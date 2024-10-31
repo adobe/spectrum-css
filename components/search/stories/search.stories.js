@@ -83,6 +83,9 @@ HelpText.args = {
 	hasDescription: true,
 };
 HelpText.tags = ["!dev"];
+HelpText.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * A quiet search field can be used when searching isn’t a high priority action on the page. These search fields have no visible background, and this style works best when a clear layout makes the field easy to recognize. Too many quiet components in a small space can be hard to read.
@@ -92,6 +95,9 @@ Quiet.args = {
 	isQuiet: true,
 };
 Quiet.tags = ["!dev"];
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 
 /**

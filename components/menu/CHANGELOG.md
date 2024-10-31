@@ -1,5 +1,17 @@
 # Change Log
 
+## 7.1.9
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Add passthrough markers to prevent unnecessary warnings about unused custom properties
+
+## 7.1.8
+
+### Patch Changes
+
+- [#3290](https://github.com/adobe/spectrum-css/pull/3290) [`df4c029`](https://github.com/adobe/spectrum-css/commit/df4c029babe8007a783099f9989af1e2c2e8181e) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation by removing unused custom property.
+
 ## 7.1.7
 
 ### Patch Changes

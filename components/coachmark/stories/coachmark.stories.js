@@ -48,7 +48,6 @@ export default {
 		hasImage: false,
 	},
 	parameters: {
-		layout: "padded",
 		actions: {
 			handles: [
 				...(ActionButton.parameters?.actions?.handles ?? []),

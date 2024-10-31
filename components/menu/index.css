@@ -94,9 +94,6 @@
 
 	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-medium);
 
-	/* "one" icon: chevron + additional icon (we don't count the chevron as an icon because it HAS to be there for a collapsible) */
-	--spectrum-menu-item-collapsible-has-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
-
 	/* "no" icon: just the chevron (we're not counting it because it HAS to be there for a collapsible) */
 	--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
 }
@@ -211,16 +208,20 @@
 		.spectrum-Menu-item:hover,
 		.spectrum-Menu-item:focus {
 			.spectrum-Menu-itemCheckbox {
+				/* @passthrough start */
 				--highcontrast-checkbox-highlight-color-hover: ButtonText;
 				--highcontrast-checkbox-highlight-color-default: ButtonText;
+				/* @passthrough end */
 			}
 
 			.spectrum-Menu-itemSwitch {
+				/* @passthrough start */
 				--highcontrast-switch-handle-border-color-hover: ButtonText;
 				--highcontrast-switch-handle-border-color-selected-default: ButtonText;
 				--highcontrast-switch-handle-border-color-selected-hover: ButtonText;
 				--highcontrast-switch-background-color-selected-default: ButtonText;
 				--highcontrast-switch-background-color-selected-hover: ButtonText;
+				/* @passthrough end */
 			}
 		}
 
@@ -398,7 +399,6 @@
 
 .spectrum-Menu-item {
 	display: grid;
-	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 	grid-template-areas:
 		".            chevronAreaCollapsible .             headingIconArea  sectionHeadingArea  .         .           .                 "
 		"selectedArea chevronAreaCollapsible checkmarkArea iconArea labelArea        valueArea actionsArea chevronAreaDrillIn"
@@ -415,7 +415,6 @@
 	grid-template-columns: auto auto;
 	grid-template-rows: 1fr auto;
 }
-/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 
 .spectrum-Menu-item .spectrum-Menu-item .spectrum-Menu-itemLabel {
 	grid-area: submenuItemLabelArea;

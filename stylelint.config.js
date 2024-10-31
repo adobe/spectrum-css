@@ -41,7 +41,7 @@ module.exports = {
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: ["extend", "container", "each", "include", "mixin"],
+				ignoreAtRules: ["extend", "each", "include", "mixin"],
 			},
 		],
 		"block-no-empty": [true, {
@@ -64,6 +64,7 @@ module.exports = {
 			{
 				ignoreProperties: {
 					color: ["CanvasText"],
+					"forced-color-adjust": ["preserve-parent-color"],
 				},
 			},
 		],
@@ -89,7 +90,11 @@ module.exports = {
 			},
 		],
 		"selector-attribute-quotes": "always",
-		"selector-class-pattern": ["^(spectrum-|is-)[A-Za-z0-9-]+", { resolveNestedSelectors: true }],
+		"selector-class-pattern": [
+			"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
+				resolveNestedSelectors: true
+			}
+		],
 		"selector-not-notation": "complex",
 		"value-keyword-case": [
 			"lower",
@@ -149,8 +154,7 @@ module.exports = {
 					/^--mod-/,
 					/^--highcontrast-/,
 					/^--system-/,
-					/^--spectrum-(global|alias|component)-/,
-					/^--spectrum-animation-/,
+					/^--spectrum-picked-color$/,
 				],
 				skipDependencies: false,
 				disableFix: true,
@@ -161,7 +165,7 @@ module.exports = {
 		"spectrum-tools/no-unused-custom-properties": [
 			true,
 			{
-				ignoreList: [/^--mod-/, /^--highcontrast-/, /^--system-/],
+				ignoreList: [/^--mod-/],
 				disableFix: true,
 				severity: "warning",
 			},

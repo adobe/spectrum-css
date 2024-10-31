@@ -60,7 +60,6 @@
 	position: relative;
 
 	display: block;
-	vertical-align: top;
 	margin: 0;
 	padding-block-start: var(--mod-steplist-topPadding, var(--spectrum-steplist-topPadding));
 	padding-inline-start: var(--mod-steplist-sidePadding, var(--spectrum-steplist-sidePadding));

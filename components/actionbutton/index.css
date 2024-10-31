@@ -234,6 +234,7 @@ a.spectrum-ActionButton {
 .spectrum-ActionButton-label {
 	@extend %spectrum-ButtonLabel;
 	pointer-events: none;
+	line-height: var(--spectrum-actionbutton-height);
 
 	font-size: var(--mod-actionbutton-font-size, var(--spectrum-actionbutton-font-size));
 	white-space: nowrap;

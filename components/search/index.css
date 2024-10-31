@@ -52,7 +52,7 @@
 	--spectrum-search-background-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-search-border-color-disabled: var(--spectrum-disabled-background-color);
 
-	/* Settings for nested Textfield component. */
+	/* @passthrough start -- settings for nested Textfield component */
 	--mod-textfield-font-family: var(--mod-search-font-family, var(--spectrum-search-font-family));
 	--mod-textfield-font-weight: var(--mod-search-font-weight, var(--spectrum-search-font-weight));
 
@@ -79,6 +79,16 @@
 
 	--mod-textfield-background-color: var(--mod-search-background-color, var(--spectrum-search-background-color));
 	--mod-textfield-background-color-disabled: var(--mod-search-background-color-disabled, var(--spectrum-search-background-color-disabled));
+	/* @passthrough end */
+
+	display: inline-block;
+	position: relative;
+	inline-size: var(--mod-search-inline-size, var(--spectrum-search-inline-size));
+	min-inline-size: var(--mod-search-min-inline-size, var(--spectrum-search-min-inline-size));
+
+	.spectrum-HelpText {
+		margin-block-start: var(--mod-search-to-help-text, var(--spectrum-search-to-help-text));
+	}
 }
 
 .spectrum-Search--sizeS {
@@ -99,19 +109,6 @@
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
 }
 
-.spectrum-Search--quiet {
-	--spectrum-search-quiet-button-offset: calc((var(--mod-search-block-size, var(--spectrum-search-block-size)) / 2) - (var(--mod-workflow-icon-size-100, var(--spectrum-workflow-icon-size-100)) / 2));
-	--spectrum-search-background-color: transparent;
-	--spectrum-search-background-color-disabled: transparent;
-	--spectrum-search-border-color-disabled: var(--spectrum-disabled-border-color);
-
-	/* Added specificity, otherwise they are overridden by system specific themes. */
-	&.spectrum-Search {
-		--spectrum-search-border-radius: 0;
-		--spectrum-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
-	}
-}
-
 @media (forced-colors: active) {
 	.spectrum-Search .spectrum-Search-textfield,
 	.spectrum-Search .spectrum-Search-textfield .spectrum-Search-input {
@@ -127,18 +124,6 @@
 			forced-color-adjust: none;
 			background-color: transparent;
 		}
-	}
-}
-
-/* Standard / Default */
-.spectrum-Search {
-	display: inline-block;
-	position: relative;
-	inline-size: var(--mod-search-inline-size, var(--spectrum-search-inline-size));
-	min-inline-size: var(--mod-search-min-inline-size, var(--spectrum-search-min-inline-size));
-
-	.spectrum-HelpText {
-		margin-block-start: var(--mod-search-to-help-text, var(--spectrum-search-to-help-text));
 	}
 }
 
@@ -162,12 +147,12 @@
 }
 
 .spectrum-Search-icon {
+	--spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
+
 	display: block;
 	position: absolute;
 	inset-block: 0;
 	margin-block: auto;
-
-	--spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
 	color: var(--spectrum-search-color);
 
 	.spectrum-Search-textfield:hover & {
@@ -197,18 +182,18 @@
 	/* Without this, it gets overridden by .spectrum-Textfield */
 	appearance: none;
 
-	/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
-	&::-webkit-search-cancel-button,
-	&::-webkit-search-decoration {
-		appearance: none;
-	}
-
 	block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
 	padding-block-start: calc(var(--mod-search-top-to-text, var(--spectrum-search-top-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
 	padding-block-end: calc(var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
 
 	font-style: var(--mod-search-font-style, var(--spectrum-search-font-style));
 	line-height: var(--mod-search-line-height, var(--spectrum-search-line-height));
+
+	/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-decoration {
+		appearance: none;
+	}
 }
 
 /* Standard / Default Only */
@@ -225,14 +210,20 @@
 
 /* Quiet Variant */
 .spectrum-Search--quiet {
-	.spectrum-Search-clearButton .spectrum-ClearButton-icon {
-		transform: translateX(var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
+	--spectrum-search-background-color: transparent;
+	--spectrum-search-background-color-disabled: transparent;
+	--spectrum-search-border-color-disabled: var(--spectrum-disabled-border-color);
+
+	/* Added specificity, otherwise they are overridden by system specific themes. */
+	&.spectrum-Search {
+		--spectrum-search-border-radius: 0;
+		--spectrum-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
 	}
 
 	&.spectrum-Search .spectrum-Search-input {
 		border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
 		padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
-		padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
+		padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-quiet-button-offset, calc(var(--mod-search-block-size, var(--spectrum-search-block-size)) / 2 - var(--mod-search-icon-size, var(--spectrum-search-icon-size)) / 2)));
 		padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
 	}
 }

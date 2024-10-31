@@ -508,12 +508,12 @@
 	border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 
 	&.is-drop-target {
+		/* Make sure negative offset outline is not covered by borders. */
+		--mod-table-border-color: transparent;
+
 		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
 		outline-style: solid;
 		outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
-
-		/* Make sure negative offset outline is not covered by borders. */
-		--mod-table-border-color: transparent;
 	}
 }
 
@@ -659,13 +659,13 @@
 	}
 
 	&.is-drop-target {
+		/* Make sure negative offset outline is not covered by borders. */
+		--mod-table-border-color: var(--highcontrast-table-focus-indicator-color, transparent);
+
 		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
 		outline-style: solid;
 		outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
 		outline-offset: calc(-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)));
-
-		/* Make sure negative offset outline is not covered by borders. */
-		--mod-table-border-color: var(--highcontrast-table-focus-indicator-color, transparent);
 
 		.spectrum-Table-cell {
 			border-block-start-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
@@ -947,12 +947,12 @@
 
 /********* THUMBNAILS *********/
 .spectrum-Table-row--thumbnail {
-	--table-thumbnail-cell-block-spacing: var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing));
-	--table-thumbnail-inner-content-block-spacing: max(0px, calc((var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)) - (var(--mod-table-row-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size)))) / 2));
+	--spectrum-table-thumbnail-cell-block-spacing: var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing));
+	--spectrum-table-thumbnail-inner-content-block-spacing: max(0px, calc((var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)) - (var(--mod-table-row-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size)))) / 2));
 
 	/* Cell that does not have a thumbnail, within a row that has a thumbnail. */
 	.spectrum-Table-cell {
-		padding-block: calc(var(--table-thumbnail-cell-block-spacing) + var(--table-thumbnail-inner-content-block-spacing));
+		padding-block: calc(var(--spectrum-table-thumbnail-cell-block-spacing) + var(--spectrum-table-thumbnail-inner-content-block-spacing));
 	}
 
 	/* Cell that does have a thumbnail has its padding moved within the "Inner" and "Content" alignment wrappers. */
@@ -962,8 +962,8 @@
 
 	/* Sometimes the padding must be larger to match any extra space created by the disclosure icon (e.g. compact + large ). */
 	&.spectrum-Table-row--collapsible {
-		--table-thumbnail-inner-minimum-block-spacing: max(0px, calc((var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) - var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size))) / 2));
-		--table-thumbnail-cell-block-spacing: max(var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing)), var(--table-thumbnail-inner-minimum-block-spacing));
+		--spectrum-table-thumbnail-inner-minimum-block-spacing: max(0px, calc((var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size)) - var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size))) / 2));
+		--spectrum-table-thumbnail-cell-block-spacing: max(var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing)), var(--spectrum-table-thumbnail-inner-minimum-block-spacing));
 	}
 }
 
@@ -973,7 +973,7 @@
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	padding-block: var(--table-thumbnail-cell-block-spacing);
+	padding-block: var(--spectrum-table-thumbnail-cell-block-spacing);
 
 	.spectrum-Thumbnail {
 		flex-grow: 0;
@@ -984,6 +984,6 @@
 
 	.spectrum-Table-thumbnailContent {
 		/* Vertically centers text with the middle of the thumbnail. */
-		padding-block: var(--table-thumbnail-inner-content-block-spacing);
+		padding-block: var(--spectrum-table-thumbnail-inner-content-block-spacing);
 	}
 }

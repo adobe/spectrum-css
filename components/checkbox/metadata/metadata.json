@@ -66,7 +66,7 @@
     ".spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-label",
     ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box",
     ".spectrum-Checkbox.is-readOnly",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label",

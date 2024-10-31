@@ -1,5 +1,17 @@
 # Change Log
 
+## 3.2.5
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Add passthrough markers to prevent unnecessary warnings about unused custom properties
+
+## 3.2.4
+
+### Patch Changes
+
+- [#3285](https://github.com/adobe/spectrum-css/pull/3285) [`727ccd0`](https://github.com/adobe/spectrum-css/commit/727ccd0eda8ef6f975cda52c7ef4e3516818e383) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation in datepicker by adjusting nesting depth.
+
 ## 3.2.3
 
 ### Patch Changes

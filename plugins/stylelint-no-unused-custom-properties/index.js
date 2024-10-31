@@ -153,23 +153,26 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 		/* Collect variable use information */
 		root.walkDecls((decl) => trackRelationships(decl));
 
+		/* Iterate through custom properties declared and report on their usage */
 		root.walkDecls(/^--/, (decl) => {
+			// No need to report on ignored properties or those used as passthroughs
 			const isIgnored = ignoreList.length ? ignoreList.some((regex) => regex.test(decl.prop)) : false;
 			const isPassthrough = allowedPassthroughs.has(decl.prop);
 
 			if (isIgnored || isPassthrough) return;
 
+			// If this variable is used in a CSS property, don't report it
+			if (usedInProps.has(decl.prop)) return;
+
 			// Check if this variable is not used anywhere in the file
 			// or is used by a CSS property (NOT a variable)
-			if (!usedAnywhere.has(decl.prop) || (!usedInProps.has(decl.prop) && !relationships.has(decl.prop))) {
+			if (!usedAnywhere.has(decl.prop)) {
 				cleanOrReport(decl);
 				return;
 			}
 
-			if (usedInProps.has(decl.prop)) return;
-
 			// Check if this variable is not used by another variable
-			if (!relationships.has(decl.prop)) return;
+			if (!relationships.has(decl.prop) || relationships.get(decl.prop)?.length === 0) return;
 
 			// Then iterate through all the variables that use it and check if they are used anywhere
 			const relatives = relationships.get(decl.prop);

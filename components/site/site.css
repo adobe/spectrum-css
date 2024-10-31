@@ -103,13 +103,11 @@
 }
 
 .spectrum-Site-logo {
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
 	--spectrum-icon-size: 32px;
 	--mod-icon-color: #fa0f00;
 	margin-inline-end: var(--spectrum-spacing-200);
 
 	.spectrum--large & {
-		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
 		--spectrum-icon-size: 40px;
 	}
 }
@@ -206,7 +204,6 @@
 	margin-inline-end: 20px;
 
 	& .spectrum-Icon {
-		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
 		--spectrum-icon-size: 200px;
 	}
 }

@@ -1,5 +1,20 @@
 # Change Log
 
+## 5.4.2
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove duplicate references
+
+## 5.4.1
+
+### Patch Changes
+
+- [#3298](https://github.com/adobe/spectrum-css/pull/3298) [`07cc324`](https://github.com/adobe/spectrum-css/commit/07cc324af3b1a6240033b6c2f91342373c7234c2) Thanks [@cdransf](https://github.com/cdransf)! - Resolves violation error by moving todo comment into stylelint disable comment as a description
+
+- Updated dependencies [[`5fa753b`](https://github.com/adobe/spectrum-css/commit/5fa753b34944584576c8d91b8d51460ff0a2e4be)]:
+  - @spectrum-css/stepper@6.2.1
+
 ## 5.4.0
 
 ### Minor Changes
