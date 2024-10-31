@@ -52,6 +52,14 @@ governing permissions and limitations under the License.
 	/* Passthrough for nested component(s) */
 	--mod-buttongroup-justify-content: flex-end;
 	--mod-buttongroup-flex-wrap: nowrap;
+
+	/* Fullscreen/fullscreenTakeover */
+	--spectrum-takeover-dialog-title-font-size: var(--spectrum-title-size-xxl);
+	--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-500);
+	--spectrum-takeover-dialog-spacing-header-gap: var(--spectrum-spacing-400);
+	--spectrum-takeover-dialog-spacing-title-to-body: var(--spectrum-spacing-500);
+	--spectrum-takeover-dialog-inline-size: var(--spectrum-takeover-dialog-width);
+	--spectrum-takeover-dialog-block-size: var(--spectrum-takeover-dialog-height);
 }
 
 .spectrum-Dialog {
@@ -247,13 +255,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Dialog--fullscreen {
-	inline-size: 100%;
-	block-size: 100%;
+	inline-size: var(--spectrum-takeover-dialog-inline-size);
+	block-size: var(--spectrum-takeover-dialog-block-size);
 }
 
 .spectrum-Dialog--fullscreenTakeover {
-	inline-size: 100%;
-	block-size: 100%;
+	inline-size: var(--spectrum-takeover-dialog-inline-size);
+	block-size: var(--spectrum-takeover-dialog-block-size);
 	border-radius: 0;
 }
 
@@ -262,19 +270,25 @@ governing permissions and limitations under the License.
 	max-block-size: none;
 	max-inline-size: none;
 
+	.spectrum--large & {
+		--spectrum-takeover-dialog-spacing-header-gap: var(--spectrum-spacing-300);
+		--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-400);
+		--spectrum-takeover-dialog-spacing-title-to-body: var(--spectrum-spacing-400);
+	}
+
 	.spectrum-Dialog-grid {
 		display: grid;
 		grid-template-columns:
-			var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding))
+			var(--mod-takeover-dialog-spacing-grid-padding, var(--spectrum-takeover-dialog-spacing-grid-padding))
 			1fr
 			auto
 			auto
-			var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
+			var(--mod-takeover-dialog-spacing-grid-padding, var(--spectrum-takeover-dialog-spacing-grid-padding));
 		grid-template-rows:
-			var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding))
+			var(--mod-takeover-dialog-spacing-grid-padding, var(--spectrum-takeover-dialog-spacing-grid-padding))
 			auto
 			1fr
-			var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
+			var(--mod-takeover-dialog-spacing-grid-padding, var(--spectrum-takeover-dialog-spacing-grid-padding));
 		grid-template-areas:
 			".    .       .       .            ."
 			".    heading header  buttonGroup  ."
@@ -284,6 +298,13 @@ governing permissions and limitations under the License.
 
 	.spectrum-Dialog-header {
 		grid-area: heading;
+		gap: var(--mod-takeover-dialog-spacing-header-gap, var(--spectrum-takeover-dialog-spacing-header-gap));
+		margin-inline-end: var(--mod-takeover-dialog-spacing-header-gap, var(--spectrum-takeover-dialog-spacing-header-gap));
+		margin-block-end: var(--spectrum-takeover-dialog-spacing-title-to-body);
+	}
+
+	.spectrum-Dialog-heading {
+		font-size: var(--mod-takeover-dialog-title-font-size, var(--spectrum-takeover-dialog-title-font-size));
 	}
 
 	.spectrum-Dialog-closeButton {
