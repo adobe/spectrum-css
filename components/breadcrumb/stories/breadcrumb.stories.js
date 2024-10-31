@@ -9,13 +9,16 @@ export default {
 	argTypes: {
 		items: { table: { disable: true } },
 		variant: {
-			name: "Variants",
+			name: "Variant",
+			description: "Adjusts the overall sizing and density.",
 			type: { name: "string" },
+			defaultValue: "medium",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
+				// defaultValue: { summary: "medium" },
 			},
-			options: ["compact", "multiline"],
+			options: ["medium", "large", "multiline"],
 			control: "inline-radio",
 		},
 		isDragged: {
@@ -31,6 +34,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
 		isDragged: false,
+		variant: "medium",
 	},
 	parameters: {
 		actions: {

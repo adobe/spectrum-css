@@ -12,7 +12,7 @@ export const Template = (
 		rootClass = "spectrum-Breadcrumbs",
 		customClasses = [],
 		items = [],
-		variant,
+		variant = "medium",
 		isDragged = false,
 	} = {},
 	context = {},
@@ -21,7 +21,7 @@ export const Template = (
 		<ul
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined" || variant !== "default",
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined" || variant !== "medium",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 		>
