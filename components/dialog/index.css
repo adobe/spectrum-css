@@ -36,15 +36,17 @@
 	--spectrum-dialog-confirm-divider-height: var(--spectrum-spacing-50);
 }
 
-.spectrum-Dialog {
+/* @deprecated .spectrum-Dialog--medium */
+.spectrum-Dialog,
+.spectrum-Dialog--medium {
 	/* Be a flexbox to allow a full sized content area that scrolls */
 	display: flex;
 
 	/* Allow 100% width, taking into account padding */
 	box-sizing: border-box;
 
-	/* Be no bigger than max-width,  but also be 90% if the viewport is smaller than max-width */
-	inline-size: fit-content;
+	/* Be no bigger than max-width, but also be 90% if the viewport is smaller than max-width */
+	inline-size: var(--mod-dialog-confirm-medium-width, var(--spectrum-dialog-confirm-medium-width));
 	min-inline-size: var(--mod-dialog-min-inline-size, var(--spectrum-dialog-min-inline-size));
 	max-inline-size: 100%;
 
@@ -53,14 +55,14 @@
 	outline: none;
 }
 
+/* @deprecated .spectrum-Dialog--small */
+.spectrum-Dialog--sizeS,
 .spectrum-Dialog--small {
 	inline-size: var(--mod-dialog-confirm-small-width, var(--spectrum-dialog-confirm-small-width));
 }
 
-.spectrum-Dialog--medium {
-	inline-size: var(--mod-dialog-confirm-medium-width, var(--spectrum-dialog-confirm-medium-width));
-}
-
+/* @deprecated .spectrum-Dialog--large */
+.spectrum-Dialog--sizeL,
 .spectrum-Dialog--large {
 	inline-size: var(--mod-dialog-confirm-large-width, var(--spectrum-dialog-confirm-large-width));
 }
