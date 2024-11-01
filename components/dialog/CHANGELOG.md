@@ -1,5 +1,19 @@
 # Change Log
 
+## 10.1.5
+
+### Patch Changes
+
+- [#3322](https://github.com/adobe/spectrum-css/pull/3322) [`ffc6895`](https://github.com/adobe/spectrum-css/commit/ffc689598122353912b604c7e1a4c121d20a9191) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Dialog t-shirt sizes
+
+  Adds support for t-shirt sizing class names to dialog CSS. `@deprecated` comments were added to communicate that the old class names (`--small`, `--medium`, and `--large`) will be removed in S2.
+
+  | old class name          | new class name                                         |
+  | ----------------------- | ------------------------------------------------------ |
+  | spectrum-Dialog--small  | spectrum-Dialog--sizeS                                 |
+  | spectrum-Dialog--medium | spectrum-Dialog (the default, so no size is necessary) |
+  | spectrum-Dialog--large  | spectrum-Dialog--sizeL                                 |
+
 ## 10.1.4
 
 ### Patch Changes
