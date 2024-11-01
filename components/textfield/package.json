@@ -57,7 +57,13 @@
 	"spectrum": [
 		{
 			"guidelines": "https://spectrum.adobe.com/page/text-field",
-			"rootClass": "spectrum-Textfield"
+			"rootClass": "spectrum-Textfield",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/textfield/"
+		},
+		{
+			"guidelines": "https://spectrum.adobe.com/page/text-area",
+			"rootClass": "spectrum-Textfield--multiline",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/textarea/"
 		}
 	]
 }
