@@ -48,3 +48,9 @@ body {
 svg:has(symbol):not(:has(use)) {
 	display: none;
 }
+
+.sb-story {
+	/* Prevent inline stories in the Docs from cutting off content (which is different than the regular
+	story view), due to Storybook's inline style that sets overflow: auto */
+	overflow: visible !important;
+}
