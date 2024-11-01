@@ -97,7 +97,7 @@ export const OverflowOption = (context) => Container({
 					},
 				]
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Collapse",
@@ -126,9 +126,9 @@ export const OverflowOption = (context) => Container({
 					},
 				]
 			}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const TreatmentTemplate = (args, context) => Container({
 	withBorder: false,
@@ -140,14 +140,13 @@ export const TreatmentTemplate = (args, context) => Container({
 		{ heading: "Default", },
 		{ iconOnly: true, heading: "Icon-only", },
 		{ iconOnly: true, areQuiet: true, heading: "Quiet, icon-only", },
-		].map(({ heading, areQuiet, iconOnly }) => Container({
-			withBorder: false,
-			heading: heading,
-			content: Template({
-				...args,
-				areQuiet, 
-				iconOnly,
-			}, context)}
-		))}`
-});
-
+	].map(({ heading, areQuiet, iconOnly }) => Container({
+		withBorder: false,
+		heading: heading,
+		content: Template({
+			...args,
+			areQuiet,
+			iconOnly,
+		}, context)
+	}, context))}`
+}, context);

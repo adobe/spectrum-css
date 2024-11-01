@@ -74,11 +74,11 @@ export const IndeterminateGroup = (args, context) => Container({
 			withBorder: false,
 			heading: "Determinate",
 			content: Template(args, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Indeterminate",
 			content: Template({ ...args, isIndeterminate: true }, context)
-		})}
+		}, context)}
 	`
-});
+}, context);

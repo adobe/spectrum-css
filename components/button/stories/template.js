@@ -82,7 +82,7 @@ export const Template = ({
 		${when(iconName && !iconAfterLabel, () =>
 			Icon({ iconName, setName: iconSet, size }, context)
 		)}
-		${when(label && !hideLabel, () => 
+		${when(label && !hideLabel, () =>
 			html`<span class=${`${rootClass}-label`}>${label}</span>`
 		)}
 		${when(iconName && iconAfterLabel, () =>
@@ -131,7 +131,7 @@ export const ButtonsWithIconOptions = ({
 			iconName: iconName ?? "Edit",
 		}, context)}
 	`,
-});
+}, context);
 
 /**
  * Display the buttons with icon options for each treatment option.
@@ -155,23 +155,23 @@ export const TextOverflowTemplate = (args, context = {}) => Container({
 		rowGap: "12px",
 	},
 	content: html`
-	${Template({
-		...args,
-		customStyles: {
-			"max-inline-size": "480px",
-		},
-		label: "An example of text overflow behavior when there is no icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-	}, context)}
-	${Template({
-		...args,
-		customStyles: {
-			"max-inline-size": "480px",
-		},
-		iconName: "Edit",
-		iconSet: "workflow",
-		label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-	}, context)}
-  `,
+		${Template({
+			...args,
+			customStyles: {
+				"max-inline-size": "480px",
+			},
+			label: "An example of text overflow behavior when there is no icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
+		}, context)}
+		${Template({
+			...args,
+			customStyles: {
+				"max-inline-size": "480px",
+			},
+			iconName: "Edit",
+			iconSet: "workflow",
+			label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
+		}, context)}
+	`,
 }, context);
 
 export const TextWrapTemplate = (args, context = {}) => Container({

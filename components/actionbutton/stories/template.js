@@ -158,7 +158,7 @@ export const ActionButtonsWithIconOptions = (args, context) => Container({
 			hasPopup: "true",
 		}, context)}
 	`
-});
+}, context);
 
 export const IconOnlyOption = (args, context) => Container({
 	withBorder: false,
@@ -179,7 +179,7 @@ export const IconOnlyOption = (args, context) => Container({
 			hasPopup: "true",
 		}, context)}
 	`
-});
+}, context);
 
 export const TreatmentTemplate = (args, context) => Container({
 	withBorder: false,
@@ -200,5 +200,5 @@ export const TreatmentTemplate = (args, context) => Container({
 			isSelected,
 			isDisabled,
 		})
-	}, context ))}`,
-});
+	}, context))}`,
+}, context);

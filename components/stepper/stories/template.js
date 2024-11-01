@@ -110,7 +110,7 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			},
 			heading: "Default",
 			content: Template(args, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -118,7 +118,7 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			},
 			heading: "Invalid",
 			content: Template({...args, isInvalid: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -126,7 +126,7 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			},
 			heading: "Hovered",
 			content: Template({...args, isHovered: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -134,7 +134,7 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			},
 			heading: "Focused",
 			content: Template({...args, isFocused: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -142,7 +142,7 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			},
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -150,7 +150,7 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			},
 			heading: "Keyboard-focused",
 			content: Template({...args, isKeyboardFocused: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -158,9 +158,9 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			},
 			heading: "Invalid, keyboard-focused",
 			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 /* Shows the disabled variants of the default and quiet stories one grouping. */
 export const DisabledVariantsGroup = (args, context) => Container({
@@ -173,7 +173,7 @@ export const DisabledVariantsGroup = (args, context) => Container({
 			},
 			heading: "Default",
 			content: Template(args, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -181,6 +181,6 @@ export const DisabledVariantsGroup = (args, context) => Container({
 			},
 			heading: "Quiet",
 			content: Template({...args, isQuiet: true}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
