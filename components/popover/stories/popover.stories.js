@@ -1,26 +1,34 @@
-import { userEvent, within } from "@storybook/testing-library";
-import { html } from "lit";
-
-import { Template } from "./template";
-
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+// import { disableDefaultModes } from "@spectrum-css/preview/modes";
+// import { isOpen } from "@spectrum-css/preview/types";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { html } from "lit";
+// import metadata from "../metadata/metadata.json";
+// import packageJson from "../package.json";
+// import { PopoverGroup } from "./popover.test.js";
+import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./template.js";
 
 /**
- * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
+ * A popover is used to display transient content (menus, options, additional actions, etc.) and appears when clicking/tapping on a source (tools, buttons, etc.).
+ * It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
+ *
+ * - Popover's position and distance to its source should be handled by the implementation. Positioning in Storybook is only for demonstration purposes.
+ * - When the `.is-open` class is present, popover is offset from the source by the spacing value defined in `--spectrum-popover-animation-distance`. This
+ * offset is done with a CSS transform and animates with a CSS transition.
  */
 export default {
 	title: "Components/Popover",
 	component: "Popover",
 	argTypes: {
 		trigger: { table: { disable: true } },
+		triggerId: { table: { disable: true } },
 		content: { table: { disable: true } },
-		nested: { table: { disable: true } },
 		isOpen: {
 			name: "Open",
 			type: { name: "boolean" },
 			table: {
-				disable: true,
 				type: { summary: "boolean" },
 				category: "State",
 			},
@@ -29,6 +37,7 @@ export default {
 		withTip: {
 			name: "Show with tip",
 			type: { name: "boolean" },
+			defaultValue: { summary: "false" },
 			table: {
 				type: { summary: "boolean" },
 				category: "Component",
@@ -38,7 +47,8 @@ export default {
 		},
 		position: {
 			name: "Positioning",
-			type: { name: "string" },
+			description: "Determines which side the popover is positioned on and where the tip appears. The first position term is the popover's position and the second term is the source's position.",
+			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
@@ -46,139 +56,128 @@ export default {
 			control: "select",
 			options: [
 				"top",
+				"top-left",
+				"top-right",
 				"top-start",
 				"top-end",
 				"bottom",
+				"bottom-left",
+				"bottom-right",
 				"bottom-start",
 				"bottom-end",
-				"left",
-				"left-top",
-				"left-bottom",
 				"right",
-				"right-top",
 				"right-bottom",
+				"right-top",
+				"left",
+				"left-bottom",
+				"left-top",
+				"start",
+				"start-top",
+				"start-bottom",
+				"end",
+				"end-top",
+				"end-bottom",
 			],
-			if: { arg: "nested", truthy: false },
 		},
+		popoverHeight: { table: { disable: true } },
+		popoverWidth: { table: { disable: true } },
+		popoverAlignment: { table: { disable: true } },
+		popoverWrapperStyles: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Popover",
-		isOpen: false,
+		isOpen: true,
 		withTip: false,
-		position: "top",
-		testId: "popover-1",
-		id: "popover-1",
-		triggerId: "trigger",
-		trigger: (passthroughs) => ActionButton({
-			label: "Hop on pop(over)",
-			id: "trigger",
-			...passthroughs,
-		}),
-		content: [
-			() => Menu({
-				items: [
-					{
-						iconName: "Edit",
-						label: "Edit",
-					},
-					{
-						iconName: "Copy",
-						label: "Copy",
-					},
-					{
-						iconName: "Move",
-						label: "Move",
-					},
-					{
-						iconName: "Delete",
-						label: "Delete",
-					},
-				],
-			}),
-		],
+		position: "bottom",
+		popoverHeight: 142,
+		popoverWidth: 89,
 	},
 	parameters: {
 		layout: "centered",
-		actions: {
-			handles: [],
-		},
-		status: {
-			type: "migrated",
-		},
-		chromatic: { delay: 2000 },
 		docs: {
 			story: {
-				height: "300px"
+				height: "200px",
 			}
 		},
+		// packageJson,
+		// metadata,
 	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
 	],
 };
 
+/**
+ * By default, popovers do not have a tip. Popovers without a tip should be used when the source has a
+ * visually distinct down state, in order to show the connection between the popover and its source.
+ *
+ * This example uses the [menu](?path=/docs/components-menu--docs) component within the popover, and a button as the source.
+ */
+// TODO: reference PopoverGroup() instead of Template()
+// export const Default = PopoverGroup.bind({});
 export const Default = Template.bind({});
-Default.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	await userEvent.click(canvas.getByRole("button"));
-};
-Default.args = {};
-
-export const WithTip = Template.bind({});
-WithTip.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	await userEvent.click(canvas.getByRole("button"));
-};
-WithTip.args = {
-	withTip: true,
-};
-
-export const Nested = Template.bind({});
-Nested.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	await userEvent.click(canvas.getAllByRole("button")[0]);
-	await userEvent.click(canvas.getAllByRole("button")[1]);
-};
-Nested.args = {
-	nested: true,
-	testId: "popover-nested",
-	id: "popover-nested",
-	triggerId: "trigger-nested",
-	isOpen: true,
-	customStyles: {
-		"margin-inline-start": "8px",
-	},
-	trigger: (passthroughs) => ActionButton({
-		label: "Hop on pop(over)",
-		id: "trigger-nested",
+Default.args = {
+	trigger: (passthroughs, context) => ActionButton({
+		isSelected: true,
+		label: "Actions",
 		...passthroughs,
-	}),
+	}, context),
 	content: [
-		() => Menu({
+		(passthroughs, context) => Menu({
+			items: [
+				{
+					iconName: "Edit",
+					label: "Edit",
+				},
+				{
+					iconName: "Copy",
+					label: "Copy",
+				},
+				{
+					iconName: "Move",
+					label: "Move",
+				},
+				{
+					iconName: "Delete",
+					label: "Delete",
+				},
+			],
+			...passthroughs,
+		}, context),
+	],
+};
+
+/**
+ * A popover can be nested within another popover.
+ */
+export const Nested = Template.bind({});
+Nested.tags = ["is-hidden-story", "!dev"];
+Nested.args = {
+	position: "end-top",
+	isOpen: true,
+	trigger: (passthroughs, context) => ActionButton({
+		label: "Actions",
+		...passthroughs,
+	}, context),
+	content: [
+		(passthroughs, context) => Menu({
 			items: [
 				{
 					iconName: "Edit",
 					label: "Edit",
 				},
 			],
-		}),
-		() => Nested({
-			position: "right",
-			testId: "popover-nested-2",
-			id: "popover-nested-2",
-			triggerId: "trigger-nested-2",
+			...passthroughs,
+		}, context),
+		(passthroughs, context) => Template({
+			position: "end-top",
 			isOpen: true,
-			customStyles: {
-				"margin-inline-start": "136px",
-				"margin-block-start": "32px"
-			},
-			trigger: (passthroughs) => ActionButton({
-				label: "Hop on pop(over) 2",
-				id: "trigger-nested-2",
+			trigger: (passthroughs, context) => ActionButton({
+				label: "More actions",
 				...passthroughs,
-			}),
+			}, context),
 			content: [
-				() => Menu({
+				(passthroughs, context) => Menu({
 					items: [
 						{
 							iconName: "Edit",
@@ -197,8 +196,169 @@ Nested.args = {
 							label: "Delete",
 						},
 					],
+					...passthroughs,
+				}, context),
+			],
+			...passthroughs,
+		}, context),
+	],
+};
+
+
+// ********* VRT ONLY ********* //
+// TODO: reference PopoverGroup() instead of Template()
+// export const WithForcedColors = PopoverGroup.bind({});
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		// modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
+// TODO: remove any "is-hidden-story" tags once this branch is rebased with main and storybook has been updated to 8.3.*
+/**
+ * Popovers can have a tip. A tip should be used to help show the connection to its source, in cases
+ * where the source does not have a visually distinct down state.
+ */
+export const WithTip = Template.bind({});
+WithTip.storyName = "Default with tip";
+WithTip.tags = ["is-hidden-story", "!dev"];
+WithTip.args = {
+	...Default.args,
+	withTip: true,
+};
+WithTip.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
+/**
+ * Popovers can display different elements within their content area. This example uses the
+ * [dialog](?path=/docs/components-dialog--docs) component within the popover.
+ */
+// @see https://opensource.adobe.com/spectrum-web-components/components/popover/#dialog-popovers
+export const DialogStyle = Template.bind({});
+DialogStyle.storyName = "Dialog style content";
+DialogStyle.tags = ["is-hidden-story", "!dev"];
+DialogStyle.args = {
+	withTip: true,
+	isOpen: true,
+	trigger: () => null,
+	content: [
+		(passthroughs, context) => Dialog({
+			showModal: false,
+			size: ["small"],
+			isDismissable: false,
+			heading: "Example heading",
+			hasFooter: false,
+			footer: [""],
+			content: [
+				() => Typography({
+					semantics: "body",
+					size: "m",
+					content: [
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+					]
 				}),
+			],
+			...passthroughs,
+		}, context),
+	],
+};
+DialogStyle.parameters = {
+	layout: "padded",
+	docs: {
+		story: {
+			height: "350px",
+		},
+	},
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
+/**
+ * Popover has 22 available positions. Ten of those positions use logical properties. Position classes using
+ * the following naming convention: the first term is the popover's position and the second term is its
+ * source's position. For example, for the `spectrum-Popover--top-left` class, the popover is positioned at the top and the
+ * source is to the left.
+ *
+ * #### Tip SVG
+ * Depending on its position, the tip uses one of two different SVGs.
+ * - Top and bottom popover positions use the same SVG. The CSS handles flipping the SVG vertically.
+ * - Left, right, start, and end popover positions use the same SVG. The CSS handles flipping the SVG horizontally.
+ */
+export const Positioning = TipPlacementVariants.bind({});
+Positioning.storyName = "Positioning options";
+Positioning.args = {
+	withTip: true,
+	isOpen: true,
+	trigger: () => null,
+	content: [() => html`<span style="padding: 0 7px">Basic text content, with some added padding.</span>`],
+	skipAlignment: true,
+	popoverWrapperStyles: {
+		"display": "block",
+		"height": "150px",
+	},
+};
+Positioning.tags = ["is-hidden-story", "!dev"];
+Positioning.parameters = {
+	layout: "padded",
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
+/**
+ * #### Default tip positioning
+ * - The tip position is centered on the edge for top, bottom, left, right, start, and end positions.
+ * - The tip position distance from edge is equal to the popover corner radius for all other positions.
+ *
+ * #### Centering the tip with the source
+ * In implementations, the tip position can be overridden to center it with the source by setting the
+ * custom property `--spectrum-popover-pointer-edge-offset` equal to half the width of the source for
+ * top and bottom popovers, or half the height of the source for side popovers. The following
+ * example sets this custom property to `50px` for a source button that is `100px` wide.
+ */
+export const TipOffset = FixedWidthSourceTemplate.bind({});
+TipOffset.storyName = "Tip positioning and inline offset";
+TipOffset.args = {
+	withTip: true,
+	isOpen: true,
+	trigger: () => null,
+	content: [
+		() => Menu({
+			items: [
+				{
+					iconName: "Edit",
+					label: "Example longer menu item",
+				},
+				{
+					iconName: "Copy",
+					label: "Copy",
+				},
+				{
+					iconName: "Move",
+					label: "Move",
+				},
 			],
 		}),
 	],
+	customStyles: {
+		"--spectrum-popover-pointer-edge-offset": "50px",
+	},
+	popoverWrapperStyles: {
+		"display": "block",
+	},
+};
+TipOffset.tags = ["is-hidden-story", "!dev"];
+TipOffset.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 };
