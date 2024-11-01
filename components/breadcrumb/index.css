@@ -12,12 +12,9 @@
  */
 
 .spectrum-Breadcrumbs {
-	/* Block size */
 	--spectrum-breadcrumbs-block-size: var(--spectrum-component-size-100);
-	--spectrum-breadcrumbs-block-size-large: var(--spectrum-component-size-200);
-	--spectrum-breadcrumbs-block-size-multiline: var(--spectrum-breadcrumbs-height-multiline);
 
-	/* Text - medium (default) */
+	/* Text - medium / default */
 	--spectrum-breadcrumbs-line-height: var(--spectrum-line-height-100);
 	--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-100);
 	--spectrum-breadcrumbs-font-family: var(--spectrum-sans-font-family-stack);
@@ -27,67 +24,30 @@
 	--spectrum-breadcrumbs-font-family-current: var(--spectrum-sans-font-family-stack);
 	--spectrum-breadcrumbs-font-weight-current: var(--spectrum-bold-font-weight);
 
-	/* Text - large */
-	--spectrum-breadcrumbs-font-size-large: var(--spectrum-font-size-200);
-	--spectrum-breadcrumbs-font-family-large: var(--spectrum-sans-font-family-stack);
-	--spectrum-breadcrumbs-font-weight-large: var(--spectrum-regular-font-weight);
-
-	--spectrum-breadcrumbs-font-size-current-large: var(--spectrum-font-size-200);
-	--spectrum-breadcrumbs-font-family-current-large: var(--spectrum-sans-font-family-stack);
-	--spectrum-breadcrumbs-font-weight-current-large: var(--spectrum-bold-font-weight);
-
-	/* Text - multiline */
-	--spectrum-breadcrumbs-font-size-multiline: var(--spectrum-font-size-75);
-	--spectrum-breadcrumbs-font-family-multiline: var(--spectrum-sans-font-family-stack);
-	--spectrum-breadcrumbs-font-weight-multiline: var(--spectrum-regular-font-weight);
-
-	--spectrum-breadcrumbs-font-size-current-multiline: var(--spectrum-heading-size-l);
-	--spectrum-breadcrumbs-font-family-current-multiline: var(--spectrum-sans-font-family-stack);
-	--spectrum-breadcrumbs-font-weight-current-multiline: var(--spectrum-extra-bold-font-weight);
-
 	/* Hover, active, focus underline */
 	--spectrum-breadcrumbs-text-decoration-thickness: var(--spectrum-text-underline-thickness);
 	--spectrum-breadcrumbs-text-decoration-gap: var(--spectrum-text-underline-gap);
 
-	/* Space between items */
-	--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-text-to-visual-100);
+	/* Space between separator chevron and items */
+	--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-medium);
 
-	/* Vertical spacing */
+	/* Vertical spacing for text and separator */
 	--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-component-top-to-text-100);
 	--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-medium);
-
-	--spectrum-breadcrumbs-text-spacing-block-start-large: var(--spectrum-component-top-to-text-200);
-	--spectrum-breadcrumbs-text-spacing-block-end-large: var(--spectrum-component-bottom-to-text-200);
-	--spectrum-breadcrumbs-icon-spacing-block-large: var(--spectrum-breadcrumbs-top-to-separator-large);
-
-	--spectrum-breadcrumbs-text-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-text-multiline);
-	--spectrum-breadcrumbs-text-spacing-block-end-multiline: var(--spectrum-breadcrumbs-bottom-to-text-multiline);
-	--spectrum-breadcrumbs-icon-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-separator-multiline);
-
-	--spectrum-breadcrumbs-text-spacing-block-between-multiline: var(--spectrum-breadcrumbs-top-text-to-bottom-text); /* vertical between lines */
-	--spectrum-breadcrumbs-icon-spacing-block-between-multiline: var(--spectrum-breadcrumbs-separator-icon-to-bottom-text-multiline); /* vertical between lines */
 
 	/* Horizontal outer spacing of list */
 	--spectrum-breadcrumbs-inline-start: var(--spectrum-breadcrumbs-start-edge-to-text);
 	--spectrum-breadcrumbs-inline-end: var(--spectrum-breadcrumbs-end-edge-to-text);
 
-	/* Menu action button icon spacing */
+	/* Action button (truncated menu / folder icon) spacing  */
 	--spectrum-breadcrumbs-action-button-spacing-inline: var(--spectrum-breadcrumbs-truncated-menu-to-separator-icon);
-
-	/* Action button spacing */
 	--spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu);
-	--spectrum-breadcrumbs-action-button-spacing-block-large: var(--spectrum-breadcrumbs-top-to-truncated-menu);
-	--spectrum-breadcrumbs-action-button-spacing-block-multiline: var(--spectrum-breadcrumbs-top-to-truncated-menu);
-
-	--spectrum-breadcrumbs-action-button-spacing-inline-start: var(--spectrum-breadcrumbs-start-edge-to-truncated-menu); /* if icon is first item */
-	--spectrum-breadcrumbs-action-button-spacing-block-between-multiline: var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text);
+	--spectrum-breadcrumbs-first-action-button-spacing-inline-start: var(--spectrum-breadcrumbs-start-edge-to-truncated-menu); /* if icon is first item */
 
 	/* Focus indicator */
 	--spectrum-breadcrumbs-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-breadcrumbs-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-
-	/* Placeholder for border radius for focus indicator */
 	--spectrum-breadcrumbs-item-link-border-radius: var(--spectrum-corner-radius-100);
 
 	/* Colors */
@@ -98,6 +58,32 @@
 	--spectrum-breadcrumbs-action-button-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
+
+	/* Layout: large */
+	&--large {
+		--spectrum-breadcrumbs-block-size: var(--spectrum-component-size-200);
+		--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-200);
+		--spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
+
+		--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-large);
+		--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-component-top-to-text-200);
+		--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-component-bottom-to-text-200);
+		--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-large);
+	}
+
+	/* Layout: multiline */
+	&--multiline {
+		--spectrum-breadcrumbs-block-size: var(--spectrum-breadcrumbs-height-multiline);
+		--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-75);
+		--spectrum-breadcrumbs-font-size-current: var(--spectrum-heading-size-l);
+		--spectrum-breadcrumbs-font-weight-current: var(--spectrum-extra-bold-font-weight);
+
+		--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-multiline);
+		--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-breadcrumbs-top-to-text-multiline);
+		--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-breadcrumbs-bottom-to-text-multiline);
+		--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-multiline) var(--spectrum-breadcrumbs-separator-icon-to-bottom-text-multiline);
+		--spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu) var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text);
+	}
 }
 
 .spectrum-Breadcrumbs {
@@ -114,12 +100,7 @@
 	flex: 1 0 0%;
 }
 
-.spectrum-Breadcrumbs--large {
-	block-size: var(--mod-breadcrumbs-block-size-large, var(--spectrum-breadcrumbs-block-size-large));
-}
-
 .spectrum-Breadcrumbs--multiline {
-	block-size: var(--mod-breadcrumbs-block-size-multiline, var(--spectrum-breadcrumbs-block-size-multiline));
 	flex-wrap: wrap;
 	align-content: center;
 }
@@ -133,15 +114,6 @@
 
 	&:dir(rtl) {
 		transform: scaleX(-1);
-	}
-
-	.spectrum-Breadcrumbs--large & {
-		margin-block: var(--mod-breadcrumbs-icon-spacing-block-large, var(--spectrum-breadcrumbs-icon-spacing-block-large));
-	}
-
-	.spectrum-Breadcrumbs--multiline & {
-		margin-block-start: var(--mod-breadcrumbs-icon-spacing-block-start-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-start-multiline));
-		margin-block-end: var(--mod-breadcrumbs-icon-spacing-block-between-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-between-multiline));
 	}
 }
 
@@ -157,32 +129,7 @@
 	font-weight: var(--mod-breadcrumbs-font-weight, var(--spectrum-breadcrumbs-font-weight));
 	line-height: var(--mod-breadcrumbs-line-height, var(--spectrum-breadcrumbs-line-height));
 
-	.spectrum-Breadcrumbs--large & {
-		font-family: var(--mod-breadcrumbs-font-family-large, var(--spectrum-breadcrumbs-font-family-large));
-		font-size: var(--mod-breadcrumbs-font-size-large, var(--spectrum-breadcrumbs-font-size-large));
-		font-weight: var(--mod-breadcrumbs-font-weight-large, var(--spectrum-breadcrumbs-font-weight-large));
-
-		> .spectrum-ActionButton {
-			margin-block: var(--mod-breadcrumbs-action-button-spacing-block-large, var(--spectrum-breadcrumbs-action-button-spacing-block-large));
-		}
-	}
-
-	.spectrum-Breadcrumbs--multiline & {
-		font-family: var(--mod-breadcrumbs-font-family-multiline, var(--spectrum-breadcrumbs-font-family-multiline));
-		font-size: var(--mod-breadcrumbs-font-size-multiline, var(--spectrum-breadcrumbs-font-size-multiline));
-		font-weight: var(--mod-breadcrumbs-font-weight-multiline, var(--spectrum-breadcrumbs-font-weight-multiline));
-
-		&:last-of-type {
-			block-size: auto;
-			inline-size: 100%;
-		}
-
-		> .spectrum-ActionButton {
-			margin-block-start: var(--mod-breadcrumbs-action-button-spacing-block-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-multiline));
-			margin-block-end: var(--mod-breadcrumbs-action-button-spacing-block-between-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline));
-		}
-	}
-
+	/* Breadcrumbs title (current item) */
 	&:last-of-type {
 		font-family: var(--mod-breadcrumbs-font-family-current, var(--spectrum-breadcrumbs-font-family-current));
 		font-size: var(--mod-breadcrumbs-font-size-current, var(--spectrum-breadcrumbs-font-size-current));
@@ -191,29 +138,22 @@
 		.spectrum-Breadcrumbs-itemSeparator {
 			display: none;
 		}
-	}
 
-	.spectrum-Breadcrumbs--large &:last-of-type {
-		font-family: var(--mod-breadcrumbs-font-family-current-large, var(--spectrum-breadcrumbs-font-family-current-large));
-		font-size: var(--mod-breadcrumbs-font-size-current-large, var(--spectrum-breadcrumbs-font-size-current-large));
-		font-weight: var(--mod-breadcrumbs-font-weight-current-large, var(--spectrum-breadcrumbs-font-weight-current-large));
-	}
+		/* The multiline title takes up the full width and appears below the other breadcrumb items. */
+		.spectrum-Breadcrumbs--multiline & {
+			block-size: auto;
+			inline-size: 100%;
 
-	.spectrum-Breadcrumbs--multiline &:last-of-type {
-		font-family: var(--mod-breadcrumbs-font-family-current-multiline, var(--spectrum-breadcrumbs-font-family-current-multiline));
-		font-size: var(--mod-breadcrumbs-font-size-current-multiline, var(--spectrum-breadcrumbs-font-size-current-multiline));
-		font-weight: var(--mod-breadcrumbs-font-weight-current-multiline, var(--spectrum-breadcrumbs-font-weight-current-multiline));
-
-		.spectrum-Breadcrumbs-itemLink {
-			margin-block-start: 0;
-			margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-multiline, var(--spectrum-breadcrumbs-text-spacing-block-end-multiline));
+			.spectrum-Breadcrumbs-itemLink {
+				margin-block-start: 0;
+			}
 		}
 	}
 
+	/* Truncated menu (folder icon) */
 	> .spectrum-ActionButton {
 		margin-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
 		margin-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
-
 		color: var(--highcontrast-breadcrumbs-action-button-color, var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color)));
 
 		&:disabled {
@@ -221,11 +161,9 @@
 		}
 	}
 
-	&:first-of-type {
-		/* If folder icon is first item */
-		> .spectrum-ActionButton {
-			margin-inline-start: var(--mod-breadcrumbs-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-action-button-spacing-inline-start));
-		}
+	/* If truncated menu (folder icon) is the first item */
+	&:first-of-type > .spectrum-ActionButton {
+		margin-inline-start: var(--mod-breadcrumbs-first-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-first-action-button-spacing-inline-start));
 	}
 }
 
@@ -247,20 +185,12 @@
 		color: var(--highcontrast-breadcrumbs-text-color-disabled, var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled)));
 	}
 
+	/* Breadcrumbs title (current item) */
 	.spectrum-Breadcrumbs-item:last-of-type & {
 		color: var(--highcontrast-breadcrumbs-text-color-current, var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current)));
 	}
 
-	.spectrum-Breadcrumbs--large & {
-		margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start-large, var(--spectrum-breadcrumbs-text-spacing-block-start-large));
-		margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-large, var(--spectrum-breadcrumbs-text-spacing-block-end-large));
-	}
-
-	.spectrum-Breadcrumbs--multiline & {
-		margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start-multiline, var(--spectrum-breadcrumbs-text-spacing-block-start-multiline));
-		margin-block-end: var(--mod-breadcrumbs-text-spacing-block-between-multiline, var(--spectrum-breadcrumbs-text-spacing-block-between-multiline)); /* vertical between lines */
-	}
-
+	/* Link is focusable */
 	&[href],
 	&[tabindex="0"] {
 		cursor: pointer;
