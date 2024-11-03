@@ -18,7 +18,7 @@ import { Template, VariantGroup } from "./template.js";
  *   - `.spectrum-Combobox-textfield` is required on the Textfield outer element (`.spectrum-Textfield`)
  *   - `.spectrum-Combobox-input` is required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
  *   - `.spectrum-Combobox-button` is required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
- * 
+ *
  * ### Indicating validity and focus
  *
  * Validity and focus must be bubbled up to the parent so descendants siblings can be styled. Implementations should add the following classes to the `.spectrum-Combobox` parent class in the following situations:
@@ -171,7 +171,7 @@ QuietGroup.parameters = {
 };
 
 /**
- * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made.
+ * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add `isReadOnly` class to the Combobox. Then within the Textfield component add `isReadOnly` class and `readonly` attribute to the `<input>`.
 */
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];

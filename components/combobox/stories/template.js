@@ -118,6 +118,7 @@ export const Template = ({
 				FieldLabel({
 					size,
 					label: fieldLabelText,
+					isDisabled,
 					customStyles: { "max-inline-size": "100px"},
 					alignment: fieldLabelPosition === "left" && "left",
 				}, context)
