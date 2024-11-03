@@ -141,7 +141,6 @@ export const Template = (args = {}, context = {}) => {
 };
 
 // ********* Template groups for displaying typography variants ********* //
-
 const RegularBoldItalicGroup = (args, context) => Container({
 	direction: "column",
 	withBorder: false,
@@ -149,7 +148,6 @@ const RegularBoldItalicGroup = (args, context) => Container({
 	content: html`
 		${Template({
 			...args,
-			context,
 			content: [
 				{
 					content: `Regular ${args.semantics} text`,
@@ -168,8 +166,8 @@ const RegularBoldItalicGroup = (args, context) => Container({
 					variant: ["strong", "emphasized"],
 				},
 			]
-		})}`
-});
+		}, context)}`
+}, context);
 
 export const DocsHeadingVariants = (args, context) => Container({
 	withBorder: false,
@@ -178,34 +176,34 @@ export const DocsHeadingVariants = (args, context) => Container({
 			direction: "column",
 			heading: "Default/sans serif",
 			content: RegularBoldItalicGroup({...args, semantics: "heading"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Heavy sans serif",
 			content: RegularBoldItalicGroup({...args, semantics: "heading", weight: "heavy"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Light sans serif",
 			content: RegularBoldItalicGroup({...args, semantics: "heading", weight: "light"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Serif",
 			content: RegularBoldItalicGroup({...args, semantics: "heading", glyph: "serif"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Heavy serif",
 			content: RegularBoldItalicGroup({...args, semantics: "heading", weight: "heavy", glyph: "serif"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Light serif",
 			content: RegularBoldItalicGroup({...args, semantics: "heading", weight: "light", glyph: "serif"}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const DocsBodyVariants = (args, context) => Container({
 	withBorder: false,
@@ -214,14 +212,14 @@ export const DocsBodyVariants = (args, context) => Container({
 			direction: "column",
 			heading: "Default/sans serif",
 			content: RegularBoldItalicGroup({...args, semantics: "body"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Serif",
 			content: RegularBoldItalicGroup({...args, semantics: "body", glyph: "serif"}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const DocsDetailVariants = (args, context) => Container({
 	withBorder: false,
@@ -230,24 +228,24 @@ export const DocsDetailVariants = (args, context) => Container({
 			direction: "column",
 			heading: "Default/sans serif",
 			content: RegularBoldItalicGroup({...args, semantics: "detail"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Serif",
 			content: RegularBoldItalicGroup({...args, semantics: "detail", glyph: "serif"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Light sans serif",
 			content: RegularBoldItalicGroup({...args, semantics: "detail", weight: "light"}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Light Serif",
 			content: RegularBoldItalicGroup({...args, semantics: "detail", glyph: "serif", weight: "light"}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const DocsCodeVariants = (args, context) => Container({
 	withBorder: false,
@@ -256,17 +254,15 @@ export const DocsCodeVariants = (args, context) => Container({
 			direction: "column",
 			heading: "Default/sans serif",
 			content: RegularBoldItalicGroup({...args, semantics: "code"}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const DocsHeadingBodyPairing = (args, context) => Container({
 	direction: "column",
 	withBorder: false,
-	content: html`
-	${Template({
+	content: Template({
 		...args,
-		context,
 		content: [
 			{
 				semantics: "heading",
@@ -278,8 +274,8 @@ export const DocsHeadingBodyPairing = (args, context) => Container({
 				content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat. Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia."
 			}
 		]
-	})}`
-});
+	}, context)
+}, context);
 
 // ********* Template groups for Internationalization ********* //
 
@@ -287,26 +283,24 @@ const InternationalizedRegularBoldItalicGroup = (args, context) => Container({
 	direction: "column",
 	withBorder: false,
 	wrapperStyles: {"row-gap": "0"},
-	content: html`
-		${Template({
-			...args,
-			context,
-			content: [
-				{
-					content: html`${args.internationalizedContent.regular} (regular ${args.semantics})`,
-					customStyles: {"margin-block-start": "0"},
-				},
-				{
-					content: html`${args.internationalizedContent.emphasized} (emphasized ${args.semantics})`,
-					variant: ["emphasized"],
-				},
-				{
-					content: html`${args.internationalizedContent.strong} (strong ${args.semantics})`,
-					variant: ["strong"],
-				}
-			]
-		})}`
-});
+	content: Template({
+		...args,
+		content: [
+			{
+				content: html`${args.internationalizedContent.regular} (regular ${args.semantics})`,
+				customStyles: {"margin-block-start": "0"},
+			},
+			{
+				content: html`${args.internationalizedContent.emphasized} (emphasized ${args.semantics})`,
+				variant: ["emphasized"],
+			},
+			{
+				content: html`${args.internationalizedContent.strong} (strong ${args.semantics})`,
+				variant: ["strong"],
+			}
+		]
+	}, context)
+}, context);
 
 // @todo these are carryover from the docs site; need to ensure accuracy in translation
 // they might all mean "heading"
@@ -340,7 +334,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				lang: "ja",
 				internationalizedContent: JapaneseInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Japanese (heavy)",
@@ -351,7 +345,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				internationalizedContent: JapaneseInternationalizedContent,
 				weight: "heavy"
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Japanese (light)",
@@ -362,7 +356,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				internationalizedContent: JapaneseInternationalizedContent,
 				weight: "light"
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Arabic (default)",
@@ -372,7 +366,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				lang: "ar",
 				internationalizedContent: ArabicInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Arabic (heavy)",
@@ -383,7 +377,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				internationalizedContent: ArabicInternationalizedContent,
 				weight: "heavy"
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Arabic (light)",
@@ -394,7 +388,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				internationalizedContent: ArabicInternationalizedContent,
 				weight: "light"
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Hebrew (default)",
@@ -404,7 +398,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				lang: "he",
 				internationalizedContent: HebrewInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Hebrew (heavy)",
@@ -415,7 +409,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				internationalizedContent: HebrewInternationalizedContent,
 				weight: "heavy"
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Hebrew (light)",
@@ -426,7 +420,7 @@ export const DocsInternationalizedHeadingVariants = (args, context) => Container
 				internationalizedContent: HebrewInternationalizedContent,
 				weight: "light"
 			}, context)
-		})}
+		}, context)}
 	`
 });
 
@@ -442,7 +436,7 @@ export const DocsInternationalizedBodyVariants = (args, context) => Container({
 				lang: "ja",
 				internationalizedContent: JapaneseInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Arabic",
@@ -452,7 +446,7 @@ export const DocsInternationalizedBodyVariants = (args, context) => Container({
 				lang: "ar",
 				internationalizedContent: ArabicInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Hebrew",
@@ -462,7 +456,7 @@ export const DocsInternationalizedBodyVariants = (args, context) => Container({
 				lang: "he",
 				internationalizedContent: HebrewInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 	`
 });
 
@@ -478,7 +472,7 @@ export const DocsInternationalizedDetailVariants = (args, context) => Container(
 				lang: "ja",
 				internationalizedContent: JapaneseInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Arabic",
@@ -488,7 +482,7 @@ export const DocsInternationalizedDetailVariants = (args, context) => Container(
 				lang: "ar",
 				internationalizedContent: ArabicInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			direction: "column",
 			heading: "Hebrew",
@@ -498,39 +492,32 @@ export const DocsInternationalizedDetailVariants = (args, context) => Container(
 				lang: "he",
 				internationalizedContent: HebrewInternationalizedContent,
 			}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const DocsInternationalizedCodeVariants = (args, context) => Container({
 	withBorder: false,
 	wrapperStyles: {"row-gap": "0"},
-	content: html`
-	${Container({
+	content: Container({
 		direction: "column",
 		heading: "Japanese",
 		wrapperStyles: {"row-gap": "0"},
-		content: html`
-				${Template({
-					...args,
-					context,
-					content: ["暗号", "Code"],
-					semantics: "code",
-					lang: "ja",
-					skipLineBreak: true,
-				})}
-			`
-	})}
-	`
-});
+		content: Template({
+			...args,
+			content: ["暗号", "Code"],
+			semantics: "code",
+			lang: "ja",
+			skipLineBreak: true,
+		}, context)
+	}, context)
+}, context);
 
 export const DocsInternationalizedHeadingBodyPairing = (args, context) => Container({
 	direction: "column",
 	withBorder: false,
-	content: html`
-	${Template({
+	content: Template({
 		...args,
-		context,
 		lang: "ja",
 		content: [
 			{
@@ -543,5 +530,5 @@ export const DocsInternationalizedHeadingBodyPairing = (args, context) => Contai
 				content: "見出しとよく対になる本文。",
 			}
 		],
-	})}`
-});
+	}, context)
+}, context);

@@ -57,11 +57,13 @@
 	"spectrum": [
 		{
 			"guidelines": "https://spectrum.adobe.com/page/progress-bar",
-			"rootClass": "spectrum-ProgressBar"
+			"rootClass": "spectrum-ProgressBar",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/progress-bar/"
 		},
 		{
 			"guidelines": "https://spectrum.adobe.com/page/meter",
-			"rootClass": "spectrum-Meter"
+			"rootClass": "spectrum-Meter",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/meter/"
 		}
 	]
 }

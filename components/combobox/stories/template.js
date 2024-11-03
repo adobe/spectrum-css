@@ -185,7 +185,7 @@ export const VariantGroup = (args, context) => {
 				heading: variant.heading,
 				containerStyles: {"gap": "8px"},
 				content: Template(variant.args, context),
-			}))
+			}, context))
 		}`
-	});
+	}, context);
 };

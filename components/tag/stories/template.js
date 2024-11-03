@@ -2,7 +2,7 @@ import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
-import { html } from "lit";
+import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -84,22 +84,20 @@ export const TagsDefaultOptions = ({
 		columnGap: "12px",
 	},
 	content: html`
-		${Template({
-			...args,
-		}, context )}
-		${!args.isInvalid ? 
+		${Template(args, context)}
+		${!args.isInvalid ?
 			Template({
 				...args,
 				hasIcon: true,
 				iconName: "CheckmarkCircle"
-			}, context ): "" }
-		${!args.isInvalid ? 
+			}, context): nothing }
+		${!args.isInvalid ?
 			Template({
 			...args,
 				hasAvatar: true,
 				avatarUrl: "example-ava.png",
-			}, context ): "" }`,
-});
+			}, context): nothing }`,
+}, context);
 
 export const SelectedTemplate = (args, context) => Container({
 	withBorder: false,
@@ -118,5 +116,5 @@ export const SelectedTemplate = (args, context) => Container({
 			isSelected,
 			isInvalid
 		})
-	}, context ))}`
-});
+	}, context))}`
+}, context);

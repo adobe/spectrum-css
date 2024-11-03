@@ -175,15 +175,15 @@ export const OverflowGroup = (args, context) => Container({
 			heading: "Default overflow",
 			containerStyles: { "gap": "8px", },
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Compact overflow",
 			containerStyles: { "gap": "8px", },
 			content: Template({...args, isCompact: true, isQuiet: true}, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const VerticalGroup = (args, context) => Container({
 	direction: "column",
@@ -195,51 +195,51 @@ export const VerticalGroup = (args, context) => Container({
 			heading: "Label and icon",
 			containerStyles: {"gap": "8px"},
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Emphasized, with label and icon",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, isEmphasized: true, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Label only",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, content: LabelOnlyTabsContent, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Emphasized, with label only",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Compact, with label and icon",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, isCompact: true, isQuiet: true, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Compact, emphasized, with label and icon",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, isEmphasized: true, isCompact: true, isQuiet: true, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Compact, label only",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, content: LabelOnlyTabsContent, isCompact: true, isQuiet: true, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Compact, emphasized label only",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, isCompact: true, isQuiet: true, }, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 /* Shows variants of quiet story in a single group. */
 export const QuietGroup = (args, context) => Container({
@@ -251,34 +251,34 @@ export const QuietGroup = (args, context) => Container({
 			withBorder: false,
 			heading: "Label and icon",
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Emphasized, with label and icon",
 			content: Template({...args, isEmphasized: true, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Label only",
 			content: Template({...args, content: LabelOnlyTabsContent, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Emphasized, with label only",
 			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Icon only",
 			content: Template({...args, iconOnly: true, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Emphasized, icon-only",
 			content: Template({...args, isEmphasized: true, iconOnly: true, }, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 /* Shows variants of compact story in a single group. */
 export const CompactGroup = (args, context) => Container({
@@ -290,31 +290,31 @@ export const CompactGroup = (args, context) => Container({
 			withBorder: false,
 			heading: "Label and icon (quiet)",
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Emphasized, with label and icon (quiet)",
 			content: Template({...args, isEmphasized: true, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Label only",
 			content: Template({...args, content: LabelOnlyTabsContent, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Emphasized, with label only (quiet)",
 			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Icon only (quiet)",
 			content: Template({...args, iconOnly: true, }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Emphasized, icon-only (quiet)",
 			content: Template({...args, isEmphasized: true, iconOnly: true, }, context),
-		})}
+		}, context)}
 	`
-});
+}, context);

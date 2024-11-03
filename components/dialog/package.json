@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/dialog",
-	"version": "10.1.4",
+	"version": "10.1.5",
 	"description": "The Spectrum CSS dialog component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -70,7 +70,8 @@
 	"spectrum": [
 		{
 			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/standard-dialog-beta",
-			"rootClass": "spectrum-Dialog"
+			"rootClass": "spectrum-Dialog",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/dialog/"
 		}
 	]
 }

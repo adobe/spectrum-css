@@ -209,14 +209,14 @@ export const HelpTextOptions = (args, context) => Container({
 			withBorder: false,
 			heading: "Description",
 			content: Template({...args, isRequired: true, labelText: "Username", value: "lisawilson24", helpText: "Username must be at least 8 characters."}, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Error message",
 			content: Template({...args, isRequired: true, labelText: "Email address", value: "abc@adobe.com", helpText: "Enter your email address", isInvalid: true }, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const TextFieldOptions = (args, context) => Container({
 	direction: "row",
@@ -232,7 +232,7 @@ export const TextFieldOptions = (args, context) => Container({
 			},
 			heading: "Default",
 			content: Template({...args, context})
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -240,7 +240,7 @@ export const TextFieldOptions = (args, context) => Container({
 			},
 			heading: "Invalid",
 			content: Template({...args, isInvalid: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -248,7 +248,7 @@ export const TextFieldOptions = (args, context) => Container({
 			},
 			heading: "Focused",
 			content: Template({...args, isFocused: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -256,7 +256,7 @@ export const TextFieldOptions = (args, context) => Container({
 			},
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -264,7 +264,7 @@ export const TextFieldOptions = (args, context) => Container({
 			},
 			heading: "Keyboard-focused",
 			content: Template({...args, isKeyboardFocused: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -272,6 +272,6 @@ export const TextFieldOptions = (args, context) => Container({
 			},
 			heading: "Invalid, keyboard-focused",
 			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
