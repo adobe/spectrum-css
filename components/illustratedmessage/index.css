@@ -14,11 +14,11 @@ governing permissions and limitations under the License.
 	/* Size & Spacing */
 	--spectrum-illustrated-message-description-max-inline-size: var(--spectrum-illustrated-message-maximum-width);
 	--spectrum-illustrated-message-heading-max-inline-size: var(--spectrum-illustrated-message-maximum-width);
-	--spectrum-illustrated-message-title-to-heading: var(--spectrum-spacing-400);
 	--spectrum-illustrated-message-heading-to-description: var(--spectrum-spacing-75);
 	--spectrum-illustrated-message-illustration-to-heading: var(--spectrum-spacing-200);
 	--spectrum-illustrated-message-illustration-to-content: var(--spectrum-spacing-200);
 	--spectrum-illustration-message-description-to-action: var(--spectrum-spacing-300);
+	--mod-buttongroup-justify-content: center;
 
 	/* Illustration */
 	--spectrum-illustrated-message-illustration-color: var(--spectrum-neutral-content-color-default);
@@ -32,6 +32,7 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-medium-title-font-size);
 	--spectrum-illustrated-message-title-line-height: var(--spectrum-title-line-height);
 	--spectrum-illustrated-message-title-color: var(--spectrum-heading-color);
+	--spectrum-illustrated-message-cjk-title-font-size: var(--spectrum-illustrated-message-medium-cjk-title-font-size);
 
 	/* Description */
 	--spectrum-illustrated-message-description-font-family: var(--spectrum-body-sans-serif-font-family);
@@ -45,7 +46,7 @@ governing permissions and limitations under the License.
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
-		--spectrum-illustrated-message-cjk-title-font-size: var(--spectrum-illustrated-message-medium-cjk-title-font-size);
+		--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-cjk-title-font-size);
 	}
 }
 
@@ -57,8 +58,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-IllustratedMessage--sizeS {
-	--spectrum-illustrated-message-illustration-to-heading: var(--spectrum-spacing-200);
-	--spectrum-illustrated-message-illustration-to-content: var(--spectrum-spacing-200);
 	--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-small-title-font-size);
 	--spectrum-illustrated-message-description-font-size: var(--spectrum-illustrated-message-small-body-font-size);
 	--spectrum-illustrated-message-cjk-title-font-size: var(--spectrum-illustrated-message-small-cjk-title-font-size);
@@ -81,16 +80,16 @@ governing permissions and limitations under the License.
 	justify-content: center;
 	text-align: center;
 	pointer-events: var(--mod-illustrated-message-pointer-events, auto);
-	max-inline-size: var(--mod-illustrated-message-content-maximum-width);
+	max-inline-size: var(--mod-illustrated-message-vertical-maximum-width, var(--spectrum-illustrated-message-vertical-maximum-width));
 }
 
 .spectrum-IllustratedMessage-illustration {
-	margin-block-end: var(--mod-illustrated-message-title-to-heading, var(--spectrum-illustrated-message-illustration-to-heading));
+	margin-block-end: var(--mod-illustrated-message-illustration-to-heading, var(--spectrum-illustrated-message-illustration-to-heading));
 	color: var(--highcontrast-illustrated-message-illustration-color, var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color)));
 	fill: currentColor;
 	stroke: currentColor;
-	block-size: var(--spectrum-illustrated-message-illustration-size);
-	inline-size: var(--spectrum-illustrated-message-illustration-size);
+	block-size: var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size));
+	inline-size: var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size));
 }
 
 .spectrum-IllustratedMessage-accent {
@@ -110,9 +109,8 @@ governing permissions and limitations under the License.
 
 	color: var(--mod-illustrated-message-title-color, var(--spectrum-illustrated-message-title-color));
 
-	max-inline-size: var(--mod-illustrated-message-heading-max-inline-size, var(--spectrum-illustrated-message-heading-max-inline-size));
 	margin-block-start: 0;
-	margin-block-end: var(--mod-illustrated-message-heading-to-body, var(--spectrum-illustrated-message-heading-to-description));
+	margin-block-end: var(--mod-illustrated-message-heading-to-description, var(--spectrum-illustrated-message-heading-to-description));
 }
 
 .spectrum-IllustratedMessage-description {
@@ -128,20 +126,12 @@ governing permissions and limitations under the License.
 
 	color: var(--mod-illustrated-message-description-color, var(--spectrum-illustrated-message-description-color));
 
-	max-inline-size: var(--mod-illustrated-message-description-max-inline-size, var(--spectrum-illustrated-message-description-max-inline-size));
 	margin-block-start: var(--mod-illustrated-message-heading-to-description, 0);
 	margin-block-end: var(--spectrum-illustration-message-description-to-action);
 }
 
-.spectrum-IllustratedMessage--vertical {
-	max-inline-size: var(--spectrum-illustrated-message-vertical-maximum-width);
-
-	.spectrum-ButtonGroup {
-		justify-content: center;
-	}
-}
-
 .spectrum-IllustratedMessage--horizontal {
+	--mod-buttongroup-justify-content: flex-start;
 	max-inline-size: var(--spectrum-illustrated-message-horizontal-maximum-width);
 	flex-direction: row;
 	text-align: start;

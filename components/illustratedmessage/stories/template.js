@@ -12,6 +12,7 @@ export const Template = ({
 	customClasses = [],
 	useAccentColor = false,
 	hasButtons = false,
+	isHorizontal = false,
 	orientation,
 	size = "m",
 }) => html`
@@ -19,6 +20,7 @@ export const Template = ({
 		class=${classMap({
 			[rootClass]: true,
 			[`${rootClass}--${orientation}`]: typeof orientation !== "undefined",
+			[`${rootClass}--horizontal`]: isHorizontal,
 			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
