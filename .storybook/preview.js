@@ -7,7 +7,6 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
-	withTextDirectionWrapper
 } from "./decorators";
 import {
 	FontLoader,
@@ -124,7 +123,6 @@ export default {
 	decorators: [
 		withLanguageWrapper,
 		withReducedMotionWrapper,
-		withTextDirectionWrapper,
 		withContextWrapper,
 		withTestingPreviewWrapper,
 		withArgEvents,
