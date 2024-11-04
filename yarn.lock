@@ -17,9 +17,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/artifact@npm:^2.1.9":
-  version: 2.1.9
-  resolution: "@actions/artifact@npm:2.1.9"
+"@actions/artifact@npm:^2.1.11":
+  version: 2.1.11
+  resolution: "@actions/artifact@npm:2.1.11"
   dependencies:
     "@actions/core": "npm:^1.10.0"
     "@actions/github": "npm:^5.1.1"
@@ -31,11 +31,10 @@ __metadata:
     "@octokit/request-error": "npm:^5.0.0"
     "@protobuf-ts/plugin": "npm:^2.2.3-alpha.1"
     archiver: "npm:^7.0.1"
-    crypto: "npm:^1.0.1"
     jwt-decode: "npm:^3.1.2"
     twirp-ts: "npm:^2.5.0"
     unzip-stream: "npm:^0.3.1"
-  checksum: 10c0/b37bf63ee3562d571d9ef4fd21c64badea7caac24874fb5dab52597031535bdda88ce5334b887609acdabb8b1de282b5e61a3c6043ef0ced9e225211a5c3c61e
+  checksum: 10c0/8f5fcd66616b6b1393e0aac00ac1eff6b21184a934b25c8ee8682c4481aa3f86bd9ceb9cdfbb69efbbfb4852eb9114e1afcdde2bf4ca01bc4f71c81e969b35e7
   languageName: node
   linkType: hard
 
@@ -4364,7 +4363,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/gh-action-file-diff@workspace:.github/actions/file-diff"
   dependencies:
-    "@actions/artifact": "npm:^2.1.9"
+    "@actions/artifact": "npm:^2.1.11"
     "@actions/core": "npm:^1.10.1"
     "@actions/github": "npm:^6.0.0"
     "@actions/glob": "npm:^0.5.0"
@@ -7694,13 +7693,6 @@ __metadata:
     shebang-command: "npm:^2.0.0"
     which: "npm:^2.0.1"
   checksum: 10c0/5738c312387081c98d69c98e105b6327b069197f864a60593245d64c8089c8a0a744e16349281210d56835bb9274130d825a78b2ad6853ca13cfbeffc0c31750
-  languageName: node
-  linkType: hard
-
-"crypto@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "crypto@npm:1.0.1"
-  checksum: 10c0/fcf7dbd68ac5415b7fde7d7208fe203038e92e83e8a8fcf6e86ab4771ce3dd026d6967a990ba56b9d1c771378210814d5c90d907d3739fbd1723d552ad6c8ab8
   languageName: node
   linkType: hard
 
