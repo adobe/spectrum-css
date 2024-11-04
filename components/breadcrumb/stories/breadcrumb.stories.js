@@ -18,16 +18,22 @@ export default {
 		items: { table: { disable: true } },
 		variant: {
 			name: "Variant",
-			description: "Adjusts the overall sizing and density.",
 			type: { name: "string" },
 			defaultValue: "medium",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
-				// defaultValue: { summary: "medium" },
+				defaultValue: { summary: "medium" },
 			},
 			options: ["medium", "large", "multiline"],
-			control: "inline-radio",
+			control: {
+				type: "radio",
+				labels: {
+					medium: "Medium (default)",
+					large: "Large",
+					multiline: "Multiline",
+				},
+			},
 		},
 		isDragged: {
 			name: "Dragged",

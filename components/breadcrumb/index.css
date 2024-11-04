@@ -31,19 +31,25 @@
 	/* Space between separator chevron and items */
 	--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-medium);
 
-	/* Vertical spacing for text and separator */
+	/* Space between edge of component and start/end items */
+	--spectrum-breadcrumbs-inline-start-to-text: var(--spectrum-breadcrumbs-start-edge-to-text-medium);
+	--spectrum-breadcrumbs-inline-end-to-text: var(--spectrum-breadcrumbs-end-edge-to-text);
+
+	/* Vertical spacing for text and separator icon */
 	--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-component-top-to-text-100);
 	--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-medium);
+	--spectrum-breadcrumbs-title-spacing-block-start: var(--spectrum-breadcrumbs-text-spacing-block-start);
+	--spectrum-breadcrumbs-title-spacing-block-end: var(--spectrum-breadcrumbs-text-spacing-block-end);
 
 	/* Horizontal outer spacing of list */
-	--spectrum-breadcrumbs-inline-start: var(--spectrum-breadcrumbs-start-edge-to-text);
+	--spectrum-breadcrumbs-inline-start: var(--spectrum-breadcrumbs-start-edge-to-text-medium);
 	--spectrum-breadcrumbs-inline-end: var(--spectrum-breadcrumbs-end-edge-to-text);
+	--spectrum-breadcrumbs-inline-start-to-truncated-menu: var(--spectrum-breadcrumbs-start-edge-to-truncated-menu);
 
-	/* Action button (truncated menu / folder icon) spacing  */
+	/* Action button (truncated menu) spacing  */
 	--spectrum-breadcrumbs-action-button-spacing-inline: var(--spectrum-breadcrumbs-truncated-menu-to-separator-icon);
 	--spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu);
-	--spectrum-breadcrumbs-first-action-button-spacing-inline-start: var(--spectrum-breadcrumbs-start-edge-to-truncated-menu); /* if icon is first item */
 
 	/* Focus indicator */
 	--spectrum-breadcrumbs-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
@@ -58,32 +64,36 @@
 	--spectrum-breadcrumbs-action-button-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
+}
 
-	/* Layout: large */
-	&--large {
-		--spectrum-breadcrumbs-block-size: var(--spectrum-component-size-200);
-		--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-200);
-		--spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
+/* Variant: large */
+.spectrum-Breadcrumbs--large {
+	--spectrum-breadcrumbs-block-size: var(--spectrum-component-size-200);
+	--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-200);
+	--spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
 
-		--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-large);
-		--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-component-top-to-text-200);
-		--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-component-bottom-to-text-200);
-		--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-large);
-	}
+	--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-large);
+	--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-component-top-to-text-200);
+	--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-component-bottom-to-text-200);
+	--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-large);
+	--spectrum-breadcrumbs-inline-start: var(--spectrum-breadcrumbs-start-edge-to-text-large);
+}
 
-	/* Layout: multiline */
-	&--multiline {
-		--spectrum-breadcrumbs-block-size: var(--spectrum-breadcrumbs-height-multiline);
-		--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-75);
-		--spectrum-breadcrumbs-font-size-current: var(--spectrum-heading-size-l);
-		--spectrum-breadcrumbs-font-weight-current: var(--spectrum-extra-bold-font-weight);
+/* Variant: multiline */
+.spectrum-Breadcrumbs--multiline {
+	--spectrum-breadcrumbs-block-size: var(--spectrum-breadcrumbs-height-multiline);
+	--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-75);
+	--spectrum-breadcrumbs-font-size-current: var(--spectrum-heading-size-l);
+	--spectrum-breadcrumbs-font-weight-current: var(--spectrum-extra-bold-font-weight);
 
-		--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-multiline);
-		--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-breadcrumbs-top-to-text-multiline);
-		--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-breadcrumbs-bottom-to-text-multiline);
-		--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-multiline) var(--spectrum-breadcrumbs-separator-icon-to-bottom-text-multiline);
-		--spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu) var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text);
-	}
+	--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-multiline);
+	--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-breadcrumbs-top-to-text-multiline);
+	--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-breadcrumbs-top-text-to-bottom-text);
+	--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-multiline) var(--spectrum-breadcrumbs-separator-to-bottom-text-multiline);
+	--spectrum-breadcrumbs-title-spacing-block-start: 0;
+	--spectrum-breadcrumbs-title-spacing-block-end: var(--spectrum-breadcrumbs-bottom-to-text-multiline);
+	--spectrum-breadcrumbs-inline-start: var(--spectrum-breadcrumbs-start-edge-to-text-multiline);
+	--spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu) var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text);
 }
 
 .spectrum-Breadcrumbs {
@@ -98,11 +108,6 @@
 	align-items: center;
 	justify-content: flex-start;
 	flex: 1 0 0%;
-}
-
-.spectrum-Breadcrumbs--multiline {
-	flex-wrap: wrap;
-	align-content: center;
 }
 
 .spectrum-Breadcrumbs-itemSeparator {
@@ -138,19 +143,9 @@
 		.spectrum-Breadcrumbs-itemSeparator {
 			display: none;
 		}
-
-		/* The multiline title takes up the full width and appears below the other breadcrumb items. */
-		.spectrum-Breadcrumbs--multiline & {
-			block-size: auto;
-			inline-size: 100%;
-
-			.spectrum-Breadcrumbs-itemLink {
-				margin-block-start: 0;
-			}
-		}
 	}
 
-	/* Truncated menu (folder icon) */
+	/* Truncated menu */
 	> .spectrum-ActionButton {
 		margin-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
 		margin-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
@@ -161,9 +156,9 @@
 		}
 	}
 
-	/* If truncated menu (folder icon) is the first item */
+	/* If truncated menu is the first item */
 	&:first-of-type > .spectrum-ActionButton {
-		margin-inline-start: var(--mod-breadcrumbs-first-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-first-action-button-spacing-inline-start));
+		margin-inline-start: var(--mod-breadcrumbs-inline-start-to-truncated-menu, var(--spectrum-breadcrumbs-inline-start-to-truncated-menu));
 	}
 }
 
@@ -188,6 +183,8 @@
 	/* Breadcrumbs title (current item) */
 	.spectrum-Breadcrumbs-item:last-of-type & {
 		color: var(--highcontrast-breadcrumbs-text-color-current, var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current)));
+		margin-block-start: var(--mod-breadcrumbs-title-spacing-block-start, var(--spectrum-breadcrumbs-title-spacing-block-start));
+		margin-block-end: var(--mod-breadcrumbs-title-spacing-block-end, var(--spectrum-breadcrumbs-title-spacing-block-end));
 	}
 
 	/* Link is focusable */
@@ -196,6 +193,7 @@
 		cursor: pointer;
 
 		&:hover,
+		&:active,
 		&:focus-visible {
 			text-decoration: underline;
 			text-decoration-thickness: var(--mod-breadcrumbs-text-decoration-thickness, var(--spectrum-breadcrumbs-text-decoration-thickness));
@@ -223,6 +221,18 @@
 	border-style: solid;
 	border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius));
 	border-color: var(--highcontrast-breadcrumbs-focus-indicator-color, var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color)));
+}
+
+/* Multiline */
+.spectrum-Breadcrumbs--multiline {
+	flex-wrap: wrap;
+	align-content: center;
+
+	/* The multiline title takes up the full width and appears below the other breadcrumb items. */
+	.spectrum-Breadcrumbs-item:last-of-type {
+		block-size: auto;
+		inline-size: 100%;
+	}
 }
 
 @media (forced-colors: active) {
