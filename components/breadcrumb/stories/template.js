@@ -43,7 +43,11 @@ export const Template = (
 									isDisabled,
 									isQuiet: true,
 									customIconClasses: [`${rootClass}-folder`],
-									size: "m",
+									size: {
+										medium: "m",
+										large: "l",
+										multiline: "s",
+									}[variant],
 								},
 								context,
 							),
@@ -71,7 +75,7 @@ export const Template = (
 					${when(idx !== arr.length - 1, () =>
 						Icon(
 							{
-								iconName: "ChevronRight100",
+								iconName: variant == "multiline" ? "ChevronRight75" : "ChevronRight100",
 								setName: "ui",
 								customClasses: [`${rootClass}-itemSeparator`],
 							},
