@@ -1,3 +1,4 @@
+import { Container } from "@spectrum-css/preview/decorators";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
@@ -52,3 +53,13 @@ export const Template = ({
 		</div>
 	`;
 };
+
+/* Displays icon-only, text-only, and icon-and-text badge options. */
+export const ContentOptions = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Template(args, context)}
+		${Template({ ...args, iconName: undefined }, context)}
+		${Template({ ...args, label: undefined }, context)}
+	`
+});
