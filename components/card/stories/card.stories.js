@@ -151,6 +151,7 @@ Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/** A quiet card for a file asset. */
 export const QuietFile = Template.bind({});
 QuietFile.storyName = "Quiet (file)";
 QuietFile.args = {
@@ -165,6 +166,7 @@ QuietFile.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/** A card with a horizontal layout. */
 export const Horizontal = Template.bind({});
 Horizontal.tags = ["!dev"];
 Horizontal.parameters = {
@@ -180,6 +182,7 @@ Horizontal.args = {
 	hasQuickAction: false,
 };
 
+/** A standard card with no photo */
 export const NoImage = Template.bind({});
 NoImage.args = {
 	title: "Card title",
@@ -190,6 +193,7 @@ NoImage.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/** A quiet card for a folder asset. */
 export const QuietFolder = Quiet.bind({});
 QuietFolder.args = {
 	title: "Name",
@@ -230,6 +234,10 @@ QuietSelected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+
+/** Card preview areas can have any aspect ratio between 4:1 (shortest) and 3:4 (tallest).
+
+The recommended default preview size is 2:1. */
 export const AssetPreview = Template.bind({});
 AssetPreview.args = {
 	title: "Card title",
