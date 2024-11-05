@@ -1,6 +1,4 @@
-import { allFakers } from "@faker-js/faker";
 import { makeDecorator, useEffect } from '@storybook/preview-api';
-import { capitalize } from "lodash-es";
 import { fetchContainers } from "./helpers";
 /* global Typekit */
 
@@ -21,13 +19,6 @@ export const withLanguageWrapper = makeDecorator({
 
 		const isNotEnglish = lang && lang !== "en-US";
 		const isRTL = ["ar", "fa", "he"].includes(lang);
-
-		// @todo: this can't be used for VRT because the strings are random
-		// Attach the generator tool to the parameters for use in the story
-		context.generator = allFakers?.[lang];
-
-		// Add a custom generator for titles
-		context.generator.lorem.title = (count) => capitalize(context.generator.lorem.words(count));
 
 		// Add a textDirection property to the globals for use in the story
 		context.globals.textDirection = isRTL ? "rtl" : "ltr";
