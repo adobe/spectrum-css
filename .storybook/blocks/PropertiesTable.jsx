@@ -1,10 +1,10 @@
-import "@spectrum-css/table";
+import "@spectrum-css/table/dist/index.css";
 
 import { DocsContext, useOf } from "@storybook/blocks";
-import { ResetWrapper } from "@storybook/components";
 import { NAVIGATE_URL } from "@storybook/core-events";
 import { styled } from "@storybook/theming";
 import React, { useContext } from 'react';
+import { ThemeContainer } from "./ThemeContainer.jsx";
 import { Body, Code, LinkableHeading } from "./Typography.jsx";
 
 export const Table = styled.table`
@@ -32,7 +32,7 @@ export const PropertiesTable = () => {
 	if (!metadata?.modifiers || !metadata?.modifiers.length) return;
 
 	return (
-		<ResetWrapper>
+		<ThemeContainer color="light" display="contents">
 			<LinkableHeading id="modifiable-properties" size="m">
 				<a aria-hidden="true" href="#modifiable-properties" tabIndex="-1" target="_self" onClick={() => {
 					context.channel.emit(NAVIGATE_URL, "#modifiable-properties");
@@ -61,6 +61,6 @@ export const PropertiesTable = () => {
 					))}
 				</tbody>
 			</Table>
-		</ResetWrapper>
+		</ThemeContainer>
 	);
 };
