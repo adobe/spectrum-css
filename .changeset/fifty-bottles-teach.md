@@ -76,7 +76,6 @@
 "@spectrum-css/link": minor
 "@spectrum-css/menu": minor
 "@spectrum-css/page": minor
-"@spectrum-css/site": minor
 "@spectrum-css/tabs": minor
 "@spectrum-css/tray": minor
 "@spectrum-css/well": minor
