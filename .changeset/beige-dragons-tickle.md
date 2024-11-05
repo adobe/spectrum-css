@@ -31,6 +31,9 @@ Removed tokens
 `--spectrum-illustrated-message-title-to-heading`
 `--spectrum-illustrated-message-description-max-inline-size`
 `--spectrum-illustrated-message-heading-max-inline-size`
+`--spectrum-illustrated-message-illustration-accent-color`
+`--mod-illustrated-message-illustration-accent-color`
+`--highcontrast-illustrated-message-illustration-accent-color`
 
 ## Dropzone
 
