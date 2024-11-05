@@ -1,5 +1,19 @@
 # Change Log
 
+## 8.2.0
+
+### Minor Changes
+
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+
+### Patch Changes
+
+- Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
+  - @spectrum-css/actiongroup@5.2.0
+  - @spectrum-css/closebutton@5.3.0
+  - @spectrum-css/fieldlabel@8.2.0
+  - @spectrum-css/popover@7.2.0
+
 ## 8.1.3
 
 ### Patch Changes
