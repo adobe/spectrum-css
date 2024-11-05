@@ -7,7 +7,7 @@ import "@spectrum-css/tokens/dist/index.css";
 const Container = styled.section`
     color: var(--spectrum-neutral-content-color-default);
     background-color: var(--spectrum-background-layer-1-color);
-    display: flex;
+    display: ${props => props.display ?? "flex" };
     padding-inline: 48px 24px;
     padding-block: 60px;
     flex-direction: column;
