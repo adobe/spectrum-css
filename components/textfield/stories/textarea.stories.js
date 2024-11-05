@@ -143,6 +143,7 @@ Sizing.parameters = {
 /**
  * When the text area was focused using the keyboard (e.g. with the tab key), the implementation must add the `is-keyboardFocused` class, which
  * displays the focus indicator. This indicator should not appear on focus from a click or tap.
+ * The example below has this class applied on first load for demonstration purposes.
  */
 export const KeyboardFocus = KeyboardFocusTemplate.bind({});
 KeyboardFocus.tags = ["!dev"];

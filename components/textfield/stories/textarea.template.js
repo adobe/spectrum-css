@@ -75,22 +75,6 @@ export const TextAreaOptions = (args, context) => Container({
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
 		}, context)}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Keyboard-focused",
-			content: Template({...args, isKeyboardFocused: true}, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Invalid, keyboard-focused",
-			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
-		}, context)}
 	`
 }, context);
 
@@ -108,7 +92,7 @@ export const KeyboardFocusTemplate = (args, context) => Container({
 			},
 			heading: "Default",
 			content: Template({...args, isKeyboardFocused: true}, context)
-		}), context}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -116,6 +100,6 @@ export const KeyboardFocusTemplate = (args, context) => Container({
 			},
 			heading: "Quiet",
 			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
-		}), context}
+		}, context)}
 	`
 }, context);
