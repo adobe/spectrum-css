@@ -334,8 +334,14 @@ export const LocaleWrapper = (args, context) => {
 			value: "สมชาย",
 		},
 	};
-	const { lang } = context.globals;
+
+	const { lang: contextLang } = context.globals;
+	const lang = args.lang || contextLang;
 	const { labelText, value } = translations[lang] ?? translations.en;
 
-	return Template({ ...args, labelText, value }, context);
+	return html`
+		<div lang=${ifDefined(args.lang)}>
+			${Template({ ...args, labelText, value }, context)}
+		</div>
+	`;
 };

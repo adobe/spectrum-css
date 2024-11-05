@@ -3,8 +3,8 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptions, KeyboardFocusTemplate, LocaleWrapper, Template, TextFieldOptions } from "./template.js";
-import { TextFieldGroup } from "./textfield.test.js";
+import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
+import { TextFieldGroup, TextFieldLocaleGroup } from "./textfield.test.js";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
@@ -149,7 +149,7 @@ export const Default = TextFieldGroup.bind({});
 Default.tags = ["!autodocs"];
 Default.args = {};
 
-export const WithLocaleText = LocaleWrapper.bind({});
+export const WithLocaleText = TextFieldLocaleGroup.bind({});
 WithLocaleText.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
