@@ -124,10 +124,24 @@ export const Template = ({
 					isFocused: true,
 				});
 			}}
+			@keyup=${function(e) {
+				// Tab key was used.
+				if (e.keyCode === 9) {
+					// The element that was focused when the key was released is this textfield / input.
+					if (e.target == this || e.target?.parentNode == this) {
+						updateArgs?.({ isKeyboardFocused: true });
+						// Manually add class since updateArgs doesn't always work on the Docs page.
+						this.classList.add("is-keyboardFocused");
+					}
+				}
+			}}
 			@focusout=${function() {
 				updateArgs?.({
 					isFocused: false,
+					isKeyboardFocused: false,
 				});
+				// Manually remove class since updateArgs doesn't always work on the Docs page.
+				this.classList.remove("is-keyboardFocused");
 			}}
 			id=${ifDefined(id)}
 		>
@@ -187,13 +201,14 @@ export const Template = ({
 			customClasses: customProgressCircleClasses,
 		}, context))}
 		${when(helpText, () =>
-				HelpText({
-					text: helpText,
-					variant: isInvalid ? "negative" : "neutral",
-					size,
-					hideIcon: true,
-					isDisabled
-				}, context ))}
+			HelpText({
+				text: helpText,
+				variant: isInvalid ? "negative" : "neutral",
+				size,
+				hideIcon: true,
+				isDisabled
+			}, context)
+		)}
 	</div>
 	`;
 };
