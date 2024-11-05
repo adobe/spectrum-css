@@ -38,6 +38,8 @@
 	--spectrum-drop-zone-border-color-hover: var(--spectrum-accent-visual-color);
 	--spectrum-drop-zone-illustration-color: var(--spectrum-neutral-visual-color);
 	--spectrum-drop-zone-illustration-color-hover: var(--spectrum-accent-visual-color);
+	--spectrum-drop-zone-illustration-to-title: var(--spectrum-spacing-200);
+	--spectrum-drop-zone-body-to-action: var(--spectrum-spacing-300);
 
 	/* Filled styles */
 	--spectrum-drop-zone-content-height: var(--spectrum-component-height-300);
@@ -59,7 +61,9 @@
 	--mod-illustrated-message-vertical-maximum-width: var(--mod-drop-zone-content-maximum-width, var(--spectrum-drop-zone-content-maximum-width));
 	--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color, var(--spectrum-drop-zone-illustration-color));
 	--mod-illustrated-message-illustration-to-heading: var(--mod-drop-zone-illustration-to-heading, var(--spectrum-drop-zone-illustration-to-heading));
+	--mod-illustrated-message-illustration-to-content: var(--mod-drop-zone-illustration-to-title, var(--spectrum-drop-zone-illustration-to-title));
 	--mod-illustrated-message-heading-to-description: var(--mod-drop-zone-heading-to-body, var(--spectrum-drop-zone-heading-to-body));
+	--mod-illustrated-message-description-to-action: var(--mod-drop-zone-body-to-action, var(--spectrum-drop-zone-body-to-action));
 	--mod-illustrated-message-title-font-family: var(--mod-drop-zone-heading-font-family, var(--spectrum-drop-zone-heading-font-family));
 	--mod-illustrated-message-title-font-weight: var(--mod-drop-zone-heading-font-weight, var(--spectrum-drop-zone-heading-font-weight));
 	--mod-illustrated-message-title-font-style: var(--mod-drop-zone-heading-font-style, var(--spectrum-drop-zone-heading-font-style));
@@ -68,7 +72,6 @@
 	--mod-illustrated-message-title-color: var(--mod-drop-zone-heading-color, var(--spectrum-drop-zone-heading-color));
 	--mod-illustrated-message-description-position: relative;
 	--mod-illustrated-message-description-z-index: 10;
-	--mod-illustrated-message-heading-to-description: 0;
 	--mod-illustrated-message-description-font-family: var(--mod-drop-zone-body-font-family, var(--spectrum-drop-zone-body-font-family));
 	--mod-illustrated-message-description-font-weight: var(--mod-drop-zone-body-font-weight, var(--spectrum-drop-zone-body-font-weight));
 	--mod-illustrated-message-description-font-style: var(--mod-drop-zone-body-font-style, var(--spectrum-drop-zone-body-font-style));

@@ -10,6 +10,22 @@ This migration contains new tokens for t-shirt sizes (S, M, L), vertical and hor
 ## Illustrated Message
 
 New tokens
+`--spectrum-illustrated-message-heading-to-description`
+`--spectrum-illustrated-message-illustration-to-heading`
+`--spectrum-illustrated-message-illustration-to-content`
+`--spectrum-illustration-message-description-to-action`
+`--spectrum-illustrated-message-illustration-color`
+`--spectrum-illustrated-message-illustration-size`
+`--spectrum-illustrated-message-small-cjk-title-font-size`
+`--spectrum-illustrated-message-large-cjk-title-font-size`
+`--spectrum-illustrated-message-large-body-font-size`
+`--spectrum-illustrated-message-horizontal-maximum-width`
+
+New mods
+`--mod-illustrated-message-description-to-action`
+`--mod-illustrated-message-heading-to-description`
+`--mod-illustrated-message-illustration-to-content`
+`--mod-illustrated-message-horizontal-maximum-width`
 
 Removed tokens
 `--spectrum-illustrated-message-title-to-heading`
@@ -18,7 +34,7 @@ Removed tokens
 
 ## Dropzone
 
-Renamed mods (Dropzone)
+Renamed mods
 `--mod-illustrated-message-title-to-heading` > `--mod-illustrated-message-illustration-to-heading`
 `--mod-illustrated-message-heading-to-body` > `--mod-illustrated-message-heading-to-description`
 `--mod-illustrated-message-content-maximum-width` > `--mod-illustrated-message-vertical-maximum-width`
