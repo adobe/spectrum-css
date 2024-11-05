@@ -18,6 +18,7 @@ export default {
 	},
 	args: {
 		...Textfield.args,
+		rootClass: "spectrum-Textfield--multiline",
 		labelText: "Comments"
 	},
 	parameters: {

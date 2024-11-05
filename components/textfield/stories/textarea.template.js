@@ -4,14 +4,13 @@ import { Template as Textfield } from "./template";
 
 export const Template = ({
 	customClasses = [],
-	rootClass = "spectrum-Textfield",
+	rootClass = "spectrum-Textfield--multiline",
 	size = "m",
 	multiline = true,
 	...item
 } = {}, context = {}) => Textfield({
 	customClasses: [
 		rootClass,
-		typeof size !== "undefined" ? `${rootClass}--size${size.toUpperCase()}` : null,
 		...customClasses
 	],
 	size,
