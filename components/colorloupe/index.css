@@ -72,7 +72,7 @@
 }
 
 /* The checkerboard classes use opacity checkerboard tokens for dark and light color.
- The opacity-checkerboard-square-size token is not able to be used witin the SVG pattern and instead colorloupe.yml is using two different patterns toggled by --spectrum-colorloupe-checkerboard-fill */
+ The opacity-checkerboard-square-size token is not able to be used witin the SVG pattern and instead colorloupe docs are using two different patterns toggled by --spectrum-colorloupe-checkerboard-fill */
 
 .spectrum-ColorLoupe-checkerboard-pattern {
 	fill: var(--spectrum-colorloupe-checkerboard-dark-color);

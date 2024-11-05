@@ -4,9 +4,6 @@
 **/.hg
 **/node_modules
 
-# Static utility assets
-site/includes/*.js
-
 # Compiled and generated files
 dist
 .storybook/storybook-static

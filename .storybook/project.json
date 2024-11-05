@@ -22,9 +22,9 @@
 				},
 				"docs": {
 					"commands": [
-						"cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir . --output-dir ../dist/preview"
+						"cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir . --output-dir ../dist"
 					],
-					"outputs": ["{workspaceRoot}/dist/preview"]
+					"outputs": ["{workspaceRoot}/dist"]
 				}
 			},
 			"dependsOn": ["clean", "^build", { "target": "report", "tag": "component" }],
@@ -42,12 +42,12 @@
 			"configurations": {
 				"docs": {
 					"commands": [
-						"rimraf dist/preview",
-						"test -d dist/preview && echo \"Error: dist/preview directory could not be removed\" && exit 1 || exit 0"
+						"rimraf dist",
+						"test -d dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
 					],
 					"cwd": "{workspaceRoot}",
 					"inputs": [
-						"{workspaceRoot}/dist/preview",
+						"{workspaceRoot}/dist",
 						{ "externalDependencies": ["rimraf"] }
 					]
 				}
@@ -71,7 +71,7 @@
 				"commands": [
 					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/assets/*.css && stylelint --fix --cache --allow-empty-input {projectRoot}/assets/*.css",
 					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.{js,json} {projectRoot}/**/*.js --ignore-pattern \"!.storybook/\"",
-					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{yml,mdx}"
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx}"
 				]
 			}
 		},

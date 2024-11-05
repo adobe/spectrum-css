@@ -7,7 +7,6 @@ name: Build and verify production
     # - Publish the PR branch to Netlify
     # -------------------------------------------------------------
 
-
 on:
     push:
         branches: [main, spectrum-two]
@@ -62,11 +61,7 @@ jobs:
     # -------------------------------------------------------------
     publish_site:
         name: Publish
-        # The build step ensures we are leveraging the cache for the build
-        needs: [vrt]
         uses: ./.github/workflows/publish-site.yml
-        with:
-            storybook-url: ${{ needs.vrt.outputs.storybook-url || '' }}
         secrets: inherit
 
     todo_to_issue:
