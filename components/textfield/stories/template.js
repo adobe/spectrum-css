@@ -298,3 +298,44 @@ export const KeyboardFocusTemplate = (args, context) => Container({
 		}, context)}
 	`
 }, context);
+
+export const LocaleWrapper = (args, context) => {
+	const translations = {
+		en: {
+			labelText: "Username",
+			value: "john_doe",
+		},
+		ja: {
+			labelText: "ユーザー名",
+			value: "山田太郎",
+		},
+		zh: {
+			labelText: "用户名",
+			value: "张伟",
+		},
+		ko: {
+			labelText: "사용자 이름",
+			value: "김철수",
+		},
+		ar: {
+			labelText: "اسم المستخدم",
+			value: "محمد_أحمد",
+		},
+		he: {
+			labelText: "שם משתמש",
+			value: "דני123",
+		},
+		fa: {
+			labelText: "نام کاربری",
+			value: "علی_رضا",
+		},
+		th: {
+			labelText: "ชื่อผู้ใช้",
+			value: "สมชาย",
+		},
+	};
+	const { lang } = context.globals;
+	const { labelText, value } = translations[lang] ?? translations.en;
+
+	return Template({ ...args, labelText, value }, context);
+};

@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
+import { HelpTextOptions, KeyboardFocusTemplate, LocaleWrapper, Template, TextFieldOptions } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
 
 /**
@@ -148,6 +148,9 @@ export default {
 export const Default = TextFieldGroup.bind({});
 Default.tags = ["!autodocs"];
 Default.args = {};
+
+export const WithLocaleText = LocaleWrapper.bind({});
+WithLocaleText.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
 
