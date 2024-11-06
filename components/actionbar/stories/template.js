@@ -68,6 +68,8 @@ export const Template = ({
 					],
 				}),
 			],
+			popoverHeight: 42,
+			popoverWidth: 500,
 		})}
 	</div>
 `;
