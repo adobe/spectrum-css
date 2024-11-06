@@ -35,7 +35,7 @@ Removed properties
 `--mod-illustrated-message-illustration-accent-color`
 `--highcontrast-illustrated-message-illustration-accent-color`
 
-## Dropzone
+## Dropzone & Illustrated message
 
 New mods
 `--mod-drop-zone-body-to-action`
