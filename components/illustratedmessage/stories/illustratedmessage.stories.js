@@ -72,7 +72,8 @@ export default {
 		rootClass: "spectrum-IllustratedMessage",
 		isHorizontal: false,
 		size: "m",
-		hasButtons: true
+		hasButtons: true,
+		useAccentColor: false,
 	},
 	parameters: {
 		design: {
@@ -84,7 +85,7 @@ export default {
 	},
 };
 
-export const Default = IllustratedMessageGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	heading: "Error 404: Page not found",
 	description: [
