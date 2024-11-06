@@ -35,7 +35,7 @@ Removed tokens
 `--mod-illustrated-message-illustration-accent-color`
 `--highcontrast-illustrated-message-illustration-accent-color`
 
-## Dropzone
+## Dropzone & Illustrated message
 
 Renamed mods
 `--mod-illustrated-message-title-to-heading` > `--mod-illustrated-message-illustration-to-heading`
