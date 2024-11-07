@@ -131,6 +131,8 @@ export const Template = ({
 	content = [],
 	...globals
 }) => {
+
+	const popoverWidth = size === "s" ? 140 : size === "l" ? 191 : size === "xl" ? 192 : 166; // default value is "m" 
 	const pickerMarkup = Picker({
 		...globals,
 		size,
@@ -147,11 +149,14 @@ export const Template = ({
 	const popoverMarkup = content.length !== 0 ? Popover({
 		isOpen: isOpen && !isDisabled && !isLoading,
 		withTip: false,
-		position: "bottom",
+		position: "bottom-start",
 		isQuiet,
 		content,
 		size,
-		customStyles: customPopoverStyles,
+		customStyles: {
+			...customPopoverStyles,
+			width: `${popoverWidth}px`,
+		}
 	}) : "";
 
 	const helpTextMarkup = helpText ? HelpText({
