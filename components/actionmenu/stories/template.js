@@ -8,6 +8,7 @@ export const Template = ({
 	popoverId = "popover-1",
 	popoverTestId = "popover-1",
 	popoverTriggerId = "trigger",
+	position = "bottom",
 	customStyles = {},
 	customClasses = [],
 	items = [],
@@ -24,7 +25,7 @@ export const Template = ({
 
 	return Popover({
 		...globals,
-		position: "bottom",
+		position,
 		isOpen,
 		id: popoverId,
 		testId: popoverTestId,
