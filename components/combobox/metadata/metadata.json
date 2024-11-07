@@ -67,6 +67,7 @@
     ".spectrum-Combobox.is-readOnly.is-invalid:not(.spectrum-Combobox--quiet) .spectrum-Combobox-input:read-only",
     ".spectrum-Combobox.is-readOnly:not(.spectrum-Combobox--quiet) .spectrum-Combobox-input:read-only",
     ".spectrum-Combobox.is-readOnly:not(.spectrum-Combobox--quiet) .spectrum-Combobox-input:read-only:hover",
+    ".spectrum-Combobox.is-readOnly:not(.spectrum-Combobox--quiet) .spectrum-Combobox-textfield.is-keyboardFocused .spectrum-Combobox-input",
     ".spectrum-Combobox:has(:active) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox:has(:active) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox:has(:focus) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",

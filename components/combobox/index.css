@@ -223,6 +223,14 @@
 	}
 
 	&.is-readOnly:not(.spectrum-Combobox--quiet) {
+		.spectrum-Combobox-textfield {
+			&.is-keyboardFocused .spectrum-Combobox-input {
+				outline-offset: var(--mod-textfield-focus-indicator-gap);
+				outline: var(--mod-textfield-focus-indicator-width) solid;
+				outline-color: var(--mod-textfield-focus-indicator-color);
+			}
+		}
+
 		.spectrum-Combobox-input:read-only {
 			background-color: var(--spectrum-combobox-readonly-input-background-color);
 			border-color: var(--spectrum-combobox-readonly-input-border-color);
