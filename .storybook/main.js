@@ -1,3 +1,12 @@
+import fs from "fs";
+import path from "path";
+
+// Get a list of all the folders in the components directory
+const componentDir = path.resolve(__dirname, "../components");
+const components = fs.readdirSync(componentDir, { withFileTypes: true })
+	.filter(dirent => dirent.isDirectory() && fs.existsSync(path.resolve(componentDir, dirent.name, "package.json")))
+	.map(dirent => dirent.name);
+
 export default {
 	stories: [
 		{
@@ -17,7 +26,7 @@ export default {
 		},
 	],
 	rootDir: "../",
-	staticDirs: ["../assets", "./assets/images"],
+	staticDirs: ["./assets", "./assets/images"],
 	addons: [
 		{
 			name: "@storybook/addon-essentials",
@@ -27,9 +36,16 @@ export default {
 				viewport: false,
 				// Don't need backgrounds b/c this is handled by the color contexts.
 				backgrounds: false,
+				// Configure separately
+				docs: false,
+			},
+		},
+		{
+			name: "@storybook/addon-docs",
+			options: {
 				// Enables JSX support in MDX for projects that aren't configured to handle the format.
 				configureJSX: true,
-				// Support markdown in MDX files.
+				// Support markdown in MDX files
 				transcludeMarkdown: true,
 			},
 		},
@@ -55,7 +71,7 @@ export default {
 		const { mergeConfig } = await import("vite");
 
 		return mergeConfig(config, {
-			publicDir: "../assets",
+			publicDir: "./assets",
 			build: {
 				sourcemap: configType === "DEVELOPMENT",
 				manifest: true,
@@ -64,6 +80,9 @@ export default {
 			css: {
 				devSourcemap: configType === "DEVELOPMENT",
 			},
+			resolve: {
+				alias: components.map(component => ({ find: `@spectrum-css/${component}`, replacement: path.resolve(__dirname, `../components/${component}`) })),
+			}
 		});
 	},
 	framework: {

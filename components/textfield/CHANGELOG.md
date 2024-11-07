@@ -1,5 +1,16 @@
 # Change Log
 
+## 7.3.0
+
+### Minor Changes
+
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+
+### Patch Changes
+
+- Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
+  - @spectrum-css/helptext@5.2.0
+
 ## 7.2.3
 
 ### Patch Changes
@@ -507,6 +518,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@5.1.6...@spectrum-css/textfield@5.1.7)
 
+### Features
+
+#### Icons
+
+Icons are now added as SVGs, with `svg.spectrum-Textfield-validationIcon` used for the UI icons that can indicate valid or invalid input.
+
 ### 🐛 Bug fixes
 
 - **textfield, stepper:** button padding and focus indicator ([#1863](https://github.com/adobe/spectrum-css/issues/1863)) ([7963b85](https://github.com/adobe/spectrum-css/commit/7963b85))
@@ -838,6 +855,69 @@ there, but it was missing a control for testing.
 - **textfield:** WHCM and tidying ([fe3ac52](https://github.com/adobe/spectrum-css/commit/fe3ac52))
 - **textfield:** WHCM setup WIP ([feb62af](https://github.com/adobe/spectrum-css/commit/feb62af))
 - **textfield:** windows high contrast mode ([e30149c](https://github.com/adobe/spectrum-css/commit/e30149c))
+
+### Migration guide
+
+#### T-shirt sizes
+
+As of token migration, textfield now has t-shirt sizes. Medium is the default size if no size variant is applied. Icon sizes must match each t-shirt size.
+
+#### Label
+
+As of token migration, textfield must always have a label. Label placement is top or on the side (start).
+
+#### Character Count
+
+As of token migration, textfield now has an optional character count. The character count moves to the side (end) when the label position is on the side (start). This count needs to be read by a screen reader but we cannot just use a live region as that will result in an overly verbose experience Adjust the markup of the character count for optimal accessibility for each API.
+
+#### Help Text
+
+As of token migration, Help text is optional and has only one position below the textfield input. Help text aligns with the input in both standard and side label layouts.
+
+#### Composition
+
+As of spectrum tokens migration, Textfield uses grid to align the label, character count, helptext, and focus indicator in both the default and side label layouts.
+
+Any application using Textarea Grows (Textarea input which automatically resizes vertically to accommodate content that is entered) will need to place the sizer element within the same grid area as the input and focus indicator.
+
+#### Indicating validity and focus
+
+##### Valid Icon
+
+Validation icons are as follows.
+Small
+`spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Textfield-validationIcon`
+
+Medium
+`spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon`
+
+Large
+`spectrum-Icon spectrum-UIIcon-Checkmark200 spectrum-Textfield-validationIcon`
+
+Extra Large
+`spectrum-Icon spectrum-UIIcon-Checkmark7300 spectrum-Textfield-validationIcon`
+
+##### Invalid Icon
+
+Uses #spectrum-icon-18-Alert
+
+Small
+`spectrum-Icon spectrum-Icon--sizeS spectrum-Textfield-validationIcon`
+
+Medium
+`spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon`
+
+Large
+`spectrum-Icon spectrum-Icon--sizeL spectrum-Textfield-validationIcon`
+
+Extra Large
+`spectrum-Icon spectrum-Icon--sizeXL spectrum-Textfield-validationIcon`
+
+##### Removal of `:valid`, `:invalid`, and `::placeholder`
+
+Textfield no longer supports the CSS pseudo selectors [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid) and [`:value`](https://developer.mozilla.org/en-US/docs/Web/CSS/:valid).
+
+The CSS pseudo-element [`::placeholder`](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) has been deprecated due to accessibility. The styling remains for backwards compatibility but it is advised to stop utilizing placeholders moving forward.
 
 ### 🐛 Bug fixes
 
@@ -1322,6 +1402,39 @@ there, but it was missing a control for testing.
 ### ✨ Features
 
 - refactor Textfield to be decorated, closes [#142](https://github.com/adobe/spectrum-css/issues/142) ([d34be59](https://github.com/adobe/spectrum-css/commit/d34be59))
+
+### Migration guide
+
+Notes below apply to both text field and text area.
+
+#### Composition
+
+As of 3.0.0, Textfield is now composed the same way a DecoratedTextfield was previously. That is, the outer element `div.spectrum-Textfield` contains a `input.spectrum-Textfield-input`.
+
+#### Icons
+
+The `<svg>` element should appear before the `<input>` element.
+
+#### Indicating validity and focus
+
+Validity and focus must be bubbled up to the parent so adjacent siblings can be styled.
+
+Thus, implementations must add the following classes in the following situations:
+
+- `.spectrum-Textfield.is-focused` - when the input is focused with the mouse
+- `.spectrum-Textfield.is-keyboardFocused` - when the input is focused with the keyboard
+- `.spectrum-Textfield.is-valid` - when the input has an explicit valid state
+- `.spectrum-Textfield.is-invalid` - when the input has an explicit invalid state
+
+#### Removal of `:valid`, `:invalid`, and `::placeholder`
+
+Textfield no longer supports the CSS pseudo selectors [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid) and [`:value`](https://developer.mozilla.org/en-US/docs/Web/CSS/:valid).
+
+Using these selectors is an anti-pattern that complicates form validation techniques by making inputs appear invalid immediately, not after use interaction. Please apply `.is-valid` and `.is-invalid` to the outer `div.spectrum-Textfield` element instead.
+
+#### Variants
+
+Variants must be applied to the parent element, i.e. `.spectrum-Textfield.spectrum-Textfield--quiet` or `.spectrum-Textfield.spectrum-Textfield--multiline`. The `<input>` will be styled appropriately.
 
 ### 🛑 BREAKING CHANGES
 

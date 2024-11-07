@@ -1,13 +1,6 @@
 [build]
   publish = "dist/"
-  command = "yarn prepare:site"
-
-# Other projects use the default /storybook/ pathing;
-# this remaps this to our /preview/ path.
-# Why? Using preview decouples us from the tool.
-[[redirects]]
-  from = "/storybook/"
-  to = "/preview/"
+  command = "yarn build:docs"
 
 # If skip_processing = true, all other settings are ignored
 [build.processing]

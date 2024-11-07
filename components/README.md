@@ -9,26 +9,26 @@ Components are released on npm as `@spectrum-css/$COMPONENT`, where `$COMPONENT`
 Each component has the following files:
 
 - `index.css` - The scale-specific styles for the component: dimensions, layout, etc (these change between scales)
-- `metadata/*.yml` - The markup examples and documentation for the component; also makes additional examples possible that appear separately in the site navigation.
 - `themes/*.css` - The theme-specific styles for the component.
+- `stories/*.mdx` - The examples and documentation for the component.
 - `stories/*.stories.js` and `stories/template.js` - The storybook assets for rendering components in the Storybook tool and eventually to be used for visual regression testing.
 
 ## Editing an existing component
 
-1. Run `gulp dev` in the root of the project to begin developing.
+1. Run `yarn start` in the root of the project to begin developing.
 2. Edit `components/$COMPONENT/index.css` with dimensions and color properties. The documentation will live reload with your changes.
-3. Edit the markup examples within `components/$COMPONENT/metadata/*.yml`. The documentation will live reload with your changes.
+3. Edit the markup examples within `components/$COMPONENT/stories/*.stories.js`. The documentation will live reload with your changes.
 
 ## Adding a new component
 
 1. Generate a new component using the `yarn new component` command. The generator will prompt you to answer questions about your component.
 2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens` and `@spectrum-css/component-builder-simple`, and most rely on `@spectrum-css/icon`. **Note: If you are working on a legacy component, it will dependend on `@spectrum-css/vars` and `@spectrum-css/component-builder` instead. This is expected.**
-3. Once your folder has been generated, you can run `yarn dev` in the root of the project to begin developing.
+3. Once your folder has been generated, you can run `yarn start` in the root of the project to begin developing.
 4. The `index.css` file is where most of your styles will be added.
 5. Inside the `stories` directory you will find a `template.js` and an `*.stories.js` file.
    - In the `*.stories.js` file, define the available knobs and properties for your component, as well as any standard variations you want to surface in [Storybook](https://storybook.js.org/docs/react/writing-stories/introduction).
    - Update the `template.js` file with the markup, using [lit-html syntax](https://lit.dev/docs/templates/overview/) to adjust results based on the provided settings from the Storybook knobs.
-6. Edit your `metadata/*.yml` to add markup examples for each of the variants of your component.
+6. Edit your `stories/*.mdx` to add markup examples for each of the variants of your component.
 
 Because we use scoped packages, before it can be published with Lerna, you must manually publish the new component as public:
 
