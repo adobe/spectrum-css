@@ -35,7 +35,9 @@ export const Template = ({
 			triggerId: "trigger-nested",
 			customStyles: {
 				"margin-inline-start": "0px",
+				"inline-size": "var(--spectrum-coach-mark-width)",
 			},
+			position: "right-top",
 			customClasses: [`${rootClass}-popover`],
 			isOpen: true,
 			content: [
@@ -49,14 +51,10 @@ export const Template = ({
 					<div class="spectrum-CoachMark-action-menu">
 					${hasActionMenu ? ActionMenu({
 						isOpen,
-						popoverPosition: "right",
+						position: "bottom-start",
 						popoverTestId: "popover-nested-2",
 						popoverId: "popover-nested-2",
 						popoverTriggerId: "trigger-nested-2",
-						customStyles: {
-							"margin-block-start": "30px",
-							"margin-inline-start": "-32px"
-						},
 						iconName: "More",
 						size: globals.scale === "large" ? "s" : "m",
 						items: [
