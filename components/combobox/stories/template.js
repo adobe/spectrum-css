@@ -39,6 +39,9 @@ export const Template = ({
 		selectedDay = new Date(selectedDay).toLocaleDateString({ language: lang });
 	}
 
+	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
+	const popoverWidth = size === "s" ? 140 : size === "l" ? 191 : size === "xl" ? 192 : 166; // default value is "m" 
+
 	return html`
 		${showFieldLabel ?
 			FieldLabel({
@@ -113,16 +116,17 @@ export const Template = ({
 					...globals,
 					isOpen: isOpen && !isDisabled,
 					withTip: false,
-					position: "bottom",
+					position: "bottom-start",
 					isQuiet,
 					customStyles: isOpen
 						? {
-								position: "absolute",
-								top: "100%",
-								left: "0",
-								width: "100%",
+								width: `${popoverWidth}px`,
 						}
 						: {},
+					popoverHeight,
+					popoverWrapperStyles: {
+						position: "unset",
+					},
 					content: [
 						Menu({
 							...globals,
