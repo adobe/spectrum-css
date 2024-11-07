@@ -204,7 +204,7 @@
 
 	.spectrum-Search-input {
 		padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) - var(--mod-search-border-width, var(--spectrum-search-border-width)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
-		padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
+		padding-inline-end: var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size));
 	}
 }
 
@@ -223,7 +223,7 @@
 	&.spectrum-Search .spectrum-Search-input {
 		border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
 		padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
-		padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-quiet-button-offset, calc(var(--mod-search-block-size, var(--spectrum-search-block-size)) / 2 - var(--mod-search-icon-size, var(--spectrum-search-icon-size)) / 2)));
+		padding-inline-end: var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size));
 		padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
 	}
 }

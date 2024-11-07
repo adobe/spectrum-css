@@ -30,7 +30,6 @@
 | `--mod-search-inline-size`               |
 | `--mod-search-line-height`               |
 | `--mod-search-min-inline-size`           |
-| `--mod-search-quiet-button-offset`       |
 | `--mod-search-text-to-icon`              |
 | `--mod-search-to-help-text`              |
 | `--mod-search-top-to-text`               |
