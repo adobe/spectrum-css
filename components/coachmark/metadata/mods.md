@@ -31,3 +31,7 @@
 | `--mod-coachmark-width`                    |
 | `--mod-popover-border-width`               |
 | `--mod-popover-corner-radius`              |
+| `--mod-popover-drop-shadow-blur`           |
+| `--mod-popover-drop-shadow-color`          |
+| `--mod-popover-drop-shadow-x`              |
+| `--mod-popover-drop-shadow-y`              |
