@@ -368,30 +368,37 @@
 /* Body t-shirt sizes */
 .spectrum-Body--sizeXS {
 	--spectrum-body-font-size: var(--spectrum-body-size-xs);
+	--spectrum-body-cjk-font-size: var(--spectrum-body-cjk-size-xs);
 }
 
 .spectrum-Body--sizeS {
 	--spectrum-body-font-size: var(--spectrum-body-size-s);
+	--spectrum-body-cjk-font-size: var(--spectrum-body-cjk-size-s);
 }
 
 .spectrum-Body--sizeM {
 	--spectrum-body-font-size: var(--spectrum-body-size-m);
+	--spectrum-body-cjk-font-size: var(--spectrum-body-cjk-size-m);
 }
 
 .spectrum-Body--sizeL {
 	--spectrum-body-font-size: var(--spectrum-body-size-l);
+	--spectrum-body-cjk-font-size: var(--spectrum-body-cjk-size-l);
 }
 
 .spectrum-Body--sizeXL {
 	--spectrum-body-font-size: var(--spectrum-body-size-xl);
+	--spectrum-body-cjk-font-size: var(--spectrum-body-cjk-size-xl);
 }
 
 .spectrum-Body--sizeXXL {
 	--spectrum-body-font-size: var(--spectrum-body-size-xxl);
+	--spectrum-body-cjk-font-size: var(--spectrum-body-cjk-size-xxl);
 }
 
 .spectrum-Body--sizeXXXL {
 	--spectrum-body-font-size: var(--spectrum-body-size-xxxl);
+	--spectrum-body-cjk-font-size: var(--spectrum-body-cjk-size-xxxl);
 }
 
 /* Body styles */
@@ -433,6 +440,7 @@
 		font-family: var(--mod-body-cjk-font-family, var(--spectrum-body-cjk-font-family));
 		font-style: var(--mod-body-cjk-font-style, var(--spectrum-body-cjk-font-style));
 		font-weight: var(--mod-body-cjk-font-weight, var(--spectrum-body-cjk-font-weight));
+		font-size: var(--mod-body-cjk-font-size, var(--spectrum-body-cjk-font-size));
 
 		line-height: var(--mod-body-cjk-line-height, var(--spectrum-body-cjk-line-height));
 
@@ -513,18 +521,22 @@
 /* Detail t-shirt sizes */
 .spectrum-Detail--sizeS {
 	--spectrum-detail-font-size: var(--spectrum-detail-size-s);
+	--spectrum-detail-cjk-font-size: var(--spectrum-detail-cjk-size-s);
 }
 
 .spectrum-Detail--sizeM {
 	--spectrum-detail-font-size: var(--spectrum-detail-size-m);
+	--spectrum-detail-cjk-font-size: var(--spectrum-detail-cjk-size-m);
 }
 
 .spectrum-Detail--sizeL {
 	--spectrum-detail-font-size: var(--spectrum-detail-size-l);
+	--spectrum-detail-cjk-font-size: var(--spectrum-detail-cjk-size-l);
 }
 
 .spectrum-Detail--sizeXL {
 	--spectrum-detail-font-size: var(--spectrum-detail-size-xl);
+	--spectrum-detail-cjk-font-size: var(--spectrum-detail-cjk-size-xl);
 }
 
 /* Detail styles */
@@ -567,6 +579,7 @@
 		font-family: var(--mod-detail-cjk-font-family, var(--spectrum-detail-cjk-font-family));
 		font-style: var(--mod-detail-cjk-font-style, var(--spectrum-detail-cjk-font-style));
 		font-weight: var(--mod-detail-cjk-font-weight, var(--spectrum-detail-cjk-font-weight));
+		font-size: var(--mod-detail-cjk-font-size, var(--spectrum-detail-cjk-font-size));
 
 		line-height: var(--mod-detail-cjk-line-height, var(--spectrum-detail-cjk-line-height));
 
