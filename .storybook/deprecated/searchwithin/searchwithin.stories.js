@@ -224,6 +224,9 @@ const Template = ({
 				top: "38px",
 				left: "0",
 			},
+			popoverWrapperStyles: {
+				position: "unset",
+			},
 			content: [
 				Menu({
 					...globals,
