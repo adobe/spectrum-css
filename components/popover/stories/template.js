@@ -78,7 +78,6 @@ export const Template = ({
 			case "top":
 				popoverWrapperStyles["inline-size"] = "var(--spectrum-popover-width)";
 				popoverAlignment["inset-block-end"] = "100%";
-				popoverAlignment["inset-inline-start"] = "0";
 				break;
 			case "top-left":
 				// Ignore the width of the popover and make it left-aligned
@@ -103,7 +102,6 @@ export const Template = ({
 			case "bottom":
 				popoverWrapperStyles["inline-size"] = "var(--spectrum-popover-width)";
 				popoverAlignment["inset-block-start"] = "100%";
-				popoverAlignment["inset-inline-start"] = "0";
 				break;
 			case "bottom-left":
 				// Ignore the width of the popover and make it left-aligned

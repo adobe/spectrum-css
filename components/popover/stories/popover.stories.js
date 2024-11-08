@@ -172,6 +172,9 @@ Nested.args = {
 		(passthroughs, context) => Template({
 			position: "end-top",
 			isOpen: true,
+			customStyles: {
+				"margin": "var(--spectrum-popover-nested-container-spacing)",
+			},
 			trigger: (passthroughs, context) => ActionButton({
 				label: "More actions",
 				...passthroughs,
