@@ -1,0 +1,47 @@
+import { Meta, Canvas } from "@storybook/blocks";
+
+import { Button, Toast, Tag, AssetCard, Typography } from "./cjk.stories.js";
+
+<Meta title="Testing CJK Typography" />
+
+# Testing CJK Typography
+
+Most changes - if incorporated at all - are to line-height, and not all of those components are listed here.
+
+Typography changes based on font size/weight are not currently extended into components, ex. body size small is not applied through to buttons size small.
+
+## Button
+
+No lang specific overrides applied.
+
+<Canvas of={Button} />
+
+## Toast
+
+Lang specific override on message line-height only.
+
+<Canvas of={Toast} />
+
+## Tag
+
+No lang specific overrides applied.
+
+<Canvas of={Tag} />
+
+## Asset Card
+
+Full font style lang overrides for header, content, and title slots.
+
+<Canvas of={AssetCard} />
+
+## Calendar
+
+[See on Calendar page](/?path=/docs/components-calendar--docs&globals=lang:ja), font-size is changed for days of the week.
+
+(_Error loading the story on this page_)
+
+## Typography
+
+All are size medium.
+
+<Canvas of={Typography} />

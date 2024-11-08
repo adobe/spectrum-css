@@ -24,6 +24,11 @@ export default {
 			files: "**/*.@(stories.js|mdx)",
 			titlePrefix: "Deprecated",
 		},
+		{
+			directory: "./testing",
+			files: "**/*.@(stories.js|mdx)",
+			titlePrefix: "Testing",
+		},
 	],
 	rootDir: "../",
 	staticDirs: ["./assets", "./assets/images"],
