@@ -69,12 +69,13 @@ export const Template = (
 							name: "field-group-example",
 							customClasses: [`${rootClass}-item`],
 						}, context))
-						: items.map((item) =>
+						: items.map((item, i) =>
 						CheckBox({
 							...item,
 							isReadOnly,
 							isRequired,
 							customClasses: [`${rootClass}-item`],
+							...(isReadOnly ? {isChecked: i === 1} : {}),
 						}, context)
 				)}
 				${when(helpText, () =>
