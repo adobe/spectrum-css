@@ -15,16 +15,21 @@ export default {
 	argTypes: {
 		size: size(["s", "m", "l"]),
 		isIndeterminate,
-		staticColor: {
-			...staticColor,
-			options: ["white"],
-		},
+		staticColor,
+		value: {
+			control: {
+				type: "range",
+				min: 0,
+				max: 100
+			}
+		}
 	},
 	args: {
 		rootClass: "spectrum-ProgressCircle",
 		size: "m",
 		isIndeterminate: false,
 		staticColor: undefined,
+		value: 43
 	},
 	parameters: {
 		design: {
@@ -100,5 +105,27 @@ StaticWhiteIndeterminate.args = {
 	isIndeterminate: true,
 };
 StaticWhiteIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackDeterminate = Sizing.bind({});
+StaticBlackDeterminate.tags = ["!dev"];
+StaticBlackDeterminate.storyName = "Static black, default";
+StaticBlackDeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: false,
+};
+StaticBlackDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackIndeterminate = Sizing.bind({});
+StaticBlackIndeterminate.tags = ["!dev"];
+StaticBlackIndeterminate.storyName = "Static black, indeterminate";
+StaticBlackIndeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: true,
+};
+StaticBlackIndeterminate.parameters = {
 	chromatic: { disableSnapshot: true },
 };

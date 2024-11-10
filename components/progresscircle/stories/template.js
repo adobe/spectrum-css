@@ -4,6 +4,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
+import { capitalize } from "lodash-es";
+
 import "../index.css";
 
 export const Template = ({
@@ -15,45 +17,48 @@ export const Template = ({
 	size = "m",
 	staticColor,
 	isIndeterminate = false,
-} = {}) => {
-	let sizeClassName = "medium";
-	switch (size) {
-		case "s":
-			sizeClassName = "small";
-			break;
-		case "l":
-			sizeClassName = "large";
-			break;
-		default:
-			sizeClassName = "medium";
-	}
+	value,
+}) => {
+
+	let strokeWidth = size === "s" ? 2 : size === "l" ? 4 : 3;
+
+	// SVG strokes are centered, so subtract half the stroke width from the radius to create an inner stroke.
+	let radius = `calc(50% - ${strokeWidth / 2}px)`;
+
+	let insideRadius = `calc(50% - ${strokeWidth / 1}px)`;
 
 	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${sizeClassName}`]: typeof size !== "undefined",
 				[`${rootClass}--indeterminate`]: isIndeterminate,
-				[`${rootClass}--staticWhite`]: staticColor === "white",
+				[`${rootClass}--static${capitalize(staticColor)}`]: typeof staticColor !== "undefined",
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap(customStyles)}
 			data-testid=${ifDefined(testId)}
 		>
-			<div class="spectrum-ProgressCircle-track"></div>
-			<div class="spectrum-ProgressCircle-fills">
-				<div class="spectrum-ProgressCircle-fillMask1">
-					<div class="spectrum-ProgressCircle-fillSubMask1">
-						<div class="spectrum-ProgressCircle-fill"></div>
-					</div>
-				</div>
-				<div class="spectrum-ProgressCircle-fillMask2">
-					<div class="spectrum-ProgressCircle-fillSubMask2">
-						<div class="spectrum-ProgressCircle-fill"></div>
-					</div>
-				</div>
-			</div>
+			<svg fill="none" width="100%" height="100%" class="spectrum-outerCircle">
+				<circle class="spectrum-innerCircle" cx="50%" cy="50%" r=${insideRadius} stroke-width="2" />
+				<circle
+					cx="50%"
+					cy="50%"
+					class="spectrum-ProgressCircle-track"
+					r=${radius}
+				/>
+				<circle
+					cx="50%"
+					cy="50%"
+					r=${radius}
+					class="spectrum-ProgressCircle-fill"
+					pathLength="100"
+					stroke-dasharray="100 200"
+					stroke-dashoffset=${100 - value}
+					stroke-linecap="round"
+				/>
+			</svg>
 		</div>
 	`;
 };
