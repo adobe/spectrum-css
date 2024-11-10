@@ -508,3 +508,14 @@
 		transform: rotate(270deg);
 	}
 }
+
+@keyframes spectrum-dashoffset-animation {
+	0%,
+	100% {
+		stroke-dashoffset: 75;
+	}
+
+	30% {
+		stroke-dashoffset: 20;
+	}
+}
