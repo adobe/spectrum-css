@@ -66,6 +66,9 @@ async function extractModifiers(
 	const selectors = new Set();
 	const root = postcss.parse(content);
 	root.walkRules((rule) => {
+		// Check that the selector is not inside a keyframe
+		if (rule.parent.type === "atrule" && rule.parent.name === "keyframes") return;
+
 		if (rule.selectors) {
 			rule.selectors.forEach((selector) => {
 				// If the selector is not a base selector, add it to the set
