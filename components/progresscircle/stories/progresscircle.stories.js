@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
+import { isIndeterminate, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ProgressCircleGroup } from "./progresscircle.test.js";
@@ -16,15 +16,31 @@ export default {
 		size: size(["s", "m", "l"]),
 		isIndeterminate,
 		staticColor: {
-			...staticColor,
-			options: ["white"],
+			name: "Static color",
+			description: "Variants that can be used when the progress circle needs to be placed on top of a colored background or a visual.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+
+			},
+			options: ["white", "black"],
+			control: "select",
 		},
+		value: {
+			control: {
+				type: "range",
+				min: 0,
+				max: 100
+			}
+		}
 	},
 	args: {
 		rootClass: "spectrum-ProgressCircle",
 		size: "m",
 		isIndeterminate: false,
 		staticColor: undefined,
+		value: 43
 	},
 	parameters: {
 		design: {
@@ -33,6 +49,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		layout: "centered"
 	},
 };
 
