@@ -9,87 +9,89 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 .spectrum-ColorArea {
-  --spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
-  --spectrum-colorarea-border-color: rgba(0, 0, 0, 10%); /* TODO replace with token --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */
-  --spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
-  --spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
-  --spectrum-colorarea-height: var(--spectrum-color-area-height);
-  --spectrum-colorarea-width: var(--spectrum-color-area-width);
-  --spectrum-colorarea-min-width: var(--spectrum-color-area-minimum-width);
-  --spectrum-colorarea-min-height: var(--spectrum-color-area-minimum-height);
+	--spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
+	--spectrum-colorarea-border-color-rgb: var(--spectrum-gray-1000-rgb);
+	--spectrum-colorarea-border-color: rgba(var(--spectrum-colorarea-border-color-rgb), var(--spectrum-color-area-border-opacity));
+	--spectrum-colorarea-border-rounding: var(--spectrum-color-area-border-rounding);
+	--spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
+	--spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
+	--spectrum-colorarea-height: var(--spectrum-color-area-height);
+	--spectrum-colorarea-width: var(--spectrum-color-area-width);
+	--spectrum-colorarea-min-width: var(--spectrum-color-area-minimum-width);
+	--spectrum-colorarea-min-height: var(--spectrum-color-area-minimum-height);
 }
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
-  .spectrum-ColorArea {
-    --highcontrast-colorarea-border-color-disabled: GrayText;
-    --highcontrast-colorarea-border-color: Canvas;
-    --highcontrast-colorarea-fill-color-disabled: Canvas;
-  }
+	.spectrum-ColorArea {
+		--highcontrast-colorarea-border-color-disabled: GrayText;
+		--highcontrast-colorarea-border-color: Canvas;
+		--highcontrast-colorarea-fill-color-disabled: Canvas;
+	}
 
-  .spectrum-ColorArea {
-    &.is-disabled {
-      forced-color-adjust: none;
-    }
-  }
+	.spectrum-ColorArea {
+		&.is-disabled {
+			forced-color-adjust: none;
+		}
+	}
 
-  .spectrum-ColorArea-gradient,
-  .spectrum-ColorHandle-color {
-    forced-color-adjust: none;
-  }
+	.spectrum-ColorArea-gradient,
+	.spectrum-ColorHandle-color {
+		forced-color-adjust: none;
+	}
 }
 
 .spectrum-ColorArea {
-  position: relative;
-  display: inline-block;
-  cursor: default;
-  user-select: none;
-  min-inline-size: var(--mod-colorarea-min-width, var(--spectrum-colorarea-min-width));
-  min-block-size: var(--mod-colorarea-min-height, var(--spectrum-colorarea-min-height));
-  inline-size: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
-  block-size:  var(--mod-colorarea-height, var(--spectrum-colorarea-height));
-  box-sizing: border-box;
-  border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
-  border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
+	position: relative;
+	display: inline-block;
+	cursor: default;
+	user-select: none;
+	min-inline-size: var(--mod-colorarea-min-width, var(--spectrum-colorarea-min-width));
+	min-block-size: var(--mod-colorarea-min-height, var(--spectrum-colorarea-min-height));
+	inline-size: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
+	block-size: var(--mod-colorarea-height, var(--spectrum-colorarea-height));
+	box-sizing: border-box;
+	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-rounding));
+	border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
-  &.is-focused {
-    z-index: 2;
-  }
+	&.is-focused {
+		z-index: 2;
+	}
 
-  &.is-disabled {
-    pointer-events: none;
-    background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));
-    border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color-disabled);
+	&.is-disabled {
+		pointer-events: none;
+		background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));
+		border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color-disabled);
 
-    .spectrum-ColorArea-gradient {
-      display: none;
-    }
-  }
+		.spectrum-ColorArea-gradient {
+			display: none;
+		}
+	}
 }
 
 .spectrum-ColorArea-handle {
-  transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-colorarea-width)) - var(--spectrum-colorarea-border-width)), 0);
-  inset-block-start: 0;
+	transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-colorarea-width)) - var(--spectrum-colorarea-border-width)), 0);
+	inset-block-start: 0;
 
-  &:dir(rtl) {
-    inset-inline-end: 0;
-  }
+	&:dir(rtl) {
+		inset-inline-end: 0;
+	}
 }
 
 .spectrum-ColorArea-gradient {
-  inline-size: 100%;
-  block-size: 100%;
-  border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
+	inline-size: 100%;
+	block-size: 100%;
+	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
 }
 
 .spectrum-ColorArea-slider {
-  opacity: 0;
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  z-index: 0;
-  margin: 0;
-  pointer-events: none;
+	opacity: 0;
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	z-index: 0;
+	margin: 0;
+	pointer-events: none;
 }
