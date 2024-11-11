@@ -11,7 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/express.css";
+
 /* Typography - Default */
+/* stylelint-disable selector-class-pattern -- @todo update this in a future breaking change to :root or .spectrum-Typography */
 .spectrum {
 	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
@@ -32,6 +35,7 @@
 		font-family: var(--spectrum-font-family-he);
 	}
 }
+/* stylelint-enable selector-class-pattern */
 
 /* Typography - Heading */
 

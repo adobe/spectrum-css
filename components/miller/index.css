@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+ @import "./themes/express.css";
+
 .spectrum-MillerColumns {
 	--spectrum-millercolumns-inline-size: 272px;
 	--spectrum-millercolumns-padding: var(--spectrum-spacing-100);

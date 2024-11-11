@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/express.css";
+
 .spectrum-Badge {
 	/* badge styling for all t-shirt sizes and all themes */
 	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-100);
