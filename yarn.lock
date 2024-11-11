@@ -4204,7 +4204,7 @@ __metadata:
     postcss-import: "npm:^16.1.0"
     postcss-licensing: "npm:^2.0.0"
     postcss-rgb-mapping: "workspace:^"
-    postcss-sorting: "npm:^8.0.2"
+    postcss-sorting: "npm:^9.1.0"
     prettier: "npm:^3.2.5"
     style-dictionary: "npm:^3.9.2"
     style-dictionary-sets: "npm:^2.3.0"
@@ -14431,6 +14431,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-sorting@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "postcss-sorting@npm:9.1.0"
+  peerDependencies:
+    postcss: ^8.4.20
+  checksum: 10c0/1faea84bf00d85929228d297587798fa9c384a02966a28a942777b2de553a8186087cfdcd0aca3dd40e4b2793aee050792d807458db8cf4880867c98c7bf22fd
+  languageName: node
+  linkType: hard
+
 "postcss-splitinator@workspace:^, postcss-splitinator@workspace:plugins/postcss-splitinator":
   version: 0.0.0-use.local
   resolution: "postcss-splitinator@workspace:plugins/postcss-splitinator"
@@ -15729,7 +15738,7 @@ __metadata:
     postcss-reporter: "npm:^7.1.0"
     postcss-rgb-mapping: "workspace:^"
     postcss-selector-replace: "npm:^1.0.2"
-    postcss-sorting: "npm:^8.0.2"
+    postcss-sorting: "npm:^9.1.0"
     postcss-splitinator: "workspace:^"
     postcss-values-parser: "npm:^6.0.2"
     prettier: "npm:^3.2.5"
