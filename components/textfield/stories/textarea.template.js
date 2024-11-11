@@ -49,7 +49,7 @@ export const TextAreaOptions = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Default",
-			content: Template({...args, context})
+			content: Template(args, context)
 		}, context)}
 		${Container({
 			withBorder: false,
@@ -75,12 +75,22 @@ export const TextAreaOptions = (args, context) => Container({
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
 		}, context)}
+	`
+}, context);
+
+export const KeyboardFocusTemplate = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`
 		${Container({
 			withBorder: false,
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Keyboard-focused",
+			heading: "Default",
 			content: Template({...args, isKeyboardFocused: true}, context)
 		}, context)}
 		${Container({
@@ -88,8 +98,8 @@ export const TextAreaOptions = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Invalid, keyboard-focused",
-			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
+			heading: "Quiet",
+			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
 		}, context)}
 	`
 }, context);
