@@ -1,5 +1,13 @@
 # Change Log
 
+## 7.4.0
+
+### Minor Changes
+
+- [#3372](https://github.com/adobe/spectrum-css/pull/3372) [`61af074`](https://github.com/adobe/spectrum-css/commit/61af0743f874d799b8fbb789aff8ad2580c5994a) Thanks [@cdransf](https://github.com/cdransf)! - This change removes the existing calc function used to calculate the padding-inline-end for S1 and the quiet variant in favor of a simpler value with a mod preceding a static value.
+
+  This change removes the `--mod-search-quiet-button-offset` mod.
+
 ## 7.3.0
 
 ### Minor Changes
