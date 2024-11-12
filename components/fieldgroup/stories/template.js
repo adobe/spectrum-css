@@ -16,6 +16,7 @@ export const Template = (
 		customClasses = [],
 		layout = "vertical",
 		inputType = "radio",
+		name = getRandomId(),
 		isReadOnly = false,
 		isRequired = false,
 		label,
@@ -61,13 +62,14 @@ export const Template = (
 				})}
 			>
 				${inputType === "radio" ?
-					items.map((item) =>
+					items.map((item, i) =>
 						Radio({
 							...item,
 							isReadOnly,
 							isRequired,
-							name: "field-group-example",
+							name: `field-group-example-${name}`,
 							customClasses: [`${rootClass}-item`],
+							...(isReadOnly ? {isChecked: i === 1} : {}),
 						}, context))
 						: items.map((item, i) =>
 						CheckBox({

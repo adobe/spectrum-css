@@ -239,24 +239,14 @@
 	}
 
 	&.is-readOnly {
-		.spectrum-Radio-input:read-only {
-			cursor: initial;
-		}
-
-		/* hide selection indicator */
-		& .spectrum-Radio-button {
-			position: fixed;
-			inset-inline-end: 100%;
-			inset-block-end: 100%;
-			clip: rect(1px, 1px, 1px, 1px);
-			clip-path: inset(50%);
+		.spectrum-Radio-input {
+			pointer-events: none;
 		}
 
 		.spectrum-Radio-label,
 		/* ensure disabled readonly has normal text color */
 		& .spectrum-Radio-input:disabled ~ .spectrum-Radio-label,
 		& .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label {
-			margin-inline-start: 0;
 			color: var(--highcontrast-radio-neutral-content-color, var(--mod-radio-neutral-content-color, var(--spectrum-radio-neutral-content-color)));
 		}
 	}
