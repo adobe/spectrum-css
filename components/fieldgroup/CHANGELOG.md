@@ -1,5 +1,16 @@
 # Change Log
 
+## 5.3.0
+
+### Minor Changes
+
+- [#3328](https://github.com/adobe/spectrum-css/pull/3328) [`a0486b3`](https://github.com/adobe/spectrum-css/commit/a0486b341581c610ebc9b3acd1837be2b66eb348) Thanks [@jawinn](https://github.com/jawinn)! - The previous display of the read-only state checkboxes did not match up with any guidelines. This update removes the read-only specific styles for checkbox within the fieldgroup component, so that the boxes are still displayed and commas are not appended to the label. This includes the removal of `--spectrum-fieldgroup-readonly-delimiter` as it is no longer needed.
+
+### Patch Changes
+
+- Updated dependencies [[`a0486b3`](https://github.com/adobe/spectrum-css/commit/a0486b341581c610ebc9b3acd1837be2b66eb348)]:
+  - @spectrum-css/checkbox@9.2.1
+
 ## 5.2.0
 
 ### Minor Changes
