@@ -12,25 +12,44 @@
  */
 
 .spectrum-ColorLoupe {
-	inline-size: var(--spectrum-color-loupe-width);
-	block-size: var(--spectrum-color-loupe-height);
+	--spectrum-colorloupe-width: var(--spectrum-color-loupe-width);
+	--spectrum-colorloupe-height: var(--spectrum-color-loupe-height);
+
+	--spectrum-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
+	--spectrum-colorloupe-animation-distance: 8px; /* TODO: replace with forthcoming animation token */
+
+	--spectrum-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-elevated-x);
+	--spectrum-colorloupe-drop-shadow-y: var(--spectrum-drop-shadow-elevated-y);
+	--spectrum-colorloupe-drop-shadow-blur: var(--spectrum-drop-shadow-elevated-blur);
+	--spectrum-colorloupe-drop-shadow-color: var(--spectrum-drop-shadow-elevated-color);
+
+	--spectrum-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
+	--spectrum-colorloupe-inner-border-width: var(--spectrum-color-loupe-inner-border-width);
+	--spectrum-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
+	--spectrum-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
+
+	--spectrum-colorloupe-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+	--spectrum-colorloupe-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+
+	inline-size: var(--spectrum-colorloupe-width);
+	block-size: var(--spectrum-colorloupe-height);
 
 	position: absolute;
-	transform: translate(0, var(--mod-colorloupe-animation-distance, 8px));
+	transform: translate(0, var(--mod-colorloupe-animation-distance, var(--spectrum-colorloupe-animation-distance)));
 	opacity: 0;
 	transform-origin: bottom center;
-	inset-block-end: calc(var(--spectrum-color-handle-size) - var(--spectrum-color-handle-outer-border-width) + var(--mod-colorloupe-offset, var(--spectrum-color-loupe-bottom-to-color-handle)));
-	inset-inline-end: calc(50% - var(--spectrum-color-loupe-width) / 2);
+	inset-block-end: calc((var(--spectrum-color-handle-size) - var(--spectrum-color-handle-outer-border-width)) + var(--mod-colorloupe-offset, var(--spectrum-colorloupe-offset)));
+	inset-inline-end: calc(50% - (var(--spectrum-colorloupe-width) / 2));
 
 	transition:
 		transform 100ms ease-in-out,
 		opacity 125ms ease-in-out;
 	pointer-events: none;
 
-	filter: drop-shadow(var(--mod-colorloupe-drop-shadow-x, var(--spectrum-drop-shadow-x)) var(--mod-colorloupe-drop-shadow-y, var(--spectrum-color-loupe-drop-shadow-y)) var(--mod-colorloupe-drop-shadow-blur, var(--spectrum-color-loupe-drop-shadow-blur)) var(--mod-colorloupe-drop-shadow-color, var(--spectrum-color-loupe-drop-shadow-color)));
+	filter: drop-shadow(var(--mod-colorloupe-drop-shadow-x, var(--spectrum-colorloupe-drop-shadow-x)) var(--mod-colorloupe-drop-shadow-y, var(--spectrum-colorloupe-drop-shadow-y)) var(--mod-colorloupe-drop-shadow-blur, var(--spectrum-colorloupe-drop-shadow-blur)) var(--mod-colorloupe-drop-shadow-color, var(--spectrum-colorloupe-drop-shadow-color)));
 
 	&:dir(rtl) {
-		inset-inline-end: calc(50% - (var(--spectrum-color-loupe-width) / 2) - 1px);
+		inset-inline-end: calc(50% - (var(--spectrum-colorloupe-width) / 2) - 1px);
 	}
 
 	&.is-open {
@@ -44,26 +63,27 @@
 }
 
 .spectrum-ColorLoupe-inner-border {
+	/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
 	fill: var(--spectrum-picked-color);
-	stroke: var(--mod-colorloupe-inner-border-color, var(--spectrum-color-loupe-inner-border));
-	stroke-width: var(--mod-colorloupe-inner-border-width, var(--spectrum-color-loupe-inner-border-width));
+	stroke: var(--mod-colorloupe-inner-border-color, var(--spectrum-colorloupe-inner-border-color));
+	stroke-width: var(--mod-colorloupe-inner-border-width, var(--spectrum-colorloupe-inner-border-width));
 }
 
 .spectrum-ColorLoupe-outer-border {
 	fill: none;
-	stroke: var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-color, var(--spectrum-color-loupe-outer-border)));
-	stroke-width: calc(var(--mod-colorloupe-outer-border-width, var(--spectrum-color-loupe-outer-border-width)) + 2px);
+	stroke: var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color)));
+	stroke-width: calc(var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width)) + 2px);
 }
 
 /* The checkerboard classes use opacity checkerboard tokens for dark and light color.
  The opacity-checkerboard-square-size token is not able to be used witin the SVG pattern and instead colorloupe docs are using two different patterns toggled by --spectrum-colorloupe-checkerboard-fill */
 
 .spectrum-ColorLoupe-checkerboard-pattern {
-	fill: var(--spectrum-opacity-checkerboard-square-dark);
+	fill: var(--spectrum-colorloupe-checkerboard-dark-color);
 }
 
 .spectrum-ColorLoupe-checkerboard-background {
-	fill: var(--spectrum-opacity-checkerboard-square-light);
+	fill: var(--spectrum-colorloupe-checkerboard-light-color);
 }
 
 .spectrum-ColorLoupe-checkerboard-fill {
