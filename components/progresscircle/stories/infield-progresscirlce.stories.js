@@ -19,6 +19,9 @@ export default {
 	},
 	args: {
 		...ProgressCircle.args,
+	},
+	parameters: {
+		...ProgressCircle.parameters
 	}
 };
 
