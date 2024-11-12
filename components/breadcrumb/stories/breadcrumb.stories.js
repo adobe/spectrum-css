@@ -1,4 +1,4 @@
-import { Template } from "./template";
+import { BreadcrumbTitleHeadings, Template } from "./template";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
@@ -44,6 +44,28 @@ export default {
 			},
 			control: "boolean"
 		},
+		titleHeadingSize: {
+			name: "Breadcrumb title heading size",
+			description: "The breadcrumb title can be customized in the multiline variant using an additional element that uses the typography component's heading classes. The preferred heading sizes are small,  medium large, and extra-large. When no heading classes are used, the text will be sized the same as a large heading by default.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: {
+				type: "select",
+				labels: {
+					undefined: "Default",
+					s: "Small",
+					m: "Medium",
+					l: "Large",
+					xl: "Extra-large",
+				},
+			},
+			defaultValue: undefined,
+			options: [undefined, "s", "m", "l", "xl"],
+			if: { arg: "variant", eq: "multiline" },
+		}
 	},
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
@@ -238,6 +260,23 @@ Disabled.args = {
 };
 Disabled.tags = ["!dev"];
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * For the multiline variant, the breadcrumb title can be customized using an additional element that uses the heading classes from
+ * the [typography component](?path=/docs/components-typography). The preferred heading sizes are `.spectrum-Heading--sizeS`,
+ * `.spectrum-Heading--sizeM`, `.spectrum-Heading--sizeL` (default), and `.spectrum-Heading--sizeXL`. If no heading element or classes are
+ * used, the text will be sized the same as a large heading by default.
+ */
+export const MultilineTitleSizes = BreadcrumbTitleHeadings.bind({});
+MultilineTitleSizes.args = {
+	...DefaultNested.args,
+	variant: "multiline",
+};
+MultilineTitleSizes.storyName = "Multiline breadcrumb title heading sizes";
+MultilineTitleSizes.tags= ["!dev"];
+MultilineTitleSizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

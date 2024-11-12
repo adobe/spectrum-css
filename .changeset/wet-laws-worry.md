@@ -11,11 +11,9 @@ There has been a major design change to the variant classes related to density a
 - The "compact" variant no longer exists. The `spectrum-Breadcrumbs--compact` class and associated custom properties are removed. The default (medium) breadcrumbs are now sized similar to what was previously called compact.
 - There is a new "large" variant, which uses the `spectrum-Breadcrumbs--large` class. This is sized similarly to what was previously the default.
 
-For each breadcrumbs variant, the design spec specifies that following sizes should be used for the truncated menu action button and the separator chevron:
-
-- default (medium): medium action button and Chevron100 UI icon
-- large: large action button and Chevron100 UI icon
-- multiline: small action button and Chevron75 UI icon
+The breadcrumb title can now be customized in the multiline variant using an additional element that uses the typography component's heading classes.
+See the documentation for details about this and the preferred sizing. The documentation also has been updated to include information about which
+icon sizes should be displayed for each t-shirt size.
 
 The component has been refactored to slim down and simplify its CSS and custom properties, by changing the values of existing custom properties for large and multiline variants.
 
