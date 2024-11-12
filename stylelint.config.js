@@ -41,7 +41,7 @@ module.exports = {
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: ["extend", "container", "each", "include", "mixin"],
+				ignoreAtRules: ["extend", "each", "include", "mixin"],
 			},
 		],
 		"block-no-empty": [true, {
@@ -64,6 +64,7 @@ module.exports = {
 			{
 				ignoreProperties: {
 					color: ["CanvasText"],
+					"forced-color-adjust": ["preserve-parent-color"],
 				},
 			},
 		],
@@ -175,10 +176,12 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["site/**/*.css", ".storybook/assets/*.css"],
+			files: [".storybook/assets/*.css"],
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
+				"spectrum-tools/no-unused-custom-properties": null,
+				"spectrum-tools/no-unknown-custom-properties": null,
 			},
 		},
 		{

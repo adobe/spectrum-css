@@ -1,12 +1,12 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
-import { getRandomId, Container } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { capitalize, lowerCase } from "lodash-es";
 import { when } from "lit/directives/when.js";
+import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
 
@@ -118,21 +118,21 @@ export const RoundingGroup = (args, context) => Container({
 			heading: "Regular",
 			containerStyles: { "gap": "8px" },
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Full",
 			containerStyles: { "gap": "8px" },
 			content: Template({...args, rounding: "full", }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "None",
 			containerStyles: { "gap": "8px" },
 			content: Template({...args, rounding: "none", }, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 /* Shows a single group of swatches with all border options. */
 export const BorderGroup = (args, context) => Container({
@@ -143,21 +143,21 @@ export const BorderGroup = (args, context) => Container({
 			heading: "Default",
 			containerStyles: { "gap": "8px" },
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "No border",
 			containerStyles: { "gap": "8px" },
 			content: Template({...args, borderStyle: "noBorder"}, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Light Border",
 			containerStyles: { "gap": "8px" },
 			content: Template({...args, borderStyle: "lightBorder"}, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 /* Shows a single group of swatches that are empty/nothing in various shapes and rounding. */
 export const EmptyGroup = (args, context) => Container({
@@ -167,19 +167,19 @@ export const EmptyGroup = (args, context) => Container({
 			withBorder: false,
 			containerStyles: { "gap": "8px" },
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: { "gap": "8px" },
 			content: Template({...args, rounding: "full", }, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: { "gap": "8px" },
 			content: Template({...args, shape: "rectangle", }, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 /* Shows a single group of disabled swatches. */
 export const DisabledGroup = (args, context) => Container({
@@ -189,14 +189,14 @@ export const DisabledGroup = (args, context) => Container({
 			withBorder: false,
 			withHeading: false,
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			withHeading: false,
 			content: Template({...args, rounding: "full", }, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const SizingGroup = (args, context) =>Container({
 	withBorder: false,
@@ -205,11 +205,11 @@ export const SizingGroup = (args, context) =>Container({
 			withBorder: false,
 			withHeading: false,
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			withHeading: false,
 			content: Template({...args, swatchColor: "rgba(174, 216, 230, 0.25)"}, context),
-		})}
+		}, context)}
 	`
 });

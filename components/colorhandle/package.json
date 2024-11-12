@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/colorhandle",
-	"version": "8.1.4",
+	"version": "8.2.0",
 	"description": "The Spectrum CSS Color Handle component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,15 +21,13 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./package.json": "./package.json"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
-		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -58,7 +56,8 @@
 	},
 	"spectrum": [
 		{
-			"rootClass": "spectrum-ColorHandle"
+			"rootClass": "spectrum-ColorHandle",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/color-handle/"
 		}
 	]
 }

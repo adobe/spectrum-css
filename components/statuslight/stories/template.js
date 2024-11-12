@@ -39,7 +39,7 @@ export const SemanticGroup = (args, context) => Container({
 		"notice",
 		"positive"].map(variant => Template({...args, variant: variant, label: `${variant.charAt(0).toUpperCase() + variant.slice(1)} status` }, context))
 	}`
-});
+}, context);
 
 export const NonsemanticGroup = (args, context) => Container({
 	withBorder: false,
@@ -60,4 +60,4 @@ export const NonsemanticGroup = (args, context) => Container({
 		"fuchsia",
 		"magenta",].map(variant => Template({...args, variant: variant, label: `${variant.charAt(0).toUpperCase() + variant.slice(1)}`}, context))
 	}`
-});
+}, context);

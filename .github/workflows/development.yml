@@ -189,14 +189,8 @@ jobs:
     # -------------------------------------------------------------
     publish_site:
         name: Publish
-        # The build step ensures we are leveraging the cache for the build
-        needs: [vrt]
-        # Note: the goal here is to allow vrt to be skipped but still require the build to succeed
-        if: ${{ always() }}
         uses: ./.github/workflows/publish-site.yml
         with:
             deploy-message: ${{ github.event.pull_request.title }}
             alias: pr-${{ github.event.number }}
-            # Only pass the storybook url if the vrt was successful
-            storybook-url: ${{ needs.vrt.outputs.storybook-url || '' }}
         secrets: inherit

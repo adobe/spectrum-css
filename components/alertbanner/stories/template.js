@@ -130,7 +130,7 @@ export const ActionableOptionsTemplate = (args, context) => Container({
 					text: "Your trial has expired",
 					actionButtonText: "Buy now",
 			}, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			direction: "column",
@@ -144,7 +144,7 @@ export const ActionableOptionsTemplate = (args, context) => Container({
 					actionButtonText: "Buy now",
 					showCloseButton: false,
 			}, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			direction: "column",
@@ -157,7 +157,7 @@ export const ActionableOptionsTemplate = (args, context) => Container({
 				text: "Your trial has expired",
 				actionButtonText: "",
 			}),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			direction: "column",
@@ -171,6 +171,6 @@ export const ActionableOptionsTemplate = (args, context) => Container({
 					actionButtonText: "",
 					showCloseButton: false,
 			}, context),
-		})}
+		}, context)}
 	`,
-});
+}, context);

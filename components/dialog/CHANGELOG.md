@@ -1,5 +1,33 @@
 # Change Log
 
+## 10.2.0
+
+### Minor Changes
+
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+
+### Patch Changes
+
+- Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
+  - @spectrum-css/closebutton@5.3.0
+  - @spectrum-css/underlay@4.2.0
+  - @spectrum-css/divider@3.2.0
+  - @spectrum-css/modal@5.2.0
+
+## 10.1.5
+
+### Patch Changes
+
+- [#3322](https://github.com/adobe/spectrum-css/pull/3322) [`ffc6895`](https://github.com/adobe/spectrum-css/commit/ffc689598122353912b604c7e1a4c121d20a9191) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Dialog t-shirt sizes
+
+  Adds support for t-shirt sizing class names to dialog CSS. `@deprecated` comments were added to communicate that the old class names (`--small`, `--medium`, and `--large`) will be removed in S2.
+
+  | old class name          | new class name                                         |
+  | ----------------------- | ------------------------------------------------------ |
+  | spectrum-Dialog--small  | spectrum-Dialog--sizeS                                 |
+  | spectrum-Dialog--medium | spectrum-Dialog (the default, so no size is necessary) |
+  | spectrum-Dialog--large  | spectrum-Dialog--sizeL                                 |
+
 ## 10.1.4
 
 ### Patch Changes

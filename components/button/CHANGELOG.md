@@ -1,5 +1,17 @@
 # Change Log
 
+## 13.5.0
+
+### Minor Changes
+
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+
+### Patch Changes
+
+- Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
+  - @spectrum-css/progresscircle@3.2.0
+  - @spectrum-css/icon@7.2.0
+
 ## 13.4.0
 
 ### Minor Changes

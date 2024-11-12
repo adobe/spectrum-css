@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/sidenav",
-	"version": "5.1.4",
+	"version": "5.2.0",
 	"description": "The Spectrum CSS sidenav component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,15 +21,13 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./package.json": "./package.json"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
-		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -57,7 +55,8 @@
 	"spectrum": [
 		{
 			"guidelines": "https://spectrum.adobe.com/page/side-navigation",
-			"rootClass": "spectrum-SideNav"
+			"rootClass": "spectrum-SideNav",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/sidenav/"
 		}
 	]
 }

@@ -51,7 +51,7 @@ export const Template = (
 						label,
 						isRequired,
 						alignment: labelPosition === "side" ? "right" : "top",
-						id: groupLabelId
+						id: groupLabelId,
 					},
 					context,
 				),
@@ -71,12 +71,13 @@ export const Template = (
 							customClasses: [`${rootClass}-item`],
 							isChecked: isReadOnly && i === 1
 						}, context))
-						: items.map((item) =>
+						: items.map((item, i) =>
 						CheckBox({
 							...item,
 							isReadOnly,
 							isRequired,
 							customClasses: [`${rootClass}-item`],
+							...(isReadOnly ? {isChecked: i === 1} : {}),
 						}, context)
 				)}
 				${when(helpText, () =>

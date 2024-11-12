@@ -4,14 +4,13 @@ import { Template as Textfield } from "./template";
 
 export const Template = ({
 	customClasses = [],
-	rootClass = "spectrum-Textfield",
+	rootClass = "spectrum-Textfield--multiline",
 	size = "m",
 	multiline = true,
 	...item
 } = {}, context = {}) => Textfield({
 	customClasses: [
 		rootClass,
-		typeof size !== "undefined" ? `${rootClass}--size${size.toUpperCase()}` : null,
 		...customClasses
 	],
 	size,
@@ -28,14 +27,14 @@ export const HelpTextOptionsTextArea = (args, context) => Container({
 			withBorder: false,
 			heading: "Description",
 			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Error message",
 			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Enter at least one interest.", isInvalid: true }, context),
-		})}
+		}, context)}
 	`
-});
+}, context);
 
 export const TextAreaOptions = (args, context) => Container({
 	direction: "row",
@@ -50,8 +49,8 @@ export const TextAreaOptions = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Default",
-			content: Template({...args, context})
-		})}
+			content: Template(args, context)
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -59,7 +58,7 @@ export const TextAreaOptions = (args, context) => Container({
 			},
 			heading: "Invalid",
 			content: Template({...args, isInvalid: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -67,7 +66,7 @@ export const TextAreaOptions = (args, context) => Container({
 			},
 			heading: "Focused",
 			content: Template({...args, isFocused: true}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			containerStyles: {
@@ -75,22 +74,32 @@ export const TextAreaOptions = (args, context) => Container({
 			},
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
-		})}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Keyboard-focused",
-			content: Template({...args, isKeyboardFocused: true}, context)
-		})}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Invalid, keyboard-focused",
-			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);
+
+export const KeyboardFocusTemplate = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Quiet",
+			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+		}, context)}
+	`
+}, context);

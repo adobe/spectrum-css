@@ -7,14 +7,18 @@ import { FieldGroupSet } from "./fieldgroup.test.js";
 import { Template } from "./template.js";
 
 /**
- * A field group is a group of fields, usually radios (also known as a radio group) or checkboxes
+ * A field group is a group of fields which are usually radios (also known as a radio group) or checkboxes
  * (also known as a checkbox group). A field group is composed of a field label, a group of radio
- * inputs or checkboxes, and an optional help text component. The field label within the field group
- * can be used to mark a field group as optional or required. The field group items other than the
- * label must be wrapped in a nested `div` with `.spectrum-FieldGroupInputLayout` to control their
- * layout separately from the label. Help text may or may not appear below a field group and is
- * necessary when denoting invalid checkbox fields, invalid radio button fields, and required
- * fields. Invalid radio buttons and checkboxes are signified by negative help text.
+ * inputs or checkboxes, and an optional help text component.
+ *
+ * ## Usage notes
+ *
+ * - **Markup:** The field group items other than the label must be wrapped in a nested `div` with the `spectrum-FieldGroupInputLayout`
+ * class to control their layout separately from the label. The class `spectrum-FieldGroup-item` should also be applied to each checkbox or radio.
+ * - **Roles:** For radio groups, the attribute `role="radiogroup"` should be used. For a checkbox group, use `role="group"`.
+ * - **Field label:** The field label within the field group can be used to mark a field group as [optional or required](#required-or-optional).
+ * - **Help text:** Help text may or may not appear below a field group and is necessary when denoting invalid
+ * checkbox fields, invalid radio button fields, and required fields.
  */
 export default {
 	title: "Field group",
@@ -182,8 +186,7 @@ InvalidCheckbox.parameters = {
 
 /**
  * Field groups can be marked as optional or required, depending on the situation.
- *
-* If required, the field group must either contain a "(required)" label or an asterisk. If an asterisk is used, help text must explain what the asterisk means.
+ * If required, the field group must either contain a "(required)" label or an asterisk. If an asterisk is used, help text must explain what the asterisk means.
  */
 export const Required = Template.bind({});
 Required.tags = ["!dev"];
@@ -271,13 +274,16 @@ HorizontalSideLabelCheckbox.parameters = {
 };
 
 /**
- * A group of read-only checkboxes that have been checked. In U.S. English, use commas to delineate items within read-only checkbox groups. In other languages, use the locale-specific formatting.
+ * Implementations should include the following behavior for read-only checkboxes:
+ * - Read-only checkboxes are immutable, i.e. their checked state cannot be changed.
+ * - Unlike disabled checkbox groups, the normally focusable elements of a checkbox group should remain focusable.
  */
 export const ReadOnlyCheckbox = Template.bind({});
 ReadOnlyCheckbox.tags = ["!dev"];
 ReadOnlyCheckbox.args = {
 	isReadOnly: true,
 	inputType: "checkbox",
+	helpText: undefined,
 };
 ReadOnlyCheckbox.parameters = {
 	chromatic: { disableSnapshot: true },

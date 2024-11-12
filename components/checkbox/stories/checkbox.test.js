@@ -28,6 +28,10 @@ export const CheckboxGroup = Variants({
 			isChecked: true,
 		},
 		{
+			testHeading: "Indeterminate",
+			isIndeterminate: true,
+		},
+		{
 			testHeading: "Invalid",
 			isInvalid: true,
 		},
@@ -35,6 +39,11 @@ export const CheckboxGroup = Variants({
 			testHeading: "Invalid, checked",
 			isInvalid: true,
 			isChecked: true,
+		},
+		{
+			testHeading: "Invalid, indeterminate",
+			isInvalid: true,
+			isIndeterminate: true,
 		},
 		{
 			testHeading: "Disabled",
@@ -46,7 +55,8 @@ export const CheckboxGroup = Variants({
 			isChecked: true,
 		},
 		{
-			testHeading: "Indeterminate",
+			testHeading: "Disabled, indeterminate",
+			isDisabled: true,
 			isIndeterminate: true,
 		},
 		{
@@ -55,6 +65,16 @@ export const CheckboxGroup = Variants({
 		},
 		{
 			testHeading: "Read-only, checked",
+			isReadOnly: true,
+			isChecked: true,
+		},
+		{
+			testHeading: "Read-only, indeterminate",
+			isReadOnly: true,
+			isIndeterminate: true,
+		},
+		{
+			testHeading: "Read-only, checked, disabled",
 			isReadOnly: true,
 			isChecked: true,
 		},

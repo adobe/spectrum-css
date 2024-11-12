@@ -1,5 +1,28 @@
 # Change Log
 
+## 6.4.0
+
+### Minor Changes
+
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+
+### Patch Changes
+
+- Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
+  - @spectrum-css/icon@7.2.0
+
+## 6.3.0
+
+### Minor Changes
+
+- [#3258](https://github.com/adobe/spectrum-css/pull/3258) [`db450d8`](https://github.com/adobe/spectrum-css/commit/db450d8679242cffced38793f8c3f4f458240612) Thanks [@cdransf](https://github.com/cdransf)! - Improves the visibility of the clear button disabled variant on static color backgrounds by more closely aligning styles with close button.
+
+  - Adds `.spectrum-ClearButton--staticWhite` to the mod declarations associated with `.spectrum-ClearButton--overBackground` in advance of the latter being deprecated. The same class has been added to the `:focus` declaration for `spectrum-ClearButton--overBackground`.
+  - Adds `--spectrum-clear-button-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);` custom property for `.spectrum-ClearButton--staticWhite`.
+  - Enables `cursor: pointer` for `.spectrum-ClearButton` when it is not disabled.
+  - Disables hover, active, focus and focus-within states for `:disabled` `.spectrum-ClearButton` elements.
+  - Adds color styles for `:disabled` and `.is-disabled` `.spectrum-ClearButton` `:disabled` icons.
+
 ## 6.2.0
 
 ### Minor Changes

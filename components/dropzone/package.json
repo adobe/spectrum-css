@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/dropzone",
-	"version": "6.1.4",
+	"version": "6.2.0",
 	"description": "The Spectrum CSS dropzone component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,15 +21,13 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./package.json": "./package.json"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
-		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -64,7 +62,8 @@
 	"spectrum": [
 		{
 			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/drop-zone-beta",
-			"rootClass": "spectrum-DropZone"
+			"rootClass": "spectrum-DropZone",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/dropzone/"
 		}
 	]
 }

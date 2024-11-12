@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import AdobeSVG from "../assets/images/adobe_logo.svg?raw";
 import GitHubSVG from "../assets/images/github_logo.svg?raw";
 import NpmSVG from "../assets/images/npm_logo.svg?raw";
+import WCSVG from "../assets/images/wc_logo.svg?raw";
 import { Body, Code, Heading } from "./Typography.jsx";
 import { fetchToken } from "./utilities.js";
 
@@ -121,6 +122,7 @@ export const ResourceLink = styled.a`
 	border-color: rgb(230, 230, 230);
 	overflow: hidden;
 	color: rgb(0, 0, 0);
+	background-color: rgba(255 255 255 / 80%);
 
 	&:hover {
 		border-color: rgb(213, 213, 213);
@@ -314,6 +316,8 @@ const fetchLogo = (brand) => {
 			return GitHubSVG;
 		case "Adobe":
 			return AdobeSVG;
+		case "WC":
+			return WCSVG;
 	}
 
 	return;
@@ -361,11 +365,16 @@ export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
 export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassName, isDeprecated }) => {
 	if (!packageName) return;
 
-	let href;
+	let swc, href;
 
 	for(let i = 0; i < spectrumData?.length; i++) {
-		if (spectrumData[i]?.guidelines && spectrumData[i]?.rootClass === rootClassName) {
+		const thisComponent = !spectrumData[i]?.rootClass || spectrumData[i]?.rootClass === rootClassName;
+		if (spectrumData[i]?.guidelines && thisComponent) {
 			href = spectrumData[i]?.guidelines;
+		}
+
+		if (spectrumData[i]?.swc && thisComponent) {
+			swc = spectrumData[i]?.swc;
 		}
 	}
 
@@ -374,10 +383,17 @@ export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassN
 			{href ?
 				<ResourceLinkContent
 					className="doc-block-resource-cards"
-					heading="View guidelines"
+					heading="Design guidelines"
 					alt="Spectrum website"
 					logo="Adobe"
 					href={href}/> : ""}
+			{swc ?
+				<ResourceLinkContent
+					className="doc-block-resource-cards"
+					heading="Web components"
+					alt="Spectrum web components"
+					logo="WC"
+					href={swc}/> : ""}
 				<ResourceLinkContent
 					className="doc-block-resource-cards"
 					heading="View package"

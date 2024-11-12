@@ -107,7 +107,7 @@ export const TooltipShowOnHover = (args, context) => {
 				heading,
 				content: html`
 					<div style="display: flex; flex-wrap: wrap;">
-						${placements.map((placement) => 
+						${placements.map((placement) =>
 								when(placement.startsWith(heading), () => html`
 									<span class="u-tooltip-showOnHover" style="margin: 15px 50px; cursor: default;">
 										${capitalize(placement.replace(/-/g, " "))}
@@ -121,9 +121,9 @@ export const TooltipShowOnHover = (args, context) => {
 						)}
 					</div>
 				`
-			})}
-			`)
-	});
+			}, context)}
+		`)
+	}, context);
 };
 
 export const TooltipPlacementGroup = (args, context) => Container({
@@ -138,9 +138,9 @@ export const TooltipPlacementGroup = (args, context) => Container({
 					placement,
 				})}
 			`
-		})}
+		}, context)}
 	`)
-});
+}, context);
 
 // these variants no longer exist in s2
 export const SemanticVariantGroup = (args, context) => {
@@ -163,7 +163,7 @@ export const SemanticVariantGroup = (args, context) => {
 						variant,
 					})}
 				`
-			})}
+			}, context)}
 		`)
-	});
+	}, context);
 };

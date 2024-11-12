@@ -1,5 +1,13 @@
 # Change Log
 
+## 10.11.7
+
+### Patch Changes
+
+- Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
+  - @spectrum-css/typography@6.2.0
+  - @spectrum-css/table@6.2.0
+
 ## 10.11.6
 
 ### Patch Changes

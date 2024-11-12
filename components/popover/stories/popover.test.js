@@ -73,6 +73,7 @@ export const PopoverGroup = Variants({
 					wrapperStyles["padding-right"] = `${popoverWidth + 20}px`;
 					break;
 				case "left":
+					wrapperStyles["align-items"] = "center";
 					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
 					wrapperStyles["padding-left"] = `${popoverWidth + 20}px`;
 					break;
@@ -87,6 +88,7 @@ export const PopoverGroup = Variants({
 					wrapperStyles["padding-left"] = `${popoverWidth + 20}px`;
 					break;
 				case "start":
+					wrapperStyles["align-items"] = "center";
 					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
 					wrapperStyles["padding-inline-start"] = `${popoverWidth + 20}px`;
 					break;
@@ -101,6 +103,7 @@ export const PopoverGroup = Variants({
 					wrapperStyles["padding-inline-start"] = `${popoverWidth + 20}px`;
 					break;
 				case "end":
+					wrapperStyles["align-items"] = "center";
 					wrapperStyles["block-size"] = `${popoverHeight + 20}px`;
 					wrapperStyles["padding-inline-end"] = `${popoverWidth + 20}px`;
 					break;

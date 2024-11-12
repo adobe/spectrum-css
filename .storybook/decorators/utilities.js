@@ -1,4 +1,3 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html, nothing } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
@@ -11,26 +10,58 @@ import { capitalize } from "lodash-es";
  * @param {string} props.content - The content to render in the heading or code block.
  * @param {string} props.size - The size of the heading to render.
  * @param {string} props.weight - The weight of the heading to render.
- * @param {string[]} props.customClasses - Additional classes to apply to the heading or code block.
  */
 const Heading = ({
 	semantics = "heading",
 	content,
 	size = "l",
 	weight,
-	customClasses = [],
-} = {}) => {
-	return Typography({
-		semantics,
-		size,
-		weight,
-		content,
-		skipLineBreak: true,
-		customClasses: ["chromatic-ignore", ...customClasses],
-		customStyles: {
-			"color": semantics === "detail" ? "var(--spectrum-heading-color)" : undefined,
+} = {}, context = {}) => {
+	if (!content) return nothing;
+
+	const headingStyles = {
+		"display": "block",
+		"color": "black",
+		"font-family": 'adobe-clean, "adobe clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif',
+		"font-size": "11px",
+		"line-height": "1.3",
+		"font-weight": "700",
+	};
+
+	if ((size === "xxs" && semantics === "heading") || size === "l") {
+		headingStyles["font-size"] = "14px";
+	}
+
+	if (semantics === "detail") {
+		headingStyles["letter-spacing"] = ".06em";
+		headingStyles["text-transform"] = "uppercase";
+	}
+
+	if (weight === "light") {
+		if (semantics === "heading") {
+			headingStyles["font-weight"] = "300";
 		}
-	});
+		else {
+			headingStyles["font-weight"] = "400";
+		}
+	}
+
+	if (context.globals?.color.startsWith("dark")) {
+		headingStyles["color"] = context?.args?.staticColor ?? "white";
+	}
+	else if (typeof context?.args?.staticColor !== "undefined") {
+		headingStyles["color"] = context?.args?.staticColor;
+	}
+
+
+	return html`
+		<span
+			class="chromatic-ignore"
+			style=${styleMap(headingStyles)}
+		>
+			${content}
+		</span>
+	`;
 };
 
 /**
@@ -54,7 +85,8 @@ export const Container = ({
 	withBorder = true,
 	containerStyles = {},
 	wrapperStyles = {},
-} = {}) => {
+} = {}, context = {}) => {
+	const isDocs = context?.viewMode === "docs";
 	const headingConfig = { size: "l", semantics: type };
 	let gap = 40;
 
@@ -100,6 +132,13 @@ export const Container = ({
 			${when(heading, () => Heading({
 				...headingConfig,
 				content: heading
+			}, {
+				...context,
+				globals: {
+					...context.globals ?? {},
+					// If the level is 1 and we are not in docs view, use the light color theme for the heading
+					color: level === 1 && !isDocs ? "light" : context.globals?.color,
+				}
 			}))}
 			<div
 				data-inner-container
@@ -117,7 +156,7 @@ export const Container = ({
 					...wrapperStyles,
 				})}
 			>
-				${renderContent(content)}
+				${renderContent(content, { context })}
 			</div>
 		</div>
 	`;
@@ -173,6 +212,15 @@ export const States = ({
 				return nothing
 			}
 
+			context = {
+				...context,
+				args: {
+					...context.args,
+					...args,
+					...item,
+				}
+			};
+
 			return Container({
 				heading: stateData.some(({ testHeading }) => testHeading) ? testHeading : "",
 				level: 3,
@@ -182,9 +230,9 @@ export const States = ({
 					...stateWrapperStyles,
 				},
 				content: Template({ ...args, ...item }, context),
-			});
+			}, context);
 		})
-	});
+	}, context);
 };
 
 /**
@@ -264,8 +312,8 @@ export const ArgGrid = ({
 				...(typeof args?.name !== "undefined" ? {name: `${args.name}-${argKey}-${index}`} : {}),
 				...(typeof args?.id !== "undefined" ? {id: `${args.id}-${argKey}-${index}`} : {}),
 			}, context)
-		})),
-	});
+		}, context)),
+	}, context);
 };
 
 /**
@@ -450,7 +498,7 @@ export const Variants = ({
 									() => AltTemplate(data, context)
 								)}
 							`,
-						});
+						}, context);
 					}
 				)}
 

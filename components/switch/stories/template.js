@@ -54,26 +54,23 @@ export const Template = ({
 export const DocsSwitchGroup = (args, context) => Container({
 	withBorder: false,
 	content: html`
-	${Container({
-		heading: "Not selected",
-		withBorder: false,
-		content: html`
-			${Template({
+		${Container({
+			heading: "Not selected",
+			withBorder: false,
+			content: Template({
 				...args,
 				context,
 				isChecked: false,
-			})}
-		`
-	})}
-	${Container({
-		heading: "Selected",
-		withBorder: false,
-		content: html`
-			${Template({
+			})
+		}, context)}
+		${Container({
+			heading: "Selected",
+			withBorder: false,
+			content: Template({
 				...args,
 				context,
 				isChecked: true,
-			})}
-		`
-	})}`
-});
+			})
+		}, context)}
+	`
+}, context);

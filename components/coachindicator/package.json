@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/coachindicator",
-	"version": "2.1.5",
+	"version": "2.2.0",
 	"description": "The Spectrum CSS Coach Indicator component ",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,15 +21,13 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./package.json": "./package.json"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
-		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -50,7 +48,8 @@
 	"spectrum": [
 		{
 			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/coach-indicator-beta",
-			"rootClass": "spectrum-CoachIndicator"
+			"rootClass": "spectrum-CoachIndicator",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/coach-indicator/"
 		}
 	]
 }

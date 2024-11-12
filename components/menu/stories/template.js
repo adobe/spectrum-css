@@ -459,7 +459,7 @@ export const DisabledItemGroup = (args, context) => {
 			]
 		}
 	];
-	
+
 	return Container({
 		withBorder: false,
 		content: groupData.map((group) => html`
@@ -473,9 +473,9 @@ export const DisabledItemGroup = (args, context) => {
 						items: group.items,
 					})}
 				`
-			})}	
+			}, context)}
 		`)
-	});
+	}, context);
 };
 
 export const OverflowGroup = (args, context) => {
@@ -582,7 +582,7 @@ export const OverflowGroup = (args, context) => {
 						items: group.items,
 					})}
 				`
-			})}	
+			})}
 		`)
 	});
 };
@@ -690,87 +690,84 @@ export const SelectionGroup = (args, context) => {
 
 	return Container({
 		withBorder: false,
-		content: groupData.map((group) => html`${Container({
+		content: groupData.map((group) => Container({
 			heading: group.heading,
-			content: html`
-			${Template({
+			content: Template({
 				...args,
 				context,
 				selectionMode: group.selectionMode || "none",
 				hasActions: group.hasActions || false,
 				items: group.items,
-			})}
-			`
-		})}`)
+			})
+		}, context))
 	});
 };
 
-export const SubmenuInPopover = (context) => html`${Popover({
-		isOpen: true,
-		position: "end-top",
-		customStyles: {
-			"inline-size": "200px",
-		},
-		trigger: (args, context) => ActionButton({
-			label: "Settings",
-			iconName: "Settings",
-			...args,
-		}, context),
-		content: [
-			(args, context) => Template({
-				items: [
-					{
-						label: "Language",
-						value: "English (US)",
-						isDrillIn: true,
-						isHovered: true,
-					},
-					{
-						label: "Notifications",
-					},
-					{
-						label: "Show grid",
-					}
-				],
-				...args
-			}, context),
-			(args, context) => Popover({
-				isOpen: true,
-				position: "end-top",
-				customStyles: {
-					"--mod-popover-animation-distance": "-4px",
-					top: "-105px",
-					"inline-size": "120px",
+export const SubmenuInPopover = (context) => Popover({
+	isOpen: true,
+	position: "end-top",
+	customStyles: {
+		"inline-size": "200px",
+	},
+	trigger: (args, context) => ActionButton({
+		label: "Settings",
+		iconName: "Settings",
+		...args,
+	}, context),
+	content: [
+		(args, context) => Template({
+			items: [
+				{
+					label: "Language",
+					value: "English (US)",
+					isDrillIn: true,
+					isHovered: true,
 				},
-				content: [
-					(args, context) => Template({
-						selectionMode: "single",
-						items: [
-							{
-								label: "Deutsch",
-							},
-							{
-								label: "English (US)",
-								isSelected: true,
-							},
-							{
-								label: "Español",
-							},
-							{
-								label: "Français",
-							},
-							{
-								label: "Italiano",
-							},
-							{
-								label: "日本語",
-							}
-						],
-						...args,
-					}, context)
-				],
-				...args,
-			}, context)
-		],
-	}, context)
-	}`;
+				{
+					label: "Notifications",
+				},
+				{
+					label: "Show grid",
+				}
+			],
+			...args
+		}, context),
+		(args, context) => Popover({
+			isOpen: true,
+			position: "end-top",
+			customStyles: {
+				"--mod-popover-animation-distance": "-4px",
+				top: "-105px",
+				"inline-size": "120px",
+			},
+			content: [
+				(args, context) => Template({
+					selectionMode: "single",
+					items: [
+						{
+							label: "Deutsch",
+						},
+						{
+							label: "English (US)",
+							isSelected: true,
+						},
+						{
+							label: "Español",
+						},
+						{
+							label: "Français",
+						},
+						{
+							label: "Italiano",
+						},
+						{
+							label: "日本語",
+						}
+					],
+					...args,
+				}, context)
+			],
+			...args,
+		}, context)
+	],
+}, context);

@@ -193,7 +193,7 @@ export const Template = ({
  */
 export const ClosedAndOpenTemplate = (args, context) => Container({
 	withBorder: false,
-	content: html`${[false, true].map((isOpen) => 
+	content: html`${[false, true].map((isOpen) =>
 		Container({
 			withBorder: false,
 			direction: "column",
@@ -209,16 +209,16 @@ export const ClosedAndOpenTemplate = (args, context) => Container({
 				...args,
 				isOpen,
 			}, context),
-		})
+		}, context)
 	)}`,
-});
+}, context);
 
 /**
  * Template for the Disabled docs story.
  */
 export const DisabledTemplate = (args, context) => Container({
 	withBorder: false,
-	content: html`${[false, true].map((isInvalid) => 
+	content: html`${[false, true].map((isInvalid) =>
 		Container({
 			withBorder: false,
 			direction: "column",
@@ -235,6 +235,6 @@ export const DisabledTemplate = (args, context) => Container({
 				...args,
 				isInvalid,
 			}, context),
-		})
+		}, context)
 	)}`,
-});
+}, context);

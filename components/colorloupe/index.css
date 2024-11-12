@@ -60,7 +60,6 @@
 }
 
 .spectrum-ColorLoupe-inner-border {
-	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 	fill: var(--spectrum-picked-color);
 	stroke: var(--mod-colorloupe-inner-border-color, var(--spectrum-colorloupe-inner-border-color));
 	stroke-width: var(--mod-colorloupe-inner-border-width, var(--spectrum-colorloupe-inner-border-width));
@@ -73,7 +72,7 @@
 }
 
 /* The checkerboard classes use opacity checkerboard tokens for dark and light color.
- The opacity-checkerboard-square-size token is not able to be used witin the SVG pattern and instead colorloupe.yml is using two different patterns toggled by --spectrum-colorloupe-checkerboard-fill */
+ The opacity-checkerboard-square-size token is not able to be used witin the SVG pattern and instead colorloupe docs are using two different patterns toggled by --spectrum-colorloupe-checkerboard-fill */
 
 .spectrum-ColorLoupe-checkerboard-pattern {
 	fill: var(--spectrum-colorloupe-checkerboard-dark-color);

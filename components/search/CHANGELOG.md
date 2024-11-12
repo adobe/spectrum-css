@@ -1,5 +1,32 @@
 # Change Log
 
+## 7.4.0
+
+### Minor Changes
+
+- [#3372](https://github.com/adobe/spectrum-css/pull/3372) [`61af074`](https://github.com/adobe/spectrum-css/commit/61af0743f874d799b8fbb789aff8ad2580c5994a) Thanks [@cdransf](https://github.com/cdransf)! - This change removes the existing calc function used to calculate the padding-inline-end for S1 and the quiet variant in favor of a simpler value with a mod preceding a static value.
+
+  This change removes the `--mod-search-quiet-button-offset` mod.
+
+## 7.3.0
+
+### Minor Changes
+
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+
+### Patch Changes
+
+- Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
+  - @spectrum-css/clearbutton@6.4.0
+  - @spectrum-css/textfield@7.3.0
+  - @spectrum-css/icon@7.2.0
+
+## 7.2.4
+
+### Patch Changes
+
+- [#3297](https://github.com/adobe/spectrum-css/pull/3297) [`60685ce`](https://github.com/adobe/spectrum-css/commit/60685ce14d1117584ca46d034ecaa2617a016345) Thanks [@castastrophe](https://github.com/castastrophe)! - Deprecated `--mod-workflow-icon-size-100` from the `.spectrum-Search--quiet` calculation of the `--spectrum-search-quiet-button-offset`. Use `--mod-search-icon-size` instead. Deprecated property will be removed in the next breaking change release.
+
 ## 7.2.3
 
 ### Patch Changes

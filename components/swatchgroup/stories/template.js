@@ -1,4 +1,4 @@
-import { getRandomId, Container } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Swatch } from "@spectrum-css/swatch/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -17,7 +17,7 @@ export const Template = ({
 	containerWidth,
 	items = [],
 	customStyles = {},
-	isDisabled =false, 
+	isDisabled =false,
 	isSelected = false,
 	id = getRandomId("swatchgroup"),
 } = {}, context = {}) => html`
@@ -59,7 +59,7 @@ export const RoundingTemplate = (args, context) => Container({
 				...args,
 				rounding: "full",
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Regular",
@@ -68,7 +68,7 @@ export const RoundingTemplate = (args, context) => Container({
 				...args,
 				rounding: "regular",
 			}, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "None",
@@ -77,6 +77,6 @@ export const RoundingTemplate = (args, context) => Container({
 				...args,
 				rounding: "none",
 			}, context)
-		})}
+		}, context)}
 	`
-});
+}, context);

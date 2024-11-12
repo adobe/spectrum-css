@@ -145,7 +145,6 @@
 
 	&.is-mixedValue {
 		.spectrum-Swatch-fill {
-			/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background: var(--spectrum-picked-color, transparent);
 		}
 
@@ -158,7 +157,6 @@
 	/* Swatch fill: Not fill with Slash */
 	&.is-nothing {
 		.spectrum-Swatch-fill {
-			/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background-color: var(--spectrum-picked-color, transparent);
 			background-image: none;
 
@@ -172,12 +170,8 @@
 			}
 		}
 
-		&.spectrum-Swatch--rectangle {
-			.spectrum-Swatch-fill {
-				&::after {
-					transform: rotate(-25deg);
-				}
-			}
+		&.spectrum-Swatch--rectangle .spectrum-Swatch-fill::after {
+			transform: rotate(-25deg);
 		}
 	}
 
@@ -248,7 +242,6 @@
 		inset: 0;
 		z-index: 0;
 
-		/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
 		background-color: var(--spectrum-picked-color, transparent);
 
 		/* Swatch border */
@@ -263,7 +256,6 @@
 		&::before {
 			box-shadow: none;
 
-			/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background-color: var(--spectrum-picked-color, transparent);
 		}
 	}
@@ -281,7 +273,6 @@
 	display: none;
 	pointer-events: none;
 
-	/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
 	color: var(--spectrum-picked-color, transparent);
 }
 

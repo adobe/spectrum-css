@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/splitview",
-	"version": "5.2.3",
+	"version": "5.3.0",
 	"description": "The Spectrum CSS splitview component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,15 +21,13 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./package.json": "./package.json"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
-		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -49,7 +47,8 @@
 	},
 	"spectrum": [
 		{
-			"rootClass": "spectrum-SplitView"
+			"rootClass": "spectrum-SplitView",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/split-view/"
 		}
 	]
 }

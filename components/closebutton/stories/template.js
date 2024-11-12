@@ -80,7 +80,7 @@ const getCloseButtonIconName = (size = "m", iconSize = "regular", iconName = "Cr
 };
 
 /**
- * Example template that includes both the default and disabled close button 
+ * Example template that includes both the default and disabled close button
  * for some of the Docs only stories.
  */
 export const CloseButtonExample = (args, context) => Container({
@@ -91,7 +91,7 @@ export const CloseButtonExample = (args, context) => Container({
 			direction: "column",
 			heading: "Default",
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			direction: "column",
@@ -100,6 +100,6 @@ export const CloseButtonExample = (args, context) => Container({
 				...args,
 				isDisabled: true,
 			}, context),
-		})}
+		}, context)}
 	`,
-});
+}, context);

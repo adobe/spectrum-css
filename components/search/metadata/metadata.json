@@ -7,7 +7,6 @@
     ".spectrum-Search .spectrum-Search-textfield",
     ".spectrum-Search .spectrum-Search-textfield .spectrum-Search-input",
     ".spectrum-Search--quiet",
-    ".spectrum-Search--quiet .spectrum-Search-clearButton .spectrum-ClearButton-icon",
     ".spectrum-Search--quiet.spectrum-Search",
     ".spectrum-Search--quiet.spectrum-Search .spectrum-Search-input",
     ".spectrum-Search--sizeL",
@@ -62,11 +61,9 @@
     "--mod-search-inline-size",
     "--mod-search-line-height",
     "--mod-search-min-inline-size",
-    "--mod-search-quiet-button-offset",
     "--mod-search-text-to-icon",
     "--mod-search-to-help-text",
-    "--mod-search-top-to-text",
-    "--mod-workflow-icon-size-100"
+    "--mod-search-top-to-text"
   ],
   "component": [
     "--spectrum-search-background-color",
@@ -101,7 +98,6 @@
     "--spectrum-search-inline-size",
     "--spectrum-search-line-height",
     "--spectrum-search-min-inline-size",
-    "--spectrum-search-quiet-button-offset",
     "--spectrum-search-text-to-icon",
     "--spectrum-search-to-help-text",
     "--spectrum-search-top-to-text"

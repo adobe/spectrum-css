@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/progressbar",
-	"version": "4.1.8",
+	"version": "4.2.0",
 	"description": "The Spectrum CSS progress bar component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,15 +21,13 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./package.json": "./package.json"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
-		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -57,11 +55,13 @@
 	"spectrum": [
 		{
 			"guidelines": "https://spectrum.adobe.com/page/progress-bar",
-			"rootClass": "spectrum-ProgressBar"
+			"rootClass": "spectrum-ProgressBar",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/progress-bar/"
 		},
 		{
 			"guidelines": "https://spectrum.adobe.com/page/meter",
-			"rootClass": "spectrum-Meter"
+			"rootClass": "spectrum-Meter",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/meter/"
 		}
 	]
 }
