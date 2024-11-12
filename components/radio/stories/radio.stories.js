@@ -137,8 +137,7 @@ Disabled.parameters = {
  * - prevent interaction like disabled, but not all disabled radio buttons are read-only
  * - are immutable, i.e. their checked state cannot be changed
  * - are keyboard focusable and communicate state to assistive technology
- * - use `aria-disabled` since the `readonly` attribute [is not valid](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly#overview)
- * - use `preventDefault()` on click to prevent changing the selection via pointer or keyboard interaction
+ * - use `aria-disabled` since the `readonly` attribute [is not valid](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly#overview) and `aria-readonly` is not currently announced by the majority of screen readers.
  */
 export const ReadOnly = BasicGroupTemplate.bind({});
 ReadOnly.storyName = "Read-only";

@@ -16,7 +16,7 @@ export const Template = (
 		customClasses = [],
 		layout = "vertical",
 		inputType = "radio",
-		name = "default",
+		name = getRandomId(),
 		isReadOnly = false,
 		isRequired = false,
 		label,
@@ -69,7 +69,7 @@ export const Template = (
 							isRequired,
 							name: `field-group-example-${name}`,
 							customClasses: [`${rootClass}-item`],
-							isChecked: isReadOnly && i === 1
+							...(isReadOnly ? {isChecked: i === 1} : {}),
 						}, context))
 						: items.map((item, i) =>
 						CheckBox({

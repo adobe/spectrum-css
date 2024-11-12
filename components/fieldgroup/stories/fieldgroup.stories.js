@@ -123,8 +123,7 @@ export const VerticalRadio = Template.bind({});
 VerticalRadio.tags = ["!dev"];
 VerticalRadio.args = {
 	layout: "vertical",
-	inputType: "radio",
-	name: "vertical"
+	inputType: "radio"
 };
 VerticalRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -144,8 +143,7 @@ export const HorizontalRadio = Template.bind({});
 HorizontalRadio.tags = ["!dev"];
 HorizontalRadio.args = {
 	layout: "horizontal",
-	inputType: "radio",
-	name: "horizontal"
+	inputType: "radio"
 };
 HorizontalRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -166,8 +164,7 @@ InvalidRadio.tags = ["!dev"];
 InvalidRadio.args = {
 	layout: "horizontal",
 	inputType: "radio",
-	isInvalid: true,
-	name: "invalid"
+	isInvalid: true
 };
 InvalidRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -192,8 +189,7 @@ export const Required = Template.bind({});
 Required.tags = ["!dev"];
 Required.args = {
 	inputType: "radio",
-	fieldLabel: "Radio group label (required)",
-	name: "required"
+	fieldLabel: "Radio group label (required)"
 };
 Required.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -232,8 +228,7 @@ VerticalSideLabelRadio.tags = ["!dev"];
 VerticalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
-	layout: "vertical",
-	name: "vertical-side-label"
+	layout: "vertical"
 };
 VerticalSideLabelRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -244,8 +239,7 @@ HorizontalSideLabelRadio.tags = ["!dev"];
 HorizontalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
-	layout: "horizontal",
-	name: "horizontal-side-label"
+	layout: "horizontal"
 };
 HorizontalSideLabelRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -298,8 +292,7 @@ export const ReadOnlyRadio = Template.bind({});
 ReadOnlyRadio.tags = ["!dev"];
 ReadOnlyRadio.args = {
 	isReadOnly: true,
-	inputType: "radio",
-	name: "read-only"
+	inputType: "radio"
 };
 ReadOnlyRadio.parameters = {
 	chromatic: { disableSnapshot: true },
