@@ -111,3 +111,25 @@ governing permissions and limitations under the License.
 		animation: 1s infinite linear spectrum-fill-mask-2;
 	}
 }
+
+.spectrum-ProgressCircle--infield {
+	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);
+	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-100);
+	padding-block: var(--spectrum-in-field-progress-circle-edge-to-fill);
+
+	&.spectrum-ProgressCircle--sizeS {
+		--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-75);
+	}
+
+	&.spectrum-ProgressCircle--sizeL {
+		--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-200);
+	}
+
+	&.spectrum-ProgressCircle--sizeXL {
+		--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-300);
+	}
+
+	.spectrum-ProgressCircle-fill {
+		stroke-linecap: square;
+	}
+}

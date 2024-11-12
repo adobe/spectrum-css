@@ -17,6 +17,7 @@ export const Template = ({
 	size = "m",
 	staticColor,
 	isIndeterminate = false,
+	isInField = false,
 	value,
 }) => {
 
@@ -36,6 +37,7 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--indeterminate`]: isIndeterminate,
+				[`${rootClass}--infield`]: isInField,
 				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
