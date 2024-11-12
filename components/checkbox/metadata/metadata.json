@@ -67,13 +67,11 @@
     ".spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-label",
     ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box",
-    ".spectrum-Checkbox.is-readOnly",
+    ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label",
-    ".spectrum-Checkbox.is-readOnly:active .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox.is-readOnly:hover .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox:active .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox:active .spectrum-Checkbox-label",
@@ -234,7 +232,6 @@
     "--highcontrast-checkbox-highlight-color-default",
     "--highcontrast-checkbox-highlight-color-down",
     "--highcontrast-checkbox-highlight-color-focus",
-    "--highcontrast-checkbox-highlight-color-hover",
-    "--highcontrast-checkbox-selected-color-default"
+    "--highcontrast-checkbox-highlight-color-hover"
   ]
 }

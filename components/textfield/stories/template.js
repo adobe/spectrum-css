@@ -120,16 +120,28 @@ export const Template = ({
 			style=${styleMap(customStyles)}
 			@click=${onclick}
 			@focusin=${function() {
-				updateArgs({
+				updateArgs?.({
 					isFocused: true,
-					isKeyboardFocused: true
 				});
 			}}
+			@keyup=${function(e) {
+				// Tab key was used.
+				if (e.keyCode === 9) {
+					// The element that was focused when the key was released is this textfield / input.
+					if (e.target == this || e.target?.parentNode == this) {
+						updateArgs?.({ isKeyboardFocused: true });
+						// Manually add class since updateArgs doesn't always work on the Docs page.
+						this.classList.add("is-keyboardFocused");
+					}
+				}
+			}}
 			@focusout=${function() {
-				updateArgs({
+				updateArgs?.({
 					isFocused: false,
-					isKeyboardFocused: false
+					isKeyboardFocused: false,
 				});
+				// Manually remove class since updateArgs doesn't always work on the Docs page.
+				this.classList.remove("is-keyboardFocused");
 			}}
 			id=${ifDefined(id)}
 		>
@@ -189,13 +201,14 @@ export const Template = ({
 			customClasses: customProgressCircleClasses,
 		}, context))}
 		${when(helpText, () =>
-				HelpText({
-					text: helpText,
-					variant: isInvalid ? "negative" : "neutral",
-					size,
-					hideIcon: true,
-					isDisabled
-				}, context ))}
+			HelpText({
+				text: helpText,
+				variant: isInvalid ? "negative" : "neutral",
+				size,
+				hideIcon: true,
+				isDisabled
+			}, context)
+		)}
 	</div>
 	`;
 };
@@ -231,7 +244,7 @@ export const TextFieldOptions = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Default",
-			content: Template({...args, context})
+			content: Template(args, context)
 		}, context)}
 		${Container({
 			withBorder: false,
@@ -257,12 +270,22 @@ export const TextFieldOptions = (args, context) => Container({
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
 		}, context)}
+	`
+}, context);
+
+export const KeyboardFocusTemplate = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`
 		${Container({
 			withBorder: false,
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Keyboard-focused",
+			heading: "Default",
 			content: Template({...args, isKeyboardFocused: true}, context)
 		}, context)}
 		${Container({
@@ -270,8 +293,8 @@ export const TextFieldOptions = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Invalid, keyboard-focused",
-			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
+			heading: "Quiet",
+			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
 		}, context)}
 	`
 }, context);
