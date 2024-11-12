@@ -49,10 +49,10 @@
     "--spectrum-thumbnail-border-color-selected",
     "--spectrum-thumbnail-border-opacity",
     "--spectrum-thumbnail-border-radius",
-    "--spectrum-thumbnail-border-radius-default",
     "--spectrum-thumbnail-border-width",
     "--spectrum-thumbnail-border-width-selected",
     "--spectrum-thumbnail-color-opacity-disabled",
+    "--spectrum-thumbnail-corner-radius",
     "--spectrum-thumbnail-focus-indicator-color",
     "--spectrum-thumbnail-focus-indicator-gap",
     "--spectrum-thumbnail-focus-indicator-thickness",
@@ -73,8 +73,7 @@
     "--spectrum-thumbnail-size-700",
     "--spectrum-thumbnail-size-75",
     "--spectrum-thumbnail-size-800",
-    "--spectrum-thumbnail-size-900",
-    "--spectrum-thumbnail-sized-size"
+    "--spectrum-thumbnail-size-900"
   ],
   "global": [
     "--spectrum-accent-color-800",
