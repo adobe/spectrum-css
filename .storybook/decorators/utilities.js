@@ -16,6 +16,7 @@ const Heading = ({
 	content,
 	size = "l",
 	weight,
+	withMargin = false,
 } = {}, context = {}) => {
 	if (!content) return nothing;
 
@@ -26,6 +27,7 @@ const Heading = ({
 		"font-size": "11px",
 		"line-height": "1.3",
 		"font-weight": "700",
+		"margin-block-end": withMargin ? "8px" : "0",
 	};
 
 	if ((size === "xxs" && semantics === "heading") || size === "l") {
@@ -46,7 +48,7 @@ const Heading = ({
 		}
 	}
 
-	if (context.globals?.color.startsWith("dark")) {
+	if (context.globals?.color?.startsWith("dark")) {
 		headingStyles["color"] = context?.args?.staticColor ?? "white";
 	}
 	else if (typeof context?.args?.staticColor !== "undefined") {
@@ -110,7 +112,7 @@ export const Container = ({
 	if (withBorder) {
 		borderStyles["padding-inline"] = "24px";
 		borderStyles["padding-block"] = "24px";
-		borderStyles["border"] = "1px solid var(--spectrum-gray-200)";
+		borderStyles["border"] = "1px solid rgba(var(--spectrum-gray-600-rgb), 20%)";
 		borderStyles["border-radius"] = "4px";
 		gap = 80;
 	}
@@ -528,9 +530,13 @@ export const Variants = ({
 export const renderContent = (content = [], {
 	context = {},
 	args = {},
-	callback = (args, context) => {
-		console.log(JSON.stringify(args, null, 2), JSON.stringify(context, null, 2));
-		return nothing;
+	callback = ({ testHeading, content, ...args }, context) => {
+		return html`
+			<div>
+				${testHeading ? Heading({ content: testHeading, withMargin: true }, context) : nothing}
+				${content ? renderContent(content, { args, context }) : nothing}
+			</div>
+		`;
 	}
 } = {}) => {
 	// If the content is not an array, make it an array for easier processing
@@ -542,6 +548,8 @@ export const renderContent = (content = [], {
 
 	return html`
 		${content.map((c) => {
+			if (typeof c === "undefined") return nothing;
+
 			/* If the content is an object (but not a lit object), we need to merge the object with the template */
 			if (typeof c !== "string" && (typeof c === "object" && !c._$litType$)) {
 				return callback({ ...args, ...c }, context);
