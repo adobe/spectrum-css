@@ -11,114 +11,99 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Thumbnail {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
 
-	--spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
+	--spectrum-thumbnail-border-radius: var(--spectrum-thumbnail-corner-radius);
 	--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
 
 	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-	--spectrum-thumbnail-border-color-rgba: rgba(
-		var(--spectrum-gray-800-rgb),
-		var(--spectrum-thumbnail-border-color-opacity)
-	);
-	--spectrum-thumbnail-layer-border-width-inner: var(
-		--spectrum-border-width-400
-	);
+	--spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
+	--spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
 	--spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
-	--spectrum-thumbnail-layer-border-width-outer: var(
-		--spectrum-border-width-100
-	);
+	--spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
 	--spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
 
-  --spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
-  --spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
+	--spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
+	--spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
 
-  --spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-  --spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-  --spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-	--spectrum-thumbnail-color-opacity-disabled: var(
-		--spectrum-thumbnail-opacity-disabled
-	);
+	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
 }
 
 .spectrum-Thumbnail--size50 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-50);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-50);
 }
 
 .spectrum-Thumbnail--size75 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-75);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-75);
 }
 
 .spectrum-Thumbnail--size100 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
 }
 
 .spectrum-Thumbnail--size200 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-200);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-200);
 }
 
 .spectrum-Thumbnail--size300 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-300);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-300);
 }
 
 .spectrum-Thumbnail--size400 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-400);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-400);
 }
 
 .spectrum-Thumbnail--size500 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
 }
 
 .spectrum-Thumbnail--size600 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-600);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-600);
 }
 
 .spectrum-Thumbnail--size700 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-700);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-700);
 }
 
 .spectrum-Thumbnail--size800 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-800);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-800);
 }
 
 .spectrum-Thumbnail--size900 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-900);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-900);
 }
 
 .spectrum-Thumbnail--size1000 {
-  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-1000);
+	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-1000);
 }
 
 .spectrum-Thumbnail {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	display: block;
 
-  inline-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
-  block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
+	inline-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
+	block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
 
-	border-radius: var(
-		--mod-thumbnail-border-radius,
-		var(--spectrum-thumbnail-border-radius)
-	);
+	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 
-  &::before {
-    content: '';
-    z-index: 2;
-    position: absolute;
-    inline-size: 100%;
-    block-size: 100%;
-    border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
-    box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width)) var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, var(--spectrum-thumbnail-border-color-rgba)));
-  }
+	&::before {
+		content: "";
+		z-index: 2;
+		position: absolute;
+		inline-size: 100%;
+		block-size: 100%;
+		border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+		box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width)) var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, var(--spectrum-thumbnail-border-color-rgba)));
+	}
 
 	&.is-disabled {
-		opacity: var(
-			--mod-thumbnail-color-opacity-disabled,
-			var(--spectrum-thumbnail-color-opacity-disabled)
-		);
+		opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
 	}
 	/* stylelint-disable selector-pseudo-class-no-unknown */
 	&.is-focused {
@@ -127,229 +112,105 @@ governing permissions and limitations under the License.
 		&::after {
 			content: "";
 			border-style: solid;
-			border-width: var(
-				--mod-thumbnail-focus-indicator-thickness,
-				var(--spectrum-thumbnail-focus-indicator-thickness)
-			);
-			border-color: var(
-				--highcontrast-thumbnail-focus-indicator-color,
-				var(
-					--mod-thumbnail-focus-indicator-color,
-					var(--spectrum-thumbnail-focus-indicator-color)
-				)
-			);
-			border-radius: var(
-				--mod-thumbnail-border-radius,
-				var(--spectrum-thumbnail-border-radius)
-			);
+			border-width: var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness));
+			border-color: var(--highcontrast-thumbnail-focus-indicator-color, var(--mod-thumbnail-focus-indicator-color, var(--spectrum-thumbnail-focus-indicator-color)));
+			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 			position: absolute;
-			inset-inline-start: calc(
-				(
-						var(
-								--mod-thumbnail-focus-indicator-gap,
-								var(--spectrum-thumbnail-focus-indicator-gap)
-							) +
-							var(
-								--mod-thumbnail-focus-indicator-thickness,
-								var(--spectrum-thumbnail-focus-indicator-thickness)
-							)
-					) * -1
-			);
-			inset-inline-end: calc(
-				(
-						var(
-								--mod-thumbnail-focus-indicator-gap,
-								var(--spectrum-thumbnail-focus-indicator-gap)
-							) +
-							var(
-								--mod-thumbnail-focus-indicator-thickness,
-								var(--spectrum-thumbnail-focus-indicator-thickness)
-							)
-					) * -1
-			);
-			inset-block-end: calc(
-				(
-						var(
-								--mod-thumbnail-focus-indicator-gap,
-								var(--spectrum-thumbnail-focus-indicator-gap)
-							) +
-							var(
-								--mod-thumbnail-focus-indicator-thickness,
-								var(--spectrum-thumbnail-focus-indicator-thickness)
-							)
-					) * -1
-			);
-			inset-block-start: calc(
-				(
-						var(
-								--mod-thumbnail-focus-indicator-gap,
-								var(--spectrum-thumbnail-focus-indicator-gap)
-							) +
-							var(
-								--mod-thumbnail-focus-indicator-thickness,
-								var(--spectrum-thumbnail-focus-indicator-thickness)
-							)
-					) * -1
-			);
+			inset: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
 		}
 
 		.spectrum-Thumbnail-image-wrapper {
 			overflow: hidden;
-			border-radius: var(
-				--mod-thumbnail-border-radius,
-				var(--spectrum-thumbnail-border-radius)
-			);
+			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 		}
 	}
 	/* stylelint-enable selector-pseudo-class-no-unknown */
 
-  /* Friends should align to the top of the tabs */
-  vertical-align: top;
-  overflow: hidden;
-  z-index: 0;
+	/* Friends should align to the top of the tabs */
+	vertical-align: top;
+	overflow: hidden;
+	z-index: 0;
 }
 
 .spectrum-Thumbnail-layer {
 	border-style: solid;
-	border-width: var(
-		--mod-thumbnail-layer-border-width-outer,
-		var(--spectrum-thumbnail-layer-border-width-outer)
-	);
-	border-color: var(
-		--highcontrast-thumbnail-layer-border-color-outer,
-		var(
-			--mod-thumbnail-layer-border-color-outer,
-			var(--spectrum-thumbnail-layer-border-color-outer)
-		)
-	);
-  box-sizing: border-box;
+	border-width: var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer));
+	border-color: var(--highcontrast-thumbnail-layer-border-color-outer, var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer)));
+	box-sizing: border-box;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  &::before {
-    content: none;
-  }
+	&::before {
+		content: none;
+	}
 
 	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 	&.is-selected {
 		outline-style: solid;
-		outline-color: var(
-			--highcontrast-thumbnail-border-color-selected,
-			var(
-				--mod-thumbnail-border-color-selected,
-				var(--spectrum-thumbnail-border-color-selected)
-			)
-		);
-		outline-width: var(
-			--mod-thumbnail-border-width-selected,
-			var(--spectrum-thumbnail-border-width-selected)
-		);
-		outline-offset: calc(
-			var(
-					--mod-thumbnail-border-width-selected,
-					var(--spectrum-thumbnail-border-width-selected)
-				) -
-				var(
-					--mod-thumbnail-layer-border-width-inner,
-					var(--spectrum-thumbnail-layer-border-width-inner)
-				)
-		);
+		outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
+		outline-width: var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected));
+		outline-offset: calc(var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)));
 	}
 }
 
 .spectrum-Thumbnail-layer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-	inline-size: calc(
-		var(--spectrum-thumbnail-size) -
-			(
-				(
-					var(
-						--mod-thumbnail-layer-border-width-inner,
-						var(--spectrum-thumbnail-layer-border-width-inner)
-					)
-				)
-			) * 2
-	);
-	block-size: calc(
-		var(--spectrum-thumbnail-size) -
-			(
-				(
-					var(
-						--mod-thumbnail-layer-border-width-inner,
-						var(--spectrum-thumbnail-layer-border-width-inner)
-					)
-				)
-			) * 2
-	);
+	inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
+	block-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
 	outline-style: solid;
-	outline-color: var(
-		--highcontrast-thumbnail-layer-border-color-inner,
-		var(
-			--mod-thumbnail-layer-border-color-inner,
-			var(--spectrum-thumbnail-layer-border-color-inner)
-		)
-	);
-	outline-width: calc(
-		var(
-				--mod-thumbnail-layer-border-width-inner,
-				var(--spectrum-thumbnail-layer-border-width-inner)
-			) -
-			var(
-				--mod-thumbnail-layer-border-width-outer,
-				var(--spectrum-thumbnail-layer-border-width-outer)
-			)
-	);
+	outline-color: var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner)));
+	outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
 }
 /* stylelint-enable declaration-block-no-redundant-longhand-properties */
 
 .spectrum-Thumbnail-image-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  inline-size: 100%;
-  block-size: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inline-size: 100%;
+	block-size: 100%;
 }
 
 .spectrum-Thumbnail-image {
-  position: relative;
-  max-block-size: 100%;
-  max-inline-size: 100%;
-  z-index: 1;
+	position: relative;
+	max-block-size: 100%;
+	max-inline-size: 100%;
+	z-index: 1;
 }
 
 .spectrum-Thumbnail--cover {
-  .spectrum-Thumbnail-image {
-    block-size: 100%;
-    inline-size: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
+	.spectrum-Thumbnail-image {
+		block-size: 100%;
+		inline-size: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
 }
 
 .spectrum-Thumbnail-background {
-  position: absolute;
-  z-index: 0;
-  inset-inline-start: 0;
-  inset-block-start: 0;
-  inset-inline-end: 0;
-  inset-block-end: 0;
-  block-size: 100%;
-  inline-size: 100%;
-  background-size: cover;
-  background-position: center center;
-  border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+	position: absolute;
+	z-index: 0;
+	inset-inline-start: 0;
+	inset-block-start: 0;
+	inset-inline-end: 0;
+	inset-block-end: 0;
+	block-size: 100%;
+	inline-size: 100%;
+	background-size: cover;
+	background-position: center center;
+	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 }
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
-  .spectrum-Thumbnail {
-    /* Allow checkerboard pattern to be visible. */
-    forced-color-adjust: none;
+	.spectrum-Thumbnail {
+		/* Allow checkerboard pattern to be visible. */
+		forced-color-adjust: none;
 		--highcontrast-thumbnail-border-color-selected: Highlight;
 		--highcontrast-thumbnail-focus-indicator-color: Highlight;
 		--highcontrast-thumbnail-border-color: CanvasText;
