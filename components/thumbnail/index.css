@@ -33,6 +33,10 @@ governing permissions and limitations under the License.
 	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
 }
 
+.spectrum-OpacityCheckerboard {
+	--spectrum-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square-size);
+}
+
 .spectrum-Thumbnail--size50 {
 	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-50);
 }
