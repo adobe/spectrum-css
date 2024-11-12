@@ -11,17 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-/* fieldgroup/index.css
- *
- * fieldgroup contains four component dependences:
- * radio, checkbox, helptext, fieldlabel
- *
- */
-
-/* custom properties */
 .spectrum-FieldGroup {
 	--spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
-	--spectrum-fieldgroup-readonly-delimiter: "\002c";
 }
 
 /* field group */
@@ -62,20 +53,6 @@
 		/* move help text down to new row */
 		.spectrum-HelpText {
 			flex-basis: 100%;
-		}
-	}
-}
-
-/* read-only checkbox group */
-.spectrum-FieldGroup {
-	.spectrum-Checkbox.is-readOnly {
-		.spectrum-Checkbox-box {
-			display: none;
-		}
-
-		/* read-only checkbox fields delimited by commas */
-		&:not(:last-child) .spectrum-Checkbox-label::after {
-			content: var(--spectrum-fieldgroup-readonly-delimiter);
 		}
 	}
 }
