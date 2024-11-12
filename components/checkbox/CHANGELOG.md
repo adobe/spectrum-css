@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.2.1
+
+### Patch Changes
+
+- [#3328](https://github.com/adobe/spectrum-css/pull/3328) [`a0486b3`](https://github.com/adobe/spectrum-css/commit/a0486b341581c610ebc9b3acd1837be2b66eb348) Thanks [@jawinn](https://github.com/jawinn)! - This removes some unnecessary read-only styles. Read-only just needs to override disabled styles. Otherwise it uses the normal styles (for both default and emphasized).
+
 ## 9.2.0
 
 ### Minor Changes
