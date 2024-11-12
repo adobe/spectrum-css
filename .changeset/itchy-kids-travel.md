@@ -11,6 +11,14 @@ This is the S2 migration of the progress circle. It has changed to an svg elemen
 `@keyframes spectrum-dashoffset-animation`:
 This animation was created by React Spectrum and used to keep the same speed and bezier curve.
 
+### Added tokens
+
+`--spectrum-in-field-progress-circle-edge-to-fill`
+`--spectrum-in-field-progress-circle-size-75`
+`--spectrum-in-field-progress-circle-size-100`
+`--spectrum-in-field-progress-circle-size-200`
+`--spectrum-in-field-progress-circle-size-300`
+
 ### Removed styles & mods
 
 `--spectrum-progress-circle-track-border-color-over-background`
