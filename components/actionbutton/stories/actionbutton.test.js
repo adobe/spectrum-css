@@ -59,6 +59,34 @@ export const ActionButtonGroup = Variants({
 			isQuiet: true,
 		},
 		{
+			testHeading: "Static black",
+			staticColor: "black",
+		},
+		{
+			testHeading: "Static black - emphasized",
+			staticColor: "black",
+			isEmphasized: true,
+		},
+		{
+			testHeading: "Static black - quiet",
+			staticColor: "black",
+			isQuiet: true,
+		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
+		{
+			testHeading: "Static white - emphasized",
+			staticColor: "white",
+			isEmphasized: true,
+		},
+		{
+			testHeading: "Static white - quiet",
+			staticColor: "white",
+			isQuiet: true,
+		},
+		{
 			Template: Truncation,
 			testHeading: "Truncation",
 			label: "Truncate this long content",
@@ -66,14 +94,6 @@ export const ActionButtonGroup = Variants({
 				maxInlineSize: "100px"
 			},
 			withStates: false,
-		},
-		{
-			testHeading: "Static black",
-			staticColor: "black",
-		},
-		{
-			testHeading: "Static white",
-			staticColor: "white",
 		},
 		{
 			testHeading: "Internationalization (Thai)",
