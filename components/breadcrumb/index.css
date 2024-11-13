@@ -48,7 +48,7 @@
 	--spectrum-breadcrumbs-inline-start-to-truncated-menu: var(--spectrum-breadcrumbs-start-edge-to-truncated-menu);
 
 	/* Action button (truncated menu) spacing  */
-	--spectrum-breadcrumbs-action-button-spacing-inline: var(--spectrum-breadcrumbs-truncated-menu-to-separator-icon);
+	--spectrum-breadcrumbs-action-button-spacing-inline: var(--spectrum-breadcrumbs-truncated-menu-to-separator);
 	--spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu);
 
 	/* Focus indicator */
@@ -99,8 +99,7 @@
 .spectrum-Breadcrumbs {
 	list-style-type: none;
 	margin: 0;
-	padding-inline-start: var(--mod-breadcrumbs-inline-start, var(--spectrum-breadcrumbs-inline-start));
-	padding-inline-end: var(--mod-breadcrumbs-inline-end, var(--spectrum-breadcrumbs-inline-end));
+	padding-inline: 0 var(--mod-breadcrumbs-inline-end, var(--spectrum-breadcrumbs-inline-end));
 	block-size: var(--mod-breadcrumbs-block-size, var(--spectrum-breadcrumbs-block-size));
 
 	display: flex;
@@ -113,7 +112,6 @@
 .spectrum-Breadcrumbs-itemSeparator {
 	position: relative;
 	margin-block: var(--mod-breadcrumbs-icon-spacing-block, var(--spectrum-breadcrumbs-icon-spacing-block));
-	margin-inline: var(--mod-breadcrumbs-separator-spacing-inline, var(--spectrum-breadcrumbs-separator-spacing-inline));
 	opacity: 1;
 	color: var(--highcontrast-breadcrumbs-separator-color, var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color)));
 
@@ -156,9 +154,15 @@
 		}
 	}
 
-	/* If truncated menu is the first item */
-	&:first-of-type > .spectrum-ActionButton {
-		margin-inline-start: var(--mod-breadcrumbs-inline-start-to-truncated-menu, var(--spectrum-breadcrumbs-inline-start-to-truncated-menu));
+	/* Start edge to text or truncated menu */
+	&:first-of-type {
+		> .spectrum-Breadcrumbs-itemLink {
+			margin-inline-start: var(--mod-breadcrumbs-inline-start, var(--spectrum-breadcrumbs-inline-start));
+		}
+
+		> .spectrum-ActionButton {
+			margin-inline-start: var(--mod-breadcrumbs-inline-start-to-truncated-menu, var(--spectrum-breadcrumbs-inline-start-to-truncated-menu));
+		}
 	}
 }
 
@@ -174,6 +178,7 @@
 
 	margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start, var(--spectrum-breadcrumbs-text-spacing-block-start));
 	margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end, var(--spectrum-breadcrumbs-text-spacing-block-end));
+	margin-inline-start: var(--mod-breadcrumbs-separator-spacing-inline, var(--spectrum-breadcrumbs-separator-spacing-inline));
 
 	&.is-disabled,
 	&[aria-disabled="true"] {
@@ -185,6 +190,10 @@
 		color: var(--highcontrast-breadcrumbs-text-color-current, var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current)));
 		margin-block-start: var(--mod-breadcrumbs-title-spacing-block-start, var(--spectrum-breadcrumbs-title-spacing-block-start));
 		margin-block-end: var(--mod-breadcrumbs-title-spacing-block-end, var(--spectrum-breadcrumbs-title-spacing-block-end));
+	}
+
+	+ .spectrum-Breadcrumbs-itemSeparator {
+		margin-inline-start: var(--mod-breadcrumbs-separator-spacing-inline, var(--spectrum-breadcrumbs-separator-spacing-inline));
 	}
 
 	/* Link is focusable */
@@ -232,6 +241,10 @@
 	.spectrum-Breadcrumbs-item:last-of-type {
 		block-size: auto;
 		inline-size: 100%;
+
+		> .spectrum-Breadcrumbs-itemLink {
+			margin-inline-start: var(--mod-breadcrumbs-inline-start, var(--spectrum-breadcrumbs-inline-start));
+		}
 	}
 }
 
