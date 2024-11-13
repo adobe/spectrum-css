@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
-		--spectrum-illustrated-message-cjk-title-font-size: var(--spectrum-illustrated-message-medium-cjk-title-font-size);
+		--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-medium-cjk-title-font-size);
 	}
 }
 
@@ -57,7 +57,12 @@ governing permissions and limitations under the License.
 .spectrum-IllustratedMessage--sizeS {
 	--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-small-title-font-size);
 	--spectrum-illustrated-message-description-font-size: var(--spectrum-illustrated-message-small-body-font-size);
-	--spectrum-illustrated-message-cjk-title-font-size: var(--spectrum-illustrated-message-small-cjk-title-font-size);
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-small-cjk-title-font-size);
+	}
 }
 
 .spectrum-IllustratedMessage--sizeL {
@@ -66,7 +71,12 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-illustration-to-content: var(--spectrum-spacing-100);
 	--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-large-title-font-size);
 	--spectrum-illustrated-message-description-font-size: var(--spectrum-illustrated-message-large-body-font-size);
-	--spectrum-illustrated-message-cjk-title-font-size: var(--spectrum-illustrated-message-large-cjk-title-font-size);
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-large-cjk-title-font-size);
+	}
 }
 
 .spectrum-IllustratedMessage {

@@ -31,7 +31,7 @@ export const Template = ({
 				heading,
 				() =>
 					html`<h2
-						class="spectrum-Heading spectrum-Heading--regular ${rootClass}-heading"
+						class="${rootClass}-heading"
 					>
 						${heading}
 					</h2>`
@@ -40,7 +40,7 @@ export const Template = ({
 				description,
 				() =>
 					html`<p
-						class="spectrum-Body ${rootClass}-description"
+						class="${rootClass}-description"
 					>
 						${description.map((c) => (typeof c === "function" ? c({}) : c))}
 					</p>`
