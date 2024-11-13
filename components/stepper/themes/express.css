@@ -41,10 +41,5 @@
 
 		--spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
 		--spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
-
-		&.is-disabled {
-			--spectrum-stepper-buttons-background-color: var(--spectrum-disabled-background-color);
-			--spectrum-stepper-buttons-border-width: 0;
-		}
 	}
 }

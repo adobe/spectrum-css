@@ -413,7 +413,6 @@
 @media (forced-colors: active) {
 	.spectrum-Calendar-prevMonth,
 	.spectrum-Calendar-nextMonth {
-		--highcontrast-calendar-button-icon-color-disabled: GrayText;
 		--highcontrast-calendar-button-icon-color: ButtonText;
 	}
 
@@ -429,7 +428,6 @@
 		--highcontrast-calendar-day-text-color-disabled: GrayText;
 		--highcontrast-calendar-day-text-color-hover: ButtonText;
 		--highcontrast-calendar-day-text-color-key-focus: ButtonText;
-		--highcontrast-calendar-day-text-color-selected-hover: HighlightText;
 		--highcontrast-calendar-day-text-color-selected: HighlightText;
 		--highcontrast-calendar-day-title-text-color: CanvasText;
 		--highcontrast-calendar-day-today-background-color-selected-hover: Highlight;
