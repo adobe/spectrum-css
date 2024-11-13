@@ -12,6 +12,7 @@
  */
 
 @import "@spectrum-css/commons/overlay.css";
+@import "./themes/express.css";
 
 .spectrum-Modal {
 	/* Bug: this must be 0ms, not 0 */

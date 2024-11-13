@@ -10,6 +10,9 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+@import "./themes/express.css";
+
 .spectrum-ColorLoupe {
 	--spectrum-colorloupe-width: var(--spectrum-color-loupe-width);
 	--spectrum-colorloupe-height: var(--spectrum-color-loupe-height);

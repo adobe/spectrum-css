@@ -10,6 +10,9 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+@import "./themes/express.css";
+
 .spectrum-ColorHandle {
 	--spectrum-colorhandle-size: var(--spectrum-color-handle-size);
 	--spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);

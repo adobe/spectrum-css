@@ -10,6 +10,9 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+@import "./themes/express.css";
+
 .spectrum-ColorWheel {
 	--spectrum-colorwheel-width: var(--spectrum-color-wheel-width);
 	--spectrum-colorwheel-min-width: var(--spectrum-color-wheel-minimum-width);
@@ -124,7 +127,7 @@
 
 .spectrum-ColorWheel-wheel {
 	position: absolute;
-	background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
+	background: conic-gradient(from 90deg, red, rgb(255 128 0), rgb(255 255 0), rgb(128 255 0), rgb(0 255 0), rgb(0 255 128), rgb(0 255 255), rgb(0 128 255), rgb(0 0 255), rgb(128 0 255), rgb(255 0 255), rgb(255 0 128), red);
 	inset-block: var(--spectrum-colorwheel-border-width);
 	inset-inline: var(--spectrum-colorwheel-border-width);
 	clip-path: path(evenodd, var(--mod-colorwheel-path, var(--spectrum-colorwheel-path)));

@@ -12,6 +12,7 @@
  */
 
 @import "@spectrum-css/commons/basebutton.css";
+@import "./themes/express.css";
 
 .spectrum-LogicButton {
 	--spectrum-logic-button-height: 24px;
@@ -107,17 +108,6 @@
 	}
 
 	.spectrum-LogicButton {
-		forced-color-adjust: none;
-
-		&:disabled,
-		&.is-disabled {
-			--highcontrast-logic-button-and-background-color: ButtonFace;
-			--highcontrast-logic-button-and-border-color: GrayText;
-			--highcontrast-logic-button-and-text-color: GrayText;
-			--highcontrast-logic-button-or-background-color: ButtonFace;
-			--highcontrast-logic-button-or-border-color: GrayText;
-			--highcontrast-logic-button-or-text-color: GrayText;
-		}
 
 		--highcontrast-logic-button-and-background-color: ButtonFace;
 		--highcontrast-logic-button-and-background-color-hover: ButtonFace;
@@ -129,5 +119,16 @@
 		--highcontrast-logic-button-or-border-color: ButtonText;
 		--highcontrast-logic-button-or-border-color-hover: Highlight;
 		--highcontrast-logic-button-or-text-color: ButtonText;
+		forced-color-adjust: none;
+
+		&:disabled,
+		&.is-disabled {
+			--highcontrast-logic-button-and-background-color: ButtonFace;
+			--highcontrast-logic-button-and-border-color: GrayText;
+			--highcontrast-logic-button-and-text-color: GrayText;
+			--highcontrast-logic-button-or-background-color: ButtonFace;
+			--highcontrast-logic-button-or-border-color: GrayText;
+			--highcontrast-logic-button-or-text-color: GrayText;
+		}
 	}
 }
