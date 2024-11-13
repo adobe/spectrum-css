@@ -13,7 +13,11 @@ governing permissions and limitations under the License.
 	--spectrum-colorwheel-width: var(--spectrum-color-wheel-width);
 	--spectrum-colorwheel-min-width: var(--spectrum-color-wheel-minimum-width);
 	--spectrum-colorwheel-height: var(--spectrum-color-wheel-width);
+
+	/* @TODO: leveraging the rgb token in this case to achieve the desired border color implementation as rgb + opacity are required by the `rgba` function. */
 	--spectrum-colorwheel-border-color-rgb: var(--spectrum-gray-1000-rgb);
+
+	/* @TODO: using explicit value as `color-wheel-border-opacity` is undefined. */
 	--spectrum-colorwheel-border-opacity: 0.1;
 	--spectrum-colorwheel-border-color: rgba(var(--spectrum-colorwheel-border-color-rgb), var(--spectrum-colorwheel-border-opacity));
 	--spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
