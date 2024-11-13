@@ -68,8 +68,8 @@
 	--spectrum-table-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-table-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
 	--spectrum-table-icon-color-active: var(--spectrum-neutral-subdued-content-color-down);
-	--spectrum-table-icon-color-focus: var(--spectrum-neutral-subdued-content-color-focus);
-	--spectrum-table-icon-color-focus-hover: var(--spectrum-neutral-subdued-content-focus-hover);
+	--spectrum-table-icon-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+	--spectrum-table-icon-color-focus-hover: var(--spectrum-neutral-subdued-content-color-hover);
 	--spectrum-table-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 
 	/* Row Selection */
@@ -353,12 +353,10 @@
 
 		--highcontrast-table-selected-row-background-color: Highlight;
 		--highcontrast-table-selected-row-text-color: HighlightText;
-		--highcontrast-table-selected-row-text-color-default: HighlightText;
 
 		@supports (color: SelectedItem) {
 			--highcontrast-table-selected-row-background-color: SelectedItem;
 			--highcontrast-table-selected-row-text-color: SelectedItemText;
-			--highcontrast-table-selected-row-text-color-default: SelectedItemText;
 		}
 
 		--highcontrast-table-selected-row-background-color-focus: Highlight;

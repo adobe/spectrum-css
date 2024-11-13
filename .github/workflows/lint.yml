@@ -86,7 +86,7 @@ jobs:
                   filter_mode: diff_context
                 #   stylelint_input: "components/*/index.css components/*/themes/*.css"
                   stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
-                  stylelint_config: stylelint.config.js
+                  stylelint_config: "${{ github.workspace }}/stylelint.config.js"
 
             - name: Run eslint on packages and stories
               uses: reviewdog/action-eslint@v1.31.0
