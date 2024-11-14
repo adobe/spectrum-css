@@ -10,6 +10,8 @@ governing permissions and limitations under the License.
 */
 .spectrum-ColorArea {
 	--spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
+
+	/* @TODO: leveraging the rgb token in this case to achieve the desired border color implementation as rgb + opacity are required by the `rgba` function. */
 	--spectrum-colorarea-border-color-rgb: var(--spectrum-gray-1000-rgb);
 	--spectrum-colorarea-border-color: rgba(var(--spectrum-colorarea-border-color-rgb), var(--spectrum-color-area-border-opacity));
 	--spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
