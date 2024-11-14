@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 	--spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
 	--spectrum-colorarea-border-color-rgb: var(--spectrum-gray-1000-rgb);
 	--spectrum-colorarea-border-color: rgba(var(--spectrum-colorarea-border-color-rgb), var(--spectrum-color-area-border-opacity));
-	--spectrum-colorarea-border-rounding: var(--spectrum-color-area-border-rounding);
 	--spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
 	--spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
 	--spectrum-colorarea-height: var(--spectrum-color-area-height);
@@ -51,7 +50,7 @@ governing permissions and limitations under the License.
 	inline-size: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
 	block-size: var(--mod-colorarea-height, var(--spectrum-colorarea-height));
 	box-sizing: border-box;
-	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-rounding));
+	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
 	border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
 	&.is-focused {
