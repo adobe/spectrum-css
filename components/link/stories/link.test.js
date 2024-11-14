@@ -16,7 +16,7 @@ export const LinkGroup = Variants({
 			isQuiet: true,
 		},
 		{
-			testHeading: "Quiet, Secondary",
+			testHeading: "Quiet - secondary",
 			isQuiet: true,
 			variant: "secondary",
 		},
@@ -25,7 +25,12 @@ export const LinkGroup = Variants({
 			staticColor: "black",
 		},
 		{
-			testHeading: "Static black (quiet)",
+			testHeading: "Static black - secondary",
+			staticColor: "black",
+			variant: "secondary",
+		},
+		{
+			testHeading: "Static black - quiet",
 			staticColor: "black",
 			isQuiet: true,
 		},
@@ -34,7 +39,12 @@ export const LinkGroup = Variants({
 			staticColor: "white",
 		},
 		{
-			testHeading: "Static white (quiet)",
+			testHeading: "Static white - secondary",
+			staticColor: "white",
+			variant: "secondary",
+		},
+		{
+			testHeading: "Static white - quiet",
 			staticColor: "white",
 			isQuiet: true,
 		},

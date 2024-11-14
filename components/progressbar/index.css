@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/express.css";
+
 .spectrum-ProgressBar {
 	/* Static tokens */
 	--spectrum-progressbar-animation-ease-in-out-indeterminate: var(--spectrum-animation-ease-in-out);
@@ -269,9 +271,9 @@
 
 @media (forced-colors: active) {
 	.spectrum-ProgressBar-track {
-		forced-color-adjust: none;
 		--highcontrast-progressbar-fill-color: ButtonText;
 		--highcontrast-progressbar-track-color: ButtonFace;
+		forced-color-adjust: none;
 		border: 1px solid ButtonText;
 	}
 }

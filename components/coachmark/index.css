@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/express.css";
+
 .spectrum-CoachMark {
 	--spectrum-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
 	--spectrum-coachmark-width: var(--spectrum-coach-mark-width);

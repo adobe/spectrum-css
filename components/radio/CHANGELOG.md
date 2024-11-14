@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.4.1
+
+### Patch Changes
+
+- [#3350](https://github.com/adobe/spectrum-css/pull/3350) [`c091b4d`](https://github.com/adobe/spectrum-css/commit/c091b4d7ee33c870d24d731c9f377cf7ed1cb19a) Thanks [@5t3ph](https://github.com/5t3ph)! - Corrects the styles of the read-only state to show the radio inputs and allow visible focus. Also adds `aria-disabled` since `aria-readonly` isn't well supported, and story demonstrates scripting to make selection for read-only radios immutable.
+
 ## 9.4.0
 
 ### Minor Changes

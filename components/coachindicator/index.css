@@ -11,7 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-@import "animation.css";
+@import "./animation.css";
+@import "./themes/express.css";
 
 .spectrum-CoachIndicator {
 	--spectrum-coach-indicator-ring-border-size: var(--spectrum-border-width-200);

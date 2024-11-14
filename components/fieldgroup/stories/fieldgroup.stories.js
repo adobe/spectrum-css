@@ -75,17 +75,14 @@ export default {
 		helpText: "Select an option.",
 		items: [
 			{
-				id: "apple",
 				label: "Apples are best",
 				customClasses: ["spectrum-FieldGroup-item"],
 			},
 			{
-				id: "banana",
 				label: "Bananas forever",
 				customClasses: ["spectrum-FieldGroup-item"],
 			},
 			{
-				id: "pear",
 				label: "Pears or bust",
 				customClasses: ["spectrum-FieldGroup-item"],
 			}
@@ -126,7 +123,7 @@ export const VerticalRadio = Template.bind({});
 VerticalRadio.tags = ["!dev"];
 VerticalRadio.args = {
 	layout: "vertical",
-	inputType: "radio",
+	inputType: "radio"
 };
 VerticalRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -146,7 +143,7 @@ export const HorizontalRadio = Template.bind({});
 HorizontalRadio.tags = ["!dev"];
 HorizontalRadio.args = {
 	layout: "horizontal",
-	inputType: "radio",
+	inputType: "radio"
 };
 HorizontalRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -167,7 +164,7 @@ InvalidRadio.tags = ["!dev"];
 InvalidRadio.args = {
 	layout: "horizontal",
 	inputType: "radio",
-	isInvalid: true,
+	isInvalid: true
 };
 InvalidRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -231,7 +228,7 @@ VerticalSideLabelRadio.tags = ["!dev"];
 VerticalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
-	layout: "vertical",
+	layout: "vertical"
 };
 VerticalSideLabelRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -242,7 +239,7 @@ HorizontalSideLabelRadio.tags = ["!dev"];
 HorizontalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
-	layout: "horizontal",
+	layout: "horizontal"
 };
 HorizontalSideLabelRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -275,13 +272,28 @@ HorizontalSideLabelCheckbox.parameters = {
  * - Read-only checkboxes are immutable, i.e. their checked state cannot be changed.
  * - Unlike disabled checkbox groups, the normally focusable elements of a checkbox group should remain focusable.
  */
-export const ReadOnly = Template.bind({});
-ReadOnly.tags = ["!dev"];
-ReadOnly.args = {
+export const ReadOnlyCheckbox = Template.bind({});
+ReadOnlyCheckbox.tags = ["!dev"];
+ReadOnlyCheckbox.args = {
 	isReadOnly: true,
 	inputType: "checkbox",
 	helpText: undefined,
 };
-ReadOnly.parameters = {
+ReadOnlyCheckbox.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A group of read-only radio buttons.
+ *
+ * Review the individual story for more features of [read-only radio buttons](?path=/docs/components-radio--docs#read-only).
+ */
+export const ReadOnlyRadio = Template.bind({});
+ReadOnlyRadio.tags = ["!dev"];
+ReadOnlyRadio.args = {
+	isReadOnly: true,
+	inputType: "radio"
+};
+ReadOnlyRadio.parameters = {
 	chromatic: { disableSnapshot: true },
 };
