@@ -82,7 +82,9 @@ governing permissions and limitations under the License.
 .spectrum-ColorArea-gradient {
 	inline-size: 100%;
 	block-size: 100%;
-	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
+
+	/* calc used here to properly calculate the `border-radius` for the gradient such that it aligns with the `border-radius` of the enclosing border */
+	border-radius: calc(var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius)) - var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)));
 }
 
 .spectrum-ColorArea-slider {
