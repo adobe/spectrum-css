@@ -15,6 +15,12 @@
         background-color: var(--spectrum-background-layer-1-color);
       }
 
+      header {
+        max-width: 1000px;
+        margin: auto;
+        padding-block-start: 4rem;
+      }
+
       main {
         --spectrum-neutral-content-color-default: rgb(34, 34, 34);
 
@@ -59,15 +65,40 @@
         margin-block: 16px;
       }
 
+      .spectrum-logo {
+        display: block;
+      }
+
+      svg {
+        block-size: auto;
+        inline-size: 100%;
+        max-inline-size: 150px;
+        max-block-size: 100px;
+      }
+
     </style>
   </head>
   <body>
+    <header>
+      <a class="spectrum-logo" href="https://opensource.adobe.com/spectrum-css/" aria-label="Spectrum CSS">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Site-logo spectrum-Icon spectrum-Icon--sizeXL" version="1.1" id="Layer_1" x="0" y="0" viewBox="0 0 190 26" focusable="false" aria-hidden="true" aria-label="Adobe logo" xml:space="preserve">
+          <g style="fill:#FA0F00">
+            <polygon points="19,0 30,0 30,26"/>
+            <polygon points="11.1,0 0,0 0,26"/>
+            <polygon points="15,9.6 22.1,26 17.5,26 15.4,20.8 10.2,20.8"/>
+          </g>
+          <text x="38" y="20" style="color: rgb(0,0,0);font-size: 22px;font-family: adobe-clean,'Source Sans Pro',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Trebuchet MS','Lucida Grande',sans-serif; font-weight: 700; height: 28px; line-height: 28.6px;">
+              Spectrum CSS
+          </text>
+          </svg>
+      </a>
+    </header>
     <main>
-      <h1>404</h1>
+      <h1>404: Page not found</h1>
       <section>
         <img src="/spectrum_illustration_2x.png" alt="">
         <h2>It's not you. It's us.</h2>
-        <p>We've made lots of changes recently to our documentation site. In preparation for Spectrum 2, we've been hard at work migrating our documentation here, to Storybook.</p>
+        <p>We've made lots of changes to the Spectrum CSS documentation site, including consolidating all of the documentation and moving it to a single location within Storybook.</p>
         <p>If you're looking for information on Spectrum CSS components, let's get you back to <a href="https://opensource.adobe.com/spectrum-css/">our landing page</a>. From there, experiment with all of our components to your heart's content!
         </p>
       </section>
