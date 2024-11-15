@@ -48,7 +48,7 @@ export const ComboBoxGroup = Variants({
 			isOpen: false,
 			isQuiet: true,
 			value: "United States of America and to the republic",
-		}
+		},
 	],
 	stateData: [
 		{
@@ -70,6 +70,10 @@ export const ComboBoxGroup = Variants({
 		{
 			testHeading: "Loading",
 			isLoading: true,
+		},
+		{
+			testHeading: "Read-only",
+			isReadOnly: true
 		},
 	],
 });

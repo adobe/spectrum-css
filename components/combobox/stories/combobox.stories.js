@@ -1,10 +1,10 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
-import { VariantGroup } from "./template.js";
+import { Template, VariantGroup } from "./template.js";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -18,7 +18,7 @@ import { VariantGroup } from "./template.js";
  *   - `.spectrum-Combobox-textfield` is required on the Textfield outer element (`.spectrum-Textfield`)
  *   - `.spectrum-Combobox-input` is required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
  *   - `.spectrum-Combobox-button` is required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
- * 
+ *
  * ### Indicating validity and focus
  *
  * Validity and focus must be bubbled up to the parent so descendants siblings can be styled. Implementations should add the following classes to the `.spectrum-Combobox` parent class in the following situations:
@@ -40,13 +40,17 @@ export default {
 	component: "Combobox",
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
-		isOpen,
+		isOpen: {
+			...isOpen,
+			if: { arg: "isReadOnly", truthy: false },
+		},
 		isQuiet,
 		isInvalid,
 		isFocused,
 		isKeyboardFocused,
 		isLoading,
 		isDisabled,
+		isReadOnly,
 		showFieldLabel: {
 			name: "Show field label",
 			type: { name: "boolean" },
@@ -99,6 +103,7 @@ export default {
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
+		isReadOnly: false,
 		showFieldLabel: false,
 		testId: "combobox",
 		content: [
@@ -164,6 +169,21 @@ QuietGroup.tags = ["!dev"];
 QuietGroup.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+
+/**
+ * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.isReadOnly` class to the combobox. To enable this feature, add the .isReadOnly class to the combobox. Then within the nested textfield component, add the .isReadOnly class and readonly attribute to the `<input>` element.
+*/
+export const ReadOnly = Template.bind({});
+ReadOnly.tags = ["!dev"];
+ReadOnly.args = {
+	isReadOnly: true,
+	value: "Ballard"
+};
+ReadOnly.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+ReadOnly.storyName = "Read-only";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ComboBoxGroup.bind({});

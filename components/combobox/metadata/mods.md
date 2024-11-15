@@ -43,6 +43,7 @@
 | `--mod-combobox-inline-size`                           |
 | `--mod-combobox-line-height`                           |
 | `--mod-combobox-min-inline-size`                       |
+| `--mod-combobox-readonly-input-border-color`           |
 | `--mod-combobox-spacing-block-end-edge-to-text`        |
 | `--mod-combobox-spacing-block-start-edge-to-text`      |
 | `--mod-combobox-spacing-edge-to-menu`                  |
