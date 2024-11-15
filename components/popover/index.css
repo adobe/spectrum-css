@@ -84,8 +84,6 @@ governing permissions and limitations under the License.
 	border-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
 	border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency)));
 
-	/* border-color: var(--spectrum-popover-border-color-default); */
-
 	border-width: var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness));
 
 	background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
