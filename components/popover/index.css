@@ -86,7 +86,7 @@ governing permissions and limitations under the License.
 
 	/* border-color: var(--spectrum-popover-border-color-default); */
 
-	border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-thickness));
+	border-width: var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness));
 
 	background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
 	filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
@@ -100,7 +100,7 @@ governing permissions and limitations under the License.
 				stroke-linejoin: miter;
 				fill: var(--highcontrast-popover-background-color, var(--mod-popover-background-color, var(--spectrum-popover-background-color)));
 				stroke: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency)));
-				stroke-width: var(--mod-popover-border-width, var(--spectrum-popover-border-thickness));
+				stroke-width: var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness));
 			}
 		}
 	}
@@ -128,7 +128,7 @@ governing permissions and limitations under the License.
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-block-end: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-block-end: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness)));
 	}
 
 	/* popover animates upward ⬆ */
@@ -146,7 +146,7 @@ governing permissions and limitations under the License.
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-block-start: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-block-start: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness)));
 	}
 
 	/* popover animates downward ⬇ */
@@ -162,7 +162,7 @@ governing permissions and limitations under the License.
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-start: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-inline-start: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness)));
 	}
 
 	/* popover animates towards right ⮕ */
@@ -178,7 +178,7 @@ governing permissions and limitations under the License.
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-end: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-inline-end: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness)));
 	}
 
 	/* popover animates towards left ⬅ */
@@ -194,7 +194,7 @@ governing permissions and limitations under the License.
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-end: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-inline-end: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness)));
 	}
 
 	/* LTR read, popover animates towards left ⬅ */
@@ -215,7 +215,7 @@ governing permissions and limitations under the License.
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-start: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-inline-start: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-thickness, var(--spectrum-popover-border-thickness)));
 	}
 
 	/* LTR read, popover animates towards right ⮕ */

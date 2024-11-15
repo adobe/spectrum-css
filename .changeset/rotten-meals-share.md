@@ -14,3 +14,4 @@ Renamed Mods
 | `--mod-popover-shadow-horizontal` | `--mod-popover-drop-shadow-x` |
 | `--mod-popover-shadow-vertical` | `--mod-popover-drop-shadow-y` |
 | `--mod-popover-content-area-spacing-vertical` | `--mod-popover-content-area-spacing` |
+| `--mod-popover-border-width` | `--mod-popover-border-thickness` |
