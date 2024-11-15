@@ -11,41 +11,30 @@
  * governing permissions and limitations under the License.
  */
 
-/* Windows High Contrast Mode */
-@media (forced-colors: active) {
-	.spectrum-ColorArea {
-		--highcontrast-colorarea-border-color-disabled: GrayText;
-		--highcontrast-colorarea-border-color: Canvas;
-		--highcontrast-colorarea-fill-color-disabled: Canvas;
-	}
-
-	.spectrum-ColorArea {
-		&.is-disabled {
-			forced-color-adjust: none;
-		}
-	}
-
-	.spectrum-ColorArea-gradient,
-	.spectrum-ColorHandle-color {
-		forced-color-adjust: none;
-	}
-}
-
 .spectrum-ColorArea {
-	/* TODO replace with token --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */
-	--spectrum-colorarea-border-color: rgb(0 0 0 / 10%);
+	--spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
+
+	/* @TODO: leveraging the rgb token in this case to achieve the desired border color implementation as rgb + opacity are required by the `rgba` function. */
+	--spectrum-colorarea-border-color-rgb: var(--spectrum-gray-1000-rgb);
+	--spectrum-colorarea-border-color: rgba(var(--spectrum-colorarea-border-color-rgb), var(--spectrum-color-area-border-opacity));
+	--spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
+	--spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
+	--spectrum-colorarea-height: var(--spectrum-color-area-height);
+	--spectrum-colorarea-width: var(--spectrum-color-area-width);
+	--spectrum-colorarea-min-width: var(--spectrum-color-area-minimum-width);
+	--spectrum-colorarea-min-height: var(--spectrum-color-area-minimum-height);
 
 	position: relative;
 	display: inline-block;
 	cursor: default;
 	user-select: none;
-	min-inline-size: var(--mod-colorarea-min-width, var(--spectrum-color-area-minimum-width));
-	min-block-size: var(--mod-colorarea-min-height, var(--spectrum-color-area-minimum-height));
-	inline-size: var(--mod-colorarea-width, var(--spectrum-color-area-width));
-	block-size: var(--mod-colorarea-height, var(--spectrum-color-area-height));
+	min-inline-size: var(--mod-colorarea-min-width, var(--spectrum-colorarea-min-width));
+	min-block-size: var(--mod-colorarea-min-height, var(--spectrum-colorarea-min-height));
+	inline-size: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
+	block-size: var(--mod-colorarea-height, var(--spectrum-colorarea-height));
 	box-sizing: border-box;
-	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-color-area-border-rounding));
-	border: var(--mod-colorarea-border-width, var(--spectrum-color-area-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
+	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
+	border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
 	&.is-focused {
 		z-index: 2;
@@ -53,8 +42,8 @@
 
 	&.is-disabled {
 		pointer-events: none;
-		background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-disabled-background-color)));
-		border: var(--mod-colorarea-border-width, var(--spectrum-color-area-border-width)) solid var(--highcontrast-colorarea-border-color-disabled);
+		background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));
+		border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color-disabled);
 
 		.spectrum-ColorArea-gradient {
 			display: none;
@@ -63,7 +52,7 @@
 }
 
 .spectrum-ColorArea-handle {
-	transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-color-area-width)) - var(--spectrum-color-area-border-width)), 0);
+	transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-colorarea-width)) - var(--spectrum-colorarea-border-width)), 0);
 	inset-block-start: 0;
 
 	&:dir(rtl) {
@@ -74,7 +63,9 @@
 .spectrum-ColorArea-gradient {
 	inline-size: 100%;
 	block-size: 100%;
-	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-color-area-border-rounding));
+
+	/* calc used here to properly calculate the `border-radius` for the gradient such that it aligns with the `border-radius` of the enclosing border */
+	border-radius: calc(var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius)) - var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)));
 }
 
 .spectrum-ColorArea-slider {
@@ -87,4 +78,22 @@
 	z-index: 0;
 	margin: 0;
 	pointer-events: none;
+}
+
+/* Windows High Contrast Mode */
+@media (forced-colors: active) {
+	.spectrum-ColorArea {
+		--highcontrast-colorarea-border-color-disabled: GrayText;
+		--highcontrast-colorarea-border-color: Canvas;
+		--highcontrast-colorarea-fill-color-disabled: Canvas;
+
+		&.is-disabled {
+			forced-color-adjust: none;
+		}
+	}
+
+	.spectrum-ColorArea-gradient,
+	.spectrum-ColorHandle-color {
+		forced-color-adjust: none;
+	}
 }
