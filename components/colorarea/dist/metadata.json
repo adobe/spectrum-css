@@ -23,6 +23,7 @@
     "--mod-colorarea-width"
   ],
   "component": [
+    "--spectrum-color-area-border-opacity",
     "--spectrum-color-area-border-rounding",
     "--spectrum-color-area-border-width",
     "--spectrum-color-area-height",
@@ -30,10 +31,19 @@
     "--spectrum-color-area-minimum-width",
     "--spectrum-color-area-width",
     "--spectrum-colorarea-border-color",
-    "--spectrum-colorarea-border-color-opacity",
-    "--spectrum-colorarea-border-color-rgb"
+    "--spectrum-colorarea-border-color-rgb",
+    "--spectrum-colorarea-border-radius",
+    "--spectrum-colorarea-border-width",
+    "--spectrum-colorarea-disabled-background-color",
+    "--spectrum-colorarea-height",
+    "--spectrum-colorarea-min-height",
+    "--spectrum-colorarea-min-width",
+    "--spectrum-colorarea-width"
   ],
-  "global": ["--spectrum-disabled-background-color"],
+  "global": [
+    "--spectrum-disabled-background-color",
+    "--spectrum-gray-1000-rgb"
+  ],
   "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
