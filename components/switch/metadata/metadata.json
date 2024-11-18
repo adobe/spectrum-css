@@ -182,10 +182,10 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
+    "--spectrum-gray-50",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
-    "--spectrum-gray-75",
     "--spectrum-gray-800",
     "--spectrum-gray-900",
     "--spectrum-line-height-100",
@@ -203,14 +203,17 @@
     "--spectrum-text-to-control-75"
   ],
   "system-theme": [
-    "--system-spectrum-switch-handle-border-color-default",
-    "--system-spectrum-switch-handle-border-color-down",
-    "--system-spectrum-switch-handle-border-color-focus",
-    "--system-spectrum-switch-handle-border-color-hover",
-    "--system-spectrum-switch-handle-border-color-selected-default",
-    "--system-spectrum-switch-handle-border-color-selected-down",
-    "--system-spectrum-switch-handle-border-color-selected-focus",
-    "--system-spectrum-switch-handle-border-color-selected-hover"
+    "--system-switch-background-color",
+    "--system-switch-background-color-disabled",
+    "--system-switch-handle-background-color",
+    "--system-switch-handle-border-color-default",
+    "--system-switch-handle-border-color-down",
+    "--system-switch-handle-border-color-focus",
+    "--system-switch-handle-border-color-hover",
+    "--system-switch-handle-border-color-selected-default",
+    "--system-switch-handle-border-color-selected-down",
+    "--system-switch-handle-border-color-selected-focus",
+    "--system-switch-handle-border-color-selected-hover"
   ],
   "passthroughs": [],
   "high-contrast": [

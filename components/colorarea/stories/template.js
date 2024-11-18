@@ -4,6 +4,9 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorArea",
@@ -16,6 +19,7 @@ export const Template = ({
 	selectedColor = "rgba(255, 0, 0, 1)",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
 	return html`
 		<div
 			class=${classMap({

@@ -7,7 +7,6 @@
 | `--mod-card-actions-drop-shadow-blur`         |
 | `--mod-card-actions-drop-shadow-color`        |
 | `--mod-card-actions-drop-shadow-x`            |
-| `--mod-card-actions-drop-shadow-y`            |
 | `--mod-card-actions-size`                     |
 | `--mod-card-actions-spacing`                  |
 | `--mod-card-animation-duration`               |
@@ -38,7 +37,6 @@
 | `--mod-card-footer-margin-block-start`        |
 | `--mod-card-footer-margin-inline-end`         |
 | `--mod-card-footer-margin-inline-start`       |
-| `--mod-card-footer-margin-top`                |
 | `--mod-card-footer-padding-block-end`         |
 | `--mod-card-footer-padding-block-start`       |
 | `--mod-card-horizontal-body-padding`          |
@@ -47,7 +45,6 @@
 | `--mod-card-minimum-width-quiet`              |
 | `--mod-card-preview-background-color`         |
 | `--mod-card-preview-background-color-hover`   |
-| `--mod-card-preview-border-width`             |
 | `--mod-card-preview-border-width-selected`    |
 | `--mod-card-preview-minimum-height`           |
 | `--mod-card-selected-background-color-rgb`    |
@@ -60,5 +57,4 @@
 | `--mod-card-title-font-weight`                |
 | `--mod-card-title-line-height`                |
 | `--mod-card-title-padding-right`              |
-| `--mod-card-title-padding-top`                |
-| `--mod-spectrum-card-background-color`        |
+| `--mod-overlay-animation-duration`            |

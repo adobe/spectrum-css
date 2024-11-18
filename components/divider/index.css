@@ -11,63 +11,29 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
-.spectrum-Divider {
-	/* default thickness no size */
-	--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
-
-	/* default background color no size */
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
-
-	/* background colors */
-	--spectrum-divider-background-color-small: var(--spectrum-gray-300);
-	--spectrum-divider-background-color-medium: var(--spectrum-gray-300);
-	--spectrum-divider-background-color-large: var(--spectrum-gray-800);
-
-	/* static white background colors */
-	--spectrum-divider-background-color-small-static-white: var(--spectrum-transparent-white-300);
-	--spectrum-divider-background-color-medium-static-white: var(--spectrum-transparent-white-300);
-	--spectrum-divider-background-color-large-static-white: var(--spectrum-transparent-white-800);
-
-	/* static black background colors */
-	--spectrum-divider-background-color-small-static-black: var(--spectrum-transparent-black-300);
-	--spectrum-divider-background-color-medium-static-black: var(--spectrum-transparent-black-300);
-	--spectrum-divider-background-color-large-static-black: var(--spectrum-transparent-black-800);
+/* windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-Divider {
+		background-color: CanvasText !important;
+	}
 }
 
-/* small divider */
-.spectrum-Divider--sizeS {
-	--spectrum-divider-thickness: var(--spectrum-divider-thickness-small);
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-small);
-}
-
-/* medium divider */
+.spectrum-Divider,
 .spectrum-Divider--sizeM {
 	--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
 	--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
 }
 
-/* large divider */
+.spectrum-Divider--sizeS {
+	--spectrum-divider-thickness: var(--spectrum-divider-thickness-small);
+	--spectrum-divider-background-color: var(--spectrum-divider-background-color-small);
+}
+
 .spectrum-Divider--sizeL {
 	--spectrum-divider-thickness: var(--spectrum-divider-thickness-large);
 	--spectrum-divider-background-color: var(--spectrum-divider-background-color-large);
-}
-
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Divider,
-	.spectrum-Divider--sizeS,
-	.spectrum-Divider--sizeM,
-	.spectrum-Divider--sizeL {
-		--spectrum-divider-background-color: CanvasText;
-		--spectrum-divider-background-color-small-static-white: CanvasText;
-		--spectrum-divider-background-color-medium-static-white: CanvasText;
-		--spectrum-divider-background-color-large-static-white: CanvasText;
-		--spectrum-divider-background-color-small-static-black: CanvasText;
-		--spectrum-divider-background-color-medium-static-black: CanvasText;
-		--spectrum-divider-background-color-large-static-black: CanvasText;
-	}
 }
 
 .spectrum-Divider {
@@ -86,12 +52,13 @@
 
 /* static white variant colors */
 .spectrum-Divider--staticWhite {
-	&.spectrum-Divider--sizeS {
-		--spectrum-divider-background-color: var(--mod-divider-background-color-small-static-white, var(--spectrum-divider-background-color-small-static-white));
-	}
-
+	&,
 	&.spectrum-Divider--sizeM {
 		--spectrum-divider-background-color: var(--mod-divider-background-color-medium-static-white, var(--spectrum-divider-background-color-medium-static-white));
+	}
+
+	&.spectrum-Divider--sizeS {
+		--spectrum-divider-background-color: var(--mod-divider-background-color-small-static-white, var(--spectrum-divider-background-color-small-static-white));
 	}
 
 	&.spectrum-Divider--sizeL {
@@ -101,12 +68,13 @@
 
 /* static black variant colors */
 .spectrum-Divider--staticBlack {
-	&.spectrum-Divider--sizeS {
-		--spectrum-divider-background-color: var(--mod-divider-background-color-small-static-black, var(--spectrum-divider-background-color-small-static-black));
-	}
-
+	&,
 	&.spectrum-Divider--sizeM {
 		--spectrum-divider-background-color: var(--mod-divider-background-color-medium-static-black, var(--spectrum-divider-background-color-medium-static-black));
+	}
+
+	&.spectrum-Divider--sizeS {
+		--spectrum-divider-background-color: var(--mod-divider-background-color-small-static-black, var(--spectrum-divider-background-color-small-static-black));
 	}
 
 	&.spectrum-Divider--sizeL {

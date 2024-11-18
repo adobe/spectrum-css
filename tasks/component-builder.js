@@ -26,12 +26,11 @@ require("colors");
 const {
 	dirs,
 	relativePrint,
-	bytesToSize,
+	writeAndReport,
 	getPackageFromPath,
 	cleanFolder,
 	validateComponentName,
 	fetchContent,
-	copy,
 } = require("./utilities.js");
 
 /**
@@ -67,6 +66,7 @@ async function processCSS(
 		from: input,
 		to: output,
 		verbose: false,
+		shouldCombine: true,
 		...postCSSOptions,
 	};
 
@@ -107,36 +107,12 @@ async function processCSS(
 	}
 
 	const promises = [
-		fsp
-			.writeFile(output, formatted)
-			.then(() => {
-				const stats = fs.statSync(output);
-				return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-			})
-			.catch((err) => {
-				if (!err) return;
-				console.log(
-					`${"✗".red}  ${relativePrint(output, { cwd }).yellow} not written`,
-				);
-				return Promise.reject(err);
-			}),
+		writeAndReport(formatted, output, { cwd }),
 	];
 
 	if (result.map) {
 		promises.push(
-			fsp
-				.writeFile(`${output}.map`, result.map.toString().trimStart())
-				.then(() => {
-					const stats = fs.statSync(output);
-					return `${"✓".green}  ${relativePrint(`${output}.map`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-				})
-				.catch((err) => {
-					if (!err) return;
-					console.log(
-						`${"✗".red}  ${relativePrint(`${output}.map`, { cwd }).yellow} not written`,
-					);
-					return Promise.reject(err);
-				}),
+			writeAndReport(result.map.toString().trimStart(), `${output}.map`, { cwd }),
 		);
 	}
 
@@ -177,10 +153,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 			referencesOnly: false,
 			preserveVariables: true,
 			stripLocalSelectors: false,
-		}).then(async (reports) => {
-			// Copy index.css to index-vars.css for backwards compat, log as deprecated
-			return copy(indexOutputPath, path.join(cwd, "dist/index-vars.css"), { cwd })
-				.then(r => [r, ...reports]);
 		}),
 		processCSS(
 			content,
@@ -189,9 +161,10 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 			{
 				cwd,
 				clean,
-				splitinatorOptions: {
-					noFlatVariables: true,
-				},
+				skipMapping: true,
+				referencesOnly: false,
+				preserveVariables: false,
+				stripLocalSelectors: false,
 			},
 		),
 	]);
@@ -235,8 +208,6 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
 				theme,
-				map: false,
-				env: "production",
 			},
 		);
 	});
@@ -250,9 +221,10 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 			{
 				cwd,
 				clean,
-				splitinatorOptions: {
-					noSelectors: true,
-				},
+				skipMapping: false,
+				stripLocalSelectors: false,
+				referencesOnly: true,
+				shouldCombine: false,
 				map: false,
 			},
 		),
