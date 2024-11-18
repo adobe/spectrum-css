@@ -251,6 +251,9 @@ DialogStyle.tags = ["is-hidden-story", "!dev"];
 DialogStyle.args = {
 	withTip: true,
 	isOpen: true,
+	popoverWrapperStyles: {
+		display: "block",
+	},
 	trigger: () => null,
 	content: [
 		(passthroughs, context) => Dialog({
