@@ -15,11 +15,10 @@
 	},
 	"exports": {
 		".": "./index.css",
-		"./*.css": "./*.css",
 		"./CHANGELOG.md": "./CHANGELOG.md",
 		"./README.md": "./README.md",
-		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./*.css": "./*.css",
+		"./package.json": "./package.json"
 	},
 	"main": "index.css",
 	"files": [
