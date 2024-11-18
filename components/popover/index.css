@@ -36,9 +36,6 @@ governing permissions and limitations under the License.
 	/* popover inner padding */
 	--spectrum-popover-content-area-spacing: var(--spectrum-popover-edge-to-content-area);
 
-	/* popover "container" padding (nested spacing) */
-	--spectrum-popover-nested-container-spacing: var(--spectrum-spacing-100);
-
 	/* popover drop shadow */
 	--spectrum-popover-drop-shadow-x: var(--spectrum-drop-shadow-elevated-x);
 	--spectrum-popover-drop-shadow-y: var(--spectrum-drop-shadow-elevated-y);

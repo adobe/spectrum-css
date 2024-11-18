@@ -173,7 +173,8 @@ Nested.args = {
 			position: "end-top",
 			isOpen: true,
 			customStyles: {
-				"margin": "var(--spectrum-popover-nested-container-spacing)",
+				// nested popover spacing so that adjacent `.spectrum-Popover` divs don't "touch"
+				"margin": "var(--spectrum-popover-animation-distance)",
 			},
 			trigger: (passthroughs, context) => ActionButton({
 				label: "More actions",
