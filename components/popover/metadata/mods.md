@@ -5,7 +5,7 @@
 | `--mod-popover-animation-distance`        |
 | `--mod-popover-background-color`          |
 | `--mod-popover-border-color`              |
-| `--mod-popover-border-width`              |
+| `--mod-popover-border-thickness`          |
 | `--mod-popover-content-area-spacing`      |
 | `--mod-popover-corner-radius`             |
 | `--mod-popover-drop-shadow-blur`          |
