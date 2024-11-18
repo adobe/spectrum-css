@@ -13,7 +13,6 @@
 
 @import "./themes/express.css";
 
-
 @media (forced-colors: active) {
 	.spectrum-Calendar-prevMonth,
 	.spectrum-Calendar-nextMonth {
@@ -144,7 +143,7 @@
 
 .spectrum-Calendar-prevMonth,
 .spectrum-Calendar-nextMonth {
-	transform: var(--spectrum-logical-rotation);
+	transform: var(--spectrum-logical-rotation,);
 
 	&:not([disabled]) {
 		color: var(--spectrum-calendar-button-icon-color);

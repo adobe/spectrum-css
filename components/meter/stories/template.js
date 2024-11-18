@@ -20,7 +20,7 @@ export const Template = ({
 		customClasses: [
 			...customClasses,
 			rootClass,
-			typeof size !== "undefined" ? `${rootClass}--size${size.toUpperCase()}` : null,
+			typeof size !== "undefined" ? `${rootClass}--size${size?.toUpperCase()}` : null,
 			typeof fill !== "undefined" ? `is-${fill}` : null,
 			/*
 			 * The `spectrum-Meter--staticWhite` class is not present in the Meter CSS, as it makes use of

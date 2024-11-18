@@ -240,7 +240,7 @@ DialogStyle.args = {
 	content: [
 		(passthroughs, context) => Dialog({
 			showModal: false,
-			size: ["small"],
+			size: "s",
 			isDismissable: false,
 			heading: "Example heading",
 			hasFooter: false,

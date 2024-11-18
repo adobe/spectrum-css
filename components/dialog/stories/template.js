@@ -26,7 +26,7 @@ export const Template = ({
 	footer = [],
 	customClasses = [],
 	id = getRandomId("dialog"),
-	size = "medium",
+	size = "m",
 	layout,
 	heroImageUrl,
 	customStyles = {},
