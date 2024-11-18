@@ -9,6 +9,9 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const DatePicker = ({
 	rootClass = "spectrum-DatePicker",
@@ -27,6 +30,7 @@ export const DatePicker = ({
 	lastDay,
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
+
 	const lang = globals.lang ?? "en-US";
 
 	const triggerId = getRandomId("datepicker-trigger");
@@ -72,15 +76,16 @@ export const DatePicker = ({
 				size: "m",
 				isQuiet,
 				isDisabled,
-				isInvalid,
 				isReadOnly,
+				isInvalid,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
 				placeholder: "Choose a date",
 				name: "field",
-				value: lastDay
-					? new Date(lastDay).toLocaleDateString(lang)
-					: undefined,
+				value: lastDay ? new Date(lastDay).toLocaleDateString(lang) : undefined,
+				onclick: function () {
+					if (!isOpen) updateArgs({ isOpen: true });
+				},
 			}, context))}
 			${PickerButton({
 				customClasses: [`${rootClass}-button`],

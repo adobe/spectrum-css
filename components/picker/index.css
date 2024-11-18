@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 @import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-Picker {
@@ -44,10 +44,6 @@
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-100);
 	--spectrum-picker-spacing-edge-to-disclosure-icon-quiet: var(--spectrum-picker-end-edge-to-disclousure-icon-quiet);
-
-	& + .spectrum-Popover--bottom.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
-	}
 
 	/* animation */
 	--spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
@@ -84,6 +80,10 @@
 	--spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
+
+	& + .spectrum-Popover--bottom.is-open {
+		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
+	}
 }
 
 .spectrum-Picker--sizeS {

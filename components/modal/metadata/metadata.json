@@ -1,6 +1,7 @@
 {
   "sourceFile": "index.css",
   "selectors": [
+    ".is-open:scope",
     ".spectrum-Modal",
     ".spectrum-Modal--fullscreen",
     ".spectrum-Modal--fullscreenTakeover",
@@ -28,16 +29,11 @@
   ],
   "component": [
     "--spectrum-modal-background-color",
-    "--spectrum-modal-confirm-border-radius",
     "--spectrum-modal-confirm-entry-animation-delay",
-    "--spectrum-modal-confirm-entry-animation-distance",
     "--spectrum-modal-confirm-entry-animation-duration",
     "--spectrum-modal-confirm-exit-animation-delay",
     "--spectrum-modal-confirm-exit-animation-duration",
-    "--spectrum-modal-fullscreen-margin",
-    "--spectrum-modal-max-height",
-    "--spectrum-modal-max-width",
-    "--spectrum-modal-transition-animation-duration"
+    "--spectrum-modal-fullscreen-margin"
   ],
   "global": [
     "--spectrum-animation-duration-0",
@@ -46,10 +42,11 @@
     "--spectrum-animation-duration-500",
     "--spectrum-animation-ease-in",
     "--spectrum-animation-ease-out",
+    "--spectrum-background-layer-2-color",
     "--spectrum-corner-radius-100",
-    "--spectrum-gray-100"
+    "--spectrum-dialog-confirm-entry-animation-distance"
   ],
-  "system-theme": [],
+  "system-theme": ["--system-modal-background-color"],
   "passthroughs": [],
   "high-contrast": []
 }

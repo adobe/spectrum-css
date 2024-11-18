@@ -6,6 +6,7 @@
     ".spectrum-TreeView--detached",
     ".spectrum-TreeView--quiet",
     ".spectrum-TreeView--sizeL",
+    ".spectrum-TreeView--sizeM",
     ".spectrum-TreeView--sizeS",
     ".spectrum-TreeView--sizeXL",
     ".spectrum-TreeView--thumbnail",
@@ -95,7 +96,6 @@
     "--spectrum-treeview-font-size",
     "--spectrum-treeview-heading-bottom-to-text",
     "--spectrum-treeview-heading-color",
-    "--spectrum-treeview-heading-font-weight",
     "--spectrum-treeview-indicator-animation-duration",
     "--spectrum-treeview-indicator-margin-inline-start",
     "--spectrum-treeview-indicator-padding",
@@ -125,13 +125,12 @@
     "--spectrum-treeview-item-min-block-size-thumbnail-offset-medium",
     "--spectrum-treeview-item-padding-inline-end",
     "--spectrum-treeview-item-padding-inline-start",
+    "--spectrum-treeview-item-sized-indentation",
     "--spectrum-treeview-item-text-color",
     "--spectrum-treeview-item-text-color-disabled",
     "--spectrum-treeview-item-text-color-focus",
     "--spectrum-treeview-item-text-color-hover",
     "--spectrum-treeview-item-text-color-selected",
-    "--spectrum-treeview-line-height",
-    "--spectrum-treeview-margin-block",
     "--spectrum-treeview-section-spacing"
   ],
   "global": [
@@ -158,7 +157,7 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-200",
+    "--spectrum-gray-100",
     "--spectrum-gray-500",
     "--spectrum-gray-700",
     "--spectrum-gray-900",
@@ -168,7 +167,10 @@
     "--spectrum-neutral-content-color-default",
     "--spectrum-text-to-visual-75"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-tree-view-item-background-color-focus",
+    "--system-tree-view-item-background-color-hover"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-treeview-heading-color",
