@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 @import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Tooltip {
@@ -77,11 +77,11 @@
 	}
 
 	.spectrum-Tooltip-tip {
-		forced-color-adjust: none;
 		--highcontrast-tooltip-background-color-default: CanvasText;
 		--highcontrast-tooltip-background-color-informative: CanvasText;
 		--highcontrast-tooltip-background-color-positive: CanvasText;
 		--highcontrast-tooltip-background-color-negative: CanvasText;
+		forced-color-adjust: none;
 	}
 }
 

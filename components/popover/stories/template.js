@@ -8,6 +8,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -41,7 +44,10 @@ export const Template = ({
 		setTimeout(() => {
 			// Get the actual height and width of the popover
 			const popover = document.getElementById(id);
+			if (!popover) return;
+
 			const rect = popover.getBoundingClientRect();
+			if (!rect) return;
 
 			let shouldChange = false;
 			if (popoverHeight !== parseInt(rect.height, 10)) {
@@ -186,8 +192,7 @@ export const Template = ({
 				class=${classMap({
 					[rootClass]: true,
 					"is-open": isOpen,
-					[`${rootClass}--size${size?.toUpperCase()}`]:
-						typeof size !== "undefined",
+					[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 					[`${rootClass}--withTip`]: withTip,
 					[`${rootClass}--${position}`]: typeof position !== "undefined",
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -275,7 +280,7 @@ export const TipPlacementVariants = (args, context) => {
 /**
  * Contains a source button with a fixed width, and an always open Popover.
  */
-export const FixedWidthSourceTemplate = (args) => html`
+export const FixedWidthSourceTemplate = (args, context) => html`
 	<div style="min-width: 300px;">
 		${ActionButton({
 			label: "Source",
@@ -283,12 +288,12 @@ export const FixedWidthSourceTemplate = (args) => html`
 				width: "100px",
 				display: "block",
 			},
-		})}
+		}, context)}
 		${Template({
 			...args,
 			position: "bottom-start",
 			isOpen: true,
 			trigger: () => null,
-		})}
+		}, context)}
 	</div>
 `;

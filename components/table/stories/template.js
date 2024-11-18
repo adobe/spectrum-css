@@ -9,6 +9,9 @@ import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const TableRowItem = ({
 	rootClass = "spectrum-Table",

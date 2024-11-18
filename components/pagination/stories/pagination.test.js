@@ -6,15 +6,12 @@ export const PaginationGroup = Variants({
 	sizeDirection: "column",
 	testData: [
 		{
-			testHeading: "Default",
+			testHeading: "Listing",
+			variant: "listing",
 		},
 		{
 			testHeading: "Explicit",
 			variant: "explicit",
-		},
-		{
-			testHeading: "Button",
-			variant: "button",
 		},
 	]
 });

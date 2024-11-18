@@ -10,6 +10,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 /**
  * @typedef API
@@ -148,6 +151,7 @@ export const Template = ({
 		${when(displayLabel, () => FieldLabel({
 			size,
 			label: labelText,
+			isDisabled,
 		}, context))}
 		${when(typeof characterCount !== "undefined", () => html`
 			<span class="${rootClass}-characterCount">${characterCount}</span>`)}
