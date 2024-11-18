@@ -10,3 +10,21 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-LogicButton {
+		--spectrum-logic-button-and-background-color-disabled: var(--spectrum-gray-200);
+		--spectrum-logic-button-and-border-color-disabled: var(--spectrum-gray-200);
+		--spectrum-logic-button-and-background-color-hover-disabled: var(--spectrum-gray-200);
+		--spectrum-logic-button-and-border-color-hover-disabled: var(--spectrum-gray-200);
+
+		--spectrum-logic-button-or-background-color-disabled: var(--spectrum-gray-200);
+		--spectrum-logic-button-or-border-color-disabled: var(--spectrum-gray-200);
+		--spectrum-logic-button-or-background-color-hover-disabled: var(--spectrum-gray-200);
+		--spectrum-logic-button-or-border-color-hover-disabled: var(--spectrum-gray-200);
+	}
+}
