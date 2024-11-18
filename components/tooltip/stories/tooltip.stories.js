@@ -90,6 +90,10 @@ export default {
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=2591-4482",
+		},
 		packageJson,
 		metadata,
 	},

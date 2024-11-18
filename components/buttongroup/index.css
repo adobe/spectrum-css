@@ -11,37 +11,18 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
-.spectrum-ButtonGroup {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
+@import "./themes/spectrum-two.css";
 
 .spectrum-ButtonGroup--sizeS {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
-}
-
-.spectrum-ButtonGroup--sizeM {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
-.spectrum-ButtonGroup--sizeL {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
-.spectrum-ButtonGroup--sizeXL {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+	--spectrum-buttongroup-spacing: var(--spectrum-spacing-200);
 }
 
 .spectrum-ButtonGroup {
-	display: flex;
+	display: var(--mod-buttongroup-display, flex);
+	flex-direction: var(--mod-buttongroup-flex-direction, row);
 	flex-wrap: wrap;
-	gap: var(--mod-buttongroup-spacing-horizontal, var(--spectrum-buttongroup-spacing-horizontal));
+
+	gap: var(--mod-buttongroup-spacing-horizontal, var(--spectrum-buttongroup-spacing, var(--spectrum-spacing-300)));
 	justify-content: var(--mod-buttongroup-justify-content, normal);
 
 	.spectrum-ButtonGroup-item {
@@ -50,7 +31,7 @@
 }
 
 .spectrum-ButtonGroup--vertical {
-	display: inline-flex;
-	flex-direction: column;
-	gap: var(--mod-buttongroup-spacing-vertical, var(--spectrum-buttongroup-spacing-vertical));
+	--mod-buttongroup-display: inline-flex;
+	--mod-buttongroup-spacing-horizontal: var(--mod-buttongroup-spacing-vertical);
+	--mod-buttongroup-flex-direction: column;
 }

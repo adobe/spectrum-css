@@ -10,11 +10,7 @@
     "--mod-swatchgroup-spacing-regular",
     "--mod-swatchgroup-spacing-spacious"
   ],
-  "component": [
-    "--spectrum-swatchgroup-spacing-compact",
-    "--spectrum-swatchgroup-spacing-regular",
-    "--spectrum-swatchgroup-spacing-spacious"
-  ],
+  "component": ["--spectrum-swatchgroup-spacing"],
   "global": [
     "--spectrum-spacing-100",
     "--spectrum-spacing-50",
