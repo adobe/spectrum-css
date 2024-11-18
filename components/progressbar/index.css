@@ -98,21 +98,7 @@
 	&:lang(ko) {
 		--mod-progressbar-line-height: var(--spectrum-progressbar-line-height-cjk);
 	}
-}
 
-@media (forced-colors: active) {
-	.spectrum-ProgressBar {
-		--highcontrast-progressbar-fill-color: ButtonText;
-		--highcontrast-progressbar-track-color: ButtonFace;
-	}
-
-	.spectrum-ProgressBar-track {
-		forced-color-adjust: none;
-		border: 1px solid ButtonText;
-	}
-}
-
-.spectrum-ProgressBar {
 	position: relative;
 	display: inline-flex;
 	flex-flow: row wrap;
@@ -202,6 +188,18 @@
 		animation-timing-function: var(--spectrum-progressbar-animation-ease-in-out-indeterminate);
 		animation-duration: var(--spectrum-progressbar-animation-duration-indeterminate);
 		animation-iteration-count: infinite;
+	}
+}
+
+@media (forced-colors: active) {
+	.spectrum-ProgressBar {
+		--highcontrast-progressbar-fill-color: ButtonText;
+		--highcontrast-progressbar-track-color: ButtonFace;
+	}
+
+	.spectrum-ProgressBar-track {
+		forced-color-adjust: none;
+		border: 1px solid ButtonText;
 	}
 }
 
