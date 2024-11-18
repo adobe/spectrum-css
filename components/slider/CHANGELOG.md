@@ -1,5 +1,215 @@
 # Change Log
 
+## 6.0.0-s2-foundations.17
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9c6561b`](https://github.com/adobe/spectrum-css/commit/9c6561b38624307da9bca7499452c3cb8ea2095e) Thanks [@pfulton](https://github.com/pfulton)! - Bring in the latest S2 foundations release including updated corner rounding approach, colors, and icon spacing. Remapped corner rounding values for the -75 token to a static 2px value for spectrum themes.
+
+### Patch Changes
+
+- Updated dependencies [[`9c6561b`](https://github.com/adobe/spectrum-css/commit/9c6561b38624307da9bca7499452c3cb8ea2095e)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.25
+
+## 6.0.0-s2-foundations.16
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`a434c9a`](https://github.com/adobe/spectrum-css/commit/a434c9aa96509427e0faaa0eef4ffc2a21fa9908) Thanks [@pfulton](https://github.com/pfulton)! - Align selectors with the specificity that exists in S1 today
+
+### Patch Changes
+
+- Updated dependencies [[`a434c9a`](https://github.com/adobe/spectrum-css/commit/a434c9aa96509427e0faaa0eef4ffc2a21fa9908)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.18
+
+## 6.0.0-s2-foundations.15
+
+### Minor Changes
+
+- [#3154](https://github.com/adobe/spectrum-css/pull/3154) [`7735155`](https://github.com/adobe/spectrum-css/commit/77351552eac8a28cab316d984fee88dca61dc786) Thanks [@cdransf](https://github.com/cdransf)! - This applies a flex layout to the spectrum slider controls to consistently align the enclosed handle and ramp, while also removing the margins that might otherwise interfere with alignment. This aims to resolve the issues with the calc-based approach that exhibited variations in vertical alignment.
+
+## 6.0.0-s2-foundations.14
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`57709c0`](https://github.com/adobe/spectrum-css/commit/57709c09f7cfddb67125fa96691ae869ff8840ca) Thanks [@pfulton](https://github.com/pfulton)! - Pull in the corner radii updates for S2
+
+### Patch Changes
+
+- Updated dependencies [[`57709c0`](https://github.com/adobe/spectrum-css/commit/57709c09f7cfddb67125fa96691ae869ff8840ca)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.17
+  - @spectrum-css/tokens@15.0.0-s2-foundations.22
+
+## 6.0.0-s2-foundations.13
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`11a0032`](https://github.com/adobe/spectrum-css/commit/11a00323addbf28b9430d27d9cbc5f30bc851b65) Thanks [@pfulton](https://github.com/pfulton)! - Bug fixes to S1 & Express theming across all components
+
+### Patch Changes
+
+- Updated dependencies [[`11a0032`](https://github.com/adobe/spectrum-css/commit/11a00323addbf28b9430d27d9cbc5f30bc851b65)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.14
+  - @spectrum-css/tokens@15.0.0-s2-foundations.21
+
+## 6.0.0-s2-foundations.12
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05) Thanks [@pfulton](https://github.com/pfulton)! - - Accordion: Flatten sizing variables in theme layer
+  - ActionButton: Fix typo in variable name "\*-defaul-selectedt"
+  - Move out rtl logical transform from theme to index.css for: calendar, pagination, treeview
+
+### Patch Changes
+
+- Updated dependencies [[`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.12
+  - @spectrum-css/tokens@15.0.0-s2-foundations.13
+
+## 6.0.0-s2-foundations.11
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1) Thanks [@pfulton](https://github.com/pfulton)! - Updated build to set cssnano to discardUnused: false
+
+### Patch Changes
+
+- Updated dependencies [[`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.11
+  - @spectrum-css/tokens@15.0.0-s2-foundations.12
+
+## 6.0.0-s2-foundations.10
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0844aad`](https://github.com/adobe/spectrum-css/commit/0844aadba2fefb844a66370ff6e9b4704f6c1543) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to index.css imports to ensure appropriate system mappings get loaded
+
+### Patch Changes
+
+- Updated dependencies [[`0844aad`](https://github.com/adobe/spectrum-css/commit/0844aadba2fefb844a66370ff6e9b4704f6c1543)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.10
+  - @spectrum-css/tokens@15.0.0-s2-foundations.10
+
+## 6.0.0-s2-foundations.9
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`84c8721`](https://github.com/adobe/spectrum-css/commit/84c87212ccb37c887225eaff28e84d9f8e608e09) Thanks [@pfulton](https://github.com/pfulton)! - Push out the latest release to the components
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0a0dace`](https://github.com/adobe/spectrum-css/commit/0a0dacec163234bc73961ef17826cdc33765d9df) Thanks [@pfulton](https://github.com/pfulton)! - Across the board version update to latest build system state
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`681ba47`](https://github.com/adobe/spectrum-css/commit/681ba478c1259d0bbb183670f3188538ec3bee1d) Thanks [@pfulton](https://github.com/pfulton)! - Doing a widespread release on all packages to ensure the latest compiled CSS is published.
+
+- Updated dependencies [[`681ba47`](https://github.com/adobe/spectrum-css/commit/681ba478c1259d0bbb183670f3188538ec3bee1d), [`84c8721`](https://github.com/adobe/spectrum-css/commit/84c87212ccb37c887225eaff28e84d9f8e608e09), [`0a0dace`](https://github.com/adobe/spectrum-css/commit/0a0dacec163234bc73961ef17826cdc33765d9df)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.9
+  - @spectrum-css/tokens@15.0.0-s2-foundations.9
+
+## 6.0.0-s2-foundations.8
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`2633985`](https://github.com/adobe/spectrum-css/commit/2633985775ef5a8fad929e275e55e99b75b10959) Thanks [@pfulton](https://github.com/pfulton)! - Update system property tooling (splitinator) to leverage the selector parser
+
+### Patch Changes
+
+- Updated dependencies [[`2633985`](https://github.com/adobe/spectrum-css/commit/2633985775ef5a8fad929e275e55e99b75b10959)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.8
+  - @spectrum-css/tokens@15.0.0-s2-foundations.8
+
+## 6.0.0-s2-foundations.7
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22) Thanks [@pfulton](https://github.com/pfulton)! - Revert themes asset naming to simplify code review; bug fixes in custom property loading from theme assets
+
+### Patch Changes
+
+- Updated dependencies [[`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.7
+  - @spectrum-css/tokens@15.0.0-s2-foundations.7
+
+## 6.0.0-s2-foundations.6
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0) Thanks [@pfulton](https://github.com/pfulton)! - Inject missing tokens into theme files and adjust logic in the splitinator tool to replace nested variable references to the new system mappings
+
+- Updated dependencies [[`130e137`](https://github.com/adobe/spectrum-css/commit/130e1372b223641efe0a3a23c83ff1d01a70bf1d), [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.6
+  - @spectrum-css/stepper@7.0.0-s2-foundations.6
+
+## 6.0.0-s2-foundations.5
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`de1d39f`](https://github.com/adobe/spectrum-css/commit/de1d39fdedc297032735acf97d0f87b6f2e45f50) Thanks [@pfulton](https://github.com/pfulton)! - Fix to how the system mapped custom property names are generated; adding support for pseudo functions, combinators, and complex selectors
+
+- Updated dependencies [[`de1d39f`](https://github.com/adobe/spectrum-css/commit/de1d39fdedc297032735acf97d0f87b6f2e45f50)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.5
+  - @spectrum-css/tokens@15.0.0-s2-foundations.5
+
+## 6.0.0-s2-foundations.4
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5) Thanks [@pfulton](https://github.com/pfulton)! - Corrects a faulty regex that was negatively affecting compilation of custom properties
+
+- Updated dependencies [[`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.4
+  - @spectrum-css/tokens@15.0.0-s2-foundations.4
+
+## 6.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+### Patch Changes
+
+- Updated dependencies [[`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.3
+  - @spectrum-css/tokens@15.0.0-s2-foundations.3
+
+## 6.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.2
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
+## 6.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+### Patch Changes
+
+- Updated dependencies [[`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.1
+  - @spectrum-css/tokens@15.0.0-s2-foundations.1
+
+## 6.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/stepper@7.0.0-s2-foundations.0
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+
 ## 5.5.0
 
 ### Minor Changes
@@ -10,6 +220,21 @@
 
 - Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
   - @spectrum-css/stepper@6.3.0
+
+## 5.4.2
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove duplicate references
+
+## 5.4.1
+
+### Patch Changes
+
+- [#3298](https://github.com/adobe/spectrum-css/pull/3298) [`07cc324`](https://github.com/adobe/spectrum-css/commit/07cc324af3b1a6240033b6c2f91342373c7234c2) Thanks [@cdransf](https://github.com/cdransf)! - Resolves violation error by moving todo comment into stylelint disable comment as a description
+
+- Updated dependencies [[`5fa753b`](https://github.com/adobe/spectrum-css/commit/5fa753b34944584576c8d91b8d51460ff0a2e4be)]:
+  - @spectrum-css/stepper@6.2.1
 
 ## 5.4.2
 

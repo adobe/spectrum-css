@@ -61,6 +61,8 @@
     ".spectrum-Card.is-selected .spectrum-Card-actions",
     ".spectrum-Card.is-selected .spectrum-Card-quickActions",
     ".spectrum-Card.is-selected:before",
+    ".spectrum-Card.spectrum-Card--gallery",
+    ".spectrum-Card.spectrum-Card--quiet",
     ".spectrum-Card:after",
     ".spectrum-Card:before",
     ".spectrum-Card:focus .spectrum-Card-actions",
@@ -81,7 +83,6 @@
     "--mod-card-actions-drop-shadow-blur",
     "--mod-card-actions-drop-shadow-color",
     "--mod-card-actions-drop-shadow-x",
-    "--mod-card-actions-drop-shadow-y",
     "--mod-card-actions-size",
     "--mod-card-actions-spacing",
     "--mod-card-animation-duration",
@@ -112,7 +113,6 @@
     "--mod-card-footer-margin-block-start",
     "--mod-card-footer-margin-inline-end",
     "--mod-card-footer-margin-inline-start",
-    "--mod-card-footer-margin-top",
     "--mod-card-footer-padding-block-end",
     "--mod-card-footer-padding-block-start",
     "--mod-card-horizontal-body-padding",
@@ -121,7 +121,6 @@
     "--mod-card-minimum-width-quiet",
     "--mod-card-preview-background-color",
     "--mod-card-preview-background-color-hover",
-    "--mod-card-preview-border-width",
     "--mod-card-preview-border-width-selected",
     "--mod-card-preview-minimum-height",
     "--mod-card-selected-background-color-rgb",
@@ -134,8 +133,7 @@
     "--mod-card-title-font-weight",
     "--mod-card-title-line-height",
     "--mod-card-title-padding-right",
-    "--mod-card-title-padding-top",
-    "--mod-spectrum-card-background-color"
+    "--mod-overlay-animation-duration"
   ],
   "component": [
     "--spectrum-card-actions-background-color-opacity",
@@ -148,13 +146,13 @@
     "--spectrum-card-actions-size",
     "--spectrum-card-actions-spacing",
     "--spectrum-card-background-color",
-    "--spectrum-card-background-color-quiet",
     "--spectrum-card-body-font-color",
     "--spectrum-card-body-font-family",
     "--spectrum-card-body-font-size",
     "--spectrum-card-body-font-style",
     "--spectrum-card-body-font-weight",
     "--spectrum-card-body-line-height",
+    "--spectrum-card-body-padding-block-start",
     "--spectrum-card-body-spacing",
     "--spectrum-card-border-color",
     "--spectrum-card-border-color-hover",
@@ -185,8 +183,7 @@
     "--spectrum-card-title-font-style",
     "--spectrum-card-title-font-weight",
     "--spectrum-card-title-line-height",
-    "--spectrum-card-title-padding-right",
-    "--spectrum-card-title-padding-top"
+    "--spectrum-card-title-padding-right"
   ],
   "global": [
     "--spectrum-animation-duration-100",
@@ -206,9 +203,9 @@
     "--spectrum-drop-shadow-y",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-thickness",
+    "--spectrum-gray-100",
     "--spectrum-gray-100-rgb",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-heading-color",
     "--spectrum-heading-line-height",
     "--spectrum-heading-sans-serif-font-style",
@@ -220,14 +217,13 @@
     "--spectrum-spacing-300",
     "--spectrum-spacing-400"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-card-border-color",
+    "--system-card-border-color-hover",
+    "--system-card-divider-color",
+    "--system-card-preview-background-color",
+    "--system-card-preview-background-color-hover"
+  ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-card-background-color",
-    "--highcontrast-card-body-font-color",
-    "--highcontrast-card-border-color",
-    "--highcontrast-card-border-color-hover",
-    "--highcontrast-card-border-color-selected",
-    "--highcontrast-card-title-font-color"
-  ]
+  "high-contrast": []
 }

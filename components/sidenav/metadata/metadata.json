@@ -166,8 +166,8 @@
     "--spectrum-focus-indicator-thickness",
     "--spectrum-font-size-100",
     "--spectrum-font-size-75",
+    "--spectrum-gray-100",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-gray-600",
     "--spectrum-line-height-100",
     "--spectrum-medium-font-weight",
@@ -180,7 +180,15 @@
     "--spectrum-text-to-visual-100",
     "--spectrum-workflow-icon-size-100"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-side-nav-background-hover",
+    "--system-side-nav-background-hover-selected",
+    "--system-side-nav-background-key-focus",
+    "--system-side-nav-background-key-focus-selected",
+    "--system-side-nav-item-background-default-selected",
+    "--system-side-nav-item-background-down",
+    "--system-side-nav-item-background-down-selected"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-sidenav-background-default",

@@ -231,12 +231,9 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-400",
     "--spectrum-gray-50",
     "--spectrum-gray-500",
     "--spectrum-gray-600",
-    "--spectrum-gray-800",
-    "--spectrum-gray-900",
     "--spectrum-line-height-100",
     "--spectrum-negative-border-color-default",
     "--spectrum-negative-border-color-focus",
@@ -249,11 +246,11 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "system-theme": [
-    "--system-spectrum-combobox-border-color-default",
-    "--system-spectrum-combobox-border-color-focus",
-    "--system-spectrum-combobox-border-color-focus-hover",
-    "--system-spectrum-combobox-border-color-hover",
-    "--system-spectrum-combobox-border-color-key-focus"
+    "--system-combobox-border-color-default",
+    "--system-combobox-border-color-focus",
+    "--system-combobox-border-color-focus-hover",
+    "--system-combobox-border-color-hover",
+    "--system-combobox-border-color-key-focus"
   ],
   "passthroughs": [
     "--mod-picker-button-background-color",

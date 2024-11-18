@@ -10,3 +10,20 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-SideNav {
+		--spectrum-sidenav-background-hover: var(--spectrum-gray-200);
+		--spectrum-sidenav-item-background-down: var(--spectrum-gray-300);
+		--spectrum-sidenav-background-key-focus: var(--spectrum-gray-200);
+
+		--spectrum-sidenav-item-background-default-selected: var(--spectrum-gray-200);
+		--spectrum-sidenav-background-hover-selected: var(--spectrum-gray-300);
+		--spectrum-sidenav-item-background-down-selected: var(--spectrum-gray-300);
+		--spectrum-sidenav-background-key-focus-selected: var(--spectrum-gray-200);
+	}
+}

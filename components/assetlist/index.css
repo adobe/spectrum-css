@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-AssetList {
 	--spectrum-assetlist-width: 272px;
@@ -26,8 +26,6 @@
 	--spectrum-assetlist-item-animation: var(--spectrum-animation-duration-100);
 	--spectrum-assetlist-item-font-size: var(--spectrum-font-size-100);
 	--spectrum-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
-	--spectrum-assetlist-item-background-color-down: var(--spectrum-gray-300);
-	--spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-200);
 
 	/* thumbnail */
 	--spectrum-assetlist-thumbnail-width: var(--spectrum-spacing-400);
@@ -38,15 +36,13 @@
 	--spectrum-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
 	--spectrum-assetlist-label-color: var(--spectrum-neutral-content-color-default);
 
-	&:dir(rtl) {
-		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-	}
-}
-
-.spectrum-AssetList {
 	margin-block-start: 0;
 	margin-block-end: 0;
 	padding: 0;
+
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 .spectrum-AssetList-item {
@@ -161,7 +157,7 @@
 .spectrum-AssetList-itemChildIndicator {
 	display: none;
 	transition: transform ease var(--mod-assetlist-child-indicator-animation, var(--spectrum-assetlist-child-indicator-animation));
-	transform: var(--spectrum-logical-rotation);
+	transform: var(--spectrum-logical-rotation,);
 }
 
 .spectrum-AssetList-itemLabel {

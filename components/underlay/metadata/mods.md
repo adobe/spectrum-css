@@ -1,6 +1,5 @@
 | Modifiable custom properties                         |
 | ---------------------------------------------------- |
-| `--mod-overlay-animation-duration`                   |
 | `--mod-overlay-animation-duration-opened`            |
 | `--mod-underlay-background-color`                    |
 | `--mod-underlay-background-entry-animation-delay`    |
