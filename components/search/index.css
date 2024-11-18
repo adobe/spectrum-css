@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Search {
 	/* Size / Spacing */
@@ -45,7 +45,6 @@
 
 	/* Background and Border */
 	--spectrum-search-border-width: var(--spectrum-border-width-100);
-	--spectrum-search-background-color: var(--spectrum-gray-50);
 
 	/* Disabled */
 	--spectrum-search-color-disabled: var(--spectrum-disabled-content-color);

@@ -228,7 +228,6 @@
   "global": [
     "--spectrum-animation-duration-100",
     "--spectrum-border-width-100",
-    "--spectrum-border-width-200",
     "--spectrum-character-count-to-field-quiet-extra-large",
     "--spectrum-character-count-to-field-quiet-large",
     "--spectrum-character-count-to-field-quiet-medium",
@@ -292,8 +291,7 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-400",
-    "--spectrum-gray-50",
+    "--spectrum-gray-25",
     "--spectrum-gray-500",
     "--spectrum-gray-600",
     "--spectrum-gray-800",
@@ -332,12 +330,13 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "system-theme": [
-    "--system-spectrum-textfield-border-color",
-    "--system-spectrum-textfield-border-color-focus",
-    "--system-spectrum-textfield-border-color-focus-hover",
-    "--system-spectrum-textfield-border-color-hover",
-    "--system-spectrum-textfield-border-color-keyboard-focus",
-    "--system-spectrum-textfield-border-width"
+    "--system-textfield-background-color",
+    "--system-textfield-border-color",
+    "--system-textfield-border-color-focus",
+    "--system-textfield-border-color-focus-hover",
+    "--system-textfield-border-color-hover",
+    "--system-textfield-border-color-keyboard-focus",
+    "--system-textfield-border-width"
   ],
   "passthroughs": [],
   "high-contrast": [

@@ -10,3 +10,14 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-ActionBar {
+		--spectrum-actionbar-popover-background-color: var(--spectrum-gray-50);
+		--spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
+	}
+}
