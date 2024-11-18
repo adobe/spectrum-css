@@ -2,7 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [".spectrum-Underlay", ".spectrum-Underlay.is-open"],
   "modifiers": [
-    "--mod-overlay-animation-duration",
     "--mod-overlay-animation-duration-opened",
     "--mod-underlay-background-color",
     "--mod-underlay-background-entry-animation-delay",
@@ -23,7 +22,6 @@
   ],
   "global": [
     "--spectrum-animation-duration-0",
-    "--spectrum-animation-duration-100",
     "--spectrum-animation-duration-200",
     "--spectrum-animation-duration-300",
     "--spectrum-animation-duration-600",
