@@ -61,4 +61,4 @@
 | `--mod-card-title-line-height`                |
 | `--mod-card-title-padding-right`              |
 | `--mod-card-title-padding-top`                |
-| `--mod-spectrum-card-background-color`        |
+| `--mod-overlay-animation-duration`            |

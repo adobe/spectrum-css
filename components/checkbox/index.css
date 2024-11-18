@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 /*
  * .spectrum-Checkbox-box::before is the Checkbox "box"
@@ -29,7 +29,6 @@
 
 	--spectrum-checkbox-content-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-checkbox-control-color-disabled: var(--spectrum-disabled-content-color);
-	--spectrum-checkbox-checkmark-color: var(--spectrum-gray-75);
 
 	--spectrum-checkbox-invalid-color-default: var(--spectrum-negative-color-900);
 	--spectrum-checkbox-invalid-color-hover: var(--spectrum-negative-color-1000);
@@ -54,7 +53,6 @@
 	/* Size */
 	--spectrum-checkbox-height: var(--spectrum-component-height-100);
 	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
-	--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-75);
 
 	--spectrum-checkbox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-checkbox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
@@ -442,6 +440,8 @@
 }
 
 .spectrum-Checkbox-box {
+	/* Fix vertical alignment when not wrapping since we're flex-start */
+	--spectrum-checkbox-spacing: calc(var(--mod-checkbox-height, var(--spectrum-checkbox-height)) - var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size)));
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -450,9 +450,6 @@
 	box-sizing: border-box;
 	inline-size: var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size));
 	block-size: var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size));
-
-	/* Fix vertical alignment when not wrapping since we're flex-start */
-	--spectrum-checkbox-spacing: calc(var(--mod-checkbox-height, var(--spectrum-checkbox-height)) - var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size)));
 	margin: calc(var(--mod-checkbox-spacing, var(--spectrum-checkbox-spacing)) / 2) 0;
 
 	flex-grow: 0;

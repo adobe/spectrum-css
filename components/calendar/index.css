@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Calendar {
 	--spectrum-calendar-day-width: var(--spectrum-component-height-100);
@@ -52,14 +52,12 @@
 
 	--spectrum-calendar-button-icon-color: var(--spectrum-gray-700);
 
+	inline-size: var(--mod-calendar-width, var(--spectrum-calendar-width));
+	display: inline-block;
+
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
-}
-
-.spectrum-Calendar {
-	inline-size: var(--mod-calendar-width, var(--spectrum-calendar-width));
-	display: inline-block;
 }
 
 .spectrum-Calendar--padded {
@@ -134,6 +132,7 @@
 
 		/* Add letter spacing of 0.66px from Typography > Detail  issue #407 */
 		letter-spacing: var(--mod-calendar-title-text-letter-spacing, var(--spectrum-calendar-title-text-letter-spacing));
+
 	}
 }
 
@@ -438,6 +437,7 @@
 		--highcontrast-calendar-day-today-text-color-disabled: GrayText;
 		--highcontrast-calendar-day-today-text-color: ButtonText;
 
+		color: CanvasText;
 		forced-color-adjust: none;
 
 		&.is-range-selection {

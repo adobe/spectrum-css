@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Textfield {
 	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
@@ -74,9 +74,6 @@
 	/* focus indicator */
 	--spectrum-textfield-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
 	--spectrum-textfield-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-
-	/*** Colors ***/
-	--spectrum-textfield-background-color: var(--spectrum-gray-50);
 
 	/* Text Colors */
 	--spectrum-textfield-text-color-default: var(--spectrum-neutral-content-color-default);

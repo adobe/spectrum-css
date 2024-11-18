@@ -12,7 +12,7 @@
  */
 
 @import "@spectrum-css/commons/basebutton.css";
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-ActionButton {
 	--spectrum-actionbutton-animation-duration: var(--spectrum-animation-duration-100);
@@ -55,6 +55,20 @@
 			--mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected-emphasized, var(--spectrum-white));
 			--mod-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected-emphasized, var(--spectrum-white));
 		}
+	}
+
+	&.spectrum-ActionButon--staticBlack {
+		--mod-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color);
+		--mod-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color);
+		--mod-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color);
+		--mod-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color);
+	}
+
+	&.spectrum-ActionButon--staticWhite {
+		--mod-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color);
+		--mod-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color);
+		--mod-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color);
+		--mod-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color);
 	}
 }
 
@@ -165,6 +179,7 @@
 
 .spectrum-ActionButton {
 	@extend %spectrum-BaseButton;
+
 	position: relative;
 
 	min-inline-size: var(--mod-actionbutton-min-width, var(--spectrum-actionbutton-min-width));

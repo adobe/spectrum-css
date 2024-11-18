@@ -12,7 +12,7 @@
 * governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-ClearButton {
 	--spectrum-clear-button-height: var(--spectrum-component-height-100);
@@ -23,7 +23,7 @@
 	--spectrum-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
 	--spectrum-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
-    
+
 	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
 	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
 	border-radius: 100%;
@@ -57,18 +57,14 @@
 		--mod-clear-button-background-color-key-focus: transparent;
 	}
 
-	/* @deprecated .spectrum-ClearButton--overBackground */
-	&.spectrum-ClearButton--staticWhite,
-	&.spectrum-ClearButton--overBackground {
+	&.spectrum-ClearButton--staticWhite {
 		--mod-clear-button-icon-color: var(--spectrum-white);
 		--mod-clear-button-icon-color-hover: var(--spectrum-white);
 		--mod-clear-button-icon-color-down: var(--spectrum-white);
 		--mod-clear-button-icon-color-key-focus: var(--spectrum-white);
+		--mod-clear-button-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);
 
 		--mod-clear-button-background-color: transparent;
-		--mod-clear-button-background-color-hover: var(--spectrum-transparent-white-300);
-		--mod-clear-button-background-color-down: var(--spectrum-transparent-white-400);
-		--mod-clear-button-background-color-key-focus:var(--spectrum-transparent-white-300);
 	}
 
 	&:disabled,
@@ -77,10 +73,6 @@
 		--mod-clear-button-icon-color-hover: var(--spectrum-disabled-content-color);
 		--mod-clear-button-icon-color-down: var(--spectrum-disabled-content-color);
 		--mod-clear-button-background-color: var(--mod-clear-button-background-color-disabled, transparent);
-	}
-
-	&.spectrum-ClearButton--staticWhite {
-		--spectrum-clear-button-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);
 	}
 
 	&:not(:disabled) {

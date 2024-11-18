@@ -49,6 +49,7 @@
     "--spectrum-alert-banner-minimum-height",
     "--spectrum-alert-banner-negative-background",
     "--spectrum-alert-banner-netural-background",
+    "--spectrum-alert-banner-neutral-background",
     "--spectrum-alert-banner-size",
     "--spectrum-alert-banner-start-edge",
     "--spectrum-alert-banner-text-to-button-horizontal",
@@ -65,16 +66,13 @@
     "--spectrum-font-size-100",
     "--spectrum-informative-background-color-default",
     "--spectrum-negative-background-color-default",
-    "--spectrum-neutral-background-color-default",
     "--spectrum-neutral-subdued-background-color-default",
     "--spectrum-spacing-300",
     "--spectrum-text-to-visual-300",
     "--spectrum-white",
     "--spectrum-workflow-icon-size-100"
   ],
-  "system-theme": [
-    "--system-spectrum-alertbanner-spectrum-alert-banner-netural-background"
-  ],
+  "system-theme": ["--system-alert-banner-neutral-background"],
   "passthroughs": [
     "--mod-button-margin-block",
     "--mod-button-margin-left",

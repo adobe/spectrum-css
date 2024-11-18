@@ -3,10 +3,6 @@
   "selectors": [
     ".spectrum-ButtonGroup",
     ".spectrum-ButtonGroup .spectrum-ButtonGroup-item",
-    ".spectrum-ButtonGroup--sizeL",
-    ".spectrum-ButtonGroup--sizeM",
-    ".spectrum-ButtonGroup--sizeS",
-    ".spectrum-ButtonGroup--sizeXL",
     ".spectrum-ButtonGroup--vertical"
   ],
   "modifiers": [
@@ -18,7 +14,7 @@
     "--spectrum-buttongroup-spacing-horizontal",
     "--spectrum-buttongroup-spacing-vertical"
   ],
-  "global": ["--spectrum-spacing-200", "--spectrum-spacing-300"],
+  "global": [],
   "system-theme": [],
   "passthroughs": [],
   "high-contrast": []

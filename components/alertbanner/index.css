@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-AlertBanner {
 	--spectrum-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
@@ -49,9 +49,7 @@
 	--mod-closebutton-margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
 	--mod-closebutton-margin-top: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
 	--mod-closebutton-align-self: flex-start;
-}
 
-.spectrum-AlertBanner {
 	display: none;
 	justify-content: space-between;
 	inline-size: var(--mod-alert-banner-size, var(--spectrum-alert-banner-size));

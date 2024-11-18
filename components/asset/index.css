@@ -11,9 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Asset {
+	--spectrum-asset-transition-duration: var(--spectrum-animation-duration-100);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;

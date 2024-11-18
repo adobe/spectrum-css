@@ -11,30 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
-.spectrum-Thumbnail {
-	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
-
-	--spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
-	--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
-
-	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-	--spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity));
-	--spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
-	--spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
-	--spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
-	--spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
-
-	--spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
-	--spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
-
-	--spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
-
-	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
-}
 
 .spectrum-Thumbnail--size50 {
 	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-50);
@@ -60,6 +38,7 @@
 	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-400);
 }
 
+.spectrum-Thumbnail,
 .spectrum-Thumbnail--size500 {
 	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
 }
@@ -85,6 +64,24 @@
 }
 
 .spectrum-Thumbnail {
+	--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
+
+	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
+	--spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity));
+	--spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
+	--spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
+	--spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
+	--spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
+
+	--spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
+	--spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
+
+	--spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
+
+	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
+
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -94,6 +91,9 @@
 	block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
 
 	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+
+	overflow: hidden;
+	z-index: 0;
 
 	&::before {
 		content: "";
@@ -130,9 +130,6 @@
 			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 		}
 	}
-
-	overflow: hidden;
-	z-index: 0;
 }
 
 .spectrum-Thumbnail-layer {
@@ -179,8 +176,8 @@
 
 .spectrum-Thumbnail-image {
 	position: relative;
-	max-block-size: 100%;
 	max-inline-size: 100%;
+	max-block-size: 100%;
 	z-index: 1;
 }
 
