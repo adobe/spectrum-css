@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-yarn add -D postcss-rgb-mapping
+yarn add -D @spectrum-tools/postcss-rgb-mapping
 postcss -u postcss-rgb-mapping -o dist/index.css src/index.css
 ```
 

@@ -1,14 +1,12 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { BadgeGroup } from "./badge.test.js";
-import { PreviewSets } from "./template.js";
+import { Template } from "./template.js";
 
-const semanticOptions = ["neutral", "accent", "informative", "positive", "negative"];
-const nonSemanticOptions = ["gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"];
-const fixedOptions = ["none", "fixed-inline-start", "fixed-inline-end", "fixed-block-start", "fixed-block-end"];
 /**
  * A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention. Some notes about badge:
  * - Badge t-shirt sizes correspond to icon sizes
@@ -52,7 +50,7 @@ export default {
 				type: { summary: "string" },
 				category: "Advanced",
 			},
-			options: fixedOptions,
+			options: ["none", "fixed-inline-start", "fixed-inline-end", "fixed-block-start", "fixed-block-end"],
 			control: "select",
 		},
 	},
@@ -64,6 +62,10 @@ export default {
 		fixed: "none"
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=36806-6551",
+		},
 		packageJson,
 		metadata,
 	},
@@ -77,19 +79,40 @@ Default.args = {
 };
 
 // ********* DOCS ONLY ********* //
-export const SemanticVariants = (args, context) => PreviewSets(semanticOptions, args, context);
+export const SemanticVariants = (args, context) => ArgGrid({
+	Template,
+	argKey: "variant",
+	options: ["neutral", "accent", "informative", "positive", "negative"],
+	withBorder: false,
+	...args,
+}, context);
+SemanticVariants.args = Default.args;
 SemanticVariants.tags = ["!dev"];
 SemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const NonSemanticVariants = (args, context) => PreviewSets(nonSemanticOptions, args, context);
+export const NonSemanticVariants = (args, context) => ArgGrid({
+	Template,
+	argKey: "variant",
+	options: ["gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
+	withBorder: false,
+	...args,
+}, context);
+NonSemanticVariants.args = Default.args;
 NonSemanticVariants.tags = ["!dev"];
 NonSemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const FixedVariants = (args, context) => PreviewSets(fixedOptions, args, context);
+export const FixedVariants = (args, context) => ArgGrid({
+	Template,
+	argKey: "fixed",
+	options: ["none", "fixed-inline-start", "fixed-inline-end", "fixed-block-start", "fixed-block-end"],
+	withBorder: false,
+	...args,
+}, context);
+FixedVariants.args = Default.args;
 FixedVariants.tags = ["!dev"];
 FixedVariants.parameters = {
 	chromatic: { disableSnapshot: true },

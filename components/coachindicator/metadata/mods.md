@@ -15,8 +15,7 @@
 | `--mod-coach-indicator-quiet-ring-diameter`                       |
 | `--mod-coach-indicator-ring-block-size`                           |
 | `--mod-coach-indicator-ring-border-size`                          |
-| `--mod-coach-indicator-ring-dark-color`                           |
 | `--mod-coach-indicator-ring-default-color`                        |
+| `--mod-coach-indicator-ring-diameter`                             |
 | `--mod-coach-indicator-ring-inline-size`                          |
-| `--mod-coach-indicator-ring-light-color`                          |
 | `--mod-coach-indicator-top`                                       |
