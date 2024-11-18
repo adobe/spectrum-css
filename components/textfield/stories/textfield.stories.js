@@ -136,6 +136,10 @@ export default {
 				"focusout .spectrum-Textfield"
 			],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=717-2629",
+		},
 		packageJson,
 		metadata,
 	},

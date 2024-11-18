@@ -6,9 +6,6 @@
     ".spectrum-ProgressCircle--indeterminate .spectrum-ProgressCircle-fillSubMask2",
     ".spectrum-ProgressCircle--indeterminate .spectrum-ProgressCircle-fills",
     ".spectrum-ProgressCircle--indeterminate-fill-submask-2",
-    ".spectrum-ProgressCircle--large",
-    ".spectrum-ProgressCircle--medium",
-    ".spectrum-ProgressCircle--small",
     ".spectrum-ProgressCircle-fill",
     ".spectrum-ProgressCircle-fillMask1",
     ".spectrum-ProgressCircle-fillMask2",
@@ -16,6 +13,9 @@
     ".spectrum-ProgressCircle-fillSubMask2",
     ".spectrum-ProgressCircle-fills",
     ".spectrum-ProgressCircle-track",
+    ".spectrum-ProgressCircle.spectrum-ProgressCircle--large",
+    ".spectrum-ProgressCircle.spectrum-ProgressCircle--medium",
+    ".spectrum-ProgressCircle.spectrum-ProgressCircle--small",
     ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite .spectrum-ProgressCircle-fill",
     ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite .spectrum-ProgressCircle-track",
     "0%",
@@ -106,11 +106,18 @@
   ],
   "global": [
     "--spectrum-accent-content-color-default",
+    "--spectrum-gray-200",
     "--spectrum-gray-300",
+    "--spectrum-transparent-white-1000",
     "--spectrum-transparent-white-300",
+    "--spectrum-transparent-white-400",
     "--spectrum-transparent-white-900"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-progress-circle-fill-border-color-over-background",
+    "--system-progress-circle-track-border-color",
+    "--system-progress-circle-track-border-color-over-background"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-progress-circle-fill-border-color",

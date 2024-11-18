@@ -384,7 +384,6 @@
     "--spectrum-informative-background-color-default",
     "--spectrum-line-height-100",
     "--spectrum-negative-background-color-default",
-    "--spectrum-neutral-background-color-default",
     "--spectrum-neutral-subdued-background-color-default",
     "--spectrum-positive-background-color-default",
     "--spectrum-regular-font-weight",
@@ -392,7 +391,7 @@
     "--spectrum-white",
     "--spectrum-workflow-icon-size-50"
   ],
-  "system-theme": ["--system-spectrum-tooltip-backgound-color-default-neutral"],
+  "system-theme": ["--system-tooltip-backgound-color-default-neutral"],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-tooltip-background-color-default",

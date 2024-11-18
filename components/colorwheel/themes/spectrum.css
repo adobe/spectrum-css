@@ -10,3 +10,13 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-ColorWheel {
+		--spectrum-colorwheel-border-color: var(--spectrum-transparent-black-200);
+	}
+}
