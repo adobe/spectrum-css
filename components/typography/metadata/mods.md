@@ -15,6 +15,8 @@
 | `--mod-body-font-size`                                         |
 | `--mod-body-line-height`                                       |
 | `--mod-body-margin`                                            |
+| `--mod-body-margin-end`                                        |
+| `--mod-body-margin-start`                                      |
 | `--mod-body-sans-serif-emphasized-font-style`                  |
 | `--mod-body-sans-serif-emphasized-font-weight`                 |
 | `--mod-body-sans-serif-font-family`                            |
@@ -52,6 +54,8 @@
 | `--mod-code-font-style`                                        |
 | `--mod-code-font-weight`                                       |
 | `--mod-code-line-height`                                       |
+| `--mod-code-margin-end`                                        |
+| `--mod-code-margin-start`                                      |
 | `--mod-code-strong-emphasized-font-style`                      |
 | `--mod-code-strong-emphasized-font-weight`                     |
 | `--mod-code-strong-font-style`                                 |

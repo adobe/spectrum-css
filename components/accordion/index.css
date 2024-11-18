@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Accordion {
 	--spectrum-accordion-item-height: var(--spectrum-component-height-200);
@@ -64,8 +64,6 @@
 	/* Focus indicator */
 	--spectrum-accordion-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-	/* Divider */
-	--spectrum-accordion-divider-color: var(--spectrum-gray-300);
 	--spectrum-accordion-min-block-size: max(
 		var(--mod-accordion-item-height, var(--spectrum-accordion-item-height)),
 		calc(var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) + var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) + (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height))))
