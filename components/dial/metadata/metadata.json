@@ -4,7 +4,6 @@
     ".js-focus-within .spectrum-Dial-handle[focus-within]",
     ".js-focus-within .spectrum-Dial-handle[focus-within]:after",
     ".spectrum-Dial",
-    ".spectrum-Dial--small",
     ".spectrum-Dial-controls",
     ".spectrum-Dial-controls:after",
     ".spectrum-Dial-controls:before",
@@ -35,6 +34,7 @@
     ".spectrum-Dial.is-disabled .spectrum-Dial-handle:after",
     ".spectrum-Dial.is-disabled .spectrum-Dial-handle:before",
     ".spectrum-Dial.is-disabled .spectrum-Dial-labelContainer",
+    ".spectrum-Dial.spectrum-Dial--small",
     ".u-isGrabbing",
     ".u-isGrabbing .spectrum-Dial .spectrum-Dial-label",
     ".u-isGrabbing .spectrum-Dial .spectrum-Dial-value"
@@ -108,15 +108,18 @@
   "global": [
     "--spectrum-border-width-200",
     "--spectrum-font-size-75",
-    "--spectrum-gray-100",
+    "--spectrum-gray-25",
     "--spectrum-gray-400",
-    "--spectrum-gray-50",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
+    "--spectrum-gray-75",
     "--spectrum-gray-800",
     "--spectrum-line-height-200"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-dial-background-color-default",
+    "--system-dial-handle-marker-color-key-focus"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-dial-background-color-default",

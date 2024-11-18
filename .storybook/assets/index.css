@@ -129,4 +129,10 @@ select:focus,
 	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
 }
 
+nav.sidebar-container,
+div.sb-bar {
+	color: var(--spectrum-neutral-content-color-default) !important;
+	background-color: var(--spectrum-background-layer-2-color) !important;
+}
+
 /* stylelint-enable selector-class-pattern */

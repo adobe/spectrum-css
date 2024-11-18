@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/pagination",
-	"version": "8.2.0",
+	"version": "9.0.0-s2-foundations.15",
 	"description": "The Spectrum CSS Pagination component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -34,7 +34,6 @@
 		"@spectrum-css/actionbutton": ">=6",
 		"@spectrum-css/button": ">=13",
 		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/splitbutton": ">=8",
 		"@spectrum-css/textfield": ">=7",
 		"@spectrum-css/tokens": ">=14"
 	},
@@ -42,7 +41,6 @@
 		"@spectrum-css/actionbutton": "workspace:^",
 		"@spectrum-css/button": "workspace:^",
 		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/splitbutton": "^8.1.2",
 		"@spectrum-css/textfield": "workspace:^",
 		"@spectrum-css/tokens": "workspace:^"
 	},

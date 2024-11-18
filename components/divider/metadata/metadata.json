@@ -5,9 +5,11 @@
     ".spectrum-Divider--sizeL",
     ".spectrum-Divider--sizeM",
     ".spectrum-Divider--sizeS",
+    ".spectrum-Divider--staticBlack",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeL",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeM",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeS",
+    ".spectrum-Divider--staticWhite",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeL",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeM",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeS",
@@ -43,14 +45,24 @@
     "--spectrum-divider-thickness-small"
   ],
   "global": [
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
     "--spectrum-gray-800",
-    "--spectrum-transparent-black-300",
-    "--spectrum-transparent-black-800",
-    "--spectrum-transparent-white-300",
-    "--spectrum-transparent-white-800"
+    "--spectrum-transparent-black-400",
+    "--spectrum-transparent-black-900",
+    "--spectrum-transparent-white-400",
+    "--spectrum-transparent-white-900"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-divider-background-color-large",
+    "--system-divider-background-color-large-static-black",
+    "--system-divider-background-color-large-static-white",
+    "--system-divider-background-color-medium",
+    "--system-divider-background-color-medium-static-black",
+    "--system-divider-background-color-medium-static-white",
+    "--system-divider-background-color-small",
+    "--system-divider-background-color-small-static-black",
+    "--system-divider-background-color-small-static-white"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

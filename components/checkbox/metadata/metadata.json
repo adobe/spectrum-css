@@ -179,7 +179,6 @@
     "--spectrum-component-top-to-text-200",
     "--spectrum-component-top-to-text-300",
     "--spectrum-component-top-to-text-75",
-    "--spectrum-corner-radius-75",
     "--spectrum-disabled-content-color",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
@@ -188,11 +187,10 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
+    "--spectrum-gray-50",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
-    "--spectrum-gray-75",
     "--spectrum-gray-800",
-    "--spectrum-gray-900",
     "--spectrum-line-height-100",
     "--spectrum-negative-color-1000",
     "--spectrum-negative-color-1100",
@@ -211,10 +209,12 @@
     "--spectrum-text-to-control-75"
   ],
   "system-theme": [
-    "--system-spectrum-checkbox-control-color-default",
-    "--system-spectrum-checkbox-control-color-down",
-    "--system-spectrum-checkbox-control-color-focus",
-    "--system-spectrum-checkbox-control-color-hover"
+    "--system-checkbox-checkmark-color",
+    "--system-checkbox-control-color-default",
+    "--system-checkbox-control-color-down",
+    "--system-checkbox-control-color-focus",
+    "--system-checkbox-control-color-hover",
+    "--system-checkbox-control-corner-radius"
   ],
   "passthroughs": [],
   "high-contrast": [

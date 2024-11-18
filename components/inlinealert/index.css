@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
- @import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-InLineAlert {
 	/* Font */
@@ -48,9 +48,7 @@
 	--spectrum-inlinealert-border-and-icon-color-positive: var(--spectrum-positive-visual-color);
 	--spectrum-inlinealert-border-and-icon-color-notice: var(--spectrum-notice-visual-color);
 	--spectrum-inlinealert-border-and-icon-color-negative: var(--spectrum-negative-visual-color);
-}
 
-.spectrum-InLineAlert {
 	position: relative;
 
 	display: inline-block;
@@ -120,6 +118,7 @@
 	line-height: var(--mod-inlinealert-content-line-height, var(--spectrum-inlinealert-content-line-height));
 
 	color: var(--highcontrast-inlinealert-content-color, var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color)));
+
 }
 
 .spectrum-InLineAlert-footer {
