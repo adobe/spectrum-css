@@ -11,27 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
- @import "./themes/express.css";
-
-.spectrum-Link {
-	--spectrum-link-animation-duration: var(--spectrum-animation-duration-100);
-
-	/* Colors */
-	/* Primary */
-	--spectrum-link-text-color-primary-default: var(--spectrum-accent-content-color-default);
-	--spectrum-link-text-color-primary-hover: var(--spectrum-accent-content-color-hover);
-	--spectrum-link-text-color-primary-active: var(--spectrum-accent-content-color-down);
-	--spectrum-link-text-color-primary-focus: var(--spectrum-accent-content-color-key-focus);
-
-	/* Secondary */
-	--spectrum-link-text-color-secondary-default: var(--spectrum-neutral-content-color-default);
-	--spectrum-link-text-color-secondary-hover: var(--spectrum-neutral-content-color-hover);
-	--spectrum-link-text-color-secondary-active: var(--spectrum-neutral-content-color-down);
-	--spectrum-link-text-color-secondary-focus: var(--spectrum-neutral-content-color-key-focus);
-
-	--spectrum-link-text-color-white: var(--spectrum-white);
-	--spectrum-link-text-color-black: var(--spectrum-black);
-}
+@import "./themes/spectrum-two.css";
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
@@ -58,22 +38,22 @@
 	/* Remove gaps in links underline in iOS 8+ and Safari 8+. */
 	text-decoration-skip: objects;
 	text-decoration: underline;
-	transition: color var(--mod-link-animation-duration, var(--spectrum-link-animation-duration)) ease-in-out;
+	transition: color var(--mod-link-animation-duration, var(--spectrum-animation-duration-100)) ease-in-out;
 	outline: none;
 	cursor: pointer;
 
-	color: var(--highcontrast-link-text-color-primary-default, var(--mod-link-text-color-primary-default, var(--spectrum-link-text-color-primary-default)));
+	color: var(--highcontrast-link-text-color-primary-default, var(--mod-link-text-color-primary-default, var(--spectrum-accent-content-color-default)));
 
 	&:hover {
-		color: var(--highcontrast-link-text-color-primary-hover, var(--mod-link-text-color-primary-hover, var(--spectrum-link-text-color-primary-hover)));
+		color: var(--highcontrast-link-text-color-primary-hover, var(--mod-link-text-color-primary-hover, var(--spectrum-accent-content-color-hover)));
 	}
 
 	&:active {
-		color: var(--highcontrast-link-text-color-primary-active, var(--mod-link-text-color-primary-active, var(--spectrum-link-text-color-primary-active)));
+		color: var(--highcontrast-link-text-color-primary-active, var(--mod-link-text-color-primary-active, var(--spectrum-accent-content-color-down)));
 	}
 
 	&:focus-visible {
-		color: var(--highcontrast-link-text-color-primary-focus, var(--mod-link-text-color-primary-focus, var(--spectrum-link-text-color-primary-focus)));
+		color: var(--highcontrast-link-text-color-primary-focus, var(--mod-link-text-color-primary-focus, var(--spectrum-accent-content-color-key-focus)));
 		text-decoration: underline;
 		text-decoration-style: double;
 		text-decoration-color: var(--highcontrast-link-focus-color, inherit);
@@ -81,18 +61,18 @@
 }
 
 .spectrum-Link--secondary {
-	color: var(--highcontrast-link-text-color-secondary-default, var(--mod-link-text-color-secondary-default, var(--spectrum-link-text-color-secondary-default)));
+	color: var(--highcontrast-link-text-color-secondary-default, var(--mod-link-text-color-secondary-default, var(--spectrum-neutral-content-color-default)));
 
 	&:hover {
-		color: var(--highcontrast-link-text-color-secondary-hover, var(--mod-link-text-color-secondary-hover, var(--spectrum-link-text-color-secondary-hover)));
+		color: var(--highcontrast-link-text-color-secondary-hover, var(--mod-link-text-color-secondary-hover, var(--spectrum-neutral-content-color-hover)));
 	}
 
 	&:active {
-		color: var(--highcontrast-link-text-color-secondary-active, var(--mod-link-text-color-secondary-active, var(--spectrum-link-text-color-secondary-active)));
+		color: var(--highcontrast-link-text-color-secondary-active, var(--mod-link-text-color-secondary-active, var(--spectrum-neutral-content-color-down)));
 	}
 
 	&:focus {
-		color: var(--highcontrast-link-text-color-secondary-focus, var(--mod-link-text-color-secondary-focus, var(--spectrum-link-text-color-secondary-focus)));
+		color: var(--highcontrast-link-text-color-secondary-focus, var(--mod-link-text-color-secondary-focus, var(--spectrum-neutral-content-color-key-focus)));
 	}
 }
 
@@ -105,21 +85,21 @@
 }
 
 .spectrum-Link--staticWhite {
-	color: var(--highcontrast-link-text-color-white, var(--mod-link-text-color-white, var(--spectrum-link-text-color-white)));
+	color: var(--highcontrast-link-text-color-white, var(--mod-link-text-color-white, var(--spectrum-white)));
 
 	&:hover,
 	&:active,
 	&:focus {
-		color: var(--highcontrast-link-text-color-white, var(--mod-link-text-color-white, var(--spectrum-link-text-color-white)));
+		color: var(--highcontrast-link-text-color-white, var(--mod-link-text-color-white, var(--spectrum-white)));
 	}
 }
 
 .spectrum-Link--staticBlack {
-	color: var(--highcontrast-link-text-color-black, var(--mod-link-text-color-black, var(--spectrum-link-text-color-black)));
+	color: var(--highcontrast-link-text-color-black, var(--mod-link-text-color-black, var(--spectrum-black)));
 
 	&:hover,
 	&:active,
 	&:focus {
-		color: var(--highcontrast-link-text-color-black, var(--mod-link-text-color-black, var(--spectrum-link-text-color-black)));
+		color: var(--highcontrast-link-text-color-black, var(--mod-link-text-color-black, var(--spectrum-black)));
 	}
 }

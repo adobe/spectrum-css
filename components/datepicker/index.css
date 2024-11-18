@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-DatePicker {
 	--spectrum-datepicker-border-radius: var(--spectrum-corner-radius-100);
@@ -68,9 +68,7 @@
 	--spectrum-datepicker-padding-inline-end-quiet: calc((var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100)) - var(--spectrum-datepicker-quiet-button-offset));
 	--spectrum-datepicker-padding-inline-end-invalid: calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) + var(--spectrum-datepicker-icon-to-button) + var(--spectrum-datepicker-icon-size) - (var(--spectrum-datepicker-border-width) * 2));
 	--spectrum-datepicker-padding-inline-end-invalid-quiet: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-icon-to-text));
-}
 
-.spectrum-DatePicker {
 	position: relative;
 	display: inline-flex;
 	flex-direction: row;
@@ -88,15 +86,15 @@
 		--mod-textfield-icon-spacing-inline-end-invalid: calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-datepicker-invalid-icon-to-button));
 		--mod-textfield-icon-spacing-inline-end-quiet-invalid: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-invalid-icon-to-button-quiet));
 	}
-}
 
-.spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled) {
-	/* @passthrough -- ensures picker button border color matches the textfield border color */
-	--mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color, var(--spectrum-datepicker-pickerbutton-border-color)));
+	&:not(.spectrum-DatePicker--quiet, .is-disabled) {
+		/* @passthrough -- ensures picker button border color matches the textfield border color */
+		--mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color, var(--spectrum-datepicker-pickerbutton-border-color)));
 
-	&.is-invalid {
-		/* @passthrough */
-		--mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-datepicker-pickerbutton-border-color-invalid)));
+		&.is-invalid {
+			/* @passthrough */
+			--mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-datepicker-pickerbutton-border-color-invalid)));
+		}
 	}
 }
 

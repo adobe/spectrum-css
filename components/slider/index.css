@@ -11,14 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Slider {
 	/* default sizing, matches t-shirt size M */
 	--spectrum-slider-font-size: var(--spectrum-font-size-75);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-medium);
 	--spectrum-slider-control-height: var(--spectrum-component-height-100);
-	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
 	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
 	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
@@ -27,57 +26,10 @@
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
 
-	&:dir(rtl),
-	&:dir(rtl) {
-		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-	}
-}
-
-.spectrum-Slider--sizeS {
-	--spectrum-slider-font-size: var(--spectrum-font-size-75);
-	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-small);
-	--spectrum-slider-control-height: var(--spectrum-component-height-75);
-	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
-	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
-	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
-	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
-	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-100);
-}
-
-.spectrum-Slider--sizeL {
-	--spectrum-slider-font-size: var(--spectrum-font-size-100);
-	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-large);
-	--spectrum-slider-control-height: var(--spectrum-component-height-200);
-	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
-	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
-	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
-	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
-	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
-
-	/* TODO: placeholder value for sideLabel variant value width */
-	--spectrum-slider-value-inline-size: 18px;
-}
-
-.spectrum-Slider--sizeXL {
-	--spectrum-slider-font-size: var(--spectrum-font-size-200);
-	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-extra-large);
-	--spectrum-slider-control-height: var(--spectrum-component-height-300);
-	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
-	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
-	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
-	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
-	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
-
-	/* TODO: placeholder value for sideLabel variant value width */
-	--spectrum-slider-value-inline-size: 22px;
-}
-
-.spectrum-Slider {
 	--spectrum-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
 	--spectrum-slider-min-size: var(--spectrum-spacing-900);
 
-	--spectrum-slider-track-corner-radius: var(--spectrum-corner-radius-75);
 	--spectrum-slider-label-margin-start: var(--spectrum-spacing-300);
 	--spectrum-slider-handle-border-width: var(--spectrum-border-width-200);
 	--spectrum-slider-handle-margin-left: calc(var(--spectrum-slider-handle-size) / -2);
@@ -115,9 +67,50 @@
 
 	user-select: none;
 
+	&:dir(rtl),
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
 	&:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp) {
 		margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
 	}
+}
+
+.spectrum-Slider--sizeS {
+	--spectrum-slider-font-size: var(--spectrum-font-size-75);
+	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-small);
+	--spectrum-slider-control-height: var(--spectrum-component-height-75);
+	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
+	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
+	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
+	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-100);
+}
+
+.spectrum-Slider--sizeL {
+	--spectrum-slider-font-size: var(--spectrum-font-size-100);
+	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-large);
+	--spectrum-slider-control-height: var(--spectrum-component-height-200);
+	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
+	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
+	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
+	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
+
+	/* TODO: placeholder value for sideLabel variant value width */
+	--spectrum-slider-value-inline-size: 18px;
+}
+
+.spectrum-Slider--sizeXL {
+	--spectrum-slider-font-size: var(--spectrum-font-size-200);
+	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-extra-large);
+	--spectrum-slider-control-height: var(--spectrum-component-height-300);
+	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
+	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
+	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
+	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
+
+	/* TODO: placeholder value for sideLabel variant value width */
+	--spectrum-slider-value-inline-size: 22px;
 }
 
 .spectrum-Slider--sideLabel {
@@ -302,7 +295,7 @@
 		block-size: 100%;
 
 		/* Flip the ramp automatically for RTL */
-		transform: var(--spectrum-logical-rotation);
+		transform: var(--spectrum-logical-rotation,);
 	}
 }
 

@@ -5,6 +5,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	id = getRandomId("progress-circle"),
@@ -15,7 +18,7 @@ export const Template = ({
 	size = "m",
 	staticColor,
 	isIndeterminate = false,
-}) => {
+} = {}) => {
 	let sizeClassName = "medium";
 	switch (size) {
 		case "s":

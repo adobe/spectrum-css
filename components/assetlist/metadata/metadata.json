@@ -82,8 +82,8 @@
   "global": [
     "--spectrum-animation-duration-100",
     "--spectrum-font-size-100",
+    "--spectrum-gray-100",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-logical-rotation",
     "--spectrum-neutral-content-color-default",
     "--spectrum-regular-font-weight",
@@ -93,7 +93,10 @@
     "--spectrum-spacing-600",
     "--spectrum-spacing-75"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-asset-list-item-background-color-down",
+    "--system-asset-list-item-background-color-hover"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-assetlist-border-color-key-focus",

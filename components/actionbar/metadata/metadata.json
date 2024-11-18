@@ -77,8 +77,8 @@
     "--spectrum-drop-shadow-x",
     "--spectrum-drop-shadow-y",
     "--spectrum-font-size-100",
+    "--spectrum-gray-25",
     "--spectrum-gray-400",
-    "--spectrum-gray-50",
     "--spectrum-informative-background-color-default",
     "--spectrum-line-height-100",
     "--spectrum-neutral-content-color-default",
@@ -88,7 +88,10 @@
     "--spectrum-spacing-75",
     "--spectrum-white"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-action-bar-popover-background-color",
+    "--system-action-bar-popover-border-color"
+  ],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-actionbar-popover-border-color"]
 }

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-ActionGroup {
 	--spectrum-actiongroup-button-spacing-reset: 0;
@@ -46,7 +46,7 @@
 		}
 	}
 
-	&:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
+	&:not(.spectrum-ActionGroup--vertical,.spectrum-ActionGroup--compact) {
 		.spectrum-ActionGroup-item {
 			flex-shrink: 0;
 		}
@@ -117,7 +117,7 @@
 	}
 }
 
-.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet).spectrum-ActionGroup--vertical {
+.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) {
 	gap: var(--mod-actiongroup-gap-size-compact, var(--spectrum-actiongroup-gap-size-compact));
 
 	.spectrum-ActionGroup-item {

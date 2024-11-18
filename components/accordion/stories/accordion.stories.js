@@ -57,6 +57,10 @@ export default {
 			handles: ["click .spectrum-Accordion-item"],
 		},
 		chromatic: { disableSnapshot: true },
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=39469-5419",
+		},
 		packageJson,
 		metadata,
 	},
