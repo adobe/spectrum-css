@@ -155,6 +155,7 @@ export const Template = ({
 		size,
 		customStyles: {
 			...customPopoverStyles,
+			transform: "unset",
 			width: `${popoverWidth}px`,
 		}
 	}) : "";
