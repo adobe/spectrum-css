@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Card {
 	/* Default Layout */
@@ -26,11 +26,7 @@
 
 	--spectrum-card-border-width: var(--spectrum-border-width-100);
 	--spectrum-card-corner-radius: var(--spectrum-corner-radius-100);
-	--spectrum-card-border-color: var(--spectrum-gray-200);
-	--spectrum-card-border-color-hover: var(--spectrum-gray-300);
 	--spectrum-card-border-color-selected: var(--spectrum-blue-700);
-
-	--spectrum-card-divider-color: var(--spectrum-gray-300);
 
 	/* Typography */
 	--spectrum-card-title-font-family: var(--spectrum-sans-font-family-stack);
@@ -68,22 +64,17 @@
 	--spectrum-card-selected-background-opacity: 0.1; /* table-selected-row-background-opacity does not exist in tokens yet */
 
 	--spectrum-card-preview-border-width-selected: var(--spectrum-border-width-100);
-	--spectrum-card-preview-background-color: var(--spectrum-background-base-color);
-	--spectrum-card-preview-background-color-hover: var(--spectrum-gray-300);
 
 	/* Horizontal */
 	--spectrum-card-horizontal-body-padding: var(--spectrum-spacing-300);
 	--spectrum-card-horizontal-preview-padding: var(--spectrum-spacing-200);
-}
 
-/* Quiet/Gallery */
-.spectrum-Card--quiet,
-.spectrum-Card--gallery {
-	--mod-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
-	--mod-card-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
-}
+	&.spectrum-Card--quiet,
+	&.spectrum-Card--gallery {
+		--mod-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
+		--mod-card-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
+	}
 
-.spectrum-Card {
 	position: relative;
 	display: inline-flex;
 	flex-direction: column;
@@ -96,9 +87,7 @@
 	border-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
 	border-color: var(--highcontrast-card-border-color, var(--mod-card-border-color, var(--spectrum-card-border-color)));
 
-	/* @deprecation --mod-spectrum-card-background-color has been renamed to
-		--mod-card-background-color. The fallback will be removed in a future version. */
-	background-color: var(--highcontrast-card-background-color, var(--mod-card-background-color, var(--mod-spectrum-card-background-color, var(--spectrum-card-background-color))));
+	background-color: var(--highcontrast-card-background-color, var(--mod-card-background-color, var(--spectrum-card-background-color)));
 
 	&::before {
 		content: "";
@@ -158,11 +147,9 @@
 	}
 
 	&.is-drop-target {
-		--mod-card-background-color: var(--spectrum-card-background-color-quiet, var(--spectrum-background-base-color));
-
 		border-color: var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));
 		box-shadow: 0 0 0 1px var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));
-		background-color: var(--mod-card-background-color, var(--spectrum-card-background-color));
+		background-color: var(--mod-card-background-color, var(--spectrum-card-background-color-quiet));
 	}
 
 	&.is-focused,
@@ -171,7 +158,6 @@
 	&:hover {
 		.spectrum-Card-quickActions,
 		.spectrum-Card-actions {
-			/* Ideally, this would simply apply is-open to the QuickActions component */
 			visibility: visible;
 			opacity: 1;
 			pointer-events: all;
@@ -191,6 +177,18 @@
 
 	inset-inline-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 	inset-block-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
+
+	/* From QuickAction component that is officially deprecated */
+	pointer-events: auto;
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	box-sizing:border-box;
+
+	transition:
+		transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
+		opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
+		visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
 }
 
 .spectrum-Card-actions {
@@ -338,6 +336,9 @@
 
 .spectrum-Card--quiet,
 .spectrum-Card--gallery {
+	--spectrum-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-card-content-margin-top-quiet));
+	--spectrum-card-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width-quiet));
+
 	block-size: 100%;
 	min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
 	border-width: 0;
@@ -425,9 +426,6 @@
 
 	.spectrum-Card-body {
 		margin-block-start: var(--mod-card-content-margin-top, var(--spectrum-card-content-margin-top));
-	}
-
-	.spectrum-Card-body {
 		padding: 0;
 	}
 

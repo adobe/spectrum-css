@@ -11,13 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 /* outer container, unstyled */
 .spectrum-AssetCard {
 	/* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
 	--spectrum-assetcard-asset-size: 224px;
-	--spectrum-assetcard-background-color: var(--spectrum-gray-200);
 	--spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-assetcard-asset-container-border-size: 1px;
 	--spectrum-assetcard-header-margin-block-start: var(--spectrum-spacing-300);
@@ -31,7 +30,6 @@
 	--spectrum-assetcard-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 
 	/* selection indicator - checkbox or number */
-	--spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-100-rgb), 0.9);
 	--spectrum-assetcard-selectionindicator-size: var(--spectrum-card-selection-background-size);
 	--spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-corner-radius-100);
 	--spectrum-assetcard-selectionindicator-offset-y: 4px;
@@ -66,6 +64,16 @@
 
 	--spectrum-assetcard-content-margin-block-start: var(--spectrum-spacing-75);
 
+	/* contain selection indicator */
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
+
+	cursor: pointer;
+
 	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
@@ -88,18 +96,6 @@
 		--spectrum-assetcard-content-font-style: var(--spectrum-body-cjk-font-style);
 		--spectrum-assetcard-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
 	}
-}
-
-.spectrum-AssetCard {
-	/* contain selection indicator */
-	position: relative;
-
-	display: flex;
-	flex-direction: column;
-
-	inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
-
-	cursor: pointer;
 
 	&.is-selected,
 	&:hover,
@@ -272,7 +268,7 @@
 
 	border-radius: var(--mod-assetcard-selectionindicator-border-radius, var(--spectrum-assetcard-selectionindicator-border-radius));
 
-	box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) rgb(0, 0, 0, 15%);
+	box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) rgb(0 0 0 / 15%);
 
 	color: var(--highcontrast-assetcard-selectionindicator-color, var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color)));
 	font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));

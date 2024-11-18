@@ -11,59 +11,89 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
+
+@media (forced-colors: active) {
+	.spectrum-Calendar-date {
+		--highcontrast-calendar-day-background-color-cap-selected: Highlight;
+		--highcontrast-calendar-day-background-color-down: ButtonFace;
+		--highcontrast-calendar-day-background-color-hover: Transparent;
+		--highcontrast-calendar-day-background-color-key-focus: ButtonFace;
+		--highcontrast-calendar-day-background-color-selected-hover: Transparent;
+		--highcontrast-calendar-day-background-color-selected: Highlight;
+		--highcontrast-calendar-day-border-color-key-focus: ButtonText;
+		--highcontrast-calendar-day-text-color-hover: ButtonText;
+		--highcontrast-calendar-day-text-color-key-focus: ButtonText;
+		--highcontrast-calendar-day-text-color-cap-selected: HighlightText;
+		--highcontrast-calendar-day-text-color-disabled: GrayText;
+		--highcontrast-calendar-day-text-color-selected: HighlightText;
+		--highcontrast-calendar-day-title-text-color: CanvasText;
+		--highcontrast-calendar-day-today-background-color-selected-hover: Highlight;
+		--highcontrast-calendar-day-today-border-color-disabled: GrayText;
+		--highcontrast-calendar-day-today-border-color: ButtonText;
+		--highcontrast-calendar-day-today-text-color-disabled: GrayText;
+		--highcontrast-calendar-day-today-text-color: ButtonText;
+
+		forced-color-adjust: none;
+
+		&.is-range-selection {
+			&.is-today {
+				--highcontrast-calendar-day-title-text-color: HighlightText;
+			}
+
+			&.is-selection-start::after,
+			&.is-selection-end::after {
+				content: none;
+			}
+		}
+
+		&.is-disabled {
+			&.is-range-selection,
+			&.is-selected {
+				--highcontrast-calendar-day-title-text-color: HighlightText;
+			}
+		}
+	}
+}
+
+.spectrum-Calendar--padded {
+	--spectrum-calendar-margin-inline: 24px;
+	--spectrum-calendar-margin-block: 32px;
+}
 
 .spectrum-Calendar {
-	--spectrum-calendar-day-width: var(--spectrum-component-height-100);
-	--spectrum-calendar-day-height: var(--spectrum-component-height-100);
-	--spectrum-calendar-border-radius-reset: 0;
-	--spectrum-calendar-border-width-reset: 0;
-	--spectrum-calendar-day-border-size: var(--spectrum-border-width-200);
-	--spectrum-calendar-margin-y: 24px;
-	--spectrum-calendar-margin-x: 32px;
-	--spectrum-calendar-day-padding: 4px;
-	--spectrum-calendar-width: calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7);
+	--spectrum-calendar-day-size: var(--mod-calendar-day-size, var(--spectrum-component-height-100));
+	--spectrum-calendar-day-border-width: var(--mod-calendar-day-border-size, var(--spectrum-border-width-200));
+	--spectrum-calendar-day-spacing: var(--mod-calendar-day-padding, 4px);
 
-	--spectrum-calendar-title-text-letter-spacing: 0.06em;
-	--spectrum-calendar-title-height: 32px;
-	--spectrum-calendar-title-text-size: var(--spectrum-font-size-300);
+	/* Add letter spacing of 0.66px from Typography > Detail | issue #407 */
+	--spectrum-calendar-title-text-letter-spacing: var(--mod-calendar-title-text-letter-spacing, 0.06em);
+	--spectrum-calendar-title-line-height: var(--mod-calendar-title-height, 32px);
+	--spectrum-calendar-title-text-size: var(--mod-calendar-title-text-size, var(--spectrum-font-size-300));
 
-	--spectrum-calendar-day-title-text-font-weight: var(--spectrum-bold-font-weight);
-	--spectrum-calendar-day-title-text-color: var(--spectrum-gray-700);
-	--spectrum-calendar-day-title-text-size: var(--spectrum-font-size-50);
-	--spectrum-calendar-day-text-size-han: var(--spectrum-font-size-50);
-
-	--spectrum-calendar-day-text-size: var(--spectrum-font-size-100);
-	--spectrum-calendar-day-text-color-selected: var(--spectrum-gray-900);
-	--spectrum-calendar-day-text-color-hover: var(--spectrum-gray-900);
-	--spectrum-calendar-day-text-color-cap-selected: var(--spectrum-gray-900);
-	--spectrum-calendar-day-text-font-weight-selected: var(--spectrum-bold-font-weight);
-	--spectrum-calendar-day-text-font-weight-cap-selected: var(--spectrum-bold-font-weight);
-
-	--spectrum-calendar-day-today-text-color: var(--spectrum-gray-800);
-	--spectrum-calendar-day-today-text-font-weight: var(--spectrum-bold-font-weight);
-	--spectrum-calendar-day-today-border-color: var(--spectrum-gray-800);
-
-	--spectrum-calendar-day-today-text-color-disabled: var(--spectrum-gray-500);
-	--spectrum-calendar-day-today-border-color-disabled: var(--spectrum-gray-400);
-	--spectrum-calendar-day-text-color-disabled: var(--spectrum-disabled-content-color);
-
-	--spectrum-calendar-day-text-color-key-focus: var(--spectrum-gray-900);
-
-	--spectrum-calendar-button-icon-color: var(--spectrum-gray-700);
+	--spectrum-calendar-day-text-size: var(--mod-calendar-day-text-size, var(--spectrum-font-size-100));
+	--spectrum-calendar-day-width: var(--mod-calendar-day-width, var(--spectrum-calendar-day-size));
+	--spectrum-calendar-day-height: var(--mod-calendar-day-height, var(--spectrum-calendar-day-size));
+	--spectrum-calendar-day-title-text-font-weight: var(--mod-calendar-day-title-text-font-weight, var(--spectrum-bold-font-weight));
+	--spectrum-calendar-day-title-text-color: var(--highcontrast-calendar-day-title-text-color, var(--mod-calendar-day-title-text-color, var(--spectrum-gray-700)));
+	--spectrum-calendar-day-title-text-size: var(--mod-calendar-day-title-text-size, var(--spectrum-font-size-50));
 
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
-}
 
-.spectrum-Calendar {
-	inline-size: var(--mod-calendar-width, var(--spectrum-calendar-width));
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		/* Remap the modifiers but don't overwrite the default font-size which doesn't change */
+		--mod-calendar-day-text-size: var(--mod-calendar-day-text-size-han);
+	}
+
+	/* Width of the days + padding on 2 sides x 7 days in a week */
+	inline-size: var(--mod-calendar-width, calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-spacing) * 2) * 7));
 	display: inline-block;
-}
-
-.spectrum-Calendar--padded {
-	margin: var(--mod-calendar-margin-x, var(--spectrum-calendar-margin-x)) var(--mod-calendar-margin-y, var(--spectrum-calendar-margin-y));
+	margin-inline: var(--mod-calendar-margin-inline, var(--mod-calendar-margin-y, var(--spectrum-calendar-margin-inline, 0)));
+	margin-block: var(--mod-calendar-margin-block, var(--mod-calendar-margin-x, var(--spectrum-calendar-margin-block, 0)));
 }
 
 .spectrum-Calendar-header {
@@ -72,12 +102,13 @@
 	inline-size: 100%;
 }
 
+/* @todo is there a typography element we can extend? */
 .spectrum-Calendar-title {
-	color: var(--highcontrast-calendar-day-title-text-color, var(--mod-calendar-day-title-text-color, var(--spectrum-calendar-day-title-text-color)));
-	font-size: var(--mod-calendar-title-text-size, var(--spectrum-calendar-title-text-size));
+	color: var(--spectrum-calendar-day-title-text-color);
+	font-size: var(--spectrum-calendar-title-text-size);
 	font-weight: bold;
 
-	line-height: var(--mod-calendar-title-height, var(--spectrum-calendar-title-height));
+	line-height: var(--spectrum-calendar-title-line-height);
 	margin: 0;
 	order: 1;
 	flex-grow: 1;
@@ -90,11 +121,10 @@
 
 .spectrum-Calendar-prevMonth,
 .spectrum-Calendar-nextMonth {
-	transform: var(--spectrum-logical-rotation);
+	/* @passthrough ActionButton -- override the default content color for the calendar's icon color */
+	--mod-actionbutton-content-color-default: var(--mod-calendar-button-icon-color, var(--spectrum-gray-700));
 
-	&:not([disabled]) {
-		color: var(--highcontrast-calendar-button-icon-color, var(--mod-calendar-button-icon-color, var(--spectrum-calendar-button-icon-color)));
-	}
+	transform: var(--spectrum-logical-rotation,);
 }
 
 .spectrum-Calendar-prevMonth {
@@ -105,19 +135,49 @@
 	order: 2;
 }
 
+/* Assigned to the grid role; tabindex=0; readonly */
+.spectrum-Calendar-body {
+	outline: none;
+}
+
+/* Nested inside .spectrum-Calendar-body; presentation role */
+.spectrum-Calendar-table {
+	table-layout: fixed;
+
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	user-select: none;
+}
+
+/* Assigned to th and td; represent individual days "calendar-day" */
+.spectrum-Calendar-tableCell {
+	text-align: center;
+	position: relative;
+	box-sizing: content-box;
+	block-size: var(--spectrum-calendar-day-height);
+	inline-size: var(--spectrum-calendar-day-width);
+	padding: var(--spectrum-calendar-day-spacing);
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+/* Assigned the <abbr> tag inside the .spectrum-Calendar-body */
 .spectrum-Calendar-dayOfWeek {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	block-size: 100%;
 
-	inline-size: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
+	inline-size: var(--spectrum-calendar-day-width);
 
 	border-block-end: none !important; /* override abbr styling from normalize.css */
 
-	color: var(--highcontrast-calendar-day-title-text-color, var(--mod-calendar-day-title-text-color, var(--spectrum-calendar-day-title-text-color)));
-	font-size: var(--mod-calendar-day-title-text-size, var(--spectrum-calendar-day-title-text-size));
-	font-weight: var(--mod-calendar-day-title-text-font-weight, var(--spectrum-calendar-day-title-text-font-weight));
+	color: var(--spectrum-calendar-day-title-text-color);
+	font-size: var(--spectrum-calendar-day-title-text-size);
+	font-weight: var(--spectrum-calendar-day-title-text-font-weight);
 	text-transform: uppercase;
 	text-decoration: none !important; /* override abbr styling from normalize.css */
 
@@ -131,121 +191,178 @@
 		/* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
 		text-decoration: underline;
 		text-decoration: underline dotted;
-
-		/* Add letter spacing of 0.66px from Typography > Detail  issue #407 */
-		letter-spacing: var(--mod-calendar-title-text-letter-spacing, var(--spectrum-calendar-title-text-letter-spacing));
+		letter-spacing: var(--spectrum-calendar-title-text-letter-spacing);
 	}
 }
 
-.spectrum-Calendar-body {
-	outline: none;
-}
-
-.spectrum-Calendar-table {
-	table-layout: fixed;
-
-	/* width: 100%; */
-
-	border-collapse: collapse;
-	border-spacing: 0;
-
-	user-select: none;
-}
-
-.spectrum-Calendar-tableCell {
-	text-align: center;
-	position: relative;
-	box-sizing: content-box;
-	block-size: var(--mod-calendar-day-height, var(--spectrum-calendar-day-height));
-	inline-size: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-	padding: var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding));
-
-	&:focus {
-		outline: 0;
-	}
-}
-
+/* Should nest inside the td (*-tableCell) */
 .spectrum-Calendar-date {
-	/* This is fun, but we need to trick the table so it doesn't size itself in a weird way */
-	position: absolute;
-	display: block;
-	inset-block-start: 0;
-	inset-inline-start: 0;
+	&:hover {
+		--highcontrast-calendar-day-title-text-color: var(--highcontrast-calendar-day-text-color-hover);
+		--mod-calendar-day-title-text-color: var(--mod-calendar-day-text-color-hover, var(--spectrum-gray-900));
 
-	box-sizing: border-box;
+		&:not(.is-selection-end, .is-selection-start) {
+			--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-hover);
+			--mod-calendar-day-background-color: var(--mod-calendar-day-background-color-hover, var(--spectrum-calendar-day-background-color-hover));
+		}
 
-	block-size: var(--mod-calendar-day-height, var(--spectrum-calendar-day-height));
-	inline-size: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-	margin: var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding));
-
-	border-radius: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-	border: var(--mod-calendar-day-border-size, var(--spectrum-calendar-day-border-size)) solid transparent;
-
-	font-size: var(--mod-calendar-day-text-size, var(--spectrum-calendar-day-text-size));
-	line-height: calc(var(--mod-calendar-day-width, var(--spectrum-calendar-day-width)) - var(--mod-calendar-day-border-size, var(--spectrum-calendar-day-border-size)) * 2);
-	white-space: nowrap;
-
-	cursor: pointer;
-
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		font-size: var(--mod-calendar-day-text-size-han, var(--spectrum-calendar-day-text-size-han));
+		&.is-selected:not(.is-selection-end, .is-selection-start),
+		&.is-range-selection {
+			--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-selected-hover);
+			--mod-calendar-day-background-color: var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover));
+		}
 	}
 
-	&.is-disabled {
-		cursor: default;
-		pointer-events: none;
+	&:active {
+		--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-down);
+		--mod-calendar-day-background-color: var(--mod-calendar-day-background-color-down, var(--spectrum-calendar-day-background-color-down));
 	}
 
-	&.is-outsideMonth {
-		display: none;
-	}
+	&.is-selected {
+		--highcontrast-calendar-day-title-text-color: var(--highcontrast-calendar-day-text-color-selected);
+		--mod-calendar-day-title-text-color: var(--mod-calendar-day-text-color-selected, var(--spectrum-gray-900));
 
-	&::before {
-		content: "";
-		position: absolute;
-		inset-block-start: calc(50% - calc(var(--mod-calendar-day-width, var(--spectrum-calendar-day-width)) / 2));
-		inset-inline-start: calc(50% - calc(var(--mod-calendar-day-width, var(--spectrum-calendar-day-width)) / 2));
-		box-sizing: border-box;
-		inline-size: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-		block-size: var(--mod-calendar-day-height, var(--spectrum-calendar-day-height));
-		border-radius: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-		border: var(--mod-calendar-day-border-size, var(--spectrum-calendar-day-border-size)) solid transparent;
+		--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-selected);
+		--mod-calendar-day-highlight-background-color: var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected));
 	}
 
 	&.is-selected:not(.is-range-selection) {
-		font-weight: var(--mod-calendar-day-text-font-weight-selected, var(--spectrum-calendar-day-text-font-weight-selected));
+		--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-cap-selected);
+		--mod-calendar-day-text-font-weight: var(--mod-calendar-day-text-font-weight-selected, var(--spectrum-bold-font-weight));
+		--mod-calendar-day-highlight-background-color: var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected));
 
-		&::before {
-			/* No highlight for lone selections */
-			display: none;
+		/* No highlight for lone selections */
+		--mod-calendar-day-highlight-display: none;
+	}
+
+	&.is-focused {
+		--mod-calendar-day-border-color: var(--highcontrast-calendar-day-border-color-key-focus, var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus)));
+
+		&.is-selected,
+		&.is-range-selection {
+			--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-selected-hover);
+			--mod-calendar-day-highlight-background-color: var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover));
+		}
+	}
+
+	&.is-focused:not(.is-range-selection) {
+		--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-key-focus);
+		--mod-calendar-day-background-color: var(--mod-calendar-day-background-color-key-focus, var(--spectrum-calendar-day-background-color-key-focus));
+		--highcontrast-calendar-day-title-text-color: var(--highcontrast-calendar-day-text-color-key-focus);
+		--mod-calendar-day-title-text-color: var(--mod-calendar-day-text-color-key-focus, var(--spectrum-gray-900));
+
+		&,
+		&.is-today,
+		&:active,
+		&.is-selected {
+			--mod-calendar-day-border-color: var(--highcontrast-calendar-day-border-color-key-focus, var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus)));
+		}
+
+		&:active,
+		&.is-selected {
+			--highcontrast-calendar-day-title-text-color: var(--highcontrast-calendar-day-text-color-selected);
+			--mod-calendar-day-title-text-color: var(--mod-calendar-day-text-color-selected, var(--spectrum-gray-900));
+			--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-cap-selected);
+			--mod-calendar-day-background-color: var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected));
 		}
 	}
 
 	&.is-today {
-		font-weight: var(--mod-calendar-day-today-text-font-weight, var(--spectrum-calendar-day-today-text-font-weight));
+		--highcontrast-calendar-day-title-text-color: var(--highcontrast-calendar-day-today-text-color);
+		--mod-calendar-day-text-font-weight: var(--mod-calendar-day-today-text-font-weight, var(--spectrum-bold-font-weight));
+		--mod-calendar-day-title-text-color: var(--mod-calendar-day-today-text-color, var(--spectrum-gray-800));
+		--mod-calendar-day-border-color: var(--highcontrast-calendar-day-today-border-color, var(--mod-calendar-day-today-border-color, var(--spectrum-gray-800)));
+
+		&.is-selected:not(.is-range-selection):hover {
+			--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-today-background-color-selected-hover);
+			--mod-calendar-day-background-color: var(--mod-calendar-day-today-background-color-selected-hover, var(--spectrum-calendar-day-today-background-color-selected-hover));
+		}
+
+		&.is-disabled {
+			--highcontrast-calendar-day-title-text-color: var(--highcontrast-calendar-day-today-text-color-disabled);
+			--mod-calendar-day-title-text-color: var(--mod-calendar-day-today-text-color-disabled, var(--spectrum-gray-500));
+			--mod-calendar-day-border-color: var(--highcontrast-calendar-day-today-border-color-disabled, var(--mod-calendar-day-today-border-color-disabled, var(--spectrum-gray-400)));
+		}
+	}
+
+	&.is-selection-start,
+	&.is-selection-end {
+		--highcontrast-calendar-day-background-color: var(--highcontrast-calendar-day-background-color-selected);
+		--mod-calendar-day-background-color: var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected));
+		--highcontrast-calendar-day-title-text-color: var(--highcontrast-calendar-day-text-color-cap-selected);
+		--mod-calendar-day-title-text-color: var(--mod-calendar-day-text-color-cap-selected, var(--spectrum-gray-900));
+	}
+
+	display: block;
+	background: var(--highcontrast-calendar-day-background-color, var(--mod-calendar-day-background-color));
+
+	inset-block-start: 0;
+	inset-inline-start: 0;
+
+	margin-block: var(--mod-calendar-day-spacing-block, var(--spectrum-calendar-day-spacing));
+	margin-inline: var(--mod-calendar-day-spacing-inline, var(--spectrum-calendar-day-spacing));
+
+	font-size: var(--spectrum-calendar-day-text-size);
+	font-weight: var(--mod-calendar-day-text-font-weight, normal);
+	color: var(--spectrum-calendar-day-title-text-color);
+	line-height: var(--mod-calendar-day-text-line-height, calc(var(--spectrum-calendar-day-width) - var(--spectrum-calendar-day-border-width) * 2));
+	white-space: nowrap;
+
+	cursor: pointer;
+
+	/* Absolute positioning tricks the table so it doesn't size in a weird way */
+	&,
+	&::before {
+		position: absolute;
+		box-sizing: border-box;
+
+		inline-size: var(--spectrum-calendar-day-width);
+		block-size: var(--spectrum-calendar-day-height);
+	}
+
+	&::before {
+		content: "";
+		display: var(--mod-calendar-day-highlight-display);
+		background: var(--highcontrast-calendar-day-background-color, var(--mod-calendar-day-highlight-background-color));
+
+		border-radius: var(--mod-calendar-border-radius, var(--spectrum-calendar-day-width));
+		border: var(--spectrum-calendar-day-border-width) solid var(--mod-calendar-day-border-color, transparent);
+
+		inset-block-start: calc(50% - var(--spectrum-calendar-day-width) / 2);
+		inset-inline-start: calc(50% - var(--spectrum-calendar-day-width) / 2);
+	}
+
+	&.is-disabled {
+		--highcontrast-calendar-day-title-text-color: var(--highcontrast-calendar-day-text-color-disabled);
+		--mod-calendar-day-title-text-color: var(--mod-calendar-day-text-color-disabled, var(--spectrum-disabled-content-color));
+
+		cursor: default;
+		pointer-events: none;
+	}
+
+	/* Hide dates from the view that are outside the current month */
+	&.is-outsideMonth {
+		display: none;
 	}
 
 	&.is-range-selection {
-		/* overrides to make the cells appear connected */
-		margin: var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding)) 0;
-		border-width: var(--mod-calendar-border-width-reset, var(--spectrum-calendar-border-width-reset));
-		line-height: var(--mod-calendar-day-height, var(--spectrum-calendar-day-height));
-		border-radius: var(--mod-calendar-border-radius-reset, var(--spectrum-calendar-border-radius-reset));
+		--mod-calendar-day-border-size: var(--mod-calendar-border-width-reset, 0);
+		--mod-calendar-day-text-line-height: var(--spectrum-calendar-day-height);
 
-		inline-size: calc(var(--mod-calendar-day-width, var(--spectrum-calendar-day-width)) + calc(var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding)) * 2));
+		/* overrides to make the cells appear connected */
+		--mod-calendar-day-spacing-inline: 0;
+		--mod-calendar-day-width: calc(var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-spacing) * var(--mod-calendar-day-padding-multiplier, 2));
 
 		&.is-range-start,
 		&.is-range-end,
 		&.is-selection-start,
 		&.is-selection-end {
-			inline-size: calc(var(--mod-calendar-day-width, var(--spectrum-calendar-day-width)) + var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding)));
+			--mod-calendar-day-padding-multiplier: 1;
 		}
 
 		&.is-selection-start,
 		&.is-selection-end {
-			font-weight: var(--mod-calendar-day-text-font-weight-cap-selected, var(--spectrum-calendar-day-text-font-weight-cap-selected));
+			--mod-calendar-day-text-font-weight: var(--mod-calendar-day-text-font-weight-cap-selected, var(--spectrum-bold-font-weight));
 
 			&::after {
 				position: absolute;
@@ -253,21 +370,26 @@
 
 				display: block;
 
-				block-size: var(--mod-calendar-day-height, var(--spectrum-calendar-day-height));
-				inline-size: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
+				block-size: var(--spectrum-calendar-day-height);
+				inline-size: var(--spectrum-calendar-day-width);
 
-				border-radius: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
+				border-radius: var(--spectrum-calendar-day-width);
 
 				content: "";
 			}
 		}
 
 		&.is-range-start,
+		&.is-selection-start,
+		&.is-range-end,
+		&.is-selection-end {
+			--mod-calendar-day-spacing-inline: var(--spectrum-calendar-day-spacing);
+		}
+
+		&.is-range-start,
 		&.is-selection-start {
-			padding-inline-end: var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding));
-			margin-inline-start: var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding));
-			border-start-start-radius: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-			border-end-start-radius: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
+			border-start-start-radius: var(--spectrum-calendar-day-width);
+			border-end-start-radius: var(--spectrum-calendar-day-width);
 
 			&::before,
 			&::after {
@@ -277,10 +399,8 @@
 
 		&.is-range-end,
 		&.is-selection-end {
-			padding-inline-start: var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding));
-			margin-inline-end: var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding));
-			border-start-end-radius: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-			border-end-end-radius: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
+			border-start-end-radius: var(--spectrum-calendar-day-width);
+			border-end-end-radius: var(--spectrum-calendar-day-width);
 
 			&::before,
 			&::after {
@@ -293,174 +413,8 @@
 		&.is-selection-start.is-range-end,
 		&.is-selection-end.is-range-start,
 		&.is-range-start.is-range-end {
-			inline-size: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-			border-radius: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
-		}
-	}
-}
-
-.spectrum-Calendar-date {
-	color: var(--highcontrast-calendar-day-title-text-color, var(--mod-calendar-day-title-text-color, var(--spectrum-calendar-day-title-text-color)));
-
-	&:hover {
-		color: var(--highcontrast-calendar-day-text-color-hover, var(--mod-calendar-day-text-color-hover, var(--spectrum-calendar-day-text-color-hover)));
-
-		&:not(.is-selection-end, .is-selection-start) {
-			&::before {
-				background: var(--highcontrast-calendar-day-background-color-hover, var(--mod-calendar-day-background-color-hover, var(--spectrum-calendar-day-background-color-hover)));
-			}
-		}
-
-		&.is-selected:not(.is-selection-end, .is-selection-start)::before {
-			background: var(--highcontrast-calendar-day-background-color-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)));
-		}
-
-		&.is-range-selection {
-			&::before {
-				background: var(--highcontrast-calendar-day-background-color-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)));
-			}
-		}
-	}
-
-	&:active {
-		background-color: var(--highcontrast-calendar-day-background-color-down, var(--mod-calendar-day-background-color-down, var(--spectrum-calendar-day-background-color-down)));
-	}
-
-	&.is-selected {
-		color: var(--highcontrast-calendar-day-text-color-selected, var(--mod-calendar-day-text-color-selected, var(--spectrum-calendar-day-text-color-selected)));
-		background: var(--highcontrast-calendar-day-background-color-selected, var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected)));
-	}
-
-	&.is-selected:not(.is-range-selection) {
-		background: var(--highcontrast-calendar-day-background-color-cap-selected, var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected)));
-	}
-
-	&.is-today {
-		color: var(--highcontrast-calendar-day-today-text-color, var(--mod-calendar-day-today-text-color, var(--spectrum-calendar-day-today-text-color)));
-		border-color: var(--highcontrast-calendar-day-today-border-color, var(--mod-calendar-day-today-border-color, var(--spectrum-calendar-day-today-border-color)));
-
-		&::before {
-			border-color: var(--highcontrast-calendar-day-today-border-color, var(--mod-calendar-day-today-border-color, var(--spectrum-calendar-day-today-border-color)));
-		}
-
-		&.is-selected:not(.is-range-selection):hover::before {
-			background: var(--highcontrast-calendar-day-today-background-color-selected-hover, var(--mod-calendar-day-today-background-color-selected-hover, var(--spectrum-calendar-day-today-background-color-selected-hover)));
-		}
-
-		&.is-disabled {
-			color: var(--highcontrast-calendar-day-today-text-color-disabled, var(--mod-calendar-day-today-text-color-disabled, var(--spectrum-calendar-day-today-text-color-disabled)));
-			border-color: var(--highcontrast-calendar-day-today-border-color-disabled, var(--mod-calendar-day-today-border-color-disabled, var(--spectrum-calendar-day-today-border-color-disabled)));
-
-			&::before {
-				border-color: var(--highcontrast-calendar-day-today-border-color-disabled, var(--mod-calendar-day-today-border-color-disabled, var(--spectrum-calendar-day-today-border-color-disabled)));
-			}
-		}
-	}
-
-	&.is-focused:not(.is-range-selection) {
-		background: var(--highcontrast-calendar-day-background-color-key-focus, var(--mod-calendar-day-background-color-key-focus, var(--spectrum-calendar-day-background-color-key-focus)));
-		border-color: var(--highcontrast-calendar-day-border-color-key-focus, var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus)));
-		color: var(--highcontrast-calendar-day-text-color-key-focus, var(--mod-calendar-day-text-color-key-focus, var(--spectrum-calendar-day-text-color-key-focus)));
-
-		&.is-today {
-			border-color: var(--highcontrast-calendar-day-border-color-key-focus, var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus)));
-		}
-
-		&:active,
-		&.is-selected {
-			color: var(--highcontrast-calendar-day-text-color-selected, var(--mod-calendar-day-text-color-selected, var(--spectrum-calendar-day-text-color-selected)));
-			background: var(--highcontrast-calendar-day-background-color-cap-selected, var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected)));
-			border-color: var(--highcontrast-calendar-day-border-color-key-focus, var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus)));
-		}
-	}
-
-	&.is-focused {
-		&.is-selected {
-			&::before {
-				background: var(--highcontrast-calendar-day-background-color-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)));
-			}
-		}
-
-		&.is-range-selection {
-			&::before {
-				background: var(--highcontrast-calendar-day-background-color-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)));
-			}
-		}
-
-		&::before {
-			border-color: var(--highcontrast-calendar-day-border-color-key-focus, var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus)));
-		}
-	}
-
-	&.is-disabled {
-		color: var(--highcontrast-calendar-day-text-color-disabled, var(--mod-calendar-day-text-color-disabled, var(--spectrum-calendar-day-text-color-disabled)));
-	}
-
-	&.is-selection-start,
-	&.is-selection-end {
-		color: var(--highcontrast-calendar-day-text-color-cap-selected, var(--mod-calendar-day-text-color-cap-selected, var(--spectrum-calendar-day-text-color-cap-selected)));
-
-		&::after {
-			background-color: var(--highcontrast-calendar-day-background-color-selected, var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected)));
-		}
-
-		&.is-disabled {
-			color: var(--highcontrast-calendar-day-text-color-disabled, var(--mod-calendar-day-text-color-disabled, var(--spectrum-calendar-day-text-color-disabled)));
-		}
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-Calendar-prevMonth,
-	.spectrum-Calendar-nextMonth {
-		--highcontrast-calendar-button-icon-color-disabled: GrayText;
-		--highcontrast-calendar-button-icon-color: ButtonText;
-	}
-
-	.spectrum-Calendar-date {
-		--highcontrast-calendar-day-background-color-cap-selected: Highlight;
-		--highcontrast-calendar-day-background-color-down: ButtonFace;
-		--highcontrast-calendar-day-background-color-hover: Transparent;
-		--highcontrast-calendar-day-background-color-key-focus: ButtonFace;
-		--highcontrast-calendar-day-background-color-selected-hover: Transparent;
-		--highcontrast-calendar-day-background-color-selected: Highlight;
-		--highcontrast-calendar-day-border-color-key-focus: ButtonText;
-		--highcontrast-calendar-day-text-color-cap-selected: HighlightText;
-		--highcontrast-calendar-day-text-color-disabled: GrayText;
-		--highcontrast-calendar-day-text-color-hover: ButtonText;
-		--highcontrast-calendar-day-text-color-key-focus: ButtonText;
-		--highcontrast-calendar-day-text-color-selected-hover: HighlightText;
-		--highcontrast-calendar-day-text-color-selected: HighlightText;
-		--highcontrast-calendar-day-title-text-color: CanvasText;
-		--highcontrast-calendar-day-today-background-color-selected-hover: Highlight;
-		--highcontrast-calendar-day-today-border-color-disabled: GrayText;
-		--highcontrast-calendar-day-today-border-color: ButtonText;
-		--highcontrast-calendar-day-today-text-color-disabled: GrayText;
-		--highcontrast-calendar-day-today-text-color: ButtonText;
-
-		forced-color-adjust: none;
-
-		&.is-range-selection {
-			&.is-today {
-				color: HighlightText;
-			}
-
-			&.is-selection-start::after,
-			&.is-selection-end::after {
-				content: none;
-			}
-		}
-
-		&.is-disabled {
-			&.is-range-selection {
-				background: Highlight;
-				color: HighlightText;
-			}
-
-			&.is-selected {
-				background: Highlight;
-				color: HighlightText;
-			}
+			--mod-calendar-day-padding-multiplier: 0;
+			--mod-calendar-border-radius: var(--spectrum-calendar-day-width);
 		}
 	}
 }

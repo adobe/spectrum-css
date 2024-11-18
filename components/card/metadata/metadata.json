@@ -61,6 +61,8 @@
     ".spectrum-Card.is-selected .spectrum-Card-actions",
     ".spectrum-Card.is-selected .spectrum-Card-quickActions",
     ".spectrum-Card.is-selected:before",
+    ".spectrum-Card.spectrum-Card--gallery",
+    ".spectrum-Card.spectrum-Card--quiet",
     ".spectrum-Card:after",
     ".spectrum-Card:before",
     ".spectrum-Card:focus .spectrum-Card-actions",
@@ -135,7 +137,7 @@
     "--mod-card-title-line-height",
     "--mod-card-title-padding-right",
     "--mod-card-title-padding-top",
-    "--mod-spectrum-card-background-color"
+    "--mod-overlay-animation-duration"
   ],
   "component": [
     "--spectrum-card-actions-background-color-opacity",
@@ -162,6 +164,7 @@
     "--spectrum-card-border-width",
     "--spectrum-card-content-margin-bottom",
     "--spectrum-card-content-margin-top",
+    "--spectrum-card-content-margin-top-quiet",
     "--spectrum-card-corner-radius",
     "--spectrum-card-divider-color",
     "--spectrum-card-focus-indicator-color",
@@ -170,6 +173,7 @@
     "--spectrum-card-horizontal-body-padding",
     "--spectrum-card-horizontal-preview-padding",
     "--spectrum-card-minimum-width",
+    "--spectrum-card-minimum-width-quiet",
     "--spectrum-card-preview-background-color",
     "--spectrum-card-preview-background-color-hover",
     "--spectrum-card-preview-border-width-selected",
@@ -190,7 +194,6 @@
   ],
   "global": [
     "--spectrum-animation-duration-100",
-    "--spectrum-background-base-color",
     "--spectrum-background-layer-2-color",
     "--spectrum-blue-700",
     "--spectrum-body-color",
@@ -206,9 +209,9 @@
     "--spectrum-drop-shadow-y",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-thickness",
+    "--spectrum-gray-100",
     "--spectrum-gray-100-rgb",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-heading-color",
     "--spectrum-heading-line-height",
     "--spectrum-heading-sans-serif-font-style",
@@ -220,7 +223,13 @@
     "--spectrum-spacing-300",
     "--spectrum-spacing-400"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-card-border-color",
+    "--system-card-border-color-hover",
+    "--system-card-divider-color",
+    "--system-card-preview-background-color",
+    "--system-card-preview-background-color-hover"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-card-background-color",

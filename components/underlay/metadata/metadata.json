@@ -1,6 +1,10 @@
 {
   "sourceFile": "index.css",
-  "selectors": [".spectrum-Underlay", ".spectrum-Underlay.is-open"],
+  "selectors": [
+    ".is-open:scope",
+    ".spectrum-Underlay",
+    ".spectrum-Underlay.is-open"
+  ],
   "modifiers": [
     "--mod-overlay-animation-duration",
     "--mod-overlay-animation-duration-opened",

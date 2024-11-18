@@ -11,11 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Pagination {
-	--spectrum-pagination-counter-margin-inline-start: var(--spectrum-pagination-item-inline-spacing);
-	--spectrum-pagination-page-button-inline-spacing: var(--spectrum-pagination-item-inline-spacing);
 	--spectrum-pagination-counter-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-pagination-counter-font-size: var(--spectrum-font-size-100);
 	--spectrum-pagination-counter-line-height: var(--spectrum-line-height-100);
@@ -34,24 +32,26 @@
 
 /* Explicit variant elements */
 .spectrum-Pagination-textfield {
+	/* @passthrough start */
 	--mod-textfield-width: var(--mod-pagination-textfield-width, var(--spectrum-pagination-textfield-width));
 	--mod-textfield-min-width: var(--mod-pagination-textfield-width, var(--spectrum-pagination-textfield-width));
+	/* @passthrough end */
 }
 
 .spectrum-Pagination-counter {
 	font-size: var(--mod-pagination-counter-font-size, var(--spectrum-pagination-counter-font-size));
 	line-height: var(--mod-pagination-counter-line-height, var(--spectrum-pagination-counter-line-height));
-	margin-inline-start: var(--mod-pagination-counter-margin-inline-start, var(--spectrum-pagination-counter-margin-inline-start));
+	margin-inline-start: var(--mod-pagination-counter-margin-inline-start, var(--spectrum-pagination-item-inline-spacing));
 	color: var(--mod-pagination-counter-color, var(--spectrum-pagination-counter-color));
 }
 
 /* Previous and next buttons */
 .spectrum-Pagination-prevButton {
-	margin-inline-end: var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-page-button-inline-spacing));
+	margin-inline-end: var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-item-inline-spacing));
 }
 
 .spectrum-Pagination-nextButton {
-	margin-inline-start: var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-page-button-inline-spacing));
+	margin-inline-start: var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-item-inline-spacing));
 }
 
 /* Correct the direction of the arrows when viewing right-to-left */

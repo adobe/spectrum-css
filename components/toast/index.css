@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Toast {
 	/* Hardcoded variables */
@@ -50,14 +50,11 @@
 	--spectrum-toast-spacing-bottom-edge-to-text: var(--spectrum-toast-bottom-to-text);
 
 	/* Color */
-
 	--spectrum-toast-negative-background-color-default: var(--spectrum-negative-background-color-default);
 	--spectrum-toast-positive-background-color-default: var(--spectrum-positive-background-color-default);
 	--spectrum-toast-informative-background-color-default: var(--spectrum-informative-background-color-default);
 
 	--spectrum-toast-text-and-icon-color: var(--spectrum-white);
-
-	--spectrum-toast-divider-color: var(--spectrum-transparent-white-300);
 }
 
 @media (forced-colors: active) {

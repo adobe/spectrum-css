@@ -11,9 +11,16 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Asset {
+	/* stylelint-disable spectrum-tools/no-unused-custom-properties -- these properties are picked up by properties defined on the folder and file SVGs */
+	--spectrum-asset-folder-background: var(--highcontrast-asset-icon-background-color, var(--mod-asset-folder-background-color, var(--spectrum-asset-folder-background-color)));
+	--spectrum-asset-file-background: var(--highcontrast-asset-icon-background-color, var(--mod-asset-file-background-color, var(--spectrum-asset-file-background-color)));
+	--spectrum-asset-folder-outline: var(--mod-asset-icon-outline-color, var(--spectrum-asset-icon-outline-color));
+	--spectrum-asset-file-outline: var(--mod-asset-icon-outline-color, var(--spectrum-asset-icon-outline-color));
+	/* stylelint-enable spectrum-tools/no-unused-custom-properties */
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -36,22 +43,9 @@
 	margin: var(--mod-asset-icon-margin, 20px);
 }
 
-.spectrum-Asset-folderBackground {
-	fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-300)));
-}
-
-.spectrum-Asset-fileBackground {
-	fill: var(--highcontrast-asset-file-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-50)));
-}
-
-.spectrum-Asset-folderOutline,
-.spectrum-Asset-fileOutline {
-	fill: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
-}
-
 @media (forced-colors: active) {
 	.spectrum-Asset {
-		--highcontrast-asset-folder-background-color: currentColor;
-		--highcontrast-asset-file-background-color: currentColor;
+		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- these properties are picked up by properties defined on the folder and file SVGs */
+		--highcontrast-asset-icon-background-color: currentColor;
 	}
 }

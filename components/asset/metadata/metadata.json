@@ -3,11 +3,7 @@
   "selectors": [
     ".spectrum-Asset",
     ".spectrum-Asset-file",
-    ".spectrum-Asset-fileBackground",
-    ".spectrum-Asset-fileOutline",
     ".spectrum-Asset-folder",
-    ".spectrum-Asset-folderBackground",
-    ".spectrum-Asset-folderOutline",
     ".spectrum-Asset-image"
   ],
   "modifiers": [
@@ -18,17 +14,26 @@
     "--mod-asset-icon-min-width",
     "--mod-asset-icon-outline-color"
   ],
-  "component": [],
+  "component": [
+    "--spectrum-asset-file-background",
+    "--spectrum-asset-file-background-color",
+    "--spectrum-asset-file-outline",
+    "--spectrum-asset-folder-background",
+    "--spectrum-asset-folder-background-color",
+    "--spectrum-asset-folder-outline",
+    "--spectrum-asset-icon-outline-color"
+  ],
   "global": [
     "--spectrum-animation-duration-100",
-    "--spectrum-gray-300",
-    "--spectrum-gray-50",
+    "--spectrum-gray-200",
+    "--spectrum-gray-25",
     "--spectrum-gray-500"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-asset-file-background-color",
+    "--system-asset-folder-background-color",
+    "--system-asset-icon-outline-color"
+  ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-asset-file-background-color",
-    "--highcontrast-asset-folder-background-color"
-  ]
+  "high-contrast": ["--highcontrast-asset-icon-background-color"]
 }
