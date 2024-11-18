@@ -52,7 +52,6 @@ export const Template = ({
 				"is-keyboardFocused": isKeyboardFocused,
 				"is-invalid": isInvalid,
 				"is-disabled": isDisabled,
-				"hide-stepper": hideStepper,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
