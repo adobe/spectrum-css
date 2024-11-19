@@ -54,7 +54,7 @@
 	--mod-textfield-focus-indicator-color: var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color));
 
 	--mod-textfield-background-color: var(--mod-combobox-background-color-default);
-	--mod-textfield-background-color-disabled: var(--mod-combobox-background-color-disabled);
+	--mod-textfield-background-color-disabled: var(--mod-combobox-background-color-disabled, var(--spectrum-combobox-background-color-disabled));
 
 	--mod-textfield-font-family: var(--mod-combobox-font-family);
 	--mod-textfield-font-weight: var(--mod-combobox-font-weight);
@@ -87,7 +87,7 @@
 	--mod-picker-button-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
 	--mod-picker-button-border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
 	--mod-picker-button-background-color: var(--mod-combobox-background-color-default);
-	--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled);
+	--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled, var(--spectrum-combobox-background-color-disabled));
 	--mod-picker-button-font-color-disabled: var(--mod-combobox-font-color-disabled);
 	/* @passthroughs end -- settings for nested Picker Button component */
 
@@ -371,15 +371,24 @@
 	&:focus {
 		--mod-textfield-background-color: var(--mod-combobox-background-color-focus);
 
+		/* Default variant, Text, Focus, Not Hover state: Expected: gray-800 border. */
+		--mod-combobox-border-color-default: var(--spectrum-gray-800);
+
 		/* Focus + Hover */
 		&:hover {
 			--mod-textfield-background-color: var(--mod-combobox-background-color-focus-hover);
+
+			/* Default variant, Text, Focus, Hover state: Expected: gray-900 border. */
+			--mod-combobox-border-color-default: var(--spectrum-gray-900);
 		}
 	}
 
 	/* Keyboard Focus */
 	.spectrum-Combobox-textfield.is-keyboardFocused & {
 		--mod-textfield-background-color: var(--mod-combobox-background-color-key-focus);
+
+		/* Default variant, Text, Key focus state: Expected: gray-800 border. */
+		--mod-combobox-border-color-default: var(--spectrum-gray-800);
 	}
 
 	/* ****** Invalid & Loading ****** */
