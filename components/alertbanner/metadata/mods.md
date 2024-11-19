@@ -10,6 +10,7 @@
 | `--mod-alert-banner-icon-size`                  |
 | `--mod-alert-banner-icon-to-text`               |
 | `--mod-alert-banner-informative-background`     |
+| `--mod-alert-banner-inline-end-to-content`      |
 | `--mod-alert-banner-inline-size`                |
 | `--mod-alert-banner-inline-start-to-content`    |
 | `--mod-alert-banner-line-height`                |
