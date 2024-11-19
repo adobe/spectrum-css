@@ -32,6 +32,9 @@
 	--spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
 	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
+
+	/* @passthrough -- custom sizing for opacity checkerboard */
+	--mod-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square-size);
 }
 
 .spectrum-Thumbnail--size50 {
