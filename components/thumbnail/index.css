@@ -92,10 +92,6 @@ governing permissions and limitations under the License.
 
 	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 
-	& .spectrum-OpacityCheckerboard {
-		--spectrum-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square-size);
-	}
-
 	&::before {
 		content: "";
 		z-index: 2;
