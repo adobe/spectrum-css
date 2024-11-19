@@ -8,53 +8,22 @@ express or implied. See the License for the specific language governing
 permissions and limitations under the License. */
 
 .spectrum-OpacityCheckerboard {
-	--spectrum-opacity-checkerboard-dark: var(
-		--spectrum-opacity-checkerboard-square-dark
-	);
-	--spectrum-opacity-checkerboard-light: var(
-		--spectrum-opacity-checkerboard-square-light
-	);
-	--spectrum-opacity-checkerboard-size: var(
-		--spectrum-opacity-checkerboard-square-size-medium
-	);
+	--spectrum-opacity-checkerboard-dark: var(--spectrum-opacity-checkerboard-square-dark);
+	--spectrum-opacity-checkerboard-light: var(--spectrum-opacity-checkerboard-square-light);
+	--spectrum-opacity-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size-medium);
 	--spectrum-opacity-checkerboard-position: left top;
 }
 
 .spectrum-OpacityCheckerboard--sizeS {
-	--spectrum-opacity-checkerboard-size: var(
-		--spectrum-opacity-checkerboard-square-size-small
-	);
+	--spectrum-opacity-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size-small);
 }
 
 .spectrum-OpacityCheckerboard {
-	background: repeating-conic-gradient(
-			var(
-					--mod-opacity-checkerboard-light,
-					var(--spectrum-opacity-checkerboard-light)
-				)
-				0% 25%,
-			var(
-					--mod-opacity-checkerboard-dark,
-					var(--spectrum-opacity-checkerboard-dark)
-				)
-				0% 50%
-		)
-		var(
-			--mod-opacity-checkerboard-position,
-			var(--spectrum-opacity-checkerboard-position)
-		) /
-		calc(
-			var(
-					--mod-opacity-checkerboard-size,
-					var(--spectrum-opacity-checkerboard-size)
-				) * 2
-		)
-		calc(
-			var(
-					--mod-opacity-checkerboard-size,
-					var(--spectrum-opacity-checkerboard-size)
-				) * 2
-		);
+	background: repeating-conic-gradient(var(--mod-opacity-checkerboard-light, var(--spectrum-opacity-checkerboard-light)) 0% 25%, var(--mod-opacity-checkerboard-dark, var(--spectrum-opacity-checkerboard-dark)) 0% 50%) var(--mod-opacity-checkerboard-position, var(--spectrum-opacity-checkerboard-position)) / calc(var(--mod-opacity-checkerboard-size, var(--spectrum-opacity-checkerboard-size)) * 2) calc(var(--mod-opacity-checkerboard-size, var(--spectrum-opacity-checkerboard-size)) * 2);
+
+	.spectrum-Thumbnail & {
+		--spectrum-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square- size);
+	}
 }
 
 @media (forced-colors: active) {

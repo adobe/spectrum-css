@@ -33,10 +33,6 @@ governing permissions and limitations under the License.
 	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
 }
 
-.spectrum-OpacityCheckerboard {
-	--spectrum-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square-size);
-}
-
 .spectrum-Thumbnail--size50 {
 	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-50);
 }
@@ -126,6 +122,10 @@ governing permissions and limitations under the License.
 		.spectrum-Thumbnail-image-wrapper {
 			overflow: hidden;
 			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+		}
+
+		& .spectrum-OpacityCheckerboard {
+			--spectrum-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square- size);
 		}
 	}
 	/* stylelint-enable selector-pseudo-class-no-unknown */
