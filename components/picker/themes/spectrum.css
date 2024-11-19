@@ -23,5 +23,7 @@
 		--spectrum-picker-background-color-hover: var(--spectrum-gray-200);
 		--spectrum-picker-background-color-hover-open: var(--spectrum-gray-200);
 		--spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
+
+		--spectrum-picker-border-color-disabled-default: transparent;
 	}
 }
