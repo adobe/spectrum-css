@@ -83,6 +83,9 @@ Default.args = {
 	isHorizontal: false
 };
 
+/**
+ * Horizontal illustrated messages are displayed on extra large screen sizes or in a menu.
+*/
 
 export const Horizontal = Template.bind({});
 Horizontal.tags = ["!dev"];
