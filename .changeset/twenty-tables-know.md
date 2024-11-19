@@ -1,4 +1,5 @@
 ---
+"@spectrum-css/opacitycheckerboard": major
 "@spectrum-css/thumbnail": major
 ---
 
