@@ -33,6 +33,10 @@ export default {
 		rootClass: "spectrum-DropZone",
 		isDragged: false,
 		isFilled: false,
+		customHeading: "Drag and drop your file",
+		customDescription: "Or, select a file from your computer.",
+		customLabel: "Browse files",
+		hasButton: true
 	},
 	parameters: {
 		design: {

@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-heading-to-description: var(--spectrum-spacing-75);
 	--spectrum-illustrated-message-illustration-to-heading: var(--spectrum-spacing-200);
 	--spectrum-illustrated-message-illustration-to-content: var(--spectrum-spacing-200);
-	--spectrum-illustration-message-description-to-action: var(--spectrum-spacing-300);
+	--spectrum-illustrated-message-description-to-action: var(--spectrum-spacing-300);
 	--mod-buttongroup-justify-content: center;
 
 	/* Illustration */
@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-illustration-size: 96px;
 
 	/* Title */
-	--spectrum-illustrated-message-title-font-family: var(--spectrum-title-sans-serif-font-family);
+	--spectrum-illustrated-message-title-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-illustrated-message-title-font-weight: var(--spectrum-title-sans-serif-font-weight);
 	--spectrum-illustrated-message-title-font-style: var(--spectrum-title-sans-serif-font-style);
 	--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-medium-title-font-size);
@@ -32,7 +32,7 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-title-color: var(--spectrum-heading-color);
 
 	/* Description */
-	--spectrum-illustrated-message-description-font-family: var(--spectrum-body-sans-serif-font-family);
+	--spectrum-illustrated-message-description-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-illustrated-message-description-font-weight: var(--spectrum-body-sans-serif-font-weight);
 	--spectrum-illustrated-message-description-font-style: var(--spectrum-body-sans-serif-font-style);
 	--spectrum-illustrated-message-description-font-size: var(--spectrum-illustrated-message-medium-body-font-size);
@@ -95,8 +95,9 @@ governing permissions and limitations under the License.
 	color: var(--highcontrast-illustrated-message-illustration-color, var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color)));
 	fill: currentColor;
 	stroke: currentColor;
-	block-size: var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size));
-	inline-size: var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size));
+	block-size: var(--mod-illustrated-message-illustration-block-size, var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size)));
+	inline-size: var(--mod-illustrated-message-illustrated-inline-size, var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size)));
+	grid-area: illustration;
 }
 
 .spectrum-IllustratedMessage-accent {
@@ -133,8 +134,7 @@ governing permissions and limitations under the License.
 
 	color: var(--mod-illustrated-message-description-color, var(--spectrum-illustrated-message-description-color));
 
-	margin-block-start: 0;
-	margin-block-end: var(--mod-illustrated-message-description-to-action, var(--spectrum-illustration-message-description-to-action));
+	margin-block: 0;
 }
 
 .spectrum-IllustratedMessage--horizontal {
@@ -143,8 +143,18 @@ governing permissions and limitations under the License.
 	flex-direction: row;
 	text-align: start;
 	gap: var(--mod-illustrated-message-illustration-to-content, var(--spectrum-illustrated-message-illustration-to-content));
+	display: grid;
+	grid-template-areas: "illustration body";
 
 	.spectrum-IllustratedMessage-illustration {
 		margin-block-end: 0;
 	}
+}
+
+.spectrum-IllustratedMessage--actions {
+	margin-block-start: var(--mod-illustrated-message-description-to-action, var(--spectrum-illustrated-message-description-to-action));
+}
+
+.spectrum-IllustratedMessage--content {
+	grid-area: body;
 }

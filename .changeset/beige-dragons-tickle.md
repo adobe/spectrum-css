@@ -5,11 +5,11 @@
 
 # S2 Illustrated Message Migration
 
-This migration contains new tokens for t-shirt sizes (S, M, L), vertical and horizontal orientation along with their maximum width, illustatrion sizes, and content spacing. Dropzone `--mod` names are renamed to match the semantic tokens in illustrated message.
+This migration contains new tokens for t-shirt sizes (S, M, L), vertical and horizontal orientation along with their maximum width, illustration sizes, and content spacing. Dropzone `--mod` names are renamed to match the semantic tokens in illustrated message.
 
 ## Illustrated Message
 
-New tokens
+New properties
 `--spectrum-illustrated-message-heading-to-description`
 `--spectrum-illustrated-message-illustration-to-heading`
 `--spectrum-illustrated-message-illustration-to-content`
@@ -27,7 +27,7 @@ New mods
 `--mod-illustrated-message-illustration-to-content`
 `--mod-illustrated-message-horizontal-maximum-width`
 
-Removed tokens
+Removed properties
 `--spectrum-illustrated-message-title-to-heading`
 `--spectrum-illustrated-message-description-max-inline-size`
 `--spectrum-illustrated-message-heading-max-inline-size`
@@ -35,7 +35,13 @@ Removed tokens
 `--mod-illustrated-message-illustration-accent-color`
 `--highcontrast-illustrated-message-illustration-accent-color`
 
-## Dropzone & Illustrated message
+## Dropzone
+
+New mods
+`--mod-drop-zone-body-to-action`
+`--mod-drop-zone-illustration-to-title`
+
+## Dropzone nested mods
 
 Renamed mods
 `--mod-illustrated-message-title-to-heading` > `--mod-illustrated-message-illustration-to-heading`

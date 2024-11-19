@@ -124,6 +124,11 @@
 
 	&.is-filled.is-dragged {
 		--mod-drop-zone-content-display: flex;
+		background-image: url("https://s3-alpha-sig.figma.com/img/18cd/d82f/a71c264919d2049dcb540ae23897d027?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OMgIsMMWb10DyYC8c-pAUm4MxTwft~CTzqPojWvC0fLCFthNPTm5uh3esb1hTRxleJ9-HMNTvqawigP1GCbYI4PqCgkgMZA2CxvtksvQoi2qvVOBy-U6grTgw2KRFOkNEsT~UkcQRAdx0wDZs-PBGyeeMjs0jyZTmq7LbR5ntIVaFFNTpBTnj1o9Hl2S-Ofo1UEANW58Az~3JvY1XyuSYd3q1QIXb-lYi57QQ74F85P0B6ZDW~0n7o-9eg4SsJ0OgVgJu3LRr6XFyNCbb109Iu~wrmSHCjnCLm5~9v4lY0Tm8whnUYQ3js88LHFxUghP~3MJahtKgJXqMwJKNMhCCQ__");
+
+		.spectrum-DropZone-actions {
+			margin-block-start: 0;
+		}
 	}
 
 	&:focus-visible {
@@ -140,6 +145,10 @@
 	justify-content: center;
 	position: relative;
 	z-index: 10;
+}
+
+.spectrum-DropZone-actions {
+	margin-block-start: var(--spectrum-drop-zone-body-to-action);
 }
 
 .spectrum-DropZone-button {
