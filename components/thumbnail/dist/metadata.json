@@ -60,6 +60,7 @@
     "--spectrum-thumbnail-layer-border-color-outer",
     "--spectrum-thumbnail-layer-border-width-inner",
     "--spectrum-thumbnail-layer-border-width-outer",
+    "--spectrum-thumbnail-opacity-checkerboard-square-size",
     "--spectrum-thumbnail-opacity-disabled",
     "--spectrum-thumbnail-size",
     "--spectrum-thumbnail-size-100",
@@ -88,7 +89,7 @@
     "--spectrum-white"
   ],
   "system-theme": [],
-  "passthroughs": [],
+  "passthroughs": ["--mod-opacity-checkerboard-size"],
   "high-contrast": [
     "--highcontrast-thumbnail-border-color",
     "--highcontrast-thumbnail-border-color-selected",
