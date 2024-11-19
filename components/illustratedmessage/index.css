@@ -187,3 +187,11 @@ governing permissions and limitations under the License.
 		margin-block-end: 0;
 	}
 }
+
+.spectrum-IllustratedMessage--actions {
+	margin-block-start: var(--mod-illustrated-message-description-to-action, var(--spectrum-illustrated-message-description-to-action));
+}
+
+.spectrum-IllustratedMessage--content {
+	grid-area: body;
+}
