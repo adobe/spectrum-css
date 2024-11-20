@@ -13,11 +13,9 @@ governing permissions and limitations under the License.
 	--spectrum-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
 	--spectrum-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);
 	--spectrum-alert-banner-inline-size: auto;
-	--spectrum-alert-banner-font-size: var(--spectrum-font-size-100);
 
-	/* @todo replace with font-size specific line-height token when one is available.
-     Results in a line-height of 18px with font-size-100. */
-	--spectrum-alert-banner-line-height: 1.28571428; /* stylelint-disable-line number-max-precision -- increased precision gives more accurate computed line-height */
+	--spectrum-alert-banner-font-size: var(--spectrum-font-size-100);
+	--spectrum-alert-banner-line-height: var(--spectrum-line-height-100);
 	--spectrum-alert-banner-icon-size: var(--spectrum-workflow-icon-size-100); /* stylelint-disable-line spectrum-tools/no-unused-custom-properties -- used in passthrough */
 
 	/* spacing */
