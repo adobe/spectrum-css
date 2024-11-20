@@ -16,6 +16,7 @@ governing permissions and limitations under the License.
 
 	--spectrum-alert-banner-font-size: var(--spectrum-font-size-100);
 	--spectrum-alert-banner-line-height: var(--spectrum-line-height-100);
+	--spectrum-alert-banner-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-alert-banner-icon-size: var(--spectrum-workflow-icon-size-100); /* stylelint-disable-line spectrum-tools/no-unused-custom-properties -- used in passthrough */
 
 	/* spacing */
@@ -57,6 +58,7 @@ governing permissions and limitations under the License.
 	max-inline-size: var(--mod-alert-banner-max-inline-size, var(--spectrum-alert-banner-max-inline-size));
 	min-block-size: var(--mod-alert-banner-min-height, var(--spectrum-alert-banner-min-height));
 	font-size: var(--mod-alert-banner-font-size, var(--spectrum-alert-banner-font-size));
+	font-family: var(--mod-alert-banner-font-family, var(--spectrum-alert-banner-font-family));
 	line-height: var(--mod-alert-banner-line-height, var(--spectrum-alert-banner-line-height));
 	color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
 	background-color: var(--mod-alert-banner-background, var(--spectrum-alert-banner-background));

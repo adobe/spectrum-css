@@ -6,6 +6,7 @@
 | `--mod-alert-banner-close-button-to-content`    |
 | `--mod-alert-banner-close-button-to-inline-end` |
 | `--mod-alert-banner-font-color`                 |
+| `--mod-alert-banner-font-family`                |
 | `--mod-alert-banner-font-size`                  |
 | `--mod-alert-banner-icon-size`                  |
 | `--mod-alert-banner-icon-to-text`               |
