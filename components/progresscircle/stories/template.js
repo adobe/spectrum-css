@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { capitalize, lowerCase } from "lodash-es";
+import { capitalize } from "lodash-es";
 
 import "../index.css";
 
@@ -21,13 +21,7 @@ export const Template = ({
 	value,
 }) => {
 
-	let strokeWidth = 3;
-	if (size === "s") {
-		strokeWidth = 2;
-	}
-	else if (size === "l") {
-		strokeWidth = 4;
-	}
+	let strokeWidth = size === "s" ? 2 : size === "l" ? 4 : 3;
 
 	// SVG strokes are centered, so subtract half the stroke width from the radius to create an inner stroke.
 	let radius = `calc(50% - ${strokeWidth / 2}px)`;
@@ -38,7 +32,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--indeterminate`]: isIndeterminate,
 				[`${rootClass}--infield`]: isInField,
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
+				[`${rootClass}--static${capitalize(staticColor)}`]: typeof staticColor !== "undefined",
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -67,3 +61,13 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const ProgressCircleGroup = (args) => html`
+	${window.isChromatic() ? html`
+		${Template(args)}
+		${Template({
+			...args,
+			isIndeterminate: true,
+		})}
+	` : Template(args)}
+`;

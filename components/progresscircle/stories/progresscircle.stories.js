@@ -21,7 +21,7 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Advanced",
 
 			},
 			options: ["white", "black"],
