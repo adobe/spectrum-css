@@ -1,5 +1,5 @@
-import { Template } from "./infield-progresscirlce.template.js";
-import { default as ProgressCircle } from "./progresscircle.stories.js";
+import { default as ProgressCircle } from "@spectrum-css/progresscircle/stories/progresscircle.stories.js";
+import { Template } from "./template.js";
 
 /**
  * In-field progress circles are used in t-shirt size components such as [buttons](/docs/components-button--docs), [combo boxes](/docs/components-combobox--docs), and [pickers](/docs/components-picker--docs). The in-field progress circle can be used in place of an icon or in tight spaces when space is limited both vertically and horizontally.
