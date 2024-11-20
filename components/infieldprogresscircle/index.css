@@ -1,0 +1,46 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "./themes/express.css";
+
+.spectrum-InfieldProgresscircle {
+	--mod-progress-circle-thickness: var(--mod-progress-cirlce-stroke-width, 2px);
+	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-100);
+}
+
+.spectrum-InfieldProgresscircle--sizeS {
+	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-75);
+}
+
+.spectrum-InfieldProgresscircle--sizeL {
+	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-200);
+}
+
+.spectrum-InfieldProgresscircle--sizeXL {
+	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-300);
+}
+
+.spectrum-InfieldProgresscircle {
+	padding-block: var(--spectrum-in-field-progress-circle-edge-to-fill);
+
+	.spectrum-ProgressCircle-fill {
+		stroke-linecap: square;
+	}
+}
+
+@media (forced-colors: active) {
+	.spectrum-InfieldProgresscircle {
+		--highcontrast-infieldprogresscircle-content-color-default: CanvasText;
+
+		forced-color-adjust: none;
+	}
+}
