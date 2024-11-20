@@ -3902,6 +3902,7 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/illustratedmessage": "workspace:^"
     "@spectrum-css/infieldbutton": "workspace:^"
+    "@spectrum-css/infieldprogresscircle": "workspace:^"
     "@spectrum-css/inlinealert": "workspace:^"
     "@spectrum-css/link": "workspace:^"
     "@spectrum-css/logicbutton": "workspace:^"
@@ -4437,6 +4438,16 @@ __metadata:
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
+  languageName: unknown
+  linkType: soft
+
+"@spectrum-css/infieldprogresscircle@workspace:^, @spectrum-css/infieldprogresscircle@workspace:components/infieldprogresscircle":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/infieldprogresscircle@workspace:components/infieldprogresscircle"
+  dependencies:
+    "@spectrum-css/tokens": "workspace:^"
+  peerDependencies:
+    "@spectrum-css/tokens": ">=14.0.0-next.0"
   languageName: unknown
   linkType: soft
 

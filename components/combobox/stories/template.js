@@ -63,7 +63,7 @@ const Combobox = ({
 				],
 				customInputClasses: [`${rootClass}-input`],
 				isLoading,
-				customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
+				customInfieldProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 				name: "field",
 				isReadOnly,
 				value,
