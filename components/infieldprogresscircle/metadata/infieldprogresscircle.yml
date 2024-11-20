@@ -1,0 +1,25 @@
+name: infield progress circle
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/infield-progress-circle/
+examples:
+  - id: infieldprogresscircle-sizing
+    name: Sizing
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <!-- Component mark-up goes here -->
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <!-- Component mark-up goes here -->
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <!-- Component mark-up goes here -->
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <!-- Component mark-up goes here -->
+        </div>
+      </div>
