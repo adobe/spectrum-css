@@ -273,7 +273,7 @@
 	.spectrum-ProgressBar-track {
 		--highcontrast-progressbar-fill-color: ButtonText;
 		--highcontrast-progressbar-track-color: ButtonFace;
-		forced-color-adjust: none;
 		border: 1px solid ButtonText;
+		forced-color-adjust: none;
 	}
 }
