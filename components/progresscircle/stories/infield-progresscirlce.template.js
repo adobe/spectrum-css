@@ -1,4 +1,4 @@
-import { Template as ProgressCircle } from "./template";
+import { Template as ProgressCircle } from "./template.js";
 
 export const Template = ({
 	customClasses = [],

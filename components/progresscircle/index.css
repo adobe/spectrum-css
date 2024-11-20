@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
 
 .spectrum-ProgressCircle {
 	/* circle unfilled border color */
-	--spectrum-progress-circle-track-border-color: var(--spectrum-gray-200);
+	--spectrum-progress-circle-track-border-color: var(--spectrum-track-color);
 
 	--spectrum-progress-circle-track-border-color-over-background: var(--spectrum-transparent-white-400);
 	--spectrum-progress-circle-fill-border-color-over-background: var(--spectrum-transparent-white-1000);
@@ -23,10 +23,6 @@ governing permissions and limitations under the License.
 	--spectrum-progress-circle-fill-border-color: var(--spectrum-accent-content-color-default);
 
 	/* default size and thickness */
-	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
-	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
-
-	/* track border style */
 	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
 }
@@ -39,17 +35,6 @@ governing permissions and limitations under the License.
 .spectrum-ProgressCircle--sizeL {
 	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-large);
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-large);
-}
-
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-ProgressCircle {
-		/* fill is bright color */
-		--highcontrast-progress-circle-fill-border-color: Highlight;
-
-		/* fill over background is bright color */
-		--highcontrast-progress-circle-fill-border-color-over-background: Highlight;
-	}
 }
 
 .spectrum-ProgressCircle {
@@ -86,7 +71,7 @@ governing permissions and limitations under the License.
 	stroke: var(--mod-progress-circle-track-border-color, var(--spectrum-progress-circle-track-border-color));
 }
 
-/* circle progress filled */
+/* circle: progress filled */
 .spectrum-ProgressCircle-fill {
 	stroke-width: var(--mod-progress-circle-thickness, var(--spectrum-progress-circle-thickness));
 	stroke: var(--highcontrast-progress-circle-fill-border-color, var(--mod-progress-circle-fill-border-color, var(--spectrum-progress-circle-fill-border-color)));
@@ -99,19 +84,9 @@ governing permissions and limitations under the License.
 	.spectrum-ProgressCircle-fill {
 		will-change: transform;
 		animation:
-			1s cubic-bezier(0.25, 0.85, 0.48, 0.89) 0.2s infinite spectrum-fills-rotate,
-			1s cubic-bezier(0.25, 0.1, 0.25, 1.3) infinite 0s spectrum-dashoffset-animation;
+			1s infinite 0.2s spectrum-fills-rotate,
+			1s infinite 0s spectrum-dashoffset-animation;
 		transform-origin: center;
-	}
-
-	.spectrum-ProgressCircle-fillSubMask1 {
-		will-change: transform;
-		animation: 1s infinite linear spectrum-fill-mask-1;
-	}
-
-	.spectrum-ProgressCircle-fillSubMask2 {
-		will-change: transform;
-		animation: 1s infinite linear spectrum-fill-mask-2;
 	}
 }
 
@@ -134,5 +109,16 @@ governing permissions and limitations under the License.
 
 	.spectrum-ProgressCircle-fill {
 		stroke-linecap: square;
+	}
+}
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-ProgressCircle {
+		/* fill is bright color */
+		--highcontrast-progress-circle-fill-border-color: Highlight;
+
+		/* fill over background is bright color */
+		--highcontrast-progress-circle-fill-border-color-over-background: Highlight;
 	}
 }
