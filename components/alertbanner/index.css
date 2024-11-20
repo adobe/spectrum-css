@@ -41,6 +41,12 @@ governing permissions and limitations under the License.
 	--mod-closebutton-margin-inline: var(--mod-alert-banner-close-button-to-content, var(--spectrum-alert-banner-close-button-to-content)) var(--mod-alert-banner-close-button-to-inline-end, var(--spectrum-alert-banner-close-button-to-inline-end));
 	--mod-closebutton-margin-top: var(--mod-alert-banner-top-to-close-button, var(--spectrum-alert-banner-block-edge-to-button));
 	--mod-closebutton-align-self: flex-start;
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-alert-banner-line-height: var(--spectrum-cjk-line-height-100);
+	}
 }
 
 .spectrum-AlertBanner--info {
