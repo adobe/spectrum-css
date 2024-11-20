@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
     <title>Page not found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="https://opensource.adobe.com/spectrum-css/favicon.svg">
+    <!-- This preconnect opens the connection for typekit to more quickly load fonts -->
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+    <!-- This is the script that attempts to pre-load the typekit fonts -->
+    <script src="https://use.typekit.net/rok6rmo.js" id="typekit" type="text/javascript" async></script>
+
     <style>
       body {
-        --spectrum-background-layer-1-color: rgb(253, 253, 253);
-
         margin: 0;
         padding: 0;
         block-size: 100vh;
-        background-color: var(--spectrum-background-layer-1-color);
+        background-color: rgb(253, 253, 253);
       }
 
       header {
@@ -22,12 +25,10 @@
       }
 
       main {
-        --spectrum-neutral-content-color-default: rgb(34, 34, 34);
-
-        color: var(--spectrum-neutral-content-color-default);
+        color: rgb(34, 34, 34);
         display: flex;
         padding-inline: 20px;
-        padding-block: 4rem;
+        padding-block: 1rem 4rem;
         flex-direction: column;
         align-items: flex-start;
         gap: 60px;
@@ -41,26 +42,26 @@
       }
 
       h1, h2, p {
-        --spectrum-sans-font-family-stack: "Nunito Sans",-apple-system,".SFNSText-Regular","San Francisco",BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+        --spectrum-sans-font-family-stack: "Adobe Clean", adobe-clean, "Nunito Sans",-apple-system,".SFNSText-Regular","San Francisco",BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
 
         -webkit-font-smoothing: antialiased;
         font-family: var(--spectrum-sans-font-family-stack);
       }
 
       h1 {
-        font-weight: 700;
-        font-size: 32px;
-        margin-block: 20px 8px;
+        font-weight: 400;
+        font-size: 24px;
+        margin-block-end: 8px;
       }
 
       h2 {
-        font-size: 24px;
-        margin-block: 20px 8px;
+        font-size: 48px;
+        margin-block-end: 8px;
         padding-block-end: 4px;
       }
 
       p {
-        font-size: 14px;
+        font-size: 18px;
         line-height: 24px;
         margin-block: 16px;
       }
@@ -96,9 +97,9 @@
     <main>
       <h1>404: Page not found</h1>
       <section>
-        <img src="/spectrum_illustration_2x.png" alt="">
+        <img src="https://opensource.adobe.com/spectrum-css/spectrum_illustration_2x.png" alt="An abstract illustrated image with a whimsical color palette">
         <h2>It's not you. It's us.</h2>
-        <p>We've made lots of changes to the Spectrum CSS documentation site, including consolidating all of the documentation and moving it to a single location within Storybook.</p>
+        <p>We've made a lot of improvements to the Spectrum CSS documentation site, including consolidating all of the documentation and moving it to a single location within Storybook.</p>
         <p>If you're looking for information on Spectrum CSS components, let's get you back to <a href="https://opensource.adobe.com/spectrum-css/">our landing page</a>. From there, experiment with all of our components to your heart's content!
         </p>
       </section>
