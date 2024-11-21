@@ -18,7 +18,7 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
 	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimum-height);
 
-	--spectrum-coachmark-border-size: var(--mod-popover-border-width);
+	--spectrum-coachmark-border-size: var(--mod-popover-border-thickness);
 	--spectrum-coachmark-border-radius: var(--mod-popover-corner-radius);
 
 	/* layout */
@@ -52,7 +52,7 @@ governing permissions and limitations under the License.
 
 	/* mods */
 	--mod-buttongroup-justify-content: flex-end;
-	--mod-popover-border-width: var(--spectrum-border-width-100);
+	--mod-popover-border-thickness: var(--spectrum-border-width-100);
 	--mod-popover-corner-radius: var(--spectrum-corner-radius-large-default);
 	--mod-popover-content-area-spacing: 0;
 	--mod-button-edge-to-visual-only: 9px;
