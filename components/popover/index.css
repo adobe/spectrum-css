@@ -30,7 +30,7 @@ governing permissions and limitations under the License.
 	--spectrum-popover-border-transparency: var(--spectrum-popover-border-opacity);
 	--spectrum-popover-border-color-with-transparency: rgba(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency));
 
-	/* TODO: Cannot use popover-border-color token until the value no longer has the rgba() function alpha/opacity */
+	/* TODO: Cannot use popover-border-color token until the value no longer has the rgba() function alpha/opacity. We should be able to refactor instances of `--spectrum-popover-border-color-rgb` with `--spectrum-popover-border-color` once this is available. */
 	/* --spectrum-popover-border-color-default: var(--spectrum-popover-border-color); */
 
 	/* popover inner padding */
