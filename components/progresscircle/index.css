@@ -77,14 +77,10 @@ governing permissions and limitations under the License.
 }
 
 /* animation masks - circle indeterminate with continuous animation */
-.spectrum-ProgressCircle--indeterminate {
-	.spectrum-ProgressCircle-fill {
-		will-change: transform;
-		animation:
-			1s infinite 0.2s spectrum-fills-rotate,
-			1s infinite 0s spectrum-dashoffset-animation;
-		transform-origin: center;
-	}
+.spectrum-ProgressCircle--indeterminate .spectrum-ProgressCircle-fill {
+	animation:
+		spectrum-fills-rotate 1s cubic-bezier(0.6, 0.1, 0.3, 0.9) infinite,
+		spectrum-dashoffset-animation 1s cubic-bezier(0.25, 0.1, 0.25, 1.3) infinite;
 }
 
 /* windows high contrast mode */

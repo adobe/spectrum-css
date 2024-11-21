@@ -22,7 +22,6 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Advanced",
-
 			},
 			options: ["white", "black"],
 			control: "select",
@@ -117,5 +116,27 @@ StaticWhiteIndeterminate.args = {
 	isIndeterminate: true,
 };
 StaticWhiteIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackDeterminate = Template.bind({});
+StaticBlackDeterminate.tags = ["!dev"];
+StaticBlackDeterminate.storyName = "Static black, default";
+StaticBlackDeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: false,
+};
+StaticBlackDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackIndeterminate = Template.bind({});
+StaticBlackIndeterminate.tags = ["!dev"];
+StaticBlackIndeterminate.storyName = "Static black, indeterminate";
+StaticBlackIndeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: true,
+};
+StaticBlackIndeterminate.parameters = {
 	chromatic: { disableSnapshot: true },
 };
