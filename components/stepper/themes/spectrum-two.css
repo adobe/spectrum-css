@@ -14,7 +14,7 @@
  @container style(--system: spectrum) {
 	.spectrum-Stepper {
 		--spectrum-stepper-border-width: var(--spectrum-border-width-100);
-		--spectrum-stepper-border-color: var(--spectrum-gray-500);
+		--spectrum-stepper-border-color-default: var(--spectrum-gray-500);
 		--spectrum-stepper-border-color-hover: var(--spectrum-gray-600);
 		--spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
 		--spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-800);
@@ -32,14 +32,17 @@
 
 		/** Invalid **/
 		--spectrum-stepper-border-color-invalid: var(--spectrum-negative-border-color-default);
-		--spectrum-stepper-border-color-hover-invalid: var(--spectrum-negative-border-color-hover);
 		--spectrum-stepper-border-color-focus-invalid: var(--spectrum-negative-border-color-focus);
 		--spectrum-stepper-border-color-focus-hover-invalid: var(--spectrum-negative-border-color-focus-hover);
 		--spectrum-stepper-border-color-keyboard-focus-invalid: var(--spectrum-negative-border-color-key-focus);
 
 		/** Disabled **/
-		--spectrum-stepper-button-border-color-disabled: var(--spectrum-disabled-border-color);
 		--spectrum-stepper-button-border-width-disabled: var(--spectrum-border-width-100);
 		--spectrum-stepper-buttons-background-color-disabled: var(--spectrum-gray-50);
+	}
+
+	.spectrum-Stepper--quiet {
+		--spectrum-stepper-buttons-border-style: none;
+		--spectrum-stepper-button-edge-to-fill: 0;
 	}
 }

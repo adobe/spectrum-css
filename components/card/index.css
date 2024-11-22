@@ -53,7 +53,7 @@
 	--spectrum-card-actions-background-color-opacity: var(--mod-card-actions-background-color-opacity, var(--spectrum-card-selection-background-color-opacity));
 	--spectrum-card-actions-drop-shadow-color: var(--mod-card-actions-drop-shadow-color, var(--spectrum-drop-shadow-color));
 	--spectrum-card-actions-drop-shadow-x: var(--mod-card-actions-drop-shadow-x, var(--spectrum-drop-shadow-x));
-	--spectrum-card-actions-drop-shadow-y: var(--mod-card-actions-drop-shadow-x, var(--spectrum-drop-shadow-y));
+	--spectrum-card-actions-drop-shadow-y: var(--mod-card-actions-drop-shadow-y, var(--spectrum-drop-shadow-y));
 	--spectrum-card-actions-drop-shadow-blur: var(--mod-card-actions-drop-shadow-blur, var(--spectrum-drop-shadow-blur));
 
 	/* Focus */
@@ -301,9 +301,6 @@
 }
 
 .spectrum-Card-actionButton {
-	align-self: center;
-	display: flex;
-	justify-content: flex-end;
 	z-index: 1;
 }
 

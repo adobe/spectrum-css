@@ -14,3 +14,9 @@
 /* @combine .spectrum.spectrum--legacy */
 
 @import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+    .spectrum-Calendar {
+        --spectrum-calendar-day-background-color-selected-disabled: rgba(var(--spectrum-gray-200-rgb), 0.4);
+    }
+}
