@@ -13,13 +13,48 @@
 
 @import "./themes/spectrum-two.css";
 
+.spectrum-ProgressBar,
+.spectrum-ProgressBar--sizeM {
+	--spectrum-progressbar-sized-size-default: var(--spectrum-progressbar-size-2400);
+	--spectrum-progressbar-sized-font-size: var(--spectrum-font-size-75);
+	/* @todo should this be --spectrum-progress-bar-thickness-medium? */
+	--spectrum-progressbar-sized-thickness: var(--spectrum-progress-bar-thickness-large);
+	--spectrum-progressbar-sized-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
+}
+
+.spectrum-ProgressBar--sizeS {
+	--spectrum-progressbar-sized-size-default: var(--spectrum-progressbar-size-2400);
+	--spectrum-progressbar-sized-font-size: var(--spectrum-font-size-75);
+	--spectrum-progressbar-sized-thickness: var(--spectrum-progress-bar-thickness-small);
+	--spectrum-progressbar-sized-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+}
+
+.spectrum-ProgressBar--sizeL {
+	--spectrum-progressbar-sized-size-default: var(--spectrum-progressbar-size-2500);
+	--spectrum-progressbar-sized-font-size: var(--spectrum-font-size-100);
+	--spectrum-progressbar-sized-thickness: var(--spectrum-progress-bar-thickness-large);
+	--spectrum-progressbar-sized-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
+}
+
+.spectrum-ProgressBar--sizeXL {
+	--spectrum-progressbar-sized-size-default: var(--spectrum-progressbar-size-2800);
+	--spectrum-progressbar-sized-font-size: var(--spectrum-font-size-200);
+	--spectrum-progressbar-sized-thickness: var(--spectrum-progress-bar-thickness-extra-large);
+	--spectrum-progressbar-sized-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
+}
+
 .spectrum-ProgressBar {
-	/* Static tokens */
-	--spectrum-progressbar-animation-ease-in-out-indeterminate: var(--spectrum-animation-ease-in-out);
-	--spectrum-progressbar-animation-duration-indeterminate: var(--spectrum-animation-duration-2000);
+	--spectrum-progressbar-size-default: var(--mod-progressbar-size-default, var(--spectrum-progressbar-sized-size-default));
+	--spectrum-progressbar-font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-sized-font-size));
+	--spectrum-progressbar-thickness: var(--mod-progressbar-thickness, var(--spectrum-progressbar-sized-thickness));
+	--spectrum-progressbar-spacing-top-to-text: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-sized-spacing-top-to-text));
+
+	--spectrum-progressbar-animation-ease-in-out-indeterminate: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-animation-ease-in-out));
+	--spectrum-progressbar-animation-duration-indeterminate: var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-animation-duration-2000));
 	--spectrum-progressbar-corner-radius: var(--spectrum-corner-radius-100);
 
-	--spectrum-progressbar-fill-size-indeterminate: 70%;
+	--spectrum-progressbar-fill-size-indeterminate: var(--mod-progressbar-fill-size-indeterminate, 70%);
+	--spectrum-progressbar-dir-indeterminate-multiplier: 1;
 
 	/* --spectrum-global-dimension-static-size-2400 */
 	--spectrum-progressbar-size-2400: 192px;
@@ -31,67 +66,53 @@
 	--spectrum-progressbar-size-2800: 224px;
 
 	/* Size */
-	--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-	--spectrum-progressbar-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--spectrum-progressbar-line-height-cjk: var(--mod-progressbar-line-height-cjk, var(--spectrum-cjk-line-height-100));
 
-	--spectrum-progressbar-min-size: var(--spectrum-progress-bar-minimum-width);
-	--spectrum-progressbar-max-size: var(--spectrum-progress-bar-maximum-width);
+	--spectrum-progressbar-min-size: var(--mod-progressbar-min-size, var(--spectrum-progress-bar-minimum-width));
+	--spectrum-progressbar-max-size: var(--mod-progressbar-max-size, var(--spectrum-progress-bar-maximum-width));
 
-	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
-	--spectrum-progressbar-line-height: var(--spectrum-line-height-100);
+	--spectrum-progressbar-line-height: var(--mod-progressbar-line-height, var(--spectrum-line-height-100));
 
 	/* Spacing */
-	--spectrum-progressbar-spacing-label-to-progressbar: var(--spectrum-spacing-75);
-	--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
-	--spectrum-progressbar-spacing-label-to-text: var(--spectrum-spacing-200);
+	--spectrum-progressbar-spacing-label-to-progressbar: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-spacing-75));
+	--spectrum-progressbar-spacing-label-to-text: var(--mod-progressbar-spacing-label-to-text, var(--spectrum-spacing-200));
 
 	/* Color */
-	--spectrum-progressbar-text-color: var(--spectrum-neutral-content-color-default);
-	--spectrum-progressbar-fill-color: var(--spectrum-accent-color-900);
-	--spectrum-progressbar-label-and-value-white: var(--spectrum-white);
-	--spectrum-progressbar-fill-color-white: var(--spectrum-white);
+	--spectrum-progressbar-fill-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-accent-color-900)));
+	--spectrum-progressbar-track-color-default: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
+
+	--spectrum-progressbar-text-color: var(--mod-progressbar-text-color, var(--spectrum-neutral-content-color-default));
+	--spectrum-progressbar-label-and-value-white: var(--mod-progressbar-label-and-value-white, var(--spectrum-white));
+	--spectrum-progressbar-fill-color-white: var(--mod-progressbar-fill-color-white, var(--spectrum-white));
+	--spectrum-progressbar-static-white-track-color: var(--spectrum-progressbar-track-color-white);
 
 	/* @passthrough */
-	--mod-fieldlabel-font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
+	--mod-fieldlabel-font-size: var(--spectrum-progressbar-font-size);
 
-	&.spectrum-ProgressBar--sizeS {
-		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
-
-		--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-small);
-
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+	&:dir(rtl) {
+		--spectrum-progressbar-dir-indeterminate-multiplier: -1;
 	}
 
-	&,
-	&.spectrum-ProgressBar--sizeM {
-		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--mod-progressbar-line-height: var(--spectrum-progressbar-line-height-cjk);
+	}
+}
 
-		--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
-
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+@media (forced-colors: active) {
+	.spectrum-ProgressBar {
+		--highcontrast-progressbar-fill-color: ButtonText;
+		--highcontrast-progressbar-track-color: ButtonFace;
 	}
 
-	&.spectrum-ProgressBar--sizeL {
-		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
-
-		--spectrum-progressbar-font-size: var(--spectrum-font-size-100);
-		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
-
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
+	.spectrum-ProgressBar-track {
+		forced-color-adjust: none;
+		border: 1px solid ButtonText;
 	}
+}
 
-	&.spectrum-ProgressBar--sizeXL {
-		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2800);
-
-		--spectrum-progressbar-font-size: var(--spectrum-font-size-200);
-		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-extra-large);
-
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
-	}
-
-
+.spectrum-ProgressBar {
 	position: relative;
 	display: inline-flex;
 	flex-flow: row wrap;
@@ -99,141 +120,97 @@
 	align-items: center;
 	vertical-align: top;
 
-	inline-size: var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));
-	max-inline-size: var(--mod-progressbar-max-size, var(--spectrum-progressbar-max-size));
-	min-inline-size: var(--mod-progressbar-min-size, var(--spectrum-progressbar-min-size));
+	inline-size: var(--spectrum-progressbar-size-default);
+	max-inline-size: var(--spectrum-progressbar-max-size);
+	min-inline-size: var(--spectrum-progressbar-min-size);
 
-	/* Label and Percentage */
-	.spectrum-ProgressBar-label,
-	.spectrum-ProgressBar-percentage {
-		text-align: start;
-		margin-block-start: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
-		margin-block-end: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
-
-		line-height: var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height));
-
-		color: var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
-
-		&:lang(ja),
-		&:lang(zh),
-		&:lang(ko) {
-			line-height: var(--mod-progressbar-line-height-cjk, var(--spectrum-progressbar-line-height-cjk));
-		}
+	&.spectrum-ProgressBar--sideLabel {
+		flex-flow: row;
+		justify-content: space-between;
 	}
 
-	/* Label */
-	.spectrum-ProgressBar-label {
-		flex: 1 1 0%;
-	}
-
-	/* Percentage */
-	.spectrum-ProgressBar-percentage {
-		align-self: flex-start;
-		margin-inline-start: var(--mod-progressbar-spacing-label-to-text, var(--spectrum-progressbar-spacing-label-to-text));
-	}
-
-	/* Track */
-	.spectrum-ProgressBar-track {
-		/* Visually apply border radius to child elements */
-		overflow: hidden;
-		inline-size: 100%;
-		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
-		border-radius: var(--spectrum-progressbar-corner-radius);
-
-		background: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
-	}
-
-	.spectrum-ProgressBar-fill {
-		border: none;
-		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
-		transition: width 1s;
-		background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
+	&.spectrum-ProgressBar--staticWhite {
+		--mod-progressbar-fill-color: var(--spectrum-progressbar-fill-color-white);
+		--mod-progressbar-text-color: var(--spectrum-progressbar-label-and-value-white);
+		--mod-progressbar-track-color: var(--spectrum-progressbar-static-white-track-color);
 	}
 }
 
-.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
-	inline-size: var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate));
-	position: relative;
-	animation-timing-function: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-progressbar-animation-ease-in-out-indeterminate));
-	will-change: transform;
+/* Label and Percentage */
+.spectrum-ProgressBar-label,
+.spectrum-ProgressBar-percentage {
+	text-align: start;
+	margin-block-start: var(--spectrum-progressbar-spacing-top-to-text);
+	margin-block-end: var(--spectrum-progressbar-spacing-label-to-progressbar);
 
-	animation-name: indeterminate-loop-ltr;
-	animation-duration: var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate));
-	animation-iteration-count: infinite;
+	line-height: var(--spectrum-progressbar-line-height);
+	color: var(--spectrum-progressbar-text-color);
 }
 
-.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill:dir(rtl) {
-	animation-name: indeterminate-loop-rtl;
-}
+/* Label */
+.spectrum-ProgressBar-label {
+	flex: 1 1 0%;
 
-/* Variants  */
-/* Side Label */
-.spectrum-ProgressBar--sideLabel {
-	display: inline-flex;
-	flex-flow: row;
-	justify-content: space-between;
-
-	.spectrum-ProgressBar-track {
-		flex: 1 1 var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));
-	}
-
-	.spectrum-ProgressBar-label {
+	.spectrum-ProgressBar--sideLabel & {
 		flex-grow: 0;
-		margin-inline-end: var(--mod-progressbar-spacing-label-to-text, var(--spectrum-progressbar-spacing-label-to-text));
+		margin-inline-end: var(--spectrum-progressbar-spacing-label-to-text);
 		margin-block-end: 0;
 	}
+}
 
-	.spectrum-ProgressBar-percentage {
+/* Percentage */
+.spectrum-ProgressBar-percentage {
+	align-self: flex-start;
+	margin-inline-start: var(--spectrum-progressbar-spacing-label-to-text);
+
+	.spectrum-ProgressBar--sideLabel & {
 		order: 3;
 		text-align: end;
-		margin-inline-start: var(--mod-spacing-progressbar-label-to-text, var(--spectrum-progressbar-spacing-label-to-text));
 		margin-block-end: 0;
 	}
 }
 
-/* Static White */
-.spectrum-ProgressBar.spectrum-ProgressBar--staticWhite {
-	.spectrum-ProgressBar-fill {
-		color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
-		background: var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white));
-	}
+/* Track */
+.spectrum-ProgressBar-track {
+	/* Visually apply border radius to child elements */
+	overflow: hidden;
+	inline-size: 100%;
+	block-size: var(--spectrum-progressbar-thickness);
+	border-radius: var(--spectrum-progressbar-corner-radius);
 
-	.spectrum-ProgressBar-label,
-	.spectrum-ProgressBar-percentage {
-		color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
-	}
+	background: var(--spectrum-progressbar-track-color-default);
 
-	.spectrum-ProgressBar-track {
-		background: var(--spectrum-progressbar-track-color-white);
+	.spectrum-ProgressBar--sideLabel & {
+		flex: 1 1 var(--spectrum-progressbar-size-default);
 	}
 }
 
-@keyframes indeterminate-loop-ltr {
+.spectrum-ProgressBar-fill {
+	block-size: var(--spectrum-progressbar-thickness);
+
+	border: none;
+	background: var(--spectrum-progressbar-fill-color);
+
+	transition: width 1s;
+
+	.spectrum-ProgressBar--indeterminate & {
+		position: relative;
+		inline-size: var(--spectrum-progressbar-fill-size-indeterminate);
+
+		will-change: transform;
+		animation-name: indeterminate-loop;
+		animation-timing-function: var(--spectrum-progressbar-animation-ease-in-out-indeterminate);
+		animation-duration: var(--spectrum-progressbar-animation-duration-indeterminate);
+		animation-iteration-count: infinite;
+	}
+}
+
+@keyframes indeterminate-loop {
 	from {
-		transform: translate(calc(-1 * var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate))));
+		transform: translate(calc(-1 * var(--spectrum-progressbar-dir-indeterminate-multiplier) * var(--spectrum-progressbar-fill-size-indeterminate)));
 	}
 
 	to {
-		transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default)));
-	}
-}
-
-@keyframes indeterminate-loop-rtl {
-	from {
-		transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-fill-size-indeterminate)));
-	}
-
-	to {
-		transform: translate(calc(-1 * var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default))));
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-ProgressBar-track {
-		--highcontrast-progressbar-fill-color: ButtonText;
-		--highcontrast-progressbar-track-color: ButtonFace;
-
-		forced-color-adjust: none;
-		border: 1px solid ButtonText;
+		transform: translate(calc(var(--spectrum-progressbar-dir-indeterminate-multiplier) * var(--spectrum-progressbar-size-default)));
 	}
 }

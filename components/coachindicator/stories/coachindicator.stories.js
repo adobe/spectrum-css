@@ -3,7 +3,7 @@ import { isQuiet, staticColor } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
-import { AllVariantsCoachIndicatorGroup, Template } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
@@ -63,14 +63,14 @@ Default.parameters = {
 };
 Default.tags = ["!autodocs"];
 
-export const DefaultVariants = AllVariantsCoachIndicatorGroup.bind({});
+export const DefaultVariants = Template.bind({});
 DefaultVariants.tags = ["!dev"];
 DefaultVariants.storyName = "Default";
 DefaultVariants.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-export const QuietVariants = AllVariantsCoachIndicatorGroup.bind({});
+export const QuietVariants = Template.bind({});
 QuietVariants.tags = ["!dev"];
 QuietVariants.storyName = "Quiet";
 QuietVariants.args = {

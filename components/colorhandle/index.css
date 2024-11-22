@@ -13,6 +13,17 @@
 
 @import "./themes/spectrum-two.css";
 
+@media (forced-colors: active) {
+	.spectrum-ColorHandle {
+		forced-color-adjust: none;
+
+		&.is-disabled {
+			--highcontrast-colorhandle-border-color-disabled: GrayText;
+			--highcontrast-colorhandle-fill-color-disabled: Canvas;
+		}
+	}
+}
+
 .spectrum-ColorHandle {
 	/* outer border as box shadow on the colorhandle */
 	/* TODO replace --spectrum-black-rgb with color-handle-outer-border-color when supported by RGBA */
@@ -38,7 +49,7 @@
 	margin-block: calc(-1 * calc(var(--mod-colorhandle-size, var(--spectrum-color-handle-size)) / 2));
 
 	border-width: var(--mod-colorhandle-border-width, var(--spectrum-color-handle-border-width));
-	border-color: var(--highcontrast-colorhandle-border-color, var(--mod-colorhandle-border-color, var(--spectrum-white)));
+	border-color: var(--mod-colorhandle-border-color, var(--spectrum-white));
 	border-style: solid;
 
 	box-shadow: 0 0 0 var(--mod-colorhandle-outer-border-width, var(--spectrum-colorhandle-outer-border-width)) var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));
@@ -87,15 +98,4 @@
 	block-size: 100%;
 	box-shadow: inset 0 0 0 var(--mod-colorhandle-inner-border-width, var(--spectrum-color-handle-inner-border-width)) var(--mod-colorhandle-inner-border-color, var(--spectrum-colorhandle-inner-border-color));
 	background-color: var(--spectrum-picked-color);
-}
-
-@media (forced-colors: active) {
-	.spectrum-ColorHandle {
-		forced-color-adjust: none;
-
-		&.is-disabled {
-			--highcontrast-colorhandle-border-color-disabled: GrayText;
-			--highcontrast-colorhandle-fill-color-disabled: Canvas;
-		}
-	}
 }
