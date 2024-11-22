@@ -29,7 +29,7 @@ governing permissions and limitations under the License.
 
 	/* font */
 	--spectrum-coachmark-title-color: var(--spectrum-heading-color);
-	--spectrum-coachmark-title-font-family: var(--spectrum-title-sans-serif-font-family);
+	--spectrum-coachmark-title-font-family: var(--spectrum-sans-serif-font);
 	--spectrum-coachmark-title-font-style: var(--spectrum-title-serif-font-style);
 	--spectrum-coachmark-title-text-font-weight: var(--spectrum-title-sans-serif-font-weight);
 	--spectrum-coachmark-title-font-size: var(--spectrum-coach-mark-title-font-size);
@@ -44,7 +44,7 @@ governing permissions and limitations under the License.
 
 	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
 	--spectrum-coachmark-step-font-weight: var(--spectrum-body-medium-font-weight);
-	--spectrum-coachmark-step-font-family: var(--spectrum-body-sans-serif-font-family);
+	--spectrum-coachmark-step-font-family: var(--spectrum-sans-serif-font);
 	--spectrum-coachmark-step-font-style: var(--spectrum-body-serif-font-style);
 	--spectrum-coachmark-step-line-height: var(--spectrum-line-height-200);
 	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-font-size);
