@@ -69,6 +69,7 @@ export default {
 };
 
 export const Default = CoachMarkGroup.bind({});
+Default.title = "Standard";
 Default.tags = ["!autodocs"];
 Default.args = {};
 
