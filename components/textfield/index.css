@@ -262,7 +262,7 @@
 		inset-block-start: var(--mod-textfield-icon-spacing-block-valid, var(--spectrum-textfield-icon-spacing-block-valid));
 		inset-block-end: var(--mod-textfield-icon-spacing-block-valid, var(--spectrum-textfield-icon-spacing-block-valid));
 		inset-inline-end: var(--mod-textfield-icon-spacing-inline-end-valid, var(--spectrum-textfield-icon-spacing-inline-end-valid));
-		color: var(--highcontrast-textfield-icon-color-valid, var(--mod-textfield-icon-color-valid, var(--spectrum-textfield-icon-color-valid)));
+		color: var(--mod-textfield-icon-color-valid, var(--spectrum-textfield-icon-color-valid));
 	}
 
 	/****** Validation Icon - Invalid ⚠️ ******/
@@ -272,7 +272,7 @@
 		inset-block-start: var(--mod-textfield-icon-spacing-block-invalid, var(--spectrum-textfield-icon-spacing-block-invalid));
 		inset-block-end: var(--mod-textfield-icon-spacing-block-invalid, var(--spectrum-textfield-icon-spacing-block-invalid));
 		inset-inline-end: var(--mod-textfield-icon-spacing-inline-end-invalid, var(--spectrum-textfield-icon-spacing-inline-end-invalid));
-		color: var(--highcontrast-textfield-icon-color-invalid, var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid)));
+		color: var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid));
 	}
 
 	.spectrum-Textfield.is-disabled &,
@@ -357,7 +357,9 @@
 	vertical-align: top; /* used to align them correctly in forms. */
 	outline: none;
 	background-color: var(--mod-textfield-background-color, var(--spectrum-textfield-background-color));
-	border: var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)) solid var(--highcontrast-textfield-border-color, var(--mod-textfield-border-color, var(--spectrum-textfield-border-color)));
+	border-width: var(--mod-textfield-border-width, var(--spectrum-textfield-border-width));
+	border-style: solid;
+	border-color: var(--highcontrast-textfield-border-color, var(--mod-textfield-border-color, var(--spectrum-textfield-border-color)));
 	border-radius: var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius));
 	transition: border-color var(--mod-texfield-animation-duration, var(--spectrum-texfield-animation-duration)) ease-in-out;
 
@@ -428,20 +430,20 @@
 	.is-focused &,
 	&:focus {
 		border-color: var(--highcontrast-textfield-border-color-focus, var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus)));
-		color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
+		color: var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus));
 
 		&::placeholder {
-			color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
+			color: var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus));
 		}
 
 		/* focus hover */
 		&:hover {
-			border-color: var(--highcontrast-textfield-border-color-focus-hover, var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover)));
-			color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
+			border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
+			color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
 		}
 
 		&:hover::placeholder {
-			color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
+			color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
 		}
 	}
 
@@ -487,7 +489,7 @@
 
 		/* focus hover */
 		&:hover {
-			border-color: var(--highcontrast-textfield-border-color-invalid-focus-hover, var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover)));
+			border-color: var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover));
 		}
 	}
 
@@ -637,6 +639,7 @@
 /********* WHCM *********/
 @media (forced-colors: active) {
 	.spectrum-Textfield {
+		--highcontrast-textfield-border-color: CanvasText;
 		--highcontrast-textfield-border-color-hover: Highlight;
 		--highcontrast-textfield-border-color-focus: Highlight;
 		--highcontrast-textfield-border-color-keyboard-focus: CanvasText;

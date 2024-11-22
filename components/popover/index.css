@@ -80,7 +80,7 @@
 			.spectrum-Popover-tip-triangle {
 				stroke-linecap: square;
 				stroke-linejoin: miter;
-				fill: var(--highcontrast-popover-background-color, var(--mod-popover-background-color, var(--spectrum-popover-background-color)));
+				fill: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
 				stroke: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
 				stroke-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 			}

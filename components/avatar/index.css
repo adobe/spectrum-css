@@ -98,7 +98,7 @@
 	opacity: var(--mod-avatar-color-opacity, var(--spectrum-avatar-color-opacity));
 
 	&.is-disabled {
-		opacity: var(--highcontrast-avatar-color-opacity-disabled, var(--mod-avatar-color-opacity-disabled, var(--spectrum-avatar-color-opacity-disabled)));
+		opacity: var(--mod-avatar-color-opacity-disabled, var(--spectrum-avatar-color-opacity-disabled));
 	}
 }
 
