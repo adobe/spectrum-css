@@ -268,7 +268,7 @@
 		&:disabled,
 		&[disabled] {
 			& + .spectrum-Switch-switch {
-				background-color: var(--highcontrast-switch-background-color-disabled, var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled)));
+				background-color: var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled));
 			}
 
 			& + .spectrum-Switch-switch::before {
@@ -367,7 +367,7 @@
 .spectrum-Switch-input:disabled,
 .spectrum-Switch-input[disabled] {
 	& + .spectrum-Switch-switch {
-		background-color: var(--highcontrast-switch-background-color-disabled, var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled)));
+		background-color: var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled));
 
 		&::before {
 			border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));

@@ -1,7 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".is-open:scope",
     ".spectrum-Modal",
     ".spectrum-Modal--fullscreen",
     ".spectrum-Modal--fullscreenTakeover",
@@ -42,6 +41,7 @@
     "--spectrum-animation-duration-500",
     "--spectrum-animation-ease-in",
     "--spectrum-animation-ease-out",
+    "--spectrum-animation-linear",
     "--spectrum-background-layer-2-color",
     "--spectrum-corner-radius-100",
     "--spectrum-dialog-confirm-entry-animation-distance"

@@ -104,12 +104,5 @@
     "--system-toast-divider-color"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-toast-background-color-default",
-    "--highcontrast-toast-border-color",
-    "--highcontrast-toast-informative-background-color-default",
-    "--highcontrast-toast-negative-background-color-default",
-    "--highcontrast-toast-positive-background-color-default",
-    "--highcontrast-toast-text-and-icon-color"
-  ]
+  "high-contrast": ["--highcontrast-toast-border-color"]
 }

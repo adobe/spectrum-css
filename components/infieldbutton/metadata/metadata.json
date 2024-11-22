@@ -2,11 +2,9 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-InfieldButton",
-    ".spectrum-InfieldButton .spectrum-InfieldButton-fill",
-    ".spectrum-InfieldButton .spectrum-InfieldButton-icon",
-    ".spectrum-InfieldButton--bottom",
     ".spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill",
-    ".spectrum-InfieldButton--top",
+    ".spectrum-InfieldButton--left .spectrum-InfieldButton-fill",
+    ".spectrum-InfieldButton--right .spectrum-InfieldButton-fill",
     ".spectrum-InfieldButton--top .spectrum-InfieldButton-fill",
     ".spectrum-InfieldButton-fill",
     ".spectrum-InfieldButton-icon",
@@ -14,10 +12,8 @@
     ".spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeL",
     ".spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeS",
     ".spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeXL",
-    ".spectrum-InfieldButton.spectrum-InfieldButton--left .spectrum-InfieldButton-fill",
     ".spectrum-InfieldButton.spectrum-InfieldButton--quiet",
     ".spectrum-InfieldButton.spectrum-InfieldButton--quiet:disabled",
-    ".spectrum-InfieldButton.spectrum-InfieldButton--right .spectrum-InfieldButton-fill",
     ".spectrum-InfieldButton.spectrum-InfieldButton--sizeL",
     ".spectrum-InfieldButton.spectrum-InfieldButton--sizeS",
     ".spectrum-InfieldButton.spectrum-InfieldButton--sizeXL",
@@ -25,17 +21,13 @@
     ".spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeL",
     ".spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeS",
     ".spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeXL",
-    ".spectrum-InfieldButton:active .spectrum-InfieldButton-fill",
-    ".spectrum-InfieldButton:active .spectrum-InfieldButton-icon",
-    ".spectrum-InfieldButton:active:not(:disabled)",
+    ".spectrum-InfieldButton:active",
     ".spectrum-InfieldButton:disabled",
     ".spectrum-InfieldButton:focus-visible",
-    ".spectrum-InfieldButton:focus-visible .spectrum-InfieldButton-fill",
-    ".spectrum-InfieldButton:focus-visible .spectrum-InfieldButton-icon",
-    ".spectrum-InfieldButton:focus-visible:not(:disabled)",
-    ".spectrum-InfieldButton:hover .spectrum-InfieldButton-fill",
-    ".spectrum-InfieldButton:hover .spectrum-InfieldButton-icon",
-    ".spectrum-InfieldButton:hover:not(:disabled)"
+    ".spectrum-InfieldButton:hover",
+    ".spectrum-InfieldButton:not(:disabled):active",
+    ".spectrum-InfieldButton:not(:disabled):focus-visible",
+    ".spectrum-InfieldButton:not(:disabled):hover"
   ],
   "modifiers": [
     "--mod-infield-border-color",
@@ -159,5 +151,8 @@
     "--system-infield-button-stacked-top-border-radius-start-start"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-infield-button-border-color"]
+  "high-contrast": [
+    "--highcontrast-infield-button-border-color",
+    "--highcontrast-infield-button-border-color-active"
+  ]
 }

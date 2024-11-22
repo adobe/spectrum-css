@@ -5,24 +5,19 @@
     ".spectrum-Link--quiet",
     ".spectrum-Link--quiet:hover",
     ".spectrum-Link--secondary",
-    ".spectrum-Link--secondary:active",
-    ".spectrum-Link--secondary:focus",
-    ".spectrum-Link--secondary:hover",
     ".spectrum-Link--staticBlack",
-    ".spectrum-Link--staticBlack:active",
-    ".spectrum-Link--staticBlack:focus",
-    ".spectrum-Link--staticBlack:hover",
     ".spectrum-Link--staticWhite",
-    ".spectrum-Link--staticWhite:active",
-    ".spectrum-Link--staticWhite:focus",
-    ".spectrum-Link--staticWhite:hover",
     ".spectrum-Link:active",
     ".spectrum-Link:focus-visible",
     ".spectrum-Link:hover"
   ],
   "modifiers": [
     "--mod-link-animation-duration",
+    "--mod-link-text-color",
+    "--mod-link-text-color-active",
     "--mod-link-text-color-black",
+    "--mod-link-text-color-focus",
+    "--mod-link-text-color-hover",
     "--mod-link-text-color-primary-active",
     "--mod-link-text-color-primary-default",
     "--mod-link-text-color-primary-focus",
@@ -49,17 +44,5 @@
   ],
   "system-theme": [],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-link-focus-color",
-    "--highcontrast-link-text-color-black",
-    "--highcontrast-link-text-color-primary-active",
-    "--highcontrast-link-text-color-primary-default",
-    "--highcontrast-link-text-color-primary-focus",
-    "--highcontrast-link-text-color-primary-hover",
-    "--highcontrast-link-text-color-secondary-active",
-    "--highcontrast-link-text-color-secondary-default",
-    "--highcontrast-link-text-color-secondary-focus",
-    "--highcontrast-link-text-color-secondary-hover",
-    "--highcontrast-link-text-color-white"
-  ]
+  "high-contrast": ["--highcontrast-link-text-color"]
 }
