@@ -31,35 +31,20 @@
 	inline-size: var(--mod-coachmark-width, var(--spectrum-coach-mark-width));
 }
 
-.spectrum-CoachMark-buttongroup {
-	display: var(--spectrum-coachmark-buttongroup-display);
-}
-
-.spectrum-CoachMark-buttongroup--mobile {
-	--spectrum-coachmark-buttongroup-display: var(--spectrum-coachmark-buttongroup-mobile-display);
-
-	/* @passthrough -- ButtonGroup */
-	--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
-}
-
-.spectrum-CoachMark-menu {
-	display: var(--spectrum-coachmark-menu-display);
-}
-
-.spectrum-CoachMark-menu--mobile {
-	--spectrum-coachmark-menu-display: var(--spectrum-coachmark-menu-mobile-display);
-}
-
+/* Used when the coachmark has an image */
 .spectrum-CoachMark-image-wrapper {
 	block-size: var(--mod-coachmark-media-height, var(--spectrum-coach-mark-media-height));
 	min-block-size: var(--mod-coachmark-media-min-height, var(--spectrum-coach-mark-media-minimum-height));
 	inline-size: calc(var(--mod-coachmark-width, var(--spectrum-coach-mark-width)) - (var(--spectrum-coachmark-border-size) * 2));
+
 	object-fit: cover;
 	object-position: center;
+
 	border-start-start-radius: inherit;
 	border-start-end-radius: inherit;
 }
 
+/* Class for the image; nested inside image-wrapper */
 .spectrum-CoachMark-image {
 	display: block;
 	inline-size: 100%;
@@ -69,6 +54,7 @@
 	border-start-end-radius: calc(var(--spectrum-coachmark-border-radius) - var(--spectrum-coachmark-border-size));
 }
 
+/* Shared content styles */
 .spectrum-CoachMark-header,
 .spectrum-CoachMark-content,
 .spectrum-CoachMark-footer {
@@ -76,6 +62,7 @@
 	padding-inline: var(--mod-coachmark-padding, var(--spectrum-coach-mark-edge-to-content));
 }
 
+/* Wrapper contains title, action-menu */
 .spectrum-CoachMark-header {
 	padding-block-start: var(--mod-coachmark-padding, var(--spectrum-coach-mark-edge-to-content));
 	display: flex;
@@ -84,33 +71,7 @@
 	margin-block-end: var(--mod-coachmark-header-to-body, var(--spectrum-spacing-200));
 }
 
-.spectrum-CoachMark-action-menu {
-	white-space: nowrap;
-	z-index: 1;
-	margin-inline-start: var(--mod-coachmark-heading-to-action-button, var(--spectrum-spacing-300));
-}
-
-.spectrum-CoachMark-content {
-	margin-block-end: var(--mod-coachmark-body-to-footer, var(--spectrum-spacing-300));
-	color: var(--mod-coachmark-content-font-color, var(--spectrum-body-color));
-	font-size: var(--mod-coachmark-content-font-size, var(--spectrum-coach-mark-body-size));
-	font-weight: var(--mod-coachmark-content-font-weight, var(--spectrum-body-sans-serif-font-weight));
-	font-family: var(--mod-coachmark-content-font-family, var(--spectrum-sans-serif-font));
-	font-style: var(--mod-coachmark-content-font-style, var(--spectrum-body-sans-serif-font-style));
-	line-height: var(--mod-coachmark-content-line-height, var(--spectrum-body-line-height));
-}
-
-.spectrum-CoachMark-footer {
-	display: grid;
-	align-items: end;
-	margin-block-start: 0;
-	padding-block-end: var(--mod-coachmark-padding, var(--spectrum-coach-mark-edge-to-content));
-
-	.spectrum-ButtonGroup {
-		grid-column-start: 2;
-	}
-}
-
+/* Text wrapper for the title content; sides besdie action menu if present */
 .spectrum-CoachMark-title {
 	color: var(--mod-coachmark-title-color, var(--spectrum-heading-color));
 	font-size: var(--mod-coachmark-title-font-size, var(--spectrum-coach-mark-title-size));
@@ -121,8 +82,47 @@
 	margin-block-end: 0;
 }
 
+/* Wrapper element around the nested action menu sub-component */
+.spectrum-CoachMark-action-menu {
+	white-space: nowrap;
+	z-index: 1;
+	margin-inline-start: var(--mod-coachmark-heading-to-action-button, var(--spectrum-spacing-300));
+}
+
+/* @deprecated not used currently in demos or by SWC */
+.spectrum-CoachMark-menu {
+	display: var(--spectrum-coachmark-menu-display);
+}
+
+/* @deprecated not used currently in demos or by SWC */
+.spectrum-CoachMark-menu--mobile {
+	--spectrum-coachmark-menu-display: var(--spectrum-coachmark-menu-mobile-display);
+}
+
+/* Text wrapper for the content */
+.spectrum-CoachMark-content {
+	margin-block-end: var(--mod-coachmark-body-to-footer, var(--spectrum-spacing-300));
+	color: var(--mod-coachmark-content-font-color, var(--spectrum-body-color));
+	font-size: var(--mod-coachmark-content-font-size, var(--spectrum-coach-mark-body-size));
+	font-weight: var(--mod-coachmark-content-font-weight, var(--spectrum-body-sans-serif-font-weight));
+	font-family: var(--mod-coachmark-content-font-family, var(--spectrum-sans-serif-font));
+	font-style: var(--mod-coachmark-content-font-style, var(--spectrum-body-sans-serif-font-style));
+	line-height: var(--mod-coachmark-content-line-height, var(--spectrum-body-line-height));
+}
+
+/* Footer wrapper for the pagination and button group sub-components */
+.spectrum-CoachMark-footer {
+	display: grid;
+	align-items: end;
+	margin-block-start: 0;
+	padding-block-end: var(--mod-coachmark-padding, var(--spectrum-coach-mark-edge-to-content));
+}
+
+/* Text wrapper for the step count */
 .spectrum-CoachMark-step {
 	justify-self: start;
+	margin-block-end: calc(var(--mod-coachmark-step-to-bottom, var(--spectrum-coach-mark-pagination-text-to-bottom-edge)) - var(--mod-coachmark-padding, var(--spectrum-coach-mark-edge-to-content)));
+
 	color: var(--mod-coachmark-step-color, var(--spectrum-coach-mark-pagination-color));
 	font-size: var(--mod-coachmark-step-font-size, var(--spectrum-coach-mark-pagination-body-size));
 	font-weight: var(--mod-coachmark-step-text-font-weight, var(--spectrum-body-sans-serif-font-weight));
@@ -130,5 +130,19 @@
 	font-style: var(--mod-coachmark-step-font-style, var(--spectrum-body-sans-serif-font-style));
 	line-height: var(--mod-coachmark-step-text-line-height, var(--spectrum-body-line-height));
 	white-space: nowrap;
-	margin-block-end: calc(var(--mod-coachmark-step-to-bottom, var(--spectrum-coach-mark-pagination-text-to-bottom-edge)) - var(--mod-coachmark-padding, var(--spectrum-coach-mark-edge-to-content)));
+}
+
+/* Class attached to the ButtonGroup sub-component */
+.spectrum-CoachMark-buttongroup {
+	display: var(--spectrum-coachmark-buttongroup-display);
+	grid-column-start: 2;
+}
+
+/* Variant for mobile */
+/* @todo can we use a media query here or base this on scale? */
+.spectrum-CoachMark-buttongroup--mobile {
+	--spectrum-coachmark-buttongroup-display: var(--spectrum-coachmark-buttongroup-mobile-display);
+
+	/* @passthrough -- ButtonGroup */
+	--mod-buttongroup-spacing: var(--spectrum-spacing-100);
 }

@@ -13,6 +13,8 @@
 
 @import "./themes/spectrum-two.css";
 
+/* @todo align modifiers to use field-label or fieldlabel but not both */
+
 .spectrum-FieldLabel,
 .spectrum-FieldLabel--sizeM {
 	--spectrum-field-label-min-height: var(--spectrum-component-height-75);

@@ -49,4 +49,3 @@
 | `--mod-line-height-100`                    |
 | `--mod-sans-font-family-stack`             |
 | `--mod-static-black-focus-indicator-color` |
-| `--mod-static-white-focus-indicator-color` |
