@@ -23,9 +23,8 @@
 | `--mod-datepicker-invalid-quiet-color`               |
 | `--mod-datepicker-min-width`                         |
 | `--mod-datepicker-padding-inline`                    |
-| `--mod-datepicker-padding-inline-end-invalid`        |
 | `--mod-datepicker-padding-inline-end-invalid-quiet`  |
-| `--mod-datepicker-padding-inline-end-quiet`          |
+| `--mod-datepicker-padding-inline-quiet`              |
 | `--mod-datepicker-pickerbutton-border-color`         |
 | `--mod-datepicker-pickerbutton-border-color-invalid` |
 | `--mod-datepicker-quiet-border-color-hover`          |

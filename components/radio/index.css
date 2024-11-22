@@ -115,6 +115,8 @@
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Radio {
+		--highcontrast-radio-button-background-color: ButtonFace;
+
 		/* high contrast text */
 		--highcontrast-radio-neutral-content-color: CanvasText;
 		--highcontrast-radio-neutral-content-color-hover: CanvasText;
