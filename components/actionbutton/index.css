@@ -82,9 +82,6 @@
 	}
 
 	&.spectrum-ActionButton--staticBlack {
-		/* background color _not_ selected is coming from the system theme layer */
-		--mod-actionbutton-background-color-disabled: transparent;
-
 		--mod-actionbutton-background-color-default-selected: var(--spectrum-transparent-black-800);
 		--mod-actionbutton-background-color-hover-selected: var(--spectrum-transparent-black-900);
 		--mod-actionbutton-background-color-down-selected: var(--spectrum-transparent-black-900);
@@ -136,7 +133,7 @@
 		--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-actionbutton-background-color-selected-hover));
 		--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected, var(--spectrum-actionbutton-background-color-selected-down));
 		--mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected, var(--spectrum-actionbutton-background-color-selected-focus));
-		--mod-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
+		--mod-actionbutton-background-color-disabled: var(--spectrum-actionbutton-background-color-selected-disabled);
 
 		--mod-actionbutton-border-color-default: transparent;
 		--mod-actionbutton-border-color-hover: transparent;
@@ -248,7 +245,7 @@
 
 	position: relative;
 
-	min-inline-size: var(--mod-actionbutton-min-width, calc((var(--spectrum-actionbutton-edge-to-visual-only) - var(--spectrum-actionbutton-border-width)) * 2 + var(--spectrum-actionbutton-icon-size)));
+	min-inline-size: var(--mod-actionbutton-min-width, calc(var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-sized-edge-to-visual-only)) * 2 + var(--spectrum-actionbutton-icon-size)));
 	block-size: var(--spectrum-actionbutton-height);
 
 	border-radius: var(--spectrum-actionbutton-border-radius);
@@ -294,6 +291,7 @@ a.spectrum-ActionButton {
 	@extend %spectrum-AnchorButton;
 }
 
+/* Nested sub-component: Icon */
 .spectrum-ActionButton-icon {
 	@extend %spectrum-ButtonIcon;
 

@@ -18,7 +18,7 @@
 @container style(--system: express) {
 	.spectrum-Stepper {
 		--spectrum-stepper-border-width: var(--spectrum-border-width-200);
-		--spectrum-stepper-border-color: var(--spectrum-gray-400);
+		--spectrum-stepper-border-color-default: var(--spectrum-gray-400);
 		--spectrum-stepper-border-color-hover: var(--spectrum-gray-500);
 		--spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
 		--spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-900);
@@ -36,7 +36,6 @@
 
 		/** Invalid **/
 		--spectrum-stepper-border-color-invalid: transparent;
-		--spectrum-stepper-border-color-hover-invalid: transparent;
 		--spectrum-stepper-border-color-focus-invalid: transparent;
 		--spectrum-stepper-border-color-focus-hover-invalid: transparent;
 		--spectrum-stepper-border-color-keyboard-focus-invalid: transparent;
@@ -44,5 +43,10 @@
 		/** Disabled **/
 		--spectrum-stepper-button-border-width-disabled: 0;
 		--spectrum-stepper-buttons-background-color-disabled: var(--spectrum-disabled-background-color);
+	}
+
+	.spectrum-Stepper--quiet {
+		--spectrum-stepper-buttons-border-style: none;
+		--spectrum-stepper-button-edge-to-fill: 0;
 	}
 }

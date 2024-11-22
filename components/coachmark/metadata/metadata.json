@@ -7,7 +7,6 @@
     ".spectrum-CoachMark-buttongroup--mobile",
     ".spectrum-CoachMark-content",
     ".spectrum-CoachMark-footer",
-    ".spectrum-CoachMark-footer .spectrum-ButtonGroup",
     ".spectrum-CoachMark-header",
     ".spectrum-CoachMark-image",
     ".spectrum-CoachMark-image-wrapper",
@@ -86,7 +85,7 @@
   "passthroughs": [
     "--mod-button-edge-to-visual-only",
     "--mod-buttongroup-justify-content",
-    "--mod-buttongroup-spacing-horizontal",
+    "--mod-buttongroup-spacing",
     "--mod-popover-border-width",
     "--mod-popover-content-area-spacing-vertical",
     "--mod-popover-corner-radius"
