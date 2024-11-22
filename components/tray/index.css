@@ -66,12 +66,12 @@
 	background-color: var(--spectrum-tray-background-color);
 
 	&.is-open {
+		transform: translateY(0);
+
 		/* Entry animations */
 		transition:
 			transform var(--spectrum-tray-entry-animation-duration) cubic-bezier(0, 0, 0.4, 1) var(--spectrum-tray-entry-animation-delay),
 			opacity var(--spectrum-tray-entry-animation-duration) cubic-bezier(0, 0, 0.4, 1) var(--spectrum-tray-entry-animation-delay);
-
-		transform: translateY(0);
 	}
 }
 

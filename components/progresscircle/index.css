@@ -78,7 +78,7 @@
 	inline-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size));
 	block-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size));
 
-	border-style: var(--highcontrast-progress-circle-track-border-style, var(--mod-progress-circle-track-border-style, var(--spectrum-progress-circle-track-border-style)));
+	border-style: var(--mod-progress-circle-track-border-style, var(--spectrum-progress-circle-track-border-style));
 	border-width: var(--mod-progress-circle-thickness, var(--spectrum-progress-circle-thickness));
 	border-radius: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size));
 	border-color: var(--mod-progress-circle-track-border-color, var(--spectrum-progress-circle-track-border-color));

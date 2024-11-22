@@ -13,25 +13,36 @@
 
 @import "./themes/spectrum-two.css";
 
-.spectrum-ButtonGroup--sizeS {
-	--spectrum-buttongroup-spacing: var(--spectrum-spacing-200);
-}
-
 .spectrum-ButtonGroup {
-	display: var(--mod-buttongroup-display, flex);
-	flex-direction: var(--mod-buttongroup-flex-direction, row);
-	flex-wrap: wrap;
+	/* @deprecated --mod-buttongroup-spacing-horizontal -- replaced by --mod-buttongroup-spacing */
+	--spectrum-buttongroup-spacing: var(--mod-buttongroup-spacing, var(--mod-buttongroup-spacing-horizontal, var(--spectrum-spacing-300)));
+	--spectrum-buttongroup-display: flex;
+	--spectrum-buttongroup-flex-direction: row;
+	--spectrum-buttongroup-justify-content: var(--mod-buttongroup-justify-content, normal);
 
-	gap: var(--mod-buttongroup-spacing-horizontal, var(--spectrum-buttongroup-spacing, var(--spectrum-spacing-300)));
-	justify-content: var(--mod-buttongroup-justify-content, normal);
+	&.spectrum-ButtonGroup--sizeS {
+		/* @deprecated --mod-buttongroup-spacing-horizontal -- replaced by --mod-buttongroup-spacing */
+		--spectrum-buttongroup-spacing: var(--mod-buttongroup-spacing, var(--mod-buttongroup-spacing-horizontal, var(--spectrum-spacing-200)));
+	}
 
-	.spectrum-ButtonGroup-item {
-		flex-shrink: 0;
+	&.spectrum-ButtonGroup--vertical {
+		/* @deprecated --mod-buttongroup-spacing-vertical -- replaced by generic --mod-buttongroup-spacing */
+		--mod-buttongroup-spacing: var(--mod-buttongroup-spacing-vertical);
+
+		--spectrum-buttongroup-display: inline-flex;
+		--spectrum-buttongroup-flex-direction: column;
 	}
 }
 
-.spectrum-ButtonGroup--vertical {
-	--mod-buttongroup-display: inline-flex;
-	--mod-buttongroup-spacing-horizontal: var(--mod-buttongroup-spacing-vertical);
-	--mod-buttongroup-flex-direction: column;
+.spectrum-ButtonGroup {
+	display: var(--spectrum-buttongroup-display);
+	flex-direction: var(--spectrum-buttongroup-flex-direction);
+	flex-wrap: wrap;
+
+	gap: var(--spectrum-buttongroup-spacing);
+	justify-content: var(--spectrum-buttongroup-justify-content);
+}
+
+.spectrum-ButtonGroup-item {
+	flex-shrink: 0;
 }

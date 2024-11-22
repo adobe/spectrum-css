@@ -88,7 +88,9 @@ export const parameters = {
 		page: DocumentationTemplate,
 		story: { inline: true },
 		source: {
-			type: "dynamic",
+			dark: false,
+			excludeDecorators: true,
+			type: "auto",
 			language: "html",
 		},
 	},
