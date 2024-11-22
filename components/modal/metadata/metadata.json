@@ -1,7 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".is-open:scope",
     ".spectrum-Modal",
     ".spectrum-Modal--fullscreen",
     ".spectrum-Modal--fullscreenTakeover",
@@ -24,7 +23,6 @@
     "--mod-modal-max-height",
     "--mod-modal-max-width",
     "--mod-modal-transition-animation-duration",
-    "--mod-overlay-animation-duration",
     "--mod-overlay-animation-duration-opened"
   ],
   "component": [

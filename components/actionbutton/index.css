@@ -242,13 +242,13 @@
 
 	--spectrum-actionbutton-edge-to-visual: var(--mod-actionbutton-edge-to-visual, calc(var(--spectrum-actionbutton-sized-edge-to-visual) - var(--spectrum-actionbutton-border-width)));
 	--spectrum-actionbutton-edge-to-text: var(--mod-actionbutton-edge-to-text, calc(var(--spectrum-actionbutton-sized-edge-to-text) - var(--spectrum-actionbutton-border-width)));
-	--spectrum-actionbutton-edge-to-visual-only: var(--mod-actionbutton-edge-to-visual-only, calc(var(--spectrum-actionbutton-sized-edge-to-visual-only) - var(--spectrum-actionbutton-border-width)));
+	--spectrum-actionbutton-edge-to-visual-only: var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-sized-edge-to-visual-only));
 
 	@extend %spectrum-BaseButton;
 
 	position: relative;
 
-	min-inline-size: var(--mod-actionbutton-min-width, calc((var(--spectrum-actionbutton-edge-to-visual-only) - var(--spectrum-actionbutton-border-width)) * 2 + var(--spectrum-actionbutton-icon-size)));
+	min-inline-size: var(--mod-actionbutton-min-width, calc(var(--spectrum-actionbutton-edge-to-visual-only) * 2 + var(--spectrum-actionbutton-sized-icon-size)));
 	block-size: var(--spectrum-actionbutton-height);
 
 	border-radius: var(--spectrum-actionbutton-border-radius);
