@@ -12,11 +12,12 @@ import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./temp
 
 /**
  * A popover is used to display transient content (menus, options, additional actions, etc.) and appears when clicking/tapping on a source (tools, buttons, etc.).
- * It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
- *
+ * It stands out via its visual style (stroke and/or drop shadow) and floats on top of the rest of the interface.
+ * 
+ * ## Usage notes
  * - Popover's position and distance to its source should be handled by the implementation. Positioning in Storybook is only for demonstration purposes.
- * - When the `.is-open` class is present, popover is offset from the source by the spacing value defined in `--spectrum-popover-animation-distance`. This
- * offset is done with a CSS transform and animates with a CSS transition.
+ * - When the `.is-open` class is present, popover is offset from the source by the spacing value defined in `--spectrum-popover-animation-distance`. This offset is done with a CSS transform and animates with a CSS transition.
+ * - There may be cases where a popover has another sibling popover. Implementation can add `margin` styles to the sibling popover, set to `--spectrum-popover-animation-distance` within their popover position calculations. See [the nested popover story](/docs/components-popover--docs#nested) below for an example.
  */
 export default {
 	title: "Components/Popover",
