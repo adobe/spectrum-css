@@ -90,12 +90,6 @@
 		--spectrum-stepper-height: var(--mod-stepper-height, var(--spectrum-component-height-75));
 	}
 
-	&,
-	&.spectrum-Stepper--sizeM {
-		--spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-medium);
-		--spectrum-stepper-height: var(--spectrum-component-height-100);
-	}
-
 	&.spectrum-Stepper--sizeL {
 		--spectrum-stepper-button-width: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-large));
 		--spectrum-stepper-height: var(--mod-stepper-height, var(--spectrum-component-height-200));
@@ -321,13 +315,12 @@
 	transition: border-color var(--spectrum-stepper-animation-duration) ease-in-out;
 }
 
-/* stylelint-disable selector-class-pattern -- @todo update hide-stepper class to standard variant syntax */
+/* stylelint-disable-next-line selector-class-pattern -- @todo update hide-stepper class to standard variant syntax */
 .spectrum-Stepper.hide-stepper .spectrum-Stepper-input {
 	border-start-end-radius: var(--spectrum-stepper-border-radius);
 	border-end-end-radius: var(--spectrum-stepper-border-radius);
 	border-inline-end-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
 }
-/* stylelint-enable selector-class-pattern */
 
 /* --- Quiet variant styles --- */
 .spectrum-Stepper--quiet {
