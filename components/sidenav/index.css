@@ -17,7 +17,7 @@
 	/* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
 	.spectrum-SideNav {
 		.spectrum-Icon {
-			forced-color-adjust: preserve-parent-color; /* stylelint-disable-line declaration-property-value-no-unknown */
+			forced-color-adjust: preserve-parent-color;
 		}
 	}
 
@@ -136,7 +136,7 @@
 	&.is-disabled {
 		/* Disable all children */
 		.spectrum-SideNav-itemLink {
-			background-color: var(--highcontrast-sidenav-background-disabled, var(--mod-sidenav-background-disabled, var(--spectrum-sidenav-background-disabled)));
+			background-color: var(--mod-sidenav-background-disabled, var(--spectrum-sidenav-background-disabled));
 			color: var(--highcontrast-sidenav-content-disabled-color, var(--mod-sidenav-content-disabled-color, var(--spectrum-sidenav-content-disabled-color)));
 
 			cursor: default;
@@ -184,7 +184,7 @@
 
 	border-radius: var(--mod-sidenav-border-radius, var(--spectrum-sidenav-border-radius));
 
-	background-color: var(--highcontrast-sidenav-background-default, var(--mod-sidenav-background-default, var(--spectrum-sidenav-background-default)));
+	background-color: var(--mod-sidenav-background-default, var(--spectrum-sidenav-background-default));
 	color: var(--highcontrast-sidenav-content-color-default, var(--mod-sidenav-content-color-default, var(--spectrum-sidenav-content-color-default)));
 
 	inline-size: var(--mod-sidenav-width, var(--spectrum-sidenav-width));
@@ -227,7 +227,7 @@
 		outline: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color))) solid var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
 		outline-offset: var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
 		background-color: var(--highcontrast-sidenav-background-key-focus, var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus)));
-		color: var(--highcontrast-sidenav-content-color-key-focus, var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus)));
+		color: var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus));
 	}
 }
 

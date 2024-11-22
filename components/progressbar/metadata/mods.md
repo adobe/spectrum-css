@@ -18,4 +18,3 @@
 | `--mod-progressbar-text-color`                          |
 | `--mod-progressbar-thickness`                           |
 | `--mod-progressbar-track-color`                         |
-| `--mod-spacing-progressbar-label-to-text`               |

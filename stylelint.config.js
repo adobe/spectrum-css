@@ -54,7 +54,11 @@ module.exports = {
 				except: ["first-nested"],
 				ignore: ["after-comment", "stylelint-commands"],
 				// don't require a newline before a passthrough flag
-				ignoreComments: [/^@?passthroughs?/],
+				ignoreComments: [
+					/^\s*@passthroughs?/,
+					/^\s*@deprecated?/,
+					/^\s*@todo?/
+				],
 			},
 		],
 		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system|_)/, {}],
@@ -152,7 +156,6 @@ module.exports = {
 				/** @note this is a list of custom properties that are allowed to be unknown */
 				ignoreList: [
 					/^--mod-/,
-					/^--highcontrast-/,
 					/^--system-/,
 					/^--spectrum-picked-color$/,
 				],
@@ -165,7 +168,9 @@ module.exports = {
 		"spectrum-tools/no-unused-custom-properties": [
 			true,
 			{
-				ignoreList: [/^--mod-/],
+				ignoreList: [
+					/^--mod-/,
+				],
 				disableFix: true,
 				severity: "warning",
 			},
@@ -176,17 +181,30 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: [".storybook/assets/*.css"],
+			files: [".storybook/assets/*.css", "iframe.html*.css"],
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
+				"selector-class-pattern": [
+					"^(spectrum|is-|u-|sb-)[A-Za-z0-9-]*", {
+						resolveNestedSelectors: true
+					}
+				],
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
+				"font-family-no-missing-generic-family-keyword": null,
 			},
 		},
 		{
-			files: ["components/*/themes/*.css", "tokens/**/*.css"],
+			files: ["tokens*/**/*.css(?inline)?"],
 			rules: {
+				"selector-class-pattern": [
+					"^(spectrum)[A-Za-z0-9-]*", {
+						resolveNestedSelectors: true
+					}
+				],
+				"custom-property-pattern": [/^(spectrum|color|scale|system)/, {}],
+				"number-max-precision": null,
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
 			}
