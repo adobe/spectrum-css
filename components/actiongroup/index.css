@@ -72,7 +72,7 @@
 		z-index: 0;
 
 		&:first-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 
 			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
@@ -81,7 +81,7 @@
 		}
 
 		& + .spectrum-ActionGroup-item {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px;
 
 			margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
@@ -89,7 +89,7 @@
 		}
 
 		&:last-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
 
 			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
@@ -124,7 +124,7 @@
 		border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 
 		&:first-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px;
 
 			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
@@ -142,7 +142,7 @@
 		}
 
 		&:last-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 
 			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));

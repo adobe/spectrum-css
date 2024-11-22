@@ -435,7 +435,7 @@
 /* setting tick marks in relation to label */
 .spectrum-Slider--tick {
 	.spectrum-Slider-handle {
-		background-color: var(--highcontrast-slider-tick-handle-background-color, var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color)));
+		background-color: var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color));
 	}
 
 	.spectrum-Slider-controls {
@@ -649,7 +649,8 @@
 
 		&:hover,
 		&:active {
-			border-color: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
+			/* @todo need to update --mod with a component-specific prefix */
+			border-color: var(--mod-disabled-border-color, var(--spectrum-disabled-border-color));
 			background: var(--highcontrast-slider-handle-background-color-disabled, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
 		}
 	}

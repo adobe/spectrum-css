@@ -331,10 +331,12 @@ export const ArgGrid = ({
 export const Sizes = ({
 	withHeading = true,
 	withBorder = false,
+	withWrapperBorder = true,
 	...args
 } = {}, context = {}) => {
 	return ArgGrid({
 		withBorder,
+		withWrapperBorder,
 		heading: withHeading ? "Sizing" : undefined,
 		argKey: "size",
 		labels: {

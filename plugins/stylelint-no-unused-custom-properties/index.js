@@ -139,14 +139,18 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 
 			// If this comment is a start indicator, capture the declarations after it until the end indicator
 			while (nextLine) {
-				if (nextLine.type === "decl" && nextLine.prop.startsWith("--")) {
-					allowedPassthroughs.add(nextLine.prop);
+				switch(nextLine.type) {
+					case "rule":
+						nextLine = nextLine.nodes[0];
+						break;
+					case "decl":
+						if (nextLine.prop.startsWith("--")) {
+							allowedPassthroughs.add(nextLine.prop);
+						}
+					// eslint-disable-next-line no-fallthrough -- intentional fallthrough
+					default:
+						nextLine = nextLine.next();
 				}
-				else if (nextLine.type === "comment" && /^\s*@passthroughs?\s*(\s+end)?$/.test(nextLine.text)) {
-					break;
-				}
-
-				nextLine = nextLine.next();
 			}
 		});
 

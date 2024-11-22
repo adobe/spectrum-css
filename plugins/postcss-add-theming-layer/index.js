@@ -176,6 +176,7 @@ module.exports = ({
 		// Our job here is done
 		if (skipMapping || stripLocalSelectors) return;
 
+		const rules = [];
 		for (let [, selectorMap] of systemMap.entries()) {
 			// This adds the new selectors to the root with their respective system-level mappings
 			for (let [selector, props] of Object.entries(selectorMap)) {
@@ -188,9 +189,12 @@ module.exports = ({
 					rule.append(decl);
 				}
 
-				root.insertAfter(root.first, rule);
+				rules.push(rule);
 			}
 		}
+
+		// Insert the new rules in order after the first rule in the root
+		root.insertAfter(root.first, rules);
 	},
 });
 
