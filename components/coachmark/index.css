@@ -120,10 +120,6 @@ governing permissions and limitations under the License.
 	white-space: nowrap;
 	z-index: 1;
 	margin-inline-start: var(--mod-coachmark-heading-to-action-button, var(--spectrum-coachmark-heading-to-action-button));
-
-	& .spectrum-Popover {
-		--mod-popover-filter: drop-shadow(var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color)));
-	}
 }
 
 .spectrum-CoachMark-content {
