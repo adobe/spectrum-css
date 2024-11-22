@@ -26,6 +26,7 @@
 | `--mod-stepper-buttons-border-width`                |
 | `--mod-stepper-focus-indicator-color`               |
 | `--mod-stepper-focus-indicator-gap`                 |
+| `--mod-stepper-focus-indicator-visibility`          |
 | `--mod-stepper-focus-indicator-width`               |
 | `--mod-stepper-height`                              |
 | `--mod-stepper-min-width-multiplier`                |
