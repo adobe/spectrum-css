@@ -1,5 +1,11 @@
 # Change Log
 
+## 15.0.0-s2-foundations.29
+
+### Patch Changes
+
+- [#3413](https://github.com/adobe/spectrum-css/pull/3413) [`0d80bad`](https://github.com/adobe/spectrum-css/commit/0d80bad9445cf747792be18498c2a7554869221d) Thanks [@pfulton](https://github.com/pfulton)! - feat: s2 foundations non-gray-800 colors update
+
 ## 15.0.0-s2-foundations.28
 
 ### Minor Changes
