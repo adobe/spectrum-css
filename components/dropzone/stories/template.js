@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
-import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -13,11 +12,11 @@ export const Template = ({
 	isDragged = false,
 	isFilled = false,
 	customClasses = [],
-	customHeading,
-	customDescription,
-	customLabel,
-	hasButton = false,
+	heading,
+	description,
+	label,
 	id,
+	size = "m",
 	...globals
 }) => html`
 	<div
@@ -34,16 +33,16 @@ export const Template = ({
 	>
 		${IllustratedMessage({
 			...globals,
-			heading: customHeading,
-			description: customDescription,
+			heading: heading,
+			description: description,
 			customIllustration: customSvg,
+			size: size
 		})}
 		<div class="${rootClass}-actions">
-			${when(hasButton, () =>
-				Button({
-					label: customLabel ?? "Drop file to replace",
-				})
-			)}
+			${Button({
+					label: label ?? "Drop file to replace",
+					size: size
+				})}
 		</div>
 	</div>
 `;

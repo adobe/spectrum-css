@@ -1,5 +1,5 @@
+import { default as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { html } from "lit";
-
 import { Template } from "./template";
 
 
@@ -29,15 +29,27 @@ export default {
 			control: "boolean",
 			if: { arg: "isDragged", truthy: true },
 		},
+		label: {
+			name: "Label",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content"
+			},
+		},
+		hasButtons: {
+			name: "Show button group",
+			table: { disable: true },
+		},
+		...IllustratedMessage.argTypes
 	},
 	args: {
 		rootClass: "spectrum-DropZone",
 		isDragged: false,
 		isFilled: false,
-		customHeading: "Drag and drop your file",
-		customDescription: "Or, select a file from your computer.",
-		customLabel: "Browse files",
-		hasButton: true
+		heading: "Drag and drop your file",
+		description: "Or, select a file from your computer.",
+		label: "Browse files",
 	},
 	parameters: {
 		actions: {
