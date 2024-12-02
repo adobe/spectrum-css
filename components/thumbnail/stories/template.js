@@ -113,9 +113,6 @@ export const Template = ({
 			${OpacityCheckerboard({
 				rootClass: backgroundColor ? `${rootClass}-image-wrapper` : undefined,
 				customClasses: isLayer ? [`${rootClass}-layer-inner`] : !backgroundColor ? [`${rootClass}-image-wrapper`] : [],
-				customStyles: {
-					"--spectrum-opacity-checkerboard-size": "var(--spectrum-thumbnail-opacity-checkerboard-square-size)"
-				},
 				content: image ? [image] : [],
 			})}
 		</div>
