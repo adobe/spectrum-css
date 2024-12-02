@@ -2,6 +2,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import translations from "@spectrum-css/preview/translations";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -298,3 +299,17 @@ export const KeyboardFocusTemplate = (args, context) => Container({
 		}, context)}
 	`
 }, context);
+
+export const LocaleWrapper = (args, context) => {
+	const { lang: contextLang } = context.globals;
+	const lang = args.lang || contextLang;
+	const langTranslations = translations[lang] ?? translations.en;
+	const labelText = langTranslations["fieldlabel.label"];
+	const value = langTranslations["textfield.value"];
+
+	return html`
+		<div lang=${ifDefined(args.lang)}>
+			${Template({ ...args, labelText, value }, context)}
+		</div>
+	`;
+};
