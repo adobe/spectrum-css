@@ -12,7 +12,7 @@
  */
 
 .spectrum-Breadcrumbs {
-	--spectrum-breadcrumbs-block-size: var(--spectrum-component-size-100);
+	--spectrum-breadcrumbs-block-size: var(--spectrum-component-height-100);
 
 	/* Text - medium / default */
 	--spectrum-breadcrumbs-line-height: var(--spectrum-line-height-100);
@@ -30,10 +30,6 @@
 
 	/* Space between separator chevron and items */
 	--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-breadcrumbs-text-to-separator-medium);
-
-	/* Space between edge of component and start/end items */
-	--spectrum-breadcrumbs-inline-start-to-text: var(--spectrum-breadcrumbs-start-edge-to-text-medium);
-	--spectrum-breadcrumbs-inline-end-to-text: var(--spectrum-breadcrumbs-end-edge-to-text);
 
 	/* Vertical spacing for text and separator icon */
 	--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-component-top-to-text-100);
@@ -68,7 +64,7 @@
 
 /* Variant: large */
 .spectrum-Breadcrumbs--large {
-	--spectrum-breadcrumbs-block-size: var(--spectrum-component-size-200);
+	--spectrum-breadcrumbs-block-size: var(--spectrum-component-height-200);
 	--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-200);
 	--spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
 
