@@ -2,11 +2,7 @@
 "@spectrum-css/coachmark": minor
 ---
 
-Adds support for the elevation/drop shadows on action menu popover using popover drop shadow tokens and new mods. Additionally, the corner radius was updated to correspond to the new S2 popover corner radius.
+CSS references to popover custom properties/tokens were updated to reflect some mod name changes in the S2 popover (#3365). The corner radius token was updated to correspond to the new S2 popover corner radius, as well as some updated popover mod names:
 
-New mods include:
-
-- `--mod-popover-drop-shadow-blur`
-- `--mod-popover-drop-shadow-color`
-- `--mod-popover-drop-shadow-x`
-- `--mod-popover-drop-shadow-y`
+- `--mod-popover-border-width` was updated to `--mod-popover-border-thickness`.
+- `--mod-popover-content-area-spacing-vertical` was updated to `--mod-popover-content-area-spacing`.

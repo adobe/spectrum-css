@@ -29,9 +29,5 @@
 | `--mod-coachmark-title-text-font-weight`   |
 | `--mod-coachmark-title-text-line-height`   |
 | `--mod-coachmark-width`                    |
-| `--mod-popover-border-width`               |
+| `--mod-popover-border-thickness`           |
 | `--mod-popover-corner-radius`              |
-| `--mod-popover-drop-shadow-blur`           |
-| `--mod-popover-drop-shadow-color`          |
-| `--mod-popover-drop-shadow-x`              |
-| `--mod-popover-drop-shadow-y`              |
