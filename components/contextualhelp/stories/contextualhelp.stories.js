@@ -78,6 +78,7 @@ export default {
 		rootClass: "spectrum-ContextualHelp",
 		iconName: "Info",
 		popoverPlacement: "bottom-start",
+		customStyles: { "inline-size": "275px" },
 	},
 	parameters: {
 		actions: {
@@ -110,7 +111,9 @@ WithLink.args = {
 export const TopPopover = Template.bind({});
 TopPopover.args = {
 	popoverPlacement: "top",
-	customStyles: { "max-inline-size": "275px" },
+	customStyles: {
+		"margin-top": "170px",
+	},
 	title: "Top popover example of text wrapping in the title",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };

@@ -19,6 +19,7 @@ export default {
 		popoverId: { table: { disable: true } },
 		popoverTestId: { table: { disable: true } },
 		popoverTriggerId: { table: { disable: true } },
+		position: Popover?.argTypes?.position,
 		isOpen: {
 			name: "Open",
 			type: { name: "boolean" },
@@ -47,6 +48,7 @@ export default {
 		popoverTestId: "popover-1",
 		popoverTriggerId: "trigger",
 		isOpen: false,
+		position: Popover?.argTypes?.position,
 		label: "More Actions",
 		iconName: "More",
 		items: [
@@ -67,7 +69,7 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
-				...Popover.parameters.actions.handles,
+				...(Popover?.parameters?.actions?.handles ?? []),
 				...ActionButton.parameters.actions.handles,
 				...Menu.parameters.actions.handles,
 			],
@@ -88,4 +90,6 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	position: "bottom",
+};

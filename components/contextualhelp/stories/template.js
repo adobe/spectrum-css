@@ -56,7 +56,11 @@ export const Template = ({
 			],
 			position: popoverPlacement,
 			customClasses: [`${rootClass}-popover`],
-			customStyles: { top: "25px" },
+			popoverWidth: 275,
+			popoverHeight: 150,
+			popoverWrapperStyles: {
+				"inline-size": "var(--spectrum-popover-width)",
+			}
 		})}
 	</div>
 `;

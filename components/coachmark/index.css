@@ -11,14 +11,14 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-CoachMark {
-	--spectrum-coachmark-min-width:  var(--spectrum-coach-mark-minimum-width);
-	--spectrum-coachmark-width:  var(--spectrum-coach-mark-width);
+	--spectrum-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
+	--spectrum-coachmark-width: var(--spectrum-coach-mark-width);
 	--spectrum-coachmark-max-width: var(--spectrum-coach-mark-maximum-width);
 
 	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
 	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimum-height);
 
-	--spectrum-coachmark-border-size: var(--mod-popover-border-width);
+	--spectrum-coachmark-border-size: var(--mod-popover-border-thickness);
 	--spectrum-coachmark-border-radius: var(--mod-popover-corner-radius);
 
 	/* layout */
@@ -52,14 +52,14 @@ governing permissions and limitations under the License.
 
 	/* mods */
 	--mod-buttongroup-justify-content: flex-end;
-	--mod-popover-border-width: var(--spectrum-border-width-100);
-	--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
-	--mod-popover-content-area-spacing-vertical: 0;
+	--mod-popover-border-thickness: var(--spectrum-border-width-100);
+	--mod-popover-corner-radius: var(--spectrum-corner-radius-large-default);
+	--mod-popover-content-area-spacing: 0;
 	--mod-button-edge-to-visual-only: 9px;
 }
 
 .spectrum-CoachMark {
-  position: relative;
+	position: relative;
 	min-inline-size: var(--mod-coachmark-min-width, var(--spectrum-coachmark-min-width));
 	max-inline-size: var(--mod-coachmark-max-width, var(--spectrum-coachmark-max-width));
 	inline-size: var(--mod-coachmark-width, var(--spectrum-coachmark-width));
@@ -108,7 +108,6 @@ governing permissions and limitations under the License.
 	padding-inline: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));
 }
 
-
 .spectrum-CoachMark-header {
 	padding-block-start: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));
 	display: flex;
@@ -120,7 +119,7 @@ governing permissions and limitations under the License.
 .spectrum-CoachMark-action-menu {
 	white-space: nowrap;
 	z-index: 1;
-	margin-inline-start: var(--mod-coachmark-heading-to-action-button, var(--spectrum-coachmark-heading-to-action-button))
+	margin-inline-start: var(--mod-coachmark-heading-to-action-button, var(--spectrum-coachmark-heading-to-action-button));
 }
 
 .spectrum-CoachMark-content {

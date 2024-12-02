@@ -68,7 +68,7 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
-				...Popover.parameters.actions.handles,
+				...(Popover?.parameters?.actions?.handles ?? []),
 				...CloseButton.parameters.actions.handles,
 				...ActionButton.parameters.actions.handles,
 			],

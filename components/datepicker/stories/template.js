@@ -32,8 +32,6 @@ export const Template = ({
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
-
-
 	return html`
 		<div
 			class=${classMap({
@@ -107,16 +105,16 @@ export const Template = ({
 				...globals,
 				isOpen: isOpen && !isDisabled && !readOnly,
 				withTip: false,
-				position: "bottom",
+				position: "bottom-start",
 				isQuiet,
 				customStyles: isOpen
-					? {
-							position: "absolute",
-							top: "100%",
-							left: "0",
-							width: undefined,
-					}
-					: {},
+						? {
+								width: undefined,
+						}
+						: {},
+					popoverWrapperStyles: {
+						position: "unset",
+					},
 				content: [Calendar(globals)],
 				// @todo this implementation of calendar does not currently display range selections or selected date on first load
 			})}
