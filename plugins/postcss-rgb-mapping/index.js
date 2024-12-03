@@ -34,7 +34,7 @@ function rgbMappingFunction ({
 			/* Determine if this property has already been processed */
 			const isProcessed = prop.endsWith("rgb") || prop.endsWith("opacity");
 
-			/* Parse the value for it's parts */
+			/* Parse the value for its parts */
 			const parsedValue = valueParser(value) || [];
 			/* Determine if the value has an rgb or rgba value */
 			const hasRGBValue = parsedValue.nodes.length ? parsedValue.nodes.some((node) => node.type === "function" && (["rgb", "rgba"].some(func => node.value === func))) : false;

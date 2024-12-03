@@ -57,12 +57,15 @@ async function findCustomProperties(input) {
     //   }
     // });
 
-    // Regular expression to match custom properties with `-rgb` or `-opacity`
-    const regex = /(--[\w-]*-(?:rgb)):.*;/g;
-    // const regex = /(--[\w-]*-(?:rgb|opacity)):.*;/g;
+    // Regular expression to match custom properties with `-rgb` or `-opacity` or `-transparent`
+    const opacityRegex = /(--[\w-]*-(?:opacity)):.*;/g;
+    const rgbRegex = /(--[\w-]*-(?:rgb)):.*;/g;
+    const transparentRegex = /--[\w-]*-transparent-[\w-]*:.*;/g;
 
     // Find all matches
-    const matches = [...cssContent.matchAll(regex)];
+    // const matches = [...cssContent.matchAll(opacityRegex)];
+    // const matches = [...cssContent.matchAll(rgbRegex)];
+    const matches = [...cssContent.matchAll(transparentRegex)];
 
     // Extract matched lines
     const matchedLines = matches.map(match => match[0]);
