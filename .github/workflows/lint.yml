@@ -78,15 +78,16 @@ jobs:
 
             - name: Lint component styles
               if: ${{ inputs.styles_added_files != '' || inputs.styles_modified_files != '' }}
-              uses: reviewdog/action-stylelint@v1.28.0
+              uses: reviewdog/action-stylelint@v1.30.0
               with:
-                  fail_on_error: true
+                  fail_level: error
                   level: error
                   reporter: github-pr-review
                   filter_mode: diff_context
                 #   stylelint_input: "components/*/index.css components/*/themes/*.css"
                   stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
                   stylelint_config: stylelint.config.js
+                  packages: 'stylelint-header stylelint-config-standard stylelint-selector-bem-pattern stylelint-order stylelint-use-logical'
 
             - name: Run eslint on packages and stories
               uses: reviewdog/action-eslint@v1.31.0
