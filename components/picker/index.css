@@ -479,7 +479,7 @@
 .spectrum-Picker.is-disabled {
 	cursor: default;
 	background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
-	border-color: var(--highcontrast-picker-border-color-disabled, transparent);
+	border-color: var(--highcontrast-picker-border-color-disabled, var(--spectrum-picker-border-color-disabled));
 	color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
 
 	.spectrum-Picker-icon,
