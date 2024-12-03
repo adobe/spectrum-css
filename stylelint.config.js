@@ -196,7 +196,9 @@ module.exports = {
 			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
 			files: ["components/*/themes/express.css", "!components/*/themes/spectrum.css"],
 			rules: {
-				"spectrum-tools/theme-alignment": true,
+				"spectrum-tools/theme-alignment": [true, {
+					baseFilename: "spectrum.css",
+				}],
 			},
 		},
 	],

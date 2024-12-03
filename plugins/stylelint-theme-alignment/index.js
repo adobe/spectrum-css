@@ -11,11 +11,12 @@
  */
 
 import fs from "node:fs";
-import { relative, sep } from "node:path";
+import { basename, relative, sep } from "node:path";
 
 import postcss from "postcss";
 import valuesParser from "postcss-values-parser";
 import stylelint from "stylelint";
+import { isString } from "stylelint/lib/utils/validateTypes.mjs";
 
 const {
 	createPlugin,
@@ -34,7 +35,7 @@ const messages = ruleMessages(ruleName, {
 });
 
 /** @type {import('stylelint').Plugin} */
-const ruleFunction = (enabled) => {
+const ruleFunction = (enabled, options = {}) => {
 	return (root, result) => {
 		const validOptions = validateOptions(
 			result,
@@ -43,19 +44,29 @@ const ruleFunction = (enabled) => {
 				actual: enabled,
 				possible: [true],
 			},
+			{
+				actual: options,
+				possible: {
+					baseFilename: isString,
+				},
+				optional: true,
+			},
 		);
 
 		if (!validOptions) return;
+
+
+		const { baseFilename = "spectrum-two" } = options;
 
 		const sourceFile = root.source.input.file;
 		const parts = sourceFile ? sourceFile.split(sep) : [];
 		const isTheme = parts[parts.length - 2] === "themes";
 		const filename = parts[parts.length - 1];
 
-		if (!isTheme || filename === "spectrum.css") return;
+		if (!isTheme || basename(filename, ".css") === baseFilename) return;
 
-		// All the parts of the source file but replace the filename with spectrum-two.css
-		const baseFile = [...parts.slice(0, -1), "spectrum.css"].join(sep);
+		// All the parts of the source file but replace the filename with the baseFilename
+		const baseFile = [...parts.slice(0, -1), `${baseFilename}.css`].join(sep);
 		const rootPath = parts.slice(0, -2).join(sep);
 
 		// If the base file doesn't exist, throw an error
@@ -81,8 +92,10 @@ const ruleFunction = (enabled) => {
 
 		/* Iterate over selectors in the base root */
 		baseRoot.walkRules((rule) => {
-			// Add this selector to the selectors set
-			baseSelectors.add(rule.selector);
+			rule.selectors.forEach((selector) => {
+				// Add this selector to the selectors set
+				baseSelectors.add(selector);
+			});
 
 			rule.walkDecls((decl) => {
 				// If this is a custom property, add it to the properties set
@@ -102,18 +115,20 @@ const ruleFunction = (enabled) => {
 
 		/* Iterate over selectors in the source root and validate that they align with the base */
 		root.walkRules((rule) => {
-			// Check if this selector exists in the base
-			if (!baseSelectors.has(rule.selector)) {
-				// Report any selectors that don't exist in the base
-				report({
-					message: messages.expected,
-					messageArgs: [rule.selector, baseFile, rootPath],
-					node: rule,
-					result,
-					ruleName,
-				});
-				return;
-			}
+			rule.selectors.forEach((selector) => {
+				// Check if this selector exists in the base
+				if (!baseSelectors.has(selector)) {
+					// Report any selectors that don't exist in the base
+					report({
+						message: messages.expected,
+						messageArgs: [selector, baseFile, rootPath],
+						node: rule,
+						result,
+						ruleName,
+					});
+					return;
+				}
+			});
 
 			rule.walkDecls((decl) => {
 				const isProperty = decl.prop.startsWith("--");
