@@ -22,7 +22,7 @@ const Heading = ({
 
 	const headingStyles = {
 		"display": "block",
-		"color": "black",
+		"color": "inherit",
 		"font-family": 'adobe-clean, "adobe clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif',
 		"font-size": "11px",
 		"line-height": "1.3",

@@ -54,7 +54,7 @@
 	--mod-textfield-focus-indicator-color: var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color));
 
 	--mod-textfield-background-color: var(--mod-combobox-background-color-default);
-	--mod-textfield-background-color-disabled: var(--mod-combobox-background-color-disabled);
+	--mod-textfield-background-color-disabled: var(--mod-combobox-background-color-disabled, var(--spectrum-combobox-background-color-disabled));
 
 	--mod-textfield-font-family: var(--mod-combobox-font-family);
 	--mod-textfield-font-weight: var(--mod-combobox-font-weight);
@@ -370,16 +370,19 @@
 	/* Focus */
 	.spectrum-Combobox-textfield.is-focused &,
 	&:focus {
+		--mod-combobox-border-color-default: var(--spectrum-combobox-border-color-focus);
 		--mod-textfield-background-color: var(--mod-combobox-background-color-focus);
 
 		/* Focus + Hover */
 		&:hover {
+			--mod-combobox-border-color-default: var(--spectrum-combobox-border-color-focus-hover);
 			--mod-textfield-background-color: var(--mod-combobox-background-color-focus-hover);
 		}
 	}
 
 	/* Keyboard Focus */
 	.spectrum-Combobox-textfield.is-keyboardFocused & {
+		--mod-combobox-border-color-default: var(--spectrum-combobox-border-color-key-focus);
 		--mod-textfield-background-color: var(--mod-combobox-background-color-key-focus);
 	}
 
