@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.0
+
+### Minor Changes
+
+- [#3403](https://github.com/adobe/spectrum-css/pull/3403) [`48626b8`](https://github.com/adobe/spectrum-css/commit/48626b8ca11043d290c0fe987ec501b88bd6e339) Thanks [@castastrophe](https://github.com/castastrophe)! - Allow the base filename to be passed into the tool so that the core theme can be updated. Great preparations for S2 roll-out when spectrum-two.css theme files will become our primary source of theme content.
+
 ## 1.0.0
 
 ### Major Changes
