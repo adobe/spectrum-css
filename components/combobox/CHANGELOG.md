@@ -1,5 +1,16 @@
 # Change Log
 
+## 4.0.0-s2-foundations.20
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`513256c`](https://github.com/adobe/spectrum-css/commit/513256c7c7587ac6a3741a819a41ab321d1cd965) Thanks [@pfulton](https://github.com/pfulton)! - Update border and background color values for Combobox states [SWC-582]
+
+### Patch Changes
+
+- Updated dependencies [[`da9a90a`](https://github.com/adobe/spectrum-css/commit/da9a90adb1b46abc7f3078d2b7cfcf84f7a41026), [`513256c`](https://github.com/adobe/spectrum-css/commit/513256c7c7587ac6a3741a819a41ab321d1cd965)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.30
+
 ## 4.0.0-s2-foundations.19
 
 ### Major Changes
