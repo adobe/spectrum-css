@@ -12,9 +12,15 @@
  */
 
 const modes = {
-    "Context: Spectrum 2": {
+    "S2": {
         scale: "medium",
         color: "light",
+        textDirection: "ltr",
+        context: "spectrum",
+    },
+    "S2 | Dark": {
+        scale: "medium",
+        color: "dark",
         textDirection: "ltr",
         context: "spectrum",
     },
