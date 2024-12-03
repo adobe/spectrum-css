@@ -7,7 +7,7 @@ export default {
 	context: {
 		title: "Design context",
 		description: "The variation of Spectrum to use in the component",
-		defaultValue: "legacy",
+		defaultValue: "spectrum",
 		type: "string",
 		showName: true,
 		toolbar: {
