@@ -14,3 +14,9 @@
 /* @combine .spectrum.spectrum--legacy */
 
 @import "./spectrum-two.css";
+
+@container style(--system: spectrum) {
+	.spectrum-Combobox {
+		--spectrum-combobox-background-color-disabled: var(--spectrum-disabled-background-color);
+	}
+}
