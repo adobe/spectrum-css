@@ -1,5 +1,13 @@
 # Change Log
 
+## 15.0.0-s2-foundations.30
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`da9a90a`](https://github.com/adobe/spectrum-css/commit/da9a90adb1b46abc7f3078d2b7cfcf84f7a41026) Thanks [@pfulton](https://github.com/pfulton)! - Update background and border color for picker in Spectrum 2 theme [SWC-575]
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`513256c`](https://github.com/adobe/spectrum-css/commit/513256c7c7587ac6a3741a819a41ab321d1cd965) Thanks [@pfulton](https://github.com/pfulton)! - Update border and background color values for Combobox states [SWC-582]
+
 ## 15.0.0-s2-foundations.29
 
 ### Minor Changes
