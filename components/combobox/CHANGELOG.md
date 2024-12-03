@@ -1,5 +1,14 @@
 # Change Log
 
+## 4.0.0-s2-foundations.21
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`79f2ae5`](https://github.com/adobe/spectrum-css/commit/79f2ae585464b2eca63232b37017bd1f96a7d970) Thanks [@pfulton](https://github.com/pfulton)! - Bug fix to retain border color values in S1 for combobox [SWC-582]
+
+- Updated dependencies [[`79f2ae5`](https://github.com/adobe/spectrum-css/commit/79f2ae585464b2eca63232b37017bd1f96a7d970)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.31
+
 ## 4.0.0-s2-foundations.20
 
 ### Minor Changes
