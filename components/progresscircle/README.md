@@ -1,6 +1,6 @@
-# @spectrum-css/progresscirlce
+# @spectrum-css/progresscircle
 
-> The Spectrum CSS progresscirlce component
+> The Spectrum CSS progresscircle component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
