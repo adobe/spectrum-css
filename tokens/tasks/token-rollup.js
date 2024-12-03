@@ -13,16 +13,16 @@
 
 /* eslint-disable no-console */
 
-const fs = require("fs");
+import fs, { existsSync, readdirSync } from "fs";
+import { basename, join } from "path";
 const fsp = fs.promises;
-const path = require("path");
 
-const fg = require("fast-glob");
+import fg from "fast-glob";
 
-const { processCSS } = require("../../tasks/component-builder.js");
-const { copy, writeAndReport, dirs, fetchContent } = require("../../tasks/utilities.js");
+import { processCSS } from "../../tasks/component-builder.js";
+import { copy, dirs, fetchContent, writeAndReport } from "../../tasks/utilities.js";
 
-require("colors");
+import "colors";
 
 /**
  * The builder for the main entry point
@@ -33,7 +33,7 @@ require("colors");
  */
 async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false } = {}) {
 	// Create an index.css asset for each component
-	if (clean && fs.existsSync(outputPath)) {
+	if (clean && existsSync(outputPath)) {
 		await fsp.unlink(outputPath);
 	}
 
@@ -50,12 +50,12 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
  * @returns
  */
 async function componentTheming() {
-	const components = fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json")));
+	const components = readdirSync(dirs.components).filter((file) => existsSync(join(dirs.components, file, "package.json")));
 
 	const promises = [];
 	for (const component of components) {
-		const componentDir = path.join(dirs.components, component);
-		if (!fs.existsSync(path.join(componentDir, "themes"))) continue;
+		const componentDir = join(dirs.components, component);
+		if (!existsSync(join(componentDir, "themes"))) continue;
 
 		// This fetches the content of the files and returns an array of objects with the content and input paths
 		const contentData = await fetchContent(["themes/*.css"], { cwd: componentDir });
@@ -76,8 +76,8 @@ async function componentTheming() {
 			// Create a bridge asset for each component
 			processCSS(
 				imports,
-				path.join(componentDir, "index.css"),
-				path.join(
+				join(componentDir, "index.css"),
+				join(
 					dirs.tokens,
 					"dist",
 					"css",
@@ -93,7 +93,7 @@ async function componentTheming() {
 				},
 			),
 			...contentData.map(async ({ content, input }) => {
-				return processCSS(content, path.join(componentDir, input), path.join(dirs.tokens, "dist", "css", "components", path.basename(input, ".css"), `${component}.css`), {
+				return processCSS(content, join(componentDir, input), join(dirs.tokens, "dist", "css", "components", basename(input, ".css"), `${component}.css`), {
 					skipMapping: false,
 					// Only output the new selectors with the system mappings
 					stripLocalSelectors: true,
@@ -119,7 +119,7 @@ async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
 
 	["express", "spectrum"].forEach(async (theme) => {
 		// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
-		const customFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, `custom-${theme}`), onlyFiles: true });
+		const customFiles = await fg(["*-vars.css"], { cwd: join(cwd, `custom-${theme}`), onlyFiles: true });
 		for (const file of customFiles) {
 
 			let strippedFilename = file.replace(/^custom-/, "");
@@ -129,13 +129,13 @@ async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
 
 			// Read in the custom file and the dist file and combine them into one file
 			const combinedContent = await fetchContent([
-				path.join("dist", "css", theme, strippedFilename),
-				path.join(`custom-${theme}`, file)
+				join("dist", "css", theme, strippedFilename),
+				join(`custom-${theme}`, file)
 			], { cwd, shouldCombine: true });
 
 			promises.push(
-				copy(path.join(`custom-${theme}`, file), path.join("dist", "css", theme, file), { cwd }),
-				combinedContent[0].content ? writeAndReport(combinedContent[0].content, path.join(cwd, "dist", "css", theme, strippedFilename), { cwd }) : Promise.resolve()
+				copy(join(`custom-${theme}`, file), join("dist", "css", theme, file), { cwd }),
+				combinedContent[0].content ? writeAndReport(combinedContent[0].content, join(cwd, "dist", "css", theme, strippedFilename), { cwd }) : Promise.resolve()
 			);
 		}
 	});
@@ -162,7 +162,7 @@ async function main({
 	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
 	console.time(key);
 
-	const compiledOutputPath = path.join(cwd, "dist");
+	const compiledOutputPath = join(cwd, "dist");
 
 	return Promise.all([
 		componentTheming(),
@@ -172,24 +172,24 @@ async function main({
 		return Promise.all([
 			index(
 				["dist/css/components/bridge/*.css"],
-				path.join(compiledOutputPath, "css", "components", "bridge", "index.css"),
+				join(compiledOutputPath, "css", "components", "bridge", "index.css"),
 				{ cwd, clean }
 			),
 			...["spectrum", "express"].map(theme => Promise.all([
 				index(
 					[`dist/css/components/${theme}/*.css`],
-					path.join(compiledOutputPath, "css", "components", theme, "index.css"),
+					join(compiledOutputPath, "css", "components", theme, "index.css"),
 					{ cwd, clean }
 				),
 				index(
 					[`dist/css/${theme}/*-vars.css`, `!dist/css/${theme}/custom-*.css`],
-					path.join(compiledOutputPath, "css", theme, "index.css"),
+					join(compiledOutputPath, "css", theme, "index.css"),
 					{ cwd, clean }
 				),
 			])),
 			index(
 				["dist/css/*-vars.css", "dist/css/spectrum/*-vars.css", "dist/css/express/*-vars.css", "!dist/css/spectrum/custom-*.css", "!dist/css/express/custom-*.css"],
-				path.join(compiledOutputPath, "index.css"),
+				join(compiledOutputPath, "index.css"),
 				{ cwd, clean }
 			),
 		]).then((reports) => {
@@ -231,4 +231,4 @@ async function main({
 	});
 }
 
-exports.default = main;
+export { main as default };
