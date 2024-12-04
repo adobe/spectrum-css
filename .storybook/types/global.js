@@ -13,8 +13,6 @@ export default {
 		toolbar: {
 			items: [
 				{ value: "spectrum", title: "Spectrum 2", right: "default" },
-				{ value: "legacy", title: "Spectrum 1", right: "legacy" },
-				{ value: "express", title: "Express", right: "legacy" },
 				{ value: "raw", title: "Token-free", right: "raw" },
 			],
 			dynamicTitle: true,
@@ -30,7 +28,6 @@ export default {
 			items: [
 				{ value: "light", title: "Light", right: "default" },
 				{ value: "dark", title: "Dark" },
-				{ value: "darkest", title: "Darkest", right: "deprecated" },
 			],
 			dynamicTitle: true,
 		},

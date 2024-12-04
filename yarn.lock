@@ -2976,7 +2976,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/asset@workspace:components/asset":
+"@spectrum-css/asset@workspace:^, @spectrum-css/asset@workspace:components/asset":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/asset@workspace:components/asset"
   peerDependencies:
@@ -3084,13 +3084,19 @@ __metadata:
 "@spectrum-css/card@workspace:components/card":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/card@workspace:components/card"
+  dependencies:
+    "@spectrum-css/actionbutton": "workspace:^"
+    "@spectrum-css/asset": "workspace:^"
+    "@spectrum-css/checkbox": "workspace:^"
+    "@spectrum-css/icon": "workspace:^"
+    "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/typography": "workspace:^"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=6"
     "@spectrum-css/asset": ">=5"
     "@spectrum-css/checkbox": ">=9"
     "@spectrum-css/icon": ">=7"
-    "@spectrum-css/quickaction": ">=3"
-    "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/tokens": ">=14.5.0"
     "@spectrum-css/typography": ">=6"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
@@ -3101,14 +3107,12 @@ __metadata:
       optional: true
     "@spectrum-css/icon":
       optional: true
-    "@spectrum-css/quickaction":
-      optional: true
     "@spectrum-css/typography":
       optional: true
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/checkbox@workspace:components/checkbox":
+"@spectrum-css/checkbox@workspace:^, @spectrum-css/checkbox@workspace:components/checkbox":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/checkbox@workspace:components/checkbox"
   peerDependencies:
@@ -3392,7 +3396,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/icon@workspace:components/icon":
+"@spectrum-css/icon@workspace:^, @spectrum-css/icon@workspace:components/icon":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/icon@workspace:components/icon"
   peerDependencies:
@@ -3514,13 +3518,18 @@ __metadata:
 "@spectrum-css/pagination@workspace:components/pagination":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/pagination@workspace:components/pagination"
+  dependencies:
+    "@spectrum-css/actionbutton": "workspace:^"
+    "@spectrum-css/button": "workspace:^"
+    "@spectrum-css/icon": "workspace:^"
+    "@spectrum-css/textfield": "workspace:^"
+    "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=6"
     "@spectrum-css/button": ">=13"
     "@spectrum-css/icon": ">=7"
-    "@spectrum-css/splitbutton": ">=8"
     "@spectrum-css/textfield": ">=7"
-    "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3587,7 +3596,6 @@ __metadata:
     "@spectrum-css/button": "workspace:^"
     "@spectrum-css/table": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
-    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^14.6.0"
     "@spectrum-css/typography": "workspace:^"
     "@spectrum-css/ui-icons": "workspace:^"
     "@spectrum-css/underlay": "workspace:^"
@@ -3830,7 +3838,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/textfield@workspace:components/textfield":
+"@spectrum-css/textfield@workspace:^, @spectrum-css/textfield@workspace:components/textfield":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/textfield@workspace:components/textfield"
   peerDependencies:

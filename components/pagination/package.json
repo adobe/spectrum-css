@@ -26,18 +26,23 @@
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"metadata/*"
 	],
 	"peerDependencies": {
 		"@spectrum-css/actionbutton": ">=6",
 		"@spectrum-css/button": ">=13",
 		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/splitbutton": ">=8",
 		"@spectrum-css/textfield": ">=7",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
+		"@spectrum-css/tokens": ">=14"
+	},
+	"devDependencies": {
+		"@spectrum-css/actionbutton": "workspace:^",
+		"@spectrum-css/button": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/textfield": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",
@@ -47,5 +52,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/pagination-list-beta",
+			"rootClass": "spectrum-Pagination"
+		}
+	]
 }

@@ -1,16 +1,14 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
 
 import "../index.css";
 
@@ -26,17 +24,17 @@ export const Template = ({
 	isHorizontal = false,
 	isQuiet = false,
 	isGallery = false,
+	isCardAssetOverride = false,
 	isGrid = false,
-	hasQuickAction = false,
 	hasActions = false,
+	hasQuickAction = false,
 	showAsset,
 	customStyles = {},
 	customClasses = [],
-	id,
+	id = getRandomId("card"),
 	role,
-	...globals
-}) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	return html`
     <div
@@ -50,86 +48,173 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
-      style=${ifDefined(styleMap(customStyles))}
+      style=${styleMap(customStyles)}
       tabindex="0"
-      role=${ifDefined(image || showAsset ? "figure" : isGrid ? "rowheader" : role)}
+      role=${ifDefined(
+        image || showAsset ? "figure" : isGrid ? "rowheader" : role
+      )}
+			@focusin=${function() {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${function() {
+				updateArgs({ isFocused: false });
+			}}
     >
-      ${when(
-        image || showAsset,
-        () => when(
+      ${when(image || showAsset, () =>
+        when(
           showAsset || (isGallery && image),
           () => html`
-            <div class="spectrum-Card-preview">
+            <div
+              class=${classMap({
+                [`${rootClass}-preview`]: true,
+              })}
+            >
               ${when(
                 !isHorizontal,
-                () => Asset({
-                  ...globals,
-                  image,
-                  preset: !image ? showAsset : undefined,
-                }),
-                () => Icon({
-                  ...globals,
-                  size: "xxl",
-                  iconName: showAsset === "folder" ? "File" : "Document",
-                })
+                () =>
+                  Asset(
+                    {
+                      image,
+                      preset: !image ? showAsset : undefined,
+                      isCardAssetOverride,
+                    },
+                    context
+                  ),
+                () =>
+                  Icon(
+                    {
+                      size: "xxl",
+                      iconName: showAsset === "folder" ? "File" : "Document",
+                      setName: "workflow",
+                    },
+                    context
+                  )
               )}
-            </div>`,
-          () => html`<div class="${rootClass}-coverPhoto" style="background-image: url(${image})"></div>`
+            </div>
+          `,
+          () => html`
+            <div
+              class=${classMap({ [`${rootClass}-coverPhoto`]: true })}
+              style=${styleMap({ "background-image": `url(${image})` })}
+            ></div>
+            ${Divider({
+              size: "s",
+              customClasses: [`${rootClass}-divider`],
+            }, context)}
+          `
         )
       )}
       ${when(
         title || subtitle,
-        () => html`
-          <div class="${rootClass}-body">
+        () =>
+          html` <div
+            class=${classMap({
+              [`${rootClass}-body`]: true,
+            })}
+          >
             ${when(
               title || hasActions,
               () => html`
-                <div class="${rootClass}-header">
-                ${when(title, () => html`<div class="${rootClass}-title spectrum-Heading spectrum-Heading--sizeXS">${title}</div>`)}
-                ${when(hasActions && !isHorizontal,
-                  () => html`
-                    <div class="${rootClass}-actionButton">
-                      ${ActionButton({
-                        ...globals,
+                <div
+                  class=${classMap({
+                    [`${rootClass}-header`]: true,
+                  })}
+                >
+                  ${when(
+                    title,
+                    () => html`
+                      <div
+                        class=${classMap({
+                          [`${rootClass}-title`]: true,
+                        })}
+                      >
+                        ${title}
+                      </div>
+                    `
+                  )}
+                  ${when(hasActions && !isHorizontal, () =>
+                    ActionButton(
+                      {
                         iconName: "More",
+                        iconSet: "workflow",
                         size: "m",
-                        isQuiet: true
-                      })}
-                    </div>`
-                )}
-                </div>`
+                        isQuiet: true,
+                        customClasses: [`${rootClass}-actionButton`],
+                      },
+                      context
+                    )
+                  )}
+                </div>
+              `
             )}
             ${when(
               subtitle || description,
               () => html`
-              <div class="${rootClass}-content">
-                ${when(subtitle, () => html`<div class="${rootClass}-subtitle spectrum-Detail spectrum-Detail--sizeS">${subtitle}</div>`)}
-                ${when(description, () => html`<div class="${rootClass}-description">${description}</div>`)}
-              </div>`
+                <div
+                  class=${classMap({
+                    [`${rootClass}-content`]: true,
+                  })}
+                >
+                  ${when(
+                    subtitle,
+                    () => html`
+                      <div
+                        class=${classMap({
+                          [`${rootClass}-subtitle`]: true,
+                        })}
+                      >
+                        ${subtitle}
+                      </div>
+                    `
+                  )}
+                  ${when(
+                    description,
+                    () => html`
+                      <div
+                        class=${classMap({
+                          [`${rootClass}-description`]: true,
+                        })}
+                      >
+                        ${description}
+                      </div>
+                    `
+                  )}
+                </div>
+              `
             )}
           </div>`
       )}
-      ${when(footer, () => html`
-        <div class="${rootClass}-footer">
-          ${footer}
-        </div>`)}
       ${when(
-        hasQuickAction && !isHorizontal,
-        () => QuickAction({
-          ...globals,
-          noOverlay: true,
-          content: [
-            Checkbox({
-              ...globals,
-              isChecked: isSelected,
-              title: "Select",
-            }),
-          ],
-          onclick: () => {
-            updateArgs({ isSelected: !isSelected });
-          },
-          customClasses: [`${rootClass}-quickActions`],
-        })
+        footer && !isQuiet,
+        () => html`
+          <div
+            class=${classMap({
+              [`${rootClass}-footer`]: true,
+            })}
+          >
+            ${footer}
+          </div>
+        `
       )}
-    </div>`;
+      ${when(hasQuickAction && !isHorizontal, () =>
+        html`
+          <div
+            class=${classMap({
+              [`${rootClass}-quickActions`]: true,
+            })}
+            @click=${function() {
+              updateArgs({ isSelected: !isSelected });
+            }}
+          >
+            ${Checkbox(
+              {
+                isChecked: isSelected,
+                title: "Select",
+              },
+              context
+            )}
+          </div>`
+      )}
+    </div>
+  `;
 };

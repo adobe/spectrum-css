@@ -1,7 +1,6 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
-import legacyTokens from "@spectrum-css/tokens-legacy/dist/index.css?inline";
 import tokens from "@spectrum-css/tokens/dist/index.css?inline";
 
 /**
@@ -48,8 +47,6 @@ export const withContextWrapper = makeDecorator({
 			const isTesting = testingPreview;
 			const isDocs = viewMode === "docs";
 			const isRaw = Boolean(context === "raw");
-			const isModern = Boolean(context === "spectrum");
-			const isExpress = Boolean(context === "express");
 
 			// Start by attaching the appropriate tokens to the container
 			toggleStyles(document.body, "tokens", tokens, !isRaw);
@@ -60,7 +57,7 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			// Start by attaching the appropriate tokens to the container
-			toggleStyles(document.body, "tokens", isModern ? tokens : legacyTokens, !isRaw);
+			toggleStyles(document.body, "tokens", tokens, !isRaw);
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Reset the context to the original values
@@ -85,19 +82,6 @@ export const withContextWrapper = makeDecorator({
 				// Every container gets the spectrum class
 				container.classList.toggle("spectrum", !isRaw);
 
-				// S1 and S1 Express get the legacy class
-				container.classList.toggle("spectrum--legacy", !isModern && !isRaw);
-
-				// Express only gets the express class
-				container.classList.toggle("spectrum--express", isExpress && !isRaw);
-
-				// Darkest is deprecated in Spectrum 2
-				if (isModern && color === "darkest") {
-					/* eslint-disable no-console -- notify that darkest was deprecated in S2 */
-					console.warn("The 'darkest' color is deprecated in Spectrum 2. Please use 'dark' instead.");
-					color = "dark";
-				}
-
 				// Let the static color override the color if it's set
 				if (hasStaticElement && staticColorSettings[staticKey]?.color) {
 					color = staticColorSettings[staticKey].color;
@@ -109,7 +93,7 @@ export const withContextWrapper = makeDecorator({
 					color = "light";
 				}
 
-				for (let c of ["light", "dark", "darkest"]) {
+				for (let c of ["light", "dark"]) {
 					container.classList.toggle(`spectrum--${c}`, c === color && !isRaw);
 				}
 
@@ -124,7 +108,7 @@ export const withContextWrapper = makeDecorator({
 				}
 			}
 
-		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, legacyTokens, staticColorSettings, testingPreview]);
+		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, testingPreview]);
 
 		return StoryFn(data);
 	},
