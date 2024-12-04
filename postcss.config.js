@@ -14,12 +14,7 @@
 const { join } = require("path");
 
 module.exports = ({
-	skipMapping = false,
-	referencesOnly = false,
-	preserveVariables = true,
-	stripLocalSelectors = false,
 	resolveImports = true,
-	shouldCombine = false,
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -81,19 +76,6 @@ module.exports = ({
 				prefix: "is-"
 			} : false,
 			"postcss-hover-media-feature": {},
-			/* --------------------------------------------------- */
-			/* ------------------- VARIABLE PARSING -------------- */
-			"@spectrum-tools/postcss-add-theming-layer": {
-				selectorPrefix: "spectrum",
-				skipMapping,
-				preserveVariables,
-				referencesOnly,
-				stripLocalSelectors,
-				debug: verbose,
-			},
-			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
-				newSelector: ".spectrum",
-			} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
