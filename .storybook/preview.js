@@ -90,7 +90,7 @@ export const parameters = {
 	// Set an empty object to avoid the "undefined" value in the ComponentDetails doc block
 	packageJson: {},
 	// A list of published npm tags that should not appear in the ComponentDetails doc block
-	ignoredTags: ["beta", "next"],
+	ignoredTags: ["beta"],
 };
 
 export default {
