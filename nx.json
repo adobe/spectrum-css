@@ -26,7 +26,7 @@
 	},
 	"pluginsConfig": {
 		"@nx/js": {
-			"analyzeSourceFiles": false
+			"analyzeSourceFiles": true
 		}
 	},
 	"targetDefaults": {
@@ -35,7 +35,10 @@
 			"dependsOn": [
 				"^build",
 				"clean",
-				{ "projects": "tokens", "target": "build" }
+				{
+					"projects": "tokens",
+					"target": "build"
+				}
 			],
 			"executor": "nx:run-commands",
 			"inputs": [
@@ -44,18 +47,19 @@
 				"{workspaceRoot}/tasks/component-builder.js",
 				"!{projectRoot}/stories/*.js",
 				"{workspaceRoot}/tasks/component-builder.js",
-				{ "externalDependencies": ["postcss"] },
-				{ "env": "NODE_ENV" }
+				{
+					"externalDependencies": ["postcss"]
+				},
+				{
+					"env": "NODE_ENV"
+				}
 			],
 			"options": {
 				"commands": [
 					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-builder.js\").default()'"
 				]
 			},
-			"outputs": [
-				"{projectRoot}/dist/*.css",
-				"{projectRoot}/dist/themes/*.css"
-			]
+			"outputs": ["{projectRoot}/dist/*.css", "{projectRoot}/dist/themes/*.css"]
 		},
 		"clean": {
 			"cache": true,
@@ -65,7 +69,9 @@
 				"{projectRoot}/dist/**/*.{css,json}",
 				"{projectRoot}/dist/*.map",
 				"{projectRoot}/dist/**/*.map",
-				{ "externalDependencies": ["rimraf"] }
+				{
+					"externalDependencies": ["rimraf"]
+				}
 			],
 			"options": {
 				"commands": [
@@ -82,7 +88,10 @@
 			"executor": "nx:run-commands",
 			"inputs": [
 				"{workspaceRoot}/tasks/compare-compiled-output.js",
-				{ "dependentTasksOutputFiles": "dist/*.css", "transitive": true },
+				{
+					"dependentTasksOutputFiles": "dist/*.css",
+					"transitive": true
+				},
 				{
 					"externalDependencies": [
 						"fast-glob",
@@ -97,7 +106,9 @@
 						"colors"
 					]
 				},
-				{ "env": "NODE_ENV" }
+				{
+					"env": "NODE_ENV"
+				}
 			],
 			"options": {
 				"commands": [
@@ -115,7 +126,9 @@
 				"stylelint",
 				"eslint",
 				"prettier",
-				{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
+				{
+					"externalDependencies": ["stylelint", "eslint", "prettier"]
+				}
 			],
 			"options": {
 				"commands": [
@@ -134,7 +147,9 @@
 				"stylelint",
 				"eslint",
 				"prettier",
-				{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
+				{
+					"externalDependencies": ["stylelint", "eslint", "prettier"]
+				}
 			],
 			"options": {
 				"commands": [
@@ -150,16 +165,16 @@
 				"core",
 				"tools",
 				"{workspaceRoot}/tasks/component-report.js",
-				{ "env": "NODE_ENV" }
+				{
+					"env": "NODE_ENV"
+				}
 			],
 			"options": {
 				"commands": [
 					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
 				]
 			},
-			"outputs": [
-				"{projectRoot}/metadata/metadata.json"
-			]
+			"outputs": ["{projectRoot}/metadata/metadata.json"]
 		},
 		"test": {
 			"cache": true,
@@ -181,7 +196,13 @@
 				}
 			},
 			"executor": "nx:run-commands",
-			"inputs": ["scripts", "tools", { "externalDependencies": ["chromatic"] }],
+			"inputs": [
+				"scripts",
+				"tools",
+				{
+					"externalDependencies": ["chromatic"]
+				}
+			],
 			"options": {
 				"commands": [
 					"chromatic --only-changed --build-script-name build --junit-report"
@@ -194,12 +215,32 @@
 			"inputs": [
 				"{workspaceRoot}/schemas/metadata.schema.json",
 				"metadata",
-				{ "externalDependencies": ["pajv"] }
+				{
+					"externalDependencies": ["pajv"]
+				}
 			],
 			"options": {
 				"commands": [
 					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/metadata/metadata.json\" || exit 0"
 				]
+			}
+		},
+		"@nx/js:tsc": {
+			"cache": true,
+			"dependsOn": ["^build"],
+			"inputs": ["default", "^default"]
+		},
+		"@nx/jest:jest": {
+			"cache": true,
+			"inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
+			"options": {
+				"passWithNoTests": true
+			},
+			"configurations": {
+				"ci": {
+					"ci": true,
+					"codeCoverage": true
+				}
 			}
 		}
 	}

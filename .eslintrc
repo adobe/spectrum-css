@@ -58,23 +58,7 @@
 		{
 			"files": ["project.json"],
 			"rules": {
-				"jsonc/sort-keys": [
-					"warn",
-					{
-						"pathPattern": "^$",
-						"order": [
-							"$schema",
-							"name",
-							"tags",
-							"implicitDependencies",
-							"targets"
-						]
-					},
-					{
-						"pathPattern": ".*",
-						"order": { "type": "asc" }
-					}
-				]
+				"jsonc/sort-keys": [0]
 			}
 		},
 		{
