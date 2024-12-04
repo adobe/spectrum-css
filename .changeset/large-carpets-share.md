@@ -80,7 +80,6 @@
 "@spectrum-css/well": major
 "@spectrum-css/tag": major
 "@spectrum-css/preview": major
-"@spectrum-css/generator": major
 "@spectrum-css/tokens": major
 ---
 

@@ -13,20 +13,28 @@
 
  @import "./themes/spectrum-two.css";
 
-.spectrum-{{ pascalCase name }} {
-  // color: var(--highcontrast-{{ folderName }}-content-color-default, var(--mod-{{ folderName }}-content-color-default, var(--spectrum-{{ folderName }}-content-color-default)));
-
-  &.spectrum-{{ pascalCase name }}--sizeS {}
-  &,
-  &.spectrum-{{ pascalCase name }}--sizeM {}
-  &.spectrum-{{ pascalCase name }}--sizeL {}
-  &.spectrum-{{ pascalCase name }}--sizeXL {}
-}
-
 @media (forced-colors: active) {
-  .spectrum-{{ pascalCase name }} {
-    --highcontrast-{{ folderName }}-content-color-default: CanvasText;
+  .spectrum-<%= pascal(name) %> {
+    --highcontrast-<%= kebab(name) %>-content-color: CanvasText;
 
     forced-color-adjust: none;
   }
+}
+
+.spectrum-<%= pascal(name) %> {
+  --spectrum-<%= kebab(name) %>-content-color: var(--highcontrast-<%= kebab(name) %>-content-color, var(--mod-<%= kebab(name) %>-content-color, var(--spectrum-neutral-content-color-default)));
+
+  /* T-shirt sizing */
+  &,
+  &.spectrum-<%= pascal(name) %>--sizeM {}
+
+  &.spectrum-<%= pascal(name) %>--sizeS {}
+
+  &.spectrum-<%= pascal(name) %>--sizeL {}
+
+  &.spectrum-<%= pascal(name) %>--sizeXL {}
+}
+
+.spectrum-<%= pascal(name) %> {
+  color: var(--spectrum-<%= kebab(name) %>-content-color);
 }

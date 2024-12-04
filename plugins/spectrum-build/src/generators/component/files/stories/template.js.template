@@ -11,9 +11,9 @@ import "../themes/express.css";
 import "../themes/spectrum.css";
 
 export const Template = ({
-  rootClass = "spectrum-{{ pascalCase name }}",
+  rootClass = "spectrum-<%= pascal(name) %>",
   size = "m",
-  id = getRandomId("{{ pascalCase name }}"),
+  id = getRandomId("<%= pascal(name) %>"),
   isDisabled = false,
   testId,
   customClasses = [],
