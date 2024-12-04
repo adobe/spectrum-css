@@ -170,10 +170,6 @@ async function main({
 
 	const processed = await processCSS(undefined, sourceCSS, undefined, {
 		cwd,
-		skipMapping: false,
-		referencesOnly: false,
-		preserveVariables: true,
-		stripLocalSelectors: false,
 		map: false,
 		env: "production",
 	});
@@ -184,7 +180,7 @@ async function main({
 			cwd,
 			sourcePath: sourceCSS,
 			componentName,
-			baseSelectors: [".spectrum", ".spectrum--express", ".spectrum--legacy"],
+			baseSelectors: [".spectrum"],
 			dataModel: {
 				modifiers: ["mod"],
 				spectrum: ["spectrum"],

@@ -1,6 +1,6 @@
 // Import the component markup template
+import { Template } from "@spectrum-css/checkbox/stories/template.js";
 import { html } from "lit";
-import { Template } from "../../../components/checkbox/stories/template";
 
 export default {
 	title: "Corner rounding",
@@ -22,16 +22,11 @@ const Checkbox = ({
 	customStyles = {},
 	isChecked = false,
 	...args
-}, context) => {
-	return html`
-		<div style="padding: 1rem 0;">
-			${Template({
-				...args,
-				iconName: undefined,
-			}, context)}
-		</div>
-	`;
-};
+} = {}, context = {}) => html`
+	<div style="padding: 1rem 0;">
+		${Template({ ...args, iconName: undefined }, context)}
+	</div>
+`;
 
 const CheckboxTable = (args, context) => {
 	return html`
