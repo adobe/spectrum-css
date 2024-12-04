@@ -80,11 +80,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.1.6...@spectrum-css/pagination@8.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
 ### 🛑 BREAKING CHANGES
- - Removes component-builder & component-builder-simple for script leveraging postcss
 
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="7.1.6"></a>
@@ -135,7 +135,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
-\*deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-css/issues/2437))([ff5dda6](https://github.com/adobe/spectrum-css/commit/ff5dda6))
+- deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-css/issues/2437))([ff5dda6](https://github.com/adobe/spectrum-css/commit/ff5dda6))
 
 <a name="7.1.0"></a>
 
@@ -145,7 +145,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
-\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+- remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="7.0.5"></a>
 
@@ -163,7 +163,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
-<a name="7.0.3"></a>
+<a name="7.0.3"></a>'
 
 ## 7.0.3
 
@@ -193,12 +193,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.50...@spectrum-css/pagination@7.0.0)
 
-\*feat(pagination)!: migrate to spectrum tokens package([f29a74d](https://github.com/adobe/spectrum-css/commit/f29a74d))
+- feat(pagination)!: migrate to spectrum tokens package([f29a74d](https://github.com/adobe/spectrum-css/commit/f29a74d))
 
 ### 🛑 BREAKING CHANGES
 
-    		*
-    		Replaces DNA tokens with Spectrum tokens.
+- Replaces DNA tokens with Spectrum tokens.
 
 Update build to use Spectrum tokens.
 Remove skin.css and incorporate its CSS into index.css.
@@ -313,7 +312,7 @@ Add the "Button style" version of Pagination from the docs to Storybook.
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="6.0.40"></a>
 
@@ -379,7 +378,7 @@ Add the "Button style" version of Pagination from the docs to Storybook.
 
 ### 🐛 Bug fixes
 
-\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+- icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="6.0.32"></a>
 
@@ -437,7 +436,7 @@ Add the "Button style" version of Pagination from the docs to Storybook.
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="6.0.25"></a>
 
