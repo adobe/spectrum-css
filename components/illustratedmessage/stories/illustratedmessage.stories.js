@@ -1,6 +1,4 @@
-
-
-import { Template } from "./template";
+import { SizingTemplate, Template } from "./template";
 
 /**
  * The illustrated message component is used for status and errors. It is also used for calls-to-action, such as within the drop zone component.
@@ -77,9 +75,7 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	isHorizontal: false
-};
+Default.args = {};
 
 /**
  * Horizontal illustrated messages are displayed on extra large screen sizes or in a menu.
@@ -89,4 +85,14 @@ export const Horizontal = Template.bind({});
 Horizontal.tags = ["!dev"];
 Horizontal.args = {
 	isHorizontal: true
+};
+Horizontal.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Sizing = SizingTemplate.bind({});
+Sizing.args = {};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
 };
