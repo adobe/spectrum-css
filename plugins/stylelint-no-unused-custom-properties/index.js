@@ -1,5 +1,5 @@
 /*!
- * Copyright 2023 Adobe. All rights reserved.
+ * Copyright 2024 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,14 +10,17 @@
  * governing permissions and limitations under the License.
  */
 
+import { sep } from "node:path";
+
+import stylelint from "stylelint";
+import { isRegExp, isString } from "stylelint/lib/utils/validateTypes.mjs";
+
 const {
 	createPlugin,
 	utils: { report, ruleMessages, validateOptions }
-} = require("stylelint");
+} = stylelint;
 
-const { isString, isRegExp } = require("stylelint/lib/utils/validateTypes");
-
-require("colors");
+import "colors";
 
 const ruleName = "spectrum-tools/no-unused-custom-properties";
 const messages = ruleMessages(ruleName, {
@@ -25,10 +28,10 @@ const messages = ruleMessages(ruleName, {
 	referenced: (prop) => `Custom property ${prop.magenta}'s references have been removed`,
 });
 
-const valueParser = require("postcss-value-parser");
+import valuesParser from "postcss-values-parser";
 
 /** @type {import('stylelint').Plugin} */
-const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
+const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 	return (root, result) => {
 		const validOptions = validateOptions(
 			result,
@@ -51,6 +54,16 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
 			ignoreList = ignoreList.map((regex) => regex instanceof RegExp ? regex : new RegExp(regex));
 		}
 
+		const sourceFile = root.source.input.file;
+		const parts = sourceFile ? sourceFile.split(sep) : [];
+
+		// @todo this is a hard-coded assumption that the components directory is the root before the component name
+		const rootIdx = parts.indexOf("components");
+
+		// We should only be checking entry-points, i.e. index.css files
+		// because others are likely to be partials or imported into main
+		if (rootIdx && typeof sourceFile !== "undefined" && !sourceFile.endsWith("index.css")) return;
+
 		/* A list of all custom properties used anywhere in the file */
 		const usedAnywhere = new Set();
 		/* A list of custom properties that are used by a CSS property (NOT a variable) */
@@ -63,9 +76,9 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
 			const usedInDecl = new Set();
 
 			// Parse value and get a list of variables used
-			const parsed = valueParser(decl.value);
+			const parsed = valuesParser.parse(decl.value);
 			parsed.walk((node) => {
-				if (node.type !== "function" || node.value !== "var" || !node.nodes.length) {
+				if (node.type !== "func" || node.name !== "var" || !node.nodes.length) {
 					return;
 				}
 
@@ -91,7 +104,8 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
 		function cleanOrReport(decl, message = messages.expected) {
 			if (context.fix) {
 				decl.remove();
-			} else {
+			}
+			else {
 				report({
 					message,
 					messageArgs: [decl.prop],
@@ -125,36 +139,44 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
 
 			// If this comment is a start indicator, capture the declarations after it until the end indicator
 			while (nextLine) {
-				if (nextLine.type === "decl" && nextLine.prop.startsWith("--")) {
-					allowedPassthroughs.add(nextLine.prop);
-				} else if (nextLine.type === "comment" && /^\s*@passthroughs?\s*(\s+end)?$/.test(nextLine.text)) {
-					break;
+				switch(nextLine.type) {
+					case "rule":
+						nextLine = nextLine.nodes[0];
+						break;
+					case "decl":
+						if (nextLine.prop.startsWith("--")) {
+							allowedPassthroughs.add(nextLine.prop);
+						}
+					// eslint-disable-next-line no-fallthrough -- intentional fallthrough
+					default:
+						nextLine = nextLine.next();
 				}
-
-				nextLine = nextLine.next();
 			}
 		});
 
 		/* Collect variable use information */
 		root.walkDecls((decl) => trackRelationships(decl));
 
+		/* Iterate through custom properties declared and report on their usage */
 		root.walkDecls(/^--/, (decl) => {
+			// No need to report on ignored properties or those used as passthroughs
 			const isIgnored = ignoreList.length ? ignoreList.some((regex) => regex.test(decl.prop)) : false;
 			const isPassthrough = allowedPassthroughs.has(decl.prop);
 
 			if (isIgnored || isPassthrough) return;
 
+			// If this variable is used in a CSS property, don't report it
+			if (usedInProps.has(decl.prop)) return;
+
 			// Check if this variable is not used anywhere in the file
 			// or is used by a CSS property (NOT a variable)
-			if (!usedAnywhere.has(decl.prop) || (!usedInProps.has(decl.prop) && !relationships.has(decl.prop))) {
+			if (!usedAnywhere.has(decl.prop)) {
 				cleanOrReport(decl);
 				return;
 			}
 
-			if (usedInProps.has(decl.prop)) return;
-
 			// Check if this variable is not used by another variable
-			if (!relationships.has(decl.prop)) return;
+			if (!relationships.has(decl.prop) || relationships.get(decl.prop)?.length === 0) return;
 
 			// Then iterate through all the variables that use it and check if they are used anywhere
 			const relatives = relationships.get(decl.prop);
@@ -174,7 +196,7 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
 	};
 };
 
-module.exports.ruleName = ruleName;
-module.exports.messages = messages;
+ruleFunction.ruleName = ruleName;
+ruleFunction.messages = messages;
 
-module.exports = createPlugin(ruleName, ruleFunction);
+export default createPlugin(ruleName, ruleFunction);

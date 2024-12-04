@@ -12,7 +12,7 @@ import { Template } from "./template";
  * A picker outlines a set of options for a user.
  */
 export default {
-	title: "Components/Picker",
+	title: "Picker",
 	component: "Picker",
 	argTypes: {
 		size: {
@@ -234,7 +234,7 @@ export default {
  */
 const States = ({
 	fieldLabelPrefix = "picker",
-	...args 
+	...args
 }) => html`
 	<div>
 		${Typography({
@@ -553,7 +553,7 @@ const SwitchAndSideLabel = (args) => html`
 const Sizing = ({
 	fieldLabelPrefix = "picker-sizing",
 	...args
-}) => html` 
+}) => html`
 	${["s","m","l","xl"].map((size) => html`
 		<div>
 			${Typography({

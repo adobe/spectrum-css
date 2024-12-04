@@ -1,8 +1,8 @@
+import { Template } from "@spectrum-css/actionbutton/stories/template.js";
 import { html } from "lit";
-import { Template } from "../../../components/actionbutton/stories/template";
 
 export default {
-	title: "Foundations/Corner rounding",
+	title: "Corner rounding",
 	description:
 		"The action button component represents an action a user can take.",
 	component: "ActionButton",
@@ -17,20 +17,13 @@ export default {
 	tags: ['foundation'],
 };
 
-const ActionButton = ({
-	...args
-}) => {
-	return html`
-		<div style="padding: 1rem 0;">
-			${Template({
-				...args,
-				iconName: undefined,
-			})}
-		</div>
-	`;
-};
+const ActionButton = (args, context) => html`
+	<div style="padding: 1rem 0;">
+		${Template({ ...args, iconName: undefined }, context)}
+	</div>
+`;
 
-const ActionButtonTable = ({ ...args }) => {
+const ActionButtonTable = (args, context) => {
 	return html`
 		<table class="spectrum-Foundations-Example-CornerRounding-table">
 			<thead>
@@ -49,7 +42,7 @@ const ActionButtonTable = ({ ...args }) => {
 							...args,
 							label: "Extra Small",
 							size: "xs"
-						})}
+						}, context)}
 					</td>
 				</tr>
 				<tr>
@@ -60,7 +53,7 @@ const ActionButtonTable = ({ ...args }) => {
 							...args,
 							label: "Small",
 							size: "s"
-						})}
+						}, context)}
 					</td>
 				</tr>
 				<tr>
@@ -71,7 +64,7 @@ const ActionButtonTable = ({ ...args }) => {
 							...args,
 							label: "Medium",
 							size: "m"
-						})}
+						}, context)}
 					</td>
 				</tr>
 				<tr>
@@ -82,7 +75,7 @@ const ActionButtonTable = ({ ...args }) => {
 							...args,
 							label: "Large",
 							size: "l"
-						})}
+						}, context)}
 					</td>
 				</tr>
 				<tr>
@@ -93,7 +86,7 @@ const ActionButtonTable = ({ ...args }) => {
 							...args,
 							label: "Extra Large",
 							size: "xl"
-						})}
+						}, context)}
 					</td>
 				</tr>
 			</tbody>

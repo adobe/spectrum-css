@@ -1,6 +1,11 @@
 name: Visual regression testing
 
 on:
+    push:
+      branches:
+        - main
+        - "!changeset-release/**"
+        - "!dependabot/**"
     workflow_dispatch:
     workflow_call:
         inputs:
@@ -20,12 +25,12 @@ permissions:
 
 jobs:
     vrt:
+        if: ${{!startsWith(github.ref, 'refs/heads/dependabot/') && !startsWith(github.ref, 'refs/heads/changeset-release/') }}
         name: Chromatic
         runs-on: ubuntu-latest
         timeout-minutes: 20
         outputs:
-            storybook-url: ${{ steps.chromatic.outputs.storybookUrl != 'undefined' && steps.chromatic.outputs.storybookUrl || '' }}
-
+          storybook-url: ${{ steps.chromatic.outputs.storybookUrl != 'undefined' && steps.chromatic.outputs.storybookUrl || '' }}
         steps:
             - name: Check out code
               uses: actions/checkout@v4
@@ -59,7 +64,7 @@ jobs:
 
             - name: Publish to Chromatic
               id: chromatic
-              uses: chromaui/action@v11
+              uses: chromaui/action@latest
               with:
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
                   buildScriptName: ci:storybook
@@ -68,7 +73,8 @@ jobs:
                   exitOnceUploaded: true
                   onlyChanged: true
                   traceChanged: true
-                  untraced: ".github/actions/*/package.json site/package.json generator/package.json"
+                  untraced: ".github/actions/*/package.json generator/package.json"
                   diagnostics: true
+                  autoAcceptChanges: "main"
                   # Lets VRT pass without running so as not to waste snapshots
                   skip: ${{ inputs.skip }}

@@ -12,7 +12,7 @@ import { default as Popover } from "@spectrum-css/popover/stories/popover.storie
  * The action menu component is an action button with a popover.
  */
 export default {
-	title: "Components/Action menu",
+	title: "Action menu",
 	component: "ActionMenu",
 	argTypes: {
 		items: { table: { disable: true } },

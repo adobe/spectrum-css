@@ -1,185 +1,43 @@
-
-import DocumentationTemplate from "./DocumentationTemplate.mdx";
-
-import { withActions } from "@storybook/addon-actions/decorator";
-import {
-  withContextWrapper,
-  withLanguageWrapper,
-  withReducedMotionWrapper,
-  withTestingPreviewWrapper,
-  withTextDirectionWrapper,
-} from "./decorators/index.js";
-
-// https://github.com/storybookjs/storybook-addon-console
-import "@storybook/addon-console";
 import { setConsoleOptions } from "@storybook/addon-console";
+import {
+	withActions,
+	withArgEvents,
+	withContextWrapper,
+	withIconSpriteSheet,
+	withLanguageWrapper,
+	withReducedMotionWrapper,
+	withTestingPreviewWrapper,
+	withTextDirectionWrapper
+} from "./decorators";
+import {
+	FontLoader,
+	IconLoader,
+} from "./loaders";
+import modes from "./modes";
+import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
+import {
+	argTypes,
+	globalTypes
+} from "./types";
+
+import "./assets/base.css";
+
+window.global = window;
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
 setConsoleOptions({
-	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss/, /stylelint/],
+	panelExclude: [
+		...panelExclude,
+		/deprecated/,
+		/TypeError/,
+		/postcss/,
+		/stylelint/,
+	],
 });
-
-import "@spectrum-css/tokens";
-import "./assets/base.css";
-
-import "./assets/typekit.js";
-
-
-// Rendered as controls; these properties are assigned
-//      to the document root element
-// @todo: resolve errors on 'name' and 'title' in console
-
-export const globalTypes = {
-	textDirection: {
-		title: "Text Direction",
-		description: "Direction of the content flow",
-		showName: true,
-		defaultValue: "ltr",
-		toolbar: {
-			items: [
-				{ value: "ltr", title: "ltr", right: "left to right" },
-				{ value: "rtl", title: "rtl", right: "right to left" },
-			],
-			dynamicTitle: true,
-		},
-	},
-	lang: {
-		title: "Language",
-		showName: true,
-		icon: "globe",
-		description: "Language of the content",
-		defaultValue: "en-US",
-		toolbar: {
-			items: [
-				{ value: "en-US", title: "🇺🇸", right: "English (US)" },
-				{ value: "ja", title: "🇯🇵", right: "Japanese" },
-				{ value: "ko", title: "🇰🇷", right: "한국어" },
-				{ value: "zh", title: "🇨🇳", right: "中文" },
-			],
-			dynamicTitle: true,
-		},
-	},
-	testingPreview: {
-		title: "Testing preview",
-		description: "See how the story will look to Chromatic",
-		defaultValue: false,
-		toolbar: {
-			icon: "beaker",
-			items: [
-				{ value: true, title: "Show testing preview" },
-				{ value: false, title: "Default mode" },
-			],
-		},
-	}
-};
-
-// Global properties added to each component;
-//      determines what stylesheets are loaded
-export const argTypes = {
-	color: {
-		name: "Color",
-		description: "Controls the color context of the component.",
-		type: { required: true },
-		table: {
-			type: { summary: "light | dark" },
-			defaultValue: { summary: "light" },
-			category: "Global",
-		},
-		options: ["light", "dark"],
-		control: {
-			type: "select",
-			labels: {
-				light: "Light (default)",
-				dark: "Dark",
-			},
-		},
-	},
-	scale: {
-		name: "Platform scale",
-		description: "Controls the platform scale of the component.",
-		table: {
-			type: { summary: "medium | large" },
-			defaultValue: { summary: "medium" },
-			category: "Global",
-		},
-		type: { required: true },
-		options: ["medium", "large"],
-		control: {
-			type: "radio",
-			labels: {
-				medium: "Medium (default)",
-				large: "Large",
-			},
-		},
-	},
-	// @todo https://jira.corp.adobe.com/browse/CSS-314
-	reducedMotion: {
-		name: "Reduce motion",
-		title: "Reduce motion",
-		description: "Reduce animation and transitions",
-		table: {
-			type: { summary: "boolean" },
-			defaultValue: { summary: false },
-			category: "Global",
-		},
-		type: { required: true },
-		control: "boolean",
-	},
-	express: {
-		name: "Express",
-		description: "The express theme is a variation of Spectrum.",
-		table: {
-			type: { summary: "boolean" },
-			defaultValue: { summary: false },
-			category: "Global",
-		},
-		type: { required: true },
-		control: "boolean",
-	},
-	/* None of these should show up in the args table but are necessary for rendering the templates */
-	rootClass: {
-		name: "Class name",
-		type: { name: "string", required: true },
-		table: { disable: true },
-		control: "text",
-	},
-	customClasses: {
-		name: "Custom classes",
-		type: { name: "string", required: false },
-		table: { disable: true },
-		control: "object",
-	},
-	customStyles: {
-		name: "Custom styles",
-		type: { name: "string", required: false },
-		table: { disable: true },
-		control: "object",
-	},
-	id: {
-		name: "Element ID",
-		type: { name: "string", required: false },
-		table: { disable: true },
-		control: "text",
-	},
-	testId: {
-		name: "Test ID",
-		type: { name: "string", required: false },
-		table: { disable: true },
-		control: "text",
-	},
-};
-
-export const args = {
-	color: "light",
-	scale: "medium",
-	reducedMotion: false,
-	express: false,
-	customClasses: [],
-};
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 export const parameters = {
-	layout: "padded",
+	layout: "centered",
 	showNav: true,
 	showTabs: true,
 	showPanel: true,
@@ -189,19 +47,34 @@ export const parameters = {
 	actions: { argTypesRegex: "^on.*" },
 	options: {
 		storySort: {
-			method: "alphabetical",
-			order: ["Guides", ["Contributing", "*", "Adobe Code of Conduct", "Changelog"], "Foundations", "Components", ["Docs", "Default", "*"], "*"],
+			method: "alphabetical-by-kind",
+			order: [
+				"Guides",
+				["Contributing", "*", "Adobe Code of Conduct", "Changelog"],
+				"Foundations",
+				["*"],
+				"Components",
+				["*", ["Docs", "Default", "*"]],
+				"Deprecated",
+				["*", ["Docs", "Default", "*"]],
+				"*",
+			],
 			includeNames: true,
 		},
 	},
-	// chromatic: { forcedColors: 'active' },
+	chromatic: {
+		forcedColors: "none",
+		prefersReducedMotion: "no-preference",
+		pauseAnimationAtEnd: true,
+		modes,
+	},
 	controls: {
 		expanded: true,
 		hideNoControlsWarning: true,
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "#root-inner",
+		root: "[data-html-preview]:first-of-type",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -214,12 +87,8 @@ export const parameters = {
 		},
 	},
 	docs: {
-		autodocs: true,
 		page: DocumentationTemplate,
-		story: {
-			inline: true,
-			iframeHeight: "200px",
-		},
+		story: { inline: true },
 		source: {
 			type: "dynamic",
 			language: "html",
@@ -232,28 +101,41 @@ export const parameters = {
 				color: "#444",
 				description: "Migrated to the latest tokens.",
 			},
+			deprecated: {
+				background: "rgb(211,21,16)",
+				color: "#fff",
+				description: "Should not be used and will not receive updates.",
+			},
 		},
 	},
+	// Set an empty object to avoid the "undefined" value in the ComponentDetails doc block
+	packageJson: {},
+	// A list of published npm tags that should not appear in the ComponentDetails doc block
+	ignoredTags: ["beta", "next"],
 };
 
-export const decorators = [
-	withTextDirectionWrapper,
-	withLanguageWrapper,
-	withReducedMotionWrapper,
-	withContextWrapper,
-	withTestingPreviewWrapper,
-	withActions,
-];
-
-// Use the document.fonts API to check if fonts have loaded
-// https://developer.mozilla.org/en-US/docs/Web/API/Document/fonts API to
-export const loaders = document.fonts ? [async () => ({ fonts: await document.fonts.ready })] : [];
-
 export default {
-	globalTypes,
-	argTypes,
-	args,
+	title: "Spectrum CSS",
 	parameters,
-	decorators,
-	loaders,
+	argTypes,
+	globalTypes,
+	args: {
+		customClasses: [],
+		customStyles: {},
+	},
+	decorators: [
+		withLanguageWrapper,
+		withReducedMotionWrapper,
+		withTextDirectionWrapper,
+		withContextWrapper,
+		withTestingPreviewWrapper,
+		withArgEvents,
+		withActions,
+		withIconSpriteSheet,
+	],
+	loaders: [
+		FontLoader,
+		IconLoader,
+	],
+	tags: ["autodocs", "dev"],
 };

@@ -6,7 +6,7 @@ import { Template as Typography } from "@spectrum-css/typography/stories/templat
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.
  */
 export default {
-	title: "Components/Dialog",
+	title: "Dialog",
 	component: "Dialog",
 	argTypes: {
 		heading: {

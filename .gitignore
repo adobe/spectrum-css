@@ -1,6 +1,9 @@
 dist
-dist-site
-!tokens/dist
+!tokens/dist/index.css
+!tokens/dist/css/*.css
+
+# Not committing the map assets, these are dev-only
+*.map
 
 # Recommended update re:https://docs.netlify.com/integrations/frameworks/eleventy/
 **/node_modules/**

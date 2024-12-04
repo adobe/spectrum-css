@@ -7,7 +7,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
  * A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention.
  */
 export default {
-	title: "Components/Badge",
+	title: "Badge",
 	component: "Badge",
 	argTypes: {
 		size: {

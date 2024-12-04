@@ -7,7 +7,7 @@ const ignoreProps = ["rootClass", "hasClearButton", "label"];
  * A group of tags.
  */
 export default {
-	title: "Components/Tag group",
+	title: "Tag group",
 	component: "TagGroup",
 	argTypes: {
 		...Object.entries(TagStories.argTypes).reduce((acc, [key, value]) => {

@@ -1,12 +1,12 @@
-import { Template } from "./template";
 import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
+import { Template } from "./template";
 
 /**
  * A grouping of buttons.
  */
 export default {
-	title: "Components/Button group",
+	title: "Button group",
 	component: "ButtonGroup",
 	argTypes: {
 		size: {

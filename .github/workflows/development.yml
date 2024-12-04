@@ -85,13 +85,15 @@ jobs:
             styles_modified_files: ${{ steps.changed-files.outputs.styles_modified_files }}
             eslint_added_files: ${{ steps.changed-files.outputs.eslint_added_files }}
             eslint_modified_files: ${{ steps.changed-files.outputs.eslint_modified_files }}
+            plugins_modified_files: ${{ steps.changed-files.outputs.plugins_modified_files }}
+            plugins_added_files: ${{ steps.changed-files.outputs.plugins_added_files }}
         permissions:
             pull-requests: read
 
         steps:
             - name: Get changed files
               id: changed-files
-              uses: tj-actions/changed-files@v44
+              uses: tj-actions/changed-files@v45
               with:
                   files_yaml: |
                       styles:
@@ -100,6 +102,8 @@ jobs:
                         - components/*/themes/express.css
                       eslint:
                         - components/*/stories/*.js
+                      plugins:
+                        - plugins/**/*
 
     # -------------------------------------------------------------
     # Lint pre-compiled assets for consistency
@@ -115,6 +119,49 @@ jobs:
             eslint_added_files: ${{ needs.changed_files.outputs.eslint_added_files }}
             eslint_modified_files: ${{ needs.changed_files.outputs.eslint_modified_files }}
         secrets: inherit
+
+    # -------------------------------------------------------------
+    # Run the test suites for the plugins if there are changes
+    # to any of the plugin files
+    # -------------------------------------------------------------
+    plugin_tests:
+        name: Plugin tests
+        runs-on: ubuntu-latest
+        needs: [changed_files]
+        if: ${{ needs.changed_files.outputs.plugins_added_files != '' || needs.changed_files.outputs.plugins_modified_files != '' }}
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v4
+
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Enable Corepack
+              run: corepack enable
+
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+
+            ## --- INSTALL --- ##
+            # If statement isn't needed here b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --immutable
+
+            ## --- Run plugins test suites --- ##
+            - name: Run plugin tests
+              run: yarn test:plugins
 
     # -------------------------------------------------------------
     # RUN VISUAL REGRESSION TESTS --- #
@@ -142,14 +189,8 @@ jobs:
     # -------------------------------------------------------------
     publish_site:
         name: Publish
-        # The build step ensures we are leveraging the cache for the build
-        needs: [vrt]
-        # Note: the goal here is to allow vrt to be skipped but still require the build to succeed
-        if: ${{ always() }}
         uses: ./.github/workflows/publish-site.yml
         with:
             deploy-message: ${{ github.event.pull_request.title }}
             alias: pr-${{ github.event.number }}
-            # Only pass the storybook url if the vrt was successful
-            storybook-url: ${{ needs.vrt.outputs.storybook-url || '' }}
         secrets: inherit

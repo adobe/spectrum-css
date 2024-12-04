@@ -13,36 +13,43 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"exports": {
+		".": "./dist/css/index.css",
+		"./*.md": "./*.md",
+		"./dist/css/*.css": "./dist/css/*.css",
+		"./dist/css/components/bridge": "./dist/components/bridge/index.css",
+		"./dist/css/components/bridge/*.css": "./dist/components/bridge/*.css",
+		"./dist/css/components/express": "./dist/components/express/index.css",
+		"./dist/css/components/express/*.css": "./dist/components/express/*.css",
+		"./dist/css/components/spectrum": "./dist/components/spectrum/index.css",
+		"./dist/css/components/spectrum-two": "./dist/components/spectrum-two/index.css",
+		"./dist/css/components/spectrum-two/*.css": "./dist/components/spectrum-two/*.css",
+		"./dist/css/components/spectrum/*.css": "./dist/components/spectrum/*.css",
+		"./dist/index.css": "./dist/css/index.css",
+		"./package.json": "./package.json"
+	},
 	"main": "dist/index.css",
 	"files": [
-		"dist/index.css",
-		"dist/**/*",
+		"dist",
 		"CHANGELOG.md",
 		"README.md",
 		"package.json"
 	],
+	"devDependencies": {
+		"@adobe/spectrum-tokens": "13.0.0-beta.52",
+		"@nxkit/style-dictionary": "^6.0.0",
+		"postcss": "^8.4.49",
+		"postcss-cli": "^11.0.0",
+		"prettier": "^3.2.5",
+		"style-dictionary": "^3.9.2",
+		"style-dictionary-sets": "^2.3.0"
+	},
 	"keywords": [
 		"spectrum",
 		"css",
 		"design system",
 		"adobe"
 	],
-	"devDependencies": {
-		"@adobe/spectrum-tokens": "13.0.0-beta.52",
-		"@nxkit/style-dictionary": "^5.0.0",
-		"postcss": "^8.4.38",
-		"postcss-cli": "^11.0.0",
-		"postcss-combine-duplicated-selectors": "^10.0.3",
-		"postcss-discard-comments": "^7.0.0",
-		"postcss-discard-empty": "^6.0.3",
-		"postcss-licensing": "^1.0.1",
-		"postcss-merge-rules": "^7.0.0",
-		"postcss-rgb-mapping": "^1.1.0",
-		"postcss-sorting": "^8.0.2",
-		"prettier": "^2.8.8",
-		"style-dictionary": "^3.9.2",
-		"style-dictionary-sets": "^2.3.0"
-	},
 	"publishConfig": {
 		"access": "public"
 	}

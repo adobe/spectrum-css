@@ -1,7 +1,7 @@
 {
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"name": "stylelint-no-missing-var",
-	"tags": ["tooling", "stylelint"],
+	"tags": ["tooling", "stylelint", "plugin"],
 	"targets": {
 		"format": {
 			"defaultConfiguration": "plugins"
