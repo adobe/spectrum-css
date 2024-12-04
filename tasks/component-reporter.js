@@ -172,10 +172,6 @@ async function main({
 	const content = await fsp.readFile(sourceCSS, "utf-8");
 	const processed = await processCSS(content, sourceCSS, undefined, {
 		cwd,
-		skipMapping: false,
-		referencesOnly: false,
-		preserveVariables: true,
-		stripLocalSelectors: false,
 		map: false,
 		env: "production",
 	});
@@ -186,7 +182,7 @@ async function main({
 			cwd,
 			sourcePath: sourceCSS,
 			componentName,
-			baseSelectors: [".spectrum", ".spectrum--express", ".spectrum--legacy"],
+			baseSelectors: [".spectrum"],
 			dataModel: {
 				modifiers: ["mod"],
 				spectrum: ["spectrum"],

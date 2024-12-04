@@ -4,11 +4,8 @@ import { classMap } from "lit/directives/class-map.js";
 import "./index.css";
 
 const getSizeModifier = (size) => {
-	if (size === "none" || size === "full") {
-		return size;
-	} else {
-		return `size${size.toUpperCase()}`;
-	}
+	if (size === "none" || size === "full") return size;
+	return `size${size.toUpperCase()}`;
 };
 
 export const Template = ({
@@ -16,7 +13,7 @@ export const Template = ({
 	size = "none",
 	label,
 	value,
-} = {}) => html`
+}) => html`
 	<tr>
 		<td>${label}</td>
 		<td style="padding: 0 2rem;">${value}</td>

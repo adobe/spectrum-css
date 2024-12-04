@@ -149,10 +149,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		processCSS(content, indexSourceCSS, indexOutputPath, {
 			cwd,
 			clean,
-			skipMapping: true,
-			referencesOnly: false,
-			preserveVariables: true,
-			stripLocalSelectors: false,
 		}),
 		processCSS(
 			content,
@@ -161,10 +157,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 			{
 				cwd,
 				clean,
-				skipMapping: true,
-				referencesOnly: false,
-				preserveVariables: false,
-				stripLocalSelectors: false,
 			},
 		),
 	]);

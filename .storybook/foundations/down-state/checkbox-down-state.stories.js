@@ -1,4 +1,4 @@
-import { Template } from "../../../components/checkbox/stories/template";
+import { Template } from "@spectrum-css/checkbox/stories/template.js";
 
 export default {
 	title: "Down state",
