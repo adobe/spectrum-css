@@ -1,7 +1,6 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
-import legacyTokens from "@spectrum-css/tokens-legacy/dist/index.css?inline";
 import tokens from "@spectrum-css/tokens/dist/index.css?inline";
 
 /**
@@ -50,8 +49,6 @@ export const withContextWrapper = makeDecorator({
 			const isDocs = viewMode === "docs";
 			const isTesting = showTestingGrid;
 			const isRaw = Boolean(context === "raw");
-			const isModern = Boolean(context === "spectrum");
-			const isExpress = Boolean(context === "express");
 
 			// Start by attaching the appropriate tokens to the container
 			toggleStyles(document.body, "tokens", tokens, !isRaw);
@@ -62,7 +59,7 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			// Start by attaching the appropriate tokens to the container
-			toggleStyles(document.body, "tokens", isModern ? tokens : legacyTokens, !isRaw);
+			toggleStyles(document.body, "tokens", tokens, !isRaw);
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
@@ -88,12 +85,6 @@ export const withContextWrapper = makeDecorator({
 
 				// Every container gets the spectrum class
 				container.classList.toggle("spectrum", !isRaw);
-
-				// S1 and S1 Express get the legacy class
-				container.classList.toggle("spectrum--legacy", !isModern && !isRaw);
-
-				// Express only gets the express class
-				container.classList.toggle("spectrum--express", isExpress && !isRaw);
 
 				// Let the static color override the color if it's set
 				if (!isTestingWrapper && hasStaticElement && staticColorSettings[staticKey]?.color) {
@@ -124,7 +115,7 @@ export const withContextWrapper = makeDecorator({
 				}
 			}
 
-		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, legacyTokens, staticColorSettings, showTestingGrid]);
+		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, showTestingGrid]);
 
 		return StoryFn(data);
 	},

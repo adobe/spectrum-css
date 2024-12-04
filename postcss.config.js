@@ -15,12 +15,7 @@ const { join } = require("path");
 
 module.exports = ({
 	file,
-	skipMapping = false,
-	referencesOnly = false,
-	preserveVariables = true,
-	stripLocalSelectors = false,
 	resolveImports = true,
-	shouldCombine = false,
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -32,14 +27,6 @@ module.exports = ({
 
 	if (typeof options?.map === "undefined") {
 		options.map = isProduction ? false : { inline: false };
-	}
-
-	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
-	if (typeof file === "string" && file.includes("@spectrum-css/tokens-legacy")) {
-		additionalPlugins["postcss-selector-replace"] = {
-			before: [".spectrum"],
-			after: [".spectrum.spectrum--legacy"],
-		};
 	}
 
 	return {
@@ -93,19 +80,6 @@ module.exports = ({
 			"@spectrum-tools/postcss-rgb-mapping": {
 				colorFunctionalNotation: false,
 			},
-			/* --------------------------------------------------- */
-			/* ------------------- VARIABLE PARSING -------------- */
-			"@spectrum-tools/postcss-add-theming-layer": {
-				selectorPrefix: "spectrum",
-				skipMapping,
-				preserveVariables,
-				referencesOnly,
-				stripLocalSelectors,
-				debug: verbose,
-			},
-			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
-				newSelector: ".spectrum",
-			} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
