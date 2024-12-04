@@ -30,6 +30,7 @@
 
 	--spectrum-card-border-width: var(--mod-card-border-width, var(--spectrum-border-width-100));
 	--spectrum-card-corner-radius: var(--mod-card-corner-radius, var(--spectrum-corner-radius-100));
+	--spectrum-card-border-color-selected: var(--mod-card-border-color-selected, var(--spectrum-blue-700));
 
 	/* Typography */
 	--spectrum-card-title-font-family: var(--mod-card-title-font-family, var(--spectrum-sans-font-family-stack));
@@ -81,13 +82,6 @@
 		--spectrum-card-content-margin-top: var(--spectrum-spacing-100);
 	}
 
-	&.is-selected,
-	&.is-drop-target {
-		--spectrum-card-border-color: var(--mod-card-border-color-selected, var(--spectrum-blue-700));
-	}
-}
-
-.spectrum-Card {
 	position: relative;
 	display: inline-flex;
 	flex-direction: column;
