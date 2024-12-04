@@ -247,7 +247,7 @@
 			&:focus {
 				--mod-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
 
-				/* stylelint-disable-next-line max-nesting-depth */
+				/* stylelint-disable-next-line max-nesting-depth -- @todo reduce complexity of selectors */
 				&:hover {
 					--mod-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)));
 				}
@@ -256,7 +256,7 @@
 			&.is-keyboardFocused {
 				--mod-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color-keyboard-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
 
-				/* stylelint-disable-next-line max-nesting-depth */
+				/* stylelint-disable-next-line max-nesting-depth -- @todo reduce complexity of selectors */
 				&:hover {
 					--mod-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
 				}
