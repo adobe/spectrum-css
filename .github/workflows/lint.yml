@@ -93,7 +93,6 @@ jobs:
                 #   stylelint_input: "components/*/index.css components/*/themes/*.css"
                   stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
                   stylelint_config: stylelint.config.js
-                  packages: 'stylelint-header stylelint-config-standard stylelint-selector-bem-pattern stylelint-order stylelint-use-logical'
 
             - name: Run eslint on packages and stories
               uses: reviewdog/action-eslint@v1.33.0
