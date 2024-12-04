@@ -1,5 +1,5 @@
+import { Template } from "@spectrum-css/actionbutton/stories/template.js";
 import { html } from "lit";
-import { Template } from "../../../components/actionbutton/stories/template";
 
 export default {
 	title: "Corner rounding",
@@ -17,16 +17,11 @@ export default {
 	tags: ['foundation'],
 };
 
-const ActionButton = (args, context) => {
-	return html`
-		<div style="padding: 1rem 0;">
-			${Template({
-				...args,
-				iconName: undefined,
-			}, context)}
-		</div>
-	`;
-};
+const ActionButton = (args, context) => html`
+	<div style="padding: 1rem 0;">
+		${Template({ ...args, iconName: undefined }, context)}
+	</div>
+`;
 
 const ActionButtonTable = (args, context) => {
 	return html`
