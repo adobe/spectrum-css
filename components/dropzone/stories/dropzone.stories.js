@@ -1,4 +1,5 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { SizingTemplate } from "@spectrum-css/dropzone/stories/template.js";
 import { default as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
@@ -70,4 +71,12 @@ WithForcedColors.parameters = {
 		forcedColors: "active",
 		modes: disableDefaultModes
 	},
+};
+
+
+export const Sizing = SizingTemplate.bind({});
+Sizing.args = {};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
 };
