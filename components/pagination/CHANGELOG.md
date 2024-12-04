@@ -313,9 +313,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - feat(pagination)!: migrate to spectrum tokens package([f29a74d](https://github.com/adobe/spectrum-css/commit/f29a74d))
 
-  ###
-
-  🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
   - Replaces DNA tokens with Spectrum tokens.
 
@@ -434,7 +432,6 @@ Add the "Button style" version of Pagination from the docs to Storybook.
 ### 🔙 Reverts
 
 - gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
-  <a name="6.0.40"></a>
 
 ## 6.0.40
 
@@ -500,7 +497,7 @@ Add the "Button style" version of Pagination from the docs to Storybook.
 
 ### 🐛 Bug fixes
 
-\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+- icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="6.0.32"></a>
 
