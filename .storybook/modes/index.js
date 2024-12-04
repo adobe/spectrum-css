@@ -12,22 +12,23 @@
  */
 
 const modes = {
-    "Context: Spectrum 1": {
-        scale: "medium",
+    "Light | LTR": {
         color: "light",
         textDirection: "ltr",
-        context: "legacy",
-    },
-    "Context: Express": {
-        scale: "medium",
-        color: "light",
-        textDirection: "ltr",
-        context: "express",
     },
     "Dark | RTL": {
-        scale: "medium",
         color: "dark",
         textDirection: "rtl",
+    },
+    "S1 | Light | LTR": {
+        context: "legacy",
+        color: "light",
+        textDirection: "ltr",
+    },
+    "Express | Light | LTR": {
+        context: "express",
+        color: "light",
+        textDirection: "ltr",
     },
 };
 
