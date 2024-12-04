@@ -4,6 +4,7 @@ import { size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { ButtonGroup } from "./buttongroup.test.js";
+import { Template } from "./template.js";
 
 /**
  * A button group is a grouping of buttons whose actions are related to each other.
@@ -57,6 +58,10 @@ export default {
 		],
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13663-6530",
+		},
 		packageJson,
 		metadata,
 	},
@@ -71,16 +76,22 @@ Default.tags = ["!autodocs"];
 /**
  * Default spacing for Medium, Large, and Extra Large t-shirt sizes.
 */
-export const Horizontal = ButtonGroup.bind({});
+export const Horizontal = Template.bind({});
 Horizontal.tags = ["!dev"];
+Horizontal.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 Horizontal.args = Default.args;
 
 
 /**
  * Spacing for the Small t-shirt size.
 */
-export const HorizontalSmall = ButtonGroup.bind({});
+export const HorizontalSmall = Template.bind({});
 HorizontalSmall.tags = ["!dev"];
+HorizontalSmall.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 HorizontalSmall.args = {
 	size: "s"
 };
@@ -90,6 +101,9 @@ HorizontalSmall.args = {
 */
 export const Vertical = ButtonGroup.bind({});
 Vertical.tags = ["!dev"];
+Vertical.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 Vertical.args = {
 	vertical: true,
 };
@@ -97,8 +111,11 @@ Vertical.args = {
 /**
  * Spacing for the Small t-shirt size.
 */
-export const VerticalSmall = ButtonGroup.bind({});
+export const VerticalSmall = Template.bind({});
 VerticalSmall.tags = ["!dev"];
+VerticalSmall.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 VerticalSmall.args = {
 	vertical: true,
 	size: "s"
@@ -108,8 +125,11 @@ VerticalSmall.args = {
  * A button group in a disabled state shows that the buttons within the group exist, but are not available in that circumstance. This state can be used to maintain layout continuity and to communicate that a button group may become available later.
 */
 
-export const Disabled = ButtonGroup.bind({});
+export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 Disabled.args = {
 	items: [
 		{

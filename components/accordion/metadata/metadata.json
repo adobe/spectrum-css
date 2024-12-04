@@ -188,7 +188,7 @@
     "--spectrum-font-size-300",
     "--spectrum-font-size-500",
     "--spectrum-font-size-700",
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
     "--spectrum-gray-900-rgb",
     "--spectrum-line-height-100",
     "--spectrum-logical-rotation",
@@ -198,7 +198,7 @@
     "--spectrum-neutral-content-color-key-focus",
     "--spectrum-sans-font-family-stack"
   ],
-  "system-theme": [],
+  "system-theme": ["--system-accordion-divider-color"],
   "passthroughs": [],
   "high-contrast": []
 }

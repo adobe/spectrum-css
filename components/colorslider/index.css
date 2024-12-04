@@ -11,9 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
- @media (forced-colors: active) {
+@media (forced-colors: active) {
 	.spectrum-ColorSlider {
 		--highcontrast-color-slider-border-color: CanvasText;
 		--highcontrast-color-slider-border-color-disabled: GrayText;
@@ -24,9 +24,9 @@
 
 .spectrum-ColorSlider {
 	/* @todo Refactor with --spectrum-color-slider-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-	--spectrum-color-slider-border-color-rgba: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-color-slider-border-opacity));
+	--spectrum-color-slider-border-color-default: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-color-slider-border-opacity));
 
-	/* Settings for nested Color handle */
+	/* @passthrough -- settings for nested color handle */
 	--mod-colorhandle-hitarea-border-radius: var(--mod-color-slider-handle-hitarea-border-radius, 0px);
 
 	position: relative;
@@ -74,7 +74,7 @@
 }
 
 .spectrum-ColorSlider-checkerboard {
-	--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-rgba)));
+	--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-default)));
 
 	/* Inset border on top of background, created with box-shadow. */
 	&::before {

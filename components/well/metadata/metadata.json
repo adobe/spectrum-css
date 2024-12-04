@@ -12,6 +12,7 @@
     "--mod-well-padding"
   ],
   "component": [
+    "--spectrum-well-background-color",
     "--spectrum-well-border-color",
     "--spectrum-well-border-radius",
     "--spectrum-well-border-width",
@@ -23,9 +24,10 @@
   "global": [
     "--spectrum-body-color",
     "--spectrum-border-width-100",
+    "--spectrum-gray-1000",
     "--spectrum-gray-800-rgb"
   ],
-  "system-theme": [],
+  "system-theme": ["--system-well-border-color"],
   "passthroughs": [],
   "high-contrast": []
 }
