@@ -26,6 +26,7 @@
 | `--mod-card-body-spacing`                     |
 | `--mod-card-border-color`                     |
 | `--mod-card-border-color-hover`               |
+| `--mod-card-border-color-selected`            |
 | `--mod-card-border-width`                     |
 | `--mod-card-content-margin-bottom`            |
 | `--mod-card-content-margin-top`               |
@@ -37,7 +38,6 @@
 | `--mod-card-footer-margin-block-start`        |
 | `--mod-card-footer-margin-inline-end`         |
 | `--mod-card-footer-margin-inline-start`       |
-| `--mod-card-footer-margin-top`                |
 | `--mod-card-footer-padding-block-end`         |
 | `--mod-card-footer-padding-block-start`       |
 | `--mod-card-horizontal-body-padding`          |
@@ -46,6 +46,7 @@
 | `--mod-card-minimum-width-quiet`              |
 | `--mod-card-preview-background-color`         |
 | `--mod-card-preview-background-color-hover`   |
+| `--mod-card-preview-border-width-selected`    |
 | `--mod-card-preview-minimum-height`           |
 | `--mod-card-selected-background-color-rgb`    |
 | `--mod-card-selected-background-opacity`      |
@@ -57,5 +58,4 @@
 | `--mod-card-title-font-weight`                |
 | `--mod-card-title-line-height`                |
 | `--mod-card-title-padding-right`              |
-| `--mod-card-title-padding-top`                |
 | `--mod-overlay-animation-duration`            |
