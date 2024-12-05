@@ -6,8 +6,6 @@
 
 This is the S2 migration of the progress circle. The original markup has changed to an svg and circle element to allow CSS styles such as `stroke-linecap`. This was necessary to match the design. The `--small/--medium/--large` sizing classes have been deprecated in favor of t-shirt classes `--sizeS/--sizeM/--sizeL`
 
-The `.spectrum-ProgressCircle--small`, `.spectrum-ProgressCircle--medium`, and `.spectrum-ProgressCircle--large` sizing classes were deprecated and removed from the CSS in favor of the t-shirt sizes.
-
 ### Animation
 
 `@keyframes spectrum-dashoffset-animation`:
