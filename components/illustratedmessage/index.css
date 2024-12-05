@@ -46,13 +46,6 @@ governing permissions and limitations under the License.
 	}
 }
 
-@media (forced-colors: active) {
-	.spectrum-IllustratedMessage {
-		--highcontrast-illustrated-message-illustration-color: CanvasText;
-		--highcontrast-illustrated-message-illustration-accent-color: Highlight;
-	}
-}
-
 .spectrum-IllustratedMessage--sizeS {
 	--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-small-title-font-size);
 	--spectrum-illustrated-message-description-font-size: var(--spectrum-illustrated-message-small-body-font-size);
@@ -148,4 +141,10 @@ governing permissions and limitations under the License.
 
 .spectrum-IllustratedMessage-content {
 	grid-area: body;
+}
+
+@media (forced-colors: active) {
+	.spectrum-IllustratedMessage {
+		--highcontrast-illustrated-message-illustration-color: CanvasText;
+	}
 }
