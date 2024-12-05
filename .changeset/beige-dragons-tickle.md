@@ -1,6 +1,6 @@
 ---
 "@spectrum-css/illustratedmessage": major
-"@spectrum-css/dropzone": patch
+"@spectrum-css/dropzone": major
 ---
 
 # S2 Illustrated Message Migration

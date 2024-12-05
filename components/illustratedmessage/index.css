@@ -20,7 +20,6 @@ governing permissions and limitations under the License.
 
 	/* Illustration */
 	--spectrum-illustrated-message-illustration-color: var(--spectrum-neutral-content-color-default);
-	--spectrum-illustrated-message-illustration-accent-color: var(--spectrum-accent-visual-color);
 	--spectrum-illustrated-message-illustration-size: 96px;
 
 	/* Title */
@@ -100,14 +99,6 @@ governing permissions and limitations under the License.
 	grid-area: illustration;
 }
 
-.spectrum-IllustratedMessage-accent {
-	color: var(--highcontrast-illustrated-message-illustration-accent-color, var(--mod-illustrated-message-illustration-accent-color, var(--spectrum-illustrated-message-illustration-accent-color)));
-
-	/* Safari 16.3 🐛🛠️: Repeated stroke/fill properties is a workaround for a currentcolor bug that was fixed in 16.4. */
-	fill: currentColor;
-	stroke: currentColor;
-}
-
 .spectrum-IllustratedMessage-heading {
 	font-family: var(--mod-illustrated-message-title-font-family, var(--spectrum-illustrated-message-title-font-family));
 	font-weight: var(--mod-illustrated-message-title-font-weight, var(--spectrum-illustrated-message-title-font-weight));
@@ -137,7 +128,7 @@ governing permissions and limitations under the License.
 	margin-block: 0;
 }
 
-.spectrum-IllustratedMessage--horizontal {
+.spectrum-IllustratedMessage-horizontal {
 	--mod-buttongroup-justify-content: flex-start;
 	max-inline-size: var(--mod-illustrated-message-horizontal-maximum-width, var(--spectrum-illustrated-message-horizontal-maximum-width));
 	flex-direction: row;
@@ -151,10 +142,10 @@ governing permissions and limitations under the License.
 	}
 }
 
-.spectrum-IllustratedMessage--actions {
+.spectrum-IllustratedMessage-actions {
 	margin-block-start: var(--mod-illustrated-message-description-to-action, var(--spectrum-illustrated-message-description-to-action));
 }
 
-.spectrum-IllustratedMessage--content {
+.spectrum-IllustratedMessage-content {
 	grid-area: body;
 }
