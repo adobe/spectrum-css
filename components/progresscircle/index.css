@@ -14,12 +14,16 @@ governing permissions and limitations under the License.
 
 .spectrum-ProgressCircle {
 	/* circle unfilled border color */
-	--spectrum-progress-circle-track-border-color: var(--spectrum-track-color);
+	--spectrum-progress-circle-track-border-color: var(--spectrum-gray-200);
 
 	/* circle progress fill border color */
 	--spectrum-progress-circle-fill-border-color: var(--spectrum-accent-content-color-default);
 
 	/* default size and thickness */
+	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
+	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+
+	/* track border style */
 	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
 }
@@ -34,15 +38,19 @@ governing permissions and limitations under the License.
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-large);
 }
 
+<<<<<<< HEAD
 .spectrum-Circle {
 	fill: none;
 }
 
+=======
+>>>>>>> 46765ca32 (feat(progresscircle): isolate progress circle)
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-ProgressCircle {
 		/* fill is bright color */
 		--highcontrast-progress-circle-fill-border-color: Highlight;
+<<<<<<< HEAD
 		--highcontrast-progressbar-track-color: Canvas;
 	}
 
@@ -56,6 +64,11 @@ governing permissions and limitations under the License.
 			border-color: CanvasText;
 			border-radius: 50%;
 		}
+=======
+
+		/* fill over background is bright color */
+		--highcontrast-progress-circle-fill-border-color-over-background: Highlight;
+>>>>>>> 46765ca32 (feat(progresscircle): isolate progress circle)
 	}
 }
 
@@ -93,7 +106,7 @@ governing permissions and limitations under the License.
 	stroke: var(--highcontrast-progressbar-track-color, var(--mod-progress-circle-track-border-color, var(--spectrum-progress-circle-track-border-color)));
 }
 
-/* circle: progress filled */
+/* circle progress filled */
 .spectrum-ProgressCircle-fill {
 	stroke-width: var(--mod-progress-circle-thickness, var(--spectrum-progress-circle-thickness));
 	stroke: var(--highcontrast-progress-circle-fill-border-color, var(--mod-progress-circle-fill-border-color, var(--spectrum-progress-circle-fill-border-color)));
