@@ -1,4 +1,5 @@
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
@@ -22,7 +23,7 @@ export const Template = ({
 	<div
 		class=${classMap({
 			[rootClass]: true,
-			[`${rootClass}--horizontal`]: isHorizontal,
+			[`${rootClass}-horizontal`]: isHorizontal,
 			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
@@ -80,3 +81,25 @@ const illustrationSvgMarkup = (size = "m") => {
     </svg>
   `;
 };
+
+export const SizingTemplate = (args) => html`
+	${["s", "m", "l"].map((size) => {
+		return html` <div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: [
+					{
+						s: "Small",
+						m: "Medium",
+						l: "Large",
+					}[size],
+				],
+			})}
+			${Template({
+				...args,
+				size,
+			})}
+		</div>`;
+	})}
+`;

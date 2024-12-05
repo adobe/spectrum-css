@@ -122,7 +122,7 @@ governing permissions and limitations under the License.
 	margin-block: 0;
 }
 
-.spectrum-IllustratedMessage--horizontal {
+.spectrum-IllustratedMessage-horizontal {
 	--mod-buttongroup-justify-content: flex-start;
 	max-inline-size: var(--mod-illustrated-message-horizontal-maximum-width, var(--spectrum-illustrated-message-horizontal-maximum-width));
 	text-align: start;
