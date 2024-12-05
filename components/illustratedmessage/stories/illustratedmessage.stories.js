@@ -4,7 +4,7 @@ import { Template, SizingTemplate } from "./template";
  * The illustrated message component is used for status and errors. It is also used for calls-to-action, such as within the drop zone component.
  */
 export default {
-	title: "Components/Illustrated message",
+	title: "Illustrated message",
 	component: "IllustratedMessage",
 	argTypes: {
 		heading: {

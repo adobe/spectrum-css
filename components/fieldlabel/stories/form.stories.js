@@ -6,7 +6,7 @@ import { Template } from "./form.template.js";
  * The form component is used for aligning multiple inputs and field groups within a form.
  */
 export default {
-	title: "Components/Form",
+	title: "Form",
 	component: "Form",
 	argTypes: {
 		labelsAbove: {

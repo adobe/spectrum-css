@@ -7,7 +7,7 @@ import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
  * The coach mark component can be used to bring added attention to specific parts of a page.
  */
 export default {
-	title: "Components/Coach mark",
+	title: "Coach mark",
 	component: "CoachMark",
 	argTypes: {
 		hasActionMenu: {

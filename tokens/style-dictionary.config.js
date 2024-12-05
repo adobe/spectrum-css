@@ -1,5 +1,5 @@
 /*!
- * Copyright 2023 Adobe. All rights reserved.
+ * Copyright 2024 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -35,7 +35,6 @@ StyleDictionary.registerFormat(CSSSetsFormatter);
  */
 const tokensPath = require.resolve("@adobe/spectrum-tokens/package.json");
 const tokensDir = path.dirname(tokensPath);
-const setNames = ["desktop", "mobile", "light", "dark", "darkest"];
 
 module.exports = {
 	source: [`${tokensDir}/src/*.json`],
@@ -50,21 +49,8 @@ module.exports = {
 			prefix: "spectrum",
 			files: [
 				generateFileConfig(),
-				...["spectrum", "express"].map((subSystemName) =>
-					generateFileConfig({ subSystemName })
-				),
-				...setNames.map((context) => generateFileConfig({ setName: context })),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "spectrum",
-					})
-				),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "express",
-					})
+				...["desktop", "mobile", "light", "dark"].map((context) =>
+					generateFileConfig({ setName: context }),
 				),
 			],
 		},

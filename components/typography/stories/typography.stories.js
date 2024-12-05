@@ -7,7 +7,7 @@ import { when } from "lit/directives/when.js";
  * Spectrum typography is broken out into several separate components.
  */
 export default {
-	title: "Components/Typography",
+	title: "Typography",
 	component: "Typography",
 	argTypes: {
 		reduceMotion: { table: { disable: true } },

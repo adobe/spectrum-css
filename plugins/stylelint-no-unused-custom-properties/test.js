@@ -1,15 +1,18 @@
-const fs = require("fs");
-const { join } = require("path");
+import { readFileSync } from "fs";
+import { join } from "path";
+import { fileURLToPath } from "url";
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-const test = require("ava");
-const stylelint = require("stylelint");
+import test from "ava";
+import stylelint from "stylelint";
+const { lint } = stylelint;
 
-const plugin = require("./index");
-const { ruleName } = require("./index");
+import plugin from "./index.js";
+const { ruleName } = plugin;
 
-function compare(t, fixtureFilePath, options = {}) {
+function compare(_, fixtureFilePath, options = {}) {
 	const code = readFile(`./fixtures/${fixtureFilePath}`);
-	return stylelint.lint({
+	return lint({
 		code,
 		config: {
 			plugins: [plugin],
@@ -21,7 +24,7 @@ function compare(t, fixtureFilePath, options = {}) {
 }
 
 function readFile(filename) {
-	return fs.readFileSync(join(__dirname, filename), "utf8");
+	return readFileSync(join(__dirname, filename), "utf8");
 }
 
 test("should throw an error for unused custom properties", async (t) => {

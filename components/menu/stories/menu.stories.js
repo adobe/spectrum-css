@@ -4,7 +4,7 @@ import { Template } from "./template";
  * A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a menu divider. Often a menu will appear in a popover so that it displays as a togglig menu.
 */
 export default {
-	title: "Components/Menu",
+	title: "Menu",
 	component: "Menu",
 	argTypes: {
 		selectionMode: {

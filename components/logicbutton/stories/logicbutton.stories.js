@@ -4,7 +4,7 @@ import { Template } from "./template";
  * A logic button displays an operator within a boolean logic sequence.
  */
 export default {
-	title: "Components/Logic button",
+	title: "Logic button",
 	component: "LogicButton",
 	argTypes: {
 		variant: {

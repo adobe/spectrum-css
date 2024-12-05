@@ -8,7 +8,7 @@ import { Template as Typography } from "@spectrum-css/typography/stories/templat
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.
  */
 export default {
-	title: "Components/Tabs",
+	title: "Tabs",
 	component: "Tabs",
 	argTypes: {
 		content: { table: { disable: true } },

@@ -4,7 +4,7 @@ import { Template } from "./template";
  * Side nav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.
  */
 export default {
-	title: "Components/Side nav",
+	title: "Side nav",
 	component: "SideNav",
 	argTypes: {
 		hasIcon: {

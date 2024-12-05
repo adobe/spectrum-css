@@ -1,0 +1,55 @@
+name: Release Snapshot
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag used on changeset version and npm package"
+        required: false
+        type: string
+
+jobs:
+  get-snapshot-tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Split branch name
+        id: split
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: echo "fragment=${BRANCH##*snapshot-}" >> $GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Get last author info
+        id: author
+        run: |
+          echo "authorName=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
+          echo "authorEmail=$(git log -1 --pretty=format:'%ae')" >> $GITHUB_OUTPUT
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: yarn
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Create snapshot release and publish to npm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SNAPSHOT_TAG: ${{ inputs.tag || steps.split.outputs.fragment }}
+          USERNAME: ${{ steps.author.outputs.authorName }}
+          EMAIL: ${{ steps.author.outputs.authorEmail }}
+        run: |
+            yarn changeset version --snapshot $SNAPSHOT_TAG && yarn --mode="update-lockfile"
+            yarn ci
+            git config --global user.name "$USERNAME"
+            git config --global user.email "$EMAIL"
+            git add .
+            git commit -m "chore: snapshot release $SNAPSHOT_TAG"
+            npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            yarn changeset publish --tag $SNAPSHOT_TAG
+            git push origin HEAD
+            git push --tags

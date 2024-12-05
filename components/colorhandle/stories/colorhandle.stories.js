@@ -4,7 +4,7 @@ import { Template } from "./template";
  * The color handle component is used with color area, color slider and color wheel as the color selector.
  */
 export default {
-	title: "Components/Color handle",
+	title: "Color handle",
 	component: "ColorHandle",
 	argTypes: {
 		isDisabled: {

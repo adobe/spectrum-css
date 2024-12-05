@@ -4,7 +4,7 @@ import { Template } from "./template";
  * A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data.
  */
 export default {
-	title: "Components/Table",
+	title: "Table",
 	component: "Table",
 	argTypes: {
 		size: {

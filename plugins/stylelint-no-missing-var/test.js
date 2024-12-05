@@ -1,15 +1,18 @@
-const fs = require("fs");
-const { join } = require("path");
+import { readFileSync } from "fs";
+import { join } from "path";
+import { fileURLToPath } from "url";
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-const test = require("ava");
-const stylelint = require("stylelint");
+import test from "ava";
+import stylelint from "stylelint";
+const { lint } = stylelint;
 
-const plugin = require("./index");
-const { ruleName } = require("./index");
+import plugin from "./index.js";
+const { ruleName } = plugin;
 
 async function compare(_, fixtureFilePath) {
 	const code = readFile(`./fixtures/${fixtureFilePath}`);
-	return stylelint.lint({
+	return lint({
 		code,
 		config: {
 			plugins: [plugin],
@@ -21,7 +24,7 @@ async function compare(_, fixtureFilePath) {
 }
 
 function readFile(filename) {
-	return fs.readFileSync(join(__dirname, filename), "utf8");
+	return readFileSync(join(__dirname, filename), "utf8");
 }
 
 test("should throw an error for missing \"var\" before custom properties", async (t) => {

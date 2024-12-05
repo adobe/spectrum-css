@@ -1,10 +1,8 @@
-import path from "path";
-
 // Imports an array of all icon names in the workflow set
 import iconOpts from "@adobe/spectrum-css-workflow-icons";
 
 export const workflowIcons = (iconOpts || []).map((icon) =>
-	path.basename(icon, ".svg")
+	icon.replace(/\.svg$/, "")
 );
 
 /**

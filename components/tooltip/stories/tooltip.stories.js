@@ -33,7 +33,7 @@ const placementOptions = [
 ];
 
 export default {
-	title: "Components/Tooltip",
+	title: "Tooltip",
 	component: "Tooltip",
 	argTypes: {
 		label: {

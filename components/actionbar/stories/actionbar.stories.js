@@ -8,7 +8,7 @@ import { default as Popover } from "@spectrum-css/popover/stories/popover.storie
  * The action bar component is a floating full width bar that appears upon selection.
  */
 export default {
-	title: "Components/Action bar",
+	title: "Action bar",
 	component: "ActionBar",
 	argTypes: {
 		isOpen: {

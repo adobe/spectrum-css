@@ -6,7 +6,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
  * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
  */
 export default {
-	title: "Components/Tag",
+	title: "Tag",
 	component: "Tag",
 	argTypes: {
 		size: {

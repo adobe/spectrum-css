@@ -1,76 +1,44 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-
-const { join, sep, basename } = require("path");
+const { join } = require("path");
 
 module.exports = ({
 	file,
-	to,
-	splitinatorOptions = {
-		noSelectors: false,
-		noFlatVariables: false,
-	},
-	combine = false,
+	skipMapping = false,
+	referencesOnly = false,
+	preserveVariables = true,
+	stripLocalSelectors = false,
+	resolveImports = true,
+	shouldCombine = false,
 	lint = true,
 	verbose = true,
+	minify = false,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
-	if (env === "development" && !options.map) {
-		options.map = { inline: false };
-	}
-	else options.map = false;
+	const isProduction = env.toLowerCase() === "production";
 
-	/* themes/*.css */
-	if (
-		(to && to.split(sep)?.includes("themes")) ||
-		(file && file.split(sep)?.includes("themes"))
-	) {
-		splitinatorOptions.noSelectors = true;
-
-		/* themes/express.css */
-		if (
-			(to && basename(to, ".css") === "express") ||
-			(file && basename(file, ".css") === "express")
-		) {
-			combine = true;
-		}
+	if (typeof options?.map === "undefined") {
+		options.map = isProduction ? false : { inline: false };
 	}
 
-	/* index-theme.css */
-	if (
-		(to && basename(to, ".css") === "index-theme") ||
-		(file && basename(file, ".css") === "index-theme")
-	) {
-		splitinatorOptions.noSelectors = true;
-	}
-
-	/* index-base.css */
-	if (
-		(to && basename(to, ".css") === "index-base") ||
-		(file && basename(file, ".css") === "index-base")
-	) {
-		splitinatorOptions.noFlatVariables = true;
-	}
-
-	/*
-		This deconstruction has to do with how options are passed
-		to the postcss config via webpack's postcss-loader
-	*/
-	if (options?.options?.additionalPlugins) {
-		additionalPlugins = {
-			...additionalPlugins,
-			...options.options.additionalPlugins,
+	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
+	if (typeof file === "string" && file.includes("@spectrum-css/tokens-legacy")) {
+		additionalPlugins["postcss-selector-replace"] = {
+			before: [".spectrum"],
+			after: [".spectrum.spectrum--legacy"],
 		};
 	}
 
@@ -80,19 +48,33 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- IMPORTS ---------------- */
 			/** @link https://github.com/postcss/postcss-import#postcss-import */
-			"postcss-import": {},
+			"postcss-import": resolveImports ? {} : false,
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
+			"postcss-pseudo-classes": !isProduction ? {
+				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				allCombinations: true,
+				preserveBeforeAfter: false,
+				prefix: "is-"
+			} : false,
 			"postcss-hover-media-feature": {},
+			"@spectrum-tools/postcss-rgb-mapping": {
+				colorFunctionalNotation: false,
+			},
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
-			"postcss-splitinator": {
-				processIdentifier: (identifier) =>
-					identifier === "express" ? "spectrum--express" : identifier,
-				...splitinatorOptions,
+			"@spectrum-tools/postcss-add-theming-layer": {
+				selectorPrefix: "spectrum",
+				skipMapping,
+				preserveVariables,
+				referencesOnly,
+				stripLocalSelectors,
+				debug: verbose,
 			},
-			"postcss-combininator": combine ? {} : false,
+			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
+				newSelector: ".spectrum",
+			} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
@@ -109,16 +91,15 @@ module.exports = ({
 				stage: 2,
 				env,
 				features: {
+					"custom-properties": true,
 					"logical-properties-and-values": false,
 					clamp: true,
 					"color-functional-notation": true,
 					"dir-pseudo-class": { preserve: true },
 					"nesting-rules": { noIsPseudoSelector: true },
-					// "focus-visible-pseudo-class": true,
 					// https://github.com/jsxtools/focus-within
 					"focus-within-pseudo-class": true,
 					"font-format-keywords": true,
-					"not-pseudo-class": true,
 					"opacity-percentage": true,
 					// https://github.com/csstools/postcss-plugins/tree/main/plugins/css-prefers-color-scheme
 					"prefers-color-scheme-query": true,
@@ -132,28 +113,33 @@ module.exports = ({
 					"cssnano-preset-advanced",
 					{
 						colormin: false,
-						discardComments: {
-							removeAllButFirst: true,
-						},
+						reduceIdents: false,
+						discardUnused: false,
+						discardComments: { removeAll: true },
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
+						normalizeWhitespace: minify
 					},
 				],
 			},
 			/* --------------------------------------------------- */
 			/* ------------------- REPORTING --------------------- */
-			stylelint: lint
-				? {
-					cache: true,
-					// Passing the config path saves a little time b/c it doesn't have to find it
-					configFile: join(__dirname, "stylelint.config.js"),
-					quiet: !verbose,
-					allowEmptyInput: true,
-					ignorePath: join(__dirname, ".stylelintignore"),
-					reportNeedlessDisables: true,
-					reportInvalidScopeDisables: true,
-				}
-				: false,
+			stylelint: {
+				cache: true,
+				// Passing the config path saves a little time b/c it doesn't have to find it
+				configFile: join(__dirname, "stylelint.config.js"),
+				quiet: !lint,
+				fix: true,
+				allowEmptyInput: true,
+				ignorePath: join(__dirname, ".stylelintignore"),
+				reportNeedlessDisables: lint,
+				reportInvalidScopeDisables: lint,
+			},
+			"postcss-licensing": {
+				filename: "COPYRIGHT",
+				cwd: __dirname,
+				skipIfEmpty: true,
+			},
 			"postcss-reporter": verbose
 				? {
 					clearAllMessages: true,

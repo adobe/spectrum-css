@@ -6,7 +6,7 @@ import { Template } from "./template";
  * Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
  */
 export default {
-	title: "Components/Progress circle",
+	title: "Progress circle",
 	component: "ProgressCircle",
 	argTypes: {
 		size: {

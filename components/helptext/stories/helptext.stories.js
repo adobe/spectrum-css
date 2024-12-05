@@ -4,7 +4,7 @@ import { Template } from "./template";
  * Help text provides either an informative description or an error message that gives more context about what a user needs to input. It's commonly used in forms.
  */
 export default {
-	title: "Components/Help text",
+	title: "Help text",
 	component: "HelpText",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },

@@ -4,7 +4,7 @@ import { Template } from "./template";
  * The color wheel component lets users visually change an individual channel of a color on a circular track.
  */
 export default {
-	title: "Components/Color wheel",
+	title: "Color wheel",
 	component: "ColorWheel",
 	argTypes: {
 		isDisabled: {

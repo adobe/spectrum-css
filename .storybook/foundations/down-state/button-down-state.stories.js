@@ -1,7 +1,7 @@
-import { Template } from "../../../components/button/stories/template";
+import { Template } from "@spectrum-css/button/stories/template.js";
 
 export default {
-	title: "Foundations/Down state",
+	title: "Down state",
 	description:
 		"Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.",
 	component: "Button",

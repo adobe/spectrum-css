@@ -4,7 +4,7 @@ import { Template } from "./template";
  * Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.
  */
 export default {
-	title: "Components/Miller columns",
+	title: "Miller columns",
 	component: "MillerColumns",
 	argTypes: {
 		columns: { table: { disable: true } },
