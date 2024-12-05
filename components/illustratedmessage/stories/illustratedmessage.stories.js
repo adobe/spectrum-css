@@ -2,7 +2,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { IllustratedMessageGroup } from "./illustratedmessage.test.js";
-import { Template } from "./template.js";
+import { SizingTemplate, Template } from "./template.js";
 
 /**
  * The Illustrated Message displays an illustration along with a heading and description. Optionally, part of the illustration can use an accent color. It can be used for status and errors, or as a call to action. For example, the Drop Zone component makes use of Illustrated Message as an area to drag and drop files.
@@ -79,14 +79,11 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	isHorizontal: false
-};
+Default.args = {};
 
 /**
  * Horizontal illustrated messages are displayed on extra large screen sizes or in a menu.
 */
-
 export const Horizontal = Template.bind({});
 Horizontal.tags = ["!dev"];
 Horizontal.args = {
@@ -104,4 +101,16 @@ WithForcedColors.parameters = {
 		forcedColors: "active",
 		modes: disableDefaultModes
 	},
+};
+/**
+ * Illustrated message comes in three sizes: small, medium, and large.
+ * - Small illustrated message is typically used in quick or in-line actions.
+ * - The medium size is the default, and often used in panels.
+ * - The large size illustrated message is generally used in full page layouts and dialogs.
+ */
+export const Sizing = SizingTemplate.bind({});
+Sizing.args = {};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
 };
