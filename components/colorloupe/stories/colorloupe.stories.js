@@ -4,7 +4,7 @@ import { Template } from "./template";
  * The color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.
  */
 export default {
-	title: "Components/Color loupe",
+	title: "Color loupe",
 	component: "ColorLoupe",
 	argTypes: {
 		isOpen: {

@@ -4,7 +4,7 @@ import { Template } from "./meter.template";
  * The meter component is a visual representations of a quantity or an achievement. Their progress is determined by user actions, rather than system actions.
  */
 export default {
-	title: "Components/Meter",
+	title: "Meter",
 	component: "ProgressBar",
 	argTypes: {
 		items: { table: { disable: true } },

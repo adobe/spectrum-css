@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - spectrum-two
+      - s2-foundations-redux
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 

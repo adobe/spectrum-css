@@ -4,7 +4,7 @@ import { Template } from "./template";
  * A link allow users to navigate to a different location. They can be presented in-line inside a paragraph or as a standalone text.
  */
 export default {
-	title: "Components/Link",
+	title: "Link",
 	component: "Link",
 	argTypes: {
 		url: {

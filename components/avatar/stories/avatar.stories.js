@@ -4,7 +4,7 @@ import { Template } from "./template";
  * An image representing a user.
  */
 export default {
-	title: "Components/Avatar",
+	title: "Avatar",
 	component: "Avatar",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },

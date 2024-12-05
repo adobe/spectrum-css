@@ -7,7 +7,7 @@ import { Template } from "./template";
  * Opacity checkerboard is used with other components to highlight opacity.
  */
 export default {
-	title: "Components/Opacity checkerboard",
+	title: "Opacity checkerboard",
 	component: "OpacityCheckerboard",
 	argTypes: {
 		backgroundPosition: {

@@ -1,7 +1,7 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 import { Template } from "./template";
 
@@ -9,7 +9,7 @@ import { Template } from "./template";
  * Status lights describe the condition of an entity. They can be used to convey semantic meaning, such as statuses and categories.
  */
 export default {
-	title: "Components/Status light",
+	title: "Status light",
 	component: "Statuslight",
 	argTypes: {
 		size: {

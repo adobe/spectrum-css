@@ -4,7 +4,7 @@ import { Template } from "./template";
  * A thumbnail is used to display a preview of an image, layer, or effect.
  */
 export default {
-	title: "Components/Thumbnail",
+	title: "Thumbnail",
 	component: "Thumbnail",
 	argTypes: {
 		reduceMotion: { table: { disable: true } },

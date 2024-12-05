@@ -25,7 +25,7 @@ const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
  * The icons component contains all UI icons used for components as well as the CSS for UI and workflow icons.
  */
 export default {
-	title: "Components/Icon",
+	title: "Icon",
 	component: "Icon",
 	argTypes: {
 		/* Turn off express theme for icon preview b/c they use a separate icon set */
