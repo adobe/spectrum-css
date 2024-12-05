@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-InfieldProgresscircle {
 	--mod-progress-circle-thickness: var(--mod-progress-cirlce-stroke-width, 2px);
 	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-100);
