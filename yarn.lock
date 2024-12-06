@@ -3293,15 +3293,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   peerDependencies:
+    "@spectrum-css/checkbox": ">=9"
     "@spectrum-css/closebutton": ">=5"
-    "@spectrum-css/divider": ">=3"
     "@spectrum-css/modal": ">=5"
     "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/typography": ">=6"
     "@spectrum-css/underlay": ">=3"
   peerDependenciesMeta:
-    "@spectrum-css/divider":
+    "@spectrum-css/checkbox":
+      optional: true
+    "@spectrum-css/closebutton":
       optional: true
     "@spectrum-css/modal":
+      optional: true
+    "@spectrum-css/typography":
       optional: true
     "@spectrum-css/underlay":
       optional: true
