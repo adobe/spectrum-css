@@ -63,6 +63,8 @@ export default {
 			name: "@storybook/addon-actions",
 			options: {},
 		},
+		// Local: plugins/storybook-addon-custom-properties
+		"@spectrum-tools/storybook-addon-custom-properties",
 		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@whitespace/storybook-addon-html",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
@@ -75,8 +77,6 @@ export default {
 		"@chromatic-com/storybook",
 		// https://storybook.js.org/addons/@storybook/addon-designs/
 		"@storybook/addon-designs",
-		// https://github.com/ljcl/storybook-addon-cssprops
-		"@ljcl/storybook-addon-cssprops",
 	],
 	core: {
 		disableTelemetry: true,
