@@ -2,10 +2,13 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
 import { within } from "@storybook/test";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
 import { Template, VariantGroup } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -144,17 +147,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
