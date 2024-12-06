@@ -1,6 +1,5 @@
-import { Container } from "@spectrum-css/preview/decorators";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -14,6 +13,7 @@ import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Badge",
+	id = getRandomId("badge"),
 	size = "m",
 	label,
 	iconName,
@@ -22,7 +22,6 @@ export const Template = ({
 	fixed,
 	customStyles = {},
 	customClasses = [],
-	id = getRandomId("badge"),
 } = {}, context = {}) => {
 	return html`
 		<div

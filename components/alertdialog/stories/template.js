@@ -16,13 +16,13 @@ import "../themes/express.css";
 
 export const Dialog = ({
 	rootClass = "spectrum-AlertDialog",
+	id = getRandomId("alert-dialog"),
 	heading,
 	content,
 	customClasses = [],
 	buttons,
 	variant,
 	icon = false,
-	id = getRandomId("alertdialog"),
 	customStyles = {},
 } = {}, context = {}) => {
 	return html`

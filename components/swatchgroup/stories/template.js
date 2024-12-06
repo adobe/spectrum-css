@@ -12,6 +12,7 @@ import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-SwatchGroup",
+	id = getRandomId("swatch-group"),
 	customClasses = [],
 	size = "m",
 	density = "regular",
@@ -22,7 +23,6 @@ export const Template = ({
 	customStyles = {},
 	isDisabled =false,
 	isSelected = false,
-	id = getRandomId("swatchgroup"),
 } = {}, context = {}) => html`
 	<div
 		class=${classMap({
