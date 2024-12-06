@@ -1,5 +1,12 @@
 # Change Log
 
+## 4.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/swatch@7.0.0-next.0
+
 ## 3.1.0
 
 ### Minor Changes

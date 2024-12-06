@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.0.0-next.0
+
+### Major Changes
+
+- [#3394](https://github.com/adobe/spectrum-css/pull/3394) [`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586) Thanks [@cdransf](https://github.com/cdransf)! - # thumbnail-opacity-checkerboard S2 migration
+
+  Adds thumbnail specific `thumbnail-opacity-checkerboard-square-size` token aliased to `--spectrum-opacity-checkerboard-size`. This impacts the display of the `opacity-checkerboard` when used within the `thumbnail` component.
+
+  This also corrects an issue with a token name in the `thumbnail` component by renaming `--spectrum-thumbnail-border-color-opacity` to `--spectrum-thumbnail-border-opacity`.
+
 ## 2.1.0
 
 ### Minor Changes

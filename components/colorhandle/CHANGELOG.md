@@ -1,5 +1,13 @@
 # Change Log
 
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`b91a202`](https://github.com/adobe/spectrum-css/commit/b91a2020be7a590a794938546e2f85f3fd9eef3e), [`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586)]:
+  - @spectrum-css/colorloupe@6.0.0-next.0
+  - @spectrum-css/opacitycheckerboard@3.0.0-next.0
+
 ## 8.1.0
 
 ### Minor Changes
