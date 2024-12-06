@@ -1,7 +1,10 @@
 import { Template } from "./template.js";
-import { isDisabled, isSelected, isHovered, isFocused } from "@spectrum-css/preview/types";
+import { isDisabled, isSelected, isHovered, isFocused, size } from "@spectrum-css/preview/types";
 import { {{ pascalCase name }}Group } from "./{{ pascalCase name }}.test.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 
@@ -9,52 +12,32 @@ import packageJson from "../package.json";
   * {{ description }}
   */
 export default {
-  title: "{{ name }}",
-  component: "{{ pascalCase name }}",
-  argTypes: {
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      defaultValue: "m",
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-        defaultValue: { summary: "m" }
-      },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
-    },
-    isDisabled,
-    isSelected,
-    isHovered,
-    isFocused,
-  },
-  args: {
-    rootClass: "spectrum-{{ pascalCase name }}",
-    size: "m",
-    isDisabled: false
-  },
-  parameters: {
-    actions: {
-      handles: ["click .spectrum-{{ pascalCase name }}"],
-    },
-    design: {
-      type: "figma",
-      url: "",
-    },
-    packageJson,
-    metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					control: key.includes("color") ? "color" : "text",
-					category: "Modifiers",
-				};
-				return collection;
-			}, {})
+	title: "{{ name }}",
+	component: "{{ pascalCase name }}",
+	argTypes: {
+		size: size(["s", "m", "l", "xl"]),
+		isDisabled,
+		isSelected,
+		isHovered,
+		isFocused,
+	},
+	args: {
+		rootClass: "spectrum-{{ pascalCase name }}",
+		size: "m",
+		isDisabled: false
+	},
+	parameters: {
+		actions: {
+			handles: ["click .spectrum-{{ pascalCase name }}"],
 		},
-  }
+		design: {
+			type: "figma",
+			url: "",
+		},
+		packageJson,
+		metadata,
+		cssprops: { styles },
+	}
 };
 
 export const Default = {{ pascalCase name }}Group.bind({});
@@ -64,14 +47,14 @@ Default.args = {};
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
-  isDisabled: true
+	isDisabled: true
 };
 Disabled.parameters = {
-  chromatic: { disableSnapshot: true },
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = {{ pascalCase name }}Group.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

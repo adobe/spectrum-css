@@ -25,6 +25,7 @@ export const AssetListItem = ({
 	isBranch = false,
 	onclick = () => {},
 } = {}, context = {}) => html`
+	${when(styles, () => html`<style>${styles}</style>`)}
 	<li
 		class=${classMap({
 			[rootClass]: true,
@@ -45,10 +46,10 @@ export const AssetListItem = ({
 				customClasses: [`${rootClass}Selector`],
 			}, context)
 		)}
-		${when(image, () => 
+		${when(image, () =>
 			html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
 		)}
-		${when(iconName, () => 
+		${when(iconName, () =>
 			Icon({
 				iconName,
 				setName: iconSet,
@@ -76,9 +77,9 @@ export const AssetListItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-AssetList",
+	id = getRandomId("asset-list"),
 	items = [],
 	customClasses = [],
-	id = getRandomId("assetlist"),
 } = {}, context = {}) => {
 	return html`
 		<ul
