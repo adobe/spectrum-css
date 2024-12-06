@@ -1,5 +1,12 @@
 # Change Log
 
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a827601`](https://github.com/adobe/spectrum-css/commit/a827601bc1769a775f24e9da294bdfaa70535082)]:
+  - @spectrum-css/avatar@8.0.0-next.0
+
 ## 9.1.0
 
 ### Minor Changes

@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/tag@10.0.0-next.0
+
 ## 5.1.0
 
 ### Minor Changes

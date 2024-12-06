@@ -1,5 +1,14 @@
 # Change Log
 
+## 5.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`8aa61a9`](https://github.com/adobe/spectrum-css/commit/8aa61a9a92974b4048ba18b4d33e756af9a37d8e), [`b91a202`](https://github.com/adobe/spectrum-css/commit/b91a2020be7a590a794938546e2f85f3fd9eef3e)]:
+  - @spectrum-css/colorarea@6.0.0-next.0
+  - @spectrum-css/colorloupe@6.0.0-next.0
+  - @spectrum-css/colorhandle@9.0.0-next.0
+
 ## 4.1.0
 
 ### Minor Changes

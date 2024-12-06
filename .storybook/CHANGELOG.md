@@ -1,5 +1,12 @@
 # Change Log
 
+## 11.0.1-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/table@7.0.0-next.0
+
 ## 10.0.0
 
 ### Major Changes

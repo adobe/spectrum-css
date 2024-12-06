@@ -1,5 +1,13 @@
 # Change Log
 
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586)]:
+  - @spectrum-css/opacitycheckerboard@3.0.0-next.0
+  - @spectrum-css/colorhandle@9.0.0-next.0
+
 ## 6.1.0
 
 ### Minor Changes
