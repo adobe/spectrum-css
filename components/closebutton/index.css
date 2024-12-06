@@ -11,8 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
 @import "@spectrum-css/commons/basebutton.css";
+@import "./themes/spectrum-two.css";
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {

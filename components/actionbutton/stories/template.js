@@ -46,6 +46,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
  */
 export const Template = ({
 	rootClass = "spectrum-ActionButton",
+	id = getRandomId("action-button"),
 	size = "m",
 	iconName,
 	iconSet = "workflow",
@@ -65,7 +66,6 @@ export const Template = ({
 	customStyles = {},
 	customIconClasses = [],
 	onclick,
-	id = getRandomId("actionbutton"),
 	testId,
 	role = "button",
 } = {}, context = {}) => {

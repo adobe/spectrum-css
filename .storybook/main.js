@@ -63,11 +63,13 @@ export default {
 			name: "@storybook/addon-actions",
 			options: {},
 		},
-		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
-		"@whitespace/storybook-addon-html",
+		// Local: plugins/storybook-addon-custom-properties
+		"@spectrum-tools/storybook-addon-custom-properties",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
-		"@storybook/addon-a11y",
+		"@whitespace/storybook-addon-html",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
+		"@storybook/addon-a11y",
+		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@etchteam/storybook-addon-status",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
 		"@storybook/addon-interactions",
@@ -75,8 +77,6 @@ export default {
 		"@chromatic-com/storybook",
 		// https://storybook.js.org/addons/@storybook/addon-designs/
 		"@storybook/addon-designs",
-		// https://github.com/ljcl/storybook-addon-cssprops
-		"@ljcl/storybook-addon-cssprops",
 	],
 	core: {
 		disableTelemetry: true,

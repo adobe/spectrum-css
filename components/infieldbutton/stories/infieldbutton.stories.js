@@ -1,10 +1,13 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { InfieldButtonGroup } from "./infieldbutton.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
 
 /**
  * The in-field button component is a button used inside a text field.
@@ -50,17 +53,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	},
 };
 

@@ -556,12 +556,12 @@ export const renderContent = (content = [], {
 	if (content.length === 0) return nothing;
 
 	return html`
-		${content.map((c) => {
+		${content.map((c, idx) => {
 			if (typeof c === "undefined") return nothing;
 
 			/* If the content is an object (but not a lit object), we need to merge the object with the template */
 			if (typeof c !== "string" && (typeof c === "object" && !c._$litType$)) {
-				return callback({ ...args, ...c }, context);
+				return callback({ ...args, ...c, idx }, context);
 			}
 
 			if (typeof c === "function") {

@@ -1,10 +1,13 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
@@ -142,17 +145,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	},
 };
 

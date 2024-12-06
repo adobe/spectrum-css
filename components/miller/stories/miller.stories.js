@@ -1,8 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { MillerGroup } from "./miller.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
 
 /**
  * Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.
@@ -79,17 +82,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	},
 };
 

@@ -1,8 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { InlineAlertGroup } from "./inlinealert.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
 
 /**
  * In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.
@@ -65,17 +68,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	},
 };
 

@@ -1,4 +1,3 @@
-import { Container } from "@spectrum-css/preview/decorators";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
@@ -11,6 +10,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Badge",
+	id = getRandomId("badge"),
 	size = "m",
 	label,
 	iconName,
@@ -19,7 +19,6 @@ export const Template = ({
 	fixed,
 	customStyles = {},
 	customClasses = [],
-	id = getRandomId("badge"),
 } = {}, context = {}) => {
 	return html`
 		<div
