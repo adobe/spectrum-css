@@ -1,10 +1,13 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { TabsGroups } from "./tabs.test.js";
 import { CompactGroup, OverflowGroup, QuietGroup, Template, VerticalGroup } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit. Tabs can be either horizontal or vertical.
@@ -18,7 +21,6 @@ import { CompactGroup, OverflowGroup, QuietGroup, Template, VerticalGroup } from
  * Only one tab item can be selected at any given time. The selected tab item is designated by the `is-selected` class. A selection indicator line is shown under or next to the selected tab item.
  *
  */
-
 export default {
 	title: "Tabs",
 	component: "Tabs",
@@ -119,17 +121,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	},
 };
 
