@@ -49,11 +49,7 @@ export default {
 			],
 		},
 		packageJson,
-		cssprops: {
-			...(Popover?.parameters?.cssprops ?? {}),
-			...(ActionButton?.parameters?.cssprops ?? {}),
-			...(Menu.parameters?.cssprops ?? {}),
-		},
+		cssprops: false,
 		docs: {
 			story: {
 				height: "200px",
