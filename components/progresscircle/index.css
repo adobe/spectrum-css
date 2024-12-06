@@ -25,10 +25,6 @@ governing permissions and limitations under the License.
 	/* default size and thickness */
 	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
-
-	/* track border style */
-	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
-	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
 }
 
 .spectrum-ProgressCircle--sizeS {
@@ -46,9 +42,6 @@ governing permissions and limitations under the License.
 	.spectrum-ProgressCircle {
 		/* fill is bright color */
 		--highcontrast-progress-circle-fill-border-color: Highlight;
-
-		/* fill over background is bright color */
-		--highcontrast-progress-circle-fill-border-color-over-background: Highlight;
 	}
 }
 
