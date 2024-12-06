@@ -16,7 +16,7 @@ import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-AlertBanner",
-	id = getRandomId("alertbanner"),
+	id = getRandomId("alert-banner"),
 	testId,
 	isOpen = true,
 	text,
@@ -35,7 +35,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
-			id=${id}
+			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId)}
 		>
 			<div class=${classMap({

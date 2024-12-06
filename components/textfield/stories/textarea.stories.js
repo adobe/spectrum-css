@@ -1,10 +1,13 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { HelpTextOptionsTextArea, KeyboardFocusTemplate, Template, TextAreaOptions } from "./textarea.template.js";
 import { TextAreaGroup } from "./textarea.test.js";
 import { default as Textfield } from "./textfield.stories.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
 
 /**
  * A text area is multi-line text field using the `<textarea>` element that lets a user input a longer amount of text than a standard text field. It can include all of the standard validation options supported by the text field component.
@@ -27,17 +30,7 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=725-2579",
 		},
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	}
 };
 

@@ -1,10 +1,11 @@
-import { Container } from "@spectrum-css/preview/decorators";
 import { Template as ActionGroup } from "@spectrum-css/actiongroup/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
@@ -14,6 +15,7 @@ import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionBar",
+	id = getRandomId("action-bar"),
 	size = "m",
 	isOpen = true,
 	isEmphasized = false,
@@ -36,6 +38,7 @@ export const Template = ({
 				"is-open": isOpen,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			id=${ifDefined(id)}
 			style=${styleMap(customStyles)}
 		>
 			${Popover({

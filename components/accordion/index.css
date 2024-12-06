@@ -72,6 +72,7 @@
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
+		/* @description When the language is CJK, update line-height values to prevent cut off diacritics */
 		--spectrum-accordion-item-header-line-height: var(--spectrum-cjk-line-height-100);
 		--spectrum-accordion-item-content-line-height: var(--spectrum-cjk-line-height-100);
 	}

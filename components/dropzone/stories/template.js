@@ -20,7 +20,7 @@ export const Template = ({
 	heading,
 	description,
 	label,
-	id = getRandomId("dropzone"),
+	id = getRandomId("drop-zone"),
 } = {}, context = {}) => {
 	return html`
 		<div

@@ -41,7 +41,7 @@ export const MenuItem = (
 		iconName,
 		iconSet = "workflow",
 		hasActions = false,
-		id = getRandomId("menuitem"),
+		id = getRandomId("menu-item"),
 		idx = 0,
 		isActive = false,
 		isCollapsible = false,
@@ -226,7 +226,7 @@ export const MenuGroup = (
 	{
 		hasActions = false,
 		heading,
-		id = getRandomId("menugroup"),
+		id = getRandomId("menu-group"),
 		idx = 0,
 		items = [],
 		isDisabled = false,

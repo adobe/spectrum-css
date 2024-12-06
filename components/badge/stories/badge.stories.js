@@ -1,13 +1,15 @@
-import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { BadgeGroup } from "./badge.test.js";
 import { ContentOptions, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
 
 /**
  * A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention. Some notes about badge:
@@ -41,7 +43,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["neutral", "accent", "informative", "positive", "negative", "notice", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
+			options: ["neutral", "accent", "informative", "positive", "negative", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
 			control: "select",
 		},
 		fixed: {
@@ -69,17 +71,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	},
 };
 
@@ -96,7 +88,7 @@ Default.args = {
 export const SemanticVariants = (args, context) => ArgGrid({
 	Template,
 	argKey: "variant",
-	options: ["neutral", "accent", "informative", "positive", "negative", "notice"],
+	options: ["neutral", "accent", "informative", "positive", "negative"],
 	withBorder: false,
 	...args,
 }, context);

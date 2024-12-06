@@ -45,10 +45,10 @@ export const AssetListItem = ({
 				customClasses: [`${rootClass}Selector`],
 			}, context)
 		)}
-		${when(image, () => 
+		${when(image, () =>
 			html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
 		)}
-		${when(iconName, () => 
+		${when(iconName, () =>
 			Icon({
 				iconName,
 				setName: iconSet,
@@ -76,9 +76,9 @@ export const AssetListItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-AssetList",
+	id = getRandomId("asset-list"),
 	items = [],
 	customClasses = [],
-	id = getRandomId("assetlist"),
 } = {}, context = {}) => {
 	return html`
 		<ul
