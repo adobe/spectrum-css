@@ -22,10 +22,6 @@ governing permissions and limitations under the License.
 	/* default size and thickness */
 	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
-
-	/* track border style */
-	--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
-	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
 }
 
 .spectrum-ProgressCircle--sizeS {
@@ -38,18 +34,16 @@ governing permissions and limitations under the License.
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-large);
 }
 
-<<<<<<< HEAD
 .spectrum-Circle {
 	fill: none;
 }
 
-=======
->>>>>>> 46765ca32 (feat(progresscircle): isolate progress circle)
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-ProgressCircle {
 		/* fill is bright color */
 		--highcontrast-progress-circle-fill-border-color: Highlight;
+<<<<<<< HEAD
 <<<<<<< HEAD
 		--highcontrast-progressbar-track-color: Canvas;
 	}
@@ -69,6 +63,8 @@ governing permissions and limitations under the License.
 		/* fill over background is bright color */
 		--highcontrast-progress-circle-fill-border-color-over-background: Highlight;
 >>>>>>> 46765ca32 (feat(progresscircle): isolate progress circle)
+=======
+>>>>>>> 5ac4a966e (fix(progresscircle): remove token dupes)
 	}
 }
 
