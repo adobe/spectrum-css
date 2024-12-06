@@ -8,6 +8,11 @@
 	"parserOptions": {
 		"sourceType": "module"
 	},
+	"settings": {
+	  "react": {
+		"version": "detect"
+	  }
+	},
 	"extends": "eslint:recommended",
 	"rules": {
 		"brace-style": ["warn", "stroustrup", { "allowSingleLine": true }],
@@ -17,7 +22,8 @@
 		"no-console": ["warn", { "allow": ["warn", "error"] }],
 		"quotes": ["warn", "double"],
 		"semi": ["warn", "always"],
-		"space-before-blocks": ["warn", "always"]
+		"space-before-blocks": ["warn", "always"],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
 	},
 	"overrides": [
 		{
@@ -172,8 +178,10 @@
 			"files": [
 				"components/*/stories/*.js",
 				".storybook/*.js",
-				".storybook/**/*.js"
+				".storybook/**/*.js",
+				"plugins/storybook-addon-*/*.js"
 			],
+			"extends": ["plugin:react/recommended", "plugin:react/jsx-runtime"],
 			"parserOptions": {
 				"ecmaVersion": "latest",
 				"sourceType": "module",

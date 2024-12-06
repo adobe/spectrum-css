@@ -1,4 +1,3 @@
-import { Container } from "@spectrum-css/preview/decorators";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
