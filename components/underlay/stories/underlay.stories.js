@@ -1,6 +1,7 @@
 import { Default as ModalStory } from "@spectrum-css/modal/stories/modal.stories.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { isOpen } from "@spectrum-css/preview/types";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { Template } from "./template.js";
@@ -31,17 +32,7 @@ export default {
 		chromatic: { disableSnapshot: true },
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	}
 };
 

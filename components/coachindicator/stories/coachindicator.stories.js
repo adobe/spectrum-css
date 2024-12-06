@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, staticColor } from "@spectrum-css/preview/types";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
@@ -44,17 +45,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers.reduce((collection, item) => {
-				const key = item.replace(/^--/, "");
-				collection[key] = {
-					category: "Modifiers",
-					control: key.includes("color") ? "color" : "text",
-					value: key.includes("color") ? undefined : " ",
-				};
-				return collection;
-			}, {})
-		},
+		cssprops: { styles },
 	},
 };
 
