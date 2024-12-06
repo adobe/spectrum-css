@@ -223,7 +223,6 @@ governing permissions and limitations under the License.
 
 	/* clear button */
 	.spectrum-Tag-clearButton {
-
 		/* width of fill neutralized to ensure correct inline spacing within tag */
 		--mod-clear-button-width: fit-content;
 		--spectrum-clearbutton-fill-size: fit-content;
@@ -412,7 +411,6 @@ governing permissions and limitations under the License.
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Tag {
-
 		--highcontrast-tag-border-color: ButtonText;
 		--highcontrast-tag-border-color-hover: ButtonText;
 		--highcontrast-tag-border-color-active: ButtonText;
