@@ -27,7 +27,7 @@ module.exports = ({
 		selector = selector.replace(/^:where\((.*?)\)$/, "$1");
 
 		// This regex is designed to pull spectrum-ActionButton out of a selector
-		let baseSelectorMatch = selector.match(/^\.([a-z]+-[\A-Z][^-. ]+)/);
+		let baseSelectorMatch = selector.match(/^\.([a-z]+-[A-Z][^-. ]+)/);
 		if (baseSelectorMatch) {
 			const [, baseSelector] = baseSelectorMatch;
 			const baseSelectorRegExp = new RegExp(baseSelector, "gi");
@@ -53,9 +53,11 @@ module.exports = ({
 			const selectorMap = {};
 
 			root.walkAtRules(/container/, (container) => {
-				const [, identifierName, identifierValue] = container.params.match(
+				const match = container.params.match(
 					/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/
 				);
+				if (!match) return;
+				const [, identifierName, identifierValue] = match;
 
 				const rule = new Rule({
 					selector: `.${
