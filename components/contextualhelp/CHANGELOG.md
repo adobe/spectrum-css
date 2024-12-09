@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/popover@8.0.0-next.0
+
 ## 3.1.0
 
 ### Minor Changes
