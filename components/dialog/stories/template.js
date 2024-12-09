@@ -2,9 +2,8 @@ import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/templ
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
-// import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
+import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -25,7 +24,7 @@ export const Template = ({
 	hasCheckbox = false,
 	content = [],
 	customClasses = [],
-	id,
+	id= getRandomId("dialog"),
 	size = "m",
 	layout,
 	hasHeroImage = false,
@@ -41,7 +40,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--dismissible`]: isDismissible && ["fullscreen", "fullscreenTakeover"].every(l => layout !== l),
 				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
-				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined", 
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -49,11 +48,11 @@ export const Template = ({
 			tabindex="-1"
 			aria-modal="true"
 			style=${ifDefined(styleMap(customStyles))}
-		> 
+		>
 			<div class="${rootClass}-grid">
 				${when(hasHeroImage, () =>
 					html`
-						<div 
+						<div
 							class="spectrum-Dialog-hero"
 							style="background-image:url(${heroImageUrl ? heroImageUrl : "example-card-portrait.png"})">
 						</div>
@@ -65,17 +64,12 @@ export const Template = ({
 					`)}
 					${when(header, () => html`
 						<span class="${rootClass}-header-content">
-							${Typography({
-								semantics: "body",
-								size: "m",
-								// @todo: takeover dialogs can accept other components in their headers. could the renderContent function work here?
-								content: [ header ]
-							})}
+							${renderContent(header)}
 						</span>
 					`,
 				)}
 				</div>
-				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
+				<section class="${rootClass}-content">${renderContent(content)}</section>
 				${when(isDismissible, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
@@ -114,12 +108,8 @@ export const Template = ({
 										label: footer,
 									})}
 								`,
-									() => 
-										Typography({
-											semantics: "body",
-											size: "m",
-											content: [ footer ]
-										})
+									() =>
+										renderContent(footer)
 								)}
 							</div>
 							<div class="${rootClass}-buttonGroup">
@@ -141,7 +131,7 @@ export const Template = ({
 									},
 								}, context)}
 							</div>
-						`, 
+						`,
 						() => html`
 						 	<div class="${rootClass}-noFooter"></div>
 							<div class="${rootClass}-buttonGroup">
