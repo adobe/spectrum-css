@@ -5,10 +5,10 @@ import { Template } from "./template.js";
 
 /**
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions. Standard dialogs are the most frequent type of dialogs. They appear in the center of the screen over the interface and should be used for moderately complex tasks. Takeover dialogs are large types of dialogs. They use the totality of the screen and should be used for modal experiences with complex workflows.
- * 
+ *
  * ## Usage with modal component
  * When a dialog component is used in tandem with a [modal](/docs/components-modal--docs), implementations should set `--mod-modal-background-color` to `transparent`. This will prevent any background color used in the modal from peeking through from behind the dialog at the rounded corners, allowing the dialog's background color to take precedence.
- * 
+ *
  * The alert variants that were previously a part of Dialog were moved to their own component, [alert dialog](/docs/components-alert-dialog--docs).
  */
 export default {
@@ -25,7 +25,7 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		header: { 
+		header: {
 			name: "Additional header content",
 			description: "Controls header content.",
 			type: { name: "string" },
@@ -170,6 +170,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		layout: "padded",
 	},
 };
 
@@ -206,7 +207,7 @@ DefaultSmall.parameters = {
 };
 DefaultSmall.args = {
 	...Default.args,
-	size: "small",
+	size: "s",
 };
 
 export const DefaultLarge = Template.bind({});
@@ -217,7 +218,7 @@ DefaultLarge.parameters = {
 };
 DefaultLarge.args = {
 	...Default.args,
-	size: "large",
+	size: "l",
 };
 
 /**
