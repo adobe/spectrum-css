@@ -4295,17 +4295,23 @@ __metadata:
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/modal": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:14.0.0-next.9"
+    "@spectrum-css/typography": "npm:8.0.1"
     "@spectrum-css/underlay": "npm:6.0.1"
   peerDependencies:
-    "@spectrum-css/closebutton": ">=5"
-    "@spectrum-css/divider": ">=3"
-    "@spectrum-css/modal": ">=5"
-    "@spectrum-css/tokens": ">=14.0.0-next.0"
-    "@spectrum-css/underlay": ">=4"
+    "@spectrum-css/closebutton": ">=5.0.0-next.0"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/modal": ">=7"
+    "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/typography": ">=8"
+    "@spectrum-css/underlay": ">=6"
   peerDependenciesMeta:
-    "@spectrum-css/divider":
+    "@spectrum-css/checkbox":
+      optional: true
+    "@spectrum-css/closebutton":
       optional: true
     "@spectrum-css/modal":
+      optional: true
+    "@spectrum-css/typography":
       optional: true
     "@spectrum-css/underlay":
       optional: true
@@ -4577,7 +4583,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/modal@workspace:components/modal"
   dependencies:
-    "@spectrum-css/commons": "npm:^11.0.0"
     "@spectrum-css/tokens": "npm:14.0.0-next.9"
   peerDependencies:
     "@spectrum-css/tokens": ">=14.0.0-next.0"
@@ -7513,9 +7518,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001640":
-  version: 1.0.30001643
-  resolution: "caniuse-lite@npm:1.0.30001643"
-  checksum: 10c0/7fcd0fd180bbe6764311ad57b0d39c23afdcc3bb1d8f804e7a76752c62a85b1bb7cf74b672d9da2f0afe7ad75336ff811a6fe279eb2a54bc04c272b6b62e57f1
+  version: 1.0.30001692
+  resolution: "caniuse-lite@npm:1.0.30001692"
+  checksum: 10c0/fca5105561ea12f3de593f3b0f062af82f7d07519e8dbcb97f34e7fd23349bcef1b1622a9a6cd2164d98e3d2f20059ef7e271edae46567aef88caf4c16c7708a
   languageName: node
   linkType: hard
 
