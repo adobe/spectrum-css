@@ -56,9 +56,9 @@
 
 	/* Fullscreen/fullscreenTakeover */
 	--spectrum-takeover-dialog-title-font-size: var(--spectrum-title-size-xxl);
-	--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-500);
-	--spectrum-takeover-dialog-spacing-header-gap: var(--spectrum-spacing-400);
-	--spectrum-takeover-dialog-spacing-title-to-body: var(--spectrum-spacing-500);
+	--spectrum-takeover-dialog-grid-spacing: var(--spectrum-takeover-dialog-spacing-grid-padding);
+	--spectrum-takeover-dialog-spacing-header-content-gap: var(--spectrum-takeover-dialog-spacing-header-gap);
+	--spectrum-takeover-dialog-spacing-title-to-content: var(--spectrum-takeover-dialog-spacing-title-to-body);
 	--spectrum-takeover-dialog-inline-size: var(--spectrum-takeover-dialog-width);
 	--spectrum-takeover-dialog-block-size: var(--spectrum-takeover-dialog-height);
 }
@@ -271,25 +271,19 @@
 	max-block-size: none;
 	max-inline-size: none;
 
-	.spectrum--large & {
-		--spectrum-takeover-dialog-spacing-header-gap: var(--spectrum-spacing-300);
-		--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-400);
-		--spectrum-takeover-dialog-spacing-title-to-body: var(--spectrum-spacing-400);
-	}
-
 	.spectrum-Dialog-grid {
 		display: grid;
 		grid-template-columns:
-			var(--mod-takeover-dialog-spacing-grid-padding, var(--spectrum-takeover-dialog-spacing-grid-padding))
+			var(--mod-takeover-dialog-grid-spacing, var(--spectrum-takeover-dialog-grid-spacing))
 			1fr
 			auto
 			auto
-			var(--mod-takeover-dialog-spacing-grid-padding, var(--spectrum-takeover-dialog-spacing-grid-padding));
+			var(--mod-takeover-dialog-grid-spacing, var(--spectrum-takeover-dialog-grid-spacing));
 		grid-template-rows:
-			var(--mod-takeover-dialog-spacing-grid-padding, var(--spectrum-takeover-dialog-spacing-grid-padding))
+			var(--mod-takeover-dialog-grid-spacing, var(--spectrum-takeover-dialog-grid-spacing))
 			auto
 			1fr
-			var(--mod-takeover-dialog-spacing-grid-padding, var(--spectrum-takeover-dialog-spacing-grid-padding));
+			var(--mod-takeover-dialog-grid-spacing, var(--spectrum-takeover-dialog-grid-spacing));
 		grid-template-areas:
 			".    .       .       .            ."
 			".    heading header  buttonGroup  ."
@@ -299,9 +293,9 @@
 
 	.spectrum-Dialog-header {
 		grid-area: heading;
-		gap: var(--mod-takeover-dialog-spacing-header-gap, var(--spectrum-takeover-dialog-spacing-header-gap));
-		margin-inline-end: var(--mod-takeover-dialog-spacing-header-gap, var(--spectrum-takeover-dialog-spacing-header-gap));
-		margin-block-end: var(--spectrum-takeover-dialog-spacing-title-to-body);
+		gap: var(--mod-takeover-dialog-spacing-header-content-gap, var(--spectrum-takeover-dialog-spacing-header-content-gap));
+		margin-inline-end: var(--mod-takeover-dialog-spacing-header-content-gap, var(--spectrum-takeover-dialog-spacing-header-content-gap));
+		margin-block-end: var(--spectrum-takeover-dialog-spacing-title-to-content);
 	}
 
 	.spectrum-Dialog-heading {
