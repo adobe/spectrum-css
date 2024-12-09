@@ -4628,6 +4628,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/appframe@workspace:components/appframe":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/appframe@workspace:components/appframe"
+  dependencies:
+    "@spectrum-css/tokens": "npm:^14.0.0-next.9"
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/asset@workspace:components/asset":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/asset@workspace:components/asset"
@@ -5564,7 +5572,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens@npm:^14.0.0-next.7, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@npm:^14.0.0-next.7, @spectrum-css/tokens@npm:^14.0.0-next.9, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:

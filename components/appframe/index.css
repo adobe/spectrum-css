@@ -1,0 +1,158 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-AppFrame {
+	--spectrum-app-frame-background: var(--spectrum-background-layer-1-color);
+	--spectrum-app-frame-content-background: var(--spectrum-background-base-color);
+	--spectrum-app-frame-intro-background: linear-gradient(93.59deg, #ffeccf 0%, #ffa213 63%, #ff709f 100%);
+
+	--spectrum-app-frame-content-corner-radius: var(--spectrum-corner-radius-extra-large-default);
+
+	--spectrum-app-frame-section-gap: var(--spectrum-spacing-200);
+	--spectrum-app-frame-to-edge: var(--spectrum-spacing-200);
+	--spectrum-app-frame-section-padding: var(--spectrum-spacing-400) var(--spectrum-spacing-600) var(--spectrum-spacing-600);
+
+	--spectrum-header-height: var(--spectrum-component-height-400);
+	--spectrum-app-frame-side-nav-minimum-inline-size: var(--spectrum-component-height-400);
+
+	--spectrum-app-frame-section-grid-gap: var(--spectrum-spacing-300);
+	--spectrum-app-frame-section-heading-margin-block: 0px var(--spectrum-spacing-400);
+	--spectrum-app-frame-section-inner-area-vertical-gap: var(--spectrum-spacing-600);
+
+	/* To-do: not sure about the best way to include this limit and where to apply. */
+	--spectrum-app-frame-max-readable-characters: 80ch;
+
+	/* To-do: For demo purposes only; would not convert to SWC. They would need a way of providing different gradients for light/dark. */
+	.spectrum--dark & {
+		--spectrum-app-frame-intro-background: linear-gradient(94.13deg, #003041 0%, #03638c 100%);
+	}
+}
+
+.spectrum-AppFrame {
+	--spectrum-app-frame-start-side-column-inline-size: minmax(var(--spectrum-app-frame-side-nav-minimum-inline-size), max-content);
+	--spectrum-app-frame-end-side-column-inline-size: var(--spectrum-app-frame-to-edge);
+
+	background: var(--highcontrast-app-frame-background, var(--mod-app-frame-background, var(--spectrum-app-frame-background)));
+	inline-size: 100%;
+	block-size: 100vh;
+	position: relative;
+	display: grid;
+	grid-template-areas:
+		"head head head"
+		"side main endside";
+	grid-template-rows: var(--mod-header-height, var(--spectrum-header-height)) 1fr;
+	grid-template-columns: var(--spectrum-app-frame-start-side-column-inline-size) 1fr var(--spectrum-app-frame-end-side-column-inline-size);
+}
+
+.spectrum-AppFrame--noSideNav {
+	grid-template-columns: var(--spectrum-app-frame-to-edge) 1fr var(--spectrum-app-frame-to-edge);
+}
+
+.spectrum-AppFrame-header {
+	grid-area: head;
+}
+
+.spectrum-AppFrame-side-nav {
+	grid-area: side;
+}
+
+/* Main scrollable content area */
+.spectrum-AppFrame-content {
+	grid-area: main;
+	block-size: 100%;
+	border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius) var(--spectrum-app-frame-content-corner-radius) 0 0);
+	overflow: auto;
+	position: relative;
+	container-type: size;
+	container-name: app-frame-content;
+}
+
+/* The use of a main element keeps an option for it to have a document level footer element or another aside. */
+.spectrum-AppFrame-content > main {
+	min-block-size: 100%;
+	display: grid;
+	grid-template-rows: max-content 1fr;
+}
+
+/* Sections within the content area */
+.spectrum-AppFrame-section {
+	background: var(--highcontrast-app-frame-content-background, var(--mod-app-frame-content-background, var(--spectrum-app-frame-content-background)));
+	border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius));
+	padding: var(--mod-app-frame-section-padding, var(--spectrum-app-frame-section-padding));
+
+	+ .spectrum-AppFrame-section {
+		margin-block-start: var(--spectrum-app-frame-section-gap);
+	}
+}
+
+.spectrum-AppFrame-content .spectrum-AppFrame-section:last-of-type {
+	border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius)) 0;
+}
+
+/* To-do: option for rounded at the bottom content when it is not scrolling. May be an option or require JS for application. */
+.spectrum-AppFrame-content--rounded {
+	> main {
+		min-block-size: calc(100% - var(--spectrum-app-frame-to-edge, 0px));
+	}
+}
+
+/* Section heading */
+.spectrum-AppFrame-section .spectrum-AppFrame-section-heading {
+	margin-block: var(--spectrum-app-frame-section-heading-margin-block);
+	max-inline-size: var(--mod-app-frame-max-readable-characters, var(--spectrum-app-frame-max-readable-characters));
+}
+
+/* Section inner area; area nested within a section that is spaced out and typically has a section heading within it. */
+.spectrum-AppFrame-section-inner:not(:last-child) {
+	margin-block-end: var(--mod-app-frame-section-inner-area-vertical-gap, var(--spectrum-app-frame-section-inner-area-vertical-gap));
+}
+
+/* To-do: not sure about the best selector to apply this limit to. */
+.spectrum-AppFrame-section-inner > .spectrum-Heading,
+.spectrum-AppFrame-section-inner > .spectrum-Body {
+	max-inline-size: var(--mod-app-frame-max-readable-characters, var(--spectrum-app-frame-max-readable-characters));
+}
+
+/* Featured or onboarding intro section with with branded background */
+.spectrum-AppFrame-content-intro {
+	background: var(--mod-app-frame-intro-background, var(--spectrum-app-frame-intro-background));
+}
+
+/* Inner grid that can be used for landing page sections. */
+.spectrum-AppFrame-section-grid {
+	display: grid;
+	padding: 0;
+	margin: 0;
+
+	/* To-do: not sure about the intended responsiveness, and this should be moddable. */
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: var(--mod-app-frame-section-grid-gap, var(--spectrum-app-frame-section-grid-gap));
+
+	&:is(ul) {
+		list-style-type: none;
+	}
+}
+
+/* To-do: not sure about the intended responsiveness, and would ideally use a calculatd min-width with tokens. */
+@container (min-width: 700px) {
+	.spectrum-AppFrame-section-grid > .spectrum-AppFrame-section-grid-item--wide {
+		grid-column: span 2;
+	}
+}
+
+/* To-do: probably want some borders present on some containers for high contrast mode only. */
+@media (forced-colors: active) {
+	.spectrum-AppFrame {
+		--highcontrast-app-frame-background: Canvas;
+		--highcontrast-app-frame-content-background: Canvas;
+	}
+}
