@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.0.0-next.0
+
+### Major Changes
+
+- [#3301](https://github.com/adobe/spectrum-css/pull/3301) [`b91a202`](https://github.com/adobe/spectrum-css/commit/b91a2020be7a590a794938546e2f85f3fd9eef3e) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Migrates color loupe to Spectrum 2 tokens. Color loupe now uses the new drop shadow tokens `--spectrum-drop-shadow-elevated-x`, `--spectrum-drop-shadow-elevated-y`, `--spectrum-drop-shadow-elevated-blur`, and `--spectrum-drop-shadow-elevated-color` rather than specific color loupe tokens.
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 5.1.0
 
 ### Minor Changes

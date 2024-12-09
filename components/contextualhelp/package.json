@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/contextualhelp",
-	"version": "3.1.0",
+	"version": "4.0.0-next.0",
 	"description": "The Spectrum CSS contextualhelp component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -34,8 +34,8 @@
 	"peerDependencies": {
 		"@spectrum-css/actionbutton": ">=6",
 		"@spectrum-css/link": ">=5",
-		"@spectrum-css/popover": ">=7",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
+		"@spectrum-css/popover": ">=8.0.0-next.0",
+		"@spectrum-css/tokens": ">=14.0.0-next.10"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/link": {
