@@ -23,7 +23,7 @@ export const Template = ({
 	<div
 		class=${classMap({
 			[rootClass]: true,
-			[`${rootClass}-horizontal`]: isHorizontal,
+			[`${rootClass}--horizontal`]: isHorizontal,
 			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
