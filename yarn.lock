@@ -4421,6 +4421,7 @@ __metadata:
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/modal": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:14.0.0-next.9"
+    "@spectrum-css/typography": "npm:8.0.1"
     "@spectrum-css/underlay": "npm:6.0.1"
   peerDependencies:
     "@spectrum-css/button": ">=14.0.0-next.0"
@@ -4773,7 +4774,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/modal@workspace:components/modal"
   dependencies:
-    "@spectrum-css/commons": "npm:9.1.4-next.1"
     "@spectrum-css/tokens": "npm:14.0.0-next.9"
   peerDependencies:
     "@spectrum-css/tokens": ">=14.0.0-next.0"
