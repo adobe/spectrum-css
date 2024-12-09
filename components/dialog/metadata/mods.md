@@ -22,6 +22,6 @@
 | `--mod-standard-dialog-spacing-grid-padding`            |
 | `--mod-standard-dialog-spacing-title-to-description`    |
 | `--mod-standard-dialog-spacing-title-to-header-content` |
-| `--mod-takeover-dialog-spacing-grid-padding`            |
-| `--mod-takeover-dialog-spacing-header-gap`              |
+| `--mod-takeover-dialog-grid-spacing`                    |
+| `--mod-takeover-dialog-spacing-header-content-gap`      |
 | `--mod-takeover-dialog-title-font-size`                 |
