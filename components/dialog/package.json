@@ -25,17 +25,24 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/closebutton": ">=5",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/modal": ">=5",
-		"@spectrum-css/tokens": ">=14.0.0-next.0",
-		"@spectrum-css/underlay": ">=4"
+		"@spectrum-css/closebutton": ">=5.0.0-next.0",
+		"@spectrum-css/divider": ">=5",
+		"@spectrum-css/modal": ">=7",
+		"@spectrum-css/tokens": ">=14.0.0-next.3",
+		"@spectrum-css/typography": ">=8",
+		"@spectrum-css/underlay": ">=6"
 	},
 	"peerDependenciesMeta": {
-		"@spectrum-css/divider": {
+		"@spectrum-css/checkbox": {
+			"optional": true
+		},
+		"@spectrum-css/closebutton": {
 			"optional": true
 		},
 		"@spectrum-css/modal": {
+			"optional": true
+		},
+		"@spectrum-css/typography": {
 			"optional": true
 		},
 		"@spectrum-css/underlay": {
@@ -49,6 +56,7 @@
 		"@spectrum-css/divider": "5.0.1",
 		"@spectrum-css/modal": "7.0.1",
 		"@spectrum-css/tokens": "14.0.0-next.9",
+		"@spectrum-css/typography": "8.0.1",
 		"@spectrum-css/underlay": "6.0.1"
 	},
 	"keywords": [
