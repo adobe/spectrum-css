@@ -4631,8 +4631,21 @@ __metadata:
 "@spectrum-css/appframe@workspace:components/appframe":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/appframe@workspace:components/appframe"
-  dependencies:
-    "@spectrum-css/tokens": "npm:^14.0.0-next.9"
+  peerDependencies:
+    "@spectrum-css/tokens": ^14.0.0-next.9
+    "@spectrum-css/typography": ">=6"
+  peerDependenciesMeta:
+    "@spectrum-css/typography":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
+"@spectrum-css/appframesidenav@workspace:components/appframesidenav":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/appframesidenav@workspace:components/appframesidenav"
+  peerDependencies:
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ^14.0.0-next.9
   languageName: unknown
   linkType: soft
 
@@ -5572,7 +5585,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens@npm:^14.0.0-next.7, @spectrum-css/tokens@npm:^14.0.0-next.9, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@npm:^14.0.0-next.7, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
