@@ -170,7 +170,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
-		layout: "padded",
+		layout: "fullscreen",
 	},
 };
 
@@ -274,7 +274,7 @@ WithScroll.parameters = {
 that are imported above, but commented out.
  */
 /**
- * The full screen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
+ * The fullscreen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
  */
 export const Fullscreen = Template.bind({});
 Fullscreen.args = {
@@ -296,7 +296,7 @@ Fullscreen.argTypes = {
 };
 
 /**
- * The full screen takeover variant is similar to the full screen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
+ * The fullscreen takeover variant is similar to the full screen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
  */
 export const FullscreenTakeover = Template.bind({});
 FullscreenTakeover.storyName = "Fullscreen takeover";
