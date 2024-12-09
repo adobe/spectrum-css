@@ -73,10 +73,10 @@ governing permissions and limitations under the License.
 
 .spectrum-IllustratedMessage {
 	block-size: 100%;
-	display: var(--mod-illustrated-message-display, flex);
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: var(--mod-illustrated-message-display, grid);
+	grid-template-areas:
+		". illustration ."
+		"body body body";
 	text-align: center;
 	pointer-events: var(--mod-illustrated-message-pointer-events, auto);
 	max-inline-size: var(--mod-illustrated-message-vertical-maximum-width, var(--spectrum-illustrated-message-vertical-maximum-width));
@@ -121,14 +121,13 @@ governing permissions and limitations under the License.
 	margin-block: 0;
 }
 
-.spectrum-IllustratedMessage-horizontal {
+.spectrum-IllustratedMessage--horizontal {
 	--mod-buttongroup-justify-content: flex-start;
 	max-inline-size: var(--mod-illustrated-message-horizontal-maximum-width, var(--spectrum-illustrated-message-horizontal-maximum-width));
-	flex-direction: row;
 	text-align: start;
 	gap: var(--mod-illustrated-message-illustration-to-content, var(--spectrum-illustrated-message-illustration-to-content));
-	display: grid;
 	grid-template-areas: "illustration body";
+	align-items: center;
 
 	.spectrum-IllustratedMessage-illustration {
 		margin-block-end: 0;
