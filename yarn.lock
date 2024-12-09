@@ -4176,6 +4176,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/appframe@workspace:components/appframe":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/appframe@workspace:components/appframe"
+  peerDependencies:
+    "@spectrum-css/tokens": ^14.0.0-next.9
+    "@spectrum-css/typography": ">=6"
+  peerDependenciesMeta:
+    "@spectrum-css/typography":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/asset@npm:8.0.0-next.0, @spectrum-css/asset@workspace:components/asset":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/asset@workspace:components/asset"
