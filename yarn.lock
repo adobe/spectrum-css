@@ -4188,6 +4188,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/appframesidenav@workspace:components/appframesidenav":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/appframesidenav@workspace:components/appframesidenav"
+  peerDependencies:
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ^14.0.0-next.9
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/asset@npm:8.0.0-next.0, @spectrum-css/asset@workspace:components/asset":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/asset@workspace:components/asset"

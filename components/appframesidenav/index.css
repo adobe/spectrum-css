@@ -1,0 +1,135 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-AppFrameSideNav {
+	--spectrum-app-side-nav-min-inline-size: 140px;
+	--spectrum-app-side-nav-padding: var(--spectrum-spacing-200);
+	--spectrum-app-side-nav-item-gap: var(--spectrum-spacing-100);
+	--spectrum-app-side-nav-top-button-to-items: var(--spectrum-spacing-300);
+	--spectrum-app-side-nav-items-to-end-section: var(--spectrum-spacing-300);
+	--spectrum-app-side-nav-label-padding-block: var(--spectrum-component-top-to-text-100) var(--spectrum-component-bottom-to-text-100);
+	--spectrum-app-side-nav-label-padding-inline: var(--spectrum-spacing-100);
+
+	--spectrum-app-side-nav-line-height: var(--spectrum-line-height-100);
+	--spectrum-app-side-nav-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-app-side-nav-font-weight: var(--spectrum-medium-font-weight);
+	--spectrum-app-side-nav-font-style: var(--spectrum-default-font-style);
+	--spectrum-app-side-nav-font-size: var(--spectrum-font-size-100);
+
+	--spectrum-app-side-nav-content-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-app-side-nav-icon-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-app-side-nav-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-app-side-nav-icon-background-default: transparent;
+	--spectrum-app-side-nav-icon-background-focus: var(--spectrum-gray-200);
+
+	--spectrum-app-side-nav-icon-background-current: #292929;
+	--spectrum-app-side-nav-icon-color-current: var(--spectrum-white);
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-app-side-nav-line-height: var(--spectrum-cjk-line-height-100);
+	}
+
+	/* To-do: For demo purposes only; would not convert to SWC. Would need a token. This large scale number is also a guesstimate. */
+	.spectrum--large & {
+		--spectrum-app-side-nav-min-inline-size: 160px;
+	}
+}
+
+.spectrum-AppFrameSideNav--condensed {
+	--spectrum-app-side-nav-min-inline-size: var(--spectrum-component-height-400);
+}
+
+.spectrum-AppFrameSideNav {
+	--_spectrum-app-side-nav-icon-background: var(--spectrum-app-side-nav-icon-background-default);
+	--_spectrum-app-side-nav-icon-color: var(--spectrum-app-side-nav-icon-color);
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: var(--spectrum-app-side-nav-padding);
+
+	/* To-do: we may want to set inline-size instead, or both min-inline-size and max-inline-size, depending on how we want this to respond to the width of the content. */
+	min-inline-size: var(--spectrum-app-side-nav-min-inline-size);
+}
+
+.spectrum-AppFrameSideNav .spectrum-AppFrameSideNav-button {
+	margin-block-end: var(--spectrum-app-side-nav-top-button-to-items);
+}
+
+.spectrum-AppFrameSideNav-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	display: grid;
+	gap: var(--spectrum-app-side-nav-item-gap);
+	line-height: var(--spectrum-app-side-nav-line-height);
+
+	color: var(--spectrum-app-side-nav-content-color);
+	font-family: var(--spectrum-app-side-nav-font-family);
+	font-weight: var(--spectrum-app-side-nav-font-weight);
+	font-style: var(--spectrum-app-side-nav-font-style);
+	font-size: var(--spectrum-app-side-nav-font-size);
+}
+
+.spectrum-AppFrameSideNav-list-item {
+	display: block;
+}
+
+.spectrum-AppFrameSideNav-list-item-icon {
+	inline-size: var(--spectrum-component-height-100);
+	block-size: var(--spectrum-component-height-100);
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--_spectrum-app-side-nav-icon-background);
+	color: var(--_spectrum-app-side-nav-icon-color);
+}
+
+.spectrum-AppFrameSideNav-list-item-link {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	text-decoration: none;
+	outline: none;
+	color: var(--spectrum-app-side-nav-content-color);
+
+	&:focus-visible {
+		outline: 2px solid var(--spectrum-app-side-nav-focus-indicator-color);
+		outline-offset: 2px;
+		border-radius: 6px;
+	}
+
+	&:focus-visible,
+	&:active,
+	&:hover {
+		--_spectrum-app-side-nav-icon-background: var(--spectrum-app-side-nav-icon-background-focus);
+	}
+
+	.spectrum-AppFrameSideNav-list-item.spectrum-AppFrameSideNav-list-item--current & {
+		--_spectrum-app-side-nav-icon-background: var(--spectrum-app-side-nav-icon-background-current);
+		--_spectrum-app-side-nav-icon-color: var(--spectrum-app-side-nav-icon-color-current);
+	}
+}
+
+.spectrum-AppFrameSideNav-list-item-label {
+	padding-block: var(--spectrum-app-side-nav-label-padding-block);
+	padding-inline: var(--spectrum-app-side-nav-label-padding-inline);
+}
+
+.spectrum-AppFrameSideNav--condensed .spectrum-AppFrameSideNav-list-item-label {
+	display: none;
+}
