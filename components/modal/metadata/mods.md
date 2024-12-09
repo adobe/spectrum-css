@@ -3,12 +3,9 @@
 | `--mod-modal-background-color`                 |
 | `--mod-modal-confirm-border-radius`            |
 | `--mod-modal-confirm-entry-animation-delay`    |
-| `--mod-modal-confirm-entry-animation-distance` |
 | `--mod-modal-confirm-entry-animation-duration` |
 | `--mod-modal-confirm-exit-animation-delay`     |
 | `--mod-modal-confirm-exit-animation-duration`  |
 | `--mod-modal-max-height`                       |
 | `--mod-modal-max-width`                        |
 | `--mod-modal-transition-animation-duration`    |
-| `--mod-overlay-animation-duration`             |
-| `--mod-overlay-animation-duration-opened`      |

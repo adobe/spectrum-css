@@ -3454,11 +3454,16 @@ __metadata:
     "@spectrum-css/divider": ">=4.0.0-s2-foundations.0"
     "@spectrum-css/modal": ">=6.0.0-s2-foundations.0"
     "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/typography": ">=7.0.0-s2-foundations.0"
     "@spectrum-css/underlay": ">=5.0.0-s2-foundations.0"
   peerDependenciesMeta:
-    "@spectrum-css/divider":
+    "@spectrum-css/checkbox":
+      optional: true
+    "@spectrum-css/closebutton":
       optional: true
     "@spectrum-css/modal":
+      optional: true
+    "@spectrum-css/typography":
       optional: true
     "@spectrum-css/underlay":
       optional: true
@@ -3721,7 +3726,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/modal@workspace:components/modal"
   dependencies:
-    "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
     "@spectrum-css/tokens": ">=14.0.0-next.3"
