@@ -167,6 +167,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		layout: "fullscreen",
 	},
 	decorators: [
 		withUnderlayWrapper,
@@ -267,7 +268,9 @@ WithScroll.parameters = {
 };
 
 /**
- * The full screen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
+ * The fullscreen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
+ *
+ * Fullscreen dialogs do not support a close button, and are not dismissible.
  */
 export const Fullscreen = DialogFullscreen.bind({});
 Fullscreen.args = {
@@ -289,7 +292,9 @@ Fullscreen.argTypes = {
 };
 
 /**
- * The full screen takeover variant is similar to the full screen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
+ * The fullscreen takeover variant is similar to the fullscreen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
+ *
+ * Fullscreen takeover dialogs do not support a close button, and are not dismissible.
  */
 export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
 FullscreenTakeover.storyName = "Fullscreen takeover";
