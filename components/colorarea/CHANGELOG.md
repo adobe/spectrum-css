@@ -1,5 +1,19 @@
 # Change Log
 
+## 6.0.0-next.0
+
+### Major Changes
+
+- [#3388](https://github.com/adobe/spectrum-css/pull/3388) [`8aa61a9`](https://github.com/adobe/spectrum-css/commit/8aa61a9a92974b4048ba18b4d33e756af9a37d8e) Thanks [@cdransf](https://github.com/cdransf)! - # colorarea S2 migration
+
+  This change migrates the `colorarea` component to S2. It leverages updated tokens and the `rgba(...)` color function, replacing the existing `TODO` and hardcoded values.
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/colorhandle@9.0.0-next.0
+
 ## 5.1.0
 
 ### Minor Changes

@@ -1,5 +1,14 @@
 # Change Log
 
+## 7.0.0-next.4
+
+### Patch Changes
+
+- [#2860](https://github.com/adobe/spectrum-css/pull/2860) [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds a new `--mod-buttongroup-flex-wrap` custom property to leverage if a user wishes to customize the `flex-wrap` property.
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 7.1.0
 
 ### Minor Changes
