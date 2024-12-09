@@ -1,4 +1,4 @@
-import { Template, SizingTemplate } from "./template";
+import { SizingTemplate, Template } from "./template";
 
 /**
  * The illustrated message component is used for status and errors. It is also used for calls-to-action, such as within the drop zone component.
@@ -90,7 +90,7 @@ Horizontal.parameters = {
 };
 
 /**
- * Illustrated message comes in three sizes: small, medium, and large. 
+ * Illustrated message comes in three sizes: small, medium, and large.
  * - Small illustrated message is typically used in quick or in-line actions.
  * - The medium size is the default, and often used in panels.
  * - The large size illustrated message is generally used in full page layouts and dialogs.
