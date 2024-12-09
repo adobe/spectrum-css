@@ -1,6 +1,4 @@
-import { html } from "lit";
-
-import { Template } from "./template";
+import { ProgressCircleGroup, Template } from "./template";
 
 /**
  * Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
@@ -30,21 +28,29 @@ export default {
 		},
 		staticColor: {
 			name: "Static color",
+			description: "Variants that can be used when the progress circle needs to be placed on top of a colored background or a visual.",
 			type: { name: "string" },
 			table: {
-				disable: true,
 				type: { summary: "string" },
 				category: "Advanced",
 			},
-			options: ["white"],
+			options: ["white", "black"],
 			control: "select",
 		},
+		value: {
+			control: {
+				type: "range",
+				min: 0,
+				max: 100
+			}
+		}
 	},
 	args: {
 		rootClass: "spectrum-ProgressCircle",
 		size: "m",
 		isIndeterminate: false,
 		staticColor: undefined,
+		value: 43
 	},
 	parameters: {
 		actions: {
@@ -53,23 +59,53 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		layout: "centered"
 	},
 };
-
-const ProgressCircleGroup = (args) => html`
-	${window.isChromatic() ? html`
-		${Template(args)}
-		${Template({
-			...args,
-			isIndeterminate: true,
-		})}
-	` : Template(args)}
-`;
 
 export const Default = ProgressCircleGroup.bind({});
 Default.args = {};
 
-export const StaticWhite = ProgressCircleGroup.bind({});
-StaticWhite.args = {
+export const StaticWhiteDeterminate = Template.bind({});
+StaticWhiteDeterminate.tags = ["!dev"];
+StaticWhiteDeterminate.storyName = "Static white, default";
+StaticWhiteDeterminate.args = {
 	staticColor: "white",
+	isIndeterminate: false,
+};
+StaticWhiteDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticWhiteIndeterminate = Template.bind({});
+StaticWhiteIndeterminate.tags = ["!dev"];
+StaticWhiteIndeterminate.storyName = "Static white, indeterminate";
+StaticWhiteIndeterminate.args = {
+	staticColor: "white",
+	isIndeterminate: true,
+};
+StaticWhiteIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackDeterminate = Template.bind({});
+StaticBlackDeterminate.tags = ["!dev"];
+StaticBlackDeterminate.storyName = "Static black, default";
+StaticBlackDeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: false,
+};
+StaticBlackDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackIndeterminate = Template.bind({});
+StaticBlackIndeterminate.tags = ["!dev"];
+StaticBlackIndeterminate.storyName = "Static black, indeterminate";
+StaticBlackIndeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: true,
+};
+StaticBlackIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
 };

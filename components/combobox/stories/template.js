@@ -80,7 +80,7 @@ export const Template = ({
 					],
 					customInputClasses: [`${rootClass}-input`],
 					isLoading,
-					customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
+					customProgressCircleClasses: ["spectrum-Combobox-progress-circle spectrum-InfieldProgressCircle"],
 					placeholder: "Type here this text should truncate",
 					name: "field",
 					value: globals.selectedDay
