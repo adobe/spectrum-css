@@ -11,23 +11,22 @@
  * governing permissions and limitations under the License.
  */
 
-@import "@spectrum-css/commons/overlay.css";
-
 .spectrum-Modal {
 	--spectrum-modal-confirm-entry-animation-duration: var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-animation-duration-500));
-	/* @deprecated --mod-overlay-animation-duration-opened in favor of --mod-modal-confirm-entry-animation-delay */
-	--spectrum-modal-confirm-entry-animation-delay: var(--mod-overlay-animation-duration-opened, var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200)));
+	--spectrum-modal-confirm-entry-animation-delay: var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200));
 
-	/* @deprecated --mod-overlay-animation-duration in favor of --mod-modal-confirm-exit-animation-duration */
-	--spectrum-modal-confirm-exit-animation-duration: var(--mod-overlay-animation-duration, var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100)));
+	--spectrum-modal-confirm-exit-animation-duration: var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100));
 	--spectrum-modal-confirm-exit-animation-delay: var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-animation-duration-0));
 
-	--spectrum-modal-background-color: var(--spectrum-gray-75);
-	--spectrum-modal-confirm-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-modal-confirm-exit-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-modal-confirm-entry-animation-duration: var(--spectrum-animation-duration-500);
-	--spectrum-modal-confirm-entry-animation-delay: var(--spectrum-animation-duration-200);
-	--spectrum-modal-transition-animation-duration: var(--spectrum-animation-duration-100);
+	/* Distance between top and bottom of modal and edge of window for fullscreen modal */
+	--spectrum-modal-fullscreen-margin: 32px;
+	--spectrum-modal-max-height: var(--mod-modal-max-height, 90vh);
+	--spectrum-modal-max-width: var(--mod-modal-max-width, 90%);
+
+	--spectrum-modal-background-color: var(--mod-modal-background-color, var(--spectrum-gray-75));
+	--spectrum-modal-confirm-border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-corner-radius-extra-large-default));
+
+	--spectrum-modal-transition-animation-duration: var(--mod-modal-transition-animation-duration, var(--spectrum-animation-duration-100));
 }
 
 /* Used to position the modal */
@@ -49,6 +48,9 @@
 	 * We use the stretch value to counteract this where supported.
 	 */
 	block-size: 100vh;
+	/* stylelint-disable-next-line value-no-vendor-prefix */
+	block-size: -moz-available;
+	/* stylelint-disable-next-line value-no-vendor-prefix */
 	block-size: -webkit-fill-available;
 
 	/* autoprefixer: ignore next -- -moz-available providing inconsistent results; want to fall FF back to 100vh */
@@ -63,7 +65,7 @@
 	z-index: 2;
 
 	/* Be invisible by default */
-	transition: visibility 0ms linear var(--mod-modal-transition-animation-duration, var(--spectrum-animation-duration-100));
+	transition: visibility 0ms linear var(--spectrum-modal-transition-animation-duration);
 
 	&.is-open {
 		visibility: visible;
@@ -75,17 +77,17 @@
 	opacity: 0;
 
 	/* Start offset by the animation distance -- @note this is using the global dialog token */
-	transform: translateY(var(--mod-modal-confirm-entry-animation-distance, var(--spectrum-dialog-confirm-entry-animation-distance)));
+	transform: translateY(var(--spectrum-dialog-confirm-entry-animation-distance));
 
 	/* Appear above underlay */
 	z-index: 2;
 
 	/* Don't be bigger than the screen */
-	max-block-size: var(--mod-modal-max-height, 90vh);
-	max-inline-size: var(--mod-modal-max-width, 90%);
+	max-block-size: var(--spectrum-modal-max-height);
+	max-inline-size: var(--spectrum-modal-max-width);
 
-	background: var(--mod-modal-background-color, var(--spectrum-modal-background-color));
-	border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-corner-radius-100));
+	background: var(--spectrum-modal-background-color);
+	border-radius: var(--spectrum-modal-confirm-border-radius);
 	overflow: hidden;
 	outline: none; /* Firefox shows outline */
 	pointer-events: auto;
@@ -93,8 +95,8 @@
 	/* Exit animations */
 	transition:
 		opacity var(--spectrum-modal-confirm-exit-animation-duration) var(--spectrum-animation-ease-in) var(--spectrum-modal-confirm-exit-animation-delay),
-		visibility var(--spectrum-animation-duration-0) var(--spectrum-animation-linear) calc(var(--spectrum-modal-confirm-exit-animation-delay) + var(--spectrum-modal-confirm-exit-animation-duration)),
-		transform var(--spectrum-animation-duration-0) var(--spectrum-animation-linear) calc(var(--spectrum-modal-confirm-exit-animation-delay) + var(--spectrum-modal-confirm-exit-animation-duration));
+		visibility 0ms linear calc(var(--spectrum-modal-confirm-exit-animation-delay) + var(--spectrum-modal-confirm-exit-animation-duration)),
+		transform 0ms linear calc(var(--spectrum-modal-confirm-exit-animation-delay) + var(--spectrum-modal-confirm-exit-animation-duration));
 
 	&.is-open {
 		pointer-events: auto;
