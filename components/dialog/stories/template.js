@@ -18,7 +18,7 @@ export const Template = ({
 	showModal = false,
 	hasFooter = false,
 	heading,
-	header,
+	header = [],
 	hasCheckbox = false,
 	content = [],
 	footer = [],
@@ -65,9 +65,11 @@ export const Template = ({
 						<h1 class="${rootClass}-heading">${heading}</h1>
 					`)}
 					${when(header, () => html`
-						<span class="${rootClass}-headerContent">
-							${renderContent(header)}
-						</span>
+						<div class="${rootClass}-headerContentWrapper">
+							<div class="${rootClass}-headerContent">
+								${renderContent(header)}
+							</div>
+						</div>
 					`,
 				)}
 				</div>
