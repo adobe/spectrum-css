@@ -394,7 +394,9 @@ export const Variants = ({
 
 	return (args, context) => {
 		// Fetch any docs configurations from the context to use for VRT
-		const { argTypes = {}, parameters = {} } = context;
+		const { argTypes = {}, parameters = {}, viewMode } = context;
+
+		if (viewMode === "docs") return Template(args, context);
 
 		const height = parameters?.docs?.story?.height;
 		const width = parameters?.docs?.story?.width;

@@ -18,7 +18,7 @@
 		"build": {
 			"configurations": {
 				"ci": {
-					"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir ."]
+					"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --test --config-dir ."]
 				},
 				"docs": {
 					"commands": [
