@@ -75,7 +75,7 @@
 	@extend %spectrum-overlay;
 
 	/* Start offset by the animation distance */
-	transform: translateY(var(--mod-modal-confirm-entry-animation-distance, var(--spectrum-modal-confirm-entry-animation-distance)));
+	transform: translateY(var(--mod-modal-confirm-entry-animation-distance));
 
 	/* Appear above underlay */
 	z-index: 2;

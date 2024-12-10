@@ -132,7 +132,6 @@
     "--spectrum-component-height-300",
     "--spectrum-component-height-75",
     "--spectrum-corner-radius-100",
-    "--spectrum-disabled-background-color",
     "--spectrum-disabled-border-color",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
@@ -178,9 +177,7 @@
     "--system-spectrum-stepper-buttons-border-color-hover",
     "--system-spectrum-stepper-buttons-border-color-keyboard-focus",
     "--system-spectrum-stepper-buttons-border-style",
-    "--system-spectrum-stepper-buttons-border-width",
-    "--system-spectrum-stepper-disabled-buttons-background-color",
-    "--system-spectrum-stepper-disabled-buttons-border-width"
+    "--system-spectrum-stepper-buttons-border-width"
   ],
   "passthroughs": [
     "--mod-infield-button-border-block-end-width",
@@ -197,16 +194,11 @@
     "--mod-textfield-icon-spacing-inline-start-invalid"
   ],
   "high-contrast": [
-    "--highcontrast-infield-button-border-color",
     "--highcontrast-stepper-border-color",
     "--highcontrast-stepper-border-color-focus",
     "--highcontrast-stepper-border-color-focus-hover",
     "--highcontrast-stepper-border-color-hover",
     "--highcontrast-stepper-border-color-keyboard-focus",
-    "--highcontrast-stepper-button-background-color-default",
-    "--highcontrast-stepper-button-background-color-focus",
-    "--highcontrast-stepper-button-background-color-hover",
-    "--highcontrast-stepper-button-background-color-keyboard-focus",
     "--highcontrast-stepper-buttons-background-color",
     "--highcontrast-stepper-buttons-border-width",
     "--highcontrast-stepper-focus-indicator-color"

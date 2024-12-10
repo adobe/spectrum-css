@@ -108,7 +108,6 @@
 	}
 
 	.spectrum-LogicButton {
-
 		--highcontrast-logic-button-and-background-color: ButtonFace;
 		--highcontrast-logic-button-and-background-color-hover: ButtonFace;
 		--highcontrast-logic-button-and-border-color: ButtonText;
@@ -119,6 +118,7 @@
 		--highcontrast-logic-button-or-border-color: ButtonText;
 		--highcontrast-logic-button-or-border-color-hover: Highlight;
 		--highcontrast-logic-button-or-text-color: ButtonText;
+
 		forced-color-adjust: none;
 
 		&:disabled,
