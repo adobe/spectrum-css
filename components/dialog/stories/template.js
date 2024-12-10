@@ -65,7 +65,7 @@ export const Template = ({
 						<h1 class="${rootClass}-heading">${heading}</h1>
 					`)}
 					${when(header, () => html`
-						<span class="${rootClass}-header-content">
+						<span class="${rootClass}-headerContent">
 							${renderContent(header)}
 						</span>
 					`,
@@ -102,7 +102,7 @@ export const Template = ({
 				${when(hasFooter, () => html`
 					<footer class="${rootClass}-footer">
 						${when(typeof footer !== "undefined", () => html`
-							<div class="${rootClass}-footer-content">
+							<div class="${rootClass}-footerContent">
 								${when(hasCheckbox, () => html`
 						 			${Checkbox({
 										label: footer,

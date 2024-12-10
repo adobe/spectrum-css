@@ -159,7 +159,7 @@
 	outline: none; /* Hide focus outline around header */
 
 	/* additional header content should grow/shrink with the text, but only until it takes up half of the header */
-	> .spectrum-Dialog-header-content {
+	> .spectrum-Dialog-headerContent {
 		max-inline-size: fit-content;
 		flex: 1 1 100%;
 		font-size: var(--mod-standard-dialog-header-content-font-size, var(--spectrum-standard-dialog-header-content-font-size));
@@ -196,12 +196,12 @@
 
 	outline: none; /* Hide focus outline */
 
-	.spectrum-Dialog-footer-content {
+	.spectrum-Dialog-footerContent {
 		/* this attempts to give as much space as possible for the button group, particularly to avoid stacking on mobile. Some sizes still may have to stack. */
 		flex: 1 1 100%;
 	}
 
-	&:has(.spectrum-Dialog-footer-content),
+	&:has(.spectrum-Dialog-footerContent),
 	&:has(.spectrum-Dialog-buttonGroup) {
 		justify-content: space-between;
 	}
