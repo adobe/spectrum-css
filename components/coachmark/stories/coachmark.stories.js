@@ -1,6 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
@@ -60,6 +61,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 		docs: {
 			story: {
 				height: "300px",

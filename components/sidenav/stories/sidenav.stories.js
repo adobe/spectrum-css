@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { SideNavGroup } from "./sidenav.test.js";
@@ -69,6 +70,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

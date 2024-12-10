@@ -17,7 +17,8 @@
 		"no-console": ["warn", { "allow": ["warn", "error"] }],
 		"quotes": ["warn", "double"],
 		"semi": ["warn", "always"],
-		"space-before-blocks": ["warn", "always"]
+		"space-before-blocks": ["warn", "always"],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
 	},
 	"overrides": [
 		{

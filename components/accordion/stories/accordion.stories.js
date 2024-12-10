@@ -2,11 +2,11 @@ import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { AccordionGroup } from "./accordion.test.js";
 import { Template } from "./template.js";
-
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
  */
@@ -63,6 +63,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 	tags: ["!autodocs"],
 };

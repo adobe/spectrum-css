@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { AssetGroup } from "./asset.test.js";
@@ -38,6 +39,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 	tags: ["!autodocs"],
 };
