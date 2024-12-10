@@ -1,14 +1,60 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Container, Variants } from "@spectrum-css/preview/decorators";
+import exampleImage from "../../../.storybook/assets/images/example-ava@2x.png";
 import { Template } from "./template.js";
+
+export const Swatches = (args, context) => {
+	return Container({
+		withBorder: false,
+		containerStyles: {
+			"flex-grow": "1",
+			"align-items": "stretch",
+		},
+		wrapperStyles: {
+			"gap": "40px",
+			"justify-content": "space-around"
+		},
+		level: 2,
+		content: [
+			Template(args, context),
+			Template({
+				...args,
+				rounding: "none",
+				borderStyle: "noBorder",
+				swatchColor: "linear-gradient(to right, rgba(154, 116, 200, 0.5), rgb(174, 216, 230))",
+			}, context),
+			Template({
+				...args,
+				rounding: "full",
+				borderStyle: "lightBorder",
+				swatchColor: `center / contain no-repeat url("${exampleImage}")`,
+			}, context),
+			Template({
+				...args,
+				isMixedValue: true,
+			}, context),
+			Template({
+				...args,
+				swatchColor: undefined,
+				imageUrl: undefined,
+			}, context),
+		],
+	});
+};
 
 export const SwatchGroup = Variants({
 	Template,
+	SizeTemplate: Swatches,
+	sizeDirection: "column",
+	containerStyles: {
+		"flex-grow": "1",
+		"align-items": "stretch",
+	},
 	testData: [
 		{
-			testHeading: "Default",
+			testHeading: "RGB",
 		},
 		{
-			testHeading: "Color with opacity",
+			testHeading: "RGBA (opacity)",
 			swatchColor: "rgba(174, 216, 230, 0.3)"
 		},
 		{
@@ -26,7 +72,6 @@ export const SwatchGroup = Variants({
 		{
 			testHeading: "No border",
 			borderStyle: "noBorder",
-			rounding: "none",
 		},
 		{
 			testHeading: "Shape: rectangle",
@@ -34,8 +79,11 @@ export const SwatchGroup = Variants({
 		},
 		{
 			testHeading: "Gradient",
-			gradient: "linear-gradient(to right, rgba(0, 0, 0, 88%), rgb(174, 216, 230))",
-			swatchColor: "rgba(174, 216, 230, 0.3)",
+			swatchColor: "linear-gradient(to right, rgba(154, 116, 200, 0.5), rgb(174, 216, 230))",
+		},
+		{
+			testHeading: "Image as background",
+			swatchColor: `center / contain no-repeat url("${exampleImage}")`,
 		},
 		{
 			testHeading: "Image",
@@ -52,10 +100,9 @@ export const SwatchGroup = Variants({
 			isDisabled: true,
 		},
 		{
-			testHeading: "No color/empty",
+			testHeading: "Empty",
 			swatchColor: undefined,
-			imageUrl: "",
-			gradient: "",
+			imageUrl: undefined,
 			isMixedValue: false,
 			borderStyle: "default",
 		},

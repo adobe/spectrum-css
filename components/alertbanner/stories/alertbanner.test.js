@@ -4,9 +4,6 @@ import { Template } from "./template.js";
 export const AlertBannerGroup = Variants({
 	Template,
 	stateDirection: "column",
-	containerStyles: {
-		"inline-size": "100%",
-	},
 	wrapperStyles: {
 		"inline-size": "100%",
 	},

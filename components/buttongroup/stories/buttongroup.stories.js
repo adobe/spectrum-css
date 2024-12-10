@@ -74,7 +74,9 @@ Default.tags = ["!autodocs"];
 export const Horizontal = ButtonGroup.bind({});
 Horizontal.tags = ["!dev"];
 Horizontal.args = Default.args;
-
+Horizontal.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * Spacing for the Small t-shirt size.
@@ -83,6 +85,9 @@ export const HorizontalSmall = ButtonGroup.bind({});
 HorizontalSmall.tags = ["!dev"];
 HorizontalSmall.args = {
 	size: "s"
+};
+HorizontalSmall.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -93,6 +98,9 @@ Vertical.tags = ["!dev"];
 Vertical.args = {
 	vertical: true,
 };
+Vertical.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * Spacing for the Small t-shirt size.
@@ -102,6 +110,9 @@ VerticalSmall.tags = ["!dev"];
 VerticalSmall.args = {
 	vertical: true,
 	size: "s"
+};
+VerticalSmall.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -125,6 +136,9 @@ Disabled.args = {
 			isDisabled: true,
 		},
 	]
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 

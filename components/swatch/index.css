@@ -112,7 +112,7 @@
 	}
 
 	&.is-selected {
-		background-color: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-swatch-inner-border-color-selected)));
+		background: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-swatch-inner-border-color-selected)));
 
 		.spectrum-Swatch-fill {
 			clip-path: polygon(
@@ -136,12 +136,10 @@
 		}
 	}
 
-	/* Swatch fill: Image, Gradient, SVG */
+	/* Swatch fill: Image or SVG */
 	&.is-image {
-		.spectrum-Swatch-fill {
-			&::before {
-				background-color: transparent;
-			}
+		.spectrum-Swatch-fill::before {
+			background: transparent;
 		}
 	}
 
@@ -159,7 +157,7 @@
 	/* Swatch fill: Not fill with Slash */
 	&.is-nothing {
 		.spectrum-Swatch-fill {
-			background-color: var(--spectrum-picked-color, transparent);
+			background: var(--spectrum-picked-color, transparent);
 			background-image: none;
 
 			&::after {
@@ -244,7 +242,7 @@
 		inset: 0;
 		z-index: 0;
 
-		background-color: var(--spectrum-picked-color, transparent);
+		background: var(--spectrum-picked-color, transparent);
 
 		/* Swatch border */
 		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
@@ -258,7 +256,7 @@
 		&::before {
 			box-shadow: none;
 
-			background-color: var(--spectrum-picked-color, transparent);
+			background: var(--spectrum-picked-color, transparent);
 		}
 	}
 }
