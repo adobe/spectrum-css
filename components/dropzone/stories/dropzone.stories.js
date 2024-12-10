@@ -1,8 +1,5 @@
 import { html } from "lit";
-
 import { Template } from "./template";
-
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
 
 /**
  * A drop zone is an area on the screen into a which an object can be dragged and dropped to accomplish a task. For example, a drop zone might be used in an upload workflow to enable the user to simply drop a file from their operating system into the drop zone, which is a more efficient and intuitive action, rather than utilize the standard "Choose file" dialog.
@@ -35,6 +32,10 @@ export default {
 		rootClass: "spectrum-DropZone",
 		isDragged: false,
 		isFilled: false,
+		customHeading: "Drag and drop your file",
+		customDescription: "Or, select a file from your computer.",
+		customLabel: "Browse files",
+		hasButton: true
 	},
 	parameters: {
 		actions: {
@@ -43,6 +44,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		layout: "centered"
 	},
 };
 
@@ -51,20 +53,6 @@ export const Default = (args) => html`
 		${Template({
 			...args
 		})}
-
-		${window.isChromatic() ?
-			Template({
-				...args,
-				customHeading: "Drag and drop your file to upload",
-				customDescription: [
-					() => {
-						return html`You can also ${Link({ url: "#", text: "select a file" })} from your computer.`;
-					}
-				],
-				customLabel: "Drag and drop to replace file upload"
-			})
-		: null
-	}
 	</div>
 `;
 Default.args = {};
