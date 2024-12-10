@@ -2,27 +2,43 @@
 <link rel="preconnect" href="https://use.typekit.net" crossorigin />
 
 <!-- This is the script that attempts to pre-load the typekit fonts -->
-<script src="https://use.typekit.net/rok6rmo.js" id="typekit" type="text/javascript" async></script>
- <script>
-    try {
-        window.Typekit = Typekit.load({
-            kitId: "rok6rmo",
-            async: true,
-            scriptTimeout: 3000,
-            // https://github.com/typekit/webfontloader?tab=readme-ov-file#configuration
-            loading: function() {},
-            fontactive: function(familyName) {
-                console.log(`Font ${familyName} active`);
-            },
-            fontinactive: function(familyName) {
-                console.log(`Font ${familyName} inactive`);
-            },
-            active: function() {
-                console.log(`Font loaded [id: ${kitId}]`);
+<script>
+	window.global = window;
 
-                // Fire a custom event to indicate the Adobe Fonts have loaded
-                document.dispatchEvent(new CustomEvent("typekit-loaded", { detail: { kitId } }));
-            },
-        });
-    } catch (e) {}
+	let d = false;
+
+	const tk = document.createElement("script");
+	tk.src = "//use.typekit.net/rok6rmo.js";
+	tk.type = "text/javascript";
+	tk.async = "true";
+	tk.onload = tk.onreadystatechange = function () {
+		const rs = this.readyState;
+		if (d || (rs && rs != "complete" && rs != "loaded")) return;
+		d = true;
+
+		try {
+			Typekit.load({
+					kitId: "rok6rmo",
+					async: true,
+					scriptTimeout: 3000,
+					// https://github.com/typekit/webfontloader?tab=readme-ov-file#configuration
+					loading: function() {
+						window.FontsLoading = true;
+					},
+					active: function() {
+						window.FontsLoading = false;
+						window.currentKitId = this.kitId;
+						console.log(`Font loaded [id: ${this.kitId}]`);
+
+						// Fire a custom event to indicate the Adobe Fonts have loaded
+						document.dispatchEvent(new CustomEvent("typekit-loaded", { detail: { kitId: this.kitId } }));
+					},
+				});
+		} catch (e) {
+			console.log(e);
+		}
+	};
+
+	const s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(tk, s);
 </script>
