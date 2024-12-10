@@ -1,15 +1,18 @@
+import { Template as Table } from "@spectrum-css/table/stories/template.js";
+import { Template as Steplist } from "@spectrum-css/steplist/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
-// import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
+import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
 import { Template } from "./template.js";
 
 /**
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions. Standard dialogs are the most frequent type of dialogs. They appear in the center of the screen over the interface and should be used for moderately complex tasks. Takeover dialogs are large types of dialogs. They use the totality of the screen and should be used for modal experiences with complex workflows.
  *
+ * The alert variants that were previously a part of Dialog were moved to their own component, [alert dialog](/docs/components-alert-dialog--docs).
+ *
  * ## Usage with modal component
  * When a dialog component is used in tandem with a [modal](/docs/components-modal--docs), implementations should set `--mod-modal-background-color` to `transparent`. This will prevent any background color used in the modal from peeking through from behind the dialog at the rounded corners, allowing the dialog's background color to take precedence.
  *
- * The alert variants that were previously a part of Dialog were moved to their own component, [alert dialog](/docs/components-alert-dialog--docs).
  */
 export default {
 	title: "Dialog",
@@ -170,7 +173,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
-		layout: "padded",
+		layout: "fullscreen",
 	},
 };
 
@@ -179,7 +182,7 @@ const ExampleContent = "Standard dialog description. This should briefly communi
 /**
  * The default size for dialog is medium. The default dialog also has a checkbox in the footer.
  */
-export const Default = Template.bind({});
+export const Default = DialogGroup.bind({});
 Default.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	header: "* Required",
@@ -194,13 +197,9 @@ Default.args = {
 	],
 };
 
-/* TODO: For all dialog stories: the "is-hidden-story" tags in older versions of Storybook. In newer versions,
-use "!dev" to remove the stories from the side navigation, reflecting the intended behavior.
-Remove "is-hidden-story" in favor of "!dev" tags when possible.
-*/
 // ********* DOCS ONLY ********* //
 export const DefaultSmall = Template.bind({});
-DefaultSmall.tags = ["is-hidden-story", "!dev"];
+DefaultSmall.tags = ["!dev"];
 DefaultSmall.storyName = "Dialog - small",
 DefaultSmall.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -211,7 +210,7 @@ DefaultSmall.args = {
 };
 
 export const DefaultLarge = Template.bind({});
-DefaultLarge.tags = ["is-hidden-story", "!dev"];
+DefaultLarge.tags = ["!dev"];
 DefaultLarge.storyName = "Dialog - large",
 DefaultLarge.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -225,7 +224,7 @@ DefaultLarge.args = {
  * A dialog that can be dismissed without taking an action.
  */
 export const Dismissible = Template.bind({});
-Dismissible.tags = ["is-hidden-story", "!dev"];
+Dismissible.tags = ["!dev"];
 Dismissible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -238,7 +237,7 @@ Dismissible.args = {
  * Dialogs can have a hero or cover image header.
  */
 export const WithHero = Template.bind({});
-WithHero.tags = ["is-hidden-story", "!dev"];
+WithHero.tags = ["!dev"];
 WithHero.storyName = "With hero image";
 WithHero.parameters = {
 	docs: {
@@ -265,20 +264,66 @@ WithScroll.args = {
 	}
 };
 WithScroll.storyName = "Scrollable";
-WithScroll.tags = ["is-hidden-story", "!dev"];
+WithScroll.tags = ["!dev"];
 WithScroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/* TODO: once this gets rebased with `main`, make sure to use the fullscreen and fullscreenTakeover test templates
-that are imported above, but commented out.
- */
 /**
- * The full screen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
+ * The fullscreen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
+ *
+ * Implementations may swap out the extra header content and body content for other components, like the [steplist](/docs/components-steplist--docs) and [table](/docs/components-table--docs) seen in this example. Content in this area will be centered.
  */
-export const Fullscreen = Template.bind({});
+export const Fullscreen = DialogFullscreen.bind({});
 Fullscreen.args = {
 	...Default.args,
+	header:[
+		(passthroughs, context) => Steplist({
+			...passthroughs,
+			items: [
+				{
+					label: "Enter records",
+					isComplete: true,
+				},
+				{
+					label: "Confirmation",
+					isComplete: true,
+				},
+				{
+					label: "Summary",
+					isSelected: true,
+				},
+			],
+		}, context),
+	],
+	content: [
+		(passthroughs, context) => Table({
+			...passthroughs,
+			showThumbnails: true,
+			rowItems: [
+				{
+					cellContent: ["Table Row Alpha", "Test", "2"],
+				},
+				{
+					cellContent: ["Table Row Bravo", "Test", "28"],
+				},
+				{
+					cellContent: [
+						"Table Row Charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+						"Test",
+						"23",
+					],
+				},
+				{
+					cellContent: ["Table Row Delta", "Test", "7"],
+				},
+				{
+					cellContent: ["Summary Row", "", "60"],
+					isSummaryRow: true,
+				},
+			],
+		}, context),
+	],
 	layout: "fullscreen",
 	hasFooter: false,
 };
@@ -293,12 +338,13 @@ Fullscreen.parameters = {
 // https://github.com/storybookjs/storybook/discussions/18542
 Fullscreen.argTypes = {
 	hasFooter: { table: { disable: true, } },
+	header: { table: { disable: true, } },
 };
 
 /**
- * The full screen takeover variant is similar to the full screen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
+ * The fullscreen takeover variant is similar to the full screen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
  */
-export const FullscreenTakeover = Template.bind({});
+export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
 FullscreenTakeover.storyName = "Fullscreen takeover";
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },

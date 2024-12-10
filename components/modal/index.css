@@ -17,7 +17,8 @@ governing permissions and limitations under the License.
 	--spectrum-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
 
 	/* Distance between top and bottom of modal and edge of window for fullscreen modal */
-	--spectrum-modal-fullscreen-margin: 32px;
+	--spectrum-modal-fullscreen-margin: var(--spectrum-window-to-edge);
+	--spectrum-modal-takeover-window-to-edge: 0;
 	--spectrum-modal-max-height: 90vh;
 	--spectrum-modal-max-width: 90%;
 
@@ -129,17 +130,15 @@ governing permissions and limitations under the License.
 /** @unofficial */
 .spectrum-Modal--fullscreen {
 	position: fixed;
-	inset-inline-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-block-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-inline-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-block-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+	inset-block: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+	inset-inline: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
 	max-inline-size: none;
 	max-block-size: none;
 }
 
 .spectrum-Modal--fullscreenTakeover {
 	position: fixed;
-	inset: 0;
+	inset: var(--spectrum-modal-takeover-window-to-edge);
 	max-inline-size: none;
 	max-block-size: none;
 
