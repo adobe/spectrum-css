@@ -1,3 +1,5 @@
+import { Template as Table } from "@spectrum-css/table/stories/template.js";
+import { Template as Steplist } from "@spectrum-css/steplist/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
 import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
@@ -269,10 +271,59 @@ WithScroll.parameters = {
 
 /**
  * The fullscreen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
+ *
+ * Implementations may swap out the extra header content and body content for other components, like the [steplist](/docs/components-steplist--docs) and [table](/docs/components-table--docs) seen in this example. Content in this area will be centered.
  */
 export const Fullscreen = DialogFullscreen.bind({});
 Fullscreen.args = {
 	...Default.args,
+	header:[
+		(passthroughs, context) => Steplist({
+			...passthroughs,
+			items: [
+				{
+					label: "Enter records",
+					isComplete: true,
+				},
+				{
+					label: "Confirmation",
+					isComplete: true,
+				},
+				{
+					label: "Summary",
+					isSelected: true,
+				},
+			],
+		}, context),
+	],
+	content: [
+		(passthroughs, context) => Table({
+			...passthroughs,
+			showThumbnails: true,
+			rowItems: [
+				{
+					cellContent: ["Table Row Alpha", "Test", "2"],
+				},
+				{
+					cellContent: ["Table Row Bravo", "Test", "28"],
+				},
+				{
+					cellContent: [
+						"Table Row Charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+						"Test",
+						"23",
+					],
+				},
+				{
+					cellContent: ["Table Row Delta", "Test", "7"],
+				},
+				{
+					cellContent: ["Summary Row", "", "60"],
+					isSummaryRow: true,
+				},
+			],
+		}, context),
+	],
 	layout: "fullscreen",
 	hasFooter: false,
 };
@@ -287,6 +338,7 @@ Fullscreen.parameters = {
 // https://github.com/storybookjs/storybook/discussions/18542
 Fullscreen.argTypes = {
 	hasFooter: { table: { disable: true, } },
+	header: { table: { disable: true, } },
 };
 
 /**

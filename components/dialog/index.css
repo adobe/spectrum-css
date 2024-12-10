@@ -151,14 +151,13 @@ governing permissions and limitations under the License.
 
 	/* Without this, buttons will be stretched */
 	align-items: flex-start;
-	justify-content: space-between;
 
 	box-sizing: border-box;
 
 	outline: none; /* Hide focus outline around header */
 
 	/* additional header content should grow/shrink with the text, but only until it takes up half of the header */
-	> .spectrum-Dialog-headerContent {
+	> .spectrum-Dialog-headerContentWrapper {
 		max-inline-size: fit-content;
 		flex: 1 1 100%;
 		font-size: var(--mod-standard-dialog-header-content-font-size, var(--spectrum-standard-dialog-header-content-font-size));
@@ -295,6 +294,13 @@ governing permissions and limitations under the License.
 		gap: var(--mod-takeover-dialog-spacing-header-content-gap, var(--spectrum-takeover-dialog-spacing-header-content-gap));
 		margin-inline-end: var(--mod-takeover-dialog-spacing-header-content-gap, var(--spectrum-takeover-dialog-spacing-header-content-gap));
 		margin-block-end: var(--spectrum-takeover-dialog-spacing-title-to-content);
+
+		/* components in fullscreen/fullscreenTakeover dialogs are centered in the headerContentWrapper */
+		> .spectrum-Dialog-headerContentWrapper {
+			max-inline-size: unset;
+			display: inline-flex;
+			justify-content: center;
+		}
 	}
 
 	.spectrum-Dialog-heading {
