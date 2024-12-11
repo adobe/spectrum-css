@@ -9,17 +9,13 @@ export const CardGroup = Variants({
 		},
 		{
 			testHeading: "No image",
-			title: "Card title",
-			description: "Optional description that should be one or two lines",
 			footer: undefined,
 			image: undefined,
 		},
 		{
 			testHeading: "Horizontal",
-			title: "Card title",
 			description: "jpg",
 			showAsset: "file",
-			isQuiet: false,
 			isHorizontal: true,
 			hasActions: false,
 			hasQuickAction: false,
@@ -27,10 +23,8 @@ export const CardGroup = Variants({
 		},
 		{
 			testHeading: "Quiet",
-			title: "Name",
 			showAsset: "image",
 			image: "example-ava@2x.png",
-			description: "10/15/18",
 			isQuiet: true,
 			footer: undefined,
 		},
@@ -39,7 +33,6 @@ export const CardGroup = Variants({
 			title: "FileName",
 			description: "PDF",
 			showAsset: "file",
-			image: undefined,
 			isQuiet: true,
 			footer: undefined,
 		},
@@ -54,7 +47,6 @@ export const CardGroup = Variants({
 		},
 		{
 			testHeading: "Asset preview",
-			title: "Card title",
 			showAsset: "image",
 			image: "example-card-portrait.png",
 			description: "jpg",
@@ -67,7 +59,6 @@ export const CardGroup = Variants({
 		},
 		{
 			testHeading: "Gallery",
-			title: "Card title",
 			showAsset: "image",
 			image: "example-card-landscape.png",
 			description: "jpg",
