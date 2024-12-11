@@ -26,3 +26,4 @@
 | `--mod-dialog-fullscreen-header-text-size`          |
 | `--mod-dialog-heading-font-weight`                  |
 | `--mod-dialog-min-inline-size`                      |
+| `--mod-dialog-width`                                |

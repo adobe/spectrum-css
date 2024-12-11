@@ -108,6 +108,10 @@ export default {
 		isMixedValue: false,
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=57008-1092",
+		},
 		packageJson,
 		metadata,
 	},

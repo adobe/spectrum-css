@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-ActionBar {
 	--spectrum-actionbar-height: var(--spectrum-action-bar-height);
@@ -21,17 +21,6 @@
 	--spectrum-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
 	--spectrum-actionbar-item-counter-line-height: var(--spectrum-line-height-100);
 	--spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
-
-	/* cjk language support for item counter */
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		--spectrum-actionbar-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	}
-
-	/* colors - applied to popover */
-	--spectrum-actionbar-popover-background-color: var(--spectrum-gray-50);
-	--spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
 
 	/* emphasized variation colors */
 	--spectrum-actionbar-emphasized-background-color: var(--spectrum-informative-background-color-default);
@@ -58,6 +47,13 @@
 	--spectrum-actionbar-shadow-vertical: var(--spectrum-drop-shadow-y);
 	--spectrum-actionbar-shadow-blur: var(--spectrum-drop-shadow-blur);
 	--spectrum-actionbar-shadow-color: var(--spectrum-drop-shadow-color);
+
+	/* cjk language support for item counter */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-actionbar-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	}
 }
 
 /* windows high contrast mode */

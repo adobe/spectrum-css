@@ -4,7 +4,6 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
-import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -12,6 +11,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Card",
@@ -27,8 +29,8 @@ export const Template = ({
 	isGallery = false,
 	isCardAssetOverride = false,
 	isGrid = false,
-	hasQuickAction = false,
 	hasActions = false,
+	hasQuickAction = false,
 	showAsset,
 	customStyles = {},
 	customClasses = [],
@@ -198,25 +200,23 @@ export const Template = ({
         `
       )}
       ${when(hasQuickAction && !isHorizontal, () =>
-        QuickAction(
-          {
-            noOverlay: true,
-            content: [
-              Checkbox(
-                {
-                  isChecked: isSelected,
-                  title: "Select",
-                },
-                context
-              ),
-            ],
-            onclick: function() {
+        html`
+          <div
+            class=${classMap({
+              [`${rootClass}-quickActions`]: true,
+            })}
+            @click=${function() {
               updateArgs({ isSelected: !isSelected });
-            },
-            customClasses: [`${rootClass}-quickActions`],
-          },
-          context
-        )
+            }}
+          >
+            ${Checkbox(
+              {
+                isChecked: isSelected,
+                title: "Select",
+              },
+              context
+            )}
+          </div>`
       )}
     </div>
   `;

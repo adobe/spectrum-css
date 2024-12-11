@@ -105,7 +105,6 @@ Quiet.parameters = {
 };
 
 export const Range = Template.bind({});
-Range.tags = ["!dev"];
 Range.args = {
 	lastDay: 3,
 	isRange: true,

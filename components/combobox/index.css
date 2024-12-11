@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Combobox {
 	--spectrum-combobox-inline-size: var(--spectrum-field-width);
@@ -54,7 +54,7 @@
 	--mod-textfield-focus-indicator-color: var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color));
 
 	--mod-textfield-background-color: var(--mod-combobox-background-color-default);
-	--mod-textfield-background-color-disabled: var(--mod-combobox-background-color-disabled);
+	--mod-textfield-background-color-disabled: var(--mod-combobox-background-color-disabled, var(--spectrum-combobox-background-color-disabled));
 
 	--mod-textfield-font-family: var(--mod-combobox-font-family);
 	--mod-textfield-font-weight: var(--mod-combobox-font-weight);
@@ -100,21 +100,7 @@
 	--spectrum-combobox-border-color-disabled: var(--spectrum-disabled-border-color);
 }
 
-.spectrum-Combobox--sizeS {
-	--spectrum-combobox-block-size: var(--spectrum-component-height-75);
-	--spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-75);
-	--spectrum-combobox-font-size: var(--spectrum-font-size-75);
-
-	--spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-small);
-	--spectrum-combobox-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
-	--spectrum-combobox-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-small);
-	--spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-small);
-	--spectrum-combobox-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-75);
-	--spectrum-combobox-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-75);
-	--spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-75);
-	--spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-75);
-}
-
+.spectrum-Combobox,
 .spectrum-Combobox--sizeM {
 	--spectrum-combobox-block-size: var(--spectrum-component-height-100);
 	--spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100);
@@ -128,6 +114,21 @@
 	--spectrum-combobox-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-100);
 	--spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-100);
+}
+
+.spectrum-Combobox--sizeS {
+	--spectrum-combobox-block-size: var(--spectrum-component-height-75);
+	--spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-75);
+	--spectrum-combobox-font-size: var(--spectrum-font-size-75);
+
+	--spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-small);
+	--spectrum-combobox-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
+	--spectrum-combobox-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-small);
+	--spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-small);
+	--spectrum-combobox-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-75);
+	--spectrum-combobox-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-75);
+	--spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-75);
+	--spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-75);
 }
 
 .spectrum-Combobox--sizeL {
@@ -369,16 +370,19 @@
 	/* Focus */
 	.spectrum-Combobox-textfield.is-focused &,
 	&:focus {
+		--mod-combobox-border-color-default: var(--spectrum-combobox-border-color-focus);
 		--mod-textfield-background-color: var(--mod-combobox-background-color-focus);
 
 		/* Focus + Hover */
 		&:hover {
+			--mod-combobox-border-color-default: var(--spectrum-combobox-border-color-focus-hover);
 			--mod-textfield-background-color: var(--mod-combobox-background-color-focus-hover);
 		}
 	}
 
 	/* Keyboard Focus */
 	.spectrum-Combobox-textfield.is-keyboardFocused & {
+		--mod-combobox-border-color-default: var(--spectrum-combobox-border-color-key-focus);
 		--mod-textfield-background-color: var(--mod-combobox-background-color-key-focus);
 	}
 
