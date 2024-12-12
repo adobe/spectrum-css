@@ -1,3 +1,4 @@
+import { Container } from "@spectrum-css/preview/decorators";
 import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as CoachIndicator } from "@spectrum-css/coachindicator/stories/template.js";
@@ -129,3 +130,25 @@ export const Template = (args, context) => {
 		</div>
 	`;
 };
+
+/* Displays open and closed action menus in a single story. */
+export const CoachmarkMenuStatesTemplate = (args, context) => Container({
+	withBorder: false,
+	withHeading: false,
+	wrapperStyles: {
+		columnGap: "100px",
+		rowGap: "200px",
+	},
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "With action menu",
+			content: Template({...args, isOpen: true}, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Without action menu",
+			content: Template({...args, hasActionMenu: false}, context),
+		})}
+	`
+});
