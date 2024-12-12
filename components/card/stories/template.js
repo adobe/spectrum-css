@@ -78,7 +78,7 @@ export const Template = ({
                   Asset(
                     {
                       image,
-                      preset: !image ? showAsset : undefined,
+                      preset: showAsset,
                       isCardAssetOverride,
                     },
                     context
@@ -87,7 +87,7 @@ export const Template = ({
                   Icon(
                     {
                       size: "xxl",
-                      iconName: showAsset === "folder" ? "File" : "Document",
+                      iconName: showAsset === "folder" ? "Folder" : "Document",
                       setName: "workflow",
                     },
                     context
@@ -188,7 +188,7 @@ export const Template = ({
           </div>`
       )}
       ${when(
-        footer && !isQuiet,
+        footer && !isQuiet && !isHorizontal && !isGallery,
         () => html`
           <div
             class=${classMap({
