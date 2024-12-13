@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 .spectrum-AppFrameSideNav {
 	--spectrum-app-side-nav-min-inline-size: 140px;
+	--spectrum-app-side-nav-max-inline-size: 260px;
 	--spectrum-app-side-nav-padding: var(--spectrum-spacing-200);
 	--spectrum-app-side-nav-item-gap: var(--spectrum-spacing-100);
 	--spectrum-app-side-nav-top-button-to-items: var(--spectrum-spacing-300);
@@ -40,13 +41,13 @@ governing permissions and limitations under the License.
 		--spectrum-app-side-nav-line-height: var(--spectrum-cjk-line-height-100);
 	}
 
-	/* To-do: For demo purposes only; would not convert to SWC. Would need a token. This large scale number is also a guesstimate. */
+	/* To-do: For demo purposes only; would not convert to SWC. Would need a token. This value is just a guesstimate. */
 	.spectrum--large & {
 		--spectrum-app-side-nav-min-inline-size: 160px;
 	}
 }
 
-.spectrum-AppFrameSideNav--condensed {
+.spectrum-AppFrameSideNav--minimized {
 	--spectrum-app-side-nav-min-inline-size: var(--spectrum-component-height-400);
 }
 
@@ -57,9 +58,12 @@ governing permissions and limitations under the License.
 	box-sizing: border-box;
 	margin: 0;
 	padding: var(--spectrum-app-side-nav-padding);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 
-	/* To-do: we may want to set inline-size instead, or both min-inline-size and max-inline-size, depending on how we want this to respond to the width of the content. */
 	min-inline-size: var(--spectrum-app-side-nav-min-inline-size);
+	max-inline-size: var(--spectrum-app-side-nav-max-inline-size);
 }
 
 .spectrum-AppFrameSideNav .spectrum-AppFrameSideNav-button {
@@ -72,7 +76,9 @@ governing permissions and limitations under the License.
 	padding: 0;
 	box-sizing: border-box;
 
-	display: grid;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
 	gap: var(--spectrum-app-side-nav-item-gap);
 	line-height: var(--spectrum-app-side-nav-line-height);
 
@@ -85,6 +91,11 @@ governing permissions and limitations under the License.
 
 .spectrum-AppFrameSideNav-list-item {
 	display: block;
+}
+
+/* Class to apply to the first nav item that should be aligned at the bottom (end section). Should only be applied to one item. */
+.spectrum-AppFrameSideNav-list-item--endSectionStart {
+	margin-block-start: auto;
 }
 
 .spectrum-AppFrameSideNav-list-item-icon {
@@ -130,6 +141,6 @@ governing permissions and limitations under the License.
 	padding-inline: var(--spectrum-app-side-nav-label-padding-inline);
 }
 
-.spectrum-AppFrameSideNav--condensed .spectrum-AppFrameSideNav-list-item-label {
+.spectrum-AppFrameSideNav--minimized .spectrum-AppFrameSideNav-list-item-label {
 	display: none;
 }

@@ -19,13 +19,13 @@ const emphasizedContainerStyles = {
 export const Template = ({
 	rootClass = "spectrum-AppFrame",
 	hasSideNavigation = true,
-	hasCondensedSideNav = false,
+	hasMinimizedSideNav = false,
 	id,
 	customClasses = [],
 	customStyles = {},
 }) => {
 	const sideNavigationMarkup = AppFrameSideNav({
-		isCondensed: hasCondensedSideNav,
+		isMinimized: hasMinimizedSideNav,
 		customClasses: ["spectrum-AppFrame-side-nav"],
 	});
 
