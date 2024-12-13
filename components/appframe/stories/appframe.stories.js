@@ -17,14 +17,26 @@ export default {
 			table: {
 				type: { summary: "boolean" },
 				category: "Component",
-				defaultValue: { summary: "true" }
+				defaultValue: { summary: "true" },
 			},
 			control: "boolean",
+		},
+		hasCondensedSideNav: {
+			name: "Condensed side navigation",
+			description: "Displays a horizontally condensed version of the side nav menu items where only the icon is visible.",
+			table: {
+				type: { summary: "boolean" },
+				defaultValue: { summary: false },
+				category: "Component",
+			},
+			control: "boolean",
+			if: { arg: "hasSideNavigation" },
 		},
 	},
 	args: {
 		rootClass: "spectrum-AppFrame",
 		hasSideNavigation: true,
+		hasCondensedSideNav: false,
 	},
 	parameters: {
 		layout: "fullscreen",
