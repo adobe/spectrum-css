@@ -19,6 +19,7 @@ governing permissions and limitations under the License.
 	--spectrum-app-side-nav-items-to-end-section: var(--spectrum-spacing-300);
 	--spectrum-app-side-nav-label-padding-block: var(--spectrum-component-top-to-text-100) var(--spectrum-component-bottom-to-text-100);
 	--spectrum-app-side-nav-label-padding-inline: var(--spectrum-spacing-100);
+	--spectrum-app-side-nav-icon-border-radius: var(--spectrum-corner-radius-medium-default);
 
 	--spectrum-app-side-nav-line-height: var(--spectrum-line-height-100);
 	--spectrum-app-side-nav-font-family: var(--spectrum-sans-font-family-stack);
@@ -101,7 +102,7 @@ governing permissions and limitations under the License.
 .spectrum-AppFrameSideNav-list-item-icon {
 	inline-size: var(--spectrum-component-height-100);
 	block-size: var(--spectrum-component-height-100);
-	border-radius: 6px;
+	border-radius: var(--spectrum-app-side-nav-icon-border-radius);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -121,7 +122,7 @@ governing permissions and limitations under the License.
 	&:focus-visible {
 		outline: 2px solid var(--spectrum-app-side-nav-focus-indicator-color);
 		outline-offset: 2px;
-		border-radius: 6px;
+		border-radius: var(--spectrum-app-side-nav-icon-border-radius);
 	}
 
 	&:focus-visible,
