@@ -22,7 +22,9 @@ governing permissions and limitations under the License.
 	--spectrum-app-frame-section-padding: var(--spectrum-spacing-400) var(--spectrum-spacing-600) var(--spectrum-spacing-600);
 
 	--spectrum-header-height: var(--spectrum-component-height-400);
-	--spectrum-app-frame-side-nav-minimum-inline-size: var(--spectrum-component-height-400);
+
+	--spectrum-app-frame-start-side-column-inline-size: minmax(var(--spectrum-component-height-400), max-content);
+	--spectrum-app-frame-end-side-column-inline-size: var(--spectrum-app-frame-to-edge);
 
 	--spectrum-app-frame-section-grid-gap: var(--spectrum-spacing-300);
 	--spectrum-app-frame-section-heading-margin-block: 0px var(--spectrum-spacing-400);
@@ -38,9 +40,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AppFrame {
-	--spectrum-app-frame-start-side-column-inline-size: minmax(var(--spectrum-app-frame-side-nav-minimum-inline-size), max-content);
-	--spectrum-app-frame-end-side-column-inline-size: var(--spectrum-app-frame-to-edge);
-
 	background: var(--highcontrast-app-frame-background, var(--mod-app-frame-background, var(--spectrum-app-frame-background)));
 	inline-size: 100%;
 	block-size: 100vh;
@@ -76,7 +75,10 @@ governing permissions and limitations under the License.
 	container-name: app-frame-content;
 }
 
-/* The use of a main element keeps an option for it to have a document level footer element or another aside. */
+/**
+ * The use of a main element keeps an option for it to have a document level <footer> element or another aside.
+ * To-do: provide examples with <footer>. may want to use a class like .spectrum-AppFrame-section-wrapper instead. 
+ */
 .spectrum-AppFrame-content > main {
 	min-block-size: 100%;
 	display: grid;
