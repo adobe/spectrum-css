@@ -13,7 +13,7 @@ export const Template = ({
 	topButtonText = "Create",
 	topButtonWorkflowIconName = "Add",
 	items = defaultSideNavItems,
-	isCondensed = false,
+	isMinimized = false,
 	id,
 	customClasses = [],
 	customStyles = {},
@@ -21,7 +21,7 @@ export const Template = ({
 	<nav
 		class=${classMap({
 			[rootClass]: true,
-			[`${rootClass}--condensed`]: isCondensed,
+			[`${rootClass}--minimized`]: isMinimized,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
@@ -32,7 +32,7 @@ export const Template = ({
 				variant: "accent",
 				label: topButtonText,
 				iconName: topButtonWorkflowIconName,
-				hideLabel: isCondensed,
+				hideLabel: isMinimized,
 				customClasses: ["spectrum-AppFrameSideNav-button"],
 			})
 		)}
@@ -41,6 +41,7 @@ export const Template = ({
 				html`<li class=${classMap({
 					[`${rootClass}-list-item`]: true,
 					[`${rootClass}-list-item--current`]: navItem.isCurrent,
+					[`${rootClass}-list-item--endSectionStart`]: navItem.isEndSectionStart,
 				})}>
 					<a class="spectrum-AppFrameSideNav-list-item-link" href="#test-link">
 						<span class="spectrum-AppFrameSideNav-list-item-icon">
@@ -59,7 +60,7 @@ export const Template = ({
  * Array of objects with `label` and `workflowIconName`.
  * Optionally:
  * - `isCurrent` marks the current page.
- * - `isEndSection` marks the nav item that should be aligned at the bottom "end section".
+ * - `isEndSectionBoundary` marks the first nav item that should be aligned at the bottom "end section". This should only be applied to one item.
  */
 export const defaultSideNavItems = [
 	{
@@ -94,7 +95,7 @@ export const defaultSideNavItems = [
 	{
 		label: "Settings",
 		workflowIconName: "Settings",
-		isEndSection: true,
+		isEndSectionStart: true,
 	},
 ];
 

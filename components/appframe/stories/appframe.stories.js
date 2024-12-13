@@ -21,9 +21,9 @@ export default {
 			},
 			control: "boolean",
 		},
-		hasCondensedSideNav: {
-			name: "Condensed side navigation",
-			description: "Displays a horizontally condensed version of the side nav menu items where only the icon is visible.",
+		hasMinimizedSideNav: {
+			name: "Minimized side navigation",
+			description: "Displays a horizontally minimized version of the side nav menu items where only the icon is visible.",
 			table: {
 				type: { summary: "boolean" },
 				defaultValue: { summary: false },
@@ -36,7 +36,7 @@ export default {
 	args: {
 		rootClass: "spectrum-AppFrame",
 		hasSideNavigation: true,
-		hasCondensedSideNav: false,
+		hasMinimizedSideNav: false,
 	},
 	parameters: {
 		layout: "fullscreen",
