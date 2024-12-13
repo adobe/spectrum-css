@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
 .spectrum-AppFrame-content {
 	grid-area: main;
 	block-size: 100%;
-	border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius) var(--spectrum-app-frame-content-corner-radius) 0 0);
+	border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius)) var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius)) 0 0;
 	overflow: auto;
 	position: relative;
 	container-type: size;
@@ -76,7 +76,7 @@ governing permissions and limitations under the License.
 }
 
 /**
- * The use of a main element keeps an option for it to have a document level <footer> element or another aside.
+ * <main> is a separate nested element, in order to allow the option for a document level <footer> element or another aside.
  * To-do: provide examples with <footer>. may want to use a class like .spectrum-AppFrame-section-wrapper instead. 
  */
 .spectrum-AppFrame-content > main {
@@ -97,11 +97,19 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AppFrame-content .spectrum-AppFrame-section:last-of-type {
-	border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius)) 0;
+	border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius)) var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius)) 0 0;
 }
 
-/* To-do: option for rounded at the bottom content when it is not scrolling. May be an option or require JS for application. */
+/**
+ * To-do: option for rounded at the bottom content when it is not scrolling. May be an option or require JS for application. 
+ * The idea is that the min-block-size would be removed (possibly with another class) from the element when the content is
+ * long enough to start scrolling past the bottom of the viewport (minus the frame to edge padding).
+ */
 .spectrum-AppFrame-content--rounded {
+	.spectrum-AppFrame-section:last-of-type {
+		border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius));
+	}
+
 	> main {
 		min-block-size: calc(100% - var(--spectrum-app-frame-to-edge, 0px));
 	}
