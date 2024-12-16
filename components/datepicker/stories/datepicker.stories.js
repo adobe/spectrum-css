@@ -4,7 +4,7 @@ import { isDisabled, isInvalid, isOpen, isQuiet, isReadOnly, isRequired, isValid
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { DatePickerGroup } from "./datepicker.test.js";
-import { Template } from "./template.js";
+import { OpenClosedTemplate, Template } from "./template.js";
 
 /**
  * A date picker displays a text field input with a button next to it, and can display two text fields next to each other for choosing a date range.
@@ -28,7 +28,7 @@ export default {
 			if: { arg: "isInvalid", truthy: false },
 		},
 		isDateTimeRange: {
-			name: "Date and Time styling",
+			name: "Date and time styling",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -81,16 +81,31 @@ export default {
 
 export const Default = DatePickerGroup.bind({});
 Default.args = {};
-Default.parameters = {
-	docs: {
-		story: {
-			height: "300px"
-		}
-	},
-};
+Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
-export const Quiet = Template.bind({});
+/** 
+ * Default styling for date pickers display a visible field button. This style works best in a dense array of controls where the field button helps separate the dropdown from its surroundings.
+ * 
+ * The standard implementation for a date picker incorporates the display of a [calendar](/docs/components-calendar--docs) within a [popover component](/docs/components-popover--docs).
+ */
+export const DefaultGroup = OpenClosedTemplate.bind({});
+DefaultGroup.args = {};
+DefaultGroup.tags = [ "!dev"];
+DefaultGroup.storyName = "Default";
+DefaultGroup.parameters = {
+	docs: {
+		story: {
+			height: "350px",
+		}
+	},
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The quiet style works best when a clear layout (vertical stack, table, grid) makes it easy to parse.
+ */
+export const Quiet = OpenClosedTemplate.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
@@ -99,11 +114,14 @@ Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
 	docs: {
 		story: {
-			height: "300px"
+			height: "350px",
 		}
 	},
 };
 
+/**
+ * Date pickers can be used to select a date range (a start date and an end date).
+ */
 export const Range = Template.bind({});
 Range.args = {
 	lastDay: 3,
@@ -125,7 +143,11 @@ QuietRange.args = {
 QuietRange.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+QuietRange.storyName = "Range, quiet";
 
+/**
+ * A date picker can be marked as having an error to show that a value needs to be entered in order to move forward, or that an entered value is invalid.
+ */
 export const Invalid = Template.bind({});
 Invalid.tags = ["!dev"];
 Invalid.args = {
@@ -146,6 +168,7 @@ QuietInvalid.args = {
 QuietInvalid.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+QuietInvalid.storyName = "Invalid, quiet";
 
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];
@@ -155,6 +178,7 @@ ReadOnly.args = {
 ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+ReadOnly.storyName = "Read-only";
 
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
@@ -174,6 +198,7 @@ QuietDisabled.args = {
 QuietDisabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+QuietDisabled.storyName = "Disabled, quiet";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = DatePickerGroup.bind({});
