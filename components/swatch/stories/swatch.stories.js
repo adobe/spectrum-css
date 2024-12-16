@@ -20,6 +20,7 @@ export default {
 		size: size(["xs", "s", "m", "l"]),
 		swatchColor: {
 			name: "Color",
+			description: "Supports standard color input or any valid input for the <code>background</code> property such as, <code>linear-gradient(red, blue)</code>.",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
@@ -74,16 +75,6 @@ export default {
 				category: "Content",
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-		},
-		gradient: {
-			name: "Gradient",
-			description: "The gradient preview within the swatch. Input a gradient example, such as <code>linear-gradient(red, blue)</code>.",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			control: "text",
 		},
 		isMixedValue: {
 			name: "Mixed value",
@@ -228,7 +219,7 @@ MixedValue.parameters = {
 
 export const Gradient = Template.bind({});
 Gradient.args = {
-	gradient: "linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
+	swatchColor: "linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
 };
 Gradient.tags = ["!dev"];
 Gradient.parameters = {

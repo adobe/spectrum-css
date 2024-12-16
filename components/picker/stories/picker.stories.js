@@ -126,10 +126,6 @@ export default {
 				],
 			}, context)
 		],
-		// Make sure container flex layout does not misalign sibling elements such as field label in Template()
-		wrapperStyles: {
-			display: "block",
-		},
 	},
 	parameters: {
 		docs: {
@@ -185,7 +181,7 @@ Standard.parameters = {
 
 /**
  * This example shows the picker with a selected value.
- * A picker can also have [help text](?path=/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should select. 
+ * A picker can also have [help text](?path=/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should select.
  */
 export const SelectedValue = ClosedAndOpenTemplate.bind({});
 SelectedValue.storyName = "Default with value and help text";
@@ -217,10 +213,10 @@ SelectedValue.parameters = {
 };
 
 /**
- * Pickers come in four different sizes: small, medium, large, and extra-large. 
- * 
+ * Pickers come in four different sizes: small, medium, large, and extra-large.
+ *
  * At each of these sizes, the following chevron UI icon should be used:
- * 
+ *
  * | Picker size    | UI icon size |
  * |----------------|--------------|
  * | small          | `Chevron75`  |
@@ -366,7 +362,7 @@ WithWorkflowIcon.parameters = {
  * Labels can be placed either on top or on the side. Top labels are the default and are recommended because
  * they work better with long copy, localization, and responsive layouts. Side labels are most useful when vertical
  * space is limited.
- * 
+ *
  * When using the side label, the `spectrum-Picker--sideLabel` class is added to the Picker.
  */
 export const WithSideLabel = Template.bind({});

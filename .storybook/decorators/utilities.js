@@ -298,11 +298,13 @@ export const ArgGrid = ({
 		heading,
 		direction,
 		withBorder: withWrapperBorder,
-		wrapperStyles: containerStyles,
+		containerStyles,
+		wrapperStyles,
 		content: options.map((opt, index) => Container({
 			heading: labels[opt] ?? capitalize(opt),
 			level,
 			withBorder,
+			containerStyles,
 			wrapperStyles,
 			content: Template({
 				...args,
@@ -368,6 +370,7 @@ export const Sizes = ({
 export const Variants = ({
 	Template,
 	TestTemplate,
+	SizeTemplate,
 	// Test data defaults to an empty array so that we at least get the base component
 	testData = [{}],
 	stateData = [],
@@ -385,6 +388,10 @@ export const Variants = ({
 	// If no separate test template is provided, use the default template
 	if (typeof TestTemplate === "undefined") {
 		TestTemplate = Template;
+	}
+
+	if (typeof SizeTemplate === "undefined") {
+		SizeTemplate = TestTemplate;
 	}
 
 	const staticColor = {
@@ -486,7 +493,7 @@ export const Variants = ({
 								...containerStyles,
 							},
 							// if the test has multiple states, pass the wrapper styles to that container, otherwise use it here
-							wrapperStyles: withStates ? { backgroundColor } : combinedStyles,
+							wrapperStyles: withStates ? { backgroundColor, ...containerStyles } : combinedStyles,
 							content: html`
 								${when(withStates, () =>
 									States({
@@ -507,8 +514,9 @@ export const Variants = ({
 				<!-- If sizing exists for the component, it will render all sizes for testing -->
 				${when(withSizes, () =>
 					Sizes({
-						Template: TestTemplate,
+						Template: SizeTemplate,
 						wrapperStyles,
+						containerStyles,
 						direction: sizeDirection,
 						...args
 					}, context)
