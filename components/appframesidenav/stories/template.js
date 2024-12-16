@@ -43,7 +43,11 @@ export const Template = ({
 					[`${rootClass}-list-item--current`]: navItem.isCurrent,
 					[`${rootClass}-list-item--endSectionStart`]: navItem.isEndSectionStart,
 				})}>
-					<a class="spectrum-AppFrameSideNav-list-item-link" href="#test-link">
+					<a
+						class="spectrum-AppFrameSideNav-list-item-link"
+						href="#"
+						@click=${demoCurrentItemOnClick}
+					>
 						<span class="spectrum-AppFrameSideNav-list-item-icon">
 							${svg`<svg aria-hidden="true" role="img" class="spectrum-Icon" viewBox="0 0 20 20">${tempSpectrum2Icons[navItem.workflowIconName]}</svg>`}
 						</span>
@@ -54,6 +58,18 @@ export const Template = ({
 		</ul>
 	</nav>
 `;
+
+/**
+ * Add the "--current" nav item class after click on a nav item, and removes from all other nav items.
+ * Used only for Spectrum CSS Storybook demonstration purposes.
+ */
+const demoCurrentItemOnClick = (e) => {
+	e.preventDefault();
+	e?.target?.closest(".spectrum-AppFrameSideNav-list")?.querySelectorAll(".spectrum-AppFrameSideNav-list-item")?.forEach(item => {
+		item?.classList.remove("spectrum-AppFrameSideNav-list-item--current");
+	});
+	e?.target?.closest(".spectrum-AppFrameSideNav-list-item")?.classList.add("spectrum-AppFrameSideNav-list-item--current");
+}
 
 /**
  * Data for the side navigation items.
