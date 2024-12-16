@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 14.0.0-next.10
+
+### Patch Changes
+
+- [#2860](https://github.com/adobe/spectrum-css/pull/2860) [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds `--spectrum-standard-dialog-spacing-edge-to-content` to properly adjust the spacing for desktop/mobile dialog styles.
+
 ## 14.0.0-next.9
 
 ### Patch Changes

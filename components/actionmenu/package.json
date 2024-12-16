@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/actionmenu",
-	"version": "7.0.0-s2-foundations.16",
+	"version": "7.0.0-next.0",
 	"description": "The Spectrum CSS actionmenu component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -35,9 +35,9 @@
 	"peerDependencies": {
 		"@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0",
 		"@spectrum-css/icon": ">=8.0.0-s2-foundations.0",
-		"@spectrum-css/menu": ">=8.0.0-s2-foundations.0",
-		"@spectrum-css/popover": ">=8.0.0-s2-foundations.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
+		"@spectrum-css/menu": ">=8.0.0-next.0",
+		"@spectrum-css/popover": ">=8.0.0-next.0",
+		"@spectrum-css/tokens": ">=14.0.0-next.10"
 	},
 	"devDependencies": {
 		"@spectrum-css/actionbutton": "workspace:^",
