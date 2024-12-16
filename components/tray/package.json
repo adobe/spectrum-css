@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tray",
-	"version": "5.0.1",
+	"version": "4.0.0-next.0",
 	"description": "The Spectrum CSS tray component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,11 +25,11 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/button": ">=13",
-		"@spectrum-css/dialog": ">=10",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/modal": ">=5",
+		"@spectrum-css/button": ">=14.0.0-next.0",
+		"@spectrum-css/dialog": ">=11.0.0-next.0",
+		"@spectrum-css/divider": ">=5",
+		"@spectrum-css/icon": ">=9",
+		"@spectrum-css/modal": ">=5.1.1-next.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.0"
 	},
 	"peerDependenciesMeta": {
@@ -42,11 +42,11 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/button": "14.0.0-next.7",
-		"@spectrum-css/dialog": "12.0.1",
+		"@spectrum-css/dialog": "11.0.0-next.0",
 		"@spectrum-css/divider": "5.0.1",
 		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/modal": "7.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.9"
+		"@spectrum-css/modal": "5.1.1-next.0",
+		"@spectrum-css/tokens": "14.0.0-next.10"
 	},
 	"keywords": [
 		"design-system",
