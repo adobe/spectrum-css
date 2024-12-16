@@ -1,5 +1,5 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -29,7 +29,7 @@ governing permissions and limitations under the License.
 	--spectrum-alert-banner-close-button-to-inline-end: var(--spectrum-alert-banner-close-button-spacing); /* stylelint-disable-line spectrum-tools/no-unused-custom-properties -- used in passthrough */
 
 	/* Top and bottom margins for AlertBanner-text. Subtracts the vertical spacing that is already included in the
-     padding-block of its parent AlertBanner-body element. */
+	padding-block of its parent AlertBanner-body element. */
 	--spectrum-alert-banner-text-margin-block-start: max(0px, var(--mod-alert-banner-top-to-text, var(--spectrum-alert-banner-top-to-text)) - var(--mod-alert-banner-block-edge-to-button, var(--spectrum-alert-banner-block-edge-to-button)));
 	--spectrum-alert-banner-text-margin-block-end: max(0px, var(--mod-alert-banner-bottom-to-text, var(--spectrum-alert-banner-bottom-to-text)) - var(--mod-alert-banner-block-edge-to-button, var(--spectrum-alert-banner-block-edge-to-button)));
 
@@ -67,7 +67,7 @@ governing permissions and limitations under the License.
 	font-family: var(--mod-alert-banner-font-family, var(--spectrum-alert-banner-font-family));
 	line-height: var(--mod-alert-banner-line-height, var(--spectrum-alert-banner-line-height));
 	color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
-	background-color: var(--mod-alert-banner-background, var(--spectrum-alert-banner-background));
+	background: var(--mod-alert-banner-background, var(--spectrum-alert-banner-background));
 	border: var(--highcontrast-alert-banner-border-width, 0) solid var(--highcontrast-alert-banner-border-color, transparent);
 
 	&.is-open {
@@ -86,7 +86,7 @@ governing permissions and limitations under the License.
 	column-gap: var(--mod-alert-banner-text-to-button-horizontal, var(--spectrum-alert-banner-text-to-button-horizontal));
 
 	/* Block spacing between text and button, when the button has wrapped to the next line. Takes into
-     account the existing margins on the text. */
+	account the existing margins on the text. */
 	row-gap: max(var(--mod-alert-banner-text-to-button-vertical, 0px), var(--spectrum-alert-banner-text-to-button-vertical) - var(--spectrum-alert-banner-text-margin-block-end));
 
 	padding-block: var(--mod-alert-banner-block-edge-to-button, var(--spectrum-alert-banner-block-edge-to-button));
@@ -102,13 +102,6 @@ governing permissions and limitations under the License.
 .spectrum-AlertBanner-content {
 	display: flex;
 	flex-grow: 1;
-}
-
-.spectrum-AlertBanner-end {
-	display: flex;
-	align-items: center;
-	display: flex;
-	align-items: center;
 }
 
 .spectrum-AlertBanner-icon {
