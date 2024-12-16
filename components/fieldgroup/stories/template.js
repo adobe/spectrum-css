@@ -1,7 +1,7 @@
 import { Template as CheckBox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -97,3 +97,42 @@ export const Template = (
 		</div>
 	`;
 };
+
+/* Displays a radio group and a checkbox group. */
+export const InputOptionsFieldGroupTemplate = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Radios",
+			content: Template({...args}, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Checkboxes",
+			content: Template({...args, inputType: "checkbox"}, context),
+		})}
+	`
+});
+
+/* Displays all options for required vs. optional indicators. */
+export const NecessityIndicatorFieldGroupTemplate = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Required (text)",
+			content: Template({...args, label: "Field label (required)",}, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Required (asterisk)",
+			content: Template({...args, isRequired: true,}, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Optional",
+			content: Template({...args, label: "Field label (optional)", helpText: "",}, context),
+		})}
+	`
+});
