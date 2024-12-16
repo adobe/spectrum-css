@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/picker",
-	"version": "9.0.0-next.0",
+	"version": "9.0.0-next.1",
 	"description": "The Spectrum CSS picker component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,11 +25,11 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/helptext": ">=5",
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/menu": ">=7",
-		"@spectrum-css/popover": ">=7",
-		"@spectrum-css/progresscircle": ">=3",
+		"@spectrum-css/helptext": ">=7",
+		"@spectrum-css/icon": ">=9",
+		"@spectrum-css/menu": ">=8.0.0-next.0",
+		"@spectrum-css/popover": ">=8.0.0-next.0",
+		"@spectrum-css/progresscircle": ">=5",
 		"@spectrum-css/tokens": ">=14.0.0-next.0"
 	},
 	"peerDependenciesMeta": {
@@ -41,13 +41,13 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "^11.0.0",
+		"@spectrum-css/commons": "^9.1.4-next.1",
 		"@spectrum-css/helptext": "7.0.1",
 		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/menu": "9.0.1",
-		"@spectrum-css/popover": "8.0.1",
+		"@spectrum-css/menu": "8.0.0-next.0",
+		"@spectrum-css/popover": "8.0.0-next.0",
 		"@spectrum-css/progresscircle": "5.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.9"
+		"@spectrum-css/tokens": "14.0.0-next.10"
 	},
 	"keywords": [
 		"design-system",

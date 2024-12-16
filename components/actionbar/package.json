@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/actionbar",
-	"version": "10.0.1",
+	"version": "9.0.0-next.0",
 	"description": "The Spectrum CSS actionbar component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,18 +25,18 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/actiongroup": ">=5",
-		"@spectrum-css/closebutton": ">=5",
-		"@spectrum-css/fieldlabel": ">=8",
-		"@spectrum-css/popover": ">=7",
+		"@spectrum-css/actiongroup": ">=5.0.0-next.0",
+		"@spectrum-css/closebutton": ">=5.0.0-next.0",
+		"@spectrum-css/fieldlabel": ">=8.0.0-next.0",
+		"@spectrum-css/popover": ">=8.0.0-next.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.0"
 	},
 	"devDependencies": {
 		"@spectrum-css/actiongroup": "5.0.0-next.3",
 		"@spectrum-css/closebutton": "5.0.0-next.2",
 		"@spectrum-css/fieldlabel": "8.0.0-next.2",
-		"@spectrum-css/popover": "8.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.9"
+		"@spectrum-css/popover": "8.0.0-next.0",
+		"@spectrum-css/tokens": "14.0.0-next.10"
 	},
 	"keywords": [
 		"design-system",
