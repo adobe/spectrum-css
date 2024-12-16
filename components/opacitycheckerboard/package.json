@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/opacitycheckerboard",
-	"version": "2.2.0",
+	"version": "3.0.0-next.0",
 	"description": "The Spectrum CSS opacitycheckerboard component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -32,7 +32,7 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
+		"@spectrum-css/tokens": ">=14.0.0-next.10"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"
