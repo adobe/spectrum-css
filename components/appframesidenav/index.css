@@ -131,6 +131,12 @@ governing permissions and limitations under the License.
 		--_spectrum-app-side-nav-icon-background: var(--spectrum-app-side-nav-icon-background-focus);
 	}
 
+	&:active {
+		.spectrum-AppFrameSideNav-list-item-icon {
+			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
+		}
+	}
+
 	.spectrum-AppFrameSideNav-list-item.spectrum-AppFrameSideNav-list-item--current & {
 		--_spectrum-app-side-nav-icon-background: var(--spectrum-app-side-nav-icon-background-current);
 		--_spectrum-app-side-nav-icon-color: var(--spectrum-app-side-nav-icon-color-current);
