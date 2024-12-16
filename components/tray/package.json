@@ -26,10 +26,10 @@
 	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/button": ">=14",
-		"@spectrum-css/dialog": ">=12.0.0 <13.0.0",
+		"@spectrum-css/dialog": ">=11.0.0 <12.0.0",
 		"@spectrum-css/divider": ">=5",
 		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/modal": ">=7",
+		"@spectrum-css/modal": ">=7.0.0 <8.0.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.0"
 	},
 	"peerDependenciesMeta": {
@@ -54,11 +54,11 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/button": "14.0.0-next.7",
-		"@spectrum-css/dialog": "12.1.0",
+		"@spectrum-css/dialog": "11.0.0-next.0",
 		"@spectrum-css/divider": "5.1.0",
 		"@spectrum-css/icon": "9.1.0",
 		"@spectrum-css/modal": "7.1.0",
-		"@spectrum-css/tokens": "14.0.0-next.9"
+		"@spectrum-css/tokens": "14.0.0-next.10"
 	},
 	"keywords": [
 		"design-system",
