@@ -1,5 +1,16 @@
 # Change Log
 
+## 8.0.0-next.0
+
+### Major Changes
+
+- [#3355](https://github.com/adobe/spectrum-css/pull/3355) [`a827601`](https://github.com/adobe/spectrum-css/commit/a827601bc1769a775f24e9da294bdfaa70535082) Thanks [@cdransf](https://github.com/cdransf)! - Adds support for new avatar-size tokens (avatar-size-800 to avatar-size-1500). Updates avatar component story to support new sizes. Adds support for avatar-border-color and avatar-border-thickness.
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 9.0.1
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/underlay",
-	"version": "6.0.1",
+	"version": "4.1.1-next.0",
 	"description": "The Spectrum CSS underlay component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -28,8 +28,8 @@
 		"@spectrum-css/tokens": ">=14.0.0-next.0"
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "^11.0.0",
-		"@spectrum-css/tokens": "14.0.0-next.9"
+		"@spectrum-css/commons": "^9.1.4-next.1",
+		"@spectrum-css/tokens": "14.0.0-next.10"
 	},
 	"keywords": [
 		"design-system",
