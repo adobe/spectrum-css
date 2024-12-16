@@ -1,5 +1,22 @@
 # Change Log
 
+## 7.0.0-next.0
+
+### Minor Changes
+
+- [#3367](https://github.com/adobe/spectrum-css/pull/3367) [`2c62239`](https://github.com/adobe/spectrum-css/commit/2c62239aab6ae9815bac6edf531c212c45665a5c) Thanks [@cdransf](https://github.com/cdransf)! - Replaces corner-radius-75 with thumbnail-corner-radius.
+- [#3394](https://github.com/adobe/spectrum-css/pull/3394) [`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586) Thanks [@cdransf](https://github.com/cdransf)! - # thumbnail-opacity-checkerboard S2 migration
+
+  Adds thumbnail specific `thumbnail-opacity-checkerboard-square-size` token aliased to `--spectrum-opacity-checkerboard-size`. This impacts the display of the `opacity-checkerboard` when used within the `thumbnail` component.
+
+  This also corrects an issue with a token name in the `thumbnail` component by renaming `--spectrum-thumbnail-border-color-opacity` to `--spectrum-thumbnail-border-opacity`.
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08), [`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/opacitycheckerboard@3.0.0-next.0
+
 ## 6.3.0
 
 ### Minor Changes

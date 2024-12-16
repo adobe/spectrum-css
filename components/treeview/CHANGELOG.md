@@ -1,5 +1,13 @@
 # Change Log
 
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08), [`2c62239`](https://github.com/adobe/spectrum-css/commit/2c62239aab6ae9815bac6edf531c212c45665a5c), [`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/thumbnail@7.0.0-next.0
+
 ## 10.4.0
 
 ### Minor Changes
