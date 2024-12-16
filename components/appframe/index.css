@@ -110,10 +110,6 @@ governing permissions and limitations under the License.
 	.spectrum-AppFrame-section:last-of-type {
 		border-radius: var(--mod-app-frame-content-corner-radius, var(--spectrum-app-frame-content-corner-radius));
 	}
-
-	/* > main {
-		min-block-size: calc(100% - var(--spectrum-app-frame-to-edge, 0px));
-	} */
 }
 
 /* Section heading */
