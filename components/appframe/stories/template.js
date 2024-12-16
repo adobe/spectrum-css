@@ -10,7 +10,8 @@ import { when } from "lit/directives/when.js";
 
 import "@spectrum-css/appframe/index.css";
 
-// Example only emphasized container
+// Example only emphasized container.
+// To-do: use actual components to replace these blocks (card, illustrated message, etc).
 const emphasizedContainerStyles = {
 	background: "var(--spectrum-background-layer-1-color)",
 	boxShadow: "var(--spectrum-drop-shadow-emphasized-default-x) var(--spectrum-drop-shadow-emphasized-default-y) var(--spectrum-drop-shadow-emphasized-default-blur) var(--spectrum-drop-shadow-emphasized-default-color)",
