@@ -32,11 +32,23 @@ export default {
 			control: "boolean",
 			if: { arg: "hasSideNavigation" },
 		},
+		contentLayout: {
+			name: "Content layout",
+			description: "Different layout options. The options available here are a work in progress.",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["default", "rounded"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-AppFrame",
 		hasSideNavigation: true,
 		hasMinimizedSideNav: false,
+		contentLayout: "default",
 	},
 	parameters: {
 		layout: "fullscreen",

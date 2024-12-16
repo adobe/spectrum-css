@@ -22,6 +22,7 @@ export const Template = ({
 	rootClass = "spectrum-AppFrame",
 	hasSideNavigation = true,
 	hasMinimizedSideNav = false,
+	contentLayout = "default",
 	id,
 	customClasses = [],
 	customStyles = {},
@@ -45,7 +46,12 @@ export const Template = ({
 		>
 			${headerExampleMarkup(hasMinimizedSideNav, updateArgs)}
 			${when(hasSideNavigation, () => sideNavigationMarkup)}
-			<div class="spectrum-AppFrame-content">
+			<div
+				class=${classMap({
+					[`${rootClass}-content`]: true,
+					[`${rootClass}-content--${contentLayout}`]: typeof contentLayout !== "undefined" && contentLayout !== "default",
+				})}
+			>
 				<main>
 					<section class="spectrum-AppFrame-section spectrum-AppFrame-content-intro">
 						<div class="spectrum-Typography">
