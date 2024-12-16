@@ -1,7 +1,7 @@
 import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { when } from "lit-html/directives/when.js";
@@ -135,3 +135,22 @@ export const Template = ({
 		}, context)}
 	`;
 };
+
+
+/* Displays open and closed date pickers. */
+export const OpenClosedTemplate = (args, context) => Container({
+	withBorder: false,
+	wrapperStyles: { "column-gap": "56px", },
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Open",
+			content: Template(args, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Closed",
+			content: Template({...args, isOpen: false}, context),
+		})}
+	`
+});
