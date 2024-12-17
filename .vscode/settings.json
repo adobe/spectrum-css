@@ -184,5 +184,6 @@
 		".storybook/deprecated/*/*.mdx",
 		"components/*/stories/*.stories.js",
 		"components/*/stories/*.mdx"
-	]
+	],
+	"eslint.validate": ["json"]
 }

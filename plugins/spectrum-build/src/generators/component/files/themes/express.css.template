@@ -11,22 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
- @import "./themes/spectrum-two.css";
+/* @combine .spectrum.spectrum--express */
 
-.spectrum-{{ pascalCase name }} {
-  // color: var(--highcontrast-{{ folderName }}-content-color-default, var(--mod-{{ folderName }}-content-color-default, var(--spectrum-{{ folderName }}-content-color-default)));
+@import "./spectrum.css";
 
-  &.spectrum-{{ pascalCase name }}--sizeS {}
-  &,
-  &.spectrum-{{ pascalCase name }}--sizeM {}
-  &.spectrum-{{ pascalCase name }}--sizeL {}
-  &.spectrum-{{ pascalCase name }}--sizeXL {}
-}
-
-@media (forced-colors: active) {
-  .spectrum-{{ pascalCase name }} {
-    --highcontrast-{{ folderName }}-content-color-default: CanvasText;
-
-    forced-color-adjust: none;
-  }
-}
+@container style(--system: express) {}

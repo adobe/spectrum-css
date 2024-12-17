@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json-schema.org/schema",
+	"$id": "Component",
+	"title": "",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string",
+			"x-prompt": "Component name (i.e. Help text)",
+			"description": "Naming is hard; but it must have a name. You can always change it later.",
+			"$default": {
+				"$source": "argv",
+				"index": 0
+			}
+		},
+		"description": {
+			"type": "string",
+			"x-prompt": "Component description",
+			"description": "A brief description of the component. This will be used in the documentation.",
+			"default": ""
+		}
+	},
+	"required": ["name"]
+}
