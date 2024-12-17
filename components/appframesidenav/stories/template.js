@@ -17,47 +17,49 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-}) => html`
-	<nav
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--minimized`]: isMinimized,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		style=${ifDefined(styleMap(customStyles))}
-	>
-		${when(showTopButton && topButtonText, () =>
-			Button({
-				variant: "accent",
-				label: topButtonText,
-				iconName: topButtonWorkflowIconName,
-				hideLabel: isMinimized,
-				customClasses: ["spectrum-AppFrameSideNav-button"],
-			})
-		)}
-		<ul class="spectrum-AppFrameSideNav-list">
-			${items.map(navItem =>
-				html`<li class=${classMap({
-					[`${rootClass}-list-item`]: true,
-					[`${rootClass}-list-item--current`]: navItem.isCurrent,
-					[`${rootClass}-list-item--endSectionStart`]: navItem.isEndSectionStart,
-				})}>
-					<a
-						class="spectrum-AppFrameSideNav-list-item-link"
-						href="#"
-						@click=${demoCurrentItemOnClick}
-					>
-						<span class="spectrum-AppFrameSideNav-list-item-icon">
-							${svg`<svg aria-hidden="true" role="img" class="spectrum-Icon" viewBox="0 0 20 20">${tempSpectrum2Icons[navItem.workflowIconName]}</svg>`}
-						</span>
-						<span class="spectrum-AppFrameSideNav-list-item-label">${navItem.label}</span>
-					</a>
-				</li>`
-			)}
-		</ul>
-	</nav>
-`;
+}) => {
+	const topButtonMarkup = Button({
+		variant: "accent",
+		label: topButtonText,
+		iconName: topButtonWorkflowIconName,
+		hideLabel: isMinimized,
+		customClasses: ["spectrum-AppFrameSideNav-button"],
+	});
+
+	return html`
+		<nav
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--minimized`]: isMinimized,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			style=${ifDefined(styleMap(customStyles))}
+		>
+			${when(showTopButton && topButtonText, () => topButtonMarkup)}
+			<ul class="spectrum-AppFrameSideNav-list">
+				${items.map(navItem =>
+					html`<li class=${classMap({
+						[`${rootClass}-list-item`]: true,
+						[`${rootClass}-list-item--current`]: navItem.isCurrent,
+						[`${rootClass}-list-item--endSectionStart`]: navItem.isEndSectionStart,
+					})}>
+						<a
+							class="spectrum-AppFrameSideNav-list-item-link"
+							href="#"
+							@click=${demoCurrentItemOnClick}
+						>
+							<span class="spectrum-AppFrameSideNav-list-item-icon">
+								${svg`<svg aria-hidden="true" role="img" class="spectrum-Icon" viewBox="0 0 20 20">${tempSpectrum2Icons[navItem.workflowIconName]}</svg>`}
+							</span>
+							<span class="spectrum-AppFrameSideNav-list-item-label">${navItem.label}</span>
+						</a>
+					</li>`
+				)}
+			</ul>
+		</nav>
+	`;
+};
 
 /**
  * Add the "--current" nav item class after click on a nav item, and removes from all other nav items.

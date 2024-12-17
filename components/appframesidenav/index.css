@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
 	}
 }
 
-.spectrum-AppFrameSideNav--minimized {
+.spectrum-AppFrameSideNav.spectrum-AppFrameSideNav--minimized {
 	--spectrum-app-side-nav-min-inline-size: var(--spectrum-component-height-400);
 }
 
