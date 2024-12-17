@@ -3,7 +3,6 @@ import { Template } from "./template.js";
 
 export const TreeViewGroup = Variants({
 	Template,
-	skipBorders: true,
 	testData: [
 		{
 			testHeading: "Default",

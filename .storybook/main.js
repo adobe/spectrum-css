@@ -29,16 +29,20 @@ export default {
 	staticDirs: ["./assets", "./assets/images"],
 	addons: [
 		{
-			name: "@storybook/addon-essentials",
-			// Supported booleans: actions, controls, docs, toolbars, measure, outline.
-			options: {
-				// Don't need viewports b/c the medium/large contexts are used to support scaling.
-				viewport: false,
-				// Don't need backgrounds b/c this is handled by the color contexts.
-				backgrounds: false,
-				// Configure separately
-				docs: false,
-			},
+			name: "@storybook/addon-controls",
+			options: {},
+		},
+		{
+			name: "@storybook/addon-toolbars",
+			options: {},
+		},
+		{
+			name: "@storybook/addon-measure",
+			options: {},
+		},
+		{
+			name: "@storybook/addon-outline",
+			options: {},
 		},
 		{
 			name: "@storybook/addon-docs",
@@ -49,10 +53,14 @@ export default {
 				transcludeMarkdown: true,
 			},
 		},
-		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
-		"@storybook/addon-a11y",
+		{
+			name: "@storybook/addon-actions",
+			options: {},
+		},
 		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@whitespace/storybook-addon-html",
+		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
+		"@storybook/addon-a11y",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
@@ -72,6 +80,15 @@ export default {
 
 		return mergeConfig(config, {
 			publicDir: "./assets",
+			// Add dependencies to pre-optimization
+			optimizeDeps: {
+				include: [
+					"@whitespace/storybook-addon-html",
+					"@storybook/blocks",
+					"@storybook/theming",
+					"@storybook/components",
+				],
+			},
 			build: {
 				sourcemap: configType === "DEVELOPMENT",
 				manifest: true,
@@ -85,17 +102,17 @@ export default {
 			}
 		});
 	},
-	framework: {
-		name: "@storybook/web-components-vite",
+	framework: "@storybook/web-components-vite",
+	typescript: {
+		reactDocgen: 'react-docgen',
+		// Not using typescript so disable the check
+		check: false,
 	},
 	features: {
 		/* Code splitting flag; load stories on-demand */
 		storyStoreV7: true,
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
-	},
-	docs: {
-		defaultName: "Docs",
 	},
 	refs: {
 		"web-components": {

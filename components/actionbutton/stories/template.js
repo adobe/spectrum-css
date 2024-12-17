@@ -118,6 +118,7 @@ export const Template = ({
 					size,
 					iconName,
 					setName: iconSet,
+					useRef: iconSet === "workflow",
 					customClasses: [`${rootClass}-icon`, ...customIconClasses],
 				}, context)
 			)}
