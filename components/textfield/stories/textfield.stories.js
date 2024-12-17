@@ -4,7 +4,7 @@ import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
-import { TextFieldGroup } from "./textfield.test.js";
+import { TextFieldGroup, TextFieldLocaleGroup } from "./textfield.test.js";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
@@ -148,6 +148,9 @@ export default {
 export const Default = TextFieldGroup.bind({});
 Default.tags = ["!autodocs"];
 Default.args = {};
+
+export const WithLocaleText = TextFieldLocaleGroup.bind({});
+WithLocaleText.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
 

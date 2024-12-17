@@ -47,19 +47,6 @@ export default {
 			dynamicTitle: true,
 		},
 	},
-	textDirection: {
-		title: "Text direction",
-		description: "Direction of the content flow",
-		defaultValue: "ltr",
-		type: "string",
-		toolbar: {
-			items: [
-				{ value: "ltr", title: "Left to right" },
-				{ value: "rtl", title: "Right to left" },
-			],
-			dynamicTitle: true,
-		},
-	},
 	// @todo https://jira.corp.adobe.com/browse/CSS-314
 	reducedMotion: {
 		title: "Reduce motion",
@@ -77,14 +64,18 @@ export default {
 	lang: {
 		title: "Language",
 		description: "Language of the content",
-		defaultValue: "en-US",
+		defaultValue: "en_US",
 		type: "string",
 		toolbar: {
 			items: [
-				{ value: "en-US", title: "🇺🇸", right: "English (US)" },
-				{ value: "ja", title: "🇯🇵", right: "日本語" },
-				{ value: "ko", title: "🇰🇷", right: "한국어" },
-				{ value: "zh", title: "🇨🇳", right: "中文" },
+				{ value: "en_US", title: "English", right: "English (US)" },
+				{ value: "he", title: "Hebrew", right: "עִברִית" },
+				{ value: "ja", title: "Japanese", right: "日本語" },
+				{ value: "ko", title: "Korean", right: "한국어" },
+				{ value: "ar", title: "Arabic", right: "عربي" },
+				{ value: "zh", title: "Chinese", right: "中文" },
+				{ value: "fa", title: "Persian", right: "فارسی" },
+				{ value: "th", title: "Thai", right: "ไทย" },
 			],
 			dynamicTitle: true,
 		},
