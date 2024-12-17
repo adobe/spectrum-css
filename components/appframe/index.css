@@ -21,7 +21,7 @@ governing permissions and limitations under the License.
 	--spectrum-app-frame-to-edge: var(--spectrum-spacing-200);
 	--spectrum-app-frame-section-padding: var(--spectrum-spacing-400) var(--spectrum-spacing-600) var(--spectrum-spacing-600);
 
-	--spectrum-header-height: var(--spectrum-component-height-400);
+	--spectrum-app-frame-header-height: var(--spectrum-component-height-400);
 
 	--spectrum-app-frame-start-side-column-inline-size: minmax(var(--spectrum-component-height-400), max-content);
 	--spectrum-app-frame-end-side-column-inline-size: var(--spectrum-app-frame-to-edge);
@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
 	grid-template-areas:
 		"head head head"
 		"side main endside";
-	grid-template-rows: var(--mod-header-height, var(--spectrum-header-height)) 1fr;
+	grid-template-rows: var(--mod-app-frame-header-height, var(--spectrum-app-frame-header-height)) 1fr;
 	grid-template-columns: var(--spectrum-app-frame-start-side-column-inline-size) 1fr var(--spectrum-app-frame-end-side-column-inline-size);
 }
 
