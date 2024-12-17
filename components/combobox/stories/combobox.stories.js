@@ -1,6 +1,7 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
+import { within } from "@storybook/test";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
@@ -139,6 +140,12 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement);
+
+		// Wait for the popover to load
+		await canvas.findAllByRole("presentation");
 	},
 };
 
