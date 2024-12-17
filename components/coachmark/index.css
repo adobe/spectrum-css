@@ -18,6 +18,8 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
 	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimum-height);
 
+	--spectrum-coachmark-media-fixed-height: var(--spectrum-coach-mark-media-height);
+
 	--spectrum-coachmark-border-size: var(--mod-popover-border-width);
 	--spectrum-coachmark-border-radius: var(--mod-popover-corner-radius);
 
@@ -90,6 +92,10 @@ governing permissions and limitations under the License.
 	object-position: center;
 	border-start-start-radius: inherit;
 	border-start-end-radius: inherit;
+}
+
+.spectrum-CoachMark-image-wrapper--fixedHeight {
+	block-size: var(--mod-coachmark-media-fixed-height, var(--spectrum-coachmark-media-fixed-height));
 }
 
 .spectrum-CoachMark-image {
