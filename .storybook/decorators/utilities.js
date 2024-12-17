@@ -1,3 +1,4 @@
+import isChromatic from "chromatic/isChromatic";
 import { html, nothing } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
@@ -52,7 +53,10 @@ const Heading = ({
 		headingStyles["color"] = context?.args?.staticColor ?? "white";
 	}
 	else if (typeof context?.args?.staticColor !== "undefined") {
-		headingStyles["color"] = context?.args?.staticColor;
+		headingStyles["color"] = context?.args?.staticColor ?? "CanvasText";
+	}
+	else {
+		headingStyles["color"] = "CanvasText";
 	}
 
 
@@ -337,7 +341,6 @@ export const Sizes = ({
 } = {}, context = {}) => {
 	return ArgGrid({
 		withBorder,
-		heading: withHeading ? "Sizing" : undefined,
 		argKey: "size",
 		labels: {
 			xxs: "Extra-extra-small",
@@ -349,7 +352,8 @@ export const Sizes = ({
 			xxl: "Extra-extra-large",
 			xxxl: "Extra-extra-extra-large",
 		},
-		...args
+		...args,
+		heading: withHeading ? "Sizing" : undefined,
 	}, context);
 };
 
@@ -360,10 +364,9 @@ export const Sizes = ({
  * @param {Function} props.TestTemplate - The template to render for each test case.
  * @param {Object[]} props.testData - The data for each test case to render.
  * @param {Object[]} props.stateData - The data for each state to render.
+ * @param {boolean} props.withSizes - Whether to render sizes for the component.
  * @param {string} props.sizeDirection - The direction of the size content.
  * @param {string} props.stateDirection - The direction of the state content.
- * @param {boolean} props.skipBorders - Whether to skip rendering borders around tests.
- * @param {boolean} props.withSizes - Whether to render sizes for the component.
  * @param {Object} props.containerStyles - Additional styles to apply to the container.
  * @param {Object} props.wrapperStyles - Additional styles to apply to the content wrapper.
  */
@@ -374,10 +377,9 @@ export const Variants = ({
 	// Test data defaults to an empty array so that we at least get the base component
 	testData = [{}],
 	stateData = [],
+	withSizes = true,
 	sizeDirection,
 	stateDirection,
-	skipBorders = false,
-	withSizes = true,
 	containerStyles = {},
 	wrapperStyles = {},
 } = {}) => {
@@ -394,43 +396,47 @@ export const Variants = ({
 		SizeTemplate = TestTemplate;
 	}
 
-	const staticColor = {
-		black: "var(--spectrum-docs-static-black-background-color)",
-		white: "var(--spectrum-docs-static-white-background-color)",
-	};
-
 	return (args, context) => {
 		// Fetch any docs configurations from the context to use for VRT
-		const { argTypes = {}, parameters = {} } = context;
+		const {
+			parameters: {
+				docs = {},
+				showTestingGrid = false,
+			} = {},
+			viewMode
+		} = context;
 
-		const height = parameters?.docs?.story?.height;
-		const width = parameters?.docs?.story?.width;
+		const height = docs?.story?.height;
+		const width = docs?.story?.width;
 
-		// Check if the staticColor property exists in this story
-		const hasStaticColor = Object.keys(argTypes).includes("staticColor");
+		if (
+			viewMode === "docs" ||
+			(
+				!showTestingGrid &&
+				(typeof isChromatic === "function" && !isChromatic())
+			)
+		) {
+			return html`
+				<!-- Simple, clean template preview for non-testing grid views -->
+				<div
+					style=${styleMap({
+						"padding": "12px",
+						"min-block-size": typeof height === "number" ? `${height}px` : height,
+						"min-inline-size": typeof width === "number" ? `${width}px` : width,
+						...wrapperStyles,
+					})}
+					data-html-preview
+				>${Template(args, context)}</div>
+			`;
+		}
 
 		return html`
-			<!-- Simple, clean template preview for non-testing grid views -->
-			<div
-				style=${styleMap({
-					backgroundColor: hasStaticColor && staticColor[args.staticColor],
-					"padding": "12px",
-					"min-block-size": typeof height === "number" ? `${height}px` : height,
-					"min-inline-size": typeof width === "number" ? `${width}px` : width,
-					...wrapperStyles,
-					"display": window.isChromatic() ? "none" : wrapperStyles.display,
-				})}
-				data-html-preview
-			>
-				${Template(args, context)}
-			</div>
-
 			<!-- Start testing grid markup -->
 			<div
 				data-testing-preview
 				style=${styleMap({
 					"padding": "24px",
-					"display": window.isChromatic() ? "flex" : "none",
+					"display": "flex",
 					"flex-direction": "column",
 					"flex-wrap": "wrap",
 					"align-items": "flex-start",
@@ -462,7 +468,7 @@ export const Variants = ({
 
 						// Show the border if we are rendering the test in multiple states or if there are several
 						// tests in the grid, this helps distinguish between tests
-						const withBorder = !skipBorders && (withStates || testData.length > 1);
+						const withBorder = withStates || testData.length > 1;
 
 						// Merge the test data with the args to pass to the template
 						const data = { ...args, ...item };
@@ -472,14 +478,7 @@ export const Variants = ({
 							testHeading = "Default";
 						}
 
-						// Check if the staticColor property is being used in this story
-						let backgroundColor;
-						if (hasStaticColor && data.staticColor) {
-							backgroundColor = staticColor[data.staticColor];
-						}
-
 						const combinedStyles = {
-							backgroundColor,
 							...wrapperStyles,
 							...testWrapperStyles,
 						};
@@ -493,7 +492,7 @@ export const Variants = ({
 								...containerStyles,
 							},
 							// if the test has multiple states, pass the wrapper styles to that container, otherwise use it here
-							wrapperStyles: withStates ? { backgroundColor, ...containerStyles } : combinedStyles,
+							wrapperStyles: withStates ? containerStyles : combinedStyles,
 							content: html`
 								${when(withStates, () =>
 									States({

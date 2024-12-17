@@ -1,5 +1,4 @@
-import { FORCE_RE_RENDER } from '@storybook/core-events';
-import { addons, makeDecorator, useCallback } from "@storybook/preview-api";
+import { makeDecorator } from "@storybook/preview-api";
 import isChromatic from "chromatic/isChromatic";
 
 /**
@@ -11,27 +10,33 @@ export const withTestingPreviewWrapper = makeDecorator({
 	parameterName: "testingPreview",
 	wrapper: (StoryFn, context) => {
 		const {
+			// Testing preview reflects the state of the user-selected global value
 			globals: {
 				testingPreview = false,
 			} = {},
-			viewMode,
+			// Show testing grid reflects whether the testing grid is currently visible in the UI
+			parameters: {
+				showTestingGrid,
+			} = {},
+			viewMode
 		} = context;
 
-		const init = () => {
-			window.isChromatic = typeof isChromatic === "function" && isChromatic() === true ? isChromatic : () => testingPreview && viewMode !== "docs";
-		};
+		// Below we're setting a new parameter "showTestingGrid" to reflect whether the testing grid should be visible
+		// This is done to ensure that the testing grid is always visible in the Chromatic testing view
+		// and that the user-selected global value is respected in the Storybook UI
 
-		// Function that will update the global value and trigger a UI refresh.
-		const refreshAndUpdateGlobal = () => {
-			init();
-
-			// Invokes Storybook's addon API method (with the FORCE_RE_RENDER) event to trigger a UI refresh
-			addons.getChannel().emit(FORCE_RE_RENDER);
-		};
-
-		init();
-
-		useCallback(() => refreshAndUpdateGlobal(), [testingPreview]);
+		// If isChromatic() is true, we should update the global value to always show the testing grid
+		if (typeof isChromatic === "function" && isChromatic() === true) {
+			context.parameters.showTestingGrid = true;
+		} else if (viewMode === "docs") {
+			// If we're in the docs view, we should disable the testing grid
+			context.parameters.showTestingGrid = false;
+		} else if (typeof showTestingGrid === "undefined") {
+			// If the global value is undefined, we should set it to the testing preview value
+			context.parameters.showTestingGrid = testingPreview;
+		} else if (showTestingGrid !== testingPreview) {
+			context.parameters.showTestingGrid = testingPreview;
+		}
 
 		return StoryFn(context);
 	},

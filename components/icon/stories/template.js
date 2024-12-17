@@ -105,7 +105,7 @@ export const Template = ({
 	id = getRandomId("icon"),
 	customClasses = [],
 	icons,
-	useRef = false,
+	useRef = true,
 	workflowIcons,
 	uiIcons,
 	uiIconSizes,
@@ -161,6 +161,11 @@ export const Template = ({
 		else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, "").replace(/(Right|Left|Down|Up)$/, ""))) {
 			setName = "ui";
 		}
+	}
+
+	// Prefer full SVG for UI icons because sizing is more consistent.
+	if (setName === "ui" && uiIconName) {
+		useRef = false;
 	}
 
 	if (!setName) {
@@ -225,7 +230,7 @@ export const Template = ({
 	if (fill) inlineStyle = `color: ${fill}`;
 
 	let svgString;
-	if (icons && icons[setName]?.[scale]?.[idKey]) {
+	if (!useRef && icons && icons[setName]?.[scale]?.[idKey]) {
 		svgString = icons[setName][scale][idKey];
 	}
 
@@ -244,12 +249,12 @@ export const Template = ({
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 	};
 
-	const classesAsString = Object.entries(classList).reduce((acc, [key, value]) => {
-		if (value) acc += `${key} `;
-		return acc;
-	}, "");
+	if (svgString) {
+		const classesAsString = Object.entries(classList).reduce((acc, [key, value]) => {
+			if (value) acc += `${key} `;
+			return acc;
+		}, "");
 
-	if (!useRef && svgString) {
 		return html`${unsafeSVG(
 			svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
 		)}`;

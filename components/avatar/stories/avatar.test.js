@@ -3,7 +3,6 @@ import { Template } from "./template.js";
 
 export const AvatarGroup = Variants({
 	Template,
-	skipBorders: true,
 	stateData: [{
 		testHeading: "Not linked",
 		hasLink: false,

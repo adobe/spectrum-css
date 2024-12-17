@@ -12,14 +12,17 @@ export const DatePickerGroup = Variants({
 	testData: [
 		{
 			testHeading: "Default",
+			isOpen: true,
 		},
 		{
 			testHeading: "Quiet",
 			isQuiet: true,
+			isOpen: true,
 		},
 		{
 			testHeading: "Range",
 			isRange: true,
+			isOpen: true,
 			lastDay: 3,
 		}
 	],

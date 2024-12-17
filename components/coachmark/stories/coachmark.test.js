@@ -19,7 +19,6 @@ export const TestTemplate = (args, context) => {
 export const CoachMarkGroup = Variants({
 	Template,
 	TestTemplate,
-	skipBorders: false,
 	wrapperStyles: {
 		"z-index": "1",
 		"min-block-size": "auto",
