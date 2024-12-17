@@ -2,27 +2,43 @@
 <link rel="preconnect" href="https://use.typekit.net" crossorigin />
 
 <!-- This is the script that attempts to pre-load the typekit fonts -->
-<script src="https://use.typekit.net/rok6rmo.js" id="typekit" type="text/javascript" async></script>
- <script>
-    try {
-        window.Typekit = Typekit.load({
-            kitId: "rok6rmo",
-            async: true,
-            scriptTimeout: 3000,
-            // https://github.com/typekit/webfontloader?tab=readme-ov-file#configuration
-            loading: function() {},
-            fontactive: function(familyName) {
-                console.log(`Font ${familyName} active`);
-            },
-            fontinactive: function(familyName) {
-                console.log(`Font ${familyName} inactive`);
-            },
-            active: function() {
-                console.log(`Font loaded [id: ${kitId}]`);
+<script>
+	window.global = window;
 
-                // Fire a custom event to indicate the Adobe Fonts have loaded
-                document.dispatchEvent(new CustomEvent("typekit-loaded", { detail: { kitId } }));
-            },
-        });
-    } catch (e) {}
+	let isLoading = false;
+
+	const script = document.createElement("script");
+	script.src = "//use.typekit.net/rok6rmo.js";
+	script.type = "text/javascript";
+	script.async = "true";
+	script.onload = script.onreadystatechange = function () {
+		const readyState = this.readyState;
+		if (isLoading || (readyState && readyState != "complete" && readyState != "loaded")) return;
+		isLoading = true;
+
+		try {
+			Typekit.load({
+					kitId: "rok6rmo",
+					async: true,
+					scriptTimeout: 3000,
+					// https://github.com/typekit/webfontloader?tab=readme-ov-file#configuration
+					loading: function() {
+						window.FontsLoading = true;
+					},
+					active: function() {
+						window.FontsLoading = false;
+						window.currentKitId = this.kitId;
+						console.log(`Font loaded [id: ${this.kitId}]`);
+
+						// Fire a custom event to indicate the Adobe Fonts have loaded
+						document.dispatchEvent(new CustomEvent("typekit-loaded", { detail: { kitId: this.kitId } }));
+					},
+				});
+		} catch (e) {
+			console.log(e);
+		}
+	};
+
+	const firstScript = document.getElementsByTagName("script")[0];
+	firstScript.parentNode.insertBefore(script, firstScript);
 </script>

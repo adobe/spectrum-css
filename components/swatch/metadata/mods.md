@@ -7,6 +7,7 @@
 | `--mod-swatch-border-radius`                 |
 | `--mod-swatch-border-thickness`              |
 | `--mod-swatch-border-thickness-selected`     |
+| `--mod-swatch-disabled-icon-border-color`    |
 | `--mod-swatch-disabled-icon-color`           |
 | `--mod-swatch-disabled-icon-size`            |
 | `--mod-swatch-focus-indicator-border-radius` |
