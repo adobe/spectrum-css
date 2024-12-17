@@ -85,6 +85,7 @@ module.exports = ({
 			"postcss-combininator": shouldCombine ? {
 				newSelector: ".spectrum",
 			} : false,
+			"postcss-transparent-mapping": {},
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
