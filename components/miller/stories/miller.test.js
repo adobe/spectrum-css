@@ -3,7 +3,6 @@ import { Template } from "./template.js";
 
 export const MillerGroup = Variants({
 	Template,
-	skipBorders: true,
 	testData: [
 		{
 			testHeading: "Selectable branches",

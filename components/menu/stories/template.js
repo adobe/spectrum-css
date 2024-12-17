@@ -89,6 +89,7 @@ export const MenuItem = (
 						isCollapsible ? "ChevronRight" : "Checkmark",
 					),
 					setName: "ui",
+					useRef: false,
 					size,
 					customClasses: [
 						`${rootClass}Icon`,
@@ -197,6 +198,7 @@ export const MenuItem = (
 				{
 					iconName: iconWithScale(size, "ChevronRight"),
 					setName: "ui",
+					useRef: false,
 					size,
 					customClasses: [`${rootClass}Icon`, "spectrum-Menu-chevron"],
 				},
