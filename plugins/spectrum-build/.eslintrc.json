@@ -1,0 +1,37 @@
+{
+	"extends": ["../../.eslintrc"],
+	"ignorePatterns": ["!**/*"],
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+			"rules": {}
+		},
+		{
+			"files": ["*.ts", "*.tsx"],
+			"rules": {}
+		},
+		{
+			"files": ["*.js", "*.jsx"],
+			"rules": {}
+		},
+		{
+			"files": ["*.json"],
+			"parser": "jsonc-eslint-parser",
+			"rules": {
+				"@nx/dependency-checks": [
+					"error",
+					{
+						"ignoredFiles": ["{projectRoot}/eslint.config.{js,cjs,mjs}"]
+					}
+				]
+			}
+		},
+		{
+			"files": ["./package.json", "./generators.json"],
+			"parser": "jsonc-eslint-parser",
+			"rules": {
+				"@nx/nx-plugin-checks": "error"
+			}
+		}
+	]
+}

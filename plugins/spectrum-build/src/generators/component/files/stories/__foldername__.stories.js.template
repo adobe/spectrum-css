@@ -1,16 +1,16 @@
 import { Template } from "./template.js";
 import { isDisabled, isSelected, isHovered, isFocused } from "@spectrum-css/preview/types";
-import { {{ pascalCase name }}Group } from "./{{ pascalCase name }}.test.js";
+import { <%= pascal(name) %>Group } from "./<%= pascal(name) %>.test.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 
 /**
-  * {{ description }}
+  * <%= description %>
   */
 export default {
-  title: "{{ name }}",
-  component: "{{ pascalCase name }}",
+  title: "<%= title(name) %>",
+  component: "<%= pascal(name) %>",
   argTypes: {
     size: {
       name: "Size",
@@ -30,13 +30,13 @@ export default {
     isFocused,
   },
   args: {
-    rootClass: "spectrum-{{ pascalCase name }}",
+    rootClass: "spectrum-<%= pascal(name) %>",
     size: "m",
     isDisabled: false
   },
   parameters: {
     actions: {
-      handles: ["click .spectrum-{{ pascalCase name }}"],
+      handles: ["click .spectrum-<%= pascal(name) %>"],
     },
     design: {
       type: "figma",
@@ -47,7 +47,7 @@ export default {
   }
 };
 
-export const Default = {{ pascalCase name }}Group.bind({});
+export const Default = <%= pascal(name) %>Group.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //

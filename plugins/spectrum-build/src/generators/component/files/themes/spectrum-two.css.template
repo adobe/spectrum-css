@@ -11,6 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./spectrum-two.css";
+@container style(--system: spectrum) {}
 
 @container style(--system: legacy) {}
