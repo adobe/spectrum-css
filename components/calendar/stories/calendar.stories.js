@@ -86,8 +86,8 @@ export default {
 			control: "boolean",
 		},
 		useDOWAbbrev: {
-			name: "Days of the week",
-			description: "Use 3 letter abbreviation for day of week.",
+			name: "Use abbreviated weekdays",
+			description: "Uses a 3 letter abbreviation for day of week.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
