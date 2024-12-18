@@ -1,5 +1,8 @@
 | Modifiable custom properties                               |
 | ---------------------------------------------------------- |
+| `--mod-actionbutton-content-color-default`                 |
+| `--mod-actionbutton-edge-to-text`                          |
+| `--mod-actionbutton-min-width`                             |
 | `--mod-calendar-border-radius-reset`                       |
 | `--mod-calendar-border-width-reset`                        |
 | `--mod-calendar-button-icon-color`                         |

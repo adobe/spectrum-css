@@ -21,6 +21,8 @@ const fg = require("fast-glob");
 const postcss = require("postcss");
 const valuesParser = require("postcss-values-parser");
 
+require("colors");
+
 /**
  * A source of truth for commonly used directories
  * @type {object} dirs
@@ -168,13 +170,36 @@ function extractProperties(
  * Remove all files and folders from the provided directory's dist folder
  * @param {object} config
  * @param {string} config.cwd - Current working directory for the component being built
- * @returns Promise<void>
+ * @returns {Promise<string[]>} - An array of log messages
  */
 async function cleanFolder({ cwd = process.cwd() } = {}) {
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(path.join(cwd, "dist"))) return Promise.resolve();
 
-	return fsp.rm(path.join(cwd, "dist"), { recursive: true, force: true }).then(() => fsp.mkdir(path.join(cwd, "dist")));
+	const logs = [];
+	try {
+		fs.rmSync(path.join(cwd, "dist"), { recursive: true, force: true });
+	}
+	catch (err) {
+		if (err) {
+			logs.push(`${"✗".red}  ${relativePrint(path.join(cwd, "dist"), { cwd }).yellow} could not be removed`, err);
+		}
+	}
+
+	try {
+		fs.mkdirSync(path.join(cwd, "dist"));
+	}
+	catch (err) {
+		if (err) {
+			logs.push(`${"✗".red}  ${relativePrint(path.join(cwd, "dist"), { cwd }).yellow} directory could not be created`, err);
+		}
+	}
+
+	if (fs.existsSync(path.join(cwd, "dist"))) {
+		logs.push(`🧹  ${relativePrint(path.join(cwd, "dist"), { cwd }).yellow} directory cleaned`);
+	}
+
+	return Promise.resolve(logs);
 }
 
 /**
@@ -184,7 +209,7 @@ async function cleanFolder({ cwd = process.cwd() } = {}) {
  * @param {string} [options.cwd=]
  * @param {string} [options.shouldCombine=false] If true, combine the assets read in into one string
  * @param {import('fast-glob').Options} [options.fastGlobOptions={}] Additional options for fast-glob
- * @returns {Promise<{ content: string, input: string }[]>}
+ * @returns {Promise<{ content: string, input: string }[]|{ content: string, input: string }>}
  */
 async function fetchContent(
 	globs = [],
@@ -194,7 +219,7 @@ async function fetchContent(
 		...fastGlobOptions
 	} = {},
 ) {
-	const files = await fg(globs, {
+	const files = fg.sync(globs, {
 		onlyFiles: true,
 		...fastGlobOptions,
 		cwd,
@@ -202,38 +227,27 @@ async function fetchContent(
 
 	if (!files.length) return Promise.resolve([]);
 
-	const fileData = await Promise.all(
-		files.map(async (file) => ({
-			input: path.join(cwd, file),
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
-		})),
-	);
+	const fileData = files.map((file) => ({
+		input: path.join(cwd, file),
+		content: fs.readFileSync(path.join(cwd, file), "utf8"),
+	}));
+
+	if (!shouldCombine) return Promise.resolve(fileData);
 
 	// Combine the content into 1 file; @todo do this in future using CSS imports
-	if (shouldCombine) {
-		let content = "";
-		fileData.forEach((dataset, idx) => {
-			if (dataset.content) {
-				if (idx > 0) content += "\n\n";
-				content += `/* Sourced from ${relativePrint(dataset.input, { cwd })} */\n`;
-				content += dataset.content;
-			}
-		});
+	let content = "";
+	fileData.forEach((dataset, idx) => {
+		if (dataset.content) {
+			if (idx > 0) content += "\n\n";
+			content += `/* Sourced from ${relativePrint(dataset.input, { cwd })} */\n`;
+			content += dataset.content;
+		}
+	});
 
-		return Promise.resolve([
-			{
-				content,
-				input: fileData[0].input,
-			},
-		]);
-	}
-
-	return Promise.all(
-		files.map(async (file) => ({
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
-			input: file,
-		})),
-	);
+	return Promise.resolve({
+		input: fileData?.[0]?.input,
+		content,
+	});
 }
 
 /**
@@ -326,6 +340,75 @@ async function writeAndReport(content, output, { cwd = process.cwd() } = {}) {
 		});
 }
 
+/**
+ * A reusable function to run tasks and report the results to the console
+ * @param {(cwd: string) => Promise<string>[]} createTasks
+ * @param {object} config
+ * @param {string} config.taskLabel - The label to use for the task in the log
+ * @param {string} config.taskIcon - The icon to use for the task in the log
+ * @param {string} config.packageName - The name of the package being built
+ * @param {string} config.folderName - The name of the folder being built
+ * @param {string} config.cwd - The current working directory for the task
+ * @param {(log: string) => void} config.logger - How to log the output (i.e., console.log or process.stdout.write)
+ * @returns
+ */
+async function runAndReportToConsole(runner, {
+	taskLabel,
+	taskIcon,
+	packageName,
+	folderName,
+	cwd = process.cwd(),
+	logger = console.log,
+} = {}) {
+	if (!runner || typeof runner !== "function") {
+		// Report to the console that a problem occurred
+		logger("No tasks were provided to run.".red);
+		process.exit(1);
+	}
+
+	// Root path stored in process.env.PWD
+	// Local path stored in process.env.INIT_CWD
+	if (!folderName) folderName = getPackageFromPath(cwd);
+
+	if (!packageName) {
+		packageName = `@spectrum-css/${folderName.replaceAll("-", "")}`;
+	}
+
+	const key = `${taskLabel ? `[${taskLabel}]  ` : ""}${packageName.cyan}`;
+
+	// Starting the timer for the tasks
+	console.time(key);
+
+	// Run the tasks and collect the logs
+	return Promise.all(runner(cwd)).then(reports => {
+		// Flatten the reports array to a single level
+		const logs = reports.flat(Infinity).filter(Boolean);
+
+		// Print the logs to the console
+		logger(`\n\n${key}${taskIcon ? `  ${taskIcon}` : ""}`);
+		// A dividing line to separate the heading from the logs
+		logger(`${"".padStart(30, "-")}`);
+
+		if (logs && logs.length > 0) {
+			logs.forEach((log) => logger(log));
+		}
+		else logger("No assets created.".gray);
+
+		// A dividing line to separate the logs from the timer
+		logger(`${"".padStart(30, "-")}`);
+		console.timeEnd(key);
+	})
+		.catch((err) => {
+			logger(`\n\n${key} 🔨`);
+			logger(`${"".padStart(30, "-")}`);
+
+			console.trace(err);
+
+			logger(`${"".padStart(30, "-")}`);
+			console.timeEnd(key);
+		});
+}
+
 module.exports = {
 	bytesToSize,
 	cleanFolder,
@@ -336,6 +419,7 @@ module.exports = {
 	getAllComponentNames,
 	getPackageFromPath,
 	relativePrint,
+	runAndReportToConsole,
 	timeInMs,
 	validateComponentName,
 	writeAndReport,

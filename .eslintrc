@@ -56,28 +56,6 @@
 			}
 		},
 		{
-			"files": ["project.json"],
-			"rules": {
-				"jsonc/sort-keys": [
-					"warn",
-					{
-						"pathPattern": "^$",
-						"order": [
-							"$schema",
-							"name",
-							"tags",
-							"implicitDependencies",
-							"targets"
-						]
-					},
-					{
-						"pathPattern": ".*",
-						"order": { "type": "asc" }
-					}
-				]
-			}
-		},
-		{
 			"files": ["package.json"],
 			"rules": {
 				"jsonc/sort-keys": [

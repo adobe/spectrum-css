@@ -1,9 +1,10 @@
 module.exports = {
 	"*.css,!plugins/*/{expected,fixtures}/*.css": [
+		"stylelint --fix --cache --allow-empty-input",
 		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write",
 	],
 	"*.{js,json}": [
-		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet --ignore-pattern \"!.storybook/\""
+		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
 	],
 	"dist/*.css": [
 		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write"
