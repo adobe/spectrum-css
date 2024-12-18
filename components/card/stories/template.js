@@ -65,7 +65,7 @@ export const Template = ({
     >
       ${when(image || showAsset, () =>
         when(
-          showAsset || (isGallery && image),
+          showAsset || (isGallery && image) || isQuiet,
           () => html`
             <div
               class=${classMap({

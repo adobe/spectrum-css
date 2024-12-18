@@ -23,11 +23,7 @@ export default {
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
 		},
-		isQuiet: {
-			...isQuiet,
-			description: "`showAsset` must be defined to properly render the quiet styles.",
-			if: { arg: "showAsset", truthy: true },
-		},
+		isQuiet,
 		isSelected,
 		isFocused,
 		hasActions: {
