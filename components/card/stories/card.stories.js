@@ -25,7 +25,8 @@ export default {
 		},
 		isQuiet: {
 			...isQuiet,
-			description: "`showAsset: 'image'` must be selected to properly render the quiet styles.",
+			description: "`showAsset` must be defined to properly render the quiet styles.",
+			if: { arg: "showAsset", truthy: true },
 		},
 		isSelected,
 		isFocused,
