@@ -27,7 +27,7 @@ export const Template = ({
 	isHorizontal = false,
 	isQuiet = false,
 	isGallery = false,
-	isCardAssetOverride = false,
+	isImageFill = false,
 	isGrid = false,
 	hasActions = false,
 	hasQuickAction = false,
@@ -79,7 +79,7 @@ export const Template = ({
                     {
                       image,
                       preset: showAsset,
-                      isCardAssetOverride,
+                      isImageFill,
                     },
                     context
                   ),

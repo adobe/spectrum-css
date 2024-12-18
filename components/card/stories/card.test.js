@@ -51,7 +51,7 @@ export const CardGroup = Variants({
 			image: "example-card-portrait.png",
 			description: "jpg",
 			hasActions: false,
-			isCardAssetOverride: true,
+			isImageFill: true,
 			customStyles: {
 				width: "200px",
 			},
@@ -63,7 +63,7 @@ export const CardGroup = Variants({
 			image: "example-card-landscape.png",
 			description: "jpg",
 			isGallery: true,
-			isCardAssetOverride: true,
+			isImageFill: true,
 			customStyles: {
 				width: "700px",
 			},

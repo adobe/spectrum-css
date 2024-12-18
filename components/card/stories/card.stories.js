@@ -80,8 +80,8 @@ export default {
 			control: "boolean",
 			if: { arg: "isHorizontal", truthy: false },
 		},
-		isCardAssetOverride: {
-			name: "Override default image styles",
+		isImageFill: {
+			name: "Image fill",
 			description: "Scales image to fill all available preview area space for gallery or full-sized previews.",
 			type: { name: "boolean" },
 			table: {
@@ -116,7 +116,7 @@ export default {
 		hasActions: true,
 		hasQuickAction: true,
 		isHorizontal: false,
-		isCardAssetOverride: false,
+		isImageFill: false,
 	},
 	parameters: {
 		actions: {
@@ -279,7 +279,7 @@ AssetPreview.args = {
 	...Default.args,
 	showAsset: "image",
 	hasActions: false,
-	isCardAssetOverride: true,
+	isImageFill: true,
 	customStyles: {
 		"width": "300px",
 	}
@@ -300,7 +300,7 @@ Gallery.args = {
 	image: "example-card-landscape.png",
 	description: "jpg",
 	isGallery: true,
-	isCardAssetOverride: true,
+	isImageFill: true,
 	customStyles: {
 		"width": "700px",
 	}
