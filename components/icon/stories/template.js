@@ -34,7 +34,7 @@ export const Template = ({
 	fill,
 	id,
 	customClasses = [],
-	useRef = false,
+	useRef = true,
 	...globals
 }) => {
 	const { scale } = globals;
