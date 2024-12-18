@@ -139,16 +139,16 @@ export const CoachmarkMenuStatesTemplate = (args, context) => Container({
 		columnGap: "100px",
 		rowGap: "200px",
 	},
-	content: html`
-		${Container({
+	content: [
+		Container({
 			withBorder: false,
 			heading: "With action menu",
 			content: Template({...args, isOpen: true}, context),
-		})}
-		${Container({
+		}),
+		Container({
 			withBorder: false,
 			heading: "Without action menu",
 			content: Template({...args, hasActionMenu: false}, context),
-		})}
-	`
+		})
+	]
 });
