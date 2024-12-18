@@ -9,7 +9,7 @@ import { Template } from "./template.js";
  * The color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a [color slider](/docs/components-color-slider--docs) or [color wheel](/docs/components-color-wheel--docs).
  *
  * ## Usage notes
- * - The `.spectrum-ColorHandle` should be moved with the `transform: translate(x, y)` style property as the sliders are dragged.
+ * - The `.spectrum-ColorArea-handle` element should be moved with the `transform: translate(x, y)` style property as the sliders are dragged.
  * - Set the background style property of `.spectrum-ColorArea-gradient` to the gradient of the colors to be selected.
  * - Set the value attribute of `.spectrum-ColorArea-slider[name=x]` to the currently selected x value (i.e. saturation).
  * - Set the value attribute of `.spectrum-ColorArea-slider[name=y]` to the currently selected y value (i.e. value).
