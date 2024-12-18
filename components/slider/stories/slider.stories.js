@@ -140,6 +140,10 @@ export default {
 				"change .spectrum-Slider-input",
 			],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=842-1056",
+		},
 		packageJson,
 		metadata,
 	},

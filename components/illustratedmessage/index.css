@@ -11,7 +11,14 @@
  * governing permissions and limitations under the License.
  */
 
- @import "./themes/express.css";
+@import "./themes/spectrum-two.css";
+
+@media (forced-colors: active) {
+	.spectrum-IllustratedMessage {
+		--highcontrast-illustrated-message-illustration-color: CanvasText;
+		--highcontrast-illustrated-message-illustration-accent-color: Highlight;
+	}
+}
 
 .spectrum-IllustratedMessage {
 	/* Size & Spacing */
@@ -40,22 +47,6 @@
 	--spectrum-illustrated-message-description-line-height: var(--spectrum-body-line-height);
 	--spectrum-illustrated-message-description-color: var(--spectrum-body-color);
 
-	/* CJK (Chinese, Japanese, and Korean) language support */
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-cjk-title-size);
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-IllustratedMessage {
-		--highcontrast-illustrated-message-illustration-color: CanvasText;
-		--highcontrast-illustrated-message-illustration-accent-color: Highlight;
-	}
-}
-
-.spectrum-IllustratedMessage {
 	block-size: 100%;
 
 	display: var(--mod-illustrated-message-display, flex);
@@ -66,6 +57,13 @@
 	text-align: center;
 	pointer-events: var(--mod-illustrated-message-pointer-events, auto);
 	max-inline-size: var(--mod-illustrated-message-content-maximum-width);
+
+	/* CJK (Chinese, Japanese, and Korean) language support */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-cjk-title-size);
+	}
 }
 
 .spectrum-IllustratedMessage-illustration {
@@ -95,6 +93,7 @@
 	max-inline-size: var(--mod-illustrated-message-heading-max-inline-size, var(--spectrum-illustrated-message-heading-max-inline-size));
 	margin-block-start: 0;
 	margin-block-end: var(--mod-illustrated-message-heading-to-body, 0);
+
 }
 
 .spectrum-IllustratedMessage-description {
