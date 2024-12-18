@@ -22,7 +22,6 @@ const prettier = require("prettier");
 require("colors");
 
 const {
-	dirs,
 	extractProperties,
 	getAllComponentNames,
 	getPackageFromPath,
@@ -136,25 +135,21 @@ async function extractModifiers(
  * @returns Promise<void>
  */
 async function main({
-	componentName = process.env.NX_TASK_TARGET_PROJECT,
-	cwd,
+	componentName,
+	cwd = process.env.INIT_CWD,
 	clean,
 } = {}) {
-	if (!cwd && componentName) {
-		cwd = path.join(dirs.components, componentName);
-	}
-
+	// Root path stored in process.env.PWD
+	// Local path stored in process.env.INIT_CWD
 	if (!componentName) {
-		componentName = cwd
-			? getPackageFromPath(cwd)
-			: process.env.NX_TASK_TARGET_PROJECT;
+		componentName = getPackageFromPath(cwd);
 	}
 
 	if (typeof clean === "undefined") {
 		clean = process.env.NODE_ENV === "production";
 	}
 
-	const key = `[report] ${`@spectrum-css/${componentName}`.cyan}`;
+	const key = `[report] ${`@spectrum-css/${componentName.replaceAll("-", "")}`.cyan}`;
 	console.time(key);
 
 	const sourceCSS = path.join(cwd, "index.css");

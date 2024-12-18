@@ -1,0 +1,86 @@
+{
+	"name": "@spectrum-css/actionbar",
+	"version": "9.0.0-s2-foundations.17",
+	"description": "The action bar component is a floating full width bar that appears upon selection. Action bars are used for single and bulk selection patterns, when a user needs to perform actions on either a single or multiple items at the same time.",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-action-bar--docs",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/action-bar"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"exports": {
+		".": "./dist/index.css",
+		"./*.md": "./*.md",
+		"./dist/*": "./dist/*",
+		"./index-*.css": "./dist/index-*.css",
+		"./index.css": "./dist/index.css",
+		"./metadata.json": "./metadata/metadata.json",
+		"./metadata/*": "./metadata/*",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
+	},
+	"main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"*.md",
+		"package.json",
+		"metadata/*",
+		"stories/*"
+	],
+	"peerDependencies": {
+		"@spectrum-css/actiongroup": ">=5",
+		"@spectrum-css/closebutton": ">=5",
+		"@spectrum-css/fieldlabel": ">=8",
+		"@spectrum-css/popover": ">=7",
+		"@spectrum-css/tokens": ">=14"
+	},
+	"devDependencies": {
+		"@spectrum-css/actiongroup": "6.0.0-s2-foundations.17",
+		"@spectrum-css/closebutton": "6.0.0-s2-foundations.17",
+		"@spectrum-css/fieldlabel": "9.0.0-s2-foundations.17",
+		"@spectrum-css/popover": "8.0.0-s2-foundations.17",
+		"@spectrum-css/tokens": "15.0.0-s2-foundations.31",
+		"eslint": "^8.57.0",
+		"npm-run-all2": "^7.0.2",
+		"prettier": "^3.4.2",
+		"stylelint": "^16.9.0"
+	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/action-bar",
+			"rootClass": "spectrum-ActionBar",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/action-bar/"
+		}
+	],
+	"scripts": {
+		"build": "yarn run component:build",
+		"report": "yarn run component:report",
+		"build:full": "yarn build && yarn report",
+		"clean": "rimraf dist && test -d dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0",
+		"compare": "yarn run component:compare action-bar",
+		"format": "run-p \"format:*\"",
+		"format:styles": "stylelint --fix --cache --allow-empty-input *.css **/*.css --ignore-pattern dist",
+		"format:scripts": "eslint --fix --cache --no-error-on-unmatched-pattern *.json stories/*.js",
+		"format:content": "prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern *.{md,mdx} **/*.{md,mdx}",
+		"lint": "run-p \"lint:*\"",
+		"lint:styles": "stylelint --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables *.css **/*.css --ignore-pattern dist",
+		"lint:scripts": "eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives *.json stories/*.js"
+	}
+}

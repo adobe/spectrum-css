@@ -19,5 +19,18 @@
     "CI",
     "Diff",
     "GitHub"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": ".github/actions/file-diff"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "files": [
+    "*.md",
+    "package.json"
+  ],
+  "homepage": "https://opensource.adobe.com/spectrum-css"
 }
