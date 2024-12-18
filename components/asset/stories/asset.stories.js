@@ -39,7 +39,6 @@ export default {
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = AssetGroup.bind({});
