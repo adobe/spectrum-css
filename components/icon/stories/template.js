@@ -105,7 +105,7 @@ export const Template = ({
 	id = getRandomId("icon"),
 	customClasses = [],
 	icons,
-	useRef = false,
+	useRef = true,
 	workflowIcons,
 	uiIcons,
 	uiIconSizes,
