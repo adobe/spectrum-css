@@ -6,10 +6,13 @@ import { isEmphasized, isOpen } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { ActionBarGroup } from "./actionbar.test.js";
-import { Template } from "./template.js";
+import { BehavioralTemplate } from "./template.js";
 
 /**
- * The action bar component is a floating full width bar that appears upon selection.
+ * The action bar component is a floating full width bar that appears upon selection. Action bars are used for single and bulk selection patterns, when a user needs to perform actions on either a single or multiple items at the same time.
+ *
+ * ## Popover dependency
+ * Action bar requires popover, which is nested within the action bar. Action bar background, border, and corner radius are applied to the nested popover component and can be overridden by using action bar's `--mod-*` prefixed custom properties. A [list of the properties](#modifiable-properties) can be found below.
  */
 export default {
 	title: "Action bar",
@@ -70,11 +73,11 @@ export default {
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = ActionBarGroup.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ActionBarGroup.bind({});
@@ -88,7 +91,8 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Emphasized = Template.bind({});
+/**The emphasized action bar has a blue background that adds visual emphasis on the actions and selection. Use this for when the bar should call attention (e.g., floating in a table). */
+export const Emphasized = BehavioralTemplate.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true,
@@ -96,3 +100,17 @@ Emphasized.args = {
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+
+/** By default, action bars fill the width of their container. Below are example of the other behavioral variants available.
+ *
+ * - Standard action bars fill the width of their container.
+ * - Flexible action bars fit the width of their content.
+ * - Sticky action bars will sit on top of content until dismissed. Scroll down on this example to view how the sticky action bar behaves within a scrollable element.
+ *
+*/
+export const Standard = BehavioralTemplate.bind({});
+Standard.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Standard.tags = ["!dev"];
+Standard.storyName = "Default";
