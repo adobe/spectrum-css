@@ -12,7 +12,7 @@ import { Template } from "./template.js";
  * - Set the color of the nested [color handle component](/docs/components-color-handle--docs) to match the color slider’s currently selected color using its custom property, `--spectrum-picked-color`.
 - The `.spectrum-ColorHandle` should be moved with `inset-inline-*` (horizontal) or `inset-block-*` (vertical) style properties as the slider is dragged.
  * - Ensure that the min and max attributes of the `.spectrum-ColorSlider-slider` input are set to the corresponding scale (i.e. 0 to 1 for a, 0 to 255 for r, etc.).
- * - Ensure the step attribute of the `.spectrum-ColorSlider-slider` input is set appropriately (i.e. 0.1 for a, s, v or 1 and h, r, etc)
+ * - Ensure the step attribute of the `.spectrum-ColorSlider-slider` input is set appropriately (i.e. 0.1 for a, s, v or 1 and h, r, etc).
  */
 export default {
 	title: "Color slider",
@@ -66,7 +66,7 @@ export default {
 };
 
 /**
- * By default, a color slider is horizontal and should be used when vertical space is more limited.
+ * By default, a color slider is horizontal and should be used when vertical space is more limited.  The background style property of `.spectrum-ColorSlider-gradient` can be set to the gradient of the colors to be selected. The CSS will automatically reverse the gradient element horizontally when using a RTL (right-to-left) base direction.
  */
 export const Default = ColorSliderGroup.bind({});
 Default.args = {
@@ -98,9 +98,6 @@ Vertical.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/**
- * The background style property of `.spectrum-ColorSlider-gradient` can be set to the gradient of the colors to be selected. The CSS will automatically reverse the gradient element horizontally when using a RTL (right-to-left) base direction.
- */
 export const Alpha = Template.bind({});
 Alpha.args = {
 	gradientStops: ["rgba(0, 0, 0, 1) 0%", "rgba(0, 0, 0, 0) 100%"],
