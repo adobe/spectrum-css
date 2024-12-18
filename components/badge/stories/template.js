@@ -57,9 +57,9 @@ export const Template = ({
 /* Displays icon-only, text-only, and icon-and-text badge options. */
 export const ContentOptions = (args, context) => Container({
 	withBorder: false,
-	content: html`
-		${Template(args, context)}
-		${Template({ ...args, iconName: undefined }, context)}
-		${Template({ ...args, label: undefined }, context)}
-	`
+	content: [
+		Template(args, context),
+		Template({ ...args, iconName: undefined }, context),
+		Template({ ...args, label: undefined }, context),
+	]
 });

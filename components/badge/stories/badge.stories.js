@@ -111,7 +111,6 @@ NonSemanticVariants.storyName = "Non-semantic";
 
 /**
  * Fixed positioning impacts the border radius of the badge component. The border radius is 0 along the fixed edge of the component. The actual component position is not represented on this page.
- *
  */
 export const FixedVariants = (args, context) => ArgGrid({
 	Template,
