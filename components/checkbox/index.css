@@ -471,7 +471,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Checkbox-box {
-
 	/* Fix vertical alignment when not wrapping since we're flex-start */
 	--spectrum-checkbox-spacing: calc(var(--mod-checkbox-height, var(--spectrum-checkbox-height)) - var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size)));
 	display: flex;
