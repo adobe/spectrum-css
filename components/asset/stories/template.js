@@ -16,7 +16,7 @@ export const Template = ({
 	id = getRandomId("asset"),
 	customClasses = [],
 	customStyles = {},
-	isCardAssetOverride = false,
+	isImageFill = false,
 } = {}) => {
 	let visual;
 	if (preset === "file") {
@@ -38,8 +38,8 @@ export const Template = ({
 			class="${rootClass}-image"
 			src=${ifDefined(image)}
 			style=${styleMap({
-				"max-inline-size": !isCardAssetOverride ? "75%" : undefined,
-				"max-block-size": !isCardAssetOverride ? "75%" : undefined,
+				"max-inline-size": !isImageFill ? "75%" : undefined,
+				"max-block-size": !isImageFill ? "75%" : undefined,
 			})}
 		/>`;
 	}
