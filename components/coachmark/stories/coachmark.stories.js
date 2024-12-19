@@ -46,6 +46,15 @@ export default {
 				category: "Component",
 			},
 		},
+		image: {
+			name: "Image",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
@@ -73,7 +82,9 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	image: "example-card-landscape.png",
+};
 
 export const WithMedia = Template.bind({});
 WithMedia.args = {
