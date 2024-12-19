@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = () => ({
+export default () => ({
 	plugins: {
 		"postcss-import": {},
 		"postcss-rgb-mapping": {

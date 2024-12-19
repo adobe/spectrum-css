@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = function ({ setName, subSystemName } = {}) {
+export default function ({ setName, subSystemName } = {}) {
 	const baseConfig = {
 		format: "css/sets",
 		options: {
@@ -113,4 +113,4 @@ module.exports = function ({ setName, subSystemName } = {}) {
 			sets,
 		},
 	};
-};
+}

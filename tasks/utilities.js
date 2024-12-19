@@ -200,27 +200,20 @@ async function fetchContent(
 		})),
 	);
 
+	if (!shouldCombine) return Promise.resolve(fileData);
+
 	// Combine the content into 1 file; @todo do this in future using CSS imports
-	if (shouldCombine) {
-		let content = "";
-		fileData.forEach((dataset) => {
-			if (dataset.content) content += "\n\n" + dataset.content;
-		});
+	let content = "";
+	fileData.forEach((dataset) => {
+		if (dataset.content) content += "\n\n" + dataset.content;
+	});
 
-		return Promise.resolve([
-			{
-				content,
-				input: fileData[0].input,
-			},
-		]);
-	}
-
-	return Promise.all(
-		files.map(async (file) => ({
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
-			input: file,
-		})),
-	);
+	return Promise.resolve([
+		{
+			content,
+			input: fileData[0].input,
+		},
+	]);
 }
 
 /**
