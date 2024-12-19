@@ -9,6 +9,7 @@
 | `--mod-drop-zone-body-font-style`                 |
 | `--mod-drop-zone-body-font-weight`                |
 | `--mod-drop-zone-body-line-height`                |
+| `--mod-drop-zone-body-to-action`                  |
 | `--mod-drop-zone-border-color`                    |
 | `--mod-drop-zone-border-color-hover`              |
 | `--mod-drop-zone-border-style`                    |
@@ -40,5 +41,6 @@
 | `--mod-drop-zone-illustration-color`              |
 | `--mod-drop-zone-illustration-color-hover`        |
 | `--mod-drop-zone-illustration-to-heading`         |
+| `--mod-drop-zone-illustration-to-title`           |
 | `--mod-drop-zone-padding`                         |
 | `--mod-drop-zone-width`                           |
