@@ -36,5 +36,14 @@
     "properties",
     "report",
     "stylelint-plugin"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "plugins/stylelint-no-unused-custom-properties"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css"
 }

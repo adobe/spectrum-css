@@ -43,7 +43,6 @@
 				"tools",
 				"{workspaceRoot}/tasks/component-builder.js",
 				"!{projectRoot}/stories/*.js",
-				"{workspaceRoot}/tasks/component-builder.js",
 				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],

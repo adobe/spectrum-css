@@ -24,7 +24,6 @@ const prettier = require("prettier");
 require("colors");
 
 const {
-	dirs,
 	relativePrint,
 	writeAndReport,
 	getPackageFromPath,
@@ -236,31 +235,27 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 /**
  * The main entry point for this tool; this builds a CSS component
  * @param {object} config
- * @param {string} [config.componentName=process.env.NX_TASK_TARGET_PROJECT] - Current working directory for the component being built
+ * @param {string} [config.componentName] - Current working directory for the component being built
  * @param {string} [config.cwd=] - Current working directory for the component being built
  * @param {boolean} [config.clean=false] - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
 async function main({
-	componentName = process.env.NX_TASK_TARGET_PROJECT,
-	cwd,
-	clean,
+	componentName,
+	cwd = process.env.INIT_CWD,
+	clean = true,
 } = {}) {
-	if (!cwd && componentName) {
-		cwd = path.join(dirs.components, componentName);
-	}
-
+	// Root path stored in process.env.PWD
+	// Local path stored in process.env.INIT_CWD
 	if (!componentName) {
-		componentName = cwd
-			? getPackageFromPath(cwd)
-			: process.env.NX_TASK_TARGET_PROJECT;
+		componentName = getPackageFromPath(cwd);
 	}
 
 	if (typeof clean === "undefined") {
 		clean = process.env.NODE_ENV === "production";
 	}
 
-	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
+	const key = `[build] ${`@spectrum-css/${componentName.replaceAll("-", "")}`.cyan}`;
 	console.time(key);
 
 	return Promise.all([
