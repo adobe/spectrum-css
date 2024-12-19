@@ -39,6 +39,7 @@ export default {
 		},
 		imageIsFixedHeight: {
 			name: "Image fixed height",
+			description: "By default this displays an image with a 4:3 aspect ratio.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
