@@ -1,3 +1,4 @@
+import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
@@ -40,7 +41,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["neutral", "accent", "informative", "positive", "negative", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
+			options: ["neutral", "accent", "informative", "positive", "negative", "notice", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
 			control: "select",
 		},
 		fixed: {
@@ -84,7 +85,7 @@ Default.args = {
 export const SemanticVariants = (args, context) => ArgGrid({
 	Template,
 	argKey: "variant",
-	options: ["neutral", "accent", "informative", "positive", "negative"],
+	options: ["neutral", "accent", "informative", "positive", "negative", "notice"],
 	withBorder: false,
 	...args,
 }, context);
