@@ -11,9 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
+/* @combine .spectrum.spectrum--express */
+
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Toast {
 		--spectrum-toast-background-color-default: var(--spectrum-neutral-background-color-default);
 	}

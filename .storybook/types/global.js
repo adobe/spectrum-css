@@ -7,13 +7,14 @@ export default {
 	context: {
 		title: "Design context",
 		description: "The variation of Spectrum to use in the component",
-		defaultValue: "legacy",
+		defaultValue: "spectrum",
 		type: "string",
 		showName: true,
 		toolbar: {
 			items: [
-				{ value: "legacy", title: "Spectrum 1", right: "default" },
-				{ value: "express", title: "Express" },
+				{ value: "spectrum", title: "Spectrum 2", right: "default" },
+				{ value: "legacy", title: "Spectrum 1", right: "legacy" },
+				{ value: "express", title: "Express", right: "legacy" },
 				{ value: "raw", title: "Token-free", right: "raw" },
 			],
 			dynamicTitle: true,

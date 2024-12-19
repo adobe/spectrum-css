@@ -1,3 +1,4 @@
+import { Container } from "@spectrum-css/preview/decorators";
 import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as CoachIndicator } from "@spectrum-css/coachindicator/stories/template.js";
@@ -8,15 +9,23 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const CoachContainer = ({
 	rootClass = "spectrum-CoachMark",
 	hasActionMenu = false,
 	hasPagination,
 	hasImage,
+	title = "Try playing with a pixel brush",
+	content = "Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.",
+	currentStep = 2,
+	totalStepCount = 8,
 	isOpen = false,
 } = {}, context = {}) => {
 	const { globals = {} } = context;
+
 	const scale = globals.scale ?? "medium";
 
 	return html`
@@ -29,12 +38,10 @@ export const CoachContainer = ({
 			</div>
 		`)}
 		<div class="spectrum-CoachMark-header">
-			<div class="spectrum-CoachMark-title">
-				Try playing with a pixel brush
-			</div>
-			<div class="spectrum-CoachMark-action-menu">
-				${when(hasActionMenu, () =>
-					ActionMenu({
+			<div class="spectrum-CoachMark-title">${title}</div>
+			${when(hasActionMenu, () => html`
+				<div class="spectrum-CoachMark-action-menu">
+					${ActionMenu({
 						isOpen,
 						position: "bottom-start",
 						iconName: "More",
@@ -49,19 +56,15 @@ export const CoachContainer = ({
 						],
 						popoverHeight: 68,
 						popoverWidth: 84,
-					}, context),
-				)}
-			</div>
+					}, context)}
+				</div>`
+			)}
 		</div>
-		<div class="spectrum-CoachMark-content">
-			Pixel brushes use pixels to create brush strokes, just like in
-			other design and drawing tools. Start drawing, and zoom in to
-			see the pixels in each stroke.
-		</div>
+		<div class="spectrum-CoachMark-content">${content}</div>
 		<div class="${rootClass}-footer">
 			${when(hasPagination, () => html`
 				<div class="spectrum-CoachMark-step">
-					<bdo dir="ltr">2 of 8</bdo>
+					<bdo dir="ltr">${currentStep} of ${totalStepCount}</bdo>
 				</div>
 			`)}
 			${ButtonGroup({
@@ -127,3 +130,25 @@ export const Template = (args, context) => {
 		</div>
 	`;
 };
+
+/* Displays open and closed action menus in a single story. */
+export const CoachmarkMenuStatesTemplate = (args, context) => Container({
+	withBorder: false,
+	withHeading: false,
+	wrapperStyles: {
+		columnGap: "100px",
+		rowGap: "200px",
+	},
+	content: [
+		Container({
+			withBorder: false,
+			heading: "With action menu",
+			content: Template({...args, isOpen: true}, context),
+		}),
+		Container({
+			withBorder: false,
+			heading: "Without action menu",
+			content: Template({...args, hasActionMenu: false}, context),
+		})
+	]
+});

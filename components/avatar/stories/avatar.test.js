@@ -10,6 +10,7 @@ export const AvatarGroup = Variants({
 	}, {
 		testHeading: "Disabled",
 		isDisabled: true,
+		hasLink: false,
 	}, {
 		testHeading: "Focused",
 		isFocused: true,

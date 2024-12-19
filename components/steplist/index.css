@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Steplist {
 	/* The width of a step */
@@ -40,23 +40,12 @@
 	--spectrum-steplist-label-text-size: 12px;
 
 	--spectrum-steplist-current-label-text-color: var(--spectrum-gray-800);
-
 	--spectrum-steplist-current-marker-color: var(--spectrum-gray-800);
-
 	--spectrum-steplist-complete-label-text-color: var(--spectrum-gray-700);
-
+	--spectrum-steplist-complete-marker-background-color: var(--spectrum-gray-600);
+	--spectrum-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
 	--spectrum-steplist-incomplete-label-color: var(--spectrum-gray-600);
 
-	--spectrum-steplist-complete-marker-background-color: var(--spectrum-gray-600);
-
-	--spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-300);
-
-	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-300);
-
-	--spectrum-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
-}
-
-.spectrum-Steplist {
 	/* Contain child elements with positive z-index */
 	z-index: 0;
 	position: relative;
@@ -71,6 +60,7 @@
 	white-space: nowrap;
 	font-size: 0; /* To remove html whitespace between inline elements */
 	line-height: 16px; /* in case the container changes it */
+
 }
 
 .spectrum-Steplist--interactive {
@@ -189,6 +179,7 @@
 	position: absolute;
 	inset-inline-start: 50%;
 	inset-block-end: var(--mod-steplist-label-labelOffset, var(--spectrum-steplist-label-labelOffset));
+
 
 	display: block;
 	inline-size: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5);

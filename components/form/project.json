@@ -1,0 +1,17 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "form",
+	"tags": ["component"],
+	"targets": {
+		"build": {},
+		"clean": {},
+		"compare": {},
+		"format": {},
+		"lint": {},
+		"report": {},
+		"test": {
+			"defaultConfiguration": "scope"
+		},
+		"validate": {}
+	}
+}

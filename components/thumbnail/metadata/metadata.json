@@ -45,10 +45,11 @@
     "--mod-thumbnail-size"
   ],
   "component": [
-    "--spectrum-thumbnail-border-color-rgba",
+    "--spectrum-thumbnail-border-color",
     "--spectrum-thumbnail-border-color-selected",
     "--spectrum-thumbnail-border-opacity",
     "--spectrum-thumbnail-border-radius",
+    "--spectrum-thumbnail-border-radius-default",
     "--spectrum-thumbnail-border-width",
     "--spectrum-thumbnail-border-width-selected",
     "--spectrum-thumbnail-color-opacity-disabled",
@@ -72,14 +73,14 @@
     "--spectrum-thumbnail-size-700",
     "--spectrum-thumbnail-size-75",
     "--spectrum-thumbnail-size-800",
-    "--spectrum-thumbnail-size-900"
+    "--spectrum-thumbnail-size-900",
+    "--spectrum-thumbnail-sized-size"
   ],
   "global": [
     "--spectrum-accent-color-800",
     "--spectrum-border-width-100",
     "--spectrum-border-width-200",
     "--spectrum-border-width-400",
-    "--spectrum-corner-radius-75",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
     "--spectrum-focus-indicator-thickness",
@@ -87,7 +88,7 @@
     "--spectrum-gray-800-rgb",
     "--spectrum-white"
   ],
-  "system-theme": [],
+  "system-theme": ["--system-thumbnail-border-radius"],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-thumbnail-border-color",
