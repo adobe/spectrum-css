@@ -2,6 +2,7 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { PickerGroup } from "./pickerbutton.test.js";
@@ -87,6 +88,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

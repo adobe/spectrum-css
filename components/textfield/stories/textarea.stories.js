@@ -1,5 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptionsTextArea, KeyboardFocusTemplate, Template, TextAreaOptions } from "./textarea.template.js";
@@ -27,6 +28,7 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=725-2579",
 		},
+		cssprops: { styles },
 	}
 };
 

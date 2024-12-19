@@ -4,6 +4,7 @@ import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDragged } from "@spectrum-css/preview/types";
 import { html } from "lit";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { DropzoneGroup } from "./dropzone.test.js";
@@ -41,6 +42,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 
