@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { TagGroups } from "./taggroup.test.js";
@@ -61,6 +62,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

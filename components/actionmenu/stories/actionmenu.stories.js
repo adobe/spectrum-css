@@ -49,6 +49,7 @@ export default {
 			],
 		},
 		packageJson,
+		cssprops: false,
 		docs: {
 			story: {
 				height: "200px",

@@ -2,6 +2,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { ActionButtonGroup } from "./actionbutton.test.js";
@@ -90,6 +91,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 		docs: {
 			story: {
 				height: "auto",

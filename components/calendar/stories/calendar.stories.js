@@ -1,6 +1,7 @@
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { CalendarGroup } from "./calendar.test.js";
@@ -98,6 +99,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 	tags: ["!autodocs"],
 };
