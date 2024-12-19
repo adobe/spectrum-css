@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 14.0.0-next.11
+
+### Patch Changes
+
+- [#3456](https://github.com/adobe/spectrum-css/pull/3456) [`b9aeb20`](https://github.com/adobe/spectrum-css/commit/b9aeb203dd0bd728606d47d10dbd37fb42229379) Thanks [@cdransf](https://github.com/cdransf)! - Uses the latest releases from Spectrum Tokens (13.0.0-beta.55)
+
 ## 14.0.0-next.10
 
 ### Patch Changes
