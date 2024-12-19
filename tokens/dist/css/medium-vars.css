@@ -12,14 +12,14 @@
  */
 
 .spectrum--medium{
-  --spectrum-checkbox-control-size-small:12px;
-  --spectrum-checkbox-control-size-medium:14px;
-  --spectrum-checkbox-control-size-large:16px;
-  --spectrum-checkbox-control-size-extra-large:18px;
-  --spectrum-checkbox-top-to-control-small:6px;
-  --spectrum-checkbox-top-to-control-medium:9px;
-  --spectrum-checkbox-top-to-control-large:12px;
-  --spectrum-checkbox-top-to-control-extra-large:15px;
+  --spectrum-checkbox-control-size-small:14px;
+  --spectrum-checkbox-control-size-medium:16px;
+  --spectrum-checkbox-control-size-large:18px;
+  --spectrum-checkbox-control-size-extra-large:20px;
+  --spectrum-checkbox-top-to-control-small:5px;
+  --spectrum-checkbox-top-to-control-medium:8px;
+  --spectrum-checkbox-top-to-control-large:11px;
+  --spectrum-checkbox-top-to-control-extra-large:14px;
   --spectrum-switch-control-width-small:22px;
   --spectrum-switch-control-width-medium:26px;
   --spectrum-switch-control-width-large:30px;
@@ -524,6 +524,24 @@
   --spectrum-number-field-visual-to-in-field-stepper-medium:6px;
   --spectrum-number-field-visual-to-in-field-stepper-large:7px;
   --spectrum-number-field-visual-to-in-field-stepper-extra-large:8px;
+  --spectrum-tree-view-disclosure-indicator-height:32px;
+  --spectrum-tree-view-disclosure-indicator-width:34px;
+  --spectrum-tree-view-minimum-height:40px;
+  --spectrum-tree-view-minimum-width:160px;
+  --spectrum-tree-view-bottom-to-label:12px;
+  --spectrum-tree-view-drag-handle-to-checkbox:8px;
+  --spectrum-tree-view-edge-to-checkbox:12px;
+  --spectrum-tree-view-edge-to-drag-handle:4px;
+  --spectrum-tree-view-end-edge-to-action-area:6px;
+  --spectrum-tree-view-item-to-header:24px;
+  --spectrum-tree-view-label-to-action-area:6px;
+  --spectrum-tree-view-level-increment:16px;
+  --spectrum-tree-view-minimum-top-to-context-area:8px;
+  --spectrum-tree-view-top-to-action-button:4px;
+  --spectrum-tree-view-top-to-checkbox:4px;
+  --spectrum-tree-view-top-to-disclosure-indicator:15px;
+  --spectrum-tree-view-top-to-drag-handle:15px;
+  --spectrum-tree-view-top-to-label:10px;
   --spectrum-workflow-icon-size-50:14px;
   --spectrum-workflow-icon-size-75:16px;
   --spectrum-workflow-icon-size-100:20px;
