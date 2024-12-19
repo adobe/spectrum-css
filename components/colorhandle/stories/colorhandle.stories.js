@@ -6,7 +6,7 @@ import { ColorHandleGroup } from "./colorhandle.test.js";
 import { Template } from "./template.js";
 
 /**
- * The color handle component is used with color area, color slider and color wheel as the color selector.
+ * The color handle component is used with [color area](/docs/components-color-area--docs), [color slider](/docs/components-color-slider--docs) and [color wheel](/docs/components-color-wheel--docs) as the color selector.
  */
 export default {
 	title: "Color handle",
@@ -53,9 +53,11 @@ export default {
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
+/**
+ * Set the `--spectrum-picked-color` custom property to the color value you want to show.
+ */
 export const Default = ColorHandleGroup.bind({});
 Default.args = {};
 
@@ -69,6 +71,9 @@ Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * Nest the [color loupe component](/docs/components-color-loupe--docs) within the color handle markup and apply `.is-open` to the `.spectrum-ColorLoupe` to display the loupe.
+ */
 export const WithColorLoupe = Template.bind({});
 WithColorLoupe.args = {
 	isWithColorLoupe: true,
@@ -77,6 +82,7 @@ WithColorLoupe.tags = ["!dev"];
 WithColorLoupe.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+WithColorLoupe.storyName = "With color loupe";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ColorHandleGroup.bind({});
