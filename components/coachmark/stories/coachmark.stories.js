@@ -4,10 +4,10 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
-import { Template } from "./template.js";
+import { CoachmarkMenuStatesTemplate, Template } from "./template.js";
 
 /**
- * The coach mark component can be used to bring added attention to specific parts of a page. It is a separate component from the coach indicator.
+ * The coach mark component can be used to bring added attention to specific parts of a page, like during a tour. It is a separate component from [the coach indicator](/docs/components-coach-indicator--docs) and similar to [a popover](/docs/components-purpose--docs).
  */
 export default {
 	title: "Coach mark",
@@ -66,13 +66,25 @@ export default {
 			}
 		}
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = CoachMarkGroup.bind({});
-Default.title = "Standard";
+Default.tags = ["!autodocs"];
 Default.args = {};
 
+/**
+ * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour.
+ */
+export const Standard = CoachmarkMenuStatesTemplate.bind({});
+Standard.storyName = "Default";
+Standard.tags = ["!dev"];
+Standard.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
+/** Coach marks can contain images or media that relate to their content, such as demonstrations of gestures, the UI being used, or illustrations. */
 export const WithMedia = Template.bind({});
 WithMedia.tags = ["!dev"];
 WithMedia.args = {
