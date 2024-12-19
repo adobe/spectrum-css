@@ -128,6 +128,12 @@
   --spectrum-bar-panel-gripper-color:var(--spectrum-gray-200);
   --spectrum-bar-panel-gripper-color-drag:var(--spectrum-gray-800);
   --spectrum-select-box-selected-border-color:var(--spectrum-gray-800);
+  --spectrum-tree-view-row-background-hover:var(--spectrum-gray-100);
+  --spectrum-tree-view-selected-row-background-color-emphasized:var(--spectrum-informative-background-color-default);
+  --spectrum-tree-view-selected-row-background-default:var(--spectrum-gray-100);
+  --spectrum-tree-view-selected-row-background-hover:var(--spectrum-gray-100);
+  --spectrum-color-wheel-border-color:var(--spectrum-gray-1000);
+  --spectrum-color-wheel-border-opacity:0.1;
   --spectrum-white-rgb:255, 255, 255;
   --spectrum-white:rgba(var(--spectrum-white-rgb));
   --spectrum-transparent-white-25-rgb:255, 255, 255;
@@ -548,6 +554,13 @@
   --spectrum-number-field-minimum-width-multiplier:1.25;
   --spectrum-takeover-dialog-height:100%;
   --spectrum-takeover-dialog-width:100%;
+  --spectrum-tree-view-header-to-item:-1px;
+  --spectrum-tree-view-item-to-item:-1px;
+  --spectrum-tree-view-item-to-item-detached:2px;
+  --spectrum-tree-view-selected-row-background-opacity-emphasized:0.1;
+  --spectrum-tree-view-selected-row-background-opacity-emphasized-hover:0.15;
+  --spectrum-action-bar-minimum-width:176px;
+  --spectrum-action-bar-label-to-action-group-area:var(--spectrum-spacing-300);
   --spectrum-corner-radius-0:0px;
   --spectrum-corner-radius-75:3px;
   --spectrum-corner-radius-100:4px;

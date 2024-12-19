@@ -139,6 +139,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@adobe/spectrum-tokens@npm:13.0.0-beta.55":
+  version: 13.0.0-beta.55
+  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.55"
+  checksum: 10c0/5130982ee293c3865aa94a93bbcac28775e9a79f3382c66a68f72c0a29315a5c5c7724d5b0bd8ad5ed7b5ad9276be09795b3bc99d439083c1698f8541abf166a
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.3.0
   resolution: "@ampproject/remapping@npm:2.3.0"
@@ -4183,7 +4190,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:13.0.0-beta.52"
+    "@adobe/spectrum-tokens": "npm:13.0.0-beta.55"
     "@nxkit/style-dictionary": "npm:^6.0.0"
     postcss: "npm:^8.4.49"
     postcss-cli: "npm:^11.0.0"
