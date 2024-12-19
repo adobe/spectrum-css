@@ -13,8 +13,10 @@
 
 /* eslint-disable no-console */
 const fs = require("fs");
-const fsp = fs.promises;
 const path = require("path");
+
+const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
 
 const postcss = require("postcss");
 const prettier = require("prettier");
@@ -23,13 +25,14 @@ require("colors");
 
 const {
 	dirs,
+	fetchContent,
 	extractProperties,
 	getAllComponentNames,
-	getPackageFromPath,
+	runAndReportToConsole,
 	writeAndReport,
 } = require("./utilities.js");
 
-const { processCSS } = require("./component-builder.js");
+const { default: builder } = require("./component-builder.js");
 
 /**
  * Extract custom property modifers to report
@@ -130,62 +133,55 @@ async function extractModifiers(
 /**
  * The main entry point for this tool; this reports on the component's features and structure
  * @param {object} config
- * @param {string} [config.componentName=process.env.NX_TASK_TARGET_PROJECT] - Current working directory for the component being built
- * @param {string} [config.cwd=] - Current working directory for the component being built
+ * @param {string} [config.folderName] - Current folder name for the component being built
+ * @param {string} [config.cwd=process.env.INIT_CWD] - Current working directory for the component being built
+ * @param {boolean} [config.build=true] - Should the component be built before running the report
  * @param {boolean} [config.clean=false] - Should the built assets be cleaned before running the build
- * @returns Promise<void>
+ * @returns Promise<0|1>
  */
 async function main({
-	componentName = process.env.NX_TASK_TARGET_PROJECT,
-	cwd,
-	clean,
+	folderName,
+	build = true,
+	cwd = process.env.INIT_CWD,
+	clean = true,
 } = {}) {
-	if (!cwd && componentName) {
-		cwd = path.join(dirs.components, componentName);
-	}
-
-	if (!componentName) {
-		componentName = cwd
-			? getPackageFromPath(cwd)
-			: process.env.NX_TASK_TARGET_PROJECT;
-	}
+	if (!folderName) return Promise.reject(new Error("[component-reporter]  No folder name provided."));
 
 	if (typeof clean === "undefined") {
 		clean = process.env.NODE_ENV === "production";
 	}
 
-	const key = `[report] ${`@spectrum-css/${componentName}`.cyan}`;
-	console.time(key);
+	if (["action-menu", "commons"].includes(folderName)) return Promise.resolve();
 
-	const sourceCSS = path.join(cwd, "index.css");
+	if (build) await builder({
+		folderName,
+		cwd,
+		clean,
+	});
 
-	if (!fs.existsSync(sourceCSS)) {
-		console.log(`\n\n${key} 🔍`);
-		console.log(`${"".padStart(30, "-")}`);
-		console.log(`No source CSS file found at ${sourceCSS}`);
-		console.log(`${"".padStart(30, "-")}`);
-		console.timeEnd(key);
-		console.log("");
-		return Promise.reject(new Error(`No source CSS file found at ${sourceCSS}`));
+	if (!fs.existsSync(path.join(cwd, "dist", "index.css"))) {
+		return runAndReportToConsole(() => ([
+			Promise.resolve("No compiled assets on which to report.".gray),
+		]), {
+			taskLabel: "report",
+			taskIcon: "🔍",
+			folderName,
+			cwd,
+		});
 	}
 
-	const content = await fsp.readFile(sourceCSS, "utf-8");
-	const processed = await processCSS(content, sourceCSS, undefined, {
-		cwd,
-		skipMapping: false,
-		referencesOnly: false,
-		preserveVariables: true,
-		stripLocalSelectors: false,
-		map: false,
-		env: "production",
-	});
+	const processed = await fetchContent([
+		"dist/index-base.css",
+		"dist/themes/*.css",
+		"dist/index-theme.css",
+	], { cwd, shouldCombine: true }).then(({ content }) => content);
 
 	const meta = await extractModifiers(
 		processed,
 		{
 			cwd,
-			sourcePath: sourceCSS,
-			componentName,
+			sourcePath: path.join(cwd, "index.css"),
+			componentName: folderName?.replaceAll("-", ""),
 			baseSelectors: [".spectrum", ".spectrum--express", ".spectrum--legacy"],
 			dataModel: {
 				modifiers: ["mod"],
@@ -201,70 +197,47 @@ async function main({
 		fs.mkdirSync(path.join(cwd, "metadata"));
 	}
 
-	return Promise.all([
-		writeAndReport(
-			await prettier.format(
-				`${[
-					"| Modifiable custom properties |",
-					"| --- |",
-					...(meta?.modifiers ?? []).map((mod) => `| \`${mod}\` |`),
-				].join("\n")}\n`,
-				{ parser: "markdown" },
-			),
-			path.join(cwd, "metadata/mods.md"),
-			{ cwd },
-		),
-		writeAndReport(
-			await prettier.format(
-				JSON.stringify({
-					sourceFile: meta.sourceFile,
-					selectors: meta.selectors,
-					modifiers: meta.modifiers,
-					component: meta.component,
-					global: meta.global,
-					"system-theme": meta["system-theme"],
-					passthroughs: meta.passthroughs,
-					"high-contrast": meta["high-contrast"],
-				}, null, 2),
-				{ parser: "json" },
-			),
-			path.join(cwd, "metadata/metadata.json"),
-			{ cwd },
-		),
-	])
-		.then((report) => {
-			const logs = report.flat(Infinity).filter(Boolean);
-
-			console.log(`\n\n${key} 🔍`);
-			console.log(`${"".padStart(30, "-")}`);
-
-			if (logs && logs.length > 0) {
-				logs
-					.sort((a) => {
-						if (typeof a === "string" && a.includes("✓")) return 0;
-						return 1;
-					})
-					.forEach((log) => console.log(log));
-			}
-			else console.log("No assets created.".gray);
-
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		})
-		.catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
-
-			console.trace(err);
-
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-
-			process.exit(1);
-		});
+	return runAndReportToConsole((cwd) => ([
+		prettier.format(
+			`${[
+				"| Modifiable custom properties |",
+				"| --- |",
+				...(meta?.modifiers ?? []).map((mod) => `| \`${mod}\` |`),
+			].join("\n")}\n`,
+			{ parser: "markdown" },
+		).then(content => writeAndReport(content, path.join(cwd, "metadata/mods.md"), { cwd })),
+		prettier.format(
+			JSON.stringify({
+				sourceFile: meta.sourceFile,
+				selectors: meta.selectors,
+				modifiers: meta.modifiers,
+				component: meta.component,
+				global: meta.global,
+				"system-theme": meta["system-theme"],
+				passthroughs: meta.passthroughs,
+				"high-contrast": meta["high-contrast"],
+			}, null, 2),
+			{ parser: "json" },
+		).then(content => writeAndReport(content, path.join(cwd, "metadata/metadata.json"), { cwd })),
+	]), {
+		taskLabel: "report",
+		taskIcon: "🔍",
+		folderName,
+		cwd,
+	});
 }
 
 exports.extractModifiers = extractModifiers;
 exports.default = main;
+
+let {
+	_: components = getAllComponentNames(),
+	build = true,
+	clean = true,
+	// @todo allow to run against local main or published versions
+} = yargs(hideBin(process.argv)).argv;
+
+Promise.all(components.map((folderName) => {
+	const cwd = path.join(dirs.components, folderName);
+	return main({ folderName, cwd, build, clean });
+})).then(() => process.exit(0));

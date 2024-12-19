@@ -11,11 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-/* eslint-disable no-console */
-
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
+
+const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
 
 const postcss = require("postcss");
 const postcssrc = require("postcss-load-config");
@@ -27,9 +28,11 @@ const {
 	dirs,
 	relativePrint,
 	writeAndReport,
+	getAllComponentNames,
 	getPackageFromPath,
 	cleanFolder,
 	validateComponentName,
+	runAndReportToConsole,
 	fetchContent,
 } = require("./utilities.js");
 
@@ -99,10 +102,10 @@ async function processCSS(
 	if (!fs.existsSync(path.dirname(output))) {
 		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
 			if (!err) return;
-			console.log(
+			return Promise.reject([
 				`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`,
-			);
-			return Promise.reject(err);
+				err,
+			]);
 		});
 	}
 
@@ -236,73 +239,44 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 /**
  * The main entry point for this tool; this builds a CSS component
  * @param {object} config
- * @param {string} [config.componentName=process.env.NX_TASK_TARGET_PROJECT] - Current working directory for the component being built
+ * @param {string} [config.componentName] - Current working directory for the component being built
  * @param {string} [config.cwd=] - Current working directory for the component being built
  * @param {boolean} [config.clean=false] - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
 async function main({
-	componentName = process.env.NX_TASK_TARGET_PROJECT,
-	cwd,
-	clean,
+	folderName,
+	// Local path stored in process.env.INIT_CWD
+	cwd = process.env.INIT_CWD,
+	clean = true,
 } = {}) {
-	if (!cwd && componentName) {
-		cwd = path.join(dirs.components, componentName);
-	}
-
-	if (!componentName) {
-		componentName = cwd
-			? getPackageFromPath(cwd)
-			: process.env.NX_TASK_TARGET_PROJECT;
-	}
-
 	if (typeof clean === "undefined") {
 		clean = process.env.NODE_ENV === "production";
 	}
 
-	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
-	console.time(key);
-
-	return Promise.all([
+	return runAndReportToConsole((cwd) => ([
 		...(clean ? [cleanFolder({ cwd })] : []),
 		build({ cwd, clean }),
 		buildThemes({ cwd, clean }),
-	])
-		.then((report) => {
-			const logs = report.flat(Infinity).filter(Boolean);
-
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
-
-			if (logs && logs.length > 0) {
-				logs
-					.sort((a) => {
-						if (typeof a === "string" && a.includes("✓")) return -1;
-						if (typeof a === "string" && a.includes("🔍")) return 0;
-						return 1;
-					})
-					.forEach((log) => console.log(log));
-			}
-			else console.log("No assets created.".gray);
-
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		})
-		.catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
-
-			console.trace(err);
-
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-
-			process.exit(1);
-		});
+	]), {
+		taskLabel: "build",
+		taskIcon: "🔨",
+		folderName,
+		cwd,
+	});
 }
 
 exports.processCSS = processCSS;
 exports.fetchContent = fetchContent;
 exports.default = main;
+
+let {
+	_: components = getAllComponentNames(),
+	clean = true,
+	// @todo allow to run against local main or published versions
+} = yargs(hideBin(process.argv)).argv;
+
+Promise.all(components.map((folderName) => {
+	const cwd = path.join(dirs.components, folderName);
+	return main({ folderName, cwd, build, clean });
+})).then(() => process.exit(0));

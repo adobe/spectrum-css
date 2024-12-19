@@ -13,7 +13,9 @@
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeL",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeM",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeS",
-    ".spectrum-Divider--vertical"
+    ".spectrum-Divider--vertical",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy"
   ],
   "modifiers": [
     "--mod-divider-background-color",
@@ -46,10 +48,15 @@
   ],
   "global": [
     "--spectrum-gray-200",
+    "--spectrum-gray-300",
     "--spectrum-gray-800",
+    "--spectrum-transparent-black-300",
     "--spectrum-transparent-black-400",
+    "--spectrum-transparent-black-800",
     "--spectrum-transparent-black-900",
+    "--spectrum-transparent-white-300",
     "--spectrum-transparent-white-400",
+    "--spectrum-transparent-white-800",
     "--spectrum-transparent-white-900"
   ],
   "system-theme": [

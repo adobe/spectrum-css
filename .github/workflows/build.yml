@@ -10,8 +10,6 @@ name: Validate successful build
 # to the workflow run. This allows us to download the compiled assets and use
 # them in other workflows.
 #
-# Note: we need to skip the nx cache b/c it does not contain the compiled assets
-#
 
 on:
     workflow_dispatch:
