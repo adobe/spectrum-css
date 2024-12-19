@@ -18,6 +18,7 @@ export const Template = ({
 	hasPagination,
 	hasImage,
 	imageIsFixedHeight,
+	image,
 	isOpen = true,
 	...globals
 }) => html`
@@ -49,7 +50,7 @@ export const Template = ({
 							>
 								<img
 									class="${rootClass}-image"
-									src="example-card-landscape.png"
+									src="${image || "example-card-portrait.png"}"
 								/>
 							</div>`
 						: ""}
