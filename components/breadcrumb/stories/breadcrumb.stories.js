@@ -50,7 +50,8 @@ export default {
 			},
 		},
 		isDragged: {
-			name: "Dragged",
+			name: "Show dragged item",
+			description: "Breadcrumbs can have optional behavior to allow for drag and drop functionality. Setting this to true will style the first breadcrumb item as if something is currently being dragged on top of it.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -99,8 +100,8 @@ export default {
 
 /**
  * By default, breadcrumbs are displayed inline with the hierarchy shown in reading order.
- * Medium is used by default, and should display the medium truncated menu action button.
- * The separator UI icon displayed should be Chevron100.
+ * The medium size is used by default, and it should display the medium truncated menu action button.
+ * The separator UI icon displayed should be `Chevron100`.
  */
 export const Default = Template.bind({});
 Default.args = {
@@ -203,12 +204,12 @@ MultilineNestedRootVisible.parameters = {
 MultilineNestedRootVisible.storyName = "Multiline, nested (root visible)";
 
 /**
- * When using the large variant, the truncated menu action button should also use the large size. The separator UI icon displayed should be Chevron100.
+ * When using the large size, the truncated menu action button should also use the large size. The separator UI icon displayed should be `Chevron100`.
  */
 export const Large = Template.bind({});
 Large.args = {
 	...Default.args,
-	variant: "large",
+	size: "l",
 };
 Large.tags = ["!dev"];
 Large.parameters = {
@@ -218,7 +219,7 @@ Large.parameters = {
 export const LargeNested = Template.bind({});
 LargeNested.args = {
 	...DefaultNested.args,
-	variant: "large",
+	size: "l",
 };
 LargeNested.tags = ["!dev"];
 LargeNested.parameters = {
@@ -229,7 +230,7 @@ LargeNested.storyName = "Large, nested";
 export const LargeNestedRootVisible = Template.bind({});
 LargeNestedRootVisible.args = {
 	...DefaultNestedRootVisible.args,
-	variant: "large",
+	size: "l",
 };
 LargeNestedRootVisible.tags = ["!dev"];
 LargeNestedRootVisible.parameters = {
@@ -239,6 +240,8 @@ LargeNestedRootVisible.storyName = "Large, nested (root visible)";
 
 /**
  * Breadcrumbs can have optional behavior to allow for drag and drop functionality.
+ * When a breadcrumb item has something being dragged on top of it, the class `is-dragged` is added to it.
+ * This example adds that class to the first breadcrumb item.
  */
 export const Dragged = Template.bind({});
 Dragged.args = {
@@ -251,7 +254,8 @@ Dragged.parameters = {
 };
 
 /**
- * The example below has two disabled breadcrumb items. When disabling the text link, the `is-disabled` class gets added to `.spectrum-Breadcrumbs-itemLink`. When disabling the Action button, the `[disabled]` attribute is applied.
+ * The example below has two disabled breadcrumb items. When disabling the text link, the `is-disabled` class
+ * gets added to `.spectrum-Breadcrumbs-itemLink`. When disabling the Action button, the `[disabled]` attribute is applied.
  */
 export const Disabled = Template.bind({});
 Disabled.args = {
