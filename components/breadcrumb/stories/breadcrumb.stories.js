@@ -16,6 +16,22 @@ export default {
 	component: "Breadcrumbs",
 	argTypes: {
 		items: { table: { disable: true } },
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["m", "l"],
+			control: {
+				type: "select",
+				labels: {
+					m: "Medium",
+					l: "Large",
+				},
+			},
+		},
 		variant: {
 			name: "Variant",
 			type: { name: "string" },
@@ -23,14 +39,12 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Component",
-				defaultValue: { summary: "medium" },
 			},
-			options: ["medium", "large", "multiline"],
+			options: [undefined, "multiline"],
 			control: {
-				type: "radio",
+				type: "select",
 				labels: {
-					medium: "Medium (default)",
-					large: "Large",
+					undefined: "Default",
 					multiline: "Multiline",
 				},
 			},
@@ -70,7 +84,8 @@ export default {
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
 		isDragged: false,
-		variant: "medium",
+		variant: undefined,
+		size: "m",
 	},
 	parameters: {
 		actions: {

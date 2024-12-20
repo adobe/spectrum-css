@@ -13,7 +13,8 @@ export const Template = (
 		rootClass = "spectrum-Breadcrumbs",
 		customClasses = [],
 		items = [],
-		variant = "medium",
+		size = "m",
+		variant,
 		isDragged = false,
 		titleHeadingSize,
 	} = {},
@@ -23,7 +24,8 @@ export const Template = (
 		<ul
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined" || variant !== "medium",
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 		>
@@ -96,8 +98,8 @@ export const Template = (
 
 /**
  * Displays all preferred sizes for breadcrumb title headings used with the multiline variant.
- * 
- * TODO: make sure of Container() with headings when S2 is in sync with the main branch again. 
+ *
+ * TODO: make sure of Container() with headings when S2 is in sync with the main branch again.
  */
 export const BreadcrumbTitleHeadings = (args) => html`
 	<div style="display: flex; flex-direction: column; gap: 16px;">

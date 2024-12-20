@@ -62,8 +62,7 @@
 	--spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
 
-/* Variant: large */
-.spectrum-Breadcrumbs--large {
+.spectrum-Breadcrumbs--sizeL {
 	--spectrum-breadcrumbs-block-size: var(--spectrum-component-height-200);
 	--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-200);
 	--spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
@@ -75,7 +74,6 @@
 	--spectrum-breadcrumbs-inline-start: var(--spectrum-breadcrumbs-start-edge-to-text-large);
 }
 
-/* Variant: multiline */
 .spectrum-Breadcrumbs--multiline {
 	--spectrum-breadcrumbs-block-size: var(--spectrum-breadcrumbs-height-multiline);
 	--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-75);
