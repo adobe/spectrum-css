@@ -15,7 +15,6 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-width: var(--spectrum-coach-mark-width);
 	--spectrum-coachmark-max-width: var(--spectrum-coach-mark-maximum-width);
 
-	--spectrum-coachmark-media-height: var(--spectrum-coach-mark-media-height);
 	--spectrum-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimum-height);
 
 	--spectrum-coachmark-media-fixed-height: var(--spectrum-coach-mark-media-height);
@@ -45,10 +44,7 @@ governing permissions and limitations under the License.
 	--spectrum-coachmark-content-font-size: var(--spectrum-coach-mark-body-font-size);
 
 	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
-	--spectrum-coachmark-step-font-weight: var(--spectrum-body-medium-font-weight);
-	--spectrum-coachmark-step-font-family: var(--spectrum-sans-serif-font);
 	--spectrum-coachmark-step-font-style: var(--spectrum-body-serif-font-style);
-	--spectrum-coachmark-step-line-height: var(--spectrum-line-height-200);
 	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-font-size);
 	--spectrum-coachmark-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
 
