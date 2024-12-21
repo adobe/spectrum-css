@@ -17,6 +17,9 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
+
 const postcss = require("postcss");
 const postcssrc = require("postcss-load-config");
 const prettier = require("prettier");
@@ -223,8 +226,8 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 		const theme = path.basename(input, ".css");
 		return processCSS(
 			content,
-			path.join(cwd, input),
-			path.join(cwd, "dist", input),
+			input,
+			path.join(cwd, "dist", "themes", `${theme}.css`),
 			{
 				cwd,
 				clean,
@@ -334,3 +337,9 @@ async function main({
 exports.processCSS = processCSS;
 exports.fetchContent = fetchContent;
 exports.default = main;
+
+let {
+	_: components,
+} = yargs(hideBin(process.argv)).argv;
+
+Promise.all(components.map((componentName) => main({ componentName })));

@@ -11,7 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = function ({ setName, subSystemName } = {}) {
+import path from "path";
+
+export default function ({ setName, subSystemName } = {}) {
 	const baseConfig = {
 		format: "css/sets",
 		options: {
@@ -21,14 +23,14 @@ module.exports = function ({ setName, subSystemName } = {}) {
 	};
 
 	const sets = [setName, subSystemName].filter(Boolean);
-	if (!sets.length) {
+	if (sets.length === 0) {
 		return {
 			...baseConfig,
 			destination: "global-vars.css",
 			filter: (token) => !token.path.includes("sets"),
 			options: {
-				...baseConfig.options,
 				selector: ".spectrum",
+				...baseConfig.options,
 			},
 		};
 	}
@@ -105,7 +107,7 @@ module.exports = function ({ setName, subSystemName } = {}) {
 
 	return {
 		...baseConfig,
-		destination: `${subSystemName ? `${subSystemName}/` : ""}${scope}-vars.css`,
+		destination: subSystemName ? path.join(subSystemName, `${scope}-vars.css`) : `${scope}-vars.css`,
 		filter,
 		options: {
 			...baseConfig.options,
@@ -113,4 +115,4 @@ module.exports = function ({ setName, subSystemName } = {}) {
 			sets,
 		},
 	};
-};
+}
