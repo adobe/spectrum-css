@@ -24,6 +24,7 @@
 		"clean": "yarn cleaner tag:component --skip-nx-cache",
 		"clean:bundle": "nx clean bundle --skip-nx-cache",
 		"clean:docs": "rimraf dist",
+		"clean:env": "rm -rf .env .storybook/chromatic.config.json",
 		"clean:preview": "nx clean storybook --skip-nx-cache",
 		"cleaner": "nx run-many --target clean --projects",
 		"compare": "cross-env NODE_ENV=production node --no-warnings ./tasks/compare-compiled-output.js",

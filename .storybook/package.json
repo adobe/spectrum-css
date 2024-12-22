@@ -25,7 +25,7 @@
 	},
 	"module": "main.js",
 	"scripts": {
-		"build": "cross-env NODE_ENV=development storybook build --config-dir . --output-dir ./storybook-static"
+		"build": "cross-env NODE_ENV=development storybook build --stats-json --config-dir ."
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
@@ -35,7 +35,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.26.0",
-		"@chromaui/addon-visual-tests": "^1.0.0",
+		"@chromatic-com/storybook": "^3.2.3",
 		"@etchteam/storybook-addon-status": "^5.0.0",
 		"@storybook/addon-a11y": "^8.4.7",
 		"@storybook/addon-actions": "^8.4.7",
