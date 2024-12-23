@@ -20,7 +20,9 @@ export const withContextWrapper = makeDecorator({
 				color = "light",
 				context = "legacy",
 				scale = "medium",
-				testingPreview = false,
+			} = {},
+			parameters: {
+				showTestingGrid = false,
 			} = {},
 			id,
 			viewMode,
@@ -45,7 +47,7 @@ export const withContextWrapper = makeDecorator({
 
 		useEffect(() => {
 			const isDocs = viewMode === "docs";
-			const isTesting = testingPreview;
+			const isTesting = showTestingGrid;
 			const isRaw = Boolean(context === "raw");
 			const isModern = Boolean(context === "spectrum");
 			const isExpress = Boolean(context === "express");
@@ -59,16 +61,18 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
+				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
+				const isTestingWrapper = isTesting ? container.matches("body:has([data-testing-preview]),[data-testing-preview]") : false;
+				// Check if the container has a static color element
+				let hasStaticElement = container.matches(`:has([data-html-preview])`) ? container.matches(`:has([data-html-preview] .${rootClass}--staticWhite, [data-html-preview] .${rootClass}--staticBlack)`) : container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack)`);
+
 				// Reset the context to the original values
 				color = original.color;
 				context = original.context;
 				scale = original.scale;
 
-				// Check if the container has a static color element
-				let hasStaticElement = container.matches(`:has([data-html-preview])`) ? container.matches(`:has([data-html-preview] .${rootClass}--staticWhite, [data-html-preview] .${rootClass}--staticBlack)`) : container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack)`);
-
 				let staticKey = staticColor;
-				if (!staticKey && hasStaticElement) {
+				if (!isTestingWrapper && !staticKey && hasStaticElement) {
 					staticKey = (
 						container.querySelector(`.${rootClass}--staticWhite`) && "white" ||
 						container.querySelector(`.${rootClass}--staticBlack`) && "black"
@@ -95,13 +99,13 @@ export const withContextWrapper = makeDecorator({
 				}
 
 				// Let the static color override the color if it's set
-				if (hasStaticElement && staticColorSettings[staticKey]?.color) {
+				if (!isTestingWrapper && hasStaticElement && staticColorSettings[staticKey]?.color) {
 					color = staticColorSettings[staticKey].color;
 				}
 
 				// Force a light theme for the body wrapper in testing preview mode
 				// because the individual containers will bring in the correct theme
-				if (isTesting && container.matches("body:has([data-testing-preview]")) {
+				if (isTestingWrapper) {
 					color = "light";
 				}
 
@@ -113,14 +117,17 @@ export const withContextWrapper = makeDecorator({
 					container.classList.toggle(`spectrum--${s}`, s === scale && !isRaw);
 				}
 
-				// Start by removing the background color from the container and then add it back if needed
-				container.style.removeProperty("background");
-				if (hasStaticElement && staticKey && staticColorSettings[staticKey]) {
-					container.style.background = staticColorSettings[staticKey].background;
+				if (!isTestingWrapper) {
+					if (hasStaticElement && staticKey && staticColorSettings[staticKey]) {
+						container.style.background = staticColorSettings[staticKey].background;
+					}
+				} else {
+					// Testing background is stark white to highlight the gray-ish background color on light theme
+					container.style.background = "Canvas";
 				}
 			}
 
-		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, testingPreview]);
+		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, showTestingGrid]);
 
 		return StoryFn(data);
 	},
