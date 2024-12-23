@@ -8,6 +8,9 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",
@@ -136,7 +139,7 @@ export const Template = ({
 		if (firstDOWInMonth > DOW.length - orphanedDays) {
 			weeksInMonth++;
 		}
-		if (displayedMonth === 1 && firstDOWInMonth > 0) { // accounts for Feburary
+		if (displayedMonth === 1 && firstDOWInMonth > 0) { // accounts for February
 			weeksInMonth++;
 		}
 
@@ -283,7 +286,7 @@ export const Template = ({
 					isQuiet: true,
 					isDisabled,
 					size: buttonSize,
-					iconName: "ChevronLeft100",
+					iconName: "ChevronLeft",
 					iconSet: "ui",
 					customClasses: [`${rootClass}-prevMonth`],
 					onclick: previousHandler.bind(null, {
@@ -297,7 +300,7 @@ export const Template = ({
 					isQuiet: true,
 					isDisabled,
 					size: buttonSize,
-					iconName: "ChevronRight100",
+					iconName: "ChevronRight",
 					iconSet: "ui",
 					customClasses: [`${rootClass}-nextMonth`],
 					onclick: nextHandler.bind(null, {
@@ -365,8 +368,6 @@ export const Template = ({
 												"is-range-start": thisDay.isRangeStart,
 												"is-range-end": thisDay.isRangeEnd,
 												"is-selected": thisDay.isSelected,
-												// "is-selection-start": thisDay.isRangeStart,
-												// "is-selection-end": thisDay.isRangeEnd,
 												"is-disabled": isDisabled,
 												"is-focused": (isFocused && thisDay.isFocused) || thisDay.isSelected,
 											})}

@@ -11,28 +11,27 @@
  * governing permissions and limitations under the License.
  */
 
+/* @combine .spectrum.spectrum--express */
+
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Button {
-		--spectrum-button-background-color-default: var(--spectrum-gray-200);
-		--spectrum-button-background-color-hover: var(--spectrum-gray-300);
-		--spectrum-button-background-color-down: var(--spectrum-gray-400);
-		--spectrum-button-background-color-focus: var(--spectrum-gray-300);
+		--mod-button-background-color-default: var(--spectrum-gray-200);
+		--mod-button-background-color-hover: var(--spectrum-gray-300);
+		--mod-button-background-color-down: var(--spectrum-gray-400);
+		--mod-button-background-color-focus: var(--spectrum-gray-300);
 
-		--spectrum-button-border-color-default: transparent;
-		--spectrum-button-border-color-hover: transparent;
-		--spectrum-button-border-color-down: transparent;
-		--spectrum-button-border-color-focus: transparent;
-
-		--spectrum-button-background-color-disabled: var(--spectrum-disabled-background-color);
-		--spectrum-button-border-color-disabled: transparent;
+		--mod-button-border-color-default: transparent;
+		--mod-button-border-color-hover: transparent;
+		--mod-button-border-color-down: transparent;
+		--mod-button-border-color-focus: transparent;
 
 		&.is-selected {
-			--spectrum-button-background-color-default: var(--spectrum-neutral-background-color-default);
-			--spectrum-button-background-color-hover: var(--spectrum-neutral-background-color-hover);
-			--spectrum-button-background-color-down: var(--spectrum-neutral-background-color-down);
-			--spectrum-button-background-color-focus: var(--spectrum-neutral-background-color-key-focus);
+			--mod-button-background-color-default: var(--spectrum-neutral-background-color-default);
+			--mod-button-background-color-hover: var(--spectrum-neutral-background-color-hover);
+			--mod-button-background-color-down: var(--spectrum-neutral-background-color-down);
+			--mod-button-background-color-focus: var(--spectrum-neutral-background-color-key-focus);
 		}
 	}
 }

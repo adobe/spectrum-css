@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Search {
 	/* Size / Spacing */
@@ -45,7 +45,6 @@
 
 	/* Background and Border */
 	--spectrum-search-border-width: var(--spectrum-border-width-100);
-	--spectrum-search-background-color: var(--spectrum-gray-50);
 
 	/* Disabled */
 	--spectrum-search-color-disabled: var(--spectrum-disabled-content-color);
@@ -215,12 +214,10 @@
 	--spectrum-search-border-color-disabled: var(--spectrum-disabled-border-color);
 
 	/* Added specificity, otherwise they are overridden by system specific themes. */
-	&.spectrum-Search {
-		--spectrum-search-border-radius: 0;
-		--spectrum-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
-	}
+	--mod-search-border-radius: 0;
+	--mod-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
 
-	&.spectrum-Search .spectrum-Search-input {
+	.spectrum-Search-input {
 		border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
 		padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
 		padding-inline-end: var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size));
