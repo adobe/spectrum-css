@@ -141,8 +141,3 @@ export const Quiet = Template.bind({});
 Quiet.args = {
 	isQuiet: true
 };
-
-export const Express = Template.bind({});
-Express.args = {
-	express: true
-};

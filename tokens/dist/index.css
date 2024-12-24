@@ -1572,9 +1572,9 @@
 	--spectrum-text-align-start: start;
 	--spectrum-text-align-center: center;
 	--spectrum-text-align-end: end;
-	--spectrum-sans-serif-font-family: adobe clean;
-	--spectrum-serif-font-family: adobe clean serif;
-	--spectrum-cjk-font-family: adobe clean han;
+	--spectrum-sans-serif-font-family: Adobe Clean;
+	--spectrum-serif-font-family: Adobe Clean Serif;
+	--spectrum-cjk-font-family: Adobe Clean Han;
 	--spectrum-light-font-weight: 300;
 	--spectrum-regular-font-weight: 400;
 	--spectrum-medium-font-weight: 500;
@@ -1802,7 +1802,7 @@
 	--spectrum-detail-cjk-size-l: var(--spectrum-font-size-100);
 	--spectrum-detail-cjk-size-xl: var(--spectrum-font-size-200);
 	--spectrum-detail-size-xs: var(--spectrum-font-size-50);
-	--spectrum-code-font-family: source code pro;
+	--spectrum-code-font-family: Source Code Pro;
 	--spectrum-code-cjk-font-family: var(--spectrum-code-font-family);
 	--spectrum-code-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-code-font-style: var(--spectrum-default-font-style);
@@ -1868,10 +1868,9 @@
 
 	--spectrum-cjk-font-family-stack: adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif;
 	--spectrum-cjk-font: var(--spectrum-code-font-family-stack);
-	--spectrum-docs-static-white-background-color-rgb: 15, 121, 125;
-	--spectrum-docs-static-white-background-color: rgba(var(--spectrum-docs-static-white-background-color-rgb));
-	--spectrum-docs-static-black-background-color-rgb: 181, 209, 211;
-	--spectrum-docs-static-black-background-color: rgba(var(--spectrum-docs-static-black-background-color-rgb));
+	--spectrum-examples-gradient: linear-gradient(45deg, var(--spectrum-magenta-1500), var(--spectrum-blue-1500));
+	--spectrum-examples-gradient-static-black: linear-gradient(45deg, rgb(255, 241, 246), rgb(238, 245, 255));
+	--spectrum-examples-gradient-static-white: linear-gradient(45deg, rgb(64, 0, 22), rgb(14, 24, 67));
 	--spectrum-corner-radius-1000: 9999px;
 }
 .spectrum--large {
