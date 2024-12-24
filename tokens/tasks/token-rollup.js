@@ -115,52 +115,47 @@ async function main({
 
 	const compiledOutputPath = path.join(cwd, "dist");
 
-	// Ensure the dist directory exists
-	if (!fs.existsSync(compiledOutputPath)) {
-		fs.mkdirSync(compiledOutputPath);
-	}
-
-	// Read in the package version from the package.json file
-	const packageJson = await fsp.readFile(path.join(cwd, "package.json"), "utf-8").then(JSON.parse);
+	const reports = [];
+	const errors = [];
 
 	// Wait for all the custom files to be processed
-	return appendCustomOverrides({ packageJson, cwd }).then(async (r) =>
-		Promise.all([
-			index(
-				["dist/css/*-vars.css"],
-				path.join(compiledOutputPath, "css", "index.css"),
-				{ cwd, clean, packageJson }
-			)
-		]).then((reports) => {
-			const logs = [reports, r].flat(Infinity).filter(Boolean);
+	await appendCustomOverrides({ cwd }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	// Then build the index.css file
+	await index(["dist/css/*-vars.css"], path.join(compiledOutputPath, "css", "index.css"), { cwd, clean }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
-			if (logs && logs.length > 0) {
-				logs.forEach(log => {
-					// Strip the ../../tokens/ from the paths
-					console.log(log.replace(/(\.\.\/)+tokens\//g, ""));
-				});
-			}
-			else console.log("No assets created.".gray);
+	// Finally, copy the index.css file to the dist folder
+	await copy(path.join(compiledOutputPath, "css", "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		}).catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	// Combine all the reports into a single log output
+	const logs = reports.flat(Infinity).filter(Boolean);
+	const errorLogs = errors.flat(Infinity).filter(Boolean);
 
-			console.trace(err);
+	console.log(`\n\n${key} 🔨`);
+	console.log(`${"".padStart(30, "-")}`);
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
+	if (!(errorLogs && errorLogs.length > 0)) {
+		if (logs && logs.length > 0) {
+			logs.forEach(log => {
+				// Strip the ../../tokens/ from the paths
+				console.log(log.replace(/(\.\.\/)+tokens\//g, ""));
+			});
+		}
+		else console.log("No assets created.".gray);
+	}
+	else {
+		errorLogs.forEach(log => {
+			console.error(log);
+		});
+	}
 
-			process.exit(1);
-		})
-	);
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
+
+	if (errorLogs && errorLogs.length > 0) {
+		process.exit(1);
+	}
 }
 
 exports.default = main;

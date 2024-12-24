@@ -35,19 +35,18 @@ Each component has the following files:
 - `stories/*.stories.js` - The storybook file that defines the component's stories and the available knobs for the component.
 - `stories/template.js` - The template function that generates the component's mark-up based on the provided settings.
 - `stories/*.test.js` - The testing grid for visual regression testing in Chromatic.
-- `stories/*.mdx` - This asset generates the component-specific documentation and is rendered in Storybook as the Docs page.
 
 Each component outputs the following assets to `dist`:
 
-- `index.css`: This asset includes the base CSS.
+- `index.css`: This asset includes the CSS for the component and is meant to be loaded in conjunction with the tokens for your desired color context and scales.
 
 ## Adding a new component
 
 1. Generate a new component using the `yarn new component` command. The generator will prompt you to answer questions about your component.
 2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens`, and most rely on `@spectrum-css/icon`.
 3. Once your folder has been generated, you can run `yarn start` in the root of the project to begin developing.
-4. The `index.css` file is where all of your styles will be added.
-5. Inside the `stories` directory you will find a `template.js`, `*.stories.js`, and `*.mdx` file.
+4. The `index.css` file is where all of your styles should be added.
+5. Inside the `stories` directory you will find a `template.js` and `*.stories.js` file.
    - In the `*.stories.js` file, define the available knobs and properties for your component, as well as any standard variations you want to surface in [Storybook](https://storybook.js.org/docs/react/writing-stories/introduction).
    - Update the `template.js` file with the markup, using [lit-html syntax](https://lit.dev/docs/templates/overview/) to adjust results based on the provided settings from the Storybook knobs.
 

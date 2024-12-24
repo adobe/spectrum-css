@@ -3,6 +3,9 @@ import { Template as ProgressBar } from "@spectrum-css/progressbar/stories/templ
 import { capitalize } from "lodash-es";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Meter",
