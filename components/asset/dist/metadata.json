@@ -18,14 +18,18 @@
     "--mod-asset-icon-min-width",
     "--mod-asset-icon-outline-color"
   ],
-  "component": [],
+  "component": [
+    "--spectrum-asset-file-background",
+    "--spectrum-asset-file-outline",
+    "--spectrum-asset-folder-background",
+    "--spectrum-asset-folder-outline"
+  ],
   "global": [
     "--spectrum-animation-duration-100",
     "--spectrum-gray-200",
     "--spectrum-gray-25",
     "--spectrum-gray-500"
   ],
-  "system-theme": [],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-asset-icon-background-color"]
 }

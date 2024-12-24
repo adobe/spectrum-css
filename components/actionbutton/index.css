@@ -13,7 +13,66 @@
 
 @import "@spectrum-css/commons/basebutton.css";
 
+@media (forced-colors: active) {
+	.spectrum-ActionButton {
+		/* force a more visible focus indicator color */
+		--highcontrast-actionbutton-focus-indicator-color: ButtonText;
+
+		&::after {
+			/* make sure focus indicator renders */
+			forced-color-adjust: none;
+		}
+
+		&.is-selected {
+			--highcontrast-actionbutton-background-color-default: Highlight;
+			--highcontrast-actionbutton-background-color-hover: Highlight;
+			--highcontrast-actionbutton-background-color-focus: Highlight;
+			--highcontrast-actionbutton-background-color-down: Highlight;
+			--highcontrast-actionbutton-background-color-disabled: ButtonFace;
+
+			--highcontrast-actionbutton-border-color-default: HighlightText;
+			--highcontrast-actionbutton-border-color-hover: HighlightText;
+			--highcontrast-actionbutton-border-color-focus: HighlightText;
+			--highcontrast-actionbutton-border-color-down: HighlightText;
+			--highcontrast-actionbutton-border-color-disabled: GrayText;
+
+			--highcontrast-actionbutton-content-color-default: HighlightText;
+			--highcontrast-actionbutton-content-color-hover: HighlightText;
+			--highcontrast-actionbutton-content-color-focus: HighlightText;
+			--highcontrast-actionbutton-content-color-down: HighlightText;
+			--highcontrast-actionbutton-content-color-disabled: GrayText;
+
+			.spectrum-ActionButton-icon,
+			.spectrum-ActionButton-hold,
+			.spectrum-ActionButton-label {
+				/* ensure custom text colors from above get applied */
+				/* it seems like this shouldn't have to be done, but colors are wrong without it */
+				forced-color-adjust: none;
+			}
+		}
+	}
+}
+
 .spectrum-ActionButton {
+	--spectrum-actionbutton-background-color-default: var(--spectrum-gray-50);
+	--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-100);
+	--spectrum-actionbutton-background-color-down: var(--spectrum-gray-200);
+	--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-100);
+	--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-black-100);
+
+	--spectrum-actionbutton-background-color-selected: var(--spectrum-neutral-background-color-selected-default);
+	--spectrum-actionbutton-background-color-selected-hover: var(--spectrum-neutral-background-color-selected-hover);
+	--spectrum-actionbutton-background-color-selected-down: var(--spectrum-neutral-background-color-selected-down);
+	--spectrum-actionbutton-background-color-selected-focus: var(--spectrum-neutral-background-color-selected-key-focus);
+
+	--spectrum-actionbutton-border-color-default: var(--spectrum-gray-400);
+	--spectrum-actionbutton-border-color-hover: var(--spectrum-gray-500);
+	--spectrum-actionbutton-border-color-down: var(--spectrum-gray-600);
+	--spectrum-actionbutton-border-color-focus: var(--spectrum-gray-500);
+	--spectrum-actionbutton-border-color-disabled: var(--spectrum-disabled-border-color);
+
+	--spectrum-actionbutton-content-color-selected: var(--spectrum-gray-50);
+
 	--spectrum-actionbutton-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-medium);
 	--spectrum-actionbutton-border-width: var(--spectrum-border-width-100);
@@ -43,6 +102,49 @@
 
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+	&.spectrum-ActionButton--quiet {
+		--spectrum-actionbutton-background-color-default: transparent;
+		--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-100);
+		--spectrum-actionbutton-background-color-down: var(--spectrum-gray-200);
+		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-100);
+	}
+
+	&.spectrum-ActionButton--staticBlack {
+		--spectrum-actionbutton-border-color-default: var(--spectrum-transparent-black-500);
+		--spectrum-actionbutton-border-color-hover: var(--spectrum-transparent-black-600);
+		--spectrum-actionbutton-border-color-down: var(--spectrum-transparent-black-700);
+		--spectrum-actionbutton-border-color-focus: var(--spectrum-transparent-black-600);
+
+		--spectrum-actionbutton-background-color-disabled: transparent;
+		--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-black-200);
+
+		&,
+		&.spectrum-ActionButton--quiet {
+			--spectrum-actionbutton-background-color-default: transparent;
+			--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-400);
+			--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-black-500);
+			--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-black-400);
+		}
+	}
+
+	&.spectrum-ActionButton--staticWhite {
+		--spectrum-actionbutton-border-color-default: var(--spectrum-transparent-white-500);
+		--spectrum-actionbutton-border-color-hover: var(--spectrum-transparent-white-600);
+		--spectrum-actionbutton-border-color-down: var(--spectrum-transparent-white-700);
+		--spectrum-actionbutton-border-color-focus: var(--spectrum-transparent-white-600);
+
+		--spectrum-actionbutton-background-color-disabled: transparent;
+		--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-white-200);
+
+		&,
+		&.spectrum-ActionButton--quiet {
+			--spectrum-actionbutton-background-color-default: transparent;
+			--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-white-400);
+			--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-500);
+			--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-white-400);
+		}
 	}
 
 	&.is-selected {
@@ -128,46 +230,6 @@
 	--spectrum-actionbutton-edge-to-visual: calc(var(--spectrum-component-edge-to-visual-300) - var(--spectrum-actionbutton-border-width));
 	--spectrum-actionbutton-edge-to-text: calc(var(--spectrum-component-edge-to-text-300) - var(--spectrum-actionbutton-border-width));
 	--spectrum-actionbutton-edge-to-visual-only: calc(var(--spectrum-component-edge-to-visual-only-300) - var(--spectrum-actionbutton-border-width));
-}
-
-@media (forced-colors: active) {
-	.spectrum-ActionButton {
-		&::after {
-			/* make sure focus indicator renders */
-			forced-color-adjust: none;
-		}
-
-		/* force a more visible focus indicator color */
-		--highcontrast-actionbutton-focus-indicator-color: ButtonText;
-
-		&.is-selected {
-			--highcontrast-actionbutton-background-color-default: Highlight;
-			--highcontrast-actionbutton-background-color-hover: Highlight;
-			--highcontrast-actionbutton-background-color-focus: Highlight;
-			--highcontrast-actionbutton-background-color-down: Highlight;
-			--highcontrast-actionbutton-background-color-disabled: ButtonFace;
-
-			--highcontrast-actionbutton-border-color-default: HighlightText;
-			--highcontrast-actionbutton-border-color-hover: HighlightText;
-			--highcontrast-actionbutton-border-color-focus: HighlightText;
-			--highcontrast-actionbutton-border-color-down: HighlightText;
-			--highcontrast-actionbutton-border-color-disabled: GrayText;
-
-			--highcontrast-actionbutton-content-color-default: HighlightText;
-			--highcontrast-actionbutton-content-color-hover: HighlightText;
-			--highcontrast-actionbutton-content-color-focus: HighlightText;
-			--highcontrast-actionbutton-content-color-down: HighlightText;
-			--highcontrast-actionbutton-content-color-disabled: GrayText;
-
-			.spectrum-ActionButton-icon,
-			.spectrum-ActionButton-hold,
-			.spectrum-ActionButton-label {
-				/* ensure custom text colors from above get applied */
-				/* it seems like this shouldn't have to be done, but colors are wrong without it */
-				forced-color-adjust: none;
-			}
-		}
-	}
 }
 
 .spectrum-ActionButton {

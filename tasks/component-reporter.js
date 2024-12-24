@@ -184,7 +184,6 @@ async function main({
 			dataModel: {
 				modifiers: ["mod"],
 				spectrum: ["spectrum"],
-				"system-theme": ["system"],
 				"high-contrast": ["highcontrast"],
 			},
 		}
@@ -204,7 +203,6 @@ async function main({
 					modifiers: meta.modifiers,
 					component: meta.component,
 					global: meta.global,
-					"system-theme": meta["system-theme"],
 					passthroughs: meta.passthroughs,
 					"high-contrast": meta["high-contrast"],
 				}, null, 2),

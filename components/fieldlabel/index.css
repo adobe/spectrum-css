@@ -25,6 +25,18 @@
 
 	--spectrum-fieldlabel-side-margin-block-start: var(--spectrum-field-label-top-margin-medium);
 	--spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+
+	/* CJK (Chinese, Japanese, and Korean) language support */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--mod-fieldlabel-line-height: var(--mod-fieldlabel-line-height-cjk, var(--spectrum-cjk-line-height-100));
+	}
+
+	/********* Disabled state *********/
+	&.is-disabled {
+		--spectrum-fieldlabel-color: var(--highcontrast-fieldlabel-disabled-content-color, var(--spectrum-disabled-content-color));
+	}
 }
 
 .spectrum-FieldLabel--sizeS {
@@ -88,18 +100,6 @@
 	-moz-osx-font-smoothing: auto;
 
 	color: var(--spectrum-fieldlabel-color);
-
-	/* CJK (Chinese, Japanese, and Korean) language support */
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		--mod-fieldlabel-line-height: var(--mod-fieldlabel-line-height-cjk, var(--spectrum-cjk-line-height-100));
-	}
-
-	/********* Disabled state *********/
-	&.is-disabled {
-		--spectrum-fieldlabel-color: var(--highcontrast-fieldlabel-disabled-content-color, var(--spectrum-disabled-content-color));
-	}
 }
 
 .spectrum-FieldLabel-requiredIcon {
@@ -122,52 +122,6 @@
 
 .spectrum-FieldLabel--right {
 	text-align: end;
-}
-
-/********* Form *********/
-.spectrum-Form {
-	--spectrum-tableform-item-block-spacing: var(--spectrum-spacing-300);
-
-	display: grid;
-	grid-template-columns: var(--mod-form-grid-template-columns, auto auto);
-	row-gap: var(--mod-form-item-block-spacing, var(--spectrum-tableform-item-block-spacing));
-	justify-content: start;
-
-	inline-size: var(--mod-form-inline-size, fit-content);
-	margin: 0;
-}
-
-/* Row */
-.spectrum-Form-item {
-	display: contents;
-}
-
-@supports (grid-template-columns: subgrid) {
-	.spectrum-Form-item {
-		display: grid;
-		grid-column: span 2;
-		grid-template-columns: subgrid;
-	}
-}
-
-.spectrum-Form-itemLabel,
-.spectrum-Form-itemField {
-	display: block;
-}
-
-/* Fix extra space after inline-flex elements such as stepper. */
-.spectrum-Form-itemField > * {
-	vertical-align: top;
-}
-
-/* Rows with stacked alignment */
-.spectrum-Form--labelsAbove {
-	--mod-form-item-block-spacing: var(--mod-form-item-block-spacing-labels-above, var(--spectrum-spacing-200));
-	--mod-form-grid-template-columns: var(--mod-form-grid-template-columns-labels-above, auto);
-
-	.spectrum-Form-item {
-		display: block;
-	}
 }
 
 /********* WHCM *********/
