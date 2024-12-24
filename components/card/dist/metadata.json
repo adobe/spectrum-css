@@ -55,7 +55,6 @@
     ".spectrum-Card.is-drop-target",
     ".spectrum-Card.is-focused .spectrum-Card-actions",
     ".spectrum-Card.is-focused .spectrum-Card-quickActions",
-    ".spectrum-Card.is-selected",
     ".spectrum-Card.is-selected .spectrum-Card-actions",
     ".spectrum-Card.is-selected .spectrum-Card-quickActions",
     ".spectrum-Card.is-selected:before",
@@ -155,6 +154,7 @@
     "--spectrum-card-body-spacing",
     "--spectrum-card-border-color",
     "--spectrum-card-border-color-hover",
+    "--spectrum-card-border-color-selected",
     "--spectrum-card-border-width",
     "--spectrum-card-content-margin-bottom",
     "--spectrum-card-content-margin-top",
@@ -215,7 +215,6 @@
     "--spectrum-spacing-300",
     "--spectrum-spacing-400"
   ],
-  "system-theme": [],
   "passthroughs": [],
   "high-contrast": []
 }

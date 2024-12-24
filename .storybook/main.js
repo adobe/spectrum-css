@@ -22,7 +22,7 @@ export default {
 		},
 		{
 			directory: "./foundations",
-			files: "*/*.mdx",
+			files: "*/*.@(stories.js|mdx)",
 			titlePrefix: "Foundations",
 		},
 		{

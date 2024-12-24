@@ -41,14 +41,6 @@
                 "pattern": "^--spectrum-"
             }
         },
-        "system-theme": {
-            "description": "The system theme hooks created by the postcss tooling to allow theme toggling on a component.",
-            "type": "array",
-            "items": {
-                "type": "string",
-                "pattern": "^--system-"
-            }
-        },
         "passthroughs": {
             "description": "Modifier custom properties for nested components that are passed through by this component.",
             "type": "array",
@@ -66,6 +58,6 @@
             }
         }
 	},
-	"required": ["sourceFile", "selectors", "modifiers", "component", "global", "system-theme", "passthroughs", "high-contrast"],
+	"required": ["sourceFile", "selectors", "modifiers", "component", "global", "passthroughs", "high-contrast"],
 	"additionalProperties": false
 }

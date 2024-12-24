@@ -11,7 +11,6 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-missing-var",
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
-		"@spectrum-tools/stylelint-theme-alignment",
 		// "stylelint-high-performance-animation",
 	],
 	rules: {
@@ -150,7 +149,6 @@ module.exports = {
 		 * Local/custom plugins
 		 * -------------------------------------------------------------- */
 		"spectrum-tools/no-missing-var": true,
-		"spectrum-tools/theme-alignment": null,
 		"spectrum-tools/no-unused-custom-properties": null,
 		"spectrum-tools/no-unknown-custom-properties": null,
 	},

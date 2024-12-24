@@ -231,41 +231,33 @@ async function main({
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
-	// Create the dist directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "dist"))) {
-		fs.mkdirSync(path.join(cwd, "dist"));
+	const reports = [];
+	const errors = [];
+
+	await build({ cwd, clean }).then((report) => reports.push(report)).catch((err) => errors.push(err));
+
+	const logs = reports.flat(Infinity).filter(Boolean);
+	const errs = errors.flat(Infinity).filter(Boolean);
+
+	console.log(`\n\n${key} 🔨`);
+	console.log(`${"".padStart(30, "-")}`);
+
+	if (errs && errs.length > 0) {
+		errs.forEach((err) => console.error(err));
+	}
+	else {
+		if (logs && logs.length > 0) {
+			logs.forEach((log) => console.log(log));
+		}
+		else console.log("No assets created.".gray);
 	}
 
-	return Promise.all([
-		build({ cwd, clean }),
-	])
-		.then((report) => {
-			const logs = report.flat(Infinity).filter(Boolean);
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
 
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
-
-			if (logs && logs.length > 0) {
-				logs.forEach((log) => console.log(log));
-			}
-			else console.log("No assets created.".gray);
-
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		})
-		.catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
-
-			console.trace(err);
-
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-
-			process.exit(1);
-		});
+	if (errs && errs.length > 0) process.exit(1);
+	else process.exit(0);
 }
 
 exports.processCSS = processCSS;
