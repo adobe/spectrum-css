@@ -64,8 +64,5 @@ addons.setConfig({
 	}),
 	sidebar: {
 		showRoots: false,
-		filters: {
-			patterns: (item) => !item.id.includes('forced-colors') && ['is-hidden-story'].every((tag) => !item.tags.includes(tag)),
-		},
 	},
 });

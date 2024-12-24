@@ -94,7 +94,7 @@ export default {
 		},
 		downState: {
 			selectors: [".spectrum-Button:not(:disabled)"],
-		}
+		},
 		packageJson,
 		metadata,
 	},

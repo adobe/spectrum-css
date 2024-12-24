@@ -19,6 +19,7 @@ export default {
 	title: "Dialog",
 	component: "Dialog",
 	argTypes: {
+		size: size(["s", "m", "l"]),
 		heading: {
 			name: "Heading",
 			description: "Title for the dialog.",
@@ -72,7 +73,6 @@ export default {
 			control: { type: "boolean" },
 			if: { arg: "hasFooter", truthy: true, },
 		},
-		size: size(["s", "m", "l"]),
 		layout: {
 			name: "Layout",
 			type: { name: "string" },
@@ -86,6 +86,7 @@ export default {
 			options: ["default", "fullscreen", "fullscreenTakeover"],
 			control: "select",
 		},
+		isOpen,
 		isDismissible: {
 			name: "Dismissible",
 			type: { name: "boolean" },
@@ -193,13 +194,9 @@ Default.args = {
 	],
 };
 
-/* TODO: For all dialog stories: the "is-hidden-story" tags in older versions of Storybook. In newer versions,
-use "!dev" to remove the stories from the side navigation, reflecting the intended behavior.
-Remove "is-hidden-story" in favor of "!dev" tags when possible.
-*/
 // ********* DOCS ONLY ********* //
 export const DefaultSmall = Template.bind({});
-DefaultSmall.tags = ["is-hidden-story", "!dev"];
+DefaultSmall.tags = ["!dev"];
 DefaultSmall.storyName = "Dialog - small",
 DefaultSmall.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -210,7 +207,7 @@ DefaultSmall.args = {
 };
 
 export const DefaultLarge = Template.bind({});
-DefaultLarge.tags = ["is-hidden-story", "!dev"];
+DefaultLarge.tags = ["!dev"];
 DefaultLarge.storyName = "Dialog - large",
 DefaultLarge.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -224,7 +221,7 @@ DefaultLarge.args = {
  * A dialog that can be dismissed without taking an action.
  */
 export const Dismissible = Template.bind({});
-Dismissible.tags = ["is-hidden-story", "!dev"];
+Dismissible.tags = ["!dev"];
 Dismissible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -237,7 +234,7 @@ Dismissible.args = {
  * Dialogs can have a hero or cover image header.
  */
 export const WithHero = Template.bind({});
-WithHero.tags = ["is-hidden-story", "!dev"];
+WithHero.tags = ["!dev"];
 WithHero.storyName = "With hero image";
 WithHero.parameters = {
 	docs: {
@@ -264,18 +261,15 @@ WithScroll.args = {
 	}
 };
 WithScroll.storyName = "Scrollable";
-WithScroll.tags = ["is-hidden-story", "!dev"];
+WithScroll.tags = ["!dev"];
 WithScroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/* TODO: once this gets rebased with `main`, make sure to use the fullscreen and fullscreenTakeover test templates
-that are imported above, but commented out.
- */
 /**
  * The full screen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
  */
-export const Fullscreen = Template.bind({});
+export const Fullscreen = DialogFullscreen.bind({});
 Fullscreen.args = {
 	...Default.args,
 	layout: "fullscreen",
@@ -297,7 +291,7 @@ Fullscreen.argTypes = {
 /**
  * The full screen takeover variant is similar to the full screen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
  */
-export const FullscreenTakeover = Template.bind({});
+export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
 FullscreenTakeover.storyName = "Fullscreen takeover";
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -319,6 +313,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-        modes: disableDefaultModes,
+		modes: disableDefaultModes,
 	},
 };
