@@ -2,9 +2,8 @@ import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/templ
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
-import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -21,7 +20,6 @@ export const Template = ({
 	hasFooter = false,
 	heading,
 	header,
-	footer,
 	hasCheckbox = false,
 	content = [],
 	footer = [],
@@ -45,7 +43,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--dismissible`]: isDismissible && ["fullscreen", "fullscreenTakeover"].every(l => layout !== l),
 				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
-				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined", 
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -53,11 +51,11 @@ export const Template = ({
 			tabindex="-1"
 			aria-modal="true"
 			style=${ifDefined(styleMap(customStyles))}
-		> 
+		>
 			<div class="${rootClass}-grid">
 				${when(hasHeroImage, () =>
 					html`
-						<div 
+						<div
 							class="spectrum-Dialog-hero"
 							style="background-image:url(${heroImageUrl ? heroImageUrl : "example-card-portrait.png"})">
 						</div>
@@ -116,7 +114,7 @@ export const Template = ({
 										label: footer,
 									}, context)}
 								`,
-									() => 
+									() =>
 										Typography({
 											semantics: "body",
 											size: "m",
@@ -143,7 +141,7 @@ export const Template = ({
 									},
 								}, context)}
 							</div>
-						`, 
+						`,
 						() => html`
 						 	<div class="${rootClass}-noFooter"></div>
 							<div class="${rootClass}-buttonGroup">
@@ -175,15 +173,16 @@ export const Template = ({
 			</div>
 		</div>
 	`;
+
 	if (showModal) {
 		return Modal({
-            isOpen,
-            content: Dialog,
-            variant: layout,
-            customStyles: {
-                "--mod-modal-background-color": "transparent"
-            },
-        }, context);
+			isOpen,
+			content: Dialog,
+			variant: layout,
+			customStyles: {
+				"--mod-modal-background-color": "transparent"
+			},
+		}, context);
 	}
 	else {
 		return Dialog;
