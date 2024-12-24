@@ -42,7 +42,7 @@
 		"refresh:config": "bash ./tasks/chromatic-config-creation.sh || exit 0",
 		"refresh:env": "bash ./tasks/copy-env-from-root.sh || exit 0",
 		"release": "yarn ci && changeset publish",
-		"report": "yarn reporter tag:component",
+		"report": "cross-env NODE_ENV=production yarn reporter tag:component",
 		"reporter": "nx run-many --target report --projects",
 		"start": "cross-env NODE_ENV=development nx start storybook",
 		"test": "cross-env NODE_ENV=development nx test storybook",

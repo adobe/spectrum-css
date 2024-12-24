@@ -11,22 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-const modes = {
-	"Light | LTR": {
-		color: "light",
-		textDirection: "ltr",
-	},
-	"Dark | RTL": {
-		color: "dark",
-		textDirection: "rtl",
-	},
-};
+:root {
+	background: var(--mod-page-background, var(--spectrum-page-background-color, var(--spectrum-gray-75)));
 
-export default modes;
-
-export const disableDefaultModes = {
-	...Object.keys(modes).reduce((acc, key) => {
-		acc[key] = { disable: true };
-		return acc;
-	}, {}),
-};
+	/* The highlight that appears over a link while it's being tapped */
+	-webkit-tap-highlight-color: var(--mod-page-content-tap-highlight, var(--spectrum-page-content-tap-highlight, var(--spectrum-transparent-black-25)));
+}
