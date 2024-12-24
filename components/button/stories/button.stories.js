@@ -1,12 +1,9 @@
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
-
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-
 import { Template } from "./template";
 
 /**
@@ -143,33 +140,13 @@ export default {
 		},
 		html: {
 			root: "#render-root"
+		},
+		downState: {
+			selectors: [".spectrum-Button:not(:disabled)"],
 		}
 	},
 	decorators: [
-		withDownStateDimensionCapture(".spectrum-Button:not(:disabled)"),
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 10px 10px;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "flex-start",
-					gap: "10px",
-					"--mod-detail-margin-end": "6px",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
+		withDownStateDimensionCapture,
 	],
 };
 

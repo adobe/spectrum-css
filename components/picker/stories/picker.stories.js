@@ -1,11 +1,9 @@
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-
-import { withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";
 
 /**
@@ -197,35 +195,12 @@ export default {
 				height: "300px"
 			}
 		},
+		downState: {
+			selectors: [".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"],
+		},
 	},
 	decorators: [
-		withDownStateDimensionCapture(".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"),
-		(Story, context) => {
-			if (!window.isChromatic()) return Story(context);
-			return html`
-				<style>
-					.spectrum-Detail { display: inline-block; }
-					.spectrum-Typography > div {
-						border: 1px solid var(--spectrum-gray-200);
-						border-radius: 4px;
-						padding: 0 1em 1em;
-						/* Why seafoam? Because it separates it from the component styles. */
-						--mod-detail-font-color: var(--spectrum-seafoam-900);
-					}
-				</style>
-				<div
-					style=${styleMap({
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						gap: "1rem",
-						"--mod-detail-margin-end": ".3rem",
-					})}
-				>
-					${Story(context)}
-				</div>
-			`;
-		},
+		withDownStateDimensionCapture,
 	],
 };
 
