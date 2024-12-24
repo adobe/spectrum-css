@@ -142,9 +142,12 @@ export default {
 		},
 		packageJson,
 		metadata,
+		downState: {
+			selectors: [".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"],
+		},
 	},
 	decorators: [
-		withDownStateDimensionCapture(".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"),
+		withDownStateDimensionCapture,
 	],
 };
 
