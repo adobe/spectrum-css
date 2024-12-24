@@ -66,7 +66,6 @@ async function processCSS(
 		from: input,
 		to: output,
 		verbose: false,
-		shouldCombine: true,
 		...postCSSOptions,
 	};
 
@@ -146,19 +145,7 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 	const indexOutputPath = path.join(cwd, "dist", "index.css");
 
 	return Promise.all([
-		processCSS(content, indexSourceCSS, indexOutputPath, {
-			cwd,
-			clean,
-		}),
-		processCSS(
-			content,
-			indexSourceCSS,
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-			},
-		),
+		processCSS(content, indexSourceCSS, indexOutputPath, { cwd, clean }),
 	]);
 }
 
@@ -192,43 +179,35 @@ async function main({
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
-	return Promise.all([
-		...(clean ? [cleanFolder({ cwd })] : []),
-		build({ cwd, clean }),
-	])
-		.then((report) => {
-			const logs = report.flat(Infinity).filter(Boolean);
+	const reports = [];
+	const errors = [];
 
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	if (clean) await cleanFolder({ cwd }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 
-			if (logs && logs.length > 0) {
-				logs
-					.sort((a) => {
-						if (typeof a === "string" && a.includes("✓")) return -1;
-						if (typeof a === "string" && a.includes("🔍")) return 0;
-						return 1;
-					})
-					.forEach((log) => console.log(log));
-			}
-			else console.log("No assets created.".gray);
+	await build({ cwd, clean }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		})
-		.catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	const logs = reports.flat(Infinity).filter(Boolean);
+	const errs = errors.flat(Infinity).filter(Boolean);
 
-			console.trace(err);
+	console.log(`\n\n${key} 🔨`);
+	console.log(`${"".padStart(30, "-")}`);
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
+	if (errs && errs.length > 0) {
+		errs.forEach((err) => console.error(err));
+	}
+	else {
+		if (logs && logs.length > 0) {
+			logs.forEach((log) => console.log(log));
+		}
+		else console.log("No assets created.".gray);
+	}
 
-			process.exit(1);
-		});
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
+
+	if (errs && errs.length > 0) process.exit(1);
+	else process.exit(0);
 }
 
 exports.processCSS = processCSS;

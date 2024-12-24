@@ -5,8 +5,7 @@
     ".spectrum-Meter.is-negative",
     ".spectrum-Meter.is-notice",
     ".spectrum-Meter.is-positive",
-    ".spectrum-Meter.spectrum-Meter--sizeL",
-    ".spectrum-Meter.spectrum-Meter--sizeS"
+    ".spectrum-Meter.spectrum-Meter--sizeL"
   ],
   "modifiers": [
     "--mod-meter-inline-size",
@@ -29,7 +28,6 @@
     "--spectrum-notice-visual-color",
     "--spectrum-positive-visual-color"
   ],
-  "system-theme": [],
   "passthroughs": [
     "--mod-progressbar-fill-color",
     "--mod-progressbar-font-size",

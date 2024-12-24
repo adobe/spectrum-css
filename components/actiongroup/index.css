@@ -74,7 +74,7 @@
 		}
 
 		&:last-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
 
 			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
@@ -115,7 +115,7 @@
 		}
 
 		&:last-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 
 			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));

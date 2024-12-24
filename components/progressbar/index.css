@@ -55,17 +55,9 @@
 	--spectrum-progressbar-label-and-value-white: var(--spectrum-transparent-white-700);
 	--spectrum-progressbar-track-color-white: var(--spectrum-transparent-white-300);
 	--spectrum-progressbar-fill-color-white: var(--spectrum-transparent-white-900);
-
-	/* Meter */
-	--spectrum-meter-min-width: var(--spectrum-meter-minimum-width);
-	--spectrum-meter-max-width: var(--spectrum-meter-maximum-width);
-	--spectrum-meter-inline-size: var(--spectrum-meter-default-width);
-	--spectrum-meter-thickness-s: var(--spectrum-meter-thickness-small);
-	--spectrum-meter-thickness-l: var(--spectrum-meter-thickness-large);
 }
 
-.spectrum-ProgressBar--sizeS,
-.spectrum-Meter--sizeS {
+.spectrum-ProgressBar--sizeS {
 	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
 
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
@@ -74,8 +66,7 @@
 	--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 }
 
-.spectrum-ProgressBar--sizeL,
-.spectrum-Meter--sizeL {
+.spectrum-ProgressBar--sizeL {
 	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
 
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-200);
@@ -91,34 +82,6 @@
 	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-extra-large);
 
 	--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
-}
-
-.spectrum-Meter {
-	--spectrum-progressbar-size-default: var(--mod-meter-inline-size, var(--spectrum-meter-inline-size));
-	--spectrum-progressbar-max-size: var(--mod-meter-max-width, var(--spectrum-meter-max-width));
-	--spectrum-progressbar-min-size: var(--mod-meter-min-width, var(--spectrum-meter-min-width));
-
-	/* Meter only supports size S and L */
-	&.spectrum-Meter--sizeS {
-		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-s);
-	}
-
-	&.spectrum-Meter--sizeL {
-		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-l);
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-	}
-
-	&.is-positive .spectrum-ProgressBar-fill {
-		background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
-	}
-
-	&.is-notice .spectrum-ProgressBar-fill {
-		background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
-	}
-
-	&.is-negative .spectrum-ProgressBar-fill {
-		background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
-	}
 }
 
 .spectrum-ProgressBar {

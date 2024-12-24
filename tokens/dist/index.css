@@ -1572,9 +1572,9 @@
 	--spectrum-text-align-start: start;
 	--spectrum-text-align-center: center;
 	--spectrum-text-align-end: end;
-	--spectrum-sans-serif-font-family: adobe clean;
-	--spectrum-serif-font-family: adobe clean serif;
-	--spectrum-cjk-font-family: adobe clean han;
+	--spectrum-sans-serif-font-family: Adobe Clean;
+	--spectrum-serif-font-family: Adobe Clean Serif;
+	--spectrum-cjk-font-family: Adobe Clean Han;
 	--spectrum-light-font-weight: 300;
 	--spectrum-regular-font-weight: 400;
 	--spectrum-medium-font-weight: 500;
@@ -1802,7 +1802,7 @@
 	--spectrum-detail-cjk-size-l: var(--spectrum-font-size-100);
 	--spectrum-detail-cjk-size-xl: var(--spectrum-font-size-200);
 	--spectrum-detail-size-xs: var(--spectrum-font-size-50);
-	--spectrum-code-font-family: source code pro;
+	--spectrum-code-font-family: Source Code Pro;
 	--spectrum-code-cjk-font-family: var(--spectrum-code-font-family);
 	--spectrum-code-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-code-font-style: var(--spectrum-default-font-style);

@@ -186,7 +186,6 @@ async function main({
 			dataModel: {
 				modifiers: ["mod"],
 				spectrum: ["spectrum"],
-				"system-theme": ["system"],
 				"high-contrast": ["highcontrast"],
 			},
 		}
@@ -200,25 +199,12 @@ async function main({
 	return Promise.all([
 		writeAndReport(
 			await prettier.format(
-				`${[
-					"| Modifiable custom properties |",
-					"| --- |",
-					...(meta?.modifiers ?? []).map((mod) => `| \`${mod}\` |`),
-				].join("\n")}\n`,
-				{ parser: "markdown" },
-			),
-			path.join(cwd, "metadata/mods.md"),
-			{ cwd },
-		),
-		writeAndReport(
-			await prettier.format(
 				JSON.stringify({
 					sourceFile: meta.sourceFile,
 					selectors: meta.selectors,
 					modifiers: meta.modifiers,
 					component: meta.component,
 					global: meta.global,
-					"system-theme": meta["system-theme"],
 					passthroughs: meta.passthroughs,
 					"high-contrast": meta["high-contrast"],
 				}, null, 2),

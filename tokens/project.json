@@ -3,8 +3,7 @@
 	"tag": ["tokens"],
 	"namedInputs": {
 		"core": [
-			"{projectRoot}/custom-express/*.css",
-			"{projectRoot}/custom-spectrum/*.css"
+			"{projectRoot}/custom/*.css"
 		],
 		"scripts": ["{projectRoot}/style-dictionary.config.js", "{projectRoot}/utilities/*.js"],
 		"tools": ["{projectRoot}/postcss.config.js", "{projectRoot}/tasks/token-rollup.js"]
@@ -18,16 +17,12 @@
 			"options": {
 				"commands": [
 					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/token-rollup.js\").default()'",
-					"rm -f ./dist/css/express/custom-light*.css ./dist/css/express/custom-dark*.css ./dist/css/spectrum/custom-dark*.css ./dist/css/spectrum/custom-light*.css",
-					"cross-env NODE_OPTIONS=\"--no-warnings\" postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" postcss ./dist/css/*.css --replace"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
 			},
 			"outputs": [
-				"{projectRoot}/dist/css/express",
-				"{projectRoot}/dist/css/spectrum",
-				"{projectRoot}/dist/css/components",
 				"{projectRoot}/dist/css/*-vars.css",
 				"{projectRoot}/dist/index.css"
 			]
