@@ -13,14 +13,7 @@
     ".spectrum-FieldLabel.is-disabled",
     ".spectrum-FieldLabel:lang(ja)",
     ".spectrum-FieldLabel:lang(ko)",
-    ".spectrum-FieldLabel:lang(zh)",
-    ".spectrum-Form",
-    ".spectrum-Form--labelsAbove",
-    ".spectrum-Form--labelsAbove .spectrum-Form-item",
-    ".spectrum-Form-item",
-    ".spectrum-Form-itemField",
-    ".spectrum-Form-itemField > *",
-    ".spectrum-Form-itemLabel"
+    ".spectrum-FieldLabel:lang(zh)"
   ],
   "modifiers": [
     "--mod-fieldlabel-asterisk-vertical-align",
@@ -81,17 +74,8 @@
     "--spectrum-regular-font-weight",
     "--spectrum-spacing-100",
     "--spectrum-spacing-200",
-    "--spectrum-spacing-300",
-    "--spectrum-tableform-item-block-spacing",
     "--spectrum-white"
   ],
-  "system-theme": [],
-  "passthroughs": [
-    "--mod-form-grid-template-columns",
-    "--mod-form-grid-template-columns-labels-above",
-    "--mod-form-inline-size",
-    "--mod-form-item-block-spacing",
-    "--mod-form-item-block-spacing-labels-above"
-  ],
+  "passthroughs": [],
   "high-contrast": ["--highcontrast-fieldlabel-disabled-content-color"]
 }
