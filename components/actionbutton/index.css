@@ -11,6 +11,46 @@
  * governing permissions and limitations under the License.
  */
 
+@media (forced-colors: active) {
+	.spectrum-ActionButton {
+		/* force a more visible focus indicator color */
+		--highcontrast-actionbutton-focus-indicator-color: ButtonText;
+
+		&::after {
+			/* make sure focus indicator renders */
+			forced-color-adjust: none;
+		}
+
+		&.is-selected {
+			--highcontrast-actionbutton-background-color-default: Highlight;
+			--highcontrast-actionbutton-background-color-hover: Highlight;
+			--highcontrast-actionbutton-background-color-focus: Highlight;
+			--highcontrast-actionbutton-background-color-down: Highlight;
+			--highcontrast-actionbutton-background-color-disabled: ButtonFace;
+
+			--highcontrast-actionbutton-border-color-default: HighlightText;
+			--highcontrast-actionbutton-border-color-hover: HighlightText;
+			--highcontrast-actionbutton-border-color-focus: HighlightText;
+			--highcontrast-actionbutton-border-color-down: HighlightText;
+			--highcontrast-actionbutton-border-color-disabled: GrayText;
+
+			--highcontrast-actionbutton-content-color-default: HighlightText;
+			--highcontrast-actionbutton-content-color-hover: HighlightText;
+			--highcontrast-actionbutton-content-color-focus: HighlightText;
+			--highcontrast-actionbutton-content-color-down: HighlightText;
+			--highcontrast-actionbutton-content-color-disabled: GrayText;
+
+			.spectrum-ActionButton-icon,
+			.spectrum-ActionButton-hold,
+			.spectrum-ActionButton-label {
+				/* ensure custom text colors from above get applied */
+				/* it seems like this shouldn't have to be done, but colors are wrong without it */
+				forced-color-adjust: none;
+			}
+		}
+	}
+}
+
 .spectrum-ActionButton {
 	--spectrum-actionbutton-background-color-default: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-default, var(--spectrum-gray-50)));
 	--spectrum-actionbutton-background-color-hover: var(--highcontrast-actionbutton-background-color-hover, var(--mod-actionbutton-background-color-hover, var(--spectrum-gray-100)));
@@ -63,22 +103,17 @@
 	}
 
 	&.spectrum-ActionButton--quiet {
-		--mod-actionbutton-border-color-default: transparent;
-
 		--mod-actionbutton-background-color-default: transparent;
 		--mod-actionbutton-background-color-hover: var(--spectrum-gray-100);
 		--mod-actionbutton-background-color-down: var(--spectrum-gray-200);
 		--mod-actionbutton-background-color-focus: var(--spectrum-gray-100);
-
-		&:disabled:not(.is-selected),
-		&.is-disabled:not(.is-selected) {
-			--mod-actionbutton-border-color-disabled: transparent;
-			--mod-actionbutton-background-color-disabled: transparent;
-		}
 	}
 
 	&.spectrum-ActionButton--staticBlack {
-		--mod-actionbutton-background-color-default: transparent;
+		--mod-actionbutton-border-color-default: var(--spectrum-transparent-black-500);
+		--mod-actionbutton-border-color-hover: var(--spectrum-transparent-black-600);
+		--mod-actionbutton-border-color-down: var(--spectrum-transparent-black-700);
+		--mod-actionbutton-border-color-focus: var(--spectrum-transparent-black-600);
 
 		--mod-actionbutton-border-color-default: var(--spectrum-transparent-black-500);
 		--mod-actionbutton-border-color-hover: var(--spectrum-transparent-black-600);
@@ -97,12 +132,18 @@
 		}
 
 		&.spectrum-ActionButton--quiet {
-			--mod-actionbutton-border-color-default: transparent;
+			--mod-actionbutton-background-color-default: transparent;
+			--mod-actionbutton-background-color-hover: var(--spectrum-transparent-black-400);
+			--mod-actionbutton-background-color-down: var(--spectrum-transparent-black-500);
+			--mod-actionbutton-background-color-focus: var(--spectrum-transparent-black-400);
 		}
 	}
 
 	&.spectrum-ActionButton--staticWhite {
-		--mod-actionbutton-background-color-default: transparent;
+		--mod-actionbutton-border-color-default: var(--spectrum-transparent-white-500);
+		--mod-actionbutton-border-color-hover: var(--spectrum-transparent-white-600);
+		--mod-actionbutton-border-color-down: var(--spectrum-transparent-white-700);
+		--mod-actionbutton-border-color-focus: var(--spectrum-transparent-white-600);
 
 		--mod-actionbutton-border-color-default: var(--spectrum-transparent-white-500);
 		--mod-actionbutton-border-color-hover: var(--spectrum-transparent-white-600);
@@ -121,7 +162,10 @@
 		}
 
 		&.spectrum-ActionButton--quiet {
-			--mod-actionbutton-border-color-default: transparent;
+			--mod-actionbutton-background-color-default: transparent;
+			--mod-actionbutton-background-color-hover: var(--spectrum-transparent-white-400);
+			--mod-actionbutton-background-color-down: var(--spectrum-transparent-white-500);
+			--mod-actionbutton-background-color-focus: var(--spectrum-transparent-white-400);
 		}
 	}
 
@@ -268,8 +312,6 @@
 
 	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari (normalize). */
 	-webkit-appearance: button;
-
-	border-style: solid;
 
 	transition:
 		background var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
@@ -421,41 +463,4 @@ a.spectrum-ActionButton {
 .spectrum-ActionButton-icon:only-child {
 	/* Augment the margin correction for the icon only scenario */
 	margin-inline-start: calc(var(--spectrum-actionbutton-edge-to-visual-only) - var(--spectrum-actionbutton-edge-to-text));
-}
-
-@media (forced-colors: active) {
-	.spectrum-ActionButton {
-		&::after {
-			/* make sure focus indicator renders */
-			forced-color-adjust: none;
-		}
-
-		&.is-selected {
-			--highcontrast-actionbutton-background-color-default: Highlight;
-			--highcontrast-actionbutton-background-color-hover: Highlight;
-			--highcontrast-actionbutton-background-color-focus: Highlight;
-			--highcontrast-actionbutton-background-color-down: Highlight;
-			--highcontrast-actionbutton-background-color-disabled: ButtonFace;
-
-			--highcontrast-actionbutton-border-color-default: HighlightText;
-			--highcontrast-actionbutton-border-color-hover: HighlightText;
-			--highcontrast-actionbutton-border-color-focus: HighlightText;
-			--highcontrast-actionbutton-border-color-down: HighlightText;
-			--highcontrast-actionbutton-border-color-disabled: GrayText;
-
-			--highcontrast-actionbutton-content-color-default: HighlightText;
-			--highcontrast-actionbutton-content-color-hover: HighlightText;
-			--highcontrast-actionbutton-content-color-focus: HighlightText;
-			--highcontrast-actionbutton-content-color-down: HighlightText;
-			--highcontrast-actionbutton-content-color-disabled: GrayText;
-
-			.spectrum-ActionButton-icon,
-			.spectrum-ActionButton-hold,
-			.spectrum-ActionButton-label {
-				/* ensure custom text colors from above get applied */
-				/* it seems like this shouldn't have to be done, but colors are wrong without it */
-				forced-color-adjust: none;
-			}
-		}
-	}
 }

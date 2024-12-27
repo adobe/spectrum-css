@@ -1,6 +1,5 @@
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
@@ -23,6 +22,12 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
+	const { updateArgs } = context;
+
+	const onclick = () => {
+		updateArgs({ isOpen: false });
+	};
+
 	return html`
 		<div
 			class=${classMap({
@@ -68,11 +73,6 @@ export const Template = ({
 				<div class=${classMap({
 					[`${rootClass}-end`]: true
 				})}>
-					${Divider({
-						vertical: true,
-						size: "s",
-						tag: "div",
-					}, context)}
 					${CloseButton({
 						size: "m",
 						staticColor: "white",
@@ -115,62 +115,62 @@ export const TextOverflowTemplate = (args) => html`
 export const ActionableOptionsTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "column",
-	containerStyles: { alignItems: "stretch" },
-	wrapperStyles: { alignItems: "stretch" },
-	content: html`
-		${Container({
+	containerStyles: { "align-items": "stretch" },
+	wrapperStyles: { "align-items": "stretch" },
+	content: [
+		Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Action button and close button",
-			containerStyles: { alignItems: "stretch" },
-			wrapperStyles: { alignItems: "stretch" },
+			containerStyles: { "align-items": "stretch" },
+			wrapperStyles: { "align-items": "stretch" },
 			content: Template({
-					...args,
-					variant: "neutral",
-					text: "Your trial has expired",
-					actionButtonText: "Buy now",
+				...args,
+				variant: "neutral",
+				text: "Your trial has expired",
+				actionButtonText: "Buy now",
 			}, context),
-		}, context)}
-		${Container({
+		}, context),
+		Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Action button only",
-			containerStyles: { alignItems: "stretch" },
-			wrapperStyles: { alignItems: "stretch" },
+			containerStyles: { "align-items": "stretch" },
+			wrapperStyles: { "align-items": "stretch" },
 			content: Template({
-					...args,
-					variant: "neutral",
-					text: "Your trial has expired",
-					actionButtonText: "Buy now",
-					showCloseButton: false,
+				...args,
+				variant: "neutral",
+				text: "Your trial has expired",
+				actionButtonText: "Buy now",
+				showCloseButton: false,
 			}, context),
-		}, context)}
-		${Container({
+		}, context),
+		Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Close button only",
-			containerStyles: { alignItems: "stretch" },
-			wrapperStyles: { alignItems: "stretch" },
+			containerStyles: { "align-items": "stretch" },
+			wrapperStyles: { "align-items": "stretch" },
 			content: Template({
 				...args,
 				variant: "neutral",
 				text: "Your trial has expired",
 				actionButtonText: "",
 			}),
-		}, context)}
-		${Container({
+		}, context),
+		Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Text only",
-			containerStyles: { alignItems: "stretch" },
-			wrapperStyles: { alignItems: "stretch" },
+			containerStyles: { "align-items": "stretch" },
+			wrapperStyles: { "align-items": "stretch" },
 			content: Template({
-					...args,
-					variant: "neutral",
-					text: "Your trial has expired",
-					actionButtonText: "",
-					showCloseButton: false,
+				...args,
+				variant: "neutral",
+				text: "Your trial has expired",
+				actionButtonText: "",
+				showCloseButton: false,
 			}, context),
-		}, context)}
-	`,
+		}, context),
+	],
 }, context);
