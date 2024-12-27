@@ -101,7 +101,7 @@ export default {
 	decorators: [
 		withDownStateDimensionCapture,
 	],
-	tags: ["!autodocs"],
+	tags: ["!autodocs", "migrated"],
 };
 
 export const Default = ButtonGroups.bind({});

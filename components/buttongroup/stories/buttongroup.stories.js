@@ -65,6 +65,7 @@ export default {
 		packageJson,
 		metadata,
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ButtonGroup.bind({});
