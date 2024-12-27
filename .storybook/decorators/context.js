@@ -18,7 +18,6 @@ export const withContextWrapper = makeDecorator({
 			} = {},
 			globals: {
 				color = "light",
-				context = "spectrum",
 				scale = "medium",
 			} = {},
 			parameters: {
@@ -39,24 +38,18 @@ export const withContextWrapper = makeDecorator({
 			},
 		};
 
-		const original = {
-			color,
-			context,
-			scale,
-		};
+		const original = { color, scale };
 
 		useEffect(() => {
 			const isDocs = viewMode === "docs";
 			const isTesting = showTestingGrid;
 			const isRaw = Boolean(context === "raw");
 
-			if (!isRaw) {
-				// add the default classes to the body to ensure labels, headings, and borders are styled correctly
-				document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
-			}
-
 			// Start by attaching the appropriate tokens to the container
-			toggleStyles(document.body, "tokens", tokens, !isRaw);
+			toggleStyles(document.body, "tokens", tokens, true);
+
+			// add the default classes to the body to ensure labels, headings, and borders are styled correctly
+			document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
@@ -66,7 +59,6 @@ export const withContextWrapper = makeDecorator({
 
 				// Reset the context to the original values
 				color = original.color;
-				context = original.context;
 				scale = original.scale;
 
 				let staticKey = staticColor;
@@ -81,7 +73,7 @@ export const withContextWrapper = makeDecorator({
 				if (!staticKey) hasStaticElement = false;
 
 				// Every container gets the spectrum class
-				container.classList.toggle("spectrum", !isRaw);
+				container.classList.toggle("spectrum", true);
 
 				// Let the static color override the color if it's set
 				if (!isTestingWrapper && hasStaticElement && staticColorSettings[staticKey]?.color) {
@@ -95,11 +87,11 @@ export const withContextWrapper = makeDecorator({
 				}
 
 				for (let c of ["light", "dark"]) {
-					container.classList.toggle(`spectrum--${c}`, c === color && !isRaw);
+					container.classList.toggle(`spectrum--${c}`, c === color);
 				}
 
 				for (const s of ["medium", "large"]) {
-					container.classList.toggle(`spectrum--${s}`, s === scale && !isRaw);
+					container.classList.toggle(`spectrum--${s}`, s === scale);
 				}
 
 				if (!isTestingWrapper) {

@@ -76,7 +76,7 @@ export default {
 		packageJson,
 		metadata,
 	},
-	decorators: [],
+	tags: ["migrated"],
 };
 
 /**
