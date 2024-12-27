@@ -23,8 +23,6 @@
     ".spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack:disabled",
     ".spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite:disabled",
     ".spectrum-ActionButton.spectrum-ActionButton--quiet",
-    ".spectrum-ActionButton.spectrum-ActionButton--quiet.is-disabled:not(.is-selected)",
-    ".spectrum-ActionButton.spectrum-ActionButton--quiet:disabled:not(.is-selected)",
     ".spectrum-ActionButton.spectrum-ActionButton--staticBlack",
     ".spectrum-ActionButton.spectrum-ActionButton--staticBlack .is-disabled",
     ".spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet",
@@ -193,11 +191,13 @@
     "--spectrum-text-to-visual-75",
     "--spectrum-transparent-black-100",
     "--spectrum-transparent-black-200",
+    "--spectrum-transparent-black-400",
     "--spectrum-transparent-black-500",
     "--spectrum-transparent-black-600",
     "--spectrum-transparent-black-700",
     "--spectrum-transparent-white-100",
     "--spectrum-transparent-white-200",
+    "--spectrum-transparent-white-400",
     "--spectrum-transparent-white-500",
     "--spectrum-transparent-white-600",
     "--spectrum-transparent-white-700",
@@ -228,6 +228,7 @@
     "--highcontrast-actionbutton-content-color-disabled",
     "--highcontrast-actionbutton-content-color-down",
     "--highcontrast-actionbutton-content-color-focus",
-    "--highcontrast-actionbutton-content-color-hover"
+    "--highcontrast-actionbutton-content-color-hover",
+    "--highcontrast-actionbutton-focus-indicator-color"
   ]
 }

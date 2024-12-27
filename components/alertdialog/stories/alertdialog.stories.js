@@ -117,6 +117,11 @@ Information.args = {
 	content: "If you enjoy our app, would you mind taking a moment to rate it?",
 };
 Information.parameters = {
+	docs: {
+		story: {
+			height: "400px",
+		}
+	},
 	chromatic: { disableSnapshot: true },
 };
 
