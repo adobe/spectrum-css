@@ -171,6 +171,7 @@ export default {
 	decorators: [
 		withUnderlayWrapper,
 	],
+	tags: ["migrated"],
 };
 
 const ExampleContent = "Standard dialog description. This should briefly communicate any additional information or context about the standard dialog title, to help users make one of the decisions offered by the buttons. Make it no more than a few short sentences.";

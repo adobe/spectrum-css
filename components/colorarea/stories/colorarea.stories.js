@@ -50,6 +50,7 @@ export default {
 		packageJson,
 		metadata,
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ColorAreaGroup.bind({});
