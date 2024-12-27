@@ -50,19 +50,7 @@ All components in this library have a peer dependency on [`@spectrum-css/tokens`
 
 Spectrum CSS components have build output that is designed to be used in a variety of ways:
 
-- `index.css` - _Preferred and most commonly used to incorporate Spectrum CSS into a project_. This file includes the component's styles and variable definitions. In this version, token-driven CSS properties<sup>[1](#token-footnote)</sup> are mapped to empty `--mod` prefixed variables (for customization) with a fallback to variables prefixed with `--spectrum` (sourced from the design tokens).
-
-  - This file loads both the `.spectrum` and `.spectrum--express` contexts which are used to toggle components between two different [visual styles](https://github.com/adobe/spectrum-css?tab=readme-ov-file#visual-language). The `.spectrum` context is the default.
-
-- `index-vars.css` - _Deprecated_. This file is identical to `index.css`. It is provided as a fallback for older implementations that may have been using it and will be removed. It is recommended to use `index.css` instead.
-
-- `index-base.css`: This file mimics the `index.css` output, but does not include the `.spectrum` or `.spectrum--express` contexts.
-
-  - If your product only requires the `.spectrum` context, you can use `index-base.css` plus `themes/spectrum.css` from the `themes` directory to render the default Spectrum visual language.
-    - The `.spectrum--express` context, on the other hand, is dependent on/expands on the default `.spectrum` context. This means if you only want to use the Express context, you still need to include `themes/spectrum.css`. In this case, we recommend using `index.css` instead since it includes both contexts by default.
-  - This approach can also be used when you have defined and written your own visual language and only need the base component styles from Spectrum CSS. To wire up your own visual language, you would need to define your own custom properties that match those defined in the `themes/*.css` assets.
-
-- `index-theme.css`: This file provides only the visual language for a component. It is used in conjunction with `index-base.css` and when loaded together, provides the same result as using `index.css` by itself.
+- `index.css` - This file includes the component's styles and variable definitions. In this version, token-driven CSS properties<sup>[1](#token-footnote)</sup> are mapped to empty `--mod` prefixed variables (for customization) with a fallback to variables prefixed with `--spectrum` (sourced from the design tokens).
 
 <sup><a name="token-footnote">1</a></sup>: Token-driven CSS properties are properties whose values are mapped to a value in the `@spectrum-css/tokens` package. These values represent design-language and are meant to be used across platforms. In contrast, properties specific to web-based implementations will not have a token value assigned, so not all CSS properties will use custom properties.
 
@@ -74,41 +62,16 @@ Start by including the base set of variables:
 /* Include tokens */
 @import "node_modules/@spectrum-css/tokens/dist/index.css";
 
-/*
-  For components with no other contexts available, load the
-  index.css file from the component's package. These are components
-  that do not have a spectrum or express context available.
-*/
-@import "node_modules/@spectrum-css/page/dist/index.css";
 @import "node_modules/@spectrum-css/typography/dist/index.css";
 @import "node_modules/@spectrum-css/icon/dist/index.css";
-
-/*
-  Recommended: For components with multiple contexts available, if you
-  want access to all contexts, load the index.css file, which includes
-  all contexts and component variables.
-*/
 @import "node_modules/@spectrum-css/button/dist/index.css";
-
-/*
-  If you only need the spectrum visual context: For components with
-  multiple contexts available, load only the spectrum context by sourcing
-  index-base.css and the spectrum theme from the themes directory.
-*/
-@import "node_modules/@spectrum-css/button/dist/index-base.css";
-@import "node_modules/@spectrum-css/button/dist/themes/spectrum.css";
 ```
 
-Tokens values are mapped to context-specific classes which can be applied to the `<html>` element or any place in your DOM where you wish to encapsulate or alter the visual language of your Spectrum components.
+Token values are mapped to context-specific classes which can be applied to the `<html>` element or any place in your DOM where you wish to encapsulate or alter the visual language of your Spectrum components.
 
 All contexts you want to use must be defined in order to load all the appropriate custom properties for the components you are using.
 
 #### Global variables
-
-##### Visual language
-
-- `.spectrum` - The default visual language for Spectrum CSS
-- `.spectrum--express` - A variant of the standard visual language. _This visual language will be deprecated in Spectrum 2_.
 
 ##### Scales
 
@@ -124,8 +87,6 @@ Themes represent the color scheme of the user's browsing context. They are used 
 - `.spectrum--light` - The default theme for Spectrum CSS, used for light mode
 - `.spectrum--dark` - A darker theme for Spectrum CSS, used for dark mode
 
-Other themes are available but are in the process of being deprecated and should not be used in new projects.
-
 #### Context example
 
 Put together, we would define the context for our application in the following way:
@@ -133,16 +94,6 @@ Put together, we would define the context for our application in the following w
 ```html
 <html class="spectrum spectrum--medium spectrum--light"></html>
 ```
-
-To switch to Express, **add** the `.spectrum--express` class to the `<html>` element:
-
-```html
-<html
-  class="spectrum spectrum--medium spectrum--light spectrum--express"
-></html>
-```
-
-Note the `spectrum--express` class is added to the existing classes; `spectrum` should always be present to ensure the correct visual language is loaded.
 
 Because CSS custom properties honor the cascading nature of CSS, you can infinitely nest different contexts. For example, you could have a `.spectrum--dark` context inside of a `.spectrum--light` context, and components will honor the innermost context.
 

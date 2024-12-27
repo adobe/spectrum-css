@@ -46,6 +46,7 @@ export default {
 		packageJson,
 		metadata,
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ColorLoupeGroup.bind({});

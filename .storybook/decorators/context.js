@@ -18,7 +18,6 @@ export const withContextWrapper = makeDecorator({
 			} = {},
 			globals: {
 				color = "light",
-				context = "spectrum",
 				scale = "medium",
 				testingPreview = false,
 			} = {},
@@ -37,32 +36,21 @@ export const withContextWrapper = makeDecorator({
 			},
 		};
 
-		const original = {
-			color,
-			context,
-			scale,
-		};
+		const original = { color, scale };
 
 		useEffect(() => {
 			const isTesting = testingPreview;
 			const isDocs = viewMode === "docs";
-			const isRaw = Boolean(context === "raw");
 
 			// Start by attaching the appropriate tokens to the container
-			toggleStyles(document.body, "tokens", tokens, !isRaw);
+			toggleStyles(document.body, "tokens", tokens, true);
 
-			if (!isRaw) {
-				// add the default classes to the body to ensure labels, headings, and borders are styled correctly
-				document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
-			}
-
-			// Start by attaching the appropriate tokens to the container
-			toggleStyles(document.body, "tokens", tokens, !isRaw);
+			// add the default classes to the body to ensure labels, headings, and borders are styled correctly
+			document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Reset the context to the original values
 				color = original.color;
-				context = original.context;
 				scale = original.scale;
 
 				// Check if the container has a static color element
@@ -80,7 +68,7 @@ export const withContextWrapper = makeDecorator({
 				if (!staticKey) hasStaticElement = false;
 
 				// Every container gets the spectrum class
-				container.classList.toggle("spectrum", !isRaw);
+				container.classList.toggle("spectrum", true);
 
 				// Let the static color override the color if it's set
 				if (hasStaticElement && staticColorSettings[staticKey]?.color) {
@@ -94,11 +82,11 @@ export const withContextWrapper = makeDecorator({
 				}
 
 				for (let c of ["light", "dark"]) {
-					container.classList.toggle(`spectrum--${c}`, c === color && !isRaw);
+					container.classList.toggle(`spectrum--${c}`, c === color);
 				}
 
 				for (const s of ["medium", "large"]) {
-					container.classList.toggle(`spectrum--${s}`, s === scale && !isRaw);
+					container.classList.toggle(`spectrum--${s}`, s === scale);
 				}
 
 				// Start by removing the background color from the container and then add it back if needed
@@ -108,7 +96,7 @@ export const withContextWrapper = makeDecorator({
 				}
 			}
 
-		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, testingPreview]);
+		}, [viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, testingPreview]);
 
 		return StoryFn(data);
 	},

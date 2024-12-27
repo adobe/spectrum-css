@@ -99,31 +99,8 @@ export default {
 		packageJson,
 		metadata,
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 1em 1em;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "flex-start",
-					gap: "1rem",
-					"--mod-detail-margin-end": ".3rem",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
-	],
+	decorators: [],
+	tags: ["migrated"],
 };
 
 /**
