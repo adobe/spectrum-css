@@ -1,6 +1,7 @@
 
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
+import { startCase } from "lodash";
 
 // Import the CSS bundle
 import "@spectrum-css/bundle";
@@ -68,5 +69,6 @@ addons.setConfig({
 	}),
 	sidebar: {
 		showRoots: false,
+		renderLabel: ({ name, type }) => (type === 'story' ? name : startCase(name)) + " 📚",
 	},
 });

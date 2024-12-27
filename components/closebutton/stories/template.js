@@ -43,6 +43,7 @@ export const Template = ({
 				size,
 				iconName: getCloseButtonIconName(size, iconSize),
 				setName: "ui",
+				useRef: false,
 				customClasses: [`${rootClass}-UIIcon`],
 			}, context)}
 		</button>
@@ -66,6 +67,7 @@ const getCloseButtonIconName = (size = "m", iconSize = "regular", iconName = "Cr
 				return `${iconName}300`;
 		}
 	}
+
 	// Default, "regular" icon size.
 	switch (size) {
 		case "s":
@@ -85,14 +87,14 @@ const getCloseButtonIconName = (size = "m", iconSize = "regular", iconName = "Cr
  */
 export const CloseButtonExample = (args, context) => Container({
 	withBorder: false,
-	content: html`
-		${Container({
+	content: [
+		Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Default",
 			content: Template(args, context),
-		}, context)}
-		${Container({
+		}, context),
+		Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Disabled",
@@ -100,6 +102,6 @@ export const CloseButtonExample = (args, context) => Container({
 				...args,
 				isDisabled: true,
 			}, context),
-		}, context)}
-	`,
+		}, context),
+	],
 }, context);

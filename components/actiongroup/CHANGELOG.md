@@ -1,5 +1,38 @@
 # Change Log
 
+<a name="5.0.0-next.3"></a>
+
+## 5.0.0-next.3
+
+- Global token update to latest package released
+
+<a name="5.0.0-next.2"></a>
+
+## 5.0.0-next.2
+
+- Remove deprecated `--mod` properties from the commons package.
+- Global grays migration for S2 foundations support.
+
+<a name="5.0.0-next.1"></a>
+
+## 5.0.0-next.1
+
+Align peerDependency requirements with local tokens package version.
+
+<a name="5.0.0-next.0"></a>
+
+## 5.0.0-next.0
+
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.0...@spectrum-css/actiongroup@5.0.0-next.0)
+
+### 🛑 BREAKING CHANGE: migrates `Action Group` to Spectrum 2
+
+Removes the following `--mod-*` properties:
+
+- `--mod-actiongroup-button-spacing-reset`
+- `--mod-actiongroup-horizontal-spacing-compact`
+- `--mod-actiongroup-vertical-spacing-compact`
+
 ## 5.2.0
 
 ### Minor Changes
@@ -278,8 +311,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - refactor(actiongroup)!: replace focus-ring with focus-visible([d792847](https://github.com/adobe/spectrum-css/commit/d792847))
 
-     ###
-     🛑 BREAKING CHANGES
+  ###
+
+  🛑 BREAKING CHANGES
 
       *
       use native focus-visible pseudo class for focus styling
