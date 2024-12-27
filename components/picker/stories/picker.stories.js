@@ -1,5 +1,6 @@
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -68,7 +69,7 @@ export default {
 			if: false,
 		},
 		isQuiet: {
-            ...isQuiet,
+			...isQuiet,
 			description: "An alternative way to display the Picker without a visible background.",
 			name: "Quiet styling",
 		},
@@ -82,19 +83,18 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isQuiet,
 		isOpen,
 		isKeyboardFocused,
 		isDisabled,
 		isLoading: {
-            ...isLoading,
-            description: "When in the loading state, a progress circle will display next to the disclosure icon.",
-            if: { arg: "isDisabled", eq: false }
-        },
+			...isLoading,
+			description: "When in the loading state, a progress circle will display next to the disclosure icon.",
+			if: { arg: "isDisabled", eq: false }
+		},
 		isInvalid: {
-            ...isInvalid,
-            description: "When in the invalid state, some styles change on the Picker, and an invalid icon displays next to the disclosure icon.",
-        },
+			...isInvalid,
+			description: "When in the invalid state, some styles change on the Picker, and an invalid icon displays next to the disclosure icon.",
+		},
 		isHovered,
 		isActive,
 		content: { table: { disable: true } },
@@ -149,6 +149,7 @@ export default {
 	decorators: [
 		withDownStateDimensionCapture,
 	],
+	tags: ["migrated"],
 };
 
 export const Default = PickerGroup.bind({});
