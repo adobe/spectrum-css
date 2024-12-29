@@ -21,13 +21,15 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
