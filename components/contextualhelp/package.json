@@ -33,10 +33,10 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=6",
-		"@spectrum-css/link": ">=5",
-		"@spectrum-css/popover": ">=7",
-		"@spectrum-css/tokens": ">=14.5.0"
+		"@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0",
+		"@spectrum-css/link": ">=6.0.0-s2-foundations.0",
+		"@spectrum-css/popover": ">=8.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/link": {
