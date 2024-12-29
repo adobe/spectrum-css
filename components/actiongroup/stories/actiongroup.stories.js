@@ -99,8 +99,8 @@ export default {
 		},
 		packageJson,
 		metadata,
-		tags: ["migrated"],
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ActionGroups.bind({});
