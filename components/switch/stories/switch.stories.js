@@ -46,6 +46,8 @@ export default {
 		packageJson,
 		metadata,
 	},
+	decorators: [],
+	tags: ["migrated"],
 };
 
 export const Default = SwitchGroup.bind({});

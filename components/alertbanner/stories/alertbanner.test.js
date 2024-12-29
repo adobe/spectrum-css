@@ -1,8 +1,39 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Container, Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
+/**
+ * Examples of options for contextual action button and close button.
+ */
+export const AlertBannerVariantsTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "column",
+	containerStyles: { "align-items": "stretch" },
+	wrapperStyles: { "align-items": "stretch" },
+	content: [
+		Template({
+			...args,
+			variant: "neutral",
+			text: "Alert banner message. Use a short phrase to describe what's happening.",
+			actionButtonText: "Action",
+		}, context),
+		Template({
+			...args,
+			variant: "info",
+			text: "Alert banner message. Use a short phrase to describe what's happening.",
+			actionButtonText: "Action",
+		}, context),
+		Template({
+			...args,
+			variant: "negative",
+			text: "Alert banner message. Use a short phrase to describe what's happening.",
+			actionButtonText: "Action",
+		}, context),
+	],
+}, context);
+
 export const AlertBannerGroup = Variants({
-	Template,
+	Template: AlertBannerVariantsTemplate,
+	TestTemplate: Template,
 	stateDirection: "column",
 	wrapperStyles: {
 		"inline-size": "100%",

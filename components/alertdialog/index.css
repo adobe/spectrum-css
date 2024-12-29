@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-AlertDialog {
 	--spectrum-alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
 	--spectrum-alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);

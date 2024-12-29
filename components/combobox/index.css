@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Combobox {
 	--spectrum-combobox-inline-size: var(--spectrum-field-width);
 	--spectrum-combobox-block-size: var(--spectrum-component-height-100);
@@ -98,10 +96,7 @@
 	--spectrum-combobox-readonly-background-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-combobox-readonly-text-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-combobox-border-color-disabled: var(--spectrum-disabled-border-color);
-}
 
-.spectrum-Combobox,
-.spectrum-Combobox--sizeM {
 	--spectrum-combobox-block-size: var(--spectrum-component-height-100);
 	--spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100);
 	--spectrum-combobox-font-size: var(--spectrum-font-size-100);
@@ -170,10 +165,6 @@
 
 	&.spectrum-Combobox--sizeS {
 		--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-small);
-	}
-
-	&.spectrum-Combobox--sizeM {
-		--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-medium);
 	}
 
 	&.spectrum-Combobox--sizeL {

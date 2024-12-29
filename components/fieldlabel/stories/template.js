@@ -5,11 +5,9 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-FieldLabel",
@@ -23,6 +21,7 @@ export const Template = ({
 	alignment,
 	isDisabled,
 	isRequired,
+	staticColor,
 } = {}, context = {}) => {
 	if (!label) {
 		console.warn("FieldLabel: please provide a label for the field label.");
@@ -52,6 +51,7 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--${alignment}`]: typeof alignment !== "undefined",
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
 				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}

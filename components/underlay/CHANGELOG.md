@@ -1,5 +1,59 @@
 # Change Log
 
+## 4.1.1-next.0
+
+### Patch Changes
+
+- [#2860](https://github.com/adobe/spectrum-css/pull/2860) [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Spectrum 2 Standard Dialog Migration
+
+  This is the migration for standard dialog. The Divider component is no longer supported in S2 dialogs. In addition, some new and updated tokens are in place to update dialog corner rounding, font treatments, spacing/padding, and maximum/minimum widths. There were several new elements implemented as well, including optional header and footer content, hero/cover images, checkbox and text-only options in the footer content area.
+
+  The `.spectrum-Dialog--small`, `.spectrum-Dialog--medium`, and `.spectrum-Dialog--large` sizing classes were deprecated and removed from the CSS in favor of the t-shirt sizes. Additionally, the spelling of the `.spectrum-Dialog--dismissable` class was corrected to `.spectrum-Dialog--dismissible`.
+
+  Mod properties are either "new," have been renamed to reflect the respective dialog language, or were removed:
+
+  _New Mods_
+  `--mod-standard-dialog-spacing-title-to-header-content`
+  `--mod-standard-dialog-spacing-title-to-description`
+  `--mod-standard-dialog-header-content-font-size`
+
+  _Renamed Mods_
+  `--mod-dialog-confirm-small-width` > `--mod-standard-dialog-max-width-small`
+  `--mod-dialog-confirm-medium-width` > `--mod-standard-dialog-max-width`
+  `--mod-dialog-confirm-large-width` > `--mod-standard-dialog-max-width-large`
+  `--mod-dialog-confirm-border-radius` > `--mod-standard-dialog-border-radius`
+  `--mod-dialog-confirm-description-text-size` > `--mod-standard-dialog-description-font-size`
+  `--mod-dialog-confirm-description-text-line-height` > `--mod-standard-dialog-description-line-height`
+  `--mod-dialog-confirm-description-text-color` > `--mod-standard-dialog-description-text-color`
+  `--mod-dialog-confirm-description-font-weight` > `--mod-standard-dialog-description-font-weight`
+  `--mod-dialog-heading-font-weight` > `--mod-standard-dialog-heading-font-weight`
+  `--mod-dialog-confirm-title-text-line-height` > `--mod-standard-dialog-heading-line-height`
+  `--mod-dialog-confirm-title-text-color` > `--mod-standard-dialog-heading-text-color`
+  `--mod-dialog-confirm-title-text-size` > `--mod-standard-dialog-heading-font-size`
+  `--mod-dialog-confirm-hero-height` > `--mod-standard-dialog-hero-block-size`
+  `--mod-dialog-min-inline-size` > `--mod-standard-dialog-min-inline-size`
+  `--mod-dialog-confirm-padding-grid` > `--mod-standard-dialog-spacing-grid-padding`
+  `--mod-dialog-confirm-footer-padding-top` > `--mod-standard-dialog-spacing-description-to-footer`
+  `--mod-dialog-confirm-close-button-padding` > `--mod-standard-dialog-spacing-edge-to-close-button`
+  `--mod-dialog-confirm-gap-size` > `--mod-standard-dialog-spacing-footer-to-button-group`
+
+  _Removed Mods_
+  `--mod-dialog-confirm-buttongroup-padding-top`
+  `--mod-dialog-confirm-close-button-size`
+  `--mod-dialog-confirm-description-margin`
+  `--mod-dialog-confirm-description-padding`
+  `--mod-dialog-confirm-divider-block-spacing-end`
+  `--mod-dialog-confirm-divider-block-spacing-start`
+  `--mod-dialog-confirm-divider-height`
+
+  Modal and underlay updates
+
+  - Modal component now uses the updated corner rounding.
+  - Underlay has an updated comment that addresses the overlay-color/overlay-opacity tokens.
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 5.0.0-s2-foundations.16
 
 ### Major Changes
@@ -253,16 +307,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.4...@spectrum-css/underlay@4.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.4...@spectrum-css/underlay@4.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -270,8 +321,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.2.4
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.3...@spectrum-css/underlay@3.2.4)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.3...@spectrum-css/underlay@3.2.4)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -279,8 +329,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.2.3
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.2...@spectrum-css/underlay@3.2.3)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.2...@spectrum-css/underlay@3.2.3)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -288,8 +337,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.2.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.1...@spectrum-css/underlay@3.2.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.1...@spectrum-css/underlay@3.2.2)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -297,8 +345,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.2.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -306,8 +353,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.2.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.1.0...@spectrum-css/underlay@3.2.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.1.0...@spectrum-css/underlay@3.2.0)
 
 ### ✨ Features
 
@@ -317,8 +363,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.13...@spectrum-css/underlay@3.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.13...@spectrum-css/underlay@3.1.0)
 
 ### ✨ Features
 
@@ -328,8 +373,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.13
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.12...@spectrum-css/underlay@3.0.13)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.12...@spectrum-css/underlay@3.0.13)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -337,8 +381,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.12
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.11...@spectrum-css/underlay@3.0.12)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.11...@spectrum-css/underlay@3.0.12)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -346,8 +389,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.11
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.9...@spectrum-css/underlay@3.0.11)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.9...@spectrum-css/underlay@3.0.11)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -355,8 +397,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.10
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.9...@spectrum-css/underlay@3.0.10)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.9...@spectrum-css/underlay@3.0.10)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -364,8 +405,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.9
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.8...@spectrum-css/underlay@3.0.9)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.8...@spectrum-css/underlay@3.0.9)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -373,8 +413,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.8
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.7...@spectrum-css/underlay@3.0.8)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.7...@spectrum-css/underlay@3.0.8)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -382,8 +421,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.7
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.6...@spectrum-css/underlay@3.0.7)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.6...@spectrum-css/underlay@3.0.7)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -391,8 +429,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.6
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.5...@spectrum-css/underlay@3.0.6)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.5...@spectrum-css/underlay@3.0.6)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -400,8 +437,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.5
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.4...@spectrum-css/underlay@3.0.5)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.4...@spectrum-css/underlay@3.0.5)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -409,8 +445,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.4
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.3...@spectrum-css/underlay@3.0.4)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.3...@spectrum-css/underlay@3.0.4)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -418,8 +453,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.3
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.2...@spectrum-css/underlay@3.0.3)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.2...@spectrum-css/underlay@3.0.3)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -427,8 +461,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.2
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.1...@spectrum-css/underlay@3.0.2)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.1...@spectrum-css/underlay@3.0.2)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -436,8 +469,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.1
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.0...@spectrum-css/underlay@3.0.1)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.0...@spectrum-css/underlay@3.0.1)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -445,8 +477,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.0
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.1.0...@spectrum-css/underlay@3.0.0)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.1.0...@spectrum-css/underlay@3.0.0)
 
 ### 🔙 Reverts
 
@@ -454,8 +485,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 \*feat(underlay)!: migrate to use spectrum-tokens (#2096)([2e0651a](https://github.com/adobe/spectrum-css/commit/2e0651a)), closes[#2096](https://github.com/adobe/spectrum-css/issues/2096)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		migrates Underlay to use `@adobe/spectrum-tokens`
@@ -492,8 +522,7 @@ Additionally:
 
 ## 2.1.0
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.54...@spectrum-css/underlay@2.1.0)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.54...@spectrum-css/underlay@2.1.0)
 
 ### ✨ Features
 
@@ -503,8 +532,7 @@ Additionally:
 
 ## 2.0.54
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.53...@spectrum-css/underlay@2.0.54)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.53...@spectrum-css/underlay@2.0.54)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -512,8 +540,7 @@ Additionally:
 
 ## 2.0.53
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.52...@spectrum-css/underlay@2.0.53)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.52...@spectrum-css/underlay@2.0.53)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -521,8 +548,7 @@ Additionally:
 
 ## 2.0.52
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.51...@spectrum-css/underlay@2.0.52)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.51...@spectrum-css/underlay@2.0.52)
 
 ### 🐛 Bug fixes
 
@@ -532,8 +558,7 @@ Additionally:
 
 ## 2.0.51
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.50...@spectrum-css/underlay@2.0.51)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.50...@spectrum-css/underlay@2.0.51)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 
@@ -541,8 +566,7 @@ Additionally:
 
 ## 2.0.50
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.49...@spectrum-css/underlay@2.0.50)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.49...@spectrum-css/underlay@2.0.50)
 
 **Note:** Version bump only for package @spectrum-css/underlay
 

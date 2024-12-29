@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Tabs {
 	/* Default is Medium sizing */
 	--spectrum-tabs-item-height: var(--spectrum-tab-item-height-medium);
@@ -45,6 +43,7 @@
 	--spectrum-tabs-selection-indicator-color: var(--spectrum-neutral-subdued-content-color-down);
 
 	--spectrum-tabs-list-background-direction: top;
+	--spectrum-tabs-divider-background-color: var(--spectrum-gray-200);
 	--spectrum-tabs-divider-size: var(--spectrum-border-width-200);
 	--spectrum-tabs-divider-border-radius: 1px;
 

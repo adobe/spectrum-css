@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 @media (forced-colors: active) {
 	.spectrum-HelpText {
 		--highcontrast-helptext-content-color-default: CanvasText;
@@ -31,24 +29,21 @@
 	--spectrum-helptext-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-helptext-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
 
+	--spectrum-helptext-min-height: var(--spectrum-component-height-75);
+	--spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-100);
+	--spectrum-helptext-font-size: var(--spectrum-font-size-75);
+	--spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75);
+	--spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-medium);
+	--spectrum-helptext-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+	--spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75);
+	--spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+
 	&.spectrum-HelpText--sizeS {
 		--spectrum-helptext-min-height: var(--spectrum-component-height-75);
 		--spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-75);
 		--spectrum-helptext-font-size: var(--spectrum-font-size-75);
 		--spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75);
 		--spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-small);
-		--spectrum-helptext-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
-		--spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75);
-		--spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
-	}
-
-	&,
-	&.spectrum-HelpText--sizeM {
-		--spectrum-helptext-min-height: var(--spectrum-component-height-75);
-		--spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-100);
-		--spectrum-helptext-font-size: var(--spectrum-font-size-75);
-		--spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75);
-		--spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-medium);
 		--spectrum-helptext-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
 		--spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75);
 		--spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75);

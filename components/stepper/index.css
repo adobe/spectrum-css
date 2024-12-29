@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /* --- High contrast settings --- */
 @media (forced-colors: active) {
 	.spectrum-Stepper {
@@ -82,11 +80,8 @@
 
 	--spectrum-stepper-animation-duration: var(--mod-stepper-animation-duration, var(--spectrum-animation-duration-100));
 
-	&,
-	&.spectrum-Stepper--sizeM {
-		--spectrum-stepper-button-width: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-medium));
-		--spectrum-stepper-height: var(--mod-stepper-height, var(--spectrum-component-height-100));
-	}
+	--spectrum-stepper-button-width: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-medium));
+	--spectrum-stepper-height: var(--mod-stepper-height, var(--spectrum-component-height-100));
 
 	&.spectrum-Stepper--sizeS {
 		--spectrum-stepper-button-width: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-small));

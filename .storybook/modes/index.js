@@ -12,31 +12,21 @@
  */
 
 const modes = {
-    "Light | LTR": {
-        color: "light",
-        textDirection: "ltr",
-    },
-    "Dark | RTL": {
-        color: "dark",
-        textDirection: "rtl",
-    },
-    "S1 | Light | LTR": {
-        context: "legacy",
-        color: "light",
-        textDirection: "ltr",
-    },
-    "Express | Light | LTR": {
-        context: "express",
-        color: "light",
-        textDirection: "ltr",
-    },
+	"Light | LTR": {
+		color: "light",
+		textDirection: "ltr",
+	},
+	"Dark | RTL": {
+		color: "dark",
+		textDirection: "rtl",
+	},
 };
 
 export default modes;
 
 export const disableDefaultModes = {
-    ...Object.keys(modes).reduce((acc, key) => {
-        acc[key] = { disable: true };
-        return acc;
-    }, {}),
+	...Object.keys(modes).reduce((acc, key) => {
+		acc[key] = { disable: true };
+		return acc;
+	}, {}),
 };

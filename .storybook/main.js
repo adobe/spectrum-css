@@ -21,6 +21,11 @@ export default {
 			titlePrefix: "Guides",
 		},
 		{
+			directory: "./foundations",
+			files: "*/*.@(stories.js|mdx)",
+			titlePrefix: "Foundations",
+		},
+		{
 			directory: "./deprecated",
 			files: "**/*.@(stories.js|mdx)",
 			titlePrefix: "Deprecated",

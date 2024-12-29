@@ -29,39 +29,40 @@
 	/* Remove button the margin in Firefox and Safari. */
 	margin: 0;
 
-	/* @deprecation --mod-sans-font-family-stack has been renamed and will be removed in a future version. */
-	font-family: var(--mod-button-font-family, var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack)));
+	font-family: var(--mod-button-font-family, var(--spectrum-sans-font-family-stack));
+
+	/* Adjacent buttons should be aligned correctly */
+	vertical-align: top;
 
 	-webkit-font-smoothing: antialiased;
 
 	/* Font smoothing for Firefox */
 	-moz-osx-font-smoothing: grayscale;
 
-	/* @deprecation --mod-line-height-100 has been renamed and will be removed in a future version. */
-	line-height: var(--mod-button-line-height, var(--mod-line-height-100, var(--spectrum-line-height-100)));
+	line-height: var(--mod-button-line-height, var(--spectrum-line-height-100));
 	text-decoration: none;
 
 	/* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
 	text-transform: none;
 
-	/* Adjacent buttons should be aligned correctly */
-	vertical-align: top;
-
 	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari (normalize). */
 	-webkit-appearance: button;
 
-	border-style: solid;
-
 	transition:
-		background var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-		border-color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-		color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-		box-shadow var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out;
+		background var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+		border-color var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+		color var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+		box-shadow var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out;
 
 	/* Fix Firefox */
 	&::-moz-focus-inner {
-		border-style: none;
+		margin-block-start: -2px;
+		margin-block-end: -2px;
 		padding: 0;
+		border: 0;
+
+		/* Remove the inner border and padding for button in Firefox. */
+		border-style: none;
 	}
 
 	&:focus {
@@ -90,16 +91,15 @@
 		inset-inline-end: 0;
 
 		display: block;
-
-		margin: calc(-1 * var(--mod-button-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
+		margin: calc(var(--mod-button-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -1);
 
 		transition:
-			opacity var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--spectrum-animation-duration-100))) ease-out,
-			margin var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--spectrum-animation-duration-100))) ease-out;
+			opacity var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+			margin var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out;
 	}
 
 	&:focus-visible::after {
-		margin: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -2);
+		margin: calc(var(--mod-button-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -2);
 	}
 }
 

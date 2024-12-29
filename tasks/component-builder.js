@@ -66,7 +66,6 @@ async function processCSS(
 		from: input,
 		to: output,
 		verbose: false,
-		shouldCombine: true,
 		...postCSSOptions,
 	};
 
@@ -146,91 +145,8 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 	const indexOutputPath = path.join(cwd, "dist", "index.css");
 
 	return Promise.all([
-		processCSS(content, indexSourceCSS, indexOutputPath, {
-			cwd,
-			clean,
-			skipMapping: true,
-			referencesOnly: false,
-			preserveVariables: true,
-			stripLocalSelectors: false,
-		}),
-		processCSS(
-			content,
-			indexSourceCSS,
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-				skipMapping: true,
-				referencesOnly: false,
-				preserveVariables: false,
-				stripLocalSelectors: false,
-			},
-		),
+		processCSS(content, indexSourceCSS, indexOutputPath, { cwd, clean }),
 	]);
-}
-
-/**
- * The builder for the individual themes assets
- * @param {object} config
- * @param {string} config.cwd - Current working directory for the component being built
- * @param {boolean} config.clean - Should the built assets be cleaned before running the build
- * @returns Promise<void>
- */
-async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
-	// This fetches the content of the files and returns an array of objects with the content and input paths
-	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
-
-	// Nothing to do if there's no content
-	if (!contentData || contentData.length === 0) return;
-
-	const imports = contentData.map(({ input }) => input);
-	const importMap = imports.map((i) => `@import "${i}";`).join("\n");
-
-	const promises = contentData.map(async ({ content, input }) => {
-		if (!content)
-			return Promise.reject(
-				new Error(`No content found for ${relativePrint(input, { cwd })}`),
-			);
-
-		const theme = path.basename(input, ".css");
-		return processCSS(
-			content,
-			path.join(cwd, input),
-			path.join(cwd, "dist", input),
-			{
-				cwd,
-				clean,
-				lint: false,
-				skipMapping: false,
-				referencesOnly: false,
-				preserveVariables: true,
-				// Only output the new selectors with the system mappings
-				stripLocalSelectors: true,
-				theme,
-			},
-		);
-	});
-
-	promises.push(
-		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
-		processCSS(
-			importMap,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-theme.css"),
-			{
-				cwd,
-				clean,
-				skipMapping: false,
-				stripLocalSelectors: false,
-				referencesOnly: true,
-				shouldCombine: false,
-				map: false,
-			},
-		),
-	);
-
-	return Promise.all(promises);
 }
 
 /**
@@ -263,44 +179,35 @@ async function main({
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
-	return Promise.all([
-		...(clean ? [cleanFolder({ cwd })] : []),
-		build({ cwd, clean }),
-		buildThemes({ cwd, clean }),
-	])
-		.then((report) => {
-			const logs = report.flat(Infinity).filter(Boolean);
+	const reports = [];
+	const errors = [];
 
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	if (clean) await cleanFolder({ cwd }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 
-			if (logs && logs.length > 0) {
-				logs
-					.sort((a) => {
-						if (typeof a === "string" && a.includes("✓")) return -1;
-						if (typeof a === "string" && a.includes("🔍")) return 0;
-						return 1;
-					})
-					.forEach((log) => console.log(log));
-			}
-			else console.log("No assets created.".gray);
+	await build({ cwd, clean }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		})
-		.catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	const logs = reports.flat(Infinity).filter(Boolean);
+	const errs = errors.flat(Infinity).filter(Boolean);
 
-			console.trace(err);
+	console.log(`\n\n${key} 🔨`);
+	console.log(`${"".padStart(30, "-")}`);
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
+	if (errs && errs.length > 0) {
+		errs.forEach((err) => console.error(err));
+	}
+	else {
+		if (logs && logs.length > 0) {
+			logs.forEach((log) => console.log(log));
+		}
+		else console.log("No assets created.".gray);
+	}
 
-			process.exit(1);
-		});
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
+
+	if (errs && errs.length > 0) process.exit(1);
+	else process.exit(0);
 }
 
 exports.processCSS = processCSS;

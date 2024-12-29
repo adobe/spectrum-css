@@ -1,8 +1,9 @@
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -10,24 +11,23 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Dialog",
 	isDismissible = false,
-	hasDivider = true,
 	isOpen = true,
 	showModal = false,
 	hasFooter = false,
 	heading,
+	header,
+	hasCheckbox = false,
 	content = [],
 	footer = [],
 	customClasses = [],
 	id = getRandomId("dialog"),
 	size = "m",
 	layout,
+	hasHeroImage = false,
 	heroImageUrl,
 	customStyles = {},
 } = {}, context = {}) => {
@@ -41,10 +41,9 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--dismissable`]: isDismissible && ["fullscreen", "fullscreenTakeover"].every(l => layout !== l),
+				[`${rootClass}--dismissible`]: isDismissible && ["fullscreen", "fullscreenTakeover"].every(l => layout !== l),
 				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-				[`${rootClass}--noDivider`]: !hasDivider,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -54,72 +53,136 @@ export const Template = ({
 			style=${ifDefined(styleMap(customStyles))}
 		>
 			<div class="${rootClass}-grid">
-				${when(typeof heroImageUrl !== "undefined", () =>
+				${when(hasHeroImage, () =>
 					html`
 						<div
 							class="spectrum-Dialog-hero"
-							style="background-image:url(${heroImageUrl})">
+							style="background-image:url(${heroImageUrl ? heroImageUrl : "example-card-portrait.png"})">
 						</div>
 					`
 				)}
-				${when(heading, () => html`
-					<h1 class="${rootClass}-heading">${heading}</h1>
-				`)}
-				${when(hasDivider, () =>
-					Divider({
-						horizontal: true,
-						customClasses: [`${rootClass}-divider`],
-					}, context),
+				<div class="${rootClass}-header">
+					${when(heading, () => html`
+						<h1 class="${rootClass}-heading">${heading}</h1>
+					`)}
+					${when(header, () => html`
+						<span class="${rootClass}-header-content">
+							${Typography({
+								semantics: "body",
+								size: "m",
+								// @todo: takeover dialogs can accept other components in their headers. could the renderContent function work here?
+								content: [ header ]
+							}, context)}
+						</span>
+					`,
 				)}
-				<section class="${rootClass}-content">
-					${renderContent(content)}
-				</section>
-				${when(hasFooter, () => {
-					return html`
-						<footer class="${rootClass}-footer" style=${styleMap({
-							"justify-content": "flex-end",
-						})}>
-							${when(typeof footer !== "undefined" && Array.isArray(footer) && footer.length > 0,
-								() => renderContent(footer),
-							)}
-							${when(!isDismissible, () => html `
-									${ButtonGroup({
-										items: [
-											{
-												label: "Cancel",
-												treatment: "outline",
-												variant: "secondary",
-											},
-											{
-												label: "Save",
-												treatment: "fill",
-												variant: "accent"
-											},
-										],
-									}, context)}
-								`
-							)}
-						</footer>
-					`;
-				})}
-				${when(isDismissible && layout !== "fullscreen" && layout !== "fullscreenTakeover", () =>
+				</div>
+				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
+				${when(isDismissible, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
 						onclick: toggleOpen,
 					}, context)
 				)}
+				${when(layout === "fullscreen" || layout === "fullscreenTakeover", () => html`
+					<div class="${rootClass}-buttonGroup">
+						${ButtonGroup({
+							items: [
+								{
+									label: "Cancel",
+									treatment: "outline",
+									variant: "secondary",
+								},
+								{
+									label: "Save",
+									treatment: "fill",
+									variant: "accent"
+								},
+							],
+							onclick: () => {
+								updateArgs(toggleOpen);
+							},
+						}, context)}
+					</div>
+				`)}
+				${when(hasFooter, () => html`
+					<footer class="${rootClass}-footer">
+						${when(typeof footer !== "undefined", () => html`
+							<div class="${rootClass}-footer-content">
+								${when(hasCheckbox, () => html`
+						 			${Checkbox({
+										label: footer,
+									}, context)}
+								`,
+									() =>
+										Typography({
+											semantics: "body",
+											size: "m",
+											content: [ footer ]
+										}, context)
+								)}
+							</div>
+							<div class="${rootClass}-buttonGroup">
+								${ButtonGroup({
+									items: [
+										{
+											label: "Cancel",
+											treatment: "outline",
+											variant: "secondary",
+										},
+										{
+											label: "Save",
+											treatment: "fill",
+											variant: "accent"
+										},
+									],
+									onclick: () => {
+										updateArgs(toggleOpen);
+									},
+								}, context)}
+							</div>
+						`,
+						() => html`
+						 	<div class="${rootClass}-noFooter"></div>
+							<div class="${rootClass}-buttonGroup">
+								${ButtonGroup({
+									items: [
+										{
+											label: "Cancel",
+											treatment: "outline",
+											variant: "secondary",
+										},
+										{
+											label: "Save",
+											treatment: "fill",
+											variant: "accent"
+										},
+									],
+									onclick: () => {
+										updateArgs(toggleOpen);
+									},
+								}, context)}
+							</div>
+						 `
+						)}
+					</footer>
+					`,
+					() => html`
+						<div class="${rootClass}-noFooter"></div>
+				`)}
 			</div>
 		</div>
 	`;
 
 	if (showModal) {
-		return html`
-			${Modal({
-				isOpen,
-				content: [ () => Dialog],
-				variant: layout,
-			}, context)}
-		`;
+		return Modal({
+			isOpen,
+			content: Dialog,
+			variant: layout,
+			customStyles: {
+				"--mod-modal-background-color": "transparent"
+			},
+		}, context);
 	}
 	else {
 		return Dialog;

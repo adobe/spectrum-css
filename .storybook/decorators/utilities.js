@@ -397,8 +397,8 @@ export const Variants = ({
 	}
 
 	const staticColor = {
-		black: "var(--spectrum-docs-static-black-background-color)",
-		white: "var(--spectrum-docs-static-white-background-color)",
+		black: "var(--spectrum-examples-gradient-static-black)",
+		white: "var(--spectrum-examples-gradient-static-white)",
 	};
 
 	return (args, context) => {

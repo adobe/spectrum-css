@@ -23,7 +23,6 @@
     ".spectrum-Swatch--roundingNone:before",
     ".spectrum-Swatch--sizeL",
     ".spectrum-Swatch--sizeM",
-    ".spectrum-Swatch--sizeS",
     ".spectrum-Swatch--sizeXS",
     ".spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch-disabledIcon path:first-child",
@@ -73,7 +72,6 @@
   "component": [
     "--spectrum-swatch-border-color",
     "--spectrum-swatch-border-color-light",
-    "--spectrum-swatch-border-color-opacity",
     "--spectrum-swatch-border-color-selected",
     "--spectrum-swatch-border-radius",
     "--spectrum-swatch-border-thickness",
@@ -86,8 +84,6 @@
     "--spectrum-swatch-focus-indicator-gap",
     "--spectrum-swatch-focus-indicator-thickness",
     "--spectrum-swatch-icon-border-color",
-    "--spectrum-swatch-icon-border-color-opacity",
-    "--spectrum-swatch-icon-border-color-rgb",
     "--spectrum-swatch-inner-border-color-selected",
     "--spectrum-swatch-size",
     "--spectrum-swatch-size-extra-small",
@@ -109,21 +105,16 @@
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
     "--spectrum-focus-indicator-thickness",
-    "--spectrum-gray-1000-rgb",
     "--spectrum-gray-25",
     "--spectrum-gray-800",
     "--spectrum-gray-900",
     "--spectrum-picked-color",
     "--spectrum-red-900",
+    "--spectrum-white",
     "--spectrum-workflow-icon-size-100",
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-50",
     "--spectrum-workflow-icon-size-75"
-  ],
-  "system-theme": [
-    "--system-swatch-border-color",
-    "--system-swatch-disabled-icon-color",
-    "--system-swatch-inner-border-color-selected"
   ],
   "passthroughs": [],
   "high-contrast": [

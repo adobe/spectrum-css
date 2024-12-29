@@ -1,9 +1,13 @@
 import "@spectrum-css/tokens/dist/index.css";
+
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
-import "./assets/index.css";
+import { startCase } from "lodash";
+
 import logo from "./assets/logo.svg";
 import pkg from "./package.json";
+
+import "./assets/index.css";
 
 const root = document.body ?? document.documentElement;
 if (root) root.classList.add("spectrum", "spectrum--light", "spectrum--medium");
@@ -63,5 +67,6 @@ addons.setConfig({
 	}),
 	sidebar: {
 		showRoots: false,
+		renderLabel: ({ name, type }) => (type === 'story' ? name : startCase(name)) + " 📚",
 	},
 });

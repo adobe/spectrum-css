@@ -51,40 +51,6 @@ export const DialogGroup = Variants({
 				"background-color": "var(--spectrum-gray-50)"
 			},
 		},
-		{
-			testHeading: "No divider",
-			hasDivider: false,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50)"
-			},
-		},
-		{
-			testHeading: "No divider, dismissible",
-			hasDivider: false,
-			isDismissible: true,
-			hasFooter: false,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50)"
-			},
-		},
-		{
-			testHeading: "With hero/cover image, no divider",
-			hasDivider: false,
-			heroImageUrl: "example-card-portrait.png",
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50)"
-			},
-		},
-		{
-			testHeading: "With hero/cover image, no divider, dismissible",
-			hasDivider: false,
-			isDismissible: true,
-			hasFooter: false,
-			heroImageUrl: "example-card-portrait.png",
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50)"
-			},
-		},
 	],
 });
 
@@ -115,4 +81,3 @@ export const DialogFullscreenTakeover = Variants({
 		},
 	],
 });
-

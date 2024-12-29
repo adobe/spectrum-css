@@ -5,9 +5,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
@@ -108,7 +105,7 @@ export const Template = ({
 	id = getRandomId("icon"),
 	customClasses = [],
 	icons,
-	useRef = false,
+	useRef = true,
 	workflowIcons,
 	uiIcons,
 	uiIconSizes,

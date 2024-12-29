@@ -11,12 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /* outer container, unstyled */
 .spectrum-AssetCard {
 	/* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
 	--spectrum-assetcard-asset-size: 224px;
+	--spectrum-assetcard-background-color: var(--spectrum-gray-100);
 	--spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-assetcard-asset-container-border-size: 1px;
 	--spectrum-assetcard-header-margin-block-start: var(--spectrum-spacing-300);
