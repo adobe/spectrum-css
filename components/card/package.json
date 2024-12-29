@@ -25,13 +25,12 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=6",
-		"@spectrum-css/asset": ">=5",
-		"@spectrum-css/checkbox": ">=9",
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/quickaction": ">=3",
-		"@spectrum-css/tokens": ">=14.5.0 || >=15",
-		"@spectrum-css/typography": ">=6"
+		"@spectrum-css/actionbutton": ">=7",
+		"@spectrum-css/asset": ">=7",
+		"@spectrum-css/checkbox": ">=10",
+		"@spectrum-css/icon": ">=9",
+		"@spectrum-css/tokens": ">=16",
+		"@spectrum-css/typography": ">=8"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actionbutton": {
@@ -56,11 +55,7 @@
 		"@spectrum-css/checkbox": "10.0.1",
 		"@spectrum-css/icon": "9.0.1",
 		"@spectrum-css/tokens": "16.0.0",
-		"@spectrum-css/typography": "8.0.1",
-		"eslint": "^8.57.0",
-		"npm-run-all2": "^7.0.2",
-		"prettier": "^3.4.2",
-		"stylelint": "^16.9.0"
+		"@spectrum-css/typography": "8.0.1"
 	},
 	"keywords": [
 		"design-system",
