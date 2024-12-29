@@ -33,11 +33,11 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/alertdialog": ">=2",
-		"@spectrum-css/dialog": ">=10",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/menu": ">=7",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/alertdialog": ">=3.0.0-s2-foundations.0",
+		"@spectrum-css/dialog": ">=11.0.0-s2-foundations.0",
+		"@spectrum-css/divider": ">=4.0.0-s2-foundations.0",
+		"@spectrum-css/menu": ">=8.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/divider": {
