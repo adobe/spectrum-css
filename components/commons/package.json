@@ -19,7 +19,8 @@
 		"./CHANGELOG.md": "./CHANGELOG.md",
 		"./README.md": "./README.md",
 		"./*.css": "./*.css",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"peerDependencies": {
 		"@spectrum-css/tokens": ">=14"
