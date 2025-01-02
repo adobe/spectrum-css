@@ -1,21 +1,19 @@
-import { html } from "lit";
-import { Template } from "./template";
-
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isOpen } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { TrayGroup } from "./tray.test.js";
 
 /**
- * Tray dialogs are typically used to portray information on mobile device or smaller screens.
+ * A tray is typically used to display transient content (menus, options, additional actions, etc.) on mobile devices or smaller screens, exposing types of content that may be too overwhelming for [popovers](?path=/docs/components-popover--docs).
  */
 export default {
 	title: "Tray",
 	component: "Tray",
 	argTypes: {
 		content: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: { disable: true },
-		},
+		isOpen,
 		heading: {
 			name: "Heading",
 			type: { name: "string" },
@@ -28,57 +26,47 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Tray",
-		customClasses: ["spectrum-Modal"],
-		isOpen: true,
-		heading: "New Messages",
+		isOpen: false,
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
-		status: {
-			type: "migrated",
-		},
+		layout: "fullscreen",
 		docs: {
 			story: {
-				height: "200px"
-			}
+				height: "300px",
+			},
 		},
+		viewport: {
+			defaultViewport: "mobile2"
+		},
+		packageJson,
+		metadata,
 	},
 };
 
-export const Default = ({
-	heading,
-	...args
-}) => html`
-	<div>
-		${Template({
-			...args,
-			content: [
-				() => Dialog({
-						heading,
-						content: ["You have 5 new messages!"],
-						isDismissable: false,
-					})
-			],
-		})}
+/**
+ * The tray displays differently depending on the orientation of the viewport, using the `orientation` CSS media feature. In portrait orientation, a Tray is displayed at the bottom of the screen and takes up the full width of the view. In landscape orientation, it keeps its portrait width, is centered horizontally, and has rounded upper corners.
+ */
+export const Default = TrayGroup.bind({});
+Default.args = {
+	isOpen: true,
+	content: [
+		(passthroughs, context) => Dialog({
+			...passthroughs,
+			heading: "New messages",
+			content: ["You have 5 new messages!"],
+			isDismissible: false,
+		}, context)
+	],
+};
 
-		${
-			window.isChromatic() ?
-			Template({
-				...args,
-				content: [
-					() => Dialog({
-							heading: "You have new messages waiting in your inbox",
-							content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
-							isDismissable: false,
-						})
-				],
-				customStyles: {
-					"justify-content": "flex-end"
-				},
-			})
-		: null
-	}
-	</div>
-`;
+// ********* VRT ONLY ********* //
+export const WithForcedColors = TrayGroup.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes,
+		viewport: "mobile2",
+	},
+};

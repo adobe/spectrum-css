@@ -98,7 +98,6 @@ jobs:
                   files_yaml: |
                       styles:
                         - components/*/index.css
-                        - components/*/themes/*.css
                       eslint:
                         - components/*/stories/*.js
                       plugins:

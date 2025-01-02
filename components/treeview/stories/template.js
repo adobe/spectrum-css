@@ -1,10 +1,12 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -12,7 +14,7 @@ export const TreeViewItem = ({
 	rootClass = "spectrum-TreeView",
 	size = "m",
 	type,
-	id,
+	id = getRandomId("treeview-item"),
 	link,
 	label,
 	isSelected,
@@ -23,9 +25,9 @@ export const TreeViewItem = ({
 	iconSet,
 	thumbnail,
 	items,
+	variant,
 	customClasses = [],
-	...globals
-}) => {
+} = {}, context = {}) => {
 	if (type === "heading") {
 		return html`
 			<li
@@ -38,15 +40,14 @@ export const TreeViewItem = ({
 				<div class="${rootClass}-heading">
 					<span class="${rootClass}-itemLabel">${label}</span>
 				</div>
-				${typeof items !== "undefined" && items.length > 0
-					? Template({
-							...globals,
-							items: items,
-							size,
-							rootClass: "spectrum-TreeView",
-							customClasses: ["is-opened"],
-					})
-					: ""}
+				${when(typeof items !== "undefined" && items.length > 0, () =>
+					Template({
+						items: items,
+						size,
+						rootClass: "spectrum-TreeView",
+						customClasses: ["is-opened"],
+					}, context)
+				)}
 			</li>
 		`;
 	}
@@ -77,49 +78,53 @@ export const TreeViewItem = ({
 					closest.classList.toggle("is-open");
 				}}
 			>
-				${typeof items !== "undefined"
-					? Icon({
-							...globals,
-							size,
-							setName: "ui",
-							iconName: "ChevronRight",
-							customClasses: [`${rootClass}-itemIndicator`],
-					})
-					: ""}
-				${icon
-					? Icon({
-							...globals,
-							size,
-							iconName: icon,
-							setName: iconSet,
-							customClasses: [`${rootClass}-itemIcon`],
-					})
-					: ""}
-				${thumbnail
-					? Thumbnail({
-							...globals,
-							...thumbnail,
-							size: size == "s"  ? "200"
-								: size == "m"  ? "200"
-								: size == "l"  ? "400"
-								: size == "xl" ? "600"
-								: "300",
-							isLayer: true,
-							isSelected,
-							customClasses: [`${rootClass}-itemThumbnail`],
-					})
-					: ""}
-				<span class="${rootClass}-itemLabel">${label}</span>
-			</a>
-			${typeof items !== "undefined" && items.length > 0
-				? Template({
-						...globals,
-						items: items,
+				${when(typeof items !== "undefined", () =>
+					Icon({
 						size,
-						rootClass: "spectrum-TreeView",
-						customClasses: ["is-opened"],
-				})
-				: ""}
+						setName: "ui",
+						iconName: "ChevronRight",
+						customClasses: [`${rootClass}-itemIndicator`],
+					}, context)
+				)}
+				${when(icon, () =>
+					Icon({
+						size,
+						iconName: icon,
+						setName: iconSet,
+						customClasses: [`${rootClass}-itemIcon`],
+					}, context)
+				)}
+				${when(variant === "thumbnail", () =>
+					Thumbnail({
+						imageURL: "example-card-landscape.png",
+						...thumbnail,
+						size: size == "s"  ? "200"
+							: size == "m"  ? "200"
+							: size == "l"  ? "400"
+							: size == "xl" ? "600"
+							: "300",
+
+						isLayer: true,
+						isSelected,
+						isDisabled,
+						customClasses: [`${rootClass}-itemThumbnail`],
+					}, context)
+				)}
+				<span class=${classMap({
+					[`${rootClass}-itemLabel`]: true
+				})}>
+					${label}
+				</span>
+			</a>
+			${when(typeof items !== "undefined" && items.length > 0, () =>
+				Template({
+					items: items,
+					size,
+					variant,
+					rootClass: "spectrum-TreeView",
+					customClasses: ["is-opened"],
+				}, context)
+			)}
 		</li>
 	`;
 };
@@ -132,29 +137,30 @@ export const Template = ({
 	variant,
 	isQuiet,
 	items,
-	...globals
-}) => html`
+	id = getRandomId("treeview"),
+	testId,
+} = {}, context = {}) => html`
 	<ul
 		class=${classMap({
 			[rootClass]: true,
 			[`${rootClass}--size${size?.toUpperCase()}`]:
 				typeof size !== "undefined",
-			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+			[`${rootClass}--${variant}`]: typeof variant !== "undefined" && variant !== "default",
 			[`${rootClass}--quiet`]: isQuiet,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		style=${styleMap(customStyles)}
+		id=${id}
+		data-testid=${ifDefined(testId)}
 	>
 		${repeat(
 			items,
 			(item) => item.id,
-			(item) => {
-				return TreeViewItem({
-					...globals,
-					...item,
-					size,
-				});
-			}
+			(item) => TreeViewItem({
+				...item,
+				size,
+				variant,
+			}, context),
 		)}
 	</ul>
 `;

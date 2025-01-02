@@ -1,9 +1,15 @@
-import { Template } from "./template";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isActive, isFocused, isHovered } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { FloatingActionButtonGroup } from "./floatingactionbutton.test.js";
+import { Template } from "./template.js";
 
 /**
  * The floating action button component is used to give users a more prominent button for high frequency actions.
+ *
+ * When using floating action button in dark themes, the `background-layer-color-2` will often show up on the base color `gray-50` or `gray-75` or on content, images, etc.
  */
 export default {
 	title: "Floating action button",
@@ -21,30 +27,53 @@ export default {
 			options: ["primary", "secondary"],
 			control: "radio",
 		},
+		isActive,
+		isHovered,
+		isFocused,
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
 		},
+		iconSet: { table: { disable: true } },
+		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-FloatingActionButton",
 		variant: "primary",
 		iconName: "AddCircle",
+		iconSet: "workflow",
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = FloatingActionButtonGroup.bind({});
+Default.storyName = "Default (Primary)";
 Default.args = {};
 
+// ********* DOCS ONLY ********* //
 export const Secondary = Template.bind({});
+Secondary.tags = ["!dev"];
 Secondary.args = {
 	variant: "secondary",
+};
+Secondary.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	}
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = FloatingActionButtonGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

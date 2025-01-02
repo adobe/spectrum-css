@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tag",
-	"version": "9.1.0",
+	"version": "10.0.0-next.0",
 	"description": "The Spectrum CSS tags component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -17,25 +17,25 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"stories/*",
+		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/avatar": ">=7",
-		"@spectrum-css/clearbutton": ">=6",
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
+		"@spectrum-css/avatar": ">=8.0.0-next.0",
+		"@spectrum-css/clearbutton": ">=7.0.0-s2-foundations.0",
+		"@spectrum-css/icon": ">=8.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=14.0.0-next.10"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/avatar": {
@@ -45,6 +45,12 @@
 			"optional": true
 		}
 	},
+	"devDependencies": {
+		"@spectrum-css/avatar": "workspace:^",
+		"@spectrum-css/clearbutton": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"keywords": [
 		"spectrum",
 		"css",
@@ -53,5 +59,12 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/tag",
+			"rootClass": "spectrum-Tag",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/tag/"
+		}
+	]
 }

@@ -1,7 +1,9 @@
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -9,16 +11,15 @@ export const Template = ({
 	rootClass = "spectrum-Switch",
 	size = "m",
 	label = "Switch label",
-	isDisabled,
-	isChecked,
-	isEmphasized,
+	isDisabled = false,
+	isChecked = false,
+	isEmphasized = false,
 	customClasses = [],
 	customStyles = {},
-	id,
-}) => {
-
+	id = getRandomId("switch"),
+} = {}) => {
 	// ID attribute value for the input element.
-	const inputId = id ? `${id}-input` : "switch-onoff-0";
+	const inputId = getRandomId("switch-input");
 
 	return html`
 		<div
@@ -31,7 +32,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 		>
 			<input
 				type="checkbox"
@@ -41,11 +42,35 @@ export const Template = ({
 				?checked=${isChecked}
 			/>
 			<span class="${rootClass}-switch"></span>
-			${label
-				? html`<label class="${rootClass}-label" for=${inputId}
-						>${label}</label
-				  >`
-				: ""}
+			${when(label, () => html`
+				<label class="${rootClass}-label" for=${inputId}>
+					${label}
+				</label>
+			`)}
 		</div>
 	`;
 };
+
+export const DocsSwitchGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			heading: "Not selected",
+			withBorder: false,
+			content: Template({
+				...args,
+				context,
+				isChecked: false,
+			})
+		}, context)}
+		${Container({
+			heading: "Selected",
+			withBorder: false,
+			content: Template({
+				...args,
+				context,
+				isChecked: true,
+			})
+		}, context)}
+	`
+}, context);

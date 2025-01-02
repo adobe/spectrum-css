@@ -1,3 +1,4 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
@@ -10,34 +11,36 @@ export const Template = ({
 	description,
 	customClasses = [],
 	useAccentColor = false,
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-	>
-		${illustrationSvgMarkup(useAccentColor)}
-		${when(
-			heading,
-			() =>
-				html`<h2
-					class="spectrum-Heading spectrum-Heading--sizeM spectrum-Heading--regular ${rootClass}-heading"
-				>
-					${heading}
-				</h2>`
-		)}
-		${when(
-			description,
-			() =>
-				html`<p
-					class="spectrum-Body spectrum-Body--sizeS ${rootClass}-description"
-				>
-					${description.map((c) => (typeof c === "function" ? c({}) : c))}
-				</p>`
-		)}
-	</div>
-`;
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+		>
+			${illustrationSvgMarkup(useAccentColor)}
+			${when(heading, () =>
+				Typography({
+					semantics: "heading",
+					"size": "m",
+					customClasses: [`${rootClass}-heading`],
+					content: [heading],
+				}, context)
+			)}
+			${when(description, () =>
+				Typography({
+					semantics: "body",
+					"size": "s",
+					customClasses: [`${rootClass}-description`],
+					content: [
+						...description.map((c) => (typeof c === "function" ? c({}) : c))
+					],
+				}, context)
+			)}
+		</div>
+	`;
+};
 
 const illustrationSvgMarkup = (withAccentColorClass = false) => html`
 	<svg

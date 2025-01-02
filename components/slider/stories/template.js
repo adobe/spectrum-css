@@ -1,12 +1,10 @@
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { useArgs, useGlobals } from "@storybook/preview-api";
-
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
 import "../index.css";
 
@@ -22,18 +20,16 @@ export const Template = ({
 	labelPosition,
 	fillColor = "rgb(213, 213, 213)",
 	showTicks = false,
+	showTickLabels = false,
 	isDisabled = false,
 	isFocused = false,
 	customClasses = [],
 	customStyles = {},
-	id,
-	...globals
-}) => {
+	id = getRandomId("slider"),
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
 
-	const [, updateArgs] = useArgs();
-	const [{ textDirection }] = useGlobals();
-
-	const rtl = !!(textDirection === "rtl");
+	const isRTL = globals.textDirection !== "rtl";
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;
 	const isRamp = variant === "ramp";
@@ -55,7 +51,7 @@ export const Template = ({
 	};
 
 	function renderTrack({ position, width }) {
-		const direction = rtl ? "right" : "left";
+		const direction = isRTL ? "right" : "left";
 		return html`
 			<div
 				class="${rootClass}-track"
@@ -73,7 +69,9 @@ export const Template = ({
 		for (let i = from; i <= to; i += step) {
 			ticks.push(html`
 				<div class="${rootClass}-tick">
-					<div class="${rootClass}-tickLabel">${i}</div>
+					<div class="${rootClass}-tickLabel">
+						${when(showTickLabels, () => html`${i}`, undefined)}
+					</div>
 				</div>
 			`);
 		}
@@ -81,7 +79,7 @@ export const Template = ({
 	}
 
 	function renderHandle({ position, value, idx = 0 }) {
-		const direction = rtl ? "right" : "left";
+		const direction = isRTL ? "left" : "right";
 		return html`
 			<div
 				class=${classMap({
@@ -90,11 +88,9 @@ export const Template = ({
 					"is-dragged": false, // note: this only applies z-index; no other styles
 					"is-tophandle": false, // todo: when is this supposed to be used
 				})}
-				style=${ifDefined(
-					styleMap({
-						[direction]: position ? `${position}%` : undefined,
-					})
-				)}
+				style=${styleMap({
+					[direction]: position ? `${position}%` : undefined,
+				})}
 			>
 				<input
 					type="range"
@@ -104,7 +100,7 @@ export const Template = ({
 					step=${ifDefined(step)}
 					min=${ifDefined(min)}
 					max=${ifDefined(max)}
-					@change=${(event) => {
+					@change=${function(event) {
 						if (isDisabled) return;
 						updateArgs({ value: event.target.value });
 					}}
@@ -128,19 +124,17 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap({
-				"max-width": "240px",
+				"inline-size": "240px",
 				["--spectrum-slider-track-color"]: fillColor,
 				...customStyles,
 			})}
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
 			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
-			@focusin=${() => {
-				const focusClass = { isFocused: true };
-				updateArgs(focusClass);
+			@focusin=${function() {
+				updateArgs({ isFocused: true });
 			}}
-			@focusout=${() => {
-				const focusClass = { isFocused: false };
-				updateArgs(focusClass);
+			@focusout=${function() {
+				updateArgs({ isFocused: false });
 			}}
 		>
 			<!-- Label region -->
@@ -150,25 +144,25 @@ export const Template = ({
 				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
 			>
 				${FieldLabel({
-					...globals,
 					size,
 					label,
 					isDisabled,
 					id: id ? `${id}-label` : undefined,
 					forInput: id ? `${id}-1` : undefined,
 					customClasses: [`${rootClass}-label`],
-				})}
+				}, context)}
 				${when(values.length && labelPosition != "side", () => html`
-				<div
-					class="${rootClass}-value"
-					role="textbox"
-					aria-readonly="true"
-					aria-labelledby=${ifDefined(
-						id && label ? `${id}-label` : undefined
-					)}
-				>
-					${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
-				</div>`)}
+					<div
+						class="${rootClass}-value"
+						role="textbox"
+						aria-readonly="true"
+						aria-labelledby=${ifDefined(
+							id && label ? `${id}-label` : undefined
+						)}
+					>
+						${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+					</div>
+				`)}
 			</div>`)}
 
 			<!-- Slider controls -->
@@ -213,7 +207,7 @@ export const Template = ({
 									})}
 									style=${ifDefined(
 										styleMap({
-											[rtl ? "right" : "left"]: `${
+											[isRTL ? "right" : "left"]: `${
 												value > centerPoint
 													? getPosition(centerPoint)
 													: getPosition(value)
@@ -227,20 +221,21 @@ export const Template = ({
 				})}
 			</div>
 			${when(values.length && labelPosition === "side", () => html`
-			<div
-				class="${rootClass}-labelContainer"
-				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
-			>
 				<div
-					class="${rootClass}-value"
-					role="textbox"
-					aria-readonly="true"
-					aria-labelledby=${ifDefined(
-						id && label ? `${id}-label` : undefined
-					)}
+					class="${rootClass}-labelContainer"
+					role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
 				>
-					${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+					<div
+						class="${rootClass}-value"
+						role="textbox"
+						aria-readonly="true"
+						aria-labelledby=${ifDefined(
+							id && label ? `${id}-label` : undefined
+						)}
+					>
+						${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+					</div>
 				</div>
-			</div>`)}
+			`)}
 		</div>`;
 };

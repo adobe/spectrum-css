@@ -1,3 +1,4 @@
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -9,10 +10,11 @@ export const Template = ({
 	rootClass = "spectrum-Asset",
 	image,
 	preset,
-	id,
+	id = getRandomId("asset"),
 	customClasses = [],
 	customStyles = {},
-}) => {
+	isImageFill = false,
+} = {}) => {
 	let visual;
 	if (preset === "file") {
 		visual = svg`
@@ -33,9 +35,8 @@ export const Template = ({
 			class="${rootClass}-image"
 			src=${ifDefined(image)}
 			style=${styleMap({
-				"max-width": "75%",
-				"max-height": "75%",
-				"object-fit": "contain",
+				"max-inline-size": !isImageFill ? "75%" : undefined,
+				"max-block-size": !isImageFill ? "75%" : undefined,
 			})}
 		/>`;
 	}

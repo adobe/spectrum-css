@@ -1,3 +1,5 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -5,28 +7,24 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-
 import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-FieldLabel",
 	customClasses = [],
+	customStyles = {},
 	size = "m",
 	label,
-	id,
+	id = getRandomId("fieldlabel"),
+	testId,
 	forInput,
 	alignment,
 	isDisabled,
 	isRequired,
-	customStyles = {},
 	staticColor,
-	style = {},
-	...globals
-}) => {
+} = {}, context = {}) => {
 	if (!label) {
 		console.warn("FieldLabel: please provide a label for the field label.");
-		return html``;
 	}
 
 	let iconName = "Asterisk100";
@@ -44,7 +42,9 @@ export const Template = ({
 			iconName = "Asterisk100";
 	}
 
-	const labelMarkup = html`
+	const icon = Icon({ size, iconName, setName: "ui", customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`] }, context);
+
+	return html`
 		<label
 			class=${classMap({
 				[rootClass]: true,
@@ -57,28 +57,11 @@ export const Template = ({
 			})}
 			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 			for=${ifDefined(forInput)}
 		>
-			${label}${when(isRequired, () => Icon({
-				...globals,
-				size,
-				iconName,
-				customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],
-			}))}
+			${label}
+			${when(isRequired, () => icon)}
 		</label>
 	`;
-
-	// When using the static color variants, wrap the label in an example element with a background color.
-	return !staticColor
-		? labelMarkup
-		: html`
-			<div
-				style=${styleMap({
-					padding: "1rem",
-					backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
-				})}
-			</div>
-				${labelMarkup}
-			</div>
-		`;
 };

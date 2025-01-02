@@ -1,11 +1,9 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -18,10 +16,9 @@ export const Template = ({
 	isDisabled = true,
 	isEmphasized = false,
 	customClasses = [],
-	id,
-	...globals
-}) => {
-	const [, updateArgs] = useArgs();
+	id = getRandomId("rating"),
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	return html`
 		<div
@@ -29,30 +26,29 @@ export const Template = ({
 				[rootClass]: true,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
+				"is-focused": isFocused,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			@focusin=${() => {
+			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}
-			@focusout=${() => {
+			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
 		>
 			<input
 				class=${classMap({
 					[`${rootClass}-input`]: true,
-					["is-Focus"]: isFocused,
 				})}
 				type="range"
 				min="0"
 				max=${max}
 				value=${value}
 				aria-label="Rating"
-				?readonly=${isReadOnly}
 				?disabled=${isDisabled}
-				@change=${(e) => {
+				@change=${function(e) {
 					const rating = e.target.closest(`.${rootClass}`);
 					if (!rating) return;
 
@@ -69,24 +65,23 @@ export const Template = ({
 					<span
 						class=${classMap({
 							[`${rootClass}-icon`]: true,
-							"is-selected": !isDisabled && idx <= value - 1,
-							"is-currentValue":
-								!isDisabled && !isReadOnly && idx === value - 1,
+							"is-selected": idx <= value - 1,
+							"is-currentValue": idx === value - 1,
 						})}
-						@click=${() => {
+						@click=${function() {
 							updateArgs({ value: idx + 1, isFocused: true });
 						}}
 					>
 						${Icon({
-							...globals,
 							iconName: "Star",
+							setName: "workflow",
 							customClasses: [`${rootClass}-starActive`],
-						})}
+						}, context)}
 						${Icon({
-							...globals,
 							iconName: "StarOutline",
+							setName: "workflow",
 							customClasses: [`${rootClass}-starInactive`],
-						})}
+						}, context)}
 					</span>
 				`
 			)}

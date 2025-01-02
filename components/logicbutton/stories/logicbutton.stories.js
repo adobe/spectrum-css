@@ -1,4 +1,9 @@
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { LogicButtonGroup } from "./logicbutton.test.js";
+import { Template, VariantGroup } from "./template.js";
 
 /**
  * A logic button displays an operator within a boolean logic sequence.
@@ -17,15 +22,7 @@ export default {
 			options: ["and", "or"],
 			control: "inline-radio",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-LogicButton",
@@ -33,24 +30,42 @@ export default {
 		isDisabled: false,
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
 };
 
-export const Default = Template.bind({});
+/**
+ * The default logic button is the And variant.
+ */
+export const Default = LogicButtonGroup.bind({});
 Default.args = {};
 
+// ********* DOCS ONLY ********* //
 export const Or = Template.bind({});
+Or.tags = ["!dev"];
 Or.args = {
-	variant: "or"
+	variant: "or",
+};
+Or.parameters = {
+	chromatic: { disableSnapshot: true }
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = VariantGroup.bind({});
+Disabled.tags = ["!dev"];
 Disabled.args = {
-	isDisabled: true
+	isDisabled: true,
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = LogicButtonGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes,
+	},
 };

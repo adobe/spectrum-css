@@ -1,49 +1,50 @@
-import { html } from "lit";
-
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 
 export const Template = ({
-	popoverId = "popover-1",
-	popoverTestId = "popover-1",
-	popoverTriggerId = "trigger",
-	customStyles = {},
+	id = getRandomId("actionmenu"),
+	testId,
+	triggerId = getRandomId("actionmenu-trigger"),
 	customClasses = [],
+	customStyles = {},
 	items = [],
 	isOpen = false,
 	label,
-	iconName,
+	iconName = "More",
+	iconSet = "workflow",
 	size = "m",
-	...globals
-}) => {
-	if (!items.length) {
-		console.warn("ActionMenu: requires items be passed in to render.");
-		return html``;
-	}
-
+	...popoverArgs
+} = {}, context = {}) => {
 	return Popover({
-		...globals,
-		position: "bottom",
+		size,
 		isOpen,
-		id: popoverId,
-		testId: popoverTestId,
-		triggerId: popoverTriggerId,
+		withTip: false,
+		id,
+		testId: testId ?? id,
+		triggerId,
+		trigger: (passthroughs) =>
+			ActionButton({
+				...passthroughs,
+				size,
+				label,
+				hasPopup: "menu",
+				iconName,
+				iconSet,
+				id: triggerId,
+				customClasses,
+			}, context),
+		position: "bottom-start",
 		customStyles,
 		content: [
-			Menu({ items })
+			(passthroughs) => Menu({
+				...passthroughs,
+				items,
+				isOpen,
+				size
+			}, context)
 		],
-		trigger: (passthroughs) => ActionButton({
-			size,
-			label,
-			isQuiet: false,
-			isEmphasized: false,
-			hasPopup: false,
-			isSelected: isOpen,
-			iconName: iconName ?? "More",
-			id: popoverTriggerId,
-			customClasses,
-			...passthroughs,
-		})
-	});
+		...popoverArgs,
+	}, context);
 };

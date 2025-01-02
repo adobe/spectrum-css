@@ -1,8 +1,10 @@
+import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
+import { Container } from "@spectrum-css/preview/decorators";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-
-import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -12,9 +14,9 @@ export const Template = ({
 	isDisabled = false,
 	isQuiet = false,
 	size,
-	...globals
-}) => {
-
+	hasDescription = false,
+	description,
+} = {}, context = {}) => {
 	return html`
 		<form
 			class=${classMap({
@@ -27,7 +29,6 @@ export const Template = ({
 			})}
 		>
 			${TextField({
-				...globals,
 				isDisabled,
 				isQuiet,
 				size,
@@ -39,13 +40,37 @@ export const Template = ({
 				customInputClasses: [`${rootClass}-input`],
 				customIconClasses: [`${rootClass}-icon`],
 				autocomplete: false,
-			})}
+			}, context)}
 			${ClearButton({
-				...globals,
-				isDisabled,
-				size,
-				customClasses: [`${rootClass}-clearButton`],
-			})}
+					isDisabled,
+					size,
+					customClasses: [`${rootClass}-clearButton`],
+				}, context)}
+			${when(hasDescription, () =>
+				HelpText({
+					text: description,
+					size,
+					isDisabled
+				}, context ))}
 		</form>
 	`;
 };
+
+export const SearchOptions = ({
+	...args
+}, context = {}) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+		${Template({
+			...args,
+		}, context)}
+		${Template({
+			...args,
+			isQuiet: true
+		}, context)}
+	`
+}, context);

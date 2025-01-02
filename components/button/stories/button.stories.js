@@ -1,13 +1,11 @@
-import { withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
-
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-
-import { Template } from "./template";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isActive, isDisabled, isFocused, isHovered, isPending, size, staticColor } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { ButtonGroups } from "./button.test.js";
+import { ButtonsWithIconOptions, TextOverflowTemplate, TextWrapTemplate, TreatmentTemplate } from "./template.js";
 
 /**
  * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
@@ -16,16 +14,7 @@ export default {
 	title: "Button",
 	component: "Button",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -64,62 +53,19 @@ export default {
 			options: ["fill", "outline"],
 			control: "inline-radio",
 		},
-		isDisabled: {
-			name: "Disabled",
+		isDisabled,
+		isHovered,
+		isFocused,
+		isActive,
+		isPending,
+		staticColor,
+		noWrap: {
+			name: "Disable label wrap",
+			description: "Used to keep the button label text on one line. Note that this option is not a part of the design specifications which intend for the label to wrap. Use with care and consideration of this option's overflow behavior and the readability of the button's content.",
 			type: { name: "boolean" },
 			table: {
-				type: { summary: "boolean" },
-				category: "State",
+				category: "Advanced",
 			},
-			control: "boolean",
-		},
-		isHovered: {
-			name: "Hovered",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isActive: {
-			name: "Active",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isPending: {
-			name: "Pending",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		staticColor: {
-			name: "Static color",
-			description: "Variants that can be used when a button needs to be placed on top of a colored background or a visual.",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-
-			},
-			options: ["white", "black"],
-			control: "select",
 		},
 	},
 	args: {
@@ -133,400 +79,74 @@ export default {
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
+		noWrap: false,
 	},
 	parameters: {
 		actions: {
 			handles: ["click .spectrum-Button"],
 		},
-		status: {
-			type: "migrated",
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=707-2774",
 		},
 		html: {
 			root: "#render-root"
-		}
+		},
+		downState: {
+			selectors: [".spectrum-Button:not(:disabled)"],
+		},
+		packageJson,
+		metadata,
 	},
 	decorators: [
-		withDownStateDimensionCapture(".spectrum-Button:not(:disabled)"),
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 10px 10px;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "flex-start",
-					gap: "10px",
-					"--mod-detail-margin-end": "6px",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
+		withDownStateDimensionCapture,
 	],
+	tags: ["!autodocs", "migrated"],
 };
 
-/**
- * Multiple button variations displayed in one story template.
- * Used as the base template for the stories.
- */
-const CustomButton = ({
-	iconName,
-	...args
-}) => html`
-	${Template({
-		...args,
-		iconName: undefined,
-	})}
-	${Template({
-		...args,
-		iconName: iconName ?? "Edit",
-	})}
-	${Template({
-		...args,
-		hideLabel: true,
-		iconName: iconName ?? "Edit",
-	})}
-`;
-
-/**
- * Chromatic only template for displaying all button states.
- */
-const States = (args) =>
-	html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Default"],
-			})}
-			${Treatment(args)}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Selected"],
-			})}
-			${Treatment({
-				...args,
-				isSelected: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Focused"],
-			})}
-			${Treatment({
-				...args,
-				isFocused: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Hovered"],
-			})}
-			${Treatment({
-				...args,
-				isHovered: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Active"],
-			})}
-			${Treatment({
-				...args,
-				isActive: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled"],
-			})}
-			${Treatment({
-				...args,
-				isDisabled: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled + selected"],
-			})}
-			${Treatment({
-				...args,
-				isSelected: true,
-				isDisabled: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Pending"],
-			})}
-			${Treatment({
-				...args,
-				isPending: true,
-			})}
-		</div>`;
-
-/**
- * Display with all size options, and all treatments.
- */
-const Sizes = (args) =>
-	html` ${["s", "m", "l", "xl"].map((size) => {
-		return html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: [
-					{
-						xxs: "Extra-extra-small",
-						xs: "Extra-small",
-						s: "Small",
-						m: "Medium",
-						l: "Large",
-						xl: "Extra-large",
-						xxl: "Extra-extra-large",
-					}[size],
-				],
-			})}
-			${Treatment({ ...args, size })}
-		</div>`;
-	})}`;
-
-/**
- * Display all treatments (fill + outline)
- */
-const Treatment = ({treatmentLayout = "inline", ...args}) => {
-	const TreatmentWrapper = (content) => html`
-		<div
-			style=${styleMap({
-				display: "flex",
-				alignItems: "flex-start",
-				gap: "10px",
-			})}
-			id="render-root"
-		>${content}</div>`;
-
-	// Stacked: display within separate wrappers so each treatment is in its own row.
-	if (treatmentLayout == "stacked") {
-		return html`${["fill", "outline"].map((treatment) => TreatmentWrapper(CustomButton({ ...args, treatment })))}`;
-	}
-	// Inline / default: display within the same wrapper, in a single row.
-	return TreatmentWrapper(html`${["fill", "outline"].map((treatment) => CustomButton({ ...args, treatment }))}`);
-};
-
-/* Text overflow scenarios. */
-const Wrapping = (args) => html`
-	${Template({
-		...args,
-		customStyles: {
-			"max-inline-size": "480px",
-		},
-		label: "An example of text overflow behavior when there is no icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-	})}
-	${Template({
-		...args,
-		customStyles: {
-			"max-inline-size": "480px",
-		},
-		iconName: "Edit",
-		label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-	})}
-	${when(window.isChromatic(), () => html`
-		${Template({
-			...args,
-			customStyles: {
-				"max-inline-size": "480px",
-			},
-			// Uses a UI icon that is smaller than workflow sizing, to test alignment:
-			iconName: "Cross100",
-			label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-		})}
-		${Template({
-			...args,
-			customStyles: {
-				"max-inline-size": "480px",
-			},
-			// UI icon that is larger than workflow sizing:
-			iconName: "ArrowDown600",
-			label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-		})}
-	`)}
-`;
-
-/**
- * Default story.
- * - Chromatic only template displays a large grid of all variants and their states
- * - User view is a single set of buttons that can be adjusted with controls
- */
-const Variants = (args) => {
-	return window.isChromatic()
-		? html`<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Accent"],
-			})}
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					gap: "10px",
-				})}
-			>
-				${States(args)}
-			</div>
-		</div>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Negative"],
-			})}
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					gap: "10px",
-				})}
-			>
-				${States({
-					...args,
-					variant: "negative"
-				})}
-			</div>
-		</div>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Primary"],
-			})}
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					gap: "10px",
-				})}
-			>
-				${States({
-					...args,
-					variant: "primary"
-				})}
-			</div>
-		</div>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Secondary"],
-			})}
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					gap: "10px",
-				})}
-			>
-				${States({
-					...args,
-					variant: "secondary"
-				})}
-			</div>
-		</div>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Sizing"],
-			})}
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					gap: "10px",
-				})}
-			>
-				${Sizes(args)}
-			</div>
-		</div>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Wrapping"],
-			})}
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					gap: "10px",
-					padding: "6px"
-				})}
-			>
-				${Wrapping(args)}
-			</div>
-		</div>`
-		: CustomButtonWrap(args);
-};
-
-/**
- * Flex layout used for displaying CustomButton elements in a row.
- */
-const CustomButtonWrap = (args) =>
-	html`<div
-		style=${styleMap({
-			display: "flex",
-			gap: "10px",
-			alignItems: "flex-start",
-		})}
-		id="render-root"
-	>${CustomButton(args)}</div>`;
-
-/* Stories */
-export const Default = Variants.bind({});
+export const Default = ButtonGroups.bind({});
 Default.args = {};
 
-export const StaticColorWhite = Variants.bind({});
-StaticColorWhite.args = {
-	staticColor: "white",
-};
-
-export const StaticColorBlack = Variants.bind({});
-StaticColorBlack.args = {
-	staticColor: "black",
-};
-
-export const WithForcedColors = Variants.bind({});
+// ********* VRT ONLY ********* //
+export const WithForcedColors = ButtonGroups.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
-	chromatic: { forcedColors: "active" },
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 WithForcedColors.args = {
 	iconName: "Actions",
+	iconSet: "workflow",
 };
 
-// Stories for MDX "Docs"
-export const Accent = CustomButtonWrap.bind({});
-Accent.tags = ["is-hidden-story"];
+// ********* DOCS ONLY ********* //
+
+/**
+ * Buttons come in four different sizes: small, medium, large, and extra large. The medium size is
+ * the default and most frequently used option. Use the other sizes sparingly; they should be used
+ * to create a hierarchy of importance within the page.
+ */
+export const Sizing = (args, context) => Sizes({
+	Template: ButtonsWithIconOptions,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.args = {};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The accent button communicates strong emphasis and is reserved for encouraging critical
+ * actions. In general, only use the emphasized option for the most important action on the page.
+ */
+export const Accent = ButtonsWithIconOptions.bind({});
+Accent.tags = ["!dev"];
 Accent.args = {
 	variant: "accent",
 };
@@ -534,8 +154,13 @@ Accent.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Primary = Treatment.bind({});
-Primary.tags = ["is-hidden-story"];
+/**
+ * The primary button is for medium emphasis. Use it in place of an accent button when the
+ * action requires less prominence, or if there are multiple primary actions of the same importance
+ * in the same view. Both the fill (default) and outline styles are demonstrated in this example.
+ */
+export const Primary = TreatmentTemplate.bind({});
+Primary.tags = ["!dev"];
 Primary.args = {
 	variant: "primary",
 	treatmentLayout: "stacked",
@@ -544,8 +169,13 @@ Primary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Secondary = Treatment.bind({});
-Secondary.tags = ["is-hidden-story"];
+/**
+ * The secondary button is for low emphasis. It’s paired with other button types to surface less
+ * prominent actions, and should never be the only button in a group. Both the fill (default) and
+ * outline styles are demonstrated in this example.
+ */
+export const Secondary = TreatmentTemplate.bind({});
+Secondary.tags = ["!dev"];
 Secondary.args = {
 	variant: "secondary",
 	treatmentLayout: "stacked",
@@ -554,8 +184,12 @@ Secondary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Negative = CustomButtonWrap.bind({});
-Negative.tags = ["is-hidden-story"];
+/**
+ * The negative button is for emphasizing actions that can be destructive or have negative
+ * consequences if taken. Use it sparingly.
+ */
+export const Negative = ButtonsWithIconOptions.bind({});
+Negative.tags = ["!dev"];
 Negative.args = {
 	variant: "negative",
 };
@@ -563,8 +197,8 @@ Negative.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticWhitePrimary = Treatment.bind({});
-StaticWhitePrimary.tags = ["is-hidden-story"];
+export const StaticWhitePrimary = TreatmentTemplate.bind({});
+StaticWhitePrimary.tags = ["!dev"];
 StaticWhitePrimary.args = {
 	variant: "primary",
 	treatmentLayout: "stacked",
@@ -574,8 +208,8 @@ StaticWhitePrimary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticWhiteSecondary = Treatment.bind({});
-StaticWhiteSecondary.tags = ["is-hidden-story"];
+export const StaticWhiteSecondary = TreatmentTemplate.bind({});
+StaticWhiteSecondary.tags = ["!dev"];
 StaticWhiteSecondary.args = {
 	variant: "secondary",
 	treatmentLayout: "stacked",
@@ -585,8 +219,8 @@ StaticWhiteSecondary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticBlackPrimary = Treatment.bind({});
-StaticBlackPrimary.tags = ["is-hidden-story"];
+export const StaticBlackPrimary = TreatmentTemplate.bind({});
+StaticBlackPrimary.tags = ["!dev"];
 StaticBlackPrimary.args = {
 	variant: "primary",
 	treatmentLayout: "stacked",
@@ -596,8 +230,8 @@ StaticBlackPrimary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticBlackSecondary = Treatment.bind({});
-StaticBlackSecondary.tags = ["is-hidden-story"];
+export const StaticBlackSecondary = TreatmentTemplate.bind({});
+StaticBlackSecondary.tags = ["!dev"];
 StaticBlackSecondary.args = {
 	variant: "secondary",
 	treatmentLayout: "stacked",
@@ -607,17 +241,15 @@ StaticBlackSecondary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Sizing = Sizes.bind({});
-Sizing.tags = ["is-hidden-story"];
-Sizing.args = {
-	variant: "primary",
-};
-Sizing.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const Pending = CustomButtonWrap.bind({});
-Pending.tags = ["is-hidden-story"];
+/**
+ * The pending button is for indicating that a quick progress action is taking place. In this case, the
+ * label and optional icon disappear and a progress circle appears. The progress circle always shows an
+ * indeterminate progress. We recommend the use of the `.is-pending` class on the component’s parent
+ * container, but there is also an option to use an attribute of `pending` instead. Buttons should have
+ * the disabled attribute when the pending state is applied.
+ */
+export const Pending = TreatmentTemplate.bind({});
+Pending.tags = ["!dev"];
 Pending.args = {
 	variant: "accent",
 	isPending: true,
@@ -627,8 +259,13 @@ Pending.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Disabled = CustomButtonWrap.bind({});
-Disabled.tags = ["is-hidden-story"];
+/**
+ * A button in a disabled state shows that an action exists, but is not available in that circumstance.
+ * This state can be used to maintain layout continuity and to communicate that an action may become
+ * available later.
+ */
+export const Disabled = TreatmentTemplate.bind({});
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	variant: "accent",
 	isDisabled: true,
@@ -637,12 +274,35 @@ Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const WithWrapping = Wrapping.bind({});
-WithWrapping.tags = ["is-hidden-story"];
-WithWrapping.storyName = "Wrapping";
+/**
+ * When the button text is too long for the horizontal space available, it wraps to form another line.
+ * When there is no icon present, the text is aligned center. When there is an icon present, the text is
+ * aligned `start` (left with a writing direction of left-to-right) and the icon remains vertically aligned
+ * at the top.
+ */
+export const WithWrapping = TextOverflowTemplate.bind({});
+WithWrapping.tags = ["!dev"];
+WithWrapping.storyName = "Text overflow behavior";
 WithWrapping.args = {
 	variant: "primary",
 };
 WithWrapping.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The normal behavior for lengthy text in the given horizontal space available is that it will wrap to form another line. By using the `.spectrum-Button--noWrap` class, the lengthy button text will not cause a line break and the width of the button will expand until it reaches its maximum width.
+ * Please note: this can cause undesired overflow experiences and to help prevent this, the overflowing text will attempt to hide by showing an ellipsis (...). This is demonstrated in the last two examples below, by constraining the maximum width of the button.
+ * This option is not part of the design spec, so please use carefully, with consideration of the overflow behavior and the readability of the button's content.
+ * */
+
+export const DisableWrapping = TextWrapTemplate.bind({});
+DisableWrapping.tags = ["!dev"];
+DisableWrapping.storyName = "Disable label wrap";
+DisableWrapping.args = {
+	variant: "primary",
+};
+
+DisableWrapping.parameters = {
 	chromatic: { disableSnapshot: true },
 };

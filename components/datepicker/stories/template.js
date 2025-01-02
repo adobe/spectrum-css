@@ -1,20 +1,18 @@
+import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
+import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { when } from "lit-html/directives/when.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
-import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-
-import { useArgs, useGlobals } from "@storybook/preview-api";
-
 import "../index.css";
 
-export const Template = ({
+export const DatePicker = ({
 	rootClass = "spectrum-DatePicker",
-	id,
+	id = getRandomId("datepicker"),
 	customClasses = [],
 	isOpen = true,
 	isInvalid = false,
@@ -24,15 +22,15 @@ export const Template = ({
 	isDateTimeRange = false,
 	isDisabled = false,
 	isRequired = false,
-	readOnly = false,
+	isReadOnly = false,
 	selectedDay,
 	lastDay,
-	...globals
-}) => {
-	const [, updateArgs] = useArgs();
-	const [{ lang }] = useGlobals();
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
 
+	const lang = globals.lang ?? "en-US";
 
+	const triggerId = getRandomId("datepicker-trigger");
 
 	return html`
 		<div
@@ -50,50 +48,49 @@ export const Template = ({
 			id=${ifDefined(id)}
 			aria-disabled=${isDisabled ? "true" : "false"}
 			aria-invalid=${ifDefined(isInvalid && !isDisabled ? "false" : undefined)}
-			aria-readonly=${ifDefined(readOnly ? "true" : "false")}
+			aria-readonly=${ifDefined(isReadOnly ? "true" : "false")}
 			aria-required=${ifDefined(isRequired ? "true" : "false")}
 			aria-haspopup="dialog"
 		>
 			${TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
-				isReadOnly: readOnly,
+				isReadOnly,
 				isInvalid: !isRange ? isInvalid : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
 				placeholder: "Choose a date",
 				name: "field",
+				id: triggerId,
 				value: selectedDay ? new Date(selectedDay).toLocaleDateString(lang) : undefined,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
-			})}
+			}, context)}
 			${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
 			${when(isRange, () => TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
+				isReadOnly,
 				isInvalid,
-				isReadOnly: readOnly,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
 				placeholder: "Choose a date",
 				name: "field",
-				value: lastDay
-					? new Date(lastDay).toLocaleDateString(lang)
-					: undefined,
-			}))}
+				value: lastDay ? new Date(lastDay).toLocaleDateString(lang) : undefined,
+				onclick: function () {
+					if (!isOpen) updateArgs({ isOpen: true });
+				},
+			}, context))}
 			${PickerButton({
-				...globals,
 				customClasses: [`${rootClass}-button`],
 				size: "m",
-				iconType: "workflow",
 				iconName: "Calendar",
+				iconSet: "workflow",
 				isQuiet,
-				customStyles: readOnly ? { "display": "none" } : undefined,
+				customStyles: isReadOnly ? { "display": "none" } : undefined,
 				// @todo this is not added to the button on the website; need to make sure it's not a bug
 				// isOpen,
 				isInvalid,
@@ -102,24 +99,55 @@ export const Template = ({
 				onclick: function () {
 					updateArgs({ isOpen: !isOpen });
 				},
-			})}
-			${Popover({
-				...globals,
-				isOpen: isOpen && !isDisabled && !readOnly,
-				withTip: false,
-				position: "bottom",
-				isQuiet,
-				customStyles: isOpen
-					? {
-							position: "absolute",
-							top: "100%",
-							left: "0",
-							width: undefined,
-					}
-					: {},
-				content: [Calendar(globals)],
-				// @todo this implementation of calendar does not currently display range selections or selected date on first load
-			})}
+			}, context)}
 		</div>
 	`;
 };
+
+export const Template = ({
+	isOpen = true,
+	isQuiet = false,
+	isDisabled = false,
+	isReadOnly = false,
+	...args
+} = {}, context = {}) => {
+	return html`
+		${Popover({
+			isOpen: isOpen && !isDisabled && !isReadOnly,
+			withTip: false,
+			position: "bottom-start",
+			isQuiet,
+			trigger: (passthroughs) => DatePicker({
+				...passthroughs,
+				isOpen,
+				isQuiet,
+				isDisabled,
+				isReadOnly,
+				...args,
+			}, context),
+			content: [
+				(passthroughs) => Calendar(passthroughs, context)
+			],
+			// @todo this implementation of calendar does not currently display range selections or selected date on first load
+		}, context)}
+	`;
+};
+
+
+/* Displays open and closed date pickers. */
+export const OpenClosedTemplate = (args, context) => Container({
+	withBorder: false,
+	wrapperStyles: { "column-gap": "56px", },
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Open",
+			content: Template(args, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Closed",
+			content: Template({...args, isOpen: false}, context),
+		})}
+	`
+});

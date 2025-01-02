@@ -1,16 +1,57 @@
-import { useArgs } from "@storybook/preview-api";
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
-
 import "../index.css";
 
+/**
+ * @typedef API
+ * @property {string} [rootClass="spectrum-Textfield"]
+ * @property {string} [size="m"]
+ * @property {string[]} [customClasses=[]]
+ * @property {string[]} [customInputClasses=[]]
+ * @property {string[]} [customIconClasses=[]]
+ * @property {string[]} [customProgressCircleClasses=[]]
+ * @property {Record<string, string>} [customStyles={}]
+ * @property {boolean} [isInvalid=false]
+ * @property {boolean} [isValid=false]
+ * @property {boolean} [multiline=false]
+ * @property {boolean} [grows=false]
+ * @property {boolean} [isQuiet=false]
+ * @property {boolean} [isFocused=false]
+ * @property {boolean} [isDisabled=false]
+ * @property {boolean} [isRequired=false]
+ * @property {boolean} [isReadOnly=false]
+ * @property {boolean} [isKeyboardFocused=false]
+ * @property {boolean} [isLoading=false]
+ * @property {boolean} [displayLabel=false]
+ * @property {"top"|"side"} [labelPosition="top"]
+ * @property {string} [labelText]
+ * @property {string} [iconName]
+ * @property {string} [iconSet]
+ * @property {string} [pattern]
+ * @property {string|undefined} [placeholder]
+ * @property {string|undefined} [name]
+ * @property {string|undefined} [id]
+ * @property {HTMLInputElement[value]|HTMLTextAreaElement[value]} [value]
+ * @property {HTMLInputElement[type]} [type="text"]
+ * @property {boolean} [autocomplete=true]
+ * @property {Function} [onclick]
+ */
+
+/**
+ *
+ * @param {API} args
+ * @param {import('@storybook/types').StoryContext<import('@storybook/web-components').WebComponentsRenderer, API>} context
+ * @returns {import('lit').TemplateResult}
+ */
 export const Template = ({
 	rootClass = "spectrum-Textfield",
 	size = "m",
@@ -32,21 +73,23 @@ export const Template = ({
 	displayLabel = false,
 	labelPosition = "top",
 	labelText,
+	characterCount,
 	iconName,
 	iconSet,
 	pattern,
 	placeholder,
 	name,
-	id,
-	value,
+	helpText = "",
+	id = getRandomId("textfield"),
+	value = "",
 	type = "text",
 	autocomplete = true,
 	onclick,
 	customStyles = {},
-	...globals
-}) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
+	// Override icon name and set if the field is invalid or valid
 	if (isInvalid) {
 		iconName = "Alert";
 		iconSet = "workflow";
@@ -74,29 +117,42 @@ export const Template = ({
 				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			@click=${onclick}
-			@focusin=${(e) => {
-				const focusClass = e.target?.classList?.contains("focus-ring")
-					? { isKeyboardFocused: true }
-					: { isFocused: true };
-				updateArgs(focusClass);
+			@focusin=${function() {
+				updateArgs?.({
+					isFocused: true,
+				});
 			}}
-			@focusout=${(e) => {
-				const focusClass = e.target?.classList?.contains("focus-ring")
-					? { isKeyboardFocused: false }
-					: { isFocused: false };
-				updateArgs(focusClass);
+			@keyup=${function(e) {
+				// Tab key was used.
+				if (e.keyCode === 9) {
+					// The element that was focused when the key was released is this textfield / input.
+					if (e.target == this || e.target?.parentNode == this) {
+						updateArgs?.({ isKeyboardFocused: true });
+						// Manually add class since updateArgs doesn't always work on the Docs page.
+						this.classList.add("is-keyboardFocused");
+					}
+				}
+			}}
+			@focusout=${function() {
+				updateArgs?.({
+					isFocused: false,
+					isKeyboardFocused: false,
+				});
+				// Manually remove class since updateArgs doesn't always work on the Docs page.
+				this.classList.remove("is-keyboardFocused");
 			}}
 			id=${ifDefined(id)}
 		>
 		${when(displayLabel, () => FieldLabel({
-			...globals,
 			size,
 			label: labelText,
-		}))}
+			isDisabled,
+		}, context))}
+		${when(typeof characterCount !== "undefined", () => html`
+			<span class="${rootClass}-characterCount">${characterCount}</span>`)}
 		${when(iconName, () => Icon({
-			...globals,
 			size,
 			iconName,
 			setName: iconSet,
@@ -106,17 +162,17 @@ export const Template = ({
 					: `${rootClass}-icon`,
 				...customIconClasses,
 			],
-		}))}
+		}, context))}
 		${when(multiline,
 			() => html`<textarea
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
-				.value=${ifDefined(value)}
-				autocomplete=${autocomplete ? undefined : "off"}
+				.value=${value}
+				autocomplete=${ifDefined(autocomplete ? undefined : "off")}
 				?required=${isRequired}
 				?disabled=${isDisabled}
-				?readonly=${ifDefined(isReadOnly)}
+				?readonly=${isReadOnly}
 				pattern=${ifDefined(pattern)}
 				class=${classMap({
 					[`${rootClass}-input`]: true,
@@ -128,11 +184,11 @@ export const Template = ({
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
-				.value=${ifDefined(value)}
-				autocomplete=${autocomplete ? undefined : "off"}
+				.value=${value}
+				autocomplete=${ifDefined(autocomplete ? undefined : "off")}
 				?required=${isRequired}
 				?disabled=${isDisabled}
-				?readonly=${ifDefined(isReadOnly)}
+				?readonly=${isReadOnly}
 				pattern=${ifDefined(pattern)}
 				class=${classMap({
 					[`${rootClass}-input`]: true,
@@ -144,7 +200,102 @@ export const Template = ({
 			isIndeterminate: true,
 			size: "s",
 			customClasses: customProgressCircleClasses,
-		}))}
+		}, context))}
+		${when(helpText, () =>
+			HelpText({
+				text: helpText,
+				variant: isInvalid ? "negative" : "neutral",
+				size,
+				hideIcon: true,
+				isDisabled
+			}, context)
+		)}
 	</div>
 	`;
 };
+
+export const HelpTextOptions = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Description",
+			content: Template({...args, isRequired: true, labelText: "Username", value: "lisawilson24", helpText: "Username must be at least 8 characters."}, context),
+		}, context)}
+		${Container({
+			withBorder: false,
+			heading: "Error message",
+			content: Template({...args, isRequired: true, labelText: "Email address", value: "abc@adobe.com", helpText: "Enter your email address", isInvalid: true }, context),
+		}, context)}
+	`
+}, context);
+
+export const TextFieldOptions = (args, context) => Container({
+	direction: "row",
+	withBorder: false,
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template(args, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid",
+			content: Template({...args, isInvalid: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Focused",
+			content: Template({...args, isFocused: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, focused",
+			content: Template({...args, isInvalid: true, isFocused: true}, context)
+		}, context)}
+	`
+}, context);
+
+export const KeyboardFocusTemplate = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Quiet",
+			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+		}, context)}
+	`
+}, context);

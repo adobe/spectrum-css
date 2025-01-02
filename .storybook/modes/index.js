@@ -12,13 +12,12 @@
  */
 
 const modes = {
-	Light: {
+	"Light | LTR": {
 		color: "light",
+		textDirection: "ltr",
 	},
-	Dark: {
+	"Dark | RTL": {
 		color: "dark",
-	},
-	RTL: {
 		textDirection: "rtl",
 	},
 };

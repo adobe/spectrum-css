@@ -1,0 +1,15 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [".spectrum-TagGroup", ".spectrum-TagGroup-item"],
+  "modifiers": [
+    "--mod-tag-group-item-margin-block",
+    "--mod-tag-group-item-margin-inline"
+  ],
+  "component": [
+    "--spectrum-tag-group-item-margin-block",
+    "--spectrum-tag-group-item-margin-inline"
+  ],
+  "global": ["--spectrum-spacing-75"],
+  "passthroughs": [],
+  "high-contrast": []
+}

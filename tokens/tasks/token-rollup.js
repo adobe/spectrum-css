@@ -20,7 +20,7 @@ const path = require("path");
 const fg = require("fast-glob");
 
 const { processCSS } = require("../../tasks/component-builder.js");
-const { copy, writeAndReport, dirs, fetchContent } = require("../../tasks/utilities.js");
+const { copy, writeAndReport, fetchContent } = require("../../tasks/utilities.js");
 
 require("colors");
 
@@ -41,71 +41,6 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 	const contents = inputs.map(input => `@import "${input}";`).join("\n");
 	if (!contents) return;
 	return processCSS(contents, undefined, outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
-}
-
-/**
- * Compile the theming assets for each component
- * @param {Object} config
- * @param {string} [config.cwd=process.cwd()] - Current working directory for the component
- * @returns
- */
-async function componentTheming() {
-	const components = fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json")));
-
-	const promises = [];
-	for (const component of components) {
-		const componentDir = path.join(dirs.components, component);
-		if (!fs.existsSync(path.join(componentDir, "themes"))) continue;
-
-		// This fetches the content of the files and returns an array of objects with the content and input paths
-		const contentData = await fetchContent(["themes/*.css"], { cwd: componentDir });
-
-		// Nothing to do if there's no content
-		if (!contentData || contentData.length === 0) continue;
-
-		const imports = contentData.map(({ input }) => `@import "${input}";`).join("\n");
-
-		const sharedPostCSSConfig = {
-			cwd: componentDir,
-			configPath: componentDir,
-			map: false,
-			env: "production",
-		};
-
-		promises.push(
-			// Create a bridge asset for each component
-			processCSS(
-				imports,
-				path.join(componentDir, "index.css"),
-				path.join(
-					dirs.tokens,
-					"dist",
-					"css",
-					"components",
-					"bridge",
-					`${component}.css`,
-				),
-				{
-					skipMapping: false,
-					stripLocalSelectors: false,
-					referencesOnly: true,
-					...sharedPostCSSConfig,
-				},
-			),
-			...contentData.map(async ({ content, input }) => {
-				return processCSS(content, path.join(componentDir, input), path.join(dirs.tokens, "dist", "css", "components", path.basename(input, ".css"), `${component}.css`), {
-					skipMapping: false,
-					// Only output the new selectors with the system mappings
-					stripLocalSelectors: true,
-					referencesOnly: false,
-					preserveVariables: true,
-					...sharedPostCSSConfig,
-				});
-			}),
-		);
-	}
-
-	return Promise.all(promises);
 }
 
 /**
@@ -155,66 +90,47 @@ async function main({
 
 	const compiledOutputPath = path.join(cwd, "dist");
 
-	return Promise.all([
-		componentTheming(),
-		// Wait for all the custom files to be processed
-		appendCustomOverrides({ cwd }),
-	]).then(async (r) => {
-		return Promise.all([
-			index(
-				["dist/css/components/bridge/*.css"],
-				path.join(compiledOutputPath, "css", "components", "bridge", "index.css"),
-				{ cwd, clean }
-			),
-			...["spectrum", "legacy", "express"].map(theme => index(
-				[`dist/css/components/${theme}/*.css`],
-				path.join(compiledOutputPath, "css", "components", theme, "index.css"),
-				{ cwd, clean }
-			)),
-			index(
-				["dist/css/*-vars.css"],
-				path.join(compiledOutputPath, "css", "index.css"),
-				{ cwd, clean }
-			).then((reports) =>
-				copy(path.join(compiledOutputPath, "css", "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false })
-					.then((reps) => [reports, reps]))
-		]).then((reports) => {
-			return [reports, r];
-		});
-	}).then((report) => {
-		const logs = report.flat(Infinity).filter(Boolean);
+	const reports = [];
+	const errors = [];
 
-		console.log(`\n\n${key} 🔨`);
-		console.log(`${"".padStart(30, "-")}`);
+	// Wait for all the custom files to be processed
+	await appendCustomOverrides({ cwd }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
+	// Then build the index.css file
+	await index(["dist/css/*-vars.css"], path.join(compiledOutputPath, "css", "index.css"), { cwd, clean }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
+
+	// Finally, copy the index.css file to the dist folder
+	await copy(path.join(compiledOutputPath, "css", "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
+
+	// Combine all the reports into a single log output
+	const logs = reports.flat(Infinity).filter(Boolean);
+	const errorLogs = errors.flat(Infinity).filter(Boolean);
+
+	console.log(`\n\n${key} 🔨`);
+	console.log(`${"".padStart(30, "-")}`);
+
+	if (!(errorLogs && errorLogs.length > 0)) {
 		if (logs && logs.length > 0) {
-			logs.sort((a,) => {
-				if (!a || typeof a !== "string") return 1;
-				if (a.includes("✓")) return -1;
-				if (a.includes("🔍")) return 0;
-				return 1;
-			}).forEach(log => {
+			logs.forEach(log => {
 				// Strip the ../../tokens/ from the paths
 				console.log(log.replace(/(\.\.\/)+tokens\//g, ""));
 			});
 		}
 		else console.log("No assets created.".gray);
+	}
+	else {
+		errorLogs.forEach(log => {
+			console.error(log);
+		});
+	}
 
-		console.log(`${"".padStart(30, "-")}`);
-		console.timeEnd(key);
-		console.log("");
-	}).catch((err) => {
-		console.log(`\n\n${key} 🔨`);
-		console.log(`${"".padStart(30, "-")}`);
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
 
-		console.trace(err);
-
-		console.log(`${"".padStart(30, "-")}`);
-		console.timeEnd(key);
-		console.log("");
-
+	if (errorLogs && errorLogs.length > 0) {
 		process.exit(1);
-	});
+	}
 }
 
 exports.default = main;

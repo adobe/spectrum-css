@@ -1,12 +1,11 @@
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { useArgs } from "@storybook/preview-api";
 import { camelCase } from "lodash-es";
-
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
 import "../index.css";
 
@@ -22,10 +21,11 @@ export const Template = ({
 	isFocused = false,
 	isDropTarget = false,
 	customClasses = [],
-	id,
-	...globals
-}) => {
-	const [, updateArgs] = useArgs();
+	customStyles = {},
+	id = getRandomId("assetcard"),
+	testId,
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	if (!image && !exampleImage) {
 		console.warn("AssetCard: image is required");
@@ -46,8 +46,16 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			@click=${() => {
+			data-testid=${ifDefined(testId)}
+			style=${styleMap(customStyles)}
+			@click=${function() {
 				updateArgs({ isSelected: !isSelected });
+			}}
+			@focusin=${function() {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${function() {
+				updateArgs({ isFocused: false });
 			}}
 			tabindex="0"
 			role="figure"
@@ -81,13 +89,12 @@ export const Template = ({
 					selection === "checkbox",
 					() =>
 						Checkbox({
-							...globals,
 							size: "m",
 							isEmphasized: true,
 							isChecked: isSelected,
 							ariaLabelledby: camelCase(title),
 							customClasses: [`${rootClass}-checkbox`],
-						}),
+						}, context),
 					() => html`<div class="${rootClass}-selectionOrder">1</div>`
 				)}
 			</div>

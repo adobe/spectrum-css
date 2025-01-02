@@ -1,4 +1,10 @@
-import { Template } from "./template";
+import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isRequired, size, staticColor } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { FieldLabelGroup } from "./fieldlabel.test.js";
+import { Template } from "./template.js";
 
 /**
  * The field label component is used along with inputs to display a label for that input.
@@ -7,16 +13,7 @@ export default {
 	title: "Field label",
 	component: "FieldLabel",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -36,35 +33,9 @@ export default {
 			options: ["left", "right"],
 			control: "select",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		staticColor: {
-			name: "Static color",
-			description: "Variants that can be used when a Field label needs to be placed on top of a colored background or a visual.",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["black", "white"],
-			control: "select",
-		},
+		isDisabled,
+		isRequired,
+		staticColor,
 	},
 	args: {
 		rootClass: "spectrum-FieldLabel",
@@ -72,53 +43,134 @@ export default {
 		alignment: "left",
 		isDisabled: false,
 		isRequired: false,
+		label: "Label",
 	},
 	parameters: {
-		actions: {
-			handles: [],
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=16090-95",
 		},
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
+	tags: ["migrated"],
 };
 
-export const Default = Template.bind({});
-Default.args = {
-	label: "Label",
+/**
+ * By default, a field label has left-aligned text, and is a medium size. For field label text, use a short, catch-all description (1-3 words) of the information that a user needs to provide.
+ *
+ * The default position of a field label is above an input, but it can alternatively be positioned to the side. Visit the [form component](/docs/components-form--docs) to see examples of the field label with an input.
+
+ */
+export const Default = FieldLabelGroup.bind({});
+Default.args = {};
+
+// ********* DOCS ONLY ********* //
+/**
+ * Field labels come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequently used option with medium-sized inputs. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
+ *
+ * Both small and medium field labels have the same font size, but different paddings when used as side labels.
+ */
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withBorder: false,
+	withHeading: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * To render right-aligned field label text, apply the `.spectrum-FieldLabel--right` class to the field label.
+ *
+ */
 export const RightAligned = Template.bind({});
 RightAligned.args = {
 	label: "Label",
 	alignment: "right",
-	customStyles: { width: "72px" },
+	customStyles: {
+		width: "72px",
+	},
 };
+RightAligned.tags = ["!dev"];
+RightAligned.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+RightAligned.storyName = "Right-aligned";
 
+/**
+ * Field labels for required inputs can be marked with an asterisk at the end of the label. Optional inputs would then be understood to not have the asterisk. If using the asterisk icon, do not leave any space between the label text and the start of the `<svg>` element in the markup. Extra space should not be added in addition to the inline margin.
+ *
+ * The field label for a required field can display either the text “(required)”, or an asterisk.
+ */
 export const Required = Template.bind({});
 Required.args = {
-	label: "Label example",
-	alignment: "left",
 	isRequired: true,
-	customStyles: { width: "200px" },
+};
+Required.tags = ["!dev"];
+Required.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * When the field label is too long for the available horizontal space, it wraps to form another line.
+ */
 export const WrappingAndRequired = Template.bind({});
 WrappingAndRequired.args = {
 	label: "Label example with longer text that will wrap to the next line. And with an asterisk that marks it as required.",
-	alignment: "left",
 	isRequired: true,
 	customStyles: { width: "200px" },
 };
+WrappingAndRequired.tags = ["!dev"];
+WrappingAndRequired.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+WrappingAndRequired.storyName = "Wrapping and required";
 
-export const StaticWhite = Template.bind({});
-StaticWhite.args = {
-	label: "The static white class used on a label marked as required",
-	staticColor: "white",
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true,
+};
+Disabled.tags = ["!dev"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
-export const StaticBlack = Template.bind({});
+/**
+ * Use static white on dark color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
+ */
+export const StaticWhite = Default.bind({});
+StaticWhite.storyName = "Static white";
+StaticWhite.args = {
+	staticColor: "white",
+};
+StaticWhite.tags = ["!dev"];
+StaticWhite.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Use static black on light color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
+ */
+export const StaticBlack = Default.bind({});
+StaticBlack.storyName = "Static black";
 StaticBlack.args = {
-	label: "The static black class used on a label marked as required",
 	staticColor: "black",
+};
+StaticBlack.tags = ["!dev"];
+StaticBlack.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = FieldLabelGroup.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

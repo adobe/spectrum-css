@@ -1,11 +1,13 @@
-import { html } from "lit";
-
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
-
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { html } from "lit";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { IllustratedMessageGroup } from "./illustratedmessage.test.js";
+import { Template } from "./template.js";
 
 /**
- * The illustrated message component is used for status and errors. It is also used for calls-to-action, such as within the drop zone component.
+ * The Illustrated Message displays an illustration along with a heading and description. Optionally, part of the illustration can use an accent color. It can be used for status and errors, or as a call to action. For example, the Drop Zone component makes use of Illustrated Message as an area to drag and drop files.
  */
 export default {
 	title: "Illustrated message",
@@ -39,45 +41,31 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
+		useAccentColor: false,
 	},
 	parameters: {
-		actions: {
-			handles: [],
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=20032-601",
 		},
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
 };
 
-export const Default = (args) => html`
-	<div>
-		${Template({
-			...args,
-			heading: "Error 404: Page not found",
-			description: [
-				"This page isn't available. Try checking the URL or visit a different page.",
-			],
-			useAccentColor: false,
-		})}
-		${window.isChromatic() ?
-			Template({
-				...args,
-				heading: "Error 404: This is not the page you're looking for",
-				description: [
-					"This page isn't available.",
-				],
-				useAccentColor: false,
-			})
-			: null
-		}
-	</div>
-`;
+export const Default = IllustratedMessageGroup.bind({});
+Default.args = {
+	heading: "Error 404: Page not found",
+	description: [
+		"This page isn't available. Try checking the URL or visit a different page.",
+	],
+};
 
 /**
- * An accent color class can be used on elements of the illustration SVG.
+ * To use the accent color, the class `.spectrum-IllustratedMessage-accent` can be added to element(s) within the illustration SVG.
  */
 export const AccentColor = Template.bind({});
+AccentColor.tags = ["!dev"];
 AccentColor.args = {
 	heading: "Drag and drop your file",
 	description: [
@@ -86,4 +74,17 @@ AccentColor.args = {
 		},
 	],
 	useAccentColor: true,
+};
+AccentColor.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = IllustratedMessageGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

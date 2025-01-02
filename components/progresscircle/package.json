@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/progresscircle",
-	"version": "3.1.0",
+	"version": "4.0.0-s2-foundations.16",
 	"description": "The Spectrum CSS progress circle component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -17,22 +17,25 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"stories/*",
+		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
+		"@spectrum-css/tokens": ">=14.0.0-next.0"
+	},
+	"devDependencies": {
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",
@@ -42,5 +45,12 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/progress-circle",
+			"rootClass": "spectrum-ProgressCircle",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/progress-circle/"
+		}
+	]
 }

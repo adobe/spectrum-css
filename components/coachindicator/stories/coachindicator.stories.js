@@ -1,23 +1,22 @@
-import { html } from "lit";
-
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isQuiet, staticColor } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { CoachIndicatorGroup } from "./coachindicator.test.js";
+import { Template } from "./template.js";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
+ *
+ * Coach indicator is primarily used along with the [coach mark](/docs/components-coach-mark--docs) component.
+ *
+ * **Deprecation notice for S2**: The "dark" variant will be deprecated entirely, and "light" variant will be deprecated in favor of "static white".
  */
 export default {
-	title: "components/Coach indicator",
+	title: "Coach indicator",
 	component: "CoachIndicator",
 	argTypes: {
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isQuiet,
 		variant: {
 			name: "Variant",
 			type: { name: "string" },
@@ -28,6 +27,10 @@ export default {
 			options: ["default", "dark", "light"],
 			control: "select"
 		},
+		staticColor: {
+			...staticColor,
+			options: ["white"],
+		},
 	},
 	args: {
 		rootClass: "spectrum-CoachIndicator",
@@ -35,50 +38,71 @@ export default {
 		variant: "default",
 	},
 	parameters: {
-		actions: {
-			handles: [],
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=48600-896",
 		},
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
 };
 
-const chromaticGroup = (args) => html`
-	<div>
-		${Template({
-			...args,
-			variant: "default"
-		})}
-		${Template({
-			...args,
-			variant: "dark"
-		})}
-		${Template({
-			...args,
-			variant: "light"
-			})}
-		${Template({
-			...args,
-			variant: "default",
-			isQuiet: true
-		})}
-		${Template({
-			...args,
-			variant: "dark",
-			isQuiet: true
-		})}
-		${Template({
-			...args,
-			variant: "light",
-			isQuiet: true
-			})}
-	</div>
-`;
+export const Default = CoachIndicatorGroup.bind({});
+Default.args = {};
+Default.parameters = {
+	chromatic: {
+		prefersReducedMotion: "reduce",
+		pauseAnimationAtEnd: true,
+		modes: {
+			// Skips the dark mode/RTL b/c no changes are made to the component
+			"Dark | RTL": {
+				disable: true,
+			},
+		},
+	},
+};
+Default.tags = ["!autodocs"];
 
-export const Default = (args) => html`
-	${window.isChromatic() ? chromaticGroup(args) : Template(args)}
-`;
-Default.args = {
-	variant: "default"
+export const DefaultVariants = Template.bind({});
+DefaultVariants.tags = ["!dev"];
+DefaultVariants.storyName = "Default";
+DefaultVariants.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+export const QuietVariants = Template.bind({});
+QuietVariants.tags = ["!dev"];
+QuietVariants.storyName = "Quiet";
+QuietVariants.args = {
+	isQuiet: true,
+};
+QuietVariants.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * When an indicator needs to be placed on top of a visual, use the static white option. Static white does not change values depending upon the color theme.
+*/
+export const StaticWhite = Template.bind({});
+StaticWhite.args = {
+	staticColor: "white"
+};
+StaticWhite.tags = ["!dev"];
+StaticWhite.storyName = "Static White";
+StaticWhite.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = CoachIndicatorGroup.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	// Sets the forced-colors media feature for a specific story.
+	chromatic: {
+		forcedColors: "active",
+		prefersReducedMotion: "reduce",
+		pauseAnimationAtEnd: true,
+		modes: disableDefaultModes,
+	},
 };

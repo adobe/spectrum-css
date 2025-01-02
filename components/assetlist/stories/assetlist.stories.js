@@ -1,6 +1,8 @@
-import { Template } from "./template";
-
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { AssetListGroup } from "./assetlist.test.js";
 
 /**
  * A selectable list of assets, often used inside of miller columns.
@@ -16,15 +18,14 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [...Checkbox.parameters.actions.handles],
+			handles: [...(Checkbox.parameters?.actions?.handles ?? [])],
 		},
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = AssetListGroup.bind({});
 Default.args = {
 	items: [
 		{
@@ -36,6 +37,7 @@ Default.args = {
 		},
 		{
 			iconName: "Document",
+			iconSet: "workflow",
 			label: "Resource allocation documentation should truncate",
 			isSelectable: true,
 			ariaLabelledby: "assetitemlabel-2",
@@ -43,6 +45,7 @@ Default.args = {
 		},
 		{
 			iconName: "Folder",
+			iconSet: "workflow",
 			label: "Front-end Projects",
 			isSelectable: true,
 			isBranch: true,
@@ -52,6 +55,7 @@ Default.args = {
 		},
 		{
 			iconName: "Folder",
+			iconSet: "workflow",
 			label: "Downloads",
 			isSelectable: true,
 			isBranch: true,
@@ -61,4 +65,15 @@ Default.args = {
 			checkboxId: "checkbox-4",
 		},
 	],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = AssetListGroup.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

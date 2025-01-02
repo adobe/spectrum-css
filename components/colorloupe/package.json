@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/colorloupe",
-	"version": "5.1.0",
+	"version": "6.0.0-next.0",
 	"description": "The Spectrum CSS Color Loupe component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -17,30 +17,40 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"stories/*",
+		"metadata/*"
 	],
+	"peerDependencies": {
+		"@spectrum-css/tokens": ">=14.0.0-next.3"
+	},
+	"devDependencies": {
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"keywords": [
 		"spectrum",
 		"css",
 		"design system",
 		"adobe"
 	],
-	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
-	},
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/color-loupe",
+			"rootClass": "spectrum-ColorLoupe",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/color-loupe/"
+		}
+	]
 }

@@ -1,6 +1,6 @@
 // Import the component markup template
 import { html } from "lit";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 export default {
 	title: "Corner rounding",
@@ -13,7 +13,7 @@ export default {
 	tags: ["foundation"],
 };
 
-const CornerRadiusGroup = ({ customStyles = {}, ...args }, context) => html`
+const CornerRadiusGroup = ({ ...args }, context) => html`
 	<div>
 		<table class="spectrum-Foundations-Example-CornerRounding-table">
 			<thead>

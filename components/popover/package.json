@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/popover",
-	"version": "7.1.0",
+	"version": "8.0.0-next.0",
 	"description": "The Spectrum CSS popover component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -17,26 +17,26 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"stories/*",
+		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/alertdialog": ">=2",
-		"@spectrum-css/dialog": ">=10",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/menu": ">=7",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
+		"@spectrum-css/alertdialog": ">=2.1.1-next.0",
+		"@spectrum-css/dialog": ">=11.0.0-next.0",
+		"@spectrum-css/divider": ">=4.0.0-s2-foundations.0",
+		"@spectrum-css/menu": ">=8.0.0-next.0",
+		"@spectrum-css/tokens": ">=14.0.0-next.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/divider": {
@@ -47,7 +47,12 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "^10.0.0"
+		"@spectrum-css/alertdialog": "workspace:^",
+		"@spectrum-css/commons": "workspace:^",
+		"@spectrum-css/dialog": "workspace:^",
+		"@spectrum-css/divider": "workspace:^",
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",
@@ -57,5 +62,12 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/popover",
+			"rootClass": "spectrum-Popover",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/popover/"
+		}
+	]
 }

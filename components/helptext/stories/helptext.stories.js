@@ -1,4 +1,10 @@
-import { Template } from "./template";
+import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, size } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { HelpTextGroup } from "./helptext.test.js";
+import { NegativeTemplate, Template, VariantsTemplate } from "./template.js";
 
 /**
  * Help text provides either an informative description or an error message that gives more context about what a user needs to input. It's commonly used in forms.
@@ -7,14 +13,13 @@ export default {
 	title: "Help text",
 	component: "HelpText",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		text: {
 			name: "Text",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
 				disable: false,
-				category: "Component",
+				category: "Content",
 			},
 			control: { type: "text" },
 		},
@@ -28,20 +33,11 @@ export default {
 			options: ["neutral", "negative"],
 			control: "inline-radio",
 		},
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		hideIcon: {
 			name: "Hide icon",
 			type: { name: "boolean" },
-			description: "Help text using the negative variant can have an optional icon.",
+			description: "Hides the optional icon used with the negative variant.",
 			table: {
 				type: { summary: "boolean" },
 				disable: false,
@@ -50,24 +46,7 @@ export default {
 			control: "boolean",
 			if: { arg: "variant", eq: "negative" },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		customStyles: {
-			name: "Custom styles",
-			description: "Storybook only styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Advanced",
-			},
-			if: { arg: "customStyles" }
-		}
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-HelpText",
@@ -78,23 +57,94 @@ export default {
 		size: "m",
 	},
 	parameters: {
-		actions: {
-			handles: [],
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13653-196",
 		},
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
 };
 
-export const Default = Template.bind({});
-Default.storyName = "Neutral";
+/**
+ * The default neutral variant is used to convey informative messages.
+ */
+export const Default = HelpTextGroup.bind({});
 Default.args = {};
 
-export const Negative = Template.bind({});
-Negative.storyName = "Negative";
+// ********* VRT ONLY ********* //
+export const WithForcedColors = HelpTextGroup.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
+
+/**
+ * Help text comes in four different sizes: small, medium, large, and extra-large. The medium size is the default.
+ */
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.storyName = "Sizing";
+Sizing.args = {
+	variant: "negative",
+};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Help text using the neutral variant can be displayed in a disabled state. The text appears with a lighter gray that matches
+ * the style of other components in a disabled state. Help text using the negative variant cannot be displayed in a disabled
+ * state because it communicates an error, and error messages should not be visible when the component is disabled.
+ */
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true,
+};
+Disabled.tags = ["!dev"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The negative variant is used to convey error messages and can have an optional icon.
+ *
+ * In most cases, help text is used with a component that already displays an icon communicating an error (e.g.,
+ * [text field](?path=/docs/components-text-field--docs),
+ * [picker](?path=/docs/components-picker--docs),
+ * [combo box](?path=/docs/components-combobox--docs#standard---invalid)),
+ * so it’s not necessary to include another icon. In other cases, help text that is used with a component that does not display an icon
+ * communicating an error (e.g., [field group](?path=/docs/components-field-group--docs#invalid)) needs to display an icon.
+ */
+export const Negative = NegativeTemplate.bind({});
 Negative.args = {
 	variant: "negative",
-	text: "This is an example with wrapping text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-	customStyles: {"max-width": "350px"},
+};
+Negative.tags = ["!dev"];
+Negative.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * When the text is too long for the available horizontal space, it wraps to form another line.
+ */
+export const TextOverflow = VariantsTemplate.bind({});
+TextOverflow.args = {
+	variant: "negative",
+	text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+};
+TextOverflow.tags = ["!dev"];
+TextOverflow.parameters = {
+	chromatic: { disableSnapshot: true },
 };

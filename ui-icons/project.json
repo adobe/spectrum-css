@@ -22,8 +22,8 @@
 				}
 			],
 			"options": {
-				"cwd": "{projectRoot}",
-				"commands": ["node ./index.js"]
+				"commands": ["node --no-warnings ./index.js"],
+				"cwd": "{projectRoot}"
 			},
 			"outputs": [
 				"{projectRoot}/dist/combined",

@@ -1,14 +1,15 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
 .spectrum-Thumbnail {
 	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
@@ -17,7 +18,7 @@ governing permissions and limitations under the License.
 	--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
 
 	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-	--spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity));
+	--spectrum-thumbnail-border-color: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity));
 	--spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
 	--spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
 	--spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
@@ -31,6 +32,9 @@ governing permissions and limitations under the License.
 	--spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
 	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
+
+	/* @passthrough -- custom sizing for opacity checkerboard */
+	--mod-opacity-checkerboard-size: var(--spectrum-thumbnail-opacity-checkerboard-square-size);
 }
 
 .spectrum-Thumbnail--size50 {
@@ -82,6 +86,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail {
+	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
+
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -92,6 +98,11 @@ governing permissions and limitations under the License.
 
 	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 
+	/* Friends should align to the top of the tabs */
+	vertical-align: top;
+	overflow: hidden;
+	z-index: 0;
+
 	&::before {
 		content: "";
 		z-index: 2;
@@ -99,13 +110,13 @@ governing permissions and limitations under the License.
 		inline-size: 100%;
 		block-size: 100%;
 		border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
-		box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width)) var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, var(--spectrum-thumbnail-border-color-rgba)));
+		box-shadow: inset 0 0 0 var(--mod-thumbnail-border-width, var(--spectrum-thumbnail-border-width)) var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, var(--spectrum-thumbnail-border-color)));
 	}
 
 	&.is-disabled {
 		opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
 	}
-	/* stylelint-disable selector-pseudo-class-no-unknown */
+
 	&.is-focused {
 		overflow: visible;
 
@@ -124,12 +135,6 @@ governing permissions and limitations under the License.
 			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 		}
 	}
-	/* stylelint-enable selector-pseudo-class-no-unknown */
-
-	/* Friends should align to the top of the tabs */
-	vertical-align: top;
-	overflow: hidden;
-	z-index: 0;
 }
 
 .spectrum-Thumbnail-layer {
@@ -146,7 +151,6 @@ governing permissions and limitations under the License.
 		content: none;
 	}
 
-	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 	&.is-selected {
 		outline-style: solid;
 		outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
@@ -166,7 +170,6 @@ governing permissions and limitations under the License.
 	outline-color: var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner)));
 	outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
 }
-/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 
 .spectrum-Thumbnail-image-wrapper {
 	display: flex;
@@ -209,12 +212,13 @@ governing permissions and limitations under the License.
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
 	.spectrum-Thumbnail {
-		/* Allow checkerboard pattern to be visible. */
-		forced-color-adjust: none;
 		--highcontrast-thumbnail-border-color-selected: Highlight;
 		--highcontrast-thumbnail-focus-indicator-color: Highlight;
 		--highcontrast-thumbnail-border-color: CanvasText;
 		--highcontrast-thumbnail-layer-border-color-inner: Canvas;
 		--highcontrast-thumbnail-layer-border-color-outer: CanvasText;
+
+		/* Allow checkerboard pattern to be visible. */
+		forced-color-adjust: none;
 	}
 }

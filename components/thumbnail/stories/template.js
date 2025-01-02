@@ -1,4 +1,5 @@
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -9,7 +10,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Thumbnail",
-	size = "500",
+	size = 500,
 	imageURL,
 	svg,
 	altText,
@@ -22,21 +23,22 @@ export const Template = ({
 	onclick,
 	customClasses = [],
 	customStyles = {},
-	id,
-}) => {
+	id = getRandomId("thumbnail"),
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
-	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
+	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)} />` : svg ? html`${svg}` : "";
 
 	const checkerboardContent = html`
 			<div class="${rootClass}-image-wrapper">
-			${imageURL
-				? html`<img
-						class="${rootClass}-image"
-						src=${imageURL}
-						alt=${altText}
-					/>`
-				: ""}
-			${svg ? html`${svg}` : ""}
+			${when(imageURL, () => html`
+				<img
+					class="${rootClass}-image"
+					src=${imageURL}
+					alt=${altText}
+				/>
+			`)}
+			${when(svg, () => svg)}
 		</div>
 	`;
 
@@ -60,7 +62,7 @@ export const Template = ({
 					componentOnly: true,
 					customClasses: [`${rootClass}-layer-inner`],
 					content: checkerboardContent,
-				})}
+				}, context)}
 			</div>
 		`;
 
@@ -82,13 +84,13 @@ export const Template = ({
 			>
 				<div class="${rootClass}-background" style=${styleMap({backgroundColor})}></div>
 				<div class="${rootClass}-image-wrapper">
-					${imageURL
-						? html`<img
-								class="${rootClass}-image"
-								src=${imageURL}
-								alt=${altText}
-						  />`
-						: ""}
+					${when(imageURL, () => html`
+						<img
+							class="${rootClass}-image"
+							src=${imageURL}
+							alt=${altText}
+						/>
+					`)}
 				</div>
 			</div>
 		`;
@@ -105,16 +107,22 @@ export const Template = ({
 				[`${rootClass}--size${size}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-		style=${ifDefined(styleMap(customStyles))}
+		style=${styleMap(customStyles)}
 		id=${ifDefined(id)}
 		@click=${onclick}
+		@focusin=${function() {
+			updateArgs({ isFocused: true });
+		}}
+		@focusout=${function() {
+			updateArgs({ isFocused: false });
+		}}
 	>
 			${when(backgroundColor, () => html`<div class="${rootClass}-background" style=${ifDefined(styleMap({ backgroundColor }))}></div>`)}
 			${OpacityCheckerboard({
 				rootClass: backgroundColor ? `${rootClass}-image-wrapper` : undefined,
 				customClasses: isLayer ? [`${rootClass}-layer-inner`] : !backgroundColor ? [`${rootClass}-image-wrapper`] : [],
 				content: image ? [image] : [],
-			})}
+			}, context)}
 		</div>
 	`;
 };

@@ -1,12 +1,12 @@
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { styleMap } from "lit/directives/style-map.js";
-
-
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import { html, nothing } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -21,15 +21,11 @@ export const Template = ({
 	isDisabled = false,
 	isInvalid = false,
 	hasClearButton = false,
-	id,
+	id = getRandomId("tag"),
 	customClasses = [],
 	customStyles = {},
-	...globals
-}) => {
-
-	if(isInvalid) {
-		iconName = "Alert";
-	}
+} = {}, context = {}) => {
+	if(isInvalid) iconName = "Alert";
 
 	return html`
 		<div
@@ -45,27 +41,25 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			tabindex=${isDisabled ? "-1" : "0"}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 		>
-			${avatarUrl && !isInvalid
-				? Avatar({
-					...globals,
+			${when(avatarUrl && !isInvalid, () =>
+				Avatar({
 					image: avatarUrl,
 					size: "50",
-				})
-				: ""}
-			${iconName || isInvalid
-				? Icon({
-					...globals,
+				}, context)
+			)}
+			${when(iconName || isInvalid, () =>
+				Icon({
 					size,
 					iconName,
+					setName: "workflow",
 					customClasses: [`${rootClass}-itemIcon`],
-				})
-				: ""}
+				}, context)
+			)}
 			<span class="${rootClass}-itemLabel">${label}</span>
-			${hasClearButton
-				? ClearButton({
-					...globals,
+			${when(hasClearButton, () =>
+				ClearButton({
 					size,
 					customClasses: [`${rootClass}-clearButton`],
 					onclick: (evt) => {
@@ -75,8 +69,52 @@ export const Template = ({
 						const wrapper = el.closest(rootClass);
 						wrapper.parentNode.removeChild(wrapper);
 					},
-				})
-				: ""}
+				}, context)
+			)}
 		</div>
 	`;
 };
+
+export const TagsDefaultOptions = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+		${Template(args, context)}
+		${!args.isInvalid ?
+			Template({
+				...args,
+				hasIcon: true,
+				iconName: "CheckmarkCircle"
+			}, context): nothing }
+		${!args.isInvalid ?
+			Template({
+			...args,
+				hasAvatar: true,
+				avatarUrl: "example-ava.png",
+			}, context): nothing }`,
+}, context);
+
+export const SelectedTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`${[
+		{ isSelected: true, isDisabled: false, heading: "Selected" },
+		{ isSelected: true, isDisabled: false, isInvalid: true, heading: "Selected + Invalid" },
+	].map(({isSelected, heading, isInvalid}) => Container({
+		withBorder: false,
+		heading: heading,
+		content: TagsDefaultOptions({
+			...args,
+			isSelected,
+			isInvalid
+		})
+	}, context))}`
+}, context);

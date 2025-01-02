@@ -1,16 +1,23 @@
+import { renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
-export const Template = ({
+/**
+ * Just the modal markup.
+ */
+const Modal = ({
 	rootClass = "spectrum-Modal",
 	customClasses = [],
+	customStyles = {},
 	isOpen = true,
 	variant,
 	content = [],
-}) => html`
-	<div class="${rootClass}-wrapper">
+} = {}, context = {}) => {
+	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
@@ -18,8 +25,31 @@ export const Template = ({
 				"is-open": isOpen,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${styleMap(customStyles)}
 		>
-			${content}
+			${renderContent(content, { context })}
 		</div>
-	</div>
-`;
+	`;
+};
+
+/**
+ * The modal, optionally wrapped with .spectrum-Modal-wrapper.
+ */
+export const Template = ({
+	rootClass = "spectrum-Modal",
+	skipWrapper = false,
+	...args
+} = {}, context = {}) => {
+	return html`
+		${when(skipWrapper,
+			() => Modal({ rootClass, ...args }, context),
+			() => html`
+				<div
+					class=${classMap({ [`${rootClass}-wrapper`]: true })}
+				>
+					${Modal({ rootClass, ...args }, context)}
+				</div>
+			`
+		)}
+	`;
+};

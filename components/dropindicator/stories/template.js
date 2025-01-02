@@ -10,18 +10,35 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	direction = "vertical",
-	size = "300px",
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--${direction}`]: typeof direction !== "undefined",
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${ifDefined(styleMap({
-			blockSize: direction == "vertical" ? size : undefined,
-			inlineSize: direction == "horizontal" ? size : undefined,
-			...customStyles,
-		}))}
-	></div>
+	length = "300px",
+} = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--${direction}`]: typeof direction !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${ifDefined(styleMap({
+				"block-size": direction == "vertical" ? length : undefined,
+				"inline-size": direction == "horizontal" ? length : undefined,
+				...customStyles,
+			}))}
+		></div>
+	`;
+};
+
+export const DocsDropIndicatorGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": "flex",
+		"align-items": "center",
+		"gap": "16px",
+		"justify-content": "space-evenly",
+	})}>
+	${Template(args, context)}
+		${Template({
+			...args,
+			direction: "horizontal",
+		}, context)}
+	</div>
 `;

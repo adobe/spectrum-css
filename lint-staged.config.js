@@ -1,27 +1,20 @@
 module.exports = {
-	"components/*/*.css": [
-		"prettier --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write",
-		"stylelint --fix --cache --allow-empty-input --quiet"
+	"*.css,!plugins/*/{expected,fixtures}/*.css": [
+		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write",
 	],
-	"*.json": [
-		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
-	],
-	"components/*/stories/*.js": [
-		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
-	],
-	"plugins/*/*.js": [
-		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
+	"*.{js,json}": [
+		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet --ignore-pattern \"!.storybook/\""
 	],
 	"dist/*.css": [
-		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write"
+		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write"
 	],
-	"components/*/metadata/*.{yml,yaml}": (files) => {
+	"components/*/metadata/metadata.json": (files) => {
 		return [
-			...(files.map(file => `pajv test --valid -s ./schemas/documentation.schema.json -d "${file}"`) ?? []),
-            `prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write ${files.join(" ")}`
+			...(files.map(file => `pajv test --valid -s ./schemas/metadata.schema.json -d "${file}"`) ?? []),
+			`prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write ${files.join(" ")}`
 		];
 	},
-	"*.md": [
-		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write"
+	"*.{md,mdx}": [
+		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write"
 	]
 };

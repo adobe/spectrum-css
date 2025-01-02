@@ -1,7 +1,8 @@
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { AssetGroup } from "./asset.test.js";
+import { Template } from "./template.js";
 
 /**
  * Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.
@@ -10,11 +11,6 @@ export default {
 	title: "Asset",
 	component: "Asset",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
-		scale: {
-			name: "Platform scale",
-			if: { arg: "preset", neq: "image" }
-		},
 		preset: {
 			name: "Preset asset types",
 			type: { name: "string" },
@@ -38,34 +34,51 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Asset",
-		preset: "image",
-		image: "example-ava.png",
 	},
 	parameters: {
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
 };
 
-const AssetGroup = (args) => html`
-	${window.isChromatic() ? html`
-		<div style=${styleMap({
-			"display": "grid",
-			"grid-template-columns": "repeat(3, 200px)",
-			"gap": "8px"
-		})}>
-			${Template(args)}
-			${Template({
-				...args,
-				preset: "file",
-			})}
-			${Template({
-				...args,
-				preset: "folder",
-			})}
-		</div>
-	` : Template(args)}
-`;
-
 export const Default = AssetGroup.bind({});
+Default.args = {
+	preset: "image",
+	image: "example-ava.png",
+};
+
+// ********* DOCS ONLY ********* //
+export const File = Template.bind({});
+File.tags = ["!dev"];
+File.args = {
+	preset: "file",
+	customStyles: {
+		"min-inline-size": "150px",
+	},
+};
+File.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Folder = Template.bind({});
+Folder.tags = ["!dev"];
+Folder.args = {
+	preset: "folder",
+	customStyles: {
+		"min-inline-size": "150px",
+	},
+};
+Folder.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = AssetGroup.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

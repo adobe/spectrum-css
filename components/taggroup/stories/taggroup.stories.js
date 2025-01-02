@@ -1,10 +1,16 @@
-import { Template } from "./template";
-
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { TagGroups } from "./taggroup.test.js";
+import { Template } from "./template.js";
+
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
 /**
- * A group of tags.
+ * A group of [tags](?path=/docs/components-tag--docs). Tags allow users to categorize content. They can represent keywords or people, and are grouped to describe an item or a search request.
+ *
+ * When horizontal space is limited in a tag group, the individual tags wrap to form another line.
  */
 export default {
 	title: "Tag group",
@@ -23,7 +29,6 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Content",
-				disable: true,
 			},
 			control: { type: "text" },
 		},
@@ -38,19 +43,11 @@ export default {
 			},
 			control: "boolean",
 		},
-		customStyles: {
-			description: "Custom styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Storybook Only",
-			},
-			if: { arg: "customStyles" }
-		}
 	},
 	args: {
 		rootClass: "spectrum-TagGroup",
-		ariaLabel: "Tags",
 		isRemovable: false,
+		size: "m",
 	},
 	parameters: {
 		actions: {
@@ -58,33 +55,18 @@ export default {
 				...(TagStories.parameters.actions.handles ?? [])
 			],
 		},
-		status: {
-			type: "migrated",
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=45924-645",
 		},
+		packageJson,
+		metadata,
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = TagGroups.bind({});
 Default.args = {
-	size: "l",
-	items: [
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 3",
-		},
-	],
-};
-
-export const Removable = Template.bind({});
-Removable.args = {
-	size: "l",
-	isRemovable: true,
-	isEmphasized: true,
+	ariaLabel: "Tags",
 	items: [
 		{
 			label: "Tag 1",
@@ -98,17 +80,18 @@ Removable.args = {
 	],
 };
 
-export const OverflowItems = Template.bind({});
-OverflowItems.parameters = {
-	docs: {
-		description: {
-			story:
-				"When horizontal space is limited in a tag group, the individual tags wrap to form another line.",
-		},
+// ********* DOCS ONLY ********* //
+/**
+ * A tag group can contain removable tags when the context is for editing or non-removable tags when tags are read-only. Removable and non-removable tags cannot be combined within the tag group.
+ */
+export const Removable = Template.bind({});
+Removable.tags = ["!dev"];
+Removable.parameters = {
+	chromatic: {
+		disableSnapshot: true,
 	},
 };
-OverflowItems.args = {
-	size: "m",
+Removable.args = {
 	isRemovable: true,
 	isEmphasized: false,
 	customStyles: {"max-width": "300px"},
@@ -124,6 +107,7 @@ OverflowItems.args = {
 		},
 		{
 			label: "Tag 4",
+			avatarUrl: "example-ava.png",
 		},
 		{
 			label: "Tag 5",
@@ -135,4 +119,15 @@ OverflowItems.args = {
 			label: "Tag 7",
 		},
 	],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = TagGroups.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

@@ -1,51 +1,24 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-import { Template } from "./template";
+import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isChecked, isDisabled, isEmphasized, size } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { SwitchGroup } from "./switch.test.js";
+import { DocsSwitchGroup, Template } from "./template.js";
 
 /**
- * A switch is used to turn an option on or off. Switches allow users to select the state of a single option at a time.
+ * A switch is used to turn an option on or off. Switches allow users to select the state of a single option at a time and are best used for communicating activation.
  */
 export default {
 	title: "Switch",
 	component: "Switch",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		isEmphasized: {
-			name: "Emphasized",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isEmphasized,
+		isDisabled,
 		isChecked: {
-			name: "Checked",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isChecked,
+			name: "Selected",
 		},
 		label: {
 			name: "Label",
@@ -66,173 +39,106 @@ export default {
 		size: "m",
 	},
 	parameters: {
-		actions: {
-			handles: [],
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=164-16761",
 		},
-		status: {
-			type: "migrated",
-		},
+		packageJson,
+		metadata,
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 1em 1em;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "flex-start",
-					gap: "1rem",
-					"--mod-detail-margin-end": ".3rem",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
-	],
+	decorators: [],
+	tags: ["migrated"],
 };
 
-const States = (args) => html`
-	${Typography({
-		semantics: "detail",
-		size: "s",
-		content: ["Default"],
-	})}
-	${Template(args)}
-	${Typography({
-		semantics: "detail",
-		size: "s",
-		content: ["Checked"],
-	})}
-	${Template({
-		...args,
-		isChecked: true,
-	})}
-	${Typography({
-		semantics: "detail",
-		size: "s",
-		content: ["Disabled"],
-	})}
-	${Template({
-		...args,
-		customStyles: {"max-width": "250px"},
-		isDisabled: true,
-		label: "Switch unchecked and disabled and so long it wraps to the next line",
-	})}
-	${Typography({
-		semantics: "detail",
-		size: "s",
-		content: ["Disabled + checked"],
-	})}
-	${Template({
-		...args,
-		isChecked: true,
-		isDisabled: true,
-	})}`;
-
-const Sizes = (args) =>
-	html` ${["s", "m", "l", "xl"].map((size) => {
-		return html`
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: [
-					{
-						s: "Small",
-						m: "Medium",
-						l: "Large",
-						xl: "Extra-large",
-					}[size],
-				],
-			})}
-			${Template({
-				...args,
-				size,
-			})}
-		`;
-	})}`;
-
-const Variants = (args) =>
-	html` ${window.isChromatic()
-		? html` <div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Default"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
-						})}
-					>
-						${States(args)}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Emphasized"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
-						})}
-					>
-						${States({
-							...args,
-							isEmphasized: true,
-						})}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Sizing - Unchecked"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
-						})}
-					>
-						${Sizes(args)}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Sizing - Checked"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
-						})}
-					>
-						${Sizes({
-							...args,
-							isChecked: true,
-						})}
-					</div>
-				</div>`
-		: Template(args)}`;
-
-export const Default = Variants.bind({});
+export const Default = SwitchGroup.bind({});
+Default.tags = ["!autodocs"];
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = SwitchGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
+/**
+ * Switches can either be selected or not selected. They cannot be in an indeterminate state (unlike
+ * [checkboxes](?path=/docs/components-checkbox--docs)). When a switch represents multiple values that are not
+ * identical (mixed values), the switch should appear as not selected.
+ */
+export const DocsDefault = DocsSwitchGroup.bind({});
+DocsDefault.storyName = "Default";
+DocsDefault.tags = ["!dev"];
+DocsDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A switch in a disabled state shows that a selection exists, but is not available in that circumstance. This can be
+ * used to maintain layout continuity and communicate that an action may become available later.
+ */
+export const Disabled = DocsSwitchGroup.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	isDisabled: true
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * Emphasized switches are optimal for forms, settings, and other scenarios where the switches need to be noticed. Not
+ * emphasized (gray) switches are optimal for application panels where all the visual components are monochrome in
+ * order to direct focus to the canvas.
+ */
+export const Emphasized = DocsSwitchGroup.bind({});
+Emphasized.tags = ["!dev"];
+Emphasized.args = {
+	isEmphasized: true,
+};
+Emphasized.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * When the label is too long for the horizontal space available, it wraps to form another line.
+ */
+export const WithLongerLabel = DocsSwitchGroup.bind({});
+WithLongerLabel.storyName = "Longer label";
+WithLongerLabel.tags = ["!dev"];
+WithLongerLabel.args = {
+	label: "Switch label that is so long it wraps to the next line",
+	customStyles: {"max-width": "250px"}
+};
+WithLongerLabel.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Switches should always have labels. When the label is not defined, a switch becomes standalone. Standalone switches
+ * should be used in situations where the context is clear without an associated text label. For example, a switch
+ * located at the top of a panel next to the panel's title makes it clear that the switch will enable/disable the panel
+ * options.
+ */
+export const Standalone = DocsSwitchGroup.bind({});
+Standalone.tags = ["!dev"];
+Standalone.args = {
+	label: "",
+};
+Standalone.parameters = {
+	chromatic: { disableSnapshot: true }
+};

@@ -1,16 +1,15 @@
-import { useArgs } from "@storybook/preview-api";
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
+import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
-import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
 import "../index.css";
 
@@ -19,6 +18,7 @@ import "../index.css";
  */
 export const Picker = ({
 	rootClass = "spectrum-Picker",
+	id = getRandomId("picker"),
 	size = "m",
 	labelPosition = "top",
 	placeholder,
@@ -34,13 +34,12 @@ export const Picker = ({
 	ariaLabeledBy,
 	customClasses = [],
 	customStyles = {},
-	...globals
-}) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	// Use the chevron from the UI icon set for each size, as defined in the design spec.
 	let disclosureIconName = "ChevronDown100";
-	if (size == "s") { disclosureIconName = "ChevronDown75"; } 
+	if (size == "s") { disclosureIconName = "ChevronDown75"; }
 	else if (size == "l") { disclosureIconName = "ChevronDown200"; }
 	else if (size == "xl") { disclosureIconName = "ChevronDown300"; }
 
@@ -55,14 +54,15 @@ export const Picker = ({
 				["is-invalid"]: isInvalid,
 				["is-open"]: isOpen,
 				["is-loading"]: isLoading,
-				["is-keyboardFocused"]: isKeyboardFocused,
 				["is-hover"]: isHovered,
 				["is-active"]: isActive,
+				["is-keyboardFocused"]: isKeyboardFocused,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
-			style=${ifDefined(styleMap(customStyles))}
+			id=${id}
+			style=${styleMap(customStyles)}
 			type="button"
 			@click=${() => {
 				if (window.isChromatic()) return;
@@ -72,35 +72,32 @@ export const Picker = ({
 		>
 			${when(contentIconName, () =>
 				Icon({
-					...globals,
 					iconName: contentIconName,
 					size,
 					customClasses: ["spectrum-Picker-icon"],
-				}))
+				}, context))
 			}
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
 			${when(isLoading, () =>
 				ProgressCircle({
-					...globals,
 					size: "s",
 					isIndeterminate: true,
-				})
+				}, context)
 			)}
 			${when(isInvalid && !isLoading, () =>
 				Icon({
-					...globals,
 					size,
 					iconName: "Alert",
+					setName: "workflow",
 					customClasses: [`${rootClass}-validationIcon`],
-				})
+				}, context)
 			)}
 			${Icon({
-				...globals,
 				size,
 				setName: "ui",
 				iconName: disclosureIconName,
 				customClasses: [`${rootClass}-menuIcon`],
-			})}
+			}, context)}
 		</button>
 	`;
 };
@@ -120,7 +117,7 @@ export const Template = ({
 	isLoading = false,
 	withSwitch = false,
 	fieldLabelStyle = {},
-	fieldLabelId = "default-picker",
+	fieldLabelId = getRandomId("fieldlabel"),
 	customPopoverStyles = {
 		// Demonstrate popover at 100% of the width of the Picker.
 		minInlineSize: "100%",
@@ -129,10 +126,8 @@ export const Template = ({
 		display: "block",
 	},
 	content = [],
-	...globals
-}) => {
+} = {}, context = {}) => {
 	const pickerMarkup = Picker({
-		...globals,
 		size,
 		isQuiet,
 		isOpen,
@@ -142,7 +137,7 @@ export const Template = ({
 		content,
 		labelPosition,
 		ariaLabeledBy: fieldLabelId,
-	});
+	}, context);
 
 	const popoverMarkup = content.length !== 0 ? Popover({
 		isOpen: isOpen && !isDisabled && !isLoading,
@@ -152,7 +147,7 @@ export const Template = ({
 		content,
 		size,
 		customStyles: customPopoverStyles,
-	}) : "";
+	}, context) : "";
 
 	const helpTextMarkup = helpText ? HelpText({
 		size,
@@ -160,10 +155,10 @@ export const Template = ({
 		variant: isInvalid ? "negative" : "neutral",
 		hideIcon: true,
 		isDisabled,
-	}) : "";
+	}, context) : "";
 
 	const markup = html`
-		<div 
+		<div
 			style=${styleMap({
 				position: "relative",
 				display: "inline-block",
@@ -181,9 +176,9 @@ export const Template = ({
 					style: fieldLabelStyle,
 					alignment: labelPosition == "side" ? "left" : undefined,
 					id: fieldLabelId,
-				})
+				}, context)
 			)}
-			${labelPosition == "side" 
+			${labelPosition == "side"
 				? html`<div style="display: inline-block; position: relative;">${pickerMarkup} ${popoverMarkup} ${helpTextMarkup}</div>`
 				: html`${pickerMarkup} ${popoverMarkup} ${helpTextMarkup}`
 			}
@@ -195,7 +190,7 @@ export const Template = ({
 					customStyles: {
 						"padding-inline-start": "15px"
 					}
-				})
+				}, context)
 			)}
 		</div>`;
 
@@ -206,3 +201,54 @@ export const Template = ({
 	}
 	return markup;
 };
+
+/**
+ * Template showing both closed and open versions of the Picker.
+ */
+export const ClosedAndOpenTemplate = (args, context) => Container({
+	withBorder: false,
+	content: html`${[false, true].map((isOpen) =>
+		Container({
+			withBorder: false,
+			direction: "column",
+			heading: isOpen ? "Open" : "Closed",
+			containerStyles: {
+				rowGap: "8px",
+			},
+			// Make sure container flex layout does not misalign sibling elements such as field label in Template()
+			wrapperStyles: {
+				display: "block",
+			},
+			content: Template({
+				...args,
+				isOpen,
+			}, context),
+		}, context)
+	)}`,
+}, context);
+
+/**
+ * Template for the Disabled docs story.
+ */
+export const DisabledTemplate = (args, context) => Container({
+	withBorder: false,
+	content: html`${[false, true].map((isInvalid) =>
+		Container({
+			withBorder: false,
+			direction: "column",
+			heading: isInvalid ? "Invalid" : "Default",
+			containerStyles: {
+				rowGap: "8px",
+				overflow: "hidden",
+			},
+			// Make sure container flex layout does not misalign sibling elements such as field label in Template()
+			wrapperStyles: {
+				display: "block",
+			},
+			content: Template({
+				...args,
+				isInvalid,
+			}, context),
+		}, context)
+	)}`,
+}, context);

@@ -17,26 +17,28 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"stories/*",
+		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/icon": ">=8.0.0-s2-foundations.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.7"
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "^10.0.0"
+		"@spectrum-css/commons": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",
@@ -46,5 +48,12 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/tooltip",
+			"rootClass": "spectrum-Tooltip",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/tooltip/"
+		}
+	]
 }

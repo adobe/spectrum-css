@@ -1,5 +1,7 @@
+/* stylelint-disable selector-class-pattern -- Targeting pre-defined Storybook classes */
+
 /*!
- * Copyright 2023 Adobe. All rights reserved.
+ * Copyright 2024 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -12,26 +14,18 @@
  */
 
 body {
-	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro",
-		-apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu,
-		"Trebuchet MS", "Lucida Grande", sans-serif;
-	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro",
-		-apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu,
-		"Trebuchet MS", "Lucida Grande", sans-serif;
+	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 
 	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-font-style: var(--spectrum-default-font-style);
 	--spectrum-font-size: var(--spectrum-font-size-100);
 
 	margin: 0;
-	background-color: var(--spectrum-background-layer-2-color);
-
-	/* @todo: add back the text color and update VRTs */
-	/* color: var(--spectrum-neutral-content-color-default); */
 
 	font-family: var(--spectrum-font-family);
-	font-style: var(--spectrum-font-style);
 	font-size: var(--spectrum-font-size);
+	font-style: var(--spectrum-font-style);
 }
 
 body:lang(ar) {
@@ -66,11 +60,18 @@ nav .spectrum-Site-logo {
 	block-size: 40px;
 }
 
+.docs-story > div:first-child {
+	padding: 20px !important;
+}
+
+/* Hide that first divider line in the top navigation */
+div.sb-bar > div > div > span:first-child {
+	display: none;
+}
+
 .docblock-argstable-body tr td {
 	letter-spacing: unset;
 	font-size: 11px;
-	color: rgb(34, 34, 34);
-	background-color: rgb(255, 255, 255);
 }
 
 .docblock-argstable-body td > span:has(select),
@@ -118,3 +119,4 @@ select:focus,
 	border-color: rgb(2, 101, 220) !important;
 	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
 }
+/* stylelint-enable selector-class-pattern */

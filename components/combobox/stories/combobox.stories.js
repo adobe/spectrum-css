@@ -1,89 +1,56 @@
-import { html } from "lit";
-
-import { Template } from "./template";
-
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { ComboBoxGroup } from "./combobox.test.js";
+import { Template, VariantGroup } from "./template.js";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
+ *
+ * ## Usage notes
+ *
+ * ### General notes
+ *
+ * - Combobox uses `.spectrum-PickerButton` instead of a `.spectrum-Picker`
+ * - The following classes must be added:
+ *   - `.spectrum-Combobox-textfield` is required on the Textfield outer element (`.spectrum-Textfield`)
+ *   - `.spectrum-Combobox-input` is required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
+ *   - `.spectrum-Combobox-button` is required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
+ *
+ * ### Indicating validity and focus
+ *
+ * Validity and focus must be bubbled up to the parent so descendants siblings can be styled. Implementations should add the following classes to the `.spectrum-Combobox` parent class in the following situations:
+ *
+ * - `.is-focused` - when the input or button is focused with the mouse
+ * - `.is-keyboardFocused` - when the input or button is focused with the keyboard
+ * - `.is-valid` - when the input has an explicit valid state
+ * - `.is-invalid` - when the input has an explicit invalid state
+ * - `.is-disabled` - when the control is disabled; should also add to the `.spectrum-Combobox-textfield` and include a `[disabled]` attribute to the `.spectrum-Combobox-button`
+ * - `.is-loading` - when the progress circle is being shown
+ *
+ * ### Don't use placeholder text
+ * Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible. Once a value is entered, placeholder text is no longer viewable; if someone is using an automatic form filler, they will never get the information in the placeholder text.
+ *
+ * Instead of placeholder text, use the [help text](/docs/components-help-text--docs) description to convey requirements or to show any formatting examples that would help user comprehension. If there's placeholder text and help text at the same time, it becomes redundant and distracting, especially if they're communicating the same thing.
  */
 export default {
 	title: "Combobox",
 	component: "Combobox",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isOpen,
+			if: { arg: "isReadOnly", truthy: false },
 		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isKeyboardFocused: {
-			name: "Keyboard Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isLoading: {
-			name: "Loading",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isQuiet,
+		isInvalid,
+		isFocused,
+		isKeyboardFocused,
+		isLoading,
+		isDisabled,
+		isReadOnly,
 		showFieldLabel: {
 			name: "Show field label",
 			type: { name: "boolean" },
@@ -114,25 +81,37 @@ export default {
 			control: "select",
 			if: { arg: "showFieldLabel", truthy: true },
 		},
+		value: {
+			name: "Value",
+			description: "The value shows the option that a user has selected.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
 		content: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Combobox",
 		size: "m",
-		isOpen: true,
+		isOpen: false,
 		isQuiet: false,
 		isInvalid: false,
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
+		isReadOnly: false,
 		showFieldLabel: false,
-		fieldLabelText: "Select location",
+		testId: "combobox",
 		content: [
-			Menu({
+			(passthroughs, context) => Menu({
 				role: "listbox",
 				subrole: "option",
-				isSelectable: true,
+				selectionMode: "single",
+				hasDividers: true,
 				items: [
 					{
 						label: "Ballard",
@@ -153,96 +132,69 @@ export default {
 						isDisabled: true,
 					},
 				],
-			}),
+				...passthroughs,
+			}, context),
 		],
 	},
 	parameters: {
-		actions: {
-			handles: [],
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=727-2550",
 		},
-		status: {
-			type: "migrated",
-		},
-		docs: {
-			story: {
-				height: "200px"
-			}
-		},
+		packageJson,
+		metadata,
 	},
 };
 
-const defaultVariants = (args) => html`
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isFocused: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isDisabled: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isLoading: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isInvalid: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			showFieldLabel: true,
-			fieldLabelText: "Select location, this label should wrap",
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			showFieldLabel: true,
-			fieldLabelText: "Select location, this label should wrap",
-			fieldLabelPosition: "left",
-		})}
-	</div>
-`;
+export const Default = ComboBoxGroup.bind({});
+Default.tags = ["!autodocs"];
+Default.args = {
+	isOpen: true,
+	fieldLabelText: "Select location",
+	value: "Ballard",
+};
 
-const closedVariants = (args) => defaultVariants({...args, isOpen: false});
+// ********* DOCS ONLY ********* //
+export const DefaultGroup = VariantGroup.bind({});
+DefaultGroup.storyName = "Default";
+DefaultGroup.args = Default.args;
+DefaultGroup.tags = ["!dev"];
+DefaultGroup.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-const chromaticKitchenSink = (args) => html`
-	<div style="display: flex; gap: 16px; flex-direction: column;">
-		${closedVariants(args)}
-	</div>
-	<div style="display: flex; gap: 16px; flex-direction: column; margin-top: 32px;">
-		${defaultVariants(args)}
-	</div>
-`;
-
-export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
-Default.args = {};
-
-export const Quiet = (args) => window.isChromatic()
-	? chromaticKitchenSink(args)
-	: Template({
-		...args
-	});
-Quiet.args = {
+export const QuietGroup = VariantGroup.bind({});
+QuietGroup.storyName = "Quiet";
+QuietGroup.args = {
+	...Default.args,
 	isQuiet: true,
+};
+QuietGroup.tags = ["!dev"];
+QuietGroup.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.isReadOnly` class to the combobox. To enable this feature, add the .isReadOnly class to the combobox. Then within the nested textfield component, add the .isReadOnly class and readonly attribute to the `<input>` element.
+*/
+export const ReadOnly = Template.bind({});
+ReadOnly.tags = ["!dev"];
+ReadOnly.args = {
+	isReadOnly: true,
+	value: "Ballard"
+};
+ReadOnly.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+ReadOnly.storyName = "Read-only";
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = ComboBoxGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

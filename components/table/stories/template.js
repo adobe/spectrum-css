@@ -1,12 +1,12 @@
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
-
-import { Template as Button } from "@spectrum-css/button/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
 import "../index.css";
 
@@ -21,6 +21,7 @@ export const TableRowItem = ({
 	isCollapsible = false,
 	isExpanded = false,
 	isHidden = false,
+	hasColumnDividers = false,
 	tier,
 	isLastTier = false,
 	useDivs = false,
@@ -29,8 +30,9 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-}) => {
+} = {}, context = {}) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
+	const useColumnDividers = hasColumnDividers && !isSummaryRow && !isSectionHeader;
 
 	// Use Table tags or Div tags.
 	// Note: Lit must use the 'literal' function for dynamic tags to work.
@@ -49,7 +51,7 @@ export const TableRowItem = ({
 						size: "300",
 						imageURL: "example-card-landscape.png",
 						isCover: true,
-					})}
+					}, context)}
 					<div class="spectrum-Table-thumbnailContent">${content}</div>
 				</div>
 			`;
@@ -67,6 +69,7 @@ export const TableRowItem = ({
 			[`${rootClass}-row--sectionHeader`]: isSectionHeader,
 			[`${rootClass}-row--collapsible`]: isCollapsible,
 			[`${rootClass}-row--thumbnail`]: useThumbnail,
+			[`${rootClass}-cell--divider`]: useColumnDividers,
 			["is-selected"]: isSelected,
 			["is-expanded"]: isExpanded,
 			["is-last-tier"]: isLastTier,
@@ -81,7 +84,10 @@ export const TableRowItem = ({
 		${when(showCheckbox && !isSectionHeader, () => html`
 			<${cellTag}
 				role="gridcell"
-				class="spectrum-Table-cell spectrum-Table-checkboxCell"
+				class=${classMap({
+					[`${rootClass}-cell`]: true,
+					[`${rootClass}-checkboxCell`]: true,
+				})}
 			>
 				${when(!isSummaryRow, () =>
 					Checkbox({
@@ -89,7 +95,7 @@ export const TableRowItem = ({
 						isEmphasized: tableIsEmphasized,
 						isChecked: isSelected,
 						customClasses: [`${rootClass}-checkbox`],
-					})
+					}, context)
 				)}
 			</${cellTag}>`
 		)}
@@ -102,6 +108,7 @@ export const TableRowItem = ({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--collapsible`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
+							[`${rootClass}-cell--divider`]: useColumnDividers,
 						})}
 					>
 						<div class="${rootClass}-collapseInner">
@@ -109,11 +116,12 @@ export const TableRowItem = ({
 								Button({
 									size,
 									iconName: "ChevronRight100",
+									iconSet: "ui",
 									hideLabel: true,
 									customClasses: [`${rootClass}-disclosureIcon`],
 									ariaExpanded: isExpanded,
 									ariaControls,
-								})
+								}, context)
 							)}
 							${useThumbnail ? getCellContent(0) : html`<div class="${rootClass}-collapseContent">${getCellContent(0)}</div>`}
 						</div>
@@ -124,6 +132,7 @@ export const TableRowItem = ({
 						class=${classMap({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
+							[`${rootClass}-cell--divider`]: useColumnDividers,
 						})}
 						colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
 					>${getCellContent(0)}</${cellTag}>`
@@ -135,6 +144,7 @@ export const TableRowItem = ({
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-cell--thumbnail`]: useThumbnail,
+					[`${rootClass}-cell--divider`]: useColumnDividers,
 				})}
 			>${getCellContent(1)}</${cellTag}>
 
@@ -142,6 +152,7 @@ export const TableRowItem = ({
 				role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
+					[`${rootClass}-cell--divider`]: useColumnDividers,
 				})}
 			>${getCellContent(2)}</${cellTag}>`
 		)}
@@ -159,10 +170,11 @@ export const Template = ({
 	useScroller = false,
 	showThumbnails = false,
 	isDropTarget = false,
+	hasColumnDividers = false,
 	rowItems = [],
 	customClasses = [],
-	id,
-}) => {
+	id = getRandomId("table"),
+} = {}, context = {}) => {
 	if (!rowItems || !rowItems.length) return html``;
 
 	// Use Table tags or Div tags.
@@ -212,7 +224,7 @@ export const Template = ({
 							isChecked: false,
 							isIndeterminate: true,
 							customClasses: [`${rootClass}-checkbox`],
-						})}
+						}, context)}
 					</${thTag}>`
 				)}
 				<${thTag}
@@ -223,14 +235,16 @@ export const Template = ({
 				>
 					${Icon({
 						iconName: "ArrowDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
-					})}<span class="${rootClass}-columnTitle">Column title</span>${
+					}, context)}<span class="${rootClass}-columnTitle">Column title</span>${
 					Icon({
 						iconName: "ChevronDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-menuIcon`],
-					})}
+					}, context)}
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell is-sortable"
@@ -240,9 +254,10 @@ export const Template = ({
 				>
 					${Icon({
 						iconName: "ArrowDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
-					})}<span class="${rootClass}-columnTitle">Column title</span>
+					}, context)}<span class="${rootClass}-columnTitle">Column title</span>
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell"
@@ -263,9 +278,10 @@ export const Template = ({
 					size,
 					useDivs,
 					showThumbnails,
+					hasColumnDividers,
 					tableIsEmphasized: isEmphasized,
 					...item,
-				})
+				}, context)
 			)}
 		</${tbodyTag}>
 	</${tableTag}>

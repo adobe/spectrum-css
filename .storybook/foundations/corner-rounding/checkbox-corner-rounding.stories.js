@@ -19,10 +19,8 @@ export default {
 };
 
 const Checkbox = ({
-	customStyles = {},
-	isChecked = false,
 	...args
-}, context) => html`
+} = {}, context = {}) => html`
 	<div style="padding: 1rem 0;">
 		${Template({ ...args, iconName: undefined }, context)}
 	</div>

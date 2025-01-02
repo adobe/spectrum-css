@@ -15,68 +15,424 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 14.0.0-next.11
+
+### Patch Changes
+
+- [#3456](https://github.com/adobe/spectrum-css/pull/3456) [`b9aeb20`](https://github.com/adobe/spectrum-css/commit/b9aeb203dd0bd728606d47d10dbd37fb42229379) Thanks [@cdransf](https://github.com/cdransf)! - Uses the latest releases from Spectrum Tokens (13.0.0-beta.55)
+
+## 14.0.0-next.10
+
+### Patch Changes
+
+- [#2860](https://github.com/adobe/spectrum-css/pull/2860) [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds `--spectrum-standard-dialog-spacing-edge-to-content` to properly adjust the spacing for desktop/mobile dialog styles.
+
+## 14.0.0-next.9
+
+### Patch Changes
+
+- [#3351](https://github.com/adobe/spectrum-css/pull/3351) [`8f782a4`](https://github.com/adobe/spectrum-css/commit/8f782a4711c0d8c6e1de47b3be91b3cc2670fa72) Thanks [@cdransf](https://github.com/cdransf)! - Uses the latest release from Spectrum Tokens (13.0.0-beta.52)
+
+## 14.0.0-next.8
+
+### Patch Changes
+
+- [#2797](https://github.com/adobe/spectrum-css/pull/2797) [`e62d1ca`](https://github.com/adobe/spectrum-css/commit/e62d1ca8cad8a2cdd9c8748335d0371e0aaca60a) Thanks [@pfulton](https://github.com/pfulton)! - Uses the latest release from Spectrum Tokens (13.0.0-beta.35)
+
+## 15.0.0-s2-foundations.31
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`79f2ae5`](https://github.com/adobe/spectrum-css/commit/79f2ae585464b2eca63232b37017bd1f96a7d970) Thanks [@pfulton](https://github.com/pfulton)! - Bug fix to retain border color values in S1 for combobox [SWC-582]
+
+## 15.0.0-s2-foundations.30
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`da9a90a`](https://github.com/adobe/spectrum-css/commit/da9a90adb1b46abc7f3078d2b7cfcf84f7a41026) Thanks [@pfulton](https://github.com/pfulton)! - Update background and border color for picker in Spectrum 2 theme [SWC-575]
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`513256c`](https://github.com/adobe/spectrum-css/commit/513256c7c7587ac6a3741a819a41ab321d1cd965) Thanks [@pfulton](https://github.com/pfulton)! - Update border and background color values for Combobox states [SWC-582]
+
+## 15.0.0-s2-foundations.29
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`f6ad55e`](https://github.com/adobe/spectrum-css/commit/f6ad55eea019f2d6c583a71b6652995a1c7c7a55) Thanks [@pfulton](https://github.com/pfulton)! - feat: s2 foundations non-gray-800 colors update
+
+  | Property name               | Context | Old value          | Updated value      |
+  | --------------------------- | ------- | ------------------ | ------------------ |
+  | `--spectrum-blue-800`       | dark    | rgb(69, 110, 254)  | rgb(64, 105, 253)  |
+  | `--spectrum-red-800`        | dark    | rgb(230, 54, 35)   | rgb(223, 52, 34)   |
+  | `--spectrum-orange-800`     | dark    | rgb(205, 86, 0)    | rgb(199, 82, 0)    |
+  | `--spectrum-yellow-800`     | dark    | rgb(169, 110, 0)   | rgb(164, 106, 0)   |
+  | `--spectrum-chartreuse-800` | dark    | rgb(109, 131, 0)   | rgb(106, 127, 0)   |
+  | `--spectrum-celery-800`     | dark    | rgb(69, 138, 19)   | rgb(66, 134, 18)   |
+  | `--spectrum-green-800`      | dark    | rgb(6, 140, 82)    | rgb(6, 136, 80)    |
+  | `--spectrum-seafoam-800`    | dark    | rgb(8, 138, 116)   | rgb(8, 134, 112)   |
+  | `--spectrum-cyan-800`       | dark    | rgb(15, 128, 194)  | rgb(13, 125, 186)  |
+  | `--spectrum-indigo-800`     | dark    | rgb(119, 97, 252)  | rgb(116, 91, 252)  |
+  | `--spectrum-purple-800`     | dark    | rgb(161, 84, 229)  | rgb(157, 78, 228)  |
+  | `--spectrum-fuchsia-800`    | dark    | rgb(192, 64, 212)  | rgb(186, 60, 206)  |
+  | `--spectrum-magenta-800`    | dark    | rgb(231, 41, 105)  | rgb(224, 38, 101)  |
+  | `--spectrum-pink-800`       | dark    | rgb(220, 47, 156)  | rgb(213, 45, 151)  |
+  | `--spectrum-turqoise-800`   | dark    | rgb(9, 135, 147)   | rgb(9, 131, 142)   |
+  | `--spectrum-brown-800`      | dark    | rgb(148, 118, 73)  | rgb(143, 114, 69)  |
+  | `--spectrum-silver-800`     | dark    | rgb(123, 123, 123) | rgb(118, 118, 118) |
+  | `--spectrum-cinnamon-800`   | dark    | rgb(179, 103, 64)  | rgb(176, 98, 59)   |
+
+## 15.0.0-s2-foundations.28
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`794904f`](https://github.com/adobe/spectrum-css/commit/794904fbbd8d9b817cf5917c457c5290a217ea91) Thanks [@pfulton](https://github.com/pfulton)! - Add a stylelint ignore for typography case
+
+## 15.0.0-s2-foundations.27
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`aedc167`](https://github.com/adobe/spectrum-css/commit/aedc167f86d810f54dea1b2aacb191e718ac9598) Thanks [@pfulton](https://github.com/pfulton)! - Border color for Swatch on light/dark mode switched to use gray instead of black so it responds to theme.
+
+## 15.0.0-s2-foundations.26
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`57e187f`](https://github.com/adobe/spectrum-css/commit/57e187f5a52e9782e8573defc825cef0399b99e4) Thanks [@pfulton](https://github.com/pfulton)! - Minor bug fixes for datepicker and radio; tokens released for alignment
+
+## 15.0.0-s2-foundations.25
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9c6561b`](https://github.com/adobe/spectrum-css/commit/9c6561b38624307da9bca7499452c3cb8ea2095e) Thanks [@pfulton](https://github.com/pfulton)! - Bring in the latest S2 foundations release including updated corner rounding approach, colors, and icon spacing. Remapped corner rounding values for the -75 token to a static 2px value for spectrum themes.
+
+## 15.0.0-s2-foundations.24
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`70b8890`](https://github.com/adobe/spectrum-css/commit/70b889026174fa552cb8f2e7f205b923bf0b6e55) Thanks [@pfulton](https://github.com/pfulton)! - Updated tokens build with latest from recent bug fixes to components
+
+## 15.0.0-s2-foundations.23
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`1da2494`](https://github.com/adobe/spectrum-css/commit/1da249479a0014287a6124dc0f900ee99ab6b946) Thanks [@pfulton](https://github.com/pfulton)! - added contextual-help-content-spacing custom property definition
+
+## 15.0.0-s2-foundations.22
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`57709c0`](https://github.com/adobe/spectrum-css/commit/57709c09f7cfddb67125fa96691ae869ff8840ca) Thanks [@pfulton](https://github.com/pfulton)! - Pull in the corner radii updates for S2
+
+## 15.0.0-s2-foundations.21
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`11a0032`](https://github.com/adobe/spectrum-css/commit/11a00323addbf28b9430d27d9cbc5f30bc851b65) Thanks [@pfulton](https://github.com/pfulton)! - Bug fixes to S1 & Express theming across all components
+
+## 15.0.0-s2-foundations.20
+
+### Patch Changes
+
+- [#3049](https://github.com/adobe/spectrum-css/pull/3049) [`db528ce`](https://github.com/adobe/spectrum-css/commit/db528ce0a6f7d817e6124604014faf9f4accfc1e) Thanks [@TarunAdobe](https://github.com/TarunAdobe)! - updated content color for button primary variant and fixes swc-342
+
+## 15.0.0-s2-foundations.19
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6582314`](https://github.com/adobe/spectrum-css/commit/65823145e139caa56f5e73e8a36e73aff37672de) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to the rgb mapping plugin brought back rgb alias's to tokens output
+
+## 15.0.0-s2-foundations.18
+
+### Patch Changes
+
+- [#3036](https://github.com/adobe/spectrum-css/pull/3036) [`96686a5`](https://github.com/adobe/spectrum-css/commit/96686a56e2532bc747985b40686783ddd9b98221) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - define undefined rgb tokens
+
+## 15.0.0-s2-foundations.17
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`1a36744`](https://github.com/adobe/spectrum-css/commit/1a367440d81e87e241c19a6c3e691faa7c0669aa) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-248]: Selected, static black actionbutton content color should be white, not black (updates tokens)
+
+## 15.0.0-s2-foundations.16
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`fa60db9`](https://github.com/adobe/spectrum-css/commit/fa60db9159edb6b111e4e6c30b05c828224b81e4) Thanks [@pfulton](https://github.com/pfulton)! - Adds `--spectrum-gray-800-rgb` custom token for use in well component. The custom token values reflect the stripped RGB values for light and dark modes of `--spectrum-gray-800` values for S2.
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`1d1cbfc`](https://github.com/adobe/spectrum-css/commit/1d1cbfcc80f8a78784edf9778c0f366be6b0efe6) Thanks [@pfulton](https://github.com/pfulton)! - Adds `--spectrum-blue-800-rgb` for light and `--spectrum-blue-900-rgb` for dark with s2 values to custom tokens to define stripped rgb token used in dropzone dragged background.
+
+## 15.0.0-s2-foundations.15
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`58a89ea`](https://github.com/adobe/spectrum-css/commit/58a89ea464c387111511271a5f5afce044f11042) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-237] accordion item border height set to 0 for non-first-child elements
+
+## 15.0.0-s2-foundations.14
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-238] t-shirt-based calc moved out of theme into base css
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-235] meter properties moved out of theme and into index.css
+
+## 15.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05) Thanks [@pfulton](https://github.com/pfulton)! - - Accordion: Flatten sizing variables in theme layer
+  - ActionButton: Fix typo in variable name "\*-defaul-selectedt"
+  - Move out rtl logical transform from theme to index.css for: calendar, pagination, treeview
+
+## 15.0.0-s2-foundations.12
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1) Thanks [@pfulton](https://github.com/pfulton)! - Updated build to set cssnano to discardUnused: false
+
+## 15.0.0-s2-foundations.11
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4265d20`](https://github.com/adobe/spectrum-css/commit/4265d208b6eb2db923e558fca100b4532b964e45) Thanks [@pfulton](https://github.com/pfulton)! - Fix unsupported variables created in components/actionbutton/themes/spectrum.css
+
+## 15.0.0-s2-foundations.10
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0844aad`](https://github.com/adobe/spectrum-css/commit/0844aadba2fefb844a66370ff6e9b4704f6c1543) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to index.css imports to ensure appropriate system mappings get loaded
+
+## 15.0.0-s2-foundations.9
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`84c8721`](https://github.com/adobe/spectrum-css/commit/84c87212ccb37c887225eaff28e84d9f8e608e09) Thanks [@pfulton](https://github.com/pfulton)! - Push out the latest release to the components
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0a0dace`](https://github.com/adobe/spectrum-css/commit/0a0dacec163234bc73961ef17826cdc33765d9df) Thanks [@pfulton](https://github.com/pfulton)! - Across the board version update to latest build system state
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`681ba47`](https://github.com/adobe/spectrum-css/commit/681ba478c1259d0bbb183670f3188538ec3bee1d) Thanks [@pfulton](https://github.com/pfulton)! - Doing a widespread release on all packages to ensure the latest compiled CSS is published.
+
+## 15.0.0-s2-foundations.8
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`2633985`](https://github.com/adobe/spectrum-css/commit/2633985775ef5a8fad929e275e55e99b75b10959) Thanks [@pfulton](https://github.com/pfulton)! - Update system property tooling (splitinator) to leverage the selector parser
+
+## 15.0.0-s2-foundations.7
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22) Thanks [@pfulton](https://github.com/pfulton)! - Revert themes asset naming to simplify code review; bug fixes in custom property loading from theme assets
+
+## 15.0.0-s2-foundations.6
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`130e137`](https://github.com/adobe/spectrum-css/commit/130e1372b223641efe0a3a23c83ff1d01a70bf1d) Thanks [@pfulton](https://github.com/pfulton)! - This update pre-resolves the bundler assets to make them easier to serve as a single entry point.
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0) Thanks [@pfulton](https://github.com/pfulton)! - Inject missing tokens into theme files and adjust logic in the splitinator tool to replace nested variable references to the new system mappings
+
+## 15.0.0-s2-foundations.5
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`de1d39f`](https://github.com/adobe/spectrum-css/commit/de1d39fdedc297032735acf97d0f87b6f2e45f50) Thanks [@pfulton](https://github.com/pfulton)! - Fix to how the system mapped custom property names are generated; adding support for pseudo functions, combinators, and complex selectors
+
+## 15.0.0-s2-foundations.4
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5) Thanks [@pfulton](https://github.com/pfulton)! - Corrects a faulty regex that was negatively affecting compilation of custom properties
+
+## 15.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+## 15.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+## 15.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+## 15.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+## 14.6.0
+
+### Minor Changes
+
+- [#3266](https://github.com/adobe/spectrum-css/pull/3266) [`4b818e1`](https://github.com/adobe/spectrum-css/commit/4b818e1062202e404de1350938ce2a19146aa0b0) Thanks [@5t3ph](https://github.com/5t3ph)! - For Coach indicator, marks "light" and "dark" variants for deprecation going into S2, and adds "static white" per direction from design.
+
+## 14.5.0
+
+### Minor Changes
+
+- [#3253](https://github.com/adobe/spectrum-css/pull/3253) [`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86) Thanks [@castastrophe](https://github.com/castastrophe)! - Add component-level token overrides from card, contextualhelp, swatch, and typography to ensure valid theme toggling.
+
+  Light/dark/darkest custom overrides added: `--spectrum-card-selected-background-color-rgb`, `--spectrum-swatch-border-color`, `--spectrum-swatch-border-color-light`
+  Medium/large custom overrides added: `--spectrum-contextual-help-content-spacing`
+  Global custom overrides added: `--spectrum-font-family-ar`, `--spectrum-font-family-he`, `--spectrum-font-family`, `--spectrum-font-style`, `--spectrum-font-size`
+
+## 14.6.0
+
+### Minor Changes
+
+- [#3266](https://github.com/adobe/spectrum-css/pull/3266) [`4b818e1`](https://github.com/adobe/spectrum-css/commit/4b818e1062202e404de1350938ce2a19146aa0b0) Thanks [@5t3ph](https://github.com/5t3ph)! - For Coach indicator, marks "light" and "dark" variants for deprecation going into S2, and adds "static white" per direction from design.
+
+## 14.5.0
+
+### Minor Changes
+
+- [#3253](https://github.com/adobe/spectrum-css/pull/3253) [`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86) Thanks [@castastrophe](https://github.com/castastrophe)! - Add component-level token overrides from card, contextualhelp, swatch, and typography to ensure valid theme toggling.
+
+  Light/dark/darkest custom overrides added: `--spectrum-card-selected-background-color-rgb`, `--spectrum-swatch-border-color`, `--spectrum-swatch-border-color-light`
+  Medium/large custom overrides added: `--spectrum-contextual-help-content-spacing`
+  Global custom overrides added: `--spectrum-font-family-ar`, `--spectrum-font-family-he`, `--spectrum-font-family`, `--spectrum-font-style`, `--spectrum-font-size`
+
+## 14.4.0
+
+### Minor Changes
+
+- [#3060](https://github.com/adobe/spectrum-css/pull/3060) [`7d41874`](https://github.com/adobe/spectrum-css/commit/7d418746362e7fe35f47e67e30682d7bf87ecfc7) Thanks [@castastrophe](https://github.com/castastrophe)! - Update build steps for the token rollup to generate the component theming assets instead of relying on component build steps to produce them.
+
+## 14.3.2
+
+### Patch Changes
+
+- [#3137](https://github.com/adobe/spectrum-css/pull/3137) [`b16a159`](https://github.com/adobe/spectrum-css/commit/b16a159bd8b1456b384f13f51ab0cdb318a692e8) Thanks [@castastrophe](https://github.com/castastrophe)! - `--spectrum-well-border-color` was mapped to the `-rgb` postfixed value which resolves to a raw rgb number but not a valid color.
+
+## 14.3.1
+
+### Patch Changes
+
+- [#2840](https://github.com/adobe/spectrum-css/pull/2840) [`84a70bb`](https://github.com/adobe/spectrum-css/commit/84a70bb076ac7afd15122d3b53299a4f1ccd1af3) Thanks [@castastrophe](https://github.com/castastrophe)! - Tokens update to correct the background color used in documentation for static black.
+
+  Feature that updates storybook to move shared arg types to the global scope.
+
+## 14.3.0
+
+### Minor Changes
+
+- [#2803](https://github.com/adobe/spectrum-css/pull/2803) [`2c5e5eb`](https://github.com/adobe/spectrum-css/commit/2c5e5ebc4d1dca38f877ad1e31f69315831c5717) Thanks [@castastrophe](https://github.com/castastrophe)! - This feature adds the custom variables for each context (spectrum and express) to the root-named asset (dist/css/express/global-vars.css)
+
+## 14.2.0
+
+### Minor Changes
+
+- [#2766](https://github.com/adobe/spectrum-css/pull/2766) [`8a123ae`](https://github.com/adobe/spectrum-css/commit/8a123ae6dbc75bcab3dfd43d856de408e7eaab1b) Thanks [@dependabot](https://github.com/apps/dependabot)! - New token `--spectrum-accordion-top-to-text-spacious-small` available to be used.
+
+## 14.1.0
+
+### Minor Changes
+
+- [#2742](https://github.com/adobe/spectrum-css/pull/2742) [`1e74ab7`](https://github.com/adobe/spectrum-css/commit/1e74ab7511257efa80f02da7a3115d302093ac6f) Thanks [@castastrophe](https://github.com/castastrophe)! - ### New token output files
+
+  - Adds component-specific theme mappings to the tokens package; this supports SWC offering S1 and S2 in tandem
+  - Adds an index file to list all available component-specific files
+
+## 14.1.0-alpha.3
+
+### Minor Changes
+
+- Adding an index file for all new component assets listed in the token package output.
+
+## 14.1.0-alpha.2
+
+### Patch Changes
+
+- [#2742](https://github.com/adobe/spectrum-css/pull/2742) [`336a558`](https://github.com/adobe/spectrum-css/commit/336a558d23b0aa66b5a15e85881b12a261a69bf0) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixed a bug where the bridge tokens were being injected into the express and spectrum component-specific files
+
+## 14.1.0-alpha.1
+
+### Patch Changes
+
+- fix: support full dist output in release
+
+## 14.1.0-alpha.0
+
+### Minor Changes
+
+- feat: adding component-specific theme mappings and new bridge files to support S1 and S2 in tandem
+
 <a name="14.0.0"></a>
-#14.0.0
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.2.0...@spectrum-css/tokens@14.0.0)
+
+## 14.0.0
+
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.2.0...@spectrum-css/tokens@14.0.0)
 
 - feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-  ###
+### 🛑 BREAKING CHANGES
 
-  🛑 BREAKING CHANGES
-
-  -
-
-  * Removes component-builder & component-builder-simple for script leveraging postcss
-
-* Imports added to index.css and themes/express.css
+- Removes component-builder & component-builder-simple for script leveraging postcss
+- Imports added to index.css and themes/express.css
 
 <a name="13.2.0"></a>
-#13.2.0
-🗓
-2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.1.2...@spectrum-css/tokens@13.2.0)
+
+## 13.2.0
+
+🗓 2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.1.2...@spectrum-css/tokens@13.2.0)
 
 ### ✨ Features
 
 - **tokens:**use spectrum-tokens@12.24.0([b20ebb6](https://github.com/adobe/spectrum-css/commit/b20ebb6))
 
 <a name="13.1.2"></a>
-##13.1.2
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.1.1...@spectrum-css/tokens@13.1.2)
+
+## 13.1.2
+
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.1.1...@spectrum-css/tokens@13.1.2)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.1.1"></a>
-##13.1.1
-🗓
-2024-02-06
+
+## 13.1.1
+
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.1.0"></a>
-#13.1.0
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.9...@spectrum-css/tokens@13.1.0)
+
+## 13.1.0
+
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.9...@spectrum-css/tokens@13.1.0)
 
 ### ✨ Features
 
 - **tokens:**add icon xxl and xxs tokens([b2d71bc](https://github.com/adobe/spectrum-css/commit/b2d71bc))
 
 <a name="13.0.9"></a>
-##13.0.9
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.8...@spectrum-css/tokens@13.0.9)
+
+## 13.0.9
+
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.8...@spectrum-css/tokens@13.0.9)
 
 ### 🐛 Bug fixes
 
 \*deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-css/issues/2437))([ff5dda6](https://github.com/adobe/spectrum-css/commit/ff5dda6))
 
 <a name="13.0.8"></a>
-##13.0.8
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.7...@spectrum-css/tokens@13.0.8)
+
+## 13.0.8
+
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.7...@spectrum-css/tokens@13.0.8)
 
 ### 🐛 Bug fixes
 
@@ -84,44 +440,50 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
   **tokens:**dependency updates([f9395a3](https://github.com/adobe/spectrum-css/commit/f9395a3))
 
 <a name="13.0.7"></a>
-##13.0.7
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.6...@spectrum-css/tokens@13.0.7)
+
+## 13.0.7
+
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.6...@spectrum-css/tokens@13.0.7)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.0.6"></a>
-##13.0.6
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.5...@spectrum-css/tokens@13.0.6)
+
+## 13.0.6
+
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.5...@spectrum-css/tokens@13.0.6)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.0.5"></a>
-##13.0.5
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.4...@spectrum-css/tokens@13.0.5)
+
+## 13.0.5
+
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.4...@spectrum-css/tokens@13.0.5)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.0.4"></a>
-##13.0.4
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.0...@spectrum-css/tokens@13.0.4)
+
+## 13.0.4
+
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.0...@spectrum-css/tokens@13.0.4)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.0.3"></a>
-##13.0.3
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.0...@spectrum-css/tokens@13.0.3)
+
+## 13.0.3
+
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.0...@spectrum-css/tokens@13.0.3)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.0.0"></a>
-#13.0.0
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@12.0.0...@spectrum-css/tokens@13.0.0)
+
+## 13.0.0
+
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@12.0.0...@spectrum-css/tokens@13.0.0)
 
 ### 🐛 Bug fixes
 
@@ -139,14 +501,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
       		migrate asset card to updated token system
 
 <a name="12.0.0"></a>
-#12.0.0
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.4.0...@spectrum-css/tokens@12.0.0)
+
+## 12.0.0
+
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.4.0...@spectrum-css/tokens@12.0.0)
 
 \*feat(modal)!: diy migration (#2164)([0b83f13](https://github.com/adobe/spectrum-css/commit/0b83f13)), closes[#2164](https://github.com/adobe/spectrum-css/issues/2164)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		migrates Modal to use `@adobe/spectrum-tokens`
@@ -170,92 +532,104 @@ chore: updated css properties
 - docs(modal): regenerate mods
 
 <a name="11.4.0"></a>
-#11.4.0
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.7...@spectrum-css/tokens@11.4.0)
+
+## 11.4.0
+
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.7...@spectrum-css/tokens@11.4.0)
 
 ### ✨ Features
 
 - **tokens:**adds ui icons tokens ([#2186](https://github.com/adobe/spectrum-css/issues/2186))([732e573](https://github.com/adobe/spectrum-css/commit/732e573))
 
 <a name="11.3.7"></a>
-##11.3.7
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.6...@spectrum-css/tokens@11.3.7)
+
+## 11.3.7
+
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.6...@spectrum-css/tokens@11.3.7)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.3.6"></a>
-##11.3.6
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.5...@spectrum-css/tokens@11.3.6)
+
+## 11.3.6
+
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.5...@spectrum-css/tokens@11.3.6)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.3.5"></a>
-##11.3.5
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.4...@spectrum-css/tokens@11.3.5)
+
+## 11.3.5
+
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.4...@spectrum-css/tokens@11.3.5)
 
 ### 🐛 Bug fixes
 
 - **well:**missing semicolons in custom vars ([#2163](https://github.com/adobe/spectrum-css/issues/2163))([814c49e](https://github.com/adobe/spectrum-css/commit/814c49e))
 
 <a name="11.3.4"></a>
-##11.3.4
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.3...@spectrum-css/tokens@11.3.4)
+
+## 11.3.4
+
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.3...@spectrum-css/tokens@11.3.4)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.3.3"></a>
-##11.3.3
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.2...@spectrum-css/tokens@11.3.3)
+
+## 11.3.3
+
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.2...@spectrum-css/tokens@11.3.3)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.3.2"></a>
-##11.3.2
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.1...@spectrum-css/tokens@11.3.2)
+
+## 11.3.2
+
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.1...@spectrum-css/tokens@11.3.2)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.3.1"></a>
-##11.3.1
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.0...@spectrum-css/tokens@11.3.1)
+
+## 11.3.1
+
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.0...@spectrum-css/tokens@11.3.1)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.3.0"></a>
-#11.3.0
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.2...@spectrum-css/tokens@11.3.0)
+
+## 11.3.0
+
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.2...@spectrum-css/tokens@11.3.0)
 
 ### ✨ Features
 
 - **tokens:**update to spectrum-tokens v12.17.0 ([#2118](https://github.com/adobe/spectrum-css/issues/2118))([57d1d93](https://github.com/adobe/spectrum-css/commit/57d1d93))
 
 <a name="11.2.2"></a>
-##11.2.2
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.0...@spectrum-css/tokens@11.2.2)
+
+## 11.2.2
+
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.0...@spectrum-css/tokens@11.2.2)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.2.1"></a>
-##11.2.1
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.0...@spectrum-css/tokens@11.2.1)
+
+## 11.2.1
+
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.0...@spectrum-css/tokens@11.2.1)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.2.0"></a>
-#11.2.0
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.1.0...@spectrum-css/tokens@11.2.0)
+
+## 11.2.0
+
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.1.0...@spectrum-css/tokens@11.2.0)
 
 ### ✨ Features
 
@@ -266,32 +640,36 @@ chore: updated css properties
 \*revert prettier ([#2074](https://github.com/adobe/spectrum-css/issues/2074))([ebb98df](https://github.com/adobe/spectrum-css/commit/ebb98df))
 
 <a name="11.1.0"></a>
-#11.1.0
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.2...@spectrum-css/tokens@11.1.0)
+
+## 11.1.0
+
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.2...@spectrum-css/tokens@11.1.0)
 
 ### ✨ Features
 
 - **tokens:**update to spectrum tokens v12.16.0 ([#2064](https://github.com/adobe/spectrum-css/issues/2064))([75ffb63](https://github.com/adobe/spectrum-css/commit/75ffb63))
 
 <a name="11.0.2"></a>
-##11.0.2
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.1...@spectrum-css/tokens@11.0.2)
+
+## 11.0.2
+
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.1...@spectrum-css/tokens@11.0.2)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.0.1"></a>
-##11.0.1
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.0...@spectrum-css/tokens@11.0.1)
+
+## 11.0.1
+
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.0...@spectrum-css/tokens@11.0.1)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.0.0"></a>
-#11.0.0
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.2...@spectrum-css/tokens@11.0.0)
+
+## 11.0.0
+
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.2...@spectrum-css/tokens@11.0.0)
 
 ### ✨ Features
 
@@ -309,34 +687,38 @@ chore: updated css properties
   syntax that Spectrum CSS had used previously.
 
 <a name="10.2.2"></a>
-##10.2.2
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.1...@spectrum-css/tokens@10.2.2)
+
+## 10.2.2
+
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.1...@spectrum-css/tokens@10.2.2)
 
 ### 🐛 Bug fixes
 
 \*revert prettier version bump ([#2004](https://github.com/adobe/spectrum-css/issues/2004))([29b179c](https://github.com/adobe/spectrum-css/commit/29b179c))
 
 <a name="10.2.1"></a>
-##10.2.1
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.0...@spectrum-css/tokens@10.2.1)
+
+## 10.2.1
+
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.0...@spectrum-css/tokens@10.2.1)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="10.2.0"></a>
-#10.2.0
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.1.2...@spectrum-css/tokens@10.2.0)
+
+## 10.2.0
+
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.1.2...@spectrum-css/tokens@10.2.0)
 
 ### ✨ Features
 
 - **tokens:**update to spectrum-tokens v12.12.0([1bf989f](https://github.com/adobe/spectrum-css/commit/1bf989f))
 
 <a name="10.1.2"></a>
-##10.1.2
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.1.1...@spectrum-css/tokens@10.1.2)
+
+## 10.1.2
+
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.1.1...@spectrum-css/tokens@10.1.2)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
@@ -350,7 +732,7 @@ chore: updated css properties
 
 <a name="10.1.0"></a>
 
-# 10.1.0
+## 10.1.0
 
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.0.0...@spectrum-css/tokens@10.1.0)
 
@@ -360,7 +742,7 @@ chore: updated css properties
 
 <a name="10.0.0"></a>
 
-# 10.0.0
+## 10.0.0
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.3.0...@spectrum-css/tokens@10.0.0)
 
@@ -377,7 +759,7 @@ chore: updated css properties
 
 <a name="9.3.0"></a>
 
-# 9.3.0
+## 9.3.0
 
 🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.2.0...@spectrum-css/tokens@9.3.0)
 
@@ -387,7 +769,7 @@ chore: updated css properties
 
 <a name="9.2.0"></a>
 
-# 9.2.0
+## 9.2.0
 
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.1.0...@spectrum-css/tokens@9.2.0)
 
@@ -397,7 +779,7 @@ chore: updated css properties
 
 <a name="9.1.0"></a>
 
-# 9.1.0
+## 9.1.0
 
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.4...@spectrum-css/tokens@9.1.0)
 
@@ -439,7 +821,7 @@ chore: updated css properties
 
 <a name="9.0.0"></a>
 
-# 9.0.0
+## 9.0.0
 
 🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.1.1...@spectrum-css/tokens@9.0.0)
 
@@ -464,7 +846,7 @@ chore: updated css properties
 
 <a name="8.1.0"></a>
 
-# 8.1.0
+## 8.1.0
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.0.4...@spectrum-css/tokens@8.1.0)
 
@@ -506,7 +888,7 @@ chore: updated css properties
 
 <a name="8.0.0"></a>
 
-# 8.0.0
+## 8.0.0
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.7.0...@spectrum-css/tokens@8.0.0)
 
@@ -520,7 +902,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.7.0"></a>
 
-# 7.7.0
+## 7.7.0
 
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.6.1...@spectrum-css/tokens@7.7.0)
 
@@ -540,7 +922,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.6.0"></a>
 
-# 7.6.0
+## 7.6.0
 
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.5.1...@spectrum-css/tokens@7.6.0)
 
@@ -558,7 +940,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.5.0"></a>
 
-# 7.5.0
+## 7.5.0
 
 🗓 2023-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.4.0...@spectrum-css/tokens@7.5.0)
 
@@ -568,7 +950,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.4.0"></a>
 
-# 7.4.0
+## 7.4.0
 
 🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.3.0...@spectrum-css/tokens@7.4.0)
 
@@ -578,7 +960,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.3.0"></a>
 
-# 7.3.0
+## 7.3.0
 
 🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.2.0...@spectrum-css/tokens@7.3.0)
 
@@ -588,7 +970,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.2.0"></a>
 
-# 7.2.0
+## 7.2.0
 
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.1.0...@spectrum-css/tokens@7.2.0)
 
@@ -598,7 +980,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.1.0"></a>
 
-# 7.1.0
+## 7.1.0
 
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.0.0...@spectrum-css/tokens@7.1.0)
 
@@ -608,7 +990,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.0.0"></a>
 
-# 7.0.0
+## 7.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.3.0...@spectrum-css/tokens@7.0.0)
 
@@ -620,7 +1002,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="6.3.0"></a>
 
-# 6.3.0
+## 6.3.0
 
 🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.2.2...@spectrum-css/tokens@6.3.0)
 
@@ -646,7 +1028,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="6.2.0"></a>
 
-# 6.2.0
+## 6.2.0
 
 🗓 2023-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.1.0...@spectrum-css/tokens@6.2.0)
 
@@ -656,7 +1038,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="6.1.0"></a>
 
-# 6.1.0
+## 6.1.0
 
 🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.0.0...@spectrum-css/tokens@6.1.0)
 
@@ -666,7 +1048,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="6.0.0"></a>
 
-# 6.0.0
+## 6.0.0
 
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@5.0.0...@spectrum-css/tokens@6.0.0)
 
@@ -682,7 +1064,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@4.0.0...@spectrum-css/tokens@5.0.0)
 
@@ -694,7 +1076,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@3.0.0...@spectrum-css/tokens@4.0.0)
 
@@ -713,7 +1095,7 @@ Full release notes can be found here: https://github.com/adobe/spectrum-tokens/r
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@2.0.0...@spectrum-css/tokens@3.0.0)
 
@@ -727,7 +1109,7 @@ Also, adds t-shirt sizes
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@1.0.8...@spectrum-css/tokens@2.0.0)
 
@@ -805,7 +1187,7 @@ Also, adds t-shirt sizes
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2022-06-16
 

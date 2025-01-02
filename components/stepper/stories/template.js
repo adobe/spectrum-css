@@ -1,10 +1,11 @@
+import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
-import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -13,18 +14,15 @@ export const Template = ({
 	size = "m",
 	isQuiet = false,
 	isFocused = false,
+	isHovered = false,
 	isKeyboardFocused = false,
 	isInvalid = false,
 	isDisabled = false,
 	hideStepper = false,
+	id = getRandomId("stepper"),
 	customClasses = [],
-	id,
-	style = {
-		"--mod-actionbutton-icon-size": "10px",
-	},
-	...globals
-}) => {
-
+	customStyles = {},
+} = {}, context = {}) => {
 	let iconSize = "75";
 	switch (size) {
 		case "s":
@@ -47,6 +45,7 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				"is-focused": isFocused,
+				"is-hover": isHovered,
 				"is-keyboardFocused": isKeyboardFocused,
 				"is-invalid": isInvalid,
 				"is-disabled": isDisabled,
@@ -54,10 +53,12 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(style))}
+			style=${styleMap({
+				"--mod-actionbutton-icon-size": "10px",
+				...customStyles
+			})}
 		>
 			${Textfield({
-				...globals,
 				size,
 				type: "number",
 				min: "-2",
@@ -69,31 +70,117 @@ export const Template = ({
 				id: id ? `${id}-input` : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`],
-			})}
-			${hideStepper
-				? ""
-				: html`<span class="${rootClass}-buttons">
-						${InfieldButton({
-							...globals,
-							size,
-							customClasses: [`${rootClass}-button`],
-							iconName: `ChevronUp${iconSize}`,
-							isDisabled,
-							isQuiet,
-							position: "top",
-							tabIndex: "-1"
-						})}
-						${InfieldButton({
-							...globals,
-							size,
-							customClasses: [`${rootClass}-button`],
-							iconName: `ChevronDown${iconSize}`,
-							isDisabled,
-							isQuiet,
-							position: "bottom",
-							tabIndex: "-1"
-						})}
-				  </span>`}
+			}, context)}
+			${when(!hideStepper, () => html`
+				<span class="${rootClass}-buttons">
+					${InfieldButton({
+						size,
+						customClasses: [`${rootClass}-button`],
+						iconName: `ChevronUp${iconSize}`,
+						iconSet: "ui",
+						isDisabled,
+						isQuiet,
+						position: "top",
+						tabIndex: "-1"
+					}, context)}
+					${InfieldButton({
+						size,
+						customClasses: [`${rootClass}-button`],
+						iconName: `ChevronDown${iconSize}`,
+						iconSet: "ui",
+						isDisabled,
+						isQuiet,
+						position: "bottom",
+						tabIndex: "-1"
+					}, context)}
+				</span>
+			`)}
 		</div>
 	`;
 };
+
+/* Shows all of the stepper states in one grouping. */
+export const AllDefaultVariantsGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template(args, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid",
+			content: Template({...args, isInvalid: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Hovered",
+			content: Template({...args, isHovered: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Focused",
+			content: Template({...args, isFocused: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, focused",
+			content: Template({...args, isInvalid: true, isFocused: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Keyboard-focused",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, keyboard-focused",
+			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
+		}, context)}
+	`
+}, context);
+
+/* Shows the disabled variants of the default and quiet stories one grouping. */
+export const DisabledVariantsGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template(args, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Quiet",
+			content: Template({...args, isQuiet: true}, context)
+		}, context)}
+	`
+}, context);

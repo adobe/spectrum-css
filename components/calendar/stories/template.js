@@ -1,13 +1,11 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
+import { action } from "@storybook/addon-actions";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { action } from "@storybook/addon-actions";
-import { useArgs, useGlobals } from "@storybook/preview-api";
-
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
 import "../index.css";
 
@@ -17,22 +15,21 @@ export const Template = ({
 	selectedDay,
 	lastDay,
 	year,
-	padded,
+	isPadded,
 	isDisabled = false,
+	isFocused = false,
 	useDOWAbbrev = false,
 	buttonSize = "s",
 	customClasses = [],
-	customStyles = {
-		"--mod-actionbutton-icon-size": "10px",
-	},
+	customStyles = {},
 	onDateClick,
 	previousHandler,
 	nextHandler,
-	id,
-	...globals
-}) => {
-	const [, updateArgs] = useArgs();
-	const [{ lang }] = useGlobals();
+	id = getRandomId("calendar"),
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
+
+	const lang = globals.lang ?? "en-US";
 
 	const DOW = [
 		"Sunday",
@@ -139,7 +136,7 @@ export const Template = ({
 		if (firstDOWInMonth > DOW.length - orphanedDays) {
 			weeksInMonth++;
 		}
-		if (displayedMonth === 1 && firstDOWInMonth > 0) { // accounts for Feburary
+		if (displayedMonth === 1 && firstDOWInMonth > 0) { // accounts for February
 			weeksInMonth++;
 		}
 
@@ -193,6 +190,8 @@ export const Template = ({
 						(selectedDate && selectedDatetime === thisDatetime) ||
 						isInRange
 					);
+					const isFocused = thisDay === 5;
+
 
 					return {
 						date: thisDate,
@@ -202,6 +201,7 @@ export const Template = ({
 						isInRange,
 						isRangeStart: !!(isInRange && thisDatetime === selectedDatetime),
 						isRangeEnd: !!(isInRange && thisDatetime === lastSelectedDatetime),
+						isFocused,
 					};
 				})
 			);
@@ -212,7 +212,7 @@ export const Template = ({
 		 * @param {Event} evt
 		 * @returns {void}
 		 */
-		onDateClick = (thisDay, evt) => {
+		onDateClick = function (thisDay, evt) {
 			if (!thisDay || thisDay.isDisabled || !thisDay.date) return;
 
 			updateArgs({ selectedDay: thisDay.date });
@@ -221,7 +221,7 @@ export const Template = ({
 	}
 
 	if (!previousHandler || typeof previousHandler !== "function") {
-		previousHandler = ({ displayedMonth, displayedYear }) => {
+		previousHandler = function({ displayedMonth, displayedYear }) {
 			if (
 				typeof displayedMonth === "undefined" ||
 				typeof displayedYear === "undefined"
@@ -256,10 +256,13 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--padded`]: padded,
+				[`${rootClass}--padded`]: isPadded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap({
+				"--mod-actionbutton-icon-size": "10px",
+				...customStyles
+			})}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">
@@ -275,33 +278,33 @@ export const Template = ({
 					})}
 				</div>
 				${ActionButton({
-					...globals,
 					label: "Previous",
 					hideLabel: true,
 					isQuiet: true,
 					isDisabled,
 					size: buttonSize,
-					iconName: "ChevronLeft100",
+					iconName: "ChevronLeft",
+					iconSet: "ui",
 					customClasses: [`${rootClass}-prevMonth`],
 					onclick: previousHandler.bind(null, {
 						displayedMonth,
 						displayedYear,
 					}),
-				})}
+				}, context)}
 				${ActionButton({
-					...globals,
 					label: "Next",
 					hideLabel: true,
 					isQuiet: true,
 					isDisabled,
 					size: buttonSize,
-					iconName: "ChevronRight100",
+					iconName: "ChevronRight",
+					iconSet: "ui",
 					customClasses: [`${rootClass}-nextMonth`],
 					onclick: nextHandler.bind(null, {
 						displayedMonth,
 						displayedYear,
 					}),
-				})}
+				}, context)}
 			</div>
 			<div
 				class="${rootClass}-body"
@@ -358,16 +361,20 @@ export const Template = ({
 												[`${rootClass}-date`]: true,
 												"is-outsideMonth": thisDay.isOutsideMonth,
 												"is-today": thisDay.isToday,
-												// "is-focused": thisDay.isSelected, @todo
 												"is-range-selection": thisDay.isInRange,
-												// "is-range-start": thisDay.isRangeStart, @todo
-												// "is-range-end": thisDay.isRangeEnd, @todo
+												"is-range-start": thisDay.isRangeStart,
+												"is-range-end": thisDay.isRangeEnd,
 												"is-selected": thisDay.isSelected,
-												"is-selection-start": thisDay.isRangeStart,
-												"is-selection-end": thisDay.isRangeEnd,
 												"is-disabled": isDisabled,
+												"is-focused": (isFocused && thisDay.isFocused) || thisDay.isSelected,
 											})}
 											@click=${onDateClick.bind(null, thisDay)}
+											@focusin=${function() {
+												updateArgs({ isFocused: true });
+											}}
+											@focusout=${function() {
+												updateArgs({ isFocused: false });
+											}}
 											>${thisDay.date.getDate()}</span
 										>
 									</td>`

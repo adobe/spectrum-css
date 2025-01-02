@@ -1,5 +1,5 @@
 /*!
- * Copyright 2023 Adobe. All rights reserved.
+ * Copyright 2024 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -951,6 +951,12 @@
 	--spectrum-bar-panel-gripper-color: var(--spectrum-gray-200);
 	--spectrum-bar-panel-gripper-color-drag: var(--spectrum-gray-800);
 	--spectrum-select-box-selected-border-color: var(--spectrum-gray-800);
+	--spectrum-tree-view-row-background-hover: var(--spectrum-gray-100);
+	--spectrum-tree-view-selected-row-background-color-emphasized: var(--spectrum-informative-background-color-default);
+	--spectrum-tree-view-selected-row-background-default: var(--spectrum-gray-100);
+	--spectrum-tree-view-selected-row-background-hover: var(--spectrum-gray-100);
+	--spectrum-color-wheel-border-color: var(--spectrum-gray-1000);
+	--spectrum-color-wheel-border-opacity: 0.1;
 	--spectrum-white-rgb: 255, 255, 255;
 	--spectrum-white: rgba(var(--spectrum-white-rgb));
 	--spectrum-transparent-white-25-rgb: 255, 255, 255;
@@ -1371,6 +1377,13 @@
 	--spectrum-number-field-minimum-width-multiplier: 1.25;
 	--spectrum-takeover-dialog-height: 100%;
 	--spectrum-takeover-dialog-width: 100%;
+	--spectrum-tree-view-header-to-item: -1px;
+	--spectrum-tree-view-item-to-item: -1px;
+	--spectrum-tree-view-item-to-item-detached: 2px;
+	--spectrum-tree-view-selected-row-background-opacity-emphasized: 0.1;
+	--spectrum-tree-view-selected-row-background-opacity-emphasized-hover: 0.15;
+	--spectrum-action-bar-minimum-width: 176px;
+	--spectrum-action-bar-label-to-action-group-area: var(--spectrum-spacing-300);
 	--spectrum-corner-radius-0: 0px;
 	--spectrum-corner-radius-75: 3px;
 	--spectrum-corner-radius-100: 4px;
@@ -1559,9 +1572,9 @@
 	--spectrum-text-align-start: start;
 	--spectrum-text-align-center: center;
 	--spectrum-text-align-end: end;
-	--spectrum-sans-serif-font-family: adobe clean;
-	--spectrum-serif-font-family: adobe clean serif;
-	--spectrum-cjk-font-family: adobe clean han;
+	--spectrum-sans-serif-font-family: Adobe Clean;
+	--spectrum-serif-font-family: Adobe Clean Serif;
+	--spectrum-cjk-font-family: Adobe Clean Han;
 	--spectrum-light-font-weight: 300;
 	--spectrum-regular-font-weight: 400;
 	--spectrum-medium-font-weight: 500;
@@ -1789,7 +1802,7 @@
 	--spectrum-detail-cjk-size-l: var(--spectrum-font-size-100);
 	--spectrum-detail-cjk-size-xl: var(--spectrum-font-size-200);
 	--spectrum-detail-size-xs: var(--spectrum-font-size-50);
-	--spectrum-code-font-family: source code pro;
+	--spectrum-code-font-family: Source Code Pro;
 	--spectrum-code-cjk-font-family: var(--spectrum-code-font-family);
 	--spectrum-code-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-code-font-style: var(--spectrum-default-font-style);
@@ -1855,21 +1868,20 @@
 
 	--spectrum-cjk-font-family-stack: adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif;
 	--spectrum-cjk-font: var(--spectrum-code-font-family-stack);
-	--spectrum-docs-static-white-background-color-rgb: 15, 121, 125;
-	--spectrum-docs-static-white-background-color: rgba(var(--spectrum-docs-static-white-background-color-rgb));
-	--spectrum-docs-static-black-background-color-rgb: 181, 209, 211;
-	--spectrum-docs-static-black-background-color: rgba(var(--spectrum-docs-static-black-background-color-rgb));
+	--spectrum-examples-gradient: linear-gradient(45deg, var(--spectrum-magenta-1500), var(--spectrum-blue-1500));
+	--spectrum-examples-gradient-static-black: linear-gradient(45deg, rgb(255, 241, 246), rgb(238, 245, 255));
+	--spectrum-examples-gradient-static-white: linear-gradient(45deg, rgb(64, 0, 22), rgb(14, 24, 67));
 	--spectrum-corner-radius-1000: 9999px;
 }
 .spectrum--large {
-	--spectrum-checkbox-control-size-small: 16px;
-	--spectrum-checkbox-control-size-medium: 18px;
-	--spectrum-checkbox-control-size-large: 20px;
-	--spectrum-checkbox-control-size-extra-large: 22px;
-	--spectrum-checkbox-top-to-control-small: 7px;
-	--spectrum-checkbox-top-to-control-medium: 11px;
-	--spectrum-checkbox-top-to-control-large: 15px;
-	--spectrum-checkbox-top-to-control-extra-large: 19px;
+	--spectrum-checkbox-control-size-small: 18px;
+	--spectrum-checkbox-control-size-medium: 20px;
+	--spectrum-checkbox-control-size-large: 22px;
+	--spectrum-checkbox-control-size-extra-large: 26px;
+	--spectrum-checkbox-top-to-control-small: 6px;
+	--spectrum-checkbox-top-to-control-medium: 10px;
+	--spectrum-checkbox-top-to-control-large: 14px;
+	--spectrum-checkbox-top-to-control-extra-large: 17px;
 	--spectrum-switch-control-width-small: 30px;
 	--spectrum-switch-control-width-medium: 34px;
 	--spectrum-switch-control-width-large: 38px;
@@ -2374,6 +2386,24 @@
 	--spectrum-number-field-visual-to-in-field-stepper-medium: 8px;
 	--spectrum-number-field-visual-to-in-field-stepper-large: 9px;
 	--spectrum-number-field-visual-to-in-field-stepper-extra-large: 10px;
+	--spectrum-tree-view-disclosure-indicator-height: 40px;
+	--spectrum-tree-view-disclosure-indicator-width: 42px;
+	--spectrum-tree-view-minimum-height: 50px;
+	--spectrum-tree-view-minimum-width: 200px;
+	--spectrum-tree-view-bottom-to-label: 16px;
+	--spectrum-tree-view-drag-handle-to-checkbox: 10px;
+	--spectrum-tree-view-edge-to-checkbox: 15px;
+	--spectrum-tree-view-edge-to-drag-handle: 5px;
+	--spectrum-tree-view-end-edge-to-action-area: 7px;
+	--spectrum-tree-view-item-to-header: 30px;
+	--spectrum-tree-view-label-to-action-area: 8px;
+	--spectrum-tree-view-level-increment: 20px;
+	--spectrum-tree-view-minimum-top-to-context-area: 10px;
+	--spectrum-tree-view-top-to-action-button: 5px;
+	--spectrum-tree-view-top-to-checkbox: 5px;
+	--spectrum-tree-view-top-to-disclosure-indicator: 19px;
+	--spectrum-tree-view-top-to-drag-handle: 19px;
+	--spectrum-tree-view-top-to-label: 13px;
 	--spectrum-workflow-icon-size-50: 16px;
 	--spectrum-workflow-icon-size-75: 18px;
 	--spectrum-workflow-icon-size-100: 24px;
@@ -2609,6 +2639,8 @@
 
 	--spectrum-slider-tick-mark-height: 13px;
 	--spectrum-slider-ramp-track-height: 20px;
+
+	--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
 
 	--spectrum-treeview-item-indentation-medium: 20px;
 	--spectrum-treeview-item-indentation-small: 15px;
@@ -3453,14 +3485,14 @@
 	--spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
 }
 .spectrum--medium {
-	--spectrum-checkbox-control-size-small: 12px;
-	--spectrum-checkbox-control-size-medium: 14px;
-	--spectrum-checkbox-control-size-large: 16px;
-	--spectrum-checkbox-control-size-extra-large: 18px;
-	--spectrum-checkbox-top-to-control-small: 6px;
-	--spectrum-checkbox-top-to-control-medium: 9px;
-	--spectrum-checkbox-top-to-control-large: 12px;
-	--spectrum-checkbox-top-to-control-extra-large: 15px;
+	--spectrum-checkbox-control-size-small: 14px;
+	--spectrum-checkbox-control-size-medium: 16px;
+	--spectrum-checkbox-control-size-large: 18px;
+	--spectrum-checkbox-control-size-extra-large: 20px;
+	--spectrum-checkbox-top-to-control-small: 5px;
+	--spectrum-checkbox-top-to-control-medium: 8px;
+	--spectrum-checkbox-top-to-control-large: 11px;
+	--spectrum-checkbox-top-to-control-extra-large: 14px;
 	--spectrum-switch-control-width-small: 22px;
 	--spectrum-switch-control-width-medium: 26px;
 	--spectrum-switch-control-width-large: 30px;
@@ -3965,6 +3997,24 @@
 	--spectrum-number-field-visual-to-in-field-stepper-medium: 6px;
 	--spectrum-number-field-visual-to-in-field-stepper-large: 7px;
 	--spectrum-number-field-visual-to-in-field-stepper-extra-large: 8px;
+	--spectrum-tree-view-disclosure-indicator-height: 32px;
+	--spectrum-tree-view-disclosure-indicator-width: 34px;
+	--spectrum-tree-view-minimum-height: 40px;
+	--spectrum-tree-view-minimum-width: 160px;
+	--spectrum-tree-view-bottom-to-label: 12px;
+	--spectrum-tree-view-drag-handle-to-checkbox: 8px;
+	--spectrum-tree-view-edge-to-checkbox: 12px;
+	--spectrum-tree-view-edge-to-drag-handle: 4px;
+	--spectrum-tree-view-end-edge-to-action-area: 6px;
+	--spectrum-tree-view-item-to-header: 24px;
+	--spectrum-tree-view-label-to-action-area: 6px;
+	--spectrum-tree-view-level-increment: 16px;
+	--spectrum-tree-view-minimum-top-to-context-area: 8px;
+	--spectrum-tree-view-top-to-action-button: 4px;
+	--spectrum-tree-view-top-to-checkbox: 4px;
+	--spectrum-tree-view-top-to-disclosure-indicator: 15px;
+	--spectrum-tree-view-top-to-drag-handle: 15px;
+	--spectrum-tree-view-top-to-label: 10px;
 	--spectrum-workflow-icon-size-50: 14px;
 	--spectrum-workflow-icon-size-75: 16px;
 	--spectrum-workflow-icon-size-100: 20px;
@@ -4198,6 +4248,8 @@
 
 	--spectrum-slider-ramp-track-height: 16px;
 	--spectrum-slider-tick-mark-height: 10px;
+
+	--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-500);
 
 	--spectrum-treeview-indicator-inset-block-start: 5px;
 	--spectrum-treeview-item-indentation-small: var(--spectrum-spacing-200);

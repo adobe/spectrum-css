@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/combobox",
-	"version": "3.1.0",
+	"version": "4.0.0-next.0",
 	"description": "The Spectrum CSS combobox component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -17,32 +17,40 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"stories/*",
+		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/menu": ">=7",
-		"@spectrum-css/pickerbutton": ">=5",
-		"@spectrum-css/popover": ">=7",
-		"@spectrum-css/progresscircle": ">=3",
-		"@spectrum-css/textfield": ">=7",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
+		"@spectrum-css/menu": ">=8.0.0-next.0",
+		"@spectrum-css/pickerbutton": ">=6.0.0-next.0",
+		"@spectrum-css/popover": ">=8.0.0-next.0",
+		"@spectrum-css/progresscircle": ">=4.0.0-s2-foundations.0",
+		"@spectrum-css/textfield": ">=8.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=14.0.0-next.10"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/progresscircle": {
 			"optional": true
 		}
+	},
+	"devDependencies": {
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/pickerbutton": "workspace:^",
+		"@spectrum-css/popover": "workspace:^",
+		"@spectrum-css/progresscircle": "workspace:^",
+		"@spectrum-css/textfield": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",
@@ -52,5 +60,12 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/combo-box",
+			"rootClass": "spectrum-Combobox",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/combobox/"
+		}
+	]
 }

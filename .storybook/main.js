@@ -4,7 +4,7 @@ import remarkGfm from 'remark-gfm';
 
 // Get a list of all the folders in the components directory
 const componentDir = path.resolve(__dirname, "../components");
-const components = fs.readdirSync("../components", { withFileTypes: true })
+const components = fs.readdirSync(componentDir, { withFileTypes: true })
 	.filter(dirent => dirent.isDirectory() && fs.existsSync(path.resolve(componentDir, dirent.name, "package.json")))
 	.map(dirent => dirent.name);
 
@@ -22,7 +22,7 @@ export default {
 		},
 		{
 			directory: "./foundations",
-			files: "**/*.@(stories.js|mdx)",
+			files: "*/*.@(stories.js|mdx)",
 			titlePrefix: "Foundations",
 		},
 		{

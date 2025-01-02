@@ -1,23 +1,20 @@
-import { Template } from "./template";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isEmphasized, isInvalid, isSelected, size } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { TagGroups } from "./tag.test.js";
+import { SelectedTemplate, TagsDefaultOptions } from "./template.js";
 
 /**
- * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
+ * A tag categorizes content. It can represent keywords or people, and are [grouped](?path=/docs/components-tag-group--docs) to describe an item or a search request.
  */
 export default {
 	title: "Tag",
 	component: "Tag",
 	argTypes: {
-		size: {
-			name: "Size",
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l"],
-			control: "select",
-		},
+		size: size(["s", "m", "l"]),
 		hasIcon: {
 			name: "Has icon",
 			type: { name: "boolean" },
@@ -62,42 +59,12 @@ export default {
 			control: { type: "text" },
 		},
 		isEmphasized: {
-			name: "Emphasized styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
+			...isEmphasized,
 			if: { arg: "isInvalid", truthy: false },
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
+		isDisabled,
+		isSelected,
 		hasClearButton: {
 			name: "Clear button",
 			description: "True if a button is present to clear the tag.",
@@ -127,30 +94,116 @@ export default {
 		actions: {
 			handles: [],
 		},
-		status: {
-			type: "migrated",
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=715-2687",
 		},
+		packageJson,
+		metadata,
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = TagGroups.bind({});
+Default.tags = ["!autodocs"];
 Default.args = {};
 
-export const Icon = Template.bind({});
-Icon.args = {
-	hasIcon: true,
-	iconName: "Info",
-	label: "Tag label that truncates when it gets too long",
-	customStyles: {"max-inline-size": "200px"}
+// ********* VRT ONLY ********* //
+// @todo combine variants into one snapshot
+export const WithForcedColors = TagGroups.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 
-export const Avatar = Template.bind({});
-Avatar.args = {
-	hasAvatar: true,
-	avatarUrl: "example-ava.png"
+// ********* DOCS ONLY ********* //
+
+export const Standard = TagsDefaultOptions.bind({});
+Standard.args = Default.args;
+Standard.tags = ["!dev"];
+Standard.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
-export const Removable = Template.bind({});
+Standard.storyName = "Default";
+
+export const Selected = SelectedTemplate.bind({});
+Selected.tags = ["!dev"];
+Selected.args = {
+	isSelected: true
+};
+
+Selected.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Disabled = TagsDefaultOptions.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	isDisabled: true,
+};
+
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Emphasized = TagsDefaultOptions.bind({});
+Emphasized.tags = ["!dev"];
+Emphasized.args = {
+	isEmphasized: true
+};
+
+Emphasized.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Invalid = TagGroups.bind({});
+Invalid.tags = ["!dev"];
+Invalid.args = {
+	isInvalid: true
+};
+
+Invalid.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Removable = TagsDefaultOptions.bind({});
+Removable.tags = ["!dev"];
 Removable.args = {
 	hasClearButton: true,
+};
+
+Removable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Sizing = (args, context) => Sizes({
+	Template: TagsDefaultOptions,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+
+/**
+ * When the tag text is too long for the available horizontal space, it truncates. The full text should be revealed with a tooltip on hover.
+ * */
+
+export const TextOverflow = TagGroups.bind({});
+TextOverflow.tags = ["!dev"];
+TextOverflow.args = {
+	hasIcon: true,
+	iconName: "CheckmarkCircle",
+	label: "An example of text overflow behavior. When the button text is too long for the horizontal space available, it will truncate and stay on one line.",
+	customStyles: { "max-inline-size": "200px" }
+};
+
+TextOverflow.parameters = {
+	chromatic: { disableSnapshot: true },
 };

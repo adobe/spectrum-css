@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/slider",
-	"version": "5.1.0",
+	"version": "6.0.0-s2-foundations.18",
 	"description": "The Spectrum CSS slider component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -17,23 +17,27 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"stories/*",
+		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/stepper": ">=6",
+		"@spectrum-css/stepper": ">=7.0.0-s2-foundations.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.3"
+	},
+	"devDependencies": {
+		"@spectrum-css/stepper": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",
@@ -43,5 +47,12 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/slider",
+			"rootClass": "spectrum-Slider",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/slider/"
+		}
+	]
 }

@@ -1,10 +1,8 @@
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { styleMap } from "lit/directives/style-map.js";
-
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { html, nothing } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 
@@ -16,8 +14,7 @@ export const Template = ({
 	text,
 	variant = "neutral",
 	isClosable = false,
-	...globals
-}) => {
+} = {}, context = {}) => {
 	let iconName;
 	switch (variant) {
 		case "info":
@@ -37,29 +34,23 @@ export const Template = ({
 
 	const iconMarkup =
 		typeof iconName !== "undefined"
-			? html`
-					${Icon({
-						...globals,
-						iconName,
-						customClasses: [`${rootClass}-icon`],
-					})}
-			  `
-			: "";
+			? Icon({
+				iconName,
+				setName: "workflow",
+				customClasses: [`${rootClass}-icon`],
+			}, context) : nothing;
 
-	const closableMarkup = isClosable
-		? html`
-				<div class="spectrum-InLineAlert-footer">
-					${Button({
-						...globals,
-						treatment: "outline",
-						variant: "primary",
-						iconName: false,
-						hideLabel: false,
-						label: "Ok",
-					})}
-				</div>
-		  `
-		: "";
+	const closableMarkup = isClosable ? html`
+		<div class="spectrum-InLineAlert-footer">
+			${Button({
+				treatment: "outline",
+				variant: "primary",
+				iconName: false,
+				hideLabel: false,
+				label: "Ok",
+			})}
+		</div>
+	` : nothing;
 
 	return html`
 		<div
@@ -68,11 +59,11 @@ export const Template = ({
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 
 		>
 			<div class="${rootClass}-header">
-				${variant.charAt(0).toUpperCase() + variant.slice(1)} ${headerText}
+				${headerText}
 				${iconMarkup}
 			</div>
 			<div class="${rootClass}-content">${text}</div>

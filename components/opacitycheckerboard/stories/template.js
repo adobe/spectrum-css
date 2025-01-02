@@ -1,3 +1,4 @@
+import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -10,16 +11,14 @@ export const Template = ({
 	backgroundPosition,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("opacity-checkerboard"),
 	content = [],
-	size,
 	role,
-}) => {
+} = {}) => {
 	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${ifDefined(styleMap({
@@ -29,6 +28,7 @@ export const Template = ({
 			role=${ifDefined(role)}
 			id=${ifDefined(id)}
 		>
-			${content}
-		</div>`;
+			${renderContent(content)}
+		</div>
+	`;
 };

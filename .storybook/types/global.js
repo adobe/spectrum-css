@@ -4,20 +4,6 @@
 
 /** @type import('@storybook/types').GlobalTypes */
 export default {
-	context: {
-		title: "Design context",
-		description: "The variation of Spectrum to use in the component",
-		defaultValue: "spectrum",
-		type: "string",
-		showName: true,
-		toolbar: {
-			items: [
-				{ value: "spectrum", title: "Spectrum 2", right: "default" },
-				{ value: "raw", title: "Token-free", right: "raw" },
-			],
-			dynamicTitle: true,
-		},
-	},
 	color: {
 		title: "Color",
 		description: "Controls the color context of the component",

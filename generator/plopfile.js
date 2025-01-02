@@ -95,7 +95,7 @@ export default async (plop) => {
 					type: "install",
 					root: rootFolder,
 				},
-				(data, config, plop) => plop.renderString("Successfully created component {{ folderName }}. To preview your component, run `yarn dev` and navigate to the {{ folderName }} story."),
+				(data, config, plop) => plop.renderString("Successfully created component {{ folderName }}. To preview your component, run `yarn start` and navigate to the {{ folderName }} story."),
 			];
 		},
 	});
@@ -133,7 +133,7 @@ export default async (plop) => {
 					type: "install",
 					root: rootFolder,
 				},
-				(data, _, plop) => plop.renderString("Successfully updated {{ folderName }}. To preview your component, run `yarn dev` and navigate to the {{ folderName }} story.", data),
+				(data, _, plop) => plop.renderString("Successfully updated {{ folderName }}. To preview your component, run `yarn start` and navigate to the {{ folderName }} story.", data),
 			];
 		},
 	});

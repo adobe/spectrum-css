@@ -1,9 +1,9 @@
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { styleMap } from "lit/directives/style-map.js";
-
 import { Template } from "./template.js";
+import { isDisabled, isSelected, isHovered, isFocused } from "@spectrum-css/preview/types";
+import { {{ pascalCase name }}Group } from "./{{ pascalCase name }}.test.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
   * {{ description }}
@@ -24,44 +24,49 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+    isDisabled,
+    isSelected,
+    isHovered,
+    isFocused,
   },
   args: {
     rootClass: "spectrum-{{ pascalCase name }}",
     size: "m",
+    isDisabled: false
   },
   parameters: {
     actions: {
-      handles: []
-    },
-    status: {
-      type: "migrated"
+      handles: ["click .spectrum-{{ pascalCase name }}"],
     },
     design: {
       type: "figma",
       url: "",
     },
+    packageJson,
+    metadata,
   }
 };
 
-const {{ pascalCase name }}Group = (args) => html`
-	${window.isChromatic() ? html`
-		<div style=${styleMap({
-			"display": "flex",
-			"flex-wrap": "wrap",
-			"gap": "16px"
-		})}>
-			${Template(args)}
-			${Template({
-				...args,
-                // variant1
-			})}
-			${Template({
-				...args,
-                // variant2
-			})}
-		</div>
-	` : Template(args)}
-`;
-
 export const Default = {{ pascalCase name }}Group.bind({});
 Default.args = {};
+
+// ********* DOCS ONLY ********* //
+export const Disabled = Template.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+  isDisabled: true
+};
+Disabled.parameters = {
+  chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

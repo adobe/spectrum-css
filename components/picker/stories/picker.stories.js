@@ -1,30 +1,21 @@
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-
-import { withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { Template } from "./template";
+import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { PickerGroup } from "./picker.test.js";
+import { ClosedAndOpenTemplate, DisabledTemplate, Template } from "./template.js";
 
 /**
- * A picker outlines a set of options for a user.
+ * The picker component (sometimes known as a "dropdown" or "select") allows users to choose from a list of options in a limited space. The list of options can change based on the context.
  */
 export default {
 	title: "Picker",
 	component: "Picker",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			description: "The label text that is displayed above or to the side of the Picker. This uses a separate Label component outside of the Picker markup.",
@@ -42,23 +33,13 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["top", "side"],
 			control: {
 				type: "select",
 				labels: {
 					side: "side (inline start)",
 				},
 			},
-		},
-		helpText: {
-			name: "Help text",
-			description: "The help text that is displayed below the Picker. This uses a separate Help text component outside of the Picker markup.",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Content",
-			},
-			control: { type: "text" },
+			options: ["top", "side"],
 		},
 		withSwitch: {
 			name: "Display Switch component",
@@ -88,93 +69,45 @@ export default {
 			if: false,
 		},
 		isQuiet: {
-			name: "Quiet styling",
+			...isQuiet,
 			description: "An alternative way to display the Picker without a visible background.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
+			name: "Quiet styling",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
+		helpText: {
+			name: "Help text",
+			description: "Optional help text that can be informational or an error message. Displays a separate help text component after the picker. For error messages, the invalid control must also be set to true.",
+			type: { name: "string" },
 			table: {
-				type: { summary: "boolean" },
-				category: "State",
+				type: { summary: "string" },
+				category: "Content",
 			},
-			control: "boolean",
+			control: { type: "text" },
 		},
-		isKeyboardFocused: {
-			name: "Keyboard focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-			if: { arg: "isLoading", eq: false },
-		},
+		isOpen,
+		isKeyboardFocused,
+		isDisabled,
 		isLoading: {
-			name: "Loading",
+			...isLoading,
 			description: "When in the loading state, a progress circle will display next to the disclosure icon.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-			if: { arg: "isDisabled", eq: false },
+			if: { arg: "isDisabled", eq: false }
 		},
 		isInvalid: {
-			name: "Invalid input",
+			...isInvalid,
 			description: "When in the invalid state, some styles change on the Picker, and an invalid icon displays next to the disclosure icon.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
 		},
-		isHovered: {
-			name: "Hovered",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isActive: {
-			name: "Active",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isHovered,
+		isActive,
 		content: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Picker",
 		size: "m",
 		label: "Country",
-		helpText: "",
 		labelPosition: "top",
 		placeholder: "Select a country",
+		helpText: "",
+		currentValue: "",
+		showWorkflowIcon: false,
 		isQuiet: false,
 		isKeyboardFocused: false,
 		isLoading: false,
@@ -184,441 +117,277 @@ export default {
 		isHovered: false,
 		isActive: false,
 		withSwitch: false,
+		popoverContent: [
+			(passthrough, context) => MenuStories({
+				...passthrough,
+				...MenuStories.args,
+				items: [
+					{ label: "United States of America" },
+					{ label: "India" },
+					{ label: "Australia" },
+					{ label: "Brazil" },
+				],
+			}, context)
+		],
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
-		status: {
-			type: "migrated",
-		},
 		docs: {
 			story: {
-				height: "300px"
+				height: "400px"
 			}
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=739-1453",
+		},
+		packageJson,
+		metadata,
+		downState: {
+			selectors: [".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"],
 		},
 	},
 	decorators: [
-		withDownStateDimensionCapture(".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"),
-		(Story, context) => {
-			if (!window.isChromatic()) return Story(context);
-			return html`
-				<style>
-					.spectrum-Detail { display: inline-block; }
-					.spectrum-Typography > div {
-						border: 1px solid var(--spectrum-gray-200);
-						border-radius: 4px;
-						padding: 0 1em 1em;
-						/* Why seafoam? Because it separates it from the component styles. */
-						--mod-detail-font-color: var(--spectrum-seafoam-900);
-					}
-				</style>
-				<div
-					style=${styleMap({
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						gap: "1rem",
-						"--mod-detail-margin-end": ".3rem",
-					})}
-				>
-					${Story(context)}
-				</div>
-			`;
-		},
+		withDownStateDimensionCapture,
 	],
+	tags: ["migrated"],
 };
 
-/**
- * Group of Pickers for default, hover, open + hover, open, keyboard focus, and disabled.
- */
-const States = ({
-	fieldLabelPrefix = "picker",
-	...args
-}) => html`
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Default"],
-		})}
-		${Template({
-			...args,
-			isOpen: false,
-			fieldLabelId: fieldLabelPrefix + "-default",
-		})}
-	</div>
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Hover"],
-		})}
-		${Template({
-			...args,
-			isHovered: true,
-			isOpen: false,
-			fieldLabelId: fieldLabelPrefix + "-hover",
-		})}
-	</div>
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Active (down state)"],
-		})}
-		${Template({
-			...args,
-			isActive: true,
-			isOpen: false,
-			fieldLabelId: fieldLabelPrefix + "-active",
-		})}
-	</div>
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Keyboard Focused"],
-		})}
-		${Template({
-			...args,
-			isKeyboardFocused: true,
-			isOpen: false,
-			fieldLabelId: fieldLabelPrefix + "-key-focused",
-		})}
-	</div>
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Disabled"],
-		})}
-		${Template({
-			...args,
-			isDisabled: true,
-			isOpen: false,
-			fieldLabelId: fieldLabelPrefix + "-disabled",
-		})}
-	</div>
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Loading"],
-		})}
-		${Template({
-			...args,
-			isLoading: true,
-			isOpen: false,
-			fieldLabelId: fieldLabelPrefix + "-loading",
-		})}
-	</div>
-	<div style="padding-bottom: 130px;">
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Open + Hover"],
-		})}
-		${Template({
-			...args,
-			isHovered: true,
-			isOpen: true,
-			fieldLabelId: fieldLabelPrefix + "-open-hover",
-		})}
-	</div>
-	<div style="padding-bottom: 130px;">
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Open"],
-		})}
-		${Template({
-			...args,
-			isOpen: true,
-			fieldLabelId: fieldLabelPrefix + "-open",
-		})}
-	</div>
-`;
-
-/**
- * Chromatic only "kitchen sink" containing multiple sections with
- * each state within them.
- */
-const ChromaticPickerGroup = (args) => {
-	const sectionData = [
-		{
-			sectionName: "Default",
-			componentMarkup: States({
-				...args,
-				placeholder: "Select country with truncated placeholder text",
-				fieldLabelPrefix: "picker",
-			}),
-		},
-		{
-			sectionName: "Invalid",
-			componentMarkup: States({
-				...args,
-				isInvalid: true,
-				placeholder: "Select country with truncated placeholder text",
-				helpText: "Please select a country",
-				fieldLabelPrefix: "picker-invalid",
-			}),
-		},
-		{
-			sectionName: "Quiet",
-			componentMarkup: States({
-				...args,
-				isQuiet: true,
-				helpText: "Please select a country",
-				fieldLabelPrefix: "picker-quiet",
-			}),
-		},
-		{
-			sectionName: "Quiet + invalid",
-			componentMarkup: States({
-				...args,
-				isQuiet: true,
-				isInvalid: true,
-				fieldLabelPrefix: "picker-quiet-invalid",
-			}),
-		},
-		{
-			sectionName: "Side label: default",
-			componentMarkup: States({
-				...args,
-				labelPosition: "side",
-				fieldLabelPrefix: "picker-side-label",
-			}),
-		},
-		{
-			sectionName: "Side label: invalid",
-			componentMarkup: States({
-				...args,
-				isInvalid: true,
-				labelPosition: "side",
-				fieldLabelPrefix: "picker-side-label-invalid",
-			}),
-		},
-		{
-			sectionName: "Side label: quiet",
-			componentMarkup: States({
-				...args,
-				isQuiet: true,
-				labelPosition: "side",
-				fieldLabelPrefix: "picker-side-label-quiet",
-			}),
-		},
-		{
-			sectionName: "Side label: quiet + invalid",
-			componentMarkup: States({
-				...args,
-				isQuiet: true,
-				isInvalid: true,
-				labelPosition: "side",
-				fieldLabelPrefix: "picker-side-label-quiet-invalid",
-			})
-		},
-		{
-			sectionName: "Alignment with switch and side label",
-			componentMarkup: SwitchAndSideLabel(args),
-			gridColumns: 2,
-		},
-		{
-			sectionName: "Sizing",
-			componentMarkup: Sizing(args),
-		},
-		{
-			sectionName: "Sizing + Quiet",
-			componentMarkup: Sizing({
-				...args,
-				isQuiet: true,
-				fieldLabelPrefix: "picker-sizing-quiet",
-			}),
-		},
-		{
-			sectionName: "Sizing + Invalid",
-			componentMarkup: Sizing({
-				...args,
-				isInvalid: true,
-				placeholder: "Select country with truncated placeholder text",
-				fieldLabelPrefix: "picker-sizing-invalid",
-			}),
-		},
-		{
-			sectionName: "Sizing + Loading",
-			componentMarkup: Sizing({
-				...args,
-				isLoading: true,
-				fieldLabelPrefix: "picker-sizing-loading",
-			}),
-		},
-	];
-
-	return sectionData.map((data) => html`
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: [data.sectionName],
-			})}
-			<div
-				style=${styleMap({
-					display: "grid",
-					gap: "1.5rem",
-					gridTemplateColumns: `repeat(${data?.gridColumns?.toString() ?? "4"}, 1fr)`,
-				})}
-			>
-				${data.componentMarkup}
-			</div>
-		</div>
-	`);
+export const Default = PickerGroup.bind({});
+Default.args = {};
+Default.tags = ["!autodocs"];
+Default.parameters = {
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
 };
 
-/**
- * Examples of side label, Picker, and Switch in a single line.
- * Used for testing vertical alignment.
- */
-const SwitchAndSideLabel = (args) => html`
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Default"],
-		})}
-		${Template({
-			...args,
-			labelPosition: "side",
-			isOpen: false,
-			withSwitch: true,
-			placeholder: "Select your country of origin",
-			fieldLabelId: "with-switch-default",
-		})}
-	</div>
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Wrapping label text"],
-		})}
-		${Template({
-			...args,
-			labelPosition: "side",
-			isOpen: false,
-			withSwitch: true,
-			fieldLabelStyle: {"max-width": "90px"},
-			label: "Enter country, text should wrap",
-			placeholder: "Select your country of origin",
-			fieldLabelId: "with-switch-wrapping",
-		})}
-	</div>
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Quiet"],
-		})}
-		${Template({
-			...args,
-			labelPosition: "side",
-			isOpen: false,
-			withSwitch: true,
-			placeholder: "Select your contry of origin",
-			isQuiet: true,
-			fieldLabelId: "with-switch-quiet",
-		})}
-	</div>
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: ["Quiet + wrapping label text"],
-		})}
-		${Template({
-			...args,
-			labelPosition: "side",
-			isOpen: false,
-			withSwitch: true,
-			isQuiet: true,
-			fieldLabelStyle: {"max-width": "90px"},
-			label: "Enter country, text should wrap",
-			placeholder: "Select your contry of origin",
-			fieldLabelId: "with-switch-quiet-wrapping",
-		})}
-	</div>
-`;
-
-/**
- * Picker displayed at each available size.
- */
-const Sizing = ({
-	fieldLabelPrefix = "picker-sizing",
-	...args
-}) => html`
-	${["s","m","l","xl"].map((size) => html`
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: {
-					s: "Small",
-					m: "Medium",
-					l: "Large",
-					xl: "Extra-large",
-				}[size],
-			})}
-			${Template({
-				...args,
-				size,
-				isOpen: false,
-				fieldLabelId: fieldLabelPrefix + size,
-			})}
-		</div>`
-	)}
-	${["s","m","l","xl"].map((size) => html`
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: {
-					s: "Small",
-					m: "Medium",
-					l: "Large",
-					xl: "Extra-large",
-				}[size] + " - with icon",
-			})}
-			${Template({
-				...args,
-				size,
-				isOpen: false,
-				fieldLabelId: fieldLabelPrefix + size,
-				contentIconName: "Image",
-			})}
-		</div>`
-	)}
-`;
-
-
-const popoverMenuItems = [
-	{ label: "United States" },
-	{ label: "Japan" },
-	{ label: "Brazil" },
-];
-
-/* Stories */
-export const Default = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
-Default.args = {
-	content: [
-		() => Menu({ items: popoverMenuItems })
-	],
-};
-
-export const WithForcedColors = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
+// ********* VRT ONLY ********* //
+export const WithForcedColors = PickerGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
-	// Sets the forced-colors media feature for a specific story.
-	chromatic: { forcedColors: "active" },
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
-WithForcedColors.args = {
-	content: [
-		() => Menu({ items: popoverMenuItems })
-	]
+WithForcedColors.args = {};
+
+// ********* DOCS ONLY ********* //
+
+/**
+ * The following example shows the picker with both a [field label](/docs/components-field-label--docs) and placeholder text.
+ * Pickers [should always have a label](https://spectrum.adobe.com/page/picker/#Usage-guidelines).
+ * The placeholder text can be displayed when it does not have a selected value.
+ */
+export const Standard = ClosedAndOpenTemplate.bind({});
+Standard.storyName = "Default";
+Standard.tags = ["!dev"];
+Standard.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
+};
+
+/**
+ * This example shows the picker with a selected value.
+ * A picker can also have [help text](?path=/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should select.
+ */
+export const SelectedValue = ClosedAndOpenTemplate.bind({});
+SelectedValue.storyName = "Default with value and help text";
+SelectedValue.args = {
+	currentValue: "United States of America",
+	helpText: "Additional field context",
+	popoverContent: [
+		(passthrough, context) => MenuStories({
+			...passthrough,
+			...MenuStories.args,
+			selectionMode: "single",
+			items: [
+				{ label: "United States of America", isSelected: true },
+				{ label: "India" },
+				{ label: "Australia" },
+				{ label: "Brazil" },
+			],
+		}, context)
+	],
+};
+SelectedValue.tags = ["!dev"];
+SelectedValue.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
+};
+
+/**
+ * Pickers come in four different sizes: small, medium, large, and extra-large.
+ *
+ * At each of these sizes, the following chevron UI icon should be used:
+ *
+ * | Picker size    | UI icon size |
+ * |----------------|--------------|
+ * | small          | `Chevron75`  |
+ * | medium         | `Chevron100` |
+ * | large          | `Chevron200` |
+ * | extra-large    | `Chevron300` |
+ */
+export const Sizing = (args, context) => Sizes({
+	Template: Template,
+	withHeading: false,
+	withBorder: false,
+	direction: "column",
+	...args,
+}, context);
+Sizing.args = {
+	popoverContent: [],
+	onclick: () => {},
+};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Disabled = DisabledTemplate.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	isDisabled: true,
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A picker can be marked as having an error to show that a value needs to be entered in order to move forward or that a value that was entered is invalid.
+ * This example shows the optional error message within the help text area.
+ */
+export const Invalid = ClosedAndOpenTemplate.bind({});
+Invalid.storyName = "Invalid";
+Invalid.tags = ["!dev"];
+Invalid.args = {
+	isInvalid: true,
+	helpText: "Select a country.",
+};
+Invalid.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
+};
+
+export const Loading = Template.bind({});
+Loading.tags = ["!dev"];
+Loading.args = {
+	isLoading: true,
+	placeholder: "Loading...",
+	popoverContent: [],
+	onclick: () => {},
+};
+Loading.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Quiet pickers have no visible background. This style works best when a clear layout (vertical stack, table, grid)
+ * makes it easy to parse the buttons. Too many quiet components in a small space can be hard to read.
+ */
+export const Quiet = ClosedAndOpenTemplate.bind({});
+Quiet.tags = ["!dev"];
+Quiet.args = {
+	isQuiet: true,
+};
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
+};
+
+export const QuietDisabled = DisabledTemplate.bind({});
+QuietDisabled.storyName = "Quiet and disabled";
+QuietDisabled.tags = ["!dev"];
+QuietDisabled.args = {
+	isDisabled: true,
+	isQuiet: true,
+};
+QuietDisabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const QuietInvalid = ClosedAndOpenTemplate.bind({});
+QuietInvalid.storyName = "Quiet and invalid";
+QuietInvalid.tags = ["!dev"];
+QuietInvalid.args = {
+	isInvalid: true,
+	isQuiet: true,
+	helpText: "Select a country.",
+};
+QuietInvalid.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
+};
+
+/**
+ * The value and placeholder within the picker will truncate with an ellipsis when it is longer than the available horizontal space within the picker.
+ * The full text of the option can be shown in the menu.
+ */
+export const TextOverflow = Template.bind({});
+TextOverflow.storyName = "Text overflow";
+TextOverflow.tags = ["!dev"];
+TextOverflow.args = {
+	placeholder: "Some long text that will be cut off when displayed as the current value or placeholder",
+	popoverContent: [],
+	onclick: () => {},
+};
+TextOverflow.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A workflow icon can be displayed before the value or placeholder. The class `.spectrum-Picker-icon` should be used with the icon.
+ */
+export const WithWorkflowIcon = Template.bind({});
+WithWorkflowIcon.storyName = "With workflow icon";
+WithWorkflowIcon.tags = ["!dev"];
+WithWorkflowIcon.args = {
+	showWorkflowIcon: true,
+	popoverContent: [],
+	onclick: () => {},
+};
+WithWorkflowIcon.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Labels can be placed either on top or on the side. Top labels are the default and are recommended because
+ * they work better with long copy, localization, and responsive layouts. Side labels are most useful when vertical
+ * space is limited.
+ *
+ * When using the side label, the `spectrum-Picker--sideLabel` class is added to the Picker.
+ */
+export const WithSideLabel = Template.bind({});
+WithSideLabel.storyName = "With side label";
+WithSideLabel.tags = ["!dev"];
+WithSideLabel.args = {
+	labelPosition: "side",
+	label: "Country",
+	popoverContent: [],
+	onclick: () => {},
+};
+WithSideLabel.parameters = {
+	chromatic: { disableSnapshot: true },
 };

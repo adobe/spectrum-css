@@ -1,16 +1,85 @@
-import { html, svg } from "lit";
+import { getRandomId } from "@spectrum-css/preview/decorators";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
-
-import { fetchIconSVG, uiIcons, uiIconSizes, workflowIcons } from "./utilities.js";
 
 import "../index.css";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
- * @typedef { IconArgs & { scale: string, useRef: boolean, setName: 'workflow' | 'ui' } } IconProps
+ * @typedef { IconArgs & { scale: string, setName: 'workflow' | 'ui' } } IconProps
  */
+
+const fetchIconDetails = ({
+	icons,
+	workflowIcons = [],
+	uiIcons = [],
+	uiIconSizes = {},
+}) => {
+	if (!icons || Object.keys(icons).length == 0) {
+		// Fetch loaded data if not provided
+		if (window.icons) icons = window.icons;
+		else {
+			return {
+				workflowIcons: [],
+				uiIcons: [],
+				uiIconSizes: {},
+				uiIconsWithDirections: [],
+			};
+		}
+	}
+
+	// clean up loaded icon data
+	icons = Object.entries(icons).reduce((acc, [setName, data]) => {
+		acc[setName] = Object.entries(data).reduce((acc, [size, data]) => {
+			acc[size] = Object.entries(data).reduce((acc, [iconName, svg]) => {
+				// simplify icon name
+				iconName = iconName.split("/").pop().replace(/\.svg$/, "");
+				acc[iconName] = svg;
+
+				// Add the icon name to the workflowIcons list if it's from the workflow set
+				if (setName === "workflow") {
+					workflowIcons.push(iconName);
+				}
+				else {
+					const iconNameRoot = iconName.replace(/\d{2,3}$/, "").replace(/(Right|Left|Down|Up)$/, "");
+					const iconNameSize = iconName.match(/\d{2,3}/g)?.[0];
+					uiIcons.push(iconNameRoot);
+					uiIconSizes[iconNameRoot] = [
+						...new Set([
+							...uiIconSizes[iconNameRoot] ?? [],
+							...(iconNameSize ? [iconNameSize] : []),
+						])
+					];
+				}
+				return acc;
+			}, {});
+			return acc;
+		}, {});
+		return acc;
+	}, {});
+
+	return {
+		icons,
+		workflowIcons: [...new Set(workflowIcons)],
+		uiIcons: [...new Set(uiIcons)],
+		uiIconSizes,
+		uiIconsWithDirections: [
+			...new Set([
+				...(uiIcons.filter((c) => !["Chevron", "Arrow"].includes(c)) ?? []),
+				"ArrowRight",
+				"ArrowLeft",
+				"ArrowUp",
+				"ArrowDown",
+				"ChevronRight",
+				"ChevronLeft",
+				"ChevronUp",
+				"ChevronDown",
+			])
+		],
+	};
+};
 
 /**
  * Template for rendering an icon
@@ -19,11 +88,11 @@ import "../index.css";
  * @param {string} props.rootClass
  * @param {"xs"|"s"|"m"|"l"|"xl"|"xxl"} props.size
  * @param {"ui"|"workflow"} props.setName
- * @param {string} props.iconName - Icon name with or without the icon scale number appended. Names with the scale (e.g. 75, 100) will replace it based upon the value of 'size'.
+ * @param {string} props.iconName Icon name; could be from either icon set.
+ * @param {string} props.uiIconName Icon name selected from the UI icon set. When defined, takes precedence over iconName when setName == "ui".
  * @param {string} props.fill
  * @param {string} props.id
  * @param {string[]} props.customClasses
- * @param {boolean} props.useRef
  * @returns {import('lit').TemplateResult<1>}
  */
 export const Template = ({
@@ -31,13 +100,49 @@ export const Template = ({
 	size = "m",
 	setName,
 	iconName,
+	uiIconName,
 	fill,
-	id,
+	id = getRandomId("icon"),
 	customClasses = [],
-	useRef = false,
-	...globals
-}) => {
-	const { scale } = globals;
+	icons,
+	useRef = true,
+	workflowIcons,
+	uiIcons,
+	uiIconSizes,
+} = {}, context = {}) => {
+	const { globals = {}, loaded = {} } = context;
+
+	const scale = globals.scale ?? "medium";
+
+	if (!workflowIcons || !uiIcons || !uiIconSizes) {
+		const details = fetchIconDetails({
+			icons: loaded.icons,
+			workflowIcons,
+			uiIcons,
+			uiIconSizes
+		});
+
+		if(details.icons) {
+			icons = details.icons;
+		}
+
+		if (!workflowIcons && details.workflowIcons) {
+			workflowIcons = details.workflowIcons;
+		}
+
+		if (!uiIcons && details.uiIcons) {
+			uiIcons = details.uiIcons;
+		}
+
+		if (!uiIconSizes && details.uiIconSizes) {
+			uiIconSizes = details.uiIconSizes;
+		}
+	}
+
+	// UI icons are selected from a different control.
+	if (setName === "ui" && uiIconName) {
+		iconName = uiIconName;
+	}
 
 	if (!iconName) {
 		console.warn(
@@ -119,15 +224,10 @@ export const Template = ({
 	// Fetch SVG file markup, and set optional fill color.
 	let inlineStyle;
 	if (fill) inlineStyle = `color: ${fill}`;
-	let icon;
 
-	if (!useRef) {
-		icon = fetchIconSVG({ iconName: idKey, setName, ...globals });
-
-		if (!icon) {
-			console.warn(`Icon: "${idKey}" was not found in the "${setName}" icon set.`);
-			return html``;
-		}
+	let svgString;
+	if (icons && icons[setName]?.[scale]?.[idKey]) {
+		svgString = icons[setName][scale][idKey];
 	}
 
 	/**
@@ -145,22 +245,16 @@ export const Template = ({
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 	};
 
-	// If we found an icon above, return that value with the appended class list
-	if (icon) {
-		return svg`${unsafeSVG(
-			icon.replace(
-				/^<svg(.*)>/,
-				`<svg class="${Object.entries(classList)
-					.filter(([, v]) => v === true)
-					.map(([k]) => k)
-					.join(" ")}"${
-					inlineStyle ? ` style="${inlineStyle}"` : ""
-				} focusable="false" aria-hidden="true" role="img" $1>`
-			)
+	const classesAsString = Object.entries(classList).reduce((acc, [key, value]) => {
+		if (value) acc += `${key} `;
+		return acc;
+	}, "");
+
+	if (!useRef && svgString) {
+		return html`${unsafeSVG(
+			svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
 		)}`;
 	}
-
-	// Otherwise, we need to render a reference to the icon
 
 	// ui ID: #spectrum-css-icon-${idKey}
 	// workflow ID: #spectrum-icon-(18|24)-${idKey}
@@ -169,19 +263,7 @@ export const Template = ({
 			? `spectrum-css-icon-${idKey}`
 			: `spectrum-icon-${scale !== "medium" ? "24" : "18"}-${idKey}`;
 
-	try {
-		import(
-			/* webpackPrefetch: true */ "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw"
-		);
-		import(
-			/* webpackPrefetch: true */ "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw"
-		);
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
-	return svg`<svg
+	return html`<svg
 		class=${classMap(classList)}
 		id=${ifDefined(id)}
 		style=${ifDefined(inlineStyle)}
