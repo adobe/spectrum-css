@@ -54,7 +54,7 @@
 	min-block-size: var(--mod-color-slider-vertical-minimum-height, var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length)));
 	block-size: var(--mod-color-slider-vertical-height, var(--mod-color-slider-length, var(--spectrum-color-slider-length)));
 	min-inline-size: 0;
-	inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-control-track-width)));
+	inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-slider-control-track-width)));
 }
 
 .spectrum-ColorSlider-handle {
@@ -76,7 +76,7 @@
 	}
 
 	.spectrum-ColorSlider.is-disabled & {
-		--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-disabled-background-color)));
+		--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-colorslider-fill-color-disabled)));
 		background: var(--highcontrast-color-slider-background-color-disabled, var(--mod-color-slider-background-color-disabled, var(--spectrum-colorslider-fill-color-disabled)));
 	}
 }
