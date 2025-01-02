@@ -61,7 +61,6 @@
 
 /* Used when the coachmark has an image */
 .spectrum-CoachMark-image-wrapper {
-	block-size: var(--mod-coachmark-media-height, var(--spectrum-coach-mark-media-height));
 	min-block-size: var(--mod-coachmark-media-min-height, var(--spectrum-coach-mark-media-minimum-height));
 	inline-size: calc(var(--mod-coachmark-width, var(--spectrum-coach-mark-width)) - (var(--spectrum-coachmark-border-size) * 2));
 
@@ -81,6 +80,7 @@
 	display: block;
 	inline-size: 100%;
 	block-size: 100%;
+	min-block-size: var(--mod-coachmark-media-min-height, var(--spectrum-coachmark-media-min-height));
 	object-fit: cover;
 	border-start-start-radius: calc(var(--spectrum-coachmark-border-radius) - var(--spectrum-coachmark-border-size));
 	border-start-end-radius: calc(var(--spectrum-coachmark-border-radius) - var(--spectrum-coachmark-border-size));
