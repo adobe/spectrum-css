@@ -99,15 +99,6 @@ export default {
 			control: "boolean",
 			if: { arg: "layout", eq: "default" },
 		},
-		hasDivider: {
-			name: "Divider",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
 		showModal: {
 			name: "Wrap the dialog in a modal",
 			type: { name: "boolean" },
@@ -275,7 +266,7 @@ WithScroll.parameters = {
  *
  * Fullscreen dialogs do not support a close button, and are not dismissible.
  *
- * Implementations may swap out the extra header content and body content for other components, like the [steplist](/docs/components-steplist--docs) and [table](/docs/components-table--docs) seen in this example. Content in this area will be centered.
+ * Implementations may swap out the extra header content and body content for other components, like the [steplist](/docs/components-steplist--docs) and [table](/docs/components-table--docs) seen in this example. Components in the extra header content area will be centered.
  */
 export const Fullscreen = DialogFullscreen.bind({});
 Fullscreen.args = {
