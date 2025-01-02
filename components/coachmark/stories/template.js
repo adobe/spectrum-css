@@ -17,6 +17,7 @@ export const CoachContainer = (
 		hasPagination,
 		hasImage,
 		imageIsFixedHeight,
+		image,
 		title = "Try playing with a pixel brush",
 		content = "Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.",
 		currentStep = 2,
@@ -38,7 +39,10 @@ export const CoachContainer = (
 						? `${rootClass}-image-wrapper--fixedHeight`
 						: ""}"
 				>
-					<img class="${rootClass}-image" src="example-card-landscape.png" />
+					<img
+						class="${rootClass}-image"
+						src="${image || "example-card-portrait.png"}"
+					/>
 				</div>
 			`,
 		)}
