@@ -49,6 +49,15 @@ export default {
 				category: "Component",
 			},
 		},
+		image: {
+			name: "Image",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
@@ -80,7 +89,9 @@ export default {
 
 export const Default = CoachMarkGroup.bind({});
 Default.tags = ["!autodocs"];
-Default.args = {};
+Default.args = {
+	image: "example-card-landscape.png",
+};
 
 /**
  * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour.
