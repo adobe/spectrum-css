@@ -40,12 +40,21 @@ export default {
 			},
 			control: "boolean",
 		},
+		imageIsFixedHeight: {
+			name: "Image fixed height",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+		},
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
 		hasActionMenu: true,
 		hasPagination: true,
 		hasImage: false,
+		imageIsFixedHeight: false,
 	},
 	parameters: {
 		actions: {
@@ -63,8 +72,8 @@ export default {
 		docs: {
 			story: {
 				height: "300px",
-			}
-		}
+			},
+		},
 	},
 };
 
@@ -107,6 +116,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };

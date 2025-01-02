@@ -19,6 +19,8 @@
 	--spectrum-coachmark-border-size: var(--mod-coachmark-border-size, var(--mod-popover-border-width));
 	--spectrum-coachmark-border-radius: var(--mod-coachmark-border-radius, var(--mod-popover-corner-radius));
 
+	--spectrum-coachmark-media-fixed-height: var(--spectrum-coach-mark-media-height);
+
 	/* layout */
 	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
 	--spectrum-coachmark-heading-to-action-button: var(--spectrum-spacing-300);
@@ -27,7 +29,7 @@
 
 	/* font */
 	--spectrum-coachmark-title-color: var(--spectrum-heading-color);
-	--spectrum-coachmark-title-font-family: var(--spectrum-title-sans-serif-font-family);
+	--spectrum-coachmark-title-font-family: var(--spectrum-sans-serif-font);
 	--spectrum-coachmark-title-font-size: var(--spectrum-coach-mark-title-font-size);
 	--spectrum-coachmark-title-font-style: var(--spectrum-title-serif-font-style);
 	--spectrum-coachmark-title-text-font-weight: var(--spectrum-title-sans-serif-font-weight);
@@ -37,7 +39,7 @@
 
 	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
 	--spectrum-coachmark-step-font-weight: var(--spectrum-body-medium-font-weight);
-	--spectrum-coachmark-step-font-family: var(--spectrum-body-sans-serif-font-family);
+	--spectrum-coachmark-step-font-family: var(--spectrum-sans-serif-font);
 	--spectrum-coachmark-step-font-style: var(--spectrum-body-serif-font-style);
 	--spectrum-coachmark-step-line-height: var(--spectrum-body-line-200);
 	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-font-size);
@@ -68,6 +70,10 @@
 
 	border-start-start-radius: inherit;
 	border-start-end-radius: inherit;
+}
+
+.spectrum-CoachMark-image-wrapper--fixedHeight {
+	block-size: var(--mod-coachmark-media-fixed-height, var(--spectrum-coachmark-media-fixed-height));
 }
 
 /* Class for the image; nested inside image-wrapper */
