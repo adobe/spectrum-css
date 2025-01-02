@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 8.1.0
 
@@ -176,32 +179,24 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/icon@>=7
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="6.0.0"></a>
 
 ## 6.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.1.4...@spectrum-css/miller@6.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.1.4...@spectrum-css/miller@6.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="5.1.4"></a>
 
 ## 5.1.4
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.1.3...@spectrum-css/miller@5.1.4)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.1.3...@spectrum-css/miller@5.1.4)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -209,8 +204,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.3
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.1.2...@spectrum-css/miller@5.1.3)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.1.2...@spectrum-css/miller@5.1.3)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -218,8 +212,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.1.1...@spectrum-css/miller@5.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.1.1...@spectrum-css/miller@5.1.2)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -227,8 +220,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -236,19 +228,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.0.4...@spectrum-css/miller@5.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.0.4...@spectrum-css/miller@5.1.0)
 
 ### ✨ Features
 
-\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
-
-<a name="5.0.4"></a>
+- remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+  <a name="5.0.4"></a>
 
 ## 5.0.4
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.0.3...@spectrum-css/miller@5.0.4)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.0.3...@spectrum-css/miller@5.0.4)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -256,8 +245,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.3
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.0.2...@spectrum-css/miller@5.0.3)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.0.2...@spectrum-css/miller@5.0.3)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -265,8 +253,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.2
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.0.0...@spectrum-css/miller@5.0.2)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@5.0.0...@spectrum-css/miller@5.0.2)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -297,7 +284,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 Additionally:
 
 - chore(assetlist): build changes
-
 - chore(assetlist): use new tokens
 
 - chore(assetlist): add custom color tokens
@@ -332,16 +318,15 @@ Additionally:
 
 ## 4.0.0
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.85...@spectrum-css/miller@4.0.0)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.85...@spectrum-css/miller@4.0.0)
 
-\*feat(millercolumns)!: migrate to spectrum-tokens (#2191)([aa163d2](https://github.com/adobe/spectrum-css/commit/aa163d2)), closes[#2191](https://github.com/adobe/spectrum-css/issues/2191)
+- feat(millercolumns)!: migrate to spectrum-tokens (#2191)([aa163d2](https://github.com/adobe/spectrum-css/commit/aa163d2)), closes[#2191](https://github.com/adobe/spectrum-css/issues/2191)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
-    		migrates MillerColumns to use `@adobe/spectrum-tokens`
+
+-     	migrates MillerColumns to use `@adobe/spectrum-tokens`
 
 Additionally:
 
@@ -356,8 +341,7 @@ Additionally:
 
 ## 3.0.85
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.84...@spectrum-css/miller@3.0.85)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.84...@spectrum-css/miller@3.0.85)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -365,8 +349,7 @@ Additionally:
 
 ## 3.0.84
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.83...@spectrum-css/miller@3.0.84)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.83...@spectrum-css/miller@3.0.84)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -374,8 +357,7 @@ Additionally:
 
 ## 3.0.83
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.82...@spectrum-css/miller@3.0.83)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.82...@spectrum-css/miller@3.0.83)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -383,17 +365,13 @@ Additionally:
 
 ## 3.0.82
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.81...@spectrum-css/miller@3.0.82)
-
 **Note:** Version bump only for package @spectrum-css/miller
 
 <a name="3.0.81"></a>
 
 ## 3.0.81
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.80...@spectrum-css/miller@3.0.81)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.80...@spectrum-css/miller@3.0.81)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -401,8 +379,7 @@ Additionally:
 
 ## 3.0.80
 
-🗓
-2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.79...@spectrum-css/miller@3.0.80)
+🗓 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.79...@spectrum-css/miller@3.0.80)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -419,8 +396,7 @@ Additionally:
 
 ## 3.0.78
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.77...@spectrum-css/miller@3.0.78)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.77...@spectrum-css/miller@3.0.78)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -428,12 +404,11 @@ Additionally:
 
 ## 3.0.77
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.76...@spectrum-css/miller@3.0.77)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.76...@spectrum-css/miller@3.0.77)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="3.0.76"></a>
 
@@ -448,8 +423,7 @@ Additionally:
 
 ## 3.0.75
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.73...@spectrum-css/miller@3.0.75)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.73...@spectrum-css/miller@3.0.75)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -457,8 +431,7 @@ Additionally:
 
 ## 3.0.74
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.73...@spectrum-css/miller@3.0.74)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.73...@spectrum-css/miller@3.0.74)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -466,8 +439,7 @@ Additionally:
 
 ## 3.0.73
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.72...@spectrum-css/miller@3.0.73)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.72...@spectrum-css/miller@3.0.73)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -484,8 +456,7 @@ Additionally:
 
 ## 3.0.71
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.70...@spectrum-css/miller@3.0.71)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.70...@spectrum-css/miller@3.0.71)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -493,8 +464,7 @@ Additionally:
 
 ## 3.0.70
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.69...@spectrum-css/miller@3.0.70)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.69...@spectrum-css/miller@3.0.70)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -511,8 +481,7 @@ Additionally:
 
 ## 3.0.68
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.67...@spectrum-css/miller@3.0.68)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.67...@spectrum-css/miller@3.0.68)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -520,8 +489,7 @@ Additionally:
 
 ## 3.0.67
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.66...@spectrum-css/miller@3.0.67)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.66...@spectrum-css/miller@3.0.67)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -529,8 +497,7 @@ Additionally:
 
 ## 3.0.66
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.65...@spectrum-css/miller@3.0.66)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.65...@spectrum-css/miller@3.0.66)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -538,8 +505,7 @@ Additionally:
 
 ## 3.0.65
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.64...@spectrum-css/miller@3.0.65)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.64...@spectrum-css/miller@3.0.65)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -547,8 +513,7 @@ Additionally:
 
 ## 3.0.64
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.63...@spectrum-css/miller@3.0.64)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.63...@spectrum-css/miller@3.0.64)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -565,8 +530,7 @@ Additionally:
 
 ## 3.0.62
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.61...@spectrum-css/miller@3.0.62)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.61...@spectrum-css/miller@3.0.62)
 
 **Note:** Version bump only for package @spectrum-css/miller
 
@@ -574,12 +538,11 @@ Additionally:
 
 ## 3.0.61
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.60...@spectrum-css/miller@3.0.61)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.60...@spectrum-css/miller@3.0.61)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="3.0.60"></a>
 
@@ -594,8 +557,7 @@ Additionally:
 
 ## 3.0.59
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.58...@spectrum-css/miller@3.0.59)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.58...@spectrum-css/miller@3.0.59)
 
 **Note:** Version bump only for package @spectrum-css/miller
 

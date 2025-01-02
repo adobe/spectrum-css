@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 11.0.0
 
@@ -48,31 +51,27 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 
 ### Minor Changes
 
-- [#2771](https://github.com/adobe/spectrum-css/pull/2771) [`81e86b1`](https://github.com/adobe/spectrum-css/commit/81e86b1adc442c891948281f1f66efea795c0447) Thanks [@jawinn](https://github.com/jawinn)! - Removes some legacy vendor prefixes that are no longer necessary, including some that were for older browsers that are no longer in browser support list for Spectrum CSS. Such as Microsoft Edge before version 79. Includes some cleanup around some of the related normalization styles in the Text field component and the Commons `%spectrum-BaseButton` (used for multiple button components).
+- [#2771](https://github.com/adobe/spectrum-css/pull/2771) [`81e86b1`](https://github.com/adobe/spectrum-css/commit/81e86b1adc442c891948281f1f66efea795c0447) Thanks [@jawinn](https://github.com/jawinn)!
+- Removes some legacy vendor prefixes that are no longer necessary, including some that were for older browsers that are no longer in browser support list for Spectrum CSS. Such as Microsoft Edge before version 79. Includes some cleanup around some of the related normalization styles in the Text field component and the Commons `%spectrum-BaseButton` (used for multiple button components).
 
 ## 10.0.1
 
 ### Patch Changes
 
-- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Leverage local workspace versioning to prevent misalignment
 
 <a name="10.0.0"></a>
 
 ## 10.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.1.2...@spectrum-css/commons@10.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.1.2...@spectrum-css/commons@10.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -80,8 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.1.1...@spectrum-css/commons@9.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.1.1...@spectrum-css/commons@9.1.2)
 
 **Note:** Version bump only for package @spectrum-css/commons
 
@@ -89,8 +87,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/commons
 
@@ -98,8 +95,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.2...@spectrum-css/commons@9.1.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.2...@spectrum-css/commons@9.1.0)
 
 ### ✨ Features
 
@@ -113,8 +109,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.2
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.1...@spectrum-css/commons@9.0.2)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.1...@spectrum-css/commons@9.0.2)
 
 **Note:** Version bump only for package @spectrum-css/commons
 
@@ -122,8 +117,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.1
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.0...@spectrum-css/commons@9.0.1)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.0...@spectrum-css/commons@9.0.1)
 
 **Note:** Version bump only for package @spectrum-css/commons
 
@@ -131,13 +125,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.0
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@8.0.1...@spectrum-css/commons@9.0.0)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@8.0.1...@spectrum-css/commons@9.0.0)
 
-\*feat(overlay)!: migrate to spectrum-tokens (#2165)([0331dae](https://github.com/adobe/spectrum-css/commit/0331dae)), closes[#2165](https://github.com/adobe/spectrum-css/issues/2165)
+- feat(overlay)!: migrate to spectrum-tokens (#2165)([0331dae](https://github.com/adobe/spectrum-css/commit/0331dae)), closes[#2165](https://github.com/adobe/spectrum-css/issues/2165)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		migrates Overlay to use `@adobe/spectrum-tokens`
@@ -150,8 +142,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.1
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@8.0.0...@spectrum-css/commons@8.0.1)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@8.0.0...@spectrum-css/commons@8.0.1)
 
 **Note:** Version bump only for package @spectrum-css/commons
 
@@ -159,13 +150,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.0
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.8...@spectrum-css/commons@8.0.0)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.8...@spectrum-css/commons@8.0.0)
 
-\*refactor(button)!: replace focus-ring with focus-visible([5ec4849](https://github.com/adobe/spectrum-css/commit/5ec4849))
+- refactor(button)!: replace focus-ring with focus-visible([5ec4849](https://github.com/adobe/spectrum-css/commit/5ec4849))
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		use native focus-visible pseudo class for focus styling on button and basebutton
@@ -174,19 +163,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.8
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.7...@spectrum-css/commons@7.0.8)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.7...@spectrum-css/commons@7.0.8)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="7.0.7"></a>
 
 ## 7.0.7
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.6...@spectrum-css/commons@7.0.7)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.6...@spectrum-css/commons@7.0.7)
 
 **Note:** Version bump only for package @spectrum-css/commons
 

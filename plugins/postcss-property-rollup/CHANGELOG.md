@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 0.0.1
 
@@ -12,10 +15,8 @@
 
 ### Patch Changes
 
-- [#2775](https://github.com/adobe/spectrum-css/pull/2775) [`2452637`](https://github.com/adobe/spectrum-css/commit/2452637d1179b9b2b025dafeb5834720712413d7) Thanks [@castastrophe](https://github.com/castastrophe)! - Dependency minor and patch updates to support new features in tools leveraged
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+- [#2775](https://github.com/adobe/spectrum-css/pull/2775) [`2452637`](https://github.com/adobe/spectrum-css/commit/2452637d1179b9b2b025dafeb5834720712413d7) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Dependency minor and patch updates to support new features in tools leveraged
 
 <a name="2.0.0"></a>
 
