@@ -3,11 +3,14 @@ import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-import metadata from "../metadata/metadata.json";
-import packageJson from "../package.json";
 import { IconGroup } from "./icon.test.js";
 import { Template } from "./template.js";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Create a list of all UI Icons with their sizing numbers.
@@ -91,6 +94,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 	tags: ["!autodocs"],
 };

@@ -12,10 +12,10 @@ import "../themes/spectrum.css";
 import "../themes/express.css";
 
 export const AccordionItem = ({
-	heading,
-	content,
 	rootClass = "spectrum-Accordion-item",
 	id = getRandomId("accordion-item"),
+	heading,
+	content,
 	idx = 0,
 	isDisabled = false,
 	isOpen = false,
@@ -74,10 +74,10 @@ export const AccordionItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-Accordion",
+	id = getRandomId("accordion"),
 	size = "m",
 	density = "regular",
 	items = [],
-	id = getRandomId("accordion"),
 	disableAll = false,
 	collapseAll = false,
 	customClasses = [],

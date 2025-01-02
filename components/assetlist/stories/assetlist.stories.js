@@ -1,8 +1,11 @@
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { AssetListGroup } from "./assetlist.test.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { AssetListGroup } from "./assetlist.test.js";
 
 /**
  * A selectable list of assets, often used inside of miller columns.
@@ -22,6 +25,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

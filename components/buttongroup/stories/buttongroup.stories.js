@@ -1,10 +1,13 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
-import packageJson from "../package.json";
 import { ButtonGroup } from "./buttongroup.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A button group is a grouping of buttons whose actions are related to each other.
@@ -64,6 +67,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

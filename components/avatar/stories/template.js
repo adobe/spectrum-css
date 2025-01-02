@@ -11,13 +11,13 @@ import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Avatar",
+	id = getRandomId("avatar"),
 	image = "example-ava.png",
 	altText,
 	isDisabled = false,
 	isFocused = false,
 	size = 700,
 	hasLink,
-	id = getRandomId("avatar"),
 	customClasses = [],
 } = {}, context = {}) => {
 	const { updateArgs } = context;

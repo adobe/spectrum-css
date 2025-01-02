@@ -14,7 +14,7 @@ import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ContextualHelp",
-	id = getRandomId("contextualhelp"),
+	id = getRandomId("contextual-help"),
 	iconName,
 	iconSet = "workflow",
 	title,

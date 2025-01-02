@@ -1,8 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../metadata/metadata.json";
-import packageJson from "../package.json";
 import { DropIndicatorGroup } from "./dropindicator.test.js";
 import { DocsDropIndicatorGroup } from "./template.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The drop indicator component is used to show the insertion position into a list or table.
@@ -41,6 +44,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

@@ -15,7 +15,7 @@ import "../themes/express.css";
 
 export const DatePicker = ({
 	rootClass = "spectrum-DatePicker",
-	id = getRandomId("datepicker"),
+	id = getRandomId("date-picker"),
 	customClasses = [],
 	isOpen = true,
 	isInvalid = false,

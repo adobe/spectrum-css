@@ -1,9 +1,12 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isEmphasized, isFocused, isReadOnly } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
-import packageJson from "../package.json";
 import { RatingGroup } from "./rating.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The rating component is used to display or collect a user's rating of an item as represented by a number of stars.
@@ -59,6 +62,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

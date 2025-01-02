@@ -1,10 +1,13 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
-import packageJson from "../package.json";
 import { SearchGroup } from "./search.test.js";
 import { SearchOptions, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A search field is used for searching and filtering items.
@@ -62,6 +65,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

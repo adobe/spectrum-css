@@ -2,10 +2,13 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
-import packageJson from "../package.json";
 import { ActionGroups } from "./actiongroup.test.js";
 import { OverflowOption, TreatmentTemplate } from "./template.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * An action group is a grouping of [action buttons](/docs/components-action-button--docs) that are related to each other.
@@ -99,6 +102,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

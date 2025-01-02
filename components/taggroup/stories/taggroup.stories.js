@@ -1,9 +1,12 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
-import metadata from "../metadata/metadata.json";
-import packageJson from "../package.json";
 import { TagGroups } from "./taggroup.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
@@ -61,6 +64,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 

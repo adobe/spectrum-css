@@ -1,9 +1,12 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
-import packageJson from "../package.json";
 import { LogicButtonGroup } from "./logicbutton.test.js";
 import { Template, VariantGroup } from "./template.js";
+
+// Local assets to render the component styles and structure
+import styles from "../index.css?inline";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A logic button displays an operator within a boolean logic sequence.
@@ -32,6 +35,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 
