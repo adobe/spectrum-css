@@ -12,7 +12,9 @@ export const TestTemplate = (args, context) => {
 				...args.customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(args.customStyles)}
-		>${CoachContainer(args, context)}</div>
+		>
+			${CoachContainer(args, context)}
+		</div>
 	`;
 };
 
@@ -38,15 +40,26 @@ export const CoachMarkGroup = Variants({
 			hasPagination: false,
 			hasImage: true,
 			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)"
+				"background-color": "var(--spectrum-gray-50, white)",
+			},
+		},
+		{
+			testHeading: "With media + fixed height",
+			hasActionMenu: false,
+			hasPagination: false,
+			hasImage: true,
+			imageIsFixedHeight: true,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50, white)",
 			},
 		},
 		{
 			testHeading: "With action menu",
 			hasPagination: false,
+			hasActionMenu: true,
 			isOpen: true,
 			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)"
+				"background-color": "var(--spectrum-gray-50, white)",
 			},
 		},
 		{
@@ -54,15 +67,16 @@ export const CoachMarkGroup = Variants({
 			hasPagination: false,
 			isOpen: true,
 			hasImage: true,
+			hasActionMenu: true,
 			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)"
+				"background-color": "var(--spectrum-gray-50, white)",
 			},
 		},
 		{
 			testHeading: "With pagination",
 			hasActionMenu: false,
 			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)"
+				"background-color": "var(--spectrum-gray-50, white)",
 			},
 		},
 		{
@@ -70,7 +84,7 @@ export const CoachMarkGroup = Variants({
 			hasActionMenu: false,
 			hasImage: true,
 			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)"
+				"background-color": "var(--spectrum-gray-50, white)",
 			},
 		},
 	],
