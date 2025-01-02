@@ -7,12 +7,12 @@
   "author": "Adobe",
   "main": "index.js",
   "dependencies": {
-    "@actions/artifact": "^2.1.11",
+    "@actions/artifact": "^2.2.0",
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.0",
     "@actions/glob": "^0.5.0",
     "diff": "^7.0.0",
-    "diff2html": "^3.4.48"
+    "diff2html": "^3.4.51"
   },
   "keywords": [
     "Actions",

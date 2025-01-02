@@ -18,7 +18,7 @@ const ExampleLabelOnlyTabContent = [
 export const TabsGroups = Variants({
 	Template,
 	wrapperStyles: {
-		"gap": "80px",
+		"column-gap": "80px",
 	},
 	testData: [
 		{

@@ -16,7 +16,6 @@ export const Template = ({
 	borderStyle = "default",
 	shape = "square",
 	imageUrl,
-	gradient,
 	isMixedValue = false,
 	isSelected = false,
 	isDisabled = false,
@@ -49,7 +48,7 @@ export const Template = ({
 				[`${rootClass}--${borderStyle}`]: typeof borderStyle !== "undefined" && borderStyle !== "default",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
-				"is-image": (["undefined", "transparent"].every(g => typeof gradient !== g)) || isMixedValue || typeof imageUrl !== "undefined",
+				"is-image": isMixedValue || typeof imageUrl !== "undefined",
 				"is-mixedValue": !isDisabled && isMixedValue,
 				[`${rootClass}--rectangle`]: typeof shape !== "undefined" && shape !== "square",
 				"is-nothing": !isDisabled && (typeof swatchColor === "undefined" || swatchColor === "transparent"),
@@ -73,37 +72,29 @@ export const Template = ({
 				updateArgs({ isSelected: !isSelected });
 			}}
 		>
-			${when((typeof imageUrl !== "undefined" || typeof gradient !== "undefined") && !isDisabled && !isMixedValue, () => html`
+			${when((typeof imageUrl !== "undefined") && !isDisabled && !isMixedValue, () => html`
 				${when(imageUrl, () => html`
 					<div class="${rootClass}-fill" >
 						<img src="${imageUrl}" alt="" class="${rootClass}-image" />
 					</div>
-				`,
-				() => html`
-					${OpacityCheckerboard({
+				`)}
+			`,
+			() => html`
+				${OpacityCheckerboard({
 						customClasses: [`${rootClass}-fill`],
 						content: [
-							html`<div class='spectrum-Swatch-image' style='background: ${gradient}'></div>`
-						],
-					}, context)}
-				`
-				)}`,
-				() => html`
-					${OpacityCheckerboard({
-							customClasses: [`${rootClass}-fill`],
-							content: [
-								...(isDisabled ? [Icon({
-									customClasses: [`${rootClass}-disabledIcon`],
-									setName: "workflow",
-									iconName: "Cancel",
-								}, context)] : []),
-								...(isMixedValue ? [Icon({
-									customClasses: [`${rootClass}-mixedValueIcon`],
-									setName: "ui",
-									iconName: "Dash",
-								}, context)] : []),
-							]
-						})}
+							...(isDisabled ? [Icon({
+								customClasses: [`${rootClass}-disabledIcon`],
+								setName: "workflow",
+								iconName: "Cancel",
+							}, context)] : []),
+							...(isMixedValue ? [Icon({
+								customClasses: [`${rootClass}-mixedValueIcon`],
+								setName: "ui",
+								iconName: "Dash",
+							}, context)] : []),
+						]
+					})}
 				`
 			)}
 	`;

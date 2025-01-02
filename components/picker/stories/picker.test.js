@@ -1,8 +1,9 @@
 import { Variants } from "@spectrum-css/preview/decorators";
+import { html } from "lit";
 import { Template } from "./template.js";
 
 export const PickerGroup = Variants({
-	Template,
+	Template: (args, context) => html`<div>${Template(args, context)}</div>`,
 	wrapperStyles: {
 		"align-items": "flex-start",
 		"min-block-size": "auto",

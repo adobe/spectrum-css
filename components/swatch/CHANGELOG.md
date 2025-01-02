@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.4.1
+
+### Patch Changes
+
+- [#3441](https://github.com/adobe/spectrum-css/pull/3441) [`dc1f06e`](https://github.com/adobe/spectrum-css/commit/dc1f06e9ce504864ae044db14d7a9a17064683cd) Thanks [@castastrophe](https://github.com/castastrophe)! - Allow --spectrum-picked-color to pass in gradient values to swatch [CSS-204]
+
 ## 6.4.0
 
 ### Minor Changes
