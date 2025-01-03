@@ -15,14 +15,10 @@ export default {
 			handles: ['click input[type="checkbox"]'],
 		},
 	},
-	tags: ['foundation'],
+	tags: ['!dev'],
 };
 
-const Checkbox = ({
-	customStyles = {},
-	isChecked = false,
-	...args
-} = {}, context = {}) => html`
+const Checkbox = (args = {}, context = {}) => html`
 	<div style="padding: 1rem 0;">
 		${Template({ ...args, iconName: undefined }, context)}
 	</div>
