@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 @media (forced-colors: active) {
 	.spectrum-ColorHandle {
 		forced-color-adjust: none;
@@ -33,7 +31,6 @@
 	/* inner border as inset boxshadow on the colorhandle-inner */
 	/* TODO replace --spectrum-black-rgb with color-handle-inner-border-color when supported by RGBA */
 	--spectrum-colorhandle-inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity));
-
 
 	/* @passthrough -- opacity checkerboard customization */
 	--mod-opacity-checkerboard-position: 50%;

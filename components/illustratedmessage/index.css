@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 @media (forced-colors: active) {
 	.spectrum-IllustratedMessage {
 		--highcontrast-illustrated-message-illustration-color: CanvasText;
@@ -93,7 +91,6 @@
 	max-inline-size: var(--mod-illustrated-message-heading-max-inline-size, var(--spectrum-illustrated-message-heading-max-inline-size));
 	margin-block-start: 0;
 	margin-block-end: var(--mod-illustrated-message-heading-to-body, 0);
-
 }
 
 .spectrum-IllustratedMessage-description {

@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-StatusLight,
 .spectrum-StatusLight--sizeM {
 	--spectrum-statuslight-height: var(--spectrum-component-height-100);

@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-CoachMark {
 	--spectrum-coachmark-border-size: var(--mod-coachmark-border-size, var(--mod-popover-border-width));
 	--spectrum-coachmark-border-radius: var(--mod-coachmark-border-radius, var(--mod-popover-corner-radius));
