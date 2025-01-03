@@ -19,26 +19,27 @@
   ],
   "modifiers": [
     "--mod-colorwheel-border-color",
-    "--mod-colorwheel-border-width",
     "--mod-colorwheel-colorarea-container-size",
     "--mod-colorwheel-colorarea-margin",
     "--mod-colorwheel-fill-color-disabled",
-    "--mod-colorwheel-height",
     "--mod-colorwheel-min-width",
     "--mod-colorwheel-path",
     "--mod-colorwheel-path-borders",
-    "--mod-colorwheel-track-width",
-    "--mod-colorwheel-width"
+    "--mod-colorwheel-track-width"
   ],
   "component": [
     "--spectrum-color-wheel-color-area-margin",
     "--spectrum-color-wheel-minimum-width",
     "--spectrum-color-wheel-width",
     "--spectrum-colorwheel-border-color",
+    "--spectrum-colorwheel-border-color-rgb",
+    "--spectrum-colorwheel-border-opacity",
     "--spectrum-colorwheel-border-width",
     "--spectrum-colorwheel-colorarea-container-size",
+    "--spectrum-colorwheel-colorarea-margin",
     "--spectrum-colorwheel-fill-color-disabled",
     "--spectrum-colorwheel-height",
+    "--spectrum-colorwheel-min-width",
     "--spectrum-colorwheel-path",
     "--spectrum-colorwheel-path-borders",
     "--spectrum-colorwheel-track-width",
@@ -47,7 +48,8 @@
   "global": [
     "--spectrum-border-width-100",
     "--spectrum-color-control-track-width",
-    "--spectrum-disabled-background-color"
+    "--spectrum-disabled-background-color",
+    "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": [],
   "high-contrast": [
