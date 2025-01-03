@@ -79,6 +79,10 @@
 }
 
 .spectrum-Menu {
+	--spectrum-menu-item-background-color-hover: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+	--spectrum-menu-item-background-color-down: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+	--spectrum-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+
 	--spectrum-menu-item-top-to-action: var(--spectrum-spacing-50);
 	--spectrum-menu-item-top-to-checkbox: var(--spectrum-spacing-50);
 

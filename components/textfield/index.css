@@ -20,6 +20,14 @@
 	--spectrum-textfield-min-width: var(--spectrum-text-field-minimum-width-multiplier);
 	--spectrum-textfield-corner-radius: var(--spectrum-corner-radius-100);
 
+	--spectrum-textfield-border-color: var(--spectrum-gray-500);
+	--spectrum-textfield-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-textfield-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-textfield-border-color-focus-hover: var(--spectrum-gray-900);
+	--spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
+
+	--spectrum-textfield-border-width: var(--spectrum-border-width-100);
+
 	/* default spacing */
 	--spectrum-textfield-spacing-inline-quiet: var(--spectrum-field-edge-to-text-quiet);
 	--spectrum-textfield-spacing-block-start: var(--spectrum-component-top-to-text-100);
