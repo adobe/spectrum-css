@@ -10,10 +10,10 @@ export default {
 	args: {
 		rootClass: "spectrum-Foundations-Example-CornerRounding",
 	},
-	tags: ["foundation"],
+	tags: ["!dev"],
 };
 
-const CornerRadiusGroup = ({ customStyles = {}, ...args }, context) => html`
+const CornerRadiusGroup = (args = {}, context = {}) => html`
 	<div>
 		<table class="spectrum-Foundations-Example-CornerRounding-table">
 			<thead>

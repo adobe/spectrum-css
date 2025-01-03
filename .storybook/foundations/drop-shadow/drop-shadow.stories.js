@@ -7,7 +7,7 @@ export default {
 	description:
 		"Drop shadows draw attention and give the appearance of depth. By default, this style is used to show elevation, when content appears on top of other content.",
 	component: "Drop shadow",
-	tags: ["foundation"],
+	tags: ["!dev"],
 };
 
 const DropShadowSwatch = ({
@@ -19,9 +19,9 @@ const DropShadowSwatch = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--${variant}-drop-shadow`]:
-					typeof variant !== undefined && !!isDropShadow,
+					typeof variant !== "undefined" && !!isDropShadow,
 				[`${rootClass}--${variant}-box-shadow`]:
-					typeof variant !== undefined && !isDropShadow,
+					typeof variant !== "undefined" && !isDropShadow,
 			})}
 		></div>
 `;
