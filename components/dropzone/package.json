@@ -4,7 +4,7 @@
 	"description": "The Spectrum CSS dropzone component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/dropzone",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-dropzone--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -21,15 +21,29 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
-		"metadata/*"
+		"metadata/*",
+		"stories/*"
 	],
+	"scripts": {
+		"build": "yarn run component:build dropzone",
+		"build:full": "yarn report",
+		"clean": "rimraf dist && test -d dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0",
+		"compare": "yarn run component:compare dropzone",
+		"format": "run-p \"format:*\"",
+		"format:content": "prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern *.{md,mdx} **/*.{md,mdx}",
+		"format:scripts": "eslint --fix --cache --no-error-on-unmatched-pattern *.json stories/*.js",
+		"lint": "run-p \"lint:*\"",
+		"lint:scripts": "eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives *.json stories/*.js",
+		"report": "yarn run component:report dropzone"
+	},
 	"peerDependencies": {
 		"@spectrum-css/actionbutton": ">=6",
 		"@spectrum-css/illustratedmessage": ">=7",
@@ -45,16 +59,23 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "workspace:^",
-		"@spectrum-css/illustratedmessage": "workspace:^",
-		"@spectrum-css/link": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^"
+		"@spectrum-css/actionbutton": "6.2.0",
+		"@spectrum-css/illustratedmessage": "7.2.0",
+		"@spectrum-css/link": "5.2.0",
+		"@spectrum-css/tokens": "14.6.0",
+		"eslint": "^8.57.0",
+		"npm-run-all2": "*",
+		"prettier": "^3.4.2",
+		"stylelint": "^16.9.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"
