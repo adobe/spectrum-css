@@ -163,11 +163,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		componentName = getPackageFromPath(cwd);
 	}
 
-	// Create the dist directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "dist"))) {
-		fs.mkdirSync(path.join(cwd, "dist"));
-	}
-
 	return processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
 		cwd,
 		clean,
@@ -281,6 +276,11 @@ async function main({
 
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
+
+	// Create the dist directory if it doesn't exist
+	if (!fs.existsSync(path.join(cwd, "dist"))) {
+		fs.mkdirSync(path.join(cwd, "dist"));
+	}
 
 	return Promise.all([
 		build({ cwd, clean }),

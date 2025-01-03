@@ -4,7 +4,7 @@
 	"description": "The Spectrum CSS card component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/card",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-card--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -24,13 +24,6 @@
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"stories/*",
-		"metadata/*"
-	],
 	"peerDependencies": {
 		"@spectrum-css/actionbutton": ">=6",
 		"@spectrum-css/asset": ">=5",
@@ -58,18 +51,25 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "workspace:^",
-		"@spectrum-css/asset": "workspace:^",
-		"@spectrum-css/checkbox": "workspace:^",
-		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^",
-		"@spectrum-css/typography": "workspace:^"
+		"@spectrum-css/actionbutton": "6.3.1",
+		"@spectrum-css/asset": "6.0.1",
+		"@spectrum-css/checkbox": "9.3.1",
+		"@spectrum-css/icon": "8.0.1",
+		"@spectrum-css/tokens": "15.2.0",
+		"@spectrum-css/typography": "7.0.1",
+		"eslint": "^8.57.0",
+		"npm-run-all2": "^7.0.2",
+		"prettier": "^3.4.2",
+		"stylelint": "^16.9.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"
