@@ -20,6 +20,10 @@ import {
 	globalTypes
 } from "./types";
 
+// Load the Spectrum CSS bundle to style the docs elements
+import "@spectrum-css/bundle/dist/index.min.css";
+
+// Import the custom base styles
 import "./assets/base.css";
 
 window.global = window;

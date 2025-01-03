@@ -28,6 +28,7 @@ module.exports = ({
 	lint = true,
 	verbose = true,
 	additionalPlugins = {},
+	minify = true,
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
@@ -130,7 +131,7 @@ module.exports = ({
 						},
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
-						normalizeWhitespace: isProduction,
+						normalizeWhitespace: minify || isProduction,
 					},
 				],
 			},

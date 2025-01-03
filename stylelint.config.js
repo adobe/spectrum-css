@@ -201,5 +201,17 @@ module.exports = {
 				}],
 			},
 		},
+		{
+			/* Allow "tree shaking" of unused custom properties in the bundle */
+			files: ["tools/bundle/**/*.css"],
+			rules: {
+				"spectrum-tools/no-unused-custom-properties": [
+					true,
+					{
+						ignoreList: [/^--mod-/],
+					},
+				],
+			}
+		},
 	],
 };
