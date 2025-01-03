@@ -13,7 +13,7 @@ export default {
 			handles: ["click input[type=\"checkbox\"]"],
 		},
 	},
-	tags: ["foundation"],
+	tags: ["!dev"],
 };
 
 export const CheckboxDownState = Template.bind({});
