@@ -54,10 +54,20 @@ async function processCSS(
 		...postCSSOptions
 	} = {},
 ) {
-	if (!content)
-		return Promise.reject(
-			new Error("This function requires content be provided"),
-		);
+	if (!content) {
+		if (!fs.existsSync(input)) {
+			return Promise.reject(
+				new Error("This function requires that either content or an input path be provided")
+			);
+		}
+		else {
+			content = await fsp.readFile(input, "utf-8");
+
+			if (!content) {
+				return Promise.reject(new Error(`No content found for ${relativePrint(input, { cwd })}`));
+			}
+		}
+	}
 
 	const ctx = {
 		cwd,
@@ -127,12 +137,8 @@ async function processCSS(
  * @returns Promise<void>
  */
 async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
-	const indexSourceCSS = path.join(cwd, "index.css");
-
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(indexSourceCSS)) return;
-
-	const content = await fsp.readFile(indexSourceCSS, "utf8");
+	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
 	if (!componentName || validateComponentName(componentName) !== true) {
 		componentName = getPackageFromPath(cwd);
@@ -143,31 +149,14 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
-	const indexOutputPath = path.join(cwd, "dist", "index.css");
-
-	return Promise.all([
-		processCSS(content, indexSourceCSS, indexOutputPath, {
-			cwd,
-			clean,
-			skipMapping: true,
-			referencesOnly: false,
-			preserveVariables: true,
-			stripLocalSelectors: false,
-		}),
-		processCSS(
-			content,
-			indexSourceCSS,
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-				skipMapping: true,
-				referencesOnly: false,
-				preserveVariables: false,
-				stripLocalSelectors: false,
-			},
-		),
-	]);
+	return processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
+		cwd,
+		clean,
+		skipMapping: true,
+		referencesOnly: false,
+		preserveVariables: true,
+		stripLocalSelectors: false,
+	});
 }
 
 /**
@@ -213,6 +202,19 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	});
 
 	promises.push(
+		processCSS(
+			undefined,
+			path.join(cwd, "index.css"),
+			path.join(cwd, "dist", "index-base.css"),
+			{
+				cwd,
+				clean,
+				skipMapping: true,
+				referencesOnly: false,
+				preserveVariables: false,
+				stripLocalSelectors: false,
+			},
+		),
 		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
 		processCSS(
 			importMap,

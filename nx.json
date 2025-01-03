@@ -158,7 +158,7 @@
 				]
 			},
 			"outputs": [
-				"{projectRoot}/metadata/metadata.json"
+				"{projectRoot}/dist/metadata.json"
 			]
 		},
 		"test": {
@@ -198,7 +198,7 @@
 			],
 			"options": {
 				"commands": [
-					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/metadata/metadata.json\" || exit 0"
+					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/dist/metadata.json\" || exit 0"
 				]
 			}
 		}

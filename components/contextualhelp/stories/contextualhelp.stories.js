@@ -1,6 +1,6 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ContextualHelpGroup } from "./contextualhelp.test.js";
 import { Template } from "./template.js";
@@ -116,7 +116,7 @@ Default.args = {};
 // ********* DOCS ONLY ********* //
 /**
  * If using a standalone [link](/docs/components-link--docs), do not add punctuation to the end of the link text. Make sure that the landing experience is intuitive, helpful, and naturally builds upon the information being introduced in this component. For example, don’t link to an external sales website unless the information there is directly related to a user being able to do something within the product.
- * 
+ *
  * A generic “Learn more” can be acceptable, but it’s more helpful, particularly for screen reader users, to include another word or two in the link text that gives more context about the link's destination.
  */
 export const WithLink = Template.bind({});

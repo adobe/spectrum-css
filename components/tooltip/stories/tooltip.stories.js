@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SemanticVariantGroup, TooltipPlacementGroup, TooltipShowOnHover } from "./template.js";
 import { PlacementVariants } from "./tooltip.test.js";

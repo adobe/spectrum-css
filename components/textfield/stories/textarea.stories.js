@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptionsTextArea, KeyboardFocusTemplate, Template, TextAreaOptions } from "./textarea.template.js";
 import { TextAreaGroup } from "./textarea.test.js";

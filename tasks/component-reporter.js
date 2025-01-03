@@ -197,23 +197,11 @@ async function main({
 	);
 
 	// Create the metadata directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "metadata"))) {
-		fs.mkdirSync(path.join(cwd, "metadata"));
+	if (!fs.existsSync(path.join(cwd, "dist"))) {
+		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
 	return Promise.all([
-		writeAndReport(
-			await prettier.format(
-				`${[
-					"| Modifiable custom properties |",
-					"| --- |",
-					...(meta?.modifiers ?? []).map((mod) => `| \`${mod}\` |`),
-				].join("\n")}\n`,
-				{ parser: "markdown" },
-			),
-			path.join(cwd, "metadata/mods.md"),
-			{ cwd },
-		),
 		writeAndReport(
 			await prettier.format(
 				JSON.stringify({
@@ -228,7 +216,7 @@ async function main({
 				}, null, 2),
 				{ parser: "json" },
 			),
-			path.join(cwd, "metadata/metadata.json"),
+			path.join(cwd, "dist", "metadata.json"),
 			{ cwd },
 		),
 	])

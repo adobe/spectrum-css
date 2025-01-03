@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
 import { BasicGroupTemplate } from "./template.js";

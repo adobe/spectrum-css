@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ProgressBarGroup } from "./progressbar.test.js";
 import { IndeterminateGroup, Template } from "./template.js";

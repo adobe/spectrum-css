@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PaginationGroup } from "./pagination.test.js";
 import { Template } from "./template.js";

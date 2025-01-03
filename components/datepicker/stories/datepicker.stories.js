@@ -1,7 +1,7 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isInvalid, isOpen, isQuiet, isReadOnly, isRequired, isValid } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { DatePickerGroup } from "./datepicker.test.js";
 import { OpenClosedTemplate, Template } from "./template.js";
@@ -84,9 +84,9 @@ Default.args = {};
 Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
-/** 
+/**
  * Default styling for date pickers display a visible field button. This style works best in a dense array of controls where the field button helps separate the dropdown from its surroundings.
- * 
+ *
  * The standard implementation for a date picker incorporates the display of a [calendar](/docs/components-calendar--docs) within a [popover component](/docs/components-popover--docs).
  */
 export const DefaultGroup = OpenClosedTemplate.bind({});

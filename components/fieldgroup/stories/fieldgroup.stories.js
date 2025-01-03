@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isReadOnly, isRequired } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { FieldGroupSet } from "./fieldgroup.test.js";
 import { InputOptionsFieldGroupTemplate, NecessityIndicatorFieldGroupTemplate, Template } from "./template.js";

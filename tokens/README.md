@@ -17,11 +17,11 @@ This package uses StyleDictionary to build Spectrum core tokens for CSS.
 
 Though the token data in this package focus on only the current context (Spectrum 2), our team is committed to offering backwards compatibility for Spectrum 1 and Express through at least December of 2024.
 
-To this end, we have included the component-level mappings for:
+To this end, every component that requires backward mapping support will include:
 
-- Spectrum 1: `dist/css/components/spectrum`
-- Express: `dist/css/components/express`
-- Spectrum 2: `dist/css/components/spectrum-two`
+- Spectrum 1: `dist/themes/spectrum.css`
+- Express: `dist/themes/express.css`
+- Spectrum 2: `dist/themes/spectrum-two.css`
 
 Consumers should load only the mappings for the components they are using in their application. This will ensure that the component-level mappings are aligned with the base CSS for each component. Spectrum 1 and Express component mappings should be loaded with the `global-vars.css` and appropriate color and scale assets from the last version of the tokens package: **v14.x**. Loading the Spectrum 1 or Express component-level mappings with the Spectrum 2 global variables will result in incorrect values being applied to the components and will break the desired design for the component.
 
@@ -35,7 +35,7 @@ For additional guidance on which assets to load, see the architecture section be
 
 ## Architecture
 
-All compiled assets are shipped from the `dist` folder. Most of the assets are available in the `dist/css` folder. The `dist/css/components` folder contains the component-level mappings for Spectrum 1, Express, and Spectrum 2. These assets should be loaded with the appropriate global variables and color and scale assets from the last version of the tokens package: **v14.x**.
+All compiled assets are shipped from the `dist` folder. Most of the assets are available in the `dist/css` folder. The component-level mappings for Spectrum 1, Express, and Spectrum 2 exist in the components output as theme assets. These should be loaded with the appropriate global variables and color and scale assets from the last version of the tokens package: **v14.x**.
 
 ### Global core tokens
 
@@ -45,54 +45,6 @@ All compiled assets are shipped from the `dist` folder. Most of the assets are a
 - `medium-vars.css`: Tokens specific to the medium (desktop) scale.
 - `large-vars.css`: Tokens specific to the large (mobile) scale.
 - `index.css`: The above files rolled up into 1 css file for convenience; best for use in a vanilla HTML application.
-
-### Components
-
-Assets in this folder must be loaded together in order for the randomly generated system variables to line up.
-
-#### `bridge`
-
-- `index.css`: everything in the folder rolled up into 1 file.
-- `<component>.css`: mappings from local component classes (i.e. `.spectrum-ActionBar.spectrum-ActionBar--quiet`) to system variables.
-
-These assets must be loaded with one of the matching `<component>.css` files for the desired context, i.e., `dist/css/components/express/<component>.css` or `dist/css/components/spectrum/<component>.css`
-
-#### `spectrum-two`
-
-- `index.css`: Everything in the folder rolled up into 1 file
-- `<component>.css`:
-  - All properties in these assets are attached to a specific root-level class: `.spectrum`.
-  - System variables are mapped to global token variables or custom values (i.e. `transparent` or `10px`, values not present in the token system).
-
-These assets must be loaded with the global token definitions found in this package at the following paths: - `dist/css/global-vars.css` - `dist/css/*-vars.css`: load only those assets relevant to the application context
-
-#### `express`
-
-Same contents as the `spectrum-two` folder but instead of `.spectrum`, properties are attached to `.spectrum--express`.
-
-**Note**: Do not load these assets with the `dist/css/global-vars.css` or `dist/css/*-vars.css` files. Instead, load global token definitions from the last version of the tokens package: **v14.x**: i.e.,
-
-- **@spectrum-css/tokens@v14.x**: `dist/css/global-vars.css`
-- **@spectrum-css/tokens@v14.x**: `dist/css/*-vars.css`
-
-When loading express styles, the following assets must be loaded last or be altered to use higher specificity:
-
-- **@spectrum-css/tokens@v14.x**: `dist/css/express/global-vars.css`
-- **@spectrum-css/tokens@v14.x**: `dist/css/express/*-vars.css`
-
-#### `spectrum`
-
-Same contents as the `spectrum-two` folder but instead of `.spectrum`, properties are attached to `.spectrum--legacy`.
-
-**Note**: Do not load these assets with the `dist/css/global-vars.css` or `dist/css/*-vars.css` files. Instead, load global token definitions from the last version of the tokens package: **v14.x**: i.e.,
-
-- **@spectrum-css/tokens@v14.x**: `dist/css/global-vars.css`
-- **@spectrum-css/tokens@v14.x**: `dist/css/*-vars.css`
-
-When loading legacy spectrum styles, the following assets must be loaded last or be altered to use higher specificity:
-
-- **@spectrum-css/tokens@v14.x**: `dist/css/spectrum/global-vars.css`
-- **@spectrum-css/tokens@v14.x**: `dist/css/spectrum/*-vars.css`
 
 ## Overrides and additions
 

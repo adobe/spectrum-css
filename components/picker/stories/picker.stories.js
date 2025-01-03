@@ -2,7 +2,7 @@ import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.sto
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PickerGroup } from "./picker.test.js";
 import { ClosedAndOpenTemplate, DisabledTemplate, Template } from "./template.js";
