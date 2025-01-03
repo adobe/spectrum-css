@@ -13,8 +13,12 @@
     ".spectrum-Button--sizeXL",
     ".spectrum-Button-label",
     ".spectrum-Button-label:empty",
+    ".spectrum-Button.is-active",
     ".spectrum-Button.is-disabled",
+    ".spectrum-Button.is-focus-visible",
+    ".spectrum-Button.is-focus-visible:after",
     ".spectrum-Button.is-focused:after",
+    ".spectrum-Button.is-hover",
     ".spectrum-Button.is-pending",
     ".spectrum-Button.is-pending .spectrum-Button-label",
     ".spectrum-Button.is-pending .spectrum-Icon",
@@ -39,6 +43,10 @@
     ".spectrum-Button.spectrum-Button--staticBlack",
     ".spectrum-Button.spectrum-Button--staticBlack.is-selected",
     ".spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline",
+<<<<<<< HEAD
+=======
+    ".spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline.spectrum-Button--secondary",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     ".spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline:not(.spectrum-Button--secondary)",
     ".spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet",
     ".spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary",
@@ -66,6 +74,8 @@
     ".spectrum-Button[pending] .spectrum-Button-label",
     ".spectrum-Button[pending] .spectrum-Icon",
     ".spectrum-Button[pending] .spectrum-ProgressCircle",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy",
     "a.spectrum-Button"
   ],
   "modifiers": [
@@ -116,6 +126,10 @@
     "--mod-button-top-to-text",
     "--mod-focus-indicator-gap",
     "--mod-line-height-100",
+    "--mod-progress-circle-position",
+    "--mod-progress-circle-thickness",
+    "--mod-progress-circle-track-border-color",
+    "--mod-progress-circle-track-border-color-over-background",
     "--mod-sans-font-family-stack",
     "--mod-static-black-focus-indicator-color"
   ],
@@ -271,17 +285,32 @@
     "--spectrum-text-to-visual-300",
     "--spectrum-text-to-visual-75",
     "--spectrum-transparent-black-1000",
+<<<<<<< HEAD
+=======
+    "--spectrum-transparent-black-200",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     "--spectrum-transparent-black-300",
     "--spectrum-transparent-black-400",
     "--spectrum-transparent-black-500",
     "--spectrum-transparent-black-600",
     "--spectrum-transparent-black-700",
+<<<<<<< HEAD
     "--spectrum-transparent-black-900",
     "--spectrum-transparent-white-1000",
+=======
+    "--spectrum-transparent-black-800",
+    "--spectrum-transparent-black-900",
+    "--spectrum-transparent-white-1000",
+    "--spectrum-transparent-white-200",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     "--spectrum-transparent-white-300",
     "--spectrum-transparent-white-400",
     "--spectrum-transparent-white-500",
     "--spectrum-transparent-white-600",
+<<<<<<< HEAD
+=======
+    "--spectrum-transparent-white-800",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     "--spectrum-transparent-white-900",
     "--spectrum-white",
     "--spectrum-workflow-icon-size-100",
@@ -334,6 +363,12 @@
     "--system-button-static-black-outline-not-secondary-content-color-down",
     "--system-button-static-black-outline-not-secondary-content-color-focus",
     "--system-button-static-black-outline-not-secondary-content-color-hover",
+<<<<<<< HEAD
+=======
+    "--system-button-static-black-outline-secondary-background-color-down",
+    "--system-button-static-black-outline-secondary-background-color-focus",
+    "--system-button-static-black-outline-secondary-background-color-hover",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     "--system-button-static-black-secondary-background-color-default",
     "--system-button-static-black-secondary-background-color-down",
     "--system-button-static-black-secondary-background-color-focus",
@@ -383,13 +418,17 @@
     "--system-button-static-white-secondary-outline-border-color-down",
     "--system-button-static-white-secondary-outline-border-color-focus",
     "--system-button-static-white-secondary-outline-border-color-hover"
+<<<<<<< HEAD
   ],
   "passthroughs": [
     "--mod-progress-circle-position",
     "--mod-progress-circle-thickness",
     "--mod-progress-circle-track-border-color",
     "--mod-progress-circle-track-border-color-over-background"
+=======
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
   ],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-button-background-color-default",
     "--highcontrast-button-background-color-disabled",

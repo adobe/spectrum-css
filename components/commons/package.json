@@ -18,16 +18,26 @@
 		"./*.css": "./*.css",
 		"./CHANGELOG.md": "./CHANGELOG.md",
 		"./README.md": "./README.md",
-		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./package.json": "./package.json"
 	},
 	"main": "index.css",
+	"files": [
+		"*.md",
+		"package.json"
+	],
 	"peerDependencies": {
 		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"
 	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
+	],
 	"publishConfig": {
 		"access": "public"
 	}
