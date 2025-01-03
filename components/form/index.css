@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Form {
 	--spectrum-form-item-block-spacing: var(--spectrum-spacing-300);
 	--spectrum-form-item-block-spacing-labels-above: var(--spectrum-spacing-200);
@@ -28,7 +26,6 @@
 	inline-size: var(--mod-form-inline-size, fit-content);
 	justify-content: start;
 	row-gap: var(--mod-form-item-block-spacing, var(--spectrum-form-item-block-spacing));
-
 }
 
 /* Row */

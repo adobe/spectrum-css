@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 @media (forced-colors: active) {
 	.spectrum-ColorSlider {
 		--highcontrast-color-slider-border-color: CanvasText;
