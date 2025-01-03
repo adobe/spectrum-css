@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/calendar",
-	"version": "5.3.0",
+	"version": "6.0.0-s2-foundations.16",
 	"description": "The Spectrum CSS calendar component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,18 +21,20 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=6",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
 	},
 	"devDependencies": {
 		"@spectrum-css/actionbutton": "workspace:^",

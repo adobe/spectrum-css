@@ -15,22 +15,24 @@ export const Template = ({
 	customStyles = {},
 	size = "m",
 	...args
-} = {}, context = {}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${styleMap(customStyles)}
-		role="list"
-		aria-label=${ifDefined(ariaLabel)}
-	>
-		${items.map((i) => Tag({
-			...i,
-			...args,
-			size,
-			hasClearButton: isRemovable,
-			customClasses: [`${rootClass}-item`],
-		}, context))}
-	</div>
-`;
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+			role="list"
+			aria-label=${ifDefined(ariaLabel)}
+		>
+			${items.map((i) => Tag({
+				...i,
+				...args,
+				size,
+				hasClearButton: isRemovable,
+				customClasses: [`${rootClass}-item`],
+			}, context))}
+		</div>
+	`;
+};

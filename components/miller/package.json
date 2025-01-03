@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/miller",
-	"version": "6.2.0",
+	"version": "7.0.0-s2-foundations.17",
 	"description": "The Spectrum CSS miller component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,20 +21,22 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/assetlist": ">=6",
-		"@spectrum-css/checkbox": ">=9",
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/assetlist": ">=7.0.0-s2-foundations.0",
+		"@spectrum-css/checkbox": ">=10.0.0-s2-foundations.0",
+		"@spectrum-css/icon": ">=8.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
 	},
 	"devDependencies": {
 		"@spectrum-css/assetlist": "workspace:^",

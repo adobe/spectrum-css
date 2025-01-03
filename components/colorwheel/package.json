@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/colorwheel",
-	"version": "4.2.0",
+	"version": "5.0.0-s2-foundations.16",
 	"description": "The Spectrum CSS Color Area component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,20 +21,22 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/colorarea": ">=5",
-		"@spectrum-css/colorhandle": ">=8",
-		"@spectrum-css/colorloupe": ">=5",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/colorarea": ">=6.0.0-s2-foundations.0",
+		"@spectrum-css/colorhandle": ">=9.0.0-s2-foundations.0",
+		"@spectrum-css/colorloupe": ">=6.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorarea": {

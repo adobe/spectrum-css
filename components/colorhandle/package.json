@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/colorhandle",
-	"version": "8.2.0",
+	"version": "9.0.0-s2-foundations.18",
 	"description": "The Spectrum CSS Color Handle component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,19 +21,21 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/colorloupe": ">=5",
-		"@spectrum-css/opacitycheckerboard": ">=2",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/colorloupe": ">=6.0.0-s2-foundations.0",
+		"@spectrum-css/opacitycheckerboard": ">=3.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorloupe": {

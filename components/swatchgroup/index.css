@@ -11,32 +11,26 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-SwatchGroup {
-	--spectrum-swatchgroup-spacing-compact: var(--spectrum-spacing-50);
-	--spectrum-swatchgroup-spacing-regular: var(--spectrum-spacing-75);
-	--spectrum-swatchgroup-spacing-spacious: var(--spectrum-spacing-100);
-}
+	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-75);
 
-.spectrum-SwatchGroup {
 	display: inline-flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
 	justify-content: flex-start;
-}
 
-/* Regular (Default) */
-.spectrum-SwatchGroup {
-	gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing-regular));
+	/* Regular (Default) */
+	gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing));
 }
 
 /* Compact */
 .spectrum-SwatchGroup--compact {
-	gap: var(--mod-swatchgroup-spacing-compact, var(--spectrum-swatchgroup-spacing-compact));
+	--mod-swatchgroup-spacing-regular: var(--mod-swatchgroup-spacing-compact);
+	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-50);
 }
 
 /* Spacious */
 .spectrum-SwatchGroup--spacious {
-	gap: var(--mod-swatchgroup-spacing-spacious, var(--spectrum-swatchgroup-spacing-spacious));
+	--mod-swatchgroup-spacing-regular: var(--mod-swatchgroup-spacing-spacious);
+	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
 }

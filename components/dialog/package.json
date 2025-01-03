@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/dialog",
-	"version": "10.2.0",
+	"version": "11.0.0-s2-foundations.17",
 	"description": "The Spectrum CSS dialog component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,21 +21,23 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/closebutton": ">=5",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/modal": ">=5",
-		"@spectrum-css/tokens": ">=14",
-		"@spectrum-css/underlay": ">=4"
+		"@spectrum-css/closebutton": ">=6.0.0-s2-foundations.0",
+		"@spectrum-css/divider": ">=4.0.0-s2-foundations.0",
+		"@spectrum-css/modal": ">=6.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0",
+		"@spectrum-css/underlay": ">=5.0.0-s2-foundations.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/divider": {

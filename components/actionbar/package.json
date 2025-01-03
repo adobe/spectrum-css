@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/actionbar",
-	"version": "8.2.0",
+	"version": "9.0.0-s2-foundations.17",
 	"description": "The Spectrum CSS actionbar component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -21,21 +21,23 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
 		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/actiongroup": ">=5",
-		"@spectrum-css/closebutton": ">=5",
-		"@spectrum-css/fieldlabel": ">=8",
-		"@spectrum-css/popover": ">=7",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/actiongroup": ">=6.0.0-s2-foundations.0",
+		"@spectrum-css/closebutton": ">=6.0.0-s2-foundations.0",
+		"@spectrum-css/fieldlabel": ">=9.0.0-s2-foundations.0",
+		"@spectrum-css/popover": ">=8.0.0-s2-foundations.0",
+		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
 	},
 	"devDependencies": {
 		"@spectrum-css/actiongroup": "workspace:^",
