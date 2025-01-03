@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Underlay {
 	--spectrum-underlay-background-exit-animation-duration: var(--mod-underlay-background-exit-animation-duration, var(--spectrum-animation-duration-300));
 	--spectrum-underlay-background-exit-animation-ease: var(--mod-underlay-background-exit-animation-ease, var(--spectrum-animation-ease-in));

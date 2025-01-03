@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-ContextualHelp {
 	position: relative;
 	min-inline-size: var(--mod-spectrum-contextual-help-minimum-width, var(--spectrum-contextual-help-minimum-width));

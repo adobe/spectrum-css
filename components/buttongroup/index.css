@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-ButtonGroup {
 	/* @deprecated --mod-buttongroup-spacing-horizontal -- replaced by --mod-buttongroup-spacing */
 	--spectrum-buttongroup-spacing: var(--mod-buttongroup-spacing, var(--mod-buttongroup-spacing-horizontal, var(--spectrum-spacing-300)));
