@@ -26,12 +26,12 @@ require("colors");
 const {
 	dirs,
 	relativePrint,
-	bytesToSize,
 	getPackageFromPath,
 	cleanFolder,
 	validateComponentName,
 	fetchContent,
 	copy,
+	writeAndReport,
 } = require("./utilities.js");
 
 /**
@@ -52,13 +52,26 @@ async function processCSS(
 	{
 		cwd,
 		configPath = __dirname,
+		minify = false,
+		encoding = "utf-8",
 		...postCSSOptions
 	} = {},
 ) {
-	if (!content)
-		return Promise.reject(
-			new Error("This function requires content be provided"),
-		);
+	if (!content) {
+		if (!input || !fs.existsSync(input)) {
+			return Promise.reject(
+				new Error("[processCSS] Content or an input file path must be provided"),
+			);
+		}
+
+		content = await fsp.readFile(input, encoding);
+
+		if (!content) {
+			return Promise.reject(
+				new Error(`[processCSS] No content found for ${relativePrint(input, { cwd })}`),
+			);
+		}
+	}
 
 	const ctx = {
 		cwd,
@@ -67,6 +80,7 @@ async function processCSS(
 		from: input,
 		to: output,
 		verbose: false,
+		minify,
 		...postCSSOptions,
 	};
 
@@ -85,13 +99,13 @@ async function processCSS(
 
 	if (!result.css) return Promise.resolve();
 
-	const formatted = await prettier.format(result.css, {
+	const formatted = !minify ? await prettier.format(result.css, {
 		parser: "css",
 		filepath: input,
 		printWidth: 500,
 		tabWidth: 2,
 		useTabs: true,
-	});
+	}) : result.css;
 
 	// If no output is provided, return the formatted content
 	if (!output) return Promise.resolve(formatted);
@@ -107,36 +121,12 @@ async function processCSS(
 	}
 
 	const promises = [
-		fsp
-			.writeFile(output, formatted)
-			.then(() => {
-				const stats = fs.statSync(output);
-				return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-			})
-			.catch((err) => {
-				if (!err) return;
-				console.log(
-					`${"✗".red}  ${relativePrint(output, { cwd }).yellow} not written`,
-				);
-				return Promise.reject(err);
-			}),
+		writeAndReport(formatted, output, { cwd }),
 	];
 
 	if (result.map) {
 		promises.push(
-			fsp
-				.writeFile(`${output}.map`, result.map.toString().trimStart())
-				.then(() => {
-					const stats = fs.statSync(output);
-					return `${"✓".green}  ${relativePrint(`${output}.map`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-				})
-				.catch((err) => {
-					if (!err) return;
-					console.log(
-						`${"✗".red}  ${relativePrint(`${output}.map`, { cwd }).yellow} not written`,
-					);
-					return Promise.reject(err);
-				}),
+			writeAndReport(result.map.toString().trimStart(), `${output}.map`, { cwd }),
 		);
 	}
 

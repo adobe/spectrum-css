@@ -80,13 +80,13 @@ function getPackageFromPath(filePath = process.cwd()) {
  * Returns a list of all component names in the repository
  * @returns string[]
  */
-function getAllComponentNames() {
+function getAllComponentNames(includeDeprecated = true) {
 	// Get a list of all the component names in the components directory that have a package.json file
 	// and a list of all the deprecated components in the storybook directory
 	// then combine and deduplicate the lists to get a full list of all components
 	return [...new Set([
 		...fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json"))),
-		...fs.readdirSync(path.join(dirs.storybook, "deprecated")),
+		...(includeDeprecated ? fs.readdirSync(path.join(dirs.storybook, "deprecated")) : []),
 	])];
 }
 
@@ -270,12 +270,12 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
  * @param {string} [config.cwd=] - Current working directory for the component being built
  * @returns Promise<string|void>
  */
-async function writeAndReport(content, output, { cwd = process.cwd() } = {}) {
+async function writeAndReport(content, output, { cwd = process.cwd(), encoding = "utf-8" } = {}) {
 	return fsp
 		.writeFile(
 			output,
 			content,
-			{ encoding: "utf-8" },
+			{ encoding },
 		)
 		.then(() => {
 			const stats = fs.statSync(output);

@@ -6,6 +6,7 @@ generator
 dist
 .storybook/storybook-static
 *-generated.css
+tools/bundle/src/*.css
 
 node_modules/**/*.css
 
