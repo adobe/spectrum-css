@@ -1,5 +1,16 @@
 # Change Log
 
+## 7.0.0-s2-foundations.17
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`7fa37a7`](https://github.com/adobe/spectrum-css/commit/7fa37a7503e791e6bc8c62a3ea15600a56e23127) Thanks [@pfulton](https://github.com/pfulton)! - Removes empty theme assets from the component; no longer publishing a themes folder or index-theme.css map.
+
+### Patch Changes
+
+- Updated dependencies [[`7fa37a7`](https://github.com/adobe/spectrum-css/commit/7fa37a7503e791e6bc8c62a3ea15600a56e23127)]:
+  - @spectrum-css/icon@8.0.0-s2-foundations.19
+
 ## 7.0.0-s2-foundations.16
 
 ### Major Changes
