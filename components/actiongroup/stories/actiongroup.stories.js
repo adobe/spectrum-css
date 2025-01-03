@@ -2,7 +2,7 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ActionGroups } from "./actiongroup.test.js";
 import { OverflowOption, TreatmentTemplate } from "./template.js";

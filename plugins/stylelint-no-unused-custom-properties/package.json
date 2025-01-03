@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-tools/stylelint-no-unused-custom-properties",
-  "version": "2.0.2-s2-foundations.0",
+  "version": "2.0.2",
   "description": "Report on any unused custom property definitions",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -23,7 +23,7 @@
     "postcss-values-parser": "^6.0.2"
   },
   "peerDependencies": {
-    "stylelint": ">=16.0.0"
+    "stylelint": ">=16"
   },
   "devDependencies": {
     "ava": "^6.2.0",

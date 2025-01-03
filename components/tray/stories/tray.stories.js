@@ -1,7 +1,7 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TrayGroup } from "./tray.test.js";
 

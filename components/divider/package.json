@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/divider",
-	"version": "4.0.0-s2-foundations.16",
+	"version": "3.2.0",
 	"description": "The Spectrum CSS divider component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -19,8 +19,7 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
+		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
 		"./stories/*": "./stories/*"
 	},
@@ -33,7 +32,7 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+		"@spectrum-css/tokens": ">=14"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"

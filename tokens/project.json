@@ -17,17 +17,12 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss", "rimraf"] }],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/token-rollup.js\").default()'",
-					"rm -f ./dist/css/express/custom-light*.css ./dist/css/express/custom-dark*.css ./dist/css/spectrum/custom-dark*.css ./dist/css/spectrum/custom-light*.css",
-					"cross-env NODE_OPTIONS=\"--no-warnings\" postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/token-rollup.js\").default()'"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
 			},
 			"outputs": [
-				"{projectRoot}/dist/css/express",
-				"{projectRoot}/dist/css/spectrum",
-				"{projectRoot}/dist/css/components",
 				"{projectRoot}/dist/css/*-vars.css",
 				"{projectRoot}/dist/index.css"
 			]

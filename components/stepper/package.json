@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/stepper",
-	"version": "7.0.0-s2-foundations.19",
+	"version": "6.3.0",
 	"description": "The Spectrum CSS stepper component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -19,8 +19,7 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
+		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
 		"./stories/*": "./stories/*"
 	},
@@ -33,11 +32,11 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0",
-		"@spectrum-css/icon": ">=8.0.0-s2-foundations.0",
-		"@spectrum-css/infieldbutton": ">=6.0.0-s2-foundations.0",
-		"@spectrum-css/textfield": ">=8.0.0-s2-foundations.0",
-		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+		"@spectrum-css/actionbutton": ">=6",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/infieldbutton": ">=5",
+		"@spectrum-css/textfield": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/infieldbutton": {

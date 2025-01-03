@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/meter",
-	"version": "0.0.0-s2-foundations.3",
+	"version": "0.0.0",
 	"description": "The Spectrum CSS meter component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -19,8 +19,7 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
+		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
 		"./stories/*": "./stories/*"
 	},
@@ -33,8 +32,8 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/progressbar": ">=5.0.0-s2-foundations.0",
-		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+		"@spectrum-css/progressbar": ">=4",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"devDependencies": {
 		"@spectrum-css/progressbar": "workspace:^",
@@ -48,5 +47,12 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/meter",
+			"rootClass": "spectrum-Meter",
+			"swc": "https://opensource.adobe.com/spectrum-web-components/components/meter/"
+		}
+	]
 }

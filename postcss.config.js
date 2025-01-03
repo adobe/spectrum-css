@@ -50,6 +50,19 @@ module.exports = ({
 			/** @link https://github.com/postcss/postcss-import#postcss-import */
 			"postcss-import": resolveImports ? {} : false,
 			/* --------------------------------------------------- */
+			/* ------------------- LINTING ---------------- */
+			stylelint: {
+				cache: true,
+				// Passing the config path saves a little time b/c it doesn't have to find it
+				configFile: join(__dirname, "stylelint.config.js"),
+				quiet: !lint,
+				fix: true,
+				allowEmptyInput: true,
+				ignorePath: join(__dirname, ".stylelintignore"),
+				reportNeedlessDisables: lint,
+				reportInvalidScopeDisables: lint,
+			},
+			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
 			"postcss-pseudo-classes": !isProduction ? {
@@ -124,17 +137,6 @@ module.exports = ({
 			},
 			/* --------------------------------------------------- */
 			/* ------------------- REPORTING --------------------- */
-			stylelint: {
-				cache: true,
-				// Passing the config path saves a little time b/c it doesn't have to find it
-				configFile: join(__dirname, "stylelint.config.js"),
-				quiet: !lint,
-				fix: true,
-				allowEmptyInput: true,
-				ignorePath: join(__dirname, ".stylelintignore"),
-				reportNeedlessDisables: lint,
-				reportInvalidScopeDisables: lint,
-			},
 			"postcss-licensing": {
 				filename: "COPYRIGHT",
 				cwd: __dirname,

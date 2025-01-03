@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/textfield",
-	"version": "8.0.0-s2-foundations.17",
+	"version": "7.3.0",
 	"description": "The Spectrum CSS textfield component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -19,8 +19,7 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
+		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
 		"./stories/*": "./stories/*"
 	},
@@ -33,8 +32,8 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/helptext": ">=6.0.0-s2-foundations.0",
-		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+		"@spectrum-css/helptext": ">=5",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/helptext": {

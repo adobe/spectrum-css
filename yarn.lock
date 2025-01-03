@@ -2951,8 +2951,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -2966,11 +2966,11 @@ __metadata:
     "@spectrum-css/popover": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actiongroup": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/closebutton": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/fieldlabel": ">=9.0.0-s2-foundations.0"
-    "@spectrum-css/popover": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actiongroup": ">=5"
+    "@spectrum-css/closebutton": ">=5"
+    "@spectrum-css/fieldlabel": ">=8"
+    "@spectrum-css/popover": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -2982,8 +2982,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -2994,8 +2994,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actiongroup@workspace:components/actiongroup"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -3012,11 +3012,11 @@ __metadata:
     "@spectrum-css/popover": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/menu": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/popover": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/menu": ">=7"
+    "@spectrum-css/popover": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3030,11 +3030,11 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0-s2-foundations.0"
-    "@spectrum-css/closebutton": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/divider": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/button": ">=13"
+    "@spectrum-css/closebutton": ">=5"
+    "@spectrum-css/divider": ">=3"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -3052,12 +3052,12 @@ __metadata:
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/underlay": "workspace:^"
   peerDependencies:
-    "@spectrum-css/buttongroup": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/divider": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/modal": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
-    "@spectrum-css/underlay": ">=5.0.0-s2-foundations.0"
+    "@spectrum-css/buttongroup": ">=7"
+    "@spectrum-css/divider": ">=3"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/modal": ">=5"
+    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/underlay": ">=4"
   peerDependenciesMeta:
     "@spectrum-css/buttongroup":
       optional: true
@@ -3072,7 +3072,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3083,8 +3083,8 @@ __metadata:
     "@spectrum-css/checkbox": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/checkbox": ">=9"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
@@ -3099,9 +3099,9 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/checkbox": ">=9"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
@@ -3116,7 +3116,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3127,8 +3127,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -3143,9 +3143,9 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -3163,9 +3163,9 @@ __metadata:
     "@spectrum-css/progresscircle": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/progresscircle": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/progresscircle": ">=3"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -3181,8 +3181,8 @@ __metadata:
     "@spectrum-css/button": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/button": ">=13"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3193,8 +3193,8 @@ __metadata:
     "@spectrum-css/actionbutton": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3209,12 +3209,12 @@ __metadata:
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/typography": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/asset": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/checkbox": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
-    "@spectrum-css/typography": ">=7.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/asset": ">=5"
+    "@spectrum-css/checkbox": ">=9"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/typography": ">=6"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -3236,8 +3236,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3248,8 +3248,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3261,8 +3261,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3272,7 +3272,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3288,13 +3288,13 @@ __metadata:
     "@spectrum-css/popover": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/actionmenu": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/button": ">=14.0.0-s2-foundations.0"
-    "@spectrum-css/buttongroup": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/menu": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/popover": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/actionmenu": ">=6"
+    "@spectrum-css/button": ">=13"
+    "@spectrum-css/buttongroup": ">=7"
+    "@spectrum-css/menu": ">=7"
+    "@spectrum-css/popover": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/button":
       optional: true
@@ -3308,8 +3308,8 @@ __metadata:
     "@spectrum-css/colorhandle": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/colorhandle": ">=9.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/colorhandle": ">=8"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3321,9 +3321,9 @@ __metadata:
     "@spectrum-css/opacitycheckerboard": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/colorloupe": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/opacitycheckerboard": ">=3.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/colorloupe": ">=5"
+    "@spectrum-css/opacitycheckerboard": ">=2"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/colorloupe":
       optional: true
@@ -3336,7 +3336,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3348,9 +3348,9 @@ __metadata:
     "@spectrum-css/opacitycheckerboard": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/colorhandle": ">=9.0.0-s2-foundations.0"
-    "@spectrum-css/opacitycheckerboard": ">=3.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/colorhandle": ">=8"
+    "@spectrum-css/opacitycheckerboard": ">=2"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3363,10 +3363,10 @@ __metadata:
     "@spectrum-css/colorloupe": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/colorarea": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/colorhandle": ">=9.0.0-s2-foundations.0"
-    "@spectrum-css/colorloupe": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/colorarea": ">=5"
+    "@spectrum-css/colorhandle": ">=8"
+    "@spectrum-css/colorloupe": ">=5"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/colorarea":
       optional: true
@@ -3386,12 +3386,12 @@ __metadata:
     "@spectrum-css/textfield": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/menu": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/pickerbutton": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/popover": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/progresscircle": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/textfield": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/menu": ">=7"
+    "@spectrum-css/pickerbutton": ">=5"
+    "@spectrum-css/popover": ">=7"
+    "@spectrum-css/progresscircle": ">=3"
+    "@spectrum-css/textfield": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/progresscircle":
       optional: true
@@ -3404,7 +3404,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3417,10 +3417,10 @@ __metadata:
     "@spectrum-css/popover": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/link": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/popover": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/link": ">=5"
+    "@spectrum-css/popover": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/link":
       optional: true
@@ -3437,11 +3437,11 @@ __metadata:
     "@spectrum-css/textfield": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/calendar": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/pickerbutton": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/popover": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/textfield": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/calendar": ">=5"
+    "@spectrum-css/pickerbutton": ">=5"
+    "@spectrum-css/popover": ">=7"
+    "@spectrum-css/textfield": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3451,7 +3451,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3466,11 +3466,11 @@ __metadata:
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/underlay": "workspace:^"
   peerDependencies:
-    "@spectrum-css/closebutton": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/divider": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/modal": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
-    "@spectrum-css/underlay": ">=5.0.0-s2-foundations.0"
+    "@spectrum-css/closebutton": ">=5"
+    "@spectrum-css/divider": ">=3"
+    "@spectrum-css/modal": ">=5"
+    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/underlay": ">=4"
   peerDependenciesMeta:
     "@spectrum-css/divider":
       optional: true
@@ -3487,7 +3487,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3498,8 +3498,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3512,10 +3512,10 @@ __metadata:
     "@spectrum-css/link": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/illustratedmessage": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/link": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/illustratedmessage": ">=7"
+    "@spectrum-css/link": ">=5"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -3533,10 +3533,10 @@ __metadata:
     "@spectrum-css/radio": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/helptext": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/radio": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/checkbox": ">=9"
+    "@spectrum-css/helptext": ">=5"
+    "@spectrum-css/radio": ">=9"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
@@ -3554,8 +3554,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3565,7 +3565,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3575,7 +3575,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3597,8 +3597,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3608,7 +3608,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3619,8 +3619,8 @@ __metadata:
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/typography": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
-    "@spectrum-css/typography": ">=7.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/typography": ">=6"
   languageName: unknown
   linkType: soft
 
@@ -3631,8 +3631,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -3647,9 +3647,9 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/button": ">=13"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/button":
       optional: true
@@ -3662,7 +3662,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3672,7 +3672,7 @@ __metadata:
   dependencies:
     "@spectrum-css/commons": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3687,12 +3687,12 @@ __metadata:
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/tray": "workspace:^"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/divider": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/switch": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
-    "@spectrum-css/tray": ">=4.0.0-s2-foundations.0"
+    "@spectrum-css/checkbox": ">=9"
+    "@spectrum-css/divider": ">=3"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/switch": ">=5"
+    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/tray": ">=3"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
@@ -3712,8 +3712,8 @@ __metadata:
     "@spectrum-css/progressbar": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/progressbar": ">=5.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/progressbar": ">=4"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3726,10 +3726,10 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/assetlist": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/checkbox": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/assetlist": ">=6"
+    "@spectrum-css/checkbox": ">=9"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3740,7 +3740,7 @@ __metadata:
     "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3750,7 +3750,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3764,11 +3764,11 @@ __metadata:
     "@spectrum-css/textfield": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/button": ">=14.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/textfield": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/button": ">=13"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/textfield": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3784,12 +3784,12 @@ __metadata:
     "@spectrum-css/progresscircle": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/helptext": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/menu": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/popover": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/progresscircle": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/helptext": ">=5"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/menu": ">=7"
+    "@spectrum-css/popover": ">=7"
+    "@spectrum-css/progresscircle": ">=3"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/helptext":
       optional: true
@@ -3807,10 +3807,10 @@ __metadata:
     "@spectrum-css/popover": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/menu": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/popover": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/menu": ">=7"
+    "@spectrum-css/popover": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3825,11 +3825,11 @@ __metadata:
     "@spectrum-css/menu": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/alertdialog": ">=3.0.0-s2-foundations.0"
-    "@spectrum-css/dialog": ">=11.0.0-s2-foundations.0"
-    "@spectrum-css/divider": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/menu": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/alertdialog": ">=2"
+    "@spectrum-css/dialog": ">=10"
+    "@spectrum-css/divider": ">=3"
+    "@spectrum-css/menu": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/divider":
       optional: true
@@ -3892,8 +3892,8 @@ __metadata:
     "@spectrum-css/fieldlabel": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/fieldlabel": ">=9.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/fieldlabel": ">=8"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/fieldlabel":
       optional: true
@@ -3906,7 +3906,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3917,8 +3917,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3929,8 +3929,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3943,10 +3943,10 @@ __metadata:
     "@spectrum-css/textfield": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/clearbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/textfield": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/clearbutton": ">=6"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/textfield": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3957,8 +3957,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -3972,8 +3972,8 @@ __metadata:
     "@spectrum-css/stepper": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/stepper": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/stepper": ">=6"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3983,7 +3983,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3993,7 +3993,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4005,9 +4005,9 @@ __metadata:
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/tooltip": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
-    "@spectrum-css/tooltip": ">=7.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/tooltip": ">=6"
   peerDependenciesMeta:
     "@spectrum-css/tooltip":
       optional: true
@@ -4024,11 +4024,11 @@ __metadata:
     "@spectrum-css/textfield": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/infieldbutton": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/textfield": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/actionbutton": ">=6"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/infieldbutton": ">=5"
+    "@spectrum-css/textfield": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/infieldbutton":
       optional: true
@@ -4042,8 +4042,8 @@ __metadata:
     "@spectrum-css/opacitycheckerboard": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/opacitycheckerboard": ">=3.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/opacitycheckerboard": ">=2"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4054,8 +4054,8 @@ __metadata:
     "@spectrum-css/swatch": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/swatch": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/swatch": ">=6"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4065,7 +4065,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4079,11 +4079,11 @@ __metadata:
     "@spectrum-css/thumbnail": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0-s2-foundations.0"
-    "@spectrum-css/checkbox": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/thumbnail": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/button": ">=13"
+    "@spectrum-css/checkbox": ">=9"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/thumbnail": ">=6"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/button":
       optional: true
@@ -4103,10 +4103,10 @@ __metadata:
     "@spectrum-css/picker": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/menu": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/picker": ">=9.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/menu": ">=7"
+    "@spectrum-css/picker": ">=8"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4122,10 +4122,10 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/avatar": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/clearbutton": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/avatar": ">=7"
+    "@spectrum-css/clearbutton": ">=6"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/avatar":
       optional: true
@@ -4141,8 +4141,8 @@ __metadata:
     "@spectrum-css/tag": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tag": ">=10.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tag": ">=9"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4153,8 +4153,8 @@ __metadata:
     "@spectrum-css/helptext": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/helptext": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/helptext": ">=5"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/helptext":
       optional: true
@@ -4168,8 +4168,8 @@ __metadata:
     "@spectrum-css/opacitycheckerboard": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/opacitycheckerboard": ">=3.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/opacitycheckerboard": ">=2"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4182,10 +4182,10 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0-s2-foundations.0"
-    "@spectrum-css/closebutton": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/button": ">=13"
+    "@spectrum-css/closebutton": ">=5"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4218,8 +4218,8 @@ __metadata:
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4234,12 +4234,12 @@ __metadata:
     "@spectrum-css/modal": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0-s2-foundations.0"
-    "@spectrum-css/dialog": ">=11.0.0-s2-foundations.0"
-    "@spectrum-css/divider": ">=4.0.0-s2-foundations.0"
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/modal": ">=6.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/button": ">=13"
+    "@spectrum-css/dialog": ">=10"
+    "@spectrum-css/divider": ">=3"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/modal": ">=5"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/dialog":
       optional: true
@@ -4256,9 +4256,9 @@ __metadata:
     "@spectrum-css/thumbnail": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/icon": ">=8.0.0-s2-foundations.0"
-    "@spectrum-css/thumbnail": ">=7.0.0-s2-foundations.0"
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/thumbnail": ">=6"
+    "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/thumbnail":
       optional: true
@@ -4271,7 +4271,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4292,7 +4292,7 @@ __metadata:
   dependencies:
     "@spectrum-css/commons": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4302,7 +4302,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -4367,7 +4367,7 @@ __metadata:
     colors: "npm:^1.4.0"
     stylelint: "npm:^16.9.0"
   peerDependencies:
-    stylelint: ">=16.0.0"
+    stylelint: ">=16"
   languageName: unknown
   linkType: soft
 
@@ -4383,7 +4383,7 @@ __metadata:
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.9.0"
   peerDependencies:
-    stylelint: ">=16.0.0"
+    stylelint: ">=16"
   languageName: unknown
   linkType: soft
 
@@ -4398,7 +4398,7 @@ __metadata:
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.9.0"
   peerDependencies:
-    stylelint: ">=16.0.0"
+    stylelint: ">=16"
   languageName: unknown
   linkType: soft
 

@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tokens",
-	"version": "15.0.0-s2-foundations.31",
+	"version": "14.6.0",
 	"description": "The Spectrum CSS tokens package",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -17,14 +17,6 @@
 		".": "./dist/css/index.css",
 		"./*.md": "./*.md",
 		"./dist/css/*.css": "./dist/css/*.css",
-		"./dist/css/components/bridge": "./dist/components/bridge/index.css",
-		"./dist/css/components/bridge/*.css": "./dist/components/bridge/*.css",
-		"./dist/css/components/express": "./dist/components/express/index.css",
-		"./dist/css/components/express/*.css": "./dist/components/express/*.css",
-		"./dist/css/components/spectrum": "./dist/components/spectrum/index.css",
-		"./dist/css/components/spectrum-two": "./dist/components/spectrum-two/index.css",
-		"./dist/css/components/spectrum-two/*.css": "./dist/components/spectrum-two/*.css",
-		"./dist/css/components/spectrum/*.css": "./dist/components/spectrum/*.css",
 		"./dist/index.css": "./dist/css/index.css",
 		"./package.json": "./package.json"
 	},
