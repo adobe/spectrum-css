@@ -19,7 +19,6 @@ export default {
 	component: "ColorSlider",
 	argTypes: {
 		colorHandleStyle: { table: { disable: true } },
-		vertical: { table: { disable: true } },
 		isDisabled,
 		isFocused: {
 			...isFocused,
@@ -49,6 +48,12 @@ export default {
 			options: ["color", "image"],
 			control: { type: "select" },
 			table: { disable: true },
+		},
+		vertical: {
+			name: "Vertical",
+			description: "The orientation of the component.",
+			type: { name: "boolean" },
+			control: "boolean",
 		},
 	},
 	args: {
