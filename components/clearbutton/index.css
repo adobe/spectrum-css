@@ -21,6 +21,11 @@
 	--spectrum-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
+	--spectrum-clear-button-background-color: transparent;
+	--spectrum-clear-button-background-color-hover: transparent;
+	--spectrum-clear-button-background-color-down: transparent;
+	--spectrum-clear-button-background-color-key-focus: transparent;
+
 	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
 	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
 	border-radius: 100%;
