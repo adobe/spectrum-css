@@ -10,3 +10,12 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+<<<<<<<< HEAD:components/alertdialog/themes/spectrum-two.css
+========
+
+@container style(--system: spectrum) {
+	.spectrum-DropZone {
+		--spectrum-drop-zone-border-color: var(--spectrum-gray-200);
+	}
+}
+>>>>>>>> edd10946b (build: migrate from nx to workspaces):components/drop-zone/themes/spectrum-two.css

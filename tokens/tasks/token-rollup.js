@@ -17,12 +17,23 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
+
 const fg = require("fast-glob");
 
 const { processCSS } = require("../../tasks/component-builder.js");
-const { copy, writeAndReport, dirs, fetchContent } = require("../../tasks/utilities.js");
 
 require("colors");
+
+const {
+	copy,
+	dirs,
+	writeAndReport,
+	runAndReportToConsole,
+	fetchContent,
+	getAllComponentNames,
+} = require("../../tasks/utilities.js");
 
 /**
  * The builder for the main entry point
@@ -47,21 +58,27 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
  * Compile the theming assets for each component
  * @param {Object} config
  * @param {string} [config.cwd=process.cwd()] - Current working directory for the component
- * @returns
+ * @returns {Promise<void>}
  */
 async function componentTheming() {
-	const components = fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json")));
+	const components = getAllComponentNames();
 
-	const promises = [];
-	for (const component of components) {
+	return Promise.all(components.map(async (component) => {
+		// Directory for the component
 		const componentDir = path.join(dirs.components, component);
-		if (!fs.existsSync(path.join(componentDir, "themes"))) continue;
+
+		// If no themes directory exists, there's nothing to do
+		if (!fs.existsSync(path.join(componentDir, "themes"))) {
+			return Promise.resolve(`No themes for ${component.yellow}.`);
+		}
 
 		// This fetches the content of the files and returns an array of objects with the content and input paths
-		const contentData = await fetchContent(["themes/*.css"], { cwd: componentDir });
+		const contentData = await fetchContent(["themes/*.css"], { cwd: componentDir, shouldCombine: false });
 
 		// Nothing to do if there's no content
-		if (!contentData || contentData.length === 0) continue;
+		if (!contentData || contentData.length === 0) {
+			return Promise.resolve(`No content in themes for ${component}`);
+		}
 
 		const imports = contentData.map(({ input }) => `@import "${input}";`).join("\n");
 
@@ -72,7 +89,7 @@ async function componentTheming() {
 			env: "production",
 		};
 
-		promises.push(
+		return Promise.all([
 			// Create a bridge asset for each component
 			processCSS(
 				imports,
@@ -102,10 +119,8 @@ async function componentTheming() {
 					...sharedPostCSSConfig,
 				});
 			}),
-		);
-	}
-
-	return Promise.all(promises);
+		]);
+	}));
 }
 
 /**
@@ -134,6 +149,32 @@ async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
 	return Promise.all(promises);
 }
 
+async function workflow({ cwd }) {
+	return Promise.all([
+		componentTheming(),
+		// Wait for all the custom files to be processed
+		appendCustomOverrides({ cwd }),
+	]).then((r) => Promise.all([
+		index(
+			["dist/css/components/bridge/*.css"],
+			path.join(cwd, "dist", "css", "components", "bridge", "index.css"),
+			{ cwd, clean }
+		),
+		...["spectrum", "legacy", "express"].map(theme => index(
+			[`dist/css/components/${theme}/*.css`],
+			path.join(cwd, "dist", "css", "components", theme, "index.css"),
+			{ cwd, clean }
+		)),
+		index(
+			["dist/css/*-vars.css"],
+			path.join(cwd, "dist", "css", "index.css"),
+			{ cwd, clean }
+		).then((reports) =>
+			copy(path.join(cwd, "dist", "css", "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false })
+				.then((reps) => [reports, reps]))
+	]).then((r2) => [r, r2]));
+}
+
 /**
  * The main entry point for this tool; this builds a CSS component
  * @param {object} config
@@ -143,78 +184,28 @@ async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
  * @returns Promise<void>
  */
 async function main({
-	cwd = process.cwd(),
+	cwd = dirs.tokens,
 	clean,
 } = {}) {
 	if (typeof clean === "undefined") {
 		clean = process.env.NODE_ENV === "production";
 	}
 
-	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
-	console.time(key);
-
-	const compiledOutputPath = path.join(cwd, "dist");
-
-	return Promise.all([
-		componentTheming(),
-		// Wait for all the custom files to be processed
-		appendCustomOverrides({ cwd }),
-	]).then(async (r) => {
-		return Promise.all([
-			index(
-				["dist/css/components/bridge/*.css"],
-				path.join(compiledOutputPath, "css", "components", "bridge", "index.css"),
-				{ cwd, clean }
-			),
-			...["spectrum", "legacy", "express"].map(theme => index(
-				[`dist/css/components/${theme}/*.css`],
-				path.join(compiledOutputPath, "css", "components", theme, "index.css"),
-				{ cwd, clean }
-			)),
-			index(
-				["dist/css/*-vars.css"],
-				path.join(compiledOutputPath, "css", "index.css"),
-				{ cwd, clean }
-			).then((reports) =>
-				copy(path.join(compiledOutputPath, "css", "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false })
-					.then((reps) => [reports, reps]))
-		]).then((reports) => {
-			return [reports, r];
-		});
-	}).then((report) => {
-		const logs = report.flat(Infinity).filter(Boolean);
-
-		console.log(`\n\n${key} 🔨`);
-		console.log(`${"".padStart(30, "-")}`);
-
-		if (logs && logs.length > 0) {
-			logs.sort((a,) => {
-				if (!a || typeof a !== "string") return 1;
-				if (a.includes("✓")) return -1;
-				if (a.includes("🔍")) return 0;
-				return 1;
-			}).forEach(log => {
-				// Strip the ../../tokens/ from the paths
-				console.log(log.replace(/(\.\.\/)+tokens\//g, ""));
-			});
-		}
-		else console.log("No assets created.".gray);
-
-		console.log(`${"".padStart(30, "-")}`);
-		console.timeEnd(key);
-		console.log("");
-	}).catch((err) => {
-		console.log(`\n\n${key} 🔨`);
-		console.log(`${"".padStart(30, "-")}`);
-
-		console.trace(err);
-
-		console.log(`${"".padStart(30, "-")}`);
-		console.timeEnd(key);
-		console.log("");
-
-		process.exit(1);
+	return runAndReportToConsole((cwd) => ([
+		workflow({ cwd }),
+	]), {
+		taskLabel: "build",
+		taskIcon: "🔨",
+		cwd,
 	});
 }
 
 exports.default = main;
+
+let {
+	cwd = dirs.tokens,
+	clean = true,
+	// @todo allow to run against local main or published versions
+} = yargs(hideBin(process.argv)).argv;
+
+main({ cwd, clean });
