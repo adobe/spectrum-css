@@ -148,7 +148,7 @@ exports.addComment = async function ({ search, content, token }) {
  * filesystem and return a Map of the files and their sizes.
  * @param {string} rootPath
  * @param {string[]} patterns
- * @returns {Promise<Map<string, number>>}
+ * @returns {Promise<Map<string, number>>} - Returns the relative path and size of the files
  */
 exports.fetchFilesAndSizes = async function (rootPath, patterns = [], { core }) {
     if (!existsSync(rootPath)) return new Map();
