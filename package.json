@@ -12,6 +12,10 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"files": [
+		"*.md",
+		"package.json"
+	],
 	"scripts": {
 		"build": "yarn builder tag:component,ui-icons",
 		"build:docs": "nx build storybook --output-dir ../dist/",
@@ -25,12 +29,15 @@
 		"clean:preview": "nx clean storybook",
 		"cleaner": "nx run-many --target clean --projects",
 		"compare": "cross-env NODE_ENV=production node --no-warnings ./tasks/compare-compiled-output.js",
+		"component:build": "node --no-warnings ./tasks/component-builder.js",
+		"component:compare": "node --no-warnings ./tasks/component-compare.js",
+		"component:report": "node --no-warnings ./tasks/component-reporter.js",
 		"dev": "cross-env NODE_ENV=development nx run storybook:build:docs",
 		"format": "yarn formatter tag:component",
 		"formatter": "nx run-many --target format --projects",
 		"lint": "yarn linter tag:component",
 		"linter": "nx run-many --target lint --verbose --projects",
-		"new": "nx run @spectrum-css/generator:new",
+		"new": "yarn workspace @spectrum-css/generator run new",
 		"postinstall": "husky || true && yarn refresh",
 		"precommit": "lint-staged --allow-empty --config lint-staged.config.js",
 		"publish:docs": "cross-env NODE_ENV=production yarn build:docs && gh-pages -d dist/ -f -e . --nojekyll",
@@ -117,6 +124,13 @@
 		"tar": "^7.4.3",
 		"yargs": "^17.7.2"
 	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
+	],
 	"engines": {
 		"node": ">=20"
 	},
