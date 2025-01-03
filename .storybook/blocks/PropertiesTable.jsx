@@ -1,9 +1,8 @@
-import "@spectrum-css/table/dist/index.css";
-
 import { DocsContext, useOf } from "@storybook/blocks";
 import { NAVIGATE_URL } from "@storybook/core-events";
 import { styled } from "@storybook/theming";
 import React, { useContext } from 'react';
+
 import { ThemeContainer } from "./ThemeContainer.jsx";
 import { Body, Code, LinkableHeading } from "./Typography.jsx";
 
