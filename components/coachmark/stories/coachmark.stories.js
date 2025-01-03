@@ -40,12 +40,31 @@ export default {
 			},
 			control: "boolean",
 		},
+		imageIsFixedHeight: {
+			name: "Image fixed height",
+			description: "By default this displays an image with a 4:3 aspect ratio.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+		},
+		image: {
+			name: "Image",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
 		hasActionMenu: true,
 		hasPagination: true,
 		hasImage: false,
+		imageIsFixedHeight: false,
 	},
 	parameters: {
 		actions: {
@@ -63,14 +82,16 @@ export default {
 		docs: {
 			story: {
 				height: "300px",
-			}
-		}
+			},
+		},
 	},
 };
 
 export const Default = CoachMarkGroup.bind({});
 Default.tags = ["!autodocs"];
-Default.args = {};
+Default.args = {
+	image: "example-card-landscape.png",
+};
 
 /**
  * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour.
@@ -107,6 +128,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };
