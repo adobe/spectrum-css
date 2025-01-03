@@ -14,7 +14,7 @@ export default {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
 	},
-	tags: ['foundation'],
+	tags: ['!dev'],
 };
 
 const ActionButton = (args, context) => html`
