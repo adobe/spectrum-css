@@ -1,9 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDragged } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { BreadcrumbGroup } from "./breadcrumb.test.js";
-import { Template } from "./template.js";
+import { BreadcrumbTitleHeadings, Template } from "./template";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
@@ -21,24 +20,77 @@ export default {
 	component: "Breadcrumbs",
 	argTypes: {
 		items: { table: { disable: true } },
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["m", "l"],
+			control: {
+				type: "select",
+				labels: {
+					m: "Medium",
+					l: "Large",
+				},
+			},
+		},
 		variant: {
-			name: "Variants",
+			name: "Variant",
 			type: { name: "string" },
 			defaultValue: "Default",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
-				defaultValue: { summary: "Default" },
 			},
-			options: ["default", "compact", "multiline"],
-			control: "select",
+			options: [undefined, "multiline"],
+			control: {
+				type: "select",
+				labels: {
+					undefined: "Default",
+					multiline: "Multiline",
+				},
+			},
 		},
-		isDragged,
+		isDragged: {
+			name: "Show dragged item",
+			description: "Breadcrumbs can have optional behavior to allow for drag and drop functionality. Setting this to true will style the second breadcrumb item as if something is currently being dragged on top of it.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean"
+		},
+		titleHeadingSize: {
+			name: "Breadcrumb title heading size",
+			description: "The breadcrumb title can be customized in the multiline variant using an additional element that uses the typography component's heading classes. The preferred heading sizes are small,  medium large, and extra-large. When no heading classes are used, the text will be sized the same as a large heading by default.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: {
+				type: "select",
+				labels: {
+					undefined: "Default",
+					s: "Small",
+					m: "Medium",
+					l: "Large",
+					xl: "Extra-large",
+				},
+			},
+			defaultValue: undefined,
+			options: [undefined, "s", "m", "l", "xl"],
+			if: { arg: "variant", eq: "multiline" },
+		}
 	},
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
 		isDragged: false,
-		variant: "default",
+		variant: undefined,
+		size: "m",
 	},
 	parameters: {
 		design: {
@@ -52,6 +104,8 @@ export default {
 
 /**
  * By default, breadcrumbs are displayed inline with the hierarchy shown in reading order.
+ * The medium size is used by default, and it should display the medium truncated menu action button.
+ * The separator UI icon displayed should be `Chevron100`.
  */
 export const Default = BreadcrumbGroup.bind({});
 Default.args = {
@@ -153,42 +207,44 @@ MultilineNestedRootVisible.parameters = {
 MultilineNestedRootVisible.storyName = "Multiline, nested (root visible)";
 
 /**
- * When needing to optimize for functional space, the compact option is useful for reducing the height of the breadcrumbs while still maintaining the proper user context.
+ * When using the large size, the truncated menu action button should also use the large size. The separator UI icon displayed should be `Chevron100`.
  */
-export const Compact = Template.bind({});
-Compact.args = {
+export const Large = Template.bind({});
+Large.args = {
 	...Default.args,
-	variant: "compact",
+	size: "l",
 };
-Compact.tags = ["!dev"];
-Compact.parameters = {
+Large.tags = ["!dev"];
+Large.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const CompactNested = Template.bind({});
-CompactNested.args = {
+export const LargeNested = Template.bind({});
+LargeNested.args = {
 	...DefaultNested.args,
-	variant: "compact",
+	size: "l",
 };
-CompactNested.tags = ["!dev"];
-CompactNested.parameters = {
+LargeNested.tags = ["!dev"];
+LargeNested.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-CompactNested.storyName = "Compact, nested";
+LargeNested.storyName = "Large, nested";
 
-export const CompactNestedRootVisible = Template.bind({});
-CompactNestedRootVisible.args = {
+export const LargeNestedRootVisible = Template.bind({});
+LargeNestedRootVisible.args = {
 	...DefaultNestedRootVisible.args,
-	variant: "compact",
+	size: "l",
 };
-CompactNestedRootVisible.tags = ["!dev"];
-CompactNestedRootVisible.parameters = {
+LargeNestedRootVisible.tags = ["!dev"];
+LargeNestedRootVisible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-CompactNestedRootVisible.storyName = "Compact, nested (root visible)";
+LargeNestedRootVisible.storyName = "Large, nested (root visible)";
 
 /**
  * Breadcrumbs can have optional behavior to allow for drag and drop functionality.
+ * When a breadcrumb item has something being dragged on top of it, the class `is-dragged` is added to it.
+ * This example adds that class to the second breadcrumb item.
  */
 export const Dragged = Template.bind({});
 Dragged.args = {
@@ -201,7 +257,8 @@ Dragged.parameters = {
 };
 
 /**
- * The example below has two disabled breadcrumb items. When disabling the text link, the `is-disabled` class gets added to `.spectrum-Breadcrumbs-itemLink`. When disabling the Action button, the `[disabled]` attribute is applied.
+ * The example below has two disabled breadcrumb items. When disabling the text link, the `is-disabled` class
+ * gets added to `.spectrum-Breadcrumbs-itemLink`. When disabling the Action button, the `[disabled]` attribute is applied.
  */
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -225,6 +282,23 @@ Disabled.args = {
 };
 Disabled.tags = ["!dev"];
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * For the multiline variant, the breadcrumb title can be customized using an additional element that uses the heading classes from
+ * the [typography component](?path=/docs/components-typography). The preferred heading sizes are `.spectrum-Heading--sizeS`,
+ * `.spectrum-Heading--sizeM`, `.spectrum-Heading--sizeL` (default), and `.spectrum-Heading--sizeXL`. If no heading element or classes are
+ * used, the text will be sized the same as a large heading by default.
+ */
+export const MultilineTitleSizes = BreadcrumbTitleHeadings.bind({});
+MultilineTitleSizes.args = {
+	...DefaultNested.args,
+	variant: "multiline",
+};
+MultilineTitleSizes.storyName = "Multiline breadcrumb title heading sizes";
+MultilineTitleSizes.tags= ["!dev"];
+MultilineTitleSizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
