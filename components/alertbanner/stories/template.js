@@ -1,5 +1,5 @@
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
-import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
+import { Template as CloseButton } from "../../close-button/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";

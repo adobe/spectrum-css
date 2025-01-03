@@ -8,7 +8,9 @@
     ".spectrum-Asset-folder",
     ".spectrum-Asset-folderBackground",
     ".spectrum-Asset-folderOutline",
-    ".spectrum-Asset-image"
+    ".spectrum-Asset-image",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy"
   ],
   "modifiers": [
     "--mod-asset-file-background-color",
@@ -31,6 +33,11 @@
     "--spectrum-animation-duration-100",
     "--spectrum-gray-200",
     "--spectrum-gray-25",
+<<<<<<< HEAD
+=======
+    "--spectrum-gray-300",
+    "--spectrum-gray-50",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     "--spectrum-gray-500"
   ],
   "system-theme": [

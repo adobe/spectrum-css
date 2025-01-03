@@ -3,18 +3,25 @@
   "selectors": [
     ".spectrum-DropZone",
     ".spectrum-DropZone-button",
+    ".spectrum-DropZone-button.is-hover",
     ".spectrum-DropZone-button:focus",
     ".spectrum-DropZone-button:hover",
     ".spectrum-DropZone-content",
     ".spectrum-DropZone.is-dragged",
     ".spectrum-DropZone.is-filled",
     ".spectrum-DropZone.is-filled.is-dragged",
+    ".spectrum-DropZone.is-focus-visible",
     ".spectrum-DropZone:focus-visible",
     ".spectrum-DropZone:lang(ja)",
     ".spectrum-DropZone:lang(ko)",
-    ".spectrum-DropZone:lang(zh)"
+    ".spectrum-DropZone:lang(zh)",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy"
   ],
   "modifiers": [
+    "--mod-actionbutton-edge-to-text",
+    "--mod-actionbutton-font-size",
+    "--mod-actionbutton-label-color",
     "--mod-drop-zone-background-color",
     "--mod-drop-zone-background-color-opacity",
     "--mod-drop-zone-background-color-opacity-filled",
@@ -55,6 +62,7 @@
     "--mod-drop-zone-illustration-color-hover",
     "--mod-drop-zone-illustration-to-heading",
     "--mod-drop-zone-padding",
+<<<<<<< HEAD:components/dropzone/metadata/metadata.json
     "--mod-drop-zone-width"
   ],
   "component": [
@@ -105,6 +113,9 @@
     "--mod-actionbutton-edge-to-text",
     "--mod-actionbutton-font-size",
     "--mod-actionbutton-label-color",
+=======
+    "--mod-drop-zone-width",
+>>>>>>> edd10946b (build: migrate from nx to workspaces):components/drop-zone/metadata/metadata.json
     "--mod-illustrated-message-content-maximum-width",
     "--mod-illustrated-message-description-color",
     "--mod-illustrated-message-description-font-family",
@@ -126,6 +137,52 @@
     "--mod-illustrated-message-title-line-height",
     "--mod-illustrated-message-title-to-heading"
   ],
+  "component": [
+    "--spectrum-drop-zone-background-color",
+    "--spectrum-drop-zone-background-color-opacity",
+    "--spectrum-drop-zone-background-color-opacity-filled",
+    "--spectrum-drop-zone-background-color-rgb",
+    "--spectrum-drop-zone-body-size",
+    "--spectrum-drop-zone-border-color",
+    "--spectrum-drop-zone-border-color-hover",
+    "--spectrum-drop-zone-border-width",
+    "--spectrum-drop-zone-cjk-title-size",
+    "--spectrum-drop-zone-content-background-color",
+    "--spectrum-drop-zone-content-maximum-width",
+    "--spectrum-drop-zone-illustration-color",
+    "--spectrum-drop-zone-title-size",
+    "--spectrum-drop-zone-width"
+  ],
+  "global": [
+    "--spectrum-accent-visual-color",
+    "--spectrum-body-color",
+    "--spectrum-body-line-height",
+    "--spectrum-body-sans-serif-font-style",
+    "--spectrum-body-sans-serif-font-weight",
+    "--spectrum-bold-font-weight",
+    "--spectrum-border-width-200",
+    "--spectrum-component-bottom-to-text-300",
+    "--spectrum-component-edge-to-text-300",
+    "--spectrum-component-height-300",
+    "--spectrum-component-top-to-text-300",
+    "--spectrum-corner-radius-100",
+    "--spectrum-default-font-style",
+    "--spectrum-font-size-300",
+    "--spectrum-gray-200",
+    "--spectrum-gray-300",
+    "--spectrum-heading-color",
+    "--spectrum-heading-line-height",
+    "--spectrum-heading-sans-serif-font-style",
+    "--spectrum-heading-sans-serif-font-weight",
+    "--spectrum-line-height-100",
+    "--spectrum-neutral-visual-color",
+    "--spectrum-sans-font-family-stack",
+    "--spectrum-spacing-400",
+    "--spectrum-spacing-75",
+    "--spectrum-white"
+  ],
+  "system-theme": ["--system-drop-zone-border-color"],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-drop-zone-border-color-hover",
     "--highcontrast-drop-zone-illustration-color",

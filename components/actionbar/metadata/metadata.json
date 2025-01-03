@@ -17,7 +17,9 @@
     ".spectrum-ActionBar.is-open",
     ".spectrum-ActionBar:lang(ja)",
     ".spectrum-ActionBar:lang(ko)",
-    ".spectrum-ActionBar:lang(zh)"
+    ".spectrum-ActionBar:lang(zh)",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy"
   ],
   "modifiers": [
     "--mod-actionbar-corner-radius",

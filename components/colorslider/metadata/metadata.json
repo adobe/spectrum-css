@@ -29,7 +29,8 @@
     "--mod-color-slider-minimum-length",
     "--mod-color-slider-vertical-control-track-width",
     "--mod-color-slider-vertical-height",
-    "--mod-color-slider-vertical-minimum-height"
+    "--mod-color-slider-vertical-minimum-height",
+    "--mod-colorhandle-hitarea-border-radius"
   ],
   "component": [
     "--spectrum-color-slider-border-color-default",
@@ -46,7 +47,7 @@
     "--spectrum-gray-900-rgb"
   ],
   "system-theme": [],
-  "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-color-slider-background-color-disabled",
     "--highcontrast-color-slider-border-color",

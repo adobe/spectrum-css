@@ -7,6 +7,8 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
+import { Template as FieldLabel } from "../../field-label/stories/template.js";
+import { Template as HelpText } from "../../help-text/stories/template.js";
 
 import "../index.css";
 

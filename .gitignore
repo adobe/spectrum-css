@@ -10,7 +10,6 @@ dist
 
 temp
 .npmrc*
-.nx
 .env
 .tmp
 npm-debug.log*
@@ -19,7 +18,6 @@ npm-debug.log*
 lerna-debug.log
 yarn-error.log
 package-lock.json
-.nx
 
 # Storybook build output
 .storybook/storybook-static

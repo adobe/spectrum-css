@@ -27,5 +27,10 @@ module.exports = ({
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
 		},
+		"postcss-licensing": {
+			filename: "COPYRIGHT",
+			cwd: __dirname,
+			skipIfEmpty: true,
+		},
 	},
 });

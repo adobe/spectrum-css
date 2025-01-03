@@ -1,10 +1,10 @@
 {
 	"name": "@spectrum-css/breadcrumb",
-	"version": "10.0.0-s2-foundations.17",
+	"version": "10.0.0-s2-foundations.16",
 	"description": "The Spectrum CSS breadcrumb component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/breadcrumb",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-breadcrumbs--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -29,13 +29,27 @@
 		"dist/*",
 		"*.md",
 		"package.json",
-		"stories/*",
-		"metadata/*"
+		"metadata/*",
+		"stories/*"
 	],
+	"scripts": {
+		"build": "yarn run component:build breadcrumb",
+		"build:full": "yarn report",
+		"clean": "rimraf dist && test -d dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0",
+		"compare": "yarn run component:compare breadcrumb",
+		"format": "run-p \"format:*\"",
+		"format:content": "prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern *.{md,mdx} **/*.{md,mdx}",
+		"format:scripts": "eslint --fix --cache --no-error-on-unmatched-pattern *.json stories/*.js",
+		"format:styles": "stylelint --fix --cache --allow-empty-input *.css **/*.css --ignore-pattern dist",
+		"lint": "run-p \"lint:*\"",
+		"lint:scripts": "eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives *.json stories/*.js",
+		"lint:styles": "stylelint --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables *.css **/*.css --ignore-pattern dist",
+		"report": "yarn run component:report breadcrumb"
+	},
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=7.0.0-s2-foundations.0",
-		"@spectrum-css/icon": ">=8.0.0-s2-foundations.0",
-		"@spectrum-css/tokens": ">=15.0.0-s2-foundations.0"
+		"@spectrum-css/actionbutton": ">=6",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actionbutton": {
@@ -46,15 +60,22 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "workspace:^",
-		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^"
+		"@spectrum-css/actionbutton": "7.0.0-s2-foundations.24",
+		"@spectrum-css/icon": "8.0.0-s2-foundations.19",
+		"@spectrum-css/tokens": "15.0.0-s2-foundations.31",
+		"eslint": "^8.57.0",
+		"npm-run-all2": "^7.0.2",
+		"prettier": "^3.4.2",
+		"stylelint": "^16.9.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"

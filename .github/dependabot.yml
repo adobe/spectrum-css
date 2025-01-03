@@ -41,10 +41,6 @@ updates:
               patterns:
                   - "@commitlint/*"
                   - "commitlint"
-          nx-ecosystem:
-              patterns:
-                  - "@nx/*"
-                  - "nx"
 
     - package-ecosystem: "github-actions"
       directory: "/"

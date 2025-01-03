@@ -8,8 +8,16 @@
     ".spectrum-Dial-controls:after",
     ".spectrum-Dial-controls:before",
     ".spectrum-Dial-handle",
+    ".spectrum-Dial-handle.is-active",
+    ".spectrum-Dial-handle.is-active:after",
     ".spectrum-Dial-handle.is-dragged",
     ".spectrum-Dial-handle.is-dragged:after",
+    ".spectrum-Dial-handle.is-focus-visible",
+    ".spectrum-Dial-handle.is-focus-visible:after",
+    ".spectrum-Dial-handle.is-focus-within",
+    ".spectrum-Dial-handle.is-focus-within:after",
+    ".spectrum-Dial-handle.is-hover",
+    ".spectrum-Dial-handle.is-hover:after",
     ".spectrum-Dial-handle:active",
     ".spectrum-Dial-handle:active:after",
     ".spectrum-Dial-handle:after",
@@ -35,6 +43,11 @@
     ".spectrum-Dial.is-disabled .spectrum-Dial-handle:before",
     ".spectrum-Dial.is-disabled .spectrum-Dial-labelContainer",
     ".spectrum-Dial.spectrum-Dial--small",
+<<<<<<< HEAD
+=======
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     ".u-isGrabbing",
     ".u-isGrabbing .spectrum-Dial .spectrum-Dial-label",
     ".u-isGrabbing .spectrum-Dial .spectrum-Dial-value"
@@ -108,6 +121,10 @@
   "global": [
     "--spectrum-border-width-200",
     "--spectrum-font-size-75",
+<<<<<<< HEAD
+=======
+    "--spectrum-gray-100",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     "--spectrum-gray-25",
     "--spectrum-gray-400",
     "--spectrum-gray-600",

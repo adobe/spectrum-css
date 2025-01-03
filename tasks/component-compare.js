@@ -1,10 +1,9 @@
-const { existsSync, statSync, readdirSync, mkdirSync } = require("fs");
+const { existsSync, statSync, mkdirSync } = require("fs");
 const { readFile, writeFile } = require("fs").promises;
 const { join, relative, dirname } = require("path");
 
 const fg = require("fast-glob");
 const tar = require("tar");
-const _ = require("lodash");
 
 const nunjucks = require("nunjucks");
 const env = new nunjucks.Environment();
@@ -22,10 +21,12 @@ const { default: builder } = require("./component-builder.js");
 
 require("colors");
 
-const pathing = {
-	root: join(__dirname, "../"),
-	components: join(__dirname, "../components"),
-};
+const {
+	dirs,
+	getAllComponentNames,
+} = require("./utilities.js");
+
+const pathing = {};
 
 const bytesToSize = function (bytes) {
 	if (bytes === 0) return "0";
@@ -48,7 +49,8 @@ env.addFilter("hasChange", (data) => {
 });
 
 const log = {
-	error: (err) => process.stderr.write(`${err}\n\n`),
+	error: (err) => process.stderr.write(`🚫   ${err}\n\n`),
+	warning: (err) => process.stderr.write(`⚠️   ${err}\n`),
 	write: (msg) => process.stdout.write(msg),
 	writeTable: (data, { min = 20, max = 30 } = {}) => {
 		// This utility function is used to print a table of data to the console
@@ -75,10 +77,7 @@ const cleanAndMkdir = (path, clean = true) => {
 	mkdirSync(isFile ? dirname(path) : path, { recursive: true });
 };
 
-const allComponents =
-	readdirSync(pathing.components, { withFileTypes: true })
-		?.filter((file) => file.isDirectory())
-		.map((file) => file.name) ?? [];
+const allComponents = getAllComponentNames();
 
 async function renderTemplate(
 	templateFile,
@@ -150,37 +149,57 @@ async function generateDiff({
 			...renderData,
 			html,
 		},
-		join(outputPath, `index.html`)
+		join(outputPath, "index.html")
 	);
 }
 
 async function processComponent(
-	component,
+	folderName,
 	{
 		cwd,
 		output = pathing.output,
 		cacheLocation = pathing.cache,
+		targetTag = "latest",
 	}
 ) {
-	if (!component) return Promise.reject("No component specified.");
+	if (!folderName) return Promise.reject("No component folder specified.");
 
-	// Build the component fresh
-	await builder({
-		componentName: component,
-		clean: true,
-	});
+	const packageName = `@spectrum-css/${folderName.replaceAll("-", "")}`;
 
-	cleanAndMkdir(join(output, "diffs", component));
-	cleanAndMkdir(join(pathing.latest, component));
+	let pkgPath = require.resolve(`${packageName}/package.json`);
 
-	const pkgPath = require.resolve(`@spectrum-css/${component}/package.json`) ?? join(cwd, component, "package.json");
-	const pkg = pkgPath && existsSync(pkgPath)
-		? require(pkgPath)
-		: { name: `@spectrum-css/${component}` };
-
+	// If no current working directory is provided, try to find it from the package.json
 	if (!cwd && pkgPath) {
 		cwd = dirname(pkgPath).split("/").slice(0, -1).join("/");
 	}
+	// If a current working directory is provided, but we weren't able to resolve the
+	// path using the package name, try to find it using the cwd
+	else if (!pkgPath && cwd) {
+		pkgPath = require.resolve(`${cwd}/package.json`);
+	}
+
+	// Get the package.json data for the component or fake it if it doesn't exist
+	const pkg = pkgPath && existsSync(pkgPath) ? require(pkgPath) : { name: packageName };
+
+	/* Force the build to be done in production mode */
+	const prevState = process.env.NODE_ENV;
+	process.env.NODE_ENV = "production";
+
+	// Build the component fresh
+	await builder({
+		folderName,
+		cwd,
+		clean: true,
+	});
+
+	/* Return to the original state when the build is complete */
+	process.env.NODE_ENV = prevState;
+
+	// Log a few extra newlines to separate the output
+	log.write("\n\n");
+
+	cleanAndMkdir(join(output, "diffs", folderName));
+	cleanAndMkdir(join(pathing.tag, folderName));
 
 	let tag;
 	let found = 0;
@@ -190,18 +209,19 @@ async function processComponent(
 	const warnings = [];
 
 	// Check if the component exists locally and has compiled output
-	if (existsSync(join(cwd, component))) {
+	if (existsSync(cwd)) {
 		found++;
 
 		// Note: component might exist locally but might not contain any compiled output
 		const files =
-			(await fg("**/*.css", { cwd: join(cwd, component, "dist") })) ?? [];
+			(await fg("**/*.css", { cwd: join(cwd, "dist") })) ?? [];
 		files.forEach((file) => filelist.add(file));
-	} else {
+	}
+	else {
 		warnings.push(
 			`${
-				`${relative(pathing.root, join(cwd, component))}`.yellow
-			} not found locally.\n`
+				`${relative(dirs.root, cwd)}`.yellow
+			} not found locally.`
 		);
 	}
 
@@ -213,19 +233,26 @@ async function processComponent(
 		const npmData =
 			(await npmFetch.json(pkg.name).catch((err) => {
 				// @todo: do we need to report on the error messages returned?
-				warnings.push(err ?? `Failed to fetch ${printPkgName} from npm.\n`);
+				warnings.push(err ?? `Failed to fetch ${printPkgName.red} from npm.`);
 			})) ?? {};
 
-		// If the component exists on npm, fetch the latest release data
-		// @todo what is the fallback if there isn't a latest tag?
-		if (npmData["dist-tags"]?.latest) {
+		// If the component exists on npm, fetch the targetTag release data
+		// @todo what is the fallback if there isn't a targetTag tag?
+		if (npmData["dist-tags"]?.[targetTag]) {
+			tag = npmData["dist-tags"]?.[targetTag];
+		}
+		else {
+			warnings.push(
+				`No release found for the tag ${targetTag.red}.\n    Falling back to compare to ${"latest".yellow} release instead.`
+			);
+
 			tag = npmData["dist-tags"]?.latest;
 		}
 
 		if (tag) {
 			// Check locally to see if we have already fetched the tarball
 			// for this tag; if not, fetch it and extract it
-			const tarballPath = join(cacheLocation, `${component}-${tag}.tgz`);
+			const tarballPath = join(cacheLocation, `${folderName}-${tag}.tgz`);
 			const tarballUrl = npmData.versions?.[tag]?.dist?.tarball;
 			if (!existsSync(tarballPath) && tarballUrl) {
 				// Here is where we check the cached packages folder for the tarball
@@ -236,7 +263,8 @@ async function processComponent(
 					(tarballFile.status && tarballFile.status !== 200)
 				) {
 					log.error(`Failed to fetch release content for ${pkg.name}`);
-				} else {
+				}
+				else {
 					await writeFile(tarballPath, await tarballFile.buffer(), {
 						encoding: "utf-8",
 					});
@@ -248,7 +276,7 @@ async function processComponent(
 				await tar
 					.extract({
 						file: tarballPath,
-						cwd: join(pathing.latest, component),
+						cwd: join(pathing.tag, folderName),
 						// Only unpack the dist folder
 						filter: (path) => path.startsWith("package/dist"),
 						strip: 2,
@@ -256,10 +284,10 @@ async function processComponent(
 					.catch((err) => warnings.push(err));
 			}
 
-			if (existsSync(join(pathing.latest, component))) {
+			if (existsSync(join(pathing.tag, folderName))) {
 				const files =
 					(await fg("**/*.css", {
-						cwd: join(pathing.latest, component),
+						cwd: join(pathing.tag, folderName),
 					})) ?? [];
 
 				if (files.length > 0) found++;
@@ -270,13 +298,13 @@ async function processComponent(
 
 	if (found < 1) {
 		return Promise.reject(
-			`${component.cyan} does not exist. Try checking the package's name and spelling.`
+			`${packageName.cyan} does not exist. Try checking the package's name and spelling.`
 		);
 	}
 
 	if (filelist.size === 0) {
 		return Promise.reject(
-			`No compiled assets found associated with ${component.cyan}.`
+			`No compiled assets found associated with ${packageName.cyan}.`
 		);
 	}
 
@@ -285,8 +313,8 @@ async function processComponent(
 		[...filelist].map(async (filename) =>
 			processFile(
 				filename,
-				join(cwd, component, "dist"),
-				join(pathing.latest, component)
+				join(cwd, "dist"),
+				join(pathing.tag, folderName)
 			)
 		)
 	).then((results) => {
@@ -296,7 +324,7 @@ async function processComponent(
 		}, new Map());
 
 		return {
-			component,
+			folderName,
 			warnings,
 			tag,
 			pkg,
@@ -306,7 +334,6 @@ async function processComponent(
 }
 
 async function processFile(filename, localPath, comparePath) {
-	const componentName = localPath.split("/")[localPath.split("/").length - 2];
 	const data = {};
 
 	// Look for the file locally
@@ -348,19 +375,19 @@ async function processFile(filename, localPath, comparePath) {
 async function main(
 	components,
 	output,
+	tag = "latest",
 	{ skipCache = false } = {}
 ) {
 	if (!components || components.length === 0) {
 		components = allComponents;
 	}
 
-
-	// Strip out utilities
-	components = components.filter(c => !["actionmenu", "commons"].includes(c));
+	// Strip out utilities and components with styles
+	components = components.filter(c => !["action-menu", "commons"].includes(c));
 
 	pathing.output = output;
 	pathing.cache = join(output, "packages");
-	pathing.latest = join(output, "latest");
+	pathing.tag = join(output, "tag");
 
 	/** Setup the folder structure */
 	cleanAndMkdir(pathing.output);
@@ -369,21 +396,23 @@ async function main(
 	// unless we want to re-fetch the tarballs
 	cleanAndMkdir(pathing.cache, skipCache);
 
-	cleanAndMkdir(pathing.latest);
+	cleanAndMkdir(pathing.tag);
 
 	/**
 	 * Each component will report on it's file structure locally when compared
-	 * against it's latest tag on npm; then a console report will be logged and
+	 * against the tag on npm; then a console report will be logged and
 	 * a visual diff generated for each file that has changed.
 	 */
 	const results = await Promise.all(
-		components.map(async (component) => {
-			return processComponent(component, {
+		components.map(async (folderName) => {
+			return processComponent(folderName, {
+				cwd: join(dirs.components, folderName),
 				output: pathing.output,
 				cacheLocation: pathing.cache,
+				targetTag: tag,
 			}).catch((err) =>
 				Promise.resolve({
-					component,
+					folderName,
 					warnings: [err],
 				})
 			);
@@ -402,7 +431,7 @@ async function main(
 		if (results && results.some((r) => r.warnings?.length > 0)) {
 			results.forEach((r) => {
 				if (r.warnings?.length > 0) {
-					r.warnings.forEach((warning) => log.error(warning));
+					r.warnings.forEach((warning) => log.warning(warning));
 				}
 			});
 		}
@@ -413,7 +442,7 @@ async function main(
 
 	let hasAnyChange = false;
 	for (const {
-		component,
+		folderName,
 		warnings = [],
 		tag,
 		pkg = {},
@@ -422,26 +451,30 @@ async function main(
 		let hasComponentChange = false;
 		const files = [...fileMap.keys()];
 
+		const component = folderName.replaceAll("-", "");
+		const packageName = `@spectrum-css/${component}`;
+
 		if (!files || files.length === 0) {
 			log.error(
-				`No compiled assets found associated with ${
-					`@spectrum-css/${component}`.yellow
-				}.`
+				`No compiled assets found associated with ${packageName.yellow}.`
 			);
 			continue;
 		}
 
-		componentData.set(component, {
+		componentData.set(folderName, {
 			pkg,
 			tag,
 			files: fileMap,
 		});
 
 		// This is our report header to indicate the start of a new component's data
-		log.write(`\n${_.pad(` ${component} `, 20, "-").cyan}\n`);
+		log.write(`[compare]  ${packageName.cyan}\n`);
+		// A dividing line to separate the heading from the logs
+		log.write(`${"".padStart(60, "-")}\n`);
 
 		if (warnings.length > 0) {
-			warnings.forEach((warning) => log.write(`${warning}\n`));
+			warnings.forEach((warning) => log.warning(warning));
+			log.write(`${"".padStart(60, "-")}\n`);
 		}
 
 		const maxColumnWidth = files.reduce((max, file) => {
@@ -456,9 +489,9 @@ async function main(
 			const { local, npm } = fileMap.get(file);
 
 			const indicatorColor = (localSize, tagSize = 0) => {
-				if (localSize < tagSize) return 'green';
-				if (localSize > tagSize) return 'red';
-				else return 'gray';
+				if (localSize < tagSize) return "green";
+				if (localSize > tagSize) return "red";
+				else return "gray";
 			};
 
 			const localSize = local?.size && `${bytesToSize(local.size)}`[indicatorColor(local.size, npm?.size)];
@@ -466,8 +499,8 @@ async function main(
 
 			log.writeTable([
 				`${file}`.green,
-				localSize ?? `** removed **`.red,
-				tagSize ?? `** new **`.yellow,
+				localSize ?? "** removed **".red,
+				tagSize ?? "** new **".yellow,
 			], { min: 25, max: maxColumnWidth + 15 });
 
 			if (local?.size && npm?.size && local.size !== npm.size) {
@@ -478,6 +511,7 @@ async function main(
 		if (hasComponentChange) hasAnyChange = true;
 	}
 
+	log.write(`${"".padStart(60, "-")}\n`);
 	if (!hasAnyChange) {
 		log.write(`\n${"✓".green}  No changes detected.\n`);
 		return Promise.resolve();
@@ -485,13 +519,13 @@ async function main(
 
 	await Promise.all(
 		[...componentData.entries()]
-			.map(async ([component, { tag, files, }], _, data) => {
+			.map(async ([folderName, { tag, files, }], _, data) => {
 				return generateDiff({
 					filepaths: [...files.keys()],
-					outputPath: join(pathing.output, "diffs", component),
+					outputPath: join(pathing.output, "diffs", folderName),
 					fileMap: files,
 					data,
-					component,
+					component: folderName,
 					tag
 				})
 					.then(() => true);
@@ -518,11 +552,12 @@ async function main(
 
 let {
 	_: components,
-	output = join(pathing.root, ".diff-output"),
+	output = join(dirs.root, ".diff-output"),
+	tag = "latest",
 	cache = true,
 	// @todo allow to run against local main or published versions
 } = yargs(hideBin(process.argv)).argv;
 
-main(components, output, { skipCache: !cache }).then((code) => {
+main(components, output, tag, { skipCache: !cache }).then((code) => {
 	process.exit(code);
 });

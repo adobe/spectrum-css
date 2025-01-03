@@ -1,5 +1,5 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
+import { Template as IllustratedMessage } from "../../illustrated-message/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
