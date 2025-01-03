@@ -1,5 +1,12 @@
 # Change Log
 
+## 11.0.0-s2-foundations.24
+
+### Patch Changes
+
+- Updated dependencies [[`7fa37a7`](https://github.com/adobe/spectrum-css/commit/7fa37a7503e791e6bc8c62a3ea15600a56e23127)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.19
+
 ## 11.0.0-s2-foundations.23
 
 ### Patch Changes
