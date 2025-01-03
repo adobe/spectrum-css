@@ -31,5 +31,14 @@
     "custom properties",
     "postcss",
     "postcss-plugin"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "plugins/postcss-add-theming-layer"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
 }

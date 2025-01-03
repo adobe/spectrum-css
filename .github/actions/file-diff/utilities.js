@@ -165,7 +165,7 @@ exports.fetchFilesAndSizes = async function (rootPath, patterns = [], { core }) 
         return new Map();
     }
 
-    core.info(`Found ${files.length} files matching the glob pattern ${patterns.join(", ")}.`);
+    core.info(`From ${rootPath}, found ${files.length} files matching the glob pattern ${patterns.join(", ")}.`);
 
     // Fetch the files and their sizes, creates an array of arrays to be used in the table
     return new Map(

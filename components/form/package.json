@@ -24,24 +24,24 @@
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"stories/*",
-		"metadata/*"
-	],
 	"peerDependencies": {
 		"@spectrum-css/tokens": ">=15"
 	},
 	"devDependencies": {
-		"@spectrum-css/tokens": "workspace:^"
+		"@spectrum-css/tokens": "15.2.0",
+		"eslint": "^8.57.0",
+		"npm-run-all2": "*",
+		"prettier": "^3.4.2",
+		"stylelint": "^16.9.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"

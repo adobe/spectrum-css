@@ -4,7 +4,7 @@
 	"description": "The Spectrum CSS popover component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/popover",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-popover--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -24,13 +24,6 @@
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"stories/*",
-		"metadata/*"
-	],
 	"peerDependencies": {
 		"@spectrum-css/alertdialog": ">=2",
 		"@spectrum-css/dialog": ">=10",
@@ -47,18 +40,25 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/alertdialog": "workspace:^",
+		"@spectrum-css/alertdialog": "3.0.1",
 		"@spectrum-css/commons": "workspace:^",
-		"@spectrum-css/dialog": "workspace:^",
-		"@spectrum-css/divider": "workspace:^",
-		"@spectrum-css/menu": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^"
+		"@spectrum-css/dialog": "11.0.1",
+		"@spectrum-css/divider": "4.0.1",
+		"@spectrum-css/menu": "8.0.1",
+		"@spectrum-css/tokens": "15.2.0",
+		"eslint": "^8.57.0",
+		"npm-run-all2": "^7.0.2",
+		"prettier": "^3.4.2",
+		"stylelint": "^16.9.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"
