@@ -5,9 +5,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Link",

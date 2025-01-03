@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Pagination {
 	--spectrum-pagination-counter-color: var(--mod-pagination-counter-color, var(--spectrum-neutral-subdued-content-color-default));
 	--spectrum-pagination-counter-font-size: var(--mod-pagination-counter-font-size, var(--spectrum-font-size-100));
