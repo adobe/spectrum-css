@@ -3,7 +3,6 @@
   "selectors": [
     ".spectrum-ColorSlider",
     ".spectrum-ColorSlider--vertical",
-    ".spectrum-ColorSlider--vertical .spectrum-ColorSlider-handle",
     ".spectrum-ColorSlider-checkerboard",
     ".spectrum-ColorSlider-checkerboard:before",
     ".spectrum-ColorSlider-gradient",
@@ -37,13 +36,15 @@
     "--spectrum-color-slider-border-opacity",
     "--spectrum-color-slider-border-rounding",
     "--spectrum-color-slider-border-width",
+    "--spectrum-color-slider-control-track-width",
     "--spectrum-color-slider-length",
-    "--spectrum-color-slider-minimum-length"
+    "--spectrum-color-slider-minimum-length",
+    "--spectrum-colorslider-fill-color-disabled"
   ],
   "global": [
     "--spectrum-color-control-track-width",
     "--spectrum-disabled-background-color",
-    "--spectrum-gray-900-rgb"
+    "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
   "high-contrast": [
