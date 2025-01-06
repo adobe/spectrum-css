@@ -5,6 +5,7 @@
     ".spectrum-ColorHandle-inner",
     ".spectrum-ColorHandle.is-disabled",
     ".spectrum-ColorHandle.is-disabled .spectrum-ColorHandle-inner",
+    ".spectrum-ColorHandle.is-focus-visible",
     ".spectrum-ColorHandle.is-focused",
     ".spectrum-ColorHandle:after",
     ".spectrum-ColorHandle:focus-visible"
@@ -23,7 +24,8 @@
     "--mod-colorhandle-inner-border-width",
     "--mod-colorhandle-outer-border-color",
     "--mod-colorhandle-outer-border-width",
-    "--mod-colorhandle-size"
+    "--mod-colorhandle-size",
+    "--mod-opacity-checkerboard-position"
   ],
   "component": [
     "--spectrum-color-handle-border-width",
@@ -47,7 +49,7 @@
     "--spectrum-white"
   ],
   "system-theme": [],
-  "passthroughs": ["--mod-opacity-checkerboard-position"],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-colorhandle-border-color-disabled",
     "--highcontrast-colorhandle-fill-color-disabled"

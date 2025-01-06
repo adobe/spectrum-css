@@ -9,7 +9,9 @@
     ".spectrum-AlertBanner-end",
     ".spectrum-AlertBanner-icon",
     ".spectrum-AlertBanner-text",
-    ".spectrum-AlertBanner.is-open"
+    ".spectrum-AlertBanner.is-open",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy"
   ],
   "modifiers": [
     "--mod-alert-banner-bottom-text",
@@ -31,7 +33,10 @@
     "--mod-alert-banner-text-to-button-vertical",
     "--mod-alert-banner-text-to-divider",
     "--mod-alert-banner-top-icon",
-    "--mod-alert-banner-top-text"
+    "--mod-alert-banner-top-text",
+    "--mod-closebutton-align-self",
+    "--mod-closebutton-margin-inline",
+    "--mod-closebutton-margin-top"
   ],
   "component": [
     "--spectrum-alert-banner-bottom-text",
@@ -76,9 +81,6 @@
     "--mod-button-margin-block",
     "--mod-button-margin-left",
     "--mod-button-margin-right",
-    "--mod-closebutton-align-self",
-    "--mod-closebutton-margin-inline",
-    "--mod-closebutton-margin-top",
     "--mod-divider-vertical-align",
     "--mod-divider-vertical-height",
     "--mod-divider-vertical-margin"

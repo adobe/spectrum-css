@@ -25,7 +25,21 @@
 	},
 	"module": "main.js",
 	"scripts": {
-		"build": "cross-env NODE_ENV=development storybook build --config-dir . --output-dir ./storybook-static"
+		"build": "cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir . --output-dir ./storybook-static",
+		"build:docs": "cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir . --output-dir ../dist",
+		"build:ci": "cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir .",
+		"clean": "rimraf ./storybook-static && test -d ./storybook-static && echo \"Error: ./storybook-static directory could not be removed\" && exit 1 || exit 0",
+		"clean:docs": "rimraf ../dist && test -d ../dist && echo \"Error: ../dist directory could not be removed\" && exit 1 || exit 0",
+		"format": "npm-run-all --parallel format:*",
+		"format:styles": "stylelint --cache --allow-empty-input --fix assets/*.css --ignore-pattern dist",
+		"format:scripts": "eslint --fix --cache --no-error-on-unmatched-pattern *.{js,json} **/*.js --ignore-pattern \"!.storybook/\"",
+		"format:content": "prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern *.{md,mdx} **/*.{md,mdx}",
+		"lint": "npm-run-all --parallel lint:*",
+		"lint:styles": "stylelint --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables assets/*.css --ignore-pattern dist",
+		"lint:scripts": "eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives *.{js,json} **/*.js --ignore-pattern \"!.storybook/\" || exit 0",
+		"start": "cross-env NODE_OPTIONS=\"--no-warnings\" WATCH_MODE=true storybook dev --port 8080 --config-dir .",
+		"test": "chromatic --only-changed --build-script-name build --junit-report",
+		"test:scope": "chromatic --build-script-name build --junit-report --only-story-names"
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
@@ -70,5 +84,24 @@
 		"rollup-plugin-postcss-lit": "^2.1.0",
 		"storybook": "^8.4.7",
 		"vite": "^5.4.11"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": ".storybook"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
+	],
+	"files": [
+		"*.md",
+		"package.json"
+	]
 }

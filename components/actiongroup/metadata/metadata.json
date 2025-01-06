@@ -3,6 +3,7 @@
   "selectors": [
     ".spectrum-ActionGroup",
     ".spectrum-ActionGroup .spectrum-ActionGroup-item",
+    ".spectrum-ActionGroup .spectrum-ActionGroup-item.is-focus-visible",
     ".spectrum-ActionGroup .spectrum-ActionGroup-item:focus-visible",
     ".spectrum-ActionGroup--compact",
     ".spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet)",
@@ -14,6 +15,8 @@
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item .spectrum-ActionButton-label",
+    ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item.is-focus-visible",
+    ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item.is-hover",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item.is-selected",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:focus-visible",
@@ -26,9 +29,12 @@
     ".spectrum-ActionGroup--sizeXL",
     ".spectrum-ActionGroup--sizeXS",
     ".spectrum-ActionGroup--vertical",
-    ".spectrum-ActionGroup:not(.spectrum-ActionGroup--vertical, .spectrum-ActionGroup--compact) .spectrum-ActionGroup-item"
+    ".spectrum-ActionGroup:not(.spectrum-ActionGroup--vertical, .spectrum-ActionGroup--compact) .spectrum-ActionGroup-item",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy"
   ],
   "modifiers": [
+    "--mod-actionbutton-focus-indicator-border-radius",
     "--mod-actiongroup-border-radius",
     "--mod-actiongroup-border-radius-reset",
     "--mod-actiongroup-button-spacing-reset",
@@ -51,6 +57,7 @@
   "global": [
     "--spectrum-corner-radius-100",
     "--spectrum-spacing-100",
+    "--spectrum-spacing-50",
     "--spectrum-spacing-75"
   ],
   "system-theme": [
@@ -58,6 +65,6 @@
     "--system-action-group-horizontal-spacing-compact",
     "--system-action-group-vertical-spacing-compact"
   ],
-  "passthroughs": ["--mod-actionbutton-focus-indicator-border-radius"],
+  "passthroughs": [],
   "high-contrast": []
 }

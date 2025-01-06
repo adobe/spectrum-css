@@ -1,4 +1,4 @@
-import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
+import { Template as ButtonGroup } from "../../button-group/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";

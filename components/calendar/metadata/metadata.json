@@ -5,6 +5,7 @@
     ".spectrum-Calendar--padded",
     ".spectrum-Calendar-body",
     ".spectrum-Calendar-date",
+    ".spectrum-Calendar-date.is-active",
     ".spectrum-Calendar-date.is-disabled",
     ".spectrum-Calendar-date.is-disabled.is-selected",
     ".spectrum-Calendar-date.is-focused",
@@ -12,9 +13,13 @@
     ".spectrum-Calendar-date.is-focused.is-selected",
     ".spectrum-Calendar-date.is-focused.is-selected:not(.is-range-selection)",
     ".spectrum-Calendar-date.is-focused:not(.is-range-selection)",
+    ".spectrum-Calendar-date.is-focused:not(.is-range-selection).is-active",
     ".spectrum-Calendar-date.is-focused:not(.is-range-selection):active",
+    ".spectrum-Calendar-date.is-hover",
+    ".spectrum-Calendar-date.is-hover:not(.is-selection-end, .is-selection-start)",
     ".spectrum-Calendar-date.is-outsideMonth",
     ".spectrum-Calendar-date.is-range-selection",
+    ".spectrum-Calendar-date.is-range-selection.is-hover",
     ".spectrum-Calendar-date.is-range-selection.is-range-end",
     ".spectrum-Calendar-date.is-range-selection.is-range-end:after",
     ".spectrum-Calendar-date.is-range-selection.is-range-end:before",
@@ -33,6 +38,10 @@
     ".spectrum-Calendar-date.is-range-selection.is-selection-start:before",
     ".spectrum-Calendar-date.is-range-selection:hover",
     ".spectrum-Calendar-date.is-selected",
+<<<<<<< HEAD
+=======
+    ".spectrum-Calendar-date.is-selected.is-hover:not(.is-selection-end, .is-selection-start)",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     ".spectrum-Calendar-date.is-selected:hover:not(.is-selection-end, .is-selection-start)",
     ".spectrum-Calendar-date.is-selected:not(.is-range-selection)",
     ".spectrum-Calendar-date.is-today",
@@ -55,9 +64,14 @@
     ".spectrum-Calendar-tableCell:focus",
     ".spectrum-Calendar-title",
     ".spectrum-Calendar:dir(rtl)",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy",
     "[dir=\"rtl\"] .spectrum-Calendar"
   ],
   "modifiers": [
+    "--mod-actionbutton-content-color-default",
+    "--mod-actionbutton-edge-to-text",
+    "--mod-actionbutton-min-width",
     "--mod-calendar-border-radius-reset",
     "--mod-calendar-border-width-reset",
     "--mod-calendar-button-icon-color",
@@ -167,6 +181,10 @@
     "--spectrum-font-size-300",
     "--spectrum-font-size-50",
     "--spectrum-gray-100-rgb",
+<<<<<<< HEAD
+=======
+    "--spectrum-gray-200-rgb",
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
     "--spectrum-gray-800",
     "--spectrum-logical-rotation",
     "--spectrum-neutral-content-color-default",
@@ -175,6 +193,7 @@
     "--spectrum-neutral-content-color-key-focus",
     "--spectrum-neutral-subdued-content-color-default",
     "--spectrum-regular-font-weight"
+<<<<<<< HEAD
   ],
   "system-theme": ["--system-calendar-day-background-color-selected-disabled"],
   "passthroughs": [
@@ -182,6 +201,11 @@
     "--mod-actionbutton-edge-to-text",
     "--mod-actionbutton-min-width"
   ],
+=======
+  ],
+  "system-theme": ["--system-calendar-day-background-color-selected-disabled"],
+  "passthroughs": [],
+>>>>>>> edd10946b (build: migrate from nx to workspaces)
   "high-contrast": [
     "--highcontrast-calendar-day-background-cap-selected",
     "--highcontrast-calendar-day-background-down",

@@ -1,9 +1,9 @@
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { Template as OpacityCheckerboard } from "../../opacity-checkerboard/stories/template.js";
 
 import "../index.css";
 

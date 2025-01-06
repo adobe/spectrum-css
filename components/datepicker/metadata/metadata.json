@@ -6,6 +6,10 @@
     ".spectrum-DatePicker--quiet .spectrum-DatePicker-button",
     ".spectrum-DatePicker--quiet .spectrum-DatePicker-button:not(.is-open)",
     ".spectrum-DatePicker--quiet .spectrum-DatePicker-button:not(:disabled, .is-open)",
+<<<<<<< HEAD:components/datepicker/metadata/metadata.json
+=======
+    ".spectrum-DatePicker--quiet.is-hover:not(.is-focused, .is-keyboardFocused, .is-disabled, .is-invalid)",
+>>>>>>> edd10946b (build: migrate from nx to workspaces):components/date-picker/metadata/metadata.json
     ".spectrum-DatePicker--quiet.is-invalid",
     ".spectrum-DatePicker--quiet.is-invalid .spectrum-DatePicker-input:not(.spectrum-DatePicker-startField)",
     ".spectrum-DatePicker--quiet:hover:not(.is-focused, .is-keyboardFocused, .is-disabled, .is-invalid)",
@@ -33,7 +37,13 @@
     ".spectrum-DatePicker.is-invalid",
     ".spectrum-DatePicker.is-invalid:not(.spectrum-DatePicker--quiet, .is-disabled)",
     ".spectrum-DatePicker.spectrum-DatePicker--quiet.is-invalid",
+<<<<<<< HEAD:components/datepicker/metadata/metadata.json
     ".spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled)"
+=======
+    ".spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled)",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy"
+>>>>>>> edd10946b (build: migrate from nx to workspaces):components/date-picker/metadata/metadata.json
   ],
   "modifiers": [
     "--mod-datepicker-border-color-disabled",
@@ -68,7 +78,9 @@
     "--mod-datepicker-range-dash-margin-left",
     "--mod-datepicker-range-dash-padding-top",
     "--mod-datepicker-range-input-width-first",
-    "--mod-datepicker-range-input-width-quiet-first"
+    "--mod-datepicker-range-input-width-quiet-first",
+    "--mod-textfield-icon-spacing-inline-end-invalid",
+    "--mod-textfield-icon-spacing-inline-end-quiet-invalid"
   ],
   "component": [
     "--spectrum-datepicker-border-color-disabled",
@@ -144,9 +156,13 @@
     "--mod-picker-button-background-color",
     "--mod-picker-button-background-color-hover-disabled",
     "--mod-picker-button-border-color",
+<<<<<<< HEAD:components/datepicker/metadata/metadata.json
     "--mod-picker-button-border-color-disabled",
     "--mod-textfield-icon-spacing-inline-end-invalid",
     "--mod-textfield-icon-spacing-inline-end-quiet-invalid"
+=======
+    "--mod-picker-button-border-color-disabled"
+>>>>>>> edd10946b (build: migrate from nx to workspaces):components/date-picker/metadata/metadata.json
   ],
   "high-contrast": [
     "--highcontrast-datepicker-dash-color",

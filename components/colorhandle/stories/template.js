@@ -1,8 +1,8 @@
-import { Template as ColorLoupe } from "@spectrum-css/colorloupe/stories/template.js";
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { Template as ColorLoupe } from "../../color-loupe/stories/template.js";
+import { Template as OpacityCheckerboard } from "../../opacity-checkerboard/stories/template.js";
 
 import "../index.css";
 

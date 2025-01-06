@@ -15,6 +15,8 @@
     ".spectrum-ColorWheel.is-disabled",
     ".spectrum-ColorWheel.is-dragged",
     ".spectrum-ColorWheel.is-focused",
+    ".spectrum.spectrum--express",
+    ".spectrum.spectrum--legacy",
     "[dir=\"rtl\"] .spectrum-ColorWheel-ColorArea-handle"
   ],
   "modifiers": [
@@ -48,6 +50,10 @@
     "--spectrum-border-width-100",
     "--spectrum-color-control-track-width",
     "--spectrum-disabled-background-color",
+<<<<<<< HEAD:components/colorwheel/metadata/metadata.json
+=======
+    "--spectrum-transparent-black-200",
+>>>>>>> edd10946b (build: migrate from nx to workspaces):components/color-wheel/metadata/metadata.json
     "--spectrum-transparent-black-300"
   ],
   "system-theme": ["--system-color-wheel-border-color"],
