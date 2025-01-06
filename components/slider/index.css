@@ -404,6 +404,7 @@
 .spectrum-Slider-labelContainer {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	position: relative;
 	inline-size: auto;
 
@@ -423,7 +424,6 @@
 
 .spectrum-Slider-label {
 	padding-inline-start: 0;
-	flex-grow: 1;
 	font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
 }
 
