@@ -49,6 +49,14 @@
 	--spectrum-combobox-font-style: var(--spectrum-default-font-style);
 	--spectrum-combobox-line-height: var(--spectrum-line-height-100);
 
+	--spectrum-combobox-background-color-disabled: var(--spectrum-gray-25);
+
+	--spectrum-combobox-border-color-default: var(--spectrum-gray-500);
+	--spectrum-combobox-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-combobox-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-combobox-border-color-focus-hover: var(--spectrum-gray-900);
+	--spectrum-combobox-border-color-key-focus: var(--spectrum-gray-800);
+
 	--spectrum-combobox-border-color-invalid-default: var(--spectrum-negative-border-color-default);
 	--spectrum-combobox-border-color-invalid-hover: var(--spectrum-negative-border-color-hover);
 	--spectrum-combobox-border-color-invalid-focus: var(--spectrum-negative-border-color-focus);
