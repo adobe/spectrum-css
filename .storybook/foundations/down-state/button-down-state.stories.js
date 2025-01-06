@@ -13,7 +13,7 @@ export default {
 			handles: ["click .spectrum-Button"],
 		},
 	},
-	tags: ["foundation"],
+	tags: ["!dev"],
 };
 
 export const ButtonDownState = Template.bind({});

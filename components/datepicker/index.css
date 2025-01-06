@@ -16,6 +16,7 @@
 	--spectrum-datepicker-border-radius-quiet: var(--mod-datepicker-border-radius-quiet, 0);
 	--spectrum-datepicker-border-width: var(--spectrum-border-width-100);
 	--spectrum-datepicker-min-width: var(--mod-datepicker-min-width, var(--spectrum-field-width));
+	--spectrum-datepicker-initial-height: var(--spectrum-component-height-100);
 	--spectrum-datepicker-icon-size: var(--spectrum-workflow-icon-size-100);
 
 	/* button */
