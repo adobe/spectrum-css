@@ -20,6 +20,8 @@
 
 	/* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
 	--spectrum-assetcard-asset-size: 224px;
+	--spectrum-assetcard-background-color: var(--spectrum-gray-75);
+	--spectrum-assetcard-overlay-background-color: rgba(27 127 245 / 10%);
 	--spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-assetcard-asset-container-border-size: 1px;
 	--spectrum-assetcard-header-margin-block-start: var(--spectrum-spacing-300);
@@ -40,6 +42,8 @@
 	--spectrum-assetcard-selectionindicator-color: var(--spectrum-white);
 	--spectrum-assetcard-selectionindicator-font-weight: var(--spectrum-bold-font-weight);
 	--spectrum-assetcard-selectionindicator-font-size: var(--spectrum-font-size-400);
+	--spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-75-rgb), 0.9);
+	--spectrum-assetcard-selectionindicator-box-shadow-color: var(--spectrum-transparent-black-300);
 
 	/* title */
 	--spectrum-assetcard-title-text-color: var(--spectrum-gray-900);
