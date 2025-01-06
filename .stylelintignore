@@ -8,5 +8,7 @@ dist
 *-generated.css
 
 node_modules/**/*.css
-plugins/*/expected/*
-plugins/*/fixtures/*
+
+# Test files
+plugins/*/expected/*.css
+plugins/*/fixtures/*.css
