@@ -3860,7 +3860,7 @@ __metadata:
     "@storybook/theming": "npm:^8.4.7"
     "@storybook/web-components-vite": "npm:^8.4.7"
     "@whitespace/storybook-addon-html": "npm:^6.1.1"
-    chromatic: "npm:^11.20.2"
+    chromatic: "npm:^11.22.0"
     lit: "npm:^3.2.1"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
@@ -4305,7 +4305,7 @@ __metadata:
     "@actions/github": "npm:^6.0.0"
     "@actions/glob": "npm:^0.5.0"
     diff: "npm:^7.0.0"
-    diff2html: "npm:^3.4.48"
+    diff2html: "npm:^3.4.51"
   languageName: unknown
   linkType: soft
 
@@ -6572,24 +6572,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001640":
-  version: 1.0.30001643
-  resolution: "caniuse-lite@npm:1.0.30001643"
-  checksum: 10c0/7fcd0fd180bbe6764311ad57b0d39c23afdcc3bb1d8f804e7a76752c62a85b1bb7cf74b672d9da2f0afe7ad75336ff811a6fe279eb2a54bc04c272b6b62e57f1
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001646":
-  version: 1.0.30001660
-  resolution: "caniuse-lite@npm:1.0.30001660"
-  checksum: 10c0/d28900b56c597176d515c3175ca75c454f2d30cb2c09a44d7bdb009bb0c4d8a2557905adb77642889bbe9feb85fbfe9d974c8b8e53521fb4b50ee16ab246104e
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001669":
-  version: 1.0.30001673
-  resolution: "caniuse-lite@npm:1.0.30001673"
-  checksum: 10c0/0e73a2b0f06973052e563dec9990a6fd440d510fa2ff54fa50310e736abb86e96c96b43c10e609fc22f2109f98fe76428b70441baf6b1a49f69ccf50c1879f6b
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001640, caniuse-lite@npm:^1.0.30001646, caniuse-lite@npm:^1.0.30001669":
+  version: 1.0.30001690
+  resolution: "caniuse-lite@npm:1.0.30001690"
+  checksum: 10c0/646bd469032afa90400a84dec30a2b00a6eda62c03ead358117e3f884cda8aacec02ec058a6dbee5eaf9714f83e483b9b0eb4fb42febb8076569f5ca40f1d347
   languageName: node
   linkType: hard
 
@@ -6709,10 +6695,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^5.3.0, chalk@npm:~5.3.0":
+"chalk@npm:^5.3.0":
   version: 5.3.0
   resolution: "chalk@npm:5.3.0"
   checksum: 10c0/8297d436b2c0f95801103ff2ef67268d362021b8210daf8ddbe349695333eb3610a71122172ff3b0272f1ef2cf7cc2c41fdaa4715f52e49ffe04c56340feed09
+  languageName: node
+  linkType: hard
+
+"chalk@npm:~5.4.1":
+  version: 5.4.1
+  resolution: "chalk@npm:5.4.1"
+  checksum: 10c0/b23e88132c702f4855ca6d25cb5538b1114343e41472d5263ee8a37cccfccd9c4216d111e1097c6a27830407a1dc81fecdf2a56f2c63033d4dbbd88c10b0dcef
   languageName: node
   linkType: hard
 
@@ -6887,9 +6880,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.20.2":
-  version: 11.20.2
-  resolution: "chromatic@npm:11.20.2"
+"chromatic@npm:^11.22.0":
+  version: 11.22.0
+  resolution: "chromatic@npm:11.22.0"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
@@ -6902,7 +6895,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 10c0/9f60e966fc7dc22df920649e3860493dbf7c86ea34d96e9818e4450c7572e47b8554a3ecec273881184303ee9098ca15b4c85d519b37138ee0399387b1356b7d
+  checksum: 10c0/1f120f74db455545186c0b16041651334fc33edf62a8d6f249fa37f3305316023b7c9f3079c9786f337743e9025c49b816e780fa9e43f1ba13da612368a370e2
   languageName: node
   linkType: hard
 
@@ -7163,10 +7156,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^11.0.0":
-  version: 11.1.0
-  resolution: "commander@npm:11.1.0"
-  checksum: 10c0/13cc6ac875e48780250f723fb81c1c1178d35c5decb1abb1b628b3177af08a8554e76b2c0f29de72d69eef7c864d12613272a71fabef8047922bc622ab75a179
+"commander@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "commander@npm:13.0.0"
+  checksum: 10c0/8ba1e2b83bfdbcefd967aa505f5f5dc58202aa5f8e10437f61f6980dd8a69f868dba439a261f9fb72fc543c5f6fe58140e37b001a4c70b92ae22527abe94dfe1
   languageName: node
   linkType: hard
 
@@ -8124,24 +8117,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff2html@npm:^3.4.48":
-  version: 3.4.48
-  resolution: "diff2html@npm:3.4.48"
+"diff2html@npm:^3.4.51":
+  version: 3.4.51
+  resolution: "diff2html@npm:3.4.51"
   dependencies:
-    diff: "npm:5.1.0"
+    diff: "npm:^7.0.0"
     highlight.js: "npm:11.9.0"
     hogan.js: "npm:3.0.2"
   dependenciesMeta:
     highlight.js:
       optional: true
-  checksum: 10c0/38d941cc7a116c003105b66758097ea6ff1b0e73bba12809284fcb2bd916fa16403ee950f13b0f0e065182677085cd5d68e3c98bd6008a8098732f710624b825
-  languageName: node
-  linkType: hard
-
-"diff@npm:5.1.0":
-  version: 5.1.0
-  resolution: "diff@npm:5.1.0"
-  checksum: 10c0/77a0d9beb9ed54796154ac2511872288432124ac90a1cabb1878783c9b4d81f1847f3b746a0630b1e836181461d2c76e1e6b95559bef86ed16294d114862e364
+  checksum: 10c0/e840459a4e8a88ea5ed27053918e0adce54d7a8fb4b0b675a1a08099919d13cacb9b94557e6fa312ee0aa10f7ddfccce7253d024da950412bf44f16e61795de0
   languageName: node
   linkType: hard
 
@@ -9835,12 +9821,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gh-pages@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "gh-pages@npm:6.2.0"
+"gh-pages@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "gh-pages@npm:6.3.0"
   dependencies:
     async: "npm:^3.2.4"
-    commander: "npm:^11.0.0"
+    commander: "npm:^13.0.0"
     email-addresses: "npm:^5.0.0"
     filenamify: "npm:^4.3.0"
     find-cache-dir: "npm:^3.3.1"
@@ -9849,7 +9835,7 @@ __metadata:
   bin:
     gh-pages: bin/gh-pages.js
     gh-pages-clean: bin/gh-pages-clean.js
-  checksum: 10c0/30b996b3a9c3dc00d333b6fb15232b3ddc8628f9f458de871ad237b4e3414e68f5408d7525d82ae4a551e24bd7461f009908e8db7c7031dc7dc51e62e7c18ac0
+  checksum: 10c0/c9c063c24ee986a1a964afa3984e62b18677a369417ed51605877bd6263d6e3b7f7c813c9e3470ce6d64191b2fc792ef50e8cf2f60ec65e0560088c147442d81
   languageName: node
   linkType: hard
 
@@ -11555,11 +11541,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^15.2.11":
-  version: 15.2.11
-  resolution: "lint-staged@npm:15.2.11"
+"lint-staged@npm:^15.3.0":
+  version: 15.3.0
+  resolution: "lint-staged@npm:15.3.0"
   dependencies:
-    chalk: "npm:~5.3.0"
+    chalk: "npm:~5.4.1"
     commander: "npm:~12.1.0"
     debug: "npm:~4.4.0"
     execa: "npm:~8.0.1"
@@ -11571,7 +11557,7 @@ __metadata:
     yaml: "npm:~2.6.1"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c0/28e2ad08b90460cc18398a023eaf93954d7753f958c2b889ead2d9305407d7b4ef0ee007875410d6ce1df758007fda77e079c82eb79c9ce684fba71e6f7d0452
+  checksum: 10c0/1ddf9488c523c0b65c85b755428d4ad74fac3aa6ccb2e28e9bff5b8d86503158fe241d20d5433a11146872050b43580644901a5ef4c924b1ad7017c224a07339
   languageName: node
   linkType: hard
 
@@ -16249,15 +16235,15 @@ __metadata:
     cssnano: "npm:^7.0.3"
     cssnano-preset-advanced: "npm:^7.0.6"
     diff: "npm:^7.0.0"
-    diff2html: "npm:^3.4.48"
+    diff2html: "npm:^3.4.51"
     eslint: "npm:^8.57.0"
     eslint-plugin-jsonc: "npm:^2.18.2"
     eslint-plugin-prettier: "npm:^5.1.3"
     fast-glob: "npm:^3.3.2"
-    gh-pages: "npm:^6.2.0"
+    gh-pages: "npm:^6.3.0"
     husky: "npm:^9.1.7"
     jsonc-eslint-parser: "npm:^2.4.0"
-    lint-staged: "npm:^15.2.11"
+    lint-staged: "npm:^15.3.0"
     lodash: "npm:^4.17.21"
     node-gyp: "npm:^10.1.0"
     npm-registry-fetch: "npm:^18.0.2"
