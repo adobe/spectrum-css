@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.5.1
+
+### Patch Changes
+
+- [#3444](https://github.com/adobe/spectrum-css/pull/3444) [`2c66a87`](https://github.com/adobe/spectrum-css/commit/2c66a8795c9792503431b147136bc47547b36c3c) Thanks [@5t3ph](https://github.com/5t3ph)! - fix(slider): Limit the slider label width to its intrinsic size instead of taking up full-width to prevent accidental activation on mobile.
+
 ## 5.5.0
 
 ### Minor Changes
