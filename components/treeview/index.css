@@ -66,6 +66,9 @@
 
 	--spectrum-treeview-item-border-color-quiet-selected: var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, transparent));
 
+	--spectrum-treeview-item-background-color-hover: var(--spectrum-gray-100);
+	--spectrum-treeview-item-background-color-focus: var(--spectrum-gray-100);
+
 	--spectrum-treeview-item-icon-gap: var(--mod-treeview-item-icon-gap, var(--spectrum-text-to-visual-75));
 	--spectrum-treeview-item-icon-color: var(--highcontrast-treeview-item-icon-color, var(--mod-treeview-item-icon-color, var(--spectrum-gray-700)));
 	--spectrum-treeview-item-icon-color-hover: var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-icon-color-hover, var(--spectrum-gray-900)));
