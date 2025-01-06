@@ -51,9 +51,11 @@
 	--spectrum-toast-spacing-bottom-edge-to-text: var(--spectrum-toast-bottom-to-text);
 
 	/* Color */
+	--spectrum-toast-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 	--spectrum-toast-negative-background-color-default: var(--spectrum-negative-background-color-default);
 	--spectrum-toast-positive-background-color-default: var(--spectrum-positive-background-color-default);
 	--spectrum-toast-informative-background-color-default: var(--spectrum-informative-background-color-default);
+	--spectrum-toast-divider-color: var(--spectrum-transparent-white-400);
 
 	--spectrum-toast-text-and-icon-color: var(--spectrum-white);
 }
