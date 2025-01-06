@@ -63,9 +63,9 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
-		hasActionMenu: true,
+		hasActionMenu: false,
 		hasPagination: true,
-		hasImage: false,
+		hasImage: true,
 		imageIsFixedHeight: false,
 	},
 	parameters: {
