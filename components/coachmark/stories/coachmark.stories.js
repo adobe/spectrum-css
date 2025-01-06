@@ -48,8 +48,9 @@ export default {
 				type: { summary: "boolean" },
 				category: "Component",
 			},
+			if: { arg: "hasImage", truthy: true },
 		},
-		image: {
+		imageSource: {
 			name: "Image source",
 			type: { name: "string" },
 			table: {
@@ -57,6 +58,7 @@ export default {
 				category: "Content",
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "hasImage", truthy: true },
 		},
 	},
 	args: {
