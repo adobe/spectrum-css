@@ -154,7 +154,7 @@
 /* Text wrapper for the step count */
 .spectrum-CoachMark-step {
 	justify-self: start;
-	margin-block-end: calc(var(--mod-coachmark-step-to-bottom, var(--spectrum-coachmark-step-to-bottom: )) - var(--mod-coachmark-padding, var(--spectrum-coachmark-padding)));
+	margin-block-end: calc(var(--mod-coachmark-step-to-bottom, var(--spectrum-coachmark-step-to-bottom)) - var(--mod-coachmark-padding, var(--spectrum-coachmark-padding)));
 
 	color: var(--mod-coachmark-step-color, var(--spectrum-coachmark-step-color));
 	font-size: var(--mod-coachmark-step-font-size, var(--spectrum-coachmark-step-font-size));
