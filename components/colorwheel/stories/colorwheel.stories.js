@@ -23,7 +23,16 @@ export default {
 			if: { arg: "isDisabled", truthy: false },
 		},
 		isWithColorArea: {
-			name: "With Color Area",
+			name: "With color area",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isWithColorLoupe: {
+			name: "With color loupe",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -44,6 +53,7 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		isWithColorArea: false,
+		isWithColorLoupe: true,
 		selectedColor: "rgba(255, 0, 0, 50%)",
 	},
 	parameters: {

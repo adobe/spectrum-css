@@ -12,6 +12,7 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	isWithColorArea = false,
+	isWithColorLoupe = true,
 	colorHandleStyle = {},
 	selectedColor = "rgba(255, 0, 0, 50%)",
 } = {}, context = {}) => {
@@ -37,20 +38,16 @@ export const Template = ({
 				</div>
 			</div>
 			<div class=${classMap({
-				[`${rootClass}-border`]: true,
+				[`${rootClass}-wheel`]: true,
 				"is-disabled": isDisabled,
-			})}>
-				<div class=${classMap({
-					[`${rootClass}-wheel`]: true,
-					"is-disabled": isDisabled,
-				})}></div>
-			</div>
+			})}></div>
 			${ColorHandle({
 				isDisabled,
 				isFocused,
 				customClasses: [`${rootClass}-handle`],
 				selectedColor,
 				customStyles: colorHandleStyle,
+				isWithColorLoupe,
 			}, context)}
 			<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
 		</div>
