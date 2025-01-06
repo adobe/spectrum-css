@@ -181,6 +181,7 @@
 			--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-black-400);
 		}
 	}
+}
 
 .spectrum-ActionButton--sizeXS {
 	--spectrum-actionbutton-border-radius: var(--mod-actionbutton-border-radius, var(--spectrum-corner-radius-medium-size-extra-small));
