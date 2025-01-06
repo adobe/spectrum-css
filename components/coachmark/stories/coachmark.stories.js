@@ -50,7 +50,7 @@ export default {
 			},
 		},
 		image: {
-			name: "Image",
+			name: "Image source",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
