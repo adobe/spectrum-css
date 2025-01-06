@@ -108,6 +108,8 @@
 		--mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected, var(--spectrum-actionbutton-background-color-selected-focus));
 		--mod-actionbutton-background-color-disabled: var(--spectrum-actionbutton-background-color-selected-disabled);
 
+		--mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected, var(--spectrum-gray-25));
+
 		--mod-actionbutton-border-color-default: transparent;
 		--mod-actionbutton-border-color-hover: transparent;
 		--mod-actionbutton-border-color-down: transparent;
