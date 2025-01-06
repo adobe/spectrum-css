@@ -97,6 +97,13 @@ export async function refresh() {
 
 	// Refresh the src/index.css file with the latest component imports
 	const imports = `
+/**
+ * This file is machine generated.
+ *
+ * To update, run \`yarn refresh:bundle\`
+ * from the project root for Spectrum CSS.
+ */
+
 /* --- CORE TOKENS --- */
 @import "@spectrum-css/tokens";
 
