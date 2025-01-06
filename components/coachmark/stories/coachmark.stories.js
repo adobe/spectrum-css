@@ -95,6 +95,13 @@ Default.tags = ["!autodocs"];
 Default.args = {
 	image: "example-card-landscape.png",
 };
+Default.parameters = {
+	docs: {
+		story: {
+			height: "450px",
+		},
+	},
+};
 
 /**
  * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour.
@@ -106,7 +113,13 @@ Standard.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
+	docs: {
+		story: {
+			height: "450px",
+		},
+	},
 };
+Standard.args = { image: "example-card-landscape.png" };
 
 /** Coach marks can contain images or media that relate to their content, such as demonstrations of gestures, the UI being used, or illustrations. */
 export const WithMedia = Template.bind({});
@@ -120,7 +133,7 @@ WithMedia.parameters = {
 	},
 	docs: {
 		story: {
-			height: "500px",
+			height: "450px",
 		},
 	},
 };

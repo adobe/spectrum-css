@@ -41,7 +41,7 @@ export const CoachContainer = (
 				>
 					<img
 						class="${rootClass}-image"
-						src="${imageSource || "example-card-portrait.png"}"
+						src="${imageSource || "example-card-landscape.png"}"
 					/>
 				</div>
 			`,
@@ -162,12 +162,15 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 			Container({
 				withBorder: false,
 				heading: "With action menu",
-				content: Template({ ...args, isOpen: true }, context),
+				content: Template(
+					{ ...args, isOpen: true, hasActionMenu: true },
+					context,
+				),
 			}),
 			Container({
 				withBorder: false,
 				heading: "Without action menu",
-				content: Template({ ...args, hasActionMenu: false }, context),
+				content: Template({ ...args }, context),
 			}),
 		],
 	});
