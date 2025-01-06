@@ -4,7 +4,10 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
-import { CoachmarkMenuStatesTemplate, Template } from "./template.js";
+import {
+	CoachmarkMenuStatesTemplate,
+	CoachMarkMediaStateTemplates,
+} from "./template.js";
 
 /**
  * The coach mark component can be used to bring added attention to specific parts of a page, like during a tour. It is a separate component from [the coach indicator](/docs/components-coach-indicator--docs) and similar to [a popover](/docs/components-purpose--docs).
@@ -104,7 +107,7 @@ Default.parameters = {
 };
 
 /**
- * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour.
+ * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour. They may contain images or media that relate to their content, such as demonstrations of gestures, the UI being used, or illustrations.
  */
 export const Standard = CoachmarkMenuStatesTemplate.bind({});
 Standard.storyName = "Default";
@@ -121,19 +124,19 @@ Standard.parameters = {
 };
 Standard.args = { image: "example-card-landscape.png" };
 
-/** Coach marks can contain images or media that relate to their content, such as demonstrations of gestures, the UI being used, or illustrations. */
-export const WithMedia = Template.bind({});
-WithMedia.tags = ["!dev"];
-WithMedia.args = {
+/** Images and media have a minimum height and can grow with the parent component. Fixed height media is constrained to a 4:3 aspect ratio. */
+export const MediaStates = CoachMarkMediaStateTemplates.bind({});
+MediaStates.tags = ["!dev"];
+MediaStates.args = {
 	hasImage: true,
 };
-WithMedia.parameters = {
+MediaStates.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
 	docs: {
 		story: {
-			height: "450px",
+			height: "725px",
 		},
 	},
 };

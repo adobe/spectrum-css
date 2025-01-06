@@ -161,16 +161,55 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 		content: [
 			Container({
 				withBorder: false,
-				heading: "With action menu",
+				heading: "With media, without action menu",
+				content: Template({ ...args }, context),
+			}),
+			Container({
+				withBorder: false,
+				heading: "With action menu, without media",
 				content: Template(
-					{ ...args, isOpen: true, hasActionMenu: true },
+					{ ...args, hasImage: false, hasActionMenu: true },
+					context,
+				),
+			}),
+		],
+	});
+
+/* Displays fixed and minimum height images in a single story. */
+export const CoachMarkMediaStateTemplates = (args, context) =>
+	Container({
+		withBorder: false,
+		withHeading: false,
+		wrapperStyles: {
+			columnGap: "100px",
+			rowGap: "200px",
+		},
+		content: [
+			Container({
+				withBorder: false,
+				heading: "With fixed height",
+				content: Template(
+					{
+						...args,
+						hasImage: true,
+						imageIsFixedHeight: true,
+						imageSource: "example-card-portrait.png",
+					},
 					context,
 				),
 			}),
 			Container({
 				withBorder: false,
-				heading: "Without action menu",
-				content: Template({ ...args }, context),
+				heading: "Without fixed height",
+				content: Template(
+					{
+						...args,
+						hasImage: true,
+						imageIsFixedHeight: false,
+						imageSource: "example-card-portrait.png",
+					},
+					context,
+				),
 			}),
 		],
 	});
