@@ -49,6 +49,8 @@
 	--spectrum-search-to-help-text: var(--spectrum-help-text-to-component);
 	--spectrum-search-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-search-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+	--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 
 	/* Focus Indicator */
 	--spectrum-search-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
@@ -66,6 +68,12 @@
 	--spectrum-search-color-focus: var(--spectrum-neutral-content-color-focus);
 	--spectrum-search-color-focus-hover: var(--spectrum-neutral-content-color-focus-hover);
 	--spectrum-search-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+	--spectrum-search-border-color-default: var(--spectrum-gray-500);
+	--spectrum-search-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-search-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-search-border-color-focus-hover: var(--spectrum-gray-900);
+	--spectrum-search-border-color-key-focus: var(--spectrum-gray-900);
 
 	/* Background and Border */
 	--spectrum-search-border-width: var(--spectrum-border-width-100);
@@ -118,18 +126,21 @@
 	--spectrum-search-block-size: var(--spectrum-component-height-75);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
+	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
 }
 
 .spectrum-Search--sizeL {
 	--spectrum-search-block-size: var(--spectrum-component-height-200);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
+	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
 }
 
 .spectrum-Search--sizeXL {
 	--spectrum-search-block-size: var(--spectrum-component-height-300);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
+	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
 }
 
 @media (forced-colors: active) {
