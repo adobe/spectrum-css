@@ -11,6 +11,10 @@ export const ColorWheelGroup = Variants({
 			testHeading: "With color area",
 			isWithColorArea: true,
 		},
+		{
+			testHeading: "Without color loupe",
+			isWithColorLoupe: false,
+		},
 	],
 	stateData: [
 		{

@@ -23,7 +23,16 @@ export default {
 			if: { arg: "isDisabled", truthy: false },
 		},
 		isWithColorArea: {
-			name: "With Color Area",
+			name: "With color area",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isWithColorLoupe: {
+			name: "With color loupe",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -44,6 +53,7 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		isWithColorArea: false,
+		isWithColorLoupe: true,
 		selectedColor: "rgba(255, 0, 0, 50%)",
 	},
 	parameters: {
@@ -74,9 +84,7 @@ Disabled.parameters = {
  *
  * To display a color area inside of the color wheel, add a color area component to `.spectrum-ColorWheel-colorarea-container` element and define the custom width and height styles with `--mod-colorarea-width` and `--mod-colorarea-height` variables.
  *
- * The `.spectrum-colorwheel-colorarea-container-size` is hard coded to position the color area within the color wheel using `.spectrum-color-wheel-color-area-margin`. Implementations using JS can calculate the container size with `Math.sqrt(2 * R * R)`, where `R` is the inner radius as calculated for the clip paths.
- *
- * `.spectrum-colorwheel-path`, `.spectrum-colorwheel-path-borders` and `.spectrum-colorwheel-colorarea-container` are hard coded in CSS, and include token values as custom CSS variables so they can be accessed with JS. To use and calculate these values, implementations should consider:
+ * `--spectrum-colorwheel-path` and `--spectrum-colorwheel-colorarea-container-size` are hard coded in CSS, and include token values as custom CSS variables so they can be accessed with JS. To use and calculate these values, implementations should consider:
  * ```
  * const wheel = document.querySelector(".spectrum-ColorWheel-wheel")
  * getComputedStyle(wheel).getPropertyValue('--track-width')
