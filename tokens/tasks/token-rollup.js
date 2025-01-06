@@ -124,9 +124,6 @@ async function main({
 	// Then build the index.css file
 	await index(["dist/css/*-vars.css"], path.join(compiledOutputPath, "css", "index.css"), { cwd, clean }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
-	// Finally, copy the index.css file to the dist folder
-	await copy(path.join(compiledOutputPath, "css", "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
-
 	// Combine all the reports into a single log output
 	const logs = reports.flat(Infinity).filter(Boolean);
 	const errorLogs = errors.flat(Infinity).filter(Boolean);
