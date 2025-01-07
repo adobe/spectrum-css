@@ -19,6 +19,8 @@
 	--spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
 	--spectrum-popover-border-color: var(--spectrum-gray-400);
 
+	--spectrum-popover-border-width: var(--spectrum-border-width-100);
+
 	/* popover inner padding */
 	--spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
 
