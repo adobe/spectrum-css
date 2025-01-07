@@ -46,8 +46,6 @@ governing permissions and limitations under the License.
 	.spectrum-ProgressCircle {
 		/* fill is bright color */
 		--highcontrast-progress-circle-fill-border-color: Highlight;
-<<<<<<< HEAD
-<<<<<<< HEAD
 		--highcontrast-progressbar-track-color: Canvas;
 	}
 
@@ -61,13 +59,9 @@ governing permissions and limitations under the License.
 			border-color: CanvasText;
 			border-radius: 50%;
 		}
-=======
 
 		/* fill over background is bright color */
 		--highcontrast-progress-circle-fill-border-color-over-background: Highlight;
->>>>>>> 46765ca32 (feat(progresscircle): isolate progress circle)
-=======
->>>>>>> 5ac4a966e (fix(progresscircle): remove token dupes)
 	}
 }
 
