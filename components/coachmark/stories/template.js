@@ -1,4 +1,5 @@
 import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
+import { Template as Badge } from "@spectrum-css/badge/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as CoachIndicator } from "@spectrum-css/coachindicator/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
@@ -18,6 +19,7 @@ export const CoachContainer = (
 		hasImage,
 		imageIsFixedHeight,
 		imageSource,
+		keyboardShortcut,
 		title = "Try playing with a pixel brush",
 		content = "Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.",
 		currentStep = 2,
@@ -73,8 +75,29 @@ export const CoachContainer = (
 						)}
 					</div>`,
 			)}
+			${when(
+				keyboardShortcut && !hasActionMenu,
+				() =>
+					html`${Badge({
+						label: keyboardShortcut,
+						size: "s",
+					})}`,
+			)}
 		</div>
-		<div class="spectrum-CoachMark-content">${content}</div>
+		<div class="spectrum-CoachMark-content">
+			<div>
+				${when(
+					keyboardShortcut && hasActionMenu,
+					() =>
+						html`${Badge({
+							label: keyboardShortcut,
+							size: "s",
+							customStyles: { marginBottom: "12px" },
+						})}`,
+				)}
+			</div>
+			${content}
+		</div>
 		<div class="${rootClass}-footer">
 			${when(
 				hasPagination,

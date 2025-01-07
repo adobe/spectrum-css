@@ -63,6 +63,14 @@ export default {
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
 			if: { arg: "hasImage", truthy: true },
 		},
+		keyboardShortcut: {
+			name: "Keyboard shortcut",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+		},
 	},
 	args: {
 		rootClass: "spectrum-CoachMark",
@@ -97,6 +105,7 @@ Default.title = "Standard";
 Default.tags = ["!autodocs"];
 Default.args = {
 	image: "example-card-landscape.png",
+	keyboardShortcut: null,
 };
 Default.parameters = {
 	docs: {
