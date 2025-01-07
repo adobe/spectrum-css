@@ -21,7 +21,7 @@
 	/* @passthrough -- settings for nested color handle */
 	--mod-colorhandle-hitarea-border-radius: var(--mod-color-slider-handle-hitarea-border-radius, 0px);
 
-	--spectrum-colorslider-fill-color-disabled: var(--spectrum-disabled-background-color);
+	--spectrum-color-slider-fill-color-disabled: var(--spectrum-disabled-background-color);
 
 	position: relative;
 	display: block;
@@ -76,8 +76,8 @@
 	}
 
 	.spectrum-ColorSlider.is-disabled & {
-		--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-colorslider-fill-color-disabled)));
-		background: var(--highcontrast-color-slider-background-color-disabled, var(--mod-color-slider-background-color-disabled, var(--spectrum-colorslider-fill-color-disabled)));
+		--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-color-slider-fill-color-disabled)));
+		background: var(--highcontrast-color-slider-background-color-disabled, var(--mod-color-slider-background-color-disabled, var(--spectrum-color-slider-fill-color-disabled)));
 	}
 }
 
