@@ -4,7 +4,7 @@ import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types"
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ProgressBarGroup } from "./progressbar.test.js";
-import { IndeterminateGroup, Template } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * The progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.
@@ -130,7 +130,7 @@ Sizing.parameters = {
 /**
  * Progress bars can represent either determinate or indeterminate progress. Use a determinate progress bar when progress can be calculated against a specific goal (e.g., downloading a file of a known size). Use an indeterminate progress bar when progress is happening, but the time or effort to completion can’t be determined (e.g., attempting to reconnect to a server).
  */
-export const Indeterminate = IndeterminateGroup.bind({});
+export const Indeterminate = Template.bind({});
 Indeterminate.args = {
 	value: 50,
 };
