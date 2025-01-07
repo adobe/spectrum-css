@@ -22,6 +22,7 @@
 	--spectrum-actionbutton-border-color-down: var(--highcontrast-actionbutton-border-color-down, var(--mod-actionbutton-border-color-down, var(--spectrum-gray-600)));
 	--spectrum-actionbutton-border-color-focus: var(--highcontrast-actionbutton-border-color-focus, var(--mod-actionbutton-border-color-focus, var(--spectrum-gray-500)));
 	--spectrum-actionbutton-border-color-disabled: var(--spectrum-disabled-border-color);
+
 	--spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-content-color);
 
 	--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-black-100);
@@ -109,6 +110,9 @@
 		--mod-actionbutton-background-color-disabled: var(--spectrum-actionbutton-background-color-selected-disabled);
 
 		--mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected, var(--spectrum-gray-25));
+		--mod-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected, var(--spectrum-gray-25));
+		--mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected, var(--spectrum-gray-25));
+		--mod-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected, var(--spectrum-gray-25));
 
 		--mod-actionbutton-border-color-default: transparent;
 		--mod-actionbutton-border-color-hover: transparent;
