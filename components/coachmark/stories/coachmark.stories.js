@@ -63,11 +63,19 @@ export default {
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
 			if: { arg: "hasImage", truthy: true },
 		},
-		keyboardShortcut: {
-			name: "Keyboard shortcut",
+		title: {
+			name: "Title text",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
+				category: "Content",
+			},
+		},
+		hasKeyboardShortcut: {
+			name: "Has keyboard shortcuts",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
 				category: "Content",
 			},
 		},
@@ -104,8 +112,9 @@ export const Default = CoachMarkGroup.bind({});
 Default.title = "Standard";
 Default.tags = ["!autodocs"];
 Default.args = {
+	title: "Coach mark title",
 	image: "example-card-landscape.png",
-	keyboardShortcut: null,
+	hasKeyboardShortcut: false,
 };
 Default.parameters = {
 	docs: {

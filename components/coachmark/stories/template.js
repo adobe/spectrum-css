@@ -19,8 +19,8 @@ export const CoachContainer = (
 		hasImage,
 		imageIsFixedHeight,
 		imageSource,
-		keyboardShortcut,
-		title = "Try playing with a pixel brush",
+		hasKeyboardShortcut = false,
+		title,
 		content = "Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.",
 		currentStep = 2,
 		totalStepCount = 8,
@@ -76,26 +76,25 @@ export const CoachContainer = (
 					</div>`,
 			)}
 			${when(
-				keyboardShortcut && !hasActionMenu,
-				() =>
-					html`${Badge({
-						label: keyboardShortcut,
-						size: "s",
-					})}`,
+				hasKeyboardShortcut && !hasActionMenu,
+				() => html`
+					<kbd class="${rootClass}-shortcut">
+						${Badge({ isKeyboardShortcut: true, label: "Command", size: "s" })}
+						+ ${Badge({ isKeyboardShortcut: true, label: "Z", size: "s" })}
+					</kbd>
+				`,
 			)}
 		</div>
 		<div class="spectrum-CoachMark-content">
-			<div>
-				${when(
-					keyboardShortcut && hasActionMenu,
-					() =>
-						html`${Badge({
-							label: keyboardShortcut,
-							size: "s",
-							customStyles: { marginBottom: "12px" },
-						})}`,
-				)}
-			</div>
+			${when(
+				hasKeyboardShortcut && hasActionMenu,
+				() => html`
+					<kbd class="${rootClass}-shortcut">
+						${Badge({ isKeyboardShortcut: true, label: "Command", size: "s" })}
+						+ ${Badge({ isKeyboardShortcut: true, label: "Z", size: "s" })}
+					</kbd>
+				`,
+			)}
 			${content}
 		</div>
 		<div class="${rootClass}-footer">

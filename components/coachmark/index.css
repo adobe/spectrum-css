@@ -25,6 +25,7 @@
 	/* layout */
 	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
 	--spectrum-coachmark-heading-to-action-button: var(--spectrum-spacing-300);
+	--spectrum-coachmark-action-button-to-menu: var(--spectrum-spacing-100);
 	--spectrum-coachmark-header-to-body: var(--spectrum-spacing-200);
 	--spectrum-coachmark-body-to-footer: var(--spectrum-spacing-300);
 
@@ -102,6 +103,10 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-block-end: var(--mod-coachmark-header-to-body, var(--spectrum-coachmark-header-to-body));
+
+	.spectrum-CoachMark-shortcut {
+		margin-inline-start: var(--mod-coachmark-heading-to-action-button, var(--spectrum-coachmark-heading-to-action-button));
+	}
 }
 
 /* Text wrapper for the title content; sides besdie action menu if present */
@@ -120,6 +125,10 @@
 	white-space: nowrap;
 	z-index: 1;
 	margin-inline-start: var(--mod-coachmark-heading-to-action-button, var(--spectrum-coachmark-heading-to-action-button));
+}
+
+.spectrum-CoachMark-shortcut {
+	white-space: nowrap;
 }
 
 /* @deprecated not used currently in demos or by SWC */
@@ -141,6 +150,11 @@
 	font-family: var(--mod-coachmark-content-font-family, var(--spectrum-sans-serif-font));
 	font-style: var(--mod-coachmark-content-font-style, var(--spectrum-body-sans-serif-font-style));
 	line-height: var(--mod-coachmark-content-line-height, var(--spectrum-body-line-height));
+
+	.spectrum-CoachMark-shortcut {
+		display: block;
+		margin-block-end: var(--mod-coachmark-action-button-to-menu, var(--spectrum-coachmark-action-button-to-menu));
+	}
 }
 
 /* Footer wrapper for the pagination and button group sub-components */
