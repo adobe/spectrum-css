@@ -78,7 +78,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = IllustratedMessageGroup.bind({});
 Default.args = {};
 
 /**

@@ -27,16 +27,16 @@ export default {
 			if: { arg: "isDragged", truthy: true },
 		},
 		...IllustratedMessage.argTypes,
+		hasButtons: { table: { disable: true }},
+		isHorizontal: { table: { disable: true }},
 		label: ActionButton.argTypes.label,
 	},
 	args: {
 		rootClass: "spectrum-DropZone",
 		isDragged: false,
 		isFilled: false,
-		customHeading: "Drag and drop your file",
-		customDescription: "Or, select a file from your computer.",
-		customLabel: "Browse files",
-		hasButton: true
+		heading: "Drag and drop your file",
+		description: "Or, select a file from your computer.",
 	},
 	parameters: {
 		design: {
