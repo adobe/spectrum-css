@@ -46,25 +46,6 @@
 		"design system",
 		"adobe"
 	],
-<<<<<<< HEAD
-=======
-	"devDependencies": {
-		"@adobe/spectrum-tokens": "13.0.0-beta.50",
-		"@nxkit/style-dictionary": "^5.0.0",
-		"postcss": "^8.4.38",
-		"postcss-cli": "^11.0.0",
-		"postcss-combine-duplicated-selectors": "^10.0.3",
-		"postcss-discard-comments": "^7.0.0",
-		"postcss-discard-empty": "^6.0.3",
-		"postcss-licensing": "^1.0.1",
-		"postcss-merge-rules": "^7.0.0",
-		"postcss-rgb-mapping": "^1.1.0",
-		"postcss-sorting": "^8.0.2",
-		"prettier": "^2.8.8",
-		"style-dictionary": "^3.9.2",
-		"style-dictionary-sets": "^2.3.0"
-	},
->>>>>>> 547d50c47 (feat(illustratedmessage): work in progress)
 	"publishConfig": {
 		"access": "public"
 	}

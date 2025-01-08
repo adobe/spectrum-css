@@ -2,6 +2,7 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-DropZone",
+    ".spectrum-DropZone-actions",
     ".spectrum-DropZone-button",
     ".spectrum-DropZone-button:focus",
     ".spectrum-DropZone-button:hover",
@@ -9,6 +10,7 @@
     ".spectrum-DropZone.is-dragged",
     ".spectrum-DropZone.is-filled",
     ".spectrum-DropZone.is-filled.is-dragged",
+    ".spectrum-DropZone.is-filled.is-dragged .spectrum-DropZone-actions",
     ".spectrum-DropZone:focus-visible",
     ".spectrum-DropZone:lang(ja)",
     ".spectrum-DropZone:lang(ko)",
@@ -56,6 +58,7 @@
     "--mod-drop-zone-illustration-color",
     "--mod-drop-zone-illustration-color-hover",
     "--mod-drop-zone-illustration-to-heading",
+    "--mod-drop-zone-illustration-to-title",
     "--mod-drop-zone-padding",
     "--mod-drop-zone-width"
   ],
