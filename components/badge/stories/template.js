@@ -1,3 +1,4 @@
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
@@ -13,9 +14,9 @@ export const Template = (
 		rootClass = "spectrum-Badge",
 		size = "m",
 		label,
+		tag = "div",
 		iconName,
 		iconSet = "workflow",
-		isKeyboardShortcut = false,
 		variant = "neutral",
 		fixed,
 		customStyles = {},
@@ -52,13 +53,7 @@ export const Template = (
 					context,
 				),
 			)}
-			${when(label, () =>
-				when(
-					isKeyboardShortcut,
-					() => html`<kbd class="${rootClass}-label">${label}</kbd>`,
-					() => html`<div class="${rootClass}-label">${label}</div>`,
-				),
-			)}
+			${when(label, () => html`${unsafeHTML(`<${tag} class="${rootClass}-label">${label}</${tag}>`)}`)}
 		</div>
 	`;
 };

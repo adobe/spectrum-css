@@ -79,8 +79,8 @@ export const CoachContainer = (
 				hasKeyboardShortcut && !hasActionMenu,
 				() => html`
 					<kbd class="${rootClass}-shortcut">
-						${Badge({ isKeyboardShortcut: true, label: "Command", size: "s" })}
-						+ ${Badge({ isKeyboardShortcut: true, label: "Z", size: "s" })}
+						${Badge({ isKeyboardShortcut: true, label: "Command", size: "s", tag: "kbd" })}
+						+ ${Badge({ isKeyboardShortcut: true, label: "Z", size: "s", tag: "kbd" })}
 					</kbd>
 				`,
 			)}
@@ -90,8 +90,8 @@ export const CoachContainer = (
 				hasKeyboardShortcut && hasActionMenu,
 				() => html`
 					<kbd class="${rootClass}-shortcut">
-						${Badge({ isKeyboardShortcut: true, label: "Command", size: "s" })}
-						+ ${Badge({ isKeyboardShortcut: true, label: "Z", size: "s" })}
+						${Badge({ isKeyboardShortcut: true, label: "Command", size: "s", tag: "kbd" })}
+						+ ${Badge({ isKeyboardShortcut: true, label: "Z", size: "s", tag: "kbd" })}
 					</kbd>
 				`,
 			)}
