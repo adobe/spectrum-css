@@ -75,19 +75,7 @@ export const Default = AvatarGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-/** Avatar sizes scale exponentially, based on the Spectrum type scale. These range from size-50 to size-700, with the default size for an avatar being `100`. An avatar can also be customized to fit appropriately for your context.
- *
- * Avatar is available in many sizes using the required `.spectrum-Avatar--size<number>` class. The available size classes are:
-
-- `spectrum-Avatar--size50`
-- `spectrum-Avatar--size75`
-- `spectrum-Avatar--size100`
-- `spectrum-Avatar--size200`
-- `spectrum-Avatar--size300`
-- `spectrum-Avatar--size400`
-- `spectrum-Avatar--size500`
-- `spectrum-Avatar--size600`
-- `spectrum-Avatar--size700`
+/** Avatar is available in many sizes and scales exponentially, based on the Spectrum type scale. These sizes range from size-50 to size-1500, using the required `.spectrum-Avatar--size<number>` class. The default size for an avatar is `100`. An avatar can also be customized to fit appropriately for your context.
 */
 export const Sizing = (args, context) => Sizes({
 	Template,
