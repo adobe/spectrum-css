@@ -63,6 +63,24 @@ export const CoachMarkGroup = Variants({
 			},
 		},
 		{
+			testHeading: "With action menu + keyboard shortcuts",
+			hasPagination: false,
+			isOpen: true,
+			hasActionMenu: true,
+			hasKeyboardShortcut: true,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50, white)",
+			},
+		},
+		{
+			testHeading: "With keyboard shortcuts",
+			hasPagination: false,
+			isOpen: true,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50, white)",
+			},
+		},
+		{
 			testHeading: "With pagination",
 			hasActionMenu: false,
 			wrapperStyles: {
