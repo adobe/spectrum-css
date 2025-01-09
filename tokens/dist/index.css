@@ -470,6 +470,7 @@
 	--spectrum-icon-color-red-primary-default: var(--spectrum-red-700);
 	--spectrum-icon-color-yellow-primary-default: var(--spectrum-yellow-1000);
 }
+
 .spectrum--darkest {
 	--spectrum-overlay-opacity: 0.6;
 	--spectrum-drop-shadow-color-rgb: 0, 0, 0;
@@ -929,6 +930,7 @@
 	--spectrum-icon-color-red-primary-default: var(--spectrum-red-700);
 	--spectrum-icon-color-yellow-primary-default: var(--spectrum-yellow-1000);
 }
+
 .spectrum {
 	--spectrum-focus-indicator-color: var(--spectrum-blue-800);
 	--spectrum-static-white-focus-indicator-color: var(--spectrum-white);
@@ -1502,6 +1504,7 @@
 	--spectrum-code-cjk-line-height: var(--spectrum-cjk-line-height-200);
 	--spectrum-code-color: var(--spectrum-gray-800);
 }
+
 .spectrum--large {
 	--spectrum-workflow-icon-size-50: 18px;
 	--spectrum-workflow-icon-size-75: 20px;
@@ -1993,6 +1996,7 @@
 	--spectrum-font-size-1200: 62px;
 	--spectrum-font-size-1300: 70px;
 }
+
 .spectrum--light,
 .spectrum--lightest {
 	--spectrum-overlay-opacity: 0.4;
@@ -2453,6 +2457,7 @@
 	--spectrum-icon-color-red-primary-default: var(--spectrum-red-900);
 	--spectrum-icon-color-yellow-primary-default: var(--spectrum-yellow-400);
 }
+
 .spectrum--medium {
 	--spectrum-workflow-icon-size-50: 14px;
 	--spectrum-workflow-icon-size-75: 16px;
@@ -2944,6 +2949,7 @@
 	--spectrum-font-size-1200: 50px;
 	--spectrum-font-size-1300: 60px;
 }
+
 .spectrum--dark {
 	--spectrum-menu-item-background-color-default-rgb: 255, 255, 255;
 	--spectrum-menu-item-background-color-default-opacity: 0;
@@ -3007,6 +3013,7 @@
 	--spectrum-swatch-border-color-light-opacity: 0.2;
 	--spectrum-swatch-border-color-light: rgba(var(--spectrum-swatch-border-color-light-rgb), var(--spectrum-swatch-border-color-light-opacity));
 }
+
 .spectrum--darkest {
 	--spectrum-menu-item-background-color-default-rgb: 255, 255, 255;
 	--spectrum-menu-item-background-color-default-opacity: 0;
@@ -3070,6 +3077,7 @@
 	--spectrum-swatch-border-color-light-opacity: 0.2;
 	--spectrum-swatch-border-color-light: rgba(var(--spectrum-swatch-border-color-light-rgb), var(--spectrum-swatch-border-color-light-opacity));
 }
+
 .spectrum {
 	--spectrum-neutral-background-color-selected-default: var(--spectrum-gray-700);
 	--spectrum-neutral-background-color-selected-hover: var(--spectrum-gray-800);
@@ -3155,6 +3163,7 @@
 
 	--spectrum-coach-indicator-ring-static-white-color: var(--spectrum-white);
 }
+
 .spectrum--large {
 	--spectrum-checkbox-control-size-small: 16px;
 	--spectrum-checkbox-control-size-medium: 18px;
@@ -3311,6 +3320,7 @@
 	--spectrum-ui-icon-medium-display: none;
 	--spectrum-ui-icon-large-display: block;
 }
+
 .spectrum--light,
 .spectrum--lightest {
 	--spectrum-menu-item-background-color-default-rgb: 0, 0, 0;
@@ -3375,6 +3385,7 @@
 	--spectrum-swatch-border-color-light-opacity: 0.2;
 	--spectrum-swatch-border-color-light: rgba(var(--spectrum-swatch-border-color-light-rgb), var(--spectrum-swatch-border-color-light-opacity));
 }
+
 .spectrum--medium {
 	--spectrum-checkbox-control-size-small: 12px;
 	--spectrum-checkbox-control-size-medium: 14px;
@@ -3530,6 +3541,7 @@
 	--spectrum-ui-icon-medium-display: block;
 	--spectrum-ui-icon-large-display: none;
 }
+
 .spectrum--express.spectrum--dark,
 .spectrum--express.spectrum--darkest {
 	--spectrum-drop-zone-background-color-rgb: var(--spectrum-indigo-900-rgb);
@@ -3540,6 +3552,7 @@
 	--spectrum-assetcard-border-color-selected-down: var(--spectrum-indigo-800);
 	--spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-indigo-700);
 }
+
 .spectrum--express {
 	--spectrum-neutral-background-color-selected-default: var(--spectrum-gray-800);
 	--spectrum-neutral-background-color-selected-hover: var(--spectrum-gray-900);
@@ -3580,6 +3593,7 @@
 	--spectrum-heading-serif-emphasized-font-weight: var(--spectrum-black-font-weight);
 	--system: express;
 }
+
 .spectrum--express.spectrum--large {
 	--spectrum-checkbox-control-size-small: 18px;
 	--spectrum-checkbox-control-size-medium: 20px;
@@ -3640,6 +3654,7 @@
 
 	--spectrum-assetcard-focus-ring-border-radius: 12px;
 }
+
 .spectrum--express.spectrum--light,
 .spectrum--express.spectrum--lightest {
 	--spectrum-drop-zone-background-color-rgb: var(--spectrum-indigo-800-rgb);
@@ -3650,6 +3665,7 @@
 	--spectrum-assetcard-border-color-selected-down: var(--spectrum-indigo-1000);
 	--spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-indigo-900);
 }
+
 .spectrum--express.spectrum--medium {
 	--spectrum-checkbox-control-size-small: 14px;
 	--spectrum-checkbox-control-size-medium: 16px;
