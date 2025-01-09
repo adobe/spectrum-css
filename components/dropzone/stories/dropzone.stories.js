@@ -57,7 +57,6 @@ Default.args = {
 		},
 	],
 	label: "Drop file to replace",
-	useAccentColor: true,
 	customStyles: {
 		width: "300px",
 	},
