@@ -44,6 +44,16 @@ export const CoachMarkGroup = Variants({
 			},
 		},
 		{
+			testHeading: "With media + fixed height",
+			hasActionMenu: false,
+			hasPagination: false,
+			hasImage: true,
+			imageIsFixedHeight: true,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50, white)",
+			},
+		},
+		{
 			testHeading: "With action menu",
 			hasPagination: false,
 			hasActionMenu: true,
