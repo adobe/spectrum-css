@@ -112,7 +112,6 @@ export const Default = CoachMarkGroup.bind({});
 Default.title = "Standard";
 Default.tags = ["!autodocs"];
 Default.args = {
-	title: "Coach mark title",
 	image: "example-card-landscape.png",
 	hasKeyboardShortcut: false,
 };

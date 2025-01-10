@@ -20,7 +20,7 @@ export const CoachContainer = (
 		imageIsFixedHeight,
 		imageSource,
 		hasKeyboardShortcut = false,
-		title,
+		title = "Coach mark title",
 		content = "Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.",
 		currentStep = 2,
 		totalStepCount = 8,
