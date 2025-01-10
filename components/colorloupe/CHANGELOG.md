@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.3.0
+
+### Minor Changes
+
+- [#3453](https://github.com/adobe/spectrum-css/pull/3453) [`8d2d269`](https://github.com/adobe/spectrum-css/commit/8d2d269a657116d48d9c13d83b76c289f4ac3e8b) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Color loupes should not be displayed when their color handle is disabled, so this work adds the `.is-disabled` selector to color loupe's CSS, with `opacity: 0`.
+
 ## 5.2.0
 
 ### Minor Changes
