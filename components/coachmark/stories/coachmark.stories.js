@@ -54,6 +54,14 @@ export default {
 			},
 			if: { arg: "hasImage", truthy: true },
 		},
+		hasKeyboardShortcut: {
+			name: "Has keyboard shortcuts",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+		},
 		imageSource: {
 			name: "Image source",
 			type: { name: "string" },
@@ -69,14 +77,6 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Content",
-			},
-		},
-		hasKeyboardShortcut: {
-			name: "Has keyboard shortcuts",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
 				category: "Content",
 			},
 		},
