@@ -1,0 +1,50 @@
+{
+	"name": "bundle",
+	"tag": ["tooling"],
+	"namedInputs": {
+		"core": ["{projectRoot}/src/index.css"],
+		"tools": ["{projectRoot}/tasks/bundler.js"]
+	},
+	"targets": {
+		"build": {
+			"dependsOn": ["clean", { "target": "build", "projects": "tokens" }],
+			"executor": "nx:run-commands",
+			"inputs": [
+				"core",
+				"tools",
+				"{workspaceRoot}/postcss.config.js",
+				"{workspaceRoot}/stylelint.config.js",
+				{ "externalDependencies": ["postcss", "stylelint"] }
+			],
+			"options": {
+				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'import(\"./tasks/bundler.js\").then(module => module.main() )'"],
+				"cwd": "{projectRoot}"
+			},
+			"outputs": [
+				"{projectRoot}/dist/index.css",
+				"{projectRoot}/dist/index.css.map"
+			]
+		},
+		"clean": {},
+		"format": {},
+		"lint": {},
+		"refresh": {
+			"cache": false,
+			"dependsOn": [],
+			"executor": "nx:run-commands",
+			"inputs": [
+				"tools",
+				"{projectRoot}/package.json",
+				"{projectRoot}/postcss.config.js",
+				{ "externalDependencies": ["postcss"] }
+			],
+			"options": {
+				"commands": [
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'import(\"./tasks/bundler.js\").then(module => module.refresh() )'"
+				],
+				"cwd": "{projectRoot}"
+			},
+			"outputs": ["{projectRoot}/src/index.css"]
+		}
+	}
+}

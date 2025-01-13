@@ -1,0 +1,106 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+/**
+ * This file is machine generated.
+ *
+ * To update, run `yarn refresh:bundle`
+ * from the project root for Spectrum CSS.
+ */
+
+/* --- CORE TOKENS --- */
+@import "@spectrum-css/tokens";
+
+/* --- COMPONENTS --- */
+@import "@spectrum-css/accordion";
+@import "@spectrum-css/actionbar";
+@import "@spectrum-css/actionbutton";
+@import "@spectrum-css/actiongroup";
+/* skip @spectrum-css/actionmenu -- does not ship CSS */
+@import "@spectrum-css/alertbanner";
+@import "@spectrum-css/alertdialog";
+@import "@spectrum-css/asset";
+@import "@spectrum-css/assetcard";
+@import "@spectrum-css/assetlist";
+@import "@spectrum-css/avatar";
+@import "@spectrum-css/badge";
+@import "@spectrum-css/breadcrumb";
+@import "@spectrum-css/button";
+@import "@spectrum-css/buttongroup";
+@import "@spectrum-css/calendar";
+@import "@spectrum-css/card";
+@import "@spectrum-css/checkbox";
+@import "@spectrum-css/clearbutton";
+@import "@spectrum-css/closebutton";
+@import "@spectrum-css/coachindicator";
+@import "@spectrum-css/coachmark";
+@import "@spectrum-css/colorarea";
+@import "@spectrum-css/colorhandle";
+@import "@spectrum-css/colorloupe";
+@import "@spectrum-css/colorslider";
+@import "@spectrum-css/colorwheel";
+@import "@spectrum-css/combobox";
+/* skip @spectrum-css/commons -- does not ship CSS */
+@import "@spectrum-css/contextualhelp";
+@import "@spectrum-css/datepicker";
+@import "@spectrum-css/dial";
+@import "@spectrum-css/dialog";
+@import "@spectrum-css/divider";
+@import "@spectrum-css/dropindicator";
+@import "@spectrum-css/dropzone";
+@import "@spectrum-css/fieldgroup";
+@import "@spectrum-css/fieldlabel";
+@import "@spectrum-css/floatingactionbutton";
+@import "@spectrum-css/helptext";
+@import "@spectrum-css/icon";
+@import "@spectrum-css/illustratedmessage";
+@import "@spectrum-css/infieldbutton";
+@import "@spectrum-css/inlinealert";
+@import "@spectrum-css/link";
+@import "@spectrum-css/logicbutton";
+@import "@spectrum-css/menu";
+@import "@spectrum-css/miller";
+@import "@spectrum-css/modal";
+@import "@spectrum-css/opacitycheckerboard";
+@import "@spectrum-css/page";
+@import "@spectrum-css/pagination";
+@import "@spectrum-css/picker";
+@import "@spectrum-css/pickerbutton";
+@import "@spectrum-css/popover";
+@import "@spectrum-css/progressbar";
+@import "@spectrum-css/progresscircle";
+@import "@spectrum-css/radio";
+@import "@spectrum-css/rating";
+@import "@spectrum-css/search";
+@import "@spectrum-css/sidenav";
+@import "@spectrum-css/slider";
+@import "@spectrum-css/splitview";
+@import "@spectrum-css/statuslight";
+@import "@spectrum-css/steplist";
+@import "@spectrum-css/stepper";
+@import "@spectrum-css/swatch";
+@import "@spectrum-css/swatchgroup";
+@import "@spectrum-css/switch";
+@import "@spectrum-css/table";
+@import "@spectrum-css/tabs";
+@import "@spectrum-css/tag";
+@import "@spectrum-css/taggroup";
+@import "@spectrum-css/textfield";
+@import "@spectrum-css/thumbnail";
+@import "@spectrum-css/toast";
+@import "@spectrum-css/tooltip";
+@import "@spectrum-css/tray";
+@import "@spectrum-css/treeview";
+@import "@spectrum-css/typography";
+@import "@spectrum-css/underlay";
+@import "@spectrum-css/well";

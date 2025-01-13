@@ -29,9 +29,9 @@ const {
 	getPackageFromPath,
 	cleanFolder,
 	validateComponentName,
-	writeAndReport,
 	fetchContent,
 	copy,
+	writeAndReport,
 } = require("./utilities.js");
 
 /**
@@ -52,21 +52,24 @@ async function processCSS(
 	{
 		cwd,
 		configPath = __dirname,
+		minify = false,
+		encoding = "utf-8",
 		...postCSSOptions
 	} = {},
 ) {
 	if (!content) {
-		if (!fs.existsSync(input)) {
+		if (!input || !fs.existsSync(input)) {
 			return Promise.reject(
-				new Error("This function requires that either content or an input path be provided")
+				new Error("[processCSS] Content or an input file path must be provided"),
 			);
 		}
-		else {
-			content = await fsp.readFile(input, "utf-8");
 
-			if (!content) {
-				return Promise.reject(new Error(`No content found for ${relativePrint(input, { cwd })}`));
-			}
+		content = await fsp.readFile(input, encoding);
+
+		if (!content) {
+			return Promise.reject(
+				new Error(`[processCSS] No content found for ${relativePrint(input, { cwd })}`),
+			);
 		}
 	}
 
@@ -77,6 +80,7 @@ async function processCSS(
 		from: input,
 		to: output,
 		verbose: false,
+		minify,
 		...postCSSOptions,
 	};
 
@@ -95,13 +99,13 @@ async function processCSS(
 
 	if (!result.css) return Promise.resolve();
 
-	const formatted = await prettier.format(result.css, {
+	const formatted = !minify ? await prettier.format(result.css, {
 		parser: "css",
 		filepath: input,
 		printWidth: 500,
 		tabWidth: 2,
 		useTabs: true,
-	});
+	}) : result.css;
 
 	// If no output is provided, return the formatted content
 	if (!output) return Promise.resolve(formatted);

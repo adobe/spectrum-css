@@ -1,7 +1,12 @@
 import "@spectrum-css/tokens/dist/index.css";
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
+
+// Import the CSS bundle
+import "@spectrum-css/bundle/dist/index.min.css";
+
 import "./assets/index.css";
+
 import logo from "./assets/logo.svg";
 import pkg from "./package.json";
 
