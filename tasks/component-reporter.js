@@ -13,7 +13,6 @@
 
 /* eslint-disable no-console */
 const fs = require("fs");
-const fsp = fs.promises;
 const path = require("path");
 
 const postcss = require("postcss");
@@ -169,8 +168,7 @@ async function main({
 		return Promise.reject(new Error(`No source CSS file found at ${sourceCSS}`));
 	}
 
-	const content = await fsp.readFile(sourceCSS, "utf-8");
-	const processed = await processCSS(content, sourceCSS, undefined, {
+	const processed = await processCSS(undefined, sourceCSS, undefined, {
 		cwd,
 		skipMapping: true,
 		referencesOnly: false,

@@ -26,10 +26,10 @@ require("colors");
 const {
 	dirs,
 	relativePrint,
-	bytesToSize,
 	getPackageFromPath,
 	cleanFolder,
 	validateComponentName,
+	writeAndReport,
 	fetchContent,
 	copy,
 } = require("./utilities.js");
@@ -55,10 +55,20 @@ async function processCSS(
 		...postCSSOptions
 	} = {},
 ) {
-	if (!content)
-		return Promise.reject(
-			new Error("This function requires content be provided"),
-		);
+	if (!content) {
+		if (!fs.existsSync(input)) {
+			return Promise.reject(
+				new Error("This function requires that either content or an input path be provided")
+			);
+		}
+		else {
+			content = await fsp.readFile(input, "utf-8");
+
+			if (!content) {
+				return Promise.reject(new Error(`No content found for ${relativePrint(input, { cwd })}`));
+			}
+		}
+	}
 
 	const ctx = {
 		cwd,
@@ -107,36 +117,12 @@ async function processCSS(
 	}
 
 	const promises = [
-		fsp
-			.writeFile(output, formatted)
-			.then(() => {
-				const stats = fs.statSync(output);
-				return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-			})
-			.catch((err) => {
-				if (!err) return;
-				console.log(
-					`${"✗".red}  ${relativePrint(output, { cwd }).yellow} not written`,
-				);
-				return Promise.reject(err);
-			}),
+		writeAndReport(formatted, output, { cwd }),
 	];
 
 	if (result.map) {
 		promises.push(
-			fsp
-				.writeFile(`${output}.map`, result.map.toString().trimStart())
-				.then(() => {
-					const stats = fs.statSync(output);
-					return `${"✓".green}  ${relativePrint(`${output}.map`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-				})
-				.catch((err) => {
-					if (!err) return;
-					console.log(
-						`${"✗".red}  ${relativePrint(`${output}.map`, { cwd }).yellow} not written`,
-					);
-					return Promise.reject(err);
-				}),
+			writeAndReport(result.map.toString().trimStart(), `${output}.map`, { cwd }),
 		);
 	}
 
@@ -151,12 +137,10 @@ async function processCSS(
  * @returns Promise<void>
  */
 async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
-	const indexSourceCSS = path.join(cwd, "index.css");
-
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(indexSourceCSS)) return;
+	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
-	const content = await fsp.readFile(indexSourceCSS, "utf8");
+	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
 
 	if (!componentName || validateComponentName(componentName) !== true) {
 		componentName = getPackageFromPath(cwd);
@@ -170,7 +154,7 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 	const indexOutputPath = path.join(cwd, "dist", "index.css");
 
 	return Promise.all([
-		processCSS(content, indexSourceCSS, indexOutputPath, {
+		processCSS(content, path.join(cwd, "index.css"), indexOutputPath, {
 			cwd,
 			clean,
 			skipMapping: true,
@@ -184,7 +168,7 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		}),
 		processCSS(
 			content,
-			indexSourceCSS,
+			path.join(cwd, "index.css"),
 			path.join(cwd, "dist", "index-base.css"),
 			{
 				cwd,
