@@ -59,13 +59,3 @@ export const Template = ({
 		</div>
 	`;
 };
-
-export const ProgressCircleGroup = (args) => html`
-	${window.isChromatic() ? html`
-		${Template(args)}
-		${Template({
-			...args,
-			isIndeterminate: true,
-		})}
-	` : Template(args)}
-`;
