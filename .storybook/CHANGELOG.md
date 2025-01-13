@@ -1,5 +1,16 @@
 # Change Log
 
+## 10.12.0
+
+### Minor Changes
+
+- [#3477](https://github.com/adobe/spectrum-css/pull/3477) [`d52c701`](https://github.com/adobe/spectrum-css/commit/d52c70196bf2d17433c239313a82f00f75d77e79) Thanks [@castastrophe](https://github.com/castastrophe)! - Update Storybook to leverage the new CSS bundled assets.
+
+### Patch Changes
+
+- Updated dependencies [[`d52c701`](https://github.com/adobe/spectrum-css/commit/d52c70196bf2d17433c239313a82f00f75d77e79)]:
+  - @spectrum-css/bundle@1.0.0
+
 ## 10.11.8
 
 ### Patch Changes
