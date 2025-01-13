@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isIndeterminate, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
+import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { ProgressCircleGroup } from "./progresscircle.test.js";
 import { Template } from "./template.js";
@@ -15,17 +15,7 @@ export default {
 	argTypes: {
 		size: size(["s", "m", "l"]),
 		isIndeterminate,
-		staticColor: {
-			name: "Static color",
-			description: "Variants that can be used when the progress circle needs to be placed on top of a colored background or a visual.",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced",
-			},
-			options: ["white", "black"],
-			control: "select",
-		},
+		staticColor,
 		value: {
 			control: {
 				type: "range",
@@ -48,7 +38,6 @@ export default {
 		},
 		packageJson,
 		metadata,
-		layout: "centered"
 	},
 };
 
@@ -119,7 +108,7 @@ StaticWhiteIndeterminate.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticBlackDeterminate = Template.bind({});
+export const StaticBlackDeterminate = Sizing.bind({});
 StaticBlackDeterminate.tags = ["!dev"];
 StaticBlackDeterminate.storyName = "Static black, default";
 StaticBlackDeterminate.args = {
@@ -130,7 +119,7 @@ StaticBlackDeterminate.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticBlackIndeterminate = Template.bind({});
+export const StaticBlackIndeterminate = Sizing.bind({});
 StaticBlackIndeterminate.tags = ["!dev"];
 StaticBlackIndeterminate.storyName = "Static black, indeterminate";
 StaticBlackIndeterminate.args = {
