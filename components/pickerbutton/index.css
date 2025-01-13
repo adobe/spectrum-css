@@ -35,8 +35,17 @@
 	--spectrum-picker-button-font-weight: var(--spectrum-body-sans-serif-font-weight);
 	--spectrum-picker-button-font-size: var(--spectrum-font-size-100);
 
+	--spectrum-picker-button-border-color: inherit;
+	--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-picker-button-border-radius-rounded-sided: 0;
+	--spectrum-picker-button-border-radius-sided: 0;
+	--spectrum-picker-button-border-width: var(--spectrum-border-width-100);
 	--spectrum-picker-button-border-radius-rounded: var(--spectrum-corner-radius-200);
 
+	--spectrum-picker-button-background-color: var(--spectrum-gray-50);
+	--spectrum-picker-button-background-color-hover: var(--spectrum-gray-100);
+	--spectrum-picker-button-background-color-down: var(--spectrum-gray-200);
+	--spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-100);
 	--spectrum-picker-button-background-animation-duration: var(--spectrum-animation-duration-100);
 
 	&:hover {
