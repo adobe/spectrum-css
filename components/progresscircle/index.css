@@ -44,6 +44,18 @@ governing permissions and limitations under the License.
 		/* fill is bright color */
 		--highcontrast-progress-circle-fill-border-color: Highlight;
 	}
+
+	.spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) {
+		.spectrum-Circle {
+			stroke: CanvasText;
+		}
+
+		.spectrum-outerCircle {
+			border: 1px solid;
+			border-color: CanvasText;
+			border-radius: 50%;
+		}
+	}
 }
 
 .spectrum-ProgressCircle {
