@@ -25,6 +25,8 @@ export const Template = ({
 	// SVG strokes are centered, so subtract half the stroke width from the radius to create an inner stroke.
 	let radius = `calc(50% - ${strokeWidth / 2}px)`;
 
+	let insideRadius = `calc(50% - ${strokeWidth / 1}px)`;
+
 	return html`
 		<div
 			class=${classMap({
@@ -38,7 +40,8 @@ export const Template = ({
 			style=${styleMap(customStyles)}
 			data-testid=${ifDefined(testId)}
 		>
-			<svg fill="none" width="100%" height="100%">
+			<svg fill="none" width="100%" height="100%" class="spectrum-outerCircle">
+				<circle class="spectrum-Circle" cx="50%" cy="50%" r=${insideRadius} stroke-width="2" />
 				<circle
 					cx="50%"
 					cy="50%"

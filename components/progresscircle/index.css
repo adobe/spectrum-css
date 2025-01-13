@@ -37,12 +37,28 @@ governing permissions and limitations under the License.
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-large);
 }
 
+.spectrum-Circle {
+	fill: none;
+}
+
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-ProgressCircle {
 		/* fill is bright color */
 		--highcontrast-progress-circle-fill-border-color: Highlight;
 		--highcontrast-progressbar-track-color: Canvas;
+	}
+
+	.spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) {
+		.spectrum-Circle {
+			stroke: CanvasText;
+		}
+
+		.spectrum-outerCircle {
+			border: 1px solid;
+			border-color: CanvasText;
+			border-radius: 50%;
+		}
 	}
 }
 
