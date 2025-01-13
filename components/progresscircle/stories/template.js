@@ -41,7 +41,7 @@ export const Template = ({
 			data-testid=${ifDefined(testId)}
 		>
 			<svg fill="none" width="100%" height="100%" class="spectrum-outerCircle">
-				<circle class="spectrum-Circle" cx="50%" cy="50%" r=${insideRadius} stroke-width="2" />
+				<circle class="spectrum-innerCircle" cx="50%" cy="50%" r=${insideRadius} stroke-width="2" />
 				<circle
 					cx="50%"
 					cy="50%"
