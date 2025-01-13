@@ -35,6 +35,7 @@ module.exports = () => ({
 		},
 		"postcss-licensing": {
 			filename: "../COPYRIGHT",
+			cwd: __dirname,
 		},
 	},
 });

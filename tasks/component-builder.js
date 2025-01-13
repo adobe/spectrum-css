@@ -141,12 +141,10 @@ async function processCSS(
  * @returns Promise<void>
  */
 async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
-	const indexSourceCSS = path.join(cwd, "index.css");
-
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(indexSourceCSS)) return;
+	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
-	const content = await fsp.readFile(indexSourceCSS, "utf8");
+	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
 
 	if (!componentName || validateComponentName(componentName) !== true) {
 		componentName = getPackageFromPath(cwd);
@@ -160,7 +158,7 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 	const indexOutputPath = path.join(cwd, "dist", "index.css");
 
 	return Promise.all([
-		processCSS(content, indexSourceCSS, indexOutputPath, {
+		processCSS(content, path.join(cwd, "index.css"), indexOutputPath, {
 			cwd,
 			clean,
 			skipMapping: true,
@@ -174,7 +172,7 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		}),
 		processCSS(
 			content,
-			indexSourceCSS,
+			path.join(cwd, "index.css"),
 			path.join(cwd, "dist", "index-base.css"),
 			{
 				cwd,
