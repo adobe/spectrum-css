@@ -1,5 +1,14 @@
 # Change Log
 
+## 11.0.0
+
+### Patch Changes
+
+- Updated dependencies [[`4be8da9`](https://github.com/adobe/spectrum-css/commit/4be8da99b49b67126017e3aa6b555f90ef2680fa), [`4be8da9`](https://github.com/adobe/spectrum-css/commit/4be8da99b49b67126017e3aa6b555f90ef2680fa)]:
+  - @spectrum-css/tokens@15.0.0
+  - @spectrum-css/typography@7.0.0
+  - @spectrum-css/table@7.0.0
+
 ## 11.0.0-s2-foundations.24
 
 ### Patch Changes
