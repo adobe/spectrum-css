@@ -197,7 +197,7 @@ module.exports = {
 			files: ["components/*/themes/express.css", "!components/*/themes/spectrum.css"],
 			rules: {
 				"spectrum-tools/theme-alignment": [true, {
-					baseFilename: "spectrum.css",
+					baseFilename: "spectrum",
 				}],
 			},
 		},
