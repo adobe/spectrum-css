@@ -50,7 +50,7 @@ governing permissions and limitations under the License.
 	}
 
 	.spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) {
-		.spectrum-Circle {
+		.spectrum-innerCircle {
 			stroke: CanvasText;
 		}
 
