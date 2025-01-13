@@ -34,12 +34,15 @@
   ],
   "global": [
     "--spectrum-accent-content-color-default",
-    "--spectrum-gray-200",
     "--spectrum-static-black-track-color",
     "--spectrum-static-black-track-indicator-color",
     "--spectrum-static-white-track-color",
-    "--spectrum-static-white-track-indicator-color"
+    "--spectrum-static-white-track-indicator-color",
+    "--spectrum-track-color"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-progress-circle-fill-border-color"]
+  "high-contrast": [
+    "--highcontrast-progress-circle-fill-border-color",
+    "--highcontrast-progressbar-track-color"
+  ]
 }
