@@ -133,14 +133,14 @@
 		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
 		border-radius: var(--spectrum-progressbar-corner-radius);
 
-		background-color: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
+		background: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
 	}
 
 	.spectrum-ProgressBar-fill {
 		border: none;
 		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
 		transition: width 1s;
-		background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
+		background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
 	}
 }
 
@@ -183,7 +183,7 @@
 .spectrum-ProgressBar--staticWhite {
 	.spectrum-ProgressBar-fill {
 		color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
-		background-color: var(--highcontrast-progressbar-fill-color-white, var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white)));
+		background: var(--highcontrast-progressbar-fill-color-white, var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white)));
 	}
 
 	.spectrum-ProgressBar-label,
@@ -192,7 +192,7 @@
 	}
 
 	.spectrum-ProgressBar-track {
-		background-color: var(--spectrum-progressbar-track-color-white);
+		background: var(--spectrum-progressbar-track-color-white);
 	}
 }
 

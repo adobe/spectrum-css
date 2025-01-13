@@ -75,9 +75,7 @@
   "component": [
     "--spectrum-dial-background-color-default",
     "--spectrum-dial-border-color",
-    "--spectrum-dial-border-color-disabled",
     "--spectrum-dial-border-color-hover",
-    "--spectrum-dial-border-color-key-focus",
     "--spectrum-dial-border-radius",
     "--spectrum-dial-container-width",
     "--spectrum-dial-controls-margin",
@@ -88,7 +86,6 @@
     "--spectrum-dial-handle-inline-margin",
     "--spectrum-dial-handle-marker-border-radius",
     "--spectrum-dial-handle-marker-color",
-    "--spectrum-dial-handle-marker-color-disabled",
     "--spectrum-dial-handle-marker-color-hover",
     "--spectrum-dial-handle-marker-color-key-focus",
     "--spectrum-dial-handle-marker-color-mouse-focus",
@@ -111,11 +108,12 @@
   "global": [
     "--spectrum-border-width-200",
     "--spectrum-font-size-75",
-    "--spectrum-gray-200",
     "--spectrum-gray-25",
+    "--spectrum-gray-400",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
     "--spectrum-gray-75",
+    "--spectrum-gray-800",
     "--spectrum-line-height-200"
   ],
   "passthroughs": [],
