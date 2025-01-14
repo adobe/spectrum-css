@@ -1,5 +1,4 @@
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
@@ -8,7 +7,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-IllustratedMessage",
-	heading,
+	title,
 	description,
 	customClasses = [],
 	hasButtons = false,
@@ -33,10 +32,10 @@ export const Template = ({
         : illustrationSvgMarkup(size)}
 		<div class="${rootClass}-content">
 			${when(
-				heading,
+				title,
 				() =>
 					html`<h2 class="${rootClass}-heading">
-						${heading}
+						${title}
 					</h2>`
 			)}
 			${when(
@@ -81,25 +80,3 @@ const illustrationSvgMarkup = (size = "m") => {
     </svg>
   `;
 };
-
-export const SizingTemplate = (args) => html`
-	${["s", "m", "l"].map((size) => {
-		return html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: [
-					{
-						s: "Small",
-						m: "Medium",
-						l: "Large",
-					}[size],
-				],
-			})}
-			${Template({
-				...args,
-				size,
-			})}
-		</div>`;
-	})}
-`;

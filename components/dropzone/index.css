@@ -63,7 +63,6 @@
 	--mod-illustrated-message-vertical-maximum-width: var(--mod-drop-zone-content-maximum-width, var(--spectrum-drop-zone-content-maximum-width));
 	--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color, var(--spectrum-drop-zone-illustration-color));
 	--mod-illustrated-message-illustration-to-heading: var(--mod-drop-zone-illustration-to-heading, var(--spectrum-drop-zone-illustration-to-heading));
-	--mod-illustrated-message-illustration-to-content: var(--mod-drop-zone-illustration-to-title, var(--spectrum-drop-zone-illustration-to-title));
 	--mod-illustrated-message-heading-to-description: var(--mod-drop-zone-heading-to-body, var(--spectrum-drop-zone-heading-to-body));
 	--mod-illustrated-message-description-to-action: var(--mod-drop-zone-body-to-action, var(--spectrum-drop-zone-body-to-action));
 	--mod-illustrated-message-title-font-family: var(--mod-drop-zone-heading-font-family, var(--spectrum-drop-zone-heading-font-family));

@@ -35,7 +35,7 @@ export default {
 		rootClass: "spectrum-DropZone",
 		isDragged: false,
 		isFilled: false,
-		heading: "Drag and drop your file",
+		title: "Drag and drop your file",
 		description: "Or, select a file from your computer.",
 	},
 	parameters: {
@@ -50,7 +50,6 @@ export default {
 
 export const Default = DropzoneGroup.bind({});
 Default.args = {
-	heading: "Drag and drop your file",
 	description: [
 		() => {
 			return html`${Link({ url: "#", text: "Select a file" })} from your computer.`;

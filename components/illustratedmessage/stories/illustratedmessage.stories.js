@@ -1,18 +1,19 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { IllustratedMessageGroup } from "./illustratedmessage.test.js";
-import { SizingTemplate, Template } from "./template.js";
+import { Template } from "./template.js";
 
 /**
- * The Illustrated Message displays an illustration along with a heading and description. Optionally, part of the illustration can use an accent color. It can be used for status and errors, or as a call to action. For example, the Drop Zone component makes use of Illustrated Message as an area to drag and drop files.
+ * The Illustrated Message displays an illustration along with a heading, description and group of buttons. It can be used for status and errors, or as a call to action. For example, the Drop Zone component makes use of Illustrated Message as an area to drag and drop files.
  */
 export default {
 	title: "Illustrated message",
 	component: "IllustratedMessage",
 	argTypes: {
-		heading: {
-			name: "Heading",
+		title: {
+			name: "Title",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -64,7 +65,7 @@ export default {
 		isHorizontal: false,
 		size: "m",
 		hasButtons: true,
-		heading: "Error 404: Page not found",
+		title: "Error 404: Page not found",
 		description: "This page isn't available. Try checking the URL or visit a different page.",
 	},
 	parameters: {
@@ -108,7 +109,13 @@ WithForcedColors.parameters = {
  * - The medium size is the default, and often used in panels.
  * - The large size illustrated message is generally used in full page layouts and dialogs.
  */
-export const Sizing = SizingTemplate.bind({});
+export const Sizing = (args, context) => Sizes({
+	Template: Template,
+	withBorder: false,
+	withHeader: false,
+	...args
+}, context);
+
 Sizing.args = {};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {

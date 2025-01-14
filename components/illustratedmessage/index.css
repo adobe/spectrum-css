@@ -16,6 +16,7 @@ governing permissions and limitations under the License.
 	--spectrum-illustrated-message-illustration-to-heading: var(--spectrum-spacing-200);
 	--spectrum-illustrated-message-illustration-to-content: var(--spectrum-spacing-200);
 	--spectrum-illustrated-message-description-to-action: var(--spectrum-spacing-300);
+	/* @passthrough -- settings for nested button group */
 	--mod-buttongroup-justify-content: center;
 
 	/* Illustration */
@@ -125,7 +126,7 @@ governing permissions and limitations under the License.
 	--mod-buttongroup-justify-content: flex-start;
 	max-inline-size: var(--mod-illustrated-message-horizontal-maximum-width, var(--spectrum-illustrated-message-horizontal-maximum-width));
 	text-align: start;
-	gap: var(--mod-illustrated-message-illustration-to-content, var(--spectrum-illustrated-message-illustration-to-content));
+	gap: var(--spectrum-illustrated-message-illustration-to-content);
 	grid-template-areas: "illustration body";
 	align-items: center;
 

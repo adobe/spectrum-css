@@ -13,7 +13,7 @@ New properties
 `--spectrum-illustrated-message-heading-to-description`
 `--spectrum-illustrated-message-illustration-to-heading`
 `--spectrum-illustrated-message-illustration-to-content`
-`--spectrum-illustration-message-description-to-action`
+`--spectrum-illustrated-message-description-to-action`
 `--spectrum-illustrated-message-illustration-color`
 `--spectrum-illustrated-message-illustration-size`
 `--spectrum-illustrated-message-small-cjk-title-font-size`
