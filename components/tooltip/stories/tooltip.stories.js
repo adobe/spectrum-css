@@ -2,7 +2,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { Template } from "./template.js";
+import { SemanticVariantGroup, TooltipPlacementGroup, TooltipShowOnHover } from "./template.js";
 import { PlacementVariants } from "./tooltip.test.js";
 
 /**
@@ -101,7 +101,7 @@ Default.args = {};
  * is its source's position. For example, for the position and modifier class `--top-left`, the tooltip is positioned
  * at the top and the source is to the left. The default placement value if none is specified is at the top.
  */
-export const Placement = Template.bind({});
+export const Placement = TooltipPlacementGroup.bind({});
 Placement.tags = ["!dev"];
 Placement.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -111,7 +111,7 @@ Placement.parameters = {
  * A tooltip that shows on hover using CSS only. Note that this approach does not support text wrapping. Also, note
  * that these tooltips will likely not work on touch-enabled devices without additional client-side scripting.
  */
-export const ShowOnHover = Template.bind({});
+export const ShowOnHover = TooltipShowOnHover.bind({});
 ShowOnHover.tags = ["!dev"];
 ShowOnHover.args = {
 	label: "Tooltip",
@@ -132,7 +132,7 @@ ShowOnHover.parameters = {
  * customized. Unless it's being used to provide context about the exact same icon, a semantic tooltip should always
  * show an icon. Doing this is essential for helping users with color vision deficiency to discern the message tone.
  */
-export const SemanticVariants = Template.bind({});
+export const SemanticVariants = SemanticVariantGroup.bind({});
 SemanticVariants.tags = ["!dev"];
 SemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
