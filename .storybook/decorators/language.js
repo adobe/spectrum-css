@@ -1,5 +1,5 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
-import { fetchContainers } from "./helpers.js";
+import { makeDecorator, useEffect } from '@storybook/preview-api';
+import { fetchContainers } from "./helpers";
 /* global Typekit */
 
 /**
@@ -17,9 +17,14 @@ export const withLanguageWrapper = makeDecorator({
 			viewMode,
 		} = context;
 
-		useEffect(() => {
-			const isNotEnglish = lang && lang !== "en-US";
+		const isNotEnglish = lang && lang !== "en-US";
+		const isRTL = ["ar", "fa", "he"].includes(lang);
 
+		// Add a textDirection property to the globals for use in the story
+		context.globals.textDirection = isRTL ? "rtl" : "ltr";
+
+
+		useEffect(() => {
 			// If it is US-language or unset use the rok6rmo Adobe font web project id (smaller size),
 			// otherwise use the mge7bvf kit with all the language settings (larger size)
 			const kitId = isNotEnglish ? "mge7bvf" : "rok6rmo";
@@ -55,10 +60,12 @@ export const withLanguageWrapper = makeDecorator({
 				} catch (e) {/* empty */}
 			}
 
+			// Set the language and direction on the relevant containers
 			for (const container of fetchContainers(id, viewMode === "docs")) {
 				container.lang = lang;
+				container.dir = !isRTL ? "ltr" : "rtl";
 			}
-		}, [lang]);
+		}, [lang, isNotEnglish, isRTL, viewMode, id]);
 
 		return StoryFn(context);
 	},

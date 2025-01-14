@@ -7,8 +7,8 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
-	withTextDirectionWrapper
 } from "./decorators";
+import translations from "./intl/translations.json";
 import {
 	FontLoader,
 	IconLoader,
@@ -38,6 +38,8 @@ setConsoleOptions({
 		/stylelint/,
 	],
 });
+
+export { translations };
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 export const parameters = {
@@ -128,7 +130,6 @@ export default {
 	decorators: [
 		withLanguageWrapper,
 		withReducedMotionWrapper,
-		withTextDirectionWrapper,
 		withContextWrapper,
 		withTestingPreviewWrapper,
 		withArgEvents,

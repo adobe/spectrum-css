@@ -1,5 +1,5 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template.js";
+import { LocaleWrapper, Template } from "./template.js";
 
 export const TextFieldGroup = Variants({
 	Template,
@@ -61,5 +61,34 @@ export const TextFieldGroup = Variants({
 	}, {
 		testHeading: "Read-only",
 		isReadOnly: true,
+	}]
+});
+
+export const TextFieldLocaleGroup = Variants({
+	Template: LocaleWrapper,
+	withSizes: false,
+	testData: [{
+		testHeading: "English",
+	}, {
+		testHeading: "Hebrew",
+		lang: "he",
+	}, {
+		testHeading: "Japanese",
+		lang: "ja",
+	}, {
+		testHeading: "Korean",
+		lang: "ko",
+	}, {
+		testHeading: "Arabic",
+		lang: "ar",
+	}, {
+		testHeading: "Chinese",
+		lang: "zh",
+	}, {
+		testHeading: "Persian",
+		lang: "fa",
+	}, {
+		testHeading: "Thai",
+		lang: "th",
 	}]
 });
