@@ -14,5 +14,4 @@ export const IllustratedMessageGroup = Variants({
 		hasButtons: false
 	},
 	],
-	withSizes: false
 });

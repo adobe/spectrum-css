@@ -15,7 +15,7 @@ export const Template = ({
 	isDragged = false,
 	isFilled = false,
 	customClasses = [],
-	heading,
+	title,
 	description,
 	label,
 	id,
@@ -38,7 +38,7 @@ export const Template = ({
 	>
 		${IllustratedMessage({
 			...globals,
-			heading: heading,
+			title: title,
 			description: description,
 			customIllustration: customSvg,
 			size: size
