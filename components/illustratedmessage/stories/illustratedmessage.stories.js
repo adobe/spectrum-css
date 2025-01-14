@@ -32,7 +32,7 @@ export default {
 		},
 		isHorizontal: {
 			name: "Horizontal orientation",
-			description: "The default content orientation is vertical. Add the horizontal class to align the illustration to the left.",
+			description: "The default content orientation is vertical. Add the horizontal class to horizontally align the illustration with the content. The illustration will align left or right determined by the global direction of the text.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
