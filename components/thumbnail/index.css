@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Thumbnail,
 .spectrum-Thumbnail--size500 {
 	--spectrum-thumbnail-sized-size: var(--spectrum-thumbnail-size-500);
@@ -63,6 +61,7 @@
 }
 
 .spectrum-Thumbnail {
+	--spectrum-thumbnail-border-radius: 2px;
 	--spectrum-thumbnail-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-sized-size));
 
 	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
