@@ -17,9 +17,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/artifact@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@actions/artifact@npm:2.2.0"
+"@actions/artifact@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@actions/artifact@npm:2.2.1"
   dependencies:
     "@actions/core": "npm:^1.10.0"
     "@actions/github": "npm:^5.1.1"
@@ -34,7 +34,7 @@ __metadata:
     jwt-decode: "npm:^3.1.2"
     twirp-ts: "npm:^2.5.0"
     unzip-stream: "npm:^0.3.1"
-  checksum: 10c0/beade6445c83f1de232efb2847937d273b880adadaf6994690531266c1f43afc286ab069f26277cb500e84496ff823179a8dcc1676088d2a49ad6d0afa58736a
+  checksum: 10c0/ed4689b9df2f362e7fead772953f1b13bf348104174482123d7ab247fc4a5bd39fc21d093155789203755a06415811e6705110b6dc0aa4209006ae9bb1aef3d9
   languageName: node
   linkType: hard
 
@@ -4965,7 +4965,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/gh-action-file-diff@workspace:.github/actions/file-diff"
   dependencies:
-    "@actions/artifact": "npm:^2.2.0"
+    "@actions/artifact": "npm:^2.2.1"
     "@actions/core": "npm:^1.11.1"
     "@actions/github": "npm:^6.0.0"
     "@actions/glob": "npm:^0.5.0"
