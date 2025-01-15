@@ -1,5 +1,18 @@
 # Change Log
 
+## 11.0.0
+
+### Major Changes
+
+- [#3458](https://github.com/adobe/spectrum-css/pull/3458) [`e1b7102`](https://github.com/adobe/spectrum-css/commit/e1b71027f92ce18feb3a63c100d2b4871fc73b9f) Thanks [@castastrophe](https://github.com/castastrophe)! - Update the Chromatic add-on to the currently maintained package:
+
+  - from "@chromaui/addon-visual-tests": "^1.0.0"
+  - to "@chromatic-com/storybook": "^3.2.3"
+
+  This requires an update to the chromatic.config.json settings, removal of the generic argTypesRegex from the preview config, and a stricter import in the doc blocks.
+
+  To support a successful build, our test command must maintain the autodocs and mdx syntax.
+
 ## 10.12.1
 
 ### Patch Changes
