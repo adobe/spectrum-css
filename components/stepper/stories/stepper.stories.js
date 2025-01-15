@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { StepperGroup } from "./stepper.test.js";
 import { AllDefaultVariantsGroup, DisabledVariantsGroup, Template } from "./template.js";
@@ -42,6 +42,10 @@ export default {
 		hideStepper: false
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=67507-450",
+		},
 		packageJson,
 		metadata,
 	},

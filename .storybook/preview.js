@@ -7,21 +7,15 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
-	withTextDirectionWrapper
+	withTextDirectionWrapper,
 } from "./decorators";
-import {
-	FontLoader,
-	IconLoader,
-} from "./loaders";
+import { FontLoader, IconLoader } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
-import {
-	argTypes,
-	globalTypes
-} from "./types";
+import { argTypes, globalTypes } from "./types";
 
 // Load the Spectrum CSS bundle to style the docs elements
-import "@spectrum-css/bundle/dist/index.min.css";
+import "@spectrum-css/bundle";
 
 // Import the custom base styles
 import "./assets/base.css";
@@ -70,6 +64,7 @@ export const parameters = {
 			htmlWhitespaceSensitivity: "ignore",
 		},
 		highlighter: {
+			showLineNumbers: false,
 			wrapLines: true,
 		},
 	},
@@ -78,8 +73,10 @@ export const parameters = {
 		page: DocumentationTemplate,
 		story: { inline: true },
 		source: {
-			format: "html",
+			dark: false,
 			excludeDecorators: true,
+			type: "auto",
+			language: "html",
 		},
 	},
 	status: {
@@ -116,9 +113,6 @@ export default {
 		withActions,
 		withIconSpriteSheet,
 	],
-	loaders: [
-		FontLoader,
-		IconLoader,
-	],
+	loaders: [FontLoader, IconLoader],
 	tags: ["autodocs", "dev"],
 };

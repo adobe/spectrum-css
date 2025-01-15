@@ -1,0 +1,55 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-ColorHandle",
+    ".spectrum-ColorHandle-inner",
+    ".spectrum-ColorHandle.is-disabled",
+    ".spectrum-ColorHandle.is-disabled .spectrum-ColorHandle-inner",
+    ".spectrum-ColorHandle.is-focused",
+    ".spectrum-ColorHandle:after",
+    ".spectrum-ColorHandle:focus-visible"
+  ],
+  "modifiers": [
+    "--mod-colorhandle-animation-duration",
+    "--mod-colorhandle-animation-easing",
+    "--mod-colorhandle-border-color",
+    "--mod-colorhandle-border-color-disabled",
+    "--mod-colorhandle-border-width",
+    "--mod-colorhandle-fill-color-disabled",
+    "--mod-colorhandle-focused-size",
+    "--mod-colorhandle-hitarea-border-radius",
+    "--mod-colorhandle-hitarea-size",
+    "--mod-colorhandle-inner-border-color",
+    "--mod-colorhandle-inner-border-width",
+    "--mod-colorhandle-outer-border-color",
+    "--mod-colorhandle-outer-border-width",
+    "--mod-colorhandle-size"
+  ],
+  "component": [
+    "--spectrum-color-handle-border-width",
+    "--spectrum-color-handle-inner-border-opacity",
+    "--spectrum-color-handle-inner-border-width",
+    "--spectrum-color-handle-outer-border-opacity",
+    "--spectrum-color-handle-outer-border-width",
+    "--spectrum-color-handle-size",
+    "--spectrum-color-handle-size-key-focus",
+    "--spectrum-colorhandle-inner-border-color",
+    "--spectrum-colorhandle-outer-border-color",
+    "--spectrum-colorhandle-outer-border-width"
+  ],
+  "global": [
+    "--spectrum-animation-duration-100",
+    "--spectrum-black-rgb",
+    "--spectrum-color-control-track-width",
+    "--spectrum-disabled-background-color",
+    "--spectrum-disabled-content-color",
+    "--spectrum-picked-color",
+    "--spectrum-white"
+  ],
+  "system-theme": [],
+  "passthroughs": ["--mod-opacity-checkerboard-position"],
+  "high-contrast": [
+    "--highcontrast-colorhandle-border-color-disabled",
+    "--highcontrast-colorhandle-fill-color-disabled"
+  ]
+}

@@ -1,7 +1,7 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { AlertDialogGroup } from "./alertdialog.test.js";
 import { Template } from "./template.js";
@@ -44,6 +44,10 @@ export default {
 		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=21917-157",
 		},
 		docs: {
 			story: {

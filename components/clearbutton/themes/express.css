@@ -11,9 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
+/* @combine .spectrum.spectrum--express */
+
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-ClearButton {
 		--spectrum-clear-button-background-color: var(--spectrum-gray-200);
 		--spectrum-clear-button-background-color-hover: var(--spectrum-gray-300);

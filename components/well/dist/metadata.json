@@ -1,0 +1,33 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [".spectrum-Well"],
+  "modifiers": [
+    "--mod-well-background-color",
+    "--mod-well-border-color",
+    "--mod-well-border-radius",
+    "--mod-well-border-width",
+    "--mod-well-content-color",
+    "--mod-well-margin-top",
+    "--mod-well-min-width",
+    "--mod-well-padding"
+  ],
+  "component": [
+    "--spectrum-well-background-color",
+    "--spectrum-well-border-color",
+    "--spectrum-well-border-radius",
+    "--spectrum-well-border-width",
+    "--spectrum-well-content-color",
+    "--spectrum-well-margin-top",
+    "--spectrum-well-min-width",
+    "--spectrum-well-padding"
+  ],
+  "global": [
+    "--spectrum-body-color",
+    "--spectrum-border-width-100",
+    "--spectrum-gray-1000",
+    "--spectrum-gray-800-rgb"
+  ],
+  "system-theme": ["--system-well-border-color"],
+  "passthroughs": [],
+  "high-contrast": []
+}

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Switch {
 	--spectrum-switch-label-color-default: var(--spectrum-neutral-content-color-default);
@@ -20,19 +20,14 @@
 	--spectrum-switch-label-color-focus: var(--spectrum-neutral-content-color-key-focus);
 	--spectrum-switch-label-color-disabled: var(--spectrum-disabled-content-color);
 
-	--spectrum-switch-background-color: var(--spectrum-gray-300);
-	--spectrum-switch-background-color-disabled: var(--spectrum-gray-300);
-	--spectrum-switch-background-color-selected-disabled: var(--spectrum-disabled-content-color);
-
 	--spectrum-switch-background-color-selected-default: var(--spectrum-neutral-background-color-selected-default);
 	--spectrum-switch-background-color-selected-hover: var(--spectrum-neutral-background-color-selected-hover);
 	--spectrum-switch-background-color-selected-down: var(--spectrum-neutral-background-color-selected-down);
 	--spectrum-switch-background-color-selected-focus: var(--spectrum-neutral-background-color-selected-key-focus);
+	--spectrum-switch-background-color-selected-disabled: var(--spectrum-disabled-content-color);
 
 	--spectrum-switch-focus-indicator-thickness: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 	--spectrum-switch-focus-indicator-color: var(--spectrum-focus-indicator-color);
-
-	--spectrum-switch-handle-background-color: var(--spectrum-gray-75);
 	--spectrum-switch-handle-border-color-disabled: var(--spectrum-disabled-content-color);
 }
 
@@ -58,17 +53,7 @@
 	--spectrum-switch-handle-border-color-selected-focus: var(--spectrum-accent-color-1000);
 }
 
-.spectrum-Switch--sizeS {
-	--spectrum-switch-min-height: var(--spectrum-component-height-75);
-	--spectrum-switch-control-width: var(--spectrum-switch-control-width-small);
-	--spectrum-switch-control-height: var(--spectrum-switch-control-height-small);
-	--spectrum-switch-control-label-spacing: var(--spectrum-text-to-control-75);
-	--spectrum-switch-spacing-top-to-control: var(--spectrum-switch-top-to-control-small);
-	--spectrum-switch-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
-
-	--spectrum-switch-font-size: var(--spectrum-font-size-75);
-}
-
+.spectrum-Switch,
 .spectrum-Switch--sizeM {
 	--spectrum-switch-min-height: var(--spectrum-component-height-100);
 	--spectrum-switch-control-width: var(--spectrum-switch-control-width-medium);
@@ -78,6 +63,17 @@
 	--spectrum-switch-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
 
 	--spectrum-switch-font-size: var(--spectrum-font-size-100);
+}
+
+.spectrum-Switch--sizeS {
+	--spectrum-switch-min-height: var(--spectrum-component-height-75);
+	--spectrum-switch-control-width: var(--spectrum-switch-control-width-small);
+	--spectrum-switch-control-height: var(--spectrum-switch-control-height-small);
+	--spectrum-switch-control-label-spacing: var(--spectrum-text-to-control-75);
+	--spectrum-switch-spacing-top-to-control: var(--spectrum-switch-top-to-control-small);
+	--spectrum-switch-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
+
+	--spectrum-switch-font-size: var(--spectrum-font-size-75);
 }
 
 .spectrum-Switch--sizeL {
@@ -272,7 +268,7 @@
 		&:disabled,
 		&[disabled] {
 			& + .spectrum-Switch-switch {
-				background-color: var(--highcontrast-switch-background-color-disabled, var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled)));
+				background-color: var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled));
 			}
 
 			& + .spectrum-Switch-switch::before {
@@ -371,7 +367,7 @@
 .spectrum-Switch-input:disabled,
 .spectrum-Switch-input[disabled] {
 	& + .spectrum-Switch-switch {
-		background-color: var(--highcontrast-switch-background-color-disabled, var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled)));
+		background-color: var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled));
 
 		&::before {
 			border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
@@ -473,7 +469,7 @@
 					background-color: GrayText;
 				}
 
-                                &:checked + .spectrum-Switch-switch::before {
+				&:checked + .spectrum-Switch-switch::before {
 					border-color: GrayText;
 					background-color: ButtonFace;
 				}

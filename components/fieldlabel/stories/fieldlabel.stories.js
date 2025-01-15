@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isRequired, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { FieldLabelGroup } from "./fieldlabel.test.js";
 import { Template } from "./template.js";
@@ -45,6 +45,10 @@ export default {
 		label: "Label",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=16090-95",
+		},
 		packageJson,
 		metadata,
 	},

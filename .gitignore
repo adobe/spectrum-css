@@ -1,8 +1,6 @@
 dist
-!tokens/dist/index.css
-!tokens/dist/css/*.css
-!tokens/dist/css/express/*.css
-!tokens/dist/css/spectrum/*.css
+!dist/metadata.json
+!tokens/dist/**
 
 # Not committing the map assets, these are dev-only
 *.map
