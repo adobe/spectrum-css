@@ -116,7 +116,7 @@
 		--mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected, var(--spectrum-actionbutton-content-color-selected));
 		--mod-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected, var(--spectrum-actionbutton-content-color-selected));
 
-		&.spectrum-ActionButton--emphasized {
+		&.spectrum-ActionButton--emphasized:not(.spectrum-ActionButton--staticBlack, .spectrum-ActionButton--staticWhite) {
 			--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected-emphasized, var(--spectrum-accent-background-color-default));
 			--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected-emphasized, var(--spectrum-accent-background-color-hover));
 			--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected-emphasized, var(--spectrum-accent-background-color-down));
