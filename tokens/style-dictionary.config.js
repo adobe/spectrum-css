@@ -11,17 +11,17 @@
  * governing permissions and limitations under the License.
  */
 
-const path = require("path");
+import { createRequire } from "node:module";
+import { dirname, join, sep } from "node:path";
 
-const generateFileConfig = require("./utilities/style-dictionary.utils.js");
+import generateFileConfig from "./utilities/style-dictionary.utils.js";
 
-const StyleDictionary = require("style-dictionary");
-const CSSSetsFormatter = require("style-dictionary-sets").CSSSetsFormatter;
-const NameKebabTransfom = require("style-dictionary-sets").NameKebabTransfom;
-const AttributeSetsTransform =
-	require("style-dictionary-sets").AttributeSetsTransform;
-const CSSOpenTypeTransform =
-	require("style-dictionary-sets").CSSOpenTypeTransform;
+import StyleDictionary from "style-dictionary";
+
+import AttributeSetsTransform from "./utilities/attribute-sets-transform.js";
+import CSSOpenTypeTransform from "./utilities/css-font-open-type-transform.js";
+import CSSSetsFormatter from "./utilities/css-sets-formatter.js";
+import NameKebabTransfom from "./utilities/name-kebab-transform.js";
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerTransform(NameKebabTransfom);
@@ -33,15 +33,16 @@ StyleDictionary.registerFormat(CSSSetsFormatter);
  * not a nested folder which might be returned if the `main` property
  * in the package.json is present.
  */
-const tokensPath = require.resolve("@adobe/spectrum-tokens/package.json");
-const tokensDir = path.dirname(tokensPath);
+const require = createRequire(import.meta.url);
+const tokensPath = require.resolve(join("@adobe", "spectrum-tokens", "package.json"));
+const tokensDir = dirname(tokensPath);
 const setNames = ["desktop", "mobile", "light", "dark", "darkest"];
 
-module.exports = {
-	source: [`${tokensDir}/src/*.json`],
+export default {
+	source: [join(tokensDir, "src", "*.json")],
 	platforms: {
-		CSS: {
-			buildPath: "dist/css/",
+		css: {
+			buildPath: join("dist", "css") + sep,
 			transforms: [
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
@@ -50,22 +51,16 @@ module.exports = {
 			prefix: "spectrum",
 			files: [
 				generateFileConfig(),
-				...["spectrum", "express"].map((subSystemName) =>
-					generateFileConfig({ subSystemName })
-				),
+				...["spectrum", "express"].map((subSystemName) => generateFileConfig({ subSystemName })),
 				...setNames.map((context) => generateFileConfig({ setName: context })),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "spectrum",
-					})
-				),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "express",
-					})
-				),
+				...setNames.map((context) => generateFileConfig({
+					setName: context,
+					subSystemName: "spectrum",
+				})),
+				...setNames.map((context) => generateFileConfig({
+					setName: context,
+					subSystemName: "express",
+				})),
 			],
 		},
 	},

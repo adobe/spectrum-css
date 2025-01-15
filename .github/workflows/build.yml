@@ -150,10 +150,9 @@ jobs:
                     echo "Changes detected"
                     git status
                     git add .
-                    git diff > changes.diff
+                    git diff --staged > changes.diff
                     exit 1
                 fi
-
             - name: Upload changes
               if: ${{ failure() }}
               uses: actions/upload-artifact@v4

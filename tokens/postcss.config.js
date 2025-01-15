@@ -11,7 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = () => ({
+import { fileURLToPath } from "url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+
+export default () => ({
 	plugins: {
 		"postcss-import": {},
 		"postcss-rgb-mapping": {

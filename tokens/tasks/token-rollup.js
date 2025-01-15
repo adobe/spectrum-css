@@ -13,16 +13,16 @@
 
 /* eslint-disable no-console */
 
-const fs = require("fs");
+import fs, { existsSync } from "fs";
+import { join } from "path";
 const fsp = fs.promises;
-const path = require("path");
 
-const fg = require("fast-glob");
+import fg from "fast-glob";
 
-const { processCSS } = require("../../tasks/component-builder.js");
-const { fetchContent } = require("../../tasks/utilities.js");
+import { processCSS } from "../../tasks/component-builder.js";
+import { fetchContent } from "../../tasks/utilities.js";
 
-require("colors");
+import "colors";
 
 /**
  * The builder for the main entry point
@@ -33,7 +33,7 @@ require("colors");
  */
 async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false } = {}) {
 	// Create an index.css asset for each component
-	if (clean && fs.existsSync(outputPath)) {
+	if (clean && existsSync(outputPath)) {
 		await fsp.unlink(outputPath);
 	}
 
@@ -50,27 +50,29 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
  * @returns {Promise<string[]>}
  */
 async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
-	const globalFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "dist", "css"), onlyFiles: true });
+	const globalFiles = await fg(["*-vars.css"], { cwd: join(cwd, "dist", "css"), onlyFiles: true });
 
 	// Clean up the generated files from style-dictionary
-	const promises = globalFiles.map(file => processCSS(undefined, path.join("dist", "css", file), path.join("dist", "css", file), { cwd, configPath: cwd }));
+	const promises = globalFiles.map(file => processCSS(undefined, join("dist", "css", file), join("dist", "css", file), { cwd, configPath: cwd }));
 
 	for (const theme of ["express", "spectrum"]) {
 		// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
-		const customFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, `custom-${theme}`), onlyFiles: true });
-		const themeFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "dist", "css", theme), onlyFiles: true });
+		const customFiles = await fg(["*-vars.css"], { cwd: join(cwd, `custom-${theme}`), onlyFiles: true });
+		const themeFiles = await fg(["*-vars.css"], { cwd: join(cwd, "dist", "css", theme), onlyFiles: true });
 
 		for (const file of [...new Set([...themeFiles, ...customFiles])]) {
 			// Read in the custom file and the dist file and combine them into one file
 			const combinedContent = await fetchContent([
-				path.join("dist", "css", theme, file),
-				path.join(`custom-${theme}`, file)
+				join("dist", "css", theme, file),
+				join(`custom-${theme}`, file)
 			], { cwd, shouldCombine: true });
 
-			if (!combinedContent || !combinedContent[0].content) continue;
+			if (!combinedContent || (Array.isArray(combinedContent) && !combinedContent[0].content)) {
+				continue;
+			}
 
 			promises.push(
-				processCSS(combinedContent[0].content, path.join(cwd, "dist", "css", theme, file), path.join(cwd, "dist", "css", theme, file), { cwd, configPath: cwd })
+				processCSS(combinedContent[0].content, join(cwd, "dist", "css", theme, file), join(cwd, "dist", "css", theme, file), { cwd, configPath: cwd })
 			);
 		}
 	}
@@ -97,7 +99,7 @@ async function main({
 	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
 	console.time(key);
 
-	const compiledOutputPath = path.join(cwd, "dist");
+	const compiledOutputPath = join(cwd, "dist");
 
 	// Wait for all the custom files to be processed
 	return appendCustomOverrides({ cwd }).then(async (r) =>
@@ -105,13 +107,13 @@ async function main({
 			...["spectrum", "express"].map(theme => Promise.all([
 				index(
 					[`dist/css/${theme}/*-vars.css`],
-					path.join(compiledOutputPath, "css", theme, "index.css"),
+					join(compiledOutputPath, "css", theme, "index.css"),
 					{ cwd, clean }
 				),
 			])),
 			index(
 				["dist/css/*.css", "dist/css/spectrum/*-vars.css", "dist/css/express/*-vars.css"],
-				path.join(compiledOutputPath, "index.css"),
+				join(compiledOutputPath, "index.css"),
 				{ cwd, clean }
 			),
 		]).then((reports) => {
@@ -151,4 +153,6 @@ async function main({
 	);
 }
 
-exports.default = main;
+main();
+
+export { main as default };
