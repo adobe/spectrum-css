@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, isIndeterminate, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CheckboxGroup } from "./checkbox.test.js";
 import { AllVariantsCheckboxGroup, DocsCheckboxGroup, Template } from "./template.js";
@@ -50,6 +50,10 @@ export default {
 	parameters: {
 		actions: {
 			handles: ["click input[type=\"checkbox\"]"],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=164-16685",
 		},
 		packageJson,
 		metadata,

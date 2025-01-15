@@ -19,15 +19,16 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./metadata.json": "./dist/metadata.json",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -35,8 +36,7 @@
 		"@spectrum-css/asset": ">=5",
 		"@spectrum-css/checkbox": ">=9",
 		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/quickaction": ">=3",
-		"@spectrum-css/tokens": ">=14.5.0",
+		"@spectrum-css/tokens": ">=15",
 		"@spectrum-css/typography": ">=6"
 	},
 	"peerDependenciesMeta": {
@@ -52,9 +52,6 @@
 		"@spectrum-css/icon": {
 			"optional": true
 		},
-		"@spectrum-css/quickaction": {
-			"optional": true
-		},
 		"@spectrum-css/typography": {
 			"optional": true
 		}
@@ -64,7 +61,6 @@
 		"@spectrum-css/asset": "workspace:^",
 		"@spectrum-css/checkbox": "workspace:^",
 		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/quickaction": "^3.1.1",
 		"@spectrum-css/tokens": "workspace:^",
 		"@spectrum-css/typography": "workspace:^"
 	},

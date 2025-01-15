@@ -31,7 +31,7 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"
@@ -44,5 +44,10 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"rootClass": ":root"
+		}
+	]
 }

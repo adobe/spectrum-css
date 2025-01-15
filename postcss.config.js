@@ -11,24 +11,20 @@
  * governing permissions and limitations under the License.
  */
 
-const { join, sep, basename } = require("path");
+const { join } = require("path");
 
 module.exports = ({
 	file,
-	to,
-	splitinatorOptions = {
-		noSelectors: false,
-		noFlatVariables: false,
-		// @todo strip out all but the references to --system- variables
-		// NOT --system- definitions, only references
-		referencesOnly: false,
-	},
+	skipMapping = false,
+	referencesOnly = false,
+	preserveVariables = true,
+	stripLocalSelectors = false,
 	resolveImports = true,
 	shouldCombine = false,
 	lint = true,
 	verbose = true,
+	minify = false,
 	additionalPlugins = {},
-	minify = true,
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
@@ -38,25 +34,12 @@ module.exports = ({
 		options.map = isProduction ? false : { inline: false };
 	}
 
-	const rootPath = __dirname;
-	const outputFilepath = to ?? file;
-	const relativePath = outputFilepath?.replace(rootPath, "");
-
-	const outputFilename = outputFilepath ? basename(outputFilepath, ".css") : undefined;
-	const pathParts = relativePath?.split(sep) ?? [];
-
-	if (["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme") {
-		splitinatorOptions.noSelectors = true;
-	}
-
-	if (outputFilename === "express" || pathParts.includes("express")) shouldCombine = true;
-
-	if (outputFilename === "index-base") {
-		splitinatorOptions.noFlatVariables = true;
-	}
-
-	if (pathParts.includes("bridge")) {
-		splitinatorOptions.referencesOnly = true;
+	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
+	if (typeof file === "string" && file.includes("@spectrum-css/tokens-legacy")) {
+		additionalPlugins["postcss-selector-replace"] = {
+			before: [".spectrum"],
+			after: [".spectrum.spectrum--legacy"],
+		};
 	}
 
 	return {
@@ -84,28 +67,7 @@ module.exports = ({
 				}
 			} : false,
 			/* --------------------------------------------------- */
-			/* ------------------- SASS-LIKE UTILITIES ----------- */
-			"postcss-extend": {},
-			"postcss-hover-media-feature": {},
-			"postcss-pseudo-classes": !isProduction ? {
-				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
-				allCombinations: true,
-				preserveBeforeAfter: false,
-				prefix: "is-"
-			} : false,
-			/* --------------------------------------------------- */
-			/* ------------------- VARIABLE PARSING -------------- */
-			"postcss-splitinator": {
-				processIdentifier: (identifier) =>
-					identifier === "express" ? "spectrum--express" : identifier,
-				...splitinatorOptions,
-			},
-			"postcss-combininator": shouldCombine ? {
-				newSelector: ".spectrum",
-			} : false,
-			...additionalPlugins,
-			/* --------------------------------------------------- */
-			/* ------------------- CLEAN-UP --------------------- */
+			/* ------------------- LINTING ---------------- */
 			// Linter needs to run before the minifier removes comments (such as the stylelint-ignore comments)
 			stylelint: {
 				cache: true,
@@ -118,6 +80,33 @@ module.exports = ({
 				reportNeedlessDisables: lint,
 				reportInvalidScopeDisables: lint,
 			},
+			/* --------------------------------------------------- */
+			/* ------------------- SASS-LIKE UTILITIES ----------- */
+			"postcss-extend": {},
+			"postcss-pseudo-classes": !isProduction ? {
+				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				allCombinations: true,
+				preserveBeforeAfter: false,
+				prefix: "is-"
+			} : false,
+			"postcss-hover-media-feature": {},
+			"@spectrum-tools/postcss-rgb-mapping": {
+				colorFunctionalNotation: false,
+			},
+			/* --------------------------------------------------- */
+			/* ------------------- VARIABLE PARSING -------------- */
+			"@spectrum-tools/postcss-add-theming-layer": {
+				selectorPrefix: "spectrum",
+				skipMapping,
+				preserveVariables,
+				referencesOnly,
+				stripLocalSelectors,
+				debug: verbose,
+			},
+			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
+				newSelector: ".spectrum",
+			} : false,
+			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
 			/**
@@ -166,6 +155,8 @@ module.exports = ({
 					},
 				],
 			},
+			/* --------------------------------------------------- */
+			/* ------------------- CLEAN-UP --------------------- */
 			"postcss-licensing": {
 				filename: "COPYRIGHT",
 				cwd: __dirname,

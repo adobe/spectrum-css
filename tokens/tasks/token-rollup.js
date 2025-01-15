@@ -20,7 +20,7 @@ const path = require("path");
 const fg = require("fast-glob");
 
 const { processCSS } = require("../../tasks/component-builder.js");
-const { fetchContent } = require("../../tasks/utilities.js");
+const { copy, fetchContent } = require("../../tasks/utilities.js");
 
 require("colors");
 
@@ -50,29 +50,29 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
  * @returns {Promise<string[]>}
  */
 async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
+	const promises = [];
+
+	// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
+	const customFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "custom"), onlyFiles: true });
 	const globalFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "dist", "css"), onlyFiles: true });
 
-	// Clean up the generated files from style-dictionary
-	const promises = globalFiles.map(file => processCSS(undefined, path.join("dist", "css", file), path.join("dist", "css", file), { cwd, configPath: cwd }));
+	// Create a list that combines the custom and dist files
+	const combinedFiles = [...new Set([...customFiles, ...globalFiles])];
+	for (const file of combinedFiles) {
+		// Read in the custom file and the dist file and combine them into one file
+		const combinedContent = await fetchContent([
+			path.join("dist", "css", file),
+			path.join("custom", file)
+		], { cwd, shouldCombine: true });
 
-	for (const theme of ["express", "spectrum"]) {
-		// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
-		const customFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, `custom-${theme}`), onlyFiles: true });
-		const themeFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "dist", "css", theme), onlyFiles: true });
+		if (!combinedContent || !combinedContent[0].content) continue;
 
-		for (const file of [...new Set([...themeFiles, ...customFiles])]) {
-			// Read in the custom file and the dist file and combine them into one file
-			const combinedContent = await fetchContent([
-				path.join("dist", "css", theme, file),
-				path.join(`custom-${theme}`, file)
-			], { cwd, shouldCombine: true });
-
-			if (!combinedContent || !combinedContent[0].content) continue;
-
-			promises.push(
-				processCSS(combinedContent[0].content, path.join(cwd, "dist", "css", theme, file), path.join(cwd, "dist", "css", theme, file), { cwd, configPath: cwd })
-			);
-		}
+		promises.push(
+			processCSS(combinedContent[0].content, path.join(cwd, "dist", "css", file), path.join(cwd, "dist", "css", file), {
+				cwd,
+				configPath: cwd,
+			})
+		);
 	}
 
 	return Promise.all(promises);
@@ -102,18 +102,13 @@ async function main({
 	// Wait for all the custom files to be processed
 	return appendCustomOverrides({ cwd }).then(async (r) =>
 		Promise.all([
-			...["spectrum", "express"].map(theme => Promise.all([
-				index(
-					[`dist/css/${theme}/*-vars.css`],
-					path.join(compiledOutputPath, "css", theme, "index.css"),
-					{ cwd, clean }
-				),
-			])),
 			index(
-				["dist/css/*.css", "dist/css/spectrum/*-vars.css", "dist/css/express/*-vars.css"],
-				path.join(compiledOutputPath, "index.css"),
+				["dist/css/*-vars.css"],
+				path.join(compiledOutputPath, "css", "index.css"),
 				{ cwd, clean }
-			),
+			).then((reports) =>
+				copy(path.join(compiledOutputPath, "css", "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false })
+					.then((reps) => [reports, reps]))
 		]).then((reports) => {
 			const logs = [reports, r].flat(Infinity).filter(Boolean);
 

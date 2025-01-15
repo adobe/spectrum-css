@@ -11,18 +11,14 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Dial {
-	--spectrum-dial-background-color-default: var(--spectrum-gray-100);
-
 	--spectrum-dial-handle-marker-color: var(--spectrum-gray-700);
 	--spectrum-dial-border-color: var(--spectrum-gray-700);
 
 	--spectrum-dial-handle-marker-color-hover: var(--spectrum-gray-800);
 	--spectrum-dial-border-color-hover: var(--spectrum-gray-800);
-
-	--spectrum-dial-handle-marker-color-key-focus: var(--spectrum-gray-50);
 
 	--spectrum-dial-handle-marker-color-mouse-focus: var(--spectrum-gray-700);
 
@@ -51,14 +47,12 @@
 	--spectrum-dial-handle-border-size: var(--spectrum-border-width-200);
 	--spectrum-dial-label-text-size: var(--spectrum-font-size-75);
 	--spectrum-dial-label-line-height: var(--spectrum-line-height-200);
-}
 
-.spectrum-Dial--small {
-	--spectrum-dial-width: 24px;
-	--spectrum-dial-height: 24px;
-}
+	&.spectrum-Dial--small {
+		--spectrum-dial-width: 24px;
+		--spectrum-dial-height: 24px;
+	}
 
-.spectrum-Dial {
 	position: relative;
 
 	/* Don't let z-index'd child elements float above other things on the page */
@@ -70,6 +64,30 @@
 	min-inline-size: var(--mod-dial-min-height, var(--spectrum-dial-min-height));
 	min-block-size: var(--mod-dial-min-height, var(--spectrum-dial-min-height));
 	inline-size: var(--mod-dial-container-width, var(--spectrum-dial-container-width));
+
+	&.is-disabled {
+		.spectrum-Dial-labelContainer {
+			color: var(--highcontrast-dial-label-text-color-disabled, var(--mod-dial-label-text-color-disabled, var(--spectrum-dial-label-text-color-disabled)));
+		}
+
+		.spectrum-Dial-controls {
+			&::after,
+			&::before {
+				background-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
+			}
+		}
+
+		.spectrum-Dial-handle {
+			cursor: default;
+			border-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
+			background: var(--mod-dial-background-color-default, var(--spectrum-dial-background-color-default));
+
+			&::after,
+			&::before {
+				background-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
+			}
+		}
+	}
 }
 
 .spectrum-Dial-label {
@@ -89,7 +107,7 @@
 }
 
 .spectrum-Dial-labelContainer {
-	color: var(--highcontrast-dial-label-text-color, var(--mod-dial-label-text-color, var(--spectrum-dial-label-text-color)));
+	color: var(--mod-dial-label-text-color, var(--spectrum-dial-label-text-color));
 	display: flex;
 	position: relative;
 	inline-size: auto;
@@ -203,8 +221,8 @@
 
 	&:focus-visible,
 	&:focus-within {
-		background-color: var(--highcontrast-dial-handle-marker-color-mouse-focus, var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus)));
-		border-color: var(--highcontrast-dial-handle-marker-color-mouse-focus, var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus)));
+		background-color: var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus));
+		border-color: var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus));
 
 		&::after {
 			background-color: var(--highcontrast-dial-handle-marker-color-key-focus, var(--mod-dial-handle-marker-color-key-focus, var(--spectrum-dial-handle-marker-color-key-focus)));
@@ -247,32 +265,7 @@
 	}
 }
 
-.spectrum-Dial {
-	&.is-disabled {
-		.spectrum-Dial-labelContainer {
-			color: var(--highcontrast-dial-label-text-color-disabled, var(--mod-dial-label-text-color-disabled, var(--spectrum-dial-label-text-color-disabled)));
-		}
-
-		.spectrum-Dial-controls {
-			&::after,
-			&::before {
-				background-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-			}
-		}
-
-		.spectrum-Dial-handle {
-			cursor: default;
-			border-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-			background: var(--highcontrast-dial-background-color-default, var(--mod-dial-background-color-default, var(--spectrum-dial-background-color-default)));
-
-			&::after,
-			&::before {
-				background-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-			}
-		}
-	}
-}
-
+/* @deprecated .u- prefixed states are a legacy implementation still supported */
 .u-isGrabbing {
 	cursor: ns-resize;
 	/* stylelint-disable-next-line -- required for webkit cursor grab/grabbing support */

@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isQuiet, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ClearButtonGroup } from "./clearbutton.test.js";
 import { Template } from "./template.js";
@@ -102,6 +102,7 @@ Sizing.args = {};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
+
 };
 
 export const OverBackground = ClearButtonGroup.bind({});
