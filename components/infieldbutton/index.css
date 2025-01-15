@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-InfieldButton {
 	/* Medium size is the default */
@@ -37,6 +37,7 @@
 		--mod-infield-button-background-color: var(--mod-infield-button-background-color-disabled, var(--spectrum-disabled-background-color));
 		--mod-infield-button-background-color-hover: var(--mod-infield-button-background-color-hover-disabled, var(--spectrum-disabled-background-color));
 		--mod-infield-button-background-color-down: var(--mod-infield-button-background-color-down-disabled, var(--spectrum-disabled-background-color));
+
 		--mod-infield-button-border-color: var(--mod-infield-button-border-color-disabled, var(--spectrum-disabled-background-color));
 
 		--mod-infield-button-icon-color: var(--mod-infield-button-icon-color-disabled, var(--spectrum-disabled-content-color));
@@ -101,11 +102,35 @@
 		}
 	}
 
-	&:hover:not(:disabled),
-	&:active:not(:disabled),
-	&:focus-visible:not(:disabled) {
-		@media (forced-colors: active) {
-			--highcontrast-infield-button-border-color: Highlight;
+	&:hover {
+		--mod-infield-button-background-color: var(--mod-infield-button-background-color-hover, var(--spectrum-infield-button-background-color-hover));
+		--mod-infield-button-icon-color: var(--mod-infield-button-icon-color-hover, var(--spectrum-infield-button-icon-color-hover));
+	}
+
+	&:active {
+		--mod-infield-button-background-color: var(--mod-infield-button-background-color-down, var(--spectrum-infield-button-background-color-down));
+		--mod-infield-button-icon-color: var(--mod-infield-button-icon-color-down, var(--spectrum-infield-button-icon-color-down));
+	}
+
+	&:focus-visible {
+		--mod-infield-button-background-color: var(--mod-infield-button-background-color-key-focus, var(--spectrum-infield-button-background-color-key-focus));
+		--mod-infield-button-icon-color: var(--mod-infield-button-icon-color-key-focus, var(--spectrum-infield-button-icon-color-key-focus));
+	}
+}
+
+@media (forced-colors: active) {
+	.spectrum-InfieldButton {
+		--highcontrast-infield-button-border-color: ButtonText;
+		--highcontrast-infield-button-border-color-active: Highlight;
+
+		&:disabled {
+			--highcontrast-infield-button-border-color: inherit;
+		}
+
+		&:not(:disabled):hover,
+		&:not(:disabled):active,
+		&:not(:disabled):focus-visible {
+			--highcontrast-infield-button-border-color: var(--highcontrast-infield-button-border-color-active);
 		}
 	}
 }
@@ -124,104 +149,71 @@
 
 	padding: var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill));
 
-	.spectrum-InfieldButton-fill {
-		block-size: 100%;
-		inline-size: 100%;
-
-		background-color: var(--mod-infield-button-background-color, var(--spectrum-infield-button-background-color));
-
-		border-width: var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width));
-		border-style: solid;
-		border-color: var(--highcontrast-infield-button-border-color, var(--mod-infield-button-border-color, var(--spectrum-infield-button-border-color)));
-		border-end-end-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
-		border-start-end-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
-		border-end-start-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
-		border-start-start-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
-
-		padding: var(--mod-infield-button-fill-padding, var(--spectrum-infield-button-fill-padding));
-	}
-
-	.spectrum-InfieldButton-icon {
-		color: var(--mod-infield-button-icon-color, var(--spectrum-infield-button-icon-color));
-	}
-
-	&.spectrum-InfieldButton--right {
-		.spectrum-InfieldButton-fill {
-			border-end-start-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
-			border-start-start-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
-		}
-	}
-
-	&.spectrum-InfieldButton--left {
-		.spectrum-InfieldButton-fill {
-			border-end-end-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
-			border-start-end-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
-		}
-	}
-
 	&:disabled {
 		cursor: auto;
 	}
 
-	&:hover {
-		.spectrum-InfieldButton-fill {
-			background-color: var(--mod-infield-button-background-color-hover, var(--spectrum-infield-button-background-color-hover));
-		}
-
-		.spectrum-InfieldButton-icon {
-			color: var(--mod-infield-button-icon-color-hover, var(--spectrum-infield-button-icon-color-hover));
-		}
-	}
-
-	&:active {
-		.spectrum-InfieldButton-fill {
-			background-color: var(--mod-infield-button-background-color-down, var(--spectrum-infield-button-background-color-down));
-		}
-
-		.spectrum-InfieldButton-icon {
-			color: var(--mod-infield-button-icon-color-down, var(--spectrum-infield-button-icon-color-down));
-		}
-	}
-
 	&:focus-visible {
 		outline: none;
+	}
 
-		.spectrum-InfieldButton-fill {
-			background-color: var(--mod-infield-button-background-color-key-focus, var(--spectrum-infield-button-background-color-key-focus));
-		}
+	/* Stacked in-field buttons */
+	/* Not currently in use (stepper uses Action Buttons) but adding the CSS so the option is there */
+	&.spectrum-InfieldButton--top,
+	&.spectrum-InfieldButton--bottom {
+		block-size: calc(var(--mod-infield-button-height, var(--spectrum-infield-button-height)) / 2);
+	}
 
-		.spectrum-InfieldButton-icon {
-			color: var(--mod-infield-button-icon-color-key-focus, var(--spectrum-infield-button-icon-color-key-focus));
-		}
+	&.spectrum-InfieldButton--top {
+		padding-block-end: var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill));
+	}
+
+	&.spectrum-InfieldButton--bottom {
+		padding-block-start: var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill));
 	}
 }
 
 .spectrum-InfieldButton-fill {
+	block-size: 100%;
+	inline-size: 100%;
+
+	background-color: var(--mod-infield-button-background-color, var(--spectrum-infield-button-background-color));
+
+	border-width: var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width));
+	border-style: solid;
+	border-color: var(--highcontrast-infield-button-border-color, var(--mod-infield-button-border-color, var(--spectrum-infield-button-border-color)));
+	border-end-end-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
+	border-start-end-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
+	border-end-start-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
+	border-start-start-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
+
+	padding: var(--mod-infield-button-fill-padding, var(--spectrum-infield-button-fill-padding));
+
 	/* center icon */
 	display: flex;
 	align-items: center;
 	justify-content: var(--mod-infield-button-fill-justify-content, var(--spectrum-infield-button-fill-justify-content));
 
-	transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
-}
+	transition: border-color var(--spectrum-animation-duration-100) ease-in-out;
 
-/* Stacked in-field buttons */
-/* Not currently in use (stepper uses Action Buttons) but adding the CSS so the option is there */
-.spectrum-InfieldButton--top,
-.spectrum-InfieldButton--bottom {
-	block-size: calc(var(--mod-infield-button-height, var(--spectrum-infield-button-height)) / 2);
+	.spectrum-InfieldButton--right & {
+		border-end-start-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
+		border-start-start-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
+	}
 
-	.spectrum-InfieldButton-fill {
+	.spectrum-InfieldButton--left & {
+		border-end-end-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
+		border-start-end-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
+	}
+
+	.spectrum-InfieldButton--top &,
+	.spectrum-InfieldButton--bottom & {
 		box-sizing: border-box;
 		padding-inline-start: calc(var(--mod-infield-button-stacked-fill-padding-inline, var(--spectrum-infield-button-stacked-fill-padding-inline)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		padding-inline-end: calc(var(--mod-infield-button-stacked-fill-padding-inline, var(--spectrum-infield-button-stacked-fill-padding-inline)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 	}
-}
 
-.spectrum-InfieldButton--top {
-	padding-block-end: var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill));
-
-	.spectrum-InfieldButton-fill {
+	.spectrum-InfieldButton--top & {
 		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) - var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill)));
 		border-block-end: none;
@@ -229,12 +221,8 @@
 		border-end-start-radius: var(--mod-infield-button-stacked-border-radius-reset, var(--spectrum-infield-button-stacked-border-radius-reset));
 		border-end-end-radius: var(--mod-infield-button-stacked-border-radius-reset, var(--spectrum-infield-button-stacked-border-radius-reset));
 	}
-}
 
-.spectrum-InfieldButton--bottom {
-	padding-block-start: var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill));
-
-	.spectrum-InfieldButton-fill {
+	.spectrum-InfieldButton--bottom & {
 		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) - var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		border-end-start-radius: var(--mod-infield-button-stacked-bottom-border-radius-end-start, var(--spectrum-infield-button-stacked-bottom-border-radius-end-start));
@@ -253,4 +241,6 @@
 
 	/* remove margin used for centering */
 	margin: 0 !important;
+
+	color: var(--mod-infield-button-icon-color, var(--spectrum-infield-button-icon-color));
 }

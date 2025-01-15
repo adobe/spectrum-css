@@ -1,7 +1,7 @@
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CalendarGroup } from "./calendar.test.js";
 import { Template } from "./template.js";
@@ -11,7 +11,7 @@ const months = [...Array(12).keys()].map((key) =>
 );
 
 /**
- * Calendars display a grid of days in one or more months and allow users to select a single date.
+ * Calendars display a grid of days in one or more months and allow users to select a single date or a range of dates.
  */
 export default {
 	title: "Calendar",
@@ -27,6 +27,9 @@ export default {
 			options: months,
 			control: "select",
 		},
+		// The date selection controls don't update the story, so they are removed from the table.
+		// TODO: We may have to refactor some of the template to create a working controls for the
+		// selectable dates.
 		selectedDay: {
 			name: "Selected date or range start (date)",
 			description:
@@ -35,9 +38,21 @@ export default {
 			table: {
 				type: { summary: "datetime" },
 				category: "Content",
+				disable: true,
 			},
 			control: "date",
 			if: { arg: "isDisabled", truthy: false },
+		},
+		isRangeSelection : {
+			name: "Range selection",
+			description: "Allow users to select a range of dates.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+				disable: true,
+			},
+			control: "boolean",
 		},
 		lastDay: {
 			name: "Range end (date)",
@@ -46,8 +61,10 @@ export default {
 			table: {
 				type: { summary: "datetime" },
 				category: "Content",
+				disable: true,
 			},
 			control: "date",
+			if: { arg: "isRangeSelection", truthy: true}
 		},
 		year: {
 			name: "Year",
@@ -69,7 +86,8 @@ export default {
 			control: "boolean",
 		},
 		useDOWAbbrev: {
-			name: "Use 3 letter abbreviation for day of week",
+			name: "Use abbreviated weekdays",
+			description: "Uses a 3 letter abbreviation for day of week.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -89,6 +107,7 @@ export default {
 		isFocused: false,
 		useDOWAbbrev: false,
 		buttonSize: ActionButtonStories.args.size,
+		isRangeSelection: false,
 	},
 	parameters: {
 		actions: {
@@ -99,45 +118,52 @@ export default {
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = CalendarGroup.bind({});
 Default.args = {
 	month: months[6],
-	selectedDay: new Date(2023, 6, 3),
-	year: 2023,
+	selectedDay: new Date(2025, 6, 3),
+	year: 2025,
 };
 
 // ********* DOCS ONLY ********* //
 export const AbbreviatedWeekdays = Template.bind({});
 AbbreviatedWeekdays.args = {
+	...Default.args,
 	useDOWAbbrev: true,
 };
 AbbreviatedWeekdays.tags = ["!dev"];
 AbbreviatedWeekdays.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+AbbreviatedWeekdays.storyName = "Abbreviated weekdays";
 
+/**
+ * For calendars with a selectable range:
+
+- The `.is-range-start` and `.is-range-selection` classes go on the first day in the selection.
+- The `.is-range-end` and `.is-range-selection` classes go on the last day of the selection.
+- The `.is-range-selection` class goes on all days in the middle of the selection.
+ */
 export const RangeSelection = Template.bind({});
 RangeSelection.args = {
+	isRangeSelection: true,
 	month: months[6],
-	selectedDay: new Date(2023, 6, 3),
-	year: 2023,
-	lastDay: new Date(2023, 6, 7),
-	useDOWAbbrev: true,
+	selectedDay: new Date(2025, 6, 3),
+	year: 2025,
+	lastDay: new Date(2025, 6, 7),
 	isPadded: true,
 };
-RangeSelection.tags = ["!dev"];
 RangeSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+RangeSelection.storyName = "Range selection";
 
 export const Focused = Template.bind({});
 Focused.args = {
-	month: undefined,
+	...Default.args,
 	selectedDay: undefined,
-	year: undefined,
 	isFocused: true,
 };
 Focused.tags = ["!dev"];
@@ -148,6 +174,7 @@ Focused.parameters = {
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
+	...Default.args,
 	isDisabled: true
 };
 Disabled.parameters = {

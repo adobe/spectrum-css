@@ -2,7 +2,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ActionButtonGroup } from "./actionbutton.test.js";
 import { ActionButtonsWithIconOptions, IconOnlyOption, TreatmentTemplate } from "./template.js";
@@ -83,6 +83,10 @@ export default {
 	parameters: {
 		actions: {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=702-2877",
 		},
 		packageJson,
 		metadata,

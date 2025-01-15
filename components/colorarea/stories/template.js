@@ -16,6 +16,7 @@ export const Template = ({
 	selectedColor = "rgba(255, 0, 0, 1)",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
 	return html`
 		<div
 			class=${classMap({

@@ -1,12 +1,18 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ColorSliderGroup } from "./colorslider.test.js";
 import { Template } from "./template.js";
 
 /**
  * The color slider component lets users visually change an individual channel of a color.
+ *
+ * ## Usage notes
+ * - Set the color of the nested [color handle component](/docs/components-color-handle--docs) to match the color slider’s currently selected color using its custom property, `--spectrum-picked-color`.
+- The `.spectrum-ColorHandle` should be moved with `inset-inline-*` (horizontal) or `inset-block-*` (vertical) style properties as the slider is dragged.
+ * - Ensure that the min and max attributes of the `.spectrum-ColorSlider-slider` input are set to the corresponding scale (i.e. 0 to 1 for a, 0 to 255 for r, etc.).
+ * - Ensure the step attribute of the `.spectrum-ColorSlider-slider` input is set appropriately (i.e. 0.1 for a, s, v or 1 and h, r, etc).
  */
 export default {
 	title: "Color slider",
@@ -50,12 +56,18 @@ export default {
 		selectedColor: "rgba(255, 0, 0, 1)",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=36740-137",
+		},
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
+/**
+ * By default, a color slider is horizontal and should be used when vertical space is more limited.  The background style property of `.spectrum-ColorSlider-gradient` can be set to the gradient of the colors to be selected. The CSS will automatically reverse the gradient element horizontally when using a RTL (right-to-left) base direction.
+ */
 export const Default = ColorSliderGroup.bind({});
 Default.args = {
 	gradientStops:
@@ -74,6 +86,9 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
+/**
+ * The vertical orientation is used when horizontal space is more limited.
+ */
 export const Vertical = Template.bind({});
 Vertical.args = {
 	vertical: true,
@@ -93,6 +108,9 @@ Alpha.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * Alternatively, implementations can provide an `<img>` element with the gradient desired and apply the `.spectrum-ColorSlider-gradient` class.
+ */
 export const WithImage = Template.bind({});
 WithImage.args = {
 	gradientType: "image",
@@ -101,7 +119,7 @@ WithImage.args = {
 		"inset-inline-start": "50%",
 	},
 };
-WithImage.storyName = "Image";
+WithImage.storyName = "With image";
 WithImage.tags = ["!dev"];
 WithImage.parameters = {
 	chromatic: { disableSnapshot: true },

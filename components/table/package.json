@@ -19,15 +19,16 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./metadata.json": "./dist/metadata.json",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -35,7 +36,7 @@
 		"@spectrum-css/checkbox": ">=9",
 		"@spectrum-css/icon": ">=7",
 		"@spectrum-css/thumbnail": ">=6",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=15"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/button": {

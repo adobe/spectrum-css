@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { InlineAlertGroup } from "./inlinealert.test.js";
 import { Template } from "./template.js";
@@ -59,6 +59,10 @@ export default {
 		isClosable: false,
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=2659-4482",
+		},
 		packageJson,
 		metadata,
 	},
