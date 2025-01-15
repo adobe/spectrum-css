@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.12.1
+
+### Patch Changes
+
+- [#3440](https://github.com/adobe/spectrum-css/pull/3440) [`6808c85`](https://github.com/adobe/spectrum-css/commit/6808c85295d472286c0a52e28d2279b2b5a16f92) Thanks [@castastrophe](https://github.com/castastrophe)! - Fix an issue where "show code" was blocking loading in Storybook docs pages [CSS-1070]
+
 ## 10.12.0
 
 ### Minor Changes
