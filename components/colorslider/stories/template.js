@@ -28,6 +28,7 @@ export const Template = ({
 	colorHandleStyle = {},
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
 	return html`
     <div
       class=${classMap({

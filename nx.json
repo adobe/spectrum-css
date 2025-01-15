@@ -34,7 +34,8 @@
 			"cache": true,
 			"dependsOn": [
 				"^build",
-				"clean"
+				"clean",
+				{ "projects": "tokens", "target": "build" }
 			],
 			"executor": "nx:run-commands",
 			"inputs": [
@@ -47,15 +48,12 @@
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-builder.js\").default()'"
 				]
 			},
 			"outputs": [
-				"{projectRoot}/dist/*.{css,json}",
-				"{projectRoot}/dist/themes/*.css",
-				"{projectRoot}/dist/*.map",
-				"{projectRoot}/dist/themes/*.css.map",
-				"{projectRoot}/metadata/mods.md"
+				"{projectRoot}/dist/*.css",
+				"{projectRoot}/dist/themes/*.css"
 			]
 		},
 		"clean": {
@@ -120,7 +118,7 @@
 			],
 			"options": {
 				"commands": [
-					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.css {projectRoot}/**/*.css && stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
+					"stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
 					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js",
 					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx}"
 				]
@@ -159,7 +157,7 @@
 				]
 			},
 			"outputs": [
-				"{projectRoot}/metadata/metadata.json"
+				"{projectRoot}/dist/metadata.json"
 			]
 		},
 		"test": {
@@ -199,7 +197,7 @@
 			],
 			"options": {
 				"commands": [
-					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/metadata/metadata.json\" || exit 0"
+					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/dist/metadata.json\" || exit 0"
 				]
 			}
 		}

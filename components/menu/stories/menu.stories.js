@@ -2,7 +2,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isSelected, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { MenuItemGroup, MenuTraySubmenu, MenuWithVariants } from "./menu.test.js";
 import { DisabledItemGroup, OverflowGroup, SelectionGroup, SubmenuInPopover, Template } from "./template.js";
@@ -81,6 +81,10 @@ export default {
 			story: {
 				height: "300px"
 			}
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=37252-553",
 		},
 		packageJson,
 		metadata,
@@ -247,6 +251,9 @@ TraySubmenu.parameters = {
 			height: "400px"
 		}
 	},
+	viewport: {
+		defaultViewport: "mobile2"
+	},
 };
 
 export const MenuItem = MenuItemGroup.bind({});
@@ -316,6 +323,12 @@ MenuItem.args = {
 	isHovered: false,
 	isSelected: false,
 	hasActions: false,
+};
+MenuItem.parameters = {
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=37252-2242&node-type=frame&t=Kcz7zeePp3PeRusJ-11",
+	},
 };
 
 /**

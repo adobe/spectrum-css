@@ -12,7 +12,7 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
 		"@spectrum-tools/theme-alignment",
-		"stylelint-high-performance-animation",
+		// "stylelint-high-performance-animation",
 	],
 	rules: {
 		/** --------------------------------------------------------------
@@ -54,7 +54,11 @@ module.exports = {
 				except: ["first-nested"],
 				ignore: ["after-comment", "stylelint-commands"],
 				// don't require a newline before a passthrough flag
-				ignoreComments: [/^@?passthroughs?/],
+				ignoreComments: [
+					/^\s*@passthroughs?/,
+					/^\s*@deprecated?/,
+					/^\s*@todo?/
+				],
 			},
 		],
 		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system|_)/, {}],
@@ -63,8 +67,7 @@ module.exports = {
 			true,
 			{
 				ignoreProperties: {
-					color: ["CanvasText"],
-					"forced-color-adjust": ["preserve-parent-color"],
+					"/.+/": ["CanvasText", "preserve-parent-color"],
 				},
 			},
 		],
@@ -137,22 +140,22 @@ module.exports = {
 			},
 		],
 		/** Performance */
-		"plugin/no-low-performance-animation-properties": [
-			true,
-			{ severity: "warning" },
-		],
+		// "plugin/no-low-performance-animation-properties": [
+		// 	true,
+		// 	{ severity: "warning" },
+		// ],
 
 		/** --------------------------------------------------------------
 		 * Local/custom plugins
 		 * -------------------------------------------------------------- */
 		"spectrum-tools/no-missing-var": true,
+		"spectrum-tools/theme-alignment": null,
 		"spectrum-tools/no-unknown-custom-properties": [
 			true,
 			{
 				/** @note this is a list of custom properties that are allowed to be unknown */
 				ignoreList: [
 					/^--mod-/,
-					/^--highcontrast-/,
 					/^--system-/,
 					/^--spectrum-picked-color$/,
 				],
@@ -165,7 +168,9 @@ module.exports = {
 		"spectrum-tools/no-unused-custom-properties": [
 			true,
 			{
-				ignoreList: [/^--mod-/],
+				ignoreList: [
+					/^--mod-/,
+				],
 				disableFix: true,
 				severity: "warning",
 			},
@@ -176,28 +181,40 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: [".storybook/assets/*.css"],
+			files: [".storybook/assets/*.css", "iframe.html*.css"],
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
+				"selector-class-pattern": [
+					"^(spectrum|is-|u-|sb-)[A-Za-z0-9-]*", {
+						resolveNestedSelectors: true
+					}
+				],
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
+				"font-family-no-missing-generic-family-keyword": null,
 			},
 		},
 		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "tokens/**/*.css"],
+			files: ["tokens*/**/*.css(?inline)?"],
 			rules: {
+				"selector-class-pattern": [
+					"^(spectrum)[A-Za-z0-9-]*", {
+						resolveNestedSelectors: true
+					}
+				],
+				"custom-property-pattern": [/^(spectrum|color|scale|system)/, {}],
+				"number-max-precision": null,
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
 			}
 		},
 		{
 			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/express.css", "!components/*/themes/spectrum.css"],
+			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "!components/*/themes/spectrum-two.css"],
 			rules: {
 				"spectrum-tools/theme-alignment": [true, {
-					baseFilename: "spectrum",
+					baseFilename: "spectrum-two",
 				}],
 			},
 		},

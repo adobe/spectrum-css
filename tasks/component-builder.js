@@ -27,10 +27,8 @@ const {
 	dirs,
 	relativePrint,
 	getPackageFromPath,
-	cleanFolder,
 	validateComponentName,
 	fetchContent,
-	copy,
 	writeAndReport,
 } = require("./utilities.js");
 
@@ -81,6 +79,7 @@ async function processCSS(
 		to: output,
 		verbose: false,
 		minify,
+		shouldCombine: true,
 		...postCSSOptions,
 	};
 
@@ -144,8 +143,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
-	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
-
 	if (!componentName || validateComponentName(componentName) !== true) {
 		componentName = getPackageFromPath(cwd);
 	}
@@ -155,34 +152,14 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
-	const indexOutputPath = path.join(cwd, "dist", "index.css");
-
-	return Promise.all([
-		processCSS(content, path.join(cwd, "index.css"), indexOutputPath, {
-			cwd,
-			clean,
-			skipMapping: true,
-			referencesOnly: false,
-			preserveVariables: true,
-			stripLocalSelectors: false,
-		}).then(async (reports) => {
-			// Copy index.css to index-vars.css for backwards compat, log as deprecated
-			return copy(indexOutputPath, path.join(cwd, "dist/index-vars.css"), { cwd })
-				.then(r => [r, ...reports]);
-		}),
-		processCSS(
-			content,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-				splitinatorOptions: {
-					noFlatVariables: true,
-				},
-			},
-		),
-	]);
+	return processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
+		cwd,
+		clean,
+		skipMapping: true,
+		referencesOnly: false,
+		preserveVariables: true,
+		stripLocalSelectors: false,
+	});
 }
 
 /**
@@ -223,13 +200,24 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
 				theme,
-				map: false,
-				env: "production",
 			},
 		);
 	});
 
 	promises.push(
+		processCSS(
+			undefined,
+			path.join(cwd, "index.css"),
+			path.join(cwd, "dist", "index-base.css"),
+			{
+				cwd,
+				clean,
+				skipMapping: true,
+				referencesOnly: false,
+				preserveVariables: false,
+				stripLocalSelectors: false,
+			},
+		),
 		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
 		processCSS(
 			importMap,
@@ -238,9 +226,10 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 			{
 				cwd,
 				clean,
-				splitinatorOptions: {
-					noSelectors: true,
-				},
+				skipMapping: false,
+				stripLocalSelectors: false,
+				referencesOnly: true,
+				shouldCombine: false,
 				map: false,
 			},
 		),
@@ -280,7 +269,6 @@ async function main({
 	console.time(key);
 
 	return Promise.all([
-		...(clean ? [cleanFolder({ cwd })] : []),
 		build({ cwd, clean }),
 		buildThemes({ cwd, clean }),
 	])

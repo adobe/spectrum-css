@@ -1,0 +1,60 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-CoachIndicator",
+    ".spectrum-CoachIndicator-ring",
+    ".spectrum-CoachIndicator-ring:first-child",
+    ".spectrum-CoachIndicator-ring:nth-child(2)",
+    ".spectrum-CoachIndicator-ring:nth-child(3)",
+    ".spectrum-CoachIndicator.spectrum-CoachIndicator--quiet",
+    ".spectrum-CoachIndicator.spectrum-CoachIndicator--staticWhite",
+    "0%",
+    "50%",
+    "to"
+  ],
+  "modifiers": [
+    "--mod-coach-animation-indicator-ring-center-delay-multiple",
+    "--mod-coach-animation-indicator-ring-duration",
+    "--mod-coach-animation-indicator-ring-outer-delay-multiple",
+    "--mod-coach-indicator-animation-name",
+    "--mod-coach-indicator-block-size",
+    "--mod-coach-indicator-gap",
+    "--mod-coach-indicator-inline-size",
+    "--mod-coach-indicator-inner-animation-delay-multiple",
+    "--mod-coach-indicator-left",
+    "--mod-coach-indicator-min-block-size",
+    "--mod-coach-indicator-min-inline-size",
+    "--mod-coach-indicator-quiet-animation-ring-inner-delay-multiple",
+    "--mod-coach-indicator-quiet-ring-diameter",
+    "--mod-coach-indicator-ring-block-size",
+    "--mod-coach-indicator-ring-border-size",
+    "--mod-coach-indicator-ring-default-color",
+    "--mod-coach-indicator-ring-diameter",
+    "--mod-coach-indicator-ring-inline-size",
+    "--mod-coach-indicator-top"
+  ],
+  "component": [
+    "--spectrum-coach-indicator-animation-keyframe-scale-initial",
+    "--spectrum-coach-indicator-animation-ring-inner-delay-multiple",
+    "--spectrum-coach-indicator-block-size",
+    "--spectrum-coach-indicator-gap",
+    "--spectrum-coach-indicator-inline-size",
+    "--spectrum-coach-indicator-min-block-size",
+    "--spectrum-coach-indicator-min-inline-size",
+    "--spectrum-coach-indicator-quiet-ring-diameter",
+    "--spectrum-coach-indicator-ring-border-size",
+    "--spectrum-coach-indicator-ring-default-color",
+    "--spectrum-coach-indicator-ring-diameter",
+    "--spectrum-coach-indicator-ring-diameter-size",
+    "--spectrum-coach-indicator-sizing-multiple"
+  ],
+  "global": [
+    "--spectrum-animation-duration-6000",
+    "--spectrum-border-width-200",
+    "--spectrum-coach-animation-indicator-ring-duration",
+    "--spectrum-white"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": []
+}

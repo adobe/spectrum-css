@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SwatchgroupGroup } from "./swatchgroup.test.js";
 import { RoundingTemplate, Template } from "./template.js";
@@ -111,6 +111,10 @@ export default {
 			handles: [
 				...(Swatch.parameters?.actions?.handles ?? []),
 			],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=57008-1093",
 		},
 		packageJson,
 		metadata,

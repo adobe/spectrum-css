@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDragged } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { BreadcrumbGroup } from "./breadcrumb.test.js";
 import { Template } from "./template.js";
@@ -41,6 +41,10 @@ export default {
 		variant: "default",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=29434-6624",
+		},
 		packageJson,
 		metadata,
 	},
