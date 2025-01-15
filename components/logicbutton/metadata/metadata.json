@@ -16,8 +16,6 @@
   ],
   "modifiers": [
     "--mod-animation-duration-100",
-    "--mod-focus-indicator-gap",
-    "--mod-line-height-100",
     "--mod-logic-button-and-background-color",
     "--mod-logic-button-and-background-color-disabled",
     "--mod-logic-button-and-background-color-hover",
@@ -83,16 +81,13 @@
     "--spectrum-font-size-100",
     "--spectrum-gray-200",
     "--spectrum-gray-500",
-    "--spectrum-line-height-100",
     "--spectrum-sans-font-family-stack",
     "--spectrum-white"
   ],
   "system-theme": [],
   "passthroughs": [
     "--mod-button-animation-duration",
-    "--mod-button-focus-indicator-gap",
-    "--mod-button-font-family",
-    "--mod-button-line-height"
+    "--mod-button-font-family"
   ],
   "high-contrast": [
     "--highcontrast-logic-button-and-background-color",

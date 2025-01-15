@@ -34,20 +34,20 @@
 
 /** @note currently unused */
 %spectrum-overlay--bottom--open {
-	transform: translateY(var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px)));
+	transform: translateY(var(--mod-overlay-animation-distance, 6px));
 }
 
 /** @note currently unused */
 %spectrum-overlay--top--open {
-	transform: translateY(calc(-1 * var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px))));
+	transform: translateY(calc(-1 * var(--mod-overlay-animation-distance, 6px)));
 }
 
 /** @note used in quickaction */
 %spectrum-overlay--right--open {
-	transform: translateX(var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px)));
+	transform: translateX(var(--mod-overlay-animation-distance, 6px));
 }
 
 /** @note used in quickaction */
 %spectrum-overlay--left--open {
-	transform: translateX(calc(-1 * var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px))));
+	transform: translateX(calc(-1 * var(--mod-overlay-animation-distance, 6px)));
 }

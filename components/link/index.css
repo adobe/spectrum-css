@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
- @import "./themes/express.css";
-
 .spectrum-Link {
 	--spectrum-link-animation-duration: var(--spectrum-animation-duration-100);
 
@@ -76,7 +74,7 @@
 		color: var(--highcontrast-link-text-color-primary-focus, var(--mod-link-text-color-primary-focus, var(--spectrum-link-text-color-primary-focus)));
 		text-decoration: underline;
 		text-decoration-style: double;
-		text-decoration-color: var(--highcontrast-link-focus-color, inherit);
+		text-decoration-color: inherit;
 	}
 }
 

@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
 
 .spectrum-Slider {
@@ -419,7 +420,6 @@
 	&:lang(ko) {
 		line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
 	}
-
 }
 
 .spectrum-Slider-label {
@@ -442,7 +442,7 @@
 /* setting tick marks in relation to label */
 .spectrum-Slider--tick {
 	.spectrum-Slider-handle {
-		background-color: var(--highcontrast-slider-tick-handle-background-color, var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color)));
+		background-color: var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color));
 	}
 
 	.spectrum-Slider-controls {
@@ -656,7 +656,7 @@
 
 		&:hover,
 		&:active {
-			border-color: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
+			border-color: var(--mod-disabled-border-color, var(--spectrum-disabled-border-color));
 			background: var(--highcontrast-slider-handle-background-color-disabled, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
 		}
 	}

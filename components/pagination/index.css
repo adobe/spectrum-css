@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-Pagination {
 	--spectrum-pagination-counter-margin-inline-start: var(--spectrum-pagination-item-inline-spacing);
 	--spectrum-pagination-page-button-inline-spacing: var(--spectrum-pagination-item-inline-spacing);

@@ -12,7 +12,6 @@ module.exports = {
 	"components/*/metadata/metadata.json": (files) => {
 		return [
 			...(files.map(file => `pajv test --valid -s ./schemas/metadata.schema.json -d "${file}"`) ?? []),
-			`prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write ${files.join(" ")} --config .prettierrc`
 		];
 	},
 	"*.{md,mdx}": [

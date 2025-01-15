@@ -34,6 +34,7 @@
 	--spectrum-animation-ease-out: cubic-bezier(0, 0, 0.4, 1);
 	--spectrum-animation-ease-linear: cubic-bezier(0, 0, 1, 1);
 
+	/* stylelint-disable value-keyword-case -- typography names should use their appropriate cases */
 	--spectrum-sans-font-family-stack: adobe-clean, var(--spectrum-sans-serif-font-family), "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 	--spectrum-sans-serif-font: var(--spectrum-sans-font-family-stack);
 
@@ -44,6 +45,7 @@
 
 	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+	/* stylelint-enable value-keyword-case */
 
 	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-font-style: var(--spectrum-default-font-style);

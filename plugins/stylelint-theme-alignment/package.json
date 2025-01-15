@@ -1,7 +1,7 @@
 {
-  "name": "@spectrum-tools/theme-alignment",
+  "name": "@spectrum-tools/stylelint-theme-alignment",
   "version": "1.1.0",
-  "description": "",
+  "description": "A utility to ensure that all custom properties are intially defined in a core resource file and all subsequent uses leverage only values defined there first.",
   "license": "Apache-2.0",
   "author": "Adobe",
   "contributors": [
@@ -20,7 +20,7 @@
     "postcss-values-parser": "^6.0.2"
   },
   "peerDependencies": {
-    "stylelint": ">=16.0.0"
+    "stylelint": ">=16"
   },
   "devDependencies": {
     "stylelint": "^16.9.0"

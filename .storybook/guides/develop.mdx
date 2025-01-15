@@ -40,7 +40,7 @@ Each component has the following files:
 
 Each component outputs the following assets to `dist`:
 
-- `index.css`: This asset includes the base CSS and the `themes/spectrum-two.css` definitions (without the system mapping layer). This asset is meant to be used in a environment where only the current Spectrum theme is supported.
+- `index.css`: This asset includes the base CSS and the `themes/spectrum.css` definitions (without the system mapping layer). This asset is meant to be used in a environment where only the current Spectrum theme is supported.
 - `index-base.css`: This asset includes only the base CSS; that is, the CSS without any custom property definitions. This can be used in conjunction with `index-theme.css` and the desired `themes/*.css` file to render a themed component.
 - `index-theme.css`: This asset includes only the custom property definitions for the component as mapped to the system variables. This can be used in conjunction with `index-base.css` and the desired `themes/*.css` file to render a themed component.
 
@@ -54,7 +54,7 @@ Each component outputs theme-specific assets to `dist/themes`. These assets incl
 1. Generate a new component using the `yarn new component` command. The generator will prompt you to answer questions about your component.
 2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens`, and most rely on `@spectrum-css/icon`.
 3. Once your folder has been generated, you can run `yarn start` in the root of the project to begin developing.
-4. The `index.css` file is where most of your styles will be added. Add any custom property mappings to the global token library in the `themes/spectrum-two.css` asset.
+4. The `index.css` file is where most of your styles will be added. Add any custom property mappings to the global token library in the `themes/spectrum.css` asset.
 5. Inside the `stories` directory you will find a `template.js`, `*.stories.js`, and `*.mdx` file.
    - In the `*.stories.js` file, define the available knobs and properties for your component, as well as any standard variations you want to surface in [Storybook](https://storybook.js.org/docs/react/writing-stories/introduction).
    - Update the `template.js` file with the markup, using [lit-html syntax](https://lit.dev/docs/templates/overview/) to adjust results based on the provided settings from the Storybook knobs.
@@ -175,28 +175,28 @@ To import shared types into your story, use the following syntax:
 
 ```js
 import {
-  isActive,
-  isDisabled,
-  isFocused,
-  isHovered,
-  isSelected,
+	isActive,
+	isDisabled,
+	isFocused,
+	isHovered,
+	isSelected,
 } from "@spectrum-css/preview/types";
 
 export default {
-  argTypes: {
-    isDisabled,
-    isSelected,
-    isHovered,
-    isFocused,
-    isActive,
-  },
-  args: {
-    isDisabled: false,
-    isSelected: false,
-    isHovered: false,
-    isFocused: false,
-    isActive: false,
-  },
+	argTypes: {
+		isDisabled,
+		isSelected,
+		isHovered,
+		isFocused,
+		isActive,
+	},
+	args: {
+		isDisabled: false,
+		isSelected: false,
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
+	},
 };
 ```
 
@@ -348,80 +348,80 @@ import "../themes/express.css";
 import "../themes/spectrum.css";
 
 export const Template = (
-  {
-    rootClass = "spectrum-Tag",
-    size = "m",
-    iconName,
-    avatarUrl,
-    label,
-    isSelected = false,
-    isEmphasized = false,
-    isDisabled = false,
-    isInvalid = false,
-    hasClearButton = false,
-    id,
-    customClasses = [],
-    customStyles = {},
-  },
-  context,
+	{
+		rootClass = "spectrum-Tag",
+		size = "m",
+		iconName,
+		avatarUrl,
+		label,
+		isSelected = false,
+		isEmphasized = false,
+		isDisabled = false,
+		isInvalid = false,
+		hasClearButton = false,
+		id,
+		customClasses = [],
+		customStyles = {},
+	},
+	context,
 ) => {
-  return html`
-    <div
-      class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--size${size?.toUpperCase()}`]:
-          typeof size !== "undefined",
-        "is-emphasized": isEmphasized,
-        "is-disabled": isDisabled,
-        "is-invalid": isInvalid,
-        "is-selected": isSelected,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
-      style=${styleMap(customStyles)}
-      id=${ifDefined(id)}
-      tabindex="0"
-    >
-      ${when(avatarUrl && !iconName, () =>
-        Avatar(
-          {
-            image: avatarUrl,
-            size: "50",
-          },
-          context,
-        ),
-      )}
-      ${when(iconName, () =>
-        Icon(
-          {
-            iconName,
-            customClasses: [`${rootClass}s-itemIcon`],
-          },
-          context,
-        ),
-      )}
-      <span
-        class=${classMap({
-          [`${rootClass}s-itemLabel`]: true,
-        })}
-        >${label}</span
-      >
-      ${when(hasClearButton, () =>
-        ClearButton(
-          {
-            customClasses: [`${rootClass}-clearButton`],
-            onclick: (evt) => {
-              const el = evt.target;
-              if (!el) return;
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				"is-emphasized": isEmphasized,
+				"is-disabled": isDisabled,
+				"is-invalid": isInvalid,
+				"is-selected": isSelected,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+			id=${ifDefined(id)}
+			tabindex="0"
+		>
+			${when(avatarUrl && !iconName, () =>
+				Avatar(
+					{
+						image: avatarUrl,
+						size: "50",
+					},
+					context,
+				),
+			)}
+			${when(iconName, () =>
+				Icon(
+					{
+						iconName,
+						customClasses: [`${rootClass}s-itemIcon`],
+					},
+					context,
+				),
+			)}
+			<span
+				class=${classMap({
+					[`${rootClass}s-itemLabel`]: true,
+				})}
+				>${label}</span
+			>
+			${when(hasClearButton, () =>
+				ClearButton(
+					{
+						customClasses: [`${rootClass}-clearButton`],
+						onclick: (evt) => {
+							const el = evt.target;
+							if (!el) return;
 
-              const wrapper = el.closest(rootClass);
-              wrapper.parentNode.removeChild(wrapper);
-            },
-          },
-          context,
-        ),
-      )}
-    </div>
-  `;
+							const wrapper = el.closest(rootClass);
+							wrapper.parentNode.removeChild(wrapper);
+						},
+					},
+					context,
+				),
+			)}
+		</div>
+	`;
 };
 ```
 
@@ -438,24 +438,24 @@ import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
 export const AccordionGroup = Variants({
-  Template,
-  testData: [
-    {
-      testHeading: "Standard",
-    },
-    {
-      testHeading: "Compact",
-      density: "compact",
-      collapseAll: true,
-      withStates: false,
-    },
-  ],
-  stateData: [
-    {
-      testHeading: "Disabled",
-      disableAll: true,
-    },
-  ],
+	Template,
+	testData: [
+		{
+			testHeading: "Standard",
+		},
+		{
+			testHeading: "Compact",
+			density: "compact",
+			collapseAll: true,
+			withStates: false,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			disableAll: true,
+		},
+	],
 });
 ```
 
@@ -474,7 +474,7 @@ In the event that you don't want a story to be tested in Chromatic, you can use 
 
 ```js
 Default.parameters = {
-  chromatic: { disableSnapshot: true },
+	chromatic: { disableSnapshot: true },
 };
 ```
 

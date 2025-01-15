@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
 @import "@spectrum-css/commons/basebutton.css";
 
@@ -222,7 +223,7 @@ a.spectrum-CloseButton {
 	background-color: var(--highcontrast-closebutton-static-background-color-default, var(--mod-closebutton-static-background-color-default, var(--spectrum-closebutton-static-background-color-default)));
 
 	&:hover {
-		background-color: var(--highcontrast-closebutton-static-background-color-hover, var(--mod-closebutton-static-background-color-hover, var(--spectrum-closebutton-static-background-color-hover)));
+		background-color: var(--mod-closebutton-static-background-color-hover, var(--spectrum-closebutton-static-background-color-hover));
 
 		.spectrum-CloseButton-UIIcon {
 			color: var(--highcontrast-closebutton-icon-color-default, var(--mod-closebutton-icon-color-default, var(--spectrum-closebutton-icon-color-default)));
@@ -230,7 +231,7 @@ a.spectrum-CloseButton {
 	}
 
 	&:active {
-		background-color: var(--highcontrast-closebutton-static-background-color-down, var(--mod-closebutton-static-background-color-down, var(--spectrum-closebutton-static-background-color-down)));
+		background-color: var(--mod-closebutton-static-background-color-down, var(--spectrum-closebutton-static-background-color-down));
 
 		.spectrum-CloseButton-UIIcon {
 			color: var(--highcontrast-closebutton-icon-color-default, var(--mod-closebutton-icon-color-default, var(--spectrum-closebutton-icon-color-default)));
@@ -239,7 +240,7 @@ a.spectrum-CloseButton {
 
 	&:focus-visible,
 	&.is-keyboardFocused {
-		background-color: var(--highcontrast-closebutton-static-background-color-focus, var(--mod-closebutton-static-background-color-focus, var(--spectrum-closebutton-static-background-color-focus)));
+		background-color: var(--mod-closebutton-static-background-color-focus, var(--spectrum-closebutton-static-background-color-focus));
 
 		.spectrum-CloseButton-UIIcon {
 			color: var(--highcontrast-closebutton-icon-color-default, var(--mod-closebutton-icon-color-default, var(--spectrum-closebutton-icon-color-default)));
@@ -261,7 +262,7 @@ a.spectrum-CloseButton {
 .spectrum-CloseButton--staticBlack:disabled,
 .spectrum-CloseButton--staticWhite:disabled {
 	.spectrum-CloseButton-UIIcon {
-		color: var(--highcontrast-closebutton-icon-disabled, var(--mod-closebutton-icon-color-disabled, var(--spectrum-closebutton-icon-color-disabled)));
+		color: var(--mod-closebutton-icon-color-disabled, var(--spectrum-closebutton-icon-color-disabled));
 	}
 }
 

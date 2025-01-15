@@ -25,7 +25,13 @@ module.exports = function ({ setName, subSystemName } = {}) {
 		return {
 			...baseConfig,
 			destination: "global-vars.css",
-			filter: (token) => !token.path.includes("sets"),
+			filter: (token) => {
+				if (token.name.startsWith("spectrum-android")) {
+					return false;
+				}
+
+				return !token.path.includes("sets");
+			},
 			options: {
 				...baseConfig.options,
 				selector: ".spectrum",
@@ -70,6 +76,10 @@ module.exports = function ({ setName, subSystemName } = {}) {
 		const tokenSets = getSets(token);
 
 		if (tokenSets.includes("wireframe")) return false;
+
+		if (token.name.startsWith("spectrum-android")) {
+			return false;
+		}
 
 		if (!setName) {
 			if (!subSystemName && tokenSets.length === 0) {

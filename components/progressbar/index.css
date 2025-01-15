@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-ProgressBar {
 	/* Static tokens */
 	--spectrum-progressbar-animation-ease-in-out-indeterminate: var(--spectrum-animation-ease-in-out);

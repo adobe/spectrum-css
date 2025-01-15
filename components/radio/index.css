@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
 
 /*
@@ -385,7 +386,7 @@
 		inline-size: var(--mod-radio-button-control-size, var(--spectrum-radio-button-control-size));
 		block-size: var(--mod-radio-button-control-size, var(--spectrum-radio-button-control-size));
 
-		background-color: var(--highcontrast-radio-button-background-color, var(--mod-radio-button-background-color, var(--spectrum-radio-button-background-color)));
+		background-color: var(--mod-radio-button-background-color, var(--spectrum-radio-button-background-color));
 
 		border-radius: 50%;
 		border-width: var(--mod-radio-border-width, var(--spectrum-radio-border-width));

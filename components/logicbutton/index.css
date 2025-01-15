@@ -11,9 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "@spectrum-css/commons/basebutton.css";
-@import "./themes/express.css";
-
 .spectrum-LogicButton {
 	--spectrum-logic-button-height: 24px;
 	--spectrum-logic-button-padding: var(--spectrum-component-edge-to-text-50);
@@ -24,7 +21,7 @@
 	--spectrum-logic-button-border-radius: var(--spectrum-corner-radius-100);
 
 	--spectrum-logic-button-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
-	--spectrum-logic-button-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-logic-button-focus-indicator-gap: var(--mod-logic-button-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
 	--spectrum-logic-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
 	--spectrum-logic-button-and-text-color: var(--spectrum-white);
@@ -50,8 +47,47 @@
 }
 
 .spectrum-LogicButton {
-	@extend %spectrum-BaseButton;
-	@extend %spectrum-ButtonWithFocusRing;
+	cursor: pointer;
+	user-select: none;
+
+	/* Contain halo */
+	position: relative;
+
+	/* Show the button overflow in Edge. */
+	overflow: visible;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	box-sizing: border-box;
+
+	/* Remove button the margin in Firefox and Safari. */
+	margin: 0;
+
+	/* @deprecation --mod-sans-font-family-stack has been renamed and will be removed in a future version. */
+	font-family: var(--mod-button-font-family, var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack)));
+
+	text-decoration: none;
+
+	/* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
+	text-transform: none;
+
+	/* Adjacent buttons should be aligned correctly */
+	vertical-align: top;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari (normalize). */
+	-webkit-appearance: button;
+
+	border-style: solid;
+
+	transition:
+		background var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
+		border-color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
+		color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
+		box-shadow var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	block-size: var(--mod-logic-button-height, var(--spectrum-logic-button-height));
 	padding: var(--mod-logic-button-padding, var(--spectrum-logic-button-padding));
@@ -64,16 +100,46 @@
 	line-height: 0;
 
 	&::after {
-		/* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
-		border-radius: calc(var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius)) + var(--mod-logic-button-focus-indicator-gap, var(--spectrum-logic-button-focus-indicator-gap)));
-	}
-}
+		border-radius: calc(var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius)) + var(--spectrum-logic-button-focus-indicator-gap));
 
-.spectrum-LogicButton {
+		content: "";
+
+		position: absolute;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
+
+		display: block;
+
+		margin: calc(-1 * var(--spectrum-logic-button-focus-indicator-gap));
+
+		/* @deprecation --mod-animation-duration-100 has been renamed and will be removed in a future version. */
+		transition:
+			opacity var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)))) ease-out,
+			margin var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)))) ease-out;
+	}
+
+	/* Remove the inner border and padding in Firefox (normalize). */
+	&::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		cursor: default;
+	}
+
 	&:focus-visible {
 		outline: none;
 
 		&::after {
+			margin: calc(-2 * var(--spectrum-logic-button-focus-indicator-gap));
 			box-shadow: 0 0 0 var(--mod-logic-button-focus-indicator-width, var(--spectrum-logic-button-focus-indicator-width)) var(--highcontrast-logic-button-focus-indicator-color, var(--mod-logic-button-focus-indicator-color, var(--spectrum-logic-button-focus-indicator-color)));
 		}
 	}

@@ -24,8 +24,6 @@
 | `--mod-button-edge-to-text`                |
 | `--mod-button-edge-to-visual`              |
 | `--mod-button-edge-to-visual-only`         |
-| `--mod-button-focus-indicator-gap`         |
-| `--mod-button-focus-ring-border-radius`    |
 | `--mod-button-focus-ring-color`            |
 | `--mod-button-focus-ring-gap`              |
 | `--mod-button-focus-ring-thickness`        |

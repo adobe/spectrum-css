@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-DropZone {
 	--spectrum-drop-zone-padding: var(--spectrum-spacing-400);
 	--spectrum-drop-zone-illustration-to-heading: var(--spectrum-spacing-400);

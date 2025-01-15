@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 @media (forced-colors: active) {
 	.spectrum-DropIndicator {
 		--highcontrast-dropindicator-color: Highlight;

@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
 
 .spectrum-Stepper {
@@ -273,7 +274,7 @@
 	border-start-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
 	border-end-end-radius: var(--mod-stepper-border-radius, var(--spectrum-stepper-border-radius));
 
-	background-color: var(--highcontrast-stepper-buttons-background-color, var(--mod-stepper-buttons-background-color, var(--spectrum-stepper-buttons-background-color)));
+	background-color: var(--mod-stepper-buttons-background-color, var(--spectrum-stepper-buttons-background-color));
 	transition: border-color var(--mod-stepper-animation-duration, var(--spectrum-stepper-animation-duration)) ease-in-out;
 }
 

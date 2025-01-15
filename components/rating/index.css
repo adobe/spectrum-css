@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
 
 .spectrum-Rating {
@@ -45,7 +46,7 @@
 
 .spectrum-Rating {
 	&.is-focused {
-		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
+		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
 
 		.spectrum-Rating-icon {
 			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
@@ -59,16 +60,16 @@
 	&:hover {
 		.spectrum-Rating-icon {
 			/* Make all stars colored when the component is hovered */
-			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+			color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 		}
 
 		/* The icon that's actually hovered is darker */
 		.spectrum-Rating-icon:hover {
-			color: var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
+			color: var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover));
 		}
 
 		.spectrum-Rating-icon:active {
-			color: var(--highcontrast-rating-icon-color-down, var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down)));
+			color: var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down));
 		}
 
 		/* Show which star is currently selected */
@@ -176,16 +177,16 @@
 }
 
 .spectrum-Rating-icon {
-	color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+	color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 
 	&.is-selected {
-		color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+		color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 	}
 
 	&:hover {
 		/* All stars following the hovered star */
 		& ~ .spectrum-Rating-icon {
-			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+			color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 		}
 	}
 }
@@ -193,12 +194,12 @@
 .spectrum-Rating--emphasized {
 	&.is-focused {
 		.spectrum-Rating-icon.is-selected {
-			color: var(--highcontrast-rating-emphasized-icon-color-key-focus, var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus)));
+			color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
 		}
 	}
 
 	.spectrum-Rating-icon {
-		color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+		color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 
 		&.is-selected {
 			color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
@@ -206,7 +207,7 @@
 
 		/* All stars following the hovered star */
 		&:hover ~ .spectrum-Rating-icon {
-			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+			color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 		}
 	}
 
@@ -220,7 +221,7 @@
 		}
 
 		&:hover ~ .spectrum-Rating-icon {
-			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+			color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 		}
 
 		&:active {

@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-TreeView {
 	--spectrum-treeview-line-height: var(--spectrum-line-height-200);
 	--spectrum-treeview-margin-block: 1em;
