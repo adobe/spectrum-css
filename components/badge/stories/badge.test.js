@@ -17,7 +17,7 @@ export const BadgeGroup = Variants({
 	Template: Badges,
 	sizeDirection: "row",
 	testData: [
-		...["neutral", "accent", "informative", "positive", "negative"].map((variant) =>
+		...["neutral", "accent", "informative", "positive", "negative", "notice"].map((variant) =>
 			({
 				testHeading: capitalize(variant),
 				wrapperStyles: {
