@@ -1,20 +1,9 @@
 import { DocsContext } from "@storybook/blocks";
-import { styled, ThemeProvider } from "@storybook/theming";
+import { ThemeProvider } from "@storybook/theming";
 import React, { useContext } from "react";
+import { Container } from "./Layouts.jsx";
 
-import "@spectrum-css/tokens/dist/index.css";
-
-const Container = styled.section`
-    color: var(--spectrum-neutral-content-color-default);
-    background-color: var(--spectrum-background-layer-1-color);
-    display: ${props => props.display ?? "flex" };
-    padding-inline: 48px 24px;
-    padding-block: 60px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 60px;
-    border-radius: 16px;
-`;
+import tokenStyles from "@spectrum-css/tokens/dist/index.css?raw";
 
 /**
  * A container that wraps the children in a themed context
@@ -35,6 +24,7 @@ export const ThemeContainer = ({ color, scale, children, ...props }) => {
 
     return (
         <ThemeProvider theme={theme}>
+            <style>{tokenStyles}</style>
             <Container {...props} className={`spectrum spectrum--${theme.color} spectrum--${theme.scale}`}>
                 {children}
             </Container>

@@ -4,82 +4,13 @@ import { styled } from "@storybook/theming";
 import React, { useEffect, useState } from "react";
 
 import { Body, Code, Heading } from "./Typography.jsx";
+import { DDefinition, DList, DTerm } from "./Layouts.jsx";
 import { fetchToken } from "./utilities.js";
 
 import AdobeSVG from "../assets/images/adobe_logo.svg?raw";
 import GitHubSVG from "../assets/images/github_logo.svg?raw";
 import NpmSVG from "../assets/images/npm_logo.svg?raw";
 import WCSVG from "../assets/images/wc_logo.svg?raw";
-
-export const DList = styled.dl`
-	display: grid;
-	grid-template-columns: max-content 1fr;
-	column-gap: 20px;
-	row-gap: 14px;
-	padding-block: 0.75rem;
-	margin-block: 0.5rem 2.5rem;
-	border-block: ${props => !props.skipBorder ? "1px solid hsla(203deg, 50%, 30%, 15%)" : "0"};
-
-	& & {
-		border-block: 0px;
-		margin-block: 0;
-		padding-inline-start: 0.75rem;
-		padding-block-start: 0.25rem;
-	}
-
-	details > & {
-		margin-inline-start: 12px;
-	}
-`;
-
-export const DTerm = styled.dt`
-	font-weight: ${props => props.theme.typography.weight.bold ?? "bold"};
-	padding: 0;
-	margin: 0;
-	font-size: ${props => props.theme.typography.size.s};
-`;
-
-export const Details = styled.details`
-	cursor: pointer;
-	grid-column: 1 / 3;
-	padding: 0;
-
-	&[open] > summary::before {
-		transform: rotate(90deg);
-	}
-`;
-
-export const Summary = styled.summary`
-	display: inline-flex;
-	align-items: center;
-	font-weight: ${props => props.theme.typography.weight.bold ?? "bold"};
-	padding: 0;
-	padding-block-end: 0.75rem;
-	margin: 0;
-	font-size: ${props => props.theme.typography.size.s};
-	list-style: none;
-
-	&::-webkit-details-marker {
-		display: none;
-	}
-
-	&::before {
-		content: '';
-		width: 10px;
-		height: 10px;
-		background-image: url('data:image/svg+xml,<svg focusable="false" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M3 9.95a.875.875 0 0 1-.615-1.498L5.88 5 2.385 1.547A.875.875 0 0 1 3.615.302L7.74 4.377a.876.876 0 0 1 0 1.246L3.615 9.698A.87.87 0 0 1 3 9.95"></path></svg>');
-		background-size: cover;
-		margin-inline-end: .75em;
-		transition: 0.2s;
-	}
-`;
-
-export const DDefinition = styled.dd`
-	font-style: normal;
-	padding: 0;
-	margin: 0;
-	font-size: ${props => props.theme.typography.size.s};
-`;
 
 export const DSet = ({ term, children }) => {
 	return (

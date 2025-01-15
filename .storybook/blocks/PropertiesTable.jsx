@@ -1,15 +1,9 @@
 import { DocsContext, useOf } from "@storybook/blocks";
 import { NAVIGATE_URL } from "@storybook/core-events";
-import { styled } from "@storybook/theming";
 import React, { useContext } from 'react';
-
+import { Table } from "./Layouts.jsx";
 import { ThemeContainer } from "./ThemeContainer.jsx";
 import { Body, Code, LinkableHeading } from "./Typography.jsx";
-
-export const Table = styled.table`
-	--mod-table-cursor-row-default: auto;
-	padding-block: 10px;
-`;
 
 /**
  * Displays the modifiable custom properties for a component based on the metadata provided in the story.

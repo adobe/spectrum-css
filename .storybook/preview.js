@@ -35,7 +35,6 @@ export const parameters = {
 	panelPosition: "bottom",
 	showToolbar: true,
 	isFullscreen: false,
-	actions: { argTypesRegex: "^on.*" },
 	options: {
 		storySort: {
 			method: "alphabetical-by-kind",

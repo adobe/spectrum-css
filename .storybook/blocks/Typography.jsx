@@ -1,5 +1,5 @@
 import { styled } from "@storybook/theming";
-import { fetchToken } from "./utilities";
+import { fetchToken } from "./utilities.js";
 
 export const Heading = styled.h3`
     font-family: ${({ theme }) => theme.typography.fontFamily};

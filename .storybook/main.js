@@ -65,8 +65,8 @@ export default {
 		"@etchteam/storybook-addon-status",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
 		"@storybook/addon-interactions",
-		// https://www.chromatic.com/docs/visual-testing-addon/
-		"@chromaui/addon-visual-tests",
+		// https://docs.chromatic.com/docs/visual-tests-addon/
+		"@chromatic-com/storybook",
 		// https://storybook.js.org/addons/@storybook/addon-designs/
 		"@storybook/addon-designs",
 	],
@@ -101,6 +101,19 @@ export default {
 				alias: components.map(component => ({ find: `@spectrum-css/${component}`, replacement: path.resolve(__dirname, `../components/${component}`) })),
 			}
 		});
+	},
+	build: {
+		test: {
+			disabledAddons: [
+				"@whitespace/storybook-addon-html",
+				"@etchteam/storybook-addon-status",
+				"@storybook/addon-interactions",
+			],
+			disableBlocks: false,
+			disableAutoDocs: false,
+			disableMDXEntries: false,
+			disableDocgen: false,
+		},
 	},
 	framework: "@storybook/web-components-vite",
 	typescript: {
