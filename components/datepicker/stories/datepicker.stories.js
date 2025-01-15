@@ -1,6 +1,7 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isInvalid, isOpen, isQuiet, isReadOnly, isRequired, isValid } from "@spectrum-css/preview/types";
+import { within } from "@storybook/test";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { DatePickerGroup } from "./datepicker.test.js";
@@ -76,6 +77,12 @@ export default {
 		},
 		packageJson,
 		metadata,
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement);
+
+		// Wait for the popover to load
+		await canvas.findAllByRole("presentation");
 	},
 };
 

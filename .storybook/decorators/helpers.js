@@ -68,7 +68,7 @@ export function fetchContainers(id, isDocs = false, isTesting = false) {
 	}
 	else if (isTesting) {
 		// Only capture the top-level container for testing previews
-		containers.push(...document.querySelectorAll("[data-inner-container]"));
+		containers.push(...document.querySelectorAll("body,[data-testing-preview],[data-testing-preview] [data-inner-container]"));
 	}
 
 	if (containers.length === 0) containers = [document.body];

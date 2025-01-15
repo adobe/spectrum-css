@@ -27,9 +27,11 @@ export const Template = ({
 	nextHandler,
 	id = getRandomId("calendar"),
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-
-	const lang = globals.lang ?? "en-US";
+	const {
+		parameters: { showTestingGrid = false } = {},
+		globals: { lang = "en-US" } = {},
+		updateArgs
+	} = context;
 
 	const DOW = [
 		"Sunday",
@@ -67,7 +69,7 @@ export const Template = ({
 	};
 
 	let today = new Date();
-	if (window.isChromatic()) {
+	if (showTestingGrid) {
 		today = new Date(`${month ?? "January"} 1, ${year ?? "2021"}`);
 	}
 

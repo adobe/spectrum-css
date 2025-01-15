@@ -1,4 +1,4 @@
-import { setConsoleOptions } from "@storybook/addon-console";
+
 import {
 	withActions,
 	withArgEvents,
@@ -25,19 +25,6 @@ import "@spectrum-css/bundle/dist/index.min.css";
 
 // Import the custom base styles
 import "./assets/base.css";
-
-window.global = window;
-
-const panelExclude = setConsoleOptions({}).panelExclude || [];
-setConsoleOptions({
-	panelExclude: [
-		...panelExclude,
-		/deprecated/,
-		/TypeError/,
-		/postcss/,
-		/stylelint/,
-	],
-});
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 export const parameters = {
@@ -76,33 +63,28 @@ export const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "[data-html-preview]:first-of-type",
+		root: "[data-html-preview]:first-of-type > *",
 		removeComments: true,
 		prettier: {
-			tabWidth: 4,
+			tabWidth: 2,
 			useTabs: false,
 			htmlWhitespaceSensitivity: "ignore",
 		},
 		highlighter: {
-			showLineNumbers: true,
 			wrapLines: true,
 		},
 	},
 	docs: {
+		defaultName: "Docs",
 		page: DocumentationTemplate,
 		story: { inline: true },
 		source: {
-			type: "dynamic",
-			language: "html",
+			format: "html",
+			excludeDecorators: true,
 		},
 	},
 	status: {
 		statuses: {
-			migrated: {
-				background: "#f0f0f0",
-				color: "#444",
-				description: "Migrated to the latest tokens.",
-			},
 			deprecated: {
 				background: "rgb(211,21,16)",
 				color: "#fff",

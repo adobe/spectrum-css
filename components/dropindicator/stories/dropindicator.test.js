@@ -3,7 +3,6 @@ import { Template } from "./template.js";
 
 export const DropIndicatorGroup = Variants({
 	Template,
-	skipBorders: true,
 	testData: [
 		{
 			testHeading: "Horizontal",

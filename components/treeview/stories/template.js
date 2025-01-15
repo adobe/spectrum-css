@@ -103,7 +103,7 @@ export const TreeViewItem = ({
 							: size == "l"  ? "400"
 							: size == "xl" ? "600"
 							: "300",
-						
+
 						isLayer: true,
 						isSelected,
 						isDisabled,
