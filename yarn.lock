@@ -4076,7 +4076,6 @@ __metadata:
     "@spectrum-css/asset": ">=5"
     "@spectrum-css/checkbox": ">=9"
     "@spectrum-css/icon": ">=7"
-    "@spectrum-css/quickaction": ">=3"
     "@spectrum-css/tokens": ">=14.5.0 || >=15"
     "@spectrum-css/typography": ">=6"
   peerDependenciesMeta:
@@ -4773,15 +4772,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/pagination@workspace:components/pagination"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.0.1"
-    "@spectrum-css/button": "npm:14.0.1"
-    "@spectrum-css/icon": "npm:9.0.1"
-    "@spectrum-css/textfield": "npm:8.0.1"
-    "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
+    "@spectrum-css/actionbutton": "workspace:^"
+    "@spectrum-css/button": "workspace:^"
+    "@spectrum-css/icon": "workspace:^"
+    "@spectrum-css/textfield": "workspace:^"
+    "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=6"
     "@spectrum-css/button": ">=13"
@@ -5301,10 +5296,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^14.6.0":
-  version: 14.6.0
-  resolution: "@spectrum-css/tokens@npm:14.6.0"
-  checksum: 10c0/62343030d55fce9de192ca0d1e13bd1ee147c1aba45ecf6b8db27c1740865f9645af8b0b260f0723ce295af2b83cd2014962d62af61b8827a548bc80be9f1012
+"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^15.2.0":
+  version: 15.2.0
+  resolution: "@spectrum-css/tokens@npm:15.2.0"
+  checksum: 10c0/dd8d1dd39fc72d57bc12e183b3fda7654a7ebf90902267e8c4145d54b09eecfc150f09c92ec837b6c501c0c9da573e2d9b0bc3745c7c8981c3a39ee03367fc24
   languageName: node
   linkType: hard
 
@@ -9171,7 +9166,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.0.0, debug@npm:^4.1.1, debug@npm:^4.3.7, debug@npm:~4.4.0":
+"debug@npm:^4.0.0, debug@npm:^4.3.7":
+  version: 4.3.7
+  resolution: "debug@npm:4.3.7"
+  dependencies:
+    ms: "npm:^2.1.3"
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 10c0/1471db19c3b06d485a622d62f65947a19a23fbd0dd73f7fd3eafb697eec5360cde447fb075919987899b1a2096e85d35d4eb5a4de09a57600ac9cf7e6c8e768b
+  languageName: node
+  linkType: hard
+
+"debug@npm:^4.1.1, debug@npm:~4.4.0":
   version: 4.4.0
   resolution: "debug@npm:4.4.0"
   dependencies:
@@ -18615,7 +18622,7 @@ __metadata:
     "@commitlint/cli": "npm:^19.6.1"
     "@commitlint/config-conventional": "npm:^19.6.0"
     "@nx/devkit": "npm:^19.8.2"
-    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^14.6.0"
+    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^15.2.0"
     "@spectrum-tools/postcss-add-theming-layer": "workspace:^"
     "@spectrum-tools/postcss-property-rollup": "workspace:^"
     "@spectrum-tools/postcss-rgb-mapping": "workspace:^"
