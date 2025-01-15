@@ -15,20 +15,6 @@ export const CoachIndicatorGroup = Variants({
 			variant: "default",
 		},
 		{
-			testHeading: "Dark",
-			variant: "dark",
-			wrapperStyles: {
-				"background-color": "rgba(255 255 255 / 80%)",
-			},
-		},
-		{
-			testHeading: "Light",
-			variant: "light",
-			wrapperStyles: {
-				"background-color": "rgba(0 0 0 / 80%)",
-			},
-		},
-		{
 			testHeading: "Static White",
 			staticColor: "white"
 		},

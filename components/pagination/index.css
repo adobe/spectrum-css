@@ -11,14 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-Pagination {
-	--spectrum-pagination-counter-margin-inline-start: var(--spectrum-pagination-item-inline-spacing);
-	--spectrum-pagination-page-button-inline-spacing: var(--spectrum-pagination-item-inline-spacing);
-	--spectrum-pagination-counter-color: var(--spectrum-neutral-subdued-content-color-default);
-	--spectrum-pagination-counter-font-size: var(--spectrum-font-size-100);
-	--spectrum-pagination-counter-line-height: var(--spectrum-line-height-100);
+	--spectrum-pagination-counter-color: var(--mod-pagination-counter-color, var(--spectrum-neutral-subdued-content-color-default));
+	--spectrum-pagination-counter-font-size: var(--mod-pagination-counter-font-size, var(--spectrum-font-size-100));
+	--spectrum-pagination-counter-line-height: var(--mod-pagination-counter-line-height, var(--spectrum-line-height-100));
+	--spectrum-pagination-counter-inline-spacing: var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-item-inline-spacing));
 
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
@@ -34,31 +31,32 @@
 
 /* Explicit variant elements */
 .spectrum-Pagination-textfield {
+	/* @passthrough start */
 	--mod-textfield-width: var(--mod-pagination-textfield-width, var(--spectrum-pagination-textfield-width));
 	--mod-textfield-min-width: var(--mod-pagination-textfield-width, var(--spectrum-pagination-textfield-width));
+	/* @passthrough end */
 }
 
 .spectrum-Pagination-counter {
-	font-size: var(--mod-pagination-counter-font-size, var(--spectrum-pagination-counter-font-size));
-	line-height: var(--mod-pagination-counter-line-height, var(--spectrum-pagination-counter-line-height));
-	margin-inline-start: var(--mod-pagination-counter-margin-inline-start, var(--spectrum-pagination-counter-margin-inline-start));
-	color: var(--mod-pagination-counter-color, var(--spectrum-pagination-counter-color));
+	font-size: var(--spectrum-pagination-counter-font-size);
+	line-height: var(--spectrum-pagination-counter-line-height);
+	color: var(--spectrum-pagination-counter-color);
 }
 
-/* Previous and next buttons */
-.spectrum-Pagination-prevButton {
-	margin-inline-end: var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-page-button-inline-spacing));
-}
-
+.spectrum-Pagination-counter,
 .spectrum-Pagination-nextButton {
-	margin-inline-start: var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-page-button-inline-spacing));
+	margin-inline-start: var(--spectrum-pagination-counter-inline-spacing);
 }
 
-/* Correct the direction of the arrows when viewing right-to-left */
+.spectrum-Pagination-prevButton {
+	margin-inline-end: var(--spectrum-pagination-counter-inline-spacing);
+}
+
+/* Correct the direction of the arrows */
+.spectrum-Pagination-nextButton .spectrum-Icon {
+	transform: var(--spectrum-logical-rotation,);
+}
+
 .spectrum-Pagination-prevButton .spectrum-Icon {
 	transform: var(--spectrum-logical-rotation,) rotate(180deg);
-}
-
-.spectrum-Pagination-nextButton .spectrum-Icon {
-	transform: var(--spectrum-logical-rotation);
 }

@@ -12,7 +12,7 @@
 
 import { existsSync, readFileSync } from "fs";
 import { createRequire } from "module";
-import { join, sep } from "path";
+import { extname, join, sep } from "path";
 const require = createRequire(import.meta.url);
 
 import stylelint from "stylelint";
@@ -94,10 +94,25 @@ const ruleFunction = (enabled, options = {}) => {
 			const content = readFileSync(req, "utf8");
 			if (!content) return;
 
-			// Fetch all defined custom properties
-			parse(content).walkDecls(/^--/, ({ prop }) => {
-				sharedDefinitions.add(prop);
-			});
+			// If the file is a CSS file, parse it for custom properties
+			if (extname(req) === ".css") {
+				// Fetch all defined custom properties
+				parse(content).walkDecls(/^--/, ({ prop }) => {
+					sharedDefinitions.add(prop);
+				});
+			}
+			else if (extname(req) === ".json") {
+				const data = JSON.parse(content);
+				Object.keys(data).forEach((key) => {
+					if (typeof key !== "string") return;
+					if (!key.startsWith("--")) {
+						sharedDefinitions.add(`--spectrum-${key.replace(".", "-")}`);
+					}
+					else {
+						sharedDefinitions.add(key);
+					}
+				});
+			}
 		}
 
 		// Check dependencies for custom properties
@@ -115,8 +130,7 @@ const ruleFunction = (enabled, options = {}) => {
 
 			if (allDependencies.size === 0) return;
 
-			// @todo this is a hard-coded assumption that we only care about spectrum-css dependencies
-			for (const dep of [...allDependencies].filter(dep => dep.startsWith("@spectrum-css"))) {
+			for (const dep of [...allDependencies]) {
 				try {
 					fetchResolutions(dep);
 				}

@@ -13,9 +13,17 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"exports": {
+		".": "./index.css",
+		"./*.css": "./*.css",
+		"./CHANGELOG.md": "./CHANGELOG.md",
+		"./README.md": "./README.md",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
+	},
 	"main": "index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"

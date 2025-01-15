@@ -1,0 +1,31 @@
+{
+  "name": "@spectrum-tools/postcss-property-rollup",
+  "version": "0.0.0",
+  "description": "Combines custom properties from multiple selectors into a single selector",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "contributors": [
+    "Cassondra Roberts <castastrophe@users.noreply.github.com>"
+  ],
+  "main": "index.js",
+  "files": [
+    "package.json",
+    "index.js",
+    "*.md"
+  ],
+  "peerDependencies": {
+    "postcss": ">=8"
+  },
+  "devDependencies": {
+    "ava": "^6.2.0",
+    "c8": "^10.1.2",
+    "postcss": "^8.4.49"
+  },
+  "keywords": [
+    "css",
+    "theming",
+    "custom properties",
+    "postcss",
+    "postcss-plugin"
+  ]
+}

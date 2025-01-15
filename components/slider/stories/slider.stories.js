@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SliderGroup } from "./slider.test.js";
 import { Template } from "./template.js";
@@ -139,6 +139,10 @@ export default {
 				"mousedown .spectrum-Slider-handle",
 				"change .spectrum-Slider-input",
 			],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=842-1056",
 		},
 		packageJson,
 		metadata,

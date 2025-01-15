@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-Avatar {
 	--spectrum-avatar-color-opacity: 1;
 
@@ -98,7 +96,7 @@
 	opacity: var(--mod-avatar-color-opacity, var(--spectrum-avatar-color-opacity));
 
 	&.is-disabled {
-		opacity: var(--highcontrast-avatar-color-opacity-disabled, var(--mod-avatar-color-opacity-disabled, var(--spectrum-avatar-color-opacity-disabled)));
+		opacity: var(--mod-avatar-color-opacity-disabled, var(--spectrum-avatar-color-opacity-disabled));
 	}
 }
 

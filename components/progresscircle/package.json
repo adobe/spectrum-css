@@ -19,19 +19,20 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./metadata.json": "./dist/metadata.json",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"

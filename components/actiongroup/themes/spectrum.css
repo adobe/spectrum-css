@@ -11,12 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
-	.spectrum-ActionGroup {
-		--spectrum-actiongroup-gap-size-compact: 0;
+/* @combine .spectrum.spectrum--legacy */
 
-		/* account for button border */
-		--spectrum-actiongroup-horizontal-spacing-compact: -1px;
-		--spectrum-actiongroup-vertical-spacing-compact: -1px;
-	}
-}
+@import "./spectrum-two.css";
