@@ -64,6 +64,8 @@
 
 	&.spectrum-ActionButton--quiet {
 		--mod-actionbutton-border-color-default: transparent;
+
+		--mod-actionbutton-background-color-default: transparent;
 		--mod-actionbutton-background-color-hover: var(--spectrum-gray-100);
 		--mod-actionbutton-background-color-down: var(--spectrum-gray-200);
 		--mod-actionbutton-background-color-focus: var(--spectrum-gray-100);
