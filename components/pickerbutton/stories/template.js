@@ -25,6 +25,7 @@ export const Template = ({
 	isRounded = false,
 	customStyles = {},
 	onclick,
+	tabindex,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
@@ -54,6 +55,7 @@ export const Template = ({
 				if (isDisabled) return;
 				updateArgs({ isOpen: !isOpen });
 			}}
+			tabindex=${ifDefined(tabindex)}
 		>
 			<div class="${rootClass}-fill">
 				${when(label, () => html`
