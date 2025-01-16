@@ -4779,11 +4779,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/pagination@workspace:components/pagination"
   dependencies:
-    "@spectrum-css/actionbutton": "workspace:^"
-    "@spectrum-css/button": "workspace:^"
-    "@spectrum-css/icon": "workspace:^"
-    "@spectrum-css/textfield": "workspace:^"
-    "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/actionbutton": "npm:7.0.1"
+    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/icon": "npm:9.0.1"
+    "@spectrum-css/textfield": "npm:8.0.1"
+    "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=6"
     "@spectrum-css/button": ">=13"
