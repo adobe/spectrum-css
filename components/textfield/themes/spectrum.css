@@ -18,5 +18,8 @@
 @container style(--system: legacy) {
 	.spectrum-Textfield {
 		--spectrum-textfield-background-color: var(--spectrum-gray-50);
+		--spectrum-textfield-background-color-disabled: var(--spectrum-disabled-background-color);
+
+		--spectrum-textfield-border-color-disabled: var(--spectrum-disabled-border-color);
 	}
 }

@@ -66,8 +66,6 @@
 	--spectrum-textfield-text-color-readonly: var(--spectrum-neutral-content-color-default);
 
 	/* Disabled Colors */
-	--spectrum-textfield-background-color-disabled: var(--spectrum-disabled-background-color);
-	--spectrum-textfield-border-color-disabled: var(--spectrum-disabled-border-color);
 	--spectrum-textfield-text-color-disabled: var(--spectrum-disabled-content-color);
 
 	/* Invalid Colors */
@@ -504,7 +502,7 @@
 	.spectrum-Textfield.is-disabled:hover &,
 	&:disabled {
 		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
-		border-color: transparent;
+		border-color: var(--mod-textfield-border-color-disabled, var(--spectrum-textfield-border-color-disabled));
 		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 
 		/* Disable the resize functionality when disabled */

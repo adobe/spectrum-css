@@ -227,6 +227,7 @@
   ],
   "global": [
     "--spectrum-animation-duration-100",
+    "--spectrum-border-width-100",
     "--spectrum-character-count-to-field-quiet-extra-large",
     "--spectrum-character-count-to-field-quiet-large",
     "--spectrum-character-count-to-field-quiet-medium",
@@ -247,8 +248,6 @@
     "--spectrum-component-height-75",
     "--spectrum-component-top-to-text-100",
     "--spectrum-corner-radius-100",
-    "--spectrum-disabled-background-color",
-    "--spectrum-disabled-border-color",
     "--spectrum-disabled-content-color",
     "--spectrum-field-edge-to-alert-icon-extra-large",
     "--spectrum-field-edge-to-alert-icon-large",
@@ -291,6 +290,11 @@
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
     "--spectrum-gray-25",
+    "--spectrum-gray-300",
+    "--spectrum-gray-500",
+    "--spectrum-gray-600",
+    "--spectrum-gray-800",
+    "--spectrum-gray-900",
     "--spectrum-help-text-to-component",
     "--spectrum-negative-border-color-default",
     "--spectrum-negative-border-color-focus",
@@ -324,7 +328,17 @@
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": ["--system-textfield-background-color"],
+  "system-theme": [
+    "--system-textfield-background-color",
+    "--system-textfield-background-color-disabled",
+    "--system-textfield-border-color",
+    "--system-textfield-border-color-disabled",
+    "--system-textfield-border-color-focus",
+    "--system-textfield-border-color-focus-hover",
+    "--system-textfield-border-color-hover",
+    "--system-textfield-border-color-keyboard-focus",
+    "--system-textfield-border-width"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-textfield-border-color",
