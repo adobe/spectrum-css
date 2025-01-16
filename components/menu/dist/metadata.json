@@ -169,6 +169,7 @@
     "--mod-menu-item-checkmark-height",
     "--mod-menu-item-checkmark-width",
     "--mod-menu-item-collapsible-no-icon-submenu-item-padding-x-start",
+    "--mod-menu-item-corner-radius",
     "--mod-menu-item-description-color-default",
     "--mod-menu-item-description-color-disabled",
     "--mod-menu-item-description-color-down",
@@ -250,6 +251,7 @@
     "--spectrum-menu-item-checkmark-width-medium",
     "--spectrum-menu-item-checkmark-width-small",
     "--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start",
+    "--spectrum-menu-item-corner-radius",
     "--spectrum-menu-item-description-color-default",
     "--spectrum-menu-item-description-color-disabled",
     "--spectrum-menu-item-description-color-down",
@@ -332,6 +334,7 @@
     "--spectrum-component-top-to-text-200",
     "--spectrum-component-top-to-text-300",
     "--spectrum-component-top-to-text-75",
+    "--spectrum-corner-radius-100",
     "--spectrum-disabled-content-color",
     "--spectrum-divider-thickness-medium",
     "--spectrum-divider-thickness-small",
@@ -376,7 +379,8 @@
   "system-theme": [
     "--system-menu-item-background-color-down",
     "--system-menu-item-background-color-hover",
-    "--system-menu-item-background-color-key-focus"
+    "--system-menu-item-background-color-key-focus",
+    "--system-menu-item-corner-radius"
   ],
   "passthroughs": [
     "--mod-checkbox-text-to-control",
