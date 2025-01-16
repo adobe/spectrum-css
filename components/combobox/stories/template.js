@@ -89,6 +89,7 @@ const Combobox = ({
 				onclick: function () {
 					updateArgs({ isOpen: !isOpen });
 				},
+				tabindex: "-1",
 			}, context)}
 		</div>
 	`;
