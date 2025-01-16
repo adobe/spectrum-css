@@ -17,7 +17,7 @@ const fetchPackage = async (path) =>
 
 export default async (plop) => {
 	/* Allow customization from the environment variables */
-	const rootFolder = process.env.ROOT_DIR ?? resolve(process.cwd(), "../");
+	const rootFolder = process.env.ROOT_DIR ?? resolve(process.cwd(), "../../");
 	const srcPath = process.env.COMPONENT_DIR ?? resolve(rootFolder, "components");
 	const projectName = process.env.PROJECT_NAME ?? "Spectrum CSS";
 	const pkg = await fetchPackage(rootFolder);

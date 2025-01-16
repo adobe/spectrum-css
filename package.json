@@ -33,7 +33,7 @@
 		"formatter": "nx run-many --target format --projects",
 		"lint": "yarn linter tag:component",
 		"linter": "nx run-many --target lint --verbose --projects",
-		"new": "nx run @spectrum-css/generator:new",
+		"new": "yarn workspace @spectrum-css/generator new",
 		"postinstall": "husky || true && yarn refresh",
 		"precommit": "lint-staged --allow-empty --config lint-staged.config.js",
 		"publish:docs": "cross-env NODE_ENV=production yarn build:docs && gh-pages -d dist/ -f -e . --nojekyll",
@@ -57,7 +57,6 @@
 		"plugins/*",
 		"tokens",
 		"ui-icons",
-		"generator",
 		".storybook",
 		".github/actions/*",
 		"tools/*"
