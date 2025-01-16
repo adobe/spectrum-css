@@ -82,6 +82,8 @@
 		--mod-actionbutton-border-color-hover: var(--spectrum-transparent-black-600);
 		--mod-actionbutton-border-color-down: var(--spectrum-transparent-black-700);
 		--mod-actionbutton-border-color-focus: var(--spectrum-transparent-black-600);
+		
+		--mod-actionbutton-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 
 		--spectrum-actionbutton-background-color-disabled: transparent;
 		--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-black-200);
@@ -104,6 +106,8 @@
 		--mod-actionbutton-border-color-hover: var(--spectrum-transparent-white-600);
 		--mod-actionbutton-border-color-down: var(--spectrum-transparent-white-700);
 		--mod-actionbutton-border-color-focus: var(--spectrum-transparent-white-600);
+		
+		--mod-actionbutton-focus-indicator-color: var(--spectrum-static-white-focus-indicator-color);
 
 		--spectrum-actionbutton-background-color-disabled: transparent;
 		--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-white-200);
