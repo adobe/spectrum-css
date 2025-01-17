@@ -1,10 +1,9 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-import { SizingTemplate } from "@spectrum-css/dropzone/stories/template.js";
+import { Template } from "@spectrum-css/dropzone/stories/template.js";
 import { default as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDragged } from "@spectrum-css/preview/types";
-import { html } from "lit";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { DropzoneGroup } from "./dropzone.test.js";
@@ -50,17 +49,7 @@ export default {
 };
 
 export const Default = DropzoneGroup.bind({});
-Default.args = {
-	description: [
-		() => {
-			return html`${Link({ url: "#", text: "Select a file" })} from your computer.`;
-		},
-	],
-	label: "Drop file to replace",
-	customStyles: {
-		width: "300px",
-	},
-};
+Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = DropzoneGroup.bind({});
@@ -74,7 +63,13 @@ WithForcedColors.parameters = {
 };
 
 
-export const Sizing = SizingTemplate.bind({});
+export const Sizing = (args, context) => Sizes({
+	Template: Template,
+	withBorder: false,
+	withHeader: false,
+	...args
+}, context);
+
 Sizing.args = {};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
