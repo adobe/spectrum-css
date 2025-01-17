@@ -1,5 +1,17 @@
 # Change Log
 
+## 4.0.0-next.1
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`a55fb01`](https://github.com/adobe/spectrum-css/commit/a55fb017d189d46371d3e5766bd866879af0cf7c) Thanks [@pfulton](https://github.com/pfulton)! - Restores missing custom properties that were flagged by the linter. The missing properties were copied from the spectrum two theme files in the foundations branch. This clears up all linter errors and warnings for these components.
+
+- Updated dependencies [[`d36242a`](https://github.com/adobe/spectrum-css/commit/d36242a48248547665059d3df074b9c5c2cbd0d5), [`46ae687`](https://github.com/adobe/spectrum-css/commit/46ae6870881d9d917568009fb4e0fcf647eb45a7)]:
+  - @spectrum-css/textfield@7.3.1-next.0
+  - @spectrum-css/popover@8.0.0-next.1
+  - @spectrum-css/menu@8.0.0-next.1
+  - @spectrum-css/pickerbutton@6.0.0-next.1
+
 ## 4.0.0-next.0
 
 ### Patch Changes

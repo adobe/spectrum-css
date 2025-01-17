@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-next.1
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`a55fb01`](https://github.com/adobe/spectrum-css/commit/a55fb017d189d46371d3e5766bd866879af0cf7c) Thanks [@pfulton](https://github.com/pfulton)! - Restores missing custom properties that were flagged by the linter. The missing properties were copied from the spectrum two theme files in the foundations branch. This clears up all linter errors and warnings for these components.
+
 ## 5.0.0-next.0
 
 ### Patch Changes

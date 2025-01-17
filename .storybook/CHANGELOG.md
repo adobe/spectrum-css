@@ -1,5 +1,14 @@
 # Change Log
 
+## 11.0.1-next.2
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`7d8a7db`](https://github.com/adobe/spectrum-css/commit/7d8a7db4c2e3f465eb1997a95d3cbba511742408) Thanks [@pfulton](https://github.com/pfulton)! - Updates the tags used by the stories in the "Foundations" documentation, so hidden stories remain hidden on the sidebar.
+
+- Updated dependencies []:
+  - @spectrum-css/bundle@1.0.0
+
 ## 11.0.1-next.1
 
 ### Patch Changes
@@ -342,7 +351,9 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 🗓 2024-02-06
 <a name="7.4.2-next.0"></a>
+
 ## 7.4.2-next.0
+
 🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.4.1...@spectrum-css/preview@7.4.2-next.0)
 
 **Note:** Spectrum 2 next version
@@ -418,11 +429,11 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
   - feat(icon,ui-icons)!: migrate the icon compiler to a distinct package (#2343)([d73d594](https://github.com/adobe/spectrum-css/commit/d73d594)), closes[#2343](https://github.com/adobe/spectrum-css/issues/2343)
 
-      	###
-      	🛑 BREAKING CHANGES
+    ###
 
-      		*
-      		 - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
+    🛑 BREAKING CHANGES
+
+    - - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
 
 * NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 

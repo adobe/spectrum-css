@@ -1,5 +1,14 @@
 # Change Log
 
+## 8.0.0-next.1
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`d36242a`](https://github.com/adobe/spectrum-css/commit/d36242a48248547665059d3df074b9c5c2cbd0d5) Thanks [@pfulton](https://github.com/pfulton)! - Define undefined custom properties from themes directory.
+
+- Updated dependencies [[`d36242a`](https://github.com/adobe/spectrum-css/commit/d36242a48248547665059d3df074b9c5c2cbd0d5)]:
+  - @spectrum-css/menu@8.0.0-next.1
+
 ## 8.0.0-next.0
 
 ### Patch Changes
