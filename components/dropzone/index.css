@@ -143,10 +143,6 @@
 	z-index: 10;
 }
 
-.spectrum-DropZone-actions {
-	margin-block-start: var(--spectrum-drop-zone-body-to-action);
-}
-
 .spectrum-DropZone-button {
 	box-sizing: border-box;
 	border: none;
