@@ -23,10 +23,6 @@
 	--spectrum-opacity-checkerboard-size: var(--mod-opacity-checkerboard-size, var(--spectrum-opacity-checkerboard-square-size-small));
 }
 
-.spectrum-OpacityCheckerboard--sizeS {
-	--spectrum-opacity-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size-small);
-}
-
 .spectrum-OpacityCheckerboard {
 	background: repeating-conic-gradient(var(--spectrum-opacity-checkerboard-light) 0% 25%, var(--spectrum-opacity-checkerboard-dark) 0% 50%) var(--spectrum-opacity-checkerboard-position) / calc(var(--spectrum-opacity-checkerboard-size) * 2) calc(var(--spectrum-opacity-checkerboard-size) * 2);
 }

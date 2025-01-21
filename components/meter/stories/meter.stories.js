@@ -2,7 +2,7 @@ import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { default as ProgressBar } from "@spectrum-css/progressbar/stories/progressbar.stories.js";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { MeterGroup } from "./meter.test.js";
 import { FillGroup, Template } from "./template.js";

@@ -32,7 +32,6 @@
 	/* TODO replace --spectrum-black-rgb with color-handle-inner-border-color when supported by RGBA */
 	--spectrum-colorhandle-inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity));
 
-
 	/* @passthrough -- opacity checkerboard customization */
 	--mod-opacity-checkerboard-position: 50%;
 

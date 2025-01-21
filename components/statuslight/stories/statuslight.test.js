@@ -3,7 +3,6 @@ import { Template } from "./template.js";
 
 export const StatusLightGroup = Variants({
 	Template,
-	skipBorders: true,
 	testData: [
 		...["accent", "info", "positive", "negative", "notice", "neutral"].map((variant) => ({
 			testHeading: variant.charAt(0).toUpperCase() + variant.slice(1),

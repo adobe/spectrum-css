@@ -3,7 +3,12 @@ import { Template } from "./template.js";
 
 export const CoachIndicatorGroup = Variants({
 	Template,
-	skipBorders: false,
+	wrapperStyles: {
+		"align-items": "center",
+		"justify-content": "center",
+		"border-radius": "4px",
+		"min-inline-size": "60px",
+	},
 	testData: [
 		{
 			testHeading: "Default",

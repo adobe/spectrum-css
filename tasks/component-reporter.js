@@ -13,7 +13,6 @@
 
 /* eslint-disable no-console */
 const fs = require("fs");
-const fsp = fs.promises;
 const path = require("path");
 
 const postcss = require("postcss");
@@ -169,8 +168,7 @@ async function main({
 		return Promise.reject(new Error(`No source CSS file found at ${sourceCSS}`));
 	}
 
-	const content = await fsp.readFile(sourceCSS, "utf-8");
-	const processed = await processCSS(content, sourceCSS, undefined, {
+	const processed = await processCSS(undefined, sourceCSS, undefined, {
 		cwd,
 		map: false,
 		env: "production",
@@ -192,8 +190,8 @@ async function main({
 	);
 
 	// Create the metadata directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "metadata"))) {
-		fs.mkdirSync(path.join(cwd, "metadata"));
+	if (!fs.existsSync(path.join(cwd, "dist"))) {
+		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
 	return Promise.all([
@@ -210,7 +208,7 @@ async function main({
 				}, null, 2),
 				{ parser: "json" },
 			),
-			path.join(cwd, "metadata/metadata.json"),
+			path.join(cwd, "dist", "metadata.json"),
 			{ cwd },
 		),
 	])

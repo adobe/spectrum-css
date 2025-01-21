@@ -1,3 +1,4 @@
+
 import {
 	withActions,
 	withArgEvents,
@@ -13,9 +14,11 @@ import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
 
-import "./assets/base.css";
+// Load the Spectrum CSS bundle to style the docs elements
+import "@spectrum-css/bundle";
 
-window.global = window;
+// Import the custom base styles
+import "./assets/base.css";
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 export const parameters = {
@@ -26,7 +29,6 @@ export const parameters = {
 	panelPosition: "bottom",
 	showToolbar: true,
 	isFullscreen: false,
-	actions: { argTypesRegex: "^on.*" },
 	options: {
 		storySort: {
 			method: "alphabetical-by-kind",
@@ -56,19 +58,20 @@ export const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "[data-html-preview]:first-of-type",
+		root: "[data-html-preview]:first-of-type > *",
 		removeComments: true,
 		prettier: {
-			tabWidth: 4,
+			tabWidth: 2,
 			useTabs: false,
 			htmlWhitespaceSensitivity: "ignore",
 		},
 		highlighter: {
-			showLineNumbers: true,
+			showLineNumbers: false,
 			wrapLines: true,
 		},
 	},
 	docs: {
+		defaultName: "Docs",
 		page: DocumentationTemplate,
 		story: { inline: true },
 		source: {
@@ -80,11 +83,6 @@ export const parameters = {
 	},
 	status: {
 		statuses: {
-			migrated: {
-				background: "#f0f0f0",
-				color: "#444",
-				description: "Migrated to the latest tokens.",
-			},
 			deprecated: {
 				background: "rgb(211,21,16)",
 				color: "#fff",

@@ -26,7 +26,6 @@
 	inline-size: var(--mod-form-inline-size, fit-content);
 	justify-content: start;
 	row-gap: var(--mod-form-item-block-spacing, var(--spectrum-form-item-block-spacing));
-
 }
 
 /* Row */

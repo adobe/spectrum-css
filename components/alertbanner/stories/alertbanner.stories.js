@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { AlertBannerGroup } from "./alertbanner.test.js";
 import { ActionableOptionsTemplate, Template, TextOverflowTemplate } from "./template.js";

@@ -61,7 +61,6 @@
 	--spectrum-slider-handle-disabled-background-color: var(--spectrum-gray-75);
 	--spectrum-slider-tick-mark-color: var(--spectrum-gray-200);
 
-
 	--spectrum-slider-handle-border-color-hover: var(--spectrum-gray-800);
 	--spectrum-slider-handle-border-color-down: var(--spectrum-gray-800);
 	--spectrum-slider-handle-border-color-key-focus: var(--spectrum-gray-800);
@@ -419,6 +418,7 @@
 .spectrum-Slider-labelContainer {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	position: relative;
 	inline-size: auto;
 
@@ -433,12 +433,10 @@
 	&:lang(ko) {
 		line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
 	}
-
 }
 
 .spectrum-Slider-label {
 	padding-inline-start: 0;
-	flex-grow: 1;
 	font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
 }
 

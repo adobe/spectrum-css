@@ -3,5 +3,4 @@ import { Template } from "./template.js";
 
 export const OpacityCheckboardGroup = Variants({
 	Template,
-	skipBorders: true,
 });

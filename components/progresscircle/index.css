@@ -43,7 +43,6 @@
 	/* track border style */
 	--spectrum-progress-circle-track-border-style: solid;
 
-
 	&.spectrum-ProgressCircle--small {
 		--spectrum-progress-circle-size: var(--spectrum-progress-circle-size-small);
 		--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);

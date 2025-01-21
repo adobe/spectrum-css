@@ -87,11 +87,13 @@ export const Template = ({
 								customClasses: [`${rootClass}-disabledIcon`],
 								setName: "workflow",
 								iconName: "Cancel",
+								useRef: false,
 							}, context)] : []),
 							...(isMixedValue ? [Icon({
 								customClasses: [`${rootClass}-mixedValueIcon`],
 								setName: "ui",
 								iconName: "Dash",
+								useRef: false,
 							}, context)] : []),
 						]
 					})}

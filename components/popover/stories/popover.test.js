@@ -131,7 +131,8 @@ export const PopoverGroup = Variants({
 			testHeading: "Dialog style content",
 			position: "bottom-start",
 			wrapperStyles: {
-				"min-inline-size": "500px",
+				"inline-size": "500px",
+				"block-size": "250px",
 				"align-items": "start",
 			},
 			content: [

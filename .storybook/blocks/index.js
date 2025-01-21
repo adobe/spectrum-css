@@ -13,6 +13,8 @@
 
 export * from "./ColorPalette.jsx";
 export * from "./ComponentDetails.jsx";
+export * from "./Layouts.jsx";
 export * from "./PropertiesTable.jsx";
+export * from "./Swatches.jsx";
 export * from "./ThemeContainer.jsx";
 export * from "./Typography.jsx";

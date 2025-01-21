@@ -14,12 +14,12 @@ env="$(pwd)/.env"
 config_path="$(pwd)/.storybook/chromatic.config.json"
 
 create_config() {
-    [[ ! -f "$1" || -f "$2" ]] && return
+	[[ ! -f "$1" || -f "$2" ]] && return
 
-    echo "🪄 Using .env to generate a local chromatic.config.json"
+	echo "🪄 Using .env to generate a local chromatic.config.json"
 
-    # Initialize the chromatic config file
-    echo "{" > $2
+	# Initialize the chromatic config file
+	echo "{" > $2
 
 	# Read in the local env example, line-by-line and look for variable names
 	while IFS= read -r line; do
@@ -31,30 +31,35 @@ create_config() {
 				continue
 			fi
 
-            # Remove the CHROMATIC_ prefix and convert to lower case
-            while IFS='_' read -ra split; do
-                for i in "${!split[@]}"; do
-                    [[ "${split[$i]}" = "CHROMATIC" ]] && unset "split[$i]"
-                    split[$i]=$(tr '[:upper:]' '[:lower:]' <<< ${split[$i]})
-                    # If the part is the first in the array, capitalize it
-                    [[ $i > 1 ]] && split[$i]=$(tr '[:lower:]' '[:upper:]' <<< ${split[$i]:0:1})${split[$i]:1}
-                done
+			# Remove the CHROMATIC_ prefix and convert to lower case
+			while IFS='_' read -ra split; do
+				for i in "${!split[@]}"; do
+					[[ "${split[$i]}" = "CHROMATIC" ]] && unset "split[$i]"
+					split[$i]=$(tr '[:upper:]' '[:lower:]' <<< ${split[$i]})
+					# If the part is the first in the array, capitalize it
+					[[ $i > 1 ]] && split[$i]=$(tr '[:lower:]' '[:upper:]' <<< ${split[$i]:0:1})${split[$i]:1}
+				done
 
-                key=$(printf "%s" "${split[@]}")
-            done <<< "${parts[0]}"
+				key=$(printf "%s" "${split[@]}")
+			done <<< "${parts[0]}"
 
-            # Write the key/value pair to the chromatic config file
-            echo "  \"${key}\": \"${parts[1]//\"/}\"," >> $2
+			# Write the key/value pair to the chromatic config file
+			# if the value is a boolean, skip the quotation marks
+			if [[ "${parts[1]}" == "true" || "${parts[1]}" == "false" ]]; then
+				echo "  \"${key}\": ${parts[1]}," >> $2
+			else
+				echo "  \"${key}\": \"${parts[1]//\"/}\"," >> $2
+			fi
 
 		done <<< "$line"
 	done < $1
 
-    # Remove the last comma from the chromatic config file
-    sed '$ s/,$//' $2 > $2.tmp && mv $2.tmp $2
+	# Remove the last comma from the chromatic config file
+	sed '$ s/,$//' $2 > $2.tmp && mv $2.tmp $2
 
-    # Close the chromatic config file
-    echo "}" >> $2
-    echo "" >> $2
+	# Close the chromatic config file
+	echo "}" >> $2
+	echo "" >> $2
 }
 
 create_config $env $config_path

@@ -20,7 +20,7 @@ const path = require("path");
 const fg = require("fast-glob");
 
 const { processCSS } = require("../../tasks/component-builder.js");
-const { copy, writeAndReport, fetchContent } = require("../../tasks/utilities.js");
+const { copy, fetchContent } = require("../../tasks/utilities.js");
 
 require("colors");
 
@@ -47,22 +47,31 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
  * Append custom/*-vars.css files to the end of the dist/css/*-vars.css files
  * @param {Object} config
  * @param {string} [config.cwd=process.cwd()] - Current working directory for the component
- * @returns
+ * @returns {Promise<string[]>}
  */
 async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
 	const promises = [];
 
 	// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
 	const customFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "custom"), onlyFiles: true });
-	for (const file of customFiles) {
+	const globalFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "dist", "css"), onlyFiles: true });
+
+	// Create a list that combines the custom and dist files
+	const combinedFiles = [...new Set([...customFiles, ...globalFiles])];
+	for (const file of combinedFiles) {
 		// Read in the custom file and the dist file and combine them into one file
 		const combinedContent = await fetchContent([
 			path.join("dist", "css", file),
 			path.join("custom", file)
 		], { cwd, shouldCombine: true });
 
+		if (!combinedContent || !combinedContent[0].content) continue;
+
 		promises.push(
-			combinedContent[0].content ? writeAndReport(combinedContent[0].content, path.join(cwd, "dist", "css", file)) : Promise.resolve()
+			processCSS(combinedContent[0].content, path.join(cwd, "dist", "css", file), path.join(cwd, "dist", "css", file), {
+				cwd,
+				configPath: cwd,
+			})
 		);
 	}
 

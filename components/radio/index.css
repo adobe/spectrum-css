@@ -53,6 +53,12 @@
 	--spectrum-radio-emphasized-accent-color-down: var(--spectrum-accent-color-1100);
 	--spectrum-radio-emphasized-accent-color-focus: var(--spectrum-accent-color-1000);
 
+	/* unchecked selection indicator */
+	--spectrum-radio-button-border-color-default: var(--spectrum-gray-600);
+	--spectrum-radio-button-border-color-hover: var(--spectrum-gray-700);
+	--spectrum-radio-button-border-color-down: var(--spectrum-gray-800);
+	--spectrum-radio-button-border-color-focus: var(--spectrum-gray-700);
+
 	/* checked selection indicator */
 	--spectrum-radio-button-checked-border-color-default: var(--spectrum-neutral-background-color-selected-default);
 	--spectrum-radio-button-checked-border-color-hover: var(--spectrum-neutral-background-color-selected-hover);

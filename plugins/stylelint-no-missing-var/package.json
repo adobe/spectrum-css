@@ -9,19 +9,19 @@
   ],
   "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "ava"
-  },
   "files": [
     "package.json",
     "index.js",
     "*.md"
   ],
+  "scripts": {
+    "test": "ava"
+  },
   "dependencies": {
     "colors": "^1.4.0"
   },
   "peerDependencies": {
-    "stylelint": ">=16.0.0"
+    "stylelint": ">=16"
   },
   "devDependencies": {
     "ava": "^6.2.0",

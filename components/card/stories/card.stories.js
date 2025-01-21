@@ -2,7 +2,7 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isQuiet, isSelected } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CardGroup } from "./card.test.js";
 import { Template } from "./template.js";
@@ -128,7 +128,6 @@ export default {
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 /**
@@ -200,10 +199,6 @@ QuietFile.args = {
 	title: "FileName",
 	description: "PDF",
 	showAsset: "file",
-};
-QuietFile.tags = ["!dev"];
-QuietFile.parameters = {
-	chromatic: { disableSnapshot: true },
 };
 QuietFile.tags = ["!dev"];
 QuietFile.parameters = {

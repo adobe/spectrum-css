@@ -18,8 +18,7 @@
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
+		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
 		"./stories/*": "./stories/*"
 	},
@@ -34,7 +33,7 @@
 	"peerDependencies": {
 		"@spectrum-css/alertdialog": ">=2.1.1-next.0",
 		"@spectrum-css/dialog": ">=11.0.0-next.0",
-		"@spectrum-css/divider": ">=4.0.0-s2-foundations.0",
+		"@spectrum-css/divider": ">=3",
 		"@spectrum-css/menu": ">=8.0.0-next.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.0"
 	},

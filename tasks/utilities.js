@@ -80,12 +80,12 @@ function getPackageFromPath(filePath = process.cwd()) {
  * Returns a list of all component names in the repository
  * @returns string[]
  */
-function getAllComponentNames() {
+function getAllComponentNames(includeDeprecated = true) {
 	// Get a list of all the component names in the components directory that have a package.json file
 	// and a list of all the deprecated components in the storybook directory
 	// then combine and deduplicate the lists to get a full list of all components
 	let deprecated = [];
-	if (fs.existsSync(path.join(dirs.storybook, "deprecated"))) {
+	if (includeDeprecated && fs.existsSync(path.join(dirs.storybook, "deprecated"))) {
 		deprecated = fs.readdirSync(path.join(dirs.storybook, "deprecated"));
 	}
 
@@ -162,19 +162,6 @@ function extractProperties(
 	});
 
 	return found;
-}
-
-/**
- * Remove all files and folders from the provided directory's dist folder
- * @param {object} config
- * @param {string} config.cwd - Current working directory for the component being built
- * @returns Promise<void>
- */
-async function cleanFolder({ cwd = process.cwd() } = {}) {
-	// Nothing to do if there's no input file
-	if (!fs.existsSync(path.join(cwd, "dist"))) return Promise.resolve();
-
-	return fsp.rm(path.join(cwd, "dist"), { recursive: true, force: true }).then(() => fsp.mkdir(path.join(cwd, "dist")));
 }
 
 /**
@@ -304,12 +291,12 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
  * @param {string} [config.cwd=] - Current working directory for the component being built
  * @returns Promise<string|void>
  */
-async function writeAndReport(content, output, { cwd = process.cwd() } = {}) {
+async function writeAndReport(content, output, { cwd = process.cwd(), encoding = "utf-8" } = {}) {
 	return fsp
 		.writeFile(
 			output,
 			content,
-			{ encoding: "utf-8" },
+			{ encoding },
 		)
 		.then(() => {
 			const stats = fs.statSync(output);
@@ -328,7 +315,6 @@ async function writeAndReport(content, output, { cwd = process.cwd() } = {}) {
 
 module.exports = {
 	bytesToSize,
-	cleanFolder,
 	copy,
 	dirs,
 	extractProperties,

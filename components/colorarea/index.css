@@ -23,6 +23,7 @@
 	--spectrum-colorarea-width: var(--spectrum-color-area-width);
 	--spectrum-colorarea-min-width: var(--spectrum-color-area-minimum-width);
 	--spectrum-colorarea-min-height: var(--spectrum-color-area-minimum-height);
+
 	position: relative;
 	display: inline-block;
 	cursor: default;
@@ -85,6 +86,7 @@
 		--highcontrast-colorarea-border-color-disabled: GrayText;
 		--highcontrast-colorarea-border-color: Canvas;
 		--highcontrast-colorarea-fill-color-disabled: Canvas;
+
 		&.is-disabled {
 			forced-color-adjust: none;
 		}

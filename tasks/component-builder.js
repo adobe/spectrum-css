@@ -26,11 +26,10 @@ require("colors");
 const {
 	dirs,
 	relativePrint,
-	writeAndReport,
 	getPackageFromPath,
-	cleanFolder,
 	validateComponentName,
 	fetchContent,
+	writeAndReport,
 } = require("./utilities.js");
 
 /**
@@ -51,13 +50,26 @@ async function processCSS(
 	{
 		cwd,
 		configPath = __dirname,
+		minify = false,
+		encoding = "utf-8",
 		...postCSSOptions
 	} = {},
 ) {
-	if (!content)
-		return Promise.reject(
-			new Error("This function requires content be provided"),
-		);
+	if (!content) {
+		if (!input || !fs.existsSync(input)) {
+			return Promise.reject(
+				new Error("[processCSS] Content or an input file path must be provided"),
+			);
+		}
+
+		content = await fsp.readFile(input, encoding);
+
+		if (!content) {
+			return Promise.reject(
+				new Error(`[processCSS] No content found for ${relativePrint(input, { cwd })}`),
+			);
+		}
+	}
 
 	const ctx = {
 		cwd,
@@ -66,6 +78,8 @@ async function processCSS(
 		from: input,
 		to: output,
 		verbose: false,
+		minify,
+		shouldCombine: true,
 		...postCSSOptions,
 	};
 
@@ -84,13 +98,13 @@ async function processCSS(
 
 	if (!result.css) return Promise.resolve();
 
-	const formatted = await prettier.format(result.css, {
+	const formatted = !minify ? await prettier.format(result.css, {
 		parser: "css",
 		filepath: input,
 		printWidth: 500,
 		tabWidth: 2,
 		useTabs: true,
-	});
+	}) : result.css;
 
 	// If no output is provided, return the formatted content
 	if (!output) return Promise.resolve(formatted);
@@ -126,12 +140,8 @@ async function processCSS(
  * @returns Promise<void>
  */
 async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
-	const indexSourceCSS = path.join(cwd, "index.css");
-
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(indexSourceCSS)) return;
-
-	const content = await fsp.readFile(indexSourceCSS, "utf8");
+	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
 	if (!componentName || validateComponentName(componentName) !== true) {
 		componentName = getPackageFromPath(cwd);
@@ -142,11 +152,14 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
-	const indexOutputPath = path.join(cwd, "dist", "index.css");
-
-	return Promise.all([
-		processCSS(content, indexSourceCSS, indexOutputPath, { cwd, clean }),
-	]);
+	return processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
+		cwd,
+		clean,
+		skipMapping: true,
+		referencesOnly: false,
+		preserveVariables: true,
+		stripLocalSelectors: false,
+	});
 }
 
 /**
@@ -181,8 +194,6 @@ async function main({
 
 	const reports = [];
 	const errors = [];
-
-	if (clean) await cleanFolder({ cwd }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 
 	await build({ cwd, clean }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 

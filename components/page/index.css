@@ -11,8 +11,8 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  background-color: var(--spectrum-gray-75);
+	background: var(--mod-page-background, var(--spectrum-page-background-color, var(--spectrum-gray-75)));
 
-  /* Prevent tap highlights */
-  -webkit-tap-highlight-color: var(--spectrum-transparent-black-100);
+	/* The highlight that appears over a link while it's being tapped */
+	-webkit-tap-highlight-color: var(--mod-page-content-tap-highlight, var(--spectrum-page-content-tap-highlight, var(--spectrum-transparent-black-25)));
 }

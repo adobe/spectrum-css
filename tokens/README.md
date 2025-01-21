@@ -17,11 +17,11 @@ This package uses StyleDictionary to build Spectrum core tokens for CSS.
 
 Though the token data in this package focus on only the current context (Spectrum 2), our team is committed to offering backwards compatibility for Spectrum 1 and Express through at least December of 2024.
 
-To this end, we have included the component-level mappings for:
+To this end, every component that requires backward mapping support will include:
 
-- Spectrum 1: `dist/css/components/spectrum`
-- Express: `dist/css/components/express`
-- Spectrum 2: `dist/css/components/spectrum-two`
+- Spectrum 1: `dist/themes/spectrum.css`
+- Express: `dist/themes/express.css`
+- Spectrum 2: `dist/themes/spectrum-two.css`
 
 Consumers should load only the mappings for the components they are using in their application. This will ensure that the component-level mappings are aligned with the base CSS for each component. Spectrum 1 and Express component mappings should be loaded with the `global-vars.css` and appropriate color and scale assets from the last version of the tokens package: **v14.x**. Loading the Spectrum 1 or Express component-level mappings with the Spectrum 2 global variables will result in incorrect values being applied to the components and will break the desired design for the component.
 
@@ -29,13 +29,13 @@ Consumers should load only the mappings for the components they are using in the
 
 The output is concatenated into a single `dist/index.css` for use in a vanilla HTML application. This entire file should be imported, and the relevant classes should be toggled to swap out core tokens.
 
-On the `<body>` element, start with `.spectrum`, add in `.spectrum--light`, then `.spectrum--medium`.
+On the `<body>` element, start with `.spectrum`, add in `.spectrum--light`, then `.spectrum--medium`. To switch to another context, add `.spectrum--legacy` or `.spectrum--express`.
 
 For additional guidance on which assets to load, see the architecture section below.
 
 ## Architecture
 
-All compiled assets are shipped from the `dist` folder. Most of the assets are available in the `dist/css` folder. The `dist/css/components` folder contains the component-level mappings for Spectrum 1, Express, and Spectrum 2. These assets should be loaded with the appropriate global variables and color and scale assets from the last version of the tokens package: **v14.x**.
+All compiled assets are shipped from the `dist` folder. Most of the assets are available in the `dist/css` folder. The component-level mappings for Spectrum 1, Express, and Spectrum 2 exist in the components output as theme assets. These should be loaded with the appropriate global variables and color and scale assets from the last version of the tokens package: **v14.x**.
 
 ### Global core tokens
 

@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
 import { BorderGroup, DisabledGroup, EmptyGroup, RoundingGroup, SizingGroup, Template } from "./template.js";

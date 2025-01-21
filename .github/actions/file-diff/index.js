@@ -175,8 +175,10 @@ async function run() {
 								const removedOnBranch = isRemoved(headByteSize, baseByteSize);
 								// @todo should there be any normalization before comparing the file names?
 								const isMainFile = readableFilename === mainFile;
-								const size = removedOnBranch ? " - " : bytesToSize(headByteSize);
-								const delta = `${printChange(headByteSize, baseByteSize)}${difference(baseByteSize, headByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`;
+								const size = removedOnBranch ? "🚨 deleted/moved" : bytesToSize(headByteSize);
+								const change = !removedOnBranch ? printChange(headByteSize, baseByteSize) : `⬇ ${bytesToSize(baseByteSize)}`;
+								const diff = difference(baseByteSize, headByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : "";
+								const delta = `${change}${removedOnBranch ? "" : diff}`;
 
 								return [
 									...table,
@@ -323,7 +325,13 @@ const makeTable = function (PACKAGES, filePath, path) {
 			if (main) mainFile = main.replace(/^.*\/dist\//, "");
 		}
 
-		const mainFileOnly = [...fileMap.keys()].filter((file) => file.endsWith(mainFile));
+		let mainFileOnly = [...fileMap.keys()].filter((file) => file === mainFile);
+
+		// If no main file is found, look for the first file matching the filename only
+		if (mainFileOnly.length === 0) {
+			mainFileOnly = [...fileMap.keys()].filter((file) => file.endsWith(mainFile));
+		}
+
 		const headMainSize = mainFileOnly.reduce(
 			(acc, filename) => {
 				const { headByteSize = 0 } = fileMap.get(filename);

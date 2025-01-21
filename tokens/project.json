@@ -13,11 +13,10 @@
 			"cache": false,
 			"dependsOn": ["clean", "style-dictionary"],
 			"executor": "nx:run-commands",
-			"inputs": ["core", "tools", { "externalDependencies": ["postcss", "rimraf"] }],
+			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/token-rollup.js\").default()'",
-					"cross-env NODE_OPTIONS=\"--no-warnings\" postcss ./dist/css/*.css --replace"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/token-rollup.js\").default()'"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false

@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.1.0
+
+### Minor Changes
+
+- [#3488](https://github.com/adobe/spectrum-css/pull/3488) [`40c1954`](https://github.com/adobe/spectrum-css/commit/40c1954048f735a07f9edfccf3a568d38164806a) Thanks [@castastrophe](https://github.com/castastrophe)! - Update file table to specify if the file is deleted/moved and indicate the file size has decreased without showing percentages. This update also hardens the way in which the main file is highlighted in the table by checking for exact equals for looking for files "ending with" the file name.
+
 ## 2.0.6
 
 ### Patch Changes

@@ -3,7 +3,7 @@ import { default as CloseButton } from "@spectrum-css/closebutton/stories/closeb
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isEmphasized, isOpen } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ActionBarGroup } from "./actionbar.test.js";
 import { BehavioralTemplate } from "./template.js";

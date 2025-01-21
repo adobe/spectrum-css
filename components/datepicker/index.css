@@ -59,7 +59,6 @@
 	--spectrum-datepicker-range-input-width-quiet-first: var(--mod-datepicker-range-input-width-quiet-first, calc(var(--spectrum-datepicker-width-quiet-first) + var(--spectrum-datepicker-width-quiet-second)));
 	--spectrum-datepicker-input-width-quiet: var(--mod-datepicker-input-width-quiet, calc(var(--spectrum-datepicker-range-input-width-quiet-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height)));
 
-
 	--spectrum-datepicker-datetime-input-width-first: var(--mod-datepicker-datetime-input-width-first, calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-datetime-width-first)));
 	--spectrum-datepicker-datetime-input-width: var(--mod-datepicker-datetime-input-width, calc(var(--spectrum-datepicker-datetime-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height)));
 	--spectrum-datepicker-datetime-quiet-input-width-first: var(--mod-datepicker-datetime-quiet-input-width-first, calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-input-datetime-width)));
