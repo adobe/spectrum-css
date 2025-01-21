@@ -109,6 +109,7 @@ export const Template = ({
 	size = "m",
 	label,
 	labelPosition = "top",
+	placeholder,
 	helpText,
 	isQuiet = false,
 	isOpen = false,
@@ -125,7 +126,7 @@ export const Template = ({
 		// Helps ensure that Popover appears below the Picker, with side labels layout.
 		display: "block",
 	},
-	content = [],
+	popoverContent = [],
 } = {}, context = {}) => {
 	const pickerMarkup = Picker({
 		size,
@@ -134,17 +135,18 @@ export const Template = ({
 		isInvalid,
 		isDisabled,
 		isLoading,
-		content,
+		placeholder,
+		popoverContent,
 		labelPosition,
 		ariaLabeledBy: fieldLabelId,
 	}, context);
 
-	const popoverMarkup = content.length !== 0 ? Popover({
+	const popoverMarkup = popoverContent.length !== 0 ? Popover({
 		isOpen: isOpen && !isDisabled && !isLoading,
 		withTip: false,
 		position: "bottom",
 		isQuiet,
-		content,
+		content: popoverContent,
 		size,
 		customStyles: customPopoverStyles,
 	}, context) : "";
