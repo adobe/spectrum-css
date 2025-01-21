@@ -64,8 +64,7 @@ export const Picker = ({
 			id=${id}
 			style=${styleMap(customStyles)}
 			type="button"
-			@click=${() => {
-				if (window.isChromatic()) return;
+			@click=${function() {
 				updateArgs({ isOpen: !isOpen });
 			}}
 			aria-labelledby=${ifDefined(ariaLabeledBy)}
@@ -195,12 +194,6 @@ export const Template = ({
 				}, context)
 			)}
 		</div>`;
-
-	// Make sure there is a wrapper around sibling components when using the Chromatic
-	// template, so their layout is not affected by the flex and grid layouts used.
-	if (window.isChromatic()) {
-		return html`<div style="position: relative;">${markup}</div>`;
-	}
 	return markup;
 };
 
