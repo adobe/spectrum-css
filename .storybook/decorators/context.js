@@ -43,7 +43,6 @@ export const withContextWrapper = makeDecorator({
 		useEffect(() => {
 			const isDocs = viewMode === "docs";
 			const isTesting = showTestingGrid;
-			const isRaw = Boolean(context === "raw");
 
 			// Start by attaching the appropriate tokens to the container
 			toggleStyles(document.body, "tokens", tokens, true);
@@ -104,7 +103,7 @@ export const withContextWrapper = makeDecorator({
 				}
 			}
 
-		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, showTestingGrid]);
+		}, [viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, showTestingGrid]);
 
 		return StoryFn(data);
 	},
