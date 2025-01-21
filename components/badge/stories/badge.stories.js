@@ -1,4 +1,3 @@
-import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
