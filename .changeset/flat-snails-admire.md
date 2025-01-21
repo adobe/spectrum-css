@@ -4,7 +4,7 @@
 
 ## Infield Progresscircle S2 Migration
 
-The infield progresscirlce is a subcomponent of the progress circle which is used in button, combobox, and picker. It's smaller in block size and has its own tshirt sizing.
+In-field progress circle is a new component created to replace progress circle (size S) in t-shirt size components such as: buttons, combo boxes, pickers. Comes in four sizes: (S, M, L, XL), has updated color variants (default, white, black), and unified track thickness.
 
 ## Mods
 
