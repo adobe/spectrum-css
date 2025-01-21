@@ -532,6 +532,10 @@ a.spectrum-Button {
 /* Forced colors / high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Button {
+		--highcontrast-button-border-color-default: ButtonBorder;
+		--highcontrast-button-border-color-hover: ButtonBorder;
+		--highcontrast-button-border-color-focus: ButtonBorder;
+		--highcontrast-button-border-color-down: ButtonBorder;
 		--highcontrast-button-content-color-disabled: GrayText;
 		--highcontrast-button-border-color-disabled: GrayText;
 		--highcontrast-button-background-color-disabled: ButtonFace;
