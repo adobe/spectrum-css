@@ -101,6 +101,8 @@ WithForcedColors.parameters = {
 export const Vertical = Template.bind({});
 Vertical.args = {
 	vertical: true,
+	color:
+		"linear-gradient(to bottom, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%)",
 };
 Vertical.tags = ["!dev"];
 Vertical.parameters = {

@@ -14,6 +14,7 @@ export const ColorSliderGroup = Variants({
 		{
 			testHeading: "Vertical",
 			vertical: true,
+			color: "linear-gradient(to bottom, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%)",
 			wrapperStyles: {
 				// Adjust for the indicator
 				"padding-block": "20px",
