@@ -12,6 +12,7 @@ export const Template = ({
 	rootClass = "spectrum-Tooltip",
 	label,
 	placement,
+	variant = "neutral",
 	isOpen = true,
 	isFocused = false,
 	showOnHover = false,
