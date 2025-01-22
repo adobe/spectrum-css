@@ -834,6 +834,7 @@
 	--spectrum-treeview-item-background-color-quiet-selected: rgba(var(--spectrum-gray-900-rgb), 0.07);
 	--spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
 }
+
 .spectrum {
 	--spectrum-focus-indicator-color: var(--spectrum-blue-800);
 	--spectrum-static-white-focus-indicator-color: var(--spectrum-white);
@@ -1876,6 +1877,7 @@
 	--spectrum-coach-indicator-ring-static-white-color: var(--spectrum-white);
 	--spectrum-corner-radius-1000: 9999px;
 }
+
 .spectrum--large {
 	--spectrum-checkbox-control-size-small: 18px;
 	--spectrum-checkbox-control-size-medium: 20px;
@@ -3488,6 +3490,7 @@
 	--spectrum-treeview-item-background-color-quiet-selected: rgba(var(--spectrum-gray-900-rgb), 0.06);
 	--spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
 }
+
 .spectrum--medium {
 	--spectrum-checkbox-control-size-small: 14px;
 	--spectrum-checkbox-control-size-medium: 16px;
