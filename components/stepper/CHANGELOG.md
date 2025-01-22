@@ -1,5 +1,24 @@
 # Change Log
 
+## 6.3.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`8d65de0`](https://github.com/adobe/spectrum-css/commit/8d65de0233a6b12e72002b47e9484dbe5f0636be) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to align `spectrum-two` with `s2-foundations-redux`/`main`, mostly defining unused custom properties, but addresses any other lint warnings or inconsistencies noted in the following components:
+
+  **Calendar**: Defines 1 previously undefined custom property to align with `main` and `s2-foundations-redux`
+  **Dial**: Defines 6 previously undefined custom properties, removes 3 unused custom properties
+  **Pickerbutton**: Defines 9 previously undefined custom properties to align with `main` and `s2-foundations-redux`
+  **Progressbar**: Removes 3 unused custom properties, reverts background-color to background to accommodate gradients
+  **Radio**: Defines 4 previously undefined custom properties to align with `main` and `s2-foundations-redux`
+  **Stepper**: moves high contrast block further down to align with other components' CSS structure, defines multiple undefined custom properties, adds disable-next-line comment to suppress no-unused-custom-properties warning
+
+- Updated dependencies [[`7582c1f`](https://github.com/adobe/spectrum-css/commit/7582c1f5c73de5ecf962bfad0294f162d7035751), [`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76), [`2850ef5`](https://github.com/adobe/spectrum-css/commit/2850ef5439d50fd47db81783c861a63ffa42414f)]:
+  - @spectrum-css/infieldbutton@5.2.1-next.0
+  - @spectrum-css/actionbutton@6.2.1-next.0
+  - @spectrum-css/tokens@14.0.0-next.12
+  - @spectrum-css/textfield@7.3.1-next.0
+
 ## 7.0.1
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # Change Log
 
+## 4.2.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`6b41b50`](https://github.com/adobe/spectrum-css/commit/6b41b501768da3db70ae00f6097646583f8fbd01) Thanks [@pfulton](https://github.com/pfulton)! - Restores missing custom properties that were flagged by the linter. The missing properties were copied from the spectrum two theme files in the foundations branch. This clears up all linter errors and warnings for these components.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
 ## 5.0.1
 
 ### Patch Changes
