@@ -12,7 +12,6 @@
  */
 
 @import "@spectrum-css/commons/overlay.css";
-@import "./themes/express.css";
 
 .spectrum-Underlay {
 	--spectrum-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);

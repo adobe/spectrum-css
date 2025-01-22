@@ -156,6 +156,9 @@ Default.args = {
 	fieldLabelText: "Select location",
 	value: "Ballard",
 };
+Default.parameters = {
+	chromatic: { delay: 1000 }
+};
 
 // ********* DOCS ONLY ********* //
 export const DefaultGroup = VariantGroup.bind({});

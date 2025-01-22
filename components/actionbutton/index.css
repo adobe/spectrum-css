@@ -12,6 +12,7 @@
  */
 
 @import "@spectrum-css/commons/basebutton.css";
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
 
 .spectrum-ActionButton {

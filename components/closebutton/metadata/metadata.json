@@ -143,10 +143,10 @@
     "--spectrum-white"
   ],
   "system-theme": [
-    "--system-spectrum-closebutton-background-color-default",
-    "--system-spectrum-closebutton-background-color-down",
-    "--system-spectrum-closebutton-background-color-focus",
-    "--system-spectrum-closebutton-background-color-hover"
+    "--system-close-button-background-color-default",
+    "--system-close-button-background-color-down",
+    "--system-close-button-background-color-focus",
+    "--system-close-button-background-color-hover"
   ],
   "passthroughs": [
     "--mod-button-animation-duration",
@@ -161,10 +161,6 @@
     "--highcontrast-closebutton-icon-color-down",
     "--highcontrast-closebutton-icon-color-focus",
     "--highcontrast-closebutton-icon-color-hover",
-    "--highcontrast-closebutton-icon-disabled",
-    "--highcontrast-closebutton-static-background-color-default",
-    "--highcontrast-closebutton-static-background-color-down",
-    "--highcontrast-closebutton-static-background-color-focus",
-    "--highcontrast-closebutton-static-background-color-hover"
+    "--highcontrast-closebutton-static-background-color-default"
   ]
 }

@@ -203,19 +203,18 @@
     "--spectrum-text-to-control-75"
   ],
   "system-theme": [
-    "--system-spectrum-switch-handle-border-color-default",
-    "--system-spectrum-switch-handle-border-color-down",
-    "--system-spectrum-switch-handle-border-color-focus",
-    "--system-spectrum-switch-handle-border-color-hover",
-    "--system-spectrum-switch-handle-border-color-selected-default",
-    "--system-spectrum-switch-handle-border-color-selected-down",
-    "--system-spectrum-switch-handle-border-color-selected-focus",
-    "--system-spectrum-switch-handle-border-color-selected-hover"
+    "--system-switch-handle-border-color-default",
+    "--system-switch-handle-border-color-down",
+    "--system-switch-handle-border-color-focus",
+    "--system-switch-handle-border-color-hover",
+    "--system-switch-handle-border-color-selected-default",
+    "--system-switch-handle-border-color-selected-down",
+    "--system-switch-handle-border-color-selected-focus",
+    "--system-switch-handle-border-color-selected-hover"
   ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-switch-background-color",
-    "--highcontrast-switch-background-color-disabled",
     "--highcontrast-switch-background-color-selected-default",
     "--highcontrast-switch-background-color-selected-disabled",
     "--highcontrast-switch-background-color-selected-down",

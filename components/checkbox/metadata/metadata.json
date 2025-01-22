@@ -211,10 +211,10 @@
     "--spectrum-text-to-control-75"
   ],
   "system-theme": [
-    "--system-spectrum-checkbox-control-color-default",
-    "--system-spectrum-checkbox-control-color-down",
-    "--system-spectrum-checkbox-control-color-focus",
-    "--system-spectrum-checkbox-control-color-hover"
+    "--system-checkbox-control-color-default",
+    "--system-checkbox-control-color-down",
+    "--system-checkbox-control-color-focus",
+    "--system-checkbox-control-color-hover"
   ],
   "passthroughs": [],
   "high-contrast": [
@@ -228,7 +228,6 @@
     "--highcontrast-checkbox-content-color-hover",
     "--highcontrast-checkbox-disabled-color-default",
     "--highcontrast-checkbox-focus-indicator-color",
-    "--highcontrast-checkbox-focus-indicator-gap",
     "--highcontrast-checkbox-highlight-color-default",
     "--highcontrast-checkbox-highlight-color-down",
     "--highcontrast-checkbox-highlight-color-focus",

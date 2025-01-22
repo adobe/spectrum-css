@@ -121,12 +121,7 @@ async function main({
 			console.log(`${"".padStart(30, "-")}`);
 
 			if (logs && logs.length > 0) {
-				logs.sort((a,) => {
-					if (!a || typeof a !== "string") return 1;
-					if (a.includes("✓")) return -1;
-					if (a.includes("🔍")) return 0;
-					return 1;
-				}).forEach(log => {
+				logs.forEach(log => {
 					// Strip the ../../tokens/ from the paths
 					console.log(log.replace(/(\.\.\/)+tokens\//g, ""));
 				});

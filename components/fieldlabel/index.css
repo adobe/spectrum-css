@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-FieldLabel {
 	--spectrum-fieldlabel-min-height: var(--spectrum-component-height-75);
 	--spectrum-fieldlabel-color: var(--spectrum-neutral-subdued-content-color-default);

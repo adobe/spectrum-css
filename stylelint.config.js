@@ -11,8 +11,8 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-missing-var",
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
-		"@spectrum-tools/theme-alignment",
-		"stylelint-high-performance-animation",
+		"@spectrum-tools/stylelint-theme-alignment",
+		// "stylelint-high-performance-animation",
 	],
 	rules: {
 		/** --------------------------------------------------------------
@@ -24,6 +24,7 @@ module.exports = {
 		"import-notation": null,
 		"no-descending-specificity": null,
 		"no-duplicate-selectors": null,
+		"number-max-precision": null,
 
 		/** --------------------------------------------------------------
 		 * Customized rule settings
@@ -54,7 +55,11 @@ module.exports = {
 				except: ["first-nested"],
 				ignore: ["after-comment", "stylelint-commands"],
 				// don't require a newline before a passthrough flag
-				ignoreComments: [/^@?passthroughs?/],
+				ignoreComments: [
+					/^\s*@passthroughs?/,
+					/^\s*@deprecated?/,
+					/^\s*@todo?/
+				],
 			},
 		],
 		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system|_)/, {}],
@@ -63,8 +68,7 @@ module.exports = {
 			true,
 			{
 				ignoreProperties: {
-					color: ["CanvasText"],
-					"forced-color-adjust": ["preserve-parent-color"],
+					"/.+/": ["CanvasText", "preserve-parent-color"],
 				},
 			},
 		],
@@ -91,7 +95,7 @@ module.exports = {
 		],
 		"selector-attribute-quotes": "always",
 		"selector-class-pattern": [
-			"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
+			"^(spectrum)[A-Za-z0-9-]*", {
 				resolveNestedSelectors: true
 			}
 		],
@@ -137,65 +141,82 @@ module.exports = {
 			},
 		],
 		/** Performance */
-		"plugin/no-low-performance-animation-properties": [
-			true,
-			{ severity: "warning" },
-		],
+		// "plugin/no-low-performance-animation-properties": [
+		// 	true,
+		// 	{ severity: "warning" },
+		// ],
 
 		/** --------------------------------------------------------------
 		 * Local/custom plugins
 		 * -------------------------------------------------------------- */
 		"spectrum-tools/no-missing-var": true,
-		"spectrum-tools/no-unknown-custom-properties": [
-			true,
-			{
-				/** @note this is a list of custom properties that are allowed to be unknown */
-				ignoreList: [
-					/^--mod-/,
-					/^--highcontrast-/,
-					/^--system-/,
-					/^--spectrum-picked-color$/,
-				],
-				skipDependencies: false,
-				disableFix: true,
-				severity: "warning",
-			},
-		],
-		/** @note this enables reporting of unused variables in a file */
-		"spectrum-tools/no-unused-custom-properties": [
-			true,
-			{
-				ignoreList: [/^--mod-/],
-				disableFix: true,
-				severity: "warning",
-			},
-		],
+		"spectrum-tools/theme-alignment": null,
+		"spectrum-tools/no-unused-custom-properties": null,
+		"spectrum-tools/no-unknown-custom-properties": null,
 	},
 	/** --------------------------------------------------------------
 	 * Overrides
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: [".storybook/assets/*.css"],
+			files: ["components/*/index.css"],
 			rules: {
-				"custom-property-pattern": null,
-				"color-function-notation": null,
-				"spectrum-tools/no-unused-custom-properties": null,
-				"spectrum-tools/no-unknown-custom-properties": null,
+				"selector-class-pattern": [
+					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
+						resolveNestedSelectors: true
+					}
+				],
+				"spectrum-tools/no-unknown-custom-properties": [
+					true,
+					{
+						/** @note this is a list of custom properties that are allowed to be unknown */
+						ignoreList: [
+							/^--mod-/,
+							/^--system-/,
+							/^--spectrum-picked-color$/,
+						],
+						skipDependencies: false,
+						disableFix: true,
+						severity: "warning",
+					},
+				],
+				/** @note this enables reporting of unused variables in a file */
+				"spectrum-tools/no-unused-custom-properties": [
+					true,
+					{
+						ignoreList: [
+							/^--mod-/,
+						],
+						disableFix: true,
+						severity: "warning",
+					},
+				],
 			},
 		},
 		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "tokens/**/*.css"],
+			files: [".storybook/assets/*.css", "iframe.html*.css"],
 			rules: {
-				"spectrum-tools/no-unused-custom-properties": null,
-				"spectrum-tools/no-unknown-custom-properties": null,
+				"custom-property-pattern": null,
+				"color-function-notation": null,
+				"selector-class-pattern": [
+					"^(spectrum|is-|u-|sb-)[A-Za-z0-9-]*", {
+						resolveNestedSelectors: true
+					}
+				],
+				"font-family-no-missing-generic-family-keyword": null,
+			},
+		},
+		{
+			files: ["tokens*/**/*.css(?inline)?", "tokens/**/*.css"],
+			rules: {
+				"custom-property-pattern": [/^(spectrum|color|scale|system)/, {}],
 			}
 		},
 		{
 			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/express.css", "!components/*/themes/spectrum.css"],
+			files: ["components/*/themes/*.css", "!components/*/themes/spectrum.css"],
 			rules: {
+				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/theme-alignment": [true, {
 					baseFilename: "spectrum",
 				}],

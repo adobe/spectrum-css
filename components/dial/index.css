@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-Dial {
 	--spectrum-dial-background-color-default: var(--spectrum-gray-100);
 
@@ -89,7 +87,7 @@
 }
 
 .spectrum-Dial-labelContainer {
-	color: var(--highcontrast-dial-label-text-color, var(--mod-dial-label-text-color, var(--spectrum-dial-label-text-color)));
+	color: var(--mod-dial-label-text-color, var(--spectrum-dial-label-text-color));
 	display: flex;
 	position: relative;
 	inline-size: auto;
@@ -203,8 +201,8 @@
 
 	&:focus-visible,
 	&:focus-within {
-		background-color: var(--highcontrast-dial-handle-marker-color-mouse-focus, var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus)));
-		border-color: var(--highcontrast-dial-handle-marker-color-mouse-focus, var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus)));
+		background-color: var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus));
+		border-color: var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus));
 
 		&::after {
 			background-color: var(--highcontrast-dial-handle-marker-color-key-focus, var(--mod-dial-handle-marker-color-key-focus, var(--spectrum-dial-handle-marker-color-key-focus)));
@@ -263,7 +261,7 @@
 		.spectrum-Dial-handle {
 			cursor: default;
 			border-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-			background: var(--highcontrast-dial-background-color-default, var(--mod-dial-background-color-default, var(--spectrum-dial-background-color-default)));
+			background: var(--mod-dial-background-color-default, var(--spectrum-dial-background-color-default));
 
 			&::after,
 			&::before {

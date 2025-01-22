@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-yarn add -D postcss-rgb-mapping
+yarn add -D @spectrum-tools/postcss-rgb-mapping
 postcss -u postcss-rgb-mapping -o dist/index.css src/index.css
 ```
 
@@ -15,8 +15,8 @@ This plugin turns this:
 
 ```css
 .spectrum--lightest {
-  --spectrum-seafoam-100: rgba(206, 247, 243);
-  --spectrum-seafoam-200: rgba(170, 241, 234, 0.5);
+	--spectrum-seafoam-100: rgba(206, 247, 243);
+	--spectrum-seafoam-200: rgba(170, 241, 234, 0.5);
 }
 ```
 
@@ -24,13 +24,13 @@ Into this:
 
 ```css
 .spectrum--lightest {
-  --spectrum-seafoam-100-rgb: 206, 247, 243;
-  --spectrum-seafoam-100: rgba(var(--spectrum-seafoam-100-rgb));
-  --spectrum-seafoam-200-rgb: 170, 241, 234;
-  --spectrum-seafoam-200-opacity: 0.5;
-  --spectrum-seafoam-200: rgba(
-    var(--spectrum-seafoam-200-rgb),
-    var(--spectrum-seafoam-200-opacity)
-  );
+	--spectrum-seafoam-100-rgb: 206, 247, 243;
+	--spectrum-seafoam-100: rgba(var(--spectrum-seafoam-100-rgb));
+	--spectrum-seafoam-200-rgb: 170, 241, 234;
+	--spectrum-seafoam-200-opacity: 0.5;
+	--spectrum-seafoam-200: rgba(
+		var(--spectrum-seafoam-200-rgb),
+		var(--spectrum-seafoam-200-opacity)
+	);
 }
 ```

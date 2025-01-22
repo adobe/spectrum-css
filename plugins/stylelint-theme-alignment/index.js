@@ -56,7 +56,7 @@ const ruleFunction = (enabled, options = {}) => {
 		if (!validOptions) return;
 
 
-		const { baseFilename = "spectrum-two" } = options;
+		const { baseFilename = "spectrum" } = options;
 
 		const sourceFile = root.source.input.file;
 		const parts = sourceFile ? sourceFile.split(sep) : [];

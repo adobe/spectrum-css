@@ -1,0 +1,63 @@
+---
+"@spectrum-css/floatingactionbutton": major
+"@spectrum-css/opacitycheckerboard": major
+"@spectrum-css/illustratedmessage": major
+"@spectrum-css/coachindicator": major
+"@spectrum-css/contextualhelp": major
+"@spectrum-css/progresscircle": major
+"@spectrum-css/dropindicator": major
+"@spectrum-css/alertdialog": major
+"@spectrum-css/buttongroup": major
+"@spectrum-css/colorhandle": major
+"@spectrum-css/colorslider": major
+"@spectrum-css/inlinealert": major
+"@spectrum-css/logicbutton": major
+"@spectrum-css/progressbar": major
+"@spectrum-css/statuslight": major
+"@spectrum-css/swatchgroup": major
+"@spectrum-css/breadcrumb": major
+"@spectrum-css/colorloupe": major
+"@spectrum-css/colorwheel": major
+"@spectrum-css/fieldgroup": major
+"@spectrum-css/fieldlabel": major
+"@spectrum-css/pagination": major
+"@spectrum-css/typography": major
+"@spectrum-css/accordion": major
+"@spectrum-css/actionbar": major
+"@spectrum-css/assetlist": major
+"@spectrum-css/coachmark": major
+"@spectrum-css/colorarea": major
+"@spectrum-css/splitview": major
+"@spectrum-css/thumbnail": major
+"@spectrum-css/calendar": major
+"@spectrum-css/dropzone": major
+"@spectrum-css/helptext": major
+"@spectrum-css/steplist": major
+"@spectrum-css/taggroup": major
+"@spectrum-css/treeview": major
+"@spectrum-css/underlay": major
+"@spectrum-css/divider": major
+"@spectrum-css/sidenav": major
+"@spectrum-css/avatar": major
+"@spectrum-css/dialog": major
+"@spectrum-css/miller": major
+"@spectrum-css/swatch": major
+"@spectrum-css/asset": major
+"@spectrum-css/badge": major
+"@spectrum-css/modal": major
+"@spectrum-css/table": major
+"@spectrum-css/card": major
+"@spectrum-css/dial": major
+"@spectrum-css/icon": major
+"@spectrum-css/link": major
+"@spectrum-css/menu": major
+"@spectrum-css/tray": major
+"@spectrum-css/well": major
+---
+
+Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
+
+- `index-base.css`
+- `index-theme.css`
+- `themes/spectrum.css`
+- `themes/express.css`

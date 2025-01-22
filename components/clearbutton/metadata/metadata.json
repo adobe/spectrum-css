@@ -79,14 +79,11 @@
     "--spectrum-white"
   ],
   "system-theme": [
-    "--system-spectrum-clearbutton-spectrum-clear-button-background-color",
-    "--system-spectrum-clearbutton-spectrum-clear-button-background-color-down",
-    "--system-spectrum-clearbutton-spectrum-clear-button-background-color-hover",
-    "--system-spectrum-clearbutton-spectrum-clear-button-background-color-key-focus"
+    "--system-clear-button-background-color",
+    "--system-clear-button-background-color-down",
+    "--system-clear-button-background-color-hover",
+    "--system-clear-button-background-color-key-focus"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-clear-button-icon-color-disabled",
-    "--highcontrast-clear-button-icon-color-hover"
-  ]
+  "high-contrast": ["--highcontrast-clear-button-icon-color-hover"]
 }

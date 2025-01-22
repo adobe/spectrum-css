@@ -170,7 +170,7 @@ async function main({
 
 	const processed = await processCSS(undefined, sourceCSS, undefined, {
 		cwd,
-		skipMapping: true,
+		skipMapping: false,
 		referencesOnly: false,
 		preserveVariables: true,
 		stripLocalSelectors: false,
@@ -210,7 +210,7 @@ async function main({
 				{ parser: "markdown" },
 			),
 			path.join(cwd, "metadata/mods.md"),
-			{ cwd },
+			{ cwd, isDeprecated: true },
 		),
 		writeAndReport(
 			await prettier.format(
@@ -237,12 +237,7 @@ async function main({
 			console.log(`${"".padStart(30, "-")}`);
 
 			if (logs && logs.length > 0) {
-				logs
-					.sort((a) => {
-						if (typeof a === "string" && a.includes("✓")) return 0;
-						return 1;
-					})
-					.forEach((log) => console.log(log));
+				logs.forEach((log) => console.log(log));
 			}
 			else console.log("No assets created.".gray);
 

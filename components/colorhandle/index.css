@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-ColorHandle {
 	--spectrum-colorhandle-size: var(--spectrum-color-handle-size);
 	--spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
@@ -50,7 +48,7 @@
 	margin-block: calc(-1 * calc(var(--mod-colorhandle-size, var(--spectrum-colorhandle-size)) / 2));
 
 	border-width: var(--mod-colorhandle-border-width, var(--spectrum-colorhandle-border-width));
-	border-color: var(--highcontrast-colorhandle-border-color, var(--mod-colorhandle-border-color, var(--spectrum-colorhandle-border-color)));
+	border-color: var(--mod-colorhandle-border-color, var(--spectrum-colorhandle-border-color));
 	border-style: solid;
 
 	box-shadow: 0 0 0 var(--mod-colorhandle-outer-border-width, var(--spectrum-colorhandle-outer-border-width)) var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));

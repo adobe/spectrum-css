@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-FloatingActionButton {
 	--spectrum-floating-action-button-size: var(--spectrum-component-height-200);
 	--spectrum-floating-action-button-icon-size: var(--spectrum-workflow-icon-size-200);
@@ -108,7 +106,7 @@
 			position: absolute;
 			inset: 0;
 			margin: calc(-1 * var(--mod-floating-action-button-focus-ring-gap, var(--spectrum-floating-action-button-focus-ring-gap)));
-			box-shadow: 0 0 0 var(--mod-floating-action-button-focus-ring-width, var(--spectrum-floating-action-button-focus-ring-width)) var(--highcontrast-floating-action-button-focus-ring-color, var(--mod-afloating-action-button-focus-ring-color, var(--spectrum-floating-action-button-focus-ring-color)));
+			box-shadow: 0 0 0 var(--mod-floating-action-button-focus-ring-width, var(--spectrum-floating-action-button-focus-ring-width)) var(--mod-afloating-action-button-focus-ring-color, var(--spectrum-floating-action-button-focus-ring-color));
 			border-radius: var(--mod-floating-action-button-border-radius, 50%);
 			pointer-events: none;
 			content: "";

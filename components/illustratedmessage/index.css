@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
- @import "./themes/express.css";
-
 .spectrum-IllustratedMessage {
 	/* Size & Spacing */
 	--spectrum-illustrated-message-description-max-inline-size: var(--spectrum-illustrated-message-maximum-width);

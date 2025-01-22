@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
- @import "./themes/express.css";
-
 .spectrum-Menu {
 	--spectrum-menu-item-min-height: var(--spectrum-component-height-100);
 	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);

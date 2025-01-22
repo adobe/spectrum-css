@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 /* Swatch tokens */
 .spectrum-Swatch {
 	/* Placeholder tokens */
@@ -264,7 +262,7 @@
 .spectrum-Swatch--lightBorder {
 	.spectrum-Swatch-fill {
 		&::before {
-			box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color-light, var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light)));
+			box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light));
 		}
 	}
 }

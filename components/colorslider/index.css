@@ -11,9 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
- @media (forced-colors: active) {
+@media (forced-colors: active) {
 	.spectrum-ColorSlider {
 		--highcontrast-color-slider-border-color: CanvasText;
 		--highcontrast-color-slider-border-color-disabled: GrayText;

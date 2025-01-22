@@ -20,7 +20,7 @@
 		],
 		"tools": [
 			"{projectRoot}/*.json",
-			"{workspaceRoot}/postcss.config.mjs",
+			"{workspaceRoot}/postcss.config.js",
 			"{workspaceRoot}/plugins/postcss-*/index.js"
 		]
 	},
@@ -40,6 +40,7 @@
 			"inputs": [
 				"core",
 				"tools",
+				"stylelint",
 				"{workspaceRoot}/tasks/component-builder.js",
 				"!{projectRoot}/stories/*.js",
 				{ "externalDependencies": ["postcss"] },
@@ -54,8 +55,7 @@
 				"{projectRoot}/dist/*.{css,json}",
 				"{projectRoot}/dist/themes/*.css",
 				"{projectRoot}/dist/*.map",
-				"{projectRoot}/dist/themes/*.css.map",
-				"{projectRoot}/metadata/mods.md"
+				"{projectRoot}/dist/themes/*.css.map"
 			]
 		},
 		"clean": {
@@ -150,8 +150,9 @@
 			"inputs": [
 				"core",
 				"tools",
+				"stylelint",
 				"{workspaceRoot}/tasks/component-report.js",
-				{ "env": "NODE_ENV" }
+				{ "externalDependencies": ["postcss"] }
 			],
 			"options": {
 				"commands": [
@@ -159,6 +160,7 @@
 				]
 			},
 			"outputs": [
+				"{projectRoot}/metadata/mods.md",
 				"{projectRoot}/metadata/metadata.json"
 			]
 		},

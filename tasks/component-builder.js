@@ -27,7 +27,6 @@ const {
 	dirs,
 	relativePrint,
 	getPackageFromPath,
-	cleanFolder,
 	validateComponentName,
 	fetchContent,
 	copy,
@@ -97,7 +96,15 @@ async function processCSS(
 
 	if (result.error) return Promise.reject(result.error);
 
-	if (!result.css) return Promise.resolve();
+	const logs = [];
+	if (result.warnings().length > 0) {
+		/** @todo, do we want to support a verbose mode that prints out the warnings during the build? */
+		result.warnings().forEach((warning) => {
+			logs.push(`${"⚠".yellow}  ${warning.text}`);
+		});
+	}
+
+	if (!result.css) return Promise.resolve(logs);
 
 	const formatted = !minify ? await prettier.format(result.css, {
 		parser: "css",
@@ -108,15 +115,18 @@ async function processCSS(
 	}) : result.css;
 
 	// If no output is provided, return the formatted content
+	/** @todo how can we return the logs from this function if we're returning the content instead here? */
 	if (!output) return Promise.resolve(formatted);
 
+	/* Ensure the directory exists */
 	if (!fs.existsSync(path.dirname(output))) {
 		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
 			if (!err) return;
-			console.log(
+
+			logs.push(
 				`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`,
 			);
-			return Promise.reject(err);
+			return Promise.reject([...logs, err]);
 		});
 	}
 
@@ -130,7 +140,7 @@ async function processCSS(
 		);
 	}
 
-	return Promise.all(promises);
+	return Promise.all(promises).then((r) => [...r, ...logs]);
 }
 
 /**
@@ -144,8 +154,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
-	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
-
 	if (!componentName || validateComponentName(componentName) !== true) {
 		componentName = getPackageFromPath(cwd);
 	}
@@ -155,33 +163,19 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
-	const indexOutputPath = path.join(cwd, "dist", "index.css");
-
 	return Promise.all([
-		processCSS(content, path.join(cwd, "index.css"), indexOutputPath, {
+		processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
 			cwd,
 			clean,
-			skipMapping: true,
+			skipMapping: false,
 			referencesOnly: false,
 			preserveVariables: true,
 			stripLocalSelectors: false,
 		}).then(async (reports) => {
-			// Copy index.css to index-vars.css for backwards compat, log as deprecated
-			return copy(indexOutputPath, path.join(cwd, "dist/index-vars.css"), { cwd })
+			/** @deprecated Copy index.css to index-vars.css for backwards compatibility */
+			return copy(path.join(cwd, "dist", "index.css"), path.join(cwd, "dist", "index-vars.css"), { cwd })
 				.then(r => [r, ...reports]);
 		}),
-		processCSS(
-			content,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-				splitinatorOptions: {
-					noFlatVariables: true,
-				},
-			},
-		),
 	]);
 }
 
@@ -202,14 +196,8 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	const imports = contentData.map(({ input }) => input);
 	const importMap = imports.map((i) => `@import "${i}";`).join("\n");
 
-	const promises = contentData.map(async ({ content, input }) => {
-		if (!content)
-			return Promise.reject(
-				new Error(`No content found for ${relativePrint(input, { cwd })}`),
-			);
-
-		const theme = path.basename(input, ".css");
-		return processCSS(
+	const promises = contentData.map(async ({ content, input }) =>
+		processCSS(
 			content,
 			path.join(cwd, input),
 			path.join(cwd, "dist", input),
@@ -222,14 +210,28 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				preserveVariables: true,
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
-				theme,
+				shouldCombine: true,
+				theme: path.basename(input, ".css"),
 				map: false,
 				env: "production",
 			},
-		);
-	});
+		),
+	);
 
 	promises.push(
+		processCSS(
+			undefined,
+			path.join(cwd, "index.css"),
+			path.join(cwd, "dist", "index-base.css"),
+			{
+				cwd,
+				clean,
+				skipMapping: false,
+				referencesOnly: true,
+				preserveVariables: true,
+				stripLocalSelectors: false,
+			},
+		),
 		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
 		processCSS(
 			importMap,
@@ -238,9 +240,10 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 			{
 				cwd,
 				clean,
-				splitinatorOptions: {
-					noSelectors: true,
-				},
+				resolveImports: true,
+				skipMapping: false,
+				stripLocalSelectors: true,
+				referencesOnly: false,
 				map: false,
 			},
 		),
@@ -280,7 +283,6 @@ async function main({
 	console.time(key);
 
 	return Promise.all([
-		...(clean ? [cleanFolder({ cwd })] : []),
 		build({ cwd, clean }),
 		buildThemes({ cwd, clean }),
 	])
@@ -291,13 +293,7 @@ async function main({
 			console.log(`${"".padStart(30, "-")}`);
 
 			if (logs && logs.length > 0) {
-				logs
-					.sort((a) => {
-						if (typeof a === "string" && a.includes("✓")) return -1;
-						if (typeof a === "string" && a.includes("🔍")) return 0;
-						return 1;
-					})
-					.forEach((log) => console.log(log));
+				logs.forEach((log) => console.log(log));
 			}
 			else console.log("No assets created.".gray);
 

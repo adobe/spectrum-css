@@ -170,18 +170,17 @@
     "--spectrum-text-to-control-75"
   ],
   "system-theme": [
-    "--system-spectrum-radio-button-border-color-default",
-    "--system-spectrum-radio-button-border-color-down",
-    "--system-spectrum-radio-button-border-color-focus",
-    "--system-spectrum-radio-button-border-color-hover",
-    "--system-spectrum-radio-emphasized-button-checked-border-color-default",
-    "--system-spectrum-radio-emphasized-button-checked-border-color-down",
-    "--system-spectrum-radio-emphasized-button-checked-border-color-focus",
-    "--system-spectrum-radio-emphasized-button-checked-border-color-hover"
+    "--system-radio-button-border-color-default",
+    "--system-radio-button-border-color-down",
+    "--system-radio-button-border-color-focus",
+    "--system-radio-button-border-color-hover",
+    "--system-radio-emphasized-button-checked-border-color-default",
+    "--system-radio-emphasized-button-checked-border-color-down",
+    "--system-radio-emphasized-button-checked-border-color-focus",
+    "--system-radio-emphasized-button-checked-border-color-hover"
   ],
   "passthroughs": [],
   "high-contrast": [
-    "--highcontrast-radio-button-background-color",
     "--highcontrast-radio-button-border-color-default",
     "--highcontrast-radio-button-border-color-down",
     "--highcontrast-radio-button-border-color-focus",

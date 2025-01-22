@@ -72,9 +72,7 @@
     "--spectrum-white",
     "--spectrum-workflow-icon-size-100"
   ],
-  "system-theme": [
-    "--system-spectrum-alertbanner-spectrum-alert-banner-netural-background"
-  ],
+  "system-theme": ["--system-alert-banner-netural-background"],
   "passthroughs": [
     "--mod-button-margin-block",
     "--mod-button-margin-left",

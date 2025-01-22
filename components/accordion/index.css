@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
 .spectrum-Accordion {
 	--spectrum-accordion-item-height: var(--spectrum-component-height-200);
 	--spectrum-accordion-item-width: var(--spectrum-accordion-minimum-width);

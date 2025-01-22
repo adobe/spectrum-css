@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
 
 /*
@@ -542,7 +543,7 @@
 			forced-color-adjust: none;
 			outline-color: var(--highcontrast-checkbox-focus-indicator-color, var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color)));
 			outline-style: auto;
-			outline-offset: var(--highcontrast-checkbox-focus-indicator-gap, var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap)));
+			outline-offset: var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap));
 			outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 
 			&::after {

@@ -11,8 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
-@import "@spectrum-css/commons/basebutton.css";
 
 /* default for all buttons */
 .spectrum-Button {
@@ -99,15 +99,43 @@
 }
 
 .spectrum-Button {
-	@extend %spectrum-BaseButton;
-	@extend %spectrum-ButtonWithFocusRing;
+	cursor: pointer;
+	user-select: none;
+
+	/* Show the button overflow in Edge. */
+	overflow: visible;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
+
+	box-sizing: border-box;
+
+	/* @deprecation --mod-sans-font-family-stack has been renamed and will be removed in a future version. */
+	font-family: var(--mod-button-font-family, var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack)));
+	font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
+	font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
+
+	/* @deprecation --mod-line-height-100 has been renamed and will be removed in a future version. */
+	line-height: var(--mod-button-line-height, var(--mod-line-height-100, var(--spectrum-line-height-100)));
+	text-decoration: none;
+
+	/* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
+	text-transform: none;
+
+	/* Adjacent buttons should be aligned correctly */
+	vertical-align: top;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari (normalize). */
+	-webkit-appearance: button;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
 	border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
 	border-style: solid;
-	font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
-	font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
-	gap: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
+	border-color: var(--highcontrast-button-border-color-default, var(--mod-button-border-color-default, var(--spectrum-button-border-color-default)));
+
 	max-inline-size: var(--mod-button-max-inline-size, none);
 	min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
 	min-block-size: var(--mod-button-height, var(--spectrum-button-height));
@@ -115,23 +143,109 @@
 	/* Start with text-only padding */
 	padding-block: 0;
 	padding-inline: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
+
+	/* Contain halo */
 	position: relative;
 
 	/* let staticColor variants inherit their color */
-	color: inherit;
 
 	margin-block: var(--mod-button-margin-block);
 	margin-inline-end: var(--mod-button-margin-right);
 	margin-inline-start: var(--mod-button-margin-left);
+
+	background-color: var(--highcontrast-button-background-color-default, var(--mod-button-background-color-default, var(--spectrum-button-background-color-default)));
+	color: var(--highcontrast-button-content-color-default, var(--mod-button-content-color-default, var(--spectrum-button-content-color-default)));
+
+	transition:
+		background-color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
+		border-color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
+		color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
+		box-shadow var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
+
+		display: block;
+
+		margin: calc(-1 * (var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) + var(--mod-button-border-width, var(--spectrum-button-border-width))));
+
+		/* @deprecation --mod-animation-duration-100 has been renamed and will be removed in a future version. */
+		transition:
+			opacity var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)))) ease-out,
+			margin var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)))) ease-out,
+			box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
+
+		/* correct focus indicator radius for t-shirt sizing */
+		border-radius: calc(var(--mod-button-border-radius, var(--spectrum-button-border-radius)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
+
+		pointer-events: none;
+	}
+
+	&:focus-visible,
+	&.is-focused {
+		background-color: var(--highcontrast-button-background-color-focus, var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus)));
+		border-color: var(--highcontrast-button-border-color-focus, var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus)));
+		color: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus)));
+
+		/* Remove the default focus outline */
+		box-shadow: none;
+		outline: none;
+
+		&::after {
+			margin: calc(-2 * var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
+			box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--mod-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color)));
+		}
+	}
+
+	/* Remove the inner border and padding in Firefox (normalize). */
+	&::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		cursor: default;
+	}
+
+	&:hover {
+		background-color: var(--highcontrast-button-background-color-hover, var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover)));
+		border-color: var(--highcontrast-button-border-color-hover, var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover)));
+		color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
+	}
+
+	&:active {
+		background-color: var(--highcontrast-button-background-color-down, var(--mod-button-background-color-down, var(--spectrum-button-background-color-down)));
+		border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
+		color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
+	}
 
 	&:hover,
 	&:active {
 		box-shadow: none;
 	}
 
+	&:disabled,
+	&.is-disabled,
+	&[pending],
+	&.is-pending {
+		background-color: var(--highcontrast-button-background-color-disabled, var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled)));
+		border-color: var(--highcontrast-button-border-color-disabled, var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled)));
+		color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
+	}
+
 	.spectrum-Icon {
-		/* Any block-size difference between the intended workflow icon size and actual icon used.
-       Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
+		/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- Any block-size difference between the intended workflow icon size and actual icon used. Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
 		--_icon-size-difference: max(0px, var(--spectrum-button-intended-icon-size) - var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size)));
 
 		margin-block-start: var(--mod-button-icon-margin-block-start, max(0px, var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - var(--mod-button-border-width, var(--spectrum-button-border-width)) + (var(--_icon-size-difference, 0px) / 2)));
@@ -142,9 +256,8 @@
 		align-self: flex-start;
 	}
 
-	/* correct focus indicator radius for t-shirt sizing */
-	&::after {
-		border-radius: calc(var(--mod-button-border-radius, var(--spectrum-button-border-radius)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
+	.spectrum-Icon + .spectrum-Button-label {
+		text-align: var(--mod-button-text-align-with-icon, start);
 	}
 
 	&.spectrum-Button--iconOnly {
@@ -161,98 +274,6 @@
 		&::after {
 			border-radius: 50%;
 		}
-	}
-}
-
-a.spectrum-Button {
-	@extend %spectrum-AnchorButton;
-}
-
-.spectrum-Button-label {
-	@extend %spectrum-ButtonLabel;
-	padding-block-start: calc(var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-	padding-block-end: calc(var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-	line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
-	align-self: start;
-	text-align: var(--mod-button-text-align, center);
-}
-
-.spectrum-Button .spectrum-Icon + .spectrum-Button-label {
-	text-align: var(--mod-button-text-align-with-icon, start);
-}
-
-.spectrum-Button {
-	&:focus-visible,
-	&.is-focused {
-		&::after {
-			box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color));
-		}
-	}
-}
-
-/* Special cases for focus indicator */
-.spectrum-Button {
-	transition: border-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
-
-	&::after {
-		position: absolute;
-		inset: 0;
-		margin: calc((var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) + var(--mod-button-border-width, var(--spectrum-button-border-width))) * -1);
-		border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius));
-		transition: box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
-		pointer-events: none;
-		content: "";
-	}
-
-	&:focus-visible {
-		/* Remove the default focus outline */
-		box-shadow: none;
-		outline: none;
-
-		&::after {
-			box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color))));
-		}
-	}
-}
-
-/* Core Token Theming */
-/* former skin.css, applied / copied from actionbutton/index.css  */
-.spectrum-Button {
-	@extend %spectrum-BaseButton;
-
-	background-color: var(--highcontrast-button-background-color-default, var(--mod-button-background-color-default, var(--spectrum-button-background-color-default)));
-	border-color: var(--highcontrast-button-border-color-default, var(--mod-button-border-color-default, var(--spectrum-button-border-color-default)));
-	color: var(--highcontrast-button-content-color-default, var(--mod-button-content-color-default, var(--spectrum-button-content-color-default)));
-	transition:
-		border var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
-		color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
-		background-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear;
-
-	&:hover {
-		background-color: var(--highcontrast-button-background-color-hover, var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover)));
-		border-color: var(--highcontrast-button-border-color-hover, var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover)));
-		color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
-	}
-
-	&:focus-visible {
-		background-color: var(--highcontrast-button-background-color-focus, var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus)));
-		border-color: var(--highcontrast-button-border-color-focus, var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus)));
-		color: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus)));
-	}
-
-	&:active {
-		background-color: var(--highcontrast-button-background-color-down, var(--mod-button-background-color-down, var(--spectrum-button-background-color-down)));
-		border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
-		color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
-	}
-
-	&:disabled,
-	&.is-disabled,
-	&[pending],
-	&.is-pending {
-		background-color: var(--highcontrast-button-background-color-disabled, var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled)));
-		border-color: var(--highcontrast-button-border-color-disabled, var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled)));
-		color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
 	}
 
 	.spectrum-Icon,
@@ -291,15 +312,35 @@ a.spectrum-Button {
 	}
 }
 
-/* Disable button label wrap  */
-.spectrum-Button--noWrap {
-	.spectrum-Button-label {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+a.spectrum-Button {
+	/* Make link text not selectable  */
+	user-select: none;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Remove appearance for clickable types in iOS and Safari. */
+	-webkit-appearance: none;
+}
+
+.spectrum-Button-label {
+	padding-block-start: calc(var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+	padding-block-end: calc(var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+	line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
+	align-self: start;
+	justify-self: center;
+
+	/* Fixes horizontal alignment of text in anchor buttons */
+	text-align: var(--mod-button-text-align, center);
+
+	&:empty {
+		display: none;
 	}
 }
 
+/* Disable button label wrap  */
+.spectrum-Button--noWrap .spectrum-Button-label {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 
 /* Static color variants */
 .spectrum-Button--staticWhite {

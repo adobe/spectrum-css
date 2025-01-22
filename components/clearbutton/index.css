@@ -1,4 +1,3 @@
-
 /*!
 * Copyright 2024 Adobe. All rights reserved.
 *
@@ -12,6 +11,7 @@
 * governing permissions and limitations under the License.
 */
 
+@import "./themes/spectrum.css";
 @import "./themes/express.css";
 
 .spectrum-ClearButton {
@@ -23,7 +23,7 @@
 	--spectrum-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
 	--spectrum-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
-    
+
 	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
 	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
 	border-radius: 100%;
@@ -68,7 +68,7 @@
 		--mod-clear-button-background-color: transparent;
 		--mod-clear-button-background-color-hover: var(--spectrum-transparent-white-300);
 		--mod-clear-button-background-color-down: var(--spectrum-transparent-white-400);
-		--mod-clear-button-background-color-key-focus:var(--spectrum-transparent-white-300);
+		--mod-clear-button-background-color-key-focus: var(--spectrum-transparent-white-300);
 	}
 
 	&:disabled,
@@ -121,8 +121,8 @@
 
 .spectrum-ClearButton:disabled,
 .spectrum-ClearButton.is-disabled {
-  .spectrum-ClearButton-icon {
-		color: var( --highcontrast-clear-button-icon-color-disabled, var(--mod-clear-button-icon-color-disabled, var(--spectrum-clear-button-icon-color-disabled)));
+	.spectrum-ClearButton-icon {
+		color: var(--mod-clear-button-icon-color-disabled, var(--spectrum-clear-button-icon-color-disabled));
 	}
 }
 
