@@ -4489,7 +4489,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/dialog@npm:12.1.0, @spectrum-css/dialog@workspace:^, @spectrum-css/dialog@workspace:components/dialog":
+"@spectrum-css/dialog@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@spectrum-css/dialog@npm:12.1.0"
+  peerDependencies:
+    "@spectrum-css/closebutton": ">=6.0.0 <7.0.0"
+    "@spectrum-css/divider": ">=5.0.0 <6.0.0"
+    "@spectrum-css/modal": ">=7.0.0 <8.0.0"
+    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/underlay": ">=6.0.0 <7.0.0"
+  peerDependenciesMeta:
+    "@spectrum-css/closebutton":
+      optional: true
+    "@spectrum-css/divider":
+      optional: true
+    "@spectrum-css/modal":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
+    "@spectrum-css/underlay":
+      optional: true
+  checksum: 10c0/e6c761eb29e070f5b979dd6925e1b43aa727a24efa0389aa67cad25c1193a6149e1277c6270d0c44c831d6c0c0b2aa1e3c3cec6dde11677567bff756d1090e75
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/dialog@workspace:^, @spectrum-css/dialog@workspace:components/dialog":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   dependencies:

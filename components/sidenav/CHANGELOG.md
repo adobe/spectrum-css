@@ -180,9 +180,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🛑 BREAKING CHANGES
 
-      *
-      - Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="4.2.4"></a>
