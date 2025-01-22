@@ -1,5 +1,16 @@
 # Change Log
 
+## 7.4.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`6b41b50`](https://github.com/adobe/spectrum-css/commit/6b41b501768da3db70ae00f6097646583f8fbd01) Thanks [@pfulton](https://github.com/pfulton)! - Restores missing custom properties that were flagged by the linter. The missing properties were copied from the spectrum two theme files in the foundations branch. This clears up all linter errors and warnings for these components.
+
+- Updated dependencies [[`7582c1f`](https://github.com/adobe/spectrum-css/commit/7582c1f5c73de5ecf962bfad0294f162d7035751), [`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76), [`2850ef5`](https://github.com/adobe/spectrum-css/commit/2850ef5439d50fd47db81783c861a63ffa42414f)]:
+  - @spectrum-css/clearbutton@6.4.1-next.0
+  - @spectrum-css/tokens@14.0.0-next.12
+  - @spectrum-css/textfield@7.3.1-next.0
+
 ## 7.4.0
 
 ### Minor Changes
@@ -122,7 +133,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
 ### 🛑 BREAKING CHANGES
- - Removes component-builder & component-builder-simple for script leveraging postcss
+
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 

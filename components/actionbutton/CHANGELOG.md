@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.2.1-next.0
+
+### Patch Changes
+
+- [#3517](https://github.com/adobe/spectrum-css/pull/3517) [`7582c1f`](https://github.com/adobe/spectrum-css/commit/7582c1f5c73de5ecf962bfad0294f162d7035751) Thanks [@cdransf](https://github.com/cdransf)! - Define undefined properties from theme directory.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
 ## 6.2.0
 
 ### Minor Changes
