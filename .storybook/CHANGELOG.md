@@ -1,5 +1,15 @@
 # Change Log
 
+## 11.0.1-next.2
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`2a9cb4a`](https://github.com/adobe/spectrum-css/commit/2a9cb4afd2514fa527f4819b7a6c00864b0cccf2) Thanks [@pfulton](https://github.com/pfulton)! - Updates the tags used by the stories in the "Foundations" documentation, so hidden stories remain hidden on the sidebar.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+  - @spectrum-css/bundle@1.0.0
+
 ## 11.0.1-next.1
 
 ### Patch Changes

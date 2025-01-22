@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.0.0-next.12
+
+### Patch Changes
+
+- [#3497](https://github.com/adobe/spectrum-css/pull/3497) [`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76) Thanks [@cdransf](https://github.com/cdransf)! - Uses the latest releases from Spectrum Tokens (spectrum-tokens@13.0.0-beta.56)
+
 ## 14.0.0-next.11
 
 ### Patch Changes
