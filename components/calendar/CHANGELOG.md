@@ -192,7 +192,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
 ### 🛑 BREAKING CHANGES
- - Removes component-builder & component-builder-simple for script leveraging postcss
+
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 

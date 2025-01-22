@@ -2522,7 +2522,6 @@
 
 - feat: adding component-specific theme mappings and new bridge files to support S1 and S2 in tandem
 
-
 <a name="14.0.0"></a>
 
 ## 14.0.0

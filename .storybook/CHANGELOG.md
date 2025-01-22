@@ -395,7 +395,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 ## 7.4.2
 
-🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.4.1...@spectrum-css/preview@7.4.2-next.0)
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.4.1...@spectrum-css/preview@7.4.2)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
@@ -472,8 +472,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 ### 🛑 BREAKING CHANGES
 
 - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
-
-* NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
+- NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 
 <a name="6.0.1"></a>
 
