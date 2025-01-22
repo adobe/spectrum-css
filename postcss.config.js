@@ -28,7 +28,7 @@ module.exports = ({
 	lint = true,
 	verbose = true,
 	additionalPlugins = {},
-	minify = true,
+	minify = false,
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
@@ -51,12 +51,16 @@ module.exports = ({
 
 	if (outputFilename === "express" || pathParts.includes("express")) shouldCombine = true;
 
-	if (outputFilename === "index-base") {
+	if (outputFilename?.startsWith("index-base")) {
 		splitinatorOptions.noFlatVariables = true;
 	}
 
 	if (pathParts.includes("bridge")) {
 		splitinatorOptions.referencesOnly = true;
+	}
+
+	if (!minify && outputFilename?.includes(".min.")) {
+		minify = true;
 	}
 
 	return {
