@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.3
+
+### Patch Changes
+
+- [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)! - Update package dependencies.
+
+  Specific to `stylelint-no-unknown-custom-properties`, the assumption that only CSS files will be parsed is removed to allow support for JSON assets as well. Additionally, this package will now evaluate dependencies beyond just `@spectrum-css`.
+
 ## 2.0.2
 
 ### Patch Changes
