@@ -1,5 +1,18 @@
 # Change Log
 
+## 4.0.0-next.1
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`5fae8ab`](https://github.com/adobe/spectrum-css/commit/5fae8aba83d396103aca56c108e7e81f61fce655) Thanks [@pfulton](https://github.com/pfulton)! - Define undefined custom properties from themes directory.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76), [`2850ef5`](https://github.com/adobe/spectrum-css/commit/2850ef5439d50fd47db81783c861a63ffa42414f), [`8d65de0`](https://github.com/adobe/spectrum-css/commit/8d65de0233a6b12e72002b47e9484dbe5f0636be)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+  - @spectrum-css/textfield@7.3.1-next.0
+  - @spectrum-css/popover@8.0.0-next.1
+  - @spectrum-css/pickerbutton@6.0.0-next.1
+  - @spectrum-css/calendar@5.3.1-next.0
+
 ## 4.0.0-next.0
 
 ### Patch Changes
@@ -120,7 +133,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
 ### 🛑 BREAKING CHANGES
- - Removes component-builder & component-builder-simple for script leveraging postcss
+
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 

@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.0.0-next.12
+
+### Patch Changes
+
+- [#3497](https://github.com/adobe/spectrum-css/pull/3497) [`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76) Thanks [@cdransf](https://github.com/cdransf)! - Uses the latest releases from Spectrum Tokens (spectrum-tokens@13.0.0-beta.56)
+
 ## 14.0.0-next.11
 
 ### Patch Changes
@@ -125,14 +131,13 @@
 
 - feat: adding component-specific theme mappings and new bridge files to support S1 and S2 in tandem
 
-
 <a name="14.0.0"></a>
 
 ## 14.0.0
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.2.0...@spectrum-css/tokens@14.0.0)
 
-* feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
 ### 🛑 BREAKING CHANGES
 
