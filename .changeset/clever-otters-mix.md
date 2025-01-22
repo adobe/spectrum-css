@@ -14,7 +14,6 @@
 "@spectrum-css/radio": minor
 "@spectrum-css/table": minor
 "@spectrum-css/card": minor
-"@spectrum-css/site": minor
 "@spectrum-css/tokens": minor
 ---
 
