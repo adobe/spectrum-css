@@ -21,7 +21,10 @@ export default {
 	component: "Breadcrumbs",
 	argTypes: {
 		items: { table: { disable: true } },
-		size: size(["m", "l"]),
+		size: {
+			...size(["m", "l"]),
+			if: { arg: "variant", neq: "multiline" },
+		},
 		variant: {
 			name: "Variant",
 			type: { name: "string" },
