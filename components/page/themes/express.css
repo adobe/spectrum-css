@@ -11,15 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-/* @combine .spectrum.spectrum--legacy */
+/* @combine .spectrum.spectrum--express */
 
-@import "./spectrum-two.css";
-
-@container style(--system: legacy) {
-	.spectrum-Textfield {
-		--spectrum-textfield-background-color: var(--spectrum-gray-50);
-		--spectrum-textfield-background-color-disabled: var(--spectrum-disabled-background-color);
-
-		--spectrum-textfield-border-color-disabled: var(--spectrum-disabled-border-color);
-	}
-}
+@import "./spectrum.css";
