@@ -25,10 +25,10 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=7.0.0 <8.0.0",
+		"@spectrum-css/actionbutton": ">=6.2.1-next.0",
 		"@spectrum-css/button": ">=14.0.0-next.0",
-		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
-		"@spectrum-css/textfield": ">=8.0.0 <9.0.0",
+		"@spectrum-css/icon": ">=9",
+		"@spectrum-css/textfield": ">=7.3.1-next.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.3"
 	},
 	"peerDependenciesMeta": {
@@ -49,11 +49,11 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "7.0.1",
-		"@spectrum-css/button": "14.0.1",
+		"@spectrum-css/actionbutton": "6.2.1-next.0",
+		"@spectrum-css/button": "14.0.0-next.8",
 		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/textfield": "8.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.11"
+		"@spectrum-css/textfield": "7.3.1-next.0",
+		"@spectrum-css/tokens": "14.0.0-next.12"
 	},
 	"keywords": [
 		"design-system",

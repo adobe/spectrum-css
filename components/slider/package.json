@@ -26,7 +26,7 @@
 	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/stepper": ">=7.0.0 <8.0.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/tokens": ">=14.0.0 <15.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/stepper": {
@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/stepper": "7.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.11"
+		"@spectrum-css/tokens": "14.0.0-next.12"
 	},
 	"keywords": [
 		"design-system",

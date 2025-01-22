@@ -25,9 +25,9 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=7.0.0 <8.0.0",
-		"@spectrum-css/link": ">=7.0.0 <8.0.0",
-		"@spectrum-css/popover": ">=8.0.0 <9.0.0",
+		"@spectrum-css/actionbutton": ">=6.2.1-next.0",
+		"@spectrum-css/link": ">=7",
+		"@spectrum-css/popover": ">=8.0.0-next.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.0"
 	},
 	"peerDependenciesMeta": {
@@ -45,10 +45,10 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "7.0.1",
+		"@spectrum-css/actionbutton": "6.2.1-next.0",
 		"@spectrum-css/link": "7.0.1",
-		"@spectrum-css/popover": "8.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.11"
+		"@spectrum-css/popover": "8.0.0-next.1",
+		"@spectrum-css/tokens": "14.0.0-next.12"
 	},
 	"keywords": [
 		"design-system",

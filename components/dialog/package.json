@@ -27,11 +27,12 @@
 	"peerDependencies": {
 		"@spectrum-css/button": ">=14.0.0-next.0",
 		"@spectrum-css/buttongroup": ">=9.0.0 <10.0.0",
-		"@spectrum-css/closebutton": ">=5.0.0-next.0",
-		"@spectrum-css/divider": ">=5.0.0 <6.0.0",
-		"@spectrum-css/modal": ">=5.0.0 <6.0.0",
+		"@spectrum-css/checkbox": ">=10",
+		"@spectrum-css/closebutton": ">=5.0.0-next.2",
+		"@spectrum-css/modal": ">=5.1.1-next.0",
 		"@spectrum-css/tokens": ">=14.0.0-next.0",
-		"@spectrum-css/underlay": ">=4.0.0 <5.0.0"
+		"@spectrum-css/typography": ">=8",
+		"@spectrum-css/underlay": ">=4.1.1-next.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/button": {
@@ -40,10 +41,10 @@
 		"@spectrum-css/buttongroup": {
 			"optional": true
 		},
-		"@spectrum-css/closebutton": {
+		"@spectrum-css/checkbox": {
 			"optional": true
 		},
-		"@spectrum-css/divider": {
+		"@spectrum-css/closebutton": {
 			"optional": true
 		},
 		"@spectrum-css/modal": {
@@ -52,17 +53,21 @@
 		"@spectrum-css/tokens": {
 			"optional": true
 		},
+		"@spectrum-css/typography": {
+			"optional": true
+		},
 		"@spectrum-css/underlay": {
 			"optional": true
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/button": "14.0.1",
+		"@spectrum-css/button": "14.0.0-next.8",
 		"@spectrum-css/buttongroup": "9.0.1",
+		"@spectrum-css/checkbox": "10.0.1",
 		"@spectrum-css/closebutton": "5.0.0-next.2",
 		"@spectrum-css/divider": "5.0.1",
 		"@spectrum-css/modal": "5.1.1-next.0",
-		"@spectrum-css/tokens": "14.0.0-next.11",
+		"@spectrum-css/tokens": "14.0.0-next.12",
 		"@spectrum-css/typography": "8.0.1",
 		"@spectrum-css/underlay": "4.1.1-next.0"
 	},
