@@ -1,5 +1,22 @@
 # Change Log
 
+## 4.0.0
+
+### Major Changes
+
+- [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
+
+  - `index-base.css`
+  - `index-theme.css`
+  - `themes/spectrum.css`
+  - `themes/express.css`
+
+### Patch Changes
+
+- Updated dependencies [[`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b), [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b)]:
+  - @spectrum-css/tokens@15.1.0
+  - @spectrum-css/swatch@7.0.0
+
 ## 3.2.0
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # Change Log
 
+## 11.0.1
+
+### Patch Changes
+
+- Updated dependencies [[`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b)]:
+  - @spectrum-css/tokens@15.1.0
+  - @spectrum-css/bundle@1.0.0
+
 ## 11.0.0
 
 ### Major Changes

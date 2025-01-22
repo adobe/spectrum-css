@@ -1,5 +1,15 @@
 # Change Log
 
+## 15.1.0
+
+### Minor Changes
+
+- [#3359](https://github.com/adobe/spectrum-css/pull/3359) [`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b) Thanks [@cdransf](https://github.com/cdransf)! - This resolves our remaining stylelint issues around undefined tokens, rule order, unused values and color syntax.
+
+  - Updates invalid color syntax from `rgba(N, N, N, N)` to `rgba(N N N / N)`.
+  - In cases of duplicate properties, preserves the property that would be applied given current code structure.
+  - Updates misnamed tokens to use valid tokens (`table/index.css`).
+
 ## 15.0.0
 
 ### Major Changes

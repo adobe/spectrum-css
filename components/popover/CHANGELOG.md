@@ -1,5 +1,20 @@
 # Change Log
 
+## 7.3.0
+
+### Minor Changes
+
+- [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)! - Simplify how the `--system` properties are mapped. By updating the logic in the `postcss-add-theming-layer`, we are now shipping cleaner, more readable `--system` property names. These custom properties are documented as _NOT_ a part of the component API so although these result in a change to the custom property names, it does not impact the properties that are in the API and so do not constitute a breaking change. Expect to see no change to how component theming works or any visual regressions as a result of this change.
+
+### Patch Changes
+
+- Updated dependencies [[`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b), [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b)]:
+  - @spectrum-css/tokens@15.1.0
+  - @spectrum-css/alertdialog@3.0.0
+  - @spectrum-css/divider@4.0.0
+  - @spectrum-css/dialog@11.0.0
+  - @spectrum-css/menu@8.0.0
+
 ## 7.2.0
 
 ### Minor Changes
