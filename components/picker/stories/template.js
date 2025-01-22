@@ -64,8 +64,7 @@ export const Picker = ({
 			id=${id}
 			style=${styleMap(customStyles)}
 			type="button"
-			@click=${() => {
-				if (window.isChromatic()) return;
+			@click=${function() {
 				updateArgs({ isOpen: !isOpen });
 			}}
 			aria-labelledby=${ifDefined(ariaLabeledBy)}
@@ -109,6 +108,7 @@ export const Template = ({
 	size = "m",
 	label,
 	labelPosition = "top",
+	placeholder,
 	helpText,
 	isQuiet = false,
 	isOpen = false,
@@ -125,7 +125,7 @@ export const Template = ({
 		// Helps ensure that Popover appears below the Picker, with side labels layout.
 		display: "block",
 	},
-	content = [],
+	popoverContent = [],
 } = {}, context = {}) => {
 	const pickerMarkup = Picker({
 		size,
@@ -134,17 +134,18 @@ export const Template = ({
 		isInvalid,
 		isDisabled,
 		isLoading,
-		content,
+		placeholder,
+		popoverContent,
 		labelPosition,
 		ariaLabeledBy: fieldLabelId,
 	}, context);
 
-	const popoverMarkup = content.length !== 0 ? Popover({
+	const popoverMarkup = popoverContent.length !== 0 ? Popover({
 		isOpen: isOpen && !isDisabled && !isLoading,
 		withTip: false,
 		position: "bottom",
 		isQuiet,
-		content,
+		content: popoverContent,
 		size,
 		customStyles: customPopoverStyles,
 	}, context) : "";
@@ -193,12 +194,6 @@ export const Template = ({
 				}, context)
 			)}
 		</div>`;
-
-	// Make sure there is a wrapper around sibling components when using the Chromatic
-	// template, so their layout is not affected by the flex and grid layouts used.
-	if (window.isChromatic()) {
-		return html`<div style="position: relative;">${markup}</div>`;
-	}
 	return markup;
 };
 
