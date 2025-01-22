@@ -132,7 +132,6 @@
     ".spectrum-Menu.is-selectable .spectrum-Menu-item.is-selected",
     ".spectrum-Menu.js-focus-within .spectrum-Menu-item--collapsible.is-open[focus-within]",
     ".spectrum-Menu.spectrum-Menu--sizeL",
-    ".spectrum-Menu.spectrum-Menu--sizeM",
     ".spectrum-Menu.spectrum-Menu--sizeS",
     ".spectrum-Menu.spectrum-Menu--sizeXL",
     ".spectrum-Menu:lang(ja)",
@@ -333,7 +332,6 @@
     "--spectrum-component-top-to-text-200",
     "--spectrum-component-top-to-text-300",
     "--spectrum-component-top-to-text-75",
-    "--spectrum-corner-radius-100",
     "--spectrum-disabled-content-color",
     "--spectrum-divider-thickness-medium",
     "--spectrum-divider-thickness-small",
@@ -374,12 +372,6 @@
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
-  ],
-  "system-theme": [
-    "--system-menu-item-background-color-down",
-    "--system-menu-item-background-color-hover",
-    "--system-menu-item-background-color-key-focus",
-    "--system-menu-item-corner-radius"
   ],
   "passthroughs": [
     "--mod-checkbox-text-to-control",

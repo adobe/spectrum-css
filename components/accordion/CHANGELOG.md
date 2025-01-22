@@ -75,8 +75,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.6...@spectrum-css/accordion@5.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.6...@spectrum-css/accordion@5.0.0)
 
 ### ✨ Features
 
@@ -84,11 +83,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -96,8 +93,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.6
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.5...@spectrum-css/accordion@4.2.6)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.5...@spectrum-css/accordion@4.2.6)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -105,8 +101,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.5
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.4...@spectrum-css/accordion@4.2.5)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.4...@spectrum-css/accordion@4.2.5)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -114,8 +109,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.4
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.3...@spectrum-css/accordion@4.2.4)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.3...@spectrum-css/accordion@4.2.4)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -123,8 +117,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.3
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.2...@spectrum-css/accordion@4.2.3)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.2...@spectrum-css/accordion@4.2.3)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -132,8 +125,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.2
 
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.1...@spectrum-css/accordion@4.2.2)
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.2.1...@spectrum-css/accordion@4.2.2)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -141,8 +133,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -150,8 +141,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.0
 
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.1.1...@spectrum-css/accordion@4.2.0)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.1.1...@spectrum-css/accordion@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -159,8 +149,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.1
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.1.0...@spectrum-css/accordion@4.1.1)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.1.0...@spectrum-css/accordion@4.1.1)
 
 ### 🐛 Bug fixes
 
@@ -170,8 +159,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.27...@spectrum-css/accordion@4.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.27...@spectrum-css/accordion@4.1.0)
 
 ### ✨ Features
 
@@ -181,8 +169,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.27
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.26...@spectrum-css/accordion@4.0.27)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.26...@spectrum-css/accordion@4.0.27)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -190,8 +177,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.26
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.25...@spectrum-css/accordion@4.0.26)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.25...@spectrum-css/accordion@4.0.26)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -199,8 +185,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.25
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.23...@spectrum-css/accordion@4.0.25)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.23...@spectrum-css/accordion@4.0.25)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -208,8 +193,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.24
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.23...@spectrum-css/accordion@4.0.24)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.23...@spectrum-css/accordion@4.0.24)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -217,8 +201,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.23
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.22...@spectrum-css/accordion@4.0.23)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.22...@spectrum-css/accordion@4.0.23)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -226,8 +209,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.22
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.21...@spectrum-css/accordion@4.0.22)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.21...@spectrum-css/accordion@4.0.22)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -235,8 +217,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.21
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.20...@spectrum-css/accordion@4.0.21)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.20...@spectrum-css/accordion@4.0.21)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -244,8 +225,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.20
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.19...@spectrum-css/accordion@4.0.20)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.19...@spectrum-css/accordion@4.0.20)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -253,8 +233,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.19
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.18...@spectrum-css/accordion@4.0.19)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.18...@spectrum-css/accordion@4.0.19)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -262,8 +241,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.18
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.17...@spectrum-css/accordion@4.0.18)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.17...@spectrum-css/accordion@4.0.18)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -271,8 +249,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.17
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.16...@spectrum-css/accordion@4.0.17)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.16...@spectrum-css/accordion@4.0.17)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -280,8 +257,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.16
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.15...@spectrum-css/accordion@4.0.16)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.15...@spectrum-css/accordion@4.0.16)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -289,8 +265,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.15
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.14...@spectrum-css/accordion@4.0.15)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.14...@spectrum-css/accordion@4.0.15)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -298,8 +273,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.14
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.13...@spectrum-css/accordion@4.0.14)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.13...@spectrum-css/accordion@4.0.14)
 
 ### 🔙 Reverts
 
@@ -309,8 +283,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.13
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.12...@spectrum-css/accordion@4.0.13)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.12...@spectrum-css/accordion@4.0.13)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -318,8 +291,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.12
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.10...@spectrum-css/accordion@4.0.12)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.10...@spectrum-css/accordion@4.0.12)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -327,8 +299,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.11
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.10...@spectrum-css/accordion@4.0.11)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.10...@spectrum-css/accordion@4.0.11)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -336,8 +307,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.10
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.9...@spectrum-css/accordion@4.0.10)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.9...@spectrum-css/accordion@4.0.10)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -345,8 +315,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.9
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.8...@spectrum-css/accordion@4.0.9)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.8...@spectrum-css/accordion@4.0.9)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -354,8 +323,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.8
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.7...@spectrum-css/accordion@4.0.8)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.7...@spectrum-css/accordion@4.0.8)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -363,8 +331,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.7
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.6...@spectrum-css/accordion@4.0.7)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.6...@spectrum-css/accordion@4.0.7)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -372,8 +339,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.6
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.5...@spectrum-css/accordion@4.0.6)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.5...@spectrum-css/accordion@4.0.6)
 
 ### 🐛 Bug fixes
 
@@ -383,8 +349,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.5
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.4...@spectrum-css/accordion@4.0.5)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.4...@spectrum-css/accordion@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -392,8 +357,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.4
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.3...@spectrum-css/accordion@4.0.4)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.3...@spectrum-css/accordion@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -401,8 +365,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.3
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.2...@spectrum-css/accordion@4.0.3)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.2...@spectrum-css/accordion@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -410,8 +373,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.2
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.1...@spectrum-css/accordion@4.0.2)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.1...@spectrum-css/accordion@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -419,8 +381,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.1
 
-🗓
-2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.0...@spectrum-css/accordion@4.0.1)
+🗓 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@4.0.0...@spectrum-css/accordion@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -428,13 +389,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.0
 
-🗓
-2023-06-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.50...@spectrum-css/accordion@4.0.0)
+🗓 2023-06-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.50...@spectrum-css/accordion@4.0.0)
 
 \*feat(accordion)!: migrate to Spectrum Tokens (#1789)([c8be0af](https://github.com/adobe/spectrum-css/commit/c8be0af)), closes[#1789](https://github.com/adobe/spectrum-css/issues/1789)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		migrates the Accordion component to use `@adobe/spectrum-tokens`.
@@ -447,8 +406,7 @@ Additionally:
 
 ## 3.0.50
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.49...@spectrum-css/accordion@3.0.50)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.49...@spectrum-css/accordion@3.0.50)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -456,8 +414,7 @@ Additionally:
 
 ## 3.0.49
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.48...@spectrum-css/accordion@3.0.49)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.48...@spectrum-css/accordion@3.0.49)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -465,8 +422,7 @@ Additionally:
 
 ## 3.0.48
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.47...@spectrum-css/accordion@3.0.48)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.47...@spectrum-css/accordion@3.0.48)
 
 ### 🐛 Bug fixes
 
@@ -476,8 +432,7 @@ Additionally:
 
 ## 3.0.47
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.46...@spectrum-css/accordion@3.0.47)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.46...@spectrum-css/accordion@3.0.47)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 
@@ -485,8 +440,7 @@ Additionally:
 
 ## 3.0.46
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.45...@spectrum-css/accordion@3.0.46)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.45...@spectrum-css/accordion@3.0.46)
 
 **Note:** Version bump only for package @spectrum-css/accordion
 

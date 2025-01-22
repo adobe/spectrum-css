@@ -163,82 +163,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 }
 
 /**
- * The builder for the individual themes assets
- * @param {object} config
- * @param {string} config.cwd - Current working directory for the component being built
- * @param {boolean} config.clean - Should the built assets be cleaned before running the build
- * @returns Promise<void>
- */
-async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
-	// This fetches the content of the files and returns an array of objects with the content and input paths
-	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
-
-	// Nothing to do if there's no content
-	if (!contentData || contentData.length === 0) return;
-
-	const imports = contentData.map(({ input }) => input);
-	const importMap = imports.map((i) => `@import "${i}";`).join("\n");
-
-	const promises = contentData.map(async ({ content, input }) => {
-		if (!content)
-			return Promise.reject(
-				new Error(`No content found for ${relativePrint(input, { cwd })}`),
-			);
-
-		const theme = path.basename(input, ".css");
-		return processCSS(
-			content,
-			path.join(cwd, input),
-			path.join(cwd, "dist", input),
-			{
-				cwd,
-				clean,
-				lint: false,
-				skipMapping: false,
-				referencesOnly: false,
-				preserveVariables: true,
-				// Only output the new selectors with the system mappings
-				stripLocalSelectors: true,
-				theme,
-			},
-		);
-	});
-
-	promises.push(
-		processCSS(
-			undefined,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-				skipMapping: true,
-				referencesOnly: false,
-				preserveVariables: false,
-				stripLocalSelectors: false,
-			},
-		),
-		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
-		processCSS(
-			importMap,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-theme.css"),
-			{
-				cwd,
-				clean,
-				skipMapping: false,
-				stripLocalSelectors: false,
-				referencesOnly: true,
-				shouldCombine: false,
-				map: false,
-			},
-		),
-	);
-
-	return Promise.all(promises);
-}
-
-/**
  * The main entry point for this tool; this builds a CSS component
  * @param {object} config
  * @param {string} [config.componentName=process.env.NX_TASK_TARGET_PROJECT] - Current working directory for the component being built
@@ -268,43 +192,33 @@ async function main({
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
-	return Promise.all([
-		build({ cwd, clean }),
-		buildThemes({ cwd, clean }),
-	])
-		.then((report) => {
-			const logs = report.flat(Infinity).filter(Boolean);
+	const reports = [];
+	const errors = [];
 
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	await build({ cwd, clean }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 
-			if (logs && logs.length > 0) {
-				logs
-					.sort((a) => {
-						if (typeof a === "string" && a.includes("✓")) return -1;
-						if (typeof a === "string" && a.includes("🔍")) return 0;
-						return 1;
-					})
-					.forEach((log) => console.log(log));
-			}
-			else console.log("No assets created.".gray);
+	const logs = reports.flat(Infinity).filter(Boolean);
+	const errs = errors.flat(Infinity).filter(Boolean);
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		})
-		.catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	console.log(`\n\n${key} 🔨`);
+	console.log(`${"".padStart(30, "-")}`);
 
-			console.trace(err);
+	if (errs && errs.length > 0) {
+		errs.forEach((err) => console.error(err));
+	}
+	else {
+		if (logs && logs.length > 0) {
+			logs.forEach((log) => console.log(log));
+		}
+		else console.log("No assets created.".gray);
+	}
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
 
-			process.exit(1);
-		});
+	if (errs && errs.length > 0) process.exit(1);
+	else process.exit(0);
 }
 
 exports.processCSS = processCSS;

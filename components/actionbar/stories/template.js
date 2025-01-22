@@ -1,16 +1,13 @@
-import { Container } from "@spectrum-css/preview/decorators";
 import { Template as ActionGroup } from "@spectrum-css/actiongroup/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionBar",

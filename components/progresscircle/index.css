@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-ProgressCircle {
@@ -31,7 +29,7 @@
 
 .spectrum-ProgressCircle {
 	/* circle unfilled border color */
-	--spectrum-progress-circle-track-border-color: var(--spectrum-gray-300);
+	--spectrum-progress-circle-track-border-color: var(--spectrum-gray-200);
 
 	/* circle progress fill border color */
 	--spectrum-progress-circle-fill-border-color: var(--spectrum-accent-content-color-default);

@@ -1,5 +1,25 @@
 # Change Log
 
+## 8.0.0-next.1
+
+### Patch Changes
+
+- [#3517](https://github.com/adobe/spectrum-css/pull/3517) [`7582c1f`](https://github.com/adobe/spectrum-css/commit/7582c1f5c73de5ecf962bfad0294f162d7035751) Thanks [@cdransf](https://github.com/cdransf)! - Define undefined properties from theme directory.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
+## 8.0.0-next.0
+
+### Major Changes
+
+- [#3355](https://github.com/adobe/spectrum-css/pull/3355) [`a827601`](https://github.com/adobe/spectrum-css/commit/a827601bc1769a775f24e9da294bdfaa70535082) Thanks [@cdransf](https://github.com/cdransf)! - Adds support for new avatar-size tokens (avatar-size-800 to avatar-size-1500). Updates avatar component story to support new sizes. Adds support for avatar-border-color and avatar-border-thickness.
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 7.3.0
 
 ### Minor Changes
@@ -54,16 +74,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.5...@spectrum-css/avatar@7.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.5...@spectrum-css/avatar@7.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -71,8 +88,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.4...@spectrum-css/avatar@6.1.5)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.4...@spectrum-css/avatar@6.1.5)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -80,8 +96,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.3...@spectrum-css/avatar@6.1.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.3...@spectrum-css/avatar@6.1.4)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -89,8 +104,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.3
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.2...@spectrum-css/avatar@6.1.3)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.2...@spectrum-css/avatar@6.1.3)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -98,8 +112,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.1...@spectrum-css/avatar@6.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.1.1...@spectrum-css/avatar@6.1.2)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -107,8 +120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -116,8 +128,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.62...@spectrum-css/avatar@6.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.62...@spectrum-css/avatar@6.1.0)
 
 ### ✨ Features
 
@@ -127,8 +138,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.62
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.61...@spectrum-css/avatar@6.0.62)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.61...@spectrum-css/avatar@6.0.62)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -136,8 +146,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.61
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.60...@spectrum-css/avatar@6.0.61)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.60...@spectrum-css/avatar@6.0.61)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -145,8 +154,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.60
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.58...@spectrum-css/avatar@6.0.60)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.58...@spectrum-css/avatar@6.0.60)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -154,8 +162,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.59
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.58...@spectrum-css/avatar@6.0.59)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.58...@spectrum-css/avatar@6.0.59)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -163,8 +170,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.58
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.57...@spectrum-css/avatar@6.0.58)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.57...@spectrum-css/avatar@6.0.58)
 
 ### 🐛 Bug fixes
 
@@ -174,8 +180,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.57
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.56...@spectrum-css/avatar@6.0.57)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.56...@spectrum-css/avatar@6.0.57)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -183,8 +188,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.56
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.55...@spectrum-css/avatar@6.0.56)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.55...@spectrum-css/avatar@6.0.56)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -192,8 +196,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.55
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.54...@spectrum-css/avatar@6.0.55)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.54...@spectrum-css/avatar@6.0.55)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -201,8 +204,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.54
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.53...@spectrum-css/avatar@6.0.54)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.53...@spectrum-css/avatar@6.0.54)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -210,8 +212,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.53
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.52...@spectrum-css/avatar@6.0.53)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.52...@spectrum-css/avatar@6.0.53)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -219,8 +220,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.52
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.51...@spectrum-css/avatar@6.0.52)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.51...@spectrum-css/avatar@6.0.52)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -228,8 +228,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.51
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.50...@spectrum-css/avatar@6.0.51)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.50...@spectrum-css/avatar@6.0.51)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -237,8 +236,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.50
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.49...@spectrum-css/avatar@6.0.50)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.49...@spectrum-css/avatar@6.0.50)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -246,8 +244,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.49
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.48...@spectrum-css/avatar@6.0.49)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.48...@spectrum-css/avatar@6.0.49)
 
 ### 🔙 Reverts
 
@@ -257,8 +254,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.48
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.47...@spectrum-css/avatar@6.0.48)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.47...@spectrum-css/avatar@6.0.48)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -266,8 +262,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.47
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.45...@spectrum-css/avatar@6.0.47)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.45...@spectrum-css/avatar@6.0.47)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -275,8 +270,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.46
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.45...@spectrum-css/avatar@6.0.46)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.45...@spectrum-css/avatar@6.0.46)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -284,8 +278,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.45
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.44...@spectrum-css/avatar@6.0.45)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.44...@spectrum-css/avatar@6.0.45)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -293,8 +286,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.44
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.43...@spectrum-css/avatar@6.0.44)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.43...@spectrum-css/avatar@6.0.44)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -302,8 +294,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.43
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.42...@spectrum-css/avatar@6.0.43)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.42...@spectrum-css/avatar@6.0.43)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -311,8 +302,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.42
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.41...@spectrum-css/avatar@6.0.42)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.41...@spectrum-css/avatar@6.0.42)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -320,8 +310,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.41
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.40...@spectrum-css/avatar@6.0.41)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.40...@spectrum-css/avatar@6.0.41)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -329,8 +318,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.40
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.39...@spectrum-css/avatar@6.0.40)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.39...@spectrum-css/avatar@6.0.40)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -338,8 +326,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.39
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.38...@spectrum-css/avatar@6.0.39)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.38...@spectrum-css/avatar@6.0.39)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -347,8 +334,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.38
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.37...@spectrum-css/avatar@6.0.38)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.37...@spectrum-css/avatar@6.0.38)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -356,8 +342,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.37
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.36...@spectrum-css/avatar@6.0.37)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.36...@spectrum-css/avatar@6.0.37)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -365,8 +350,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.36
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.35...@spectrum-css/avatar@6.0.36)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.35...@spectrum-css/avatar@6.0.36)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -374,8 +358,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.35
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.34...@spectrum-css/avatar@6.0.35)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.34...@spectrum-css/avatar@6.0.35)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -383,8 +366,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.34
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.33...@spectrum-css/avatar@6.0.34)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.33...@spectrum-css/avatar@6.0.34)
 
 ### 🐛 Bug fixes
 
@@ -394,8 +376,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.33
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.32...@spectrum-css/avatar@6.0.33)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.32...@spectrum-css/avatar@6.0.33)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 
@@ -403,8 +384,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.32
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.31...@spectrum-css/avatar@6.0.32)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@6.0.31...@spectrum-css/avatar@6.0.32)
 
 **Note:** Version bump only for package @spectrum-css/avatar
 

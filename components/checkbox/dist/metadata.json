@@ -28,7 +28,6 @@
     ".spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--sizeL",
-    ".spectrum-Checkbox--sizeM",
     ".spectrum-Checkbox--sizeS",
     ".spectrum-Checkbox--sizeXL",
     ".spectrum-Checkbox-box",
@@ -77,7 +76,8 @@
     ".spectrum-Checkbox:active .spectrum-Checkbox-label",
     ".spectrum-Checkbox:hover .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox:hover .spectrum-Checkbox-label"
+    ".spectrum-Checkbox:hover .spectrum-Checkbox-label",
+    ".spectrum-Checkbox:not(.is-readOnly):active .spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box"
   ],
   "modifiers": [
     "--mod-checkbox-animation-duration",
@@ -175,10 +175,16 @@
     "--spectrum-component-height-200",
     "--spectrum-component-height-300",
     "--spectrum-component-height-75",
+    "--spectrum-component-size-difference-down",
+    "--spectrum-component-size-minimum-perspective-down",
     "--spectrum-component-top-to-text-100",
     "--spectrum-component-top-to-text-200",
     "--spectrum-component-top-to-text-300",
     "--spectrum-component-top-to-text-75",
+    "--spectrum-corner-radius-small-size-extra-large",
+    "--spectrum-corner-radius-small-size-large",
+    "--spectrum-corner-radius-small-size-medium",
+    "--spectrum-corner-radius-small-size-small",
     "--spectrum-disabled-content-color",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
@@ -207,14 +213,6 @@
     "--spectrum-text-to-control-200",
     "--spectrum-text-to-control-300",
     "--spectrum-text-to-control-75"
-  ],
-  "system-theme": [
-    "--system-checkbox-checkmark-color",
-    "--system-checkbox-control-color-default",
-    "--system-checkbox-control-color-down",
-    "--system-checkbox-control-color-focus",
-    "--system-checkbox-control-color-hover",
-    "--system-checkbox-control-corner-radius"
   ],
   "passthroughs": [],
   "high-contrast": [

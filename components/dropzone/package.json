@@ -17,7 +17,6 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
@@ -35,7 +34,7 @@
 		"@spectrum-css/actionbutton": ">=6",
 		"@spectrum-css/illustratedmessage": ">=7",
 		"@spectrum-css/link": ">=5",
-		"@spectrum-css/tokens": ">=15"
+		"@spectrum-css/tokens": ">=14.0.0-next.3"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actionbutton": {

@@ -65,6 +65,7 @@ export default {
 		packageJson,
 		metadata,
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ButtonGroup.bind({});
@@ -74,7 +75,7 @@ Default.tags = ["!autodocs"];
 // ********* DOCS ONLY ********* //
 
 /**
- * Default spacing for Medium, Large, and Extra Large t-shirt sizes.
+ * Default horizontal spacing for when using medium, large, and extra large buttons.
 */
 export const Horizontal = Template.bind({});
 Horizontal.tags = ["!dev"];
@@ -87,7 +88,7 @@ Horizontal.parameters = {
 };
 
 /**
- * Spacing for the Small t-shirt size.
+ * Horizontal spacing for the small t-shirt size. Should be used with small buttons.
 */
 export const HorizontalSmall = Template.bind({});
 HorizontalSmall.tags = ["!dev"];
@@ -102,7 +103,7 @@ HorizontalSmall.parameters = {
 };
 
 /**
- * Default spacing for Medium, Large, and Extra Large t-shirt sizes
+ * Default vertical spacing for when using medium, large, and extra large buttons.
 */
 export const Vertical = ButtonGroup.bind({});
 Vertical.tags = ["!dev"];
@@ -117,7 +118,7 @@ Vertical.parameters = {
 };
 
 /**
- * Spacing for the Small t-shirt size.
+ * Vertical spacing for the small t-shirt size. Should be used with small buttons.
 */
 export const VerticalSmall = Template.bind({});
 VerticalSmall.tags = ["!dev"];

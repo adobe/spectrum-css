@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`5a0ce6e`](https://github.com/adobe/spectrum-css/commit/5a0ce6e5c1908679bd87a63969b99a105faea265)]:
+  - @spectrum-css/tooltip@7.0.0-next.0
+
 ## 5.2.0
 
 ### Minor Changes
@@ -74,16 +81,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.1.4...@spectrum-css/steplist@5.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.1.4...@spectrum-css/steplist@5.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -91,8 +95,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.4
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.1.3...@spectrum-css/steplist@4.1.4)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.1.3...@spectrum-css/steplist@4.1.4)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -100,8 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.3
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.1.2...@spectrum-css/steplist@4.1.3)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.1.2...@spectrum-css/steplist@4.1.3)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -109,8 +111,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.1.1...@spectrum-css/steplist@4.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.1.1...@spectrum-css/steplist@4.1.2)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -118,8 +119,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -127,8 +127,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.9...@spectrum-css/steplist@4.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.9...@spectrum-css/steplist@4.1.0)
 
 ### ✨ Features
 
@@ -138,8 +137,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.9
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.8...@spectrum-css/steplist@4.0.9)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.8...@spectrum-css/steplist@4.0.9)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -147,8 +145,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.8
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.7...@spectrum-css/steplist@4.0.8)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.7...@spectrum-css/steplist@4.0.8)
 
 ### 🐛 Bug fixes
 
@@ -158,8 +155,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.7
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.5...@spectrum-css/steplist@4.0.7)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.5...@spectrum-css/steplist@4.0.7)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -167,8 +163,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.6
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.5...@spectrum-css/steplist@4.0.6)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.5...@spectrum-css/steplist@4.0.6)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -176,8 +171,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.5
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.4...@spectrum-css/steplist@4.0.5)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.4...@spectrum-css/steplist@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -185,8 +179,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.4
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.3...@spectrum-css/steplist@4.0.4)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.3...@spectrum-css/steplist@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -194,8 +187,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.3
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.2...@spectrum-css/steplist@4.0.3)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.2...@spectrum-css/steplist@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -203,8 +195,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.2
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.1...@spectrum-css/steplist@4.0.2)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.1...@spectrum-css/steplist@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -212,8 +203,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.1
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.0...@spectrum-css/steplist@4.0.1)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@4.0.0...@spectrum-css/steplist@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -221,13 +211,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.0
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.78...@spectrum-css/steplist@4.0.0)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.78...@spectrum-css/steplist@4.0.0)
 
 \*feat(steplist)!: migrate to spectrum tokens([5b0f4aa](https://github.com/adobe/spectrum-css/commit/5b0f4aa))
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		migrates to use spectrum-tokens
@@ -236,8 +224,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.78
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.77...@spectrum-css/steplist@3.0.78)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.77...@spectrum-css/steplist@3.0.78)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -245,8 +232,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.77
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.76...@spectrum-css/steplist@3.0.77)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.76...@spectrum-css/steplist@3.0.77)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -254,8 +240,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.76
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.75...@spectrum-css/steplist@3.0.76)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.75...@spectrum-css/steplist@3.0.76)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -263,8 +248,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.75
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.74...@spectrum-css/steplist@3.0.75)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.74...@spectrum-css/steplist@3.0.75)
 
 ### 🔙 Reverts
 
@@ -274,8 +258,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.74
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.73...@spectrum-css/steplist@3.0.74)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.73...@spectrum-css/steplist@3.0.74)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -283,8 +266,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.73
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.71...@spectrum-css/steplist@3.0.73)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.71...@spectrum-css/steplist@3.0.73)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -292,8 +274,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.72
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.71...@spectrum-css/steplist@3.0.72)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.71...@spectrum-css/steplist@3.0.72)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -301,8 +282,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.71
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.70...@spectrum-css/steplist@3.0.71)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.70...@spectrum-css/steplist@3.0.71)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -310,8 +290,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.70
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.69...@spectrum-css/steplist@3.0.70)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.69...@spectrum-css/steplist@3.0.70)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -319,8 +298,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.69
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.68...@spectrum-css/steplist@3.0.69)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.68...@spectrum-css/steplist@3.0.69)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -328,8 +306,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.68
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.67...@spectrum-css/steplist@3.0.68)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.67...@spectrum-css/steplist@3.0.68)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -337,8 +314,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.67
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.66...@spectrum-css/steplist@3.0.67)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.66...@spectrum-css/steplist@3.0.67)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -346,8 +322,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.66
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.65...@spectrum-css/steplist@3.0.66)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.65...@spectrum-css/steplist@3.0.66)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -355,8 +330,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.65
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.64...@spectrum-css/steplist@3.0.65)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.64...@spectrum-css/steplist@3.0.65)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -364,8 +338,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.64
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.63...@spectrum-css/steplist@3.0.64)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.63...@spectrum-css/steplist@3.0.64)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -373,8 +346,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.63
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.62...@spectrum-css/steplist@3.0.63)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.62...@spectrum-css/steplist@3.0.63)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -382,8 +354,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.62
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.61...@spectrum-css/steplist@3.0.62)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.61...@spectrum-css/steplist@3.0.62)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -391,8 +362,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.61
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.60...@spectrum-css/steplist@3.0.61)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.60...@spectrum-css/steplist@3.0.61)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -400,8 +370,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.60
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.59...@spectrum-css/steplist@3.0.60)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.59...@spectrum-css/steplist@3.0.60)
 
 ### 🐛 Bug fixes
 
@@ -411,8 +380,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.59
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.58...@spectrum-css/steplist@3.0.59)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.58...@spectrum-css/steplist@3.0.59)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 
@@ -420,8 +388,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.58
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.57...@spectrum-css/steplist@3.0.58)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.57...@spectrum-css/steplist@3.0.58)
 
 **Note:** Version bump only for package @spectrum-css/steplist
 

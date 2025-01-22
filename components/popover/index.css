@@ -10,8 +10,6 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
-@import "./themes/spectrum-two.css";
 @import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Popover {
@@ -20,6 +18,8 @@
 
 	--spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
 	--spectrum-popover-border-color: var(--spectrum-gray-400);
+
+	--spectrum-popover-border-width: var(--spectrum-border-width-100);
 
 	/* popover inner padding */
 	--spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);

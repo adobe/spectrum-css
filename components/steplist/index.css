@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Steplist {
 	/* The width of a step */
 	--spectrum-steplist-step-width: 80px;
@@ -41,10 +39,14 @@
 
 	--spectrum-steplist-current-label-text-color: var(--spectrum-gray-800);
 	--spectrum-steplist-current-marker-color: var(--spectrum-gray-800);
+
 	--spectrum-steplist-complete-label-text-color: var(--spectrum-gray-700);
 	--spectrum-steplist-complete-marker-background-color: var(--spectrum-gray-600);
 	--spectrum-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
-	--spectrum-steplist-incomplete-label-color: var(--spectrum-gray-600);
+
+	--spectrum-steplist-incomplete-label-text-color: var(--spectrum-gray-600);
+    --spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
+    --spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
 
 	/* Contain child elements with positive z-index */
 	z-index: 0;
@@ -187,7 +189,7 @@
 
 	transform: translateX(-50%);
 
-	color: var(--mod-steplist-incomplete-label-color, var(--spectrum-steplist-incomplete-label-color));
+	color: var(--mod-steplist-incomplete-label-color, var(--spectrum-steplist-incomplete-label-text-color));
 
 	&:dir(rtl) {
 		transform: translateX(50%);
@@ -224,7 +226,8 @@
 
 	border-radius: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
 
-	border: 2px solid;
+	border-width: 2px;
+	border-style: solid;
 	border-color: var(--mod-steplist-incomplete-marker-border-color, var(--spectrum-steplist-incomplete-marker-border-color));
 	background: transparent;
 }

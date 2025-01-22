@@ -1,5 +1,13 @@
 # Change Log
 
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/popover@8.0.0-next.0
+
 ## 8.2.0
 
 ### Minor Changes
@@ -77,8 +85,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.4...@spectrum-css/actionbar@8.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.4...@spectrum-css/actionbar@8.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
@@ -94,8 +101,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.4
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.3...@spectrum-css/actionbar@7.2.4)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.3...@spectrum-css/actionbar@7.2.4)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -103,8 +109,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.3
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.2...@spectrum-css/actionbar@7.2.3)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.2...@spectrum-css/actionbar@7.2.3)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -112,8 +117,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.2
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.1...@spectrum-css/actionbar@7.2.2)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.1...@spectrum-css/actionbar@7.2.2)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -121,8 +125,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.1
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.0...@spectrum-css/actionbar@7.2.1)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.2.0...@spectrum-css/actionbar@7.2.1)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -130,8 +133,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.0
 
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.1.1...@spectrum-css/actionbar@7.2.0)
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.1.1...@spectrum-css/actionbar@7.2.0)
 
 ### ✨ Features
 
@@ -141,8 +143,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -150,8 +151,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.11...@spectrum-css/actionbar@7.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.11...@spectrum-css/actionbar@7.1.0)
 
 ### ✨ Features
 
@@ -161,8 +161,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.11
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.10...@spectrum-css/actionbar@7.0.11)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.10...@spectrum-css/actionbar@7.0.11)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -170,8 +169,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.10
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.9...@spectrum-css/actionbar@7.0.10)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.9...@spectrum-css/actionbar@7.0.10)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -179,8 +177,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.9
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.7...@spectrum-css/actionbar@7.0.9)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.7...@spectrum-css/actionbar@7.0.9)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -188,8 +185,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.8
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.7...@spectrum-css/actionbar@7.0.8)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.7...@spectrum-css/actionbar@7.0.8)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -197,8 +193,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.7
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.6...@spectrum-css/actionbar@7.0.7)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.6...@spectrum-css/actionbar@7.0.7)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -206,8 +201,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.6
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.5...@spectrum-css/actionbar@7.0.6)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.5...@spectrum-css/actionbar@7.0.6)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -215,8 +209,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.5
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.4...@spectrum-css/actionbar@7.0.5)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.4...@spectrum-css/actionbar@7.0.5)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -224,8 +217,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.4
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.3...@spectrum-css/actionbar@7.0.4)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.3...@spectrum-css/actionbar@7.0.4)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -233,8 +225,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.3
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.2...@spectrum-css/actionbar@7.0.3)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.2...@spectrum-css/actionbar@7.0.3)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -242,8 +233,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.2
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.1...@spectrum-css/actionbar@7.0.2)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.1...@spectrum-css/actionbar@7.0.2)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -251,8 +241,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.1
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.0...@spectrum-css/actionbar@7.0.1)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@7.0.0...@spectrum-css/actionbar@7.0.1)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -260,8 +249,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.0
 
-🗓
-2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.67...@spectrum-css/actionbar@7.0.0)
+🗓 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.67...@spectrum-css/actionbar@7.0.0)
 
 \*feat(table)!: migrate to spectrum-tokens, add section header (#1842)([74cd1b4](https://github.com/adobe/spectrum-css/commit/74cd1b4)), closes[#1842](https://github.com/adobe/spectrum-css/issues/1842)
 
@@ -755,8 +743,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.67
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.66...@spectrum-css/actionbar@6.0.67)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.66...@spectrum-css/actionbar@6.0.67)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -764,8 +751,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.66
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.65...@spectrum-css/actionbar@6.0.66)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.65...@spectrum-css/actionbar@6.0.66)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -773,8 +759,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.65
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.64...@spectrum-css/actionbar@6.0.65)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.64...@spectrum-css/actionbar@6.0.65)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -782,8 +767,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.64
 
-🗓
-2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.63...@spectrum-css/actionbar@6.0.64)
+🗓 2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.63...@spectrum-css/actionbar@6.0.64)
 
 ### 🔙 Reverts
 
@@ -793,8 +777,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.63
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.62...@spectrum-css/actionbar@6.0.63)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.62...@spectrum-css/actionbar@6.0.63)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -802,8 +785,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.62
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.60...@spectrum-css/actionbar@6.0.62)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.60...@spectrum-css/actionbar@6.0.62)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -811,8 +793,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.61
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.60...@spectrum-css/actionbar@6.0.61)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.60...@spectrum-css/actionbar@6.0.61)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -820,8 +801,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.60
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.59...@spectrum-css/actionbar@6.0.60)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.59...@spectrum-css/actionbar@6.0.60)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -829,8 +809,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.59
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.58...@spectrum-css/actionbar@6.0.59)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.58...@spectrum-css/actionbar@6.0.59)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -838,8 +817,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.58
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.57...@spectrum-css/actionbar@6.0.58)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.57...@spectrum-css/actionbar@6.0.58)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -847,8 +825,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.57
 
-🗓
-2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.56...@spectrum-css/actionbar@6.0.57)
+🗓 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.56...@spectrum-css/actionbar@6.0.57)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -856,8 +833,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.56
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.55...@spectrum-css/actionbar@6.0.56)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.55...@spectrum-css/actionbar@6.0.56)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -865,8 +841,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.55
 
-🗓
-2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.54...@spectrum-css/actionbar@6.0.55)
+🗓 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.54...@spectrum-css/actionbar@6.0.55)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -874,8 +849,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.54
 
-🗓
-2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.53...@spectrum-css/actionbar@6.0.54)
+🗓 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.53...@spectrum-css/actionbar@6.0.54)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -883,8 +857,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.53
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.52...@spectrum-css/actionbar@6.0.53)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.52...@spectrum-css/actionbar@6.0.53)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -892,8 +865,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.52
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.51...@spectrum-css/actionbar@6.0.52)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.51...@spectrum-css/actionbar@6.0.52)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -901,8 +873,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.51
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.50...@spectrum-css/actionbar@6.0.51)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.50...@spectrum-css/actionbar@6.0.51)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -910,8 +881,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.50
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.49...@spectrum-css/actionbar@6.0.50)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.49...@spectrum-css/actionbar@6.0.50)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -919,8 +889,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.49
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.48...@spectrum-css/actionbar@6.0.49)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.48...@spectrum-css/actionbar@6.0.49)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -928,8 +897,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.48
 
-🗓
-2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.47...@spectrum-css/actionbar@6.0.48)
+🗓 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.47...@spectrum-css/actionbar@6.0.48)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -937,8 +905,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.47
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.46...@spectrum-css/actionbar@6.0.47)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.46...@spectrum-css/actionbar@6.0.47)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -946,8 +913,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.46
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.45...@spectrum-css/actionbar@6.0.46)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.45...@spectrum-css/actionbar@6.0.46)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -955,8 +921,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.45
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.44...@spectrum-css/actionbar@6.0.45)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.44...@spectrum-css/actionbar@6.0.45)
 
 ### 🐛 Bug fixes
 
@@ -966,8 +931,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.44
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.43...@spectrum-css/actionbar@6.0.44)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.43...@spectrum-css/actionbar@6.0.44)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 
@@ -975,8 +939,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 ## 6.0.43
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.42...@spectrum-css/actionbar@6.0.43)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@6.0.42...@spectrum-css/actionbar@6.0.43)
 
 **Note:** Version bump only for package @spectrum-css/actionbar
 

@@ -17,7 +17,6 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
@@ -33,10 +32,10 @@
 	],
 	"peerDependencies": {
 		"@spectrum-css/actionbutton": ">=6",
-		"@spectrum-css/button": ">=13",
+		"@spectrum-css/button": ">=14.0.0-next.0",
 		"@spectrum-css/icon": ">=7",
 		"@spectrum-css/textfield": ">=7",
-		"@spectrum-css/tokens": ">=15"
+		"@spectrum-css/tokens": ">=14.0.0-next.3"
 	},
 	"devDependencies": {
 		"@spectrum-css/actionbutton": "workspace:^",

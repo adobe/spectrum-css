@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/dialog",
-	"version": "10.2.0",
+	"version": "11.0.0-next.1",
 	"description": "The Spectrum CSS dialog component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -17,7 +17,6 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
@@ -32,17 +31,25 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/closebutton": ">=5",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/modal": ">=5",
-		"@spectrum-css/tokens": ">=15",
-		"@spectrum-css/underlay": ">=4"
+		"@spectrum-css/buttongroup": ">=7.0.0-next.0",
+		"@spectrum-css/checkbox": ">=9",
+		"@spectrum-css/closebutton": ">=5.0.0-next.2",
+		"@spectrum-css/modal": ">=5.1.1-next.0",
+		"@spectrum-css/tokens": ">=14.0.0-next.10",
+		"@spectrum-css/typography": ">=6",
+		"@spectrum-css/underlay": ">=4.1.1-next.0"
 	},
 	"peerDependenciesMeta": {
-		"@spectrum-css/divider": {
+		"@spectrum-css/checkbox": {
+			"optional": true
+		},
+		"@spectrum-css/closebutton": {
 			"optional": true
 		},
 		"@spectrum-css/modal": {
+			"optional": true
+		},
+		"@spectrum-css/typography": {
 			"optional": true
 		},
 		"@spectrum-css/underlay": {

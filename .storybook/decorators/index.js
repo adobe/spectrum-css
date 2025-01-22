@@ -13,6 +13,7 @@
 
 export { withArgEvents } from "./arg-events.js";
 export { withContextWrapper } from "./context.js";
+export { withDownStateDimensionCapture } from "./down-state.js";
 export { withIconSpriteSheet } from "./icon-sprites.js";
 export { withLanguageWrapper } from "./language.js";
 export { withReducedMotionWrapper } from "./reduce-motion.js";

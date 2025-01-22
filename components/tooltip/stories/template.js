@@ -7,15 +7,12 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tooltip",
 	label,
-	variant = "neutral",
 	placement,
+	variant = "neutral",
 	isOpen = true,
 	isFocused = false,
 	showOnHover = false,
@@ -45,8 +42,6 @@ export const Template = ({
 		<span
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${variant}`]:
-					typeof variant !== "undefined" && variant !== "neutral",
 				[`${rootClass}--${placement}`]: typeof placement !== "undefined",
 				"is-open": isOpen,
 				"is-focused": isFocused,
