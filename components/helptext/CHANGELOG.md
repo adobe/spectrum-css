@@ -1,36 +1,6 @@
 # Change Log
 
-<<<<<<< HEAD
 ## 5.2.0
-=======
-## 6.0.0-s2-foundations.12
-
-### Minor Changes
-
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05) Thanks [@pfulton](https://github.com/pfulton)! - - Accordion: Flatten sizing variables in theme layer
-  - ActionButton: Fix typo in variable name "\*-defaul-selectedt"
-  - Move out rtl logical transform from theme to index.css for: calendar, pagination, treeview
-
-### Patch Changes
-
-- Updated dependencies [[`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05)]:
-  - @spectrum-css/icon@8.0.0-s2-foundations.13
-  - @spectrum-css/tokens@15.0.0-s2-foundations.13
-
-## 6.0.0-s2-foundations.11
-
-### Major Changes
-
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1) Thanks [@pfulton](https://github.com/pfulton)! - Updated build to set cssnano to discardUnused: false
-
-### Patch Changes
-
-- Updated dependencies [[`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1)]:
-  - @spectrum-css/icon@8.0.0-s2-foundations.12
-  - @spectrum-css/tokens@15.0.0-s2-foundations.12
-
-## 6.0.0-s2-foundations.10
->>>>>>> ae954b540 (chore: release (s2-foundations) (#2964))
 
 ### Minor Changes
 

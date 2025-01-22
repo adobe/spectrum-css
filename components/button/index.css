@@ -178,10 +178,10 @@
 		--mod-button-background-color-focus: var(--spectrum-neutral-background-color-key-focus);
 		--mod-button-background-color-disabled: var(--spectrum-disabled-background-color);
 
-		--mod-button-content-color-default: var(--spectrum-white);
-		--mod-button-content-color-hover: var(--spectrum-white);
-		--mod-button-content-color-down: var(--spectrum-white);
-		--mod-button-content-color-focus: var(--spectrum-white);
+		--mod-button-content-color-default: var(--spectrum-gray-25);
+		--mod-button-content-color-hover: var(--spectrum-gray-25);
+		--mod-button-content-color-down: var(--spectrum-gray-25);
+		--mod-button-content-color-focus: var(--spectrum-gray-25);
 
 		--mod-button-border-color-default: transparent;
 		--mod-button-border-color-hover: transparent;
