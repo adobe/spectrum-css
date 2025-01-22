@@ -77,11 +77,12 @@
 	}
 
 	.spectrum-Tooltip-tip {
-		forced-color-adjust: none;
 		--highcontrast-tooltip-background-color-default: CanvasText;
 		--highcontrast-tooltip-background-color-informative: CanvasText;
 		--highcontrast-tooltip-background-color-positive: CanvasText;
 		--highcontrast-tooltip-background-color-negative: CanvasText;
+
+		forced-color-adjust: none;
 	}
 }
 

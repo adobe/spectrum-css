@@ -56,8 +56,7 @@
     ".spectrum-Stepper:focus:not(.is-disabled) .spectrum-Stepper-input",
     ".spectrum-Stepper:hover:not(.is-disabled) .spectrum-Stepper-buttons",
     ".spectrum-Stepper:hover:not(.is-disabled) .spectrum-Stepper-input",
-    ".spectrum-Stepper:hover:not(.is-invalid)",
-    ".x"
+    ".spectrum-Stepper:hover:not(.is-invalid)"
   ],
   "modifiers": [
     "--mod-stepper-animation-duration",
@@ -197,16 +196,11 @@
     "--mod-textfield-icon-spacing-inline-start-invalid"
   ],
   "high-contrast": [
-    "--highcontrast-infield-button-border-color",
     "--highcontrast-stepper-border-color",
     "--highcontrast-stepper-border-color-focus",
     "--highcontrast-stepper-border-color-focus-hover",
     "--highcontrast-stepper-border-color-hover",
     "--highcontrast-stepper-border-color-keyboard-focus",
-    "--highcontrast-stepper-button-background-color-default",
-    "--highcontrast-stepper-button-background-color-focus",
-    "--highcontrast-stepper-button-background-color-hover",
-    "--highcontrast-stepper-button-background-color-keyboard-focus",
     "--highcontrast-stepper-buttons-background-color",
     "--highcontrast-stepper-buttons-border-width",
     "--highcontrast-stepper-focus-indicator-color"
