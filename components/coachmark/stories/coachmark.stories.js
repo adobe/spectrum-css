@@ -6,7 +6,7 @@ import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import {
 	CoachmarkMenuStatesTemplate,
-	CoachmarkMediaStatesTemplate,
+	CoachMarkMediaStateTemplates,
 	CoachmarkShortcutStatesTemplate,
 } from "./template.js";
 
@@ -130,7 +130,7 @@ Standard.parameters = {
 Standard.args = { image: "example-card-landscape.png" };
 
 /** Images and media have a minimum height and can grow with the parent component. Fixed height media is constrained to a 4:3 aspect ratio by applying the spectrum-CoachMark-image-wrapper--fixedHeight class. */
-export const MediaStates = CoachmarkMediaStatesTemplate.bind({});
+export const MediaStates = CoachMarkMediaStateTemplates.bind({});
 MediaStates.tags = ["!dev"];
 MediaStates.args = {
 	imageSource: "example-card-portrait.png",

@@ -245,16 +245,17 @@ export const CoachmarkShortcutStatesTemplate = (args, context) =>
 			columnGap: "100px",
 			rowGap: "200px",
 		},
+		
 		content: [
 			Container({
 				withBorder: false,
-				heading: "With shortcut, with action menu",
-				content: Template({ ...args, hasKeyboardShortcut: true, hasActionMenu: true }, context),
+				heading: "With action menu",
+				content: Template({ ...args, hasActionMenu: true }, context),
 			}),
 			Container({
 				withBorder: false,
-				heading: "With shortcut menu, without action menu",
-				content: Template({ ...args, hasKeyboardShortcut: true, hasActionMenu: false }, context),
+				heading: "Without action menu",
+				content: Template({ ...args, hasActionMenu: false }, context),
 			}),
 		],
 	});
