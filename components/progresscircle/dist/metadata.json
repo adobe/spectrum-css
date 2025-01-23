@@ -1,7 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".spectrum-Circle",
     ".spectrum-ProgressCircle",
     ".spectrum-ProgressCircle--indeterminate .spectrum-ProgressCircle-fill",
     ".spectrum-ProgressCircle--sizeL",
@@ -46,7 +45,6 @@
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-progress-circle-fill-border-color",
-    "--highcontrast-progress-circle-fill-border-color-over-background",
-    "--highcontrast-progressbar-track-color"
+    "--highcontrast-progress-circle-track-color"
   ]
 }
