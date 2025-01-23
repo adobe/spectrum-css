@@ -17,4 +17,4 @@ This migrates the `coachmark` component to S2. Custom properties have been remap
 
 ## Additions
 
-Adds `--spectrum-coachmark-media-fixed-height` for fixed `4:3` image variant and an accompanying `--mod-coachmark-media-fixed-height` mod. This variation has been added to the `coachmark` component story as a boolean control labeled as `Image fixed height`. The class is conditionally added within the `hasImage` block and, as such, will only impact rendering when `hasImage` is also `true`.
+Adds `--spectrum-coachmark-media-fixed-height` for fixed `4:3` image variant and an accompanying `--mod-coachmark-media-fixed-height` mod. This variation has been added to the `coachmark` component story as a boolean control labeled as `Fixed image height`. The class is conditionally added within the `hasImage` block and, as such, will only impact rendering when `hasImage` is also `true`.

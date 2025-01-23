@@ -6,7 +6,7 @@ import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import {
 	CoachmarkMenuStatesTemplate,
-	CoachMarkMediaStateTemplates,
+	CoachmarkMediaStatesTemplate,
 	CoachmarkShortcutStatesTemplate,
 } from "./template.js";
 
@@ -82,6 +82,8 @@ export default {
 		},
 	},
 	args: {
+		title: "Coach mark title",
+		hasKeyboardShortcut: false,
 		rootClass: "spectrum-CoachMark",
 		hasActionMenu: false,
 		hasPagination: true,
@@ -103,7 +105,7 @@ export default {
 		metadata,
 		docs: {
 			story: {
-				height: "300px",
+				height: "450px",
 			},
 		},
 	},
@@ -112,18 +114,7 @@ export default {
 export const Default = CoachMarkGroup.bind({});
 Default.title = "Standard";
 Default.tags = ["!autodocs"];
-Default.args = {
-	title: "Coach mark title",
-	image: "example-card-landscape.png",
-	hasKeyboardShortcut: false,
-};
-Default.parameters = {
-	docs: {
-		story: {
-			height: "450px",
-		},
-	},
-};
+Default.parameters = {};
 
 /**
  * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour. They may contain images or media that relate to their content, such as demonstrations of gestures, the UI being used, or illustrations.
@@ -135,19 +126,14 @@ Standard.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
-	docs: {
-		story: {
-			height: "450px",
-		},
-	},
 };
 Standard.args = { image: "example-card-landscape.png" };
 
-/** Images and media have a minimum height and can grow with the parent component. Fixed height media is constrained to a 4:3 aspect ratio. */
-export const MediaStates = CoachMarkMediaStateTemplates.bind({});
+/** Images and media have a minimum height and can grow with the parent component. Fixed height media is constrained to a 4:3 aspect ratio by applying the spectrum-CoachMark-image-wrapper--fixedHeight class. */
+export const MediaStates = CoachmarkMediaStatesTemplate.bind({});
 MediaStates.tags = ["!dev"];
 MediaStates.args = {
-	hasImage: true,
+	imageSource: "example-card-portrait.png",
 };
 MediaStates.parameters = {
 	chromatic: {
@@ -159,7 +145,7 @@ MediaStates.parameters = {
 		},
 	},
 };
-
+MediaStates.storyName = "Media states";
 /** Keyboard shortcuts may be shown in place of or below the action menu. */
 export const ShortCutStories = CoachmarkShortcutStatesTemplate.bind({});
 ShortCutStories.tags = ["!dev"];
@@ -167,12 +153,11 @@ ShortCutStories.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
-	docs: {
-		story: {
-			height: "450px",
-		},
-	},
+}; 
+ShortCutStories.args = {
+	hasKeyboardShortcut: true,
 };
+ShortCutStories.storyName = "With keyboard shortcuts";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = CoachMarkGroup.bind({});

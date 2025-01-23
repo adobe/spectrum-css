@@ -198,7 +198,7 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 	});
 
 /* Displays fixed and minimum height images in a single story. */
-export const CoachMarkMediaStateTemplates = (args, context) =>
+export const CoachmarkMediaStatesTemplate = (args, context) =>
 	Container({
 		withBorder: false,
 		withHeading: false,
