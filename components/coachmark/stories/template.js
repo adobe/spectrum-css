@@ -245,7 +245,6 @@ export const CoachmarkShortcutStatesTemplate = (args, context) =>
 			columnGap: "100px",
 			rowGap: "200px",
 		},
-		
 		content: [
 			Container({
 				withBorder: false,
