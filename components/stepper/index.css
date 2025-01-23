@@ -99,7 +99,6 @@
 	}
 
 	&.spectrum-Stepper--quiet {
-		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used by --mod-infield-button-inner-edge-to-fill and --mod-infield-button-edge-to-fill */
 		--spectrum-stepper-button-edge-to-fill: 0;
 
 		--mod-stepper-buttons-background-color: transparent;
