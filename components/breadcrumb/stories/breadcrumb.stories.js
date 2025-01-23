@@ -3,24 +3,23 @@ import { size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { BreadcrumbGroup } from "./breadcrumb.test.js";
-import { BreadcrumbTitleHeadings, Template } from "./template";
+import { BreadcrumbTitleHeadings, Template } from "./template.js";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
- *
- * ## Nesting
- * Breadcrumbs truncate when there is not enough room to display all levels of the breadcrumb list, or as a way of managing relevance of the visible breadcrumb items in a deeply nested hierarchy. The truncation of breadcrumb items begins when either there is not enough room to display all items, or if there are 5 or more breadcrumbs to display. They are typically indicated by the truncated menu folder icon.
- *
- * The nested variants below are non-functional. Implementations can add their own overflow menus to display all options within a breadcrumb.
- *
- * ## Root Context
- * Some applications find that displaying the root directory is useful for user orientation. This variation keeps the root visible when other folders are truncated into a menu. For example, when users can navigate file directories on their device as well as in the cloud, exposing a root directory called “On this device” is very helpful.
  */
 export default {
 	title: "Breadcrumbs",
 	component: "Breadcrumbs",
 	argTypes: {
-		items: { table: { disable: true } },
+		items: {
+			name: "Breadcrumb items",
+			description: "Additional breadcrumb items after the nav root item, including their label text.<br>Advanced:<ul><li>To show an item as disabled, add a key named `isDisabled` with a value of `true`.</li><li>The \"Show dragged item\" control will affect the item with `isDragged` set to `true`.</li></ul>",
+			control: "array",
+			table: {
+				category: "Content",
+			},
+		},
 		size: {
 			...size(["m", "l"]),
 			if: { arg: "variant", neq: "multiline" },
@@ -44,7 +43,7 @@ export default {
 		},
 		isDragged: {
 			name: "Show dragged item",
-			description: "Breadcrumbs can have optional behavior to allow for drag and drop functionality. Setting this to true will style the second breadcrumb item as if something is currently being dragged on top of it.",
+			description: "Breadcrumbs can have optional behavior to allow for drag and drop functionality. Setting this to true will style a breadcrumb item as if something is currently being dragged on top of it.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -73,13 +72,70 @@ export default {
 			defaultValue: undefined,
 			options: [undefined, "s", "m", "l", "xl"],
 			if: { arg: "variant", eq: "multiline" },
-		}
+		},
+		showTruncatedMenu: {
+			name: "Show truncated menu",
+			description: "Displays a breadcrumb item with a folder icon, that would house truncated breadcrumb items.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		showRootContext: {
+			name: "Show with root context",
+			description: "Includes a visible breadcrumb item before the truncated menu, for displaying a root directory.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+			if: { arg: "showTruncatedMenu" },
+		},
+		truncatedMenuIsDisabled: {
+			name: "Show truncated menu as disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+			if: { arg: "showTruncatedMenu" },
+		},
+		rootItemText: {
+			name: "Root breadcrumb item label",
+			type: { name: "string" },
+			defaultValue: "Nav root",
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: "text",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
 		isDragged: false,
 		variant: undefined,
 		size: "m",
+		showTruncatedMenu: false,
+		showRootContext: false,
+		truncatedMenuIsDisabled: false,
+		rootItemText: "Nav root",
+		items: [
+			{
+				label: "Sub item",
+				isDragged: true,
+			},
+			{
+				label: "Trend",
+			},
+			{
+				label: "January 2019 assets",
+			},
+		],
 	},
 	parameters: {
 		design: {
@@ -97,31 +153,17 @@ export default {
  * The separator UI icon displayed should be `Chevron100`.
  */
 export const Default = BreadcrumbGroup.bind({});
-Default.args = {
-	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			label: "Trend",
-			isDragged: true,
-		},
-		{
-			label: "January 2019 assets",
-		},
-	],
-};
+Default.args = {};
 
+/**
+ * Breadcrumbs truncate when there is not enough room to display all levels of the breadcrumb list, or as a way of managing relevance of the visible breadcrumb items in a deeply nested hierarchy. The truncation of breadcrumb items begins when either there is not enough room to display all items, or if there are 5 or more breadcrumbs to display. This truncated menu is an icon only action button that typically displays a folder icon.
+ *
+ * The nested variants below are non-functional. Implementations should make sure to follow the design guidelines for overflow behavior and displaying all options within the truncated menu.
+ */
 export const DefaultNested = Template.bind({});
 DefaultNested.args = {
+	showTruncatedMenu: true,
 	items: [
-		{
-			iconName: "FolderOpen",
-			iconSet: "workflow",
-		},
-		{
-			label: "Sub item",
-		},
 		{
 			label: "Trend",
 		},
@@ -134,18 +176,18 @@ DefaultNested.tags = ["!dev"];
 DefaultNested.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-DefaultNested.storyName = "Default, nested";
+DefaultNested.storyName = "Default, nested (truncated menu)";
 
+/**
+ * Some applications find that displaying the root directory is useful for user orientation. This variation keeps the root visible when other folders are
+ * truncated into a menu. For example, when users can navigate file directories on their device as well as in the cloud, exposing a root directory
+ * called “On this device” is very helpful.
+ */
 export const DefaultNestedRootVisible = Template.bind({});
 DefaultNestedRootVisible.args = {
+	showTruncatedMenu: true,
+	showRootContext: true,
 	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			iconName: "FolderOpen",
-			iconSet: "workflow",
-		},
 		{
 			label: "Trend",
 		},
@@ -158,7 +200,7 @@ DefaultNestedRootVisible.tags = ["!dev"];
 DefaultNestedRootVisible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-DefaultNestedRootVisible.storyName = "Default, nested (root visible)";
+DefaultNestedRootVisible.storyName = "Default, nested with root context";
 
 /**
  * The multiline variation places emphasis on the selected breadcrumb item as a page title, helping a user to more clearly identify their current location.
@@ -178,7 +220,7 @@ MultilineNested.args = {
 	...DefaultNested.args,
 	variant: "multiline",
 };
-MultilineNested.storyName = "Multiline, nested";
+MultilineNested.storyName = "Multiline, nested (truncated menu)";
 MultilineNested.tags= ["!dev"];
 MultilineNested.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -193,7 +235,7 @@ MultilineNestedRootVisible.tags = ["!dev"];
 MultilineNestedRootVisible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-MultilineNestedRootVisible.storyName = "Multiline, nested (root visible)";
+MultilineNestedRootVisible.storyName = "Multiline, nested with root context";
 
 /**
  * When using the large size, the truncated menu action button should also use the large size. The separator UI icon displayed should be `Chevron100`.
@@ -217,7 +259,7 @@ LargeNested.tags = ["!dev"];
 LargeNested.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-LargeNested.storyName = "Large, nested";
+LargeNested.storyName = "Large, nested (truncated menu)";
 
 export const LargeNestedRootVisible = Template.bind({});
 LargeNestedRootVisible.args = {
@@ -228,7 +270,7 @@ LargeNestedRootVisible.tags = ["!dev"];
 LargeNestedRootVisible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-LargeNestedRootVisible.storyName = "Large, nested (root visible)";
+LargeNestedRootVisible.storyName = "Large, nested with root context";
 
 /**
  * Breadcrumbs can have optional behavior to allow for drag and drop functionality.
@@ -247,21 +289,15 @@ Dragged.parameters = {
 
 /**
  * The example below has two disabled breadcrumb items. When disabling the text link, the `is-disabled` class
- * gets added to `.spectrum-Breadcrumbs-itemLink`. When disabling the Action button, the `[disabled]` attribute is applied.
+ * gets added to `.spectrum-Breadcrumbs-itemLink`. When disabling the truncated menu action button, the `[disabled]` attribute is applied.
  */
 export const Disabled = Template.bind({});
 Disabled.args = {
+	showTruncatedMenu: true,
+	truncatedMenuIsDisabled: true,
 	items: [
 		{
-			label: "Nav root",
-		},
-		{
-			iconName: "FolderOpen",
-			iconSet: "workflow",
-			isDisabled: true,
-		},
-		{
-			label: "Trendy",
+			label: "Trend",
 			isDisabled: true,
 		},
 		{
@@ -282,11 +318,11 @@ Disabled.parameters = {
  */
 export const MultilineTitleSizes = BreadcrumbTitleHeadings.bind({});
 MultilineTitleSizes.args = {
-	...DefaultNested.args,
-	variant: "multiline",
+	...Multiline.args,
+	showTruncatedMenu: true,
 };
 MultilineTitleSizes.storyName = "Multiline, title heading sizes";
-MultilineTitleSizes.tags= ["!dev"];
+MultilineTitleSizes.tags = ["!dev"];
 MultilineTitleSizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };

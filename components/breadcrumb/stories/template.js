@@ -17,7 +17,28 @@ export const Template = ({
 	variant,
 	isDragged = false,
 	titleHeadingSize,
+	showTruncatedMenu = false,
+	showRootContext = false,
+	truncatedMenuIsDisabled = false,
+	rootItemText = "Nav root",
 } = {}, context = {}) => {
+	/**
+	 * Build array of breadcrumb items.
+	 * - The presence of the root item and truncated menu are dependent upon controls.
+	 * - The rest of the items, including the current item, come from the `items` array.
+	 */
+	const breadcrumbItems = [
+		...(showTruncatedMenu == false || showRootContext == true) ? [{
+			label: rootItemText,
+		}] : [],
+		...(showTruncatedMenu == true) ? [{
+			iconName: "FolderOpen",
+			iconSet: "workflow",
+			isDragged: true,
+		}] : [],
+		...items,
+	];
+
 	return html`
 		<nav>
 			<ul
@@ -28,7 +49,7 @@ export const Template = ({
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 			>
-				${items.map((item, idx, arr) => {
+				${breadcrumbItems.map((item, idx, arr) => {
 					const { label, isDisabled, iconName, iconSet } = item;
 					return html` <li
 						class=${classMap({
@@ -43,7 +64,7 @@ export const Template = ({
 									{
 										iconName,
 										iconSet,
-										isDisabled,
+										isDisabled: isDisabled || truncatedMenuIsDisabled,
 										isQuiet: true,
 										customIconClasses: [`${rootClass}-folder`],
 										size: {
