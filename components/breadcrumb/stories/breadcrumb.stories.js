@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { isDragged, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { BreadcrumbGroup } from "./breadcrumb.test.js";
@@ -42,14 +42,9 @@ export default {
 			},
 		},
 		isDragged: {
+			...isDragged,
 			name: "Show dragged item",
 			description: "Breadcrumbs can have optional behavior to allow for drag and drop functionality. Setting this to true will style a breadcrumb item as if something is currently being dragged on top of it.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean"
 		},
 		titleHeadingSize: {
 			name: "Breadcrumb title heading size",
