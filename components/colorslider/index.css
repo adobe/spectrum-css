@@ -55,6 +55,10 @@
 	block-size: var(--mod-color-slider-vertical-height, var(--mod-color-slider-length, var(--spectrum-color-slider-length)));
 	min-inline-size: 0;
 	inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-slider-control-track-width)));
+
+	.spectrum-ColorSlider-handle {
+		inset-block-start: 0;
+	}
 }
 
 .spectrum-ColorSlider-handle {
