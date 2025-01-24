@@ -183,14 +183,14 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 		content: [
 			Container({
 				withBorder: false,
-				heading: "With media, without action menu",
+				heading: "Media, without action menu",
 				content: Template({ ...args }, context),
 			}),
 			Container({
 				withBorder: false,
-				heading: "With action menu, without media",
+				heading: "Action menu, without media",
 				content: Template(
-					{ ...args, hasImage: false, hasActionMenu: true },
+					{ ...args, hasImage: false, hasActionMenu: true, isOpen: true },
 					context,
 				),
 			}),

@@ -5,6 +5,7 @@ import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import {
+	Template,
 	CoachmarkMenuStatesTemplate,
 	CoachmarkMediaStatesTemplate,
 	CoachmarkShortcutStatesTemplate,
@@ -105,7 +106,7 @@ export default {
 		metadata,
 		docs: {
 			story: {
-				height: "450px",
+				height: "525px",
 			},
 		},
 	},
@@ -117,17 +118,43 @@ Default.tags = ["!autodocs"];
 Default.parameters = {};
 
 /**
- * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour. They may contain images or media that relate to their content, such as demonstrations of gestures, the UI being used, or illustrations.
+ * Coach marks are temporary messages that educate users through new or unfamiliar product experiences. They can be chained into a sequence to form a tour. They may contain images or media that relate to their content, such as demonstrations of gestures, the UI being used, or illustrations. All coach marks can have any combination of action menu, media, and keyboard shortcut options.
  */
-export const Standard = CoachmarkMenuStatesTemplate.bind({});
+export const Standard = Template.bind({});
 Standard.storyName = "Default";
 Standard.tags = ["!dev"];
 Standard.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
+	docs: {
+		story: {
+			height: "475px",
+		},
+	},
 };
-Standard.args = { image: "example-card-landscape.png" };
+Standard.args = {
+	image: "example-card-landscape.png",
+	hasImage: true,
+	hasActionMenu: false,
+	imageIsFixedHeight: false,
+};
+
+export const StandardNoMedia = Template.bind({});
+StandardNoMedia.storyName = "Default, no media";
+StandardNoMedia.args = {
+	hasImage: false,
+};
+StandardNoMedia.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+	docs: {
+		story: {
+			height: "250px",
+		},
+	},
+};
 
 /** Images and media have a minimum height and can grow with the parent component. Fixed height media is constrained to a 4:3 aspect ratio by applying the spectrum-CoachMark-image-wrapper--fixedHeight class. */
 export const MediaStates = CoachmarkMediaStatesTemplate.bind({});
@@ -139,13 +166,21 @@ MediaStates.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
-	docs: {
-		story: {
-			height: "725px",
-		},
-	},
 };
 MediaStates.storyName = "Media states";
+
+/** The action menu, if enabled, is shown in line with the title. */
+export const WithActionMenu = CoachmarkMenuStatesTemplate.bind({});
+WithActionMenu.storyName = "With action menu";
+WithActionMenu.args = {
+	hasActionMenu: true,
+};
+WithActionMenu.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
 /** Keyboard shortcuts may be shown in place of or below the action menu. */
 export const ShortCutStories = CoachmarkShortcutStatesTemplate.bind({});
 ShortCutStories.tags = ["!dev"];
