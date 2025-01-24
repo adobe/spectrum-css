@@ -62,3 +62,5 @@ This migrates the `coachmark` component to S2. Custom properties have been remap
 ## Additions
 
 Adds `--spectrum-coachmark-media-fixed-height` for fixed `4:3` image variant and an accompanying `--mod-coachmark-media-fixed-height` mod. This variation has been added to the `coachmark` component story as a boolean control labeled as `Fixed image height`. The class is conditionally added within the `hasImage` block and, as such, will only impact rendering when `hasImage` is also `true`.
+
+A keyboard shortcut element has been added and will be rendered when `hasKeyboardShortcut` is `true`. If there is no action menu, it will render inline with the coachmark title. If there is an action menu, it will render below the action menu and title.
