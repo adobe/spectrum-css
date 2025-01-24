@@ -50,5 +50,40 @@ export const BreadcrumbGroup = Variants({
 				},
 			]
 		},
+		{
+			testHeading: "Hover",
+			isDragged: true,
+			showTruncatedMenu: true,
+			items: [
+				{
+					label: "Sub item",
+					isHovered: true,
+				},
+				{
+					label: "Disabled sub item",
+					isDisabled: true,
+					isHovered: true,
+				},
+				{
+					label: "January 2019 assets",
+					isHovered: true,
+				},
+			]
+		},
+		{
+			testHeading: "Focus-visible",
+			isDragged: true,
+			showTruncatedMenu: true,
+			items: [
+				{
+					label: "Sub item",
+					isFocused: true,
+				},
+				{
+					label: "January 2019 assets",
+					isFocused: true,
+				},
+			]
+		},
 	]
 });

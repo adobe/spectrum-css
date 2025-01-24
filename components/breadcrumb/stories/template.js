@@ -83,6 +83,8 @@ export const Template = ({
 											class=${classMap({
 												[`${rootClass}-itemLink`]: true,
 												"is-disabled": isDisabled,
+												"is-focus-visible": item.isFocused,
+												"is-hover": item.isHovered,
 											})}
 											aria-disabled=${ifDefined(
 												isDisabled ? "true" : undefined,
@@ -93,7 +95,12 @@ export const Template = ({
 											${label}
 										</div>`,
 									() =>
-										html`<a class="${rootClass}-itemLink" aria-current="page"
+										html`<a
+												class=${classMap({
+													[`${rootClass}-itemLink`]: true,
+													"is-hover": item.isHovered,
+												})}
+												aria-current="page"
 											>${ typeof titleHeadingSize == "undefined" ? label : Typography({
 												semantics: "heading",
 												size: titleHeadingSize,
