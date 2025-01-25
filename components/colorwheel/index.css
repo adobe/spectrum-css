@@ -43,6 +43,20 @@
 	user-select: none;
 	cursor: default;
 
+	&::before {
+		inline-size: calc(var(--spectrum-colorwheel-width) - 4px);
+		block-size: calc(var(--spectrum-colorwheel-width) - 4px);
+		inset-block-start: 1px;
+		inset-inline-start: 1px;
+		content: " ";
+		position: absolute;
+		border-width: var(--spectrum-colorwheel-border-width);
+		border-style: solid;
+		border-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
+		border-radius: 100%;
+		z-index: 1;
+	}
+
 	&.is-focused {
 		z-index: 2;
 	}
@@ -67,6 +81,20 @@
 	inline-size: var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
 	block-size: var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
 	margin: auto;
+
+	&::before {
+		inline-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + 2px);
+		block-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + 2px);
+		inset-block-start: -2px;
+		inset-inline-start: -2px;
+		content: " ";
+		position: absolute;
+		border-width: var(--spectrum-colorwheel-border-width);
+		border-style: solid;
+		border-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
+		border-radius: 100%;
+		z-index: 1;
+	}
 }
 
 .spectrum-ColorWheel-colorarea-container {
