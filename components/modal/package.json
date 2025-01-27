@@ -31,7 +31,7 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=14 || >=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/commons": "workspace:^",
