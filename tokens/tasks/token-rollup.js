@@ -37,10 +37,13 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 		await fsp.unlink(outputPath);
 	}
 
+	// Read in the package version from the package.json file
+	const packageJson = await fsp.readFile(path.join(cwd, "package.json"), "utf-8").then(JSON.parse);
+
 	const inputs = await fg(inputGlob, { cwd });
 	const contents = inputs.map(input => `@import "${input}";`).join("\n");
 	if (!contents) return;
-	return processCSS(contents, undefined, outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
+	return processCSS(contents, undefined, outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true, customTagline: `/* Token version: v${packageJson.version} */\n\n` });
 }
 
 /**

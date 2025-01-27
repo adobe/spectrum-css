@@ -53,6 +53,7 @@ async function processCSS(
 		configPath = __dirname,
 		minify = false,
 		encoding = "utf-8",
+		customTagline,
 		...postCSSOptions
 	} = {},
 ) {
@@ -105,6 +106,10 @@ async function processCSS(
 	}
 
 	if (!result.css) return Promise.resolve(logs);
+
+	if (typeof customTagline === "string") {
+		result.css = `${customTagline}\n${result.css}`;
+	}
 
 	const formatted = !minify ? await prettier.format(result.css, {
 		parser: "css",
