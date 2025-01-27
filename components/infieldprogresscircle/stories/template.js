@@ -4,7 +4,7 @@ import "../index.css";
 
 export const Template = ({
 	customClasses = [],
-	rootClass = "spectrum-InfieldProgresscircle",
+	rootClass = "spectrum-InfieldProgressCircle",
 	size = "m",
 	staticColor,
 	...item
@@ -19,4 +19,3 @@ export const Template = ({
 	staticColor,
 	...item
 }, context );
-

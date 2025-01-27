@@ -10,35 +10,27 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-InfieldProgresscircle {
+.spectrum-InfieldProgressCircle {
 	--mod-progress-circle-thickness: var(--mod-progress-cirlce-stroke-width, 2px);
 	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-100);
 }
 
-.spectrum-InfieldProgresscircle--sizeS {
+.spectrum-InfieldProgressCircle--sizeS {
 	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-75);
 }
 
-.spectrum-InfieldProgresscircle--sizeL {
+.spectrum-InfieldProgressCircle--sizeL {
 	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-200);
 }
 
-.spectrum-InfieldProgresscircle--sizeXL {
+.spectrum-InfieldProgressCircle--sizeXL {
 	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-300);
 }
 
-.spectrum-InfieldProgresscircle {
+.spectrum-InfieldProgressCircle {
 	padding-block: var(--spectrum-in-field-progress-circle-edge-to-fill);
 
 	.spectrum-ProgressCircle-fill {
 		stroke-linecap: square;
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-InfieldProgresscircle {
-		--highcontrast-infieldprogresscircle-content-color-default: CanvasText;
-
-		forced-color-adjust: none;
 	}
 }
