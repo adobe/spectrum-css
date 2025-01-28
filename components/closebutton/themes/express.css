@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-/* @combine .spectrum--express */
+/* @combine .spectrum.spectrum--express */
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-CloseButton {
 		--spectrum-closebutton-background-color-default: transparent;
 		--spectrum-closebutton-background-color-hover: var(--spectrum-gray-300);

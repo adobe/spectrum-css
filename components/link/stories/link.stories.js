@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { LinkGroup } from "./link.test.js";
 import { TemplateWithFillerText } from "./template.js";
@@ -69,6 +69,10 @@ export default {
 	parameters: {
 		actions: {
 			handles: ["click .spectrum-Link"],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=18850-110",
 		},
 		packageJson,
 		metadata,

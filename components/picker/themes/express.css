@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-/* @combine .spectrum--express */
+/* @combine .spectrum.spectrum--express */
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Picker {
 		--spectrum-picker-background-color-default: var(--spectrum-gray-200);
 		--spectrum-picker-background-color-default-open: var(--spectrum-gray-300);

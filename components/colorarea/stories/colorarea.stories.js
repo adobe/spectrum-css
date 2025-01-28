@@ -1,18 +1,20 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ColorAreaGroup } from "./colorarea.test.js";
 import { Template } from "./template.js";
 
 /**
- * The color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel. Some usage notes:
- * - The `.spectrum-ColorHandle` should be moved with the `transform: translate(x, y)` style property as the sliders are dragged
- * - Set the background style property of `.spectrum-ColorArea-gradient` to the gradient of the colors to be selected
- * - Set the value attribute of `.spectrum-ColorArea-slider[name=x]` to the currently selected x value (i.e. saturation)
- * - Set the value attribute of `.spectrum-ColorArea-slider[name=y]` to the currently selected y value (i.e. value)
- * - Set the value of the ColorHandle component to the selected color
- * - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation)
+ * The color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a [color slider](/docs/components-color-slider--docs) or [color wheel](/docs/components-color-wheel--docs).
+ *
+ * ## Usage notes
+ * - The `.spectrum-ColorArea-handle` element should be moved with the `transform: translate(x, y)` style property as the sliders are dragged.
+ * - Set the background style property of `.spectrum-ColorArea-gradient` to the gradient of the colors to be selected.
+ * - Set the value attribute of `.spectrum-ColorArea-slider[name=x]` to the currently selected x value (i.e. saturation).
+ * - Set the value attribute of `.spectrum-ColorArea-slider[name=y]` to the currently selected y value (i.e. value).
+ * - Set the value of the [color handle component](/docs/components-color-handle--docs) to the selected color.
+ * - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation).
  */
 export default {
 	title: "Color area",
@@ -41,10 +43,13 @@ export default {
 		selectedColor: "rgba(255, 0, 0, 1)",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=36734-2573",
+		},
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = ColorAreaGroup.bind({});
@@ -60,6 +65,7 @@ CustomSize.args = {
 CustomSize.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+CustomSize.storyName = "Custom size";
 
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];

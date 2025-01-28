@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-/* @combine .spectrum--express */
+/* @combine .spectrum.spectrum--express */
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Checkbox {
 		--spectrum-checkbox-control-color-default: var(--spectrum-gray-800);
 		--spectrum-checkbox-control-color-hover: var(--spectrum-gray-900);

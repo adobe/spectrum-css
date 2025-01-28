@@ -11,8 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum.css";
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Tag {
 	/* TODO - replace placeholder disabled avatar opacity with correct token once avatar is migrated */
@@ -30,8 +29,6 @@
 	--spectrum-tag-label-line-height: var(--spectrum-line-height-100);
 	--spectrum-tag-label-font-weight: var(--spectrum-regular-font-weight);
 
-	/* selected */
-	--spectrum-tag-content-color-selected: var(--spectrum-gray-50);
 	--spectrum-tag-background-color-selected: var(--spectrum-neutral-background-color-selected-default);
 	--spectrum-tag-background-color-selected-hover: var(--spectrum-neutral-background-color-selected-hover);
 	--spectrum-tag-background-color-selected-active: var(--spectrum-neutral-background-color-selected-down);
@@ -77,33 +74,32 @@
 
 	/* disabled variant content */
 	--spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
+}
 
-	/* ↧↧↧ Fallback defaults in case of no t-shirt size - set to Medium styles ↧↧↧ */
-	/* icon spacing fallback if no t-shirt size */
-	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
+.spectrum-Tag,
+.spectrum-Tag--sizeM {
+	--spectrum-tag-height: var(--spectrum-component-height-100);
+	--spectrum-tag-font-size: var(--spectrum-font-size-100);
 	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
+
+	--spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
+	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
+
 	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
 	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
+	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
-	/* avatar spacing fallback if no t-shirt size */
-	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
+	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium); /* 6px 9px */
 	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
 	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
-	/* label spacing fallback if no t-shirt size */
 	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
-	/* clear button inline spacing fallback if no t-shirt size */
-	--spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
-
-	/* tag defaults if no t-shirt size */
-	--spectrum-tag-height: var(--spectrum-component-height-100);
-
-	/* text defaults if no t-shirt size */
-	--spectrum-tag-font-size: var(--spectrum-font-size-100);
-
-	/* clear button spacing if no t-shirt size */
-	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
+	/* tokens based on theme and t-shirt size */
+	--spectrum-tag-corner-radius: var(--spectrum-tag-size-medium-corner-radius);
+	--spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-medium-spacing-inline-start);
+	--spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-medium-label-spacing-inline-end);
+	--spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-medium-clear-button-spacing-inline-end);
 }
 
 /* t-shirt sizes */
@@ -130,31 +126,6 @@
 	--spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-small-spacing-inline-start);
 	--spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-small-label-spacing-inline-end);
 	--spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-small-clear-button-spacing-inline-end);
-}
-
-.spectrum-Tag--sizeM {
-	--spectrum-tag-height: var(--spectrum-component-height-100);
-	--spectrum-tag-font-size: var(--spectrum-font-size-100);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
-
-	--spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
-	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
-
-	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
-
-	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium); /* 6px 9px */
-	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
-	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
-
-	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
-
-	/* tokens based on theme and t-shirt size */
-	--spectrum-tag-corner-radius: var(--spectrum-tag-size-medium-corner-radius);
-	--spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-medium-spacing-inline-start);
-	--spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-medium-label-spacing-inline-end);
-	--spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-medium-clear-button-spacing-inline-end);
 }
 
 .spectrum-Tag--sizeL {

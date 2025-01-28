@@ -29,7 +29,6 @@ const {
 	getPackageFromPath,
 	validateComponentName,
 	fetchContent,
-	copy,
 	writeAndReport,
 } = require("./utilities.js");
 
@@ -81,6 +80,7 @@ async function processCSS(
 		to: output,
 		verbose: false,
 		minify,
+		shouldCombine: true,
 		...postCSSOptions,
 	};
 
@@ -168,20 +168,14 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
-	return Promise.all([
-		processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
-			cwd,
-			clean,
-			skipMapping: false,
-			referencesOnly: false,
-			preserveVariables: true,
-			stripLocalSelectors: false,
-		}).then(async (reports) => {
-			/** @deprecated Copy index.css to index-vars.css for backwards compatibility */
-			return copy(path.join(cwd, "dist", "index.css"), path.join(cwd, "dist", "index-vars.css"), { cwd })
-				.then(r => [r, ...reports]);
-		}),
-	]);
+	return processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
+		cwd,
+		clean,
+		skipMapping: true,
+		referencesOnly: false,
+		preserveVariables: true,
+		stripLocalSelectors: false,
+	});
 }
 
 /**
@@ -234,7 +228,7 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				skipMapping: false,
 				referencesOnly: true,
 				preserveVariables: true,
-				stripLocalSelectors: false,
+				stripLocalSelectors: true,
 			},
 		),
 		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
@@ -249,6 +243,7 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				skipMapping: false,
 				stripLocalSelectors: true,
 				referencesOnly: false,
+				shouldCombine: false,
 				map: false,
 			},
 		),

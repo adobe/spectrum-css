@@ -13,6 +13,13 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"exports": {
+		".": "./dist/css/index.css",
+		"./*.md": "./*.md",
+		"./dist/css/*.css": "./dist/css/*.css",
+		"./dist/index.css": "./dist/css/index.css",
+		"./package.json": "./package.json"
+	},
 	"main": "dist/index.css",
 	"files": [
 		"dist",
@@ -21,15 +28,12 @@
 		"package.json"
 	],
 	"devDependencies": {
-		"@adobe/spectrum-tokens": "12.25.0",
+		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-20241121221506",
+		"@adobe/token-diff-generator": "^1.3.0",
 		"@nxkit/style-dictionary": "^6.0.0",
 		"@spectrum-tools/postcss-rgb-mapping": "workspace:^",
-		"cssnano": "^7.0.3",
-		"cssnano-preset-advanced": "^7.0.6",
 		"postcss": "^8.5.0",
 		"postcss-cli": "^11.0.0",
-		"postcss-import": "^16.1.0",
-		"postcss-licensing": "^2.0.0",
 		"postcss-sorting": "^9.1.0",
 		"prettier": "^3.4.2",
 		"style-dictionary": "^3.9.2",

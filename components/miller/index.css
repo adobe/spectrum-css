@@ -12,31 +12,24 @@
  */
 
 .spectrum-MillerColumns {
-	--spectrum-millercolumns-inline-size: 272px;
-	--spectrum-millercolumns-padding: var(--spectrum-spacing-100);
-	--spectrum-millercolumns-margin-inline-start: var(--spectrum-spacing-100);
-	--spectrum-millercolumns-margin-inline-end: var(--spectrum-spacing-100);
-}
-
-.spectrum-MillerColumns {
 	overflow-x: auto;
 	white-space: nowrap;
 	user-select: none;
-	padding: var(--mod-millercolumns-padding, var(--spectrum-millercolumns-padding)) 0;
+	padding: var(--mod-millercolumns-padding, var(--spectrum-spacing-100)) 0;
 }
 
 .spectrum-MillerColumns-item {
 	display: inline-block;
-	inline-size: var(--mod-millercolumns-inline-size, var(--spectrum-millercolumns-inline-size));
+	inline-size: var(--mod-millercolumns-inline-size, 272px);
 	vertical-align: top;
 	outline: none;
 	margin: 0;
 	padding: 0;
-	margin-inline-end: var(--mod-millercolumns-margin-inline-end, var(--spectrum-millercolumns-margin-inline-end));
+	margin-inline-end: var(--mod-millercolumns-margin-inline-end, var(--spectrum-spacing-100));
 	overflow: auto;
 	block-size: 100%;
 
 	&:first-child {
-		margin-inline-start: var(--mod-millercolumns-margin-inline-start, var(--spectrum-millercolumns-margin-inline-start));
+		margin-inline-start: var(--mod-millercolumns-margin-inline-start, var(--spectrum-spacing-100));
 	}
 }

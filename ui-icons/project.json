@@ -34,6 +34,18 @@
 				"{projectRoot}/dist/spectrum-css-icons-medium.svg"
 			]
 		},
-		"clean": {}
+		"clean": {
+			"cache": false,
+			"executor": "nx:run-commands",
+			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
+			"options": {
+				"commands": [
+					"rimraf {projectRoot}/dist",
+					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+				],
+				"parallel": false
+			},
+			"outputs": []
+		}
 	}
 }

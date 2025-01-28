@@ -11,7 +11,8 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	selectedColor = "rgba(255, 0, 0, 0.5)",
-} = {}) => svg`
+} = {}) => {
+	return svg`
     <svg
       class=${classMap({
         [rootClass]: true,
@@ -49,4 +50,5 @@ export const Template = ({
         <use xlink:href="#loupe-path" mask="url(#loupe-mask)" class="spectrum-ColorLoupe-outer-border" />
       </g>
     </svg>
-`;
+  `;
+};

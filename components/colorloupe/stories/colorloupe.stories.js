@@ -1,11 +1,17 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isOpen } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ColorLoupeGroup } from "./colorloupe.test.js";
 
 /**
  * The color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.
+ *
+ * ## Usage notes
+ *
+ * - Set the `--spectrum-picked-color` custom property to the CSS color value you want to show.
+ * - Implementations must apply the `.is-open` class to display the loupe.
+ * - Color loupe does not have a disabled style. Do not show it when the handle it's attached to is disabled.
  */
 export default {
 	title: "Color loupe",

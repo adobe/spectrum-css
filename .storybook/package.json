@@ -29,9 +29,10 @@
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
-		"@adobe/spectrum-tokens": "12.25.0",
+		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-20241021172855",
 		"@spectrum-css/table": "workspace:^",
 		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^14.6.0",
 		"@spectrum-css/ui-icons": "workspace:^"
 	},
 	"devDependencies": {

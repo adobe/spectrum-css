@@ -404,9 +404,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - fix(pickerbutton): fix disabled hover
 - fix(searchwithin): pass through mod for picker button border color
 - chore(pickerbutton): update token peer dependency
-- fix(searchwithin): update searchwithin story to match docs site  
+- fix(searchwithin): update searchwithin story to match docs site
   use picker instead of pickerbutton and remove extra border
-- fix(pickerbutton): remove icononly class and remove padding from uiicononly  
+- fix(pickerbutton): remove icononly class and remove padding from uiicononly
   removes padding from uiicononly class to allow for larger icons in slots
 - fix(pickerbutton): explicitly add box-sizing border-box
 - fix(pickerbutton): fix icon size

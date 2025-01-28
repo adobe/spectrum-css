@@ -11,8 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum.css";
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-ActionGroup {
 	--spectrum-actiongroup-button-spacing-reset: 0;
@@ -47,7 +46,7 @@
 		}
 	}
 
-	&:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
+	&:not(.spectrum-ActionGroup--vertical, .spectrum-ActionGroup--compact) {
 		.spectrum-ActionGroup-item {
 			flex-shrink: 0;
 		}
@@ -73,7 +72,7 @@
 		z-index: 0;
 
 		&:first-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 
 			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
@@ -82,7 +81,7 @@
 		}
 
 		& + .spectrum-ActionGroup-item {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px;
 
 			margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
@@ -90,7 +89,7 @@
 		}
 
 		&:last-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
 
 			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
@@ -118,14 +117,14 @@
 	}
 }
 
-.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet).spectrum-ActionGroup--vertical {
+.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) {
 	gap: var(--mod-actiongroup-gap-size-compact, var(--spectrum-actiongroup-gap-size-compact));
 
 	.spectrum-ActionGroup-item {
 		border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 
 		&:first-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px;
 
 			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
@@ -143,7 +142,7 @@
 		}
 
 		&:last-child {
-			/* Action button passthrough styling */
+			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 
 			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));

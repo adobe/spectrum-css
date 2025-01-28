@@ -11,8 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum.css";
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Textfield {
 	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
@@ -24,11 +23,7 @@
 	--spectrum-textfield-min-width: var(--spectrum-text-field-minimum-width-multiplier);
 	--spectrum-textfield-corner-radius: var(--spectrum-corner-radius-100);
 
-	/* default height */
-	--spectrum-textfield-height: var(--spectrum-component-height-100);
-
 	/* default spacing */
-	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
 	--spectrum-textfield-spacing-inline-quiet: var(--spectrum-field-edge-to-text-quiet);
 	--spectrum-textfield-spacing-block-start: var(--spectrum-component-top-to-text-100);
 	--spectrum-textfield-spacing-block-end: var(--spectrum-component-bottom-to-text-100);
@@ -36,48 +31,29 @@
 
 	/* default label spacing */
 	--spectrum-textfield-label-spacing-block: var(--spectrum-field-label-to-component);
-	--spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-medium);
-	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-100);
 
 	/* default help text spacing */
 	--spectrum-textfield-helptext-spacing-block: var(--spectrum-help-text-to-component);
 
-	/* default icon size */
-	--spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-100);
-	--spectrum-textfield-icon-size-valid: var(--spectrum-checkmark-icon-size-100);
-
 	/* default icon spacing - invalid */
-	--spectrum-textfield-icon-spacing-inline-start-invalid: var(--spectrum-field-text-to-alert-icon-medium);
-	--spectrum-textfield-icon-spacing-inline-end-invalid: var(--spectrum-field-edge-to-alert-icon-medium);
 	--spectrum-textfield-icon-spacing-inline-end-quiet-invalid: var(--spectrum-field-edge-to-alert-icon-quiet);
-	--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-field-top-to-alert-icon-medium);
 
 	/* default icon spacing - valid */
-	--spectrum-textfield-icon-spacing-inline-start-valid: var(--spectrum-field-text-to-validation-icon-medium);
-	--spectrum-textfield-icon-spacing-inline-end-valid: var(--spectrum-field-edge-to-validation-icon-medium);
 	--spectrum-textfield-icon-spacing-inline-end-quiet-valid: var(--spectrum-field-edge-to-validation-icon-quiet);
-	--spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-top-to-validation-icon-medium);
 
 	/* font styles */
 	--spectrum-textfield-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-textfield-font-weight: var(--spectrum-regular-font-weight);
-	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);
 
 	/* character count */
 	--spectrum-textfield-character-count-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-textfield-character-count-font-weight: var(--spectrum-regular-font-weight);
-	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
 	--spectrum-textfield-character-count-spacing-inline: var(--spectrum-spacing-200);
-	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-75);
 	--spectrum-textfield-character-count-spacing-inline-side: var(--spectrum-side-label-character-count-to-field);
-	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-medium);
 
 	/* focus indicator */
 	--spectrum-textfield-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
 	--spectrum-textfield-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-
-	/*** Colors ***/
-	--spectrum-textfield-background-color: var(--spectrum-gray-50);
 
 	/* Text Colors */
 	--spectrum-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
@@ -90,8 +66,6 @@
 	--spectrum-textfield-text-color-readonly: var(--spectrum-neutral-content-color-default);
 
 	/* Disabled Colors */
-	--spectrum-textfield-background-color-disabled: var(--spectrum-disabled-background-color);
-	--spectrum-textfield-border-color-disabled: var(--spectrum-disabled-border-color);
 	--spectrum-textfield-text-color-disabled: var(--spectrum-disabled-content-color);
 
 	/* Invalid Colors */
@@ -114,6 +88,27 @@
 	/* Text Area / Multiline */
 	--spectrum-text-area-min-inline-size: var(--spectrum-text-area-minimum-width);
 	--spectrum-text-area-min-block-size: var(--spectrum-text-area-minimum-height);
+
+	/* Default sizing values: Medium */
+	--spectrum-textfield-height: var(--spectrum-component-height-100);
+	--spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
+	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);
+	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
+	--spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-100);
+	--spectrum-textfield-icon-size-valid: var(--spectrum-checkmark-icon-size-100);
+	--spectrum-textfield-icon-spacing-inline-end-invalid: var(--spectrum-field-edge-to-alert-icon-medium);
+	--spectrum-textfield-icon-spacing-inline-end-valid: var(--spectrum-field-edge-to-validation-icon-medium);
+	--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-field-top-to-alert-icon-medium);
+	--spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-top-to-validation-icon-medium);
+	--spectrum-textfield-icon-spacing-inline-start-invalid: var(--spectrum-field-text-to-alert-icon-medium);
+	--spectrum-textfield-icon-spacing-inline-start-valid: var(--spectrum-field-text-to-validation-icon-medium);
+	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
+	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-75);
+	--spectrum-textfield-character-count-spacing-block-quiet: var(--spectrum-character-count-to-field-quiet-medium);
+	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-medium);
+
+	/* Text Area / Multiline size medium */
 	--spectrum-text-area-min-block-size-quiet: var(--spectrum-component-height-100);
 }
 
@@ -139,29 +134,6 @@
 
 	/* Text Area / Multiline size small */
 	--spectrum-text-area-min-block-size-quiet: var(--spectrum-component-height-75);
-}
-
-.spectrum-Textfield--sizeM {
-	--spectrum-textfield-height: var(--spectrum-component-height-100);
-	--spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-medium);
-	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
-	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);
-	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
-	--spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-100);
-	--spectrum-textfield-icon-size-valid: var(--spectrum-checkmark-icon-size-100);
-	--spectrum-textfield-icon-spacing-inline-end-invalid: var(--spectrum-field-edge-to-alert-icon-medium);
-	--spectrum-textfield-icon-spacing-inline-end-valid: var(--spectrum-field-edge-to-validation-icon-medium);
-	--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-field-top-to-alert-icon-medium);
-	--spectrum-textfield-icon-spacing-block-valid: var(--spectrum-field-top-to-validation-icon-medium);
-	--spectrum-textfield-icon-spacing-inline-start-invalid: var(--spectrum-field-text-to-alert-icon-medium);
-	--spectrum-textfield-icon-spacing-inline-start-valid: var(--spectrum-field-text-to-validation-icon-medium);
-	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
-	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-75);
-	--spectrum-textfield-character-count-spacing-block-quiet: var(--spectrum-character-count-to-field-quiet-medium);
-	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-medium);
-
-	/* Text Area / Multiline size medium */
-	--spectrum-text-area-min-block-size-quiet: var(--spectrum-component-height-100);
 }
 
 .spectrum-Textfield--sizeL {
@@ -231,38 +203,6 @@
 	margin: 0;
 }
 
-.spectrum-Textfield.spectrum-Textfield--quiet {
-	&::after {
-		content: "";
-		pointer-events: none;
-		position: absolute;
-		inset-block-end: calc(-1 * (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width))));
-		inset-inline-start: 0;
-		inline-size: 100%;
-		block-size: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
-	}
-
-	&.is-keyboardFocused {
-		&::after {
-			background-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
-		}
-	}
-
-	/*** Quiet Input Invalid ⚠️ ***/
-	&.is-invalid {
-		.spectrum-Textfield-input {
-			padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) + var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid)));
-		}
-	}
-
-	/*** Quiet Input Valid ✅ ***/
-	&.is-valid {
-		.spectrum-Textfield-input {
-			padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid)) + var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid)));
-		}
-	}
-}
-
 /********* Child Element - Validation Icons - ⚠️ ✅ *********/
 .spectrum-Textfield-validationIcon {
 	/* specify validation class or web components will apply this to all icons */
@@ -330,18 +270,16 @@
 		margin-block-end: var(--mod-textfield-label-spacing-block-quiet, var(--spectrum-textfield-label-spacing-block-quiet));
 	}
 
-	.is-disabled & {
+	.spectrum-Textfield.is-disabled & {
 		color: var(--spectrum-textfield-text-color-disabled);
 	}
 }
 
 /********* Child Component - Help Text *********/
-.spectrum-HelpText {
-	.spectrum-Textfield & {
-		margin-block-start: var(--mod-textfield-helptext-spacing-block, var(--spectrum-textfield-helptext-spacing-block));
-		grid-row: 3;
-		grid-column: 1 / span 2;
-	}
+.spectrum-Textfield .spectrum-HelpText {
+	margin-block-start: var(--mod-textfield-helptext-spacing-block, var(--spectrum-textfield-helptext-spacing-block));
+	grid-row: 3;
+	grid-column: 1 / span 2;
 }
 
 /********* Child Element - Character Count *********/
@@ -381,7 +319,9 @@
 	vertical-align: top; /* used to align them correctly in forms. */
 	outline: none;
 	background-color: var(--mod-textfield-background-color, var(--spectrum-textfield-background-color));
-	border: var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)) solid var(--mod-textfield-border-color, var(--spectrum-textfield-border-color));
+	border-width: var(--mod-textfield-border-width, var(--spectrum-textfield-border-width));
+	border-style: solid;
+	border-color: var(--highcontrast-textfield-border-color, var(--mod-textfield-border-color, var(--spectrum-textfield-border-color)));
 	border-radius: var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius));
 	transition: border-color var(--mod-texfield-animation-duration, var(--spectrum-texfield-animation-duration)) ease-in-out;
 
@@ -526,7 +466,7 @@
 	.spectrum-Textfield.is-disabled:hover &,
 	&:disabled {
 		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
-		border-color: transparent;
+		border-color: var(--mod-textfield-border-color-disabled, var(--spectrum-textfield-border-color-disabled));
 		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 
 		/* Disable the resize functionality when disabled */
@@ -647,20 +587,45 @@
 		}
 	}
 
-	&.spectrum-Textfield--quiet {
-		.spectrum-Textfield-input {
-			min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
+	&.spectrum-Textfield--quiet .spectrum-Textfield-input {
+		min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
 
-			/* Treat all quiet inputs and text areas the same */
-			resize: none;
-			overflow-y: hidden;
-		}
+		/* Treat all quiet inputs and text areas the same */
+		resize: none;
+		overflow-y: hidden;
+	}
+}
+
+.spectrum-Textfield--quiet {
+	&::after {
+		content: "";
+		pointer-events: none;
+		position: absolute;
+		inset-block-end: calc(-1 * (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width))));
+		inset-inline-start: 0;
+		inline-size: 100%;
+		block-size: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
+	}
+
+	&.is-keyboardFocused::after {
+		background-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
+	}
+
+	/*** Quiet Input Invalid ⚠️ ***/
+	&.is-invalid .spectrum-Textfield-input {
+		padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) + var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid)));
+	}
+
+	/*** Quiet Input Valid ✅ ***/
+	&.is-valid .spectrum-Textfield-input {
+		padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid)) + var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid)));
 	}
 }
 
 /********* WHCM *********/
 @media (forced-colors: active) {
 	.spectrum-Textfield {
+		--highcontrast-textfield-border-color: CanvasText;
 		--highcontrast-textfield-border-color-hover: Highlight;
 		--highcontrast-textfield-border-color-focus: Highlight;
 		--highcontrast-textfield-border-color-keyboard-focus: CanvasText;

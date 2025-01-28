@@ -120,10 +120,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:12.25.0":
-  version: 12.25.0
-  resolution: "@adobe/spectrum-tokens@npm:12.25.0"
-  checksum: 10c0/783a4fb59cecc54b7a8157d998e690de82f3fb5a15934ed241256c998375aa38e699e81ddfb2d815be8b3281fe774acf33bed97eb9beabad9648fb9bd53ca322
+"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241021172855":
+  version: 0.0.0-s2-foundations-20241021172855
+  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241021172855"
+  checksum: 10c0/0604c571afa0416f7802e45d7cbb1d003f14bdf3f90771c274723fa504de6d96f8e16b82f7facbbdb5ee5e66f29c37bd7e3e63a42a05f983d65ede2668b9b0a4
+  languageName: node
+  linkType: hard
+
+"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241121221506":
+  version: 0.0.0-s2-foundations-20241121221506
+  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241121221506"
+  checksum: 10c0/64664995ca98170c2a089ecb215103c77bb5a3ff49848371e2dfc301dc3ca30ef4dafae3d44cda82a1609d877e54608cc2e591edef37095ee646c6cf185143ee
+  languageName: node
+  linkType: hard
+
+"@adobe/token-diff-generator@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@adobe/token-diff-generator@npm:1.3.0"
+  dependencies:
+    chalk: "npm:^5.3.0"
+    commander: "npm:^12.1.0"
+    deep-object-diff: "npm:^1.1.9"
+    emojilib: "npm:^4.0.0"
+    glob: "npm:^11.0.0"
+    inquirer: "npm:^12.0.0"
+    nixt: "npm:^0.5.1"
+    node-emoji: "npm:^2.1.3"
+    tar: "npm:^7.4.3"
+    tmp-promise: "npm:^3.0.3"
+  bin:
+    tdiff: src/lib/cli.js
+  checksum: 10c0/e237d70fe9503a47d1e3b9ce163895bf84c46a41e256cc3ee218c493007d743dda5387e58f1aee619e329c8ee440535f5df183495ca6140e86bf47a2687f030a
   languageName: node
   linkType: hard
 
@@ -2236,10 +2263,195 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@inquirer/checkbox@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "@inquirer/checkbox@npm:4.0.6"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/figures": "npm:^1.0.9"
+    "@inquirer/type": "npm:^3.0.2"
+    ansi-escapes: "npm:^4.3.2"
+    yoctocolors-cjs: "npm:^2.1.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/919e3c5d652f1ccd9d5e8e9678e63981a968ba4a0dffe9d9409d94a1951b398218f7dfb05e57aefcb3c3c1d61ac2333160e370b0ff4632ada7a92ebe07a2ca72
+  languageName: node
+  linkType: hard
+
+"@inquirer/confirm@npm:^5.1.3":
+  version: 5.1.3
+  resolution: "@inquirer/confirm@npm:5.1.3"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/type": "npm:^3.0.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/ddbca429ebb3a8bf1d10928f4ab0c8eedbf3f74f85ed64c6b26a830f0fbbab5fa964b9ef2eb2c57a10b9afc9ca3921a12e4659f5a83069078cd1a7ce3d0d126d
+  languageName: node
+  linkType: hard
+
+"@inquirer/core@npm:^10.1.4":
+  version: 10.1.4
+  resolution: "@inquirer/core@npm:10.1.4"
+  dependencies:
+    "@inquirer/figures": "npm:^1.0.9"
+    "@inquirer/type": "npm:^3.0.2"
+    ansi-escapes: "npm:^4.3.2"
+    cli-width: "npm:^4.1.0"
+    mute-stream: "npm:^2.0.0"
+    signal-exit: "npm:^4.1.0"
+    strip-ansi: "npm:^6.0.1"
+    wrap-ansi: "npm:^6.2.0"
+    yoctocolors-cjs: "npm:^2.1.2"
+  checksum: 10c0/4e6c51713c79a0b22381a08a2d11c37f2d696597d01bdecd7b3482889e53e4ac279c55d663a365798ad52becc37052b571bc3ec85ee8a10054c681d9248b88d3
+  languageName: node
+  linkType: hard
+
+"@inquirer/editor@npm:^4.2.3":
+  version: 4.2.3
+  resolution: "@inquirer/editor@npm:4.2.3"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/type": "npm:^3.0.2"
+    external-editor: "npm:^3.1.0"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/0194a660b33e38781c35a6ab531f76beca998e5e30ebc90bb94e2140fd943e0dfcff4f9c650f4f79f74df7dac04c82db254ff8c2d9ef0b55c491523f859a8c2b
+  languageName: node
+  linkType: hard
+
+"@inquirer/expand@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "@inquirer/expand@npm:4.0.6"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/type": "npm:^3.0.2"
+    yoctocolors-cjs: "npm:^2.1.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/2a4990744edf17528c5cf894b9a7a04f202740fb9e2123fb8ced1e623f5bf9716976b037e1b23e88cfce826a85b6052d49784ac2294644e353767b51a0a2f877
+  languageName: node
+  linkType: hard
+
 "@inquirer/figures@npm:^1.0.3":
   version: 1.0.5
   resolution: "@inquirer/figures@npm:1.0.5"
   checksum: 10c0/ec9ba23db42cb33fa18eb919abf2a18e750e739e64c1883ce4a98345cd5711c60cac12d1faf56a859f52d387deb221c8d3dfe60344ee07955a9a262f8b821fe3
+  languageName: node
+  linkType: hard
+
+"@inquirer/figures@npm:^1.0.9":
+  version: 1.0.9
+  resolution: "@inquirer/figures@npm:1.0.9"
+  checksum: 10c0/21e1a7c902b2b77f126617b501e0fe0d703fae680a9df472afdae18a3e079756aee85690cef595a14e91d18630118f4a3893aab6832b9232fefc6ab31c804a68
+  languageName: node
+  linkType: hard
+
+"@inquirer/input@npm:^4.1.3":
+  version: 4.1.3
+  resolution: "@inquirer/input@npm:4.1.3"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/type": "npm:^3.0.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/251468b9596fcbff286d0817da7408f2a78230c1f84de23361e6362a8a91e5bf4c42c04f4971a8fe751eb0afc4ab1cef0d3766742fd4e693b4b0cbcc72aa8d97
+  languageName: node
+  linkType: hard
+
+"@inquirer/number@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@inquirer/number@npm:3.0.6"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/type": "npm:^3.0.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/26c030735bdc94053dfca50db1e75c7e325b8dcc009f3f9e6f572d89b67d7b23cfb3920ed2fa6fa34c312b5ebb6b86ba5b4e77c277ce463720eba45052c0d253
+  languageName: node
+  linkType: hard
+
+"@inquirer/password@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "@inquirer/password@npm:4.0.6"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/type": "npm:^3.0.2"
+    ansi-escapes: "npm:^4.3.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/c36f675d350c38156efe255d9b3a052271faff2bfcebf626f5f02092e9110ef8f87a6985e96dd0c2351fa79723d0847bacaa86ae10c1d24526434de96af5503e
+  languageName: node
+  linkType: hard
+
+"@inquirer/prompts@npm:^7.2.3":
+  version: 7.2.3
+  resolution: "@inquirer/prompts@npm:7.2.3"
+  dependencies:
+    "@inquirer/checkbox": "npm:^4.0.6"
+    "@inquirer/confirm": "npm:^5.1.3"
+    "@inquirer/editor": "npm:^4.2.3"
+    "@inquirer/expand": "npm:^4.0.6"
+    "@inquirer/input": "npm:^4.1.3"
+    "@inquirer/number": "npm:^3.0.6"
+    "@inquirer/password": "npm:^4.0.6"
+    "@inquirer/rawlist": "npm:^4.0.6"
+    "@inquirer/search": "npm:^3.0.6"
+    "@inquirer/select": "npm:^4.0.6"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/52c2e1fd8a4e98bc5fd6a79acf9c7d7e1ecc534013d7c018412a6ed34d15be69a2d10791b539740fed8e538485e359e1cacbec98ca3d04e24c5e9fa9480d7bc6
+  languageName: node
+  linkType: hard
+
+"@inquirer/rawlist@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "@inquirer/rawlist@npm:4.0.6"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/type": "npm:^3.0.2"
+    yoctocolors-cjs: "npm:^2.1.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/c79f0ddd5cf7eae8db27a7080e277c32809d7bd58619f470d8b1598d1aff36f6aac276535ef35801a1dae97bb3763fd248e1067800e6eccd49276206d6cdb945
+  languageName: node
+  linkType: hard
+
+"@inquirer/search@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@inquirer/search@npm:3.0.6"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/figures": "npm:^1.0.9"
+    "@inquirer/type": "npm:^3.0.2"
+    yoctocolors-cjs: "npm:^2.1.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/27afe9105b9fd26b5985847f75c82f59156158b6366e35896764cd08ee7bb76e3d9c7110c6ed50ab4d7e13466ea3f0e60492a644e0eb6a0d8c30701b07221ad9
+  languageName: node
+  linkType: hard
+
+"@inquirer/select@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "@inquirer/select@npm:4.0.6"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/figures": "npm:^1.0.9"
+    "@inquirer/type": "npm:^3.0.2"
+    ansi-escapes: "npm:^4.3.2"
+    yoctocolors-cjs: "npm:^2.1.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/5346007a5f62ff88f36c219b625d6031ba12fea6849b38aab1d3ed1219387004bf1c3a44aeec47a3988c9aeb1934a8a06509fe9e00f39135fa22113a01e1cc37
+  languageName: node
+  linkType: hard
+
+"@inquirer/type@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@inquirer/type@npm:3.0.2"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/fe348db2977fff92cad0ade05b36ec40714326fccd4a174be31663f8923729b4276f1736d892a449627d7fb03235ff44e8aac5aa72b09036d993593b813ef313
   languageName: node
   linkType: hard
 
@@ -3404,6 +3616,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sindresorhus/is@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "@sindresorhus/is@npm:4.6.0"
+  checksum: 10c0/33b6fb1d0834ec8dd7689ddc0e2781c2bfd8b9c4e4bacbcb14111e0ae00621f2c264b8a7d36541799d74888b5dccdf422a891a5cb5a709ace26325eedc81e22e
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/merge-streams@npm:^2.1.0":
   version: 2.3.0
   resolution: "@sindresorhus/merge-streams@npm:2.3.0"
@@ -3784,7 +4003,6 @@ __metadata:
     "@spectrum-css/asset": "workspace:^"
     "@spectrum-css/checkbox": "workspace:^"
     "@spectrum-css/icon": "workspace:^"
-    "@spectrum-css/quickaction": "npm:^3.1.1"
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/typography": "workspace:^"
   peerDependencies:
@@ -3803,8 +4021,6 @@ __metadata:
     "@spectrum-css/checkbox":
       optional: true
     "@spectrum-css/icon":
-      optional: true
-    "@spectrum-css/quickaction":
       optional: true
     "@spectrum-css/typography":
       optional: true
@@ -4009,16 +4225,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/cyclebutton@npm:^3.1.3":
-  version: 3.1.3
-  resolution: "@spectrum-css/cyclebutton@npm:3.1.3"
-  peerDependencies:
-    "@spectrum-css/actionbutton": ">=5"
-    "@spectrum-css/vars": ">=9"
-  checksum: 10c0/92eacba8788911201a46a418354e6281037b97e6913bd056c62328848f53c745a3f1c722b7be1cf8900ba86bf6996149d2653d998b2ccf2fee5f955c89a24c00
-  languageName: node
-  linkType: hard
-
 "@spectrum-css/datepicker@workspace:^, @spectrum-css/datepicker@workspace:components/datepicker":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/datepicker@workspace:components/datepicker"
@@ -4161,6 +4367,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/form@workspace:components/form":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/form@workspace:components/form"
+  dependencies:
+    "@spectrum-css/tokens": "workspace:^"
+  peerDependencies:
+    "@spectrum-css/tokens": ">=15"
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/generator@workspace:tools/generator":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/generator@workspace:tools/generator"
@@ -4287,6 +4503,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/meter@workspace:components/meter":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/meter@workspace:components/meter"
+  dependencies:
+    "@spectrum-css/progressbar": "workspace:^"
+    "@spectrum-css/tokens": "workspace:^"
+  peerDependencies:
+    "@spectrum-css/progressbar": ">=4"
+    "@spectrum-css/tokens": ">=15"
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/miller@workspace:^, @spectrum-css/miller@workspace:components/miller":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/miller@workspace:components/miller"
@@ -4341,14 +4569,12 @@ __metadata:
     "@spectrum-css/actionbutton": "workspace:^"
     "@spectrum-css/button": "workspace:^"
     "@spectrum-css/icon": "workspace:^"
-    "@spectrum-css/splitbutton": "npm:^8.1.2"
     "@spectrum-css/textfield": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=6"
     "@spectrum-css/button": ">=13"
     "@spectrum-css/icon": ">=7"
-    "@spectrum-css/splitbutton": ">=8"
     "@spectrum-css/textfield": ">=7"
     "@spectrum-css/tokens": ">=14 || >=15"
   languageName: unknown
@@ -4425,12 +4651,13 @@ __metadata:
   resolution: "@spectrum-css/preview@workspace:.storybook"
   dependencies:
     "@adobe/spectrum-css-workflow-icons": "npm:^1.5.4"
-    "@adobe/spectrum-tokens": "npm:12.25.0"
+    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241021172855"
     "@babel/core": "npm:^7.26.0"
     "@chromatic-com/storybook": "npm:^3.2.3"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
     "@spectrum-css/table": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^14.6.0"
     "@spectrum-css/ui-icons": "workspace:^"
     "@storybook/addon-a11y": "npm:^8.4.7"
     "@storybook/addon-actions": "npm:^8.4.7"
@@ -4489,17 +4716,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/quickaction@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@spectrum-css/quickaction@npm:3.1.1"
-  peerDependencies:
-    "@spectrum-css/actionbutton": ">=5"
-    "@spectrum-css/checkbox": ">=8"
-    "@spectrum-css/vars": ">=9"
-  checksum: 10c0/5c57f78b2715d5b143e2abfeb07129511b5fd242be9a109b0b62db7708923f9aa2f4c709b1e4fd26d1b17436a18f4dec8d6923fd16799d9bdbed3a1348a41e0a
-  languageName: node
-  linkType: hard
-
 "@spectrum-css/radio@workspace:^, @spectrum-css/radio@workspace:components/radio":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/radio@workspace:components/radio"
@@ -4540,19 +4756,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/searchwithin@npm:^5.1.3":
-  version: 5.1.3
-  resolution: "@spectrum-css/searchwithin@npm:5.1.3"
-  peerDependencies:
-    "@spectrum-css/clearbutton": ">=5"
-    "@spectrum-css/icon": ">=4"
-    "@spectrum-css/picker": ">=3"
-    "@spectrum-css/textfield": ">=5"
-    "@spectrum-css/vars": ">=9"
-  checksum: 10c0/5b5aba2d300e41d37895c071f6ed9f771cc1650ff3643ac53721052cd413fcc8cafa47761e5c9f12d22ec3cbf7ea9990c895b0747ce2bd2a1f8adfa722609726
-  languageName: node
-  linkType: hard
-
 "@spectrum-css/sidenav@workspace:^, @spectrum-css/sidenav@workspace:components/sidenav":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/sidenav@workspace:components/sidenav"
@@ -4579,20 +4782,6 @@ __metadata:
     "@spectrum-css/tokens": ">=14 || >=15"
   languageName: unknown
   linkType: soft
-
-"@spectrum-css/splitbutton@npm:^8.1.2":
-  version: 8.1.2
-  resolution: "@spectrum-css/splitbutton@npm:8.1.2"
-  peerDependencies:
-    "@spectrum-css/button": ">=11"
-    "@spectrum-css/icon": ">=4"
-    "@spectrum-css/vars": ">=9"
-  peerDependenciesMeta:
-    "@spectrum-css/icon":
-      optional: true
-  checksum: 10c0/4ca2ec3541b6d5a5224d1a92ecb9156519b12731bbae13261a31827e638c1266141f66b8f615f92bafada3729b7893c0839db6dc0d6e0d698603e782925e7335
-  languageName: node
-  linkType: hard
 
 "@spectrum-css/splitview@workspace:^, @spectrum-css/splitview@workspace:components/splitview":
   version: 0.0.0-use.local
@@ -4806,19 +4995,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^14.6.0":
+  version: 14.6.0
+  resolution: "@spectrum-css/tokens@npm:14.6.0"
+  checksum: 10c0/62343030d55fce9de192ca0d1e13bd1ee147c1aba45ecf6b8db27c1740865f9645af8b0b260f0723ce295af2b83cd2014962d62af61b8827a548bc80be9f1012
+  languageName: node
+  linkType: hard
+
 "@spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:12.25.0"
+    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241121221506"
+    "@adobe/token-diff-generator": "npm:^1.3.0"
     "@nxkit/style-dictionary": "npm:^6.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "workspace:^"
-    cssnano: "npm:^7.0.3"
-    cssnano-preset-advanced: "npm:^7.0.6"
     postcss: "npm:^8.5.0"
     postcss-cli: "npm:^11.0.0"
-    postcss-import: "npm:^16.1.0"
-    postcss-licensing: "npm:^2.0.0"
     postcss-sorting: "npm:^9.1.0"
     prettier: "npm:^3.4.2"
     style-dictionary: "npm:^3.9.2"
@@ -6620,6 +6813,13 @@ __metadata:
   version: 2.0.1
   resolution: "assertion-error@npm:2.0.1"
   checksum: 10c0/bbbcb117ac6480138f8c93cf7f535614282dea9dc828f540cdece85e3c665e8f78958b96afac52f29ff883c72638e6a87d469ecc9fe5bc902df03ed24a55dba8
+  languageName: node
+  linkType: hard
+
+"assertion-error@npm:~1.0.0":
+  version: 1.0.2
+  resolution: "assertion-error@npm:1.0.2"
+  checksum: 10c0/9958e75c114afc248f82f9e4205e48802d3840fc86a7e12001b3d3042004bf662563b6f11e96e50270bef341e7714d13141aad300acda0fa74bad437e2338193
   languageName: node
   linkType: hard
 
@@ -8694,6 +8894,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deep-object-diff@npm:^1.1.9":
+  version: 1.1.9
+  resolution: "deep-object-diff@npm:1.1.9"
+  checksum: 10c0/12cfd1b000d16c9192fc649923c972f8aac2ddca4f71a292f8f2c1e2d5cf3c9c16c85e73ab3e7d8a89a5ec6918d6460677d0b05bd160f7bd50bb4816d496dc24
+  languageName: node
+  linkType: hard
+
 "deepmerge@npm:^4.2.2":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
@@ -9200,6 +9407,20 @@ __metadata:
   version: 9.2.2
   resolution: "emoji-regex@npm:9.2.2"
   checksum: 10c0/af014e759a72064cf66e6e694a7fc6b0ed3d8db680427b021a89727689671cefe9d04151b2cad51dbaf85d5ba790d061cd167f1cf32eb7b281f6368b3c181639
+  languageName: node
+  linkType: hard
+
+"emojilib@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "emojilib@npm:2.4.0"
+  checksum: 10c0/6e66ba8921175842193f974e18af448bb6adb0cf7aeea75e08b9d4ea8e9baba0e4a5347b46ed901491dcaba277485891c33a8d70b0560ca5cc9672a94c21ab8f
+  languageName: node
+  linkType: hard
+
+"emojilib@npm:^4.0.0":
+  version: 4.0.1
+  resolution: "emojilib@npm:4.0.1"
+  checksum: 10c0/b9adccce90bf8ed3386439b44c425ea1900413a3a7323adf9ff11309c9148e2811d88611fde2bf27de809f22c94d013e9246ce430adaf25893c2284333b4dd68
   languageName: node
   linkType: hard
 
@@ -11463,6 +11684,23 @@ __metadata:
   peerDependencies:
     inquirer: ^9.1.0
   checksum: 10c0/08b3359665a82f3e7fed6bd463cd2b1ac70814f4702d4bd3bce760b5070a44f81ddca5f7727ee71f530cad29bfb8e0936b03653481734683af12c5fb3ae9f012
+  languageName: node
+  linkType: hard
+
+"inquirer@npm:^12.0.0":
+  version: 12.3.2
+  resolution: "inquirer@npm:12.3.2"
+  dependencies:
+    "@inquirer/core": "npm:^10.1.4"
+    "@inquirer/prompts": "npm:^7.2.3"
+    "@inquirer/type": "npm:^3.0.2"
+    ansi-escapes: "npm:^4.3.2"
+    mute-stream: "npm:^2.0.0"
+    run-async: "npm:^3.0.0"
+    rxjs: "npm:^7.8.1"
+  peerDependencies:
+    "@types/node": ">=18"
+  checksum: 10c0/cdded52fa440f2622aec2972eb5775789c9c36cea7d31f3f83d5ef692e328a4c52ae1e039960f41d2d5c8a0e6e728b3fb502c1b552dcb6c422dd0f7adc3906a5
   languageName: node
   linkType: hard
 
@@ -14377,6 +14615,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mute-stream@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "mute-stream@npm:2.0.0"
+  checksum: 10c0/2cf48a2087175c60c8dcdbc619908b49c07f7adcfc37d29236b0c5c612d6204f789104c98cc44d38acab7b3c96f4a3ec2cfdc4934d0738d876dbefa2a12c69f4
+  languageName: node
+  linkType: hard
+
 "mutexify@npm:^1.1.0":
   version: 1.4.0
   resolution: "mutexify@npm:1.4.0"
@@ -14431,6 +14676,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nixt@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "nixt@npm:0.5.1"
+  dependencies:
+    assertion-error: "npm:~1.0.0"
+    clone: "npm:^1.0.2"
+    shell-quote: "npm:^1.4.1"
+  checksum: 10c0/51044b04efb10fd78a763e8457525f145099147b3639d781e5bb28b2ab501731f814b1bebdaebfcd76c671731416a5157ef93a9f279cfe2b261ce9d99f298041
+  languageName: node
+  linkType: hard
+
 "no-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "no-case@npm:3.0.4"
@@ -14447,6 +14703,18 @@ __metadata:
   dependencies:
     node-gyp: "npm:latest"
   checksum: 10c0/bcf526f2ce788182730d3c3df5206585873d1e837a6e1378ff84abccf2f19cf3f93a8274f9c1245af0de63a0dbd1bb95ca2f767ecf5c678d6930326aaf396c4e
+  languageName: node
+  linkType: hard
+
+"node-emoji@npm:^2.1.3":
+  version: 2.2.0
+  resolution: "node-emoji@npm:2.2.0"
+  dependencies:
+    "@sindresorhus/is": "npm:^4.6.0"
+    char-regex: "npm:^1.0.2"
+    emojilib: "npm:^2.4.0"
+    skin-tone: "npm:^2.0.0"
+  checksum: 10c0/9525defbd90a82a2131758c2470203fa2a2faa8edd177147a8654a26307fe03594e52847ecbe2746d06cfc5c50acd12bd500f035350a7609e8217c9894c19aad
   languageName: node
   linkType: hard
 
@@ -17611,6 +17879,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"shell-quote@npm:^1.4.1":
+  version: 1.8.2
+  resolution: "shell-quote@npm:1.8.2"
+  checksum: 10c0/85fdd44f2ad76e723d34eb72c753f04d847ab64e9f1f10677e3f518d0e5b0752a176fd805297b30bb8c3a1556ebe6e77d2288dbd7b7b0110c7e941e9e9c20ce1
+  languageName: node
+  linkType: hard
+
 "side-channel@npm:^1.0.4":
   version: 1.0.6
   resolution: "side-channel@npm:1.0.6"
@@ -17641,6 +17916,15 @@ __metadata:
   version: 1.0.5
   resolution: "sisteransi@npm:1.0.5"
   checksum: 10c0/230ac975cca485b7f6fe2b96a711aa62a6a26ead3e6fb8ba17c5a00d61b8bed0d7adc21f5626b70d7c33c62ff4e63933017a6462942c719d1980bb0b1207ad46
+  languageName: node
+  linkType: hard
+
+"skin-tone@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "skin-tone@npm:2.0.0"
+  dependencies:
+    unicode-emoji-modifier-base: "npm:^1.0.0"
+  checksum: 10c0/82d4c2527864f9cbd6cb7f3c4abb31e2224752234d5013b881d3e34e9ab543545b05206df5a17d14b515459fcb265ce409f9cfe443903176b0360cd20e4e4ba5
   languageName: node
   linkType: hard
 
@@ -17826,15 +18110,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "spectrum-css-monorepo@workspace:."
   dependencies:
+    "@adobe/token-diff-generator": "npm:^1.3.0"
     "@changesets/changelog-github": "npm:^0.5.0"
     "@changesets/cli": "npm:^2.27.11"
     "@commitlint/cli": "npm:^19.6.1"
     "@commitlint/config-conventional": "npm:^19.6.0"
     "@nx/devkit": "npm:^19.8.2"
-    "@spectrum-css/cyclebutton": "npm:^3.1.3"
-    "@spectrum-css/quickaction": "npm:^3.1.1"
-    "@spectrum-css/searchwithin": "npm:^5.1.3"
-    "@spectrum-css/splitbutton": "npm:^8.1.2"
+    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^14.6.0"
     "@spectrum-tools/postcss-add-theming-layer": "workspace:^"
     "@spectrum-tools/postcss-property-rollup": "workspace:^"
     "@spectrum-tools/postcss-rgb-mapping": "workspace:^"
@@ -18736,6 +19018,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tmp-promise@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "tmp-promise@npm:3.0.3"
+  dependencies:
+    tmp: "npm:^0.2.0"
+  checksum: 10c0/23b47dcb2e82b14bbd8f61ed7a9d9353cdb6a6f09d7716616cfd27d0087040cd40152965a518e598d7aabe1489b9569bf1eebde0c5fadeaf3ec8098adcebea4e
+  languageName: node
+  linkType: hard
+
 "tmp@npm:^0.0.33":
   version: 0.0.33
   resolution: "tmp@npm:0.0.33"
@@ -18745,7 +19036,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tmp@npm:~0.2.1":
+"tmp@npm:^0.2.0, tmp@npm:~0.2.1":
   version: 0.2.3
   resolution: "tmp@npm:0.2.3"
   checksum: 10c0/3e809d9c2f46817475b452725c2aaa5d11985cf18d32a7a970ff25b568438e2c076c2e8609224feef3b7923fa9749b74428e3e634f6b8e520c534eef2fd24125
@@ -19163,6 +19454,13 @@ __metadata:
   dependencies:
     "@fastify/busboy": "npm:^2.0.0"
   checksum: 10c0/4dfaa13089fe4c0758f84ec0d34b257e58608e6be3aa540f493b9864b39e3fdcd0a1ace38e434fe79db55f833aa30bcfddd8d6cbe3e0982b0dcae8ec17b65e08
+  languageName: node
+  linkType: hard
+
+"unicode-emoji-modifier-base@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "unicode-emoji-modifier-base@npm:1.0.0"
+  checksum: 10c0/b37623fcf0162186debd20f116483e035a2d5b905b932a2c472459d9143d446ebcbefb2a494e2fe4fa7434355396e2a95ec3fc1f0c29a3bc8f2c827220e79c66
   languageName: node
   linkType: hard
 
