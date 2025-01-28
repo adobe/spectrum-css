@@ -4,8 +4,6 @@
     ".spectrum-ColorWheel",
     ".spectrum-ColorWheel-ColorArea-handle",
     ".spectrum-ColorWheel-ColorArea-handle:dir(rtl)",
-    ".spectrum-ColorWheel-border",
-    ".spectrum-ColorWheel-border.is-disabled",
     ".spectrum-ColorWheel-colorarea-container",
     ".spectrum-ColorWheel-handle",
     ".spectrum-ColorWheel-inner",
@@ -26,7 +24,6 @@
     "--mod-colorwheel-fill-color-disabled",
     "--mod-colorwheel-min-width",
     "--mod-colorwheel-path",
-    "--mod-colorwheel-path-borders",
     "--mod-colorwheel-track-width"
   ],
   "component": [
@@ -41,7 +38,6 @@
     "--spectrum-colorwheel-colorarea-margin",
     "--spectrum-colorwheel-height",
     "--spectrum-colorwheel-path",
-    "--spectrum-colorwheel-path-borders",
     "--spectrum-colorwheel-track-width",
     "--spectrum-colorwheel-width"
   ],

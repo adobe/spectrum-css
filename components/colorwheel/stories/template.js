@@ -37,14 +37,9 @@ export const Template = ({
 				</div>
 			</div>
 			<div class=${classMap({
-				[`${rootClass}-border`]: true,
+				[`${rootClass}-wheel`]: true,
 				"is-disabled": isDisabled,
-			})}>
-				<div class=${classMap({
-					[`${rootClass}-wheel`]: true,
-					"is-disabled": isDisabled,
-				})}></div>
-			</div>
+			})}></div>
 			${ColorHandle({
 				isDisabled,
 				isFocused,
