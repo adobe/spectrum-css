@@ -13,7 +13,6 @@
 
 .spectrum-ColorWheel {
 	--spectrum-colorwheel-width: var(--spectrum-color-wheel-width);
-	--spectrum-colorwheel-min-inline-size: var(--spectrum-color-wheel-minimum-width);
 	--spectrum-colorwheel-height: var(--spectrum-color-wheel-width);
 
 	/* @TODO: leveraging the rgb token in this case to achieve the desired border color implementation as rgb + opacity are required by the `rgba` function. */
@@ -37,7 +36,7 @@
 
 	position: relative;
 	display: block;
-	min-inline-size: var(--mod-colorwheel-min-width, var(--spectrum-colorwheel-min-width));
+	min-inline-size: var(--mod-colorwheel-min-width, var(--spectrum-color-wheel-minimum-width));
 	inline-size: var(--spectrum-colorwheel-width);
 	block-size: var(--spectrum-colorwheel-height);
 	user-select: none;
