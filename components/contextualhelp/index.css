@@ -35,6 +35,8 @@
 	font-size: var(--mod-spectrum-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
 	color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-contextual-help-body-color)));
 
+	max-inline-size: var(--mod-spectrum-contextual-help-popover-maximum-width);
+
 	.spectrum-ContextualHelp-heading,
 	.spectrum-ContextualHelp-body {
 		margin: 0;
