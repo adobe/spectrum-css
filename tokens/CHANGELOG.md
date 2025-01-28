@@ -1,5 +1,13 @@
 # Change Log
 
+## 15.2.0
+
+### Minor Changes
+
+- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! - The shipped index assets will now come with a version comment stamped at the top of the file.
+
+  New JSON format! The new `tokens/dist/json/tokens.json` asset provides a queryable asset with custom property names, values available by set.
+
 ## 15.1.0
 
 ### Minor Changes

@@ -1,5 +1,21 @@
 # Change Log
 
+## 11.0.2
+
+### Patch Changes
+
+- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! - Minor storybook updates and fixes including some whitespace changes.
+
+  A bug was fixed with the HTML code preview that was displaying duplicate line numbers.
+
+  Some key metadata was incorporated into the preview head file for better contextual information when published.
+
+  The remark-gfm dependency was added to support tables in the \*.mdx files for Storybook.
+
+- Updated dependencies [[`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39), [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39)]:
+  - @spectrum-css/tokens@15.2.0
+  - @spectrum-css/table@7.0.1
+
 ## 11.0.1
 
 ### Patch Changes
