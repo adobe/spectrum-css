@@ -82,7 +82,47 @@ The following `--mod` custom properties have been renamed:
 - `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`
 - `--mod-bold-font-weight` has been renamed to `--mod-button-font-weight`
 
-## 14.0.0-next.5
+## 13.1.3
+
+### Patch Changes
+
+- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+
+  Sort keys in the package.json assets.
+
+- Updated dependencies [[`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2)]:
+  - @spectrum-css/progresscircle@3.1.4
+  - @spectrum-css/icon@7.1.4
+
+## 13.1.2
+
+### Patch Changes
+
+- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+
+- Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
+  - @spectrum-css/progresscircle@3.1.3
+  - @spectrum-css/icon@7.1.3
+
+## 13.1.1
+
+### Patch Changes
+
+- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
+
+- Updated dependencies [[`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855)]:
+  - @spectrum-css/progresscircle@3.1.1
+  - @spectrum-css/icon@7.1.1
+
+## 13.1.0
+
+### Minor Changes
+
+- [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+#### Build optmizations to support minification
+
+Output for all component CSS files is now being run through a lightweight optimizer (cssnano) which significantly reduces unnecessary whitespace. These changes reduce file size but should not have any impact on the rendering of the component. By removing unnecessary whitespace from var functions, we are making it easier to effectively minify our provided CSS assets.
 
 <a name="13.0.0"></a>
 

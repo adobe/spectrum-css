@@ -34,7 +34,38 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- IMPORTS ---------------- */
 			/** @link https://github.com/postcss/postcss-import#postcss-import */
-			"postcss-import": resolveImports ? {} : false,
+			"postcss-import": resolveImports ? {
+				resolve(id, basedir) {
+					// Resolve these imports to the local components directory
+					if (/^@spectrum-css\//.test(id)) {
+						// Check if the package specifies a file or just the package name
+						const packageParts = id.split("/");
+						const filePath = packageParts.length > 2 ? packageParts.slice(2).join("/") : "index.css";
+
+						if (packageParts[1] === "tokens") {
+							return join(__dirname, packageParts[1], "dist", filePath);
+						}
+
+						return join(__dirname, "components", packageParts[1], filePath);
+					}
+
+					return join(basedir, id);
+				}
+			} : false,
+			/* --------------------------------------------------- */
+			/* ------------------- LINTING ---------------- */
+			// Linter needs to run before the minifier removes comments (such as the stylelint-ignore comments)
+			stylelint: {
+				cache: true,
+				// Passing the config path saves a little time b/c it doesn't have to find it
+				configFile: join(__dirname, "stylelint.config.js"),
+				quiet: !lint,
+				fix: true,
+				allowEmptyInput: true,
+				ignorePath: join(__dirname, ".stylelintignore"),
+				reportNeedlessDisables: lint,
+				reportInvalidScopeDisables: lint,
+			},
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
@@ -88,31 +119,24 @@ module.exports = ({
 						colormin: false,
 						reduceIdents: false,
 						discardUnused: false,
-						discardComments: { removeAll: true },
+						discardComments: {
+							remove: (comment) => !comment.includes("stylelint-disable"),
+						},
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
-						normalizeWhitespace: minify
+						normalizeWhitespace: minify || isProduction,
 					},
 				],
 			},
 			/* --------------------------------------------------- */
-			/* ------------------- REPORTING --------------------- */
-			stylelint: {
-				cache: true,
-				// Passing the config path saves a little time b/c it doesn't have to find it
-				configFile: join(__dirname, "stylelint.config.js"),
-				quiet: !lint,
-				fix: true,
-				allowEmptyInput: true,
-				ignorePath: join(__dirname, ".stylelintignore"),
-				reportNeedlessDisables: lint,
-				reportInvalidScopeDisables: lint,
-			},
+			/* ------------------- CLEAN-UP --------------------- */
 			"postcss-licensing": {
 				filename: "COPYRIGHT",
 				cwd: __dirname,
 				skipIfEmpty: true,
 			},
+			/* --------------------------------------------------- */
+			/* ------------------- REPORTING --------------------- */
 			"postcss-reporter": verbose
 				? {
 					clearAllMessages: true,

@@ -11,23 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-@keyframes spectrum-fills-rotate {
-	0% {
-		transform: rotate(-90deg);
-	}
-
-	100% {
-		transform: rotate(270deg);
-	}
-}
-
-@keyframes spectrum-dashoffset-animation {
-	0%,
-	100% {
-		stroke-dashoffset: 75px;
-	}
-
-	30% {
-		stroke-dashoffset: 20px;
+@container style(--system: spectrum) {
+	.spectrum-Thumbnail {
+		--spectrum-thumbnail-border-radius: 2px;
 	}
 }

@@ -92,7 +92,8 @@ jobs:
                   reporter: github-pr-review
                 #   stylelint_input: "components/*/index.css"
                   stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
-                  stylelint_config: stylelint.config.js
+                  stylelint_config: "${{ github.workspace }}/stylelint.config.js"
+                  packages: 'stylelint-header stylelint-config-standard stylelint-selector-bem-pattern stylelint-order stylelint-use-logical'
 
             - name: Run eslint on packages and stories
               uses: reviewdog/action-eslint@v1.33.0
