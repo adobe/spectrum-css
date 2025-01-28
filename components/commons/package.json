@@ -15,7 +15,7 @@
 	},
 	"main": "index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=14 || >=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"

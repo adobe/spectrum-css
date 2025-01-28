@@ -23,7 +23,7 @@ const Heading = ({
 
 	const headingStyles = {
 		"display": "block",
-		"color": "black",
+		"color": "inherit",
 		"font-family": 'adobe-clean, "adobe clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif',
 		"font-size": "11px",
 		"line-height": "1.3",
@@ -337,10 +337,12 @@ export const ArgGrid = ({
 export const Sizes = ({
 	withHeading = true,
 	withBorder = false,
+	withWrapperBorder = true,
 	...args
 } = {}, context = {}) => {
 	return ArgGrid({
 		withBorder,
+		withWrapperBorder,
 		argKey: "size",
 		labels: {
 			xxs: "Extra-extra-small",

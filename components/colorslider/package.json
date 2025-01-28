@@ -33,7 +33,7 @@
 	"peerDependencies": {
 		"@spectrum-css/colorhandle": ">=8",
 		"@spectrum-css/opacitycheckerboard": ">=2",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=14 || >=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/colorhandle": "workspace:^",

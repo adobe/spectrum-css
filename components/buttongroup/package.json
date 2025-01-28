@@ -32,7 +32,7 @@
 	],
 	"peerDependencies": {
 		"@spectrum-css/button": ">=13",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=14 || >=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/button": "workspace:^",

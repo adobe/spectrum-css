@@ -32,7 +32,7 @@
 	],
 	"peerDependencies": {
 		"@spectrum-css/swatch": ">=6",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=14 || >=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/swatch": "workspace:^",

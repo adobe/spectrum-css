@@ -5,6 +5,8 @@ import { Table } from "./Layouts.jsx";
 import { ThemeContainer } from "./ThemeContainer.jsx";
 import { Body, Code, LinkableHeading } from "./Typography.jsx";
 
+import styles from "@spectrum-css/table?inline";
+
 /**
  * Displays the modifiable custom properties for a component based on the metadata provided in the story.
  * The story metadata object is imported from the "metadata.json" file in the component's directory.
@@ -36,6 +38,7 @@ export const PropertiesTable = () => {
 				These are empty CSS custom property hooks available in this component
 				that enable one-off customizations specific to a product implementation.
 			</Body>
+			{styles && <style>{styles}</style>}
 			<Table className="docblock-properties-table sb-unstyled spectrum-Table spectrum-Table--sizeL spectrum-Table--compact">
 				<thead className="spectrum-Table-head">
 					<tr>
