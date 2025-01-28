@@ -48,8 +48,5 @@
     "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-colorwheel-border-color-disabled",
-    "--highcontrast-colorwheel-fill-color-disabled"
-  ]
+  "high-contrast": ["--highcontrast-colorwheel-fill-color-disabled"]
 }
