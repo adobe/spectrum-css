@@ -1,5 +1,18 @@
 # Change Log
 
+## 2.4.1
+
+### Patch Changes
+
+- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! - Peer dependency for @spectrum-css/tokens updated to include v15 as well as v14.
+
+- Updated dependencies [[`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39), [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39)]:
+  - @spectrum-css/tokens@15.2.0
+  - @spectrum-css/closebutton@5.4.1
+  - @spectrum-css/divider@4.0.1
+  - @spectrum-css/button@13.6.1
+  - @spectrum-css/icon@8.0.1
+
 ## 2.4.0
 
 ### Minor Changes
