@@ -57,6 +57,7 @@
 	inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-slider-control-track-width)));
 
 	.spectrum-ColorSlider-handle {
+		inset-inline-start: 50%;
 		inset-block-start: 0;
 	}
 }

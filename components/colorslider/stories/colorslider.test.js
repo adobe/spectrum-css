@@ -22,7 +22,7 @@ export const ColorSliderGroup = Variants({
 		},
 		{
 			testHeading: "Alpha",
-			color: "linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%)",
+			color: "linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
 			selectedColor: "rgba(0, 0, 0, 1)",
 			wrapperStyles: {
 				// Adjust for the indicator
