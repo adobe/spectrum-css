@@ -1,8 +1,8 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as InfieldProgressCircle } from "@spectrum-css/infieldprogresscircle/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
-import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -196,9 +196,9 @@ export const Template = ({
 				})}
 			/>`
 		)}
-		${when(isLoading, () => ProgressCircle({
+		${when(isLoading, () => InfieldProgressCircle({
 			isIndeterminate: true,
-			size: "s",
+			size: size,
 			customClasses: customProgressCircleClasses,
 		}, context))}
 		${when(helpText, () =>
