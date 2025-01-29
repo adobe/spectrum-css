@@ -102,7 +102,7 @@
 		},
 		"compare": {
 			"cache": true,
-			"dependsOn": ["build"],
+			"dependsOn": [{ "projects": "bundle", "target": "build" }],
 			"executor": "nx:run-commands",
 			"inputs": [
 				"{workspaceRoot}/tasks/compare-compiled-output.js",
