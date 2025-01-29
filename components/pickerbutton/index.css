@@ -11,19 +11,15 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum.css";
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-PickerButton {
 	--spectrum-picker-button-height: var(--spectrum-component-height-100);
 	--spectrum-picker-button-width: var(--spectrum-component-height-100);
 	--spectrum-picker-button-gap: var(--spectrum-text-to-visual-50);
 
-	--spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill);
 	--spectrum-picker-button-label-padding: var(--spectrum-text-to-visual-50);
 	--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-100);
-
-	--spectrum-picker-button-border-radius-rounded: var(--spectrum-corner-radius-200);
 
 	--spectrum-picker-button-icon-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-picker-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -40,7 +36,30 @@
 	--spectrum-picker-button-font-weight: var(--spectrum-body-sans-serif-font-weight);
 	--spectrum-picker-button-font-size: var(--spectrum-font-size-100);
 
+	--spectrum-picker-button-border-radius-rounded: var(--spectrum-corner-radius-200);
 	--spectrum-picker-button-background-animation-duration: var(--spectrum-animation-duration-100);
+
+	&:hover {
+		--mod-picker-button-background-color: var(--mod-picker-button-background-color-hover, var(--spectrum-picker-button-background-color-hover));
+		--mod-picker-button-font-color: var(--mod-picker-button-font-color-hover, var(--spectrum-picker-button-font-color-hover));
+		--mod-picker-button-icon-color: var(--mod-picker-button-icon-color-hover, var(--spectrum-picker-button-icon-color-hover));
+	}
+
+	&:active,
+	&.is-open {
+		--mod-picker-button-background-color: var(--mod-picker-button-background-color-down, var(--spectrum-picker-button-background-color-down));
+		--mod-picker-button-font-color: var(--mod-picker-button-font-color-down, var(--spectrum-picker-button-font-color-down));
+		--mod-picker-button-icon-color: var(--mod-picker-button-icon-color-down, var(--spectrum-picker-button-icon-color-down));
+	}
+
+	&:focus,
+	&.is-focused,
+	&:focus-visible,
+	&.is-keyboardFocused {
+		--mod-picker-button-background-color: var(--mod-picker-button-background-color-key-focus, var(--spectrum-picker-button-background-color-key-focus));
+		--mod-picker-button-font-color: var(--mod-picker-button-font-color-key-focus, var(--spectrum-picker-button-font-color-key-focus));
+		--mod-picker-button-icon-color: var(--mod-picker-button-icon-color-key-focus, var(--spectrum-picker-button-icon-color-key-focus));
+	}
 
 	&:disabled {
 		--mod-picker-button-background-color: var(--mod-picker-button-background-color-disabled, var(--spectrum-disabled-background-color));
@@ -101,78 +120,8 @@
 	box-sizing: border-box;
 	padding: var(--mod-picker-button-padding, var(--spectrum-picker-button-padding));
 
-	&:hover {
-		.spectrum-PickerButton-fill {
-			background-color: var(--mod-picker-button-background-color-hover, var(--spectrum-picker-button-background-color-hover));
-		}
-
-		.spectrum-PickerButton-label {
-			color: var(--mod-picker-button-font-color-hover, var(--spectrum-picker-button-font-color-hover));
-		}
-
-		.spectrum-PickerButton-icon {
-			color: var(--mod-picker-button-icon-color-hover, var(--spectrum-picker-button-icon-color-hover));
-		}
-	}
-
-	&:active,
-	&.is-open {
-		.spectrum-PickerButton-fill {
-			background-color: var(--mod-picker-button-background-color-down, var(--spectrum-picker-button-background-color-down));
-		}
-
-		.spectrum-PickerButton-label {
-			color: var(--mod-picker-button-font-color-down, var(--spectrum-picker-button-font-color-down));
-		}
-
-		.spectrum-PickerButton-icon {
-			color: var(--mod-picker-button-icon-color-down, var(--spectrum-picker-button-icon-color-down));
-		}
-	}
-
-	&:focus,
-	&.is-focused,
-	&:focus-visible,
-	&.is-keyboardFocused {
-		.spectrum-PickerButton-fill {
-			background-color: var(--mod-picker-button-background-color-key-focus, var(--spectrum-picker-button-background-color-key-focus));
-		}
-
-		.spectrum-PickerButton-label {
-			color: var(--mod-picker-button-font-color-key-focus, var(--spectrum-picker-button-font-color-key-focus));
-		}
-
-		.spectrum-PickerButton-icon {
-			color: var(--mod-picker-button-icon-color-key-focus, var(--spectrum-picker-button-icon-color-key-focus));
-		}
-	}
-}
-
-.spectrum-PickerButton--right {
-	.spectrum-PickerButton-fill {
-		border-end-start-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
-		border-start-start-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
-	}
-
-	&.spectrum-PickerButton--rounded {
-		.spectrum-PickerButton-fill {
-			border-end-start-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
-			border-start-start-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
-		}
-	}
-}
-
-.spectrum-PickerButton--left {
-	.spectrum-PickerButton-fill {
-		border-end-end-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
-		border-start-end-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
-	}
-
-	&.spectrum-PickerButton--rounded {
-		.spectrum-PickerButton-fill {
-			border-end-end-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
-			border-start-end-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
-		}
+	&.spectrum-PickerButton--uiicononly {
+		inline-size: var(--mod-picker-button-height, var(--spectrum-picker-button-height));
 	}
 }
 
@@ -190,6 +139,10 @@
 	font-style: var(--mod-picker-button-font-style, var(--spectrum-picker-button-font-style));
 	font-weight: var(--mod-picker-button-font-weight, var(--spectrum-picker-button-font-weight));
 	font-size: var(--mod-picker-button-font-size, var(--spectrum-picker-button-font-size));
+
+	.spectrum-PickerButton--uiicononly & {
+		display: none;
+	}
 }
 
 .spectrum-PickerButton-fill {
@@ -213,37 +166,45 @@
 	border-start-start-radius: var(--mod-picker-button-border-radius, var(--spectrum-picker-button-border-radius));
 
 	transition: border-color var(--mod-picker-button-background-animation-duration, var(--spectrum-picker-button-background-animation-duration)) ease-in-out;
+
+	.spectrum-PickerButton--right & {
+		border-end-start-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
+		border-start-start-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
+	}
+
+	.spectrum-PickerButton--right.spectrum-PickerButton--rounded & {
+		border-end-start-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
+		border-start-start-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
+	}
+
+	.spectrum-PickerButton--left & {
+		border-end-end-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
+		border-start-end-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
+	}
+
+	.spectrum-PickerButton--left.spectrum-PickerButton--rounded & {
+		border-end-end-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
+		border-start-end-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
+	}
+
+	.spectrum-PickerButton--rounded & {
+		border-end-end-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
+		border-end-start-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
+		border-start-end-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
+		border-start-start-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
+	}
+
+	.spectrum-PickerButton--uiicononly & {
+		padding: 0;
+	}
+
+	.spectrum-PickerButton--textuiicon & {
+		inline-size: auto;
+	}
 }
 
 .spectrum-PickerButton-icon {
 	/* don't be small, ever */
 	flex-shrink: 0;
 	color: var(--mod-picker-button-icon-color, var(--spectrum-picker-button-icon-color));
-}
-
-.spectrum-PickerButton--rounded {
-	.spectrum-PickerButton-fill {
-		border-end-end-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
-		border-end-start-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
-		border-start-end-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
-		border-start-start-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
-	}
-}
-
-.spectrum-PickerButton--uiicononly {
-	inline-size: var(--mod-picker-button-height, var(--spectrum-picker-button-height));
-
-	.spectrum-PickerButton-label {
-		display: none;
-	}
-
-	.spectrum-PickerButton-fill {
-		padding: 0;
-	}
-}
-
-.spectrum-PickerButton--textuiicon {
-	.spectrum-PickerButton-fill {
-		inline-size: auto;
-	}
 }

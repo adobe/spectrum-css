@@ -1,6 +1,6 @@
-# @spectrum-css/barloader
+# @spectrum-css/progressbar
 
-> The Spectrum CSS barloader component
+> The Spectrum CSS progressbar component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

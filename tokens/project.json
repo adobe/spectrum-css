@@ -23,8 +23,6 @@
 				"parallel": false
 			},
 			"outputs": [
-				"{projectRoot}/dist/css/express",
-				"{projectRoot}/dist/css/spectrum",
 				"{projectRoot}/dist/css/*-vars.css",
 				"{projectRoot}/dist/index.css"
 			]
@@ -44,6 +42,21 @@
 		},
 		"format": {},
 		"lint": {},
+		"report": {
+			"cache": true,
+			"executor": "nx:run-commands",
+			"inputs": [{ "externalDependencies": ["@adobe/token-diff-generator", "@adobe/spectrum-tokens"] }],
+			"options": {
+				"commands": [
+					"tdiff report --old-token-version @adobe/spectrum-tokens@12.25.0 --new-token-version @adobe/spectrum-tokens@0.0.0-s2-foundations-20241121221506 --format markdown --output ./dist/tokens-diff.md"
+				],
+				"cwd": "{projectRoot}",
+				"parallel": false
+			},
+			"outputs": [
+				"{projectRoot}/dist/"
+			]
+		},
 		"style-dictionary": {
 			"dependsOn": ["clean"],
 			"executor": "@nxkit/style-dictionary:build",

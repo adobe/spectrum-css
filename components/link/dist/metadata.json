@@ -1,0 +1,48 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-Link",
+    ".spectrum-Link--quiet",
+    ".spectrum-Link--quiet:hover",
+    ".spectrum-Link--secondary",
+    ".spectrum-Link--staticBlack",
+    ".spectrum-Link--staticWhite",
+    ".spectrum-Link:active",
+    ".spectrum-Link:focus-visible",
+    ".spectrum-Link:hover"
+  ],
+  "modifiers": [
+    "--mod-link-animation-duration",
+    "--mod-link-text-color",
+    "--mod-link-text-color-active",
+    "--mod-link-text-color-black",
+    "--mod-link-text-color-focus",
+    "--mod-link-text-color-hover",
+    "--mod-link-text-color-primary-active",
+    "--mod-link-text-color-primary-default",
+    "--mod-link-text-color-primary-focus",
+    "--mod-link-text-color-primary-hover",
+    "--mod-link-text-color-secondary-active",
+    "--mod-link-text-color-secondary-default",
+    "--mod-link-text-color-secondary-focus",
+    "--mod-link-text-color-secondary-hover",
+    "--mod-link-text-color-white"
+  ],
+  "component": [],
+  "global": [
+    "--spectrum-accent-content-color-default",
+    "--spectrum-accent-content-color-down",
+    "--spectrum-accent-content-color-hover",
+    "--spectrum-accent-content-color-key-focus",
+    "--spectrum-animation-duration-100",
+    "--spectrum-black",
+    "--spectrum-neutral-content-color-default",
+    "--spectrum-neutral-content-color-down",
+    "--spectrum-neutral-content-color-hover",
+    "--spectrum-neutral-content-color-key-focus",
+    "--spectrum-white"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": ["--highcontrast-link-text-color"]
+}

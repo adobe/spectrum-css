@@ -19,11 +19,9 @@ export const FieldGroupSet = Variants({
 			testHeading: "Horizontal checkboxes",
 			layout: "horizontal",
 			inputType: "checkbox",
-			helpText: "Make a selection.",
 		},
 		{
 			testHeading: "Radios label position: side",
-			label: "Pick one:",
 			labelPosition: "side",
 		},
 		{
@@ -33,14 +31,12 @@ export const FieldGroupSet = Variants({
 		},
 		{
 			testHeading: "Horizontal radios label position: side",
-			label: "Pick one:",
 			labelPosition: "side",
 			layout: "horizontal",
 			inputType: "radio",
 		},
 		{
 			testHeading: "Horizontal checkboxes label position: side",
-			label: "Pick one:",
 			labelPosition: "side",
 			layout: "horizontal",
 			inputType: "checkbox",

@@ -19,15 +19,16 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./metadata.json": "./dist/metadata.json",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
 	"files": [
 		"dist/*",
 		"*.md",
 		"package.json",
+		"stories/*",
 		"metadata/*"
 	],
 	"peerDependencies": {
@@ -57,11 +58,6 @@
 			"guidelines": "https://spectrum.adobe.com/page/progress-bar",
 			"rootClass": "spectrum-ProgressBar",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/progress-bar/"
-		},
-		{
-			"guidelines": "https://spectrum.adobe.com/page/meter",
-			"rootClass": "spectrum-Meter",
-			"swc": "https://opensource.adobe.com/spectrum-web-components/components/meter/"
 		}
 	]
 }

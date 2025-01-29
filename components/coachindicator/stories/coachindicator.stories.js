@@ -1,9 +1,9 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
-import { AllVariantsCoachIndicatorGroup, Template } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
@@ -17,27 +17,17 @@ export default {
 	component: "CoachIndicator",
 	argTypes: {
 		isQuiet,
-		variant: {
-			name: "Variant",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["default", "dark", "light"],
-			control: "select"
-		},
-		staticColor: {
-			...staticColor,
-			options: ["white"],
-		},
+		staticColor,
 	},
 	args: {
 		rootClass: "spectrum-CoachIndicator",
 		isQuiet: false,
-		variant: "default",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=48600-896",
+		},
 		packageJson,
 		metadata,
 	},
@@ -49,30 +39,17 @@ Default.parameters = {
 	chromatic: {
 		prefersReducedMotion: "reduce",
 		pauseAnimationAtEnd: true,
-		modes: {
-			// Skips the dark mode/RTL b/c no changes are made to the component
-			"Dark | RTL": {
-				disable: true,
-			},
-		},
 	},
 };
 Default.tags = ["!autodocs"];
 
-export const DefaultVariants = AllVariantsCoachIndicatorGroup.bind({});
-DefaultVariants.tags = ["!dev"];
-DefaultVariants.storyName = "Default";
-DefaultVariants.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
-export const QuietVariants = AllVariantsCoachIndicatorGroup.bind({});
-QuietVariants.tags = ["!dev"];
-QuietVariants.storyName = "Quiet";
-QuietVariants.args = {
+export const Quiet = Template.bind({});
+Quiet.tags = ["!dev"];
+Quiet.storyName = "Quiet";
+Quiet.args = {
 	isQuiet: true,
 };
-QuietVariants.parameters = {
+Quiet.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
@@ -84,8 +61,21 @@ StaticWhite.args = {
 	staticColor: "white"
 };
 StaticWhite.tags = ["!dev"];
-StaticWhite.storyName = "Static White";
+StaticWhite.storyName = "Static white";
 StaticWhite.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * When an indicator needs to be placed on top of a visual, use the static black option. Static black does not change values depending upon the color theme.
+*/
+export const StaticBlack = Template.bind({});
+StaticBlack.args = {
+	staticColor: "black"
+};
+StaticBlack.tags = ["!dev"];
+StaticBlack.storyName = "Static black";
+StaticBlack.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 

@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum-two.css";
+
 .spectrum-ActionBar {
 	--spectrum-actionbar-height: var(--spectrum-action-bar-height);
 	--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-100);
@@ -19,10 +21,6 @@
 	--spectrum-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
 	--spectrum-actionbar-item-counter-line-height: var(--spectrum-line-height-100);
 	--spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
-
-	/* colors - applied to popover */
-	--spectrum-actionbar-popover-background-color: var(--spectrum-gray-50);
-	--spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
 
 	/* emphasized variation colors */
 	--spectrum-actionbar-emphasized-background-color: var(--spectrum-informative-background-color-default);

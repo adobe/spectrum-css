@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isSelected, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { Template } from "./template.js";
 import { ThumbnailGroup } from "./thumbnail.test.js";
@@ -87,6 +87,10 @@ export default {
 	parameters: {
 		actions: {
 			handles: [],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=29951-634",
 		},
 		packageJson,
 		metadata,

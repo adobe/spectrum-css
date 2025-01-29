@@ -1,0 +1,55 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-ColorSlider",
+    ".spectrum-ColorSlider--vertical",
+    ".spectrum-ColorSlider--vertical .spectrum-ColorSlider-handle",
+    ".spectrum-ColorSlider-checkerboard",
+    ".spectrum-ColorSlider-checkerboard:before",
+    ".spectrum-ColorSlider-gradient",
+    ".spectrum-ColorSlider-gradient:dir(rtl)",
+    ".spectrum-ColorSlider-handle",
+    ".spectrum-ColorSlider-slider",
+    ".spectrum-ColorSlider.is-disabled",
+    ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-checkerboard",
+    ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-gradient",
+    ".spectrum-ColorSlider.is-focused",
+    "[dir=\"rtl\"] .spectrum-ColorSlider-gradient"
+  ],
+  "modifiers": [
+    "--mod-color-slider-background-color-disabled",
+    "--mod-color-slider-border-color",
+    "--mod-color-slider-border-color-disabled",
+    "--mod-color-slider-border-rounding",
+    "--mod-color-slider-border-width",
+    "--mod-color-slider-control-track-height",
+    "--mod-color-slider-control-track-width",
+    "--mod-color-slider-handle-hitarea-border-radius",
+    "--mod-color-slider-length",
+    "--mod-color-slider-minimum-length",
+    "--mod-color-slider-vertical-control-track-width",
+    "--mod-color-slider-vertical-height",
+    "--mod-color-slider-vertical-minimum-height"
+  ],
+  "component": [
+    "--spectrum-color-slider-border-color-default",
+    "--spectrum-color-slider-border-color-local",
+    "--spectrum-color-slider-border-opacity",
+    "--spectrum-color-slider-border-rounding",
+    "--spectrum-color-slider-border-width",
+    "--spectrum-color-slider-length",
+    "--spectrum-color-slider-minimum-length"
+  ],
+  "global": [
+    "--spectrum-color-control-track-width",
+    "--spectrum-disabled-background-color",
+    "--spectrum-gray-900-rgb"
+  ],
+  "system-theme": [],
+  "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
+  "high-contrast": [
+    "--highcontrast-color-slider-background-color-disabled",
+    "--highcontrast-color-slider-border-color",
+    "--highcontrast-color-slider-border-color-disabled"
+  ]
+}

@@ -2,7 +2,7 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
 import { within } from "@storybook/test";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
 import { Template, VariantGroup } from "./template.js";
@@ -138,6 +138,10 @@ export default {
 		],
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=727-2550",
+		},
 		packageJson,
 		metadata,
 	},

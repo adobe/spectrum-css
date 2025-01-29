@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
 import { BasicGroupTemplate } from "./template.js";
@@ -53,6 +53,10 @@ export default {
 	parameters: {
 		actions: {
 			handles: ["click input[type=\"radio\"]"],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=164-16723",
 		},
 		packageJson,
 		metadata,
