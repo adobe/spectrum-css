@@ -3,8 +3,6 @@ import { ThemeProvider } from "@storybook/theming";
 import React, { useContext } from "react";
 import { Container } from "./Layouts.jsx";
 
-import tokenStyles from "@spectrum-css/tokens/dist/css/index.css?raw";
-
 /**
  * A container that wraps the children in a themed context
  * inherited from the storybook global context. This is used
@@ -24,7 +22,6 @@ export const ThemeContainer = ({ color, scale, children, ...props }) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <style>{tokenStyles}</style>
             <Container {...props} className={`spectrum spectrum--${theme.color} spectrum--${theme.scale}`}>
                 {children}
             </Container>

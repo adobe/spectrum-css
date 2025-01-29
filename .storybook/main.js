@@ -1,6 +1,9 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import { createRequire } from "node:module";
+import path from "node:path";
 import remarkGfm from 'remark-gfm';
+
+const require = createRequire(import.meta.url);
 
 // Get a list of all the folders in the components directory
 const componentDir = path.resolve(__dirname, "../components");
@@ -104,7 +107,21 @@ export default {
 				devSourcemap: configType === "DEVELOPMENT",
 			},
 			resolve: {
-				alias: components.map(component => ({ find: `@spectrum-css/${component}`, replacement: path.resolve(__dirname, `../components/${component}`) })),
+				alias: [
+					...components.map(component => ({ find: `@spectrum-css/${component}`, replacement: path.resolve(__dirname, `../components/${component}`) })),
+					{
+						find: `@spectrum-css/tokens`,
+						replacement: path.resolve(__dirname, `../tokens`),
+					},
+					{
+						find: `@spectrum-css/tokens-legacy`,
+						replacement: require.resolve("@spectrum-css/tokens-legacy"),
+					},
+					{
+						find: `@spectrum-css/ui-icons`,
+						replacement: path.resolve(__dirname, `../ui-icons`),
+					},
+				],
 			}
 		});
 	},

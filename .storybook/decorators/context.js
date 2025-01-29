@@ -1,8 +1,5 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
-import { fetchContainers, toggleStyles } from "./helpers.js";
-
-import legacyTokens from "@spectrum-css/tokens-legacy/dist/index.css?inline";
-import tokens from "@spectrum-css/tokens/dist/css/index.css?inline";
+import { fetchContainers } from "./helpers.js";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -57,9 +54,6 @@ export const withContextWrapper = makeDecorator({
 				// add the default classes to the body to ensure labels, headings, and borders are styled correctly
 				document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 			}
-
-			// Start by attaching the appropriate tokens to the container
-			toggleStyles(document.body, "tokens", isModern ? tokens : legacyTokens, !isRaw, context);
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
@@ -128,7 +122,7 @@ export const withContextWrapper = makeDecorator({
 				}
 			}
 
-		}, [context, color, scale, viewMode, original, staticColor, rootClass, tokens, legacyTokens, staticColorSettings, showTestingGrid]);
+		}, [context, color, scale, viewMode, original, staticColor, rootClass, staticColorSettings, showTestingGrid]);
 
 		return StoryFn(data);
 	},

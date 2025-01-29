@@ -198,11 +198,7 @@ module.exports = {
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
-				"selector-class-pattern": [
-					"^(spectrum|is-|u-|sb-)[A-Za-z0-9-]*", {
-						resolveNestedSelectors: true
-					}
-				],
+				"selector-class-pattern": null,
 				"font-family-no-missing-generic-family-keyword": null,
 			},
 		},

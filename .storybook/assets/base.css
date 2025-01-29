@@ -13,6 +13,9 @@
  * governing permissions and limitations under the License.
  */
 
+@import url("node_modules:@spectrum-css/tokens") scope((.spectrum));
+@import url("node_modules:@spectrum-css/tokens-legacy") scope((.spectrum--legacy));
+
 body {
 	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-font-style: var(--spectrum-default-font-style);
