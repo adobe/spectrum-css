@@ -28,6 +28,8 @@
 	/* --spectrum-global-dimension-static-size-2800 */
 	--spectrum-progressbar-size-2800: 224px;
 
+	--spectrum-progressbar-inline-size: var(--spectrum-meter-default-width);
+
 	/* Size */
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
 	--spectrum-progressbar-line-height-cjk: var(--spectrum-cjk-line-height-100);
@@ -64,7 +66,7 @@
 
 .spectrum-ProgressBar--sizeS,
 .spectrum-Meter--sizeS {
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
+	--spectrum-progressbar-size-default: var(--spectrum-progressbar-inline-size);
 
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
 	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-small);
@@ -73,7 +75,7 @@
 }
 
 .spectrum-ProgressBar--sizeM {
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
+	--spectrum-progressbar-size-default: var(--spectrum-progressbar-inline-size);
 
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
 	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
@@ -83,7 +85,7 @@
 
 .spectrum-ProgressBar--sizeL,
 .spectrum-Meter--sizeL {
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
+	--spectrum-progressbar-size-default: var(--spectrum-progressbar-inline-size);
 
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-100);
 	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
@@ -92,7 +94,7 @@
 }
 
 .spectrum-ProgressBar--sizeXL {
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2800);
+	--spectrum-progressbar-size-default: var(--spectrum-progressbar-inline-size);
 
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-200);
 	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-extra-large);
