@@ -37,13 +37,15 @@
     "--spectrum-color-slider-border-opacity",
     "--spectrum-color-slider-border-rounding",
     "--spectrum-color-slider-border-width",
+    "--spectrum-color-slider-control-track-width",
+    "--spectrum-color-slider-fill-color-disabled",
     "--spectrum-color-slider-length",
     "--spectrum-color-slider-minimum-length"
   ],
   "global": [
     "--spectrum-color-control-track-width",
     "--spectrum-disabled-background-color",
-    "--spectrum-gray-900-rgb"
+    "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
   "high-contrast": [
