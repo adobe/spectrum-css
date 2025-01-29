@@ -4,8 +4,15 @@ on:
     push:
       branches:
         - main
-        - "!changeset-release/**"
-        - "!dependabot/**"
+    pull_request:
+      # the closed event type gives us the head_ref (the name of the branch being merged into main)
+      types:
+        - closed
+      # for PRs merging into the below branches
+      branches:
+        - main
+        - spectrum_two
+        - s2-foundations-redux
     workflow_dispatch:
     workflow_call:
         inputs:
@@ -25,7 +32,8 @@ permissions:
 
 jobs:
     vrt:
-        if: ${{!startsWith(github.ref, 'refs/heads/dependabot/') && !startsWith(github.ref, 'refs/heads/changeset-release/') }}
+        # if the branch being merged is a dependabot branch or a changeset release, skip everything in this workflow
+        if: ${{!startsWith(github.head_ref, 'dependabot') && !startsWith(github.head_ref, 'changeset-release') }}
         name: Chromatic
         runs-on: ubuntu-latest
         timeout-minutes: 20
