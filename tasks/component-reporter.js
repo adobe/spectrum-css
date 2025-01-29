@@ -138,7 +138,6 @@ async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
 } = {}) {
-	console.log("componentName", componentName);
 	if (!cwd && componentName) {
 		cwd = path.join(dirs.components, componentName);
 	}

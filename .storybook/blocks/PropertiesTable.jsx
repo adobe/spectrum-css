@@ -4,8 +4,7 @@ import React, { useContext } from 'react';
 import { Table } from "./Layouts.jsx";
 import { ThemeContainer } from "./ThemeContainer.jsx";
 import { Body, Code, LinkableHeading } from "./Typography.jsx";
-
-import styles from "@spectrum-css/table?inline";
+import styles from "@spectrum-css/bundle/dist/index.module.css";
 
 /**
  * Displays the modifiable custom properties for a component based on the metadata provided in the story.
@@ -38,25 +37,14 @@ export const PropertiesTable = () => {
 				These are empty CSS custom property hooks available in this component
 				that enable one-off customizations specific to a product implementation.
 			</Body>
-			{styles && <style>{styles}</style>}
-			<Table className="docblock-properties-table sb-unstyled spectrum-Table spectrum-Table--sizeL spectrum-Table--compact">
-				<thead className="spectrum-Table-head">
-					<tr>
-						<th className="spectrum-Table-headCell">Property</th>
-					</tr>
-				</thead>
-				<tbody className="spectrum-Table-body">
-					{metadata?.modifiers.map((propertyName) => (
-						<tr key={propertyName} className="spectrum-Table-row">
-							<td className="spectrum-Table-cell">
-								<Code backgroundColor={"transparent"} size="s">
-									{propertyName}
-								</Code>
-							</td>
-						</tr>
-					))}
-				</tbody>
-			</Table>
+			<Table
+				headers={["Property"]}
+				rows={metadata?.modifiers.map((propertyName) => [
+					<Code backgroundColor={"transparent"} size="s">
+						{propertyName}
+					</Code>
+				])}
+			/>
 		</ThemeContainer>
 	);
 };
