@@ -2,6 +2,8 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-IllustratedMessage",
+    ".spectrum-IllustratedMessage--actions",
+    ".spectrum-IllustratedMessage--content",
     ".spectrum-IllustratedMessage--horizontal",
     ".spectrum-IllustratedMessage--horizontal .spectrum-IllustratedMessage-illustration",
     ".spectrum-IllustratedMessage--sizeL",
@@ -50,6 +52,7 @@
     "--mod-illustrated-message-vertical-maximum-width"
   ],
   "component": [
+    "--spectrum-illustrated-message-cjk-title-font-size",
     "--spectrum-illustrated-message-description-color",
     "--spectrum-illustrated-message-description-font-family",
     "--spectrum-illustrated-message-description-font-size",
@@ -84,6 +87,8 @@
     "--spectrum-body-color",
     "--spectrum-body-sans-serif-font-style",
     "--spectrum-body-sans-serif-font-weight",
+    "--spectrum-body-size-s",
+    "--spectrum-body-size-xs",
     "--spectrum-heading-color",
     "--spectrum-line-height-200",
     "--spectrum-neutral-content-color-default",
@@ -92,9 +97,13 @@
     "--spectrum-spacing-200",
     "--spectrum-spacing-300",
     "--spectrum-spacing-75",
+    "--spectrum-title-cjk-size-m",
+    "--spectrum-title-cjk-size-xxl",
     "--spectrum-title-line-height",
     "--spectrum-title-sans-serif-font-style",
-    "--spectrum-title-sans-serif-font-weight"
+    "--spectrum-title-sans-serif-font-weight",
+    "--spectrum-title-size-m",
+    "--spectrum-title-size-xxl"
   ],
   "passthroughs": ["--mod-buttongroup-justify-content"],
   "high-contrast": ["--highcontrast-illustrated-message-illustration-color"]

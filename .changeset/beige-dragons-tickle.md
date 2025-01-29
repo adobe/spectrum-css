@@ -43,6 +43,12 @@ New mods
 
 ## Dropzone nested mods
 
+New mods
+`--mod-drop-zone-body-to-action`
+`--mod-drop-zone-illustration-to-title`
+
+## Dropzone nested mods
+
 Renamed mods
 `--mod-illustrated-message-title-to-heading` > `--mod-illustrated-message-illustration-to-heading`
 `--mod-illustrated-message-heading-to-body` > `--mod-illustrated-message-heading-to-description`
