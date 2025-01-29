@@ -37,6 +37,7 @@ export default {
 		isFilled: false,
 		title: "Drag and drop your file",
 		description: "Or, select a file from your computer.",
+		label: "Browse files"
 	},
 	parameters: {
 		design: {

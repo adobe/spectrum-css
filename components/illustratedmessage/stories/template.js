@@ -30,11 +30,7 @@ export const Template = ({
 	${customIllustration
         ? customIllustration()
         : illustrationSvgMarkup(size)}
-<<<<<<< HEAD
 		<div class="${rootClass}-content">
-=======
-		<div class="${rootClass}--content">
->>>>>>> da506c0eb (feat(dropzone): adding dropzone migration)
 			${when(
 				title,
 				() =>

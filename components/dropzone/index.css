@@ -32,6 +32,7 @@
 
 	--spectrum-drop-zone-content-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-drop-zone-content-font-weight: var(--spectrum-bold-font-weight);
+	--spectrum-drop-zone-content-font-size: var(--spectrum-font-size-300);
 	--spectrum-drop-zone-content-font-style: var(--spectrum-default-font-style);
 	--spectrum-drop-zone-content-line-height: var(--spectrum-line-height-100);
 
@@ -45,8 +46,11 @@
 	--mod-illustrated-message-description-z-index: 10;
 	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
 
-	--mod-drop-zone-content-display: flex;
+	--mod-drop-zone-content-display: block;
 	--mod-drop-zone-content-height: 280px;
+
+	/* Typography */
+	--mod-illustrated-message-title-font-weight: var(--spectrum-title-serif-font-weight);
 }
 
 .spectrum-DropZone {
@@ -58,6 +62,7 @@
 	background-size: cover;
 	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
 	color: var(--spectrum-drop-zone-illustration-color);
+	border: none;
 	position: relative;
 
 	&.is-dragged {
@@ -85,11 +90,14 @@
 
 	&.is-filled.is-dragged {
 		background-position: center;
-		display: var(--mod-drop-zone-content-display);
 		align-items: center;
 		justify-content: center;
 		block-size: var(--mod-drop-zone-content-height);
 		background-blend-mode: multiply;
+
+		.spectrum-DropZone-content {
+			block-size: 100%;
+		}
 
 		.spectrum-DropZone-actions {
 			margin-block-start: 0;
@@ -104,7 +112,7 @@
 }
 
 .spectrum-DropZone-stroke {
-  position: absolute;
+	position: absolute;
 	inset-block-start: -2px;
 	inset-inline-start: -2px;
 	inline-size: 101%;
@@ -113,12 +121,14 @@
 }
 
 .spectrum-DropZone-stroke-path {
-  stroke: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
-	stroke-dasharray: calc(var(--spectrum-drop-zone-border-dash-length)/2) calc(var(--spectrum-drop-zone-border-dash-gap)/2);
-	rx: calc(var(--spectrum-drop-zone-corner-radius)/2);
+	stroke: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
+	stroke-dasharray: calc(var(--spectrum-drop-zone-border-dash-length) / 2) calc(var(--spectrum-drop-zone-border-dash-gap) / 2);
+	rx: calc(var(--spectrum-drop-zone-corner-radius) / 2);
+	ry: calc(var(--spectrum-drop-zone-corner-radius) / 2);
 }
 
 .spectrum-DropZone-content {
+	block-size: auto;
 	max-inline-size: var(--mod-illustrated-message-vertical-maximum-width);
 }
 
@@ -137,8 +147,11 @@
 
 	font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
 	font-weight: var(--mod-drop-zone-content-font-weight, var(--spectrum-drop-zone-content-font-weight));
-	font-style: var(--mod-drop-zone-content-font-style, var(--spectrum-drop-zone-content-font-style));
 	line-height: var(--mod-drop-zone-content-line-height, var(--spectrum-drop-zone-content-line-height));
+
+	.spectrum-ActionButton-label {
+		font-size: var(--mod-drop-zone-content-font-size, var(--spectrum-drop-zone-content-font-size));
+	}
 
 	&:hover,
 	&:focus {
