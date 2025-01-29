@@ -13,7 +13,6 @@ export const Template = ({
 	customStyles = {},
 	id = getRandomId("opacity-checkerboard"),
 	content = [],
-	size,
 	role,
 } = {}) => {
 	return html`
