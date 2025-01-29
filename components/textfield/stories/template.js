@@ -58,7 +58,7 @@ export const Template = ({
 	customClasses = [],
 	customInputClasses = [],
 	customIconClasses = [],
-	customProgressCircleClasses = [],
+	customInfieldProgressCircleClasses = [],
 	isInvalid = false,
 	isValid = false,
 	multiline = false,
@@ -199,7 +199,7 @@ export const Template = ({
 		${when(isLoading, () => InfieldProgressCircle({
 			isIndeterminate: true,
 			size: size,
-			customClasses: customProgressCircleClasses,
+			customClasses: customInfieldProgressCircleClasses,
 		}, context))}
 		${when(helpText, () =>
 			HelpText({

@@ -93,6 +93,7 @@ export const Template = ({
 				size: size,
 				staticColor,
 				isIndeterminate: true,
+				testId: "progress-circle"
 			}, context)
 		)}
 	</button>

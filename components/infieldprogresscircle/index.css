@@ -11,8 +11,9 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-InfieldProgressCircle {
-	--mod-progress-circle-thickness: var(--mod-progress-cirlce-stroke-width, 2px);
+	--mod-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);
 	--mod-progress-circle-size: var(--spectrum-in-field-progress-circle-size-100);
+	--spectrum-infieldprogresscircle-padding-block: var(--spectrum-in-field-progress-circle-edge-to-fill);
 }
 
 .spectrum-InfieldProgressCircle--sizeS {
@@ -28,7 +29,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-InfieldProgressCircle {
-	padding-block: var(--spectrum-in-field-progress-circle-edge-to-fill);
+	padding-block: var(--spectrum-infieldprogresscircle-padding-block);
 
 	.spectrum-ProgressCircle-fill {
 		stroke-linecap: square;

@@ -1,58 +1,43 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
+import { size } from "@spectrum-css/preview/types";
+import { default as ProgressCircle } from "@spectrum-css/progresscircle/stories/progresscircle.stories.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { ProgressCircleGroup } from "./progresscircle.test.js";
+import { InfieldProgressCircleGroup } from "./infieldprogresscircle.test.js";
 import { Template } from "./template.js";
 
 /**
- * Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
- */
+ * In-field progress circles are used in t-shirt size components such as [buttons](/docs/components-button--docs), [combo boxes](/docs/components-combobox--docs), and [pickers](/docs/components-picker--docs). The in-field progress circle can be used in place of an icon or in tight spaces when space is limited both vertically and horizontally.
+*/
+
 export default {
-	title: "Progress circle",
-	component: "ProgressCircle",
+	title: "In-field progress circle",
+	component: "InfieldProgressCircle",
 	argTypes: {
-		size: size(["s", "m", "l"]),
-		isIndeterminate,
-		staticColor,
-		value: {
-			name: "Percent filled",
-			type: { name: "number" },
-			table: {
-				type: { summary: "number" },
-				category: "Content",
-			},
-			control: {
-				type: "range",
-				min: 0,
-				max: 100
-			},
-			if: { arg: "isIndeterminate", truthy: false },
-		}
+		...ProgressCircle.argTypes,
+		size: size(["s", "m", "l", "xl"]),
 	},
 	args: {
-		rootClass: "spectrum-ProgressCircle",
-		size: "m",
-		isIndeterminate: false,
-		staticColor: undefined,
-		value: 43
+		...ProgressCircle.args,
+		rootClass: "spectrum-InfieldProgressCircle",
 	},
 	parameters: {
+		...ProgressCircle.parameters,
 		design: {
 			type: "figma",
-			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13061-181",
+			url: "https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=14970-6050",
 		},
 		packageJson,
 		metadata,
-	},
+	}
 };
 
-export const Default = ProgressCircleGroup.bind({});
+export const Default = InfieldProgressCircleGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = ProgressCircleGroup.bind({});
+export const WithForcedColors = InfieldProgressCircleGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
@@ -65,7 +50,7 @@ WithForcedColors.parameters = {
 // ********* DOCS ONLY ********* //
 
 export const Sizing = (args, context) => Sizes({
-	Template: Template,
+	Template,
 	withHeading: false,
 	withBorder: false,
 	...args,
@@ -80,7 +65,7 @@ Sizing.parameters = {
  * The indeterminate progress circle displays a repeating animation for the inner fill.
  */
 export const Indeterminate = (args, context) => Sizes({
-	Template: Template,
+	Template,
 	withHeading: false,
 	withBorder: false,
 	...args,
@@ -98,7 +83,6 @@ StaticWhiteDeterminate.tags = ["!dev"];
 StaticWhiteDeterminate.storyName = "Static white, default";
 StaticWhiteDeterminate.args = {
 	staticColor: "white",
-	isIndeterminate: false,
 };
 StaticWhiteDeterminate.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -120,7 +104,6 @@ StaticBlackDeterminate.tags = ["!dev"];
 StaticBlackDeterminate.storyName = "Static black, default";
 StaticBlackDeterminate.args = {
 	staticColor: "black",
-	isIndeterminate: false,
 };
 StaticBlackDeterminate.parameters = {
 	chromatic: { disableSnapshot: true },
