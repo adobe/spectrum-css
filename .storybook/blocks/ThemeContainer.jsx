@@ -3,7 +3,7 @@ import { ThemeProvider } from "@storybook/theming";
 import React, { useContext } from "react";
 import { Container } from "./Layouts.jsx";
 
-import tokenStyles from "@spectrum-css/tokens/dist/index.css?raw";
+import tokenStyles from "@spectrum-css/tokens/dist/css/index.css?raw";
 
 /**
  * A container that wraps the children in a themed context

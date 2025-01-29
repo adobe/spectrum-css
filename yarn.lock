@@ -3901,6 +3901,7 @@ __metadata:
     "@spectrum-css/fieldgroup": "workspace:^"
     "@spectrum-css/fieldlabel": "workspace:^"
     "@spectrum-css/floatingactionbutton": "workspace:^"
+    "@spectrum-css/form": "workspace:^"
     "@spectrum-css/helptext": "workspace:^"
     "@spectrum-css/icon": "workspace:^"
     "@spectrum-css/illustratedmessage": "workspace:^"
@@ -3909,6 +3910,7 @@ __metadata:
     "@spectrum-css/link": "workspace:^"
     "@spectrum-css/logicbutton": "workspace:^"
     "@spectrum-css/menu": "workspace:^"
+    "@spectrum-css/meter": "workspace:^"
     "@spectrum-css/miller": "workspace:^"
     "@spectrum-css/modal": "workspace:^"
     "@spectrum-css/opacitycheckerboard": "workspace:^"
@@ -4367,7 +4369,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/form@workspace:components/form":
+"@spectrum-css/form@workspace:^, @spectrum-css/form@workspace:components/form":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/form@workspace:components/form"
   dependencies:
@@ -4503,7 +4505,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/meter@workspace:components/meter":
+"@spectrum-css/meter@workspace:^, @spectrum-css/meter@workspace:components/meter":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/meter@workspace:components/meter"
   dependencies:
