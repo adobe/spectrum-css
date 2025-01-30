@@ -153,9 +153,7 @@
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
-	.spectrum-ColorWheel {
-		--highcontrast-colorwheel-fill-color-disabled: Canvas;
-
-		forced-color-adjust: none;
+	.spectrum-ColorWheel.is-disabled {
+		--highcontrast-colorwheel-fill-color-disabled: CanvasText;
 	}
 }
