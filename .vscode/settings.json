@@ -101,8 +101,8 @@
 		}
 	],
 	"cssVariables.lookupFiles": [
-		"${workspaceFolder}/tokens/dist/index.css",
-		"${workspaceFolder}/tokens/**/*.css",
+		"${workspaceFolder}/tokens/dist/css/index.css",
+		"${workspaceFolder}/tokens/dist/css/*.css",
 		"${workspaceFolder}/components/*/index.css",
 		"${workspaceFolder}/components/*/themes/*.css"
 	],

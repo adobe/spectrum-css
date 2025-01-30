@@ -16,11 +16,11 @@
 	"exports": {
 		".": "./dist/css/index.css",
 		"./*.md": "./*.md",
-		"./dist/css/*.css": "./dist/css/*.css",
+		"./dist/*": "./dist/*",
 		"./dist/index.css": "./dist/css/index.css",
 		"./package.json": "./package.json"
 	},
-	"main": "dist/index.css",
+	"main": "dist/css/index.css",
 	"files": [
 		"dist",
 		"CHANGELOG.md",

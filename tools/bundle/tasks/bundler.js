@@ -161,9 +161,9 @@ export async function bundler() {
 	}
 
 	return Promise.all([
-		processCSS(undefined, path.join(bundleRoot, "src", "index.css"), path.join(bundleRoot, "dist", "index.css"), { cwd: bundleRoot }),
+		processCSS(undefined, path.join(bundleRoot, "src", "index.css"), path.join(bundleRoot, "dist", "index.css"), { lint: false, cwd: bundleRoot }),
 		// Write the minified CSS
-		processCSS(undefined, path.join(bundleRoot, "src", "index.css"), path.join(bundleRoot, "dist", "index.min.css"), { cwd: bundleRoot, minify: true }),
+		processCSS(undefined, path.join(bundleRoot, "src", "index.css"), path.join(bundleRoot, "dist", "index.min.css"), { lint: false, cwd: bundleRoot, minify: true }),
 	]);
 }
 
@@ -175,9 +175,7 @@ export async function main() {
 	const key = "bundler";
 
 	console.time(key);
-	return Promise.all([
-		bundler(),
-	]).then((report) => {
+	return bundler().then((report) => {
 		const logs = report.flat(Infinity).filter(Boolean);
 
 		console.log(`\n\n📦  ${key}`);

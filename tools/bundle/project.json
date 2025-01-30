@@ -7,7 +7,7 @@
 	},
 	"targets": {
 		"build": {
-			"dependsOn": ["clean", { "target": "build", "projects": "tokens" }],
+			"dependsOn": ["clean", "^build"],
 			"executor": "nx:run-commands",
 			"inputs": [
 				"core",

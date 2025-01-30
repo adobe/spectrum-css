@@ -48,7 +48,7 @@ module.exports = ({
 						const filePath = packageParts.length > 2 ? packageParts.slice(2).join("/") : "index.css";
 
 						if (packageParts[1] === "tokens") {
-							return join(__dirname, packageParts[1], "dist", filePath);
+							return join(__dirname, packageParts[1], "dist", "css", filePath);
 						}
 
 						return join(__dirname, "components", packageParts[1], filePath);
