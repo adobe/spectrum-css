@@ -138,8 +138,36 @@
 	--spectrum-menu-checkmark-display-shown: block;
 	--spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-shown);
 
+	--spectrum-menu-item-min-height: var(--spectrum-component-height-100);
+	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
+	--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
+	--spectrum-menu-item-label-font-size: var(--spectrum-font-size-100);
+	--spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-100);
+
+	--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-100);
+	--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-100);
+	--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-100);
+
+	--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-100);
+
+	--spectrum-menu-item-description-font-size: var(--spectrum-font-size-75);
+
+	--spectrum-menu-section-header-font-size: var(--spectrum-font-size-100);
+	--spectrum-menu-section-header-min-width: var(--spectrum-component-height-100);
+
+	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
+
+	--spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-medium);
+	--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-medium);
+	--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-medium);
+
+	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-medium);
+
 	/* "no" icon: just the chevron (we're not counting it because it HAS to be there for a collapsible) */
 	--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
+
+	--spectrum-menu-item-focus-indicator-color-default: var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
+	--spectrum-menu-item-focus-indicator-border-width: calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1));
 
 	&.spectrum-Menu--sizeS {
 		--spectrum-menu-item-min-height: var(--spectrum-component-height-75);
@@ -166,34 +194,6 @@
 		--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-small);
 
 		--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-small);
-	}
-
-	&,
-	&.spectrum-Menu--sizeM {
-		--spectrum-menu-item-min-height: var(--spectrum-component-height-100);
-		--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
-		--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
-		--spectrum-menu-item-label-font-size: var(--spectrum-font-size-100);
-		--spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-100);
-
-		--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-100);
-		--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-100);
-		--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-100);
-
-		--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-100);
-
-		--spectrum-menu-item-description-font-size: var(--spectrum-font-size-75);
-
-		--spectrum-menu-section-header-font-size: var(--spectrum-font-size-100);
-		--spectrum-menu-section-header-min-width: var(--spectrum-component-height-100);
-
-		--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
-
-		--spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-medium);
-		--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-medium);
-		--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-medium);
-
-		--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-medium);
 	}
 
 	&.spectrum-Menu--sizeL {
@@ -249,7 +249,9 @@
 
 		--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
 	}
+}
 
+.spectrum-Menu {
 	display: inline-block;
 	inline-size: var(--mod-menu-inline-size, auto);
 	box-sizing: border-box;
@@ -280,6 +282,16 @@
 
 				padding-inline-start: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
 			}
+		}
+	}
+
+	&.is-selectableMultiple {
+		.spectrum-Menu-item {
+			align-items: start;
+		}
+
+		.spectrum-Menu-itemCheckbox {
+			grid-area: checkmarkArea;
 		}
 	}
 
@@ -384,7 +396,7 @@
 	padding-block-end: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
 	padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
 
-	margin: 0;
+	margin: calc((var(--spectrum-menu-item-focus-indicator-offset) + var(--spectrum-menu-item-focus-indicator-border-width)) * var(--spectrum-menu-item-spacing-multiplier));
 	text-decoration: none;
 
 	display: grid;
@@ -590,17 +602,10 @@
 
 .spectrum-Menu-item:focus-visible,
 .spectrum-Menu-back:focus-visible {
-	box-shadow: inset calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1)) 0 0 0 var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
-}
-
-.is-selectableMultiple {
-	.spectrum-Menu-item {
-		align-items: start;
-	}
-
-	.spectrum-Menu-itemCheckbox {
-		grid-area: checkmarkArea;
-	}
+	box-shadow: var(--spectrum-menu-item-focus-indicator-shadow) var(--spectrum-menu-item-focus-indicator-border-width) 0 0 0 var(--spectrum-menu-item-focus-indicator-color-default);
+	outline: var(--spectrum-menu-item-focus-indicator-border-width) var(--spectrum-menu-item-focus-indicator-outline-style) var(--spectrum-menu-item-focus-indicator-color-default);
+	outline-offset: var(--spectrum-menu-item-focus-indicator-offset);
+	border-radius: var(--spectrum-menu-item-corner-radius);
 }
 
 .spectrum-Menu-itemSelection {
@@ -765,26 +770,20 @@
 		}
 	}
 
-	&:hover {
-		.spectrum-Menu-chevron {
-			fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-hover, var(--spectrum-menu-drillin-icon-color-hover)));
-			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-hover, var(--spectrum-menu-drillin-icon-color-hover)));
-		}
+	&:hover .spectrum-Menu-chevron {
+		fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-hover, var(--spectrum-menu-drillin-icon-color-hover)));
+		color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-hover, var(--spectrum-menu-drillin-icon-color-hover)));
 	}
 
-	&:focus,
-	&.is-focused {
-		.spectrum-Menu-chevron {
-			fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-focus, var(--spectrum-menu-drillin-icon-color-focus)));
-			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-focus, var(--spectrum-menu-drillin-icon-color-focus)));
-		}
+	&:focus .spectrum-Menu-chevron,
+	&.is-focused .spectrum-Menu-chevron {
+		fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-focus, var(--spectrum-menu-drillin-icon-color-focus)));
+		color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-focus, var(--spectrum-menu-drillin-icon-color-focus)));
 	}
 
-	&:active {
-		.spectrum-Menu-chevron {
-			fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-down, var(--spectrum-menu-drillin-icon-color-down)));
-			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-down, var(--spectrum-menu-drillin-icon-color-down)));
-		}
+	&:active .spectrum-Menu-chevron {
+		fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-down, var(--spectrum-menu-drillin-icon-color-down)));
+		color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-drillin-icon-color-down, var(--spectrum-menu-drillin-icon-color-down)));
 	}
 }
 

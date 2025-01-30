@@ -110,7 +110,8 @@ Default.args = {
 				{
 					label: "Focused menu item",
 					iconName: "FolderOpen",
-					isFocused: true
+					isFocused: true,
+					isActive: true,
 				},
 				{
 					label: "A menu item with a longer label that causes the text to wrap to the next line",
@@ -248,7 +249,7 @@ TraySubmenu.parameters = {
 	docs: {
 		story: {
 			inline: false,
-			height: "400px"
+			height: "300px",
 		}
 	},
 	viewport: {
@@ -497,6 +498,7 @@ export const PopoverSubmenu = SubmenuInPopover.bind({});
 PopoverSubmenu.storyName = "Submenu in popover";
 PopoverSubmenu.tags = ["!dev"];
 PopoverSubmenu.parameters = {
+	layout: "padded",
 	chromatic: { disableSnapshot: true },
 };
 
