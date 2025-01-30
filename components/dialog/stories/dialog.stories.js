@@ -1,6 +1,8 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
+import { Template as Table } from "@spectrum-css/table/stories/template.js";
+import { Template as Steplist } from "@spectrum-css/steplist/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -10,10 +12,11 @@ import { Template } from "./template.js";
 /**
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions. Standard dialogs are the most frequent type of dialogs. They appear in the center of the screen over the interface and should be used for moderately complex tasks. Takeover dialogs are large types of dialogs. They use the totality of the screen and should be used for modal experiences with complex workflows.
  *
+ * The alert variants that were previously a part of Dialog were moved to their own component, [alert dialog](/docs/components-alert-dialog--docs).
+ *
  * ## Usage with modal component
  * When a dialog component is used in tandem with a [modal](/docs/components-modal--docs), implementations should set `--mod-modal-background-color` to `transparent`. This will prevent any background color used in the modal from peeking through from behind the dialog at the rounded corners, allowing the dialog's background color to take precedence.
  *
- * The alert variants that were previously a part of Dialog were moved to their own component, [alert dialog](/docs/components-alert-dialog--docs).
  */
 export default {
 	title: "Dialog",
@@ -96,15 +99,6 @@ export default {
 			control: "boolean",
 			if: { arg: "layout", eq: "default" },
 		},
-		hasDivider: {
-			name: "Divider",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
 		showModal: {
 			name: "Wrap the dialog in a modal",
 			type: { name: "boolean" },
@@ -167,6 +161,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		layout: "fullscreen",
 	},
 	decorators: [
 		withUnderlayWrapper,
@@ -267,16 +262,71 @@ WithScroll.parameters = {
 };
 
 /**
- * The full screen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
+ * The fullscreen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
+ *
+ * Fullscreen dialogs do not support a close button, and are not dismissible.
+ *
+ * Implementations may swap out the extra header content and body content for other components, like the [steplist](/docs/components-steplist--docs) and [table](/docs/components-table--docs) seen in this example. Components in the extra header content area will be centered.
  */
 export const Fullscreen = DialogFullscreen.bind({});
 Fullscreen.args = {
 	...Default.args,
+	header:[
+		(passthroughs, context) => Steplist({
+			...passthroughs,
+			items: [
+				{
+					label: "Enter records",
+					isComplete: true,
+				},
+				{
+					label: "Confirmation",
+					isComplete: true,
+				},
+				{
+					label: "Summary",
+					isSelected: true,
+				},
+			],
+		}, context),
+	],
+	content: [
+		(passthroughs, context) => Table({
+			...passthroughs,
+			showThumbnails: true,
+			rowItems: [
+				{
+					cellContent: ["Table Row Alpha", "Test", "2"],
+				},
+				{
+					cellContent: ["Table Row Bravo", "Test", "28"],
+				},
+				{
+					cellContent: [
+						"Table Row Charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+						"Test",
+						"23",
+					],
+				},
+				{
+					cellContent: ["Table Row Delta", "Test", "7"],
+				},
+				{
+					cellContent: ["Summary Row", "", "60"],
+					isSummaryRow: true,
+				},
+			],
+		}, context),
+	],
 	layout: "fullscreen",
 	hasFooter: false,
 };
 Fullscreen.parameters = {
 	chromatic: { disableSnapshot: true },
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=61935-5399",
+	}
 };
 
 // TODO: Because storybook doesn't support for multiple conditionals, we've removed the hasFooter
@@ -286,15 +336,22 @@ Fullscreen.parameters = {
 // https://github.com/storybookjs/storybook/discussions/18542
 Fullscreen.argTypes = {
 	hasFooter: { table: { disable: true, } },
+	header: { table: { disable: true, } },
 };
 
 /**
- * The full screen takeover variant is similar to the full screen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
+ * The fullscreen takeover variant is similar to the fullscreen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
+ *
+ * Fullscreen takeover dialogs do not support a close button, and are not dismissible.
  */
 export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
 FullscreenTakeover.storyName = "Fullscreen takeover";
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=61935-5399",
+	}
 };
 FullscreenTakeover.args = {
 	...Default.args,
