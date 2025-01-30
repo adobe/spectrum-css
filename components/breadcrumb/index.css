@@ -19,6 +19,7 @@
 	--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-100);
 	--spectrum-breadcrumbs-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-breadcrumbs-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-breadcrumbs-font-style: var(--spectrum-default-font-style);
 
 	--spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-100);
 	--spectrum-breadcrumbs-font-family-current: var(--spectrum-sans-font-family-stack);
@@ -128,6 +129,7 @@
 	font-family: var(--mod-breadcrumbs-font-family, var(--spectrum-breadcrumbs-font-family));
 	font-size: var(--mod-breadcrumbs-font-size, var(--spectrum-breadcrumbs-font-size));
 	font-weight: var(--mod-breadcrumbs-font-weight, var(--spectrum-breadcrumbs-font-weight));
+	font-style: var(--mod-breadcrumbs-font-style, var(--spectrum-breadcrumbs-font-style));
 	line-height: var(--mod-breadcrumbs-line-height, var(--spectrum-breadcrumbs-line-height));
 
 	/* Breadcrumbs title (current item) */
