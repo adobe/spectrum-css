@@ -40,11 +40,12 @@
 	user-select: none;
 	cursor: default;
 
+	/* calcs wrapping --spectrum-colorwheel-border-width are used to properly position the border drawn using this ::before psueo element over the exterior edge of the colorwheel. The size is reduced and positioning adjusted to create the border effect. */
 	&::before {
-inline-size: calc(var(--spectrum-colorwheel-width) - calc(4 * var(--spectrum-colorwheel-border-width)));
-block-size: calc(var(--spectrum-colorwheel-width) - calc(4 * var(--spectrum-colorwheel-border-width)));
-inset-block-start: var(--spectrum-colorwheel-border-width);
-inset-inline-start: var(--spectrum-colorwheel-border-width);
+		inline-size: calc(var(--spectrum-colorwheel-width) - calc(4 * var(--spectrum-colorwheel-border-width)));
+		block-size: calc(var(--spectrum-colorwheel-width) - calc(4 * var(--spectrum-colorwheel-border-width)));
+		inset-block-start: var(--spectrum-colorwheel-border-width);
+		inset-inline-start: var(--spectrum-colorwheel-border-width);
 		content: "";
 		position: absolute;
 		border-width: var(--spectrum-colorwheel-border-width);
@@ -79,11 +80,12 @@ inset-inline-start: var(--spectrum-colorwheel-border-width);
 	block-size: var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
 	margin: auto;
 
+	/* calcs wrapping --spectrum-colorwheel-border-width are used to properly position the border drawn using this ::before psueo element over the interior edge of the colorwheel. The size is increased and positioning adjusted to create the border effect. */
 	&::before {
-inline-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + calc(2 * var(--spectrum-colorwheel-border-width)));
-block-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + calc(2 * var(--spectrum-colorwheel-border-width)));
-inset-block-start: calc(-2 * var(--spectrum-colorwheel-border-width));
-inset-inline-start: calc(-2 * var(--spectrum-colorwheel-border-width));
+		inline-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + calc(2 * var(--spectrum-colorwheel-border-width)));
+		block-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + calc(2 * var(--spectrum-colorwheel-border-width)));
+		inset-block-start: calc(-2 * var(--spectrum-colorwheel-border-width));
+		inset-inline-start: calc(-2 * var(--spectrum-colorwheel-border-width));
 		content: "";
 		position: absolute;
 		border-width: var(--spectrum-colorwheel-border-width);
