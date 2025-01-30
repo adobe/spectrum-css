@@ -21,9 +21,10 @@
 	--spectrum-modal-confirm-exit-animation-delay: var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-animation-duration-0));
 
 	/* Distance between top and bottom of modal and edge of window for fullscreen modal */
-	--spectrum-modal-fullscreen-margin: 32px;
-	--spectrum-modal-max-height: var(--mod-modal-max-height, 90vh);
-	--spectrum-modal-max-width: var(--mod-modal-max-width, 90%);
+	--spectrum-modal-fullscreen-margin: var(--spectrum-window-to-edge);
+	--spectrum-modal-takeover-window-to-edge: 0;
+	--spectrum-modal-max-height: 90vh;
+	--spectrum-modal-max-width: 90%;
 
 	--spectrum-modal-background-color: var(--mod-modal-background-color, var(--spectrum-gray-75));
 	--spectrum-modal-confirm-border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-corner-radius-extra-large-default));
@@ -85,8 +86,8 @@
 	z-index: 2;
 
 	/* Don't be bigger than the screen */
-	max-block-size: var(--spectrum-modal-max-height);
-	max-inline-size: var(--spectrum-modal-max-width);
+	max-block-size: var(--mod-modal-max-height, var(--spectrum-modal-max-height));
+	max-inline-size: var(--mod-modal-max-width, var(--spectrum-modal-max-width));
 
 	background: var(--spectrum-modal-background-color);
 	border-radius: var(--spectrum-modal-confirm-border-radius);
@@ -132,17 +133,15 @@
 /** @unofficial */
 .spectrum-Modal--fullscreen {
 	position: fixed;
-	inset-inline-start: var(--spectrum-modal-fullscreen-margin);
-	inset-block-start: var(--spectrum-modal-fullscreen-margin);
-	inset-inline-end: var(--spectrum-modal-fullscreen-margin);
-	inset-block-end: var(--spectrum-modal-fullscreen-margin);
+	inset-block: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+	inset-inline: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
 	max-inline-size: none;
 	max-block-size: none;
 }
 
 .spectrum-Modal--fullscreenTakeover {
 	position: fixed;
-	inset: 0;
+	inset: var(--spectrum-modal-takeover-window-to-edge);
 	max-inline-size: none;
 	max-block-size: none;
 

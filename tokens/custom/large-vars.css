@@ -104,7 +104,10 @@
 	--spectrum-slider-tick-mark-height: 13px;
 	--spectrum-slider-ramp-track-height: 20px;
 
-  --spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
+	--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
+	--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-400);
+	--spectrum-takeover-dialog-spacing-header-gap: var(--spectrum-spacing-300);
+	--spectrum-takeover-dialog-spacing-title-to-body: var(--spectrum-spacing-400);
 
 	--spectrum-treeview-item-indentation-medium: 20px;
 	--spectrum-treeview-item-indentation-small: 15px;
