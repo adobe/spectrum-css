@@ -2,6 +2,7 @@ import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
 import "../index.css";
@@ -281,3 +282,57 @@ export const Template = ({
 		<use xlink:href="#${iconID}" href="#${iconID}" />
 	</svg>`;
 };
+
+/**
+ * Helper template function to display multiple icons using an array of icon names.
+ */
+export const IconListTemplate = (args, iconsList = [], context) => html`
+	<div
+		style=${styleMap({
+			"display": "flex",
+			"gap": "32px",
+			"flexWrap": "wrap",
+		})}
+	>
+		${iconsList.map(
+			(iconName) => Template({ ...args, iconName }, context)
+		)}
+	</div>
+`;
+
+/**
+ * A sampling of a few UI icons.
+ */
+export const UIDefaultTemplate = (args, context) => html`
+<div style="margin-bottom: 32px;">
+	${IconListTemplate(
+		{
+			...args,
+			setName: "ui",
+		},
+		[
+			"Asterisk100",
+			"Asterisk200",
+			"Asterisk300",
+		],
+		context
+	)}
+</div>
+<div>
+	${IconListTemplate(
+		{
+			...args,
+			setName: "ui",
+		},
+		[
+			"ChevronDown50",
+			"ChevronDown75",
+			"ChevronDown100",
+			"ChevronDown200",
+			"ChevronDown300",
+			"ChevronDown400",
+		],
+		context
+	)}
+</div>
+`;
