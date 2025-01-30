@@ -42,41 +42,34 @@ export const DialogGroup = Variants({
 		},
 		{
 			testHeading: "With hero/cover image",
+			hasHeroImage: true,
 			heroImageUrl: "example-card-portrait.png",
 		},
 		{
 			testHeading: "With hero/cover image, dismissible",
+			hasHeroImage: true,
 			heroImageUrl: "example-card-portrait.png",
 			isDismissible: true,
 			hasFooter: false,
-		},
-		{
-			testHeading: "No divider",
-			hasDivider: false,
-		},
-		{
-			testHeading: "No divider, dismissible",
-			hasDivider: false,
-			isDismissible: true,
-			hasFooter: false,
-		},
-		{
-			testHeading: "With hero/cover image, no divider",
-			hasDivider: false,
-			heroImageUrl: "example-card-portrait.png",
-		},
-		{
-			testHeading: "With hero/cover image, no divider, dismissible",
-			hasDivider: false,
-			isDismissible: true,
-			hasFooter: false,
-			heroImageUrl: "example-card-portrait.png",
 		},
 	],
 });
 
 export const DialogFullscreen = Variants({
-	Template,
+	Template: (args, context) => {
+		const { parameters: { showTestingGrid = false } = {} } = context;
+
+		return Template({
+			...args,
+			/*
+			 * Custom styles were added to make sure the VRTs catch the rounded corners
+			 */
+			customStyles: {
+				margin: showTestingGrid ? "16px" : undefined,
+				"background-color": showTestingGrid ? "var(--spectrum-gray-100)" : undefined,
+			},
+		}, context);
+	},
 	withSizes: false,
 	wrapperStyles: {
 		"background-color": "var(--spectrum-gray-50)"

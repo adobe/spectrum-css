@@ -18,6 +18,7 @@
     "--mod-modal-confirm-entry-animation-duration",
     "--mod-modal-confirm-exit-animation-delay",
     "--mod-modal-confirm-exit-animation-duration",
+    "--mod-modal-fullscreen-margin",
     "--mod-modal-max-height",
     "--mod-modal-max-width",
     "--mod-modal-transition-animation-duration"
@@ -32,6 +33,7 @@
     "--spectrum-modal-fullscreen-margin",
     "--spectrum-modal-max-height",
     "--spectrum-modal-max-width",
+    "--spectrum-modal-takeover-window-to-edge",
     "--spectrum-modal-transition-animation-duration"
   ],
   "global": [
@@ -43,7 +45,8 @@
     "--spectrum-animation-ease-out",
     "--spectrum-corner-radius-extra-large-default",
     "--spectrum-dialog-confirm-entry-animation-distance",
-    "--spectrum-gray-75"
+    "--spectrum-gray-75",
+    "--spectrum-window-to-edge"
   ],
   "passthroughs": [],
   "high-contrast": []

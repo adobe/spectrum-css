@@ -2,8 +2,7 @@ import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/templ
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -19,7 +18,7 @@ export const Template = ({
 	showModal = false,
 	hasFooter = false,
 	heading,
-	header,
+	header = [],
 	hasCheckbox = false,
 	content = [],
 	footer = [],
@@ -66,18 +65,15 @@ export const Template = ({
 						<h1 class="${rootClass}-heading">${heading}</h1>
 					`)}
 					${when(header, () => html`
-						<span class="${rootClass}-header-content">
-							${Typography({
-								semantics: "body",
-								size: "m",
-								// @todo: takeover dialogs can accept other components in their headers. could the renderContent function work here?
-								content: [ header ]
-							}, context)}
-						</span>
+						<div class="${rootClass}-headerContentWrapper">
+							<div class="${rootClass}-headerContent">
+								${renderContent(header)}
+							</div>
+						</div>
 					`,
 				)}
 				</div>
-				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
+				<section class="${rootClass}-content">${renderContent(content)}</section>
 				${when(isDismissible, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
@@ -108,18 +104,14 @@ export const Template = ({
 				${when(hasFooter, () => html`
 					<footer class="${rootClass}-footer">
 						${when(typeof footer !== "undefined", () => html`
-							<div class="${rootClass}-footer-content">
+							<div class="${rootClass}-footerContent">
 								${when(hasCheckbox, () => html`
 						 			${Checkbox({
 										label: footer,
 									}, context)}
 								`,
 									() =>
-										Typography({
-											semantics: "body",
-											size: "m",
-											content: [ footer ]
-										}, context)
+										renderContent(footer)
 								)}
 							</div>
 							<div class="${rootClass}-buttonGroup">
