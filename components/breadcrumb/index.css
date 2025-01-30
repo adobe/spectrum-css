@@ -50,7 +50,7 @@
 	/* Focus indicator */
 	--spectrum-breadcrumbs-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-breadcrumbs-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--spectrum-breadcrumbs-item-link-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-breadcrumbs-item-link-border-radius: var(--spectrum-corner-radius-small-default);
 
 	/* Colors */
 	--spectrum-breadcrumbs-text-color: var(--spectrum-neutral-subdued-content-color-default);
