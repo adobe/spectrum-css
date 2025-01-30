@@ -1,8 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".js-focus-within .spectrum-Dial-handle[focus-within]",
-    ".js-focus-within .spectrum-Dial-handle[focus-within]:after",
     ".spectrum-Dial",
     ".spectrum-Dial-controls",
     ".spectrum-Dial-controls:after",
@@ -20,8 +18,6 @@
     ".spectrum-Dial-handle:focus-within:after",
     ".spectrum-Dial-handle:hover",
     ".spectrum-Dial-handle:hover:after",
-    ".spectrum-Dial-handle[focus-within].js-focus-within",
-    ".spectrum-Dial-handle[focus-within].js-focus-within:after",
     ".spectrum-Dial-input",
     ".spectrum-Dial-input:focus",
     ".spectrum-Dial-label",

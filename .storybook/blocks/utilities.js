@@ -1,4 +1,4 @@
-import spectrum from "@adobe/spectrum-tokens/dist/json/variables.json";
+import spectrum from "@spectrum-css/tokens/dist/json/tokens.json";
 import { useTheme } from "@storybook/theming";
 
 /**
@@ -23,18 +23,18 @@ function parseData(data, { key, color, platform }) {
 	// Check if the key has a value
 	if (data.value) return data.value;
 
-	if (Object.keys(data.sets).length === 0) {
+	if (Object.keys(data).length === 0) {
 		console.log(`⚠️ Token ${key} has no value or sets`);
 		return;
 	}
 
 	// Check if one of the contexts is a key in the sets
-	if (color in data.sets) {
-		return parseData(data.sets[color], { key, color, platform });
+	if (color in data) {
+		return parseData(data[color], { key, color, platform });
 	}
 
-	if (platform in data.sets) {
-		return parseData(data.sets[platform], { key, color, platform });
+	if (platform in data) {
+		return parseData(data[platform], { key, color, platform });
 	}
 
 	return;

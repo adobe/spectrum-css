@@ -1,8 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".js-focus-within .spectrum-ClearButton:not(:disabled)[focus-within]",
-    ".js-focus-within .spectrum-ClearButton:not(:disabled)[focus-within] .spectrum-ClearButton-fill",
     ".spectrum-ClearButton",
     ".spectrum-ClearButton > .spectrum-Icon",
     ".spectrum-ClearButton--overBackground:focus-visible",
@@ -24,9 +22,7 @@
     ".spectrum-ClearButton:not(:disabled):focus-within",
     ".spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill",
     ".spectrum-ClearButton:not(:disabled):hover",
-    ".spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill",
-    ".spectrum-ClearButton:not(:disabled)[focus-within].js-focus-within",
-    ".spectrum-ClearButton:not(:disabled)[focus-within].js-focus-within .spectrum-ClearButton-fill"
+    ".spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill"
   ],
   "modifiers": [
     "--mod-clear-button-background-color",
