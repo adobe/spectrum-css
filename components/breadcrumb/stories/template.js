@@ -67,11 +67,7 @@ export const Template = ({
 										isDisabled: isDisabled || truncatedMenuIsDisabled,
 										isQuiet: true,
 										customIconClasses: [`${rootClass}-folder`],
-										size: {
-											medium: "m",
-											large: "l",
-											multiline: "s",
-										}[variant],
+										size: variant === "multiline" ? "s" : size,
 									},
 									context,
 								),
