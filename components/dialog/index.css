@@ -53,6 +53,14 @@
 	/* Passthrough for nested component(s) */
 	--mod-buttongroup-justify-content: flex-end;
 	--mod-buttongroup-flex-wrap: nowrap;
+
+	/* Fullscreen/fullscreenTakeover */
+	--spectrum-takeover-dialog-title-font-size: var(--spectrum-title-size-xxl);
+	--spectrum-takeover-dialog-grid-spacing: var(--spectrum-takeover-dialog-spacing-grid-padding);
+	--spectrum-takeover-dialog-spacing-header-content-gap: var(--spectrum-takeover-dialog-spacing-header-gap);
+	--spectrum-takeover-dialog-spacing-title-to-content: var(--spectrum-takeover-dialog-spacing-title-to-body);
+	--spectrum-takeover-dialog-inline-size: var(--spectrum-takeover-dialog-width);
+	--spectrum-takeover-dialog-block-size: var(--spectrum-takeover-dialog-height);
 }
 
 .spectrum-Dialog {
@@ -151,7 +159,7 @@
 	outline: none; /* Hide focus outline around header */
 
 	/* additional header content should grow/shrink with the text, but only until it takes up half of the header */
-	> .spectrum-Dialog-header-content {
+	> .spectrum-Dialog-headerContentWrapper {
 		max-inline-size: fit-content;
 		flex: 1 1 100%;
 		font-size: var(--mod-standard-dialog-header-content-font-size, var(--spectrum-standard-dialog-header-content-font-size));
@@ -188,12 +196,12 @@
 
 	outline: none; /* Hide focus outline */
 
-	.spectrum-Dialog-footer-content {
+	.spectrum-Dialog-footerContent {
 		/* this attempts to give as much space as possible for the button group, particularly to avoid stacking on mobile. Some sizes still may have to stack. */
 		flex: 1 1 100%;
 	}
 
-	&:has(.spectrum-Dialog-footer-content),
+	&:has(.spectrum-Dialog-footerContent),
 	&:has(.spectrum-Dialog-buttonGroup) {
 		justify-content: space-between;
 	}
@@ -248,13 +256,13 @@
 }
 
 .spectrum-Dialog--fullscreen {
-	inline-size: 100%;
-	block-size: 100%;
+	inline-size: var(--spectrum-takeover-dialog-inline-size);
+	block-size: var(--spectrum-takeover-dialog-block-size);
 }
 
 .spectrum-Dialog--fullscreenTakeover {
-	inline-size: 100%;
-	block-size: 100%;
+	inline-size: var(--spectrum-takeover-dialog-inline-size);
+	block-size: var(--spectrum-takeover-dialog-block-size);
 	border-radius: 0;
 }
 
@@ -266,16 +274,16 @@
 	.spectrum-Dialog-grid {
 		display: grid;
 		grid-template-columns:
-			var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding))
+			var(--mod-takeover-dialog-grid-spacing, var(--spectrum-takeover-dialog-grid-spacing))
 			1fr
 			auto
 			auto
-			var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
+			var(--mod-takeover-dialog-grid-spacing, var(--spectrum-takeover-dialog-grid-spacing));
 		grid-template-rows:
-			var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding))
+			var(--mod-takeover-dialog-grid-spacing, var(--spectrum-takeover-dialog-grid-spacing))
 			auto
 			1fr
-			var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
+			var(--mod-takeover-dialog-grid-spacing, var(--spectrum-takeover-dialog-grid-spacing));
 		grid-template-areas:
 			".    .       .       .            ."
 			".    heading header  buttonGroup  ."
@@ -285,6 +293,20 @@
 
 	.spectrum-Dialog-header {
 		grid-area: heading;
+		gap: var(--mod-takeover-dialog-spacing-header-content-gap, var(--spectrum-takeover-dialog-spacing-header-content-gap));
+		margin-inline-end: var(--mod-takeover-dialog-spacing-header-content-gap, var(--spectrum-takeover-dialog-spacing-header-content-gap));
+		margin-block-end: var(--spectrum-takeover-dialog-spacing-title-to-content);
+
+		/* components in fullscreen/fullscreenTakeover dialogs are centered in the headerContentWrapper */
+		> .spectrum-Dialog-headerContentWrapper {
+			max-inline-size: unset;
+			display: inline-flex;
+			justify-content: center;
+		}
+	}
+
+	.spectrum-Dialog-heading {
+		font-size: var(--mod-takeover-dialog-title-font-size, var(--spectrum-takeover-dialog-title-font-size));
 	}
 
 	.spectrum-Dialog-closeButton {
