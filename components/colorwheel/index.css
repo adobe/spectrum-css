@@ -30,7 +30,7 @@
 	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used with JS in calculating the clip-path paths and colorarea-container-size */
 	--_track-width: var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
 	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used with JS in calculating the clip-path paths and colorarea-container-size */
-	--_border-width: var(--spectrum-colorwheel-border-width);
+	--_border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
 
 	position: relative;
 	display: block;
@@ -41,10 +41,10 @@
 	cursor: default;
 
 	&::before {
-		inline-size: calc(var(--spectrum-colorwheel-width) - 4px);
-		block-size: calc(var(--spectrum-colorwheel-width) - 4px);
-		inset-block-start: 1px;
-		inset-inline-start: 1px;
+inline-size: calc(var(--spectrum-colorwheel-width) - calc(4 * var(--spectrum-colorwheel-border-width)));
+block-size: calc(var(--spectrum-colorwheel-width) - calc(4 * var(--spectrum-colorwheel-border-width)));
+inset-block-start: var(--spectrum-colorwheel-border-width);
+inset-inline-start: var(--spectrum-colorwheel-border-width);
 		content: "";
 		position: absolute;
 		border-width: var(--spectrum-colorwheel-border-width);
@@ -80,10 +80,10 @@
 	margin: auto;
 
 	&::before {
-		inline-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + 2px);
-		block-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + 2px);
-		inset-block-start: -2px;
-		inset-inline-start: -2px;
+inline-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + calc(2 * var(--spectrum-colorwheel-border-width)));
+block-size: calc(var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size)) + calc(2 * var(--spectrum-colorwheel-border-width)));
+inset-block-start: calc(-2 * var(--spectrum-colorwheel-border-width));
+inset-inline-start: calc(-2 * var(--spectrum-colorwheel-border-width));
 		content: "";
 		position: absolute;
 		border-width: var(--spectrum-colorwheel-border-width);
