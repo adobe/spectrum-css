@@ -39,18 +39,18 @@
 
 	--spectrum-checkbox-invalid-color-default: var(--spectrum-negative-color-900);
 	--spectrum-checkbox-invalid-color-hover: var(--spectrum-negative-color-1000);
-	--spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1100);
+	--spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1000);
 	--spectrum-checkbox-invalid-color-focus: var(--spectrum-negative-color-1000);
 
-	--spectrum-checkbox-emphasized-color-default: var(--spectrum-accent-color-900);
-	--spectrum-checkbox-emphasized-color-hover: var(--spectrum-accent-color-1000);
-	--spectrum-checkbox-emphasized-color-down: var(--spectrum-accent-color-1100);
-	--spectrum-checkbox-emphasized-color-focus: var(--spectrum-accent-color-1000);
+	--spectrum-checkbox-emphasized-color-default: var(--spectrum-accent-content-color-default);
+	--spectrum-checkbox-emphasized-color-hover: var(--spectrum-accent-content-color-hover);
+	--spectrum-checkbox-emphasized-color-down: var(--spectrum-accent-content-color-down);
+	--spectrum-checkbox-emphasized-color-focus: var(--spectrum-accent-content-color-key-focus);
 
-	--spectrum-checkbox-control-selected-color-default: var(--spectrum-neutral-background-color-selected-default);
-	--spectrum-checkbox-control-selected-color-hover: var(--spectrum-neutral-background-color-selected-hover);
-	--spectrum-checkbox-control-selected-color-down: var(--spectrum-neutral-background-color-selected-down);
-	--spectrum-checkbox-control-selected-color-focus: var(--spectrum-neutral-background-color-selected-key-focus);
+	--spectrum-checkbox-control-selected-color-default: var(--spectrum-neutral-content-color-default);
+	--spectrum-checkbox-control-selected-color-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-checkbox-control-selected-color-down: var(--spectrum-neutral-content-color-down);
+	--spectrum-checkbox-control-selected-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
 	/* Font */
 	--spectrum-checkbox-line-height: var(--spectrum-line-height-100);
@@ -71,7 +71,9 @@
 	--spectrum-checkbox-font-size: var(--spectrum-font-size-100);
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
+	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
+	--spectrum-checkbox-top-to-control: var(--spectrum-checkbox-top-to-control-medium);
 }
 
 .spectrum-Checkbox--sizeS {
@@ -83,7 +85,9 @@
 	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-75);
+	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
+	--spectrum-checkbox-top-to-control: var(--spectrum-checkbox-top-to-control-small);
 }
 
 .spectrum-Checkbox--sizeL {
@@ -95,7 +99,9 @@
 	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-large);
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-200);
+	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-200);
+	--spectrum-checkbox-top-to-control: var(--spectrum-checkbox-top-to-control-large);
 }
 
 .spectrum-Checkbox--sizeXL {
@@ -107,7 +113,9 @@
 	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-extra-large);
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-300);
+	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
+	--spectrum-checkbox-top-to-control: var(--spectrum-checkbox-top-to-control-extra-large);
 }
 
 /* Default Unchecked */
@@ -154,7 +162,7 @@
 
 	&:not(.is-readOnly):active {
 		.spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
-			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
+			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down)) scale(var(--spectrum-component-size-width-ratio-down), var(--spectrum-component-size-width-ratio-down));
 		}
 	}
 
@@ -356,6 +364,7 @@
 	text-align: start;
 	margin-inline-start: var(--mod-checkbox-text-to-control, var(--spectrum-checkbox-text-to-control));
 	margin-block-start: var(--mod-checkbox-top-to-text, var(--spectrum-checkbox-top-to-text));
+	margin-block-end: var(--mod-checkbox-bottom-to-text, var(--spectrum-checkbox-bottom-to-text));
 
 	font-size: var(--mod-checkbox-font-size, var(--spectrum-checkbox-font-size));
 
@@ -406,6 +415,8 @@
 	z-index: 1;
 
 	cursor: pointer;
+
+	margin-block-start: var(--spectrum-checkbox-top-to-control);
 
 	&:disabled {
 		cursor: default;
