@@ -60,6 +60,11 @@
 
 	&.is-disabled {
 		pointer-events: none;
+
+		&::before,
+		.spectrum-ColorWheel-inner::before {
+			border-color: transparent;
+		}
 	}
 
 	&.is-dragged {
