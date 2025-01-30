@@ -483,7 +483,7 @@
 	&::before {
 		forced-color-adjust: none;
 		border-color: var(--highcontrast-checkbox-color-default, var(--mod-checkbox-control-color-default, var(--spectrum-checkbox-control-color-default)));
-
+		background-color: var(--spectrum-checkbox-background-color);
 		display: block;
 		z-index: 0;
 		content: "";
