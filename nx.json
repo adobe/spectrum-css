@@ -71,7 +71,7 @@
 			],
 			"options": {
 				"commands": [
-					"rimraf {projectRoot}/dist/*.css {projectRoot}/dist/themes/*.css"
+					"rimraf {projectRoot}/dist/*.css* {projectRoot}/dist/themes/*.css*"
 				],
 				"parallel": false
 			},
@@ -151,8 +151,7 @@
 				"core",
 				"tools",
 				"stylelint",
-				"{workspaceRoot}/tasks/component-report.js",
-				{ "externalDependencies": ["postcss"] }
+				"{workspaceRoot}/tasks/component-report.js"
 			],
 			"options": {
 				"commands": [

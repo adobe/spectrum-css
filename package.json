@@ -14,8 +14,8 @@
 	},
 	"scripts": {
 		"build": "yarn builder tag:component,ui-icons",
-		"build:docs": "nx build storybook --output-dir ../dist/",
-		"build:preview": "nx build storybook",
+		"build:docs": "yarn build:preview --output-dir ../dist/",
+		"build:preview": "yarn report && nx build storybook",
 		"builder": "nx run-many --target build report --projects",
 		"bundle": "nx build bundle",
 		"changeset": "changeset",
@@ -28,12 +28,15 @@
 		"clean:preview": "nx clean storybook --skip-nx-cache",
 		"cleaner": "nx run-many --target clean --projects",
 		"compare": "cross-env NODE_ENV=production node --no-warnings ./tasks/compare-compiled-output.js",
+		"component:build": "node --no-warnings ./tasks/component-builder.js",
+		"component:compare": "node --no-warnings ./tasks/component-compare.js",
+		"component:report": "node --no-warnings ./tasks/component-reporter.js",
 		"dev": "cross-env NODE_ENV=development nx run storybook:build:docs",
 		"format": "yarn formatter tag:component",
 		"formatter": "nx run-many --target format --projects",
 		"lint": "yarn linter tag:component",
 		"linter": "nx run-many --target lint --verbose --projects",
-		"new": "yarn workspace @spectrum-css/generator new",
+		"new": "yarn workspace @spectrum-css/generator run new",
 		"postinstall": "husky || true && yarn refresh",
 		"precommit": "lint-staged --allow-empty --config lint-staged.config.js",
 		"publish:docs": "cross-env NODE_ENV=production yarn build:docs && gh-pages -d dist/ -f -e . --nojekyll",
@@ -72,6 +75,7 @@
 		"@spectrum-tools/postcss-add-theming-layer": "workspace:^",
 		"@spectrum-tools/postcss-property-rollup": "workspace:^",
 		"@spectrum-tools/postcss-rgb-mapping": "workspace:^",
+		"@yarnpkg/types": "^4.0.0",
 		"at-rule-packer": "^0.4.2",
 		"autoprefixer": "^10.4.19",
 		"colors": "^1.4.0",
@@ -119,6 +123,13 @@
 		"tar": "^7.4.3",
 		"yargs": "^17.7.2"
 	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
+	],
 	"engines": {
 		"node": ">=20"
 	},

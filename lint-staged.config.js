@@ -4,7 +4,7 @@ module.exports = {
 		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
 	],
 	"*.{js,json}": [
-		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet --ignore-pattern \"!.storybook/\""
+		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
 	],
 	"dist/*.css": [
 		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc"

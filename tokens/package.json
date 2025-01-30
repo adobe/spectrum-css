@@ -4,7 +4,7 @@
 	"description": "The Spectrum CSS tokens package",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/",
+	"homepage": "https://opensource.adobe.com/spectrum-css",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -23,27 +23,39 @@
 	"main": "dist/css/index.css",
 	"files": [
 		"dist",
-		"CHANGELOG.md",
-		"README.md",
+		"*.md",
 		"package.json"
 	],
+	"scripts": {
+		"format": "run-p \"format:*\"",
+		"format:content": "prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern *.md **/*.md",
+		"format:scripts": "eslint --fix --cache --no-error-on-unmatched-pattern *.{js,json} {tasks,utilities}/*.js",
+		"lint": "run-p \"lint:*\"",
+		"lint:scripts": "eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives *.{js,json} {tasks,utilities}/*.js"
+	},
 	"devDependencies": {
 		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-20241121221506",
 		"@adobe/token-diff-generator": "^1.3.0",
 		"@nxkit/style-dictionary": "^6.0.0",
 		"@spectrum-tools/postcss-rgb-mapping": "workspace:^",
+		"eslint": "^8.57.0",
+		"npm-run-all2": "^7.0.2",
 		"postcss": "^8.5.0",
 		"postcss-cli": "^11.0.0",
 		"postcss-sorting": "^9.1.0",
 		"prettier": "^3.4.2",
 		"style-dictionary": "^3.9.2",
-		"style-dictionary-sets": "^2.3.0"
+		"style-dictionary-sets": "^2.3.0",
+		"stylelint": "^16.9.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"tokens",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"
