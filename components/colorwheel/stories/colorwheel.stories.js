@@ -31,6 +31,15 @@ export default {
 			},
 			control: "boolean",
 		},
+		isWithColorLoupe: {
+			name: "With color loupe",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 		selectedColor: {
 			name: "Selected color",
 			description: "The color of the handle.",
@@ -57,7 +66,9 @@ export default {
 };
 
 export const Default = ColorWheelGroup.bind({});
-Default.args = {};
+Default.args = {
+	isWithColorLoupe: true,
+};
 
 // ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
