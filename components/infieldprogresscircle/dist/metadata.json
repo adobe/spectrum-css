@@ -1,0 +1,25 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-InfieldProgressCircle",
+    ".spectrum-InfieldProgressCircle .spectrum-ProgressCircle-fill",
+    ".spectrum-InfieldProgressCircle--sizeL",
+    ".spectrum-InfieldProgressCircle--sizeS",
+    ".spectrum-InfieldProgressCircle--sizeXL"
+  ],
+  "modifiers": [],
+  "component": [
+    "--spectrum-in-field-progress-circle-edge-to-fill",
+    "--spectrum-in-field-progress-circle-size-100",
+    "--spectrum-in-field-progress-circle-size-200",
+    "--spectrum-in-field-progress-circle-size-300",
+    "--spectrum-in-field-progress-circle-size-75",
+    "--spectrum-infieldprogresscircle-padding-block"
+  ],
+  "global": ["--spectrum-progress-circle-thickness-small"],
+  "passthroughs": [
+    "--mod-progress-circle-size",
+    "--mod-progress-circle-thickness"
+  ],
+  "high-contrast": []
+}

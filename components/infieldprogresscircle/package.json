@@ -1,0 +1,55 @@
+{
+  "name": "@spectrum-css/infieldprogresscircle",
+  "version": "0.0.0",
+  "description": "The Spectrum CSS infieldprogresscircle component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/infieldprogresscircle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/infieldprogresscircle"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "exports": {
+    ".": "./dist/index.css",
+    "./*.md": "./*.md",
+    "./dist/*": "./dist/*",
+    "./index.css": "./dist/index.css",
+    "./metadata.json": "./dist/metadata.json",
+    "./package.json": "./package.json",
+    "./stories/*": "./stories/*"
+  },
+  "main": "dist/index.css",
+  "files": [
+    "dist/*",
+    "*.md",
+    "package.json",
+    "stories/*",
+    "metadata/*"
+  ],
+  "peerDependencies": {
+    "@spectrum-css/tokens": ">=14.0.0-next.0"
+  },
+  "devDependencies": {
+    "@spectrum-css/tokens": "workspace:^"
+  },
+  "keywords": [
+    "spectrum",
+    "css",
+    "design system",
+    "adobe"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "spectrum": [
+    {
+      "guidelines": "https://spectrum.adobe.com/page/progress-circle",
+      "rootClass": "spectrum-InfieldProgressCircle",
+      "swc": "https://opensource.adobe.com/spectrum-web-components/components/progress-circle/"
+    }
+  ]
+}

@@ -4216,6 +4216,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/infieldprogresscircle@workspace:components/infieldprogresscircle":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/infieldprogresscircle@workspace:components/infieldprogresscircle"
+  dependencies:
+    "@spectrum-css/tokens": "workspace:^"
+  peerDependencies:
+    "@spectrum-css/tokens": ">=14.0.0-next.0"
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/inlinealert@workspace:^, @spectrum-css/inlinealert@workspace:components/inlinealert":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/inlinealert@workspace:components/inlinealert"
