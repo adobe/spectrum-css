@@ -66,6 +66,10 @@ jobs:
               shell: bash
               run: yarn install --immutable
 
+            - name: Generate metadata assets
+              shell: bash
+              run: yarn report
+
             ## --- BUILD --- ##
             - name: Build storybook
               shell: bash

@@ -5,23 +5,13 @@
 	"license": "Apache-2.0",
 	"author": "Adobe",
 	"homepage": "https://opensource.adobe.com/spectrum-css/",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": ".storybook"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
 	"type": "module",
 	"exports": {
 		".": "./preview.js",
 		"./blocks": "./blocks/index.js",
-		"./blocks/*": "./blocks/*",
 		"./decorators": "./decorators/index.js",
 		"./decorators/*": "./decorators/*",
 		"./deprecated/*": "./deprecated/*",
-		"./guides/*": "./guides/*",
 		"./loaders": "./loaders/index.js",
 		"./loaders/*": "./loaders/*",
 		"./main": "./main.js",
@@ -30,7 +20,6 @@
 		"./modes/*": "./modes/*",
 		"./package.json": "./package.json",
 		"./preview": "./preview.js",
-		"./templates/*": "./templates/*",
 		"./types": "./types/index.js",
 		"./types/*": "./types/*"
 	},
@@ -79,12 +68,5 @@
 		"rollup-plugin-postcss-lit": "^2.1.0",
 		"storybook": "^8.4.7",
 		"vite": "^5.4.11"
-	},
-	"keywords": [
-		"design-system",
-		"spectrum",
-		"spectrum-css",
-		"adobe",
-		"adobe-spectrum"
-	]
+	}
 }

@@ -90,14 +90,12 @@ jobs:
               with:
                   name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.head-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}
-                  merge-multiple: true
 
             - name: Download build artifacts for base
               uses: actions/download-artifact@v4
               with:
                   name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.base-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}
-                  merge-multiple: true
 
             - name: Compare compiled output file size
               id: compare

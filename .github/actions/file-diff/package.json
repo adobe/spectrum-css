@@ -5,22 +5,7 @@
   "description": "A GitHub Action to compare asset sizes and generate a diff if changes are found.",
   "license": "Apache-2.0",
   "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": ".github/actions/file-diff"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
   "main": "index.js",
-  "files": [
-    "*.md",
-    "*.js",
-    "*.yml",
-    "package.json"
-  ],
   "dependencies": {
     "@actions/artifact": "^2.2.1",
     "@actions/core": "^1.11.1",

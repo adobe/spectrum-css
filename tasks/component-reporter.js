@@ -137,8 +137,8 @@ async function extractModifiers(
 async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
+	clean,
 } = {}) {
-	console.log("componentName", componentName);
 	if (!cwd && componentName) {
 		cwd = path.join(dirs.components, componentName);
 	}
@@ -147,6 +147,10 @@ async function main({
 		componentName = cwd
 			? getPackageFromPath(cwd)
 			: process.env.NX_TASK_TARGET_PROJECT;
+	}
+
+	if (typeof clean === "undefined") {
+		clean = process.env.NODE_ENV === "production";
 	}
 
 	const key = `[report] ${`@spectrum-css/${componentName}`.cyan}`;
@@ -162,11 +166,6 @@ async function main({
 		console.timeEnd(key);
 		console.log("");
 		return Promise.reject(new Error(`No source CSS file found at ${sourceCSS}`));
-	}
-
-	// Create the dist directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "dist"))) {
-		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
 	const processed = await processCSS(undefined, sourceCSS, undefined, {
@@ -194,6 +193,11 @@ async function main({
 			},
 		}
 	);
+
+	// Create the metadata directory if it doesn't exist
+	if (!fs.existsSync(path.join(cwd, "dist"))) {
+		fs.mkdirSync(path.join(cwd, "dist"));
+	}
 
 	return Promise.all([
 		writeAndReport(

@@ -22,23 +22,12 @@
 		"./stories/*": "./stories/*"
 	},
 	"main": "index.css",
-	"files": [
-		"*.md",
-		"package.json"
-	],
 	"peerDependencies": {
 		"@spectrum-css/tokens": ">=14 || >=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"
 	},
-	"keywords": [
-		"design-system",
-		"spectrum",
-		"spectrum-css",
-		"adobe",
-		"adobe-spectrum"
-	],
 	"publishConfig": {
 		"access": "public"
 	}

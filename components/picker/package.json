@@ -4,7 +4,7 @@
 	"description": "The Spectrum CSS picker component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-picker--docs",
+	"homepage": "https://opensource.adobe.com/spectrum-css/picker",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -24,6 +24,13 @@
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"*.md",
+		"package.json",
+		"stories/*",
+		"metadata/*"
+	],
 	"peerDependencies": {
 		"@spectrum-css/helptext": ">=5",
 		"@spectrum-css/icon": ">=7",
@@ -42,25 +49,18 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/commons": "workspace:^",
-		"@spectrum-css/helptext": "6.0.1",
-		"@spectrum-css/icon": "8.0.1",
-		"@spectrum-css/menu": "8.0.1",
-		"@spectrum-css/popover": "7.3.1",
-		"@spectrum-css/progresscircle": "4.0.1",
-		"@spectrum-css/tokens": "15.2.0",
-		"eslint": "^8.57.0",
-		"npm-run-all2": "^7.0.2",
-		"prettier": "^3.4.2",
-		"stylelint": "^16.9.0"
+		"@spectrum-css/helptext": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/popover": "workspace:^",
+		"@spectrum-css/progresscircle": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
-		"design-system",
 		"spectrum",
-		"spectrum-css",
-		"adobe",
-		"adobe-spectrum",
-		"component",
-		"css"
+		"css",
+		"design system",
+		"adobe"
 	],
 	"publishConfig": {
 		"access": "public"
