@@ -1,5 +1,5 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template.js";
+import { BreadcrumbTitleHeadings, Template } from "./template.js";
 
 export const BreadcrumbGroup = Variants({
 	Template,
@@ -17,9 +17,13 @@ export const BreadcrumbGroup = Variants({
 			variant: "multiline",
 		},
 		{
-			testHeading: "Multiline with small heading",
+			testHeading: "Multiline with typography headings",
 			variant: "multiline",
-			titleHeadingSize: "s",
+			withStates: false,
+			Template: BreadcrumbTitleHeadings,
+			showTruncatedMenu: true,
+			showRootContext: true,
+			isDragged: true,
 		},
 	],
 	stateData: [
