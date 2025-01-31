@@ -60,7 +60,7 @@ module.exports = defineConfig({
 		 * @param {string} folderName
 		 * @returns {void}
 		 */
-		function updateComponentPackageJson(workspace, folderName) {
+		function validateComponentPackageJson(workspace, folderName) {
 			// Only update the homepage if it does not already exist
 			if (!workspace.manifest.homepage) {
 				workspace.set("homepage", `https://opensource.adobe.com/spectrum-css/?path=/docs/components-${folderName}--docs`);
@@ -88,7 +88,7 @@ module.exports = defineConfig({
 		 * @param {Workspace} workspace
 		 * @returns {void}
 		 */
-		function updatePackageJson(workspace) {
+		function validatePackageJson(workspace) {
 			const isRoot = workspace.cwd === ".";
 			const isComponent = components.includes(workspace.cwd);
 			const isToken = workspace.cwd === "tokens";
@@ -114,7 +114,7 @@ module.exports = defineConfig({
 			 */
 			if (isComponent) {
 				const folderName = workspace.cwd?.split("/")?.[1];
-				updateComponentPackageJson(workspace, folderName);
+				validateComponentPackageJson(workspace, folderName);
 				validateLocalPackages(workspace);
 			}
 			/**
@@ -144,8 +144,12 @@ module.exports = defineConfig({
 			}
 		}
 
+		/**
+		 * This loop iterates over all the workspaces in the project
+		 * and updates the package.json file with the necessary
+		 */
 		for (const workspace of Yarn.workspaces()) {
-			updatePackageJson(workspace);
+			validatePackageJson(workspace);
 		}
 	},
 });
