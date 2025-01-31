@@ -7,6 +7,7 @@ import { CoachMarkGroup } from "./coachmark.test.js";
 import {
 	CoachmarkMenuStatesTemplate,
 	CoachMarkMediaStateTemplates,
+	CoachmarkShortcutStatesTemplate,
 } from "./template.js";
 
 /**
@@ -154,6 +155,20 @@ MediaStates.parameters = {
 	docs: {
 		story: {
 			height: "725px",
+		},
+	},
+};
+
+/** Keyboard shortcuts may be shown in place of or below the action menu. */
+export const ShortCutStories = CoachmarkShortcutStatesTemplate.bind({})
+ShortCutStories.tags = ["!dev"];
+ShortCutStories.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+	docs: {
+		story: {
+			height: "450px",
 		},
 	},
 };

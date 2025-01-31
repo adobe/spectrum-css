@@ -32,6 +32,7 @@
     "--mod-coachmark-content-line-height",
     "--mod-coachmark-header-to-body",
     "--mod-coachmark-heading-to-action-button",
+    "--mod-coachmark-keyboard-shortcut-font-family",
     "--mod-coachmark-max-width",
     "--mod-coachmark-media-fixed-height",
     "--mod-coachmark-media-min-height",
@@ -101,7 +102,8 @@
     "--spectrum-body-sans-serif-font-weight",
     "--spectrum-body-serif-font-style",
     "--spectrum-border-width-100",
-    "--spectrum-corner-radius-large-default",
+    "--spectrum-code-font-family",
+    "--spectrum-corner-radius-100",
     "--spectrum-heading-color",
     "--spectrum-line-height-200",
     "--spectrum-sans-serif-font",
@@ -117,7 +119,7 @@
     "--mod-buttongroup-justify-content",
     "--mod-buttongroup-spacing",
     "--mod-popover-border-width",
-    "--mod-popover-content-area-spacing",
+    "--mod-popover-content-area-spacing-vertical",
     "--mod-popover-corner-radius"
   ],
   "high-contrast": []

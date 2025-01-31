@@ -47,6 +47,8 @@
 	--spectrum-coachmark-step-text-line-height: var(--spectrum-line-height-200);
 	--spectrum-coachmark-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
 
+	--spectrun-coachmark-keyboard-shortcut-font-family: var(--spectrum-code-font-family);
+
 	/* @passthrough start */
 	--mod-buttongroup-justify-content: flex-end;
 	--mod-popover-border-width: var(--spectrum-border-width-100);
@@ -128,6 +130,7 @@
 }
 
 .spectrum-CoachMark-shortcut {
+	font-family: var(--mod-coachmark-keyboard-shortcut-font-family, var(--spectrun-coachmark-keyboard-shortcut-font-family));
 	white-space: nowrap;
 }
 

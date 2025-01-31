@@ -235,3 +235,26 @@ export const CoachMarkMediaStateTemplates = (args, context) =>
 			}),
 		],
 	});
+
+/* Displays shortcut with and without action menu in a single story. */
+export const CoachmarkShortcutStatesTemplate = (args, context) =>
+	Container({
+		withBorder: false,
+		withHeading: false,
+		wrapperStyles: {
+			columnGap: "100px",
+			rowGap: "200px",
+		},
+		content: [
+			Container({
+				withBorder: false,
+				heading: "With shortcut, with action menu",
+				content: Template({ ...args, hasKeyboardShortcut: true, hasActionMenu: true }, context),
+			}),
+			Container({
+				withBorder: false,
+				heading: "With shortcut menu, without action menu",
+				content: Template({ ...args, hasKeyboardShortcut: true, hasActionMenu: false }, context),
+			}),
+		],
+	});
