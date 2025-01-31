@@ -103,7 +103,7 @@ module.exports = defineConfig({
 				workspace.set("homepage", "https://opensource.adobe.com/spectrum-css");
 				workspace.set("publishConfig.access", "public");
 				workspace.set("keywords", keywords(["tokens", "css"]));
-				workspace.set("main", "dist/index.css");
+				workspace.set("main", "dist/css/index.css");
 
 				validateLocalPackages(workspace);
 			}
