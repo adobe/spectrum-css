@@ -307,7 +307,7 @@ Disabled.parameters = {
 
 /**
  * For the multiline variant, the breadcrumb title can be customized using an additional element that uses the heading classes from
- * the [typography component](?path=/docs/components-typography). The preferred heading sizes are `.spectrum-Heading--sizeS`,
+ * the [typography component](/docs/components-typography--docs). The preferred heading sizes are `.spectrum-Heading--sizeS`,
  * `.spectrum-Heading--sizeM`, `.spectrum-Heading--sizeL` (default), and `.spectrum-Heading--sizeXL`. If no heading element or classes are
  * used, the text will be sized the same as a large heading by default.
  */
