@@ -52,7 +52,7 @@
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-100);
 
-	& + .spectrum-Popover--bottom.is-open {
+	& + .spectrum-Popover--bottom-start.is-open {
 		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
 	}
 
@@ -124,7 +124,7 @@
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-75);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-75);
 
-	& + .spectrum-Popover--bottom.is-open {
+	& + .spectrum-Popover--bottom-start.is-open {
 		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-small);
 	}
 }
@@ -146,7 +146,7 @@
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-200);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-200);
 
-	& + .spectrum-Popover--bottom.is-open {
+	& + .spectrum-Popover--bottom-start.is-open {
 		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-large);
 	}
 }
@@ -168,7 +168,7 @@
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
 
-	& + .spectrum-Popover--bottom.is-open {
+	& + .spectrum-Popover--bottom-start.is-open {
 		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-extra-large);
 	}
 }
@@ -409,7 +409,7 @@
 	margin-inline-end: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
 }
 
-.spectrum-Picker + .spectrum-Popover--bottom.is-open {
+.spectrum-Picker + .spectrum-Popover--bottom-start.is-open {
 	transform: translateY(var(--mod-picker-spacing-picker-to-popover, var(--spectrum-picker-spacing-picker-to-popover)));
 }
 

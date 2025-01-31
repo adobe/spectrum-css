@@ -12,11 +12,12 @@ import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./temp
 
 /**
  * A popover is used to display transient content (menus, options, additional actions, etc.) and appears when clicking/tapping on a source (tools, buttons, etc.).
- * It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
+ * It stands out via its visual style (stroke and/or drop shadow) and floats on top of the rest of the interface.
  *
+ * ## Usage notes
  * - Popover's position and distance to its source should be handled by the implementation. Positioning in Storybook is only for demonstration purposes.
- * - When the `.is-open` class is present, popover is offset from the source by the spacing value defined in `--spectrum-popover-animation-distance`. This
- * offset is done with a CSS transform and animates with a CSS transition.
+ * - When the `.is-open` class is present, popover is offset from the source by the spacing value defined in `--spectrum-popover-animation-distance`. This offset is done with a CSS transform and animates with a CSS transition.
+ * - There may be cases where a popover has another sibling popover. Implementations can add `margin` styles to the sibling popover, set to `--spectrum-popover-animation-distance`, within their popover position calculations. See [the nested popover story](/docs/components-popover--docs#nested) below for an example.
  */
 export default {
 	title: "Popover",
@@ -81,8 +82,8 @@ export default {
 		isOpen: true,
 		withTip: false,
 		position: "bottom",
-		popoverHeight: 142,
-		popoverWidth: 89,
+		popoverHeight: 158,
+		popoverWidth: 105,
 	},
 	parameters: {
 		layout: "centered",
@@ -101,10 +102,10 @@ export default {
 };
 
 /**
- * By default, popovers do not have a tip. Popovers without a tip should be used when the source has a
- * visually distinct down state, in order to show the connection between the popover and its source.
+ * By default, popovers do not have a tip and are positioned at the top. Popovers without a tip should be used when the source has a
+ * visually distinct [down state](/docs/foundations-down-state--docs), in order to show the connection between the popover and its source.
  *
- * This example uses the [menu](?path=/docs/components-menu--docs) component within the popover, and a button as the source.
+ * This example uses the [menu](/docs/components-menu--docs) component within the popover, has a position of `bottom`, and uses a button as the source.
  */
 export const Default = PopoverGroup.bind({});
 Default.args = {
@@ -163,6 +164,10 @@ Nested.args = {
 		(passthroughs, context) => Template({
 			position: "end-top",
 			isOpen: true,
+			customStyles: {
+				// nested popover spacing so that adjacent `.spectrum-Popover` divs don't "touch"
+				"margin": "var(--spectrum-popover-animation-distance)",
+			},
 			trigger: (passthroughs, context) => ActionButton({
 				label: "More actions",
 				...passthroughs,
@@ -231,7 +236,7 @@ WithTip.parameters = {
  */
 // @see https://opensource.adobe.com/spectrum-web-components/components/popover/#dialog-popovers
 export const DialogStyle = Template.bind({});
-DialogStyle.storyName = "Dialog style content";
+DialogStyle.storyName = "Dialog-style content";
 DialogStyle.tags = ["!dev"];
 DialogStyle.args = {
 	withTip: true,
