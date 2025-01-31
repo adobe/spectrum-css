@@ -144,6 +144,10 @@ module.exports = defineConfig({
 			}
 		}
 
+		/**
+		 * This loop iterates over all the workspaces in the project
+		 * and updates the package.json file with the necessary
+		 */
 		for (const workspace of Yarn.workspaces()) {
 			updatePackageJson(workspace);
 		}
