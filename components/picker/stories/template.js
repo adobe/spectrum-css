@@ -143,11 +143,14 @@ export const Template = ({
 	const popoverMarkup = popoverContent.length !== 0 ? Popover({
 		isOpen: isOpen && !isDisabled && !isLoading,
 		withTip: false,
-		position: "bottom",
+		position: "bottom-start",
 		isQuiet,
 		content: popoverContent,
 		size,
 		customStyles: customPopoverStyles,
+		popoverWrapperStyles: {
+			"display": "block",
+		},
 	}, context) : "";
 
 	const helpTextMarkup = helpText ? HelpText({
