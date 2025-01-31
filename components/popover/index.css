@@ -14,48 +14,44 @@
 @import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Popover {
-	--spectrum-popover-border-width: var(--spectrum-border-width-100);
-
-	/* animation distance is equal to and responsible for popover offset */
+	/* animation distance is equal to and responsible for popover offset ("spacing" tip to source) */
 	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
 
 	--spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
-	--spectrum-popover-border-color: var(--spectrum-gray-400);
+
+	/* TODO: Cannot use popover-border-color token until the value no longer has the rgba() function alpha/opacity. We should be able to refactor instances of `--spectrum-popover-border-color-rgb` with `--spectrum-popover-border-color` once this is available. */
+	/* --spectrum-popover-border-color-default: var(--spectrum-popover-border-color); */
+	--spectrum-popover-border-color-rgb: var(--spectrum-gray-200-rgb);
+	--spectrum-popover-border-transparency: var(--spectrum-popover-border-opacity);
+	--spectrum-popover-border-color-with-transparency: rgba(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency));
 
 	--spectrum-popover-border-width: var(--spectrum-border-width-100);
 
 	/* popover inner padding */
-	--spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
+	--spectrum-popover-content-area-spacing: var(--spectrum-popover-edge-to-content-area);
 
 	/* popover drop shadow */
-	--spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
-	--spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
-	--spectrum-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
-	--spectrum-popover-shadow-color: var(--spectrum-drop-shadow-color);
+	--spectrum-popover-drop-shadow-x: var(--spectrum-drop-shadow-elevated-x);
+	--spectrum-popover-drop-shadow-y: var(--spectrum-drop-shadow-elevated-y);
+	--spectrum-popover-drop-shadow-blur: var(--spectrum-drop-shadow-elevated-blur);
+	--spectrum-popover-drop-shadow-color: var(--spectrum-drop-shadow-elevated-color);
 
 	/* popover corner radius */
-	--spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
+	--spectrum-popover-corner-radius: var(--spectrum-corner-radius-large-default);
 
 	/* pointer tip dimensions */
 	--spectrum-popover-pointer-width: var(--spectrum-popover-tip-width);
 	--spectrum-popover-pointer-height: var(--spectrum-popover-tip-height);
 
 	/* pointer tip - default spacing to edge - corner radius plus half of tip width to neutralize override */
-	--spectrum-popover-pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + (var(--spectrum-popover-tip-width) / 2));
+	--spectrum-popover-pointer-edge-offset: calc(var(--spectrum-popover-corner-radius) + (var(--spectrum-popover-tip-width) / 2));
 
 	/* pointer tip - spacing to edge will center pointer to source - apply in markup by setting '--spectrum-popover-pointer-edge-offset' value == half of source */
 	--spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - (var(--spectrum-popover-tip-width) / 2));
 }
 
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Popover {
-		--highcontrast-popover-border-color: CanvasText;
-	}
-}
-
 .spectrum-Popover {
-	--spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
+	--spectrum-popover-filter: drop-shadow(var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color)));
 	@extend %spectrum-overlay;
 
 	box-sizing: border-box;
@@ -63,14 +59,15 @@
 
 	outline: none; /* Hide focus outline */
 
-	padding: var(--mod-popover-content-area-spacing-vertical, var(--spectrum-popover-content-area-spacing-vertical)) 0;
+	padding: var(--mod-popover-content-area-spacing, var(--spectrum-popover-content-area-spacing));
 
 	display: inline-flex;
 	flex-direction: column;
 
 	border-style: solid;
 	border-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
-	border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
+	border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency)));
+
 	border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 
 	background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
@@ -84,7 +81,7 @@
 				stroke-linecap: square;
 				stroke-linejoin: miter;
 				fill: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
-				stroke: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
+				stroke: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency)));
 				stroke-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 			}
 		}
@@ -148,7 +145,7 @@
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
 		/* stylelint-disable-next-line csstools/use-logical -- intentional, right stays on the same side even for RTL */
-		margin-left: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-left: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
 	}
 
 	/* popover animates towards right ⮕ */
@@ -165,7 +162,7 @@
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
 		/* stylelint-disable-next-line csstools/use-logical -- intentional, left stays on the same side even for RTL */
-		margin-right: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-right: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
 	}
 
 	/* popover animates towards left ⬅ */
@@ -181,7 +178,7 @@
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-end: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-inline-end: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
 	}
 
 	/* LTR read, popover animates towards left ⬅ */
@@ -202,7 +199,7 @@
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-start: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-inline-start: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
 	}
 
 	/* LTR read, popover animates towards right ⮕ */
@@ -413,5 +410,12 @@
 				transform: scaleX(1);
 			}
 		}
+	}
+}
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-Popover {
+		--highcontrast-popover-border-color: CanvasText;
 	}
 }
