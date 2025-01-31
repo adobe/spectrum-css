@@ -113,6 +113,7 @@ export const Default = CoachMarkGroup.bind({});
 Default.title = "Standard";
 Default.tags = ["!autodocs"];
 Default.args = {
+	title: "Coach mark title",
 	image: "example-card-landscape.png",
 	hasKeyboardShortcut: false,
 };
@@ -160,7 +161,7 @@ MediaStates.parameters = {
 };
 
 /** Keyboard shortcuts may be shown in place of or below the action menu. */
-export const ShortCutStories = CoachmarkShortcutStatesTemplate.bind({})
+export const ShortCutStories = CoachmarkShortcutStatesTemplate.bind({});
 ShortCutStories.tags = ["!dev"];
 ShortCutStories.parameters = {
 	chromatic: {
