@@ -1,0 +1,10 @@
+.elements {
+  --spectrum-transparent-white-100-rgb: 215, 134, 255;
+  --spectrum-transparent-white-100-opacity: 0.71;
+  --spectrum-transparent-white-100: rgba(var(--spectrum-transparent-white-100-rgb), var(--spectrum-transparent-white-100-opacity));
+  --spectrum-disabled-static-white-content-color: var(--spectrum-transparent-white-100);
+  --spectrum-transparent-black-400-rgb: 0, 1, 100;
+  --spectrum-transparent-black-400-opacity: 0.47;
+  --spectrum-transparent-black-400: rgba(var(--spectrum-transparent-black-400-rgb), var(--spectrum-transparent-black-400-opacity));
+  --spectrum-disabled-static-black-content-color: var(--spectrum-transparent-black-400);
+}
