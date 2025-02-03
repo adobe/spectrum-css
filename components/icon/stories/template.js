@@ -109,7 +109,7 @@ export const Template = ({
 	// Make sure icon set is provided.
 	if (!setName) {
 		console.warn(
-			`Icon ${idKey} is missing its icon set. Make sure you are explicitly setting either the workflow or ui icon set.`
+			`Icon "${idKey}" is missing its icon set. Make sure you are explicitly setting either the workflow or ui icon set.`
 		);
 		return html``;
 	}
@@ -193,12 +193,6 @@ export const Template = ({
 		}
 	}
 
-	// Fetch SVG file markup.
-	let svgString;
-	if (!useRef && icons && icons[setName]?.[idKey]) {
-		svgString = icons[setName][idKey];
-	}
-
 	/**
 	 * Classes to apply to the SVG element. Object as used by the classMap function.
 	 * @type {[name: string]: string | boolean | number}
@@ -213,23 +207,37 @@ export const Template = ({
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 	};
 
-	// If not using the reference to the icon within the sprite sheet, return the individual SVG's entire markup.
-	if (!useRef && svgString) {
-		const classesAsString = Object.entries(classList).reduce((acc, [key, value]) => {
-			if (value) acc += `${key} `;
-			return acc;
-		}, "");
+	/**
+	 * Full SVG file markup (from loader data), when not using a reference to the sprite sheet.
+	 */
+	if (!useRef) {
+		let svgString;
+		if (icons && icons[setName]?.[idKey]) {
+			svgString = icons[setName][idKey];
+		}
 
-		return html`${unsafeSVG(
-			svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
-		)}`;
+		// Return the individual SVG's entire markup.
+		if (svgString) {
+			const classesAsString = Object.entries(classList).reduce((acc, [key, value]) => {
+				if (value) acc += `${key} `;
+				return acc;
+			}, "");
+
+			return html`${unsafeSVG(
+				svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
+			)}`;
+		}
+		else {
+			console.warn(`Could not find SVG markup for "${idKey}". Falling back to using the sprite sheet reference instead.`);
+		}
 	}
 
 	/**
 	 * ID of the icon within the sprite sheet, for the value of the hrefs within the SVG <use> element.
 	 *
-	 * ui ID: #spectrum-css-icon-${idKey}
-	 * workflow ID: #icon-${idKey}
+	 * Example of the format of IDs within the sprite sheet:
+	 *   ui ID: #spectrum-css-icon-${idKey}
+	 *   workflow ID: #icon-${idKey}
 	 */
 	const iconID =
 		setName !== "workflow"
