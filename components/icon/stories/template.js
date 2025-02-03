@@ -85,6 +85,7 @@ export const Template = ({
 		iconName = uiIconName;
 	}
 
+	// Make sure icon name is provided.
 	if (!iconName) {
 		console.warn(
 			"Icon: Could not render a result because no icon name was provided to the icon template."
@@ -103,6 +104,14 @@ export const Template = ({
 		setName === "ui"
 	) {
 		idKey = idKey.replace(/(Right|Left|Down|Up)/, "");
+	}
+
+	// Make sure icon set is provided.
+	if (!setName) {
+		console.warn(
+			`Icon ${idKey} is missing its icon set. Make sure you are explicitly setting either the workflow or ui icon set.`
+		);
+		return html``;
 	}
 
 	/**
@@ -184,32 +193,6 @@ export const Template = ({
 		}
 	}
 
-	// If icon set was not provided, try to determine which icon set contains this icon.
-	// Note: icon sets can contain the same icon name, with different icons.
-	if (!["workflow","ui"].includes(setName)) {
-		if (workflowIcons.some(key => cleanWorkflowIcon(key) === idKey)) {
-			setName = "workflow";
-		}
-		else if (uiIcons.some(ui => ui.includes(idKey))) {
-			setName = "ui";
-		}
-
-		if (["workflow","ui"].includes(setName)) {
-			console.warn(`The icon set was not provided for "${iconName}". It is recommended to always set the icon set, as icons may reside in both sets. As a best guess based on the icon name, the set "${setName}" was selected.`);
-		}
-	}
-
-	if (!setName) {
-		console.warn(
-			`Icon: Could not determine the icon set for the provided icon name: ${idKey}.`
-		);
-		return html``;
-	}
-
-	// Set optional fill color.
-	let inlineStyle;
-	if (fill) inlineStyle = `color: ${fill}`;
-
 	// Fetch SVG file markup.
 	let svgString;
 	if (!useRef && icons && icons[setName]?.[idKey]) {
@@ -258,7 +241,7 @@ export const Template = ({
 	return html`<svg
 		class=${classMap(classList)}
 		id=${ifDefined(id)}
-		style=${ifDefined(inlineStyle)}
+		style=${ifDefined(fill ? `color: ${fill};` : undefined)}
 		focusable="false"
 		aria-hidden="true"
 		aria-label=${iconName}
