@@ -1,5 +1,12 @@
 # Change Log
 
+## 12.0.1
+
+### Patch Changes
+
+- Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
+  - @spectrum-css/table@8.0.1
+
 ## 12.0.0
 
 ### Major Changes

@@ -1,5 +1,24 @@
 # Change Log
 
+## 7.0.1
+
+### Patch Changes
+
+- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes a bug in the content of the `dist/index-theme.css` file.
+
+  Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
+
+  Expected output example for the index-theme.css:
+
+  ```
+  .spectrum-ActionButton {
+   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+  ```
+
+- Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
+  - @spectrum-css/icon@9.0.1
+
 ## 7.0.0
 
 ### Major Changes
