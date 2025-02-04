@@ -5,7 +5,7 @@ import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { IconGroup } from "./icon.test.js";
 import { FullIconSetTemplate, Template, UIArrowsTemplate, UIDefaultTemplate, WorkflowDefaultTemplate } from "./template";
-import { cleanWorkflowIcon, uiIconsWithDirections, workflowIcons, workflowSizes } from "./utilities.js";
+import { uiIconsWithDirections, workflowIconsCleaned, workflowSizes } from "./utilities.js";
 
 /**
  * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
@@ -35,7 +35,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: workflowIcons.map((iconName) => cleanWorkflowIcon(iconName)),
+			options: workflowIconsCleaned,
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
 		},
@@ -59,7 +59,16 @@ export default {
 			},
 			control: "color",
 		},
-		useRef: { table: { disable: true } },
+		useRef: {
+			name: "Use sprite sheet reference",
+			description: "Storybook only: whether to display an SVG with a `<use>` reference to the icon within a loaded sprite sheet. This improves Storybook performance, especially for multiple icons. When set to `false`, the icon file's full markup is used.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Advanced",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Icon",

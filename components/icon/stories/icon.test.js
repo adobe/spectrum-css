@@ -55,7 +55,7 @@ export const TestTemplate = (args) => html`
 					"File",
 					"Folder",
 					"MenuHamburger",
-					"SelectCircularSubtract",
+					"SelectRectangle",
 					"Redo",
 					"Star",
 					"StarFilled",
@@ -111,7 +111,7 @@ export const TestTemplate = (args) => html`
 								...args,
 								setName: "ui",
 								useRef: false,
-								iconName: `${iconName}${scale}`,
+								uiIconName: `${iconName}${scale}`,
 							});
 						}
 					});
