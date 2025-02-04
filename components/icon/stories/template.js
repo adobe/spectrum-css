@@ -6,7 +6,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
-import { cleanWorkflowIcon, fetchIconDetails, uiIconsWithDirections, workflowIcons } from "./utilities.js";
+import { fetchIconDetails, getSpriteSheetName, uiIconsWithDirections, workflowIconsCleaned } from "./utilities.js";
 
 import "../index.css";
 
@@ -97,8 +97,9 @@ export const Template = ({
 	// directional icons that use a single icon.
 	let idKey = iconName;
 
-	// If a descriptor like Right, Left, Down, or Up is present for the UI icons Chevron or
-	// Arrow, use that only for the class and not the icon fetch.
+	// If a descriptor like "Right", "Left", "Down", or "Up" is present for the UI icons Chevron or
+	// Arrow, use that only for the class name and not the icon fetch. This is because these use a
+	// single icon file that is rotated in CSS.
 	if (
 		["Right", "Left", "Down", "Up"].some((c) => idKey.includes(c)) &&
 		setName === "ui"
@@ -232,18 +233,8 @@ export const Template = ({
 		}
 	}
 
-	/**
-	 * ID of the icon within the sprite sheet, for the value of the hrefs within the SVG <use> element.
-	 *
-	 * Example of the format of IDs within the sprite sheet:
-	 *   ui ID: #spectrum-css-icon-${idKey}
-	 *   workflow ID: #icon-${idKey}
-	 */
-	const iconID =
-		setName !== "workflow"
-			? `spectrum-css-icon-${idKey}`
-			// replace two consecutive capital letters with a dash
-			: `icon-${cleanWorkflowIcon(idKey).replaceAll(/(\w)([A-Z])/g, "$1-$2").replaceAll(/(\w)([A-Z])/g, "$1-$2").replace("C-C-", "cc-").replace("_", "-").toLowerCase()}`;
+	// ID of the icon within the sprite sheet for its icon set.
+	const iconID = getSpriteSheetName(idKey, setName);
 
 	// Return SVG markup with a reference to the icon ID within the sprite sheet.
 	return html`<svg
@@ -275,7 +266,7 @@ export const FullIconSetTemplate = (args) => {
 			})}
 		>
 			${when(args.setName === "workflow", () => {
-				return workflowIcons.sort().map((iconName) => IconWithLabelTemplate({ ...args, iconName }));
+				return workflowIconsCleaned.sort().map((iconName) => IconWithLabelTemplate({ ...args, iconName }));
 			}, () => {
 				return uiIconsWithDirections.sort().map((iconName) => IconWithLabelTemplate({ ...args, uiIconName: iconName }));
 			})}
@@ -297,18 +288,19 @@ export const IconWithLabelTemplate = (args) => html`
 		})}
 	>
 		${Template({
-			...args,
-			iconName: args.setName == "ui" ? args.uiIconName : args.iconName,
-			setName: args.setName,
-			size: "xxl",
 			useRef: true,
+			size: "xxl",
+			setName: args.setName,
+			iconName: args?.iconName ?? undefined,
+			uiIconName: args?.uiIconName ?? undefined,
+			...args,
 		})}
 		${Typography({
 			customClasses: ["chromatic-ignore"],
 			semantics: "body",
 			size: "xxs",
 			content: [
-				args.setName == "ui" ? args.uiIconName : cleanWorkflowIcon(args.iconName),
+				args.setName == "ui" ? args.uiIconName : args.iconName,
 			],
 		})}
 	</div>
@@ -328,7 +320,8 @@ export const IconListTemplate = (args, iconsList = []) => html`
 		${iconsList.map(
 			(iconName) => Template({
 				...args,
-				iconName,
+				iconName: args?.setName === "workflow" ? iconName : undefined,
+				uiIconName: args?.setName === "ui" ? iconName : undefined,
 			})
 		)}
 	</div>
