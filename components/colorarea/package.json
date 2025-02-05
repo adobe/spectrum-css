@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/colorarea",
-	"version": "6.0.0-next.0",
+	"version": "7.0.1",
 	"description": "The Spectrum CSS Color Area component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,12 +25,12 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/colorhandle": ">=9.0.0-next.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/colorhandle": ">=8",
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
-		"@spectrum-css/colorhandle": "9.0.0-next.0",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/colorhandle": "10.0.1",
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",

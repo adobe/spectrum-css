@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/datepicker",
-	"version": "4.0.0-next.1",
+	"version": "4.0.1",
 	"description": "The Spectrum CSS datepicker component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,18 +25,18 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/calendar": ">=5.3.1-next.0",
-		"@spectrum-css/pickerbutton": ">=6.0.0-next.0",
-		"@spectrum-css/popover": ">=8.0.0-next.0",
-		"@spectrum-css/textfield": ">=7.3.1-next.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/calendar": ">=5",
+		"@spectrum-css/pickerbutton": ">=5",
+		"@spectrum-css/popover": ">=8",
+		"@spectrum-css/textfield": ">=7",
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
-		"@spectrum-css/calendar": "5.3.1-next.0",
-		"@spectrum-css/pickerbutton": "6.0.0-next.1",
-		"@spectrum-css/popover": "8.0.0-next.1",
-		"@spectrum-css/textfield": "7.3.1-next.0",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/calendar": "7.0.1",
+		"@spectrum-css/pickerbutton": "6.0.1",
+		"@spectrum-css/popover": "8.0.1",
+		"@spectrum-css/textfield": "8.0.1",
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",

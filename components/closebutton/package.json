@@ -1,10 +1,10 @@
 {
 	"name": "@spectrum-css/closebutton",
-	"version": "5.0.0-next.2",
+	"version": "6.0.1",
 	"description": "The Spectrum CSS close button component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/closebutton",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-close-button--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -24,21 +24,14 @@
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"stories/*",
-		"metadata/*"
-	],
 	"peerDependencies": {
 		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "^9.1.4-next.1",
+		"@spectrum-css/commons": "11.0.0",
 		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",

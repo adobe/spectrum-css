@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/assetcard",
-	"version": "4.2.1-next.0",
+	"version": "5.0.1",
 	"description": "The Spectrum CSS asset card component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -26,7 +26,7 @@
 	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/checkbox": ">=10",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/checkbox": {
@@ -35,7 +35,7 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/checkbox": "10.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",

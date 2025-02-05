@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/slider",
-	"version": "5.5.2-next.0",
+	"version": "6.0.1",
 	"description": "The Spectrum CSS slider component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,12 +25,12 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/stepper": ">=6.3.1-next.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/stepper": ">=6",
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
-		"@spectrum-css/stepper": "6.3.1-next.0",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/stepper": "7.0.1",
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",

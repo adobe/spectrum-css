@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/colorhandle",
-	"version": "9.0.0-next.0",
+	"version": "10.0.1",
 	"description": "The Spectrum CSS Color Handle component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,9 +25,9 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/colorloupe": ">=6.0.0-next.0",
-		"@spectrum-css/opacitycheckerboard": ">=3.0.0-next.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/colorloupe": ">=5",
+		"@spectrum-css/opacitycheckerboard": ">=2",
+		"@spectrum-css/tokens": ">=16"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorloupe": {
@@ -35,9 +35,9 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/colorloupe": "6.0.0-next.0",
-		"@spectrum-css/opacitycheckerboard": "3.0.0-next.0",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/colorloupe": "7.0.1",
+		"@spectrum-css/opacitycheckerboard": "4.0.1",
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",
