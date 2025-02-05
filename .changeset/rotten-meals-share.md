@@ -2,7 +2,7 @@
 "@spectrum-css/popover": major
 ---
 
-S2 Popover Migration
+## S2 Popover Migration
 
 The S2 popover using new tokens for border color, padding, corner radius and elevation/drop shadows.
 

@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/dialog",
-	"version": "11.0.0-next.0",
+	"version": "12.1.0",
 	"description": "The Spectrum CSS dialog component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -27,10 +27,10 @@
 	"peerDependencies": {
 		"@spectrum-css/button": ">=14.0.0-next.0",
 		"@spectrum-css/buttongroup": ">=9.0.0 <10.0.0",
-		"@spectrum-css/closebutton": ">=5.0.0-next.0",
+		"@spectrum-css/closebutton": ">=6.0.0 <7.0.0",
 		"@spectrum-css/divider": ">=5.0.0 <6.0.0",
 		"@spectrum-css/modal": ">=7.0.0 <8.0.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0",
 		"@spectrum-css/underlay": ">=6.0.0 <7.0.0"
 	},
 	"peerDependenciesMeta": {
@@ -57,12 +57,12 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/button": "14.0.0-next.7",
+		"@spectrum-css/button": "14.1.1",
 		"@spectrum-css/buttongroup": "9.1.0",
-		"@spectrum-css/closebutton": "5.0.0-next.2",
+		"@spectrum-css/closebutton": "6.1.0",
 		"@spectrum-css/divider": "5.1.0",
 		"@spectrum-css/modal": "7.1.0",
-		"@spectrum-css/tokens": "14.0.0-next.12",
+		"@spectrum-css/tokens": "16.0.1",
 		"@spectrum-css/typography": "8.1.0",
 		"@spectrum-css/underlay": "6.1.0"
 	},

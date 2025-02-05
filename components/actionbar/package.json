@@ -26,10 +26,10 @@
 	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/actiongroup": ">=6.0.0 <7.0.0",
-		"@spectrum-css/closebutton": ">=5.0.0-next.0",
+		"@spectrum-css/closebutton": ">=6.0.0 <7.0.0",
 		"@spectrum-css/fieldlabel": ">=10.0.0 <11.0.0",
 		"@spectrum-css/popover": ">=8.0.0 <9.0.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actiongroup": {
@@ -50,10 +50,10 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/actiongroup": "6.1.0",
-		"@spectrum-css/closebutton": "5.0.0-next.2",
+		"@spectrum-css/closebutton": "6.1.0",
 		"@spectrum-css/fieldlabel": "10.1.0",
 		"@spectrum-css/popover": "8.2.0",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/tokens": "16.0.1"
 	},
 	"keywords": [
 		"design-system",

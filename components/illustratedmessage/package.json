@@ -25,11 +25,19 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14.0.0-next.0",
-		"@spectrum-css/typography": ">=8"
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0",
+		"@spectrum-css/typography": ">=8.0.0 <9.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/tokens": {
+			"optional": true
+		},
+		"@spectrum-css/typography": {
+			"optional": true
+		}
 	},
 	"devDependencies": {
-		"@spectrum-css/tokens": "14.0.0-next.12",
+		"@spectrum-css/tokens": "16.0.1",
 		"@spectrum-css/typography": "8.1.0"
 	},
 	"keywords": [
@@ -50,13 +58,5 @@
 			"rootClass": "spectrum-IllustratedMessage",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/illustrated-message/"
 		}
-	],
-	"peerDependenciesMeta": {
-		"@spectrum-css/tokens": {
-			"optional": true
-		},
-		"@spectrum-css/typography": {
-			"optional": true
-		}
-	}
+	]
 }
