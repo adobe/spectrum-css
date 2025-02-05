@@ -21,7 +21,6 @@
   ],
   "component": [
     "--spectrum-progress-circle-fill-border-color",
-    "--spectrum-progress-circle-fill-border-color-over-background",
     "--spectrum-progress-circle-size",
     "--spectrum-progress-circle-size-large",
     "--spectrum-progress-circle-size-medium",
@@ -30,8 +29,7 @@
     "--spectrum-progress-circle-thickness-large",
     "--spectrum-progress-circle-thickness-medium",
     "--spectrum-progress-circle-thickness-small",
-    "--spectrum-progress-circle-track-border-color",
-    "--spectrum-progress-circle-track-border-color-over-background"
+    "--spectrum-progress-circle-track-border-color"
   ],
   "global": [
     "--spectrum-accent-content-color-default",
@@ -39,9 +37,7 @@
     "--spectrum-static-black-track-indicator-color",
     "--spectrum-static-white-track-color",
     "--spectrum-static-white-track-indicator-color",
-    "--spectrum-track-color",
-    "--spectrum-transparent-white-1000",
-    "--spectrum-transparent-white-400"
+    "--spectrum-track-color"
   ],
   "passthroughs": [],
   "high-contrast": [
