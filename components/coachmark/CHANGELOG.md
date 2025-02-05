@@ -1,5 +1,19 @@
 # Change Log
 
+## 9.1.0-next.0
+
+### Minor Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`f158499`](https://github.com/adobe/spectrum-css/commit/f15849905f28815ebd70198ffaac7532fb37c253) Thanks [@pfulton](https://github.com/pfulton)! - CSS references to popover custom properties/tokens were updated to reflect some mod name changes in the S2 popover (#3365). The corner radius token was updated to correspond to the new S2 popover corner radius, as well as some updated popover mod names:
+
+  - `--mod-popover-content-area-spacing-vertical` was updated to `--mod-popover-content-area-spacing`.
+  - `--spectrum-border-width-100` was updated to `--spectrum-corner-radius-large-default`
+
+### Patch Changes
+
+- Updated dependencies [[`f158499`](https://github.com/adobe/spectrum-css/commit/f15849905f28815ebd70198ffaac7532fb37c253)]:
+  - @spectrum-css/popover@9.0.0-next.0
+
 ## 8.0.0-next.0
 
 ### Patch Changes

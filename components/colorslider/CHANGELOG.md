@@ -1,5 +1,17 @@
 # Change Log
 
+## 8.1.0-next.0
+
+### Minor Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`8381dd0`](https://github.com/adobe/spectrum-css/commit/8381dd01378a977341c1158877abe39f07d2e21b) Thanks [@pfulton](https://github.com/pfulton)! - # S2 colorslider migration
+
+  This migrates the `colorslider` component to S2. Custom properties have been remapped per the design spec.
+
+  | Before                    | After                      |
+  | ------------------------- | -------------------------- |
+  | `--spectrum-gray-900-rgb` | `--spectrum-gray-1000-rgb` |
+
 ## 7.0.0-next.0
 
 ### Patch Changes

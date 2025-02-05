@@ -1,5 +1,28 @@
 # Change Log
 
+## 9.0.0-next.0
+
+### Major Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`f158499`](https://github.com/adobe/spectrum-css/commit/f15849905f28815ebd70198ffaac7532fb37c253) Thanks [@pfulton](https://github.com/pfulton)! - S2 Popover Migration
+
+  The S2 popover using new tokens for border color, padding, corner radius and elevation/drop shadows.
+
+  Renamed Mods
+
+  | Old mod                                       | New mod                              |
+  | --------------------------------------------- | ------------------------------------ |
+  | `--mod-popover-shadow-blur`                   | `--mod-popover-drop-shadow-blur`     |
+  | `--mod-popover-shadow-color`                  | `--mod-popover-drop-shadow-color`    |
+  | `--mod-popover-shadow-horizontal`             | `--mod-popover-drop-shadow-x`        |
+  | `--mod-popover-shadow-vertical`               | `--mod-popover-drop-shadow-y`        |
+  | `--mod-popover-content-area-spacing-vertical` | `--mod-popover-content-area-spacing` |
+
+### Patch Changes
+
+- Updated dependencies [[`8a4ab84`](https://github.com/adobe/spectrum-css/commit/8a4ab8476f4e606b9c020b780baf29248e4f8f24)]:
+  - @spectrum-css/dialog@13.0.0-next.0
+
 ## 8.0.0-next.1
 
 ### Patch Changes

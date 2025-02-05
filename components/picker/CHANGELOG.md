@@ -1,5 +1,15 @@
 # Change Log
 
+## 9.0.2-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`f158499`](https://github.com/adobe/spectrum-css/commit/f15849905f28815ebd70198ffaac7532fb37c253) Thanks [@pfulton](https://github.com/pfulton)! - S2 Popover has an updated default position, bottom-start. The correct `.spectrum-Popover--bottom-start` class was added to the open popover selector blocks for picker so that the spacing from the picker to the popover is correctly adjusted.
+
+- Updated dependencies [[`e911854`](https://github.com/adobe/spectrum-css/commit/e911854a7f9bd4ffccebe6bba78fa967d3046450), [`f158499`](https://github.com/adobe/spectrum-css/commit/f15849905f28815ebd70198ffaac7532fb37c253)]:
+  - @spectrum-css/progresscircle@6.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+
 ## 9.0.0-next.1
 
 ### Patch Changes

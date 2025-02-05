@@ -1,5 +1,30 @@
 # Change Log
 
+## 6.0.0-next.0
+
+### Major Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`e911854`](https://github.com/adobe/spectrum-css/commit/e911854a7f9bd4ffccebe6bba78fa967d3046450) Thanks [@pfulton](https://github.com/pfulton)! - ## Progress circle S2 migration
+
+  This is the S2 migration of the progress circle. The original markup has changed to an svg and circle element to allow CSS styles such as `stroke-linecap`. This was necessary to match the design. The `--small/--medium/--large` sizing classes have been deprecated in favor of t-shirt classes `--sizeS/--sizeM/--sizeL`
+
+  ### Animation
+
+  `@keyframes spectrum-dashoffset-animation`:
+  This animation was created by React Spectrum and used to keep the same speed and bezier curve.
+
+  ### Added tokens
+
+  ### Removed styles & mods
+
+  `--spectrum-progress-circle-track-border-color-over-background`
+  `--spectrum-progress-circle-fill-border-color-over-background`
+  `--spectrum-progress-circle-track-border-style`
+  `--spectrum-progress-circle-track-border-style`
+  `--highcontrast-progress-circle-track-border-style`
+  `--mod-progress-circle-track-border-style`
+  `--spectrum-progress-circle-track-border-style`
+
 ## 5.0.1
 
 ### Patch Changes
