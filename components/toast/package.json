@@ -25,9 +25,24 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/button": ">=14",
-		"@spectrum-css/icon": ">=9",
+		"@spectrum-css/button": ">=14.0.0 <15.0.0",
+		"@spectrum-css/closebutton": ">=6.0.0 <7.0.0",
+		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
 		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/button": {
+			"optional": true
+		},
+		"@spectrum-css/closebutton": {
+			"optional": true
+		},
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
 	},
 	"devDependencies": {
 		"@spectrum-css/button": "14.1.1",
@@ -53,16 +68,5 @@
 			"rootClass": "spectrum-Toast",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/toast/"
 		}
-	],
-	"peerDependenciesMeta": {
-		"@spectrum-css/button": {
-			"optional": true
-		},
-		"@spectrum-css/icon": {
-			"optional": true
-		},
-		"@spectrum-css/tokens": {
-			"optional": true
-		}
-	}
+	]
 }
