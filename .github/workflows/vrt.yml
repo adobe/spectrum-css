@@ -4,6 +4,7 @@ on:
     push:
       branches:
         - main
+        - spectrum-two
         - "!changeset-release/**"
         - "!dependabot/**"
     workflow_dispatch:
