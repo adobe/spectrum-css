@@ -17,11 +17,16 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const { deflate } = require("zlib");
+const { promisify } = require("util");
+
 const postcss = require("postcss");
 const postcssrc = require("postcss-load-config");
 const prettier = require("prettier");
 
 require("colors");
+
+const gzip = promisify(deflate);
 
 const {
 	dirs,
@@ -72,15 +77,17 @@ async function processCSS(
 		}
 	}
 
+	// If the output file is a minified file, force the minify flag to true
+	if (output && path.basename(output, ".css").endsWith(".min")) minify = true;
+
 	const ctx = {
 		cwd,
 		env: process.env.NODE_ENV ?? "development",
-		file: output,
+		file: output ?? input,
 		from: input,
-		to: output,
+		to: output ?? input,
 		verbose: false,
 		minify,
-		shouldCombine: true,
 		...postCSSOptions,
 	};
 
@@ -91,7 +98,7 @@ async function processCSS(
 
 	const result = await postcss(plugins).process(content, {
 		from: input,
-		to: output,
+		to: output ?? input,
 		...options
 	});
 
@@ -139,6 +146,12 @@ async function processCSS(
 		writeAndReport(formatted, output, { cwd }),
 	];
 
+	if (minify) {
+		promises.push(
+			gzip(formatted).then(zipped => writeAndReport(zipped, `${output}.gz`, { cwd }))
+		);
+	}
+
 	if (result.map) {
 		promises.push(
 			writeAndReport(result.map.toString().trimStart(), `${output}.map`, { cwd }),
@@ -155,7 +168,7 @@ async function processCSS(
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
+async function build({ cwd = process.cwd(), clean = false, minify = false, componentName } = {}) {
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
@@ -163,14 +176,24 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		componentName = getPackageFromPath(cwd);
 	}
 
-	return processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
-		cwd,
-		clean,
-		skipMapping: true,
-		referencesOnly: false,
-		preserveVariables: true,
-		stripLocalSelectors: false,
-	});
+	return Promise.all([
+		processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
+			cwd,
+			clean,
+			skipMapping: true,
+			referencesOnly: false,
+			preserveVariables: true,
+			stripLocalSelectors: false,
+		}),
+		minify ? processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.min.css"), {
+			cwd,
+			clean,
+			skipMapping: true,
+			referencesOnly: false,
+			preserveVariables: true,
+			stripLocalSelectors: false,
+		}) : Promise.resolve(),
+	]);
 }
 
 /**
@@ -180,7 +203,7 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
+async function buildThemes({ cwd = process.cwd(), minify = false, clean = false } = {}) {
 	// This fetches the content of the files and returns an array of objects with the content and input paths
 	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
 
@@ -190,58 +213,57 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	const imports = contentData.map(({ input }) => input);
 	const importMap = imports.map((i) => `@import "${i}";`).join("\n");
 
-	const promises = contentData.map(async ({ content, input }) =>
-		processCSS(
-			content,
-			path.join(cwd, input),
-			path.join(cwd, "dist", input),
-			{
-				cwd,
-				clean,
-				lint: false,
-				skipMapping: false,
-				referencesOnly: false,
-				preserveVariables: true,
+	const basePostCSSOptions = {
+		cwd,
+		clean,
+		map: false,
+		env: "production",
+		lint: false,
+	};
+
+	const promises = [];
+
+	contentData.forEach(async ({ content, input }) => {
+		const theme = path.basename(input, ".css");
+
+		promises.push(
+			processCSS(content, path.join(cwd, input), path.join(cwd, "dist", "themes", `${theme}.css`), {
+				...basePostCSSOptions,
+				shouldCombine: true,
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
+			}),
+			minify ? processCSS(content, path.join(cwd, input), path.join(cwd, "dist", "themes", `${theme}.min.css`), {
+				...basePostCSSOptions,
 				shouldCombine: true,
-				theme: path.basename(input, ".css"),
-				map: false,
-				env: "production",
-			},
-		),
-	);
+				// Only output the new selectors with the system mappings
+				stripLocalSelectors: true,
+			}) : Promise.resolve(),
+		);
+	});
 
 	promises.push(
-		processCSS(
-			undefined,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-				skipMapping: false,
-				referencesOnly: true,
-				preserveVariables: true,
-				stripLocalSelectors: true,
-			},
-		),
+		processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-base.css"), {
+			...basePostCSSOptions,
+			referencesOnly: true,
+			// Only output the new selectors with the system mappings
+			stripLocalSelectors: true,
+		}),
+		minify ? processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-base.min.css"), {
+			...basePostCSSOptions,
+			referencesOnly: true,
+			// Only output the new selectors with the system mappings
+			stripLocalSelectors: true,
+		}) : Promise.resolve(),
 		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
-		processCSS(
-			importMap,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-theme.css"),
-			{
-				cwd,
-				clean,
-				resolveImports: true,
-				skipMapping: false,
-				stripLocalSelectors: false,
-				referencesOnly: true,
-				shouldCombine: false,
-				map: false,
-			},
-		),
+		processCSS(importMap, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-theme.css"), {
+			...basePostCSSOptions,
+			referencesOnly: true,
+		}),
+		minify ? processCSS(importMap, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-theme.min.css"), {
+			...basePostCSSOptions,
+			referencesOnly: true,
+		}) : Promise.resolve(),
 	);
 
 	return Promise.all(promises);
@@ -259,6 +281,7 @@ async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
 	clean,
+	minify = false,
 } = {}) {
 	if (!cwd && componentName) {
 		cwd = path.join(dirs.components, componentName);
@@ -274,6 +297,10 @@ async function main({
 		clean = process.env.NODE_ENV === "production";
 	}
 
+	if (process.env.NODE_ENV === "production") {
+		minify = true;
+	}
+
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
@@ -283,8 +310,8 @@ async function main({
 	}
 
 	return Promise.all([
-		build({ cwd, clean }),
-		buildThemes({ cwd, clean }),
+		build({ cwd, clean, minify }),
+		buildThemes({ cwd, clean, minify }),
 	])
 		.then((report) => {
 			const logs = report.flat(Infinity).filter(Boolean);
