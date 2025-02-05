@@ -3,7 +3,7 @@
 "@spectrum-css/modal": minor
 ---
 
-S2 Takeover dialog
+## S2 Takeover dialog
 
 This is the migration for the fullscreen/fullscreenTakeover dialog stories (these stories correspond to the "takeover dialog" in Figma). The Divider component support was removed in S2 standard dialog migration ([#2860](https://github.com/adobe/spectrum-css/pull/2860)). New and updated tokens are in place to update fullscreen/fullscreenTakeover dialog sizing, grid spacing, spacing in the header, and font sizes. Fullscreen/fullscreenTakeover dialogs do not support additional footer content or checkboxes (in comparison to the standard dialog).
 

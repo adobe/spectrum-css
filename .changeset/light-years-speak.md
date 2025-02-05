@@ -2,7 +2,7 @@
 "@spectrum-css/tooltip": major
 ---
 
-feat(tooltip): Spectrum 2 migration
+## Spectrum 2 migration
 
 This migration includes updated colors, rounding, a bigger tip, and the removal of variants (only neutral is available in Spectrum 2). As a result of the deprecation of variants, icons have also been removed.
 

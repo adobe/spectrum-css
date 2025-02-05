@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/actionbutton",
-	"version": "6.2.1-next.0",
+	"version": "7.0.1",
 	"description": "The Spectrum CSS action button component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -26,7 +26,7 @@
 	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/icon": {
@@ -34,9 +34,9 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "^9.1.4-next.1",
+		"@spectrum-css/commons": "11.0.0",
 		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",
