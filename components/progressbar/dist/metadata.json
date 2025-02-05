@@ -26,9 +26,7 @@
     ".spectrum-ProgressBar--staticWhite .spectrum-ProgressBar-percentage",
     ".spectrum-ProgressBar--staticWhite .spectrum-ProgressBar-track",
     ".spectrum-ProgressBar-track",
-    "0%",
-    "[dir=\"rtl\"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill",
-    "to"
+    "[dir=\"rtl\"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill"
   ],
   "modifiers": [
     "--mod-progressbar-animation-duration-indeterminate",

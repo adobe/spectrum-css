@@ -18,12 +18,6 @@
  */
 
 .spectrum-Radio {
-	/* selection indicator */
-	--spectrum-radio-button-border-color-default: var(--spectrum-gray-600);
-	--spectrum-radio-button-border-color-hover: var(--spectrum-gray-700);
-	--spectrum-radio-button-border-color-down: var(--spectrum-gray-800);
-	--spectrum-radio-button-border-color-focus: var(--spectrum-gray-700);
-
 	--spectrum-radio-button-background-color: var(--spectrum-gray-50);
 
 	/* state colors for all themes */
@@ -64,16 +58,6 @@
 	/* animation all themes */
 	--spectrum-radio-animation-duration: var(--spectrum-animation-duration-100);
 
-	/* CJK language support all themes */
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		--spectrum-radio-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	}
-}
-
-.spectrum-Radio,
-.spectrum-Radio--sizeM {
 	--spectrum-radio-height: var(--spectrum-component-height-100);
 	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
 
@@ -83,6 +67,13 @@
 	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-medium);
 
 	--spectrum-radio-font-size: var(--spectrum-font-size-100);
+
+	/* CJK language support all themes */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-radio-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	}
 }
 
 .spectrum-Radio--sizeS {
