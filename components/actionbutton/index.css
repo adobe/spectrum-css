@@ -425,9 +425,6 @@ a.spectrum-ActionButton {
 
 @media (forced-colors: active) {
 	.spectrum-ActionButton {
-		/* force a more visible focus indicator color */
-		--highcontrast-actionbutton-focus-indicator-color: ButtonText;
-
 		&::after {
 			/* make sure focus indicator renders */
 			forced-color-adjust: none;
