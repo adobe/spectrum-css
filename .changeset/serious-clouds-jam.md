@@ -2,7 +2,7 @@
 "@spectrum-css/colorslider": minor
 ---
 
-# S2 colorslider migration
+## S2 colorslider migration
 
 This migrates the `colorslider` component to S2. Custom properties have been remapped per the design spec.
 

@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/popover",
-	"version": "8.0.0-next.1",
+	"version": "8.0.1",
 	"description": "The Spectrum CSS popover component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -28,8 +28,8 @@
 		"@spectrum-css/alertdialog": ">=4.0.0 <5.0.0",
 		"@spectrum-css/dialog": ">=11.0.0 <12.0.0",
 		"@spectrum-css/divider": ">=5",
-		"@spectrum-css/menu": ">=8.0.0 <9.0.0",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/menu": ">=9.0.0 <10.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/alertdialog": {
@@ -50,11 +50,11 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/alertdialog": "4.0.1",
-		"@spectrum-css/commons": "9.1.4-next.1",
+		"@spectrum-css/commons": "11.0.0",
 		"@spectrum-css/dialog": "11.0.0-next.0",
 		"@spectrum-css/divider": "5.0.1",
-		"@spectrum-css/menu": "8.0.0-next.1",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/menu": "9.0.1",
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",
