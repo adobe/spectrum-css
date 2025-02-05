@@ -25,6 +25,20 @@
 
 		--spectrum-textfield-border-width: var(--spectrum-border-width-100);
 
+		--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-component-top-to-workflow-icon-100);
+
+		&.spectrum-Textfield--sizeS {
+			--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-component-top-to-workflow-icon-75);
+		}
+
+		&.spectrum-Textfield--sizeL {
+			--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-component-top-to-workflow-icon-200);
+		}
+
+		&.spectrum-Textfield--sizeXL {
+			--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-component-top-to-workflow-icon-300);
+		}
+
 		&.spectrum-Textfield--quiet {
 			--spectrum-textfield-border-color-disabled: var(--spectrum-gray-300);
 		}
