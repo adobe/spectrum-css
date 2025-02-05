@@ -21,9 +21,18 @@
 		--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-down: var(--spectrum-gray-300);
 		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
-		--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-black-200);
+		--spectrum-actionbutton-background-color-disabled: transparent;
+		--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-disabled-background-color);
 
 		--spectrum-actionbutton-content-color-selected: var(--spectrum-gray-75);
+
+		&.spectrum-ActionButton--sizeXS,
+		&.spectrum-ActionButton--sizeS,
+		&.spectrum-ActionButton--sizeM,
+		&.spectrum-ActionButton--sizeL,
+		&.spectrum-ActionButton--sizeXL {
+			--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-100);
+		}
 
 		&.spectrum-ActionButton--quiet {
 			--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-200);
