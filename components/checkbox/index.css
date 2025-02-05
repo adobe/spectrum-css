@@ -17,13 +17,7 @@
  */
 
 .spectrum-Checkbox {
-	--spectrum-checkbox-control-color-default: var(--spectrum-gray-600);
-	--spectrum-checkbox-control-color-hover: var(--spectrum-gray-700);
-	--spectrum-checkbox-control-color-down: var(--spectrum-gray-800);
-	--spectrum-checkbox-control-color-focus: var(--spectrum-gray-700);
-
-	--spectrum-checkbox-checkmark-color: var(--spectrum-gray-50);
-	--spectrum-checkbox-control-corner-radius: 2px;
+	--spectrum-checkbox-checkmark-color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-gray-50)));
 
 	/* Color */
 	--spectrum-checkbox-content-color-default: var(--spectrum-neutral-content-color-default);
@@ -201,7 +195,7 @@
 		.spectrum-Checkbox-input:checked {
 			&:disabled + .spectrum-Checkbox-box::before {
 				border-color: var(--highcontrast-checkbox-color-default, var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default)));
-				background-color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
+				background-color: var(--spectrum-checkbox-checkmark-color);
 			}
 
 			&:disabled ~ .spectrum-Checkbox-label {
@@ -422,7 +416,7 @@
 	&:checked + .spectrum-Checkbox-box {
 		&::before {
 			border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default)));
-			background-color: var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color));
+			background-color: var(--spectrum-checkbox-checkmark-color);
 			border-width: var(--mod-checkbox-selected-border-width, var(--spectrum-checkbox-selected-border-width));
 		}
 
@@ -520,7 +514,7 @@
 .spectrum-Checkbox {
 	.spectrum-Checkbox-checkmark,
 	.spectrum-Checkbox-partialCheckmark {
-		color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
+		color: var(--spectrum-checkbox-checkmark-color);
 		opacity: 0;
 		transform: scale(0);
 
@@ -541,7 +535,7 @@
 		&::before {
 			border-color: var(--highcontrast-checkbox-disabled-color-default, var(--mod-checkbox-control-color-disabled, var(--spectrum-checkbox-control-color-disabled)));
 
-			background-color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
+			background-color: var(--spectrum-checkbox-checkmark-color);
 		}
 	}
 
