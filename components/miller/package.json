@@ -25,16 +25,16 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/assetlist": ">=8",
+		"@spectrum-css/assetlist": ">=6",
 		"@spectrum-css/checkbox": ">=10",
 		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
 		"@spectrum-css/assetlist": "8.0.1",
 		"@spectrum-css/checkbox": "10.0.1",
 		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/tokens": "14.0.0-next.12"
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",
