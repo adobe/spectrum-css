@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/commons",
-	"version": "9.1.4-next.1",
+	"version": "11.0.0",
 	"description": "Common mixins for Spectrum CSS components",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -27,10 +27,10 @@
 		"package.json"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
-		"@spectrum-css/tokens": "^14.0.0-next.4"
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",
