@@ -20,5 +20,6 @@
 		--spectrum-swatch-border-color: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-swatch-border-color-opacity));
 		--spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50);
 		--spectrum-swatch-disabled-icon-color: var(--spectrum-gray-50);
+		--spectrum-swatch-border-radius: var(--spectrum-corner-radius-100);
 	}
 }

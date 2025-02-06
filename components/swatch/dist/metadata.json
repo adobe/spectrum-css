@@ -103,7 +103,7 @@
     "--spectrum-animation-duration-100",
     "--spectrum-border-width-100",
     "--spectrum-border-width-200",
-    "--spectrum-corner-radius-100",
+    "--spectrum-corner-radius-75",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
     "--spectrum-focus-indicator-thickness",
@@ -120,6 +120,7 @@
   ],
   "system-theme": [
     "--system-swatch-border-color",
+    "--system-swatch-border-radius",
     "--system-swatch-disabled-icon-color",
     "--system-swatch-inner-border-color-selected"
   ],
