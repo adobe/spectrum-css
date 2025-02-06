@@ -164,6 +164,8 @@ export async function bundler() {
 		processCSS(undefined, path.join(bundleRoot, "src", "index.css"), path.join(bundleRoot, "dist", "index.css"), { lint: false, cwd: bundleRoot }),
 		// Write the minified CSS
 		processCSS(undefined, path.join(bundleRoot, "src", "index.css"), path.join(bundleRoot, "dist", "index.min.css"), { lint: false, cwd: bundleRoot, minify: true }),
+		// Write the module CSS
+		processCSS(undefined, path.join(bundleRoot, "src", "index.css"), path.join(bundleRoot, "dist", "index.module.css"), { lint: false, cwd: bundleRoot, module: true }),
 	]);
 }
 

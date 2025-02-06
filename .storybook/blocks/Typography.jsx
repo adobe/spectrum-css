@@ -1,64 +1,40 @@
 import { styled } from "@storybook/theming";
-import { fetchToken } from "./utilities.js";
+import React from "react";
 
-export const Heading = styled.h3`
-    font-family: ${({ theme }) => theme.typography.fontFamily};
-    font-weight: ${({ theme }) => theme.typography.weight.bold};
-    color: inherit;
-    font-size: ${({ size }) => fetchToken(`font-size-${size === "xs" ? 200 : size === "s" ? 300 : size === "l" ? 700 : size === "xl" ? 900 : 500}`, 22)};
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
+import styles from "@spectrum-css/bundle/dist/index.module.css";
 
-    > strong {
-        font-weight: 900;
-    }
+export const Heading = ({ size = "m", weight, strong, emphasis, serif = false, children }) => {
+    const className = [
+        styles._spectrum_heading,
+        styles[`_spectrum_heading__size${size}`],
+        weight ? styles[`_spectrum_heading__${weight}`] : null,
+        serif ? styles[`_spectrum_heading__serif`] : null,
+        strong ? styles[`_spectrum_heading_strong`] : null,
+        emphasis ? styles[`_spectrum_heading_emphasized`] : null,
+    ].filter(Boolean);
+    return <h3 className={className.join(" ")}>{children}</h3>;
+};
 
-    > em {
-        font-style: ${() => fetchToken(
-            "heading-sans-serif-emphasized-font-style",
-            "italic",
-        )};
-    }
-`;
+export const Body = ({ size = "m", strong, emphasis, serif = false, children }) => {
+    const className = [
+        styles._spectrum_body,
+        styles[`_spectrum_body__size${size}`],
+        serif ? styles[`_spectrum_body__serif`] : null,
+        strong ? styles[`_spectrum_body_strong`] : null,
+        emphasis ? styles[`_spectrum_body_emphasized`] : null,
+    ].filter(Boolean);
+    return <p className={className.join(" ")}>{children}</p>;
+};
 
-export const Body = styled.div(
-	({ theme, size = "m", scale = "desktop", ...props }) => {
-		const fontSize =
-			size === "s" ? 100 : size === "l" ? 300 : size === "xl" ? 400 : 200;
-		return {
-			fontFamily: theme.typography.fontFamily,
-			fontWeight: "normal",
-			color: "inherit",
-			fontSize: fetchToken(`font-size-${fontSize}`, 16),
-			"> strong": {
-				fontWeight: 900, // @todo: this uses "black" which isn't valid CSS
-			},
-			"> em": {
-				fontStyle: fetchToken(
-					"body-sans-serif-emphasized-font-style",
-					"italic",
-				),
-			},
-			...props,
-		};
-	},
-);
-
-export const Code = styled.div(
-	({ theme, size = "m", scale = "desktop", ...props }) => {
-		return {
-			fontFamily: theme.typography.fonts.mono,
-			fontStyle: fetchToken("code-font-style", "normal"),
-			fontWeight: fetchToken("code-font-weight", "400"),
-			color: fetchToken("code-color", "inherit"),
-			fontSize: fetchToken(`code-size-${size}`, 22),
-			backgroundColor: props => props.backgroundColor ?? fetchToken("gray-200"),
-			padding: "0.125em 0.25em",
-			borderRadius: "0.125em",
-			...props,
-		};
-	},
-);
+export const Code = ({ size = "m", strong, emphasis, children }) => {
+    const className = [
+        styles._spectrum_code,
+        styles[`_spectrum_code__size${size}`],
+        strong ? styles[`_spectrum_code_strong`] : null,
+        emphasis ? styles[`_spectrum_code_emphasized`] : null,
+    ].filter(Boolean);
+    return <code className={className.join(" ")}>{children}</code>;
+};
 
 export const LinkableHeading = styled(Heading)`
     margin: 20px 0 8px;
