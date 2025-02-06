@@ -9,7 +9,10 @@ const fg = require("fast-glob");
 
 module.exports = defineConfig({
 	async constraints({ Yarn }) {
-		// Fetch a list of all the component workspaces using a glob pattern
+		/**
+		 * Fetch a list of all the component workspaces using a glob pattern
+		 * @type {string[]} components
+		 */
 		const components = fg.sync("components/*", {
 			cwd: __dirname,
 			onlyDirectories: true,
@@ -49,7 +52,47 @@ module.exports = defineConfig({
 			return ["design-system", "spectrum", "spectrum-css", "adobe", "adobe-spectrum", ...additionalKeywords];
 		}
 
-		for (const workspace of Yarn.workspaces()) {
+		/**
+		 * This function rolls up all the component package.json
+		 * requirements for all workspaces into a single function
+		 * to simplify into a readable set of operations
+		 * @param {Workspace} workspace
+		 * @param {string} folderName
+		 * @returns {void}
+		 */
+		function validateComponentPackageJson(workspace, folderName) {
+			// Only update the homepage if it does not already exist
+			if (!workspace.manifest.homepage) {
+				workspace.set("homepage", `https://opensource.adobe.com/spectrum-css/?path=/docs/components-${folderName}--docs`);
+			}
+
+			workspace.set("publishConfig.access", "public");
+			workspace.set("keywords", keywords(["component", "css"]));
+			workspace.set("main", "dist/index.css");
+			workspace.set("exports", {
+				".": "./dist/index.css",
+				"./*.md": "./*.md",
+				"./dist/*": "./dist/*",
+				"./index-*.css": "./dist/index-*.css",
+				"./index.css": "./dist/index.css",
+				"./metadata.json": "./dist/metadata.json",
+				"./package.json": "./package.json",
+				"./stories/*": "./stories/*"
+			});
+		}
+
+		/**
+		 * This function rolls up all the package.json requirements
+		 * for all workspaces into a single function to simplify
+		 * the workspace for loop into a readable set of operations
+		 * @param {Workspace} workspace
+		 * @returns {void}
+		 */
+		function validatePackageJson(workspace) {
+			const isRoot = workspace.cwd === ".";
+			const isComponent = components.includes(workspace.cwd);
+			const isToken = workspace.cwd === "tokens";
+
 			/**
 			 * -------------- GLOBAL --------------
 			 * Global configuration for all workspaces
@@ -61,9 +104,7 @@ module.exports = defineConfig({
 			workspace.set("repository.url", "https://github.com/adobe/spectrum-css.git");
 
 			// We don't need to set the directory for the root workspace
-			if (workspace.cwd !== ".") {
-				workspace.set("repository.directory", workspace.cwd);
-			}
+			if (!isRoot) workspace.set("repository.directory", workspace.cwd);
 
 			workspace.set("bugs.url", "https://github.com/adobe/spectrum-css/issues");
 
@@ -71,35 +112,16 @@ module.exports = defineConfig({
 			 * -------------- COMPONENTS --------------
 			 * Process the components workspaces with component-specific configuration
 			 */
-			if (components.includes(workspace.cwd)) {
+			if (isComponent) {
 				const folderName = workspace.cwd?.split("/")?.[1];
-
-				// Only update the homepage if it does not already exist
-				if (!workspace.manifest.homepage) {
-					workspace.set("homepage", `https://opensource.adobe.com/spectrum-css/?path=/docs/components-${folderName}--docs`);
-				}
-
-				workspace.set("publishConfig.access", "public");
-				workspace.set("keywords", keywords(["component", "css"]));
-				workspace.set("main", "dist/index.css");
-				workspace.set("exports", {
-					".": "./dist/index.css",
-					"./*.md": "./*.md",
-					"./dist/*": "./dist/*",
-					"./index-*.css": "./dist/index-*.css",
-					"./index.css": "./dist/index.css",
-					"./metadata.json": "./dist/metadata.json",
-					"./package.json": "./package.json",
-					"./stories/*": "./stories/*"
-				});
-
+				validateComponentPackageJson(workspace, folderName);
 				validateLocalPackages(workspace);
 			}
 			/**
 			 * -------------- TOKENS --------------
 			 * Process the tokens workspace with token-specific configuration
 			 */
-			else if (workspace.cwd === "tokens") {
+			else if (isToken) {
 				workspace.set("homepage", "https://opensource.adobe.com/spectrum-css");
 				workspace.set("publishConfig.access", "public");
 				workspace.set("keywords", keywords(["tokens", "css"]));
@@ -113,13 +135,21 @@ module.exports = defineConfig({
 				 * All other workspaces should have at least the following configuration
 				 */
 				if (!workspace.manifest.keywords) {
-					workspace.set("keywords", keywords([]));
+					workspace.set("keywords", keywords());
 				}
 
 				if (!workspace.manifest.homepage) {
 					workspace.set("homepage", "https://opensource.adobe.com/spectrum-css/");
 				}
 			}
+		}
+
+		/**
+		 * This loop iterates over all the workspaces in the project
+		 * and updates the package.json file with the necessary
+		 */
+		for (const workspace of Yarn.workspaces()) {
+			validatePackageJson(workspace);
 		}
 	},
 });
