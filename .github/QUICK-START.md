@@ -16,7 +16,7 @@ Spectrum CSS components utilize custom properties in order to change themes and 
 <html class="spectrum spectrum--medium spectrum--light"></html>
 ```
 
-Use the `index.css` files in your project to include component and global styles ([Spectrum and Express contexts](https://github.com/adobe/spectrum-css?tab=readme-ov-file#visual-language), [background theme/colorstop](https://github.com/adobe/spectrum-css?tab=readme-ov-file#themes-colorstops), [platform scaling](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales), etc.) for the component. If you don't need all of the global styles, peek at the docs for [including assets](https://github.com/adobe/spectrum-css?tab=readme-ov-file#including-assets)). Use this file by including the stylesheet (plus stylesheets for dependencies) in the `<head>` tag:
+Use the `index.css` files in your project to include component and global styles ([background theme/colorstop](https://github.com/adobe/spectrum-css?tab=readme-ov-file#themes-colorstops), [platform scaling](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales), etc.) for the component. If you don't need all of the global styles, peek at the docs for [including assets](https://github.com/adobe/spectrum-css?tab=readme-ov-file#including-assets)). Use this file by including the stylesheet (plus stylesheets for dependencies) in the `<head>` tag:
 
 ```html
 <head>
