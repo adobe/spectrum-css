@@ -14,7 +14,7 @@
     "*.md"
   ],
   "dependencies": {
-    "postcss-selector-parser": "^6.1.1",
+    "postcss-selector-parser": "^6.1.2",
     "postcss-values-parser": "^6.0.2"
   },
   "peerDependencies": {
@@ -23,7 +23,7 @@
   "devDependencies": {
     "ava": "^6.2.0",
     "c8": "^10.1.2",
-    "postcss": "^8.4.49"
+    "postcss": "^8.5.1"
   },
   "keywords": [
     "css",

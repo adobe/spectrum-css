@@ -810,6 +810,46 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bundled-es-modules/deepmerge@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "@bundled-es-modules/deepmerge@npm:4.3.1"
+  dependencies:
+    deepmerge: "npm:^4.3.1"
+  checksum: 10c0/50493fb741d588aa358edc5e844cbf31493cb64aca0a5ca0d33d73f61eb9eb853f7038074429343afbe199e614a6be8400abfd31909f9e5f14a53a4cff39b894
+  languageName: node
+  linkType: hard
+
+"@bundled-es-modules/glob@npm:^10.4.2":
+  version: 10.4.2
+  resolution: "@bundled-es-modules/glob@npm:10.4.2"
+  dependencies:
+    buffer: "npm:^6.0.3"
+    events: "npm:^3.3.0"
+    glob: "npm:^10.4.2"
+    patch-package: "npm:^8.0.0"
+    path: "npm:^0.12.7"
+    stream: "npm:^0.0.3"
+    string_decoder: "npm:^1.3.0"
+    url: "npm:^0.11.3"
+  checksum: 10c0/0c61907efb170750c69c7a6953d613bcbffdefca5ced668c0579baf46e28232793fb6e2ac3b736dd937f750572ef5a17483c417060df43e4be30dc4c8567aaba
+  languageName: node
+  linkType: hard
+
+"@bundled-es-modules/memfs@npm:^4.9.4":
+  version: 4.9.4
+  resolution: "@bundled-es-modules/memfs@npm:4.9.4"
+  dependencies:
+    assert: "npm:^2.0.0"
+    buffer: "npm:^6.0.3"
+    events: "npm:^3.3.0"
+    memfs: "npm:^4.9.3"
+    path: "npm:^0.12.7"
+    stream: "npm:^0.0.3"
+    util: "npm:^0.12.5"
+  checksum: 10c0/e3548c14379183fb74aa9a94407c1cdb8587320216fb557c0af7277d2dccf23f10a2edf8726e99f878758730c0c8d71524f77e19b26660a067b01d9afa07c891
+  languageName: node
+  linkType: hard
+
 "@changesets/apply-release-plan@npm:^7.0.7":
   version: 7.0.7
   resolution: "@changesets/apply-release-plan@npm:7.0.7"
@@ -1271,15 +1311,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cspotcode/source-map-support@npm:^0.8.0":
-  version: 0.8.1
-  resolution: "@cspotcode/source-map-support@npm:0.8.1"
-  dependencies:
-    "@jridgewell/trace-mapping": "npm:0.3.9"
-  checksum: 10c0/05c5368c13b662ee4c122c7bfbe5dc0b613416672a829f3e78bc49a357a197e0218d6e74e7c66cfcd04e15a179acab080bd3c69658c9fbefd0e1ccd950a07fc6
-  languageName: node
-  linkType: hard
-
 "@csstools/cascade-layer-name-parser@npm:^1.0.13":
   version: 1.0.13
   resolution: "@csstools/cascade-layer-name-parser@npm:1.0.13"
@@ -1329,12 +1360,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/css-parser-algorithms@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@csstools/css-parser-algorithms@npm:3.0.1"
+"@csstools/css-parser-algorithms@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@csstools/css-parser-algorithms@npm:3.0.4"
   peerDependencies:
-    "@csstools/css-tokenizer": ^3.0.1
-  checksum: 10c0/064c6d519197b5af43bbf5efe8f4cdbd361b006113aa82160d637e925b50c643a52d33d512ca01c63042d952d723a2a10798231a714668356b76668fb11294e3
+    "@csstools/css-tokenizer": ^3.0.3
+  checksum: 10c0/d411f07765e14eede17bccc6bd4f90ff303694df09aabfede3fd104b2dfacfd4fe3697cd25ddad14684c850328f3f9420ebfa9f78380892492974db24ae47dbd
   languageName: node
   linkType: hard
 
@@ -1345,10 +1376,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/css-tokenizer@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@csstools/css-tokenizer@npm:3.0.1"
-  checksum: 10c0/c9ed4373e5731b5375ea9791590081019c04e95f08b46b272977e5e7b8c3d560affc62e82263cb8def1df1e57f0673140e7e16a14a5e7be04e6a234be088d1d3
+"@csstools/css-tokenizer@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@csstools/css-tokenizer@npm:3.0.3"
+  checksum: 10c0/c31bf410e1244b942e71798e37c54639d040cb59e0121b21712b40015fced2b0fb1ffe588434c5f8923c9cd0017cfc1c1c8f3921abc94c96edf471aac2eba5e5
   languageName: node
   linkType: hard
 
@@ -1362,13 +1393,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/media-query-list-parser@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@csstools/media-query-list-parser@npm:3.0.1"
+"@csstools/media-query-list-parser@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "@csstools/media-query-list-parser@npm:4.0.2"
   peerDependencies:
-    "@csstools/css-parser-algorithms": ^3.0.1
-    "@csstools/css-tokenizer": ^3.0.1
-  checksum: 10c0/fca1935cabf9fb94128da87f72c34aa2cfce8eb0beba4c78d685c7b42aaba3521067710afc6905b7347fc41fe53947536ce15a7ef3387b48763d8f7d71778d5e
+    "@csstools/css-parser-algorithms": ^3.0.4
+    "@csstools/css-tokenizer": ^3.0.3
+  checksum: 10c0/5d008a70f5d4fd96224066a433f5cdefa76cfd78a74416a20d6d5b2bb1bc8282b140e8373015d807d4dadb91daf3deb73eb13f853ec4e0479d0cb92e80c6f20d
   languageName: node
   linkType: hard
 
@@ -1761,12 +1792,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/selector-specificity@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@csstools/selector-specificity@npm:4.0.0"
+"@csstools/selector-specificity@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@csstools/selector-specificity@npm:5.0.0"
   peerDependencies:
-    postcss-selector-parser: ^6.1.0
-  checksum: 10c0/6f4d4ecfdcd37f950100de8ffe0b4c1b1cc8c004aab2c2ebaa5c3e2bca2412d15b17d4628435f47a62d2c56db41bcbf985cb9c69e74b89964d48e421e93e75ba
+    postcss-selector-parser: ^7.0.0
+  checksum: 10c0/186b444cabcdcdeb553bfe021f80c58bfe9ef38dcc444f2b1f34a5aab9be063ab4e753022b2d5792049c041c28cfbb78e4b707ec398459300e402030d35c07eb
   languageName: node
   linkType: hard
 
@@ -2748,7 +2779,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/resolve-uri@npm:^3.0.3, @jridgewell/resolve-uri@npm:^3.1.0":
+"@jridgewell/resolve-uri@npm:^3.1.0":
   version: 3.1.2
   resolution: "@jridgewell/resolve-uri@npm:3.1.2"
   checksum: 10c0/d502e6fb516b35032331406d4e962c21fe77cdf1cbdb49c6142bcbd9e30507094b18972778a6e27cbad756209cfe34b1a27729e6fa08a2eb92b33943f680cf1e
@@ -2769,16 +2800,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/trace-mapping@npm:0.3.9":
-  version: 0.3.9
-  resolution: "@jridgewell/trace-mapping@npm:0.3.9"
-  dependencies:
-    "@jridgewell/resolve-uri": "npm:^3.0.3"
-    "@jridgewell/sourcemap-codec": "npm:^1.4.10"
-  checksum: 10c0/fa425b606d7c7ee5bfa6a31a7b050dd5814b4082f318e0e4190f991902181b4330f43f4805db1dd4f2433fd0ed9cc7a7b9c2683f1deeab1df1b0a98b1e24055b
-  languageName: node
-  linkType: hard
-
 "@jridgewell/trace-mapping@npm:^0.3.12, @jridgewell/trace-mapping@npm:^0.3.18, @jridgewell/trace-mapping@npm:^0.3.24, @jridgewell/trace-mapping@npm:^0.3.25":
   version: 0.3.25
   resolution: "@jridgewell/trace-mapping@npm:0.3.25"
@@ -2786,6 +2807,47 @@ __metadata:
     "@jridgewell/resolve-uri": "npm:^3.1.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
   checksum: 10c0/3d1ce6ebc69df9682a5a8896b414c6537e428a1d68b02fcc8363b04284a8ca0df04d0ee3013132252ab14f2527bc13bea6526a912ecb5658f0e39fd2860b4df4
+  languageName: node
+  linkType: hard
+
+"@jsonjoy.com/base64@npm:^1.1.1":
+  version: 1.1.2
+  resolution: "@jsonjoy.com/base64@npm:1.1.2"
+  peerDependencies:
+    tslib: 2
+  checksum: 10c0/88717945f66dc89bf58ce75624c99fe6a5c9a0c8614e26d03e406447b28abff80c69fb37dabe5aafef1862cf315071ae66e5c85f6018b437d95f8d13d235e6eb
+  languageName: node
+  linkType: hard
+
+"@jsonjoy.com/json-pack@npm:^1.0.3":
+  version: 1.1.0
+  resolution: "@jsonjoy.com/json-pack@npm:1.1.0"
+  dependencies:
+    "@jsonjoy.com/base64": "npm:^1.1.1"
+    "@jsonjoy.com/util": "npm:^1.1.2"
+    hyperdyperid: "npm:^1.2.0"
+    thingies: "npm:^1.20.0"
+  peerDependencies:
+    tslib: 2
+  checksum: 10c0/cdf5cb567a7f2e703d4966a3e3a5f7f7b54ee40a2102aa0ede5c79bcf2060c8465d82f39de8583db4cf1d8415bec8e57dfb1156ef663567b846cdea45813d9d1
+  languageName: node
+  linkType: hard
+
+"@jsonjoy.com/util@npm:^1.1.2, @jsonjoy.com/util@npm:^1.3.0":
+  version: 1.5.0
+  resolution: "@jsonjoy.com/util@npm:1.5.0"
+  peerDependencies:
+    tslib: 2
+  checksum: 10c0/0065ae12c4108d8aede01a479c8d2b5a39bce99e9a449d235befc753f57e8385d9c1115720529f26597840b7398d512898155423d9859fd638319fb0c827365d
+  languageName: node
+  linkType: hard
+
+"@keyv/serialize@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@keyv/serialize@npm:1.0.2"
+  dependencies:
+    buffer: "npm:^6.0.3"
+  checksum: 10c0/31c5cb0938d22ce890314befc4d00c248c4c9be9664885978d6449b1787993dbc91999041076d53437888bb5f4280233276fbc4c72f97955d111d7a6ccd4cd67
   languageName: node
   linkType: hard
 
@@ -3014,24 +3076,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nx/devkit@npm:20.0.10":
-  version: 20.0.10
-  resolution: "@nx/devkit@npm:20.0.10"
-  dependencies:
-    ejs: "npm:^3.1.7"
-    enquirer: "npm:~2.3.6"
-    ignore: "npm:^5.0.4"
-    minimatch: "npm:9.0.3"
-    semver: "npm:^7.5.3"
-    tmp: "npm:~0.2.1"
-    tslib: "npm:^2.3.0"
-    yargs-parser: "npm:21.1.1"
-  peerDependencies:
-    nx: ">= 19 <= 21"
-  checksum: 10c0/bab4c7ce90013ae8ed6a2d4edc8162afdcf249dd72e0540402f1e3c3f3d9540f7b60eb546b6151c11238202b78106e568130f7e308023e526663e3b5187a7794
-  languageName: node
-  linkType: hard
-
 "@nx/nx-darwin-arm64@npm:19.8.2":
   version: 19.8.2
   resolution: "@nx/nx-darwin-arm64@npm:19.8.2"
@@ -3099,21 +3143,6 @@ __metadata:
   version: 19.8.2
   resolution: "@nx/nx-win32-x64-msvc@npm:19.8.2"
   conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@nxkit/style-dictionary@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "@nxkit/style-dictionary@npm:6.0.0"
-  dependencies:
-    "@nx/devkit": "npm:20.0.10"
-    "@phenomnomnominal/tsquery": "npm:^5.0.1"
-    fs-extra: "npm:^11.2.0"
-    ts-node: "npm:10.9.1"
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    style-dictionary: ^3.9.2
-  checksum: 10c0/168694e713a38ceb05c969043d49c4a70354432be3c1378be1c163ad8e1e4f31e9fa47c248f1e46299b84306c11e46db772a8a2cba1014aff9e08badcff31a9f
   languageName: node
   linkType: hard
 
@@ -3363,17 +3392,6 @@ __metadata:
   dependencies:
     "@octokit/openapi-types": "npm:^12.11.0"
   checksum: 10c0/81cfa58e5524bf2e233d75a346e625fd6e02a7b919762c6ddb523ad6fb108943ef9d34c0298ff3c5a44122e449d9038263bc22959247fd6ff8894a48888ac705
-  languageName: node
-  linkType: hard
-
-"@phenomnomnominal/tsquery@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "@phenomnomnominal/tsquery@npm:5.0.1"
-  dependencies:
-    esquery: "npm:^1.4.0"
-  peerDependencies:
-    typescript: ^3 || ^4 || ^5
-  checksum: 10c0/e241410cd321eb19543acd1e5f3cd973e02ecca918b2382d44e35e316fa1e41cf2d81abc4a2ee48cca023541d3812e94b491f215894375f5a2576e948b934e89
   languageName: node
   linkType: hard
 
@@ -3654,13 +3672,14 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -3673,16 +3692,23 @@ __metadata:
     "@spectrum-css/fieldlabel": "npm:10.0.1"
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actiongroup": ">=5"
-    "@spectrum-css/closebutton": ">=5"
-    "@spectrum-css/fieldlabel": ">=8"
-    "@spectrum-css/popover": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actiongroup": ">=6"
+    "@spectrum-css/closebutton": ">=6"
+    "@spectrum-css/fieldlabel": ">=10"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/actiongroup":
+      optional: true
+    "@spectrum-css/closebutton":
+      optional: true
+    "@spectrum-css/fieldlabel":
+      optional: true
+    "@spectrum-css/popover":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -3693,15 +3719,13 @@ __metadata:
     "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -3712,15 +3736,13 @@ __metadata:
   dependencies:
     "@spectrum-css/actionbutton": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -3734,16 +3756,23 @@ __metadata:
     "@spectrum-css/menu": "npm:9.0.1"
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/menu": ">=7"
-    "@spectrum-css/popover": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/menu": ">=9"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/actionbutton":
+      optional: true
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/menu":
+      optional: true
+    "@spectrum-css/popover":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -3756,18 +3785,22 @@ __metadata:
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/button": ">=13"
-    "@spectrum-css/closebutton": ">=5"
-    "@spectrum-css/divider": ">=3"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/closebutton": ">=6"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
+    "@spectrum-css/button":
+      optional: true
+    "@spectrum-css/closebutton":
+      optional: true
+    "@spectrum-css/divider":
+      optional: true
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -3782,21 +3815,25 @@ __metadata:
     "@spectrum-css/modal": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/underlay": "npm:6.0.1"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/buttongroup": ">=7"
-    "@spectrum-css/divider": ">=3"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/modal": ">=5"
-    "@spectrum-css/tokens": ">=14 || >=15"
-    "@spectrum-css/underlay": ">=4"
+    "@spectrum-css/buttongroup": ">=9"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/modal": ">=7"
+    "@spectrum-css/tokens": ">=16"
+    "@spectrum-css/underlay": ">=6"
   peerDependenciesMeta:
     "@spectrum-css/buttongroup":
       optional: true
+    "@spectrum-css/divider":
+      optional: true
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/modal":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
+    "@spectrum-css/underlay":
       optional: true
   languageName: unknown
   linkType: soft
@@ -3806,12 +3843,11 @@ __metadata:
   resolution: "@spectrum-css/asset@workspace:components/asset"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -3821,15 +3857,13 @@ __metadata:
   dependencies:
     "@spectrum-css/checkbox": "npm:10.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=9"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -3841,18 +3875,16 @@ __metadata:
     "@spectrum-css/checkbox": "npm:10.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=9"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -3862,12 +3894,11 @@ __metadata:
   resolution: "@spectrum-css/avatar@workspace:components/avatar"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -3877,15 +3908,13 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -3897,18 +3926,16 @@ __metadata:
     "@spectrum-css/actionbutton": "npm:7.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4003,7 +4030,7 @@ __metadata:
     "@spectrum-css/underlay": "workspace:^"
     "@spectrum-css/well": "workspace:^"
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.0"
+    postcss: "npm:^8.5.1"
     postcss-licensing: "npm:^2.0.0"
   languageName: unknown
   linkType: soft
@@ -4016,18 +4043,16 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/progresscircle": "npm:5.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/progresscircle": ">=3"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/progresscircle": ">=5"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
     "@spectrum-css/progresscircle":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4038,13 +4063,14 @@ __metadata:
   dependencies:
     "@spectrum-css/button": "npm:14.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/button": ">=13"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/button":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4054,13 +4080,14 @@ __metadata:
   dependencies:
     "@spectrum-css/actionbutton": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/actionbutton":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4074,18 +4101,13 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/typography": "npm:8.0.1"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/asset": ">=5"
-    "@spectrum-css/checkbox": ">=9"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/quickaction": ">=3"
-    "@spectrum-css/tokens": ">=14.5.0 || >=15"
-    "@spectrum-css/typography": ">=6"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/asset": ">=7"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+    "@spectrum-css/typography": ">=8"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -4094,6 +4116,8 @@ __metadata:
     "@spectrum-css/checkbox":
       optional: true
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
     "@spectrum-css/typography":
       optional: true
@@ -4106,13 +4130,14 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4122,13 +4147,14 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4139,13 +4165,14 @@ __metadata:
     "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4154,12 +4181,11 @@ __metadata:
   resolution: "@spectrum-css/coachindicator@workspace:components/coachindicator"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14.6.0 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4174,20 +4200,28 @@ __metadata:
     "@spectrum-css/menu": "npm:9.0.1"
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/actionmenu": ">=6"
-    "@spectrum-css/button": ">=13"
-    "@spectrum-css/buttongroup": ">=7"
-    "@spectrum-css/menu": ">=7"
-    "@spectrum-css/popover": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/actionmenu": ">=7"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/buttongroup": ">=9"
+    "@spectrum-css/menu": ">=9"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
+    "@spectrum-css/actionbutton":
+      optional: true
+    "@spectrum-css/actionmenu":
+      optional: true
     "@spectrum-css/button":
+      optional: true
+    "@spectrum-css/buttongroup":
+      optional: true
+    "@spectrum-css/menu":
+      optional: true
+    "@spectrum-css/popover":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4198,13 +4232,14 @@ __metadata:
   dependencies:
     "@spectrum-css/colorhandle": "npm:10.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/colorhandle": ">=8"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/colorhandle": ">=10"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/colorhandle":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4215,16 +4250,16 @@ __metadata:
     "@spectrum-css/colorloupe": "npm:7.0.1"
     "@spectrum-css/opacitycheckerboard": "npm:4.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/colorloupe": ">=5"
-    "@spectrum-css/opacitycheckerboard": ">=2"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/colorloupe": ">=7"
+    "@spectrum-css/opacitycheckerboard": ">=4"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/colorloupe":
+      optional: true
+    "@spectrum-css/opacitycheckerboard":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4234,12 +4269,11 @@ __metadata:
   resolution: "@spectrum-css/colorloupe@workspace:components/colorloupe"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4250,14 +4284,17 @@ __metadata:
     "@spectrum-css/colorhandle": "npm:10.0.1"
     "@spectrum-css/opacitycheckerboard": "npm:4.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/colorhandle": ">=8"
-    "@spectrum-css/opacitycheckerboard": ">=2"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/colorhandle": ">=10"
+    "@spectrum-css/opacitycheckerboard": ">=4"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/colorhandle":
+      optional: true
+    "@spectrum-css/opacitycheckerboard":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4269,19 +4306,19 @@ __metadata:
     "@spectrum-css/colorhandle": "npm:10.0.1"
     "@spectrum-css/colorloupe": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/colorarea": ">=5"
-    "@spectrum-css/colorhandle": ">=8"
-    "@spectrum-css/colorloupe": ">=5"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/colorarea": ">=7"
+    "@spectrum-css/colorhandle": ">=10"
+    "@spectrum-css/colorloupe": ">=7"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/colorarea":
       optional: true
+    "@spectrum-css/colorhandle":
+      optional: true
     "@spectrum-css/colorloupe":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4296,19 +4333,25 @@ __metadata:
     "@spectrum-css/progresscircle": "npm:5.0.1"
     "@spectrum-css/textfield": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/menu": ">=7"
-    "@spectrum-css/pickerbutton": ">=5"
-    "@spectrum-css/popover": ">=7"
-    "@spectrum-css/progresscircle": ">=3"
-    "@spectrum-css/textfield": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/menu": ">=9"
+    "@spectrum-css/pickerbutton": ">=6"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/progresscircle": ">=5"
+    "@spectrum-css/textfield": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
+    "@spectrum-css/menu":
+      optional: true
+    "@spectrum-css/pickerbutton":
+      optional: true
+    "@spectrum-css/popover":
+      optional: true
     "@spectrum-css/progresscircle":
+      optional: true
+    "@spectrum-css/textfield":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4317,9 +4360,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/commons@workspace:components/commons"
   dependencies:
-    "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4331,17 +4377,19 @@ __metadata:
     "@spectrum-css/link": "npm:7.0.1"
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/link": ">=5"
-    "@spectrum-css/popover": ">=7"
-    "@spectrum-css/tokens": ">=14.5.0 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/link": ">=7"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
+    "@spectrum-css/actionbutton":
+      optional: true
     "@spectrum-css/link":
+      optional: true
+    "@spectrum-css/popover":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4355,16 +4403,23 @@ __metadata:
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/textfield": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/calendar": ">=5"
-    "@spectrum-css/pickerbutton": ">=5"
-    "@spectrum-css/popover": ">=7"
-    "@spectrum-css/textfield": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/calendar": ">=7"
+    "@spectrum-css/pickerbutton": ">=6"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/textfield": ">=8"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/calendar":
+      optional: true
+    "@spectrum-css/pickerbutton":
+      optional: true
+    "@spectrum-css/popover":
+      optional: true
+    "@spectrum-css/textfield":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4373,12 +4428,11 @@ __metadata:
   resolution: "@spectrum-css/dial@workspace:components/dial"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4386,26 +4440,29 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   dependencies:
-    "@spectrum-css/buttongroup": "workspace:^"
+    "@spectrum-css/buttongroup": "npm:9.0.1"
     "@spectrum-css/closebutton": "npm:6.0.1"
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/modal": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/underlay": "npm:6.0.1"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/closebutton": ">=5"
-    "@spectrum-css/divider": ">=3"
-    "@spectrum-css/modal": ">=5"
-    "@spectrum-css/tokens": ">=14 || >=15"
-    "@spectrum-css/underlay": ">=4"
+    "@spectrum-css/buttongroup": ">=9"
+    "@spectrum-css/closebutton": ">=6"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/modal": ">=7"
+    "@spectrum-css/tokens": ">=16"
+    "@spectrum-css/underlay": ">=6"
   peerDependenciesMeta:
+    "@spectrum-css/buttongroup":
+      optional: true
+    "@spectrum-css/closebutton":
+      optional: true
     "@spectrum-css/divider":
       optional: true
     "@spectrum-css/modal":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
     "@spectrum-css/underlay":
       optional: true
@@ -4417,12 +4474,11 @@ __metadata:
   resolution: "@spectrum-css/divider@workspace:components/divider"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4432,13 +4488,14 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4450,19 +4507,19 @@ __metadata:
     "@spectrum-css/illustratedmessage": "npm:9.0.1"
     "@spectrum-css/link": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/illustratedmessage": ">=7"
-    "@spectrum-css/link": ">=5"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/illustratedmessage": ">=9"
+    "@spectrum-css/link": ">=7"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
+    "@spectrum-css/illustratedmessage":
+      optional: true
     "@spectrum-css/link":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4475,21 +4532,19 @@ __metadata:
     "@spectrum-css/helptext": "npm:7.0.1"
     "@spectrum-css/radio": "npm:10.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=9"
-    "@spectrum-css/helptext": ">=5"
-    "@spectrum-css/radio": ">=9"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/helptext": ">=7"
+    "@spectrum-css/radio": ">=10"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
     "@spectrum-css/helptext":
       optional: true
     "@spectrum-css/radio":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4500,13 +4555,14 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4515,12 +4571,11 @@ __metadata:
   resolution: "@spectrum-css/floatingactionbutton@workspace:components/floatingactionbutton"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4529,12 +4584,11 @@ __metadata:
   resolution: "@spectrum-css/form@workspace:components/form"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:*"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4555,13 +4609,14 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4570,12 +4625,11 @@ __metadata:
   resolution: "@spectrum-css/icon@workspace:components/icon"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4585,13 +4639,14 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/typography": "npm:8.0.1"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
-    "@spectrum-css/typography": ">=6"
+    "@spectrum-css/tokens": ">=16"
+    "@spectrum-css/typography": ">=8"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
+    "@spectrum-css/typography":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4601,15 +4656,13 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4621,16 +4674,16 @@ __metadata:
     "@spectrum-css/button": "npm:14.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/button": ">=13"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/button":
+      optional: true
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4640,12 +4693,11 @@ __metadata:
   resolution: "@spectrum-css/link@workspace:components/link"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4655,12 +4707,11 @@ __metadata:
   dependencies:
     "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4674,23 +4725,23 @@ __metadata:
     "@spectrum-css/switch": "npm:6.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/tray": "npm:5.0.1"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=9"
-    "@spectrum-css/divider": ">=3"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/switch": ">=5"
-    "@spectrum-css/tokens": ">=14 || >=15"
-    "@spectrum-css/tray": ">=3"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/switch": ">=6"
+    "@spectrum-css/tokens": ">=16"
+    "@spectrum-css/tray": ">=5"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
     "@spectrum-css/divider":
       optional: true
+    "@spectrum-css/icon":
+      optional: true
     "@spectrum-css/switch":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
     "@spectrum-css/tray":
       optional: true
@@ -4703,13 +4754,14 @@ __metadata:
   dependencies:
     "@spectrum-css/progressbar": "npm:6.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:*"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/progressbar": ">=4"
-    "@spectrum-css/tokens": ">=15"
+    "@spectrum-css/progressbar": ">=6"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/progressbar":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4721,15 +4773,20 @@ __metadata:
     "@spectrum-css/checkbox": "npm:10.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/assetlist": ">=6"
-    "@spectrum-css/checkbox": ">=9"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/assetlist": ">=8"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/assetlist":
+      optional: true
+    "@spectrum-css/checkbox":
+      optional: true
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4739,12 +4796,11 @@ __metadata:
   dependencies:
     "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4753,12 +4809,11 @@ __metadata:
   resolution: "@spectrum-css/opacitycheckerboard@workspace:components/opacitycheckerboard"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4767,12 +4822,11 @@ __metadata:
   resolution: "@spectrum-css/page@workspace:components/page"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4785,16 +4839,23 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/textfield": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/button": ">=13"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/textfield": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/textfield": ">=8"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/actionbutton":
+      optional: true
+    "@spectrum-css/button":
+      optional: true
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/textfield":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4809,21 +4870,25 @@ __metadata:
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/progresscircle": "npm:5.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/helptext": ">=5"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/menu": ">=7"
-    "@spectrum-css/popover": ">=7"
-    "@spectrum-css/progresscircle": ">=3"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/helptext": ">=7"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/menu": ">=9"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/progresscircle": ">=5"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/helptext":
       optional: true
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/menu":
+      optional: true
+    "@spectrum-css/popover":
+      optional: true
     "@spectrum-css/progresscircle":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4836,15 +4901,20 @@ __metadata:
     "@spectrum-css/menu": "npm:9.0.1"
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/menu": ">=7"
-    "@spectrum-css/popover": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/menu": ">=9"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/menu":
+      optional: true
+    "@spectrum-css/popover":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4858,20 +4928,22 @@ __metadata:
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/menu": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/alertdialog": ">=2"
-    "@spectrum-css/dialog": ">=10"
-    "@spectrum-css/divider": ">=3"
-    "@spectrum-css/menu": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/alertdialog": ">=4"
+    "@spectrum-css/dialog": ">=12"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/menu": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
+    "@spectrum-css/alertdialog":
+      optional: true
+    "@spectrum-css/dialog":
+      optional: true
     "@spectrum-css/divider":
       optional: true
     "@spectrum-css/menu":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4909,7 +4981,7 @@ __metadata:
     lit: "npm:^3.2.1"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
-    postcss: "npm:^8.5.0"
+    postcss: "npm:^8.5.1"
     prettier: "npm:^3.4.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
@@ -4927,15 +4999,13 @@ __metadata:
   dependencies:
     "@spectrum-css/fieldlabel": "npm:10.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/fieldlabel": ">=8"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/fieldlabel": ">=10"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/fieldlabel":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -4945,12 +5015,11 @@ __metadata:
   resolution: "@spectrum-css/progresscircle@workspace:components/progresscircle"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4960,13 +5029,14 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4976,13 +5046,14 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4994,15 +5065,20 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/textfield": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/clearbutton": ">=6"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/textfield": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/clearbutton": ">=7"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/textfield": ">=8"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/clearbutton":
+      optional: true
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/textfield":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5012,15 +5088,13 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -5031,13 +5105,14 @@ __metadata:
   dependencies:
     "@spectrum-css/stepper": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/stepper": ">=6"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/stepper": ">=7"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/stepper":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5046,12 +5121,11 @@ __metadata:
   resolution: "@spectrum-css/splitview@workspace:components/splitview"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5060,12 +5134,11 @@ __metadata:
   resolution: "@spectrum-css/statuslight@workspace:components/statuslight"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5076,15 +5149,15 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/tooltip": "npm:7.0.1"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
-    "@spectrum-css/tooltip": ">=6"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+    "@spectrum-css/tooltip": ">=7"
   peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
     "@spectrum-css/tooltip":
       optional: true
   languageName: unknown
@@ -5099,18 +5172,22 @@ __metadata:
     "@spectrum-css/infieldbutton": "npm:6.0.1"
     "@spectrum-css/textfield": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/infieldbutton": ">=5"
-    "@spectrum-css/textfield": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/infieldbutton": ">=6"
+    "@spectrum-css/textfield": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
+    "@spectrum-css/actionbutton":
+      optional: true
+    "@spectrum-css/icon":
+      optional: true
     "@spectrum-css/infieldbutton":
+      optional: true
+    "@spectrum-css/textfield":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -5121,13 +5198,14 @@ __metadata:
   dependencies:
     "@spectrum-css/opacitycheckerboard": "npm:4.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/opacitycheckerboard": ">=2"
-    "@spectrum-css/tokens": ">=14.5.0 || >=15"
+    "@spectrum-css/opacitycheckerboard": ">=4"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/opacitycheckerboard":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5137,13 +5215,14 @@ __metadata:
   dependencies:
     "@spectrum-css/swatch": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/swatch": ">=6"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/swatch": ">=8"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/swatch":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5152,12 +5231,11 @@ __metadata:
   resolution: "@spectrum-css/switch@workspace:components/switch"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5170,22 +5248,22 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/thumbnail": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/button": ">=13"
-    "@spectrum-css/checkbox": ">=9"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/thumbnail": ">=6"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/thumbnail": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/button":
       optional: true
     "@spectrum-css/checkbox":
       optional: true
+    "@spectrum-css/icon":
+      optional: true
     "@spectrum-css/thumbnail":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -5198,17 +5276,19 @@ __metadata:
     "@spectrum-css/menu": "npm:9.0.1"
     "@spectrum-css/picker": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/menu": ">=7"
-    "@spectrum-css/picker": ">=8"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/menu": ">=9"
+    "@spectrum-css/picker": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/menu":
+      optional: true
+    "@spectrum-css/picker":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -5221,19 +5301,19 @@ __metadata:
     "@spectrum-css/clearbutton": "npm:7.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/avatar": ">=7"
-    "@spectrum-css/clearbutton": ">=6"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/avatar": ">=9"
+    "@spectrum-css/clearbutton": ">=7"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/avatar":
       optional: true
+    "@spectrum-css/clearbutton":
+      optional: true
     "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -5244,13 +5324,14 @@ __metadata:
   dependencies:
     "@spectrum-css/tag": "npm:10.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tag": ">=9"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tag": ">=10"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tag":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5260,15 +5341,13 @@ __metadata:
   dependencies:
     "@spectrum-css/helptext": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/helptext": ">=5"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/helptext": ">=7"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/helptext":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -5279,13 +5358,14 @@ __metadata:
   dependencies:
     "@spectrum-css/opacitycheckerboard": "npm:4.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/opacitycheckerboard": ">=2"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/opacitycheckerboard": ">=4"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/opacitycheckerboard":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5297,15 +5377,20 @@ __metadata:
     "@spectrum-css/closebutton": "npm:6.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/button": ">=13"
-    "@spectrum-css/closebutton": ">=5"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/closebutton": ">=6"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/button":
+      optional: true
+    "@spectrum-css/closebutton":
+      optional: true
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5322,17 +5407,12 @@ __metadata:
   dependencies:
     "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241121221506"
     "@adobe/token-diff-generator": "npm:^1.3.0"
-    "@nxkit/style-dictionary": "npm:^6.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "workspace:^"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    postcss: "npm:^8.5.0"
-    postcss-cli: "npm:^11.0.0"
+    deepmerge: "npm:^4.3.1"
+    lodash-es: "npm:^4.17.21"
+    postcss: "npm:^8.5.1"
     postcss-sorting: "npm:^9.1.0"
-    prettier: "npm:^3.4.2"
-    style-dictionary: "npm:^3.9.2"
-    style-dictionary-sets: "npm:^2.3.0"
-    stylelint: "npm:^16.9.0"
+    style-dictionary: "npm:^4.3.2"
   languageName: unknown
   linkType: soft
 
@@ -5343,13 +5423,14 @@ __metadata:
     "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5363,21 +5444,25 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/modal": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/button": ">=13"
-    "@spectrum-css/dialog": ">=10"
-    "@spectrum-css/divider": ">=3"
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/modal": ">=5"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/dialog": ">=12"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/modal": ">=7"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
+    "@spectrum-css/button":
+      optional: true
     "@spectrum-css/dialog":
       optional: true
     "@spectrum-css/divider":
+      optional: true
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/modal":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -5389,16 +5474,16 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/thumbnail": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/thumbnail": ">=6"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/thumbnail": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
     "@spectrum-css/thumbnail":
+      optional: true
+    "@spectrum-css/tokens":
       optional: true
   languageName: unknown
   linkType: soft
@@ -5408,12 +5493,11 @@ __metadata:
   resolution: "@spectrum-css/typography@workspace:components/typography"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14.5.0 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5434,12 +5518,11 @@ __metadata:
   dependencies:
     "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5448,12 +5531,11 @@ __metadata:
   resolution: "@spectrum-css/well@workspace:components/well"
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -5476,8 +5558,8 @@ __metadata:
   dependencies:
     ava: "npm:^6.2.0"
     c8: "npm:^10.1.2"
-    postcss: "npm:^8.4.49"
-    postcss-selector-parser: "npm:^6.1.1"
+    postcss: "npm:^8.5.1"
+    postcss-selector-parser: "npm:^6.1.2"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
     postcss: ">=8"
@@ -5490,7 +5572,7 @@ __metadata:
   dependencies:
     ava: "npm:^6.2.0"
     c8: "npm:^10.1.2"
-    postcss: "npm:^8.4.49"
+    postcss: "npm:^8.5.1"
   peerDependencies:
     postcss: ">=8"
   languageName: unknown
@@ -5502,7 +5584,7 @@ __metadata:
   dependencies:
     ava: "npm:^6.2.0"
     c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.0"
+    postcss: "npm:^8.5.1"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
     postcss: ">=8"
@@ -5516,7 +5598,7 @@ __metadata:
     ava: "npm:^6.2.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
-    stylelint: "npm:^16.9.0"
+    stylelint: "npm:^16.14.1"
   peerDependencies:
     stylelint: ">=16"
   languageName: unknown
@@ -5530,9 +5612,9 @@ __metadata:
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     fast-glob: "npm:^3.3.3"
-    postcss: "npm:^8.5.0"
+    postcss: "npm:^8.5.1"
     postcss-values-parser: "npm:^6.0.2"
-    stylelint: "npm:^16.9.0"
+    stylelint: "npm:^16.14.1"
   peerDependencies:
     stylelint: ">=16"
   languageName: unknown
@@ -5545,9 +5627,9 @@ __metadata:
     ava: "npm:^6.2.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.4.49"
+    postcss: "npm:^8.5.1"
     postcss-values-parser: "npm:^6.0.2"
-    stylelint: "npm:^16.9.0"
+    stylelint: "npm:^16.14.1"
   peerDependencies:
     stylelint: ">=16"
   languageName: unknown
@@ -5558,9 +5640,9 @@ __metadata:
   resolution: "@spectrum-tools/stylelint-theme-alignment@workspace:plugins/stylelint-theme-alignment"
   dependencies:
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.0"
+    postcss: "npm:^8.5.1"
     postcss-values-parser: "npm:^6.0.2"
-    stylelint: "npm:^16.9.0"
+    stylelint: "npm:^16.14.1"
   peerDependencies:
     stylelint: ">=16"
   languageName: unknown
@@ -6187,34 +6269,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node10@npm:^1.0.7":
-  version: 1.0.11
-  resolution: "@tsconfig/node10@npm:1.0.11"
-  checksum: 10c0/28a0710e5d039e0de484bdf85fee883bfd3f6a8980601f4d44066b0a6bcd821d31c4e231d1117731c4e24268bd4cf2a788a6787c12fc7f8d11014c07d582783c
-  languageName: node
-  linkType: hard
-
-"@tsconfig/node12@npm:^1.0.7":
-  version: 1.0.11
-  resolution: "@tsconfig/node12@npm:1.0.11"
-  checksum: 10c0/dddca2b553e2bee1308a056705103fc8304e42bb2d2cbd797b84403a223b25c78f2c683ec3e24a095e82cd435387c877239bffcb15a590ba817cd3f6b9a99fd9
-  languageName: node
-  linkType: hard
-
-"@tsconfig/node14@npm:^1.0.0":
-  version: 1.0.3
-  resolution: "@tsconfig/node14@npm:1.0.3"
-  checksum: 10c0/67c1316d065fdaa32525bc9449ff82c197c4c19092b9663b23213c8cbbf8d88b6ed6a17898e0cbc2711950fbfaf40388938c1c748a2ee89f7234fc9e7fe2bf44
-  languageName: node
-  linkType: hard
-
-"@tsconfig/node16@npm:^1.0.2":
-  version: 1.0.4
-  resolution: "@tsconfig/node16@npm:1.0.4"
-  checksum: 10c0/05f8f2734e266fb1839eb1d57290df1664fe2aa3b0fdd685a9035806daa635f7519bf6d5d9b33f6e69dd545b8c46bd6e2b5c79acb2b1f146e885f7f11a42a5bb
-  languageName: node
-  linkType: hard
-
 "@tybys/wasm-util@npm:^0.9.0":
   version: 0.9.0
   resolution: "@tybys/wasm-util@npm:0.9.0"
@@ -6602,6 +6656,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zip.js/zip.js@npm:^2.7.44":
+  version: 2.7.53
+  resolution: "@zip.js/zip.js@npm:2.7.53"
+  checksum: 10c0/883527bf09ce7c312117536c79d5f07e736d87de802a6c19e39ba2e18027499dcb9359df94dfde13c9bcf6118a20b4f26a40f9892ee82d7cac3124d6986b15c8
+  languageName: node
+  linkType: hard
+
 "@zkochan/js-yaml@npm:0.0.7":
   version: 0.0.7
   resolution: "@zkochan/js-yaml@npm:0.0.7"
@@ -6691,15 +6752,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn-walk@npm:^8.1.1":
-  version: 8.3.3
-  resolution: "acorn-walk@npm:8.3.3"
-  dependencies:
-    acorn: "npm:^8.11.0"
-  checksum: 10c0/4a9e24313e6a0a7b389e712ba69b66b455b4cb25988903506a8d247e7b126f02060b05a8a5b738a9284214e4ca95f383dd93443a4ba84f1af9b528305c7f243b
-  languageName: node
-  linkType: hard
-
 "acorn-walk@npm:^8.3.4":
   version: 8.3.4
   resolution: "acorn-walk@npm:8.3.4"
@@ -6736,7 +6788,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.4.1, acorn@npm:^8.5.0, acorn@npm:^8.6.0, acorn@npm:^8.9.0":
+"acorn@npm:^8.5.0, acorn@npm:^8.6.0, acorn@npm:^8.9.0":
   version: 8.11.3
   resolution: "acorn@npm:8.11.3"
   bin:
@@ -7003,13 +7055,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"arg@npm:^4.1.0":
-  version: 4.1.3
-  resolution: "arg@npm:4.1.3"
-  checksum: 10c0/070ff801a9d236a6caa647507bdcc7034530604844d64408149a26b9e87c2f97650055c0f049abd1efc024b334635c01f29e0b632b371ac3f26130f4cf65997a
-  languageName: node
-  linkType: hard
-
 "argparse@npm:^1.0.7":
   version: 1.0.10
   resolution: "argparse@npm:1.0.10"
@@ -7160,6 +7205,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"assert@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "assert@npm:2.1.0"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    is-nan: "npm:^1.3.2"
+    object-is: "npm:^1.1.5"
+    object.assign: "npm:^4.1.4"
+    util: "npm:^0.12.5"
+  checksum: 10c0/7271a5da883c256a1fa690677bf1dd9d6aa882139f2bed1cd15da4f9e7459683e1da8e32a203d6cc6767e5e0f730c77a9532a87b896b4b0af0dd535f668775f0
+  languageName: node
+  linkType: hard
+
 "assertion-error@npm:^2.0.1":
   version: 2.0.1
   resolution: "assertion-error@npm:2.0.1"
@@ -7208,6 +7266,13 @@ __metadata:
   version: 0.4.0
   resolution: "asynckit@npm:0.4.0"
   checksum: 10c0/d73e2ddf20c4eb9337e1b3df1a0f6159481050a5de457c55b14ea2e5cb6d90bb69e004c9af54737a5ee0917fcf2c9e25de67777bbe58261847846066ba75bc9d
+  languageName: node
+  linkType: hard
+
+"at-least-node@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "at-least-node@npm:1.0.0"
+  checksum: 10c0/4c058baf6df1bc5a1697cf182e2029c58cd99975288a13f9e70068ef5d6f4e1f1fd7c4d2c3c4912eae44797d1725be9700995736deca441b39f3e66d8dee97ef
   languageName: node
   linkType: hard
 
@@ -7776,6 +7841,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cacheable@npm:^1.8.8":
+  version: 1.8.8
+  resolution: "cacheable@npm:1.8.8"
+  dependencies:
+    hookified: "npm:^1.7.0"
+    keyv: "npm:^5.2.3"
+  checksum: 10c0/24e0f93782015be75b1ec9fe3fb151b2921f61c282091b873f78a0efeb141e95a21d8aa5f4c6bd99a8acb0b485deb5801aa32b4ecf4b666efa7446739368588b
+  languageName: node
+  linkType: hard
+
 "caching-transform@npm:^4.0.0":
   version: 4.0.0
   resolution: "caching-transform@npm:4.0.0"
@@ -7788,7 +7863,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"call-bind@npm:^1.0.2, call-bind@npm:^1.0.5, call-bind@npm:^1.0.6, call-bind@npm:^1.0.7":
+"call-bind@npm:^1.0.0, call-bind@npm:^1.0.2, call-bind@npm:^1.0.5, call-bind@npm:^1.0.6, call-bind@npm:^1.0.7":
   version: 1.0.7
   resolution: "call-bind@npm:1.0.7"
   dependencies:
@@ -7852,9 +7927,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001629, caniuse-lite@npm:^1.0.30001640, caniuse-lite@npm:^1.0.30001646, caniuse-lite@npm:^1.0.30001669":
-  version: 1.0.30001690
-  resolution: "caniuse-lite@npm:1.0.30001690"
-  checksum: 10c0/646bd469032afa90400a84dec30a2b00a6eda62c03ead358117e3f884cda8aacec02ec058a6dbee5eaf9714f83e483b9b0eb4fb42febb8076569f5ca40f1d347
+  version: 1.0.30001697
+  resolution: "caniuse-lite@npm:1.0.30001697"
+  checksum: 10c0/c114045be1bb5e610ca14c619157472910401bf59cc4d3050cc64ecd6887345ae8f685a5474c126755fabbd6e02f899b3b743218ab46dcbd5b6880607b67e18e
   languageName: node
   linkType: hard
 
@@ -7964,7 +8039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:~4.1.2":
+"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.2, chalk@npm:~4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -8005,6 +8080,13 @@ __metadata:
     snake-case: "npm:^3.0.4"
     tslib: "npm:^2.0.3"
   checksum: 10c0/95a6e48563cd393241ce18470c7310a8a050304a64b63addac487560ab039ce42b099673d1d293cc10652324d92060de11b5d918179fe3b5af2ee521fb03ca58
+  languageName: node
+  linkType: hard
+
+"change-case@npm:^5.3.0":
+  version: 5.4.4
+  resolution: "change-case@npm:5.4.4"
+  checksum: 10c0/2a9c2b9c9ad6ab2491105aaf506db1a9acaf543a18967798dcce20926c6a173aa63266cb6189f3086e3c14bf7ae1f8ea4f96ecc466fcd582310efa00372f3734
   languageName: node
   linkType: hard
 
@@ -8121,7 +8203,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^3.3.0, chokidar@npm:^3.6.0":
+"chokidar@npm:^3.6.0":
   version: 3.6.0
   resolution: "chokidar@npm:3.6.0"
   dependencies:
@@ -8507,13 +8589,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^8.3.0":
-  version: 8.3.0
-  resolution: "commander@npm:8.3.0"
-  checksum: 10c0/8b043bb8322ea1c39664a1598a95e0495bfe4ca2fad0d84a92d7d1d8d213e2a155b441d2470c8e08de7c4a28cf2bc6e169211c49e1b21d9f7edc6ae4d9356060
-  languageName: node
-  linkType: hard
-
 "commander@npm:~2.13.0":
   version: 2.13.0
   resolution: "commander@npm:2.13.0"
@@ -8549,6 +8624,13 @@ __metadata:
     array-ify: "npm:^1.0.0"
     dot-prop: "npm:^5.1.0"
   checksum: 10c0/78bd4dd4ed311a79bd264c9e13c36ed564cde657f1390e699e0f04b8eee1fc06ffb8698ce2dfb5fbe7342d509579c82d4e248f08915b708f77f7b72234086cc3
+  languageName: node
+  linkType: hard
+
+"component-emitter@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "component-emitter@npm:2.0.0"
+  checksum: 10c0/65dfaf787ea49eb48f0ffec766bda7ec67e8dbeb3b406f08724dcae842e0aa274731fcccb9280b77d2b41693061731a9080b60d276020246a146544cd9900b83
   languageName: node
   linkType: hard
 
@@ -8732,13 +8814,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"create-require@npm:^1.1.0":
-  version: 1.1.1
-  resolution: "create-require@npm:1.1.1"
-  checksum: 10c0/157cbc59b2430ae9a90034a5f3a1b398b6738bf510f713edc4d4e45e169bc514d3d99dd34d8d01ca7ae7830b5b8b537e46ae8f3c8f932371b0875c0151d7ec91
-  languageName: node
-  linkType: hard
-
 "cross-env@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-env@npm:7.0.3"
@@ -8751,7 +8826,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3, cross-spawn@npm:^7.0.5, cross-spawn@npm:^7.0.6":
+"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3, cross-spawn@npm:^7.0.5":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
   dependencies:
@@ -8807,10 +8882,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-functions-list@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "css-functions-list@npm:3.2.2"
-  checksum: 10c0/8638a63d0cf1bdc50d4a752ec1c94a57e9953c3b03eace4f5526db20bec3c061e95089f905dbb4999c44b9780ce777ba856967560f6d15119a303f6030901c10
+"css-functions-list@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "css-functions-list@npm:3.2.3"
+  checksum: 10c0/03f9ed34eeed310d2b1cf0e524eea02bc5f87854a4de85f8957ea432ab1036841a3fb00879590519f7bb8fda40d992ce7a72fa9b61696ca1dc53b90064858f96
   languageName: node
   linkType: hard
 
@@ -8872,6 +8947,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-tree@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "css-tree@npm:3.1.0"
+  dependencies:
+    mdn-data: "npm:2.12.2"
+    source-map-js: "npm:^1.0.1"
+  checksum: 10c0/b5715852c2f397c715ca00d56ec53fc83ea596295ae112eb1ba6a1bda3b31086380e596b1d8c4b980fe6da09e7d0fc99c64d5bb7313030dd0fba9c1415f30979
+  languageName: node
+  linkType: hard
+
 "css-tree@npm:~2.2.0":
   version: 2.2.1
   resolution: "css-tree@npm:2.2.1"
@@ -8929,46 +9014,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano-preset-default@npm:^7.0.4":
-  version: 7.0.4
-  resolution: "cssnano-preset-default@npm:7.0.4"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    css-declaration-sorter: "npm:^7.2.0"
-    cssnano-utils: "npm:^5.0.0"
-    postcss-calc: "npm:^10.0.0"
-    postcss-colormin: "npm:^7.0.1"
-    postcss-convert-values: "npm:^7.0.2"
-    postcss-discard-comments: "npm:^7.0.1"
-    postcss-discard-duplicates: "npm:^7.0.0"
-    postcss-discard-empty: "npm:^7.0.0"
-    postcss-discard-overridden: "npm:^7.0.0"
-    postcss-merge-longhand: "npm:^7.0.2"
-    postcss-merge-rules: "npm:^7.0.2"
-    postcss-minify-font-values: "npm:^7.0.0"
-    postcss-minify-gradients: "npm:^7.0.0"
-    postcss-minify-params: "npm:^7.0.1"
-    postcss-minify-selectors: "npm:^7.0.2"
-    postcss-normalize-charset: "npm:^7.0.0"
-    postcss-normalize-display-values: "npm:^7.0.0"
-    postcss-normalize-positions: "npm:^7.0.0"
-    postcss-normalize-repeat-style: "npm:^7.0.0"
-    postcss-normalize-string: "npm:^7.0.0"
-    postcss-normalize-timing-functions: "npm:^7.0.0"
-    postcss-normalize-unicode: "npm:^7.0.1"
-    postcss-normalize-url: "npm:^7.0.0"
-    postcss-normalize-whitespace: "npm:^7.0.0"
-    postcss-ordered-values: "npm:^7.0.1"
-    postcss-reduce-initial: "npm:^7.0.1"
-    postcss-reduce-transforms: "npm:^7.0.0"
-    postcss-svgo: "npm:^7.0.1"
-    postcss-unique-selectors: "npm:^7.0.1"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/0083821e778bdf7b8aa9589408a01a717be730f73584e7b81756a6fcf87af05b8f17342025e666572a8d573cc30783f2d817b0f7ad63670398bc3135b017ccad
-  languageName: node
-  linkType: hard
-
 "cssnano-preset-default@npm:^7.0.6":
   version: 7.0.6
   resolution: "cssnano-preset-default@npm:7.0.6"
@@ -9018,15 +9063,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano@npm:^7.0.3":
-  version: 7.0.4
-  resolution: "cssnano@npm:7.0.4"
+"cssnano@npm:^7.0.6":
+  version: 7.0.6
+  resolution: "cssnano@npm:7.0.6"
   dependencies:
-    cssnano-preset-default: "npm:^7.0.4"
+    cssnano-preset-default: "npm:^7.0.6"
     lilconfig: "npm:^3.1.2"
   peerDependencies:
     postcss: ^8.4.31
-  checksum: 10c0/3939a0b37b11cb4bae92f7916517c7ba21257551f92517b49a640d5df32e855fb7e73321f4be44d2c2de578309c05d711cdcb1976e95607b1b7f92bd4cbd1350
+  checksum: 10c0/19ff09931a1531e7c0c0d8928da554d99213aa0bb1f3b93cc6b4987727d60a8cd5537b113a5cf4f95cc1db65bba3f2b35476bd63bb57e7469d4eab73e07d736d
   languageName: node
   linkType: hard
 
@@ -9184,18 +9229,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.3.6":
-  version: 4.3.6
-  resolution: "debug@npm:4.3.6"
-  dependencies:
-    ms: "npm:2.1.2"
-  peerDependenciesMeta:
-    supports-color:
-      optional: true
-  checksum: 10c0/3293416bff072389c101697d4611c402a6bacd1900ac20c0492f61a9cdd6b3b29750fc7f5e299f8058469ef60ff8fb79b86395a30374fbd2490113c1c7112285
-  languageName: node
-  linkType: hard
-
 "decamelize@npm:^1.2.0":
   version: 1.2.0
   resolution: "decamelize@npm:1.2.0"
@@ -9252,7 +9285,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:^4.2.2":
+"deepmerge@npm:^4.2.2, deepmerge@npm:^4.3.1":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
   checksum: 10c0/e53481aaf1aa2c4082b5342be6b6d8ad9dfe387bc92ce197a66dea08bd4265904a087e75e464f14d1347cf2ac8afe1e4c16b266e0561cc5df29382d3c5f80044
@@ -9319,7 +9352,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"define-properties@npm:^1.2.0, define-properties@npm:^1.2.1":
+"define-properties@npm:^1.1.3, define-properties@npm:^1.2.0, define-properties@npm:^1.2.1":
   version: 1.2.1
   resolution: "define-properties@npm:1.2.1"
   dependencies:
@@ -9350,13 +9383,6 @@ __metadata:
   version: 1.0.0
   resolution: "delayed-stream@npm:1.0.0"
   checksum: 10c0/d758899da03392e6712f042bec80aa293bbe9e9ff1b2634baae6a360113e708b91326594c8a486d475c69d6259afb7efacdc3537bfcda1c6c648e390ce601b19
-  languageName: node
-  linkType: hard
-
-"dependency-graph@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "dependency-graph@npm:0.11.0"
-  checksum: 10c0/9e6968d1534fdb502f7f3a25a3819b499f9d60f8389193950ed0b4d1618f1341b36b5d039f2cee256cfe10c9e8198ace16b271e370df06a93fac206e81602e7c
   languageName: node
   linkType: hard
 
@@ -9429,13 +9455,6 @@ __metadata:
     highlight.js:
       optional: true
   checksum: 10c0/e840459a4e8a88ea5ed27053918e0adce54d7a8fb4b0b675a1a08099919d13cacb9b94557e6fa312ee0aa10f7ddfccce7253d024da950412bf44f16e61795de0
-  languageName: node
-  linkType: hard
-
-"diff@npm:^4.0.1":
-  version: 4.0.2
-  resolution: "diff@npm:4.0.2"
-  checksum: 10c0/81b91f9d39c4eaca068eb0c1eb0e4afbdc5bb2941d197f513dd596b820b956fef43485876226d65d497bebc15666aa2aa82c679e84f65d5f2bfbf14ee46e32c1
   languageName: node
   linkType: hard
 
@@ -10351,7 +10370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esquery@npm:^1.4.0, esquery@npm:^1.4.2, esquery@npm:^1.6.0":
+"esquery@npm:^1.4.2, esquery@npm:^1.6.0":
   version: 1.6.0
   resolution: "esquery@npm:1.6.0"
   dependencies:
@@ -10735,21 +10754,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"file-entry-cache@npm:^10.0.5":
+  version: 10.0.6
+  resolution: "file-entry-cache@npm:10.0.6"
+  dependencies:
+    flat-cache: "npm:^6.1.6"
+  checksum: 10c0/4e7226a5dbe7b5130c848c5fd3a352bb16e4ddb1de10cb4b3ea8375f6ab6085ed10da4db2db8119c61fc7e56fc59a40eeb837a4ae1a3a7c8357a17e69004f113
+  languageName: node
+  linkType: hard
+
 "file-entry-cache@npm:^6.0.1":
   version: 6.0.1
   resolution: "file-entry-cache@npm:6.0.1"
   dependencies:
     flat-cache: "npm:^3.0.4"
   checksum: 10c0/58473e8a82794d01b38e5e435f6feaf648e3f36fdb3a56e98f417f4efae71ad1c0d4ebd8a9a7c50c3ad085820a93fc7494ad721e0e4ebc1da3573f4e1c3c7cdd
-  languageName: node
-  linkType: hard
-
-"file-entry-cache@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "file-entry-cache@npm:9.0.0"
-  dependencies:
-    flat-cache: "npm:^5.0.0"
-  checksum: 10c0/07b0a4f062dc0aa258f3e1b06ac083ea25313f5e289943e146fafdaf3315dcc031635545eea7fe98fe5598b91d6c7f48dba7a251dd7ac20108a6ebf7d00b0b1c
   languageName: node
   linkType: hard
 
@@ -10884,6 +10903,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"find-yarn-workspace-root@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "find-yarn-workspace-root@npm:2.0.0"
+  dependencies:
+    micromatch: "npm:^4.0.2"
+  checksum: 10c0/b0d3843013fbdaf4e57140e0165889d09fa61745c9e85da2af86e54974f4cc9f1967e40f0d8fc36a79d53091f0829c651d06607d552582e53976f3cd8f4e5689
+  languageName: node
+  linkType: hard
+
 "findup-sync@npm:^5.0.0":
   version: 5.0.0
   resolution: "findup-sync@npm:5.0.0"
@@ -10927,13 +10955,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flat-cache@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "flat-cache@npm:5.0.0"
+"flat-cache@npm:^6.1.6":
+  version: 6.1.6
+  resolution: "flat-cache@npm:6.1.6"
   dependencies:
-    flatted: "npm:^3.3.1"
-    keyv: "npm:^4.5.4"
-  checksum: 10c0/847f25eefec5d6614fdce76dc6097ee98f63fd4dfbcb908718905ac56610f939f4c28b1f908d6e8857d49286fe73235095d2e7ac9df096c35a3e8a15204c361b
+    cacheable: "npm:^1.8.8"
+    flatted: "npm:^3.3.2"
+    hookified: "npm:^1.7.0"
+  checksum: 10c0/2aeba555b61d32d7f0803e6b6b3ba959610cdc0e5b591ed0f80a3ad70c4e80e81afb6853c495cafdcbc3a02386d76a1522babcf04e50c4a1e81df2decfd02e9f
   languageName: node
   linkType: hard
 
@@ -10946,10 +10975,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flatted@npm:^3.2.9, flatted@npm:^3.3.1":
+"flatted@npm:^3.2.9":
   version: 3.3.1
   resolution: "flatted@npm:3.3.1"
   checksum: 10c0/324166b125ee07d4ca9bcf3a5f98d915d5db4f39d711fba640a3178b959919aae1f7cfd8aabcfef5826ed8aa8a2aa14cc85b2d7d18ff638ddf4ae3df39573eaf
+  languageName: node
+  linkType: hard
+
+"flatted@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "flatted@npm:3.3.2"
+  checksum: 10c0/24cc735e74d593b6c767fe04f2ef369abe15b62f6906158079b9874bdb3ee5ae7110bb75042e70cd3f99d409d766f357caf78d5ecee9780206f5fdc5edbad334
   languageName: node
   linkType: hard
 
@@ -11084,18 +11120,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^10.0.0":
-  version: 10.1.0
-  resolution: "fs-extra@npm:10.1.0"
-  dependencies:
-    graceful-fs: "npm:^4.2.0"
-    jsonfile: "npm:^6.0.1"
-    universalify: "npm:^2.0.0"
-  checksum: 10c0/5f579466e7109719d162a9249abbeffe7f426eb133ea486e020b89bc6d67a741134076bf439983f2eb79276ceaf6bd7b7c1e43c3fd67fe889863e69072fb0a5e
-  languageName: node
-  linkType: hard
-
-"fs-extra@npm:^11.0.0, fs-extra@npm:^11.1.1, fs-extra@npm:^11.2.0":
+"fs-extra@npm:^11.1.1":
   version: 11.2.0
   resolution: "fs-extra@npm:11.2.0"
   dependencies:
@@ -11125,6 +11150,18 @@ __metadata:
     jsonfile: "npm:^4.0.0"
     universalify: "npm:^0.1.0"
   checksum: 10c0/259f7b814d9e50d686899550c4f9ded85c46c643f7fe19be69504888e007fcbc08f306fae8ec495b8b998635e997c9e3e175ff2eeed230524ef1c1684cc96423
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:^9.0.0":
+  version: 9.1.0
+  resolution: "fs-extra@npm:9.1.0"
+  dependencies:
+    at-least-node: "npm:^1.0.0"
+    graceful-fs: "npm:^4.2.0"
+    jsonfile: "npm:^6.0.1"
+    universalify: "npm:^2.0.0"
+  checksum: 10c0/9b808bd884beff5cb940773018179a6b94a966381d005479f00adda6b44e5e3d4abf765135773d849cc27efe68c349e4a7b86acd7d3306d5932c14f3a4b17a92
   languageName: node
   linkType: hard
 
@@ -11272,13 +11309,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-stdin@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "get-stdin@npm:9.0.0"
-  checksum: 10c0/7ef2edc0c81a0644ca9f051aad8a96ae9373d901485abafaabe59fd347a1c378689d8a3d8825fb3067415d1d09dfcaa43cb9b9516ecac6b74b3138b65a8ccc6b
-  languageName: node
-  linkType: hard
-
 "get-stream@npm:^6.0.0":
   version: 6.0.1
   resolution: "get-stream@npm:6.0.1"
@@ -11353,7 +11383,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.0.0, glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7, glob@npm:^10.4.1":
+"glob@npm:^10.0.0, glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7, glob@npm:^10.4.1, glob@npm:^10.4.2":
   version: 10.4.5
   resolution: "glob@npm:10.4.5"
   dependencies:
@@ -11527,7 +11557,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^14.0.0, globby@npm:^14.0.2":
+"globby@npm:^14.0.2":
   version: 14.0.2
   resolution: "globby@npm:14.0.2"
   dependencies:
@@ -11557,7 +11587,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.15, graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.5, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.10, graceful-fs@npm:^4.2.3, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
+"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.15, graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.5, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.10, graceful-fs@npm:^4.2.3, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
@@ -11758,6 +11788,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hookified@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "hookified@npm:1.7.0"
+  checksum: 10c0/039424cbeb8cc55cd9bd6b17e9fb48c5d619899f49d560abf39a4cd3ae3d9197e434732218641ebaec22ff0a0b195fdb96fc4c42df12477f464bfe63a35a4b66
+  languageName: node
+  linkType: hard
+
 "hosted-git-info@npm:^8.0.0":
   version: 8.0.0
   resolution: "hosted-git-info@npm:8.0.0"
@@ -11896,6 +11933,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hyperdyperid@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "hyperdyperid@npm:1.2.0"
+  checksum: 10c0/885ba3177c7181d315a856ee9c0005ff8eb5dcb1ce9e9d61be70987895d934d84686c37c981cceeb53216d4c9c15c1cc25f1804e84cc6a74a16993c5d7fd0893
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:^0.4.24":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
@@ -11935,10 +11979,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ignore@npm:^5.3.2":
-  version: 5.3.2
-  resolution: "ignore@npm:5.3.2"
-  checksum: 10c0/f9f652c957983634ded1e7f02da3b559a0d4cc210fca3792cb67f1b153623c9c42efdc1c4121af171e295444459fc4a9201101fb041b1104a3c000bccb188337
+"ignore@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "ignore@npm:7.0.3"
+  checksum: 10c0/8e21637513cbcd888a4873d34d5c651a2e24b3c4c9a6b159335a26bed348c3c386c51d6fab23577f59140e1b226323138fbd50e63882d4568fd12aa6c822029e
   languageName: node
   linkType: hard
 
@@ -12006,6 +12050,13 @@ __metadata:
   version: 2.0.4
   resolution: "inherits@npm:2.0.4"
   checksum: 10c0/4e531f648b29039fb7426fb94075e6545faa1eb9fe83c29f0b6d9e7263aceb4289d2d4557db0d428188eeb449cc7c5e77b0a0b2c4e248ff2a65933a0dee49ef2
+  languageName: node
+  linkType: hard
+
+"inherits@npm:2.0.3":
+  version: 2.0.3
+  resolution: "inherits@npm:2.0.3"
+  checksum: 10c0/6e56402373149ea076a434072671f9982f5fad030c7662be0332122fe6c0fa490acb3cc1010d90b6eff8d640b1167d77674add52dfd1bb85d545cf29e80e73e7
   languageName: node
   linkType: hard
 
@@ -12384,6 +12435,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-nan@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "is-nan@npm:1.3.2"
+  dependencies:
+    call-bind: "npm:^1.0.0"
+    define-properties: "npm:^1.1.3"
+  checksum: 10c0/8bfb286f85763f9c2e28ea32e9127702fe980ffd15fa5d63ade3be7786559e6e21355d3625dd364c769c033c5aedf0a2ed3d4025d336abf1b9241e3d9eddc5b0
+  languageName: node
+  linkType: hard
+
 "is-negative-zero@npm:^2.0.3":
   version: 2.0.3
   resolution: "is-negative-zero@npm:2.0.3"
@@ -12435,7 +12496,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-plain-obj@npm:^4.0.0":
+"is-plain-obj@npm:^4.0.0, is-plain-obj@npm:^4.1.0":
   version: 4.1.0
   resolution: "is-plain-obj@npm:4.1.0"
   checksum: 10c0/32130d651d71d9564dc88ba7e6fda0e91a1010a3694648e9f4f47bb6080438140696d3e3e15c741411d712e47ac9edc1a8a9de1fe76f3487b0d90be06ac9975e
@@ -12610,7 +12671,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-wsl@npm:^2.2.0":
+"is-wsl@npm:^2.1.1, is-wsl@npm:^2.2.0":
   version: 2.2.0
   resolution: "is-wsl@npm:2.2.0"
   dependencies:
@@ -13427,13 +13488,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-parse-even-better-errors@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "json-parse-even-better-errors@npm:4.0.0"
-  checksum: 10c0/84cd9304a97e8fb2af3937bf53acb91c026aeb859703c332684e688ea60db27fc2242aa532a84e1883fdcbe1e5c1fb57c2bef38e312021aa1cd300defc63cf16
-  languageName: node
-  linkType: hard
-
 "json-schema-traverse@npm:^0.3.0":
   version: 0.3.1
   resolution: "json-schema-traverse@npm:0.3.1"
@@ -13459,6 +13513,18 @@ __metadata:
   version: 1.0.1
   resolution: "json-stable-stringify-without-jsonify@npm:1.0.1"
   checksum: 10c0/cb168b61fd4de83e58d09aaa6425ef71001bae30d260e2c57e7d09a5fd82223e2f22a042dedaab8db23b7d9ae46854b08bb1f91675a8be11c5cffebef5fb66a5
+  languageName: node
+  linkType: hard
+
+"json-stable-stringify@npm:^1.0.2":
+  version: 1.1.1
+  resolution: "json-stable-stringify@npm:1.1.1"
+  dependencies:
+    call-bind: "npm:^1.0.5"
+    isarray: "npm:^2.0.5"
+    jsonify: "npm:^0.0.1"
+    object-keys: "npm:^1.1.1"
+  checksum: 10c0/3801e3eeccbd030afb970f54bea690a079cfea7d9ed206a1b17ca9367f4b7772c764bf77a48f03e56b50e5f7ee7d11c52339fe20d8d7ccead003e4ca69e4cfde
   languageName: node
   linkType: hard
 
@@ -13499,7 +13565,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonc-parser@npm:^3.0.0, jsonc-parser@npm:^3.2.0":
+"jsonc-parser@npm:^3.2.0":
   version: 3.3.1
   resolution: "jsonc-parser@npm:3.3.1"
   checksum: 10c0/269c3ae0a0e4f907a914bf334306c384aabb9929bd8c99f909275ebd5c2d3bc70b9bcd119ad794f339dec9f24b6a4ee9cd5a8ab2e6435e730ad4075388fc2ab6
@@ -13531,6 +13597,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonify@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "jsonify@npm:0.0.1"
+  checksum: 10c0/7f5499cdd59a0967ed35bda48b7cec43d850bbc8fb955cdd3a1717bb0efadbe300724d5646de765bb7a99fc1c3ab06eb80d93503c6faaf99b4ff50a3326692f6
+  languageName: node
+  linkType: hard
+
 "jsonparse@npm:^1.2.0, jsonparse@npm:^1.3.1":
   version: 1.3.1
   resolution: "jsonparse@npm:1.3.1"
@@ -13545,12 +13618,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"keyv@npm:^4.5.3, keyv@npm:^4.5.4":
+"keyv@npm:^4.5.3":
   version: 4.5.4
   resolution: "keyv@npm:4.5.4"
   dependencies:
     json-buffer: "npm:3.0.1"
   checksum: 10c0/aa52f3c5e18e16bb6324876bb8b59dd02acf782a4b789c7b2ae21107fab95fab3890ed448d4f8dba80ce05391eeac4bfabb4f02a20221342982f806fa2cf271e
+  languageName: node
+  linkType: hard
+
+"keyv@npm:^5.2.3":
+  version: 5.2.3
+  resolution: "keyv@npm:5.2.3"
+  dependencies:
+    "@keyv/serialize": "npm:^1.0.2"
+  checksum: 10c0/76b87dd2c21a4c1c5c05e9ff3b85670beab98f153429aaa9aee544b72b65411a7d80d96c29f3fef3e9dcebb672c8268e7209d6f80beb5da939b4e019722948b4
   languageName: node
   linkType: hard
 
@@ -13561,6 +13643,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"klaw-sync@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "klaw-sync@npm:6.0.0"
+  dependencies:
+    graceful-fs: "npm:^4.1.11"
+  checksum: 10c0/00d8e4c48d0d699b743b3b028e807295ea0b225caf6179f51029e19783a93ad8bb9bccde617d169659fbe99559d73fb35f796214de031d0023c26b906cecd70a
+  languageName: node
+  linkType: hard
+
 "kleur@npm:^3.0.3":
   version: 3.0.3
   resolution: "kleur@npm:3.0.3"
@@ -13568,10 +13659,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"known-css-properties@npm:^0.34.0":
-  version: 0.34.0
-  resolution: "known-css-properties@npm:0.34.0"
-  checksum: 10c0/8549969f02b1858554e89faf4548ece37625d0d21b42e8d54fa53184e68e1512ef2531bb15941575ad816361ab7447b598c1b18c1b96ce0a868333d1a68f2e2c
+"known-css-properties@npm:^0.35.0":
+  version: 0.35.0
+  resolution: "known-css-properties@npm:0.35.0"
+  checksum: 10c0/04a4a2859d62670bb25b5b28091a1f03f6f0d3298a5ed3e7476397c5287b98c434f6dd9c004a0c67a53b7f21acc93f83c972e98c122f568d4d0bd21fd2b90fb6
   languageName: node
   linkType: hard
 
@@ -14041,13 +14132,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-error@npm:^1.1.1":
-  version: 1.3.6
-  resolution: "make-error@npm:1.3.6"
-  checksum: 10c0/171e458d86854c6b3fc46610cfacf0b45149ba043782558c6875d9f42f222124384ad0b468c92e996d815a8a2003817a710c0a160e49c1c394626f76fa45396f
-  languageName: node
-  linkType: hard
-
 "make-fetch-happen@npm:^13.0.0":
   version: 13.0.1
   resolution: "make-fetch-happen@npm:13.0.1"
@@ -14310,6 +14394,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdn-data@npm:2.12.2":
+  version: 2.12.2
+  resolution: "mdn-data@npm:2.12.2"
+  checksum: 10c0/b22443b71d70f72ccc3c6ba1608035431a8fc18c3c8fc53523f06d20e05c2ac10f9b53092759a2ca85cf02f0d37036f310b581ce03e7b99ac74d388ef8152ade
+  languageName: node
+  linkType: hard
+
+"memfs@npm:^4.9.3":
+  version: 4.14.0
+  resolution: "memfs@npm:4.14.0"
+  dependencies:
+    "@jsonjoy.com/json-pack": "npm:^1.0.3"
+    "@jsonjoy.com/util": "npm:^1.3.0"
+    tree-dump: "npm:^1.0.1"
+    tslib: "npm:^2.0.0"
+  checksum: 10c0/d1de2e4b3c269f5b5f27b63f60bb8ea9ae5800843776e0bed4548f2957dcd55237ac5eab3a5ffe0d561a6be53e42c055a7bc79efc1613563b14e14c287ef3b0a
+  languageName: node
+  linkType: hard
+
 "memoize@npm:^10.0.0":
   version: 10.0.0
   resolution: "memoize@npm:10.0.0"
@@ -14325,13 +14428,6 @@ __metadata:
   dependencies:
     map-or-similar: "npm:^1.5.0"
   checksum: 10c0/661bf69b7afbfad57f0208f0c63324f4c96087b480708115b78ee3f0237d86c7f91347f6db31528740b2776c2e34c709bcb034e1e910edee2270c9603a0a469e
-  languageName: node
-  linkType: hard
-
-"memorystream@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "memorystream@npm:0.3.1"
-  checksum: 10c0/4bd164657711d9747ff5edb0508b2944414da3464b7fe21ac5c67cf35bba975c4b446a0124bd0f9a8be54cfc18faf92e92bd77563a20328b1ccf2ff04e9f39b9
   languageName: node
   linkType: hard
 
@@ -14701,7 +14797,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.4, micromatch@npm:^4.0.8, micromatch@npm:~4.0.8":
+"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4, micromatch@npm:^4.0.8, micromatch@npm:~4.0.8":
   version: 4.0.8
   resolution: "micromatch@npm:4.0.8"
   dependencies:
@@ -14791,7 +14887,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.0, minimatch@npm:^9.0.4":
+"minimatch@npm:^9.0.4":
   version: 9.0.5
   resolution: "minimatch@npm:9.0.5"
   dependencies:
@@ -15233,13 +15329,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-normalize-package-bin@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "npm-normalize-package-bin@npm:4.0.0"
-  checksum: 10c0/1fa546fcae8eaab61ef9b9ec237b6c795008da50e1883eae030e9e38bb04ffa32c5aabcef9a0400eae3dc1f91809bcfa85e437ce80d677c69b419d1d9cacf0ab
-  languageName: node
-  linkType: hard
-
 "npm-package-arg@npm:^12.0.0":
   version: 12.0.0
   resolution: "npm-package-arg@npm:12.0.0"
@@ -15265,27 +15354,6 @@ __metadata:
     npm-package-arg: "npm:^12.0.0"
     proc-log: "npm:^5.0.0"
   checksum: 10c0/43e02befb393f67d5014d690a96d55f0b5f837a3eb9a79b17738ff0e3a1f081968480f2f280d1ad77a088ebd88c196793d929b0e4d24a8389a324dfd4006bc39
-  languageName: node
-  linkType: hard
-
-"npm-run-all2@npm:*, npm-run-all2@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "npm-run-all2@npm:7.0.2"
-  dependencies:
-    ansi-styles: "npm:^6.2.1"
-    cross-spawn: "npm:^7.0.6"
-    memorystream: "npm:^0.3.1"
-    minimatch: "npm:^9.0.0"
-    pidtree: "npm:^0.6.0"
-    read-package-json-fast: "npm:^4.0.0"
-    shell-quote: "npm:^1.7.3"
-    which: "npm:^5.0.0"
-  bin:
-    npm-run-all: bin/npm-run-all/index.js
-    npm-run-all2: bin/npm-run-all/index.js
-    run-p: bin/run-p/index.js
-    run-s: bin/run-s/index.js
-  checksum: 10c0/4606c0cdaad9dc7dbe5a6ae432b1aabea25e2ffd541f959307e5c34247d0658952f98352b8ce45f925241af304c6718b2198b425f234e0e9fbc30b342cedb121
   languageName: node
   linkType: hard
 
@@ -15473,6 +15541,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"object-is@npm:^1.1.5":
+  version: 1.1.6
+  resolution: "object-is@npm:1.1.6"
+  dependencies:
+    call-bind: "npm:^1.0.7"
+    define-properties: "npm:^1.2.1"
+  checksum: 10c0/506af444c4dce7f8e31f34fc549e2fb8152d6b9c4a30c6e62852badd7f520b579c679af433e7a072f9d78eb7808d230dc12e1cf58da9154dfbf8813099ea0fe0
+  languageName: node
+  linkType: hard
+
 "object-keys@npm:^1.1.1":
   version: 1.1.1
   resolution: "object-keys@npm:1.1.1"
@@ -15480,7 +15558,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.assign@npm:^4.1.5":
+"object.assign@npm:^4.1.4, object.assign@npm:^4.1.5":
   version: 4.1.5
   resolution: "object.assign@npm:4.1.5"
   dependencies:
@@ -15583,6 +15661,16 @@ __metadata:
     is-inside-container: "npm:^1.0.0"
     is-wsl: "npm:^3.1.0"
   checksum: 10c0/c86d0b94503d5f735f674158d5c5d339c25ec2927562f00ee74590727292ed23e1b8d9336cb41ffa7e1fa4d3641d29b199b4ea37c78cb557d72b511743e90ebb
+  languageName: node
+  linkType: hard
+
+"open@npm:^7.4.2":
+  version: 7.4.2
+  resolution: "open@npm:7.4.2"
+  dependencies:
+    is-docker: "npm:^2.0.0"
+    is-wsl: "npm:^2.1.1"
+  checksum: 10c0/77573a6a68f7364f3a19a4c80492712720746b63680ee304555112605ead196afe91052bd3c3d165efdf4e9d04d255e87de0d0a77acec11ef47fd5261251813f
   languageName: node
   linkType: hard
 
@@ -15962,6 +16050,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"patch-package@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "patch-package@npm:8.0.0"
+  dependencies:
+    "@yarnpkg/lockfile": "npm:^1.1.0"
+    chalk: "npm:^4.1.2"
+    ci-info: "npm:^3.7.0"
+    cross-spawn: "npm:^7.0.3"
+    find-yarn-workspace-root: "npm:^2.0.0"
+    fs-extra: "npm:^9.0.0"
+    json-stable-stringify: "npm:^1.0.2"
+    klaw-sync: "npm:^6.0.0"
+    minimist: "npm:^1.2.6"
+    open: "npm:^7.4.2"
+    rimraf: "npm:^2.6.3"
+    semver: "npm:^7.5.3"
+    slash: "npm:^2.0.0"
+    tmp: "npm:^0.0.33"
+    yaml: "npm:^2.2.2"
+  bin:
+    patch-package: index.js
+  checksum: 10c0/690eab0537e953a3fd7d32bb23f0e82f97cd448f8244c3227ed55933611a126f9476397325c06ad2c11d881a19b427a02bd1881bee78d89f1731373fc4fe0fee
+  languageName: node
+  linkType: hard
+
 "path-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "path-case@npm:3.0.4"
@@ -16071,6 +16184,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path-unified@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "path-unified@npm:0.2.0"
+  checksum: 10c0/5229bbcbb093b1c76e7a8f568dd7d362bae6bd9348099968252aa17b1ffd86ef845d560a6b483bb2e6a3b2c25a5e8288707b03e41b66b2761aa1e2ba67b07d5b
+  languageName: node
+  linkType: hard
+
+"path@npm:^0.12.7":
+  version: 0.12.7
+  resolution: "path@npm:0.12.7"
+  dependencies:
+    process: "npm:^0.11.1"
+    util: "npm:^0.10.3"
+  checksum: 10c0/f795ce5438a988a590c7b6dfd450ec9baa1c391a8be4c2dea48baa6e0f5b199e56cd83b8c9ebf3991b81bea58236d2c32bdafe2c17a2e70c3a2e4c69891ade59
+  languageName: node
+  linkType: hard
+
 "pathval@npm:^2.0.0":
   version: 2.0.0
   resolution: "pathval@npm:2.0.0"
@@ -16113,7 +16243,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pidtree@npm:^0.6.0, pidtree@npm:~0.6.0":
+"pidtree@npm:~0.6.0":
   version: 0.6.0
   resolution: "pidtree@npm:0.6.0"
   bin:
@@ -16242,18 +16372,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-calc@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "postcss-calc@npm:10.0.0"
-  dependencies:
-    postcss-selector-parser: "npm:^6.0.16"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.38
-  checksum: 10c0/d4d529f2f71b49f17441eed74a7564ccd2779c72ed8648d4bb2530261a27c0ca01fe6a07260e7bf57e55f46dd68dea07e52fd1a6b538db7bc13015124be258a5
-  languageName: node
-  linkType: hard
-
 "postcss-calc@npm:^10.0.2":
   version: 10.0.2
   resolution: "postcss-calc@npm:10.0.2"
@@ -16274,30 +16392,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.6
   checksum: 10c0/701261026b38a4c27b3c3711635fac96005f36d3270adb76dbdb1eebc950fc841db45283ee66068a7121565592e9d7967d5534e15b6e4dd266afcabf9eafa905
-  languageName: node
-  linkType: hard
-
-"postcss-cli@npm:^11.0.0":
-  version: 11.0.0
-  resolution: "postcss-cli@npm:11.0.0"
-  dependencies:
-    chokidar: "npm:^3.3.0"
-    dependency-graph: "npm:^0.11.0"
-    fs-extra: "npm:^11.0.0"
-    get-stdin: "npm:^9.0.0"
-    globby: "npm:^14.0.0"
-    picocolors: "npm:^1.0.0"
-    postcss-load-config: "npm:^5.0.0"
-    postcss-reporter: "npm:^7.0.0"
-    pretty-hrtime: "npm:^1.0.3"
-    read-cache: "npm:^1.0.0"
-    slash: "npm:^5.0.0"
-    yargs: "npm:^17.0.0"
-  peerDependencies:
-    postcss: ^8.0.0
-  bin:
-    postcss: index.js
-  checksum: 10c0/c50a4f857153089124273cf1ae79a66048b317aa61089cd0bf7fc016f7ee05565c67ee80e77759fc575f07ec2584fcb0fd19e6dca8f98e8d1b814c840908007f
   languageName: node
   linkType: hard
 
@@ -16340,20 +16434,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-colormin@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-colormin@npm:7.0.1"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    caniuse-api: "npm:^3.0.0"
-    colord: "npm:^2.9.3"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/e01e9e129ce39320cf10bb09ee2a3ab5b44b77805d3f7827eea07297644838b85c33b78996eeae0a1aba327ffd72a6ab1d24949ebc831523e310e916d5500371
-  languageName: node
-  linkType: hard
-
 "postcss-colormin@npm:^7.0.2":
   version: 7.0.2
   resolution: "postcss-colormin@npm:7.0.2"
@@ -16365,18 +16445,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/76d09fb7e0218698e622a7c2cfc9087985f48f3a7e44f2655d5eefac4ae9c04198ae9d408dc7ace15d3aa5bde80e7031e462b0cb9b5bd50cfa76bbb1503c755b
-  languageName: node
-  linkType: hard
-
-"postcss-convert-values@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "postcss-convert-values@npm:7.0.2"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/beb59faf6aae97e6d3c233c5e6ed06cc60d65c49eec576036e3d0da1a831a1e827e3d41f5e81d016440b4f0bdf1406268ae069c4d5b38a6667b310c3da079d22
   languageName: node
   linkType: hard
 
@@ -16446,17 +16514,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-discard-comments@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-discard-comments@npm:7.0.1"
-  dependencies:
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/64de3fced7e0e49dfea6aede8a5ca495b81dcd01c3c47734a5fbc86a3cb2b1ae39e1958e34e9bea64ecabd5fb4d8c287ec1d6189cf175c2434c6b6582da79948
-  languageName: node
-  linkType: hard
-
 "postcss-discard-comments@npm:^7.0.3":
   version: 7.0.3
   resolution: "postcss-discard-comments@npm:7.0.3"
@@ -16465,15 +16522,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/7700c8fb9a83c6ea5cc784267b9afd6e2968fda0358d583af5913baa28dfc91b0f2a4bd0b2bd62a86ebcb8dadb2547e287beae25b5a097e21c1f723367ccf112
-  languageName: node
-  linkType: hard
-
-"postcss-discard-duplicates@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "postcss-discard-duplicates@npm:7.0.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/37d568dc18d47b8b9f0fd6d5115b1faf96c2bf429fc4586508a773533479e18627d6260cad6a3ca7d3bfc2f220fd9448410aee40e07f2ec6c6f96bbe3595dbc8
   languageName: node
   linkType: hard
 
@@ -16637,7 +16685,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-load-config@npm:^5.0.0, postcss-load-config@npm:^5.1.0":
+"postcss-load-config@npm:^5.1.0":
   version: 5.1.0
   resolution: "postcss-load-config@npm:5.1.0"
   dependencies:
@@ -16681,18 +16729,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-merge-longhand@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "postcss-merge-longhand@npm:7.0.2"
-  dependencies:
-    postcss-value-parser: "npm:^4.2.0"
-    stylehacks: "npm:^7.0.2"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/71d22418e5850e134bfcf2038acb1c91eeb48d9b6f9e4c0252fee757e11dc4ae351097a855c327fbc38dc7658fa6edc7cc7f458c08bb4044b82c6005dc565fcb
-  languageName: node
-  linkType: hard
-
 "postcss-merge-longhand@npm:^7.0.4":
   version: 7.0.4
   resolution: "postcss-merge-longhand@npm:7.0.4"
@@ -16702,20 +16738,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/6f50f7775dd361f83daf1acb3e0001d700ed2b7b9bea02df172143adc7fa196ce9209c9e482010ce36fd704512433b62692c5ab2eef5226db71ea3e694654dc7
-  languageName: node
-  linkType: hard
-
-"postcss-merge-rules@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "postcss-merge-rules@npm:7.0.2"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    caniuse-api: "npm:^3.0.0"
-    cssnano-utils: "npm:^5.0.0"
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/fbad20382ca45f1b3b5ff704c075f899cc9ba8418ae6effbdeb9e7c1f9b5c24996d1941ad36cd0936d60cbf127a72f235b2cbb0c44d9239a8a61042406d95b4a
   languageName: node
   linkType: hard
 
@@ -16757,19 +16779,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-minify-params@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-minify-params@npm:7.0.1"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    cssnano-utils: "npm:^5.0.0"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/84e1c4de5af47178c1f48e10ce16341560f32bb2becf5ec9b014103f6c706174bc70885e2e13ced4de9b4f1959fb970193261cbd4751c8b87d5159e859e8c5ec
-  languageName: node
-  linkType: hard
-
 "postcss-minify-params@npm:^7.0.2":
   version: 7.0.2
   resolution: "postcss-minify-params@npm:7.0.2"
@@ -16780,18 +16789,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/0e041f70554bae9d4a66c8ab2f2f3ed8bf73862c9d5ff9972ac7f1a596badd1544f093fa2362dd33e96c038af9e10287cdbfec9f480c49bffdcbaca9fdcb1e4e
-  languageName: node
-  linkType: hard
-
-"postcss-minify-selectors@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "postcss-minify-selectors@npm:7.0.2"
-  dependencies:
-    cssesc: "npm:^3.0.0"
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/87e0c21a0135b6c61b58d62c4c1e0cbd3cfb516ff8105db714c6a33a5edc477846ae220399d368e4ef6518529c711aa2dee9ff49e9befd93e83d5c939f3084a1
   languageName: node
   linkType: hard
 
@@ -16884,18 +16881,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-normalize-unicode@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-normalize-unicode@npm:7.0.1"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/fcabac738765f608cb211ac01a19f9a7d784f99d223ef6f31352f37b9bcf008e0ca7849414c9e77116be8660d78b01dba6fc4a87cee7c9a977d3c2741d6a222d
-  languageName: node
-  linkType: hard
-
 "postcss-normalize-unicode@npm:^7.0.2":
   version: 7.0.2
   resolution: "postcss-normalize-unicode@npm:7.0.2"
@@ -16982,7 +16967,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:^9.5.13":
+"postcss-preset-env@npm:^9.6.0":
   version: 9.6.0
   resolution: "postcss-preset-env@npm:9.6.0"
   dependencies:
@@ -17084,18 +17069,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-reduce-initial@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-reduce-initial@npm:7.0.1"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    caniuse-api: "npm:^3.0.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/3e7c6c1d0cc4ace38f44971f02d0dd98131af678cf114aa05cfa0c066420019d5329c221ef8507644b8a79d0e76534303f747c97860ac777fe17f57110edefe1
-  languageName: node
-  linkType: hard
-
 "postcss-reduce-initial@npm:^7.0.2":
   version: 7.0.2
   resolution: "postcss-reduce-initial@npm:7.0.2"
@@ -17128,7 +17101,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-reporter@npm:^7.0.0, postcss-reporter@npm:^7.1.0":
+"postcss-reporter@npm:^7.1.0":
   version: 7.1.0
   resolution: "postcss-reporter@npm:7.1.0"
   dependencies:
@@ -17154,12 +17127,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-safe-parser@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "postcss-safe-parser@npm:7.0.0"
+"postcss-safe-parser@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "postcss-safe-parser@npm:7.0.1"
   peerDependencies:
     postcss: ^8.4.31
-  checksum: 10c0/4217afd8ce2809e959dc365e4675f499303cc6b91f94db06c8164422822db2d3b3124df701ee2234db4127ad05619b016bfb9c2bccae9bf9cf898a396f1632c9
+  checksum: 10c0/6957b10b818bd8d4664ec0e548af967f7549abedfb37f844d389571d36af681340f41f9477b9ccf34bcc7599bdef222d1d72e79c64373001fae77089fba6d965
   languageName: node
   linkType: hard
 
@@ -17174,7 +17147,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.0.13, postcss-selector-parser@npm:^6.0.16, postcss-selector-parser@npm:^6.0.4":
+"postcss-selector-parser@npm:^6.0.13, postcss-selector-parser@npm:^6.0.4":
   version: 6.1.1
   resolution: "postcss-selector-parser@npm:6.1.1"
   dependencies:
@@ -17194,13 +17167,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.1.1, postcss-selector-parser@npm:^6.1.2":
+"postcss-selector-parser@npm:^6.1.2":
   version: 6.1.2
   resolution: "postcss-selector-parser@npm:6.1.2"
   dependencies:
     cssesc: "npm:^3.0.0"
     util-deprecate: "npm:^1.0.2"
   checksum: 10c0/523196a6bd8cf660bdf537ad95abd79e546d54180f9afb165a4ab3e651ac705d0f8b8ce6b3164fb9e3279ce482c5f751a69eb2d3a1e8eb0fd5e82294fb3ef13e
+  languageName: node
+  linkType: hard
+
+"postcss-selector-parser@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "postcss-selector-parser@npm:7.0.0"
+  dependencies:
+    cssesc: "npm:^3.0.0"
+    util-deprecate: "npm:^1.0.2"
+  checksum: 10c0/e96e096afcce70bf5c97789f5ea09d7415ae5eb701d82b05b5e8532885d31363b484fcb1ca9488c9a331f30508d9e5bb6c3109eb2eb5067ef3d3919f9928cd9d
   languageName: node
   linkType: hard
 
@@ -17240,17 +17223,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/7c7b177e6f4e2a3e9ada76d53afa02e08d900c8ac15600ba9daa80480269d538405e544bd8091bc5eb7529173a476896fad885a72a247258265424b29a9195ed
-  languageName: node
-  linkType: hard
-
-"postcss-unique-selectors@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-unique-selectors@npm:7.0.1"
-  dependencies:
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/6352d71ce2f65265f545831c2ce3686bd71961d08a2247c545d717d93d23b1eb08bb986efc11194d31970eea4cb42207b9aa9a3f4666d75492a6cbf1493cf466
   languageName: node
   linkType: hard
 
@@ -17328,7 +17300,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.32, postcss@npm:^8.4.41":
+"postcss@npm:^8.4.32":
   version: 8.4.41
   resolution: "postcss@npm:8.4.41"
   dependencies:
@@ -17350,7 +17322,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.49, postcss@npm:^8.5.0":
+"postcss@npm:^8.5.1":
   version: 8.5.1
   resolution: "postcss@npm:8.5.1"
   dependencies:
@@ -17386,7 +17358,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.4.2":
+"prettier@npm:^3.3.3, prettier@npm:^3.4.2":
   version: 3.4.2
   resolution: "prettier@npm:3.4.2"
   bin:
@@ -17417,7 +17389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-hrtime@npm:^1.0.2, pretty-hrtime@npm:^1.0.3":
+"pretty-hrtime@npm:^1.0.2":
   version: 1.0.3
   resolution: "pretty-hrtime@npm:1.0.3"
   checksum: 10c0/67cb3fc283a72252b49ac488647e6a01b78b7aa1b8f2061834aa1650691229081518ef3ca940f77f41cc8a8f02ba9eeb74b843481596670209e493062f2e89e0
@@ -17486,7 +17458,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"process@npm:^0.11.10":
+"process@npm:^0.11.1, process@npm:^0.11.10":
   version: 0.11.10
   resolution: "process@npm:0.11.10"
   checksum: 10c0/40c3ce4b7e6d4b8c3355479df77aeed46f81b279818ccdc500124e6a5ab882c0cc81ff7ea16384873a95a74c4570b01b120f287abbdd4c877931460eca6084b3
@@ -17529,6 +17501,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"punycode@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "punycode@npm:1.4.1"
+  checksum: 10c0/354b743320518aef36f77013be6e15da4db24c2b4f62c5f1eb0529a6ed02fbaf1cb52925785f6ab85a962f2b590d9cd5ad730b70da72b5f180e2556b8bd3ca08
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0":
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
@@ -17540,6 +17519,15 @@ __metadata:
   version: 6.1.0
   resolution: "pure-rand@npm:6.1.0"
   checksum: 10c0/1abe217897bf74dcb3a0c9aba3555fe975023147b48db540aa2faf507aee91c03bf54f6aef0eb2bf59cc259a16d06b28eca37f0dc426d94f4692aeff02fb0e65
+  languageName: node
+  linkType: hard
+
+"qs@npm:^6.12.3":
+  version: 6.13.1
+  resolution: "qs@npm:6.13.1"
+  dependencies:
+    side-channel: "npm:^1.0.6"
+  checksum: 10c0/5ef527c0d62ffca5501322f0832d800ddc78eeb00da3b906f1b260ca0492721f8cdc13ee4b8fd8ac314a6ec37b948798c7b603ccc167e954088df392092f160c
   languageName: node
   linkType: hard
 
@@ -17632,16 +17620,6 @@ __metadata:
   dependencies:
     pify: "npm:^2.3.0"
   checksum: 10c0/90cb2750213c7dd7c80cb420654344a311fdec12944e81eb912cd82f1bc92aea21885fa6ce442e3336d9fccd663b8a7a19c46d9698e6ca55620848ab932da814
-  languageName: node
-  linkType: hard
-
-"read-package-json-fast@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "read-package-json-fast@npm:4.0.0"
-  dependencies:
-    json-parse-even-better-errors: "npm:^4.0.0"
-    npm-normalize-package-bin: "npm:^4.0.0"
-  checksum: 10c0/8a03509ae8e852f1abc4b109c1be571dd90ac9ea65d55433b2fe287e409113441a9b00df698288fe48aa786c1a2550569d47b5ab01ed83ada073d691d5aff582
   languageName: node
   linkType: hard
 
@@ -17979,6 +17957,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rimraf@npm:^2.6.3":
+  version: 2.7.1
+  resolution: "rimraf@npm:2.7.1"
+  dependencies:
+    glob: "npm:^7.1.3"
+  bin:
+    rimraf: ./bin.js
+  checksum: 10c0/4eef73d406c6940927479a3a9dee551e14a54faf54b31ef861250ac815172bade86cc6f7d64a4dc5e98b65e4b18a2e1c9ff3b68d296be0c748413f092bb0dd40
+  languageName: node
+  linkType: hard
+
 "rimraf@npm:^3.0.0, rimraf@npm:^3.0.2":
   version: 3.0.2
   resolution: "rimraf@npm:3.0.2"
@@ -18282,14 +18271,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shell-quote@npm:^1.4.1, shell-quote@npm:^1.7.3":
+"shell-quote@npm:^1.4.1":
   version: 1.8.2
   resolution: "shell-quote@npm:1.8.2"
   checksum: 10c0/85fdd44f2ad76e723d34eb72c753f04d847ab64e9f1f10677e3f518d0e5b0752a176fd805297b30bb8c3a1556ebe6e77d2288dbd7b7b0110c7e941e9e9c20ce1
   languageName: node
   linkType: hard
 
-"side-channel@npm:^1.0.4":
+"side-channel@npm:^1.0.4, side-channel@npm:^1.0.6":
   version: 1.0.6
   resolution: "side-channel@npm:1.0.6"
   dependencies:
@@ -18328,6 +18317,13 @@ __metadata:
   dependencies:
     unicode-emoji-modifier-base: "npm:^1.0.0"
   checksum: 10c0/82d4c2527864f9cbd6cb7f3c4abb31e2224752234d5013b881d3e34e9ab543545b05206df5a17d14b515459fcb265ce409f9cfe443903176b0360cd20e4e4ba5
+  languageName: node
+  linkType: hard
+
+"slash@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "slash@npm:2.0.0"
+  checksum: 10c0/f83dbd3cb62c41bb8fcbbc6bf5473f3234b97fa1d008f571710a9d3757a28c7169e1811cad1554ccb1cc531460b3d221c9a7b37f549398d9a30707f0a5af9193
   languageName: node
   linkType: hard
 
@@ -18525,10 +18521,10 @@ __metadata:
     "@spectrum-tools/postcss-rgb-mapping": "workspace:^"
     "@yarnpkg/types": "npm:^4.0.0"
     at-rule-packer: "npm:^0.4.2"
-    autoprefixer: "npm:^10.4.19"
+    autoprefixer: "npm:^10.4.20"
     colors: "npm:^1.4.0"
     cross-env: "npm:^7.0.3"
-    cssnano: "npm:^7.0.3"
+    cssnano: "npm:^7.0.6"
     cssnano-preset-advanced: "npm:^7.0.6"
     diff: "npm:^7.0.0"
     diff2html: "npm:^3.4.51"
@@ -18547,13 +18543,13 @@ __metadata:
     nx: "npm:^19.8.2"
     open: "npm:^10.1.0"
     pajv: "npm:^1.2.0"
-    postcss: "npm:^8.5.0"
+    postcss: "npm:^8.5.1"
     postcss-extend: "npm:^1.0.5"
     postcss-hover-media-feature: "npm:^1.0.2"
     postcss-import: "npm:^16.1.0"
     postcss-licensing: "npm:^2.0.0"
     postcss-load-config: "npm:^5.1.0"
-    postcss-preset-env: "npm:^9.5.13"
+    postcss-preset-env: "npm:^9.6.0"
     postcss-pseudo-classes: "npm:^0.4.0"
     postcss-reporter: "npm:^7.1.0"
     postcss-selector-replace: "npm:^1.0.2"
@@ -18561,9 +18557,9 @@ __metadata:
     postcss-values-parser: "npm:^6.0.2"
     prettier: "npm:^3.4.2"
     rimraf: "npm:^6.0.1"
-    stylelint: "npm:^16.9.0"
+    stylelint: "npm:^16.14.1"
     stylelint-config-standard: "npm:^36.0.1"
-    stylelint-header: "npm:^2.0.1"
+    stylelint-header: "npm:^2.1.0"
     stylelint-high-performance-animation: "npm:^1.10.0"
     stylelint-order: "npm:^6.0.4"
     stylelint-selector-bem-pattern: "npm:^4.0.1"
@@ -18667,6 +18663,15 @@ __metadata:
     sb: ./bin/index.cjs
     storybook: ./bin/index.cjs
   checksum: 10c0/795b79950b88b41ee0158fe2e2583a8ce97ff843c054f91e3c55310967b9e5c4e4d72814773380b543c33bd6d57ce6b5f377ce93ce73962e803b250a751be37c
+  languageName: node
+  linkType: hard
+
+"stream@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "stream@npm:0.0.3"
+  dependencies:
+    component-emitter: "npm:^2.0.0"
+  checksum: 10c0/5d262408583f3d5fed8077b33ad670320d85c6b7c0fb3ab73a9a632fbad0ee36f3c66e6feb5264cb39dbee3a619174fa886b5f69f98217666d0844f6a2f6510b
   languageName: node
   linkType: hard
 
@@ -18923,43 +18928,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary-sets@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "style-dictionary-sets@npm:2.3.0"
+"style-dictionary@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "style-dictionary@npm:4.3.2"
   dependencies:
-    deepmerge: "npm:^4.2.2"
-  checksum: 10c0/4ed6506ae1709546d4a93d303386dae4d11610c0f409bada47b77607ab564ff95003c1f44b2e18a64752b586c8b065636a1bacab30054d307c6ef19a9aa73c93
-  languageName: node
-  linkType: hard
-
-"style-dictionary@npm:^3.9.2":
-  version: 3.9.2
-  resolution: "style-dictionary@npm:3.9.2"
-  dependencies:
-    chalk: "npm:^4.0.0"
-    change-case: "npm:^4.1.2"
-    commander: "npm:^8.3.0"
-    fs-extra: "npm:^10.0.0"
-    glob: "npm:^10.3.10"
+    "@bundled-es-modules/deepmerge": "npm:^4.3.1"
+    "@bundled-es-modules/glob": "npm:^10.4.2"
+    "@bundled-es-modules/memfs": "npm:^4.9.4"
+    "@zip.js/zip.js": "npm:^2.7.44"
+    chalk: "npm:^5.3.0"
+    change-case: "npm:^5.3.0"
+    commander: "npm:^12.1.0"
+    is-plain-obj: "npm:^4.1.0"
     json5: "npm:^2.2.2"
-    jsonc-parser: "npm:^3.0.0"
-    lodash: "npm:^4.17.15"
-    tinycolor2: "npm:^1.4.1"
+    patch-package: "npm:^8.0.0"
+    path-unified: "npm:^0.2.0"
+    prettier: "npm:^3.3.3"
+    tinycolor2: "npm:^1.6.0"
   bin:
-    style-dictionary: bin/style-dictionary
-  checksum: 10c0/639f567e35565ea4e76f1f564b4b7f21208fd7f0bc86230fce9bee474f6add33defe3c2467fb73703e8e9819c29707d5d1628f2569cb69f2561b9e7b7596d434
-  languageName: node
-  linkType: hard
-
-"stylehacks@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "stylehacks@npm:7.0.2"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/552299e869ac430e1076c025ace6c80bdfd5b672632435625eb1bd45ff5611aad7f3ee810e72edc04dc0fc3761e08dec40d27b72c50b95690eea2de43238b8d8
+    style-dictionary: bin/style-dictionary.js
+  checksum: 10c0/bd6f4524faf38c4daa6c2c827744577e91787778d7715343da25241d7d638624fcb86e4a4568b78f7a407dfba2081a279087a1910dbefde5a1b88c74ba63b366
   languageName: node
   linkType: hard
 
@@ -18995,14 +18983,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-header@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "stylelint-header@npm:2.0.1"
+"stylelint-header@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "stylelint-header@npm:2.1.0"
   dependencies:
+    lodash-es: "npm:^4.17.21"
     string-similarity: "npm:^4.0.4"
   peerDependencies:
     stylelint: ^15.0.0 || ^16.0.0
-  checksum: 10c0/ed06484ec0484ad02878c8e1512b34926e87532db7287c315c015532f7cfd3d202df5aa2603a06bb1569dc0ac93cefa94bd952b75d71dc8035608578a3fa64d4
+  checksum: 10c0/e2fb17dcc0142ac48b88d31d7f6ede23bb2d3df77cc18f69ae9638814de656680808f8edb8efd8f0e60a7c6dbec0399b85fdc644b8ebf6e1ebc3f2eb80496a80
   languageName: node
   linkType: hard
 
@@ -19051,52 +19040,51 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.9.0":
-  version: 16.9.0
-  resolution: "stylelint@npm:16.9.0"
+"stylelint@npm:^16.14.1":
+  version: 16.14.1
+  resolution: "stylelint@npm:16.14.1"
   dependencies:
-    "@csstools/css-parser-algorithms": "npm:^3.0.1"
-    "@csstools/css-tokenizer": "npm:^3.0.1"
-    "@csstools/media-query-list-parser": "npm:^3.0.1"
-    "@csstools/selector-specificity": "npm:^4.0.0"
+    "@csstools/css-parser-algorithms": "npm:^3.0.4"
+    "@csstools/css-tokenizer": "npm:^3.0.3"
+    "@csstools/media-query-list-parser": "npm:^4.0.2"
+    "@csstools/selector-specificity": "npm:^5.0.0"
     "@dual-bundle/import-meta-resolve": "npm:^4.1.0"
     balanced-match: "npm:^2.0.0"
     colord: "npm:^2.9.3"
     cosmiconfig: "npm:^9.0.0"
-    css-functions-list: "npm:^3.2.2"
-    css-tree: "npm:^2.3.1"
-    debug: "npm:^4.3.6"
-    fast-glob: "npm:^3.3.2"
+    css-functions-list: "npm:^3.2.3"
+    css-tree: "npm:^3.1.0"
+    debug: "npm:^4.3.7"
+    fast-glob: "npm:^3.3.3"
     fastest-levenshtein: "npm:^1.0.16"
-    file-entry-cache: "npm:^9.0.0"
+    file-entry-cache: "npm:^10.0.5"
     global-modules: "npm:^2.0.0"
     globby: "npm:^11.1.0"
     globjoin: "npm:^0.1.4"
     html-tags: "npm:^3.3.1"
-    ignore: "npm:^5.3.2"
+    ignore: "npm:^7.0.3"
     imurmurhash: "npm:^0.1.4"
     is-plain-object: "npm:^5.0.0"
-    known-css-properties: "npm:^0.34.0"
+    known-css-properties: "npm:^0.35.0"
     mathml-tag-names: "npm:^2.1.3"
     meow: "npm:^13.2.0"
     micromatch: "npm:^4.0.8"
     normalize-path: "npm:^3.0.0"
-    picocolors: "npm:^1.0.1"
-    postcss: "npm:^8.4.41"
+    picocolors: "npm:^1.1.1"
+    postcss: "npm:^8.5.1"
     postcss-resolve-nested-selector: "npm:^0.1.6"
-    postcss-safe-parser: "npm:^7.0.0"
-    postcss-selector-parser: "npm:^6.1.2"
+    postcss-safe-parser: "npm:^7.0.1"
+    postcss-selector-parser: "npm:^7.0.0"
     postcss-value-parser: "npm:^4.2.0"
     resolve-from: "npm:^5.0.0"
     string-width: "npm:^4.2.3"
-    strip-ansi: "npm:^7.1.0"
     supports-hyperlinks: "npm:^3.1.0"
     svg-tags: "npm:^1.0.0"
-    table: "npm:^6.8.2"
+    table: "npm:^6.9.0"
     write-file-atomic: "npm:^5.0.1"
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: 10c0/d3ff9c8945c56b04a2fa16ec33d163325496d5db94b6fcb5adf74c76f7f794ac992888273f9a3317652ba8b6195168b2ffff382ca2a667a241e2ace8c9505ae2
+  checksum: 10c0/cce94374dc721d491d955f548ee81ba835d4955fa37d58a11323454f9f3721e5644fa89a04c14f85bdfa12790bdd043a41be2001a99cb0bfe23b38eb933199d7
   languageName: node
   linkType: hard
 
@@ -19233,16 +19221,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"table@npm:^6.8.2":
-  version: 6.8.2
-  resolution: "table@npm:6.8.2"
+"table@npm:^6.9.0":
+  version: 6.9.0
+  resolution: "table@npm:6.9.0"
   dependencies:
     ajv: "npm:^8.0.1"
     lodash.truncate: "npm:^4.4.2"
     slice-ansi: "npm:^4.0.0"
     string-width: "npm:^4.2.3"
     strip-ansi: "npm:^6.0.1"
-  checksum: 10c0/f8b348af38ee34e419d8ce7306ba00671ce6f20e861ccff22555f491ba264e8416086063ce278a8d81abfa8d23b736ec2cca7ac4029b5472f63daa4b4688b803
+  checksum: 10c0/35646185712bb65985fbae5975dda46696325844b78735f95faefae83e86df0a265277819a3e67d189de6e858c509b54e66ca3958ffd51bde56ef1118d455bf4
   languageName: node
   linkType: hard
 
@@ -19364,6 +19352,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"thingies@npm:^1.20.0":
+  version: 1.21.0
+  resolution: "thingies@npm:1.21.0"
+  peerDependencies:
+    tslib: ^2
+  checksum: 10c0/7570ee855aecb73185a672ecf3eb1c287a6512bf5476449388433b2d4debcf78100bc8bfd439b0edd38d2bc3bfb8341de5ce85b8557dec66d0f27b962c9a8bc1
+  languageName: node
+  linkType: hard
+
 "through@npm:>=2.2.7 <3, through@npm:^2.3.4":
   version: 2.3.8
   resolution: "through@npm:2.3.8"
@@ -19385,7 +19382,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinycolor2@npm:^1.4.1":
+"tinycolor2@npm:^1.6.0":
   version: 1.6.0
   resolution: "tinycolor2@npm:1.6.0"
   checksum: 10c0/9aa79a36ba2c2a87cb221453465cabacd04b9e35f9694373e846fdc78b1c768110f81e581ea41440106c0f24d9a023891d0887e8075885e790ac40eb0e74a5c1
@@ -19513,6 +19510,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tree-dump@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "tree-dump@npm:1.0.2"
+  peerDependencies:
+    tslib: 2
+  checksum: 10c0/d1d180764e9c691b28332dbd74226c6b6af361dfb1e134bb11e60e17cb11c215894adee50ffc578da5dcf546006693947be8b6665eb1269b56e2f534926f1c1f
+  languageName: node
+  linkType: hard
+
 "tree-kill@npm:^1.2.2":
   version: 1.2.2
   resolution: "tree-kill@npm:1.2.2"
@@ -19545,44 +19551,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:10.9.1":
-  version: 10.9.1
-  resolution: "ts-node@npm:10.9.1"
-  dependencies:
-    "@cspotcode/source-map-support": "npm:^0.8.0"
-    "@tsconfig/node10": "npm:^1.0.7"
-    "@tsconfig/node12": "npm:^1.0.7"
-    "@tsconfig/node14": "npm:^1.0.0"
-    "@tsconfig/node16": "npm:^1.0.2"
-    acorn: "npm:^8.4.1"
-    acorn-walk: "npm:^8.1.1"
-    arg: "npm:^4.1.0"
-    create-require: "npm:^1.1.0"
-    diff: "npm:^4.0.1"
-    make-error: "npm:^1.1.1"
-    v8-compile-cache-lib: "npm:^3.0.1"
-    yn: "npm:3.1.1"
-  peerDependencies:
-    "@swc/core": ">=1.2.50"
-    "@swc/wasm": ">=1.2.50"
-    "@types/node": "*"
-    typescript: ">=2.7"
-  peerDependenciesMeta:
-    "@swc/core":
-      optional: true
-    "@swc/wasm":
-      optional: true
-  bin:
-    ts-node: dist/bin.js
-    ts-node-cwd: dist/bin-cwd.js
-    ts-node-esm: dist/bin-esm.js
-    ts-node-script: dist/bin-script.js
-    ts-node-transpile-only: dist/bin-transpile.js
-    ts-script: dist/bin-script-deprecated.js
-  checksum: 10c0/95187932fb83f3901e22546bd2feeac7d2feb4f412f42ac3a595f049a23e8dcf70516dffb51866391228ea2dbcfaea039e250fb2bb334d48a86ab2b6aea0ae2d
-  languageName: node
-  linkType: hard
-
 "ts-poet@npm:^4.5.0":
   version: 4.15.0
   resolution: "ts-poet@npm:4.15.0"
@@ -19604,17 +19572,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.0.0":
+  version: 2.8.1
+  resolution: "tslib@npm:2.8.1"
+  checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.2.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.6.2":
   version: 2.6.3
   resolution: "tslib@npm:2.6.3"
   checksum: 10c0/2598aef53d9dbe711af75522464b2104724d6467b26a60f2bdac8297d2b5f1f6b86a71f61717384aa8fd897240467aaa7bcc36a0700a0faf751293d1331db39a
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.8.1":
-  version: 2.8.1
-  resolution: "tslib@npm:2.8.1"
-  checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
   languageName: node
   linkType: hard
 
@@ -20077,6 +20045,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"url@npm:^0.11.3":
+  version: 0.11.4
+  resolution: "url@npm:0.11.4"
+  dependencies:
+    punycode: "npm:^1.4.1"
+    qs: "npm:^6.12.3"
+  checksum: 10c0/cc93405ae4a9b97a2aa60ca67f1cb1481c0221cb4725a7341d149be5e2f9cfda26fd432d64dbbec693d16593b68b8a46aad8e5eab21f814932134c9d8620c662
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -20096,6 +20074,15 @@ __metadata:
     object.getownpropertydescriptors: "npm:^2.1.6"
     safe-array-concat: "npm:^1.0.0"
   checksum: 10c0/cc9bf4912b89ea8e095b5746d945607884b4635d219cb1935c028259e86be6af92d7b7b1e702776805d81f7d387ffa436037299e9bf01ce076267e217b54ae3e
+  languageName: node
+  linkType: hard
+
+"util@npm:^0.10.3":
+  version: 0.10.4
+  resolution: "util@npm:0.10.4"
+  dependencies:
+    inherits: "npm:2.0.3"
+  checksum: 10c0/d29f6893e406b63b088ce9924da03201df89b31490d4d011f1c07a386ea4b3dbe907464c274023c237da470258e1805d806c7e4009a5974cd6b1d474b675852a
   languageName: node
   linkType: hard
 
@@ -20127,13 +20114,6 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 10c0/1607dd32ac7fc22f2d8f77051e6a64845c9bce5cd3dd8aa0070c074ec73e666a1f63c7b4e0f4bf2bc8b9d59dc85a15e17807446d9d2b17c8485fbc2147b27f9b
-  languageName: node
-  linkType: hard
-
-"v8-compile-cache-lib@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "v8-compile-cache-lib@npm:3.0.1"
-  checksum: 10c0/bdc36fb8095d3b41df197f5fb6f11e3a26adf4059df3213e3baa93810d8f0cc76f9a74aaefc18b73e91fe7e19154ed6f134eda6fded2e0f1c8d2272ed2d2d391
   languageName: node
   linkType: hard
 
@@ -20384,17 +20364,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"which@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "which@npm:5.0.0"
-  dependencies:
-    isexe: "npm:^3.1.1"
-  bin:
-    node-which: bin/which.js
-  checksum: 10c0/e556e4cd8b7dbf5df52408c9a9dd5ac6518c8c5267c8953f5b0564073c66ed5bf9503b14d876d0e9c7844d4db9725fb0dcf45d6e911e17e26ab363dc3965ae7b
-  languageName: node
-  linkType: hard
-
 "word-wrap@npm:^1.2.5":
   version: 1.2.5
   resolution: "word-wrap@npm:1.2.5"
@@ -20624,21 +20593,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yaml@npm:^2.2.2, yaml@npm:~2.6.1":
+  version: 2.6.1
+  resolution: "yaml@npm:2.6.1"
+  bin:
+    yaml: bin.mjs
+  checksum: 10c0/aebf07f61c72b38c74d2b60c3a3ccf89ee4da45bcd94b2bfb7899ba07a5257625a7c9f717c65a6fc511563d48001e01deb1d9e55f0133f3e2edf86039c8c1be7
+  languageName: node
+  linkType: hard
+
 "yaml@npm:^2.4.2":
   version: 2.4.5
   resolution: "yaml@npm:2.4.5"
   bin:
     yaml: bin.mjs
   checksum: 10c0/e1ee78b381e5c710f715cc4082fd10fc82f7f5c92bd6f075771d20559e175616f56abf1c411f545ea0e9e16e4f84a83a50b42764af5f16ec006328ba9476bb31
-  languageName: node
-  linkType: hard
-
-"yaml@npm:~2.6.1":
-  version: 2.6.1
-  resolution: "yaml@npm:2.6.1"
-  bin:
-    yaml: bin.mjs
-  checksum: 10c0/aebf07f61c72b38c74d2b60c3a3ccf89ee4da45bcd94b2bfb7899ba07a5257625a7c9f717c65a6fc511563d48001e01deb1d9e55f0133f3e2edf86039c8c1be7
   languageName: node
   linkType: hard
 
@@ -20690,13 +20659,6 @@ __metadata:
     y18n: "npm:^5.0.5"
     yargs-parser: "npm:^21.1.1"
   checksum: 10c0/ccd7e723e61ad5965fffbb791366db689572b80cca80e0f96aad968dfff4156cd7cd1ad18607afe1046d8241e6fb2d6c08bf7fa7bfb5eaec818735d8feac8f05
-  languageName: node
-  linkType: hard
-
-"yn@npm:3.1.1":
-  version: 3.1.1
-  resolution: "yn@npm:3.1.1"
-  checksum: 10c0/0732468dd7622ed8a274f640f191f3eaf1f39d5349a1b72836df484998d7d9807fbea094e2f5486d6b0cd2414aad5775972df0e68f8604db89a239f0f4bf7443
   languageName: node
   linkType: hard
 
