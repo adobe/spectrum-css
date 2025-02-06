@@ -5322,10 +5322,10 @@ __metadata:
     "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241121221506"
     "@adobe/token-diff-generator": "npm:^1.3.0"
     "@nxkit/style-dictionary": "npm:^6.0.0"
-    "@spectrum-tools/postcss-rgb-mapping": "workspace:^"
+    "@spectrum-tools/postcss-rgb-mapping": "npm:1.0.0"
     eslint: "npm:^8.57.0"
     npm-run-all2: "npm:^7.0.2"
-    postcss: "npm:^8.5.0"
+    postcss: "npm:^8.4.49"
     postcss-cli: "npm:^11.0.0"
     postcss-sorting: "npm:^9.1.0"
     prettier: "npm:^3.4.2"
@@ -5495,7 +5495,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-tools/postcss-rgb-mapping@workspace:^, @spectrum-tools/postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping":
+"@spectrum-tools/postcss-rgb-mapping@npm:1.0.0, @spectrum-tools/postcss-rgb-mapping@workspace:^, @spectrum-tools/postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping":
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping"
   dependencies:
@@ -18309,6 +18309,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semver@npm:^7.7.1":
+  version: 7.7.1
+  resolution: "semver@npm:7.7.1"
+  bin:
+    semver: bin/semver.js
+  checksum: 10c0/fd603a6fb9c399c6054015433051bdbe7b99a940a8fb44b85c2b524c4004b023d7928d47cb22154f8d054ea7ee8597f586605e05b52047f048278e4ac56ae958
+  languageName: node
+  linkType: hard
+
 "sentence-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "sentence-case@npm:3.0.4"
@@ -18658,6 +18667,7 @@ __metadata:
     postcss-values-parser: "npm:^6.0.2"
     prettier: "npm:^3.4.2"
     rimraf: "npm:^6.0.1"
+    semver: "npm:^7.7.1"
     stylelint: "npm:^16.9.0"
     stylelint-config-standard: "npm:^36.0.1"
     stylelint-header: "npm:^2.0.1"
