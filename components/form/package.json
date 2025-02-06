@@ -25,14 +25,15 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=15"
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
 	},
 	"devDependencies": {
-		"@spectrum-css/tokens": "16.0.0",
-		"eslint": "^8.57.0",
-		"npm-run-all2": "*",
-		"prettier": "^3.4.2",
-		"stylelint": "^16.9.0"
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",

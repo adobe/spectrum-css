@@ -25,11 +25,17 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/tokens": ">=14 || >=15",
-		"@spectrum-css/tooltip": ">=6"
+		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0",
+		"@spectrum-css/tooltip": ">=7.0.0 <8.0.0"
 	},
 	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		},
 		"@spectrum-css/tooltip": {
 			"optional": true
 		}
@@ -37,11 +43,7 @@
 	"devDependencies": {
 		"@spectrum-css/icon": "9.0.1",
 		"@spectrum-css/tokens": "16.0.0",
-		"@spectrum-css/tooltip": "7.0.1",
-		"eslint": "^8.57.0",
-		"npm-run-all2": "^7.0.2",
-		"prettier": "^3.4.2",
-		"stylelint": "^16.9.0"
+		"@spectrum-css/tooltip": "7.0.1"
 	},
 	"keywords": [
 		"design-system",

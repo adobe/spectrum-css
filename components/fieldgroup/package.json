@@ -25,10 +25,10 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/checkbox": ">=9",
-		"@spectrum-css/helptext": ">=5",
-		"@spectrum-css/radio": ">=9",
-		"@spectrum-css/tokens": ">=14 || >=15"
+		"@spectrum-css/checkbox": ">=10.0.0 <11.0.0",
+		"@spectrum-css/helptext": ">=7.0.0 <8.0.0",
+		"@spectrum-css/radio": ">=10.0.0 <11.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/checkbox": {
@@ -39,17 +39,16 @@
 		},
 		"@spectrum-css/radio": {
 			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
 		}
 	},
 	"devDependencies": {
 		"@spectrum-css/checkbox": "10.0.1",
 		"@spectrum-css/helptext": "7.0.1",
 		"@spectrum-css/radio": "10.0.1",
-		"@spectrum-css/tokens": "16.0.0",
-		"eslint": "^8.57.0",
-		"npm-run-all2": "^7.0.2",
-		"prettier": "^3.4.2",
-		"stylelint": "^16.9.0"
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",
