@@ -23,6 +23,7 @@ module.exports = ({
 		"@spectrum-tools/postcss-rgb-mapping": {
 			colorFunctionalNotation: false,
 		},
+		"@spectrum-tools/postcss-transparent-mapping": {},
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
