@@ -245,7 +245,7 @@ async function run() {
 					summary.push(
 						`**Total change (Δ)**: ${printChange(overallHeadSize, overallBaseSize)} (${printPercentChange(overallHeadSize, overallBaseSize)})`,
 						"",
-						`<small><em>Table reports on changes to a package's main file.${componentsChanged > 1 ? ` Other changes can be found in the collapsed <a href=\"#details\">Details</a> section below.` : ""}</em></small>`,
+						`<small><em>Table reports on changes to a package's main file.${sections.length > 1 ? ` Other changes can be found in the collapsed <a href=\"#details\">Details</a> section below.` : ""}</em></small>`,
 						""
 					);
 				}
