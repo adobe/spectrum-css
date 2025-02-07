@@ -17,11 +17,16 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const { deflate } = require("zlib");
+const { promisify } = require("util");
+
 const postcss = require("postcss");
 const postcssrc = require("postcss-load-config");
 const prettier = require("prettier");
 
 require("colors");
+
+const gzip = promisify(deflate);
 
 const {
 	dirs,
@@ -72,15 +77,17 @@ async function processCSS(
 		}
 	}
 
+	// If the output file is a minified file, force the minify flag to true
+	if (output && path.basename(output, ".css").endsWith(".min")) minify = true;
+
 	const ctx = {
 		cwd,
 		env: process.env.NODE_ENV ?? "development",
-		file: output,
+		file: output ?? input,
 		from: input,
-		to: output,
+		to: output ?? input,
 		verbose: false,
 		minify,
-		shouldCombine: true,
 		...postCSSOptions,
 	};
 
@@ -91,7 +98,7 @@ async function processCSS(
 
 	const result = await postcss(plugins).process(content, {
 		from: input,
-		to: output,
+		to: output ?? input,
 		...options
 	});
 
@@ -139,6 +146,12 @@ async function processCSS(
 		writeAndReport(formatted, output, { cwd }),
 	];
 
+	if (minify) {
+		promises.push(
+			gzip(formatted).then(zipped => writeAndReport(zipped, `${output}.gz`, { cwd }))
+		);
+	}
+
 	if (result.map) {
 		promises.push(
 			writeAndReport(result.map.toString().trimStart(), `${output}.map`, { cwd }),
@@ -155,7 +168,7 @@ async function processCSS(
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
+async function build({ cwd = process.cwd(), clean = false, minify = false, componentName } = {}) {
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
@@ -163,14 +176,24 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		componentName = getPackageFromPath(cwd);
 	}
 
-	return processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
-		cwd,
-		clean,
-		skipMapping: true,
-		referencesOnly: false,
-		preserveVariables: true,
-		stripLocalSelectors: false,
-	});
+	return Promise.all([
+		processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
+			cwd,
+			clean,
+			skipMapping: true,
+			referencesOnly: false,
+			preserveVariables: true,
+			stripLocalSelectors: false,
+		}),
+		minify ? processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.min.css"), {
+			cwd,
+			clean,
+			skipMapping: true,
+			referencesOnly: false,
+			preserveVariables: true,
+			stripLocalSelectors: false,
+		}) : Promise.resolve(),
+	]);
 }
 
 /**
@@ -185,6 +208,7 @@ async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
 	clean,
+	minify = false,
 } = {}) {
 	if (!cwd && componentName) {
 		cwd = path.join(dirs.components, componentName);
@@ -198,6 +222,10 @@ async function main({
 
 	if (typeof clean === "undefined") {
 		clean = process.env.NODE_ENV === "production";
+	}
+
+	if (process.env.NODE_ENV === "production") {
+		minify = true;
 	}
 
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;

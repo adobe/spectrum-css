@@ -11,15 +11,18 @@
  * governing permissions and limitations under the License.
  */
 
-const { join } = require("path");
+const fs = require("node:fs");
+const { join, basename } = require("node:path");
 
 module.exports = ({
 	resolveImports = true,
 	lint = true,
 	verbose = true,
 	minify = false,
+	module = false,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
+	cwd = process.cwd(),
 	...options
 } = {}) => {
 	const isProduction = env.toLowerCase() === "production";
@@ -132,6 +135,15 @@ module.exports = ({
 				cwd: __dirname,
 				skipIfEmpty: true,
 			},
+			"postcss-modules": module ? {
+				getJSON: (cssFileName, json) =>
+					fs.writeFileSync(join(cwd, "dist", basename(cssFileName, ".css") + ".json"), JSON.stringify(json)),
+				exportGlobals: true,
+				generateScopedName: function (name) {
+					const cleanClass = name.toLowerCase().replaceAll(/-/g, "_");
+					return "_" + cleanClass;
+				},
+			} : false,
 			/* --------------------------------------------------- */
 			/* ------------------- REPORTING --------------------- */
 			"postcss-reporter": verbose
