@@ -25,31 +25,36 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/alertdialog": ">=2",
-		"@spectrum-css/dialog": ">=10",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/menu": ">=7",
-		"@spectrum-css/tokens": ">=14 || >=15"
+		"@spectrum-css/alertdialog": ">=4.0.0 <5.0.0",
+		"@spectrum-css/dialog": ">=12.0.0 <13.0.0",
+		"@spectrum-css/divider": ">=5.0.0 <6.0.0",
+		"@spectrum-css/menu": ">=9.0.0 <10.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
+		"@spectrum-css/alertdialog": {
+			"optional": true
+		},
+		"@spectrum-css/dialog": {
+			"optional": true
+		},
 		"@spectrum-css/divider": {
 			"optional": true
 		},
 		"@spectrum-css/menu": {
 			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
 		}
 	},
 	"devDependencies": {
 		"@spectrum-css/alertdialog": "4.0.1",
-		"@spectrum-css/commons": "workspace:^",
+		"@spectrum-css/commons": "11.0.0",
 		"@spectrum-css/dialog": "12.0.1",
 		"@spectrum-css/divider": "5.0.1",
 		"@spectrum-css/menu": "9.0.1",
-		"@spectrum-css/tokens": "16.0.0",
-		"eslint": "^8.57.0",
-		"npm-run-all2": "^7.0.2",
-		"prettier": "^3.4.2",
-		"stylelint": "^16.9.0"
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
 		"design-system",
