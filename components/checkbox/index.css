@@ -27,6 +27,7 @@
 	--spectrum-checkbox-checkmark-color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-gray-50)));
 
 	/* Color */
+	--spectrum-checkbox-background-color: var(--spectrum-gray-25);
 	--spectrum-checkbox-content-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-checkbox-content-color-hover: var(--spectrum-neutral-content-color-hover);
 	--spectrum-checkbox-content-color-down: var(--spectrum-neutral-content-color-down);
@@ -56,9 +57,6 @@
 	--spectrum-checkbox-line-height: var(--spectrum-line-height-100);
 	--spectrum-checkbox-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
-	/* Size */
-	--spectrum-checkbox-height: var(--spectrum-component-height-100);
-	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
 
 	--spectrum-checkbox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-checkbox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
