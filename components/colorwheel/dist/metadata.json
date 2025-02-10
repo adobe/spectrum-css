@@ -7,7 +7,6 @@
     ".spectrum-ColorWheel-colorarea-container",
     ".spectrum-ColorWheel-handle",
     ".spectrum-ColorWheel-inner",
-    ".spectrum-ColorWheel-inner:before",
     ".spectrum-ColorWheel-slider",
     ".spectrum-ColorWheel-wheel",
     ".spectrum-ColorWheel-wheel.is-disabled",
@@ -16,6 +15,7 @@
     ".spectrum-ColorWheel.is-disabled:before",
     ".spectrum-ColorWheel.is-dragged",
     ".spectrum-ColorWheel.is-focused",
+    ".spectrum-ColorWheel:after",
     ".spectrum-ColorWheel:before",
     "[dir=\"rtl\"] .spectrum-ColorWheel-ColorArea-handle"
   ],

@@ -1,4 +1,3 @@
-import legacy from "@spectrum-css/tokens-legacy/dist/json/tokens.json";
 import spectrum from "@spectrum-css/tokens/dist/json/tokens.json";
 
 import { useTheme } from "@storybook/theming";
