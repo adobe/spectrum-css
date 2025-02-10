@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/colorwheel",
-	"version": "6.0.1",
+	"version": "7.0.0",
 	"description": "The Spectrum CSS Color Area component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,10 +25,10 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/colorarea": ">=7.0.0 <8.0.0",
-		"@spectrum-css/colorhandle": ">=10.0.0 <11.0.0",
-		"@spectrum-css/colorloupe": ">=7.0.0 <8.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+		"@spectrum-css/colorarea": ">=8.0.0",
+		"@spectrum-css/colorhandle": ">=11.0.0",
+		"@spectrum-css/colorloupe": ">=7.1.0",
+		"@spectrum-css/tokens": ">=16.0.1"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorarea": {
@@ -45,10 +45,10 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/colorarea": "7.0.1",
-		"@spectrum-css/colorhandle": "10.0.1",
-		"@spectrum-css/colorloupe": "7.0.1",
-		"@spectrum-css/tokens": "16.0.0"
+		"@spectrum-css/colorarea": "8.0.0",
+		"@spectrum-css/colorhandle": "11.0.0",
+		"@spectrum-css/colorloupe": "7.1.0",
+		"@spectrum-css/tokens": "16.0.1"
 	},
 	"keywords": [
 		"design-system",
