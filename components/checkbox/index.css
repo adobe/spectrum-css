@@ -54,7 +54,13 @@
 	/* Font */
 	--spectrum-checkbox-line-height: var(--spectrum-line-height-100);
 	--spectrum-checkbox-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--spectrum-checkbox-text-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-checkbox-text-font-style: var(--spectrum-default-font-style);
 
+	/* Size */
+	--spectrum-checkbox-height: var(--spectrum-component-height-100);
+	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
+	--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-small-size-medium);
 
 	--spectrum-checkbox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-checkbox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
@@ -63,6 +69,13 @@
 	--spectrum-checkbox-selected-border-width: calc(var(--spectrum-checkbox-control-size) / 2);
 
 	--spectrum-checkbox-animation-duration: var(--spectrum-animation-duration-100);
+
+	/* CJK (Chinese, Japanese, and Korean) language support */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		line-height: var(--mod-checkbox-line-height-cjk, var(--spectrum-checkbox-line-height-cjk));
+	}
 }
 
 .spectrum-Checkbox,
@@ -161,7 +174,7 @@
 
 	&:not(.is-readOnly):active {
 		.spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
-			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down)) scale(var(--spectrum-component-size-width-ratio-down), var(--spectrum-component-size-width-ratio-down));
+			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
 		}
 	}
 
@@ -182,8 +195,7 @@
 		}
 
 		&:hover {
-			.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
-			.spectrum-Checkbox-box::before {
+			.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box::before {
 				border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
 			}
 		}
@@ -365,20 +377,12 @@
 	margin-block-end: var(--mod-checkbox-bottom-to-text, var(--spectrum-checkbox-bottom-to-text));
 
 	font-size: var(--mod-checkbox-font-size, var(--spectrum-checkbox-font-size));
-
-	/* TODO Use font-weight and font-style tokens */
-	/* font-weight: var(--spectrum-checkbox-text-font-weight); */
-	/* font-style: var(--spectrum-checkbox-text-font-style); */
+	font-weight: var(--spectrum-checkbox-text-font-weight);
+	font-style: var(--spectrum-checkbox-text-font-style);
 
 	transition: color var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out;
 
 	line-height: var(--mod-checkbox-line-height, var(--spectrum-checkbox-line-height));
-
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		line-height: var(--mod-checkbox-line-height-cjk, var(--spectrum-checkbox-line-height-cjk));
-	}
 }
 
 /**
