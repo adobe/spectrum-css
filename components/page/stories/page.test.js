@@ -7,7 +7,7 @@ export const PageGroup = Variants({
 	testData: [
 		{
 			testHeading: "Standard",
-			skipWrapper: false,
+			skipWrapper: true,
 		},
 	]
 });

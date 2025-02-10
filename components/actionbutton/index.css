@@ -336,7 +336,7 @@
 		color: var(--spectrum-actionbutton-content-color-focus);
 
 		&::after {
-			box-shadow: 0 0 0 var(--mod-actionbutton-focus-indicator-thickness, var(--spectrum-actionbutton-focus-indicator-thickness)) var(--highcontrast-actionbutton-focus-indicator-color, var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color)));
+			box-shadow: 0 0 0 var(--spectrum-actionbutton-focus-indicator-thickness) var(--spectrum-actionbutton-focus-indicator-color);
 		}
 	}
 
@@ -364,6 +364,7 @@ a.spectrum-ActionButton {
 	-webkit-appearance: none;
 }
 
+/* Nested sub-component: Icon */
 .spectrum-ActionButton-icon {
 	flex-shrink: 0;
 
@@ -376,6 +377,12 @@ a.spectrum-ActionButton {
 	margin-inline-end: calc(var(--spectrum-actionbutton-edge-to-visual-only) - var(--spectrum-actionbutton-edge-to-text));
 
 	color: inherit;
+
+	/* Augment the margin correction for the icon only scenario */
+	.spectrum-ActionButton-hold + &,
+	&:only-child {
+		margin-inline-start: calc(var(--spectrum-actionbutton-edge-to-visual-only) - var(--spectrum-actionbutton-edge-to-text));
+	}
 }
 
 .spectrum-ActionButton-label {
@@ -386,8 +393,9 @@ a.spectrum-ActionButton {
 	text-align: center;
 
 	pointer-events: none;
+	line-height: var(--spectrum-actionbutton-height);
 
-	font-size: var(--mod-actionbutton-font-size, var(--spectrum-actionbutton-font-size));
+	font-size: var(--spectrum-actionbutton-font-size);
 	white-space: nowrap;
 	color: var(--mod-actionbutton-label-color, inherit);
 
@@ -406,7 +414,7 @@ a.spectrum-ActionButton {
 
 	color: inherit;
 
-	transform: var(--spectrum-logical-rotation);
+	transform: var(--spectrum-logical-rotation,);
 }
 
 .spectrum-ActionButton-hold + .spectrum-ActionButton-icon,

@@ -5,13 +5,23 @@
 	"license": "Apache-2.0",
 	"author": "Adobe",
 	"homepage": "https://opensource.adobe.com/spectrum-css/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": ".storybook"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
 	"type": "module",
 	"exports": {
 		".": "./preview.js",
 		"./blocks": "./blocks/index.js",
+		"./blocks/*": "./blocks/*",
 		"./decorators": "./decorators/index.js",
 		"./decorators/*": "./decorators/*",
 		"./deprecated/*": "./deprecated/*",
+		"./guides/*": "./guides/*",
 		"./loaders": "./loaders/index.js",
 		"./loaders/*": "./loaders/*",
 		"./main": "./main.js",
@@ -20,12 +30,13 @@
 		"./modes/*": "./modes/*",
 		"./package.json": "./package.json",
 		"./preview": "./preview.js",
+		"./templates/*": "./templates/*",
 		"./types": "./types/index.js",
 		"./types/*": "./types/*"
 	},
 	"module": "main.js",
 	"scripts": {
-		"build": "cross-env NODE_ENV=development storybook build --stats-json --config-dir ."
+		"build": "yarn docs:report && cross-env NODE_ENV=development storybook build --stats-json --config-dir ."
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
@@ -69,10 +80,10 @@
 		"vite": "^5.4.11"
 	},
 	"keywords": [
-		"adobe",
-		"css",
-		"design system",
+		"design-system",
 		"spectrum",
-		"storybook"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
 	]
 }

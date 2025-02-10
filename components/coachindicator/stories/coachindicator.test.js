@@ -15,8 +15,12 @@ export const CoachIndicatorGroup = Variants({
 			variant: "default",
 		},
 		{
-			testHeading: "Static White",
+			testHeading: "Static white",
 			staticColor: "white"
+		},
+		{
+			testHeading: "Static black",
+			staticColor: "black"
 		},
 	],
 	stateData: [

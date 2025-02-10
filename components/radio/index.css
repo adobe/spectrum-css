@@ -18,15 +18,7 @@
  */
 
 .spectrum-Radio {
-	--spectrum-radio-height: var(--spectrum-component-height-100);
-	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
-
-	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
-	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
-	--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
-	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-medium);
-
-	--spectrum-radio-font-size: var(--spectrum-font-size-100);
+	--spectrum-radio-button-background-color: var(--spectrum-gray-50);
 
 	/* state colors for all themes */
 	--spectrum-radio-neutral-content-color: var(--spectrum-neutral-content-color-default);
@@ -69,6 +61,16 @@
 
 	/* animation all themes */
 	--spectrum-radio-animation-duration: var(--spectrum-animation-duration-100);
+
+	--spectrum-radio-height: var(--spectrum-component-height-100);
+	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
+
+	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
+	--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-medium);
+
+	--spectrum-radio-font-size: var(--spectrum-font-size-100);
 
 	/* CJK language support all themes */
 	&:lang(ja),
@@ -375,7 +377,7 @@
 		inline-size: var(--mod-radio-button-control-size, var(--spectrum-radio-button-control-size));
 		block-size: var(--mod-radio-button-control-size, var(--spectrum-radio-button-control-size));
 
-		background-color: var(--highcontrast-radio-button-background-color, var(--mod-radio-button-background-color, var(--spectrum-radio-button-background-color)));
+		background-color: var(--mod-radio-button-background-color, var(--spectrum-radio-button-background-color));
 
 		border-radius: 50%;
 		border-width: var(--mod-radio-border-width, var(--spectrum-radio-border-width));

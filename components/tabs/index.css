@@ -12,6 +12,9 @@
  */
 
 .spectrum-Tabs {
+	--spectrum-tabs-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-tabs-divider-background-color: var(--spectrum-gray-200);
+
 	/* Default is Medium sizing */
 	--spectrum-tabs-item-height: var(--spectrum-tab-item-height-medium);
 	--spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
@@ -44,7 +47,6 @@
 	--spectrum-tabs-selection-indicator-color: var(--spectrum-neutral-subdued-content-color-down);
 
 	--spectrum-tabs-list-background-direction: top;
-	--spectrum-tabs-divider-background-color: var(--spectrum-gray-200);
 	--spectrum-tabs-divider-size: var(--spectrum-border-width-200);
 	--spectrum-tabs-divider-border-radius: 1px;
 

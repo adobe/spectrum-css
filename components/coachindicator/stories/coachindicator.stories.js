@@ -17,25 +17,11 @@ export default {
 	component: "CoachIndicator",
 	argTypes: {
 		isQuiet,
-		variant: {
-			name: "Variant",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["default", "dark", "light"],
-			control: "select"
-		},
-		staticColor: {
-			...staticColor,
-			options: ["white"],
-		},
+		staticColor,
 	},
 	args: {
 		rootClass: "spectrum-CoachIndicator",
 		isQuiet: false,
-		variant: "default",
 	},
 	parameters: {
 		design: {
@@ -53,30 +39,17 @@ Default.parameters = {
 	chromatic: {
 		prefersReducedMotion: "reduce",
 		pauseAnimationAtEnd: true,
-		modes: {
-			// Skips the dark mode/RTL b/c no changes are made to the component
-			"Dark | RTL": {
-				disable: true,
-			},
-		},
 	},
 };
 Default.tags = ["!autodocs"];
 
-export const DefaultVariants = Template.bind({});
-DefaultVariants.tags = ["!dev"];
-DefaultVariants.storyName = "Default";
-DefaultVariants.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
-export const QuietVariants = Template.bind({});
-QuietVariants.tags = ["!dev"];
-QuietVariants.storyName = "Quiet";
-QuietVariants.args = {
+export const Quiet = Template.bind({});
+Quiet.tags = ["!dev"];
+Quiet.storyName = "Quiet";
+Quiet.args = {
 	isQuiet: true,
 };
-QuietVariants.parameters = {
+Quiet.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
@@ -88,8 +61,21 @@ StaticWhite.args = {
 	staticColor: "white"
 };
 StaticWhite.tags = ["!dev"];
-StaticWhite.storyName = "Static White";
+StaticWhite.storyName = "Static white";
 StaticWhite.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * When an indicator needs to be placed on top of a visual, use the static black option. Static black does not change values depending upon the color theme.
+*/
+export const StaticBlack = Template.bind({});
+StaticBlack.args = {
+	staticColor: "black"
+};
+StaticBlack.tags = ["!dev"];
+StaticBlack.storyName = "Static black";
+StaticBlack.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 

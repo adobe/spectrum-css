@@ -4,6 +4,15 @@
   "description": "Check for custom properties without a var function around them",
   "license": "Apache-2.0",
   "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "plugins/stylelint-no-missing-var"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
   "contributors": [
     "Cassondra Roberts <castastrophe@users.noreply.github.com>"
   ],

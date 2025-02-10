@@ -10,10 +10,7 @@
     ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticBlack",
     ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite",
     ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-innerCircle",
-    ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-outerCircle",
-    "0%",
-    "30%",
-    "to"
+    ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-outerCircle"
   ],
   "modifiers": [
     "--mod-progress-circle-fill-border-color",

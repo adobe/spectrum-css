@@ -4,7 +4,10 @@ module.exports = {
 		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
 	],
 	"*.{js,json}": [
-		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet --ignore-pattern \"!.storybook/\""
+		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
+	],
+	"package.json": [
+		"yarn constraints --fix"
 	],
 	"dist/*.css": [
 		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc"
@@ -12,7 +15,6 @@ module.exports = {
 	"components/*/dist/metadata.json": (files) => {
 		return [
 			...(files.map(file => `pajv test --valid -s ./schemas/metadata.schema.json -d "${file}"`) ?? []),
-			`prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write ${files.join(" ")} --config .prettierrc`
 		];
 	},
 	"*.{md,mdx}": [

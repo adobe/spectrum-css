@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = function ({ setName } = {}) {
+module.exports = function ({ setName, format = "css" } = {}) {
 	let selector = ".spectrum";
 
 	const baseConfig = {
-		format: "css/sets",
+		format: `${format}/sets`,
 		options: {
 			showFileHeader: false,
 			outputReferences: true,
@@ -25,8 +25,14 @@ module.exports = function ({ setName } = {}) {
 	if (!setName) {
 		return {
 			...baseConfig,
-			destination: "global-vars.css",
-			filter: (token) => !token.path.includes("sets"),
+			destination: `global-vars.${format}`,
+			filter: (token) => {
+				if (token.name.startsWith("spectrum-android")) {
+					return false;
+				}
+
+				return !token.path.includes("sets");
+			},
 			options: {
 				...baseConfig.options,
 				selector,
@@ -72,7 +78,7 @@ module.exports = function ({ setName } = {}) {
 
 	return {
 		...baseConfig,
-		destination: `${scope}-vars.css`,
+		destination: `${scope}-vars.${format}`,
 		filter,
 		options: {
 			...baseConfig.options,

@@ -9,6 +9,7 @@
     ".spectrum-Table--emphasized",
     ".spectrum-Table--quiet",
     ".spectrum-Table--sizeL",
+    ".spectrum-Table--sizeM",
     ".spectrum-Table--sizeS",
     ".spectrum-Table--sizeXL",
     ".spectrum-Table--spacious",
@@ -407,6 +408,8 @@
     "--spectrum-gray-100",
     "--spectrum-gray-200",
     "--spectrum-gray-25",
+    "--spectrum-gray-300",
+    "--spectrum-gray-50",
     "--spectrum-gray-700-rgb",
     "--spectrum-gray-75",
     "--spectrum-gray-900-rgb",
@@ -429,7 +432,8 @@
     "--spectrum-thumbnail-size-500",
     "--spectrum-thumbnail-size-700",
     "--spectrum-thumbnail-size-800",
-    "--spectrum-transparent-white-100"
+    "--spectrum-transparent-white-100",
+    "--spectrum-transparent-white-25"
   ],
   "passthroughs": ["--mod-checkbox-spacing", "--mod-thumbnail-size"],
   "high-contrast": [

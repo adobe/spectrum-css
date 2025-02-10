@@ -1,6 +1,6 @@
 dist
 !dist/metadata.json
-!tokens/dist/**
+!tokens/dist/json/*
 
 # Not committing the map assets, these are dev-only
 *.map

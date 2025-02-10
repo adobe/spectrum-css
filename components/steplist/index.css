@@ -12,6 +12,9 @@
  */
 
 .spectrum-Steplist {
+	--spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
+	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
+
 	/* The width of a step */
 	--spectrum-steplist-step-width: 80px;
 
@@ -39,14 +42,10 @@
 
 	--spectrum-steplist-current-label-text-color: var(--spectrum-gray-800);
 	--spectrum-steplist-current-marker-color: var(--spectrum-gray-800);
-
 	--spectrum-steplist-complete-label-text-color: var(--spectrum-gray-700);
 	--spectrum-steplist-complete-marker-background-color: var(--spectrum-gray-600);
 	--spectrum-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
-
-	--spectrum-steplist-incomplete-label-text-color: var(--spectrum-gray-600);
-    --spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
-    --spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
+	--spectrum-steplist-incomplete-label-color: var(--spectrum-gray-600);
 
 	/* Contain child elements with positive z-index */
 	z-index: 0;

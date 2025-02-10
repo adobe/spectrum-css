@@ -91,7 +91,9 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-/**The emphasized action bar has a blue background that adds visual emphasis on the actions and selection. Use this for when the bar should call attention (e.g., floating in a table). */
+/**
+ * The emphasized action bar has a blue background that adds visual emphasis on the actions and selection. Use this for when the bar should call attention (e.g., floating in a table).
+ */
 export const Emphasized = BehavioralTemplate.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
@@ -101,7 +103,8 @@ Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/** By default, action bars fill the width of their container. Below are example of the other behavioral variants available.
+/**
+ * By default, action bars fill the width of their container. Below are example of the other behavioral variants available.
  *
  * - Standard action bars fill the width of their container.
  * - Flexible action bars fit the width of their content.

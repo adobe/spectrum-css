@@ -247,7 +247,6 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 	// Check if the input is a file or a directory
 	const stats = fs.statSync(from);
 	if (stats.isDirectory()) {
-		console.log(`Copying directory ${from} to ${to}`);
 		return fsp
 			.cp(from, to, { recursive: true, force: true })
 			.then(async () => {
@@ -291,7 +290,7 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
  * @param {string} [config.cwd=] - Current working directory for the component being built
  * @returns Promise<string|void>
  */
-async function writeAndReport(content, output, { cwd = process.cwd(), encoding = "utf-8" } = {}) {
+async function writeAndReport(content, output, { cwd = process.cwd(), encoding = "utf-8", isDeprecated = false } = {}) {
 	return fsp
 		.writeFile(
 			output,
@@ -302,7 +301,7 @@ async function writeAndReport(content, output, { cwd = process.cwd(), encoding =
 			const stats = fs.statSync(output);
 			const relativePath = path.relative(cwd, output);
 			return [
-				`${"✓".green}  ${relativePath.padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
+				`${"✓".green}  ${relativePath.padEnd(20, " ").yellow}${isDeprecated ? "  -- deprecated --".gray : `  ${bytesToSize(stats.size).gray}`}`,
 			];
 		})
 		.catch((err) => {

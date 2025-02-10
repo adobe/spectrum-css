@@ -4,7 +4,7 @@
 "@spectrum-css/underlay": patch
 ---
 
-Spectrum 2 Standard Dialog Migration
+## Spectrum 2 Standard Dialog Migration
 
 This is the migration for standard dialog. The Divider component is no longer supported in S2 dialogs. In addition, some new and updated tokens are in place to update dialog corner rounding, font treatments, spacing/padding, and maximum/minimum widths. There were several new elements implemented as well, including optional header and footer content, hero/cover images, checkbox and text-only options in the footer content area.
 

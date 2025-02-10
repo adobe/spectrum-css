@@ -1,10 +1,10 @@
 {
 	"name": "@spectrum-css/card",
-	"version": "10.0.0-s2-foundations.21",
+	"version": "11.0.1",
 	"description": "The Spectrum CSS card component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/card",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-card--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -23,20 +23,13 @@
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"stories/*",
-		"metadata/*"
-	],
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=6",
-		"@spectrum-css/asset": ">=5",
-		"@spectrum-css/checkbox": ">=9",
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/tokens": ">=14.0.0-next.3",
-		"@spectrum-css/typography": ">=6"
+		"@spectrum-css/actionbutton": ">=7",
+		"@spectrum-css/asset": ">=7",
+		"@spectrum-css/checkbox": ">=10",
+		"@spectrum-css/icon": ">=9",
+		"@spectrum-css/tokens": ">=16",
+		"@spectrum-css/typography": ">=8"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actionbutton": {
@@ -56,18 +49,21 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "workspace:^",
-		"@spectrum-css/asset": "workspace:^",
-		"@spectrum-css/checkbox": "workspace:^",
-		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^",
-		"@spectrum-css/typography": "workspace:^"
+		"@spectrum-css/actionbutton": "7.0.1",
+		"@spectrum-css/asset": "7.0.1",
+		"@spectrum-css/checkbox": "10.0.1",
+		"@spectrum-css/icon": "9.0.1",
+		"@spectrum-css/tokens": "16.0.0",
+		"@spectrum-css/typography": "8.0.1"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"

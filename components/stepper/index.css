@@ -28,8 +28,11 @@
 
 	--spectrum-stepper-animation-duration: var(--mod-stepper-animation-duration, var(--spectrum-animation-duration-100));
 
-	--spectrum-stepper-button-width: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-medium));
-	--spectrum-stepper-height: var(--mod-stepper-height, var(--spectrum-component-height-100));
+	&,
+	&.spectrum-Stepper--sizeM {
+		--spectrum-stepper-button-width: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-medium));
+		--spectrum-stepper-height: var(--mod-stepper-height, var(--spectrum-component-height-100));
+	}
 
 	--spectrum-stepper-buttons-border-style: none;
 	--spectrum-stepper-buttons-border-width: 0;
@@ -189,6 +192,10 @@
 
 	--mod-textfield-border-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
 	--mod-textfield-border-color: var(--spectrum-stepper-border-color);
+
+	&:not(.spectrum-Stepper--quiet) {
+		--mod-textfield-border-color-disabled: var(--spectrum-stepper-border-color-disabled);
+	}
 
 	&:hover:not(.is-invalid, .is-disabled) {
 		--mod-infield-button-border-color: var(--mod-stepper-buttons-border-color-hover, var(--spectrum-stepper-buttons-border-color-hover));

@@ -32,6 +32,7 @@
     ".spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):focus:hover",
     ".spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):hover",
     ".spectrum-Stepper.spectrum-Stepper--sizeL",
+    ".spectrum-Stepper.spectrum-Stepper--sizeM",
     ".spectrum-Stepper.spectrum-Stepper--sizeS",
     ".spectrum-Stepper.spectrum-Stepper--sizeXL",
     ".spectrum-Stepper:before",
@@ -41,7 +42,8 @@
     ".spectrum-Stepper:not(.is-disabled):focus",
     ".spectrum-Stepper:not(.is-disabled):focus-visible",
     ".spectrum-Stepper:not(.is-disabled):focus:hover",
-    ".spectrum-Stepper:not(.is-disabled):hover"
+    ".spectrum-Stepper:not(.is-disabled):hover",
+    ".spectrum-Stepper:not(.spectrum-Stepper--quiet)"
   ],
   "modifiers": [
     "--mod-stepper-animation-duration",
@@ -80,6 +82,7 @@
     "--spectrum-stepper-animation-duration",
     "--spectrum-stepper-border-color",
     "--spectrum-stepper-border-color-default",
+    "--spectrum-stepper-border-color-disabled",
     "--spectrum-stepper-border-color-focus",
     "--spectrum-stepper-border-color-focus-hover",
     "--spectrum-stepper-border-color-focus-hover-invalid",
@@ -153,6 +156,7 @@
     "--mod-infield-button-width-stacked",
     "--mod-textfield-background-color",
     "--mod-textfield-border-color",
+    "--mod-textfield-border-color-disabled",
     "--mod-textfield-border-color-hover",
     "--mod-textfield-border-width",
     "--mod-textfield-focus-indicator-color",

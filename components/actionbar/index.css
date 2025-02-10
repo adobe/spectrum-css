@@ -12,6 +12,9 @@
  */
 
 .spectrum-ActionBar {
+	--spectrum-actionbar-popover-background-color: var(--spectrum-gray-25);
+	--spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
+
 	--spectrum-actionbar-height: var(--spectrum-action-bar-height);
 	--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-100);
 
@@ -64,10 +67,8 @@
 		--highcontrast-actionbar-popover-border-color: CanvasText;
 	}
 
-	.spectrum-ActionBar--emphasized {
-		.spectrum-ActionBar-popover {
-			--highcontrast-actionbar-popover-border-color: CanvasText;
-		}
+	.spectrum-ActionBar--emphasized .spectrum-ActionBar-popover {
+		--highcontrast-actionbar-popover-border-color: CanvasText;
 	}
 }
 
@@ -184,8 +185,6 @@
 }
 
 /* flexible width */
-.spectrum-ActionBar--flexible {
-	.spectrum-ActionBar-popover {
-		inline-size: auto;
-	}
+.spectrum-ActionBar--flexible .spectrum-ActionBar-popover {
+	inline-size: auto;
 }

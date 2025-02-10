@@ -40,6 +40,7 @@
 	--spectrum-tag-content-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
 	--spectrum-tag-content-color-active: var(--spectrum-neutral-subdued-content-color-down);
 	--spectrum-tag-content-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+	--spectrum-tag-content-color-selected: var(--spectrum-gray-25);
 
 	/* focus ring */
 	--spectrum-tag-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
@@ -50,8 +51,6 @@
 	--spectrum-tag-label-line-height: var(--spectrum-line-height-100);
 	--spectrum-tag-label-font-weight: var(--spectrum-regular-font-weight);
 
-	/* selected */
-	--spectrum-tag-content-color-selected: var(--spectrum-gray-25);
 	--spectrum-tag-background-color-selected: var(--spectrum-neutral-background-color-selected-default);
 	--spectrum-tag-background-color-selected-hover: var(--spectrum-neutral-background-color-selected-hover);
 	--spectrum-tag-background-color-selected-active: var(--spectrum-neutral-background-color-selected-down);
@@ -235,10 +234,11 @@
 
 	/* clear button */
 	.spectrum-Tag-clearButton {
-		/* width of fill neutralized to ensure correct inline spacing within tag */
+		/* @passthrough start -- width of fill neutralized to ensure correct inline spacing within tag */
 		--mod-clear-button-width: fit-content;
 		--spectrum-clearbutton-fill-size: fit-content;
 		--spectrum-clearbutton-fill-background-color: transparent;
+		/* @passthrough end */
 
 		box-sizing: border-box;
 

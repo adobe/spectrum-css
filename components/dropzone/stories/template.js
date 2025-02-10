@@ -14,7 +14,7 @@ export const Template = ({
 	isFilled = false,
 	customClasses = [],
 	customStyles = {},
-	heading,
+	title,
 	description,
 	label,
 	id = getRandomId("dropzone"),
@@ -32,7 +32,7 @@ export const Template = ({
 			tabindex="0"
 			style=${styleMap(customStyles)}
 		>
-			${IllustratedMessage({ heading, description }, context)}
+			${IllustratedMessage({ title, description }, context)}
 
 			<div class="${rootClass}-content">
 			${ActionButton(

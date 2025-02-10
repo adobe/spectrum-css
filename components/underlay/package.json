@@ -1,10 +1,10 @@
 {
 	"name": "@spectrum-css/underlay",
-	"version": "4.1.1-next.0",
+	"version": "6.0.1",
 	"description": "The Spectrum CSS underlay component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-underlay--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -23,24 +23,21 @@
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"stories/*",
-		"metadata/*"
-	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14.0.0-next.0"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "workspace:^"
+		"@spectrum-css/commons": "11.0.0",
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"

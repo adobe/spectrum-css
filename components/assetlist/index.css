@@ -12,6 +12,9 @@
  */
 
 .spectrum-AssetList {
+	--spectrum-assetlist-item-background-color-down: var(--spectrum-gray-200);
+	--spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-100);
+
 	--spectrum-assetlist-width: 272px;
 	--spectrum-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);
 
@@ -24,8 +27,6 @@
 	--spectrum-assetlist-item-animation: var(--spectrum-animation-duration-100);
 	--spectrum-assetlist-item-font-size: var(--spectrum-font-size-100);
 	--spectrum-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
-	--spectrum-assetlist-item-background-color-down: var(--spectrum-gray-200);
-	--spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-100);
 
 	/* thumbnail */
 	--spectrum-assetlist-thumbnail-width: var(--spectrum-spacing-400);

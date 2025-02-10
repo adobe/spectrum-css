@@ -4,6 +4,7 @@ on:
     push:
       branches:
         - main
+        - spectrum-two
         - "!changeset-release/**"
         - "!dependabot/**"
     workflow_dispatch:
@@ -61,6 +62,10 @@ jobs:
             - name: Install dependencies
               shell: bash
               run: yarn install --immutable
+
+            - name: Generate metadata assets
+              shell: bash
+              run: yarn report
 
             - name: Publish to Chromatic
               id: chromatic

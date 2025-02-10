@@ -20,7 +20,7 @@
 		],
 		"tools": [
 			"{projectRoot}/*.json",
-			"{workspaceRoot}/postcss.config.mjs",
+			"{workspaceRoot}/postcss.config.js",
 			"{workspaceRoot}/plugins/postcss-*/index.js"
 		]
 	},
@@ -41,6 +41,7 @@
 			"inputs": [
 				"core",
 				"tools",
+				"stylelint",
 				"{workspaceRoot}/tasks/component-builder.js",
 				"!{projectRoot}/stories/*.js",
 				"{workspaceRoot}/tasks/component-builder.js",
@@ -53,7 +54,8 @@
 				]
 			},
 			"outputs": [
-				"{projectRoot}/dist/*.css"
+				"{projectRoot}/dist/*.{css,json}",
+				"{projectRoot}/dist/*.map"
 			]
 		},
 		"clean": {
@@ -68,8 +70,7 @@
 			],
 			"options": {
 				"commands": [
-					"rimraf {projectRoot}/dist",
-					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+					"rimraf {projectRoot}/dist/*.css* {projectRoot}/dist/themes/*.css*"
 				],
 				"parallel": false
 			},
@@ -148,8 +149,8 @@
 			"inputs": [
 				"core",
 				"tools",
-				"{workspaceRoot}/tasks/component-report.js",
-				{ "env": "NODE_ENV" }
+				"stylelint",
+				"{workspaceRoot}/tasks/component-report.js"
 			],
 			"options": {
 				"commands": [

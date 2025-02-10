@@ -418,6 +418,11 @@
 		transform: perspective(var(--spectrum-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
+	&:hover,
+	&:active {
+		box-shadow: none;
+	}
+
 	&:disabled,
 	&.is-disabled,
 	&[pending],
@@ -425,6 +430,38 @@
 		background-color: var(--highcontrast-button-background-color-disabled, var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled)));
 		border-color: var(--highcontrast-button-border-color-disabled, var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled)));
 		color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
+	}
+
+	.spectrum-Icon {
+		/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- Any block-size difference between the intended workflow icon size and actual icon used. Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
+		--_icon-size-difference: max(0px, var(--spectrum-button-intended-icon-size) - var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size)));
+
+		margin-block-start: var(--mod-button-icon-margin-block-start, max(0px, var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - var(--mod-button-border-width, var(--spectrum-button-border-width)) + (var(--_icon-size-difference, 0px) / 2)));
+
+		margin-inline-start: calc(var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) - var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text)));
+		color: inherit;
+		flex-shrink: 0;
+		align-self: flex-start;
+	}
+
+	.spectrum-Icon + .spectrum-Button-label {
+		text-align: var(--mod-button-text-align-with-icon, start);
+	}
+
+	&.spectrum-Button--iconOnly {
+		min-inline-size: unset;
+		padding: calc(var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+		border-radius: 50%;
+
+		.spectrum-Icon {
+			align-self: center;
+			margin-inline-start: 0;
+			margin-block-start: 0;
+		}
+
+		&::after {
+			border-radius: 50%;
+		}
 	}
 
 	.spectrum-Icon,

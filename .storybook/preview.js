@@ -14,9 +14,6 @@ import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
 
-// Load the Spectrum CSS bundle to style the docs elements
-import "@spectrum-css/bundle";
-
 // Import the custom base styles
 import "./assets/base.css";
 

@@ -75,7 +75,7 @@ export const Template = ({
 
 	if (today) {
 		month = month ?? getMonthName(today);
-		year = year ?? today.getFullYear();
+		year = year ?? today ? today.getFullYear() : 2021;
 	}
 
 	const displayedDate = new Date(`${month} 1, ${year}`);

@@ -14,6 +14,8 @@
 @import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Tooltip {
+	--spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
+
 	--spectrum-tooltip-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-tooltip-animation-distance: var(--spectrum-spacing-75);
 
@@ -55,7 +57,6 @@
 
 	--highcontrast-tooltip-border-width: 0px;
 }
-
 .spectrum-Tooltip {
 	@extend %spectrum-overlay;
 
@@ -575,7 +576,7 @@
 @media (forced-colors: active) {
 	.spectrum-Tooltip {
 		--highcontrast-tooltip-border-width: 1px;
-
+        
 		border: var(--highcontrast-tooltip-border-width) solid CanvasText;
 	}
 

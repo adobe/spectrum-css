@@ -1,10 +1,12 @@
 # Change Log
 
-## 2.0.2-s2-foundations.0
+## 2.0.2
 
 ### Patch Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`683871c`](https://github.com/adobe/spectrum-css/commit/683871c8cec3de3585c3d29fc63bd8bbf71e245a) Thanks [@pfulton](https://github.com/pfulton)! - Dependency updates to align with versions used in the parent repository.
+- [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)! - Update package dependencies.
+
+  Specific to `stylelint-no-unknown-custom-properties`, the assumption that only CSS files will be parsed is removed to allow support for JSON assets as well. Additionally, this package will now evaluate dependencies beyond just `@spectrum-css`.
 
 ## 2.0.1
 

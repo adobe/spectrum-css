@@ -12,6 +12,8 @@
  */
 
 .spectrum-DatePicker {
+	--spectrum-datepicker-initial-height: var(--spectrum-component-height-100);
+
 	--spectrum-datepicker-border-radius: var(--mod-datepicker-border-radius, var(--spectrum-corner-radius-100));
 	--spectrum-datepicker-border-radius-quiet: var(--mod-datepicker-border-radius-quiet, 0);
 	--spectrum-datepicker-border-width: var(--spectrum-border-width-100);
@@ -78,11 +80,16 @@
 
 	&.is-disabled {
 		--mod-datepicker-dash-color: var(--mod-datepicker-dash-color-disabled, var(--spectrum-disabled-content-color));
+
+		/* @passthrough -- ensures the textfield border color is hidden when disabled */
+		--mod-textfield-border-color-disabled: transparent;
 	}
 
 	&.is-invalid {
+		/* @passthrough start */
 		--mod-textfield-icon-spacing-inline-end-invalid: calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-datepicker-invalid-icon-to-button));
 		--mod-textfield-icon-spacing-inline-end-quiet-invalid: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-invalid-icon-to-button-quiet));
+		/* @passthrough end */
 	}
 
 	&:not(.spectrum-DatePicker--quiet, .is-disabled) {
@@ -154,6 +161,12 @@
 	/* @passthrough start -- quiet variant nested button styles */
 	--mod-picker-button-border-color-disabled: var(--spectrum-datepicker-border-color-disabled);
 	--mod-picker-button-background-color-hover-disabled: var(--spectrum-datepicker-border-color-disabled);
+	/* @passthrough end */
+
+	/* @passthrough start -- quiet variant nested button styles */
+	&.is-disabled {
+		--mod-textfield-border-color-disabled: var(--spectrum-datepicker-border-color-disabled);
+	}
 	/* @passthrough end */
 
 	/* quiet invalid and quiet range invalid */

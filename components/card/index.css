@@ -89,6 +89,7 @@
 	text-decoration: none;
 
 	min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
+	block-size: 100%;
 
 	border: var(--spectrum-card-border-width) solid transparent;
 	border-radius: var(--spectrum-card-corner-radius);
@@ -145,19 +146,15 @@
 		--mod-card-border-color: var(--mod-card-border-color-hover, var(--spectrum-card-border-color-hover));
 	}
 
-	&.is-selected {
-		--mod-card-border-color: var(--spectrum-card-border-color-selected);
-
-		&::before {
-			background-color: rgba(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--spectrum-card-selected-background-opacity));
-		}
+	&.is-selected::before {
+		background-color: rgba(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--spectrum-card-selected-background-opacity));
 	}
 
 	&.is-drop-target {
 		--mod-card-background-color: var(--spectrum-background-base-color);
 		--mod-card-border-color: var(--spectrum-card-border-color-selected);
 
-		box-shadow: 0 0 0 1px var(--spectrum-card-border-color-selected);
+		box-shadow: 0 0 0 1px var(--spectrum-card-border-color);
 	}
 
 	&.is-focused,
@@ -324,18 +321,16 @@
 		}
 	}
 
-	&.is-selected {
-		.spectrum-Card-preview {
-			border: var(--spectrum-card-preview-border-width-selected) solid;
-			border-color: var(--spectrum-card-border-color-selected);
-		}
+	&.is-selected .spectrum-Card-preview {
+		border: var(--spectrum-card-preview-border-width-selected) solid;
+		border-color: var(--spectrum-card-border-color);
 	}
 }
 
 .spectrum-Card--quiet,
 .spectrum-Card--gallery {
-	block-size: 100%;
-	min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
+	--mod-card-border-color-hover: transparent;
+
 	border-width: 0;
 	border-radius: 0;
 	overflow: visible;
@@ -389,12 +384,8 @@
 		}
 	}
 
-	&:hover {
-		border-color: transparent;
-
-		.spectrum-Card-preview {
-			background-color: var(--mod-card-preview-background-color-hover, var(--mod-card-background-color-hover, var(--spectrum-card-preview-background-color-hover)));
-		}
+	&:hover .spectrum-Card-preview {
+		background-color: var(--mod-card-preview-background-color-hover, var(--mod-card-background-color-hover, var(--spectrum-card-preview-background-color-hover)));
 	}
 
 	&.is-drop-target {
@@ -413,10 +404,8 @@
 		}
 	}
 
-	&.is-selected {
-		.spectrum-Card-preview::before {
-			background-color: rgba(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--mod-card-selected-background-opacity, var(--spectrum-card-selected-background-opacity)));
-		}
+	&.is-selected .spectrum-Card-preview::before {
+		background-color: rgba(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--mod-card-selected-background-opacity, var(--spectrum-card-selected-background-opacity)));
 	}
 
 	.spectrum-Card-body {
@@ -433,10 +422,8 @@
 .spectrum-Card--horizontal {
 	flex-direction: row;
 
-	&:hover {
-		.spectrum-Card-preview {
-			border-color: var(--mod-card-border-color-hover, var(--spectrum-card-border-color-hover));
-		}
+	&:hover .spectrum-Card-preview {
+		border-color: var(--mod-card-border-color-hover, var(--spectrum-card-border-color-hover));
 	}
 
 	.spectrum-Card-preview {

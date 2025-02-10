@@ -99,7 +99,7 @@
 	}
 
 	&:focus-visible::after {
-		margin: calc(var(--mod-button-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * -2);
+		margin: calc(-2 * var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
 	}
 }
 

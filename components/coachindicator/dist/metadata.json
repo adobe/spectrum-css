@@ -7,10 +7,8 @@
     ".spectrum-CoachIndicator-ring:nth-child(2)",
     ".spectrum-CoachIndicator-ring:nth-child(3)",
     ".spectrum-CoachIndicator.spectrum-CoachIndicator--quiet",
-    ".spectrum-CoachIndicator.spectrum-CoachIndicator--staticWhite",
-    "0%",
-    "50%",
-    "to"
+    ".spectrum-CoachIndicator.spectrum-CoachIndicator--staticBlack",
+    ".spectrum-CoachIndicator.spectrum-CoachIndicator--staticWhite"
   ],
   "modifiers": [
     "--mod-coach-animation-indicator-ring-center-delay-multiple",
@@ -50,6 +48,7 @@
   ],
   "global": [
     "--spectrum-animation-duration-6000",
+    "--spectrum-black",
     "--spectrum-border-width-200",
     "--spectrum-coach-animation-indicator-ring-duration",
     "--spectrum-white"

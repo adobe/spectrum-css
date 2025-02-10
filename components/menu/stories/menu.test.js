@@ -221,6 +221,11 @@ export const MenuItemGroup = Variants({
 			isFocused: true,
 		},
 		{
+			testHeading: "Focused and active",
+			isFocused: true,
+			isActive: true,
+		},
+		{
 			testHeading: "Disabled",
 			isDisabled: true,
 		},

@@ -26,6 +26,63 @@
   - @spectrum-css/underlay@4.1.1-next.0
   - @spectrum-css/table@7.0.0-next.0
 
+## 12.0.1
+
+### Patch Changes
+
+- Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
+  - @spectrum-css/table@8.0.1
+
+## 12.0.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+
+  This update removes the previously deprecated component documentation for **cyclebutton**, **quickaction**, **searchwithin**, and **splitbutton**.
+
+  To support the Spectrum 2 (S2) Foundations release, Storybook has been updated to toggle token packages to connect the following labels with their appropriate data sources:
+
+  - **Spectrum 1**: Flagged as the "legacy" context, this version is no longer the default for the component contexts. When selected, Storybook will load the `@spectrum-css/tokens` at release `v14.6.0` and attach the `.spectrum--legacy` class to the container.
+  - **Spectrum 2**: The new default context, this version represents the "S2 Foundations" release which serves as a bridge between S1 and S2. Components in this context are not fully S2 and will not exactly match specifications but they do reflect a significant move toward the S2 designs. For full details, see the token and component-level changelogs.
+  - **Express**: This now deprecated context is still rendered in Storybook by leveraging the `@spectrum-css/tokens` at release `v14.6.0`. Please note that Express and S1 will be removed in the next major release.
+
+  This release also includes:
+
+  - New migration documentation for S1 -> S2 updates
+  - Fix for the duplicate line numbers in the code preview plugin
+  - Updated styles to integrate Spectrum styling into the Storybook UI
+
+### Patch Changes
+
+- Updated dependencies [[`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6), [`3d08cea`](https://github.com/adobe/spectrum-css/commit/3d08cea0f590c8c2de7252677a6b81b8cc206b9a), [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6)]:
+  - @spectrum-css/tokens@16.0.0
+  - @spectrum-css/table@8.0.0
+
+## 11.0.2
+
+### Patch Changes
+
+- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! - Minor storybook updates and fixes including some whitespace changes.
+
+  A bug was fixed with the HTML code preview that was displaying duplicate line numbers.
+
+  Some key metadata was incorporated into the preview head file for better contextual information when published.
+
+  The remark-gfm dependency was added to support tables in the \*.mdx files for Storybook.
+
+- Updated dependencies [[`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39), [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39)]:
+  - @spectrum-css/tokens@15.2.0
+  - @spectrum-css/table@7.0.1
+
+## 11.0.1
+
+### Patch Changes
+
+- Updated dependencies [[`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b)]:
+  - @spectrum-css/tokens@15.1.0
+  - @spectrum-css/bundle@1.0.0
+
 ## 11.0.0
 
 ### Major Changes
@@ -286,9 +343,6 @@
 
 - [#2671](https://github.com/adobe/spectrum-css/pull/2671) [`9130dd9`](https://github.com/adobe/spectrum-css/commit/9130dd9eee61abd4ae6a02c92a333f66bc5afdcf) Thanks [@castastrophe](https://github.com/castastrophe)! - Support for Node v18 dropped; upgraded to Node v20
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="9.0.0"></a>
 
 ## 9.0.0
@@ -304,7 +358,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### 🛑 BREAKING CHANGES
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
-
 - Imports added to index.css and themes/express.css
 
 <a name="8.0.4"></a>
@@ -349,11 +402,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **quickaction:**deprecate component; support this in docs ([#2304](https://github.com/adobe/spectrum-css/issues/2304))([84e1ee9](https://github.com/adobe/spectrum-css/commit/84e1ee9))
 
-      ###
-      🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-      	*
-      	**quickaction:** @spectrum-css/quickaction deprecated
+- **quickaction:** @spectrum-css/quickaction deprecated
 
 This component has been deprecated. Use an action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
 
@@ -371,8 +422,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 ## 7.4.2
 
-🗓 2024-02-06
-<a name="7.4.2-next.0"></a>
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.4.1...@spectrum-css/preview@7.4.2)
 
 ## 7.4.2-next.0
 
@@ -405,7 +455,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 ### ✨ Features
 
-\*migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum-css/issues/2460))([bd6c40e](https://github.com/adobe/spectrum-css/commit/bd6c40e))
+- migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum-css/issues/2460))([bd6c40e](https://github.com/adobe/spectrum-css/commit/bd6c40e))
 
 <a name="7.2.1"></a>
 
@@ -427,7 +477,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 ### 🐛 Bug fixes
 
-\*remove storybook-addon-pseudo-states ([#2401](https://github.com/adobe/spectrum-css/issues/2401))([4510975](https://github.com/adobe/spectrum-css/commit/4510975))
+- remove storybook-addon-pseudo-states ([#2401](https://github.com/adobe/spectrum-css/issues/2401))([4510975](https://github.com/adobe/spectrum-css/commit/4510975))
 
 <a name="7.1.0"></a>
 
@@ -447,17 +497,14 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 ### 🐛 Bug fixes
 
--     **storybook:**chromatic requires build script ([#2360](https://github.com/adobe/spectrum-css/issues/2360))([114b75b](https://github.com/adobe/spectrum-css/commit/114b75b))
+- **storybook:**chromatic requires build script ([#2360](https://github.com/adobe/spectrum-css/issues/2360))([114b75b](https://github.com/adobe/spectrum-css/commit/114b75b))
 
-  - feat(icon,ui-icons)!: migrate the icon compiler to a distinct package (#2343)([d73d594](https://github.com/adobe/spectrum-css/commit/d73d594)), closes[#2343](https://github.com/adobe/spectrum-css/issues/2343)
+- feat(icon,ui-icons)!: migrate the icon compiler to a distinct package (#2343)([d73d594](https://github.com/adobe/spectrum-css/commit/d73d594)), closes[#2343](https://github.com/adobe/spectrum-css/issues/2343)
 
-    ###
+### 🛑 BREAKING CHANGES
 
-    🛑 BREAKING CHANGES
-
-    - - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
-
-* NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
+- @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
+- NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 
 <a name="6.0.1"></a>
 
@@ -479,11 +526,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 ### 🛑 BREAKING CHANGES
 
-    		*
-    		as no additional changes have been or are planned to be made to
-
-these legacy token packages, these assets no longer need to exist in the monorepo
-structure for Spectrum CSS.
+- as no additional changes have been or are planned to be made to these legacy token packages, these assets no longer need to exist in the monorepo structure for Spectrum CSS.
 
 <a name="5.1.1"></a>
 
@@ -553,8 +596,7 @@ structure for Spectrum CSS.
 
 ### 🛑 BREAKING CHANGES
 
-    		*
-    		migrates SplitView to use `@adobe/spectrum-tokens`
+- migrates SplitView to use `@adobe/spectrum-tokens`
 
 Additionally:
 
@@ -597,7 +639,7 @@ fix max nesting depth
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="4.1.11"></a>
 
@@ -647,7 +689,7 @@ fix max nesting depth
 
 ### 🐛 Bug fixes
 
-\*revert prettier ([#2074](https://github.com/adobe/spectrum-css/issues/2074))([ebb98df](https://github.com/adobe/spectrum-css/commit/ebb98df))
+- revert prettier ([#2074](https://github.com/adobe/spectrum-css/issues/2074))([ebb98df](https://github.com/adobe/spectrum-css/commit/ebb98df))
 
 <a name="4.1.5"></a>
 
@@ -697,7 +739,7 @@ fix max nesting depth
 
 ### ✨ Features
 
-\*add Storybook Pseudo States addon([882a634](https://github.com/adobe/spectrum-css/commit/882a634))
+- add Storybook Pseudo States addon([882a634](https://github.com/adobe/spectrum-css/commit/882a634))
 
 ### 🐛 Bug fixes
 
@@ -713,8 +755,7 @@ fix max nesting depth
 
 ### 🛑 BREAKING CHANGES
 
-    		*
-    		Migrates the Tabs component to use `@adobe/spectrum-tokens`.
+- Migrates the Tabs component to use `@adobe/spectrum-tokens`.
 
 <a name="3.2.0"></a>
 
@@ -724,11 +765,11 @@ fix max nesting depth
 
 ### ✨ Features
 
-\*allow story-level params to be passed to RTL decorator ([#1986](https://github.com/adobe/spectrum-css/issues/1986))([5fba21e](https://github.com/adobe/spectrum-css/commit/5fba21e))
+- allow story-level params to be passed to RTL decorator ([#1986](https://github.com/adobe/spectrum-css/issues/1986))([5fba21e](https://github.com/adobe/spectrum-css/commit/5fba21e))
 
 ### 🐛 Bug fixes
 
-\*revert prettier version bump ([#2004](https://github.com/adobe/spectrum-css/issues/2004))([29b179c](https://github.com/adobe/spectrum-css/commit/29b179c))
+- revert prettier version bump ([#2004](https://github.com/adobe/spectrum-css/issues/2004))([29b179c](https://github.com/adobe/spectrum-css/commit/29b179c))
 
 <a name="3.1.3"></a>
 
@@ -762,7 +803,7 @@ fix max nesting depth
 
 ### ✨ Features
 
-\*update to Storybook v7 ([#1935](https://github.com/adobe/spectrum-css/issues/1935))([6dcf09b](https://github.com/adobe/spectrum-css/commit/6dcf09b))
+- update to Storybook v7 ([#1935](https://github.com/adobe/spectrum-css/issues/1935))([6dcf09b](https://github.com/adobe/spectrum-css/commit/6dcf09b))
 
 <a name="3.0.26"></a>
 

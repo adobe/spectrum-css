@@ -8,7 +8,6 @@ export const Template = ({
 	rootClass = "spectrum-CoachIndicator",
 	isQuiet = false,
 	staticColor,
-	variant,
 	customClasses = [],
 	customStyles = {},
 } = {}) => {
@@ -17,8 +16,8 @@ export const Template = ({
 			class=${classMap({
 				[`${rootClass}`]: true,
 				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined" || variant !== "default",
 				[`${rootClass}--staticWhite`]: staticColor === "white",
+				[`${rootClass}--staticBlack`]: staticColor === "black",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}

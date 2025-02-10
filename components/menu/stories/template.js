@@ -738,8 +738,7 @@ export const SubmenuInPopover = (context) => Popover({
 			isOpen: true,
 			position: "end-top",
 			customStyles: {
-				"--mod-popover-animation-distance": "-4px",
-				top: "-105px",
+				top: "-120px",
 				"inline-size": "120px",
 			},
 			content: [

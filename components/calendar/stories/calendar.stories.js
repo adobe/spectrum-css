@@ -123,8 +123,8 @@ export default {
 export const Default = CalendarGroup.bind({});
 Default.args = {
 	month: months[6],
-	selectedDay: new Date(2025, 6, 3),
 	year: 2025,
+	selectedDay: new Date(2025, 6, 3),
 };
 
 // ********* DOCS ONLY ********* //
@@ -150,8 +150,8 @@ export const RangeSelection = Template.bind({});
 RangeSelection.args = {
 	isRangeSelection: true,
 	month: months[6],
-	selectedDay: new Date(2025, 6, 3),
 	year: 2025,
+	selectedDay: new Date(2025, 6, 3),
 	lastDay: new Date(2025, 6, 7),
 	isPadded: true,
 };

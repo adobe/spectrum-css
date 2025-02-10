@@ -12,6 +12,9 @@
  */
 
 .spectrum-Toast {
+	--spectrum-toast-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
+	--spectrum-toast-divider-color: var(--spectrum-transparent-white-400);
+
 	/* Hardcoded variables */
 	--spectrum-toast-font-weight: var(--spectrum-regular-font-weight);
 

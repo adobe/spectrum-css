@@ -15,6 +15,10 @@
 	},
 	"type": "module",
 	"main": "plopfile.js",
+	"files": [
+		"*.md",
+		"package.json"
+	],
 	"scripts": {
 		"new": "plop",
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -24,5 +28,12 @@
 		"inquirer": "^9.2.23",
 		"inquirer-autocomplete-prompt": "^3.0.1",
 		"plop": "^4.0.1"
-	}
+	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
+	]
 }

@@ -23,6 +23,7 @@ module.exports = {
 		"import-notation": null,
 		"no-descending-specificity": null,
 		"no-duplicate-selectors": null,
+		"number-max-precision": null,
 
 		/** --------------------------------------------------------------
 		 * Customized rule settings
@@ -93,7 +94,7 @@ module.exports = {
 		],
 		"selector-attribute-quotes": "always",
 		"selector-class-pattern": [
-			"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
+			"^(spectrum)[A-Za-z0-9-]*", {
 				resolveNestedSelectors: true
 			}
 		],
@@ -148,36 +149,48 @@ module.exports = {
 		 * Local/custom plugins
 		 * -------------------------------------------------------------- */
 		"spectrum-tools/no-missing-var": true,
-		"spectrum-tools/no-unknown-custom-properties": [
-			true,
-			{
-				/** @note this is a list of custom properties that are allowed to be unknown */
-				ignoreList: [
-					/^--mod-/,
-					/^--system-/,
-					/^--spectrum-picked-color$/,
-				],
-				skipDependencies: false,
-				disableFix: true,
-				severity: "warning",
-			},
-		],
-		/** @note this enables reporting of unused variables in a file */
-		"spectrum-tools/no-unused-custom-properties": [
-			true,
-			{
-				ignoreList: [
-					/^--mod-/,
-				],
-				disableFix: true,
-				severity: "warning",
-			},
-		],
+		"spectrum-tools/no-unused-custom-properties": null,
+		"spectrum-tools/no-unknown-custom-properties": null,
 	},
 	/** --------------------------------------------------------------
 	 * Overrides
 	 * -------------------------------------------------------------- */
 	overrides: [
+		{
+			files: ["components/*/index.css", "components/*/themes/spectrum.css"],
+			rules: {
+				"selector-class-pattern": [
+					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
+						resolveNestedSelectors: true
+					}
+				],
+				"spectrum-tools/no-unknown-custom-properties": [
+					true,
+					{
+						/** @note this is a list of custom properties that are allowed to be unknown */
+						ignoreList: [
+							/^--mod-/,
+							/^--system-/,
+							/^--spectrum-picked-color$/,
+						],
+						skipDependencies: false,
+						disableFix: true,
+						severity: "warning",
+					},
+				],
+				/** @note this enables reporting of unused variables in a file */
+				"spectrum-tools/no-unused-custom-properties": [
+					true,
+					{
+						ignoreList: [
+							/^--mod-/,
+						],
+						disableFix: true,
+						severity: "warning",
+					},
+				],
+			},
+		},
 		{
 			files: [".storybook/assets/*.css", "iframe.html*.css"],
 			rules: {
@@ -188,23 +201,13 @@ module.exports = {
 						resolveNestedSelectors: true
 					}
 				],
-				"spectrum-tools/no-unused-custom-properties": null,
-				"spectrum-tools/no-unknown-custom-properties": null,
 				"font-family-no-missing-generic-family-keyword": null,
 			},
 		},
 		{
-			files: ["tokens*/**/*.css(?inline)?"],
+			files: ["tokens*/**/*.css(?inline)?", "tokens/**/*.css"],
 			rules: {
-				"selector-class-pattern": [
-					"^(spectrum)[A-Za-z0-9-]*", {
-						resolveNestedSelectors: true
-					}
-				],
 				"custom-property-pattern": [/^(spectrum|color|scale|system)/, {}],
-				"number-max-precision": null,
-				"spectrum-tools/no-unused-custom-properties": null,
-				"spectrum-tools/no-unknown-custom-properties": null,
 			}
 		},
 		{

@@ -19,65 +19,56 @@
 }
 
 .spectrum-Divider {
-	/* default background color no size */
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
-	--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
-
 	/* background colors */
-	--spectrum-divider-background-color-small: var(--spectrum-gray-200);
-	--spectrum-divider-background-color-medium: var(--spectrum-gray-200);
-	--spectrum-divider-background-color-large: var(--spectrum-gray-800);
+	--spectrum-divider-background-color: var(--spectrum-gray-200);
 
 	/* static white background colors */
-	--spectrum-divider-background-color-small-static-white: var(--spectrum-transparent-white-300);
-	--spectrum-divider-background-color-medium-static-white: var(--spectrum-transparent-white-300);
-	--spectrum-divider-background-color-large-static-white: var(--spectrum-transparent-white-800);
+	--spectrum-divider-background-color-static-white: var(--spectrum-transparent-white-200);
 
 	/* static black background colors */
-	--spectrum-divider-background-color-small-static-black: var(--spectrum-transparent-black-300);
-	--spectrum-divider-background-color-medium-static-black: var(--spectrum-transparent-black-300);
-	--spectrum-divider-background-color-large-static-black: var(--spectrum-transparent-black-800);
+	--spectrum-divider-background-color-static-black: var(--spectrum-transparent-black-200);
+
+	--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
 }
 
 .spectrum-Divider--sizeS {
 	--spectrum-divider-thickness: var(--spectrum-divider-thickness-small);
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-small);
 }
 
 .spectrum-Divider--sizeL {
 	--spectrum-divider-thickness: var(--spectrum-divider-thickness-large);
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-large);
+	--spectrum-divider-background-color: var(--spectrum-gray-800);
 }
 
 /* static white variant colors */
 .spectrum-Divider--staticWhite {
-	--mod-divider-background-color: var(--mod-divider-background-color-medium-static-white);
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium-static-white);
+	/** @deprecated --mod-divider-background-color-medium-static-white, use --mod-divider-background-color instead */
+	--mod-divider-background-color: var(--mod-divider-background-color-medium-static-white, var(--spectrum-divider-background-color-static-white));
 
 	&.spectrum-Divider--sizeS {
-		--mod-divider-background-color: var(--mod-divider-background-color-small-static-white);
-		--spectrum-divider-background-color: var(--spectrum-divider-background-color-small-static-white);
+		/** @deprecated --mod-divider-background-color-small-static-white, use --mod-divider-background-color instead */
+		--mod-divider-background-color: var(--mod-divider-background-color-small-static-white, var(--spectrum-divider-background-color-static-white));
 	}
 
 	&.spectrum-Divider--sizeL {
-		--mod-divider-background-color: var(--mod-divider-background-color-large-static-white);
-		--spectrum-divider-background-color: var(--spectrum-divider-background-color-large-static-white);
+		/** @deprecated --mod-divider-background-color-large-static-white, use --mod-divider-background-color instead */
+		--mod-divider-background-color: var(--mod-divider-background-color-large-static-white, var(--spectrum-transparent-white-800));
 	}
 }
 
 /* static black variant colors */
 .spectrum-Divider--staticBlack {
-	--mod-divider-background-color: var(--mod-divider-background-color-medium-static-black);
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium-static-black);
+	/** @deprecated --mod-divider-background-color-medium-static-black, use --mod-divider-background-color instead */
+	--mod-divider-background-color: var(--mod-divider-background-color-medium-static-black, var(--spectrum-divider-background-color-static-black));
 
 	&.spectrum-Divider--sizeS {
-		--mod-divider-background-color: var(--mod-divider-background-color-small-static-black);
-		--spectrum-divider-background-color: var(--spectrum-divider-background-color-small-static-black);
+		/** @deprecated --mod-divider-background-color-small-static-black, use --mod-divider-background-color instead */
+		--mod-divider-background-color: var(--mod-divider-background-color-small-static-black, var(--spectrum-divider-background-color-static-black));
 	}
 
 	&.spectrum-Divider--sizeL {
-		--mod-divider-background-color: var(--mod-divider-background-color-large-static-black);
-		--spectrum-divider-background-color: var(--spectrum-divider-background-color-large-static-black);
+		/** @deprecated --mod-divider-background-color-large-static-black, use --mod-divider-background-color instead */
+		--mod-divider-background-color: var(--mod-divider-background-color-large-static-black, var(--spectrum-transparent-black-800));
 	}
 }
 

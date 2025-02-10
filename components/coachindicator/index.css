@@ -37,6 +37,10 @@
 		--spectrum-coach-indicator-ring-default-color: var(--spectrum-white);
 	}
 
+	&.spectrum-CoachIndicator--staticBlack {
+		--spectrum-coach-indicator-ring-default-color: var(--spectrum-black);
+	}
+
 	position: relative;
 	margin: var(--mod-coach-indicator-gap, var(--spectrum-coach-indicator-gap));
 

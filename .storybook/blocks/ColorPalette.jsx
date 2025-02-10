@@ -11,42 +11,57 @@ import {
 } from "./Swatches.jsx";
 import { ThemeContainer } from "./ThemeContainer.jsx";
 import { Body, Heading } from "./Typography.jsx";
-import { fetchToken } from "./utilities.js";
+import { fetchToken, fetchTokenSet, sortAlphaNumerically } from "./utilities.js";
+
+import styles from "@spectrum-css/bundle/dist/index.module.css";
 
 /**
  * A single color row your styleguide showing title, subtitle and one or more colors, used
  * as a child of `ColorPalette`.
  */
-export const ColorItem = ({ title, color, size = 60, values = [], ...props }) => {
+export const ColorItem = ({ title, color, size = 60, values = [], noCheckerboard = false, skipTitle = false, ...props }) => {
 	if (!color) return;
-	if (!values.length) return (
-		<>
-			{title && <SwatchGroupLabel className="swatch-group-label">
-				<Heading size="s">{title ?? capitalize(color)}</Heading>
-			</SwatchGroupLabel>}
-			<Body>No values provided for color {color}</Body>
-		</>
-	);
+
+	// Attempt to fetch values from the token data
+	if (!values.length) {
+		const sets = fetchTokenSet(new RegExp(`^${color}-\\d+$`));
+		values = Object.keys(sets)?.sort(sortAlphaNumerically).map((key) => key.replace(`${color}-`, ""));
+	}
+
+	if (!values.length) {
+		return (
+			<>
+				{!skipTitle && <SwatchGroupLabel className="swatch-group-label">
+					<Heading size="s">{title ?? capitalize(color)}</Heading>
+				</SwatchGroupLabel>}
+				<Body>No values provided for color {color}</Body>
+			</>
+		);
+	}
 
 	return (
 		<>
-			{title && <SwatchGroupLabel className="swatch-group-label">
+			{!skipTitle && <SwatchGroupLabel className="swatch-group-label">
 				<Heading size="s">{title ?? capitalize(color)}</Heading>
 			</SwatchGroupLabel>}
-			<SwatchGroup className="swatch-group" {...props}>
-				<SwatchColors className="swatch-colors" size={60}>
+			<SwatchGroup className={styles._spectrum_swatchgroup} {...props}>
+				<SwatchColors className="swatch-colors" size={size}>
 					{values.map((value) => {
 						const resolved = fetchToken(`${color}-${value}`, value ?? color);
 						return (
-							<SwatchSet className="swatch-set" key={`${color}-${value}`}>
+							<SwatchSet
+								className="swatch-set"
+								key={`${color}-${value}`}
+								style={{ "--mod-swatch-size": `${size}px` }}
+							>
 								<Body className="swatch-label" size="s">
 									{value}
 								</Body>
 								<Swatch
-									className="swatch"
 									title={`--spectrum-${color}-${value} / ${resolved}`}
-									background={resolved}
+									color={resolved}
 									size={size}
+									noCheckerboard={noCheckerboard}
 									onClick={() => navigator.clipboard.writeText(`--spectrum-${color}-${value}`)}
 								/>
 							</SwatchSet>

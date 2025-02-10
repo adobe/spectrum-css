@@ -25,6 +25,19 @@ const { copy, fetchContent } = require("../../tasks/utilities.js");
 require("colors");
 
 /**
+ * Create a tagline for the CSS file based on the package.json data
+ * @param {Object} [packageJson={}]
+ * @param {string} packageJson.name
+ * @param {string} packageJson.version
+ * @returns
+ */
+function generateTagline({ name, version } = {}) {
+	if (!name) return "";
+	if (!version) return `/* ${name} */\n\n`;
+	return `/* ${name}@v${version} */\n\n`;
+}
+
+/**
  * The builder for the main entry point
  * @param {object} config
  * @param {string} config.cwd - Current working directory for the component being built
@@ -32,15 +45,21 @@ require("colors");
  * @returns Promise<void>
  */
 async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false } = {}) {
-	// Create an index.css asset for each component
-	if (clean && fs.existsSync(outputPath)) {
-		await fsp.unlink(outputPath);
-	}
+	// Read in the package version from the package.json file
+	const packageJson = await fsp.readFile(path.join(cwd, "package.json"), "utf-8").then(JSON.parse);
 
 	const inputs = await fg(inputGlob, { cwd });
 	const contents = inputs.map(input => `@import "${input}";`).join("\n");
 	if (!contents) return;
-	return processCSS(contents, undefined, outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
+
+	return processCSS(contents, undefined, outputPath, {
+		cwd,
+		clean,
+		configPath: cwd,
+		map: false,
+		resolveImports: true,
+		customTagline: generateTagline(packageJson),
+	});
 }
 
 /**
@@ -49,7 +68,7 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
  * @param {string} [config.cwd=process.cwd()] - Current working directory for the component
  * @returns {Promise<string[]>}
  */
-async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
+async function appendCustomOverrides({ cwd = process.cwd(), packageJson = {} } = {}) {
 	const promises = [];
 
 	// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
@@ -71,6 +90,7 @@ async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
 			processCSS(combinedContent[0].content, path.join(cwd, "dist", "css", file), path.join(cwd, "dist", "css", file), {
 				cwd,
 				configPath: cwd,
+				customTagline: generateTagline(packageJson),
 			})
 		);
 	}
@@ -90,10 +110,6 @@ async function main({
 	cwd = process.cwd(),
 	clean,
 } = {}) {
-	if (typeof clean === "undefined") {
-		clean = process.env.NODE_ENV === "production";
-	}
-
 	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
 	console.time(key);
 

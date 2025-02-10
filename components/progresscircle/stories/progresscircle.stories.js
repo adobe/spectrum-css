@@ -17,11 +17,18 @@ export default {
 		isIndeterminate,
 		staticColor,
 		value: {
+			name: "Percent filled",
+			type: { name: "number" },
+			table: {
+				type: { summary: "number" },
+				category: "Content",
+			},
 			control: {
 				type: "range",
 				min: 0,
 				max: 100
-			}
+			},
+			if: { arg: "isIndeterminate", truthy: false },
 		}
 	},
 	args: {

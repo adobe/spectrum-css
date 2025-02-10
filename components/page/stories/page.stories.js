@@ -26,9 +26,13 @@ export default {
 		packageJson,
 		metadata,
 	},
+	tags: ["!autodocs", "!dev"]
 };
 
 export const Default = PageGroup.bind({});
 Default.args = {
 	content: [],
+};
+Default.parameters = {
+	chromatic: { disableSnapshot: true },
 };
