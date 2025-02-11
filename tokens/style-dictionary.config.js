@@ -11,23 +11,22 @@
  * governing permissions and limitations under the License.
  */
 
-const path = require("path");
-
-const generateFileConfig = require("./utilities/style-dictionary.utils.js");
+const path = require("node:path");
 
 const StyleDictionary = require("style-dictionary");
+
 const CSSSetsFormatter = require("style-dictionary-sets").CSSSetsFormatter;
-const JsonSetsFormatter = require("./utilities/data-json-formatter.js");
 const NameKebabTransfom = require("style-dictionary-sets").NameKebabTransfom;
-const AttributeSetsTransform =
-	require("style-dictionary-sets").AttributeSetsTransform;
-const CSSOpenTypeTransform =
-	require("style-dictionary-sets").CSSOpenTypeTransform;
+const AttributeSetsTransform = require("style-dictionary-sets").AttributeSetsTransform;
+const CSSOpenTypeTransform = require("style-dictionary-sets").CSSOpenTypeTransform;
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
 StyleDictionary.registerFormat(CSSSetsFormatter);
+
+const JsonSetsFormatter = require("./utilities/data-json-formatter.js");
+
 StyleDictionary.registerFormat(JsonSetsFormatter);
 
 /**
@@ -49,12 +48,89 @@ module.exports = {
 				CSSOpenTypeTransform.name,
 			],
 			prefix: "spectrum",
-			files: [
-				generateFileConfig(),
-				...["desktop", "mobile", "light", "dark"].map((context) =>
-					generateFileConfig({ setName: context }),
-				),
-			],
+			files: [{
+				format: "css/sets",
+				options: {
+					showFileHeader: false,
+					outputReferences: true,
+					selector: ".spectrum"
+				},
+				destination: "global-vars.css",
+				filter: (token) => {
+					// Fetch the sets for this token
+					const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+					if (tokenSets.length === 0) return true;
+					return false;
+				},
+			}, {
+				format: "css/sets",
+				options: {
+					showFileHeader: false,
+					outputReferences: true,
+					selector: ".spectrum--medium",
+					sets: [ "desktop" ]
+				},
+				destination: "medium-vars.css",
+				filter: (token) => {
+					// Fetch the sets for this token
+					const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+
+					if (tokenSets.includes("wireframe")) return false;
+					if (!tokenSets.includes("desktop")) return false;
+					if (tokenSets.length === 1) return true;
+				},
+			}, {
+				format: "css/sets",
+				options: {
+					showFileHeader: false,
+					outputReferences: true,
+					selector: ".spectrum--large",
+					sets: [ "mobile" ]
+				},
+				destination: "large-vars.css",
+				filter: (token) => {
+					// Fetch the sets for this token
+					const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+
+					if (tokenSets.includes("wireframe")) return false;
+					if (!tokenSets.includes("mobile")) return false;
+					if (tokenSets.length === 1) return true;
+				},
+			}, {
+				format: "css/sets",
+				options: {
+					showFileHeader: false,
+					outputReferences: true,
+					selector: ".spectrum--light",
+					sets: [ "light" ]
+				},
+				destination: "light-vars.css",
+				filter: (token) => {
+					// Fetch the sets for this token
+					const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+
+					if (tokenSets.includes("wireframe")) return false;
+					if (!tokenSets.includes("light")) return false;
+					if (tokenSets.length === 1) return true;
+				},
+			}, {
+				format: "css/sets",
+				options: {
+					showFileHeader: false,
+					outputReferences: true,
+					selector: ".spectrum--dark",
+					sets: [ "dark" ]
+				},
+				destination: "dark-vars.css",
+				filter: (token) => {
+					// Fetch the sets for this token
+					const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+
+					if (tokenSets.includes("wireframe")) return false;
+					if (!tokenSets.includes("light")) return false;
+					if (tokenSets.length === 1) return true;
+				},
+			}],
 		},
 		JSON: {
 			buildPath: "dist/json/",
@@ -71,9 +147,7 @@ module.exports = {
 					filter: (token) => {
 						// Fetch the sets for this token
 						const sets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-
 						if (sets.includes("wireframe")) return false;
-
 						return true;
 					},
 					options: {

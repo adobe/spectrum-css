@@ -12,10 +12,9 @@
  */
 
 @import "@spectrum-css/commons/basebutton.css";
-@import "./themes/spectrum-two.css";
 
-.spectrum-Button,
-.spectrum-Button--sizeM {
+/* default for all buttons */
+.spectrum-Button {
 	--spectrum-button-sized-height: var(--spectrum-component-height-100);
 	--spectrum-button-sized-font-size: var(--spectrum-font-size-100);
 
@@ -27,53 +26,26 @@
 	--spectrum-button-sized-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
 	--spectrum-button-sized-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
 	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-100);
-}
 
-.spectrum-Button--sizeS {
-	--spectrum-button-sized-height: var(--spectrum-component-height-75);
-	--spectrum-button-sized-font-size: var(--spectrum-font-size-75);
+	--spectrum-button-background-color-default: var(--spectrum-gray-50);
+	--spectrum-button-background-color-hover: var(--spectrum-gray-100);
+	--spectrum-button-background-color-down: var(--spectrum-gray-200);
+	--spectrum-button-background-color-focus: var(--spectrum-gray-100);
 
-	--spectrum-button-sized-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-75) - var(--spectrum-button-border-width));
-	--spectrum-button-sized-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-75);
-	--spectrum-button-sized-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--spectrum-button-border-width));
-	--spectrum-button-sized-padding-label-to-icon: var(--spectrum-text-to-visual-75);
-	--spectrum-button-sized-top-to-text: var(--spectrum-button-top-to-text-small);
-	--spectrum-button-sized-bottom-to-text: var(--spectrum-button-bottom-to-text-small);
-	--spectrum-button-sized-top-to-icon: var(--spectrum-component-top-to-workflow-icon-75);
-	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-75);
-}
+	--spectrum-button-border-color-default: var(--spectrum-gray-400);
+	--spectrum-button-border-color-hover: var(--spectrum-gray-500);
+	--spectrum-button-border-color-down: var(--spectrum-gray-600);
+	--spectrum-button-border-color-focus: var(--spectrum-gray-500);
 
-.spectrum-Button--sizeL {
-	--spectrum-button-sized-height: var(--spectrum-component-height-200);
-	--spectrum-button-sized-font-size: var(--spectrum-font-size-200);
+	--spectrum-button-background-color-disabled: transparent;
+	--spectrum-button-border-color-disabled: var(--spectrum-disabled-border-color);
 
-	--spectrum-button-sized-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-200) - var(--spectrum-button-border-width));
-	--spectrum-button-sized-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-200);
-	--spectrum-button-sized-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--spectrum-button-border-width));
-	--spectrum-button-sized-padding-label-to-icon: var(--spectrum-text-to-visual-200);
-	--spectrum-button-sized-top-to-text: var(--spectrum-button-top-to-text-large);
-	--spectrum-button-sized-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
-	--spectrum-button-sized-top-to-icon: var(--spectrum-component-top-to-workflow-icon-200);
-	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-200);
-}
-
-.spectrum-Button--sizeXL {
-	--spectrum-button-sized-height: var(--spectrum-component-height-300);
-	--spectrum-button-sized-font-size: var(--spectrum-font-size-300);
-
-	--spectrum-button-sized-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--spectrum-button-border-width));
-	--spectrum-button-sized-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-300);
-	--spectrum-button-sized-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--spectrum-button-border-width));
-	--spectrum-button-sized-padding-label-to-icon: var(--spectrum-text-to-visual-300);
-	--spectrum-button-sized-top-to-text: var(--spectrum-button-top-to-text-extra-large);
-	--spectrum-button-sized-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
-	--spectrum-button-sized-top-to-icon: var(--spectrum-component-top-to-workflow-icon-300);
-	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-300);
-}
-
-/* default for all buttons */
-.spectrum-Button {
 	&.is-selected {
+		--mod-button-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
+		--mod-button-background-color-hover: var(--spectrum-neutral-subdued-background-color-hover);
+		--mod-button-background-color-down: var(--spectrum-neutral-subdued-background-color-down);
+		--mod-button-background-color-focus: var(--spectrum-neutral-subdued-background-color-key-focus);
+
 		--mod-button-border-color-default: transparent;
 		--mod-button-border-color-hover: transparent;
 		--mod-button-border-color-down: transparent;
@@ -184,7 +156,16 @@
 		--mod-button-border-color-focus: transparent;
 		--mod-button-border-color-disabled: transparent;
 
+		--mod-button-content-color-default: var(--spectrum-gray-25);
+		--mod-button-content-color-hover: var(--spectrum-gray-25);
+		--mod-button-content-color-down: var(--spectrum-gray-25);
+		--mod-button-content-color-focus: var(--spectrum-gray-25);
+
 		&.spectrum-Button--outline {
+			--mod-button-background-color-hover: var(--spectrum-gray-200);
+			--mod-button-background-color-down: var(--spectrum-gray-400);
+			--mod-button-background-color-focus: var(--spectrum-gray-200);
+
 			--mod-button-border-color-default: var(--spectrum-gray-800);
 			--mod-button-border-color-hover: var(--spectrum-gray-900);
 			--mod-button-border-color-down: var(--spectrum-gray-900);
@@ -201,6 +182,7 @@
 	}
 
 	&.spectrum-Button--secondary {
+		--mod-button-background-color-default: var(--spectrum-gray-100);
 		--mod-button-background-color-disabled: var(--spectrum-disabled-background-color);
 
 		--mod-button-border-color-default: transparent;
@@ -215,10 +197,18 @@
 		--mod-button-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
 		--mod-button-content-color-disabled: var(--spectrum-disabled-content-color);
 
-		&.spectrum-Button--outline {
+		&:not(.spectrum-Button--outline) {
+			--mod-button-background-color-hover: var(--spectrum-gray-200);
 			--mod-button-background-color-down: var(--spectrum-gray-400);
+			--mod-button-background-color-focus: var(--spectrum-gray-200);
+		}
 
-			--mod-button-border-color-default: var(--spectrum-gray-300);
+		&.spectrum-Button--outline {
+			--mod-button-background-color-hover: var(--spectrum-gray-200);
+			--mod-button-background-color-down: var(--spectrum-gray-400);
+			--mod-button-background-color-focus: var(--spectrum-gray-200);
+
+			--mod-button-border-color-default: var(--spectrum-gray-200);
 			--mod-button-border-color-hover: var(--spectrum-gray-400);
 			--mod-button-border-color-down: var(--spectrum-gray-500);
 			--mod-button-border-color-focus: var(--spectrum-gray-400);
@@ -281,32 +271,133 @@
 	}
 
 	&.spectrum-Button--staticWhite {
-		--mod-button-content-color-disabled: var(--spectrum-disabled-static-white-content-color);
-		--mod-button-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
 		--mod-button-focus-ring-color: var(--spectrum-static-white-focus-indicator-color);
 
-		&.spectrum-Button--secondary:not(.spectrum-Button--outline) {
-			--mod-button-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
+		--mod-button-background-color-default: var(--spectrum-transparent-white-900);
+		--mod-button-background-color-hover: var(--spectrum-transparent-white-1000);
+		--mod-button-background-color-down: var(--spectrum-transparent-white-1000);
+		--mod-button-background-color-focus: var(--spectrum-transparent-white-1000);
+		--mod-button-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
+
+		--mod-button-content-color-default: var(--spectrum-black);
+		--mod-button-content-color-hover: var(--spectrum-black);
+		--mod-button-content-color-down: var(--spectrum-black);
+		--mod-button-content-color-focus: var(--spectrum-black);
+		--mod-button-content-color-disabled: var(--spectrum-disabled-static-white-content-color);
+
+		&.spectrum-Button--secondary {
+			--mod-button-background-color-default: var(--spectrum-transparent-white-300);
+			--mod-button-background-color-hover: var(--spectrum-transparent-white-400);
+			--mod-button-background-color-down: var(--spectrum-transparent-white-500);
+			--mod-button-background-color-focus: var(--spectrum-transparent-white-400);
+
+			--mod-button-content-color-default: var(--spectrum-white);
+			--mod-button-content-color-hover: var(--spectrum-white);
+			--mod-button-content-color-down: var(--spectrum-white);
+			--mod-button-content-color-focus: var(--spectrum-white);
+
+			&:not(.spectrum-Button--outline) {
+				--mod-button-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
+			}
+
+			&.spectrum-Button--outline {
+				--mod-button-border-color-default: var(--spectrum-transparent-white-400);
+				--mod-button-border-color-hover: var(--spectrum-transparent-white-500);
+				--mod-button-border-color-down: var(--spectrum-transparent-white-600);
+				--mod-button-border-color-focus: var(--spectrum-transparent-white-500);
+			}
 		}
 
 		&.spectrum-Button--outline {
 			--mod-button-content-color-disabled: var(--spectrum-disabled-static-white-content-color);
 			--mod-button-border-color-disabled: var(--spectrum-disabled-static-white-border-color);
+
+			&:not(.spectrum-Button--secondary) {
+				--mod-button-background-color-hover: var(--spectrum-transparent-white-400);
+				--mod-button-background-color-down: var(--spectrum-transparent-white-500);
+				--mod-button-background-color-focus: var(--spectrum-transparent-white-400);
+
+				--mod-button-content-color-default: var(--spectrum-white);
+				--mod-button-content-color-hover: var(--spectrum-white);
+				--mod-button-content-color-down: var(--spectrum-white);
+				--mod-button-content-color-focus: var(--spectrum-white);
+
+				--mod-button-border-color-default: var(--spectrum-transparent-white-900);
+				--mod-button-border-color-hover: var(--spectrum-transparent-white-1000);
+				--mod-button-border-color-down: var(--spectrum-transparent-white-1000);
+				--mod-button-border-color-focus: var(--spectrum-transparent-white-1000);
+			}
+
+			&.spectrum-Button--secondary {
+				--mod-button-background-color-hover: var(--spectrum-transparent-white-400);
+				--mod-button-background-color-down: var(--spectrum-transparent-white-500);
+				--mod-button-background-color-focus: var(--spectrum-transparent-white-400);
+			}
 		}
 	}
 
+	/* static black */
 	&.spectrum-Button--staticBlack {
-		--mod-button-content-color-disabled: var(--spectrum-disabled-static-black-content-color);
-		--mod-button-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
 		--mod-button-focus-ring-color: var(--mod-static-black-focus-indicator-color, var(--spectrum-static-black-focus-indicator-color));
 
-		&.spectrum-Button--secondary:not(.spectrum-Button--outline) {
-			--mod-button-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
+		--mod-button-background-color-default: var(--spectrum-transparent-black-900);
+		--mod-button-background-color-hover: var(--spectrum-transparent-black-1000);
+		--mod-button-background-color-down: var(--spectrum-transparent-black-1000);
+		--mod-button-background-color-focus: var(--spectrum-transparent-black-1000);
+		--mod-button-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
+
+		--mod-button-content-color-default: var(--spectrum-white);
+		--mod-button-content-color-hover: var(--spectrum-white);
+		--mod-button-content-color-down: var(--spectrum-white);
+		--mod-button-content-color-focus: var(--spectrum-white);
+		--mod-button-content-color-disabled: var(--spectrum-disabled-static-black-content-color);
+
+		&.spectrum-Button--secondary {
+			--mod-button-background-color-default: var(--spectrum-transparent-black-300);
+			--mod-button-background-color-hover: var(--spectrum-transparent-black-400);
+			--mod-button-background-color-down: var(--spectrum-transparent-black-500);
+			--mod-button-background-color-focus: var(--spectrum-transparent-black-400);
+
+			--mod-button-content-color-default: var(--spectrum-black);
+			--mod-button-content-color-hover: var(--spectrum-black);
+			--mod-button-content-color-down: var(--spectrum-black);
+			--mod-button-content-color-focus: var(--spectrum-black);
+
+			&:not(.spectrum-Button--outline) {
+				--mod-button-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
+			}
+
+			&.spectrum-Button--outline {
+				--mod-button-background-color-hover: var(--spectrum-transparent-black-400);
+				--mod-button-background-color-down: var(--spectrum-transparent-black-500);
+				--mod-button-background-color-focus: var(--spectrum-transparent-black-400);
+
+				--mod-button-border-color-default: var(--spectrum-transparent-black-400);
+				--mod-button-border-color-hover: var(--spectrum-transparent-black-500);
+				--mod-button-border-color-down: var(--spectrum-transparent-black-600);
+				--mod-button-border-color-focus: var(--spectrum-transparent-black-500);
+				--mod-button-border-color-disabled: var(--spectrum-disabled-static-black-border-color);
+
+				--mod-button-content-color-disabled: var(--spectrum-disabled-static-black-content-color);
+			}
 		}
 
 		&.spectrum-Button--outline {
-			--mod-button-content-color-disabled: var(--spectrum-disabled-static-black-content-color);
-			--mod-button-border-color-disabled: var(--spectrum-disabled-static-black-border-color);
+			&:not(.spectrum-Button--secondary) {
+				--mod-button-background-color-hover: var(--spectrum-transparent-black-400);
+				--mod-button-background-color-down: var(--spectrum-transparent-black-500);
+				--mod-button-background-color-focus: var(--spectrum-transparent-black-400);
+
+				--mod-button-content-color-default: var(--spectrum-black);
+				--mod-button-content-color-hover: var(--spectrum-black);
+				--mod-button-content-color-down: var(--spectrum-black);
+				--mod-button-content-color-focus: var(--spectrum-black);
+
+				--mod-button-border-color-default: var(--spectrum-transparent-black-500);
+				--mod-button-border-color-hover: var(--spectrum-transparent-black-600);
+				--mod-button-border-color-down: var(--spectrum-transparent-black-700);
+				--mod-button-border-color-focus: var(--spectrum-transparent-black-600);
+			}
 		}
 	}
 
@@ -315,6 +406,48 @@
 		--mod-button-background-color-default: transparent;
 		--mod-button-background-color-disabled: transparent;
 	}
+}
+
+.spectrum-Button--sizeS {
+	--spectrum-button-sized-height: var(--spectrum-component-height-75);
+	--spectrum-button-sized-font-size: var(--spectrum-font-size-75);
+
+	--spectrum-button-sized-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-75) - var(--spectrum-button-border-width));
+	--spectrum-button-sized-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-75);
+	--spectrum-button-sized-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--spectrum-button-border-width));
+	--spectrum-button-sized-padding-label-to-icon: var(--spectrum-text-to-visual-75);
+	--spectrum-button-sized-top-to-text: var(--spectrum-button-top-to-text-small);
+	--spectrum-button-sized-bottom-to-text: var(--spectrum-button-bottom-to-text-small);
+	--spectrum-button-sized-top-to-icon: var(--spectrum-component-top-to-workflow-icon-75);
+	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-75);
+}
+
+.spectrum-Button--sizeL {
+	--spectrum-button-sized-height: var(--spectrum-component-height-200);
+	--spectrum-button-sized-font-size: var(--spectrum-font-size-200);
+
+	--spectrum-button-sized-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-200) - var(--spectrum-button-border-width));
+	--spectrum-button-sized-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-200);
+	--spectrum-button-sized-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--spectrum-button-border-width));
+	--spectrum-button-sized-padding-label-to-icon: var(--spectrum-text-to-visual-200);
+	--spectrum-button-sized-top-to-text: var(--spectrum-button-top-to-text-large);
+	--spectrum-button-sized-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
+	--spectrum-button-sized-top-to-icon: var(--spectrum-component-top-to-workflow-icon-200);
+	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-200);
+}
+
+.spectrum-Button--sizeXL {
+	--spectrum-button-sized-height: var(--spectrum-component-height-300);
+	--spectrum-button-sized-font-size: var(--spectrum-font-size-300);
+
+	--spectrum-button-sized-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--spectrum-button-border-width));
+	--spectrum-button-sized-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-300);
+	--spectrum-button-sized-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--spectrum-button-border-width));
+	--spectrum-button-sized-padding-label-to-icon: var(--spectrum-text-to-visual-300);
+	--spectrum-button-sized-top-to-text: var(--spectrum-button-top-to-text-extra-large);
+	--spectrum-button-sized-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
+	--spectrum-button-sized-top-to-icon: var(--spectrum-component-top-to-workflow-icon-300);
+	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-300);
 }
 
 .spectrum-Button {
