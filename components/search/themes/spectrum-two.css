@@ -41,14 +41,14 @@
 			--spectrum-search-block-size: var(--spectrum-component-height-200);
 			--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
 			--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
+		}
 
-			&.spectrum-Search--sizeXL {
-				--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
-				--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
-				--spectrum-search-block-size: var(--spectrum-component-height-300);
-				--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
-				--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
-			}
+		&.spectrum-Search--sizeXL {
+			--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
+			--spectrum-search-block-size: var(--spectrum-component-height-300);
+			--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
+			--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
 		}
 	}
 }
