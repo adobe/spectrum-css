@@ -24,7 +24,7 @@ function rgbMappingFunction ({
 	colorFunctionalNotation = false,
 }) {
 	return {
-		postcssPlugin: "postcss-rgb-mapping",
+		postcssPlugin: "@spectrum-tools/postcss-rgb-mapping",
 		/** @type {import('postcss').DeclarationProcessor} */
 		Declaration(decl, { Warning }) {
 			const { prop, value } = decl;

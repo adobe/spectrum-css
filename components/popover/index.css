@@ -11,10 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
 @import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Popover {
+	--spectrum-popover-border-width: var(--spectrum-border-width-100);
+
 	/* animation distance is equal to and responsible for popover offset */
 	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
 

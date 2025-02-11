@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Divider {
@@ -21,6 +19,15 @@
 }
 
 .spectrum-Divider {
+	/* background colors */
+	--spectrum-divider-background-color: var(--spectrum-gray-200);
+
+	/* static white background colors */
+	--spectrum-divider-background-color-static-white: var(--spectrum-transparent-white-200);
+
+	/* static black background colors */
+	--spectrum-divider-background-color-static-black: var(--spectrum-transparent-black-200);
+
 	--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
 }
 
