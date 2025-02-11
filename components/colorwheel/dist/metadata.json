@@ -20,10 +20,12 @@
     "[dir=\"rtl\"] .spectrum-ColorWheel-ColorArea-handle"
   ],
   "modifiers": [
+    "--mod-colorwheel-block-size",
     "--mod-colorwheel-border-color",
     "--mod-colorwheel-border-width",
     "--mod-colorwheel-colorarea-container-size",
     "--mod-colorwheel-fill-color-disabled",
+    "--mod-colorwheel-inline-size",
     "--mod-colorwheel-min-inline-size",
     "--mod-colorwheel-path",
     "--mod-colorwheel-track-width"
@@ -32,17 +34,17 @@
     "--spectrum-color-wheel-border-opacity",
     "--spectrum-color-wheel-minimum-width",
     "--spectrum-color-wheel-width",
+    "--spectrum-colorwheel-block-size",
     "--spectrum-colorwheel-border-color",
     "--spectrum-colorwheel-border-color-rgb",
     "--spectrum-colorwheel-border-opacity",
     "--spectrum-colorwheel-border-width",
     "--spectrum-colorwheel-colorarea-container-size",
     "--spectrum-colorwheel-fill-color-disabled",
-    "--spectrum-colorwheel-height",
+    "--spectrum-colorwheel-inline-size",
     "--spectrum-colorwheel-min-inline-size",
     "--spectrum-colorwheel-path",
-    "--spectrum-colorwheel-track-width",
-    "--spectrum-colorwheel-width"
+    "--spectrum-colorwheel-track-width"
   ],
   "global": [
     "--spectrum-border-width-100",

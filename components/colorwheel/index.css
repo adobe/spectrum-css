@@ -12,8 +12,9 @@
  */
 
 .spectrum-ColorWheel {
-	--spectrum-colorwheel-width: var(--spectrum-color-wheel-width);
-	--spectrum-colorwheel-height: var(--spectrum-color-wheel-width);
+	--spectrum-colorwheel-inline-size: var(--spectrum-color-wheel-width);
+	--spectrum-colorwheel-block-size: var(--spectrum-color-wheel-width);
+	--spectrum-colorwheel-min-inline-size: var(--spectrum-color-wheel-minimum-width);
 
 	/* @TODO: leveraging the rgb token in this case to achieve the desired border color implementation as rgb + opacity are required by the `rgba` function. */
 	--spectrum-colorwheel-border-color-rgb: var(--spectrum-gray-1000-rgb);
@@ -23,8 +24,6 @@
 
 	--spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
 	--spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
-
-	--spectrum-colorwheel-min-inline-size: var(--spectrum-color-wheel-minimum-width);
 
 	--spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
 
@@ -36,8 +35,8 @@
 	position: relative;
 	display: block;
 	min-inline-size: var(--mod-colorwheel-min-inline-size, var(--spectrum-colorwheel-min-inline-size));
-	inline-size: var(--spectrum-colorwheel-width);
-	block-size: var(--spectrum-colorwheel-height);
+	inline-size: var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size));
+	block-size: var(--mod-colorwheel-block-size, var(--spectrum-colorwheel-block-size));
 	user-select: none;
 	cursor: default;
 
@@ -47,13 +46,13 @@
 	 * (to account for the inset width of the exterior border) from the component's width.
 	 */
 	&::before {
-		inline-size: calc(var(--spectrum-colorwheel-width) - calc(4 * var(--spectrum-colorwheel-border-width)));
-		block-size: calc(var(--spectrum-colorwheel-width) - calc(4 * var(--spectrum-colorwheel-border-width)));
-		inset-block-start: var(--spectrum-colorwheel-border-width);
-		inset-inline-start: var(--spectrum-colorwheel-border-width);
+		inline-size: calc(var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size)) - calc(4 * var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width))));
+		block-size: calc(var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size)) - calc(4 * var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width))));
+		inset-block-start: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
+		inset-inline-start: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
 		content: "";
 		position: absolute;
-		border-width: var(--spectrum-colorwheel-border-width);
+		border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
 		border-style: solid;
 		border-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
 		border-radius: 100%;
@@ -66,10 +65,10 @@
 	 * track width (to account for the inset width of the interior border)
 	 */
 	&::after {
-		inset: calc(var(--spectrum-colorwheel-track-width) - (calc(2 * var(--spectrum-colorwheel-border-width))));
+		inset: calc(var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width)) - (calc(2 * var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width)))));
 		content: "";
 		position: absolute;
-		border-width: var(--spectrum-colorwheel-border-width);
+		border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
 		border-style: solid;
 		border-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
 		border-radius: 100%;
@@ -132,7 +131,7 @@
 }
 
 .spectrum-ColorWheel-handle {
-	transform: translate(calc(var(--spectrum-colorwheel-width) / 2 - var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width)) / 2), 0);
+	transform: translate(calc(var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size)) / 2 - var(--mod-colorwheel-track-width, var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width))) / 2), 0);
 	inset-block-start: 50%;
 	inset-inline: 50%;
 }
@@ -149,8 +148,8 @@
 .spectrum-ColorWheel-wheel {
 	position: absolute;
 	background: conic-gradient(from 90deg, red, rgb(255 128 0), rgb(255 255 0), rgb(128 255 0), rgb(0 255 0), rgb(0 255 128), rgb(0 255 255), rgb(0 128 255), rgb(0 0 255), rgb(128 0 255), rgb(255 0 255), rgb(255 0 128), red);
-	inset-block: var(--spectrum-colorwheel-border-width);
-	inset-inline: var(--spectrum-colorwheel-border-width);
+	inset-block: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
+	inset-inline: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
 	clip-path: path(evenodd, var(--mod-colorwheel-path, var(--spectrum-colorwheel-path)));
 
 	&.is-disabled {
