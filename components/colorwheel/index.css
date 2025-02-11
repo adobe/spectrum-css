@@ -107,6 +107,10 @@
 	margin: auto;
 }
 
+/*
+ * While unused, we should factor in the `--spectrum-color-wheel-color-area-margin` which resolves to a value of
+ * 12px when calculating the size of the color area relative to the color wheel that contains it.
+ */
 .spectrum-ColorWheel-colorarea-container {
 	block-size: auto;
 	inline-size: 100%;
