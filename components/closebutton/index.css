@@ -11,7 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
 @import "@spectrum-css/commons/basebutton.css";
 
 /* Windows high contrast mode */
@@ -49,6 +48,11 @@
 }
 
 .spectrum-CloseButton {
+	--spectrum-closebutton-background-color-default: transparent;
+	--spectrum-closebutton-background-color-hover: var(--spectrum-gray-100);
+	--spectrum-closebutton-background-color-down: var(--spectrum-gray-200);
+	--spectrum-closebutton-background-color-focus: var(--spectrum-gray-100);
+
 	/* Cross icon */
 	--spectrum-closebutton-icon-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-closebutton-icon-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -85,6 +89,10 @@
 	}
 
 	&.spectrum-CloseButton--staticWhite {
+		--spectrum-closebutton-static-background-color-hover: var(--spectrum-transparent-white-400);
+		--spectrum-closebutton-static-background-color-down: var(--spectrum-transparent-white-500);
+		--spectrum-closebutton-static-background-color-focus: var(--spectrum-transparent-white-400);
+
 		--spectrum-closebutton-static-background-color-default: transparent;
 
 		--spectrum-closebutton-icon-color-default: var(--spectrum-white);
@@ -93,13 +101,19 @@
 	}
 
 	&.spectrum-CloseButton--staticBlack {
+		--spectrum-closebutton-static-background-color-hover: var(--spectrum-transparent-black-400);
+		--spectrum-closebutton-static-background-color-down: var(--spectrum-transparent-black-500);
+		--spectrum-closebutton-static-background-color-focus: var(--spectrum-transparent-black-400);
+
 		--spectrum-closebutton-static-background-color-default: transparent;
 
 		--spectrum-closebutton-icon-color-default: var(--spectrum-black);
 		--spectrum-closebutton-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
 		--spectrum-closebutton-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 	}
+}
 
+.spectrum-CloseButton {
 	@extend %spectrum-BaseButton;
 
 	block-size: var(--mod-closebutton-height, var(--spectrum-closebutton-size));
