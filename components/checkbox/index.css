@@ -20,15 +20,16 @@
 	--spectrum-checkbox-checkmark-color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-gray-50)));
 
 	/* Color */
+	--spectrum-checkbox-background-color: var(--spectrum-gray-25);
 	--spectrum-checkbox-content-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-checkbox-content-color-hover: var(--spectrum-neutral-content-color-hover);
 	--spectrum-checkbox-content-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-checkbox-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
-	--spectrum-checkbox-control-color-default: var(--spectrum-gray-600);
-	--spectrum-checkbox-control-color-hover: var(--spectrum-gray-700);
-	--spectrum-checkbox-control-color-down: var(--spectrum-gray-800);
-	--spectrum-checkbox-control-color-focus: var(--spectrum-gray-700);
+	--spectrum-checkbox-control-color-default: var(--spectrum-neutral-content-color-default);
+	--spectrum-checkbox-control-color-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-checkbox-control-color-down: var(--spectrum-neutral-content-color-down);
+	--spectrum-checkbox-control-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
 	--spectrum-checkbox-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
@@ -37,22 +38,24 @@
 
 	--spectrum-checkbox-invalid-color-default: var(--spectrum-negative-color-900);
 	--spectrum-checkbox-invalid-color-hover: var(--spectrum-negative-color-1000);
-	--spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1100);
+	--spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1000);
 	--spectrum-checkbox-invalid-color-focus: var(--spectrum-negative-color-1000);
 
-	--spectrum-checkbox-emphasized-color-default: var(--spectrum-accent-color-900);
-	--spectrum-checkbox-emphasized-color-hover: var(--spectrum-accent-color-1000);
-	--spectrum-checkbox-emphasized-color-down: var(--spectrum-accent-color-1100);
-	--spectrum-checkbox-emphasized-color-focus: var(--spectrum-accent-color-1000);
+	--spectrum-checkbox-emphasized-color-default: var(--spectrum-accent-content-color-default);
+	--spectrum-checkbox-emphasized-color-hover: var(--spectrum-accent-content-color-hover);
+	--spectrum-checkbox-emphasized-color-down: var(--spectrum-accent-content-color-down);
+	--spectrum-checkbox-emphasized-color-focus: var(--spectrum-accent-content-color-key-focus);
 
-	--spectrum-checkbox-control-selected-color-default: var(--spectrum-neutral-background-color-selected-default);
-	--spectrum-checkbox-control-selected-color-hover: var(--spectrum-neutral-background-color-selected-hover);
-	--spectrum-checkbox-control-selected-color-down: var(--spectrum-neutral-background-color-selected-down);
-	--spectrum-checkbox-control-selected-color-focus: var(--spectrum-neutral-background-color-selected-key-focus);
+	--spectrum-checkbox-control-selected-color-default: var(--spectrum-neutral-content-color-default);
+	--spectrum-checkbox-control-selected-color-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-checkbox-control-selected-color-down: var(--spectrum-neutral-content-color-down);
+	--spectrum-checkbox-control-selected-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
 	/* Font */
 	--spectrum-checkbox-line-height: var(--spectrum-line-height-100);
 	--spectrum-checkbox-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--spectrum-checkbox-text-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-checkbox-text-font-style: var(--spectrum-default-font-style);
 
 	/* Size */
 	--spectrum-checkbox-height: var(--spectrum-component-height-100);
@@ -66,6 +69,13 @@
 	--spectrum-checkbox-selected-border-width: calc(var(--spectrum-checkbox-control-size) / 2);
 
 	--spectrum-checkbox-animation-duration: var(--spectrum-animation-duration-100);
+
+	/* CJK (Chinese, Japanese, and Korean) language support */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		line-height: var(--mod-checkbox-line-height-cjk, var(--spectrum-checkbox-line-height-cjk));
+	}
 }
 
 .spectrum-Checkbox,
@@ -73,7 +83,9 @@
 	--spectrum-checkbox-font-size: var(--spectrum-font-size-100);
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
+	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
+	--spectrum-checkbox-top-to-control: var(--spectrum-checkbox-top-to-control-medium);
 }
 
 .spectrum-Checkbox--sizeS {
@@ -85,7 +97,9 @@
 	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-75);
+	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
+	--spectrum-checkbox-top-to-control: var(--spectrum-checkbox-top-to-control-small);
 }
 
 .spectrum-Checkbox--sizeL {
@@ -97,7 +111,9 @@
 	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-large);
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-200);
+	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-200);
+	--spectrum-checkbox-top-to-control: var(--spectrum-checkbox-top-to-control-large);
 }
 
 .spectrum-Checkbox--sizeXL {
@@ -109,7 +125,9 @@
 	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-extra-large);
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-300);
+	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
+	--spectrum-checkbox-top-to-control: var(--spectrum-checkbox-top-to-control-extra-large);
 }
 
 /* Default Unchecked */
@@ -177,8 +195,7 @@
 		}
 
 		&:hover {
-			.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
-			.spectrum-Checkbox-box::before {
+			.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box::before {
 				border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
 			}
 		}
@@ -357,22 +374,15 @@
 	text-align: start;
 	margin-inline-start: var(--mod-checkbox-text-to-control, var(--spectrum-checkbox-text-to-control));
 	margin-block-start: var(--mod-checkbox-top-to-text, var(--spectrum-checkbox-top-to-text));
+	margin-block-end: var(--mod-checkbox-bottom-to-text, var(--spectrum-checkbox-bottom-to-text));
 
 	font-size: var(--mod-checkbox-font-size, var(--spectrum-checkbox-font-size));
-
-	/* TODO Use font-weight and font-style tokens */
-	/* font-weight: var(--spectrum-checkbox-text-font-weight); */
-	/* font-style: var(--spectrum-checkbox-text-font-style); */
+	font-weight: var(--spectrum-checkbox-text-font-weight);
+	font-style: var(--spectrum-checkbox-text-font-style);
 
 	transition: color var(--mod-checkbox-animation-duration, var(--spectrum-checkbox-animation-duration)) ease-in-out;
 
 	line-height: var(--mod-checkbox-line-height, var(--spectrum-checkbox-line-height));
-
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		line-height: var(--mod-checkbox-line-height-cjk, var(--spectrum-checkbox-line-height-cjk));
-	}
 }
 
 /**
@@ -407,6 +417,8 @@
 	z-index: 1;
 
 	cursor: pointer;
+
+	margin-block-start: var(--spectrum-checkbox-top-to-control);
 
 	&:disabled {
 		cursor: default;
@@ -472,7 +484,7 @@
 	&::before {
 		forced-color-adjust: none;
 		border-color: var(--highcontrast-checkbox-color-default, var(--mod-checkbox-control-color-default, var(--spectrum-checkbox-control-color-default)));
-
+		background-color: var(--spectrum-checkbox-background-color);
 		display: block;
 		z-index: 0;
 		content: "";
