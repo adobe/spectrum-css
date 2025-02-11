@@ -19,6 +19,8 @@ export const Template = ({
 	isDisabled = false,
 	isInvalid = false,
 	isReadOnly = false,
+	isFocused = false,
+	isHovered,
 	title,
 	value,
 	id = getRandomId("checkbox"),
@@ -55,6 +57,7 @@ export const Template = ({
 				["is-invalid"]: isInvalid,
 				["is-hover"]: isHovered && !isDisabled,
 				["is-readOnly"]: isReadOnly,
+				"is-hover": isHovered,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -62,11 +65,17 @@ export const Template = ({
 		>
 			<input
 				type="checkbox"
-				class="${rootClass}-input"
+				class=${classMap({["is-focus-visible"]: isFocused, [`${rootClass}-input`]: true })}
 				aria-labelledby=${ifDefined(ariaLabelledby)}
 				aria-disabled=${ifDefined(isReadOnly ? "true" : undefined)}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
+				@focusin=${function() {
+					updateArgs({ isFocused: true });
+				}}
+				@focusout=${function() {
+					updateArgs({ isFocused: false });
+				}}
 				title=${ifDefined(title)}
 				value=${ifDefined(value)}
 				@change=${(e) => {
