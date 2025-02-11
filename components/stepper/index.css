@@ -170,7 +170,7 @@
 		--mod-textfield-border-color-disabled: var(--spectrum-stepper-border-color-disabled);
 	}
 
-	&:hover:not(.is-invalid, .is-disabled) {
+	&:hover:not(.is-invalid, .is-disabled, .is-focused) {
 		--mod-infield-button-border-color: var(--mod-stepper-buttons-border-color-hover, var(--spectrum-stepper-buttons-border-color-hover));
 	}
 
