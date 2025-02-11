@@ -95,6 +95,7 @@ export default {
 		packageJson,
 		metadata,
 	},
+	tags: ["migrated"],
 };
 
 // @todo combine variants into one snapshot

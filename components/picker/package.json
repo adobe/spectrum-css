@@ -26,11 +26,11 @@
 	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/helptext": ">=7.0.0 <8.0.0",
-		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/icon": ">=9",
 		"@spectrum-css/menu": ">=9.0.0 <10.0.0",
-		"@spectrum-css/popover": ">=8.0.0 <9.0.0",
-		"@spectrum-css/progresscircle": ">=5.0.0 <6.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+		"@spectrum-css/popover": ">=8",
+		"@spectrum-css/progresscircle": ">=5",
+		"@spectrum-css/tokens": ">=16"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/helptext": {

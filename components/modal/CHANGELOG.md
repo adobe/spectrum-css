@@ -1,5 +1,59 @@
 # Change Log
 
+## 5.1.1-next.0
+
+### Patch Changes
+
+- [#2860](https://github.com/adobe/spectrum-css/pull/2860) [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Spectrum 2 Standard Dialog Migration
+
+  This is the migration for standard dialog. The Divider component is no longer supported in S2 dialogs. In addition, some new and updated tokens are in place to update dialog corner rounding, font treatments, spacing/padding, and maximum/minimum widths. There were several new elements implemented as well, including optional header and footer content, hero/cover images, checkbox and text-only options in the footer content area.
+
+  The `.spectrum-Dialog--small`, `.spectrum-Dialog--medium`, and `.spectrum-Dialog--large` sizing classes were deprecated and removed from the CSS in favor of the t-shirt sizes. Additionally, the spelling of the `.spectrum-Dialog--dismissable` class was corrected to `.spectrum-Dialog--dismissible`.
+
+  Mod properties are either "new," have been renamed to reflect the respective dialog language, or were removed:
+
+  _New Mods_
+  `--mod-standard-dialog-spacing-title-to-header-content`
+  `--mod-standard-dialog-spacing-title-to-description`
+  `--mod-standard-dialog-header-content-font-size`
+
+  _Renamed Mods_
+  `--mod-dialog-confirm-small-width` > `--mod-standard-dialog-max-width-small`
+  `--mod-dialog-confirm-medium-width` > `--mod-standard-dialog-max-width`
+  `--mod-dialog-confirm-large-width` > `--mod-standard-dialog-max-width-large`
+  `--mod-dialog-confirm-border-radius` > `--mod-standard-dialog-border-radius`
+  `--mod-dialog-confirm-description-text-size` > `--mod-standard-dialog-description-font-size`
+  `--mod-dialog-confirm-description-text-line-height` > `--mod-standard-dialog-description-line-height`
+  `--mod-dialog-confirm-description-text-color` > `--mod-standard-dialog-description-text-color`
+  `--mod-dialog-confirm-description-font-weight` > `--mod-standard-dialog-description-font-weight`
+  `--mod-dialog-heading-font-weight` > `--mod-standard-dialog-heading-font-weight`
+  `--mod-dialog-confirm-title-text-line-height` > `--mod-standard-dialog-heading-line-height`
+  `--mod-dialog-confirm-title-text-color` > `--mod-standard-dialog-heading-text-color`
+  `--mod-dialog-confirm-title-text-size` > `--mod-standard-dialog-heading-font-size`
+  `--mod-dialog-confirm-hero-height` > `--mod-standard-dialog-hero-block-size`
+  `--mod-dialog-min-inline-size` > `--mod-standard-dialog-min-inline-size`
+  `--mod-dialog-confirm-padding-grid` > `--mod-standard-dialog-spacing-grid-padding`
+  `--mod-dialog-confirm-footer-padding-top` > `--mod-standard-dialog-spacing-description-to-footer`
+  `--mod-dialog-confirm-close-button-padding` > `--mod-standard-dialog-spacing-edge-to-close-button`
+  `--mod-dialog-confirm-gap-size` > `--mod-standard-dialog-spacing-footer-to-button-group`
+
+  _Removed Mods_
+  `--mod-dialog-confirm-buttongroup-padding-top`
+  `--mod-dialog-confirm-close-button-size`
+  `--mod-dialog-confirm-description-margin`
+  `--mod-dialog-confirm-description-padding`
+  `--mod-dialog-confirm-divider-block-spacing-end`
+  `--mod-dialog-confirm-divider-block-spacing-start`
+  `--mod-dialog-confirm-divider-height`
+
+  Modal and underlay updates
+
+  - Modal component now uses the updated corner rounding.
+  - Underlay has an updated comment that addresses the overlay-color/overlay-opacity tokens.
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 7.0.1
 
 ### Patch Changes
@@ -136,16 +190,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.6...@spectrum-css/modal@5.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.6...@spectrum-css/modal@5.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -153,8 +204,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.6
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.5...@spectrum-css/modal@4.2.6)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.5...@spectrum-css/modal@4.2.6)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -162,8 +212,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.5
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.4...@spectrum-css/modal@4.2.5)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.4...@spectrum-css/modal@4.2.5)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -171,8 +220,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.4
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.3...@spectrum-css/modal@4.2.4)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.3...@spectrum-css/modal@4.2.4)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -180,8 +228,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.3
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.2...@spectrum-css/modal@4.2.3)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.2...@spectrum-css/modal@4.2.3)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -189,8 +236,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.2
 
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.1...@spectrum-css/modal@4.2.2)
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.1...@spectrum-css/modal@4.2.2)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -198,8 +244,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -207,8 +252,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.2.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.1.0...@spectrum-css/modal@4.2.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.1.0...@spectrum-css/modal@4.2.0)
 
 ### ✨ Features
 
@@ -219,8 +263,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 
 ## 4.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.5...@spectrum-css/modal@4.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.5...@spectrum-css/modal@4.1.0)
 
 ### ✨ Features
 
@@ -230,8 +273,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 
 ## 4.0.5
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.4...@spectrum-css/modal@4.0.5)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.4...@spectrum-css/modal@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -239,8 +281,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 
 ## 4.0.4
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.3...@spectrum-css/modal@4.0.4)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.3...@spectrum-css/modal@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -248,8 +289,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 
 ## 4.0.3
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.1...@spectrum-css/modal@4.0.3)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.1...@spectrum-css/modal@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -257,8 +297,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 
 ## 4.0.2
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.1...@spectrum-css/modal@4.0.2)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.1...@spectrum-css/modal@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -266,8 +305,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 
 ## 4.0.1
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.0...@spectrum-css/modal@4.0.1)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.0...@spectrum-css/modal@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -275,8 +313,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 
 ## 4.0.0
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.1.0...@spectrum-css/modal@4.0.0)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.1.0...@spectrum-css/modal@4.0.0)
 
 ### 🔙 Reverts
 
@@ -284,8 +321,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 
 \*feat(modal)!: diy migration (#2164)([0b83f13](https://github.com/adobe/spectrum-css/commit/0b83f13)), closes[#2164](https://github.com/adobe/spectrum-css/issues/2164)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		migrates Modal to use `@adobe/spectrum-tokens`
@@ -312,8 +348,7 @@ chore: updated css properties
 
 ## 3.1.0
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.49...@spectrum-css/modal@3.1.0)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.49...@spectrum-css/modal@3.1.0)
 
 ### 🐛 Bug fixes
 
@@ -323,8 +358,7 @@ chore: updated css properties
 
 ## 3.0.49
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.48...@spectrum-css/modal@3.0.49)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.48...@spectrum-css/modal@3.0.49)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -332,8 +366,7 @@ chore: updated css properties
 
 ## 3.0.48
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.47...@spectrum-css/modal@3.0.48)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.47...@spectrum-css/modal@3.0.48)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -341,8 +374,7 @@ chore: updated css properties
 
 ## 3.0.47
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.46...@spectrum-css/modal@3.0.47)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.46...@spectrum-css/modal@3.0.47)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -350,8 +382,7 @@ chore: updated css properties
 
 ## 3.0.46
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.45...@spectrum-css/modal@3.0.46)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.45...@spectrum-css/modal@3.0.46)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -359,8 +390,7 @@ chore: updated css properties
 
 ## 3.0.45
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.44...@spectrum-css/modal@3.0.45)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.44...@spectrum-css/modal@3.0.45)
 
 ### 🐛 Bug fixes
 
@@ -370,8 +400,7 @@ chore: updated css properties
 
 ## 3.0.44
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.43...@spectrum-css/modal@3.0.44)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.43...@spectrum-css/modal@3.0.44)
 
 **Note:** Version bump only for package @spectrum-css/modal
 
@@ -379,8 +408,7 @@ chore: updated css properties
 
 ## 3.0.43
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.42...@spectrum-css/modal@3.0.43)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.42...@spectrum-css/modal@3.0.43)
 
 **Note:** Version bump only for package @spectrum-css/modal
 

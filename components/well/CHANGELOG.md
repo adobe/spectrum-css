@@ -1,5 +1,14 @@
 # Change Log
 
+## 5.3.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`2850ef5`](https://github.com/adobe/spectrum-css/commit/2850ef5439d50fd47db81783c861a63ffa42414f) Thanks [@pfulton](https://github.com/pfulton)! - Define undefined custom properties from themes directory.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
 ## 7.0.1
 
 ### Patch Changes
@@ -137,16 +146,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.1.4...@spectrum-css/well@5.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.1.4...@spectrum-css/well@5.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -154,8 +160,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.4
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.1.3...@spectrum-css/well@4.1.4)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.1.3...@spectrum-css/well@4.1.4)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -163,8 +168,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.3
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.1.2...@spectrum-css/well@4.1.3)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.1.2...@spectrum-css/well@4.1.3)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -172,8 +176,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.1.1...@spectrum-css/well@4.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.1.1...@spectrum-css/well@4.1.2)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -181,8 +184,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -190,8 +192,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.10...@spectrum-css/well@4.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.10...@spectrum-css/well@4.1.0)
 
 ### ✨ Features
 
@@ -201,8 +202,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.10
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.9...@spectrum-css/well@4.0.10)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.9...@spectrum-css/well@4.0.10)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -210,8 +210,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.9
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.8...@spectrum-css/well@4.0.9)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.8...@spectrum-css/well@4.0.9)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -219,8 +218,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.8
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.6...@spectrum-css/well@4.0.8)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.6...@spectrum-css/well@4.0.8)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -228,8 +226,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.7
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.6...@spectrum-css/well@4.0.7)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.6...@spectrum-css/well@4.0.7)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -237,8 +234,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.6
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.5...@spectrum-css/well@4.0.6)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.5...@spectrum-css/well@4.0.6)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -246,8 +242,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.5
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.4...@spectrum-css/well@4.0.5)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.4...@spectrum-css/well@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -255,8 +250,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.4
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.3...@spectrum-css/well@4.0.4)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.3...@spectrum-css/well@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -264,8 +258,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.3
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.2...@spectrum-css/well@4.0.3)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.2...@spectrum-css/well@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -273,8 +266,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.2
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.1...@spectrum-css/well@4.0.2)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.1...@spectrum-css/well@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -282,8 +274,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.1
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.0...@spectrum-css/well@4.0.1)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@4.0.0...@spectrum-css/well@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -291,13 +282,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 4.0.0
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.49...@spectrum-css/well@4.0.0)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.49...@spectrum-css/well@4.0.0)
 
 \*feat(well)!: migrate to use spectrum-tokens([b362c23](https://github.com/adobe/spectrum-css/commit/b362c23))
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		migrates Well to use spectrum-tokens
@@ -306,8 +295,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.49
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.48...@spectrum-css/well@3.0.49)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.48...@spectrum-css/well@3.0.49)
 
 ### 🔙 Reverts
 
@@ -317,8 +305,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.48
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.47...@spectrum-css/well@3.0.48)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.47...@spectrum-css/well@3.0.48)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -326,8 +313,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.47
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.46...@spectrum-css/well@3.0.47)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.46...@spectrum-css/well@3.0.47)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -335,8 +321,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.46
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.45...@spectrum-css/well@3.0.46)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.45...@spectrum-css/well@3.0.46)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -344,8 +329,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.45
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.44...@spectrum-css/well@3.0.45)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.44...@spectrum-css/well@3.0.45)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -353,8 +337,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.44
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.43...@spectrum-css/well@3.0.44)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.43...@spectrum-css/well@3.0.44)
 
 ### 🐛 Bug fixes
 
@@ -364,8 +347,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.43
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.42...@spectrum-css/well@3.0.43)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.42...@spectrum-css/well@3.0.43)
 
 **Note:** Version bump only for package @spectrum-css/well
 
@@ -373,8 +355,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.42
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.41...@spectrum-css/well@3.0.42)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.41...@spectrum-css/well@3.0.42)
 
 **Note:** Version bump only for package @spectrum-css/well
 

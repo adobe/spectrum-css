@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /*
  * Radio:
  *  ::before is to style the input circle (selection indicator)
@@ -20,6 +18,8 @@
  */
 
 .spectrum-Radio {
+	--spectrum-radio-button-background-color: var(--spectrum-gray-50);
+
 	/* state colors for all themes */
 	--spectrum-radio-neutral-content-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-radio-neutral-content-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -41,8 +41,11 @@
 	--spectrum-radio-emphasized-accent-color-down: var(--spectrum-accent-color-1100);
 	--spectrum-radio-emphasized-accent-color-focus: var(--spectrum-accent-color-1000);
 
-	/* selection indicator all themes */
-	--spectrum-radio-border-width: var(--spectrum-border-width-200);
+	/* unchecked selection indicator */
+	--spectrum-radio-button-border-color-default: var(--spectrum-gray-600);
+	--spectrum-radio-button-border-color-hover: var(--spectrum-gray-700);
+	--spectrum-radio-button-border-color-down: var(--spectrum-gray-800);
+	--spectrum-radio-button-border-color-focus: var(--spectrum-gray-700);
 
 	/* checked selection indicator */
 	--spectrum-radio-button-checked-border-color-default: var(--spectrum-neutral-background-color-selected-default);
@@ -55,16 +58,6 @@
 	/* animation all themes */
 	--spectrum-radio-animation-duration: var(--spectrum-animation-duration-100);
 
-	/* CJK language support all themes */
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		--spectrum-radio-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	}
-}
-
-.spectrum-Radio,
-.spectrum-Radio--sizeM {
 	--spectrum-radio-height: var(--spectrum-component-height-100);
 	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
 
@@ -74,6 +67,13 @@
 	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-medium);
 
 	--spectrum-radio-font-size: var(--spectrum-font-size-100);
+
+	/* CJK language support all themes */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-radio-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	}
 }
 
 .spectrum-Radio--sizeS {
