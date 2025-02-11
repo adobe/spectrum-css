@@ -11,9 +11,21 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Textfield {
+	--spectrum-textfield-background-color: var(--spectrum-gray-25);
+	--spectrum-textfield-background-color-disabled: var(--spectrum-gray-25);
+
+	--spectrum-textfield-border-color: var(--spectrum-gray-500);
+	--spectrum-textfield-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-textfield-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-textfield-border-color-focus-hover: var(--spectrum-gray-900);
+	--spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
+	--spectrum-textfield-border-color-disabled: var(--spectrum-gray-300);
+
+	--spectrum-textfield-border-width: var(--spectrum-border-width-100);
+
+	--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-component-top-to-workflow-icon-100);
+
 	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
 	/* disallow mod for max compatibility */
 	--spectrum-textfield-input-line-height: var(--spectrum-textfield-height);
@@ -109,10 +121,16 @@
 
 	/* Text Area / Multiline size medium */
 	--spectrum-text-area-min-block-size-quiet: var(--spectrum-component-height-100);
+
+	&.spectrum-Textfield--quiet {
+		--spectrum-textfield-border-color-disabled: var(--spectrum-gray-300);
+	}
 }
 
 /********* Text field t-shirt sizes *********/
 .spectrum-Textfield--sizeS {
+	--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-component-top-to-workflow-icon-75);
+
 	--spectrum-textfield-height: var(--spectrum-component-height-75);
 	--spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-small);
 	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-100);
@@ -135,6 +153,8 @@
 }
 
 .spectrum-Textfield--sizeL {
+	--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-component-top-to-workflow-icon-200);
+
 	--spectrum-textfield-height: var(--spectrum-component-height-200);
 	--spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-large);
 	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
@@ -157,6 +177,8 @@
 }
 
 .spectrum-Textfield--sizeXL {
+	--spectrum-textfield-icon-spacing-block-invalid: var(--spectrum-component-top-to-workflow-icon-300);
+
 	--spectrum-textfield-height: var(--spectrum-component-height-300);
 	--spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
 	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);

@@ -7,7 +7,6 @@
     ".spectrum-ProgressBar--sideLabel .spectrum-ProgressBar-percentage",
     ".spectrum-ProgressBar--sideLabel .spectrum-ProgressBar-track",
     ".spectrum-ProgressBar--sizeL",
-    ".spectrum-ProgressBar--sizeM",
     ".spectrum-ProgressBar--sizeS",
     ".spectrum-ProgressBar--sizeXL",
     ".spectrum-ProgressBar-fill",
@@ -20,9 +19,7 @@
     ".spectrum-ProgressBar:lang(ja)",
     ".spectrum-ProgressBar:lang(ko)",
     ".spectrum-ProgressBar:lang(zh)",
-    "0%",
-    "[dir=\"rtl\"] .spectrum-ProgressBar",
-    "to"
+    "[dir=\"rtl\"] .spectrum-ProgressBar"
   ],
   "modifiers": [
     "--mod-progressbar-animation-duration-indeterminate",
@@ -101,10 +98,6 @@
     "--spectrum-spacing-75",
     "--spectrum-transparent-white-400",
     "--spectrum-white"
-  ],
-  "system-theme": [
-    "--system-progress-bar-track-color",
-    "--system-progress-bar-track-color-white"
   ],
   "passthroughs": ["--mod-fieldlabel-font-size"],
   "high-contrast": [
