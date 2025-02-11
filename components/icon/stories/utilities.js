@@ -1,5 +1,5 @@
 // Import arrays containing data with all icon names in both icon sets.
-import iconOpts from "@adobe/spectrum-css-workflow-icons/dist/manifest.json";
+import workflowIconOpts from "@adobe/spectrum-css-workflow-icons/dist/manifest.json";
 import uiIconOpts from "@spectrum-css/ui-icons/dist/icons.json";
 
 /**
@@ -64,19 +64,22 @@ export const getSpriteSheetName = (iconName, setName) => {
 };
 
 /**
- * Array with all the SVG workflow icon names, cleaned to remove file extension and
+ * Sorted array with all the SVG workflow icon names, cleaned to remove file extension and
  * unnecessary prefix and postfix text. These might look something like "3DAsset".
+ *
+ * Excludes 22x20 icons, which currently do not match workflow icon sizing.
  */
-export const workflowIconsCleaned = (iconOpts?.svg ?? []).map((iconName) =>
-	cleanWorkflowIconName(iconName)
-).sort(alphaNumericSort);
+export const workflowIconsCleaned = (workflowIconOpts?.svg ?? [])
+	.filter(iconName => !iconName.includes("22x20"))
+	.map(iconName => cleanWorkflowIconName(iconName))
+	.sort(alphaNumericSort);
 
 /**
- * Array with all UI icon names, without the file extension.
+ * Sorted array with all UI icon names, without the file extension.
  */
-export const uiIcons = (uiIconOpts || []).map((icon) =>
-	icon.replace(/\.svg$/, "")
-).sort(alphaNumericSort);
+export const uiIcons = (uiIconOpts || [])
+	.map(iconName => iconName.replace(/\.svg$/, ""))
+	.sort(alphaNumericSort);
 
 /**
  * @description A custom alpha-numeric sort that helps keep the order of the sizing numbers at the end of the string.
