@@ -1,19 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-UIIcon">
-  <symbol id="spectrum-css-icon-Add50" viewBox="0 0 8 8">
-    <path fill="var(--iconPrimary, #222)" d="M6.625 3.078H4.922V1.375a.922.922 0 0 0-1.844 0v1.703H1.375a.922.922 0 0 0 0 1.844h1.703v1.703a.922.922 0 0 0 1.844 0V4.922h1.703a.922.922 0 0 0 0-1.844"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-Add75" viewBox="0 0 8 8">
-    <path fill="var(--iconPrimary, #222)" d="M7 3.04H4.96V1a.96.96 0 1 0-1.92 0v2.04H1a.96.96 0 1 0 0 1.92h2.04V7a.96.96 0 1 0 1.92 0V4.96H7a.96.96 0 1 0 0-1.92"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-Add100" viewBox="0 0 10 10">
-    <path fill="var(--iconPrimary, #222)" d="M8.5 4H6V1.5a1 1 0 1 0-2 0V4H1.5a1 1 0 1 0 0 2H4v2.5a1 1 0 1 0 2 0V6h2.5a1 1 0 1 0 0-2"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-Add200" viewBox="0 0 12 12">
-    <path fill="var(--iconPrimary, #222)" d="M10.021 4.959h-2.98v-2.98a1.04 1.04 0 1 0-2.082 0v2.98h-2.98a1.04 1.04 0 1 0 0 2.082h2.98v2.98a1.04 1.04 0 1 0 2.082 0v-2.98h2.98a1.04 1.04 0 1 0 0-2.082"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-Add300" viewBox="0 0 12 12">
-    <path fill="var(--iconPrimary, #222)" d="M10.61 4.915H7.085V1.39a1.084 1.084 0 1 0-2.17 0v3.525H1.39a1.084 1.084 0 1 0 0 2.17h3.525v3.525a1.084 1.084 0 1 0 2.17 0V7.085h3.525a1.084 1.084 0 1 0 0-2.17"/>
-  </symbol>
   <symbol id="spectrum-css-icon-Arrow100" viewBox="0 0 10 10">
     <path fill="var(--iconPrimary, #222)" d="M9.95 4.997c0-.052-.02-.102-.03-.153-.01-.058-.013-.118-.035-.173l-.003-.009a.8.8 0 0 0-.136-.203c-.018-.023-.026-.05-.047-.072l-.005-.005V4.38l-3.07-3.12a.875.875 0 1 0-1.248 1.227l1.61 1.637H.926a.875.875 0 1 0 0 1.75h6.062L5.376 7.512a.875.875 0 1 0 1.248 1.226l3.07-3.119.005-.006c.021-.021.029-.049.047-.072a.8.8 0 0 0 .136-.203l.003-.009c.022-.055.024-.115.035-.173.01-.051.03-.1.03-.153z"/>
   </symbol>
@@ -112,52 +97,5 @@
   </symbol>
   <symbol id="spectrum-css-icon-Dash300" viewBox="0 0 12 12">
     <path fill="var(--iconPrimary, #222)" d="M10.61 7.085H1.39a1.084 1.084 0 1 1 0-2.17h9.22a1.084 1.084 0 1 1 0 2.17"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-DragHandle75" viewBox="0 0 10 10">
-    <circle cx="3.2" cy="8.6" r=".9" fill="var(--iconPrimary, #222)"/>
-    <circle cx="3.2" cy="5" r=".9" fill="var(--iconPrimary, #222)"/>
-    <circle cx="3.2" cy="1.4" r=".9" fill="var(--iconPrimary, #222)"/>
-    <circle cx="6.8" cy="8.6" r=".9" fill="var(--iconPrimary, #222)"/>
-    <circle cx="6.8" cy="5" r=".9" fill="var(--iconPrimary, #222)"/>
-    <circle cx="6.8" cy="1.4" r=".9" fill="var(--iconPrimary, #222)"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-DragHandle100" viewBox="0 0 10 10">
-    <circle cx="3" cy="9" r="1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="3" cy="5" r="1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="3" cy="1" r="1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="7" cy="9" r="1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="7" cy="5" r="1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="7" cy="1" r="1" fill="var(--iconPrimary, #222)"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-DragHandle200" viewBox="0 0 12 12">
-    <circle cx="3.8" cy="10.4" r="1.1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="3.8" cy="6" r="1.1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="3.8" cy="1.6" r="1.1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="8.2" cy="10.4" r="1.1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="8.2" cy="6" r="1.1" fill="var(--iconPrimary, #222)"/>
-    <circle cx="8.2" cy="1.6" r="1.1" fill="var(--iconPrimary, #222)"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-DragHandle300" viewBox="0 0 14 14">
-    <circle cx="4.6" cy="11.8" r="1.2" fill="var(--iconPrimary, #222)"/>
-    <circle cx="4.6" cy="7" r="1.2" fill="var(--iconPrimary, #222)"/>
-    <circle cx="4.6" cy="2.2" r="1.2" fill="var(--iconPrimary, #222)"/>
-    <circle cx="9.4" cy="11.8" r="1.2" fill="var(--iconPrimary, #222)"/>
-    <circle cx="9.4" cy="7" r="1.2" fill="var(--iconPrimary, #222)"/>
-    <circle cx="9.4" cy="2.2" r="1.2" fill="var(--iconPrimary, #222)"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-Gripper100" viewBox="0 0 24 4">
-    <path fill="var(--iconPrimary, #222)" d="M22 4H2a2 2 0 0 1 0-4h20a2 2 0 0 1 0 4"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-LinkOut100" viewBox="0 0 10 10">
-    <path fill="var(--iconPrimary, #222)" d="M8.125 1H3.741a.875.875 0 1 0 0 1.75h2.27l-4.88 4.88a.88.88 0 0 0 0 1.24.873.873 0 0 0 1.238 0L7.25 3.987v2.27a.875.875 0 1 0 1.75 0V1.876A.875.875 0 0 0 8.125 1"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-LinkOut200" viewBox="0 0 12 12">
-    <path fill="var(--iconPrimary, #222)" d="M10.089 1h-5.51a.911.911 0 0 0 0 1.822h3.31L1.355 9.355a.91.91 0 1 0 1.29 1.29L9.178 4.11v3.31a.911.911 0 0 0 1.822 0V1.91a.91.91 0 0 0-.911-.91"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-LinkOut300" viewBox="0 0 14 14">
-    <path fill="var(--iconPrimary, #222)" d="M12.05 1H5.164a.949.949 0 1 0 0 1.898h4.595l-8.18 8.18a.95.95 0 0 0 1.344 1.344l8.18-8.18v4.595a.949.949 0 1 0 1.898 0V1.949A.95.95 0 0 0 12.05 1"/>
-  </symbol>
-  <symbol id="spectrum-css-icon-LinkOut400" viewBox="0 0 16 16">
-    <path fill="var(--iconPrimary, #222)" d="M14.01 1h-8a.99.99 0 0 0 0 1.979h5.613L1.551 13.05a.988.988 0 1 0 1.398 1.398L13.021 4.377v5.612a.99.99 0 0 0 1.979 0v-8A.99.99 0 0 0 14.01 1"/>
   </symbol>
 </svg>

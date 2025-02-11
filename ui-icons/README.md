@@ -42,11 +42,6 @@ Iconography in v1 inclued 2 sizes, `medium` and `large`, as well as a single SVG
 
 | Icon name         | Migration notes |
 | ----------------- | --------------- |
-| Add50             | **New**         |
-| Add75             | **New**         |
-| Add100            | **New**         |
-| Add200            | **New**         |
-| Add300            | **New**         |
 | Arrow75           | Deprecated      |
 | Arrow100          | -               |
 | Arrow200          | Deprecated      |
@@ -93,15 +88,6 @@ Iconography in v1 inclued 2 sizes, `medium` and `large`, as well as a single SVG
 | Dash400           | Deprecated      |
 | Dash500           | Deprecated      |
 | Dash600           | Deprecated      |
-| DragHandle75      | **New**         |
-| DragHandle100     | **New**         |
-| DragHandle200     | **New**         |
-| DragHandle300     | **New**         |
-| Gripper100        | **New**         |
 | SingleGripper     | Deprecated      |
 | DoubleGripper     | Deprecated      |
 | TripleGripper     | Deprecated      |
-| LinkOut100        | **New**         |
-| LinkOut200        | **New**         |
-| LinkOut300        | **New**         |
-| LinkOut400        | **New**         |
