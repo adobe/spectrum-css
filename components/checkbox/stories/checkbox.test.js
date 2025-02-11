@@ -14,6 +14,14 @@ export const CheckboxGroup = Variants({
 			isEmphasized: true,
 		},
 		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+		{
+			testHeading: "Hovered",
+			isHovered: true,
+		},
+		{
 			testHeading: "Truncation",
 			withStates: false,
 			label: "Checkbox with an extraordinarily long label. Please don't do this but if you did, it should wrap text when it gets longer than the container that houses the checkbox with the unacceptably long label",
@@ -78,5 +86,5 @@ export const CheckboxGroup = Variants({
 			isReadOnly: true,
 			isChecked: true,
 		},
-	]
+	],
 });
