@@ -3,7 +3,7 @@ import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ColorWheelGroup } from "./colorwheel.test.js";
-import { Template } from "./template.js";
+import { SizeTemplate, Template } from "./template.js";
 
 /**
  * The color wheel component lets users visually change an individual channel of a color on a circular track.
@@ -23,7 +23,16 @@ export default {
 			if: { arg: "isDisabled", truthy: false },
 		},
 		isWithColorArea: {
-			name: "With Color Area",
+			name: "With color area",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isWithColorLoupe: {
+			name: "With color loupe",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -44,6 +53,7 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		isWithColorArea: false,
+		isWithColorLoupe: true,
 		selectedColor: "rgba(255, 0, 0, 50%)",
 	},
 	parameters: {
@@ -58,6 +68,39 @@ export default {
 
 export const Default = ColorWheelGroup.bind({});
 Default.args = {};
+
+/**
+ * The color wheel has twp default sizes: `192px` (medium) and `240px` (large).
+ *
+ * The following mods have been applied to the `240px` variant.
+ * ```
+ * "--mod-colorwheel-inline-size": "240px",
+ * "--mod-colorwheel-block-size": "240px",
+ * "--mod-colorwheel-track-width": "30px",
+ * "--mod-colorwheel-path": '"M 119 119 m -119 0 a 119 119 0 1 0 238 0 a 119 119 0 1 0 -238 0.2 M 119 119 m -91 0 a 91 91 0 1 0 182 0 a 91 91 0 1 0 -182 0"',
+ * ```
+ */
+export const DefaultSizing = SizeTemplate.bind({});
+
+/**
+ * The color wheel may be displayed at custom sizes. Below the wheel is displayed at 300px with the following mod values.
+ * ```
+ * "--mod-colorwheel-inline-size": "300px",
+ * "--mod-colorwheel-block-size": "300px",
+ * "--mod-colorwheel-track-width": "30px",
+ * "--mod-colorwheel-path": '"M 149 149 m -149 0 a 149 149 0 1 0 298 0 a 149 149 0 1 0 -298 0 M 149 149 m -121 0 a 121 121 0 1 0 242 0 a 121 121 0 1 0 -242 0"',
+ * ```
+ */
+export const CustomSizing = Template.bind({});
+CustomSizing.args = {
+	customStyles: {
+		"--mod-colorwheel-inline-size": "300px",
+		"--mod-colorwheel-block-size": "300px",
+		"--mod-colorwheel-track-width": "30px",
+		"--mod-colorwheel-path": "\"M 149 149 m -149 0 a 149 149 0 1 0 298 0 a 149 149 0 1 0 -298 0 M 149 149 m -121 0 a 121 121 0 1 0 242 0 a 121 121 0 1 0 -242 0\"",
+	}
+};
+
 
 // ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
@@ -74,9 +117,7 @@ Disabled.parameters = {
  *
  * To display a color area inside of the color wheel, add a color area component to `.spectrum-ColorWheel-colorarea-container` element and define the custom width and height styles with `--mod-colorarea-width` and `--mod-colorarea-height` variables.
  *
- * The `.spectrum-colorwheel-colorarea-container-size` is hard coded to position the color area within the color wheel using `.spectrum-color-wheel-color-area-margin`. Implementations using JS can calculate the container size with `Math.sqrt(2 * R * R)`, where `R` is the inner radius as calculated for the clip paths.
- *
- * `.spectrum-colorwheel-path`, `.spectrum-colorwheel-path-borders` and `.spectrum-colorwheel-colorarea-container` are hard coded in CSS, and include token values as custom CSS variables so they can be accessed with JS. To use and calculate these values, implementations should consider:
+ * `--spectrum-colorwheel-path` and `--spectrum-colorwheel-colorarea-container-size` are hard coded in CSS, and include token values as custom CSS variables so they can be accessed with JS. To use and calculate these values, implementations should consider:
  * ```
  * const wheel = document.querySelector(".spectrum-ColorWheel-wheel")
  * getComputedStyle(wheel).getPropertyValue('--track-width')
