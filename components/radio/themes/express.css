@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-/* @combine .spectrum--express */
+/* @combine .spectrum.spectrum--express */
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Radio {
 		/* selection indicator */
 		--spectrum-radio-button-border-color-default: var(--spectrum-gray-800);

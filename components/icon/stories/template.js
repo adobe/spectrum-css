@@ -111,6 +111,7 @@ export const Template = ({
 	uiIconSizes,
 } = {}, context = {}) => {
 	const { globals = {}, loaded = {} } = context;
+
 	const scale = globals.scale ?? "medium";
 
 	if (!workflowIcons || !uiIcons || !uiIconSizes) {

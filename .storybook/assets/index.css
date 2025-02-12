@@ -26,9 +26,6 @@ body {
 	font-family: var(--spectrum-font-family);
 	font-size: var(--spectrum-font-size);
 	font-style: var(--spectrum-font-style);
-
-	color: var(--spectrum-neutral-content-color-default);
-	background-color: var(--spectrum-background-layer-2-color);
 }
 
 body:lang(ar) {
@@ -72,15 +69,9 @@ div.sb-bar > div > div > span:first-child {
 	display: none;
 }
 
-div.sb-bar > div > div > div > button {
-	background-color: white !important;
-}
-
 .docblock-argstable-body tr td {
 	letter-spacing: unset;
 	font-size: 11px;
-	color: rgb(34, 34, 34);
-	background-color: rgb(255, 255, 255);
 }
 
 .docblock-argstable-body td > span:has(select),
@@ -128,5 +119,4 @@ select:focus,
 	border-color: rgb(2, 101, 220) !important;
 	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
 }
-
 /* stylelint-enable selector-class-pattern */

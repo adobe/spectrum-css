@@ -1,5 +1,54 @@
 # Change Log
 
+## 12.0.1
+
+### Patch Changes
+
+- Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
+  - @spectrum-css/table@8.0.1
+
+## 12.0.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+
+  This update removes the previously deprecated component documentation for **cyclebutton**, **quickaction**, **searchwithin**, and **splitbutton**.
+
+  To support the Spectrum 2 (S2) Foundations release, Storybook has been updated to toggle token packages to connect the following labels with their appropriate data sources:
+
+  - **Spectrum 1**: Flagged as the "legacy" context, this version is no longer the default for the component contexts. When selected, Storybook will load the `@spectrum-css/tokens` at release `v14.6.0` and attach the `.spectrum--legacy` class to the container.
+  - **Spectrum 2**: The new default context, this version represents the "S2 Foundations" release which serves as a bridge between S1 and S2. Components in this context are not fully S2 and will not exactly match specifications but they do reflect a significant move toward the S2 designs. For full details, see the token and component-level changelogs.
+  - **Express**: This now deprecated context is still rendered in Storybook by leveraging the `@spectrum-css/tokens` at release `v14.6.0`. Please note that Express and S1 will be removed in the next major release.
+
+  This release also includes:
+
+  - New migration documentation for S1 -> S2 updates
+  - Fix for the duplicate line numbers in the code preview plugin
+  - Updated styles to integrate Spectrum styling into the Storybook UI
+
+### Patch Changes
+
+- Updated dependencies [[`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6), [`3d08cea`](https://github.com/adobe/spectrum-css/commit/3d08cea0f590c8c2de7252677a6b81b8cc206b9a), [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6)]:
+  - @spectrum-css/tokens@16.0.0
+  - @spectrum-css/table@8.0.0
+
+## 11.0.2
+
+### Patch Changes
+
+- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! - Minor storybook updates and fixes including some whitespace changes.
+
+  A bug was fixed with the HTML code preview that was displaying duplicate line numbers.
+
+  Some key metadata was incorporated into the preview head file for better contextual information when published.
+
+  The remark-gfm dependency was added to support tables in the \*.mdx files for Storybook.
+
+- Updated dependencies [[`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39), [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39)]:
+  - @spectrum-css/tokens@15.2.0
+  - @spectrum-css/table@7.0.1
+
 ## 11.0.1
 
 ### Patch Changes

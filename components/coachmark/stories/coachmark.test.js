@@ -28,7 +28,6 @@ export const CoachMarkGroup = Variants({
 			testHeading: "Default",
 			hasActionMenu: false,
 			hasPagination: false,
-			hasImage: false,
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50, white)",
 			},
@@ -45,18 +44,31 @@ export const CoachMarkGroup = Variants({
 		{
 			testHeading: "With action menu",
 			hasPagination: false,
-			hasActionMenu: true,
-			hasImage: false,
 			isOpen: true,
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50, white)"
 			},
 		},
 		{
+			testHeading: "With action menu + media",
+			hasPagination: false,
+			isOpen: true,
+			hasImage: true,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50, white)"
+			},
+		},
+		{
 			testHeading: "With pagination",
-			hasPagination: true,
 			hasActionMenu: false,
-			hasImage: false,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50, white)"
+			},
+		},
+		{
+			testHeading: "With pagination + media",
+			hasActionMenu: false,
+			hasImage: true,
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50, white)"
 			},

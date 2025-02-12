@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SearchGroup } from "./search.test.js";
 import { SearchOptions, Template } from "./template.js";
@@ -56,6 +56,10 @@ export default {
 				"click .spectrum-Search-icon",
 			],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13670-229",
+		},
 		packageJson,
 		metadata,
 	},
@@ -70,8 +74,10 @@ export const Disabled = SearchOptions.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
-
 Disabled.tags = ["!dev"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * A search field can have [help text](?path=/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input. The description communicates a hint or helpful information, such as a search’s scope.

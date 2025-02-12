@@ -1,0 +1,19 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [".spectrum-OpacityCheckerboard"],
+  "modifiers": [
+    "--mod-opacity-checkerboard-dark",
+    "--mod-opacity-checkerboard-light",
+    "--mod-opacity-checkerboard-position",
+    "--mod-opacity-checkerboard-size"
+  ],
+  "component": [
+    "--spectrum-opacity-checkerboard-square-dark",
+    "--spectrum-opacity-checkerboard-square-light",
+    "--spectrum-opacity-checkerboard-square-size"
+  ],
+  "global": [],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": []
+}

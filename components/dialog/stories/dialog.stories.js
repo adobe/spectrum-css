@@ -1,8 +1,8 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isOpen } from "@spectrum-css/preview/types";
+import { isOpen, size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
 import { Template } from "./template.js";
@@ -36,16 +36,7 @@ export default {
 			control: "boolean",
 		},
 		footer: { table: { disable: true } },
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["small", "medium", "large"],
-			control: "select",
-		},
+		size: size(["s", "m", "l"]),
 		layout: {
 			name: "Layout",
 			type: { name: "string" },
@@ -106,7 +97,7 @@ export default {
 		hasDivider: true,
 		isOpen: true,
 		showModal: true,
-		size: "medium",
+		size: "m",
 		layout: "default",
 	},
 	parameters: {
@@ -119,6 +110,10 @@ export default {
 				// TODO: restore `inline: false,`
 				height: "500px",
 			},
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=839-1128",
 		},
 		packageJson,
 		metadata,
@@ -155,7 +150,7 @@ DefaultSmall.parameters = {
 };
 DefaultSmall.args = {
 	...Default.args,
-	size: "small",
+	size: "s",
 };
 
 export const DefaultLarge = Template.bind({});
@@ -166,7 +161,7 @@ DefaultLarge.parameters = {
 };
 DefaultLarge.args = {
 	...Default.args,
-	size: "large",
+	size: "l",
 };
 
 /**
@@ -237,6 +232,10 @@ WithScroll.parameters = {
 export const Fullscreen = DialogFullscreen.bind({});
 Fullscreen.parameters = {
 	chromatic: { disableSnapshot: true },
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=61935-5399",
+	},
 };
 Fullscreen.args = {
 	...Default.args,
@@ -249,6 +248,10 @@ Fullscreen.args = {
 export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=61935-5399",
+	},
 };
 FullscreenTakeover.args = {
 	...Default.args,

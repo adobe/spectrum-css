@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ProgressCircleGroup } from "./progresscircle.test.js";
 import { Template } from "./template.js";
@@ -27,6 +27,10 @@ export default {
 		staticColor: undefined,
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13061-181",
+		},
 		packageJson,
 		metadata,
 	},

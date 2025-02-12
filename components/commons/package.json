@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/commons",
-	"version": "10.1.0",
+	"version": "11.0.0",
 	"description": "Common mixins for Spectrum CSS components",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -13,13 +13,32 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"exports": {
+		".": "./index.css",
+		"./*.css": "./*.css",
+		"./CHANGELOG.md": "./CHANGELOG.md",
+		"./README.md": "./README.md",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
+	},
 	"main": "index.css",
+	"files": [
+		"*.md",
+		"package.json"
+	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=14 || >=15"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"
 	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
+	],
 	"publishConfig": {
 		"access": "public"
 	}

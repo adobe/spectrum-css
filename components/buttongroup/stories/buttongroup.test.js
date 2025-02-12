@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Sizes, Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
 export const ButtonGroup = Variants({
@@ -6,10 +6,6 @@ export const ButtonGroup = Variants({
 	testData: [
 		{
 			testHeading: "Default",
-		},
-		{
-			testHeading: "Vertical",
-			vertical: true,
 		},
 		{
 			testHeading: "Disabled",
@@ -27,6 +23,20 @@ export const ButtonGroup = Variants({
 					isDisabled: true,
 				},
 			]
-		}
+		},
+		{
+			testHeading: "Vertical",
+			vertical: true,
+		},
+		{
+			Template: (args, context) => Sizes({
+				Template,
+				withHeading: false,
+				withWrapperBorder: false,
+				...args
+			}, context),
+			testHeading: "Vertical sizing",
+			vertical: true,
+		},
 	],
 });

@@ -1,0 +1,51 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-ColorLoupe",
+    ".spectrum-ColorLoupe-checkerboard-background",
+    ".spectrum-ColorLoupe-checkerboard-fill",
+    ".spectrum-ColorLoupe-checkerboard-pattern",
+    ".spectrum-ColorLoupe-inner-border",
+    ".spectrum-ColorLoupe-outer-border",
+    ".spectrum-ColorLoupe.is-disabled",
+    ".spectrum-ColorLoupe.is-open",
+    ".spectrum-ColorLoupe:dir(rtl)",
+    "[dir=\"rtl\"] .spectrum-ColorLoupe"
+  ],
+  "modifiers": [
+    "--mod-colorloupe-animation-distance",
+    "--mod-colorloupe-drop-shadow-blur",
+    "--mod-colorloupe-drop-shadow-color",
+    "--mod-colorloupe-drop-shadow-x",
+    "--mod-colorloupe-drop-shadow-y",
+    "--mod-colorloupe-inner-border-color",
+    "--mod-colorloupe-inner-border-width",
+    "--mod-colorloupe-offset",
+    "--mod-colorloupe-outer-border-color",
+    "--mod-colorloupe-outer-border-width"
+  ],
+  "component": [
+    "--spectrum-color-loupe-bottom-to-color-handle",
+    "--spectrum-color-loupe-drop-shadow-blur",
+    "--spectrum-color-loupe-drop-shadow-color",
+    "--spectrum-color-loupe-drop-shadow-y",
+    "--spectrum-color-loupe-height",
+    "--spectrum-color-loupe-inner-border",
+    "--spectrum-color-loupe-inner-border-width",
+    "--spectrum-color-loupe-outer-border",
+    "--spectrum-color-loupe-outer-border-width",
+    "--spectrum-color-loupe-width",
+    "--spectrum-colorloupe-checkerboard-fill"
+  ],
+  "global": [
+    "--spectrum-color-handle-outer-border-width",
+    "--spectrum-color-handle-size",
+    "--spectrum-drop-shadow-x",
+    "--spectrum-opacity-checkerboard-square-dark",
+    "--spectrum-opacity-checkerboard-square-light",
+    "--spectrum-picked-color"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": ["--highcontrast-colorloupe-outer-border-color"]
+}

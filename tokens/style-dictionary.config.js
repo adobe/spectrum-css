@@ -17,6 +17,7 @@ const generateFileConfig = require("./utilities/style-dictionary.utils.js");
 
 const StyleDictionary = require("style-dictionary");
 const CSSSetsFormatter = require("style-dictionary-sets").CSSSetsFormatter;
+const JsonSetsFormatter = require("./utilities/data-json-formatter.js");
 const NameKebabTransfom = require("style-dictionary-sets").NameKebabTransfom;
 const AttributeSetsTransform =
 	require("style-dictionary-sets").AttributeSetsTransform;
@@ -27,6 +28,7 @@ StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
 StyleDictionary.registerFormat(CSSSetsFormatter);
+StyleDictionary.registerFormat(JsonSetsFormatter);
 
 /**
  * @note This references the package.json because we want the root folder and
@@ -35,7 +37,6 @@ StyleDictionary.registerFormat(CSSSetsFormatter);
  */
 const tokensPath = require.resolve("@adobe/spectrum-tokens/package.json");
 const tokensDir = path.dirname(tokensPath);
-const setNames = ["desktop", "mobile", "light", "dark", "darkest"];
 
 module.exports = {
 	source: [`${tokensDir}/src/*.json`],
@@ -50,22 +51,36 @@ module.exports = {
 			prefix: "spectrum",
 			files: [
 				generateFileConfig(),
-				...["spectrum", "express"].map((subSystemName) =>
-					generateFileConfig({ subSystemName })
+				...["desktop", "mobile", "light", "dark"].map((context) =>
+					generateFileConfig({ setName: context }),
 				),
-				...setNames.map((context) => generateFileConfig({ setName: context })),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "spectrum",
-					})
-				),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "express",
-					})
-				),
+			],
+		},
+		JSON: {
+			buildPath: "dist/json/",
+			transforms: [
+				AttributeSetsTransform.name,
+				NameKebabTransfom.name,
+				CSSOpenTypeTransform.name,
+			],
+			prefix: "spectrum",
+			files: [
+				{
+					format: "json/sets",
+					destination: "tokens.json",
+					filter: (token) => {
+						// Fetch the sets for this token
+						const sets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+
+						if (sets.includes("wireframe")) return false;
+
+						return true;
+					},
+					options: {
+						showFileHeader: false,
+						outputReferences: true,
+					},
+				},
 			],
 		},
 	},

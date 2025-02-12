@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TagGroups } from "./taggroup.test.js";
 import { Template } from "./template.js";
@@ -54,6 +54,10 @@ export default {
 			handles: [
 				...(TagStories.parameters.actions.handles ?? [])
 			],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=45924-645",
 		},
 		packageJson,
 		metadata,

@@ -1,4 +1,6 @@
 import { styled } from "@storybook/theming";
+import React from "react";
+import styles from "@spectrum-css/bundle/dist/index.module.css";
 
 export const Container = styled.section`
     color: var(--spectrum-neutral-content-color-default);
@@ -8,7 +10,7 @@ export const Container = styled.section`
     padding-block: 60px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 60px;
+    gap: ${props => props.gap ?? "60px"};
     border-radius: 16px;
 `;
 
@@ -91,7 +93,40 @@ export const Summary = styled.summary`
 	}
 `;
 
-export const Table = styled.table`
-	--mod-table-cursor-row-default: auto;
-	padding-block: 10px;
-`;
+export const Table = ({ headers = [], rows = [], size = "l", compact = false, spacious = false, ...props }) => {
+	return (
+		<table
+			className={[
+				"sb-unstyled",
+				styles._spectrum_table,
+				styles[`_spectrum_table__size${size}`],
+				compact ? styles._spectrum_table__compact : null,
+				spacious ? styles._spectrum_table__spacious : null
+			].filter(Boolean).join(" ")}
+			{...props}
+		>
+			{headers.length > 0 ? (
+				<thead className={styles._spectrum_table_head}>
+					<tr>
+						{headers.map((heading, idx) => (
+							<th key={idx} className={styles._spectrum_table_headcell}>
+								{heading}
+							</th>
+						))}
+					</tr>
+				</thead>
+			) : null}
+			<tbody className={styles._spectrum_table_body}>
+				{rows.map((columns, idx) => (
+					<tr key={idx} className={styles._spectrum_table_row}>
+						{columns.map((col, i) => (
+							<td key={i} className={styles._spectrum_table_cell}>
+								{col}
+							</td>
+						))}
+					</tr>
+				))}
+			</tbody>
+		</table>
+	);
+};

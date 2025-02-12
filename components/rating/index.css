@@ -11,8 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum.css";
-@import "./themes/express.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Rating {
 	/* Icon */
@@ -27,7 +26,6 @@
 
 	/* Spacing (top/bottom edge to icon) */
 	--spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
 
 	/* Indicator height */
 	--spectrum-rating-indicator-height: var(--spectrum-border-width-200);
@@ -42,9 +40,20 @@
 	/* Disabled */
 	--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
-}
 
-.spectrum-Rating {
+	position: relative;
+	display: inline-flex;
+	flex: 0 0 auto;
+
+	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
+
+	inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
+	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+
+	padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
+
+	cursor: pointer;
+
 	&.is-focused {
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
 
@@ -77,31 +86,8 @@
 			/* Match the color of the star */
 			background: currentColor;
 		}
-	}
-}
 
-.spectrum-Rating {
-	position: relative;
-	display: inline-flex;
-	flex: 0 0 auto;
-
-	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
-
-	inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
-	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
-
-	padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
-
-	cursor: pointer;
-
-	&.is-disabled,
-	&.is-readOnly {
-		cursor: default;
-		pointer-events: none;
-	}
-
-	/* When the entire component is hovered, show all solid icons */
-	&:hover {
+		/* When the entire component is hovered, show all solid icons */
 		.spectrum-Rating-starActive {
 			display: block;
 		}
@@ -109,6 +95,12 @@
 		.spectrum-Rating-starInactive {
 			display: none;
 		}
+	}
+
+	&.is-disabled,
+	&.is-readOnly {
+		cursor: default;
+		pointer-events: none;
 	}
 }
 

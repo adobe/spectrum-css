@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
@@ -135,6 +135,10 @@ export default {
 				"focusin .spectrum-Textfield",
 				"focusout .spectrum-Textfield"
 			],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=717-2629",
 		},
 		packageJson,
 		metadata,

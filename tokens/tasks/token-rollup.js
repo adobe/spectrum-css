@@ -25,6 +25,19 @@ const { fetchContent } = require("../../tasks/utilities.js");
 require("colors");
 
 /**
+ * Create a tagline for the CSS file based on the package.json data
+ * @param {Object} [packageJson={}]
+ * @param {string} packageJson.name
+ * @param {string} packageJson.version
+ * @returns
+ */
+function generateTagline({ name, version } = {}) {
+	if (!name) return "";
+	if (!version) return `/* ${name} */\n\n`;
+	return `/* ${name}@v${version} */\n\n`;
+}
+
+/**
  * The builder for the main entry point
  * @param {object} config
  * @param {string} config.cwd - Current working directory for the component being built
@@ -32,15 +45,21 @@ require("colors");
  * @returns Promise<void>
  */
 async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false } = {}) {
-	// Create an index.css asset for each component
-	if (clean && fs.existsSync(outputPath)) {
-		await fsp.unlink(outputPath);
-	}
+	// Read in the package version from the package.json file
+	const packageJson = await fsp.readFile(path.join(cwd, "package.json"), "utf-8").then(JSON.parse);
 
 	const inputs = await fg(inputGlob, { cwd });
 	const contents = inputs.map(input => `@import "${input}";`).join("\n");
 	if (!contents) return;
-	return processCSS(contents, undefined, outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
+
+	return processCSS(contents, undefined, outputPath, {
+		cwd,
+		clean,
+		configPath: cwd,
+		map: false,
+		resolveImports: true,
+		customTagline: generateTagline(packageJson),
+	});
 }
 
 /**
@@ -49,30 +68,31 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
  * @param {string} [config.cwd=process.cwd()] - Current working directory for the component
  * @returns {Promise<string[]>}
  */
-async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
+async function appendCustomOverrides({ cwd = process.cwd(), packageJson = {} } = {}) {
+	const promises = [];
+
+	// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
+	const customFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "custom"), onlyFiles: true });
 	const globalFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "dist", "css"), onlyFiles: true });
 
-	// Clean up the generated files from style-dictionary
-	const promises = globalFiles.map(file => processCSS(undefined, path.join("dist", "css", file), path.join("dist", "css", file), { cwd, configPath: cwd }));
+	// Create a list that combines the custom and dist files
+	const combinedFiles = [...new Set([...customFiles, ...globalFiles])];
+	for (const file of combinedFiles) {
+		// Read in the custom file and the dist file and combine them into one file
+		const combinedContent = await fetchContent([
+			path.join("dist", "css", file),
+			path.join("custom", file)
+		], { cwd, shouldCombine: true });
 
-	for (const theme of ["express", "spectrum"]) {
-		// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
-		const customFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, `custom-${theme}`), onlyFiles: true });
-		const themeFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "dist", "css", theme), onlyFiles: true });
+		if (!combinedContent || !combinedContent[0].content) continue;
 
-		for (const file of [...new Set([...themeFiles, ...customFiles])]) {
-			// Read in the custom file and the dist file and combine them into one file
-			const combinedContent = await fetchContent([
-				path.join("dist", "css", theme, file),
-				path.join(`custom-${theme}`, file)
-			], { cwd, shouldCombine: true });
-
-			if (!combinedContent || !combinedContent[0].content) continue;
-
-			promises.push(
-				processCSS(combinedContent[0].content, path.join(cwd, "dist", "css", theme, file), path.join(cwd, "dist", "css", theme, file), { cwd, configPath: cwd })
-			);
-		}
+		promises.push(
+			processCSS(combinedContent[0].content, path.join(cwd, "dist", "css", file), path.join(cwd, "dist", "css", file), {
+				cwd,
+				configPath: cwd,
+				customTagline: generateTagline(packageJson),
+			})
+		);
 	}
 
 	return Promise.all(promises);
@@ -90,30 +110,27 @@ async function main({
 	cwd = process.cwd(),
 	clean,
 } = {}) {
-	if (typeof clean === "undefined") {
-		clean = process.env.NODE_ENV === "production";
-	}
-
 	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
 	console.time(key);
 
 	const compiledOutputPath = path.join(cwd, "dist");
 
+	// Ensure the dist directory exists
+	if (!fs.existsSync(compiledOutputPath)) {
+		fs.mkdirSync(compiledOutputPath);
+	}
+
+	// Read in the package version from the package.json file
+	const packageJson = await fsp.readFile(path.join(cwd, "package.json"), "utf-8").then(JSON.parse);
+
 	// Wait for all the custom files to be processed
-	return appendCustomOverrides({ cwd }).then(async (r) =>
+	return appendCustomOverrides({ packageJson, cwd }).then(async (r) =>
 		Promise.all([
-			...["spectrum", "express"].map(theme => Promise.all([
-				index(
-					[`dist/css/${theme}/*-vars.css`],
-					path.join(compiledOutputPath, "css", theme, "index.css"),
-					{ cwd, clean }
-				),
-			])),
 			index(
-				["dist/css/*.css", "dist/css/spectrum/*-vars.css", "dist/css/express/*-vars.css"],
-				path.join(compiledOutputPath, "index.css"),
-				{ cwd, clean }
-			),
+				["dist/css/*-vars.css"],
+				path.join(compiledOutputPath, "css", "index.css"),
+				{ cwd, clean, packageJson }
+			)
 		]).then((reports) => {
 			const logs = [reports, r].flat(Infinity).filter(Boolean);
 

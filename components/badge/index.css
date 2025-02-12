@@ -193,6 +193,7 @@
 	background: var(--mod-badge-background-color-positive, var(--spectrum-badge-background-color-positive));
 }
 
+/* New in S2, not supporting in Foundations yet! */
 .spectrum-Badge--notice {
 	background: var(--mod-badge-background-color-notice, var(--spectrum-badge-background-color-notice));
 }

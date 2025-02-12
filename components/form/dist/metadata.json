@@ -1,0 +1,37 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-Form",
+    ".spectrum-Form--labelsAbove",
+    ".spectrum-Form--labelsAbove .spectrum-Form-item",
+    ".spectrum-Form-item",
+    ".spectrum-Form-itemField",
+    ".spectrum-Form-itemField > *",
+    ".spectrum-Form-itemLabel",
+    ".spectrum-Form-itemLabel.is-disabled",
+    ".spectrum-Form-itemLabel.is-disabled .spectrum-FieldLabel-requiredIcon"
+  ],
+  "modifiers": [
+    "--mod-disabled-content-color",
+    "--mod-form-grid-template-columns",
+    "--mod-form-grid-template-columns-labels-above",
+    "--mod-form-inline-size",
+    "--mod-form-item-block-spacing",
+    "--mod-form-item-block-spacing-labels-above"
+  ],
+  "component": [
+    "--spectrum-form-grid-template-columns",
+    "--spectrum-form-grid-template-columns-labels-above",
+    "--spectrum-form-item-block-spacing",
+    "--spectrum-form-item-block-spacing-labels-above",
+    "--spectrum-form-item-disabled-content-color"
+  ],
+  "global": [
+    "--spectrum-disabled-content-color",
+    "--spectrum-spacing-200",
+    "--spectrum-spacing-300"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": ["--highcontrast-form-item-disabled-content-color"]
+}

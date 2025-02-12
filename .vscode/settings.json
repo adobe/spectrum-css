@@ -101,8 +101,8 @@
 		}
 	],
 	"cssVariables.lookupFiles": [
-		"${workspaceFolder}/tokens/dist/index.css",
-		"${workspaceFolder}/tokens/**/*.css",
+		"${workspaceFolder}/tokens/dist/css/index.css",
+		"${workspaceFolder}/tokens/dist/css/*.css",
 		"${workspaceFolder}/components/*/index.css",
 		"${workspaceFolder}/components/*/themes/*.css"
 	],
@@ -177,10 +177,6 @@
 	"stylelint.reportNeedlessDisables": true,
 	"stylelint.validate": ["css", "postcss"],
 	"yaml.schemas": {
-		"./schemas/documentation.schema.json": [
-			"/metadata/*.yml",
-			"/metadata/*.yaml"
-		],
 		"~/.vscode/extensions/atlassian.atlascode-3.0.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
 	},
 	"storyExplorer.storiesGlobs": [

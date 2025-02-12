@@ -1,10 +1,10 @@
 {
 	"name": "@spectrum-css/dialog",
-	"version": "11.0.0",
+	"version": "12.0.1",
 	"description": "The Spectrum CSS dialog component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/dialog",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-dialog--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -19,29 +19,29 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./metadata.json": "./dist/metadata.json",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"metadata/*"
-	],
 	"peerDependencies": {
-		"@spectrum-css/closebutton": ">=5",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/modal": ">=5",
-		"@spectrum-css/tokens": ">=14",
-		"@spectrum-css/underlay": ">=4"
+		"@spectrum-css/closebutton": ">=6.0.0 <7.0.0",
+		"@spectrum-css/divider": ">=5.0.0 <6.0.0",
+		"@spectrum-css/modal": ">=7.0.0 <8.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0",
+		"@spectrum-css/underlay": ">=6.0.0 <7.0.0"
 	},
 	"peerDependenciesMeta": {
+		"@spectrum-css/closebutton": {
+			"optional": true
+		},
 		"@spectrum-css/divider": {
 			"optional": true
 		},
 		"@spectrum-css/modal": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
 			"optional": true
 		},
 		"@spectrum-css/underlay": {
@@ -49,18 +49,21 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/buttongroup": "workspace:^",
-		"@spectrum-css/closebutton": "workspace:^",
-		"@spectrum-css/divider": "workspace:^",
-		"@spectrum-css/modal": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^",
-		"@spectrum-css/underlay": "workspace:^"
+		"@spectrum-css/buttongroup": "9.0.1",
+		"@spectrum-css/closebutton": "6.0.1",
+		"@spectrum-css/divider": "5.0.1",
+		"@spectrum-css/modal": "7.0.1",
+		"@spectrum-css/tokens": "16.0.0",
+		"@spectrum-css/underlay": "6.0.1"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"

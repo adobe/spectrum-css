@@ -1,14 +1,19 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { AccordionGroup } from "./accordion.test.js";
 import { Template } from "./template.js";
 
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
+ *
+ * ## Density options
+ *
+ * Accordion has three density options and requires that you specify one of the density types: compact, regular, or spacious.
  */
 export default {
 	title: "Accordion",
@@ -57,10 +62,13 @@ export default {
 			handles: ["click .spectrum-Accordion-item"],
 		},
 		chromatic: { disableSnapshot: true },
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=39469-5419",
+		},
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 /* Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions. */
@@ -178,10 +186,30 @@ Compact.args = {
 	items: content,
 	density: "compact",
 };
+Compact.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Compact.storyName = "Density - Compact";
 
 export const Spacious = Template.bind({});
 Spacious.tags = ["!dev"];
 Spacious.args = {
 	items: content,
 	density: "spacious",
+};
+Spacious.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Spacious.storyName = "Density - Spacious";
+
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withBorder: false,
+	withHeading: false,
+	items: content,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
 };

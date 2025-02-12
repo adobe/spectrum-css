@@ -22,7 +22,10 @@ import { dirs } from "../../tasks/utilities.js";
  *
  * This only adds the licensing information to the top of the file.
  */
-export default () => ({
+export default ({
+	module = false,
+}) => ({
+	module,
 	map: false,
 	plugins: {
 		"postcss-licensing": {

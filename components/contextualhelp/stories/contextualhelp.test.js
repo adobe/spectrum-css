@@ -22,5 +22,13 @@ export const ContextualHelpGroup = Variants({
 				url: "#",
 			},
 		},
+		{
+			testHeading: "Help",
+			iconName: "Help",
+			customStyles: {
+				"inline-size": "275px",
+				"margin-bottom": "170px",
+			},
+		},
 	],
 });

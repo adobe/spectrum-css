@@ -62,6 +62,10 @@ jobs:
               shell: bash
               run: yarn install --immutable
 
+            - name: Generate metadata assets
+              shell: bash
+              run: yarn report
+
             - name: Publish to Chromatic
               id: chromatic
               uses: chromaui/action@latest
@@ -73,7 +77,7 @@ jobs:
                   exitOnceUploaded: true
                   onlyChanged: true
                   traceChanged: true
-                  untraced: ".github/actions/*/package.json generator/package.json"
+                  untraced: ".github/* plugins/stylelint-*/* tools/* .changeset/*"
                   diagnostics: true
                   autoAcceptChanges: "main"
                   # Lets VRT pass without running so as not to waste snapshots

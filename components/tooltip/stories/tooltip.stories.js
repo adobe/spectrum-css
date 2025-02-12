@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SemanticVariantGroup, TooltipPlacementGroup, TooltipShowOnHover } from "./template.js";
 import { PlacementVariants } from "./tooltip.test.js";
@@ -90,6 +90,10 @@ export default {
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=2591-4482",
+		},
 		packageJson,
 		metadata,
 	},

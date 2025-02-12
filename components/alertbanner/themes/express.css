@@ -11,12 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-/* @combine .spectrum--express */
+/* @combine .spectrum.spectrum--express */
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-AlertBanner {
-		--spectrum-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
+		--spectrum-alert-banner-neutral-background: var(--spectrum-neutral-background-color-default);
 	}
 }

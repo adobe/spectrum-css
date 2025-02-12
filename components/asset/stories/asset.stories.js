@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { AssetGroup } from "./asset.test.js";
 import { Template } from "./template.js";
@@ -39,7 +39,6 @@ export default {
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = AssetGroup.bind({});

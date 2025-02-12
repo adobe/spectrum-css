@@ -13,6 +13,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 /**
  * Get the tray submenu back arrow name with scale number (defined in design spec).
@@ -738,8 +741,7 @@ export const SubmenuInPopover = (context) => Popover({
 			isOpen: true,
 			position: "end-top",
 			customStyles: {
-				"--mod-popover-animation-distance": "-4px",
-				top: "-105px",
+				top: "-120px",
 				"inline-size": "120px",
 			},
 			content: [

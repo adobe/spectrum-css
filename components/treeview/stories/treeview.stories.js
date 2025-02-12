@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { Template } from "./template.js";
 import { TreeViewGroup } from "./treeview.test.js";
@@ -36,6 +36,10 @@ export default {
 	parameters: {
 		actions: {
 			handles: ["click .spectrum-TreeView-itemLink"],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=64762-1960",
 		},
 		packageJson,
 		metadata,

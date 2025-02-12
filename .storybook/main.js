@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import remarkGfm from 'remark-gfm';
 
 // Get a list of all the folders in the components directory
 const componentDir = path.resolve(__dirname, "../components");
@@ -51,6 +52,11 @@ export default {
 				configureJSX: true,
 				// Support markdown in MDX files
 				transcludeMarkdown: true,
+				mdxPluginOptions: {
+					mdxCompileOptions: {
+						remarkPlugins: [remarkGfm],
+					},
+				},
 			},
 		},
 		{

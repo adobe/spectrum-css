@@ -1,0 +1,43 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-Meter",
+    ".spectrum-Meter.is-negative",
+    ".spectrum-Meter.is-notice",
+    ".spectrum-Meter.is-positive",
+    ".spectrum-Meter.spectrum-Meter--sizeL",
+    ".spectrum-Meter.spectrum-Meter--sizeS"
+  ],
+  "modifiers": [
+    "--mod-meter-inline-size",
+    "--mod-meter-max-width",
+    "--mod-meter-min-width"
+  ],
+  "component": [
+    "--spectrum-meter-default-width",
+    "--spectrum-meter-maximum-width",
+    "--spectrum-meter-minimum-width",
+    "--spectrum-meter-thickness-large",
+    "--spectrum-meter-thickness-small"
+  ],
+  "global": [
+    "--spectrum-component-top-to-text-200",
+    "--spectrum-component-top-to-text-75",
+    "--spectrum-font-size-100",
+    "--spectrum-font-size-75",
+    "--spectrum-negative-visual-color",
+    "--spectrum-notice-visual-color",
+    "--spectrum-positive-visual-color"
+  ],
+  "system-theme": [],
+  "passthroughs": [
+    "--mod-progressbar-fill-color",
+    "--mod-progressbar-font-size",
+    "--mod-progressbar-max-size",
+    "--mod-progressbar-min-size",
+    "--mod-progressbar-size-default",
+    "--mod-progressbar-spacing-top-to-text",
+    "--mod-progressbar-thickness"
+  ],
+  "high-contrast": []
+}

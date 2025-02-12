@@ -69,6 +69,7 @@
 		"@spectrum-css/fieldgroup": "workspace:^",
 		"@spectrum-css/fieldlabel": "workspace:^",
 		"@spectrum-css/floatingactionbutton": "workspace:^",
+		"@spectrum-css/form": "workspace:^",
 		"@spectrum-css/helptext": "workspace:^",
 		"@spectrum-css/icon": "workspace:^",
 		"@spectrum-css/illustratedmessage": "workspace:^",
@@ -77,6 +78,7 @@
 		"@spectrum-css/link": "workspace:^",
 		"@spectrum-css/logicbutton": "workspace:^",
 		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/meter": "workspace:^",
 		"@spectrum-css/miller": "workspace:^",
 		"@spectrum-css/modal": "workspace:^",
 		"@spectrum-css/opacitycheckerboard": "workspace:^",
@@ -114,7 +116,14 @@
 		"@spectrum-css/underlay": "workspace:^",
 		"@spectrum-css/well": "workspace:^",
 		"colors": "^1.4.0",
-		"postcss": "^8.5.0",
+		"postcss": "^8.5.2",
 		"postcss-licensing": "^2.0.0"
-	}
+	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
+	]
 }

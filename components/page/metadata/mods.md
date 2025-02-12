@@ -1,2 +1,0 @@
-| Modifiable custom properties |
-| ---------------------------- |

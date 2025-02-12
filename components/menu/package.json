@@ -1,10 +1,10 @@
 {
 	"name": "@spectrum-css/menu",
-	"version": "8.0.0",
+	"version": "9.0.1",
 	"description": "The Spectrum CSS menu component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/menu",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-menu--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -19,24 +19,18 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./metadata.json": "./dist/metadata.json",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"metadata/*"
-	],
 	"peerDependencies": {
-		"@spectrum-css/checkbox": ">=9",
-		"@spectrum-css/divider": ">=3",
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/switch": ">=5",
-		"@spectrum-css/tokens": ">=14",
-		"@spectrum-css/tray": ">=3"
+		"@spectrum-css/checkbox": ">=10.0.0 <11.0.0",
+		"@spectrum-css/divider": ">=5.0.0 <6.0.0",
+		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/switch": ">=6.0.0 <7.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0",
+		"@spectrum-css/tray": ">=5.0.0 <6.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/checkbox": {
@@ -45,7 +39,13 @@
 		"@spectrum-css/divider": {
 			"optional": true
 		},
+		"@spectrum-css/icon": {
+			"optional": true
+		},
 		"@spectrum-css/switch": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
 			"optional": true
 		},
 		"@spectrum-css/tray": {
@@ -53,18 +53,21 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/checkbox": "workspace:^",
-		"@spectrum-css/divider": "workspace:^",
-		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/switch": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^",
-		"@spectrum-css/tray": "workspace:^"
+		"@spectrum-css/checkbox": "10.0.1",
+		"@spectrum-css/divider": "5.0.1",
+		"@spectrum-css/icon": "9.0.1",
+		"@spectrum-css/switch": "6.0.1",
+		"@spectrum-css/tokens": "16.0.0",
+		"@spectrum-css/tray": "5.0.1"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"

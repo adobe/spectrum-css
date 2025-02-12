@@ -5,7 +5,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PopoverGroup } from "./popover.test.js";
 import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./template.js";
@@ -90,6 +90,10 @@ export default {
 			story: {
 				height: "200px",
 			}
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=42086-5684",
 		},
 		packageJson,
 		metadata,
@@ -236,7 +240,7 @@ DialogStyle.args = {
 	content: [
 		(passthroughs, context) => Dialog({
 			showModal: false,
-			size: ["small"],
+			size: "s",
 			isDismissable: false,
 			heading: "Example heading",
 			hasFooter: false,

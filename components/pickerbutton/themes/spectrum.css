@@ -11,7 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
 	.spectrum-PickerButton {
 		--spectrum-picker-button-background-color: var(--spectrum-gray-75);
 		--spectrum-picker-button-background-color-hover: var(--spectrum-gray-200);
@@ -23,5 +27,7 @@
 		--spectrum-picker-button-border-radius-rounded-sided: 0;
 		--spectrum-picker-button-border-radius-sided: 0;
 		--spectrum-picker-button-border-width: var(--spectrum-border-width-100);
+
+		--spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill);
 	}
 }

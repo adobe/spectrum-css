@@ -1,15 +1,13 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isReadOnly, isRequired } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { FieldGroupSet } from "./fieldgroup.test.js";
-import { Template } from "./template.js";
+import { InputOptionsFieldGroupTemplate, NecessityIndicatorFieldGroupTemplate, Template } from "./template.js";
 
 /**
- * A field group is a group of fields which are usually radios (also known as a radio group) or checkboxes
- * (also known as a checkbox group). A field group is composed of a field label, a group of radio
- * inputs or checkboxes, and an optional help text component.
+ * A field group is a group of fields which are usually radios (also known as a radio group) or checkboxes (also known as a checkbox group). It is composed of a [field label](/docs/components-field-label--docs), a group of [radio inputs](/docs/components-radio--docs) or [checkboxes](/docs/components-checkbox--docs), and [an optional help text component](/docs/components-help-text--docs).
  *
  * ## Usage notes
  *
@@ -61,7 +59,6 @@ export default {
 		},
 		isInvalid,
 		items: { table: { disable: true } },
-		fieldLabel: { table: { disable: true } },
 		helpText: { table: { disable: true } },
 		isRequired,
 		isReadOnly,
@@ -100,11 +97,11 @@ export default {
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = FieldGroupSet.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = FieldGroupSet.bind({});
@@ -117,155 +114,78 @@ WithForcedColors.parameters = {
 	},
 };
 
-
 // ********* DOCS ONLY ********* //
-export const VerticalRadio = Template.bind({});
-VerticalRadio.tags = ["!dev"];
-VerticalRadio.args = {
-	layout: "vertical",
-	inputType: "radio"
-};
-VerticalRadio.parameters = {
+/**
+ * The default field group orientation is vertical. The field label is positioned at the top with the `spectrum-FieldGroup spectrum-FieldGroup--toplabel` classes.
+ * */
+export const Vertical = InputOptionsFieldGroupTemplate.bind({});
+Vertical.tags = ["!dev"];
+Vertical.args = Default.args;
+Vertical.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Vertical.storyName = "Default";
 
-export const VerticalCheckbox = Template.bind({});
-VerticalCheckbox.tags = ["!dev"];
-VerticalCheckbox.args = {
-	layout: "vertical",
-	inputType: "checkbox",
-};
-VerticalCheckbox.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const HorizontalRadio = Template.bind({});
-HorizontalRadio.tags = ["!dev"];
-HorizontalRadio.args = {
+/**
+ * A horizontal group of fields. Use a horizontal field group when vertical space is limited.
+ * */
+export const Horizontal = InputOptionsFieldGroupTemplate.bind({});
+Horizontal.tags = ["!dev"];
+Horizontal.args = {
 	layout: "horizontal",
-	inputType: "radio"
 };
-HorizontalRadio.parameters = {
+Horizontal.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const HorizontalCheckbox = Template.bind({});
-HorizontalCheckbox.tags = ["!dev"];
-HorizontalCheckbox.args = {
-	layout: "horizontal",
-	inputType: "checkbox",
-};
-HorizontalCheckbox.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const InvalidRadio = Template.bind({});
-InvalidRadio.tags = ["!dev"];
-InvalidRadio.args = {
-	layout: "horizontal",
-	inputType: "radio",
+/**
+ * An invalid group of radio buttons or checkboxes is signified by negative help text.
+ */
+export const InvalidFieldGroups = InputOptionsFieldGroupTemplate.bind({});
+InvalidFieldGroups.tags = ["!dev"];
+InvalidFieldGroups.args = {
 	isInvalid: true
 };
-InvalidRadio.parameters = {
+InvalidFieldGroups.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
-export const InvalidCheckbox = Template.bind({});
-InvalidCheckbox.tags = ["!dev"];
-InvalidCheckbox.args = {
-	layout: "horizontal",
-	inputType: "checkbox",
-	isInvalid: true,
-};
-InvalidCheckbox.parameters = {
-	chromatic: { disableSnapshot: true },
-};
+InvalidFieldGroups.storyName = "Invalid field groups";
 
 /**
  * Field groups can be marked as optional or required, depending on the situation.
- * If required, the field group must either contain a "(required)" label or an asterisk. If an asterisk is used, help text must explain what the asterisk means.
+ * - If required, the field group must either contain the text "(required)" in its label or an asterisk. If an asterisk is used, help text must explain what the asterisk means.
+ * - Optional field groups can be denoted with the text "(optional)" added to the end of the label or have no indication at all.
  */
-export const Required = Template.bind({});
-Required.tags = ["!dev"];
-Required.args = {
-	inputType: "radio",
-	fieldLabel: "Radio group label (required)"
-};
-Required.parameters = {
+export const RequiredOptional = NecessityIndicatorFieldGroupTemplate.bind({});
+RequiredOptional.tags = ["!dev"];
+RequiredOptional.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
-export const RequiredAsterisk = Template.bind({});
-RequiredAsterisk.tags = ["!dev"];
-RequiredAsterisk.args = {
-	fieldLabel: "Checkbox group label",
-	inputType: "checkbox",
-	isRequired: true,
-};
-RequiredAsterisk.parameters = {
-	chromatic: { disableSnapshot: true },
-};
+RequiredOptional.storyName = "Indicating required or optional";
 
 /**
- * Optional field groups can be denoted with text added to the end of the label "(optional)" or have no indication at all.
+ * The alternative layout option has side-aligned labels, and can be achieved with `spectrum-FieldGroup spectrum-FieldGroup--sidelabel`.
  */
-export const Optional = Template.bind({});
-Optional.tags = ["!dev"];
-Optional.args = {
-	fieldLabel: "Checkbox group label (optional)",
-	helpText: "",
-	inputType: "checkbox",
+export const VerticalSideLabels = InputOptionsFieldGroupTemplate.bind({});
+VerticalSideLabels.tags = ["!dev"];
+VerticalSideLabels.args = {
+	labelPosition: "side",
 };
-Optional.parameters = {
+VerticalSideLabels.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+VerticalSideLabels.storyName = "Default - with side labels";
 
-/**
- * The field group label has two layout options: the label can be top aligned with `spectrum-FieldGroup spectrum-FieldGroup--toplabel`, or side aligned with `spectrum-FieldGroup spectrum-FieldGroup--sidelabel`.
- */
-export const VerticalSideLabelRadio = Template.bind({});
-VerticalSideLabelRadio.tags = ["!dev"];
-VerticalSideLabelRadio.args = {
+export const HorizontalSideLabels = InputOptionsFieldGroupTemplate.bind({});
+HorizontalSideLabels.tags = ["!dev"];
+HorizontalSideLabels.args = {
 	labelPosition: "side",
-	inputType: "radio",
-	layout: "vertical"
-};
-VerticalSideLabelRadio.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const HorizontalSideLabelRadio = Template.bind({});
-HorizontalSideLabelRadio.tags = ["!dev"];
-HorizontalSideLabelRadio.args = {
-	labelPosition: "side",
-	inputType: "radio",
-	layout: "horizontal"
-};
-HorizontalSideLabelRadio.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const VerticalSideLabelCheckbox = Template.bind({});
-VerticalSideLabelCheckbox.tags = ["!dev"];
-VerticalSideLabelCheckbox.args = {
-	labelPosition: "side",
-	inputType: "checkbox",
-	layout: "vertical",
-};
-VerticalSideLabelCheckbox.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const HorizontalSideLabelCheckbox = Template.bind({});
-HorizontalSideLabelCheckbox.tags = ["!dev"];
-HorizontalSideLabelCheckbox.args = {
-	labelPosition: "side",
-	inputType: "checkbox",
 	layout: "horizontal",
 };
-HorizontalSideLabelCheckbox.parameters = {
+HorizontalSideLabels.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+HorizontalSideLabels.storyName = "Horizontal - with side labels";
 
 /**
  * Implementations should include the following behavior for read-only checkboxes:
@@ -282,11 +202,12 @@ ReadOnlyCheckbox.args = {
 ReadOnlyCheckbox.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+ReadOnlyCheckbox.storyName = "Read-only checkbox";
 
 /**
  * A group of read-only radio buttons.
  *
- * Review the individual story for more features of [read-only radio buttons](?path=/docs/components-radio--docs#read-only).
+ * Review the individual story for more features of [read-only radio buttons](/docs/components-radio--docs#read-only).
  */
 export const ReadOnlyRadio = Template.bind({});
 ReadOnlyRadio.tags = ["!dev"];
@@ -297,3 +218,4 @@ ReadOnlyRadio.args = {
 ReadOnlyRadio.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+ReadOnlyRadio.storyName = "Read-only radio";

@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isKeyboardFocused, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../metadata/metadata.json";
+import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CloseButtonGroup } from "./closebutton.test.js";
 import { CloseButtonExample, Template } from "./template.js";
@@ -45,6 +45,10 @@ export default {
 	parameters: {
 		actions: {
 			handles: ["click .spectrum-CloseButton"],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13601-149",
 		},
 		packageJson,
 		metadata,

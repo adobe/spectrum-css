@@ -22,8 +22,8 @@ export const CalendarGroup = Variants({
 		{
 			testHeading: "Range selection",
 			month: months[6],
-			selectedDay: new Date(2023, 6, 3),
 			year: 2023,
+			selectedDay: new Date(2023, 6, 3),
 			lastDay: new Date(2023, 6, 7),
 			useDOWAbbrev: true,
 			padded: true,
@@ -31,8 +31,8 @@ export const CalendarGroup = Variants({
 		{
 			testHeading: "Today highlighted",
 			month: undefined,
-			selectedDay: undefined,
 			year: undefined,
+			selectedDay: undefined,
 		},
 	],
 	stateData: [

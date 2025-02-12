@@ -1,29 +1,33 @@
 import { global } from '@storybook/global';
 
 /**
- * @type (container: HTMLElement, id: string, styleObj: object, add: boolean = true) => void
  * @description Fetches the style container for the given ID or creates a new one
+ * @param {HTMLElement} container - required container in which to add the style tag
+ * @param {string} id - required ID for the style container
+ * @param {string} styles - required styles to add to the container
+ * @param {boolean} [add=true] - optional flag to add or remove the styles
+ * @param {string} [context] - optional context to print in the style tag
+ * @returns {void}
  **/
-export function toggleStyles(container, id, styles, add = true) {
+export function toggleStyles(container, id, styles, add = true, context = undefined) {
 	if (!container && !id) return;
 
 	let style = container.querySelector(`#${id}`);
+	const isNewTag = !style;
 
+	// If we're removing the styles, remove the tag from the container
 	if (!add) {
-		if (style) style.remove();
+		if (!isNewTag) style.remove();
 		return;
 	}
 
-	if (!style) {
-		style = document.createElement("style");
-		style.id = id;
-		container.appendChild(style);
-	}
+	if (isNewTag) style = document.createElement("style");
 
-	if (!style) return;
+	style.id = id;
+	style.innerHTML = styles;
 
-	if (add && styles) style.innerHTML = styles;
-	else style.remove();
+	if (context) style.setAttribute("data-context", context);
+	if (isNewTag) container.appendChild(style);
 }
 
 /**

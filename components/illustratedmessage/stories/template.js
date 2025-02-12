@@ -11,34 +11,36 @@ export const Template = ({
 	description,
 	customClasses = [],
 	useAccentColor = false,
-} = {}, context = {}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-	>
-		${illustrationSvgMarkup(useAccentColor)}
-		${when(heading, () =>
-			Typography({
-				semantics: "heading",
-				"size": "m",
-				customClasses: [`${rootClass}-heading`],
-				content: [heading],
-			}, context)
-		)}
-		${when(description, () =>
-			Typography({
-				semantics: "body",
-				"size": "s",
-				customClasses: [`${rootClass}-description`],
-				content: [
-					...description.map((c) => (typeof c === "function" ? c({}) : c))
-				],
-			}, context)
-		)}
-	</div>
-`;
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+		>
+			${illustrationSvgMarkup(useAccentColor)}
+			${when(heading, () =>
+				Typography({
+					semantics: "heading",
+					"size": "m",
+					customClasses: [`${rootClass}-heading`],
+					content: [heading],
+				}, context)
+			)}
+			${when(description, () =>
+				Typography({
+					semantics: "body",
+					"size": "s",
+					customClasses: [`${rootClass}-description`],
+					content: [
+						...description.map((c) => (typeof c === "function" ? c({}) : c))
+					],
+				}, context)
+			)}
+		</div>
+	`;
+};
 
 const illustrationSvgMarkup = (withAccentColorClass = false) => html`
 	<svg

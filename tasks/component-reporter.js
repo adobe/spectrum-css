@@ -137,7 +137,6 @@ async function extractModifiers(
 async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
-	clean,
 } = {}) {
 	if (!cwd && componentName) {
 		cwd = path.join(dirs.components, componentName);
@@ -147,10 +146,6 @@ async function main({
 		componentName = cwd
 			? getPackageFromPath(cwd)
 			: process.env.NX_TASK_TARGET_PROJECT;
-	}
-
-	if (typeof clean === "undefined") {
-		clean = process.env.NODE_ENV === "production";
 	}
 
 	const key = `[report] ${`@spectrum-css/${componentName}`.cyan}`;
@@ -166,6 +161,11 @@ async function main({
 		console.timeEnd(key);
 		console.log("");
 		return Promise.reject(new Error(`No source CSS file found at ${sourceCSS}`));
+	}
+
+	// Create the dist directory if it doesn't exist
+	if (!fs.existsSync(path.join(cwd, "dist"))) {
+		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
 	const processed = await processCSS(undefined, sourceCSS, undefined, {
@@ -194,24 +194,7 @@ async function main({
 		}
 	);
 
-	// Create the metadata directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "metadata"))) {
-		fs.mkdirSync(path.join(cwd, "metadata"));
-	}
-
 	return Promise.all([
-		writeAndReport(
-			await prettier.format(
-				`${[
-					"| Modifiable custom properties |",
-					"| --- |",
-					...(meta?.modifiers ?? []).map((mod) => `| \`${mod}\` |`),
-				].join("\n")}\n`,
-				{ parser: "markdown" },
-			),
-			path.join(cwd, "metadata/mods.md"),
-			{ cwd, isDeprecated: true },
-		),
 		writeAndReport(
 			await prettier.format(
 				JSON.stringify({
@@ -226,7 +209,7 @@ async function main({
 				}, null, 2),
 				{ parser: "json" },
 			),
-			path.join(cwd, "metadata/metadata.json"),
+			path.join(cwd, "dist", "metadata.json"),
 			{ cwd },
 		),
 	])

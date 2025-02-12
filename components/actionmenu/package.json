@@ -1,10 +1,10 @@
 {
 	"name": "@spectrum-css/actionmenu",
-	"version": "6.2.0",
+	"version": "7.0.0",
 	"description": "The Spectrum CSS actionmenu component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/actionmenu",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-action-menu--docs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -19,36 +19,33 @@
 		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
-		"./metadata.json": "./metadata/metadata.json",
-		"./metadata/*": "./metadata/*",
-		"./package.json": "./package.json"
+		"./metadata.json": "./dist/metadata.json",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"metadata/*"
-	],
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=6",
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/menu": ">=7",
-		"@spectrum-css/popover": ">=7",
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/actionbutton": ">=7.0.0 <8.0.0",
+		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/menu": ">=9.0.0 <10.0.0",
+		"@spectrum-css/popover": ">=8.0.0 <9.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "workspace:^",
-		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/menu": "workspace:^",
-		"@spectrum-css/popover": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^"
+		"@spectrum-css/actionbutton": "7.0.1",
+		"@spectrum-css/icon": "9.0.1",
+		"@spectrum-css/menu": "9.0.1",
+		"@spectrum-css/popover": "8.0.1",
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"
@@ -57,5 +54,22 @@
 		{
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/action-menu/"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/actionbutton": {
+			"optional": true
+		},
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/menu": {
+			"optional": true
+		},
+		"@spectrum-css/popover": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

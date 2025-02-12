@@ -159,7 +159,7 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["components/*/index.css"],
+			files: ["components/*/index.css", "components/*/themes/spectrum.css"],
 			rules: {
 				"selector-class-pattern": [
 					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
@@ -217,8 +217,13 @@ module.exports = {
 			files: ["components/*/themes/*.css", "!components/*/themes/spectrum.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": null,
+				"selector-class-pattern": [
+					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
+						resolveNestedSelectors: true
+					}
+				],
 				"spectrum-tools/theme-alignment": [true, {
-					baseFilename: "spectrum",
+					baseFilename: "spectrum-two",
 				}],
 			},
 		},

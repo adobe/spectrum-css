@@ -12,22 +12,19 @@
  */
 
 @import "@spectrum-css/commons/overlay.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Modal {
-	/* Bug: this must be 0ms, not 0 */
-	--spectrum-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
+	--spectrum-modal-confirm-entry-animation-duration: var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-animation-duration-500));
+	/* @deprecated --mod-overlay-animation-duration-opened in favor of --mod-modal-confirm-entry-animation-delay */
+	--spectrum-modal-confirm-entry-animation-delay: var(--mod-overlay-animation-duration-opened, var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200)));
+
+	/* @deprecated --mod-overlay-animation-duration in favor of --mod-modal-confirm-exit-animation-duration */
+	--spectrum-modal-confirm-exit-animation-duration: var(--mod-overlay-animation-duration, var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100)));
+	--spectrum-modal-confirm-exit-animation-delay: var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-animation-duration-0));
 
 	/* Distance between top and bottom of modal and edge of window for fullscreen modal */
-	--spectrum-modal-fullscreen-margin: 32px;
-	--spectrum-modal-max-height: 90vh;
-	--spectrum-modal-max-width: 90%;
-
-	--spectrum-modal-background-color: var(--spectrum-gray-100);
-	--spectrum-modal-confirm-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-modal-confirm-exit-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-modal-confirm-entry-animation-duration: var(--spectrum-animation-duration-500);
-	--spectrum-modal-confirm-entry-animation-delay: var(--spectrum-animation-duration-200);
-	--spectrum-modal-transition-animation-duration: var(--spectrum-animation-duration-100);
+	--spectrum-modal-fullscreen-margin: var(--mod-modal-fullscreen-margin, 32px);
 }
 
 /* Used to position the modal */
@@ -63,7 +60,7 @@
 	z-index: 2;
 
 	/* Be invisible by default */
-	transition: visibility 0ms linear var(--mod-modal-transition-animation-duration, var(--spectrum-modal-transition-animation-duration));
+	transition: visibility 0ms linear var(--mod-modal-transition-animation-duration, var(--spectrum-animation-duration-100));
 
 	&.is-open {
 		visibility: visible;
@@ -71,42 +68,43 @@
 }
 
 .spectrum-Modal {
-	@extend %spectrum-overlay;
+	visibility: hidden;
+	opacity: 0;
 
-	/* Start offset by the animation distance */
+	/* Start offset by the animation distance -- @note this is using the global dialog token */
 	transform: translateY(var(--mod-modal-confirm-entry-animation-distance, var(--spectrum-dialog-confirm-entry-animation-distance)));
 
 	/* Appear above underlay */
 	z-index: 2;
 
 	/* Don't be bigger than the screen */
-	max-block-size: var(--mod-modal-max-height, var(--spectrum-modal-max-height));
-	max-inline-size: var(--mod-modal-max-width, var(--spectrum-modal-max-width));
+	max-block-size: var(--mod-modal-max-height, 90vh);
+	max-inline-size: var(--mod-modal-max-width, 90%);
 
 	background: var(--mod-modal-background-color, var(--spectrum-modal-background-color));
-
-	/* border-radius includes legacy token fallback, which can be deprecated once component is migrated */
-	border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-modal-confirm-border-radius));
+	border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-corner-radius-100));
 	overflow: hidden;
 	outline: none; /* Firefox shows outline */
 	pointer-events: auto;
 
 	/* Exit animations */
 	transition:
-		opacity var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration)) var(--spectrum-animation-ease-in) var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)),
-		visibility 0ms linear calc(var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) + var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration))),
-		transform 0ms linear calc(var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) + var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration)));
-}
+		opacity var(--spectrum-modal-confirm-exit-animation-duration) var(--spectrum-animation-ease-in) var(--spectrum-modal-confirm-exit-animation-delay),
+		visibility var(--spectrum-animation-duration-0) var(--spectrum-animation-linear) calc(var(--spectrum-modal-confirm-exit-animation-delay) + var(--spectrum-modal-confirm-exit-animation-duration)),
+		transform var(--spectrum-animation-duration-0) var(--spectrum-animation-linear) calc(var(--spectrum-modal-confirm-exit-animation-delay) + var(--spectrum-modal-confirm-exit-animation-duration));
 
-.spectrum-Modal.is-open {
-	@extend %spectrum-overlay--open;
+	&.is-open {
+		pointer-events: auto;
+		visibility: visible;
+		opacity: 1;
 
-	/* Entry animations */
-	transition:
-		transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
-		opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
+		/* Entry animations */
+		transition:
+			transform var(--spectrum-modal-confirm-entry-animation-duration) var(--spectrum-animation-ease-out) var(--spectrum-modal-confirm-entry-animation-delay),
+			opacity var(--spectrum-modal-confirm-entry-animation-duration) var(--spectrum-animation-ease-out) var(--spectrum-modal-confirm-entry-animation-delay);
 
-	transform: translateY(0);
+		transform: translateY(0);
+	}
 }
 
 /* Responsive modals will fill the screen on small viewports */
@@ -119,20 +117,18 @@
 		border-radius: 0;
 	}
 
-	.spectrum-Modal-wrapper {
-		.spectrum-Modal--responsive {
-			margin-block-start: 0; /* Prevent the vertical offset bit */
-		}
+	.spectrum-Modal-wrapper .spectrum-Modal--responsive {
+		margin-block-start: 0; /* Prevent the vertical offset bit */
 	}
 }
 
 /** @unofficial */
 .spectrum-Modal--fullscreen {
 	position: fixed;
-	inset-inline-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-block-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-inline-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-block-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+	inset-inline-start: var(--spectrum-modal-fullscreen-margin);
+	inset-block-start: var(--spectrum-modal-fullscreen-margin);
+	inset-inline-end: var(--spectrum-modal-fullscreen-margin);
+	inset-block-end: var(--spectrum-modal-fullscreen-margin);
 	max-inline-size: none;
 	max-block-size: none;
 }
