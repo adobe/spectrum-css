@@ -85,6 +85,8 @@ jobs:
             styles_modified_files: ${{ steps.changed-files.outputs.styles_modified_files }}
             eslint_added_files: ${{ steps.changed-files.outputs.eslint_added_files }}
             eslint_modified_files: ${{ steps.changed-files.outputs.eslint_modified_files }}
+            mdlint_added_files: ${{ steps.changed-files.outputs.mdlint_added_files }}
+            mdlint_modified_files: ${{ steps.changed-files.outputs.mdlint_modified_files }}
             plugins_modified_files: ${{ steps.changed-files.outputs.plugins_modified_files }}
             plugins_added_files: ${{ steps.changed-files.outputs.plugins_added_files }}
         permissions:
@@ -100,6 +102,17 @@ jobs:
                         - components/*/index.css
                       eslint:
                         - components/*/stories/*.js
+                      mdlint:
+                        - *.md
+                        - .storybook/*.md
+                        - .storybook/*/*.md
+                        - .storybook/*/*.mdx
+                        - components/*/*.md
+                        - components/*/stories/*.mdx
+                        - plugins/*/*.md
+                        - tokens/*.md
+                        - tools/*/*.md
+                        - ui-icons/*.md
                       plugins:
                         - plugins/**/*
 
