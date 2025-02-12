@@ -150,7 +150,7 @@ async function generateDiff({
 			...renderData,
 			html,
 		},
-		join(outputPath, `index.html`)
+		join(outputPath, "index.html")
 	);
 }
 
@@ -197,7 +197,8 @@ async function processComponent(
 		const files =
 			(await fg("**/*.css", { cwd: join(cwd, component, "dist") })) ?? [];
 		files.forEach((file) => filelist.add(file));
-	} else {
+	}
+	else {
 		warnings.push(
 			`${
 				`${relative(pathing.root, join(cwd, component))}`.yellow
@@ -236,7 +237,8 @@ async function processComponent(
 					(tarballFile.status && tarballFile.status !== 200)
 				) {
 					log.error(`Failed to fetch release content for ${pkg.name}`);
-				} else {
+				}
+				else {
 					await writeFile(tarballPath, await tarballFile.buffer(), {
 						encoding: "utf-8",
 					});
@@ -306,7 +308,6 @@ async function processComponent(
 }
 
 async function processFile(filename, localPath, comparePath) {
-	const componentName = localPath.split("/")[localPath.split("/").length - 2];
 	const data = {};
 
 	// Look for the file locally
@@ -456,9 +457,9 @@ async function main(
 			const { local, npm } = fileMap.get(file);
 
 			const indicatorColor = (localSize, tagSize = 0) => {
-				if (localSize < tagSize) return 'green';
-				if (localSize > tagSize) return 'red';
-				else return 'gray';
+				if (localSize < tagSize) return "green";
+				if (localSize > tagSize) return "red";
+				else return "gray";
 			};
 
 			const localSize = local?.size && `${bytesToSize(local.size)}`[indicatorColor(local.size, npm?.size)];
@@ -466,8 +467,8 @@ async function main(
 
 			log.writeTable([
 				`${file}`.green,
-				localSize ?? `** removed **`.red,
-				tagSize ?? `** new **`.yellow,
+				localSize ?? "** removed **".red,
+				tagSize ?? "** new **".yellow,
 			], { min: 25, max: maxColumnWidth + 15 });
 
 			if (local?.size && npm?.size && local.size !== npm.size) {
