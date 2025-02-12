@@ -13,126 +13,63 @@
 
 .spectrum-DropZone {
 	--spectrum-drop-zone-padding: var(--spectrum-spacing-400);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-illustration-to-heading: var(--spectrum-spacing-400);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-heading-to-body: var(--spectrum-spacing-75);
-
 	--spectrum-drop-zone-border-width: var(--spectrum-border-width-200);
-	--spectrum-drop-zone-corner-radius: var(--spectrum-corner-radius-100);
-	--spectrum-drop-zone-border-color: var(--spectrum-gray-200);
-
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-heading-font-family: var(--spectrum-sans-font-family-stack);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-heading-font-style: var(--spectrum-heading-sans-serif-font-style);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-heading-font-size: var(--spectrum-drop-zone-title-size);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-heading-line-height: var(--spectrum-heading-line-height);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-heading-color: var(--spectrum-heading-color);
-
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-body-font-family: var(--spectrum-sans-font-family-stack);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-body-font-style: var(--spectrum-body-sans-serif-font-style);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-body-font-size: var(--spectrum-drop-zone-body-size);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-body-line-height: var(--spectrum-body-line-height);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-body-color: var(--spectrum-body-color);
+	--spectrum-drop-zone-corner-radius: var(--spectrum-corner-radius-700);
+	--spectrum-drop-zone-border-color: var(--spectrum-gray-300);
 
 	--spectrum-drop-zone-background-color: var(--spectrum-drop-zone-background-color-rgb);
 	--spectrum-drop-zone-border-color-hover: var(--spectrum-accent-visual-color);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-illustration-color: var(--spectrum-neutral-visual-color);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-illustration-color-hover: var(--spectrum-accent-visual-color);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-illustration-to-title: var(--spectrum-spacing-200);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
+	--spectrum-drop-zone-illustration-color-hover: var(--spectrum-accent-content-color-default);
 	--spectrum-drop-zone-body-to-action: var(--spectrum-spacing-300);
 
 	/* Filled styles */
-	--spectrum-drop-zone-content-height: var(--spectrum-component-height-300);
 	--spectrum-drop-zone-content-max-width: var(--spectrum-drop-zone-content-maximum-width);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-content-edge-to-text: var(--spectrum-component-edge-to-text-300);
 	--spectrum-drop-zone-content-top-to-text: var(--spectrum-component-top-to-text-300);
 	--spectrum-drop-zone-content-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+	--spectrum-drop-zone-content-height: var(--spectrum-component-height-300);
+	--spectrum-drop-zone-edge-to-text: var(--spectrum-component-edge-to-text-300);
 
 	--spectrum-drop-zone-content-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-drop-zone-content-font-weight: var(--spectrum-bold-font-weight);
-	--spectrum-drop-zone-content-font-style: var(--spectrum-default-font-style);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
 	--spectrum-drop-zone-content-font-size: var(--spectrum-font-size-300);
-	--spectrum-drop-zone-content-line-height: var(--spectrum-line-height-100);
+	--spectrum-drop-zone-title-line-height: var(--spectrum-line-height-100);
 
 	--spectrum-drop-zone-content-background-color: var(--spectrum-accent-visual-color);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-	--spectrum-drop-zone-content-color: var(--spectrum-white);
 
 	/* Settings for a nested illustrated message */
 	--mod-illustrated-message-vertical-maximum-width: var(--mod-drop-zone-content-maximum-width, var(--spectrum-drop-zone-content-maximum-width));
-	--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color, var(--spectrum-drop-zone-illustration-color));
-	--mod-illustrated-message-illustration-to-heading: var(--mod-drop-zone-illustration-to-heading, var(--spectrum-drop-zone-illustration-to-heading));
-	--mod-illustrated-message-heading-to-description: var(--mod-drop-zone-heading-to-body, var(--spectrum-drop-zone-heading-to-body));
 	--mod-illustrated-message-description-to-action: var(--mod-drop-zone-body-to-action, var(--spectrum-drop-zone-body-to-action));
-	--mod-illustrated-message-title-font-family: var(--mod-drop-zone-heading-font-family, var(--spectrum-drop-zone-heading-font-family));
-	--mod-illustrated-message-title-font-weight: var(--mod-drop-zone-heading-font-weight, var(--spectrum-drop-zone-heading-font-weight));
-	--mod-illustrated-message-title-font-style: var(--mod-drop-zone-heading-font-style, var(--spectrum-drop-zone-heading-font-style));
-	--mod-illustrated-message-title-font-size: var(--mod-drop-zone-heading-font-size, var(--spectrum-drop-zone-heading-font-size));
-	--mod-illustrated-message-title-line-height: var(--mod-drop-zone-heading-line-height, var(--spectrum-drop-zone-heading-line-height));
-	--mod-illustrated-message-title-color: var(--mod-drop-zone-heading-color, var(--spectrum-drop-zone-heading-color));
 	--mod-illustrated-message-description-position: relative;
 	--mod-illustrated-message-description-z-index: 10;
-	--mod-illustrated-message-description-font-family: var(--mod-drop-zone-body-font-family, var(--spectrum-drop-zone-body-font-family));
-	--mod-illustrated-message-description-font-weight: var(--mod-drop-zone-body-font-weight, var(--spectrum-drop-zone-body-font-weight));
-	--mod-illustrated-message-description-font-style: var(--mod-drop-zone-body-font-style, var(--spectrum-drop-zone-body-font-style));
 	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
-	--mod-illustrated-message-description-line-height: var(--mod-drop-zone-body-line-height, var(--spectrum-drop-zone-body-line-height));
-	--mod-illustrated-message-description-color: var(--mod-drop-zone-body-color, var(--spectrum-drop-zone-body-color));
+	--mod-illustrated-message-illustration-color: var(--spectrum-gray-500);
+	--mod-drop-zone-content-height: 280px;
 
-	/* Settings for a nested actionbutton */
-	--mod-actionbutton-font-size: var(--mod-drop-zone-content-font-size, var(--spectrum-drop-zone-content-font-size));
-	--mod-actionbutton-label-color: var(--mod-drop-zone-content-color, var(--spectrum-drop-zone-content-color));
-	--mod-actionbutton-edge-to-text: var(--mod-drop-zone-content-edge-to-text, var(--spectrum-drop-zone-content-edge-to-text));
-
-	/* cjk language support */
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-		--spectrum-drop-zone-heading-font-size: var(--spectrum-drop-zone-cjk-title-size);
-	}
+	/* Typography */
+	--mod-illustrated-message-title-font-weight: var(--spectrum-title-serif-font-weight);
 }
 
 .spectrum-DropZone {
 	box-sizing: border-box;
 	inline-size: var(--mod-drop-zone-width, var(--spectrum-drop-zone-width));
 	padding: calc(var(--mod-drop-zone-padding, var(--spectrum-drop-zone-padding)) - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
-	text-align: center;
-	border-color: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
-	border-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
 	border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
-	border-style: var(--mod-drop-zone-border-style, dashed);
 	background-size: cover;
 	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
+	position: relative;
 
 	&.is-dragged {
-		/* @deprecation --mod-drop-zone-border-style--dragged will be removed during the S2 migration; please update your code to --mod-drop-zone-border-style-dragged */
-		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style--dragged, var(--mod-drop-zone-border-style-dragged, solid));
+		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style-dragged, var(--mod-drop-zone-border-style-dragged, solid));
 		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-background-color-opacity)));
 		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 
 		/* Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
+		color: var(--spectrum-drop-zone-illustration-color-hover);
+
+		.spectrum-DropZone-stroke-path {
+			stroke-dasharray: none;
+		}
 	}
 
 	&.is-filled {
@@ -144,38 +81,74 @@
 	}
 
 	&.is-filled.is-dragged {
-		--mod-drop-zone-content-display: flex;
+		background-position: center;
+		block-size: var(--mod-drop-zone-content-height);
+		background-blend-mode: multiply;
+
+		.spectrum-DropZone-content {
+			block-size: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.spectrum-DropZone-actions {
+			margin-block-start: 0;
+		}
 	}
 
 	&:focus-visible {
-		--mod-drop-zone-border-style: solid;
 		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 		outline: 0;
 	}
 }
 
+.spectrum-DropZone-stroke {
+	position: absolute;
+	inset-block-start: -2px;
+	inset-inline-start: -2px;
+
+	/* Measurement below is estimated based on stroke-width */
+	inline-size: 101%;
+	block-size: 101.5%;
+	pointer-events: none;
+}
+
+.spectrum-DropZone-stroke-path {
+	stroke: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
+	stroke-dasharray: calc(var(--spectrum-drop-zone-border-dash-length) / 2) calc(var(--spectrum-drop-zone-border-dash-gap) / 2);
+	rx: calc(var(--spectrum-drop-zone-corner-radius) / 2);
+	ry: calc(var(--spectrum-drop-zone-corner-radius) / 2);
+}
+
 .spectrum-DropZone-content {
-	display: var(--mod-drop-zone-content-display, none);
-	block-size: 100%;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	z-index: 10;
+	max-inline-size: var(--mod-illustrated-message-vertical-maximum-width);
+}
+
+.spectrum-DropZone-actions {
+	margin-block-start: var(--spectrum-drop-zone-body-to-action);
+	text-align: center;
 }
 
 .spectrum-DropZone-button {
 	box-sizing: border-box;
 	border: none;
-	block-size: var(--mod-drop-zone-content-height, var(--spectrum-drop-zone-content-height));
+	block-size: auto;
+
 	max-inline-size: var(--mod-drop-zone-content-max-width, var(--spectrum-drop-zone-content-max-width));
 	padding-block-start: var(--mod-drop-zone-content-top-to-text, var(--spectrum-drop-zone-content-top-to-text));
 	padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-drop-zone-content-bottom-to-text));
+	padding-inline: var(--mod-drop-zone-edge-to-text, var(--spectrum-drop-zone-edge-to-text));
 	background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
+	max-block-size: var(--mod-drop-zone-content-height, var(--spectrum-drop-zone-content-height));
 
 	font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
 	font-weight: var(--mod-drop-zone-content-font-weight, var(--spectrum-drop-zone-content-font-weight));
-	font-style: var(--mod-drop-zone-content-font-style, var(--spectrum-drop-zone-content-font-style));
-	line-height: var(--mod-drop-zone-content-line-height, var(--spectrum-drop-zone-content-line-height));
+	line-height: var(--mod-drop-zone-title-line-height, var(--spectrum-drop-zone-title-line-height));
+
+	.spectrum-ActionButton-label {
+		font-size: var(--mod-drop-zone-content-font-size, var(--spectrum-drop-zone-content-font-size));
+	}
 
 	&:hover,
 	&:focus {
@@ -183,16 +156,16 @@
 	}
 }
 
+/********* Illustrated Message *********/
+.spectrum-DropZone {
+	.spectrum-IllustratedMessage {
+		justify-content: center;
+	}
+}
+
 /********* WHCM *********/
 @media (forced-colors: active) {
 	.spectrum-DropZone {
-		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-		--highcontrast-drop-zone-illustration-color: CanvasText;
-
 		--highcontrast-drop-zone-border-color-hover: Highlight;
-
-		/* Updated values for a nested illustrated message when in a high contrast state */
-		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in illustrated */
-		--highcontrast-illustrated-message-illustration-color: var(--highcontrast-drop-zone-illustration-color);
 	}
 }
