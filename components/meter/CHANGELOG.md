@@ -4,17 +4,19 @@
 
 ### Patch Changes
 
-- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes a bug in the content of the `dist/index-theme.css` file.
+- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
+- Fixes a bug in the content of the `dist/index-theme.css` file.
 
-  Expected output example for the index-theme.css:
+Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
 
-  ```
-  .spectrum-ActionButton {
-   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
-   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
-  ```
+Expected output example for the index-theme.css:
+
+```css
+.spectrum-ActionButton {
+  --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+  --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+```
 
 - Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
   - @spectrum-css/progressbar@6.0.1
@@ -23,7 +25,9 @@
 
 ### Major Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)!
+
+- ## Breaking change
 
   This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
 
