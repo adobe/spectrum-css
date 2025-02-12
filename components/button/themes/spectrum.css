@@ -23,10 +23,10 @@
 		--mod-button-background-color-focus: var(--spectrum-gray-200);
 
 		&.spectrum-Button--primary {
-			--mod-button-content-color-default: var(--spectrum-gray-50);
-			--mod-button-content-color-hover: var(--spectrum-gray-50);
-			--mod-button-content-color-down: var(--spectrum-gray-50);
-			--mod-button-content-color-focus: var(--spectrum-gray-50);
+			--mod-button-content-color-default: var(--spectrum-white);
+			--mod-button-content-color-hover: var(--spectrum-white);
+			--mod-button-content-color-down: var(--spectrum-white);
+			--mod-button-content-color-focus: var(--spectrum-white);
 
 			&.spectrum-Button--outline {
 				--mod-button-background-color-hover: var(--spectrum-gray-300);
