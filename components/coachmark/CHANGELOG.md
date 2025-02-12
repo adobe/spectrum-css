@@ -1,18 +1,20 @@
 # Change Log
 
-## 10.0.0
+## 9.1.0
 
 ### Minor Changes
 
-- [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)! - ## New feature
+- [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Minified and gzipped outputs available for all compiled CSS assets.
+## New feature
+
+Minified and gzipped outputs available for all compiled CSS assets.
 
 ### Patch Changes
 
-- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)! - Dependency alignment across the project.
+- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Set component peerDependencies as optional to reduce console warnings on downstream projects.
+Dependency alignment across the project.
 
 - Updated dependencies [[`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee), [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
   - @spectrum-css/actionbutton@8.0.0

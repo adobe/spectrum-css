@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/table",
-	"version": "9.0.0",
+	"version": "8.1.0",
 	"description": "The Spectrum CSS table component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,11 +25,11 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/button": ">=15.0.0",
-		"@spectrum-css/checkbox": ">=11.0.0",
-		"@spectrum-css/icon": ">=9.1.0",
-		"@spectrum-css/thumbnail": ">=9.0.0",
-		"@spectrum-css/tokens": ">=16.0.1"
+		"@spectrum-css/button": ">=14.0.0 <15.0.0",
+		"@spectrum-css/checkbox": ">=10.0.0 <11.0.0",
+		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/thumbnail": ">=8.0.0 <9.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/button": {
@@ -49,10 +49,10 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/button": "15.0.0",
-		"@spectrum-css/checkbox": "11.0.0",
+		"@spectrum-css/button": "14.1.0",
+		"@spectrum-css/checkbox": "10.1.0",
 		"@spectrum-css/icon": "9.1.0",
-		"@spectrum-css/thumbnail": "9.0.0",
+		"@spectrum-css/thumbnail": "8.1.0",
 		"@spectrum-css/tokens": "16.0.1"
 	},
 	"keywords": [
