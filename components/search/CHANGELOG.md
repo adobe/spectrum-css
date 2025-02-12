@@ -1,8 +1,5 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## 8.1.0
 
 ### Minor Changes
@@ -29,17 +26,19 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes a bug in the content of the `dist/index-theme.css` file.
+- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
+Fixes a bug in the content of the `dist/index-theme.css` file.
 
-  Expected output example for the index-theme.css:
+Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
 
-  ```
-  .spectrum-ActionButton {
-   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
-   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
-  ```
+Expected output example for the index-theme.css:
+
+```css
+.spectrum-ActionButton {
+  --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+  --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+```
 
 - Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
   - @spectrum-css/clearbutton@7.0.1
@@ -50,29 +49,31 @@ Dependency alignment across the project.
 
 ### Major Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)!
 
-  This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
+### 🛑 Breaking change
 
-  For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
+This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
 
-  For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
+For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
 
-  If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
+For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
 
-  ### Deprecations
+If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
 
-  The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
+### Deprecations
 
-  The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
+The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
 
-  ### File usage
+The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
 
-  If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
+### File usage
 
-  If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
 
-  To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
+If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+
+To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
 
 ### Patch Changes
 
@@ -218,8 +219,6 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/textfield@>=7
   - @spectrum-css/tokens@>=14
 
-<a name="7.0.0"></a>
-
 ## 7.0.0
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.2.4...@spectrum-css/search@7.0.0)
@@ -231,36 +230,29 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
-<a name="6.2.4"></a>
-
 ## 6.2.4
 
 🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.2.3...@spectrum-css/search@6.2.4)
-**Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.2.3"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.2.3
 
 🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.2.2...@spectrum-css/search@6.2.3)
 
-🗓 20
-<a name="6.2.2"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.2.2
 
 🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.2.1...@spectrum-css/search@6.2.2)
 
 **Note:** Version bump only for package @spectrum-css/search
-<a name="6.2.1"></a>
 
 ## 6.2.1
 
-🗓 2024-02-06
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.2.0...@spectrum-css/search@6.2.1)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="6.2.0"></a>
 
 ## 6.2.0
 
@@ -268,8 +260,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.1.0"></a>
-🗓 20 6.1.0
+## 6.1.0
 
 🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.30...@spectrum-css/search@6.1.0)
 
@@ -277,15 +268,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
-<a name="6.0.30"></a>
-
 ## 6.0.30
 
 🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.29...@spectrum-css/search@6.0.30)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="6.0.29"></a>
 
 ## 6.0.29
 
@@ -293,35 +280,29 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.28"></a>
-
 ## 6.0.28
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/search
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.27...@spectrum-css/search@6.0.28)
 
-<a name="6.0.27"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.0.27
 
 🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.26...@spectrum-css/search@6.0.27)
-**Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.26"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.0.26
 
 🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.25...@spectrum-css/search@6.0.26)
 
-🗓 20
-<a name="6.0.25"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.0.25
 
 🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.24...@spectrum-css/search@6.0.25)
 
 **Note:** Version bump only for package @spectrum-css/search
-<a name="6.0.24"></a>
 
 ## 6.0.24
 
@@ -329,29 +310,23 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.23"></a>
-
 ## 6.0.23
 
 🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.22...@spectrum-css/search@6.0.23)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.22"></a>
-🗓 20 6.0.22
+## 6.0.22
 
 🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.21...@spectrum-css/search@6.0.22)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.21"></a>
+## 6.0.21
 
-🗓 20
 🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.20...@spectrum-css/search@6.0.21)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="6.0.20"></a>
 
 ## 6.0.20
 
@@ -359,28 +334,21 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.19"></a>
-
 ## 6.0.19
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/search
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.18...@spectrum-css/search@6.0.19)
 
-<a name="6.0.18"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.0.18
 
 🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.17...@spectrum-css/search@6.0.18)
-**Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.17"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.0.17
 
 🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.16...@spectrum-css/search@6.0.17)
-
-🗓 20
-<a name="6.0.16"></a>
 
 ## 6.0.16
 
@@ -388,23 +356,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🔙 Reverts
 
-🗓 20gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
-
-<a name="6.0.15"></a>
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 ## 6.0.15
 
 🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.14...@spectrum-css/search@6.0.15)
-
-🗓 20
-<a name="6.0.14"></a>
 
 ## 6.0.14
 
 🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.12...@spectrum-css/search@6.0.14)
 
 **Note:** Version bump only for package @spectrum-css/search
-<a name="6.0.13"></a>
 
 ## 6.0.13
 
@@ -412,14 +374,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.12"></a>
+## 6.0.12
 
-🗓 20
 🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.11...@spectrum-css/search@6.0.12)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="6.0.11"></a>
 
 ## 6.0.11
 
@@ -427,35 +386,27 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.10"></a>
-
 ## 6.0.10
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/search
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.9...@spectrum-css/search@6.0.10)
 
-<a name="6.0.9"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.0.9
 
 🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.8...@spectrum-css/search@6.0.9)
-**Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.8"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.0.8
 
 🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.7...@spectrum-css/search@6.0.8)
-
-🗓 20
-<a name="6.0.7"></a>
 
 ## 6.0.7
 
 🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.6...@spectrum-css/search@6.0.7)
 
 **Note:** Version bump only for package @spectrum-css/search
-<a name="6.0.6"></a>
 
 ## 6.0.6
 
@@ -463,29 +414,23 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.5"></a>
-
 ## 6.0.5
 
 🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.4...@spectrum-css/search@6.0.5)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.4"></a>
-🗓 20 6.0.4
+## 6.0.4
 
 🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.3...@spectrum-css/search@6.0.4)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.3"></a>
+## 6.0.3
 
-🗓 20
 🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.2...@spectrum-css/search@6.0.3)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="6.0.2"></a>
 
 ## 6.0.2
 
@@ -493,40 +438,33 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="6.0.1"></a>
-
 ## 6.0.1
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/search
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@6.0.0...@spectrum-css/search@6.0.1)
 
-<a name="6.0.0"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 6.0.0
 
 🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.23...@spectrum-css/search@6.0.0)
-🗓 20chore(search)!: core tokens migration (#1761)([b54d8ef](https://github.com/adobe/spectrum-css/commit/b54d8ef)), closes[#1761](https://github.com/adobe/spectrum-css/issues/1761)
+
+- chore(search)!: core tokens migration (#1761)([b54d8ef](https://github.com/adobe/spectrum-css/commit/b54d8ef)), closes[#1761](https://github.com/adobe/spectrum-css/issues/1761)
 
 ### 🛑 BREAKING CHANGES
 
-    		*
-    		migrates Search to use `@adobe/spectrum-tokens`
+- migrates Search to use `@adobe/spectrum-tokens`
 
-<a name="5.0.23"></a>
-🗓 20 5.0.23
+## 5.0.23
 
 🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.22...@spectrum-css/search@5.0.23)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.22"></a>
+## 5.0.22
 
-🗓 20
 🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.21...@spectrum-css/search@5.0.22)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.21"></a>
 
 ## 5.0.21
 
@@ -534,14 +472,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.20"></a>
-
 ## 5.0.20
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/search
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.19...@spectrum-css/search@5.0.20)
 
-<a name="5.0.19"></a>
+**Note:** Version bump only for package @spectrum-css/search
 
 ## 5.0.19
 
@@ -549,14 +484,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.18"></a>
+## 5.0.18
 
-🗓 20
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.17...@spectrum-css/search@5.0.18)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.17"></a>
 
 ## 5.0.17
 
@@ -564,15 +496,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.16"></a>
-
 ## 5.0.16
 
 🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.15...@spectrum-css/search@5.0.16)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.15"></a>
 
 ## 5.0.15
 
@@ -580,15 +508,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.14"></a>
-
 ## 5.0.14
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.13...@spectrum-css/search@5.0.14)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.13"></a>
 
 ## 5.0.13
 
@@ -596,15 +520,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.12"></a>
-
 ## 5.0.12
 
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.11...@spectrum-css/search@5.0.12)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.11"></a>
 
 ## 5.0.11
 
@@ -612,15 +532,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.10"></a>
-
 ## 5.0.10
 
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.9...@spectrum-css/search@5.0.10)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.9"></a>
 
 ## 5.0.9
 
@@ -628,15 +544,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.8"></a>
-
 ## 5.0.8
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.7...@spectrum-css/search@5.0.8)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.7"></a>
 
 ## 5.0.7
 
@@ -644,15 +556,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.6"></a>
-
 ## 5.0.6
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.5...@spectrum-css/search@5.0.6)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.5"></a>
 
 ## 5.0.5
 
@@ -660,15 +568,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.4"></a>
-
 ## 5.0.4
 
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.3...@spectrum-css/search@5.0.4)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.3"></a>
 
 ## 5.0.3
 
@@ -676,23 +580,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.2"></a>
-
 ## 5.0.2
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.0...@spectrum-css/search@5.0.2)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="5.0.1"></a>
-
 ## 5.0.1
 
 🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@5.0.0...@spectrum-css/search@5.0.1)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="5.0.0"></a>
 
 ## 5.0.0
 
@@ -706,15 +604,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
-<a name="4.2.25"></a>
-
 ## 4.2.25
 
 🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.24...@spectrum-css/search@4.2.25)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.24"></a>
 
 ## 4.2.24
 
@@ -722,15 +616,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.23"></a>
-
 ## 4.2.23
 
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.22...@spectrum-css/search@4.2.23)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.22"></a>
 
 ## 4.2.22
 
@@ -738,15 +628,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.21"></a>
-
 ## 4.2.21
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.20...@spectrum-css/search@4.2.21)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.20"></a>
 
 ## 4.2.20
 
@@ -754,15 +640,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.19"></a>
-
 ## 4.2.19
 
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.18...@spectrum-css/search@4.2.19)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.18"></a>
 
 ## 4.2.18
 
@@ -770,15 +652,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.17"></a>
-
 ## 4.2.17
 
 🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.15...@spectrum-css/search@4.2.17)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.16"></a>
 
 ## 4.2.16
 
@@ -786,15 +664,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.15"></a>
-
 ## 4.2.15
 
 🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.14...@spectrum-css/search@4.2.15)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.14"></a>
 
 ## 4.2.14
 
@@ -802,15 +676,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.13"></a>
-
 ## 4.2.13
 
 🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.12...@spectrum-css/search@4.2.13)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.12"></a>
 
 ## 4.2.12
 
@@ -818,15 +688,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.11"></a>
-
 ## 4.2.11
 
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.10...@spectrum-css/search@4.2.11)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.10"></a>
 
 ## 4.2.10
 
@@ -834,15 +700,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.9"></a>
-
 ## 4.2.9
 
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.8...@spectrum-css/search@4.2.9)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.8"></a>
 
 ## 4.2.8
 
@@ -850,15 +712,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.7"></a>
-
 ## 4.2.7
 
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.6...@spectrum-css/search@4.2.7)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.6"></a>
 
 ## 4.2.6
 
@@ -866,15 +724,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.5"></a>
-
 ## 4.2.5
 
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.4...@spectrum-css/search@4.2.5)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.4"></a>
 
 ## 4.2.4
 
@@ -882,15 +736,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.3"></a>
-
 ## 4.2.3
 
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.2...@spectrum-css/search@4.2.3)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.2"></a>
 
 ## 4.2.2
 
@@ -898,15 +748,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="4.2.1"></a>
-
 ## 4.2.1
 
 🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.0...@spectrum-css/search@4.2.1)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.2.0"></a>
 
 ## 4.2.0
 
@@ -920,33 +766,19 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 - update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
-<a name="4.1.0"></a>
-
 ## 4.1.0
 
-🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.1.0-beta.0...@spectrum-css/search@4.1.0)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.1.0-beta.0"></a>
-
-## 4.1.0-beta.0
-
-🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.0.1...@spectrum-css/search@4.1.0-beta.0)
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.0.1...@spectrum-css/search@4.1.0)
 
 ### ✨ Features
 
 - break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
-
-<a name="4.0.1"></a>
 
 ## 4.0.1
 
 🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.0.0...@spectrum-css/search@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="4.0.0"></a>
 
 ## 4.0.0
 
@@ -960,23 +792,17 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 - a new classname is required to enable this. See migration guide
 
-<a name="3.1.2"></a>
-
 ## 3.1.2
 
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.1.1...@spectrum-css/search@3.1.2)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="3.1.1"></a>
-
 ## 3.1.1
 
 🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.1.0...@spectrum-css/search@3.1.1)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.1.0"></a>
 
 ## 3.1.0
 
@@ -986,77 +812,19 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 - make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
 
-<a name="3.0.5"></a>
-
 ## 3.0.5
 
 🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.4...@spectrum-css/search@3.0.5)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="3.0.3"></a>
-
 ## 3.0.3
 
-🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.3-alpha.5...@spectrum-css/search@3.0.3)
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.2...@spectrum-css/search@3.0.3)
 
 ### 🐛 Bug fixes
 
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="3.0.3-alpha.5"></a>
-
-## 3.0.3-alpha.5
-
-🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.3-alpha.4...@spectrum-css/search@3.0.3-alpha.5)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.3-alpha.4"></a>
-
-## 3.0.3-alpha.4
-
-🗓 2021-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.3-alpha.3...@spectrum-css/search@3.0.3-alpha.4)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.3-alpha.3"></a>
-
-## 3.0.3-alpha.3
-
-🗓 2021-07-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.3-alpha.2...@spectrum-css/search@3.0.3-alpha.3)
-
-### 🐛 Bug fixes
-
-- missing validation icon ([613e849](https://github.com/adobe/spectrum-css/commit/613e849))
-
-<a name="3.0.3-alpha.2"></a>
-
-## 3.0.3-alpha.2
-
-🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.3-alpha.1...@spectrum-css/search@3.0.3-alpha.2)
-
-### 🐛 Bug fixes
-
-- search quiet clear button positioning ([41a4a13](https://github.com/adobe/spectrum-css/commit/41a4a13))
-
-<a name="3.0.3-alpha.1"></a>
-
-## 3.0.3-alpha.1
-
-🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.3-alpha.0...@spectrum-css/search@3.0.3-alpha.1)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.3-alpha.0"></a>
-
-## 3.0.3-alpha.0
-
-🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.2...@spectrum-css/search@3.0.3-alpha.0)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.2"></a>
 
 ## 3.0.2
 
@@ -1064,106 +832,23 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="3.0.1"></a>
-
 ## 3.0.1
 
 🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0...@spectrum-css/search@3.0.1)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="3.0.0"></a>
-
 ## 3.0.0
 
-🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0-beta.7...@spectrum-css/search@3.0.0)
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@2.0.6...@spectrum-css/search@3.0.0)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.0-beta.7"></a>
-
-## 3.0.0-beta.7
-
-🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0-beta.6...@spectrum-css/search@3.0.0-beta.7)
-
-### 🐛 Bug fixes
-
-- make Search build again ([231be73](https://github.com/adobe/spectrum-css/commit/231be73))
-- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
-
-<a name="3.0.0-beta.6"></a>
-
-## 3.0.0-beta.6
-
-🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0-beta.5...@spectrum-css/search@3.0.0-beta.6)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.0-beta.5"></a>
-
-## 3.0.0-beta.5
-
-🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0-beta.4...@spectrum-css/search@3.0.0-beta.5)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.0-beta.4"></a>
-
-## 3.0.0-beta.4
-
-🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0-beta.3...@spectrum-css/search@3.0.0-beta.4)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.0-beta.3"></a>
-
-## 3.0.0-beta.3
-
-🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0-beta.2...@spectrum-css/search@3.0.0-beta.3)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.0-beta.2"></a>
-
-## 3.0.0-beta.2
-
-🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0-beta.1...@spectrum-css/search@3.0.0-beta.2)
-
-**Note:** Version bump only for package @spectrum-css/search
-
-<a name="3.0.0-beta.1"></a>
-
-## 3.0.0-beta.1
-
-🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.0-beta.0...@spectrum-css/search@3.0.0-beta.1)
-
-### ✨ Features
-
-- make Search use new Textfield markup ([fc23c51](https://github.com/adobe/spectrum-css/commit/fc23c51)), closes [#457](https://github.com/adobe/spectrum-css/issues/457)
-
-### 🛑 BREAKING CHANGES
-
-- migrated to next Textfield markup
-
-<a name="3.0.0-beta.0"></a>
-
-## 3.0.0-beta.0
-
-🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@2.0.6...@spectrum-css/search@3.0.0-beta.0)
-
-### ✨ Features
-
-- make Search support RTL ([dea3233](https://github.com/adobe/spectrum-css/commit/dea3233))
-
-<a name="2.0.6"></a>
 
 ## 2.0.6
 
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@2.0.5...@spectrum-css/search@2.0.6)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="2.0.5"></a>
 
 ## 2.0.5
 
@@ -1173,15 +858,11 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 - color of disabled Search icon on hover/active/focus ([#483](https://github.com/adobe/spectrum-css/issues/483)) ([a928e3f](https://github.com/adobe/spectrum-css/commit/a928e3f))
 
-<a name="2.0.4"></a>
-
 ## 2.0.4
 
 🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@2.0.3...@spectrum-css/search@2.0.4)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="2.0.3"></a>
 
 ## 2.0.3
 
@@ -1191,23 +872,17 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 - correct Search icon color on hover/down/focus, fixes [#409](https://github.com/adobe/spectrum-css/issues/409) ([#429](https://github.com/adobe/spectrum-css/issues/429)) ([d63b887](https://github.com/adobe/spectrum-css/commit/d63b887))
 
-<a name="2.0.2"></a>
-
 ## 2.0.2
 
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@2.0.1...@spectrum-css/search@2.0.2)
 
 **Note:** Version bump only for package @spectrum-css/search
 
-<a name="2.0.1"></a>
-
 ## 2.0.1
 
 🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@2.0.0...@spectrum-css/search@2.0.1)
 
 **Note:** Version bump only for package @spectrum-css/search
-
-<a name="2.0.0"></a>
 
 ## 2.0.0
 

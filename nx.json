@@ -8,21 +8,64 @@
 		}
 	},
 	"namedInputs": {
-		"core": ["{projectRoot}/*.css"],
-		"eslint": ["{workspaceRoot}/.eslintrc"],
-		"metadata": ["{projectRoot}/metadata/*.json"],
-		"prettier": ["{workspaceRoot}/.prettierrc"],
-		"scripts": ["{projectRoot}/stories/*.js"],
+		"builder": [
+			"{workspaceRoot}/tasks/component-builder.js",
+			"{workspaceRoot}/tasks/utilities.js",
+			{
+				"externalDependencies": [
+					"zlib",
+					"util",
+					"postcss",
+					"postcss-load-config",
+					"prettier",
+					"colors",
+					"fast-glob",
+					"postcss-values-parser"
+				]
+			}
+		],
+		"docs": ["{projectRoot}/*.{md,mdx}", "{projectRoot}/**/*.{md,mdx}"],
+		"eslint": [
+			"{workspaceRoot}/.eslintrc",
+			{ "externalDependencies": ["eslint"] }
+		],
+		"markdownlint": [
+			"{workspaceRoot}/.markdownlint.json",
+			{ "externalDependencies": ["markdownlint", "markdownlint-cli"] }
+		],
+		"postcss": [
+			"{workspaceRoot}/postcss.config.js",
+			"{workspaceRoot}/plugins/postcss-*/index.js",
+			{ "externalDependencies": ["postcss"] }
+		],
+		"prettier": [
+			"{workspaceRoot}/.prettierrc",
+			{ "externalDependencies": ["prettier"] }
+		],
+		"reporter": [
+			"{workspaceRoot}/tasks/component-reporter.js",
+			"{workspaceRoot}/tasks/utilities.js",
+			{
+				"externalDependencies": [
+					"zlib",
+					"util",
+					"postcss",
+					"postcss-load-config",
+					"prettier",
+					"colors",
+					"fast-glob",
+					"postcss-values-parser"
+				]
+			}
+		],
+		"stories": ["{projectRoot}/stories/*.js"],
 		"stylelint": [
 			"{workspaceRoot}/.stylelintignore",
 			"{workspaceRoot}/stylelint.config.js",
-			"{workspaceRoot}/plugins/stylelint-*/index.js"
+			"{workspaceRoot}/plugins/stylelint-*/index.js",
+			{ "externalDependencies": ["stylelint"] }
 		],
-		"tools": [
-			"{projectRoot}/*.json",
-			"{workspaceRoot}/postcss.config.js",
-			"{workspaceRoot}/plugins/postcss-*/index.js"
-		]
+		"styles": ["{projectRoot}/*.css"]
 	},
 	"pluginsConfig": {
 		"@nx/js": {
@@ -32,19 +75,13 @@
 	"targetDefaults": {
 		"build": {
 			"cache": true,
-			"dependsOn": [
-				"^build",
-				"clean",
-				{ "projects": "tokens", "target": "build" }
-			],
+			"dependsOn": ["^build", "clean"],
 			"executor": "nx:run-commands",
 			"inputs": [
-				"core",
-				"tools",
+				"styles",
+				"builder",
+				"postcss",
 				"stylelint",
-				"{workspaceRoot}/tasks/component-builder.js",
-				"!{projectRoot}/stories/*.js",
-				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],
 			"options": {
@@ -52,28 +89,16 @@
 					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-builder.js\").default()'"
 				]
 			},
-			"outputs": [
-				"{projectRoot}/dist/*.{css,json}",
-				"{projectRoot}/dist/*.map"
-			]
+			"outputs": ["{projectRoot}/dist/*.css", "{projectRoot}/dist/*.map"]
 		},
 		"clean": {
 			"cache": true,
 			"executor": "nx:run-commands",
-			"inputs": [
-				"{projectRoot}/dist/*.{css,json}",
-				"{projectRoot}/dist/**/*.{css,json}",
-				"{projectRoot}/dist/*.map",
-				"{projectRoot}/dist/**/*.map",
-				{ "externalDependencies": ["rimraf"] }
-			],
+			"inputs": ["{projectRoot}/dist/*.css", "{projectRoot}/dist/*.map", { "externalDependencies": ["rimraf"] }],
 			"options": {
-				"commands": [
-					"rimraf {projectRoot}/dist/*.css*"
-				],
-				"parallel": false
+				"commands": ["rimraf {projectRoot}/dist/*.css {projectRoot}/dist/*.map"]
 			},
-			"outputs": []
+			"outputs": ["{projectRoot}/dist"]
 		},
 		"compare": {
 			"cache": true,
@@ -103,24 +128,26 @@
 					"node --no-warnings ./tasks/compare-compiled-output.js $NX_TASK_TARGET_PROJECT"
 				]
 			},
-			"outputs": ["{workspaceRoot}/.diff-output"]
+			"outputs": ["{workspaceRoot}/.diff-output/**"]
 		},
 		"format": {
 			"cache": true,
 			"executor": "nx:run-commands",
 			"inputs": [
-				"core",
-				"scripts",
+				"styles",
+				"postcss",
 				"stylelint",
+				"stories",
 				"eslint",
+				"docs",
 				"prettier",
-				{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
+				"markdownlint"
 			],
 			"options": {
 				"commands": [
-					"stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
+					"stylelint --fix --cache --allow-empty-input {projectRoot}/*.css",
 					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js",
-					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx}"
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.md {projectRoot}/**/*.{md,mdx} && markdownlint --fix --config .markdownlint.json {projectRoot}/*.md {projectRoot}/**/*.{md,mdx}"
 				]
 			}
 		},
@@ -128,17 +155,20 @@
 			"cache": true,
 			"executor": "nx:run-commands",
 			"inputs": [
-				"core",
-				"scripts",
+				"styles",
+				"postcss",
 				"stylelint",
+				"stories",
 				"eslint",
+				"docs",
 				"prettier",
-				{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
+				"markdownlint"
 			],
 			"options": {
 				"commands": [
 					"stylelint --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables {projectRoot}/*.css {projectRoot}/**/*.css --ignore-pattern {projectRoot}/dist",
-					"eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives {projectRoot}/*.{js,json} {projectRoot}/**/*.{js,json} --ignore-pattern {projectRoot}/dist || exit 0"
+					"eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives {projectRoot}/*.{js,json} {projectRoot}/**/*.{js,json} --ignore-pattern {projectRoot}/dist || exit 0",
+					"markdownlint --config .markdownlint.json {projectRoot}/*.md {projectRoot}/**/*.{md,mdx}"
 				]
 			}
 		},
@@ -146,19 +176,17 @@
 			"cache": true,
 			"executor": "nx:run-commands",
 			"inputs": [
-				"core",
-				"tools",
+				"styles",
+				"postcss",
 				"stylelint",
-				"{workspaceRoot}/tasks/component-report.js"
+				"reporter"
 			],
 			"options": {
 				"commands": [
 					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
 				]
 			},
-			"outputs": [
-				"{projectRoot}/dist/metadata.json"
-			]
+			"outputs": ["{projectRoot}/dist/metadata.json"]
 		},
 		"test": {
 			"cache": true,
@@ -180,7 +208,7 @@
 				}
 			},
 			"executor": "nx:run-commands",
-			"inputs": ["scripts", "tools", { "externalDependencies": ["chromatic"] }],
+			"inputs": ["styles", "stories", { "externalDependencies": ["chromatic"] }],
 			"options": {
 				"commands": [
 					"chromatic --only-changed --build-script-name build --junit-report"
@@ -197,7 +225,7 @@
 			],
 			"options": {
 				"commands": [
-					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/dist/metadata.json\" || exit 0"
+					"test -e {projectRoot}/dist/metadata.json && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/dist/metadata.json\" || exit 0"
 				]
 			}
 		}
