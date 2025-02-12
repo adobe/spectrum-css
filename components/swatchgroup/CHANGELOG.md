@@ -1,5 +1,25 @@
 # Change Log
 
+## 5.1.0
+
+### Minor Changes
+
+- [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## New feature
+
+Minified and gzipped outputs available for all compiled CSS assets.
+
+### Patch Changes
+
+- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Dependency alignment across the project.
+
+- Updated dependencies [[`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee), [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d), [`7bd5e4b`](https://github.com/adobe/spectrum-css/commit/7bd5e4be4fcd9de7b09f1d90bc590b0af35faee0)]:
+  - @spectrum-css/swatch@9.0.0
+  - @spectrum-css/tokens@16.0.1
+
 ## 5.0.1
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # Change Log
 
+## 12.0.2
+
+### Patch Changes
+
+- [#3528](https://github.com/adobe/spectrum-css/pull/3528) [`bee70fb`](https://github.com/adobe/spectrum-css/commit/bee70fbab5f12b49ce2611366b614c75277e0aa9) Thanks [@castastrophe](https://github.com/castastrophe)! - Update fetchToken to use the exported JSON from @spectrum-css/tokens instead of @adobe/spectrum-tokens
+
+- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)! - Dependency alignment across the project.
+
+  Set component peerDependencies as optional to reduce console warnings on downstream projects.
+
+- Updated dependencies [[`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
+  - @spectrum-css/tokens@16.0.1
+  - @spectrum-css/bundle@1.0.0
+
 ## 12.0.1
 
 ### Patch Changes
