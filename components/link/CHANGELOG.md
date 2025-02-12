@@ -1,8 +1,5 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## 7.1.0
 
 ### Minor Changes
@@ -26,45 +23,49 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes a bug in the content of the `dist/index-theme.css` file.
+- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
+Fixes a bug in the content of the `dist/index-theme.css` file.
 
-  Expected output example for the index-theme.css:
+Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
 
-  ```
-  .spectrum-ActionButton {
-   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
-   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
-  ```
+Expected output example for the index-theme.css:
+
+```css
+.spectrum-ActionButton {
+  --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+  --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+```
 
 ## 7.0.0
 
 ### Major Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)!
 
-  This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
+### 🛑 Breaking change
 
-  For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
+This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
 
-  For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
+For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
 
-  If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
+For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
 
-  ### Deprecations
+If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
 
-  The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
+### Deprecations
 
-  The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
+The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
 
-  ### File usage
+The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
 
-  If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
+### File usage
 
-  If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
 
-  To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
+If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+
+To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
 
 ### Patch Changes
 
@@ -137,8 +138,6 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Updated peerDependencies [[`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d)]:
   - @spectrum-css/tokens@>=14
 
-<a name="5.0.0"></a>
-
 ## 5.0.0
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.2.5...@spectrum-css/link@5.0.0)
@@ -150,14 +149,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
-<a name="4.2.5"></a>
-
 ## 4.2.5
 
 🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.2.4...@spectrum-css/link@4.2.5)
-**Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.2.4"></a>
+**Note:** Version bump only for package @spectrum-css/link
 
 ## 4.2.4
 
@@ -165,15 +161,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.2.3"></a>
-
 ## 4.2.3
 
 🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.2.2...@spectrum-css/link@4.2.3)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.2.2"></a>
 
 ## 4.2.2
 
@@ -181,24 +173,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.2.1"></a>
-
 ## 4.2.1
 
-🗓 2024-02-06
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.2.0...@spectrum-css/link@4.2.1)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.2.0"></a>
 
 ## 4.2.0
 
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.1.0...@spectrum-css/link@4.2.0)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.1.0...@spectrum-css/link@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.1.0"></a>
 
 ## 4.1.0
 
@@ -208,32 +193,22 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
-<a name="4.0.75"></a>
-
 ## 4.0.75
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.74...@spectrum-css/link@4.0.75)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.74...@spectrum-css/link@4.0.75)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.74"></a>
 
 ## 4.0.74
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.73...@spectrum-css/link@4.0.74)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.73...@spectrum-css/link@4.0.74)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.73"></a>
 
 ## 4.0.73
 
 🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.71...@spectrum-css/link@4.0.73)
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.72"></a>
 
 ## 4.0.72
 
@@ -241,15 +216,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.71"></a>
-
 ## 4.0.71
 
 🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.70...@spectrum-css/link@4.0.71)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.70"></a>
 
 ## 4.0.70
 
@@ -257,24 +228,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.69"></a>
-
 ## 4.0.69
 
 🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.68...@spectrum-css/link@4.0.69)
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.68"></a>
-
 ## 4.0.68
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.67...@spectrum-css/link@4.0.68)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.67...@spectrum-css/link@4.0.68)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.67"></a>
 
 ## 4.0.67
 
@@ -282,24 +246,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.66"></a>
-
 ## 4.0.66
 
 🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.65...@spectrum-css/link@4.0.66)
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.65"></a>
-
 ## 4.0.65
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.64...@spectrum-css/link@4.0.65)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.64...@spectrum-css/link@4.0.65)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.64"></a>
 
 ## 4.0.64
 
@@ -307,15 +264,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.63"></a>
-
 ## 4.0.63
 
 🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.62...@spectrum-css/link@4.0.63)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.62"></a>
 
 ## 4.0.62
 
@@ -323,9 +276,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
-
-<a name="4.0.61"></a>
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 ## 4.0.61
 
@@ -333,15 +284,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.60"></a>
-
 ## 4.0.60
 
 🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.58...@spectrum-css/link@4.0.60)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.59"></a>
 
 ## 4.0.59
 
@@ -349,15 +296,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.58"></a>
-
 ## 4.0.58
 
 🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.57...@spectrum-css/link@4.0.58)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.57"></a>
 
 ## 4.0.57
 
@@ -365,21 +308,16 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.56"></a>
-
 ## 4.0.56
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/link
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.55...@spectrum-css/link@4.0.56)
 
-<a name="4.0.55"></a>
+**Note:** Version bump only for package @spectrum-css/link
 
 ## 4.0.55
 
 🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.54...@spectrum-css/link@4.0.55)
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.54"></a>
 
 ## 4.0.54
 
@@ -387,15 +325,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.53"></a>
-
 ## 4.0.53
 
 🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.52...@spectrum-css/link@4.0.53)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.52"></a>
 
 ## 4.0.52
 
@@ -403,24 +337,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.51"></a>
-
 ## 4.0.51
 
 🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.50...@spectrum-css/link@4.0.51)
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.50"></a>
-
 ## 4.0.50
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.49...@spectrum-css/link@4.0.50)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.49...@spectrum-css/link@4.0.50)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.49"></a>
 
 ## 4.0.49
 
@@ -428,26 +355,19 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.48"></a>
-
 ## 4.0.48
 
 🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.47...@spectrum-css/link@4.0.48)
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.47"></a>
-
 ## 4.0.47
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.46...@spectrum-css/link@4.0.47)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.46...@spectrum-css/link@4.0.47)
 
 ### 🐛 Bug fixes
 
 - restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
-
-<a name="4.0.46"></a>
 
 ## 4.0.46
 
@@ -455,16 +375,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.45"></a>
-
 ## 4.0.45
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.44...@spectrum-css/link@4.0.45)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.44...@spectrum-css/link@4.0.45)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.44"></a>
 
 ## 4.0.44
 
@@ -472,15 +387,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.43"></a>
-
 ## 4.0.43
 
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.42...@spectrum-css/link@4.0.43)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.42"></a>
 
 ## 4.0.42
 
@@ -488,15 +399,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.41"></a>
-
 ## 4.0.41
 
 🗓 2023-05-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.40...@spectrum-css/link@4.0.41)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.40"></a>
 
 ## 4.0.40
 
@@ -504,15 +411,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.39"></a>
-
 ## 4.0.39
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.38...@spectrum-css/link@4.0.39)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.38"></a>
 
 ## 4.0.38
 
@@ -520,15 +423,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.37"></a>
-
 ## 4.0.37
 
 🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.36...@spectrum-css/link@4.0.37)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.36"></a>
 
 ## 4.0.36
 
@@ -536,15 +435,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.35"></a>
-
 ## 4.0.35
 
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.34...@spectrum-css/link@4.0.35)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.34"></a>
 
 ## 4.0.34
 
@@ -552,15 +447,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.33"></a>
-
 ## 4.0.33
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.31...@spectrum-css/link@4.0.33)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.32"></a>
 
 ## 4.0.32
 
@@ -568,15 +459,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.31"></a>
-
 ## 4.0.31
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.30...@spectrum-css/link@4.0.31)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.30"></a>
 
 ## 4.0.30
 
@@ -584,15 +471,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.29"></a>
-
 ## 4.0.29
 
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.28...@spectrum-css/link@4.0.29)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.28"></a>
 
 ## 4.0.28
 
@@ -600,15 +483,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.27"></a>
-
 ## 4.0.27
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.25...@spectrum-css/link@4.0.27)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.26"></a>
 
 ## 4.0.26
 
@@ -616,15 +495,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.25"></a>
-
 ## 4.0.25
 
 🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.23...@spectrum-css/link@4.0.25)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.24"></a>
 
 ## 4.0.24
 
@@ -632,15 +507,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.23"></a>
-
 ## 4.0.23
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.22...@spectrum-css/link@4.0.23)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.22"></a>
 
 ## 4.0.22
 
@@ -648,15 +519,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.21"></a>
-
 ## 4.0.21
 
 🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.20...@spectrum-css/link@4.0.21)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.20"></a>
 
 ## 4.0.20
 
@@ -664,15 +531,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.19"></a>
-
 ## 4.0.19
 
 🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.18...@spectrum-css/link@4.0.19)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.18"></a>
 
 ## 4.0.18
 
@@ -680,15 +543,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.17"></a>
-
 ## 4.0.17
 
 🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.16...@spectrum-css/link@4.0.17)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.16"></a>
 
 ## 4.0.16
 
@@ -696,15 +555,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.15"></a>
-
 ## 4.0.15
 
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.14...@spectrum-css/link@4.0.15)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.14"></a>
 
 ## 4.0.14
 
@@ -712,15 +567,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.13"></a>
-
 ## 4.0.13
 
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.12...@spectrum-css/link@4.0.13)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.12"></a>
 
 ## 4.0.12
 
@@ -728,15 +579,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.11"></a>
-
 ## 4.0.11
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.10...@spectrum-css/link@4.0.11)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.10"></a>
 
 ## 4.0.10
 
@@ -744,15 +591,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.9"></a>
-
 ## 4.0.9
 
 🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.8...@spectrum-css/link@4.0.9)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.8"></a>
 
 ## 4.0.8
 
@@ -760,15 +603,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.7"></a>
-
 ## 4.0.7
 
 🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.6...@spectrum-css/link@4.0.7)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.6"></a>
 
 ## 4.0.6
 
@@ -776,15 +615,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.5"></a>
-
 ## 4.0.5
 
 🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.4...@spectrum-css/link@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.4"></a>
 
 ## 4.0.4
 
@@ -794,8 +629,6 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - **link:** correct highcontrast custom properties ([#1562](https://github.com/adobe/spectrum-css/issues/1562)) ([e76b2b4](https://github.com/adobe/spectrum-css/commit/e76b2b4))
 
-<a name="4.0.3"></a>
-
 ## 4.0.3
 
 🗓 2022-12-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.2...@spectrum-css/link@4.0.3)
@@ -804,23 +637,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - **link:** correct highcontrast custom properties ([#1562](https://github.com/adobe/spectrum-css/issues/1562)) ([e76b2b4](https://github.com/adobe/spectrum-css/commit/e76b2b4))
 
-<a name="4.0.2"></a>
-
 ## 4.0.2
 
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.1...@spectrum-css/link@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="4.0.1"></a>
-
 ## 4.0.1
 
 🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.0...@spectrum-css/link@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="4.0.0"></a>
 
 ## 4.0.0
 
@@ -836,15 +663,11 @@ refactor: remove t-shirt sizes
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
-<a name="3.1.23"></a>
-
 ## 3.1.23
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.22...@spectrum-css/link@3.1.23)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.22"></a>
 
 ## 3.1.22
 
@@ -852,15 +675,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.21"></a>
-
 ## 3.1.21
 
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.20...@spectrum-css/link@3.1.21)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.20"></a>
 
 ## 3.1.20
 
@@ -868,15 +687,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.19"></a>
-
 ## 3.1.19
 
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.18...@spectrum-css/link@3.1.19)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.18"></a>
 
 ## 3.1.18
 
@@ -884,15 +699,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.17"></a>
-
 ## 3.1.17
 
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.16...@spectrum-css/link@3.1.17)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.16"></a>
 
 ## 3.1.16
 
@@ -900,15 +711,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.15"></a>
-
 ## 3.1.15
 
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.14...@spectrum-css/link@3.1.15)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.14"></a>
 
 ## 3.1.14
 
@@ -916,15 +723,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.13"></a>
-
 ## 3.1.13
 
 🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.12...@spectrum-css/link@3.1.13)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.12"></a>
 
 ## 3.1.12
 
@@ -934,23 +737,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
-<a name="3.1.11"></a>
-
 ## 3.1.11
 
-🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.11-beta.0...@spectrum-css/link@3.1.11)
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.10...@spectrum-css/link@3.1.11)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.11-beta.0"></a>
-
-## 3.1.11-beta.0
-
-🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.10...@spectrum-css/link@3.1.11-beta.0)
-
-**Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.10"></a>
 
 ## 3.1.10
 
@@ -958,15 +749,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.9"></a>
-
 ## 3.1.9
 
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.8...@spectrum-css/link@3.1.9)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.8"></a>
 
 ## 3.1.8
 
@@ -974,15 +761,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.7"></a>
-
 ## 3.1.7
 
 🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.6...@spectrum-css/link@3.1.7)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.6"></a>
 
 ## 3.1.6
 
@@ -990,58 +773,20 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.5"></a>
-
 ## 3.1.5
 
 🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.4...@spectrum-css/link@3.1.5)
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.3"></a>
-
 ## 3.1.3
 
-🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.3-alpha.3...@spectrum-css/link@3.1.3)
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.2...@spectrum-css/link@3.1.3)
 
 ### 🐛 Bug fixes
 
 - secondary links use high contrast mode colours ([433c74c](https://github.com/adobe/spectrum-css/commit/433c74c))
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="3.1.3-alpha.3"></a>
-
-## 3.1.3-alpha.3
-
-🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.3-alpha.2...@spectrum-css/link@3.1.3-alpha.3)
-
-**Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.3-alpha.2"></a>
-
-## 3.1.3-alpha.2
-
-🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.3-alpha.1...@spectrum-css/link@3.1.3-alpha.2)
-
-**Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.3-alpha.1"></a>
-
-## 3.1.3-alpha.1
-
-🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.3-alpha.0...@spectrum-css/link@3.1.3-alpha.1)
-
-**Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.3-alpha.0"></a>
-
-## 3.1.3-alpha.0
-
-🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.2...@spectrum-css/link@3.1.3-alpha.0)
-
-**Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.1.2"></a>
 
 ## 3.1.2
 
@@ -1049,57 +794,19 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.1"></a>
-
 ## 3.1.1
 
 🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.0...@spectrum-css/link@3.1.1)
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="3.1.0"></a>
-
 ## 3.1.0
 
-🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.0-beta.0...@spectrum-css/link@3.1.0)
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.0.0...@spectrum-css/link@3.1.0)
 
 ### 🐛 Bug fixes
 
 - link shouldn't remap color variables, fixes [#1108](https://github.com/adobe/spectrum-css/issues/1108) ([#1110](https://github.com/adobe/spectrum-css/issues/1110)) ([52dc759](https://github.com/adobe/spectrum-css/commit/52dc759))
-
-<a name="3.1.0-beta.0"></a>
-
-## 3.1.0-beta.0
-
-🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.0.1-beta.1...@spectrum-css/link@3.1.0-beta.0)
-
-### ✨ Features
-
-- implement t-shirt sizing for Link, closes [#1066](https://github.com/adobe/spectrum-css/issues/1066) ([d8be754](https://github.com/adobe/spectrum-css/commit/d8be754))
-
-### 🐛 Bug fixes
-
-- make Link build again ([19513a3](https://github.com/adobe/spectrum-css/commit/19513a3))
-
-<a name="3.0.1-beta.1"></a>
-
-## 3.0.1-beta.1
-
-🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.0.1-beta.0...@spectrum-css/link@3.0.1-beta.1)
-
-**Note:** Version bump only for package @spectrum-css/link
-
-<a name="3.0.1-beta.0"></a>
-
-## 3.0.1-beta.0
-
-🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.0.0...@spectrum-css/link@3.0.1-beta.0)
-
-### 🐛 Bug fixes
-
-- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
-
-<a name="3.0.0"></a>
 
 ## 3.0.0
 
@@ -1123,15 +830,11 @@ Co-authored-by: Aleksandra Ljubenovic <pst67662@adobe.com>
 Co-authored-by: Jian Liao <jianliao@adobe.com>
 Co-authored-by: Larry Davis <lawdavis@adobe.com>
 
-<a name="2.0.6"></a>
-
 ## 2.0.6
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@2.0.5...@spectrum-css/link@2.0.6)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="2.0.5"></a>
 
 ## 2.0.5
 
@@ -1139,15 +842,11 @@ Co-authored-by: Larry Davis <lawdavis@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="2.0.4"></a>
-
 ## 2.0.4
 
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@2.0.3...@spectrum-css/link@2.0.4)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="2.0.3"></a>
 
 ## 2.0.3
 
@@ -1155,23 +854,17 @@ Co-authored-by: Larry Davis <lawdavis@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="2.0.2"></a>
-
 ## 2.0.2
 
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@2.0.1...@spectrum-css/link@2.0.2)
 
 **Note:** Version bump only for package @spectrum-css/link
 
-<a name="2.0.1"></a>
-
 ## 2.0.1
 
 🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@2.0.0...@spectrum-css/link@2.0.1)
 
 **Note:** Version bump only for package @spectrum-css/link
-
-<a name="2.0.0"></a>
 
 ## 2.0.0
 
