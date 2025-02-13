@@ -1,5 +1,27 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## New feature
+
+Minified and gzipped outputs available for all compiled CSS assets.
+
+### Patch Changes
+
+- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Dependency alignment across the project.
+
+Set component peerDependencies as optional to reduce console warnings on downstream projects.
+
+- Updated dependencies [[`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee), [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
+  - @spectrum-css/icon@9.1.0
+  - @spectrum-css/tokens@16.0.1
+
 ## 7.0.1
 
 ### Patch Changes
@@ -10,11 +32,11 @@
 
   Expected output example for the index-theme.css:
 
-  ```
-  .spectrum-ActionButton {
-   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
-   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
-  ```
+```css
+.spectrum-ActionButton {
+  --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+  --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+```
 
 - Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
   - @spectrum-css/icon@9.0.1
