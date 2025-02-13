@@ -84,14 +84,12 @@ export default {
 		iconSet: "workflow",
 		popoverPlacement: "bottom-start",
 		title: "Permission required",
-		body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		body: "Your admin must grant you permission before you can create a new document. Please contact your admin for more information.",
 		customStyles: { "inline-size": "275px" },
 	},
 	parameters: {
 		actions: {
-			handles: [
-				...(ActionButtonStories?.parameters?.actions?.handles ?? [])
-			],
+			handles: [...(ActionButtonStories?.parameters?.actions?.handles ?? [])],
 		},
 		design: {
 			type: "figma",
@@ -132,9 +130,25 @@ WithLink.parameters = {
 };
 WithLink.storyName = "Default - info icon with link";
 
-/**
- * This is an example of the contextual help component within a popover with a placement of `top`. Read more about the 22 available placement positions in the [popover documentation](/docs/components-popover--docs).
- */
+export const MaxWidthPopover = Template.bind({});
+MaxWidthPopover.tags = ["!dev"];
+MaxWidthPopover.args = {
+	customStyles: {
+		"inline-size": "275px",
+		"--mod-spectrum-contextual-help-popover-maximum-width": "180px",
+		"margin-bottom": "270px",
+	},
+};
+MaxWidthPopover.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "auto",
+		},
+	},
+};
+MaxWidthPopover.storyName = "Default - max width popover";
+
 export const TopPopover = Template.bind({});
 TopPopover.tags = ["!dev"];
 TopPopover.args = {
@@ -143,8 +157,6 @@ TopPopover.args = {
 		"inline-size": "275px",
 		"margin-top": "170px",
 	},
-	title: "Top popover example of text wrapping in the title",
-	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
 TopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -163,6 +175,7 @@ export const HelpDefault = Template.bind({});
 HelpDefault.tags = ["!dev"];
 HelpDefault.args = {
 	iconName: "Help",
+	title: "Need help?",
 };
 HelpDefault.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -177,6 +190,8 @@ HelpWithLink.args = {
 		url: "#",
 	},
 	iconName: "Help",
+	title: "Need help?",
+	body: "Reach out to your admin for help regarding the document you are trying to create.",
 };
 HelpWithLink.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -191,8 +206,8 @@ HelpTopPopover.args = {
 		"inline-size": "275px",
 		"margin-top": "170px",
 	},
-	title: "Top popover example of text wrapping in the title",
-	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	title: "Need help?",
+	body: "Reach out to your admin for help regarding the document you are trying to create.",
 	iconName: "Help",
 };
 HelpTopPopover.parameters = {
@@ -205,6 +220,28 @@ HelpTopPopover.parameters = {
 };
 HelpTopPopover.storyName = "Help icon - top popover";
 
+export const HelpMaxWidthPopover = Template.bind({});
+HelpMaxWidthPopover.tags = ["!dev"];
+HelpMaxWidthPopover.args = {
+	customStyles: {
+		"inline-size": "275px",
+		"--mod-spectrum-contextual-help-popover-maximum-width": "180px",
+		"margin-bottom": "270px",
+	},
+	title: "Need help?",
+	body: "Reach out to your admin for help regarding the document you are trying to create.",
+	iconName: "Help",
+};
+HelpMaxWidthPopover.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "auto",
+		},
+	},
+};
+HelpMaxWidthPopover.storyName = "Help icon - max width popover";
+
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ContextualHelpGroup.bind({});
 WithForcedColors.args = Default.args;
@@ -212,6 +249,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };
