@@ -11,7 +11,7 @@ import { uiIconsWithDirections, uniqueUiIconBaseNames, workflowSizes } from "./u
  * - Several workflow icons, at all sizes, with some set to a color
  * - All UI icons, organized within a grid by sizing number and name
  */
-export const TestTemplate = (args) => html`
+export const TestTemplate = (args, context) => html`
 	<div style=${styleMap({
 		"display": "flex",
 		"gap": "12px",
@@ -68,7 +68,7 @@ export const TestTemplate = (args) => html`
 						setName: "workflow",
 						size,
 						fill: idx % 5 === 0 ? "var(--spectrum-negative-content-color-default)" : undefined
-					}))}
+					}, context))}
 				`)}
 			</div>
 		</div>
@@ -112,7 +112,7 @@ export const TestTemplate = (args) => html`
 								setName: "ui",
 								useRef: false,
 								uiIconName: `${iconName}${scale}`,
-							});
+							}, context);
 						}
 					});
 					print.push(...output);

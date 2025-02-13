@@ -6,7 +6,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
-import { fetchIconDetails, getSpriteSheetName, uiIconsWithDirections, workflowIconsCleaned } from "./utilities.js";
+import { getSpriteSheetName, uiIconsCleaned, uiIconsWithDirections, workflowIconsCleaned } from "./utilities.js";
 
 import "../index.css";
 
@@ -16,7 +16,7 @@ import "../index.css";
  */
 
 /**
- * Template for rendering an icon
+ * Template for rendering an icon.
  * @description Icon template that renders an icon based on the provided icon name and set name.
  * @param {IconProps} props
  * @param {string} props.rootClass
@@ -39,48 +39,13 @@ export const Template = ({
 	fill,
 	id = getRandomId("icon"),
 	customClasses = [],
-	icons,
 	useRef = true,
-	workflowIcons,
-	uiIcons,
-	uiIconSizes,
 } = {}, context = {}) => {
-	const { loaded = {} } = context;
+	// All icons SVG markup from the global IconLoader are in loaded.icons
+	const { loaded } = context;
 
-	// Fetch the list of all icons and icon sizes, if they are not already passed through as args.
-	if (!workflowIcons || !uiIcons || !uiIconSizes) {
-		const details = fetchIconDetails({
-			icons: loaded.icons,
-			workflowIcons,
-			uiIcons,
-			uiIconSizes
-		});
-
-		if (details.icons) {
-			icons = details.icons;
-		}
-
-		if (!workflowIcons && details.workflowIcons) {
-			workflowIcons = details.workflowIcons;
-		}
-
-		if (!uiIcons && details.uiIcons) {
-			uiIcons = details.uiIcons;
-		}
-
-		if (!uiIconSizes && details.uiIconSizes) {
-			uiIconSizes = details.uiIconSizes;
-		}
-	}
-
-	if (uiIcons.length === 0) {
-		console.error("The uiIcons array is empty.");
-	}
-	if (workflowIcons.length === 0) {
-		console.error("The workflowIcons array is empty.");
-	}
-
-	// UI icons are selected from a different control.
+	// Treat "iconName" as the icon name regardless of the icon set.
+	// UI icons are selected from a different control and arg.
 	if (setName === "ui" && uiIconName) {
 		iconName = uiIconName;
 	}
@@ -133,7 +98,7 @@ export const Template = ({
 			// if not, strip it from the key.
 			(
 				idKey.match(/\d{2,3}$/) &&
-				!uiIcons.includes(idKey)
+				!uiIconsCleaned.includes(idKey)
 			)
 		)
 	) {
@@ -189,7 +154,7 @@ export const Template = ({
 		iconName = iconName.replace(/\d{2,3}$/, "");
 		iconName += sizeVal;
 
-		if (!uiIcons.includes(idKey)) {
+		if (!uiIconsCleaned.includes(idKey)) {
 			console.error(`The UI icon "${idKey}" does not exist in the list of available UI icons.`);
 		}
 	}
@@ -209,12 +174,12 @@ export const Template = ({
 	};
 
 	/**
-	 * Full SVG file markup (from loader data), when not using a reference to the sprite sheet.
+	 * Display full SVG file markup from global IconLoader data, when not using a reference to the sprite sheet.
 	 */
 	if (!useRef) {
 		let svgString;
-		if (icons && icons[setName]?.[idKey]) {
-			svgString = icons[setName][idKey];
+		if (loaded?.icons && loaded?.icons[setName]?.[idKey]) {
+			svgString = loaded.icons[setName][idKey];
 		}
 
 		// Return the individual SVG's entire markup.
@@ -229,7 +194,7 @@ export const Template = ({
 			)}`;
 		}
 		else {
-			console.warn(`Could not find SVG markup for "${idKey}". Falling back to using the sprite sheet reference instead.`);
+			console.warn(`Could not find SVG markup for "${idKey}" in context.loaded.icons. Did you pass through context? Falling back to using the sprite sheet reference instead.`);
 		}
 	}
 
@@ -254,7 +219,7 @@ export const Template = ({
 /**
  * Display all icons in the icon set within a grid.
  */
-export const FullIconSetTemplate = (args) => {
+export const FullIconSetTemplate = (args, context) => {
 	return html`
 		<div
 			style=${styleMap({
@@ -266,9 +231,9 @@ export const FullIconSetTemplate = (args) => {
 			})}
 		>
 			${when(args.setName === "workflow", () => {
-				return workflowIconsCleaned.sort().map((iconName) => IconWithLabelTemplate({ ...args, iconName }));
+				return workflowIconsCleaned.sort().map((iconName) => IconWithLabelTemplate({ ...args, iconName }, context));
 			}, () => {
-				return uiIconsWithDirections.sort().map((iconName) => IconWithLabelTemplate({ ...args, uiIconName: iconName }));
+				return uiIconsWithDirections.sort().map((iconName) => IconWithLabelTemplate({ ...args, uiIconName: iconName }, context));
 			})}
 		</div>
 	`;
@@ -277,7 +242,7 @@ export const FullIconSetTemplate = (args) => {
 /**
  * Display a single icon in the icon set with a label showing the icon name.
  */
-export const IconWithLabelTemplate = (args) => html`
+export const IconWithLabelTemplate = (args, context) => html`
 	<div
 		style=${styleMap({
 			"display": "flex",
@@ -294,7 +259,7 @@ export const IconWithLabelTemplate = (args) => html`
 			iconName: args?.iconName ?? undefined,
 			uiIconName: args?.uiIconName ?? undefined,
 			...args,
-		})}
+		}, context)}
 		${Typography({
 			customClasses: ["chromatic-ignore"],
 			semantics: "body",
@@ -309,7 +274,7 @@ export const IconWithLabelTemplate = (args) => html`
 /**
  * Helper template function to display multiple icons using an array of icon names.
  */
-export const IconListTemplate = (args, iconsList = []) => html`
+export const IconListTemplate = (args, context, iconsList = []) => html`
 	<div
 		style=${styleMap({
 			"display": "flex",
@@ -322,7 +287,7 @@ export const IconListTemplate = (args, iconsList = []) => html`
 				...args,
 				iconName: args?.setName === "workflow" ? iconName : undefined,
 				uiIconName: args?.setName === "ui" ? iconName : undefined,
-			})
+			}, context)
 		)}
 	</div>
 `;
@@ -330,13 +295,14 @@ export const IconListTemplate = (args, iconsList = []) => html`
 /**
  * Display examples of multiple workflow icons.
  */
-export const WorkflowDefaultTemplate = (args) => html`
+export const WorkflowDefaultTemplate = (args, context) => html`
 	${IconListTemplate(
 		{
 			...args,
 			setName: "workflow",
 			size: "xl",
 		},
+		context,
 		[
 			"AlertCircle",
 			"Bell",
@@ -357,12 +323,13 @@ export const WorkflowDefaultTemplate = (args) => html`
 /**
  * Display examples of all directions of a single UI arrow.
  */
-export const UIArrowsTemplate = (args) => html`
+export const UIArrowsTemplate = (args, context) => html`
 	${IconListTemplate(
 		{
 			...args,
 			setName: "ui",
 		},
+		context,
 		[
 			"ArrowRight100",
 			"ArrowLeft100",
@@ -375,13 +342,14 @@ export const UIArrowsTemplate = (args) => html`
 /**
  * Display examples of multiple UI icons.
  */
-export const UIDefaultTemplate = (args) => html`
+export const UIDefaultTemplate = (args, context) => html`
 	<div style="margin-bottom: 32px;">
 		${IconListTemplate(
 			{
 				...args,
 				setName: "ui",
 			},
+			context,
 			[
 				"Asterisk100",
 				"Asterisk200",
@@ -395,6 +363,7 @@ export const UIDefaultTemplate = (args) => html`
 				...args,
 				setName: "ui",
 			},
+			context,
 			[
 				"ChevronDown50",
 				"ChevronDown75",

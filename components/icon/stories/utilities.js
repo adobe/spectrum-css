@@ -15,6 +15,16 @@ export const cleanWorkflowIconName = (iconName) => (
 );
 
 /**
+ * Clean UI icon name to remove file extension and any unnecessary text.
+ *
+ * @param {string} iconName
+ * @returns {string}
+ */
+export const cleanUiIconName = (iconName) => (
+	iconName.replace(/\.svg$/, "")
+);
+
+/**
  * Get the ID of the icon within the sprite sheet.
  *
  * The sprite sheets are single SVG files containing all of the icons in the set, each with a
@@ -77,15 +87,15 @@ export const workflowIconsCleaned = (workflowIconOpts?.svg ?? [])
 /**
  * Sorted array with all UI icon names, without the file extension.
  */
-export const uiIcons = (uiIconOpts || [])
-	.map(iconName => iconName.replace(/\.svg$/, ""))
+export const uiIconsCleaned = (uiIconOpts || [])
+	.map(iconName => cleanUiIconName(iconName))
 	.sort(alphaNumericSort);
 
 /**
  * @description A custom alpha-numeric sort that helps keep the order of the sizing numbers at the end of the string.
  * @param {string} a
  * @param {string} b
- * @returns number
+ * @returns {number}
  */
 function alphaNumericSort(a, b) {
 	const aSet = a.match(/^([a-zA-Z]+)([0-9]+)(\.svg)?$/i);
@@ -106,8 +116,11 @@ function alphaNumericSort(a, b) {
 }
 
 /**
- * List of all UI icon names for CSS. Chevron and Arrow have directional suffixes
+ * Array of all UI icon names for CSS. Chevron and Arrow have directional suffixes
  * for rotating the same base icon, e.g. Arrow becomes ArrowRight, ArrowDown, etc.
+ *
+ * @param {string[]} uiIcons Array of icon names.
+ * @returns {string[]}
  */
 export const getUiIconsWithDirections = (uiIcons) => [
 	...uiIcons.filter((c) => !["Chevron", "Arrow"].some(prefix => c.startsWith(prefix))),
@@ -118,90 +131,62 @@ export const getUiIconsWithDirections = (uiIcons) => [
 ].sort(alphaNumericSort);
 
 /**
- * List of all UI icon names for CSS. Including sizing numbers and directional suffixes.
+ * Array of all cleaned UI icon names for CSS. Including sizing numbers and directional suffixes.
  */
-export const uiIconsWithDirections = getUiIconsWithDirections(uiIcons);
+export const uiIconsWithDirections = getUiIconsWithDirections(uiIconsCleaned);
 
 /**
- * List of all unique base UI icon names without their sizing numbers.
+ * Array of all unique base UI icon names without their sizing numbers.
  */
 export const getUniqueUiIconBaseNames = (uiIcons) => [
 	...new Set(uiIcons.map(ui => ui.replace(/\d{2,3}$/, "")))
 ];
 
 /**
- * List of all base UI icon names (without sizing numbers) for CSS (including directional suffixes).
+ * Array of all base UI icon names (without sizing numbers) for CSS (including directional suffixes).
  */
 export const uniqueUiIconBaseNames = getUniqueUiIconBaseNames(uiIconsWithDirections);
 
-// Workflow icon sizes. Does not apply to UI icons. Note: XXL is not part of the design spec and may be deprecated in the future.
+/**
+ * Workflow icon sizes. Does not apply to UI icons. Note: XXL is not part of the design
+ * spec and may be deprecated in the future.
+ */
 export const workflowSizes = ["xs", "s", "m", "l", "xl", "xxl"];
 
 /**
- * Get all icons data (originating from IconsLoader) and clean it up to return usable arrays
- * with the list of icons and their sizes.
+ * Create an object where the key is the UI icon name, and the value is an array of
+ * strings with every sizing number available.
+ *
+ * Returns something like the following:
+ * {
+ *   "Arrow": ['100', '400'],
+ *   "Asterisk": ['100', '200', '300'],
+ *   ...
+ * }
+ *
+ * @param {string[]} uiIcons Array of all UI icon names.
+ * @returns {object}
  */
-export const fetchIconDetails = ({
-	icons,
-	workflowIcons = [],
-	uiIcons = [],
-	uiIconSizes = {},
-}) => {
-	if (!icons || Object.keys(icons).length == 0) {
-		// Fetch loaded data if not provided
-		if (window.icons) icons = window.icons;
-		else {
-			return {
-				workflowIcons: [],
-				uiIcons: [],
-				uiIconSizes: {},
-				uiIconsWithDirections: [],
-			};
-		}
-	}
+export const getUiIconSizes = (uiIcons) => {
+	let uiIconSizes = {};
 
-	// Clean up loaded icon data.
-	icons = Object.entries(icons).reduce((acc, [setName, data]) => {
-		acc[setName] = Object.entries(data).reduce((acc, [iconName, svg]) => {
-			// Simplify icon name to just the file name.
-			iconName = iconName.split("/").pop();
-			// Clean file name, to be without file extension or extra prefix/postfix.
-			iconName = cleanWorkflowIconName(iconName);
-			acc[iconName] = svg;
+	uiIcons.forEach(iconName => {
+		// UI icon name without the sizing number at the end.
+		const iconNameRoot = iconName.replace(/\d{2,3}$/, "");
 
-			// Add the icon name to the workflowIcons list if it's from the workflow set.
-			if (setName === "workflow") {
-				workflowIcons.push(iconName);
-			}
-			else {
-				// Add to array of all UI icons.
-				uiIcons.push(iconName);
+		// Sizing number at the end of the icon name (e.g. "100").
+		const iconNameSize = iconName.match(/\d{2,3}/g)?.[0];
 
-				// UI icon name without the sizing number at the end.
-				const iconNameRoot = iconName.replace(/\d{2,3}$/, "");
+		// Add to object (with no duplicates).
+		uiIconSizes[iconNameRoot] = [
+			...new Set([
+				...uiIconSizes[iconNameRoot] ?? [],
+				...(iconNameSize ? [iconNameSize] : []),
+			])
+		];
+	});
 
-				// Sizing number at the end of the icon name (e.g. "100").
-				const iconNameSize = iconName.match(/\d{2,3}/g)?.[0];
-
-				// Add to array that associates the root icon name with an array of all available sizes.
-				uiIconSizes[iconNameRoot] = [
-					...new Set([
-						...uiIconSizes[iconNameRoot] ?? [],
-						...(iconNameSize ? [iconNameSize] : []),
-					])
-				];
-			}
-
-			return acc;
-		}, {});
-		return acc;
-	}, {});
-
-	return {
-		icons,
-		workflowIcons: [...new Set(workflowIcons)],
-		uiIcons: [...new Set(uiIcons)],
-		uiIconSizes,
-		uiIconsWithDirections: [...new Set(getUiIconsWithDirections(uiIcons))],
-	};
+	return uiIconSizes;
 };
+
+export const uiIconSizes = getUiIconSizes(uiIconsWithDirections);

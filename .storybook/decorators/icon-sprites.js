@@ -14,9 +14,6 @@ export const withIconSpriteSheet = makeDecorator({
             loaded = {},
 		} = context;
 
-        // Store the icons data from the IconLoader in the window object.
-        if (loaded.icons) window.icons = loaded.icons;
-
 		useEffect(() => {
             // Inject the sprite sheets into the document
             let sprite = document.getElementById("spritesheets");
