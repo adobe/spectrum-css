@@ -8,6 +8,14 @@ export const RadioGroup = Variants({
 			testHeading: "Default"
 		},
 		{
+			testHeading: "Hover",
+			isHovered: true,
+		},
+		{
+			testHeading: "Focus",
+			isFocused: true,
+		},
+		{
 			testHeading: "Emphasized",
 			isEmphasized: true,
 		},
@@ -34,5 +42,9 @@ export const RadioGroup = Variants({
 			testHeading: "Read-only",
 			isReadOnly: true,
 		},
+		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		}
 	]
 });
