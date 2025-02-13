@@ -11,7 +11,6 @@ export const Template = ({
 	tag = "hr",
 	staticColor,
 	vertical = false,
-	minDimensionValues,
 	customClasses = [],
 	customStyles = {},
 } = {}) => {
@@ -25,11 +24,7 @@ export const Template = ({
 					typeof staticColor !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap({
-				"min-inline-size": minDimensionValues && !vertical ? "200px": undefined,
-				"min-block-size": minDimensionValues && vertical ? "20px": undefined,
-				...customStyles,
-			})}
+			style=${styleMap({...customStyles})}
 			role="separator"
 		/>`;
 	}
@@ -43,11 +38,7 @@ export const Template = ({
 				typeof staticColor !== "undefined",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
-		style=${styleMap({
-			"min-inline-size": minDimensionValues && !vertical ? "200px": undefined,
-			"min-block-size": minDimensionValues && vertical ? "20px": undefined,
-			...customStyles,
-		})}
+		style=${styleMap({...customStyles})}
 		role="separator"
 	></div>`;
 };
