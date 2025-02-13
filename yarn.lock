@@ -3687,7 +3687,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/actionbutton@npm:7.1.0, @spectrum-css/actionbutton@workspace:^, @spectrum-css/actionbutton@workspace:components/actionbutton":
+"@spectrum-css/actionbutton@npm:7.1.1, @spectrum-css/actionbutton@workspace:^, @spectrum-css/actionbutton@workspace:components/actionbutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actionbutton@workspace:components/actionbutton"
   dependencies:
@@ -3709,7 +3709,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actiongroup@workspace:components/actiongroup"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
@@ -3726,7 +3726,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actionmenu@workspace:components/actionmenu"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/menu": "npm:9.1.0"
     "@spectrum-css/popover": "npm:8.1.0"
@@ -3898,7 +3898,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/breadcrumb@workspace:components/breadcrumb"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
@@ -4053,7 +4053,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/calendar@workspace:components/calendar"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
@@ -4070,7 +4070,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/card@workspace:components/card"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/asset": "npm:7.1.0"
     "@spectrum-css/checkbox": "npm:10.1.0"
     "@spectrum-css/icon": "npm:9.1.0"
@@ -4171,7 +4171,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/coachmark@workspace:components/coachmark"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/actionmenu": "npm:7.1.0"
     "@spectrum-css/button": "npm:14.1.0"
     "@spectrum-css/buttongroup": "npm:9.1.0"
@@ -4348,7 +4348,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/contextualhelp@workspace:components/contextualhelp"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/link": "npm:7.1.0"
     "@spectrum-css/popover": "npm:8.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
@@ -4475,7 +4475,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dropzone@workspace:components/dropzone"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/illustratedmessage": "npm:9.1.0"
     "@spectrum-css/link": "npm:7.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
@@ -4806,7 +4806,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/pagination@workspace:components/pagination"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/button": "npm:14.1.0"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/textfield": "npm:8.1.0"
@@ -5138,7 +5138,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/stepper@workspace:components/stepper"
   dependencies:
-    "@spectrum-css/actionbutton": "npm:7.1.0"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/infieldbutton": "npm:6.1.0"
     "@spectrum-css/textfield": "npm:8.1.0"
