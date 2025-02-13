@@ -138,8 +138,6 @@ MaxWidthPopover.args = {
 		"--mod-spectrum-contextual-help-popover-maximum-width": "180px",
 		"margin-bottom": "270px",
 	},
-	title: "Permission required",
-	body: "Your admin must grant you permission before you can create a new document. Please contact your admin for more information.",
 };
 MaxWidthPopover.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -149,6 +147,7 @@ MaxWidthPopover.parameters = {
 		},
 	},
 };
+MaxWidthPopover.storyName = "Default - max width popover";
 
 export const TopPopover = Template.bind({});
 TopPopover.tags = ["!dev"];
@@ -158,8 +157,6 @@ TopPopover.args = {
 		"inline-size": "275px",
 		"margin-top": "170px",
 	},
-	title: "Permission required",
-	body: "Your admin must grant you permission before you can create a new document. Please contact your admin for more information.",
 };
 TopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -243,6 +240,7 @@ HelpMaxWidthPopover.parameters = {
 		},
 	},
 };
+HelpMaxWidthPopover.storyName = "Help icon - max width popover";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ContextualHelpGroup.bind({});
