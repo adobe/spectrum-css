@@ -143,7 +143,7 @@ WorkflowDefault.parameters = {
 
 /**
  * An example of a Workflow icon displayed at all sizes, from small to extra-large.
- * Note that the extra-extra-large size is currently not part of the design spec and may be deprecated in the future.
+ * Note that the extra-extra-large size is currently *not* part of the design specifications and may be deprecated in the near future.
  */
 export const WorkflowSizing = (args, context) => Sizes({
 	Template,
