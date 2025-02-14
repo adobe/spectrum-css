@@ -35,12 +35,6 @@
 
 		--spectrum-stepper-button-border-width: 0;
 
-		/** Invalid **/
-		--spectrum-stepper-border-color-invalid: transparent;
-		--spectrum-stepper-border-color-focus-invalid: transparent;
-		--spectrum-stepper-border-color-focus-hover-invalid: transparent;
-		--spectrum-stepper-border-color-keyboard-focus-invalid: transparent;
-
 		/** Disabled **/
 		--spectrum-stepper-button-border-width-disabled: 0;
 		--spectrum-stepper-buttons-background-color-disabled: var(--spectrum-disabled-background-color);
