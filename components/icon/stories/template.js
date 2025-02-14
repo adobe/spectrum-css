@@ -224,7 +224,7 @@ export const FullIconSetTemplate = (args, context) => {
 		<div
 			style=${styleMap({
 				"display": "grid",
-				"grid-template-columns": "repeat(4 , 150px)",
+				"grid-template-columns": "repeat(auto-fill, minmax(150px, 1fr))",
 				"gap": "16px",
 				"rowGap": "32px",
 				"padding": "32px",

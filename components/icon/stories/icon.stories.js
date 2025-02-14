@@ -101,6 +101,11 @@ Workflow.argTypes = {
 	setName: { table: { disable: true } },
 	iconName: { table: { disable: true } },
 };
+Workflow.parameters = {
+	chromatic: { disableSnapshot: true },
+	// Layout other than "centered" needed for dynamic grid columns CSS to work correctly.
+	layout: "padded",
+};
 
 /**
  * All icons in the UI icon set.
@@ -114,6 +119,11 @@ UI.args = {
 UI.argTypes = {
 	setName: { table: { disable: true } },
 	uiIconName: { table: { disable: true } },
+};
+UI.parameters = {
+	chromatic: { disableSnapshot: true },
+	// Layout other than "centered" needed for dynamic grid columns CSS to work correctly.
+	layout: "padded",
 };
 
 // ********* VRT ONLY ********* //
