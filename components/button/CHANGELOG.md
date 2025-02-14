@@ -1,5 +1,32 @@
 # Change Log
 
+## 14.1.1
+
+### Patch Changes
+
+- [#3550](https://github.com/adobe/spectrum-css/pull/3550) [`a674de5`](https://github.com/adobe/spectrum-css/commit/a674de5d6a7264588f66e66ff0d9e6daeb2aa9b7) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Revert primary button content color to spectrum-white to bring back white color in both dark and light themes.
+
+## 14.1.0
+
+### Minor Changes
+
+- [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## New feature
+
+Minified and gzipped outputs available for all compiled CSS assets.
+
+### Patch Changes
+
+- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Dependency alignment across the project.
+
+- Updated dependencies [[`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee), [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
+  - @spectrum-css/icon@9.1.0
+  - @spectrum-css/progresscircle@5.1.0
+  - @spectrum-css/tokens@16.0.1
+
 ## 14.0.1
 
 ### Patch Changes

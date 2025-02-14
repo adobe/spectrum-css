@@ -17,7 +17,7 @@
 		--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-100);
 		--spectrum-actionbutton-background-color-down: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-100);
-		--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-black-100);
+		--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
 
 		--spectrum-actionbutton-background-color-selected: var(--spectrum-neutral-background-color-selected-default);
 		--spectrum-actionbutton-background-color-selected-hover: var(--spectrum-neutral-background-color-selected-hover);
@@ -32,11 +32,33 @@
 
 		--spectrum-actionbutton-content-color-selected: var(--spectrum-gray-50);
 
+		&.spectrum-ActionButton--sizeM {
+			--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-medium);
+		}
+
+		&.spectrum-ActionButton--sizeXS {
+			--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-extra-small);
+		}
+
+		&.spectrum-ActionButton--sizeS {
+			--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-small);
+		}
+
+		&.spectrum-ActionButton--sizeL {
+			--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-large);
+		}
+
+		&.spectrum-ActionButton--sizeXL {
+			--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-extra-large);
+		}
+
 		&.spectrum-ActionButton--quiet {
 			--spectrum-actionbutton-background-color-default: transparent;
 			--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-100);
 			--spectrum-actionbutton-background-color-down: var(--spectrum-gray-200);
 			--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-100);
+			--spectrum-actionbutton-background-color-disabled: transparent;
+			--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-disabled-background-color);
 		}
 
 		&.spectrum-ActionButton--staticBlack {
@@ -45,8 +67,8 @@
 			--spectrum-actionbutton-border-color-down: var(--spectrum-transparent-black-700);
 			--spectrum-actionbutton-border-color-focus: var(--spectrum-transparent-black-600);
 
-			--spectrum-actionbutton-background-color-disabled: transparent;
-			--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-black-200);
+			--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
+			--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-disabled-static-black-background-color);
 
 			&,
 			&.spectrum-ActionButton--quiet {
@@ -54,6 +76,7 @@
 				--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-400);
 				--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-black-500);
 				--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-black-400);
+				--spectrum-actionbutton-background-color-disabled: transparent;
 			}
 		}
 
@@ -63,8 +86,8 @@
 			--spectrum-actionbutton-border-color-down: var(--spectrum-transparent-white-700);
 			--spectrum-actionbutton-border-color-focus: var(--spectrum-transparent-white-600);
 
-			--spectrum-actionbutton-background-color-disabled: transparent;
-			--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-transparent-white-200);
+			--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
+			--spectrum-actionbutton-background-color-selected-disabled: var(--spectrum-disabled-static-white-background-color);
 
 			&,
 			&.spectrum-ActionButton--quiet {
@@ -72,6 +95,7 @@
 				--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-white-400);
 				--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-500);
 				--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-white-400);
+				--spectrum-actionbutton-background-color-disabled: transparent;
 			}
 		}
 	}
