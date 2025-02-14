@@ -17,24 +17,32 @@
 		--spectrum-stepper-border-color-default: var(--spectrum-gray-500);
 		--spectrum-stepper-border-color-hover: var(--spectrum-gray-600);
 		--spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
-		--spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-800);
+		--spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-900);
 		--spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
 
 		--spectrum-stepper-buttons-border-style: none;
 		--spectrum-stepper-buttons-border-width: 0;
-		--spectrum-stepper-buttons-border-color: var(--spectrum-gray-500);
+		/* --spectrum-stepper-buttons-border-color: var(--spectrum-stepper-border-color-default);
 		--spectrum-stepper-buttons-background-color: var(--spectrum-gray-100);
-		--spectrum-stepper-buttons-border-color-hover: var(--spectrum-gray-600);
-		--spectrum-stepper-buttons-border-color-focus: var(--spectrum-gray-800);
-		--spectrum-stepper-buttons-border-color-keyboard-focus: var(--spectrum-gray-900);
+		--spectrum-stepper-buttons-border-color-hover: var(--spectrum-stepper-border-color-hover);
+		--spectrum-stepper-buttons-border-color-focus: var(--spectrum-stepper-border-color-focus);
+		--spectrum-stepper-buttons-border-color-focus-hover: var(--spectrum-stepper-border-color-focus-hover);
+		--spectrum-stepper-buttons-border-color-keyboard-focus: var(--spectrum-stepper-border-color-keyboard-focus); */
 
 		--spectrum-stepper-button-border-width: var(--spectrum-border-width-100);
 
 		/** Invalid **/
 		--spectrum-stepper-border-color-invalid: var(--spectrum-negative-border-color-default);
+		--spectrum-stepper-border-color-hover-invalid: var(--spectrum-negative-border-color-hover);
 		--spectrum-stepper-border-color-focus-invalid: var(--spectrum-negative-border-color-focus);
 		--spectrum-stepper-border-color-focus-hover-invalid: var(--spectrum-negative-border-color-focus-hover);
 		--spectrum-stepper-border-color-keyboard-focus-invalid: var(--spectrum-negative-border-color-key-focus);
+
+		/* --spectrum-stepper-buttons-border-color-invalid: var(--spectrum-stepper-border-color-default);
+		--spectrum-stepper-buttons-border-color-hover-invalid: var(--spectrum-stepper-border-color-hover-invalid);
+		--spectrum-stepper-buttons-border-color-focus-invalid: var(--spectrum-stepper-border-color-focus-invalid);
+		--spectrum-stepper-buttons-border-color-focus-hover-invalid: var(--spectrum-stepper-border-color-focus-hover-invalid);
+		--spectrum-stepper-buttons-border-color-keyboard-focus-invalid: var(--spectrum-stepper-border-color-keyboard-focus-invalid); */
 
 		/** Disabled **/
 		--spectrum-stepper-border-color-disabled: var(--spectrum-gray-300);
@@ -42,8 +50,8 @@
 		--spectrum-stepper-buttons-background-color-disabled: var(--spectrum-gray-50);
 	}
 
-	.spectrum-Stepper--quiet {
+	/* .spectrum-Stepper--quiet {
 		--spectrum-stepper-buttons-border-style: none;
 		--spectrum-stepper-button-edge-to-fill: 0;
-	}
+	} */
 }
