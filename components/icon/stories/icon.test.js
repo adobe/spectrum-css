@@ -18,6 +18,7 @@ export const TestTemplate = (args, context) => html`
 	})}>
 		<div>
 			${Typography({
+				customClasses: ["chromatic-ignore"],
 				semantics: "detail",
 				size: "l",
 				content: ["Workflow icons"],
@@ -39,6 +40,7 @@ export const TestTemplate = (args, context) => html`
 				${workflowSizes.map(scale => html`
 					<div>
 						${Typography({
+							customClasses: ["chromatic-ignore"],
 							semantics: "detail",
 							size: "s",
 							content: [scale],
@@ -76,12 +78,13 @@ export const TestTemplate = (args, context) => html`
 		</div>
 		<div>
 			${Typography({
+				customClasses: ["chromatic-ignore"],
 				semantics: "detail",
 				size: "l",
 				content: ["UI icons"],
 				customStyles: {
 					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
-				}
+				},
 			})}
 			<div
 				style=${styleMap({
@@ -96,6 +99,7 @@ export const TestTemplate = (args, context) => html`
 				${["50", "75", "100", "200", "300", "400", "500", "600"].map(scale => html`
 					<div>
 						${Typography({
+							customClasses: ["chromatic-ignore"],
 							semantics: "detail",
 							size: "s",
 							content: [scale],
