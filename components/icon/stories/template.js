@@ -190,7 +190,7 @@ export const Template = ({
 			}, "");
 
 			return html`${unsafeSVG(
-				svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
+				svgString.replace(/<svg/, `<svg class="${classesAsString}" ${fill ? `style="color: ${fill};"` : ""} focusable="false" aria-hidden="true" role="img"`)
 			)}`;
 		}
 		else {

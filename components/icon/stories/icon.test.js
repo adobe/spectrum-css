@@ -60,6 +60,8 @@ export const TestTemplate = (args, context) => html`
 					"Star",
 					"StarFilled",
 					"User",
+					"ColorHarmony",
+					"CornerRadiusBottomLeft",
 				].map((iconName, idx) => html`
 					${workflowSizes.map((size) => Template({
 						...args,
