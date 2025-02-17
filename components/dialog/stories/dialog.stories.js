@@ -54,6 +54,7 @@ export default {
 			},
 			control: "boolean",
 		},
+		isOpen,
 		footer: {
 			name: "Footer text",
 			description: "Text content of the dialog footer. Represents the checkbox label if a checkbox is present, or stands alone if there is no checkbox. Currently only supported in the default layout.",
