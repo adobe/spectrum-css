@@ -27,12 +27,10 @@ export const Template = ({
 	</div>
 `;
 
-// TODO: the accent variant will be removed in S2.
 export const SemanticGroup = (args, context) => Container({
 	withBorder: false,
 	direction: "column",
 	content: html`${[
-		"accent",
 		"neutral",
 		"info",
 		"negative",

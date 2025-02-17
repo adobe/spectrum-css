@@ -111,7 +111,6 @@
 	--spectrum-statuslight-content-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-statuslight-subdued-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-statuslight-semantic-neutral-color: var(--spectrum-neutral-visual-color);
-	--spectrum-statuslight-semantic-accent-color: var(--spectrum-accent-visual-color);
 	--spectrum-statuslight-semantic-negative-color: var(--spectrum-negative-visual-color);
 	--spectrum-statuslight-semantic-info-color: var(--spectrum-informative-visual-color);
 	--spectrum-statuslight-semantic-notice-color: var(--spectrum-notice-visual-color);
@@ -159,6 +158,7 @@
 
 	/* Dot */
 	&::before {
+		--spectrum-statuslight-spacing-computed-top-to-dot: calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)));
 		content: "";
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -166,8 +166,6 @@
 		inline-size: var(--mod-statuslight-dot-size, var(--spectrum-statuslight-dot-size));
 		block-size: var(--mod-statuslight-dot-size, var(--spectrum-statuslight-dot-size));
 		border-radius: var(--mod-statuslight-corner-radius, var(--spectrum-statuslight-corner-radius));
-
-		--spectrum-statuslight-spacing-computed-top-to-dot: calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)));
 		margin-block-start: var(--spectrum-statuslight-spacing-computed-top-to-dot);
 		margin-inline-end: var(--mod-statuslight-spacing-dot-to-label, var(--spectrum-statuslight-spacing-dot-to-label));
 	}
@@ -277,9 +275,9 @@
 
 @media (forced-colors: active) {
 	.spectrum-StatusLight {
-		forced-color-adjust: none;
 		--highcontrast-statuslight-content-color-default: CanvasText;
 		--highcontrast-statuslight-subdued-content-color-default: CanvasText;
+		forced-color-adjust: none;
 
 		/* Dot */
 		&::before {
