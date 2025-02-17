@@ -1,6 +1,6 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { isOpen, size } from "@spectrum-css/preview/types";
 import { Template as Table } from "@spectrum-css/table/stories/template.js";
 import { Template as Steplist } from "@spectrum-css/steplist/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -54,6 +54,7 @@ export default {
 			},
 			control: "boolean",
 		},
+		isOpen,
 		footer: {
 			name: "Footer text",
 			description: "Text content of the dialog footer. Represents the checkbox label if a checkbox is present, or stands alone if there is no checkbox. Currently only supported in the default layout.",
