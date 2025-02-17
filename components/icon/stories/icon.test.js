@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Container, Variants } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
@@ -12,20 +12,14 @@ import { uiIconsWithDirections, uniqueUiIconBaseNames, workflowSizes } from "./u
  * - All UI icons, organized within a grid by sizing number and name
  */
 export const TestTemplate = (args, context) => html`
-	<div style=${styleMap({
-		"display": "flex",
-		"gap": "12px",
-	})}>
-		<div>
-			${Typography({
-				customClasses: ["chromatic-ignore"],
-				semantics: "detail",
-				size: "l",
-				content: ["Workflow icons"],
-				customStyles: {
-					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
-				}
-			})}
+	${Container({
+		heading: "Workflow icon examples",
+		withBorder: false,
+		direction: "row",
+		wrapperStyles: {
+			columnGap: "12px",
+		},
+		content: html`
 			<div
 				style=${styleMap({
 				"display": "grid",
@@ -75,17 +69,17 @@ export const TestTemplate = (args, context) => html`
 					}, context))}
 				`)}
 			</div>
-		</div>
-		<div>
-			${Typography({
-				customClasses: ["chromatic-ignore"],
-				semantics: "detail",
-				size: "l",
-				content: ["UI icons"],
-				customStyles: {
-					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
-				},
-			})}
+		`,
+	}, context)}
+
+	${Container({
+		heading: "UI icon set",
+		withBorder: false,
+		direction: "row",
+		wrapperStyles: {
+			columnGap: "12px",
+		},
+		content: html`
 			<div
 				style=${styleMap({
 				"display": "grid",
@@ -125,8 +119,8 @@ export const TestTemplate = (args, context) => html`
 					return print;
 				}, [])}
 			</div>
-		</div>
-	</div>
+		`,
+	}, context)}
 `;
 
 export const IconGroup = Variants({
