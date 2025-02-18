@@ -1,5 +1,5 @@
 // Used in the icon sprite decorator to inject the sprite sheets into the document
-import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
+import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/assets/svg-spriteSheet/icons.svg?raw";
 import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 
@@ -13,9 +13,6 @@ export const withIconSpriteSheet = makeDecorator({
 		const {
             loaded = {},
 		} = context;
-
-        // Load the icons into the window object
-        if (loaded.icons) window.icons = loaded.icons;
 
 		useEffect(() => {
             // Inject the sprite sheets into the document
