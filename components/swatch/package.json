@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/swatch",
-	"version": "8.0.1",
+	"version": "7.0.0-next.0",
 	"description": "The Spectrum CSS Color swatch component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -24,8 +24,16 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/opacitycheckerboard": ">=4",
-		"@spectrum-css/tokens": ">=16"
+		"@spectrum-css/opacitycheckerboard": ">=4.0.0 <5.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/opacitycheckerboard": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
 	},
 	"devDependencies": {
 		"@spectrum-css/opacitycheckerboard": "4.0.1",

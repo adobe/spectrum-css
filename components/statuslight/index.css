@@ -159,6 +159,7 @@
 
 	/* Dot */
 	&::before {
+		--spectrum-statuslight-spacing-computed-top-to-dot: calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)));
 		content: "";
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -166,8 +167,6 @@
 		inline-size: var(--mod-statuslight-dot-size, var(--spectrum-statuslight-dot-size));
 		block-size: var(--mod-statuslight-dot-size, var(--spectrum-statuslight-dot-size));
 		border-radius: var(--mod-statuslight-corner-radius, var(--spectrum-statuslight-corner-radius));
-
-		--spectrum-statuslight-spacing-computed-top-to-dot: calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)));
 		margin-block-start: var(--spectrum-statuslight-spacing-computed-top-to-dot);
 		margin-inline-end: var(--mod-statuslight-spacing-dot-to-label, var(--spectrum-statuslight-spacing-dot-to-label));
 	}
@@ -280,6 +279,7 @@
 		forced-color-adjust: none;
 		--highcontrast-statuslight-content-color-default: CanvasText;
 		--highcontrast-statuslight-subdued-content-color-default: CanvasText;
+		forced-color-adjust: none;
 
 		/* Dot */
 		&::before {

@@ -49,5 +49,13 @@
 			"rootClass": "spectrum-FieldLabel",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/field-label/"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

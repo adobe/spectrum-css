@@ -25,10 +25,6 @@
 	--spectrum-popover-border-transparency: var(--spectrum-popover-border-opacity);
 	--spectrum-popover-border-color-with-transparency: rgba(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency));
 
-	--spectrum-popover-border-width: var(--spectrum-border-width-100);
-
-	--spectrum-popover-border-width: var(--spectrum-border-width-100);
-
 	/* popover inner padding */
 	--spectrum-popover-content-area-spacing: var(--spectrum-popover-edge-to-content-area);
 

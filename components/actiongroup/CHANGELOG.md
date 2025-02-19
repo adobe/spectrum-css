@@ -387,12 +387,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - refactor(actiongroup)!: replace focus-ring with focus-visible([d792847](https://github.com/adobe/spectrum-css/commit/d792847))
 
   ###
+
 ### 🛑 BREAKING CHANGES
 
-  🛑 BREAKING CHANGES
+🛑 BREAKING CHANGES
 
       *
       use native focus-visible pseudo class for focus styling
+
 - use native focus-visible pseudo class for focus styling
 
 <a name="3.0.61"></a>

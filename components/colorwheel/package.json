@@ -24,16 +24,22 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/colorarea": ">=5",
-		"@spectrum-css/colorhandle": ">=8",
-		"@spectrum-css/colorloupe": ">=5",
-		"@spectrum-css/tokens": ">=16"
+		"@spectrum-css/colorarea": ">=7.0.0 <8.0.0",
+		"@spectrum-css/colorhandle": ">=10.0.0 <11.0.0",
+		"@spectrum-css/colorloupe": ">=7.0.0 <8.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorarea": {
 			"optional": true
 		},
+		"@spectrum-css/colorhandle": {
+			"optional": true
+		},
 		"@spectrum-css/colorloupe": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
 			"optional": true
 		}
 	},

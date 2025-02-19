@@ -31,6 +31,12 @@
 	"peerDependenciesMeta": {
 		"@spectrum-css/button": {
 			"optional": true
+		},
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
 		}
 	},
 	"devDependencies": {

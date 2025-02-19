@@ -1,29 +1,11 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { IconGroup } from "./icon.test.js";
-import { Template } from "./template.js";
-import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
-
-/**
- * Create a list of all UI Icons with their sizing numbers.
- *
- * The list is a little long until Storybook adds a way to use conditional options
- * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
- * @see https://github.com/storybookjs/storybook/discussions/24235
- */
-const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
-	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, "");
-	// Icons like Gripper that don't have sizes yet, represented by any empty array.
-	if (uiIconSizes[baseIconName]?.length == 0) {
-		return [baseIconName];
-	}
-	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
-}).flat();
+import { FullIconSetTemplate, Template, UIArrowsTemplate, UIDefaultTemplate, WorkflowDefaultTemplate } from "./template";
+import { uiIconsWithDirections, workflowIconsCleaned, workflowSizes } from "./utilities.js";
 
 /**
  * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
@@ -33,7 +15,7 @@ export default {
 	component: "Icon",
 	argTypes: {
 		size: {
-			...size(["xs", "s", "m", "l", "xl", "xxl"]),
+			...size(workflowSizes),
 			if: { arg: "setName", eq: "workflow" },
 		},
 		setName: {
@@ -53,7 +35,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: workflowIcons,
+			options: workflowIconsCleaned,
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
 		},
@@ -64,9 +46,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: [
-				...uiIconNameOptions,
-			],
+			options: uiIconsWithDirections,
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
 		},
@@ -79,24 +59,76 @@ export default {
 			},
 			control: "color",
 		},
-		useRef: { table: { disable: true } },
+		useRef: {
+			name: "Use sprite sheet reference",
+			description: "Storybook only: whether to display an SVG with a `<use>` reference to the icon within a loaded sprite sheet. This improves Storybook performance, especially for multiple icons. When set to `false`, the icon file's full markup is used.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Advanced",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Icon",
 		setName: "workflow",
-		iconName: "ABC",
+		iconName: "Color",
+		uiIconName: "Checkmark400",
 		size: "xl",
 		useRef: true,
 	},
 	parameters: {
 		packageJson,
 		metadata,
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/9qeVZSJ9t0kv6r7njzgHx7/S2-%2F-Styles-visualizer-(WIP)?node-id=295-24257&t=ZC7fyaQ0VQYQ5VYM-1",
+		},
 	},
 	tags: ["!autodocs"],
 };
 
 export const Default = IconGroup.bind({});
 Default.args = {};
+
+/**
+ * All icons in the Workflow icon set.
+ */
+export const Workflow = FullIconSetTemplate.bind({});
+Workflow.storyName = "Workflow icons";
+Workflow.args = {
+	setName: "workflow",
+	useRef: true,
+};
+Workflow.argTypes = {
+	setName: { table: { disable: true } },
+	iconName: { table: { disable: true } },
+};
+Workflow.parameters = {
+	chromatic: { disableSnapshot: true },
+	// Layout other than "centered" needed for dynamic grid columns CSS to work correctly.
+	layout: "padded",
+};
+
+/**
+ * All icons in the UI icon set.
+ */
+export const UI = FullIconSetTemplate.bind({});
+UI.storyName = "UI icons";
+UI.args = {
+	setName: "ui",
+	useRef: true,
+};
+UI.argTypes = {
+	setName: { table: { disable: true } },
+	uiIconName: { table: { disable: true } },
+};
+UI.parameters = {
+	chromatic: { disableSnapshot: true },
+	// Layout other than "centered" needed for dynamic grid columns CSS to work correctly.
+	layout: "padded",
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = IconGroup.bind({});
@@ -111,50 +143,13 @@ WithForcedColors.parameters = {
 	},
 };
 
-/**
- * Helper template function to display multiple icons using an array of icon names.
- */
-const IconListTemplate = (args, iconsList = [], context) => html`
-	<div
-		style=${styleMap({
-			"display": "flex",
-			"gap": "32px",
-			"flexWrap": "wrap",
-		})}
-	>
-		${iconsList.map(
-			(iconName) => Template({ ...args, iconName }, context)
-		)}
-	</div>
-`;
-
-/* Stories for the MDX "Docs" only. */
+// ********* DOCS ONLY ********* //
 
 /**
  * A sampling of multiple Workflow icons.
  */
-export const WorkflowDefault = (args, context) => IconListTemplate(
-	{
-		...args,
-		setName: "workflow",
-		size: "xl",
-	},
-	[
-		"Alert",
-		"Asset",
-		"Actions",
-		"ArrowDown",
-		"Camera",
-		"Copy",
-		"DeviceDesktop",
-		"Download",
-		"FilterAdd",
-		"Form",
-		"Light",
-		"Polygon",
-	],
-	context
-);
+export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
+WorkflowDefault.storyName = "Workflow icons";
 WorkflowDefault.tags = ["!dev"];
 WorkflowDefault.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -162,49 +157,14 @@ WorkflowDefault.parameters = {
 
 /**
  * An example of a Workflow icon displayed at all sizes, from small to extra-large.
+ * Note that the extra-extra-large size is currently *not* part of the design specifications and may be deprecated in the near future.
  */
-export const WorkflowSizing = (args, context) => html`
-	<div
-		style=${styleMap({
-			"display": "flex",
-			"gap": "24px",
-			"flexWrap": "wrap",
-		})}
-	>
-		${["xs","s","m","l","xl"].map(
-			(size) => html`
-				<div
-					style=${styleMap({
-						"display": "flex",
-						"gap": "16px",
-						"flexDirection": "column",
-						"alignItems": "center",
-						"flexBasis": "80px",
-					})}
-				>
-					${Typography({
-						semantics: "heading",
-						size: "xs",
-						content: [
-							{
-								xs: "Extra-small",
-								s: "Small",
-								m: "Medium",
-								l: "Large",
-								xl: "Extra-large",
-							}[size],
-						],
-						customStyles: {
-							"white-space": "nowrap",
-							"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
-						}
-					})}
-					${Template({ ...args, size }, context)}
-				</div>
-			`
-		)}
-	</div>
-`;
+export const WorkflowSizing = (args, context) => Sizes({
+	Template,
+	withBorder: false,
+	withHeading: false,
+	...args,
+}, context);
 WorkflowSizing.tags = ["!dev"];
 WorkflowSizing.args = {
 	setName: "workflow",
@@ -217,40 +177,8 @@ WorkflowSizing.parameters = {
 /**
  * A sampling of a few UI icons.
  */
-export const UIDefault = (args, context) => html`
-	<div style="margin-bottom: 32px;">
-		${IconListTemplate(
-			{
-				...args,
-				setName: "ui",
-			},
-			[
-				"Asterisk100",
-				"Asterisk200",
-				"Asterisk300",
-			],
-			context
-		)}
-	</div>
-	<div>
-		${IconListTemplate(
-			{
-				...args,
-				setName: "ui",
-			},
-			[
-				"ChevronDown50",
-				"ChevronDown75",
-				"ChevronDown100",
-				"ChevronDown200",
-				"ChevronDown300",
-				"ChevronDown400",
-			],
-			context
-		)}
-	</div>
-`;
-UIDefault.storyName = "UI Default";
+export const UIDefault = UIDefaultTemplate.bind({});
+UIDefault.storyName = "UI icons";
 UIDefault.tags = ["!dev"];
 UIDefault.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -259,19 +187,7 @@ UIDefault.parameters = {
 /**
  * A UI arrow displayed for all directions (left, right, up, down).
  */
-export const UIArrows = (args, context) => IconListTemplate(
-	{
-		...args,
-		setName: "ui",
-	},
-	[
-		"ArrowRight100",
-		"ArrowLeft100",
-		"ArrowDown100",
-		"ArrowUp100",
-	],
-	context
-);
+export const UIArrows = UIArrowsTemplate.bind({});
 UIArrows.storyName = "UI Arrows";
 UIArrows.tags = ["!dev"];
 UIArrows.parameters = {

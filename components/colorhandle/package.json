@@ -24,12 +24,18 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/colorloupe": ">=5",
-		"@spectrum-css/opacitycheckerboard": ">=2",
-		"@spectrum-css/tokens": ">=16"
+		"@spectrum-css/colorloupe": ">=7.0.0 <8.0.0",
+		"@spectrum-css/opacitycheckerboard": ">=4.0.0 <5.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorloupe": {
+			"optional": true
+		},
+		"@spectrum-css/opacitycheckerboard": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
 			"optional": true
 		}
 	},

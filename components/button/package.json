@@ -24,15 +24,18 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/progresscircle": ">=5",
-		"@spectrum-css/tokens": ">=16"
+		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/progresscircle": ">=5.0.0 <6.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/icon": {
 			"optional": true
 		},
 		"@spectrum-css/progresscircle": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
 			"optional": true
 		}
 	},

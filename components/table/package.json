@@ -24,11 +24,11 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/button": ">=14",
-		"@spectrum-css/checkbox": ">=10",
-		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/thumbnail": ">=6",
-		"@spectrum-css/tokens": ">=16"
+		"@spectrum-css/button": ">=14.0.0 <15.0.0",
+		"@spectrum-css/checkbox": ">=10.0.0 <11.0.0",
+		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/thumbnail": ">=8.0.0 <9.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/button": {
@@ -37,7 +37,13 @@
 		"@spectrum-css/checkbox": {
 			"optional": true
 		},
+		"@spectrum-css/icon": {
+			"optional": true
+		},
 		"@spectrum-css/thumbnail": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
 			"optional": true
 		}
 	},

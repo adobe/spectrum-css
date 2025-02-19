@@ -47,5 +47,13 @@
 		{
 			"rootClass": "spectrum-DropIndicator"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

@@ -52,17 +52,6 @@ Spectrum CSS components have build output that is designed to be used in a varie
 
 - `index.css` - _Preferred and most commonly used to incorporate Spectrum CSS into a project_. This file includes the component's styles and variable definitions. In this version, token-driven CSS properties<sup>[1](#token-footnote)</sup> are mapped to empty `--mod` prefixed variables (for customization) with a fallback to variables prefixed with `--spectrum` (sourced from the design tokens).
 
-  - This file loads the `.spectrum`, `.spectrum--legacy`, and `.spectrum--express` contexts which are used to toggle components between different [visual styles](https://github.com/adobe/spectrum-css?tab=readme-ov-file#visual-language). The `.spectrum` context is the default.
-
-- `index-base.css`: This file mimics the `index.css` output, but does not include the `.spectrum` or `.spectrum--express` contexts.
-
-  - If your product only requires the `.spectrum` context, you can use `index-base.css` plus `themes/spectrum-two.css` from the `themes` directory to render the default Spectrum visual language.
-    - The `.spectrum--legacy` context represents the previous version of Spectrum (also known as Spectrum 1). This means if you only want to use the legacy context, you should load `themes/spectrum.css`. **deprecated**
-    - The `.spectrum--express` context represents the subtheme of Spectrum 1 called Express . This means if you only want to use the Express context, you should load `themes/express.css`. **deprecated**
-  - This approach can also be used when you have defined and written your own visual language and only need the base component styles from Spectrum CSS. To wire up your own visual language, you would need to define your own custom properties that match those defined in the `themes/spectrum-two.css` assets.
-
-- `index-theme.css`: This file provides only the visual language for a component. It is used in conjunction with `index-base.css` and when loaded together, provides the same result as using `index.css` by itself.
-
 <sup><a name="token-footnote">1</a></sup>: Token-driven CSS properties are properties whose values are mapped to a value in the `@spectrum-css/tokens` package. These values represent design-language and are meant to be used across platforms. In contrast, properties specific to web-based implementations will not have a token value assigned, so not all CSS properties will use custom properties.
 
 #### Including assets
@@ -73,6 +62,7 @@ Start by including the base set of variables:
 /* Include tokens */
 @import "node_modules/@spectrum-css/tokens/dist/index.css";
 
+@import "node_modules/@spectrum-css/page/dist/index.css";
 @import "node_modules/@spectrum-css/typography/dist/index.css";
 @import "node_modules/@spectrum-css/icon/dist/index.css";
 @import "node_modules/@spectrum-css/button/dist/index.css";
@@ -86,9 +76,7 @@ All contexts you want to use must be defined in order to load all the appropriat
 
 ##### Visual language
 
-- `.spectrum` - The default visual language for Spectrum CSS; represents the Spectrum 2 foundations visual language.
-- `.spectrum--legacy` - The legacy Spectrum 1 visual language. _This visual language will be deprecated in Spectrum 2_.
-- `.spectrum--express` - A variant of the standard visual language. _This visual language will be deprecated in Spectrum 2_.
+- `.spectrum` - The default visual language for Spectrum CSS; represents the Spectrum 2 visual language.
 
 ##### Scales
 
@@ -111,16 +99,6 @@ Put together, we would define the context for our application in the following w
 ```html
 <html class="spectrum spectrum--medium spectrum--light"></html>
 ```
-
-To switch to Express, **add** the `.spectrum--express` class to the `<html>` element:
-
-```html
-<html
-	class="spectrum spectrum--medium spectrum--light spectrum--express"
-></html>
-```
-
-Note the `spectrum--legacy` or `spectrum--express` class is added to the existing classes; `spectrum` should always be present to ensure the correct visual language is loaded.
 
 Because CSS custom properties honor the cascading nature of CSS, you can infinitely nest different contexts. For example, you could have a `.spectrum--dark` context inside of a `.spectrum--light` context, and components will honor the innermost context.
 

@@ -16,21 +16,21 @@ Spectrum CSS components utilize custom properties in order to change themes and 
 <html class="spectrum spectrum--medium spectrum--light"></html>
 ```
 
-Use the `index.css` files in your project to include component and global styles ([Spectrum and Express contexts](https://github.com/adobe/spectrum-css?tab=readme-ov-file#visual-language), [background theme/colorstop](https://github.com/adobe/spectrum-css?tab=readme-ov-file#themes-colorstops), [platform scaling](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales), etc.) for the component. If you don't need all of the global styles, peek at the docs for [including assets](https://github.com/adobe/spectrum-css?tab=readme-ov-file#including-assets)). Use this file by including the stylesheet (plus stylesheets for dependencies) in the `<head>` tag:
+Use the `index.css` files in your project to include component and global styles ([background theme/colorstop](https://github.com/adobe/spectrum-css?tab=readme-ov-file#themes-colorstops), [platform scaling](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales), etc.) for the component. If you don't need all of the global styles, peek at the docs for [including assets](https://github.com/adobe/spectrum-css?tab=readme-ov-file#including-assets)). Use this file by including the stylesheet (plus stylesheets for dependencies) in the `<head>` tag:
 
 ```html
 <head>
-  <!-- Include global tokens depedency first -->
-  <link
-    rel="stylesheet"
-    href="node_modules/@spectrum-css/tokens/dist/index.css"
-  />
+	<!-- Include global tokens depedency first -->
+	<link
+		rel="stylesheet"
+		href="node_modules/@spectrum-css/tokens/dist/index.css"
+	/>
 
-  <!-- Include index.css for the components you're using -->
-  <link
-    rel="stylesheet"
-    href="node_modules/@spectrum-css/button/dist/index.css"
-  />
+	<!-- Include index.css for the components you're using -->
+	<link
+		rel="stylesheet"
+		href="node_modules/@spectrum-css/button/dist/index.css"
+	/>
 </head>
 ```
 
@@ -38,9 +38,9 @@ Inside the `<body>` tag, add the markup for your component (Spectrum button in o
 
 ```html
 <button
-  class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM"
+	class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM"
 >
-  <span class="spectrum-Button-label">Button</span>
+	<span class="spectrum-Button-label">Button</span>
 </button>
 ```
 
@@ -48,23 +48,23 @@ To put it all together, your final html file will look like this:
 
 ```html
 <html class="spectrum spectrum--light spectrum--medium">
-  <head>
-    <link
-      rel="stylesheet"
-      href="node_modules/@spectrum-css/tokens/dist/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/@spectrum-css/button/dist/index.css"
-    />
-  </head>
-  <body>
-    <button
-      class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM"
-    >
-      <span class="spectrum-Button-label">Button</span>
-    </button>
-  </body>
+	<head>
+		<link
+			rel="stylesheet"
+			href="node_modules/@spectrum-css/tokens/dist/index.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="node_modules/@spectrum-css/button/dist/index.css"
+		/>
+	</head>
+	<body>
+		<button
+			class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM"
+		>
+			<span class="spectrum-Button-label">Button</span>
+		</button>
+	</body>
 </html>
 ```
 

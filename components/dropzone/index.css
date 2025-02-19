@@ -114,45 +114,44 @@
 }
 
 .spectrum-DropZone {
-  box-sizing: border-box;
-  inline-size: var(--mod-drop-zone-width, var(--spectrum-drop-zone-width));
-  padding: calc(var(--mod-drop-zone-padding, var(--spectrum-drop-zone-padding)) - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
-  text-align: center;
-  border-color: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
-  border-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
-  border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
-  border-style: var(--mod-drop-zone-border-style, dashed);
-  background-size: cover;
-  background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
+	box-sizing: border-box;
+	inline-size: var(--mod-drop-zone-width, var(--spectrum-drop-zone-width));
+	padding: calc(var(--mod-drop-zone-padding, var(--spectrum-drop-zone-padding)) - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
+	text-align: center;
+	border-color: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
+	border-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
+	border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
+	border-style: var(--mod-drop-zone-border-style, dashed);
+	background-size: cover;
+	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
 
-  &.is-dragged {
-    /* @deprecation --mod-drop-zone-border-style--dragged will be removed during the S2 migration; please update your code to --mod-drop-zone-border-style-dragged */
-    --mod-drop-zone-border-style: var(--mod-drop-zone-border-style--dragged, var(--mod-drop-zone-border-style-dragged, solid));
-    --mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-background-color-opacity)));
-    --spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
+	&.is-dragged {
+		/* @deprecation --mod-drop-zone-border-style--dragged will be removed during the S2 migration; please update your code to --mod-drop-zone-border-style-dragged */
+		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style--dragged, var(--mod-drop-zone-border-style-dragged, solid));
+		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-background-color-opacity)));
+		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
+
+		/* Updated values for a nested illustrated message when state changes */
+		--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
+	}
 
     /* Updated values for a nested illustrated message when state changes */
     --mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
   }
 
-  &.is-filled {
-    /* note: the below applies to .is-filled.is-dragged but works here b/c dragged is the only state applying background color */
-    --mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled)));
+		/* Updated values for a nested illustrated message when state changes */
+		--mod-illustrated-message-display: none;
+	}
 
     /* Updated values for a nested illustrated message when state changes */
     --mod-illustrated-message-display: none;
   }
 
-  &.is-filled.is-dragged {
-    --mod-drop-zone-content-display: flex;
-  }
-
-  &:focus-visible {
-    --mod-drop-zone-border-style: solid;
-    --spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
-
-    outline: 0;
-  }
+	&:focus-visible {
+		--mod-drop-zone-border-style: solid;
+		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
+		outline: 0;
+	}
 }
 
 .spectrum-DropZone-content {
@@ -165,18 +164,18 @@
 }
 
 .spectrum-DropZone-button {
-  box-sizing: border-box;
-  border: none;
-  block-size: var(--mod-drop-zone-content-height, var(--spectrum-drop-zone-content-height));
-  max-inline-size: var(--mod-drop-zone-content-max-width, var(--spectrum-drop-zone-content-max-width));
-  padding-block-start: var(--mod-drop-zone-content-top-to-text, var(--spectrum-drop-zone-content-top-to-text));
-  padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-drop-zone-content-bottom-to-text));
-  background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
+	box-sizing: border-box;
+	border: none;
+	block-size: var(--mod-drop-zone-content-height, var(--spectrum-drop-zone-content-height));
+	max-inline-size: var(--mod-drop-zone-content-max-width, var(--spectrum-drop-zone-content-max-width));
+	padding-block-start: var(--mod-drop-zone-content-top-to-text, var(--spectrum-drop-zone-content-top-to-text));
+	padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-drop-zone-content-bottom-to-text));
+	background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
 
-  font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
-  font-weight: var(--mod-drop-zone-content-font-weight, var(--spectrum-drop-zone-content-font-weight));
-  font-style: var(--mod-drop-zone-content-font-style, var(--spectrum-drop-zone-content-font-style));
-  line-height: var(--mod-drop-zone-content-line-height, var(--spectrum-drop-zone-content-line-height));
+	font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
+	font-weight: var(--mod-drop-zone-content-font-weight, var(--spectrum-drop-zone-content-font-weight));
+	font-style: var(--mod-drop-zone-content-font-style, var(--spectrum-drop-zone-content-font-style));
+	line-height: var(--mod-drop-zone-content-line-height, var(--spectrum-drop-zone-content-line-height));
 
   &:hover,
   &:focus {

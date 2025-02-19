@@ -24,8 +24,16 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/colorhandle": ">=8",
-		"@spectrum-css/tokens": ">=16"
+		"@spectrum-css/colorhandle": ">=10.0.0 <11.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/colorhandle": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
 	},
 	"devDependencies": {
 		"@spectrum-css/colorhandle": "10.0.1",

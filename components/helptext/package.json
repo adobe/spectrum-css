@@ -49,5 +49,13 @@
 			"rootClass": "spectrum-HelpText",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/help-text/"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

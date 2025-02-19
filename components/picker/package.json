@@ -24,9 +24,9 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/helptext": ">=5",
+		"@spectrum-css/helptext": ">=7.0.0 <8.0.0",
 		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/menu": ">=7",
+		"@spectrum-css/menu": ">=9.0.0 <10.0.0",
 		"@spectrum-css/popover": ">=8",
 		"@spectrum-css/progresscircle": ">=5",
 		"@spectrum-css/tokens": ">=16"
@@ -35,7 +35,19 @@
 		"@spectrum-css/helptext": {
 			"optional": true
 		},
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/menu": {
+			"optional": true
+		},
+		"@spectrum-css/popover": {
+			"optional": true
+		},
 		"@spectrum-css/progresscircle": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
 			"optional": true
 		}
 	},

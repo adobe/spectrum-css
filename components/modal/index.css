@@ -84,8 +84,8 @@
 	z-index: 2;
 
 	/* Don't be bigger than the screen */
-	max-block-size: var(--spectrum-modal-max-height);
-	max-inline-size: var(--spectrum-modal-max-width);
+	max-block-size: var(--mod-modal-max-height, var(--spectrum-modal-max-height));
+	max-inline-size: var(--mod-modal-max-width, var(--spectrum-modal-max-width));
 
 	background: var(--spectrum-modal-background-color);
 	border-radius: var(--spectrum-modal-confirm-border-radius);

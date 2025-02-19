@@ -48,5 +48,10 @@
       "rootClass": "spectrum-InfieldProgressCircle",
       "swc": "https://opensource.adobe.com/spectrum-web-components/components/progress-circle/"
     }
-  ]
+  ],
+  "peerDependenciesMeta": {
+    "@spectrum-css/tokens": {
+      "optional": true
+    }
+  }
 }

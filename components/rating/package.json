@@ -48,5 +48,13 @@
 			"guidelines": "https://spectrum.adobe.com/page/rating",
 			"rootClass": "spectrum-Rating"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

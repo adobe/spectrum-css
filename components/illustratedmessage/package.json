@@ -49,5 +49,13 @@
 			"rootClass": "spectrum-IllustratedMessage",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/illustrated-message/"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/tokens": {
+			"optional": true
+		},
+		"@spectrum-css/typography": {
+			"optional": true
+		}
+	}
 }

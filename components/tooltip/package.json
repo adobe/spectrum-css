@@ -50,5 +50,13 @@
 			"rootClass": "spectrum-Tooltip",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/tooltip/"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }
