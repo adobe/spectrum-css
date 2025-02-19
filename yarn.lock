@@ -5708,6 +5708,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-tools/theme-alignment@workspace:plugins/stylelint-theme-alignment":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-tools/theme-alignment@workspace:plugins/stylelint-theme-alignment"
+  dependencies:
+    colors: "npm:^1.4.0"
+    postcss: "npm:^8.4.49"
+    postcss-values-parser: "npm:^6.0.2"
+    stylelint: "npm:^16.9.0"
+  peerDependencies:
+    stylelint: ">=16"
+  languageName: unknown
+  linkType: soft
+
 "@storybook/addon-a11y@npm:^8.4.7":
   version: 8.5.8
   resolution: "@storybook/addon-a11y@npm:8.5.8"
@@ -7839,7 +7852,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"c8@npm:^10.1.3":
+"c8@npm:^10.1.2, c8@npm:^10.1.3":
   version: 10.1.3
   resolution: "c8@npm:10.1.3"
   dependencies:
