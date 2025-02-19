@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/preview",
-	"version": "12.0.2",
+	"version": "12.0.3",
 	"description": "A Spectrum CSS preview",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -40,10 +40,10 @@
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
-		"@spectrum-css/bundle": "workspace:^",
+		"@spectrum-css/bundle": "1.0.0",
 		"@spectrum-css/tokens": "16.0.1",
 		"@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^15.2.0",
-		"@spectrum-css/ui-icons": "workspace:^"
+		"@spectrum-css/ui-icons": "1.1.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.26.0",

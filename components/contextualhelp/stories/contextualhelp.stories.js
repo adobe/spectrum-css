@@ -130,6 +130,9 @@ WithLink.parameters = {
 };
 WithLink.storyName = "Default - info icon with link";
 
+/**
+ * In order to further customize the contextual help popover, implementations can set `--mod-spectrum-contextual-help-popover-maximum-width` to their desired max width.
+ */
 export const MaxWidthPopover = Template.bind({});
 MaxWidthPopover.tags = ["!dev"];
 MaxWidthPopover.args = {
@@ -149,6 +152,9 @@ MaxWidthPopover.parameters = {
 };
 MaxWidthPopover.storyName = "Default - max width popover";
 
+/**
+ * This is an example of the contextual help component within a popover with a placement of `top`. Read more about the 22 available placement positions in the [popover documentation](/docs/components-popover--docs).
+ */
 export const TopPopover = Template.bind({});
 TopPopover.tags = ["!dev"];
 TopPopover.args = {
