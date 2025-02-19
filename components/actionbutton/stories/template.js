@@ -66,8 +66,6 @@ export const Template = ({
 	testId,
 	role = "button",
 } = {}, context = {}) => {
-	const { updateArgs } = context;
-
 	return html`
 		<button
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
@@ -94,17 +92,7 @@ export const Template = ({
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
-			@click=${onclick ?? function() {
-				updateArgs?.({
-					isSelected: !isSelected
-				});
-			}}
-			@focusin=${function() {
-				updateArgs?.({ isFocused: true });
-			}}
-			@focusout=${function() {
-				updateArgs?.({ isFocused: false });
-			}}
+			@click=${ifDefined(onclick)}
 		>
 			${when(hasPopup && hasPopup !== "false", () =>
 				Icon({
@@ -220,6 +208,6 @@ export const TreatmentTemplate = (args, context) => Container({
 			...args,
 			isSelected,
 			isDisabled,
-		})
+		}, context)
 	}, context))}`,
 }, context);
