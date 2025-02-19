@@ -24,7 +24,6 @@ import "../index.css";
  * @property {boolean} [isValid=false]
  * @property {boolean} [multiline=false]
  * @property {boolean} [grows=false]
- * @property {boolean} [isQuiet=false]
  * @property {boolean} [isFocused=false]
  * @property {boolean} [isDisabled=false]
  * @property {boolean} [isRequired=false]
@@ -63,7 +62,6 @@ export const Template = ({
 	isValid = false,
 	multiline = false,
 	grows = false,
-	isQuiet = false,
 	isFocused = false,
 	isDisabled = false,
 	isRequired = false,
@@ -107,7 +105,6 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--multiline`]: multiline,
 				[`${rootClass}--grows`]: grows,
-				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--sideLabel`]: labelPosition === "side",
 				"is-invalid": isInvalid,
 				"is-valid": isValid,
@@ -288,14 +285,6 @@ export const KeyboardFocusTemplate = (args, context) => Container({
 			},
 			heading: "Default",
 			content: Template({...args, isKeyboardFocused: true}, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Quiet",
-			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
 		}, context)}
 	`
 }, context);

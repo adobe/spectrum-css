@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
@@ -57,7 +57,6 @@ export default {
 		isFocused,
 		isKeyboardFocused,
 		size: size(["s", "m", "l", "xl"]),
-		isQuiet,
 		multiline: { table: { disable: true } },
 		grows: {
 			name: "Grows",
@@ -124,7 +123,6 @@ export default {
 		labelText: "Username",
 		size: "m",
 		grows: false,
-		isQuiet: false,
 		value: "",
 		helpText: ""
 	},
@@ -196,19 +194,6 @@ Disabled.parameters = {
 export const HelpText = HelpTextOptions.bind({});
 HelpText.tags = ["!dev"];
 HelpText.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
-/**
- * Quiet text fields can have no visible background. This style works best when a clear layout (vertical stack, table, grid) makes it easy to parse. Too many quiet components in a small space can be hard to read.
- */
-export const Quiet = TextFieldOptions.bind({});
-Quiet.tags = ["!dev"];
-Quiet.args = {
-	isQuiet: true,
-	value: ""
-};
-Quiet.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 

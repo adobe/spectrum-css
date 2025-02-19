@@ -20,15 +20,6 @@ export const TextAreaGroup = Variants({
 		value: "Exercitation ad magna aliqua officia adipisicing ullamco.",
 		helpText: "Example help text. Ullamco laborum."
 	},{
-		testHeading: "Quiet",
-		value: "Ullamco id consequat adipisicing veniam sunt ut cupidatat do ullamco.",
-		isQuiet: true
-	},{
-		testHeading: "Quiet, with side label",
-		value: "Sunt Lorem consequat quis sunt tempor aliqua ipsum ut.",
-		labelPosition: "side",
-		isQuiet: true
-	}, {
 		testHeading: "Character count",
 		value: "Sunt Lorem consequat quis sunt tempor aliqua ipsum ut.",
 		hasCharacterCount: true,
