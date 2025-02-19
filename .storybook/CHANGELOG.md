@@ -1,5 +1,11 @@
 # Change Log
 
+## 12.0.3
+
+### Patch Changes
+
+- [#3564](https://github.com/adobe/spectrum-css/pull/3564) [`9753f18`](https://github.com/adobe/spectrum-css/commit/9753f180fce982cd64b4abb4ea1fae4ebe86ad37) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the internal workspace:^ dependency syntax for the Storybook package so that it can be leveraged externally without throwing errors.
+
 ## 12.0.2
 
 ### Patch Changes

@@ -12,6 +12,14 @@ export const ContextualHelpGroup = Variants({
 			},
 		},
 		{
+			testHeading: "Max-width popover",
+			customStyles: {
+				"inline-size": "275px",
+				"margin-bottom": "275px",
+				"--mod-spectrum-contextual-help-popover-maximum-width": "150px",
+			},
+		},
+		{
 			testHeading: "With link",
 			customStyles: {
 				"inline-size": "275px",
