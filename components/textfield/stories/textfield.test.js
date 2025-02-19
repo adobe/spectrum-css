@@ -26,15 +26,6 @@ export const TextFieldGroup = Variants({
 		value: "UsernameWiderThanInput@ReallyLongEmail.com",
 		helpText: "Example help text. Ullamco laborum."
 	},{
-		testHeading: "Quiet",
-		value: "UsernameWiderThanInput@ReallyLongEmail.com",
-		isQuiet: true
-	},{
-		testHeading: "Quiet, with side label",
-		value: "UsernameWiderThanInput@ReallyLongEmail.com",
-		labelPosition: "side",
-		isQuiet: true
-	},{
 		testHeading: "Character count",
 		value: "UsernameWiderThanInput@ReallyLongEmail.com",
 		hasCharacterCount: true,
