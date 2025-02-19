@@ -25,6 +25,7 @@ export default {
 		size: size(["xs", "s", "m", "l", "xl"]),
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
+			name: "Workflow icon",
 			if: false,
 		},
 		label: {
@@ -42,7 +43,10 @@ export default {
 			if: { arg: "staticColor", truthy: false},
 		},
 		isDisabled,
-		isSelected,
+		isSelected: {
+			...isSelected,
+			description: "An optional state used when treating the action button as a toggle.",
+		},
 		isHovered,
 		isFocused,
 		isActive,
@@ -115,7 +119,9 @@ Default.tags = ["!autodocs"];
 /**
  * Action buttons should always have a label, unless they are only using an icon that is universally understood and accessible. They can have an optional icon, but it should not be used for decoration. Use an icon only when necessary and when it has a strong association with the label text.
  *
- * The label can be hidden to create an icon-only action button. If the label is hidden, an icon is required, and the label will appear in a tooltip on hover.
+ * The label can be hidden to create an icon-only action button. If the label is hidden, an icon is required, and the implementation should show the label with a tooltip on hover.
+ *
+ * Action buttons can be used as toggles instead of for taking direct action. The optional "selected" state displayed below is used for when the action button is toggleable.
  */
 export const Standard = TreatmentTemplate.bind({});
 Standard.args = Default.args;
@@ -170,7 +176,8 @@ Quiet.parameters = {
 };
 
 /**
- * An action button can have a hold icon (a small corner triangle). This icon indicates that holding down the action button for a short amount of time can reveal a popover menu, which can be used, for example, to switch between related actions. Because of the way padding is calculated, the hold icon must be placed before the workflow icon in the markup.
+ * An action button can have a hold icon (a small corner triangle). This icon indicates that holding down the action button for a short amount of time can reveal a popover menu, which can be used, for example, to switch between related actions. Note that this
+ * popover menu is not demonstrated here—this would be handled by the implementation. Because of the way padding is calculated, the hold icon must be placed before the workflow icon in the markup.
  */
 export const HoldIcon = IconOnlyOption.bind({});
 HoldIcon.tags = ["!dev"];
