@@ -26,7 +26,7 @@
 	--spectrum-drop-zone-content-max-width: var(--spectrum-drop-zone-content-maximum-width);
 	--spectrum-drop-zone-content-top-to-text: var(--spectrum-component-top-to-text-300);
 	--spectrum-drop-zone-content-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
-	--spectrum-drop-zone-content-height: var(--spectrum-component-height-300);
+	--spectrum-drop-zone-component-height: var(--spectrum-component-height-300);
 	--spectrum-drop-zone-edge-to-text: var(--spectrum-component-edge-to-text-300);
 
 	--spectrum-drop-zone-content-font-family: var(--spectrum-sans-font-family-stack);
@@ -42,7 +42,9 @@
 	--mod-illustrated-message-description-position: relative;
 	--mod-illustrated-message-description-z-index: 10;
 	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
-	--mod-illustrated-message-illustration-color: var(--spectrum-gray-500);
+	--mod-illustrated-message-illustration-color: var(--spectrum-neutral-visual-color);
+
+	/* Adjusts height of filled & dragged dropzone state */
 	--mod-drop-zone-content-height: 280px;
 
 	/* Typography */
@@ -116,9 +118,10 @@
 
 .spectrum-DropZone-stroke-path {
 	stroke: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
-	stroke-dasharray: calc(var(--spectrum-drop-zone-border-dash-length) / 2) calc(var(--spectrum-drop-zone-border-dash-gap) / 2);
+	stroke-dasharray: var(--spectrum-drop-zone-border-dash-length) var(--spectrum-drop-zone-border-dash-gap);
 	rx: calc(var(--spectrum-drop-zone-corner-radius) / 2);
 	ry: calc(var(--spectrum-drop-zone-corner-radius) / 2);
+	stroke-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
 }
 
 .spectrum-DropZone-content {
@@ -140,7 +143,7 @@
 	padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-drop-zone-content-bottom-to-text));
 	padding-inline: var(--mod-drop-zone-edge-to-text, var(--spectrum-drop-zone-edge-to-text));
 	background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
-	max-block-size: var(--mod-drop-zone-content-height, var(--spectrum-drop-zone-content-height));
+	max-block-size: var(--spectrum-drop-zone-component-height);
 
 	font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
 	font-weight: var(--mod-drop-zone-content-font-weight, var(--spectrum-drop-zone-content-font-weight));

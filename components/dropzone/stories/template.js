@@ -51,6 +51,8 @@ export const Template = ({
         ry="8"
         fill="none"
         stroke-linecap="round"
+				stroke-linejoin="round"
+				vector-effect="non-scaling-stroke"
         class="${rootClass}-stroke-path"
       />
     </svg>
