@@ -59,6 +59,10 @@ governing permissions and limitations under the License.
 		--spectrum-actionbutton-background-color-down: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-disabled: transparent;
+
+		&.is-selected {
+			--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
+		}
 	}
 
 	&.spectrum-ActionButton--staticBlack {
