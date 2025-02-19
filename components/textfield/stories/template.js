@@ -91,12 +91,28 @@ export const Template = ({
 
 	// Override icon name and set if the field is invalid or valid
 	if (isInvalid) {
-		iconName = "Alert";
+		iconName = "AlertTriangle";
 		iconSet = "workflow";
 	}
 	else if (isValid) {
-		iconName = "Checkmark";
 		iconSet = "ui";
+
+		switch (size) {
+			case "s":
+				iconName = "Checkmark75";
+				break;
+			case "m":
+				iconName = "Checkmark100";
+				break;
+			case "l":
+				iconName = "Checkmark200";
+				break;
+			case "xl":
+				iconName = "Checkmark300";
+				break;
+			default:
+				iconName = "Checkmark"; // Fallback if size is undefined or doesn't match
+		}
 	}
 
 	return html`
