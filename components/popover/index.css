@@ -72,10 +72,10 @@
 
 	background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
 	filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
-	overflow: auto;
 
 	/* has tip triangle */
 	&.spectrum-Popover--withTip {
+		/* Prevents clipping of the tip */
 		overflow: visible;
 
 		.spectrum-Popover-tip {
@@ -118,7 +118,8 @@
 
 	/* popover animates upward ⬆ */
 	&.is-open {
-		transform: translateY(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translate3d(0, 0, 0);
+		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
+		transform: translateY(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translateZ(0);
 	}
 }
 
@@ -136,7 +137,8 @@
 
 	/* popover animates downward ⬇ */
 	&.is-open {
-		transform: translateY(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translate3d(0, 0, 0);
+		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
+		transform: translateY(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translateZ(0);
 	}
 }
 
@@ -153,7 +155,8 @@
 
 	/* popover animates towards right ⮕ */
 	&.is-open {
-		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translate3d(0, 0, 0);
+		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
+		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translateZ(0);
 	}
 }
 
@@ -170,7 +173,8 @@
 
 	/* popover animates towards left ⬅ */
 	&.is-open {
-		transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translate3d(0, 0, 0);
+		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
+		transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translateZ(0);
 	}
 }
 
@@ -186,12 +190,13 @@
 
 	/* LTR read, popover animates towards left ⬅ */
 	&.is-open {
-		transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translate3d(0, 0, 0);
+		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
+		transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translateZ(0);
 	}
 
 	/* RTL read, popover animates towards right ⮕ */
 	&.is-open:dir(rtl) {
-		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translate3d(0, 0, 0);
+		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translateZ(0);
 	}
 }
 
@@ -207,13 +212,15 @@
 
 	/* LTR read, popover animates towards right ⮕ */
 	&.is-open {
-		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translate3d(0, 0, 0);
+		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
+		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translateZ(0);
 	}
 
 	/* RTL read, popover animates towards left ⬅ */
 	&:dir(rtl) {
 		&.is-open {
-			transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translate3d(0, 0, 0);
+			/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
+			transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translateZ(0);
 		}
 	}
 }
