@@ -190,3 +190,27 @@ export const getUiIconSizes = (uiIcons) => {
 };
 
 export const uiIconSizes = getUiIconSizes(uiIconsWithDirections);
+
+/**
+ * If UI icon name does not have a sizing number appended, add one to approximate the provided
+ * t-shirt sizing for the component, based on the most common mapping.
+ *
+ * @param {string} uiIconName
+ * @param {string} size t-shirt sizing
+ * @returns {string} uiIconName with appended default sizing number, if one is not already present.
+ */
+export const appendUiIconDefaultSizing = (uiIconName, size = "m") => {
+	// If icon name already has a size number on the end, no change is needed.
+	if (uiIconName.match(/\d{2,3}$/)) {
+		return uiIconName;
+	}
+
+	return uiIconName + ({
+		xs: "50",
+		s: "75",
+		m: "100",
+		l: "200",
+		xl: "300",
+		xxl: "400",
+	}[size] || "100");
+};
