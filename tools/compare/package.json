@@ -1,0 +1,53 @@
+{
+	"name": "@spectrum-tools/compare",
+	"version": "0.0.0",
+	"description": "A tool to compare two versions of a component's compiled output.",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"contributors": [
+		"Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)"
+	],
+	"homepage": "https://opensource.adobe.com/spectrum-css/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "tools/compare"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"type": "module",
+	"main": "lib/index.js",
+	"bin": "./lib/cli.js",
+	"dependencies": {
+		"@spectrum-css/bundle": "1.0.0",
+		"@zachleat/heading-anchors": "^1.0.1"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-fetch": "^5.0.2",
+		"@11ty/eleventy-img": "^6.0.1",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-rss": "^2.0.3",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"colors": "^1.4.0",
+		"cross-env": "^7.0.3",
+		"diff": "^7.0.0",
+		"diff2html": "^3.4.51",
+		"fast-glob": "^3.3.3",
+		"lodash-es": "^4.17.21",
+		"npm-registry-fetch": "^18.0.2",
+		"nunjucks": "^3.2.4",
+		"prismjs": "^1.29.0",
+		"rimraf": "^6.0.1",
+		"tar": "^7.4.3",
+		"yargs": "^17.7.2"
+	},
+	"keywords": [
+		"design-system",
+		"spectrum",
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum"
+	]
+}

@@ -19,7 +19,10 @@ const path = require("path");
 
 const fg = require("fast-glob");
 const postcss = require("postcss");
+const { rimrafSync } = require("rimraf");
 const valuesParser = require("postcss-values-parser");
+
+require("colors");
 
 /**
  * A source of truth for commonly used directories
@@ -37,11 +40,20 @@ const dirs = {
 	storybook: path.join(__dirname, "../.storybook"),
 };
 
+/**
+ * @param {Number} seconds
+ * @param {Number} nanoseconds
+ * @returns {Number} time in milliseconds
+ */
 const timeInMs = (seconds, nanoseconds) => (seconds * 1000000000 + nanoseconds) / 1000000;
 
 /** @type {(string) => string} */
 const relativePrint = (filename, { cwd = dirs.root } = {}) => path.relative(cwd, filename);
 
+/**
+ * @param {Number} bytes
+ * @returns {string} - A human-readable string of the file size
+ */
 const bytesToSize = function (bytes) {
 	if (bytes === 0) return "0";
 
@@ -50,6 +62,24 @@ const bytesToSize = function (bytes) {
 	const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
 	if (i === 0) return (bytes / 1000).toFixed(2) + " " + sizes[1];
 	return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
+};
+
+/**
+ * A utility to write logs to the console
+ * @type {object} log
+ * @property {(string) => void} log.error
+ * @property {(string) => void} log.write
+ * @property {(string[], { min: number, max: number }) => void} log.writeTable
+ */
+const log = {
+	error: (err) => process.stderr.write(`${err}\n\n`),
+	write: (msg) => process.stdout.write(msg),
+	writeTable: (data = [], { min = 20, max = 30 } = {}) => {
+		if (!data.length) return;
+
+		// Print a table of data to the console
+		process.stdout.write(`${data.map((row, idx) => `${row ?? " "}`.padEnd(idx === 0 ? max : min)).join("")}\n`);
+	},
 };
 
 /**
@@ -283,6 +313,27 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 }
 
 /**
+ * A utility to clean and create a directory
+ * @param {string} path - The path to the directory to clean
+ * @param {boolean} clean - Whether to delete the directory before creating it
+ * @returns void
+ */
+const cleanAndMkdir = (path, clean = true) => {
+	if (!path) return;
+
+	let isFile = false;
+
+	// If the output directory exists, delete it but don't throw an error if it doesn't
+	if (clean && fs.existsSync(path)) {
+		isFile = fs.statSync(path).isFile();
+		rimrafSync(path, { preserveRoot: true });
+	}
+
+	// Create the output directory fresh
+	fs.mkdirSync(isFile ? path.dirname(path) : path, { recursive: true });
+};
+
+/**
  *
  * @param {string} content - The content to write to the output file
  * @param {import("fs").PathLike} output - The path to the output file
@@ -324,4 +375,6 @@ module.exports = {
 	timeInMs,
 	validateComponentName,
 	writeAndReport,
+	log,
+	cleanAndMkdir,
 };

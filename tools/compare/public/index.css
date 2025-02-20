@@ -1,0 +1,129 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+	--mod-detail-margin-start: 0;
+	--mod-table-cursor-row-default: auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+
+	font-family: var(--spectrum-default-font-family);
+	background-color: var(--spectrum-background-layer-1-color);
+	color: var(--spectrum-neutral-content-color-default);
+	-webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	scroll-behavior: smooth;
+	scroll-margin-block-start: 2em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	block-size: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	inline-size: 1px;
+}
+
+.spectrum-Container {
+	display: flex;
+	flex-flow: row-reverse nowrap;
+	gap: 0.5em;
+
+	margin-inline: auto;
+
+	block-size: 100vh;
+	inline-size: min(1480px, 98vw);
+
+	overflow: hidden;
+}
+
+.spectrum-Container-main {
+	flex-grow: 1;
+	max-block-size: 100vh;
+	overflow-y: auto;
+}
+
+.spectrum-Container-main header {
+	margin-block-start: 50px;
+	margin-block-end: 2em;
+}
+
+.spectrum-Container-main section {
+	background-color: var(--spectrum-background-layer-2-color);
+	color: var(--spectrum-neutral-content-color-default);
+	border-radius: 4px;
+	padding: 1rem;
+}
+
+.spectrum-Container-aside {
+	box-sizing: border-box;
+	overflow: hidden;
+
+	margin-block-start: 1vh;
+	padding: 1rem;
+
+	max-block-size: 98%;
+	min-inline-size: max-content;
+	max-inline-size: 200px;
+}
+
+.spectrum-Container-aside > div {
+	margin-block-start: 1rem;
+}
+
+.spectrum-Container-aside > div > .spectrum-SideNav {
+	overflow-y: auto;
+	padding: 1rem;
+	max-block-size: 85vh;
+
+	background-color: var(--spectrum-background-layer-2-color);
+	color: var(--spectrum-neutral-content-color-default);
+	border-radius: 4px;
+}
+
+.spectrum-Grid {
+	--mod-heading-margin-end: 1em;
+
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.spectrum-SideNav {
+	--mod-sidenav-icon-size: 0.8rem;
+}
+
+.d2h-code-side-linenumber {
+	position: relative !important;
+}

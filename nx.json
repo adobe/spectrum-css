@@ -79,11 +79,13 @@
 		},
 		"compare": {
 			"cache": true,
-			"dependsOn": ["build"],
+			"dependsOn": [{ "projects": "bundle", "target": "build" }],
 			"executor": "nx:run-commands",
 			"inputs": [
 				"{workspaceRoot}/tasks/compare-compiled-output.js",
-				{ "dependentTasksOutputFiles": "dist/*.css", "transitive": true },
+				"{workspaceRoot}/tasks/utilities.js",
+				"{workspaceRoot}/tasks/templates/*.njk",
+				{ "dependentTasksOutputFiles": "dist/index.css" },
 				{
 					"externalDependencies": [
 						"fast-glob",
@@ -102,10 +104,13 @@
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings ./tasks/compare-compiled-output.js $NX_TASK_TARGET_PROJECT"
+					{
+						"command": "node --no-warnings ./tasks/compare-compiled-output.js $NX_TASK_TARGET_PROJECT",
+						"forwardAllArgs": true
+					}
 				]
 			},
-			"outputs": ["{workspaceRoot}/.diff-output"]
+			"outputs": ["{projectRoot}/_site"]
 		},
 		"format": {
 			"cache": true,

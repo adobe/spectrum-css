@@ -1,0 +1,53 @@
+{
+	"name": "compare",
+	"tag": ["tooling"],
+	"namedInputs": {
+		"core": ["{projectRoot}/src/index.css"],
+		"tools": ["{projectRoot}/tasks/bundler.js"]
+	},
+	"targets": {
+		"build": {
+			"dependsOn": ["clean", "^build"],
+			"executor": "nx:run-commands",
+			"inputs": [
+				"{projectRoot}/tasks/compare-compiled-output.js",
+				"{projectRoot}/tasks/utilities.js",
+				"{projectRoot}/tasks/templates/*.njk",
+				{ "dependentTasksOutputFiles": "dist/index.css" },
+				{
+					"externalDependencies": [
+						"fast-glob",
+						"tar",
+						"lodash-es",
+						"nunjucks",
+						"rimraf",
+						"npm-registry-fetch",
+						"yargs",
+						"diff",
+						"diff2html",
+						"colors"
+					]
+				},
+				{ "env": "NODE_ENV" }
+			],
+			"options": {
+				"commands": ["yarn eleventy --serve --incremental --input=. --output=_site"],
+				"cwd": "{projectRoot}"
+			},
+			"outputs": ["{projectRoot}/_site"]
+		},
+		"clean": {
+			"inputs": [
+				"{projectRoot}/_site",
+				{ "externalDependencies": ["rimraf"] }
+			],
+			"options": {
+				"commands": [
+					"rimraf {projectRoot}/_site"
+				]
+			}
+		},
+		"format": {},
+		"lint": {}
+	}
+}

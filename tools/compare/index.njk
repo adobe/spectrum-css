@@ -1,0 +1,19 @@
+---js
+layout: layouts/base.njk
+const eleventyComputed = {
+	keys: (data) => Object.keys(data.npmData).join(", "),
+};
+const eleventyNavigation = {
+	key: "Home",
+	order: 1,
+	url: "/",
+};
+---
+
+{{ data | json }}
+
+<ul>
+	{%- for entry in collections.all %}
+	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+	{%- endfor %}
+</ul>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<title>{{ title or metadata.title }}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="{{ description or metadata.description }}">
+        <meta name="theme-color" content="#e1251b" />
+
+        <link rel="stylesheet" href="/node_modules/@spectrum-css/bundle/index.css">
+        <link rel="stylesheet" href="/node_modules/diff2html/css/diff2html.min.css">
+		<link rel="stylesheet" href="/index.css">
+	</head>
+	<body class="spectrum spectrum--light spectrum--medium">
+        <a name="#top"></a>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+        <div class="spectrum-Container">
+			<nav class="spectrum-Typography spectrum-Container-aside">
+                <h2 class="spectrum-Detail spectrum-Detail--sizeL">Quick links</h2>
+				<ul class="spectrum-SideNav">
+				{%- for entry in collections.all | eleventyNavigation %}
+					<li class="spectrum-SideNav-item{% if isListing %} is-selected{% endif %}">
+                        <a class="spectrum-SideNav-itemLink" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>
+                            <span class="spectrum-SideNav-link-text">{{ entry.title }}</span>
+                        </a>
+                    </li>
+				{%- endfor %}
+				</ul>
+			</nav>
+
+            <main class="spectrum-Container-main" id="skip">
+                {% if heading or subheading %}
+                <header class="spectrum-Typography">
+                    {% if heading %}<h1 class="spectrum-Heading spectrum-Heading--sizeXL">{{ heading }}</h1>{% endif %}
+                    {% if subheading %}<p class="spectrum-Body spectrum-Body--sizeM">Local content is rendered in the panel on the right and compared against changes in tag v{{ tag }} (rendered in the panel on the left).</p>{% endif %}
+                </header>
+                {% endif %}
+
+                <heading-anchors>
+                    {{ content | safe }}
+                </heading-anchors>
+            </main>
+        </div>
+
+        <script type="module" src="/node_modules/diff2html/js/diff2html.min.js"></script>
+
+		{#- Add the heading-anchors web component to the JavaScript bundle #}
+		<script type="module" src="/node_modules/@zachleat/heading-anchors/heading-anchors.js"></script>
+
+        <script src="https://use.typekit.net/bbk5msc.js"></script>
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                // This wrapper prevents loading the font more than once
+                if (!window.Typekit) {
+                    const kitId =
+                        document.querySelector('[lang]:not([lang="en-US"])') === null
+                            ? "mge7bvf"
+                            : "rok6rmo";
+
+                    const html = document.documentElement;
+                    html.classList.add("wf-loading");
+
+                    const t = setTimeout(function () {
+                        html.classList.remove("wf-loading");
+                        html.classList.add("wf-inactive");
+                    }, 3000);
+
+                    const tk = document.createElement("script");
+                    let d = false;
+
+                    // Always load over https
+                    tk.src = "https://use.typekit.net/" + kitId + ".js";
+                    tk.type = "text/javascript";
+                    tk.async = "true";
+                    tk.onload = tk.onreadystatechange = () => {
+                        const a = this.readyState;
+                        if (d || (a && a !== "complete" && a !== "loaded")) return;
+
+                        d = true;
+                        clearTimeout(t);
+
+                        try {
+                            window.Typekit = Typekit.load({
+                                kitId,
+                                scriptTimeout: 3000,
+                                active: function () {
+                                    var loader = document.getElementById("loader");
+                                    if (loader) {
+                                        setTimeout(function () {
+                                            // Hide the loader
+                                            loader.style.display = "none";
+                                        }, 125);
+                                    }
+                                },
+                            });
+                        } catch (b) {}
+                    };
+
+                    const script = document.getElementsByTagName("script")[0];
+                    script.parentNode.insertBefore(tk, script);
+                }
+            });
+
+            try {
+                Typekit.load();
+            } catch (e) {}
+        </script>
+	</body>
+</html>

@@ -1,6 +1,7 @@
 dist
 !dist/metadata.json
 !tokens/dist/json/*
+_site
 
 # Not committing the map assets, these are dev-only
 *.map
@@ -20,6 +21,7 @@ lerna-debug.log
 yarn-error.log
 package-lock.json
 .nx
+.cache
 
 # Storybook build output
 .storybook/storybook-static
@@ -31,9 +33,6 @@ chromatic.log
 chromatic-build-*.xml
 chromatic-diagnostics*.json
 chromatic.config.json
-
-# Custom diff tool
-.diff-output
 
 .eslintcache
 .stylelintcache
