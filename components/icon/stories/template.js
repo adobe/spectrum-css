@@ -6,7 +6,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
-import { getSpriteSheetName, uiIconsCleaned, uiIconsWithDirections, workflowIconsCleaned } from "./utilities.js";
+import { appendUiIconDefaultSizing, getSpriteSheetName, uiIconsWithDirections, workflowIconsCleaned } from "./utilities.js";
 
 import "../index.css";
 
@@ -33,7 +33,7 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Icon",
 	size = "m",
-	setName,
+	setName = "workflow",
 	iconName,
 	uiIconName,
 	fill,
@@ -50,113 +50,51 @@ export const Template = ({
 		iconName = uiIconName;
 	}
 
+	// Make sure icon set is provided.
+	if (!["ui","workflow"].includes(setName)) {
+		console.warn(
+			`Icon "${iconName}" is missing its icon set. Make sure you are explicitly setting either the workflow or ui icon set.`
+		);
+		return html``;
+	}
+
 	// Make sure icon name is provided.
 	if (!iconName) {
-		console.warn(
-			"Icon: Could not render a result because no icon name was provided to the icon template."
-		);
+		console.warn("Icon: Could not render a result because no icon name was provided to the icon template.");
+		return html``;
+	}
+
+	/**
+	 * Append approximate sizing number to UI icons passed in without a sizing number.
+	 *
+	 * Note: It's preferred for components to provide the specific UI sizing numbers in the UI icon
+	 * name, rather than relying on this approximation, as UI icons do not use t-shirt sizing.
+	 */
+	if (setName === "ui") {
+		iconName = appendUiIconDefaultSizing(iconName, size);
+	}
+
+	// Make sure icon exists in the set.
+	if (
+		(setName == "workflow" && !workflowIconsCleaned.includes(iconName)) ||
+		(setName == "ui" && !uiIconsWithDirections.includes(iconName))
+	) {
+		console.warn(`Icon: Could not render an icon with the name "${iconName}" because it does not exist in the ${setName} icon set.`);
 		return html``;
 	}
 
 	// Name of icon that corresponds with SVG file. This may differ from the icon name, such as with
 	// directional icons that use a single icon.
-	let idKey = iconName;
+	let iconNameToLoad = iconName;
 
 	// If a descriptor like "Right", "Left", "Down", or "Up" is present for the UI icons Chevron or
 	// Arrow, use that only for the class name and not the icon fetch. This is because these use a
 	// single icon file that is rotated in CSS.
 	if (
-		["Right", "Left", "Down", "Up"].some((c) => idKey.includes(c)) &&
+		["Right", "Left", "Down", "Up"].some((c) => iconNameToLoad.includes(c)) &&
 		setName === "ui"
 	) {
-		idKey = idKey.replace(/(Right|Left|Down|Up)/, "");
-	}
-
-	// Make sure icon set is provided.
-	if (!setName) {
-		console.warn(
-			`Icon "${idKey}" is missing its icon set. Make sure you are explicitly setting either the workflow or ui icon set.`
-		);
-		return html``;
-	}
-
-	/**
-	 * Fallback UI Icon sizing number.
-	 *
-	 * If the icon name includes its scale, we want to leave that scale. This is preferred,
-	 * as UI icons do not use workflow icon sizing.
-	 *
-	 * If the UI icon name does not include scale, or the scale does not exist in the current
-	 * list of UI icons, reformat it to approximate the provided sizing for the component.
-	 */
-	if (
-		setName === "ui" &&
-		(
-			// Does not already have size number at the end.
-			!idKey.match(/\d{2,3}$/) ||
-			// If the provided icon name includes the sizing number, make sure it's a supported sizing number;
-			// if not, strip it from the key.
-			(
-				idKey.match(/\d{2,3}$/) &&
-				!uiIconsCleaned.includes(idKey)
-			)
-		)
-	) {
-		let sizeVal;
-		switch (size) {
-			case "xs":
-				if (["CornerTriangle", "Cross"].some(c => idKey.startsWith(c))) {
-					sizeVal = "75";
-				}
-				else if (["Arrow", "Asterisk", "LinkOut"].some(c => idKey.startsWith(c))) {
-					sizeVal = "100";
-				}
-				else {
-					sizeVal = "50";
-				}
-				break;
-			case "s":
-				if (["Arrow", "Asterisk", "LinkOut"].some(c => idKey.startsWith(c))) {
-					sizeVal = "100";
-				}
-				else {
-					sizeVal = "75";
-				}
-				break;
-			case "l":
-				if (["Arrow"].some(c => idKey.startsWith(c))) {
-					sizeVal = "400";
-				}
-				else {
-					sizeVal = "200";
-				}
-				break;
-			case "xl":
-			case "xxl":
-				if (["Arrow"].some(c => idKey.startsWith(c))) {
-					sizeVal = "400";
-				}
-				else {
-					sizeVal = "300";
-				}
-				break;
-			default:
-				sizeVal = "100";
-				break;
-		}
-
-		console.warn(`Using fallback UI Icon sizing number "${sizeVal}" for "${idKey}". UI icon size was not provided or does not exist in the list of available UI icons.`);
-
-		// Replace sizing number on idKey and iconName with new fallback size.
-		idKey = idKey.replace(/\d{2,3}$/, "");
-		idKey += sizeVal;
-
-		iconName = iconName.replace(/\d{2,3}$/, "");
-		iconName += sizeVal;
-
-		if (!uiIconsCleaned.includes(idKey)) {
-			console.error(`The UI icon "${idKey}" does not exist in the list of available UI icons.`);
-		}
+		iconNameToLoad = iconNameToLoad.replace(/(Right|Left|Down|Up)/, "");
 	}
 
 	/**
@@ -178,8 +116,8 @@ export const Template = ({
 	 */
 	if (!useRef) {
 		let svgString;
-		if (loaded?.icons && loaded?.icons[setName]?.[idKey]) {
-			svgString = loaded.icons[setName][idKey];
+		if (loaded?.icons && loaded?.icons[setName]?.[iconNameToLoad]) {
+			svgString = loaded.icons[setName][iconNameToLoad];
 		}
 
 		// Return the individual SVG's entire markup.
@@ -194,12 +132,12 @@ export const Template = ({
 			)}`;
 		}
 		else {
-			console.warn(`Could not find SVG markup for "${idKey}" in context.loaded.icons. Did you pass through context? Falling back to using the sprite sheet reference instead.`);
+			console.warn(`Could not find SVG markup for "${iconNameToLoad}" in context.loaded.icons. Was context passed through in the template? Falling back to using the sprite sheet reference instead.`);
 		}
 	}
 
 	// ID of the icon within the sprite sheet for its icon set.
-	const iconID = getSpriteSheetName(idKey, setName);
+	const iconID = getSpriteSheetName(iconNameToLoad, setName);
 
 	// Return SVG markup with a reference to the icon ID within the sprite sheet.
 	return html`<svg
@@ -211,7 +149,7 @@ export const Template = ({
 		aria-label=${iconName}
 		role="img"
 	>
-		<title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
+		<title id=${iconNameToLoad}>${iconNameToLoad.replace(/([A-Z])/g, " $1").trim()}</title>
 		<use xlink:href="#${iconID}" href="#${iconID}" />
 	</svg>`;
 };
