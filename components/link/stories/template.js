@@ -49,3 +49,11 @@ export const TemplateWithFillerText = (args, context) => html`
 		. This is just filler text, but if you keep reading maybe something good will happen.
 	</div>
 `;
+
+export const TemplateWithFillerTextFocused = (args, context) => html`
+	<div style="width: 100px">
+		Hello, this is a
+		${Template(args, context)}
+		. This is just filler text, but if you keep reading maybe something good will happen.
+	</div>
+`;
