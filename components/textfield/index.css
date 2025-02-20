@@ -58,12 +58,6 @@
 
 	/* character count */
 	--spectrum-textfield-character-count-color: var(--spectrum-neutral-subdued-content-color-default);
-	--spectrum-textfield-character-count-font-family: var(--spectrum-sans-font-family-stack);
-	--spectrum-textfield-character-count-font-weight: var(--spectrum-regular-font-weight);
-	--spectrum-textfield-character-count-font-style: var(--spectrum-default-font-style);
-	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-100);
-	--spectrum-textfield-character-count-line-height: var(--spectrum-line-height-100);
-	--spectrum-textfield-character-count-line-height-cjk: var(--spectrum-cjk-line-height-100);
 	--spectrum-textfield-character-count-spacing-inline: var(--spectrum-spacing-200);
 	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-textfield-character-count-spacing-inline-side: var(--spectrum-side-label-character-count-to-field);
@@ -140,7 +134,6 @@
 
 	--spectrum-textfield-font-size: var(--spectrum-font-size-75);
 
-	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-75);
 	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-75);
 	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-component-top-to-text-75);
 }
@@ -167,7 +160,6 @@
 
 	--spectrum-textfield-font-size: var(--spectrum-font-size-200);
 
-	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-200);
 	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-200);
 	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-component-top-to-text-200);
 }
@@ -194,7 +186,6 @@
 
 	--spectrum-textfield-font-size: var(--spectrum-font-size-300);
 
-	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-300);
 	--spectrum-textfield-character-count-spacing-block: var(--spectrum-component-bottom-to-text-300);
 	--spectrum-textfield-character-count-spacing-block-side: var(--spectrum-component-top-to-text-300);
 }
@@ -302,11 +293,11 @@
 	margin-block-end: var(--mod-textfield-character-count-spacing-block, var(--spectrum-textfield-character-count-spacing-block));
 	margin-inline-start: var(--mod-textfield-character-count-spacing-inline, var(--spectrum-textfield-character-count-spacing-inline));
 	margin-inline-end: 0;
-	font-size: var(--mod-textfield-character-count-font-size, var(--spectrum-textfield-character-count-font-size));
-	font-family: var(--mod-textfield-character-count-font-family, var(--spectrum-textfield-character-count-font-family));
-	font-weight: var(--mod-textfield-character-count-font-weight, var(--spectrum-textfield-character-count-font-weight));
-	font-style: var(--mod-textfield-character-count-font-style, var(--spectrum-textfield-character-count-font-style));
-	line-height: var(--mod-textfield-character-count-line-height, var(--spectrum-textfield-character-count-line-height));
+	font-size: var(--mod-textfield-font-size, var(--spectrum-textfield-font-size));
+	font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
+	font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
+	font-style: var(--mod-textfield-font-style, var(--spectrum-textfield-font-style));
+	line-height: var(--mod-textfield-line-height, var(--spectrum-textfield-line-height));
 	grid-row: 1;
 	grid-column: 2 / span 1;
 	padding-inline-end: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
@@ -318,7 +309,7 @@
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
-		--spectrum-textfield-character-count-line-height: var(--mod-textfield-character-count-line-height-cjk, var(--spectrum-textfield-character-count-line-height-cjk));
+		--spectrum-textfield-line-height: var(--mod-textfield-line-height-cjk, var(--spectrum-textfield-line-height-cjk));
 	}
 }
 
