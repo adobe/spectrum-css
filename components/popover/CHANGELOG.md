@@ -1,5 +1,15 @@
 # Change Log
 
+## 8.2.0
+
+### Minor Changes
+
+- [#3566](https://github.com/adobe/spectrum-css/pull/3566) [`0fe73e9`](https://github.com/adobe/spectrum-css/commit/0fe73e9483e028c5c8b724d19f5e7e0bd455b279) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - # Popover overflow bug on Safari browser
+
+  `translateZ` has been added to popover `&.is-open`. This is to prevent clipping of the `filter: drop-shadow` when `overflow` is applied on `spectrum-Popover`. This bug happens on the Safari browser. `translateZ or translate3d` on the `&.is-open` class accelerates the component to the GPU layer maintaining any transformations and animations.
+
+  `overflow: visible` applied to CSS `--withTip` so the tip is still visible if `overflow` is applied to the component.
+
 ## 8.1.0
 
 ### Minor Changes

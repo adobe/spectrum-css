@@ -1,5 +1,12 @@
 # Change Log
 
+## 7.0.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/picker@10.0.0
+
 ## 6.1.0
 
 ### Minor Changes

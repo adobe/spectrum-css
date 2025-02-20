@@ -1,5 +1,12 @@
 # Change Log
 
+## 8.0.0
+
+### Patch Changes
+
+- Updated dependencies [[`0fe73e9`](https://github.com/adobe/spectrum-css/commit/0fe73e9483e028c5c8b724d19f5e7e0bd455b279)]:
+  - @spectrum-css/popover@8.2.0
+
 ## 7.1.0
 
 ### Patch Changes
