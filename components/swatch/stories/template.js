@@ -106,7 +106,12 @@ export const Template = ({
 							...(isMixedValue ? [Icon({
 								customClasses: [`${rootClass}-mixedValueIcon`],
 								setName: "ui",
-								iconName: "Dash",
+								iconName: "Dash" + ({
+									xs: "75",
+									s: "75",
+									m: "100",
+									l: "200",
+								}[size] || "100"),
 								useRef: false,
 							}, context)] : []),
 						]
