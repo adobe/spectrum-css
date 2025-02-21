@@ -2,7 +2,7 @@ import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptionsTextArea, KeyboardFocusTemplate, Template, TextAreaOptions } from "./textarea.template.js";
+import { HelpTextOptionsTextArea, RequiredOptionsTextArea, Template, TextAreaOptions } from "./textarea.template.js";
 import { TextAreaGroup } from "./textarea.test.js";
 import { default as Textfield } from "./textfield.stories.js";
 
@@ -77,12 +77,15 @@ HelpText.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-export const Quiet = TextAreaOptions.bind({});
-Quiet.tags = ["!dev"];
-Quiet.args = {
-	isQuiet: true,
+/**
+ * Text areas can be marked as optional or required, depending on the situation. For required text areas, there are two styling options: a "(required)" label or an asterisk. If you use an asterisk, be sure to include hint text to explain what the asterisk means. Optional text fields are either denoted with text added to the end of the label — "(optional)" — or have no indication at all.
+ */
+export const Required = RequiredOptionsTextArea.bind({});
+Required.tags = ["!dev"];
+Required.args = {
+	isRequired: true,
 };
-Quiet.parameters = {
+Required.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
@@ -149,7 +152,7 @@ Sizing.parameters = {
  * displays the focus indicator. This indicator should not appear on focus from a click or tap.
  * The example below has this class applied on first load for demonstration purposes.
  */
-export const KeyboardFocus = KeyboardFocusTemplate.bind({});
+export const KeyboardFocus = Template.bind({});
 KeyboardFocus.tags = ["!dev"];
 KeyboardFocus.args = {
 	isKeyboardFocused: true,
