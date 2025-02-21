@@ -14,22 +14,6 @@ import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
-/**
- * Get the tray submenu back arrow name with scale number (defined in design spec).
- */
-const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
-	switch (size) {
-		case "s":
-			return `${iconName}200`;
-		case "l":
-			return `${iconName}400`;
-		case "xl":
-			return `${iconName}500`;
-		default:
-			return `${iconName}300`;
-	}
-};
-
 export const MenuItem = (
 	{
 		rootClass = "spectrum-Menu-item",
@@ -84,10 +68,7 @@ export const MenuItem = (
 		${when(isCollapsible || (selectionMode == "single" && isSelected), () =>
 			Icon(
 				{
-					iconName: iconWithScale(
-						size,
-						isCollapsible ? "ChevronRight" : "Checkmark",
-					),
+					iconName: isCollapsible ? "ChevronRight" : "Checkmark",
 					setName: "ui",
 					useRef: false,
 					size,
@@ -196,7 +177,7 @@ export const MenuItem = (
 		${when(isDrillIn, () =>
 			Icon(
 				{
-					iconName: iconWithScale(size, "ChevronRight"),
+					iconName: "ChevronRight",
 					setName: "ui",
 					useRef: false,
 					size,
@@ -266,7 +247,12 @@ export const MenuGroup = (
 					>
 						${Icon(
 							{
-								iconName: iconWithScale(size),
+								iconName: "ArrowRight" + ({
+									s: "100",
+									m: "100",
+									l: "400",
+									xl: "400",
+								}[size] || "100"),
 								setName: "ui",
 								size,
 								customClasses: ["spectrum-Menu-backIcon"],
