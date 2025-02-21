@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
+import { HelpTextOptions, RequiredOptions, Template, TextFieldOptions } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
 
 /**
@@ -73,7 +73,13 @@ export default {
 			table: { disable: true },
 		},
 		isDisabled,
-		isRequired,
+		isRequired: {
+			...isRequired,
+			description: "Sets the required attribute on the input element and adds the required asterisk to the field label.",
+		},
+		isRequiredWithoutAsterisk: {
+			table: { disable: true },
+		},
 		isReadOnly,
 		isLoading,
 		pattern: { table: { disable: true } },
@@ -113,6 +119,7 @@ export default {
 		isInvalid: false,
 		isDisabled: false,
 		isRequired: false,
+		isRequiredWithoutAsterisk: false,
 		isReadOnly: false,
 		isHovered: false,
 		isFocused: false,
@@ -273,11 +280,23 @@ Validation.parameters = {
 Validation.storyName = "Validation icon";
 
 /**
+ * Text fields can be marked as optional or required, depending on the situation. For required text fields, there are two styling options: a "(required)" label or an asterisk. If you use an asterisk, be sure to include hint text to explain what the asterisk means. Optional text fields are either denoted with text added to the end of the label — "(optional)" — or have no indication at all.
+ */
+export const Required = RequiredOptions.bind({});
+Required.tags = ["!dev"];
+Required.args = {
+	isRequired: true,
+};
+Required.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
  * When the text field was focused using the keyboard (e.g. with the tab key), the implementation must add the `is-keyboardFocused` class, which
  * displays the focus indicator. This indicator should not appear on focus from a click or tap.
  * The example below has this class applied on first load for demonstration purposes.
  */
-export const KeyboardFocus = KeyboardFocusTemplate.bind({});
+export const KeyboardFocus = Template.bind({});
 KeyboardFocus.tags = ["!dev"];
 KeyboardFocus.args = {
 	isKeyboardFocused: true,

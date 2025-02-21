@@ -78,28 +78,25 @@ export const TextAreaOptions = (args, context) => Container({
 	`
 }, context);
 
-export const KeyboardFocusTemplate = (args, context) => Container({
+export const RequiredOptionsTextArea = (args, context) => Container({
 	direction: "column",
 	withBorder: false,
-	wrapperStyles: {
-		rowGap: "12px",
-	},
+	withHeading: false,
 	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Default",
-			content: Template({...args, isKeyboardFocused: true}, context)
+			heading: "Required with (required) label",
+			content: Template({...args, isRequired: true, isRequiredWithoutAsterisk: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Quiet",
-			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+			heading: "Required with asterisk",
+			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
+		}, context)}
+		${Container({
+			withBorder: false,
+			heading: "Required with asterisk, side label",
+			content: Template({...args, isRequired: true, labelPosition: "side", labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
 		}, context)}
 	`
 }, context);
