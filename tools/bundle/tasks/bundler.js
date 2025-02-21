@@ -29,7 +29,9 @@ const bundleRoot = path.resolve(dirs.root, "tools", "bundle");
  * @returns {Promise<string[]>}
  */
 async function validateDependencies(components) {
+	// This is the bundle's package.json
 	const localPackage = path.join(bundleRoot, "package.json");
+
 	// Confirm the dependencies listed in this package.json match the components in the components directory
 	const packageJSON = JSON.parse(fs.readFileSync(localPackage, "utf8"));
 
@@ -51,8 +53,11 @@ async function validateDependencies(components) {
 
 		// Update the package.json dependencies
 		missing.forEach((dependency) => {
+			// Fetch the package.json for the component to get the version
+			const componentPackage = JSON.parse(fs.readFileSync(path.join(dirs.components, dependency, "package.json"), "utf8"));
+
 			reports.push(`${"+".green} ${`@spectrum-css/${dependency} to package.json`.gray}`);
-			packageJSON.devDependencies[`@spectrum-css/${dependency}`] = "workspace:^";
+			packageJSON.devDependencies[`@spectrum-css/${dependency}`] = componentPackage?.version ?? "workspace:^";
 		});
 	}
 
