@@ -17,7 +17,8 @@
     ".spectrum-DropZone.is-filled.is-dragged",
     ".spectrum-DropZone.is-filled.is-dragged .spectrum-DropZone-actions",
     ".spectrum-DropZone.is-filled.is-dragged .spectrum-DropZone-content",
-    ".spectrum-DropZone:focus-visible"
+    ".spectrum-DropZone:focus-visible",
+    ".spectrum-DropZone:has(.spectrum-DropZone-stroke)"
   ],
   "modifiers": [
     "--mod-drop-zone-background-color",
@@ -87,7 +88,7 @@
     "--spectrum-font-size-300",
     "--spectrum-gray-300",
     "--spectrum-line-height-100",
-    "--spectrum-neutral-visual-color",
+    "--spectrum-neutral-content-color-default",
     "--spectrum-sans-font-family-stack",
     "--spectrum-spacing-300",
     "--spectrum-spacing-400",
@@ -103,5 +104,8 @@
     "--mod-illustrated-message-title-font-weight",
     "--mod-illustrated-message-vertical-maximum-width"
   ],
-  "high-contrast": ["--highcontrast-drop-zone-border-color-hover"]
+  "high-contrast": [
+    "--highcontrast-drop-zone-border-color-hover",
+    "--highcontrast-drop-zone-button-color"
+  ]
 }

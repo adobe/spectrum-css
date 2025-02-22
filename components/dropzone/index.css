@@ -42,7 +42,7 @@
 	--mod-illustrated-message-description-position: relative;
 	--mod-illustrated-message-description-z-index: 10;
 	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
-	--mod-illustrated-message-illustration-color: var(--spectrum-neutral-visual-color);
+	--mod-illustrated-message-illustration-color: var(--spectrum-neutral-content-color-default);
 
 	/* Adjusts height of filled & dragged dropzone state */
 	--mod-drop-zone-content-height: 280px;
@@ -59,6 +59,7 @@
 	background-size: cover;
 	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
 	position: relative;
+	border: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)) dashed var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
 
 	&.is-dragged {
 		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style-dragged, var(--mod-drop-zone-border-style-dragged, solid));
@@ -68,6 +69,7 @@
 		/* Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
 		color: var(--spectrum-drop-zone-illustration-color-hover);
+		border-style: solid;
 
 		.spectrum-DropZone-stroke-path {
 			stroke-dasharray: none;
@@ -105,23 +107,27 @@
 	}
 }
 
+.spectrum-DropZone:has(.spectrum-DropZone-stroke) {
+	border: none;
+}
+
 .spectrum-DropZone-stroke {
 	position: absolute;
-	inset-block-start: -2px;
-	inset-inline-start: -2px;
-
-	/* Measurement below is estimated based on stroke-width */
-	inline-size: 101%;
-	block-size: 101.5%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 100%;
+	block-size: 100%;
 	pointer-events: none;
 }
 
 .spectrum-DropZone-stroke-path {
 	stroke: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
 	stroke-dasharray: var(--spectrum-drop-zone-border-dash-length) var(--spectrum-drop-zone-border-dash-gap);
-	rx: calc(var(--spectrum-drop-zone-corner-radius) / 2);
-	ry: calc(var(--spectrum-drop-zone-corner-radius) / 2);
+	rx: var(--spectrum-drop-zone-corner-radius);
+	ry: var(--spectrum-drop-zone-corner-radius);
 	stroke-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
+	inline-size: calc(100% - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
+	block-size: calc(100% - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
 }
 
 .spectrum-DropZone-content {
@@ -142,7 +148,7 @@
 	padding-block-start: var(--mod-drop-zone-content-top-to-text, var(--spectrum-drop-zone-content-top-to-text));
 	padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-drop-zone-content-bottom-to-text));
 	padding-inline: var(--mod-drop-zone-edge-to-text, var(--spectrum-drop-zone-edge-to-text));
-	background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
+	background-color: var(--highcontrast-drop-zone-button-color, var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color)));
 	max-block-size: var(--spectrum-drop-zone-component-height);
 
 	font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
@@ -155,7 +161,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
+		background-color: var(--highcontrast-drop-zone-button-color, var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color)));
 	}
 }
 
@@ -170,5 +176,6 @@
 @media (forced-colors: active) {
 	.spectrum-DropZone {
 		--highcontrast-drop-zone-border-color-hover: Highlight;
+		--highcontrast-drop-zone-button-color: Highlight;
 	}
 }

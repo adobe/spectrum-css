@@ -39,17 +39,16 @@ export const Template = ({
 	<svg
       class="${rootClass}-stroke"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 206 122"
       preserveAspectRatio="none"
     >
       <rect
         x="1"
         y="1"
-        width="204"
-        height="120"
-        rx="8"
-        ry="8"
+        rx="10px"
+        ry="10px"
         fill="none"
+				width="100%"
+				height="100%"
         stroke-linecap="round"
 				stroke-linejoin="round"
 				vector-effect="non-scaling-stroke"

@@ -52,6 +52,25 @@ export default {
 export const Default = DropzoneGroup.bind({});
 Default.args = {};
 
+export const Dragged = Template.bind({});
+Dragged.args = {
+	isDragged: true,
+};
+Dragged.tags = ["!dev"];
+Dragged.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Filled = Template.bind({});
+Filled.args = {
+	isDragged: true,
+	isFilled: true,
+};
+Filled.tags = ["!dev"];
+Filled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 // ********* VRT ONLY ********* //
 export const WithForcedColors = DropzoneGroup.bind({});
 WithForcedColors.args = Default.args;
