@@ -122,7 +122,7 @@
 
 .spectrum-DropZone-stroke-path {
 	stroke: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
-	stroke-dasharray: var(--spectrum-drop-zone-border-dash-length) var(--spectrum-drop-zone-border-dash-gap);
+	stroke-dasharray: var(--mod-drop-zone-border-dash-length, var(--spectrum-drop-zone-border-dash-length)) var(--mod-drop-zone-border-dash-gap, var(--spectrum-drop-zone-border-dash-gap));
 	rx: var(--spectrum-drop-zone-corner-radius);
 	ry: var(--spectrum-drop-zone-corner-radius);
 	stroke-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
