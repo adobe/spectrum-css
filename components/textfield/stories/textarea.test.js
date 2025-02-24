@@ -8,43 +8,77 @@ export const TextAreaGroup = Variants({
 	{
 		testHeading: "Text area with value",
 		displayLabel: true,
-		value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+		labelText: "Interests",
+		value: "Snowboarding, canoeing, calligraphy, gardening, knitting, child-rearing",
 	},{
-		testHeading: "With side label",
+		testHeading: "Invalid with help text",
+		isInvalid: true,
 		displayLabel: true,
-		labelPosition: "side",
-		value: "Sit ad magna pariatur id et qui ex non voluptate."
+		labelText: "Interests",
+		value: "Snowboarding, canoeing, calligraphy, gardening, knitting, child-rearing",
+		helpText: "Describe the interests you'd like to explore through our tutorials."
 	},{
 		testHeading: "With help text",
 		displayLabel: true,
-		value: "Exercitation ad magna aliqua officia adipisicing ullamco.",
-		helpText: "Example help text. Ullamco laborum."
+		labelText: "Interests",
+		value: "Snowboarding, canoeing, calligraphy, gardening, knitting, child-rearing",
+		helpText: "Describe the interests you'd like to explore through our tutorials."
 	},{
 		testHeading: "Character count",
-		value: "Sunt Lorem consequat quis sunt tempor aliqua ipsum ut.",
+		labelText: "Interests",
+		value: "Snowboarding, canoeing, calligraphy, gardening, knitting, child-rearing",
 		hasCharacterCount: true,
-		characterCount: 50
+		characterCount: 80
+	},{
+		testHeading: "Character count without label",
+		displayLabel: false,
+		value: "Snowboarding, canoeing, calligraphy, gardening, knitting, child-rearing",
+		hasCharacterCount: true,
+		characterCount: 80
+	},{
+		testHeading: "With side label, help text, and character count",
+		displayLabel: true,
+		labelPosition: "side",
+		labelText: "Interests",
+		value: "Snowboarding, canoeing, calligraphy, gardening, knitting, child-rearing",
+		hasCharacterCount: true,
+		characterCount: 80,
+		helpText: "Describe the interests you'd like to explore through our tutorials."
 	}],
 	stateData: [{
-		testHeading: "Invalid",
-		isInvalid: true,
-	}, {
-		testHeading: "Valid",
-		isValid: true,
-	}, {
 		testHeading: "Focused",
 		isFocused: true,
+		include: ["Default", "Text area with value", "Invalid with help text"],
 	}, {
 		testHeading: "Keyboard focused",
 		isKeyboardFocused: true,
+		include: ["Default", "Text area with value", "Invalid with help text"],
+	}, {
+		testHeading: "Hover",
+		isHovered: true,
+		include: ["Default", "Text area with value", "Invalid with help text"],
+	}, {
+		testHeading: "Focus & hover",
+		isFocused: true,
+		isHovered: true,
+		include: ["Default", "Text area with value", "Invalid with help text"],
+	}, {
+		testHeading: "Valid",
+		isValid: true,
+		ignore: ["Invalid with help text"],
 	}, {
 		testHeading: "Disabled",
 		isDisabled: true,
 	}, {
 		testHeading: "Required",
 		isRequired: true,
+		ignore: ["Character count without label"],
 	}, {
 		testHeading: "Read-only",
 		isReadOnly: true,
+	}, {
+		testHeading: "Read-only & disabled",
+		isReadOnly: true,
+		isDisabled: true,
 	}]
 });
