@@ -150,9 +150,14 @@ jobs:
                     echo "Changes detected"
                     git status
                     git add .
-                    git diff > changes.diff
                     exit 1
                 fi
+
+            # If there are changes, capture the changes and upload them as an artifact
+            - name: Capture changes
+              if: ${{ failure() }}
+              id: capture-changes
+              run: git diff --staged > changes.diff
 
             - name: Upload changes
               if: ${{ failure() }}
