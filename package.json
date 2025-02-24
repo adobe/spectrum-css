@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"name": "spectrum-css-monorepo",
+	"name": "@adobe/spectrum-css-monorepo",
 	"version": "0.0.0",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -32,6 +32,7 @@
 		"component:compare": "node --no-warnings ./tasks/component-compare.js",
 		"component:report": "node --no-warnings ./tasks/component-reporter.js",
 		"dev": "cross-env NODE_ENV=development nx run storybook:build:docs",
+		"docs:report": "yarn report",
 		"format": "yarn formatter tag:component",
 		"formatter": "nx run-many --target format --projects",
 		"lint": "yarn linter tag:component",
