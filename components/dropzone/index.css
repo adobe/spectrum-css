@@ -42,7 +42,6 @@
 	--mod-illustrated-message-description-position: relative;
 	--mod-illustrated-message-description-z-index: 10;
 	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
-	--mod-illustrated-message-illustration-color: var(--spectrum-neutral-content-color-default);
 
 	/* Adjusts height of filled & dragged dropzone state */
 	--mod-drop-zone-content-height: 280px;
