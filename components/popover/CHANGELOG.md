@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/alertdialog@5.0.0-next.0
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/dialog@13.0.0-next.0
+
 ## 8.2.0
 
 ### Minor Changes

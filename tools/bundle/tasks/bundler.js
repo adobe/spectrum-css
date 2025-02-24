@@ -43,6 +43,9 @@ async function validateDependencies(components) {
 	// Capture any components that are missing from the dependencies to add them
 	const missing = components.filter((components) => !dependencies.includes(`@spectrum-css/${components}`));
 
+	// List the dependencies not in outdated or missing
+	const remaining = dependencies.filter((dependency) => !outdated.includes(dependency) && !missing.includes(dependency.replace("@spectrum-css/", "")));
+
 	// We don't need to update the package.json if nothing has changed
 	let hasChanged = false;
 	const reports = [];
@@ -72,6 +75,21 @@ async function validateDependencies(components) {
 
 			reports.push(`${"-".red} ${`${dependency} from package.json`.gray}`);
 			delete packageJSON.devDependencies[dependency];
+		});
+	}
+
+	if (remaining.length > 0) {
+		// Check the versions of the remaining dependencies
+		remaining.forEach((dependency) => {
+			const componentPackage = JSON.parse(fs.readFileSync(path.join(dirs.components, dependency.replace("@spectrum-css/", ""), "package.json"), "utf8"));
+
+			// If the version in the package.json is different from the component's package.json, update it
+			if (packageJSON.devDependencies[dependency] !== componentPackage.version) {
+				hasChanged = true;
+
+				reports.push(`${"~".yellow} ${`${dependency} in package.json`.gray}`);
+				packageJSON.devDependencies[dependency] = componentPackage.version;
+			}
 		});
 	}
 

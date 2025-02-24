@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/closebutton@7.0.0-next.0
+  - @spectrum-css/fieldlabel@11.0.0-next.0
+  - @spectrum-css/actiongroup@7.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+
 ## 10.1.1
 
 ### Patch Changes
