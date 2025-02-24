@@ -123,9 +123,9 @@ __metadata:
     "@commitlint/cli": "npm:^19.6.1"
     "@commitlint/config-conventional": "npm:^19.6.0"
     "@nx/devkit": "npm:^19.8.2"
-    "@spectrum-tools/postcss-add-theming-layer": "workspace:^"
-    "@spectrum-tools/postcss-property-rollup": "workspace:^"
-    "@spectrum-tools/postcss-rgb-mapping": "workspace:^"
+    "@spectrum-tools/postcss-add-theming-layer": "npm:1.0.1"
+    "@spectrum-tools/postcss-property-rollup": "npm:0.0.1"
+    "@spectrum-tools/postcss-rgb-mapping": "npm:1.0.0"
     "@yarnpkg/types": "npm:^4.0.0"
     at-rule-packer: "npm:^0.4.2"
     autoprefixer: "npm:^10.4.19"
@@ -3706,7 +3706,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/accordion@workspace:^, @spectrum-css/accordion@workspace:components/accordion":
+"@spectrum-css/accordion@npm:7.1.0, @spectrum-css/accordion@workspace:components/accordion":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/accordion@workspace:components/accordion"
   dependencies:
@@ -3723,7 +3723,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/actionbar@workspace:^, @spectrum-css/actionbar@workspace:components/actionbar":
+"@spectrum-css/actionbar@npm:10.1.1, @spectrum-css/actionbar@workspace:components/actionbar":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actionbar@workspace:components/actionbar"
   dependencies:
@@ -3752,7 +3752,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/actionbutton@npm:7.1.1, @spectrum-css/actionbutton@workspace:^, @spectrum-css/actionbutton@workspace:components/actionbutton":
+"@spectrum-css/actionbutton@npm:7.1.1, @spectrum-css/actionbutton@workspace:components/actionbutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actionbutton@workspace:components/actionbutton"
   dependencies:
@@ -3770,7 +3770,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/actiongroup@npm:6.1.0, @spectrum-css/actiongroup@workspace:^, @spectrum-css/actiongroup@workspace:components/actiongroup":
+"@spectrum-css/actiongroup@npm:6.1.0, @spectrum-css/actiongroup@workspace:components/actiongroup":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actiongroup@workspace:components/actiongroup"
   dependencies:
@@ -3787,7 +3787,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/actionmenu@npm:7.1.1, @spectrum-css/actionmenu@workspace:^, @spectrum-css/actionmenu@workspace:components/actionmenu":
+"@spectrum-css/actionmenu@npm:7.1.1, @spectrum-css/actionmenu@workspace:components/actionmenu":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actionmenu@workspace:components/actionmenu"
   dependencies:
@@ -3816,7 +3816,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/alertbanner@workspace:^, @spectrum-css/alertbanner@workspace:components/alertbanner":
+"@spectrum-css/alertbanner@npm:3.1.0, @spectrum-css/alertbanner@workspace:components/alertbanner":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/alertbanner@workspace:components/alertbanner"
   dependencies:
@@ -3845,7 +3845,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/alertdialog@npm:4.1.0, @spectrum-css/alertdialog@workspace:^, @spectrum-css/alertdialog@workspace:components/alertdialog":
+"@spectrum-css/alertdialog@npm:4.1.0, @spectrum-css/alertdialog@workspace:components/alertdialog":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/alertdialog@workspace:components/alertdialog"
   dependencies:
@@ -3878,7 +3878,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/asset@npm:7.1.0, @spectrum-css/asset@workspace:^, @spectrum-css/asset@workspace:components/asset":
+"@spectrum-css/asset@npm:7.1.0, @spectrum-css/asset@workspace:components/asset":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/asset@workspace:components/asset"
   dependencies:
@@ -3891,7 +3891,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/assetcard@workspace:^, @spectrum-css/assetcard@workspace:components/assetcard":
+"@spectrum-css/assetcard@npm:5.1.0, @spectrum-css/assetcard@workspace:components/assetcard":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/assetcard@workspace:components/assetcard"
   dependencies:
@@ -3908,7 +3908,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/assetlist@npm:8.1.0, @spectrum-css/assetlist@workspace:^, @spectrum-css/assetlist@workspace:components/assetlist":
+"@spectrum-css/assetlist@npm:8.1.0, @spectrum-css/assetlist@workspace:components/assetlist":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/assetlist@workspace:components/assetlist"
   dependencies:
@@ -3929,7 +3929,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/avatar@npm:9.1.0, @spectrum-css/avatar@workspace:^, @spectrum-css/avatar@workspace:components/avatar":
+"@spectrum-css/avatar@npm:9.1.0, @spectrum-css/avatar@workspace:components/avatar":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/avatar@workspace:components/avatar"
   dependencies:
@@ -3942,7 +3942,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/badge@workspace:^, @spectrum-css/badge@workspace:components/badge":
+"@spectrum-css/badge@npm:6.1.0, @spectrum-css/badge@workspace:components/badge":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/badge@workspace:components/badge"
   dependencies:
@@ -3959,7 +3959,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/breadcrumb@workspace:^, @spectrum-css/breadcrumb@workspace:components/breadcrumb":
+"@spectrum-css/breadcrumb@npm:11.1.0, @spectrum-css/breadcrumb@workspace:components/breadcrumb":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/breadcrumb@workspace:components/breadcrumb"
   dependencies:
@@ -3984,98 +3984,98 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/bundle@workspace:tools/bundle"
   dependencies:
-    "@spectrum-css/accordion": "workspace:^"
-    "@spectrum-css/actionbar": "workspace:^"
-    "@spectrum-css/actionbutton": "workspace:^"
-    "@spectrum-css/actiongroup": "workspace:^"
-    "@spectrum-css/actionmenu": "workspace:^"
-    "@spectrum-css/alertbanner": "workspace:^"
-    "@spectrum-css/alertdialog": "workspace:^"
-    "@spectrum-css/asset": "workspace:^"
-    "@spectrum-css/assetcard": "workspace:^"
-    "@spectrum-css/assetlist": "workspace:^"
-    "@spectrum-css/avatar": "workspace:^"
-    "@spectrum-css/badge": "workspace:^"
-    "@spectrum-css/breadcrumb": "workspace:^"
-    "@spectrum-css/button": "workspace:^"
-    "@spectrum-css/buttongroup": "workspace:^"
-    "@spectrum-css/calendar": "workspace:^"
-    "@spectrum-css/card": "workspace:^"
-    "@spectrum-css/checkbox": "workspace:^"
-    "@spectrum-css/clearbutton": "workspace:^"
-    "@spectrum-css/closebutton": "workspace:^"
-    "@spectrum-css/coachindicator": "workspace:^"
-    "@spectrum-css/coachmark": "workspace:^"
-    "@spectrum-css/colorarea": "workspace:^"
-    "@spectrum-css/colorhandle": "workspace:^"
-    "@spectrum-css/colorloupe": "workspace:^"
-    "@spectrum-css/colorslider": "workspace:^"
-    "@spectrum-css/colorwheel": "workspace:^"
-    "@spectrum-css/combobox": "workspace:^"
-    "@spectrum-css/commons": "workspace:^"
-    "@spectrum-css/contextualhelp": "workspace:^"
-    "@spectrum-css/datepicker": "workspace:^"
-    "@spectrum-css/dial": "workspace:^"
-    "@spectrum-css/dialog": "workspace:^"
-    "@spectrum-css/divider": "workspace:^"
-    "@spectrum-css/dropindicator": "workspace:^"
-    "@spectrum-css/dropzone": "workspace:^"
-    "@spectrum-css/fieldgroup": "workspace:^"
-    "@spectrum-css/fieldlabel": "workspace:^"
-    "@spectrum-css/floatingactionbutton": "workspace:^"
-    "@spectrum-css/form": "workspace:^"
-    "@spectrum-css/helptext": "workspace:^"
-    "@spectrum-css/icon": "workspace:^"
-    "@spectrum-css/illustratedmessage": "workspace:^"
-    "@spectrum-css/infieldbutton": "workspace:^"
-    "@spectrum-css/inlinealert": "workspace:^"
-    "@spectrum-css/link": "workspace:^"
-    "@spectrum-css/logicbutton": "workspace:^"
-    "@spectrum-css/menu": "workspace:^"
-    "@spectrum-css/meter": "workspace:^"
-    "@spectrum-css/miller": "workspace:^"
-    "@spectrum-css/modal": "workspace:^"
-    "@spectrum-css/opacitycheckerboard": "workspace:^"
-    "@spectrum-css/page": "workspace:^"
-    "@spectrum-css/pagination": "workspace:^"
-    "@spectrum-css/picker": "workspace:^"
-    "@spectrum-css/pickerbutton": "workspace:^"
-    "@spectrum-css/popover": "workspace:^"
-    "@spectrum-css/progressbar": "workspace:^"
-    "@spectrum-css/progresscircle": "workspace:^"
-    "@spectrum-css/radio": "workspace:^"
-    "@spectrum-css/rating": "workspace:^"
-    "@spectrum-css/search": "workspace:^"
-    "@spectrum-css/sidenav": "workspace:^"
-    "@spectrum-css/slider": "workspace:^"
-    "@spectrum-css/splitview": "workspace:^"
-    "@spectrum-css/statuslight": "workspace:^"
-    "@spectrum-css/steplist": "workspace:^"
-    "@spectrum-css/stepper": "workspace:^"
-    "@spectrum-css/swatch": "workspace:^"
-    "@spectrum-css/swatchgroup": "workspace:^"
-    "@spectrum-css/switch": "workspace:^"
-    "@spectrum-css/table": "workspace:^"
-    "@spectrum-css/tabs": "workspace:^"
-    "@spectrum-css/tag": "workspace:^"
-    "@spectrum-css/taggroup": "workspace:^"
-    "@spectrum-css/textfield": "workspace:^"
-    "@spectrum-css/thumbnail": "workspace:^"
-    "@spectrum-css/toast": "workspace:^"
-    "@spectrum-css/tokens": "workspace:^"
-    "@spectrum-css/tooltip": "workspace:^"
-    "@spectrum-css/tray": "workspace:^"
-    "@spectrum-css/treeview": "workspace:^"
-    "@spectrum-css/typography": "workspace:^"
-    "@spectrum-css/underlay": "workspace:^"
-    "@spectrum-css/well": "workspace:^"
+    "@spectrum-css/accordion": "npm:7.1.0"
+    "@spectrum-css/actionbar": "npm:10.1.1"
+    "@spectrum-css/actionbutton": "npm:7.1.1"
+    "@spectrum-css/actiongroup": "npm:6.1.0"
+    "@spectrum-css/actionmenu": "npm:7.1.1"
+    "@spectrum-css/alertbanner": "npm:3.1.0"
+    "@spectrum-css/alertdialog": "npm:4.1.0"
+    "@spectrum-css/asset": "npm:7.1.0"
+    "@spectrum-css/assetcard": "npm:5.1.0"
+    "@spectrum-css/assetlist": "npm:8.1.0"
+    "@spectrum-css/avatar": "npm:9.1.0"
+    "@spectrum-css/badge": "npm:6.1.0"
+    "@spectrum-css/breadcrumb": "npm:11.1.0"
+    "@spectrum-css/button": "npm:14.1.1"
+    "@spectrum-css/buttongroup": "npm:9.1.0"
+    "@spectrum-css/calendar": "npm:7.1.0"
+    "@spectrum-css/card": "npm:11.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/clearbutton": "npm:7.1.0"
+    "@spectrum-css/closebutton": "npm:6.1.0"
+    "@spectrum-css/coachindicator": "npm:4.1.0"
+    "@spectrum-css/coachmark": "npm:9.1.1"
+    "@spectrum-css/colorarea": "npm:7.1.0"
+    "@spectrum-css/colorhandle": "npm:10.1.0"
+    "@spectrum-css/colorloupe": "npm:7.1.0"
+    "@spectrum-css/colorslider": "npm:8.1.0"
+    "@spectrum-css/colorwheel": "npm:6.1.0"
+    "@spectrum-css/combobox": "npm:4.1.1"
+    "@spectrum-css/commons": "npm:11.0.0"
+    "@spectrum-css/contextualhelp": "npm:5.1.2"
+    "@spectrum-css/datepicker": "npm:4.1.1"
+    "@spectrum-css/dial": "npm:5.1.0"
+    "@spectrum-css/dialog": "npm:12.1.0"
+    "@spectrum-css/divider": "npm:5.1.0"
+    "@spectrum-css/dropindicator": "npm:7.1.0"
+    "@spectrum-css/dropzone": "npm:8.1.0"
+    "@spectrum-css/fieldgroup": "npm:7.1.0"
+    "@spectrum-css/fieldlabel": "npm:10.1.0"
+    "@spectrum-css/floatingactionbutton": "npm:4.1.0"
+    "@spectrum-css/form": "npm:1.1.0"
+    "@spectrum-css/helptext": "npm:7.1.0"
+    "@spectrum-css/icon": "npm:9.1.0"
+    "@spectrum-css/illustratedmessage": "npm:9.1.0"
+    "@spectrum-css/infieldbutton": "npm:6.1.0"
+    "@spectrum-css/inlinealert": "npm:10.1.0"
+    "@spectrum-css/link": "npm:7.1.0"
+    "@spectrum-css/logicbutton": "npm:6.1.0"
+    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/meter": "npm:1.1.0"
+    "@spectrum-css/miller": "npm:8.1.0"
+    "@spectrum-css/modal": "npm:7.1.0"
+    "@spectrum-css/opacitycheckerboard": "npm:4.1.0"
+    "@spectrum-css/page": "npm:9.1.0"
+    "@spectrum-css/pagination": "npm:10.1.0"
+    "@spectrum-css/picker": "npm:9.1.1"
+    "@spectrum-css/pickerbutton": "npm:6.1.1"
+    "@spectrum-css/popover": "npm:8.2.0"
+    "@spectrum-css/progressbar": "npm:6.1.0"
+    "@spectrum-css/progresscircle": "npm:5.1.0"
+    "@spectrum-css/radio": "npm:10.1.0"
+    "@spectrum-css/rating": "npm:6.1.0"
+    "@spectrum-css/search": "npm:8.1.0"
+    "@spectrum-css/sidenav": "npm:7.1.0"
+    "@spectrum-css/slider": "npm:6.1.0"
+    "@spectrum-css/splitview": "npm:7.1.0"
+    "@spectrum-css/statuslight": "npm:9.1.0"
+    "@spectrum-css/steplist": "npm:7.1.0"
+    "@spectrum-css/stepper": "npm:7.1.0"
+    "@spectrum-css/swatch": "npm:8.1.1"
+    "@spectrum-css/swatchgroup": "npm:5.1.0"
+    "@spectrum-css/switch": "npm:6.1.0"
+    "@spectrum-css/table": "npm:8.1.0"
+    "@spectrum-css/tabs": "npm:6.1.1"
+    "@spectrum-css/tag": "npm:10.1.0"
+    "@spectrum-css/taggroup": "npm:7.1.0"
+    "@spectrum-css/textfield": "npm:8.1.0"
+    "@spectrum-css/thumbnail": "npm:8.1.0"
+    "@spectrum-css/toast": "npm:11.1.0"
+    "@spectrum-css/tokens": "npm:16.0.1"
+    "@spectrum-css/tooltip": "npm:7.1.0"
+    "@spectrum-css/tray": "npm:5.1.0"
+    "@spectrum-css/treeview": "npm:12.1.0"
+    "@spectrum-css/typography": "npm:8.1.0"
+    "@spectrum-css/underlay": "npm:6.1.0"
+    "@spectrum-css/well": "npm:7.1.0"
     colors: "npm:^1.4.0"
     postcss: "npm:^8.5.3"
     postcss-licensing: "npm:^2.0.0"
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/button@npm:14.1.1, @spectrum-css/button@workspace:^, @spectrum-css/button@workspace:components/button":
+"@spectrum-css/button@npm:14.1.1, @spectrum-css/button@workspace:components/button":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/button@workspace:components/button"
   dependencies:
@@ -4097,7 +4097,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/buttongroup@npm:9.1.0, @spectrum-css/buttongroup@workspace:^, @spectrum-css/buttongroup@workspace:components/buttongroup":
+"@spectrum-css/buttongroup@npm:9.1.0, @spectrum-css/buttongroup@workspace:components/buttongroup":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/buttongroup@workspace:components/buttongroup"
   dependencies:
@@ -4114,7 +4114,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/calendar@npm:7.1.0, @spectrum-css/calendar@workspace:^, @spectrum-css/calendar@workspace:components/calendar":
+"@spectrum-css/calendar@npm:7.1.0, @spectrum-css/calendar@workspace:components/calendar":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/calendar@workspace:components/calendar"
   dependencies:
@@ -4131,7 +4131,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/card@workspace:^, @spectrum-css/card@workspace:components/card":
+"@spectrum-css/card@npm:11.1.0, @spectrum-css/card@workspace:components/card":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/card@workspace:components/card"
   dependencies:
@@ -4167,7 +4167,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/checkbox@npm:10.1.0, @spectrum-css/checkbox@workspace:^, @spectrum-css/checkbox@workspace:components/checkbox":
+"@spectrum-css/checkbox@npm:10.1.0, @spectrum-css/checkbox@workspace:components/checkbox":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/checkbox@workspace:components/checkbox"
   dependencies:
@@ -4184,7 +4184,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/clearbutton@npm:7.1.0, @spectrum-css/clearbutton@workspace:^, @spectrum-css/clearbutton@workspace:components/clearbutton":
+"@spectrum-css/clearbutton@npm:7.1.0, @spectrum-css/clearbutton@workspace:components/clearbutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/clearbutton@workspace:components/clearbutton"
   dependencies:
@@ -4201,7 +4201,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/closebutton@npm:6.1.0, @spectrum-css/closebutton@workspace:^, @spectrum-css/closebutton@workspace:components/closebutton":
+"@spectrum-css/closebutton@npm:6.1.0, @spectrum-css/closebutton@workspace:components/closebutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/closebutton@workspace:components/closebutton"
   dependencies:
@@ -4219,7 +4219,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/coachindicator@workspace:^, @spectrum-css/coachindicator@workspace:components/coachindicator":
+"@spectrum-css/coachindicator@npm:4.1.0, @spectrum-css/coachindicator@workspace:components/coachindicator":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/coachindicator@workspace:components/coachindicator"
   dependencies:
@@ -4232,7 +4232,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/coachmark@workspace:^, @spectrum-css/coachmark@workspace:components/coachmark":
+"@spectrum-css/coachmark@npm:9.1.1, @spectrum-css/coachmark@workspace:components/coachmark":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/coachmark@workspace:components/coachmark"
   dependencies:
@@ -4269,7 +4269,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/colorarea@npm:7.1.0, @spectrum-css/colorarea@workspace:^, @spectrum-css/colorarea@workspace:components/colorarea":
+"@spectrum-css/colorarea@npm:7.1.0, @spectrum-css/colorarea@workspace:components/colorarea":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorarea@workspace:components/colorarea"
   dependencies:
@@ -4286,7 +4286,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/colorhandle@npm:10.1.0, @spectrum-css/colorhandle@workspace:^, @spectrum-css/colorhandle@workspace:components/colorhandle":
+"@spectrum-css/colorhandle@npm:10.1.0, @spectrum-css/colorhandle@workspace:components/colorhandle":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorhandle@workspace:components/colorhandle"
   dependencies:
@@ -4307,7 +4307,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/colorloupe@npm:7.1.0, @spectrum-css/colorloupe@workspace:^, @spectrum-css/colorloupe@workspace:components/colorloupe":
+"@spectrum-css/colorloupe@npm:7.1.0, @spectrum-css/colorloupe@workspace:components/colorloupe":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorloupe@workspace:components/colorloupe"
   dependencies:
@@ -4320,7 +4320,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/colorslider@workspace:^, @spectrum-css/colorslider@workspace:components/colorslider":
+"@spectrum-css/colorslider@npm:8.1.0, @spectrum-css/colorslider@workspace:components/colorslider":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorslider@workspace:components/colorslider"
   dependencies:
@@ -4341,7 +4341,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/colorwheel@workspace:^, @spectrum-css/colorwheel@workspace:components/colorwheel":
+"@spectrum-css/colorwheel@npm:6.1.0, @spectrum-css/colorwheel@workspace:components/colorwheel":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorwheel@workspace:components/colorwheel"
   dependencies:
@@ -4366,7 +4366,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/combobox@workspace:^, @spectrum-css/combobox@workspace:components/combobox":
+"@spectrum-css/combobox@npm:4.1.1, @spectrum-css/combobox@workspace:components/combobox":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/combobox@workspace:components/combobox"
   dependencies:
@@ -4399,17 +4399,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/commons@npm:11.0.0, @spectrum-css/commons@workspace:^, @spectrum-css/commons@workspace:components/commons":
+"@spectrum-css/commons@npm:11.0.0, @spectrum-css/commons@workspace:components/commons":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/commons@workspace:components/commons"
   dependencies:
-    "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/tokens": ">=16.0.1"
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/contextualhelp@workspace:^, @spectrum-css/contextualhelp@workspace:components/contextualhelp":
+"@spectrum-css/contextualhelp@npm:5.1.2, @spectrum-css/contextualhelp@workspace:components/contextualhelp":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/contextualhelp@workspace:components/contextualhelp"
   dependencies:
@@ -4434,7 +4434,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/datepicker@workspace:^, @spectrum-css/datepicker@workspace:components/datepicker":
+"@spectrum-css/datepicker@npm:4.1.1, @spectrum-css/datepicker@workspace:components/datepicker":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/datepicker@workspace:components/datepicker"
   dependencies:
@@ -4463,7 +4463,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/dial@workspace:^, @spectrum-css/dial@workspace:components/dial":
+"@spectrum-css/dial@npm:5.1.0, @spectrum-css/dial@workspace:components/dial":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dial@workspace:components/dial"
   dependencies:
@@ -4476,7 +4476,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/dialog@npm:12.1.0, @spectrum-css/dialog@workspace:^, @spectrum-css/dialog@workspace:components/dialog":
+"@spectrum-css/dialog@npm:12.1.0, @spectrum-css/dialog@workspace:components/dialog":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   dependencies:
@@ -4506,7 +4506,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/divider@npm:5.1.0, @spectrum-css/divider@workspace:^, @spectrum-css/divider@workspace:components/divider":
+"@spectrum-css/divider@npm:5.1.0, @spectrum-css/divider@workspace:components/divider":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/divider@workspace:components/divider"
   dependencies:
@@ -4519,7 +4519,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/dropindicator@workspace:^, @spectrum-css/dropindicator@workspace:components/dropindicator":
+"@spectrum-css/dropindicator@npm:7.1.0, @spectrum-css/dropindicator@workspace:components/dropindicator":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dropindicator@workspace:components/dropindicator"
   dependencies:
@@ -4536,7 +4536,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/dropzone@workspace:^, @spectrum-css/dropzone@workspace:components/dropzone":
+"@spectrum-css/dropzone@npm:8.1.0, @spectrum-css/dropzone@workspace:components/dropzone":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dropzone@workspace:components/dropzone"
   dependencies:
@@ -4561,7 +4561,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/fieldgroup@workspace:^, @spectrum-css/fieldgroup@workspace:components/fieldgroup":
+"@spectrum-css/fieldgroup@npm:7.1.0, @spectrum-css/fieldgroup@workspace:components/fieldgroup":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/fieldgroup@workspace:components/fieldgroup"
   dependencies:
@@ -4586,7 +4586,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/fieldlabel@npm:10.1.0, @spectrum-css/fieldlabel@workspace:^, @spectrum-css/fieldlabel@workspace:components/fieldlabel":
+"@spectrum-css/fieldlabel@npm:10.1.0, @spectrum-css/fieldlabel@workspace:components/fieldlabel":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/fieldlabel@workspace:components/fieldlabel"
   dependencies:
@@ -4603,7 +4603,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/floatingactionbutton@workspace:^, @spectrum-css/floatingactionbutton@workspace:components/floatingactionbutton":
+"@spectrum-css/floatingactionbutton@npm:4.1.0, @spectrum-css/floatingactionbutton@workspace:components/floatingactionbutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/floatingactionbutton@workspace:components/floatingactionbutton"
   dependencies:
@@ -4616,7 +4616,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/form@workspace:^, @spectrum-css/form@workspace:components/form":
+"@spectrum-css/form@npm:1.1.0, @spectrum-css/form@workspace:components/form":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/form@workspace:components/form"
   dependencies:
@@ -4640,7 +4640,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/helptext@npm:7.1.0, @spectrum-css/helptext@workspace:^, @spectrum-css/helptext@workspace:components/helptext":
+"@spectrum-css/helptext@npm:7.1.0, @spectrum-css/helptext@workspace:components/helptext":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/helptext@workspace:components/helptext"
   dependencies:
@@ -4657,7 +4657,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/icon@npm:9.1.0, @spectrum-css/icon@workspace:^, @spectrum-css/icon@workspace:components/icon":
+"@spectrum-css/icon@npm:9.1.0, @spectrum-css/icon@workspace:components/icon":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/icon@workspace:components/icon"
   dependencies:
@@ -4670,7 +4670,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/illustratedmessage@npm:9.1.0, @spectrum-css/illustratedmessage@workspace:^, @spectrum-css/illustratedmessage@workspace:components/illustratedmessage":
+"@spectrum-css/illustratedmessage@npm:9.1.0, @spectrum-css/illustratedmessage@workspace:components/illustratedmessage":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/illustratedmessage@workspace:components/illustratedmessage"
   dependencies:
@@ -4687,7 +4687,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/infieldbutton@npm:6.1.0, @spectrum-css/infieldbutton@workspace:^, @spectrum-css/infieldbutton@workspace:components/infieldbutton":
+"@spectrum-css/infieldbutton@npm:6.1.0, @spectrum-css/infieldbutton@workspace:components/infieldbutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/infieldbutton@workspace:components/infieldbutton"
   dependencies:
@@ -4704,7 +4704,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/inlinealert@workspace:^, @spectrum-css/inlinealert@workspace:components/inlinealert":
+"@spectrum-css/inlinealert@npm:10.1.0, @spectrum-css/inlinealert@workspace:components/inlinealert":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/inlinealert@workspace:components/inlinealert"
   dependencies:
@@ -4725,7 +4725,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/link@npm:7.1.0, @spectrum-css/link@workspace:^, @spectrum-css/link@workspace:components/link":
+"@spectrum-css/link@npm:7.1.0, @spectrum-css/link@workspace:components/link":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/link@workspace:components/link"
   dependencies:
@@ -4738,7 +4738,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/logicbutton@workspace:^, @spectrum-css/logicbutton@workspace:components/logicbutton":
+"@spectrum-css/logicbutton@npm:6.1.0, @spectrum-css/logicbutton@workspace:components/logicbutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/logicbutton@workspace:components/logicbutton"
   dependencies:
@@ -4752,7 +4752,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/menu@npm:9.1.0, @spectrum-css/menu@workspace:^, @spectrum-css/menu@workspace:components/menu":
+"@spectrum-css/menu@npm:9.1.0, @spectrum-css/menu@workspace:components/menu":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/menu@workspace:components/menu"
   dependencies:
@@ -4785,7 +4785,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/meter@workspace:^, @spectrum-css/meter@workspace:components/meter":
+"@spectrum-css/meter@npm:1.1.0, @spectrum-css/meter@workspace:components/meter":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/meter@workspace:components/meter"
   dependencies:
@@ -4802,7 +4802,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/miller@workspace:^, @spectrum-css/miller@workspace:components/miller":
+"@spectrum-css/miller@npm:8.1.0, @spectrum-css/miller@workspace:components/miller":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/miller@workspace:components/miller"
   dependencies:
@@ -4827,7 +4827,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/modal@npm:7.1.0, @spectrum-css/modal@workspace:^, @spectrum-css/modal@workspace:components/modal":
+"@spectrum-css/modal@npm:7.1.0, @spectrum-css/modal@workspace:components/modal":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/modal@workspace:components/modal"
   dependencies:
@@ -4841,7 +4841,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/opacitycheckerboard@npm:4.1.0, @spectrum-css/opacitycheckerboard@workspace:^, @spectrum-css/opacitycheckerboard@workspace:components/opacitycheckerboard":
+"@spectrum-css/opacitycheckerboard@npm:4.1.0, @spectrum-css/opacitycheckerboard@workspace:components/opacitycheckerboard":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/opacitycheckerboard@workspace:components/opacitycheckerboard"
   dependencies:
@@ -4854,7 +4854,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/page@workspace:^, @spectrum-css/page@workspace:components/page":
+"@spectrum-css/page@npm:9.1.0, @spectrum-css/page@workspace:components/page":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/page@workspace:components/page"
   dependencies:
@@ -4867,7 +4867,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/pagination@workspace:^, @spectrum-css/pagination@workspace:components/pagination":
+"@spectrum-css/pagination@npm:10.1.0, @spectrum-css/pagination@workspace:components/pagination":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/pagination@workspace:components/pagination"
   dependencies:
@@ -4896,7 +4896,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/picker@npm:9.1.1, @spectrum-css/picker@workspace:^, @spectrum-css/picker@workspace:components/picker":
+"@spectrum-css/picker@npm:9.1.1, @spectrum-css/picker@workspace:components/picker":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/picker@workspace:components/picker"
   dependencies:
@@ -4930,7 +4930,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/pickerbutton@npm:6.1.1, @spectrum-css/pickerbutton@workspace:^, @spectrum-css/pickerbutton@workspace:components/pickerbutton":
+"@spectrum-css/pickerbutton@npm:6.1.1, @spectrum-css/pickerbutton@workspace:components/pickerbutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/pickerbutton@workspace:components/pickerbutton"
   dependencies:
@@ -4955,7 +4955,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/popover@npm:8.2.0, @spectrum-css/popover@workspace:^, @spectrum-css/popover@workspace:components/popover":
+"@spectrum-css/popover@npm:8.2.0, @spectrum-css/popover@workspace:components/popover":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/popover@workspace:components/popover"
   dependencies:
@@ -5029,7 +5029,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/progressbar@npm:6.1.0, @spectrum-css/progressbar@workspace:^, @spectrum-css/progressbar@workspace:components/progressbar":
+"@spectrum-css/progressbar@npm:6.1.0, @spectrum-css/progressbar@workspace:components/progressbar":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/progressbar@workspace:components/progressbar"
   dependencies:
@@ -5046,7 +5046,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/progresscircle@npm:5.1.0, @spectrum-css/progresscircle@workspace:^, @spectrum-css/progresscircle@workspace:components/progresscircle":
+"@spectrum-css/progresscircle@npm:5.1.0, @spectrum-css/progresscircle@workspace:components/progresscircle":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/progresscircle@workspace:components/progresscircle"
   dependencies:
@@ -5059,7 +5059,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/radio@npm:10.1.0, @spectrum-css/radio@workspace:^, @spectrum-css/radio@workspace:components/radio":
+"@spectrum-css/radio@npm:10.1.0, @spectrum-css/radio@workspace:components/radio":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/radio@workspace:components/radio"
   dependencies:
@@ -5076,7 +5076,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/rating@workspace:^, @spectrum-css/rating@workspace:components/rating":
+"@spectrum-css/rating@npm:6.1.0, @spectrum-css/rating@workspace:components/rating":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/rating@workspace:components/rating"
   dependencies:
@@ -5093,7 +5093,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/search@workspace:^, @spectrum-css/search@workspace:components/search":
+"@spectrum-css/search@npm:8.1.0, @spectrum-css/search@workspace:components/search":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/search@workspace:components/search"
   dependencies:
@@ -5118,7 +5118,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/sidenav@workspace:^, @spectrum-css/sidenav@workspace:components/sidenav":
+"@spectrum-css/sidenav@npm:7.1.0, @spectrum-css/sidenav@workspace:components/sidenav":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/sidenav@workspace:components/sidenav"
   dependencies:
@@ -5135,7 +5135,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/slider@workspace:^, @spectrum-css/slider@workspace:components/slider":
+"@spectrum-css/slider@npm:6.1.0, @spectrum-css/slider@workspace:components/slider":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/slider@workspace:components/slider"
   dependencies:
@@ -5152,7 +5152,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/splitview@workspace:^, @spectrum-css/splitview@workspace:components/splitview":
+"@spectrum-css/splitview@npm:7.1.0, @spectrum-css/splitview@workspace:components/splitview":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/splitview@workspace:components/splitview"
   dependencies:
@@ -5165,7 +5165,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/statuslight@workspace:^, @spectrum-css/statuslight@workspace:components/statuslight":
+"@spectrum-css/statuslight@npm:9.1.0, @spectrum-css/statuslight@workspace:components/statuslight":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/statuslight@workspace:components/statuslight"
   dependencies:
@@ -5178,7 +5178,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/steplist@workspace:^, @spectrum-css/steplist@workspace:components/steplist":
+"@spectrum-css/steplist@npm:7.1.0, @spectrum-css/steplist@workspace:components/steplist":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/steplist@workspace:components/steplist"
   dependencies:
@@ -5199,7 +5199,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/stepper@npm:7.1.0, @spectrum-css/stepper@workspace:^, @spectrum-css/stepper@workspace:components/stepper":
+"@spectrum-css/stepper@npm:7.1.0, @spectrum-css/stepper@workspace:components/stepper":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/stepper@workspace:components/stepper"
   dependencies:
@@ -5228,7 +5228,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/swatch@npm:8.1.1, @spectrum-css/swatch@workspace:^, @spectrum-css/swatch@workspace:components/swatch":
+"@spectrum-css/swatch@npm:8.1.1, @spectrum-css/swatch@workspace:components/swatch":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/swatch@workspace:components/swatch"
   dependencies:
@@ -5245,7 +5245,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/swatchgroup@workspace:^, @spectrum-css/swatchgroup@workspace:components/swatchgroup":
+"@spectrum-css/swatchgroup@npm:5.1.0, @spectrum-css/swatchgroup@workspace:components/swatchgroup":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/swatchgroup@workspace:components/swatchgroup"
   dependencies:
@@ -5262,7 +5262,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/switch@npm:6.1.0, @spectrum-css/switch@workspace:^, @spectrum-css/switch@workspace:components/switch":
+"@spectrum-css/switch@npm:6.1.0, @spectrum-css/switch@workspace:components/switch":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/switch@workspace:components/switch"
   dependencies:
@@ -5275,7 +5275,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/table@workspace:^, @spectrum-css/table@workspace:components/table":
+"@spectrum-css/table@npm:8.1.0, @spectrum-css/table@workspace:components/table":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/table@workspace:components/table"
   dependencies:
@@ -5304,7 +5304,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tabs@workspace:^, @spectrum-css/tabs@workspace:components/tabs":
+"@spectrum-css/tabs@npm:6.1.1, @spectrum-css/tabs@workspace:components/tabs":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tabs@workspace:components/tabs"
   dependencies:
@@ -5329,7 +5329,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tag@npm:10.1.0, @spectrum-css/tag@workspace:^, @spectrum-css/tag@workspace:components/tag":
+"@spectrum-css/tag@npm:10.1.0, @spectrum-css/tag@workspace:components/tag":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tag@workspace:components/tag"
   dependencies:
@@ -5354,7 +5354,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/taggroup@workspace:^, @spectrum-css/taggroup@workspace:components/taggroup":
+"@spectrum-css/taggroup@npm:7.1.0, @spectrum-css/taggroup@workspace:components/taggroup":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/taggroup@workspace:components/taggroup"
   dependencies:
@@ -5371,7 +5371,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/textfield@npm:8.1.0, @spectrum-css/textfield@workspace:^, @spectrum-css/textfield@workspace:components/textfield":
+"@spectrum-css/textfield@npm:8.1.0, @spectrum-css/textfield@workspace:components/textfield":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/textfield@workspace:components/textfield"
   dependencies:
@@ -5388,7 +5388,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/thumbnail@npm:8.1.0, @spectrum-css/thumbnail@workspace:^, @spectrum-css/thumbnail@workspace:components/thumbnail":
+"@spectrum-css/thumbnail@npm:8.1.0, @spectrum-css/thumbnail@workspace:components/thumbnail":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/thumbnail@workspace:components/thumbnail"
   dependencies:
@@ -5405,7 +5405,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/toast@workspace:^, @spectrum-css/toast@workspace:components/toast":
+"@spectrum-css/toast@npm:11.1.0, @spectrum-css/toast@workspace:components/toast":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/toast@workspace:components/toast"
   dependencies:
@@ -5437,7 +5437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens@npm:16.0.1, @spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@npm:16.0.1, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
@@ -5452,7 +5452,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tooltip@npm:7.1.0, @spectrum-css/tooltip@workspace:^, @spectrum-css/tooltip@workspace:components/tooltip":
+"@spectrum-css/tooltip@npm:7.1.0, @spectrum-css/tooltip@workspace:components/tooltip":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tooltip@workspace:components/tooltip"
   dependencies:
@@ -5470,7 +5470,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tray@npm:5.1.0, @spectrum-css/tray@workspace:^, @spectrum-css/tray@workspace:components/tray":
+"@spectrum-css/tray@npm:5.1.0, @spectrum-css/tray@workspace:components/tray":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tray@workspace:components/tray"
   dependencies:
@@ -5503,7 +5503,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/treeview@workspace:^, @spectrum-css/treeview@workspace:components/treeview":
+"@spectrum-css/treeview@npm:12.1.0, @spectrum-css/treeview@workspace:components/treeview":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/treeview@workspace:components/treeview"
   dependencies:
@@ -5524,7 +5524,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/typography@npm:8.1.0, @spectrum-css/typography@workspace:^, @spectrum-css/typography@workspace:components/typography":
+"@spectrum-css/typography@npm:8.1.0, @spectrum-css/typography@workspace:components/typography":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/typography@workspace:components/typography"
   dependencies:
@@ -5548,7 +5548,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/underlay@npm:6.1.0, @spectrum-css/underlay@workspace:^, @spectrum-css/underlay@workspace:components/underlay":
+"@spectrum-css/underlay@npm:6.1.0, @spectrum-css/underlay@workspace:components/underlay":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/underlay@workspace:components/underlay"
   dependencies:
@@ -5562,7 +5562,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/well@workspace:^, @spectrum-css/well@workspace:components/well":
+"@spectrum-css/well@npm:7.1.0, @spectrum-css/well@workspace:components/well":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/well@workspace:components/well"
   dependencies:
@@ -5588,7 +5588,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-tools/postcss-add-theming-layer@workspace:^, @spectrum-tools/postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer":
+"@spectrum-tools/postcss-add-theming-layer@npm:1.0.1, @spectrum-tools/postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer":
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer"
   dependencies:
@@ -5602,7 +5602,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-tools/postcss-property-rollup@workspace:^, @spectrum-tools/postcss-property-rollup@workspace:plugins/postcss-property-rollup":
+"@spectrum-tools/postcss-property-rollup@npm:0.0.1, @spectrum-tools/postcss-property-rollup@workspace:plugins/postcss-property-rollup":
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-property-rollup@workspace:plugins/postcss-property-rollup"
   dependencies:
@@ -5614,7 +5614,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-tools/postcss-rgb-mapping@npm:1.0.0, @spectrum-tools/postcss-rgb-mapping@workspace:^, @spectrum-tools/postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping":
+"@spectrum-tools/postcss-rgb-mapping@npm:1.0.0, @spectrum-tools/postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping":
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping"
   dependencies:
