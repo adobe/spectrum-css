@@ -17,7 +17,7 @@
 	/* default height/width/border radius */
 	--spectrum-textfield-height: var(--spectrum-component-height-100);
 	--spectrum-textfield-width: var(--spectrum-field-default-width-medium);
-	--spectrum-textfield-min-width: var(--spectrum-text-field-minimum-width-multiplier);
+	--spectrum-textfield-min-width: calc(var(--spectrum-textfield-height) * var(--spectrum-text-field-minimum-width-multiplier));
 	--spectrum-textfield-border-width: var(--spectrum-border-width-200);
 	--spectrum-textfield-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
 
