@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
@@ -54,6 +54,7 @@ export default {
 			...isInvalid,
 			if: { arg: "isValid", truthy: false },
 		},
+		isHovered,
 		isFocused,
 		isKeyboardFocused,
 		size: size(["s", "m", "l", "xl"]),
@@ -113,6 +114,7 @@ export default {
 		isDisabled: false,
 		isRequired: false,
 		isReadOnly: false,
+		isHovered: false,
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
@@ -189,11 +191,27 @@ Disabled.parameters = {
 /**
  * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
  *
- * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
+ * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension.
  */
 export const HelpText = HelpTextOptions.bind({});
 HelpText.tags = ["!dev"];
 HelpText.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * __Don’t use placeholder text.__ Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible. Once a value is entered, placeholder text is no longer viewable; if someone is using an automatic form filler, they will never get the information in the placeholder text.
+ *
+ * Instead, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. If there's placeholder text and help text at the same time, it becomes redundant and distracting, especially if they're communicating the same thing.
+ *
+ * Because use of placeholder text is discouraged, placeholder and value text are styled the same.
+ */
+export const Placeholder = Template.bind({});
+Placeholder.tags = ["!dev"];
+Placeholder.args = {
+	placeholder: "placeholder@adobe.com"
+};
+Placeholder.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
