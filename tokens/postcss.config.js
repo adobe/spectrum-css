@@ -11,12 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = ({
-	resolveImports = true,
-	...options
-}) => require("../postcss.config.js")({
+import postcssConfig from "../postcss.config.js";
+
+export default (options) => postcssConfig({
 	...options,
-	resolveImports,
 	env: "production",
 	map: false,
 	additionalPlugins: {
