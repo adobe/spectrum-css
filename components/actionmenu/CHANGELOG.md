@@ -1,5 +1,15 @@
 # Change Log
 
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/actionbutton@8.0.0-next.0
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+
 ## 7.1.1
 
 ### Patch Changes
@@ -157,7 +167,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
 ### 🛑 BREAKING CHANGES
- - Removes component-builder & component-builder-simple for script leveraging postcss
+
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 

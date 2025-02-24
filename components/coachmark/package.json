@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/coachmark",
-	"version": "9.1.1",
+	"version": "10.0.0-next.0",
 	"description": "The Spectrum CSS coachmark component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,12 +25,12 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=7.0.0 <8.0.0",
-		"@spectrum-css/actionmenu": ">=7.0.0 <8.0.0",
-		"@spectrum-css/button": ">=14.0.0 <15.0.0",
-		"@spectrum-css/buttongroup": ">=9.0.0 <10.0.0",
-		"@spectrum-css/menu": ">=9.0.0 <10.0.0",
-		"@spectrum-css/popover": ">=8.0.0 <9.0.0",
+		"@spectrum-css/actionbutton": ">=8.0.0-next.0",
+		"@spectrum-css/actionmenu": ">=8.0.0-next.0",
+		"@spectrum-css/button": ">=15.0.0-next.0",
+		"@spectrum-css/buttongroup": ">=10.0.0-next.0",
+		"@spectrum-css/menu": ">=10.0.0-next.0",
+		"@spectrum-css/popover": ">=9.0.0-next.0",
 		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
@@ -57,12 +57,12 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "7.1.1",
-		"@spectrum-css/actionmenu": "7.1.1",
-		"@spectrum-css/button": "14.1.1",
-		"@spectrum-css/buttongroup": "9.1.0",
-		"@spectrum-css/menu": "9.1.0",
-		"@spectrum-css/popover": "8.2.0",
+		"@spectrum-css/actionbutton": "8.0.0-next.0",
+		"@spectrum-css/actionmenu": "8.0.0-next.0",
+		"@spectrum-css/button": "15.0.0-next.0",
+		"@spectrum-css/buttongroup": "10.0.0-next.0",
+		"@spectrum-css/menu": "10.0.0-next.0",
+		"@spectrum-css/popover": "9.0.0-next.0",
 		"@spectrum-css/tokens": "16.0.1"
 	},
 	"keywords": [

@@ -1,5 +1,14 @@
 # Change Log
 
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/checkbox@11.0.0-next.0
+  - @spectrum-css/tray@6.0.0-next.0
+
 ## 10.0.0
 
 ### Minor Changes
