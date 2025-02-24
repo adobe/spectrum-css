@@ -1,5 +1,12 @@
 # Change Log
 
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/button@15.0.0-next.0
+
 ## 9.1.0
 
 ### Minor Changes
@@ -172,7 +179,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
-  * Removes component-builder & component-builder-simple for script leveraging postcss
+  - Removes component-builder & component-builder-simple for script leveraging postcss
 
 * Imports added to index.css and themes/express.css
 

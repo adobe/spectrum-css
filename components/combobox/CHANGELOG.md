@@ -1,5 +1,15 @@
 # Change Log
 
+## 5.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/pickerbutton@7.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
+
 ## 4.1.1
 
 ### Patch Changes
