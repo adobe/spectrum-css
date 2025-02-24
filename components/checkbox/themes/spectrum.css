@@ -17,6 +17,7 @@
 
 @container style(--system: legacy) {
 	.spectrum-Checkbox {
+		--spectrum-checkbox-control-color-default: var(--spectrum-gray-600);
 		--spectrum-checkbox-checkmark-color: var(--spectrum-gray-75);
 		--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-75);
 	}
