@@ -22,6 +22,11 @@ export const CheckboxGroup = Variants({
 			isHovered: true,
 		},
 		{
+			testHeading: "Emphasized, hovered",
+			isEmphasized: true,
+			isHovered: true,
+		},
+		{
 			testHeading: "Truncation",
 			withStates: false,
 			label: "Checkbox with an extraordinarily long label. Please don't do this but if you did, it should wrap text when it gets longer than the container that houses the checkbox with the unacceptably long label",
