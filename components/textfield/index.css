@@ -404,9 +404,24 @@
 		&:hover {
 			border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
 			color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
-		}
 
-		&:hover::placeholder {
+			&::placeholder {
+				color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
+			}
+		}
+	}
+
+	/* focus hover */
+	.spectrum-Textfield:focus:hover &,
+	.spectrum-Textfield:focus-visible:hover &,
+	.is-focused:hover &,
+	.is-keyboardFocused:hover &,
+	&:focus:hover,
+	&:focus-visible:hover {
+		border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
+		color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
+
+		&::placeholder {
 			color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
 		}
 	}
@@ -458,6 +473,13 @@
 		&:hover {
 			border-color: var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover));
 		}
+	}
+
+	.is-invalid:focus:hover &,
+	.is-invalid:focus-visible:hover &,
+	.is-invalid.is-focused:hover &,
+	.is-invalid.is-keyboardFocused:hover & {
+		border-color: var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover));
 	}
 
 	/* invalid keyboard focus */
