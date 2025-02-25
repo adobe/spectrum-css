@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 9.1.0
 
@@ -148,25 +151,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.5...@spectrum-css/icon@7.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.5...@spectrum-css/icon@7.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="6.0.5"></a>
 
 ## 6.0.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.4...@spectrum-css/icon@6.0.5)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.4...@spectrum-css/icon@6.0.5)
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -174,8 +172,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.3...@spectrum-css/icon@6.0.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.3...@spectrum-css/icon@6.0.4)
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -183,8 +180,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.3
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.2...@spectrum-css/icon@6.0.3)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.2...@spectrum-css/icon@6.0.3)
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -192,8 +188,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.2
 
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.1...@spectrum-css/icon@6.0.2)
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.1...@spectrum-css/icon@6.0.2)
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -201,8 +196,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -210,16 +204,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.0
 
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@5.1.0...@spectrum-css/icon@6.0.0)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@5.1.0...@spectrum-css/icon@6.0.0)
 
-\*refactor(icon)!: tokens migration (#2347)([b63631a](https://github.com/adobe/spectrum-css/commit/b63631a)), closes[#2347](https://github.com/adobe/spectrum-css/issues/2347)
+- refactor(icon)!: tokens migration (#2347)([b63631a](https://github.com/adobe/spectrum-css/commit/b63631a)), closes[#2347](https://github.com/adobe/spectrum-css/issues/2347)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		migrate Icon from DNA tokens to Spectrum tokens.
+- - migrate Icon from DNA tokens to Spectrum tokens.
 
 Additionally:
 
@@ -337,8 +328,7 @@ includes the new custom-vars for the xxl and xxs workflow icon sizes.
 
 ## 5.1.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@5.0.1...@spectrum-css/icon@5.1.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@5.0.1...@spectrum-css/icon@5.1.0)
 
 ### ✨ Features
 
@@ -374,8 +364,7 @@ includes the new custom-vars for the xxl and xxs workflow icon sizes.
 
 ## 4.0.5
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@4.0.3...@spectrum-css/icon@4.0.5)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@4.0.3...@spectrum-css/icon@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -383,8 +372,7 @@ includes the new custom-vars for the xxl and xxs workflow icon sizes.
 
 ## 4.0.4
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@4.0.3...@spectrum-css/icon@4.0.4)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@4.0.3...@spectrum-css/icon@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -392,8 +380,7 @@ includes the new custom-vars for the xxl and xxs workflow icon sizes.
 
 ## 4.0.3
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@4.0.2...@spectrum-css/icon@4.0.3)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@4.0.2...@spectrum-css/icon@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -401,8 +388,7 @@ includes the new custom-vars for the xxl and xxs workflow icon sizes.
 
 ## 4.0.2
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@4.0.1...@spectrum-css/icon@4.0.2)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@4.0.1...@spectrum-css/icon@4.0.2)
 
 ### 🔙 Reverts
 
@@ -421,13 +407,11 @@ includes the new custom-vars for the xxl and xxs workflow icon sizes.
 
 ## 4.0.0
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.50...@spectrum-css/icon@4.0.0)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.50...@spectrum-css/icon@4.0.0)
 
-\*feat(sidenav)!: use spectrum-tokens (#1901)([8851dd9](https://github.com/adobe/spectrum-css/commit/8851dd9)), closes[#1901](https://github.com/adobe/spectrum-css/issues/1901)
+- feat(sidenav)!: use spectrum-tokens (#1901)([8851dd9](https://github.com/adobe/spectrum-css/commit/8851dd9)), closes[#1901](https://github.com/adobe/spectrum-css/issues/1901)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		Migrates Side Nav to use `@adobe/spectrum-tokens`
@@ -439,7 +423,6 @@ Additionally:
 - chore(sidenav)!: wip add new tokens
 
 - chore(sidenav)!: wip migrate tokens
-
 - chore(sidenav)!: wip migrate tokens
 
 - chore(sidenav): migrates tokens part 3
@@ -534,12 +517,11 @@ This reverts commit a404f9505d8125277ed5eda0312289a0468a527f.
 
 ## 3.0.50
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.49...@spectrum-css/icon@3.0.50)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.49...@spectrum-css/icon@3.0.50)
 
 ### 🐛 Bug fixes
 
-\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+- icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="3.0.49"></a>
 
@@ -568,14 +550,13 @@ This reverts commit a404f9505d8125277ed5eda0312289a0468a527f.
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="3.0.46"></a>
 
 ## 3.0.46
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.45...@spectrum-css/icon@3.0.46)
+## 🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.45...@spectrum-css/icon@3.0.46)
 
 **Note:** Version bump only for package @spectrum-css/icon
 
@@ -595,7 +576,6 @@ This reverts commit a404f9505d8125277ed5eda0312289a0468a527f.
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@3.0.43...@spectrum-css/icon@3.0.44)
 
 **Note:** Version bump only for package @spectrum-css/icon
-
 <a name="3.0.43"></a>
 
 ## 3.0.43
