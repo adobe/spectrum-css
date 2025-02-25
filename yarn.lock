@@ -5228,7 +5228,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/swatch@npm:8.1.0, @spectrum-css/swatch@workspace:^, @spectrum-css/swatch@workspace:components/swatch":
+"@spectrum-css/swatch@npm:8.1.1, @spectrum-css/swatch@workspace:^, @spectrum-css/swatch@workspace:components/swatch":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/swatch@workspace:components/swatch"
   dependencies:
@@ -5249,7 +5249,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/swatchgroup@workspace:components/swatchgroup"
   dependencies:
-    "@spectrum-css/swatch": "npm:8.1.0"
+    "@spectrum-css/swatch": "npm:8.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/swatch": ">=8.0.0 <9.0.0"
