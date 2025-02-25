@@ -1,9 +1,9 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptions, KeyboardFocusTemplate, Template, TextFieldOptions } from "./template.js";
+import { HelpTextOptions, RequiredOptions, Template, TextFieldOptions } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
 
 /**
@@ -54,10 +54,10 @@ export default {
 			...isInvalid,
 			if: { arg: "isValid", truthy: false },
 		},
+		isHovered,
 		isFocused,
 		isKeyboardFocused,
 		size: size(["s", "m", "l", "xl"]),
-		isQuiet,
 		multiline: { table: { disable: true } },
 		grows: {
 			name: "Grows",
@@ -73,7 +73,13 @@ export default {
 			table: { disable: true },
 		},
 		isDisabled,
-		isRequired,
+		isRequired: {
+			...isRequired,
+			description: "Sets the required attribute on the input element and adds the required asterisk to the field label.",
+		},
+		isRequiredWithoutAsterisk: {
+			table: { disable: true },
+		},
 		isReadOnly,
 		isLoading,
 		pattern: { table: { disable: true } },
@@ -113,7 +119,9 @@ export default {
 		isInvalid: false,
 		isDisabled: false,
 		isRequired: false,
+		isRequiredWithoutAsterisk: false,
 		isReadOnly: false,
+		isHovered: false,
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
@@ -124,7 +132,6 @@ export default {
 		labelText: "Username",
 		size: "m",
 		grows: false,
-		isQuiet: false,
 		value: "",
 		helpText: ""
 	},
@@ -191,7 +198,7 @@ Disabled.parameters = {
 /**
  * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
  *
- * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
+ * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension.
  */
 export const HelpText = HelpTextOptions.bind({});
 HelpText.tags = ["!dev"];
@@ -200,15 +207,18 @@ HelpText.parameters = {
 };
 
 /**
- * Quiet text fields can have no visible background. This style works best when a clear layout (vertical stack, table, grid) makes it easy to parse. Too many quiet components in a small space can be hard to read.
+ * __Don’t use placeholder text.__ Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible. Once a value is entered, placeholder text is no longer viewable; if someone is using an automatic form filler, they will never get the information in the placeholder text.
+ *
+ * Instead, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. If there's placeholder text and help text at the same time, it becomes redundant and distracting, especially if they're communicating the same thing.
+ *
+ * Because use of placeholder text is discouraged, placeholder and value text are styled the same.
  */
-export const Quiet = TextFieldOptions.bind({});
-Quiet.tags = ["!dev"];
-Quiet.args = {
-	isQuiet: true,
-	value: ""
+export const Placeholder = Template.bind({});
+Placeholder.tags = ["!dev"];
+Placeholder.args = {
+	placeholder: "placeholder@adobe.com"
 };
-Quiet.parameters = {
+Placeholder.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
@@ -270,11 +280,23 @@ Validation.parameters = {
 Validation.storyName = "Validation icon";
 
 /**
+ * Text fields can be marked as optional or required, depending on the situation. For required text fields, there are two styling options: a "(required)" label or an asterisk. If you use an asterisk, be sure to include hint text to explain what the asterisk means. Optional text fields are either denoted with text added to the end of the label — "(optional)" — or have no indication at all.
+ */
+export const Required = RequiredOptions.bind({});
+Required.tags = ["!dev"];
+Required.args = {
+	isRequired: true,
+};
+Required.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
  * When the text field was focused using the keyboard (e.g. with the tab key), the implementation must add the `is-keyboardFocused` class, which
  * displays the focus indicator. This indicator should not appear on focus from a click or tap.
  * The example below has this class applied on first load for demonstration purposes.
  */
-export const KeyboardFocus = KeyboardFocusTemplate.bind({});
+export const KeyboardFocus = Template.bind({});
 KeyboardFocus.tags = ["!dev"];
 KeyboardFocus.args = {
 	isKeyboardFocused: true,

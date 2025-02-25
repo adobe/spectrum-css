@@ -24,7 +24,6 @@ import "../index.css";
  * @property {boolean} [isValid=false]
  * @property {boolean} [multiline=false]
  * @property {boolean} [grows=false]
- * @property {boolean} [isQuiet=false]
  * @property {boolean} [isFocused=false]
  * @property {boolean} [isDisabled=false]
  * @property {boolean} [isRequired=false]
@@ -63,14 +62,15 @@ export const Template = ({
 	isValid = false,
 	multiline = false,
 	grows = false,
-	isQuiet = false,
 	isFocused = false,
 	isDisabled = false,
+	isHovered = false,
 	isRequired = false,
+	isRequiredWithoutAsterisk = false,
 	isReadOnly = false,
 	isKeyboardFocused = false,
 	isLoading = false,
-	displayLabel = false,
+	displayLabel = true,
 	labelPosition = "top",
 	labelText,
 	characterCount,
@@ -91,12 +91,28 @@ export const Template = ({
 
 	// Override icon name and set if the field is invalid or valid
 	if (isInvalid) {
-		iconName = "Alert";
+		iconName = "AlertTriangle";
 		iconSet = "workflow";
 	}
 	else if (isValid) {
-		iconName = "Checkmark";
 		iconSet = "ui";
+
+		switch (size) {
+			case "s":
+				iconName = "Checkmark75";
+				break;
+			case "m":
+				iconName = "Checkmark100";
+				break;
+			case "l":
+				iconName = "Checkmark200";
+				break;
+			case "xl":
+				iconName = "Checkmark300";
+				break;
+			default:
+				iconName = "Checkmark"; // Fallback if size is undefined or doesn't match
+		}
 	}
 
 	return html`
@@ -107,10 +123,10 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--multiline`]: multiline,
 				[`${rootClass}--grows`]: grows,
-				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--sideLabel`]: labelPosition === "side",
 				"is-invalid": isInvalid,
 				"is-valid": isValid,
+				"is-hover": isHovered,
 				"is-focused": isFocused,
 				"is-keyboardFocused": isKeyboardFocused,
 				"is-disabled": isDisabled,
@@ -149,6 +165,7 @@ export const Template = ({
 			size,
 			label: labelText,
 			isDisabled,
+			isRequired: isRequired && !isRequiredWithoutAsterisk,
 		}, context))}
 		${when(typeof characterCount !== "undefined", () => html`
 			<span class="${rootClass}-characterCount">${characterCount}</span>`)}
@@ -274,28 +291,25 @@ export const TextFieldOptions = (args, context) => Container({
 	`
 }, context);
 
-export const KeyboardFocusTemplate = (args, context) => Container({
+export const RequiredOptions = (args, context) => Container({
 	direction: "column",
 	withBorder: false,
-	wrapperStyles: {
-		rowGap: "12px",
-	},
+	withHeading: false,
 	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Default",
-			content: Template({...args, isKeyboardFocused: true}, context)
+			heading: "Required with (required) label",
+			content: Template({...args, isRequired: true, isRequiredWithoutAsterisk: true, labelText: "Email address (required)", value: "abc@adobe.com", helpText: "Email address is required"}, context),
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Quiet",
-			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+			heading: "Required with asterisk",
+			content: Template({...args, isRequired: true, labelText: "Email address", value: "abc@adobe.com", helpText: "Email address is required"}, context),
+		}, context)}
+		${Container({
+			withBorder: false,
+			heading: "Required with asterisk, side label",
+			content: Template({...args, isRequired: true, labelPosition: "side", labelText: "Email address", value: "abc@adobe.com", helpText: "Email address is required"}, context),
 		}, context)}
 	`
 }, context);
