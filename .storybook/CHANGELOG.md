@@ -10,10 +10,10 @@
 
 ### Patch Changes
 
-- [#3528](https://github.com/adobe/spectrum-css/pull/3528) [`bee70fb`](https://github.com/adobe/spectrum-css/commit/bee70fbab5f12b49ce2611366b614c75277e0aa9) Thanks [@castastrophe](https://github.com/castastrophe)!
+- [#3528](https://github.com/adobe/spectrum-css/pull/3528) [`bee70fb`](https://github.com/adobe/spectrum-css/commit/bee70fbab5f12b49ce2611366b614c75277e0aa9) Thanks [@castastrophe](https://github.com/castastrophe)! 
 - Update fetchToken to use the exported JSON from @spectrum-css/tokens instead of @adobe/spectrum-tokens
 
-- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
+- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)! 
 - Dependency alignment across the project.
 
   Set component peerDependencies as optional to reduce console warnings on downstream projects.
@@ -33,9 +33,11 @@
 
 ### Major Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)!
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! 
 
 #### Breaking change
+
+  This update removes the previously deprecated component documentation for **cyclebutton**, **quickaction**, **searchwithin**, and **splitbutton**.
 
 This update removes the previously deprecated component documentation for **cyclebutton**, **quickaction**, **searchwithin**, and **splitbutton**.
 
@@ -47,9 +49,7 @@ To support the Spectrum 2 (S2) Foundations release, Storybook has been updated t
 
 This release also includes:
 
-- New migration documentation for S1 -> S2 updates
-- Fix for the duplicate line numbers in the code preview plugin
-- Updated styles to integrate Spectrum styling into the Storybook UI
+#### Patch Changes
 
 #### Patch Changes
 
@@ -61,7 +61,7 @@ This release also includes:
 
 ### Patch Changes
 
-- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)!
+- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! 
 - Minor storybook updates and fixes including some whitespace changes.
 
   A bug was fixed with the HTML code preview that was displaying duplicate line numbers.
@@ -86,7 +86,7 @@ This release also includes:
 
 ### Major Changes
 
-- [#3458](https://github.com/adobe/spectrum-css/pull/3458) [`e1b7102`](https://github.com/adobe/spectrum-css/commit/e1b71027f92ce18feb3a63c100d2b4871fc73b9f) Thanks [@castastrophe](https://github.com/castastrophe)!
+- [#3458](https://github.com/adobe/spectrum-css/pull/3458) [`e1b7102`](https://github.com/adobe/spectrum-css/commit/e1b71027f92ce18feb3a63c100d2b4871fc73b9f) Thanks [@castastrophe](https://github.com/castastrophe)! 
 - Update the Chromatic add-on to the currently maintained package:
 
   - from "@chromaui/addon-visual-tests": "^1.0.0"
@@ -100,14 +100,14 @@ This release also includes:
 
 ### Patch Changes
 
-- [#3440](https://github.com/adobe/spectrum-css/pull/3440) [`6808c85`](https://github.com/adobe/spectrum-css/commit/6808c85295d472286c0a52e28d2279b2b5a16f92) Thanks [@castastrophe](https://github.com/castastrophe)!
+- [#3440](https://github.com/adobe/spectrum-css/pull/3440) [`6808c85`](https://github.com/adobe/spectrum-css/commit/6808c85295d472286c0a52e28d2279b2b5a16f92) Thanks [@castastrophe](https://github.com/castastrophe)! 
 - Fix an issue where "show code" was blocking loading in Storybook docs pages [CSS-1070]
 
 ## 10.12.0
 
 ### Minor Changes
 
-- [#3477](https://github.com/adobe/spectrum-css/pull/3477) [`d52c701`](https://github.com/adobe/spectrum-css/commit/d52c70196bf2d17433c239313a82f00f75d77e79) Thanks [@castastrophe](https://github.com/castastrophe)!
+- [#3477](https://github.com/adobe/spectrum-css/pull/3477) [`d52c701`](https://github.com/adobe/spectrum-css/commit/d52c70196bf2d17433c239313a82f00f75d77e79) Thanks [@castastrophe](https://github.com/castastrophe)! 
 - Update Storybook to leverage the new CSS bundled assets.
 
 ### Patch Changes
