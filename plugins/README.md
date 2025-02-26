@@ -16,12 +16,12 @@ Add the plugins to your Stylelint configuration file (i.e., `.stylelintrc.js`).
 
 ```js
 module.exports = {
-  extends: ["stylelint-config-standard"],
-  plugins: [
-    "stylelint-use-logical",
-    "stylelint-suit-naming-pattern",
-    "stylelint-no-missing-var",
-  ],
+	extends: ["stylelint-config-standard"],
+	plugins: [
+		"stylelint-use-logical",
+		"stylelint-suit-naming-pattern",
+		"stylelint-no-missing-var",
+	],
 };
 ```
 
