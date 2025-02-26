@@ -5497,7 +5497,6 @@ __metadata:
     "@adobe/token-diff-generator": "npm:^1.3.0"
     "@nxkit/style-dictionary": "npm:^6.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.0.0"
-    "@spectrum-tools/postcss-transparent-mapping": "workspace:^"
     eslint: "npm:^8.57.0"
     npm-run-all2: "npm:^7.0.2"
     postcss: "npm:^8.5.3"
@@ -5676,45 +5675,6 @@ __metadata:
     ava: "npm:^6.2.0"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.3"
-    postcss-values-parser: "npm:^6.0.2"
-  peerDependencies:
-    postcss: ">=8"
-  languageName: unknown
-  linkType: soft
-
-"@spectrum-tools/postcss-transparent-mapping@workspace:^, @spectrum-tools/postcss-transparent-mapping@workspace:plugins/postcss-transparent-mapping":
-  version: 0.0.0-use.local
-  resolution: "@spectrum-tools/postcss-transparent-mapping@workspace:plugins/postcss-transparent-mapping"
-  dependencies:
-    ava: "npm:^6.2.0"
-    c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.3"
-    postcss-values-parser: "npm:^6.0.2"
-  peerDependencies:
-    postcss: ">=8"
-  languageName: unknown
-  linkType: soft
-
-"@spectrum-tools/postcss-transparent-mapping@workspace:^, @spectrum-tools/postcss-transparent-mapping@workspace:plugins/postcss-transparent-mapping":
-  version: 0.0.0-use.local
-  resolution: "@spectrum-tools/postcss-transparent-mapping@workspace:plugins/postcss-transparent-mapping"
-  dependencies:
-    ava: "npm:^6.2.0"
-    c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.2"
-    postcss-values-parser: "npm:^6.0.2"
-  peerDependencies:
-    postcss: ">=8"
-  languageName: unknown
-  linkType: soft
-
-"@spectrum-tools/postcss-transparent-mapping@workspace:^, @spectrum-tools/postcss-transparent-mapping@workspace:plugins/postcss-transparent-mapping":
-  version: 0.0.0-use.local
-  resolution: "@spectrum-tools/postcss-transparent-mapping@workspace:plugins/postcss-transparent-mapping"
-  dependencies:
-    ava: "npm:^6.2.0"
-    c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.0"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
     postcss: ">=8"
