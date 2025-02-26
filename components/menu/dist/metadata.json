@@ -89,7 +89,6 @@
     ".spectrum-Menu-item:active > .spectrum-Menu-itemLabel",
     ".spectrum-Menu-item:active > .spectrum-Menu-itemValue",
     ".spectrum-Menu-item:active > .spectrum-Menu-sectionHeading",
-    ".spectrum-Menu-item:dir(rtl)",
     ".spectrum-Menu-item:focus",
     ".spectrum-Menu-item:focus > .spectrum-Menu-checkmark",
     ".spectrum-Menu-item:focus > .spectrum-Menu-chevron",
@@ -134,11 +133,12 @@
     ".spectrum-Menu.spectrum-Menu--sizeL",
     ".spectrum-Menu.spectrum-Menu--sizeS",
     ".spectrum-Menu.spectrum-Menu--sizeXL",
+    ".spectrum-Menu:dir(rtl)",
     ".spectrum-Menu:lang(ja)",
     ".spectrum-Menu:lang(ko)",
     ".spectrum-Menu:lang(zh)",
-    "[dir=\"rtl\"] .spectrum-Menu .spectrum-Menu-chevron",
-    "[dir=\"rtl\"] .spectrum-Menu-item"
+    "[dir=\"rtl\"] .spectrum-Menu",
+    "[dir=\"rtl\"] .spectrum-Menu .spectrum-Menu-chevron"
   ],
   "modifiers": [
     "--mod-menu-back-heading-color",
