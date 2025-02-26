@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -11,24 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Divider {
-		--highcontrast-divider-background-color: CanvasText;
-	}
-}
-
 .spectrum-Divider {
-	/* background colors */
 	--spectrum-divider-background-color: var(--spectrum-gray-200);
 
-	/* static white background colors */
-	--spectrum-divider-background-color-static-white: var(--spectrum-transparent-white-200);
-
-	/* static black background colors */
-	--spectrum-divider-background-color-static-black: var(--spectrum-transparent-black-200);
-
 	--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
+
+	--spectrum-divider-inline-minimum-size: var(--spectrum-divider-horizontal-minimum-width);
+	--spectrum-divider-block-minimum-size: var(--spectrum-divider-vertical-minimum-height);
 }
 
 .spectrum-Divider--sizeS {
@@ -42,33 +31,19 @@
 
 /* static white variant colors */
 .spectrum-Divider--staticWhite {
-	/** @deprecated --mod-divider-background-color-medium-static-white, use --mod-divider-background-color instead */
-	--mod-divider-background-color: var(--mod-divider-background-color-medium-static-white, var(--spectrum-divider-background-color-static-white));
-
-	&.spectrum-Divider--sizeS {
-		/** @deprecated --mod-divider-background-color-small-static-white, use --mod-divider-background-color instead */
-		--mod-divider-background-color: var(--mod-divider-background-color-small-static-white, var(--spectrum-divider-background-color-static-white));
-	}
+	--spectrum-divider-background-color: var(--spectrum-transparent-white-200);
 
 	&.spectrum-Divider--sizeL {
-		/** @deprecated --mod-divider-background-color-large-static-white, use --mod-divider-background-color instead */
-		--mod-divider-background-color: var(--mod-divider-background-color-large-static-white, var(--spectrum-transparent-white-800));
+		--spectrum-divider-background-color: var(--spectrum-transparent-white-800);
 	}
 }
 
 /* static black variant colors */
 .spectrum-Divider--staticBlack {
-	/** @deprecated --mod-divider-background-color-medium-static-black, use --mod-divider-background-color instead */
-	--mod-divider-background-color: var(--mod-divider-background-color-medium-static-black, var(--spectrum-divider-background-color-static-black));
-
-	&.spectrum-Divider--sizeS {
-		/** @deprecated --mod-divider-background-color-small-static-black, use --mod-divider-background-color instead */
-		--mod-divider-background-color: var(--mod-divider-background-color-small-static-black, var(--spectrum-divider-background-color-static-black));
-	}
+	--spectrum-divider-background-color: var(--spectrum-transparent-black-200);
 
 	&.spectrum-Divider--sizeL {
-		/** @deprecated --mod-divider-background-color-large-static-black, use --mod-divider-background-color instead */
-		--mod-divider-background-color: var(--mod-divider-background-color-large-static-black, var(--spectrum-transparent-black-800));
+		--spectrum-divider-background-color: var(--spectrum-transparent-black-800);
 	}
 }
 
@@ -84,12 +59,24 @@
 	border-radius: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
 
 	background-color: var(--highcontrast-divider-background-color, var(--mod-divider-background-color, var(--spectrum-divider-background-color)));
+
+	&:not(&.spectrum-Divider--vertical) {
+		min-inline-size: var(--mod-divider-inline-minimum-size, var(--spectrum-divider-inline-minimum-size));
+	}
 }
 
 /* vertical dividers */
 .spectrum-Divider--vertical {
 	inline-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
+	min-block-size: var(--mod-divider-block-minimum-size, var(--spectrum-divider-block-minimum-size));
 	margin-block: var(--mod-divider-vertical-margin, 0);
 	block-size: var(--mod-divider-vertical-height, 100%);
 	align-self: var(--mod-divider-vertical-align, flex-start);
+}
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-Divider {
+		--highcontrast-divider-background-color: CanvasText;
+	}
 }
