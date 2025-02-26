@@ -1,5 +1,12 @@
 # Change log
 
+## 5.1.1-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`45f110c`](https://github.com/adobe/spectrum-css/commit/45f110cbca47e245236bf4316593b0a5b1312241)]:
+  - @spectrum-css/swatch@8.1.1-next.0
+
 ## 5.1.0
 
 ### Minor Changes
