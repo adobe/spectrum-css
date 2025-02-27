@@ -18,14 +18,8 @@ Checkbox's control and color tokens have been updated by the latest S2 tokens:
 ##### New tokens
 
 `--spectrum-component-size-width-ratio-down`
-`--spectrum-checkbox-bottom-to-text(S)`
-`--spectrum-checkbox-bottom-to-text(M)`
-`--spectrum-checkbox-bottom-to-text(L)`
-`--spectrum-checkbox-bottom-to-text(XL)`
-`--spectrum-checkbox-top-to-control (S)`
-`--spectrum-checkbox-top-to-control (M)`
-`--spectrum-checkbox-top-to-control (L)`
-`--spectrum-checkbox-top-to-control (XL)`
+`--spectrum-checkbox-bottom-to-text`
+`--spectrum-checkbox-top-to-control`
 `--spectrum-accent-content-color-default`
 `--spectrum-accent-content-color-hover`
 `--spectrum-accent-content-color-down`

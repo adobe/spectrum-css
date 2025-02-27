@@ -230,12 +230,6 @@
 				opacity: 1;
 			}
 		}
-
-		.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
-			&::before {
-				border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-control-selected-color-focus, var(--spectrum-checkbox-control-selected-color-focus)));
-			}
-		}
 	}
 
 	/* Invalid Indeterminate */
@@ -269,6 +263,12 @@
 
 /* Emphasized */
 .spectrum-Checkbox--emphasized {
+	.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
+		&::before {
+			border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-emphasized-color-down, var(--spectrum-checkbox-emphasized-color-down)));
+		}
+	}
+
 	/* Checked and Indeterminate Default States */
 	.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
 	&.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
