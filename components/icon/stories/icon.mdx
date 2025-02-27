@@ -20,20 +20,26 @@ The SVG icons used in Spectrum CSS are a part of two different icon sets, "workf
 
 ### Workflow icons
 
-The workflow icon set contains several hundred icons to choose from.
-These icons can be seen in use within Button, Action button, Menu, and many other components.
+The workflow icon set contains several hundred icons to choose from. For a full list of all icons within this set, see **[workflow icons](/story/components-icon--workflow)**.
+These icons can be seen in use within button, action button, menu, and many other components.
 Here is an example with just a few of these icons:
 
 <Canvas of={IconStories.WorkflowDefault} />
 
-These icons use "t-shirt" sizes (e.g. small, medium), that are the same width and height for each icon in the set:
+#### T-shirt sizing
+
+Workflow icons use "t-shirt" sizes, e.g. small or medium, that are the same width and height for each icon in the set. Note that the
+extra-extra-large size is currently _not_ part of the design specifications and may be deprecated in the near future:
 
 <Canvas of={IconStories.WorkflowSizing} />
 
 ### UI icons
 
 UI icons are atomic pieces (e.g., arrows, crosses, etc.) that are used as part of some components. The chevron within
-the [Combobox component](?path=/docs/components-combobox--docs) is one example.
+the [Combobox component](/docs/components-combobox--docs) is one example. For a full list of all icons within this
+set, see **[ui icons](/story/components-icon--ui)**.
+
+#### Numbered sizing
 
 Unlike workflow icons, each UI icon comes in specific numbered sizes. They do not use "t-shirt" sizing.
 They have unique classes applied that set their size in CSS. For example:
@@ -48,6 +54,8 @@ size options is typically defined on the design spec.
 An example of some UI icons in their available sizes:
 
 <Canvas of={IconStories.UIDefault} />
+
+#### Directional icons
 
 Directional UI icons such as Chevron and Arrow have classes for each direction. They rotate the same base icon with a CSS `transform: rotate`. For example, the `Arrow100.svg` icon is used
 with:

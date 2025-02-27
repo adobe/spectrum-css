@@ -1,7 +1,11 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/button@15.0.0-next.0
 
 ## 9.1.0
 
@@ -176,11 +180,16 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
+  - Removes component-builder & component-builder-simple for script leveraging postcss
+
+* Imports added to index.css and themes/express.css
+
 <a name="6.2.5"></a>
 
 ## 6.2.5
 
 🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.2.4...@spectrum-css/buttongroup@6.2.5)
+
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
 <a name="6.2.4"></a>
@@ -218,8 +227,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.2.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.16...@spectrum-css/buttongroup@6.2.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.16...@spectrum-css/buttongroup@6.2.0)
 
 ### ✨ Features
 
@@ -245,8 +253,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.1.14
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.12...@spectrum-css/buttongroup@6.1.14)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.12...@spectrum-css/buttongroup@6.1.14)
 
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
@@ -255,6 +262,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ## 6.1.13
 
 🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.12...@spectrum-css/buttongroup@6.1.13)
+
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
 <a name="6.1.12"></a>
@@ -292,8 +300,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.1.8
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.7...@spectrum-css/buttongroup@6.1.8)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.7...@spectrum-css/buttongroup@6.1.8)
 
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
@@ -317,8 +324,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.1.5
 
-🗓
-2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.4...@spectrum-css/buttongroup@6.1.5)
+🗓 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.4...@spectrum-css/buttongroup@6.1.5)
 
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
@@ -327,6 +333,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ## 6.1.4
 
 🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.1.3...@spectrum-css/buttongroup@6.1.4)
+
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
 <a name="6.1.3"></a>
@@ -345,7 +352,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="6.1.1"></a>
 
@@ -385,8 +392,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.0.61
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.60...@spectrum-css/buttongroup@6.0.61)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.60...@spectrum-css/buttongroup@6.0.61)
 
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
@@ -394,8 +400,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.0.60
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.59...@spectrum-css/buttongroup@6.0.60)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.59...@spectrum-css/buttongroup@6.0.60)
 
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
@@ -404,6 +409,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ## 6.0.59
 
 🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.58...@spectrum-css/buttongroup@6.0.59)
+
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
 <a name="6.0.58"></a>
@@ -442,8 +448,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.0.54
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.53...@spectrum-css/buttongroup@6.0.54)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.53...@spectrum-css/buttongroup@6.0.54)
 
 **Note:** Version bump only for package @spectrum-css/buttongroup
 
@@ -467,8 +472,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.0.51
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.50...@spectrum-css/buttongroup@6.0.51)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.50...@spectrum-css/buttongroup@6.0.51)
 
 ### 🐛 Bug fixes
 
@@ -486,8 +490,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 6.0.49
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.48...@spectrum-css/buttongroup@6.0.49)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.0.48...@spectrum-css/buttongroup@6.0.49)
 
 **Note:** Version bump only for package @spectrum-css/buttongroup
 

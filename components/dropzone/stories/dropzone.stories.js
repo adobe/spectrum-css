@@ -27,12 +27,16 @@ export default {
 			if: { arg: "isDragged", truthy: true },
 		},
 		...IllustratedMessage.argTypes,
+		hasButtons: { table: { disable: true }},
+		isHorizontal: { table: { disable: true }},
 		label: ActionButton.argTypes.label,
 	},
 	args: {
 		rootClass: "spectrum-DropZone",
 		isDragged: false,
 		isFilled: false,
+		title: "Drag and drop your file",
+		description: "Or, select a file from your computer.",
 	},
 	parameters: {
 		design: {
@@ -46,14 +50,12 @@ export default {
 
 export const Default = DropzoneGroup.bind({});
 Default.args = {
-	heading: "Drag and drop your file",
 	description: [
 		() => {
 			return html`${Link({ url: "#", text: "Select a file" })} from your computer.`;
 		},
 	],
 	label: "Drop file to replace",
-	useAccentColor: true,
 	customStyles: {
 		width: "300px",
 	},

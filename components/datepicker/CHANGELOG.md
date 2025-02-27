@@ -1,7 +1,14 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+## 5.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/pickerbutton@7.0.0-next.0
+  - @spectrum-css/calendar@8.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
 
 ## 4.1.1
 
@@ -231,6 +238,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ### 🛑 BREAKING CHANGES
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
+
 - Imports added to index.css and themes/express.css
 
 <a name="2.1.4"></a>

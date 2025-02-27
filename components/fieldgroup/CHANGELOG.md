@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/checkbox@11.0.0-next.0
+  - @spectrum-css/helptext@8.0.0-next.0
+  - @spectrum-css/radio@11.0.0-next.0
+
 ## 7.1.0
 
 ### Minor Changes

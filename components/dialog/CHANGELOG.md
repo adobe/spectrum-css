@@ -1,7 +1,20 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+## 13.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`c6836fb`](https://github.com/adobe/spectrum-css/commit/c6836fb132effcfb09e4ca6d0d8923564bfe2914)]:
+  - @spectrum-css/divider@6.0.0-next.0
+
+## 13.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/button@15.0.0-next.0
+  - @spectrum-css/closebutton@7.0.0-next.0
+  - @spectrum-css/buttongroup@10.0.0-next.0
 
 ## 12.1.0
 
@@ -224,6 +237,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ### 🛑 BREAKING CHANGES
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
+
 - Imports added to index.css and themes/express.css
 
 <a name="9.2.4"></a>

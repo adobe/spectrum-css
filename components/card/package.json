@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/card",
-	"version": "11.1.0",
+	"version": "12.0.0-next.0",
 	"description": "The Spectrum CSS card component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,10 +25,10 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=7.0.0 <8.0.0",
+		"@spectrum-css/actionbutton": ">=8.0.0-next.0",
 		"@spectrum-css/asset": ">=7.0.0 <8.0.0",
-		"@spectrum-css/checkbox": ">=10.0.0 <11.0.0",
-		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/checkbox": ">=11.0.0-next.0",
+		"@spectrum-css/icon": ">=10.0.0-next.0",
 		"@spectrum-css/quickaction": ">=3",
 		"@spectrum-css/tokens": ">=16.0.0 <17.0.0",
 		"@spectrum-css/typography": ">=8.0.0 <9.0.0"
@@ -57,10 +57,10 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actionbutton": "7.1.1",
+		"@spectrum-css/actionbutton": "8.0.0-next.0",
 		"@spectrum-css/asset": "7.1.0",
-		"@spectrum-css/checkbox": "10.1.0",
-		"@spectrum-css/icon": "9.1.0",
+		"@spectrum-css/checkbox": "11.0.0-next.0",
+		"@spectrum-css/icon": "10.0.0-next.0",
 		"@spectrum-css/tokens": "16.0.1",
 		"@spectrum-css/typography": "8.1.0"
 	},
