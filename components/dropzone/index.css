@@ -58,7 +58,7 @@
 	background-size: cover;
 	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
 	position: relative;
-	border: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)) dashed var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
+	border: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)) dashed var(--highcontrast-drop-zone-border-color, var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color)));
 
 	&.is-dragged {
 		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style-dragged, var(--mod-drop-zone-border-style-dragged, solid));
@@ -120,7 +120,7 @@
 }
 
 .spectrum-DropZone-stroke-path {
-	stroke: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
+	stroke: var(--highcontrast-drop-zone-border-color, var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color)));
 	stroke-dasharray: var(--mod-drop-zone-border-dash-length, var(--spectrum-drop-zone-border-dash-length)) var(--mod-drop-zone-border-dash-gap, var(--spectrum-drop-zone-border-dash-gap));
 	rx: var(--spectrum-drop-zone-corner-radius);
 	ry: var(--spectrum-drop-zone-corner-radius);
@@ -175,6 +175,15 @@
 @media (forced-colors: active) {
 	.spectrum-DropZone {
 		--highcontrast-drop-zone-border-color-hover: Highlight;
-		--highcontrast-drop-zone-button-color: Highlight;
+		--highcontrast-drop-zone-button-color: ButtonText;
+		--highcontrast-drop-zone-border-color: ButtonText;
+
+		&.is-dragged {
+			border-color: var(--highcontrast-drop-zone-border-color-hover);
+
+			.spectrum-DropZone-stroke-path {
+				stroke: var(--highcontrast-drop-zone-border-color-hover);
+			}
+		}
 	}
 }
