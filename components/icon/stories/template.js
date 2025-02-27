@@ -75,12 +75,14 @@ export const Template = ({
 	}
 
 	// Make sure icon exists in the set.
-	if (
-		(setName == "workflow" && !workflowIconsCleaned.includes(iconName)) ||
-		(setName == "ui" && !uiIconsWithDirections.includes(iconName))
-	) {
-		console.warn(`Icon: Could not render an icon with the name "${iconName}" because it does not exist in the ${setName} icon set.`);
+	if (setName == "ui" && !uiIconsWithDirections.includes(iconName)) {
+		console.warn(`Icon: Could not render an icon with the name "${iconName}" because it does not exist in the "ui" icon set.`);
 		return html``;
+	}
+
+	if (setName == "workflow" && !workflowIconsCleaned.includes(iconName)) {
+		console.warn(`Icon: Could not render the correct icon with the name "${iconName}" because it does not exist in the "workflow" icon set. Rendering the placeholder icon instead.`);
+		iconName = "Circle";
 	}
 
 	// Name of icon that corresponds with SVG file. This may differ from the icon name, such as with
