@@ -36,7 +36,7 @@
     ".spectrum-Stepper.spectrum-Stepper--sizeS",
     ".spectrum-Stepper.spectrum-Stepper--sizeXL",
     ".spectrum-Stepper:before",
-    ".spectrum-Stepper:hover:not(.is-invalid, .is-disabled)",
+    ".spectrum-Stepper:hover:not(.is-invalid, .is-disabled, .is-focused)",
     ".spectrum-Stepper:not(.is-disabled) .is-focused",
     ".spectrum-Stepper:not(.is-disabled) .is-focused:hover",
     ".spectrum-Stepper:not(.is-disabled):focus",

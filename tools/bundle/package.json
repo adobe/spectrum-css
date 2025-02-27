@@ -74,7 +74,6 @@
 		"@spectrum-css/icon": "10.0.0-next.0",
 		"@spectrum-css/illustratedmessage": "9.1.0",
 		"@spectrum-css/infieldbutton": "7.0.0-next.0",
-		"@spectrum-css/infieldprogresscircle": "1.0.0-next.0",
 		"@spectrum-css/inlinealert": "11.0.0-next.0",
 		"@spectrum-css/link": "7.1.0",
 		"@spectrum-css/logicbutton": "6.1.0",
@@ -99,7 +98,7 @@
 		"@spectrum-css/statuslight": "9.1.1-next.0",
 		"@spectrum-css/steplist": "8.0.0-next.0",
 		"@spectrum-css/stepper": "8.0.0-next.0",
-		"@spectrum-css/swatch": "8.1.0",
+		"@spectrum-css/swatch": "8.1.1",
 		"@spectrum-css/swatchgroup": "5.1.0",
 		"@spectrum-css/switch": "6.1.0",
 		"@spectrum-css/table": "9.0.0-next.0",
@@ -109,6 +108,7 @@
 		"@spectrum-css/textfield": "9.0.0-next.0",
 		"@spectrum-css/thumbnail": "8.1.0",
 		"@spectrum-css/toast": "12.0.0-next.0",
+		"@spectrum-css/tokens": "16.0.1",
 		"@spectrum-css/tooltip": "8.0.0-next.0",
 		"@spectrum-css/tray": "6.0.0-next.0",
 		"@spectrum-css/treeview": "13.0.0-next.0",
@@ -125,5 +125,8 @@
 		"spectrum-css",
 		"adobe",
 		"adobe-spectrum"
-	]
+	],
+	"publishConfig": {
+		"access": "public"
+	}
 }
