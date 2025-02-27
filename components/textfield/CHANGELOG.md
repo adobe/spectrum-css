@@ -1,5 +1,11 @@
 # Change log
 
+## 8.1.1
+
+### Patch Changes
+
+- [#3575](https://github.com/adobe/spectrum-css/pull/3575) [`2e17d10`](https://github.com/adobe/spectrum-css/commit/2e17d109ebec3c2745c32a15840af5c636c8dc5d) Thanks [@TarunAdobe](https://github.com/TarunAdobe)! - updated border color on keyboard focus state for textfield in spectrum-two theme
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
