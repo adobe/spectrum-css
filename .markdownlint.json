@@ -1,0 +1,24 @@
+{
+    "extends": "markdownlint/style/prettier",
+    "first-line-h1": false,
+	"no-inline-html": false,
+    "no-bare-urls": false,
+    "no-duplicate-heading": {
+      "siblings_only": true
+    },
+    "code-block-style": {
+      "style": "fenced"
+    },
+    "code-fence-style": {
+      "style": "backtick"
+    },
+    "emphasis-style": {
+      "style": "underscore"
+    },
+    "strong-style": {
+      "style": "asterisk"
+    },
+    "ul-style": {
+      "style": "dash"
+    }
+}
