@@ -31,7 +31,6 @@
     "--mod-drop-zone-border-dash-gap",
     "--mod-drop-zone-border-dash-length",
     "--mod-drop-zone-border-style",
-    "--mod-drop-zone-border-style--dragged",
     "--mod-drop-zone-border-style-dragged",
     "--mod-drop-zone-border-width",
     "--mod-drop-zone-content-background-color",
@@ -107,6 +106,7 @@
     "--mod-illustrated-message-vertical-maximum-width"
   ],
   "high-contrast": [
+    "--highcontrast-drop-zone-border-color",
     "--highcontrast-drop-zone-border-color-hover",
     "--highcontrast-drop-zone-button-color"
   ]
