@@ -1,5 +1,12 @@
 # Change log
 
+## 5.1.3-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/popover@8.2.1-next.0
+
 ## 5.1.2
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # Change log
 
+## 8.1.1-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`3caeff3`](https://github.com/adobe/spectrum-css/commit/3caeff3a62220a988e5b64af66c1333e524f1b75)]:
+  - @spectrum-css/checkbox@10.1.1-next.0
+  - @spectrum-css/assetlist@8.1.1-next.0
+
 ## 8.1.0
 
 ### Minor Changes

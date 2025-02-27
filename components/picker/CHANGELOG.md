@@ -1,5 +1,13 @@
 # Change log
 
+## 9.1.3-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/menu@9.1.1-next.0
+  - @spectrum-css/popover@8.2.1-next.0
+
 ## 9.1.2
 
 ### Patch Changes
