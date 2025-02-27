@@ -32,7 +32,7 @@ Minified and gzipped outputs available for all compiled CSS assets.
 
 - [#3581](https://github.com/adobe/spectrum-css/pull/3581) [`ccc9b83`](https://github.com/adobe/spectrum-css/commit/ccc9b83f0be645b97b88393edc9785d717dc0f1b) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
 
-- Adjusts RTL mode menu item focus indicator side for S1/Express.
+Adjusts RTL mode menu item focus indicator side for S1/Express.
 
 ## 9.0.1
 

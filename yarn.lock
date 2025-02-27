@@ -123,6 +123,8 @@ __metadata:
     "@commitlint/cli": "npm:^19.6.1"
     "@commitlint/config-conventional": "npm:^19.6.0"
     "@nx/devkit": "npm:^19.8.2"
+    "@spectrum-tools/postcss-add-theming-layer": "npm:1.0.1"
+    "@spectrum-tools/postcss-property-rollup": "npm:0.0.1"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.0.0"
     "@yarnpkg/types": "npm:^4.0.0"
     at-rule-packer: "npm:^0.4.2"
@@ -5589,7 +5591,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-tools/postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer":
+"@spectrum-tools/postcss-add-theming-layer@npm:1.0.1, @spectrum-tools/postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer":
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer"
   dependencies:
@@ -5603,7 +5605,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-tools/postcss-property-rollup@workspace:plugins/postcss-property-rollup":
+"@spectrum-tools/postcss-property-rollup@npm:0.0.1, @spectrum-tools/postcss-property-rollup@workspace:plugins/postcss-property-rollup":
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-property-rollup@workspace:plugins/postcss-property-rollup"
   dependencies:
