@@ -14,13 +14,9 @@ temp
 .nx
 .env
 .tmp
-npm-debug.log*
 .DS_Store
 .idea
 lerna-debug.log
-yarn-error.log
-package-lock.json
-.nx
 
 # Storybook build output
 .storybook/storybook-static
@@ -39,7 +35,7 @@ chromatic.config.json
 .eslintcache
 .stylelintcache
 
-# yarn 3
+# yarn
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -47,3 +43,7 @@ chromatic.config.json
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+yarn-error.log
+package-lock.json
+npm-debug.log*
