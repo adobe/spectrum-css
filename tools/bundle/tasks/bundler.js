@@ -16,100 +16,11 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { processCSS } from "../../../tasks/component-builder.js";
-import { dirs, getAllComponentNames, writeAndReport } from "../../../tasks/utilities.js";
+import { dirs, getAllComponentNames } from "../../../tasks/utilities.js";
 
 import "colors";
 
 const bundleRoot = path.resolve(dirs.root, "tools", "bundle");
-
-/**
- * Validate the dependencies listed in the package.json
- * match the components in the components directory
- * @param {string[]} components - List of components
- * @returns {Promise<string[]>}
- */
-async function validateDependencies(components) {
-	// This is the bundle's package.json
-	const localPackage = path.join(bundleRoot, "package.json");
-
-	// Confirm the dependencies listed in this package.json match the components in the components directory
-	const packageJSON = JSON.parse(fs.readFileSync(localPackage, "utf8"));
-
-	const dependencies = Object.keys(packageJSON.devDependencies ?? {}).filter((dependency) => dependency.startsWith("@spectrum-css/"));
-
-	// Capture any dependencies that are missing or outdated in the components directory
-	const outdated = dependencies.filter((dependency) => !components.includes(dependency.replace("@spectrum-css/", "")));
-
-	// Capture any components that are missing from the dependencies to add them
-	const missing = components.filter((components) => !dependencies.includes(`@spectrum-css/${components}`));
-
-	// List the dependencies not in outdated or missing
-	const remaining = dependencies.filter((dependency) => !outdated.includes(dependency) && !missing.includes(dependency.replace("@spectrum-css/", "")));
-
-	// We don't need to update the package.json if nothing has changed
-	let hasChanged = false;
-	const reports = [];
-
-	// If there are missing components, add them to the package dependencies
-	if (missing.length > 0) {
-		hasChanged = true;
-
-		// Update the package.json dependencies
-		missing.forEach((dependency) => {
-			// Fetch the package.json for the component to get the version
-			const componentPackage = JSON.parse(fs.readFileSync(path.join(dirs.components, dependency, "package.json"), "utf8"));
-
-			reports.push(`${"+".green} ${`@spectrum-css/${dependency} to package.json`.gray}`);
-			packageJSON.devDependencies[`@spectrum-css/${dependency}`] = componentPackage?.version ?? "workspace:^";
-		});
-	}
-
-	// If there are outdated dependencies, remove them from the package dependencies
-	if (outdated.length > 0) {
-		hasChanged = true;
-
-		// Remove the outdated dependencies
-		outdated.forEach((dependency) => {
-			// Don't remove the tokens dependency
-			if (dependency === "@spectrum-css/tokens") return;
-
-			reports.push(`${"-".red} ${`${dependency} from package.json`.gray}`);
-			delete packageJSON.devDependencies[dependency];
-		});
-	}
-
-	if (remaining.length > 0) {
-		// Check the versions of the remaining dependencies
-		remaining.forEach((dependency) => {
-			const componentPackage = JSON.parse(fs.readFileSync(path.join(dirs.components, dependency.replace("@spectrum-css/", ""), "package.json"), "utf8"));
-
-			// If the version in the package.json is different from the component's package.json, update it
-			if (packageJSON.devDependencies[dependency] !== componentPackage.version) {
-				hasChanged = true;
-
-				reports.push(`${"~".yellow} ${`${dependency} in package.json`.gray}`);
-				packageJSON.devDependencies[dependency] = componentPackage.version;
-			}
-		});
-	}
-
-	// If changes were made to the dependencies, write the package.json file
-	if (hasChanged) {
-		// Sort the devDependencies alphabetically
-		packageJSON.devDependencies = Object.keys(packageJSON.devDependencies)
-			.sort()
-			.reduce((obj, key) => {
-				obj[key] = packageJSON.devDependencies[key];
-				return obj;
-			}, {});
-
-		return writeAndReport(JSON.stringify(packageJSON, null, "\t"), localPackage).then((r) => [...reports, r]).catch((err) => {
-			return [...reports, err];
-		});
-	}
-
-	return Promise.resolve("No dependency updates needed.\n".gray);
-}
 
 /**
  * Refresh the list of component imports
@@ -120,12 +31,7 @@ export async function refresh() {
 
 	// Refresh the src/index.css file with the latest component imports
 	const imports = `
-/**
- * This file is machine generated.
- *
- * To update, run \`yarn refresh:bundle\`
- * from the project root for Spectrum CSS.
- */
+/** This file is machine generated. */
 
 /* --- CORE TOKENS --- */
 @import "@spectrum-css/tokens";
@@ -143,34 +49,30 @@ ${components.map((component) => {
 }).join("\n")}
 `;
 
-	return Promise.all([
-		validateDependencies(components),
-		processCSS(imports, undefined, path.join(bundleRoot, "src", "index.css"), {
-			cwd: bundleRoot,
-			env: "development",
-			configPath: bundleRoot,
-		}),
-	]).then(reports => {
-		const logs = reports.flat(Infinity).filter(Boolean);
+	const reports = await processCSS(imports, undefined, path.join(bundleRoot, "src", "index.css"), {
+		cwd: bundleRoot,
+		env: "development",
+		configPath: bundleRoot,
+	}).catch((err) => {
 		console.log("\n\n🔄  refresh bundle");
 		console.log(`${"".padStart(30, "-")}`);
-		if (logs && logs.length > 0) {
-			logs.forEach(log => console.log(log));
-			console.log(`${"".padStart(30, "-")}`);
-			console.log("");
-		}
-	})
-		.catch((err) => {
-			console.log("\n\n🔄  refresh bundle");
-			console.log(`${"".padStart(30, "-")}`);
 
-			console.trace(err);
+		console.trace(err);
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.log("");
+		console.log(`${"".padStart(30, "-")}`);
+		console.log("");
 
-			process.exit(1);
-		});
+		process.exit(1);
+	});
+
+	const logs = reports.flat(Infinity).filter(Boolean);
+	console.log("\n\n🔄  refresh bundle");
+	console.log(`${"".padStart(30, "-")}`);
+	if (logs && logs.length > 0) {
+		logs.forEach(log => console.log(log));
+		console.log(`${"".padStart(30, "-")}`);
+		console.log("");
+	}
 }
 
 /**
@@ -200,31 +102,31 @@ export async function main() {
 	const key = "bundler";
 
 	console.time(key);
-	return bundler().then((report) => {
-		const logs = report.flat(Infinity).filter(Boolean);
 
-		console.log(`\n\n📦  ${key}`);
+	const report = await bundler().catch((err) => {
+		console.log(`\n\n${key} 🔨`);
 		console.log(`${"".padStart(30, "-")}`);
 
-		if (logs && logs.length > 0) {
-			logs.forEach((log) => console.log(log));
-		}
-		else console.log("No assets created.".gray);
+		console.trace(err);
 
 		console.log(`${"".padStart(30, "-")}`);
 		console.timeEnd(key);
 		console.log("");
-	})
-		.catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
 
-			console.trace(err);
+		process.exit(1);
+	});
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
+	const logs = report.flat(Infinity).filter(Boolean);
 
-			process.exit(1);
-		});
+	console.log(`\n\n📦  ${key}`);
+	console.log(`${"".padStart(30, "-")}`);
+
+	if (logs && logs.length > 0) {
+		logs.forEach((log) => console.log(log));
+	}
+	else console.log("No assets created.".gray);
+
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
 }
