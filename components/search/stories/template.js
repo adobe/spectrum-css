@@ -34,6 +34,7 @@ export const Template = ({
 				size,
 				customClasses: [`${rootClass}-textfield`],
 				iconName: "Magnify",
+				setName: "workflow",
 				type: "search",
 				placeholder: "Search",
 				name: "search",
