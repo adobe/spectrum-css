@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 14.1.1
 
@@ -116,7 +119,8 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Remove the storybook assets from the shipped output for components
 
 ### Patch Changes
 
@@ -128,25 +132,29 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3197](https://github.com/adobe/spectrum-css/pull/3197) [`1eac198`](https://github.com/adobe/spectrum-css/commit/1eac198754ca1e60f96a64c7cf5e7c7a4758b1f3) Thanks [@cdransf](https://github.com/cdransf)! - Replaces all of occurrences of --spectrum-component-pill-edge-to-text-_ (intended to be used as padding) in the button component with the appropriate corner-radius-_ tokens.
+- [#3197](https://github.com/adobe/spectrum-css/pull/3197) [`1eac198`](https://github.com/adobe/spectrum-css/commit/1eac198754ca1e60f96a64c7cf5e7c7a4758b1f3) Thanks [@cdransf](https://github.com/cdransf)!
+- Replaces all of occurrences of --spectrum-component-pill-edge-to-text-_(intended to be used as padding) in the button component with the appropriate corner-radius-_ tokens.
 
 ## 13.3.0
 
 ### Minor Changes
 
-- [#3086](https://github.com/adobe/spectrum-css/pull/3086) [`d49ea11`](https://github.com/adobe/spectrum-css/commit/d49ea118abbeb0c2195630dcccf64ac64bbcacbc) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - Adds the ability to disable text wrapping within the button component's label by applying the class `.spectrum-Button--noWrap` to `.spectrum-Button`. If the text overflows the maximum allowed width of the button, an ellipsis `...` indicator will show. Please note that this option is not a part of the design specification and should be used carefully, with consideration of this overflow behavior and the readability of the button's content.
+- [#3086](https://github.com/adobe/spectrum-css/pull/3086) [`d49ea11`](https://github.com/adobe/spectrum-css/commit/d49ea118abbeb0c2195630dcccf64ac64bbcacbc) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+- Adds the ability to disable text wrapping within the button component's label by applying the class `.spectrum-Button--noWrap` to `.spectrum-Button`. If the text overflows the maximum allowed width of the button, an ellipsis `...` indicator will show. Please note that this option is not a part of the design specification and should be used carefully, with consideration of this overflow behavior and the readability of the button's content.
 
 ## 13.2.0
 
 ### Minor Changes
 
-- [#3078](https://github.com/adobe/spectrum-css/pull/3078) [`06491f3`](https://github.com/adobe/spectrum-css/commit/06491f3a7983bdf0fe0acf350623eed7297ad935) Thanks [@cdransf](https://github.com/cdransf)! - Includes fixes and updates to the colors used in forced-colors / high contrast mode. In Windows high contrast, a different background was showing behind the label text, as a result of extra text readability backplates being rendered. `forced-color-adjust: none` is now applied to the child label element to fix this. The appropriate `ButtonFace`/`ButtonText` system colors are also now defined instead of relying on the default. The existing use of `Highlight` is now paired with `HighlightText` to ensure contrast by using a matching foreground/background pair.
+- [#3078](https://github.com/adobe/spectrum-css/pull/3078) [`06491f3`](https://github.com/adobe/spectrum-css/commit/06491f3a7983bdf0fe0acf350623eed7297ad935) Thanks [@cdransf](https://github.com/cdransf)!
+- Includes fixes and updates to the colors used in forced-colors / high contrast mode. In Windows high contrast, a different background was showing behind the label text, as a result of extra text readability backplates being rendered. `forced-color-adjust: none` is now applied to the child label element to fix this. The appropriate `ButtonFace`/`ButtonText` system colors are also now defined instead of relying on the default. The existing use of `Highlight` is now paired with `HighlightText` to ensure contrast by using a matching foreground/background pair.
 
 ## 13.1.3
 
 ### Patch Changes
 
-- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
 
   Sort keys in the package.json assets.
 
@@ -158,7 +166,8 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Improve changeset suggestions by using exports instead of files in component packages
 
 - Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
   - @spectrum-css/progresscircle@3.1.3
@@ -168,7 +177,8 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
+- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Leverage local workspace versioning to prevent misalignment
 
 - Updated dependencies [[`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855)]:
   - @spectrum-css/progresscircle@3.1.1
@@ -191,49 +201,39 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/progresscircle@>=3
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="13.0.0"></a>
 
 ## 13.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@12.0.2...@spectrum-css/button@13.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@12.0.2...@spectrum-css/button@13.0.0)
 
 ### ✨ Features
 
-\*use storybook v8 ([#2604](https://github.com/adobe/spectrum-css/issues/2604))([166ab23](https://github.com/adobe/spectrum-css/commit/166ab23))
+- use storybook v8 ([#2604](https://github.com/adobe/spectrum-css/issues/2604))([166ab23](https://github.com/adobe/spectrum-css/commit/166ab23))
 
 ### 🐛 Bug fixes
 
--     **button:**pending state width, transition ([#2570](https://github.com/adobe/spectrum-css/issues/2570))([7b67bff](https://github.com/adobe/spectrum-css/commit/7b67bff))
+- **button:**pending state width, transition ([#2570](https://github.com/adobe/spectrum-css/issues/2570))([7b67bff](https://github.com/adobe/spectrum-css/commit/7b67bff))
 
-  \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-      	###
-      	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-      		*
-      		- Removes component-builder & component-builder-simple for script leveraging postcss
-
-* Imports added to index.css and themes/express.css
+- Removes component-builder & component-builder-simple for script leveraging postcss
+- Imports added to index.css and themes/express.css
 
 <a name="12.0.2"></a>
 
 ## 12.0.2
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@12.0.1...@spectrum-css/button@12.0.2)
-
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@12.0.1...@spectrum-css/button@12.0.2)
 **Note:** Version bump only for package @spectrum-css/button
 
 <a name="12.0.1"></a>
 
 ## 12.0.1
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@12.0.0...@spectrum-css/button@12.0.1)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@12.0.0...@spectrum-css/button@12.0.1)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -241,18 +241,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 12.0.0
 
-🗓
-2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.3.1...@spectrum-css/button@12.0.0)
+🗓 2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.3.1...@spectrum-css/button@12.0.0)
 
 ### 🐛 Bug fixes
 
 - **button:**support for wrapping text ([#2248](https://github.com/adobe/spectrum-css/issues/2248))([3f14a86](https://github.com/adobe/spectrum-css/commit/3f14a86))
 
-      ###
-      🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-      	*
-      	**button:** changes vertical flex alignment to start.
+- **button:** changes vertical flex alignment to start.
 
 Previously when the button had an icon and the text was wrapping, the
 icon was vertically aligned center and the text was aligned center.
@@ -291,8 +288,7 @@ intended workflow sizes.
 
 ## 11.3.1
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.3.0...@spectrum-css/button@11.3.1)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.3.0...@spectrum-css/button@11.3.1)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -300,8 +296,7 @@ intended workflow sizes.
 
 ## 11.3.0
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.2.1...@spectrum-css/button@11.3.0)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.2.1...@spectrum-css/button@11.3.0)
 
 ### ✨ Features
 
@@ -311,8 +306,7 @@ intended workflow sizes.
 
 ## 11.2.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -320,8 +314,7 @@ intended workflow sizes.
 
 ## 11.2.0
 
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.1.0...@spectrum-css/button@11.2.0)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.1.0...@spectrum-css/button@11.2.0)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -329,8 +322,7 @@ intended workflow sizes.
 
 ## 11.1.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.19...@spectrum-css/button@11.1.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.19...@spectrum-css/button@11.1.0)
 
 ### ✨ Features
 
@@ -344,8 +336,7 @@ intended workflow sizes.
 
 ## 11.0.19
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.18...@spectrum-css/button@11.0.19)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.18...@spectrum-css/button@11.0.19)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -353,8 +344,7 @@ intended workflow sizes.
 
 ## 11.0.18
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.17...@spectrum-css/button@11.0.18)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.17...@spectrum-css/button@11.0.18)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -362,8 +352,7 @@ intended workflow sizes.
 
 ## 11.0.17
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.16...@spectrum-css/button@11.0.17)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.16...@spectrum-css/button@11.0.17)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -371,8 +360,7 @@ intended workflow sizes.
 
 ## 11.0.16
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.14...@spectrum-css/button@11.0.16)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.14...@spectrum-css/button@11.0.16)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -380,8 +368,7 @@ intended workflow sizes.
 
 ## 11.0.15
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.14...@spectrum-css/button@11.0.15)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.14...@spectrum-css/button@11.0.15)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -389,8 +376,7 @@ intended workflow sizes.
 
 ## 11.0.14
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.13...@spectrum-css/button@11.0.14)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.13...@spectrum-css/button@11.0.14)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -398,8 +384,7 @@ intended workflow sizes.
 
 ## 11.0.13
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.12...@spectrum-css/button@11.0.13)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.12...@spectrum-css/button@11.0.13)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -407,8 +392,7 @@ intended workflow sizes.
 
 ## 11.0.12
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.11...@spectrum-css/button@11.0.12)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.11...@spectrum-css/button@11.0.12)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -416,8 +400,7 @@ intended workflow sizes.
 
 ## 11.0.11
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.10...@spectrum-css/button@11.0.11)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.10...@spectrum-css/button@11.0.11)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -425,8 +408,7 @@ intended workflow sizes.
 
 ## 11.0.10
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.9...@spectrum-css/button@11.0.10)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.9...@spectrum-css/button@11.0.10)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -434,8 +416,7 @@ intended workflow sizes.
 
 ## 11.0.9
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.8...@spectrum-css/button@11.0.9)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.8...@spectrum-css/button@11.0.9)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -443,8 +424,7 @@ intended workflow sizes.
 
 ## 11.0.8
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.7...@spectrum-css/button@11.0.8)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.7...@spectrum-css/button@11.0.8)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -452,8 +432,7 @@ intended workflow sizes.
 
 ## 11.0.7
 
-🗓
-2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.6...@spectrum-css/button@11.0.7)
+🗓 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.6...@spectrum-css/button@11.0.7)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -461,8 +440,7 @@ intended workflow sizes.
 
 ## 11.0.6
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.5...@spectrum-css/button@11.0.6)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.5...@spectrum-css/button@11.0.6)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -470,8 +448,7 @@ intended workflow sizes.
 
 ## 11.0.5
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.4...@spectrum-css/button@11.0.5)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.4...@spectrum-css/button@11.0.5)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -479,19 +456,17 @@ intended workflow sizes.
 
 ## 11.0.4
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.3...@spectrum-css/button@11.0.4)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.3...@spectrum-css/button@11.0.4)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="11.0.3"></a>
 
 ## 11.0.3
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.2...@spectrum-css/button@11.0.3)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.2...@spectrum-css/button@11.0.3)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -499,8 +474,7 @@ intended workflow sizes.
 
 ## 11.0.2
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.0...@spectrum-css/button@11.0.2)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.0...@spectrum-css/button@11.0.2)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -508,8 +482,7 @@ intended workflow sizes.
 
 ## 11.0.1
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.0...@spectrum-css/button@11.0.1)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.0...@spectrum-css/button@11.0.1)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -517,23 +490,16 @@ intended workflow sizes.
 
 ## 11.0.0
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.14...@spectrum-css/button@11.0.0)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.14...@spectrum-css/button@11.0.0)
+🗓 20refactor(button)!: replace focus-ring with focus-visible([5ec4849](https://github.com/adobe/spectrum-css/commit/5ec4849))
 
-\*refactor(button)!: replace focus-ring with focus-visible([5ec4849](https://github.com/adobe/spectrum-css/commit/5ec4849))
+### 🛑 BREAKING CHANGES
 
-    	###
-    	🛑 BREAKING CHANGES
-
-    		*
-    		use native focus-visible pseudo class for focus styling on button and basebutton
+- use native focus-visible pseudo class for focus styling on button and basebutton
 
 <a name="10.1.14"></a>
 
-## 10.1.14
-
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.13...@spectrum-css/button@10.1.14)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.13...@spectrum-css/button@10.1.14)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -541,8 +507,7 @@ intended workflow sizes.
 
 ## 10.1.13
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.12...@spectrum-css/button@10.1.13)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.12...@spectrum-css/button@10.1.13)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -550,8 +515,7 @@ intended workflow sizes.
 
 ## 10.1.12
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.11...@spectrum-css/button@10.1.12)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.11...@spectrum-css/button@10.1.12)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -559,8 +523,7 @@ intended workflow sizes.
 
 ## 10.1.11
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.10...@spectrum-css/button@10.1.11)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.10...@spectrum-css/button@10.1.11)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -568,8 +531,7 @@ intended workflow sizes.
 
 ## 10.1.10
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.9...@spectrum-css/button@10.1.10)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.9...@spectrum-css/button@10.1.10)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -577,8 +539,7 @@ intended workflow sizes.
 
 ## 10.1.9
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.8...@spectrum-css/button@10.1.9)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.8...@spectrum-css/button@10.1.9)
 
 ### 🐛 Bug fixes
 
@@ -588,8 +549,7 @@ intended workflow sizes.
 
 ## 10.1.8
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.7...@spectrum-css/button@10.1.8)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.7...@spectrum-css/button@10.1.8)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -597,8 +557,7 @@ intended workflow sizes.
 
 ## 10.1.7
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.6...@spectrum-css/button@10.1.7)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.6...@spectrum-css/button@10.1.7)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -606,8 +565,7 @@ intended workflow sizes.
 
 ## 10.1.6
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.5...@spectrum-css/button@10.1.6)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.5...@spectrum-css/button@10.1.6)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -615,8 +573,7 @@ intended workflow sizes.
 
 ## 10.1.5
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.4...@spectrum-css/button@10.1.5)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.4...@spectrum-css/button@10.1.5)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -624,19 +581,17 @@ intended workflow sizes.
 
 ## 10.1.4
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.3...@spectrum-css/button@10.1.4)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.3...@spectrum-css/button@10.1.4)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="10.1.3"></a>
 
 ## 10.1.3
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.2...@spectrum-css/button@10.1.3)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.2...@spectrum-css/button@10.1.3)
 
 **Note:** Version bump only for package @spectrum-css/button
 
@@ -644,8 +599,7 @@ intended workflow sizes.
 
 ## 10.1.2
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.1...@spectrum-css/button@10.1.2)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.1...@spectrum-css/button@10.1.2)
 
 **Note:** Version bump only for package @spectrum-css/button
 

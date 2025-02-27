@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 9.1.0
 
@@ -163,34 +166,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.5...@spectrum-css/illustratedmessage@7.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.5...@spectrum-css/illustratedmessage@7.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="6.1.5"></a>
 
 ## 6.1.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.4...@spectrum-css/illustratedmessage@6.1.5)
-
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.4...@spectrum-css/illustratedmessage@6.1.5)
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
 <a name="6.1.4"></a>
 
 ## 6.1.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.3...@spectrum-css/illustratedmessage@6.1.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.3...@spectrum-css/illustratedmessage@6.1.4)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -198,8 +194,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.3
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.2...@spectrum-css/illustratedmessage@6.1.3)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.2...@spectrum-css/illustratedmessage@6.1.3)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -207,8 +202,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.2
 
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.1...@spectrum-css/illustratedmessage@6.1.2)
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.1...@spectrum-css/illustratedmessage@6.1.2)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -216,8 +210,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -230,14 +223,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
-\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+- remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="6.0.31"></a>
 
 ## 6.0.31
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.30...@spectrum-css/illustratedmessage@6.0.31)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.30...@spectrum-css/illustratedmessage@6.0.31)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -245,8 +237,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.30
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.29...@spectrum-css/illustratedmessage@6.0.30)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.29...@spectrum-css/illustratedmessage@6.0.30)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -263,17 +254,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.28
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.27...@spectrum-css/illustratedmessage@6.0.28)
-
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.27...@spectrum-css/illustratedmessage@6.0.28)
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
 <a name="6.0.27"></a>
 
 ## 6.0.27
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.26...@spectrum-css/illustratedmessage@6.0.27)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.26...@spectrum-css/illustratedmessage@6.0.27)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -290,8 +278,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.25
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.24...@spectrum-css/illustratedmessage@6.0.25)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.24...@spectrum-css/illustratedmessage@6.0.25)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -299,8 +286,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.24
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.23...@spectrum-css/illustratedmessage@6.0.24)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.23...@spectrum-css/illustratedmessage@6.0.24)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -317,8 +303,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.22
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.21...@spectrum-css/illustratedmessage@6.0.22)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.21...@spectrum-css/illustratedmessage@6.0.22)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -326,8 +311,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.21
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.20...@spectrum-css/illustratedmessage@6.0.21)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.20...@spectrum-css/illustratedmessage@6.0.21)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -344,37 +328,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.19
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.18...@spectrum-css/illustratedmessage@6.0.19)
-
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.18...@spectrum-css/illustratedmessage@6.0.19)
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
 <a name="6.0.18"></a>
 
 ## 6.0.18
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.17...@spectrum-css/illustratedmessage@6.0.18)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.17...@spectrum-css/illustratedmessage@6.0.18)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="6.0.17"></a>
 
 ## 6.0.17
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.16...@spectrum-css/illustratedmessage@6.0.17)
-
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.16...@spectrum-css/illustratedmessage@6.0.17)
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
 <a name="6.0.16"></a>
 
 ## 6.0.16
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.14...@spectrum-css/illustratedmessage@6.0.16)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.14...@spectrum-css/illustratedmessage@6.0.16)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -382,8 +360,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.15
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.14...@spectrum-css/illustratedmessage@6.0.15)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.14...@spectrum-css/illustratedmessage@6.0.15)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -400,8 +377,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.13
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.12...@spectrum-css/illustratedmessage@6.0.13)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.12...@spectrum-css/illustratedmessage@6.0.13)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -409,8 +385,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.12
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.11...@spectrum-css/illustratedmessage@6.0.12)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.11...@spectrum-css/illustratedmessage@6.0.12)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -427,17 +402,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.10
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.9...@spectrum-css/illustratedmessage@6.0.10)
-
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.9...@spectrum-css/illustratedmessage@6.0.10)
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
 <a name="6.0.9"></a>
 
 ## 6.0.9
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.8...@spectrum-css/illustratedmessage@6.0.9)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.8...@spectrum-css/illustratedmessage@6.0.9)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -454,8 +426,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.7
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.6...@spectrum-css/illustratedmessage@6.0.7)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.6...@spectrum-css/illustratedmessage@6.0.7)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -463,8 +434,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.6
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.5...@spectrum-css/illustratedmessage@6.0.6)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.5...@spectrum-css/illustratedmessage@6.0.6)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -481,8 +451,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.4
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.3...@spectrum-css/illustratedmessage@6.0.4)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.3...@spectrum-css/illustratedmessage@6.0.4)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -490,19 +459,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.3
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.2...@spectrum-css/illustratedmessage@6.0.3)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.2...@spectrum-css/illustratedmessage@6.0.3)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="6.0.2"></a>
 
 ## 6.0.2
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.1...@spectrum-css/illustratedmessage@6.0.2)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.1...@spectrum-css/illustratedmessage@6.0.2)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
@@ -510,8 +477,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.1
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.0...@spectrum-css/illustratedmessage@6.0.1)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.0...@spectrum-css/illustratedmessage@6.0.1)
 
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 

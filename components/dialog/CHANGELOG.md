@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 12.1.0
 
@@ -206,36 +209,28 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/tokens@>=14
   - @spectrum-css/underlay@>=4
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="10.0.0"></a>
 
 ## 10.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.4...@spectrum-css/dialog@10.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.4...@spectrum-css/dialog@10.0.0)
 
 ### ✨ Features
 
-\*use storybook v8 ([#2604](https://github.com/adobe/spectrum-css/issues/2604))([166ab23](https://github.com/adobe/spectrum-css/commit/166ab23))
+- use storybook v8 ([#2604](https://github.com/adobe/spectrum-css/issues/2604))([166ab23](https://github.com/adobe/spectrum-css/commit/166ab23))
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="9.2.4"></a>
 
 ## 9.2.4
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.3...@spectrum-css/dialog@9.2.4)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.3...@spectrum-css/dialog@9.2.4)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -243,8 +238,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.2.3
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.2...@spectrum-css/dialog@9.2.3)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.2...@spectrum-css/dialog@9.2.3)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -252,8 +246,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.2.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.1...@spectrum-css/dialog@9.2.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.1...@spectrum-css/dialog@9.2.2)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -261,8 +254,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.2.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -270,8 +262,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.2.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.1.0...@spectrum-css/dialog@9.2.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.1.0...@spectrum-css/dialog@9.2.0)
 
 ### ✨ Features
 
@@ -281,19 +272,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.5...@spectrum-css/dialog@9.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.5...@spectrum-css/dialog@9.1.0)
 
 ### ✨ Features
 
-\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+- remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="9.0.5"></a>
 
 ## 9.0.5
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.4...@spectrum-css/dialog@9.0.5)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.4...@spectrum-css/dialog@9.0.5)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -301,8 +290,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.4
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.3...@spectrum-css/dialog@9.0.4)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.3...@spectrum-css/dialog@9.0.4)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -319,17 +307,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.2
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.1...@spectrum-css/dialog@9.0.2)
-
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.1...@spectrum-css/dialog@9.0.2)
 **Note:** Version bump only for package @spectrum-css/dialog
 
 <a name="9.0.1"></a>
 
 ## 9.0.1
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.0...@spectrum-css/dialog@9.0.1)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.0...@spectrum-css/dialog@9.0.1)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -337,16 +322,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.0
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.8...@spectrum-css/dialog@9.0.0)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.8...@spectrum-css/dialog@9.0.0)
 
-\*feat(dialog)!: migrate to spectrum-tokens (#2168)([0811386](https://github.com/adobe/spectrum-css/commit/0811386)), closes[#2168](https://github.com/adobe/spectrum-css/issues/2168)
+- feat(dialog)!: migrate to spectrum-tokens (#2168)([0811386](https://github.com/adobe/spectrum-css/commit/0811386)), closes[#2168](https://github.com/adobe/spectrum-css/issues/2168) ###
+  🛑 BREAKING CHANGES
 
-    	###
-    	🛑 BREAKING CHANGES
-
-    		*
-    		migrates to use `@adobe/spectrum-tokens`
+  - migrates to use `@adobe/spectrum-tokens`
 
 Additionally:
 
@@ -357,8 +338,7 @@ Additionally:
 
 ## 8.0.8
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.7...@spectrum-css/dialog@8.0.8)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.7...@spectrum-css/dialog@8.0.8)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -366,8 +346,7 @@ Additionally:
 
 ## 8.0.7
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.6...@spectrum-css/dialog@8.0.7)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.6...@spectrum-css/dialog@8.0.7)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -384,8 +363,7 @@ Additionally:
 
 ## 8.0.5
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.4...@spectrum-css/dialog@8.0.5)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.4...@spectrum-css/dialog@8.0.5)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -393,8 +371,7 @@ Additionally:
 
 ## 8.0.4
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.3...@spectrum-css/dialog@8.0.4)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.3...@spectrum-css/dialog@8.0.4)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -411,8 +388,7 @@ Additionally:
 
 ## 8.0.2
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.1...@spectrum-css/dialog@8.0.2)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.1...@spectrum-css/dialog@8.0.2)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -420,8 +396,7 @@ Additionally:
 
 ## 8.0.1
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.0...@spectrum-css/dialog@8.0.1)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.0...@spectrum-css/dialog@8.0.1)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -429,20 +404,18 @@ Additionally:
 
 ## 8.0.0
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@7.0.1...@spectrum-css/dialog@8.0.0)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@7.0.1...@spectrum-css/dialog@8.0.0)
 
 ### 🔙 Reverts
 
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
-\*feat(underlay)!: migrate to use spectrum-tokens (#2096)([2e0651a](https://github.com/adobe/spectrum-css/commit/2e0651a)), closes[#2096](https://github.com/adobe/spectrum-css/issues/2096)
+- feat(underlay)!: migrate to use spectrum-tokens (#2096)([2e0651a](https://github.com/adobe/spectrum-css/commit/2e0651a)), closes[#2096](https://github.com/adobe/spectrum-css/issues/2096)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		migrates Underlay to use `@adobe/spectrum-tokens`
+- -
+-     	migrates Underlay to use `@adobe/spectrum-tokens`
 
 Additionally:
 
@@ -476,8 +449,7 @@ Additionally:
 
 ## 7.0.1
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@7.0.0...@spectrum-css/dialog@7.0.1)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@7.0.0...@spectrum-css/dialog@7.0.1)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -485,13 +457,11 @@ Additionally:
 
 ## 7.0.0
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@7.0.0)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@7.0.0)
 
-\*feat(dialog)!: major layout updates([526d505](https://github.com/adobe/spectrum-css/commit/526d505))
+- feat(dialog)!: major layout updates([526d505](https://github.com/adobe/spectrum-css/commit/526d505))
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		Alert variants of Dialog have been removed and placed inside of Alert Dialog
@@ -500,8 +470,7 @@ Additionally:
 
 ## 6.0.68
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@6.0.68)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@6.0.68)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -509,17 +478,14 @@ Additionally:
 
 ## 6.0.67
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.66...@spectrum-css/dialog@6.0.67)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.66...@spectrum-css/dialog@6.0.67)
 
 **Note:** Version bump only for package @spectrum-css/dialog
-
 <a name="6.0.66"></a>
 
 ## 6.0.66
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.65...@spectrum-css/dialog@6.0.66)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.65...@spectrum-css/dialog@6.0.66)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -536,8 +502,7 @@ Additionally:
 
 ## 6.0.64
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.63...@spectrum-css/dialog@6.0.64)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.63...@spectrum-css/dialog@6.0.64)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -545,8 +510,7 @@ Additionally:
 
 ## 6.0.63
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.62...@spectrum-css/dialog@6.0.63)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.62...@spectrum-css/dialog@6.0.63)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -554,8 +518,7 @@ Additionally:
 
 ## 6.0.62
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.61...@spectrum-css/dialog@6.0.62)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.61...@spectrum-css/dialog@6.0.62)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -563,8 +526,7 @@ Additionally:
 
 ## 6.0.61
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.60...@spectrum-css/dialog@6.0.61)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.60...@spectrum-css/dialog@6.0.61)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -572,8 +534,7 @@ Additionally:
 
 ## 6.0.60
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.59...@spectrum-css/dialog@6.0.60)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.59...@spectrum-css/dialog@6.0.60)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -590,8 +551,7 @@ Additionally:
 
 ## 6.0.58
 
-🗓
-2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.57...@spectrum-css/dialog@6.0.58)
+🗓 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.57...@spectrum-css/dialog@6.0.58)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -599,8 +559,7 @@ Additionally:
 
 ## 6.0.57
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.56...@spectrum-css/dialog@6.0.57)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.56...@spectrum-css/dialog@6.0.57)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 
@@ -637,8 +596,7 @@ Additionally:
 
 ## 6.0.53
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.52...@spectrum-css/dialog@6.0.53)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.52...@spectrum-css/dialog@6.0.53)
 
 **Note:** Version bump only for package @spectrum-css/dialog
 

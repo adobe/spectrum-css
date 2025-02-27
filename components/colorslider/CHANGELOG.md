@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 8.1.0
 
@@ -109,7 +112,8 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Remove the storybook assets from the shipped output for components
 
 ### Patch Changes
 
@@ -121,19 +125,22 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove duplicate references
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Remove duplicate references
 
 ## 6.1.4
 
 ### Patch Changes
 
-- [#3284](https://github.com/adobe/spectrum-css/pull/3284) [`cc9afaa`](https://github.com/adobe/spectrum-css/commit/cc9afaaf4ac1aa9311028307c0a18c25d12c0193) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violations by removing unused custom properties.
+- [#3284](https://github.com/adobe/spectrum-css/pull/3284) [`cc9afaa`](https://github.com/adobe/spectrum-css/commit/cc9afaaf4ac1aa9311028307c0a18c25d12c0193) Thanks [@cdransf](https://github.com/cdransf)!
+- Resolves lint violations by removing unused custom properties.
 
 ## 6.1.3
 
 ### Patch Changes
 
-- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
 
   Sort keys in the package.json assets.
 
@@ -145,7 +152,8 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Improve changeset suggestions by using exports instead of files in component packages
 
 - Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
   - @spectrum-css/opacitycheckerboard@2.1.2
@@ -155,7 +163,8 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
+- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Leverage local workspace versioning to prevent misalignment
 
 - Updated dependencies [[`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855)]:
   - @spectrum-css/opacitycheckerboard@2.1.1
@@ -178,32 +187,24 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/opacitycheckerboard@>=2
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="6.0.0"></a>
 
 ## 6.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.5...@spectrum-css/colorslider@6.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.5...@spectrum-css/colorslider@6.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="5.1.5"></a>
 
 ## 5.1.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.4...@spectrum-css/colorslider@5.1.5)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.4...@spectrum-css/colorslider@5.1.5)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -211,8 +212,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.3...@spectrum-css/colorslider@5.1.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.3...@spectrum-css/colorslider@5.1.4)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -220,8 +220,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.3
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.2...@spectrum-css/colorslider@5.1.3)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.2...@spectrum-css/colorslider@5.1.3)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -229,8 +228,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.1...@spectrum-css/colorslider@5.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.1...@spectrum-css/colorslider@5.1.2)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -238,8 +236,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -247,19 +244,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.14...@spectrum-css/colorslider@5.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.14...@spectrum-css/colorslider@5.1.0)
 
 ### ✨ Features
 
-\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+- remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="5.0.14"></a>
 
 ## 5.0.14
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.13...@spectrum-css/colorslider@5.0.14)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.13...@spectrum-css/colorslider@5.0.14)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -267,8 +262,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.13
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.12...@spectrum-css/colorslider@5.0.13)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.12...@spectrum-css/colorslider@5.0.13)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -276,8 +270,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.12
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.10...@spectrum-css/colorslider@5.0.12)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.10...@spectrum-css/colorslider@5.0.12)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -285,8 +278,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.11
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.10...@spectrum-css/colorslider@5.0.11)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.10...@spectrum-css/colorslider@5.0.11)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -294,8 +286,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.10
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.9...@spectrum-css/colorslider@5.0.10)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.9...@spectrum-css/colorslider@5.0.10)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -303,8 +294,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.9
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.8...@spectrum-css/colorslider@5.0.9)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.8...@spectrum-css/colorslider@5.0.9)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -312,8 +302,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.8
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.7...@spectrum-css/colorslider@5.0.8)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.7...@spectrum-css/colorslider@5.0.8)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -321,8 +310,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.7
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.6...@spectrum-css/colorslider@5.0.7)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.6...@spectrum-css/colorslider@5.0.7)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -330,8 +318,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.6
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.5...@spectrum-css/colorslider@5.0.6)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.5...@spectrum-css/colorslider@5.0.6)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -339,8 +326,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.5
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.4...@spectrum-css/colorslider@5.0.5)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.4...@spectrum-css/colorslider@5.0.5)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -348,8 +334,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.4
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.3...@spectrum-css/colorslider@5.0.4)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.3...@spectrum-css/colorslider@5.0.4)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -357,8 +342,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.3
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.2...@spectrum-css/colorslider@5.0.3)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.2...@spectrum-css/colorslider@5.0.3)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -366,8 +350,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.2
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.1...@spectrum-css/colorslider@5.0.2)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.1...@spectrum-css/colorslider@5.0.2)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -375,8 +358,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.1
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.0...@spectrum-css/colorslider@5.0.1)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.0...@spectrum-css/colorslider@5.0.1)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -384,20 +366,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.0
 
-🗓
-2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.9...@spectrum-css/colorslider@5.0.0)
+🗓 2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.9...@spectrum-css/colorslider@5.0.0)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
-\*feat(colorslider)!: spectrum tokens migration (#1924)([da345bd](https://github.com/adobe/spectrum-css/commit/da345bd)), closes[#1924](https://github.com/adobe/spectrum-css/issues/1924)
+- feat(colorslider)!: spectrum tokens migration (#1924)([da345bd](https://github.com/adobe/spectrum-css/commit/da345bd)), closes[#1924](https://github.com/adobe/spectrum-css/issues/1924)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		migrates Color Slider to use `@adobe/spectrum-tokens` and the new Opacity Checkerboard
+      *
+      migrates Color Slider to use `@adobe/spectrum-tokens` and the new Opacity Checkerboard
 
 Additionally:
 
@@ -407,9 +387,9 @@ Additionally:
 
 - refactor(colorslider): convert CSS to use core tokens - wip
 
-* Add new tokens defined in design.
-* Use tokens in existing CSS.
-* Merge skin.css into index.css.
+- Add new tokens defined in design.
+- Use tokens in existing CSS.
+- Merge skin.css into index.css.
 
 - feat(colorslider): add story for 'alpha' gradient
 
@@ -425,11 +405,11 @@ Clarifies what these "hidden" styles are doing.
 
 - feat(colorslider): finalize css to use new core tokens
 
-* Finalize CSS to use new core tokens.
-* Integrates skin.css into index.css.
-* Remove "canvas" variant as was done with colorwheel component.
-* Replaces some properties with their logical properties.
-* Generate mods.
+- Finalize CSS to use new core tokens.
+- Integrates skin.css into index.css.
+- Remove "canvas" variant as was done with colorwheel component.
+- Replaces some properties with their logical properties.
+- Generate mods.
 
 - style(colorslider): prettier and stylelint on colorslider files
 
@@ -461,7 +441,7 @@ necessary.
 - border-radius is set to 100% in colorhandle and there does not appear
   to be any option to support changing this through a mod or SWC options
 
-* fix(colorslider): remove added label and its spacing token
+- fix(colorslider): remove added label and its spacing token
 
 Per discussion with design, the label on the design was meant to serve
 more as guidance, and does not need to be a part of the component.
@@ -525,16 +505,17 @@ Due to mix of tabs and spaces in file.
 
 - feat(opacitycheckerboard): modify stories for use in components
 
-* Modify storybook template so that it can be imported and used by other
+- Modify storybook template so that it can be imported and used by other
   components' stories. Allow passing in content, and excluding the
   storybook testing wrapper markup.
-* Moves defaultValue to args, as that syntax has been deprecated in
+- Moves defaultValue to args, as that syntax has been deprecated in
   newer versions of Storybook:
-  https://storybook.js.org/docs/react/api/arg-types#defaultvalue
-* Adds a new story with a centered background position mod, and
+  <https://storybook.js.org/docs/react/api/arg-types#defaultvalue>
+- Adds a new story with a centered background position mod, and
   clarifies that the arg is changing the mod.
 
 - feat(colorslider): use imported opacitycheckerboard story
+-
 
 Use opacitycheckerboard story in the template for ColorSlider, so the
 checkerboard appears in the Alpha variant.
@@ -569,8 +550,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.9
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.8...@spectrum-css/colorslider@4.0.9)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.8...@spectrum-css/colorslider@4.0.9)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -578,8 +558,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.8
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.6...@spectrum-css/colorslider@4.0.8)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.6...@spectrum-css/colorslider@4.0.8)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -587,8 +566,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.7
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.6...@spectrum-css/colorslider@4.0.7)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.6...@spectrum-css/colorslider@4.0.7)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -596,8 +574,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.6
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.5...@spectrum-css/colorslider@4.0.6)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.5...@spectrum-css/colorslider@4.0.6)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -605,8 +582,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.5
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.4...@spectrum-css/colorslider@4.0.5)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.4...@spectrum-css/colorslider@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -614,8 +590,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.4
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.3...@spectrum-css/colorslider@4.0.4)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.3...@spectrum-css/colorslider@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -623,8 +598,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.3
 
-🗓
-2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.2...@spectrum-css/colorslider@4.0.3)
+🗓 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.2...@spectrum-css/colorslider@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -632,8 +606,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.2
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.1...@spectrum-css/colorslider@4.0.2)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.1...@spectrum-css/colorslider@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -641,8 +614,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.1
 
-🗓
-2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.0...@spectrum-css/colorslider@4.0.1)
+🗓 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.0...@spectrum-css/colorslider@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -650,13 +622,11 @@ Update devDependencies to use latest version of tokens package.
 
 ## 4.0.0
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.23...@spectrum-css/colorslider@4.0.0)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.23...@spectrum-css/colorslider@4.0.0)
 
-\*feat(opacitycheckerboard)!: new component (#1916)([24e9f06](https://github.com/adobe/spectrum-css/commit/24e9f06)), closes[#1916](https://github.com/adobe/spectrum-css/issues/1916)
+- feat(opacitycheckerboard)!: new component (#1916)([24e9f06](https://github.com/adobe/spectrum-css/commit/24e9f06)), closes[#1916](https://github.com/adobe/spectrum-css/issues/1916)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		creates new Opacity Checkerboard component and uses it within Swatch, Color Handle, Thumbnail, Color Slider.
@@ -701,8 +671,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.23
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.22...@spectrum-css/colorslider@3.0.23)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.22...@spectrum-css/colorslider@3.0.23)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -710,8 +679,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.22
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.21...@spectrum-css/colorslider@3.0.22)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.21...@spectrum-css/colorslider@3.0.22)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -719,8 +687,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.21
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.20...@spectrum-css/colorslider@3.0.21)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.20...@spectrum-css/colorslider@3.0.21)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -728,8 +695,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.20
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.19...@spectrum-css/colorslider@3.0.20)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.19...@spectrum-css/colorslider@3.0.20)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -737,8 +703,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.19
 
-🗓
-2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.18...@spectrum-css/colorslider@3.0.19)
+🗓 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.18...@spectrum-css/colorslider@3.0.19)
 
 ### 🐛 Bug fixes
 
@@ -748,8 +713,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.18
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.17...@spectrum-css/colorslider@3.0.18)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.17...@spectrum-css/colorslider@3.0.18)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -757,8 +721,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.17
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.16...@spectrum-css/colorslider@3.0.17)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.16...@spectrum-css/colorslider@3.0.17)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -766,19 +729,17 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.16
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.15...@spectrum-css/colorslider@3.0.16)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.15...@spectrum-css/colorslider@3.0.16)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="3.0.15"></a>
 
 ## 3.0.15
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.14...@spectrum-css/colorslider@3.0.15)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.14...@spectrum-css/colorslider@3.0.15)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 
@@ -786,8 +747,7 @@ Update devDependencies to use latest version of tokens package.
 
 ## 3.0.14
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.13...@spectrum-css/colorslider@3.0.14)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.13...@spectrum-css/colorslider@3.0.14)
 
 **Note:** Version bump only for package @spectrum-css/colorslider
 

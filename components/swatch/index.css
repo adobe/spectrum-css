@@ -61,7 +61,8 @@
 
 .spectrum-Swatch {
 	--spectrum-swatch-focus-indicator-border-radius: 8px;
-	--spectrum-swatch-icon-border-color: rgb(0 0 0 / 51%);
+	--spectrum-swatch-icon-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-swatch-disabled-icon-border-opacity));
+	--spectrum-swatch-disabled-icon-color: var(--spectrum-white);
 	--spectrum-swatch-border-thickness: var(--spectrum-border-width-100);
 	--spectrum-swatch-border-thickness-selected: var(--spectrum-border-width-200);
 	--spectrum-swatch-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);

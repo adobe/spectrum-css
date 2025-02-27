@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 5.1.0
 
@@ -134,32 +137,24 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Updated peerDependencies [[`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d)]:
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="3.0.0"></a>
 
 ## 3.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.5...@spectrum-css/divider@3.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.5...@spectrum-css/divider@3.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="2.2.5"></a>
 
 ## 2.2.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.4...@spectrum-css/divider@2.2.5)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.4...@spectrum-css/divider@2.2.5)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -167,8 +162,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.2.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.3...@spectrum-css/divider@2.2.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.3...@spectrum-css/divider@2.2.4)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -176,8 +170,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.2.3
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.2...@spectrum-css/divider@2.2.3)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.2...@spectrum-css/divider@2.2.3)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -185,8 +178,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.2.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.1...@spectrum-css/divider@2.2.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.2.1...@spectrum-css/divider@2.2.2)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -194,8 +186,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.2.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -208,14 +199,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
-\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+- remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="2.1.35"></a>
 
 ## 2.1.35
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.34...@spectrum-css/divider@2.1.35)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.34...@spectrum-css/divider@2.1.35)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -223,8 +213,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.34
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.33...@spectrum-css/divider@2.1.34)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.33...@spectrum-css/divider@2.1.34)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -241,8 +230,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.32
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.31...@spectrum-css/divider@2.1.32)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.31...@spectrum-css/divider@2.1.32)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -250,8 +238,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.31
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.30...@spectrum-css/divider@2.1.31)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.30...@spectrum-css/divider@2.1.31)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -259,8 +246,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.30
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.29...@spectrum-css/divider@2.1.30)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.29...@spectrum-css/divider@2.1.30)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -268,8 +254,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.29
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.28...@spectrum-css/divider@2.1.29)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.28...@spectrum-css/divider@2.1.29)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -277,8 +262,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.28
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.27...@spectrum-css/divider@2.1.28)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.27...@spectrum-css/divider@2.1.28)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -304,8 +288,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.25
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.24...@spectrum-css/divider@2.1.25)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.24...@spectrum-css/divider@2.1.25)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -322,8 +305,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.23
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.22...@spectrum-css/divider@2.1.23)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.22...@spectrum-css/divider@2.1.23)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -331,19 +313,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.22
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.21...@spectrum-css/divider@2.1.22)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.21...@spectrum-css/divider@2.1.22)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="2.1.21"></a>
 
 ## 2.1.21
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.20...@spectrum-css/divider@2.1.21)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.20...@spectrum-css/divider@2.1.21)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -351,8 +331,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.20
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.18...@spectrum-css/divider@2.1.20)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.18...@spectrum-css/divider@2.1.20)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -360,8 +339,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.19
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.18...@spectrum-css/divider@2.1.19)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.18...@spectrum-css/divider@2.1.19)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -378,8 +356,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.17
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.16...@spectrum-css/divider@2.1.17)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.16...@spectrum-css/divider@2.1.17)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -387,8 +364,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.16
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.15...@spectrum-css/divider@2.1.16)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.15...@spectrum-css/divider@2.1.16)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -405,8 +381,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.14
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.13...@spectrum-css/divider@2.1.14)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.13...@spectrum-css/divider@2.1.14)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -414,8 +389,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.13
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.12...@spectrum-css/divider@2.1.13)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.12...@spectrum-css/divider@2.1.13)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -423,8 +397,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.12
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.11...@spectrum-css/divider@2.1.12)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.11...@spectrum-css/divider@2.1.12)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -432,8 +405,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.11
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.10...@spectrum-css/divider@2.1.11)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.10...@spectrum-css/divider@2.1.11)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -441,8 +413,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.10
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.9...@spectrum-css/divider@2.1.10)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.9...@spectrum-css/divider@2.1.10)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -459,8 +430,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.8
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.7...@spectrum-css/divider@2.1.8)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.7...@spectrum-css/divider@2.1.8)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -468,8 +438,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.7
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.6...@spectrum-css/divider@2.1.7)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.6...@spectrum-css/divider@2.1.7)
 
 **Note:** Version bump only for package @spectrum-css/divider
 
@@ -482,14 +451,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="2.1.5"></a>
 
 ## 2.1.5
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.4...@spectrum-css/divider@2.1.5)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@2.1.4...@spectrum-css/divider@2.1.5)
 
 **Note:** Version bump only for package @spectrum-css/divider
 

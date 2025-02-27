@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 5.1.0
 
@@ -140,27 +143,21 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Updated peerDependencies [[`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d)]:
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="3.0.0"></a>
 
 ## 3.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.3...@spectrum-css/progresscircle@3.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.3...@spectrum-css/progresscircle@3.0.0)
 
 ### 🐛 Bug fixes
 
--     **button:**pending state width, transition ([#2570](https://github.com/adobe/spectrum-css/issues/2570))([7b67bff](https://github.com/adobe/spectrum-css/commit/7b67bff))
+- **button:**pending state width, transition ([#2570](https://github.com/adobe/spectrum-css/issues/2570))([7b67bff](https://github.com/adobe/spectrum-css/commit/7b67bff))
 
-  \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-      	###
-      	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-      		*
-      		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 * Imports added to index.css and themes/express.css
 
@@ -168,66 +165,54 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.2.3
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.2...@spectrum-css/progresscircle@2.2.3)
-
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.2...@spectrum-css/progresscircle@2.2.3)
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.2.2"></a>
 
 ## 2.2.2
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.1...@spectrum-css/progresscircle@2.2.2)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.1...@spectrum-css/progresscircle@2.2.2)
 
-**Note:** Version bump only for package @spectrum-css/progresscircle
-
+🗓 20
 <a name="2.2.1"></a>
 
 ## 2.2.1
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.0...@spectrum-css/progresscircle@2.2.1)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.0...@spectrum-css/progresscircle@2.2.1)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
-
 <a name="2.2.0"></a>
 
 ## 2.2.0
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.1.1...@spectrum-css/progresscircle@2.2.0)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.1.1...@spectrum-css/progresscircle@2.2.0)
 
 ### ✨ Features
 
-- **button:**pending state([0b82dd9](https://github.com/adobe/spectrum-css/commit/0b82dd9))
-
+🗓 20
 <a name="2.1.1"></a>
 
 ## 2.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.1.0"></a>
+🗓 20 2.1.0
 
-## 2.1.0
-
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.75...@spectrum-css/progresscircle@2.1.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.75...@spectrum-css/progresscircle@2.1.0)
 
 ### ✨ Features
 
-\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
+- remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="2.0.75"></a>
 
 ## 2.0.75
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.74...@spectrum-css/progresscircle@2.0.75)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.74...@spectrum-css/progresscircle@2.0.75)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -235,8 +220,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.74
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.73...@spectrum-css/progresscircle@2.0.74)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.73...@spectrum-css/progresscircle@2.0.74)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -244,44 +228,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.73
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.71...@spectrum-css/progresscircle@2.0.73)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.72"></a>
 
 ## 2.0.72
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.71...@spectrum-css/progresscircle@2.0.72)
-
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.71...@spectrum-css/progresscircle@2.0.72)
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.71"></a>
 
 ## 2.0.71
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.70...@spectrum-css/progresscircle@2.0.71)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.70...@spectrum-css/progresscircle@2.0.71)
 
-**Note:** Version bump only for package @spectrum-css/progresscircle
-
+🗓 20
 <a name="2.0.70"></a>
 
 ## 2.0.70
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.69...@spectrum-css/progresscircle@2.0.70)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.69...@spectrum-css/progresscircle@2.0.70)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
-
 <a name="2.0.69"></a>
 
 ## 2.0.69
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.68...@spectrum-css/progresscircle@2.0.69)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.68...@spectrum-css/progresscircle@2.0.69)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -289,26 +264,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.68
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.67...@spectrum-css/progresscircle@2.0.68)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.67...@spectrum-css/progresscircle@2.0.68)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.67"></a>
+🗓 20 2.0.67
 
-## 2.0.67
-
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.66...@spectrum-css/progresscircle@2.0.67)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.66...@spectrum-css/progresscircle@2.0.67)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.66"></a>
 
-## 2.0.66
-
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.65...@spectrum-css/progresscircle@2.0.66)
+🗓 20
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.65...@spectrum-css/progresscircle@2.0.66)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -316,8 +286,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.65
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.64...@spectrum-css/progresscircle@2.0.65)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.64...@spectrum-css/progresscircle@2.0.65)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -325,73 +294,59 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.64
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.63...@spectrum-css/progresscircle@2.0.64)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.63"></a>
 
 ## 2.0.63
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.62...@spectrum-css/progresscircle@2.0.63)
-
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.62...@spectrum-css/progresscircle@2.0.63)
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.62"></a>
 
 ## 2.0.62
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.61...@spectrum-css/progresscircle@2.0.62)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.61...@spectrum-css/progresscircle@2.0.62)
 
-### 🔙 Reverts
+🗓 20
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="2.0.61"></a>
 
 ## 2.0.61
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.60...@spectrum-css/progresscircle@2.0.61)
-
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.60...@spectrum-css/progresscircle@2.0.61)
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.60"></a>
 
 ## 2.0.60
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.58...@spectrum-css/progresscircle@2.0.60)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.58...@spectrum-css/progresscircle@2.0.60)
 
-**Note:** Version bump only for package @spectrum-css/progresscircle
-
+🗓 20
 <a name="2.0.59"></a>
 
 ## 2.0.59
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.58...@spectrum-css/progresscircle@2.0.59)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.58...@spectrum-css/progresscircle@2.0.59)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.58"></a>
+🗓 20 2.0.58
 
-## 2.0.58
-
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.57...@spectrum-css/progresscircle@2.0.58)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.57...@spectrum-css/progresscircle@2.0.58)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.57"></a>
 
-## 2.0.57
-
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.56...@spectrum-css/progresscircle@2.0.57)
+🗓 20
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.56...@spectrum-css/progresscircle@2.0.57)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -399,8 +354,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.56
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.55...@spectrum-css/progresscircle@2.0.56)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.55...@spectrum-css/progresscircle@2.0.56)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -408,44 +362,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.55
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.54...@spectrum-css/progresscircle@2.0.55)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.54"></a>
 
 ## 2.0.54
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.53...@spectrum-css/progresscircle@2.0.54)
-
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.53...@spectrum-css/progresscircle@2.0.54)
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.53"></a>
 
 ## 2.0.53
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.52...@spectrum-css/progresscircle@2.0.53)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.52...@spectrum-css/progresscircle@2.0.53)
 
-**Note:** Version bump only for package @spectrum-css/progresscircle
-
+🗓 20
 <a name="2.0.52"></a>
 
 ## 2.0.52
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.51...@spectrum-css/progresscircle@2.0.52)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.51...@spectrum-css/progresscircle@2.0.52)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
-
 <a name="2.0.51"></a>
 
 ## 2.0.51
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.50...@spectrum-css/progresscircle@2.0.51)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.50...@spectrum-css/progresscircle@2.0.51)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -453,26 +398,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.50
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.49...@spectrum-css/progresscircle@2.0.50)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.49...@spectrum-css/progresscircle@2.0.50)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.49"></a>
+🗓 20 2.0.49
 
-## 2.0.49
-
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.48...@spectrum-css/progresscircle@2.0.49)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.48...@spectrum-css/progresscircle@2.0.49)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.48"></a>
 
-## 2.0.48
-
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.47...@spectrum-css/progresscircle@2.0.48)
+🗓 20
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.47...@spectrum-css/progresscircle@2.0.48)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -480,19 +420,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.47
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.46...@spectrum-css/progresscircle@2.0.47)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.46...@spectrum-css/progresscircle@2.0.47)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="2.0.46"></a>
 
-## 2.0.46
-
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.45...@spectrum-css/progresscircle@2.0.46)
+🗓 20
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.45...@spectrum-css/progresscircle@2.0.46)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -500,8 +437,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.45
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.44...@spectrum-css/progresscircle@2.0.45)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.44...@spectrum-css/progresscircle@2.0.45)
 
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
@@ -509,8 +445,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.44
 
-🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.43...@spectrum-css/progresscircle@2.0.44)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.43"></a>
@@ -518,7 +453,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.0.43
 
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.42...@spectrum-css/progresscircle@2.0.43)
-
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.42"></a>
@@ -538,8 +472,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/progresscircle
 
 <a name="2.0.40"></a>
-
-## 2.0.40
+🗓 20 2.0.40
 
 🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.0.39...@spectrum-css/progresscircle@2.0.40)
 

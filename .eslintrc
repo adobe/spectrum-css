@@ -134,6 +134,10 @@
 						"order": ["type", "url", "directory"]
 					},
 					{
+						"pathPattern": "^spectrum$",
+						"order": { "type": "asc" }
+					},
+					{
 						"pathPattern": ".*",
 						"order": { "type": "asc" }
 					}

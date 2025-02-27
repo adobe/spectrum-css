@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 7.1.0
 
@@ -97,13 +100,15 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Remove the storybook assets from the shipped output for components
 
 ## 5.1.3
 
 ### Patch Changes
 
-- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
 
   Sort keys in the package.json assets.
 
@@ -111,13 +116,15 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Improve changeset suggestions by using exports instead of files in component packages
 
 ## 5.1.1
 
 ### Patch Changes
 
-- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
+- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)!
+- Leverage local workspace versioning to prevent misalignment
 
 ## 5.1.0
 
@@ -134,41 +141,30 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Updated peerDependencies [[`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d)]:
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="5.0.0"></a>
 
 ## 5.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@4.0.0...@spectrum-css/asset@5.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@4.0.0...@spectrum-css/asset@5.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="4.0.0"></a>
 
 ## 4.0.0
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.1.2...@spectrum-css/asset@4.0.0)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.1.2...@spectrum-css/asset@4.0.0)
 
-\*refactor(asset)!: migrate to tokens package (#2553)([03f693b](https://github.com/adobe/spectrum-css/commit/03f693b)), closes[#2553](https://github.com/adobe/spectrum-css/issues/2553)
+- refactor(asset)!: migrate to tokens package (#2553)([03f693b](https://github.com/adobe/spectrum-css/commit/03f693b)), closes[#2553](https://github.com/adobe/spectrum-css/issues/2553)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		migrates to use spectrum-tokens
-
+- migrates to use spectrum-tokens
 - refactor(asset): migrate to tokens package
 - chore: add mods values for customization
 
@@ -176,8 +172,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.1.1...@spectrum-css/asset@3.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.1.1...@spectrum-css/asset@3.1.2)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
@@ -185,8 +180,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/asset
 
@@ -194,19 +188,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.1.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.52...@spectrum-css/asset@3.1.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.52...@spectrum-css/asset@3.1.0)
 
 ### ✨ Features
 
-- **asset,cyclebutton,quickaction,site:**deprecate skin.css assets ([#2438](https://github.com/adobe/spectrum-css/issues/2438))([d6de839](https://github.com/adobe/spectrum-css/commit/d6de839))
+- **asset,cyclebutton,quickaction,site:** deprecate skin.css assets ([#2438](https://github.com/adobe/spectrum-css/issues/2438))([d6de839](https://github.com/adobe/spectrum-css/commit/d6de839))
 
 <a name="3.0.52"></a>
 
 ## 3.0.52
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.51...@spectrum-css/asset@3.0.52)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.51...@spectrum-css/asset@3.0.52)
 
 ### 🐛 Bug fixes
 
@@ -216,8 +208,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.51
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.50...@spectrum-css/asset@3.0.51)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.50...@spectrum-css/asset@3.0.51)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
@@ -225,30 +216,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.50
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.48...@spectrum-css/asset@3.0.50)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.48...@spectrum-css/asset@3.0.50)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="3.0.49"></a>
 
 ## 3.0.49
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.48...@spectrum-css/asset@3.0.49)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.48...@spectrum-css/asset@3.0.49)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="3.0.48"></a>
 
 ## 3.0.48
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.47...@spectrum-css/asset@3.0.48)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.47...@spectrum-css/asset@3.0.48)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
@@ -256,17 +244,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.47
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.46...@spectrum-css/asset@3.0.47)
-
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.46...@spectrum-css/asset@3.0.47)
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.0.46"></a>
 
 ## 3.0.46
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.45...@spectrum-css/asset@3.0.46)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.45...@spectrum-css/asset@3.0.46)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
@@ -274,8 +259,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.45
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.44...@spectrum-css/asset@3.0.45)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.44...@spectrum-css/asset@3.0.45)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
@@ -283,19 +267,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.44
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.43...@spectrum-css/asset@3.0.44)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.43...@spectrum-css/asset@3.0.44)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="3.0.43"></a>
 
 ## 3.0.43
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.42...@spectrum-css/asset@3.0.43)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.42...@spectrum-css/asset@3.0.43)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
@@ -303,8 +285,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.42
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.41...@spectrum-css/asset@3.0.42)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.41...@spectrum-css/asset@3.0.42)
 
 **Note:** Version bump only for package @spectrum-css/asset
 

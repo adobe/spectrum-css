@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 10.1.0
 
@@ -163,45 +166,35 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/icon@>=7
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="9.0.0"></a>
 
 ## 9.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.5...@spectrum-css/checkbox@9.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.5...@spectrum-css/checkbox@9.0.0)
 
 ### ✨ Features
 
-\*use storybook v8 ([#2604](https://github.com/adobe/spectrum-css/issues/2604))([166ab23](https://github.com/adobe/spectrum-css/commit/166ab23))
+- use storybook v8 ([#2604](https://github.com/adobe/spectrum-css/issues/2604))([166ab23](https://github.com/adobe/spectrum-css/commit/166ab23))
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="8.1.5"></a>
 
 ## 8.1.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.4...@spectrum-css/checkbox@8.1.5)
-
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.4...@spectrum-css/checkbox@8.1.5)
 **Note:** Version bump only for package @spectrum-css/checkbox
 
 <a name="8.1.4"></a>
 
 ## 8.1.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.3...@spectrum-css/checkbox@8.1.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.3...@spectrum-css/checkbox@8.1.4)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -209,17 +202,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.1.3
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.2...@spectrum-css/checkbox@8.1.3)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.2...@spectrum-css/checkbox@8.1.3)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
-
 <a name="8.1.2"></a>
 
 ## 8.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.1...@spectrum-css/checkbox@8.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.1.1...@spectrum-css/checkbox@8.1.2)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -227,8 +217,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -245,8 +234,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.6
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.5...@spectrum-css/checkbox@8.0.6)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.5...@spectrum-css/checkbox@8.0.6)
 
 ### 🐛 Bug fixes
 
@@ -274,17 +262,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.3
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.2...@spectrum-css/checkbox@8.0.3)
-
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.2...@spectrum-css/checkbox@8.0.3)
 **Note:** Version bump only for package @spectrum-css/checkbox
 
 <a name="8.0.2"></a>
 
 ## 8.0.2
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.0...@spectrum-css/checkbox@8.0.2)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.0...@spectrum-css/checkbox@8.0.2)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -292,41 +277,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.1
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.0...@spectrum-css/checkbox@8.0.1)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@8.0.0...@spectrum-css/checkbox@8.0.1)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
-
 <a name="8.0.0"></a>
 
 ## 8.0.0
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.16...@spectrum-css/checkbox@8.0.0)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.16...@spectrum-css/checkbox@8.0.0)
 
-\*refactor(assetcard)!: token migration (#2229)([a0cf37b](https://github.com/adobe/spectrum-css/commit/a0cf37b)), closes[#2229](https://github.com/adobe/spectrum-css/issues/2229)
+- refactor(assetcard)!: token migration (#2229)([a0cf37b](https://github.com/adobe/spectrum-css/commit/a0cf37b)), closes[#2229](https://github.com/adobe/spectrum-css/issues/2229)
 
-    	###
-    	🛑 BREAKING CHANGES
+  ###
 
-    		*
-    		migrate asset card to updated token system
+  🛑 BREAKING CHANGES
+
+  - migrate asset card to updated token system
 
 <a name="7.0.16"></a>
 
 ## 7.0.16
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.15...@spectrum-css/checkbox@7.0.16)
-
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.15...@spectrum-css/checkbox@7.0.16)
 **Note:** Version bump only for package @spectrum-css/checkbox
 
 <a name="7.0.15"></a>
 
 ## 7.0.15
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.14...@spectrum-css/checkbox@7.0.15)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.14...@spectrum-css/checkbox@7.0.15)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -334,8 +313,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.14
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.13...@spectrum-css/checkbox@7.0.14)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.13...@spectrum-css/checkbox@7.0.14)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -343,8 +321,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.13
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.12...@spectrum-css/checkbox@7.0.13)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.12...@spectrum-css/checkbox@7.0.13)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -361,17 +338,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.11
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.10...@spectrum-css/checkbox@7.0.11)
-
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.10...@spectrum-css/checkbox@7.0.11)
 **Note:** Version bump only for package @spectrum-css/checkbox
 
 <a name="7.0.10"></a>
 
 ## 7.0.10
 
-🗓
-2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.9...@spectrum-css/checkbox@7.0.10)
+🗓 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.9...@spectrum-css/checkbox@7.0.10)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -379,8 +353,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.9
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.8...@spectrum-css/checkbox@7.0.9)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.8...@spectrum-css/checkbox@7.0.9)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -388,8 +361,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.8
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.7...@spectrum-css/checkbox@7.0.8)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.7...@spectrum-css/checkbox@7.0.8)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -397,19 +369,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.7
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.6...@spectrum-css/checkbox@7.0.7)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.6...@spectrum-css/checkbox@7.0.7)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
-
-<a name="7.0.6"></a>
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
+  <a name="7.0.6"></a>
 
 ## 7.0.6
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.5...@spectrum-css/checkbox@7.0.6)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.5...@spectrum-css/checkbox@7.0.6)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -417,8 +386,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.5
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.3...@spectrum-css/checkbox@7.0.5)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.3...@spectrum-css/checkbox@7.0.5)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -444,17 +412,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.2
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.1...@spectrum-css/checkbox@7.0.2)
-
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.1...@spectrum-css/checkbox@7.0.2)
 **Note:** Version bump only for package @spectrum-css/checkbox
 
 <a name="7.0.1"></a>
 
 ## 7.0.1
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.0...@spectrum-css/checkbox@7.0.1)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@7.0.0...@spectrum-css/checkbox@7.0.1)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -462,16 +427,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.0
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.10...@spectrum-css/checkbox@7.0.0)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.10...@spectrum-css/checkbox@7.0.0)
 
-\*feat(checkbox)!: add new color aliases and focus color fixes (#2052)([2a0d3c8](https://github.com/adobe/spectrum-css/commit/2a0d3c8)), closes[#2052](https://github.com/adobe/spectrum-css/issues/2052)
+- feat(checkbox)!: add new color aliases and focus color fixes (#2052)([2a0d3c8](https://github.com/adobe/spectrum-css/commit/2a0d3c8)), closes[#2052](https://github.com/adobe/spectrum-css/issues/2052)
 
-    	###
-    	🛑 BREAKING CHANGES
+  ###
 
-    		*
-    		prefers `:focus-visible` to `:focus-ring` & updates colors
+  🛑 BREAKING CHANGES
+
+  - prefers `:focus-visible` to `:focus-ring` & updates colors
 
 Additionally:
 
@@ -509,8 +473,7 @@ needed system color updates noticed while looking at that code.
 
 ## 6.1.10
 
-🗓
-2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.9...@spectrum-css/checkbox@6.1.10)
+🗓 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.9...@spectrum-css/checkbox@6.1.10)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -518,12 +481,11 @@ needed system color updates noticed while looking at that code.
 
 ## 6.1.9
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.8...@spectrum-css/checkbox@6.1.9)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.8...@spectrum-css/checkbox@6.1.9)
 
 ### 🐛 Bug fixes
 
-\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
+- icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="6.1.8"></a>
 
@@ -538,8 +500,7 @@ needed system color updates noticed while looking at that code.
 
 ## 6.1.7
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.6...@spectrum-css/checkbox@6.1.7)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.6...@spectrum-css/checkbox@6.1.7)
 
 ### 🐛 Bug fixes
 
@@ -550,8 +511,7 @@ needed system color updates noticed while looking at that code.
 
 ## 6.1.6
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.5...@spectrum-css/checkbox@6.1.6)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.5...@spectrum-css/checkbox@6.1.6)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -559,8 +519,7 @@ needed system color updates noticed while looking at that code.
 
 ## 6.1.5
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.4...@spectrum-css/checkbox@6.1.5)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.4...@spectrum-css/checkbox@6.1.5)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -568,8 +527,7 @@ needed system color updates noticed while looking at that code.
 
 ## 6.1.4
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.3...@spectrum-css/checkbox@6.1.4)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.3...@spectrum-css/checkbox@6.1.4)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -577,8 +535,7 @@ needed system color updates noticed while looking at that code.
 
 ## 6.1.3
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.2...@spectrum-css/checkbox@6.1.3)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.2...@spectrum-css/checkbox@6.1.3)
 
 **Note:** Version bump only for package @spectrum-css/checkbox
 
@@ -586,12 +543,11 @@ needed system color updates noticed while looking at that code.
 
 ## 6.1.2
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.1...@spectrum-css/checkbox@6.1.2)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@6.1.1...@spectrum-css/checkbox@6.1.2)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="6.1.1"></a>
 

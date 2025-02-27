@@ -79,6 +79,7 @@
     "--spectrum-swatch-border-thickness",
     "--spectrum-swatch-border-thickness-selected",
     "--spectrum-swatch-dash-icon-color",
+    "--spectrum-swatch-disabled-icon-border-opacity",
     "--spectrum-swatch-disabled-icon-color",
     "--spectrum-swatch-disabled-icon-size",
     "--spectrum-swatch-focus-indicator-border-radius",
@@ -101,6 +102,7 @@
   ],
   "global": [
     "--spectrum-animation-duration-100",
+    "--spectrum-black-rgb",
     "--spectrum-border-width-100",
     "--spectrum-border-width-200",
     "--spectrum-corner-radius-75",
@@ -113,6 +115,7 @@
     "--spectrum-gray-900",
     "--spectrum-picked-color",
     "--spectrum-red-900",
+    "--spectrum-white",
     "--spectrum-workflow-icon-size-100",
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-50",
@@ -121,7 +124,6 @@
   "system-theme": [
     "--system-swatch-border-color",
     "--system-swatch-border-radius",
-    "--system-swatch-disabled-icon-color",
     "--system-swatch-inner-border-color-selected"
   ],
   "passthroughs": [],

@@ -14,17 +14,17 @@ Assuming you have some variables defined and rule(s) that use them:
 
 ```css
 :root {
-  --prefix-component-background-color: blue;
-  --prefix-component-width: 10px;
-  --prefix-component-height: 10px;
-  --prefix-component-size: 10px;
+	--prefix-component-background-color: blue;
+	--prefix-component-width: 10px;
+	--prefix-component-height: 10px;
+	--prefix-component-size: 10px;
 }
 
 .component {
-  background-color: var(--prefix-component-background-color);
+	background-color: var(--prefix-component-background-color);
 
-  width: var(--prefix-component-width);
-  height: var(--prefix-component-height);
+	width: var(--prefix-component-width);
+	height: var(--prefix-component-height);
 }
 ```
 
@@ -32,16 +32,16 @@ The variables that are not used in any rule will be removed from the output or r
 
 ```css
 :root {
-  --prefix-component-background-color: blue;
-  --prefix-component-width: 10px;
-  --prefix-component-height: 10px;
+	--prefix-component-background-color: blue;
+	--prefix-component-width: 10px;
+	--prefix-component-height: 10px;
 }
 
 .component {
-  background-color: var(--prefix-component-background-color);
+	background-color: var(--prefix-component-background-color);
 
-  width: var(--prefix-component-width);
-  height: var(--prefix-component-height);
+	width: var(--prefix-component-width);
+	height: var(--prefix-component-height);
 }
 ```
 
@@ -49,11 +49,11 @@ To allow variables to be defined without being used, such as when you want to pa
 
 ```css
 :root {
-  /* @passthrough */
-  --nested-component-background-color: blue;
-  --prefix-component-width: 10px;
-  --prefix-component-height: 10px;
-  --prefix-component-size: 10px;
+	/* @passthrough */
+	--nested-component-background-color: blue;
+	--prefix-component-width: 10px;
+	--prefix-component-height: 10px;
+	--prefix-component-size: 10px;
 }
 ```
 
@@ -61,13 +61,13 @@ To allow a group of properties to be passed down, you can prefix the set with `/
 
 ```css
 :root {
-  /* @passthrough start */
-  --nested-component-background-color: blue;
-  --nested-component-width: 10px;
-  /* @passthrough end */
+	/* @passthrough start */
+	--nested-component-background-color: blue;
+	--nested-component-width: 10px;
+	/* @passthrough end */
 
-  --prefix-component-height: 10px;
-  --prefix-component-size: 10px;
+	--prefix-component-height: 10px;
+	--prefix-component-size: 10px;
 }
 ```
 

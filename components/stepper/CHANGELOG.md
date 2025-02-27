@@ -1,4 +1,7 @@
-# Change Log
+# Change log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 7.1.0
 
@@ -215,59 +218,45 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/textfield@>=7
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="6.0.0"></a>
 
 ## 6.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.5...@spectrum-css/stepper@6.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.5...@spectrum-css/stepper@6.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
 <a name="5.1.5"></a>
 
 ## 5.1.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.4...@spectrum-css/stepper@5.1.5)
-
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.4...@spectrum-css/stepper@5.1.5)
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="5.1.4"></a>
 
 ## 5.1.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.3...@spectrum-css/stepper@5.1.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.3...@spectrum-css/stepper@5.1.4)
 
-**Note:** Version bump only for package @spectrum-css/stepper
-
+🗓 20
 <a name="5.1.3"></a>
 
 ## 5.1.3
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.2...@spectrum-css/stepper@5.1.3)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.2...@spectrum-css/stepper@5.1.3)
 
 **Note:** Version bump only for package @spectrum-css/stepper
-
 <a name="5.1.2"></a>
 
 ## 5.1.2
 
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.1...@spectrum-css/stepper@5.1.2)
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.1...@spectrum-css/stepper@5.1.2)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -275,43 +264,36 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="5.1.0"></a>
+🗓 20 5.1.0
 
-## 5.1.0
-
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.7...@spectrum-css/stepper@5.1.0)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.7...@spectrum-css/stepper@5.1.0)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="5.0.7"></a>
 
-## 5.0.7
-
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.6...@spectrum-css/stepper@5.0.7)
+🗓 20
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.6...@spectrum-css/stepper@5.0.7)
 
 ### 🐛 Bug fixes
 
 - **stepper:**button size + space match infieldbutton spec([6ab77f8](https://github.com/adobe/spectrum-css/commit/6ab77f8))_
   **stepper:**express whcm ([#2384](https://github.com/adobe/spectrum-css/issues/2384))([890f469](https://github.com/adobe/spectrum-css/commit/890f469))_
   **stepper:**infieldbutton background unchanged on stepper focus([c01d2b6](https://github.com/adobe/spectrum-css/commit/c01d2b6))_
-  **stepper:**infieldbutton isnt focusable in stepper([4529874](https://github.com/adobe/spectrum-css/commit/4529874))_
-  **stepper:**invalid hover state border color([4ea4e6c](https://github.com/adobe/spectrum-css/commit/4ea4e6c))_
-  **stepper:**invalid keyboard focus outline alignment([5b74dfe](https://github.com/adobe/spectrum-css/commit/5b74dfe))_
+  🗓 20**stepper:**invalid hover state border color([4ea4e6c](https://github.com/adobe/spectrum-css/commit/4ea4e6c))_
+  **stepper:**invalid keyboard focus outline alignment([5b74dfe](https://github.com/adobe/spectrum-css/commit/5b74dfe))\_
   **stepper:**no longer touches InfieldButton classes([e408272](https://github.com/adobe/spectrum-css/commit/e408272))
 
 <a name="5.0.6"></a>
 
 ## 5.0.6
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.5...@spectrum-css/stepper@5.0.6)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.5...@spectrum-css/stepper@5.0.6)
 
 ### 🐛 Bug fixes
 
@@ -319,11 +301,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
   **stepper:**no longer touches InfieldButton classes ([#2300](https://github.com/adobe/spectrum-css/issues/2300))([a82b8ad](https://github.com/adobe/spectrum-css/commit/a82b8ad))
 
 <a name="5.0.5"></a>
+🗓 20 5.0.5
 
-## 5.0.5
-
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.4...@spectrum-css/stepper@5.0.5)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.4...@spectrum-css/stepper@5.0.5)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -331,35 +311,28 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.4
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.2...@spectrum-css/stepper@5.0.4)
-
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.2...@spectrum-css/stepper@5.0.4)
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="5.0.3"></a>
 
 ## 5.0.3
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.2...@spectrum-css/stepper@5.0.3)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.2...@spectrum-css/stepper@5.0.3)
 
-**Note:** Version bump only for package @spectrum-css/stepper
-
+🗓 20
 <a name="5.0.2"></a>
 
 ## 5.0.2
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.1...@spectrum-css/stepper@5.0.2)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.1...@spectrum-css/stepper@5.0.2)
 
-**Note:** Version bump only for package @spectrum-css/stepper
-
+<a nameVersion bump only for package @spectrum-css/stepper
 <a name="5.0.1"></a>
 
 ## 5.0.1
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.0...@spectrum-css/stepper@5.0.1)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.0...@spectrum-css/stepper@5.0.1)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -367,14 +340,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.0.0
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.59...@spectrum-css/stepper@5.0.0)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.59...@spectrum-css/stepper@5.0.0)
 
-\*feat(stepper)!: stepper migrate tokens (#1960)([3a4c217](https://github.com/adobe/spectrum-css/commit/3a4c217)), closes[#1960](https://github.com/adobe/spectrum-css/issues/1960)
+- feat(stepper)!: stepper migrate tokens (#1960)([3a4c217](https://github.com/adobe/spectrum-css/commit/3a4c217)), closes[#1960](https://github.com/adobe/spectrum-css/issues/1960)
 
 ### Migration Guide
 
-#### Use InFieldButton instead of FieldButton
+<a name="Use InFieldButton instead of FieldButton"></a>
+
+## Use InFieldButton instead of FieldButton
 
 Stepper now uses InFieldButtons instead of FieldButtons for the up/down buttons.
 
@@ -382,7 +356,7 @@ Stepper now uses InFieldButtons instead of FieldButtons for the up/down buttons.
 
 - migrates Stepper to use `@adobe/spectrum-tokens`
 
-Additionally:
+🗓 20
 
 - style(infieldbutton!): begin updating css to tokens
 
@@ -496,8 +470,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 ## 4.0.59
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.58...@spectrum-css/stepper@4.0.59)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.58...@spectrum-css/stepper@4.0.59)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -505,8 +478,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 ## 4.0.58
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.57...@spectrum-css/stepper@4.0.58)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.57...@spectrum-css/stepper@4.0.58)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -514,8 +486,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 ## 4.0.57
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.56...@spectrum-css/stepper@4.0.57)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.56...@spectrum-css/stepper@4.0.57)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -523,64 +494,53 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 ## 4.0.56
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.55...@spectrum-css/stepper@4.0.56)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.55"></a>
 
 ## 4.0.55
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.54...@spectrum-css/stepper@4.0.55)
-
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.54...@spectrum-css/stepper@4.0.55)
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.54"></a>
 
 ## 4.0.54
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.53...@spectrum-css/stepper@4.0.54)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.53...@spectrum-css/stepper@4.0.54)
 
-**Note:** Version bump only for package @spectrum-css/stepper
-
+🗓 20
 <a name="4.0.53"></a>
 
 ## 4.0.53
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.52...@spectrum-css/stepper@4.0.53)
+<a name
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.52...@spectrum-css/stepper@4.0.53)
 
 **Note:** Version bump only for package @spectrum-css/stepper
-
 <a name="4.0.52"></a>
 
 ## 4.0.52
 
-🗓
-2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.51...@spectrum-css/stepper@4.0.52)
+🗓 2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.51...@spectrum-css/stepper@4.0.52)
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
-
+🗓 20
 <a name="4.0.51"></a>
 
 ## 4.0.51
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.50...@spectrum-css/stepper@4.0.51)
+<a name
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.50...@spectrum-css/stepper@4.0.51)
 
 **Note:** Version bump only for package @spectrum-css/stepper
-
 <a name="4.0.50"></a>
 
 ## 4.0.50
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.48...@spectrum-css/stepper@4.0.50)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.48...@spectrum-css/stepper@4.0.50)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -588,17 +548,15 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 ## 4.0.49
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.48...@spectrum-css/stepper@4.0.49)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.48...@spectrum-css/stepper@4.0.49)
 
-**Note:** Version bump only for package @spectrum-css/stepper
+🗓 20\* Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.48"></a>
 
 ## 4.0.48
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.47...@spectrum-css/stepper@4.0.48)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.47...@spectrum-css/stepper@4.0.48)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -606,44 +564,35 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 ## 4.0.47
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.46...@spectrum-css/stepper@4.0.47)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.46"></a>
 
 ## 4.0.46
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.45...@spectrum-css/stepper@4.0.46)
-
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.45...@spectrum-css/stepper@4.0.46)
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.45"></a>
 
 ## 4.0.45
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.44...@spectrum-css/stepper@4.0.45)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.44...@spectrum-css/stepper@4.0.45)
 
-**Note:** Version bump only for package @spectrum-css/stepper
-
+🗓 20
 <a name="4.0.44"></a>
 
-## 4.0.44
+<a name
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.43...@spectrum-css/stepper@4.0.44)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.43...@spectrum-css/stepper@4.0.44)
 
 **Note:** Version bump only for package @spectrum-css/stepper
-
 <a name="4.0.43"></a>
 
 ## 4.0.43
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.42...@spectrum-css/stepper@4.0.43)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.42...@spectrum-css/stepper@4.0.43)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -651,35 +600,29 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 ## 4.0.42
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.41...@spectrum-css/stepper@4.0.42)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.41...@spectrum-css/stepper@4.0.42)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.41"></a>
+🗓 20 4.0.41
 
-## 4.0.41
-
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.40...@spectrum-css/stepper@4.0.41)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.40...@spectrum-css/stepper@4.0.41)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.40"></a>
 
-## 4.0.40
-
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.39...@spectrum-css/stepper@4.0.40)
-
+🗓 20
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.39...@spectrum-css/stepper@4.0.40)
+🗓 20
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.39"></a>
 
 ## 4.0.39
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.38...@spectrum-css/stepper@4.0.39)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.38...@spectrum-css/stepper@4.0.39)
 
 **Note:** Version bump only for package @spectrum-css/stepper
 
@@ -687,38 +630,30 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 ## 4.0.38
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.37...@spectrum-css/stepper@4.0.38)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.37"></a>
 
 ## 4.0.37
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.36...@spectrum-css/stepper@4.0.37)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.36...@spectrum-css/stepper@4.0.37)
+🗓 20# 🐛 Bug fixes
 
-### 🐛 Bug fixes
-
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="4.0.36"></a>
 
 ## 4.0.36
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.35...@spectrum-css/stepper@4.0.36)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.35"></a>
 
 ## 4.0.35
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.34...@spectrum-css/stepper@4.0.35)
-
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.34...@spectrum-css/stepper@4.0.35)
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.34"></a>
@@ -727,16 +662,15 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.33...@spectrum-css/stepper@4.0.34)
 
-**Note:** Version bump only for package @spectrum-css/stepper
-
+🗓 20
 <a name="4.0.33"></a>
+<a name
 
 ## 4.0.33
 
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.32...@spectrum-css/stepper@4.0.33)
 
 **Note:** Version bump only for package @spectrum-css/stepper
-
 <a name="4.0.32"></a>
 
 ## 4.0.32
@@ -747,10 +681,9 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="4.0.31"></a>
 
-## 4.0.31
-
+🗓 20
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.30...@spectrum-css/stepper@4.0.31)
-
+🗓 20
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="4.0.30"></a>
