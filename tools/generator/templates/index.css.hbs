@@ -12,18 +12,16 @@
  */
 
 .spectrum-{{ pascalCase name }} {
-  // color: var(--highcontrast-{{ folderName }}-content-color-default, var(--mod-{{ folderName }}-content-color-default, var(--spectrum-{{ folderName }}-content-color-default)));
-
-  &.spectrum-{{ pascalCase name }}--sizeS {}
-  &,
-  &.spectrum-{{ pascalCase name }}--sizeM {}
-  &.spectrum-{{ pascalCase name }}--sizeL {}
-  &.spectrum-{{ pascalCase name }}--sizeXL {}
+  // color: var(--highcontrast-{{ folderName }}-content-color, var(--mod-{{ folderName }}-content-color, var(--spectrum-{{ folderName }}-content-color)));
 }
+
+.spectrum-{{ pascalCase name }}--sizeS {}
+.spectrum-{{ pascalCase name }}--sizeL {}
+.spectrum-{{ pascalCase name }}--sizeXL {}
 
 @media (forced-colors: active) {
   .spectrum-{{ pascalCase name }} {
-    --highcontrast-{{ folderName }}-content-color-default: CanvasText;
+    --highcontrast-{{ folderName }}-content-color: CanvasText;
 
     forced-color-adjust: none;
   }

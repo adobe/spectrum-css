@@ -60,7 +60,6 @@
     "a.spectrum-CloseButton"
   ],
   "modifiers": [
-    "--mod-animation-duration-100",
     "--mod-closebutton-align-self",
     "--mod-closebutton-animation-duraction",
     "--mod-closebutton-animation-duration",
@@ -85,9 +84,7 @@
     "--mod-closebutton-static-background-color-down",
     "--mod-closebutton-static-background-color-focus",
     "--mod-closebutton-static-background-color-hover",
-    "--mod-closebutton-width",
-    "--mod-line-height-100",
-    "--mod-sans-font-family-stack"
+    "--mod-closebutton-width"
   ],
   "component": [
     "--spectrum-closebutton-animation-duration",
@@ -138,18 +135,6 @@
     "--spectrum-transparent-white-400",
     "--spectrum-transparent-white-500",
     "--spectrum-white"
-  ],
-  "system-theme": [
-    "--system-close-button-background-color-default",
-    "--system-close-button-background-color-down",
-    "--system-close-button-background-color-focus",
-    "--system-close-button-background-color-hover",
-    "--system-close-button-static-black-static-background-color-down",
-    "--system-close-button-static-black-static-background-color-focus",
-    "--system-close-button-static-black-static-background-color-hover",
-    "--system-close-button-static-white-static-background-color-down",
-    "--system-close-button-static-white-static-background-color-focus",
-    "--system-close-button-static-white-static-background-color-hover"
   ],
   "passthroughs": [
     "--mod-button-animation-duration",

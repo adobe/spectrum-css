@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 @media (forced-colors: active) {
 	/* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
 	.spectrum-SideNav {
@@ -47,6 +45,15 @@
 }
 
 .spectrum-SideNav {
+	--spectrum-sidenav-background-hover: var(--spectrum-gray-100);
+	--spectrum-sidenav-item-background-down: var(--spectrum-gray-200);
+	--spectrum-sidenav-background-key-focus: var(--spectrum-gray-100);
+
+	--spectrum-sidenav-item-background-default-selected: var(--spectrum-gray-100);
+	--spectrum-sidenav-background-hover-selected: var(--spectrum-gray-200);
+	--spectrum-sidenav-item-background-down-selected: var(--spectrum-gray-200);
+	--spectrum-sidenav-background-key-focus-selected: var(--spectrum-gray-100);
+
 	/* focus indicator */
 	--spectrum-sidenav-focus-ring-size: var(--spectrum-focus-indicator-thickness);
 	--spectrum-sidenav-focus-ring-gap: var(--spectrum-focus-indicator-gap);
