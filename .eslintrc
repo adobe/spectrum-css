@@ -145,6 +145,30 @@
 			}
 		},
 		{
+			"files": ["tokens/dist/**/*.json"],
+			"rules": {
+				"jsonc/sort-keys": [
+					"warn",
+					{
+						"pathPattern": "^$",
+						"order": { "type": "asc" }
+					},
+					{
+						"pathPattern": ".*",
+						"order": [
+							"prop",
+							"ref",
+							"value",
+							"light",
+							"dark",
+							"medium",
+							"large"
+						]
+					}
+				]
+			}
+		},
+		{
 			"files": [
 				"components/*/stories/*.js",
 				".storybook/*.js",
