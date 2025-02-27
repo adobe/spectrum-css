@@ -45,7 +45,7 @@
 		"refresh:config": "bash ./tasks/chromatic-config-creation.sh || exit 0",
 		"refresh:env": "bash ./tasks/copy-env-from-root.sh || exit 0",
 		"release": "yarn ci && changeset publish",
-		"report": "yarn reporter tag:component",
+		"report": "cross-env NODE_ENV=production yarn reporter tag:component",
 		"reporter": "nx run-many --target report --projects",
 		"start": "cross-env NODE_ENV=development nx start storybook",
 		"test": "cross-env NODE_ENV=development nx test storybook",
@@ -71,8 +71,6 @@
 		"@commitlint/cli": "^19.6.1",
 		"@commitlint/config-conventional": "^19.6.0",
 		"@nx/devkit": "^19.8.2",
-		"@spectrum-tools/postcss-add-theming-layer": "1.0.1",
-		"@spectrum-tools/postcss-property-rollup": "0.0.1",
 		"@spectrum-tools/postcss-rgb-mapping": "1.0.0",
 		"@yarnpkg/types": "^4.0.0",
 		"at-rule-packer": "^0.4.2",
@@ -92,6 +90,8 @@
 		"jsonc-eslint-parser": "^2.4.0",
 		"lint-staged": "^15.3.0",
 		"lodash": "^4.17.21",
+		"markdownlint": "^0.37.4",
+		"markdownlint-cli": "^0.44.0",
 		"node-gyp": "^10.1.0",
 		"npm-registry-fetch": "^18.0.2",
 		"nunjucks": "^3.2.4",
@@ -122,7 +122,8 @@
 		"stylelint-selector-bem-pattern": "^4.0.1",
 		"stylelint-use-logical": "^2.1.2",
 		"tar": "^7.4.3",
-		"yargs": "^17.7.2"
+		"yargs": "^17.7.2",
+		"zlib": "^1.0.5"
 	},
 	"keywords": [
 		"design-system",

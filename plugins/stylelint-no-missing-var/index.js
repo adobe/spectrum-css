@@ -46,7 +46,8 @@ const ruleFunction = (enabled, _options, context) => {
 			if (regex.test(value)) {
 				if (context.fix) {
 					decl.value = value.replace(regex, `var(${value.match(regex)[0]})`);
-				} else {
+				}
+				else {
 					const prop = value.match(regex)?.[0];
 					if (!prop) return;
 
