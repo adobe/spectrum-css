@@ -1,5 +1,12 @@
 # Change log
 
+## 8.2.1-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/menu@9.1.1-next.0
+
 ## 8.2.0
 
 ### Minor Changes

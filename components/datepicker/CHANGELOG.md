@@ -1,5 +1,13 @@
 # Change log
 
+## 4.1.2-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/pickerbutton@6.1.2-next.0
+  - @spectrum-css/popover@8.2.1-next.0
+
 ## 4.1.1
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # Change log
 
+## 6.1.2-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/menu@9.1.1-next.0
+  - @spectrum-css/picker@9.1.3-next.0
+
 ## 7.0.0
 
 ### Patch Changes
