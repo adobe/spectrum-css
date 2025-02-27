@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import remarkGfm from 'remark-gfm';
+import remarkGfm from "remark-gfm";
 
 // Get a list of all the folders in the components directory
 const componentDir = path.resolve(__dirname, "../components");
@@ -123,7 +123,7 @@ export default {
 	},
 	framework: "@storybook/web-components-vite",
 	typescript: {
-		reactDocgen: 'react-docgen',
+		reactDocgen: "react-docgen",
 		// Not using typescript so disable the check
 		check: false,
 	},
