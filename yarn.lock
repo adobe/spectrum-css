@@ -4052,14 +4052,14 @@ __metadata:
     "@spectrum-css/statuslight": "npm:9.1.0"
     "@spectrum-css/steplist": "npm:7.1.0"
     "@spectrum-css/stepper": "npm:7.1.1"
-    "@spectrum-css/swatch": "npm:8.1.1"
+    "@spectrum-css/swatch": "npm:8.1.2"
     "@spectrum-css/swatchgroup": "npm:5.1.0"
     "@spectrum-css/switch": "npm:6.1.0"
     "@spectrum-css/table": "npm:8.1.0"
     "@spectrum-css/tabs": "npm:6.1.1"
     "@spectrum-css/tag": "npm:10.1.0"
     "@spectrum-css/taggroup": "npm:7.1.0"
-    "@spectrum-css/textfield": "npm:8.1.0"
+    "@spectrum-css/textfield": "npm:8.1.1"
     "@spectrum-css/thumbnail": "npm:8.1.0"
     "@spectrum-css/toast": "npm:11.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
@@ -4374,7 +4374,7 @@ __metadata:
     "@spectrum-css/pickerbutton": "npm:6.1.1"
     "@spectrum-css/popover": "npm:8.2.0"
     "@spectrum-css/progresscircle": "npm:5.1.0"
-    "@spectrum-css/textfield": "npm:8.1.0"
+    "@spectrum-css/textfield": "npm:8.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/menu": ">=9.0.0 <10.0.0"
@@ -4441,7 +4441,7 @@ __metadata:
     "@spectrum-css/calendar": "npm:7.1.0"
     "@spectrum-css/pickerbutton": "npm:6.1.1"
     "@spectrum-css/popover": "npm:8.2.0"
-    "@spectrum-css/textfield": "npm:8.1.0"
+    "@spectrum-css/textfield": "npm:8.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/calendar": ">=7.0.0 <8.0.0"
@@ -4874,7 +4874,7 @@ __metadata:
     "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/button": "npm:14.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
-    "@spectrum-css/textfield": "npm:8.1.0"
+    "@spectrum-css/textfield": "npm:8.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
@@ -5099,7 +5099,7 @@ __metadata:
   dependencies:
     "@spectrum-css/clearbutton": "npm:7.1.0"
     "@spectrum-css/icon": "npm:9.1.0"
-    "@spectrum-css/textfield": "npm:8.1.0"
+    "@spectrum-css/textfield": "npm:8.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/clearbutton": ">=7.0.0 <8.0.0"
@@ -5206,7 +5206,7 @@ __metadata:
     "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/infieldbutton": "npm:6.1.1"
-    "@spectrum-css/textfield": "npm:8.1.0"
+    "@spectrum-css/textfield": "npm:8.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
@@ -5228,7 +5228,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/swatch@npm:8.1.1, @spectrum-css/swatch@workspace:components/swatch":
+"@spectrum-css/swatch@npm:8.1.2, @spectrum-css/swatch@workspace:components/swatch":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/swatch@workspace:components/swatch"
   dependencies:
@@ -5249,7 +5249,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/swatchgroup@workspace:components/swatchgroup"
   dependencies:
-    "@spectrum-css/swatch": "npm:8.1.1"
+    "@spectrum-css/swatch": "npm:8.1.2"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/swatch": ">=8.0.0 <9.0.0"
@@ -5371,7 +5371,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/textfield@npm:8.1.0, @spectrum-css/textfield@workspace:components/textfield":
+"@spectrum-css/textfield@npm:8.1.1, @spectrum-css/textfield@workspace:components/textfield":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/textfield@workspace:components/textfield"
   dependencies:
