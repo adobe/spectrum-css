@@ -3793,7 +3793,7 @@ __metadata:
   dependencies:
     "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
-    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/menu": "npm:9.1.1"
     "@spectrum-css/popover": "npm:8.2.0"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
@@ -4031,7 +4031,7 @@ __metadata:
     "@spectrum-css/inlinealert": "npm:10.1.0"
     "@spectrum-css/link": "npm:7.1.0"
     "@spectrum-css/logicbutton": "npm:6.1.0"
-    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/menu": "npm:9.1.1"
     "@spectrum-css/meter": "npm:1.1.0"
     "@spectrum-css/miller": "npm:8.1.0"
     "@spectrum-css/modal": "npm:7.1.0"
@@ -4240,7 +4240,7 @@ __metadata:
     "@spectrum-css/actionmenu": "npm:7.1.1"
     "@spectrum-css/button": "npm:14.1.1"
     "@spectrum-css/buttongroup": "npm:9.1.0"
-    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/menu": "npm:9.1.1"
     "@spectrum-css/popover": "npm:8.2.0"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
@@ -4370,7 +4370,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/combobox@workspace:components/combobox"
   dependencies:
-    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/menu": "npm:9.1.1"
     "@spectrum-css/pickerbutton": "npm:6.1.1"
     "@spectrum-css/popover": "npm:8.2.0"
     "@spectrum-css/progresscircle": "npm:5.1.0"
@@ -4752,7 +4752,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/menu@npm:9.1.0, @spectrum-css/menu@workspace:components/menu":
+"@spectrum-css/menu@npm:9.1.1, @spectrum-css/menu@workspace:components/menu":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/menu@workspace:components/menu"
   dependencies:
@@ -4903,7 +4903,7 @@ __metadata:
     "@spectrum-css/commons": "npm:11.0.0"
     "@spectrum-css/helptext": "npm:7.1.0"
     "@spectrum-css/icon": "npm:9.1.0"
-    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/menu": "npm:9.1.1"
     "@spectrum-css/popover": "npm:8.2.0"
     "@spectrum-css/progresscircle": "npm:5.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
@@ -4935,7 +4935,7 @@ __metadata:
   resolution: "@spectrum-css/pickerbutton@workspace:components/pickerbutton"
   dependencies:
     "@spectrum-css/icon": "npm:9.1.0"
-    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/menu": "npm:9.1.1"
     "@spectrum-css/popover": "npm:8.2.0"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
@@ -4963,7 +4963,7 @@ __metadata:
     "@spectrum-css/commons": "npm:11.0.0"
     "@spectrum-css/dialog": "npm:12.1.0"
     "@spectrum-css/divider": "npm:5.1.0"
-    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/menu": "npm:9.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/alertdialog": ">=4.0.0 <5.0.0"
@@ -5309,7 +5309,7 @@ __metadata:
   resolution: "@spectrum-css/tabs@workspace:components/tabs"
   dependencies:
     "@spectrum-css/icon": "npm:9.1.0"
-    "@spectrum-css/menu": "npm:9.1.0"
+    "@spectrum-css/menu": "npm:9.1.1"
     "@spectrum-css/picker": "npm:9.1.2"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
