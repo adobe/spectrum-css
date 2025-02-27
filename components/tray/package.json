@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tray",
-	"version": "6.0.0-next.0",
+	"version": "6.0.0-next.1",
 	"description": "The Spectrum CSS tray component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -27,7 +27,7 @@
 	"peerDependencies": {
 		"@spectrum-css/button": ">=15.0.0-next.0",
 		"@spectrum-css/dialog": ">=13.0.0-next.0",
-		"@spectrum-css/divider": ">=5.0.0 <6.0.0",
+		"@spectrum-css/divider": ">=6.0.0-next.0",
 		"@spectrum-css/icon": ">=10.0.0-next.0",
 		"@spectrum-css/modal": ">=7.0.0 <8.0.0",
 		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
@@ -54,8 +54,8 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/button": "15.0.0-next.0",
-		"@spectrum-css/dialog": "13.0.0-next.0",
-		"@spectrum-css/divider": "5.1.0",
+		"@spectrum-css/dialog": "13.0.0-next.1",
+		"@spectrum-css/divider": "6.0.0-next.0",
 		"@spectrum-css/icon": "10.0.0-next.0",
 		"@spectrum-css/modal": "7.1.0",
 		"@spectrum-css/tokens": "16.0.1"
