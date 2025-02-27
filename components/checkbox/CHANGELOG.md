@@ -1,7 +1,12 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+## 10.1.1
+
+### Patch Changes
+
+- [#3573](https://github.com/adobe/spectrum-css/pull/3573) [`3caeff3`](https://github.com/adobe/spectrum-css/commit/3caeff3a62220a988e5b64af66c1333e524f1b75) Thanks [@TarunAdobe](https://github.com/TarunAdobe)!
+
+- Updated deselected (default) border color of the box to be neutral content color default in spectrum-two theme
 
 ## 10.1.0
 

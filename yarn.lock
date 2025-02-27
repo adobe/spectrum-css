@@ -3895,7 +3895,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/assetcard@workspace:components/assetcard"
   dependencies:
-    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/checkbox": ">=10.0.0 <11.0.0"
@@ -3912,7 +3912,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/assetlist@workspace:components/assetlist"
   dependencies:
-    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
@@ -4001,7 +4001,7 @@ __metadata:
     "@spectrum-css/buttongroup": "npm:9.1.0"
     "@spectrum-css/calendar": "npm:7.1.0"
     "@spectrum-css/card": "npm:11.1.0"
-    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.1"
     "@spectrum-css/clearbutton": "npm:7.1.0"
     "@spectrum-css/closebutton": "npm:6.1.0"
     "@spectrum-css/coachindicator": "npm:4.1.0"
@@ -4137,7 +4137,7 @@ __metadata:
   dependencies:
     "@spectrum-css/actionbutton": "npm:7.1.1"
     "@spectrum-css/asset": "npm:7.1.0"
-    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
     "@spectrum-css/typography": "npm:8.1.0"
@@ -4167,7 +4167,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/checkbox@npm:10.1.0, @spectrum-css/checkbox@workspace:components/checkbox":
+"@spectrum-css/checkbox@npm:10.1.1, @spectrum-css/checkbox@workspace:components/checkbox":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/checkbox@workspace:components/checkbox"
   dependencies:
@@ -4565,7 +4565,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/fieldgroup@workspace:components/fieldgroup"
   dependencies:
-    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.1"
     "@spectrum-css/helptext": "npm:7.1.0"
     "@spectrum-css/radio": "npm:10.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
@@ -4756,7 +4756,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/menu@workspace:components/menu"
   dependencies:
-    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.1"
     "@spectrum-css/divider": "npm:5.1.0"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/switch": "npm:6.1.0"
@@ -4807,7 +4807,7 @@ __metadata:
   resolution: "@spectrum-css/miller@workspace:components/miller"
   dependencies:
     "@spectrum-css/assetlist": "npm:8.1.0"
-    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
@@ -5280,7 +5280,7 @@ __metadata:
   resolution: "@spectrum-css/table@workspace:components/table"
   dependencies:
     "@spectrum-css/button": "npm:14.1.1"
-    "@spectrum-css/checkbox": "npm:10.1.0"
+    "@spectrum-css/checkbox": "npm:10.1.1"
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/thumbnail": "npm:8.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
