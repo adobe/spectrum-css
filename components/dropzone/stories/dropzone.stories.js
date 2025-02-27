@@ -61,6 +61,9 @@ Dragged.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * The filled state of a drop zone is used to indicate that a file has been dropped into the drop zone. Since the type size doesn't change in this state the dropzone size would be identical in all size variants.
+*/
 export const Filled = Template.bind({});
 Filled.args = {
 	isDragged: true,
