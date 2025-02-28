@@ -2,4 +2,4 @@
 "@spectrum-css/picker": patch
 ---
 
-chore: upgrade picker border-color
+fix(picker): update S2 border-color [SWC-641]
