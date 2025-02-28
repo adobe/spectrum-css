@@ -1,5 +1,11 @@
 # Change log
 
+## 8.1.2
+
+### Patch Changes
+
+- [#3575](https://github.com/adobe/spectrum-css/pull/3575) [`2e17d10`](https://github.com/adobe/spectrum-css/commit/2e17d109ebec3c2745c32a15840af5c636c8dc5d) Thanks [@TarunAdobe](https://github.com/TarunAdobe)! - Reverts all themes' disabled icon color back to original spectrum-white and border color to black with opacity token `swatch-disabled-icon-border-opacity`.
+
 ## 8.1.1
 
 ### Patch Changes
