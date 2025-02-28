@@ -23,18 +23,63 @@ const valuesParser = require("postcss-values-parser");
 function rgbMappingFunction ({
 	colorFunctionalNotation = false,
 }) {
+
 	return {
 		postcssPlugin: "postcss-rgb-mapping",
+		/** @type {import('postcss').RootProcessor} */
+		Root(root) {
+			/* Gather all the custom properties that reference "unprocessed" transparent tokens (i.e. transparent-white-200) */
+			const transparentTokens = new Set();
+			root.walkDecls(decl => {
+				if (decl.prop.startsWith('--spectrum-transparent-') && !decl.prop.endsWith('rgb') && !decl.prop.endsWith('opacity')) {
+					transparentTokens.add(decl.prop);
+				}
+			});
+
+			root.walkDecls(decl => {
+				const { prop, value } = decl;
+
+				/* Determine if this property is a custom property */
+				const isCustomProp = prop.startsWith("--");
+
+				/* Determine if this property has already been processed */
+				const isProcessed = prop.endsWith("rgb") || prop.endsWith("opacity");
+
+				/* Check for transparent token reference */
+				const transparentMatch = value.match(/var\((--spectrum-transparent-[^\s)]+)\)/);
+				if (isCustomProp && !isProcessed && transparentMatch) {
+					const referencedToken = transparentMatch[1];
+
+					if (transparentTokens.has(referencedToken)) {
+						/* Create the new RGB and opacity properties */
+						decl.cloneBefore({
+							prop: `${prop}-rgb`,
+							value: `var(${referencedToken}-rgb)`
+						});
+						decl.cloneBefore({
+							prop: `${prop}-opacity`,
+							value: `var(${referencedToken}-opacity)`
+						});
+
+						/* Update the original declaration */
+						decl.value = `rgba(var(${prop}-rgb)${colorFunctionalNotation ? " / " : ", "}var(${prop}-opacity))`;
+					}
+				}
+				return;
+			});
+		},
+
 		/** @type {import('postcss').DeclarationProcessor} */
 		Declaration(decl, { Warning }) {
 			const { prop, value } = decl;
 
 			/* Determine if this property is a custom property */
 			const isCustomProp = prop.startsWith("--");
+
 			/* Determine if this property has already been processed */
 			const isProcessed = prop.endsWith("rgb") || prop.endsWith("opacity");
 
-			/* Parse the value for it's parts */
+			/* Parse the value for its parts */
 			const parsedValue = valuesParser.parse(value) || [];
 
 			/* Determine if the value has an rgb or rgba value */
@@ -114,7 +159,6 @@ function rgbMappingFunction ({
 			decl.assign({
 				value: `rgba(var(${prop}-rgb)${a ? `${colorFunctionalNotation ? " /" : ","} var(${prop}-opacity)` : ""})`,
 			});
-
 			return;
 		},
 	};
