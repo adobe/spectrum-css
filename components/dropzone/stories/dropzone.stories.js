@@ -85,14 +85,12 @@ WithForcedColors.parameters = {
 	},
 };
 
-
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withBorder: false,
 	withHeader: false,
 	...args
 }, context);
-
 Sizing.args = {};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {

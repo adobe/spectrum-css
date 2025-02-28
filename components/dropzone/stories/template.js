@@ -1,13 +1,11 @@
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-
-
-
 import { styleMap } from "lit/directives/style-map.js";
+
 import "../index.css";
 
 export const Template = ({
@@ -19,7 +17,7 @@ export const Template = ({
 	title,
 	description,
 	label,
-	id,
+	id = getRandomId("dropzone"),
 	size = "m",
 	image = "dropzone-illustration.png",
 	...globals
@@ -52,7 +50,7 @@ export const Template = ({
         stroke-linecap="round"
 				stroke-linejoin="round"
 				vector-effect="non-scaling-stroke"
-        class="${rootClass}-stroke-path"
+        class="${rootClass}-strokePath"
       />
     </svg>
 		<div class="${rootClass}-content">
@@ -65,11 +63,10 @@ export const Template = ({
 			})}
 			<div class="${rootClass}-actions">
 				${isDragged && isFilled
-					? ActionButton({
+					? Button({
 						label: label,
 						customClasses: [`${rootClass}-button`],
-						isSelected: true,
-						isEmphasized: true
+						variant: "accent",
 					})
 					: Button({
 						label: label,

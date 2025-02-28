@@ -10,11 +10,15 @@ The component reflects the [new design](https://www.figma.com/design/eoZHKJH9a3L
 
 ### SVG Border
 
-To support the intention of the design, an SVG element is used. There modifiable tokens to adjust the length of dashed lines and the gap between them. It's understood it may be too much to consume an additional element so there's a fallback where the SVG element is not necessary - dropzone will use the standard `border` CSS property.
+To support the intention of the design, an SVG element is used. There are custom `--mod` tokens to adjust the length of dashed lines and the gap between them. It's understood it may be too much to consume an additional element so there's a fallback where the SVG element is not necessary - dropzone will use the standard `border` CSS property.
 
 ### New mods
 
 `--mod-drop-zone-content-height`
+`--mod-drop-zone-edge-to-text`
+`--mod-drop-zone-title-line-height`
+`--mod-drop-zone-border-dash-length`
+`--mod-drop-zone-border-dash-gap`
 
 ### Removed mods
 
