@@ -59,7 +59,8 @@ export const withLanguageWrapper = makeDecorator({
 
 					},
 				});
-			} catch (e) {/* empty */}
+			}
+			catch (e) {/* empty */}
 		}, [lang, currentKitId, window]);
 
 		return StoryFn(context);

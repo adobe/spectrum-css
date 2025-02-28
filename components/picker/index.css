@@ -265,7 +265,7 @@
 			border-color: var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
 		}
 
-		&.is-placeholder {
+		.spectrum-Picker-label.is-placeholder {
 			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
 		}
 
