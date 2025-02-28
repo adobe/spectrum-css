@@ -289,7 +289,7 @@
 		&.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
 		&.is-indeterminate .spectrum-Checkbox-box {
 			&::before {
-				border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-emphasized-color-hover, var(--spectrum-checkbox-emphasized-color-hover)));
+				border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-emphasized-color-hover, var(--spectrum-checkbox-emphasized-color-hover)));
 			}
 		}
 	}
@@ -310,7 +310,7 @@
 		&.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
 		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
 			&::before {
-				border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
+				border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
 			}
 		}
 	}
