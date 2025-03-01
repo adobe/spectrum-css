@@ -244,7 +244,7 @@ export const WorkflowDefaultTemplate = (args, context) => html`
 		},
 		context,
 		[
-			"AlertCircle",
+			"AlertTriangle",
 			"Bell",
 			"Camera",
 			"Color",
@@ -255,7 +255,7 @@ export const WorkflowDefaultTemplate = (args, context) => html`
 			"Files",
 			"Hand",
 			"Lightbulb",
-			"Paragraph",
+			"InfoCircle",
 		]
 	)}
 `;
