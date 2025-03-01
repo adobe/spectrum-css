@@ -459,7 +459,7 @@ export const DisabledItemGroup = (args, context) => {
 						context,
 						shouldTruncate: group.shouldTruncate || false,
 						items: group.items,
-					})}
+					}, context)}
 				`
 			}, context)}
 		`)
@@ -568,11 +568,11 @@ export const OverflowGroup = (args, context) => {
 						context,
 						shouldTruncate: group.shouldTruncate || false,
 						items: group.items,
-					})}
+					}, context)}
 				`
-			})}
+			}, context)}
 		`)
-	});
+	}, context);
 };
 
 export const SelectionGroup = (args, context) => {
@@ -686,12 +686,12 @@ export const SelectionGroup = (args, context) => {
 				selectionMode: group.selectionMode || "none",
 				hasActions: group.hasActions || false,
 				items: group.items,
-			})
+			}, context)
 		}, context))
 	});
 };
 
-export const SubmenuInPopover = (context) => Popover({
+export const SubmenuInPopover = (args, context) => Popover({
 	isOpen: true,
 	position: "end-top",
 	customStyles: {
@@ -703,7 +703,8 @@ export const SubmenuInPopover = (context) => Popover({
 		...args,
 	}, context),
 	content: [
-		(args, context) => Template({
+		Template({
+			...args,
 			items: [
 				{
 					label: "Language",
@@ -718,9 +719,8 @@ export const SubmenuInPopover = (context) => Popover({
 					label: "Show grid",
 				}
 			],
-			...args
 		}, context),
-		(args, context) => Popover({
+		Popover({
 			isOpen: true,
 			position: "end-top",
 			customStyles: {
@@ -728,7 +728,8 @@ export const SubmenuInPopover = (context) => Popover({
 				"inline-size": "120px",
 			},
 			content: [
-				(args, context) => Template({
+				Template({
+					...args,
 					selectionMode: "single",
 					items: [
 						{
@@ -751,10 +752,8 @@ export const SubmenuInPopover = (context) => Popover({
 							label: "日本語",
 						}
 					],
-					...args,
 				}, context)
 			],
-			...args,
 		}, context)
 	],
 }, context);
