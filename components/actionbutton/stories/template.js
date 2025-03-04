@@ -109,7 +109,13 @@ export const Template = ({
 			${when(hasPopup && hasPopup !== "false", () =>
 				Icon({
 					size,
-					iconName: "CornerTriangle",
+					iconName: "CornerTriangle" + ({
+						xs: "75",
+						s: "75",
+						m: "100",
+						l: "200",
+						xl: "300",
+					}[size] || "100"),
 					setName: "ui",
 					customClasses: [`${rootClass}-hold`],
 				}, context)
