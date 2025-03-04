@@ -75,7 +75,7 @@ export const Template = ({
 	labelText,
 	characterCount,
 	iconName,
-	iconSet,
+	iconSet = "workflow",
 	pattern,
 	placeholder,
 	name,
