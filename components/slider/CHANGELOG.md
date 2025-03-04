@@ -1,5 +1,12 @@
 # Change log
 
+## 6.1.1-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`6200a63`](https://github.com/adobe/spectrum-css/commit/6200a63f2c7dc1d2b0481c33b17c86427726c0bd)]:
+  - @spectrum-css/stepper@7.1.2-next.0
+
 ## 6.1.0
 
 ### Minor Changes

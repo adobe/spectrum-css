@@ -1,5 +1,11 @@
 # Change log
 
+## 7.1.2-next.0
+
+### Patch Changes
+
+- [#3594](https://github.com/adobe/spectrum-css/pull/3594) [`6200a63`](https://github.com/adobe/spectrum-css/commit/6200a63f2c7dc1d2b0481c33b17c86427726c0bd) Thanks [@TarunAdobe](https://github.com/TarunAdobe)! - Updates Stepper's key-focus border color (`--spectrum-stepper-border-color-keyboard-focus`) to `--spectrum-gray-800`.
+
 ## 7.1.1
 
 ### Patch Changes

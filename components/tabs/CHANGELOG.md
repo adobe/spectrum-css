@@ -1,5 +1,12 @@
 # Change log
 
+## 6.1.2-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`f286c68`](https://github.com/adobe/spectrum-css/commit/f286c68ee8988eafb36ab03a5acbee5aac71e938)]:
+  - @spectrum-css/picker@9.1.3-next.0
+
 ## 7.0.0
 
 ### Patch Changes
