@@ -11,11 +11,6 @@
   "linked": [],
   "access": "public",
   "baseBranch": "main",
-  "updateInternalDependencies": "minor",
-  "useCalculatedVersion": true,
-  "ignore": [],
-  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
-    "onlyUpdatePeerDependentsWhenOutOfRange": true,
-    "updateInternalDependents": "out-of-range"
-  }
+  "updateInternalDependencies": "patch",
+  "ignore": []
 }
