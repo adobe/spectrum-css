@@ -2,4 +2,4 @@
 "@spectrum-css/stepper": patch
 ---
 
-updated stepper Default variant, Key focus state border color to gray-800
+Updates Stepper's key-focus border color (`--spectrum-stepper-border-color-keyboard-focus`) to `--spectrum-gray-800`.
