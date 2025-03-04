@@ -1,8 +1,5 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## 7.0.0
 
 ### Patch Changes
@@ -36,17 +33,19 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes a bug in the content of the `dist/index-theme.css` file.
+- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
+Fixes a bug in the content of the `dist/index-theme.css` file.
 
-  Expected output example for the index-theme.css:
+Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
 
-  ```
-  .spectrum-ActionButton {
-   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
-   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
-  ```
+Expected output example for the index-theme.css:
+
+```css
+.spectrum-ActionButton {
+  --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+  --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+```
 
 - Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
   - @spectrum-css/icon@9.0.1
@@ -57,29 +56,31 @@ Dependency alignment across the project.
 
 ### Major Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)!
 
-  This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
+### 🛑 Breaking change
 
-  For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
+This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
 
-  For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
+For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
 
-  If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
+For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
 
-  ### Deprecations
+If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
 
-  The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
+### Deprecations
 
-  The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
+The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
 
-  ### File usage
+The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
 
-  If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
+### File usage
 
-  If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
 
-  To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
+If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+
+To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
 
 ### Patch Changes
 
@@ -187,8 +188,6 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/picker@>=8
   - @spectrum-css/tokens@>=14
 
-<a name="5.0.0"></a>
-
 ## 5.0.0
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.1.4...@spectrum-css/tabs@5.0.0)
@@ -204,27 +203,20 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
-<a name="4.1.4"></a>
-
 ## 4.1.4
 
 🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.1.3...@spectrum-css/tabs@4.1.4)
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.1.3"></a>
-
 ## 4.1.3
 
 🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.1.2...@spectrum-css/tabs@4.1.3)
-
-<a name="4.1.2"></a>
 
 ## 4.1.2
 
 🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.1.1...@spectrum-css/tabs@4.1.2)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-<a name="4.1.1"></a>
 
 ## 4.1.1
 
@@ -232,29 +224,23 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.1.0"></a>
-
 ## 4.1.0
 
 🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.28...@spectrum-css/tabs@4.1.0)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.28"></a>
-🗓 20 4.0.28
+## 4.0.28
 
 🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.27...@spectrum-css/tabs@4.0.28)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.27"></a>
+## 4.0.27
 
-🗓 20
 🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.26...@spectrum-css/tabs@4.0.27)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="4.0.26"></a>
 
 ## 4.0.26
 
@@ -264,35 +250,27 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - **tabs:**focus outline only on keyboard focus([ec96da6](https://github.com/adobe/spectrum-css/commit/ec96da6))
 
-<a name="4.0.25"></a>
+## 4.0.25
 
-🗓 20
 🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.23...@spectrum-css/tabs@4.0.25)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.24"></a>
-
 ## 4.0.24
 
 🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.23...@spectrum-css/tabs@4.0.24)
-**Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.23"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 4.0.23
 
 🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.22...@spectrum-css/tabs@4.0.23)
-
-🗓 20
-<a name="4.0.22"></a>
 
 ## 4.0.22
 
 🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.21...@spectrum-css/tabs@4.0.22)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-<a name="4.0.21"></a>
 
 ## 4.0.21
 
@@ -300,29 +278,23 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.20"></a>
-
 ## 4.0.20
 
 🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.19...@spectrum-css/tabs@4.0.20)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.19"></a>
-🗓 20 4.0.19
+## 4.0.19
 
 🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.18...@spectrum-css/tabs@4.0.19)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.18"></a>
+## 4.0.18
 
-🗓 20
 🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.17...@spectrum-css/tabs@4.0.18)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="4.0.17"></a>
 
 ## 4.0.17
 
@@ -330,28 +302,21 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.16"></a>
-
 ## 4.0.16
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/tabs
+🗓 2023
 
-<a name="4.0.15"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 4.0.15
 
 🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.14...@spectrum-css/tabs@4.0.15)
-**Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.14"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 4.0.14
 
 🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.13...@spectrum-css/tabs@4.0.14)
-
-🗓 20
-<a name="4.0.13"></a>
 
 ## 4.0.13
 
@@ -359,23 +324,19 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🔙 Reverts
 
-🗓 20gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
-
-<a name="4.0.12"></a>
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 ## 4.0.12
 
 🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.11...@spectrum-css/tabs@4.0.12)
 
-🗓 20
-<a name="4.0.11"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 4.0.11
 
 🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.9...@spectrum-css/tabs@4.0.11)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-<a name="4.0.10"></a>
 
 ## 4.0.10
 
@@ -383,14 +344,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.9"></a>
+## 4.0.9
 
-🗓 20
 🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.8...@spectrum-css/tabs@4.0.9)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="4.0.8"></a>
 
 ## 4.0.8
 
@@ -398,35 +356,29 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.7"></a>
-
 ## 4.0.7
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/tabs
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.6...@spectrum-css/tabs@4.0.7)
 
-<a name="4.0.6"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 4.0.6
 
 🗓 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.5...@spectrum-css/tabs@4.0.6)
-**Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.5"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 4.0.5
 
 🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.4...@spectrum-css/tabs@4.0.5)
 
-🗓 20
-<a name="4.0.4"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 4.0.4
 
 🗓 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.3...@spectrum-css/tabs@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-<a name="4.0.3"></a>
 
 ## 4.0.3
 
@@ -434,24 +386,20 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.2"></a>
-
 ## 4.0.2
 
 🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.1...@spectrum-css/tabs@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.1"></a>
-🗓 20 4.0.1
+## 4.0.1
 
 🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@4.0.0...@spectrum-css/tabs@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="4.0.0"></a>
+## 4.0.0
 
-🗓 20
 🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.64...@spectrum-css/tabs@4.0.0)
 
 - feat(tabs)!: migrate tokens (#1902)([6d07436](https://github.com/adobe/spectrum-css/commit/6d07436)), closes[#1902](https://github.com/adobe/spectrum-css/issues/1902)
@@ -460,20 +408,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 #### Compact Tabs
 
-🗓 20mpact tabs should not be used without `.spectrum-Tabs--quiet`.
+- Compact tabs should not be used without `.spectrum-Tabs--quiet`.
 
 #### 🛑 BREAKING CHANGES
 
 - Migrates the Tabs component to use `@adobe/spectrum-tokens`.
 
-<a name="3.2.64"></a>
+## 3.2.64
 
-🗓 20
 🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.63...@spectrum-css/tabs@3.2.64)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.63"></a>
 
 ## 3.2.63
 
@@ -481,14 +426,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.62"></a>
-
 ## 3.2.62
 
-🗓 20
-**Note:** Version bump only for package @spectrum-css/tabs
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.61...@spectrum-css/tabs@3.2.62)
 
-<a name="3.2.61"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 3.2.61
 
@@ -496,30 +438,23 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.60"></a>
-
 ## 3.2.60
 
 🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.59...@spectrum-css/tabs@3.2.60)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-<a name="3.2.59"></a>
 
 ## 3.2.59
 
 🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.58...@spectrum-css/tabs@3.2.59)
 
-### 🐛 Bug fixes
-
-🗓 20
-<a name="3.2.58"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 3.2.58
 
 🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.57...@spectrum-css/tabs@3.2.58)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-<a name="3.2.57"></a>
 
 ## 3.2.57
 
@@ -527,43 +462,35 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.56"></a>
-
 ## 3.2.56
 
 🗓 2023-05-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.55...@spectrum-css/tabs@3.2.56)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.55"></a>
-🗓 20 3.2.55
+## 3.2.55
 
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.54...@spectrum-css/tabs@3.2.55)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.54"></a>
+## 3.2.54
 
-🗓 20
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.53...@spectrum-css/tabs@3.2.54)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.53"></a>
-
 ## 3.2.53
 
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.52...@spectrum-css/tabs@3.2.53)
-**Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.52"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 3.2.52
 
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.51...@spectrum-css/tabs@3.2.52)
 
-🗓 20
-<a name="3.2.51"></a>
+**Note:** Version bump only for package @spectrum-css/tabs
 
 ## 3.2.51
 
@@ -571,15 +498,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.50"></a>
-
 ## 3.2.50
 
 🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.49...@spectrum-css/tabs@3.2.50)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.49"></a>
 
 ## 3.2.49
 
@@ -587,15 +510,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.48"></a>
-
 ## 3.2.48
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.47...@spectrum-css/tabs@3.2.48)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.47"></a>
 
 ## 3.2.47
 
@@ -603,15 +522,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.46"></a>
-
 ## 3.2.46
 
 🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.45...@spectrum-css/tabs@3.2.46)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.45"></a>
 
 ## 3.2.45
 
@@ -619,15 +534,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.44"></a>
-
 ## 3.2.44
 
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.43...@spectrum-css/tabs@3.2.44)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.43"></a>
 
 ## 3.2.43
 
@@ -635,15 +546,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.42"></a>
-
 ## 3.2.42
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.40...@spectrum-css/tabs@3.2.42)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.41"></a>
 
 ## 3.2.41
 
@@ -651,15 +558,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.40"></a>
-
 ## 3.2.40
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.39...@spectrum-css/tabs@3.2.40)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.39"></a>
 
 ## 3.2.39
 
@@ -667,15 +570,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.38"></a>
-
 ## 3.2.38
 
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.37...@spectrum-css/tabs@3.2.38)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.37"></a>
 
 ## 3.2.37
 
@@ -683,15 +582,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.36"></a>
-
 ## 3.2.36
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.34...@spectrum-css/tabs@3.2.36)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.35"></a>
 
 ## 3.2.35
 
@@ -699,15 +594,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.34"></a>
-
 ## 3.2.34
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.33...@spectrum-css/tabs@3.2.34)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.33"></a>
 
 ## 3.2.33
 
@@ -715,15 +606,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.32"></a>
-
 ## 3.2.32
 
 🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.31...@spectrum-css/tabs@3.2.32)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.31"></a>
 
 ## 3.2.31
 
@@ -731,15 +618,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.30"></a>
-
 ## 3.2.30
 
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.29...@spectrum-css/tabs@3.2.30)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.29"></a>
 
 ## 3.2.29
 
@@ -747,15 +630,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.28"></a>
-
 ## 3.2.28
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.27...@spectrum-css/tabs@3.2.28)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.27"></a>
 
 ## 3.2.27
 
@@ -763,15 +642,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.26"></a>
-
 ## 3.2.26
 
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.25...@spectrum-css/tabs@3.2.26)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.25"></a>
 
 ## 3.2.25
 
@@ -779,15 +654,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.24"></a>
-
 ## 3.2.24
 
 🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.22...@spectrum-css/tabs@3.2.24)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.23"></a>
 
 ## 3.2.23
 
@@ -795,23 +666,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.22"></a>
-
 ## 3.2.22
 
 🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.21...@spectrum-css/tabs@3.2.22)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.21"></a>
-
 ## 3.2.21
 
 🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.20...@spectrum-css/tabs@3.2.21)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.20"></a>
 
 ## 3.2.20
 
@@ -821,15 +686,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - **tabs:** selection indicator scroll overflow border ([#1513](https://github.com/adobe/spectrum-css/issues/1513)) ([3f740ad](https://github.com/adobe/spectrum-css/commit/3f740ad))
 
-<a name="3.2.19"></a>
-
 ## 3.2.19
 
 🗓 2022-07-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.18...@spectrum-css/tabs@3.2.19)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.18"></a>
 
 ## 3.2.18
 
@@ -837,15 +698,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.17"></a>
-
 ## 3.2.17
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.15...@spectrum-css/tabs@3.2.17)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.16"></a>
 
 ## 3.2.16
 
@@ -853,15 +710,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.15"></a>
-
 ## 3.2.15
 
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.14...@spectrum-css/tabs@3.2.15)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.14"></a>
 
 ## 3.2.14
 
@@ -869,15 +722,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.13"></a>
-
 ## 3.2.13
 
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.12...@spectrum-css/tabs@3.2.13)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.12"></a>
 
 ## 3.2.12
 
@@ -885,15 +734,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.11"></a>
-
 ## 3.2.11
 
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.10...@spectrum-css/tabs@3.2.11)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.10"></a>
 
 ## 3.2.10
 
@@ -901,15 +746,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.9"></a>
-
 ## 3.2.9
 
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.8...@spectrum-css/tabs@3.2.9)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.8"></a>
 
 ## 3.2.8
 
@@ -917,15 +758,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.7"></a>
-
 ## 3.2.7
 
 🗓 2022-03-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.6...@spectrum-css/tabs@3.2.7)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.6"></a>
 
 ## 3.2.6
 
@@ -933,15 +770,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.5"></a>
-
 ## 3.2.5
 
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.4...@spectrum-css/tabs@3.2.5)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.4"></a>
 
 ## 3.2.4
 
@@ -949,15 +782,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.3"></a>
-
 ## 3.2.3
 
 🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.2...@spectrum-css/tabs@3.2.3)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.2"></a>
 
 ## 3.2.2
 
@@ -965,15 +794,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.2.1"></a>
-
 ## 3.2.1
 
 🗓 2022-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.2.0...@spectrum-css/tabs@3.2.1)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.2.0"></a>
 
 ## 3.2.0
 
@@ -987,8 +812,6 @@ Output for all component CSS files is now being run through a lightweight optimi
 - **tabs:** use correct vars for focusring ([972c82e](https://github.com/adobe/spectrum-css/commit/972c82e))
 - **tabs:** values now reference correct custom props ([e0a859d](https://github.com/adobe/spectrum-css/commit/e0a859d))
 
-<a name="3.1.9"></a>
-
 ## 3.1.9
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.7...@spectrum-css/tabs@3.1.9)
@@ -997,23 +820,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
-<a name="3.1.8"></a>
-
 ## 3.1.8
 
-🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.8-beta.0...@spectrum-css/tabs@3.1.8)
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.7...@spectrum-css/tabs@3.1.8)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.1.8-beta.0"></a>
-
-## 3.1.8-beta.0
-
-🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.7...@spectrum-css/tabs@3.1.8-beta.0)
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.1.7"></a>
 
 ## 3.1.7
 
@@ -1021,15 +832,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.1.6"></a>
-
 ## 3.1.6
 
 🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.5...@spectrum-css/tabs@3.1.6)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.1.5"></a>
 
 ## 3.1.5
 
@@ -1037,15 +844,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.1.4"></a>
-
 ## 3.1.4
 
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.3...@spectrum-css/tabs@3.1.4)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.1.3"></a>
 
 ## 3.1.3
 
@@ -1053,106 +856,29 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.1.2"></a>
-
 ## 3.1.2
 
-🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.0-alpha.1...@spectrum-css/tabs@3.1.2)
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.1...@spectrum-css/tabs@3.1.2)
 
 ### 🐛 Bug fixes
 
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="3.1.1"></a>
 
 ## 3.1.1
 
-🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.0-alpha.1...@spectrum-css/tabs@3.1.1)
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.0...@spectrum-css/tabs@3.1.1)
 
 ### 🐛 Bug fixes
 
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="3.1.0"></a>
 
 ## 3.1.0
 
-🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.0-alpha.1...@spectrum-css/tabs@3.1.0)
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.2...@spectrum-css/tabs@3.1.0)
 
 ### 🐛 Bug fixes
 
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="3.1.0-alpha.1"></a>
-
-## 3.1.0-alpha.1
-
-🗓 2021-08-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.0-alpha.0...@spectrum-css/tabs@3.1.0-alpha.1)
-
-### 🐛 Bug fixes
-
-- **tabs:** vertically center tab item text in vertical tabs ([c7c0b29](https://github.com/adobe/spectrum-css/commit/c7c0b29))
-
-<a name="3.1.0-alpha.0"></a>
-
-## 3.1.0-alpha.0
-
-🗓 2021-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.4...@spectrum-css/tabs@3.1.0-alpha.0)
-
-### ✨ Features
-
-#### T-shirt sizing
-
-Tabs now support t-shirt sizing and require that you specify the size by adding a `.spectrum-Tabs--size*` class.
-
-- **tabs:** add t-shirt size classes and styles ([4b818f2](https://github.com/adobe/spectrum-css/commit/4b818f2))
-
-### 🐛 Bug fixes
-
-- **tabs:** remove improper indentation for horizontal tabs ([79b7a82](https://github.com/adobe/spectrum-css/commit/79b7a82)), closes [#1107](https://github.com/adobe/spectrum-css/issues/1107)
-- switched to dna-7.0 token names ([7e848dc](https://github.com/adobe/spectrum-css/commit/7e848dc))
-
-<a name="3.0.3-alpha.4"></a>
-
-## 3.0.3-alpha.4
-
-🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.3...@spectrum-css/tabs@3.0.3-alpha.4)
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.3-alpha.3"></a>
-
-## 3.0.3-alpha.3
-
-🗓 2021-07-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.2...@spectrum-css/tabs@3.0.3-alpha.3)
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.3-alpha.2"></a>
-
-## 3.0.3-alpha.2
-
-🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.1...@spectrum-css/tabs@3.0.3-alpha.2)
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.3-alpha.1"></a>
-
-## 3.0.3-alpha.1
-
-🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.0...@spectrum-css/tabs@3.0.3-alpha.1)
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.3-alpha.0"></a>
-
-## 3.0.3-alpha.0
-
-🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.2...@spectrum-css/tabs@3.0.3-alpha.0)
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.2"></a>
 
 ## 3.0.2
 
@@ -1160,107 +886,17 @@ Tabs now support t-shirt sizing and require that you specify the size by adding 
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.0.1"></a>
-
 ## 3.0.1
 
 🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0...@spectrum-css/tabs@3.0.1)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="3.0.0"></a>
-
 ## 3.0.0
 
-🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.6...@spectrum-css/tabs@3.0.0)
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.5...@spectrum-css/tabs@3.0.0)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.0-beta.6"></a>
-
-## 3.0.0-beta.6
-
-🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.5...@spectrum-css/tabs@3.0.0-beta.6)
-
-### ✨ Features
-
-- change all instances of .is-selected to .is-open ([e28af42](https://github.com/adobe/spectrum-css/commit/e28af42))
-- replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
-
-### 🐛 Bug fixes
-
-- make Tabs build again ([33d0e97](https://github.com/adobe/spectrum-css/commit/33d0e97))
-- unbreak the build for Tabs ([832949e](https://github.com/adobe/spectrum-css/commit/832949e))
-- update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
-- use new Picker markup ([5cc3797](https://github.com/adobe/spectrum-css/commit/5cc3797))
-
-### 🛑 BREAKING CHANGES
-
-- Use .is-open to indicate the popover is shown, not .is-selected
-- Tabs now uses new Picker markup
-- markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
-
-<a name="3.0.0-beta.5"></a>
-
-## 3.0.0-beta.5
-
-🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.4...@spectrum-css/tabs@3.0.0-beta.5)
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.0-beta.4"></a>
-
-## 3.0.0-beta.4
-
-🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.3...@spectrum-css/tabs@3.0.0-beta.4)
-
-### 🐛 Bug fixes
-
-- removed deprecated tokens from tabs and tags ([1e543e4](https://github.com/adobe/spectrum-css/commit/1e543e4))
-
-<a name="3.0.0-beta.3"></a>
-
-## 3.0.0-beta.3
-
-🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.2...@spectrum-css/tabs@3.0.0-beta.3)
-
-### Migration Guide
-
-#### Change workflow icon size to medium
-
-If you use a workflow icon with tab items, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.0-beta.2"></a>
-
-## 3.0.0-beta.2
-
-🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.1...@spectrum-css/tabs@3.0.0-beta.2)
-
-### ✨ Features
-
-- fix tabs markup, support anchors for labels ([#672](https://github.com/adobe/spectrum-css/issues/672)) ([eb07ee7](https://github.com/adobe/spectrum-css/commit/eb07ee7))
-
-<a name="3.0.0-beta.1"></a>
-
-## 3.0.0-beta.1
-
-🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.0...@spectrum-css/tabs@3.0.0-beta.1)
-
-**Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="3.0.0-beta.0"></a>
-
-## 3.0.0-beta.0
-
-🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.5...@spectrum-css/tabs@3.0.0-beta.0)
-
-### ✨ Features
-
-- make Tabs support RTL ([e39628a](https://github.com/adobe/spectrum-css/commit/e39628a))
-
-<a name="2.1.5"></a>
 
 ## 2.1.5
 
@@ -1268,15 +904,11 @@ If you use a workflow icon with tab items, please replace `.spectrum-Icon--sizeS
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="2.1.4"></a>
-
 ## 2.1.4
 
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.3...@spectrum-css/tabs@2.1.4)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="2.1.3"></a>
 
 ## 2.1.3
 
@@ -1284,23 +916,17 @@ If you use a workflow icon with tab items, please replace `.spectrum-Icon--sizeS
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="2.1.2"></a>
-
 ## 2.1.2
 
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.1...@spectrum-css/tabs@2.1.2)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 
-<a name="2.1.1"></a>
-
 ## 2.1.1
 
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.0...@spectrum-css/tabs@2.1.1)
 
 **Note:** Version bump only for package @spectrum-css/tabs
-
-<a name="2.1.0"></a>
 
 ## 2.1.0
 
@@ -1309,8 +935,6 @@ If you use a workflow icon with tab items, please replace `.spectrum-Icon--sizeS
 ### ✨ Features
 
 - add menu icon class, closes [#202](https://github.com/adobe/spectrum-css/issues/202) ([#331](https://github.com/adobe/spectrum-css/issues/331)) ([169940a](https://github.com/adobe/spectrum-css/commit/169940a))
-
-<a name="2.0.0"></a>
 
 ## 2.0.0
 

@@ -77,8 +77,6 @@
     ".spectrum-Picker:hover .spectrum-Picker-menuIcon"
   ],
   "modifiers": [
-    "--mod-animation-duration-100",
-    "--mod-line-height-100",
     "--mod-picker-animation-duration",
     "--mod-picker-background-color-active",
     "--mod-picker-background-color-default",
@@ -141,8 +139,7 @@
     "--mod-picker-spacing-top-to-alert-icon",
     "--mod-picker-spacing-top-to-disclosure-icon",
     "--mod-picker-spacing-top-to-progress-circle",
-    "--mod-picker-spacing-top-to-text",
-    "--mod-sans-font-family-stack"
+    "--mod-picker-spacing-top-to-text"
   ],
   "component": [
     "--spectrum-picker-animation-duration",
@@ -302,22 +299,6 @@
     "--spectrum-text-to-visual-200",
     "--spectrum-text-to-visual-300",
     "--spectrum-text-to-visual-75"
-  ],
-  "system-theme": [
-    "--system-picker-background-color-active",
-    "--system-picker-background-color-default",
-    "--system-picker-background-color-default-open",
-    "--system-picker-background-color-hover",
-    "--system-picker-background-color-hover-open",
-    "--system-picker-background-color-key-focus",
-    "--system-picker-border-color-active",
-    "--system-picker-border-color-default",
-    "--system-picker-border-color-default-open",
-    "--system-picker-border-color-disabled",
-    "--system-picker-border-color-hover",
-    "--system-picker-border-color-hover-open",
-    "--system-picker-border-color-key-focus",
-    "--system-picker-border-width"
   ],
   "passthroughs": [
     "--mod-button-animation-duration",
