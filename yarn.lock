@@ -4038,7 +4038,7 @@ __metadata:
     "@spectrum-css/opacitycheckerboard": "npm:4.1.0"
     "@spectrum-css/page": "npm:9.1.0"
     "@spectrum-css/pagination": "npm:10.1.0"
-    "@spectrum-css/picker": "npm:9.1.2"
+    "@spectrum-css/picker": "npm:9.1.3"
     "@spectrum-css/pickerbutton": "npm:6.1.1"
     "@spectrum-css/popover": "npm:8.2.0"
     "@spectrum-css/progressbar": "npm:6.1.0"
@@ -4051,7 +4051,7 @@ __metadata:
     "@spectrum-css/splitview": "npm:7.1.0"
     "@spectrum-css/statuslight": "npm:9.1.0"
     "@spectrum-css/steplist": "npm:7.1.0"
-    "@spectrum-css/stepper": "npm:7.1.1"
+    "@spectrum-css/stepper": "npm:7.1.2"
     "@spectrum-css/swatch": "npm:8.1.2"
     "@spectrum-css/swatchgroup": "npm:5.1.0"
     "@spectrum-css/switch": "npm:6.1.0"
@@ -4896,7 +4896,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/picker@npm:9.1.2, @spectrum-css/picker@workspace:components/picker":
+"@spectrum-css/picker@npm:9.1.3, @spectrum-css/picker@workspace:components/picker":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/picker@workspace:components/picker"
   dependencies:
@@ -5139,7 +5139,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/slider@workspace:components/slider"
   dependencies:
-    "@spectrum-css/stepper": "npm:7.1.1"
+    "@spectrum-css/stepper": "npm:7.1.2"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/stepper": ">=7.0.0 <8.0.0"
@@ -5199,7 +5199,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/stepper@npm:7.1.1, @spectrum-css/stepper@workspace:components/stepper":
+"@spectrum-css/stepper@npm:7.1.2, @spectrum-css/stepper@workspace:components/stepper":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/stepper@workspace:components/stepper"
   dependencies:
@@ -5310,7 +5310,7 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/menu": "npm:9.1.1"
-    "@spectrum-css/picker": "npm:9.1.2"
+    "@spectrum-css/picker": "npm:9.1.3"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/icon": ">=9.0.0 <10.0.0"
