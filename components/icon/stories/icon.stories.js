@@ -193,3 +193,20 @@ UIArrows.tags = ["!dev"];
 UIArrows.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+
+/**
+ * In Storybook documentation, if a workflow icon name does not exist in the set, the
+ * placeholder "Circle" icon will be shown. Missing ui icons will render
+ * nothing. The following example purposefully uses an icon name that does
+ * not exist to demonstrate this behavior.
+ */
+export const MissingWorkflowIcon = Default.bind({});
+MissingWorkflowIcon.storyName = "Missing workflow icon placeholder";
+MissingWorkflowIcon.tags = ["!dev"];
+MissingWorkflowIcon.args = {
+	setName: "workflow",
+	iconName: "ThisIconNameDoesNotExist",
+};
+MissingWorkflowIcon.parameters = {
+	chromatic: { disableSnapshot: true },
+};
