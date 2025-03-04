@@ -14,14 +14,14 @@
 @container style(--system: spectrum) {
 	.spectrum-Picker {
 		--spectrum-picker-background-color-default: var(--spectrum-gray-100);
-		--spectrum-picker-background-color-default-open: var(--spectrum-gray-100);
+		--spectrum-picker-background-color-default-open: var(--spectrum-gray-200);
 		--spectrum-picker-background-color-hover: var(--spectrum-gray-200);
 		--spectrum-picker-background-color-hover-open: var(--spectrum-gray-200);
 		--spectrum-picker-background-color-active: var(--spectrum-gray-200);
 		--spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
 
 		--spectrum-picker-border-color-default: var(--spectrum-gray-500);
-		--spectrum-picker-border-color-default-open: var(--spectrum-gray-500);
+		--spectrum-picker-border-color-default-open: var(--spectrum-neutral-content-color-focus);
 		--spectrum-picker-border-color-hover: var(--spectrum-gray-600);
 		--spectrum-picker-border-color-hover-open: var(--spectrum-gray-900);
 		--spectrum-picker-border-color-active: var(--spectrum-gray-700);
