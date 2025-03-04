@@ -60,8 +60,8 @@ const ButtonIconGroup = (args, context) => Container({
 			testHeading: "UI icon (larger)",
 			content: Template({
 				...args,
-				// UI icon that is larger than workflow sizing:
-				iconName: "ArrowDown600",
+				// Largest UI icon from UI icon set:
+				iconName: "Cross600",
 				iconSet: "ui",
 			}, context),
 		},
