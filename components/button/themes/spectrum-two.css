@@ -66,10 +66,10 @@
 
 		/* static white: double the selector, double the fun (specificity...) */
 		&.spectrum-Button--staticWhite {
-			--mod-button-background-color-default: var(--spectrum-transparent-white-900);
-			--mod-button-background-color-hover: var(--spectrum-transparent-white-1000);
-			--mod-button-background-color-down: var(--spectrum-transparent-white-1000);
-			--mod-button-background-color-focus: var(--spectrum-transparent-white-1000);
+			--mod-button-background-color-default: var(--spectrum-transparent-white-800);
+			--mod-button-background-color-hover: var(--spectrum-transparent-white-900);
+			--mod-button-background-color-down: var(--spectrum-transparent-white-900);
+			--mod-button-background-color-focus: var(--spectrum-transparent-white-900);
 
 			--mod-button-content-color-default: var(--spectrum-black);
 			--mod-button-content-color-hover: var(--spectrum-black);
@@ -123,10 +123,10 @@
 
 		/* static black */
 		&.spectrum-Button--staticBlack {
-			--mod-button-background-color-default: var(--spectrum-transparent-black-900);
-			--mod-button-background-color-hover: var(--spectrum-transparent-black-1000);
-			--mod-button-background-color-down: var(--spectrum-transparent-black-1000);
-			--mod-button-background-color-focus: var(--spectrum-transparent-black-1000);
+			--mod-button-background-color-default: var(--spectrum-transparent-black-800);
+			--mod-button-background-color-hover: var(--spectrum-transparent-black-900);
+			--mod-button-background-color-down: var(--spectrum-transparent-black-900);
+			--mod-button-background-color-focus: var(--spectrum-transparent-black-900);
 
 			--mod-button-content-color-default: var(--spectrum-white);
 			--mod-button-content-color-hover: var(--spectrum-white);
