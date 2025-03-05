@@ -8,6 +8,7 @@ module.exports = {
 	],
 	"package.json": (files) => [
 		"yarn constraints --fix",
+		"yarn",
 		`eslint --fix --cache --no-error-on-unmatched-pattern --quiet ${files.join(" ")}`,
 	],
 	"dist/*.css": [
