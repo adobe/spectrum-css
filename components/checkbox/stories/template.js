@@ -68,12 +68,6 @@ export const Template = ({
 				aria-disabled=${ifDefined(isReadOnly ? "true" : undefined)}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
-				@focusin=${function() {
-					updateArgs({ isFocused: true });
-				}}
-				@focusout=${function() {
-					updateArgs({ isFocused: false });
-				}}
 				title=${ifDefined(title)}
 				value=${ifDefined(value)}
 				@change=${(e) => {
