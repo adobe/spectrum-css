@@ -15,6 +15,9 @@ export const Template = ({
 	isChecked = false,
 	isDisabled = false,
 	isReadOnly = false,
+	isFocused = false,
+	isInvalid = false,
+	isHovered,
 	id = getRandomId("radio"),
 	customClasses = [],
 	customStyles = {},
@@ -34,7 +37,9 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--emphasized`]: isEmphasized,
+				"is-hover": isHovered,
 				"is-readOnly" : isReadOnly,
+				"is-invalid": isInvalid,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
@@ -42,7 +47,7 @@ export const Template = ({
 			<input
 				type="radio"
 				name=${name}
-				class="${rootClass}-input"
+				class=${classMap({["is-focus-visible"]: isFocused, [`${rootClass}-input`]: true })}
 				id=${inputId}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
@@ -56,6 +61,12 @@ export const Template = ({
 
 					// Make checked value immutable for read-only.
 					e.preventDefault();
+				}}
+				@focusin=${function() {
+					updateArgs({ isFocused: true });
+				}}
+				@focusout=${function() {
+					updateArgs({ isFocused: false });
 				}}
 			/>
 			<span class="${rootClass}-button ${rootClass}-button--sizeS"></span>

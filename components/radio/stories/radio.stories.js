@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isChecked, isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isChecked, isDisabled, isEmphasized, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
@@ -37,6 +37,7 @@ export default {
 			control: { type: "text" },
 		},
 		isEmphasized,
+		isInvalid,
 		isChecked,
 		isDisabled,
 		isReadOnly,
@@ -47,6 +48,7 @@ export default {
 		label: "Label",
 		isEmphasized: false,
 		isChecked: false,
+		isInvalid: false,
 		isDisabled: false,
 		isReadOnly: false,
 	},
