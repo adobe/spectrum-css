@@ -96,23 +96,12 @@ export const Template = ({
 	}
 	else if (isValid) {
 		iconSet = "ui";
-
-		switch (size) {
-			case "s":
-				iconName = "Checkmark75";
-				break;
-			case "m":
-				iconName = "Checkmark100";
-				break;
-			case "l":
-				iconName = "Checkmark200";
-				break;
-			case "xl":
-				iconName = "Checkmark300";
-				break;
-			default:
-				iconName = "Checkmark"; // Fallback if size is undefined or doesn't match
-		}
+		iconName = "Checkmark" + ({
+			s: "75",
+			m: "100",
+			l: "200",
+			xl: "300",
+		}[size] || "100");
 	}
 
 	return html`
@@ -279,6 +268,14 @@ export const TextFieldOptions = (args, context) => Container({
 			},
 			heading: "Focused",
 			content: Template({...args, isFocused: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Keyboard focused",
+			content: Template({...args, isKeyboardFocused: true}, context)
 		}, context)}
 		${Container({
 			withBorder: false,
