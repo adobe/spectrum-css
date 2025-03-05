@@ -72,6 +72,14 @@ export const TextAreaOptions = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
+			heading: "Keyboard focused",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
 		}, context)}
@@ -86,7 +94,7 @@ export const RequiredOptionsTextArea = (args, context) => Container({
 		${Container({
 			withBorder: false,
 			heading: "Required with (required) label",
-			content: Template({...args, isRequired: true, isRequiredWithoutAsterisk: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
+			content: Template({...args, isRequired: true, isRequiredWithoutAsterisk: true, labelText: "Interests (Required)", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
 		}, context)}
 		${Container({
 			withBorder: false,
