@@ -1,5 +1,11 @@
 # Change log
 
+## 14.1.2
+
+### Patch Changes
+
+- [#3600](https://github.com/adobe/spectrum-css/pull/3600) [`bb845cb`](https://github.com/adobe/spectrum-css/commit/bb845cb2477d0c218a9675169f157b047c028222) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Adjust border colors for static black and static white outline buttons, primary variant to match S2 spec.
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
