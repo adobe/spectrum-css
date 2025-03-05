@@ -174,7 +174,8 @@
 		/* Overrides disabled styles */
 		.spectrum-Checkbox-input,
 		.spectrum-Checkbox-input:checked {
-			&:disabled + .spectrum-Checkbox-box::before {
+			&:disabled + .spectrum-Checkbox-box::before,
+			&:hover {
 				border-color: var(--highcontrast-checkbox-color-default, var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default)));
 				background-color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
 			}
