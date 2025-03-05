@@ -20,8 +20,8 @@ export const Template = ({
 	id = getRandomId("dropzone"),
 	size = "m",
 	image = "dropzone-illustration.png",
-	...globals
-}) => html`
+} = {}, context = {}) => {
+	return html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -55,12 +55,11 @@ export const Template = ({
     </svg>
 		<div class="${rootClass}-content">
 			${IllustratedMessage({
-				...globals,
 				title: title,
 				description: description,
 				customIllustration: customSvg,
 				size: size
-			})}
+			}, context )}
 			<div class="${rootClass}-actions">
 				${isDragged && isFilled
 					? Button({
@@ -76,6 +75,7 @@ export const Template = ({
 		</div>
 	</div>
 `;
+}
 
 
 const customSvg = () => html`
