@@ -1,7 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".js-focus-within .spectrum-Menu .spectrum-Menu-item--collapsible.is-open[focus-within]",
     ".spectrum-Menu",
     ".spectrum-Menu .spectrum-Menu-backIcon",
     ".spectrum-Menu .spectrum-Menu-checkmark",
@@ -129,7 +128,6 @@
     ".spectrum-Menu.is-selectable .spectrum-Menu-item.is-selected",
     ".spectrum-Menu.is-selectableMultiple .spectrum-Menu-item",
     ".spectrum-Menu.is-selectableMultiple .spectrum-Menu-itemCheckbox",
-    ".spectrum-Menu.js-focus-within .spectrum-Menu-item--collapsible.is-open[focus-within]",
     ".spectrum-Menu.spectrum-Menu--sizeL",
     ".spectrum-Menu.spectrum-Menu--sizeS",
     ".spectrum-Menu.spectrum-Menu--sizeXL",

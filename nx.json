@@ -9,19 +9,27 @@
 	},
 	"namedInputs": {
 		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
-		"eslint": ["{workspaceRoot}/.eslintrc"],
+		"eslint": [
+			"{workspaceRoot}/.eslintrc",
+			{ "externalDependencies": ["eslint"] }
+		],
 		"metadata": ["{projectRoot}/metadata/*.json"],
-		"prettier": ["{workspaceRoot}/.prettierrc"],
+		"prettier": [
+			"{workspaceRoot}/.prettierrc",
+			{ "externalDependencies": ["prettier"] }
+		],
 		"scripts": ["{projectRoot}/stories/*.js"],
 		"stylelint": [
 			"{workspaceRoot}/.stylelintignore",
 			"{workspaceRoot}/stylelint.config.js",
-			"{workspaceRoot}/plugins/stylelint-*/index.js"
+			"{workspaceRoot}/plugins/stylelint-*/index.js",
+			{ "externalDependencies": ["stylelint"] }
 		],
 		"tools": [
 			"{projectRoot}/*.json",
 			"{workspaceRoot}/postcss.config.js",
-			"{workspaceRoot}/plugins/postcss-*/index.js"
+			"{workspaceRoot}/plugins/postcss-*/index.js",
+			{ "externalDependencies": ["postcss"] }
 		]
 	},
 	"pluginsConfig": {
@@ -44,7 +52,6 @@
 				"stylelint",
 				"{workspaceRoot}/tasks/component-builder.js",
 				"!{projectRoot}/stories/*.js",
-				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],
 			"options": {
@@ -115,8 +122,7 @@
 				"scripts",
 				"stylelint",
 				"eslint",
-				"prettier",
-				{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
+				"prettier"
 			],
 			"options": {
 				"commands": [
@@ -134,8 +140,7 @@
 				"scripts",
 				"stylelint",
 				"eslint",
-				"prettier",
-				{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
+				"prettier"
 			],
 			"options": {
 				"commands": [
