@@ -67,6 +67,14 @@ with:
 
 <Canvas of={IconStories.UIArrows} />
 
+## Missing workflow icon placeholder
+
+In Storybook documentation, if a workflow icon name does not exist in the set, the placeholder "Circle" icon
+will be shown. Missing ui icons will render nothing. The following example purposefully uses an
+icon name that does not exist to demonstrate this behavior.
+
+<Canvas of={IconStories.MissingWorkflowIcon} />
+
 ## Repositories for the icon SVG files
 
 The UI icon SVGs are within the Spectrum CSS repository, which has its own package published to NPM:
