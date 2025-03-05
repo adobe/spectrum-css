@@ -73,10 +73,8 @@ export const Template = ({
 					})}
 			</div>
 		</div>
-	</div>
-`;
-}
-
+	</div>`;
+};
 
 const customSvg = () => html`
   <svg class="spectrum-IllustratedMessage-illustration" fill="none" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
