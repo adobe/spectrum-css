@@ -16,10 +16,6 @@ export const DialogGroup = Variants({
 			// TODO: The dialog's heading arg is getting passed as the "Sizing" heading arg (instead of the
 			// TODO: word "Sizing"). We should be able to remove this arg once that no longers happens.
 			heading: showTestingGrid ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit" : args.heading,
-			customStyles: {
-				...(args.customStyles ?? {}),
-				"background-color": showTestingGrid ? "var(--spectrum-gray-100)" : undefined,
-			},
 		}, context);
 	},
 	sizeDirection: "column",
@@ -66,7 +62,6 @@ export const DialogFullscreen = Variants({
 			 */
 			customStyles: {
 				margin: showTestingGrid ? "16px" : undefined,
-				"background-color": showTestingGrid ? "var(--spectrum-gray-100)" : undefined,
 			},
 		}, context);
 	},
@@ -85,9 +80,6 @@ export const DialogFullscreen = Variants({
 export const DialogFullscreenTakeover = Variants({
 	Template,
 	withSizes: false,
-	wrapperStyles: {
-		"background-color": "var(--spectrum-gray-50)"
-	},
 	testData: [
 		{
 			showModal: false,
