@@ -1,5 +1,6 @@
-dist
-!dist/metadata.json
+# Ignore dist directories except metadata.json
+**/dist/*
+!components/*/dist/metadata.json
 !tokens/dist/json/*
 
 # Not committing the map assets, these are dev-only
