@@ -17,9 +17,12 @@
 
 @container style(--system: legacy) {
 	.spectrum-Stepper {
-		--spectrum-stepper-border-color-disabled: transparent;
 		--spectrum-stepper-button-border-width-disabled: var(--spectrum-border-width-100);
 		--spectrum-stepper-buttons-background-color: var(--spectrum-gray-50);
 		--spectrum-stepper-buttons-background-color-disabled: var(--spectrum-gray-100);
+
+		&.is-disabled:not(.spectrum-Stepper--quiet) {
+			--spectrum-stepper-border-color-disabled: transparent;
+		}
 	}
 }
