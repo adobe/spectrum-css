@@ -72,25 +72,7 @@ export const TextAreaOptions = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Invalid, focused",
-			content: Template({...args, isInvalid: true, isFocused: true}, context)
-		}, context)}
-	`
-}, context);
-
-export const KeyboardFocusTemplate = (args, context) => Container({
-	direction: "column",
-	withBorder: false,
-	wrapperStyles: {
-		rowGap: "12px",
-	},
-	content: html`
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Default",
+			heading: "Keyboard focused",
 			content: Template({...args, isKeyboardFocused: true}, context)
 		}, context)}
 		${Container({
@@ -98,8 +80,31 @@ export const KeyboardFocusTemplate = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Quiet",
-			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+			heading: "Invalid, focused",
+			content: Template({...args, isInvalid: true, isFocused: true}, context)
+		}, context)}
+	`
+}, context);
+
+export const RequiredOptionsTextArea = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Required with (required) label",
+			content: Template({...args, isRequired: true, isRequiredWithoutAsterisk: true, labelText: "Interests (Required)", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
+		}, context)}
+		${Container({
+			withBorder: false,
+			heading: "Required with asterisk",
+			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
+		}, context)}
+		${Container({
+			withBorder: false,
+			heading: "Required with asterisk, side label",
+			content: Template({...args, isRequired: true, labelPosition: "side", labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
 		}, context)}
 	`
 }, context);
