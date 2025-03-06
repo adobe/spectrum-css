@@ -25,13 +25,6 @@
 			forced-color-adjust: none;
 		}
 
-		&:disabled,
-		&.is-disabled {
-			--highcontrast-actionbutton-content-color: GrayText;
-			--highcontrast-actionbutton-border-color: GrayText;
-			--highcontrast-actionbutton-background-color: ButtonFace;
-		}
-
 		&.is-selected {
 			--highcontrast-actionbutton-background-color: Highlight;
 			--highcontrast-actionbutton-border-color: HighlightText;
@@ -44,6 +37,13 @@
 				/* it seems like this shouldn't have to be done, but colors are wrong without it */
 				forced-color-adjust: none;
 			}
+		}
+
+		&:disabled,
+		&.is-disabled {
+			--highcontrast-actionbutton-content-color: GrayText;
+			--highcontrast-actionbutton-border-color: GrayText;
+			--highcontrast-actionbutton-background-color: ButtonFace;
 		}
 	}
 }
