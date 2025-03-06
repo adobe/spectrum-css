@@ -10,6 +10,14 @@
   - @spectrum-css/menu@10.0.0-next.0
   - @spectrum-css/popover@9.0.0-next.0
 
+## 9.1.3
+
+### Patch Changes
+
+- [#3584](https://github.com/adobe/spectrum-css/pull/3584) [`f286c68`](https://github.com/adobe/spectrum-css/commit/f286c68ee8988eafb36ab03a5acbee5aac71e938) Thanks [@blunteshwar](https://github.com/blunteshwar)!
+
+- Previously, the --spectrum-picker-border-color-default-open was gray-500, but the spec shows it as gray-800. This change aligns the component with the spec by updating the --spectrum-picker-border-color-default-open to gray-800.
+
 ## 9.1.2
 
 ### Patch Changes
