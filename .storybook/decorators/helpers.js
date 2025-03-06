@@ -1,4 +1,4 @@
-import { global } from '@storybook/global';
+import { global } from "@storybook/global";
 
 /**
  * @description Fetches the style container for the given ID or creates a new one
@@ -37,8 +37,8 @@ export function toggleStyles(container, id, styles, add = true, context = undefi
 export function fetchStyleContainer(id, container) {
 	if (!id) return;
 
-    const { document } = global;
-    if (!container) container = document.body;
+	const { document } = global;
+	if (!container) container = document.body;
 
 	let styleContainer = container.querySelector(`#${id}`);
 	if (styleContainer) return styleContainer;

@@ -28,13 +28,16 @@ export const withTestingPreviewWrapper = makeDecorator({
 		// If isChromatic() is true, we should update the global value to always show the testing grid
 		if (typeof isChromatic === "function" && isChromatic() === true) {
 			context.parameters.showTestingGrid = true;
-		} else if (viewMode === "docs") {
+		}
+		else if (viewMode === "docs") {
 			// If we're in the docs view, we should disable the testing grid
 			context.parameters.showTestingGrid = false;
-		} else if (typeof showTestingGrid === "undefined") {
+		}
+		else if (typeof showTestingGrid === "undefined") {
 			// If the global value is undefined, we should set it to the testing preview value
 			context.parameters.showTestingGrid = testingPreview;
-		} else if (showTestingGrid !== testingPreview) {
+		}
+		else if (showTestingGrid !== testingPreview) {
 			context.parameters.showTestingGrid = testingPreview;
 		}
 

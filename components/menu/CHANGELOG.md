@@ -7,8 +7,13 @@
 - Updated dependencies [[`c6836fb`](https://github.com/adobe/spectrum-css/commit/c6836fb132effcfb09e4ca6d0d8923564bfe2914)]:
   - @spectrum-css/divider@6.0.0-next.0
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+## 9.1.1
+
+### Patch Changes
+
+- [#3581](https://github.com/adobe/spectrum-css/pull/3581) [`ccc9b83`](https://github.com/adobe/spectrum-css/commit/ccc9b83f0be645b97b88393edc9785d717dc0f1b) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+- Adjusts RTL mode menu item focus indicator side for S1/Express.
 
 ## 10.0.0-next.0
 
