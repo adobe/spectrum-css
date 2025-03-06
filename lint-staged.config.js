@@ -7,7 +7,7 @@ module.exports = {
 		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
 	],
 	"package.json": (files) => [
-		"yarn constraints --fix",
+		"yarn constraints --fix && yarn install",
 		`eslint --fix --cache --no-error-on-unmatched-pattern --quiet ${files.join(" ")}`,
 	],
 	"dist/*.css": [
