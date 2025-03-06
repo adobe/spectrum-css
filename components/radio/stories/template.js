@@ -1,3 +1,4 @@
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -62,12 +63,6 @@ export const Template = ({
 					// Make checked value immutable for read-only.
 					e.preventDefault();
 				}}
-				@focusin=${function() {
-					updateArgs({ isFocused: true });
-				}}
-				@focusout=${function() {
-					updateArgs({ isFocused: false });
-				}}
 			/>
 			<span class="${rootClass}-button ${rootClass}-button--sizeS"></span>
 			<label class="${rootClass}-label ${rootClass}-label--sizeS" for=${inputId}
@@ -101,6 +96,34 @@ export const BasicGroupTemplate = (args, context) => Container({
 				"max-width": "220px",
 			},
 			name: "radio-example-" + (args?.name ?? "default"),
+		}, context)}
+	`,
+}, context);
+
+export const InvalidGroupTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "column",
+	wrapperStyles: {
+		rowGap: "0px",
+		alignItems: "flex-start",
+	},
+	content: html`
+		${Template({
+			...args,
+			label: "Example label",
+			name: "radio-example-" + (args?.name ?? "default"),
+		}, context)}
+		${Template({
+			...args,
+			label: "Initially selected radio button that has wrapping label text",
+			customStyles: {
+				"max-width": "220px",
+			},
+			name: "radio-example-" + (args?.name ?? "default"),
+		}, context)}
+		${HelpText({
+			text: "Please select an option.",
+			variant: "negative",
 		}, context)}
 	`,
 }, context);

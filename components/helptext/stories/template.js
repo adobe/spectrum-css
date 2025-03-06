@@ -34,7 +34,7 @@ export const Template = ({
 			${when(!hideIcon && variant == "negative", () =>
 			Icon(
 				{
-				iconName: "Alert",
+				iconName: "AlertTriangle",
 				setName: "workflow",
 				size,
 				customClasses: [`${rootClass}-validationIcon`],

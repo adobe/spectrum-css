@@ -12,7 +12,7 @@ export const RadioGroup = Variants({
 			isHovered: true,
 		},
 		{
-			testHeading: "Focus",
+			testHeading: "Focus-visible",
 			isFocused: true,
 		},
 		{
@@ -35,16 +35,31 @@ export const RadioGroup = Variants({
 			isChecked: true,
 		},
 		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		},
+		{
+			testHeading: "Invalid, Checked",
+			isInvalid: true,
+			isChecked: true,
+		},
+		{
 			testHeading: "Disabled",
 			isDisabled: true,
+		},
+		{
+			testHeading: "Disabled + checked",
+			isDisabled: true,
+			isChecked: true,
 		},
 		{
 			testHeading: "Read-only",
 			isReadOnly: true,
 		},
 		{
-			testHeading: "Invalid",
-			isInvalid: true,
+			testHeading: "Read-only + checked",
+			isReadOnly: true,
+			isChecked: true,
 		}
 	]
 });
