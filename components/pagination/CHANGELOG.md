@@ -325,7 +325,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🛑 BREAKING CHANGES
 
-  - Replaces DNA tokens with Spectrum tokens.
+- Replaces DNA tokens with Spectrum tokens.
 
 Update build to use Spectrum tokens.
 Remove skin.css and incorporate its CSS into index.css.
