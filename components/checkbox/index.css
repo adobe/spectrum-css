@@ -25,7 +25,6 @@
 	--spectrum-checkbox-content-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-checkbox-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
-
 	--spectrum-checkbox-control-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-checkbox-control-color-hover: var(--spectrum-neutral-content-color-hover);
 	--spectrum-checkbox-control-color-down: var(--spectrum-neutral-content-color-down);
@@ -60,7 +59,7 @@
 	/* Size */
 	--spectrum-checkbox-height: var(--spectrum-component-height-100);
 	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
-
+	--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-small-size-medium);
 	--spectrum-checkbox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-checkbox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 
@@ -68,7 +67,6 @@
 	--spectrum-checkbox-selected-border-width: calc(var(--spectrum-checkbox-control-size) / 2);
 
 	--spectrum-checkbox-animation-duration: var(--spectrum-animation-duration-100);
-
 
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-checkbox-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
