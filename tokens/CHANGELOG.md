@@ -2625,8 +2625,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 13.0.5
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.4...@spectrum-css/tokens@13.0.5)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.4...@spectrum-css/tokens@13.0.5)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 
@@ -2635,6 +2634,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 13.0.4
 
 🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.0...@spectrum-css/tokens@13.0.4)
+
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.0.3"></a>
@@ -2815,6 +2815,7 @@ chore: updated css properties
 ## 11.0.2
 
 🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.1...@spectrum-css/tokens@11.0.2)
+
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.0.1"></a>
@@ -2828,6 +2829,8 @@ chore: updated css properties
 <a name="11.0.0"></a>
 
 ## 11.0.0
+
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.2...@spectrum-css/tokens@11.0.0)
 
 ### ✨ Features
 
@@ -2853,8 +2856,7 @@ chore: updated css properties
 
 ## 10.2.1
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.0...@spectrum-css/tokens@10.2.1)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.0...@spectrum-css/tokens@10.2.1)
 
 **Note:** Version bump only for package @spectrum-css/tokens
 

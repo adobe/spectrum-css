@@ -1,7 +1,23 @@
 # Change log
 
+## 9.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`c6836fb`](https://github.com/adobe/spectrum-css/commit/c6836fb132effcfb09e4ca6d0d8923564bfe2914)]:
+  - @spectrum-css/divider@6.0.0-next.0
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/alertdialog@5.0.0-next.0
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/dialog@13.0.0-next.0
 
 ## 8.2.0
 

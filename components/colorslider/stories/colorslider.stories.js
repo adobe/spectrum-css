@@ -19,18 +19,20 @@ export default {
 	component: "ColorSlider",
 	argTypes: {
 		colorHandleStyle: { table: { disable: true } },
-		vertical: { table: { disable: true } },
 		isDisabled,
 		isFocused: {
 			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
-		gradientStops: {
-			name: "Gradient stops",
+		color: {
+			name: "Color",
 			description:
-				"The <linear-color-stop> value of the CSS linear-gradient. Can be multiple stops separated by commas.",
-			type: { name: "array" },
-			table: { disable: true },
+				"Supports standard color input or any valid input for the <code>background</code> property such as, <code>linear-gradient(red, blue)</code>.",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+			},
+			control: "color",
 		},
 		selectedColor: {
 			name: "Selected color",
@@ -40,11 +42,18 @@ export default {
 			control: "color",
 		},
 		gradientType: {
-			name: "Gradient type",
-			description: "The gradient can be defined in the markup using CSS or with an image.",
-			options: ["gradient", "image"],
+			name: "Color type",
+			description:
+				"The color can be defined in the markup using CSS or with an image.",
+			options: ["color", "image"],
 			control: { type: "select" },
 			table: { disable: true },
+		},
+		vertical: {
+			name: "Vertical",
+			description: "The orientation of the component.",
+			type: { name: "boolean" },
+			control: "boolean",
 		},
 	},
 	args: {
@@ -70,8 +79,8 @@ export default {
  */
 export const Default = ColorSliderGroup.bind({});
 Default.args = {
-	gradientStops:
-		["rgb(255, 0, 0) 0%", "rgb(255, 255, 0) 17%", "rgb(0, 255, 0) 33%", "rgb(0, 255, 255) 50%", "rgb(0, 0, 255) 67%", "rgb(255, 0, 255) 83%", "rgb(255, 0, 0) 100%"],
+	color:
+		"linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%)",
 };
 
 // ********* VRT ONLY ********* //
@@ -81,7 +90,7 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };
 
@@ -92,6 +101,8 @@ WithForcedColors.parameters = {
 export const Vertical = Template.bind({});
 Vertical.args = {
 	vertical: true,
+	color:
+		"linear-gradient(to bottom, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%)",
 };
 Vertical.tags = ["!dev"];
 Vertical.parameters = {
@@ -100,7 +111,7 @@ Vertical.parameters = {
 
 export const Alpha = Template.bind({});
 Alpha.args = {
-	gradientStops: ["rgba(0, 0, 0, 1) 0%", "rgba(0, 0, 0, 0) 100%"],
+	color: "linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
 	selectedColor: "rgba(0, 0, 0, 1)",
 };
 Alpha.tags = ["!dev"];

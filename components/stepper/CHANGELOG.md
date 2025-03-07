@@ -1,10 +1,22 @@
 # Change log
 
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/actionbutton@8.0.0-next.0
+  - @spectrum-css/infieldbutton@7.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
+
 ## 7.1.2
 
 ### Patch Changes
 
-- [#3594](https://github.com/adobe/spectrum-css/pull/3594) [`6200a63`](https://github.com/adobe/spectrum-css/commit/6200a63f2c7dc1d2b0481c33b17c86427726c0bd) Thanks [@TarunAdobe](https://github.com/TarunAdobe)! - Updates Stepper's key-focus border color (`--spectrum-stepper-border-color-keyboard-focus`) to `--spectrum-gray-800`.
+- [#3594](https://github.com/adobe/spectrum-css/pull/3594) [`6200a63`](https://github.com/adobe/spectrum-css/commit/6200a63f2c7dc1d2b0481c33b17c86427726c0bd) Thanks [@TarunAdobe](https://github.com/TarunAdobe)!
+
+- Updates Stepper's key-focus border color (`--spectrum-stepper-border-color-keyboard-focus`) to `--spectrum-gray-800`.
 
 ## 7.1.1
 
@@ -16,9 +28,6 @@
     - This corresponds to the background-color updates picker has for S2.
   - Corrects the border color for the default picker for S2 foundations, using `gray-500` (instead of `gray-800`) to align with other field/form components.
   - Refactors the `&.is-keyboardFocused&.is-placeholder` selector to `&.is-keyboardFocused.spectrum-Picker-label.is-placeholder` to avoid unexpectedly targeting the nested placeholder class.
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## 7.1.0
 

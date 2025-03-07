@@ -7,18 +7,15 @@ export const DividerGroup = Variants({
 		{
 			testHeading: "Default",
 			vertical: false,
-			minDimensionValues: true,
 		},
 		{
 			testHeading: "Non-HR",
 			tag: "div",
 			vertical: false,
-			minDimensionValues: true,
 		},
 		{
 			testHeading: "Vertical",
 			vertical: true,
-			minDimensionValues: true,
 		},
 		{
 			testHeading: "Static black",

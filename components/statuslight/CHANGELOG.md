@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 9.1.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`dce3669`](https://github.com/adobe/spectrum-css/commit/dce366923562d004c61e8a19da216f6ea6a11d40) Thanks [@pfulton](https://github.com/pfulton)! - Removes references to the accent variant, since the accent status light was deprecated in S2.
+
+  Removed variant:
+
+  `.spectrum-StatusLight--accent`
+  `--spectrum-statuslight-semantic-accent-color`
+
 ## 9.1.0
 
 ### Minor Changes

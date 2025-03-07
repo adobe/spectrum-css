@@ -1,99 +1,127 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Container, Variants } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
 import { Template } from "./template.js";
-import { uiIconSizes, uiIconsWithDirections } from "./utilities.js";
+import { uiIconsWithDirections, uniqueUiIconBaseNames, workflowSizes } from "./utilities.js";
 
 /**
  * Chromatic VRT template that displays multiple icons to cover various options.
+ * Includes Chromatic-only testing grid with:
+ * - Several workflow icons, at all sizes, with some set to a color
+ * - All UI icons, organized within a grid by sizing number and name
  */
-const TestTemplate = (args, context) => {
-	return html`
-        <div
-            style=${styleMap({
-                "display": "flex",
-                "flex-direction": "column",
-                "gap": "32px",
-            })}
-        >
-            <div
-                style=${styleMap({
-                    "display": "flex",
-                    "flex-direction": "column",
-                    "gap": "16px",
-                })}
-            >
-                ${[
-                {
-                    setName: "workflow",
-                    iconName: "Alert",
-                    fill: "var(--spectrum-negative-content-color-default)",
-                },
-                {
-                    setName: "workflow",
-                    iconName: "Hand",
-                },
-                {
-                    setName: "workflow",
-                    iconName: "Help",
-                },
-                {
-                    setName: "workflow",
-                    iconName: "ArrowLeft",
-                },
-                {
-                    setName: "workflow",
-                    iconName: "ArrowRight",
-                },
-                {
-                    setName: "workflow",
-                    iconName: "ChevronDown",
-                }
-                ].map((row_args) => html`
-                    <div
-                        style=${styleMap({
-                            "display": "grid",
-                            "grid-template-columns": "repeat(6, 1fr)",
-                            "column-gap": "24px",
-                            "row-gap": "48px",
-                            "place-items": "center",
-                        })}
-                    >
-                        ${["xs","s","m","l","xl","xxl"].map(
-                            (size) => Template({ ...args, ...row_args, size })
-                        )}
-                    </div>`
-                )}
-            </div>
-            <div
-                style=${styleMap({
-                    "display": "flex",
-                    "flex-direction": "column",
-                    "gap": "16px",
-                })}
-            >
-                ${uiIconsWithDirections.map(iconName => html`
-                    <div
-                        style=${styleMap({
-                            "display": "grid",
-                            "grid-template-columns": "repeat(8, 1fr)",
-                            "column-gap": "24px",
-                            "row-gap": "48px",
-                        })}
-                    >
-                        ${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
-                            Template({ ...args, setName: "ui", iconName: iconName + iconSize }, context)
-                        )}
-                        ${when(uiIconSizes[iconName]?.length == 0, () =>
-                            Template({ ...args, setName: "ui", iconName }, context)
-                        )}
-                    </div>`
-                )}
-            </div>
-        </div>
-    `;
-};
+export const TestTemplate = (args, context) => html`
+	${Container({
+		heading: "Workflow icon examples",
+		withBorder: false,
+		direction: "row",
+		wrapperStyles: {
+			columnGap: "12px",
+		},
+		content: html`
+			<div
+				style=${styleMap({
+				"display": "grid",
+				"grid-template-columns": `repeat(${workflowSizes.length}, 50px)`,
+				"gap": "16px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "16px",
+				"margin-block-end": "32px",
+			})}
+			>
+				${workflowSizes.map(scale => html`
+					<div>
+						${Typography({
+							customClasses: ["chromatic-ignore"],
+							semantics: "detail",
+							size: "s",
+							content: [scale],
+							customStyles: {
+								"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+							}
+						})}
+					</div>
+				`)}
+				${[
+					"Add",
+					"AlertTriangle",
+					"Edit",
+					"File",
+					"Folder",
+					"MenuHamburger",
+					"SelectRectangle",
+					"Redo",
+					"Star",
+					"StarFilled",
+					"User",
+					"ColorHarmony",
+					"CornerRadiusBottomLeft",
+				].map((iconName, idx) => html`
+					${workflowSizes.map((size) => Template({
+						...args,
+						useRef: true,
+						iconName,
+						setName: "workflow",
+						size,
+						fill: idx % 5 === 0 ? "var(--spectrum-negative-content-color-default)" : undefined
+					}, context))}
+				`)}
+			</div>
+		`,
+	}, context)}
+
+	${Container({
+		heading: "UI icon set",
+		withBorder: false,
+		direction: "row",
+		wrapperStyles: {
+			columnGap: "12px",
+		},
+		content: html`
+			<div
+				style=${styleMap({
+				"display": "grid",
+				"grid-template-columns": "repeat(8, 50px)",
+				"gap": "16px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "16px",
+			})}
+			>
+				${["50", "75", "100", "200", "300", "400", "500", "600"].map(scale => html`
+					<div>
+						${Typography({
+							customClasses: ["chromatic-ignore"],
+							semantics: "detail",
+							size: "s",
+							content: [scale],
+							customStyles: {
+								"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+							}
+						})}
+					</div>
+				`)}
+				${uniqueUiIconBaseNames.sort().reduce((print, iconName) => {
+					let output = Array(8).fill(html`<span></span>`);
+					["50", "75", "100", "200", "300", "400", "500", "600"].forEach((scale, idx) => {
+						if (uiIconsWithDirections.includes(`${iconName}${scale}`)) {
+							output[idx] = Template({
+								...args,
+								setName: "ui",
+								useRef: false,
+								uiIconName: `${iconName}${scale}`,
+							}, context);
+						}
+					});
+					print.push(...output);
+					return print;
+				}, [])}
+			</div>
+		`,
+	}, context)}
+`;
 
 export const IconGroup = Variants({
 	Template,

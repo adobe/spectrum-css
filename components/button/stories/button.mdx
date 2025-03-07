@@ -1,24 +1,10 @@
-import {
-	Meta,
-	Title,
-	Subtitle,
-	Description,
-	ArgTypes,
-	Canvas,
-} from "@storybook/blocks";
-import {
-	ComponentDetails,
-	TaggedReleases,
-	PropertiesTable,
-} from "@spectrum-css/preview/blocks";
+import { Canvas, Meta, Description } from '@storybook/blocks';
 
-import * as ButtonStories from "./button.stories";
+import * as ButtonStories from './button.stories';
 
 <Meta of={ButtonStories} title="Docs" />
 
-<Title of={ButtonStories} />
-<Subtitle of={ButtonStories} />
-<ComponentDetails of={ButtonStories} />
+# Button
 
 <Description of={ButtonStories} />
 
@@ -30,22 +16,32 @@ and secondary variants also have an outline option.
 
 ### Accent
 
-<Description of={ButtonStories.Accent} />
+The call to action button communicates strong emphasis and is reserved for encouraging critical
+actions. In general, only use the emphasized option for the most important action on the page.
+
 <Canvas of={ButtonStories.Accent} />
 
 ### Primary
 
-<Description of={ButtonStories.Primary} />
+The primary button is for medium emphasis. Use it in place of a call to action button when the
+action requires less prominence, or if there are multiple primary actions of the same importance
+in the same view. Both the fill (default) and outline styles are demonstrated below:
+
 <Canvas of={ButtonStories.Primary} />
 
 ### Secondary
 
-<Description of={ButtonStories.Secondary} />
+The secondary button is for low emphasis. It’s paired with other button types to surface less
+prominent actions, and should never be the only button in a group. Both the fill (default) and
+outline styles are demonstrated below:
+
 <Canvas of={ButtonStories.Secondary} />
 
 ### Negative
 
-<Description of={ButtonStories.Negative} />
+The negative button is for emphasizing actions that can be destructive or have negative
+consequences if taken. Use it sparingly.
+
 <Canvas of={ButtonStories.Negative} />
 
 ## Static color
@@ -55,65 +51,51 @@ option. Static color buttons do not change shades or values depending upon the c
 
 ### Static white - primary
 
-<Canvas
-	of={ButtonStories.StaticWhitePrimary}
-	className="spectrum-examples-static-white"
-/>
+<Canvas of={ButtonStories.StaticWhitePrimary} className="spectrum-examples-static-white" />
 
 ### Static white - secondary
 
-<Canvas
-	of={ButtonStories.StaticWhiteSecondary}
-	className="spectrum-examples-static-white"
-/>
+<Canvas of={ButtonStories.StaticWhiteSecondary} className="spectrum-examples-static-white" />
 
 ### Static black - primary
 
-<Canvas
-	of={ButtonStories.StaticBlackPrimary}
-	className="spectrum-examples-static-black"
-/>
+<Canvas of={ButtonStories.StaticBlackPrimary} className="spectrum-examples-static-black" />
 
 ### Static black - secondary
 
-<Canvas
-	of={ButtonStories.StaticBlackSecondary}
-	className="spectrum-examples-static-black"
-/>
+<Canvas of={ButtonStories.StaticBlackSecondary} className="spectrum-examples-static-black" />
 
 ## Sizing
 
-<Description of={ButtonStories.Sizing} />
+Buttons come in four different sizes: small, medium, large, and extra large. The medium size is
+the default and most frequently used option. Use the other sizes sparingly; they should be used
+to create a hierarchy of importance within the page.
+
 <Canvas of={ButtonStories.Sizing} />
 
 ## Pending state
 
-<Description of={ButtonStories.Pending} />
+The pending button is for indicating that a quick progress action is taking place. In this case, the
+label and optional icon disappear and a progress circle appears. The progress circle always shows an
+indeterminate progress. We recommend the use of the `.is-pending` class on the component’s parent
+container, but there is also an option to use an attribute of `pending` instead. Buttons should have
+the disabled attribute when the pending state is applied.
+
 <Canvas of={ButtonStories.Pending} />
 
 ## Disabled state
 
-<Description of={ButtonStories.Disabled} />
+A button in a disabled state shows that an action exists, but is not available in that circumstance. 
+This state can be used to maintain layout continuity and to communicate that an action may become
+available later.
+
 <Canvas of={ButtonStories.Disabled} />
 
 ## Text overflow behavior
 
-<Description of={ButtonStories.WithWrapping} />
+When the button text is too long for the horizontal space available, it wraps to form another line. 
+When there is no icon present, the text is aligned center. When there is an icon present, the text is
+aligned `start` (left with a writing direction of left-to-right) and the icon remains vertically aligned
+at the top.
+
 <Canvas of={ButtonStories.WithWrapping} />
-
-## Disable text wrapping
-
-<Description of={ButtonStories.DisableWrapping} />
-<Canvas of={ButtonStories.DisableWrapping} />
-
-## Properties
-
-The component accepts the following inputs (properties):
-
-<ArgTypes of={ButtonStories} />
-
-<PropertiesTable />
-
-## Tagged releases
-
-<TaggedReleases of={ButtonStories} />

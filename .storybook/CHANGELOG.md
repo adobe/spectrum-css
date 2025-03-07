@@ -498,7 +498,6 @@ This component has been deprecated. Use an action bar to allow users to perform 
 ### 🛑 BREAKING CHANGES
 
 - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
-
 - NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 
 <a name="6.0.1"></a>
@@ -804,7 +803,7 @@ fix max nesting depth
 
 ## 3.0.26
 
-## 🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.25...@spectrum-css/preview@3.0.26)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.25...@spectrum-css/preview@3.0.26)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
