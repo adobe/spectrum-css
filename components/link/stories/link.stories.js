@@ -3,7 +3,7 @@ import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { LinkGroup } from "./link.test.js";
-import { TemplateWithFillerText } from "./template.js";
+import { LinkGroupText, MultilineText, TemplateWithFillerText } from "./template.js";
 
 /**
  * A link allows users to navigate to a different location. They can be presented in-line inside a paragraph or as standalone text.
@@ -53,6 +53,14 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+		},isInline: {
+			name: "Inline",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
 		},
 		staticColor,
 		isQuiet,
@@ -65,6 +73,7 @@ export default {
 		isActive: false,
 		isFocused: false,
 		isVisited: false,
+		isInline: false,
 	},
 	parameters: {
 		actions: {
@@ -76,7 +85,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-	},
+	}
 };
 
 export const Default = LinkGroup.bind({});
@@ -89,105 +98,81 @@ Default.tags = ["!autodocs"];
 // ********* DOCS ONLY ********* //
 /**
  * The primary link is the default variant and is blue. This should be used to call attention to the link and for when the blue color won’t feel too overwhelming in the experience.
+ * All links can have a quiet style, without an underline. This style should only be used when the placement and context of the link is explicit enough that a visible underline isn’t necessary.
  */
-export const Primary = TemplateWithFillerText.bind({});
-Primary.args = {
-	...Default.args,
-	text: "link using spectrum-Link"
-};
+export const Primary = LinkGroupText.bind({});
+Primary.args = {};
 Primary.tags = ["!dev"];
 Primary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Primary.storyName = "Standalone, primary";
 
 /**
  * The secondary variant is the same gray color as the paragraph text. Its subdued appearance is optimal for when the primary variant is too overwhelming, such as in blocks of text with several references linked throughout.
+ * Link is using `spectrum-Link--secondary`
  */
-export const Secondary = TemplateWithFillerText.bind({});
+export const Secondary = LinkGroupText.bind({});
 Secondary.args = {
 	variant: "secondary",
-	text: "link using spectrum-Link--secondary",
 };
 Secondary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 Secondary.tags = ["!dev"];
-
-/**
- * All links can have a quiet style, without an underline. This style should only be used when the placement and context of the link is explicit enough that a visible underline isn’t necessary.
- */
-export const QuietPrimary = TemplateWithFillerText.bind({});
-QuietPrimary.storyName = "Primary (quiet)";
-QuietPrimary.args = {
-	isQuiet: true,
-	text: "link using spectrum-Link--quiet",
-};
-QuietPrimary.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-QuietPrimary.tags = ["!dev"];
-
-export const QuietSecondary = TemplateWithFillerText.bind({});
-QuietSecondary.storyName = "Secondary (quiet)";
-QuietSecondary.args = {
-	isQuiet: true,
-	variant: "secondary",
-	text: "link using spectrum-Link--quiet and spectrum-Link--secondary",
-};
-QuietSecondary.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-QuietSecondary.tags = ["!dev"];
+Secondary.storyName = "Standalone, secondary";
 
 /**
  * Use static white on dark color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
+ * Link is using `spectrum-Link--staticWhite`
  */
-export const StaticWhite = Default.bind({});
+export const StaticWhite = LinkGroupText.bind({});
 StaticWhite.storyName = "Static white";
 StaticWhite.args = {
 	staticColor: "white",
-	text: "Link using spectrum-Link--staticWhite",
 };
 StaticWhite.tags = ["!dev"];
 StaticWhite.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+StaticWhite.storyName = "Standalone, static white";
 
 /**
  * Use static black on light color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
+ * Link using `spectrum-Link--staticBlack`
  */
-export const StaticBlack = Default.bind({});
+export const StaticBlack = LinkGroupText.bind({});
 StaticBlack.storyName = "Static black";
 StaticBlack.args = {
 	staticColor: "black",
-	text: "Link using spectrum-Link--staticBlack",
 };
 StaticBlack.tags = ["!dev"];
 StaticBlack.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+StaticBlack.storyName = "Standalone, static black";
 
-export const QuietStaticWhite = Default.bind({});
-QuietStaticWhite.storyName = "Static white (quiet)";
-QuietStaticWhite.args = {
-	isQuiet: true,
-	staticColor: "white",
-	text: "Link using spectrum-Link--staticWhite and spectrum-Link--quiet",
-};
-QuietStaticWhite.tags = ["!dev"];
-QuietStaticWhite.parameters = {
+/**
+ * The focus ring wraps when the link component breaks on multiple rows.
+ */
+export const Multiline = MultilineText.bind({});
+Multiline.args = {};
+Multiline.tags = ["!dev"];
+Multiline.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const QuietStaticBlack = Default.bind({});
-QuietStaticBlack.storyName = "Static black (quiet)";
-QuietStaticBlack.args = {
-	isQuiet: true,
-	staticColor: "black",
-	text: "Link using spectrum-Link--staticBlack and spectrum-Link--quiet",
+/**
+ * Inline links are used within a paragraph of text. They are styled differently from standalone links in which the font weight is lighter and can be adjusted to match the paragraph text.
+ * Inline links do not have a quiet variant style due to accessiblity reasons.
+ */
+export const Inline = TemplateWithFillerText.bind({});
+Inline.args = {
+	isInline: true,
+	text: "Inline link",
 };
-QuietStaticBlack.tags = ["!dev"];
-QuietStaticBlack.parameters = {
+Inline.tags = ["!dev"];
+Inline.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

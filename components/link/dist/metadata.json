@@ -2,6 +2,7 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Link",
+    ".spectrum-Link--inline",
     ".spectrum-Link--quiet",
     ".spectrum-Link--quiet:hover",
     ".spectrum-Link--secondary",
@@ -16,6 +17,7 @@
   ],
   "modifiers": [
     "--mod-link-animation-duration",
+    "--mod-link-inline-font-weight",
     "--mod-link-line-height-cjk",
     "--mod-link-text-color",
     "--mod-link-text-color-active",
@@ -30,12 +32,14 @@
   ],
   "component": [
     "--spectrum-link-corner-radius",
+    "--spectrum-link-default-font-family",
     "--spectrum-link-focus-indicator-color",
     "--spectrum-link-focus-indicator-gap",
     "--spectrum-link-focus-indicator-thickness",
     "--spectrum-link-font-size",
     "--spectrum-link-font-style",
     "--spectrum-link-font-weight",
+    "--spectrum-link-inline-font-weight",
     "--spectrum-link-line-height",
     "--spectrum-link-line-height-cjk",
     "--spectrum-link-text-underline-gap",
@@ -50,6 +54,7 @@
     "--spectrum-black",
     "--spectrum-cjk-line-height-100",
     "--spectrum-corner-radius-100",
+    "--spectrum-default-font-family",
     "--spectrum-default-font-style",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
@@ -61,6 +66,7 @@
     "--spectrum-neutral-content-color-down",
     "--spectrum-neutral-content-color-hover",
     "--spectrum-neutral-content-color-key-focus",
+    "--spectrum-regular-font-weight",
     "--spectrum-text-underline-gap",
     "--spectrum-text-underline-thickness",
     "--spectrum-white"

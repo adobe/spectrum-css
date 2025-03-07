@@ -19,6 +19,9 @@
 	--spectrum-link-corner-radius: var(--spectrum-corner-radius-100);
 
 	/* Typography */
+	--spectrum-link-default-font-family: var(--spectrum-default-font-family);
+
+	/* Standalone */
 	--spectrum-link-line-height: var(--spectrum-line-height-100);
 	--spectrum-link-line-height-cjk: var(--spectrum-cjk-line-height-100);
 	--spectrum-link-font-size: var(--spectrum-font-size-100);
@@ -26,6 +29,9 @@
 	--spectrum-link-font-weight: var(--spectrum-medium-font-weight);
 	--spectrum-link-text-underline-thickness: var(--spectrum-text-underline-thickness);
 	--spectrum-link-text-underline-gap: var(--spectrum-text-underline-gap);
+
+	/* Inline */
+	--spectrum-link-inline-font-weight: var(--spectrum-regular-font-weight);
 
 	/* Remove the gray background on active links in IE 10. */
 	background-color: transparent;
@@ -38,6 +44,7 @@
 	cursor: pointer;
 
 	color: var(--highcontrast-link-text-color, var(--mod-link-text-color, var(--spectrum-accent-content-color-default)));
+	font-family: var(--spectrum-link-default-font-family);
 	font-weight: var(--spectrum-link-font-weight);
 	font-size: var(--spectrum-link-font-size);
 	font-style: var(--spectrum-link-font-style);
@@ -81,6 +88,10 @@
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.spectrum-Link--inline {
+	--spectrum-link-font-weight: var(--mod-link-inline-font-weight, var(--spectrum-link-inline-font-weight));
 }
 
 .spectrum-Link--staticWhite {
