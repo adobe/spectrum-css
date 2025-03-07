@@ -1,3 +1,4 @@
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -15,6 +16,9 @@ export const Template = ({
 	isChecked = false,
 	isDisabled = false,
 	isReadOnly = false,
+	isFocused = false,
+	isInvalid = false,
+	isHovered,
 	id = getRandomId("radio"),
 	customClasses = [],
 	customStyles = {},
@@ -34,7 +38,9 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--emphasized`]: isEmphasized,
+				"is-hover": isHovered,
 				"is-readOnly" : isReadOnly,
+				"is-invalid": isInvalid,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
@@ -42,7 +48,7 @@ export const Template = ({
 			<input
 				type="radio"
 				name=${name}
-				class="${rootClass}-input"
+				class=${classMap({["is-focus-visible"]: isFocused, [`${rootClass}-input`]: true })}
 				id=${inputId}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
@@ -90,6 +96,34 @@ export const BasicGroupTemplate = (args, context) => Container({
 				"max-width": "220px",
 			},
 			name: "radio-example-" + (args?.name ?? "default"),
+		}, context)}
+	`,
+}, context);
+
+export const InvalidGroupTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "column",
+	wrapperStyles: {
+		rowGap: "0px",
+		alignItems: "flex-start",
+	},
+	content: html`
+		${Template({
+			...args,
+			label: "Example label",
+			name: "radio-example-" + (args?.name ?? "default"),
+		}, context)}
+		${Template({
+			...args,
+			label: "Initially selected radio button that has wrapping label text",
+			customStyles: {
+				"max-width": "220px",
+			},
+			name: "radio-example-" + (args?.name ?? "default"),
+		}, context)}
+		${HelpText({
+			text: "Please select an option.",
+			variant: "negative",
 		}, context)}
 	`,
 }, context);

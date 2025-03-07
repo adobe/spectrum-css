@@ -1,10 +1,10 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isChecked, isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isChecked, isDisabled, isEmphasized, isFocused, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
-import { BasicGroupTemplate } from "./template.js";
+import { BasicGroupTemplate, InvalidGroupTemplate } from "./template.js";
 
 /**
  * Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
@@ -37,9 +37,11 @@ export default {
 			control: { type: "text" },
 		},
 		isEmphasized,
+		isInvalid,
 		isChecked,
 		isDisabled,
 		isReadOnly,
+		isFocused,
 	},
 	args: {
 		rootClass: "spectrum-Radio",
@@ -47,8 +49,10 @@ export default {
 		label: "Label",
 		isEmphasized: false,
 		isChecked: false,
+		isInvalid: false,
 		isDisabled: false,
 		isReadOnly: false,
+		isFocused: false,
 	},
 	parameters: {
 		actions: {
@@ -120,6 +124,20 @@ Emphasized.args = {
 };
 Emphasized.tags = ["!dev"];
 Emphasized.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The invalid option provides a visual indication that the radio button group is in an invalid state. This is typically used in conjunction with help text.
+ * Apply `.is-invalid` class to activate this state.
+ */
+export const Invalid = InvalidGroupTemplate.bind({});
+Invalid.args = {
+	isInvalid: true,
+	name: "invalid",
+};
+Invalid.tags = ["!dev"];
+Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
