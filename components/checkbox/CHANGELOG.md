@@ -7,6 +7,14 @@
 - Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
   - @spectrum-css/icon@10.0.0-next.0
 
+## 10.1.1
+
+### Patch Changes
+
+- [#3573](https://github.com/adobe/spectrum-css/pull/3573) [`3caeff3`](https://github.com/adobe/spectrum-css/commit/3caeff3a62220a988e5b64af66c1333e524f1b75) Thanks [@TarunAdobe](https://github.com/TarunAdobe)!
+
+- Updated deselected (default) border color of the box to be neutral content color default in spectrum-two theme
+
 ## 10.1.0
 
 ### Minor Changes
