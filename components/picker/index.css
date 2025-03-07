@@ -14,6 +14,22 @@
 @import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-Picker {
+	--spectrum-picker-background-color-default: var(--spectrum-gray-100);
+	--spectrum-picker-background-color-default-open: var(--spectrum-gray-200);
+	--spectrum-picker-background-color-hover: var(--spectrum-gray-200);
+	--spectrum-picker-background-color-hover-open: var(--spectrum-gray-200);
+	--spectrum-picker-background-color-active: var(--spectrum-gray-200);
+	--spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
+
+	--spectrum-picker-border-color-default: var(--spectrum-gray-500);
+	--spectrum-picker-border-color-default-open: var(--spectrum-neutral-content-color-focus);
+	--spectrum-picker-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-picker-border-color-hover-open: var(--spectrum-gray-900);
+	--spectrum-picker-border-color-active: var(--spectrum-gray-700);
+	--spectrum-picker-border-color-key-focus: var(--spectrum-gray-900);
+
+	--spectrum-picker-border-width: var(--spectrum-border-width-100);
+
 	/* Font */
 	--spectrum-picker-font-size: var(--spectrum-font-size-100);
 	--spectrum-picker-font-weight: var(--spectrum-regular-font-weight);
@@ -23,12 +39,10 @@
 
 	/* Dimensions */
 	--spectrum-picker-block-size: var(--spectrum-component-height-100);
-	--spectrum-picker-inline-size: var(--spectrum-field-default-width-medium);
 	--spectrum-picker-min-inline-size: calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)));
 
 	/* Border */
 	--spectrum-picker-border-radius: var(--spectrum-corner-radius-medium-size-medium);
-	--spectrum-picker-border-width: var(--spectrum-border-width-200);
 
 	/* Spacing */
 	--spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
@@ -53,27 +67,8 @@
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-100);
 
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
-	}
-
 	/* Animation */
 	--spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
-
-	/* Color */
-	--spectrum-picker-background-color-default: var(--spectrum-gray-100);
-	--spectrum-picker-background-color-default-open: var(--spectrum-gray-200);
-	--spectrum-picker-background-color-hover: var(--spectrum-gray-200);
-	--spectrum-picker-background-color-hover-open: var(--spectrum-gray-200);
-	--spectrum-picker-background-color-active: var(--spectrum-gray-200);
-	--spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
-
-	--spectrum-picker-border-color-default: transparent;
-	--spectrum-picker-border-color-default-open: transparent;
-	--spectrum-picker-border-color-hover: transparent;
-	--spectrum-picker-border-color-hover-open: transparent;
-	--spectrum-picker-border-color-active: transparent;
-	--spectrum-picker-border-color-key-focus: transparent;
 
 	--spectrum-picker-font-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-picker-font-color-default-open: var(--spectrum-neutral-content-color-focus);
@@ -106,6 +101,10 @@
 	--spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
+
+	& + .spectrum-Popover--bottom-start.is-open {
+		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
+	}
 }
 
 .spectrum-Picker--sizeS {
