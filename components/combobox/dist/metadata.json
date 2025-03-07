@@ -252,16 +252,19 @@
   "system-theme": [
     "--system-combobox-background-color-disabled",
     "--system-combobox-border-color-default",
+    "--system-combobox-border-color-disabled",
     "--system-combobox-border-color-focus",
     "--system-combobox-border-color-focus-hover",
     "--system-combobox-border-color-hover",
-    "--system-combobox-border-color-key-focus"
+    "--system-combobox-border-color-key-focus",
+    "--system-combobox-readonly-input-border-color"
   ],
   "passthroughs": [
     "--mod-picker-button-background-color",
     "--mod-picker-button-background-color-disabled",
     "--mod-picker-button-background-color-quiet",
     "--mod-picker-button-border-color",
+    "--mod-picker-button-border-color-disabled",
     "--mod-picker-button-border-color-quiet",
     "--mod-picker-button-border-width",
     "--mod-picker-button-font-color-disabled",

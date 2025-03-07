@@ -22,5 +22,7 @@
 		--spectrum-combobox-border-color-focus: var(--spectrum-gray-900);
 		--spectrum-combobox-border-color-focus-hover: var(--spectrum-gray-800);
 		--spectrum-combobox-border-color-key-focus: var(--spectrum-gray-900);
+
+		--spectrum-combobox-readonly-input-border-color: var(--spectrum-gray-400);
 	}
 }
