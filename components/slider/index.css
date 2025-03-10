@@ -537,6 +537,12 @@
 	&::before {
 		background: var(--highcontrast-slider-track-color-static, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
 	}
+
+	/* Styles below are applied to the sibling spectrum-Slider-track when filled-offset variant is activated */
+	& ~ .spectrum-Slider-track::before {
+		border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+		border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+	}
 }
 
 /* All variants other than filled-offset get a new track color for highcontrast mode */
