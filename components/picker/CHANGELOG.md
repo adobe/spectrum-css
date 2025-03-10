@@ -1,5 +1,11 @@
 # Change log
 
+## 9.1.4
+
+### Patch Changes
+
+- [#3607](https://github.com/adobe/spectrum-css/pull/3607) [`7797847`](https://github.com/adobe/spectrum-css/commit/7797847c723d530f34d610516e04150092557af1) Thanks [@blunteshwar](https://github.com/blunteshwar)! - Updated border-color for Open not hover state of picker from --spectrum-gray-900 to --spectrum-gray-800 as specified in the spec
+
 ## 9.1.3
 
 ### Patch Changes
