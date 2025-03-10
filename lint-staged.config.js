@@ -12,7 +12,7 @@ module.exports = {
 		`eslint --fix --cache --no-error-on-unmatched-pattern --quiet ${files.join(" ")}`,
 	],
 	"dist/*.css": [
-		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc"
+		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc"
 	],
 	"components/*/dist/metadata.json": (files) => {
 		return [
@@ -20,6 +20,7 @@ module.exports = {
 		];
 	},
 	"*.{md,mdx}": [
-		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc"
+		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
+		"markdownlint --config .markdownlint.json --fix"
 	]
 };

@@ -1,13 +1,10 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## 10.1.0
 
 ### Minor Changes
 
-- [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 ## New feature
 
@@ -15,7 +12,7 @@ Minified and gzipped outputs available for all compiled CSS assets.
 
 ### Patch Changes
 
-- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 Dependency alignment across the project.
 
@@ -29,17 +26,19 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes a bug in the content of the `dist/index-theme.css` file.
+📝 [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
+Fixes a bug in the content of the `dist/index-theme.css` file.
 
-  Expected output example for the index-theme.css:
+Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
 
-  ```
-  .spectrum-ActionButton {
-   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
-   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
-  ```
+Expected output example for the index-theme.css:
+
+```css
+.spectrum-ActionButton {
+  --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+  --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+```
 
 - Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
   - @spectrum-css/avatar@9.0.1
@@ -50,29 +49,31 @@ Dependency alignment across the project.
 
 ### Major Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+📝 [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)!
 
-  This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
+### 🛑 Breaking change
 
-  For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
+This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
 
-  For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
+For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
 
-  If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
+For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
 
-  ### Deprecations
+If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
 
-  The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
+### Deprecations
 
-  The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
+The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
 
-  ### File usage
+The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
 
-  If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
+### File usage
 
-  If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
 
-  To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
+If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+
+To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
 
 ### Patch Changes
 
@@ -86,7 +87,9 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! - Peer dependency for @spectrum-css/tokens updated to include v15 as well as v14.
+📝 [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Peer dependency for @spectrum-css/tokens updated to include v15 as well as v14.
 
 - Updated dependencies [[`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39), [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39)]:
   - @spectrum-css/tokens@15.2.0
@@ -98,7 +101,9 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)! - Simplify how the `--system` properties are mapped. By updating the logic in the `postcss-add-theming-layer`, we are now shipping cleaner, more readable `--system` property names. These custom properties are documented as _NOT_ a part of the component API so although these result in a change to the custom property names, it does not impact the properties that are in the API and so do not constitute a breaking change. Expect to see no change to how component theming works or any visual regressions as a result of this change.
+📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Simplify how the `--system` properties are mapped. By updating the logic in the `postcss-add-theming-layer`, we are now shipping cleaner, more readable `--system` property names. These custom properties are documented as _NOT_ a part of the component API so although these result in a change to the custom property names, it does not impact the properties that are in the API and so do not constitute a breaking change. Expect to see no change to how component theming works or any visual regressions as a result of this change.
 
 ### Patch Changes
 
@@ -112,7 +117,8 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)!
+
 - Remove the storybook assets from the shipped output for components
 
 ### Patch Changes
@@ -126,26 +132,20 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3307](https://github.com/adobe/spectrum-css/pull/3307) [`25ddd5e`](https://github.com/adobe/spectrum-css/commit/25ddd5e62a19a8040f6c08549e447e19c0788af3) Thanks [@cdransf](https://github.com/cdransf)!
-- Reorder rules and custom properties to resolve lint violations.
+📝 [#3307](https://github.com/adobe/spectrum-css/pull/3307) [`25ddd5e`](https://github.com/adobe/spectrum-css/commit/25ddd5e62a19a8040f6c08549e447e19c0788af3) Thanks [@cdransf](https://github.com/cdransf)!
 
-## 9.1.4
-
-### Patch Changes
-
-- [#3307](https://github.com/adobe/spectrum-css/pull/3307) [`25ddd5e`](https://github.com/adobe/spectrum-css/commit/25ddd5e62a19a8040f6c08549e447e19c0788af3) Thanks [@cdransf](https://github.com/cdransf)!
 - Reorder rules and custom properties to resolve lint violations.
 
 ## 9.1.3
 
 ### Patch Changes
 
-- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)!
+
 - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
 
   Sort keys in the package.json assets.
 
--
 - Updated dependencies [[`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2)]:
   - @spectrum-css/clearbutton@6.1.3
   - @spectrum-css/avatar@7.1.3
@@ -155,7 +155,8 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)!
+
 - Improve changeset suggestions by using exports instead of files in component packages
 
 - Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
@@ -165,9 +166,7 @@ Dependency alignment across the project.
 
 ## 9.1.1
 
--
-
-### 🛑 BREAKING CHANGES.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)!
+### 🛑 BREAKING CHANGE
 
 - Leverage local workspace versioning to prevent misalignment
 
@@ -180,7 +179,7 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 #### Build optmizations to support minification
 
@@ -190,25 +189,16 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - Updated peerDependencies [[`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d)]:
 
-### 🛑 BREAKING CHANGES=7
-
-- @spectrum-css/tokens@>=14
-
-<a name="9.0.0"></a>
-
 ## 9.0.0
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.5...@spectrum-css/tag@9.0.0)
 
 - feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
-
 - Imports added to index.css and themes/express.css
-
-<a name="8.1.5"></a>
 
 ## 8.1.5
 
@@ -216,21 +206,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.1.4"></a>
-
-### 🛑 BREAKING CHANGESits](<https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.3...@spectrum-css/tag@8.1.4>)
-
-## **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.1.3"></a>
-
 ## 8.1.3
 
 🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.2...@spectrum-css/tag@8.1.3)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.1.2"></a>
 
 ## 8.1.2
 
@@ -238,15 +218,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.1.1"></a>
-
 ## 8.1.1
 
-🗓 2024-02-06
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.0...@spectrum-css/tag@8.1.1)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.1.0"></a>
 
 ## 8.1.0
 
@@ -254,9 +230,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🐛 Bug fixes
 
-- **tag:**higher specificity for color definition in hover states([fa8cd37](https://github.com/adobe/spectrum-css/commit/fa8cd37))
-
-<a name="8.0.17"></a>
+- **tag:** higher specificity for color definition in hover states([fa8cd37](https://github.com/adobe/spectrum-css/commit/fa8cd37))
 
 ## 8.0.17
 
@@ -264,15 +238,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.0.16"></a>
-
 ## 8.0.16
 
 🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.15...@spectrum-css/tag@8.0.16)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-## <a name="8.0.15"></a>
 
 ## 8.0.15
 
@@ -280,15 +250,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.0.14"></a>
-
 ## 8.0.14
 
 🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.12...@spectrum-css/tag@8.0.14)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.0.13"></a>
 
 ## 8.0.13
 
@@ -296,15 +262,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.0.12"></a>
-
 ## 8.0.12
 
 🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.11...@spectrum-css/tag@8.0.12)
 
-- Note:\*\* Version bump only for package @spectrum-css/tag
-
-<a name="8.0.11"></a>
+**Note:** Version bump only for package @spectrum-css/tag
 
 ## 8.0.11
 
@@ -312,15 +274,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.0.10"></a>
-
 ## 8.0.10
 
 🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.9...@spectrum-css/tag@8.0.10)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.0.9"></a>
 
 ## 8.0.9
 
@@ -328,15 +286,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.0.8"></a>
-
 ## 8.0.8
 
 🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.7...@spectrum-css/tag@8.0.8)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.0.7"></a>
 
 ## 8.0.7
 
@@ -344,15 +298,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.0.6"></a>
-
 ## 8.0.6
 
 🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.5...@spectrum-css/tag@8.0.6)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.0.5"></a>
 
 ## 8.0.5
 
@@ -360,23 +310,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.0.4"></a>
-
 ## 8.0.4
 
 🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.3...@spectrum-css/tag@8.0.4)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="8.0.3"></a>
-
 ## 8.0.3
 
 🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.2...@spectrum-css/tag@8.0.3)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.0.2"></a>
 
 ## 8.0.2
 
@@ -386,15 +330,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
-<a name="8.0.1"></a>
-
 ## 8.0.1
 
 🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.0...@spectrum-css/tag@8.0.1)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="8.0.0"></a>
 
 ## 8.0.0
 
@@ -402,19 +342,9 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
-    		*
-    		migrates clear button to use `@adobe/spectrum-tokens`
-
-- update to use infield button tokens release
-- migrate css to use tokens
-- add quiet variant and whcm styles
-- update storybook to include over background story
-- fix icon sizing in story, add cursor pointer
-- add aria-labels
-
-<a name="7.0.0"></a>
+- migrates clear button to use `@adobe/spectrum-tokens`
 
 ## 7.0.0
 
@@ -422,19 +352,9 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
-    		*
-    		migrates clear button to use `@adobe/spectrum-tokens`
-
-- update to use infield button tokens release
-- migrate css to use tokens
-- add quiet variant and whcm styles
-- update storybook to include over background story
-- fix icon sizing in story, add cursor pointer
-- add aria-labels
-
-<a name="6.0.1"></a>
+- migrates clear button to use `@adobe/spectrum-tokens`
 
 ## 6.0.1
 
@@ -442,18 +362,15 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="6.0.0"></a>
-
 ## 6.0.0
 
 🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.46...@spectrum-css/tag@6.0.0)
 
 - fix(tag)!: update color tokens, rename classes to be singular (#2039)([bb60ff4](https://github.com/adobe/spectrum-css/commit/bb60ff4)), closes[#2039](https://github.com/adobe/spectrum-css/issues/2039)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
-    		*
-    		renames class name instances of `--spectrum-Tags-*` to be `--spectrum-Tag-*`
+- renames class name instances of `--spectrum-Tags-*` to be `--spectrum-Tag-*`
 
 Additionally:
 
@@ -461,15 +378,11 @@ Additionally:
 - chore(tag): update stories
 - fix(tag): storybook icon avatar toggle
 
-<a name="5.0.46"></a>
-
 ## 5.0.46
 
 🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.45...@spectrum-css/tag@5.0.46)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.45"></a>
 
 ## 5.0.45
 
@@ -477,17 +390,13 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.44"></a>
-
 ## 5.0.44
 
 🗓 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.43...@spectrum-css/tag@5.0.44)
 
 ### 🐛 Bug fixes
 
-- **tag:**update whcm focus ring color ([#2043](https://github.com/adobe/spectrum-css/issues/2043))([e581fbc](https://github.com/adobe/spectrum-css/commit/e581fbc))
-
-<a name="5.0.43"></a>
+- **tag:** update whcm focus ring color ([#2043](https://github.com/adobe/spectrum-css/issues/2043))([e581fbc](https://github.com/adobe/spectrum-css/commit/e581fbc))
 
 ## 5.0.43
 
@@ -497,23 +406,17 @@ Additionally:
 
 - icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
-<a name="5.0.42"></a>
-
 ## 5.0.42
 
 🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.41...@spectrum-css/tag@5.0.42)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.41"></a>
-
 ## 5.0.41
 
 🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.40...@spectrum-css/tag@5.0.41)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.40"></a>
 
 ## 5.0.40
 
@@ -523,15 +426,11 @@ Additionally:
 
 - tag focus issue solved ([#1983](https://github.com/adobe/spectrum-css/issues/1983))([37baa4c](https://github.com/adobe/spectrum-css/commit/37baa4c))
 
-<a name="5.0.39"></a>
-
 ## 5.0.39
 
 🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.38...@spectrum-css/tag@5.0.39)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.38"></a>
 
 ## 5.0.38
 
@@ -539,15 +438,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.37"></a>
-
 ## 5.0.37
 
 🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.36...@spectrum-css/tag@5.0.37)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.36"></a>
 
 ## 5.0.36
 
@@ -557,15 +452,11 @@ Additionally:
 
 - restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
-<a name="5.0.35"></a>
-
 ## 5.0.35
 
 🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.34...@spectrum-css/tag@5.0.35)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.34"></a>
 
 ## 5.0.34
 
@@ -573,15 +464,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.33"></a>
-
 ## 5.0.33
 
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.32...@spectrum-css/tag@5.0.33)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.32"></a>
 
 ## 5.0.32
 
@@ -589,15 +476,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.31"></a>
-
 ## 5.0.31
 
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.30...@spectrum-css/tag@5.0.31)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.30"></a>
 
 ## 5.0.30
 
@@ -605,15 +488,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.29"></a>
-
 ## 5.0.29
 
 🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.28...@spectrum-css/tag@5.0.29)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.28"></a>
 
 ## 5.0.28
 
@@ -621,15 +500,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.27"></a>
-
 ## 5.0.27
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.26...@spectrum-css/tag@5.0.27)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.26"></a>
 
 ## 5.0.26
 
@@ -637,15 +512,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.25"></a>
-
 ## 5.0.25
 
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.24...@spectrum-css/tag@5.0.25)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.24"></a>
 
 ## 5.0.24
 
@@ -653,15 +524,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.23"></a>
-
 ## 5.0.23
 
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.22...@spectrum-css/tag@5.0.23)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.22"></a>
 
 ## 5.0.22
 
@@ -669,15 +536,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.21"></a>
-
 ## 5.0.21
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.20...@spectrum-css/tag@5.0.21)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.20"></a>
 
 ## 5.0.20
 
@@ -685,15 +548,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.19"></a>
-
 ## 5.0.19
 
 🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.18...@spectrum-css/tag@5.0.19)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.18"></a>
 
 ## 5.0.18
 
@@ -701,15 +560,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.17"></a>
-
 ## 5.0.17
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.16...@spectrum-css/tag@5.0.17)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.16"></a>
 
 ## 5.0.16
 
@@ -717,15 +572,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.15"></a>
-
 ## 5.0.15
 
 🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.14...@spectrum-css/tag@5.0.15)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.14"></a>
 
 ## 5.0.14
 
@@ -733,15 +584,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.13"></a>
-
 ## 5.0.13
 
 🗓 2023-04-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.12...@spectrum-css/tag@5.0.13)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.12"></a>
 
 ## 5.0.12
 
@@ -749,15 +596,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.11"></a>
-
 ## 5.0.11
 
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.10...@spectrum-css/tag@5.0.11)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.10"></a>
 
 ## 5.0.10
 
@@ -765,15 +608,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.9"></a>
-
 ## 5.0.9
 
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.8...@spectrum-css/tag@5.0.9)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.8"></a>
 
 ## 5.0.8
 
@@ -781,15 +620,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.7"></a>
-
 ## 5.0.7
 
 🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.6...@spectrum-css/tag@5.0.7)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.6"></a>
 
 ## 5.0.6
 
@@ -797,15 +632,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.5"></a>
-
 ## 5.0.5
 
 🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.4...@spectrum-css/tag@5.0.5)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.4"></a>
 
 ## 5.0.4
 
@@ -813,15 +644,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.3"></a>
-
 ## 5.0.3
 
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.2...@spectrum-css/tag@5.0.3)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.2"></a>
 
 ## 5.0.2
 
@@ -829,15 +656,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="5.0.1"></a>
-
 ## 5.0.1
 
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.0...@spectrum-css/tag@5.0.1)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="5.0.0"></a>
 
 ## 5.0.0
 
@@ -845,11 +668,9 @@ Additionally:
 
 - chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - uses latest `@adobe/spectrum-tokens` dependency which includes token renames
-
-<a name="4.0.9"></a>
 
 ## 4.0.9
 
@@ -857,15 +678,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="4.0.8"></a>
-
 ## 4.0.8
 
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.7...@spectrum-css/tag@4.0.8)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="4.0.7"></a>
 
 ## 4.0.7
 
@@ -873,15 +690,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="4.0.6"></a>
-
 ## 4.0.6
 
 🗓 2023-01-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.4...@spectrum-css/tag@4.0.6)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="4.0.5"></a>
 
 ## 4.0.5
 
@@ -889,15 +702,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="4.0.4"></a>
-
 ## 4.0.4
 
 🗓 2023-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.3...@spectrum-css/tag@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="4.0.3"></a>
 
 ## 4.0.3
 
@@ -905,15 +714,11 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="4.0.2"></a>
-
 ## 4.0.2
 
 🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.1...@spectrum-css/tag@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="4.0.1"></a>
 
 ## 4.0.1
 
@@ -921,21 +726,17 @@ Additionally:
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="4.0.0"></a>
-
 ## 4.0.0
 
 🗓 2022-12-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.15...@spectrum-css/tag@4.0.0)
 
 - refactor(tag)!: migrate to core tokens (#1520) ([a9612d1](https://github.com/adobe/spectrum-css/commit/a9612d1)), closes [#1520](https://github.com/adobe/spectrum-css/issues/1520)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - migrates tag to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
-
-<a name="3.3.15"></a>
 
 ## 3.3.15
 
@@ -943,23 +744,17 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="3.3.14"></a>
-
 ## 3.3.14
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.13...@spectrum-css/tag@3.3.14)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="3.3.13"></a>
-
 ## 3.3.13
 
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.12...@spectrum-css/tag@3.3.13)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.3.12"></a>
 
 ## 3.3.12
 
@@ -969,15 +764,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - tag WHCM ([2a87aed](https://github.com/adobe/spectrum-css/commit/2a87aed))
 
-<a name="3.3.11"></a>
-
 ## 3.3.11
 
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.10...@spectrum-css/tag@3.3.11)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.3.10"></a>
 
 ## 3.3.10
 
@@ -987,15 +778,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - stick to a single selector for consistency in tag clearbutton ([2d8261e](https://github.com/adobe/spectrum-css/commit/2d8261e))
 
-<a name="3.3.9"></a>
-
 ## 3.3.9
 
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.8...@spectrum-css/tag@3.3.9)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.3.8"></a>
 
 ## 3.3.8
 
@@ -1003,15 +790,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="3.3.7"></a>
-
 ## 3.3.7
 
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.6...@spectrum-css/tag@3.3.7)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.3.6"></a>
 
 ## 3.3.6
 
@@ -1019,15 +802,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="3.3.5"></a>
-
 ## 3.3.5
 
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.4...@spectrum-css/tag@3.3.5)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.3.4"></a>
 
 ## 3.3.4
 
@@ -1035,23 +814,17 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="3.3.3"></a>
-
 ## 3.3.3
 
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.2...@spectrum-css/tag@3.3.3)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="3.3.2"></a>
-
 ## 3.3.2
 
 🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.1...@spectrum-css/tag@3.3.2)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.3.1"></a>
 
 ## 3.3.1
 
@@ -1061,8 +834,6 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - add express support to tag ([92355bb](https://github.com/adobe/spectrum-css/commit/92355bb))
 - update tag for express WIP ([fe2d8d1](https://github.com/adobe/spectrum-css/commit/fe2d8d1))
-
-<a name="3.3.0"></a>
 
 ## 3.3.0
 
@@ -1076,25 +847,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
-<a name="3.2.0"></a>
-
 ## 3.2.0
 
-🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.2.0-beta.0...@spectrum-css/tag@3.2.0)
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.1.4...@spectrum-css/tag@3.2.0)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.2.0-beta.0"></a>
-
-## 3.2.0-beta.0
-
-🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.1.4...@spectrum-css/tag@3.2.0-beta.0)
-
-### ✨ Features
-
-- break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
-
-<a name="3.1.4"></a>
 
 ## 3.1.4
 
@@ -1102,15 +859,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="3.1.3"></a>
-
 ## 3.1.3
 
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.1.2...@spectrum-css/tag@3.1.3)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.1.2"></a>
 
 ## 3.1.2
 
@@ -1118,15 +871,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/tag
 
-<a name="3.1.1"></a>
-
 ## 3.1.1
 
 🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.1.0...@spectrum-css/tag@3.1.1)
 
 **Note:** Version bump only for package @spectrum-css/tag
-
-<a name="3.1.0"></a>
 
 ## 3.1.0
 
@@ -1136,11 +885,9 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
 
-<a name="3.0.0"></a>
-
 ## 3.0.0
 
-🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.3...@spectrum-css/tag@3.0.0)
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0...@spectrum-css/tag@3.0.0)
 
 ### 🐛 Bug fixes
 
@@ -1149,60 +896,14 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - fix!: avatar needs a div wrapper for to support express border overlay ([f54b645](https://github.com/adobe/spectrum-css/commit/f54b645))
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
-- for express to support the transparent border overlay,
-  the avatar needs to be wrapped in a div to support pseudo elements.
-
-<a name="2.0.0"></a>
+- for express to support the transparent border overlay, the avatar needs to be wrapped in a div to support pseudo elements.
 
 ## 2.0.0
 
-🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.3...@spectrum-css/tag@2.0.0)
+🗓 2021-09-29
 
 ### 🐛 Bug fixes
 
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="2.0.0-alpha.3"></a>
-
-## 2.0.0-alpha.3
-
-🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.2...@spectrum-css/tag@2.0.0-alpha.3)
-
-**Note:** Version bump only for package @spectrum-css/tag
-
-<a name="2.0.0-alpha.2"></a>
-
-## 2.0.0-alpha.2
-
-🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.1...@spectrum-css/tag@2.0.0-alpha.2)
-
-**Note:** Version bump only for package @spectrum-css/tag
-
-<a name="2.0.0-alpha.1"></a>
-
-## 2.0.0-alpha.1
-
-🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.0...@spectrum-css/tag@2.0.0-alpha.1)
-
-**Note:** Version bump only for package @spectrum-css/tag
-
-<a name="2.0.0-alpha.0"></a>
-
-## 2.0.0-alpha.0
-
-🗓 2021-04-27
-
-### ✨ Features
-
-- align tags with more recent DNA tokens ([0f41e47](https://github.com/adobe/spectrum-css/commit/0f41e47))
-
-### 🐛 Bug fixes
-
-- taggroup to use more dna tokens ([243aad6](https://github.com/adobe/spectrum-css/commit/243aad6))
-- updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
-
-### 🛑 BREAKING CHANGES
-
-- changed tags to taggroup and broke tag into it's own component
