@@ -1,4 +1,9 @@
 module.exports = {
+	"**/*": () => [
+		"yarn constraints --fix",
+		"yarn install",
+		"git add yarn.lock"
+	],
 	"*.css": [
 		"stylelint --fix --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables",
 		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
@@ -7,8 +12,6 @@ module.exports = {
 		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
 	],
 	"package.json": (files) => [
-		"yarn constraints --fix",
-		"yarn install",
 		`eslint --fix --cache --no-error-on-unmatched-pattern --quiet ${files.join(" ")}`,
 	],
 	"dist/*.css": [
