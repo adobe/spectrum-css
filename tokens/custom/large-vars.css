@@ -104,6 +104,11 @@
 	--spectrum-slider-tick-mark-height: 13px;
 	--spectrum-slider-ramp-track-height: 20px;
 
+	--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
+	--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-400);
+	--spectrum-takeover-dialog-spacing-header-gap: var(--spectrum-spacing-300);
+	--spectrum-takeover-dialog-spacing-title-to-body: var(--spectrum-spacing-400);
+
 	--spectrum-treeview-item-indentation-medium: 20px;
 	--spectrum-treeview-item-indentation-small: 15px;
 	--spectrum-treeview-item-indentation-large: 25px;
@@ -111,7 +116,9 @@
 	--spectrum-treeview-indicator-inset-block-start: 6px;
 	--spectrum-treeview-item-min-block-size-thumbnail-offset-medium: 2px;
 
-	--spectrum-tooltip-animation-distance: 5px;
+	/* To get a square that measures 12px on the diagonal, the sides have to be 10px */
+	--spectrum-tooltip-tip-square-size: 10px;
+
 	--spectrum-ui-icon-medium-display: none;
 	--spectrum-ui-icon-large-display: block;
 

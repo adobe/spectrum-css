@@ -2,7 +2,7 @@
 
 ## 1.1.2
 
-🗓 2024-02-06
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/ui-icons@1.1.1...@spectrum-css/ui-icons@1.1.1)
 
 **Note:** Version bump only for package @spectrum-css/ui-icons
 

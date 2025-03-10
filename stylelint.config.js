@@ -11,7 +11,6 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-missing-var",
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
-		"@spectrum-tools/stylelint-theme-alignment",
 		// "stylelint-high-performance-animation",
 	],
 	rules: {
@@ -150,7 +149,6 @@ module.exports = {
 		 * Local/custom plugins
 		 * -------------------------------------------------------------- */
 		"spectrum-tools/no-missing-var": true,
-		"spectrum-tools/theme-alignment": null,
 		"spectrum-tools/no-unused-custom-properties": null,
 		"spectrum-tools/no-unknown-custom-properties": null,
 	},
@@ -159,7 +157,7 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["components/*/index.css", "components/*/themes/spectrum.css"],
+			files: ["components/*/index.css"],
 			rules: {
 				"selector-class-pattern": [
 					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
@@ -207,21 +205,6 @@ module.exports = {
 			rules: {
 				"custom-property-pattern": [/^(spectrum|color|scale|system)/, {}],
 			}
-		},
-		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/*.css", "!components/*/themes/spectrum.css"],
-			rules: {
-				"spectrum-tools/no-unused-custom-properties": null,
-				"selector-class-pattern": [
-					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
-						resolveNestedSelectors: true
-					}
-				],
-				"spectrum-tools/theme-alignment": [true, {
-					baseFilename: "spectrum-two",
-				}],
-			},
 		},
 		{
 			/* Allow "tree shaking" of unused custom properties in the bundle */

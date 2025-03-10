@@ -50,9 +50,7 @@
     ".spectrum-Tabs.spectrum-Tabs--sizeL",
     ".spectrum-Tabs.spectrum-Tabs--sizeS",
     ".spectrum-Tabs.spectrum-Tabs--sizeXL",
-    ".spectrum-Tabs.spectrum-Tabs--vertical.spectrum-Tabs--compact .spectrum-Tabs-item:before",
-    "[dir=\"rtl\"] .spectrum-Tabs--vertical",
-    "[dir=\"rtl\"] .spectrum-Tabs--vertical-right"
+    ".spectrum-Tabs.spectrum-Tabs--vertical.spectrum-Tabs--compact .spectrum-Tabs-item:before"
   ],
   "modifiers": [
     "--mod-tabs-animation-duration",
@@ -205,10 +203,6 @@
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-50",
     "--spectrum-workflow-icon-size-75"
-  ],
-  "system-theme": [
-    "--system-tabs-divider-background-color",
-    "--system-tabs-font-weight"
   ],
   "passthroughs": [],
   "high-contrast": [

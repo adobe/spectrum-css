@@ -14,8 +14,7 @@
     ".spectrum-ColorWheel-wheel.is-disabled",
     ".spectrum-ColorWheel.is-disabled",
     ".spectrum-ColorWheel.is-dragged",
-    ".spectrum-ColorWheel.is-focused",
-    "[dir=\"rtl\"] .spectrum-ColorWheel-ColorArea-handle"
+    ".spectrum-ColorWheel.is-focused"
   ],
   "modifiers": [
     "--mod-colorwheel-border-color",
@@ -50,7 +49,6 @@
     "--spectrum-disabled-background-color",
     "--spectrum-transparent-black-300"
   ],
-  "system-theme": ["--system-color-wheel-border-color"],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-colorwheel-border-color-disabled",
