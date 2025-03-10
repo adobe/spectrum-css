@@ -39,9 +39,7 @@
     ".spectrum-Accordion:dir(rtl)",
     ".spectrum-Accordion:lang(ja)",
     ".spectrum-Accordion:lang(ko)",
-    ".spectrum-Accordion:lang(zh)",
-    "[dir=\"rtl\"] .spectrum-Accordion",
-    "[dir=\"rtl\"] .spectrum-Accordion-itemIconContainer"
+    ".spectrum-Accordion:lang(zh)"
   ],
   "modifiers": [
     "--mod-accordion-background-color-default",
@@ -197,11 +195,6 @@
     "--spectrum-neutral-content-color-hover",
     "--spectrum-neutral-content-color-key-focus",
     "--spectrum-sans-font-family-stack"
-  ],
-  "system-theme": [
-    "--system-accordion-divider-color",
-    "--system-accordion-item-content-color",
-    "--system-accordion-item-content-disabled-color"
   ],
   "passthroughs": [],
   "high-contrast": []
