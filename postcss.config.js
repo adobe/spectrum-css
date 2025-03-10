@@ -15,12 +15,7 @@ const fs = require("node:fs");
 const { join, basename } = require("node:path");
 
 module.exports = ({
-	skipMapping = false,
-	referencesOnly = false,
-	preserveVariables = true,
-	stripLocalSelectors = false,
 	resolveImports = true,
-	shouldCombine = false,
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -84,19 +79,6 @@ module.exports = ({
 				prefix: "is-"
 			} : false,
 			"postcss-hover-media-feature": {},
-			/* --------------------------------------------------- */
-			/* ------------------- VARIABLE PARSING -------------- */
-			"@spectrum-tools/postcss-add-theming-layer": {
-				selectorPrefix: "spectrum",
-				skipMapping,
-				preserveVariables,
-				referencesOnly,
-				stripLocalSelectors,
-				debug: verbose,
-			},
-			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
-				newSelector: ".spectrum",
-			} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
@@ -113,18 +95,11 @@ module.exports = ({
 				stage: 2,
 				env,
 				features: {
-					"custom-properties": true,
-					"logical-properties-and-values": false,
-					clamp: true,
-					"color-functional-notation": true,
-					"dir-pseudo-class": { preserve: true },
-					"nesting-rules": { noIsPseudoSelector: true },
-					// https://github.com/jsxtools/focus-within
-					"focus-within-pseudo-class": true,
-					"font-format-keywords": true,
-					"opacity-percentage": true,
-					// https://github.com/csstools/postcss-plugins/tree/main/plugins/css-prefers-color-scheme
-					"prefers-color-scheme-query": true,
+					"nesting-rules": {
+						preserve: true,
+						edition: "2021",
+						noIsPseudoSelector: true,
+					},
 				},
 			},
 			/* --------------------------------------------------- */

@@ -1,15 +1,16 @@
 {
   "sourceFile": "index.css",
   "selectors": [":root"],
-  "modifiers": ["--mod-page-background", "--mod-page-content-tap-highlight"],
-  "component": [
-    "--spectrum-page-background-color",
-    "--spectrum-page-content-tap-highlight"
+  "modifiers": [
+    "--mod-page-background",
+    "--mod-page-content-color",
+    "--mod-page-content-tap-highlight"
   ],
-  "global": ["--spectrum-gray-75", "--spectrum-transparent-black-25"],
-  "system-theme": [
-    "--system-root-page-background-color",
-    "--system-root-page-content-tap-highlight"
+  "component": [],
+  "global": [
+    "--spectrum-gray-75",
+    "--spectrum-neutral-content-color-default",
+    "--spectrum-transparent-black-25"
   ],
   "passthroughs": [],
   "high-contrast": []
