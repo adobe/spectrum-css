@@ -29,7 +29,7 @@ Consumers should load only the mappings for the components they are using in the
 
 The output is concatenated into a single `dist/index.css` for use in a vanilla HTML application. This entire file should be imported, and the relevant classes should be toggled to swap out core tokens.
 
-On the `<body>` element, start with `.spectrum`, add in `.spectrum--light`, then `.spectrum--medium`. To switch to another context, add `.spectrum--legacy` or `.spectrum--express`.
+On the `<body>` element, start with `.spectrum`, add in `.spectrum--light`, then `.spectrum--medium`.
 
 For additional guidance on which assets to load, see the architecture section below.
 
