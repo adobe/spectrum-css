@@ -1,4 +1,3 @@
-import legacy from "@spectrum-css/tokens-legacy/dist/json/tokens.json";
 import spectrum from "@spectrum-css/tokens/dist/json/tokens.json";
 
 import { useTheme } from "@storybook/theming";
@@ -70,9 +69,8 @@ function fetchTheme({ color, scale, context } = {}) {
 
 	// Create a platform context based on the scale (platform used in the token data)
 	const platform = scale === "medium" ? "desktop" : "mobile";
-	const tokens = context === "spectrum" ? spectrum : legacy;
 
-	return { color, scale, context, platform, tokens };
+	return { color, scale, context, platform, tokens: spectrum };
 }
 
 /**

@@ -13,7 +13,7 @@ on:
     pull_request:
         branches:
             - main
-            - spectrum-two
+            - spectrum-2
             # Allow us to run tests for PRs updating github actions
             - chore-*ci*
             - chore-*github-actions*
@@ -106,8 +106,6 @@ jobs:
                   files_yaml: |
                       styles:
                         - components/*/index.css
-                        - components/*/themes/spectrum.css
-                        - components/*/themes/express.css
                       eslint:
                         - components/*/stories/*.js
                       mdlint:
@@ -201,7 +199,7 @@ jobs:
         if: ${{ contains(github.event.pull_request.labels.*.name, 'run_vrt') || ((github.event.pull_request.draft != true || contains(github.event.pull_request.labels.*.name, 'run_ci')) && github.event.pull_request.mergeable == true) }}
         uses: ./.github/workflows/vrt.yml
         with:
-            skip: ${{ github.base_ref == 'spectrum-two' || contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
+            skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
         secrets: inherit
 
     # -------------------------------------------------------------

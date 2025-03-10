@@ -25,5 +25,20 @@ export default (options) => postcssConfig({
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
 		},
+		cssnano: {
+			preset: [
+				"cssnano-preset-advanced",
+				{
+					colormin: false,
+					discardComments: { removeAll: true },
+					// @todo yarn add -DW css-declaration-sorter
+					cssDeclarationSorter: false, // @todo { order: "smacss" },
+					normalizeWhitespace: false,
+				},
+			],
+		},
+		"postcss-licensing": {
+			filename: "../COPYRIGHT",
+		},
 	},
 });

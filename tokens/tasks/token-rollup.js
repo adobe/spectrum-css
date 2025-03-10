@@ -118,48 +118,47 @@ async function main({
 	if (!existsSync(compiledOutputPath)) {
 		mkdirSync(compiledOutputPath);
 	}
+	const reports = [];
+	const errors = [];
 
 	// Read in the package version from the package.json file
 	const packageJson = await fsp.readFile(join(cwd, "package.json"), "utf-8").then(JSON.parse);
 
 	// Wait for all the custom files to be processed
-	return appendCustomOverrides({ packageJson, cwd }).then(async (r) =>
-		Promise.all([
-			index(
-				[join("dist", "css", "*-vars.css")],
-				join(compiledOutputPath, "css", "index.css"),
-				{ cwd, clean, packageJson }
-			)
-		]).then((reports) => {
-			const logs = [reports, r].flat(Infinity).filter(Boolean);
+	await appendCustomOverrides({ packageJson, cwd }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	// Then build the index.css file
+	await index(["dist/css/*-vars.css"], path.join(compiledOutputPath, "css", "index.css"), { cwd, clean }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
-			if (logs && logs.length > 0) {
-				logs.forEach(log => {
-					// Strip the ../../tokens/ from the paths
-					console.log(log.replace(/(\.\.\/)+tokens\//g, ""));
-				});
-			}
-			else console.log("No assets created.".gray);
+	// Combine all the reports into a single log output
+	const logs = reports.flat(Infinity).filter(Boolean);
+	const errorLogs = errors.flat(Infinity).filter(Boolean);
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		}).catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
+	console.log(`\n\n${key} 🔨`);
+	console.log(`${"".padStart(30, "-")}`);
 
-			console.trace(err);
+	if (!(errorLogs && errorLogs.length > 0)) {
+		if (logs && logs.length > 0) {
+			logs.forEach(log => {
+				// Strip the ../../tokens/ from the paths
+				console.log(log.replace(/(\.\.\/)+tokens\//g, ""));
+			});
+		}
+		else console.log("No assets created.".gray);
+	}
+	else {
+		errorLogs.forEach(log => {
+			console.error(log);
+		});
+	}
 
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
 
-			process.exit(1);
-		})
-	);
+	if (errorLogs && errorLogs.length > 0) {
+		process.exit(1);
+	}
 }
 
 main();

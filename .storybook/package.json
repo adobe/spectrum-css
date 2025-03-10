@@ -42,12 +42,11 @@
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
 		"@spectrum-css/bundle": "1.0.1",
 		"@spectrum-css/tokens": "16.0.1",
-		"@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^15.0.0",
 		"@spectrum-css/ui-icons": "1.1.2"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.26.0",
-		"@chromatic-com/storybook": "^3.2.3",
+		"@babel/core": "^7.26.9",
+		"@chromatic-com/storybook": "^3.2.5",
 		"@etchteam/storybook-addon-status": "^5.0.0",
 		"@storybook/addon-a11y": "8.4.7",
 		"@storybook/addon-actions": "8.4.7",
@@ -65,7 +64,7 @@
 		"@storybook/theming": "8.4.7",
 		"@storybook/web-components-vite": "8.4.7",
 		"@whitespace/storybook-addon-html": "^6.1.1",
-		"chromatic": "^11.22.2",
+		"chromatic": "^11.27.0",
 		"lit": "^3.2.1",
 		"lodash-es": "^4.17.21",
 		"npm-registry-fetch": "^18.0.2",
@@ -74,7 +73,7 @@
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-syntax-highlighter": "^15.6.1",
-		"remark-gfm": "^4.0.0",
+		"remark-gfm": "^4.0.1",
 		"rollup-plugin-postcss-lit": "^2.1.0",
 		"storybook": "8.4.7",
 		"vite": "^5.4.11"
