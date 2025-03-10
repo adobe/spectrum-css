@@ -11,9 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Tabs {
+	--spectrum-tabs-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-tabs-divider-background-color: var(--spectrum-gray-200);
+
 	/* Default is Medium sizing */
 	--spectrum-tabs-item-height: var(--spectrum-tab-item-height-medium);
 	--spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
