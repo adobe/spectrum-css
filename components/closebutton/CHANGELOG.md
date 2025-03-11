@@ -1,8 +1,5 @@
 # Change log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 ## 7.0.0-next.0
 
 ### Patch Changes
@@ -14,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Minor Changes
 
-- [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 ## New feature
 
@@ -22,7 +19,7 @@ Minified and gzipped outputs available for all compiled CSS assets.
 
 ### Patch Changes
 
-- [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 Dependency alignment across the project.
 
@@ -34,17 +31,19 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes a bug in the content of the `dist/index-theme.css` file.
+📝 [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
+Fixes a bug in the content of the `dist/index-theme.css` file.
 
-  Expected output example for the index-theme.css:
+Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
 
-  ```
-  .spectrum-ActionButton {
-   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
-   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
-  ```
+Expected output example for the index-theme.css:
+
+```css
+.spectrum-ActionButton {
+  --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+  --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+```
 
 - Updated dependencies [[`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c)]:
   - @spectrum-css/icon@9.0.1
@@ -53,29 +52,31 @@ Dependency alignment across the project.
 
 ### Major Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+📝 [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)!
 
-  This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
+### 🛑 Breaking change
 
-  For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
+This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
 
-  For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
+For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
 
-  If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
+For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
 
-  ### Deprecations
+If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
 
-  The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
+### Deprecations
 
-  The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
+The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
 
-  ### File usage
+The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
 
-  If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
+### File usage
 
-  If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
 
-  To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
+If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+
+To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
 
 ### Patch Changes
 
@@ -87,7 +88,9 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! - Peer dependency for @spectrum-css/tokens updated to include v15 as well as v14.
+📝 [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Peer dependency for @spectrum-css/tokens updated to include v15 as well as v14.
 
 - Updated dependencies [[`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39), [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39)]:
   - @spectrum-css/tokens@15.2.0
@@ -97,7 +100,9 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)! - Simplify how the `--system` properties are mapped. By updating the logic in the `postcss-add-theming-layer`, we are now shipping cleaner, more readable `--system` property names. These custom properties are documented as _NOT_ a part of the component API so although these result in a change to the custom property names, it does not impact the properties that are in the API and so do not constitute a breaking change. Expect to see no change to how component theming works or any visual regressions as a result of this change.
+📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Simplify how the `--system` properties are mapped. By updating the logic in the `postcss-add-theming-layer`, we are now shipping cleaner, more readable `--system` property names. These custom properties are documented as _NOT_ a part of the component API so although these result in a change to the custom property names, it does not impact the properties that are in the API and so do not constitute a breaking change. Expect to see no change to how component theming works or any visual regressions as a result of this change.
 
 ### Patch Changes
 
@@ -109,7 +114,9 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+📝 [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Remove the storybook assets from the shipped output for components
 
 ### Patch Changes
 
@@ -120,13 +127,17 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3270](https://github.com/adobe/spectrum-css/pull/3270) [`008bb34`](https://github.com/adobe/spectrum-css/commit/008bb34a0bbefd1abeb0d37bcdb179811dd9df3c) Thanks [@cdransf](https://github.com/cdransf)! - Removes unnecessary stylelint-disable comments now that rule is disabled in config.
+📝 [#3270](https://github.com/adobe/spectrum-css/pull/3270) [`008bb34`](https://github.com/adobe/spectrum-css/commit/008bb34a0bbefd1abeb0d37bcdb179811dd9df3c) Thanks [@cdransf](https://github.com/cdransf)!
+
+- Removes unnecessary stylelint-disable comments now that rule is disabled in config.
 
 ## 5.2.1
 
 ### Patch Changes
 
-- [#3250](https://github.com/adobe/spectrum-css/pull/3250) [`2b45928`](https://github.com/adobe/spectrum-css/commit/2b45928b503c9ded173a56da65a32764f2255918) Thanks [@castastrophe](https://github.com/castastrophe)! - CloseButton
+📝 [#3250](https://github.com/adobe/spectrum-css/pull/3250) [`2b45928`](https://github.com/adobe/spectrum-css/commit/2b45928b503c9ded173a56da65a32764f2255918) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- CloseButton
 
   - Remove hardcoded tokens for sizing in favor of component sizing. Remove mapping to height & width separately in favor of using the existing "--spectrum-closebutton-size" property.
 
@@ -134,7 +145,9 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#3108](https://github.com/adobe/spectrum-css/pull/3108) [`7fedb1f`](https://github.com/adobe/spectrum-css/commit/7fedb1f23bcce5ff1a089b8cfc2649eb273c6d80) Thanks [@castastrophe](https://github.com/castastrophe)! - Currently the t-shirt sizing for Close button is using "spectrum-Closebutton" as a prefix which does not align with the use of "spectrum-CloseButton" (capital B) for the root class. This PR adds sizing classes that use the capital B and labels the lowercase B class as deprecated.
+📝 [#3108](https://github.com/adobe/spectrum-css/pull/3108) [`7fedb1f`](https://github.com/adobe/spectrum-css/commit/7fedb1f23bcce5ff1a089b8cfc2649eb273c6d80) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Currently the t-shirt sizing for Close button is using "spectrum-Closebutton" as a prefix which does not align with the use of "spectrum-CloseButton" (capital B) for the root class. This PR adds sizing classes that use the capital B and labels the lowercase B class as deprecated.
 
   Expands Close button test coverage to include the hover and focus states.
 
@@ -142,7 +155,9 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+📝 [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
 
   Sort keys in the package.json assets.
 
@@ -153,7 +168,9 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+📝 [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Improve changeset suggestions by using exports instead of files in component packages
 
 - Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
   - @spectrum-css/icon@7.1.3
@@ -162,7 +179,9 @@ Dependency alignment across the project.
 
 ### Patch Changes
 
-- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
+📝 [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Leveral local workspace versioning to prevent misalignment
 
 - Updated dependencies [[`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855)]:
   - @spectrum-css/icon@7.1.1
@@ -171,7 +190,7 @@ Dependency alignment across the project.
 
 ### Minor Changes
 
-- [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 #### Build optmizations to support minification
 
@@ -183,29 +202,21 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/icon@>=7
   - @spectrum-css/tokens@>=14
 
-<a name="5.0.0"></a>
-
 ## 5.0.0
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.2.5...@spectrum-css/closebutton@5.0.0)
 
 - feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
-      *
-      - Removes component-builder & component-builder-simple for script leveraging postcss
-
+- Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
-
-<a name="4.2.5"></a>
 
 ## 4.2.5
 
 🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.2.4...@spectrum-css/closebutton@4.2.5)
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.2.4"></a>
 
 ## 4.2.4
 
@@ -213,15 +224,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.2.3"></a>
-
 ## 4.2.3
 
 🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.2.2...@spectrum-css/closebutton@4.2.3)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.2.2"></a>
 
 ## 4.2.2
 
@@ -229,23 +236,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.2.1"></a>
-
 ## 4.2.1
 
-🗓 2024-02-06
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.2.0...@spectrum-css/closebutton@4.2.1)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.2.0"></a>
 
 ## 4.2.0
 
-🗓
+🗓 2024 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.1.0...@spectrum-css/closebutton@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.1.0"></a>
 
 ## 4.1.0
 
@@ -257,9 +258,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🐛 Bug fixes
 
-- **commons:**rename and deprecate mods referencing global tokens ([#2423](https://github.com/adobe/spectrum-css/issues/2423))([3a49432](https://github.com/adobe/spectrum-css/commit/3a49432))
-
-<a name="4.0.18"></a>
+- **commons:** rename and deprecate mods referencing global tokens ([#2423](https://github.com/adobe/spectrum-css/issues/2423))([3a49432](https://github.com/adobe/spectrum-css/commit/3a49432))
 
 ## 4.0.18
 
@@ -267,23 +266,16 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.17"></a>
-
 ## 4.0.17
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.16...@spectrum-css/closebutton@4.0.17)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.16...@spectrum-css/closebutton@4.0.17)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.0.16"></a>
 
 ## 4.0.16
 
 🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.15...@spectrum-css/closebutton@4.0.16)
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.0.15"></a>
 
 ## 4.0.15
 
@@ -291,14 +283,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.14"></a>
-
 ## 4.0.14
 
 🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.13...@spectrum-css/closebutton@4.0.14)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-<a name="4.0.13"></a>
 
 ## 4.0.13
 
@@ -306,24 +295,17 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.12"></a>
-
 ## 4.0.12
 
 🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.11...@spectrum-css/closebutton@4.0.12)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.11"></a>
-
 ## 4.0.11
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.10...@spectrum-css/closebutton@4.0.11)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.10...@spectrum-css/closebutton@4.0.11)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.0.10"></a>
 
 ## 4.0.10
 
@@ -331,31 +313,22 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.9"></a>
-
 ## 4.0.9
 
 🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.8...@spectrum-css/closebutton@4.0.9)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.8"></a>
-
 ## 4.0.8
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.7...@spectrum-css/closebutton@4.0.8)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.7...@spectrum-css/closebutton@4.0.8)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.0.7"></a>
 
 ## 4.0.7
 
 🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.6...@spectrum-css/closebutton@4.0.7)
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.0.6"></a>
 
 ## 4.0.6
 
@@ -363,15 +336,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.5"></a>
-
 ## 4.0.5
 
 🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.4...@spectrum-css/closebutton@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.0.4"></a>
 
 ## 4.0.4
 
@@ -379,9 +348,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
-
-<a name="4.0.3"></a>
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 ## 4.0.3
 
@@ -389,15 +356,11 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.2"></a>
-
 ## 4.0.2
 
 🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.0...@spectrum-css/closebutton@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="4.0.1"></a>
 
 ## 4.0.1
 
@@ -405,22 +368,16 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="4.0.0"></a>
-
 ## 4.0.0
 
 🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.14...@spectrum-css/closebutton@4.0.0)
 
 - refactor(closebutton)!: replace focus-ring with focus-visible([a17183f](https://github.com/adobe/spectrum-css/commit/a17183f))
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
-    		*
-    		use focus-visible pseudo class for focus styling
-
-remove duplicate focus indicator styling
-
-<a name="3.1.14"></a>
+- use focus-visible pseudo class for focus styling
+- remove duplicate focus indicator styling
 
 ## 3.1.14
 
@@ -428,14 +385,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.1.13"></a>
-
 ## 3.1.13
 
 🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.12...@spectrum-css/closebutton@3.1.13)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-<a name="3.1.12"></a>
 
 ## 3.1.12
 
@@ -443,17 +397,13 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.1.11"></a>
-
 ## 3.1.11
 
 🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.10...@spectrum-css/closebutton@3.1.11)
 
 ### 🐛 Bug fixes
 
-\*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
-
-<a name="3.1.10"></a>
+- icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 ## 3.1.10
 
@@ -461,14 +411,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.1.9"></a>
-
 ## 3.1.9
 
 🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.8...@spectrum-css/closebutton@3.1.9)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-<a name="3.1.8"></a>
 
 ## 3.1.8
 
@@ -476,15 +423,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.1.7"></a>
-
 ## 3.1.7
 
 🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.6...@spectrum-css/closebutton@3.1.7)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.1.6"></a>
 
 ## 3.1.6
 
@@ -492,50 +435,37 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.1.5"></a>
-
 ## 3.1.5
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.4...@spectrum-css/closebutton@3.1.5)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.4...@spectrum-css/closebutton@3.1.5)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.1.4"></a>
 
 ## 3.1.4
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.3...@spectrum-css/closebutton@3.1.4)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.3...@spectrum-css/closebutton@3.1.4)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
-
-<a name="3.1.3"></a>
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 ## 3.1.3
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.2...@spectrum-css/closebutton@3.1.3)
-**Note:** Version bump only for package @spectrum-css/closebutton
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.2...@spectrum-css/closebutton@3.1.3)
 
-<a name="3.1.2"></a>
+**Note:** Version bump only for package @spectrum-css/closebutton
 
 ## 3.1.2
 
 🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.1...@spectrum-css/closebutton@3.1.2)
-**Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.1.1"></a>
+**Note:** Version bump only for package @spectrum-css/closebutton
 
 ## 3.1.1
 
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.0...@spectrum-css/closebutton@3.1.1)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.1.0"></a>
 
 ## 3.1.0
 
@@ -545,15 +475,11 @@ remove duplicate focus indicator styling
 
 - **alertbanner:** add AlertBanner component ([#1798](https://github.com/adobe/spectrum-css/issues/1798)) ([1610e7a](https://github.com/adobe/spectrum-css/commit/1610e7a))
 
-<a name="3.0.43"></a>
-
 ## 3.0.43
 
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.42...@spectrum-css/closebutton@3.0.43)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.42"></a>
 
 ## 3.0.42
 
@@ -561,15 +487,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.41"></a>
-
 ## 3.0.41
 
 🗓 2023-05-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.40...@spectrum-css/closebutton@3.0.41)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.40"></a>
 
 ## 3.0.40
 
@@ -577,15 +499,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.39"></a>
-
 ## 3.0.39
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.38...@spectrum-css/closebutton@3.0.39)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.38"></a>
 
 ## 3.0.38
 
@@ -593,15 +511,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.37"></a>
-
 ## 3.0.37
 
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.36...@spectrum-css/closebutton@3.0.37)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.36"></a>
 
 ## 3.0.36
 
@@ -609,15 +523,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.35"></a>
-
 ## 3.0.35
 
 🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.34...@spectrum-css/closebutton@3.0.35)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.34"></a>
 
 ## 3.0.34
 
@@ -625,15 +535,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.33"></a>
-
 ## 3.0.33
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.32...@spectrum-css/closebutton@3.0.33)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.32"></a>
 
 ## 3.0.32
 
@@ -641,15 +547,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.31"></a>
-
 ## 3.0.31
 
 🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.30...@spectrum-css/closebutton@3.0.31)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.30"></a>
 
 ## 3.0.30
 
@@ -657,15 +559,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.29"></a>
-
 ## 3.0.29
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.28...@spectrum-css/closebutton@3.0.29)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.28"></a>
 
 ## 3.0.28
 
@@ -673,15 +571,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.27"></a>
-
 ## 3.0.27
 
 🗓 2023-04-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.26...@spectrum-css/closebutton@3.0.27)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.26"></a>
 
 ## 3.0.26
 
@@ -689,15 +583,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.25"></a>
-
 ## 3.0.25
 
 🗓 2023-04-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.24...@spectrum-css/closebutton@3.0.25)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.24"></a>
 
 ## 3.0.24
 
@@ -705,15 +595,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.23"></a>
-
 ## 3.0.23
 
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.22...@spectrum-css/closebutton@3.0.23)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.22"></a>
 
 ## 3.0.22
 
@@ -721,15 +607,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.21"></a>
-
 ## 3.0.21
 
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.20...@spectrum-css/closebutton@3.0.21)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.20"></a>
 
 ## 3.0.20
 
@@ -737,15 +619,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.19"></a>
-
 ## 3.0.19
 
 🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.18...@spectrum-css/closebutton@3.0.19)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.18"></a>
 
 ## 3.0.18
 
@@ -753,15 +631,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.17"></a>
-
 ## 3.0.17
 
 🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.16...@spectrum-css/closebutton@3.0.17)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.16"></a>
 
 ## 3.0.16
 
@@ -769,15 +643,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.15"></a>
-
 ## 3.0.15
 
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.14...@spectrum-css/closebutton@3.0.15)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.14"></a>
 
 ## 3.0.14
 
@@ -785,15 +655,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.13"></a>
-
 ## 3.0.13
 
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.12...@spectrum-css/closebutton@3.0.13)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.12"></a>
 
 ## 3.0.12
 
@@ -801,15 +667,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.11"></a>
-
 ## 3.0.11
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.10...@spectrum-css/closebutton@3.0.11)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.10"></a>
 
 ## 3.0.10
 
@@ -817,15 +679,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.9"></a>
-
 ## 3.0.9
 
 🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.8...@spectrum-css/closebutton@3.0.9)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.8"></a>
 
 ## 3.0.8
 
@@ -833,15 +691,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.7"></a>
-
 ## 3.0.7
 
 🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.6...@spectrum-css/closebutton@3.0.7)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.6"></a>
 
 ## 3.0.6
 
@@ -849,15 +703,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.5"></a>
-
 ## 3.0.5
 
 🗓 2022-12-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.4...@spectrum-css/closebutton@3.0.5)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.4"></a>
 
 ## 3.0.4
 
@@ -865,15 +715,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.3"></a>
-
 ## 3.0.3
 
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.2...@spectrum-css/closebutton@3.0.3)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.2"></a>
 
 ## 3.0.2
 
@@ -881,15 +727,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="3.0.1"></a>
-
 ## 3.0.1
 
 🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.0...@spectrum-css/closebutton@3.0.1)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="3.0.0"></a>
 
 ## 3.0.0
 
@@ -897,7 +739,7 @@ remove duplicate focus indicator styling
 
 - refactor(closebutton)!: remap core token aliases & rename aliases ([dc3afde](https://github.com/adobe/spectrum-css/commit/dc3afde))
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - remaps existing aliases to new/renamed core token values
 
@@ -907,15 +749,11 @@ remove duplicate focus indicator styling
 - `--spectrum-static-white-focus-ring-color` renamed to `--spectrum-static-white-focus-indicator-color`
 - `--spectrum-static-black-focus-ring-color` renamed to `--spectrum-static-black-focus-indicator-color`
 
-<a name="2.0.7"></a>
-
 ## 2.0.7
 
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.6...@spectrum-css/closebutton@2.0.7)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="2.0.6"></a>
 
 ## 2.0.6
 
@@ -923,15 +761,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="2.0.5"></a>
-
 ## 2.0.5
 
 🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.4...@spectrum-css/closebutton@2.0.5)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="2.0.4"></a>
 
 ## 2.0.4
 
@@ -939,15 +773,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="2.0.3"></a>
-
 ## 2.0.3
 
 🗓 2022-08-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.2...@spectrum-css/closebutton@2.0.3)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="2.0.2"></a>
 
 ## 2.0.2
 
@@ -955,15 +785,11 @@ remove duplicate focus indicator styling
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="2.0.1"></a>
-
 ## 2.0.1
 
 🗓 2022-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.0...@spectrum-css/closebutton@2.0.1)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="2.0.0"></a>
 
 ## 2.0.0
 
@@ -971,13 +797,11 @@ remove duplicate focus indicator styling
 
 - feat(closebutton)!: migrate closebutton to core tokens (CSS-118) (#1477) ([766f9da](https://github.com/adobe/spectrum-css/commit/766f9da)), closes [#1477](https://github.com/adobe/spectrum-css/issues/1477)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - migrates closebutton to core tokens
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
-
-<a name="1.2.13"></a>
 
 ## 1.2.13
 
@@ -987,23 +811,17 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
 
-<a name="1.2.12"></a>
-
 ## 1.2.12
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.11...@spectrum-css/closebutton@1.2.12)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="1.2.11"></a>
-
 ## 1.2.11
 
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.10...@spectrum-css/closebutton@1.2.11)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="1.2.10"></a>
 
 ## 1.2.10
 
@@ -1013,15 +831,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - closebutton WHCM ([7b61437](https://github.com/adobe/spectrum-css/commit/7b61437))
 
-<a name="1.2.9"></a>
-
 ## 1.2.9
 
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.8...@spectrum-css/closebutton@1.2.9)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="1.2.8"></a>
 
 ## 1.2.8
 
@@ -1029,15 +843,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="1.2.7"></a>
-
 ## 1.2.7
 
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.6...@spectrum-css/closebutton@1.2.7)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="1.2.6"></a>
 
 ## 1.2.6
 
@@ -1045,15 +855,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="1.2.5"></a>
-
 ## 1.2.5
 
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.4...@spectrum-css/closebutton@1.2.5)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="1.2.4"></a>
 
 ## 1.2.4
 
@@ -1061,15 +867,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
-<a name="1.2.3"></a>
-
 ## 1.2.3
 
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.2...@spectrum-css/closebutton@1.2.3)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="1.2.2"></a>
 
 ## 1.2.2
 
@@ -1079,15 +881,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - removed some issues from the generated css for close button ([0b3aee3](https://github.com/adobe/spectrum-css/commit/0b3aee3))
 
-<a name="1.2.1"></a>
-
 ## 1.2.1
 
 🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.0...@spectrum-css/closebutton@1.2.1)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
-
-<a name="1.2.0"></a>
 
 ## 1.2.0
 
@@ -1103,8 +901,6 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 - removing clear button inheritance ([8836489](https://github.com/adobe/spectrum-css/commit/8836489))
 - update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 - use latest vars package in closebutton ([57f2200](https://github.com/adobe/spectrum-css/commit/57f2200))
-
-<a name="1.1.0"></a>
 
 ## 1.1.0
 

@@ -18,6 +18,12 @@ on:
             eslint_modified_files:
                 type: string
                 required: false
+            mdlint_added_files:
+                type: string
+                required: false
+            mdlint_modified_files:
+                type: string
+                required: false
     workflow_call:
         inputs:
             styles_added_files:
@@ -30,6 +36,12 @@ on:
                 type: string
                 required: false
             eslint_modified_files:
+                type: string
+                required: false
+            mdlint_added_files:
+                type: string
+                required: false
+            mdlint_modified_files:
                 type: string
                 required: false
 
@@ -105,3 +117,12 @@ jobs:
                   filter_mode: diff_context
                 #   eslint_flags: "components/*/stories/*.js"
                   eslint_flags: "${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"
+
+            - name: Run markdownlint on documentation
+              uses: reviewdog/action-markdownlint@v1.0.0
+              with:
+                reporter: github-pr-review
+                filter_mode: diff_context
+                fail_level: error
+                markdownlint_config: "${{ github.workspace }}/.markdownlint.json"
+                markdownlint_input: "${{ inputs.mdlint_added_files }} ${{ inputs.mdlint_modified_files }}"

@@ -22,7 +22,7 @@
 	--spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
 
 	--spectrum-picker-border-color-default: var(--spectrum-gray-500);
-	--spectrum-picker-border-color-default-open: var(--spectrum-neutral-content-color-focus);
+	--spectrum-picker-border-color-default-open: var(--spectrum-gray-800);
 	--spectrum-picker-border-color-hover: var(--spectrum-gray-600);
 	--spectrum-picker-border-color-hover-open: var(--spectrum-gray-900);
 	--spectrum-picker-border-color-active: var(--spectrum-gray-700);
@@ -93,6 +93,7 @@
 
 	--spectrum-picker-icon-color-error: var(--spectrum-negative-visual-color);
 
+	--spectrum-picker-border-color-disabled: var(--spectrum-gray-300);
 	--spectrum-picker-background-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-picker-font-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-picker-icon-color-disabled: var(--spectrum-disabled-content-color);
@@ -181,6 +182,7 @@
 	--spectrum-picker-background-color-active: transparent;
 	--spectrum-picker-background-color-key-focus: transparent;
 	--spectrum-picker-background-color-disabled: transparent;
+	--spectrum-picker-border-color-disabled: transparent;
 
 	--spectrum-picker-min-inline-size: var(--mod-picker-min-inline-size-quiet, 0);
 	--spectrum-picker-inline-size: var(--mod-picker-inline-size-quiet, auto);
@@ -452,7 +454,7 @@
 .spectrum-Picker.is-disabled {
 	cursor: default;
 	transform: none;
-	border-color: var(--highcontrast-picker-border-color-disabled, transparent);
+	border-color: var(--highcontrast-picker-border-color-disabled, var(--spectrum-picker-border-color-disabled));
 	color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
 
 	&:not(.spectrum-Picker--quiet) {
