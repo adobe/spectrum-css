@@ -86,7 +86,7 @@
 			],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-builder.js\").default()'"
+					"node --no-warnings ./tasks/component-builder.js {projectName}"
 				]
 			},
 			"outputs": ["{projectRoot}/dist/*.css", "{projectRoot}/dist/*.map"]
@@ -96,7 +96,9 @@
 			"executor": "nx:run-commands",
 			"inputs": ["{projectRoot}/dist/*.css", "{projectRoot}/dist/*.map", { "externalDependencies": ["rimraf"] }],
 			"options": {
-				"commands": ["rimraf {projectRoot}/dist/*.css {projectRoot}/dist/*.map"]
+				"commands": [
+					"rimraf -g {projectRoot}/dist/*.css* {projectRoot}/dist/themes/*.css*"
+				]
 			},
 			"outputs": ["{projectRoot}/dist"]
 		},
@@ -125,7 +127,7 @@
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings ./tasks/compare-compiled-output.js $NX_TASK_TARGET_PROJECT"
+					"node --no-warnings ./tasks/compare-compiled-output.js {projectName}"
 				]
 			},
 			"outputs": ["{workspaceRoot}/.diff-output/**"]
@@ -183,7 +185,7 @@
 			],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
+					"node --no-warnings ./tasks/component-reporter.js {projectName}"
 				]
 			},
 			"outputs": ["{projectRoot}/dist/metadata.json"]
