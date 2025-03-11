@@ -2,4 +2,4 @@
 "@spectrum-css/search": patch
 ---
 
-updated disabled search background color to gray-25 and border-color to gray-300 in spectrum-two theme
+Updated `--spectrum-search-background-color-disabled` to `--spectrum-gray-25` and `--spectrum-search-border-color-disabled` to `--spectrum-gray-300` for the foundations contexts.
