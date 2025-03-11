@@ -53,7 +53,7 @@
 		"tester": "cross-env NODE_ENV=development nx run storybook:test:scope",
 		"validate": "yarn validator tag:component",
 		"validator": "nx run-many --target validate --verbose --projects",
-		"version:packages": "changeset version && yarn --mode=\"update-lockfile\""
+		"version:packages": "changeset version && yarn constraints --fix && yarn install"
 	},
 	"workspaces": [
 		"components/*",
@@ -90,6 +90,8 @@
 		"jsonc-eslint-parser": "^2.4.0",
 		"lint-staged": "^15.3.0",
 		"lodash": "^4.17.21",
+		"markdownlint": "^0.37.4",
+		"markdownlint-cli": "^0.44.0",
 		"node-gyp": "^10.1.0",
 		"npm-registry-fetch": "^18.0.2",
 		"nunjucks": "^3.2.4",
@@ -120,7 +122,8 @@
 		"stylelint-selector-bem-pattern": "^4.0.1",
 		"stylelint-use-logical": "^2.1.2",
 		"tar": "^7.4.3",
-		"yargs": "^17.7.2"
+		"yargs": "^17.7.2",
+		"zlib": "^1.0.5"
 	},
 	"keywords": [
 		"design-system",
