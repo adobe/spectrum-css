@@ -2750,6 +2750,7 @@ chore: updated css properties
 ## 11.0.2
 
 🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.1...@spectrum-css/tokens@11.0.2)
+
 **Note:** Version bump only for package @spectrum-css/tokens
 
 ## 11.0.1
@@ -2759,6 +2760,8 @@ chore: updated css properties
 **Note:** Version bump only for package @spectrum-css/tokens
 
 ## 11.0.0
+
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.2...@spectrum-css/tokens@11.0.0)
 
 ### ✨ Features
 

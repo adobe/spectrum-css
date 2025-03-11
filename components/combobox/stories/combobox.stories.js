@@ -171,6 +171,11 @@ DefaultGroup.args = Default.args;
 DefaultGroup.tags = ["!dev"];
 DefaultGroup.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "360px",
+		},
+	},
 };
 
 export const QuietGroup = VariantGroup.bind({});
@@ -182,6 +187,11 @@ QuietGroup.args = {
 QuietGroup.tags = ["!dev"];
 QuietGroup.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "360px",
+		},
+	},
 };
 
 /**

@@ -8,6 +8,13 @@
 
 - Updated border color on keyboard focus state for textfield in spectrum-two theme.
 
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/helptext@8.0.0-next.0
+
 ## 8.1.0
 
 ### Minor Changes

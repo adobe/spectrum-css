@@ -1,8 +1,8 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as InfieldProgressCircle } from "@spectrum-css/infieldprogresscircle/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
-import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -10,9 +10,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 /**
  * @typedef API
@@ -21,7 +18,7 @@ import "../themes/express.css";
  * @property {string[]} [customClasses=[]]
  * @property {string[]} [customInputClasses=[]]
  * @property {string[]} [customIconClasses=[]]
- * @property {string[]} [customProgressCircleClasses=[]]
+ * @property {string[]} [customInfieldProgressCircleClasses=[]]
  * @property {Record<string, string>} [customStyles={}]
  * @property {boolean} [isInvalid=false]
  * @property {boolean} [isValid=false]
@@ -61,7 +58,7 @@ export const Template = ({
 	customClasses = [],
 	customInputClasses = [],
 	customIconClasses = [],
-	customProgressCircleClasses = [],
+	customInfieldProgressCircleClasses = [],
 	isInvalid = false,
 	isValid = false,
 	multiline = false,
@@ -78,7 +75,7 @@ export const Template = ({
 	labelText,
 	characterCount,
 	iconName,
-	iconSet,
+	iconSet = "workflow",
 	pattern,
 	placeholder,
 	name,
@@ -199,10 +196,10 @@ export const Template = ({
 				})}
 			/>`
 		)}
-		${when(isLoading, () => ProgressCircle({
+		${when(isLoading, () => InfieldProgressCircle({
 			isIndeterminate: true,
-			size: "s",
-			customClasses: customProgressCircleClasses,
+			size: size,
+			customClasses: customInfieldProgressCircleClasses,
 		}, context))}
 		${when(helpText, () =>
 			HelpText({

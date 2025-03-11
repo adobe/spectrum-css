@@ -4,9 +4,6 @@ import { Template } from "./template.js";
 export const ComboBoxGroup = Variants({
 	Template,
 	sizeDirection: "row",
-	wrapperStyles: {
-		"align-items": "flex-start",
-	},
 	testData: [
 		{
 			testHeading: "Default",
@@ -20,11 +17,17 @@ export const ComboBoxGroup = Variants({
 		{
 			testHeading: "Open",
 			isOpen: true,
+			wrapperStyles: {
+				"min-block-size": "250px",
+			},
 		},
 		{
 			testHeading: "Quiet + open",
 			isQuiet: true,
 			isOpen: true,
+			wrapperStyles: {
+				"min-block-size": "250px",
+			},
 		},
 		{
 			testHeading: "With field label top",

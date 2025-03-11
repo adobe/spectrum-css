@@ -9,9 +9,6 @@ import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Swatch",
@@ -109,7 +106,12 @@ export const Template = ({
 							...(isMixedValue ? [Icon({
 								customClasses: [`${rootClass}-mixedValueIcon`],
 								setName: "ui",
-								iconName: "Dash",
+								iconName: "Dash" + ({
+									xs: "75",
+									s: "75",
+									m: "100",
+									l: "200",
+								}[size] || "100"),
 								useRef: false,
 							}, context)] : []),
 						]

@@ -1,5 +1,12 @@
 # Change log
 
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 10.1.1
 
 ### Patch Changes
@@ -204,6 +211,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ### 🛑 BREAKING CHANGE
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
+
 - Imports added to index.css and themes/express.css
 
 ## 8.1.5

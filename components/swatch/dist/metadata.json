@@ -23,7 +23,6 @@
     ".spectrum-Swatch--roundingNone:before",
     ".spectrum-Swatch--sizeL",
     ".spectrum-Swatch--sizeM",
-    ".spectrum-Swatch--sizeS",
     ".spectrum-Swatch--sizeXS",
     ".spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch-disabledIcon path:first-child",
@@ -73,13 +72,11 @@
   "component": [
     "--spectrum-swatch-border-color",
     "--spectrum-swatch-border-color-light",
-    "--spectrum-swatch-border-color-opacity",
     "--spectrum-swatch-border-color-selected",
     "--spectrum-swatch-border-radius",
     "--spectrum-swatch-border-thickness",
     "--spectrum-swatch-border-thickness-selected",
     "--spectrum-swatch-dash-icon-color",
-    "--spectrum-swatch-disabled-icon-border-opacity",
     "--spectrum-swatch-disabled-icon-color",
     "--spectrum-swatch-disabled-icon-size",
     "--spectrum-swatch-focus-indicator-border-radius",
@@ -102,14 +99,12 @@
   ],
   "global": [
     "--spectrum-animation-duration-100",
-    "--spectrum-black-rgb",
     "--spectrum-border-width-100",
     "--spectrum-border-width-200",
-    "--spectrum-corner-radius-75",
+    "--spectrum-corner-radius-100",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
     "--spectrum-focus-indicator-thickness",
-    "--spectrum-gray-1000-rgb",
     "--spectrum-gray-25",
     "--spectrum-gray-800",
     "--spectrum-gray-900",
@@ -120,11 +115,6 @@
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-50",
     "--spectrum-workflow-icon-size-75"
-  ],
-  "system-theme": [
-    "--system-swatch-border-color",
-    "--system-swatch-border-radius",
-    "--system-swatch-inner-border-color-selected"
   ],
   "passthroughs": [],
   "high-contrast": [

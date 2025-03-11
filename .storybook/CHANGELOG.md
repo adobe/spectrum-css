@@ -494,7 +494,6 @@ This component has been deprecated. Use an action bar to allow users to perform 
 ### 🛑 BREAKING CHANGE
 
 - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
-
 - NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 
 ## 6.0.1
