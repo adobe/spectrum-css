@@ -90,7 +90,6 @@ export default {
 			options: ["default", "fullscreen", "fullscreenTakeover"],
 			control: "select",
 		},
-		isOpen,
 		isDismissible: {
 			name: "Dismissible",
 			type: { name: "boolean" },
