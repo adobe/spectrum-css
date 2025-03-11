@@ -119,10 +119,9 @@ jobs:
                   eslint_flags: "${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"
 
             - name: Run markdownlint on documentation
-              uses: reviewdog/action-markdownlint@v1.0.0
+              uses: reviewdog/action-markdownlint@v0.26.0
               with:
                 reporter: github-pr-review
                 filter_mode: diff_context
                 fail_level: error
-                markdownlint_config: "${{ github.workspace }}/.markdownlint.json"
-                markdownlint_input: "${{ inputs.mdlint_added_files }} ${{ inputs.mdlint_modified_files }}"
+                markdownlint_flags: "--config ${{ github.workspace }}/.markdownlint.json ${{ inputs.mdlint_added_files }} ${{ inputs.mdlint_modified_files }}"
