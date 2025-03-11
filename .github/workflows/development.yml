@@ -105,7 +105,7 @@ jobs:
                       eslint:
                         - components/*/stories/*.js
                       mdlint:
-                        - *.md
+                        - '*.md'
                         - .storybook/*.md
                         - .storybook/*/*.md
                         - .storybook/*/*.mdx
