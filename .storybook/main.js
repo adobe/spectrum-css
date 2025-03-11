@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import remarkGfm from "remark-gfm";
+import fs from "node:fs";
+import path from "node:path";
+import remarkGfm from 'remark-gfm';
 
 // Get a list of all the folders in the components directory
 const componentDir = path.resolve(__dirname, "../components");
@@ -19,6 +19,11 @@ export default {
 			directory: "./guides",
 			files: "*.@(stories.js|mdx)",
 			titlePrefix: "Guides",
+		},
+		{
+			directory: "./foundations",
+			files: "*/*.@(stories.js|mdx)",
+			titlePrefix: "Foundations",
 		},
 		{
 			directory: "./deprecated",
@@ -104,7 +109,17 @@ export default {
 				devSourcemap: configType === "DEVELOPMENT",
 			},
 			resolve: {
-				alias: components.map(component => ({ find: `@spectrum-css/${component}`, replacement: path.resolve(__dirname, `../components/${component}`) })),
+				alias: [
+					...components.map(component => ({ find: `@spectrum-css/${component}`, replacement: path.resolve(__dirname, `../components/${component}`) })),
+					{
+						find: `@spectrum-css/tokens`,
+						replacement: path.resolve(__dirname, `../tokens`),
+					},
+					{
+						find: `@spectrum-css/ui-icons`,
+						replacement: path.resolve(__dirname, `../ui-icons`),
+					},
+				],
 			}
 		});
 	},
