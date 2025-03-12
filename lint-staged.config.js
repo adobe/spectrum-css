@@ -13,6 +13,7 @@ module.exports = {
 	"package.json": () => ([
 		"yarn constraints --fix",
 		"yarn install --refresh-lockfile",
+		"git add yarn.lock"
 	]),
 	"dist/*.css": [
 		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc"
