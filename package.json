@@ -53,7 +53,7 @@
 		"tester": "cross-env NODE_ENV=development nx run storybook:test:scope",
 		"validate": "yarn validator tag:component",
 		"validator": "nx run-many --target validate --verbose --projects",
-		"version:packages": "changeset version && yarn constraints --fix && yarn install"
+		"version:packages": "changeset version && yarn lint-staged"
 	},
 	"workspaces": [
 		"components/*",
