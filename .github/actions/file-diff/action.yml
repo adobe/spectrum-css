@@ -13,10 +13,9 @@ inputs:
         description: "GITHUB_TOKEN for the repository."
         required: false
         default: ${{ github.token }}
-    file-glob-pattern:
-        description: "Glob pattern for filtering of the files."
-        required: false
-        default: "**/dist/**"
+    package-pattern:
+        description: "Glob pattern for the package directories."
+        required: true
     comment:
         description: "Whether to comment on the PR."
         required: false
