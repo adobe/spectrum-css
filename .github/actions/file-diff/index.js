@@ -331,22 +331,16 @@ async function run() {
 				0
 			);
 			core.setOutput("total-size", headMainSize);
-
-			if (hasBase) {
-				const baseMainSize = [...baseOutput.entries()].reduce(
-					(acc, [, size]) => acc + size,
-					0
-				);
-
-				core.setOutput(
-					"has-changed",
-					hasBase && headMainSize !== baseMainSize ? "true" : "false"
-				);
-			}
 		}
 		else {
 			core.setOutput("total-size", 0);
 		}
+
+		core.setOutput(
+			"has-changed",
+			sections.length === 0 ? "true" : "false"
+		);
+
 	} catch (error) {
 		core.error(error.stack);
 		core.setFailed(error.message);
