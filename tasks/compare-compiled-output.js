@@ -1,5 +1,5 @@
 const { existsSync, statSync, readdirSync, mkdirSync } = require("fs");
-const { readFile, writeFile, cp } = require("fs").promises;
+const { readFile, writeFile } = require("fs").promises;
 const { join, relative, dirname } = require("path");
 
 const fg = require("fast-glob");
@@ -17,6 +17,8 @@ const yargs = require("yargs");
 
 const Diff = require("diff");
 const Diff2Html = require("diff2html");
+
+const { default: builder } = require("./component-builder.js");
 
 require("colors");
 
@@ -148,7 +150,7 @@ async function generateDiff({
 			...renderData,
 			html,
 		},
-		join(outputPath, "index.html")
+		join(outputPath, `index.html`)
 	);
 }
 
@@ -161,6 +163,12 @@ async function processComponent(
 	}
 ) {
 	if (!component) return Promise.reject("No component specified.");
+
+	// Build the component fresh
+	await builder({
+		componentName: component,
+		clean: true,
+	});
 
 	cleanAndMkdir(join(output, "diffs", component));
 	cleanAndMkdir(join(pathing.latest, component));
@@ -189,8 +197,7 @@ async function processComponent(
 		const files =
 			(await fg("**/*.css", { cwd: join(cwd, component, "dist") })) ?? [];
 		files.forEach((file) => filelist.add(file));
-	}
-	else {
+	} else {
 		warnings.push(
 			`${
 				`${relative(pathing.root, join(cwd, component))}`.yellow
@@ -229,8 +236,7 @@ async function processComponent(
 					(tarballFile.status && tarballFile.status !== 200)
 				) {
 					log.error(`Failed to fetch release content for ${pkg.name}`);
-				}
-				else {
+				} else {
 					await writeFile(tarballPath, await tarballFile.buffer(), {
 						encoding: "utf-8",
 					});
@@ -300,6 +306,7 @@ async function processComponent(
 }
 
 async function processFile(filename, localPath, comparePath) {
+	const componentName = localPath.split("/")[localPath.split("/").length - 2];
 	const data = {};
 
 	// Look for the file locally
@@ -347,6 +354,7 @@ async function main(
 		components = allComponents;
 	}
 
+
 	// Strip out utilities
 	components = components.filter(c => !["actionmenu", "commons"].includes(c));
 
@@ -363,28 +371,13 @@ async function main(
 
 	cleanAndMkdir(pathing.latest);
 
-	const promises = [];
-	// Copy the bundled CSS to the output directory
-	if (existsSync(join(pathing.root, "tools", "bundle", "dist", "index.min.css"))) {
-		promises.push(
-			cp(join(pathing.root, "tools", "bundle", "dist", "index.min.css"), join(pathing.output, "bundle.min.css"))
-		);
-	}
-
-	const diff2HTML = join(require.resolve("diff2html"), "..", "..", "bundles", "css", "diff2html.min.css");
-	if (existsSync(diff2HTML)) {
-		promises.push(
-			cp(diff2HTML, join(pathing.output, "diff2html.min.css"))
-		);
-	}
-
 	/**
 	 * Each component will report on it's file structure locally when compared
 	 * against it's latest tag on npm; then a console report will be logged and
 	 * a visual diff generated for each file that has changed.
 	 */
-	const results = await Promise.all([
-		...(components.map(async (component) => {
+	const results = await Promise.all(
+		components.map(async (component) => {
 			return processComponent(component, {
 				output: pathing.output,
 				cacheLocation: pathing.cache,
@@ -394,8 +387,8 @@ async function main(
 					warnings: [err],
 				})
 			);
-		}))
-	]).catch((err) => {
+		})
+	).catch((err) => {
 		log.error(err);
 	});
 
@@ -463,9 +456,9 @@ async function main(
 			const { local, npm } = fileMap.get(file);
 
 			const indicatorColor = (localSize, tagSize = 0) => {
-				if (localSize < tagSize) return "green";
-				if (localSize > tagSize) return "red";
-				else return "gray";
+				if (localSize < tagSize) return 'green';
+				if (localSize > tagSize) return 'red';
+				else return 'gray';
 			};
 
 			const localSize = local?.size && `${bytesToSize(local.size)}`[indicatorColor(local.size, npm?.size)];
@@ -473,8 +466,8 @@ async function main(
 
 			log.writeTable([
 				`${file}`.green,
-				localSize ?? "** removed **".red,
-				tagSize ?? "** new **".yellow,
+				localSize ?? `** removed **`.red,
+				tagSize ?? `** new **`.yellow,
 			], { min: 25, max: maxColumnWidth + 15 });
 
 			if (local?.size && npm?.size && local.size !== npm.size) {
@@ -490,9 +483,8 @@ async function main(
 		return Promise.resolve();
 	}
 
-	await Promise.all([
-		...promises,
-		...[...componentData.entries()]
+	await Promise.all(
+		[...componentData.entries()]
 			.map(async ([component, { tag, files, }], _, data) => {
 				return generateDiff({
 					filepaths: [...files.keys()],
@@ -504,7 +496,7 @@ async function main(
 				})
 					.then(() => true);
 			})
-	]);
+	);
 
 	// This is writing a summary of all the components that were compared
 	// to make reviewing the diffs easier to navigate
