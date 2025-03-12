@@ -3,6 +3,8 @@ const { defineConfig } = require("@yarnpkg/types");
 
 const fg = require("fast-glob");
 const semver = require("semver");
+const { existsSync } = require("fs");
+const { join } = require("path");
 
 /**
  * The workspace object used in the constraints function
@@ -126,6 +128,11 @@ module.exports = defineConfig({
 		 * @returns {void}
 		 */
 		function validateComponentPackageJson(workspace, folderName) {
+			// Check the folder to see if there's a themes directory
+			const hasThemes = existsSync(join(workspace.cwd, "themes"));
+			const hasCSS = existsSync(join(workspace.cwd, "index.css"));
+			const noShippedOutput = !hasCSS || folderName === "commons";
+
 			// Only update the homepage if it does not already exist
 			if (!workspace.manifest.homepage) {
 				workspace.set("homepage", `https://opensource.adobe.com/spectrum-css/?path=/docs/components-${folderName}--docs`);
@@ -135,14 +142,21 @@ module.exports = defineConfig({
 			workspace.set("keywords", keywords(["component", "css"]));
 			workspace.set("main", "dist/index.css");
 			workspace.set("exports", {
-				".": "./dist/index.css",
+				...(!noShippedOutput ? {
+					".": "./dist/index.css",
+				} : {}),
 				"./*.md": "./*.md",
-				"./dist/*": "./dist/*",
-				"./index-*.css": "./dist/index-*.css",
-				"./index.css": "./dist/index.css",
-				"./metadata.json": "./dist/metadata.json",
+				...(!noShippedOutput ? {
+					"./dist/*": "./dist/*",
+					"./index.css": "./dist/index.css",
+					"./metadata.json": "./dist/metadata.json",
+				} : {}),
 				"./package.json": "./package.json",
-				"./stories/*": "./stories/*"
+				"./stories/*": "./stories/*",
+				...(hasThemes ? {
+					"./index-*.css": "./dist/index-*.css",
+					"./themes/*": "./dist/themes/*"
+				} : {})
 			});
 		}
 
