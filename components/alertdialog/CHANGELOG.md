@@ -1,5 +1,12 @@
 # Change log
 
+## 5.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`cb1b957`](https://github.com/adobe/spectrum-css/commit/cb1b957c05ecf02d3f473de09a8bfd5f2b5d42bf)]:
+  - @spectrum-css/modal@7.1.1-next.0
+
 ## 5.0.0-next.1
 
 ### Patch Changes
