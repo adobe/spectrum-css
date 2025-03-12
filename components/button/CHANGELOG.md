@@ -4,9 +4,16 @@
 
 ### Patch Changes
 
-📝 [#3613](https://github.com/adobe/spectrum-css/pull/3613) [`b01e816`](https://github.com/adobe/spectrum-css/commit/b01e8160c1cb48992a3643931f85ebc604246542) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+📝 [`d2272ea`](https://github.com/adobe/spectrum-css/commit/d2272eaedcc3a2a957028fe3d1ed6a3ce96a49f6) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
 
-Adjust static white and static black button colors to match S2 design specification.
+Adjusts static color buttons to more closely resemble the S2 specifications. There are no expected changes to non-static button variants in S2, and no expected changes to other themes.
+
+This PR includes changes to:
+
+- Static white primary button (outline variant), static white secondary button (fill variant), static black primary button (outline variant), static black secondary button (fill variant)
+- Static white secondary button (outline variant) and static black secondary button (outline variant) border and background colors
+- Static color buttons' content color
+- Static white primary button (fill variant) and static black primary button (fill variant) background colors
 
 ## 14.1.2
 
