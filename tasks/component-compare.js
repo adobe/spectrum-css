@@ -1,5 +1,5 @@
-const { existsSync, statSync, readdirSync, mkdirSync } = require("fs");
-const { readFile, writeFile, cp } = require("fs").promises;
+const { existsSync, statSync } = require("fs");
+const { readFile } = require("fs").promises;
 const { join, relative, dirname, basename } = require("path");
 
 const fg = require("fast-glob");
@@ -9,7 +9,6 @@ const _ = require("lodash");
 const nunjucks = require("nunjucks");
 const env = new nunjucks.Environment();
 
-const { rimrafSync } = require("rimraf");
 const npmFetch = require("npm-registry-fetch");
 
 const { hideBin } = require("yargs/helpers");
@@ -18,22 +17,17 @@ const yargs = require("yargs");
 const Diff = require("diff");
 const Diff2Html = require("diff2html");
 
+const { dirs, log, bytesToSize, copy, writeConsoleTable, cleanAndMkdir, writeAndReport, getAllComponentNames } = require("./utilities.js");
+
 require("colors");
 
-const pathing = {
-	root: join(__dirname, "../"),
-	components: join(__dirname, "../components"),
-};
-
-const bytesToSize = function (bytes) {
-	if (bytes === 0) return "0";
-
-	const sizes = ["bytes", "KB", "MB", "GB", "TB"];
-	// Determine the size identifier to use (KB, MB, etc)
-	const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-	if (i === 0) return (bytes / 1000).toFixed(2) + " " + sizes[1];
-	return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
-};
+/**
+ * A global object to store the paths to the output directories
+ * this facilitates a shared location for all the tasks to write
+ * without having to pass the paths around as arguments.
+ * @type {{ [key: string]: string }}
+ */
+const pathing = {};
 
 env.addFilter("bytesToSize", bytesToSize);
 env.addFilter("print", (data) => JSON.stringify(data, null, 2));
@@ -45,39 +39,13 @@ env.addFilter("hasChange", (data) => {
 	}, false);
 });
 
-const log = {
-	error: (err) => process.stderr.write(`${err}\n\n`),
-	write: (msg) => process.stdout.write(msg),
-	writeTable: (data, { min = 20, max = 30 } = {}) => {
-		// This utility function is used to print a table of data to the console
-		const table = (data = []) => {
-			return data.map((row, idx) => `${row ?? " "}`.padEnd(idx === 0 ? max : min)).join("");
-		};
-
-		process.stdout.write(`${table(data)}\n`);
-	},
-};
-
-const cleanAndMkdir = (path, clean = true) => {
-	if (!path) return;
-
-	let isFile = false;
-
-	// If the output directory exists, delete it but don't throw an error if it doesn't
-	if (clean && existsSync(path)) {
-		isFile = statSync(path).isFile();
-		rimrafSync(path, { preserveRoot: true });
-	}
-
-	// Create the output directory fresh
-	mkdirSync(isFile ? dirname(path) : path, { recursive: true });
-};
-
-const allComponents =
-	readdirSync(pathing.components, { withFileTypes: true })
-		?.filter((file) => file.isDirectory())
-		.map((file) => file.name) ?? [];
-
+/**
+ * A focused function that handles the template rendering
+ * @param {string} templateFile
+ * @param {Object} templateVariables
+ * @param {string} [outputPath=undefined]
+ * @returns {Promise<string | void>}
+ */
 async function renderTemplate(
 	templateFile,
 	templateVariables = {},
@@ -99,16 +67,24 @@ async function renderTemplate(
 
 	// Generate an HTML summary of the component's compiled assets with links to the HTML diffs of each file
 	const html = env.renderString(template, {
-		allComponents,
+		allComponents: getAllComponentNames(false),
 		nav,
 		...templateVariables,
 	});
 
 	if (typeof outputPath === "undefined") return html;
 
-	return writeFile(outputPath, html, { encoding: "utf-8" });
+	return writeAndReport(html, outputPath);
 }
 
+/**
+ * This function generates a visual diff of the compiled assets for a component
+ * @param {Object} config
+ * @param {string[]} config.filepaths
+ * @param {string} config.outputPath
+ * @param {Map<string, { local: { path: string, content: string, size: number }, npm: { path: string, content: string, size: number }, hasDiff: boolean }>} config.fileMap
+ * @returns {ReturnType<typeof renderTemplate>}
+ */
 async function generateDiff({
 	filepaths,
 	outputPath,
@@ -193,7 +169,7 @@ async function processComponent(
 	else {
 		warnings.push(
 			`${
-				`${relative(pathing.root, join(cwd, component))}`.yellow
+				`${relative(dirs.root, join(cwd, component))}`.yellow
 			} not found locally.\n`
 		);
 	}
@@ -231,9 +207,7 @@ async function processComponent(
 					log.error(`Failed to fetch release content for ${pkg.name}`);
 				}
 				else {
-					await writeFile(tarballPath, await tarballFile.buffer(), {
-						encoding: "utf-8",
-					});
+					await writeAndReport(await tarballFile.buffer(), tarballPath);
 				}
 			}
 
@@ -344,7 +318,7 @@ async function main(
 	{ skipCache = false } = {}
 ) {
 	if (!components || components.length === 0) {
-		components = allComponents;
+		components = getAllComponentNames(false);
 	}
 
 	// Strip out utilities
@@ -365,24 +339,17 @@ async function main(
 
 	const promises = [];
 	// Copy the bundled CSS to the output directory
-	if (existsSync(join(pathing.root, "tools", "bundle", "dist", "index.min.css"))) {
-		promises.push(
-			cp(join(pathing.root, "tools", "bundle", "dist", "index.min.css"), join(pathing.output, "bundle.min.css"))
-		);
-	}
+	const renderAssets = [
+		join(dirs.root, "tools", "bundle", "dist", "index.min.css"),
+		join(require.resolve("diff2html"), "..", "..", "bundles", "css", "diff2html.min.css"),
+		join(require.resolve("diff2html"), "..", "..", "bundles", "js", "diff2html.min.js"),
+	];
 
-	const diff2HTMLCSS = join(require.resolve("diff2html"), "..", "..", "bundles", "css", "diff2html.min.css");
-	const diff2HTMLJS = join(require.resolve("diff2html"), "..", "..", "bundles", "js", "diff2html.min.js");
-	if (existsSync(diff2HTMLCSS)) {
+	renderAssets.forEach((asset) => {
 		promises.push(
-			cp(diff2HTMLCSS, join(pathing.output, basename(diff2HTMLCSS)))
+			copy(asset, join(pathing.output, basename(asset)), { isDeprecated: false })
 		);
-	}
-	if (existsSync(diff2HTMLJS)) {
-		promises.push(
-			cp(diff2HTMLJS, join(pathing.output, basename(diff2HTMLJS)))
-		);
-	}
+	});
 
 	/**
 	 * Each component will report on it's file structure locally when compared
@@ -424,6 +391,8 @@ async function main(
 
 	const componentData = new Map();
 
+	const cliOutput = [];
+
 	let hasAnyChange = false;
 	for (const {
 		component,
@@ -451,10 +420,10 @@ async function main(
 		});
 
 		// This is our report header to indicate the start of a new component's data
-		log.write(`\n${_.pad(` ${component} `, 20, "-").cyan}\n`);
+		cliOutput.push(`\n${_.pad(` ${component} `, 20, "-").cyan}\n`);
 
 		if (warnings.length > 0) {
-			warnings.forEach((warning) => log.write(`${warning}\n`));
+			warnings.forEach((warning) => cliOutput.push(`${warning}\n`));
 		}
 
 		const maxColumnWidth = files.reduce((max, file) => {
@@ -463,7 +432,9 @@ async function main(
 		}, 30);
 
 		// Write a table of the file sizes to the console for easy comparison
-		log.writeTable(["Filename", "Local", `Tag v${tag}`], { min: 15, max: maxColumnWidth + 5});
+		cliOutput.push(
+			writeConsoleTable(["Filename", "Local", `Tag v${tag}`], { min: 15, max: maxColumnWidth + 5})
+		);
 
 		files.forEach(async (file) => {
 			const { local, npm } = fileMap.get(file);
@@ -477,11 +448,13 @@ async function main(
 			const localSize = local?.size && `${bytesToSize(local.size)}`[indicatorColor(local.size, npm?.size)];
 			const tagSize = npm?.size && `${bytesToSize(npm.size)}`.gray;
 
-			log.writeTable([
+			cliOutput.push(
+				writeConsoleTable([
 				`${file}`.green,
 				localSize ?? "** removed **".red,
 				tagSize ?? "** new **".yellow,
-			], { min: 25, max: maxColumnWidth + 15 });
+				], { min: 25, max: maxColumnWidth + 15 })
+			);
 
 			if (local?.size && npm?.size && local.size !== npm.size) {
 				hasComponentChange = true;
@@ -491,15 +464,11 @@ async function main(
 		if (hasComponentChange) hasAnyChange = true;
 	}
 
-	if (!hasAnyChange) {
-		log.write(`\n${"✓".green}  No changes detected.\n`);
-	}
-
 	await Promise.all([
 		...promises,
 		...[...componentData.entries()]
-			.map(async ([component, { tag, files, }], _, data) => {
-				return generateDiff({
+			.map(async ([component, { tag, files, }], _, data) =>
+				generateDiff({
 					filepaths: [...files.keys()],
 					outputPath: join(pathing.output, "diffs", component),
 					fileMap: files,
@@ -507,13 +476,18 @@ async function main(
 					component,
 					tag
 				})
-					.then(() => true);
-			})
-	]);
+			)
+	]).then((result) => {
+		log.write("\n");
+		// Print any result strings to the console
+		[...result].flat(Infinity).filter(Boolean).forEach((r) => log.write(r + "\n"));
+	}).catch((err) => {
+		log.error(err);
+	});
 
 	// This is writing a summary of all the components that were compared
 	// to make reviewing the diffs easier to navigate
-	return renderTemplate(
+	await renderTemplate(
 		"compare-listing",
 		{
 			title: "Compiled asset comparison",
@@ -527,11 +501,18 @@ async function main(
 			if (open) await open(join(output, "index.html"));
 		})
 		.catch((err) => Promise.reject(err));
+
+	/** WRITE CONTENT TO CONSOLE */
+	cliOutput.forEach(line => log.write(line));
+
+	if (!hasAnyChange) {
+		log.write(`\n${"✓".green}  No changes detected.\n`);
+	}
 }
 
 let {
 	_: components,
-	output = join(pathing.root, ".diff-output"),
+	output = join(dirs.root, ".diff-output"),
 	cache = true,
 	// @todo allow to run against local main or published versions
 } = yargs(hideBin(process.argv)).argv;
