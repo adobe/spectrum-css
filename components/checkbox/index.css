@@ -158,19 +158,8 @@
 		}
 
 		&:hover {
-			.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+			.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box::before,
 			.spectrum-Checkbox-box::before {
-				border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
-			}
-		}
-	}
-
-	/* TODO: The nesting structure above for the invalid hover styles might not be specific enough for the styles to apply correctly. This selector (below) is repetitive, and there's opportunity to refactor when we can safely remove/refactor selectors again. */
-	/* Invalid Hover States */
-	&.is-invalid:hover {
-		.spectrum-Checkbox-box,
-		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-			&::before {
 				border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
 			}
 		}
