@@ -66,10 +66,10 @@
 
 		/* static white: double the selector, double the fun (specificity...) */
 		&.spectrum-Button--staticWhite {
-			--mod-button-background-color-default: var(--spectrum-transparent-white-900);
-			--mod-button-background-color-hover: var(--spectrum-transparent-white-1000);
-			--mod-button-background-color-down: var(--spectrum-transparent-white-1000);
-			--mod-button-background-color-focus: var(--spectrum-transparent-white-1000);
+			--mod-button-background-color-default: var(--spectrum-transparent-white-800);
+			--mod-button-background-color-hover: var(--spectrum-transparent-white-900);
+			--mod-button-background-color-down: var(--spectrum-transparent-white-900);
+			--mod-button-background-color-focus: var(--spectrum-transparent-white-900);
 
 			--mod-button-content-color-default: var(--spectrum-black);
 			--mod-button-content-color-hover: var(--spectrum-black);
@@ -77,55 +77,56 @@
 			--mod-button-content-color-focus: var(--spectrum-black);
 
 			&.spectrum-Button--secondary {
-				--mod-button-background-color-default: var(--spectrum-transparent-white-300);
-				--mod-button-background-color-hover: var(--spectrum-transparent-white-400);
-				--mod-button-background-color-down: var(--spectrum-transparent-white-500);
-				--mod-button-background-color-focus: var(--spectrum-transparent-white-400);
+				--mod-button-background-color-default: var(--spectrum-transparent-white-100);
+				--mod-button-background-color-hover: var(--spectrum-transparent-white-200);
+				--mod-button-background-color-down: var(--spectrum-transparent-white-200);
+				--mod-button-background-color-focus: var(--spectrum-transparent-white-200);
 
-				--mod-button-content-color-default: var(--spectrum-white);
-				--mod-button-content-color-hover: var(--spectrum-white);
-				--mod-button-content-color-down: var(--spectrum-white);
-				--mod-button-content-color-focus: var(--spectrum-white);
+				--mod-button-content-color-default: var(--spectrum-transparent-white-800);
+				--mod-button-content-color-hover: var(--spectrum-transparent-white-900);
+				--mod-button-content-color-down: var(--spectrum-transparent-white-900);
+				--mod-button-content-color-focus: var(--spectrum-transparent-white-900);
 
 				&.spectrum-Button--outline {
-					--mod-button-border-color-default: var(--spectrum-transparent-white-400);
-					--mod-button-border-color-hover: var(--spectrum-transparent-white-500);
-					--mod-button-border-color-down: var(--spectrum-transparent-white-600);
-					--mod-button-border-color-focus: var(--spectrum-transparent-white-500);
+					--mod-button-border-color-default: var(--spectrum-transparent-white-300);
+					--mod-button-border-color-hover: var(--spectrum-transparent-white-400);
+					--mod-button-border-color-down: var(--spectrum-transparent-white-400);
+					--mod-button-border-color-focus: var(--spectrum-transparent-white-400);
 				}
 			}
 
 			&.spectrum-Button--outline {
 				&:not(.spectrum-Button--secondary) {
-					--mod-button-background-color-hover: var(--spectrum-transparent-white-400);
-					--mod-button-background-color-down: var(--spectrum-transparent-white-500);
-					--mod-button-background-color-focus: var(--spectrum-transparent-white-400);
+					--mod-button-background-color-default: var(--spectrum-transparent-white-25);
+					--mod-button-background-color-hover: var(--spectrum-transparent-white-100);
+					--mod-button-background-color-down: var(--spectrum-transparent-white-100);
+					--mod-button-background-color-focus: var(--spectrum-transparent-white-100);
 
-					--mod-button-content-color-default: var(--spectrum-white);
-					--mod-button-content-color-hover: var(--spectrum-white);
-					--mod-button-content-color-down: var(--spectrum-white);
-					--mod-button-content-color-focus: var(--spectrum-white);
+					--mod-button-content-color-default: var(--spectrum-transparent-white-800);
+					--mod-button-content-color-hover: var(--spectrum-transparent-white-900);
+					--mod-button-content-color-down: var(--spectrum-transparent-white-900);
+					--mod-button-content-color-focus: var(--spectrum-transparent-white-900);
 
 					--mod-button-border-color-default: var(--spectrum-transparent-white-800);
-					--mod-button-border-color-hover: var(--spectrum-transparent-white-1000);
-					--mod-button-border-color-down: var(--spectrum-transparent-white-1000);
-					--mod-button-border-color-focus: var(--spectrum-transparent-white-1000);
+					--mod-button-border-color-hover: var(--spectrum-transparent-white-900);
+					--mod-button-border-color-down: var(--spectrum-transparent-white-900);
+					--mod-button-border-color-focus: var(--spectrum-transparent-white-900);
 				}
 
 				&.spectrum-Button--secondary {
-					--mod-button-background-color-hover: var(--spectrum-transparent-white-400);
-					--mod-button-background-color-down: var(--spectrum-transparent-white-500);
-					--mod-button-background-color-focus: var(--spectrum-transparent-white-400);
+					--mod-button-background-color-hover: var(--spectrum-transparent-white-100);
+					--mod-button-background-color-down: var(--spectrum-transparent-white-100);
+					--mod-button-background-color-focus: var(--spectrum-transparent-white-100);
 				}
 			}
 		}
 
 		/* static black */
 		&.spectrum-Button--staticBlack {
-			--mod-button-background-color-default: var(--spectrum-transparent-black-900);
-			--mod-button-background-color-hover: var(--spectrum-transparent-black-1000);
-			--mod-button-background-color-down: var(--spectrum-transparent-black-1000);
-			--mod-button-background-color-focus: var(--spectrum-transparent-black-1000);
+			--mod-button-background-color-default: var(--spectrum-transparent-black-800);
+			--mod-button-background-color-hover: var(--spectrum-transparent-black-900);
+			--mod-button-background-color-down: var(--spectrum-transparent-black-900);
+			--mod-button-background-color-focus: var(--spectrum-transparent-black-900);
 
 			--mod-button-content-color-default: var(--spectrum-white);
 			--mod-button-content-color-hover: var(--spectrum-white);
@@ -133,43 +134,46 @@
 			--mod-button-content-color-focus: var(--spectrum-white);
 
 			&.spectrum-Button--secondary {
-				--mod-button-background-color-default: var(--spectrum-transparent-black-300);
-				--mod-button-background-color-hover: var(--spectrum-transparent-black-400);
-				--mod-button-background-color-down: var(--spectrum-transparent-black-500);
-				--mod-button-background-color-focus: var(--spectrum-transparent-black-400);
+				--mod-button-background-color-default: var(--spectrum-transparent-black-100);
+				--mod-button-background-color-hover: var(--spectrum-transparent-black-200);
+				--mod-button-background-color-down: var(--spectrum-transparent-black-200);
+				--mod-button-background-color-focus: var(--spectrum-transparent-black-200);
 
-				--mod-button-content-color-default: var(--spectrum-black);
-				--mod-button-content-color-hover: var(--spectrum-black);
-				--mod-button-content-color-down: var(--spectrum-black);
-				--mod-button-content-color-focus: var(--spectrum-black);
+				--mod-button-content-color-default: var(--spectrum-transparent-black-800);
+				--mod-button-content-color-hover: var(--spectrum-transparent-black-900);
+				--mod-button-content-color-down: var(--spectrum-transparent-black-900);
+				--mod-button-content-color-focus: var(--spectrum-transparent-black-900);
 
 				&.spectrum-Button--outline {
-					--mod-button-background-color-hover: var(--spectrum-transparent-black-400);
-					--mod-button-background-color-down: var(--spectrum-transparent-black-500);
-					--mod-button-background-color-focus: var(--spectrum-transparent-black-400);
-
-					--mod-button-border-color-default: var(--spectrum-transparent-black-400);
-					--mod-button-border-color-hover: var(--spectrum-transparent-black-500);
-					--mod-button-border-color-down: var(--spectrum-transparent-black-600);
-					--mod-button-border-color-focus: var(--spectrum-transparent-black-500);
+					--mod-button-border-color-default: var(--spectrum-transparent-black-300);
+					--mod-button-border-color-hover: var(--spectrum-transparent-black-400);
+					--mod-button-border-color-down: var(--spectrum-transparent-black-400);
+					--mod-button-border-color-focus: var(--spectrum-transparent-black-400);
 				}
 			}
 
 			&.spectrum-Button--outline {
 				&:not(.spectrum-Button--secondary) {
-					--mod-button-background-color-hover: var(--spectrum-transparent-black-400);
-					--mod-button-background-color-down: var(--spectrum-transparent-black-500);
-					--mod-button-background-color-focus: var(--spectrum-transparent-black-400);
+					--mod-button-background-color-default: var(--spectrum-transparent-black-25);
+					--mod-button-background-color-hover: var(--spectrum-transparent-black-100);
+					--mod-button-background-color-down: var(--spectrum-transparent-black-100);
+					--mod-button-background-color-focus: var(--spectrum-transparent-black-100);
 
-					--mod-button-content-color-default: var(--spectrum-black);
-					--mod-button-content-color-hover: var(--spectrum-black);
-					--mod-button-content-color-down: var(--spectrum-black);
-					--mod-button-content-color-focus: var(--spectrum-black);
+					--mod-button-content-color-default: var(--spectrum-transparent-black-800);
+					--mod-button-content-color-hover: var(--spectrum-transparent-black-900);
+					--mod-button-content-color-down: var(--spectrum-transparent-black-900);
+					--mod-button-content-color-focus: var(--spectrum-transparent-black-900);
 
 					--mod-button-border-color-default: var(--spectrum-transparent-black-800);
-					--mod-button-border-color-hover: var(--spectrum-transparent-black-600);
-					--mod-button-border-color-down: var(--spectrum-transparent-black-700);
-					--mod-button-border-color-focus: var(--spectrum-transparent-black-600);
+					--mod-button-border-color-hover: var(--spectrum-transparent-black-900);
+					--mod-button-border-color-down: var(--spectrum-transparent-black-900);
+					--mod-button-border-color-focus: var(--spectrum-transparent-black-900);
+				}
+
+				&.spectrum-Button--secondary {
+					--mod-button-background-color-hover: var(--spectrum-transparent-black-100);
+					--mod-button-background-color-down: var(--spectrum-transparent-black-100);
+					--mod-button-background-color-focus: var(--spectrum-transparent-black-100);
 				}
 			}
 		}
