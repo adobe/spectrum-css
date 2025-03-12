@@ -1,5 +1,13 @@
 # Change log
 
+## 14.1.3
+
+### Patch Changes
+
+📝 [#3613](https://github.com/adobe/spectrum-css/pull/3613) [`b01e816`](https://github.com/adobe/spectrum-css/commit/b01e8160c1cb48992a3643931f85ebc604246542) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Adjust static white and static black button colors to match S2 design specification.
+
 ## 14.1.2
 
 ### Patch Changes
