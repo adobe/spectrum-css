@@ -24,6 +24,7 @@
 
 	/* layout */
 	--spectrum-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
+	--spectrum-coachmark-image-to-heading: var(--spectrum-coach-mark-edge-to-content);
 	--spectrum-coachmark-heading-to-action-button: var(--spectrum-spacing-300);
 	--spectrum-coachmark-header-to-body: var(--spectrum-spacing-200);
 	--spectrum-coachmark-body-to-footer: var(--spectrum-spacing-300);
@@ -97,11 +98,17 @@
 
 /* Wrapper contains title, action-menu */
 .spectrum-CoachMark-header {
-	padding-block-start: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));
+	padding-block-start: var(--mod-coachmark-image-to-heading, var(--spectrum-coachmark-image-to-heading));
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-block-end: var(--mod-coachmark-header-to-body, var(--spectrum-coachmark-header-to-body));
+}
+
+/* Enforces consistent spacing from image to header and header to text with action menu present */
+.spectrum-CoachMark-header:has(.spectrum-CoachMark-action-menu) {
+	--mod-coachmark-image-to-heading: calc(var(--spectrum-spacing-200) * 1.55);
+	--mod-coachmark-header-to-body: calc(var(--spectrum-spacing-75) * 1.6);
 }
 
 /* Text wrapper for the title content; sides besdie action menu if present */
