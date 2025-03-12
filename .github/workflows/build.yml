@@ -17,28 +17,37 @@ on:
     workflow_dispatch:
         inputs:
             system:
+                description: "The system to build on"
                 required: false
+                type: string
                 default: "macos-latest"
             node-version:
+                description: "The Node.js version to use"
                 required: false
+                type: string
                 default: "20"
             experimental:
+                description: "Whether to run the build in experimental mode"
                 required: false
-                default: "false"
+                type: boolean
+                default: false
             ref:
                 description: "The branch or tag to checkout"
                 required: false
     workflow_call:
         inputs:
             system:
+                description: "The system to build on"
                 required: false
                 type: string
                 default: "macos-latest"
             node-version:
+                description: "The Node.js version to use"
                 required: false
                 type: string
                 default: "20"
             experimental:
+                description: "Whether to run the build in experimental mode"
                 required: false
                 type: boolean
                 default: false

@@ -8,42 +8,50 @@
 name: Compare
 
 on:
-  workflow_call:
-    inputs:
-      deploy-message:
-        required: false
-        type: string
-      alias:
-        required: false
-        type: string
-      base-sha:
-        description: The branch or tag to compare against
-        required: false
-        type: string
-        default: main
-      head-sha:
-        description: The branch or tag to checkout
-        required: false
-        type: string
-        default: ${{ github.event.workflow_call.head.ref }}
-    outputs:
-      has-changed:
-        value: ${{ jobs.compare.outputs.has-changed }}
-      total-size:
-        value: ${{ jobs.compare.outputs.total-size }}
+    workflow_call:
+        inputs:
+            system:
+                required: false
+                type: string
+                default: "ubuntu-latest"
+            node-version:
+                required: false
+                type: string
+                default: "20"
+            deploy-message:
+                required: false
+                type: string
+            alias:
+                required: false
+                type: string
+            base-sha:
+                description: The branch or tag to compare against
+                required: false
+                type: string
+                default: main
+            head-sha:
+                description: The branch or tag to checkout
+                required: false
+                type: string
+                default: ${{ github.event.workflow_call.head.ref }}
+        outputs:
+            has-changed:
+                value: ${{ jobs.compare.outputs.has-changed }}
+            total-size:
+                value: ${{ jobs.compare.outputs.total-size }}
 
 permissions:
-  contents: read
-  pull-requests: write
+    contents: read
+    pull-requests: write
 
 defaults:
-  run:
-    shell: bash
+    run:
+        shell: bash
 
 jobs:
     compare:
         name: Compare compiled assets
-        runs-on: ubuntu-latest
+        runs-on: ${{ inputs.system }}
         timeout-minutes: 10
         needs: [fetch-build-artifacts]
         outputs:
@@ -52,7 +60,7 @@ jobs:
         steps:
             - uses: actions/checkout@v5
               with:
-                  fetch-depth: 0
+                  fetch-depth: 1
 
             ## --- SETUP --- ##
             - name: Use Node LTS version
@@ -62,181 +70,160 @@ jobs:
                   cache: yarn
                   cache-dependency-path: yarn.lock
 
-      - name: Enable Corepack
-        run: corepack enable
+            - name: Enable Corepack
+              run: corepack enable
 
-      ## --- YARN CACHE --- ##
-      - name: Check for cached dependencies
-        continue-on-error: true
-        id: cache-dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            .cache/yarn
-            node_modules
-          key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ${{ inputs.system }}-node${{ inputs.node-version }}-${{ hashFiles('yarn.lock') }}
 
-      ## --- INSTALL --- ##
-      # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
-      - name: Install dependencies
-        shell: bash
-        run: yarn install --immutable
+            ## --- INSTALL --- ##
+            # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --immutable
 
-      - name: Set the cache key for builds
-        id: derive-key
-        shell: bash
-        run: |
-          BRANCH=${{ inputs.head-sha }}
-          echo "head-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
-          BRANCH=${{ inputs.base-sha }}
-          echo "base-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
+            - name: Set the cache key for builds
+              id: derive-key
+              shell: bash
+              run: |
+                  BRANCH=${{ inputs.head-sha }}
+                  echo "head-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
+                  BRANCH=${{ inputs.base-sha }}
+                  echo "base-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
 
             - name: Download build artifacts for head
               uses: actions/download-artifact@v5
               with:
-                  name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.head-path }}
+                  artifact-ids: ${{ needs.fetch-build-artifacts.outputs.head-artifact-id }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}
                   merge-multiple: true
+
+            - name: List files in head path
+              shell: bash
+              run: ls -R ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}/
 
             - name: Download build artifacts for base
               uses: actions/download-artifact@v5
               with:
-                  name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.base-path }}
+                  artifact-ids: ${{ needs.fetch-build-artifacts.outputs.base-artifact-id }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}
                   merge-multiple: true
 
-      - name: Compare compiled output file size
-        id: compare
-        uses: ./.github/actions/file-diff
-        # uses: spectrum-tools/gh-action-file-diff@v1
-        with:
-          head-path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}/
-          base-path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}/
-          file-glob-pattern: |
-            components/*/dist/**
-            tokens/dist/**
-            ui-icons/dist/**
-          token: ${{ secrets.GITHUB_TOKEN }}
+            - name: List files in base path
+              shell: bash
+              run: ls -R ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}/
 
-      - name: Generate rich diff for compiled assets
-        if: ${{ steps.compare.outputs.has-changed }}
-        id: rich-diff
-        shell: bash
-        run: yarn compare
+            - name: Compare compiled output file size
+              id: compare
+              uses: ./.github/actions/file-diff
+              with:
+                  head-path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}/
+                  base-path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}/
+                  package-pattern: |
+                      components/*
+                      tokens
+                      ui-icons
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      ## --- DEPLOY DIFFS TO NETLIFY --- ##
-      - name: Deploy rich diff to Netlify
-        uses: nwtgck/actions-netlify@v3
-        if: ${{ steps.compare.outputs.has-changed }}
-        with:
-          publish-dir: .diff-output
-          production-branch: main
-          production-deploy: false
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: ${{ inputs.deploy-message }}
-          enable-pull-request-comment: true
-          enable-commit-comment: false
-          overwrites-pull-request-comment: true
-          alias: ${{ inputs.alias }}
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_DIFF }}
+            - name: Generate rich diff for compiled assets
+              if: ${{ steps.compare.outputs.has-changed }}
+              id: rich-diff
+              shell: bash
+              run: yarn compare
+
+            ## --- DEPLOY DIFFS TO NETLIFY --- ##
+            - name: Deploy rich diff to Netlify
+              uses: nwtgck/actions-netlify@v3
+              if: ${{ steps.compare.outputs.has-changed }}
+              with:
+                  publish-dir: .diff-output
+                  production-branch: main
+                  production-deploy: false
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: ${{ inputs.deploy-message }}
+                  enable-pull-request-comment: true
+                  enable-commit-comment: false
+                  overwrites-pull-request-comment: true
+                  alias: ${{ inputs.alias }}
+              env:
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_DIFF }}
+              timeout-minutes: 10
+
+    fetch-build-artifacts:
+        name: Fetch & validate build artifacts
+        strategy:
+            matrix:
+                branch:
+                    - key: head
+                      sha: ${{ inputs.head-sha }}
+                    - key: base
+                      sha: ${{ inputs.base-sha }}
+        runs-on: ${{ inputs.system }}
         timeout-minutes: 10
+        outputs:
+            artifact-id: ${{ steps.upload.outputs.artifact-id }}
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 1
+                  ref: ${{ matrix.branch.sha }}
 
-  fetch-build-artifacts:
-    name: Fetch & validate build artifacts
-    strategy:
-      matrix:
-        branch:
-          - ${{ inputs.head-sha }}
-          - ${{ inputs.base-sha }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    outputs:
-      artifact-id: ${{ steps.upload.outputs.artifact-id }}
-    steps:
-      - name: Set the cache key for builds
-        id: derive-key
-        shell: bash
-        run: |
-          BRANCH=${{ matrix.branch }}
-          BRANCH=${BRANCH//\//_}
-          echo "key=ubuntu-latest-node20-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
+            ## --- SETUP --- ##
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20.19.5
+                  cache: yarn
 
-      - name: Check if build artifacts already exist
-        uses: actions/download-artifact@v4
-        id: artifact-found
-        continue-on-error: true
-        with:
-          name: ${{ steps.derive-key.outputs.key }}
+            - name: Enable Corepack
+              run: corepack enable
 
-      - name: Exit if artifact already exists
-        if: ${{ success() }}
-        shell: bash
-        run: exit 0
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ${{ inputs.system }}-node${{ inputs.node-version }}-${{ hashFiles('yarn.lock') }}
 
-      - name: Check out code
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-          ref: ${{ matrix.branch }}
+            ## --- INSTALL --- ##
+            # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --immutable
 
-      ## --- SETUP --- ##
-      - name: Use Node LTS version
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.5
-          cache: yarn
+            ## --- BUILD --- ##
+            - name: Build
+              shell: bash
+              run: yarn ci
 
-      - name: Enable Corepack
-        run: corepack enable
+            - name: Upload compiled assets
+              continue-on-error: true
+              id: upload
+              uses: actions/upload-artifact@v4
+              with:
+                  path: |
+                    ${{ github.workspace }}/components/*
+                    ${{ github.workspace }}/tokens
+                    ${{ github.workspace }}/ui-icons
+                  # this is important, it lets us catch if the build failed silently
+                  # by alterting us that no compiled assets were generated
+                  if-no-files-found: error
+                  retention-days: 5
 
-      ## --- YARN CACHE --- ##
-      - name: Check for cached dependencies
-        continue-on-error: true
-        id: cache-dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            .cache/yarn
-            node_modules
-          key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
-
-      ## --- INSTALL --- ##
-      # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
-      - name: Install dependencies
-        shell: bash
-        run: yarn install --immutable
-
-      ## --- BUILD --- ##
-      - name: Check for built assets
-        continue-on-error: true
-        id: download
-        uses: actions/download-artifact@v5
-        with:
-          path: |
-            ${{ github.workspace }}/components/*/dist/**
-            ${{ github.workspace }}/tokens/dist/**
-            ${{ github.workspace }}/ui-icons/dist/**
-          name: ${{ steps.derive-key.outputs.key }}
-
-      - name: Build
-        if: ${{ steps.download.outcome != 'success' }}
-        shell: bash
-        run: yarn ci
-
-      - name: Upload compiled assets
-        if: ${{ steps.download.outcome != 'success' }}
-        continue-on-error: true
-        id: upload
-        uses: actions/upload-artifact@v4
-        with:
-          path: |
-            ${{ github.workspace }}/components/*/dist/**
-            ${{ github.workspace }}/tokens/dist/**
-            ${{ github.workspace }}/ui-icons/dist/**
-          name: ${{ steps.derive-key.outputs.key }}
-          # this is important, it lets us catch if the build failed silently
-          # by alterting us that no compiled assets were generated
-          if-no-files-found: error
-          retention-days: 5
+            - name: Output a distinct matrix-specific artifact-id
+              shell: bash
+              run: echo "${{ matrix.branch.key }}-artifact-id=${{ steps.upload.outputs.artifact-id }}" >> "$GITHUB_OUTPUT"
