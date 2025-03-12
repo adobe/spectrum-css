@@ -27,7 +27,7 @@
 		"clean:env": "rm -rf .env .storybook/chromatic.config.json",
 		"clean:preview": "nx clean storybook --skip-nx-cache",
 		"cleaner": "nx run-many --target clean --projects",
-		"compare": "cross-env NODE_ENV=production node --no-warnings ./tasks/compare-compiled-output.js",
+		"compare": "cross-env NODE_ENV=production nx build bundle && node --no-warnings ./tasks/compare-compiled-output.js",
 		"component:build": "node --no-warnings ./tasks/component-builder.js",
 		"component:compare": "node --no-warnings ./tasks/component-compare.js",
 		"component:report": "node --no-warnings ./tasks/component-reporter.js",
