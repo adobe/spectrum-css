@@ -7,7 +7,9 @@
         <meta name="theme-color" content="#e1251b" />
 
         <!-- Load component stylesheets -->
-        <link rel="stylesheet" type="text/css" href="{{ "./bundle.min.css" | safe }}"/>
+        <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+        <script type="text/javascript" async src="https://use.typekit.net/rok6rmo.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ "./index.min.css" | safe }}"/>
 
         <style>
             body {
@@ -59,6 +61,19 @@
                 <header class="spectrum-Typography">
                     <h1 class="spectrum-Heading spectrum-Heading--sizeXL">Compiled asset comparison</h1>
                 </header>
+
+                <div class="spectrum-TagGroup">
+                    <div class="spectrum-Tag spectrum-Tag--sizeM">
+                        <span class="spectrum-Tag-itemLabel">With changes</span>
+                        <button class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-ClearButton--quiet">
+                            <span class="spectrum-ClearButton-fill">
+                                <svg class="spectrum-ClearButton-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#spectrum-icon-20-Cross" href="#spectrum-icon-20-Cross" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
 
                 <section class="spectrum-Grid">
                     {% for component, details in data -%}
