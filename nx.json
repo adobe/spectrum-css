@@ -89,14 +89,14 @@
 					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-builder.js\").default()'"
 				]
 			},
-			"outputs": ["{projectRoot}/dist/*.css", "{projectRoot}/dist/*.map"]
+			"outputs": ["{projectRoot}/dist/*.css*", "{projectRoot}/dist/**/*.css*"]
 		},
 		"clean": {
 			"cache": true,
 			"executor": "nx:run-commands",
-			"inputs": ["{projectRoot}/dist/*.css", "{projectRoot}/dist/*.map", { "externalDependencies": ["rimraf"] }],
+			"inputs": ["{projectRoot}/dist/*.css*", "{projectRoot}/dist/**/*.css*", { "externalDependencies": ["rimraf"] }],
 			"options": {
-				"commands": ["rimraf {projectRoot}/dist/*.css {projectRoot}/dist/*.map"]
+				"commands": ["rimraf {projectRoot}/dist/*.css* {projectRoot}/dist/**/"]
 			},
 			"outputs": ["{projectRoot}/dist"]
 		},
@@ -217,6 +217,7 @@
 			}
 		},
 		"validate": {
+			"cache": true,
 			"executor": "nx:run-commands",
 			"inputs": [
 				"{workspaceRoot}/schemas/metadata.schema.json",

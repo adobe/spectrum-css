@@ -8,6 +8,10 @@ A GitHub Action for comparing compiled assets between branches.
 
 **Required** Path to file or directory for file sizes analysis.
 
+### `package-pattern`
+
+**Required** All packages to include in the comparison. Supports glob syntax. Should point to the package folder which contains a package.json asset. If no package.json asset, this folder will be left off the results.
+
 ### `base-path`
 
 **Optional** Path to another directory against which to perform file comparisons.
@@ -15,10 +19,6 @@ A GitHub Action for comparing compiled assets between branches.
 ### `token`
 
 **Optional** GitHub token for accessing the GitHub API. Defaults to `${{ github.token }}`.
-
-### `file-glob-pattern`
-
-**Optional** Glob pattern for selecting files to compare. Defaults to `dist/*`.
 
 ### `comment`
 
@@ -44,9 +44,9 @@ Total size of all files for this branch in bytes.
 name: Compare compiled output file size
 uses: "spectrum-tools/gh-action-file-diff"
 with:
-    head-path: ${{ github.workspace }}/pull-request
-    base-path: ${{ github.workspace }}/base-branch
-    file-glob-pattern: |
-        components/*/dist/*.{css,json}
-        components/*/dist/themes/*.css
+  head-path: ${{ github.workspace }}/pull-request
+  base-path: ${{ github.workspace }}/base-branch
+  package-pattern: |
+    components/*/dist/*.{css,json}
+    components/*/dist/themes/*.css
 ```
