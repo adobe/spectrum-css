@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-css/preview/types";
+import { isActive, isFocused, isHovered, staticColor } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { LinkGroup } from "./link.test.js";
@@ -53,7 +53,8 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
-		},isInline: {
+		},
+		isInline: {
 			name: "Inline",
 			type: { name: "boolean" },
 			table: {
@@ -63,7 +64,15 @@ export default {
 			control: "boolean",
 		},
 		staticColor,
-		isQuiet,
+		isQuiet: {
+			name: "Quiet styling",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			if: { arg: "isInline", neq: true },
+		},
 	},
 	args: {
 		rootClass: "spectrum-Link",
@@ -97,7 +106,7 @@ Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
 /**
- * The primary link is the default variant and is blue. This should be used to call attention to the link and for when the blue color won’t feel too overwhelming in the experience.
+ * The standalone link is the default variant with the primary style which appears blue. This should be used to call attention to the link and for when the blue color won’t feel too overwhelming in the experience.
  * All links can have a quiet style, without an underline. This style should only be used when the placement and context of the link is explicit enough that a visible underline isn’t necessary.
  */
 export const Primary = LinkGroupText.bind({});
@@ -110,7 +119,7 @@ Primary.storyName = "Standalone, primary";
 
 /**
  * The secondary variant is the same gray color as the paragraph text. Its subdued appearance is optimal for when the primary variant is too overwhelming, such as in blocks of text with several references linked throughout.
- * Link is using `spectrum-Link--secondary`
+ * Link is using the class `spectrum-Link--secondary`.
  */
 export const Secondary = LinkGroupText.bind({});
 Secondary.args = {
@@ -124,7 +133,7 @@ Secondary.storyName = "Standalone, secondary";
 
 /**
  * Use static white on dark color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
- * Link is using `spectrum-Link--staticWhite`
+ * Link is using the class `spectrum-Link--staticWhite`.
  */
 export const StaticWhite = LinkGroupText.bind({});
 StaticWhite.storyName = "Static white";
@@ -139,7 +148,7 @@ StaticWhite.storyName = "Standalone, static white";
 
 /**
  * Use static black on light color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
- * Link using `spectrum-Link--staticBlack`
+ * Link using is the class `spectrum-Link--staticBlack`.
  */
 export const StaticBlack = LinkGroupText.bind({});
 StaticBlack.storyName = "Static black";
@@ -161,6 +170,7 @@ Multiline.tags = ["!dev"];
 Multiline.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Multiline.storyName = "Multiline, focused";
 
 /**
  * Inline links are used within a paragraph of text. They are styled differently from standalone links in which the font weight is lighter and can be adjusted to match the paragraph text.

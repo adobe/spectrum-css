@@ -45,15 +45,15 @@ export const Template = ({
 };
 
 export const TemplateWithFillerText = (args, context) => html`
-	<div>
+	<p>
 		Hello, this is a
 		${Template(args, context)}
 		. This is just filler text, but if you keep reading maybe something good will happen.
-	</div>
+	</p>
 `;
 
 export const MultilineText = (args, context) => html`
-	<div style="width: 200px;">
+	<p style="width: 200px;">
 		I like focus styles. They are very important for accessibility. They help users know where they are on the page.
 		${Template({
 			...args,
@@ -62,7 +62,7 @@ export const MultilineText = (args, context) => html`
 			isInline: true,
 		}, context)}
 		They are also very pretty.
-	</div>
+	</p>
 `;
 
 export const LinkGroupText = (args, context) => Container({
