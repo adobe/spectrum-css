@@ -73,12 +73,12 @@ export const Template = ({
 						}}
 					>
 						${Icon({
-							iconName: "Star",
+							iconName: "StarFilled",
 							setName: "workflow",
 							customClasses: [`${rootClass}-starActive`],
 						}, context)}
 						${Icon({
-							iconName: "StarOutline",
+							iconName: "Star",
 							setName: "workflow",
 							customClasses: [`${rootClass}-starInactive`],
 						}, context)}
