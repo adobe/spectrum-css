@@ -8,7 +8,7 @@ The link component is updated with S2 specifications, colors, and typography. Th
 
 #### Note
 
-- Quiet styling does not apply to the inline variant for accessiblity reasons.
+- Quiet styling does not apply to the inline variant so that it is distinguishable from the surrounding text and the underline indicator is clear
 - `--mod-spectrum-link-font-weight` can be used to adjust inline variant to match surrounding text. Apply font weights to this mod `inherit` does not apply.
 
 ## New tokens

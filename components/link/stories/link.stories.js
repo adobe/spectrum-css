@@ -169,7 +169,7 @@ Multiline.storyName = "Multiline, focused";
 
 /**
  * Inline links are used within a paragraph of text. They are styled differently from standalone links in which the font weight is lighter and can be adjusted to match the paragraph text.
- * Inline links do not have a quiet variant style due to accessiblity reasons.
+ * Inline links do not have a quiet variant style so that it is distinguishable from the surrounding text and the underline indicator is clear.
  */
 export const Inline = TemplateWithFillerText.bind({});
 Inline.args = {
