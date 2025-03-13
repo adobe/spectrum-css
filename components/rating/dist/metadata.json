@@ -11,6 +11,7 @@
     ".spectrum-Rating--emphasized:hover .spectrum-Rating-icon:active",
     ".spectrum-Rating--emphasized:hover .spectrum-Rating-icon:hover",
     ".spectrum-Rating--emphasized:hover .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon",
+    ".spectrum-Rating--sizeM",
     ".spectrum-Rating-icon",
     ".spectrum-Rating-icon .spectrum-Rating-starActive",
     ".spectrum-Rating-icon .spectrum-Rating-starInactive",
@@ -52,10 +53,8 @@
     "--mod-rating-icon-color-down",
     "--mod-rating-icon-color-hover",
     "--mod-rating-icon-color-key-focus",
-    "--mod-rating-icon-count",
     "--mod-rating-icon-height",
     "--mod-rating-icon-spacing",
-    "--mod-rating-icon-spacing-vertical-top",
     "--mod-rating-icon-width",
     "--mod-rating-indicator-border-radius",
     "--mod-rating-indicator-height"
@@ -81,7 +80,10 @@
     "--spectrum-rating-icon-width",
     "--spectrum-rating-indicator-border-radius",
     "--spectrum-rating-indicator-height",
-    "--spectrum-rating-indicator-width"
+    "--spectrum-rating-indicator-width",
+    "--spectrum-rating-width",
+    "--spectrum-rating-width-medium",
+    "--spectrum-rating-width-small"
   ],
   "global": [
     "--spectrum-accent-content-color-default",
@@ -90,7 +92,8 @@
     "--spectrum-accent-content-color-key-focus",
     "--spectrum-border-width-200",
     "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-corner-radius-100",
+    "--spectrum-corner-radius-medium-size-medium",
+    "--spectrum-corner-radius-medium-size-small",
     "--spectrum-disabled-content-color",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
@@ -99,9 +102,11 @@
     "--spectrum-neutral-subdued-content-color-down",
     "--spectrum-neutral-subdued-content-color-hover",
     "--spectrum-neutral-subdued-content-color-key-focus",
-    "--spectrum-workflow-icon-size-100"
+    "--spectrum-spacing-75",
+    "--spectrum-workflow-icon-size-100",
+    "--spectrum-workflow-icon-size-75"
   ],
-  "passthroughs": [],
+  "passthroughs": ["--mod-icon-block-size", "--mod-icon-inline-size"],
   "high-contrast": [
     "--highcontrast-rating-emphasized-icon-color-default",
     "--highcontrast-rating-emphasized-icon-color-down",
