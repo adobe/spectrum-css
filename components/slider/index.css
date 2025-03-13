@@ -627,6 +627,8 @@
 	.spectrum-Slider-track {
 		&:not(:first-of-type, :last-of-type)::before {
 			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+			border-start-end-radius: 0;
+			border-end-end-radius: 0;
 		}
 	}
 }
