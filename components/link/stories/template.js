@@ -68,29 +68,25 @@ export const MultilineText = (args, context) => html`
 export const LinkGroupText = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
-	content: html`
-	${Container({
-		withBorder: false,
-		direction: "column",
-		heading: "Default",
-		content: html`
-			${Template({
+	content: [
+		Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Default",
+			content: Template({
 				...args,
 				text: "Learn more",
-			}, context)}
-		`,
-	}, context)}
-	${Container({
-		withBorder: false,
-		direction: "column",
-		heading: "Quiet",
-		content: html`
-			${Template({
+			}, context)
+		}, context),
+		Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Quiet",
+			content: Template({
 				...args,
 				text: "Learn more",
 				isQuiet: true,
-			}, context)}
-		`,
-	}, context)}
-`,
+			}, context)
+		}, context)
+	],
 }, context);

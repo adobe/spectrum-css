@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isFocused, isHovered, staticColor } from "@spectrum-css/preview/types";
+import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { LinkGroup } from "./link.test.js";
@@ -65,12 +65,7 @@ export default {
 		},
 		staticColor,
 		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
+			...isQuiet,
 			if: { arg: "isInline", neq: true },
 		},
 	},

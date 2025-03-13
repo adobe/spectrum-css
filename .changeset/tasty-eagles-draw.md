@@ -2,11 +2,12 @@
 "@spectrum-css/link": major
 ---
 
-# Link S2 migration
+### Link S2 migration
 
-The link component is now updated with S2 specs, colors, and typography.There is a new inline variant which uses the `.spectrum-Link--inline` class and the default variant is the standalone variant.
+The link component is updated with S2 specifications, colors, and typography. There is a new inline variant which uses the `.spectrum-Link--inline` modifier class and the default is the standalone variant.
 
-**Notes**
+#### Note
+
 - Quiet styling does not apply to the inline variant for accessiblity reasons.
 - `--mod-spectrum-link-font-weight` can be used to adjust inline variant to match surrounding text. Apply font weights to this mod `inherit` does not apply.
 
