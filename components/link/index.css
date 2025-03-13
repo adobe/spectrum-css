@@ -11,21 +11,28 @@
  * governing permissions and limitations under the License.
  */
 
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Link {
-		--highcontrast-link-text-color: LinkText;
-	}
-}
-
-.spectrum-Link--secondary {
-	--mod-link-text-color: var(--mod-link-text-color-secondary-default, var(--spectrum-neutral-content-color-default));
-	--mod-link-text-color-hover: var(--mod-link-text-color-secondary-hover, var(--spectrum-neutral-content-color-hover));
-	--mod-link-text-color-active: var(--mod-link-text-color-secondary-active, var(--spectrum-neutral-content-color-down));
-	--mod-link-text-color-focus: var(--mod-link-text-color-secondary-focus, var(--spectrum-neutral-content-color-key-focus));
-}
-
 .spectrum-Link {
+	/* Focus state */
+	--spectrum-link-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-link-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-link-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-link-corner-radius: var(--spectrum-corner-radius-100);
+
+	/* Typography */
+	--spectrum-link-default-font-family: var(--spectrum-sans-font-family-stack);
+
+	/* Standalone */
+	--spectrum-link-line-height: var(--spectrum-line-height-100);
+	--spectrum-link-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--spectrum-link-font-size: var(--spectrum-font-size-100);
+	--spectrum-link-font-style: var(--spectrum-default-font-style);
+	--spectrum-link-font-weight: var(--spectrum-medium-font-weight);
+	--spectrum-link-text-underline-thickness: var(--spectrum-text-underline-thickness);
+	--spectrum-link-text-underline-gap: var(--spectrum-text-underline-gap);
+
+	/* Inline */
+	--spectrum-link-inline-font-weight: var(--spectrum-regular-font-weight);
+
 	/* Remove the gray background on active links in IE 10. */
 	background-color: transparent;
 
@@ -36,27 +43,43 @@
 	outline: none;
 	cursor: pointer;
 
-	/* @deprecated --mod-link-text-color-primary-default in favor of --mod-link-text-color */
-	color: var(--highcontrast-link-text-color, var(--mod-link-text-color, var(--mod-link-text-color-primary-default, var(--spectrum-accent-content-color-default))));
+	color: var(--highcontrast-link-text-color, var(--mod-link-text-color, var(--spectrum-accent-content-color-default)));
+	font-family: var(--spectrum-link-default-font-family);
+	font-weight: var(--spectrum-link-font-weight);
+	font-size: var(--spectrum-link-font-size);
+	font-style: var(--spectrum-link-font-style);
+	line-height: var(--spectrum-link-line-height);
+	text-decoration-thickness: var(--spectrum-link-text-underline-thickness);
+	text-underline-offset: var(--spectrum-link-text-underline-gap);
 
 	&:hover {
-		/* @deprecated --mod-link-text-color-primary-hover in favor of --mod-link-text-color-hover */
-		--mod-link-text-color: var(--mod-link-text-color-hover, var(--mod-link-text-color-primary-hover, var(--spectrum-accent-content-color-hover)));
+		--mod-link-text-color: var(--mod-link-text-color-hover, var(--spectrum-accent-content-color-hover));
 	}
 
 	&:active {
-		/* @deprecated --mod-link-text-color-primary-active in favor of --mod-link-text-color-active */
-		--mod-link-text-color: var(--mod-link-text-color-active, var(--mod-link-text-color-primary-active, var(--spectrum-accent-content-color-down)));
+		--mod-link-text-color: var(--mod-link-text-color-active, var(--spectrum-accent-content-color-down));
 	}
 
 	&:focus-visible {
-		/* @deprecated --mod-link-text-color-primary-focus in favor of --mod-link-text-color-focus */
-		--mod-link-text-color: var(--mod-link-text-color-focus, var(--mod-link-text-color-primary-focus, var(--spectrum-accent-content-color-key-focus)));
+		--mod-link-text-color: var(--mod-link-text-color-focus, var(--spectrum-accent-content-color-key-focus));
 
-		text-decoration: underline;
-		text-decoration-style: double;
-		text-decoration-color: inherit;
+		outline: var(--spectrum-link-focus-indicator-thickness) solid var(--highcontrast-link-focus-indicator-color, var(--spectrum-link-focus-indicator-color));
+		padding: var(--spectrum-link-focus-indicator-gap);
+		border-radius: var(--spectrum-link-corner-radius);
 	}
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		line-height: var(--mod-link-line-height-cjk, var(--spectrum-link-line-height-cjk));
+	}
+}
+
+.spectrum-Link--secondary {
+	--mod-link-text-color: var(--mod-link-text-color-secondary-default, var(--spectrum-neutral-content-color-default));
+	--mod-link-text-color-hover: var(--mod-link-text-color-secondary-hover, var(--spectrum-neutral-content-color-hover));
+	--mod-link-text-color-active: var(--mod-link-text-color-secondary-active, var(--spectrum-neutral-content-color-down));
+	--mod-link-text-color-focus: var(--mod-link-text-color-secondary-focus, var(--spectrum-neutral-content-color-key-focus));
 }
 
 .spectrum-Link--quiet {
@@ -65,6 +88,10 @@
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.spectrum-Link--inline {
+	--spectrum-link-font-weight: var(--mod-link-inline-font-weight, var(--spectrum-link-inline-font-weight));
 }
 
 .spectrum-Link--staticWhite {
@@ -79,4 +106,12 @@
 	--mod-link-text-color-hover: var(--mod-link-text-color-black, var(--spectrum-black));
 	--mod-link-text-color-active: var(--mod-link-text-color-black, var(--spectrum-black));
 	--mod-link-text-color-focus: var(--mod-link-text-color-black, var(--spectrum-black));
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-Link {
+		--highcontrast-link-text-color: LinkText;
+		--highcontrast-link-focus-indicator-color: LinkText;
+	}
 }
