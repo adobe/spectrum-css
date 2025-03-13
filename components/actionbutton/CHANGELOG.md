@@ -1,5 +1,15 @@
 # Change log
 
+## 7.1.2
+
+### Patch Changes
+
+📝 [#3606](https://github.com/adobe/spectrum-css/pull/3606) [`3ec3b46`](https://github.com/adobe/spectrum-css/commit/3ec3b468313cbeb19298b35a2bd80860b83f4734) Thanks [@jawinn](https://github.com/jawinn)!
+
+This updates the colors used in action button for the spectrum two theme, so they are closer aligned with the spectrum 2 spec, per the request in SWC-597. This removes the border by making it transparent and updates the background color tokens that are used.
+
+This also includes a forced-colors/high contrast mode fix for the selected + disabled state. This now shows the disabled colors.
+
 ## 8.0.0-next.0
 
 ### Patch Changes
