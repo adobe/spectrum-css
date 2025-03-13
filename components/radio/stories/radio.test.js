@@ -8,14 +8,6 @@ export const RadioGroup = Variants({
 			testHeading: "Default"
 		},
 		{
-			testHeading: "Hover",
-			isHovered: true,
-		},
-		{
-			testHeading: "Focus-visible",
-			isFocused: true,
-		},
-		{
 			testHeading: "Emphasized",
 			isEmphasized: true,
 		},
@@ -26,13 +18,20 @@ export const RadioGroup = Variants({
 			customStyles: {
 				"max-width": "220px",
 			}
-
 		}
 	],
 	stateData: [
 		{
 			testHeading: "Checked",
 			isChecked: true,
+		},
+		{
+			testHeading: "Hover",
+			isHovered: true,
+		},
+		{
+			testHeading: "Focus-visible",
+			isFocused: true,
 		},
 		{
 			testHeading: "Invalid",

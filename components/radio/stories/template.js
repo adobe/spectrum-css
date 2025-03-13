@@ -48,7 +48,11 @@ export const Template = ({
 			<input
 				type="radio"
 				name=${name}
-				class=${classMap({["is-focus-visible"]: isFocused, [`${rootClass}-input`]: true })}
+				class=${classMap({
+					["is-focus-visible"]: isFocused && !isDisabled,
+					["is-invalid"]: isInvalid,
+					[`${rootClass}-input`]: true
+				})}
 				id=${inputId}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
@@ -110,15 +114,17 @@ export const InvalidGroupTemplate = (args, context) => Container({
 	content: html`
 		${Template({
 			...args,
-			label: "Example label",
+			label: "Small",
 			name: "radio-example-" + (args?.name ?? "default"),
 		}, context)}
 		${Template({
 			...args,
-			label: "Initially selected radio button that has wrapping label text",
-			customStyles: {
-				"max-width": "220px",
-			},
+			label: "Medium",
+			name: "radio-example-" + (args?.name ?? "default"),
+		}, context)}
+		${Template({
+			...args,
+			label: "Large",
 			name: "radio-example-" + (args?.name ?? "default"),
 		}, context)}
 		${HelpText({
