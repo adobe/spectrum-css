@@ -15,6 +15,7 @@ export const Template = ({
 	isFocused = false,
 	isDisabled = true,
 	isEmphasized = false,
+	size,
 	customClasses = [],
 	id = getRandomId("rating"),
 } = {}, context = {}) => {
@@ -28,6 +29,8 @@ export const Template = ({
 				"is-readOnly": isReadOnly,
 				"is-focused": isFocused,
 				[`${rootClass}--emphasized`]: isEmphasized,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
