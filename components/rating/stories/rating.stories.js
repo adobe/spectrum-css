@@ -64,8 +64,6 @@ export default {
 
 /**
  * A initial value of three is used for the following examples, to demonstrate both active and inactive stars.
- * When hovering over a rating component that has a previously entered value, an underline appears under the
- * current selection to provide context.
  */
 export const Default = RatingGroup.bind({});
 Default.args = {};
