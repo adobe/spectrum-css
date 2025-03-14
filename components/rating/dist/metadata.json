@@ -7,7 +7,6 @@
     ".spectrum-Rating--emphasized .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon",
     ".spectrum-Rating--emphasized.is-focused .spectrum-Rating-icon.is-selected",
     ".spectrum-Rating--emphasized:hover .spectrum-Rating-icon",
-    ".spectrum-Rating--emphasized:hover .spectrum-Rating-icon.is-currentValue:after",
     ".spectrum-Rating--emphasized:hover .spectrum-Rating-icon:active",
     ".spectrum-Rating--emphasized:hover .spectrum-Rating-icon:hover",
     ".spectrum-Rating--emphasized:hover .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon",
@@ -15,7 +14,6 @@
     ".spectrum-Rating-icon",
     ".spectrum-Rating-icon .spectrum-Rating-starActive",
     ".spectrum-Rating-icon .spectrum-Rating-starInactive",
-    ".spectrum-Rating-icon.is-currentValue:after",
     ".spectrum-Rating-icon.is-selected",
     ".spectrum-Rating-icon.is-selected .spectrum-Rating-starActive",
     ".spectrum-Rating-icon.is-selected .spectrum-Rating-starInactive",
@@ -33,7 +31,6 @@
     ".spectrum-Rating.is-focused .spectrum-Rating-icon.is-selected",
     ".spectrum-Rating.is-readOnly",
     ".spectrum-Rating:hover .spectrum-Rating-icon",
-    ".spectrum-Rating:hover .spectrum-Rating-icon.is-currentValue:after",
     ".spectrum-Rating:hover .spectrum-Rating-icon:active",
     ".spectrum-Rating:hover .spectrum-Rating-icon:hover",
     ".spectrum-Rating:hover .spectrum-Rating-starActive",
@@ -46,7 +43,6 @@
     "--mod-rating-emphasized-icon-color-hover",
     "--mod-rating-emphasized-icon-color-key-focus",
     "--mod-rating-focus-indicator-color",
-    "--mod-rating-focus-indicator-gap",
     "--mod-rating-focus-indicator-thickness",
     "--mod-rating-icon-color-default",
     "--mod-rating-icon-color-disabled",
@@ -55,9 +51,7 @@
     "--mod-rating-icon-color-key-focus",
     "--mod-rating-icon-height",
     "--mod-rating-icon-spacing",
-    "--mod-rating-icon-width",
-    "--mod-rating-indicator-border-radius",
-    "--mod-rating-indicator-height"
+    "--mod-rating-icon-width"
   ],
   "component": [
     "--spectrum-rating-border-radius",
@@ -80,7 +74,6 @@
     "--spectrum-rating-icon-width",
     "--spectrum-rating-indicator-border-radius",
     "--spectrum-rating-indicator-height",
-    "--spectrum-rating-indicator-width",
     "--spectrum-rating-width",
     "--spectrum-rating-width-medium",
     "--spectrum-rating-width-small"
