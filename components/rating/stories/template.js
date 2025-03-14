@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -15,7 +15,7 @@ export const Template = ({
 	isFocused = false,
 	isDisabled = true,
 	isEmphasized = false,
-	size,
+	size = "s",
 	customClasses = [],
 	id = getRandomId("rating"),
 } = {}, context = {}) => {
@@ -90,3 +90,21 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const RatingSizeGroup = (args, context) => Container({
+	direction: "row",
+	withBorder: false,
+	content: html`
+		${Template({
+			...args,
+			context,
+			label: "Small"
+		})}
+		${Template({
+			...args,
+			context,
+			size: "m",
+			label: "Medium"
+		})}
+	`
+}, context);
