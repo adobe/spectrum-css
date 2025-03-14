@@ -58,6 +58,11 @@ export const TextAreaGroup = Variants({
 		isHovered: true,
 		include: ["Default", "Text area with value", "Invalid with help text"],
 	}, {
+		testHeading: "Disabled & hover",
+		isHovered: true,
+		isDisabled: true,
+		include: ["Default", "Text area with value", "Invalid with help text"],
+	}, {
 		testHeading: "Focus & hover",
 		isFocused: true,
 		isHovered: true,
