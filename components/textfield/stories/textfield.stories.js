@@ -7,10 +7,11 @@ import { HelpTextOptions, RequiredOptions, Template, TextFieldOptions } from "./
 import { TextFieldGroup } from "./textfield.test.js";
 
 /**
- * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
+ * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to
+ * communicate the entry requirements.
  *
- * ## Usage Notes
- * A single-line text field using the `<input>` element.
+ * Textfields are single-line text fields using the `<input>` element. For multi-line text input, see the
+ * [text area](/docs/components-textarea--docs) component.
  */
 export default {
 	title: "Text field",
@@ -152,16 +153,20 @@ export default {
 	},
 };
 
-/**
- * Text fields should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These text fields without a visible label should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
- */
-
 export const Default = TextFieldGroup.bind({});
 Default.tags = ["!autodocs"];
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-
+/**
+ * Text fields should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label
+ * could be undefined. These text fields without a visible label should still include an aria-label in HTML (depending on the context, "aria-label"
+ * or "aria-labelledby").
+ *
+ * When the text field is focused using the keyboard (e.g. with the tab key), the implementation must add the `is-keyboardFocused` class, which
+ * displays the focus indicator. This indicator should not appear on focus from a click or tap. The example below has this class applied on first
+ * load for demonstration purposes.
+ */
 export const Standard = TextFieldOptions.bind({});
 Standard.tags = ["!dev"];
 Standard.storyName = "Default";
@@ -170,7 +175,8 @@ Standard.parameters = {
 };
 
 /**
- * Text fields can display a character count indicator when the length of the text entry needs to be kept under a predefined value. Character count indicators can be used in conjunction with other indicators (validation icon, “optional” or “required” indicators) when necessary.
+ * Text fields can display a character count indicator when the length of the text entry needs to be kept under a predefined value. Character count
+ * indicators can be used in conjunction with other indicators (validation icon, "optional" or "required" indicators) when necessary.
  */
 export const CharacterCount = Template.bind({});
 CharacterCount.tags = ["!dev"];
@@ -184,7 +190,8 @@ CharacterCount.parameters = {
 };
 
 /**
- * A text field in a disabled state shows that an input field exists, but is not available in that circumstance. This can be used to maintain layout continuity and communicate that a field may become available later.
+ * A text field in a disabled state shows that an input field exists, but is not available in that circumstance. This can be used to maintain layout
+ * continuity and communicate that a field may become available later.
  */
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
@@ -196,9 +203,13 @@ Disabled.parameters = {
 };
 
 /**
- * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
+ * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should
+ * input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful
+ * information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field
+ * requirements aren't met, prompting a user to adjust what they had originally input.
  *
- * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension.
+ * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user
+ * comprehension.
  */
 export const HelpText = HelpTextOptions.bind({});
 HelpText.tags = ["!dev"];
@@ -207,9 +218,12 @@ HelpText.parameters = {
 };
 
 /**
- * __Don’t use placeholder text.__ Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible. Once a value is entered, placeholder text is no longer viewable; if someone is using an automatic form filler, they will never get the information in the placeholder text.
+ * __Don't use placeholder text.__ Putting instructions for how to complete an input, requirements, or any other essential information into
+ * placeholder text is not accessible. Once a value is entered, placeholder text is no longer viewable; if someone is using an automatic form filler,
+ * they will never get the information in the placeholder text.
  *
- * Instead, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. If there's placeholder text and help text at the same time, it becomes redundant and distracting, especially if they're communicating the same thing.
+ * Instead, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. If there's
+ * placeholder text and help text at the same time, it becomes redundant and distracting, especially if they're communicating the same thing.
  *
  * Because use of placeholder text is discouraged, placeholder and value text are styled the same.
  */
@@ -223,7 +237,8 @@ Placeholder.parameters = {
 };
 
 /**
- * Text fields have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed.
+ * Text fields have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not
+ * interacted with or changed.
  */
 export const Readonly = Template.bind({});
 Readonly.tags = ["!dev"];
@@ -267,7 +282,8 @@ Sizing.parameters = {
 };
 
 /**
- * Text fields can display a validation icon when the text entry is expected to conform to a specific format (e.g., email address, credit card number, password creation requirements, etc.). The icon appears as soon as a user types a valid entry in the field.
+ * Text fields can display a validation icon when the text entry is expected to conform to a specific format (e.g., email address, credit card
+ * number, password creation requirements, etc.). The icon should appear as soon as a user types a valid entry in the field.
  */
 export const Validation = Template.bind({});
 Validation.tags = ["!dev"];
@@ -280,7 +296,9 @@ Validation.parameters = {
 Validation.storyName = "Validation icon";
 
 /**
- * Text fields can be marked as optional or required, depending on the situation. For required text fields, there are two styling options: a "(required)" label or an asterisk. If you use an asterisk, be sure to include hint text to explain what the asterisk means. Optional text fields are either denoted with text added to the end of the label — "(optional)" — or have no indication at all.
+ * Text fields can be marked as optional or required, depending on the situation. For required text fields, there are two styling options: a
+ * "(required)" label or an asterisk. If you use an asterisk, be sure to include hint text to explain what the asterisk means. Optional text
+ * fields are either denoted with text added to the end of the label — "(optional)" — or have no indication at all.
  */
 export const Required = RequiredOptions.bind({});
 Required.tags = ["!dev"];
@@ -291,22 +309,7 @@ Required.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-/**
- * When the text field was focused using the keyboard (e.g. with the tab key), the implementation must add the `is-keyboardFocused` class, which
- * displays the focus indicator. This indicator should not appear on focus from a click or tap.
- * The example below has this class applied on first load for demonstration purposes.
- */
-export const KeyboardFocus = Template.bind({});
-KeyboardFocus.tags = ["!dev"];
-KeyboardFocus.args = {
-	isKeyboardFocused: true,
-};
-KeyboardFocus.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
 // ********* VRT ONLY ********* //
-// @todo should this show text field and text area in the same snapshot?
 export const WithForcedColors = TextFieldGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
