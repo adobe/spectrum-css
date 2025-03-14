@@ -15,7 +15,7 @@
 
 @import "./spectrum-two.css";
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-AlertBanner {
 		--spectrum-alert-banner-neutral-background: var(--spectrum-neutral-subdued-background-color-default);
 	}
