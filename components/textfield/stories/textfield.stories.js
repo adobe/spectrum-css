@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptions, RequiredOptions, Template, TextFieldOptions } from "./template.js";
+import { HelpTextOptions, InvalidOptions, RequiredOptions, Template, TextFieldOptions } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
 
 /**
@@ -199,6 +199,15 @@ Disabled.args = {
 	isDisabled: true
 };
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+export const Invalid = InvalidOptions.bind({});
+Invalid.tags = ["!dev"];
+Invalid.args = {
+	isInvalid: true
+};
+Invalid.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 

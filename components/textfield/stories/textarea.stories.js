@@ -2,7 +2,7 @@ import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptionsTextArea, RequiredOptionsTextArea, Template, TextAreaOptions } from "./textarea.template.js";
+import { HelpTextOptionsTextArea, InvalidOptionsTextArea, RequiredOptionsTextArea, Template, TextAreaOptions } from "./textarea.template.js";
 import { TextAreaGroup } from "./textarea.test.js";
 import { default as Textfield } from "./textfield.stories.js";
 
@@ -75,6 +75,15 @@ Disabled.args = {
 	isDisabled: true
 };
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+export const Invalid = InvalidOptionsTextArea.bind({});
+Invalid.tags = ["!dev"];
+Invalid.args = {
+	isInvalid: true
+};
+Invalid.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
