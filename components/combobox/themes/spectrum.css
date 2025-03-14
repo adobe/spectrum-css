@@ -15,12 +15,15 @@
 
 @import "./spectrum-two.css";
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-Combobox {
 		--spectrum-combobox-border-color-focus: var(--spectrum-gray-500);
 		--spectrum-combobox-border-color-focus-hover: var(--spectrum-gray-600);
 		--spectrum-combobox-border-color-key-focus: var(--spectrum-gray-600);
 
+		--spectrum-combobox-readonly-input-border-color: var(--spectrum-gray-500);
+
 		--spectrum-combobox-background-color-disabled: var(--spectrum-disabled-background-color);
+		--spectrum-combobox-border-color-disabled: transparent;
 	}
 }
