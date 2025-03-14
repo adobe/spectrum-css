@@ -27,5 +27,9 @@
 		--spectrum-infield-button-background-color-hover: var(--spectrum-gray-200);
 		--spectrum-infield-button-background-color-down: var(--spectrum-gray-200);
 		--spectrum-infield-button-background-color-key-focus: var(--spectrum-gray-200);
+
+		&:disabled {
+			--spectrum-infield-button-border-color: var(--spectrum-gray-300);
+		}
 	}
 }
