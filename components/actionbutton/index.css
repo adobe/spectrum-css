@@ -41,6 +41,8 @@ governing permissions and limitations under the License.
 	--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-100);
 	--spectrum-actionbutton-font-size: var(--spectrum-font-size-100);
 	--spectrum-actionbutton-font-weight: var(--spectrum-medium-font-weight);
+	--spectrum-actionbutton-font-style: var(--spectrum-default-font-style);
+
 	--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-100);
 	--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-medium);
 	--spectrum-actionbutton-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
@@ -297,6 +299,7 @@ a.spectrum-ActionButton {
 
 	font-size: var(--mod-actionbutton-font-size, var(--spectrum-actionbutton-font-size));
 	font-weight: var(--mod-actionbutton-font-weight, var(--spectrum-actionbutton-font-weight));
+	font-style: var(--mod-actionbutton-font-style, var(--spectrum-actionbutton-font-style));
 	white-space: nowrap;
 	color: var(--mod-actionbutton-label-color, inherit);
 
