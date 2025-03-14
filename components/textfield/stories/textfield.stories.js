@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptions, InvalidOptions, RequiredOptions, Template, TextFieldOptions } from "./template.js";
@@ -82,7 +82,7 @@ export default {
 			table: { disable: true },
 		},
 		isReadOnly,
-		isLoading,
+		isLoading: { table: { disable: true } }, // @todo add this back when we know what it should look like
 		pattern: { table: { disable: true } },
 		value: { table: { disable: true } },
 		helpText: {
