@@ -19,7 +19,7 @@ export const Template = ({
 }, context );
 
 export const HelpTextOptionsTextArea = (args, context) => Container({
-	direction: "column",
+	direction: "row",
 	withBorder: false,
 	withHeading: false,
 	content: html`
@@ -39,47 +39,37 @@ export const HelpTextOptionsTextArea = (args, context) => Container({
 export const TextAreaOptions = (args, context) => Container({
 	direction: "row",
 	withBorder: false,
-	wrapperStyles: {
-		rowGap: "12px",
-	},
 	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
 			heading: "Default",
 			content: Template(args, context)
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Invalid",
-			content: Template({...args, isInvalid: true}, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
 			heading: "Focused",
 			content: Template({...args, isFocused: true}, context)
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
 			heading: "Keyboard focused",
 			content: Template({...args, isKeyboardFocused: true}, context)
 		}, context)}
+	`
+}, context);
+
+export const InvalidOptionsTextArea = (args, context) => Container({
+	direction: "row",
+	withBorder: false,
+	withHeading: false,
+	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
+			heading: "Invalid",
+			content: Template({...args, isInvalid: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
 		}, context)}
@@ -87,7 +77,7 @@ export const TextAreaOptions = (args, context) => Container({
 }, context);
 
 export const RequiredOptionsTextArea = (args, context) => Container({
-	direction: "column",
+	direction: "row",
 	withBorder: false,
 	withHeading: false,
 	content: html`
