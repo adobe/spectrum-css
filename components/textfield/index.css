@@ -413,11 +413,9 @@
 
 	/* focus hover */
 	.spectrum-Textfield:focus:hover &,
-	.spectrum-Textfield:focus-visible:hover &,
 	.is-focused:hover &,
 	.is-keyboardFocused:hover &,
-	&:focus:hover,
-	&:focus-visible:hover {
+	&:focus:hover {
 		border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
 		color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
 
@@ -427,8 +425,7 @@
 	}
 
 	/* keyboard focus */
-	.is-keyboardFocused &,
-	&:focus-visible {
+	.is-keyboardFocused & {
 		border-color: var(--highcontrast-textfield-border-color-keyboard-focus, var(--mod-textfield-border-color-keyboard-focus, var(--spectrum-textfield-border-color-keyboard-focus)));
 		color: var(--highcontrast-textfield-text-color-keyboard-focus, var(--mod-textfield-text-color-keyboard-focus, var(--spectrum-textfield-text-color-keyboard-focus)));
 
@@ -476,15 +473,13 @@
 	}
 
 	.is-invalid:focus:hover &,
-	.is-invalid:focus-visible:hover &,
 	.is-invalid.is-focused:hover &,
 	.is-invalid.is-keyboardFocused:hover & {
 		border-color: var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover));
 	}
 
 	/* invalid keyboard focus */
-	.is-invalid.is-keyboardFocused &,
-	.is-invalid &:focus-visible {
+	.is-invalid.is-keyboardFocused & {
 		border-color: var(--highcontrast-textfield-border-color-invalid-keyboard-focus, var(--mod-textfield-border-color-invalid-keyboard-focus, var(--spectrum-textfield-border-color-invalid-keyboard-focus)));
 	}
 
