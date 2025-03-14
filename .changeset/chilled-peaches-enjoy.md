@@ -12,7 +12,7 @@ Action button now uses Spectrum 2 tokens and design specifications. A few notabl
 - Background and content colors were updated.
 - Mod custom properties have been adjusted:
   - Renamed:
-    - `--mod-line-height-100` renamed to `--mod-button-line-height`.
+    - `--mod-line-height-100` renamed to `--mod-actionbutton-line-height`.
     - `--mod-sans-font-family-stack` renamed to `--mod-button-font-family`.
     - `--mod-animation-duration-100` renamed to `--mod-button-animation-duration`.
   - Removed:
@@ -25,3 +25,4 @@ Action button now uses Spectrum 2 tokens and design specifications. A few notabl
     - `--mod-actionbutton-static-content-color`
   - New:
     - `--mod-actionbutton-font-weight`
+    - `--mod-actionbutton-font-style`

@@ -35,6 +35,9 @@
     ".spectrum-ActionButton:focus-visible",
     ".spectrum-ActionButton:focus-visible:after",
     ".spectrum-ActionButton:hover",
+    ".spectrum-ActionButton:lang(ja)",
+    ".spectrum-ActionButton:lang(ko)",
+    ".spectrum-ActionButton:lang(zh)",
     "[dir=\"rtl\"] .spectrum-ActionButton",
     "a.spectrum-ActionButton"
   ],
@@ -81,6 +84,7 @@
     "--mod-actionbutton-height",
     "--mod-actionbutton-icon-size",
     "--mod-actionbutton-label-color",
+    "--mod-actionbutton-line-height",
     "--mod-actionbutton-min-width",
     "--mod-actionbutton-text-to-visual"
   ],
@@ -118,6 +122,7 @@
     "--spectrum-actionbutton-font-weight",
     "--spectrum-actionbutton-height",
     "--spectrum-actionbutton-icon-size",
+    "--spectrum-actionbutton-line-height",
     "--spectrum-actionbutton-min-width",
     "--spectrum-actionbutton-text-to-visual"
   ],
@@ -129,6 +134,7 @@
     "--spectrum-animation-duration-100",
     "--spectrum-black",
     "--spectrum-border-width-100",
+    "--spectrum-cjk-line-height-100",
     "--spectrum-component-edge-to-text-100",
     "--spectrum-component-edge-to-text-200",
     "--spectrum-component-edge-to-text-300",
