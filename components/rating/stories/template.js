@@ -66,7 +66,6 @@ export const Template = ({
 						class=${classMap({
 							[`${rootClass}-icon`]: true,
 							"is-selected": idx <= value - 1,
-							"is-currentValue": idx === value - 1,
 						})}
 						@click=${function() {
 							updateArgs({ value: idx + 1, isFocused: true });
