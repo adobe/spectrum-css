@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isFocused, isReadOnly } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isFocused, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RatingGroup } from "./rating.test.js";
@@ -21,6 +21,7 @@ export default {
 		isFocused,
 		isDisabled,
 		isReadOnly,
+		size: size(["s", "m"]),
 		max: {
 			name: "Maximum value",
 			description: "The total number of stars. Star ratings should always have 5 available stars. This shouldn't be increased or decreased to fit various containers.",
@@ -49,6 +50,7 @@ export default {
 		isDisabled: false,
 		isEmphasized: false,
 		isReadOnly: false,
+		size: "s",
 		max: 5,
 		value: 3,
 	},
