@@ -132,7 +132,9 @@ Standard.parameters = {
 Standard.storyName = "Default";
 
 /**
- * The emphasized action button has a blue background for its selected state in order to provide a visual prominence. This is optimal for when the selection should call attention, such as within a tool bar.
+ * The emphasized action button has a blue background for its selected state in order to provide a visual prominence.
+ * This is optimal for when the selection should call attention, such as within a tool bar.
+ * For this variant, the `.spectrum-ActionButton--emphasized` class is applied to `.spectrum-ActionButton`.
  */
 export const Emphasized = TreatmentTemplate.bind({});
 Emphasized.tags = ["!dev"];
@@ -145,9 +147,6 @@ Emphasized.parameters = {
 	},
 };
 
-/**
- * Adding the `.spectrum-ActionButton--emphasized` class to a quiet action button can be effective in calling attention.
- */
 export const EmphasizedQuiet = TreatmentTemplate.bind({});
 EmphasizedQuiet.tags = ["!dev"];
 EmphasizedQuiet.args = {
@@ -159,7 +158,7 @@ EmphasizedQuiet.parameters = {
 		disableSnapshot: true,
 	},
 };
-EmphasizedQuiet.storyName = "Emphasized (quiet)";
+EmphasizedQuiet.storyName = "Quiet, emphasized";
 
 /**
  * Quiet action buttons have no visible background until they’re interacted with. This style works best when a clear layout (vertical stack, table, grid) makes it easy to parse the buttons. Too many quiet components in a small space can be hard to read.
@@ -206,6 +205,9 @@ StaticWhiteQuiet.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
+/**
+ * Emphasized is not supported for the static black and static white variants.
+ */
 export const StaticBlackDocs = TreatmentTemplate.bind({});
 StaticBlackDocs.tags = ["!dev"];
 StaticBlackDocs.args = {
