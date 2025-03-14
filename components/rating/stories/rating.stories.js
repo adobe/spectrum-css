@@ -3,7 +3,7 @@ import { isDisabled, isEmphasized, isFocused, isReadOnly, size } from "@spectrum
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RatingGroup } from "./rating.test.js";
-import { Template } from "./template.js";
+import { Template, RatingSizeGroup } from "./template.js";
 
 /**
  * The rating component is used to display or collect a user's rating of an item as represented by a number of stars.
@@ -83,6 +83,16 @@ WithForcedColors.parameters = {
 // ********* DOCS ONLY ********* //
 
 /**
+ * Small and medium rating
+ */
+export const RatingSizes = RatingSizeGroup.bind({});
+RatingSizes.storyName = "Sizes";
+RatingSizes.tags = ["!dev"];
+RatingSizes.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
  * A non-interactive rating.
  */
 export const ReadOnly = Template.bind({});
@@ -95,6 +105,9 @@ ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * An emphasized rating.
+ */
 export const Emphasized = Template.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
@@ -104,6 +117,9 @@ Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * A read only, emphasized rating.
+ */
 export const ReadOnlyEmphasized = Template.bind({});
 ReadOnlyEmphasized.storyName = "Read-only, emphasized";
 ReadOnlyEmphasized.tags = ["!dev"];
@@ -115,6 +131,9 @@ ReadOnlyEmphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * A disabled rating.
+ */
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
