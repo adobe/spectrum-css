@@ -4037,7 +4037,7 @@ __metadata:
     "@spectrum-css/colorloupe": "npm:7.1.0"
     "@spectrum-css/colorslider": "npm:8.1.0"
     "@spectrum-css/colorwheel": "npm:6.1.0"
-    "@spectrum-css/combobox": "npm:4.1.1"
+    "@spectrum-css/combobox": "npm:4.1.2"
     "@spectrum-css/commons": "npm:11.0.0"
     "@spectrum-css/contextualhelp": "npm:5.1.2"
     "@spectrum-css/datepicker": "npm:4.1.1"
@@ -4073,11 +4073,11 @@ __metadata:
     "@spectrum-css/rating": "npm:6.1.0"
     "@spectrum-css/search": "npm:8.1.1"
     "@spectrum-css/sidenav": "npm:7.1.0"
-    "@spectrum-css/slider": "npm:6.1.0"
+    "@spectrum-css/slider": "npm:6.2.0"
     "@spectrum-css/splitview": "npm:7.1.0"
     "@spectrum-css/statuslight": "npm:9.1.0"
     "@spectrum-css/steplist": "npm:7.1.0"
-    "@spectrum-css/stepper": "npm:7.1.2"
+    "@spectrum-css/stepper": "npm:7.1.3"
     "@spectrum-css/swatch": "npm:8.1.2"
     "@spectrum-css/swatchgroup": "npm:5.1.0"
     "@spectrum-css/switch": "npm:6.1.0"
@@ -4392,7 +4392,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/combobox@npm:4.1.1, @spectrum-css/combobox@workspace:components/combobox":
+"@spectrum-css/combobox@npm:4.1.2, @spectrum-css/combobox@workspace:components/combobox":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/combobox@workspace:components/combobox"
   dependencies:
@@ -5161,11 +5161,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/slider@npm:6.1.0, @spectrum-css/slider@workspace:components/slider":
+"@spectrum-css/slider@npm:6.2.0, @spectrum-css/slider@workspace:components/slider":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/slider@workspace:components/slider"
   dependencies:
-    "@spectrum-css/stepper": "npm:7.1.2"
+    "@spectrum-css/stepper": "npm:7.1.3"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/stepper": ">=7.0.0 <8.0.0"
@@ -5225,7 +5225,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/stepper@npm:7.1.2, @spectrum-css/stepper@workspace:components/stepper":
+"@spectrum-css/stepper@npm:7.1.3, @spectrum-css/stepper@workspace:components/stepper":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/stepper@workspace:components/stepper"
   dependencies:
