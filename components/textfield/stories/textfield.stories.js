@@ -19,10 +19,12 @@ export default {
 	argTypes: {
 		isValid: {
 			...isValid,
+			description: "Displays validation icon when user has typed valid entry into the input field.",
 			if: { arg: "isInvalid", truthy: false },
 		},
 		displayLabel: {
 			name: "Display field label",
+			description: "Displays the label text above or on the side of the input field, depending on the label position.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -53,6 +55,7 @@ export default {
 		},
 		isInvalid: {
 			...isInvalid,
+			description: "Shows error icon to indicate that the value entered is invalid, always overrides the validation icon.",
 			if: { arg: "isValid", truthy: false },
 		},
 		isHovered,
@@ -87,6 +90,7 @@ export default {
 		value: { table: { disable: true } },
 		helpText: {
 			name: "Help text (description)",
+			description: "Displays help text below the field, if left blank, the help text will not be displayed.",
 			type: { name: "string" },
 			control: { type: "text" },
 			table: {
