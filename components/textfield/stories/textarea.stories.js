@@ -7,7 +7,10 @@ import { TextAreaGroup } from "./textarea.test.js";
 import { default as Textfield } from "./textfield.stories.js";
 
 /**
- * A text area is multi-line text field using the `<textarea>` element that lets a user input a longer amount of text than a standard text field. It can include all of the standard validation options supported by the text field component.
+ * A text area is multi-line text field using the `<textarea>` element that lets a user input a longer amount of text than a standard text field. It
+ * can include all of the standard validation options supported by the text field component.
+ *
+ * For single-line text input, see the [text field](/docs/components-textfield--docs) component.
  */
 export default {
 	title: "Text area",
@@ -35,7 +38,15 @@ Default.args = {};
 Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
-
+/**
+ * A text area should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label
+ * could be undefined. A text area without a visible label should still include an aria-label in HTML (depending on the context, "aria-label" or
+ * "aria-labelledby").
+ *
+ * When the text area is focused using the keyboard (e.g. with the tab key), the implementation must add the `is-keyboardFocused` class, which
+ * displays the focus indicator. This indicator should not appear on focus from a click or tap. The keyboard focused example below has this class
+ * applied on first load for demonstration purposes.
+ */
 export const Standard = TextAreaOptions.bind({});
 Standard.tags = ["!dev"];
 Standard.storyName = "Default";
@@ -55,7 +66,8 @@ CharacterCount.parameters = {
 };
 
 /**
- * A text area in a disabled state shows that an input field exists, but is not available in that circumstance. This can be used to maintain layout continuity and communicate that a field may become available later.
+ * A text area in a disabled state shows that an input field exists, but is not available in that circumstance. This can be used to maintain layout
+ * continuity and communicate that a field may become available later.
  */
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
@@ -67,9 +79,14 @@ Disabled.parameters = {
 };
 
 /**
- * A text area can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
+ * A text area can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should
+ * input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful
+ * information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field
+ * requirements aren't met, prompting a user to adjust what they had originally input.
  *
- * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
+ * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user
+ * comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not
+ * accessible.
  */
 export const HelpText = HelpTextOptionsTextArea.bind({});
 HelpText.tags = ["!dev"];
@@ -78,7 +95,9 @@ HelpText.parameters = {
 };
 
 /**
- * Text areas can be marked as optional or required, depending on the situation. For required text areas, there are two styling options: a "(required)" label or an asterisk. If you use an asterisk, be sure to include hint text to explain what the asterisk means. Optional text fields are either denoted with text added to the end of the label — "(optional)" — or have no indication at all.
+ * Text areas can be marked as optional or required, depending on the situation. For required text areas, there are two styling options: a
+ * "(required)" label or an asterisk. If you use an asterisk, be sure to include hint text to explain what the asterisk means. Optional text
+ * fields are either denoted with text added to the end of the label — "(optional)" — or have no indication at all.
  */
 export const Required = RequiredOptionsTextArea.bind({});
 Required.tags = ["!dev"];
@@ -90,7 +109,8 @@ Required.parameters = {
 };
 
 /**
- * Text area has a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed.
+ * Text area has a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not
+ * interacted with or changed.
  */
 export const Readonly = Template.bind({});
 Readonly.tags = ["!dev"];
@@ -120,7 +140,8 @@ SideLabel.parameters = {
 };
 
 /**
- * Text area can display a validation icon when the text entry is expected to conform to a specific format (e.g., email address, credit card number, password creation requirements, etc.). The icon appears as soon as a user types a valid entry in the field.
+ * Text area can display a validation icon when the text entry is expected to conform to a specific format (e.g., email address, credit card number,
+ * password creation requirements, etc.). The icon appears as soon as a user types a valid entry in the field.
  */
 export const Validation = Template.bind({});
 Validation.tags = ["!dev"];
@@ -147,22 +168,7 @@ Sizing.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-/**
- * When the text area was focused using the keyboard (e.g. with the tab key), the implementation must add the `is-keyboardFocused` class, which
- * displays the focus indicator. This indicator should not appear on focus from a click or tap.
- * The example below has this class applied on first load for demonstration purposes.
- */
-export const KeyboardFocus = Template.bind({});
-KeyboardFocus.tags = ["!dev"];
-KeyboardFocus.args = {
-	isKeyboardFocused: true,
-};
-KeyboardFocus.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
 // ********* VRT ONLY ********* //
-// @todo should this show text field and text area in the same snapshot?
 export const WithForcedColors = TextAreaGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
