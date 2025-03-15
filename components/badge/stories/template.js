@@ -10,6 +10,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Badge",
+	id = getRandomId("badge"),
 	size = "m",
 	label,
 	iconName,
@@ -18,7 +19,6 @@ export const Template = ({
 	fixed,
 	customStyles = {},
 	customClasses = [],
-	id = getRandomId("badge"),
 } = {}, context = {}) => {
 	return html`
 		<div
