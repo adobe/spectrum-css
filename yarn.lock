@@ -4068,13 +4068,13 @@ __metadata:
     "@spectrum-css/colorwheel": "npm:7.0.0-next.0"
     "@spectrum-css/combobox": "npm:5.0.0-next.0"
     "@spectrum-css/commons": "npm:11.0.0"
-    "@spectrum-css/contextualhelp": "npm:6.0.0-next.0"
+    "@spectrum-css/contextualhelp": "npm:6.0.0-next.1"
     "@spectrum-css/datepicker": "npm:5.0.0-next.0"
     "@spectrum-css/dial": "npm:5.1.0"
     "@spectrum-css/dialog": "npm:13.0.0-next.2"
     "@spectrum-css/divider": "npm:6.0.0-next.0"
     "@spectrum-css/dropindicator": "npm:8.0.0-next.0"
-    "@spectrum-css/dropzone": "npm:9.0.0-next.1"
+    "@spectrum-css/dropzone": "npm:9.0.0-next.2"
     "@spectrum-css/fieldgroup": "npm:8.0.0-next.0"
     "@spectrum-css/fieldlabel": "npm:11.0.0-next.0"
     "@spectrum-css/floatingactionbutton": "npm:4.1.0"
@@ -4084,7 +4084,7 @@ __metadata:
     "@spectrum-css/illustratedmessage": "npm:9.1.0"
     "@spectrum-css/infieldbutton": "npm:7.0.0-next.0"
     "@spectrum-css/inlinealert": "npm:11.0.0-next.0"
-    "@spectrum-css/link": "npm:7.1.0"
+    "@spectrum-css/link": "npm:8.0.0-next.0"
     "@spectrum-css/logicbutton": "npm:6.1.0"
     "@spectrum-css/menu": "npm:10.0.0-next.1"
     "@spectrum-css/meter": "npm:2.0.0-next.0"
@@ -4464,17 +4464,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/contextualhelp@npm:6.0.0-next.0, @spectrum-css/contextualhelp@workspace:components/contextualhelp":
+"@spectrum-css/contextualhelp@npm:6.0.0-next.1, @spectrum-css/contextualhelp@workspace:components/contextualhelp":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/contextualhelp@workspace:components/contextualhelp"
   dependencies:
     "@spectrum-css/actionbutton": "npm:8.0.0-next.0"
-    "@spectrum-css/link": "npm:7.1.0"
+    "@spectrum-css/link": "npm:8.0.0-next.0"
     "@spectrum-css/popover": "npm:9.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=8.0.0-next.0"
-    "@spectrum-css/link": ">=7.0.0 <8.0.0"
+    "@spectrum-css/link": ">=8.0.0-next.0"
     "@spectrum-css/popover": ">=9.0.0-next.0"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
   peerDependenciesMeta:
@@ -4599,18 +4599,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/dropzone@npm:9.0.0-next.1, @spectrum-css/dropzone@workspace:components/dropzone":
+"@spectrum-css/dropzone@npm:9.0.0-next.2, @spectrum-css/dropzone@workspace:components/dropzone":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dropzone@workspace:components/dropzone"
   dependencies:
     "@spectrum-css/actionbutton": "npm:8.0.0-next.0"
     "@spectrum-css/illustratedmessage": "npm:9.1.0"
-    "@spectrum-css/link": "npm:7.1.0"
+    "@spectrum-css/link": "npm:8.0.0-next.0"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/actionbutton": ">=8.0.0-next.0"
     "@spectrum-css/illustratedmessage": ">=9.0.0 <10.0.0"
-    "@spectrum-css/link": ">=7.0.0 <8.0.0"
+    "@spectrum-css/link": ">=8.0.0-next.0"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
@@ -4801,7 +4801,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/link@npm:7.1.0, @spectrum-css/link@workspace:components/link":
+"@spectrum-css/link@npm:8.0.0-next.0, @spectrum-css/link@workspace:components/link":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/link@workspace:components/link"
   dependencies:
