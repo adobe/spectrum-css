@@ -4,25 +4,27 @@
 
 ### Major Changes
 
-- [#3570](https://github.com/adobe/spectrum-css/pull/3570) [`c88fcdc`](https://github.com/adobe/spectrum-css/commit/c88fcdcfa4866f4b3ff7a1027e4253b8f2114351) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - ### Link S2 migration
+- [#3570](https://github.com/adobe/spectrum-css/pull/3570) [`c88fcdc`](https://github.com/adobe/spectrum-css/commit/c88fcdcfa4866f4b3ff7a1027e4253b8f2114351) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! 
+
+#### Link S2 migration
 
   The link component is updated with S2 specifications, colors, and typography. There is a new inline variant which uses the `.spectrum-Link--inline` modifier class and the default is the standalone variant.
 
-  #### Note
+  ##### Note
 
   - Quiet styling does not apply to the inline variant so that it is distinguishable from the surrounding text and the underline indicator is clear
   - `--mod-spectrum-link-font-weight` can be used to adjust inline variant to match surrounding text. Apply font weights to this mod `inherit` does not apply.
 
-  ## New tokens
+  #### New tokens
 
-  ### Color
+  ##### Color
 
   `spectrum-link-focus-indicator-color`
   `spectrum-link-focus-indicator-thickness`
   `spectrum-link-focus-indicator-gap`
   `spectrum-link-corner-radius`
 
-  ### Typography
+  ##### Typography
 
   `spectrum-link-line-height`
   `spectrum-link-line-height-cjk-100`
