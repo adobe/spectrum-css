@@ -95,6 +95,15 @@
 		.spectrum-Rating-icon:active {
 			color: var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down));
 		}
+
+		/* When the entire component is hovered, show all solid icons */
+		.spectrum-Rating-starActive {
+			display: block;
+		}
+
+		.spectrum-Rating-starInactive {
+			display: none;
+		}
 	}
 
 	&.is-disabled,
@@ -141,6 +150,8 @@
 
 	.spectrum-Rating-starInactive {
 		display: block;
+		position: absolute;
+		inset-block-start: 0;
 	}
 
 	&.is-selected {
@@ -151,16 +162,28 @@
 		.spectrum-Rating-starInactive {
 			display: none;
 		}
+
+		&.spectrum-Rating-starHalfActive .spectrum-Rating-starActive {
+			mask-image: linear-gradient(to right, white 50%, transparent 50%);
+		}
+
+		&.spectrum-Rating-starHalfActive .spectrum-Rating-starActive ~ .spectrum-Rating-starInactive {
+			display: block;
+		}
 	}
 
-	&:hover,
-	&.is-hoverSelection {
+	/* All stars following the hovered star */
+	&:hover ~ .spectrum-Rating-icon {
 		.spectrum-Rating-starActive {
-			display: block;
+			display: none;
 		}
 
 		.spectrum-Rating-starInactive {
-			display: none;
+			display: block;
+		}
+
+		&.spectrum-Rating-starHalfActive .spectrum-Rating-starActive {
+			mask-image: unset;
 		}
 	}
 }
