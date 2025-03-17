@@ -25,5 +25,17 @@ export const RatingGroup = Variants({
 			testHeading: "Read-only",
 			isReadOnly: true,
 		},
+		{
+			testHeading: "With tooltip",
+			withTooltip: true,
+		},
+		{
+			testHeading: "Small size",
+			size: "s",
+		},
+		{
+			testHeading: "Medium size",
+			size: "m",
+		},
 	]
 });
