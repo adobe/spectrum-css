@@ -114,17 +114,17 @@ export const InvalidGroupTemplate = (args, context) => Container({
 	content: html`
 		${Template({
 			...args,
-			label: "Small",
+			label: "Example label",
 			name: "radio-example-" + (args?.name ?? "default"),
 		}, context)}
 		${Template({
 			...args,
-			label: "Medium",
-			name: "radio-example-" + (args?.name ?? "default"),
-		}, context)}
-		${Template({
-			...args,
-			label: "Large",
+			isChecked: true,
+			isInvalid: true,
+			label: "Initially selected radio button that has wrapping label text",
+			customStyles: {
+				"max-width": "220px",
+			},
 			name: "radio-example-" + (args?.name ?? "default"),
 		}, context)}
 		${HelpText({
