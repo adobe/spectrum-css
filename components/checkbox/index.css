@@ -282,8 +282,7 @@
 		block-size: var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size));
 
 		/* Fix vertical alignment when not wrapping since we're flex-start */
-		margin: calc(var(--mod-checkbox-spacing, var(--spectrum-checkbox-spacing)) / 2) 0;
-		margin-block-start: var(--spectrum-checkbox-top-to-control);
+		margin: var(--mod-checkbox-margin-block, var(--spectrum-checkbox-top-to-control)) 0;
 		flex-grow: 0;
 		flex-shrink: 0;
 
@@ -366,7 +365,7 @@
 		.is-focus-visible {
 			.spectrum-Checkbox-box::before,
 			.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box::before {
-				border-color: var(--highcontrast-checkbox-color-default);
+				border-color: var(--highcontrast-checkbox-highlight-color-default);
 			}
 
 			.spectrum-Checkbox-label {
@@ -490,8 +489,7 @@
 
 /* Disabled */
 .spectrum-Checkbox .spectrum-Checkbox-input,
-.spectrum-Checkbox .spectrum-Checkbox-input:checked,
-&.is-disabled {
+.spectrum-Checkbox .spectrum-Checkbox-input:checked {
 	&:disabled + .spectrum-Checkbox-box {
 		&::before {
 			border-color: var(--highcontrast-checkbox-disabled-color-default, var(--mod-checkbox-control-color-disabled, var(--spectrum-checkbox-control-color-disabled)));
@@ -512,7 +510,6 @@
 		&:focus-visible + .spectrum-Checkbox-box {
 			forced-color-adjust: none;
 			outline-color: var(--highcontrast-checkbox-focus-indicator-color, var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color)));
-			outline-style: auto;
 			outline-offset: var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap));
 			outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 
@@ -534,7 +531,7 @@
 		&.is-readOnly.is-indeterminate {
 			.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
 				&::before {
-					border-color: var(--highcontrast-checkbox-color-default);
+					border-color: var(--highcontrast-checkbox-highlight-color-default);
 				}
 			}
 		}
@@ -542,7 +539,7 @@
 		&.is-readOnly {
 			.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
 				&::before {
-					border-color: var(--highcontrast-checkbox-color-default);
+					border-color: var(--highcontrast-checkbox-highlight-color-default);
 				}
 			}
 		}
