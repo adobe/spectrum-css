@@ -40,7 +40,7 @@ export default {
 		isQuiet,
 		isEmphasized: {
 			...isEmphasized,
-			if: { arg: "staticColor", truthy: false},
+			if: { arg: "staticColor", truthy: false },
 		},
 		isDisabled,
 		isSelected: {
@@ -70,7 +70,10 @@ export default {
 			control: "select",
 			options: ["true", "menu", "listbox", "tree", "grid", "dialog", "false"],
 		},
-		staticColor,
+		staticColor: {
+			...staticColor,
+			if: { arg: "isEmphasized", truthy: false },
+		},
 	},
 	args: {
 		rootClass: "spectrum-ActionButton",
