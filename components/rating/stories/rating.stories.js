@@ -65,7 +65,7 @@ export default {
 };
 
 /**
- * A initial value of three is used for the following examples, to demonstrate both active and inactive stars.
+ * An initial value of three is used for the following examples, to demonstrate both active and inactive stars.
  */
 export const Default = RatingGroup.bind({});
 Default.args = {};
