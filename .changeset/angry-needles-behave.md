@@ -6,7 +6,6 @@
 
 Updates:
 
-- Now has an invalid/error state
 - High contrast tokens have been modified
 - Typography tokens modified
 

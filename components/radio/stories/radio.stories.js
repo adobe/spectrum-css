@@ -49,7 +49,6 @@ export default {
 		label: "Label",
 		isEmphasized: false,
 		isChecked: false,
-		isInvalid: false,
 		isDisabled: false,
 		isReadOnly: false,
 		isHovered: false,
