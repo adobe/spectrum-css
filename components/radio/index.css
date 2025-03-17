@@ -140,7 +140,8 @@
 		}
 	}
 
-	&:active {
+	&:active,
+	&.is-active {
 		/* selection indicator active */
 		.spectrum-Radio-button::before {
 			border-color: var(--highcontrast-radio-button-border-color-down, var(--mod-radio-button-border-color-down, var(--spectrum-radio-button-border-color-down)));

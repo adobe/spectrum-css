@@ -16,6 +16,7 @@ export const Template = ({
 	isDisabled = false,
 	isReadOnly = false,
 	isFocused = false,
+	isActive = false,
 	isHovered,
 	id = getRandomId("radio"),
 	customClasses = [],
@@ -38,6 +39,7 @@ export const Template = ({
 				[`${rootClass}--emphasized`]: isEmphasized,
 				"is-hover": isHovered,
 				"is-readOnly" : isReadOnly,
+				"is-active" : isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
@@ -47,6 +49,7 @@ export const Template = ({
 				name=${name}
 				class=${classMap({
 					["is-focus-visible"]: isFocused && !isDisabled,
+					["is-active"]: isActive,
 					[`${rootClass}-input`]: true
 				})}
 				id=${inputId}

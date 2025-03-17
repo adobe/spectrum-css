@@ -64,6 +64,10 @@ export const RadioGroup = Variants({
 			isChecked: true,
 		},
 		{
+			testHeading: "Active",
+			isActive: true
+		},
+		{
 			testHeading: "Focus-visible",
 			isFocused: true,
 		},
