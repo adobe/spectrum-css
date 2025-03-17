@@ -95,15 +95,6 @@
 		.spectrum-Rating-icon:active {
 			color: var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down));
 		}
-
-		/* When the entire component is hovered, show all solid icons */
-		.spectrum-Rating-starActive {
-			display: block;
-		}
-
-		.spectrum-Rating-starInactive {
-			display: none;
-		}
 	}
 
 	&.is-disabled,
@@ -162,14 +153,14 @@
 		}
 	}
 
-	/* All stars following the hovered star */
-	&:hover ~ .spectrum-Rating-icon {
+	&:hover,
+	&.is-hoverSelection {
 		.spectrum-Rating-starActive {
-			display: none;
+			display: block;
 		}
 
 		.spectrum-Rating-starInactive {
-			display: block;
+			display: none;
 		}
 	}
 }
