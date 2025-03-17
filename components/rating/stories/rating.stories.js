@@ -44,12 +44,36 @@ export default {
 			},
 			control: { type: "number" },
 		},
+		withTooltip: {
+			name: "With Tooltip",
+			description:
+				"A tooltip indicating whether a user is editing or clearing a rating may be displayed.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		withHalfStar: {
+			name: "With half star",
+			description: "A rating my have half or partial stars when displaying aggregate ratings.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		}
 	},
 	args: {
 		rootClass: "spectrum-Rating",
 		isDisabled: false,
 		isEmphasized: false,
+		isFocused: false,
 		isReadOnly: false,
+		withTooltip: false,
+		withHalfStar: false,
 		size: "s",
 		max: 5,
 		value: 3,
@@ -140,5 +164,17 @@ Disabled.args = {
 	isDisabled: true,
 };
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A rating with a tooltip displayed.
+ */
+export const withTooltip = Template.bind({});
+withTooltip.tags = ["!dev"];
+withTooltip.args = {
+	withTooltip: true,
+}
+withTooltip.parameters = {
 	chromatic: { disableSnapshot: true },
 };

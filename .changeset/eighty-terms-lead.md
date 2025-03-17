@@ -12,6 +12,8 @@ The small component variation is now the default and a t-shirt size medium varia
 
 New JavaScript logic has been added to better suppot hover interactivity in our Storybook example. Customers and consuming teams will need to implement the same (or comparable) logic.
 
+A tooltip may be displayed to a user indicating whether interacting with the component will clear or edit the rating. A control and documentation example have been added.
+
 ## New mods
 
 ```css
