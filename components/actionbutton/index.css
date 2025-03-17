@@ -359,12 +359,31 @@ a.spectrum-ActionButton {
 			forced-color-adjust: none;
 		}
 
+		.spectrum-ActionButton-icon,
+		.spectrum-ActionButton-hold,
+		.spectrum-ActionButton-label {
+			/* Fix for extra unwanted background color on label ("readability backplate"). */
+			forced-color-adjust: none;
+		}
+
 		--highcontrast-actionbutton-focus-indicator-color: CanvasText;
+		--highcontrast-actionbutton-border-color: ButtonBorder;
+
+		--highcontrast-actionbutton-background-color-default: ButtonFace;
+		--highcontrast-actionbutton-background-color-hover: ButtonFace;
+		--highcontrast-actionbutton-background-color-focus: ButtonFace;
+		--highcontrast-actionbutton-background-color-down: ButtonFace;
 		--highcontrast-actionbutton-background-color-disabled: ButtonFace;
+
+		--highcontrast-actionbutton-content-color-default: ButtonText;
+		--highcontrast-actionbutton-content-color-hover: ButtonText;
+		--highcontrast-actionbutton-content-color-focus: ButtonText;
+		--highcontrast-actionbutton-content-color-down: ButtonText;
 		--highcontrast-actionbutton-content-color-disabled: GrayText;
 
 		&.spectrum-ActionButton--quiet {
 			--highcontrast-actionbutton-border-color: Canvas;
+
 			--highcontrast-actionbutton-background-color-default: Canvas;
 			--highcontrast-actionbutton-background-color-hover: Canvas;
 			--highcontrast-actionbutton-background-color-focus: Canvas;
@@ -388,6 +407,8 @@ a.spectrum-ActionButton {
 		}
 
 		&.is-selected {
+			--highcontrast-actionbutton-border-color: Highlight;
+
 			--highcontrast-actionbutton-background-color-default: Highlight;
 			--highcontrast-actionbutton-background-color-hover: Highlight;
 			--highcontrast-actionbutton-background-color-focus: Highlight;
@@ -397,15 +418,6 @@ a.spectrum-ActionButton {
 			--highcontrast-actionbutton-content-color-hover: HighlightText;
 			--highcontrast-actionbutton-content-color-focus: HighlightText;
 			--highcontrast-actionbutton-content-color-down: HighlightText;
-
-			--highcontrast-actionbutton-border-color: Highlight;
-
-			.spectrum-ActionButton-icon,
-			.spectrum-ActionButton-hold,
-			.spectrum-ActionButton-label {
-				/* Fix for unwanted additional background color ("readability backplate"). */
-				forced-color-adjust: none;
-			}
 		}
 
 		&:disabled {
