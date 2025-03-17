@@ -178,8 +178,10 @@ Quiet.parameters = {
 };
 
 /**
- * An action button can have a hold icon (a small corner triangle). This icon indicates that holding down the action button for a short amount of time can reveal a popover menu, which can be used, for example, to switch between related actions. Note that this
- * popover menu is not demonstrated here—this would be handled by the implementation. Because of the way padding is calculated, the hold icon must be placed before the workflow icon in the markup.
+ * An action button can have a hold icon (a small corner triangle). This icon indicates that holding down the action button for a
+ * short amount of time can reveal a [popover](/docs/components-popover--docs) menu, which can be used, for example, to switch
+ * between related actions. Note that this popover menu is not demonstrated here—this would be handled by the implementation.
+ * Because of the way padding is calculated, the hold icon must be placed before the workflow icon in the markup.
  */
 export const HoldIcon = IconOnlyOption.bind({});
 HoldIcon.tags = ["!dev"];
