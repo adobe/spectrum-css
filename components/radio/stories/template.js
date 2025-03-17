@@ -1,4 +1,3 @@
-import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -17,7 +16,6 @@ export const Template = ({
 	isDisabled = false,
 	isReadOnly = false,
 	isFocused = false,
-	isInvalid = false,
 	isHovered,
 	id = getRandomId("radio"),
 	customClasses = [],
@@ -40,7 +38,6 @@ export const Template = ({
 				[`${rootClass}--emphasized`]: isEmphasized,
 				"is-hover": isHovered,
 				"is-readOnly" : isReadOnly,
-				"is-invalid": isInvalid,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
@@ -50,7 +47,6 @@ export const Template = ({
 				name=${name}
 				class=${classMap({
 					["is-focus-visible"]: isFocused && !isDisabled,
-					["is-invalid"]: isInvalid,
 					[`${rootClass}-input`]: true
 				})}
 				id=${inputId}
@@ -100,67 +96,6 @@ export const BasicGroupTemplate = (args, context) => Container({
 				"max-width": "220px",
 			},
 			name: "radio-example-" + (args?.name ?? "default"),
-		}, context)}
-	`,
-}, context);
-
-export const InvalidGroupTemplate = (args, context) => Container({
-	withBorder: false,
-	direction: "column",
-	wrapperStyles: {
-		rowGap: "0px",
-		alignItems: "flex-start",
-	},
-	content: html`
-		${Template({
-			...args,
-			label: "Example label",
-			name: "radio-example-" + (args?.name ?? "default"),
-		}, context)}
-		${Template({
-			...args,
-			isChecked: true,
-			isInvalid: true,
-			label: "Initially selected radio button that has wrapping label text",
-			customStyles: {
-				"max-width": "220px",
-			},
-			name: "radio-example-" + (args?.name ?? "default"),
-		}, context)}
-		${HelpText({
-			text: "Please select an option.",
-			variant: "negative",
-		}, context)}
-	`,
-}, context);
-
-/* This template group showcases the radio in various states of disabled, read-only, invalid, etc. */
-export const AllVariantsRadioGroup = (args, context) => Container({
-	withBorder: false,
-	content: html`
-		${Container({
-			withBorder: false,
-			direction: "column",
-			heading: "Default",
-			content: BasicGroupTemplate(args, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			direction: "column",
-			heading: "Invalid",
-			content: BasicGroupTemplate({...args, isInvalid: true }, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			direction: "column",
-			heading: "Disabled",
-			content: BasicGroupTemplate({...args, isDisabled: true }, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			direction: "column",
-			heading: "Read-only",
-			content: BasicGroupTemplate({...args, isReadOnly: true }, context)
 		}, context)}
 	`,
 }, context);

@@ -41,12 +41,6 @@
 	--spectrum-radio-emphasized-accent-color-down: var(--spectrum-accent-content-color-down);
 	--spectrum-radio-emphasized-accent-color-focus: var(--spectrum-accent-content-color-key-focus);
 
-	/* invalid state colors selection indicator all themes */
-	--spectrum-radio-invalid-color-default: var(--spectrum-negative-color-900);
-	--spectrum-radio-invalid-color-hover: var(--spectrum-negative-color-1000);
-	--spectrum-radio-invalid-color-down: var(--spectrum-negative-color-1000);
-	--spectrum-radio-invalid-color-key-focus: var(--spectrum-negative-color-1000);
-
 	/* radio checked/unchecked selection indicator */
 	--spectrum-radio-button-border-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-radio-button-border-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -221,36 +215,6 @@
 	/* selection indicator emphasized focus */
 	&:focus .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
 		border-color: var(--highcontrast-radio-emphasized-accent-color-focus, var(--mod-radio-emphasized-accent-color-focus, var(--spectrum-radio-emphasized-accent-color-focus)));
-	}
-}
-
-.is-invalid {
-	.spectrum-Radio-input + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-button-border-color-default, var(--mod-radio-invalid-border-color, var(--spectrum-radio-invalid-color-default)));
-	}
-
-	&:hover .spectrum-Radio-input + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-button-border-color-default, var(--mod-radio-invalid-border-color-hover, var(--spectrum-radio-invalid-color-hover)));
-	}
-
-	/* selection indicator invalid */
-	.spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-button-checked-border-color-default, var(--mod-radio-invalid-color-default, var(--spectrum-radio-invalid-color-default)));
-	}
-
-	/* selection indicator invalid hover */
-	&:hover .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-button-checked-border-color-default, var(--mod-radio-invalid-color-hover, var(--spectrum-radio-invalid-color-hover)));
-	}
-
-	/* selection indicator invalid active */
-	&:active .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-button-checked-border-color-default, var(--mod-radio-invalid-color-down, var(--spectrum-radio-invalid-color-down)));
-	}
-
-	/* selection indicator invalid focus */
-	&:focus .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-button-checked-border-color-default, var(--mod-radio-invalid-color-key-focus, var(--spectrum-radio-invalid-color-key-focus)));
 	}
 }
 

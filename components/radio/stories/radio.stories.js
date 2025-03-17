@@ -1,10 +1,10 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isChecked, isDisabled, isEmphasized, isFocused, isHovered, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isChecked, isDisabled, isEmphasized, isFocused, isHovered, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
-import { AllVariantsRadioGroup, BasicGroupTemplate, InvalidGroupTemplate } from "./template.js";
+import { BasicGroupTemplate } from "./template.js";
 
 /**
  * Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
@@ -37,7 +37,6 @@ export default {
 			control: { type: "text" },
 		},
 		isEmphasized,
-		isInvalid,
 		isChecked,
 		isDisabled,
 		isReadOnly,
@@ -88,7 +87,7 @@ WithForcedColors.parameters = {
 /**
  * The following example has two radio buttons in order to demonstrate the difference between selected and unselected.
  */
-export const Standard = AllVariantsRadioGroup.bind({});
+export const Standard = BasicGroupTemplate.bind({});
 Standard.args = Default.args;
 Standard.tags = ["!dev"];
 Standard.parameters = {
@@ -119,27 +118,13 @@ Sizing.parameters = {
  * It is best for forms, settings, lists or grids of assets, and other situations where a
  * radio button needs to be noticed.
  */
-export const Emphasized = AllVariantsRadioGroup.bind({});
+export const Emphasized = BasicGroupTemplate.bind({});
 Emphasized.args = {
 	isEmphasized: true,
 	name: "emphasized",
 };
 Emphasized.tags = ["!dev"];
 Emphasized.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * The invalid option provides a visual indication that the radio button group is in an invalid state. This is typically used in conjunction with help text.
- * Apply the `.is-invalid` class to the `.spectrum-Radio` element to activate this state.
- */
-export const Invalid = InvalidGroupTemplate.bind({});
-Invalid.args = {
-	isInvalid: true,
-	name: "invalid",
-};
-Invalid.tags = ["!dev"];
-Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
