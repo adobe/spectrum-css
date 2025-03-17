@@ -1,5 +1,12 @@
 # Change log
 
+## 6.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`c88fcdc`](https://github.com/adobe/spectrum-css/commit/c88fcdcfa4866f4b3ff7a1027e4253b8f2114351)]:
+  - @spectrum-css/link@8.0.0-next.0
+
 ## 6.0.0-next.0
 
 ### Patch Changes

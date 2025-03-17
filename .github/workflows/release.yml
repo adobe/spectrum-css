@@ -29,12 +29,12 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: yarn version:packages
-
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
           title: "chore: release"
           commit: "chore: release"
+          # This expects you to have a script called release / version:packages
+          # which does a build for your packages and calls changeset publish
           publish: yarn release
+          version: yarn version:packages
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
