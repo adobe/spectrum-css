@@ -1,7 +1,7 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
-import tokens from "@spectrum-css/tokens/dist/index.css?inline";
+import tokens from "@spectrum-css/tokens/dist/css/index.css?inline";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -54,7 +54,7 @@ export const withContextWrapper = makeDecorator({
 				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
 				const isTestingWrapper = isTesting ? container.matches("body:has([data-testing-preview]),[data-testing-preview]") : false;
 				// Check if the container has a static color element
-				let hasStaticElement = container.matches(`:has([data-html-preview])`) ? container.matches(`:has([data-html-preview] .${rootClass}--staticWhite, [data-html-preview] .${rootClass}--staticBlack)`) : container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack)`);
+				let hasStaticElement = container.matches(":has([data-html-preview])") ? container.matches(`:has([data-html-preview] .${rootClass}--staticWhite, [data-html-preview] .${rootClass}--staticBlack)`) : container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack)`);
 
 				// Reset the context to the original values
 				color = original.color;
@@ -97,7 +97,8 @@ export const withContextWrapper = makeDecorator({
 					if (hasStaticElement && staticKey && staticColorSettings[staticKey]) {
 						container.style.background = staticColorSettings[staticKey].background;
 					}
-				} else {
+				}
+				else {
 					// Testing background is stark white to highlight the gray-ish background color on light theme
 					container.style.background = "Canvas";
 				}

@@ -24,7 +24,7 @@ const Heading = ({
 	const headingStyles = {
 		"display": "block",
 		"color": "inherit",
-		"font-family": 'adobe-clean, "adobe clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif',
+		"font-family": "adobe-clean, \"adobe clean\", \"Source Sans Pro\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubuntu, \"Trebuchet MS\", \"Lucida Grande\", sans-serif",
 		"font-size": "11px",
 		"line-height": "1.3",
 		"font-weight": "700",
@@ -215,7 +215,7 @@ export const States = ({
 
 			// If the container test heading is in the ignore list, skip rendering this state
 			if (ignore.length && ignore.includes(containerHeading)) {
-				return nothing
+				return nothing;
 			}
 
 			context = {

@@ -65,7 +65,7 @@
 		.spectrum-Menu-item--collapsible.is-open {
 			&:hover,
 			&:focus-within {
-				box-shadow: inset calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1)) 0 0 0 var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
+				box-shadow: var(--spectrum-menu-item-focus-indicator-shadow) var(--spectrum-menu-item-focus-indicator-border-width) 0 0 0 var(--spectrum-menu-item-focus-indicator-color-default);
 			}
 
 			&:hover,
@@ -97,7 +97,7 @@
 	--spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
 	--spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
 	--spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description);
-	--spectrum-menu-item-focus-indicator-width: var(--spectrum-border-width-200);
+	--spectrum-menu-item-focus-indicator-width: var(--mod-menu-item-focus-indicator-width, var(--spectrum-border-width-200));
 	--spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
 	--spectrum-menu-item-label-to-value-area-min-spacing: var(--spectrum-spacing-100);
 
@@ -177,7 +177,7 @@
 	--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
 
 	--spectrum-menu-item-focus-indicator-color-default: var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
-	--spectrum-menu-item-focus-indicator-border-width: calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1));
+	--spectrum-menu-item-focus-indicator-border-width: calc(var(--spectrum-menu-item-focus-indicator-width) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1));
 
 	&.spectrum-Menu--sizeS {
 		--spectrum-menu-item-min-height: var(--spectrum-component-height-75);
@@ -258,6 +258,10 @@
 		--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-extra-large);
 
 		--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
+	}
+
+	&:dir(rtl) {
+		--spectrum-menu-item-focus-indicator-direction-scalar: -1;
 	}
 }
 
@@ -406,7 +410,7 @@
 	padding-block-end: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
 	padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
 
-	margin: calc((var(--spectrum-menu-item-focus-indicator-offset) + var(--spectrum-menu-item-focus-indicator-border-width)) * var(--spectrum-menu-item-spacing-multiplier));
+	margin: calc((var(--spectrum-menu-item-focus-indicator-offset) + var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-spacing-multiplier));
 	text-decoration: none;
 
 	display: grid;
@@ -494,10 +498,6 @@
 			fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-focus, var(--spectrum-menu-checkmark-icon-color-focus)));
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-focus, var(--spectrum-menu-checkmark-icon-color-focus)));
 		}
-	}
-
-	&:dir(rtl) {
-		--spectrum-menu-item-focus-indicator-direction-scalar: -1;
 	}
 
 	&:hover {
@@ -615,7 +615,7 @@
 .spectrum-Menu-item:focus-visible,
 .spectrum-Menu-back:focus-visible {
 	box-shadow: var(--spectrum-menu-item-focus-indicator-shadow) var(--spectrum-menu-item-focus-indicator-border-width) 0 0 0 var(--spectrum-menu-item-focus-indicator-color-default);
-	outline: var(--spectrum-menu-item-focus-indicator-border-width) var(--spectrum-menu-item-focus-indicator-outline-style) var(--spectrum-menu-item-focus-indicator-color-default);
+	outline: var(--spectrum-menu-item-focus-indicator-width) var(--spectrum-menu-item-focus-indicator-outline-style) var(--spectrum-menu-item-focus-indicator-color-default);
 	outline-offset: var(--spectrum-menu-item-focus-indicator-offset);
 	border-radius: var(--spectrum-menu-item-corner-radius);
 }

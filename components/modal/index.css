@@ -24,7 +24,7 @@
 	--spectrum-modal-max-height: 90vh;
 	--spectrum-modal-max-width: 90%;
 
-	--spectrum-modal-background-color: var(--mod-modal-background-color, var(--spectrum-gray-75));
+	--spectrum-modal-background-color: var(--mod-modal-background-color, transparent);
 	--spectrum-modal-confirm-border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-corner-radius-extra-large-default));
 
 	--spectrum-modal-transition-animation-duration: var(--mod-modal-transition-animation-duration, var(--spectrum-animation-duration-100));

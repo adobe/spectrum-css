@@ -7,7 +7,7 @@
 <h1 align="center">Spectrum CSS</h1>
 <h3 align="center">A CSS-implementation of the Spectrum design language</h3>
 
-<img src="assets/spectrum-css_illustration_desktop.png">
+<img src=".storybook/assets/images/spectrum-css_illustration_desktop.png">
 
 ## Features
 

@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"name": "spectrum-css-monorepo",
+	"name": "@adobe/spectrum-css-monorepo",
 	"version": "0.0.0",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -32,6 +32,7 @@
 		"component:compare": "node --no-warnings ./tasks/component-compare.js",
 		"component:report": "node --no-warnings ./tasks/component-reporter.js",
 		"dev": "cross-env NODE_ENV=development nx run storybook:build:docs",
+		"docs:report": "yarn report",
 		"format": "yarn formatter tag:component",
 		"formatter": "nx run-many --target format --projects",
 		"lint": "yarn linter tag:component",
@@ -41,7 +42,6 @@
 		"precommit": "lint-staged --allow-empty --config lint-staged.config.js",
 		"publish:docs": "cross-env NODE_ENV=production yarn build:docs && gh-pages -d dist/ -f -e . --nojekyll",
 		"refresh": "yarn refresh:env && yarn refresh:config",
-		"refresh:bundle": "nx refresh bundle",
 		"refresh:config": "bash ./tasks/chromatic-config-creation.sh || exit 0",
 		"refresh:env": "bash ./tasks/copy-env-from-root.sh || exit 0",
 		"release": "yarn ci && changeset publish",
@@ -53,7 +53,7 @@
 		"tester": "cross-env NODE_ENV=development nx run storybook:test:scope",
 		"validate": "yarn validator tag:component",
 		"validator": "nx run-many --target validate --verbose --projects",
-		"version:packages": "changeset version && yarn --mode=\"update-lockfile\""
+		"version:packages": "yarn config set -H enableImmutableInstalls false && changeset version && git add . && yarn lint-staged"
 	},
 	"workspaces": [
 		"components/*",
@@ -71,7 +71,7 @@
 		"@commitlint/cli": "^19.6.1",
 		"@commitlint/config-conventional": "^19.6.0",
 		"@nx/devkit": "^19.8.2",
-		"@spectrum-tools/postcss-rgb-mapping": "^1.0.0",
+		"@spectrum-tools/postcss-rgb-mapping": "1.0.0",
 		"@yarnpkg/types": "^4.0.0",
 		"at-rule-packer": "^0.4.2",
 		"autoprefixer": "^10.4.19",
@@ -90,13 +90,15 @@
 		"jsonc-eslint-parser": "^2.4.0",
 		"lint-staged": "^15.3.0",
 		"lodash": "^4.17.21",
+		"markdownlint": "^0.37.4",
+		"markdownlint-cli": "^0.44.0",
 		"node-gyp": "^10.1.0",
 		"npm-registry-fetch": "^18.0.2",
 		"nunjucks": "^3.2.4",
 		"nx": "^19.8.2",
 		"open": "^10.1.0",
 		"pajv": "^1.2.0",
-		"postcss": "^8.5.0",
+		"postcss": "^8.5.3",
 		"postcss-extend": "^1.0.5",
 		"postcss-hover-media-feature": "^1.0.2",
 		"postcss-import": "^16.1.0",
@@ -120,7 +122,8 @@
 		"stylelint-selector-bem-pattern": "^4.0.1",
 		"stylelint-use-logical": "^2.1.2",
 		"tar": "^7.4.3",
-		"yargs": "^17.7.2"
+		"yargs": "^17.7.2",
+		"zlib": "^1.0.5"
 	},
 	"keywords": [
 		"design-system",

@@ -46,31 +46,45 @@ module.exports = defineConfig({
 		 * @returns {void}
 		 */
 		function validateLocalPackages(workspace) {
-			// Start by filtering out the local packages from the external dependencies
-			const localPackages = [
-				...Object.keys(workspace.manifest?.peerDependencies ?? {}),
-				...Object.keys(workspace.manifest?.devDependencies ?? {}),
-				...Object.keys(workspace.manifest?.dependencies ?? {}),
-			].filter((pkg) => Yarn.workspace({ ident: pkg })).map((pkg) => Yarn.workspace({ ident: pkg }));
+			["peerDependencies", "devDependencies", "dependencies"].forEach((type) => {
+				// Start by filtering out the local packages from the external dependencies
+				const localPackages = Object.keys(workspace.manifest?.[type] ?? {}).filter((pkg) => Yarn.workspace({ ident: pkg })).map((pkg) => Yarn.workspace({ ident: pkg }));
 
-			// Iterate over the local packages and ensure that the devDependencies are up-to-date
-			for (const localWorkspace of localPackages) {
-				const localVersion = localWorkspace.manifest.version;
+				// Iterate over the local packages and ensure that the devDependencies are up-to-date
+				for (const localWorkspace of localPackages) {
+					const localVersion = localWorkspace.manifest.version;
 
-				// Capture the major version of the local package to ensure that the workspace peerDependencies are aligned
-				const majorVersion = localVersion?.split(".")?.[0];
+					// Capture the major version of the local package to ensure that the workspace peerDependencies are aligned
+					const majorVersion = localVersion?.split(".")?.[0];
+					// Returns the prerelease tag if the version is a prerelease and the tag iterator in an array
+					/** @type [string, number] */
+					const prerelease = semver.prerelease(localVersion);
 
-				workspace.set(`devDependencies.${localWorkspace.manifest.name}`, localVersion ?? "workspace:^");
+					if (type !== "peerDependencies" && workspace.manifest[type]?.[localWorkspace.manifest.name]) {
+						workspace.set(`${type}.${localWorkspace.manifest.name}`, localVersion ?? "workspace:^");
+					}
+					else {
+						// If the local package is a peerDependency, ensure that the version is aligned with the major version but allow for more specificity in minor and patch versions
+						if (
+							workspace.manifest.peerDependencies &&
+							workspace.manifest.peerDependencies[localWorkspace.manifest.name]
+						) {
+							const range = workspace.manifest.peerDependencies?.[localWorkspace.manifest.name];
+							// Check if the semver range already matches the current version
+							if (range && semver.satisfies(localVersion, range)) continue;
 
-				// If the local package is a peerDependency, ensure that the version is aligned with the major version but allow for more specificity in minor and patch versions
-				if (
-					workspace.manifest.peerDependencies &&
-					workspace.manifest.peerDependencies[localWorkspace.manifest.name] &&
-					!workspace.manifest.peerDependencies[localWorkspace.manifest.name].startsWith(`>=${majorVersion}`)
-				) {
-					workspace.set(`peerDependencies.${localWorkspace.manifest.name}`, `>=${majorVersion}.0.0 <${parseInt(majorVersion) + 1}.0.0`);
+							// Check if the local version is a prerelease
+							if (semver.prerelease(localVersion)) {
+								workspace.set(`peerDependencies.${localWorkspace.manifest.name}`, `>=${semver.coerce(localVersion)}-${prerelease[0]}.0`);
+							}
+							else {
+								workspace.set(`peerDependencies.${localWorkspace.manifest.name}`, `>=${majorVersion}.0.0 <${parseInt(majorVersion) + 1}.0.0`);
+							}
+
+						}
+					}
 				}
-			}
+			});
 		}
 
 		/**
@@ -180,6 +194,7 @@ module.exports = defineConfig({
 		function validatePackageJson(workspace) {
 			const isRoot = workspace.cwd === ".";
 			const isToken = workspace.cwd === "tokens";
+			const isBundle = workspace.cwd === "tools/bundle";
 
 			/**
 			 * -------------- GLOBAL --------------
@@ -201,9 +216,7 @@ module.exports = defineConfig({
 			 * Process the components workspaces with component-specific configuration
 			 */
 			if (isComponent(workspace)) {
-				const folderName = workspace.cwd?.split("/")?.[1];
-				validateComponentPackageJson(workspace, folderName);
-				validateLocalPackages(workspace);
+				validateComponentPackageJson(workspace, workspace.cwd?.split("/")?.[1]);
 				validateComponentPeerDependencyMetadata(workspace);
 			}
 			/**
@@ -215,8 +228,33 @@ module.exports = defineConfig({
 				workspace.set("publishConfig.access", "public");
 				workspace.set("keywords", keywords(["tokens", "css"]));
 				workspace.set("main", "dist/css/index.css");
+			}
+			else if (isBundle) {
+				workspace.set("publishConfig.access", "public");
 
-				validateLocalPackages(workspace);
+				if (!workspace.manifest.keywords) {
+					workspace.set("keywords", keywords(["bundle", "css-modules"]));
+				}
+
+				if (!workspace.manifest.homepage) {
+					workspace.set("homepage", "https://opensource.adobe.com/spectrum-css/");
+				}
+
+				// Check that the bundle dependencies list all local components; if not, add them
+				// Remove any dependencies that are not in the components directory anymore
+				for (const dependency of Object.keys(workspace.manifest.dependencies ?? {})) {
+					// Don't remove tooling dependencies
+					if (!dependency.startsWith("@spectrum-css/")) continue;
+
+					if (!components.includes(dependency.replace("@spectrum-css/", "")) && dependency !== "@spectrum-css/tokens") {
+						// Remove the dependencies that are not in the components directory
+						workspace.remove(`dependencies.${dependency}`);
+					}
+					else {
+						// Update the version of the dependency to the latest local version
+						workspace.set(`dependencies.${dependency}`, Yarn.workspace({ ident: dependency }).manifest.version);
+					}
+				}
 			}
 			else {
 				/**
@@ -239,6 +277,7 @@ module.exports = defineConfig({
 		 */
 		for (const workspace of Yarn.workspaces()) {
 			validatePackageJson(workspace);
+			validateLocalPackages(workspace);
 			enforceConsistentDependenciesAcrossTheProject({Yarn});
 		}
 	},

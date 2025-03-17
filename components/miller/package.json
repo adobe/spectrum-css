@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/miller",
-	"version": "8.0.1",
+	"version": "9.0.0-next.0",
 	"description": "The Spectrum CSS miller component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -24,16 +24,30 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/assetlist": ">=8.0.0 <9.0.0",
-		"@spectrum-css/checkbox": ">=10",
-		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/tokens": ">=16"
+		"@spectrum-css/assetlist": ">=9.0.0-next.0",
+		"@spectrum-css/checkbox": ">=11.0.0-next.0",
+		"@spectrum-css/icon": ">=10.0.0-next.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/assetlist": {
+			"optional": true
+		},
+		"@spectrum-css/checkbox": {
+			"optional": true
+		},
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
 	},
 	"devDependencies": {
-		"@spectrum-css/assetlist": "8.0.1",
-		"@spectrum-css/checkbox": "10.0.1",
-		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/tokens": "16.0.0"
+		"@spectrum-css/assetlist": "9.0.0-next.0",
+		"@spectrum-css/checkbox": "11.0.0-next.0",
+		"@spectrum-css/icon": "10.0.0-next.0",
+		"@spectrum-css/tokens": "16.0.1"
 	},
 	"keywords": [
 		"design-system",
@@ -52,19 +66,5 @@
 			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/miller-columns-beta",
 			"rootClass": "spectrum-MillerColumns"
 		}
-	],
-	"peerDependenciesMeta": {
-		"@spectrum-css/assetlist": {
-			"optional": true
-		},
-		"@spectrum-css/checkbox": {
-			"optional": true
-		},
-		"@spectrum-css/icon": {
-			"optional": true
-		},
-		"@spectrum-css/tokens": {
-			"optional": true
-		}
-	}
+	]
 }

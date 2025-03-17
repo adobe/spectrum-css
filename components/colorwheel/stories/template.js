@@ -2,6 +2,7 @@ import { Template as ColorArea } from "@spectrum-css/colorarea/stories/template.
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
@@ -12,16 +13,21 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	isWithColorArea = false,
+	isWithColorLoupe = true,
 	colorHandleStyle = {},
 	selectedColor = "rgba(255, 0, 0, 50%)",
+	customStyles = {},
 } = {}, context = {}) => {
 	return html`
-		<div class=${classMap({
-			[rootClass]: true,
-			"is-disabled": isDisabled,
-			"is-focused": isFocused,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}>
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				"is-disabled": isDisabled,
+				"is-focused": isFocused,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+		>
 			<div class="${rootClass}-inner">
 				<div class="${rootClass}-colorarea-container">
 				${when(isWithColorArea, () => html`
@@ -37,20 +43,16 @@ export const Template = ({
 				</div>
 			</div>
 			<div class=${classMap({
-				[`${rootClass}-border`]: true,
+				[`${rootClass}-wheel`]: true,
 				"is-disabled": isDisabled,
-			})}>
-				<div class=${classMap({
-					[`${rootClass}-wheel`]: true,
-					"is-disabled": isDisabled,
-				})}></div>
-			</div>
+			})}></div>
 			${ColorHandle({
 				isDisabled,
 				isFocused,
 				customClasses: [`${rootClass}-handle`],
 				selectedColor,
 				customStyles: colorHandleStyle,
+				isWithColorLoupe,
 			}, context)}
 			<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
 		</div>

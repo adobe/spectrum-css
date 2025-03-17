@@ -235,7 +235,7 @@ async function main({
 	const reports = [];
 	const errors = [];
 
-	await build({ cwd, clean }).then((report) => reports.push(report)).catch((err) => errors.push(err));
+	await build({ cwd, clean, minify }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 
 	const logs = reports.flat(Infinity).filter(Boolean);
 	const errs = errors.flat(Infinity).filter(Boolean);

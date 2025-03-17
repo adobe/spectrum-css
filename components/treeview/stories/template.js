@@ -22,7 +22,7 @@ export const TreeViewItem = ({
 	isOpen,
 	isDropTarget,
 	icon,
-	iconSet,
+	iconSet = "workflow",
 	thumbnail,
 	items,
 	variant,

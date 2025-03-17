@@ -134,8 +134,36 @@
 						"order": ["type", "url", "directory"]
 					},
 					{
+						"pathPattern": "^spectrum$",
+						"order": { "type": "asc" }
+					},
+					{
 						"pathPattern": ".*",
 						"order": { "type": "asc" }
+					}
+				]
+			}
+		},
+		{
+			"files": ["tokens/dist/**/*.json"],
+			"rules": {
+				"jsonc/sort-keys": [
+					"warn",
+					{
+						"pathPattern": "^$",
+						"order": { "type": "asc" }
+					},
+					{
+						"pathPattern": ".*",
+						"order": [
+							"prop",
+							"ref",
+							"value",
+							"light",
+							"dark",
+							"medium",
+							"large"
+						]
 					}
 				]
 			}

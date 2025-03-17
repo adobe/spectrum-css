@@ -1,4 +1,34 @@
-# Change Log
+# Change log
+
+## 9.1.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`dce3669`](https://github.com/adobe/spectrum-css/commit/dce366923562d004c61e8a19da216f6ea6a11d40) Thanks [@pfulton](https://github.com/pfulton)! - Removes references to the accent variant, since the accent status light was deprecated in S2.
+
+  Removed variant:
+
+  `.spectrum-StatusLight--accent`
+  `--spectrum-statuslight-semantic-accent-color`
+
+## 9.1.0
+
+### Minor Changes
+
+📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+## New feature
+
+Minified and gzipped outputs available for all compiled CSS assets.
+
+### Patch Changes
+
+📝 [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Dependency alignment across the project.
+
+- Updated dependencies [[`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
+  - @spectrum-css/tokens@16.0.1
 
 ## 8.0.0-next.0
 
@@ -26,45 +56,49 @@
 
 ### Patch Changes
 
-- [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes a bug in the content of the `dist/index-theme.css` file.
+📝 [#3534](https://github.com/adobe/spectrum-css/pull/3534) [`68e0057`](https://github.com/adobe/spectrum-css/commit/68e00577156cc32b21bfa768dbd2d35d73563b4c) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
+Fixes a bug in the content of the `dist/index-theme.css` file.
 
-  Expected output example for the index-theme.css:
+Expected `index-theme.css` to include the component selectors with component-level custom properties mapped to the `--system` prefixed ones in order to allow a component to support various contexts.
 
-  ```
-  .spectrum-ActionButton {
-   --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
-   --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
-  ```
+Expected output example for the index-theme.css:
+
+```css
+.spectrum-ActionButton {
+  --spectrum-actionbutton-background-color-default: var(--system-action-button-background-color-default);
+  --spectrum-actionbutton-background-color-hover: var(--system-action-button-background-color-hover);
+```
 
 ## 9.0.0
 
 ### Major Changes
 
-- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)! - ## Breaking change
+📝 [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6c19fcf`](https://github.com/adobe/spectrum-css/commit/6c19fcf3f0eda76987f338981ae20f9999febce6) Thanks [@pfulton](https://github.com/pfulton)!
 
-  This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
+### 🛑 Breaking change
 
-  For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
+This major update creates a bridge between the Spectrum 1 (S1) and Spectrum 2 (S2) designs, dubbed "Spectrum 2 Foundations". These do _NOT_ reflect a fully migrated S2 component. This approach allows consumers to swap the appearance of their components between S1, Express, and S2 by leveraging a "system" layer that remaps the necessary component-level tokens to the appropriate token dataset.
 
-  For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
+For these components to appear S2, you must load the assets with the `@spectrum-css/tokens` at `v16` or higher.
 
-  If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
+For S1 or Express, load assets with the `@spectrum-css/tokens` at `v14.x` or `v15.x`.
 
-  ### Deprecations
+If you are looking to implement a fully S2 design, please explore the `next` tag releases instead of using this foundations release. **This release is used in Spectrum Web Components 1.x**.
 
-  The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
+### Deprecations
 
-  The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
+The `metadata` folder containing the `mods.md` and `metadata.json` assets has been removed from source. To find information about the components including what selectors, modifiers, and passthroughs are used, please see the `dist/metadata.json` asset shipped with every component containing CSS.
 
-  ### File usage
+The `index-vars.css` asset has been removed in this release as it was previously deprecated and is no longer maintained. Please use the `index.css` or `index-base.css`
 
-  If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
+### File usage
 
-  If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+If you are rendering components and need **only** the S2 Foundations styles, you can make use of the `index.css` asset which contains all the base styles plus the system mappings for S2 Foundations.
 
-  To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
+If you are using this version to publish **only** an S1 or Express component, you can use the `index-base.css` plus the desired `themes/(spectrum|express).css` file.
+
+To render a component that can be easily swapped between the S2 Foundations, S1, or Express contexts, load `index-base.css` with the `index-theme.css` file and leverage the appropriate context classes (`.spectrum--legacy` for S1 and `.spectrum--express` for Express).
 
 ### Patch Changes
 
@@ -75,7 +109,9 @@
 
 ### Patch Changes
 
-- [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)! - Peer dependency for @spectrum-css/tokens updated to include v15 as well as v14.
+📝 [#3522](https://github.com/adobe/spectrum-css/pull/3522) [`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Peer dependency for @spectrum-css/tokens updated to include v15 as well as v14.
 
 - Updated dependencies [[`7a47c22`](https://github.com/adobe/spectrum-css/commit/7a47c2266b6d0e8c99061fe85cba8d52684bae39)]:
   - @spectrum-css/tokens@15.2.0
@@ -84,7 +120,9 @@
 
 ### Major Changes
 
-- [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
+📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
 
   - `index-base.css`
   - `index-theme.css`
@@ -100,13 +138,17 @@
 
 ### Minor Changes
 
-- [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove the storybook assets from the shipped output for components
+📝 [#3369](https://github.com/adobe/spectrum-css/pull/3369) [`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Remove the storybook assets from the shipped output for components
 
 ## 7.2.3
 
 ### Patch Changes
 
-- [#3299](https://github.com/adobe/spectrum-css/pull/3299) [`d1a8522`](https://github.com/adobe/spectrum-css/commit/d1a8522b8bd0ba8f1ecf30bd8ed00af679e7e532) Thanks [@cdransf](https://github.com/cdransf)! - Adjust custom property ordering to resolve lint violations.
+📝 [#3299](https://github.com/adobe/spectrum-css/pull/3299) [`d1a8522`](https://github.com/adobe/spectrum-css/commit/d1a8522b8bd0ba8f1ecf30bd8ed00af679e7e532) Thanks [@cdransf](https://github.com/cdransf)!
+
+Adjust custom property ordering to resolve lint violations.
 
 ## 7.2.3
 
@@ -118,33 +160,41 @@
 
 ### Patch Changes
 
-- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+📝 [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-  Sort keys in the package.json assets.
+Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+
+Sort keys in the package.json assets.
 
 ## 7.2.1
 
 ### Patch Changes
 
-- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+📝 [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Improve changeset suggestions by using exports instead of files in component packages
 
 ## 7.2.0
 
 ### Minor Changes
 
-- [#2771](https://github.com/adobe/spectrum-css/pull/2771) [`81e86b1`](https://github.com/adobe/spectrum-css/commit/81e86b1adc442c891948281f1f66efea795c0447) Thanks [@jawinn](https://github.com/jawinn)! - Removes some legacy vendor prefixes that are no longer necessary, including some that were for older browsers that are no longer in browser support list for Spectrum CSS. Such as Microsoft Edge before version 79. Includes some cleanup around some of the related normalization styles in the Text field component and the Commons `%spectrum-BaseButton` (used for multiple button components).
+📝 [#2771](https://github.com/adobe/spectrum-css/pull/2771) [`81e86b1`](https://github.com/adobe/spectrum-css/commit/81e86b1adc442c891948281f1f66efea795c0447) Thanks [@jawinn](https://github.com/jawinn)!
+
+- Removes some legacy vendor prefixes that are no longer necessary, including some that were for older browsers that are no longer in browser support list for Spectrum CSS. Such as Microsoft Edge before version 79. Includes some cleanup around some of the related normalization styles in the Text field component and the Commons `%spectrum-BaseButton` (used for multiple button components).
 
 ## 7.1.1
 
 ### Patch Changes
 
-- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
+📝 [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- Leveral local workspace versioning to prevent misalignment
 
 ## 7.1.0
 
 ### Minor Changes
 
-- [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
+📝 [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 #### Build optmizations to support minification
 
@@ -155,24 +205,16 @@ Output for all component CSS files is now being run through a lightweight optimi
 - Updated peerDependencies [[`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d)]:
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
-<a name="7.0.0"></a>
-
 ## 7.0.0
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.1.6...@spectrum-css/statuslight@7.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
-
 - Imports added to index.css and themes/express.css
-
-<a name="6.1.6"></a>
 
 ## 6.1.6
 
@@ -180,15 +222,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.1.5"></a>
-
 ## 6.1.5
 
 🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.1.4...@spectrum-css/statuslight@6.1.5)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.1.4"></a>
 
 ## 6.1.4
 
@@ -196,15 +234,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.1.3"></a>
-
 ## 6.1.3
 
 🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.1.2...@spectrum-css/statuslight@6.1.3)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.1.2"></a>
 
 ## 6.1.2
 
@@ -212,15 +246,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.1.1"></a>
-
 ## 6.1.1
 
-🗓 2024-02-06
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.1.0...@spectrum-css/statuslight@6.1.1)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.1.0"></a>
 
 ## 6.1.0
 
@@ -228,9 +258,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
-\*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
-
-<a name="6.0.62"></a>
+- remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 ## 6.0.62
 
@@ -238,15 +266,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.61"></a>
-
 ## 6.0.61
 
-🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.60...@spectrum-css/statuslight@6.0.61)
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.60...@spectrum-css/statuslight@6.0.61)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.60"></a>
 
 ## 6.0.60
 
@@ -254,15 +278,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.59"></a>
-
 ## 6.0.59
 
 🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.58...@spectrum-css/statuslight@6.0.59)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.58"></a>
 
 ## 6.0.58
 
@@ -270,15 +290,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.57"></a>
-
 ## 6.0.57
 
 🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.56...@spectrum-css/statuslight@6.0.57)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.56"></a>
 
 ## 6.0.56
 
@@ -286,15 +302,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.55"></a>
-
 ## 6.0.55
 
 🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.54...@spectrum-css/statuslight@6.0.55)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.54"></a>
 
 ## 6.0.54
 
@@ -302,23 +314,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.53"></a>
-
 ## 6.0.53
 
 🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.52...@spectrum-css/statuslight@6.0.53)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.52"></a>
-
 ## 6.0.52
 
-🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.51...@spectrum-css/statuslight@6.0.52)
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.51...@spectrum-css/statuslight@6.0.52)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.51"></a>
 
 ## 6.0.51
 
@@ -326,15 +332,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.50"></a>
-
 ## 6.0.50
 
 🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.49...@spectrum-css/statuslight@6.0.50)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.49"></a>
 
 ## 6.0.49
 
@@ -342,9 +344,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 🔙 Reverts
 
-\*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
-
-<a name="6.0.48"></a>
+- gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 ## 6.0.48
 
@@ -352,15 +352,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.47"></a>
-
 ## 6.0.47
 
 🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.45...@spectrum-css/statuslight@6.0.47)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.46"></a>
 
 ## 6.0.46
 
@@ -368,15 +364,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.45"></a>
-
 ## 6.0.45
 
 🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.44...@spectrum-css/statuslight@6.0.45)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.44"></a>
 
 ## 6.0.44
 
@@ -384,15 +376,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.43"></a>
-
 ## 6.0.43
 
-🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.42...@spectrum-css/statuslight@6.0.43)
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.41...@spectrum-css/statuslight@6.0.42)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.42"></a>
 
 ## 6.0.42
 
@@ -400,15 +388,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.41"></a>
-
 ## 6.0.41
 
 🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.40...@spectrum-css/statuslight@6.0.41)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.40"></a>
 
 ## 6.0.40
 
@@ -416,15 +400,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.39"></a>
-
 ## 6.0.39
 
 🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.38...@spectrum-css/statuslight@6.0.39)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.38"></a>
 
 ## 6.0.38
 
@@ -432,15 +412,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.37"></a>
-
 ## 6.0.37
 
 🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.36...@spectrum-css/statuslight@6.0.37)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.36"></a>
 
 ## 6.0.36
 
@@ -448,25 +424,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.35"></a>
-
 ## 6.0.35
 
 🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.34...@spectrum-css/statuslight@6.0.35)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.34"></a>
-
 ## 6.0.34
 
-🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.33...@spectrum-css/statuslight@6.0.34)
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.33...@spectrum-css/statuslight@6.0.34)
 
 ### 🐛 Bug fixes
 
-\*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
-
-<a name="6.0.33"></a>
+- restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 ## 6.0.33
 
@@ -474,15 +444,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.32"></a>
-
 ## 6.0.32
 
-🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.31...@spectrum-css/statuslight@6.0.32)
+🗓 2023 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.31...@spectrum-css/statuslight@6.0.32)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.31"></a>
 
 ## 6.0.31
 
@@ -490,15 +456,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.30"></a>
-
 ## 6.0.30
 
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.29...@spectrum-css/statuslight@6.0.30)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.29"></a>
 
 ## 6.0.29
 
@@ -506,15 +468,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.28"></a>
-
 ## 6.0.28
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.27...@spectrum-css/statuslight@6.0.28)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.27"></a>
 
 ## 6.0.27
 
@@ -522,15 +480,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.26"></a>
-
 ## 6.0.26
 
 🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.25...@spectrum-css/statuslight@6.0.26)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.25"></a>
 
 ## 6.0.25
 
@@ -538,15 +492,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.24"></a>
-
 ## 6.0.24
 
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.23...@spectrum-css/statuslight@6.0.24)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.23"></a>
 
 ## 6.0.23
 
@@ -554,15 +504,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.22"></a>
-
 ## 6.0.22
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.20...@spectrum-css/statuslight@6.0.22)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.21"></a>
 
 ## 6.0.21
 
@@ -570,15 +516,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.20"></a>
-
 ## 6.0.20
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.19...@spectrum-css/statuslight@6.0.20)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.19"></a>
 
 ## 6.0.19
 
@@ -586,15 +528,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.18"></a>
-
 ## 6.0.18
 
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.17...@spectrum-css/statuslight@6.0.18)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.17"></a>
 
 ## 6.0.17
 
@@ -602,15 +540,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.16"></a>
-
 ## 6.0.16
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.14...@spectrum-css/statuslight@6.0.16)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.15"></a>
 
 ## 6.0.15
 
@@ -618,15 +552,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.14"></a>
-
 ## 6.0.14
 
 🗓 2023-04-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.12...@spectrum-css/statuslight@6.0.14)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.13"></a>
 
 ## 6.0.13
 
@@ -634,15 +564,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.12"></a>
-
 ## 6.0.12
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.11...@spectrum-css/statuslight@6.0.12)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.11"></a>
 
 ## 6.0.11
 
@@ -650,15 +576,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.10"></a>
-
 ## 6.0.10
 
 🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.9...@spectrum-css/statuslight@6.0.10)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.9"></a>
 
 ## 6.0.9
 
@@ -666,15 +588,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.8"></a>
-
 ## 6.0.8
 
 🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.7...@spectrum-css/statuslight@6.0.8)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.7"></a>
 
 ## 6.0.7
 
@@ -682,15 +600,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.6"></a>
-
 ## 6.0.6
 
 🗓 2023-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.5...@spectrum-css/statuslight@6.0.6)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.5"></a>
 
 ## 6.0.5
 
@@ -698,15 +612,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.4"></a>
-
 ## 6.0.4
 
 🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.3...@spectrum-css/statuslight@6.0.4)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.3"></a>
 
 ## 6.0.3
 
@@ -714,15 +624,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.2"></a>
-
 ## 6.0.2
 
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@6.0.1...@spectrum-css/statuslight@6.0.2)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="6.0.1"></a>
 
 ## 6.0.1
 
@@ -730,19 +636,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="6.0.0"></a>
-
 ## 6.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@5.0.10...@spectrum-css/statuslight@6.0.0)
 
 - chore(tokens)!: use latest dependency & fix build error (#1591) ([f2532e7](https://github.com/adobe/spectrum-css/commit/f2532e7)), closes [#1591](https://github.com/adobe/spectrum-css/issues/1591)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - uses latest `@adobe/spectrum-tokens` dependency which includes token renames
-
-<a name="5.0.10"></a>
 
 ## 5.0.10
 
@@ -750,15 +652,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="5.0.9"></a>
-
 ## 5.0.9
 
 🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@5.0.8...@spectrum-css/statuslight@5.0.9)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="5.0.8"></a>
 
 ## 5.0.8
 
@@ -766,15 +664,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="5.0.7"></a>
-
 ## 5.0.7
 
 🗓 2023-01-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@5.0.6...@spectrum-css/statuslight@5.0.7)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="5.0.6"></a>
 
 ## 5.0.6
 
@@ -782,23 +676,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="5.0.5"></a>
-
 ## 5.0.5
 
 🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@5.0.4...@spectrum-css/statuslight@5.0.5)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="5.0.4"></a>
-
 ## 5.0.4
 
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@5.0.3...@spectrum-css/statuslight@5.0.4)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="5.0.3"></a>
 
 ## 5.0.3
 
@@ -808,15 +696,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - resolve missing tokens errors due to name changes ([#1555](https://github.com/adobe/spectrum-css/issues/1555)) ([ddae027](https://github.com/adobe/spectrum-css/commit/ddae027))
 
-<a name="5.0.2"></a>
-
 ## 5.0.2
 
 🗓 2022-11-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@5.0.1...@spectrum-css/statuslight@5.0.2)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="5.0.1"></a>
 
 ## 5.0.1
 
@@ -824,15 +708,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="5.0.0"></a>
-
 ## 5.0.0
 
 🗓 2022-09-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.14...@spectrum-css/statuslight@5.0.0)
 
 - feat(statuslight)!: migrate statuslight to core tokens (#1495) ([3dc991d](https://github.com/adobe/spectrum-css/commit/3dc991d)), closes [#1495](https://github.com/adobe/spectrum-css/issues/1495)
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - migrates statuslight to core tokens
 
@@ -843,23 +725,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
-<a name="4.0.14"></a>
-
 ## 4.0.14
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.13...@spectrum-css/statuslight@4.0.14)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="4.0.13"></a>
-
 ## 4.0.13
 
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.12...@spectrum-css/statuslight@4.0.13)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="4.0.12"></a>
 
 ## 4.0.12
 
@@ -869,15 +745,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - statuslight WHCM ([4073fc6](https://github.com/adobe/spectrum-css/commit/4073fc6))
 
-<a name="4.0.11"></a>
-
 ## 4.0.11
 
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.10...@spectrum-css/statuslight@4.0.11)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="4.0.10"></a>
 
 ## 4.0.10
 
@@ -885,15 +757,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="4.0.9"></a>
-
 ## 4.0.9
 
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.8...@spectrum-css/statuslight@4.0.9)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="4.0.8"></a>
 
 ## 4.0.8
 
@@ -901,15 +769,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="4.0.7"></a>
-
 ## 4.0.7
 
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.6...@spectrum-css/statuslight@4.0.7)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="4.0.6"></a>
 
 ## 4.0.6
 
@@ -917,15 +781,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="4.0.5"></a>
-
 ## 4.0.5
 
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.4...@spectrum-css/statuslight@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="4.0.4"></a>
 
 ## 4.0.4
 
@@ -933,15 +793,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="4.0.3"></a>
-
 ## 4.0.3
 
 🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.2...@spectrum-css/statuslight@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="4.0.2"></a>
 
 ## 4.0.2
 
@@ -951,23 +807,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
 
-<a name="4.0.1"></a>
-
 ## 4.0.1
 
-🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.1-beta.0...@spectrum-css/statuslight@4.0.1)
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.0...@spectrum-css/statuslight@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="4.0.1-beta.0"></a>
-
-## 4.0.1-beta.0
-
-🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@4.0.0...@spectrum-css/statuslight@4.0.1-beta.0)
-
-**Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="4.0.0"></a>
 
 ## 4.0.0
 
@@ -979,11 +823,9 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - feat(statuslight)!: use new tokens, new spacing ([700abe9](https://github.com/adobe/spectrum-css/commit/700abe9))
 
-### 🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGE
 
 - spacing in StatusLight has changed and may impact layout when it is used with other components.
-
-<a name="3.0.8"></a>
 
 ## 3.0.8
 
@@ -991,15 +833,11 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="3.0.7"></a>
-
 ## 3.0.7
 
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.6...@spectrum-css/statuslight@3.0.7)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.6"></a>
 
 ## 3.0.6
 
@@ -1007,69 +845,29 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="3.0.5"></a>
-
 ## 3.0.5
 
-🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.3-alpha.3...@spectrum-css/statuslight@3.0.5)
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.4...@spectrum-css/statuslight@3.0.5)
 
 ### 🐛 Bug fixes
 
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="3.0.4"></a>
 
 ## 3.0.4
 
-🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.3-alpha.3...@spectrum-css/statuslight@3.0.4)
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.3...@spectrum-css/statuslight@3.0.4)
 
 ### 🐛 Bug fixes
 
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="3.0.3"></a>
 
 ## 3.0.3
 
-🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.3-alpha.3...@spectrum-css/statuslight@3.0.3)
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.2...@spectrum-css/statuslight@3.0.3)
 
 ### 🐛 Bug fixes
 
 - updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
-
-<a name="3.0.3-alpha.3"></a>
-
-## 3.0.3-alpha.3
-
-🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.3-alpha.2...@spectrum-css/statuslight@3.0.3-alpha.3)
-
-**Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.3-alpha.2"></a>
-
-## 3.0.3-alpha.2
-
-🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.3-alpha.1...@spectrum-css/statuslight@3.0.3-alpha.2)
-
-**Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.3-alpha.1"></a>
-
-## 3.0.3-alpha.1
-
-🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.3-alpha.0...@spectrum-css/statuslight@3.0.3-alpha.1)
-
-**Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.3-alpha.0"></a>
-
-## 3.0.3-alpha.0
-
-🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.2...@spectrum-css/statuslight@3.0.3-alpha.0)
-
-**Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.2"></a>
 
 ## 3.0.2
 
@@ -1077,91 +875,23 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="3.0.1"></a>
-
 ## 3.0.1
 
 🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.0...@spectrum-css/statuslight@3.0.1)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="3.0.0"></a>
-
 ## 3.0.0
 
-🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.0-beta.5...@spectrum-css/statuslight@3.0.0)
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.6...@spectrum-css/statuslight@3.0.0)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.0-beta.5"></a>
-
-## 3.0.0-beta.5
-
-🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.0-beta.4...@spectrum-css/statuslight@3.0.0-beta.5)
-
-### ✨ Features
-
-- implement t-shirt sizing for Status Light, closes [#686](https://github.com/adobe/spectrum-css/issues/686) ([0a20b52](https://github.com/adobe/spectrum-css/commit/0a20b52))
-
-### Migration Guide
-
-#### T-shirt sizing
-
-Status Light now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-StatusLight--size*` class.
-
-<a name="3.0.0-beta.4"></a>
-
-## 3.0.0-beta.4
-
-🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.0-beta.3...@spectrum-css/statuslight@3.0.0-beta.4)
-
-**Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.0-beta.3"></a>
-
-## 3.0.0-beta.3
-
-🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.0-beta.2...@spectrum-css/statuslight@3.0.0-beta.3)
-
-### 🐛 Bug fixes
-
-- wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
-
-<a name="3.0.0-beta.2"></a>
-
-## 3.0.0-beta.2
-
-🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.0-beta.1...@spectrum-css/statuslight@3.0.0-beta.2)
-
-**Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.0-beta.1"></a>
-
-## 3.0.0-beta.1
-
-🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.0-beta.0...@spectrum-css/statuslight@3.0.0-beta.1)
-
-**Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="3.0.0-beta.0"></a>
-
-## 3.0.0-beta.0
-
-🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.6...@spectrum-css/statuslight@3.0.0-beta.0)
-
-### ✨ Features
-
-- make StatusLight support RTL ([e0d398b](https://github.com/adobe/spectrum-css/commit/e0d398b))
-
-<a name="2.0.6"></a>
 
 ## 2.0.6
 
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.5...@spectrum-css/statuslight@2.0.6)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="2.0.5"></a>
 
 ## 2.0.5
 
@@ -1171,8 +901,6 @@ Status Light now supports t-shirt sizing and requires that you specify the size 
 
 - [Accessibility] StatusLight dot disappears in High Contrast Mode, fixes [#508](https://github.com/adobe/spectrum-css/issues/508) ([#509](https://github.com/adobe/spectrum-css/issues/509)) ([0909251](https://github.com/adobe/spectrum-css/commit/0909251))
 
-<a name="2.0.4"></a>
-
 ## 2.0.4
 
 🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.3...@spectrum-css/statuslight@2.0.4)
@@ -1180,8 +908,6 @@ Status Light now supports t-shirt sizing and requires that you specify the size 
 ### 🐛 Bug fixes
 
 - align labels for Radio/Checkbox/Switch/Status light ([#458](https://github.com/adobe/spectrum-css/issues/458)) ([616a1b4](https://github.com/adobe/spectrum-css/commit/616a1b4)), closes [#406](https://github.com/adobe/spectrum-css/issues/406) [#402](https://github.com/adobe/spectrum-css/issues/402) [#403](https://github.com/adobe/spectrum-css/issues/403) [#426](https://github.com/adobe/spectrum-css/issues/426)
-
-<a name="2.0.3"></a>
 
 ## 2.0.3
 
@@ -1191,23 +917,17 @@ Status Light now supports t-shirt sizing and requires that you specify the size 
 
 - vertical alignment of Status Light text, fixes [#426](https://github.com/adobe/spectrum-css/issues/426) ([#436](https://github.com/adobe/spectrum-css/issues/436)) ([b87148b](https://github.com/adobe/spectrum-css/commit/b87148b))
 
-<a name="2.0.2"></a>
-
 ## 2.0.2
 
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.1...@spectrum-css/statuslight@2.0.2)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
 
-<a name="2.0.1"></a>
-
 ## 2.0.1
 
 🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.0...@spectrum-css/statuslight@2.0.1)
 
 **Note:** Version bump only for package @spectrum-css/statuslight
-
-<a name="2.0.0"></a>
 
 ## 2.0.0
 

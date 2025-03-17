@@ -18,7 +18,7 @@ export const Template = ({
 	values = [],
 	variant,
 	labelPosition,
-	fillColor = "rgb(213, 213, 213)",
+	fillColor,
 	showTicks = false,
 	showTickLabels = false,
 	isDisabled = false,
@@ -124,8 +124,8 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap({
+				"--spectrum-slider-track-color": fillColor ? fillColor : undefined,
 				"inline-size": "240px",
-				["--spectrum-slider-track-color"]: fillColor,
 				...customStyles,
 			})}
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}

@@ -7,7 +7,7 @@
 	},
 	"targets": {
 		"build": {
-			"dependsOn": ["clean", "^build"],
+			"dependsOn": ["clean", "^build", "refresh"],
 			"executor": "nx:run-commands",
 			"inputs": [
 				"core",
@@ -25,7 +25,12 @@
 				"{projectRoot}/dist/index.css.map"
 			]
 		},
-		"clean": {},
+		"clean": {
+			"inputs": [
+				"{projectRoot}/dist/*.{css,json}",
+				{ "externalDependencies": ["rimraf"] }
+			]
+		},
 		"format": {},
 		"lint": {},
 		"refresh": {

@@ -1,18 +1,18 @@
 {
-  "name": "@spectrum-css/{{ folderName }}",
-  "version": "0.0.0",
-  "description": "The Spectrum CSS {{ folderName }} component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/{{ folderName }}",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/{{ folderName }}"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
+	"name": "@spectrum-css/{{ folderName }}",
+	"version": "0.0.0",
+	"description": "The Spectrum CSS {{ folderName }} component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-{{ folderName }}--docs",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/{{ folderName }}"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
 	"exports": {
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
@@ -21,31 +21,33 @@
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json"
 	},
-  "main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"*.md",
-		"package.json",
-		"stories/*",
-		"metadata/*"
-	],
-  "peerDependencies": {
-    "{{ tokens.name }}": ">={{ parse tokens.version '.' 0 1 }}"
-  },
+	"main": "dist/index.css",
+	"peerDependencies": {
+		"{{ tokens.name }}": ">={{ parse tokens.version '.' 0 1 }}"
+	},
+	"peerDependenciesMeta": {
+		"{{ tokens.name }}": {
+			"optional": true
+		}
+	},
 	"devDependencies": {
-		"@spectrum-css/tokens": "workspace:^"
+		"{{ tokens.name }}": "{{ tokens.version }}"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
-  "publishConfig": {
-    "access": "public"
-  },
+	"publishConfig": {
+		"access": "public"
+	},
 	"spectrum": [
 		{
+			"guidelines": "https://spectrum.adobe.com/page/{{ folderName }}",
 			"rootClass": "spectrum-{{ pascalCase name }}",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/{{ folderName }}/"
 		}

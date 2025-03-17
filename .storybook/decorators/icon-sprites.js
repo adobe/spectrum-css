@@ -11,23 +11,23 @@ export const withIconSpriteSheet = makeDecorator({
 	parameterName: "spritesheet",
 	wrapper: (StoryFn, context) => {
 		const {
-            loaded = {},
+			loaded = {},
 		} = context;
 
 		useEffect(() => {
-            // Inject the sprite sheets into the document
-            let sprite = document.getElementById("spritesheets");
-            if (!sprite) {
-                sprite = document.createElement("div");
-                sprite.id = "spritesheets";
-                sprite.innerHTML = workflowSprite + uiSprite;
-                document.body.appendChild(sprite);
-            }
-            else {
-                sprite.innerHTML = workflowSprite + uiSprite;
-            }
+			// Inject the sprite sheets into the document
+			let sprite = document.getElementById("spritesheets");
+			if (!sprite) {
+				sprite = document.createElement("div");
+				sprite.id = "spritesheets";
+				sprite.innerHTML = workflowSprite + uiSprite;
+				document.body.appendChild(sprite);
+			}
+			else {
+				sprite.innerHTML = workflowSprite + uiSprite;
+			}
 		}, []);
 
-        return StoryFn(context);
+		return StoryFn(context);
 	},
 });

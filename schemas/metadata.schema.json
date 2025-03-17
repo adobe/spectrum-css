@@ -7,7 +7,7 @@
 	"properties": {
 		"sourceFile": {
 			"type": "string",
-            "pattern": "^.+\\.css$",
+			"pattern": "^.+\\.css$",
 			"description": "The path to the source file used in generating the metadata."
 		},
         "selectors": {

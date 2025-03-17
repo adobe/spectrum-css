@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/splitview",
-	"version": "7.0.1",
+	"version": "7.1.0",
 	"description": "The Spectrum CSS splitview component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -32,7 +32,7 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/tokens": "16.0.0"
+		"@spectrum-css/tokens": "16.0.1"
 	},
 	"keywords": [
 		"design-system",
@@ -48,6 +48,7 @@
 	},
 	"spectrum": [
 		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/drag-bars-thumbs-beta/",
 			"rootClass": "spectrum-SplitView",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/split-view/"
 		}
