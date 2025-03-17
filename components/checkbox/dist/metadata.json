@@ -1,8 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".is-disabled:scope:disabled + .spectrum-Checkbox-box:before",
-    ".is-disabled:scope:disabled ~ .spectrum-Checkbox-label",
     ".spectrum-Checkbox",
     ".spectrum-Checkbox .spectrum-Checkbox-box",
     ".spectrum-Checkbox .spectrum-Checkbox-box:after",
@@ -114,8 +112,8 @@
     "--mod-checkbox-invalid-color-hover",
     "--mod-checkbox-line-height",
     "--mod-checkbox-line-height-cjk",
+    "--mod-checkbox-margin-block",
     "--mod-checkbox-selected-border-width",
-    "--mod-checkbox-spacing",
     "--mod-checkbox-text-to-control",
     "--mod-checkbox-top-to-text",
     "--mod-focus-indicator-thickness"
