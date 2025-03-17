@@ -1,10 +1,10 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isChecked, isDisabled, isEmphasized, isHovered, isFocused, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isChecked, isDisabled, isEmphasized, isFocused, isHovered, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
-import { BasicGroupTemplate, InvalidGroupTemplate } from "./template.js";
+import { AllVariantsRadioGroup, BasicGroupTemplate, InvalidGroupTemplate } from "./template.js";
 
 /**
  * Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
@@ -88,7 +88,7 @@ WithForcedColors.parameters = {
 /**
  * The following example has two radio buttons in order to demonstrate the difference between selected and unselected.
  */
-export const Standard = BasicGroupTemplate.bind({});
+export const Standard = AllVariantsRadioGroup.bind({});
 Standard.args = Default.args;
 Standard.tags = ["!dev"];
 Standard.parameters = {
@@ -119,7 +119,7 @@ Sizing.parameters = {
  * It is best for forms, settings, lists or grids of assets, and other situations where a
  * radio button needs to be noticed.
  */
-export const Emphasized = BasicGroupTemplate.bind({});
+export const Emphasized = AllVariantsRadioGroup.bind({});
 Emphasized.args = {
 	isEmphasized: true,
 	name: "emphasized",

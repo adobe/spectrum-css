@@ -133,3 +133,34 @@ export const InvalidGroupTemplate = (args, context) => Container({
 		}, context)}
 	`,
 }, context);
+
+/* This template group showcases the radio in various states of disabled, read-only, invalid, etc. */
+export const AllVariantsRadioGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Default",
+			content: BasicGroupTemplate(args, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Invalid",
+			content: BasicGroupTemplate({...args, isInvalid: true }, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Disabled",
+			content: BasicGroupTemplate({...args, isDisabled: true }, context)
+		}, context)}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Read-only",
+			content: BasicGroupTemplate({...args, isReadOnly: true }, context)
+		}, context)}
+	`,
+}, context);
