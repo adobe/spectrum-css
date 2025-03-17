@@ -22,6 +22,7 @@
     ".spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite",
     ".spectrum-ActionButton.spectrum-ActionButton--quiet",
     ".spectrum-ActionButton.spectrum-ActionButton--quiet.is-selected",
+    ".spectrum-ActionButton.spectrum-ActionButton--quiet:disabled:not(.is-selected)",
     ".spectrum-ActionButton.spectrum-ActionButton--staticBlack",
     ".spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet",
     ".spectrum-ActionButton.spectrum-ActionButton--staticWhite",
