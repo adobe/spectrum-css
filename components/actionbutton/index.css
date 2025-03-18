@@ -42,7 +42,9 @@ governing permissions and limitations under the License.
 	--spectrum-actionbutton-font-size: var(--spectrum-font-size-100);
 	--spectrum-actionbutton-font-weight: var(--spectrum-medium-font-weight);
 	--spectrum-actionbutton-font-style: var(--spectrum-default-font-style);
-	--spectrum-actionbutton-line-height: var(--spectrum-line-height-100);
+
+	/* Take up full component height for line-height, in order to help prevent characters from being cut off in some languages (e.g. Thai). */
+	--spectrum-actionbutton-line-height: var(--spectrum-actionbutton-height);
 
 	--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-100);
 	--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-medium);
@@ -55,12 +57,6 @@ governing permissions and limitations under the License.
 
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-	}
-
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		--spectrum-actionbutton-line-height: var(--spectrum-cjk-line-height-100);
 	}
 
 	&.spectrum-ActionButton--quiet {
