@@ -259,18 +259,18 @@ governing permissions and limitations under the License.
 	color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-default, var(--spectrum-actionbutton-content-color-default)));
 
 	&:hover {
-		background-color: var(--highcontrast-actionbutton-background-color-hover, var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover)));
-		color: var(--highcontrast-actionbutton-content-color-hover, var(--mod-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover)));
+		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover)));
+		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover)));
 	}
 
 	&:focus-visible {
-		background-color: var(--highcontrast-actionbutton-background-color-focus, var(--mod-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus)));
-		color: var(--highcontrast-actionbutton-content-color-focus, var(--mod-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus)));
+		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus)));
+		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus)));
 	}
 
 	&:active {
-		background-color: var(--highcontrast-actionbutton-background-color-down, var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down)));
-		color: var(--highcontrast-actionbutton-content-color-down, var(--mod-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down)));
+		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down)));
+		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down)));
 		transform: perspective(var(--spectrum-actionbutton-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
@@ -355,71 +355,62 @@ a.spectrum-ActionButton {
 @media (forced-colors: active) {
 	.spectrum-ActionButton {
 		&::after {
-			/* make sure the box-shadow for the focus indicator renders */
+			/* Make sure the box-shadow for the focus indicator renders. */
 			forced-color-adjust: none;
 		}
 
 		.spectrum-ActionButton-icon,
 		.spectrum-ActionButton-hold,
 		.spectrum-ActionButton-label {
-			/* Fix for extra unwanted background color on label ("readability backplate"). */
+			/* Removes the extra unwanted background on label ("readability backplate") that can cause text to be unreadable. */
 			forced-color-adjust: none;
 		}
 
-		--highcontrast-actionbutton-focus-indicator-color: CanvasText;
+		/**
+		 * Default
+		 * - Uses "Button*" system color pairings.
+		 * - Focus indicator is outside the element and should contrast with its background (default of Canvas).
+		 */
 		--highcontrast-actionbutton-border-color: ButtonBorder;
-
 		--highcontrast-actionbutton-background-color-default: ButtonFace;
-		--highcontrast-actionbutton-background-color-hover: ButtonFace;
-		--highcontrast-actionbutton-background-color-focus: ButtonFace;
-		--highcontrast-actionbutton-background-color-down: ButtonFace;
-		--highcontrast-actionbutton-background-color-disabled: ButtonFace;
-
 		--highcontrast-actionbutton-content-color-default: ButtonText;
-		--highcontrast-actionbutton-content-color-hover: ButtonText;
-		--highcontrast-actionbutton-content-color-focus: ButtonText;
-		--highcontrast-actionbutton-content-color-down: ButtonText;
+
+		--highcontrast-actionbutton-background-color-disabled: ButtonFace;
 		--highcontrast-actionbutton-content-color-disabled: GrayText;
 
+		--highcontrast-actionbutton-focus-indicator-color: CanvasText;
+
+		/**
+		 * Quiet
+		 * - Default blends in with background and has no border.
+		 * - Quiet + disabled does not show border unless selected.
+		 */
 		&.spectrum-ActionButton--quiet {
 			--highcontrast-actionbutton-border-color: Canvas;
-
 			--highcontrast-actionbutton-background-color-default: Canvas;
-			--highcontrast-actionbutton-background-color-hover: Canvas;
-			--highcontrast-actionbutton-background-color-focus: Canvas;
-			--highcontrast-actionbutton-background-color-down: Canvas;
 			--highcontrast-actionbutton-background-color-disabled: Canvas;
-
 			--highcontrast-actionbutton-content-color-default: CanvasText;
-			--highcontrast-actionbutton-content-color-hover: CanvasText;
-			--highcontrast-actionbutton-content-color-focus: CanvasText;
-			--highcontrast-actionbutton-content-color-down: CanvasText;
 
 			&:disabled:not(.is-selected) {
 				--highcontrast-actionbutton-border-color: Canvas;
 			}
 		}
 
+		/* Interaction shows a change in border color. */
 		&:hover,
 		&:active,
 		&:focus-visible {
 			--highcontrast-actionbutton-border-color: Highlight;
 		}
 
+		/* Selected always shows as a solid highlighted color. */
 		&.is-selected {
 			--highcontrast-actionbutton-border-color: Highlight;
-
 			--highcontrast-actionbutton-background-color-default: Highlight;
-			--highcontrast-actionbutton-background-color-hover: Highlight;
-			--highcontrast-actionbutton-background-color-focus: Highlight;
-			--highcontrast-actionbutton-background-color-down: Highlight;
-
 			--highcontrast-actionbutton-content-color-default: HighlightText;
-			--highcontrast-actionbutton-content-color-hover: HighlightText;
-			--highcontrast-actionbutton-content-color-focus: HighlightText;
-			--highcontrast-actionbutton-content-color-down: HighlightText;
 		}
 
+		/* Disabled has a GrayText border and content color. */
 		&:disabled {
 			--highcontrast-actionbutton-border-color: GrayText;
 		}
