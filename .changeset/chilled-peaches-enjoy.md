@@ -6,7 +6,7 @@ feat(actionbutton): S2 migration
 
 Action button now uses Spectrum 2 tokens and design specifications. A few notable changes:
 
-- Medium is now the default size and `.spectrum-Switch--sizeM` has been removed.
+- Medium is now the default size and `.spectrum-ActionButton--sizeM` has been removed.
 - Includes the Spectrum 2 down state transform.
 - The component border was not removed and its color was changed to `transparent` in order to continue support for Windows High Contrast / forced colors, which still shows a border. The mod custom properties for border were removed to avoid interference with Windows High Contrast / forced colors accessibility.
 - Background and content colors were updated.
