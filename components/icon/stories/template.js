@@ -97,12 +97,12 @@ const fetchIconDetails = ({
  */
 export const Template = ({
 	rootClass = "spectrum-Icon",
+	id = getRandomId("icon"),
 	size = "m",
 	setName,
 	iconName,
 	uiIconName,
 	fill,
-	id = getRandomId("icon"),
 	customClasses = [],
 	icons,
 	useRef = true,
@@ -256,9 +256,12 @@ export const Template = ({
 			return acc;
 		}, "");
 
-		return html`${unsafeSVG(
-			svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
-		)}`;
+	if (!useRef && svgString) {
+		return html`
+			${unsafeSVG(
+				svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
+			)}
+		`;
 	}
 
 	// ui ID: #spectrum-css-icon-${idKey}
@@ -268,16 +271,18 @@ export const Template = ({
 			? `spectrum-css-icon-${idKey}`
 			: `spectrum-icon-${scale !== "medium" ? "24" : "18"}-${idKey}`;
 
-	return html`<svg
-		class=${classMap(classList)}
-		id=${ifDefined(id)}
-		style=${ifDefined(inlineStyle)}
-		focusable="false"
-		aria-hidden="true"
-		aria-labelledby=${idKey}
-		role="img"
-	>
-		<title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
-		<use xlink:href="#${iconID}" href="#${iconID}" />
-	</svg>`;
+	return html`
+		<svg
+			class=${classMap(classList)}
+			id=${ifDefined(id)}
+			style=${ifDefined(inlineStyle)}
+			focusable="false"
+			aria-hidden="true"
+			aria-labelledby=${idKey}
+			role="img"
+		>
+			<title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
+			<use xlink:href="#${iconID}" href="#${iconID}" />
+		</svg>
+	`;
 };
