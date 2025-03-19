@@ -13,12 +13,11 @@ export const Template = ({
 	max = 5,
 	value = 0,
 	isReadOnly = false,
-	isFocused = false,
+	isKeyboardFocused = false,
 	isDisabled = true,
 	isEmphasized = false,
 	withTooltip = false,
 	size = "s",
-	withHalfStar = false,
 	customClasses = [],
 	id = getRandomId("rating"),
 } = {}, context = {}) => {
@@ -30,7 +29,7 @@ export const Template = ({
 				[rootClass]: true,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
-				"is-focused": isFocused,
+				"is-keyboardFocused": isKeyboardFocused,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
@@ -38,10 +37,10 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			@focusin=${function() {
-				updateArgs({ isFocused: true });
+				updateArgs({ isKeyboardFocused: true });
 			}}
 			@focusout=${function() {
-				updateArgs({ isFocused: false });
+				updateArgs({ isKeyboardFocused: false });
 			}}
 		>
 			${withTooltip
@@ -80,7 +79,6 @@ export const Template = ({
 						class=${classMap({
 							[`${rootClass}-icon`]: true,
 							"is-selected": idx <= value - 1,
-							"spectrum-Rating-starHalfActive": withHalfStar && idx === value -1
 						})}
 						@click=${function() {
 							updateArgs({ value: idx + 1, isFocused: true });

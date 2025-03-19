@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isFocused, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isKeyboardFocused, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RatingGroup } from "./rating.test.js";
@@ -18,7 +18,7 @@ export default {
 	component: "Rating",
 	argTypes: {
 		isEmphasized,
-		isFocused,
+		isKeyboardFocused,
 		isDisabled,
 		isReadOnly,
 		size: size(["s", "m"]),
@@ -55,25 +55,14 @@ export default {
 			},
 			control: "boolean",
 		},
-		withHalfStar: {
-			name: "With half star",
-			description: "A rating my have half or partial stars when displaying aggregate ratings.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		}
 	},
 	args: {
 		rootClass: "spectrum-Rating",
 		isDisabled: false,
 		isEmphasized: false,
-		isFocused: false,
+		isKeyboardFocused: false,
 		isReadOnly: false,
 		withTooltip: false,
-		withHalfStar: false,
 		size: "s",
 		max: 5,
 		value: 3,
@@ -167,6 +156,18 @@ Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/*
+ * A keyboard focused rating.
+*/
+export const KeyboardFocused = Template.bind({});
+KeyboardFocused.tags = ["!dev"];
+KeyboardFocused.args = {
+	isKeyboardFocused: true,
+};
+KeyboardFocused.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 /**
  * A rating with a tooltip displayed.
  */
@@ -174,7 +175,7 @@ export const withTooltip = Template.bind({});
 withTooltip.tags = ["!dev"];
 withTooltip.args = {
 	withTooltip: true,
-}
+};
 withTooltip.parameters = {
 	chromatic: { disableSnapshot: true },
 };
