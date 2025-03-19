@@ -1,5 +1,13 @@
 # Change log
 
+## 10.1.2
+
+### Patch Changes
+
+📝 [#3617](https://github.com/adobe/spectrum-css/pull/3617) [`a02f1d1`](https://github.com/adobe/spectrum-css/commit/a02f1d13d07106465a3236c5bfe3d029f3e64426) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! 
+
+Adds a `::before` pseudo element to properly target the `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box` element. The selector update, specifically in the invalid+checked+hover state should now get the proper error background color, as opposed to the default background color.
+
 ## 10.1.1
 
 ### Patch Changes
