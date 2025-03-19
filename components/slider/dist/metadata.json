@@ -62,6 +62,7 @@
     ".spectrum-Slider-ticks ~ .spectrum-Slider-handleContainer .spectrum-Slider-handle",
     ".spectrum-Slider-track",
     ".spectrum-Slider-track ~ .spectrum-Slider-track",
+    ".spectrum-Slider-track ~ .spectrum-Slider-track:before",
     ".spectrum-Slider-track:before",
     ".spectrum-Slider-track:first-of-type:before",
     ".spectrum-Slider-track:last-of-type:before",
