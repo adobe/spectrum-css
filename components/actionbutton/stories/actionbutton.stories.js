@@ -13,8 +13,6 @@ import { ActionButtonsWithIconOptions, IconOnlyOption, TreatmentTemplate } from 
  * ## Usage notes
  *
  * For action buttons that only contain an icon with no label, do not include the element with the `.spectrum-ActionButton-label` class in the markup.
- *
- * When using `.spectrum-ActionButton--staticWhite` or `.spectrum-ActionButton--staticBlack`, use the `--mod-actionbutton-content-color-default` custom property to set the text color when selected.
  */
 export default {
 	title: "Action button",
@@ -209,6 +207,11 @@ StaticWhiteQuiet.parameters = {
 };
 
 /**
+ * When an action button needs to be placed on top of a color background or a visual, use the static color
+ * option. Use static black on light color or image backgrounds, and static white on dark color or image
+ * backgrounds, regardless of the color theme. For more info, see the
+ * [design guidelines](https://spectrum.adobe.com/page/action-button/#Static-color).
+ *
  * Emphasized is not supported for the static black and static white variants.
  */
 export const StaticBlackDocs = TreatmentTemplate.bind({});
