@@ -5,7 +5,7 @@ import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSe
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ActionButtonGroup } from "./actionbutton.test.js";
-import { ActionButtonsWithIconOptions, IconOnlyOption, TreatmentTemplate } from "./template.js";
+import { ActionButtonsWithIconOptions, IconOnlyOption, Template, TreatmentTemplate } from "./template.js";
 
 /**
  * The action button component represents an action a user can take.
@@ -248,6 +248,26 @@ Sizing.args = {};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot:  true },
+};
+
+/**
+ * When the action button text is too long for the available horizontal space, it truncates at the end.
+ * Implementations should reveal the full text on hover, per this component's
+ * [design guidelines on text overflow](https://spectrum.adobe.com/page/action-button/#Text-overflow).
+ * To demonstrate this behavior, this example sets a maximum width on the button.
+ */
+export const TextOverflowBehavior = Template.bind({});
+TextOverflowBehavior.tags = ["!dev"];
+TextOverflowBehavior.args = {
+	label: "This is extra long text that will cause text truncation",
+	customStyles: {
+		"max-inline-size": "120px",
+	},
+};
+TextOverflowBehavior.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 };
 
 // ********* VRT ONLY ********* //
