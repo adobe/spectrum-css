@@ -12,13 +12,6 @@
  */
 
 .spectrum-Rating {
-	--spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
-	--spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
-	--spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
-	--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-
-	--spectrum-rating-indicator-border-radius: 2px;
-
 	--spectrum-rating-width: var(--spectrum-rating-width-small);
 
 	/* Icon */
@@ -33,15 +26,9 @@
 	--spectrum-rating-border-radius: var(--spectrum-corner-radius-medium-size-small);
 	--spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
-	/* Spacing (top/bottom edge to icon) */
-	--spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
+	/* Spacing */
 	--spectrum-rating-icon-spacing: var(--spectrum-spacing-75);
-
-	/* Indicator */
-	--spectrum-rating-indicator-height: var(--spectrum-border-width-200);
-	--spectrum-rating-indicator-border-radius: 2px;
 
 	/* Colors */
 	/* selected + emphasized */
@@ -62,14 +49,14 @@
 	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
-	padding-inline: var(--spectrum-spacing-75);
-	padding-block: var(--spectrum-spacing-75);
+	padding-inline: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
+	padding-block: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 
 	cursor: pointer;
 
-	inline-size: var(--spectrum-rating-width);
+	inline-size: var(--mod-rating-width, var(--spectrum-rating-width));
 
-	&.is-focused {
+	&.is-keyboardFocused {
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
 
 		.spectrum-Rating-icon {
@@ -114,14 +101,14 @@
 }
 
 .spectrum-Rating--sizeM {
-	--spectrum-rating-width: var(--spectrum-rating-width-medium);
+	--mod-rating-width: var(--spectrum-rating-width-medium);
 
 	/* Icon */
-	--spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
-	--spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-100);
+	--mod-rating-icon-height: var(--spectrum-workflow-icon-size-100);
+	--mod-rating-icon-width: var(--spectrum-workflow-icon-size-100);
 
 	/* Focus ring */
-	--spectrum-rating-border-radius: var(--spectrum-corner-radius-medium-size-medium);
+	--mod-rating-border-radius: var(--spectrum-corner-radius-medium-size-medium);
 }
 
 .spectrum-Rating-input {
@@ -150,8 +137,6 @@
 
 	.spectrum-Rating-starInactive {
 		display: block;
-		position: absolute;
-		inset-block-start: 0;
 	}
 
 	&.is-selected {
@@ -161,14 +146,6 @@
 
 		.spectrum-Rating-starInactive {
 			display: none;
-		}
-
-		&.spectrum-Rating-starHalfActive .spectrum-Rating-starActive {
-			mask-image: linear-gradient(to right, white 50%, transparent 50%);
-		}
-
-		&.spectrum-Rating-starHalfActive .spectrum-Rating-starActive ~ .spectrum-Rating-starInactive {
-			display: block;
 		}
 	}
 
@@ -180,10 +157,6 @@
 
 		.spectrum-Rating-starInactive {
 			display: block;
-		}
-
-		&.spectrum-Rating-starHalfActive .spectrum-Rating-starActive {
-			mask-image: unset;
 		}
 	}
 }
@@ -209,7 +182,7 @@
 }
 
 .spectrum-Rating--emphasized {
-	&.is-focused {
+	&.is-keyboardFocused {
 		.spectrum-Rating-icon.is-selected {
 			color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
 		}
@@ -267,7 +240,7 @@
 		--highcontrast-rating-emphasized-icon-color-down: Highlight;
 		--highcontrast-rating-focus-color-outline: CanvasText;
 
-		&.is-focused {
+		&.is-keyboardFocused {
 			outline: 1px solid var(--highcontrast-rating-focus-color-outline);
 		}
 	}
