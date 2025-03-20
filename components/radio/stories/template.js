@@ -15,6 +15,9 @@ export const Template = ({
 	isChecked = false,
 	isDisabled = false,
 	isReadOnly = false,
+	isFocused = false,
+	isActive = false,
+	isHovered,
 	id = getRandomId("radio"),
 	customClasses = [],
 	customStyles = {},
@@ -34,7 +37,9 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--emphasized`]: isEmphasized,
+				"is-hover": isHovered,
 				"is-readOnly" : isReadOnly,
+				"is-active" : isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
@@ -42,7 +47,11 @@ export const Template = ({
 			<input
 				type="radio"
 				name=${name}
-				class="${rootClass}-input"
+				class=${classMap({
+					["is-focus-visible"]: isFocused && !isDisabled,
+					["is-active"]: isActive,
+					[`${rootClass}-input`]: true
+				})}
 				id=${inputId}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
