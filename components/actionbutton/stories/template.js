@@ -75,7 +75,7 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
+					typeof size !== "undefined" && size !== "m",
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--static${capitalize(staticColor)}`]:
