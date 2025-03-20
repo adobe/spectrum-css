@@ -252,9 +252,11 @@ Sizing.parameters = {
 
 /**
  * When the action button text is too long for the available horizontal space, it truncates at the end.
- * Implementations should reveal the full text on hover, per this component's
+ * To demonstrate what this looks like, this example sets a maximum width on the button.
+ *
+ * Implementations should also reveal the full text on hover, per this component's
  * [design guidelines on text overflow](https://spectrum.adobe.com/page/action-button/#Text-overflow).
- * To demonstrate this behavior, this example sets a maximum width on the button.
+ * This is not demonstrated here.
  */
 export const TextOverflowBehavior = Template.bind({});
 TextOverflowBehavior.tags = ["!dev"];
