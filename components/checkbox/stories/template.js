@@ -14,6 +14,7 @@ export const Template = ({
 	label,
 	isChecked = false,
 	isEmphasized = false,
+	isHovered = false,
 	isIndeterminate = false,
 	isDisabled = false,
 	isInvalid = false,
@@ -52,6 +53,7 @@ export const Template = ({
 				["is-indeterminate"]: isIndeterminate,
 				["is-disabled"]: isDisabled,
 				["is-invalid"]: isInvalid,
+				["is-hover"]: isHovered && !isDisabled,
 				["is-readOnly"]: isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}

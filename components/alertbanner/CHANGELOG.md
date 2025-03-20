@@ -16,6 +16,12 @@
   - @spectrum-css/button@15.0.0-next.0
   - @spectrum-css/closebutton@7.0.0-next.0
 
+## 3.1.1
+
+### Patch Changes
+
+- [#3624](https://github.com/adobe/spectrum-css/pull/3624) [`754f99a`](https://github.com/adobe/spectrum-css/commit/754f99afc3c1918cdc0d173150989bcc1e6a7d2f) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - In the alert banner spectrum.css (the S1 stylesheet), --system: legacy was corrected in the container query.
+
 ## 3.1.0
 
 ### Minor Changes
