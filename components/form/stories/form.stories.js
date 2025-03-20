@@ -1,4 +1,3 @@
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Fieldgroup } from "@spectrum-css/fieldgroup/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
@@ -80,18 +79,19 @@ export default {
 				content: [
 					(passthroughs, context) => Fieldgroup({
 						layout: "horizontal",
+						inputType: "checkbox",
 						items: [
-							Checkbox({
+							{
 								...passthroughs,
 								label: "Kittens",
 								customClasses: ["spectrum-FieldGroup-item"],
-							}, context),
-							Checkbox({
+							},
+							{
 								...passthroughs,
 								label: "Puppies",
 								customClasses: ["spectrum-FieldGroup-item"],
-							}, context),]
-					}),
+							}]
+					}, context),
 				],
 			},{
 				label: "Age",
