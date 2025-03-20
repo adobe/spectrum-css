@@ -4098,7 +4098,7 @@ __metadata:
     "@spectrum-css/popover": "npm:9.0.0-next.1"
     "@spectrum-css/progressbar": "npm:7.0.0-next.0"
     "@spectrum-css/progresscircle": "npm:5.1.0"
-    "@spectrum-css/radio": "npm:11.0.0-next.0"
+    "@spectrum-css/radio": "npm:11.0.0-next.1"
     "@spectrum-css/rating": "npm:7.0.0-next.0"
     "@spectrum-css/search": "npm:9.0.0-next.0"
     "@spectrum-css/sidenav": "npm:8.0.0-next.0"
@@ -4630,7 +4630,7 @@ __metadata:
   dependencies:
     "@spectrum-css/checkbox": "npm:11.0.0-next.0"
     "@spectrum-css/helptext": "npm:8.0.0-next.0"
-    "@spectrum-css/radio": "npm:11.0.0-next.0"
+    "@spectrum-css/radio": "npm:11.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/checkbox": ">=11.0.0-next.0"
@@ -5133,7 +5133,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/radio@npm:11.0.0-next.0, @spectrum-css/radio@workspace:components/radio":
+"@spectrum-css/radio@npm:11.0.0-next.1, @spectrum-css/radio@workspace:components/radio":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/radio@workspace:components/radio"
   dependencies:
