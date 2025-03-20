@@ -20,7 +20,6 @@ export const Template = ({
 	isInvalid = false,
 	isReadOnly = false,
 	isFocused = false,
-	isHovered,
 	title,
 	value,
 	id = getRandomId("checkbox"),
@@ -57,7 +56,6 @@ export const Template = ({
 				["is-invalid"]: isInvalid,
 				["is-hover"]: isHovered && !isDisabled,
 				["is-readOnly"]: isReadOnly,
-				"is-hover": isHovered,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
