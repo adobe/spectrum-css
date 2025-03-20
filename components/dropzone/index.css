@@ -11,9 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-DropZone {
+	--spectrum-drop-zone-border-color: var(--spectrum-gray-200);
+
 	--spectrum-drop-zone-border-width: var(--spectrum-border-width-200);
 	--spectrum-drop-zone-background-color: var(--spectrum-drop-zone-background-color-rgb);
 	--spectrum-drop-zone-border-color-hover: var(--spectrum-accent-visual-color);

@@ -54,8 +54,7 @@
     ".spectrum-Calendar-tableCell",
     ".spectrum-Calendar-tableCell:focus",
     ".spectrum-Calendar-title",
-    ".spectrum-Calendar:dir(rtl)",
-    "[dir=\"rtl\"] .spectrum-Calendar"
+    ".spectrum-Calendar:dir(rtl)"
   ],
   "modifiers": [
     "--mod-calendar-border-radius-reset",
@@ -176,7 +175,6 @@
     "--spectrum-neutral-subdued-content-color-default",
     "--spectrum-regular-font-weight"
   ],
-  "system-theme": ["--system-calendar-day-background-color-selected-disabled"],
   "passthroughs": [
     "--mod-actionbutton-content-color-default",
     "--mod-actionbutton-edge-to-text",

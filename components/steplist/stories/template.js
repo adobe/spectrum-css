@@ -6,9 +6,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const SteplistItem = ({
 	rootClass = "spectrum-Steplist-item",
