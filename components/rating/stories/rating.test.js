@@ -29,13 +29,5 @@ export const RatingGroup = Variants({
 			testHeading: "With tooltip",
 			withTooltip: true,
 		},
-		{
-			testHeading: "Small size",
-			size: "s",
-		},
-		{
-			testHeading: "Medium size",
-			size: "m",
-		},
 	]
 });

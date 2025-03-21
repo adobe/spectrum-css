@@ -1,9 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isEmphasized, isKeyboardFocused, isReadOnly, size } from "@spectrum-css/preview/types";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RatingGroup } from "./rating.test.js";
-import { Template, RatingSizeGroup } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * The rating component is used to display or collect a user's rating of an item as represented by a number of stars.
@@ -63,7 +64,7 @@ export default {
 		isKeyboardFocused: false,
 		isReadOnly: false,
 		withTooltip: false,
-		size: "s",
+		size: "m",
 		max: 5,
 		value: 3,
 	},
@@ -98,10 +99,14 @@ WithForcedColors.parameters = {
 /**
  * Small and medium rating
  */
-export const RatingSizes = RatingSizeGroup.bind({});
-RatingSizes.storyName = "Sizes";
-RatingSizes.tags = ["!dev"];
-RatingSizes.parameters = {
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withBorder: false,
+	withHeading: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

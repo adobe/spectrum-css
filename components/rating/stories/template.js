@@ -1,6 +1,6 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -100,21 +100,3 @@ export const Template = ({
 		</div>
 	`;
 };
-
-export const RatingSizeGroup = (args, context) => Container({
-	direction: "row",
-	withBorder: false,
-	content: html`
-		${Template({
-			...args,
-			context,
-			label: "Small"
-		})}
-		${Template({
-			...args,
-			context,
-			size: "m",
-			label: "Medium"
-		})}
-	`
-}, context);
