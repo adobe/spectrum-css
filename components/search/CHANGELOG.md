@@ -1,5 +1,14 @@
 # Change log
 
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/clearbutton@8.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
+
 ## 8.1.1
 
 ### Patch Changes
@@ -9,15 +18,6 @@
 Updated `--spectrum-search-background-color-disabled` to `--spectrum-gray-25` and `--spectrum-search-border-color-disabled` to `--spectrum-gray-300` for the S2 foundations contexts.
 
 Also defines disabled quiet border and background colors (`--system-search-quiet-background-color-disabled` and `--system-search-quiet-border-color-disabled`) in order to maintain disabled quiet styling.
-
-## 9.0.0-next.0
-
-### Patch Changes
-
-- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
-  - @spectrum-css/icon@10.0.0-next.0
-  - @spectrum-css/clearbutton@8.0.0-next.0
-  - @spectrum-css/textfield@9.0.0-next.0
 
 ## 8.1.0
 

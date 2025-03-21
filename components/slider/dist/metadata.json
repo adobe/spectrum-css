@@ -1,7 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".js-focus-within .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls[focus-within]",
     ".spectrum-Slider",
     ".spectrum-Slider .spectrum-Slider-handle.is-focused:before",
     ".spectrum-Slider--filled .spectrum-Slider-track:first-child:before",
@@ -62,6 +61,7 @@
     ".spectrum-Slider-ticks ~ .spectrum-Slider-handleContainer .spectrum-Slider-handle",
     ".spectrum-Slider-track",
     ".spectrum-Slider-track ~ .spectrum-Slider-track",
+    ".spectrum-Slider-track ~ .spectrum-Slider-track:before",
     ".spectrum-Slider-track:before",
     ".spectrum-Slider-track:first-of-type:before",
     ".spectrum-Slider-track:last-of-type:before",
@@ -83,16 +83,12 @@
     ".spectrum-Slider.is-disabled.spectrum-Slider--filled .spectrum-Slider-track:first-child:before",
     ".spectrum-Slider.is-disabled.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before",
     ".spectrum-Slider.spectrum-Slider--ramp .spectrum-Slider-handle",
-    ".spectrum-Slider.spectrum-Slider--sizeL",
-    ".spectrum-Slider.spectrum-Slider--sizeS",
-    ".spectrum-Slider.spectrum-Slider--sizeXL",
     ".spectrum-Slider:dir(rtl)",
     ".spectrum-Slider:dir(rtl) .spectrum-Slider-handle:before",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover",
-    ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range).js-focus-within .spectrum-Slider-controls[focus-within]",
     ".spectrum-Slider:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp)",
     "[dir=\"rtl\"] .spectrum-Slider",
     "[dir=\"rtl\"] .spectrum-Slider .spectrum-Slider-handle:before"

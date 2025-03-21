@@ -7,6 +7,14 @@
 - Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
   - @spectrum-css/icon@10.0.0-next.0
 
+## 7.2.0
+
+### Minor Changes
+
+📝 [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
+
 ## 7.1.0
 
 ### Minor Changes

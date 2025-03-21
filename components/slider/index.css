@@ -12,42 +12,6 @@
  */
 
 .spectrum-Slider {
-	--spectrum-slider-track-color: var(--spectrum-gray-200);
-	--spectrum-slider-track-fill-color: var(--spectrum-gray-700);
-	--spectrum-slider-ramp-track-color: var(--spectrum-gray-400);
-	--spectrum-slider-ramp-track-color-disabled: var(--spectrum-gray-100);
-
-	--spectrum-slider-handle-background-color: transparent;
-	--spectrum-slider-handle-background-color-disabled: transparent;
-	--spectrum-slider-ramp-handle-background-color: var(--spectrum-gray-75);
-	--spectrum-slider-ticks-handle-background-color: var(--spectrum-gray-75);
-	--spectrum-slider-handle-border-color: var(--spectrum-gray-700);
-	--spectrum-slider-handle-disabled-background-color: var(--spectrum-gray-75);
-
-	--spectrum-slider-tick-mark-color: var(--spectrum-gray-200);
-
-	--spectrum-slider-handle-border-color-hover: var(--spectrum-gray-800);
-	--spectrum-slider-handle-border-color-down: var(--spectrum-gray-800);
-	--spectrum-slider-handle-border-color-key-focus: var(--spectrum-gray-800);
-	--spectrum-slider-handle-focus-ring-color-key-focus: var(--spectrum-focus-indicator-color);
-
-	--spectrum-slider-track-corner-radius: 2px;
-
-	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
-
-	&.spectrum-Slider--sizeS {
-		--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
-	}
-
-	&.spectrum-Slider--sizeL {
-		--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
-	}
-
-	&.spectrum-Slider--sizeXL {
-		--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
-	}
-
-	/* default sizing, matches t-shirt size M */
 	--spectrum-slider-font-size: var(--spectrum-font-size-75);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-medium);
 	--spectrum-slider-control-height: var(--spectrum-component-height-100);
@@ -96,7 +60,6 @@
 	--spectrum-slider-handle-disabled-background-color: var(--spectrum-gray-75);
 	--spectrum-slider-tick-mark-color: var(--spectrum-gray-200);
 
-
 	--spectrum-slider-handle-border-color-hover: var(--spectrum-gray-800);
 	--spectrum-slider-handle-border-color-down: var(--spectrum-gray-800);
 	--spectrum-slider-handle-border-color-key-focus: var(--spectrum-gray-800);
@@ -105,30 +68,9 @@
 	/* values */
 	--spectrum-slider-input-left: calc(var(--spectrum-slider-handle-margin-left) / 4);
 	--spectrum-slider-track-handleoffset: var(--spectrum-slider-handle-gap);
-
 	--spectrum-slider-range-track-reset: 0;
-
 	--spectrum-slider-track-corner-radius: 2px;
-
 	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
-
-	position: relative;
-
-	/* Don't let z-index'd child elements float above other things on the page */
-	z-index: 0;
-	display: block;
-	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
-
-	user-select: none;
-
-	&:dir(rtl),
-	&:dir(rtl) {
-		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-	}
-
-	&:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp) {
-		margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
-	}
 }
 
 .spectrum-Slider--sizeS {
@@ -168,6 +110,26 @@
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 22px;
+}
+
+.spectrum-Slider {
+	position: relative;
+
+	/* Don't let z-index'd child elements float above other things on the page */
+	z-index: 0;
+	display: block;
+	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
+
+	user-select: none;
+
+	&:dir(rtl),
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+	&:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp) {
+		margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
+	}
 }
 
 .spectrum-Slider--sideLabel {
@@ -594,6 +556,12 @@
 	&::before {
 		background: var(--highcontrast-slider-track-color-static, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
 	}
+
+	/* Styles below are applied to the sibling spectrum-Slider-track when filled-offset variant is activated */
+	& ~ .spectrum-Slider-track::before {
+		border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+		border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+	}
 }
 
 /* All variants other than filled-offset get a new track color for highcontrast mode */
@@ -678,6 +646,8 @@
 	.spectrum-Slider-track {
 		&:not(:first-of-type, :last-of-type)::before {
 			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+			border-start-end-radius: 0;
+			border-end-end-radius: 0;
 		}
 	}
 }

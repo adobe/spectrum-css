@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isChecked, isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isActive, isChecked, isDisabled, isEmphasized, isFocused, isHovered, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
@@ -40,6 +40,9 @@ export default {
 		isChecked,
 		isDisabled,
 		isReadOnly,
+		isHovered,
+		isFocused,
+		isActive,
 	},
 	args: {
 		rootClass: "spectrum-Radio",
@@ -49,6 +52,9 @@ export default {
 		isChecked: false,
 		isDisabled: false,
 		isReadOnly: false,
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
 	},
 	parameters: {
 		actions: {
