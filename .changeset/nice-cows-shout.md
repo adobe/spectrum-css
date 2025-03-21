@@ -2,7 +2,7 @@
 "@spectrum-css/coachmark": major
 ---
 
-# S2 coachmark migration
+#### S2 coachmark migration
 
 This migrates the `coachmark` component to S2. Custom properties have been remapped per the design spec.
 
