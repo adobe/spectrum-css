@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isKeyboardFocused, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isHovered, isKeyboardFocused, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SearchGroup } from "./search.test.js";
@@ -20,36 +20,46 @@ export default {
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
 		isDisabled,
+		isHovered,
 		showHelpText: {
 			name: "Show help text",
 			description: "A search field can have help text below the field to give extra context or instruction about what a user should input. The description communicates a hint or helpful information, such as a search’s scope.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Advanced",
+				category: "Content",
 			},
 			control: "boolean",
 		},
 		helpTextLabel: {
 			name: "Help text (description)",
 			type: { name: "string" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
 			control: { type: "text" },
 			if: { arg: "showHelpText", eq: true },
 		},
-		isFocused: {
-			...isFocused,
-			table: { disable: true },
-		},
+		isFocused,
 		isKeyboardFocused,
 		inputValue: {
-			table: { disable: true },
+			name: "Display value and close button",
+			description: "When defined, this will display the input and the clear button within the search field.",
 			type: { name: "string" },
+			control: { type: "text" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
 		},
 	},
 	args: {
 		rootClass: "spectrum-Search",
 		size: "m",
 		isDisabled: false,
+		isFocused: false,
+		isHovered: false,
 		isKeyboardFocused: false,
 		showHelpText: false,
 		helpTextLabel: "Help text with a suggestion of what to search for",
@@ -76,10 +86,15 @@ export default {
 
 export const Default = SearchGroup.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
+export const Standard = SearchOptions.bind({});
+Standard.args = {};
+Standard.storyName = "Default";
+Standard.tags = ["!dev"];
 
-export const Disabled = SearchOptions.bind({});
+export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
 };

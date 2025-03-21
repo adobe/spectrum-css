@@ -14,9 +14,10 @@ export const Template = ({
 	customClasses = [],
 	isDisabled = false,
 	isFocused = false,
+	isHovered = false,
 	isKeyboardFocused = false,
 	inputValue = "",
-	size,
+	size = "m",
 	showHelpText = false,
 	helpTextLabel = "",
 } = {}, context = {}) => {
@@ -25,7 +26,7 @@ export const Template = ({
 		class=${classMap({
 			[rootClass]: true,
 			[`${rootClass}--size${size?.toUpperCase()}`]:
-				typeof size !== "undefined",
+				typeof size !== "undefined" && size !== "m",
 			"is-disabled": isDisabled,
 			"is-keyboardFocused": isKeyboardFocused,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -34,8 +35,13 @@ export const Template = ({
 		${TextField({
 			isDisabled,
 			size,
-			customClasses: [`${rootClass}-textfield`, isFocused && "is-focused", isKeyboardFocused && "is-keyboardFocused"],
-			iconName: "Magnify",
+			customClasses: [
+				`${rootClass}-textfield`,
+				isFocused && "is-focused",
+				isKeyboardFocused && "is-keyboardFocused",
+				isHovered && "is-hover"
+			],
+			iconName: "Search",
 			setName: "workflow",
 			type: "search",
 			placeholder: "Search",
@@ -45,12 +51,14 @@ export const Template = ({
 			autocomplete: false,
 			value: inputValue,
 		}, context)}
-		${ClearButton({
-			isDisabled,
-			size,
-			customClasses: [`${rootClass}-clearButton`],
-			isFocusable: false,
-		}, context)}
+		${when(inputValue, () =>
+			ClearButton({
+				isDisabled,
+				size,
+				customClasses: [`${rootClass}-clearButton`],
+				isFocusable: false,
+			}, context)
+		)}
 		${when(showHelpText, () =>
 			HelpText({
 				text: helpTextLabel,
@@ -61,9 +69,7 @@ export const Template = ({
 `;
 };
 
-export const SearchOptions = ({
-	...args
-}, context = {}) => Container({
+export const SearchOptions = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
@@ -75,7 +81,11 @@ export const SearchOptions = ({
 		}, context)}
 		${Template({
 			...args,
-			isQuiet: true
+			isFocused: true,
+		}, context)}
+		${Template({
+			...args,
+			isKeyboardFocused: true,
 		}, context)}
 	`
 }, context);
