@@ -132,6 +132,7 @@ Standard.args = {
 
 export const StandardNoMedia = Template.bind({});
 StandardNoMedia.storyName = "Default, no media";
+StandardNoMedia.tags = ["!dev"];
 StandardNoMedia.args = {
 	hasImage: false,
 };
@@ -167,6 +168,7 @@ MediaStates.storyName = "Media states";
 /** The action menu, if enabled, is shown in line with the title. */
 export const WithActionMenu = CoachmarkMenuStatesTemplate.bind({});
 WithActionMenu.storyName = "With action menu";
+WithActionMenu.tags = ["!dev"];
 WithActionMenu.args = {
 	hasActionMenu: true,
 };
