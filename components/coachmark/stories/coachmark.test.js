@@ -87,6 +87,14 @@ export const CoachMarkGroup = Variants({
 				"background-color": "var(--spectrum-gray-50, white)",
 			},
 		},
+		{
+			testHeading: "With a long title",
+			title: "Coach mark title with longer text that wraps to see how icon should align",
+			hasActionMenu: true,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50, white)",
+			},
+		},
 	],
 	stateData: [],
 });
