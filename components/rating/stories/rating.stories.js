@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isFocused, isReadOnly } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isKeyboardFocused, isReadOnly, size } from "@spectrum-css/preview/types";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { RatingGroup } from "./rating.test.js";
@@ -18,9 +19,10 @@ export default {
 	component: "Rating",
 	argTypes: {
 		isEmphasized,
-		isFocused,
+		isKeyboardFocused,
 		isDisabled,
 		isReadOnly,
+		size: size(["s", "m"]),
 		max: {
 			name: "Maximum value",
 			description: "The total number of stars. Star ratings should always have 5 available stars. This shouldn't be increased or decreased to fit various containers.",
@@ -43,12 +45,26 @@ export default {
 			},
 			control: { type: "number" },
 		},
+		withTooltip: {
+			name: "With Tooltip",
+			description:
+				"A tooltip indicating whether a user is editing or clearing a rating may be displayed.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Rating",
 		isDisabled: false,
 		isEmphasized: false,
+		isKeyboardFocused: false,
 		isReadOnly: false,
+		withTooltip: false,
+		size: "m",
 		max: 5,
 		value: 3,
 	},
@@ -63,9 +79,7 @@ export default {
 };
 
 /**
- * A initial value of three is used for the following examples, to demonstrate both active and inactive stars.
- * When hovering over a rating component that has a previously entered value, an underline appears under the
- * current selection to provide context.
+ * An initial value of three is used for the following examples, to demonstrate both active and inactive stars.
  */
 export const Default = RatingGroup.bind({});
 Default.args = {};
@@ -83,6 +97,20 @@ WithForcedColors.parameters = {
 // ********* DOCS ONLY ********* //
 
 /**
+ * Small and medium rating
+ */
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withBorder: false,
+	withHeading: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
  * A non-interactive rating.
  */
 export const ReadOnly = Template.bind({});
@@ -95,6 +123,9 @@ ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * An emphasized rating.
+ */
 export const Emphasized = Template.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
@@ -104,6 +135,9 @@ Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * A read only, emphasized rating.
+ */
 export const ReadOnlyEmphasized = Template.bind({});
 ReadOnlyEmphasized.storyName = "Read-only, emphasized";
 ReadOnlyEmphasized.tags = ["!dev"];
@@ -115,11 +149,38 @@ ReadOnlyEmphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * A disabled rating.
+ */
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/*
+ * A keyboard focused rating.
+*/
+export const KeyboardFocused = Template.bind({});
+KeyboardFocused.tags = ["!dev"];
+KeyboardFocused.args = {
+	isKeyboardFocused: true,
+};
+KeyboardFocused.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A rating with a tooltip displayed.
+ */
+export const withTooltip = Template.bind({});
+withTooltip.tags = ["!dev"];
+withTooltip.args = {
+	withTooltip: true,
+};
+withTooltip.parameters = {
 	chromatic: { disableSnapshot: true },
 };
