@@ -63,11 +63,6 @@ export const ActionButtonGroup = Variants({
 			staticColor: "black",
 		},
 		{
-			testHeading: "Static black - emphasized",
-			staticColor: "black",
-			isEmphasized: true,
-		},
-		{
 			testHeading: "Static black - quiet",
 			staticColor: "black",
 			isQuiet: true,
@@ -75,11 +70,6 @@ export const ActionButtonGroup = Variants({
 		{
 			testHeading: "Static white",
 			staticColor: "white",
-		},
-		{
-			testHeading: "Static white - emphasized",
-			staticColor: "white",
-			isEmphasized: true,
 		},
 		{
 			testHeading: "Static white - quiet",
