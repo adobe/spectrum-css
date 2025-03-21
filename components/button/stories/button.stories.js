@@ -9,6 +9,10 @@ import { ButtonsWithIconOptions, TextOverflowTemplate, TextWrapTemplate, Treatme
 
 /**
  * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
+ *
+ * There are four available variants that are used for different levels of emphasis and different
+ * types of actions. By default, a button uses the fill style with a solid background. The primary
+ * and secondary variants also have an outline option.
  */
 export default {
 	title: "Button",
@@ -92,11 +96,11 @@ export default {
 		packageJson,
 		metadata,
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = ButtonGroups.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ButtonGroups.bind({});
@@ -144,6 +148,7 @@ Accent.args = {
 Accent.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Accent.storyName = "Emphasis - accent";
 
 /**
  * The primary button is for medium emphasis. Use it in place of an accent button when the
@@ -159,6 +164,7 @@ Primary.args = {
 Primary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Primary.storyName = "Emphasis - primary";
 
 /**
  * The secondary button is for low emphasis. It’s paired with other button types to surface less
@@ -174,6 +180,7 @@ Secondary.args = {
 Secondary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Secondary.storyName = "Emphasis - secondary";
 
 /**
  * The negative button is for emphasizing actions that can be destructive or have negative
@@ -187,7 +194,11 @@ Negative.args = {
 Negative.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Negative.storyName = "Emphasis - negative";
 
+/**
+ * When a button needs to be placed on top of a dark color background or a visual, use the static white options. Static color buttons do not change shades or values depending upon the color theme.
+ */
 export const StaticWhitePrimary = TreatmentTemplate.bind({});
 StaticWhitePrimary.tags = ["!dev"];
 StaticWhitePrimary.args = {
@@ -198,6 +209,7 @@ StaticWhitePrimary.args = {
 StaticWhitePrimary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+StaticWhitePrimary.storyName = "Static white - primary";
 
 export const StaticWhiteSecondary = TreatmentTemplate.bind({});
 StaticWhiteSecondary.tags = ["!dev"];
@@ -209,7 +221,11 @@ StaticWhiteSecondary.args = {
 StaticWhiteSecondary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+StaticWhiteSecondary.storyName = "Static white - secondary";
 
+/**
+ * When a button needs to be placed on top of a light color background or a visual, use the static black options. Static color buttons do not change shades or values depending upon the color theme.
+ */
 export const StaticBlackPrimary = TreatmentTemplate.bind({});
 StaticBlackPrimary.tags = ["!dev"];
 StaticBlackPrimary.args = {
@@ -220,6 +236,7 @@ StaticBlackPrimary.args = {
 StaticBlackPrimary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+StaticBlackPrimary.storyName = "Static black - primary";
 
 export const StaticBlackSecondary = TreatmentTemplate.bind({});
 StaticBlackSecondary.tags = ["!dev"];
@@ -231,6 +248,8 @@ StaticBlackSecondary.args = {
 StaticBlackSecondary.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+StaticBlackSecondary.storyName = "Static black - secondary";
+
 
 /**
  * The pending button is for indicating that a quick progress action is taking place. In this case, the
@@ -273,7 +292,7 @@ Disabled.parameters = {
  */
 export const WithWrapping = TextOverflowTemplate.bind({});
 WithWrapping.tags = ["!dev"];
-WithWrapping.storyName = "Text overflow behavior";
+WithWrapping.storyName = "Text overflow";
 WithWrapping.args = {
 	variant: "primary",
 };
@@ -289,7 +308,7 @@ WithWrapping.parameters = {
 
 export const DisableWrapping = TextWrapTemplate.bind({});
 DisableWrapping.tags = ["!dev"];
-DisableWrapping.storyName = "Disable label wrap";
+DisableWrapping.storyName = "Text overflow disabled";
 DisableWrapping.args = {
 	variant: "primary",
 };
