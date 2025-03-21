@@ -66,6 +66,7 @@ export const Template = ({
 	testId,
 	role = "button",
 } = {}, context = {}) => {
+	const { updateArgs } = context;
 	return html`
 		<button
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
@@ -75,7 +76,7 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined" && size !== "m",
+					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--static${capitalize(staticColor)}`]:
@@ -92,7 +93,17 @@ export const Template = ({
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
-			@click=${ifDefined(onclick)}
+			@click=${onclick ?? function() {
+				updateArgs({
+					isSelected: !isSelected
+				});
+			}}
+			@focusin=${function() {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${function() {
+				updateArgs({ isFocused: false });
+			}}
 		>
 			${when(hasPopup && hasPopup !== "false", () =>
 				Icon({
@@ -135,29 +146,29 @@ export const ActionButtonsWithIconOptions = (args, context) => Container({
 	wrapperStyles: {
 		columnGap: "12px",
 	},
-	content: html`
-		${Template({
+	content: [
+		Template({
 			...args,
 			iconName: undefined,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			iconName: undefined,
 			hasPopup: "true",
-		}, context)}
-	`
+		}, context)
+	],
 }, context);
 
 /**
@@ -171,19 +182,19 @@ export const IconOnlyOption = (args, context) => Container({
 	wrapperStyles: {
 		columnGap: "12px",
 	},
-	content: html`
-		${Template({
+	content: [
+		Template({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
 			isQuiet: true,
 			hasPopup: "true",
-		}, context)}
-	`
+		}, context),
+	],
 }, context);
 
 /**
