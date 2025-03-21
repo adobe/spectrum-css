@@ -47,6 +47,8 @@
 	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-color-area-border-rounding));
 	border: var(--mod-colorarea-border-width, var(--spectrum-color-area-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
+	touch-action: none;
+
 	&.is-focused {
 		z-index: 2;
 	}

@@ -34,6 +34,9 @@
 	inline-size: var(--mod-color-slider-length, var(--spectrum-color-slider-length));
 	block-size: var(--mod-color-slider-control-track-width, var(--spectrum-color-control-track-width));
 
+	/* Prevents dragging of the color slider handle from selecting text. */
+	touch-action: none;
+
 	/* Otherwise we randomly drag a file icon */
 	user-select: none;
 
