@@ -42,6 +42,14 @@ Minified and gzipped outputs available for all compiled CSS assets.
   - @spectrum-css/tray@6.0.0
   - @spectrum-css/tokens@16.0.1
 
+## 9.2.0
+
+### Minor Changes
+
+📝 [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
+
 ## 9.1.1
 
 ### Patch Changes
