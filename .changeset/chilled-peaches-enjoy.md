@@ -2,8 +2,6 @@
 "@spectrum-css/actionbutton": major
 ---
 
-feat(actionbutton): S2 migration
-
 Action button now uses Spectrum 2 tokens and design specifications. A few notable changes:
 
 - Medium is now the default size and `.spectrum-ActionButton--sizeM` has been removed.
