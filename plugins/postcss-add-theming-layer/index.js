@@ -17,7 +17,7 @@ const {
 	extractFallbackValue,
 	getVariableName,
 	checkForReplacement
-} = require("./utilities");
+} = require("./utilities.js");
 
 /**
  * @typedef Options
