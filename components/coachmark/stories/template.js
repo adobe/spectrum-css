@@ -35,9 +35,10 @@ export const CoachContainer = (
 			hasImage,
 			() => html`
 				<div
-					class="${rootClass}-image-wrapper ${imageIsFixedHeight
-						? `${rootClass}-image-wrapper--fixedHeight`
-						: ""}"
+					class=${classMap({
+						[`${rootClass}-image-wrapper`]: true,
+						[`${rootClass}-image-wrapper--fixedHeight`]: imageIsFixedHeight
+					})}
 				>
 					<img
 						class="${rootClass}-image"
