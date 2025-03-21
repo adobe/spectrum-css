@@ -55,6 +55,9 @@
 
 	transition: all var(--mod-colorhandle-animation-duration, var(--spectrum-animation-duration-100)) var(--mod-colorhandle-animation-easing, ease-in-out);
 
+	touch-action: none;
+	user-select: none;
+
 	&::after {
 		content: "";
 		inset-inline: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-color-control-track-width)) / 2));
