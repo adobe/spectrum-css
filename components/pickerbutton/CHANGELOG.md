@@ -4,11 +4,13 @@
 
 ### Patch Changes
 
-- [#3630](https://github.com/adobe/spectrum-css/pull/3630) [`954243f`](https://github.com/adobe/spectrum-css/commit/954243fe5c9a6ff0649ee041d197fcd0d9ad5899) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Updates background colors for the picker button to match S2-foundations design specs.
+📝 [#3630](https://github.com/adobe/spectrum-css/pull/3630) [`954243f`](https://github.com/adobe/spectrum-css/commit/954243fe5c9a6ff0649ee041d197fcd0d9ad5899) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
-  default state: gray-50 to gray-100
-  hover state: gray-100 to gray-200
-  key-focus state: gray-100 to gray-200
+Updates background colors for the picker button to match S2-foundations design specifications:
+
+- default state: `gray-50` to `gray-100`
+- hover state: `gray-100` to `gray-200`
+- key-focus state: `gray-100` to `gray-200`
 
 ## 6.1.1
 
