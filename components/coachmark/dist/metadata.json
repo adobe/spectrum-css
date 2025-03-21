@@ -8,7 +8,6 @@
     ".spectrum-CoachMark-content",
     ".spectrum-CoachMark-footer",
     ".spectrum-CoachMark-header",
-    ".spectrum-CoachMark-header:has(.spectrum-CoachMark-action-menu)",
     ".spectrum-CoachMark-image",
     ".spectrum-CoachMark-image-wrapper",
     ".spectrum-CoachMark-image-wrapper--fixedHeight",
@@ -18,6 +17,7 @@
     ".spectrum-CoachMark-title"
   ],
   "modifiers": [
+    "--mod-coachmark-action-menu-vertical-offset",
     "--mod-coachmark-body-to-footer",
     "--mod-coachmark-border-radius",
     "--mod-coachmark-border-size",
@@ -28,7 +28,6 @@
     "--mod-coachmark-content-font-weight",
     "--mod-coachmark-content-line-height",
     "--mod-coachmark-header-to-body",
-    "--mod-coachmark-heading-to-action-button",
     "--mod-coachmark-image-to-heading",
     "--mod-coachmark-max-width",
     "--mod-coachmark-media-fixed-height",
@@ -61,6 +60,7 @@
     "--spectrum-coach-mark-pagination-text-to-bottom-edge",
     "--spectrum-coach-mark-title-font-size",
     "--spectrum-coach-mark-width",
+    "--spectrum-coachmark-action-menu-vertical-offset",
     "--spectrum-coachmark-body-to-footer",
     "--spectrum-coachmark-border-radius",
     "--spectrum-coachmark-border-size",
@@ -107,7 +107,6 @@
     "--spectrum-spacing-100",
     "--spectrum-spacing-200",
     "--spectrum-spacing-300",
-    "--spectrum-spacing-75",
     "--spectrum-title-line-height",
     "--spectrum-title-sans-serif-font-weight",
     "--spectrum-title-serif-font-style"
