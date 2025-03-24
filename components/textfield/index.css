@@ -265,7 +265,7 @@
 		grid-column: 1 / span 1;
 	}
 
-	.is-disabled & {
+	.spectrum-Textfield.is-disabled & {
 		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 	}
 }
@@ -278,7 +278,7 @@
 		grid-column: 1 / span 2;
 	}
 
-	.is-disabled & .spectrum-HelpText-text {
+	.spectrum-Textfield.is-disabled & .spectrum-HelpText-text {
 		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 	}
 }
@@ -302,7 +302,7 @@
 	grid-column: 2 / span 1;
 	padding-inline-end: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
 
-	.is-disabled & {
+	.spectrum-Textfield.is-disabled & {
 		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 	}
 
@@ -391,7 +391,7 @@
 	}
 
 	/* mouse focus */
-	.is-focused &,
+	.spectrum-Textfield.is-focused &,
 	&:focus {
 		border-color: var(--highcontrast-textfield-border-color-focus, var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus)));
 		color: var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus));
@@ -413,8 +413,8 @@
 
 	/* focus hover */
 	.spectrum-Textfield:focus:hover &,
-	.is-focused:hover &,
-	.is-keyboardFocused:hover &,
+	.spectrum-Textfield.is-focused:hover &,
+	.spectrum-Textfield.is-keyboardFocused:hover &,
 	&:focus:hover {
 		border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
 		color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
@@ -425,7 +425,7 @@
 	}
 
 	/* keyboard focus */
-	.is-keyboardFocused & {
+	.spectrum-Textfield.is-keyboardFocused & {
 		border-color: var(--highcontrast-textfield-border-color-keyboard-focus, var(--mod-textfield-border-color-keyboard-focus, var(--spectrum-textfield-border-color-keyboard-focus)));
 		color: var(--highcontrast-textfield-text-color-keyboard-focus, var(--mod-textfield-text-color-keyboard-focus, var(--spectrum-textfield-text-color-keyboard-focus)));
 
@@ -440,14 +440,14 @@
 	}
 
 	/*** Input Valid ✅ ***/
-	.is-valid & {
+	.spectrum-Textfield.is-valid & {
 		/* creates spacing between text end and icon start, sum of icon start spacing + icon size + icon end spacing - border */
 		padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid)) + var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid)) + var(--mod-textfield-icon-spacing-inline-end-valid, var(--spectrum-textfield-icon-spacing-inline-end-valid)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
 		color: var(--highcontrast-textfield-text-color-valid, var(--mod-textfield-text-color-valid, var(--spectrum-textfield-text-color-valid)));
 	}
 
 	/*** Input Invalid ⚠️ ***/
-	.is-invalid & {
+	.spectrum-Textfield.is-invalid & {
 		/* creates spacing between text end and icon start, sum of icon start spacing + icon size + icon end spacing - border */
 		padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) + var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid)) + var(--mod-textfield-icon-spacing-inline-end-invalid, var(--spectrum-textfield-icon-spacing-inline-end-invalid)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
 		color: var(--highcontrast-textfield-text-color-invalid, var(--mod-textfield-text-color-invalid, var(--spectrum-textfield-text-color-invalid)));
@@ -455,15 +455,15 @@
 	}
 
 	/* Invalid hover */
-	.is-invalid:hover:not(.is-disabled) &,
-	.is-invalid &:hover:not(.is-disabled) {
+	.spectrum-Textfield.is-invalid:hover:not(.is-disabled) &,
+	.spectrum-Textfield.is-invalid &:hover:not(.is-disabled) {
 		border-color: var(--highcontrast-textfield-border-color-invalid-hover, var(--mod-textfield-border-color-invalid-hover, var(--spectrum-textfield-border-color-invalid-hover)));
 	}
 
 	/* Invalid mouse focus */
-	.is-invalid.is-focused &,
-	.is-invalid:focus &,
-	.is-invalid &:focus {
+	.spectrum-Textfield.is-invalid.is-focused &,
+	.spectrum-Textfield.is-invalid:focus &,
+	.spectrum-Textfield.is-invalid &:focus {
 		border-color: var(--highcontrast-textfield-border-color-invalid-focus, var(--mod-textfield-border-color-invalid-focus, var(--spectrum-textfield-border-color-invalid-focus)));
 
 		/* focus hover */
@@ -472,14 +472,14 @@
 		}
 	}
 
-	.is-invalid:focus:hover &,
-	.is-invalid.is-focused:hover &,
-	.is-invalid.is-keyboardFocused:hover & {
+	.spectrum-Textfield.is-invalid:focus:hover &,
+	.spectrum-Textfield.is-invalid.is-focused:hover &,
+	.spectrum-Textfield.is-invalid.is-keyboardFocused:hover & {
 		border-color: var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover));
 	}
 
 	/* invalid keyboard focus */
-	.is-invalid.is-keyboardFocused & {
+	.spectrum-Textfield.is-invalid.is-keyboardFocused & {
 		border-color: var(--highcontrast-textfield-border-color-invalid-keyboard-focus, var(--mod-textfield-border-color-invalid-keyboard-focus, var(--spectrum-textfield-border-color-invalid-keyboard-focus)));
 	}
 
@@ -511,8 +511,8 @@
 		color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
 		outline: none;
 
-		.is-disabled &,
-		.is-disabled:hover & {
+		.spectrum-Textfield.is-disabled &,
+		.spectrum-Textfield.is-disabled:hover & {
 			color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 		}
 
@@ -520,8 +520,8 @@
 			color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
 			background-color: transparent;
 
-			.is-disabled &,
-			.is-disabled:hover & {
+			.spectrum-Textfield.is-disabled &,
+			.spectrum-Textfield.is-disabled:hover & {
 				color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 			}
 		}
