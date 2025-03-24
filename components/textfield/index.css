@@ -394,16 +394,16 @@
 	.spectrum-Textfield.is-focused &,
 	&:focus {
 		border-color: var(--highcontrast-textfield-border-color-focus, var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus)));
-		color: var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus));
+		color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
 
 		&::placeholder {
-			color: var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus));
+			color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
 		}
 
 		/* focus hover */
 		&:hover {
-			border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
-			color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
+			border-color: var(--highcontrast-textfield-border-color-focus-hover, var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover)));
+			color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
 
 			&::placeholder {
 				color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
@@ -513,7 +513,7 @@
 
 		.spectrum-Textfield.is-disabled &,
 		.spectrum-Textfield.is-disabled:hover & {
-		border-color: var(--highcontrast-textfield-border-color-disabled, transparent);
+			border-color: var(--highcontrast-textfield-border-color-disabled, transparent);
 			color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 		}
 
@@ -619,9 +619,11 @@
 
 		.spectrum-Textfield-input {
 			&::placeholder {
-				--highcontrast-textfield-text-color-default: GrayText;
-				--highcontrast-textfield-text-color-hover: GrayText;
-				--highcontrast-textfield-text-color-keyboard-focus: GrayText;
+				--highcontrast-textfield-text-color-default: CanvasText;
+				--highcontrast-textfield-text-color-hover: CanvasText;
+				--highcontrast-textfield-text-color-focus: CanvasText;
+				--highcontrast-textfield-text-color-focus-hover: CanvasText;
+				--highcontrast-textfield-text-color-keyboard-focus: CanvasText;
 				--highcontrast-textfield-text-color-disabled: GrayText;
 				--highcontrast-textfield-text-color-readonly: CanvasText;
 			}
