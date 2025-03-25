@@ -12,31 +12,11 @@ export const InfieldButtonGroup = Variants({
 			isQuiet: true,
 		},
 		{
-			testHeading: "Position: top",
-			position: "top",
-		},
-		{
-			testHeading: "Position: bottom",
-			position: "bottom",
-		},
-		{
-			testHeading: "Position: left",
-			position: "left",
-		},
-		{
-			testHeading: "Position: right",
-			position: "right",
-		},
-		{
 			testHeading: "Stacked",
 			isStacked: true,
 		},
 	],
 	stateData: [
-		{
-			testHeading: "Disabled",
-			isDisabled: true,
-		},
 		{
 			testHeading: "Hovered",
 			isHovered: true,
@@ -46,12 +26,8 @@ export const InfieldButtonGroup = Variants({
 			isActive: true,
 		},
 		{
-			testHeading: "Focused",
-			isFocused: true,
-		},
-		{
-			testHeading: "Invalid",
-			isInvalid: true,
+			testHeading: "Disabled",
+			isDisabled: true,
 		},
 	],
 });
