@@ -406,7 +406,7 @@
 			color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
 
 			&::placeholder {
-				color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
+				color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
 			}
 		}
 	}
@@ -416,11 +416,11 @@
 	.spectrum-Textfield.is-focused:hover &,
 	.spectrum-Textfield.is-keyboardFocused:hover &,
 	&:focus:hover {
-		border-color: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
-		color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
+		border-color: var(--highcontrast-textfield-border-color-focus-hover, var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover)));
+		color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
 
 		&::placeholder {
-			color: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
+			color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
 		}
 	}
 
@@ -468,14 +468,14 @@
 
 		/* focus hover */
 		&:hover {
-			border-color: var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover));
+			border-color: var(--highcontrast-textfield-border-color-invalid-focus-hover, var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover)));
 		}
 	}
 
 	.spectrum-Textfield.is-invalid:focus:hover &,
 	.spectrum-Textfield.is-invalid.is-focused:hover &,
 	.spectrum-Textfield.is-invalid.is-keyboardFocused:hover & {
-		border-color: var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover));
+		border-color: var(--highcontrast-textfield-border-color-invalid-focus-hover, var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover)));
 	}
 
 	/* invalid keyboard focus */
@@ -597,6 +597,7 @@
 		--highcontrast-textfield-border-color-hover: Highlight;
 		--highcontrast-textfield-border-color-focus: Highlight;
 		--highcontrast-textfield-border-color-keyboard-focus: Highlight;
+		--highcontrast-textfield-border-color-focus-hover: Highlight;
 		--highcontrast-textfield-focus-indicator-color: Highlight;
 
 		--highcontrast-textfield-background-color-disabled: Canvas;
@@ -608,6 +609,7 @@
 		--highcontrast-textfield-border-color-invalid-hover: Highlight;
 		--highcontrast-textfield-border-color-invalid-focus: Highlight;
 		--highcontrast-textfield-border-color-invalid-keyboard-focus: Highlight;
+		--highcontrast-textfield-border-color-invalid-focus-hover: Highlight;
 
 		--highcontrast-textfield-text-color-default: CanvasText;
 		--highcontrast-textfield-text-color-hover: CanvasText;
