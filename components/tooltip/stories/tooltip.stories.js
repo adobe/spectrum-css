@@ -21,6 +21,16 @@ export default {
 			},
 			control: "text",
 		},
+		variant: {
+			name: "Variant",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["neutral", "info", "negative"],
+			control: "inline-radio",
+		},
 		placement: {
 			name: "Placement",
 			description: "The placement of the tooltip relative to the source. Note that placements that start with left/right do not change with text direction, but start/end placements do.",
@@ -76,6 +86,7 @@ export default {
 		isOpen: true,
 		isFocused: false,
 		showOnHover: false,
+		variant: "neutral",
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	},
 	parameters: {
@@ -123,14 +134,10 @@ ShowOnHover.parameters = {
 
 /**
  * By default, tooltips are the neutral variant. This is the most common variant because most tooltips are used to only
- * disclose additional information, without conveying a semantic meaning. The neutral variant never includes an icon.
+ * disclose additional information, without conveying a semantic meaning.
  *
- * Tooltips also come in other semantic variants: informative (blue), positive (green), and negative (red). These use
+ * Tooltips also come in other semantic variants: informative (blue) and negative (red). These use
  * [semantic colors](https://spectrum.adobe.com/page/color-system/#Color-semantics) to communicate the meaning.
- *
- * These semantic variants include an icon to supplement the messaging. These icons are predefined and can not be
- * customized. Unless it's being used to provide context about the exact same icon, a semantic tooltip should always
- * show an icon. Doing this is essential for helping users with color vision deficiency to discern the message tone.
  */
 export const SemanticVariants = SemanticVariantGroup.bind({});
 SemanticVariants.tags = ["!dev"];
