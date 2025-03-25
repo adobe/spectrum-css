@@ -49,7 +49,7 @@ export default {
 			type: { name: "string" },
 			control: { type: "text" },
 			table: {
-				type: { summary: "boolean" },
+				type: { summary: "string" },
 				category: "Content",
 			},
 		},

@@ -1,4 +1,3 @@
-
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Container } from "@spectrum-css/preview/decorators";
