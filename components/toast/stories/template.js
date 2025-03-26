@@ -19,8 +19,8 @@ export const Template = ({
 	customStyles = {},
 	id = getRandomId("toast"),
 } = {}, context = {}) => {
-	let iconName = "Info";
-	if (variant === "negative") iconName = "Alert";
+	let iconName = "InfoCircle";
+	if (variant === "negative") iconName = "AlertTriangle";
 	if (variant === "positive") iconName = "CheckmarkCircle";
 	if (variant === "neutral") iconName = undefined;
 
