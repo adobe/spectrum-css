@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -42,7 +42,7 @@
 	--spectrum-coachmark-step-color: var(--spectrum-coach-mark-pagination-color);
 	--spectrum-coachmark-step-font-style: var(--spectrum-body-serif-font-style);
 	--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-font-size);
-	--spectrum-coachmark-step-text-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--spectrum-coachmark-step-text-font-weight: var(--spectrum-medium-font-weight);
 	--spectrum-coachmark-step-text-line-height: var(--spectrum-line-height-200);
 	--spectrum-coachmark-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
 
@@ -53,7 +53,9 @@
 	--mod-popover-content-area-spacing: 0;
 	--mod-button-edge-to-visual-only: 9px;
 	/* @passthrough end */
+}
 
+.spectrum-CoachMark {
 	position: relative;
 	min-inline-size: var(--mod-coachmark-min-width, var(--spectrum-coachmark-min-width));
 	max-inline-size: var(--mod-coachmark-max-width, var(--spectrum-coachmark-max-width));
@@ -121,6 +123,7 @@
 
 	white-space: nowrap;
 	z-index: 1;
+	margin-inline-start: var(--mod-coachmark-heading-to-action-button, var(--spectrum-spacing-300));
 	margin-block: var(--mod-coachmark-action-menu-vertical-offset, var(--spectrum-coachmark-action-menu-vertical-offset));
 }
 
