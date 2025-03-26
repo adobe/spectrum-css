@@ -7,7 +7,7 @@ import { CoachMarkGroup } from "./coachmark.test.js";
 import {
 	Template,
 	CoachmarkMenuStatesTemplate,
-	CoachmarkMediaStatesTemplate,
+	CoachMarkMediaOptionsTemplate,
 } from "./template.js";
 
 /**
@@ -125,9 +125,6 @@ Standard.parameters = {
 };
 Standard.args = {
 	imageSource: "example-card-landscape.png",
-	hasImage: true,
-	hasActionMenu: false,
-	imageIsFixedHeight: false,
 };
 
 export const StandardNoMedia = Template.bind({});
@@ -148,12 +145,12 @@ StandardNoMedia.parameters = {
 };
 
 /** Images and media have a minimum height and can grow with the parent component. Fixed height media is constrained to a 4:3 aspect ratio by applying the `spectrum-CoachMark-image-wrapper--fixedHeight` class. When this fixed height class is used, the height can be customized using the modifiable custom property `--mod-coachmark-media-fixed-height`.  */
-export const MediaStates = CoachmarkMediaStatesTemplate.bind({});
-MediaStates.tags = ["!dev"];
-MediaStates.args = {
+export const MediaOptions = CoachMarkMediaOptionsTemplate.bind({});
+MediaOptions.tags = ["!dev"];
+MediaOptions.args = {
 	imageSource: "example-card-portrait.png",
 };
-MediaStates.parameters = {
+MediaOptions.parameters = {
 	docs: {
 		story: {
 			height: "725px",
@@ -163,7 +160,7 @@ MediaStates.parameters = {
 		disableSnapshot: true,
 	},
 };
-MediaStates.storyName = "Media states";
+MediaOptions.storyName = "Media options";
 
 /** The action menu, if enabled, is shown in line with the title. */
 export const WithActionMenu = CoachmarkMenuStatesTemplate.bind({});

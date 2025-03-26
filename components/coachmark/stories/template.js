@@ -195,7 +195,7 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 	});
 
 /* Displays fixed and minimum height images in a single story. */
-export const CoachmarkMediaStatesTemplate = (args, context) =>
+export const CoachMarkMediaOptionsTemplate = (args, context) =>
 	Container({
 		withBorder: false,
 		withHeading: false,
@@ -226,9 +226,7 @@ export const CoachmarkMediaStatesTemplate = (args, context) =>
 				content: Template(
 					{
 						...args,
-						hasImage: true,
 						imageIsFixedHeight: false,
-						imageSource: "example-card-portrait.png",
 						customStyles: {
 							"height": "700px"
 						}
