@@ -18,7 +18,7 @@ import {
 import { TypographyGroup } from "./typography.test.js";
 
 /**
- * Spectrum typography is broken out into several separate components: heading, body, detail, and code. Internationalized typography examples are also shown.
+ * Spectrum typography is broken out into several separate components: [heading](#heading), [body](#body), [detail](#detail), and [code](#code). [Internationalized typography examples](#internationalized-typography) are also shown.
  */
 export default {
 	title: "Typography",
@@ -87,7 +87,7 @@ export default {
 };
 
 /**
- * By default, Typography components do not include outer margins. If you would like to add margins, simply add the `.spectrum-Typography` class to your container, and every typography component inside of your container will have the correct margins.
+ * By default, typography components do not include outer margins. If you would like to add margins, simply add the `.spectrum-Typography` class to your container, and every typography component inside of your container will have the correct margins.
  */
 export const Default = TypographyGroup.bind({});
 Default.args = {
@@ -150,6 +150,7 @@ HeadingSizes.args = {
 HeadingSizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+HeadingSizes.storyName = "Heading sizes";
 
 /**
  * Body is primarily used for Spectrum components and for blocks of text.
@@ -172,6 +173,7 @@ BodySizes.args = {
 BodySizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+BodySizes.storyName = "Body sizes";
 
 /**
  * When typography elements are paired, such as with heading and body below, clear content hierarchies are shown.
@@ -191,6 +193,7 @@ HeadingBodyHierarchy.tags = ["!dev"];
 HeadingBodyHierarchy.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+HeadingBodyHierarchy.storyName = "Heading with body pairings";
 
 export const DetailSizes = (args, context) => Sizes({
 	Template,
@@ -212,6 +215,7 @@ DetailSizes.tags = ["!dev"];
 DetailSizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+DetailSizes.storyName = "Detail sizes";
 
 export const CodeSizes = (args, context) => Sizes({
 	Template,
@@ -229,6 +233,7 @@ CodeSizes.args = {
 CodeSizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+CodeSizes.storyName = "Code sizes";
 
 // ====== Docs: Glyphs and Variants ====== //
 /**
@@ -239,6 +244,7 @@ HeadingVariants.tags = ["!dev"];
 HeadingVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+HeadingVariants.storyName = "Heading";
 
 /**
  * Body is a typography component primarily used within Spectrum components and for blocks of text.
@@ -248,6 +254,7 @@ BodyVariants.tags = ["!dev"];
 BodyVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+BodyVariants.storyName = "Body";
 
 /**
  *  Detail is used for disclosing extra information or smaller items in hierarchical relationships of text.
@@ -257,6 +264,7 @@ DetailVariants.tags = ["!dev"];
 DetailVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+DetailVariants.storyName = "Detail";
 
 /**
  * Code is used for text that represents code.
@@ -268,20 +276,21 @@ CodeVariants.tags = ["!dev"];
 CodeVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+CodeVariants.storyName = "Code";
 
 // ====== Docs: Internationalization ====== //
 /**
- * We should note that Hebrew and Arabic are rtl languages somewhere over here.
+ * In the examples below, Hebrew and Arabic are "RTL" languages, meaning they are read from right to left.
  */
 export const InternationalizedHeading = DocsInternationalizedHeadingVariants.bind({});
-InternationalizedHeading.storyName = "Internationalized Heading";
+InternationalizedHeading.storyName = "Internationalized heading";
 InternationalizedHeading.tags = ["!dev"];
 InternationalizedHeading.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const InternationalizedBody = DocsInternationalizedBodyVariants.bind({});
-InternationalizedBody.storyName = "Internationalized Body";
+InternationalizedBody.storyName = "Internationalized body";
 InternationalizedBody.tags = ["!dev"];
 InternationalizedBody.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -305,16 +314,17 @@ InternationalizedHeadingBodyHierarchy.tags = ["!dev"];
 InternationalizedHeadingBodyHierarchy.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+InternationalizedHeadingBodyHierarchy.storyName = "Internationalized heading and body pairings";
 
 export const InternationalizedDetail = DocsInternationalizedDetailVariants.bind({});
-InternationalizedDetail.storyName = "Internationalized Detail";
+InternationalizedDetail.storyName = "Internationalized detail";
 InternationalizedDetail.tags = ["!dev"];
 InternationalizedDetail.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const InternationalizedCode = DocsInternationalizedCodeVariants.bind({});
-InternationalizedCode.storyName = "Internationalized Code";
+InternationalizedCode.storyName = "Internationalized code";
 InternationalizedCode.tags = ["!dev"];
 InternationalizedCode.parameters = {
 	chromatic: { disableSnapshot: true },
