@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/bundle",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A demo-ready bundle of the components in the Spectrum CSS library.",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -32,7 +32,7 @@
 	"devDependencies": {
 		"@spectrum-css/accordion": "8.0.0-next.0",
 		"@spectrum-css/actionbar": "11.0.0-next.0",
-		"@spectrum-css/actionbutton": "8.0.0-next.0",
+		"@spectrum-css/actionbutton": "8.0.0-next.1",
 		"@spectrum-css/actiongroup": "7.0.0-next.0",
 		"@spectrum-css/actionmenu": "8.0.0-next.0",
 		"@spectrum-css/alertbanner": "4.0.0-next.1",
@@ -61,7 +61,7 @@
 		"@spectrum-css/commons": "11.0.0",
 		"@spectrum-css/contextualhelp": "6.0.0-next.1",
 		"@spectrum-css/datepicker": "5.0.0-next.0",
-		"@spectrum-css/dial": "5.1.0",
+		"@spectrum-css/dial": "5.2.0",
 		"@spectrum-css/dialog": "13.0.0-next.2",
 		"@spectrum-css/divider": "6.0.0-next.0",
 		"@spectrum-css/dropindicator": "8.0.0-next.0",
@@ -117,7 +117,7 @@
 		"@spectrum-css/well": "7.1.0",
 		"colors": "^1.4.0",
 		"postcss": "^8.5.3",
-		"postcss-licensing": "^2.0.0"
+		"postcss-licensing": "^3.0.0"
 	},
 	"keywords": [
 		"design-system",

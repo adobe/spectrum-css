@@ -2,7 +2,7 @@
 "@spectrum-css/checkbox": major
 ---
 
-# Checkbox S2 Migration
+#### Checkbox S2 Migration
 
 Checkbox's control and color tokens have been updated by the latest S2 tokens:
 
@@ -14,8 +14,9 @@ Checkbox's control and color tokens have been updated by the latest S2 tokens:
 - Fixed typo in `--mod-focus-indicator-thickness`
 - Removed interactive state selectors in `--emphasized` variant that was overriding other variants
 - Refactored WHCM settings for read-only and disabled states
+- `--mod-checkbox-spacing` has been renamed to `--mod-checkbox-margin-block`
 
-## New tokens
+##### New tokens
 
 `--spectrum-component-size-width-ratio-down`
 `--spectrum-checkbox-bottom-to-text`
@@ -25,7 +26,7 @@ Checkbox's control and color tokens have been updated by the latest S2 tokens:
 `--spectrum-accent-content-color-down`
 `--spectrum-accent-content-color-key-focus`
 
-## Modified tokens
+##### Modified tokens
 
 `--spectrum-checkbox-checkmark-color`
 `--spectrum-checkbox-invalid-color-down`

@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- Updated dependencies []:
+- Updated dependencies:
   - @spectrum-css/menu@10.0.0-next.0
   - @spectrum-css/pickerbutton@7.0.0-next.0
   - @spectrum-css/popover@9.0.0-next.0
@@ -14,11 +14,13 @@
 
 ### Patch Changes
 
-- [#3609](https://github.com/adobe/spectrum-css/pull/3609) [`851be13`](https://github.com/adobe/spectrum-css/commit/851be13295f9d42d548894fee6626009f053de61) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Fast follow fixes for combobox
+📝 [#3609](https://github.com/adobe/spectrum-css/pull/3609) [`851be13`](https://github.com/adobe/spectrum-css/commit/851be13295f9d42d548894fee6626009f053de61) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
-  - corrects container query for the `--system` reference to "legacy" in the combobox/themes/spectrum.css file
-  - corrects the border colors for several combobox states including focus, keyboardFocus, focus+hover, disabled, read-only for all themes
-  - adds `--spectrum-combobox-readonly-input-border-color: var(--spectrum-gray-400);` to express.css theme so that the default border and read-only border colors are the same
+#### Fast follow fixes for combobox
+
+- corrects container query for the `--system` reference to "legacy" in the combobox/themes/spectrum.css file
+- corrects the border colors for several combobox states including focus, keyboardFocus, focus+hover, disabled, read-only for all themes
+- adds `--spectrum-combobox-readonly-input-border-color: var(--spectrum-gray-400);` to express.css theme so that the default border and read-only border colors are the same
 
 ## 4.1.1
 
