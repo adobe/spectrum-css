@@ -30,18 +30,12 @@ export const CoachMarkGroup = Variants({
 			testHeading: "Default",
 			hasActionMenu: false,
 			hasPagination: false,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)",
-			},
 		},
 		{
 			testHeading: "With media",
 			hasActionMenu: false,
 			hasPagination: false,
 			hasImage: true,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)",
-			},
 		},
 		{
 			testHeading: "With media + fixed height",
@@ -49,18 +43,12 @@ export const CoachMarkGroup = Variants({
 			hasPagination: false,
 			hasImage: true,
 			imageIsFixedHeight: true,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)",
-			},
 		},
 		{
 			testHeading: "With action menu",
 			hasPagination: false,
 			hasActionMenu: true,
 			isOpen: true,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)",
-			},
 		},
 		{
 			testHeading: "With action menu + media",
@@ -68,32 +56,20 @@ export const CoachMarkGroup = Variants({
 			isOpen: true,
 			hasImage: true,
 			hasActionMenu: true,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)",
-			},
 		},
 		{
 			testHeading: "With pagination",
 			hasActionMenu: false,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)",
-			},
 		},
 		{
 			testHeading: "With pagination + media",
 			hasActionMenu: false,
 			hasImage: true,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)",
-			},
 		},
 		{
 			testHeading: "With a long title",
 			title: "Coach mark title with longer text that wraps to see how icon should align",
 			hasActionMenu: true,
-			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)",
-			},
 		},
 	],
 	stateData: [],
