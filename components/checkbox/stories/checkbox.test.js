@@ -10,8 +10,26 @@ export const CheckboxGroup = Variants({
 			testHeading: "Default",
 		},
 		{
+			testHeading: "Hovered",
+			isHovered: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+		{
 			testHeading: "Emphasized",
 			isEmphasized: true,
+		},
+		{
+			testHeading: "Emphasized, hovered",
+			isEmphasized: true,
+			isHovered: true,
+		},
+		{
+			testHeading: "Emphasized, focused",
+			isEmphasized: true,
+			isFocused: true,
 		},
 		{
 			testHeading: "Truncation",
@@ -100,5 +118,5 @@ export const CheckboxGroup = Variants({
 			isReadOnly: true,
 			isChecked: true,
 		},
-	]
+	],
 });
