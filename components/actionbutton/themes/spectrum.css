@@ -37,7 +37,7 @@
 		&.spectrum-ActionButton--sizeM,
 		&.spectrum-ActionButton--sizeL,
 		&.spectrum-ActionButton--sizeXL {
-			--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-100);
+			--spectrum-actionbutton-border-radius-default: var(--spectrum-corner-radius-100);
 		}
 
 		&.spectrum-ActionButton--quiet {

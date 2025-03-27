@@ -53,7 +53,7 @@
 	--spectrum-actionbutton-border-color: var(--highcontrast-actionbutton-border-color, var(--mod-actionbutton-border-color-default, var(--spectrum-actionbutton-border-color-default)));
 	--spectrum-actionbutton-content-color: var(--highcontrast-actionbutton-content-color, var(--mod-actionbutton-content-color-default, var(--spectrum-neutral-content-color-default)));
 
-	--spectrum-actionbutton-border-radius: var(--mod-actionbutton-border-radius, var(--spectrum-actionbutton-border-radius));
+	--spectrum-actionbutton-border-radius: var(--mod-actionbutton-border-radius, var(--spectrum-actionbutton-border-radius-default));
 	--spectrum-actionbutton-border-width: var(--mod-actionbutton-border-width, var(--spectrum-border-width-100));
 
 	--spectrum-actionbutton-focus-indicator-gap: var(--mod-actionbutton-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
