@@ -35,6 +35,8 @@
     ".spectrum-Tooltip--end-top.is-open:dir(rtl)",
     ".spectrum-Tooltip--end.is-open",
     ".spectrum-Tooltip--end.is-open:dir(rtl)",
+    ".spectrum-Tooltip--info",
+    ".spectrum-Tooltip--info .spectrum-Tooltip-tip",
     ".spectrum-Tooltip--left",
     ".spectrum-Tooltip--left .spectrum-Tooltip-tip",
     ".spectrum-Tooltip--left .spectrum-Tooltip-tip:dir(rtl)",
@@ -47,6 +49,8 @@
     ".spectrum-Tooltip--left-top .spectrum-Tooltip-tip:dir(rtl)",
     ".spectrum-Tooltip--left-top.is-open",
     ".spectrum-Tooltip--left.is-open",
+    ".spectrum-Tooltip--negative",
+    ".spectrum-Tooltip--negative .spectrum-Tooltip-tip",
     ".spectrum-Tooltip--right",
     ".spectrum-Tooltip--right .spectrum-Tooltip-tip",
     ".spectrum-Tooltip--right .spectrum-Tooltip-tip:dir(rtl)",
@@ -302,6 +306,8 @@
     "--mod-overlay-animation-duration-opened",
     "--mod-tooltip-animation-distance",
     "--mod-tooltip-background-color-default",
+    "--mod-tooltip-background-color-informative",
+    "--mod-tooltip-background-color-negative",
     "--mod-tooltip-border-radius",
     "--mod-tooltip-cjk-line-height",
     "--mod-tooltip-content-color",
@@ -324,8 +330,9 @@
   "component": [
     "--spectrum-tooltip-animation-distance",
     "--spectrum-tooltip-animation-duration",
-    "--spectrum-tooltip-backgound-color-default-neutral",
     "--spectrum-tooltip-background-color-default",
+    "--spectrum-tooltip-background-color-informative",
+    "--spectrum-tooltip-background-color-negative",
     "--spectrum-tooltip-border-radius",
     "--spectrum-tooltip-cjk-line-height",
     "--spectrum-tooltip-content-color",
@@ -358,14 +365,17 @@
     "--spectrum-corner-radius-400",
     "--spectrum-font-size-75",
     "--spectrum-gray-25",
+    "--spectrum-informative-background-color-default",
+    "--spectrum-negative-background-color-default",
     "--spectrum-neutral-background-color-default",
-    "--spectrum-neutral-subdued-background-color-default",
     "--spectrum-regular-font-weight",
     "--spectrum-spacing-75"
   ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-tooltip-background-color-default",
+    "--highcontrast-tooltip-background-color-informative",
+    "--highcontrast-tooltip-background-color-negative",
     "--highcontrast-tooltip-border-width"
   ]
 }

@@ -1,4 +1,3 @@
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -18,18 +17,7 @@ export const Template = ({
 	showOnHover = false,
 	customStyles = {},
 	customClasses = [],
-} = {}, context = {}) => {
-	let variantIcon;
-	if (variant === "info") {
-		variantIcon = "Info";
-	}
-	else if (variant === "positive") {
-		variantIcon = "CheckmarkCircle";
-	}
-	else if (variant === "negative") {
-		variantIcon = "Alert";
-	}
-
+} = {}) => {
 	if (showOnHover) {
 		document.addEventListener("DOMContentLoaded", () => {
 			[...document.querySelectorAll(`.${rootClass}`)].forEach(tooltip => {
@@ -42,6 +30,8 @@ export const Template = ({
 		<span
 			class=${classMap({
 				[rootClass]: true,
+				[`${rootClass}--${variant}`]:
+					typeof variant !== "undefined" && variant !== "neutral",
 				[`${rootClass}--${placement}`]: typeof placement !== "undefined",
 				"is-open": isOpen,
 				"is-focused": isFocused,
@@ -49,14 +39,6 @@ export const Template = ({
 			})}
 			style=${styleMap(customStyles)}
 		>
-			${when(variantIcon, () =>
-				Icon({
-					iconName: variantIcon,
-					setName: "workflow",
-					size: "m",
-					customClasses: [`${rootClass}-typeIcon`],
-				}, context)
-			)}
 			${when(label, () => html`
 				<span class=${classMap({
 					[`${rootClass}-label`]: true
@@ -145,7 +127,6 @@ export const SemanticVariantGroup = (args, context) => {
 	const variants = [
 		"neutral",
 		"info",
-		"positive",
 		"negative",
 	];
 
