@@ -1,6 +1,7 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
-import { html } from "lit";
+import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
@@ -12,9 +13,11 @@ export const Template = ({
 	max = 5,
 	value = 0,
 	isReadOnly = false,
-	isFocused = false,
+	isKeyboardFocused = false,
 	isDisabled = true,
 	isEmphasized = false,
+	withTooltip = false,
+	size = "s",
 	customClasses = [],
 	id = getRandomId("rating"),
 } = {}, context = {}) => {
@@ -26,18 +29,28 @@ export const Template = ({
 				[rootClass]: true,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
-				"is-focused": isFocused,
+				"is-keyboardFocused": isKeyboardFocused,
 				[`${rootClass}--emphasized`]: isEmphasized,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 			@focusin=${function() {
-				updateArgs({ isFocused: true });
+				updateArgs({ isKeyboardFocused: true });
 			}}
 			@focusout=${function() {
-				updateArgs({ isFocused: false });
+				updateArgs({ isKeyboardFocused: false });
 			}}
 		>
+			${withTooltip
+				? Tooltip({
+					label: "Edit rating",
+					isOpen: true,
+					placement: "top",
+					showOnHover: true,
+			}, context)
+			: nothing}
 			<input
 				class=${classMap({
 					[`${rootClass}-input`]: true,
@@ -66,19 +79,18 @@ export const Template = ({
 						class=${classMap({
 							[`${rootClass}-icon`]: true,
 							"is-selected": idx <= value - 1,
-							"is-currentValue": idx === value - 1,
 						})}
 						@click=${function() {
 							updateArgs({ value: idx + 1, isFocused: true });
 						}}
 					>
 						${Icon({
-							iconName: "Star",
+							iconName: "StarFilled",
 							setName: "workflow",
 							customClasses: [`${rootClass}-starActive`],
 						}, context)}
 						${Icon({
-							iconName: "StarOutline",
+							iconName: "Star",
 							setName: "workflow",
 							customClasses: [`${rootClass}-starInactive`],
 						}, context)}

@@ -18,12 +18,16 @@ export const RatingGroup = Variants({
 			isDisabled: true,
 		},
 		{
-			testHeading: "Focused",
-			isFocused: true,
+			testHeading: "Keyboard focused",
+			isKeyboardFocused: true,
 		},
 		{
 			testHeading: "Read-only",
 			isReadOnly: true,
+		},
+		{
+			testHeading: "With tooltip",
+			withTooltip: true,
 		},
 	]
 });

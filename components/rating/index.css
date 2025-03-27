@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -12,35 +12,23 @@
  */
 
 .spectrum-Rating {
-	--spectrum-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-	--spectrum-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-	--spectrum-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-	--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-
-	--spectrum-rating-indicator-border-radius: 2px;
+	--spectrum-rating-width: var(--spectrum-rating-width-medium);
 
 	/* Icon */
 	--spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
 	--spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-100);
-	--spectrum-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-	--spectrum-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-	--spectrum-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
+	--spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
+	--spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 
-
-
 	/* Focus ring */
-	--spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-rating-border-radius: var(--spectrum-corner-radius-medium-size-medium);
 	--spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
-	/* Spacing (top/bottom edge to icon) */
-	--spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-
-	/* Indicator */
-	--spectrum-rating-indicator-height: var(--spectrum-border-width-200);
-	--spectrum-rating-indicator-border-radius: 2px;
+	/* Spacing */
+	--spectrum-rating-icon-spacing: var(--spectrum-spacing-75);
 
 	/* Colors */
 	/* selected + emphasized */
@@ -56,17 +44,19 @@
 	position: relative;
 	display: inline-flex;
 	flex: 0 0 auto;
+	justify-content: space-between;
 
 	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
-
-	inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
 	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
-	padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
+	padding-inline: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
+	padding-block: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 
 	cursor: pointer;
 
-	&.is-focused {
+	inline-size: var(--mod-rating-width, var(--spectrum-rating-width));
+
+	&.is-keyboardFocused {
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
 
 		.spectrum-Rating-icon {
@@ -93,12 +83,6 @@
 			color: var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down));
 		}
 
-		/* Show which star is currently selected */
-		.spectrum-Rating-icon.is-currentValue::after {
-			/* Match the color of the star */
-			background: currentColor;
-		}
-
 		/* When the entire component is hovered, show all solid icons */
 		.spectrum-Rating-starActive {
 			display: block;
@@ -116,6 +100,17 @@
 	}
 }
 
+.spectrum-Rating--sizeS {
+	--mod-rating-width: var(--spectrum-rating-width-small);
+
+	/* Icon */
+	--mod-rating-icon-height: var(--spectrum-workflow-icon-size-75);
+	--mod-rating-icon-width: var(--spectrum-workflow-icon-size-75);
+
+	/* Focus ring */
+	--mod-rating-border-radius: var(--spectrum-corner-radius-medium-size-small);
+}
+
 .spectrum-Rating-input {
 	position: absolute;
 	z-index: 0;
@@ -127,12 +122,14 @@
 }
 
 .spectrum-Rating-icon {
+	--mod-icon-inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
+	--mod-icon-block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+
 	position: relative;
 	background-size: contain;
 	background-repeat: no-repeat;
 	inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
 	block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
-	padding-block: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 
 	.spectrum-Rating-starActive {
 		display: none;
@@ -150,17 +147,6 @@
 		.spectrum-Rating-starInactive {
 			display: none;
 		}
-	}
-
-	&.is-currentValue::after {
-		border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
-		content: "";
-		block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
-		inline-size: var(--spectrum-rating-indicator-width);
-
-		/* position the indicator relative to the element's total bottom size (including bottom padding) */
-		inset-block-end: calc((var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) * 2) - 1px);
-		position: absolute;
 	}
 
 	/* All stars following the hovered star */
@@ -196,7 +182,7 @@
 }
 
 .spectrum-Rating--emphasized {
-	&.is-focused {
+	&.is-keyboardFocused {
 		.spectrum-Rating-icon.is-selected {
 			color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
 		}
@@ -254,16 +240,8 @@
 		--highcontrast-rating-emphasized-icon-color-down: Highlight;
 		--highcontrast-rating-focus-color-outline: CanvasText;
 
-		&.is-focused {
+		&.is-keyboardFocused {
 			outline: 1px solid var(--highcontrast-rating-focus-color-outline);
 		}
-
-		&:hover .spectrum-Rating-icon.is-currentValue::after {
-			background-color: var(--highcontrast-rating-icon-color-key-focus);
-		}
-	}
-
-	.spectrum-Rating--emphasized:hover .spectrum-Rating-icon.is-currentValue::after {
-		background-color: var(--highcontrast-rating-emphasized-icon-color-default);
 	}
 }
