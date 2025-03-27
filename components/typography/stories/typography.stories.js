@@ -18,7 +18,7 @@ import {
 import { TypographyGroup } from "./typography.test.js";
 
 /**
- * Spectrum typography is broken out into several separate components: [heading](#heading), [body](#body), [detail](#detail), and [code](#code). [Internationalized typography examples](#internationalized-typography) are also shown.
+ * Spectrum typography is broken out into several separate components: [heading](#heading), [body](#body), [detail](#detail), and [code](#code). [Internationalized typography examples](#internationalized%20body) are also shown.
  */
 export default {
 	title: "Typography",
