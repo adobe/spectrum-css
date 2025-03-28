@@ -17,6 +17,7 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
+		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
@@ -24,7 +25,7 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/swatch": ">=7.0.0 <8.0.0",
+		"@spectrum-css/swatch": ">=8.0.0 <9.0.0",
 		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {

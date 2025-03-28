@@ -17,6 +17,7 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
+		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
@@ -43,6 +44,9 @@
 			"optional": true
 		},
 		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/quickaction": {
 			"optional": true
 		},
 		"@spectrum-css/tokens": {
