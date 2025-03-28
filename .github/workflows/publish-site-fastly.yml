@@ -75,7 +75,4 @@ jobs:
                   fastly-api-token: ${{ secrets.FASTLY_API_KEY }}
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   project_directory: dist
-                  service_id: ZRzI0ci9myQCiR14oxEmC7
-                  comment: ${{ inputs.deploy-message }}
-                  alias: ${{ inputs.alias }}
               timeout-minutes: 10
