@@ -202,7 +202,7 @@ jobs:
     # -------------------------------------------------------------
     publish_site:
         name: Publish
-        uses: ./.github/workflows/publish-site.yml
+        uses: ./.github/workflows/publish-site-fastly.yml
         with:
             deploy-message: ${{ github.event.pull_request.title }}
             alias: pr-${{ github.event.number }}

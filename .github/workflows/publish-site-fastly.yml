@@ -1,0 +1,80 @@
+name: Publish documentation
+#
+# This workflow publishes the documentation to Fastly
+#
+
+on:
+    workflow_dispatch:
+        inputs:
+            deploy-message:
+                required: false
+                type: string
+            alias:
+                required: false
+                type: string
+    workflow_call:
+        inputs:
+            deploy-message:
+                required: false
+                type: string
+            alias:
+                required: false
+                type: string
+
+permissions:
+    contents: read
+    pull-requests: write
+
+jobs:
+    publish_site:
+        name: Publish to Fastly
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        steps:
+            ## --- SETUP --- ##
+            - name: Check out code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Enable Corepack
+              run: corepack enable
+
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+
+            ## --- INSTALL --- ##
+            # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --immutable
+
+            ## --- BUILD --- ##
+            - name: Build storybook
+              shell: bash
+              run: yarn build:docs
+
+            ## --- DEPLOY WEBSITE TO Fastly --- ##
+            - name: Deploy to Fastly
+              uses: fastly/compute-actions/preview@v11
+              with:
+                  fastly-api-token: ${{ secrets.FASTLY_API_KEY }}
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  service_id: ZRzI0ci9myQCiR14oxEmC7
+                  comment: ${{ inputs.deploy-message }}
+                  alias: ${{ inputs.alias }}
+              timeout-minutes: 10
