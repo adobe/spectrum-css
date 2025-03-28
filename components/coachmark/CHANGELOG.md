@@ -1,5 +1,13 @@
 # Change log
 
+## 9.1.2-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`5adef1d`](https://github.com/adobe/spectrum-css/commit/5adef1d15d07516dc9c1aac7bbcf9ac5bdeb9e97)]:
+  - @spectrum-css/actionbutton@7.1.3-next.0
+  - @spectrum-css/actionmenu@7.1.2-next.0
+
 ## 9.1.1
 
 ### Patch Changes

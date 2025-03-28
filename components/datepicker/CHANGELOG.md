@@ -1,5 +1,12 @@
 # Change log
 
+## 4.1.2-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/calendar@7.1.1-next.0
+
 ## 4.1.1
 
 ### Patch Changes

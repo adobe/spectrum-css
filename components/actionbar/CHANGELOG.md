@@ -1,5 +1,12 @@
 # Change log
 
+## 10.1.2-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/actiongroup@6.1.1-next.0
+
 ## 10.1.1
 
 ### Patch Changes

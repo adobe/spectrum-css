@@ -1,5 +1,11 @@
 # Change log
 
+## 7.1.3-next.0
+
+### Patch Changes
+
+- [#3644](https://github.com/adobe/spectrum-css/pull/3644) [`5adef1d`](https://github.com/adobe/spectrum-css/commit/5adef1d15d07516dc9c1aac7bbcf9ac5bdeb9e97) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Fix support for `--mod-actionbutton-border-radius` to make sure it is surfaced to consumers, and properly overwrites the default border radius setting.
+
 ## 7.1.2
 
 ### Patch Changes

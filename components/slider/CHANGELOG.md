@@ -1,5 +1,12 @@
 # Change log
 
+## 6.3.1-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/stepper@7.1.4-next.0
+
 ## 6.3.0
 
 ### Minor Changes
