@@ -353,7 +353,6 @@
 	margin: 0;
 	appearance: none;
 
-
 	&[type="number"] {
 		/* stylelint-disable-next-line property-no-vendor-prefix -- Removes the native spin buttons in Firefox. */
 		-moz-appearance: textfield;
@@ -515,12 +514,6 @@
 		color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
 		outline: none;
 
-		.spectrum-Textfield.is-disabled &,
-		.spectrum-Textfield.is-disabled:hover & {
-			border-color: var(--highcontrast-textfield-border-color-disabled, transparent);
-			color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
-		}
-
 		&::placeholder {
 			color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
 			background-color: transparent;
@@ -530,6 +523,13 @@
 				color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 			}
 		}
+	}
+
+	/****** ReadOnly & Disabled ******/
+	.spectrum-Textfield.is-readOnly.is-disabled &,
+	.spectrum-Textfield.is-disabled.is-readOnly:hover & {
+		border-color: var(--highcontrast-textfield-border-color-disabled, transparent);
+		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 	}
 }
 
