@@ -327,7 +327,7 @@
 
 	vertical-align: top; /* used to align them correctly in forms. */
 	outline: none;
-	background-color: var(--spectrum-textfield-background-color);
+	background-color: var(--highcontrast-textfield-background-color, var(--spectrum-textfield-background-color));
 	border-width: var(--mod-textfield-border-width, var(--spectrum-textfield-border-width));
 	border-style: solid;
 	border-color: var(--highcontrast-textfield-border-color, var(--mod-textfield-border-color, var(--spectrum-textfield-border-color)));
@@ -345,10 +345,14 @@
 	grid-row: 2;
 	grid-column: 1 / span 2;
 
+	/* prevents unexpected color changes for border in high contrast mode */
+	forced-color-adjust: none;
+
 	/*** ↓ Browser Mitigations for Input ↓ ***/
 	/* Firefox and Safari - Remove the margin for input. */
 	margin: 0;
 	appearance: none;
+
 
 	&[type="number"] {
 		/* stylelint-disable-next-line property-no-vendor-prefix -- Removes the native spin buttons in Firefox. */
@@ -599,6 +603,7 @@
 		--highcontrast-textfield-border-color-keyboard-focus: Highlight;
 		--highcontrast-textfield-border-color-focus-hover: Highlight;
 		--highcontrast-textfield-focus-indicator-color: Highlight;
+		--highcontrast-textfield-background-color: Canvas;
 
 		--highcontrast-textfield-background-color-disabled: Canvas;
 		--highcontrast-textfield-border-color-disabled: GrayText;
@@ -611,24 +616,17 @@
 		--highcontrast-textfield-border-color-invalid-keyboard-focus: Highlight;
 		--highcontrast-textfield-border-color-invalid-focus-hover: Highlight;
 
-		--highcontrast-textfield-text-color-default: CanvasText;
-		--highcontrast-textfield-text-color-hover: CanvasText;
-		--highcontrast-textfield-text-color-keyboard-focus: CanvasText;
-		--highcontrast-textfield-text-color-readonly: CanvasText;
-		--highcontrast-textfield-text-color-disabled: GrayText;
-		--highcontrast-textfield-text-color-valid: CanvasText;
-		--highcontrast-textfield-text-color-invalid: CanvasText;
-
-		.spectrum-Textfield-input {
-			&::placeholder {
-				--highcontrast-textfield-text-color-default: CanvasText;
-				--highcontrast-textfield-text-color-hover: CanvasText;
-				--highcontrast-textfield-text-color-focus: CanvasText;
-				--highcontrast-textfield-text-color-focus-hover: CanvasText;
-				--highcontrast-textfield-text-color-keyboard-focus: CanvasText;
-				--highcontrast-textfield-text-color-disabled: GrayText;
-				--highcontrast-textfield-text-color-readonly: CanvasText;
-			}
+		&,
+		.spectrum-Textfield-input::placeholder {
+			--highcontrast-textfield-text-color-valid: CanvasText;
+			--highcontrast-textfield-text-color-invalid: CanvasText;
+			--highcontrast-textfield-text-color-default: CanvasText;
+			--highcontrast-textfield-text-color-hover: CanvasText;
+			--highcontrast-textfield-text-color-focus: CanvasText;
+			--highcontrast-textfield-text-color-focus-hover: CanvasText;
+			--highcontrast-textfield-text-color-keyboard-focus: CanvasText;
+			--highcontrast-textfield-text-color-disabled: GrayText;
+			--highcontrast-textfield-text-color-readonly: CanvasText;
 		}
 	}
 }
