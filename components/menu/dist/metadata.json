@@ -134,9 +134,7 @@
     ".spectrum-Menu:dir(rtl)",
     ".spectrum-Menu:lang(ja)",
     ".spectrum-Menu:lang(ko)",
-    ".spectrum-Menu:lang(zh)",
-    "[dir=\"rtl\"] .spectrum-Menu",
-    "[dir=\"rtl\"] .spectrum-Menu .spectrum-Menu-chevron"
+    ".spectrum-Menu:lang(zh)"
   ],
   "modifiers": [
     "--mod-menu-back-heading-color",
@@ -377,16 +375,6 @@
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
-  ],
-  "system-theme": [
-    "--system-menu-item-background-color-down",
-    "--system-menu-item-background-color-hover",
-    "--system-menu-item-background-color-key-focus",
-    "--system-menu-item-corner-radius",
-    "--system-menu-item-focus-indicator-offset",
-    "--system-menu-item-focus-indicator-outline-style",
-    "--system-menu-item-focus-indicator-shadow",
-    "--system-menu-item-spacing-multiplier"
   ],
   "passthroughs": [
     "--mod-checkbox-text-to-control",
