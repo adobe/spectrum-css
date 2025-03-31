@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isKeyboardFocused, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -19,7 +19,6 @@ export default {
 	component: "Rating",
 	argTypes: {
 		isEmphasized,
-		isKeyboardFocused,
 		isDisabled,
 		isReadOnly,
 		size: size(["s", "m"]),
@@ -61,7 +60,6 @@ export default {
 		rootClass: "spectrum-Rating",
 		isDisabled: false,
 		isEmphasized: false,
-		isKeyboardFocused: false,
 		isReadOnly: false,
 		withTooltip: false,
 		size: "m",
@@ -158,18 +156,6 @@ Disabled.args = {
 	isDisabled: true,
 };
 Disabled.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/*
- * A keyboard focused rating.
-*/
-export const KeyboardFocused = Template.bind({});
-KeyboardFocused.tags = ["!dev"];
-KeyboardFocused.args = {
-	isKeyboardFocused: true,
-};
-KeyboardFocused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

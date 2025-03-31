@@ -42,6 +42,7 @@
     "--mod-rating-emphasized-icon-color-hover",
     "--mod-rating-focus-indicator-color",
     "--mod-rating-focus-indicator-thickness",
+    "--mod-rating-height",
     "--mod-rating-icon-color-default",
     "--mod-rating-icon-color-disabled",
     "--mod-rating-icon-color-down",
@@ -65,6 +66,7 @@
     "--spectrum-rating-emphasized-icon-color-hover",
     "--spectrum-rating-focus-indicator-color",
     "--spectrum-rating-focus-indicator-thickness",
+    "--spectrum-rating-height",
     "--spectrum-rating-icon-color-default",
     "--spectrum-rating-icon-color-disabled",
     "--spectrum-rating-icon-color-down",
@@ -96,7 +98,7 @@
     "--spectrum-workflow-icon-size-100",
     "--spectrum-workflow-icon-size-75"
   ],
-  "passthroughs": ["--mod-icon-block-size", "--mod-icon-inline-size"],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-rating-emphasized-icon-color-default",
     "--highcontrast-rating-emphasized-icon-color-down",
