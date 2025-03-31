@@ -62,6 +62,12 @@
 	block-size: var(--mod-rating-height, var(--spectrum-rating-height));
 	inline-size: var(--mod-rating-width, var(--spectrum-rating-width));
 
+	&:not(.is-readOnly) {
+		.spectrum-Rating-input:not(:disabled) ~ .spectrum-Rating-icon:active {
+			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
+		}
+	}
+
 	&.is-focused {
 		padding-block: var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap));
 		padding-inline: var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap));
