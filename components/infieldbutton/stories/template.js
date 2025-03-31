@@ -13,21 +13,32 @@ export const Template = (
 		size = "m",
 		isQuiet,
 		iconName = "ChevronDown",
-		iconSet = "ui",
 		isDisabled,
 		isInvalid,
 		isHovered,
 		isActive,
-		isStacked,
+		isPaired,
 		tabIndex = 0,
 	} = {},
 	context = {},
 ) => {
 	let iconSize = size === "s" ? "75" : size === "l" ? "200" : size === "xl" ? "300" : "100";
-	let iconNameWithSize = `${iconName}${iconSize}`;
-	return isStacked
+
+	// TODO: This is a temporary solution to support the iconSet changes in the controls in order to show an "add" workflow icon.
+	// TODO: if we update the UI icons to include the correct UI "add" icon, we should be able to just remove all this extra logic.
+	const iconMap = {
+		ChevronDown: { name: "ChevronDown", set: "ui" },
+		Cross: { name: "Cross", set: "ui" },
+		Dash: { name: "Dash", set: "ui" },
+		Add: { name: "Add", set: "workflow" }
+	};
+
+	const selectedIcon = iconMap[iconName] || iconMap.ChevronDown;
+	let iconNameWithSize = selectedIcon.set === "ui" ? `${selectedIcon.name}${iconSize}` : selectedIcon.name;
+
+	return isPaired
 		? html`
-			<div class="${rootClass}-stacked">
+			<div class="${rootClass}-paired">
 			<button
 					class=${classMap({
 						[rootClass]: true,
@@ -111,7 +122,7 @@ export const Template = (
 								{
 									size,
 									iconName: iconNameWithSize,
-									setName: iconSet,
+									setName: selectedIcon.set,
 									customClasses: [`${rootClass}-icon`],
 								},
 								context,
@@ -139,4 +150,15 @@ export const InfieldButtonGroupVariant = (args, context) => Container({
 			content: Template({ ...args, isDisabled: true }, context),
 		}),
 	]
+}, context);
+
+export const InfieldButtonIcons = (args, context) => Container({
+	withBorder: false,
+	direction: "row",
+	content: [
+		Template(args, context),
+		Template({...args, iconName: "Cross", }, context),
+		Template({...args, iconName: "Dash", }, context),
+		Template({...args, iconName: "Add", iconSet: "workflow"}, context),
+	],
 }, context);

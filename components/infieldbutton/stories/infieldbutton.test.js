@@ -12,8 +12,8 @@ export const InfieldButtonGroup = Variants({
 			isQuiet: true,
 		},
 		{
-			testHeading: "Stacked",
-			isStacked: true,
+			testHeading: "Paired",
+			isPaired: true,
 		},
 	],
 	stateData: [
