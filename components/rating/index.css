@@ -20,7 +20,6 @@
 	--spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
 	--spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
-	--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 
 	/* Focus ring */
 	--spectrum-rating-border-radius: var(--spectrum-corner-radius-medium-size-medium);
@@ -35,7 +34,6 @@
 	--spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
 	--spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
 	--spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
-	--spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
 
 	/* Disabled */
 	--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
@@ -58,14 +56,6 @@
 
 	&.is-keyboardFocused {
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
-
-		.spectrum-Rating-icon {
-			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
-		}
-
-		.spectrum-Rating-icon.is-selected {
-			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
-		}
 	}
 
 	&:hover {
@@ -182,12 +172,6 @@
 }
 
 .spectrum-Rating--emphasized {
-	&.is-keyboardFocused {
-		.spectrum-Rating-icon.is-selected {
-			color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
-		}
-	}
-
 	.spectrum-Rating-icon {
 		color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 
@@ -233,7 +217,6 @@
 
 @media (forced-colors: active) {
 	.spectrum-Rating {
-		--highcontrast-rating-icon-color-key-focus: CanvasText;
 		--highcontrast-rating-icon-color-disabled: GrayText;
 		--highcontrast-rating-emphasized-icon-color-default: Highlight;
 		--highcontrast-rating-emphasized-icon-color-hover: Highlight;
