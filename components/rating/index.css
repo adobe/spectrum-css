@@ -12,6 +12,7 @@
  */
 
 .spectrum-Rating {
+	--spectrum-rating-height: var(--spectrum-rating-width-medium);
 	--spectrum-rating-width: var(--spectrum-rating-width-medium);
 
 	/* Icon */
@@ -56,6 +57,7 @@
 
 	cursor: pointer;
 
+	block-size: var(--mod-rating-height, var(--spectrum-rating-height));
 	inline-size: var(--mod-rating-width, var(--spectrum-rating-width));
 
 	&.is-keyboardFocused {
@@ -95,6 +97,7 @@
 }
 
 .spectrum-Rating--sizeS {
+	--mod-rating-height: var(--spectrum-rating-width-medium);
 	--mod-rating-width: var(--spectrum-rating-width-small);
 	--mod-rating-top-to-content-area: var(--spectrum-rating-top-to-content-area-small);
 	--mod-rating-edge-to-content-area: var(--spectrum-rating-edge-to-content-area-small);
@@ -119,9 +122,6 @@
 }
 
 .spectrum-Rating-icon {
-	--mod-icon-inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
-	--mod-icon-block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
-
 	position: relative;
 	background-size: contain;
 	background-repeat: no-repeat;
