@@ -12,7 +12,7 @@
  */
 
 .spectrum-Rating {
-	--spectrum-rating-height: var(--spectrum-rating-width-medium);
+	--spectrum-rating-height: var(--spectrum-rating-height-medium);
 	--spectrum-rating-width: var(--spectrum-rating-width-medium);
 
 	/* Icon */
@@ -26,6 +26,7 @@
 	--spectrum-rating-border-radius: var(--spectrum-corner-radius-medium-size-medium);
 	--spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
 	/* Spacing */
 	--spectrum-rating-icon-spacing: var(--spectrum-spacing-75);
@@ -49,6 +50,7 @@
 	display: inline-flex;
 	flex: 0 0 auto;
 	justify-content: space-between;
+	align-items: center;
 	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 	padding-block: var(--mod-rating-top-to-content-area, var(--spectrum-rating-top-to-content-area)) var(--mod-rating-bottom-to-content-area, var(--spectrum-rating-bottom-to-content-area));
 	padding-inline: var(--mod-rating-edge-to-content-area, var(--spectrum-rating-edge-to-content-area));
@@ -60,8 +62,16 @@
 	block-size: var(--mod-rating-height, var(--spectrum-rating-height));
 	inline-size: var(--mod-rating-width, var(--spectrum-rating-width));
 
-	&.is-keyboardFocused {
+	&.is-focused {
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
+
+		.spectrum-Rating-icon {
+			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+		}
+
+		.spectrum-Rating-icon.is-selected {
+			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+		}
 	}
 
 	&:hover {
@@ -97,7 +107,7 @@
 }
 
 .spectrum-Rating--sizeS {
-	--mod-rating-height: var(--spectrum-rating-width-medium);
+	--mod-rating-height: var(--spectrum-rating-height-medium);
 	--mod-rating-width: var(--spectrum-rating-width-small);
 	--mod-rating-top-to-content-area: var(--spectrum-rating-top-to-content-area-small);
 	--mod-rating-edge-to-content-area: var(--spectrum-rating-edge-to-content-area-small);
@@ -127,6 +137,11 @@
 	background-repeat: no-repeat;
 	inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
 	block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+
+	svg {
+		inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
+		block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+	}
 
 	.spectrum-Rating-starActive {
 		display: none;
@@ -179,6 +194,12 @@
 }
 
 .spectrum-Rating--emphasized {
+	&.is-focused {
+		.spectrum-Rating-icon.is-selected {
+			color: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
+		}
+	}
+
 	.spectrum-Rating-icon {
 		color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 
@@ -230,7 +251,7 @@
 		--highcontrast-rating-emphasized-icon-color-down: Highlight;
 		--highcontrast-rating-focus-color-outline: CanvasText;
 
-		&.is-keyboardFocused {
+		&.is-focused {
 			outline: 1px solid var(--highcontrast-rating-focus-color-outline);
 		}
 	}
