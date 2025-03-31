@@ -13,7 +13,7 @@ export const Template = ({
 	max = 5,
 	value = 0,
 	isReadOnly = false,
-	isKeyboardFocused = false,
+	isFocused = false,
 	isDisabled = true,
 	isEmphasized = false,
 	withTooltip = false,
@@ -29,7 +29,7 @@ export const Template = ({
 				[rootClass]: true,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
-				"is-keyboardFocused": isKeyboardFocused,
+				"is-focused": isFocused,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
@@ -37,10 +37,10 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			@focusin=${function() {
-				updateArgs({ isKeyboardFocused: true });
+				updateArgs({ isFocused: true });
 			}}
 			@focusout=${function() {
-				updateArgs({ isKeyboardFocused: false });
+				updateArgs({ isFocused: false });
 			}}
 		>
 			${withTooltip

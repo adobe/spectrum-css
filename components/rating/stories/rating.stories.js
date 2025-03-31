@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isFocused, isReadOnly, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -21,6 +21,7 @@ export default {
 		isEmphasized,
 		isDisabled,
 		isReadOnly,
+		isFocused,
 		size: size(["s", "m"]),
 		max: {
 			name: "Maximum value",
@@ -61,6 +62,7 @@ export default {
 		isDisabled: false,
 		isEmphasized: false,
 		isReadOnly: false,
+		isFocused: false,
 		withTooltip: false,
 		size: "m",
 		max: 5,
@@ -156,6 +158,19 @@ Disabled.args = {
 	isDisabled: true,
 };
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+
+/*
+ * A focused rating.
+*/
+export const Focused = Template.bind({});
+Focused.tags = ["!dev"];
+Focused.args = {
+	isFocused: true,
+};
+Focused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
