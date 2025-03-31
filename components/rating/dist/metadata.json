@@ -35,6 +35,8 @@
   ],
   "modifiers": [
     "--mod-rating-border-radius",
+    "--mod-rating-bottom-to-content-area",
+    "--mod-rating-edge-to-content-area",
     "--mod-rating-emphasized-icon-color-default",
     "--mod-rating-emphasized-icon-color-down",
     "--mod-rating-emphasized-icon-color-hover",
@@ -47,10 +49,17 @@
     "--mod-rating-icon-height",
     "--mod-rating-icon-spacing",
     "--mod-rating-icon-width",
+    "--mod-rating-top-to-content-area",
     "--mod-rating-width"
   ],
   "component": [
     "--spectrum-rating-border-radius",
+    "--spectrum-rating-bottom-to-content-area",
+    "--spectrum-rating-bottom-to-content-area-medium",
+    "--spectrum-rating-bottom-to-content-area-small",
+    "--spectrum-rating-edge-to-content-area",
+    "--spectrum-rating-edge-to-content-area-medium",
+    "--spectrum-rating-edge-to-content-area-small",
     "--spectrum-rating-emphasized-icon-color-default",
     "--spectrum-rating-emphasized-icon-color-down",
     "--spectrum-rating-emphasized-icon-color-hover",
@@ -64,6 +73,9 @@
     "--spectrum-rating-icon-height",
     "--spectrum-rating-icon-spacing",
     "--spectrum-rating-icon-width",
+    "--spectrum-rating-top-to-content-area",
+    "--spectrum-rating-top-to-content-area-medium",
+    "--spectrum-rating-top-to-content-area-small",
     "--spectrum-rating-width",
     "--spectrum-rating-width-medium",
     "--spectrum-rating-width-small"
