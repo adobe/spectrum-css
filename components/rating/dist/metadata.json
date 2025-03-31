@@ -35,7 +35,8 @@
     ".spectrum-Rating:hover .spectrum-Rating-icon:active",
     ".spectrum-Rating:hover .spectrum-Rating-icon:hover",
     ".spectrum-Rating:hover .spectrum-Rating-starActive",
-    ".spectrum-Rating:hover .spectrum-Rating-starInactive"
+    ".spectrum-Rating:hover .spectrum-Rating-starInactive",
+    ".spectrum-Rating:not(.is-readOnly) .spectrum-Rating-input:not(:disabled) ~ .spectrum-Rating-icon:active"
   ],
   "modifiers": [
     "--mod-rating-border-radius",
@@ -97,6 +98,8 @@
     "--spectrum-accent-content-color-default",
     "--spectrum-accent-content-color-down",
     "--spectrum-accent-content-color-hover",
+    "--spectrum-component-size-difference-down",
+    "--spectrum-component-size-minimum-perspective-down",
     "--spectrum-corner-radius-medium-size-medium",
     "--spectrum-corner-radius-medium-size-small",
     "--spectrum-disabled-content-color",
