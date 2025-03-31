@@ -63,6 +63,8 @@
 	inline-size: var(--mod-rating-width, var(--spectrum-rating-width));
 
 	&.is-focused {
+		padding-block: var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap));
+		padding-inline: var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap));
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
 
 		.spectrum-Rating-icon {
