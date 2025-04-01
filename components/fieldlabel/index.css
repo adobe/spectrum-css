@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -25,6 +25,10 @@
 
 	--spectrum-fieldlabel-side-margin-block-start: var(--spectrum-field-label-top-margin-medium);
 	--spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+}
+
+.spectrum-FieldLabel {
+	text-wrap: pretty;
 
 	/* CJK (Chinese, Japanese, and Korean) language support */
 	&:lang(ja),
