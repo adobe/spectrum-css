@@ -21,9 +21,9 @@
     ".spectrum-HelpText:lang(zh)"
   ],
   "modifiers": [
+    "--mod-helptext-bottom-edge-to-workflow-icon",
     "--mod-helptext-bottom-to-text",
     "--mod-helptext-content-color-default",
-    "--mod-helptext-edge-to-workflow-icon",
     "--mod-helptext-font-family",
     "--mod-helptext-font-size",
     "--mod-helptext-font-style",
@@ -34,6 +34,7 @@
     "--mod-helptext-line-height-cjk",
     "--mod-helptext-min-height",
     "--mod-helptext-text-to-visual",
+    "--mod-helptext-top-edge-to-workflow-icon",
     "--mod-helptext-top-to-text"
   ],
   "component": [

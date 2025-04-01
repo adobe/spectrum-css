@@ -12,9 +12,6 @@
  */
 
 .spectrum-HelpText {
-	--spectrum-helptext-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
-	--spectrum-helptext-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-
 	/* Spacing */
 	--spectrum-helptext-min-height: var(--spectrum-component-height-100);
 	--spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-100);
@@ -66,6 +63,7 @@
 		--spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
 	}
 
+	&,
 	&.spectrum-HelpText--neutral {
 		--spectrum-helptext-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
 		--spectrum-helptext-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
@@ -90,8 +88,8 @@
 
 	.spectrum-HelpText-validationIcon {
 		margin-inline-end: var(--mod-helptext-text-to-visual, var(--spectrum-helptext-text-to-visual));
-		padding-block-start: var(--mod-helptext-edge-to-workflow-icon, var(--spectrum-helptext-edge-to-workflow-icon));
-		padding-block-end: var(--mod-helptext-edge-to-workflow-icon, var(--spectrum-helptext-edge-to-workflow-icon));
+		padding-block-start: var(--mod-helptext-top-edge-to-workflow-icon, var(--spectrum-helptext-edge-to-workflow-icon));
+		padding-block-end: var(--mod-helptext-bottom-edge-to-workflow-icon, var(--spectrum-helptext-edge-to-workflow-icon));
 		flex-shrink: 0;
 		block-size: var(--mod-helptext-icon-size, var(--spectrum-helptext-icon-size));
 		inline-size: var(--mod-helptext-icon-size, var(--spectrum-helptext-icon-size));
@@ -142,12 +140,5 @@
 	.spectrum-HelpText {
 		--highcontrast-helptext-content-color-default: CanvasText;
 		--highcontrast-helptext-icon-color-default: CanvasText;
-
-		forced-color-adjust: none;
-
-		.spectrum-HelpText-validationIcon,
-		.spectrum-HelpText-text {
-			forced-color-adjust: none;
-		}
 	}
 }
