@@ -118,7 +118,7 @@ jobs:
                   eslint_flags: "${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"
 
             - name: Run markdownlint on documentation
-              uses: reviewdog/action-markdownlint@v0.26.0
+              uses: reviewdog/action-markdownlint@v0.26.2
               with:
                 reporter: github-pr-review
                 filter_mode: diff_context
