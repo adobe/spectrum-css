@@ -458,8 +458,8 @@
 	}
 
 	/* Invalid hover */
-	.spectrum-Textfield.is-invalid:hover:not(.is-disabled) &,
-	.spectrum-Textfield.is-invalid &:hover:not(.is-disabled) {
+	.spectrum-Textfield.is-invalid:hover:not(.is-disabled, .is-readOnly) &,
+	.spectrum-Textfield.is-invalid:not(.is-disabled, .is-readOnly) &:hover {
 		border-color: var(--highcontrast-textfield-border-color-invalid-hover, var(--mod-textfield-border-color-invalid-hover, var(--spectrum-textfield-border-color-invalid-hover)));
 	}
 
@@ -526,8 +526,7 @@
 	}
 
 	/****** ReadOnly & Disabled ******/
-	.spectrum-Textfield.is-readOnly.is-disabled &,
-	.spectrum-Textfield.is-disabled.is-readOnly:hover & {
+	.spectrum-Textfield.is-readOnly.is-disabled & {
 		border-color: var(--highcontrast-textfield-border-color-disabled, transparent);
 		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 	}
