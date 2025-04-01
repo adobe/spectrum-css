@@ -18,16 +18,17 @@ export const Template = (
 		isInvalid,
 		isHovered,
 		isActive,
-		isStacked,
+		isInline,
 		tabIndex = 0,
 	} = {},
 	context = {},
 ) => {
 	let iconSize = size === "s" ? "75" : size === "l" ? "200" : size === "xl" ? "300" : "100";
 	let iconNameWithSize = `${iconName}${iconSize}`;
-	return isStacked
+
+	return isInline
 		? html`
-			<div class="${rootClass}-stacked">
+			<div class="${rootClass}-inline">
 			<button
 					class=${classMap({
 						[rootClass]: true,
@@ -49,7 +50,7 @@ export const Template = (
 						${Icon(
 							{
 								size,
-								iconName: "Dash100",
+								iconName: "Dash",
 								setName: "ui",
 								customClasses: [`${rootClass}-icon`],
 							},
@@ -139,4 +140,15 @@ export const InfieldButtonGroupVariant = (args, context) => Container({
 			content: Template({ ...args, isDisabled: true }, context),
 		}),
 	]
+}, context);
+
+export const InfieldButtonIcons = (args, context) => Container({
+	withBorder: false,
+	direction: "row",
+	content: [
+		Template(args, context),
+		Template({...args, iconName: "Cross", }, context),
+		Template({...args, iconName: "Dash", }, context),
+		Template({...args, iconName: "Add", iconSet: "workflow" }, context),
+	],
 }, context);

@@ -6,10 +6,10 @@ import { isActive, isDisabled, isHovered, isQuiet, size } from "@spectrum-css/pr
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { InfieldButtonGroup } from "./infieldbutton.test.js";
-import { InfieldButtonGroupVariant, Template } from "./template.js";
+import { InfieldButtonGroupVariant, InfieldButtonIcons, Template } from "./template.js";
 
 /**
- * In-field buttons are used to represent actions within input fields. They’re currently used inside the [combo box,](/docs/components-combobox--docs) number field, and [search field.](/docs/components-search--docs)
+ * In-field buttons are used to represent actions within input fields. They’re currently used inside the [combo box,](/docs/components-combobox--docs) [number field,](/docs/components-stepper--docs) and [search field.](/docs/components-search--docs)
  */
 export default {
 	title: "In-field button",
@@ -20,13 +20,21 @@ export default {
 		iconName: {
 			...IconStories?.argTypes?.uiIconName ?? {},
 			options: uniqueUiIconBaseNames,
-			if: false,
+			if: { arg: "isInline", neq: true },
 			description: "All UI icons have sizes of `s`, `m`, `l`, and `xl` except for `ArrowDown`, `ArrowLeft`, `ArrowRight`, and `ArrowUp` which only have sizes of `m`. `Asterisk` has all sizes except for `s`.",
 		},
 		isDisabled,
 		isActive,
 		isHovered,
-		isStacked: { table: { disable: true } },
+		isInline: {
+			name: "Side by side",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-InfieldButton",
@@ -36,7 +44,7 @@ export default {
 		isDisabled: false,
 		isHovered: false,
 		isActive: false,
-		isStacked: false,
+		isInline: false,
 	},
 	parameters: {
 		actions: {
@@ -70,7 +78,7 @@ Primary.parameters = {
 };
 
 /**
- * The quiet variant is used when the in-field button needs to be less visually prominent since it is used in input fields. This is typically used for search fields to clear the entered value.
+ * The quiet variant is used when the in-field button needs to be less visually prominent since it is used in input fields. This is typically used with the cross icon in search fields to clear the entered value..
 */
 export const Quiet = InfieldButtonGroupVariant.bind({});
 Quiet.tags = ["!dev"];
@@ -82,15 +90,15 @@ Quiet.parameters = {
 };
 
 /**
- * The stacked variant is used when there are multiple in-field buttons that need to be displayed side by side. This is typically used for number fields to add or subtract a number.
+ * The inline variant is used when there are multiple in-field buttons that need to be displayed side by side. This is typically used for number fields to add or subtract a number.
 */
 
-export const Stacked = Template.bind({});
-Stacked.tags = ["!dev"];
-Stacked.args = {
-	isStacked: true,
+export const Inline = Template.bind({});
+Inline.tags = ["!dev"];
+Inline.args = {
+	isInline: true,
 };
-Stacked.parameters = {
+Inline.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -102,6 +110,57 @@ export const Sizing = (args, context) => Sizes({
 }, context);
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The `ChevronDown`, `Add`, `Dash` and `Cross` icons should be used within the infield button to represent different actions. Use the correct icon size that corresponds to the t-shirt size you require for the infield button.
+
+	<table>
+		<thead>
+			<tr>
+				<th>**T-Shirt size**</th>
+				<th>**Cross icon size class**</th>
+				<th>**Disclosure (ChevronDown) icon size class**</th>
+				<th>**Dash (Minus) icon size class**</th>
+				<th>**Add icon size class**</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>spectrum-InfieldButton--sizeS</td>
+				<td>spectrum-UIIcon-Cross75</td>
+				<td>spectrum-UIIcon-ChevronDown75</td>
+				<td>spectrum-UIIcon-Dash75</td>
+				<td>spectrum-Icon--sizeS</td>
+			</tr>
+			<tr>
+				<td>spectrum-InfieldButton--sizeM</td>
+				<td>spectrum-UIIcon-Cross100</td>
+				<td>spectrum-UIIcon-ChevronDown100</td>
+				<td>spectrum-UIIcon-Dash100</td>
+				<td>spectrum-Icon--sizeM</td>
+			</tr>
+			<tr>
+				<td>spectrum-InfieldButton--sizeL</td>
+				<td>spectrum-UIIcon-Cross200</td>
+				<td>spectrum-UIIcon-ChevronDown200</td>
+				<td>spectrum-UIIcon-Dash200</td>
+				<td>spectrum-Icon--sizeL</td>
+			</tr>
+			<tr>
+				<td>spectrum-InfieldButton--sizeXL</td>
+				<td>spectrum-UIIcon-Cross300</td>
+				<td>spectrum-UIIcon-ChevronDown300</td>
+				<td>spectrum-UIIcon-Dash300</td>
+				<td>spectrum-Icon--sizeXL</td>
+			</tr>
+		</tbody>
+	</table>
+ */
+export const SupportedIcons = InfieldButtonIcons.bind({});
+SupportedIcons.tags = ["!dev"];
+SupportedIcons.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

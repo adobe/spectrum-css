@@ -128,4 +128,9 @@
 	/* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
 	--spectrum-workflow-icon-size-xxl: 32px;
 	--spectrum-workflow-icon-size-xxs: 12px;
+
+	--spectrum-in-field-button-side-edge-to-fill-small: 4px;
+	--spectrum-in-field-button-side-edge-to-fill-medium: 3px;
+	--spectrum-in-field-button-side-edge-to-fill-large: 4px;
+	--spectrum-in-field-button-side-edge-to-fill-extra-large: 4px;
 }
