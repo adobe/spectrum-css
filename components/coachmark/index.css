@@ -102,7 +102,7 @@
 	padding-block-start: var(--mod-coachmark-image-to-heading, var(--spectrum-coachmark-image-to-heading));
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin-block-end: var(--mod-coachmark-header-to-body, var(--spectrum-coachmark-header-to-body));
 }
 
