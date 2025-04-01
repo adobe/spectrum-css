@@ -19,7 +19,7 @@ export const Template = ({
 }, context );
 
 export const HelpTextOptionsTextArea = (args, context) => Container({
-	direction: "column",
+	direction: "row",
 	withBorder: false,
 	withHeading: false,
 	content: html`
@@ -39,67 +39,62 @@ export const HelpTextOptionsTextArea = (args, context) => Container({
 export const TextAreaOptions = (args, context) => Container({
 	direction: "row",
 	withBorder: false,
-	wrapperStyles: {
-		rowGap: "12px",
-	},
 	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
 			heading: "Default",
 			content: Template(args, context)
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Invalid",
-			content: Template({...args, isInvalid: true}, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
 			heading: "Focused",
 			content: Template({...args, isFocused: true}, context)
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
+			heading: "Keyboard focused",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		}, context)}
+	`
+}, context);
+
+export const InvalidOptionsTextArea = (args, context) => Container({
+	direction: "row",
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Invalid",
+			content: Template({...args, isInvalid: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
 		}, context)}
 	`
 }, context);
 
-export const KeyboardFocusTemplate = (args, context) => Container({
-	direction: "column",
+export const RequiredOptionsTextArea = (args, context) => Container({
+	direction: "row",
 	withBorder: false,
-	wrapperStyles: {
-		rowGap: "12px",
-	},
+	withHeading: false,
 	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Default",
-			content: Template({...args, isKeyboardFocused: true}, context)
+			heading: "Required with (required) label",
+			content: Template({...args, isRequired: true, isRequiredWithoutAsterisk: true, labelText: "Interests (Required)", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Quiet",
-			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+			heading: "Required with asterisk",
+			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
+		}, context)}
+		${Container({
+			withBorder: false,
+			heading: "Required with asterisk, side label",
+			content: Template({...args, isRequired: true, labelPosition: "side", labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
 		}, context)}
 	`
 }, context);
