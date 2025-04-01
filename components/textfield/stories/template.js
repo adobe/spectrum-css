@@ -24,7 +24,6 @@ import "../index.css";
  * @property {boolean} [isValid=false]
  * @property {boolean} [multiline=false]
  * @property {boolean} [grows=false]
- * @property {boolean} [isQuiet=false]
  * @property {boolean} [isFocused=false]
  * @property {boolean} [isDisabled=false]
  * @property {boolean} [isRequired=false]
@@ -63,14 +62,15 @@ export const Template = ({
 	isValid = false,
 	multiline = false,
 	grows = false,
-	isQuiet = false,
 	isFocused = false,
 	isDisabled = false,
+	isHovered = false,
 	isRequired = false,
+	isRequiredWithoutAsterisk = false,
 	isReadOnly = false,
 	isKeyboardFocused = false,
 	isLoading = false,
-	displayLabel = false,
+	displayLabel = true,
 	labelPosition = "top",
 	labelText,
 	characterCount,
@@ -91,12 +91,17 @@ export const Template = ({
 
 	// Override icon name and set if the field is invalid or valid
 	if (isInvalid) {
-		iconName = "Alert";
+		iconName = "AlertTriangle";
 		iconSet = "workflow";
 	}
 	else if (isValid) {
-		iconName = "Checkmark";
 		iconSet = "ui";
+		iconName = "Checkmark" + ({
+			s: "75",
+			m: "100",
+			l: "200",
+			xl: "300",
+		}[size] || "100");
 	}
 
 	return html`
@@ -107,10 +112,10 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--multiline`]: multiline,
 				[`${rootClass}--grows`]: grows,
-				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--sideLabel`]: labelPosition === "side",
 				"is-invalid": isInvalid,
 				"is-valid": isValid,
+				"is-hover": isHovered,
 				"is-focused": isFocused,
 				"is-keyboardFocused": isKeyboardFocused,
 				"is-disabled": isDisabled,
@@ -149,6 +154,7 @@ export const Template = ({
 			size,
 			label: labelText,
 			isDisabled,
+			isRequired: isRequired && !isRequiredWithoutAsterisk,
 		}, context))}
 		${when(typeof characterCount !== "undefined", () => html`
 			<span class="${rootClass}-characterCount">${characterCount}</span>`)}
@@ -215,7 +221,7 @@ export const Template = ({
 };
 
 export const HelpTextOptions = (args, context) => Container({
-	direction: "column",
+	direction: "row",
 	withBorder: false,
 	withHeading: false,
 	content: html`
@@ -235,67 +241,62 @@ export const HelpTextOptions = (args, context) => Container({
 export const TextFieldOptions = (args, context) => Container({
 	direction: "row",
 	withBorder: false,
-	wrapperStyles: {
-		rowGap: "12px",
-	},
 	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
 			heading: "Default",
 			content: Template(args, context)
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Invalid",
-			content: Template({...args, isInvalid: true}, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
 			heading: "Focused",
 			content: Template({...args, isFocused: true}, context)
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
+			heading: "Keyboard focused",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		}, context)}
+	`
+}, context);
+
+export const InvalidOptions = (args, context) => Container({
+	direction: "row",
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Invalid",
+			content: Template({...args, isInvalid: true}, context)
+		}, context)}
+		${Container({
+			withBorder: false,
 			heading: "Invalid, focused",
 			content: Template({...args, isInvalid: true, isFocused: true}, context)
 		}, context)}
 	`
 }, context);
 
-export const KeyboardFocusTemplate = (args, context) => Container({
-	direction: "column",
+export const RequiredOptions = (args, context) => Container({
+	direction: "row",
 	withBorder: false,
-	wrapperStyles: {
-		rowGap: "12px",
-	},
+	withHeading: false,
 	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Default",
-			content: Template({...args, isKeyboardFocused: true}, context)
+			heading: "Required with (required) label",
+			content: Template({...args, isRequired: true, isRequiredWithoutAsterisk: true, labelText: "Email address (required)", value: "abc@adobe.com", helpText: "Email address is required"}, context),
 		}, context)}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Quiet",
-			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+			heading: "Required with asterisk",
+			content: Template({...args, isRequired: true, labelText: "Email address", value: "abc@adobe.com", helpText: "Email address is required"}, context),
+		}, context)}
+		${Container({
+			withBorder: false,
+			heading: "Required with asterisk, side label",
+			content: Template({...args, isRequired: true, labelPosition: "side", labelText: "Email address", value: "abc@adobe.com", helpText: "Email address is required"}, context),
 		}, context)}
 	`
 }, context);
