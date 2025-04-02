@@ -433,16 +433,24 @@
 		}
 	}
 
-	.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
+	.spectrum-Checkbox-input:checked:focus-visible + .spectrum-Checkbox-box {
 		&::before {
 			border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-emphasized-color-down, var(--spectrum-checkbox-emphasized-color-down)));
 		}
 	}
 
+	&.is-indeterminate .spectrum-Checkbox-input.is-focus-visible + .spectrum-Checkbox-box {
+		&::before {
+			/* Ensure indeterminate state is highlighted when focused */
+			border-color: var(--highcontrast-checkbox-highlight-color-focus, var(--mod-checkbox-emphasized-color-focus, var(--spectrum-checkbox-emphasized-color-focus)));
+		}
+	}
+
 	/* Hover for Checked and Indeterminate States */
-	&:not(.is-disabled):hover {
+	&:hover {
 		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
 		&.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+		&.is-readOnly .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
 		&.is-indeterminate .spectrum-Checkbox-box {
 			&::before {
 				border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-emphasized-color-hover, var(--spectrum-checkbox-emphasized-color-hover)));
