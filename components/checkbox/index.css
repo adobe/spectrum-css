@@ -433,7 +433,7 @@
 		}
 	}
 
-	.spectrum-Checkbox-input:checked:focus-visible + .spectrum-Checkbox-box {
+	&:not(.is-disabled).spectrum-Checkbox-input:checked:focus-visible + .spectrum-Checkbox-box {
 		&::before {
 			border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-emphasized-color-down, var(--spectrum-checkbox-emphasized-color-down)));
 		}
