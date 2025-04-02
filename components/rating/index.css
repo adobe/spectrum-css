@@ -42,14 +42,14 @@
 
 	/* Disabled */
 	--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
-	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
 .spectrum-Rating {
+	box-sizing: border-box;
 	position: relative;
 	display: inline-flex;
 	flex: 0 0 auto;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 	padding-block: var(--mod-rating-top-to-content-area, var(--spectrum-rating-top-to-content-area)) var(--mod-rating-bottom-to-content-area, var(--spectrum-rating-bottom-to-content-area));
@@ -69,8 +69,8 @@
 	}
 
 	&.is-focused {
-		padding-block: var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap));
-		padding-inline: var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap));
+		padding-block: calc(var(--mod-rating-top-to-content-area, var(--spectrum-rating-top-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) calc(var(--mod-rating-bottom-to-content-area, var(--spectrum-rating-bottom-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
+		padding-inline: calc(var(--mod-rating-edge-to-content-area, var(--spectrum-rating-edge-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
 
 		.spectrum-Rating-icon {
@@ -115,7 +115,7 @@
 }
 
 .spectrum-Rating--sizeS {
-	--mod-rating-height: var(--spectrum-rating-height-medium);
+	--mod-rating-height: var(--spectrum-rating-height-small);
 	--mod-rating-width: var(--spectrum-rating-width-small);
 	--mod-rating-top-to-content-area: var(--spectrum-rating-top-to-content-area-small);
 	--mod-rating-edge-to-content-area: var(--spectrum-rating-edge-to-content-area-small);
