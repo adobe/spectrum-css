@@ -207,6 +207,9 @@
 	padding-inline-end: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
 	margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 
+	touch-action: none;
+	user-select: none;
+
 	&::before {
 		content: "";
 		display: block;
