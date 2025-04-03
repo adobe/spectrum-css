@@ -30,6 +30,15 @@ export default {
 			},
 			control: "text",
 		},
+		hasButton: {
+			name: "Button",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		inlineButtonLabel: {
 			name: "Inline button label",
 			description: "Label for the inline button; if blank, no button is shown",
@@ -39,6 +48,7 @@ export default {
 				type: { summary: "string" },
 			},
 			control: "text",
+			if: { arg: "hasButton", truthy: true },
 		},
 	},
 	args: {
@@ -64,6 +74,7 @@ export default {
 export const Default = ToastGroup.bind({});
 Default.args = {
 	message: "File has been archived",
+	hasButton: true,
 	inlineButtonLabel: "Undo",
 	variant: "neutral"
 };
