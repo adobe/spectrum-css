@@ -30,11 +30,11 @@
 	/* Space */
 	--spectrum-toast-spacing-close-button-to-edge: var(--spectrum-spacing-100);
 	--spectrum-toast-spacing-text-to-close-button: var(--spectrum-spacing-300);
-	--spectrum-toast-spacing-text-to-action-button-horizontal: var(--spectrum-spacing-400);
+	--spectrum-toast-spacing-text-to-button-horizontal: var(--spectrum-spacing-400);
 	--spectrum-toast-spacing-icon-to-text: var(--spectrum-text-to-visual-300);
 
 	--spectrum-toast-spacing-start-edge-to-text-and-icon: var(--spectrum-spacing-300);
-	--spectrum-toast-spacing-action-button-to-close-button: var(--spectrum-spacing-200);
+	--spectrum-toast-spacing-button-to-close-button: var(--spectrum-spacing-200);
 
 	--spectrum-toast-spacing-top-edge-to-close-button: var(--spectrum-spacing-200);
 	--spectrum-toast-spacing-bottom-edge-to-close-button: var(--spectrum-spacing-200);
@@ -150,12 +150,12 @@
 }
 
 .spectrum-Toast .spectrum-Button {
-	margin-inline-start: var(--mod-toast-spacing-text-to-action-button-horizontal, var(--spectrum-toast-spacing-text-to-action-button-horizontal));
+	margin-inline-start: var(--mod-toast-spacing-text-to-button-horizontal, var(--spectrum-toast-spacing-text-to-button-horizontal));
 }
 
 .spectrum-Toast:has(.spectrum-Button) {
 	.spectrum-Toast-buttons {
-		padding-inline-start: var(--mod-toast-spacing-action-button-to-close-button, var(--spectrum-toast-spacing-action-button-to-close-button));
+		padding-inline-start: var(--mod-toast-spacing-button-to-close-button, var(--spectrum-toast-spacing-button-to-close-button));
 	}
 }
 
