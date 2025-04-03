@@ -118,6 +118,7 @@
 
 	&:not(.is-disabled):hover {
 		--mod-stepper-border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
+		--mod-stepper-buttons-background-color: var(--spectrum-gray-200);
 	}
 
 	&:not(.is-disabled).is-focused,
@@ -131,8 +132,9 @@
 		}
 	}
 
-	&:not(.is-disabled).is-keyboardFocused {
+	&:not(.is-disabled).is-keyboardFocused:not(.spectrum-Stepper--quiet) {
 		--mod-stepper-border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
+		--mod-stepper-buttons-background-color: var(--spectrum-gray-200);
 	}
 
 	&.spectrum-Stepper--quiet {
@@ -171,6 +173,7 @@
 	}
 
 	&:hover:not(.is-invalid, .is-disabled, .is-focused) {
+		--mod-infield-button-background-color: var(--mod-stepper-buttons-background-color, var(--spectrum-stepper-buttons-background-color));
 		--mod-infield-button-border-color: var(--mod-stepper-buttons-border-color-hover, var(--spectrum-stepper-buttons-border-color-hover));
 	}
 
@@ -191,6 +194,8 @@
 		&.is-keyboardFocused,
 		&:focus-visible {
 			--mod-infield-button-border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-buttons-border-color-keyboard-focus, var(--spectrum-stepper-buttons-border-color-keyboard-focus)));
+			--mod-infield-button-background-color: var(--mod-stepper-buttons-background-color, var(--spectrum-stepper-buttons-background-color));
+			--mod-infield-button-icon-color: var(--mod-infield-button-icon-color-key-focus, var(--spectrum-stepper-border-color-focus-hover));
 			--mod-textfield-focus-indicator-width: 0;
 			--mod-textfield-border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-border-color-keyboard-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
 
