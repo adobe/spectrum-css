@@ -13,6 +13,7 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Toast",
 	message,
+	hasButton,
 	inlineButtonLabel,
 	variant,
 	customClasses = [],
@@ -44,7 +45,7 @@ export const Template = ({
 			)}
 			<div class="${rootClass}-body">
 				<div class="${rootClass}-content">${message}</div>
-				${when(inlineButtonLabel, () =>
+				${when(hasButton && inlineButtonLabel, () =>
 					Button({
 						variant: "secondary",
 						size: "m",
@@ -54,13 +55,11 @@ export const Template = ({
 					}, context)
 				)}
 			</div>
-			<div class="${rootClass}-buttons">
-				${CloseButton({
-					size: "m",
-					staticColor: "white",
-					onclick,
-				}, context)}
-			</div>
+			${CloseButton({
+				size: "m",
+				staticColor: "white",
+				onclick,
+			}, context)}
 		</div>
 	`;
 };
