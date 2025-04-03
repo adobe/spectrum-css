@@ -4,7 +4,7 @@
 
 #### S2 toast migration
 
-This migrates the `toast` component to S2. Custom properties have been remapped per the design spec. Mods have been added and placeholder icons have been updated from the new workflow icons.
+This migrates the `toast` component to S2. Custom properties have been remapped per the design spec. Mods have been added and placeholder icons have been updated from the new workflow icons. The toast no longer supports a divider.
 
 ##### Tokens
 
