@@ -1,5 +1,16 @@
 # Change log
 
+## 14.1.4
+
+### Patch Changes
+
+- [#3648](https://github.com/adobe/spectrum-css/pull/3648) [`8e52975`](https://github.com/adobe/spectrum-css/commit/8e52975c9c75d1fc44089a3b112c7f1745f8cea3) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - S2 Foundations fixes to adjust:
+
+  - primary outline background color for hover, active, and focus states (gray-100)
+  - secondary fill background color for active state (gray-200)
+  - secondary outline background color for hover, active, and focus states (gray-100)
+  - secondary outline border color for default (gray-300) and active states (gray-400)
+
 ## 14.1.3
 
 ### Patch Changes
