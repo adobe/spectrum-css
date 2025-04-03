@@ -41,8 +41,8 @@
     "--mod-inlinealert-icon-size",
     "--mod-inlinealert-min-inline-size",
     "--mod-inlinealert-spacing-edge-to-text",
-    "--mod-inlinealert-spacing-header-content-button",
-    "--mod-inlinealert-spacing-header-to-icon"
+    "--mod-inlinealert-spacing-title-to-description",
+    "--mod-inlinealert-spacing-title-to-icon-minimum"
   ],
   "component": [
     "--spectrum-in-line-alert-minimum-width",
@@ -70,8 +70,8 @@
     "--spectrum-inlinealert-icon-size",
     "--spectrum-inlinealert-min-inline-size",
     "--spectrum-inlinealert-spacing-edge-to-text",
-    "--spectrum-inlinealert-spacing-header-content-button",
-    "--spectrum-inlinealert-spacing-header-to-icon"
+    "--spectrum-inlinealert-spacing-title-to-description",
+    "--spectrum-inlinealert-spacing-title-to-icon-minimum"
   ],
   "global": [
     "--spectrum-background-layer-2-color",
@@ -82,7 +82,7 @@
     "--spectrum-body-size-s",
     "--spectrum-border-width-200",
     "--spectrum-component-height-50",
-    "--spectrum-corner-radius-100",
+    "--spectrum-corner-radius-700",
     "--spectrum-heading-color",
     "--spectrum-heading-line-height",
     "--spectrum-heading-sans-serif-font-style",
@@ -94,6 +94,7 @@
     "--spectrum-notice-visual-color",
     "--spectrum-positive-visual-color",
     "--spectrum-sans-font-family-stack",
+    "--spectrum-spacing-100",
     "--spectrum-spacing-300",
     "--spectrum-spacing-400",
     "--spectrum-workflow-icon-size-100"

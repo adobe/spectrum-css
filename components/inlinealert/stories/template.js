@@ -18,15 +18,17 @@ export const Template = ({
 	let iconName;
 	switch (variant) {
 		case "info":
-			iconName = "Info";
+			iconName = "InfoCircle";
 			break;
 		case "positive":
 			iconName = "CheckmarkCircle";
 			break;
 		case "notice":
+			iconName = "AlertDiamond";
+			break;
 		case "negative":
 		case "closable":
-			iconName = "Alert";
+			iconName = "AlertTriangle";
 			break;
 		default:
 			iconName = undefined;
