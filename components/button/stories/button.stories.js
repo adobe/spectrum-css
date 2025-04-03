@@ -304,7 +304,7 @@ WithWrapping.parameters = {
 
 export const DisableWrapping = TextWrapTemplate.bind({});
 DisableWrapping.tags = ["!dev"];
-DisableWrapping.storyName = "Text overflow - disabled";
+DisableWrapping.storyName = "Text overflow - disabled text wrap";
 DisableWrapping.args = {
 	variant: "primary",
 };
