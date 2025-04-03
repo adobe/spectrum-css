@@ -13,6 +13,7 @@ import { Template } from "./template.js";
  * - All active stars have the class `is-selected` applied.
  * - The current value (the last active star) has the class `is-currentValue` applied.
  * - When the rating receives focus, the class `is-focused` should be added to the component's root element (`.spectrum-Rating`).
+ * - A rating may have a partially filled star. The width and fill of this star is controlled by adding `.is-partial` to the parent `span` with classes of `spectrum-Rating-icon` and `is-selected` and then setting `--mod-rating-icon-fill` to the necessary fill percentage (e.g. `50%`).
  */
 export default {
 	title: "Rating",
@@ -183,5 +184,21 @@ withTooltip.args = {
 	withTooltip: true,
 };
 withTooltip.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A rating with a partially filled icon
+ */
+export const withPartial = Template.bind({});
+withPartial.tags = ["!dev"];
+withPartial.args = {
+	isPartial: true,
+	value: 5,
+	customStyles: {
+		"--mod-rating-icon-fill": "50%"
+	}
+};
+withPartial.parameters = {
 	chromatic: { disableSnapshot: true },
 };

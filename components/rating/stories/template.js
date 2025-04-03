@@ -5,6 +5,7 @@ import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 
@@ -17,8 +18,10 @@ export const Template = ({
 	isDisabled = true,
 	isEmphasized = false,
 	withTooltip = false,
+	isPartial = false,
 	size = "s",
 	customClasses = [],
+	customStyles = {},
 	id = getRandomId("rating"),
 } = {}, context = {}) => {
 	const { updateArgs } = context;
@@ -79,10 +82,12 @@ export const Template = ({
 						class=${classMap({
 							[`${rootClass}-icon`]: true,
 							"is-selected": idx <= value - 1,
+							"is-partial": isPartial === true && idx === value - 1,
 						})}
 						@click=${function() {
 							updateArgs({ value: idx + 1, isFocused: true });
 						}}
+						style=${styleMap(customStyles)}
 					>
 						${Icon({
 							iconName: "StarFilled",
