@@ -40,9 +40,9 @@
 			--mod-button-content-color-focus: var(--spectrum-gray-25);
 
 			&.spectrum-Button--outline {
-				--mod-button-background-color-hover: var(--spectrum-gray-200);
-				--mod-button-background-color-down: var(--spectrum-gray-400);
-				--mod-button-background-color-focus: var(--spectrum-gray-200);
+				--mod-button-background-color-hover: var(--spectrum-gray-100);
+				--mod-button-background-color-down: var(--spectrum-gray-100);
+				--mod-button-background-color-focus: var(--spectrum-gray-100);
 			}
 		}
 
@@ -51,16 +51,17 @@
 
 			&:not(.spectrum-Button--outline) {
 				--mod-button-background-color-hover: var(--spectrum-gray-200);
-				--mod-button-background-color-down: var(--spectrum-gray-400);
+				--mod-button-background-color-down: var(--spectrum-gray-200);
 				--mod-button-background-color-focus: var(--spectrum-gray-200);
 			}
 
 			&.spectrum-Button--outline {
-				--mod-button-background-color-hover: var(--spectrum-gray-200);
-				--mod-button-background-color-down: var(--spectrum-gray-400);
-				--mod-button-background-color-focus: var(--spectrum-gray-200);
+				--mod-button-background-color-hover: var(--spectrum-gray-100);
+				--mod-button-background-color-down: var(--spectrum-gray-100);
+				--mod-button-background-color-focus: var(--spectrum-gray-100);
 
-				--mod-button-border-color-default: var(--spectrum-gray-200);
+				--mod-button-border-color-default: var(--spectrum-gray-300);
+				--mod-button-border-color-down: var(--spectrum-gray-400);
 			}
 		}
 

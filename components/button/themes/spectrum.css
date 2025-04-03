@@ -30,6 +30,7 @@
 
 			&.spectrum-Button--outline {
 				--mod-button-background-color-hover: var(--spectrum-gray-300);
+				--mod-button-background-color-down: var(--spectrum-gray-400);
 				--mod-button-background-color-focus: var(--spectrum-gray-300);
 			}
 		}
@@ -39,14 +40,17 @@
 
 			&:not(.spectrum-Button--outline) {
 				--mod-button-background-color-hover: var(--spectrum-gray-300);
+				--mod-button-background-color-down: var(--spectrum-gray-400);
 				--mod-button-background-color-focus: var(--spectrum-gray-300);
 			}
 
 			&.spectrum-Button--outline {
 				--mod-button-background-color-hover: var(--spectrum-gray-300);
+				--mod-button-background-color-down: var(--spectrum-gray-400);
 				--mod-button-background-color-focus: var(--spectrum-gray-300);
 
 				--mod-button-border-color-default: var(--spectrum-gray-300);
+				--mod-button-border-color-down: var(--spectrum-gray-500);
 			}
 		}
 
