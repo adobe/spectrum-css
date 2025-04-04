@@ -1,5 +1,39 @@
 # Change log
 
+## 8.0.0-next.1
+
+### Major Changes
+
+📝 [#3628](https://github.com/adobe/spectrum-css/pull/3628) [`beee947`](https://github.com/adobe/spectrum-css/commit/beee9473b66a4e10c2e4c100a64a3d05fd3f5d44) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Helptext S2 Migration
+
+The helptext S2 component has some updated spacing and typography tokens. The error message validation icon has also been updated.
+
+##### New mods
+
+`--mod-helptext-font-family`
+`--mod-helptext-font-style`
+`--mod-helptext-font-weight`
+`--mod-helptext-top-edge-to-workflow-icon`
+`--mod-helptext-bottom-edge-to-workflow-icon`
+
+##### Renamed mods
+
+`--mod-helptext-bottom-to-workflow-icon` >> `--mod-helptext-edge-to-workflow-icon`
+
+##### Deprecated tokens
+
+`--spectrum-help-text-top-to-workflow-icon-small`
+`--spectrum-help-text-top-to-workflow-icon-medium`
+`--spectrum-help-text-top-to-workflow-icon-large`
+`--spectrum-help-text-top-to-workflow-icon-extra-large`
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
 ## 8.0.0-next.0
 
 ### Patch Changes
@@ -13,7 +47,7 @@
 
 📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-## New feature
+### New feature
 
 Minified and gzipped outputs available for all compiled CSS assets.
 

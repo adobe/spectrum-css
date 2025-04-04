@@ -1,5 +1,12 @@
 # Change log
 
+## 7.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
 ## 7.0.0-next.0
 
 ### Patch Changes
@@ -8,6 +15,18 @@
   - @spectrum-css/icon@10.0.0-next.0
   - @spectrum-css/menu@10.0.0-next.0
   - @spectrum-css/popover@9.0.0-next.0
+
+## 6.1.2
+
+### Patch Changes
+
+📝 [#3630](https://github.com/adobe/spectrum-css/pull/3630) [`954243f`](https://github.com/adobe/spectrum-css/commit/954243fe5c9a6ff0649ee041d197fcd0d9ad5899) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+Updates background colors for the picker button to match S2-foundations design specifications:
+
+- default state: `gray-50` to `gray-100`
+- hover state: `gray-100` to `gray-200`
+- key-focus state: `gray-100` to `gray-200`
 
 ## 6.1.1
 
