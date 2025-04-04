@@ -116,7 +116,9 @@
 	--spectrum-menu-item-background-color-down: var(--spectrum-gray-100);
 	--spectrum-menu-item-background-color-keyboard-focus: var(--spectrum-gray-100);
 	--spectrum-menu-item-background-color-disabled: var(--spectrum-gray-100);
+	--spectrum-popover-border-color: var(--spectrum-transparent-white-25);
 	--spectrum-popover-border-opacity: 0;
+	--spectrum-action-bar-border-color: var(--spectrum-transparent-white-25);
 	--spectrum-gray-25-rgb: 255, 255, 255;
 	--spectrum-gray-25: rgba(var(--spectrum-gray-25-rgb));
 	--spectrum-gray-50-rgb: 248, 248, 248;
@@ -782,16 +784,6 @@
 	--spectrum-accent-subtle-background-color-default: var(--spectrum-accent-color-200);
 	--color-scheme: light;
 
-	--spectrum-assetcard-border-color-selected: var(--spectrum-blue-900);
-	--spectrum-assetcard-border-color-selected-hover: var(--spectrum-blue-900);
-	--spectrum-assetcard-border-color-selected-down: var(--spectrum-blue-1000);
-	--spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-blue-900);
-	--spectrum-assestcard-focus-indicator-color: var(--spectrum-blue-800);
-
-	--spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-900-rgb), 0.2);
-	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
-	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-800);
-
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-white);
 
 	--spectrum-calendar-day-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
@@ -802,7 +794,6 @@
 	--spectrum-calendar-day-background-color-cap-selected: rgba(var(--spectrum-blue-900-rgb), 0.2);
 	--spectrum-calendar-day-background-color-key-focus: rgba(var(--spectrum-black-rgb), 0.06);
 	--spectrum-calendar-day-border-color-key-focus: var(--spectrum-blue-800);
-
 	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 
 	--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-800);
@@ -815,7 +806,6 @@
 	--spectrum-logic-button-and-border-color: var(--spectrum-blue-900);
 	--spectrum-logic-button-and-background-color-hover: var(--spectrum-blue-1100);
 	--spectrum-logic-button-and-border-color-hover: var(--spectrum-blue-1100);
-
 	--spectrum-logic-button-or-background-color: var(--spectrum-magenta-900);
 	--spectrum-logic-button-or-border-color: var(--spectrum-magenta-900);
 	--spectrum-logic-button-or-background-color-hover: var(--spectrum-magenta-1100);

@@ -81,9 +81,9 @@
 		}
 	}
 
-    /* Updated values for a nested illustrated message when state changes */
-    --mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
-  }
+	&.is-filled {
+		/* note: the below applies to .is-filled.is-dragged but works here b/c dragged is the only state applying background color */
+		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled)));
 
 		/* Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-display: none;

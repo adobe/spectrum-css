@@ -116,7 +116,9 @@
 	--spectrum-menu-item-background-color-down: var(--spectrum-gray-200);
 	--spectrum-menu-item-background-color-keyboard-focus: var(--spectrum-gray-200);
 	--spectrum-menu-item-background-color-disabled: var(--spectrum-gray-200);
+	--spectrum-popover-border-color: var(--spectrum-gray-400);
 	--spectrum-popover-border-opacity: 1;
+	--spectrum-action-bar-border-color: var(--spectrum-gray-400);
 	--spectrum-gray-25-rgb: 17, 17, 17;
 	--spectrum-gray-25: rgba(var(--spectrum-gray-25-rgb));
 	--spectrum-gray-50-rgb: 27, 27, 27;
@@ -787,10 +789,6 @@
 	--spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-blue-800);
 	--spectrum-assestcard-focus-indicator-color: var(--spectrum-blue-700);
 
-	--spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.25);
-	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
-	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
-
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-black);
 
 	--spectrum-calendar-day-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
@@ -801,7 +799,6 @@
 	--spectrum-calendar-day-background-color-cap-selected: rgba(var(--spectrum-blue-800-rgb), 0.25);
 	--spectrum-calendar-day-background-color-key-focus: rgba(var(--spectrum-white-rgb), 0.07);
 	--spectrum-calendar-day-border-color-key-focus: var(--spectrum-blue-700);
-
 	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
 
 	--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-700);
@@ -814,7 +811,6 @@
 	--spectrum-logic-button-and-border-color: var(--spectrum-blue-800);
 	--spectrum-logic-button-and-background-color-hover: var(--spectrum-blue-1000);
 	--spectrum-logic-button-and-border-color-hover: var(--spectrum-blue-1000);
-
 	--spectrum-logic-button-or-background-color: var(--spectrum-magenta-700);
 	--spectrum-logic-button-or-border-color: var(--spectrum-magenta-700);
 	--spectrum-logic-button-or-background-color-hover: var(--spectrum-magenta-900);
