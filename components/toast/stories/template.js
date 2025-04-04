@@ -54,13 +54,11 @@ export const Template = ({
 					}, context)
 				)}
 			</div>
-			<div class="${rootClass}-buttons">
-				${CloseButton({
-					size: "m",
-					staticColor: "white",
-					onclick,
-				}, context)}
-			</div>
+			${CloseButton({
+				size: "m",
+				staticColor: "white",
+				onclick,
+			}, context)}
 		</div>
 	`;
 };
