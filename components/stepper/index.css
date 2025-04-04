@@ -131,7 +131,7 @@
 		}
 	}
 
-	&:not(.is-disabled).is-keyboardFocused:not(.spectrum-Stepper--quiet) {
+	&:not(.is-disabled).is-keyboardFocused {
 		--mod-stepper-border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
 	}
 
@@ -191,7 +191,6 @@
 		&.is-keyboardFocused,
 		&:focus-visible {
 			--mod-infield-button-border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-buttons-border-color-keyboard-focus, var(--spectrum-stepper-buttons-border-color-keyboard-focus)));
-			--mod-infield-button-icon-color: var(--mod-infield-button-icon-color-key-focus, var(--spectrum-stepper-border-color-focus-hover));
 			--mod-textfield-focus-indicator-width: 0;
 			--mod-textfield-border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-border-color-keyboard-focus, var(--spectrum-stepper-border-color-keyboard-focus)));
 
