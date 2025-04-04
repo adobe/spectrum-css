@@ -39,6 +39,7 @@
 	--spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
 	--spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
 	--spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
+	--spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-default);
 
 	/* Disabled */
 	--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
@@ -72,14 +73,6 @@
 		padding-block: calc(var(--mod-rating-top-to-content-area, var(--spectrum-rating-top-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) calc(var(--mod-rating-bottom-to-content-area, var(--spectrum-rating-bottom-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 		padding-inline: calc(var(--mod-rating-edge-to-content-area, var(--spectrum-rating-edge-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
-
-		.spectrum-Rating-icon {
-			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
-		}
-
-		.spectrum-Rating-icon.is-selected {
-			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
-		}
 	}
 
 	&:hover {
@@ -174,7 +167,6 @@
 		}
 
 		&.is-partial .spectrum-Rating-starActive {
-			mask-image: linear-gradient(to right, black var(--spectrum-rating-icon-fill), transparent var(--spectrum-rating-icon-fill));
 			mask-image: linear-gradient(to right, black var(--spectrum-rating-icon-fill), transparent var(--spectrum-rating-icon-fill));
 		}
 
