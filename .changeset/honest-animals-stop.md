@@ -1,5 +1,5 @@
 ---
-"@spectrum-css/fieldlabel": minor
+"@spectrum-css/fieldlabel": patch
 ---
 
 #### Fix fieldlabel required icon wrapping
