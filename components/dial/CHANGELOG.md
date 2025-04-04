@@ -34,6 +34,22 @@ Dependency alignment across the project.
 - Updated dependencies [[`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
   - @spectrum-css/tokens@16.0.1
 
+## 3.2.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`8d65de0`](https://github.com/adobe/spectrum-css/commit/8d65de0233a6b12e72002b47e9484dbe5f0636be) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to align `spectrum-two` with `s2-foundations-redux`/`main`, mostly defining unused custom properties, but addresses any other lint warnings or inconsistencies noted in the following components:
+
+  **Calendar**: Defines 1 previously undefined custom property to align with `main` and `s2-foundations-redux`
+  **Dial**: Defines 6 previously undefined custom properties, removes 3 unused custom properties
+  **Pickerbutton**: Defines 9 previously undefined custom properties to align with `main` and `s2-foundations-redux`
+  **Progressbar**: Removes 3 unused custom properties, reverts background-color to background to accommodate gradients
+  **Radio**: Defines 4 previously undefined custom properties to align with `main` and `s2-foundations-redux`
+  **Stepper**: moves high contrast block further down to align with other components' CSS structure, defines multiple undefined custom properties, adds disable-next-line comment to suppress no-unused-custom-properties warning
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
 ## 5.0.1
 
 ### Patch Changes
@@ -131,6 +147,12 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3286](https://github.com/adobe/spectrum-css/pull/3286) [`3d5c39a`](https://github.com/adobe/spectrum-css/commit/3d5c39ab4b79316563f9659eb4b19afe81f9debf) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Resolves lint violations for dial by removing unused properties and moving todo comment into stylelint-disable description.
+
+## 3.1.4
+
+### Patch Changes
+
+- [#3286](https://github.com/adobe/spectrum-css/pull/3286) [`3d5c39a`](https://github.com/adobe/spectrum-css/commit/3d5c39ab4b79316563f9659eb4b19afe81f9debf) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violations for dial by removing unused properties and moving todo comment into stylelint-disable description.
 
 ## 3.1.3
 

@@ -26,6 +26,17 @@ Dependency alignment across the project.
 - Updated dependencies [[`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
   - @spectrum-css/tokens@16.0.1
 
+## 6.0.0-next.0
+
+### Major Changes
+
+- [#3301](https://github.com/adobe/spectrum-css/pull/3301) [`b91a202`](https://github.com/adobe/spectrum-css/commit/b91a2020be7a590a794938546e2f85f3fd9eef3e) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Migrates color loupe to Spectrum 2 tokens. Color loupe now uses the new drop shadow tokens `--spectrum-drop-shadow-elevated-x`, `--spectrum-drop-shadow-elevated-y`, `--spectrum-drop-shadow-elevated-blur`, and `--spectrum-drop-shadow-elevated-color` rather than specific color loupe tokens.
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 7.0.1
 
 ### Patch Changes
@@ -131,6 +142,12 @@ Remove empty theme references to reduce complexity for components that don't nee
 📝 [#3272](https://github.com/adobe/spectrum-css/pull/3272) [`a354b16`](https://github.com/adobe/spectrum-css/commit/a354b166727fb34b17300bcd3a6118a00034e344) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Disables lint violation and moves comment to stylelint-disable description.
+
+## 5.1.4
+
+### Patch Changes
+
+- [#3272](https://github.com/adobe/spectrum-css/pull/3272) [`a354b16`](https://github.com/adobe/spectrum-css/commit/a354b166727fb34b17300bcd3a6118a00034e344) Thanks [@cdransf](https://github.com/cdransf)! - Disables lint violation and moves comment to stylelint-disable description.
 
 ## 5.1.3
 

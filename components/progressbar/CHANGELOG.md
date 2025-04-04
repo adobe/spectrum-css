@@ -34,6 +34,33 @@ Dependency alignment across the project.
   - @spectrum-css/fieldlabel@11.0.0
   - @spectrum-css/tokens@16.0.1
 
+## 5.0.0-next.1
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`8d65de0`](https://github.com/adobe/spectrum-css/commit/8d65de0233a6b12e72002b47e9484dbe5f0636be) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to align `spectrum-two` with `s2-foundations-redux`/`main`, mostly defining unused custom properties, but addresses any other lint warnings or inconsistencies noted in the following components:
+
+  **Calendar**: Defines 1 previously undefined custom property to align with `main` and `s2-foundations-redux`
+  **Dial**: Defines 6 previously undefined custom properties, removes 3 unused custom properties
+  **Pickerbutton**: Defines 9 previously undefined custom properties to align with `main` and `s2-foundations-redux`
+  **Progressbar**: Removes 3 unused custom properties, reverts background-color to background to accommodate gradients
+  **Radio**: Defines 4 previously undefined custom properties to align with `main` and `s2-foundations-redux`
+  **Stepper**: moves high contrast block further down to align with other components' CSS structure, defines multiple undefined custom properties, adds disable-next-line comment to suppress no-unused-custom-properties warning
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
+## 5.0.0-next.0
+
+### Major Changes
+
+- [#2659](https://github.com/adobe/spectrum-css/pull/2659) [`bd38eaa`](https://github.com/adobe/spectrum-css/commit/bd38eaa8c8597c066f1fe61d70130a7f310bcca4) Thanks [@mdt2](https://github.com/mdt2)! - feat(progressbar): S2 migration
+
+  Progress bar now uses Spectrum 2 tokens and specifications. This migration includes updated colors, font sizes, and spacing. No mods were harmed in the migration of this component (all `--mod` properties remain the same).
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## 6.0.1
 
 ### Patch Changes
@@ -152,6 +179,12 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3291](https://github.com/adobe/spectrum-css/pull/3291) [`6c47b48`](https://github.com/adobe/spectrum-css/commit/6c47b48cdfbd1ad5fc19d913d18901f405b8b211) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Resolves lint violation by removing unused custom property.
+
+## 4.1.8
+
+### Patch Changes
+
+- [#3291](https://github.com/adobe/spectrum-css/pull/3291) [`6c47b48`](https://github.com/adobe/spectrum-css/commit/6c47b48cdfbd1ad5fc19d913d18901f405b8b211) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation by removing unused custom property.
 
 ## 4.1.7
 

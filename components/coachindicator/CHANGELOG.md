@@ -127,6 +127,15 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 - Updated dependencies [[`4b818e1`](https://github.com/adobe/spectrum-css/commit/4b818e1062202e404de1350938ce2a19146aa0b0)]:
   - @spectrum-css/tokens@14.6.0
 
+## 2.1.5
+
+### Patch Changes
+
+- [#3266](https://github.com/adobe/spectrum-css/pull/3266) [`4b818e1`](https://github.com/adobe/spectrum-css/commit/4b818e1062202e404de1350938ce2a19146aa0b0) Thanks [@5t3ph](https://github.com/5t3ph)! - For Coach indicator, marks "light" and "dark" variants for deprecation going into S2, and adds "static white" per direction from design.
+
+- Updated dependencies [[`4b818e1`](https://github.com/adobe/spectrum-css/commit/4b818e1062202e404de1350938ce2a19146aa0b0)]:
+  - @spectrum-css/tokens@14.6.0
+
 ## 2.1.4
 
 ### Patch Changes
@@ -152,6 +161,12 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#2842](https://github.com/adobe/spectrum-css/pull/2842) [`4cd3a15`](https://github.com/adobe/spectrum-css/commit/4cd3a15db914b667f5d606388051ecd2cd318134) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Updated CSSNano plugin to toggle reduceIdent off to prevent invalid abstractions from breaking named grid templates.
+
+## 2.1.2
+
+### Patch Changes
+
+- [#2842](https://github.com/adobe/spectrum-css/pull/2842) [`4cd3a15`](https://github.com/adobe/spectrum-css/commit/4cd3a15db914b667f5d606388051ecd2cd318134) Thanks [@castastrophe](https://github.com/castastrophe)! - Updated CSSNano plugin to toggle reduceIdent off to prevent invalid abstractions from breaking named grid templates.
 
 ## 2.1.1
 

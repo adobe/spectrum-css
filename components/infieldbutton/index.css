@@ -46,6 +46,20 @@
 
 	--spectrum-infield-button-fill-justify-content: center;
 
+	--spectrum-infield-button-border-width: var(--spectrum-border-width-100);
+	--spectrum-infield-button-border-color: inherit;
+
+	--spectrum-infield-button-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-infield-button-border-radius-reset: 0;
+
+	--spectrum-infield-button-stacked-top-border-radius-start-start: var(--spectrum-infield-button-border-radius-reset);
+	--spectrum-infield-button-stacked-bottom-border-radius-end-start: var(--spectrum-infield-button-border-radius-reset);
+
+	--spectrum-infield-button-background-color: var(--spectrum-gray-50);
+	--spectrum-infield-button-background-color-hover: var(--spectrum-gray-100);
+	--spectrum-infield-button-background-color-down: var(--spectrum-gray-200);
+	--spectrum-infield-button-background-color-key-focus: var(--spectrum-gray-100);
+
 	&:disabled {
 		--mod-infield-button-background-color: var(--mod-infield-button-background-color-disabled, var(--spectrum-disabled-background-color));
 		--mod-infield-button-background-color-hover: var(--mod-infield-button-background-color-hover-disabled, var(--spectrum-disabled-background-color));

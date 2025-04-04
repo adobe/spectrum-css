@@ -78,6 +78,29 @@ Dependency alignment across the project.
   - @spectrum-css/progresscircle@5.1.0
   - @spectrum-css/tokens@16.0.1
 
+## 9.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/popover@8.0.0-next.0
+  - @spectrum-css/menu@8.0.0-next.0
+
+## 9.0.0-next.0
+
+### Major Changes
+
+- [#2697](https://github.com/adobe/spectrum-css/pull/2697) [`5d730fe`](https://github.com/adobe/spectrum-css/commit/5d730fe711c7469b7216ece9638a4a157429fa17) Thanks [@jawinn](https://github.com/jawinn)! - #### Spectrum 2 migration
+
+  Picker now uses Spectrum 2 tokens and specifications. A few notable changes:
+
+  - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
+  - The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
+  - The mod custom property `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`.
+  - The mod custom property `--mod-picker-spacing-text-to-alert-icon-inline-start` has been renamed to `--mod-picker-spacing-text-to-icon-inline-end`. This removed the fallback that was marked as deprecated in a previous version.
+  - The mod custom property `--mod-picker-spacing-text-to-icon` has been removed. Use `--mod-picker-spacing-text-to-icon-inline-end` for the spacing between text and visual (indicator or disclosure), or `--mod-picker-spacing-starting-icon-to-text` for the space between the optional workflow icon and the text.
+
 ## 9.0.1
 
 ### Patch Changes

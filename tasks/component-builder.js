@@ -88,6 +88,7 @@ async function processCSS(
 		to: output ?? input,
 		verbose: false,
 		minify,
+		shouldCombine: true,
 		...postCSSOptions,
 	};
 

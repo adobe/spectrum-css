@@ -26,6 +26,26 @@ Dependency alignment across the project.
 - Updated dependencies [[`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
   - @spectrum-css/tokens@16.0.1
 
+## 8.0.0-next.1
+
+### Patch Changes
+
+- [#3517](https://github.com/adobe/spectrum-css/pull/3517) [`7582c1f`](https://github.com/adobe/spectrum-css/commit/7582c1f5c73de5ecf962bfad0294f162d7035751) Thanks [@cdransf](https://github.com/cdransf)! - Define undefined properties from theme directory.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
+## 8.0.0-next.0
+
+### Major Changes
+
+- [#3355](https://github.com/adobe/spectrum-css/pull/3355) [`a827601`](https://github.com/adobe/spectrum-css/commit/a827601bc1769a775f24e9da294bdfaa70535082) Thanks [@cdransf](https://github.com/cdransf)! - Adds support for new avatar-size tokens (avatar-size-800 to avatar-size-1500). Updates avatar component story to support new sizes. Adds support for avatar-border-color and avatar-border-thickness.
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 9.0.1
 
 ### Patch Changes

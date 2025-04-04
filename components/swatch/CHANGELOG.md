@@ -48,6 +48,14 @@ Dependency alignment across the project.
   - @spectrum-css/opacitycheckerboard@4.1.0
   - @spectrum-css/tokens@16.0.1
 
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08), [`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/opacitycheckerboard@3.0.0-next.0
+
 ## 8.0.1
 
 ### Patch Changes
@@ -164,6 +172,17 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3253](https://github.com/adobe/spectrum-css/pull/3253) [`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - This update removes tokens defined locally that belonged in the global scope. To ensure no regressions, please upgrade your @spectrum-css/tokens package at the same time so you will pick up the component-level definitions now in the global tokens scope. References to `.spectrum--(light|dark|darkest|medium|large)` have been removed.
+
+### Patch Changes
+
+- Updated dependencies [[`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86)]:
+  - @spectrum-css/tokens@14.5.0
+
+## 6.3.0
+
+### Minor Changes
+
+- [#3253](https://github.com/adobe/spectrum-css/pull/3253) [`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86) Thanks [@castastrophe](https://github.com/castastrophe)! - This update removes tokens defined locally that belonged in the global scope. To ensure no regressions, please upgrade your @spectrum-css/tokens package at the same time so you will pick up the component-level definitions now in the global tokens scope. References to `.spectrum--(light|dark|darkest|medium|large)` have been removed.
 
 ### Patch Changes
 

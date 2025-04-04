@@ -66,6 +66,24 @@ By updating the postcss-preset-env to the latest breaking change version, output
 
 Adjusts RTL mode menu item focus indicator side for S1/Express.
 
+## 8.0.0-next.1
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`2850ef5`](https://github.com/adobe/spectrum-css/commit/2850ef5439d50fd47db81783c861a63ffa42414f) Thanks [@pfulton](https://github.com/pfulton)! - Define undefined custom properties from themes directory.
+
+- Updated dependencies [[`5fae8ab`](https://github.com/adobe/spectrum-css/commit/5fae8aba83d396103aca56c108e7e81f61fce655), [`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/switch@5.2.1-next.0
+  - @spectrum-css/tokens@14.0.0-next.12
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/tray@4.0.0-next.0
+
 ## 9.0.1
 
 ### Patch Changes
@@ -208,6 +226,18 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3290](https://github.com/adobe/spectrum-css/pull/3290) [`df4c029`](https://github.com/adobe/spectrum-css/commit/df4c029babe8007a783099f9989af1e2c2e8181e) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Resolves lint violation by removing unused custom property.
+
+## 7.1.9
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Add passthrough markers to prevent unnecessary warnings about unused custom properties
+
+## 7.1.8
+
+### Patch Changes
+
+- [#3290](https://github.com/adobe/spectrum-css/pull/3290) [`df4c029`](https://github.com/adobe/spectrum-css/commit/df4c029babe8007a783099f9989af1e2c2e8181e) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation by removing unused custom property.
 
 ## 7.1.7
 

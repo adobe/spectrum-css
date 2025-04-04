@@ -59,6 +59,25 @@ Dependency alignment across the project.
   - @spectrum-css/colorloupe@7.1.0
   - @spectrum-css/tokens@16.0.1
 
+## 5.0.0-next.1
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`6b41b50`](https://github.com/adobe/spectrum-css/commit/6b41b501768da3db70ae00f6097646583f8fbd01) Thanks [@pfulton](https://github.com/pfulton)! - Restores missing custom properties that were flagged by the linter. The missing properties were copied from the spectrum two theme files in the foundations branch. This clears up all linter errors and warnings for these components.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
+## 5.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08), [`8aa61a9`](https://github.com/adobe/spectrum-css/commit/8aa61a9a92974b4048ba18b4d33e756af9a37d8e), [`b91a202`](https://github.com/adobe/spectrum-css/commit/b91a2020be7a590a794938546e2f85f3fd9eef3e)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/colorarea@6.0.0-next.0
+  - @spectrum-css/colorloupe@6.0.0-next.0
+  - @spectrum-css/colorhandle@9.0.0-next.0
+
 ## 6.0.1
 
 ### Patch Changes
@@ -187,6 +206,16 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3273](https://github.com/adobe/spectrum-css/pull/3273) [`c6205bb`](https://github.com/adobe/spectrum-css/commit/c6205bb247c9c56bb3d7cf8bd52c032fe3b9486f) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Moves custom properties to resolve declaration order lint violation. Disable unused property violation and add comment as disable statement description.
+
+- Updated dependencies [[`055906c`](https://github.com/adobe/spectrum-css/commit/055906cddb04bdf34ac64125d95a63697b922760), [`a354b16`](https://github.com/adobe/spectrum-css/commit/a354b166727fb34b17300bcd3a6118a00034e344)]:
+  - @spectrum-css/colorhandle@8.1.4
+  - @spectrum-css/colorloupe@5.1.4
+
+## 4.1.4
+
+### Patch Changes
+
+- [#3273](https://github.com/adobe/spectrum-css/pull/3273) [`c6205bb`](https://github.com/adobe/spectrum-css/commit/c6205bb247c9c56bb3d7cf8bd52c032fe3b9486f) Thanks [@cdransf](https://github.com/cdransf)! - Moves custom properties to resolve declaration order lint violation. Disable unused property violation and add comment as disable statement description.
 
 - Updated dependencies [[`055906c`](https://github.com/adobe/spectrum-css/commit/055906cddb04bdf34ac64125d95a63697b922760), [`a354b16`](https://github.com/adobe/spectrum-css/commit/a354b166727fb34b17300bcd3a6118a00034e344)]:
   - @spectrum-css/colorhandle@8.1.4

@@ -36,6 +36,13 @@ Dependency alignment across the project.
   - @spectrum-css/tooltip@8.0.0
   - @spectrum-css/tokens@16.0.1
 
+## 6.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`5a0ce6e`](https://github.com/adobe/spectrum-css/commit/5a0ce6e5c1908679bd87a63969b99a105faea265)]:
+  - @spectrum-css/tooltip@7.0.0-next.0
+
 ## 7.0.1
 
 ### Patch Changes
@@ -149,6 +156,12 @@ Remove the storybook assets from the shipped output for components
 📝 [#3302](https://github.com/adobe/spectrum-css/pull/3302) [`4988da3`](https://github.com/adobe/spectrum-css/commit/4988da329bc4d562dd068776d7b7f84393086274) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Resolves stylelint violation by removing vertical-align declaration that is ignored due to preceding display: block declaration.
+
+## 5.1.4
+
+### Patch Changes
+
+- [#3302](https://github.com/adobe/spectrum-css/pull/3302) [`4988da3`](https://github.com/adobe/spectrum-css/commit/4988da329bc4d562dd068776d7b7f84393086274) Thanks [@cdransf](https://github.com/cdransf)! - Resolves stylelint violation by removing vertical-align declaration that is ignored due to preceding display: block declaration.
 
 ## 5.1.3
 

@@ -21,6 +21,36 @@ In `tokens/custom/medium-vars.css`: `--spectrum-coachmark-action-menu-vertical-o
 
 Set component peerDependencies as optional to reduce console warnings on downstream projects.
 
+## 14.0.0-next.12
+
+### Patch Changes
+
+- [#3497](https://github.com/adobe/spectrum-css/pull/3497) [`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76) Thanks [@cdransf](https://github.com/cdransf)! - Uses the latest releases from Spectrum Tokens (spectrum-tokens@13.0.0-beta.56)
+
+## 14.0.0-next.11
+
+### Patch Changes
+
+- [#3456](https://github.com/adobe/spectrum-css/pull/3456) [`b9aeb20`](https://github.com/adobe/spectrum-css/commit/b9aeb203dd0bd728606d47d10dbd37fb42229379) Thanks [@cdransf](https://github.com/cdransf)! - Uses the latest releases from Spectrum Tokens (13.0.0-beta.55)
+
+## 14.0.0-next.10
+
+### Patch Changes
+
+- [#2860](https://github.com/adobe/spectrum-css/pull/2860) [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds `--spectrum-standard-dialog-spacing-edge-to-content` to properly adjust the spacing for desktop/mobile dialog styles.
+
+## 14.0.0-next.9
+
+### Patch Changes
+
+- [#3351](https://github.com/adobe/spectrum-css/pull/3351) [`8f782a4`](https://github.com/adobe/spectrum-css/commit/8f782a4711c0d8c6e1de47b3be91b3cc2670fa72) Thanks [@cdransf](https://github.com/cdransf)! - Uses the latest release from Spectrum Tokens (13.0.0-beta.52)
+
+## 14.0.0-next.8
+
+### Patch Changes
+
+- [#2797](https://github.com/adobe/spectrum-css/pull/2797) [`e62d1ca`](https://github.com/adobe/spectrum-css/commit/e62d1ca8cad8a2cdd9c8748335d0371e0aaca60a) Thanks [@pfulton](https://github.com/pfulton)! - Uses the latest release from Spectrum Tokens (13.0.0-beta.35)
+
 ## 16.0.0
 
 ### Major Changes

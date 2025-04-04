@@ -170,10 +170,6 @@
 		--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-small);
 	}
 
-	&.spectrum-Combobox--sizeM {
-		--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-medium);
-	}
-
 	&.spectrum-Combobox--sizeL {
 		--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-large);
 	}

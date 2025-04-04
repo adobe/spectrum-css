@@ -97,7 +97,7 @@ export default {
 		},
 		isHovered,
 		isActive,
-		popoverContent: { table: { disable: true } },
+		content: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Picker",

@@ -36,6 +36,39 @@ Minified and gzipped outputs available for all compiled CSS assets.
   - @spectrum-css/actionbutton@8.0.0
   - @spectrum-css/tokens@16.0.1
 
+<a name="5.0.0-next.3"></a>
+
+## 5.0.0-next.3
+
+- Global token update to latest package released
+
+<a name="5.0.0-next.2"></a>
+
+## 5.0.0-next.2
+
+- Remove deprecated `--mod` properties from the commons package.
+- Global grays migration for S2 foundations support.
+
+<a name="5.0.0-next.1"></a>
+
+## 5.0.0-next.1
+
+Align peerDependency requirements with local tokens package version.
+
+<a name="5.0.0-next.0"></a>
+
+## 5.0.0-next.0
+
+🗓 2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.0...@spectrum-css/actiongroup@5.0.0-next.0)
+
+### 🛑 BREAKING CHANGE: migrates `Action Group` to Spectrum 2
+
+Removes the following `--mod-*` properties:
+
+- `--mod-actiongroup-button-spacing-reset`
+- `--mod-actiongroup-horizontal-spacing-compact`
+- `--mod-actiongroup-vertical-spacing-compact`
+
 ## 6.0.1
 
 ### Patch Changes

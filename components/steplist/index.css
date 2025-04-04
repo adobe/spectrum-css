@@ -180,6 +180,7 @@
 	inset-inline-start: 50%;
 	inset-block-end: var(--mod-steplist-label-labelOffset, var(--spectrum-steplist-label-labelOffset));
 
+
 	display: block;
 	inline-size: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5);
 
@@ -188,7 +189,7 @@
 
 	transform: translateX(-50%);
 
-	color: var(--mod-steplist-incomplete-label-color, var(--spectrum-steplist-incomplete-label-color));
+	color: var(--mod-steplist-incomplete-label-color, var(--spectrum-steplist-incomplete-label-text-color));
 
 	&:dir(rtl) {
 		transform: translateX(50%);
@@ -225,7 +226,8 @@
 
 	border-radius: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
 
-	border: 2px solid;
+	border-width: 2px;
+	border-style: solid;
 	border-color: var(--mod-steplist-incomplete-marker-border-color, var(--spectrum-steplist-incomplete-marker-border-color));
 	background: transparent;
 }

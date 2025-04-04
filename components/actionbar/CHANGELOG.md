@@ -47,6 +47,14 @@ Dependency alignment across the project.
   - @spectrum-css/popover@9.0.0
   - @spectrum-css/tokens@16.0.1
 
+## 9.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/popover@8.0.0-next.0
+
 ## 10.0.1
 
 ### Patch Changes

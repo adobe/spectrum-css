@@ -152,6 +152,7 @@
 
 	&.is-drop-target {
 		--mod-card-background-color: var(--spectrum-background-base-color);
+		--mod-card-border-color: var(--spectrum-card-border-color-selected);
 
 		box-shadow: 0 0 0 1px var(--spectrum-card-border-color);
 	}

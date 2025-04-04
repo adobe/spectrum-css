@@ -37,6 +37,28 @@ Dependency alignment across the project.
 - Updated dependencies [[`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d)]:
   - @spectrum-css/tokens@16.0.1
 
+## 8.0.0-next.0
+
+### Major Changes
+
+- [#2818](https://github.com/adobe/spectrum-css/pull/2818) [`2f8ef28`](https://github.com/adobe/spectrum-css/commit/2f8ef28aa58063553de30026de81bbc965e91157) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Spectrum 2 Status light migration
+
+  New non-semantic colors were added to the variants list, while the `accent` semantic variant was removed. There were also some new and updated color and text-to-visual tokens used to match the designs, along with normalizing font family, font style, and font weight.
+
+  New mods added:
+
+  - `--mod-statuslight-font-family`
+  - `--mod-statuslight-font-style`
+  - `--mod-statuslight-nonsemantic-brown-color`
+  - `--mod-statuslight-nonsemantic-cinnamon-color`
+  - `--mod-statuslight-nonsemantic-pink-color`
+  - `--mod-statuslight-nonsemantic-silver-color`
+  - `--mod-statuslight-nonsemantic-turquoise-color`
+
+  Removed mods:
+
+  - `--mod-statuslight-semantic-accent-color`
+
 ## 9.0.1
 
 ### Patch Changes
@@ -134,6 +156,12 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3299](https://github.com/adobe/spectrum-css/pull/3299) [`d1a8522`](https://github.com/adobe/spectrum-css/commit/d1a8522b8bd0ba8f1ecf30bd8ed00af679e7e532) Thanks [@cdransf](https://github.com/cdransf)!
 
 Adjust custom property ordering to resolve lint violations.
+
+## 7.2.3
+
+### Patch Changes
+
+- [#3299](https://github.com/adobe/spectrum-css/pull/3299) [`d1a8522`](https://github.com/adobe/spectrum-css/commit/d1a8522b8bd0ba8f1ecf30bd8ed00af679e7e532) Thanks [@cdransf](https://github.com/cdransf)! - Adjust custom property ordering to resolve lint violations.
 
 ## 7.2.2
 

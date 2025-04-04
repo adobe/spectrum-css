@@ -21,6 +21,14 @@
 	--spectrum-textfield-border-width: var(--spectrum-border-width-200);
 	--spectrum-textfield-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
 
+	--spectrum-textfield-border-color: var(--spectrum-gray-500);
+	--spectrum-textfield-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-textfield-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-textfield-border-color-focus-hover: var(--spectrum-gray-900);
+	--spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
+
+	--spectrum-textfield-border-width: var(--spectrum-border-width-100);
+
 	/* default spacing */
 	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
 	--spectrum-textfield-spacing-block-start: var(--spectrum-component-top-to-text-100);
@@ -315,6 +323,10 @@
 
 /********* Child Element - Input *********/
 .spectrum-Textfield-input {
+	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
+	/* disallow mod for max compatibility */
+	--spectrum-textfield-input-line-height: var(--mod-textfield-height, var(--spectrum-textfield-height));
+
 	/* no mod defined to allow for maximum compatibility */
 	line-height: var(--spectrum-textfield-input-line-height);
 	box-sizing: border-box;

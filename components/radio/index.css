@@ -35,6 +35,10 @@
 	--spectrum-radio-disabled-content-color: var(--spectrum-disabled-content-color);
 	--spectrum-radio-disabled-border-color: var(--spectrum-disabled-content-color);
 
+	/* selection indicator all themes */
+	--spectrum-radio-border-width: var(--spectrum-border-width-200);
+	--spectrum-radio-button-background-color: var(--spectrum-gray-50);
+
 	/* emphasized state colors selection indicator all themes */
 	--spectrum-radio-emphasized-accent-color: var(--spectrum-accent-content-color-default);
 	--spectrum-radio-emphasized-accent-color-hover: var(--spectrum-accent-content-color-hover);

@@ -1,11 +1,13 @@
+
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
 import { startCase } from "lodash";
 
-import "./assets/index.css";
 
 import logo from "./assets/logo.svg";
 import pkg from "./package.json";
+
+import "./assets/index.css";
 
 const root = document.body ?? document.documentElement;
 if (root) root.classList.add("spectrum", "spectrum--light", "spectrum--medium");

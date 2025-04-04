@@ -80,6 +80,54 @@ Dependency alignment across the project.
   - @spectrum-css/progresscircle@5.1.0
   - @spectrum-css/tokens@16.0.1
 
+## 14.0.0-next.8
+
+### Patch Changes
+
+- [#3517](https://github.com/adobe/spectrum-css/pull/3517) [`7582c1f`](https://github.com/adobe/spectrum-css/commit/7582c1f5c73de5ecf962bfad0294f162d7035751) Thanks [@cdransf](https://github.com/cdransf)! - Define undefined properties from theme directory.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
+## 14.0.0-next.7
+
+### Patch Changes
+
+- [#2725](https://github.com/adobe/spectrum-css/pull/2725) [`81edcde`](https://github.com/adobe/spectrum-css/commit/81edcde7fc606acd86b2bdb4379e0d2f96a5e211) Thanks [@jawinn](https://github.com/jawinn)! - #### refactor: remove spectrum-ButtonWithFocusRing placeholder class extend
+
+  Removes the need for the extend from this placeholder class, as the styles it provides have diverged slightly from what is in button and it was causing some unnecessary CSS to override.
+  This should not result in any changed visuals or behavior, as the same CSS has been integrated.
+
+## 14.0.0-next.6
+
+### Major Changes
+
+- [#2600](https://github.com/adobe/spectrum-css/pull/2600) [`3559678`](https://github.com/adobe/spectrum-css/commit/35596780a1309dd145fa565461d330ddfaf50e68) Thanks [@jawinn](https://github.com/jawinn)!
+
+#### Spectrum 2 migration
+
+Button now uses Spectrum 2 tokens and specifications, which includes many color changes to all variants. A few other notable changes:
+
+- Outline buttons are no longer available in accent and negative options — use the filled variant instead.
+- Medium size is now the default. The class `.spectrum-Button--sizeM` is now unnecessary for this size, and has been removed.
+- The `.spectrum-Button--fill` class is no longer needed and has been removed.
+
+The following `--mod` custom properties have been renamed:
+
+- `--mod-line-height-100` has been renamed to `--mod-button-line-height`
+- `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`
+- `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`
+- `--mod-bold-font-weight` has been renamed to `--mod-button-font-weight`
+
+## 14.0.0-next.5
+
+### Patch Changes
+
+- Updated peerDependencies [[`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d)]:
+  - @spectrum-css/icon@>=7
+  - @spectrum-css/progresscircle@>=3
+  - @spectrum-css/tokens@>=14
+
 ## 14.0.1
 
 ### Patch Changes
@@ -185,29 +233,30 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 
 ### Patch Changes
 
-- Updated dependencies [[`9c49505`](https://github.com/adobe/spectrum-css/commit/9c4950517bf0f8ca7b2e373f4323c97d068d0ceb)]:
-  - @spectrum-css/progresscircle@3.2.0
-  - @spectrum-css/icon@7.2.0
+- [#2725](https://github.com/adobe/spectrum-css/pull/2725) [`81edcde`](https://github.com/adobe/spectrum-css/commit/81edcde7fc606acd86b2bdb4379e0d2f96a5e211) Thanks [@jawinn](https://github.com/jawinn)! - #### refactor: remove spectrum-ButtonWithFocusRing placeholder class extend
 
-## 13.4.0
+  Removes the need for the extend from this placeholder class, as the styles it provides have diverged slightly from what is in button and it was causing some unnecessary CSS to override.
+  This should not result in any changed visuals or behavior, as the same CSS has been integrated.
 
-### Minor Changes
+## 14.0.0-next.6
 
 📝 [#3197](https://github.com/adobe/spectrum-css/pull/3197) [`1eac198`](https://github.com/adobe/spectrum-css/commit/1eac198754ca1e60f96a64c7cf5e7c7a4758b1f3) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Replaces all of occurrences of --spectrum-component-pill-edge-to-text-_(intended to be used as padding) in the button component with the appropriate corner-radius-_ tokens.
 
-## 13.3.0
+- [#2600](https://github.com/adobe/spectrum-css/pull/2600) [`3559678`](https://github.com/adobe/spectrum-css/commit/35596780a1309dd145fa565461d330ddfaf50e68) Thanks [@jawinn](https://github.com/jawinn)!
 
-### Minor Changes
+#### Spectrum 2 migration
 
 📝 [#3086](https://github.com/adobe/spectrum-css/pull/3086) [`d49ea11`](https://github.com/adobe/spectrum-css/commit/d49ea118abbeb0c2195630dcccf64ac64bbcacbc) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
 
 - Adds the ability to disable text wrapping within the button component's label by applying the class `.spectrum-Button--noWrap` to `.spectrum-Button`. If the text overflows the maximum allowed width of the button, an ellipsis `...` indicator will show. Please note that this option is not a part of the design specification and should be used carefully, with consideration of this overflow behavior and the readability of the button's content.
 
-## 13.2.0
+- Outline buttons are no longer available in accent and negative options — use the filled variant instead.
+- Medium size is now the default. The class `.spectrum-Button--sizeM` is now unnecessary for this size, and has been removed.
+- The `.spectrum-Button--fill` class is no longer needed and has been removed.
 
-### Minor Changes
+The following `--mod` custom properties have been renamed:
 
 📝 [#3078](https://github.com/adobe/spectrum-css/pull/3078) [`06491f3`](https://github.com/adobe/spectrum-css/commit/06491f3a7983bdf0fe0acf350623eed7297ad935) Thanks [@cdransf](https://github.com/cdransf)!
 

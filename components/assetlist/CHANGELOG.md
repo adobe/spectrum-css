@@ -163,6 +163,17 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 - Updated dependencies [[`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86)]:
   - @spectrum-css/tokens@14.5.0
 
+## 6.3.0
+
+### Minor Changes
+
+- [#3264](https://github.com/adobe/spectrum-css/pull/3264) [`fc815ec`](https://github.com/adobe/spectrum-css/commit/fc815ec1eee63718e1f6441aedcfd7e25bb81c00) Thanks [@cdransf](https://github.com/cdransf)! - Resolves a linting violation in the assetlist component by moving forced-color-adjust after token declarations.
+
+### Patch Changes
+
+- Updated dependencies [[`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86)]:
+  - @spectrum-css/tokens@14.5.0
+
 ## 6.2.0
 
 ### Minor Changes

@@ -38,6 +38,25 @@ Dependency alignment across the project.
   - @spectrum-css/icon@9.1.0
   - @spectrum-css/tokens@16.0.1
 
+## 10.0.0-next.1
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`2850ef5`](https://github.com/adobe/spectrum-css/commit/2850ef5439d50fd47db81783c861a63ffa42414f) Thanks [@pfulton](https://github.com/pfulton)! - Define undefined custom properties from themes directory.
+
+- Updated dependencies [[`7582c1f`](https://github.com/adobe/spectrum-css/commit/7582c1f5c73de5ecf962bfad0294f162d7035751), [`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/clearbutton@6.4.1-next.0
+  - @spectrum-css/avatar@8.0.0-next.1
+  - @spectrum-css/tokens@14.0.0-next.12
+
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a827601`](https://github.com/adobe/spectrum-css/commit/a827601bc1769a775f24e9da294bdfaa70535082), [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/avatar@8.0.0-next.0
+  - @spectrum-css/tokens@14.0.0-next.10
+
 ## 10.0.1
 
 ### Patch Changes
@@ -151,6 +170,12 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3307](https://github.com/adobe/spectrum-css/pull/3307) [`25ddd5e`](https://github.com/adobe/spectrum-css/commit/25ddd5e62a19a8040f6c08549e447e19c0788af3) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Reorder rules and custom properties to resolve lint violations.
+
+## 9.1.4
+
+### Patch Changes
+
+- [#3307](https://github.com/adobe/spectrum-css/pull/3307) [`25ddd5e`](https://github.com/adobe/spectrum-css/commit/25ddd5e62a19a8040f6c08549e447e19c0788af3) Thanks [@cdransf](https://github.com/cdransf)! - Reorder rules and custom properties to resolve lint violations.
 
 ## 9.1.3
 

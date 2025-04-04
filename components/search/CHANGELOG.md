@@ -48,6 +48,17 @@ Dependency alignment across the project.
   - @spectrum-css/textfield@9.0.0
   - @spectrum-css/tokens@16.0.1
 
+## 7.4.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`6b41b50`](https://github.com/adobe/spectrum-css/commit/6b41b501768da3db70ae00f6097646583f8fbd01) Thanks [@pfulton](https://github.com/pfulton)! - Restores missing custom properties that were flagged by the linter. The missing properties were copied from the spectrum two theme files in the foundations branch. This clears up all linter errors and warnings for these components.
+
+- Updated dependencies [[`7582c1f`](https://github.com/adobe/spectrum-css/commit/7582c1f5c73de5ecf962bfad0294f162d7035751), [`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76), [`2850ef5`](https://github.com/adobe/spectrum-css/commit/2850ef5439d50fd47db81783c861a63ffa42414f)]:
+  - @spectrum-css/clearbutton@6.4.1-next.0
+  - @spectrum-css/tokens@14.0.0-next.12
+  - @spectrum-css/textfield@7.3.1-next.0
+
 ## 8.0.1
 
 ### Patch Changes
@@ -195,6 +206,24 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3270](https://github.com/adobe/spectrum-css/pull/3270) [`008bb34`](https://github.com/adobe/spectrum-css/commit/008bb34a0bbefd1abeb0d37bcdb179811dd9df3c) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Removes unnecessary stylelint-disable comments now that rule is disabled in config.
+
+## 7.2.3
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Add passthrough markers to prevent unnecessary warnings about unused custom properties
+
+## 7.2.2
+
+### Patch Changes
+
+- [#3295](https://github.com/adobe/spectrum-css/pull/3295) [`62e2b76`](https://github.com/adobe/spectrum-css/commit/62e2b76f1fed5c0fb60049826b05eaa9162f21e2) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation in search by moving spectrum-search-color custom property above style declarations.
+
+## 7.2.1
+
+### Patch Changes
+
+- [#3270](https://github.com/adobe/spectrum-css/pull/3270) [`008bb34`](https://github.com/adobe/spectrum-css/commit/008bb34a0bbefd1abeb0d37bcdb179811dd9df3c) Thanks [@cdransf](https://github.com/cdransf)! - Removes unnecessary stylelint-disable comments now that rule is disabled in config.
 
 ## 7.2.0
 

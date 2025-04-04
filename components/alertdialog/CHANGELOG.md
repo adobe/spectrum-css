@@ -55,6 +55,16 @@ Dependency alignment across the project.
   - @spectrum-css/underlay@6.1.0
   - @spectrum-css/tokens@16.0.1
 
+## 2.1.1-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08), [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08), [`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08)]:
+  - @spectrum-css/buttongroup@7.0.0-next.4
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/modal@5.1.1-next.0
+  - @spectrum-css/underlay@4.1.1-next.0
+
 ## 4.0.1
 
 ### Patch Changes

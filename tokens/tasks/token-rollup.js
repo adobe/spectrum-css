@@ -20,7 +20,7 @@ const path = require("path");
 const fg = require("fast-glob");
 
 const { processCSS } = require("../../tasks/component-builder.js");
-const { fetchContent } = require("../../tasks/utilities.js");
+const { copy, fetchContent } = require("../../tasks/utilities.js");
 
 require("colors");
 

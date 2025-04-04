@@ -34,6 +34,15 @@ Dependency alignment across the project.
   - @spectrum-css/icon@9.1.0
   - @spectrum-css/tokens@16.0.1
 
+## 5.2.1-next.0
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`5fae8ab`](https://github.com/adobe/spectrum-css/commit/5fae8aba83d396103aca56c108e7e81f61fce655) Thanks [@pfulton](https://github.com/pfulton)! - Define undefined custom properties from themes directory.
+
+- Updated dependencies [[`0c431fc`](https://github.com/adobe/spectrum-css/commit/0c431fce7f38f967f934daa578b9bd2d8d173e76)]:
+  - @spectrum-css/tokens@14.0.0-next.12
+
 ## 6.0.1
 
 ### Patch Changes
@@ -137,6 +146,12 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3294](https://github.com/adobe/spectrum-css/pull/3294) [`d66cc60`](https://github.com/adobe/spectrum-css/commit/d66cc6019124f25582716d57b2cf499cdbacad48) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Assigns CanvasText to custom property to satisfy linting requirements.
+
+## 5.1.4
+
+### Patch Changes
+
+- [#3294](https://github.com/adobe/spectrum-css/pull/3294) [`d66cc60`](https://github.com/adobe/spectrum-css/commit/d66cc6019124f25582716d57b2cf499cdbacad48) Thanks [@cdransf](https://github.com/cdransf)! - Assigns CanvasText to custom property to satisfy linting requirements.
 
 ## 5.1.3
 

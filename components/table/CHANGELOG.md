@@ -40,6 +40,14 @@ Dependency alignment across the project.
   - @spectrum-css/thumbnail@9.0.0
   - @spectrum-css/tokens@16.0.1
 
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08), [`2c62239`](https://github.com/adobe/spectrum-css/commit/2c62239aab6ae9815bac6edf531c212c45665a5c), [`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/thumbnail@7.0.0-next.0
+
 ## 8.0.1
 
 ### Patch Changes
@@ -173,6 +181,12 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3305](https://github.com/adobe/spectrum-css/pull/3305) [`092aac5`](https://github.com/adobe/spectrum-css/commit/092aac56953f4c02cd5227e3f61c6cb0b2b4e46a) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Move mod declaration to satisfy lint rules. Rename table custom properties to align with lint rules.
+
+## 6.1.4
+
+### Patch Changes
+
+- [#3305](https://github.com/adobe/spectrum-css/pull/3305) [`092aac5`](https://github.com/adobe/spectrum-css/commit/092aac56953f4c02cd5227e3f61c6cb0b2b4e46a) Thanks [@cdransf](https://github.com/cdransf)! - Move mod declaration to satisfy lint rules. Rename table custom properties to align with lint rules.
 
 ## 6.1.3
 

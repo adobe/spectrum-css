@@ -2,7 +2,8 @@ import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/templ
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";

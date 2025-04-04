@@ -116,6 +116,7 @@
 	line-height: var(--mod-inlinealert-content-line-height, var(--spectrum-inlinealert-content-line-height));
 
 	color: var(--highcontrast-inlinealert-content-color, var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color)));
+
 }
 
 .spectrum-InLineAlert-footer {

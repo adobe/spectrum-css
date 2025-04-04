@@ -118,6 +118,12 @@
 
 		forced-color-adjust: none;
 
+		&::after {
+			--highcontrast-logic-button-focus-indicator-color: Highlight;
+
+			forced-color-adjust: none;
+		}
+
 		&:disabled,
 		&.is-disabled {
 			--highcontrast-logic-button-and-background-color: ButtonFace;

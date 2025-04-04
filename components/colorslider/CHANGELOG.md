@@ -30,6 +30,15 @@ Dependency alignment across the project.
   - @spectrum-css/opacitycheckerboard@4.1.0
   - @spectrum-css/tokens@16.0.1
 
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`bd934cc`](https://github.com/adobe/spectrum-css/commit/bd934cc9a5a43b2d453710d462a1faaa5046de08), [`eda9897`](https://github.com/adobe/spectrum-css/commit/eda9897f1a6e9ecaa4e000985e55b62ecdb9a586)]:
+  - @spectrum-css/tokens@14.0.0-next.10
+  - @spectrum-css/opacitycheckerboard@3.0.0-next.0
+  - @spectrum-css/colorhandle@9.0.0-next.0
+
 ## 8.0.1
 
 ### Patch Changes
@@ -151,6 +160,18 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3284](https://github.com/adobe/spectrum-css/pull/3284) [`cc9afaa`](https://github.com/adobe/spectrum-css/commit/cc9afaaf4ac1aa9311028307c0a18c25d12c0193) Thanks [@cdransf](https://github.com/cdransf)!
 
 - Resolves lint violations by removing unused custom properties.
+
+## 6.1.5
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove duplicate references
+
+## 6.1.4
+
+### Patch Changes
+
+- [#3284](https://github.com/adobe/spectrum-css/pull/3284) [`cc9afaa`](https://github.com/adobe/spectrum-css/commit/cc9afaaf4ac1aa9311028307c0a18c25d12c0193) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violations by removing unused custom properties.
 
 ## 6.1.3
 

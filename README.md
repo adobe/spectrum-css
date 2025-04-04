@@ -68,7 +68,7 @@ Start by including the base set of variables:
 @import "node_modules/@spectrum-css/button/dist/index.css";
 ```
 
-Tokens values are mapped to context-specific classes which can be applied to the `<html>` element or any place in your DOM where you wish to encapsulate or alter the visual language of your Spectrum components.
+Token values are mapped to context-specific classes which can be applied to the `<html>` element or any place in your DOM where you wish to encapsulate or alter the visual language of your Spectrum components.
 
 All contexts you want to use must be defined in order to load all the appropriate custom properties for the components you are using.
 
@@ -91,8 +91,6 @@ Themes represent the color scheme of the user's browsing context. They are used 
 
 - `.spectrum--light` - The default theme for Spectrum CSS, used for light mode
 - `.spectrum--dark` - A darker theme for Spectrum CSS, used for dark mode
-
-Other themes are available but are in the process of being deprecated and should not be used in new projects.
 
 #### Context example
 
