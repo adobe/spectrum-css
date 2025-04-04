@@ -9,8 +9,7 @@
     ".spectrum-ColorLoupe-outer-border",
     ".spectrum-ColorLoupe.is-disabled",
     ".spectrum-ColorLoupe.is-open",
-    ".spectrum-ColorLoupe:dir(rtl)",
-    "[dir=\"rtl\"] .spectrum-ColorLoupe"
+    ".spectrum-ColorLoupe:dir(rtl)"
   ],
   "modifiers": [
     "--mod-colorloupe-animation-distance",
@@ -45,7 +44,6 @@
     "--spectrum-opacity-checkerboard-square-light",
     "--spectrum-picked-color"
   ],
-  "system-theme": [],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-colorloupe-outer-border-color"]
 }
