@@ -4135,7 +4135,7 @@ __metadata:
     "@spectrum-css/thumbnail": "npm:9.0.0-next.0"
     "@spectrum-css/toast": "npm:12.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.1.0-next.0"
-    "@spectrum-css/tooltip": "npm:8.0.0-next.1"
+    "@spectrum-css/tooltip": "npm:8.0.0-next.2"
     "@spectrum-css/tray": "npm:6.0.0-next.3"
     "@spectrum-css/treeview": "npm:13.0.0-next.1"
     "@spectrum-css/typography": "npm:9.0.0-next.0"
@@ -5275,7 +5275,7 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:10.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.1.0-next.0"
-    "@spectrum-css/tooltip": "npm:8.0.0-next.1"
+    "@spectrum-css/tooltip": "npm:8.0.0-next.2"
   peerDependencies:
     "@spectrum-css/icon": ">=10.0.0-next.0"
     "@spectrum-css/tokens": ">=16.1.0-next.0"
@@ -5536,7 +5536,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tooltip@npm:8.0.0-next.1, @spectrum-css/tooltip@workspace:components/tooltip":
+"@spectrum-css/tooltip@npm:8.0.0-next.2, @spectrum-css/tooltip@workspace:components/tooltip":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tooltip@workspace:components/tooltip"
   dependencies:
