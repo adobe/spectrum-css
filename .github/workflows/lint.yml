@@ -96,7 +96,7 @@ jobs:
 
             - name: Lint component styles
               if: ${{ inputs.styles_added_files != '' || inputs.styles_modified_files != '' }}
-              uses: reviewdog/action-stylelint@v1.30.0
+              uses: reviewdog/action-stylelint@v1.30.2
               with:
                   fail_level: error
                   filter_mode: diff_context
@@ -108,7 +108,7 @@ jobs:
                   packages: 'stylelint-header stylelint-config-standard stylelint-selector-bem-pattern stylelint-order stylelint-use-logical'
 
             - name: Run eslint on packages and stories
-              uses: reviewdog/action-eslint@v1.33.0
+              uses: reviewdog/action-eslint@v1.33.2
               if: ${{ inputs.eslint_added_files != '' || inputs.eslint_modified_files != '' }}
               with:
                   fail_level: error
@@ -119,7 +119,7 @@ jobs:
                   eslint_flags: "${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"
 
             - name: Run markdownlint on documentation
-              uses: reviewdog/action-markdownlint@v0.26.0
+              uses: reviewdog/action-markdownlint@v0.26.2
               with:
                 reporter: github-pr-review
                 filter_mode: diff_context
