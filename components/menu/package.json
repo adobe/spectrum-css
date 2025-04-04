@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/menu",
-	"version": "10.0.0-next.1",
+	"version": "10.0.0-next.2",
 	"description": "The Spectrum CSS menu component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -28,8 +28,8 @@
 		"@spectrum-css/checkbox": ">=11.0.0-next.0",
 		"@spectrum-css/divider": ">=6.0.0-next.0",
 		"@spectrum-css/icon": ">=10.0.0-next.0",
-		"@spectrum-css/switch": ">=6.0.0 <7.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0",
+		"@spectrum-css/switch": ">=7.0.0-next.0",
+		"@spectrum-css/tokens": ">=16.1.0-next.0",
 		"@spectrum-css/tray": ">=6.0.0-next.0"
 	},
 	"peerDependenciesMeta": {
@@ -53,12 +53,12 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/checkbox": "11.0.0-next.0",
-		"@spectrum-css/divider": "6.0.0-next.0",
-		"@spectrum-css/icon": "10.0.0-next.0",
-		"@spectrum-css/switch": "6.1.0",
-		"@spectrum-css/tokens": "16.0.1",
-		"@spectrum-css/tray": "6.0.0-next.2"
+		"@spectrum-css/checkbox": "11.0.0-next.1",
+		"@spectrum-css/divider": "6.0.0-next.1",
+		"@spectrum-css/icon": "10.0.0-next.1",
+		"@spectrum-css/switch": "7.0.0-next.0",
+		"@spectrum-css/tokens": "16.1.0-next.0",
+		"@spectrum-css/tray": "6.0.0-next.3"
 	},
 	"keywords": [
 		"design-system",

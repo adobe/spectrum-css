@@ -1,5 +1,16 @@
 # Change log
 
+## 16.1.0-next.0
+
+### Minor Changes
+
+📝 [#3412](https://github.com/adobe/spectrum-css/pull/3412) [`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b) Thanks [@cdransf](https://github.com/cdransf)!
+
+Adds custom vars for coachmark action menu vertical spacing. These help provide consistent spacing between states when the action menu is and is not visible.
+
+In `tokens/custom/large-vars.css`: `--spectrum-coachmark-action-menu-vertical-offset`.
+In `tokens/custom/medium-vars.css`: `--spectrum-coachmark-action-menu-vertical-offset`.
+
 ## 16.0.1
 
 ### Patch Changes
@@ -8,7 +19,7 @@
 
 - Dependency alignment across the project.
 
-  Set component peerDependencies as optional to reduce console warnings on downstream projects.
+Set component peerDependencies as optional to reduce console warnings on downstream projects.
 
 ## 16.0.0
 
