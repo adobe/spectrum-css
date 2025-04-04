@@ -271,7 +271,7 @@ CodeVariants.parameters = {
 
 // ====== Docs: Internationalization ====== //
 /**
- * We should note that Hebrew and Arabic are rtl languages somewhere over here.
+ * In the examples below, Hebrew and Arabic are "RTL" languages, meaning they are read from right to left.
  */
 export const InternationalizedHeading = DocsInternationalizedHeadingVariants.bind({});
 InternationalizedHeading.storyName = "Internationalized Heading";
