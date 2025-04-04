@@ -12,11 +12,12 @@
  */
 
 .spectrum-ActionBar {
-	--spectrum-actionbar-popover-background-color: var(--spectrum-gray-25);
-	--spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
-
+	/* Layout */
 	--spectrum-actionbar-height: var(--spectrum-action-bar-height);
-	--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-100);
+	--spectrum-actionbar-minimum-width: var(--spectrum-action-bar-minimum-width);
+	--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-medium-size-extra-large);
+	--spectrum-actionbar-spacing-label-to-actiongroup: var(--spectrum-action-bar-label-to-action-group-area);
+	--spectrum-actionbar-spacing-action-group-edge: var(--spectrum-action-bar-edge-to-content-area);
 
 	/* item counter field label */
 	--spectrum-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
@@ -24,47 +25,25 @@
 	--spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
 
 	/* emphasized variation colors */
-	--spectrum-actionbar-emphasized-background-color: var(--spectrum-informative-background-color-default);
-	--spectrum-actionbar-emphasized-item-counter-color: var(--spectrum-white);
+	--spectrum-actionbar-emphasized-background-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-actionbar-emphasized-item-counter-color: var(--spectrum-gray-25);
+	--spectrum-actionbar-emphasized-actionbutton-label-color: var(--spectrum-gray-25);
+	--spectrum-actionbar-emphasized-icon-color: var(--spectrum-gray-25);
 
 	/* spacing of action bar bottom and horizontal outer edge */
 	--spectrum-actionbar-spacing-outer-edge: var(--spectrum-spacing-300);
 
-	/* spacing of close button */
-	--spectrum-actionbar-spacing-close-button-top: var(--spectrum-spacing-100);
-	--spectrum-actionbar-spacing-close-button-start: var(--spectrum-spacing-100);
-	--spectrum-actionbar-spacing-close-button-end: var(--spectrum-spacing-75);
-
-	/* spacing of item counter field label */
-	--spectrum-actionbar-spacing-item-counter-top: var(--spectrum-action-bar-top-to-item-counter);
-	--spectrum-actionbar-spacing-item-counter-end: var(--spectrum-spacing-400);
-
-	/* spacing of action group */
-	--spectrum-actionbar-spacing-action-group-top: var(--spectrum-spacing-100);
-	--spectrum-actionbar-spacing-action-group-end: var(--spectrum-spacing-100);
-
 	/* drop shadow */
-	--spectrum-actionbar-shadow-horizontal: var(--spectrum-drop-shadow-x);
-	--spectrum-actionbar-shadow-vertical: var(--spectrum-drop-shadow-y);
-	--spectrum-actionbar-shadow-blur: var(--spectrum-drop-shadow-blur);
-	--spectrum-actionbar-shadow-color: var(--spectrum-drop-shadow-color);
+	--spectrum-actionbar-shadow-horizontal: var(--spectrum-drop-shadow-elevated-x);
+	--spectrum-actionbar-shadow-vertical: var(--spectrum-drop-shadow-elevated-y);
+	--spectrum-actionbar-shadow-blur: var(--spectrum-drop-shadow-elevated-blur);
+	--spectrum-actionbar-shadow-color: var(--spectrum-drop-shadow-elevated-color);
 
 	/* cjk language support for item counter */
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
 		--spectrum-actionbar-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	}
-}
-
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-ActionBar {
-		--highcontrast-actionbar-popover-border-color: CanvasText;
-	}
-
-	.spectrum-ActionBar--emphasized .spectrum-ActionBar-popover {
-		--highcontrast-actionbar-popover-border-color: CanvasText;
 	}
 }
 
@@ -94,11 +73,11 @@
 	.spectrum-ActionBar-popover {
 		/* popover is ActionBar height */
 		block-size: var(--mod-actionbar-height, var(--spectrum-actionbar-height));
+		min-inline-size: var(--mod-actionbar-minimum-width, var(--spectrum-actionbar-minimum-width));
 		box-sizing: border-box;
 		inline-size: 100%;
 		margin: auto;
-		padding-block-start: 0;
-		padding-block-end: 0;
+		padding-inline: var(--mod-actionbar-spacing-action-group-edge, var(--spectrum-actionbar-spacing-action-group-edge));
 
 		/* Be relative so our width can be restricted */
 		position: relative;
@@ -115,24 +94,17 @@
 		/* inner layout of content items */
 		display: flex;
 		flex-direction: row;
+		align-items: center;
+		gap: var(--mod-actionbar-spacing-label-to-actiongroup, var(--spectrum-actionbar-spacing-label-to-actiongroup)); /* space between label and action group */
 	}
 
 	/* close button */
 	.spectrum-CloseButton {
-		margin-inline-start: var(--mod-actionbar-spacing-close-button-start, var(--spectrum-actionbar-spacing-close-button-start));
-		margin-inline-end: var(--mod-actionbar-spacing-close-button-end, var(--spectrum-actionbar-spacing-close-button-end));
-		margin-block-start: var(--mod-actionbar-spacing-close-button-top, var(--spectrum-actionbar-spacing-close-button-top));
 		flex-shrink: 0;
 	}
 
 	/* item counter */
 	.spectrum-FieldLabel {
-		margin-inline-end: var(--mod-actionbar-spacing-item-counter-end, var(--spectrum-actionbar-spacing-item-counter-end));
-		margin-block-start: var(--mod-actionbar-spacing-item-counter-top, var(--spectrum-actionbar-spacing-item-counter-top));
-
-		/* neutralize padding for correct spacing within ActionBar */
-		padding: 0;
-
 		font-size: var(--mod-actionbar-item-counter-font-size, var(--spectrum-actionbar-item-counter-font-size));
 		color: var(--mod-actionbar-item-counter-color, var(--spectrum-actionbar-item-counter-color));
 		line-height: var(--mod-actionbar-item-counter-line-height, var(--spectrum-actionbar-item-counter-line-height));
@@ -147,9 +119,6 @@
 
 	/* action group */
 	.spectrum-ActionGroup {
-		margin-inline-end: var(--mod-actionbar-spacing-action-group-end, var(--spectrum-actionbar-spacing-action-group-end));
-		margin-block-start: var(--mod-actionbar-spacing-action-group-top, var(--spectrum-actionbar-spacing-action-group-top));
-
 		/* align to end by default */
 		margin-inline-start: auto;
 	}
@@ -168,6 +137,20 @@
 	.spectrum-FieldLabel {
 		color: var(--mod-actionbar-emphasized-item-counter-color, var(--spectrum-actionbar-emphasized-item-counter-color));
 	}
+
+	.spectrum-ActionGroup .spectrum-ActionButton {
+		.spectrum-ActionButton-label {
+			--mod-actionbutton-label-color: var(--spectrum-actionbar-emphasized-actionbutton-label-color);
+		}
+
+		.spectrum-ActionButton-icon {
+			color: var(--spectrum-actionbar-emphasized-icon-color);
+		}
+	}
+
+	.spectrum-CloseButton .spectrum-Icon {
+		color: var(--spectrum-actionbar-emphasized-icon-color);
+	}
 }
 
 .spectrum-ActionBar--sticky {
@@ -183,4 +166,15 @@
 /* flexible width */
 .spectrum-ActionBar--flexible .spectrum-ActionBar-popover {
 	inline-size: auto;
+}
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-ActionBar {
+		--highcontrast-actionbar-popover-border-color: CanvasText;
+	}
+
+	.spectrum-ActionBar--emphasized .spectrum-ActionBar-popover {
+		--highcontrast-actionbar-popover-border-color: CanvasText;
+	}
 }
