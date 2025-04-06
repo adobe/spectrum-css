@@ -4,37 +4,38 @@ import sinon from "sinon";
 import changelogFunctions from "./index.js";
 
 /** @type {sinon.SinonSandbox} */
-let sandbox;
+let sandbox = sinon.createSandbox();
 
 const data = {
-	commit: "a085003",
+	commit: "a085003d4c8ca284c116668d7217fb747802ed85",
 	user: "Andarist",
 	pull: 1613,
 	repo: "emotion-js/emotion",
 };
 
 test.beforeEach((t) => {
-	sandbox = sinon.createSandbox();
-	const stub = sandbox.stub("@changesets/get-github-info");
-	stub.getInfo.returns({
-		pull: data.pull,
-		user: data.user,
-		links: {
-			user: `[@${data.user}](https://github.com/${data.user})`,
-			pull: `[#${data.pull}](https://github.com/${data.repo}/pull/${data.pull})`,
-			commit: `[\`${data.commit}\`](https://github.com/${data.repo}/commit/${data.commit})`,
-		},
-	});
-
-	stub.getInfoFromPullRequest.returns({
-		commit: data.commit,
-		user: data.user,
-		links: {
-			user: `[@${data.user}](https://github.com/${data.user})`,
-			pull: `[#${data.pull}](https://github.com/${data.repo}/pull/${data.pull})`,
-			commit: `[\`${data.commit}\`](https://github.com/${data.repo}/commit/${data.commit})`,
-		},
-	});
+	sandbox.stub({
+		getInfo: () => ({
+			pull: data.pull,
+			user: data.user,
+			links: {
+				user: `[@${data.user}](https://github.com/${data.user})`,
+				pull: `[#${data.pull}](https://github.com/${data.repo}/pull/${data.pull})`,
+				commit: `[\`${data.commit.slice(0, 7)}\`](https://github.com/${data.repo}/commit/${data.commit})`,
+			},
+		})
+	}, "getInfo");
+	sandbox.stub({
+		getInfoFromPullRequest: () => ({
+			commit: data.commit,
+			user: data.user,
+			links: {
+				user: `[@${data.user}](https://github.com/${data.user})`,
+				pull: `[#${data.pull}](https://github.com/${data.repo}/pull/${data.pull})`,
+				commit: `[\`${data.commit.slice(0, 7)}\`](https://github.com/${data.repo}/commit/${data.commit})`,
+			},
+		}),
+	}, "getInfoFromPullRequest");
 });
 
 test.afterEach.always(() => {
@@ -77,7 +78,7 @@ const getChangeset = (content, commit) => {
                         commitFromChangeset
 					)
 				),
-				"\n\n- [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003) Thanks [@Andarist](https://github.com/Andarist)! - something\n"
+				"\n\n📝  [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003d4c8ca284c116668d7217fb747802ed85) Thanks [@Andarist](https://github.com/Andarist)!\n\nsomething\n"
 			);
 		});
 
@@ -89,7 +90,7 @@ const getChangeset = (content, commit) => {
                         commitFromChangeset
 					)
 				),
-				"\n\n- [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003) Thanks [@Andarist](https://github.com/Andarist)! - something\n"
+				"\n\n📝  [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003d4c8ca284c116668d7217fb747802ed85) Thanks [@Andarist](https://github.com/Andarist)!\n\nsomething\n"
 			);
 		});
 	});
@@ -99,7 +100,7 @@ const getChangeset = (content, commit) => {
 			await changelogFunctions.getReleaseLine(
 				...getChangeset(`commit: ${data.commit}`, commitFromChangeset)
 			),
-			"\n\n- [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003) Thanks [@Andarist](https://github.com/Andarist)! - something\n"
+			"\n\n📝  [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003d4c8ca284c116668d7217fb747802ed85) Thanks [@Andarist](https://github.com/Andarist)!\n\nsomething\n"
 		);
 	});
 });
@@ -113,7 +114,7 @@ const getChangeset = (content, commit) => {
                     data.commit
 				)
 			),
-			"\n\n- [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003) Thanks [@other](https://github.com/other)!\n\nsomething\n"
+			"\n\n📝  [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003d4c8ca284c116668d7217fb747802ed85) Thanks [@other](https://github.com/other)!\n\nsomething\n"
 		);
 	});
 
@@ -125,7 +126,7 @@ const getChangeset = (content, commit) => {
                     data.commit
 				)
 			),
-			"\n\n- [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003) Thanks [@other](https://github.com/other)!\n\nsomething\n"
+			"\n\n📝  [#1613](https://github.com/emotion-js/emotion/pull/1613) [`a085003`](https://github.com/emotion-js/emotion/commit/a085003d4c8ca284c116668d7217fb747802ed85) Thanks [@other](https://github.com/other)!\n\nsomething\n"
 		);
 	});
 });
@@ -138,6 +139,6 @@ test("with multiple authors", async (t) => {
 				data.commit
 			)
 		),
-        `
-    - [#1613](https://github.com/emotion-js/emotion/pull/1613) [\`a085003\`](https://github.com/emotion-js/emotion/commit/a085003) Thanks [@Andarist](https://github.com/Andarist), [@mitchellhamilton](https://github.com/mitchellhamilton)!\n\nsomething`);
+		`\n\n📝  [#1613](https://github.com/emotion-js/emotion/pull/1613) [\`a085003\`](https://github.com/emotion-js/emotion/commit/a085003d4c8ca284c116668d7217fb747802ed85) Thanks [@Andarist](https://github.com/Andarist), [@mitchellhamilton](https://github.com/mitchellhamilton)!\n\nsomething\n`
+	);
 });
