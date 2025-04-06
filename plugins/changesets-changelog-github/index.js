@@ -82,11 +82,7 @@ const changelogFunctions = {
 					pull: prFromSummary,
 				});
 				if (commitFromSummary) {
-					const shortCommitId = commitFromSummary.slice(0, 7);
-					links = {
-						...links,
-						commit: `[\`${shortCommitId}\`](https://github.com/${options.repo}/commit/${commitFromSummary})`,
-					};
+					links.commit = `[\`${commitFromSummary.slice(0, 7)}\`](https://github.com/${options.repo}/commit/${commitFromSummary})`;
 				}
 				return links;
 			}
@@ -116,7 +112,7 @@ const changelogFunctions = {
 			users === null ? "" : ` Thanks ${users}!`,
 		].join("");
 
-		return `\n\n📝 ${prefix ? `${prefix}` : ""}\n\n${changelogLines.join("\n")}`;
+		return `${prefix ? `\n\n📝 ${prefix}` : ""}\n\n${changelogLines.join("\n")}\n`;
 	},
 };
 
