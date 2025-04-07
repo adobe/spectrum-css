@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -25,7 +25,9 @@
 
 	--spectrum-fieldlabel-side-margin-block-start: var(--spectrum-field-label-top-margin-medium);
 	--spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
+}
 
+.spectrum-FieldLabel {
 	/* CJK (Chinese, Japanese, and Korean) language support */
 	&:lang(ja),
 	&:lang(zh),
@@ -84,7 +86,7 @@
 }
 
 .spectrum-FieldLabel {
-	display: block;
+	text-wrap: pretty;
 	box-sizing: border-box;
 	min-block-size: var(--mod-fieldlabel-min-height, var(--spectrum-fieldlabel-min-height));
 
@@ -105,7 +107,7 @@
 .spectrum-FieldLabel-requiredIcon {
 	color: inherit;
 	margin-block: 0;
-	margin-inline: var(--mod-fieldlabel-text-to-asterisk, var(--spectrum-fieldlabel-text-to-asterisk)) 0;
+	margin-inline: 0 0 var(--mod-fieldlabel-text-to-asterisk, var(--spectrum-fieldlabel-text-to-asterisk));
 	vertical-align: var(--mod-fieldlabel-asterisk-vertical-align, baseline);
 }
 
