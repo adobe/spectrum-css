@@ -13,20 +13,24 @@ export const Template = ({
 	headerText,
 	text,
 	variant = "neutral",
+	isSubtle = false,
+	isBold = false,
 	isClosable = false,
 } = {}, context = {}) => {
 	let iconName;
 	switch (variant) {
 		case "info":
-			iconName = "Info";
+			iconName = "InfoCircle";
 			break;
 		case "positive":
 			iconName = "CheckmarkCircle";
 			break;
 		case "notice":
+			iconName = "AlertDiamond";
+			break;
 		case "negative":
 		case "closable":
-			iconName = "Alert";
+			iconName = "AlertTriangle";
 			break;
 		default:
 			iconName = undefined;
@@ -57,6 +61,8 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				[`${rootClass}--${variant}--${"subtle"}`]: typeof variant !== "undefined" && isSubtle,
+				[`${rootClass}--${variant}--${"bold"}`]: typeof variant !== "undefined" && isBold,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
