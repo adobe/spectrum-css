@@ -61,14 +61,17 @@
 	--spectrum-numberfield-spacing-inline-edge-to-text: var(--spectrum-component-edge-to-text-100);
 	--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-100);
-	--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-component-text-to-visual-100);
-	--spectrum-numberfield-spacing-field-to-helptext: var(--spectrum-component-helptext-to-component);
+	--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-text-to-visual-100);
+	--spectrum-numberfield-spacing-field-to-helptext: var(--spectrum-help-text-to-component);
 	--spectrum-numberfield-spacing-label-to-field: var(--spectrum-field-label-to-component);
 	--spectrum-numberfield-spacing-validation-icon-to-stepper: var(--spectrum-number-field-visual-to-in-field-stepper-medium);
 	--spectrum-numberfield-spacing-validation-icon-to-stepper-hidden: var(--spectrum-field-edge-to-validation-icon-medium);
 
-	--spectrum-numberfield-button-size: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-medium));
+	--spectrum-numberfield-button-size: var(--mod-stepper-button-width, var(--spectrum-component-height-100));
 	--spectrum-numberfield-button-inline-offset: var(--mod-stepper-button-inline-offset, var(--spectrum-in-field-stepper-to-end-medium));
+
+	--spectrum-numberfield-spacing-block-start-validation-icon-to-stepper: var(--spectrum-component-top-to-workflow-icon-100);
+	--spectrum-numberfield-spacing-block-end-validation-icon-to-stepper: var(--spectrum-component-top-to-workflow-icon-100);
 
 	&.spectrum-Stepper--sizeS {
 		--spectrum-numberfield-border-radius: var(--mod-stepper-border-radius, var(--spectrum-corner-radius-medium-size-small));
@@ -79,12 +82,15 @@
 		--spectrum-numberfield-font-size: var(--mod-stepper-font-size, var(--spectrum-font-size-75));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-75);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-75);
-		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-component-text-to-visual-75);
+		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-text-to-visual-75);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper: var(--spectrum-number-field-visual-to-in-field-stepper-small);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper-hidden: var(--spectrum-number-field-edge-to-validation-icon-small);
 
-		--spectrum-numberfield-button-size: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-small));
+		--spectrum-numberfield-button-size: var(--mod-stepper-button-width, var(--spectrum-component-height-75));
 		--spectrum-numberfield-button-inline-offset: var(--mod-stepper-button-inline-offset, var(--spectrum-in-field-stepper-to-end-small));
+
+		--spectrum-numberfield-spacing-block-start-validation-icon-to-stepper: var(--spectrum-component-top-to-workflow-icon-75);
+		--spectrum-numberfield-spacing-block-end-validation-icon-to-stepper: var(--spectrum-component-top-to-workflow-icon-75);
 	}
 
 	&.spectrum-Stepper--sizeL {
@@ -96,12 +102,15 @@
 		--spectrum-numberfield-font-size: var(--mod-stepper-font-size, var(--spectrum-font-size-200));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-200);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-200);
-		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-component-text-to-visual-200);
+		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-text-to-visual-200);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper: var(--spectrum-number-field-visual-to-in-field-stepper-large);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper-hidden: var(--spectrum-number-field-edge-to-validation-icon-large);
 
-		--spectrum-numberfield-button-size: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-large));
+		--spectrum-numberfield-button-size: var(--mod-stepper-button-width, var(--spectrum-component-height-200));
 		--spectrum-numberfield-button-inline-offset: var(--mod-stepper-button-inline-offset, var(--spectrum-in-field-stepper-to-end-large));
+
+		--spectrum-numberfield-spacing-block-start-validation-icon-to-stepper: var(--spectrum-component-top-to-workflow-icon-200);
+		--spectrum-numberfield-spacing-block-end-validation-icon-to-stepper: var(--spectrum-component-top-to-workflow-icon-200);
 	}
 
 	&.spectrum-Stepper--sizeXL {
@@ -113,11 +122,14 @@
 		--spectrum-numberfield-font-size: var(--mod-stepper-font-size, var(--spectrum-font-size-300));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-300);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-300);
-		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-component-text-to-visual-300);
+		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-text-to-visual-300);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper: var(--spectrum-number-field-visual-to-in-field-stepper-extra-large);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper-hidden: var(--spectrum-number-field-edge-to-validation-icon-extra-large);
-		--spectrum-numberfield-button-size: var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-extra-large));
+		--spectrum-numberfield-button-size: var(--mod-stepper-button-width, var(--spectrum-component-height-300));
 		--spectrum-numberfield-button-inline-offset: var(--mod-stepper-button-inline-offset, var(--spectrum-in-field-stepper-to-end-extra-large));
+
+		--spectrum-numberfield-spacing-block-start-validation-icon-to-stepper: var(--spectrum-component-top-to-workflow-icon-300);
+		--spectrum-numberfield-spacing-block-end-validation-icon-to-stepper: var(--spectrum-component-top-to-workflow-icon-300);
 	}
 
 	/* @passthrough start -- MODS for sub components */
@@ -140,7 +152,8 @@
 	--mod-textfield-border-color-invalid-focus: var(--mod-stepper-border-color-invalid-focus, var(--spectrum-numberfield-border-color-invalid-focus));
 	--mod-textfield-border-color-invalid-focus-hover: var(--mod-stepper-border-color-invalid-focus-hover, var(--spectrum-numberfield-border-color-invalid-focus-hover));
 	--mod-textfield-border-color-invalid-keyboard-focus: var(--mod-stepper-border-color-invalid-keyboard-focus, var(--spectrum-numberfield-border-color-invalid-keyboard-focus));
-
+	--mod-textfield-icon-spacing-block-invalid: calc(var(--spectrum-numberfield-spacing-block-start-validation-icon-to-stepper) - var(--spectrum-numberfield-border-width));
+	--mod-textfield-icon-spacing-inline-end-invalid: var(--spectrum-numberfield-spacing-validation-icon-to-stepper);
 	--mod-textfield-width: var(--mod-stepper-inline-size, var(--spectrum-numberfield-inline-size));
 	--mod-textfield-min-width: var(--mod-stepper-min-inline-size, var(--spectrum-numberfield-min-inline-size));
 	--mod-textfield-height: var(--mod-stepper-block-size, var(--spectrum-numberfield-block-size));
@@ -234,8 +247,6 @@
 	inline-size: var(--spectrum-numberfield-inline-size);
 	min-inline-size: var(--spectrum-numberfield-min-inline-size);
 
-	border-radius: var(--spectrum-numberfield-border-radius);
-
 	&::before {
 		content: "";
 	}
@@ -250,7 +261,7 @@
 	}
 
 	&.hide-stepper {
-		min-inline-size: var(--spectrum-numberfield-hidden-stepper-min-inline-size);
+		min-inline-size: var(--mod-numberfield-hidden-stepper-min-inline-size, var(--spectrum-numberfield-hidden-stepper-min-inline-size));
 	}
 
 	&.spectrum-Stepper--sideLabel {
@@ -262,9 +273,15 @@
 	margin-block-end: var(--mod-numberfield-label-to-field, var(--spectrum-numberfield-spacing-label-to-field));
 }
 
+.spectrum-Stepper-fieldContainer {
+	block-size: var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size));
+}
+
 /* container for textfield and buttons */
 .spectrum-Stepper-inputs {
-	block-size: var(--spectrum-numberfield-block-size);
+	margin-block-end: var(--mod-numberfield-field-to-helptext, var(--spectrum-numberfield-spacing-field-to-helptext));
+	display: flex;
+	align-items: center;
 }
 
 /* Nested textfield subcomponent */
@@ -272,6 +289,17 @@
 	inline-size: 100%;
 	display: inline-flex;
 	flex-flow: column-reverse nowrap;
+	block-size: calc(var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size)) - var(--spectrum-numberfield-border-width) * 2);
+
+
+	border: var(--spectrum-numberfield-border-width) solid var(--spectrum-numberfield-border-color-default);
+	padding-inline-start: var(--spectrum-numberfield-spacing-inline-edge-to-text);
+	padding-inline-end: var(--spectrum-numberfield-spacing-inline-edge-to-text);
+	border-radius: var(--spectrum-numberfield-border-radius);
+
+	&.is-invalid {
+		border-color: var(--spectrum-numberfield-border-color-invalid-default);
+	}
 
 	/* accommodate stepper buttons and validation icons */
 	&.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon,
@@ -287,9 +315,12 @@
 }
 
 .spectrum-Stepper-input {
-	inline-size: 100%;
-	padding-inline-start: var(--spectrum-numberfield-spacing-inline-edge-to-text);
+	padding-inline-start: 0;
 	padding-inline-end: var(--spectrum-numberfield-spacing-inline-edge-to-text);
+	inline-size: calc(var(--spectrum-numberfield-inline-size) - calc(var(--spectrum-numberfield-button-size)* 2) - var(--spectrum-numberfield-button-inline-offset) - var(--spectrum-numberfield-spacing-min-inline-end-text-to-stepper));
+	border: none;
+	min-inline-size: unset;
+	block-size: calc(var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size)) - var(--spectrum-numberfield-border-width) * 2);
 }
 
 /* container for stepUp and stepDown buttons */
@@ -302,6 +333,7 @@
 	/* gap: 4px; */
 	position: absolute;
 	inset-inline-end: calc(var(--mod-stepper-button-inline-offset, var(--spectrum-numberfield-button-inline-offset, 0px)));
+
 	/* inset-block-start: calc(var(--spectrum-numberfield-border-width));
 	block-size: calc(var(--spectrum-numberfield-block-size) - calc(2 * var(--spectrum-numberfield-border-width))); */
 
