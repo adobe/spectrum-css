@@ -51,6 +51,7 @@ export default {
 						...passthroughs,
 						multiline: true,
 						name: "field",
+						displayLabel: false,
 					}, context),
 				],
 			}, {
@@ -61,6 +62,7 @@ export default {
 						...passthroughs,
 						type: "email",
 						name: "email",
+						displayLabel: false,
 					}, context),
 				],
 			}, {
@@ -71,6 +73,7 @@ export default {
 						...passthroughs,
 						placeholder: "Select a country",
 						name: "country",
+						displayLabel: false,
 					}, context),
 				],
 			}, {
