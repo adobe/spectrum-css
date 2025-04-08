@@ -41,6 +41,7 @@ export const Template = ({
 				customInputClasses: [`${rootClass}-input`],
 				customIconClasses: [`${rootClass}-icon`],
 				autocomplete: false,
+				displayLabel: false,
 			}, context)}
 			${ClearButton({
 					isDisabled,

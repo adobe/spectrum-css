@@ -70,6 +70,7 @@ export const Template = ({
 				id: id ? `${id}-input` : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`],
+				displayLabel: false,
 			}, context)}
 			${when(!hideStepper, () => html`
 				<span class="${rootClass}-buttons">
