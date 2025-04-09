@@ -151,7 +151,7 @@
 	}
 }
 
-.spectrum-InLineAlert--info--subtle {
+.spectrum-InLineAlert--info--subtle:not(.spectrum-InLineAlert--info--bold) {
 	--mod-inlinealert-border-width: 0;
 	--mod-inlinealert-background-color: var(--spectrum-inlinealert-subtle-background-color-informative);
 	--mod-inlinealert-border-and-icon-color-info: var(--spectrum-inlinealert-subtle-color-informative);
@@ -161,7 +161,7 @@
 	}
 }
 
-.spectrum-InLineAlert--info--bold {
+.spectrum-InLineAlert--info--bold:not(.spectrum-InLineAlert--info--subtle) {
 	--mod-inlinealert-border-width: 0;
 	--mod-inlinealert-background-color: var(--spectrum-inlinealert-bold-background-color-informative);
 	--mod-inlinealert-header-color: var(--spectrum-inlinealert-color-white);
