@@ -56,7 +56,7 @@ export const AccordionItem = ({
 					}, context)}
 				</span>
 			</h3>
-			<!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+			<!-- WAI-ARIA 1.1: Item content uses a role of "region" -->
 			<div
 				class="${rootClass}Content"
 				role="region"
