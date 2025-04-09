@@ -64,7 +64,6 @@ export const DatePicker = ({
 				name: "field",
 				id: triggerId,
 				value: selectedDay ? new Date(selectedDay).toLocaleDateString(lang) : undefined,
-				displayLabel: false,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},

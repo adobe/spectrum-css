@@ -33,7 +33,6 @@ export const Template = ({
 				size,
 				value: "1",
 				customClasses: [`${rootClass}-textfield`],
-				displayLabel: false,
 			}, context)}
 			<span class="${rootClass}-counter">of 89 pages</span>
 			${ActionButton({

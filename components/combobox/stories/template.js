@@ -67,7 +67,6 @@ const Combobox = ({
 				name: "field",
 				isReadOnly,
 				value,
-				displayLabel: false,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
