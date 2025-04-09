@@ -11,9 +11,7 @@ import { Template } from "./template.js";
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
  *
- * ## Density options
- *
- * Accordion has three density options and requires that you specify one of the density types: compact, regular, or spacious.
+ * Accordion has three density options: regular (default), compact, or spacious. Each of the different densities have the same font size, but have tighter or looser vertical spacing between the rows.
  */
 export default {
 	title: "Accordion",
@@ -180,6 +178,10 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
+
+/**
+ * The compact density has less spacing between rows.
+ */
 export const Compact = Template.bind({});
 Compact.tags = ["!dev"];
 Compact.args = {
@@ -189,8 +191,11 @@ Compact.args = {
 Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Compact.storyName = "Density - Compact";
+Compact.storyName = "Density: Compact";
 
+/**
+ * The spacious density has more spacing between rows.
+ */
 export const Spacious = Template.bind({});
 Spacious.tags = ["!dev"];
 Spacious.args = {
@@ -200,8 +205,11 @@ Spacious.args = {
 Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Spacious.storyName = "Density - Spacious";
+Spacious.storyName = "Density: Spacious";
 
+/**
+ * Each of the different sizes have varying font sizes, and tighter or looser vertical spacing between the rows. Medium is the default size.
+ */
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withBorder: false,
