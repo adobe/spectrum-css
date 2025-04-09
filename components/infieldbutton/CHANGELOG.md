@@ -1,5 +1,13 @@
 # Change log
 
+## 6.1.2
+
+### Patch Changes
+
+- [#3615](https://github.com/adobe/spectrum-css/pull/3615) [`f09c84a`](https://github.com/adobe/spectrum-css/commit/f09c84ae9922d67b6fe237d693afee0fab53fa67) Thanks [@Rajdeepc](https://github.com/Rajdeepc)! - ### Infield button and stepper fast follows
+
+  - Updated infield button disabled border color to use `--spectrum-gray-300` for spectrum-two theme and `--spectrum-gray-200` for other themes.
+
 ## 6.1.1
 
 ### Patch Changes
