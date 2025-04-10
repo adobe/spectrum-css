@@ -32,9 +32,7 @@
 
 		--spectrum-actionbutton-content-color-selected: var(--spectrum-gray-50);
 
-		&.spectrum-ActionButton--sizeM {
-			--spectrum-actionbutton-border-radius-default: var(--spectrum-corner-radius-medium-size-medium);
-		}
+		--spectrum-actionbutton-border-radius-default: var(--spectrum-corner-radius-medium-size-medium);
 
 		&.spectrum-ActionButton--sizeXS {
 			--spectrum-actionbutton-border-radius-default: var(--spectrum-corner-radius-medium-size-extra-small);
