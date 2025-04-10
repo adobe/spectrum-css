@@ -153,7 +153,7 @@
 	}
 
 	& > .is-focused.is-hover .spectrum-Search-input {
-		border-color: var(--mod-textfield-border-color-focus-hover, var(--mod-search-border-color-focus-hover, var(--spectrum-search-border-color-focus-hover)));
+		border-color: var(--highcontrast-textfield-border-color-focus-hover, var(--mod-textfield-border-color-focus-hover, var(--mod-search-border-color-focus-hover, var(--spectrum-search-border-color-focus-hover))));
 		color: var(--mod-textfield-text-color-focus-hover, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
 	}
 }
