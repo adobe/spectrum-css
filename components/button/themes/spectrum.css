@@ -62,6 +62,11 @@
 				--spectrum-button-background-color-down: var(--spectrum-transparent-white-400);
 				--spectrum-button-background-color-focus: var(--spectrum-transparent-white-300);
 
+				--spectrum-button-content-color-default: var(--spectrum-white);
+				--spectrum-button-content-color-hover: var(--spectrum-white);
+				--spectrum-button-content-color-down: var(--spectrum-white);
+				--spectrum-button-content-color-focus: var(--spectrum-white);
+
 				--spectrum-button-border-color-default: var(--spectrum-transparent-white-800);
 				--spectrum-button-border-color-hover: var(--spectrum-transparent-white-900);
 				--spectrum-button-border-color-down: var(--spectrum-transparent-white-900);
@@ -73,6 +78,11 @@
 				--spectrum-button-background-color-hover: var(--spectrum-transparent-white-300);
 				--spectrum-button-background-color-down: var(--spectrum-transparent-white-400);
 				--spectrum-button-background-color-focus: var(--spectrum-transparent-white-300);
+
+				--spectrum-button-content-color-default: var(--spectrum-white);
+				--spectrum-button-content-color-hover: var(--spectrum-white);
+				--spectrum-button-content-color-down: var(--spectrum-white);
+				--spectrum-button-content-color-focus: var(--spectrum-white);
 
 				&.spectrum-Button--outline {
 					--spectrum-button-border-color-default: var(--spectrum-transparent-white-300);
@@ -99,6 +109,11 @@
 				--spectrum-button-background-color-down: var(--spectrum-transparent-black-400);
 				--spectrum-button-background-color-focus: var(--spectrum-transparent-black-300);
 
+				--spectrum-button-content-color-default: var(--spectrum-black);
+				--spectrum-button-content-color-hover: var(--spectrum-black);
+				--spectrum-button-content-color-down: var(--spectrum-black);
+				--spectrum-button-content-color-focus: var(--spectrum-black);
+
 				--spectrum-button-border-color-default: var(--spectrum-transparent-black-400);
 				--spectrum-button-border-color-hover: var(--spectrum-transparent-black-500);
 				--spectrum-button-border-color-down: var(--spectrum-transparent-black-600);
@@ -110,6 +125,11 @@
 				--spectrum-button-background-color-hover: var(--spectrum-transparent-black-300);
 				--spectrum-button-background-color-down: var(--spectrum-transparent-black-400);
 				--spectrum-button-background-color-focus: var(--spectrum-transparent-black-300);
+
+				--spectrum-button-content-color-default: var(--spectrum-black);
+				--spectrum-button-content-color-hover: var(--spectrum-black);
+				--spectrum-button-content-color-down: var(--spectrum-black);
+				--spectrum-button-content-color-focus: var(--spectrum-black);
 
 				&.spectrum-Button--outline {
 					--spectrum-button-border-color-default: var(--spectrum-transparent-black-300);
