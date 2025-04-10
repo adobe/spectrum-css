@@ -50,6 +50,9 @@
     "--mod-search-color-hover",
     "--mod-search-color-key-focus",
     "--mod-search-edge-to-visual",
+    "--mod-search-focus-indicator-color",
+    "--mod-search-focus-indicator-gap",
+    "--mod-search-focus-indicator-thickness",
     "--mod-search-font-family",
     "--mod-search-font-style",
     "--mod-search-font-weight",
@@ -85,6 +88,9 @@
     "--spectrum-search-color-key-focus",
     "--spectrum-search-edge-to-visual",
     "--spectrum-search-field-minimum-width-multiplier",
+    "--spectrum-search-focus-indicator-color",
+    "--spectrum-search-focus-indicator-gap",
+    "--spectrum-search-focus-indicator-thickness",
     "--spectrum-search-font-family",
     "--spectrum-search-font-style",
     "--spectrum-search-font-weight",
@@ -125,6 +131,9 @@
     "--spectrum-disabled-border-color",
     "--spectrum-disabled-content-color",
     "--spectrum-field-width",
+    "--spectrum-focus-indicator-color",
+    "--spectrum-focus-indicator-gap",
+    "--spectrum-focus-indicator-thickness",
     "--spectrum-font-size-100",
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
@@ -163,6 +172,9 @@
     "--mod-textfield-border-color-keyboard-focus",
     "--mod-textfield-border-width",
     "--mod-textfield-corner-radius",
+    "--mod-textfield-focus-indicator-color",
+    "--mod-textfield-focus-indicator-gap",
+    "--mod-textfield-focus-indicator-width",
     "--mod-textfield-font-family",
     "--mod-textfield-font-weight",
     "--mod-textfield-placeholder-font-size",
@@ -177,6 +189,7 @@
     "--highcontrast-search-color-default",
     "--highcontrast-search-color-disabled",
     "--highcontrast-search-color-focus",
-    "--highcontrast-search-color-hover"
+    "--highcontrast-search-color-hover",
+    "--highcontrast-textfield-border-color-focus-hover"
   ]
 }
