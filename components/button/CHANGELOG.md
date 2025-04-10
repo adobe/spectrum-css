@@ -4,12 +4,14 @@
 
 ### Patch Changes
 
-- [#3662](https://github.com/adobe/spectrum-css/pull/3662) [`79e3363`](https://github.com/adobe/spectrum-css/commit/79e336369700b9eded8fb7154995abee3789b545) Thanks [@castastrophe](https://github.com/castastrophe)! - This update aims to simplify `--mod-*` access by ensuring local variants and states aren't hooking into those custom properties for overrides. This updates all local variants and states to override the `--spectrum-button-*` properties instead and adjusts the specificity to ensure no regressions in rendered results.
+- [#3662](https://github.com/adobe/spectrum-css/pull/3662) [`79e3363`](https://github.com/adobe/spectrum-css/commit/79e336369700b9eded8fb7154995abee3789b545) Thanks [@castastrophe](https://github.com/castastrophe)! 
 
-  Other changes of note:
+This update aims to simplify `--mod-*` access by ensuring local variants and states aren't hooking into those custom properties for overrides. This updates all local variants and states to override the `--spectrum-button-*` properties instead and adjusts the specificity to ensure no regressions in rendered results.
 
-  - Removes the `.spectrum-Button--sizeM` as unnecessary and duplicate as these styles are applied in the base class.
-  - Reduces the use of the `:not()` pseudo-class in theme overrides as these selectors are more complex to remap for web component projects.
+Other changes of note:
+
+- Removes the `.spectrum-Button--sizeM` as unnecessary and duplicate as these styles are applied in the base class.
+- Reduces the use of the `:not()` pseudo-class in theme overrides as these selectors are more complex to remap for web component projects.
 
 ## 14.1.4
 
