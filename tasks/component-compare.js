@@ -1,6 +1,6 @@
-const { existsSync, statSync, readdirSync, mkdirSync } = require("fs");
-const { readFile, writeFile } = require("fs").promises;
-const { join, relative, dirname } = require("path");
+const { existsSync, statSync } = require("fs");
+const { readFile } = require("fs").promises;
+const { join, relative, dirname, basename, extname } = require("path");
 
 const fg = require("fast-glob");
 const tar = require("tar");
@@ -9,7 +9,6 @@ const _ = require("lodash");
 const nunjucks = require("nunjucks");
 const env = new nunjucks.Environment();
 
-const { rimrafSync } = require("rimraf");
 const npmFetch = require("npm-registry-fetch");
 
 const { hideBin } = require("yargs/helpers");
@@ -18,24 +17,17 @@ const yargs = require("yargs");
 const Diff = require("diff");
 const Diff2Html = require("diff2html");
 
-const { default: builder } = require("./component-builder.js");
+const { dirs, log, bytesToSize, copy, writeConsoleTable, cleanAndMkdir, writeAndReport, getAllComponentNames } = require("./utilities.js");
 
 require("colors");
 
-const pathing = {
-	root: join(__dirname, "../"),
-	components: join(__dirname, "../components"),
-};
-
-const bytesToSize = function (bytes) {
-	if (bytes === 0) return "0";
-
-	const sizes = ["bytes", "KB", "MB", "GB", "TB"];
-	// Determine the size identifier to use (KB, MB, etc)
-	const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-	if (i === 0) return (bytes / 1000).toFixed(2) + " " + sizes[1];
-	return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
-};
+/**
+ * A global object to store the paths to the output directories
+ * this facilitates a shared location for all the tasks to write
+ * without having to pass the paths around as arguments.
+ * @type {{ [key: string]: string }}
+ */
+const pathing = {};
 
 env.addFilter("bytesToSize", bytesToSize);
 env.addFilter("print", (data) => JSON.stringify(data, null, 2));
@@ -47,39 +39,13 @@ env.addFilter("hasChange", (data) => {
 	}, false);
 });
 
-const log = {
-	error: (err) => process.stderr.write(`${err}\n\n`),
-	write: (msg) => process.stdout.write(msg),
-	writeTable: (data, { min = 20, max = 30 } = {}) => {
-		// This utility function is used to print a table of data to the console
-		const table = (data = []) => {
-			return data.map((row, idx) => `${row ?? " "}`.padEnd(idx === 0 ? max : min)).join("");
-		};
-
-		process.stdout.write(`${table(data)}\n`);
-	},
-};
-
-const cleanAndMkdir = (path, clean = true) => {
-	if (!path) return;
-
-	let isFile = false;
-
-	// If the output directory exists, delete it but don't throw an error if it doesn't
-	if (clean && existsSync(path)) {
-		isFile = statSync(path).isFile();
-		rimrafSync(path, { preserveRoot: true });
-	}
-
-	// Create the output directory fresh
-	mkdirSync(isFile ? dirname(path) : path, { recursive: true });
-};
-
-const allComponents =
-	readdirSync(pathing.components, { withFileTypes: true })
-		?.filter((file) => file.isDirectory())
-		.map((file) => file.name) ?? [];
-
+/**
+ * A focused function that handles the template rendering
+ * @param {string} templateFile
+ * @param {Object} templateVariables
+ * @param {string} [outputPath=undefined]
+ * @returns {Promise<string | void>}
+ */
 async function renderTemplate(
 	templateFile,
 	templateVariables = {},
@@ -101,16 +67,24 @@ async function renderTemplate(
 
 	// Generate an HTML summary of the component's compiled assets with links to the HTML diffs of each file
 	const html = env.renderString(template, {
-		allComponents,
+		allComponents: getAllComponentNames(false),
 		nav,
 		...templateVariables,
 	});
 
 	if (typeof outputPath === "undefined") return html;
 
-	return writeFile(outputPath, html, { encoding: "utf-8" });
+	return writeAndReport(html, outputPath);
 }
 
+/**
+ * This function generates a visual diff of the compiled assets for a component
+ * @param {Object} config
+ * @param {string[]} config.filepaths
+ * @param {string} config.outputPath
+ * @param {Map<string, { local: { path: string, content: string, size: number }, npm: { path: string, content: string, size: number }, hasDiff: boolean }>} config.fileMap
+ * @returns {ReturnType<typeof renderTemplate>}
+ */
 async function generateDiff({
 	filepaths,
 	outputPath,
@@ -123,9 +97,23 @@ async function generateDiff({
 		const { local, npm } = data;
 		if (!npm?.content || !local?.content) return;
 
+		const extension = extname(npm.path);
+
 		const patch = Diff.createPatch(file, npm.content, local.content);
-		const css = Diff.diffCss(npm.content, local.content);
-		data.hasDiff = css.length > 1;
+
+		let diff;
+		switch(extension) {
+			case ".css":
+				diff = Diff.diffCss(npm.content, local.content);
+				break;
+			case ".json":
+				diff = Diff.diffJson(npm.content, local.content);
+				break;
+			default:
+				diff = Diff.diffChars(npm.content, local.content);
+		}
+
+		data.hasDiff = diff.length > 1;
 
 		// Reflect if the component has a diff to the data
 		fileMap.set(file, data);
@@ -150,8 +138,66 @@ async function generateDiff({
 			...renderData,
 			html,
 		},
-		join(outputPath, `index.html`)
+		join(outputPath, "index.html")
 	);
+}
+
+async function fetchPublishedComponent(packageName, {
+	cacheLocation,
+	outputLocation,
+}) {
+	const warnings = [];
+	let tag;
+
+	// Check if the component exists on npm; do not fail if it isn't found -
+	//   report it and output only the sizes of the local compiled assets
+	const npmData =
+		(await npmFetch.json(packageName).catch((err) => {
+			// @todo: do we need to report on the error messages returned?
+			warnings.push(err ?? `Failed to fetch ${packageName.yellow} from npm.\n`);
+		})) ?? {};
+
+	// If the component exists on npm, fetch the latest release data
+	// @todo what is the fallback if there isn't a latest tag?
+	if (npmData["dist-tags"]?.latest) {
+		tag = npmData["dist-tags"]?.latest;
+	}
+
+	if (!tag) return;
+
+	// Check locally to see if we have already fetched the tarball
+	// for this tag; if not, fetch it and extract it
+	const tarballPath = join(cacheLocation, `${packageName?.split("/")?.[1] ?? packageName}-${tag}.tgz`);
+	const tarballUrl = npmData.versions?.[tag]?.dist?.tarball;
+	if (!existsSync(tarballPath) && tarballUrl) {
+		// Here is where we check the cached packages folder for the tarball
+		// so we don't have to re-fetch it every time
+		const tarballFile = await npmFetch(tarballUrl).catch(() => {});
+		if (
+			!tarballFile ||
+			(tarballFile.status && tarballFile.status !== 200)
+		) {
+			log.error(`Failed to fetch release content for ${packageName}`);
+		}
+		else {
+			await writeAndReport(await tarballFile.buffer(), tarballPath);
+		}
+	}
+
+	// The tarball path should exist locally now; if not, something went wrong
+	if (existsSync(tarballPath)) {
+		await tar
+			.extract({
+				file: tarballPath,
+				cwd: outputLocation,
+				// Only unpack the dist folder
+				filter: (path) => path.startsWith("package/dist"),
+				strip: 2,
+			})
+			.catch((err) => warnings.push(err));
+	}
+
+	return { tag, warnings };
 }
 
 async function processComponent(
@@ -163,12 +209,6 @@ async function processComponent(
 	}
 ) {
 	if (!component) return Promise.reject("No component specified.");
-
-	// Build the component fresh
-	await builder({
-		componentName: component,
-		clean: true,
-	});
 
 	cleanAndMkdir(join(output, "diffs", component));
 	cleanAndMkdir(join(pathing.latest, component));
@@ -182,7 +222,6 @@ async function processComponent(
 		cwd = dirname(pkgPath).split("/").slice(0, -1).join("/");
 	}
 
-	let tag;
 	let found = 0;
 
 	// Using a set, we can remove duplicates from the list of compiled assets
@@ -194,77 +233,44 @@ async function processComponent(
 		found++;
 
 		// Note: component might exist locally but might not contain any compiled output
-		const files =
-			(await fg("**/*.css", { cwd: join(cwd, component, "dist") })) ?? [];
-		files.forEach((file) => filelist.add(file));
-	} else {
+		for (const file of await fg("**/*", {
+			cwd: join(cwd, component, "dist"),
+			ignore: ["*.map", "*.min.*", "*.gz"],
+		})) {
+			filelist.add(file);
+		}
+	}
+	else {
 		warnings.push(
 			`${
-				`${relative(pathing.root, join(cwd, component))}`.yellow
+				`${relative(dirs.root, join(cwd, component))}`.yellow
 			} not found locally.\n`
 		);
 	}
 
-	if (pkg && pkg.name) {
-		const printPkgName = pkg.name.yellow;
+	let tag = "latest";
+	if (pkg?.name) {
+		const npmResults = await fetchPublishedComponent(pkg.name, {
+			cacheLocation,
+			outputLocation: join(pathing.latest, component),
+		});
 
-		// Check if the component exists on npm; do not fail if it isn't found -
-		//   report it and output only the sizes of the local compiled assets
-		const npmData =
-			(await npmFetch.json(pkg.name).catch((err) => {
-				// @todo: do we need to report on the error messages returned?
-				warnings.push(err ?? `Failed to fetch ${printPkgName} from npm.\n`);
-			})) ?? {};
-
-		// If the component exists on npm, fetch the latest release data
-		// @todo what is the fallback if there isn't a latest tag?
-		if (npmData["dist-tags"]?.latest) {
-			tag = npmData["dist-tags"]?.latest;
+		if (npmResults?.tag) {
+			tag = npmResults.tag;
 		}
 
-		if (tag) {
-			// Check locally to see if we have already fetched the tarball
-			// for this tag; if not, fetch it and extract it
-			const tarballPath = join(cacheLocation, `${component}-${tag}.tgz`);
-			const tarballUrl = npmData.versions?.[tag]?.dist?.tarball;
-			if (!existsSync(tarballPath) && tarballUrl) {
-				// Here is where we check the cached packages folder for the tarball
-				// so we don't have to re-fetch it every time
-				const tarballFile = await npmFetch(tarballUrl).catch(() => {});
-				if (
-					!tarballFile ||
-					(tarballFile.status && tarballFile.status !== 200)
-				) {
-					log.error(`Failed to fetch release content for ${pkg.name}`);
-				} else {
-					await writeFile(tarballPath, await tarballFile.buffer(), {
-						encoding: "utf-8",
-					});
-				}
-			}
+		if (npmResults?.warnings?.length > 0) {
+			warnings.push(...npmResults.warnings);
+		}
 
-			// The tarball path should exist locally now; if not, something went wrong
-			if (existsSync(tarballPath)) {
-				await tar
-					.extract({
-						file: tarballPath,
-						cwd: join(pathing.latest, component),
-						// Only unpack the dist folder
-						filter: (path) => path.startsWith("package/dist"),
-						strip: 2,
-					})
-					.catch((err) => warnings.push(err));
-			}
+		if (existsSync(join(pathing.latest, component))) {
+			const files =
+				(await fg("**/*.css", {
+					cwd: join(pathing.latest, component),
+				})) ?? [];
 
-			if (existsSync(join(pathing.latest, component))) {
-				const files =
-					(await fg("**/*.css", {
-						cwd: join(pathing.latest, component),
-					})) ?? [];
-
-				if (files.length > 0) found++;
-				files.forEach((file) => filelist.add(file));
-			}
+			if (files.length > 0) found++;
+			files.forEach((file) => filelist.add(file));
 		}
 	}
 
@@ -306,7 +312,6 @@ async function processComponent(
 }
 
 async function processFile(filename, localPath, comparePath) {
-	const componentName = localPath.split("/")[localPath.split("/").length - 2];
 	const data = {};
 
 	// Look for the file locally
@@ -351,9 +356,8 @@ async function main(
 	{ skipCache = false } = {}
 ) {
 	if (!components || components.length === 0) {
-		components = allComponents;
+		components = getAllComponentNames(false);
 	}
-
 
 	// Strip out utilities
 	components = components.filter(c => !["actionmenu", "commons"].includes(c));
@@ -371,13 +375,27 @@ async function main(
 
 	cleanAndMkdir(pathing.latest);
 
+	const promises = [];
+	// Copy the bundled CSS to the output directory
+	const renderAssets = [
+		join(dirs.root, "tools", "bundle", "dist", "index.min.css"),
+		join(require.resolve("diff2html"), "..", "..", "bundles", "css", "diff2html.min.css"),
+		join(require.resolve("diff2html"), "..", "..", "bundles", "js", "diff2html.min.js"),
+	];
+
+	renderAssets.forEach((asset) => {
+		promises.push(
+			copy(asset, join(pathing.output, basename(asset)), { isDeprecated: false })
+		);
+	});
+
 	/**
 	 * Each component will report on it's file structure locally when compared
 	 * against it's latest tag on npm; then a console report will be logged and
 	 * a visual diff generated for each file that has changed.
 	 */
-	const results = await Promise.all(
-		components.map(async (component) => {
+	const results = await Promise.all([
+		...(components.map(async (component) => {
 			return processComponent(component, {
 				output: pathing.output,
 				cacheLocation: pathing.cache,
@@ -387,8 +405,8 @@ async function main(
 					warnings: [err],
 				})
 			);
-		})
-	).catch((err) => {
+		}))
+	]).catch((err) => {
 		log.error(err);
 	});
 
@@ -410,6 +428,8 @@ async function main(
 	}
 
 	const componentData = new Map();
+
+	const cliOutput = [];
 
 	let hasAnyChange = false;
 	for (const {
@@ -438,10 +458,10 @@ async function main(
 		});
 
 		// This is our report header to indicate the start of a new component's data
-		log.write(`\n${_.pad(` ${component} `, 20, "-").cyan}\n`);
+		cliOutput.push(`\n${_.pad(` ${component} `, 20, "-").cyan}\n`);
 
 		if (warnings.length > 0) {
-			warnings.forEach((warning) => log.write(`${warning}\n`));
+			warnings.forEach((warning) => cliOutput.push(`${warning}\n`));
 		}
 
 		const maxColumnWidth = files.reduce((max, file) => {
@@ -450,25 +470,29 @@ async function main(
 		}, 30);
 
 		// Write a table of the file sizes to the console for easy comparison
-		log.writeTable(["Filename", "Local", `Tag v${tag}`], { min: 15, max: maxColumnWidth + 5});
+		cliOutput.push(
+			writeConsoleTable(["Filename", "Local", `Tag v${tag}`], { min: 15, max: maxColumnWidth + 5})
+		);
 
 		files.forEach(async (file) => {
 			const { local, npm } = fileMap.get(file);
 
 			const indicatorColor = (localSize, tagSize = 0) => {
-				if (localSize < tagSize) return 'green';
-				if (localSize > tagSize) return 'red';
-				else return 'gray';
+				if (localSize < tagSize) return "green";
+				if (localSize > tagSize) return "red";
+				else return "gray";
 			};
 
 			const localSize = local?.size && `${bytesToSize(local.size)}`[indicatorColor(local.size, npm?.size)];
 			const tagSize = npm?.size && `${bytesToSize(npm.size)}`.gray;
 
-			log.writeTable([
+			cliOutput.push(
+				writeConsoleTable([
 				`${file}`.green,
-				localSize ?? `** removed **`.red,
-				tagSize ?? `** new **`.yellow,
-			], { min: 25, max: maxColumnWidth + 15 });
+				localSize ?? "** removed **".red,
+				tagSize ?? "** new **".yellow,
+				], { min: 25, max: maxColumnWidth + 15 })
+			);
 
 			if (local?.size && npm?.size && local.size !== npm.size) {
 				hasComponentChange = true;
@@ -478,15 +502,11 @@ async function main(
 		if (hasComponentChange) hasAnyChange = true;
 	}
 
-	if (!hasAnyChange) {
-		log.write(`\n${"✓".green}  No changes detected.\n`);
-		return Promise.resolve();
-	}
-
-	await Promise.all(
-		[...componentData.entries()]
-			.map(async ([component, { tag, files, }], _, data) => {
-				return generateDiff({
+	await Promise.all([
+		...promises,
+		...[...componentData.entries()]
+			.map(async ([component, { tag, files, }], _, data) =>
+				generateDiff({
 					filepaths: [...files.keys()],
 					outputPath: join(pathing.output, "diffs", component),
 					fileMap: files,
@@ -494,13 +514,18 @@ async function main(
 					component,
 					tag
 				})
-					.then(() => true);
-			})
-	);
+			)
+	]).then((result) => {
+		log.write("\n");
+		// Print any result strings to the console
+		[...result].flat(Infinity).filter(Boolean).forEach((r) => log.write(r + "\n"));
+	}).catch((err) => {
+		log.error(err);
+	});
 
 	// This is writing a summary of all the components that were compared
 	// to make reviewing the diffs easier to navigate
-	return renderTemplate(
+	await renderTemplate(
 		"compare-listing",
 		{
 			title: "Compiled asset comparison",
@@ -514,11 +539,18 @@ async function main(
 			if (open) await open(join(output, "index.html"));
 		})
 		.catch((err) => Promise.reject(err));
+
+	/** WRITE CONTENT TO CONSOLE */
+	cliOutput.forEach(line => log.write(line));
+
+	if (!hasAnyChange) {
+		log.write(`\n${"✓".green}  No changes detected.\n`);
+	}
 }
 
 let {
 	_: components,
-	output = join(pathing.root, ".diff-output"),
+	output = join(dirs.root, ".diff-output"),
 	cache = true,
 	// @todo allow to run against local main or published versions
 } = yargs(hideBin(process.argv)).argv;
