@@ -12,66 +12,94 @@ export const Template = ({
 	rootClass = "spectrum-Search",
 	customClasses = [],
 	isDisabled = false,
-	isQuiet = false,
-	size,
-	hasDescription = false,
-	description,
+	isFocused = false,
+	isHovered = false,
+	isKeyboardFocused = false,
+	inputValue = "",
+	size = "m",
+	showHelpText = false,
+	helpTextLabel = "",
 } = {}, context = {}) => {
 	return html`
-		<form
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				"is-disabled": isDisabled,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-		>
-			${TextField({
+	<form
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined" && size !== "m",
+			"is-disabled": isDisabled,
+			"is-keyboardFocused": isKeyboardFocused,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		aria-label="Search"
+	>
+		${TextField({
+			isDisabled,
+			size,
+			customClasses: [
+				`${rootClass}-textfield`,
+				isFocused && "is-focused",
+				isKeyboardFocused && "is-keyboardFocused",
+				isHovered && "is-hover"
+			],
+			iconName: "Search",
+			setName: "workflow",
+			type: "search",
+			placeholder: "Search",
+			displayLabel: false,
+			name: "search",
+			customInputClasses: [`${rootClass}-input`],
+			customIconClasses: [`${rootClass}-icon`],
+			autocomplete: false,
+			value: inputValue,
+		}, context)}
+		${when(inputValue, () =>
+			ClearButton({
 				isDisabled,
-				isQuiet,
 				size,
-				customClasses: [`${rootClass}-textfield`],
-				iconName: "Magnify",
-				setName: "workflow",
-				type: "search",
-				placeholder: "Search",
-				name: "search",
-				customInputClasses: [`${rootClass}-input`],
-				customIconClasses: [`${rootClass}-icon`],
-				autocomplete: false,
-			}, context)}
-			${ClearButton({
-					isDisabled,
-					size,
-					customClasses: [`${rootClass}-clearButton`],
-				}, context)}
-			${when(hasDescription, () =>
-				HelpText({
-					text: description,
-					size,
-					isDisabled
-				}, context ))}
-		</form>
-	`;
+				customClasses: [`${rootClass}-clearButton`],
+				isFocusable: false,
+			}, context)
+		)}
+		${when(showHelpText, () =>
+			HelpText({
+				text: helpTextLabel,
+				size,
+				isDisabled,
+			}, context))}
+	</form>
+`;
 };
 
-export const SearchOptions = ({
-	...args
-}, context = {}) => Container({
+export const SearchOptions = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
 		columnGap: "12px",
 	},
 	content: html`
-		${Template({
-			...args,
-		}, context)}
-		${Template({
-			...args,
-			isQuiet: true
-		}, context)}
+		${Container({
+			heading: "Default",
+			withBorder: false,
+			containerStyles: {
+				rowGap: "8px",
+			},
+			content: Template(args, context)
+		})}
+		${Container({
+			heading: "Focused",
+			withBorder: false,
+			containerStyles: {
+				rowGap: "8px",
+			},
+			content: Template({...args, isFocused: true,}, context)
+		})}
+		${Container({
+			heading: "Keyboard focused",
+			withBorder: false,
+			containerStyles: {
+				rowGap: "8px",
+			},
+			content: Template({...args, isKeyboardFocused: true,}, context)
+		})}
 	`
 }, context);
