@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Thumbnail,
 .spectrum-Thumbnail--size500 {
 	--spectrum-thumbnail-sized-size: var(--spectrum-thumbnail-size-500);
@@ -70,7 +68,7 @@
 	--spectrum-thumbnail-border-color-selected: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-accent-color-800)));
 	--spectrum-thumbnail-border-width: var(--mod-thumbnail-border-width, var(--spectrum-border-width-100));
 	--spectrum-thumbnail-border-width-selected: var(--mod-thumbnail-border-width-selected, var(--spectrum-border-width-200));
-	--spectrum-thumbnail-border-radius-default: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+	--spectrum-thumbnail-border-radius: var(--mod-thumbnail-border-radius, 2px);
 
 	--spectrum-thumbnail-layer-border-color-inner: var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-white)));
 	--spectrum-thumbnail-layer-border-color-outer: var(--highcontrast-thumbnail-layer-border-color-outer, var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-gray-500)));
@@ -91,7 +89,7 @@
 	inline-size: var(--spectrum-thumbnail-size);
 	block-size: var(--spectrum-thumbnail-size);
 
-	border-radius: var(--spectrum-thumbnail-border-radius-default);
+	border-radius: var(--spectrum-thumbnail-border-radius);
 
 	overflow: hidden;
 	z-index: 0;
@@ -102,7 +100,7 @@
 		position: absolute;
 		inline-size: 100%;
 		block-size: 100%;
-		border-radius: var(--spectrum-thumbnail-border-radius-default);
+		border-radius: var(--spectrum-thumbnail-border-radius);
 		box-shadow: inset 0 0 0 var(--spectrum-thumbnail-border-width) var(--spectrum-thumbnail-border-color);
 	}
 
@@ -118,7 +116,7 @@
 			border-style: solid;
 			border-width: var(--spectrum-thumbnail-focus-indicator-thickness);
 			border-color: var(--spectrum-thumbnail-focus-indicator-color);
-			border-radius: var(--spectrum-thumbnail-border-radius-default);
+			border-radius: var(--spectrum-thumbnail-border-radius);
 			position: absolute;
 			inset-inline-start: calc((var(--spectrum-thumbnail-focus-indicator-gap) + var(--spectrum-thumbnail-focus-indicator-thickness)) * -1);
 			inset-inline-end: calc((var(--spectrum-thumbnail-focus-indicator-gap) + var(--spectrum-thumbnail-focus-indicator-thickness)) * -1);
@@ -128,7 +126,7 @@
 
 		.spectrum-Thumbnail-image-wrapper {
 			overflow: hidden;
-			border-radius: var(--spectrum-thumbnail-border-radius-default);
+			border-radius: var(--spectrum-thumbnail-border-radius);
 		}
 	}
 }
@@ -202,7 +200,7 @@
 	inline-size: 100%;
 	background-size: cover;
 	background-position: center center;
-	border-radius: var(--spectrum-thumbnail-border-radius-default);
+	border-radius: var(--spectrum-thumbnail-border-radius);
 }
 
 /* Windows High Contrast Mode */
