@@ -30,6 +30,7 @@ export const Template = ({
 			"is-keyboardFocused": isKeyboardFocused,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
+		aria-label="Search"
 	>
 		${TextField({
 			isDisabled,
@@ -44,6 +45,7 @@ export const Template = ({
 			setName: "workflow",
 			type: "search",
 			placeholder: "Search",
+			displayLabel: false,
 			name: "search",
 			customInputClasses: [`${rootClass}-input`],
 			customIconClasses: [`${rootClass}-icon`],
@@ -75,16 +77,29 @@ export const SearchOptions = (args, context) => Container({
 		columnGap: "12px",
 	},
 	content: html`
-		${Template({
-			...args,
-		}, context)}
-		${Template({
-			...args,
-			isFocused: true,
-		}, context)}
-		${Template({
-			...args,
-			isKeyboardFocused: true,
-		}, context)}
+		${Container({
+			heading: "Default",
+			withBorder: false,
+			containerStyles: {
+				rowGap: "8px",
+			},
+			content: Template(args, context)
+		})}
+		${Container({
+			heading: "Focused",
+			withBorder: false,
+			containerStyles: {
+				rowGap: "8px",
+			},
+			content: Template({...args, isFocused: true,}, context)
+		})}
+		${Container({
+			heading: "Keyboard focused",
+			withBorder: false,
+			containerStyles: {
+				rowGap: "8px",
+			},
+			content: Template({...args, isKeyboardFocused: true,}, context)
+		})}
 	`
 }, context);
