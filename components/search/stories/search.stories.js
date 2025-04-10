@@ -44,8 +44,8 @@ export default {
 		isFocused,
 		isKeyboardFocused,
 		inputValue: {
-			name: "Display value and close button",
-			description: "When defined, this will display the input and the clear button within the search field.",
+			name: "Value",
+			description: "When defined, this will set the value of the input, and the clear button will appear within the search field.",
 			type: { name: "string" },
 			control: { type: "text" },
 			table: {
@@ -63,6 +63,7 @@ export default {
 		isKeyboardFocused: false,
 		showHelpText: false,
 		helpTextLabel: "Help text with a suggestion of what to search for",
+		inputValue: "",
 	},
 	parameters: {
 		actions: {
@@ -89,11 +90,21 @@ Default.args = {};
 Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
+/**
+ * A search field should include a label and a search icon. In the default state before a search term is input,
+ * the label is in regular body text style to meet contrast ratios and to show that this is a field label, not placeholder text.
+ * Search fields should also include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
+ * The width of a search field can be customized appropriately for its context.
+ */
 export const Standard = SearchOptions.bind({});
 Standard.args = {};
 Standard.storyName = "Default";
 Standard.tags = ["!dev"];
 
+/**
+ * A search field in a disabled state shows that a search option exists, but is not available in that circumstance.
+ * This can be used to maintain layout continuity and communicate that it may become available later.
+ */
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
@@ -104,7 +115,7 @@ Disabled.parameters = {
 };
 
 /**
- * A search field can have [help text](?path=/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input. The description communicates a hint or helpful information, such as a search’s scope.
+ * A search field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input. The description communicates a hint or helpful information, such as a search’s scope.
  *
  * When the help text is too long for the available horizontal space, it wraps to form another line.
 */
@@ -117,6 +128,19 @@ WithHelpText.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 WithHelpText.storyName = "With help text";
+
+/**
+ * The value shows a user’s entered text. When the search field has an input value, [the clear button](/docs/components-clear-button--docs) appears with it. When the entered text is too long for the available horizontal space in the field, the text truncates.
+ */
+export const WithValue = SearchGroup.bind({});
+WithValue.args = {
+	inputValue: "What should I search for?",
+};
+WithValue.tags = ["!dev"];
+WithValue.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+WithValue.storyName = "With value and clear button";
 
 /**
  * The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
