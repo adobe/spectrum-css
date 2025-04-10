@@ -26,16 +26,16 @@
 		.spectrum-Swatch-fill {
 			forced-color-adjust: none;
 		}
-	}
 
-	.spectrum-Swatch[disabled],
-	.spectrum-Swatch.is-disabled {
-		--highcontrast-swatch-border-color: GrayText;
+		&[disabled],
+		&.is-disabled {
+			--highcontrast-swatch-border-color: GrayText;
+		}
 	}
 }
 
-.spectrum-Swatch,
-.spectrum-Swatch--sizeS {
+/* note that sizeS is considered the default state for swatch */
+.spectrum-Swatch {
 	--spectrum-swatch-size: var(--spectrum-swatch-size-small);
 	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
@@ -123,10 +123,8 @@
 	}
 
 	/* Swatch fill: Image or SVG */
-	&.is-image {
-		.spectrum-Swatch-fill::before {
-			background: transparent;
-		}
+	&.is-image .spectrum-Swatch-fill::before {
+		background: transparent;
 	}
 
 	&.is-mixedValue {
