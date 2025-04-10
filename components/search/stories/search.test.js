@@ -13,7 +13,7 @@ export const SearchGroup = Variants({
 			helpTextLabel: "Help text description goes here and just in case, let's also make it wrap."
 		},
 		{
-			testHeading: "With input value and close button",
+			testHeading: "With input value and clear button",
 			inputValue: "What should we search for?",
 			withStates: false,
 		},
