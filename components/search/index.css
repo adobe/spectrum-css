@@ -38,6 +38,11 @@
 	--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
 	--spectrum-search-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
 
+	/* Focus Indicator */
+	--spectrum-search-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-search-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-search-focus-indicator-color: var(--spectrum-focus-indicator-color);
+
 	/* Font / Color */
 	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Textfield mods */
 	--spectrum-search-font-family: var(--spectrum-sans-font-family-stack);
@@ -72,6 +77,10 @@
 
 	--mod-textfield-corner-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
 	--mod-textfield-border-width: var(--mod-search-border-width, var(--spectrum-search-border-width));
+
+	--mod-textfield-focus-indicator-gap: var(--mod-search-focus-indicator-gap, var(--spectrum-search-focus-indicator-gap));
+	--mod-textfield-focus-indicator-width: var(--mod-search-focus-indicator-thickness, var(--spectrum-search-focus-indicator-thickness));
+	--mod-textfield-focus-indicator-color: var(--mod-search-focus-indicator-color, var(--spectrum-search-focus-indicator-color));
 
 	--mod-textfield-text-color-default: var(--mod-search-color-default, var(--spectrum-search-color-default));
 	--mod-textfield-text-color-hover: var(--mod-search-color-hover, var(--spectrum-search-color-hover));
