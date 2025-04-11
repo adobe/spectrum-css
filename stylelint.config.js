@@ -15,7 +15,18 @@ module.exports = {
 		// "stylelint-high-performance-animation",
 	],
 	ignoreFiles: [
-		"tools/bundle/dist/*.css",
+		// Static utility assets
+		"tokens/custom-*/*.css",
+		"tools/generator/**/*.css",
+		// Compiled and generated files
+		"**/dist/**",
+		".storybook/storybook-static/**/*.css",
+		"**/*-generated.css",
+		"tools/bundle/src/*.css",
+		"**/node_modules/**",
+		// Test files
+		"plugins/*/expected/*.css",
+		"plugins/*/fixtures/*.css",
 	],
 	rules: {
 		/** --------------------------------------------------------------
@@ -240,7 +251,7 @@ module.exports = {
 		},
 		{
 			/* Module CSS file classes have an underscore before classes, and use underscores instead of a dash as separators (e.g. _spectrum_well) */
-			files: ["tools/bundle/**/*.module.css"],
+			files: ["*.module.css"],
 			rules: {
 				"selector-class-pattern": [
 					"^_spectrum$|^(_)?(spectrum|is|u)(_|-)[A-Za-z0-9-_]+", {
