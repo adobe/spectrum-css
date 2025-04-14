@@ -224,7 +224,7 @@ module.exports = {
 		},
 		{
 			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/express.css", "components/*/themes/spectrum-two.css"],
+			files: ["components/*/themes/express.css", "components/*/themes/spectrum.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": null,
 				"selector-class-pattern": [
