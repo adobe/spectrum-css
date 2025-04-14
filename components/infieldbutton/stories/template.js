@@ -30,21 +30,21 @@ export const Template = (
 		? html`
 			<div class="${rootClass}-inline">
 			<button
-					class=${classMap({
-						[rootClass]: true,
-						[`${rootClass}--size${size?.toUpperCase()}`]:
-							typeof size !== "undefined",
-						[`${rootClass}--quiet`]: isQuiet,
-						"is-invalid": isInvalid,
-						"is-hover": isHovered,
-						"is-active": isActive,
-						...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-					})}
-					?disabled=${isDisabled}
-					aria-haspopup="listbox"
-					type="button"
-					tabindex=${tabIndex}
-					aria-label="minus"
+				class=${classMap({
+					[rootClass]: true,
+					[`${rootClass}--size${size?.toUpperCase()}`]:
+						typeof size !== "undefined",
+					[`${rootClass}--quiet`]: isQuiet,
+					"is-invalid": isInvalid,
+					"is-hover": isHovered,
+					"is-active": isActive,
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+				?disabled=${isDisabled}
+				aria-haspopup="listbox"
+				type="button"
+				tabindex=${tabIndex}
+				aria-label="minus"
 				>
 					<div class="${rootClass}-fill">
 						${Icon(
@@ -80,7 +80,7 @@ export const Template = (
 							{
 								size,
 								iconName: "Add",
-								setName: "workflow",
+								setName: "ui",
 								customClasses: [`${rootClass}-icon`],
 							},
 							context,
@@ -129,13 +129,11 @@ export const InfieldButtonGroupVariant = (args, context) => Container({
 	content: [
 		Container({
 			withBorder: false,
-			direction: "column",
 			heading: "Default",
 			content: Template(args, context),
 		}),
 		Container({
 			withBorder: false,
-			direction: "column",
 			heading: "Disabled",
 			content: Template({ ...args, isDisabled: true }, context),
 		}),
@@ -147,8 +145,8 @@ export const InfieldButtonIcons = (args, context) => Container({
 	direction: "row",
 	content: [
 		Template(args, context),
-		Template({...args, iconName: "Cross", }, context),
-		Template({...args, iconName: "Dash", }, context),
-		Template({...args, iconName: "Add", iconSet: "workflow" }, context),
+		Template({...args, iconName: "Cross"}, context),
+		Template({...args, iconName: "Dash"}, context),
+		Template({...args, iconName: "Add"}, context),
 	],
 }, context);

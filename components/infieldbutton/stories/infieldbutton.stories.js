@@ -1,5 +1,4 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { uniqueUiIconBaseNames } from "@spectrum-css/icon/stories/utilities.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isHovered, isQuiet, size } from "@spectrum-css/preview/types";
@@ -9,7 +8,7 @@ import { InfieldButtonGroup } from "./infieldbutton.test.js";
 import { InfieldButtonGroupVariant, InfieldButtonIcons, Template } from "./template.js";
 
 /**
- * In-field buttons are used to represent actions within input fields. They’re currently used inside the [combo box,](/docs/components-combobox--docs) [number field,](/docs/components-stepper--docs) and [search field.](/docs/components-search--docs)
+ * In-field buttons are used to represent actions within input fields. They’re currently used inside the [number field,](/docs/components-stepper--docs).
  */
 export default {
 	title: "In-field button",
@@ -19,9 +18,9 @@ export default {
 		isQuiet,
 		iconName: {
 			...IconStories?.argTypes?.uiIconName ?? {},
-			options: uniqueUiIconBaseNames,
+			options: ["ChevronDown", "Cross", "Dash", "Add"],
 			if: { arg: "isInline", neq: true },
-			description: "All UI icons have sizes of `s`, `m`, `l`, and `xl` except for `ArrowDown`, `ArrowLeft`, `ArrowRight`, and `ArrowUp` which only have sizes of `m`. `Asterisk` has all sizes except for `s`.",
+			description: "These are icons to use within the in-field button - `ChevronDown`, `Add`, `Dash` and `Cross`",
 		},
 		isDisabled,
 		isActive,
@@ -78,7 +77,7 @@ Primary.parameters = {
 };
 
 /**
- * The quiet variant is used when the in-field button needs to be less visually prominent since it is used in input fields. This is typically used with the cross icon in search fields to clear the entered value..
+ * The quiet variant is used when the in-field button needs to be less visually prominent since it is used in input fields. This is typically used with the cross icon in search fields to clear the entered value.
 */
 export const Quiet = InfieldButtonGroupVariant.bind({});
 Quiet.tags = ["!dev"];
