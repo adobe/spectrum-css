@@ -157,6 +157,20 @@ Focused.parameters = {
 };
 
 /**
+ * For the emphasized variant, when a selected star is hovered, the color of the star is slightly darker.
+ */
+export const EmphasizedHovered = Template.bind({});
+EmphasizedHovered.tags = ["!dev"];
+EmphasizedHovered.args = {
+	value: 5,
+	isHovered: true,
+	isEmphasized: true,
+};
+EmphasizedHovered.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
  * A tooltip may be displayed to a user indicating whether interacting with the component will clear or edit the rating.
  */
 export const WithTooltip = Template.bind({});

@@ -227,10 +227,12 @@
 		}
 	}
 
-	&:hover .spectrum-Rating-icon {
+	&:hover .spectrum-Rating-icon,
+	&.is-hovered .spectrum-Rating-icon {
 		/* Make all stars selected when the component is hovered */
 		color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
 
+		&.is-hovered,
 		&:hover {
 			/* The icon that's actually hovered is darker */
 			color: var(--highcontrast-rating-emphasized-icon-color-hover, var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover)));
