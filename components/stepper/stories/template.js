@@ -59,35 +59,33 @@ export const Template = ({
 					customClasses: [`${rootClass}-fieldLabel`],
 				}, context)}
 			`)}
-			<div class="${rootClass}-fieldContainer">
-				<div class="${rootClass}-inputs">
-					${Textfield({
-						size,
-						type: "number",
-						min: "-2",
-						max: "2",
-						step: "0.5",
-						value: "0",
-						isValid,
-						isInvalid,
-						isFocused,
-						isDisabled,
-						displayLabel: false,
-						id: id ? `${id}-input` : undefined,
-						customClasses: [`${rootClass}-textfield`],
-						customInputClasses: [`${rootClass}-input`],
-					}, context)}
-					${when(!hideStepper, () => html`
-						<span class="${rootClass}-buttons">
-							${InfieldButton({
-								isInline: true,
-								size,
-								customClasses: [`${rootClass}-button`],
-								isDisabled,
-							}, context)}
-						</span>
-					`)}
-				</div>
+			<div class="${rootClass}-inputs">
+				${Textfield({
+					size,
+					type: "number",
+					min: "-2",
+					max: "2",
+					step: "0.5",
+					value: "0",
+					isValid,
+					isInvalid,
+					isFocused,
+					isDisabled,
+					displayLabel: false,
+					id: id ? `${id}-input` : undefined,
+					customClasses: [`${rootClass}-textfield`],
+					customInputClasses: [`${rootClass}-input`],
+				}, context)}
+				${when(!hideStepper, () => html`
+					<span class="${rootClass}-buttons">
+						${InfieldButton({
+							isInline: true,
+							size,
+							customClasses: [`${rootClass}-button`],
+							isDisabled,
+						}, context)}
+					</span>
+				`)}
 			</div>
 			${when(helpText, () => html`
 				<div class="${rootClass}-helpText">

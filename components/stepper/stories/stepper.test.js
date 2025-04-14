@@ -15,6 +15,13 @@ export const NumberFieldGroup = Variants({
 			testHeading: "Valid",
 			isValid: true,
 		},
+		{
+			testHeading: "Minimum width (100px)",
+			wrapperStyles: {
+				"inline-size": "100px",
+			},
+			include: ["Default"]
+		},
 	],
 	stateData: [
 		{
