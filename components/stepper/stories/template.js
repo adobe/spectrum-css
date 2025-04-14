@@ -17,7 +17,6 @@ export const Template = ({
 	displayLabel = true,
 	label,
 	labelPosition = "top",
-	// isQuiet = false,
 	isFocused = false,
 	isHovered = false,
 	isKeyboardFocused = false,

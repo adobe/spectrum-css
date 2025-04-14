@@ -204,13 +204,13 @@
 		--spectrum-numberfield-buttons-background-color: var(--spectrum-numberfield-buttons-background-color-disabled);
 	} */
 
-	/* &.is-invalid {
+	&.is-invalid {
 		--mod-stepper-border-color: var(--mod-stepper-border-color-invalid, var(--spectrum-negative-border-color-default));
 		--mod-stepper-border-color-hover: var(--mod-stepper-border-color-hover-invalid, var(--spectrum-negative-border-color-hover));
 		--mod-stepper-border-color-focus: var(--mod-stepper-border-color-focus-invalid, var(--spectrum-negative-border-color-focus));
 		--mod-stepper-border-color-focus-hover: var(--mod-stepper-border-color-focus-hover-invalid, var(--spectrum-negative-border-color-focus-hover));
 		--mod-stepper-border-color-keyboard-focus: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--spectrum-negative-border-color-key-focus));
-	} */
+	}
 
 	/* &:not(.is-disabled).is-hover,
 	&:not(.is-disabled):hover {
