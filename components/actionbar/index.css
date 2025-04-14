@@ -30,6 +30,10 @@
 	--spectrum-actionbar-emphasized-actionbutton-label-color: var(--spectrum-gray-25);
 	--spectrum-actionbar-emphasized-icon-color: var(--spectrum-gray-25);
 
+	/* colors - applied to popover */
+	--spectrum-actionbar-popover-background-color: var(--spectrum-background-elevated-color);
+	--spectrum-actionbar-popover-border-color: var(--spectrum-action-bar-border-color);
+
 	/* spacing of action bar bottom and horizontal outer edge */
 	--spectrum-actionbar-spacing-outer-edge: var(--spectrum-spacing-300);
 
