@@ -12,7 +12,7 @@ import { when } from "lit/directives/when.js";
 import "../index.css";
 
 export const Template = ({
-	rootClass = "spectrum-Stepper",
+	rootClass = "spectrum-NumberField",
 	size = "m",
 	displayLabel = true,
 	label,
@@ -25,7 +25,7 @@ export const Template = ({
 	isDisabled = false,
 	hideStepper = false,
 	helpText,
-	id = getRandomId("stepper"),
+	id = getRandomId("numberfield"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
@@ -104,7 +104,7 @@ export const Template = ({
 	`;
 };
 
-/* Shows all of the stepper states in one grouping. */
+/* Shows all of the number field states in one grouping. */
 export const AllDefaultVariantsGroup = (args, context) => Container({
 	withBorder: false,
 	content: html`

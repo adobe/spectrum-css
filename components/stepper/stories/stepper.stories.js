@@ -4,7 +4,7 @@ import { isDisabled, isFocused, isHovered, isKeyboardFocused, size } from "@spec
 import { default as TextfieldStories } from "@spectrum-css/textfield/stories/textfield.stories.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { StepperGroup } from "./stepper.test.js";
+import { NumberFieldGroup } from "./stepper.test.js";
 import { AllDefaultVariantsGroup, DisabledVariantsGroup, Template } from "./template.js";
 
 /**
@@ -50,7 +50,7 @@ export default {
 		},
 	},
 	args: {
-		rootClass: "spectrum-Stepper",
+		rootClass: "spectrum-NumberField",
 		size: "m",
 		isFocused: false,
 		isHovered: false,
@@ -75,7 +75,7 @@ export default {
 	},
 };
 
-export const Default = StepperGroup.bind({});
+export const Default = NumberFieldGroup.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
 
@@ -94,7 +94,7 @@ Sizing.parameters = {
 /**
  * Number fields come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
  *
- * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a secondary option to be position on the side of the field. The [inline infield buttons](/docs/components-in-field-button--docs#inline) are usually visible, but can be hidden. All styles and options available regarding validation, icons, and [help text](/docs/components-help-text--docs) in the [textfield component](/docs/components-text-field--docs) are available in the stepper component.
+ * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a secondary option to be position on the side of the field. The [inline infield buttons](/docs/components-in-field-button--docs#inline) are usually visible, but can be hidden. All styles and options available regarding validation, icons, and [help text](/docs/components-help-text--docs) in the [textfield component](/docs/components-text-field--docs) are available in the number field component.
  */
 export const DefaultStates = AllDefaultVariantsGroup.bind({});
 DefaultStates.args = {};
@@ -134,7 +134,7 @@ Disabled.parameters = {
 Disabled.storyName = "Disabled";
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = StepperGroup.bind({});
+export const WithForcedColors = NumberFieldGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

@@ -1,7 +1,7 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
-export const StepperGroup = Variants({
+export const NumberFieldGroup = Variants({
 	Template,
 	testData: [
 		{
