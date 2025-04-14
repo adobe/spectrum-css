@@ -43,7 +43,7 @@ export const Template = ({
 					Container({
 						withBorder: false,
 						wrapperStyles: {
-							"column-gap": "0",
+							"column-gap": "var(--spectrum-action-bar-close-button-to-counter)",
 							"align-items": "center",
 						},
 						content: [

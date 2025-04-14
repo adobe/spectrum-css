@@ -27,7 +27,7 @@
 	/* emphasized variation colors */
 	--spectrum-actionbar-emphasized-background-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-actionbar-emphasized-item-counter-color: var(--spectrum-gray-25);
-	--spectrum-actionbar-emphasized-actionbutton-label-color: var(--spectrum-gray-25);
+	--spectrum-actionbar-emphasized-action-button-label-color: var(--spectrum-gray-25);
 	--spectrum-actionbar-emphasized-icon-color: var(--spectrum-gray-25);
 
 	/* colors - applied to popover */
@@ -102,11 +102,6 @@
 		gap: var(--mod-actionbar-spacing-label-to-actiongroup, var(--spectrum-actionbar-spacing-label-to-actiongroup)); /* space between label and action group */
 	}
 
-	/* close button */
-	.spectrum-CloseButton {
-		flex-shrink: 0;
-	}
-
 	/* item counter */
 	.spectrum-FieldLabel {
 		font-size: var(--mod-actionbar-item-counter-font-size, var(--spectrum-actionbar-item-counter-font-size));
@@ -144,7 +139,7 @@
 
 	.spectrum-ActionGroup .spectrum-ActionButton {
 		.spectrum-ActionButton-label {
-			--mod-actionbutton-label-color: var(--spectrum-actionbar-emphasized-actionbutton-label-color);
+			--mod-actionbutton-label-color: var(--spectrum-actionbar-emphasized-action-button-label-color);
 		}
 
 		.spectrum-ActionButton-icon {
