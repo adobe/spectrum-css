@@ -102,7 +102,9 @@
 	flex-grow: 0;
 
 	block-size: var(--mod-toast-icon-block-size, var(--spectrum-toast-icon-block-size));
-	margin-block-start: var(--mod-toast-spacing-top-edge-to-icon, var(--spectrum-toast-spacing-top-edge-to-icon));
+
+	/* Positions toast icon based on the difference between half the toast interior spacing to allow for consistent alignment with label when inline and wrapped */
+	margin-block: calc(var(--mod-toast-spacing-top-edge-to-icon, var(--spectrum-toast-spacing-top-edge-to-icon)) + calc(var(--spectrum-toast-top-to-text) / 2));
 	margin-inline-end: var(--mod-toast-spacing-icon-to-text, var(--spectrum-toast-spacing-icon-to-text));
 	margin-inline-start: 0;
 
@@ -126,8 +128,8 @@
 }
 
 .spectrum-CloseButton {
-	margin-block-start: var(--mod-toast-spacing-top-edge-to-text, var(--spectrum-toast-spacing-top-edge-to-text));
-	margin-block-end: var(--mod-toast-spacing-top-edge-to-text, var(--spectrum-toast-spacing-top-edge-to-text));
+	/* Adds 2px to bring close button in vertical alignment with button which has a 2px border */
+	margin-block: calc(var(--mod-toast-spacing-top-edge-to-text, var(--spectrum-toast-spacing-top-edge-to-text)) + 2px);
 	margin-inline-end: var(--mod-toast-spacing-close-button-to-end-edge, var(--spectrum-toast-spacing-close-button-to-end-edge));
 
 	flex-shrink: 0;
