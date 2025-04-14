@@ -8,7 +8,7 @@ This migrates the `rating` component to S2. Custom properties have been remapped
 
 ##### Additions
 
-The small component variation is now the default and a t-shirt size medium variation has been added.
+The medium component variation is the default and a t-shirt size medium variation has been added.
 
 A tooltip may be displayed to a user indicating whether interacting with the component will clear or edit the rating. A control and documentation example have been added.
 
@@ -16,23 +16,17 @@ A rating may have a partially filled star. The width and fill of this star is co
 
 ##### New mods
 
-`--mod-rating-border-radius`
-`--mod-rating-icon-height`
-`--mod-rating-icon-spacing`
 `--mod-rating-width`
+`--mod-rating-height`
 `--mod-rating-bottom-to-content-area`
 `--mod-rating-edge-to-content-area`
-`--mod-rating-height`
 `--mod-rating-top-to-content-area`
-`--mod-rating-width`
 `--mod-rating-top-to-content-area`
-`--mod-rating-width`
 `--mod-rating-icon-fill`
 
 ##### Removed mods
 
 `--mod-rating-icon-spacing-vertical-top`
-`--mod-rating-focus-indicator-gap`
 `--mod-rating-icon-count`
 `--mod-rating-indicator-border-radius`
 `--mod-rating-indicator-height`
@@ -40,8 +34,6 @@ A rating may have a partially filled star. The width and fill of this star is co
 ##### New custom properties
 
 `--spectrum-rating-width`
-`--spectrum-rating-border-radius`
-`--spectrum-rating-icon-spacing`
 `--spectrum-component-size-difference-down`
 `--spectrum-component-size-minimum-perspective-down`
 `--spectrum-corner-radius-medium-size-medium`

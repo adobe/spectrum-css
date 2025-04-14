@@ -97,9 +97,6 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 
-/**
- * Small and medium rating
- */
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withBorder: false,
@@ -111,9 +108,6 @@ Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/**
- * A non-interactive rating.
- */
 export const ReadOnly = Template.bind({});
 ReadOnly.storyName = "Read-only";
 ReadOnly.tags = ["!dev"];
@@ -124,9 +118,6 @@ ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/**
- * An emphasized rating.
- */
 export const Emphasized = Template.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
@@ -136,9 +127,6 @@ Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/**
- * A read only, emphasized rating.
- */
 export const ReadOnlyEmphasized = Template.bind({});
 ReadOnlyEmphasized.storyName = "Read-only, emphasized";
 ReadOnlyEmphasized.tags = ["!dev"];
@@ -150,9 +138,6 @@ ReadOnlyEmphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/**
- * A disabled rating.
- */
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
@@ -162,10 +147,6 @@ Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-
-/*
- * A focused rating.
-*/
 export const Focused = Template.bind({});
 Focused.tags = ["!dev"];
 Focused.args = {
@@ -176,29 +157,29 @@ Focused.parameters = {
 };
 
 /**
- * A rating with a tooltip displayed.
+ * A tooltip may be displayed to a user indicating whether interacting with the component will clear or edit the rating.
  */
-export const withTooltip = Template.bind({});
-withTooltip.tags = ["!dev"];
-withTooltip.args = {
+export const WithTooltip = Template.bind({});
+WithTooltip.tags = ["!dev"];
+WithTooltip.args = {
 	withTooltip: true,
 };
-withTooltip.parameters = {
+WithTooltip.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 /**
- * A rating with a partially filled icon
+ * To implement a partially filled rating star, the star must have the `is-selected` class applied to its parent and the `is-partial` and `spectrum-Rating-starActive` classes applied. The fill can then be adjusted by setting `--mod-rating-icon-fill` to a valid percentage (e.g. 50%).
  */
-export const withPartial = Template.bind({});
-withPartial.tags = ["!dev"];
-withPartial.args = {
+export const WithPartial = Template.bind({});
+WithPartial.tags = ["!dev"];
+WithPartial.args = {
 	isPartial: true,
 	value: 5,
 	customStyles: {
 		"--mod-rating-icon-fill": "50%"
 	}
 };
-withPartial.parameters = {
+WithPartial.parameters = {
 	chromatic: { disableSnapshot: true },
 };

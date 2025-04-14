@@ -28,6 +28,9 @@ export const RatingGroup = Variants({
 		{
 			testHeading: "With tooltip",
 			withTooltip: true,
+			wrapperStyles: {
+				"padding-top": "35px"
+			}
 		},
 	]
 });
