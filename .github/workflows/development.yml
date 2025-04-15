@@ -135,6 +135,8 @@ jobs:
             styles_modified_files: ${{ needs.changed_files.outputs.styles_modified_files }}
             eslint_added_files: ${{ needs.changed_files.outputs.eslint_added_files }}
             eslint_modified_files: ${{ needs.changed_files.outputs.eslint_modified_files }}
+            mdlint_added_files: ${{ needs.changed_files.outputs.mdlint_added_files }}
+            mdlint_modified_files: ${{ needs.changed_files.outputs.mdlint_modified_files }}
         secrets: inherit
 
     # -------------------------------------------------------------
