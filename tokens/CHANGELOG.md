@@ -1,5 +1,13 @@
 # Change log
 
+## 16.1.0-next.1
+
+### Patch Changes
+
+📝 [#2673](https://github.com/adobe/spectrum-css/pull/2673) [`89a3f2b`](https://github.com/adobe/spectrum-css/commit/89a3f2bfeed257a5eefeef229efaa3cc7555980c) Thanks [@mdt2](https://github.com/mdt2)!
+
+Adds `--spectrum-corner-radius-1000: 9999px;` to global-vars.css to override value of 0.5. This should ensure our components that use this custom property are properly rounded (i.e. the fully rounded swatch or search field).
+
 ## 16.1.0-next.0
 
 ### Minor Changes
