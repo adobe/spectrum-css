@@ -38,23 +38,45 @@ const valueFormatter = (token, platform) => {
  * @type {import('style-dictionary/types').FormatFn} format
  */
 const format = ({ dictionary, platform, options }) => {
-	const resultAr = [];
+	const { selector = ":root" } = options;
+	const results = new Map();
 
-	dictionary.allTokens.forEach((token) => {
+	for (const [key, token] of [...dictionary.tokenMap.entries()]) {
 		const name = generateNameArray(token, platform.prefix);
-		const value = valueFormatter(token, platform);
+		let value = valueFormatter(token, platform);
 
-		if (!value) return;
-		if (name[1]?.startsWith("android-")) {
-			return;
+		if (!name || name[1]?.startsWith("android-")) continue;
+		if (!value) continue;
+
+		if (!token.path.includes("sets")) {
+			results.set(name.join("-"), value);
+			continue;
 		}
 
-		resultAr.push(`  --${name.join("-")}: ${value};`);
-	});
+		const isDark = token.path.includes("dark");
+		const isLight = token.path.includes("light");
 
-	const selector = options.selector ? options.selector : ".spectrum";
+		if (!isDark && !isLight) {
+			results.set(name.join("-"), value);
+			continue;
+		}
 
-	return `${selector} {\n${resultAr.join("\n")}\n}\n`;
+		// Check that an alternate key exists for the dark or light set; if not, we can't use light-dark()
+		let altKey = key.replace(/dark|light/g, isDark ? "light" : "dark");
+		const useLightDark = altKey ? dictionary.tokenMap.has(altKey) : false;
+
+		if (!useLightDark) {
+			results.set(name.join("-"), value);
+			continue;
+		}
+		// skip the dark sets as they are going to be combined with the light ones
+		else if (isDark) continue;
+
+		const darkValue = valueFormatter(dictionary.tokenMap.get(altKey), platform);
+		results.set(name.join("-"), value !== darkValue ? `light-dark(${value}, ${darkValue})` : value);
+	}
+
+	return `${selector} {\n${[...results.entries()].sort().map(([name, value]) => `  --${name}: ${value};`).join("\n")}\n}\n`;
 };
 format.nested = true;
 

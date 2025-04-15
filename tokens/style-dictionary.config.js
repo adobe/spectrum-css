@@ -40,7 +40,7 @@ const tokensPath = import.meta.resolve("@adobe/spectrum-tokens/package.json")?.r
 const tokensDir = dirname(tokensPath);
 
 export default {
-	source: [join(tokensDir, "src", "*.json")],
+	source: [join(tokensDir, "src", "*.json"), "custom-tokens.json", "../components/*/tokens.json"],
 	hooks: {
 		transforms: {
 			[AttributeSetsTransform.name]: AttributeSetsTransform,
@@ -67,7 +67,10 @@ export default {
 					filter: (token) => {
 						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
 						if (tokenSets.includes("wireframe")) return false;
-						if (tokenSets.length === 0) return true;
+						if (
+							tokenSets.length === 0 ||
+							["light", "dark"].some((set) => tokenSets.includes(set))
+						) return true;
 						return false;
 					},
 				},
@@ -76,15 +79,13 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--medium",
-						sets: ["desktop"],
 					},
 					destination: "medium-vars.css",
 					filter: (token) => {
 						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+						if (tokenSets.length === 0) return false;
 						if (tokenSets.includes("wireframe")) return false;
-						if (!tokenSets.includes("desktop")) return false;
-						if (tokenSets.length === 1) return true;
+						if (tokenSets.includes("desktop")) return true;
 						return false;
 					},
 				},
@@ -93,50 +94,14 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--large",
-						sets: ["mobile"],
 					},
 					destination: "large-vars.css",
 					filter: (token) => {
 						// Fetch the sets for this token
 						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+						if (tokenSets.length === 0) return false;
 						if (tokenSets.includes("wireframe")) return false;
-						if (!tokenSets.includes("mobile")) return false;
-						if (tokenSets.length === 1) return true;
-						return false;
-					},
-				},
-				{
-					format: "css/sets",
-					options: {
-						showFileHeader: false,
-						outputReferences: true,
-						selector: ".spectrum--light",
-						sets: ["light"],
-					},
-					destination: "light-vars.css",
-					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.includes("wireframe")) return false;
-						if (!tokenSets.includes("light")) return false;
-						if (tokenSets.length === 1) return true;
-						return false;
-					},
-				},
-				{
-					format: "css/sets",
-					options: {
-						showFileHeader: false,
-						outputReferences: true,
-						selector: ".spectrum--dark",
-						sets: ["dark"],
-					},
-					destination: "dark-vars.css",
-					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.includes("wireframe")) return false;
-						if (!tokenSets.includes("dark")) return false;
-						if (tokenSets.length === 1) return true;
+						if (tokenSets.includes("mobile")) return true;
 						return false;
 					},
 				},

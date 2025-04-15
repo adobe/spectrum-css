@@ -14,7 +14,7 @@
 /* eslint-disable no-console */
 
 import fs, { existsSync, mkdirSync } from "fs";
-import { join } from "path";
+import { basename, join } from "path";
 const fsp = fs.promises;
 
 import fg from "fast-glob";
@@ -49,8 +49,24 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 	const packageJson = await fsp.readFile(join(cwd, "package.json"), "utf-8").then(JSON.parse);
 
 	const inputs = await fg(inputGlob, { cwd });
-	const contents = inputs.map(input => `@import "@spectrum-css/tokens/${input}";`).join("\n");
-	if (!contents) return;
+
+	const results = await fetchContent(inputs, { cwd }).catch((err) => {
+		return Promise.reject(err);
+	});
+
+	if (!results) return;
+
+	const contents = results.map(({ content, input }) => {
+		if (!content) return "";
+		const fileName = basename(input, ".css")?.replace(/-vars$/, "");
+
+		let selector = ".spectrum";
+		if (fileName !== "global" && fileName !== "medium") {
+			selector = `.spectrum.spectrum--${fileName}`;
+		}
+
+		return content.replaceAll(/:root/g, selector);
+	}).join("\n\n");
 
 	return processCSS(contents, undefined, outputPath, {
 		cwd,
@@ -67,7 +83,7 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
  * @param {string} [config.cwd=process.cwd()] - Current working directory for the component
  * @returns {Promise<string[]>}
  */
-async function appendCustomOverrides({ cwd = process.cwd(), packageJson = {} } = {}) {
+async function appendOverrides({ cwd = process.cwd(), packageJson = {} } = {}) {
 	const promises = [];
 
 	// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
@@ -118,7 +134,6 @@ async function main({
 	if (!existsSync(compiledOutputPath)) {
 		mkdirSync(compiledOutputPath);
 	}
-
 	const reports = [];
 	const errors = [];
 
@@ -126,7 +141,7 @@ async function main({
 	const packageJson = await fsp.readFile(join(cwd, "package.json"), "utf-8").then(JSON.parse);
 
 	// Wait for all the custom files to be processed
-	await appendCustomOverrides({ packageJson, cwd }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
+	await appendOverrides({ packageJson, cwd }).then((report) => { reports.push(report); });
 
 	// Then build the index.css file
 	await index(["dist/css/*-vars.css"], join(compiledOutputPath, "css", "index.css"), { cwd, clean }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
