@@ -1,5 +1,33 @@
 # Change log
 
+## 15.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/progresscircle@6.0.0-next.0
+
+## 15.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
+## 14.1.4
+
+### Patch Changes
+
+📝 [#3648](https://github.com/adobe/spectrum-css/pull/3648) [`8e52975`](https://github.com/adobe/spectrum-css/commit/8e52975c9c75d1fc44089a3b112c7f1745f8cea3) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+S2 Foundations fixes to adjust:
+
+- primary outline background color for hover, active, and focus states (gray-100)
+- secondary fill background color for active state (gray-200)
+- secondary outline background color for hover, active, and focus states (gray-100)
+- secondary outline border color for default (gray-300) and active states (gray-400)
+
 ## 14.1.3
 
 ### Patch Changes
@@ -22,13 +50,6 @@ This PR includes changes to:
 📝 [#3600](https://github.com/adobe/spectrum-css/pull/3600) [`bb845cb`](https://github.com/adobe/spectrum-css/commit/bb845cb2477d0c218a9675169f157b047c028222) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
 
 - Adjust border colors for static black and static white outline buttons, primary variant to match S2 spec.
-
-## 15.0.0-next.0
-
-### Patch Changes
-
-- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
-  - @spectrum-css/icon@10.0.0-next.0
 
 ## 14.1.1
 
