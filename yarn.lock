@@ -186,10 +186,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:13.0.0-beta.58":
-  version: 13.0.0-beta.58
-  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.58"
-  checksum: 10c0/2713a0dfd73b11172c5f9d2be4ae92c472387e74aad857575cee0a4391f029f9fa7b10f8b46e917d8972b1c7631758432130ca361ce9dfc76064af2378c12a02
+"@adobe/spectrum-tokens@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "@adobe/spectrum-tokens@npm:13.3.0"
+  checksum: 10c0/38024ea32e2554c5f27539993e67af8ba41d5a19a6e02eaeb00dd45df094d0196d1823a72c71e32b2097cf55b2e5f98d2a8bd40840fa537b6801b1371fd99f4e
   languageName: node
   linkType: hard
 
@@ -5525,7 +5525,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:13.0.0-beta.58"
+    "@adobe/spectrum-tokens": "npm:^13.3.0"
     "@adobe/token-diff-generator": "npm:^1.3.0"
     "@nxkit/style-dictionary": "npm:^6.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.0.0"
