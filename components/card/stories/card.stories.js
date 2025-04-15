@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused, isQuiet, isSelected } from "@spectrum-css/preview/types";
+import { isFocused, isSelected } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CardGroup } from "./card.test.js";
@@ -23,7 +23,6 @@ export default {
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
 		},
-		isQuiet,
 		isSelected,
 		isFocused,
 		hasActions: {
@@ -109,7 +108,6 @@ export default {
 		rootClass: "spectrum-Card",
 		isSelected: false,
 		isFocused: false,
-		isQuiet: false,
 		isGrid: false,
 		isGallery: false,
 		isDropTarget: false,
@@ -131,7 +129,7 @@ export default {
 };
 
 /**
- *  Cards can either be standard or quiet style. A standard card includes a cover photo and footer, with buttons and more information. A vertical layout is default for cards, and the recommended default preview size is 2:1.
+ *  A standard card includes a cover photo and footer, with buttons and more information. A vertical layout is default for cards, and the recommended default preview size is 2:1.
  */
 export const Default = CardGroup.bind({});
 Default.args = {
@@ -177,35 +175,6 @@ Focused.parameters = {
 Focused.storyName = "Default - focused";
 
 /**
- * Quiet card styling is reserved for very simple cards with little metadata. The border of the `.spectrum-Card` element is removed, and additional rounded corners are added to the `.spectrum-Card-preview` container.
- */
-export const Quiet = Template.bind({});
-Quiet.args = {
-	...Default.args,
-	showAsset: "image",
-	image: "example-ava@2x.png",
-	isQuiet: true,
-};
-Quiet.tags = ["!dev"];
-Quiet.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/** A quiet card for a file asset. */
-export const QuietFile = Template.bind({});
-QuietFile.storyName = "Quiet - file";
-QuietFile.args = {
-	...Quiet.args,
-	title: "FileName",
-	description: "PDF",
-	showAsset: "file",
-};
-QuietFile.tags = ["!dev"];
-QuietFile.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
  * A card with a horizontal layout. Horizontal cards always have a square preview, and the image is cropped to fit inside the square. These can only be laid out in a tile grid where every card is the same size.
  * */
 export const Horizontal = Template.bind({});
@@ -232,44 +201,6 @@ NoImage.args = {
 NoImage.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
-/**
- * A quiet card for a folder asset.
- * */
-export const QuietFolder = Quiet.bind({});
-QuietFolder.args = {
-	title: "Name",
-	showAsset: "folder",
-	description: "10/15/18",
-	isQuiet: true,
-};
-QuietFolder.tags = ["!dev"];
-QuietFolder.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-QuietFolder.storyName = "Quiet - folder";
-
-export const QuietFocused = Quiet.bind({});
-QuietFocused.args = {
-	...Quiet.args,
-	isFocused: true,
-};
-QuietFocused.tags = ["!dev"];
-QuietFocused.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-QuietFocused.storyName = "Quiet - focused";
-
-export const QuietSelected = Quiet.bind({});
-QuietSelected.args = {
-	...Quiet.args,
-	isSelected: true,
-};
-QuietSelected.tags = ["!dev"];
-QuietSelected.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-QuietSelected.storyName = "Quiet - selected";
 
 /**
  * Card preview areas can have any aspect ratio between 4:1 (shortest) and 3:4 (tallest).

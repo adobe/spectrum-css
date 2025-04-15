@@ -22,7 +22,6 @@ export const Template = ({
 	isFocused = false,
 	isSelected = false,
 	isHorizontal = false,
-	isQuiet = false,
 	isGallery = false,
 	isImageFill = false,
 	isGrid = false,
@@ -42,7 +41,6 @@ export const Template = ({
         [rootClass]: true,
         "is-selected": isSelected,
         "is-focused": isFocused,
-        [`${rootClass}--quiet`]: isQuiet,
         [`${rootClass}--gallery`]: isGallery,
         [`${rootClass}--horizontal`]: isHorizontal,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -62,7 +60,7 @@ export const Template = ({
     >
       ${when(image || showAsset, () =>
         when(
-          showAsset || (isGallery && image) || isQuiet,
+          showAsset || (isGallery && image),
           () => html`
             <div
               class=${classMap({
@@ -185,7 +183,7 @@ export const Template = ({
           </div>`
       )}
       ${when(
-        footer && !isQuiet && !isHorizontal && !isGallery,
+        footer && !isHorizontal && !isGallery,
         () => html`
           <div
             class=${classMap({
