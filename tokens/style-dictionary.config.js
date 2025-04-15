@@ -11,38 +11,44 @@
  * governing permissions and limitations under the License.
  */
 
-const path = require("path");
+import { dirname, join, sep } from "path";
 
-const generateFileConfig = require("./utilities/style-dictionary.utils.js");
-
-const StyleDictionary = require("style-dictionary");
-const CSSSetsFormatter = require("style-dictionary-sets").CSSSetsFormatter;
-const JsonSetsFormatter = require("./utilities/data-json-formatter.js");
-const NameKebabTransfom = require("style-dictionary-sets").NameKebabTransfom;
-const AttributeSetsTransform =
-	require("style-dictionary-sets").AttributeSetsTransform;
-const CSSOpenTypeTransform =
-	require("style-dictionary-sets").CSSOpenTypeTransform;
+import StyleDictionary from "style-dictionary";
+import {
+	AttributeSetsTransform,
+	CSSOpenTypeTransform,
+	CSSSetsFormatter,
+	DataJsonFormatter,
+	NameKebabTransfom,
+} from "./utilities/index.js";
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
+
 StyleDictionary.registerFormat(CSSSetsFormatter);
-StyleDictionary.registerFormat(JsonSetsFormatter);
+StyleDictionary.registerFormat(DataJsonFormatter);
 
 /**
  * @note This references the package.json because we want the root folder and
  * not a nested folder which might be returned if the `main` property
  * in the package.json is present.
  */
-const tokensPath = require.resolve("@adobe/spectrum-tokens/package.json");
-const tokensDir = path.dirname(tokensPath);
+const tokensPath = import.meta.resolve("@adobe/spectrum-tokens/package.json")?.replace(/file:\/\//, "");
+const tokensDir = dirname(tokensPath);
 
-module.exports = {
-	source: [`${tokensDir}/src/*.json`],
+export default {
+	source: [join(tokensDir, "src", "*.json"), "custom-tokens.json", "../components/*/tokens.json"],
+	hooks: {
+		transforms: {
+			[AttributeSetsTransform.name]: AttributeSetsTransform,
+			[NameKebabTransfom.name]: NameKebabTransfom,
+			[CSSOpenTypeTransform.name]: CSSOpenTypeTransform,
+		},
+	},
 	platforms: {
-		CSS: {
-			buildPath: "dist/css/",
+		css: {
+			buildPath: join("dist", "css") + sep,
 			transforms: [
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
@@ -50,14 +56,55 @@ module.exports = {
 			],
 			prefix: "spectrum",
 			files: [
-				generateFileConfig(),
-				...["desktop", "mobile", "light", "dark"].map((context) =>
-					generateFileConfig({ setName: context }),
-				),
+				{
+					format: "css/sets",
+					options: { showFileHeader: false, outputReferences: true },
+					destination: "global-vars.css",
+					filter: (token) => {
+						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+						if (tokenSets.includes("wireframe")) return false;
+						if (
+							tokenSets.length === 0 ||
+							["light", "dark"].some((set) => tokenSets.includes(set))
+						) return true;
+						return false;
+					},
+				},
+				{
+					format: "css/sets",
+					options: {
+						showFileHeader: false,
+						outputReferences: true,
+					},
+					destination: "medium-vars.css",
+					filter: (token) => {
+						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+						if (tokenSets.length === 0) return false;
+						if (tokenSets.includes("wireframe")) return false;
+						if (tokenSets.includes("desktop")) return true;
+						return false;
+					},
+				},
+				{
+					format: "css/sets",
+					options: {
+						showFileHeader: false,
+						outputReferences: true,
+					},
+					destination: "large-vars.css",
+					filter: (token) => {
+						// Fetch the sets for this token
+						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+						if (tokenSets.length === 0) return false;
+						if (tokenSets.includes("wireframe")) return false;
+						if (tokenSets.includes("mobile")) return true;
+						return false;
+					},
+				},
 			],
 		},
 		JSON: {
-			buildPath: "dist/json/",
+			buildPath: join("dist", "json") + sep,
 			transforms: [
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
@@ -69,11 +116,8 @@ module.exports = {
 					format: "json/sets",
 					destination: "tokens.json",
 					filter: (token) => {
-						// Fetch the sets for this token
-						const sets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-
-						if (sets.includes("wireframe")) return false;
-
+						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
+						if (tokenSets.includes("wireframe")) return false;
 						return true;
 					},
 					options: {
