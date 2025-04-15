@@ -63,7 +63,7 @@ export const Template = ({
 		>
 			<input
 				type="checkbox"
-				class=${classMap({["is-focus-visible"]: isFocused, [`${rootClass}-input`]: true })}
+				class=${classMap({["is-focus-visible"]: isFocused && !isDisabled, [`${rootClass}-input`]: true })}
 				aria-labelledby=${ifDefined(ariaLabelledby)}
 				aria-disabled=${ifDefined(isReadOnly ? "true" : undefined)}
 				?checked=${isChecked}
