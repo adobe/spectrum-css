@@ -1,5 +1,21 @@
 # Change log
 
+## 9.0.0-next.2
+
+### Major Changes
+
+📝 [#2673](https://github.com/adobe/spectrum-css/pull/2673) [`89a3f2b`](https://github.com/adobe/spectrum-css/commit/89a3f2bfeed257a5eefeef229efaa3cc7555980c) Thanks [@mdt2](https://github.com/mdt2)!
+
+#### Search S2 migration
+
+Search now uses Spectrum 2 tokens and specifications. The following items have been adjusted:
+
+- Quiet variant has been deprecated and code removed (including removal of the custom property `--mod-search-quiet-button-offset`).
+- Updates to colors, corner rounding, and spacing.
+- Custom property mod adjustments:
+  - Added `--mod-search-top-to-icon`.
+  - Removed `--mod-workflow-icon-size-100`.
+
 ## 9.0.0-next.1
 
 ### Patch Changes
