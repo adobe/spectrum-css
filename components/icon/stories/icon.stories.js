@@ -9,6 +9,19 @@ import { uiIconsWithDirections, workflowIconsCleaned, workflowSizes } from "./ut
 
 /**
  * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
+ *
+ * ## Icon sets
+ * The SVG icons used in Spectrum CSS are a part of two different icon sets, "workflow" and "ui".
+ * The two sets have different uses and methods of sizing.
+ *
+ * ## Repositories for the icon SVG files
+ * The UI icon SVGs are within the Spectrum CSS repository, which has its own package published to NPM:
+ * - GitHub: [adobe/spectrum-css — ui-icons folder](https://github.com/adobe/spectrum-css/tree/main/ui-icons)
+ * - NPM: [@spectrum-css/ui-icons](https://www.npmjs.com/package/@spectrum-css/ui-icons).
+ *
+ * The workflow icon SVGs are within a separate repository, which is also published to NPM:
+ * - GitHub: [adobe/spectrum-css-workflow-icons](https://github.com/adobe/spectrum-css-workflow-icons)
+ * - NPM: [@adobe/spectrum-css-workflow-icons](https://www.npmjs.com/package/@adobe/spectrum-css-workflow-icons).
  */
 export default {
 	title: "Icon",
@@ -86,11 +99,11 @@ export default {
 			url: "https://www.figma.com/design/9qeVZSJ9t0kv6r7njzgHx7/S2-%2F-Styles-visualizer-(WIP)?node-id=295-24257&t=ZC7fyaQ0VQYQ5VYM-1",
 		},
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = IconGroup.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
 
 /**
  * All icons in the Workflow icon set.
@@ -146,7 +159,9 @@ WithForcedColors.parameters = {
 // ********* DOCS ONLY ********* //
 
 /**
- * A sampling of multiple Workflow icons.
+ * The workflow icon set contains several hundred icons to choose from.
+ * These icons can be seen in use within [button](/docs/components-button--docs), [action button](/docs/components-action-button--docs), [menu](/docs/components-menu--docs), and many other components.
+ * Here is an example of just a few of these icons:
  */
 export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
 WorkflowDefault.storyName = "Workflow icons";
@@ -154,6 +169,7 @@ WorkflowDefault.tags = ["!dev"];
 WorkflowDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+WorkflowDefault.storyName = "Workflow icons";
 
 /**
  * An example of a Workflow icon displayed at all sizes, from small to extra-large.
@@ -170,12 +186,24 @@ WorkflowSizing.args = {
 	setName: "workflow",
 	iconName: "Asset",
 };
+WorkflowSizing.tags = ["!dev"];
 WorkflowSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+WorkflowSizing.storyName = "Workflow sizing";
 
 /**
- * A sampling of a few UI icons.
+ * UI icons are atomic pieces (e.g., arrows, crosses, etc.) that are used as part of some components.
+ * The chevron within the [combobox component](/docs/components-combobox--docs) is one example.
+ * Unlike workflow icons, each UI icon comes in specific numbered sizes. They do not use "t-shirt" sizing. They have unique classes applied that set their size in CSS. For example:
+ * - `.spectrum-UIIcon-Asterisk300`
+ * - `.spectrum-UIIcon-ChevronDown75`
+ *
+ * Different UI icons have different number sizes available. The smallest size for some may be `50`, while others may start at `100`.
+ * Some have up to a `600` size. Some may only have two different sizes, while others have six.
+ * Because of this, they can't be mapped one-to-one to t-shirt sizes.
+ * The correct UI icon sizes that correspond to each of a component's size options is typically defined in the design spec.
+ * An example of some UI icons in their available sizes is below.
  */
 export const UIDefault = UIDefaultTemplate.bind({});
 UIDefault.storyName = "UI icons";
@@ -185,7 +213,12 @@ UIDefault.parameters = {
 };
 
 /**
- * A UI arrow displayed for all directions (left, right, up, down).
+ * Directional UI icons such as chevron and arrow have classes for each direction. They rotate the same basic icon with a CSS `transform: rotate`.
+ * For example, the `Arrow100.svg` icon is used with:
+ * - `.spectrum-UIIcon-ArrowRight100`
+ * - `.spectrum-UIIcon-ArrowLeft100`
+ * - `.spectrum-UIIcon-ArrowDown100`
+ * - `.spectrum-UIIcon-ArrowUp100`
  */
 export const UIArrows = UIArrowsTemplate.bind({});
 UIArrows.storyName = "UI Arrows";
