@@ -67,7 +67,7 @@
 		var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) + var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) + (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height)))
 	);
 
-	/* Right-to-left adjustments */
+	/* Right-to-left adjustments for transforms */
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
@@ -265,7 +265,6 @@
 
 	&:focus-visible {
 		border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
-
 		outline: var(--mod-accordion-focus-indicator-thickness, var(--spectrum-accordion-focus-indicator-thickness)) solid var(--mod-accordion-focus-indicator-color, var(--spectrum-accordion-focus-indicator-color));
 		background-color: var(--mod-accordion-background-color-key-focus, var(--spectrum-accordion-background-color-key-focus));
 		color: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-accordion-item-header-color-key-focus));
@@ -279,6 +278,15 @@
 }
 
 .spectrum-Accordion-item.is-open {
+	> .spectrum-Accordion-itemHeading > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator,
+	> .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator {
+		transform: var(--spectrum-logical-rotation,) rotate(90deg);
+	}
+
+	> .spectrum-Accordion-itemContent {
+		display: block;
+	}
+
 	.spectrum-Accordion-itemHeader:hover {
 		background-color: var(--mod-accordion-background-color-hover, var(--spectrum-accordion-background-color-hover));
 	}
@@ -286,6 +294,8 @@
 
 .spectrum-Accordion-item.is-disabled {
 	.spectrum-Accordion-itemHeader {
+		cursor: default;
+
 		&,
 		&:hover,
 		&:focus-visible {
@@ -300,25 +310,6 @@
 
 	.spectrum-Accordion-itemContent {
 		color: var(--spectrum-accordion-item-content-disabled-color);
-	}
-}
-
-.spectrum-Accordion-item {
-	&.is-open {
-		> .spectrum-Accordion-itemHeading > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator,
-		> .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator {
-			transform: var(--spectrum-logical-rotation,) rotate(90deg);
-		}
-
-		> .spectrum-Accordion-itemContent {
-			display: block;
-		}
-	}
-
-	&.is-disabled {
-		.spectrum-Accordion-itemHeader {
-			cursor: default;
-		}
 	}
 }
 
