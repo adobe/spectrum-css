@@ -2,6 +2,9 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Checkbox",
+    ".spectrum-Checkbox .is-active .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox .is-active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox .is-active .spectrum-Checkbox-label",
     ".spectrum-Checkbox .spectrum-Checkbox-box",
     ".spectrum-Checkbox .spectrum-Checkbox-box:after",
     ".spectrum-Checkbox .spectrum-Checkbox-box:before",

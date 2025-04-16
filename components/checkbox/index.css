@@ -153,7 +153,8 @@
 		}
 	}
 
-	&:active {
+	&:active,
+	.is-active {
 		.spectrum-Checkbox-box::before {
 			border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-control-color-down, var(--spectrum-checkbox-control-color-down)));
 		}
