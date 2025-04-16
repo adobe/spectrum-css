@@ -21,7 +21,6 @@ A rating may have a partially filled star. The width and fill of this star is co
 `--mod-rating-bottom-to-content-area`
 `--mod-rating-edge-to-content-area`
 `--mod-rating-top-to-content-area`
-`--mod-rating-top-to-content-area`
 `--mod-rating-icon-fill`
 
 ##### Removed mods
