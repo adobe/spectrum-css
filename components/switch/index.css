@@ -243,7 +243,7 @@
 	}
 }
 
-.spectrum-Switch:hover {
+.spectrum-Switch:hover:not(:active) {
 	.spectrum-Switch-input {
 		& + .spectrum-Switch-switch {
 			&::before {
