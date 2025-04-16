@@ -3801,7 +3801,7 @@ __metadata:
   dependencies:
     "@spectrum-css/actiongroup": "npm:7.0.0-next.1"
     "@spectrum-css/closebutton": "npm:7.0.0-next.1"
-    "@spectrum-css/fieldlabel": "npm:11.0.0-next.1"
+    "@spectrum-css/fieldlabel": "npm:11.0.0-next.2"
     "@spectrum-css/popover": "npm:9.0.0-next.2"
     "@spectrum-css/tokens": "npm:16.1.0-next.1"
   peerDependencies:
@@ -4093,7 +4093,7 @@ __metadata:
     "@spectrum-css/dropindicator": "npm:8.0.0-next.1"
     "@spectrum-css/dropzone": "npm:9.0.0-next.3"
     "@spectrum-css/fieldgroup": "npm:8.0.0-next.1"
-    "@spectrum-css/fieldlabel": "npm:11.0.0-next.1"
+    "@spectrum-css/fieldlabel": "npm:11.0.0-next.2"
     "@spectrum-css/floatingactionbutton": "npm:5.0.0-next.0"
     "@spectrum-css/form": "npm:2.0.0-next.0"
     "@spectrum-css/helptext": "npm:8.0.0-next.1"
@@ -4666,7 +4666,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/fieldlabel@npm:11.0.0-next.1, @spectrum-css/fieldlabel@workspace:components/fieldlabel":
+"@spectrum-css/fieldlabel@npm:11.0.0-next.2, @spectrum-css/fieldlabel@workspace:components/fieldlabel":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/fieldlabel@workspace:components/fieldlabel"
   dependencies:
@@ -5124,7 +5124,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/progressbar@workspace:components/progressbar"
   dependencies:
-    "@spectrum-css/fieldlabel": "npm:11.0.0-next.1"
+    "@spectrum-css/fieldlabel": "npm:11.0.0-next.2"
     "@spectrum-css/tokens": "npm:16.1.0-next.1"
   peerDependencies:
     "@spectrum-css/fieldlabel": ">=11.0.0-next.0"
