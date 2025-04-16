@@ -29,6 +29,7 @@ A rating may have a partially filled star. The width and fill of this star is co
 `--mod-rating-icon-count`
 `--mod-rating-indicator-border-radius`
 `--mod-rating-indicator-height`
+`--mod-rating-icon-color-key-focus`
 
 ##### New custom properties
 
