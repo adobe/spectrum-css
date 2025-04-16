@@ -110,6 +110,7 @@ Default.tags = ["!autodocs"];
  */
 export const Workflow = FullIconSetTemplate.bind({});
 Workflow.storyName = "Workflow icons";
+Workflow.tags = ["!autodocs"];
 Workflow.args = {
 	setName: "workflow",
 	useRef: true,
@@ -129,6 +130,7 @@ Workflow.parameters = {
  */
 export const UI = FullIconSetTemplate.bind({});
 UI.storyName = "UI icons";
+UI.tags = ["!autodocs"];
 UI.args = {
 	setName: "ui",
 	useRef: true,
@@ -160,6 +162,7 @@ WithForcedColors.parameters = {
 
 /**
  * The workflow icon set contains several hundred icons to choose from.
+ * For a full list of all icons within this set, see **[workflow icons](/story/components-icon--workflow)**.
  * These icons can be seen in use within [button](/docs/components-button--docs), [action button](/docs/components-action-button--docs), [menu](/docs/components-menu--docs), and many other components.
  * Here is an example of just a few of these icons:
  */
@@ -190,11 +193,13 @@ WorkflowSizing.tags = ["!dev"];
 WorkflowSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-WorkflowSizing.storyName = "Workflow sizing";
+WorkflowSizing.storyName = "Workflow icons - sizing";
 
 /**
  * UI icons are atomic pieces (e.g., arrows, crosses, etc.) that are used as part of some components.
  * The chevron within the [combobox component](/docs/components-combobox--docs) is one example.
+ * For a full list of all icons within this set, see **[ui icons](/story/components-icon--ui)**.
+ *
  * Unlike workflow icons, each UI icon comes in specific numbered sizes. They do not use "t-shirt" sizing. They have unique classes applied that set their size in CSS. For example:
  * - `.spectrum-UIIcon-Asterisk300`
  * - `.spectrum-UIIcon-ChevronDown75`
@@ -221,7 +226,7 @@ UIDefault.parameters = {
  * - `.spectrum-UIIcon-ArrowUp100`
  */
 export const UIArrows = UIArrowsTemplate.bind({});
-UIArrows.storyName = "UI Arrows";
+UIArrows.storyName = "UI icons - directional";
 UIArrows.tags = ["!dev"];
 UIArrows.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -234,7 +239,7 @@ UIArrows.parameters = {
  * not exist to demonstrate this behavior.
  */
 export const MissingWorkflowIcon = Default.bind({});
-MissingWorkflowIcon.storyName = "Missing workflow icon placeholder";
+MissingWorkflowIcon.storyName = "Workflow icons - missing workflow icon placeholder";
 MissingWorkflowIcon.tags = ["!dev"];
 MissingWorkflowIcon.args = {
 	setName: "workflow",
