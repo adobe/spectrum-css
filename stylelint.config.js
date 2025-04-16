@@ -13,6 +13,20 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
 		// "stylelint-high-performance-animation",
 	],
+	ignoreFiles: [
+		// Static utility assets
+		"tokens/custom-*/*.css",
+		"tools/generator/**/*.css",
+		// Compiled and generated files
+		"**/dist/**",
+		".storybook/storybook-static/**/*.css",
+		"**/*-generated.css",
+		"tools/bundle/src/*.css",
+		"**/node_modules/**",
+		// Test files
+		"plugins/*/expected/*.css",
+		"plugins/*/fixtures/*.css",
+	],
 	rules: {
 		/** --------------------------------------------------------------
 		 * Disabled rules
@@ -216,6 +230,18 @@ module.exports = {
 						ignoreList: [/^--mod-/],
 					},
 				],
+			}
+		},
+		{
+			/* Module CSS file classes have an underscore before classes, and use underscores instead of a dash as separators (e.g. _spectrum_well) */
+			files: ["*.module.css"],
+			rules: {
+				"selector-class-pattern": [
+					"^_spectrum$|^(_)?(spectrum|is|u)(_|-)[A-Za-z0-9-_]+", {
+						resolveNestedSelectors: true
+					}
+				],
+				"keyframes-name-pattern": null,
 			}
 		},
 	],
