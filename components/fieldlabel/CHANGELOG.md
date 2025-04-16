@@ -1,5 +1,15 @@
 # Change log
 
+## 11.0.0-next.2
+
+### Patch Changes
+
+📝 [#3652](https://github.com/adobe/spectrum-css/pull/3652) [`8b4511e`](https://github.com/adobe/spectrum-css/commit/8b4511eb14a8dc586c34719db2efd6f5c542e7b1) Thanks [@cdransf](https://github.com/cdransf)!
+
+#### Fix field label required icon wrapping
+
+Addresses case where fieldlabel required icon could appear on its own line when wrapping by applying text-wrap: pretty; to the parent label class and adding a non-breaking space character between the label content and required marker.
+
 ## 11.0.0-next.1
 
 ### Patch Changes
