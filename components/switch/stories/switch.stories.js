@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isChecked, isDisabled, isEmphasized, size } from "@spectrum-css/preview/types";
+import { isActive, isChecked, isDisabled, isEmphasized, isHovered, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SwitchGroup } from "./switch.test.js";
@@ -14,6 +14,8 @@ export default {
 	component: "Switch",
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
+		isActive,
+		isHovered,
 		isEmphasized,
 		isDisabled,
 		isChecked: {

@@ -14,6 +14,8 @@ export const Template = ({
 	rootClass = "spectrum-Switch",
 	size = "m",
 	label = "Switch label",
+	isActive = false,
+	isHovered = false,
 	isDisabled = false,
 	isChecked = false,
 	isEmphasized = false,
@@ -32,6 +34,8 @@ export const Template = ({
 				[`${rootClass}--emphasized`] : isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
+				"is-active": isActive,
+				"is-hovered": isHovered,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}

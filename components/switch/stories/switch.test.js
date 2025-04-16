@@ -32,5 +32,15 @@ export const SwitchGroup = Variants({
 			isChecked: true,
 			isDisabled: true,
 		},
+		{
+			testHeading: "Checked and hovered",
+			isChecked: true,
+			isHovered: true,
+		},
+		{
+			testHeading: "Checked and active",
+			isChecked: true,
+			isActive: true,
+		},
 	]
 });
