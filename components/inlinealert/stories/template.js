@@ -61,8 +61,8 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--${variant}--${"subtle"}`]: typeof variant !== "undefined" && isSubtle,
-				[`${rootClass}--${variant}--${"bold"}`]: typeof variant !== "undefined" && isBold,
+				[`${rootClass}--${variant}--subtle`]: typeof variant !== "undefined" && isSubtle,
+				[`${rootClass}--${variant}--bold`]: typeof variant !== "undefined" && isBold,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}

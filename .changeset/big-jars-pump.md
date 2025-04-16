@@ -22,33 +22,27 @@ Subtle and bold styles have been added for each badge variant.
 
 ##### New custom properties
 
-`.spectrum-InLineAlert--info--bold`
-`.spectrum-InLineAlert--info--bold .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--info--subtle`
-`.spectrum-InLineAlert--info--subtle .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--negative--bold`
-`.spectrum-InLineAlert--negative--bold .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--negative--subtle`
-`.spectrum-InLineAlert--negative--subtle .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--neutral`
-`.spectrum-InLineAlert--neutral .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--neutral--bold`
-`.spectrum-InLineAlert--neutral--bold .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--neutral--subtle`
-`.spectrum-InLineAlert--neutral--subtle .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--notice--bold`
-`.spectrum-InLineAlert--notice--bold .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--notice--subtle`
-`.spectrum-InLineAlert--notice--subtle .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--positive--bold`
-`.spectrum-InLineAlert--positive--bold .spectrum-InLineAlert-icon`
-`.spectrum-InLineAlert--positive--subtle`
-`.spectrum-InLineAlert--positive--subtle .spectrum-InLineAlert-icon`
 `--spectrum-inlinealert-bold-background-color-informative`
 `--spectrum-inlinealert-bold-background-color-negative`
 `--spectrum-inlinealert-bold-background-color-neutral`
 `--spectrum-inlinealert-bold-background-color-notice`
 `--spectrum-inlinealert-bold-background-color-positive`
+`--spectrum-inlinealert-border-and-icon-color-neutral`
+`--spectrum-inlinealert-color-black`
+`--spectrum-inlinealert-color-white`
+`--spectrum-inlinealert-min-spacing-header-to-icon`
+`--spectrum-inlinealert-spacing-content-link-button`
+`--spectrum-inlinealert-spacing-header-content`
+`--spectrum-inlinealert-subtle-background-color-informative`
+`--spectrum-inlinealert-subtle-background-color-negative`
+`--spectrum-inlinealert-subtle-background-color-neutral`
+`--spectrum-inlinealert-subtle-background-color-notice`
+`--spectrum-inlinealert-subtle-background-color-positive`
+`--spectrum-inlinealert-subtle-color-informative`
+`--spectrum-inlinealert-subtle-color-negative`
+`--spectrum-inlinealert-subtle-color-neutral`
+`--spectrum-inlinealert-subtle-color-notice`
+`--spectrum-inlinealert-subtle-color-positive`
 
 ##### Removed custom properties
 
