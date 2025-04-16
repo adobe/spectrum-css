@@ -42,7 +42,6 @@ A rating may have a partially filled star. The width and fill of this star is co
 `--spectrum-neutral-content-color-down`
 `--spectrum-neutral-content-color-hover`
 `--spectrum-spacing-75`
-`--spectrum-workflow-icon-size-100`
 `--spectrum-workflow-icon-size-75`
 
 ##### Removed custom properties
@@ -50,7 +49,6 @@ A rating may have a partially filled star. The width and fill of this star is co
 `--spectrum-rating-indicator-width`
 `--spectrum-rating-icon-color-key-focus`
 `--spectrum-rating-icon-spacing-vertical-top`
-`--spectrum-rating-focus-indicator-gap`
 `--spectrum-rating-indicator-height`
 `--spectrum-rating-indicator-border-radius`
 `--spectrum-accent-content-color-key-focus`
@@ -61,4 +59,3 @@ A rating may have a partially filled star. The width and fill of this star is co
 `--spectrum-neutral-subdued-content-color-down`
 `--spectrum-neutral-subdued-content-color-hover`
 `--spectrum-neutral-subdued-content-color-key-focus`
-`--spectrum-workflow-icon-size-100`
