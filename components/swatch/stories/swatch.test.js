@@ -34,6 +34,10 @@ export const Swatches = (args, context) => {
 			}, context),
 			Template({
 				...args,
+				isAddSwatch: true,
+			}, context),
+			Template({
+				...args,
 				swatchColor: undefined,
 				imageUrl: undefined,
 			}, context),
@@ -93,6 +97,10 @@ export const SwatchGroup = Variants({
 			testHeading: "Mixed value",
 			isMixedValue: true,
 		},
+		{
+			testHeading: "Add swatch",
+			isAddSwatch: true,
+		},
 	],
 	stateData: [
 		{
@@ -104,6 +112,7 @@ export const SwatchGroup = Variants({
 			swatchColor: undefined,
 			imageUrl: undefined,
 			isMixedValue: false,
+			isAddSwatch: false,
 			borderStyle: "default",
 		},
 		{

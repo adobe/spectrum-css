@@ -38,7 +38,7 @@ export default {
 				category: "Component",
 				defaultValue: { summary: "regular", },
 			},
-			options: ["none", "regular", "full"],
+			options: ["regular", "full"],
 			control: "select",
 		},
 		isDisabled,
@@ -85,6 +85,18 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "isAddSwatch", truthy: false },
+		},
+		isAddSwatch: {
+			name: "Add swatch",
+			description: "A swatch that allows a user to add a new value.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+			if: { arg: "isMixedValue", truthy: false },
 		},
 	},
 	args: {
@@ -97,6 +109,7 @@ export default {
 		borderStyle: "default",
 		shape: "square",
 		isMixedValue: false,
+		isAddSwatch: false,
 	},
 	parameters: {
 		design: {
@@ -145,7 +158,7 @@ Disabled.parameters = {
 };
 
 /**
- * Default rounding and full rounding are usually used when a swatch is presented by itself near other components. A rounding of “none” is used in a swatch group to help minimize the Hermann grid illusion that happens at the intersections of white space in the group.
+ * Full rounding is usually used when a swatch is presented by itself near other components.
  */
 export const Rounding = RoundingGroup.bind({});
 Rounding.tags = ["!dev"];
@@ -218,6 +231,18 @@ MixedValue.args = {
 };
 MixedValue.tags = ["!dev"];
 MixedValue.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * When a swatch allows a user to add a new value, the preview shows a `gray-50` fill and an add UI icon.
+ */
+export const AddSwatch = Template.bind({});
+AddSwatch.args = {
+	isAddSwatch: true,
+};
+AddSwatch.tags = ["!dev"];
+AddSwatch.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

@@ -11,12 +11,6 @@ import { RoundingTemplate, Template } from "./template.js";
  *
  * ## Usage notes
  *
- * ### Corner rounding in swatch groups
- *
- * A corner rounding of “none” (`.spectrum-Swatch--roundingNone` class) should be used in a swatch group in order to help minimize the Hermann grid illusion that happens at the intersections of the white space within the group.
- *
- * The only exception is when a swatch group only takes up a single row. In that case, use any of the rounding options.
- *
  * ### Apply border to low-contrast swatches only
  *
  * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), they have a less prominent border compared to a single swatch component used by itself, and should have the `.spectrum-Swatch--lightBorder` class. This reduces the likelihood of the UI interfering with color perception and comparisons. Otherwise, swatches within a swatch group that meet contrast should have the `.spectrum-Swatch--noBorder` class.
@@ -57,12 +51,11 @@ export default {
 		},
 		rounding: {
 			...Swatch.argTypes.rounding,
-			description: "Only use rounded swatches if there is a single row.",
-			defaultValue: "none",
+			defaultValue: "regular",
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
-				defaultValue: { summary: "none", },
+				defaultValue: { summary: "regular", },
 			},
 		},
 		borderStyle: {
@@ -74,6 +67,7 @@ export default {
 				category: "Component",
 				defaultValue: { summary: "noBorder" },
 			},
+			if: { arg: "isSelected", truthy: false },
 			options: ["noBorder", "lightBorder"],
 		},
 	},
@@ -81,7 +75,7 @@ export default {
 		rootClass: "spectrum-SwatchGroup",
 		size: "m",
 		density: "regular",
-		rounding: "none",
+		rounding: "regular",
 		borderStyle: "noBorder",
 		containerWidth: "200px",
 		isDisabled: false,
