@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
- /* @note: default sizing for swatch is small */
+/* @note: default sizing for swatch is small */
 .spectrum-Swatch {
 	/* Placeholder tokens */
 	--spectrum-swatch-focus-indicator-border-radius: var(--mod-swatch-focus-indicator-border-radius, 8px);
@@ -19,7 +19,7 @@
 
 	/* Size */
 	--spectrum-swatch-size: var(--mod-swatch-size, var(--spectrum-swatch-size-small));
-	--spectrum-swatch-border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-100));
+	--spectrum-swatch-border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-75));
 	--spectrum-swatch-border-thickness: var(--mod-swatch-border-thickness, var(--spectrum-border-width-100));
 	--spectrum-swatch-border-thickness-selected: var(--mod-swatch-border-thickness-selected, var(--spectrum-border-width-200));
 	--spectrum-swatch-disabled-icon-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-workflow-icon-size-75));
@@ -31,7 +31,7 @@
 	--spectrum-swatch-border-color-selected: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-gray-900)));
 	--spectrum-swatch-inner-border-color-selected: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-gray-25)));
 	--spectrum-swatch-disabled-icon-color: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-white)));
-	--spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
+	--spectrum-swatch-icon-color: var(--spectrum-gray-800);
 	--spectrum-swatch-slash-icon-color: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-red-900)));
 	--spectrum-swatch-focus-indicator-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-focus-indicator-color)));
 }
@@ -52,27 +52,6 @@
 	--spectrum-swatch-size: var(--mod-swatch-size, var(--spectrum-swatch-size-large));
 	--spectrum-swatch-disabled-icon-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-workflow-icon-size-200));
 	--spectrum-swatch-slash-thickness: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness-large));
-}
-
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Swatch {
-		--highcontrast-swatch-disabled-icon-color: GrayText;
-		--highcontrast-swatch-focus-indicator-color: ButtonText;
-		--highcontrast-swatch-background-color-selected: Background;
-		--highcontrast-swatch-border-color-selected: Highlight;
-		--highcontrast-swatch-border-color: ButtonText;
-		--highcontrast-swatch-fill-foreground-color: ButtonText;
-
-		.spectrum-Swatch-fill {
-			forced-color-adjust: none;
-		}
-
-		&[disabled],
-		&.is-disabled {
-			--highcontrast-swatch-border-color: GrayText;
-		}
-	}
 }
 
 .spectrum-Swatch {
@@ -133,13 +112,14 @@
 		}
 	}
 
-	&.is-mixedValue {
+	&.is-mixedValue,
+	&.is-addSwatch {
 		.spectrum-Swatch-fill {
 			background: var(--spectrum-picked-color, transparent);
 		}
 
-		.spectrum-Swatch-mixedValueIcon {
-			color: var(--spectrum-swatch-dash-icon-color);
+		.spectrum-Swatch-icon {
+			color: var(--spectrum-swatch-icon-color);
 			display: block;
 		}
 	}
@@ -259,7 +239,7 @@
 	}
 }
 
-.spectrum-Swatch-mixedValueIcon {
+.spectrum-Swatch-icon {
 	display: none;
 	pointer-events: none;
 
@@ -289,20 +269,7 @@
 }
 
 .spectrum-Swatch--rectangle {
-	inline-size: calc(var(--spectrum-swatch-size) * 2);
-}
-
-/* Variant: Rounding - None */
-.spectrum-Swatch--roundingNone {
-	&,
-	&::before,
-	&::after,
-	.spectrum-Swatch-fill,
-	.spectrum-Swatch-fill::before,
-	&.is-selected .spectrum-Swatch-fill,
-	&.is-selected .spectrum-Swatch-fill::before {
-		border-radius: 0;
-	}
+	inline-size: calc(var(--spectrum-swatch-size) * var(--spectrun-swatch-rectangle-width-multiplier));
 }
 
 /* Variant: Rounding - Full */
@@ -333,4 +300,25 @@
 	transition:
 		width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
 		height var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-Swatch {
+		--highcontrast-swatch-disabled-icon-color: GrayText;
+		--highcontrast-swatch-focus-indicator-color: ButtonText;
+		--highcontrast-swatch-background-color-selected: Background;
+		--highcontrast-swatch-border-color-selected: Highlight;
+		--highcontrast-swatch-border-color: ButtonText;
+		--highcontrast-swatch-fill-foreground-color: ButtonText;
+
+		.spectrum-Swatch-fill {
+			forced-color-adjust: none;
+		}
+
+		&[disabled],
+		&.is-disabled {
+			--highcontrast-swatch-border-color: GrayText;
+		}
+	}
 }
