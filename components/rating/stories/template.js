@@ -34,7 +34,7 @@ export const Template = ({
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
 				"is-focused": isFocused,
-				"is-hovered": isHovered,
+				"is-hover": isHovered,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
@@ -84,7 +84,7 @@ export const Template = ({
 						class=${classMap({
 							[`${rootClass}-icon`]: true,
 							"is-selected": idx <= value - 1,
-							"is-hovered": idx === 4 && isHovered,
+                                                        "is-hovered": idx === 4 && isHovered,
 							"is-partial": isPartial === true && idx === value - 1,
 						})}
 						@click=${function() {
