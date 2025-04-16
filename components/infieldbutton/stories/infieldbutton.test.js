@@ -13,7 +13,7 @@ export const InfieldButtonGroup = Variants({
 		},
 		{
 			testHeading: "Side by side",
-			isStacked: true,
+			isInline: true,
 		},
 	],
 	stateData: [

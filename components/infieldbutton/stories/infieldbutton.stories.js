@@ -8,7 +8,7 @@ import { InfieldButtonGroup } from "./infieldbutton.test.js";
 import { InfieldButtonGroupVariant, InfieldButtonIcons, Template } from "./template.js";
 
 /**
- * In-field buttons are used to represent actions within input fields. They’re currently used inside the [number field,](/docs/components-stepper--docs).
+ * In-field buttons are used to represent actions within input fields. They’re currently used inside the [number field](/docs/components-stepper--docs).
  */
 export default {
 	title: "In-field button",
@@ -27,6 +27,7 @@ export default {
 		isHovered,
 		isInline: {
 			name: "Side by side",
+			description: "Renders two in-field buttons side by side. This is typically used for number fields to add or subtract a number.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
