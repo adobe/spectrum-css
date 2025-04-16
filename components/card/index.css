@@ -12,11 +12,13 @@
  */
 
 .spectrum-Card {
-	--spectrum-card-border-color: var(--spectrum-gray-100);
-	--spectrum-card-border-color-hover: var(--spectrum-gray-200);
-	--spectrum-card-divider-color: var(--spectrum-gray-200);
-	--spectrum-card-preview-background-color: var(--spectrum-gray-100);
-	--spectrum-card-preview-background-color-hover: var(--spectrum-gray-200);
+	--spectrum-card-border-color: var(--mod-card-border-color, var(--spectrum-gray-100));
+	--spectrum-card-border-color-hover: var(--mod-card-border-color-hover, var(--spectrum-gray-200));
+	--spectrum-card-border-color-selected: var(--mod-card-border-color-selected, var(--spectrum-blue-700));
+
+	--spectrum-card-divider-color: var(--mod-card-divider-color, var(--spectrum-gray-200));
+	--spectrum-card-preview-background-color: var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-gray-100)));
+	--spectrum-card-preview-background-color-hover: var(--mod-card-preview-background-color-hover, var(--mod-card-background-color-hover, var(--spectrum-gray-200)));
 
 	/* Default Layout */
 	--spectrum-card-background-color: var(--mod-card-background-color, var(--spectrum-background-layer-2-color));
@@ -30,7 +32,6 @@
 
 	--spectrum-card-border-width: var(--mod-card-border-width, var(--spectrum-border-width-100));
 	--spectrum-card-corner-radius: var(--mod-card-corner-radius, var(--spectrum-corner-radius-100));
-	--spectrum-card-border-color-selected: var(--mod-card-border-color-selected, var(--spectrum-blue-700));
 
 	/* Typography */
 	--spectrum-card-title-font-family: var(--mod-card-title-font-family, var(--spectrum-sans-font-family-stack));
@@ -52,9 +53,6 @@
 	--spectrum-card-actions-size: var(--mod-card-actions-size, var(--spectrum-card-selection-background-size));
 	--spectrum-card-actions-border-radius: var(--mod-card-actions-border-radius, var(--spectrum-corner-radius-100));
 
-	/* TODO update to --spectrum-card-selection-background-color token once an RGB stripped value is available */
-	--spectrum-card-actions-background-color-rgb: var(--mod-card-actions-background-color-rgb, var(--spectrum-gray-100-rgb));
-	--spectrum-card-actions-background-color-opacity: var(--mod-card-actions-background-color-opacity, var(--spectrum-card-selection-background-color-opacity));
 	--spectrum-card-actions-drop-shadow-color: var(--mod-card-actions-drop-shadow-color, var(--spectrum-drop-shadow-color));
 	--spectrum-card-actions-drop-shadow-x: var(--mod-card-actions-drop-shadow-x, var(--spectrum-drop-shadow-x));
 	--spectrum-card-actions-drop-shadow-y: var(--mod-card-actions-drop-shadow-y, var(--spectrum-drop-shadow-y));
@@ -73,11 +71,6 @@
 	--spectrum-card-horizontal-body-padding: var(--mod-card-horizontal-body-padding, var(--spectrum-spacing-300));
 	--spectrum-card-horizontal-preview-padding: var(--mod-card-horizontal-preview-padding, var(--spectrum-spacing-200));
 
-	&.spectrum-Card--quiet {
-		--mod-card-minimum-width: var(--mod-card-minimum-width-quiet);
-		--mod-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
-	}
-
 	&.spectrum-Card--gallery {
 		--spectrum-card-content-margin-top: var(--spectrum-spacing-100);
 	}
@@ -93,7 +86,7 @@
 
 	border: var(--spectrum-card-border-width) solid transparent;
 	border-radius: var(--spectrum-card-corner-radius);
-	border-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
+	border-color: var(--spectrum-card-border-color);
 
 	background-color: var(--spectrum-card-background-color);
 
@@ -143,11 +136,16 @@
 	}
 
 	&:hover {
-		--mod-card-border-color: var(--mod-card-border-color-hover, var(--spectrum-card-border-color-hover));
+		--mod-card-border-color: var(--spectrum-card-border-color-hover);
 	}
 
-	&.is-selected::before {
-		background-color: rgba(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--spectrum-card-selected-background-opacity));
+	&.is-selected {
+		--mod-card-border-color: var(--spectrum-card-border-color-selected);
+
+		&::before {
+			/* @deprecated --mod-card-selected-background-color-rgb. Use --mod-card-background-color-selected instead. */
+			background-color: var(--mod-card-background-color-selected, var(--spectrum-card-selection-background-color));
+		}
 	}
 
 	&.is-drop-target {
@@ -177,7 +175,7 @@
 	inline-size: var(--spectrum-card-actions-size);
 	block-size: var(--spectrum-card-actions-size);
 	border-radius: var(--spectrum-card-actions-border-radius);
-	background-color: rgba(var(--spectrum-card-actions-background-color-rgb), var(--spectrum-card-actions-background-color-opacity));
+	background-color: var(--spectrum-card-selection-background-color);
 
 	inset-inline-start: calc(var(--spectrum-card-actions-spacing) - var(--spectrum-card-border-width));
 	inset-block-start: calc(var(--spectrum-card-actions-spacing) - var(--spectrum-card-border-width));
@@ -218,8 +216,8 @@
 	background-size: cover;
 	background-position: center center;
 
-	background-color: var(--mod-card-preview-background-color, var(--spectrum-card-preview-background-color));
-	border-block-end-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
+	background-color: var(--spectrum-card-preview-background-color);
+	border-block-end-color: var(--spectrum-card-border-color);
 }
 
 .spectrum-Card .spectrum-Divider {
@@ -290,7 +288,7 @@
 
 	color: var(--spectrum-card-body-font-color);
 	line-height: var(--spectrum-card-body-line-height);
-	border-block-start: var(--spectrum-card-border-width) solid var(--mod-card-divider-color, var(--spectrum-card-divider-color));
+	border-block-start: var(--spectrum-card-border-width) solid var(--spectrum-card-divider-color);
 }
 
 .spectrum-Card-header {
@@ -303,30 +301,6 @@
 	z-index: 1;
 }
 
-.spectrum-Card--quiet {
-	.spectrum-Card-preview {
-		border: var(--spectrum-card-focus-indicator-width) solid transparent;
-	}
-
-	&:focus,
-	&.is-focused {
-		/* Quiet cards only have the focus indicator around the preview */
-		&::after {
-			border-width: 0;
-		}
-
-		.spectrum-Card-preview::after {
-			border-color: var(--spectrum-card-focus-indicator-color);
-		}
-	}
-
-	&.is-selected .spectrum-Card-preview {
-		border: var(--spectrum-card-preview-border-width-selected) solid;
-		border-color: var(--spectrum-card-border-color);
-	}
-}
-
-.spectrum-Card--quiet,
 .spectrum-Card--gallery {
 	--mod-card-border-color-hover: transparent;
 
@@ -342,7 +316,7 @@
 
 	.spectrum-Card-preview {
 		border-radius: var(--spectrum-card-corner-radius);
-		background-color: var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-card-preview-background-color)));
+		background-color: var(--spectrum-card-preview-background-color);
 		min-block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
 		inline-size: 100%;
 		flex: 1;
@@ -384,7 +358,7 @@
 	}
 
 	&:hover .spectrum-Card-preview {
-		background-color: var(--mod-card-preview-background-color-hover, var(--mod-card-background-color-hover, var(--spectrum-card-preview-background-color-hover)));
+		background-color: var(--spectrum-card-preview-background-color-hover);
 	}
 
 	&.is-drop-target {
@@ -394,7 +368,7 @@
 
 		.spectrum-Card-preview {
 			transition: none;
-			background-color: var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-card-preview-background-color)));
+			background-color: var(--spectrum-card-preview-background-color);
 		}
 
 		.spectrum-Card-preview::before {
@@ -422,7 +396,7 @@
 	flex-direction: row;
 
 	&:hover .spectrum-Card-preview {
-		border-color: var(--mod-card-border-color-hover, var(--spectrum-card-border-color-hover));
+		--mod-card-border-color: var(--spectrum-card-border-color-hover);
 	}
 
 	.spectrum-Card-preview {
@@ -438,8 +412,8 @@
 		border-end-end-radius: 0;
 
 		padding: var(--spectrum-card-horizontal-preview-padding);
-		background-color: var(--mod-card-preview-background-color, var(--spectrum-card-preview-background-color));
-		border-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
+		background-color: var(--spectrum-card-preview-background-color);
+		border-color: var(--spectrum-card-border-color);
 	}
 
 	.spectrum-Card-header,

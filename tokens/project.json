@@ -47,7 +47,7 @@
 			"inputs": [{ "externalDependencies": ["@adobe/token-diff-generator", "@adobe/spectrum-tokens"] }],
 			"options": {
 				"commands": [
-					"tdiff report --old-token-version @adobe/spectrum-tokens@12.25.0 --new-token-version @adobe/spectrum-tokens@0.0.0-s2-foundations-20241121221506 --format markdown --output ./dist/tokens-diff.md"
+					"tdiff report --old-token-version @adobe/spectrum-tokens@13.0.0-beta.58 --new-token-version @adobe/spectrum-tokens@13.3.0 --format markdown --output ./dist/tokens-diff.md"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
