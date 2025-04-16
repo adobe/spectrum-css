@@ -32,6 +32,14 @@ Search now uses Spectrum 2 tokens and specifications. The following items have b
   - @spectrum-css/clearbutton@8.0.0-next.0
   - @spectrum-css/textfield@9.0.0-next.0
 
+## 8.1.2
+
+### Patch Changes
+
+- [#3658](https://github.com/adobe/spectrum-css/pull/3658) [`e9fde67`](https://github.com/adobe/spectrum-css/commit/e9fde67bf341798a6ab34f227b2e7a417d1e5da7) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Change S2 theme border color to gray-800 on keyfocus per design request in order to align with text field.
+
 ## 8.1.1
 
 ### Patch Changes
