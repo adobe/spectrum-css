@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isInvalid, isSelected, size } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
@@ -61,9 +61,7 @@ export default {
 		},
 		isEmphasized: {
 			...isEmphasized,
-			if: { arg: "isInvalid", truthy: false },
 		},
-		isInvalid,
 		isDisabled,
 		isSelected,
 		hasClearButton: {
@@ -86,7 +84,6 @@ export default {
 		thumbnailUrl: "example-card-landscape.png",
 		isSelected: false,
 		isDisabled: false,
-		isInvalid: false,
 		isEmphasized: false,
 		hasClearButton: false,
 	},
@@ -156,16 +153,6 @@ Emphasized.args = {
 };
 
 Emphasized.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const Invalid = TagGroups.bind({});
-Invalid.tags = ["!dev"];
-Invalid.args = {
-	isInvalid: true
-};
-
-Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

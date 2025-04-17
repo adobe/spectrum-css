@@ -3,7 +3,7 @@ import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/templ
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
-import { html, nothing } from "lit";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -21,14 +21,11 @@ export const Template = ({
 	isSelected = false,
 	isEmphasized = false,
 	isDisabled = false,
-	isInvalid = false,
 	hasClearButton = false,
 	id = getRandomId("tag"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
-	if(isInvalid) iconName = "Alert";
-
 	return html`
 		<div
 			class=${classMap({
@@ -37,7 +34,6 @@ export const Template = ({
 					typeof size !== "undefined",
 				"is-emphasized": isEmphasized,
 				"is-disabled": isDisabled,
-				"is-invalid": isInvalid,
 				"is-selected": isSelected,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -45,13 +41,13 @@ export const Template = ({
 			tabindex=${isDisabled ? "-1" : "0"}
 			style=${styleMap(customStyles)}
 		>
-			${when(avatarUrl && !isInvalid, () =>
+			${when(avatarUrl, () =>
 				Avatar({
 					image: avatarUrl,
 					size: "50",
 				}, context)
 			)}
-			${when(iconName || isInvalid, () =>
+			${when(iconName, () =>
 				Icon({
 					size,
 					iconName,
@@ -93,18 +89,16 @@ export const TagsDefaultOptions = ({
 	},
 	content: html`
 		${Template(args, context)}
-		${!args.isInvalid ?
-			Template({
+		${Template({
 				...args,
 				hasIcon: true,
 				iconName: "CheckmarkCircle"
-			}, context): nothing }
-		${!args.isInvalid ?
-			Template({
+			}, context)}
+		${Template({
 			...args,
 				hasAvatar: true,
 				avatarUrl: "example-ava.png",
-			}, context): nothing }`,
+			}, context)}`,
 }, context);
 
 export const SelectedTemplate = (args, context) => Container({
@@ -115,14 +109,12 @@ export const SelectedTemplate = (args, context) => Container({
 	},
 	content: html`${[
 		{ isSelected: true, isDisabled: false, heading: "Selected" },
-		{ isSelected: true, isDisabled: false, isInvalid: true, heading: "Selected + Invalid" },
-	].map(({isSelected, heading, isInvalid}) => Container({
+	].map(({isSelected, heading}) => Container({
 		withBorder: false,
 		heading: heading,
 		content: TagsDefaultOptions({
 			...args,
-			isSelected,
-			isInvalid
+			isSelected
 		})
 	}, context))}`
 }, context);
