@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isSelected, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
@@ -64,6 +64,9 @@ export default {
 		},
 		isDisabled,
 		isSelected,
+		isHovered,
+		isFocused,
+		isActive,
 		hasClearButton: {
 			name: "Clear button",
 			description: "True if a button is present to clear the tag.",
@@ -85,6 +88,9 @@ export default {
 		isSelected: false,
 		isDisabled: false,
 		isEmphasized: false,
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
 		hasClearButton: false,
 	},
 	parameters: {

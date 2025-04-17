@@ -21,11 +21,16 @@ export const Template = ({
 	isSelected = false,
 	isEmphasized = false,
 	isDisabled = false,
+	isHovered = false,
+	isFocused = false,
+	isActive = false,
 	hasClearButton = false,
 	id = getRandomId("tag"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
+	const { updateArgs } = context;
+
 	return html`
 		<div
 			class=${classMap({
@@ -35,11 +40,23 @@ export const Template = ({
 				"is-emphasized": isEmphasized,
 				"is-disabled": isDisabled,
 				"is-selected": isSelected,
+				"is-hover": isHovered,
+				"is-focus-visible": isFocused,
+				"is-active": isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 			tabindex=${isDisabled ? "-1" : "0"}
 			style=${styleMap(customStyles)}
+			@click=${function() {
+				updateArgs({ isSelected: !isSelected });
+			}}
+			@focusin=${function() {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${function() {
+				updateArgs({ isFocused: false });
+			}}
 		>
 			${when(avatarUrl, () =>
 				Avatar({
