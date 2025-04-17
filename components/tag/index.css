@@ -24,7 +24,6 @@
 	--spectrum-tag-border-color-hover: var(--highcontrast-tag-border-color-hover, var(--mod-tag-border-color-hover, transparent));
 	--spectrum-tag-border-color-active: var(--highcontrast-tag-border-color-active, var(--mod-tag-border-color-active, transparent));
 	--spectrum-tag-border-color-focus: var(--highcontrast-tag-border-color-focus, var(--mod-tag-border-color-focus, transparent));
-	--spectrum-tag-border-color-invalid: var(--highcontrast-tag-border-color-invalid, var(--mod-tag-border-color-invalid, transparent));
 	--spectrum-tag-border-color-emphasized: var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent));
 	--spectrum-tag-border-color-disabled: var(--highcontrast-tag-border-color-disabled, var(--mod-tag-border-color-disabled, transparent));
 
@@ -56,19 +55,6 @@
 	--spectrum-tag-label-line-height: var(--mod-tag-label-line-height, var(--spectrum-line-height-100));
 	--spectrum-tag-label-line-height-cjk: var(--mod-tag-label-line-height-cjk, var(--spectrum-cjk-line-height-100));
 	--spectrum-tag-label-font-weight: var(--spectrum-medium-font-weight);
-
-	/* invalid variant */
-	--spectrum-tag-content-color-invalid: var(--spectrum-negative-content-color-default);
-	--spectrum-tag-content-color-invalid-hover: var(--spectrum-negative-content-color-hover);
-	--spectrum-tag-content-color-invalid-active: var(--spectrum-negative-content-color-down);
-	--spectrum-tag-content-color-invalid-focus: var(--spectrum-negative-content-color-key-focus);
-
-	/* invalid selected variant */
-	--spectrum-tag-background-color-invalid-selected: var(--spectrum-negative-background-color-default);
-	--spectrum-tag-background-color-invalid-selected-hover: var(--spectrum-negative-background-color-hover);
-	--spectrum-tag-background-color-invalid-selected-active: var(--spectrum-negative-background-color-down);
-	--spectrum-tag-background-color-invalid-selected-focus: var(--spectrum-negative-background-color-key-focus);
-	--spectrum-tag-content-color-invalid-selected: var(--spectrum-white);
 
 	/* emphasized variant */
 	--spectrum-tag-background-color-emphasized: var(--spectrum-accent-background-color-default);
@@ -332,44 +318,6 @@
 	}
 }
 
-.spectrum-Tag.is-invalid {
-	border-color: var(--spectrum-tag-border-color-invalid); /* mod/highcontrast specified at top */
-	color: var(--highcontrast-tag-content-color-invalid, var(--mod-tag-content-color-invalid, var(--spectrum-tag-content-color-invalid)));
-
-	&:hover {
-		color: var(--highcontrast-tag-content-color-invalid-hover, var(--mod-tag-content-color-invalid-hover, var(--spectrum-tag-content-color-invalid-hover)));
-	}
-
-	&:active {
-		color: var(--highcontrast-tag-content-color-invalid-active, var(--mod-tag-content-color-invalid-active, var(--spectrum-tag-content-color-invalid-active)));
-	}
-
-	&:focus-visible,
-	&.is-focused {
-		color: var(--highcontrast-tag-content-color-invalid-focus, var(--mod-tag-content-color-invalid-focus, var(--spectrum-tag-content-color-invalid-focus)));
-	}
-
-	&.is-selected {
-		border-color: var(--spectrum-tag-border-color-invalid); /* mod/highcontrast specified at top */
-		background-color: var(--highcontrast-tag-background-color-invalid-selected, var(--mod-tag-background-color-invalid-selected, var(--spectrum-tag-background-color-invalid-selected)));
-		color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
-
-		&:hover {
-			background-color: var(--highcontrast-tag-background-color-invalid-selected-hover, var(--mod-tag-background-color-invalid-selected-hover, var(--spectrum-tag-background-color-invalid-selected-hover)));
-			color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
-		}
-
-		&:active {
-			background-color: var(--highcontrast-tag-background-color-invalid-selected-active, var(--mod-tag-background-color-invalid-selected-active, var(--spectrum-tag-background-color-invalid-selected-active)));
-		}
-
-		&:focus-visible,
-		&.is-focused {
-			background-color: var(--highcontrast-tag-background-color-invalid-selected-focus, var(--mod-tag-background-color-invalid-selected-focus, var(--spectrum-tag-background-color-invalid-selected-focus)));
-		}
-	}
-}
-
 /* emphasized */
 .spectrum-Tag.is-emphasized {
 	border-color: var(--spectrum-tag-border-color-emphasized); /* mod/highcontrast specified at top */
@@ -440,24 +388,6 @@
 			--highcontrast-tag-border-color-disabled: GrayText;
 			--highcontrast-tag-background-color-disabled: ButtonFace;
 			--highcontrast-tag-content-color-disabled: GrayText;
-		}
-
-		&.is-invalid {
-			--highcontrast-tag-border-color-invalid: Highlight;
-
-			--highcontrast-tag-background-color-invalid-selected: Highlight;
-			--highcontrast-tag-background-color-invalid-selected-hover: Highlight;
-			--highcontrast-tag-background-color-invalid-selected-active: Highlight;
-			--highcontrast-tag-background-color-invalid-selected-focus: Highlight;
-
-			--highcontrast-tag-content-color-invalid: CanvasText;
-			--highcontrast-tag-content-color-invalid-hover: CanvasText;
-			--highcontrast-tag-content-color-invalid-active: CanvasText;
-			--highcontrast-tag-content-color-invalid-focus: CanvasText;
-
-			&.is-selected {
-				--highcontrast-tag-content-color-invalid-selected: HighlightText;
-			}
 		}
 
 		&.is-emphasized {
