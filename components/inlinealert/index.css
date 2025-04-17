@@ -168,6 +168,9 @@
 	--mod-inlinealert-content-color: var(--spectrum-inlinealert-color-white);
 	--mod-inlinealert-border-and-icon-color-info: var(--spectrum-inlinealert-color-white);
 
+	--mod-button-content-color-default: var(--spectrum-inlinealert-color-white);
+	--mod-button-border-color-default: var(--spectrum-inlinealert-color-white);
+
 	.spectrum-InLineAlert-icon {
 		--mod-inlinealert-border-and-icon-color-info: var(--spectrum-inlinealert-color-white);
 	}
@@ -222,6 +225,9 @@
 	--mod-inlinealert-header-color: var(--spectrum-inlinealert-color-white);
 	--mod-inlinealert-content-color: var(--spectrum-inlinealert-color-white);
 
+	--mod-button-content-color-default: var(--spectrum-inlinealert-color-white);
+	--mod-button-border-color-default: var(--spectrum-inlinealert-color-white);
+
 	.spectrum-InLineAlert-icon {
 		--mod-inlinealert-border-and-icon-color-positive: var(--spectrum-inlinealert-color-white);
 	}
@@ -232,6 +238,9 @@
 	--mod-inlinealert-background-color: var(--mod-inlinealert-bold-background-color-informative, var(--spectrum-inlinealert-bold-background-color-informative));
 	--mod-inlinealert-header-color: var(--spectrum-inlinealert-color-white);
 	--mod-inlinealert-content-color: var(--spectrum-inlinealert-color-white);
+
+	--mod-button-content-color-default: var(--spectrum-inlinealert-color-white);
+	--mod-button-border-color-default: var(--spectrum-inlinealert-color-white);
 
 	.spectrum-InLineAlert-icon {
 		--mod-inlinealert-border-and-icon-color-positive: var(--spectrum-inlinealert-color-white);
@@ -262,6 +271,9 @@
 	--mod-inlinealert-header-color: var(--spectrum-inlinealert-color-white);
 	--mod-inlinealert-content-color: var(--spectrum-inlinealert-color-white);
 
+	--mod-button-content-color-default: var(--spectrum-inlinealert-color-white);
+	--mod-button-border-color-default: var(--spectrum-inlinealert-color-white);
+
 	.spectrum-InLineAlert-icon {
 		--mod-inlinealert-border-and-icon-color-negative: var(--spectrum-inlinealert-color-white);
 	}
@@ -289,6 +301,9 @@
 	--mod-inlinealert-background-color: var(--mod-inlinealert-bold-background-color-neutral, var(--spectrum-inlinealert-bold-background-color-neutral));
 	--mod-inlinealert-header-color: var(--spectrum-inlinealert-color-white);
 	--mod-inlinealert-content-color: var(--spectrum-inlinealert-color-white);
+
+	--mod-button-content-color-default: var(--spectrum-inlinealert-color-white);
+	--mod-button-border-color-default: var(--spectrum-inlinealert-color-white);
 
 	.spectrum-InLineAlert-icon {
 		--mod-inlinealert-border-and-icon-color-neutral: var(--spectrum-inlinealert-color-white);
