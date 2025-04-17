@@ -24,6 +24,10 @@ export const CheckboxGroup = Variants({
 	],
 	stateData: [
 		{
+			testHeading: "Hovered",
+			isHovered: true,
+		},
+		{
 			testHeading: "Checked",
 			isChecked: true,
 		},
@@ -32,8 +36,20 @@ export const CheckboxGroup = Variants({
 			isIndeterminate: true,
 		},
 		{
-			testHeading: "Hovered",
+			testHeading: "Hovered + checked",
 			isHovered: true,
+			isChecked: true,
+		},
+		{
+			testHeading: "Hovered + indeterminate",
+			isHovered: true,
+			isChecked: true,
+		},
+		{
+			testHeading: "Hovered + indeterminate + invalid",
+			isHovered: true,
+			isChecked: true,
+			isIndeterminate: true,
 		},
 		{
 			testHeading: "Active",
@@ -42,6 +58,16 @@ export const CheckboxGroup = Variants({
 		{
 			testHeading: "Focused",
 			isFocused: true,
+		},
+		{
+			testHeading: "Focused + checked",
+			isFocused: true,
+			isChecked: true,
+		},
+		{
+			testHeading: "Focused + indeterminate",
+			isFocused: true,
+			isIndeterminate: true,
 		},
 		{
 			testHeading: "Invalid",
@@ -56,6 +82,36 @@ export const CheckboxGroup = Variants({
 			testHeading: "Invalid, indeterminate",
 			isInvalid: true,
 			isIndeterminate: true,
+		},
+		{
+			testHeading: "Hovered + checked + invalid",
+			isHovered: true,
+			isChecked: true,
+			isInvalid: true,
+		},
+		{
+			testHeading: "Focused + checked + invalid",
+			isFocused: true,
+			isChecked: true,
+			isInvalid: true,
+		},
+		{
+			testHeading: "Focused + indeterminate + invalid",
+			isFocused: true,
+			isIndeterminate: true,
+			isInvalid: true,
+		},
+		{
+			testHeading: "Read-only, checked + invalid",
+			isReadOnly: true,
+			isChecked: true,
+			isInvalid: true,
+		},
+		{
+			testHeading: "Read-only, indeterminate + invalid",
+			isReadOnly: true,
+			isIndeterminate: true,
+			isInvalid: true,
 		},
 		{
 			testHeading: "Disabled",
@@ -81,9 +137,21 @@ export const CheckboxGroup = Variants({
 			isChecked: true,
 		},
 		{
+			testHeading: "Read-only, checked + hovered",
+			isReadOnly: true,
+			isChecked: true,
+			isHovered: true,
+		},
+		{
 			testHeading: "Read-only, indeterminate",
 			isReadOnly: true,
 			isIndeterminate: true,
+		},
+		{
+			testHeading: "Read-only, indeterminate + hovered",
+			isReadOnly: true,
+			isIndeterminate: true,
+			isHovered: true,
 		},
 		{
 			testHeading: "Read-only, checked, disabled",
