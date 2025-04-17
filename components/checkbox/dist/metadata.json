@@ -2,9 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Checkbox",
-    ".spectrum-Checkbox .is-active .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox .is-active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox .is-active .spectrum-Checkbox-label",
     ".spectrum-Checkbox .spectrum-Checkbox-box",
     ".spectrum-Checkbox .spectrum-Checkbox-box:after",
     ".spectrum-Checkbox .spectrum-Checkbox-box:before",
@@ -36,6 +33,10 @@
     ".spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark",
     ".spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid",
+    ".spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.spectrum-Checkbox--emphasized",
     ".spectrum-Checkbox.spectrum-Checkbox--sizeL",
     ".spectrum-Checkbox.spectrum-Checkbox--sizeS",
@@ -49,6 +50,7 @@
     ".spectrum-Checkbox:lang(ja)",
     ".spectrum-Checkbox:lang(ko)",
     ".spectrum-Checkbox:lang(zh)",
+    ".spectrum-Checkbox:not(.is-readOnly) .spectrum-Checkbox-input:active:not(:disabled) + .spectrum-Checkbox-box",
     ".spectrum-Checkbox:not(.is-readOnly):active .spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box"
   ],
   "modifiers": [

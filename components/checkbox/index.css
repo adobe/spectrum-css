@@ -153,8 +153,7 @@
 		}
 	}
 
-	&:active,
-	.is-active {
+	&:active {
 		.spectrum-Checkbox-box::before {
 			border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-control-color-down, var(--spectrum-checkbox-control-color-down)));
 		}
@@ -168,8 +167,9 @@
 		}
 	}
 
-	&:not(.is-readOnly):active {
-		.spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
+	&:not(.is-readOnly) {
+		.spectrum-Checkbox-input:active:not(:disabled) + .spectrum-Checkbox-box,
+		&:active .spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
 			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
 		}
 	}
@@ -342,6 +342,25 @@
 				display: block;
 				transform: scale(1);
 				opacity: 1;
+			}
+		}
+	}
+}
+
+/* Invalid state indeterminate override - for default state */
+.spectrum-Checkbox.is-invalid.is-indeterminate {
+	.spectrum-Checkbox-box,
+	.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+		&::before {
+			border-color: var(--highcontrast-checkbox-highlight-color-default, var(--spectrum-checkbox-control-selected-color-default));
+		}
+	}
+
+	&:hover {
+		.spectrum-Checkbox-box,
+		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+			&::before {
+				border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--spectrum-checkbox-control-selected-color-hover));
 			}
 		}
 	}
