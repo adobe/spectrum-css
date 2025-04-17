@@ -311,7 +311,7 @@
 }
 
 .spectrum-Swatch--rectangle {
-	inline-size: calc(var(--spectrum-swatch-size) * var(--spectrun-swatch-rectangle-width-multiplier));
+	inline-size: calc(var(--spectrum-swatch-size) * var(--spectrum-swatch-rectangle-width-multiplier));
 }
 
 /* Variant: Rounding - Full */
