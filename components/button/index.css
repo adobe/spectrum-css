@@ -552,6 +552,7 @@ a.spectrum-Button {
 		--highcontrast-button-border-color-disabled: GrayText;
 		--highcontrast-button-background-color-disabled: ButtonFace;
 
+		/* @passthrough start -- progress circle highcontrast overrides */
 		--mod-progress-circle-track-border-color: ButtonText;
 		--mod-progress-circle-track-border-color-over-background: ButtonText;
 		--mod-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);

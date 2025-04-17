@@ -15,6 +15,27 @@
 - Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
   - @spectrum-css/icon@10.0.0-next.0
 
+## 14.1.6
+
+### Patch Changes
+
+📝 [#3665](https://github.com/adobe/spectrum-css/pull/3665) [`56e143a`](https://github.com/adobe/spectrum-css/commit/56e143a6ac9efda0eaec7a4d1cde01319985b2e2) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Adjust S1/Express static outline variant content color (from transparent-black/white to solid black/white) to fix unintentional regression.
+
+## 14.1.5
+
+### Patch Changes
+
+📝 [#3662](https://github.com/adobe/spectrum-css/pull/3662) [`79e3363`](https://github.com/adobe/spectrum-css/commit/79e336369700b9eded8fb7154995abee3789b545) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update aims to simplify `--mod-*` access by ensuring local variants and states aren't hooking into those custom properties for overrides. This updates all local variants and states to override the `--spectrum-button-*` properties instead and adjusts the specificity to ensure no regressions in rendered results.
+
+Other changes of note:
+
+- Removes the `.spectrum-Button--sizeM` as unnecessary and duplicate as these styles are applied in the base class.
+- Reduces the use of the `:not()` pseudo-class in theme overrides as these selectors are more complex to remap for web component projects.
+
 ## 14.1.4
 
 ### Patch Changes
