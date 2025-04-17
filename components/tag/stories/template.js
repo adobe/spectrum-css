@@ -2,6 +2,7 @@ import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -13,9 +14,10 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Tag",
 	size = "m",
-	iconName,
-	avatarUrl,
-	label,
+	iconName = "",
+	avatarUrl = "",
+	thumbnailUrl = "",
+	label = "",
 	isSelected = false,
 	isEmphasized = false,
 	isDisabled = false,
@@ -55,6 +57,12 @@ export const Template = ({
 					iconName,
 					setName: "workflow",
 					customClasses: [`${rootClass}-itemIcon`],
+				}, context)
+			)}
+			${when(thumbnailUrl, () =>
+				Thumbnail({
+					image: thumbnailUrl,
+					size: "50",
 				}, context)
 			)}
 			<span class="${rootClass}-itemLabel">${label}</span>

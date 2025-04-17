@@ -15,29 +15,29 @@ export default {
 	component: "Tag",
 	argTypes: {
 		size: size(["s", "m", "l"]),
-		hasIcon: {
-			name: "Has icon",
-			type: { name: "boolean" },
+		label: {
+			name: "Label",
+			type: { name: "string" },
 			table: {
-				type: { summary: "boolean" },
-				category: "Component",
+				type: { summary: "string" },
+				category: "Content",
 			},
-			control: "boolean",
-			if: { arg: "hasAvatar", truthy: false },
+			control: { type: "text" },
+		},
+		visualContent: {
+			name: "Visual content",
+			description: "Can consist of a thumbnail, icon, or avatar",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			options: ["none", "avatar", "icon", "thumbnail"],
+			control: "select",
 		},
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
-			if: { arg: "hasIcon", truthy: true },
-		},
-		hasAvatar: {
-			name: "Has avatar",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-			if: { arg: "hasIcon", truthy: false },
+			if: { arg: "visualContent", eq: "icon" },
 		},
 		avatarUrl: {
 			name: "Avatar image",
@@ -47,16 +47,17 @@ export default {
 				category: "Content",
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-			if: { arg: "hasAvatar", truthy: true },
+			if: { arg: "visualContent", eq: "avatar" },
 		},
-		label: {
-			name: "Label",
+		thumbnailUrl: {
+			name: "Thumbnail image",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			control: { type: "text" },
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "visualContent", eq: "thumbnail" },
 		},
 		isEmphasized: {
 			...isEmphasized,
@@ -80,10 +81,9 @@ export default {
 		rootClass: "spectrum-Tag",
 		size: "m",
 		label: "Tag label",
-		hasIcon: false,
-		iconName: "Info",
+		iconName: "Circle",
 		avatarUrl: "example-ava.png",
-		hasAvatar: false,
+		thumbnailUrl: "example-card-landscape.png",
 		isSelected: false,
 		isDisabled: false,
 		isInvalid: false,
