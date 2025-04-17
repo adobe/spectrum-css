@@ -84,7 +84,7 @@ export const Template = ({
 						class=${classMap({
 							[`${rootClass}-icon`]: true,
 							"is-selected": idx <= value - 1,
-                                                        "is-hovered": idx === 4 && isHovered,
+							"is-hover": idx === 4 && isHovered,
 							"is-partial": isPartial === true && idx === value - 1,
 						})}
 						@click=${function() {
