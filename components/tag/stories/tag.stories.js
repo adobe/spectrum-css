@@ -103,9 +103,6 @@ export default {
 		},
 		packageJson,
 		metadata,
-		downState: {
-			selectors: [".spectrum-Tag:not(:disabled)"],
-		},
 	},
 	decorators: [
 		withDownStateDimensionCapture,

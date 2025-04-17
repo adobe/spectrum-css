@@ -6,11 +6,11 @@ export const withDownStateDimensionCapture = makeDecorator({
   parameterName: "downState",
   wrapper: (StoryFn, context) => {
     const { args = {}, parameters = {}, viewMode, id } = context;
-    
+
     /* Selectors are defined in the downState parameter */
     const {
       // Fall back to the rootClass if no selectors are provided
-      selectors = args.rootClass ? [ args.rootClass ] : []
+      selectors = args.rootClass ? [`.${args.rootClass}`] : []
     } = parameters.downState ?? {};
 
     /**
