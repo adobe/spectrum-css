@@ -75,6 +75,7 @@
 	color: var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color));
 	overflow-wrap: anywhere;
 
+	&.spectrum-Toast--noButton,
 	&:not(:has(.spectrum-Button)) {
 		column-gap: var(--mod-toast-spacing-text-to-close-button, var(--spectrum-toast-spacing-text-to-close-button));
 	}
