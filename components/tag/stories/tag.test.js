@@ -9,18 +9,21 @@ export const TagGroups = Variants({
 			testHeading: "Default",
 		},
 		{
-			testHeading: "Is removable",
-			hasClearButton: true,
+			testHeading: "Emphasized",
+			isEmphasized: true,
 		},
 		{
-			testHeading: "With icon",
-			hasIcon: true,
-			iconName: "Info",
+			testHeading: "Default, with icon",
+			iconName: "Circle",
 		},
 		{
-			testHeading: "With avatar",
-			hasAvatar: true,
+			testHeading: "Default, with avatar",
 			avatarUrl: "example-ava.png",
+		},
+		{
+			testHeading: "Emphasized, with thumbnail",
+			isEmphasized: true,
+			thumbnailUrl: "example-card-landscape.png",
 		},
 		{
 			testHeading: "Truncated",
@@ -32,20 +35,33 @@ export const TagGroups = Variants({
 	],
 	stateData: [
 		{
-			testHeading: "Invalid",
-			isInvalid: true,
+			testHeading: "Hovered",
+			isHovered: true,
+			ignore: ["Truncated"],
 		},
 		{
-			testHeading: "Disabled",
-			isDisabled: true,
+			testHeading: "Focused",
+			isFocused: true,
+			ignore: ["Truncated"],
+		},
+		{
+			testHeading: "Active",
+			isActive: true,
+			ignore: ["Truncated"],
 		},
 		{
 			testHeading: "Selected",
 			isSelected: true,
+			ignore: ["Truncated"],
 		},
 		{
-			testHeading: "Emphasized",
-			isEmphasized: true,
+			testHeading: "Disabled",
+			isDisabled: true,
+			ignore: ["Truncated"],
 		},
+		{
+			testHeading: "Removable",
+			hasClearButton: true,
+		}
 	]
 });
