@@ -78,7 +78,7 @@ Primary.parameters = {
 };
 
 /**
- * The quiet variant is used when the in-field button needs to be less visually prominent since it is used in input fields. This is typically used with the cross icon in search fields to clear the entered value.
+ * The quiet variant is used when the in-field button needs to be less visually prominent since it is used in input fields.
 */
 export const Quiet = InfieldButtonGroupVariant.bind({});
 Quiet.tags = ["!dev"];

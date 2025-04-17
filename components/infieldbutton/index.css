@@ -83,7 +83,7 @@
 	}
 
 	&.spectrum-InfieldButton--quiet {
-		--spectrum-infield-button-background-color: var(--mod-infield-button-background-color-quiet, transparent);
+		--mod-infield-button-background-color: var(--mod-infield-button-background-color-quiet, transparent);
 		--mod-infield-button-background-color-hover: var(--mod-infield-button-background-color-hover-quiet, transparent);
 		--mod-infield-button-background-color-down: var(--mod-infield-button-background-color-down-quiet, transparent);
 		--mod-infield-button-background-color-key-focus: var(--mod-infield-button-background-color-key-focus-quiet, transparent);
