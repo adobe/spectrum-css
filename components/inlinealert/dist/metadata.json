@@ -42,6 +42,12 @@
   ],
   "modifiers": [
     "--mod-inlinealert-background-color",
+    "--mod-inlinealert-background-color-info-subtle",
+    "--mod-inlinealert-bold-background-color-informative",
+    "--mod-inlinealert-bold-background-color-negative",
+    "--mod-inlinealert-bold-background-color-neutral",
+    "--mod-inlinealert-bold-background-color-notice",
+    "--mod-inlinealert-bold-background-color-positive",
     "--mod-inlinealert-border-and-icon-color",
     "--mod-inlinealert-border-and-icon-color-info",
     "--mod-inlinealert-border-and-icon-color-negative",
@@ -68,7 +74,11 @@
     "--mod-inlinealert-min-spacing-header-to-icon",
     "--mod-inlinealert-spacing-content-link-button",
     "--mod-inlinealert-spacing-edge-to-text",
-    "--mod-inlinealert-spacing-header-content"
+    "--mod-inlinealert-spacing-header-content",
+    "--mod-inlinealert-subtle-background-color-negative",
+    "--mod-inlinealert-subtle-background-color-neutral",
+    "--mod-inlinealert-subtle-background-color-notice",
+    "--mod-inlinealert-subtle-background-color-positive"
   ],
   "component": [
     "--spectrum-in-line-alert-minimum-width",

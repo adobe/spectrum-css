@@ -14,6 +14,16 @@ Subtle and bold styles have been added for each badge variant.
 `--mod-inlinealert-min-spacing-header-to-icon`
 `--mod-inlinealert-spacing-content-link-button`
 `--mod-inlinealert-spacing-header-content`
+`--mod-inlinealert-background-color-info-subtle`
+`--mod-inlinealert-bold-background-color-informative`
+`--mod-inlinealert-bold-background-color-negative`
+`--mod-inlinealert-bold-background-color-neutral`
+`--mod-inlinealert-bold-background-color-notice`
+`--mod-inlinealert-bold-background-color-positive`
+`--mod-inlinealert-subtle-background-color-negative`
+`--mod-inlinealert-subtle-background-color-neutral`
+`--mod-inlinealert-subtle-background-color-notice`
+`--mod-inlinealert-subtle-background-color-positive`
 
 ##### Removed mods
 
