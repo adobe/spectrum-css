@@ -33,10 +33,9 @@ export const RatingGroup = Variants({
 			}
 		},
 		{
-			testHeading: "Emphasized hover",
+			testHeading: "Hover",
 			value: 5,
 			isHovered: true,
-			isEmphasized: true,
 		},
 	]
 });

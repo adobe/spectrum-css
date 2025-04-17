@@ -157,7 +157,7 @@ Focused.parameters = {
 };
 
 /**
- * For the emphasized variant, when a selected star is hovered, the color of the star is slightly darker.
+ * When a selected star is hovered, the color of the star is slightly darker.
  */
 export const EmphasizedHovered = Template.bind({});
 EmphasizedHovered.tags = ["!dev"];
