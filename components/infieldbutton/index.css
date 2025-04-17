@@ -37,7 +37,7 @@
 	--spectrum-infield-button-fill-justify-content: center;
 
 	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
-	--spectrum-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
+	--spectrum-infield-button-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
 
 	&:disabled {
 		--mod-infield-button-background-color: var(--mod-infield-button-background-color-disabled, var(--spectrum-disabled-background-color));
@@ -60,6 +60,7 @@
 		--spectrum-infield-button-field-edge-to-disclosure-icon: var(--spectrum-field-edge-to-disclosure-icon-75);
 		--spectrum-infield-button-inline-edge-to-fill: var(--spectrum-in-field-button-side-edge-to-fill-small);
 		--spectrum-infield-button-inline-field-edge-to-icon: var(--spectrum-field-edge-to-icon-75);
+		--spectrum-infield-button-downstate-perspective: var(--spectrum-component-size-minimum-perspective-down);
 	}
 
 	&.spectrum-InfieldButton--sizeL {
@@ -103,7 +104,7 @@
 		--mod-infield-button-background-color: var(--mod-infield-button-background-color-down, var(--spectrum-infield-button-background-color-down));
 		--mod-infield-button-icon-color: var(--mod-infield-button-icon-color-down, var(--spectrum-infield-button-icon-color-down));
 
-		transform: perspective(var(--spectrum-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
+		transform: perspective(var(--spectrum-infield-button-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 }
 
