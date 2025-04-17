@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isInvalid, isSelected, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isReadOnly, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
@@ -15,40 +15,6 @@ export default {
 	component: "Tag",
 	argTypes: {
 		size: size(["s", "m", "l"]),
-		hasIcon: {
-			name: "Has icon",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-			if: { arg: "hasAvatar", truthy: false },
-		},
-		iconName: {
-			...(IconStories?.argTypes?.iconName ?? {}),
-			if: { arg: "hasIcon", truthy: true },
-		},
-		hasAvatar: {
-			name: "Has avatar",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-			if: { arg: "hasIcon", truthy: false },
-		},
-		avatarUrl: {
-			name: "Avatar image",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Content",
-			},
-			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-			if: { arg: "hasAvatar", truthy: true },
-		},
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -58,16 +24,51 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isEmphasized: {
-			...isEmphasized,
-			if: { arg: "isInvalid", truthy: false },
+		visualContent: {
+			name: "Visual content",
+			description: "Can consist of a thumbnail, icon, or avatar.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			options: ["none", "avatar", "icon", "thumbnail"],
+			control: "select",
 		},
-		isInvalid,
+		iconName: {
+			...(IconStories?.argTypes?.iconName ?? {}),
+			if: { arg: "visualContent", eq: "icon" },
+		},
+		avatarUrl: {
+			name: "Avatar image",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "visualContent", eq: "avatar" },
+		},
+		thumbnailUrl: {
+			name: "Thumbnail image",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "visualContent", eq: "thumbnail" },
+		},
+		isEmphasized,
 		isDisabled,
 		isSelected,
+		isHovered,
+		isFocused,
+		isActive,
+		isReadOnly,
 		hasClearButton: {
-			name: "Clear button",
-			description: "True if a button is present to clear the tag.",
+			name: "Removable",
+			description: "Has a clear button to clear the tag.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -80,14 +81,16 @@ export default {
 		rootClass: "spectrum-Tag",
 		size: "m",
 		label: "Tag label",
-		hasIcon: false,
-		iconName: "Info",
+		iconName: "Circle",
 		avatarUrl: "example-ava.png",
-		hasAvatar: false,
+		thumbnailUrl: "example-card-landscape.png",
 		isSelected: false,
 		isDisabled: false,
-		isInvalid: false,
 		isEmphasized: false,
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
+		isReadOnly: false,
 		hasClearButton: false,
 	},
 	parameters: {
@@ -115,7 +118,6 @@ Default.tags = ["!autodocs"];
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-// @todo combine variants into one snapshot
 export const WithForcedColors = TagGroups.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
@@ -126,32 +128,38 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-
+/**
+ * Tags should always include a label to represent search terms, filters, or keywords. Tags also
+ * have the option to include an icon, avatar, or thumbnail in addition to the label.
+ */
 export const Standard = TagsDefaultOptions.bind({});
 Standard.args = Default.args;
+Standard.storyName = "Default";
 Standard.tags = ["!dev"];
 Standard.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-Standard.storyName = "Default";
 
 export const Selected = SelectedTemplate.bind({});
+Selected.storyName = "Default, selected";
 Selected.tags = ["!dev"];
 Selected.args = {
 	isSelected: true
 };
-
 Selected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * A tag in a disabled state shows that a tag exists, but is not available in that circumstance.
+ * This can be used to maintain layout continuity and communicate that a tag may become available later.
+ */
 export const Disabled = TagsDefaultOptions.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
-
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -161,28 +169,34 @@ Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true
 };
-
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Invalid = TagGroups.bind({});
-Invalid.tags = ["!dev"];
-Invalid.args = {
-	isInvalid: true
-};
-
-Invalid.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
+/**
+ * Tags have the option to be removable or not. Removable tags have a small close ("x") button.
+ */
 export const Removable = TagsDefaultOptions.bind({});
+Removable.storyName = "Default, removable";
 Removable.tags = ["!dev"];
 Removable.args = {
 	hasClearButton: true,
 };
-
 Removable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Tags have a read-only option for when content in the disabled state still needs to be shown.
+ * Read-only tags cannot be interacted with or changed.
+ */
+export const ReadOnly = TagsDefaultOptions.bind({});
+ReadOnly.storyName = "Read only";
+ReadOnly.tags = ["!dev"];
+ReadOnly.args = {
+	isReadOnly: true,
+};
+ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
