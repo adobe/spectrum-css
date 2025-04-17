@@ -59,7 +59,7 @@ export const Template = ({
 			?disabled=${isDisabled}
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap({
-				"--spectrum-picked-color": (isMixedValue || isAddSwatch) ? "var(--spectrum-gray-50)" : swatchColor,
+				"--spectrum-picked-color": (isMixedValue || isAddSwatch) ? "var(--spectrum-gray-25)" : swatchColor,
 				...customStyles,
 			}))}
 			tabindex="0"
