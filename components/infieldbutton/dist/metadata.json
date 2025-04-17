@@ -43,6 +43,7 @@
     "--mod-infield-button-border-color-quiet-disabled",
     "--mod-infield-button-border-radius",
     "--mod-infield-button-edge-to-fill",
+    "--mod-infield-button-field-edge-to-icon",
     "--mod-infield-button-fill-justify-content",
     "--mod-infield-button-fill-padding",
     "--mod-infield-button-height",
@@ -79,6 +80,7 @@
     "--spectrum-infield-button-icon-color-down",
     "--spectrum-infield-button-icon-color-hover",
     "--spectrum-infield-button-inline-edge-to-fill",
+    "--spectrum-infield-button-inline-field-edge-to-icon",
     "--spectrum-infield-button-width"
   ],
   "global": [
@@ -102,6 +104,10 @@
     "--spectrum-field-edge-to-disclosure-icon-200",
     "--spectrum-field-edge-to-disclosure-icon-300",
     "--spectrum-field-edge-to-disclosure-icon-75",
+    "--spectrum-field-edge-to-icon-100",
+    "--spectrum-field-edge-to-icon-200",
+    "--spectrum-field-edge-to-icon-300",
+    "--spectrum-field-edge-to-icon-75",
     "--spectrum-gray-100",
     "--spectrum-gray-200",
     "--spectrum-neutral-content-color-default",
