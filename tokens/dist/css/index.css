@@ -1,4 +1,4 @@
-/* @spectrum-css/tokens@v16.0.1 */
+/* @spectrum-css/tokens@v16.1.0-next.2 */
 
 /*!
  * Copyright 2024 Adobe. All rights reserved.
@@ -790,6 +790,10 @@
 	--spectrum-assetcard-border-color-selected-down: var(--spectrum-blue-900);
 	--spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-blue-800);
 	--spectrum-assestcard-focus-indicator-color: var(--spectrum-blue-700);
+
+	--spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.25);
+	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
+	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
 
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-black);
 
@@ -1867,8 +1871,8 @@
 	--spectrum-cjk-font-family-stack: adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif;
 	--spectrum-cjk-font: var(--spectrum-code-font-family-stack);
 	--spectrum-examples-gradient: linear-gradient(45deg, var(--spectrum-magenta-1500), var(--spectrum-blue-1500));
-	--spectrum-examples-gradient-static-black: linear-gradient(45deg, rgb(255, 241, 246), rgb(238, 245, 255));
-	--spectrum-examples-gradient-static-white: linear-gradient(45deg, rgb(64, 0, 22), rgb(14, 24, 67));
+	--spectrum-examples-gradient-static-black: linear-gradient(45deg, rgb(255 241 246), rgb(238 245 255));
+	--spectrum-examples-gradient-static-white: linear-gradient(45deg, rgb(64 0 22), rgb(14 24 67));
 
 	--spectrum-coach-indicator-ring-static-white-color: var(--spectrum-white);
 	--spectrum-corner-radius-1000: 9999px;
@@ -3437,6 +3441,16 @@
 	--spectrum-negative-subtle-background-color-default: var(--spectrum-negative-color-200);
 	--spectrum-accent-subtle-background-color-default: var(--spectrum-accent-color-200);
 	--color-scheme: light;
+
+	--spectrum-assetcard-border-color-selected: var(--spectrum-blue-900);
+	--spectrum-assetcard-border-color-selected-hover: var(--spectrum-blue-900);
+	--spectrum-assetcard-border-color-selected-down: var(--spectrum-blue-1000);
+	--spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-blue-900);
+	--spectrum-assestcard-focus-indicator-color: var(--spectrum-blue-800);
+
+	--spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-900-rgb), 0.2);
+	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
+	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-800);
 
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-white);
 
