@@ -15,7 +15,7 @@
 .spectrum-Swatch {
 	/* Placeholder tokens */
 	--spectrum-swatch-focus-indicator-border-radius: var(--mod-swatch-focus-indicator-border-radius, 8px);
-	--spectrum-swatch-icon-border-color: var(--mod-swatch-icon-border-color, rgb(0 0 0 / 51%));
+	--spectrum-swatch-icon-border-color: var(--mod-swatch-icon-border-color, rgb(0 0 0 / var(--spectrum-swatch-disabled-icon-border-opacity)));
 
 	/* Size */
 	--spectrum-swatch-size: var(--mod-swatch-size, var(--spectrum-swatch-size-small));
@@ -28,11 +28,12 @@
 	--spectrum-swatch-focus-indicator-gap: var(--mod-swatch-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
 
 	/* Color */
-	--spectrum-swatch-border-color-selected: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-gray-900)));
+	--spectrum-swatch-border-color-selected: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-gray-1000)));
+	--spectrum-swatch-border-color-rgb: var(--spectrum-gray-900-rgb);
 	--spectrum-swatch-inner-border-color-selected: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-gray-25)));
 	--spectrum-swatch-disabled-icon-color: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-white)));
-	--spectrum-swatch-icon-color: var(--spectrum-gray-800);
-	--spectrum-swatch-slash-icon-color: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-red-900)));
+	--spectrum-swatch-icon-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-swatch-slash-icon-color: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-negative-visual-color)));
 	--spectrum-swatch-focus-indicator-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-focus-indicator-color)));
 }
 
@@ -216,7 +217,7 @@
 		background: var(--spectrum-picked-color, transparent);
 
 		/* Swatch border */
-		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
+		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, rgb(var(--mod-swatch-border-color-rgb, var(--spectrum-swatch-border-color-rgb)), var(--mod-swatch-border-opacity, var(--spectrum-swatch-border-opacity)))));
 		border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 	}
 }
