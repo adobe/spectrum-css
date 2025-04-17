@@ -74,6 +74,11 @@ export const CheckboxGroup = Variants({
 			isInvalid: true,
 		},
 		{
+			testHeading: "Hovered + invalid",
+			isHovered: true,
+			isInvalid: true,
+		},
+		{
 			testHeading: "Invalid, checked",
 			isInvalid: true,
 			isChecked: true,
