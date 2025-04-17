@@ -1,5 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -103,7 +103,14 @@ export default {
 		},
 		packageJson,
 		metadata,
+		downState: {
+			selectors: [".spectrum-Tag:not(:disabled)"],
+		},
 	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
+	tags: ["migrated"],
 };
 
 export const Default = TagGroups.bind({});
