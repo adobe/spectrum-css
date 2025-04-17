@@ -20,6 +20,7 @@ export const Template = ({
 	isAddSwatch = false,
 	isSelected = false,
 	isDisabled = false,
+	isKeyboardFocused = false,
 	rounding = "regular",
 	customClasses = [],
 	swatchColor,
@@ -37,6 +38,11 @@ export const Template = ({
 			break;
 	}
 
+	let pickedColor = swatchColor;
+
+	if (isMixedValue) pickedColor = "var(--spectrum-gray-25)";
+	if (isAddSwatch) pickedColor = undefined;
+
 	return html`
 		<div
 			class=${classMap({
@@ -49,6 +55,7 @@ export const Template = ({
 				[`${rootClass}--${borderStyle}`]: typeof borderStyle !== "undefined" && borderStyle !== "default",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
+				"is-keyboardFocused": isKeyboardFocused,
 				"is-image": (isMixedValue || isAddSwatch) || typeof imageUrl !== "undefined",
 				"is-mixedValue": !isDisabled && isMixedValue,
 				"is-addSwatch": !isDisabled && isAddSwatch,
@@ -59,7 +66,7 @@ export const Template = ({
 			?disabled=${isDisabled}
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap({
-				"--spectrum-picked-color": (isMixedValue || isAddSwatch) ? "var(--spectrum-gray-25)" : swatchColor,
+				"--spectrum-picked-color": pickedColor,
 				...customStyles,
 			}))}
 			tabindex="0"

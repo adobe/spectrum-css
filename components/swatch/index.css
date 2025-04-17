@@ -35,6 +35,13 @@
 	--spectrum-swatch-icon-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-swatch-slash-icon-color: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-negative-visual-color)));
 	--spectrum-swatch-focus-indicator-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-focus-indicator-color)));
+
+	--spectrum-mixed-button-background: var(--spectrum-gray-25);
+
+	--spectrum-add-button-background: var(--spectrum-gray-100);
+	--spectrum-add-button-background-hover: var(--spectrum-gray-200);
+	--spectrum-add-button-background-down: var(--spectrum-gray-200);
+	--spectrum-add-button-background-keyboard-focus: var(--spectrum-gray-200);
 }
 
 .spectrum-Swatch--sizeXS {
@@ -81,6 +88,41 @@
 		border-radius: var(--spectrum-swatch-border-radius);
 	}
 
+	&.is-mixedValue {
+		--spectrum-picked-color: var(--mod-mixed-button-background, var(--spectrum-mixed-button-background));
+	}
+
+	&.is-addSwatch {
+		--spectrum-picked-color: var(--mod-add-button-background, var(--spectrum-add-button-background));
+
+		.spectrum-Swatch-fill {
+			background: var(--spectrum-picked-color);
+		}
+
+		&:hover {
+			--spectrum-picked-color: var(--mod-add-button-background-hover, var(--spectrum-add-button-background-hover));
+		}
+
+		&:active {
+			--spectrum-picked-color: var(--mod-add-button-background-down, var(--spectrum-add-button-background-down));
+		}
+
+		&:hover,
+		&:active {
+			cursor: pointer;
+		}
+
+		&.is-keyboardFocused,
+		&:focus-visible {
+			--spectrum-picked-color: var(--mod-add-button-background-keyboard-focus, var(--spectrum-add-button-background-keyboard-focus));
+		}
+
+		.spectrum-Swatch-icon {
+			color: var(--spectrum-swatch-icon-color);
+			display: block;
+		}
+	}
+
 	&.is-selected {
 		background: var(--spectrum-swatch-inner-border-color-selected);
 
@@ -113,8 +155,7 @@
 		}
 	}
 
-	&.is-mixedValue,
-	&.is-addSwatch {
+	&.is-mixedValue {
 		.spectrum-Swatch-fill {
 			background: var(--spectrum-picked-color, transparent);
 		}
