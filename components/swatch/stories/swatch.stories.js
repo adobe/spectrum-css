@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
+import { isDisabled, isHovered, isKeyboardFocused, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
@@ -43,6 +43,14 @@ export default {
 		},
 		isDisabled,
 		isSelected,
+		isHovered: {
+			...isHovered,
+			if: { arg: "isAddSwatch", truthy: true },
+		},
+		isKeyboardFocused: {
+			...isKeyboardFocused,
+			if: { arg: "isAddSwatch", truthy: true },
+		},
 		borderStyle: {
 			name: "Border style",
 			type: { name: "string" },
@@ -104,6 +112,8 @@ export default {
 		size: "m",
 		isSelected: false,
 		isDisabled: false,
+		isHovered: false,
+		isKeyboardFocused: false,
 		rounding: "regular",
 		swatchColor: "rgb(174, 216, 230)",
 		borderStyle: "default",
