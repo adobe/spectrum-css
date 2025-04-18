@@ -61,7 +61,7 @@ export const Template = ({
 			${when(avatarUrl, () =>
 				Avatar({
 					image: avatarUrl,
-					size: "50",
+					size,
 				}, context)
 			)}
 			${when(iconName, () =>
@@ -75,7 +75,7 @@ export const Template = ({
 			${when(thumbnailUrl, () =>
 				Thumbnail({
 					image: thumbnailUrl,
-					size: "50",
+					size,
 				}, context)
 			)}
 			<span class="${rootClass}-itemLabel">${label}</span>
