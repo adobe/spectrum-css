@@ -34,6 +34,7 @@
     ".spectrum-Swatch.is-disabled",
     ".spectrum-Swatch.is-disabled .spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch.is-image .spectrum-Swatch-fill:before",
+    ".spectrum-Swatch.is-keyboardFocused",
     ".spectrum-Swatch.is-mixedValue",
     ".spectrum-Swatch.is-mixedValue .spectrum-Swatch-fill",
     ".spectrum-Swatch.is-mixedValue .spectrum-Swatch-icon",
@@ -46,6 +47,7 @@
     ".spectrum-Swatch.is-selected:before",
     ".spectrum-Swatch:after",
     ".spectrum-Swatch:before",
+    ".spectrum-Swatch:focus-visible",
     ".spectrum-Swatch:focus-visible:after",
     ".spectrum-Swatch[disabled]",
     ".spectrum-Swatch[disabled] .spectrum-Swatch-disabledIcon"
@@ -126,6 +128,7 @@
     "--spectrum-gray-25",
     "--spectrum-gray-900-rgb",
     "--spectrum-mixed-button-background",
+    "--spectrum-mod-focus-indicator-color",
     "--spectrum-negative-visual-color",
     "--spectrum-neutral-content-color-default",
     "--spectrum-picked-color",

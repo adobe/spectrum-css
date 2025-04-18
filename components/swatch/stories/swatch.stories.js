@@ -47,10 +47,7 @@ export default {
 			...isHovered,
 			if: { arg: "isAddSwatch", truthy: true },
 		},
-		isKeyboardFocused: {
-			...isKeyboardFocused,
-			if: { arg: "isAddSwatch", truthy: true },
-		},
+		isKeyboardFocused,
 		borderStyle: {
 			name: "Border style",
 			type: { name: "string" },
