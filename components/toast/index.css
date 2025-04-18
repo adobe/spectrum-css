@@ -29,9 +29,10 @@
 
 	/* Space */
 	--spectrum-toast-spacing-toast-to-edge: var(--spectrum-spacing-300);
+	--spectrum-toast-spacing-block-close-button: var(--spectrum-spacing-200);
 	--spectrum-toast-spacing-close-button-to-end-edge: var(--spectrum-spacing-100);
 	--spectrum-toast-spacing-text-to-close-button: var(--spectrum-spacing-300);
-	--spectrum-toast-spacing-text-to-button-vertical: var(--spectrum-spacing-100);
+	--spectrum-toast-spacing-edge-to-button-vertical: var(--spectrum-spacing-200);
 	--spectrum-toast-spacing-text-to-button-horizontal: var(--spectrum-spacing-400);
 	--spectrum-toast-spacing-button-to-close-button-horizontal: var(--spectrum-spacing-200);
 	--spectrum-toast-spacing-icon-to-text: var(--spectrum-text-to-visual-300);
@@ -57,7 +58,6 @@
 	align-items: stretch;
 	margin: var(--mod-toast-spacing-toast-to-edge, var(--spectrum-toast-spacing-toast-to-edge));
 	min-block-size: var(--mod-toast-min-block-size, var(--spectrum-toast-min-block-size));
-	min-inline-size: calc(var(--mod-toast-max-inline-size, var(--spectrum-toast-max-inline-size)) / 2);
 	max-inline-size: var(--mod-toast-max-inline-size, var(--spectrum-toast-max-inline-size));
 
 	border-radius: var(--mod-toast-corner-radius, var(--spectrum-toast-corner-radius));
@@ -72,7 +72,7 @@
 	-webkit-font-smoothing: antialiased;
 
 	background-color: var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default));
-	color: var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default));
+	color: var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color));
 	overflow-wrap: anywhere;
 
 	&:not(:has(.spectrum-Button)) {
@@ -82,11 +82,6 @@
 
 .spectrum-Toast--negative {
 	background-color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
-	color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
-
-	.spectrum-Toast-closeButton:focus-visible:not(:active) {
-		color: var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default));
-	}
 }
 
 .spectrum-Toast--info {
@@ -103,35 +98,15 @@
 
 	block-size: var(--mod-toast-icon-block-size, var(--spectrum-toast-icon-block-size));
 
-	/* Positions toast icon based on the difference between half the toast interior spacing to allow for consistent alignment with label when inline and wrapped */
-	margin-block: calc(var(--mod-toast-spacing-top-edge-to-icon, var(--spectrum-toast-spacing-top-edge-to-icon)) + calc(var(--spectrum-toast-top-to-text) / 2));
+	/* Similar to the spectrum-Toast-text calc, now the icon only has an extra margin to add the difference between spacing-200 (which is now around the entire toast) and the requested toast-top-to-workflow-icon token. */
+	margin-block-start: calc(var(--spectrum-toast-spacing-top-edge-to-icon) - var(--spectrum-toast-spacing-edge-to-button-vertical));
 	margin-inline-end: var(--mod-toast-spacing-icon-to-text, var(--spectrum-toast-spacing-icon-to-text));
 	margin-inline-start: 0;
-
-	color: var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color));
-}
-
-.spectrum-Toast-content {
-	flex: 1 1 auto;
-	display: inline-flex;
-	box-sizing: border-box;
-	line-height: var(--mod-toast-line-height, var(--spectrum-toast-line-height));
-	text-align: start;
-	color: var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color));
-	padding-inline-start: 0;
-
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		line-height: var(--mod-toast-line-height-cjk, var(--spectrum-toast-line-height-cjk));
-	}
 }
 
 .spectrum-CloseButton {
-	/* Adds 2px to bring close button in vertical alignment with button which has a 2px border */
-	margin-block: calc(var(--mod-toast-spacing-top-edge-to-text, var(--spectrum-toast-spacing-top-edge-to-text)) + 2px);
+	margin-block: var(--mod--spectrum-toast-spacing-block-close-button, var(--spectrum-toast-spacing-block-close-button));
 	margin-inline-end: var(--mod-toast-spacing-close-button-to-end-edge, var(--spectrum-toast-spacing-close-button-to-end-edge));
-
 	flex-shrink: 0;
 }
 
@@ -142,11 +117,34 @@
 .spectrum-Toast-body {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	justify-content: flex-end;
 	flex: 1 1 auto;
-	align-self: center;
-	column-gap: var(--mod-toast-spacing-text-to-button-horizontal, var(--spectrum-toast-spacing-text-to-button-horizontal));
-	row-gap: var(--mod-toast-spacing-text-to-button-vertical, var(--spectrum-toast-spacing-text-to-button-vertical));
-	padding-block-start: var(--mod-toast-spacing-top-edge-to-text, var(--spectrum-toast-spacing-top-edge-to-text));
-	padding-block-end: var(--mod-toast-spacing-bottom-edge-to-text, var(--spectrum-toast-spacing-bottom-edge-to-text));
+	padding-block: var(--mod-toast-spacing-text-to-button-vertical, var(--spectrum-toast-spacing-edge-to-button-vertical));
+	column-gap: var(--spectrum-toast-spacing-text-to-button-horizontal);
+
+}
+
+.spectrum-Toast-content {
+	flex: 1 1 auto;
+	display: inline-flex;
+	align-items: start;
+	box-sizing: border-box;
+	line-height: var(--mod-toast-line-height, var(--spectrum-toast-line-height));
+	text-align: start;
+	color: var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color));
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		line-height: var(--mod-toast-line-height-cjk, var(--spectrum-toast-line-height-cjk));
+	}
+}
+
+.spectrum-Toast-text {
+	/* the toast itself has spacing-200 spacing on the top and bottom. That ensures that the spectrum-Button has the requested spacing-200 token, but poses a problem for the text, which is smaller in height than the button. So this padding for this text is difference between the requested toast-top-to-text/toast-bottom-to-text tokens and the spacing-200.
+
+	This padding + the spacing-200 should equal the requested toast-top-to-text/toast-bottom-to-text tokens. */
+	padding-block-start: calc(var(--spectrum-toast-spacing-top-edge-to-text) - var(--spectrum-toast-spacing-edge-to-button-vertical));
+	padding-block-end: calc(var(--spectrum-toast-spacing-bottom-edge-to-text) - var(--spectrum-toast-spacing-edge-to-button-vertical));
+	margin: 0;
 }
