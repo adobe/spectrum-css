@@ -28,9 +28,6 @@ export const TagGroups = Variants({
 		{
 			testHeading: "Truncated",
 			label: "Tag label that truncates when it gets too long",
-			customStyles: {
-				"max-inline-size": "200px"
-			}
 		}
 	],
 	stateData: [
