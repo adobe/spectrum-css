@@ -35,13 +35,16 @@
 	--spectrum-swatch-icon-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-swatch-slash-icon-color: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-negative-visual-color)));
 	--spectrum-swatch-focus-indicator-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-focus-indicator-color)));
-
 	--spectrum-mixed-button-background: var(--spectrum-gray-25);
-
 	--spectrum-add-button-background: var(--spectrum-gray-100);
 	--spectrum-add-button-background-hover: var(--spectrum-gray-200);
 	--spectrum-add-button-background-down: var(--spectrum-gray-200);
 	--spectrum-add-button-background-keyboard-focus: var(--spectrum-gray-200);
+
+	/* Focus ring */
+	--spectrum-swatch-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-swatch-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-swatch-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 }
 
 .spectrum-Swatch--sizeXS {
@@ -121,6 +124,12 @@
 			color: var(--spectrum-swatch-icon-color);
 			display: block;
 		}
+	}
+
+	&.is-keyboardFocused,
+	&:focus-visible {
+		outline: var(--mod-swatch-focus-indicator-thickness, var(--spectrum-swatch-focus-indicator-thickness)) solid var(--spectrum-mod-focus-indicator-color, var(--spectrum-swatch-focus-indicator-color));
+		outline-offset: var(--mod-swatch-focus-indicator-gap, var(--spectrum-swatch-focus-indicator-gap));
 	}
 
 	&.is-selected {
