@@ -45,16 +45,19 @@ export const AccordionItem = ({
 					aria-controls="spectrum-accordion-item-${idx}-content"
 					aria-expanded="${open ? "true" : "false"}"
 				>
-					${heading}
-				</button>
-				<span class="${rootClass}IconContainer">
 					${Icon({
-						iconName: !isOpen ? "ChevronRight" : "ChevronDown",
+						iconName: (!isOpen ? "ChevronRight" : "ChevronDown") + ({
+							s: "75",
+							m: "100",
+							l: "200",
+							xl: "300",
+						}[iconSize] || "100"),
 						setName: "ui",
 						size: iconSize,
 						customClasses: [`${rootClass}Indicator`],
 					}, context)}
-				</span>
+					<span class="${rootClass}Title">${heading}</span>
+				</button>
 			</h3>
 			<!-- WAI-ARIA 1.1: Item content uses a role of "region" -->
 			<div
