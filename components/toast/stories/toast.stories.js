@@ -30,6 +30,16 @@ export default {
 			},
 			control: "text",
 		},
+		hasButton: {
+			name: "Has button",
+			description: "Adds a button that is directly related to the toast's message.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		inlineButtonLabel: {
 			name: "Inline button label",
 			description: "Label for the inline button; if blank, no button is shown",
@@ -39,6 +49,7 @@ export default {
 				type: { summary: "string" },
 			},
 			control: "text",
+			if: { arg: "hasButton", truthy: true },
 		},
 	},
 	args: {
@@ -64,6 +75,7 @@ export default {
 export const Default = ToastGroup.bind({});
 Default.args = {
 	message: "File has been archived",
+	hasButton: true,
 	inlineButtonLabel: "Undo",
 	variant: "neutral"
 };
@@ -142,7 +154,7 @@ Wrapping.parameters = {
 };
 
 /**
- * A toast can have up to one action: [a static white, secondary, outline button](?path=/docs/components-button--docs#static-white---secondary). This label should be kept concise, and it should only be used when there’s a direct action available that is related to the toast text.
+ * A toast can have up to one button: [a static white, secondary, outline button](?path=/docs/components-button--docs#static-white---secondary). That button's label should be kept concise, and it should only be used when there’s a direct action available that is related to the toast text.
 */
 
 export const Action = ActionTemplate.bind({});
