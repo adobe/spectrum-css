@@ -62,6 +62,17 @@ export const TagGroups = Variants({
 		{
 			testHeading: "Removable",
 			hasClearButton: true,
+		},
+		// testing icon/avatar/thumbnail to ensure size is applied correctly
+		{
+			testHeading: "Small",
+			size: "s",
+			include: ["Default, with icon", "Default, with avatar", "Emphasized, with thumbnail"],
+		},
+		{
+			testHeading: "Large",
+			size: "l",
+			include: ["Default, with icon", "Default, with avatar", "Emphasized, with thumbnail"],
 		}
 	]
 });
