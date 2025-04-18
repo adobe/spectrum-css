@@ -17,6 +17,9 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
+
 const { deflate } = require("zlib");
 const { promisify } = require("util");
 
@@ -36,6 +39,12 @@ const {
 	fetchContent,
 	writeAndReport,
 } = require("./utilities.js");
+
+const report = {
+	failure: (message) => `${"✗".red}  ${message}`,
+	warning: (message) => `${"⚠".yellow}  ${message}`,
+	success: (message) => `${"✓".green}  ${message}`,
+};
 
 /**
  * Process the provided CSS input and write out to a file
@@ -108,7 +117,7 @@ async function processCSS(
 	if (result.warnings().length > 0) {
 		/** @todo, do we want to support a verbose mode that prints out the warnings during the build? */
 		result.warnings().forEach((warning) => {
-			logs.push(`${"⚠".yellow}  ${warning.text}`);
+			logs.push(report.warning(warning.text));
 		});
 	}
 
@@ -131,13 +140,12 @@ async function processCSS(
 	if (!output) return Promise.resolve(formatted);
 
 	/* Ensure the directory exists */
-	if (!fs.existsSync(path.dirname(output))) {
-		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
+	const outputDir = path.dirname(output);
+	if (!fs.existsSync(outputDir)) {
+		await fsp.mkdir(outputDir, { recursive: true }).catch((err) => {
 			if (!err) return;
 
-			logs.push(
-				`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`,
-			);
+			logs.push(report.failure(`problem making the ${relativePrint(outputDir, { cwd })} directory`));
 			return Promise.reject([...logs, err]);
 		});
 	}
@@ -287,6 +295,12 @@ async function main({
 		cwd = path.join(dirs.components, componentName);
 	}
 
+	if (!fs.existsSync(cwd)) {
+		return Promise.resolve(
+			report.failure(`Component directory not found at ${relativePrint(cwd)}`)
+		);
+	}
+
 	if (!componentName) {
 		componentName = cwd
 			? getPackageFromPath(cwd)
@@ -345,3 +359,9 @@ async function main({
 exports.processCSS = processCSS;
 exports.fetchContent = fetchContent;
 exports.default = main;
+
+let {
+	_: components,
+} = yargs(hideBin(process.argv)).argv;
+
+Promise.all(components.map((componentName) => main({ componentName })));

@@ -93,7 +93,7 @@ export function fetchToken(key, fallback = undefined, presets = {}) {
 	// Check if the spectrum data is available
 	if (!tokens || typeof tokens !== "object") return fallback;
 
-	return parseData(tokens[key], { color, platform }) ?? fallback;
+	return parseData(tokens?.[key], { color, platform }) ?? fallback;
 }
 
 /**
@@ -110,7 +110,7 @@ export function fetchTokenSet(key, presets = {}) {
 	}
 
 	// Fetch the theme if it exists; this data exists if wrapped in a ThemeProvider
-	const { color, platform, tokens } = fetchTheme(presets);
+	const { color, platform, tokens = {} } = fetchTheme(presets);
 
 	// Check the token data for a set of tokens matching the provided regex
 	const tokenSet = Object.keys(tokens)

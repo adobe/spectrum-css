@@ -1,12 +1,11 @@
-/* eslint-disable no-prototype-builtins */
-const jsonSetsFormatter = require("style-dictionary-sets").JsonSetsFormatter;
+import { format as JSONSetsFormat } from "./json-sets-formatter.js";
 
-const formatter = ({ dictionary, platform, file, options }) => {
+export const format = ({ dictionary, platform, file, options }) => {
 	const prefix = platform.prefix ? platform.prefix : false;
 	let result = {};
 
 	const jsonSets = JSON.parse(
-		jsonSetsFormatter.formatter({ dictionary, platform, file, options })
+		JSONSetsFormat({ dictionary, platform, file, options })
 	);
 
 	const convertRef = (ref) => {
@@ -21,7 +20,14 @@ const formatter = ({ dictionary, platform, file, options }) => {
 
 			delete data.uuid;
 
-			if (data.ref) data.ref = convertRef(data.ref);
+			if (data.ref) {
+				data.ref = convertRef(data.ref);
+
+				if (data.ref === data.value) {
+					delete data.ref;
+				}
+			}
+			
 			if (data.sets) {
 				data = deconstructSets(data, context);
 
@@ -39,6 +45,10 @@ const formatter = ({ dictionary, platform, file, options }) => {
 
 		delete ret.uuid;
 		if (ret.ref) ret.ref = convertRef(ret.ref);
+
+		if (ret.ref === ret.value) {
+			delete ret.ref;
+		}
 
 		return ret;
 	};
@@ -62,9 +72,9 @@ const formatter = ({ dictionary, platform, file, options }) => {
 	return JSON.stringify(result, null, 2);
 };
 
-formatter.nested = true;
+format.nested = true;
 
-module.exports = {
+export default {
 	name: "json/sets",
-	formatter,
+	format,
 };
