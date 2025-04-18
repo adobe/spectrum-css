@@ -79,6 +79,12 @@
 	&:not(:has(.spectrum-Button)) {
 		column-gap: var(--mod-toast-spacing-text-to-close-button, var(--spectrum-toast-spacing-text-to-close-button));
 	}
+
+	.spectrum-CloseButton {
+		margin-block: var(--mod--spectrum-toast-spacing-block-close-button, var(--spectrum-toast-spacing-block-close-button));
+		margin-inline-end: var(--mod-toast-spacing-close-button-to-end-edge, var(--spectrum-toast-spacing-close-button-to-end-edge));
+		flex-shrink: 0;
+	}
 }
 
 .spectrum-Toast--negative {
@@ -105,12 +111,6 @@
 	margin-inline-start: 0;
 }
 
-.spectrum-CloseButton {
-	margin-block: var(--mod--spectrum-toast-spacing-block-close-button, var(--spectrum-toast-spacing-block-close-button));
-	margin-inline-end: var(--mod-toast-spacing-close-button-to-end-edge, var(--spectrum-toast-spacing-close-button-to-end-edge));
-	flex-shrink: 0;
-}
-
 .spectrum-Toast .spectrum-Button {
 	margin-inline-end: var(--mod-toast-spacing-button-to-close-button-horizontal, var(--spectrum-toast-spacing-button-to-close-button-horizontal));
 }
@@ -122,7 +122,6 @@
 	flex: 1 1 auto;
 	padding-block: var(--mod-toast-spacing-text-to-button-vertical, var(--spectrum-toast-spacing-edge-to-button-vertical));
 	column-gap: var(--spectrum-toast-spacing-text-to-button-horizontal);
-
 }
 
 .spectrum-Toast-content {
