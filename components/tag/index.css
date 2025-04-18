@@ -271,6 +271,8 @@
 		border-color: var(--spectrum-tag-border-color-active); /* mod/highcontrast specified at top */
 		background-color: var(--highcontrast-tag-background-color-active, var(--mod-tag-background-color-active, var(--spectrum-tag-background-color-active)));
 		color: var(--highcontrast-tag-content-color-active, var(--mod-tag-content-color-active, var(--spectrum-tag-content-color-active)));
+
+		/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
 		transform: perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down))) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
