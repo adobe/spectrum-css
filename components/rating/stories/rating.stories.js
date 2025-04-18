@@ -159,14 +159,14 @@ Focused.parameters = {
 /**
  * When a selected star is hovered, the color of the star is slightly darker.
  */
-export const EmphasizedHovered = Template.bind({});
-EmphasizedHovered.tags = ["!dev"];
-EmphasizedHovered.args = {
+export const Hovered = Template.bind({});
+Hovered.tags = ["!dev"];
+Hovered.args = {
 	value: 5,
 	isHovered: true,
 	isEmphasized: true,
 };
-EmphasizedHovered.parameters = {
+Hovered.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
