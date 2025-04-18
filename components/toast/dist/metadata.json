@@ -1,9 +1,9 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".spectrum-CloseButton",
     ".spectrum-Toast",
     ".spectrum-Toast .spectrum-Button",
+    ".spectrum-Toast .spectrum-CloseButton",
     ".spectrum-Toast--info",
     ".spectrum-Toast--negative",
     ".spectrum-Toast--positive",
@@ -18,6 +18,7 @@
     ".spectrum-Toast:not(:has(.spectrum-Button))"
   ],
   "modifiers": [
+    "--mod--spectrum-toast-spacing-block-close-button",
     "--mod-toast-background-color-default",
     "--mod-toast-corner-radius",
     "--mod-toast-font-family",
@@ -59,6 +60,7 @@
     "--spectrum-toast-min-block-size",
     "--spectrum-toast-negative-background-color-default",
     "--spectrum-toast-positive-background-color-default",
+    "--spectrum-toast-spacing-block-close-button",
     "--spectrum-toast-spacing-bottom-edge-to-text",
     "--spectrum-toast-spacing-button-to-close-button-horizontal",
     "--spectrum-toast-spacing-close-button-to-end-edge",
