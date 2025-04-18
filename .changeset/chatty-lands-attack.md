@@ -9,6 +9,11 @@ Accordion now uses Spectrum 2 tokens and specifications.
 New sized tokens are used for corner rounding, the spacing around the disclosure icon, and
 the spacing around the content area.
 
+##### New features
+
+- Adds CSS transition to animate the rotation of the disclosure indicator when expanding and
+  collapsing the accordion item.
+
 ##### Markup changes
 
 The HTML markup has changed slightly for the accordion header. The disclosure icon has been moved
