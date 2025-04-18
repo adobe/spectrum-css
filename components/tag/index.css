@@ -83,12 +83,12 @@
 	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
 	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
-	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-100); /* TODO: this should be used somewhere */
+	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-100);
 	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
 	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
 	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
-	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-100); /* TODO: this should be used somewhere */
+	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-75);
 	--spectrum-tag-thumbnail-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
 	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
@@ -129,12 +129,12 @@
 	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-75);
 	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
-	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-75);
+	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-50);
 	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-small);
 	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-small);
 	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
-	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-75);
+	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-50);
 	--spectrum-tag-thumbnail-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
 	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
@@ -157,12 +157,12 @@
 	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-200);
 	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
-	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-200);
+	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-100);
 	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-large);
 	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-large);
 	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
-	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-200);
+	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-100);
 	--spectrum-tag-thumbnail-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
 	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
