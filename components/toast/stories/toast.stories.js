@@ -31,7 +31,8 @@ export default {
 			control: "text",
 		},
 		hasButton: {
-			name: "Button",
+			name: "Has button",
+			description: "Adds a button that is directly related to the toast's message.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
