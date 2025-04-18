@@ -6,4 +6,10 @@
   --seafoam-200: rgba(var(--seafoam-200-rgb), var(--seafoam-200-opacity));
   --seafoam-300-rgb: 206, 247, 243;
   --seafoam-300: rgba(var(--seafoam-300-rgb));
+  --spectrum-transparent-white-100-rgb: 100, 100, 100;
+  --spectrum-transparent-white-100-opacity: 0.5;
+  --spectrum-transparent-white-100: rgba(var(--spectrum-transparent-white-100-rgb), var(--spectrum-transparent-white-100-opacity));
+  --disabled-static-white-background-color-rgb: var(--spectrum-transparent-white-100-rgb);
+  --disabled-static-white-background-color-opacity: var(--spectrum-transparent-white-100-opacity);
+  --disabled-static-white-background-color: rgba(var(--disabled-static-white-background-color-rgb), var(--disabled-static-white-background-color-opacity));
 }

@@ -52,9 +52,15 @@ jobs:
                 system:
                     - macos-latest
                     - ubuntu-latest
-                    # - windows-latest # todo: debug token style-dictionary failures on windows
                 node-version:
                     - 20
+                # experimental:
+                #     - false
+                # include:
+                #     - system: windows-latest
+                #       experimental: true
+                #     - system: windows-latest
+                #       experimental: true
         uses: ./.github/workflows/build.yml
         with:
             system: ${{ matrix.system }}
@@ -188,7 +194,7 @@ jobs:
     # -------------------------------------------------------------
     vrt:
         name: Testing
-        if: contains(github.event.pull_request.labels.*.name, 'run_vrt') || ((github.event.pull_request.draft != true || contains(github.event.pull_request.labels.*.name, 'run_ci')) && github.event.pull_request.mergeable == true)
+        if: ${{ contains(github.event.pull_request.labels.*.name, 'run_vrt') || ((github.event.pull_request.draft != true || contains(github.event.pull_request.labels.*.name, 'run_ci')) && github.event.pull_request.mergeable == true) }}
         uses: ./.github/workflows/vrt.yml
         with:
             skip: ${{ github.base_ref == 'spectrum-two' || contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
