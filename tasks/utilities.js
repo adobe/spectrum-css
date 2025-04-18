@@ -18,6 +18,7 @@ const fsp = fs.promises;
 const path = require("path");
 
 const fg = require("fast-glob");
+const { rimrafSync } = require("rimraf");
 const postcss = require("postcss");
 const valuesParser = require("postcss-values-parser");
 
@@ -37,20 +38,54 @@ const dirs = {
 	storybook: path.join(__dirname, "../.storybook"),
 };
 
-const timeInMs = (seconds, nanoseconds) => (seconds * 1000000000 + nanoseconds) / 1000000;
+/**
+ * A simple logger utility to write messages to the console
+ * @type {object} log
+ * @property {(string) => void} log.error
+ * @property {(string) => void} log.write
+ */
+const log = {
+	error: (err) => process.stderr.write(`${err}\n\n`),
+	write: (msg) => process.stdout.write(msg),
+};
+
+const writeConsoleTable = (data, { min = 20, max = 30 } = {}) => {
+	// This utility function is used to print a table of data to the console
+	const table = (data = []) => {
+		return data
+			.map((row, idx) => `${row ?? " "}`.padEnd(idx === 0 ? max : min))
+			.join("");
+	};
+
+	return `${table(data)}\n`;
+};
+
+const timeInMs = (seconds, nanoseconds) =>
+	(seconds * 1000000000 + nanoseconds) / 1000000;
 
 /** @type {(string) => string} */
-const relativePrint = (filename, { cwd = dirs.root } = {}) => path.relative(cwd, filename);
+const relativePrint = (filename, { cwd = dirs.root } = {}) =>
+	path.relative(cwd, filename);
 
-const bytesToSize = function (bytes) {
-	if (bytes === 0) return "0";
+/**
+ * Converts a number of bytes to a human-readable string
+ * @param {number} bytes
+ * @returns {string} the numeric value of bytes converted to a human-readable string
+ */
+function bytesToSize(bytes) {
+	// If the value is not a number, attempt to cast it to a number
+	if (isNaN(bytes)) {
+		bytes = Number(bytes);
+	}
+
+	if (!bytes || bytes === 0) return "0";
 
 	const sizes = ["bytes", "KB", "MB", "GB", "TB"];
 	// Determine the size identifier to use (KB, MB, etc)
 	const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
 	if (i === 0) return (bytes / 1000).toFixed(2) + " " + sizes[1];
 	return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
-};
+}
 
 /**
  * Determines the package name from a file path
@@ -85,14 +120,23 @@ function getAllComponentNames(includeDeprecated = true) {
 	// and a list of all the deprecated components in the storybook directory
 	// then combine and deduplicate the lists to get a full list of all components
 	let deprecated = [];
-	if (includeDeprecated && fs.existsSync(path.join(dirs.storybook, "deprecated"))) {
+	if (
+		includeDeprecated &&
+		fs.existsSync(path.join(dirs.storybook, "deprecated"))
+	) {
 		deprecated = fs.readdirSync(path.join(dirs.storybook, "deprecated"));
 	}
 
-	return [...new Set([
-		...fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json"))),
-		...deprecated,
-	])];
+	return [
+		...new Set([
+			...fs
+				.readdirSync(dirs.components)
+				.filter((file) =>
+					fs.existsSync(path.join(dirs.components, file, "package.json")),
+				),
+			...deprecated,
+		]),
+	];
 }
 
 /**
@@ -106,12 +150,13 @@ function validateComponentName(componentName) {
 
 	// Check if the component name exists in that list
 	if (!components.includes(componentName)) {
-		return new Error(`Component name "${componentName}" does not exist in the components directory.`);
+		return new Error(
+			`Component name "${componentName}" does not exist in the components directory.`,
+		);
 	}
 
 	return true;
 }
-
 
 /**
  * This regex will find all the custom properties that start with --mod-
@@ -122,10 +167,7 @@ function validateComponentName(componentName) {
  * @param {{ [string]: (string)[] }} [meta={}]
  * @returns { [string]: string[] }
  */
-function extractProperties(
-	content,
-	meta = {},
-) {
+function extractProperties(content, meta = {}) {
 	if (!content) return new Set();
 
 	const found = {};
@@ -175,11 +217,7 @@ function extractProperties(
  */
 async function fetchContent(
 	globs = [],
-	{
-		cwd,
-		shouldCombine = false,
-		...fastGlobOptions
-	} = {},
+	{ cwd, shouldCombine = false, ...fastGlobOptions } = {},
 ) {
 	const files = await fg(globs, {
 		onlyFiles: true,
@@ -237,10 +275,7 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 	if (!fs.existsSync(path.dirname(to))) {
 		await fsp.mkdir(path.dirname(to), { recursive: true }).catch((err) => {
 			if (!err) return;
-			console.log(
-				`${"✗".red}  problem making the ${relativePrint(path.dirname(to), { cwd }).yellow} directory`,
-			);
-			return Promise.reject(err);
+			return Promise.resolve(`${"✗".red}  problem making the ${relativePrint(path.dirname(to), { cwd }).yellow} directory`);
 		});
 	}
 
@@ -251,15 +286,15 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 			.cp(from, to, { recursive: true, force: true })
 			.then(async () => {
 				// Determine the number of files and the size of the copied files
-				const stats = await fg(path.join(cwd, "components") + "/**/*", { onlyFiles: true, stats: true });
-				return `${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow} ${`copied ${stats.length >= 0 ? stats.length : "0"} files (${bytesToSize(stats.reduce((acc, details) => acc + details.stats.size, 0))})`.gray}`;
+				const stats = await fg(path.join(cwd, "components") + "/**/*", {
+					onlyFiles: true,
+					stats: true,
+				});
+				return Promise.resolve(`${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow} ${`copied ${stats.length >= 0 ? stats.length : "0"} files (${bytesToSize(stats.reduce((acc, details) => acc + details.stats.size, 0))})`.gray}`);
 			})
 			.catch((err) => {
 				if (!err) return;
-				console.log(
-					`${"✗".red}  ${relativePrint(from, { cwd }).yellow} could not be copied to ${relativePrint(to, { cwd }).yellow}`,
-				);
-				return Promise.reject(err);
+				return Promise.resolve(`${"✗".red}  ${relativePrint(from, { cwd }).yellow} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
 			});
 	}
 
@@ -271,14 +306,11 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 		.writeFile(to, content, { encoding: "utf-8" })
 		.then(
 			() =>
-				`${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${(isDeprecated ? "-- deprecated --" : `copied ${stats.size ? `(${bytesToSize(stats.size)})` : ""}`).gray}`,
+				Promise.resolve(`${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${(isDeprecated ? "-- deprecated --" : `copied ${stats.size ? `(${bytesToSize(stats.size)})` : ""}`).gray}`),
 		)
 		.catch((err) => {
 			if (!err) return;
-			console.log(
-				`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`,
-			);
-			return Promise.reject(err);
+			return Promise.resolve(`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
 		});
 }
 
@@ -290,19 +322,19 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
  * @param {string} [config.cwd=] - Current working directory for the component being built
  * @returns Promise<string|void>
  */
-async function writeAndReport(content, output, { cwd = process.cwd(), encoding = "utf-8", isDeprecated = false } = {}) {
+async function writeAndReport(
+	content,
+	output,
+	{ cwd = process.cwd(), encoding = "utf-8", isDeprecated = false } = {},
+) {
 	return fsp
-		.writeFile(
-			output,
-			content,
-			{ encoding },
-		)
+		.writeFile(output, content, { encoding })
 		.then(() => {
 			const stats = fs.statSync(output);
 			const relativePath = path.relative(cwd, output);
-			return [
+			return Promise.resolve([
 				`${"✓".green}  ${relativePath.padEnd(20, " ").yellow}${isDeprecated ? "  -- deprecated --".gray : `  ${bytesToSize(stats.size).gray}`}`,
-			];
+			]);
 		})
 		.catch((err) => {
 			if (!err) return;
@@ -312,16 +344,40 @@ async function writeAndReport(content, output, { cwd = process.cwd(), encoding =
 		});
 }
 
+/**
+ * A utility to delete a directory and all its contents, then recreate the directory fresh
+ * @param {string} path
+ * @param {boolean} [clean=true] - If true, the directory will be deleted before being created
+ * @returns void
+ */
+function cleanAndMkdir(path, clean = true) {
+	if (!path) return;
+
+	let isFile = false;
+
+	// If the output directory exists, delete it but don't throw an error if it doesn't
+	if (clean && fs.existsSync(path)) {
+		isFile = fs.statSync(path).isFile();
+		rimrafSync(path, { preserveRoot: true });
+	}
+
+	// Create the output directory fresh
+	fs.mkdirSync(isFile ? path.dirname(path) : path, { recursive: true });
+}
+
 module.exports = {
 	bytesToSize,
 	copy,
 	dirs,
+	log,
 	extractProperties,
 	fetchContent,
+	cleanAndMkdir,
 	getAllComponentNames,
 	getPackageFromPath,
 	relativePrint,
 	timeInMs,
 	validateComponentName,
 	writeAndReport,
+	writeConsoleTable,
 };

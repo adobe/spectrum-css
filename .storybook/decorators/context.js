@@ -48,7 +48,7 @@ export const withContextWrapper = makeDecorator({
 			toggleStyles(document.body, "tokens", tokens, true);
 
 			// add the default classes to the body to ensure labels, headings, and borders are styled correctly
-			document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
+			document.body.classList.add("spectrum");
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
