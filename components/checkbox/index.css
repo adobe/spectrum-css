@@ -348,7 +348,7 @@
 /* Invalid state indeterminate override - for default state */
 .spectrum-Checkbox.is-invalid.is-indeterminate {
 	.spectrum-Checkbox-box,
-	.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+	.spectrum-Checkbox-input:checked:not(:disabled) + .spectrum-Checkbox-box {
 		&::before {
 			border-color: var(--highcontrast-checkbox-highlight-color-default, var(--spectrum-checkbox-control-selected-color-default));
 		}
@@ -362,7 +362,7 @@
 
 	&:hover {
 		.spectrum-Checkbox-box,
-		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+		.spectrum-Checkbox-input:checked:not(:disabled) + .spectrum-Checkbox-box {
 			&::before {
 				border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--spectrum-checkbox-control-selected-color-hover));
 			}
@@ -410,6 +410,12 @@
 		&::before {
 			border-color: var(--highcontrast-checkbox-disabled-color-default, var(--mod-checkbox-control-color-disabled, var(--spectrum-checkbox-control-color-disabled)));
 			background-color: var(--highcontrast-checkbox-background-color-default, var(--spectrum-checkbox-background-color));
+		}
+	}
+
+	&:hover:disabled + .spectrum-Checkbox-box {
+		&::before {
+			border-color: var(--highcontrast-checkbox-disabled-color-default, var(--mod-checkbox-control-color-disabled, var(--spectrum-checkbox-control-color-disabled)));
 		}
 	}
 
