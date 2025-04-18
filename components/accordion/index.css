@@ -34,7 +34,9 @@
 	--spectrum-accordion-item-header-font-style: var(--spectrum-default-font-style);
 	--spectrum-accordion-item-header-font-size: var(--spectrum-font-size-300);
 	--spectrum-accordion-item-header-line-height: var(--spectrum-line-height-100);
+
 	--spectrum-accordion-item-header-cursor: pointer;
+	--spectrum-accordion-animation-duration: var(--spectrum-animation-duration-100);
 
 	/* Text body */
 	--spectrum-accordion-item-content-font: var(--spectrum-sans-font-family-stack);
@@ -211,6 +213,7 @@
 
 .spectrum-Accordion-itemIndicator {
 	transform: var(--spectrum-logical-rotation);
+	transition: transform ease var(--mod-accordion-animation-duration, var(--spectrum-accordion-animation-duration));
 	flex-shrink: 0;
 	margin-block-start: var(--mod-accordion-top-to-disclosure-indicator, var(--spectrum-accordion-top-to-disclosure-indicator));
 	margin-inline: var(--mod-accordion-edge-to-disclosure-indicator-space, var(--spectrum-accordion-edge-to-disclosure-indicator-space)) var(--mod-accordion-disclosure-indicator-to-text-space, var(--spectrum-accordion-disclosure-indicator-to-text-space));
