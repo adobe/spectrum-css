@@ -70,9 +70,8 @@
 	}
 
 	&.is-focused {
-		padding-block-start: calc(var(--mod-rating-top-to-content-area, var(--spectrum-rating-top-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
-		padding-block-end: calc(var(--mod-rating-bottom-to-content-area, var(--spectrum-rating-bottom-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
-		padding-inline: var(--mod-rating-edge-to-content-area, var(--spectrum-rating-edge-to-content-area));
+		padding-block: calc(var(--mod-rating-top-to-content-area, var(--spectrum-rating-top-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) calc(var(--mod-rating-bottom-to-content-area, var(--spectrum-rating-bottom-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
+		padding-inline: calc(var(--mod-rating-edge-to-content-area, var(--spectrum-rating-edge-to-content-area)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
 	}
 
