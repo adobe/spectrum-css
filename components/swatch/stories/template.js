@@ -17,8 +17,11 @@ export const Template = ({
 	shape = "square",
 	imageUrl,
 	isMixedValue = false,
+	isAddSwatch = false,
 	isSelected = false,
 	isDisabled = false,
+	isHovered = false,
+	isKeyboardFocused = false,
 	rounding = "regular",
 	customClasses = [],
 	swatchColor,
@@ -36,6 +39,11 @@ export const Template = ({
 			break;
 	}
 
+	let pickedColor = swatchColor;
+
+	if (isMixedValue) pickedColor = "var(--spectrum-gray-25)";
+	if (isAddSwatch) pickedColor = undefined;
+
 	return html`
 		<div
 			class=${classMap({
@@ -48,8 +56,11 @@ export const Template = ({
 				[`${rootClass}--${borderStyle}`]: typeof borderStyle !== "undefined" && borderStyle !== "default",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
-				"is-image": isMixedValue || typeof imageUrl !== "undefined",
+				"is-hover": isHovered,
+				"is-keyboardFocused": isKeyboardFocused,
+				"is-image": (isMixedValue || isAddSwatch) || typeof imageUrl !== "undefined",
 				"is-mixedValue": !isDisabled && isMixedValue,
+				"is-addSwatch": !isDisabled && isAddSwatch,
 				[`${rootClass}--rectangle`]: typeof shape !== "undefined" && shape !== "square",
 				"is-nothing": !isDisabled && (typeof swatchColor === "undefined" || swatchColor === "transparent"),
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -57,7 +68,7 @@ export const Template = ({
 			?disabled=${isDisabled}
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap({
-				"--spectrum-picked-color": isMixedValue ? "var(--spectrum-gray-50)" : swatchColor,
+				"--spectrum-picked-color": pickedColor,
 				...customStyles,
 			}))}
 			tabindex="0"
@@ -72,7 +83,7 @@ export const Template = ({
 				updateArgs({ isSelected: !isSelected });
 			}}
 		>
-			${when((typeof imageUrl !== "undefined") && !isDisabled && !isMixedValue, () => html`
+			${when((typeof imageUrl !== "undefined") && !isDisabled && !isMixedValue && !isAddSwatch, () => html`
 				${when(imageUrl, () => html`
 					<div class="${rootClass}-fill" >
 						<img src="${imageUrl}" alt="" class="${rootClass}-image" />
@@ -104,7 +115,7 @@ export const Template = ({
 								</svg>
 						`] : []),
 							...(isMixedValue ? [Icon({
-								customClasses: [`${rootClass}-mixedValueIcon`],
+								customClasses: [`${rootClass}-icon`],
 								setName: "ui",
 								iconName: "Dash" + ({
 									xs: "75",
@@ -112,6 +123,13 @@ export const Template = ({
 									m: "100",
 									l: "200",
 								}[size] || "100"),
+								useRef: false,
+							}, context)] : []),
+							...(isAddSwatch ? [Icon({
+								customClasses: [`${rootClass}-icon`],
+								setName: "workflow",
+								size,
+								iconName: "Add",
 								useRef: false,
 							}, context)] : []),
 						]

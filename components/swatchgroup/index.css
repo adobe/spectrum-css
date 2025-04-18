@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -20,17 +20,15 @@
 	justify-content: flex-start;
 
 	/* Regular (Default) */
-	gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing));
+	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
 }
 
 /* Compact */
 .spectrum-SwatchGroup--compact {
-	--mod-swatchgroup-spacing-regular: var(--mod-swatchgroup-spacing-compact);
-	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-50);
+	--mod-swatchgroup-spacing: var(--mod-swatchgroup-spacing-compact, var(--spectrum-spacing-50));
 }
 
 /* Spacious */
 .spectrum-SwatchGroup--spacious {
-	--mod-swatchgroup-spacing-regular: var(--mod-swatchgroup-spacing-spacious);
-	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
+	--mod-swatchgroup-spacing: var(--mod-swatch-group-spacing-spacious, var(--spectrum-swatch-group-spacing-spacious));
 }
