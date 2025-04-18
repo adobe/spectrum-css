@@ -20,17 +20,15 @@
 	justify-content: flex-start;
 
 	/* Regular (Default) */
-	gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing));
+	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
 }
 
 /* Compact */
 .spectrum-SwatchGroup--compact {
-	--mod-swatchgroup-spacing-regular: var(--mod-swatchgroup-spacing-compact);
-	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-50);
+	--mod-swatchgroup-spacing: var(--mod-swatchgroup-spacing-compact, var(--spectrum-spacing-50));
 }
 
 /* Spacious */
 .spectrum-SwatchGroup--spacious {
-	--mod-swatchgroup-spacing-regular: var(--mod-swatchgroup-spacing-spacious);
-	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
+	--mod-swatchgroup-spacing: var(--mod-swatch-group-spacing-spacious, var(--spectrum-swatch-group-spacing-spacious));
 }

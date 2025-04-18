@@ -6,16 +6,15 @@
     ".spectrum-SwatchGroup--spacious"
   ],
   "modifiers": [
-    "--mod-swatchgroup-spacing-compact",
-    "--mod-swatchgroup-spacing-regular",
-    "--mod-swatchgroup-spacing-spacious"
+    "--mod-swatch-group-spacing-spacious",
+    "--mod-swatchgroup-spacing",
+    "--mod-swatchgroup-spacing-compact"
   ],
-  "component": ["--spectrum-swatchgroup-spacing"],
-  "global": [
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-50",
-    "--spectrum-spacing-75"
+  "component": [
+    "--spectrum-swatch-group-spacing-spacious",
+    "--spectrum-swatchgroup-spacing"
   ],
+  "global": ["--spectrum-spacing-50", "--spectrum-spacing-75"],
   "passthroughs": [],
   "high-contrast": []
 }
