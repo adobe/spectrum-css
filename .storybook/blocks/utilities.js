@@ -86,7 +86,7 @@ export function fetchToken(key, fallback = undefined, presets = {}) {
 	// Check if the spectrum data is available
 	if (!tokens || typeof tokens !== "object") return fallback;
 
-	return parseData(tokens[key], { color, platform }) ?? fallback;
+	return parseData(tokens?.[key], { color, platform }) ?? fallback;
 }
 
 /**
