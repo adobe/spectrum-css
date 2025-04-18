@@ -36,26 +36,26 @@ export const Template = ({
 			style=${styleMap(customStyles)}
 		>
 			<div class="${rootClass}-body">
-				${when(variant, () =>
-					Icon({
-						iconName,
-						setName: "workflow",
-						size: "m",
-						customClasses: [`${rootClass}-typeIcon`],
-					}, context)
-				)}
 				<div class="${rootClass}-content">
-					<p class="spectrum-Toast-text">${message}</p>
-					${when(hasButton && inlineButtonLabel, () =>
-						Button({
-							variant: "secondary",
+					${when(variant, () =>
+						Icon({
+							iconName,
+							setName: "workflow",
 							size: "m",
-							staticColor: "white",
-							treatment: "outline",
-							label: inlineButtonLabel,
+							customClasses: [`${rootClass}-typeIcon`],
 						}, context)
 					)}
+					<p class="spectrum-Toast-text">${message}</p>
 				</div>
+				${when(hasButton && inlineButtonLabel, () =>
+					Button({
+						variant: "secondary",
+						size: "m",
+						staticColor: "white",
+						treatment: "outline",
+						label: inlineButtonLabel,
+					}, context)
+				)}
 			</div>
 			${CloseButton({
 				size: "m",
