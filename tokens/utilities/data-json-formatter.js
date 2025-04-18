@@ -9,7 +9,7 @@ export const format = ({ dictionary, platform, file, options }) => {
 	);
 
 	const convertRef = (ref) => {
-		return ref.replace(/\{(.*?)\}/g, `var(--${prefix}-$1)`);
+		return ref?.toString()?.replace(/\{(.*?)\}/g, `var(--${prefix}-$1)`);
 	};
 
 	const deconstructSets = (obj, scope = undefined) => {
@@ -23,11 +23,11 @@ export const format = ({ dictionary, platform, file, options }) => {
 			if (data.ref) {
 				data.ref = convertRef(data.ref);
 
-				if (data.ref === data.value) {
+				if (data.ref?.toString() === data.value?.toString()) {
 					delete data.ref;
 				}
 			}
-			
+
 			if (data.sets) {
 				data = deconstructSets(data, context);
 
