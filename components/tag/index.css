@@ -188,7 +188,7 @@
 	align-items: center;
 	box-sizing: border-box;
 	vertical-align: bottom;
-	max-inline-size: 100%;
+	max-inline-size: calc(var(--mod-tag-height, var(--spectrum-tag-height)) * var(--mod-tag-maximum-width-multiplier, var(--spectrum-tag-maximum-width-multiplier)));
 	outline: none;
 	user-select: none;
 
