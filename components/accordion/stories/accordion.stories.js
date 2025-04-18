@@ -56,6 +56,8 @@ export default {
 		disableAll: false,
 	},
 	parameters: {
+		// Prevent an innacurate depiction of width due to "centered" layout's use of flex on the body.
+		layout: "padded",
 		actions: {
 			handles: ["click .spectrum-Accordion-item"],
 		},
@@ -158,6 +160,9 @@ const content = new Map([
 	]
 ]);
 
+/**
+ * The default accordion displays at medium size with a regular density.
+ */
 export const Default = AccordionGroup.bind({});
 Default.args = {
 	items: content,
