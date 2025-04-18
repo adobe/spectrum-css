@@ -13,11 +13,6 @@
 # After migrating from our old build system, there are a lot of empty folders hanging out still
 # This script aims to clean up those folders
 
-# Legacy tools folder (included storybook & generator)
-# test -d "tools" && rm -rf tools
-
-test -d "tools" && rm -rf tools
-
 # Remove deprecated files
 for folder in components/*; do
     # Only processing nested folders, not top-level files
