@@ -38,7 +38,7 @@ export default {
 				category: "Component",
 				defaultValue: { summary: "regular", },
 			},
-			options: ["regular", "full"],
+			options: ["regular", "partial", "full"],
 			control: "select",
 		},
 		isDisabled,
