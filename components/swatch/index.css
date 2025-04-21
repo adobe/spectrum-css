@@ -331,10 +331,6 @@
 	&.is-selected .spectrum-Swatch-fill::before {
 		border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-75));
 	}
-
-	&.is-selected .spectrum-Swatch-fill {
-		clip-path: circle(calc(50% - (var(--spectrum-swatch-border-thickness-selected) * 2)) at 50% 50%);
-	}
 }
 
 /* Variant: Rounding - Full */
@@ -348,6 +344,10 @@
 		&.is-selected .spectrum-Swatch-fill,
 		&.is-selected .spectrum-Swatch-fill::before {
 			border-radius: var(--mod-corner-radius-full, var(--spectrum-corner-radius-full));
+		}
+
+		&.is-selected .spectrum-Swatch-fill {
+			clip-path: circle(calc(50% - (var(--spectrum-swatch-border-thickness-selected) * 2)) at 50% 50%);
 		}
 	}
 }
