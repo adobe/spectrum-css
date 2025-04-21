@@ -138,7 +138,7 @@
 
 	& .spectrum-InfieldButton {
 		--mod-infield-button-field-edge-to-icon: var(--spectrum-infield-button-inline-field-edge-to-icon);
-		inline-size: calc(var(--mod-infield-button-width, var(--spectrum-infield-button-width)) - var(--mod-infield-button-width, var(--spectrum-infield-button-edge-to-fill)));
+		inline-size: calc(var(--mod-infield-button-width, var(--spectrum-infield-button-width)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)));
 		padding-inline: var(--mod-infield-button-side-edge-to-fill, var(--spectrum-infield-button-inline-edge-to-fill));
 	}
 
