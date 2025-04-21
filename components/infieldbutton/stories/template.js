@@ -20,6 +20,7 @@ export const Template = (
 		isActive,
 		isInline,
 		tabIndex = 0,
+		onclick,
 	} = {},
 	context = {},
 ) => {
@@ -105,6 +106,7 @@ export const Template = (
 					aria-haspopup="listbox"
 					type="button"
 					tabindex=${tabIndex}
+					@click=${onclick}
 				>
 					<div class="${rootClass}-fill">
 						${when(iconName, () =>
