@@ -103,8 +103,6 @@
 	&:active {
 		--mod-infield-button-background-color: var(--mod-infield-button-background-color-down, var(--spectrum-infield-button-background-color-down));
 		--mod-infield-button-icon-color: var(--mod-infield-button-icon-color-down, var(--spectrum-infield-button-icon-color-down));
-
-		transform: perspective(var(--spectrum-infield-button-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 }
 
@@ -124,6 +122,10 @@
 
 	&:disabled {
 		cursor: auto;
+	}
+
+	&:active {
+		transform: perspective(var(--spectrum-infield-button-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
 	&:focus-visible {
