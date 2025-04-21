@@ -81,7 +81,7 @@
 	}
 
 	.spectrum-CloseButton {
-		margin-block: var(--mod--spectrum-toast-spacing-block-close-button, var(--spectrum-toast-spacing-block-close-button));
+		margin-block: var(--mod-toast-spacing-block-close-button, var(--spectrum-toast-spacing-block-close-button));
 		margin-inline-end: var(--mod-toast-spacing-close-button-to-end-edge, var(--spectrum-toast-spacing-close-button-to-end-edge));
 		flex-shrink: 0;
 	}
@@ -141,7 +141,7 @@
 }
 
 .spectrum-Toast-text {
-	/* the toast itself has spacing-200 spacing on the top and bottom. That ensures that the spectrum-Button has the requested spacing-200 token, but poses a problem for the text, which is smaller in height than the button. So this padding for this text is difference between the requested toast-top-to-text/toast-bottom-to-text tokens and the spacing-200.
+	/* The toast itself has spacing-200 spacing on the top and bottom. That ensures that the spectrum-Button has the requested spacing-200 token, but poses a problem for the text, which is smaller in height than the button. So this padding for this text is the difference between the requested toast-top-to-text/toast-bottom-to-text tokens and the spacing-200.
 
 	This padding + the spacing-200 should equal the requested toast-top-to-text/toast-bottom-to-text tokens. */
 	padding-block-start: calc(var(--spectrum-toast-spacing-top-edge-to-text) - var(--spectrum-toast-spacing-edge-to-button-vertical));
