@@ -60,8 +60,7 @@ export const Template = ({
 			data-testid=${ifDefined(testId)}
 			for=${ifDefined(forInput)}
 		>
-			${label}
-			${when(isRequired, () => icon)}
+			${label?.trim()}${when(isRequired, () => html`&#8288;${icon}`)}
 		</label>
 	`;
 };

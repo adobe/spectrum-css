@@ -1,5 +1,21 @@
 # Change log
 
+## 9.0.0-next.2
+
+### Major Changes
+
+📝 [#2673](https://github.com/adobe/spectrum-css/pull/2673) [`89a3f2b`](https://github.com/adobe/spectrum-css/commit/89a3f2bfeed257a5eefeef229efaa3cc7555980c) Thanks [@mdt2](https://github.com/mdt2)!
+
+#### Search S2 migration
+
+Search now uses Spectrum 2 tokens and specifications. The following items have been adjusted:
+
+- Quiet variant has been deprecated and code removed (including removal of the custom property `--mod-search-quiet-button-offset`).
+- Updates to colors, corner rounding, and spacing.
+- Custom property mod adjustments:
+  - Added `--mod-search-top-to-icon`.
+  - Removed `--mod-workflow-icon-size-100`.
+
 ## 9.0.0-next.1
 
 ### Patch Changes
@@ -15,6 +31,14 @@
   - @spectrum-css/icon@10.0.0-next.0
   - @spectrum-css/clearbutton@8.0.0-next.0
   - @spectrum-css/textfield@9.0.0-next.0
+
+## 8.1.2
+
+### Patch Changes
+
+- [#3658](https://github.com/adobe/spectrum-css/pull/3658) [`e9fde67`](https://github.com/adobe/spectrum-css/commit/e9fde67bf341798a6ab34f227b2e7a417d1e5da7) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Change S2 theme border color to gray-800 on keyfocus per design request in order to align with text field.
 
 ## 8.1.1
 
