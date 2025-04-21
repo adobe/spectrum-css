@@ -2,7 +2,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { InlineAlertGroup } from "./inlinealert.test.js";
-import { Template } from "./template.js";
+import { AlertsWithStyleOptions } from "./template.js";
 
 /**
  * In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.
@@ -112,7 +112,7 @@ Default.args = {};
 /**
  * The informative variant uses the informative semantic color (blue) and has an "information" icon to help those with color vision deficiency discern the message tone. This should be used when the message needs to call extra attention, as compared to the neutral variant.
  */
-export const Informative = Template.bind({});
+export const Informative = AlertsWithStyleOptions.bind({});
 Informative.args = {
 	variant: "info",
 	headerText: "Info in-line alert header",
@@ -125,7 +125,7 @@ Informative.tags = ["!dev"];
 /**
  * A negative variant uses the negative semantic color (red) and has an "alert" icon to help those with color vision deficiency to discern the message tone. Negative variants are used to show an error or failure, or to convey something that needs to be immediately acknowledged or addressed.
  */
-export const Negative = Template.bind({});
+export const Negative = AlertsWithStyleOptions.bind({});
 Negative.args = {
 	variant: "negative",
 	headerText: "Negative in-line alert header",
@@ -138,7 +138,7 @@ Negative.tags = ["!dev"];
 /**
  * The positive variant uses the positive semantic color (green) and has a "checkmark" icon to help those with color vision deficiency discern the message tone. This variant should be used to inform someone of a successful function or result of an action they took.
  */
-export const Positive = Template.bind({});
+export const Positive = AlertsWithStyleOptions.bind({});
 Positive.args = {
 	variant: "positive",
 	headerText: "Positive in-line alert header",
@@ -151,7 +151,7 @@ Positive.tags = ["!dev"];
 /**
  * To warn about a situation that may need to be addressed soon, use the notice variant. It utilizes the notice semantic color (orange) and has an "alert" icon to help those with color vision deficiency to discern the message tone.
  */
-export const Notice = Template.bind({});
+export const Notice = AlertsWithStyleOptions.bind({});
 Notice.args = {
 	variant: "notice",
 	headerText: "Notice in-line alert header",
@@ -164,7 +164,7 @@ Notice.tags = ["!dev"];
 /**
  * An in-line alert with a close button in the footer. Combine this strategy with any variant.
  */
-export const Closable = Template.bind({});
+export const Closable = AlertsWithStyleOptions.bind({});
 Closable.args = {
 	variant: "negative",
 	isClosable: true,
@@ -174,6 +174,19 @@ Closable.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 Closable.tags = ["!dev"];
+
+/**
+ * An in-line alert with a link in the footer. Combine this strategy with any variant.
+ */
+export const Link = AlertsWithStyleOptions.bind({});
+Link.args = {
+	hasLink: true,
+	headerText: "Click the link",
+};
+Link.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Link.tags = ["!dev"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = InlineAlertGroup.bind({});

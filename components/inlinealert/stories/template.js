@@ -4,6 +4,7 @@ import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { Container } from "@spectrum-css/preview/decorators";
 
 import "../index.css";
 
@@ -89,3 +90,26 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const AlertsWithStyleOptions = ({
+	...args
+}, context = {}) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+		${Template({
+			...args,
+		}, context)}
+		${Template({
+			...args,
+			isSubtle: true,
+		}, context)}
+		${Template({
+			...args,
+			isBold: true,
+		}, context)}
+	`,
+}, context);
