@@ -30,5 +30,15 @@ export const InlineAlertGroup = Variants({
 			testHeading: "Bold",
 			isBold: true,
 		},
+		{
+			testHeading: "Subtle",
+			isSubtle: true,
+			isClosable: true,
+		},
+		{
+			testHeading: "Bold",
+			isBold: true,
+			isClosable: true,
+		},
 	],
 });
