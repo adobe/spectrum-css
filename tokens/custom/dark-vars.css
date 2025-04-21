@@ -58,7 +58,7 @@
 	--spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-700);
 
 	--spectrum-swatch-border-color: rgb(255 255 255 / 51%);
-	--spectrum-swatch-border-color-light: rgb(255 255 255 / 20%);
+	--spectrum-swatch-border-color-light: rgb(255 255 255 / var(--swatch-group-border-opacity));
 
 	--spectrum-treeview-item-background-color-quiet-selected: rgba(var(--spectrum-gray-900-rgb), 0.07);
 	--spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
