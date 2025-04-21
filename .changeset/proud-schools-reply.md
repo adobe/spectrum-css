@@ -18,6 +18,8 @@ An `Add Swatch` variant has been added with the required color tokens and the sp
 
 `--spectrum-swatch-border-color-rgb`
 `--spectrum-swatch-border-opacity`
+`--spectrum-corner-radius-full`
+`--spectrum-corner-radius-none`
 `--spectrum-swatch-disabled-icon-border-opacity`
 `--spectrum-swatch-icon-color`
 `--spectrum-swatch-rectangle-width-multiplier`
@@ -28,6 +30,7 @@ An `Add Swatch` variant has been added with the required color tokens and the sp
 `--mod-add-button-background-down`
 `--mod-add-button-background-hover`
 `--mod-add-button-background-keyboard-focus`
+`--mod-corner-radius-full`
 `--mod-mixed-button-background`
 `--mod-swatch-border-color-rgb`
 `--mod-swatch-border-opacity`
