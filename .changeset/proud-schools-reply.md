@@ -5,7 +5,7 @@
 
 #### S2 migration swatchgroup
 
-This migrates the `rating` component to S2. Custom properties have been remapped and added per the design specification.
+This migrates the `swatch` and `swatchgroup` components to S2. Custom properties have been remapped and added per the design specification.
 
 An `Add Swatch` variant has been added with the required color tokens and the specified add UI icon.
 
