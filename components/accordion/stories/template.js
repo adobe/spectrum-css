@@ -76,6 +76,7 @@ export const Template = ({
 	rootClass = "spectrum-Accordion",
 	size = "m",
 	density = "regular",
+	isQuiet = false,
 	items = [],
 	id = getRandomId("accordion"),
 	disableAll = false,
@@ -90,9 +91,10 @@ export const Template = ({
 			class="${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
+					typeof size !== "undefined" && size !== "m",
 				[`${rootClass}--${density}`]:
 					typeof density !== "undefined" && density !== "regular",
+				[`${rootClass}--quiet`]: isQuiet,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}"
 			id=${ifDefined(id)}

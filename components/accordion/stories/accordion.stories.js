@@ -1,7 +1,7 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { isQuiet, size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -47,6 +47,7 @@ export default {
 			options: ["compact", "regular", "spacious"],
 			control: "select",
 		},
+		isQuiet,
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
@@ -54,6 +55,7 @@ export default {
 		density: "regular",
 		collapseAll: false,
 		disableAll: false,
+		isQuiet: false,
 	},
 	parameters: {
 		// Prevent an innacurate depiction of width due to "centered" layout's use of flex on the body.
@@ -211,6 +213,22 @@ Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 Spacious.storyName = "Density: Spacious";
+
+/**
+ * The optional quiet style for accordion has no dividers between sections. This style works best when a clear layout
+ * (vertical stack, table, grid) makes it easy see and understand. Too many quiet components in a small space can be
+ * hard to differentiate. This can be applied by adding the `spectrum-Accordion--quiet` class alongside the
+ * parent `spectrum-Accordion` class.
+ */
+export const Quiet = Template.bind({});
+Quiet.tags = ["!dev"];
+Quiet.args = {
+	items: content,
+	isQuiet: true,
+};
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * Each of the different sizes have varying font sizes, and tighter or looser vertical spacing between the rows. Medium is the default size.

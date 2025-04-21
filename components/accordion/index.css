@@ -27,6 +27,7 @@
 	--spectrum-accordion-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
 	--spectrum-accordion-item-content-area-top-to-content: var(--spectrum-accordion-content-area-top-to-content);
 	--spectrum-accordion-item-content-area-bottom-to-content: var(--spectrum-accordion-content-area-bottom-to-content);
+	--spectrum-accordion-divider-thickness: var(--spectrum-divider-thickness-small);
 
 	/* Text header */
 	--spectrum-accordion-item-header-font: var(--spectrum-sans-font-family-stack);
@@ -172,6 +173,10 @@
 	}
 }
 
+.spectrum-Accordion--quiet {
+	--spectrum-accordion-divider-thickness: 0px;
+}
+
 .spectrum-Accordion-item.is-disabled {
 	--spectrum-accordion-item-header-cursor: default;
 	--spectrum-accordion-background-color-default: transparent;
@@ -198,10 +203,10 @@
 	margin: 0;
 	min-block-size: var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size));
 	min-inline-size: var(--mod-accordion-item-minimum-width, var(--spectrum-accordion-item-minimum-width));
-	border-block-end: var(--mod-accordion-divider-thickness, var(--spectrum-divider-thickness-small)) solid var(--spectrum-accordion-divider-color);
+	border-block-end: var(--mod-accordion-divider-thickness, var(--spectrum-accordion-divider-thickness)) solid var(--spectrum-accordion-divider-color);
 
 	&:first-child {
-		border-block-start: var(--mod-accordion-divider-thickness, var(--spectrum-divider-thickness-small)) solid var(--spectrum-accordion-divider-color);
+		border-block-start: var(--mod-accordion-divider-thickness, var(--spectrum-accordion-divider-thickness)) solid var(--spectrum-accordion-divider-color);
 	}
 }
 
@@ -290,6 +295,10 @@
 	> .spectrum-Accordion-itemContent {
 		display: block;
 	}
+}
+
+.spectrum-Accordion--quiet .spectrum-Accordion-itemHeader {
+	border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
 }
 
 @media (forced-colors: active) {
