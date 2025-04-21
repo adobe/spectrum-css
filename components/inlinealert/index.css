@@ -69,6 +69,9 @@
 	--spectrum-inlinealert-bold-background-color-notice: var(--spectrum-notice-background-color-default);
 	--spectrum-inlinealert-bold-background-color-negative: var(--spectrum-negative-background-color-default);
 	--spectrum-inlinealert-bold-background-color-neutral: var(--spectrum-neutral-background-color-default);
+
+	/* Link */
+	--mod-link-text-color: var(--highcontrast-inlinealert-content-color, var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color)));
 }
 
 .spectrum-InLineAlert {

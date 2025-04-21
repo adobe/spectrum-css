@@ -1,5 +1,6 @@
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -16,6 +17,7 @@ export const Template = ({
 	isSubtle = false,
 	isBold = false,
 	isClosable = false,
+	hasLink = false,
 } = {}, context = {}) => {
 	let iconName;
 	switch (variant) {
@@ -44,7 +46,7 @@ export const Template = ({
 				customClasses: [`${rootClass}-icon`],
 			}, context) : nothing;
 
-	const closableMarkup = isClosable ? html`
+	const closableMarkup = (isClosable && !hasLink) ? html`
 		<div class="spectrum-InLineAlert-footer">
 			${Button({
 				treatment: "outline",
@@ -52,6 +54,15 @@ export const Template = ({
 				iconName: false,
 				hideLabel: false,
 				label: "Ok",
+			})}
+		</div>
+	` : nothing;
+
+	const linkMarkup = (hasLink && !isClosable) ? html`
+		<div class="spectrum-InLineAlert-footer">
+			${Link({
+				url: "#",
+				text: "Link",
 			})}
 		</div>
 	` : nothing;
@@ -74,6 +85,7 @@ export const Template = ({
 			</div>
 			<div class="${rootClass}-content">${text}</div>
 			${closableMarkup}
+			${linkMarkup}
 		</div>
 	`;
 };

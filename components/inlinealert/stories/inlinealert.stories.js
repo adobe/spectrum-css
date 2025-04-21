@@ -69,6 +69,17 @@ export default {
 				category: "Advanced",
 			},
 			control: "boolean",
+			if: { arg: "hasLink", truthy: false },
+		},
+		hasLink: {
+			name: "Link",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Advanced",
+			},
+			control: "boolean",
+			if: { arg: "isClosable", truthy: false },
 		},
 	},
 	args: {
@@ -79,6 +90,7 @@ export default {
 		isSubtle: false,
 		isBold: false,
 		isClosable: false,
+		hasLink: false,
 	},
 	parameters: {
 		design: {
