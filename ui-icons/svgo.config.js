@@ -1,4 +1,4 @@
-module.exports = ({
+export default ({
 	clean = false,
 	idPrefix = false,
 	// classPrefix = "spectrum-UIIcon",

@@ -18,7 +18,6 @@ export const withContextWrapper = makeDecorator({
 			} = {},
 			globals: {
 				color = "light",
-				scale = "medium",
 			} = {},
 			parameters: {
 				showTestingGrid = false,
@@ -38,7 +37,7 @@ export const withContextWrapper = makeDecorator({
 			},
 		};
 
-		const original = { color, scale };
+		const original = { color };
 
 		useEffect(() => {
 			const isDocs = viewMode === "docs";
@@ -46,9 +45,6 @@ export const withContextWrapper = makeDecorator({
 
 			// Start by attaching the appropriate tokens to the container
 			toggleStyles(document.body, "tokens", tokens, true);
-
-			// add the default classes to the body to ensure labels, headings, and borders are styled correctly
-			document.body.classList.add("spectrum");
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
@@ -58,7 +54,6 @@ export const withContextWrapper = makeDecorator({
 
 				// Reset the context to the original values
 				color = original.color;
-				scale = original.scale;
 
 				let staticKey = staticColor;
 				if (!isTestingWrapper && !staticKey && hasStaticElement) {
@@ -70,9 +65,6 @@ export const withContextWrapper = makeDecorator({
 
 				// If we can't determine the static key, we can't use the static color
 				if (!staticKey) hasStaticElement = false;
-
-				// Every container gets the spectrum class
-				container.classList.toggle("spectrum", true);
 
 				// Let the static color override the color if it's set
 				if (!isTestingWrapper && hasStaticElement && staticColorSettings[staticKey]?.color) {
@@ -86,11 +78,7 @@ export const withContextWrapper = makeDecorator({
 				}
 
 				for (let c of ["light", "dark"]) {
-					container.classList.toggle(`spectrum--${c}`, c === color);
-				}
-
-				for (const s of ["medium", "large"]) {
-					container.classList.toggle(`spectrum--${s}`, s === scale);
+					container.style.setProperty('color-scheme', c);
 				}
 
 				if (!isTestingWrapper) {
@@ -104,7 +92,7 @@ export const withContextWrapper = makeDecorator({
 				}
 			}
 
-		}, [viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, showTestingGrid]);
+		}, [viewMode, original, staticColor, color, rootClass, tokens, staticColorSettings, showTestingGrid]);
 
 		return StoryFn(data);
 	},

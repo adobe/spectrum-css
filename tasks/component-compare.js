@@ -1,25 +1,46 @@
-const { existsSync, statSync } = require("fs");
-const { readFile } = require("fs").promises;
-const { join, relative, dirname, basename, extname } = require("path");
+/* eslint-disable no-console */
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
-const fg = require("fast-glob");
-const tar = require("tar");
-const _ = require("lodash");
+import fs, { existsSync, statSync } from "node:fs";
+import { basename, dirname, extname, join, relative } from "node:path";
+const { readFile } = fs.promises;
 
-const nunjucks = require("nunjucks");
+import fg from "fast-glob";
+import { pad } from "lodash-es";
+import semver from "semver";
+import { extract } from "tar";
+
+import nunjucks from "nunjucks";
 const env = new nunjucks.Environment();
 
-const npmFetch = require("npm-registry-fetch");
+import npmFetch from "npm-registry-fetch";
 
-const { hideBin } = require("yargs/helpers");
-const yargs = require("yargs");
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
-const Diff = require("diff");
-const Diff2Html = require("diff2html");
+import { createPatch, diffChars, diffCss, diffJson } from "diff";
+import Diff2Html from "diff2html";
 
-const { dirs, log, bytesToSize, copy, writeConsoleTable, cleanAndMkdir, writeAndReport, getAllComponentNames } = require("./utilities.js");
+import { bytesToSize, cleanAndMkdir, copy, dirs, getAllComponentNames, log, writeAndReport, writeConsoleTable } from "./utilities.js";
 
-require("colors");
+import "colors";
+
+import { createRequire } from "module";
+import { fileURLToPath } from "url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const require = createRequire(import.meta.url);
 
 /**
  * A global object to store the paths to the output directories
@@ -99,18 +120,18 @@ async function generateDiff({
 
 		const extension = extname(npm.path);
 
-		const patch = Diff.createPatch(file, npm.content, local.content);
+		const patch = createPatch(file, npm.content, local.content);
 
 		let diff;
 		switch(extension) {
 			case ".css":
-				diff = Diff.diffCss(npm.content, local.content);
+				diff = diffCss(npm.content, local.content);
 				break;
 			case ".json":
-				diff = Diff.diffJson(npm.content, local.content);
+				diff = diffJson(npm.content, local.content);
 				break;
 			default:
-				diff = Diff.diffChars(npm.content, local.content);
+				diff = diffChars(npm.content, local.content);
 		}
 
 		data.hasDiff = diff.length > 1;
@@ -142,12 +163,36 @@ async function generateDiff({
 	);
 }
 
+function getPreviousVersion(tag, versions) {
+	const semTag = semver.parse(tag, { includePrerelease: true });
+	// Get the previous version of this tag (if it exists) to compare against
+	if (semTag?.prerelease) {
+		tag = [semTag.major, semTag.minor, semTag.patch].join(".") + "-" + [...semTag.prerelease.slice(0, -1), semTag.prerelease[semTag.prerelease.length - 1] - 1].join(".");
+		if (versions?.[tag]) return tag;
+	}
+
+	if (semTag.patch > 0) {
+		tag = [semTag.major, semTag.minor, semTag.patch - 1].join(".");
+		if (versions?.[tag]) return tag;
+	}
+
+	if (semTag.minor > 0) {
+		tag = [semTag.major, semTag.minor - 1, 0].join(".");
+		if (versions?.[tag]) return tag;
+	}
+
+	tag = [semTag.major - 1, 0, 0].join(".");
+	if (versions?.[tag]) return tag;
+
+	return "latest";
+}
+
 async function fetchPublishedComponent(packageName, {
 	cacheLocation,
 	outputLocation,
-}) {
+	tag,
+} = {}) {
 	const warnings = [];
-	let tag;
 
 	// Check if the component exists on npm; do not fail if it isn't found -
 	//   report it and output only the sizes of the local compiled assets
@@ -158,8 +203,15 @@ async function fetchPublishedComponent(packageName, {
 		})) ?? {};
 
 	// If the component exists on npm, fetch the latest release data
+	if (typeof tag === "undefined") {
+		tag = "latest";
+	}
+	else {
+		tag = getPreviousVersion(tag, npmData?.versions);
+	}
+
 	// @todo what is the fallback if there isn't a latest tag?
-	if (npmData["dist-tags"]?.latest) {
+	if (!npmData?.versions?.[tag]) {
 		tag = npmData["dist-tags"]?.latest;
 	}
 
@@ -186,15 +238,13 @@ async function fetchPublishedComponent(packageName, {
 
 	// The tarball path should exist locally now; if not, something went wrong
 	if (existsSync(tarballPath)) {
-		await tar
-			.extract({
-				file: tarballPath,
-				cwd: outputLocation,
-				// Only unpack the dist folder
-				filter: (path) => path.startsWith("package/dist"),
-				strip: 2,
-			})
-			.catch((err) => warnings.push(err));
+		await extract({
+			file: tarballPath,
+			cwd: outputLocation,
+			// Only unpack the dist folder
+			filter: (path) => path.startsWith("package/dist"),
+			strip: 2,
+		}).catch((err) => warnings.push(err));
 	}
 
 	return { tag, warnings };
@@ -206,12 +256,13 @@ async function processComponent(
 		cwd,
 		output = pathing.output,
 		cacheLocation = pathing.cache,
+		compareTag,
 	}
 ) {
 	if (!component) return Promise.reject("No component specified.");
 
 	cleanAndMkdir(join(output, "diffs", component));
-	cleanAndMkdir(join(pathing.latest, component));
+	cleanAndMkdir(join(pathing.compare, component));
 
 	const pkgPath = require.resolve(`@spectrum-css/${component}/package.json`) ?? join(cwd, component, "package.json");
 	const pkg = pkgPath && existsSync(pkgPath)
@@ -252,7 +303,8 @@ async function processComponent(
 	if (pkg?.name) {
 		const npmResults = await fetchPublishedComponent(pkg.name, {
 			cacheLocation,
-			outputLocation: join(pathing.latest, component),
+			outputLocation: join(pathing.compare, component),
+			tag: compareTag ?? pkg.version,
 		});
 
 		if (npmResults?.tag) {
@@ -263,10 +315,10 @@ async function processComponent(
 			warnings.push(...npmResults.warnings);
 		}
 
-		if (existsSync(join(pathing.latest, component))) {
+		if (existsSync(join(pathing.compare, component))) {
 			const files =
 				(await fg("**/*.css", {
-					cwd: join(pathing.latest, component),
+					cwd: join(pathing.compare, component),
 				})) ?? [];
 
 			if (files.length > 0) found++;
@@ -292,7 +344,7 @@ async function processComponent(
 			processFile(
 				filename,
 				join(cwd, component, "dist"),
-				join(pathing.latest, component)
+				join(pathing.compare, component)
 			)
 		)
 	).then((results) => {
@@ -353,7 +405,7 @@ async function processFile(filename, localPath, comparePath) {
 async function main(
 	components,
 	output,
-	{ skipCache = false } = {}
+	{ skipCache = false, base } = {}
 ) {
 	if (!components || components.length === 0) {
 		components = getAllComponentNames(false);
@@ -364,7 +416,7 @@ async function main(
 
 	pathing.output = output;
 	pathing.cache = join(output, "packages");
-	pathing.latest = join(output, "latest");
+	pathing.compare = join(output, "latest");
 
 	/** Setup the folder structure */
 	cleanAndMkdir(pathing.output);
@@ -373,7 +425,7 @@ async function main(
 	// unless we want to re-fetch the tarballs
 	cleanAndMkdir(pathing.cache, skipCache);
 
-	cleanAndMkdir(pathing.latest);
+	cleanAndMkdir(pathing.compare);
 
 	const promises = [];
 	// Copy the bundled CSS to the output directory
@@ -399,6 +451,7 @@ async function main(
 			return processComponent(component, {
 				output: pathing.output,
 				cacheLocation: pathing.cache,
+				compareTag: base,
 			}).catch((err) =>
 				Promise.resolve({
 					component,
@@ -458,7 +511,7 @@ async function main(
 		});
 
 		// This is our report header to indicate the start of a new component's data
-		cliOutput.push(`\n${_.pad(` ${component} `, 20, "-").cyan}\n`);
+		cliOutput.push(`\n${pad(` ${component} `, 20, "-").cyan}\n`);
 
 		if (warnings.length > 0) {
 			warnings.forEach((warning) => cliOutput.push(`${warning}\n`));
@@ -552,9 +605,15 @@ let {
 	_: components,
 	output = join(dirs.root, ".diff-output"),
 	cache = true,
+	base,
 	// @todo allow to run against local main or published versions
-} = yargs(hideBin(process.argv)).argv;
+} = yargs(hideBin(process.argv))
+	.option("base", {
+		description: "The tag to compare against",
+		type: "string",
+	})
+	.parse();
 
-main(components, output, { skipCache: !cache }).then((code) => {
+main(components, output, { skipCache: !cache, base }).then((code) => {
 	process.exit(code);
 });

@@ -13,6 +13,7 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"type": "module",
 	"exports": {
 		".": "./dist/index.css",
 		"./*.md": "./*.md",

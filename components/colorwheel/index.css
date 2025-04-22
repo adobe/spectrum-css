@@ -12,155 +12,248 @@
  */
 
 .spectrum-ColorWheel {
-	--spectrum-colorwheel-inline-size: var(--spectrum-color-wheel-width);
-	--spectrum-colorwheel-block-size: var(--spectrum-color-wheel-width);
-	--spectrum-colorwheel-min-inline-size: var(--spectrum-color-wheel-minimum-width);
+  --spectrum-colorwheel-inline-size: var(--spectrum-color-wheel-width);
+  --spectrum-colorwheel-block-size: var(--spectrum-color-wheel-width);
+  --spectrum-colorwheel-min-inline-size: var(
+    --spectrum-color-wheel-minimum-width
+  );
 
-	/* @TODO: leveraging the rgb token in this case to achieve the desired border color implementation as rgb + opacity are required by the `rgba` function. */
-	--spectrum-colorwheel-border-color-rgb: var(--spectrum-gray-1000-rgb);
+  --spectrum-colorwheel-border-opacity: var(
+    --spectrum-color-wheel-border-opacity
+  );
+  --spectrum-colorwheel-border-color: color-mix(
+    in sRGB,
+    var(--spectrum-gray-1000),
+    var(--spectrum-colorwheel-border-opacity)
+  );
 
-	--spectrum-colorwheel-border-opacity: var(--spectrum-color-wheel-border-opacity);
-	--spectrum-colorwheel-border-color: rgba(var(--spectrum-colorwheel-border-color-rgb), var(--spectrum-colorwheel-border-opacity));
+  --spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
+  --spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
 
-	--spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
-	--spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
+  --spectrum-colorwheel-fill-color-disabled: var(
+    --spectrum-disabled-background-color
+  );
 
-	--spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
+  /* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used with JS in calculating the clip-path paths and colorarea-container-size */
+  --_track-width: var(
+    --mod-colorwheel-track-width,
+    var(--spectrum-colorwheel-track-width)
+  );
+  /* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used with JS in calculating the clip-path paths and colorarea-container-size */
+  --_border-width: var(--spectrum-colorwheel-border-width);
 
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used with JS in calculating the clip-path paths and colorarea-container-size */
-	--_track-width: var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used with JS in calculating the clip-path paths and colorarea-container-size */
-	--_border-width: var(--spectrum-colorwheel-border-width);
+  position: relative;
+  display: block;
+  min-inline-size: var(
+    --mod-colorwheel-min-inline-size,
+    var(--spectrum-colorwheel-min-inline-size)
+  );
+  inline-size: var(
+    --mod-colorwheel-inline-size,
+    var(--spectrum-colorwheel-inline-size)
+  );
+  block-size: var(
+    --mod-colorwheel-block-size,
+    var(--spectrum-colorwheel-block-size)
+  );
+  touch-action: none; /* Disable touch scrolling on touch devices to allow for color picking */
+  user-select: none;
+  cursor: default;
 
-	position: relative;
-	display: block;
-	min-inline-size: var(--mod-colorwheel-min-inline-size, var(--spectrum-colorwheel-min-inline-size));
-	inline-size: var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size));
-	block-size: var(--mod-colorwheel-block-size, var(--spectrum-colorwheel-block-size));
-	touch-action: none; /* Disable touch scrolling on touch devices to allow for color picking */
-	user-select: none;
-	cursor: default;
-
-	/**
+  /**
 	 * Color wheel exterior border
 	 * - Calcs for `inline-size` and `block-size` subtract 4 times the component's border width
 	 * (to account for the inset width of the exterior border) from the component's width.
 	 */
-	&::before {
-		inline-size: calc(var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size)) - calc(4 * var(--spectrum-colorwheel-border-width)));
-		block-size: calc(var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size)) - calc(4 * var(--spectrum-colorwheel-border-width)));
-		inset: var(--spectrum-colorwheel-border-width);
-		content: "";
-		position: absolute;
-		border-width: var(--spectrum-colorwheel-border-width);
-		border-style: solid;
-		border-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
-		border-radius: 100%;
-		z-index: 1;
-	}
+  &::before {
+    inline-size: calc(
+      var(
+          --mod-colorwheel-inline-size,
+          var(--spectrum-colorwheel-inline-size)
+        ) -
+        calc(4 * var(--spectrum-colorwheel-border-width))
+    );
+    block-size: calc(
+      var(
+          --mod-colorwheel-inline-size,
+          var(--spectrum-colorwheel-inline-size)
+        ) -
+        calc(4 * var(--spectrum-colorwheel-border-width))
+    );
+    inset: var(--spectrum-colorwheel-border-width);
+    content: "";
+    position: absolute;
+    border-width: var(--spectrum-colorwheel-border-width);
+    border-style: solid;
+    border-color: var(
+      --mod-colorwheel-border-color,
+      var(--spectrum-colorwheel-border-color)
+    );
+    border-radius: 100%;
+    z-index: 1;
+  }
 
-	/**
+  /**
 	 * Color wheel interior border
 	 * - Calcs for `inset` 2 times the component's border width from the
 	 * track width (to account for the inset width of the interior border)
 	 */
-	&::after {
-		inset: calc(var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width)) - (calc(2 * var(--spectrum-colorwheel-border-width))));
-		content: "";
-		position: absolute;
-		border-width: var(--spectrum-colorwheel-border-width);
-		border-style: solid;
-		border-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
-		border-radius: 100%;
-		z-index: 1;
-	}
+  &::after {
+    inset: calc(
+      var(
+          --mod-colorwheel-track-width,
+          var(--spectrum-colorwheel-track-width)
+        ) -
+        (calc(2 * var(--spectrum-colorwheel-border-width)))
+    );
+    content: "";
+    position: absolute;
+    border-width: var(--spectrum-colorwheel-border-width);
+    border-style: solid;
+    border-color: var(
+      --mod-colorwheel-border-color,
+      var(--spectrum-colorwheel-border-color)
+    );
+    border-radius: 100%;
+    z-index: 1;
+  }
 
-	&.is-focused {
-		z-index: 2;
-	}
+  &.is-focused {
+    z-index: 2;
+  }
 
-	&.is-disabled {
-		pointer-events: none;
+  &.is-disabled {
+    pointer-events: none;
 
-		&::before,
-		&::after,
-		.spectrum-ColorWheel-inner::before {
-			border-color: var(--highcontrast-colorwheel-border-color-disabled, transparent);
-		}
-	}
+    &::before,
+    &::after,
+    .spectrum-ColorWheel-inner::before {
+      border-color: var(
+        --highcontrast-colorwheel-border-color-disabled,
+        transparent
+      );
+    }
+  }
 
-	&.is-dragged {
-		/* Be on top when dragging so loupe can overlap */
-		z-index: 2;
-	}
+  &.is-dragged {
+    /* Be on top when dragging so loupe can overlap */
+    z-index: 2;
+  }
 }
 
 .spectrum-ColorWheel-inner {
-	display: flex;
-	position: absolute;
-	inset-inline-start: 0;
-	inset-inline-end: 0;
-	inset-block-start: 0;
-	inset-block-end: 0;
-	inline-size: var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
-	block-size: var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
-	margin: auto;
+  display: flex;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inline-size: var(
+    --mod-colorwheel-colorarea-container-size,
+    var(--spectrum-colorwheel-colorarea-container-size)
+  );
+  block-size: var(
+    --mod-colorwheel-colorarea-container-size,
+    var(--spectrum-colorwheel-colorarea-container-size)
+  );
+  margin: auto;
 }
 
 .spectrum-ColorWheel-colorarea-container {
-	block-size: auto;
-	inline-size: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  block-size: auto;
+  inline-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .spectrum-ColorWheel-slider {
-	opacity: 0;
-	position: absolute;
-	inset-block-start: 0;
-	inset-inline-start: 0;
-	inline-size: 100%;
-	block-size: 100%;
-	z-index: 0;
-	margin: 0;
-	pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  z-index: 0;
+  margin: 0;
+  pointer-events: none;
 }
 
 .spectrum-ColorWheel-handle {
-	transform: translate(calc(var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size)) / 2 - var(--mod-colorwheel-track-width, var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width))) / 2), 0);
-	inset-block-start: 50%;
-	inset-inline: 50%;
+  transform: translate(
+    calc(
+      var(
+          --mod-colorwheel-inline-size,
+          var(--spectrum-colorwheel-inline-size)
+        ) /
+        2 -
+        var(
+          --mod-colorwheel-track-width,
+          var(
+            --mod-colorwheel-track-width,
+            var(--spectrum-colorwheel-track-width)
+          )
+        ) /
+        2
+    ),
+    0
+  );
+  inset-block-start: 50%;
+  inset-inline: 50%;
 }
 
 .spectrum-ColorWheel-ColorArea-handle {
-	inset-block-start: 0;
-	inset-inline-end: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
 
-	&:dir(rtl) {
-		inset-inline-start: 0;
-	}
+  &:dir(rtl) {
+    inset-inline-start: 0;
+  }
 }
 
 .spectrum-ColorWheel-wheel {
-	position: absolute;
-	background: conic-gradient(from 90deg, red, rgb(255 128 0), rgb(255 255 0), rgb(128 255 0), rgb(0 255 0), rgb(0 255 128), rgb(0 255 255), rgb(0 128 255), rgb(0 0 255), rgb(128 0 255), rgb(255 0 255), rgb(255 0 128), red);
-	inset-block: var(--spectrum-colorwheel-border-width);
-	inset-inline: var(--spectrum-colorwheel-border-width);
-	clip-path: path(evenodd, var(--mod-colorwheel-path, var(--spectrum-colorwheel-path)));
+  position: absolute;
+  background: conic-gradient(
+    from 90deg,
+    red,
+    rgb(255 128 0),
+    rgb(255 255 0),
+    rgb(128 255 0),
+    rgb(0 255 0),
+    rgb(0 255 128),
+    rgb(0 255 255),
+    rgb(0 128 255),
+    rgb(0 0 255),
+    rgb(128 0 255),
+    rgb(255 0 255),
+    rgb(255 0 128),
+    red
+  );
+  inset-block: var(--spectrum-colorwheel-border-width);
+  inset-inline: var(--spectrum-colorwheel-border-width);
+  clip-path: path(
+    evenodd,
+    var(--mod-colorwheel-path, var(--spectrum-colorwheel-path))
+  );
 
-	&.is-disabled {
-		pointer-events: none;
-		background: var(--highcontrast-colorwheel-fill-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
-	}
+  &.is-disabled {
+    pointer-events: none;
+    background: var(
+      --highcontrast-colorwheel-fill-color-disabled,
+      var(
+        --mod-colorwheel-fill-color-disabled,
+        var(--spectrum-colorwheel-fill-color-disabled)
+      )
+    );
+  }
 }
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
-	.spectrum-ColorWheel {
-		--highcontrast-colorwheel-border-color-disabled: GrayText;
-		--highcontrast-colorwheel-fill-color-disabled: Canvas;
+  .spectrum-ColorWheel {
+    --highcontrast-colorwheel-border-color-disabled: GrayText;
+    --highcontrast-colorwheel-fill-color-disabled: Canvas;
 
-		forced-color-adjust: none;
-	}
+    forced-color-adjust: none;
+  }
 }

@@ -13,6 +13,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
+  "type": "module",
   "exports": {
     ".": "./dist/index.css",
     "./*.md": "./*.md",
@@ -26,6 +27,11 @@
   "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/tokens": ">=16.1.0-next.0"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/tokens": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@spectrum-css/tokens": "16.1.0-next.2"
@@ -48,10 +54,5 @@
       "rootClass": "spectrum-InfieldProgressCircle",
       "swc": "https://opensource.adobe.com/spectrum-web-components/components/progress-circle/"
     }
-  ],
-  "peerDependenciesMeta": {
-    "@spectrum-css/tokens": {
-      "optional": true
-    }
-  }
+  ]
 }

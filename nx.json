@@ -86,7 +86,7 @@
 			],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-builder.js\").default()'"
+					"node ./tasks/component-builder.js"
 				]
 			},
 			"outputs": ["{projectRoot}/dist/*.css*", "{projectRoot}/dist/**/*.css*"]
@@ -182,7 +182,7 @@
 			"inputs": ["styles", "postcss", "stylelint", "reporter"],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
+					"node ./tasks/component-reporter.js"
 				]
 			},
 			"outputs": ["{projectRoot}/dist/metadata.json"]

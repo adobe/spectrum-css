@@ -11,13 +11,18 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = (options) => require("../postcss.config.js")({
-	...options,
+import postcssConfig from "../postcss.config.js";
+
+export default (ctx = {}) => postcssConfig({
+	...ctx,
 	resolveImports: false,
 	env: "production",
-	map: false,
 	lint: false,
 	additionalPlugins: {
 		"@csstools/postcss-bundler": {},
 	},
+	options: {
+		...ctx.options,
+		map: true,
+	}
 });

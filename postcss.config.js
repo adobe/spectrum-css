@@ -11,10 +11,15 @@
  * governing permissions and limitations under the License.
  */
 
-const fs = require("node:fs");
-const { join, basename } = require("node:path");
+import { writeFileSync } from "node:fs";
+import { basename, join } from "node:path";
 
-module.exports = ({
+import { fileURLToPath } from "url";
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+
+import stylelint from "stylelint";
+
+export default ({
 	resolveImports = true,
 	lint = true,
 	verbose = true,
@@ -58,7 +63,7 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- LINTING ---------------- */
 			// Linter needs to run before the minifier removes comments (such as the stylelint-ignore comments)
-			stylelint: {
+			"stylelint": stylelint({
 				cache: true,
 				// Passing the config path saves a little time b/c it doesn't have to find it
 				configFile: join(__dirname, "stylelint.config.js"),
@@ -68,7 +73,7 @@ module.exports = ({
 				ignorePath: join(__dirname, ".stylelintignore"),
 				reportNeedlessDisables: lint,
 				reportInvalidScopeDisables: lint,
-			},
+			}),
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
@@ -96,6 +101,7 @@ module.exports = ({
 				env,
 				features: {
 					"dir-pseudo-class": { preserve: true },
+					"color-mix": { preserve: true },
 					"nesting-rules": {
 						preserve: true,
 						edition: "2021",
@@ -131,7 +137,7 @@ module.exports = ({
 			},
 			"postcss-modules": module ? {
 				getJSON: (cssFileName, json) =>
-					fs.writeFileSync(join(cwd, "dist", basename(cssFileName, ".css") + ".json"), JSON.stringify(json)),
+					writeFileSync(join(cwd, "dist", basename(cssFileName, ".css") + ".json"), JSON.stringify(json)),
 				exportGlobals: true,
 				generateScopedName: function (name) {
 					const cleanClass = name.toLowerCase().replaceAll(/-/g, "_");

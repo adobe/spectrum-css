@@ -13,14 +13,22 @@
 
 import postcssConfig from "../postcss.config.js";
 
-export default (options) => postcssConfig({
-	...options,
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+
+// Read in --minify from the command line
+const argv = yargs(hideBin(process.argv)).argv;
+
+/** @type {import("postcss").ProcessOptions} */
+export default (ctx = {}) => postcssConfig({
+	...ctx,
+	minify: argv?.ext?.startsWith("min.") ?? ctx.file?.extname?.startsWith("min.") ?? false,
+	options: {
+		...ctx.options,
+		map: false,
+	},
 	env: "production",
-	map: false,
 	additionalPlugins: {
-		"@spectrum-tools/postcss-rgb-mapping": {
-			colorFunctionalNotation: false,
-		},
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
