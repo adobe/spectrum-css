@@ -13,16 +13,16 @@
 
 /* eslint-disable no-console */
 
-const fs = require("fs");
+import fs, { existsSync, mkdirSync } from "fs";
+import { join } from "path";
 const fsp = fs.promises;
-const path = require("path");
 
-const fg = require("fast-glob");
+import fg from "fast-glob";
 
-const { processCSS } = require("../../tasks/component-builder.js");
-const { fetchContent } = require("../../tasks/utilities.js");
+import { processCSS } from "../../tasks/component-builder.js";
+import { fetchContent } from "../../tasks/utilities.js";
 
-require("colors");
+import "colors";
 
 /**
  * Create a tagline for the CSS file based on the package.json data
@@ -46,10 +46,10 @@ function generateTagline({ name, version } = {}) {
  */
 async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false } = {}) {
 	// Read in the package version from the package.json file
-	const packageJson = await fsp.readFile(path.join(cwd, "package.json"), "utf-8").then(JSON.parse);
+	const packageJson = await fsp.readFile(join(cwd, "package.json"), "utf-8").then(JSON.parse);
 
 	const inputs = await fg(inputGlob, { cwd });
-	const contents = inputs.map(input => `@import "${input}";`).join("\n");
+	const contents = inputs.map(input => `@import "@spectrum-css/tokens/${input}";`).join("\n");
 	if (!contents) return;
 
 	return processCSS(contents, undefined, outputPath, {
@@ -57,7 +57,6 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 		clean,
 		configPath: cwd,
 		map: false,
-		resolveImports: true,
 		customTagline: generateTagline(packageJson),
 	});
 }
@@ -72,22 +71,22 @@ async function appendCustomOverrides({ cwd = process.cwd(), packageJson = {} } =
 	const promises = [];
 
 	// Add custom/*-vars.css to the end of the dist/css/*-vars.css files and run through postcss before writing back to the dist/css/*-vars.css file
-	const customFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "custom"), onlyFiles: true });
-	const globalFiles = await fg(["*-vars.css"], { cwd: path.join(cwd, "dist", "css"), onlyFiles: true });
+	const customFiles = await fg(["*-vars.css"], { cwd: join(cwd, "custom"), onlyFiles: true });
+	const globalFiles = await fg(["*-vars.css"], { cwd: join(cwd, "dist", "css"), onlyFiles: true });
 
 	// Create a list that combines the custom and dist files
 	const combinedFiles = [...new Set([...customFiles, ...globalFiles])];
 	for (const file of combinedFiles) {
 		// Read in the custom file and the dist file and combine them into one file
 		const combinedContent = await fetchContent([
-			path.join("dist", "css", file),
-			path.join("custom", file)
+			join("dist", "css", file),
+			join("custom", file)
 		], { cwd, shouldCombine: true });
 
-		if (!combinedContent || !combinedContent[0].content) continue;
+		if (!combinedContent || !combinedContent?.[0]?.content) continue;
 
 		promises.push(
-			processCSS(combinedContent[0].content, path.join(cwd, "dist", "css", file), path.join(cwd, "dist", "css", file), {
+			processCSS(combinedContent[0].content, join(cwd, "dist", "css", file), join(cwd, "dist", "css", file), {
 				cwd,
 				configPath: cwd,
 				customTagline: generateTagline(packageJson),
@@ -113,16 +112,24 @@ async function main({
 	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
 	console.time(key);
 
-	const compiledOutputPath = path.join(cwd, "dist");
+	const compiledOutputPath = join(cwd, "dist");
+
+	// Ensure the dist directory exists
+	if (!existsSync(compiledOutputPath)) {
+		mkdirSync(compiledOutputPath);
+	}
 
 	const reports = [];
 	const errors = [];
 
+	// Read in the package version from the package.json file
+	const packageJson = await fsp.readFile(join(cwd, "package.json"), "utf-8").then(JSON.parse);
+
 	// Wait for all the custom files to be processed
-	await appendCustomOverrides({ cwd }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
+	await appendCustomOverrides({ packageJson, cwd }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
 	// Then build the index.css file
-	await index(["dist/css/*-vars.css"], path.join(compiledOutputPath, "css", "index.css"), { cwd, clean }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
+	await index(["dist/css/*-vars.css"], join(compiledOutputPath, "css", "index.css"), { cwd, clean }).then((report) => { reports.push(report); }).catch((err) => { errors.push(err); });
 
 	// Combine all the reports into a single log output
 	const logs = reports.flat(Infinity).filter(Boolean);
@@ -155,4 +162,6 @@ async function main({
 	}
 }
 
-exports.default = main;
+main();
+
+export { main as default };
