@@ -46,10 +46,10 @@
 	--spectrum-accordion-item-content-line-height: var(--spectrum-line-height-100);
 
 	/* Colors */
-	--spectrum-accordion-background-color-default: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-background-opacity-default));
-	--spectrum-accordion-background-color-hover: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-background-opacity-hover));
-	--spectrum-accordion-background-color-down: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-background-opacity-down));
-	--spectrum-accordion-background-color-key-focus: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-background-opacity-key-focus));
+	--spectrum-accordion-background-color-default: color-mix(in sRGB, var(--spectrum-gray-900) var(--spectrum-background-opacity-default), transparent);
+	--spectrum-accordion-background-color-hover: color-mix(in sRGB, var(--spectrum-gray-900) var(--spectrum-background-opacity-hover), transparent);
+	--spectrum-accordion-background-color-down: color-mix(in sRGB, var(--spectrum-gray-900) var(--spectrum-background-opacity-down), transparent);
+	--spectrum-accordion-background-color-key-focus: color-mix(in sRGB, var(--spectrum-gray-900) var(--spectrum-background-opacity-key-focus), transparent);
 
 	/* Label */
 	--spectrum-accordion-item-header-color-default: var(--spectrum-neutral-content-color-default);
