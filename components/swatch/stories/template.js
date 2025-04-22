@@ -34,6 +34,9 @@ export const Template = ({
 		case "none":
 			borderStyle = "noBorder";
 			break;
+		case "border":
+			borderStyle = "border";
+			break;
 		case "light":
 			borderStyle = "lightBorder";
 			break;

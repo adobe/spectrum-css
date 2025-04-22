@@ -68,7 +68,7 @@ export default {
 				defaultValue: { summary: "noBorder" },
 			},
 			if: { arg: "isSelected", truthy: false },
-			options: ["noBorder", "lightBorder"],
+			options: ["noBorder", "border", "lightBorder"],
 		},
 	},
 	args: {
@@ -205,6 +205,16 @@ WithLightBorder.args = {
 WithLightBorder.tags = ["!dev"];
 WithLightBorder.storyName = "With light border";
 WithLightBorder.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const WithBorder = Template.bind({});
+WithBorder.args = {
+	borderStyle: "border",
+};
+WithBorder.tags = ["!dev"];
+WithBorder.storyName = "With border";
+WithBorder.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

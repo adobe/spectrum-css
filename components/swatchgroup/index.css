@@ -13,13 +13,13 @@
 
 .spectrum-SwatchGroup {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-75);
+}
 
+.spectrum-SwatchGroup {
 	display: inline-flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
 	justify-content: flex-start;
-
-	/* Regular (Default) */
 	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
 }
 

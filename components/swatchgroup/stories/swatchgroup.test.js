@@ -24,6 +24,10 @@ export const SwatchgroupGroup = Variants({
 			rounding: "regular",
 		},
 		{
+			testHeading: "With borders",
+			borderStyle: "border",
+		},
+		{
 			testHeading: "With light borders",
 			borderStyle: "lightBorder",
 			items: [
