@@ -15,19 +15,18 @@ import { dirname, join, sep } from "path";
 
 import StyleDictionary from "style-dictionary";
 import {
-	AttributeSetsTransform,
 	CSSBorderRoundingTransform,
+	CSSOpacityPercentTransform,
 	CSSOpenTypeTransform,
 	CSSSetsFormatter,
 	DataJsonFormatter,
-	NameKebabTransfom,
+	NameKebabTransform,
 } from "./utilities/index.js";
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerTransform(CSSBorderRoundingTransform);
-StyleDictionary.registerTransform(NameKebabTransfom);
-StyleDictionary.registerTransform(AttributeSetsTransform);
-
+StyleDictionary.registerTransform(CSSOpacityPercentTransform);
+StyleDictionary.registerTransform(NameKebabTransform);
 StyleDictionary.registerFormat(CSSSetsFormatter);
 StyleDictionary.registerFormat(DataJsonFormatter);
 
@@ -39,83 +38,53 @@ StyleDictionary.registerFormat(DataJsonFormatter);
 const tokensPath = import.meta.resolve("@adobe/spectrum-tokens/package.json")?.replace(/file:\/\//, "");
 const tokensDir = dirname(tokensPath);
 
+/**
+ * @type {import('style-dictionary').Config}
+ */
 export default {
 	source: [join(tokensDir, "src", "*.json"), "custom-tokens.json", "../components/*/tokens.json"],
 	hooks: {
 		transforms: {
-			[AttributeSetsTransform.name]: AttributeSetsTransform,
-			[NameKebabTransfom.name]: NameKebabTransfom,
+			[NameKebabTransform.name]: NameKebabTransform,
 			[CSSOpenTypeTransform.name]: CSSOpenTypeTransform,
 			[CSSBorderRoundingTransform.name]: CSSBorderRoundingTransform,
+			[CSSOpacityPercentTransform.name]: CSSOpacityPercentTransform,
 		},
 	},
 	platforms: {
 		css: {
 			buildPath: join("dist", "css") + sep,
+			prefix: "spectrum",
 			transforms: [
-				AttributeSetsTransform.name,
-				NameKebabTransfom.name,
+				NameKebabTransform.name,
 				CSSOpenTypeTransform.name,
 				CSSBorderRoundingTransform.name,
+				CSSOpacityPercentTransform.name,
 			],
-			prefix: "spectrum",
 			files: [
 				{
 					format: "css/sets",
-					options: { showFileHeader: false, outputReferences: true },
-					destination: "global-vars.css",
-					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.includes("wireframe")) return false;
-						if (
-							tokenSets.length === 0 ||
-							["light", "dark"].some((set) => tokenSets.includes(set))
-						) return true;
-						return false;
-					},
-				},
-				{
-					format: "css/sets",
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
 					},
-					destination: "medium-vars.css",
+					destination: "index.css",
 					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.length === 0) return false;
-						if (tokenSets.includes("wireframe")) return false;
-						if (tokenSets.includes("desktop")) return true;
-						return false;
-					},
-				},
-				{
-					format: "css/sets",
-					options: {
-						showFileHeader: false,
-						outputReferences: true,
-					},
-					destination: "large-vars.css",
-					filter: (token) => {
-						// Fetch the sets for this token
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.length === 0) return false;
-						if (tokenSets.includes("wireframe")) return false;
-						if (tokenSets.includes("mobile")) return true;
-						return false;
+						if (token.name.includes("android-")) return false;
+						return true;
 					},
 				},
 			],
 		},
 		JSON: {
 			buildPath: join("dist", "json") + sep,
+			prefix: "spectrum",
 			transforms: [
-				AttributeSetsTransform.name,
-				NameKebabTransfom.name,
+				NameKebabTransform.name,
 				CSSOpenTypeTransform.name,
 				CSSBorderRoundingTransform.name,
+				CSSOpacityPercentTransform.name,
 			],
-			prefix: "spectrum",
 			files: [
 				{
 					format: "json/sets",
