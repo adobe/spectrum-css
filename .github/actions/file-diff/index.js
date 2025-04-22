@@ -11,16 +11,16 @@
  * governing permissions and limitations under the License.
  */
 
-const { existsSync } = require("fs");
-const { join, sep } = require("path");
+import { existsSync } from "fs";
+import { join, sep } from "path";
 
-const core = require("@actions/core");
+import core from "@actions/core";
 
-const {
-	fetchFilesAndSizes,
-	bytesToSize,
+import {
 	addComment,
-} = require("./utilities.js");
+	bytesToSize,
+	fetchFilesAndSizes,
+} from "./utilities.js";
 
 async function run() {
 	try {
@@ -415,7 +415,9 @@ const makeTable = function (PACKAGES, filePath, rootPath) {
 		let mainFile = "index.css";
 		if (existsSync(packagePath)) {
 			// If the package.json exists, read in the main file
-			const { main } = require(packagePath) ?? {};
+			const packageContent = fs.readFileSync(packagePath, "utf8") ?? "{}";
+			const { main } = JSON.parse(packageContent);
+
 			// If the main file is a string, use it as the main file
 			if (typeof main === "string") {
 				// Strip out the path to the dist folder from the main file

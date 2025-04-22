@@ -1,14 +1,19 @@
-const fs = require("fs");
+import fs from "fs";
+import { createRequire } from "module";
+import path from "path";
+import { fileURLToPath } from "url";
+
 const fsp = fs.promises;
-const path = require("path");
+const require = createRequire(import.meta.url);
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-const fg = require("fast-glob");
-const { optimize } = require("svgo");
+import fg from "fast-glob";
+import { optimize } from "svgo";
 
-const svgstore = require("svgstore");
+import svgstore from "svgstore";
 
 // Not using svgo's loadConfig because it doesn't support dynamic config files
-const getSvgoConfig = require("./svgo.config.js");
+import getSvgoConfig from "./svgo.config.js";
 
 /**
  * @description Clean the file name
@@ -167,3 +172,5 @@ main()
 		console.error(e);
 		process.exit(1);
 	});
+
+export default main;

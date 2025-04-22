@@ -11,12 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-const fs = require("fs");
-const test = require("ava");
-const postcss = require("postcss");
-const plugin = require("./index.js");
+import test from "ava";
+import { readFileSync } from "fs";
+import postcss from "postcss";
+import plugin from "./index.js";
 
-function compare(t, fixtureFilePath, expectedFilePath, options = {}) {
+async function compare(t, fixtureFilePath, expectedFilePath, options = {}) {
 	return postcss([plugin(options)])
 		.process(readFile(`./fixtures/${fixtureFilePath}`), {
 			from: fixtureFilePath,
@@ -30,7 +30,7 @@ function compare(t, fixtureFilePath, expectedFilePath, options = {}) {
 }
 
 function readFile(filename) {
-	return fs.readFileSync(filename, "utf8");
+	return readFileSync(filename, "utf8");
 }
 
 test("create basic output", (t) => {

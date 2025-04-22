@@ -1,48 +1,51 @@
 {
-	"name": "@spectrum-css/tokens",
-	"version": "16.1.0-next.2",
-	"description": "The Spectrum CSS tokens package",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "tokens"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"type": "module",
-	"exports": {
-		".": "./dist/css/index.css",
-		"./*.md": "./*.md",
-		"./dist/*": "./dist/*",
-		"./dist/index.css": "./dist/css/index.css",
-		"./package.json": "./package.json"
-	},
-	"main": "dist/css/index.css",
-	"module": "style-dictionary.config.js",
-	"devDependencies": {
-		"@adobe/spectrum-tokens": "^13.3.0",
-		"@adobe/token-diff-generator": "^1.3.0",
-		"@spectrum-tools/postcss-rgb-mapping": "1.1.0",
-		"deepmerge": "^4.3.1",
-		"lodash-es": "^4.17.21",
-		"postcss": "^8.5.3",
-		"postcss-sorting": "^9.1.0",
-		"style-dictionary": "^4.3.3"
-	},
-	"keywords": [
-		"design-system",
-		"spectrum",
-		"spectrum-css",
-		"adobe",
-		"adobe-spectrum",
-		"tokens",
-		"css"
-	],
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/tokens",
+  "version": "16.1.0-next.2",
+  "description": "The Spectrum CSS tokens package",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "tokens"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/css/index.css",
+    "./*.md": "./*.md",
+    "./dist/*": "./dist/*",
+    "./dist/index.css": "./dist/css/index.css",
+    "./package.json": "./package.json"
+  },
+  "main": "dist/css/index.css",
+  "module": "style-dictionary.config.js",
+  "devDependencies": {
+    "@adobe/spectrum-tokens": "^13.3.0",
+    "@adobe/token-diff-generator": "^1.3.0",
+    "@spectrum-tools/postcss-rgb-mapping": "1.1.0",
+    "deepmerge": "^4.3.1",
+    "lodash-es": "^4.17.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-sorting": "^9.1.0",
+    "prettier": "^3.5.3",
+    "style-dictionary": "^4.3.3",
+    "yargs": "^17.7.2"
+  },
+  "keywords": [
+    "design-system",
+    "spectrum",
+    "spectrum-css",
+    "adobe",
+    "adobe-spectrum",
+    "tokens",
+    "css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
 */
 
-const valuesParser = require("postcss-values-parser");
+import { parse } from "postcss-values-parser";
 
 /** @typedef {object} Options */
 
@@ -31,7 +31,7 @@ function rgbMappingFunction ({
 			/* Gather all the custom properties that reference "unprocessed" transparent tokens (i.e. transparent-white-200) */
 			const transparentTokens = new Set();
 			root.walkDecls(decl => {
-				if (decl.prop.startsWith('--spectrum-transparent-') && !decl.prop.endsWith('rgb') && !decl.prop.endsWith('opacity')) {
+				if (decl.prop.startsWith("--spectrum-transparent-") && !decl.prop.endsWith("rgb") && !decl.prop.endsWith("opacity")) {
 					transparentTokens.add(decl.prop);
 				}
 			});
@@ -80,7 +80,7 @@ function rgbMappingFunction ({
 			const isProcessed = prop.endsWith("rgb") || prop.endsWith("opacity");
 
 			/* Parse the value for its parts */
-			const parsedValue = valuesParser.parse(value) || [];
+			const parsedValue = parse(value) || [];
 
 			/* Determine if the value has an rgb or rgba value */
 			const hasRGBValue = parsedValue.nodes.length ? parsedValue.nodes.some((node) => node.type === "func" && (["rgb", "rgba"].some(func => node.name === func))) : false;
@@ -165,4 +165,4 @@ function rgbMappingFunction ({
 }
 
 rgbMappingFunction.postcss = true;
-module.exports = rgbMappingFunction;
+export default rgbMappingFunction;

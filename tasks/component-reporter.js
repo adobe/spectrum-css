@@ -12,26 +12,20 @@
  */
 
 /* eslint-disable no-console */
-const fs = require("fs");
-const path = require("path");
+import { existsSync, mkdirSync } from "fs";
+import { join, relative } from "path";
 
-const { hideBin } = require("yargs/helpers");
-const yargs = require("yargs");
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
-const postcss = require("postcss");
-const prettier = require("prettier");
+import { parse } from "postcss";
+import { format } from "prettier";
 
-require("colors");
+import "colors";
 
-const {
-	dirs,
-	extractProperties,
-	getAllComponentNames,
-	getPackageFromPath,
-	writeAndReport,
-} = require("./utilities.js");
+import { dirs, extractProperties, getAllComponentNames, getPackageFromPath, writeAndReport } from "./utilities.js";
 
-const { processCSS } = require("./component-builder.js");
+import { processCSS } from "./component-builder.js";
 
 /**
  * Extract custom property modifers to report
@@ -62,12 +56,12 @@ async function extractModifiers(
 	const meta = extractProperties(content, dataModel);
 
 	if (sourcePath) {
-		meta.sourceFile = path.relative(cwd, sourcePath);
+		meta.sourceFile = relative(cwd, sourcePath);
 	}
 
 	// Extract all selectors from the source file
 	const selectors = new Set();
-	const root = postcss.parse(content);
+	const root = parse(content);
 	root.walkRules((rule) => {
 		// Check that the selector is not inside a keyframe
 		if (rule.parent.type === "atrule" && rule.parent.name === "keyframes") return;
@@ -145,7 +139,7 @@ async function main({
 	cwd,
 } = {}) {
 	if (!cwd && componentName) {
-		cwd = path.join(dirs.components, componentName);
+		cwd = join(dirs.components, componentName);
 	}
 
 	if (!componentName) {
@@ -157,9 +151,9 @@ async function main({
 	const key = `[report] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
-	const sourceCSS = path.join(cwd, "index.css");
+	const sourceCSS = join(cwd, "index.css");
 
-	if (!fs.existsSync(sourceCSS)) {
+	if (!existsSync(sourceCSS)) {
 		console.log(`\n\n${key} 🔍`);
 		console.log(`${"".padStart(30, "-")}`);
 		console.log(`No source CSS file found at ${sourceCSS}`);
@@ -170,8 +164,8 @@ async function main({
 	}
 
 	// Create the dist directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "dist"))) {
-		fs.mkdirSync(path.join(cwd, "dist"));
+	if (!existsSync(join(cwd, "dist"))) {
+		mkdirSync(join(cwd, "dist"));
 	}
 
 	const processed = await processCSS(undefined, sourceCSS, undefined, {
@@ -197,7 +191,7 @@ async function main({
 
 	return Promise.all([
 		writeAndReport(
-			await prettier.format(
+			await format(
 				JSON.stringify({
 					sourceFile: meta.sourceFile,
 					selectors: meta.selectors,
@@ -209,7 +203,7 @@ async function main({
 				}, null, 2),
 				{ parser: "json" },
 			),
-			path.join(cwd, "dist", "metadata.json"),
+			join(cwd, "dist", "metadata.json"),
 			{ cwd },
 		),
 	])
@@ -242,8 +236,7 @@ async function main({
 		});
 }
 
-exports.extractModifiers = extractModifiers;
-exports.default = main;
+export { main as default, extractModifiers };
 
 let {
 	_: components,
