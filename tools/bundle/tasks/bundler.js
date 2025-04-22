@@ -34,7 +34,7 @@ export async function refresh() {
 /** This file is machine generated. */
 
 /* --- CORE TOKENS --- */
-@import "@spectrum-css/tokens";
+@import "@spectrum-css/tokens/dist/css/index.css";
 
 /* --- COMPONENTS --- */
 ${components.map((component) => {

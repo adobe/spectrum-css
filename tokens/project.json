@@ -16,7 +16,7 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/token-rollup.js\").default()'"
+					"node --no-warnings ./tasks/token-rollup.js",
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
@@ -39,39 +39,45 @@
 			},
 			"outputs": []
 		},
-		"format": {},
-		"lint": {},
-		"report": {
+		"diff": {
 			"cache": true,
 			"executor": "nx:run-commands",
 			"inputs": [{ "externalDependencies": ["@adobe/token-diff-generator", "@adobe/spectrum-tokens"] }],
 			"options": {
 				"commands": [
-					"tdiff report --old-token-version @adobe/spectrum-tokens@13.0.0-beta.58 --new-token-version @adobe/spectrum-tokens@13.3.0 --format markdown --output ./dist/tokens-diff.md"
+					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output {projectRoot}/dist/tokens-diff.md"
 				],
 				"cwd": "{projectRoot}",
+				"forwardAllArgs": true,
 				"parallel": false
 			},
 			"outputs": [
 				"{projectRoot}/dist/tokens-diff.md"
 			]
 		},
+		"format": {},
+		"lint": {},
 		"style-dictionary": {
 			"dependsOn": ["clean"],
-			"executor": "@nxkit/style-dictionary:build",
-			"inputs": ["scripts"],
+			"executor": "nx:run-commands",
+			"inputs": [
+				"{projectRoot}/postcss.config.js",
+				"{projectRoot}/style-dictionary.config.js",
+				"{projectRoot}/utilities/style-dictionary.utils.js"
+			],
 			"options": {
-				"deleteOutputPath": false,
-				"outputPath": "./tokens",
-				"styleDictionaryConfig": "./tokens/style-dictionary.config.js",
-				"tsConfig": "./tsconfig.json"
+				"commands": [
+					"style-dictionary build --config style-dictionary.config.js"
+				],
+				"cwd": "{projectRoot}"
 			},
 			"outputs": [
 				"{projectRoot}/dist/css/global-vars.css",
 				"{projectRoot}/dist/css/light-vars.css",
 				"{projectRoot}/dist/css/dark-vars.css",
 				"{projectRoot}/dist/css/medium-vars.css",
-				"{projectRoot}/dist/css/large-vars.css"
+				"{projectRoot}/dist/css/large-vars.css",
+				"{projectRoot}/dist/json/tokens.json"
 			]
 		}
 	}

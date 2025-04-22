@@ -1,35 +1,34 @@
 {
 	"name": "bundle",
 	"tag": ["tooling"],
-	"namedInputs": {
-		"core": ["{projectRoot}/src/index.css"],
-		"tools": ["{projectRoot}/tasks/bundler.js"]
-	},
 	"targets": {
 		"build": {
 			"dependsOn": ["clean", "^build", "refresh"],
 			"executor": "nx:run-commands",
 			"inputs": [
-				"core",
-				"tools",
-				"{workspaceRoot}/postcss.config.js",
-				"{workspaceRoot}/stylelint.config.js",
-				{ "externalDependencies": ["postcss", "stylelint"] }
+				"{projectRoot}/src/index.css",
+				"{projectRoot}/tasks/bundler.js",
+				"builder",
+				"postcss",
+				"stylelint",
+				{ "env": "NODE_ENV" }
 			],
 			"options": {
 				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'import(\"./tasks/bundler.js\").then(module => module.main() )'"],
 				"cwd": "{projectRoot}"
 			},
 			"outputs": [
-				"{projectRoot}/dist/index.css",
-				"{projectRoot}/dist/index.css.map"
+				"{projectRoot}/dist/index.*.{css,json,gz,map}"
 			]
 		},
 		"clean": {
 			"inputs": [
-				"{projectRoot}/dist/*.{css,json}",
+				"{projectRoot}/dist/*",
 				{ "externalDependencies": ["rimraf"] }
-			]
+			],
+			"options": {
+				"commands": ["rimraf {projectRoot}/dist/*"]
+			}
 		},
 		"format": {},
 		"lint": {},
@@ -38,10 +37,11 @@
 			"dependsOn": [],
 			"executor": "nx:run-commands",
 			"inputs": [
-				"tools",
-				"{projectRoot}/package.json",
-				"{projectRoot}/postcss.config.js",
-				{ "externalDependencies": ["postcss"] }
+				"{projectRoot}/tasks/bundler.js",
+				"builder",
+				"postcss",
+				"stylelint",
+				{ "env": "NODE_ENV" }
 			],
 			"options": {
 				"commands": [
