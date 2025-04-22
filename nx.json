@@ -109,7 +109,7 @@
 			"dependsOn": ["build", { "projects": ["bundle"], "target": "build" }],
 			"executor": "nx:run-commands",
 			"inputs": [
-				"{workspaceRoot}/tasks/compare-compiled-output.js",
+				"{workspaceRoot}/tasks/component-compare.js",
 				{ "dependentTasksOutputFiles": "dist/*.css", "transitive": true },
 				{
 					"externalDependencies": [
@@ -129,7 +129,7 @@
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings ./tasks/compare-compiled-output.js $NX_TASK_TARGET_PROJECT"
+					"node --no-warnings ./tasks/component-compare.js $NX_TASK_TARGET_PROJECT"
 				]
 			},
 			"outputs": ["{workspaceRoot}/.diff-output/**"]

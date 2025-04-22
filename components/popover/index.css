@@ -15,19 +15,13 @@
 
 .spectrum-Popover {
 	/* animation distance is equal to and responsible for popover offset ("spacing" tip to source) */
-	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
-
-	--spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
-	--spectrum-popover-border-width: var(--spectrum-border-width-100);
-
-	/* TODO: Cannot use popover-border-color token until the value no longer has the rgba() function alpha/opacity. We should be able to refactor instances of `--spectrum-popover-border-color-rgb` with `--spectrum-popover-border-color` once this is available. */
-	/* --spectrum-popover-border-color-default: var(--spectrum-popover-border-color); */
-	--spectrum-popover-border-color-rgb: var(--spectrum-gray-200-rgb);
-	--spectrum-popover-border-transparency: var(--spectrum-popover-border-opacity);
-	--spectrum-popover-border-color-with-transparency: rgb(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency));
+	--spectrum-popover-animation-distance: var(--mod-popover-animation-distance, var(--spectrum-spacing-100));
+	--spectrum-popover-background-color: var(--mod-popover-background-color, var(--spectrum-background-layer-2-color));
+	--spectrum-popover-border-width: var(--mod-popover-border-width, var(--spectrum-border-width-100));
+	--spectrum-popover-border-color-with-transparency: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, color-mix(in sRGB, var(--spectrum-popover-border-color) var(--spectrum-popover-border-opacity), transparent)));
 
 	/* popover inner padding */
-	--spectrum-popover-content-area-spacing: var(--spectrum-popover-edge-to-content-area);
+	--spectrum-popover-content-area-spacing: var(--mod-popover-content-area-spacing, var(--spectrum-popover-edge-to-content-area));
 
 	/* popover drop shadow */
 	--spectrum-popover-drop-shadow-x: var(--spectrum-drop-shadow-elevated-x);
@@ -36,25 +30,20 @@
 	--spectrum-popover-drop-shadow-color: var(--spectrum-drop-shadow-elevated-color);
 
 	/* popover corner radius */
-	--spectrum-popover-corner-radius: var(--spectrum-corner-radius-large-default);
+	--spectrum-popover-corner-radius: var(--mod-popover-corner-radius, var(--spectrum-corner-radius-large-default));
 
 	/* pointer tip dimensions */
-	--spectrum-popover-pointer-width: var(--spectrum-popover-tip-width);
-	--spectrum-popover-pointer-height: var(--spectrum-popover-tip-height);
+	--spectrum-popover-pointer-width: var(--mod-popover-pointer-width, var(--spectrum-popover-tip-width));
+	--spectrum-popover-pointer-height: var(--mod-popover-pointer-height, var(--spectrum-popover-tip-height));
+}
 
+.spectrum-Popover {
 	/* pointer tip - default spacing to edge - corner radius plus half of tip width to neutralize override */
 	--spectrum-popover-pointer-edge-offset: calc(var(--spectrum-popover-corner-radius) + (var(--spectrum-popover-tip-width) / 2));
 
 	/* pointer tip - spacing to edge will center pointer to source - apply in markup by setting '--spectrum-popover-pointer-edge-offset' value == half of source */
-	--spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - (var(--spectrum-popover-tip-width) / 2));
-}
-
-.spectrum-Popover {
-	/* filter is for popovers with a tip. we divide the blur by 2 to match the box-shadow rendering better. */
-	--spectrum-popover-filter: drop-shadow(var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) calc(var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) / 2) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color)));
-
-	/* box-shadow is for popovers without a tip. */
-	--spectrum-popover-box-shadow: var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color));
+	--spectrum-popover-pointer-edge-spacing: var(--mod-popover-pointer-edge-spacing, calc(var(--spectrum-popover-pointer-edge-offset) - (var(--spectrum-popover-tip-width) / 2)));
+	--spectrum-popover-filter: drop-shadow(var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color)));
 
 	@extend %spectrum-overlay;
 
@@ -63,16 +52,16 @@
 
 	outline: none; /* Hide focus outline */
 
-	padding: var(--mod-popover-content-area-spacing, var(--spectrum-popover-content-area-spacing));
+	padding: var(--spectrum-popover-content-area-spacing);
 
 	display: inline-flex;
 	flex-direction: column;
 
 	border-style: solid;
-	border-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
-	border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency)));
+	border-radius: var(--spectrum-popover-corner-radius);
+	border-color: var(--spectrum-popover-border-color-with-transparency);
 
-	border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
+	border-width: var(--spectrum-popover-border-width);
 
 	background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
 	box-shadow: var(--mod-popover-box-shadow, var(--spectrum-popover-box-shadow));
@@ -89,9 +78,9 @@
 			.spectrum-Popover-tip-triangle {
 				stroke-linecap: square;
 				stroke-linejoin: miter;
-				fill: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
-				stroke: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency)));
-				stroke-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
+				fill: var(--spectrum-popover-background-color);
+				stroke: var(--spectrum-popover-border-color-with-transparency);
+				stroke-width: var(--spectrum-popover-border-width);
 			}
 		}
 	}
@@ -114,13 +103,13 @@
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-block-end: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-block-end: calc(var(--spectrum-popover-pointer-height) - var(--spectrum-popover-border-width));
 	}
 
 	/* popover animates upward ⬆ */
 	&.is-open {
 		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
-		transform: translateY(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translateZ(0);
+		transform: translateY(calc(-1 * var(--spectrum-popover-animation-distance))) translateZ(0);
 	}
 }
 
@@ -133,13 +122,13 @@
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-block-start: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-block-start: calc(var(--spectrum-popover-pointer-height) - var(--spectrum-popover-border-width));
 	}
 
 	/* popover animates downward ⬇ */
 	&.is-open {
 		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
-		transform: translateY(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translateZ(0);
+		transform: translateY(var(--spectrum-popover-animation-distance)) translateZ(0);
 	}
 }
 
@@ -151,13 +140,13 @@
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
 		/* stylelint-disable-next-line csstools/use-logical -- intentional, right stays on the same side even for RTL */
-		margin-left: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-left: calc(var(--spectrum-popover-pointer-height) - var(--spectrum-popover-border-width));
 	}
 
 	/* popover animates towards right ⮕ */
 	&.is-open {
 		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
-		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translateZ(0);
+		transform: translateX(var(--spectrum-popover-animation-distance)) translateZ(0);
 	}
 }
 
@@ -169,13 +158,13 @@
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
 		/* stylelint-disable-next-line csstools/use-logical -- intentional, left stays on the same side even for RTL */
-		margin-right: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-right: calc(var(--spectrum-popover-pointer-height) - var(--spectrum-popover-border-width));
 	}
 
 	/* popover animates towards left ⬅ */
 	&.is-open {
 		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
-		transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translateZ(0);
+		transform: translateX(calc(-1 * var(--spectrum-popover-animation-distance))) translateZ(0);
 	}
 }
 
@@ -186,18 +175,18 @@
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-end: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-inline-end: calc(var(--spectrum-popover-pointer-height) - var(--spectrum-popover-border-width));
 	}
 
 	/* LTR read, popover animates towards left ⬅ */
 	&.is-open {
 		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
-		transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translateZ(0);
+		transform: translateX(calc(-1 * var(--spectrum-popover-animation-distance))) translateZ(0);
 	}
 
 	/* RTL read, popover animates towards right ⮕ */
 	&.is-open:dir(rtl) {
-		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translateZ(0);
+		transform: translateX(var(--spectrum-popover-animation-distance)) translateZ(0);
 	}
 }
 
@@ -208,20 +197,20 @@
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-start: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		margin-inline-start: calc(var(--spectrum-popover-pointer-height) - var(--spectrum-popover-border-width));
 	}
 
 	/* LTR read, popover animates towards right ⮕ */
 	&.is-open {
 		/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
-		transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))) translateZ(0);
+		transform: translateX(var(--spectrum-popover-animation-distance)) translateZ(0);
 	}
 
 	/* RTL read, popover animates towards left ⬅ */
 	&:dir(rtl) {
 		&.is-open {
 			/* TranslateZ is Safari fix to prevent clipping of filter dropshadow and accelerate the element to GPU layer */
-			transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)))) translateZ(0);
+			transform: translateX(calc(-1 * var(--spectrum-popover-animation-distance))) translateZ(0);
 		}
 	}
 }
@@ -241,8 +230,8 @@
 	&.spectrum-Popover--bottom-start,
 	&.spectrum-Popover--bottom-end {
 		.spectrum-Popover-tip {
-			inline-size: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-			block-size: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
+			inline-size: var(--spectrum-popover-pointer-width);
+			block-size: var(--spectrum-popover-pointer-height);
 			position: absolute;
 			inset-block-start: 100%;
 			inset-inline: 0;
@@ -256,28 +245,28 @@
 	/* popover is at top of source, tip left and pointing down ▽ */
 	&.spectrum-Popover--top-left {
 		.spectrum-Popover-tip {
-			inset-inline: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
+			inset-inline: var(--spectrum-popover-pointer-edge-spacing) auto;
 		}
 	}
 
 	/* popover is at top of source, tip right and pointing down ▽ */
 	&.spectrum-Popover--top-right {
 		.spectrum-Popover-tip {
-			inset-inline: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			inset-inline: auto var(--spectrum-popover-pointer-edge-spacing);
 		}
 	}
 
 	/* logical property - popover is above, source and tip are at start, tip pointing down ▽ */
 	&.spectrum-Popover--top-start {
 		.spectrum-Popover-tip {
-			margin-inline-start: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			margin-inline-start: var(--spectrum-popover-pointer-edge-spacing);
 		}
 	}
 
 	/* logical property - popover is above, source and tip are at end, tip pointing down ▽ */
 	&.spectrum-Popover--top-end {
 		.spectrum-Popover-tip {
-			margin-inline-end: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			margin-inline-end: var(--spectrum-popover-pointer-edge-spacing);
 		}
 	}
 
@@ -298,28 +287,28 @@
 	/* popover position is bottom, source is at left, tip pointing up △ */
 	&.spectrum-Popover--bottom-left {
 		.spectrum-Popover-tip {
-			inset-inline: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
+			inset-inline: var(--spectrum-popover-pointer-edge-spacing) auto;
 		}
 	}
 
 	/* popover position is bottom, source is at right, tip pointing up △ */
 	&.spectrum-Popover--bottom-right {
 		.spectrum-Popover-tip {
-			inset-inline: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			inset-inline: auto var(--spectrum-popover-pointer-edge-spacing);
 		}
 	}
 
 	/* logical property - popover is below, source is at start, tip pointing up △ */
 	&.spectrum-Popover--bottom-start {
 		.spectrum-Popover-tip {
-			margin-inline-start: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			margin-inline-start: var(--spectrum-popover-pointer-edge-spacing);
 		}
 	}
 
 	/* logical property - popover is below, source is at end, tip pointing up △ */
 	&.spectrum-Popover--bottom-end {
 		.spectrum-Popover-tip {
-			margin-inline-end: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			margin-inline-end: var(--spectrum-popover-pointer-edge-spacing);
 		}
 	}
 
@@ -338,8 +327,8 @@
 	&.spectrum-Popover--end-bottom {
 		.spectrum-Popover-tip {
 			/* swap height and width for vertical triangle */
-			inline-size: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
-			block-size: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
+			inline-size: var(--spectrum-popover-pointer-height);
+			block-size: var(--spectrum-popover-pointer-width);
 			inset-block: 0;
 		}
 	}
@@ -375,7 +364,7 @@
 	&.spectrum-Popover--start-top,
 	&.spectrum-Popover--end-top {
 		.spectrum-Popover-tip {
-			inset-block: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
+			inset-block: var(--spectrum-popover-pointer-edge-spacing) auto;
 		}
 	}
 
@@ -385,7 +374,7 @@
 	&.spectrum-Popover--start-bottom,
 	&.spectrum-Popover--end-bottom {
 		.spectrum-Popover-tip {
-			inset-block: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			inset-block: auto var(--spectrum-popover-pointer-edge-spacing);
 		}
 	}
 
