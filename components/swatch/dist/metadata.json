@@ -4,6 +4,7 @@
     ".spectrum-Swatch",
     ".spectrum-Swatch .spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch .spectrum-Swatch-fill",
+    ".spectrum-Swatch--border .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--lightBorder .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--noBorder .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--rectangle",
@@ -85,7 +86,8 @@
     "--mod-swatch-inner-border-color-selected",
     "--mod-swatch-size",
     "--mod-swatch-slash-icon-color",
-    "--mod-swatch-slash-thickness"
+    "--mod-swatch-slash-thickness",
+    "--mod-swatchgroup-border-color"
   ],
   "component": [
     "--spectrum-swatch-border-color-light",
@@ -116,7 +118,8 @@
     "--spectrum-swatch-slash-thickness-extra-small",
     "--spectrum-swatch-slash-thickness-large",
     "--spectrum-swatch-slash-thickness-medium",
-    "--spectrum-swatch-slash-thickness-small"
+    "--spectrum-swatch-slash-thickness-small",
+    "--spectrum-swatchgroup-border-color"
   ],
   "global": [
     "--spectrum-add-button-background",
