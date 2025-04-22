@@ -17,6 +17,7 @@ import StyleDictionary from "style-dictionary";
 import {
 	AttributeSetsTransform,
 	CSSBorderRoundingTransform,
+	CSSOpacityPercentTransform,
 	CSSOpenTypeTransform,
 	CSSSetsFormatter,
 	DataJsonFormatter,
@@ -25,6 +26,7 @@ import {
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerTransform(CSSBorderRoundingTransform);
+StyleDictionary.registerTransform(CSSOpacityPercentTransform);
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
 
@@ -47,6 +49,7 @@ export default {
 			[NameKebabTransfom.name]: NameKebabTransfom,
 			[CSSOpenTypeTransform.name]: CSSOpenTypeTransform,
 			[CSSBorderRoundingTransform.name]: CSSBorderRoundingTransform,
+			[CSSOpacityPercentTransform.name]: CSSOpacityPercentTransform,
 		},
 	},
 	platforms: {
@@ -57,52 +60,17 @@ export default {
 				NameKebabTransfom.name,
 				CSSOpenTypeTransform.name,
 				CSSBorderRoundingTransform.name,
+				CSSOpacityPercentTransform.name,
 			],
 			prefix: "spectrum",
 			files: [
 				{
 					format: "css/sets",
 					options: { showFileHeader: false, outputReferences: true },
-					destination: "global-vars.css",
+					destination: "index.css",
 					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.includes("wireframe")) return false;
-						if (
-							tokenSets.length === 0 ||
-							["light", "dark"].some((set) => tokenSets.includes(set))
-						) return true;
-						return false;
-					},
-				},
-				{
-					format: "css/sets",
-					options: {
-						showFileHeader: false,
-						outputReferences: true,
-					},
-					destination: "medium-vars.css",
-					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.length === 0) return false;
-						if (tokenSets.includes("wireframe")) return false;
-						if (tokenSets.includes("desktop")) return true;
-						return false;
-					},
-				},
-				{
-					format: "css/sets",
-					options: {
-						showFileHeader: false,
-						outputReferences: true,
-					},
-					destination: "large-vars.css",
-					filter: (token) => {
-						// Fetch the sets for this token
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.length === 0) return false;
-						if (tokenSets.includes("wireframe")) return false;
-						if (tokenSets.includes("mobile")) return true;
-						return false;
+						if (token.path.filter((_, idx, array) => array[idx - 1] == "sets")?.includes("wireframe")) return false;
+						return true;
 					},
 				},
 			],
@@ -114,6 +82,7 @@ export default {
 				NameKebabTransfom.name,
 				CSSOpenTypeTransform.name,
 				CSSBorderRoundingTransform.name,
+				CSSOpacityPercentTransform.name,
 			],
 			prefix: "spectrum",
 			files: [

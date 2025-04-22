@@ -12,10 +12,10 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: ['click input[type="checkbox"]'],
+			handles: ["click input[type=\"checkbox\"]"],
 		},
 	},
-	tags: ['!dev'],
+	tags: ["!dev"],
 };
 
 const Checkbox = (args = {}, context = {}) => html`
@@ -82,7 +82,7 @@ const CheckboxTable = (args, context) => {
 			</tbody>
 		</table>
 	`;
-}
+};
 
 export const CheckboxExamples = CheckboxTable.bind({});
 CheckboxExamples.args = {};
