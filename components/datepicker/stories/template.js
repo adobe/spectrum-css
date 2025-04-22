@@ -1,5 +1,5 @@
 import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
-import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
@@ -57,6 +57,7 @@ export const DatePicker = ({
 				isQuiet,
 				isDisabled,
 				isReadOnly,
+				displayLabel: false,
 				isInvalid: !isRange ? isInvalid : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
@@ -75,6 +76,7 @@ export const DatePicker = ({
 				isDisabled,
 				isReadOnly,
 				isInvalid,
+				displayLabel: false,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
 				placeholder: "Choose a date",
@@ -84,12 +86,13 @@ export const DatePicker = ({
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
 			}, context))}
-			${PickerButton({
+			${InfieldButton({
 				customClasses: [`${rootClass}-button`],
 				size: "m",
 				iconName: "Calendar",
 				iconSet: "workflow",
 				isQuiet,
+				displayLabel: false,
 				customStyles: isReadOnly ? { "display": "none" } : undefined,
 				// @todo this is not added to the button on the website; need to make sure it's not a bug
 				// isOpen,

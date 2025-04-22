@@ -40,6 +40,7 @@ export default {
 		rootClass: "spectrum-InfieldButton",
 		size: "m",
 		iconName: "ChevronDown",
+		iconSet: "ui",
 		isQuiet: false,
 		isDisabled: false,
 		isHovered: false,

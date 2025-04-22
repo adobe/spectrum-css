@@ -13,7 +13,7 @@ export const Template = (
 		size = "m",
 		isQuiet,
 		iconName = "ChevronDown",
-		iconSet = "ui",
+		iconSet,
 		isDisabled,
 		isInvalid,
 		isHovered,
@@ -25,7 +25,7 @@ export const Template = (
 	context = {},
 ) => {
 	let iconSize = size === "s" ? "75" : size === "l" ? "200" : size === "xl" ? "300" : "100";
-	let iconNameWithSize = `${iconName}${iconSize}`;
+	let iconNameWithSize = iconSet === "ui" ? `${iconName}${iconSize}` : iconName;
 
 	return isInline
 		? html`
@@ -81,7 +81,7 @@ export const Template = (
 							{
 								size,
 								iconName: "Add",
-								setName: "ui",
+								setName: "workflow",
 								customClasses: [`${rootClass}-icon`],
 							},
 							context,
@@ -149,6 +149,6 @@ export const InfieldButtonIcons = (args, context) => Container({
 		Template(args, context),
 		Template({...args, iconName: "Cross"}, context),
 		Template({...args, iconName: "Dash"}, context),
-		Template({...args, iconName: "Add"}, context),
+		Template({...args, iconName: "Add", iconSet: "workflow"}, context),
 	],
 }, context);

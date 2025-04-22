@@ -94,11 +94,11 @@
 
 	&:not(.spectrum-DatePicker--quiet, .is-disabled) {
 		/* @passthrough -- ensures picker button border color matches the textfield border color */
-		--mod-picker-button-border-color: var(--spectrum-datepicker-pickerbutton-border-color);
+		/* --mod-picker-button-border-color: var(--spectrum-datepicker-pickerbutton-border-color); */
 
 		&.is-invalid {
 			/* @passthrough */
-			--mod-picker-button-border-color: var(--spectrum-datepicker-pickerbutton-border-color-invalid);
+			/* --mod-picker-button-border-color: var(--spectrum-datepicker-pickerbutton-border-color-invalid); */
 		}
 	}
 }
@@ -159,8 +159,8 @@
 	--mod-datepicker-padding-inline: var(--spectrum-datepicker-padding-inline-end-quiet);
 
 	/* @passthrough start -- quiet variant nested button styles */
-	--mod-picker-button-border-color-disabled: var(--spectrum-datepicker-border-color-disabled);
-	--mod-picker-button-background-color-hover-disabled: var(--spectrum-datepicker-border-color-disabled);
+	/* --mod-picker-button-border-color-disabled: var(--spectrum-datepicker-border-color-disabled); */
+	/* --mod-picker-button-background-color-hover-disabled: var(--spectrum-datepicker-border-color-disabled); */
 	/* @passthrough end */
 
 	/* @passthrough start -- quiet variant nested button styles */
@@ -176,12 +176,12 @@
 
 	&:hover:not(.is-focused, .is-keyboardFocused, .is-disabled, .is-invalid) {
 		/* @passthrough -- nested border colors */
-		--mod-picker-button-border-color: var(--spectrum-datepicker-quiet-border-color-hover);
+		/* --mod-picker-button-border-color: var(--spectrum-datepicker-quiet-border-color-hover); */
 	}
 
 	&.is-invalid {
 		/* @passthrough -- invalid bottom border color */
-		--mod-picker-button-border-color: var(--spectrum-datepicker-invalid-quiet-color);
+		/* --mod-picker-button-border-color: var(--spectrum-datepicker-invalid-quiet-color); */
 	}
 
 	/* Nested Picker Button */
@@ -190,11 +190,11 @@
 		inset-inline-end: calc(-1 * var(--spectrum-datepicker-quiet-button-offset));
 
 		&:not(.is-open) {
-			--mod-picker-button-border-color-disabled: transparent;
+			/* --mod-picker-button-border-color-disabled: transparent; */
 		}
 
 		&:not(:disabled, .is-open) {
-			--mod-picker-button-background-color: transparent;
+			/* --mod-picker-button-background-color: transparent; */
 		}
 	}
 }

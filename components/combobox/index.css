@@ -92,12 +92,12 @@
 	/* @passthroughs end -- settings for nested Textfield component */
 
 	/* @passthroughs start -- settings for nested Picker Button component */
-	--mod-picker-button-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
+	/* --mod-picker-button-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
 	--mod-picker-button-border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
 	--mod-picker-button-background-color: var(--mod-combobox-background-color-default);
 	--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled);
 	--mod-picker-button-font-color-disabled: var(--mod-combobox-font-color-disabled);
-	--mod-picker-button-border-color-disabled: var(--mod-combobox-border-color-disabled, var(--spectrum-combobox-border-color-disabled));
+	--mod-picker-button-border-color-disabled: var(--mod-combobox-border-color-disabled, var(--spectrum-combobox-border-color-disabled)); */
 	/* @passthroughs end -- settings for nested Picker Button component */
 
 	/*** Read-only Colors ***/
@@ -163,8 +163,8 @@
 	--mod-textfield-border-color-disabled: var(--mod-combobox-border-color-disabled, initial);
 
 	/* Settings for nested Picker Button component. */
-	--mod-picker-button-background-color-quiet: transparent;
-	--mod-picker-button-border-color-quiet: transparent;
+	/* --mod-picker-button-background-color-quiet: transparent;
+	--mod-picker-button-border-color-quiet: transparent; */
 
 	&.spectrum-Combobox--sizeS {
 		--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-small);
@@ -269,7 +269,7 @@
 	position: absolute;
 	inset-inline-end: calc(-1 * var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px)));
 
-	/* Default */
+	/* Default
 	&:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet) {
 		--mod-picker-button-border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
 
@@ -301,7 +301,7 @@
 		}
 	}
 
-	/* Invalid */
+	/* Invalid 
 	&.is-invalid:not(:disabled, .spectrum-PickerButton--quiet) {
 		--mod-picker-button-border-color: var(--highcontrast-combobox-border-color-invalid, var(--mod-combobox-border-color-invalid-default, var(--spectrum-combobox-border-color-invalid-default)));
 
@@ -331,7 +331,7 @@
 		.spectrum-Combobox.is-focused:hover & {
 			--mod-picker-button-border-color: var(--highcontrast-combobox-border-color-invalid, var(--mod-combobox-border-color-invalid-focus-hover, var(--spectrum-combobox-border-color-invalid-focus-hover)));
 		}
-	}
+	} */
 }
 
 /* TEXTFIELD (wrapper) */

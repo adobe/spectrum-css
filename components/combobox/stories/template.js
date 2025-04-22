@@ -1,5 +1,5 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
@@ -57,6 +57,7 @@ const Combobox = ({
 				isInvalid,
 				isFocused,
 				isKeyboardFocused,
+				displayLabel: false,
 				customClasses: [
 					`${rootClass}-textfield`,
 					...(isLoading ? ["is-loading"] : []),
@@ -71,7 +72,7 @@ const Combobox = ({
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
 			}, context)}
-			${PickerButton({
+			${InfieldButton({
 				customClasses: [
 					`${rootClass}-button`,
 					... isInvalid ? ["is-invalid"] : [],
