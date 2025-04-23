@@ -13,6 +13,7 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"type": "module",
 	"exports": {
 		".": "./dist/css/index.css",
 		"./*.md": "./*.md",
@@ -21,20 +22,16 @@
 		"./package.json": "./package.json"
 	},
 	"main": "dist/css/index.css",
-	"files": [
-		"dist",
-		"*.md",
-		"package.json"
-	],
+	"module": "style-dictionary.config.js",
 	"devDependencies": {
 		"@adobe/spectrum-tokens": "^13.3.0",
 		"@adobe/token-diff-generator": "^1.3.0",
-		"@nxkit/style-dictionary": "^6.0.0",
-		"@spectrum-tools/postcss-rgb-mapping": "1.0.0",
+		"@spectrum-tools/postcss-rgb-mapping": "1.1.0",
+		"deepmerge": "^4.3.1",
+		"lodash-es": "^4.17.21",
 		"postcss": "^8.5.3",
 		"postcss-sorting": "^9.1.0",
-		"style-dictionary": "^3.9.2",
-		"style-dictionary-sets": "^2.3.0"
+		"style-dictionary": "^4.3.3"
 	},
 	"keywords": [
 		"design-system",
