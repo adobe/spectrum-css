@@ -118,7 +118,7 @@
 	--spectrum-menu-item-focus-indicator-color-default: var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
 	--spectrum-menu-item-focus-indicator-border-width: calc(var(--spectrum-menu-item-focus-indicator-width) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1));
 
-	--spectrum-menu-item-background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default)));
+	--spectrum-menu-item-background-color: transparent;
 
 	&.spectrum-Menu--sizeS {
 		--spectrum-menu-item-min-height: var(--spectrum-component-height-75);
@@ -257,6 +257,9 @@
 	list-style-type: none;
 	overflow: auto;
 	row-gap: var(--spectrum-menu-item-to-item);
+
+	/* Prevent stretch behavior when menu container is taller than menu items */
+	align-self: start;
 
 	&:lang(ja),
 	&:lang(zh),
@@ -458,6 +461,13 @@
 	}
 
 	&:focus,
+	&.is-focused,
+	&:hover,
+	&:active {
+		--spectrum-menu-item-background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default)));
+	}
+
+	&:focus,
 	&.is-focused {
 		background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus)));
 		outline: none;
@@ -570,8 +580,6 @@
 	/* Disabled menu items */
 	&.is-disabled,
 	&[aria-disabled="true"] {
-		background-color: transparent;
-
 		.spectrum-Menu-itemLabel,
 		.spectrum-Menu-sectionHeading,
 		.spectrum-Menu-itemValue {
@@ -732,7 +740,7 @@
 	&.is-open:active,
 	&.is-open:focus,
 	&.is-open.is-focused {
-		background-color: var(--spectrum-menu-item-background-color);
+		background-color: transparent;
 	}
 
 	.spectrum-Menu-itemIcon {
