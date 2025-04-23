@@ -15,6 +15,9 @@
 const fs = require("fs");
 const path = require("path");
 
+const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
+
 const postcss = require("postcss");
 const prettier = require("prettier");
 
@@ -241,3 +244,9 @@ async function main({
 
 exports.extractModifiers = extractModifiers;
 exports.default = main;
+
+let {
+	_: components,
+} = yargs(hideBin(process.argv)).argv;
+
+Promise.all(components.map((componentName) => main({ componentName })));
