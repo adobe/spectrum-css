@@ -11,9 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = () => ({
-	plugins: {
-		"postcss-import": {},
+import postcssConfig from "../postcss.config.js";
+
+export default (options) => postcssConfig({
+	...options,
+	env: "production",
+	map: false,
+	additionalPlugins: {
 		"@spectrum-tools/postcss-rgb-mapping": {
 			colorFunctionalNotation: false,
 		},
