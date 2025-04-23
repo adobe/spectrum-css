@@ -10,20 +10,7 @@ export const ComboBoxGroup = Variants({
 			isOpen: false,
 		},
 		{
-			testHeading: "Quiet",
-			isQuiet: true,
-			isOpen: false,
-		},
-		{
 			testHeading: "Open",
-			isOpen: true,
-			wrapperStyles: {
-				"min-block-size": "250px",
-			},
-		},
-		{
-			testHeading: "Quiet + open",
-			isQuiet: true,
 			isOpen: true,
 			wrapperStyles: {
 				"min-block-size": "250px",
@@ -44,12 +31,6 @@ export const ComboBoxGroup = Variants({
 		{
 			testHeading: "Truncation",
 			isOpen: false,
-			value: "United States of America and to the republic",
-		},
-		{
-			testHeading: "Quiet + truncation",
-			isOpen: false,
-			isQuiet: true,
 			value: "United States of America and to the republic",
 		},
 	],

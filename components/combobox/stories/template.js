@@ -1,5 +1,6 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
+import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
@@ -20,7 +21,6 @@ const Combobox = ({
 	size = "m",
 	isOpen = true,
 	isInvalid = false,
-	isQuiet = false,
 	isDisabled = false,
 	isFocused = false,
 	isKeyboardFocused = false,
@@ -29,6 +29,24 @@ const Combobox = ({
 	value = "",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+	const comboboxId = id || getRandomId("combobox");
+
+	// Handle click outside of the combobox to close it
+	if (typeof window !== "undefined" && isOpen) {
+		// Use setTimeout to allow DOM to render first
+		setTimeout(() => {
+			const comboboxEl = document.getElementById(comboboxId);
+
+			const handleClickOutside = (event) => {
+				if (comboboxEl && !comboboxEl.contains(event.target)) {
+					updateArgs({ isOpen: false });
+					document.removeEventListener("mousedown", handleClickOutside);
+				}
+			};
+
+			document.addEventListener("mousedown", handleClickOutside);
+		}, 0);
+	}
 
 	return html`
 		<div
@@ -37,7 +55,6 @@ const Combobox = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				"is-open": !isDisabled && isOpen,
-				[`${rootClass}--quiet`]: isQuiet,
 				"is-invalid": !isDisabled && isInvalid,
 				"is-focused": !isDisabled && isFocused,
 				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
@@ -52,7 +69,6 @@ const Combobox = ({
 		>
 			${TextField({
 				size,
-				isQuiet,
 				isDisabled,
 				isInvalid,
 				isFocused,
@@ -71,25 +87,20 @@ const Combobox = ({
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
 			}, context)}
-			${PickerButton({
+			${InfieldButton({
 				customClasses: [
 					`${rootClass}-button`,
-					... isInvalid ? ["is-invalid"] : [],
+					...(!isDisabled && isOpen ? ["is-open"] : []),
 				],
 				size,
-				iconSet: "ui",
-				iconName: "ChevronDown",
-				isQuiet,
-				id: getRandomId("picker"),
-				isOpen,
-				isFocused,
-				isKeyboardFocused,
+				id: getRandomId("infieldbutton"),
 				isDisabled,
-				position: "right",
-				onclick: function () {
-					updateArgs({ isOpen: !isOpen });
-				},
 				tabindex: "-1",
+				onclick: function () {
+					updateArgs({
+						isOpen: !isOpen,
+					});
+				},
 			}, context)}
 		</div>
 	`;
@@ -98,10 +109,12 @@ const Combobox = ({
 export const Template = ({
 	size = "m",
 	isOpen = true,
-	isQuiet = false,
 	isDisabled = false,
+	isLabelRequired = false,
 	showFieldLabel = false,
 	isReadOnly = false,
+	showHelpText = false,
+	helpText = "This is a help text",
 	fieldLabelText = "Select location",
 	fieldLabelPosition = "top",
 	content = [],
@@ -109,6 +122,7 @@ export const Template = ({
 	...args
 } = {}, context = {}) => {
 	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
+	const fieldWidth = size === "s" ? 192 : size === "l" ? 224 : size === "xl" ? 240 : 208; // default value is "m"
 	return html`
 		<div style=${styleMap({
 			// This accounts for the height of the popover when it is open to prevent testing issues
@@ -120,8 +134,12 @@ export const Template = ({
 					size,
 					label: fieldLabelText,
 					isDisabled,
-					customStyles: { "max-inline-size": "100px"},
+					...(fieldLabelPosition !== "left" && {
+						customStyles: { "inline-size": `${fieldWidth}px` },
+					}),
+					customClasses: [`${args.rootClass}-label`],
 					alignment: fieldLabelPosition === "left" && "left",
+					isRequired: isLabelRequired,
 				}, context)
 			)}
 			${[
@@ -129,11 +147,10 @@ export const Template = ({
 					isOpen: isOpen && !isDisabled && !isReadOnly,
 					withTip: false,
 					position: "bottom-start",
-					isQuiet,
+					customClasses: [`${args.rootClass}-popover`],
 					trigger: (passthrough) => Combobox({
 						size,
 						isOpen,
-						isQuiet,
 						isDisabled,
 						isReadOnly,
 						value,
@@ -145,6 +162,19 @@ export const Template = ({
 					popoverHeight,
 				}, context),
 			]}
+			${when(showHelpText, () =>
+				HelpText({
+					customClasses: [`${args.rootClass}-helptext`],
+					...(fieldLabelPosition !== "left" && {
+						customStyles: { "inline-size": `${fieldWidth}px` },
+					}),
+					size,
+					isDisabled,
+					hideIcon: true,
+					text: helpText,
+					variant: args.isInvalid ? "negative" : "neutral",
+				}, context)
+			)}
 		</div>
 	`;
 };
