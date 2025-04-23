@@ -123,9 +123,4 @@
 	/* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
 	--spectrum-workflow-icon-size-xxl: 40px;
 	--spectrum-workflow-icon-size-xxs: 15px;
-
-	/* Temporary - not yet in tokens package */
-	--spectrum-link-out-icon-size-75: 12px;
-	--spectrum-link-out-icon-size-100: 14px;
-	--spectrum-link-out-icon-size-200: 16px;
 }
