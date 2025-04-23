@@ -1,31 +1,69 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
-export const StepperGroup = Variants({
+export const NumberFieldGroup = Variants({
 	Template,
 	testData: [
 		{
 			testHeading: "Default",
 		},
 		{
-			testHeading: "Quiet",
-			isQuiet: true,
+			testHeading: "Hidden stepper",
+			hideStepper: true,
+		},
+		{
+			testHeading: "With help text",
+			helpText: "Help text is here to assist",
+		},
+		{
+			testHeading: "Side label",
+			labelPosition: "side",
+		},
+		{
+			testHeading: "Side label with help text",
+			labelPosition: "side",
+			helpText: "Help text is here to assist",
 		},
 		{
 			testHeading: "Invalid",
 			isInvalid: true,
+			helpText: "Help text is here to assist",
 		},
 		{
-			testHeading: "Quiet + invalid",
-			isQuiet: true,
+			testHeading: "Invalid hidden stepper",
 			isInvalid: true,
+			hideStepper: true,
+			helpText: "Help text is here to assist",
 		},
+		{
+			testHeading: "Minimum width (100px)",
+			wrapperStyles: {
+				"inline-size": "100px",
+			},
+		},
+		{
+			testHeading: "Default + truncation",
+			withStates: false,
+			value: "1234567890123456789012345678901",
+		},
+		{
+			testHeading: "Hidden Stepper + truncation",
+			withStates: false,
+			hideStepper: true,
+			value: "1234567890123456789012345678901",
+		},
+		{
+			testHeading: "Side label + truncation",
+			withStates: false,
+			labelPosition: "side",
+			value: "1234567890123456789012345678901",
+		},
+		// {
+		// 	testHeading: "Internationalization (Thai)",
+		// 	value: "๐๑๒๓๔๕๖๗๘๙๑๐",
+		// }
 	],
 	stateData: [
-		{
-			testHeading: "Hide stepper",
-			hideStepper: true,
-		},
 		{
 			testHeading: "Disabled",
 			isDisabled: true,
@@ -39,8 +77,18 @@ export const StepperGroup = Variants({
 			isFocused: true,
 		},
 		{
+			testHeading: "Focused + hovered",
+			isFocused: true,
+			isHovered: true,
+		},
+		{
 			testHeading: "Keyboard-focused",
 			isKeyboardFocused: true,
+		},
+		{
+			testHeading: "Keyboard-focused + hovered",
+			isKeyboardFocused: true,
+			isHovered: true,
 		},
 		{
 			testHeading: "Disabled + hovered",
@@ -51,6 +99,11 @@ export const StepperGroup = Variants({
 			testHeading: "Disabled + focused",
 			isDisabled: true,
 			isFocused: true,
+		},
+		{
+			testHeading: "Disabled + keyboard-focused",
+			isDisabled: true,
+			isKeyboardFocused: true,
 		},
 		{
 			testHeading: "Disabled + keyboard-focused",
