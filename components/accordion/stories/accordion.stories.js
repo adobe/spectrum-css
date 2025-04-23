@@ -80,7 +80,7 @@ const content = new Map([
 		{
 			content:
 				"Yes, Adobe offers free products like Acrobat Reader, Aero, Fill & Sign, Photoshop Express, and Adobe Scan. You can also use Creative Cloud Express, Fresco, and Lightroom Mobile for free, with the option of making in-app purchases.",
-			isDisabled: true,
+			isDisabled: false,
 		},
 	],
 	[
@@ -117,22 +117,10 @@ const content = new Map([
 	[
 		"How many products does Adobe have?",
 		{
-			content:
-				"Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as Adobe Experience Manager, Campaign, and Target.",
-			isOpen: true,
-		},
-	],
-	[
-		"How much do Adobe products cost?",
-		{
 			content: Typography({
 				semantics: "body",
 				content: [
-					"Creative Cloud plans start at US$9.99/mo. You can subscribe to specific Single App plans or get 20+ creative apps and services in the Creative Cloud All Apps plan.",
-					Link({
-						url: "https://www.adobe.com/creativecloud/plans.html",
-						text: "Explore Creative Cloud plans.",
-					}),
+					"Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator, InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as adobe experience manager, Campaign, and Target.",
 				],
 			}),
 		},
@@ -144,22 +132,6 @@ const content = new Map([
 				"Adobe makes some of the most widely used software in the world, including popular apps like Acrobat Pro, Photoshop, Illustrator, InDesign, Lightroom, and Premiere Pro.",
 		},
 	],
-	[
-		"How can I get a student discount on Adobe products?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					`Students who provide a valid school-issued email address at purchase are eligible to save over 60% on Creative Cloud All Apps, which includes 20+ apps such as Photoshop, Illustrator, InDesign, Acrobat Pro, and more. ${Link(
-						{
-							url: "https://www.adobe.com/creativecloud/buy/students.html",
-							text: "Learn more about Creative Cloud for students.",
-						}
-					)}`,
-				],
-			}),
-		},
-	]
 ]);
 
 /**
@@ -213,6 +185,20 @@ Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 Spacious.storyName = "Density: Spacious";
+
+/**
+ * Individual accordion items (of class `.spectrum-Accordion-item`) can be styled as disabled by applying the `is-disabled` class.
+ * This example markup also applies the `disabled` attribute on the heading button.
+ */
+export const Disabled = Template.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	items: content,
+	disableAll: true,
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * The optional quiet style for accordion has no dividers between sections. This style works best when a clear layout

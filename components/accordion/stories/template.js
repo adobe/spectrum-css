@@ -16,6 +16,9 @@ export const AccordionItem = ({
 	idx = 0,
 	isDisabled = false,
 	isOpen = false,
+	isHovered = false,
+	isActive = false,
+	isFocused = false,
 	iconSize = "m",
 	customStyles = {},
 	customClasses = [],
@@ -38,7 +41,12 @@ export const AccordionItem = ({
 			<h3 class="${rootClass}Heading">
 				<!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
 				<button
-					class="${rootClass}Header"
+					class=${classMap({
+						[`${rootClass}Header`]: true,
+						"is-hover": isHovered,
+						"is-active": isActive,
+						"is-focus-visible": isFocused,
+					})}
 					type="button"
 					?disabled=${isDisabled}
 					id="spectrum-accordion-item-${idx}-header"
