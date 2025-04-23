@@ -16,7 +16,6 @@
 .spectrum-Menu {
 	--spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
 	--spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	--spectrum-menu-item-label-to-description: var(--spectrum-menu-item-label-to-description-medium);
 	--spectrum-menu-item-focus-indicator-width: var(--mod-menu-item-focus-indicator-width, var(--spectrum-border-width-200));
 	--spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
 	--spectrum-menu-item-label-to-value-area-min-spacing: var(--spectrum-spacing-100);
@@ -49,7 +48,13 @@
 	--spectrum-menu-section-header-color: var(--spectrum-gray-900);
 	--spectrum-menu-section-header-font-size: var(--spectrum-font-size-100);
 	--spectrum-menu-section-header-min-width: var(--spectrum-component-height-100);
+
+	--spectrum-menu-section-description-line-height: var(--spectrum-line-height-100);
+	--spectrum-menu-section-description-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--spectrum-menu-section-description-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-menu-section-description-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-menu-section-header-to-description: var(--spectrum-menu-section-header-to-description-medium);
+	--spectrum-menu-item-label-to-description: var(--spectrum-menu-item-label-to-description-medium);
 
 	--spectrum-menu-collapsible-icon-color: var(--spectrum-gray-900);
 
@@ -76,8 +81,8 @@
 	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
 	--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
 
-	--spectrum-menu-item-link-out-icon-height: var(--spectrum-link-out-icon-size-100);
-	--spectrum-menu-item-link-out-icon-width: var(--spectrum-link-out-icon-size-100);
+	--spectrum-menu-item-linkout-icon-height: var(--spectrum-link-out-icon-size-100);
+	--spectrum-menu-item-linkout-icon-width: var(--spectrum-link-out-icon-size-100);
 
 	--spectrum-menu-item-label-font-size: var(--spectrum-font-size-100);
 	--spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-100);
@@ -100,7 +105,10 @@
 	--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-medium);
 
 	--spectrum-menu-item-top-to-thumbnail: var(--spectrum-menu-item-top-to-thumbnail-medium);
-	--spectrum-menu-item-thumbnail-text-to-visual: var(--spectrum-text-to-visual-200);
+	--spectrum-menu-item-thumbnail-to-label: var(--spectrum-text-to-visual-200);
+	--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-700);
+	--spectrum-menu-item-thumbnail-width: var(--spectrum-thumbnail-size-700);
+	--spectrum-menu-item-thumbnail-opacity-disabled: 0.3;
 
 	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-medium);
 
@@ -118,7 +126,6 @@
 		--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-75);
 		--spectrum-menu-item-label-font-size: var(--spectrum-font-size-75);
 		--spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-75);
-		--spectrum-menu-item-label-to-description: var(--spectrum-menu-item-label-to-description-small);
 
 		--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-75);
 		--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-75);
@@ -130,7 +137,10 @@
 
 		--spectrum-menu-section-header-font-size: var(--spectrum-font-size-75);
 		--spectrum-menu-section-header-min-width: var(--spectrum-component-height-75);
+
+		--spectrum-menu-section-description-font-size: var(--spectrum-font-size-50);
 		--spectrum-menu-section-header-to-description: var(--spectrum-menu-section-header-to-description-small);
+		--spectrum-menu-item-label-to-description: var(--spectrum-menu-item-label-to-description-small);
 
 		--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-small);
 
@@ -138,13 +148,15 @@
 		--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-small);
 		--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-small);
 
-		--spectrum-menu-item-link-out-icon-height: var(--spectrum-link-out-icon-size-75);
-		--spectrum-menu-item-link-out-icon-width: var(--spectrum-link-out-icon-size-75);
+		--spectrum-menu-item-linkout-icon-height: var(--spectrum-link-out-icon-size-75);
+		--spectrum-menu-item-linkout-icon-width: var(--spectrum-link-out-icon-size-75);
 
 		--spectrum-menu-item-corner-radius: var(--spectrum-corner-radius-400);
 
 		--spectrum-menu-item-top-to-thumbnail: var(--spectrum-menu-item-top-to-thumbnail-small);
-		--spectrum-menu-item-thumbnail-text-to-visual: var(--spectrum-text-to-visual-100);
+		--spectrum-menu-item-thumbnail-to-label: var(--spectrum-text-to-visual-100);
+		--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-500);
+		--spectrum-menu-item-thumbnail-width: var(--spectrum-thumbnail-size-500);
 
 		--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-small);
 	}
@@ -155,7 +167,6 @@
 		--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-200);
 		--spectrum-menu-item-label-font-size: var(--spectrum-font-size-200);
 		--spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-200);
-		--spectrum-menu-item-label-to-description: var(--spectrum-menu-item-label-to-description-large);
 
 		--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-200);
 		--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-200);
@@ -167,7 +178,10 @@
 
 		--spectrum-menu-section-header-font-size: var(--spectrum-font-size-200);
 		--spectrum-menu-section-header-min-width: var(--spectrum-component-height-200);
+
+		--spectrum-menu-section-description-font-size: var(--spectrum-font-size-100);
 		--spectrum-menu-section-header-to-description: var(--spectrum-menu-section-header-to-description-large);
+		--spectrum-menu-item-label-to-description: var(--spectrum-menu-item-label-to-description-large);
 
 		--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-large);
 
@@ -175,13 +189,15 @@
 		--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-large);
 		--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-large);
 
-		--spectrum-menu-item-link-out-icon-height: var(--spectrum-link-out-icon-size-200);
-		--spectrum-menu-item-link-out-icon-width: var(--spectrum-link-out-icon-size-200);
+		--spectrum-menu-item-linkout-icon-height: var(--spectrum-link-out-icon-size-200);
+		--spectrum-menu-item-linkout-icon-width: var(--spectrum-link-out-icon-size-200);
 
 		--spectrum-menu-item-corner-radius: var(--spectrum-corner-radius-600);
 
 		--spectrum-menu-item-top-to-thumbnail: var(--spectrum-menu-item-top-to-thumbnail-large);
-		--spectrum-menu-item-thumbnail-text-to-visual: var(--spectrum-text-to-visual-300);
+		--spectrum-menu-item-thumbnail-to-label: var(--spectrum-text-to-visual-300);
+		--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-800);
+		--spectrum-menu-item-thumbnail-width: var(--spectrum-thumbnail-size-800);
 
 		--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-large);
 	}
@@ -192,7 +208,6 @@
 		--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-300);
 		--spectrum-menu-item-label-font-size: var(--spectrum-font-size-300);
 		--spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-300);
-		--spectrum-menu-item-label-to-description: var(--spectrum-menu-item-label-to-description-extra-large);
 
 		--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-300);
 		--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-300);
@@ -204,7 +219,10 @@
 
 		--spectrum-menu-section-header-font-size: var(--spectrum-font-size-300);
 		--spectrum-menu-section-header-min-width: var(--spectrum-component-height-300);
+
+		--spectrum-menu-section-description-font-size: var(--spectrum-font-size-200);
 		--spectrum-menu-section-header-to-description: var(--spectrum-menu-section-header-to-description-extra-large);
+		--spectrum-menu-item-label-to-description: var(--spectrum-menu-item-label-to-description-extra-large);
 
 		--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large);
 
@@ -212,13 +230,15 @@
 		--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-extra-large);
 		--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-extra-large);
 
-		--spectrum-menu-item-link-out-icon-height: var(--spectrum-link-out-icon-size-200);
-		--spectrum-menu-item-link-out-icon-width: var(--spectrum-link-out-icon-size-200);
+		--spectrum-menu-item-linkout-icon-height: var(--spectrum-link-out-icon-size-200);
+		--spectrum-menu-item-linkout-icon-width: var(--spectrum-link-out-icon-size-200);
 
 		--spectrum-menu-item-corner-radius: var(--spectrum-corner-radius-700);
 
 		--spectrum-menu-item-top-to-thumbnail: var(--spectrum-menu-item-top-to-thumbnail-extra-large);
-		--spectrum-menu-item-thumbnail-text-to-visual: var(--spectrum-text-to-visual-400);
+		--spectrum-menu-item-thumbnail-to-label: var(--spectrum-text-to-visual-400);
+		--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-900);
+		--spectrum-menu-item-thumbnail-width: var(--spectrum-thumbnail-size-900);
 
 		--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
 	}
@@ -244,6 +264,7 @@
 		--spectrum-menu-item-label-line-height: var(--mod-menu-item-label-line-height-cjk, var(--spectrum-menu-item-label-line-height-cjk));
 		--spectrum-menu-item-description-line-height: var(--mod-menu-item-description-line-height-cjk, var(--spectrum-menu-item-description-line-height-cjk));
 		--spectrum-menu-section-header-line-height: var(--mod-menu-section-header-line-height-cjk, var(--spectrum-menu-section-header-line-height-cjk));
+		--spectrum-menu-section-description-line-height: var(--mod-menu-section-description-line-height-cjk, var(--spectrum-menu-section-description-line-height-cjk));
 	}
 
 	/* Menus with "selectable" menu items. */
@@ -340,7 +361,7 @@
 		margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
 	}
 
-	.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+	.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark, .spectrum-menu-item-linkout) {
 		block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
 		inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
 	}
@@ -387,6 +408,17 @@
 
 	grid-template-columns: auto auto auto auto 1fr auto auto auto;
 	grid-template-rows: 1fr auto;
+
+	/* vertically center menu items if there's a thumbnail */
+	&:has(.spectrum-Menu-itemThumbnail) {
+		.spectrum-Menu-itemCheckbox,
+		.spectrum-Menu-checkmark,
+		.spectrum-Menu-itemActions,
+		.spectrum-Menu-itemLabel {
+			align-self: center;
+			margin-block-start: 0;
+		}
+	}
 
 	.spectrum-Menu-itemCheckbox {
 		--mod-checkbox-top-to-text: 0;
@@ -555,6 +587,10 @@
 			fill: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-icon-color-disabled, var(--spectrum-menu-item-label-icon-color-disabled)));
 		}
 
+		.spectrum-Menu-itemThumbnail {
+			opacity: var(--mod-menu-item-thumbnail-opacity-disabled, var(--spectrum-menu-item-thumbnail-opacity-disabled));
+		}
+
 		&:hover {
 			cursor: default;
 			background-color: transparent;
@@ -618,6 +654,11 @@
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
+.spectrum-menu-item-linkout {
+	block-size: var(--spectrum-menu-item-linkout-icon-height);
+	inline-size: var(--spectrum-menu-item-linkout-icon-width);
+}
+
 .spectrum-Menu-sectionHeading {
 	grid-area: sectionHeadingArea;
 	grid-column: 1 / -1;
@@ -632,6 +673,15 @@
 	padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
 }
 
+.spectrum-Menu-sectionDescription {
+	display: block;
+	color: var(--mod-menu-section-description-color, var(--spectrum-menu-section-description-color));
+	font-weight: var(--mod-menu-section-description-font-weight, var(--spectrum-menu-section-description-font-weight));
+	line-height: var(--mod-menu-section-description-line-height, var(--spectrum-menu-section-description-line-height));
+	font-size: var(--mod-menu-section-description-font-size, var(--spectrum-menu-section-description-font-size));
+	margin-block-start: var(--mod-menu-section-header-to-description, var(--spectrum-menu-section-header-to-description));
+}
+
 .spectrum-Menu-itemDescription {
 	grid-area: descriptionArea;
 	color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-description-color-default, var(--spectrum-menu-item-description-color-default)));
@@ -640,6 +690,15 @@
 	overflow-wrap: break-word;
 	margin-block-start: var(--mod-menu-item-label-to-description-spacing, var(--spectrum-menu-item-label-to-description));
 	line-height: var(--mod-menu-item-description-line-height, var(--spectrum-menu-item-description-line-height));
+}
+
+.spectrum-Menu-itemThumbnail {
+	grid-area: iconArea;
+	display: inline-block;
+	block-size: var(--mod-menu-item-thumbnail-height, var(--spectrum-menu-item-thumbnail-height));
+	inline-size: var(--mod-menu-item-thumbnail-width, var(--spectrum-menu-item-thumbnail-width));
+	margin-block-start: calc(var(--mod-menu-item-top-to-thumbnail, var(--spectrum-menu-item-top-to-thumbnail)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
+	margin-inline-end: var(--mod-menu-item-thumbnail-to-label, var(--spectrum-menu-item-thumbnail-to-label));
 }
 
 .spectrum-Menu-itemLabel--truncate {
