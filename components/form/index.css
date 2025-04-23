@@ -46,7 +46,7 @@
 	display: block;
 }
 
-/* Fix extra space after inline-flex elements such as stepper. */
+/* Fix extra space after inline-flex elements such as number field. */
 .spectrum-Form-itemField > * {
 	vertical-align: top;
 }
