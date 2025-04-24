@@ -19,7 +19,7 @@ import { RoundingTemplate, Template } from "./template.js";
  *
  * ### Density
  *
- * Swatch groups come in 3 densities: regular (default), compact, and spacious. Compact and spacious densities retain the same swatch size as regular density, but have less or more padding between each swatch, respectively.
+ * Swatch groups come in several densities: regular (default), spacious, medium and large. Each density retains the same swatch size, but have less or more padding between each swatch, respectively.
  */
 export default {
 	title: "Swatch group",
@@ -42,7 +42,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["regular", "spacious", "mediumLarge"],
+			options: ["regular", "spacious", "sizeM", "sizeL"],
 			control: "select",
 		},
 		items: {
@@ -124,15 +124,15 @@ export const Default = SwatchgroupGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-export const MediumLarge = Template.bind({});
-MediumLarge.args = {
-	density: "mediumLarge",
+export const Medium = Template.bind({});
+Medium.args = {
+	density: "sizeM",
 };
-MediumLarge.tags = ["!dev"];
-MediumLarge.parameters = {
+Medium.tags = ["!dev"];
+Medium.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-MediumLarge.storyName = "Density - medium/large";
+Medium.storyName = "Density - Medium";
 
 export const Spacious = Template.bind({});
 Spacious.args = {
