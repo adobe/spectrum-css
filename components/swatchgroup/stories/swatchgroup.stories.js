@@ -30,11 +30,8 @@ export default {
 		shape: { table: { disable: true } },
 		imageUrl: { table: { disable: true } },
 		isMixedValue: { table: { disable: true } },
-		gradient: { table: { disable: true } },
 		isKeyboardFocused: { table: { disable: true } },
 		isAddSwatch: { table: { disable: true } },
-		isDisabled: { table: { disable: true } },
-		isSelected: { table: { disable: true } },
 		density: {
 			name: "Density",
 			type: { name: "string" },
@@ -53,15 +50,6 @@ export default {
 			name: "Container width",
 			table: { disable: true },
 		},
-		rounding: {
-			...Swatch.argTypes.rounding,
-			defaultValue: "partial",
-			table: {
-				type: { summary: "string", required: true },
-				category: "Component",
-				defaultValue: { summary: "partial", },
-			},
-		},
 		borderStyle: {
 			...Swatch.argTypes.borderStyle,
 			defaultValue: "noBorder",
@@ -77,9 +65,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-SwatchGroup",
-		size: "m",
 		density: "regular",
-		rounding: "partial",
 		borderStyle: "noBorder",
 		containerWidth: "200px",
 		items: [
