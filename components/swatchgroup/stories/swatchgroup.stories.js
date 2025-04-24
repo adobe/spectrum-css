@@ -31,6 +31,10 @@ export default {
 		imageUrl: { table: { disable: true } },
 		isMixedValue: { table: { disable: true } },
 		gradient: { table: { disable: true } },
+		isKeyboardFocused: { table: { disable: true } },
+		isAddSwatch: { table: { disable: true } },
+		isDisabled: { table: { disable: true } },
+		isSelected: { table: { disable: true } },
 		density: {
 			name: "Density",
 			type: { name: "string" },
@@ -58,7 +62,6 @@ export default {
 				defaultValue: { summary: "partial", },
 			},
 		},
-		isKeyboardFocused: { table: { disable: true } },
 		borderStyle: {
 			...Swatch.argTypes.borderStyle,
 			defaultValue: "noBorder",
@@ -79,9 +82,6 @@ export default {
 		rounding: "partial",
 		borderStyle: "noBorder",
 		containerWidth: "200px",
-		isDisabled: false,
-		isSelected: false,
-		isAddSwatch: false,
 		items: [
 			{swatchColor: "rgb(184, 109, 70)",},
 			{swatchColor: "rgb(240, 56, 35)",},
