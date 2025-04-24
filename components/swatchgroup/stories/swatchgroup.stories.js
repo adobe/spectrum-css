@@ -38,7 +38,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["regular", "compact", "spacious"],
+			options: ["regular", "spacious", "mediumLarge"],
 			control: "select",
 		},
 		items: {
@@ -124,15 +124,15 @@ export const Default = SwatchgroupGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-export const Compact = Template.bind({});
-Compact.args = {
-	density: "compact",
+export const MediumLarge = Template.bind({});
+MediumLarge.args = {
+	density: "mediumLarge",
 };
-Compact.tags = ["!dev"];
-Compact.parameters = {
+MediumLarge.tags = ["!dev"];
+MediumLarge.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Compact.storyName = "Density - Compact";
+MediumLarge.storyName = "Density - medium/large";
 
 export const Spacious = Template.bind({});
 Spacious.args = {
