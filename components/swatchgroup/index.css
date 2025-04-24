@@ -31,5 +31,5 @@
 
 /* Medium/large */
 .spectrum-SwatchGroup--mediumLarge {
-	--mod-swatchgroup-spacing: var(--mod-swatchgroup-spacing-mediumLarge, var(--spectrum-swatchgroup-spacing-mediumLarge));
+	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
 }
