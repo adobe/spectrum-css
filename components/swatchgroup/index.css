@@ -13,6 +13,7 @@
 
 .spectrum-SwatchGroup {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-75);
+	--spectrum-swatchgroup-spacing-mediumLarge: var(--spectrum-spacing-100);
 }
 
 .spectrum-SwatchGroup {
@@ -23,12 +24,12 @@
 	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
 }
 
-/* Compact */
-.spectrum-SwatchGroup--compact {
-	--mod-swatchgroup-spacing: var(--mod-swatchgroup-spacing-compact, var(--spectrum-spacing-50));
-}
-
 /* Spacious */
 .spectrum-SwatchGroup--spacious {
 	--mod-swatchgroup-spacing: var(--mod-swatch-group-spacing-spacious, var(--spectrum-swatch-group-spacing-spacious));
+}
+
+/* Medium/large */
+.spectrum-SwatchGroup--mediumLarge {
+	--mod-swatchgroup-spacing: var(--mod-swatchgroup-spacing-mediumLarge, var(--spectrum-swatchgroup-spacing-mediumLarge));
 }
