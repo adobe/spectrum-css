@@ -31,14 +31,14 @@ export default {
 		rounding: {
 			name: "Rounding",
 			description: "The amount of corner rounding for a swatch.",
-			defaultValue: "regular",
+			defaultValue: "partial",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
-				defaultValue: { summary: "regular", },
+				defaultValue: { summary: "partial", },
 			},
-			options: ["regular", "partial", "full"],
+			options: ["partial", "none", "full"],
 			control: "select",
 		},
 		isDisabled,
@@ -111,7 +111,7 @@ export default {
 		isDisabled: false,
 		isHovered: false,
 		isKeyboardFocused: false,
-		rounding: "regular",
+		rounding: "partial",
 		swatchColor: "rgb(174, 216, 230)",
 		borderStyle: "default",
 		shape: "square",
@@ -165,7 +165,7 @@ Disabled.parameters = {
 };
 
 /**
- * Full rounding is usually used when a swatch is presented by itself near other components.
+ * Default rounding and full rounding are usually used when a swatch is presented by itself near other components. A rounding of “none” is used in a swatch group to help minimize the Hermann grid illusion that happens at the intersections of white space in the group.
  */
 export const Rounding = RoundingGroup.bind({});
 Rounding.tags = ["!dev"];

@@ -51,13 +51,14 @@ export default {
 		},
 		rounding: {
 			...Swatch.argTypes.rounding,
-			defaultValue: "regular",
+			defaultValue: "partial",
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
-				defaultValue: { summary: "regular", },
+				defaultValue: { summary: "partial", },
 			},
 		},
+		isKeyboardFocused: { table: { disable: true } },
 		borderStyle: {
 			...Swatch.argTypes.borderStyle,
 			defaultValue: "noBorder",
@@ -75,11 +76,12 @@ export default {
 		rootClass: "spectrum-SwatchGroup",
 		size: "m",
 		density: "regular",
-		rounding: "regular",
+		rounding: "partial",
 		borderStyle: "noBorder",
 		containerWidth: "200px",
 		isDisabled: false,
 		isSelected: false,
+		isAddSwatch: false,
 		items: [
 			{swatchColor: "rgb(184, 109, 70)",},
 			{swatchColor: "rgb(240, 56, 35)",},
