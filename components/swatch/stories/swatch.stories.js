@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isHovered, isKeyboardFocused, isSelected, size } from "@spectrum-css/preview/types";
+import { isDisabled, isHovered, isActive, isKeyboardFocused, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
@@ -48,6 +48,10 @@ export default {
 		isSelected,
 		isHovered: {
 			...isHovered,
+			if: { arg: "isAddSwatch", truthy: true },
+		},
+		isActive: {
+			...isActive,
 			if: { arg: "isAddSwatch", truthy: true },
 		},
 		isKeyboardFocused,
@@ -101,7 +105,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "State",
+				category: "Component",
 			},
 			control: "boolean",
 			if: { arg: "isMixedValue", truthy: false },
@@ -113,6 +117,7 @@ export default {
 		isSelected: false,
 		isDisabled: false,
 		isHovered: false,
+		isActive: false,
 		isKeyboardFocused: false,
 		rounding: "partial",
 		swatchColor: "rgb(174, 216, 230)",

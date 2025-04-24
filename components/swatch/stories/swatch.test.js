@@ -127,5 +127,15 @@ export const SwatchGroup = Variants({
 			testHeading: "Disabled",
 			isDisabled: true,
 		},
+		{
+			testHeading: "Hovered",
+			isHovered: true,
+			include: ["Add"]
+		},
+		{
+			testHeading: "Active",
+			isActive: true,
+			include: ["Add"]
+		},
 	]
 });
