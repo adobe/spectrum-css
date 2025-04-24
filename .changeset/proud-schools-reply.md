@@ -24,7 +24,6 @@ An `Add Swatch` variant has been added with the required color tokens and the sp
 `--spectrum-swatch-icon-color`
 `--spectrum-swatch-rectangle-width-multiplier`
 `--spectrum-swatchgroup-border-color`
-`--spectrum-swatchgroup-spacing-mediumLarge`
 
 ##### New mods
 

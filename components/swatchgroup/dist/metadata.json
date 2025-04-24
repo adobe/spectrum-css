@@ -2,18 +2,17 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-SwatchGroup",
-    ".spectrum-SwatchGroup--mediumLarge",
+    ".spectrum-SwatchGroup--sizeL",
+    ".spectrum-SwatchGroup--sizeM",
     ".spectrum-SwatchGroup--spacious"
   ],
   "modifiers": [
     "--mod-swatch-group-spacing-spacious",
-    "--mod-swatchgroup-spacing",
-    "--mod-swatchgroup-spacing-mediumLarge"
+    "--mod-swatchgroup-spacing"
   ],
   "component": [
     "--spectrum-swatch-group-spacing-spacious",
-    "--spectrum-swatchgroup-spacing",
-    "--spectrum-swatchgroup-spacing-mediumLarge"
+    "--spectrum-swatchgroup-spacing"
   ],
   "global": ["--spectrum-spacing-100", "--spectrum-spacing-75"],
   "passthroughs": [],
