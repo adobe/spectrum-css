@@ -27,7 +27,7 @@
 
 	/* Color */
 	--spectrum-swatch-border-color-selected: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-gray-1000)));
-	--spectrum-swatch-border-color-rgb: var(--spectrum-gray-900-rgb);
+	--spectrum-swatch-border-color-rgb: var(--spectrum-gray-1000-rgb);
 	--spectrum-swatch-inner-border-color-selected: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-gray-25)));
 	--spectrum-swatch-disabled-icon-color: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-white)));
 	--spectrum-swatch-icon-color: var(--spectrum-neutral-content-color-default);
