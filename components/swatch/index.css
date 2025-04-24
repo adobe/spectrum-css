@@ -337,7 +337,7 @@
 	.spectrum-Swatch-fill::before,
 	&.is-selected .spectrum-Swatch-fill,
 	&.is-selected .spectrum-Swatch-fill::before {
-		border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-none));
+		border-radius: var(--spectrum-corner-radius-none);
 	}
 }
 

@@ -34,10 +34,10 @@ An `Add Swatch` variant has been added with the required color tokens and the sp
 `--mod-add-button-background-keyboard-focus`
 `--mod-corner-radius-full`
 `--mod-mixed-button-background`
---mod-swatchgroup-border-color`
+`--mod-swatchgroup-border-color`
 `--mod-swatch-border-color-rgb`
 `--mod-swatch-border-opacity`
 
 ##### Removed mods
 
-`"--mod-swatchgroup-spacing-compact`
+`--mod-swatchgroup-spacing-compact`
