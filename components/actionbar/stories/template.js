@@ -40,21 +40,13 @@ export const Template = ({
 				customClasses: [`${rootClass}-popover`],
 				isOpen,
 				content: [
-					Container({
-						withBorder: false,
-						wrapperStyles: {
-							"column-gap": "var(--spectrum-action-bar-close-button-to-counter)",
-							"align-items": "center",
-						},
-						content: [
-							CloseButton({
-								label: "Clear selection",
-								staticColor: isEmphasized ? "white" : undefined,
-							}, context),
-							FieldLabel({ size: "s", label: "2 Selected" }, context),
-						]
-					}),
+					CloseButton({
+						label: "Clear selection",
+						staticColor: isEmphasized ? "white" : undefined,
+					}, context),
+					FieldLabel({ size: "s", label: "2 Selected" }, context),
 					ActionGroup({
+						customClasses: [`${rootClass}-actiongroup`],
 						size: "m",
 						areQuiet: true,
 						staticColor: isEmphasized ? "white" : undefined,

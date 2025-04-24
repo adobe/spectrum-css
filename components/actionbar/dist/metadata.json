@@ -2,6 +2,7 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-ActionBar",
+    ".spectrum-ActionBar .spectrum-ActionBar-actiongroup",
     ".spectrum-ActionBar .spectrum-ActionBar-popover",
     ".spectrum-ActionBar .spectrum-ActionGroup",
     ".spectrum-ActionBar .spectrum-FieldLabel",
@@ -9,6 +10,7 @@
     ".spectrum-ActionBar .spectrum-FieldLabel:lang(ko)",
     ".spectrum-ActionBar .spectrum-FieldLabel:lang(zh)",
     ".spectrum-ActionBar--emphasized .spectrum-ActionBar-popover",
+    ".spectrum-ActionBar--emphasized .spectrum-ActionBar-popover .spectrum-CloseButton:hover .spectrum-Icon",
     ".spectrum-ActionBar--emphasized .spectrum-ActionGroup .spectrum-ActionButton .spectrum-ActionButton-icon",
     ".spectrum-ActionBar--emphasized .spectrum-ActionGroup .spectrum-ActionButton .spectrum-ActionButton-label",
     ".spectrum-ActionBar--emphasized .spectrum-CloseButton .spectrum-Icon",
@@ -22,6 +24,7 @@
     ".spectrum-ActionBar:lang(zh)"
   ],
   "modifiers": [
+    "--mod-actionbar-close-button-to-counter",
     "--mod-actionbar-corner-radius",
     "--mod-actionbar-emphasized-background-color",
     "--mod-actionbar-emphasized-item-counter-color",
@@ -43,10 +46,12 @@
   ],
   "component": [
     "--spectrum-action-bar-border-color",
+    "--spectrum-action-bar-close-button-to-counter",
     "--spectrum-action-bar-edge-to-content-area",
     "--spectrum-action-bar-height",
     "--spectrum-action-bar-label-to-action-group-area",
     "--spectrum-action-bar-minimum-width",
+    "--spectrum-actionbar-close-button-to-counter",
     "--spectrum-actionbar-corner-radius",
     "--spectrum-actionbar-emphasized-action-button-label-color",
     "--spectrum-actionbar-emphasized-background-color",
@@ -82,6 +87,11 @@
     "--spectrum-neutral-content-color-default",
     "--spectrum-spacing-300"
   ],
-  "passthroughs": ["--mod-actionbutton-label-color"],
-  "high-contrast": ["--highcontrast-actionbar-popover-border-color"]
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-actionbar-closebutton-highlight-color",
+    "--highcontrast-actionbar-popover-border-color",
+    "--highcontrast-actionbutton-emphasized-content-color-default",
+    "--highcontrast-actionbutton-emphasized-icon-color"
+  ]
 }

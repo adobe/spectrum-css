@@ -18,6 +18,7 @@
 	--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-medium-size-extra-large);
 	--spectrum-actionbar-spacing-label-to-actiongroup: var(--spectrum-action-bar-label-to-action-group-area);
 	--spectrum-actionbar-spacing-action-group-edge: var(--spectrum-action-bar-edge-to-content-area);
+	--spectrum-actionbar-close-button-to-counter: var(--spectrum-action-bar-close-button-to-counter);
 
 	/* item counter field label */
 	--spectrum-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
@@ -99,7 +100,10 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: var(--mod-actionbar-spacing-label-to-actiongroup, var(--spectrum-actionbar-spacing-label-to-actiongroup)); /* space between label and action group */
+	}
+
+	.spectrum-ActionBar-actiongroup {
+		padding-inline-start: var(--mod-actionbar-spacing-label-to-actiongroup, var(--spectrum-actionbar-spacing-label-to-actiongroup)); /* space between label and action group */
 	}
 
 	/* item counter */
@@ -107,6 +111,7 @@
 		font-size: var(--mod-actionbar-item-counter-font-size, var(--spectrum-actionbar-item-counter-font-size));
 		color: var(--mod-actionbar-item-counter-color, var(--spectrum-actionbar-item-counter-color));
 		line-height: var(--mod-actionbar-item-counter-line-height, var(--spectrum-actionbar-item-counter-line-height));
+		padding-inline-start: var(--mod-actionbar-close-button-to-counter, var(--spectrum-actionbar-close-button-to-counter));
 
 		/* cjk language support */
 		&:lang(ja),
@@ -125,11 +130,11 @@
 
 .spectrum-ActionBar--emphasized {
 	.spectrum-ActionBar-popover {
-		filter: none;
 		background-color: var(--mod-actionbar-emphasized-background-color, var(--spectrum-actionbar-emphasized-background-color));
 
-		/* border transparent instead of none so WHCM will have visible border */
-		border-color: transparent;
+		.spectrum-CloseButton:hover .spectrum-Icon {
+			color: var(--highcontrast-actionbar-closebutton-highlight-color, var(--spectrum-actionbar-emphasized-icon-color));
+		}
 	}
 
 	/* ensure text is legible on emphasized background */
@@ -139,11 +144,11 @@
 
 	.spectrum-ActionGroup .spectrum-ActionButton {
 		.spectrum-ActionButton-label {
-			--mod-actionbutton-label-color: var(--spectrum-actionbar-emphasized-action-button-label-color);
+			color: var(--highcontrast-actionbutton-emphasized-content-color-default, var(--spectrum-actionbar-emphasized-action-button-label-color));
 		}
 
 		.spectrum-ActionButton-icon {
-			color: var(--spectrum-actionbar-emphasized-icon-color);
+			color: var(--highcontrast-actionbutton-emphasized-icon-color, var(--spectrum-actionbar-emphasized-icon-color));
 		}
 	}
 
@@ -171,9 +176,8 @@
 @media (forced-colors: active) {
 	.spectrum-ActionBar {
 		--highcontrast-actionbar-popover-border-color: CanvasText;
-	}
-
-	.spectrum-ActionBar--emphasized .spectrum-ActionBar-popover {
-		--highcontrast-actionbar-popover-border-color: CanvasText;
+		--highcontrast-actionbutton-emphasized-content-color-default: CanvasText;
+		--highcontrast-actionbutton-emphasized-icon-color: CanvasText;
+		--highcontrast-actionbar-closebutton-highlight-color: Highlight;
 	}
 }
