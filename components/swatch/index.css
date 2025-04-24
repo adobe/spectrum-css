@@ -19,7 +19,7 @@
 
 	/* Size */
 	--spectrum-swatch-size: var(--mod-swatch-size, var(--spectrum-swatch-size-small));
-	--spectrum-swatch-border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-none));
+	--spectrum-swatch-border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-75));
 	--spectrum-swatch-border-thickness: var(--mod-swatch-border-thickness, var(--spectrum-border-width-100));
 	--spectrum-swatch-border-thickness-selected: var(--mod-swatch-border-thickness-selected, var(--spectrum-border-width-200));
 	--spectrum-swatch-disabled-icon-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-workflow-icon-size-75));
@@ -328,8 +328,8 @@
 	inline-size: calc(var(--spectrum-swatch-size) * var(--spectrum-swatch-rectangle-width-multiplier));
 }
 
-/* Variant: Rounding - Partial */
-.spectrum-Swatch--roundingPartial {
+/* Variant: Rounding - None */
+.spectrum-Swatch--roundingNone {
 	&,
 	&::before,
 	&::after,
@@ -337,7 +337,7 @@
 	.spectrum-Swatch-fill::before,
 	&.is-selected .spectrum-Swatch-fill,
 	&.is-selected .spectrum-Swatch-fill::before {
-		border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-75));
+		border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-none));
 	}
 }
 

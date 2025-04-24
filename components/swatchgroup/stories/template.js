@@ -12,7 +12,7 @@ export const Template = ({
 	customClasses = [],
 	size = "m",
 	density = "regular",
-	rounding = "regular",
+	rounding = "partial",
 	borderStyle = "noBorder",
 	containerWidth,
 	items = [],
@@ -62,11 +62,11 @@ export const RoundingTemplate = (args, context) => Container({
 		}, context)}
 		${Container({
 			withBorder: false,
-			heading: "Regular",
+			heading: "Partial",
 			containerStyles: {"gap": "8px",},
 			content: Template({
 				...args,
-				rounding: "regular",
+				rounding: "partial",
 			}, context)
 		}, context)}
 		${Container({

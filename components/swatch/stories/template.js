@@ -22,7 +22,7 @@ export const Template = ({
 	isDisabled = false,
 	isHovered = false,
 	isKeyboardFocused = false,
-	rounding = "regular",
+	rounding = "partial",
 	customClasses = [],
 	swatchColor,
 	customStyles = {},
@@ -55,7 +55,7 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--rounding${capitalize(
 							lowerCase(rounding)
-						)}`]: typeof rounding !== "undefined" && rounding !== "regular",
+						)}`]: typeof rounding !== "undefined" && rounding !== "partial",
 				[`${rootClass}--${borderStyle}`]: typeof borderStyle !== "undefined" && borderStyle !== "default",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
