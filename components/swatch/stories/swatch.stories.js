@@ -41,7 +41,10 @@ export default {
 			options: ["partial", "none", "full"],
 			control: "select",
 		},
-		isDisabled,
+		isDisabled: {
+			...isDisabled,
+			if: { arg: "isAddSwatch", truthy: false },
+		},
 		isSelected,
 		isHovered: {
 			...isHovered,
@@ -98,7 +101,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "State",
 			},
 			control: "boolean",
 			if: { arg: "isMixedValue", truthy: false },
@@ -244,7 +247,11 @@ MixedValue.parameters = {
 /**
  * When a swatch allows a user to add a new value, the preview shows a `gray-50` fill and an add UI icon.
  */
-export const AddSwatch = Template.bind({});
+export const AddSwatch  = (args, context) => Sizes({
+	Template: DisabledGroup,
+	withHeading: false,
+	...args,
+}, context);
 AddSwatch.args = {
 	isAddSwatch: true,
 };

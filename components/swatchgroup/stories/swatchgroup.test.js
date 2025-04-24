@@ -8,12 +8,12 @@ export const SwatchgroupGroup = Variants({
 			testHeading: "Default",
 		},
 		{
-			testHeading: "Compact",
-			density: "compact",
-		},
-		{
 			testHeading: "Spacious",
 			density: "spacious",
+		},
+		{
+			testHeading: "Medium/large",
+			density: "mediumLarge",
 		},
 		{
 			testHeading: "Full rounding",

@@ -34,6 +34,10 @@ export const Swatches = (args, context) => {
 			}, context),
 			Template({
 				...args,
+				isDisabled: true,
+			}, context),
+			Template({
+				...args,
 				isAddSwatch: true,
 			}, context),
 			Template({
@@ -98,15 +102,11 @@ export const SwatchGroup = Variants({
 			isMixedValue: true,
 		},
 		{
-			testHeading: "Add swatch",
+			testHeading: "Add",
 			isAddSwatch: true,
 		},
 	],
 	stateData: [
-		{
-			testHeading: "Disabled",
-			isDisabled: true,
-		},
 		{
 			testHeading: "Empty",
 			swatchColor: undefined,
@@ -118,6 +118,14 @@ export const SwatchGroup = Variants({
 		{
 			testHeading: "Selected",
 			isSelected: true,
+		},
+		{
+			testHeading: "Keyboard focus",
+			isKeyboardFocused: true,
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
 		},
 	]
 });

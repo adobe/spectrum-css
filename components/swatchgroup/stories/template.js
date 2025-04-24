@@ -17,8 +17,6 @@ export const Template = ({
 	containerWidth,
 	items = [],
 	customStyles = {},
-	isDisabled =false,
-	isSelected = false,
 	id = getRandomId("swatchgroup"),
 } = {}, context = {}) => html`
 	<div
@@ -38,8 +36,6 @@ export const Template = ({
 		${items.map((swatch) => Swatch({
 			size,
 			rounding,
-			isDisabled,
-			isSelected,
 			borderStyle,
 			...swatch,
 		}, context))}
