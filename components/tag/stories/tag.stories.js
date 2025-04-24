@@ -5,7 +5,7 @@ import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isReadOnly, i
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
-import { SelectedTemplate, TagsDefaultOptions } from "./template.js";
+import { TagsDefaultOptions } from "./template.js";
 
 /**
  * A tag categorizes content. It can represent keywords or people, and are [grouped](?path=/docs/components-tag-group--docs) to describe an item or a search request.
@@ -141,7 +141,7 @@ Standard.parameters = {
 };
 
 
-export const Selected = SelectedTemplate.bind({});
+export const Selected = TagsDefaultOptions.bind({});
 Selected.storyName = "Default, selected";
 Selected.tags = ["!dev"];
 Selected.args = {

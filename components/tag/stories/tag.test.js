@@ -1,8 +1,9 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template.js";
+import { TagsDefaultOptions, Template } from "./template.js";
 
 export const TagGroups = Variants({
 	Template,
+	SizeTemplate: TagsDefaultOptions,
 	sizeDirection: "row",
 	testData: [
 		{
@@ -96,17 +97,6 @@ export const TagGroups = Variants({
 			testHeading: "Disabled",
 			isDisabled: true,
 			ignore: ["Truncated", "Disabled with states"],
-		},
-		// testing icon/avatar/thumbnail/clear button to ensure size is applied correctly
-		{
-			testHeading: "Small",
-			size: "s",
-			include: ["Default, removable", "Default, with icon", "Default, with avatar", "Emphasized, with thumbnail"],
-		},
-		{
-			testHeading: "Large",
-			size: "l",
-			include: ["Default, removable", "Default, with icon", "Default, with avatar", "Emphasized, with thumbnail"],
 		}
 	]
 });

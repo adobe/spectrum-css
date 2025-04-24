@@ -108,6 +108,10 @@ export const TagsDefaultOptions = ({
 	},
 	content: html`
 		${Template(args, context)}
+		${args.hasClearButton ? "" : Template({
+			...args,
+				hasClearButton: true,
+			}, context)}
 		${Template({
 				...args,
 				hasIcon: true,
@@ -123,22 +127,4 @@ export const TagsDefaultOptions = ({
 				hasAvatar: true,
 				avatarUrl: "example-ava.png",
 			}, context)}`,
-}, context);
-
-export const SelectedTemplate = (args, context) => Container({
-	withBorder: false,
-	direction: "row",
-	wrapperStyles: {
-		rowGap: "12px",
-	},
-	content: html`${[
-		{ isSelected: true, isDisabled: false, heading: "Selected" },
-	].map(({isSelected, heading}) => Container({
-		withBorder: false,
-		heading: heading,
-		content: TagsDefaultOptions({
-			...args,
-			isSelected
-		})
-	}, context))}`
 }, context);
