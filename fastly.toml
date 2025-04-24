@@ -1,0 +1,6 @@
+language = "javascript"
+manifest_version = 3
+name = "spectrum-css"
+
+[scripts]
+  build = "npx @fastly/compute-js-static-publish@latest --root-dir=./ --kv-store-name=spectrum-css-test"
