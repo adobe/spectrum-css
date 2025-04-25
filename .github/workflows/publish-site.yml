@@ -76,9 +76,6 @@ jobs:
             - name: Copy fastly.toml to dist
               run: cp fastly.toml dist/fastly.toml
 
-            - name: Install Fastly CLI
-              run: npm install -g @fastly/cli@latest
-
             ## --- DEPLOY WEBSITE TO Fastly --- ##
             - name: Deploy to Fastly
               uses: fastly/compute-actions/preview@v11
