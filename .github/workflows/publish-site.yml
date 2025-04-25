@@ -83,3 +83,4 @@ jobs:
               env:
                 FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
               run: npx @fastly/compute-js-static-publish@latest --root-dir=./ --kv-store-name=spectrum-css-test && cd ./compute-js && npm run fastly:deploy && npm run fastly:publish
+              timeout-minutes: 25
