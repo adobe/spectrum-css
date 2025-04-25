@@ -82,5 +82,4 @@ jobs:
               with:
                 fastly-api-token: ${{ secrets.FASTLY_API_TOKEN }}
                 github-token: ${{ secrets.GITHUB_TOKEN }}
-                project_directory: dist
               timeout-minutes: 10
