@@ -77,12 +77,13 @@ jobs:
               run: cp fastly.toml dist/fastly.toml
 
             - name: Install Fastly CLI
-              run: yarn install @fastly/cli@latest
+              run: npm install -g @fastly/cli@latest
 
-            ## --- DEPLOY WEBSITE TO Fastly --- ##
-            - name: Deploy to Fastly
-              uses: fastly/compute-actions/deploy@v11
-              with:
-                fastly-api-token: ${{ secrets.FASTLY_API_TOKEN }}
-                github-token: ${{ secrets.GITHUB_TOKEN }}
-              timeout-minutes: 10
+            - name: Fastly static publish
+              run: npx @fastly/compute-js-static-publish@latest --root-dir=./ --kv-store-name=spectrum-css-test
+
+            - name: Run Fastly deploy
+              run: npm run fastly:deploy
+
+            - name: Run Fastly publish
+              run: npm run fastly:publish
