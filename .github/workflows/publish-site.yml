@@ -77,7 +77,7 @@ jobs:
               run: cp fastly.toml dist/fastly.toml
 
             - name: Install Fastly CLI
-              run: yarn install @fastly/cli@latest
+              run: npm install -g @fastly/cli@latest
 
             ## --- DEPLOY WEBSITE TO Fastly --- ##
             - name: Deploy to Fastly
