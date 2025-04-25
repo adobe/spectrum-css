@@ -80,10 +80,4 @@ jobs:
               run: npm install -g @fastly/cli@latest
 
             - name: Fastly static publish
-              run: npx @fastly/compute-js-static-publish@latest --root-dir=./ --kv-store-name=spectrum-css-test
-
-            - name: Run Fastly deploy
-              run: npm run fastly:deploy
-
-            - name: Run Fastly publish
-              run: npm run fastly:publish
+              run: npx @fastly/compute-js-static-publish@latest --root-dir=./ --kv-store-name=spectrum-css-test && npm run fastly:deploy && npm run fastly:publish
