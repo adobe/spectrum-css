@@ -3,4 +3,4 @@ manifest_version = 3
 name = "spectrum-css"
 
 [scripts]
-  build = "npx @fastly/compute-js-static-publish@latest --root-dir=./ --kv-store-name=spectrum-css-test"
+  build = "npx @fastly/compute-js-static-publish@latest --root-dir=./ --kv-store-name=spectrum-css-test && npm run fastly:deploy && npm run fastly:publish"
