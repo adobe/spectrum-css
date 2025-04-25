@@ -3,9 +3,11 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
+
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -18,7 +20,7 @@ import "../themes/spectrum.css";
 import "../themes/express.css";
 
 /**
- * Get the tray submenu back arrow name with scale number (defined in design spec).
+ * Get icon name with scale number (defined in design spec).
  */
 const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
 	switch (size) {
@@ -33,13 +35,207 @@ const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
 	}
 };
 
+const Label = ({
+	hasActions,
+	isCollapsible,
+	label,
+	rootClass,
+	shouldTruncate,
+}) => {
+	if (isCollapsible) {
+		return html`<span
+					class=${classMap({
+						["spectrum-Menu-sectionHeading"]: true,
+						[`${rootClass}Label--truncate`]: shouldTruncate,
+					})}
+				>
+					${label}
+				</span>`;
+	}
+	else {
+		return html`<span
+				class=${classMap({
+					[`${rootClass}Label`]: true,
+					["spectrum-Switch-label"]: hasActions,
+					["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+				})}>
+				${label}
+				</span>`;
+	}
+};
+
+const Visual = ({
+	iconName,
+	iconSet,
+	rootClass,
+	size,
+	thumbnailUrl
+}) => {
+	if (thumbnailUrl) {
+		return html`
+    ${Thumbnail({
+        imageURL: thumbnailUrl,
+        altText: "Thumbnail alt text",
+        size,
+        customClasses: [`${rootClass}Thumbnail`],
+    })}
+    `;
+	}
+	else if (iconName) {
+		return html`
+    ${Icon({
+        iconName,
+		setName: iconSet,
+        size,
+        customClasses: [
+            `${rootClass}Icon`,
+            `${rootClass}Icon--workflowIcon`
+        ]
+        })}
+    `;
+	}
+	return;
+};
+
+const StartAction = ({
+	hasActions,
+	idx,
+	isCollapsible,
+	isDisabled,
+	isSelected,
+	rootClass,
+	selectionMode,
+	size,
+	context
+}) => {
+	if (isCollapsible || (selectionMode == "single" && isSelected)) {
+		return html`
+			${Icon(
+				{
+					iconName: iconWithScale(
+						size,
+						isCollapsible ? "ChevronRight" : "Checkmark",
+					),
+					setName: "ui",
+					useRef: false,
+					size,
+					customClasses: [
+						`${rootClass}Icon`,
+						isCollapsible ? "spectrum-Menu-chevron" : "spectrum-Menu-checkmark",
+					],
+				},
+				context,
+			)}
+			`;
+	}
+	else if (selectionMode == "multiple" && !hasActions) {
+		return html`
+			${Checkbox({
+				size,
+				isEmphasized: true,
+				isChecked: isSelected,
+				isDisabled,
+				id: `menu-checkbox-${idx}`,
+				customClasses: [`${rootClass}Checkbox`],
+			},
+			context)}`;
+	}
+	return null;
+};
+
+const EndAction = ({
+	hasExternalLink,
+	hasActions,
+	idx,
+	isDisabled,
+	isDrillIn,
+	isSelected,
+	rootClass,
+	selectionMode,
+	size,
+	value,
+	context
+}) => html`
+	${when(value, () => html`
+		<span
+			class=${classMap({
+				[`${rootClass}Value`]: true,
+			})}
+		>
+			${value}
+		</span>
+	`)}
+
+	${when(
+		hasActions && selectionMode == "multiple",
+		() => html`
+			<div
+				class=${classMap({
+							[`${rootClass}Actions`]: true,
+						})}>
+				${Switch({
+					size,
+					isChecked: isSelected,
+					isDisabled,
+					label: null,
+					id: `menu-switch-${idx}`,
+					customClasses: [`${rootClass}Switch`],
+				},
+				context)}
+			</div>`
+	)}
+
+	${when(
+		hasExternalLink && !(hasActions && selectionMode === "multiple"),
+		() => html`<div class="${rootClass}Actions">
+			${Icon({
+			iconName: "LinkOut",
+			size,
+			customClasses: [
+				`${rootClass}Icon`,
+				"spectrum-Menu-linkout",
+			],
+			},
+			context)}
+		</div>`
+	)}
+
+	${when(isDrillIn, () =>
+		Icon(
+			{
+				iconName: iconWithScale(size, "ChevronRight"),
+				setName: "ui",
+				useRef: false,
+				size,
+				customClasses: [`${rootClass}Icon`, "spectrum-Menu-chevron"],
+			},
+			context,
+		),
+	)}
+`;
+
+const Description = ({
+	description,
+	rootClass
+}) => html`
+		<span
+			class=${classMap({
+				[`${rootClass}Description`]: true,
+			})}
+		>
+			${description}
+		</span>
+`;
+
 export const MenuItem = (
 	{
 		rootClass = "spectrum-Menu-item",
 		label,
 		description,
+		thumbnailUrl = "",
 		iconName,
 		iconSet = "workflow",
+		hasExternalLink = false,
 		hasActions = false,
 		id = getRandomId("menuitem"),
 		idx = 0,
@@ -84,130 +280,11 @@ export const MenuItem = (
 		aria-disabled=${isDisabled ? "true" : "false"}
 		tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
 	>
-		${when(isCollapsible || (selectionMode == "single" && isSelected), () =>
-			Icon(
-				{
-					iconName: iconWithScale(
-						size,
-						isCollapsible ? "ChevronRight" : "Checkmark",
-					),
-					setName: "ui",
-					useRef: false,
-					size,
-					customClasses: [
-						`${rootClass}Icon`,
-						isCollapsible ? "spectrum-Menu-chevron" : "spectrum-Menu-checkmark",
-					],
-				},
-				context,
-			),
-		)}
-		${when(selectionMode === "multiple" && !hasActions, () =>
-			Checkbox(
-				{
-					size,
-					isEmphasized: true,
-					isChecked: isSelected,
-					isDisabled,
-					id: `menu-checkbox-${idx}`,
-					customClasses: [`${rootClass}Checkbox`],
-				},
-				context,
-			),
-		)}
-		${when(iconName, () =>
-			Icon(
-				{
-					iconName,
-					setName: iconSet,
-					size,
-					customClasses: [`${rootClass}Icon`, `${rootClass}Icon--workflowIcon`],
-				},
-				context,
-			),
-		)}
-		${when(
-			isCollapsible,
-			() => html`
-				<span
-					class=${classMap({
-						["spectrum-Menu-sectionHeading"]: true,
-						[`${rootClass}Label--truncate`]: shouldTruncate,
-					})}
-				>
-					${label}
-				</span>
-			`,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Label`]: true,
-						["spectrum-Switch-label"]: hasActions,
-						[`${rootClass}Label--truncate`]: shouldTruncate,
-					})}
-				>
-					${label}
-				</span>
-			`,
-		)}
-		${when(
-			description,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Description`]: true,
-					})}
-				>
-					${description}
-				</span>
-			`,
-		)}
-		${when(
-			value,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Value`]: true,
-					})}
-				>
-					${value}
-				</span>
-			`,
-		)}
-		${when(
-			hasActions && selectionMode == "multiple",
-			() => html`
-				<div
-					class=${classMap({
-						[`${rootClass}Actions`]: true,
-					})}
-				>
-					${Switch(
-						{
-							size,
-							isChecked: isSelected,
-							isDisabled,
-							label: null,
-							id: `menu-switch-${idx}`,
-							customClasses: [`${rootClass}Switch`],
-						},
-						context,
-					)}
-				</div>
-			`,
-		)}
-		${when(isDrillIn, () =>
-			Icon(
-				{
-					iconName: iconWithScale(size, "ChevronRight"),
-					setName: "ui",
-					useRef: false,
-					size,
-					customClasses: [`${rootClass}Icon`, "spectrum-Menu-chevron"],
-				},
-				context,
-			),
-		)}
+		${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, rootClass, selectionMode, size, context })}
+		${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl })}
+		${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
+		${when(description, () => Description({ description, rootClass }))}
+		${EndAction({ hasExternalLink, hasActions, idx, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}
 		${when(isCollapsible && items.length > 0, () =>
 			Template(
 				{
@@ -322,6 +399,7 @@ export const Template = (
 		id = getRandomId("menu"),
 		hasActions = false,
 		hasDividers = false,
+		hasThumbnail = false,
 		isDisabled = false,
 		isOpen = false,
 		isTraySubmenu = false,
@@ -386,6 +464,8 @@ export const Template = (
 							selectionMode,
 							shouldTruncate,
 							size,
+							// TODO: Figure out why this value isn't passing through
+							thumbnailUrl: i.thumbnailUrl || (hasThumbnail && "thumbnail.png"),
 							value: singleItemValue || i.value,
 						},
 						context,
@@ -712,7 +792,7 @@ export const SubmenuInPopover = (context) => Popover({
 	isOpen: true,
 	position: "end-top",
 	customStyles: {
-		"inline-size": "200px",
+		"inline-size": "184px",
 	},
 	trigger: (args, context) => ActionButton({
 		label: "Settings",
@@ -741,7 +821,7 @@ export const SubmenuInPopover = (context) => Popover({
 			isOpen: true,
 			position: "end-top",
 			customStyles: {
-				top: "-120px",
+				top: "-136px",
 				"inline-size": "120px",
 			},
 			content: [

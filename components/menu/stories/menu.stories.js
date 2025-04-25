@@ -115,7 +115,7 @@ Default.args = {
 				},
 				{
 					label: "A menu item with a longer label that causes the text to wrap to the next line",
-					iconName: "Send",
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Menu item with no icon",
@@ -141,6 +141,7 @@ Default.args = {
 					label: "Selected item",
 					description: "This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Selected item with icon",
@@ -153,7 +154,7 @@ Default.args = {
 		{ type: "divider" },
 		{
 			idx: 3,
-			heading: "Menu header - With actions, icons, short descriptions, and values and longer header text that wraps",
+			heading: "Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
 			id: "menu-heading-desc-icon-value",
 			hasActions: true,
 			items: [
@@ -179,7 +180,19 @@ Default.args = {
 					iconName: "Archive",
 					description: "Disabled menu item with description and icon",
 					isDisabled: true,
+					thumbnailUrl: "thumbnail.png",
 				},
+				{
+					label: "Menu item with external link action",
+					description: "Menu item with external link action (does not work in multi-select mode)",
+					hasExternalLink: true,
+				},
+				{
+					label: "Disabled menu item with external link action",
+					description: "Menu item with external link action (does not work in multi-select mode)",
+					hasExternalLink: true,
+					isDisabled: true,
+				}
 			],
 		},
 		{
@@ -296,7 +309,7 @@ MenuItem.argTypes = {
 	},
 	iconName: {
 		...(IconStories?.argTypes?.iconName ?? {}),
-		if: false,
+		if: { arg: "hasThumbnail", truthy: false },
 	},
 	hasActions: {
 		name: "Has switches",
@@ -308,6 +321,26 @@ MenuItem.argTypes = {
 		},
 		control: "boolean",
 		if: { arg: "selectionMode", eq: "multiple" },
+	},
+	hasExternalLink: {
+		name: "Has external link",
+		description: "Has external link action",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean",
+	},
+	hasThumbnail: {
+		name: "Has thumbnail",
+		description: "Displays a thumbnail in the label",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean"
 	},
 	// These settings are not used in the MenuItem story
 	hasDividers: { table: { disable: true } },
@@ -324,6 +357,8 @@ MenuItem.args = {
 	isHovered: false,
 	isSelected: false,
 	hasActions: false,
+	hasExternalLink: false,
+	hasThumbnail: false
 };
 MenuItem.parameters = {
 	design: {
