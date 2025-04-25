@@ -79,8 +79,11 @@ jobs:
             - name: Install Fastly CLI
               run: npm install -g @fastly/cli@latest
 
+            - name: Get PR number
+              run: echo "pr_number=${{ github.event.pull_request.number }}" >> GITHUB_ENV
+
             - name: Fastly static publish
               env:
                 FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
-              run: npx @fastly/compute-js-static-publish@latest --root-dir=./dist --kv-store-name=spectrum-css-test && cd ./compute-js && npm run fastly:deploy && npm run fastly:publish
+              run: npx @fastly/compute-js-static-publish@latest --root-dir=./dist --kv-store-name=spectrum-css-test && cd ./compute-js && npm run fastly:deploy --domain=pr-${{ env.pr_number }}-spectrum-css.edgecompute.app && npm run fastly:publish
               timeout-minutes: 25
