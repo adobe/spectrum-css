@@ -85,38 +85,7 @@ jobs:
               run: echo "SERVICE_NAME=$(yq '.name' fastly.toml)-${{ github.event.number }}" >> "$GITHUB_OUTPUT"
               shell: bash
 
-            - if: github.event.action == 'closed'
-              name: Delete the Fastly Service
-              working-directory: ${{ inputs.project_directory }}
-              run: fastly service delete --quiet --service-name=${{ steps.service-name.outputs.SERVICE_NAME }} --force --token ${{ secrets.FASTLY_API_TOKEN }} || true
-              shell: bash
-              env:
-                fastly_api_token: ${{ secrets.FASTLY_API_TOKEN }}
-
             - name: Fastly static publish
               env:
                 FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
-              run: npx @fastly/compute-js-static-publish@latest --root-dir=./dist --kv-store-name=${{ steps.service-name.outputs.SERVICE_NAME }} && cd ./compute-js && npm run fastly:deploy && npm run fastly:publish
-
-            - if: github.event.action != 'closed'
-              name: Retrieve domain for deployment
-              working-directory: ${{ inputs.project_directory }}
-              run: fastly domain list --quiet --version latest --json --service-name=${{ steps.service-name.outputs.SERVICE_NAME }} --token ${{ secrets.FASTLY_API_TOKEN }} | jq -r '.[0].Name'
-              shell: bash
-              env:
-                FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
-
-            - if: github.event.action != 'closed'
-              working-directory: ${{ inputs.project_directory }}
-              name: Set domain for deployment
-              shell: bash
-              id: domain
-              run: echo "DOMAIN=$(fastly domain list --quiet --version latest --json --service-name=${{ steps.service-name.outputs.SERVICE_NAME }} --token ${{ secrets.FASTLY_API_TOKEN }} | jq -r '.[0].Name')" >> "$GITHUB_OUTPUT"
-              env:
-                FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
-
-            - if: github.event.action != 'closed'
-              working-directory: ${{ inputs.project_directory }}
-              shell: bash
-              name: Add domain to PR summary
-              run: echo 'This pull-request has been deployed to Fastly and is available at <https://${{ steps.domain.outputs.DOMAIN }}> 🚀' >> $GITHUB_STEP_SUMMARY
+              run: npx @fastly/compute-js-static-publish@latest --root-dir=./dist --kv-store-name=spectrum-css-test --publish-content=spectrum-css && cd ./compute-js && npx @fastly/compute-js-static-publish publish-content --collection-name=${{ steps.service-name.outputs.SERVICE_NAME }}
