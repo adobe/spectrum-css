@@ -237,6 +237,7 @@
 
 .spectrum-Accordion-itemTitle {
 	padding-block: var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space));
+	padding-inline-end: var(--mod-accordion-edge-to-text-space, var(--spectrum-accordion-edge-to-text-space));
 }
 
 /* Focusable button that expands/collapses the accordion item. */
