@@ -88,4 +88,4 @@ jobs:
             - name: Fastly static publish
               env:
                 FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
-              run: npx @fastly/compute-js-static-publish@latest --root-dir=./dist --kv-store-name=spectrum-css-test --publish-content=spectrum-css && cd ./compute-js && npx @fastly/compute-js-static-publish publish-content --collection-name=${{ steps.service-name.outputs.SERVICE_NAME }}
+              run: npx @fastly/compute-js-static-publish@latest --root-dir=./dist --kv-store-name=spectrum-css && cd ./compute-js && npx @fastly/compute-js-static-publish publish-content --collection-name=${{ steps.service-name.outputs.SERVICE_NAME }}
