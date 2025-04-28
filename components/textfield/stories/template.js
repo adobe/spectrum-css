@@ -70,7 +70,7 @@ export const Template = ({
 	isReadOnly = false,
 	isKeyboardFocused = false,
 	isLoading = false,
-	displayLabel = true,
+	displayLabel,
 	labelPosition = "top",
 	labelText,
 	characterCount,
