@@ -35,7 +35,7 @@ export const MenuWithVariants = Variants({
 			items: [
 				{
 					label: "Web Design",
-					iconName: "DesktopAndMobile",
+					iconName: "DeviceMultiscreen",
 					iconSet: "workflow",
 					isCollapsible: true,
 					isOpen: true,
@@ -89,7 +89,7 @@ export const MenuWithVariants = Variants({
 				},
 				{
 					label: "Watches and longer truncated label that is really really much longer",
-					iconName: "Watch",
+					iconName: "Clock",
 					iconSet: "workflow",
 					isCollapsible: true,
 					items: [{ label: "Defaults to not visible within closed item" }],

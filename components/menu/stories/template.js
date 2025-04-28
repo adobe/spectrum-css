@@ -530,7 +530,7 @@ export const DisabledItemGroup = (args, context) => {
 				{
 					label: "Quick export",
 					description: "Share a snapshot",
-					iconName: "Export",
+					iconName: "ExportTo",
 				},
 				{
 					label: "Open a copy",
@@ -638,7 +638,7 @@ export const OverflowGroup = (args, context) => {
 			items: [
 				{
 					label: "Quick export truncated text",
-					iconName: "Export",
+					iconName: "ExportTo",
 					description: "Share a low-res snapshot",
 				},
 				{
@@ -649,7 +649,7 @@ export const OverflowGroup = (args, context) => {
 				},
 				{
 					label: "Preview timelapse truncated text",
-					iconName: "Pending",
+					iconName: "Preview",
 					value: "Value",
 				}
 			]
@@ -722,16 +722,16 @@ export const SelectionGroup = (args, context) => {
 			items: [
 				{
 					label: "Marquee",
-					iconName: "Selection",
+					iconName: "SelectRectangle",
 					isSelected: true,
 				},
 				{
 					label: "Add",
-					iconName: "SelectAdd",
+					iconName: "SelectMulti",
 				},
 				{
 					label: "Subtract",
-					iconName: "SelectSubtract",
+					iconName: "SelectNone",
 				}
 			],
 		},
@@ -760,16 +760,16 @@ export const SelectionGroup = (args, context) => {
 			items: [
 				{
 					label: "Marquee",
-					iconName: "Selection",
+					iconName: "SelectRectangle",
 					isSelected: true,
 				},
 				{
 					label: "Add",
-					iconName: "SelectAdd",
+					iconName: "SelectMulti",
 				},
 				{
 					label: "Subtract",
-					iconName: "SelectSubtract",
+					iconName: "SelectNone",
 				}
 			],
 		},
@@ -794,7 +794,7 @@ export const SubmenuInPopover = (args, context) => Popover({
 	isOpen: true,
 	position: "end-top",
 	customStyles: {
-		"inline-size": "184px",
+		"inline-size": "202px",
 	},
 	trigger: (args, context) => ActionButton({
 		label: "Settings",

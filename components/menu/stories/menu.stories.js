@@ -105,7 +105,7 @@ Default.args = {
 			items: [
 				{
 					label: "Default menu item",
-					iconName: "Export"
+					iconName: "ExportTo"
 				},
 				{
 					label: "Focused menu item",
@@ -348,7 +348,7 @@ MenuItem.argTypes = {
 };
 MenuItem.args = {
 	label: "Start a chat",
-	iconName: "Chat",
+	iconName: "Comment",
 	description: "Menu item description",
 	value: "⌘ N",
 	isDisabled: false,
@@ -388,7 +388,7 @@ Collapsible.args = {
 	items: [
 		{
 			label: "Web Design",
-			iconName: "DesktopAndMobile",
+			iconName: "DeviceMultiscreen",
 			isCollapsible: true,
 			isOpen: true,
 			items: [
@@ -443,7 +443,7 @@ Collapsible.args = {
 		},
 		{
 			label: "Watches",
-			iconName: "Watch",
+			iconName: "Clock",
 			isCollapsible: true,
 			items: [
 				{ label: "Defaults to not visible within closed item" },
@@ -634,15 +634,15 @@ WithDividersAndHeaders.args = {
 				{
 					label: "Marquee",
 					isSelected: true,
-					iconName: "Selection",
+					iconName: "SelectRectangle",
 				},
 				{
 					label: "Add",
-					iconName: "SelectAdd",
+					iconName: "SelectMulti",
 				},
 				{
 					label: "Subtract",
-					iconName: "SelectSubtract",
+					iconName: "SelectNone",
 				},
 			]
 		},
@@ -655,7 +655,7 @@ WithDividersAndHeaders.args = {
 			items: [
 				{
 					label: "Deselect",
-					iconName: "Deselect",
+					iconName: "SelectNo",
 					isDisabled: true,
 				}
 			]
