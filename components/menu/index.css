@@ -12,23 +12,11 @@
  */
 
 .spectrum-Menu {
-	--spectrum-menu-item-background-color-hover: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
-	--spectrum-menu-item-background-color-down: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
-	--spectrum-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
-
-	/* Focus state styling */
-	--spectrum-menu-item-focus-indicator-shadow: none;
-	--spectrum-menu-item-focus-indicator-offset: var(--spectrum-spacing-50);
-	--spectrum-menu-item-spacing-multiplier: 1;
-	--spectrum-menu-item-focus-indicator-outline-style: solid;
-
-	--spectrum-menu-item-top-to-action: var(--spectrum-spacing-50);
-	--spectrum-menu-item-top-to-checkbox: var(--spectrum-spacing-50);
+	/* Simplified - spec'd for 0% opacity */
+	--spectrum-menu-item-background-color-default: var(--highcontrast-menu-item-background-color-default, transparent);
 
 	--spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
 	--spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	--spectrum-menu-item-focus-indicator-width: var(--mod-menu-item-focus-indicator-width, var(--spectrum-border-width-200));
-	--spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
 	--spectrum-menu-item-label-to-value-area-min-spacing: var(--spectrum-spacing-100);
 
 	--spectrum-menu-item-label-content-color-default: var(--spectrum-neutral-content-color-default);
@@ -126,10 +114,12 @@
 	/* "no" icon: just the chevron (we're not counting it because it HAS to be there for a collapsible) */
 	--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
 
+	/* Focus state styling */
+	--spectrum-menu-item-focus-indicator-width: var(--mod-menu-item-focus-indicator-width, var(--spectrum-focus-indicator-thickness));
+	--spectrum-menu-item-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-menu-item-focus-indicator-offset: var(--spectrum-focus-indicator-gap);
+	--spectrum-menu-item-focus-indicator-outline-style: solid;
 	--spectrum-menu-item-focus-indicator-color-default: var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
-	--spectrum-menu-item-focus-indicator-border-width: calc(var(--spectrum-menu-item-focus-indicator-width) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1));
-
-	--spectrum-menu-item-background-color: transparent;
 
 	&.spectrum-Menu--sizeS {
 		--spectrum-menu-item-min-height: var(--spectrum-component-height-75);
@@ -252,10 +242,6 @@
 		--spectrum-menu-item-thumbnail-width: var(--spectrum-thumbnail-size-900);
 
 		--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
-	}
-
-	&:dir(rtl) {
-		--spectrum-menu-item-focus-indicator-direction-scalar: -1;
 	}
 }
 
@@ -399,7 +385,7 @@
 
 	box-sizing: border-box;
 
-	background-color: var(--spectrum-menu-item-background-color);
+	background-color: var(--spectrum-menu-item-background-color-default);
 
 	line-height: var(--mod-menu-item-label-line-height, var(--spectrum-menu-item-label-line-height));
 
@@ -409,7 +395,7 @@
 	padding-block-end: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
 	padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
 
-	margin: calc((var(--spectrum-menu-item-focus-indicator-offset) + var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-spacing-multiplier));
+	margin: calc(var(--spectrum-menu-item-focus-indicator-offset) + var(--spectrum-menu-item-focus-indicator-width));
 	text-decoration: none;
 
 	display: grid;
@@ -474,15 +460,8 @@
 	}
 
 	&:focus,
-	&.is-focused,
-	&:hover,
-	&:active {
-		--spectrum-menu-item-background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default)));
-	}
-
-	&:focus,
 	&.is-focused {
-		background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus)));
+		background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-keyboard-focus)));
 		outline: none;
 
 		> .spectrum-Menu-itemLabel {
@@ -636,7 +615,6 @@
 
 .spectrum-Menu-item:focus-visible,
 .spectrum-Menu-back:focus-visible {
-	box-shadow: var(--spectrum-menu-item-focus-indicator-shadow) var(--spectrum-menu-item-focus-indicator-border-width) 0 0 0 var(--spectrum-menu-item-focus-indicator-color-default);
 	outline: var(--spectrum-menu-item-focus-indicator-width) var(--spectrum-menu-item-focus-indicator-outline-style) var(--spectrum-menu-item-focus-indicator-color-default);
 	outline-offset: var(--spectrum-menu-item-focus-indicator-offset);
 	border-radius: var(--spectrum-menu-item-corner-radius);
@@ -931,11 +909,6 @@
 		}
 
 		.spectrum-Menu-item--collapsible.is-open {
-			&:hover,
-			&:focus-within {
-				box-shadow: var(--spectrum-menu-item-focus-indicator-shadow) var(--spectrum-menu-item-focus-indicator-border-width) 0 0 0 var(--spectrum-menu-item-focus-indicator-color-default);
-			}
-
 			&:hover,
 			&:active,
 			&:focus,
