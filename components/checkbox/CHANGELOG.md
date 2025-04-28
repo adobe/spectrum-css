@@ -1,10 +1,24 @@
 # Change log
 
+## 11.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 10.1.2
 
 ### Patch Changes
 
-📝 [#3617](https://github.com/adobe/spectrum-css/pull/3617) [`a02f1d1`](https://github.com/adobe/spectrum-css/commit/a02f1d13d07106465a3236c5bfe3d029f3e64426) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! 
+📝 [#3617](https://github.com/adobe/spectrum-css/pull/3617) [`a02f1d1`](https://github.com/adobe/spectrum-css/commit/a02f1d13d07106465a3236c5bfe3d029f3e64426) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
 Adds a `::before` pseudo element to properly target the `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box` element. The selector update, specifically in the invalid+checked+hover state should now get the proper error background color, as opposed to the default background color.
 
@@ -212,6 +226,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ### 🛑 BREAKING CHANGE
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
+
 - Imports added to index.css and themes/express.css
 
 ## 8.1.5

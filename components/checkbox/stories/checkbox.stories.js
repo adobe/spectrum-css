@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isChecked, isDisabled, isEmphasized, isHovered, isIndeterminate, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isActive, isChecked, isDisabled, isEmphasized, isHovered, isIndeterminate, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CheckboxGroup } from "./checkbox.test.js";
@@ -36,6 +36,7 @@ export default {
 		isChecked,
 		isIndeterminate,
 		isReadOnly,
+		isActive,
 	},
 	args: {
 		rootClass: "spectrum-Checkbox",
@@ -48,6 +49,7 @@ export default {
 		isIndeterminate: false,
 		isInvalid: false,
 		isReadOnly: false,
+		isActive: false,
 	},
 	parameters: {
 		actions: {

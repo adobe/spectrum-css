@@ -1,4 +1,3 @@
-import legacy from "@spectrum-css/tokens-legacy/dist/json/tokens.json";
 import spectrum from "@spectrum-css/tokens/dist/json/tokens.json";
 
 import { useTheme } from "@storybook/theming";
@@ -50,14 +49,9 @@ function parseData(data, { key, color, platform }) {
  * @param {string} context.context - The theme context set globally for the page
  * @returns {{ color: string, scale: string, context: string, platform: "desktop"|"mobile" }} - An object containing the calculated theme context
  */
-function fetchTheme({ color, scale, context } = {}) {
+function fetchTheme({ color, scale } = {}) {
 	// Fetch the theme if it exists; this data exists if wrapped in a ThemeProvider
 	const theme = useTheme() ?? {};
-
-	// If the context is not provided, use the theme value or a fallback
-	if (typeof context !== "string" && typeof theme.context == "string")
-		context = theme.context;
-	else if (!context) context = "spectrum";
 
 	// If the color or scale is not provided, use the theme values or a fallback
 	if (typeof color !== "string" && typeof theme.color == "string")
@@ -70,9 +64,8 @@ function fetchTheme({ color, scale, context } = {}) {
 
 	// Create a platform context based on the scale (platform used in the token data)
 	const platform = scale === "medium" ? "desktop" : "mobile";
-	const tokens = context === "spectrum" ? spectrum : legacy;
 
-	return { color, scale, context, platform, tokens };
+	return { color, scale, platform, tokens: (spectrum ?? {}) };
 }
 
 /**
@@ -93,7 +86,7 @@ export function fetchToken(key, fallback = undefined, presets = {}) {
 	// Check if the spectrum data is available
 	if (!tokens || typeof tokens !== "object") return fallback;
 
-	return parseData(tokens[key], { color, platform }) ?? fallback;
+	return parseData(tokens?.[key], { color, platform }) ?? fallback;
 }
 
 /**
@@ -110,7 +103,7 @@ export function fetchTokenSet(key, presets = {}) {
 	}
 
 	// Fetch the theme if it exists; this data exists if wrapped in a ThemeProvider
-	const { color, platform, tokens } = fetchTheme(presets);
+	const { color, platform, tokens = {} } = fetchTheme(presets);
 
 	// Check the token data for a set of tokens matching the provided regex
 	const tokenSet = Object.keys(tokens)

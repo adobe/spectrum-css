@@ -14,7 +14,7 @@
 /** This file is machine generated. */
 
 /* --- CORE TOKENS --- */
-@import "@spectrum-css/tokens";
+@import "@spectrum-css/tokens/dist/css/index.css";
 
 /* --- COMPONENTS --- */
 @import "@spectrum-css/accordion";
@@ -61,6 +61,7 @@
 @import "@spectrum-css/icon";
 @import "@spectrum-css/illustratedmessage";
 @import "@spectrum-css/infieldbutton";
+@import "@spectrum-css/infieldprogresscircle";
 @import "@spectrum-css/inlinealert";
 @import "@spectrum-css/link";
 @import "@spectrum-css/logicbutton";

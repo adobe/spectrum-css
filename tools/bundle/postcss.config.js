@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-import path from "node:path";
-
 import { dirs } from "../../tasks/utilities.js";
 
 /**
@@ -30,7 +28,7 @@ export default ({
 	plugins: {
 		"postcss-licensing": {
 			filename: "COPYRIGHT",
-			cwd: path.join(dirs.root),
+			cwd: dirs.root,
 			skipIfEmpty: true,
 		},
 	},

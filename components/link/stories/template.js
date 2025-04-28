@@ -1,4 +1,4 @@
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -17,6 +17,7 @@ export const Template = ({
 	isActive = false,
 	isFocused = false,
 	isVisited = false,
+	isInline = false,
 	id = getRandomId("link"),
 	customClasses = [],
 } = {}) => {
@@ -25,6 +26,7 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--inline`]: isInline,
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
@@ -43,9 +45,48 @@ export const Template = ({
 };
 
 export const TemplateWithFillerText = (args, context) => html`
-	<div>
+	<p>
 		Hello, this is a
 		${Template(args, context)}
 		. This is just filler text, but if you keep reading maybe something good will happen.
-	</div>
+	</p>
 `;
+
+export const MultilineText = (args, context) => html`
+	<p style="width: 200px;">
+		I like focus styles. They are very important for accessibility. They help users know where they are on the page.
+		${Template({
+			...args,
+			text: "This is a link that spans multiple lines",
+			isFocused: true,
+			isInline: true,
+		}, context)}
+		They are also very pretty.
+	</p>
+`;
+
+export const LinkGroupText = (args, context) => Container({
+	withBorder: false,
+	direction: "row",
+	content: [
+		Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Default",
+			content: Template({
+				...args,
+				text: "Learn more",
+			}, context)
+		}, context),
+		Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Quiet",
+			content: Template({
+				...args,
+				text: "Learn more",
+				isQuiet: true,
+			}, context)
+		}, context)
+	],
+}, context);

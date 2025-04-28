@@ -11,12 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = ({
-	resolveImports = true,
-	...options
-}) => require("../postcss.config.js")({
+import postcssConfig from "../postcss.config.js";
+
+export default (options) => postcssConfig({
 	...options,
-	resolveImports,
 	env: "production",
 	map: false,
 	additionalPlugins: {
@@ -26,6 +24,21 @@ module.exports = ({
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
+		},
+		cssnano: {
+			preset: [
+				"cssnano-preset-advanced",
+				{
+					colormin: false,
+					discardComments: { removeAll: true },
+					// @todo yarn add -DW css-declaration-sorter
+					cssDeclarationSorter: false, // @todo { order: "smacss" },
+					normalizeWhitespace: false,
+				},
+			],
+		},
+		"postcss-licensing": {
+			filename: "../COPYRIGHT",
 		},
 	},
 });

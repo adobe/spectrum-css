@@ -11,11 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 :root {
-	background: var(--mod-page-background, var(--spectrum-page-background-color));
+	background: var(--mod-page-background, var(--spectrum-page-background-color, var(--spectrum-gray-75)));
 
 	/* The highlight that appears over a link while it's being tapped */
-	-webkit-tap-highlight-color: var(--mod-page-content-tap-highlight, var(--spectrum-page-content-tap-highlight));
+	-webkit-tap-highlight-color: var(--mod-page-content-tap-highlight, var(--spectrum-page-content-tap-highlight, var(--spectrum-transparent-black-25)));
 }

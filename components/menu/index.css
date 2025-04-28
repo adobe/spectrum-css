@@ -11,9 +11,20 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Menu {
+	--spectrum-menu-item-background-color-hover: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+	--spectrum-menu-item-background-color-down: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+	--spectrum-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+
+	/* Focus state styling */
+	--spectrum-menu-item-focus-indicator-shadow: none;
+	--spectrum-menu-item-focus-indicator-offset: var(--spectrum-spacing-50);
+	--spectrum-menu-item-spacing-multiplier: 1;
+	--spectrum-menu-item-focus-indicator-outline-style: solid;
+
+	--spectrum-menu-item-top-to-action: var(--spectrum-spacing-50);
+	--spectrum-menu-item-top-to-checkbox: var(--spectrum-spacing-50);
+
 	--spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
 	--spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
 	--spectrum-menu-item-focus-indicator-width: var(--mod-menu-item-focus-indicator-width, var(--spectrum-border-width-200));
@@ -424,8 +435,10 @@
 	}
 
 	.spectrum-Menu-itemCheckbox {
+		/* @passthrough start */
 		--mod-checkbox-top-to-text: 0;
 		--mod-checkbox-text-to-control: 0;
+		/* @passthrough end */
 
 		min-block-size: 0;
 

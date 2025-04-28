@@ -1,12 +1,27 @@
 # Change log
 
+## 8.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 7.1.1-next.0
+
+### Patch Changes
+
+📝 [#3604](https://github.com/adobe/spectrum-css/pull/3604) [`cb1b957`](https://github.com/adobe/spectrum-css/commit/cb1b957c05ecf02d3f473de09a8bfd5f2b5d42bf) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+In Spectrum 2, elements that would typically be children of a modal (like dialogs, alert dialogs, and tray) have background-color token specs defined. Because modal _also_ had a defined background color, there was some antialiasing bleed-through happening on the corners, since both the modal and its child now had background colors on top of each other. `--spectrum-modal-background-color` is now redefined as `transparent` to avoid these conflicts in S2. `--mod-modal-background-color` is still available to consumers.
+
 ## 7.1.0
 
 ### Minor Changes
 
 📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-## New feature
+### New feature
 
 Minified and gzipped outputs available for all compiled CSS assets.
 

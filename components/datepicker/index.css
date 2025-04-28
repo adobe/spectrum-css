@@ -11,13 +11,14 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-DatePicker {
+	--spectrum-datepicker-initial-height: var(--spectrum-component-height-100);
+
 	--spectrum-datepicker-border-radius: var(--mod-datepicker-border-radius, var(--spectrum-corner-radius-100));
 	--spectrum-datepicker-border-radius-quiet: var(--mod-datepicker-border-radius-quiet, 0);
 	--spectrum-datepicker-border-width: var(--spectrum-border-width-100);
 	--spectrum-datepicker-min-width: var(--mod-datepicker-min-width, var(--spectrum-field-width));
+	--spectrum-datepicker-initial-height: var(--spectrum-component-height-100);
 	--spectrum-datepicker-icon-size: var(--spectrum-workflow-icon-size-100);
 
 	/* button */
@@ -85,8 +86,10 @@
 	}
 
 	&.is-invalid {
+		/* @passthrough start */
 		--mod-textfield-icon-spacing-inline-end-invalid: calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-datepicker-invalid-icon-to-button));
 		--mod-textfield-icon-spacing-inline-end-quiet-invalid: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-invalid-icon-to-button-quiet));
+		/* @passthrough end */
 	}
 
 	&:not(.spectrum-DatePicker--quiet, .is-disabled) {

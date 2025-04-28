@@ -17,6 +17,9 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
+
 const { deflate } = require("zlib");
 const { promisify } = require("util");
 
@@ -36,6 +39,12 @@ const {
 	fetchContent,
 	writeAndReport,
 } = require("./utilities.js");
+
+const report = {
+	failure: (message) => `${"✗".red}  ${message}`,
+	warning: (message) => `${"⚠".yellow}  ${message}`,
+	success: (message) => `${"✓".green}  ${message}`,
+};
 
 /**
  * Process the provided CSS input and write out to a file
@@ -108,7 +117,7 @@ async function processCSS(
 	if (result.warnings().length > 0) {
 		/** @todo, do we want to support a verbose mode that prints out the warnings during the build? */
 		result.warnings().forEach((warning) => {
-			logs.push(`${"⚠".yellow}  ${warning.text}`);
+			logs.push(report.warning(warning.text));
 		});
 	}
 
@@ -131,13 +140,12 @@ async function processCSS(
 	if (!output) return Promise.resolve(formatted);
 
 	/* Ensure the directory exists */
-	if (!fs.existsSync(path.dirname(output))) {
-		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
+	const outputDir = path.dirname(output);
+	if (!fs.existsSync(outputDir)) {
+		await fsp.mkdir(outputDir, { recursive: true }).catch((err) => {
 			if (!err) return;
 
-			logs.push(
-				`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`,
-			);
+			logs.push(report.failure(`problem making the ${relativePrint(outputDir, { cwd })} directory`));
 			return Promise.reject([...logs, err]);
 		});
 	}
@@ -197,79 +205,6 @@ async function build({ cwd = process.cwd(), clean = false, minify = false, compo
 }
 
 /**
- * The builder for the individual themes assets
- * @param {object} config
- * @param {string} config.cwd - Current working directory for the component being built
- * @param {boolean} config.clean - Should the built assets be cleaned before running the build
- * @returns Promise<void>
- */
-async function buildThemes({ cwd = process.cwd(), minify = false, clean = false } = {}) {
-	// This fetches the content of the files and returns an array of objects with the content and input paths
-	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
-
-	// Nothing to do if there's no content
-	if (!contentData || contentData.length === 0) return;
-
-	const imports = contentData.map(({ input }) => input);
-	const importMap = imports.map((i) => `@import "${i}";`).join("\n");
-
-	const basePostCSSOptions = {
-		cwd,
-		clean,
-		map: false,
-		env: "production",
-		lint: false,
-	};
-
-	const promises = [];
-
-	contentData.forEach(async ({ content, input }) => {
-		const theme = path.basename(input, ".css");
-
-		promises.push(
-			processCSS(content, path.join(cwd, input), path.join(cwd, "dist", "themes", `${theme}.css`), {
-				...basePostCSSOptions,
-				shouldCombine: true,
-				// Only output the new selectors with the system mappings
-				stripLocalSelectors: true,
-			}),
-			minify ? processCSS(content, path.join(cwd, input), path.join(cwd, "dist", "themes", `${theme}.min.css`), {
-				...basePostCSSOptions,
-				shouldCombine: true,
-				// Only output the new selectors with the system mappings
-				stripLocalSelectors: true,
-			}) : Promise.resolve(),
-		);
-	});
-
-	promises.push(
-		processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-base.css"), {
-			...basePostCSSOptions,
-			referencesOnly: true,
-			// Only output the new selectors with the system mappings
-			stripLocalSelectors: true,
-		}),
-		minify ? processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-base.min.css"), {
-			...basePostCSSOptions,
-			referencesOnly: true,
-			// Only output the new selectors with the system mappings
-			stripLocalSelectors: true,
-		}) : Promise.resolve(),
-		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
-		processCSS(importMap, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-theme.css"), {
-			...basePostCSSOptions,
-			referencesOnly: true,
-		}),
-		minify ? processCSS(importMap, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-theme.min.css"), {
-			...basePostCSSOptions,
-			referencesOnly: true,
-		}) : Promise.resolve(),
-	);
-
-	return Promise.all(promises);
-}
-
-/**
  * The main entry point for this tool; this builds a CSS component
  * @param {object} config
  * @param {string} [config.componentName=process.env.NX_TASK_TARGET_PROJECT] - Current working directory for the component being built
@@ -285,6 +220,12 @@ async function main({
 } = {}) {
 	if (!cwd && componentName) {
 		cwd = path.join(dirs.components, componentName);
+	}
+
+	if (!fs.existsSync(cwd)) {
+		return Promise.resolve(
+			report.failure(`Component directory not found at ${relativePrint(cwd)}`)
+		);
 	}
 
 	if (!componentName) {
@@ -304,44 +245,41 @@ async function main({
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
-	// Create the dist directory if it doesn't exist
-	if (!fs.existsSync(path.join(cwd, "dist"))) {
-		fs.mkdirSync(path.join(cwd, "dist"));
+	const reports = [];
+	const errors = [];
+
+	await build({ cwd, clean, minify }).then((report) => reports.push(report)).catch((err) => errors.push(err));
+
+	const logs = reports.flat(Infinity).filter(Boolean);
+	const errs = errors.flat(Infinity).filter(Boolean);
+
+	console.log(`\n\n${key} 🔨`);
+	console.log(`${"".padStart(30, "-")}`);
+
+	if (errs && errs.length > 0) {
+		errs.forEach((err) => console.error(err));
+	}
+	else {
+		if (logs && logs.length > 0) {
+			logs.forEach((log) => console.log(log));
+		}
+		else console.log("No assets created.".gray);
 	}
 
-	return Promise.all([
-		build({ cwd, clean, minify }),
-		buildThemes({ cwd, clean, minify }),
-	])
-		.then((report) => {
-			const logs = report.flat(Infinity).filter(Boolean);
+	console.log(`${"".padStart(30, "-")}`);
+	console.timeEnd(key);
+	console.log("");
 
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
-
-			if (logs && logs.length > 0) {
-				logs.forEach((log) => console.log(log));
-			}
-			else console.log("No assets created.".gray);
-
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-		})
-		.catch((err) => {
-			console.log(`\n\n${key} 🔨`);
-			console.log(`${"".padStart(30, "-")}`);
-
-			console.trace(err);
-
-			console.log(`${"".padStart(30, "-")}`);
-			console.timeEnd(key);
-			console.log("");
-
-			process.exit(1);
-		});
+	if (errs && errs.length > 0) process.exit(1);
+	else process.exit(0);
 }
 
 exports.processCSS = processCSS;
 exports.fetchContent = fetchContent;
 exports.default = main;
+
+let {
+	_: components,
+} = yargs(hideBin(process.argv)).argv;
+
+Promise.all(components.map((componentName) => main({ componentName })));

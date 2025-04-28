@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tag",
-	"version": "10.1.0",
+	"version": "11.0.0-next.1",
 	"description": "The Spectrum CSS tags component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,10 +25,10 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/avatar": ">=9.0.0 <10.0.0",
-		"@spectrum-css/clearbutton": ">=7.0.0 <8.0.0",
-		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+		"@spectrum-css/avatar": ">=10.0.0-next.0",
+		"@spectrum-css/clearbutton": ">=8.0.0-next.0",
+		"@spectrum-css/icon": ">=10.0.0-next.0",
+		"@spectrum-css/tokens": ">=16.1.0-next.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/avatar": {
@@ -45,10 +45,10 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/avatar": "9.1.0",
-		"@spectrum-css/clearbutton": "7.2.0",
-		"@spectrum-css/icon": "9.1.0",
-		"@spectrum-css/tokens": "16.0.1"
+		"@spectrum-css/avatar": "10.0.0-next.0",
+		"@spectrum-css/clearbutton": "8.0.0-next.1",
+		"@spectrum-css/icon": "10.0.0-next.1",
+		"@spectrum-css/tokens": "16.1.0-next.2"
 	},
 	"keywords": [
 		"design-system",

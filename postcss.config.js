@@ -15,12 +15,7 @@ const fs = require("node:fs");
 const { join, basename } = require("node:path");
 
 module.exports = ({
-	skipMapping = false,
-	referencesOnly = false,
-	preserveVariables = true,
-	stripLocalSelectors = false,
 	resolveImports = true,
-	shouldCombine = false,
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -51,7 +46,7 @@ module.exports = ({
 						const filePath = packageParts.length > 2 ? packageParts.slice(2).join("/") : "index.css";
 
 						if (packageParts[1] === "tokens") {
-							return join(__dirname, packageParts[1], "dist", "css", filePath);
+							return join(__dirname, packageParts[1], filePath);
 						}
 
 						return join(__dirname, "components", packageParts[1], filePath);
@@ -84,19 +79,6 @@ module.exports = ({
 				prefix: "is-"
 			} : false,
 			"postcss-hover-media-feature": {},
-			/* --------------------------------------------------- */
-			/* ------------------- VARIABLE PARSING -------------- */
-			"@spectrum-tools/postcss-add-theming-layer": {
-				selectorPrefix: "spectrum",
-				skipMapping,
-				preserveVariables,
-				referencesOnly,
-				stripLocalSelectors,
-				debug: verbose,
-			},
-			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
-				newSelector: ".spectrum",
-			} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */

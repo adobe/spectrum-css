@@ -21,6 +21,11 @@ export default {
 			titlePrefix: "Guides",
 		},
 		{
+			directory: "./foundations",
+			files: "**/*.@(stories.js|mdx)",
+			titlePrefix: "Foundations",
+		},
+		{
 			directory: "./deprecated",
 			files: "**/*.@(stories.js|mdx)",
 			titlePrefix: "Deprecated",
@@ -138,8 +143,6 @@ export default {
 		check: false,
 	},
 	features: {
-		/* Code splitting flag; load stories on-demand */
-		storyStoreV7: true,
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
 	},

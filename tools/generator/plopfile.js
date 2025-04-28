@@ -67,8 +67,9 @@ export default async (plop) => {
 						return "Naming is hard; but it must have a name. You can always change it later.";
 					}
 
-					const name = plop.renderString("{{ lowerCase (camelCase name) }}", { name: answer });
-					if (name && existingComponents && existingComponents.includes(name)) {
+					const name = plop.renderString("{{ lowerCase (kebabCase name) }}", { name: answer });
+					const altName = plop.renderString("{{ lowerCase (camelCase name) }}", { name: answer });
+					if ((name || altName) && existingComponents && (existingComponents.includes(name) || existingComponents.includes(altName))) {
 						return "A component with that name already exists. You can always change it later.";
 					}
 
@@ -79,7 +80,7 @@ export default async (plop) => {
 		],
 		actions: (data) => {
 			data.description = `The ${data.name} component is...`;
-			data.folderName = plop.renderString("{{ lowerCase (camelCase name) }}", data);
+			data.folderName = plop.renderString("{{ lowerCase (kebabCase name) }}", data);
 			data.pkg = pkg;
 			data.tokens = { name: tokens.name, version: tokens.version };
 

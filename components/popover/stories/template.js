@@ -8,9 +8,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -24,8 +21,8 @@ export const Template = ({
 	triggerId = getRandomId("popover-trigger"),
 	customStyles = {},
 	popoverWrapperStyles = {},
-	popoverHeight = 142,
-	popoverWidth = 89,
+	popoverHeight = 158,
+	popoverWidth = 105,
 	popoverAlignment = {},
 	skipAlignment = false,
 	trigger,

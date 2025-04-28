@@ -1,5 +1,22 @@
 # Change log
 
+## 11.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/actionbutton@8.0.0-next.0
+  - @spectrum-css/button@15.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
+
 ## 10.1.0
 
 ### Minor Changes
@@ -295,11 +312,9 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - feat(pagination)!: migrate to spectrum tokens package([f29a74d](https://github.com/adobe/spectrum-css/commit/f29a74d))
 
-  ###
+### 🛑 BREAKING CHANGES
 
-  🛑 BREAKING CHANGES
-
-  - Replaces DNA tokens with Spectrum tokens.
+- Replaces DNA tokens with Spectrum tokens.
 
 Update build to use Spectrum tokens.
 Remove skin.css and incorporate its CSS into index.css.

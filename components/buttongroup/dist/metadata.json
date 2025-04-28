@@ -7,6 +7,7 @@
     ".spectrum-ButtonGroup.spectrum-ButtonGroup--vertical"
   ],
   "modifiers": [
+    "--mod-buttongroup-flex-wrap",
     "--mod-buttongroup-justify-content",
     "--mod-buttongroup-spacing",
     "--mod-buttongroup-spacing-horizontal",
@@ -19,7 +20,6 @@
     "--spectrum-buttongroup-spacing"
   ],
   "global": ["--spectrum-spacing-200", "--spectrum-spacing-300"],
-  "system-theme": [],
   "passthroughs": [],
   "high-contrast": []
 }

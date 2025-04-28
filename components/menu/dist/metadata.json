@@ -60,7 +60,6 @@
     ".spectrum-Menu-item--drillIn:active .spectrum-Menu-chevron",
     ".spectrum-Menu-item--drillIn:focus .spectrum-Menu-chevron",
     ".spectrum-Menu-item--drillIn:hover .spectrum-Menu-chevron",
-    ".spectrum-Menu-item.is-disabled",
     ".spectrum-Menu-item.is-disabled .spectrum-Menu-itemDescription",
     ".spectrum-Menu-item.is-disabled .spectrum-Menu-itemIcon",
     ".spectrum-Menu-item.is-disabled .spectrum-Menu-itemLabel",
@@ -117,7 +116,6 @@
     ".spectrum-Menu-itemSelection",
     ".spectrum-Menu-itemThumbnail",
     ".spectrum-Menu-itemValue",
-    ".spectrum-Menu-item[aria-disabled=\"true\"]",
     ".spectrum-Menu-item[aria-disabled=\"true\"] .spectrum-Menu-itemDescription",
     ".spectrum-Menu-item[aria-disabled=\"true\"] .spectrum-Menu-itemIcon",
     ".spectrum-Menu-item[aria-disabled=\"true\"] .spectrum-Menu-itemLabel",
@@ -439,15 +437,6 @@
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
-  ],
-  "system-theme": [
-    "--system-menu-item-background-color-down",
-    "--system-menu-item-background-color-hover",
-    "--system-menu-item-background-color-key-focus",
-    "--system-menu-item-focus-indicator-offset",
-    "--system-menu-item-focus-indicator-outline-style",
-    "--system-menu-item-focus-indicator-shadow",
-    "--system-menu-item-spacing-multiplier"
   ],
   "passthroughs": [
     "--mod-checkbox-text-to-control",
