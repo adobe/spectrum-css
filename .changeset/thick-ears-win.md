@@ -2,6 +2,7 @@
 "@spectrum-css/colorhandle": minor
 "@spectrum-css/colorslider": minor
 "@spectrum-css/colorarea": minor
+"@spectrum-css/colorwheel": minor
 "@spectrum-css/slider": minor
 ---
 
