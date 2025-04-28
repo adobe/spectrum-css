@@ -207,7 +207,7 @@
 	padding-inline-end: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
 	margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 
-	touch-action: none;
+	touch-action: none; /* Disable touch scrolling on touch devices to allow dragging slider */
 	user-select: none;
 
 	&::before {
@@ -247,6 +247,8 @@
 	padding-inline-end: 0;
 	margin-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
 	margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+	user-select: none;
+	touch-action: none; /* Disable touch scrolling on touch devices to allow dragging slider handle */
 }
 
 /* over-write for Range, without the LTR RTL post-css hack */
