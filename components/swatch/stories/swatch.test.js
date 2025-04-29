@@ -66,6 +66,10 @@ export const SwatchGroup = Variants({
 			swatchColor: "rgba(174, 216, 230, 0.3)"
 		},
 		{
+			testHeading: "No rounding",
+			rounding: "none"
+		},
+		{
 			testHeading: "Partial rounding",
 			rounding: "partial"
 		},
