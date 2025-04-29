@@ -12,6 +12,7 @@ export const InlineAlertGroup = Variants({
 		})),
 		{
 			testHeading: "Truncation",
+			variant: "info",
 			headerText: "In-line alert header announcing something very long and in-line",
 			text: "This is a very urgent alert with a lot of context, so the text has to wrap.",
 			customStyles: {"max-width": "400px"}
@@ -24,34 +25,51 @@ export const InlineAlertGroup = Variants({
 		},
 		{
 			testHeading: "Link",
+			hasLink: true,
+		},
+		{
+			testHeading: "Link + closable",
 			isClosable: true,
+			hasLink: true,
 		},
 		{
 			testHeading: "Subtle",
-			isSubtle: true,
+			treatment: "subtle",
 		},
 		{
 			testHeading: "Bold",
-			isBold: true,
+			treatment: "bold",
 		},
 		{
 			testHeading: "Subtle + closable",
-			isSubtle: true,
+			treatment: "subtle",
 			isClosable: true,
 		},
 		{
+			testHeading: "Subtle + link + closable",
+			treatment: "subtle",
+			isClosable: true,
+			hasLink: true,
+		},
+		{
 			testHeading: "Bold + closable",
-			isBold: true,
+			treatment: "bold",
 			isClosable: true,
 		},
 		{
 			testHeading: "Subtle + link",
-			isSubtle: true,
+			treatment: "subtle",
 			hasLink: true,
 		},
 		{
 			testHeading: "Bold + link",
-			isBold: true,
+			treatment: "bold",
+			hasLink: true,
+		},
+		{
+			testHeading: "Bold + link + closable",
+			treatment: "bold",
+			isClosable: true,
 			hasLink: true,
 		},
 	],

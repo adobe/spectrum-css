@@ -15,8 +15,7 @@ export const Template = ({
 	headerText,
 	text,
 	variant = "neutral",
-	isSubtle = false,
-	isBold = false,
+	treatment = "default",
 	isClosable = false,
 	hasLink = false,
 } = {}, context = {}) => {
@@ -47,7 +46,17 @@ export const Template = ({
 				customClasses: [`${rootClass}-icon`],
 			}, context) : nothing;
 
-	const closableMarkup = (isClosable && !hasLink) ? html`
+
+	const linkMarkup = hasLink ? html`
+		<div class="spectrum-InLineAlert-footer">
+			${Link({
+				url: "#",
+				text: "Link",
+			})}
+		</div>
+	` : nothing;
+
+	const closableMarkup = isClosable ? html`
 		<div class="spectrum-InLineAlert-footer">
 			${Button({
 				treatment: "outline",
@@ -59,22 +68,12 @@ export const Template = ({
 		</div>
 	` : nothing;
 
-	const linkMarkup = (hasLink && !isClosable) ? html`
-		<div class="spectrum-InLineAlert-footer">
-			${Link({
-				url: "#",
-				text: "Link",
-			})}
-		</div>
-	` : nothing;
-
 	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--${variant}--subtle`]: typeof variant !== "undefined" && isSubtle,
-				[`${rootClass}--${variant}--bold`]: typeof variant !== "undefined" && isBold,
+				[`${rootClass}--${treatment}`]: treatment !== "default",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
@@ -85,8 +84,8 @@ export const Template = ({
 				${iconMarkup}
 			</div>
 			<div class="${rootClass}-content">${text}</div>
-			${closableMarkup}
 			${linkMarkup}
+			${closableMarkup}
 		</div>
 	`;
 };

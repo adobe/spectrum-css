@@ -41,45 +41,35 @@ export default {
 			options: ["neutral", "info", "positive", "notice", "negative"],
 			control: "select",
 		},
-		isSubtle: {
-			name: "Subtle",
-			type: { name: "boolean" },
+		treatment: {
+			name: "Treatment",
+			type: { name: "string" },
 			table: {
-				type: { summary: "boolean" },
+				type: { summary: "string" },
 				category: "Component",
 			},
-			control: "boolean",
-			if: { arg: "isBold", truthy: false },
-		},
-		isBold: {
-			name: "Bold",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-			if: { arg: "isSubtle", truthy: false },
+			options: ["default", "subtle", "bold"],
+			control: "select",
 		},
 		isClosable: {
 			name: "Closable",
+			description: "An optional close button rendered below the alert text and link (if enabled).",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
 				category: "Advanced",
 			},
 			control: "boolean",
-			if: { arg: "hasLink", truthy: false },
 		},
 		hasLink: {
 			name: "Link",
+			description: "An optional link rendered below the alert text.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
 				category: "Advanced",
 			},
 			control: "boolean",
-			if: { arg: "isClosable", truthy: false },
 		},
 	},
 	args: {
@@ -87,8 +77,7 @@ export default {
 		headerText: "In-line alert header",
 		text: "This is an alert.",
 		variant: "neutral",
-		isSubtle: false,
-		isBold: false,
+		treatment: "default",
 		isClosable: false,
 		hasLink: false,
 	},
