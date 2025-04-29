@@ -120,6 +120,7 @@
 	--spectrum-menu-item-focus-indicator-offset: var(--spectrum-focus-indicator-gap);
 	--spectrum-menu-item-focus-indicator-outline-style: solid;
 	--spectrum-menu-item-focus-indicator-color-default: var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
+	--spectrum-menu-item-focus-margin: calc(var(--spectrum-menu-item-focus-indicator-offset) + var(--spectrum-menu-item-focus-indicator-width));
 
 	&.spectrum-Menu--sizeS {
 		--spectrum-menu-item-min-height: var(--spectrum-component-height-75);
@@ -246,17 +247,13 @@
 }
 
 .spectrum-Menu {
-	display: inline-grid;
+	display: inline-block;
 	inline-size: var(--mod-menu-inline-size, auto);
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 	overflow: auto;
-	row-gap: var(--spectrum-menu-item-to-item);
-
-	/* Prevent stretch behavior when menu container is taller than menu items */
-	align-self: start;
 
 	&:lang(ja),
 	&:lang(zh),
@@ -395,7 +392,7 @@
 	padding-block-end: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
 	padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
 
-	margin: calc(var(--spectrum-menu-item-focus-indicator-offset) + var(--spectrum-menu-item-focus-indicator-width));
+	margin: var(--spectrum-menu-item-focus-margin);
 	text-decoration: none;
 
 	display: grid;
@@ -670,6 +667,9 @@
 	padding-block-start: var(--mod-menu-section-header-top-edge-to-text, var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
 	padding-block-end: var(--mod-menu-section-header-bottom-edge-to-text, var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text)));
 	padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
+
+	/* Keep alignment with menu items */
+	margin-inline: var(--spectrum-menu-item-focus-margin);
 }
 
 .spectrum-Menu-sectionDescription {

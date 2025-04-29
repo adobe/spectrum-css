@@ -307,6 +307,7 @@ export const MenuGroup = (
 		isSelectable = false,
 		isTraySubmenu = false,
 		shouldTruncate = false,
+		sectionDescription,
 		subrole = "menuitem",
 		size = "m",
 		selectionMode = "none",
@@ -327,6 +328,7 @@ export const MenuGroup = (
 					aria-hidden="true"
 				>
 					${heading}
+					<span class="spectrum-Menu-sectionDescription" aria-hidden="true">${sectionDescription}</span>
 				</span>
 			`,
 			() => html`
@@ -369,6 +371,7 @@ export const MenuGroup = (
 								aria-hidden="true"
 							>
 								${heading}
+								<span class="spectrum-Menu-sectionDescription" aria-hidden="true">${sectionDescription}</span>
 							</span>
 						`,
 					)}
