@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isReadOnly, isSelected, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isEmphasized, isHovered, isKeyboardFocused, isReadOnly, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
@@ -63,10 +63,10 @@ export default {
 		isDisabled,
 		isSelected,
 		isHovered,
-		isFocused,
+		isKeyboardFocused,
 		isActive,
 		isReadOnly,
-		hasClearButton: {
+		isRemovable: {
 			name: "Removable",
 			description: "Has a clear button to clear the tag.",
 			type: { name: "boolean" },
@@ -88,10 +88,10 @@ export default {
 		isDisabled: false,
 		isEmphasized: false,
 		isHovered: false,
-		isFocused: false,
+		isKeyboardFocused: false,
 		isActive: false,
 		isReadOnly: false,
-		hasClearButton: false,
+		isRemovable: false,
 	},
 	parameters: {
 		actions: {
@@ -130,7 +130,9 @@ WithForcedColors.parameters = {
 // ********* DOCS ONLY ********* //
 /**
  * Tags should always include a label to represent search terms, filters, or keywords. Tags also
- * have the option to include an icon, avatar, or thumbnail in addition to the label.
+ * have the option to include an [icon](?path=/docs/components-icon--docs),
+ * [avatar](?path=/docs/components-avatar--docs), or
+ * [thumbnail](?path=/docs/components-thumbnail--docs) in addition to the label.
  */
 export const Standard = TagsDefaultOptions.bind({});
 Standard.args = Default.args;
@@ -142,7 +144,7 @@ Standard.parameters = {
 
 
 export const Selected = TagsDefaultOptions.bind({});
-Selected.storyName = "Default, selected";
+Selected.storyName = "Selected default";
 Selected.tags = ["!dev"];
 Selected.args = {
 	isSelected: true
@@ -165,22 +167,24 @@ Disabled.parameters = {
 };
 
 export const Emphasized = TagsDefaultOptions.bind({});
+Emphasized.storyName = "Selected emphasized";
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
-	isEmphasized: true
+	isEmphasized: true,
+	isSelected: true,
 };
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 /**
- * Tags have the option to be removable or not. Removable tags have a small close ("x") button.
+ * Tags have the option to be removable or not. Removable tags have a small clear ("x") button.
  */
 export const Removable = TagsDefaultOptions.bind({});
 Removable.storyName = "Default, removable";
 Removable.tags = ["!dev"];
 Removable.args = {
-	hasClearButton: true,
+	isRemovable: true,
 };
 Removable.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -191,7 +195,7 @@ Removable.parameters = {
  * Read-only tags cannot be interacted with or changed.
  */
 export const ReadOnly = TagsDefaultOptions.bind({});
-ReadOnly.storyName = "Read only";
+ReadOnly.storyName = "Read-only";
 ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
 	isReadOnly: true,
@@ -213,16 +217,22 @@ Sizing.parameters = {
 
 
 /**
- * When the tag text is too long for the available horizontal space, it truncates. The full text should be revealed with a tooltip on hover.
+ * When the tag text is too long for the available horizontal space, it truncates. The full text
+ * should be revealed with a tooltip on hover. Tags have a maximum width that differs depending on
+ * the size of the tag.
  * */
 
-export const TextOverflow = TagGroups.bind({});
+export const TextOverflow = (args, context) => Sizes({
+	Template: TagGroups,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
 TextOverflow.tags = ["!dev"];
 TextOverflow.args = {
 	hasIcon: true,
 	iconName: "CheckmarkCircle",
 	label: "An example of text overflow behavior. When the button text is too long for the horizontal space available, it will truncate and stay on one line.",
-	customStyles: { "max-inline-size": "200px" }
 };
 
 TextOverflow.parameters = {

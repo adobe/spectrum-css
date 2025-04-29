@@ -7,10 +7,10 @@ export const TagGroups = Variants({
 	sizeDirection: "row",
 	testData: [
 		{
-			testHeading: "Default",
+			testHeading: "Default, not selected",
 		},
 		{
-			testHeading: "Emphasized",
+			testHeading: "Emphasized, not selected",
 			isEmphasized: true,
 		},
 		{
@@ -25,17 +25,18 @@ export const TagGroups = Variants({
 		// show removable tags for these variants so hover and focus can be captured
 		{
 			testHeading: "Default, removable",
-			hasClearButton: true,
+			isRemovable: true,
 		},
 		{
-			testHeading: "Emphasized, removable",
+			testHeading: "Emphasized & selected, removable",
 			isEmphasized: true,
-			hasClearButton: true,
+			isSelected: true,
+			isRemovable: true,
 		},
 		{
 			testHeading: "Selected, removable",
 			isSelected: true,
-			hasClearButton: true,
+			isRemovable: true,
 		},
 		{
 			testHeading: "Disabled with states",
@@ -61,9 +62,10 @@ export const TagGroups = Variants({
 			isReadOnly: true,
 		},
 		{
-			testHeading: "Emphasized, read-only",
+			testHeading: "Emphasized & selected, read-only",
 			isReadOnly: true,
 			isEmphasized: true,
+			isSelected: true,
 		},
 		// truncated, which many states below ignore
 		{
@@ -75,7 +77,7 @@ export const TagGroups = Variants({
 		// show removable as a state for test headings that don't already test it
 		{
 			testHeading: "Removable",
-			hasClearButton: true,
+			isRemovable: true,
 			include: ["Default, with icon" , "Default, with avatar", "Emphasized, with thumbnail", "Truncated"],
 		},
 		{
@@ -84,8 +86,8 @@ export const TagGroups = Variants({
 			ignore: ["Truncated"],
 		},
 		{
-			testHeading: "Focused",
-			isFocused: true,
+			testHeading: "Keyboard focused",
+			isKeyboardFocused: true,
 			ignore: ["Truncated"],
 		},
 		{

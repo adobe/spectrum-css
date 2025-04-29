@@ -191,7 +191,6 @@
 	vertical-align: bottom;
 	max-inline-size: calc(var(--mod-tag-height, var(--spectrum-tag-height)) * var(--mod-tag-maximum-width-multiplier, var(--spectrum-tag-maximum-width-multiplier)));
 	outline: none;
-	user-select: none;
 
 	transition:
 		border-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
@@ -271,8 +270,7 @@
 		transform: perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down))) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
-	&:not(.is-disabled, .is-readOnly):focus-visible,
-	&:not(.is-disabled, .is-readOnly).is-focused {
+	&:not(.is-disabled, .is-readOnly):focus-visible {
 		/* mod/highcontrast specified at top */
 		border-color: var(--spectrum-tag-border-color-focus);
 		background-color: var(--spectrum-tag-background-color-focus);
@@ -297,7 +295,7 @@
 }
 
 /* selected */
-.spectrum-Tag.is-selected {
+.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly) {
 	/* mod/highcontrast colors specified at top */
 	border-color: var(--spectrum-tag-border-color-selected);
 	background-color: var(--spectrum-tag-background-color-selected);
@@ -315,8 +313,7 @@
 		color: var(--spectrum-tag-content-color-selected);
 	}
 
-	&:focus-visible,
-	&.is-focused {
+	&:focus-visible {
 		border-color: var(--spectrum-tag-border-color-selected);
 		background-color: var(--spectrum-tag-background-color-selected-focus);
 		color: var(--spectrum-tag-content-color-selected);
@@ -324,26 +321,25 @@
 }
 
 /* emphasized */
-.spectrum-Tag.is-emphasized {
+.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly) {
 	/* mod/highcontrast colors specified at top */
 	border-color: var(--spectrum-tag-border-color-emphasized);
 	background-color: var(--spectrum-tag-background-color-emphasized);
 	color: var(--spectrum-tag-content-color-emphasized);
 
-	&:not(.is-disabled, .is-readOnly):hover {
+	&:hover {
 		border-color: var(--spectrum-tag-border-color-emphasized);
 		background-color: var(--spectrum-tag-background-color-emphasized-hover);
 		color: var(--spectrum-tag-content-color-emphasized);
 	}
 
-	&:not(.is-disabled, .is-readOnly):active {
+	&:active {
 		border-color: var(--spectrum-tag-border-color-emphasized);
 		background-color: var(--spectrum-tag-background-color-emphasized-active);
 		color: var(--spectrum-tag-content-color-emphasized);
 	}
 
-	&:not(.is-disabled, .is-readOnly):focus-visible,
-	&:not(.is-disabled, .is-readOnly).is-focused {
+	&:focus-visible {
 		border-color: var(--spectrum-tag-border-color-emphasized);
 		background-color: var(--spectrum-tag-background-color-emphasized-focus);
 		color: var(--spectrum-tag-content-color-emphasized);
@@ -405,7 +401,7 @@
 			--highcontrast-tag-content-color-disabled: GrayText;
 		}
 
-		&.is-emphasized {
+		&.spectrum-Tag--emphasized {
 			--highcontrast-tag-border-color-emphasized: Highlight;
 
 			--highcontrast-tag-background-color-emphasized: ButtonFace;

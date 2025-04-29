@@ -22,10 +22,10 @@ export const Template = ({
 	isEmphasized = false,
 	isDisabled = false,
 	isHovered = false,
-	isFocused = false,
+	isKeyboardFocused = false,
 	isActive = false,
 	isReadOnly = false,
-	hasClearButton = false,
+	isRemovable = false,
 	id = getRandomId("tag"),
 	customClasses = [],
 	customStyles = {},
@@ -38,11 +38,11 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
-				"is-emphasized": isEmphasized,
+				[`${rootClass}--emphasized`]: isEmphasized,
 				"is-disabled": isDisabled,
 				"is-selected": isSelected,
 				"is-hover": isHovered,
-				"is-focus-visible": isFocused,
+				"is-focus-visible": isKeyboardFocused,
 				"is-active": isActive,
 				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -53,13 +53,6 @@ export const Template = ({
 			@click=${function() {
 				if (isReadOnly || isDisabled) return;
 				updateArgs({ isSelected: !isSelected });
-			}}
-			@focusin=${function() {
-				if (isReadOnly || isDisabled) return;
-				updateArgs({ isFocused: true });
-			}}
-			@focusout=${function() {
-				updateArgs({ isFocused: false });
 			}}
 		>
 			${when(avatarUrl, () =>
@@ -81,7 +74,7 @@ export const Template = ({
 				}, context)
 			)}
 			<span class="${rootClass}-itemLabel">${label}</span>
-			${when(hasClearButton, () =>
+			${when(isRemovable, () =>
 				ClearButton({
 					isDisabled,
 					customClasses: [`${rootClass}-clearButton`],
@@ -108,9 +101,9 @@ export const TagsDefaultOptions = ({
 	},
 	content: html`
 		${Template(args, context)}
-		${args.hasClearButton ? "" : Template({
+		${args.isRemovable ? "" : Template({
 			...args,
-				hasClearButton: true,
+			isRemovable: true,
 			}, context)}
 		${Template({
 				...args,
