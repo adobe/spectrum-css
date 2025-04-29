@@ -33,7 +33,9 @@
 	/* Text color */
 	--spectrum-numberfield-text-color: var(--mod-numberfield-text-color, var(--spectrum-neutral-content-color-default));
 	--spectrum-numberfield-text-color-hover: var(--mod-numberfield-text-color-hover, var(--spectrum-neutral-content-color-hover));
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Textfield mods */
 	--spectrum-numberfield-text-color-focus: var(--mod-numberfield-text-color-focus, var(--spectrum-neutral-content-color-focus));
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Textfield mods */
 	--spectrum-numberfield-text-color-focus-hover: var(--mod-numberfield-text-color-focus-hover, var(--spectrum-neutral-content-color-focus-hover));
 	--spectrum-numberfield-text-color-keyboard-focus: var(--mod-numberfield-text-color-keyboard-focus, var(--spectrum-neutral-content-color-key-focus));
 	--spectrum-numberfield-text-color-disabled: var(--mod-numberfield-text-color-disabled, var(--spectrum-disabled-content-color));
@@ -160,11 +162,11 @@
 	}
 
 	&.is-invalid {
-		--mod-numberfield-border-color: var(--mod-numberfield-border-color-invalid, var(--spectrum-negative-border-color-default));
-		--mod-numberfield-border-color-hover: var(--mod-numberfield-border-color-hover-invalid, var(--spectrum-negative-border-color-hover));
-		--mod-numberfield-border-color-focus: var(--mod-numberfield-border-color-focus-invalid, var(--spectrum-negative-border-color-focus));
-		--mod-numberfield-border-color-focus-hover: var(--mod-numberfield-border-color-focus-hover-invalid, var(--spectrum-negative-border-color-focus-hover));
-		--mod-numberfield-border-color-keyboard-focus: var(--mod-numberfield-border-color-keyboard-focus-invalid, var(--spectrum-negative-border-color-key-focus));
+		--mod-numberfield-border-color: var(--mod-numberfield-border-color-invalid, var(--spectrum-numberfield-border-color-invalid-default));
+		--mod-numberfield-border-color-hover: var(--mod-numberfield-border-color-hover-invalid, var(--spectrum-numberfield-border-color-invalid-hover));
+		--mod-numberfield-border-color-focus: var(--mod-numberfield-border-color-focus-invalid, var(--spectrum-numberfield-border-color-invalid-focus));
+		--mod-numberfield-border-color-focus-hover: var(--mod-numberfield-border-color-focus-hover-invalid, var(--spectrum-numberfield-border-color-invalid-focus-hover));
+		--mod-numberfield-border-color-keyboard-focus: var(--mod-numberfield-border-color-keyboard-focus-invalid, var(--spectrum-numberfield-border-color-invalid-keyboard-focus));
 	}
 
 	&:not(.is-disabled).is-focused,
@@ -191,9 +193,7 @@
 
 	&.is-disabled {
 		--mod-numberfield-border-color: var(--spectrum-numberfield-border-color-disabled);
-
-		/* --mod-numberfield-background-color: var(--spectrum-numberfield-background-color-disabled); */
-		--mod-numberfield-background-color: var(--spectrum-gray-25);
+		--mod-numberfield-background-color: var(--spectrum-numberfield-background-color-disabled);
 	}
 
 	&:lang(ja),
@@ -204,43 +204,32 @@
 
 	/* @passthrough start -- MODS for sub components */
 	/* nested textfield */
-	--mod-textfield-corner-radius: var(--mod-numberfield-border-radius, var(--spectrum-numberfield-border-radius));
-	--mod-textfield-border-width: var(--mod-numberfield-border-width, var(--spectrum-numberfield-border-width));
-	--mod-textfield-border-color: var(--mod-numberfield-border-color, var(--spectrum-numberfield-border-color-default));
-	--mod-textfield-border-color-hover: var(--mod-numberfield-border-color, var(--spectrum-numberfield-border-color-hover));
-	--mod-textfield-border-color-focus: var(--mod-numberfield-border-color, var(--spectrum-numberfield-border-color-focus));
-	--mod-textfield-border-color-keyboard-focus: var(--mod-numberfield-border-color, var(--spectrum-numberfield-border-color-keyboard-focus));
-	--mod-textfield-border-color-focus-hover: var(--mod-numberfield-border-color, var(--spectrum-numberfield-border-color-focus-hover));
-	--mod-textfield-border-color-disabled: var(--spectrum-numberfield-border-color-disabled);
-	--mod-textfield-border-color-invalid-default: var(--mod-numberfield-border-color-invalid-default, var(--spectrum-numberfield-border-color-invalid-default));
-	--mod-textfield-border-color-invalid-hover: var(--mod-numberfield-border-color-invalid-hover, var(--spectrum-numberfield-border-color-invalid-hover));
-	--mod-textfield-border-color-invalid-focus: var(--mod-numberfield-border-color-invalid-focus, var(--spectrum-numberfield-border-color-invalid-focus));
-	--mod-textfield-border-color-invalid-focus-hover: var(--mod-numberfield-border-color-invalid-focus-hover, var(--spectrum-numberfield-border-color-invalid-focus-hover));
 	--mod-textfield-spacing-block-start: var(--mod-numberfield-spacing-block-start-edge-to-text, var(--spectrum-numberfield-spacing-block-start-edge-to-text));
 	--mod-textfield-spacing-block-end: var(--mod-numberfield-spacing-block-end-edge-to-text, var(--spectrum-numberfield-spacing-block-end-edge-to-text));
-	--mod-textfield-border-color-invalid-keyboard-focus: var(--mod-numberfield-border-color-invalid-keyboard-focus, var(--spectrum-numberfield-border-color-invalid-keyboard-focus));
 	--mod-textfield-icon-spacing-block-invalid: calc(var(--spectrum-numberfield-spacing-block-start-edge-to-alert-icon) - var(--spectrum-numberfield-border-width));
 	--mod-textfield-icon-spacing-inline-end-invalid: var(--spectrum-numberfield-spacing-validation-icon-to-stepper);
-	--mod-textfield-width: var(--mod-numberfield-inline-size, var(--spectrum-numberfield-inline-size));
-	--mod-textfield-min-width: var(--mod-numberfield-min-inline-size, var(--spectrum-numberfield-min-inline-size));
-	--mod-textfield-height: var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size));
+
+	/* this mod overrides the inline-size of the nested textfield */
+	--mod-textfield-width: 100%;
+	--mod-textfield-height: calc(var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size)) - var(--mod-numberfield-border-width, var(--spectrum-numberfield-border-width)) * 2);
 	--mod-textfield-icon-spacing-inline-start-invalid: var(--mod-numberfield-spacing-min-inline-end-value-to-icon, var(--spectrum-numberfield-spacing-min-inline-end-value-to-icon));
 	--mod-textfield-background-color: var(--mod-numberfield-background-color, var(--spectrum-numberfield-background-color, transparent));
-	--mod-textfield-text-color-default: var(--mod-numberfield-text-color-invalid, var(--spectrum-numberfield-text-color));
-	--mod-textfield-text-color-hover: var(--mod-numberfield-text-color-hover, var(--spectrum-numberfield-text-color-hover));
-	--mod-textfield-text-color-focus: var(--mod-numberfield-text-color-focus, var(--spectrum-numberfield-text-color-focus));
-	--mod-textfield-text-color-focus-hover: var(--mod-numberfield-text-color-focus-hover, var(--spectrum-numberfield-text-color-focus-hover));
-	--mod-textfield-text-color-keyboard-focus: var(--mod-numberfield-text-color-keyboard-focus, var(--spectrum-numberfield-text-color-keyboard-focus));
+	--mod-textfield-text-color-default: var(--mod-numberfield-text-color, var(--spectrum-numberfield-text-color));
 	--mod-textfield-text-color-disabled: var(--mod-numberfield-text-color-disabled, var(--spectrum-numberfield-text-color-disabled));
 	--mod-textfield-background-color-disabled: var(--mod-numberfield-background-color-disabled, var(--spectrum-numberfield-background-color-disabled));
 	--mod-textfield-font-family: var(--mod-numberfield-font-family, var(--spectrum-numberfield-font-family));
 	--mod-textfield-font-weight: var(--mod-numberfield-font-weight, var(--spectrum-numberfield-font-weight));
 	--mod-textfield-font-style: var(--mod-numberfield-font-style, var(--spectrum-numberfield-font-style));
 	--mod-textfield-font-size: var(--mod-numberfield-font-size, var(--spectrum-numberfield-font-size));
-	--mod-textfield-line-height: var(--mod-numberfield-line-height, var(--spectrum-numberfield-line-height));
 
 	&.spectrum-NumberField--hiddenStepper {
 		--mod-textfield-min-width: var(--mod-numberfield-hidden-stepper-min-inline-size, var(--spectrum-numberfield-hidden-stepper-min-inline-size));
+	}
+
+	&:not(.is-disabled).is-hover,
+	&:not(.is-disabled):hover {
+		/* overrides the textfield mod */
+		--mod-textfield-text-color-default: var(--mod-numberfield-text-color-hover, var(--spectrum-numberfield-text-color-hover));
 	}
 
 	&:not(.is-disabled).is-keyboardFocused,
@@ -253,6 +242,8 @@
 	&:not(.is-disabled).is-focused,
 	&:not(.is-disabled):focus,
 	&:not(.is-disabled):focus-within {
+		--mod-textfield-text-color-focus: var(--mod-numberfield-text-color-focus, var(--spectrum-numberfield-text-color-focus));
+
 		&.is-hover,
 		&:hover {
 			/* overrides the textfield mod */
@@ -266,7 +257,6 @@
 .spectrum-NumberField {
 	position: relative;
 	display: inline-grid;
-
 	min-inline-size: var(--spectrum-numberfield-min-inline-size);
 	inline-size: var(--spectrum-numberfield-inline-size);
 
@@ -338,7 +328,7 @@
 
 /* Number field container includes .spectrum-Textfield and .spectrum-InfieldButtons */
 .spectrum-NumberField-inputs {
-	block-size: var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size));
+	/* gives the focus ring the proper border-radius */
 	border-radius: var(--spectrum-numberfield-border-radius);
 	display: flex;
 	align-items: center;
@@ -348,22 +338,23 @@
 		(which was being inherited from .spectrum-Textfield) */
 		outline: none;
 		border-radius: 0;
-
-		padding-inline-end: calc(var(--spectrum-numberfield-spacing-min-inline-end-value-to-icon) + var(--spectrum-numberfield-alert-icon-size) + var(--spectrum-numberfield-spacing-validation-icon-to-stepper));
 	}
 }
 
 /* Nested textfield subcomponent */
 .spectrum-NumberField-textfield {
-	inline-size: 100%;
 	display: inline-flex;
 	flex-flow: column-reverse nowrap;
-	block-size: calc(var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size)) - var(--spectrum-numberfield-border-width) * 2);
 
+	/* gives the textfield container (instead of the input) the proper border styles */
 	border: var(--spectrum-numberfield-border-width) solid var(--spectrum-numberfield-border-color-default);
 	padding-inline-start: var(--spectrum-numberfield-spacing-inline-edge-to-text);
 	padding-inline-end: var(--spectrum-numberfield-button-container-size);
+
+	/* gives the textfield container (instead of the input) the proper border-radius */
 	border-radius: var(--spectrum-numberfield-border-radius);
+
+	/* gives the textfield container (instead of the input) the proper background color */
 	background-color: var(--spectrum-numberfield-background-color, transparent);
 
 	/* accommodate stepper buttons and validation icons */
@@ -378,9 +369,9 @@
 	padding-inline-start: 0;
 	padding-inline-end: var(--spectrum-numberfield-spacing-min-inline-end-text-to-stepper);
 	border: none;
+
+	/* overrides the min-inline-size of the nested textfield input element */
 	min-inline-size: 100%;
-	block-size: calc(var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size)) - var(--spectrum-numberfield-border-width) * 2);
-	background-color: var(--mod-numberfield-background-color, var(--spectrum-numberfield-background-color, transparent));
 }
 
 /* container for stepUp and stepDown buttons */
