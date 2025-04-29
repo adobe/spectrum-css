@@ -80,11 +80,8 @@ export const Template = ({
 			@click=${function() {
 				updateArgs({ isSelected: !isSelected });
 			}}
-			@focusin=${function() {
-				updateArgs({ isKeyboardFocused: true });
-			}}
 			@focusout=${function() {
-				updateArgs({ isKeyboardFocused: false });
+				updateArgs({ isSelected: false });
 			}}
 			@keypress=${function(e) {
 				if (e.key !== "Enter" && e.key !== " ") return;
