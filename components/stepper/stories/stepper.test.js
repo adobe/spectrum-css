@@ -1,5 +1,6 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
+import { capitalize } from "lodash-es";
 
 export const NumberFieldGroup = Variants({
 	Template,
@@ -35,12 +36,23 @@ export const NumberFieldGroup = Variants({
 			hideStepper: true,
 			helpText: "Help text is here to assist",
 		},
-		{
-			testHeading: "Minimum width (100px)",
+		...["s", "m", "l", "xl"].map((size) => ({
+			testHeading: `Min width: ${capitalize(size)} number field, 100px width container`,
 			wrapperStyles: {
 				"inline-size": "100px",
 			},
-		},
+			size,
+			withStates: false,
+		})),
+		...["s", "m", "l", "xl"].map((size) => ({
+			testHeading: `Min width: ${capitalize(size)} number field (hidden stepper buttons), 25px width container`,
+			wrapperStyles: {
+				"inline-size": "25px",
+			},
+			size,
+			withStates: false,
+			hideStepper: true,
+		})),
 		{
 			testHeading: "Default + truncation",
 			withStates: false,
