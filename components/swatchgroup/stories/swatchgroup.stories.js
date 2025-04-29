@@ -31,6 +31,8 @@ export default {
 		imageUrl: { table: { disable: true } },
 		isMixedValue: { table: { disable: true } },
 		isKeyboardFocused: { table: { disable: true } },
+		isDisabled: { table: { disable: true } },
+		isSelected: { table: { disable: true } },
 		isAddSwatch: { table: { disable: true } },
 		density: {
 			name: "Density",
