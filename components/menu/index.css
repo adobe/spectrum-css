@@ -93,7 +93,6 @@
 	--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-100);
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
-	--spectrum-menu-item-to-item: var(--spectrum-spacing-50);
 
 	--spectrum-menu-item-description-font-size: var(--spectrum-font-size-75);
 
@@ -358,9 +357,14 @@
 		margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
 	}
 
-	.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark, .spectrum-menu-item-linkout) {
+	.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark, .spectrum-Menu-linkout) {
 		block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
 		inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
+	}
+
+	.spectrum-Menu-linkout {
+		block-size: var(--spectrum-menu-item-linkout-icon-height);
+		inline-size: var(--spectrum-menu-item-linkout-icon-width);
 	}
 
 	/* Presentational list items for sections and dividers. */
@@ -398,22 +402,40 @@
 	display: grid;
 
 	grid-template-areas:
-		".            chevronAreaCollapsible .             headingIconArea  sectionHeadingArea  .         .           .                 "
-		"selectedArea chevronAreaCollapsible checkmarkArea iconArea 		labelArea        	valueArea actionsArea chevronAreaDrillIn"
-		".            .                      .             .        		descriptionArea  	.         .           .                 "
-		".            .                      .             .        		submenuArea      	.         .           .                 ";
+		".            		chevronAreaCollapsible 	.             	headingIconArea		sectionHeadingArea  .         	.           	.                 "
+		"selectedArea		chevronAreaCollapsible	checkmarkArea	iconArea 			labelArea        	valueArea	actionsArea		chevronAreaDrillIn"
+		"selectedOverflow	.                      	.             	visualOverflow		descriptionArea  	.         	.           	.                 "
+		".            		.                      	.             	.        			submenuArea      	.         	.           	.                 ";
 
 	grid-template-columns: auto auto auto auto 1fr auto auto auto;
 	grid-template-rows: 1fr auto;
 
 	/* vertically center menu items if there's a thumbnail */
-	&:has(.spectrum-Menu-itemThumbnail) {
-		.spectrum-Menu-itemCheckbox,
-		.spectrum-Menu-checkmark,
-		.spectrum-Menu-itemActions,
-		.spectrum-Menu-itemLabel {
+	&:has(> .spectrum-Menu-itemThumbnail) {
+		> .spectrum-Menu-itemCheckbox,
+		> .spectrum-Menu-checkmark,
+		> .spectrum-Menu-itemActions,
+		> .spectrum-Menu-itemValue,
+		> .spectrum-Menu-itemLabel {
 			align-self: center;
 			margin-block-start: 0;
+		}
+
+		&:has(> .spectrum-Menu-itemDescription) {
+			> .spectrum-Menu-itemActions,
+			> .spectrum-Menu-itemValue,
+			> .spectrum-Menu-itemLabel {
+				align-self: end;
+			}
+
+			> .spectrum-Menu-itemDescription {
+				align-self: start;
+			}
+
+			> .spectrum-Menu-itemCheckbox,
+			> .spectrum-Menu-checkmark {
+				grid-row-end: selectedOverflow;
+			}
 		}
 	}
 
@@ -650,11 +672,6 @@
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
-.spectrum-menu-item-linkout {
-	block-size: var(--spectrum-menu-item-linkout-icon-height);
-	inline-size: var(--spectrum-menu-item-linkout-icon-width);
-}
-
 .spectrum-Menu-sectionHeading {
 	grid-area: sectionHeadingArea;
 	grid-column: 1 / -1;
@@ -698,6 +715,11 @@
 	inline-size: var(--mod-menu-item-thumbnail-width, var(--spectrum-menu-item-thumbnail-width));
 	margin-block-start: calc(var(--mod-menu-item-top-to-thumbnail, var(--spectrum-menu-item-top-to-thumbnail)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
 	margin-inline-end: var(--mod-menu-item-thumbnail-to-label, var(--spectrum-menu-item-thumbnail-to-label));
+
+	.spectrum-Menu-item:has(> &):has(> .spectrum-Menu-itemDescription) & {
+		grid-row-end: visualOverflow;
+		align-self: center;
+	}
 }
 
 .spectrum-Menu-itemLabel--truncate {

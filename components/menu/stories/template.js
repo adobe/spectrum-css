@@ -186,7 +186,8 @@ const EndAction = ({
 		hasExternalLink && !(hasActions && selectionMode === "multiple"),
 		() => html`<div class="${rootClass}Actions">
 			${Icon({
-			iconName: "LinkOut",
+			// TODO: Update name once available in "UI" icon set #1194
+			iconName: "ExportTo",
 			size,
 			customClasses: [
 				`${rootClass}Icon`,
@@ -704,6 +705,25 @@ export const SelectionGroup = (args, context) => {
 			],
 		},
 		{
+			heading: "Single selection with thumbnails",
+			selectionMode: "single",
+			items: [
+				{
+					label: "Preview 1",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
+					label: "Preview 2",
+					thumbnailUrl: "flowers.png"
+				},
+				{
+					label: "Preview 3",
+					thumbnailUrl: "example-ava.png"
+				}
+			],
+		},
+		{
 			heading: "Multiple selection with checkboxes",
 			selectionMode: "multiple",
 			items: [
@@ -735,6 +755,25 @@ export const SelectionGroup = (args, context) => {
 				{
 					label: "Subtract",
 					iconName: "SelectNone",
+				}
+			],
+		},
+		{
+			heading: "Multiple selection with thumbnails",
+			selectionMode: "multiple",
+			items: [
+				{
+					label: "Preview 1",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
+					label: "Preview 2",
+					thumbnailUrl: "flowers.png"
+				},
+				{
+					label: "Preview 3",
+					thumbnailUrl: "example-ava.png"
 				}
 			],
 		},
@@ -773,6 +812,26 @@ export const SelectionGroup = (args, context) => {
 				{
 					label: "Subtract",
 					iconName: "SelectNone",
+				}
+			],
+		},
+		{
+			heading: "Multiple selection with switches and thumbnails",
+			selectionMode: "multiple",
+			hasActions: true,
+			items: [
+				{
+					label: "Preview 1",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
+					label: "Preview 2",
+					thumbnailUrl: "flowers.png"
+				},
+				{
+					label: "Preview 3",
+					thumbnailUrl: "example-ava.png"
 				}
 			],
 		},
@@ -826,8 +885,9 @@ export const SubmenuInPopover = (args, context) => Popover({
 			isOpen: true,
 			position: "end-top",
 			customStyles: {
-				top: "-136px",
+				top: "-110px",
 				"inline-size": "120px",
+				"inset-inline-start": "calc(100% - 10px)"
 			},
 			content: [
 				Template({

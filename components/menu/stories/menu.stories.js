@@ -105,7 +105,7 @@ Default.args = {
 			items: [
 				{
 					label: "Default menu item",
-					iconName: "ExportTo"
+					iconName: "Comment"
 				},
 				{
 					label: "Focused menu item",
@@ -114,11 +114,23 @@ Default.args = {
 					isActive: true,
 				},
 				{
-					label: "A menu item with a longer label that causes the text to wrap to the next line",
-					thumbnailUrl: "thumbnail.png",
+					label: "A menu item with a longer label that causes the text to wrap to the next line"
 				},
 				{
 					label: "Menu item with no icon",
+				},
+				{
+					label: "Menu item as external link",
+					hasExternalLink: true,
+				},
+				{
+					label: "Menu item as external link with icon",
+					hasExternalLink: true,
+					iconName: "Data"
+				},
+				{
+					label: "Menu item with a thumbnail",
+					thumbnailUrl: "thumbnail.png"
 				},
 				{
 					label: "Disabled menu item",
@@ -142,7 +154,17 @@ Default.args = {
 					label: "Selected item",
 					description: "This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
-					thumbnailUrl: "thumbnail.png",
+				},
+				{
+					label: "Selected item with thumbnail",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
+					label: "Selected item with thumbnail",
+					description: "This item is checked if single-select or multi-select mode is turned on",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
 				},
 				{
 					label: "Selected item with icon",
@@ -178,10 +200,20 @@ Default.args = {
 					value: "⌘ C",
 				},
 				{
-					label: "Disabled menu item with action",
-					iconName: "Archive",
-					description: "Disabled menu item with description and icon",
+					label: "Disabled menu item with thumbnail",
+					description: "Disabled menu item with description and thumbnail",
 					isDisabled: true,
+					thumbnailUrl: "thumbnail.png",
+				},
+				{
+					label: "Menu item with thumbnail and value",
+					value: "⌘ C",
+					thumbnailUrl: "thumbnail.png",
+				},
+				{
+					label: "Menu item with thumbnail and value",
+					description: "And a description, too",
+					value: "⌘ C",
 					thumbnailUrl: "thumbnail.png",
 				},
 				{
@@ -500,6 +532,23 @@ Sizing.args = {
 			description: "Short description of menu item",
 			iconName: "Cloud",
 		},
+		{
+			idx: 6,
+			label: "Menu item as external link",
+			hasExternalLink: true
+		},
+		{
+			idx: 7,
+			label: "Menu item with thumbnail",
+			value: "Value",
+			thumbnailUrl: "thumbnail.png"
+		},
+		{
+			idx: 8,
+			label: "Menu item with thumbnail",
+			description: "and description",
+			thumbnailUrl: "thumbnail.png"
+		},
 	]
 };
 Sizing.parameters = {
@@ -615,7 +664,7 @@ WithDividers.args = {
 
 /**
  * Use a section header when a menu section requires a descriptor. Section headers are helpful when two or more
- * sections differ in their functionality or relationships.
+ * sections differ in their functionality or relationships. Section headers can also include an optional description.
  */
 export const WithDividersAndHeaders = Template.bind({});
 WithDividersAndHeaders.storyName = "Sections with dividers and headers";
@@ -652,6 +701,7 @@ WithDividersAndHeaders.args = {
 		{
 			idx: 2,
 			heading: "Actions",
+			sectionDescription:"With an optional description",
 			id: "menu-actions",
 			selectionMode: "single",
 			items: [
