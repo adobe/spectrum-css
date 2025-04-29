@@ -214,28 +214,6 @@
 
 		pointer-events: none;
 	}
-
-	/* focus-ring */
-	&::after {
-		content: "";
-		position: absolute;
-		inset: calc(-2 * var(--spectrum-swatch-focus-indicator-gap));
-
-		opacity: 0;
-
-		border-width: var(--spectrum-swatch-focus-indicator-thickness);
-		border-style: solid;
-		border-color: var(--spectrum-swatch-focus-indicator-color);
-		border-radius: var(--spectrum-swatch-focus-indicator-border-radius);
-
-		transition: opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
-	}
-
-	&:focus-visible {
-		&::after {
-			opacity: 1;
-		}
-	}
 }
 
 .spectrum-Swatch-fill {
