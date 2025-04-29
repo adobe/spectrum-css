@@ -14,7 +14,6 @@
 /* @note: default sizing for swatch is small */
 .spectrum-Swatch {
 	/* Placeholder tokens */
-	--spectrum-swatch-focus-indicator-border-radius: var(--mod-swatch-focus-indicator-border-radius, 8px);
 	--spectrum-swatch-icon-border-color: var(--mod-swatch-icon-border-color, rgb(0 0 0 / var(--spectrum-swatch-disabled-icon-border-opacity)));
 
 	/* Size */
@@ -37,6 +36,7 @@
 	--spectrum-add-button-background-hover: var(--spectrum-gray-200);
 	--spectrum-add-button-background-down: var(--spectrum-gray-200);
 	--spectrum-add-button-background-keyboard-focus: var(--spectrum-gray-200);
+	--spectrum-swatch-border-color-light: rgb(var(--spectrum-swatch-group-border-color) / 42%);
 
 	/* Focus ring */
 	--spectrum-swatch-focus-indicator-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-focus-indicator-color)));
