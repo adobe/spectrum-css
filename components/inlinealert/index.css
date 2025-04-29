@@ -45,7 +45,7 @@
 	--spectrum-inlinealert-content-color: var(--spectrum-body-color);
 
 	/* Link */
-	--mod-link-text-color: var(--highcontrast-inlinealert-content-color, var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color)));
+	--mod-link-text-color: var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color));
 }
 
 .spectrum-InLineAlert {
@@ -207,9 +207,21 @@
 
 @media (forced-colors: active) {
 	.spectrum-InLineAlert {
-		--highcontrast-inlinealert-background-color: Background;
 		--highcontrast-inlinealert-header-color: CanvasText;
 		--highcontrast-inlinealert-content-color: CanvasText;
 		--highcontrast-inlinealert-border-and-icon-color: ButtonBorder;
+
+		--mod-button-content-color-default: CanvasText;
+
+		.spectrum-InLineAlert-header,
+		.spectrum-InLineAlert-content,
+		.spectrum-InLineAlert-footer {
+			forced-color-adjust: none;
+		}
+
+		&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold),
+		&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
+			--highcontrast-inlinealert-background-color: ButtonFace;
+		}
 	}
 }

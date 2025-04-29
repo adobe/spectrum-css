@@ -2,6 +2,9 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-InLineAlert",
+    ".spectrum-InLineAlert .spectrum-InLineAlert-content",
+    ".spectrum-InLineAlert .spectrum-InLineAlert-footer",
+    ".spectrum-InLineAlert .spectrum-InLineAlert-header",
     ".spectrum-InLineAlert--info",
     ".spectrum-InLineAlert--info.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle)",
     ".spectrum-InLineAlert--info.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold)",

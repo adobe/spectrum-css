@@ -6,6 +6,8 @@ import { AlertsWithStyleOptions } from "./template.js";
 
 /**
  * In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.
+ * 
+ * In-line alerts have five different variants: neutral (default), informative, positive, notice, and negative. Each variant is available with three fill styles (treatment): outline (default), subtle, and bold.
  */
 export default {
 	title: "In-line alert",
@@ -48,7 +50,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["default", "subtle", "bold"],
+			options: ["border", "subtle", "bold"],
 			control: "select",
 		},
 		isClosable: {
@@ -125,6 +127,19 @@ Negative.parameters = {
 Negative.tags = ["!dev"];
 
 /**
+ * Neutral (default) variant alerts may also use the subtle and bold treatments available to other variants.
+ */
+export const Neutral = AlertsWithStyleOptions.bind({});
+Neutral.args = {
+	variant: "neutral",
+	headerText: "Neutral in-line alert header",
+};
+Neutral.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Neutral.tags = ["!dev"];
+
+/**
  * The positive variant uses the positive semantic color (green) and has a "checkmark" icon to help those with color vision deficiency discern the message tone. This variant should be used to inform someone of a successful function or result of an action they took.
  */
 export const Positive = AlertsWithStyleOptions.bind({});
@@ -153,29 +168,43 @@ Notice.tags = ["!dev"];
 /**
  * An in-line alert with a close button in the footer. Combine this strategy with any variant.
  */
-export const Closable = AlertsWithStyleOptions.bind({});
-Closable.args = {
+export const WithFooterClosable = AlertsWithStyleOptions.bind({});
+WithFooterClosable.args = {
 	variant: "negative",
 	isClosable: true,
-	headerText: "Incorrect payment information - error",
+	text: "Incorrect payment information - error",
 };
-Closable.parameters = {
+WithFooterClosable.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Closable.tags = ["!dev"];
+WithFooterClosable.tags = ["!dev"];
 
 /**
  * An in-line alert with a link in the footer. Combine this strategy with any variant.
  */
-export const Link = AlertsWithStyleOptions.bind({});
-Link.args = {
+export const WithFooterLink = AlertsWithStyleOptions.bind({});
+WithFooterLink.args = {
 	hasLink: true,
-	headerText: "Click the link",
+	text: "Click the link",
 };
-Link.parameters = {
+WithFooterLink.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Link.tags = ["!dev"];
+WithFooterLink.tags = ["!dev"];
+
+/**
+ * An in-line alert with a link and close button in the footer. Combine this strategy with any variant.
+ */
+export const WithFooterLinkAndClosable = AlertsWithStyleOptions.bind({});
+WithFooterLinkAndClosable.args = {
+	hasLink: true,
+	isClosable: true,
+	text: "Click the link or close the alert",
+};
+WithFooterLinkAndClosable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+WithFooterLinkAndClosable.tags = ["!dev"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = InlineAlertGroup.bind({});

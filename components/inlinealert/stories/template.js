@@ -90,6 +90,16 @@ export const Template = ({
 	`;
 };
 
+/**
+ * Convert provided string to title case
+ */
+const toTitleCase = (string) => string.replace(/\w\S*/g, text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase());
+
+/**
+ * Set the appropriate treatment header text
+ */
+const setTreatmentHeaderText = (variant, treatment) => `${toTitleCase(variant)} variant with ${treatment !== "default" ? treatment : "outline"} fill`;
+
 export const AlertsWithStyleOptions = ({
 	...args
 }, context = {}) => Container({
@@ -101,14 +111,17 @@ export const AlertsWithStyleOptions = ({
 	content: html`
 		${Template({
 			...args,
+			headerText: setTreatmentHeaderText(args.variant, "default"),
 		}, context)}
 		${Template({
 			...args,
-			isSubtle: true,
+			treatment: "subtle",
+			headerText: setTreatmentHeaderText(args.variant, "subtle"),
 		}, context)}
 		${Template({
 			...args,
-			isBold: true,
+			treatment: "bold",
+			headerText: setTreatmentHeaderText(args.variant, "bold"),
 		}, context)}
 	`,
 }, context);
