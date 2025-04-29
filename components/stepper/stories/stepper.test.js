@@ -58,10 +58,6 @@ export const NumberFieldGroup = Variants({
 			labelPosition: "side",
 			value: "1234567890123456789012345678901",
 		},
-		// {
-		// 	testHeading: "Internationalization (Thai)",
-		// 	value: "๐๑๒๓๔๕๖๗๘๙๑๐",
-		// }
 	],
 	stateData: [
 		{
@@ -99,11 +95,6 @@ export const NumberFieldGroup = Variants({
 			testHeading: "Disabled + focused",
 			isDisabled: true,
 			isFocused: true,
-		},
-		{
-			testHeading: "Disabled + keyboard-focused",
-			isDisabled: true,
-			isKeyboardFocused: true,
 		},
 		{
 			testHeading: "Disabled + keyboard-focused",
