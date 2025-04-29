@@ -66,7 +66,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		}
 	},
+	tags: ["migrated"],
 };
 
 export const Default = NumberFieldGroup.bind({});
@@ -88,7 +92,7 @@ Sizing.parameters = {
 /**
  * Number fields come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
  *
- * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a secondary option to be positioned on the side of the field. The [inline infield buttons](/docs/components-in-field-button--docs#inline) are usually visible, but can be hidden. When the label is to long for the available space, it will wrap to the next line. If the value within the number field input overflows, it will truncate with an ellipsis.
+ * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a secondary option to be positioned on the side of the field. The [inline infield buttons](/docs/components-in-field-button--docs#inline) are usually visible, but can be hidden. When the label is too long for the available space, it will wrap to the next line. If the value within the number field input overflows, it will truncate with an ellipsis.
  */
 export const DefaultStates = AllDefaultVariantsGroup.bind({});
 DefaultStates.args = {};
