@@ -1,8 +1,8 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
-import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
+import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -88,7 +88,6 @@ export const Template = ({
 					isInvalid,
 					isFocused,
 					isDisabled,
-					displayLabel: false,
 					id: id ? `${id}-input` : undefined,
 					customClasses: [`${rootClass}-textfield`],
 					customInputClasses: [`${rootClass}-input`],
