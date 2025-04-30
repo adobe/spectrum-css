@@ -156,8 +156,8 @@
 		--spectrum-numberfield-alert-icon-size: var(--spectrum-workflow-icon-size-300);
 	}
 
-	&:not(.is-disabled).is-hover,
-	&:not(.is-disabled):hover {
+	&:not(.is-disabled, .is-readOnly).is-hover,
+	&:not(.is-disabled, .is-readOnly):hover {
 		--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-hover, var(--mod-numberfield-border-color-hover, var(--spectrum-numberfield-border-color-hover)));
 	}
 
@@ -169,9 +169,9 @@
 		--mod-numberfield-border-color-keyboard-focus: var(--mod-numberfield-border-color-keyboard-focus-invalid, var(--spectrum-numberfield-border-color-invalid-keyboard-focus));
 	}
 
-	&:not(.is-disabled).is-focused,
-	&:not(.is-disabled):focus,
-	&:not(.is-disabled):focus-within {
+	&:not(.is-disabled, .is-readOnly).is-focused,
+	&:not(.is-disabled, .is-readOnly):focus,
+	&:not(.is-disabled, .is-readOnly):focus-within {
 		--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus, var(--mod-numberfield-border-color-focus, var(--spectrum-numberfield-border-color-focus)));
 
 		&.is-hover,
@@ -180,15 +180,19 @@
 		}
 	}
 
-	&:not(.is-disabled).is-keyboardFocused,
-	&:not(.is-disabled):focus-visible,
-	&:not(.is-disabled):focus-within {
+	&:not(.is-disabled, .is-readOnly).is-keyboardFocused,
+	&:not(.is-disabled, .is-readOnly):focus-visible,
+	&:not(.is-disabled, .is-readOnly):focus-within {
 		--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus, var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-numberfield-border-color-keyboard-focus)));
 
 		&.is-hover,
 		&:hover {
 			--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus-hover, var(--mod-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover)));
 		}
+	}
+
+	&.is-readOnly {
+		--mod-numberfield-border-color: var(--spectrum-numberfield-border-color-disabled);
 	}
 
 	&.is-disabled {
@@ -264,7 +268,7 @@
 		content: "";
 	}
 
-	&:not(.is-disabled).is-keyboardFocused .spectrum-NumberField-inputs,
+	&:not(.is-disabled, .is-readOnly).is-keyboardFocused .spectrum-NumberField-inputs,
 	&:focus-visible .spectrum-NumberField-inputs {
 		outline: var(--spectrum-numberfield-focus-indicator-width) solid;
 		outline-color: var(--spectrum-numberfield-focus-indicator-color);

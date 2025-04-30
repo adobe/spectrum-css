@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isHovered, isKeyboardFocused, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isHovered, isKeyboardFocused, isReadOnly, size } from "@spectrum-css/preview/types";
 import { default as TextfieldStories } from "@spectrum-css/textfield/stories/textfield.stories.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -31,6 +31,7 @@ export default {
 		isFocused,
 		isHovered,
 		isKeyboardFocused,
+		isReadOnly,
 		displayLabel: {
 			...TextfieldStories?.argTypes?.displayLabel ?? {},
 		},
@@ -51,6 +52,7 @@ export default {
 		isFocused: false,
 		isHovered: false,
 		isKeyboardFocused: false,
+		isReadOnly: false,
 		isInvalid: false,
 		isDisabled: false,
 		hideStepper: false,
@@ -90,9 +92,13 @@ Sizing.parameters = {
 };
 
 /**
- * Number fields come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
+ * Number fields come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most
+ * frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
  *
- * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a secondary option to be positioned on the side of the field. The [inline infield buttons](/docs/components-in-field-button--docs#inline) are usually visible, but can be hidden. When the label is too long for the available space, it will wrap to the next line. If the value within the number field input overflows, it will truncate with an ellipsis.
+ * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a
+ * secondary option to be positioned on the side of the field. Having the label on the top is the default and is recommended
+ * because this works better with long copy, localization, and responsive layouts. The [inline infield buttons](/docs/components-in-field-button--docs#inline) are usually visible, but can be hidden. When the label is too long for the available
+ * space, it will wrap to the next line. If the value within the number field input overflows, it will truncate with an ellipsis.
  */
 export const DefaultStates = AllDefaultVariantsGroup.bind({});
 DefaultStates.args = {};
@@ -102,6 +108,9 @@ DefaultStates.parameters = {
 };
 DefaultStates.storyName = "Default";
 
+/**
+ * Labels can be placed either on top or on the side of the field. Having the label on the side is most useful for when vertical space is limited.
+ */
 export const SideLabel = AllDefaultVariantsGroup.bind({});
 SideLabel.args = {
 	labelPosition: "side",
@@ -110,6 +119,19 @@ SideLabel.tags = ["!dev"];
 SideLabel.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+
+/**
+ * Number fields have a read-only option for when disabled content still needs to be shown. This allows for content to be copied, but not interacted with or changed.
+ */
+export const ReadOnly = DisabledVariantsGroup.bind({});
+ReadOnly.args = {
+	isReadOnly: true,
+};
+ReadOnly.tags = ["!dev"];
+ReadOnly.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+ReadOnly.storyName = "Read-only";
 
 export const InvalidStates = AllDefaultVariantsGroup.bind({});
 InvalidStates.args = {

@@ -20,6 +20,7 @@ export const Template = ({
 	isFocused = false,
 	isHovered = false,
 	isKeyboardFocused = false,
+	isReadOnly = false,
 	isInvalid = false,
 	isDisabled = false,
 	hideStepper = false,
@@ -40,6 +41,7 @@ export const Template = ({
 				"is-focused": isFocused,
 				"is-hover": isHovered,
 				"is-keyboardFocused": isKeyboardFocused,
+				"is-readOnly": isReadOnly && !isDisabled,
 				"is-invalid": isInvalid,
 				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -88,6 +90,7 @@ export const Template = ({
 					isInvalid,
 					isFocused,
 					isDisabled,
+					isReadOnly,
 					id: id ? `${id}-input` : undefined,
 					customClasses: [`${rootClass}-textfield`],
 					customInputClasses: [`${rootClass}-input`],
@@ -98,7 +101,7 @@ export const Template = ({
 							isInline: true,
 							size,
 							customClasses: [`${rootClass}-button`],
-							isDisabled,
+							isDisabled: isDisabled || isReadOnly,
 						}, context)}
 					</span>
 				`)}
@@ -110,7 +113,7 @@ export const Template = ({
 						text: helpText,
 						variant: isInvalid ? "negative" : undefined,
 						hideIcon: true,
-						isDisabled,
+						isDisabled: isDisabled || isReadOnly,
 					}, context)}
 				</div>
 			`)}

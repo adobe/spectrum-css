@@ -113,5 +113,29 @@ export const NumberFieldGroup = Variants({
 			isDisabled: true,
 			isKeyboardFocused: true,
 		},
+		{
+			testHeading: "Read-only",
+			isReadOnly: true,
+		},
+		{
+			testHeading: "Read-only + disabled",
+			isReadOnly: true,
+			isDisabled: true,
+		},
+		{
+			testHeading: "Read-only + hovered",
+			isReadOnly: true,
+			isHovered: true,
+		},
+		{
+			testHeading: "Read-only + focused",
+			isReadOnly: true,
+			isFocused: true,
+		},
+		{
+			testHeading: "Read-only + keyboard-focused",
+			isReadOnly: true,
+			isKeyboardFocused: true,
+		},
 	]
 });
