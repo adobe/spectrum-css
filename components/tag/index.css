@@ -66,54 +66,7 @@
 	--spectrum-tag-background-color-disabled: var(--highcontrast-tag-background-color-disabled, var(--mod-tag-background-color-disabled, var(--spectrum-disabled-background-color)));
 	--spectrum-tag-content-color-disabled: var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-disabled-content-color)));
 
-	/* default size/sizeM */
-	--spectrum-tag-height: var(--spectrum-component-height-100);
-	--spectrum-tag-min-inline-size: var(--spectrum-tag-minimum-width-medium);
-	--spectrum-tag-font-size: var(--spectrum-font-size-100);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
-	--spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
-
-	--spectrum-tag-clear-button-size: var(--spectrum-cross-icon-size-100);
-	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
-	--spectrum-tag-label-to-clear-icon: var(--spectrum-tag-label-to-clear-icon-medium);
-	--spectrum-tag-edge-to-clear-icon: var(--spectrum-tag-edge-to-clear-icon-medium);
-
-	--spectrum-tag-visual-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
-	--spectrum-tag-visual-spacing-inline-end: var(--spectrum-text-to-visual-100);
-
-	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
-
-	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-100);
-	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
-	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
-
-	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-75);
-
-	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
-	--spectrum-tag-label-spacing-inline: var(--spectrum-component-edge-to-text-100);
-
-	/* @passthrough start for nested components */
-	--mod-avatar-inline-size: var(--mod-tag-avatar-size, var(--spectrum-tag-avatar-size));
-	--mod-avatar-block-size: var(--mod-tag-avatar-size, var(--spectrum-tag-avatar-size));
-	--mod-thumbnail-size: var(--mod-tag-thumbnail-size, var(--spectrum-tag-thumbnail-size));
-	--mod-clear-button-width: var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size));
-	--mod-clear-button-height: var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size));
-	--mod-clear-button-background-color: transparent;
-	--mod-clear-button-icon-color: currentColor;
-	--mod-clear-button-icon-color-hover: currentColor;
-	--mod-clear-button-icon-color-key-focus: currentColor;
-	/* @passthrough end */
-
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		--mod-tag-label-line-height: var(--mod-tag-label-line-height-cjk, var(--spectrum-tag-label-line-height-cjk));
-	}
-}
-
-/* t-shirt sizes */
-.spectrum-Tag--sizeS {
+	/* default size/sizeS */
 	--spectrum-tag-height: var(--spectrum-component-height-75);
 	--spectrum-tag-min-inline-size: var(--spectrum-tag-minimum-width-small);
 	--spectrum-tag-font-size: var(--spectrum-font-size-75);
@@ -139,6 +92,53 @@
 
 	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
 	--spectrum-tag-label-spacing-inline: var(--spectrum-component-edge-to-text-75);
+
+	/* @passthrough start for nested components */
+	--mod-avatar-inline-size: var(--mod-tag-avatar-size, var(--spectrum-tag-avatar-size));
+	--mod-avatar-block-size: var(--mod-tag-avatar-size, var(--spectrum-tag-avatar-size));
+	--mod-thumbnail-size: var(--mod-tag-thumbnail-size, var(--spectrum-tag-thumbnail-size));
+	--mod-clear-button-width: var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size));
+	--mod-clear-button-height: var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size));
+	--mod-clear-button-background-color: transparent;
+	--mod-clear-button-icon-color: currentColor;
+	--mod-clear-button-icon-color-hover: currentColor;
+	--mod-clear-button-icon-color-key-focus: currentColor;
+	/* @passthrough end */
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--mod-tag-label-line-height: var(--mod-tag-label-line-height-cjk, var(--spectrum-tag-label-line-height-cjk));
+	}
+}
+
+/* t-shirt sizes - small is default */
+.spectrum-Tag--sizeM {
+	--spectrum-tag-height: var(--spectrum-component-height-100);
+	--spectrum-tag-min-inline-size: var(--spectrum-tag-minimum-width-medium);
+	--spectrum-tag-font-size: var(--spectrum-font-size-100);
+	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
+	--spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
+
+	--spectrum-tag-clear-button-size: var(--spectrum-cross-icon-size-100);
+	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
+	--spectrum-tag-label-to-clear-icon: var(--spectrum-tag-label-to-clear-icon-medium);
+	--spectrum-tag-edge-to-clear-icon: var(--spectrum-tag-edge-to-clear-icon-medium);
+
+	--spectrum-tag-visual-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
+	--spectrum-tag-visual-spacing-inline-end: var(--spectrum-text-to-visual-100);
+
+	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
+	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
+
+	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-100);
+	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
+	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
+
+	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-75);
+
+	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
+	--spectrum-tag-label-spacing-inline: var(--spectrum-component-edge-to-text-100);
 }
 
 .spectrum-Tag--sizeL {

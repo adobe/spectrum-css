@@ -13,7 +13,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tag",
-	size = "m",
+	size = "s",
 	iconName = "",
 	avatarUrl = "",
 	thumbnailUrl = "",

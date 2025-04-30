@@ -79,7 +79,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Tag",
-		size: "m",
+		size: "s",
 		label: "Tag label",
 		iconName: "Circle",
 		avatarUrl: "example-ava.png",
