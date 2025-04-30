@@ -16,7 +16,7 @@
 	--spectrum-actionbar-height: var(--spectrum-action-bar-height);
 	--spectrum-actionbar-minimum-width: var(--spectrum-action-bar-minimum-width);
 	--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-medium-size-extra-large);
-	--spectrum-actionbar-spacing-label-to-actiongroup: var(--spectrum-action-bar-label-to-action-group-area);
+	--spectrum-actionbar-spacing-label-to-action-group: var(--spectrum-action-bar-label-to-action-group-area);
 	--spectrum-actionbar-spacing-action-group-edge: var(--spectrum-action-bar-edge-to-content-area);
 	--spectrum-actionbar-close-button-to-counter: var(--spectrum-action-bar-close-button-to-counter);
 
@@ -24,12 +24,6 @@
 	--spectrum-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
 	--spectrum-actionbar-item-counter-line-height: var(--spectrum-line-height-100);
 	--spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
-
-	/* emphasized variation colors */
-	--spectrum-actionbar-emphasized-background-color: var(--spectrum-neutral-content-color-default);
-	--spectrum-actionbar-emphasized-item-counter-color: var(--spectrum-gray-25);
-	--spectrum-actionbar-emphasized-action-button-label-color: var(--spectrum-gray-25);
-	--spectrum-actionbar-emphasized-icon-color: var(--spectrum-gray-25);
 
 	/* colors - applied to popover */
 	--spectrum-actionbar-popover-background-color: var(--spectrum-background-elevated-color);
@@ -102,10 +96,6 @@
 		align-items: center;
 	}
 
-	.spectrum-ActionBar-actiongroup {
-		padding-inline-start: var(--mod-actionbar-spacing-label-to-actiongroup, var(--spectrum-actionbar-spacing-label-to-actiongroup)); /* space between label and action group */
-	}
-
 	/* item counter */
 	.spectrum-FieldLabel {
 		font-size: var(--mod-actionbar-item-counter-font-size, var(--spectrum-actionbar-item-counter-font-size));
@@ -125,36 +115,13 @@
 	.spectrum-ActionGroup {
 		/* align to end by default */
 		margin-inline-start: auto;
+		padding-inline-start: var(--mod-actionbar-spacing-label-to-actiongroup, var(--spectrum-actionbar-spacing-label-to-action-group)); /* space between label and action group */
 	}
 }
 
 .spectrum-ActionBar--emphasized {
-	.spectrum-ActionBar-popover {
-		background-color: var(--mod-actionbar-emphasized-background-color, var(--spectrum-actionbar-emphasized-background-color));
-
-		.spectrum-CloseButton:hover .spectrum-Icon {
-			color: var(--highcontrast-actionbar-closebutton-highlight-color, var(--spectrum-actionbar-emphasized-icon-color));
-		}
-	}
-
-	/* ensure text is legible on emphasized background */
-	.spectrum-FieldLabel {
-		color: var(--mod-actionbar-emphasized-item-counter-color, var(--spectrum-actionbar-emphasized-item-counter-color));
-	}
-
-	.spectrum-ActionGroup .spectrum-ActionButton {
-		.spectrum-ActionButton-label {
-			color: var(--highcontrast-actionbutton-emphasized-content-color-default, var(--spectrum-actionbar-emphasized-action-button-label-color));
-		}
-
-		.spectrum-ActionButton-icon {
-			color: var(--highcontrast-actionbutton-emphasized-icon-color, var(--spectrum-actionbar-emphasized-icon-color));
-		}
-	}
-
-	.spectrum-CloseButton .spectrum-Icon {
-		color: var(--spectrum-actionbar-emphasized-icon-color);
-	}
+	--spectrum-actionbar-item-counter-color: var(--spectrum-gray-25);
+	--spectrum-actionbar-popover-background-color: var(--spectrum-neutral-content-color-default);
 }
 
 .spectrum-ActionBar--sticky {

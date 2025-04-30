@@ -4,9 +4,9 @@
 
 ### Actionbar S2 Migration
 
-Action bar now has some updated colors, corner radius, and icons. There's a new look to the default and emphasized variants and each have a custom touch in both light and dark themes.
+Action bar now has some updated colors, corner radius, and icons. There's a new look to the default and emphasized variants.
 
-The emphasized has changed from an `accent` background color to a `neutral` background color.
+The emphasized has changed from an `accent` background color to a `neutral` background color. In light mode, the clear button and action buttons are `staticWhite` and in dark mode they are `staticBlack`.
 
 #### New tokens
 

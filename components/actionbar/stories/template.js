@@ -42,14 +42,21 @@ export const Template = ({
 				content: [
 					CloseButton({
 						label: "Clear selection",
-						staticColor: isEmphasized ? "white" : undefined,
+						staticColor: isEmphasized
+							? context.globals?.color === "dark"
+								? "black"
+								: "white"
+							: undefined,
 					}, context),
-					FieldLabel({ size: "s", label: "2 Selected" }, context),
+					FieldLabel({ size: "s", label: "224 Selected" }, context),
 					ActionGroup({
-						customClasses: [`${rootClass}-actiongroup`],
 						size: "m",
 						areQuiet: true,
-						staticColor: isEmphasized ? "white" : undefined,
+						staticColor: isEmphasized
+							? context.globals?.color === "dark"
+								? "black"
+								: "white"
+							: undefined,
 						content: [
 							{
 								iconName: "Edit",
