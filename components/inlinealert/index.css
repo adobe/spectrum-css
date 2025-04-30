@@ -67,11 +67,11 @@
 	border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color, var(--spectrum-inlinealert-border-and-icon-color)));
 
 	&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold) {
-		--spectrum-inlinealert-border-width: 0px;
+		--mod-inlinealert-border-width: 0px;
 	}
 
 	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
-		--spectrum-inlinealert-border-width: 0px;
+		--mod-inlinealert-border-width: 0px;
 	}
 
 	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle, .spectrum-InLineAlert--notice) {
@@ -217,6 +217,7 @@
 		&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold),
 		&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
 			--highcontrast-inlinealert-background-color: Canvas;
+			--mod-inlinealert-border-width: var(--spectrum-inlinealert-border-width);
 		}
 	}
 }
