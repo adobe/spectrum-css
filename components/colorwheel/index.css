@@ -37,6 +37,7 @@
 	min-inline-size: var(--mod-colorwheel-min-inline-size, var(--spectrum-colorwheel-min-inline-size));
 	inline-size: var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size));
 	block-size: var(--mod-colorwheel-block-size, var(--spectrum-colorwheel-block-size));
+	touch-action: none; /* Disable touch scrolling on touch devices to allow for color picking */
 	user-select: none;
 	cursor: default;
 
