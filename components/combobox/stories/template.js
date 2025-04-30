@@ -36,7 +36,6 @@ const Combobox = ({
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 	const comboboxId = id || getRandomId("combobox");
-	const fieldWidth = size === "s" ? 192 : size === "l" ? 224 : size === "xl" ? 240 : 208; // default value is "m"
 
 	// Handle click outside of the combobox to close it
 	if (typeof window !== "undefined" && isOpen) {

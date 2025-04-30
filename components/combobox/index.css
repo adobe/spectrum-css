@@ -385,14 +385,15 @@
 	.spectrum-Combobox-textfield {
 		inline-size: auto;
 	}
+
 	.spectrum-Combobox-label {
 		grid-row: 1 / span 2;
-    grid-column: 1 / span 1;
+		grid-column: 1 / span 1;
 	}
 
 	.spectrum-Combobox-content {
 		grid-row: 1 / span 1;
-    grid-column: 2 / span 1;
+		grid-column: 2 / span 1;
 	}
 
 	.spectrum-Combobox-helptext {
