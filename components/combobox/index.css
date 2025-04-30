@@ -175,34 +175,13 @@
 	}
 }
 
-@media (forced-colors: active) {
-	.spectrum-Combobox {
-		--highcontrast-combobox-border-color-highlight: Highlight;
-		--highcontrast-combobox-border-color-invalid: Highlight;
-		--highcontrast-combobox-background-color-default: Canvas;
-		--highcontrast-combobox-readonly-border-color: CanvasText;
-
-		.spectrum-Combobox-button.spectrum-PickerButton--quiet {
-			.spectrum-PickerButton-fill {
-				forced-color-adjust: none;
-			}
-
-			.spectrum-PickerButton-icon {
-				/* Should match foreground color of the Textfield. */
-				color: CanvasText;
-			}
-		}
-	}
-}
-
 .spectrum-Combobox {
 	position: relative;
-	display: inline-flex;
+	display: inline-grid;
 	flex-flow: row nowrap;
 
 	inline-size: var(--mod-combobox-inline-size, var(--spectrum-combobox-inline-size));
 	min-inline-size: var(--mod-combobox-min-inline-size, var(--spectrum-combobox-min-inline-size));
-	block-size: var(--mod-combobox-block-size, var(--spectrum-combobox-block-size));
 	margin-block-start: var(--mod-combobox-spacing-label-to-combobox, var(--spectrum-combobox-spacing-label-to-combobox));
 
 	border-radius: var(--mod-combobox-border-radius, var(--spectrum-combobox-border-radius));
@@ -329,10 +308,9 @@
 	}
 }
 
-/* TEXTFIELD (wrapper) */
-.spectrum-Combobox-textfield {
-	inline-size: 100%;
-	display: inline-flex;
+.spectrum-Combobox-content {
+	display: flex;
+	block-size: var(--mod-combobox-block-size, var(--spectrum-combobox-block-size));
 }
 
 /* TEXT INPUT */
@@ -403,10 +381,24 @@
 	}
 }
 
-&:not(&--left).spectrum-Combobox-label {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.spectrum-Combobox--sideLabel {
+	.spectrum-Combobox-textfield {
+		inline-size: auto;
+	}
+	.spectrum-Combobox-label {
+		grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
+	}
+
+	.spectrum-Combobox-content {
+		grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+	}
+
+	.spectrum-Combobox-helptext {
+		grid-row: 2 / span 1;
+		grid-column: 2 / span 1;
+	}
 }
 
 /* VALIDATION ICON */
@@ -425,5 +417,25 @@
 	.spectrum-Textfield.is-readOnly &,
 	.spectrum-Textfield.is-loading & {
 		display: none;
+	}
+}
+
+@media (forced-colors: active) {
+	.spectrum-Combobox {
+		--highcontrast-combobox-border-color-highlight: Highlight;
+		--highcontrast-combobox-border-color-invalid: Highlight;
+		--highcontrast-combobox-background-color-default: Canvas;
+		--highcontrast-combobox-readonly-border-color: CanvasText;
+
+		.spectrum-Combobox-button.spectrum-PickerButton--quiet {
+			.spectrum-PickerButton-fill {
+				forced-color-adjust: none;
+			}
+
+			.spectrum-PickerButton-icon {
+				/* Should match foreground color of the Textfield. */
+				color: CanvasText;
+			}
+		}
 	}
 }

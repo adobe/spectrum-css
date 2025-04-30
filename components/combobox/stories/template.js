@@ -26,10 +26,17 @@ const Combobox = ({
 	isKeyboardFocused = false,
 	isLoading = false,
 	isReadOnly = false,
+	showHelpText = false,
+	helpText = "This is a help text",
+	fieldLabelText = "Select location",
+	fieldLabelPosition = "top",
+	isLabelRequired = false,
+	showFieldLabel = false,
 	value = "",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 	const comboboxId = id || getRandomId("combobox");
+	const fieldWidth = size === "s" ? 192 : size === "l" ? 224 : size === "xl" ? 240 : 208; // default value is "m"
 
 	// Handle click outside of the combobox to close it
 	if (typeof window !== "undefined" && isOpen) {
@@ -61,47 +68,70 @@ const Combobox = ({
 				"is-loading": isLoading,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
+				[`${rootClass}--sideLabel`]: fieldLabelPosition === "left",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId ?? id)}
 			style=${styleMap(customStyles)}
 		>
+		${when(showFieldLabel, () =>
+				FieldLabel({
+					size,
+					label: fieldLabelText,
+					isDisabled,
+					customClasses: [`${rootClass}-label`],
+					alignment: fieldLabelPosition === "left" && "left",
+					isRequired: isLabelRequired,
+				}, context)
+			)}
+		<div class="${rootClass}-content">
 			${TextField({
-				size,
-				isDisabled,
-				isInvalid,
-				isFocused,
-				isKeyboardFocused,
-				customClasses: [
-					`${rootClass}-textfield`,
-					...(isLoading ? ["is-loading"] : []),
-				],
-				customInputClasses: [`${rootClass}-input`],
-				isLoading,
-				customInfieldProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
-				name: "field",
-				isReadOnly,
-				value,
-				onclick: function () {
-					if (!isOpen) updateArgs({ isOpen: true });
-				},
-			}, context)}
-			${InfieldButton({
-				customClasses: [
-					`${rootClass}-button`,
-					...(!isDisabled && isOpen ? ["is-open"] : []),
-				],
-				size,
-				id: getRandomId("infieldbutton"),
-				isDisabled,
-				tabindex: "-1",
-				onclick: function () {
-					updateArgs({
-						isOpen: !isOpen,
-					});
-				},
-			}, context)}
+					size,
+					isDisabled,
+					isInvalid,
+					isFocused,
+					isKeyboardFocused,
+					customClasses: [
+						`${rootClass}-textfield`,
+						...(isLoading ? ["is-loading"] : []),
+					],
+					customInputClasses: [`${rootClass}-input`],
+					isLoading,
+					customInfieldProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
+					name: "field",
+					isReadOnly,
+					value,
+					onclick: function () {
+						if (!isOpen) updateArgs({ isOpen: true });
+					},
+				}, context)}
+				${InfieldButton({
+					customClasses: [
+						`${rootClass}-button`,
+						...(!isDisabled && isOpen ? ["is-open"] : []),
+					],
+					size,
+					id: getRandomId("infieldbutton"),
+					isDisabled,
+					tabindex: "-1",
+					onclick: function () {
+						updateArgs({
+							isOpen: !isOpen,
+						});
+					},
+				}, context)}
+		</div>
+		${when(showHelpText, () =>
+				HelpText({
+					customClasses: [`${rootClass}-helptext`],
+					size,
+					isDisabled,
+					hideIcon: true,
+					text: helpText,
+					variant: isInvalid ? "negative" : "neutral",
+				}, context)
+			)}
 		</div>
 	`;
 };
@@ -110,38 +140,20 @@ export const Template = ({
 	size = "m",
 	isOpen = true,
 	isDisabled = false,
-	isLabelRequired = false,
-	showFieldLabel = false,
 	isReadOnly = false,
-	showHelpText = false,
-	helpText = "This is a help text",
-	fieldLabelText = "Select location",
-	fieldLabelPosition = "top",
 	content = [],
 	value = "",
 	...args
 } = {}, context = {}) => {
 	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
-	const fieldWidth = size === "s" ? 192 : size === "l" ? 224 : size === "xl" ? 240 : 208; // default value is "m"
+
 	return html`
 		<div style=${styleMap({
 			// This accounts for the height of the popover when it is open to prevent testing issues
 			// and allow docs containers to be the right height
 			["margin-block-end"]: !isReadOnly && isOpen && !isDisabled ? `${popoverHeight}px` : undefined,
 		})}>
-			${when(showFieldLabel, () =>
-				FieldLabel({
-					size,
-					label: fieldLabelText,
-					isDisabled,
-					...(fieldLabelPosition !== "left" && {
-						customStyles: { "inline-size": `${fieldWidth}px` },
-					}),
-					customClasses: [`${args.rootClass}-label`],
-					alignment: fieldLabelPosition === "left" && "left",
-					isRequired: isLabelRequired,
-				}, context)
-			)}
+
 			${[
 				Popover({
 					isOpen: isOpen && !isDisabled && !isReadOnly,
@@ -162,19 +174,6 @@ export const Template = ({
 					popoverHeight,
 				}, context),
 			]}
-			${when(showHelpText, () =>
-				HelpText({
-					customClasses: [`${args.rootClass}-helptext`],
-					...(fieldLabelPosition !== "left" && {
-						customStyles: { "inline-size": `${fieldWidth}px` },
-					}),
-					size,
-					isDisabled,
-					hideIcon: true,
-					text: helpText,
-					variant: args.isInvalid ? "negative" : "neutral",
-				}, context)
-			)}
 		</div>
 	`;
 };
