@@ -413,10 +413,10 @@
 	display: grid;
 
 	grid-template-areas:
-		".            		chevronAreaCollapsible 	.             	headingIconArea		sectionHeadingArea  .         	.           	.                 "
-		"selectedArea		chevronAreaCollapsible	checkmarkArea	iconArea 			labelArea        	valueArea	actionsArea		chevronAreaDrillIn"
-		"selectedOverflow	.                      	.             	visualOverflow		descriptionArea  	.         	.           	.                 "
-		".            		.                      	.             	.        			submenuArea      	.         	.           	.                 ";
+		".					chevronAreaCollapsible		.				headingIconArea		sectionHeadingArea	.			.				.                 "
+		"selectedArea		chevronAreaCollapsible		checkmarkArea	iconArea			labelArea			valueArea	actionsArea		chevronAreaDrillIn"
+		"selectedOverflow	.							.				visualOverflow		descriptionArea		.			.				.				  "
+		".					.							.				.					submenuArea			.			.				.                 ";
 
 	grid-template-columns: auto auto auto auto 1fr auto auto auto;
 	grid-template-rows: 1fr auto;
