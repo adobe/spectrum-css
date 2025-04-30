@@ -75,7 +75,9 @@
 	/* contain selection indicator and focus-ring */
 	position: relative;
 
-	outline: none;
+	outline-width: 0;
+	outline-style: solid;
+	outline-color: transparent;
 
 	/* don't let double clicking select stuff */
 	user-select: none;
@@ -127,8 +129,11 @@
 
 	&.is-keyboardFocused,
 	&:focus-visible {
-		outline: var(--mod-swatch-focus-indicator-thickness, var(--spectrum-swatch-focus-indicator-thickness)) solid var(--mod-swatch-focus-indicator-color, var(--spectrum-swatch-focus-indicator-color));
+		outline-width: var(--mod-swatch-focus-indicator-thickness, var(--spectrum-swatch-focus-indicator-thickness));
+		outline-color: var(--mod-swatch-focus-indicator-color, var(--spectrum-swatch-focus-indicator-color));
 		outline-offset: var(--mod-swatch-focus-indicator-gap, var(--spectrum-swatch-focus-indicator-gap));
+
+		transition: outline-color var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
 	}
 
 	&.is-selected {
