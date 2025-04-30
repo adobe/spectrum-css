@@ -143,8 +143,5 @@
 @media (forced-colors: active) {
 	.spectrum-ActionBar {
 		--highcontrast-actionbar-popover-border-color: CanvasText;
-		--highcontrast-actionbutton-emphasized-content-color-default: CanvasText;
-		--highcontrast-actionbutton-emphasized-icon-color: CanvasText;
-		--highcontrast-actionbar-closebutton-highlight-color: Highlight;
 	}
 }

@@ -76,10 +76,5 @@
     "--spectrum-spacing-300"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-actionbar-closebutton-highlight-color",
-    "--highcontrast-actionbar-popover-border-color",
-    "--highcontrast-actionbutton-emphasized-content-color-default",
-    "--highcontrast-actionbutton-emphasized-icon-color"
-  ]
+  "high-contrast": ["--highcontrast-actionbar-popover-border-color"]
 }
