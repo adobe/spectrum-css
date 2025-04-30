@@ -46,6 +46,86 @@
 
 	/* Link */
 	--mod-link-text-color: var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color));
+
+	&.spectrum-InLineAlert--subtle {
+		--mod-inlinealert-border-width: 0px;
+	}
+
+	&.spectrum-InLineAlert--bold {
+		--mod-inlinealert-border-width: 0px;
+	}
+
+	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle, .spectrum-InLineAlert--notice) {
+		--spectrum-inlinealert-header-color: var(--spectrum-white);
+		--spectrum-inlinealert-content-color: var(--spectrum-white);
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-white);
+	}
+
+	&.spectrum-InLineAlert--info {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-informative-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-informative-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-informative-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-informative-background-color-default);
+		}
+	}
+
+	&.spectrum-InLineAlert--notice {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-notice-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-notice-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-notice-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-notice-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-black);
+		}
+	}
+
+	&.spectrum-InLineAlert--positive {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-positive-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-positive-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-positive-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-positive-background-color-default);
+		}
+	}
+
+	&.spectrum-InLineAlert--negative {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-negative-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-negative-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-negative-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-negative-background-color-default);
+		}
+	}
+
+	&.spectrum-InLineAlert--neutral {
+		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
+
+		&.spectrum-InLineAlert--subtle {
+			--spectrum-inlinealert-background-color: var(--spectrum-neutral-subtle-background-color-default);
+			--spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
+		}
+
+		&.spectrum-InLineAlert--bold {
+			--spectrum-inlinealert-background-color: var(--spectrum-neutral-background-color-default);
+		}
+	}
 }
 
 .spectrum-InLineAlert {
@@ -65,20 +145,6 @@
 
 	background-color: var(--highcontrast-inlinealert-background-color, var(--mod-inlinealert-background-color, var(--spectrum-inlinealert-background-color)));
 	border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color, var(--spectrum-inlinealert-border-and-icon-color)));
-
-	&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold) {
-		--mod-inlinealert-border-width: 0px;
-	}
-
-	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
-		--mod-inlinealert-border-width: 0px;
-	}
-
-	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle, .spectrum-InLineAlert--notice) {
-		--spectrum-inlinealert-header-color: var(--spectrum-white);
-		--spectrum-inlinealert-content-color: var(--spectrum-white);
-		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-white);
-	}
 }
 
 .spectrum-InLineAlert-icon {
@@ -136,72 +202,6 @@
 	}
 }
 
-.spectrum-InLineAlert--info {
-	--spectrum-inlinealert-border-and-icon-color: var(--spectrum-informative-visual-color);
-
-	&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold) {
-		--spectrum-inlinealert-background-color: var(--spectrum-informative-subtle-background-color-default);
-		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-informative-visual-color);
-	}
-
-	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
-		--spectrum-inlinealert-background-color: var(--spectrum-informative-background-color-default);
-	}
-}
-
-.spectrum-InLineAlert--notice {
-	--spectrum-inlinealert-border-and-icon-color: var(--spectrum-notice-visual-color);
-
-	&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold) {
-		--spectrum-inlinealert-background-color: var(--spectrum-notice-subtle-background-color-default);
-		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-notice-visual-color);
-	}
-
-	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
-		--spectrum-inlinealert-background-color: var(--spectrum-notice-background-color-default);
-		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-black);
-	}
-}
-
-.spectrum-InLineAlert--positive {
-	--spectrum-inlinealert-border-and-icon-color: var(--spectrum-positive-visual-color);
-
-	&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold) {
-		--spectrum-inlinealert-background-color: var(--spectrum-positive-subtle-background-color-default);
-		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-positive-visual-color);
-	}
-
-	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
-		--spectrum-inlinealert-background-color: var(--spectrum-positive-background-color-default);
-	}
-}
-
-.spectrum-InLineAlert--negative {
-	--spectrum-inlinealert-border-and-icon-color: var(--spectrum-negative-visual-color);
-
-	&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold) {
-		--spectrum-inlinealert-background-color: var(--spectrum-negative-subtle-background-color-default);
-		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-negative-visual-color);
-	}
-
-	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
-		--spectrum-inlinealert-background-color: var(--spectrum-negative-background-color-default);
-	}
-}
-
-.spectrum-InLineAlert--neutral {
-	--spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
-
-	&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold) {
-		--spectrum-inlinealert-background-color: var(--spectrum-neutral-subtle-background-color-default);
-		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
-	}
-
-	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
-		--spectrum-inlinealert-background-color: var(--spectrum-neutral-background-color-default);
-	}
-}
-
 @media (forced-colors: active) {
 	.spectrum-InLineAlert {
 		--highcontrast-inlinealert-header-color: CanvasText;
@@ -214,8 +214,8 @@
 			forced-color-adjust: none;
 		}
 
-		&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold),
-		&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
+		&.spectrum-InLineAlert--subtle,
+		&.spectrum-InLineAlert--bold {
 			--highcontrast-inlinealert-background-color: Canvas;
 			--mod-inlinealert-border-width: var(--spectrum-inlinealert-border-width);
 		}
