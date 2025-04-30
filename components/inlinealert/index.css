@@ -44,9 +44,6 @@
 	--spectrum-inlinealert-header-color: var(--spectrum-heading-color);
 	--spectrum-inlinealert-content-color: var(--spectrum-body-color);
 
-	/* Link */
-	--mod-link-text-color: var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color));
-
 	&.spectrum-InLineAlert--subtle {
 		--mod-inlinealert-border-width: 0px;
 	}
