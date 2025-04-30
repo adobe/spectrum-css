@@ -3,16 +3,18 @@
 `@spectrum-css/swatch`: major
 ---
 
-#### S2 migration swatchgroup
+#### S2 migration for Swatch group
 
-This migrates the `swatch` and `swatchgroup` components to S2. Custom properties have been remapped and added per the design specification.
+This migrates the `swatch` and `swatchgroup` components to the latest Spectrum 2 designs. Custom properties have been remapped and added per the design specification.
 
 An `Add Swatch` variant has been added with the required color tokens and the specified add UI icon.
+
+The border should not be set when the swatch is selected as the border conflicts with the display of the selected state.
 
 ##### Removed custom properties
 
 `--spectrum-swatch-border-color`
-`--spectrum-swatch-dash-icon-color`
+`--spectrum-swatch-dash-icon-color` (replaced by `--spectrum-swatch-icon-color`)
 
 ##### New custom properties
 
@@ -36,7 +38,3 @@ An `Add Swatch` variant has been added with the required color tokens and the sp
 `--mod-swatchgroup-border-color`
 `--mod-swatch-border-color-rgb`
 `--mod-swatch-border-opacity`
-
-##### Removed mods
-
-`--mod-swatchgroup-spacing-compact`
