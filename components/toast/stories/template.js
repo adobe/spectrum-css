@@ -13,14 +13,15 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Toast",
 	message,
+	hasButton,
 	inlineButtonLabel,
 	variant,
 	customClasses = [],
 	customStyles = {},
 	id = getRandomId("toast"),
 } = {}, context = {}) => {
-	let iconName = "Info";
-	if (variant === "negative") iconName = "Alert";
+	let iconName = "InfoCircle";
+	if (variant === "negative") iconName = "AlertTriangle";
 	if (variant === "positive") iconName = "CheckmarkCircle";
 	if (variant === "neutral") iconName = undefined;
 
@@ -34,17 +35,19 @@ export const Template = ({
 			id=${ifDefined(id)}
 			style=${styleMap(customStyles)}
 		>
-			${when(variant, () =>
-				Icon({
-					iconName,
-					setName: "workflow",
-					size: "m",
-					customClasses: [`${rootClass}-typeIcon`],
-				}, context)
-			)}
 			<div class="${rootClass}-body">
-				<div class="${rootClass}-content">${message}</div>
-				${when(inlineButtonLabel, () =>
+				<div class="${rootClass}-content">
+					${when(variant, () =>
+						Icon({
+							iconName,
+							setName: "workflow",
+							size: "m",
+							customClasses: [`${rootClass}-typeIcon`],
+						}, context)
+					)}
+					<p class="spectrum-Toast-text">${message}</p>
+				</div>
+				${when(hasButton && inlineButtonLabel, () =>
 					Button({
 						variant: "secondary",
 						size: "m",
@@ -54,13 +57,12 @@ export const Template = ({
 					}, context)
 				)}
 			</div>
-			<div class="${rootClass}-buttons">
-				${CloseButton({
-					size: "m",
-					staticColor: "white",
-					onclick,
-				}, context)}
-			</div>
+			${CloseButton({
+				size: "m",
+				iconSize: "large",
+				staticColor: "white",
+				onclick,
+			}, context)}
 		</div>
 	`;
 };
