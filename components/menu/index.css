@@ -363,8 +363,8 @@
 	}
 
 	.spectrum-Menu-linkout {
-		block-size: var(--spectrum-menu-item-linkout-icon-height);
-		inline-size: var(--spectrum-menu-item-linkout-icon-width);
+		block-size: var(--mod-menu-item-linkout-icon-height, var(--spectrum-menu-item-linkout-icon-height));
+		inline-size: var(--mod-menu-item-linkout-icon-width, var(--spectrum-menu-item-linkout-icon-width));
 
 		/* Improve vertical alignment of linkout icon */
 		/* TODO: revisit with #1194 when final icon available */
@@ -421,7 +421,7 @@
 	grid-template-columns: auto auto auto auto 1fr auto auto auto;
 	grid-template-rows: 1fr auto;
 
-	/* vertically center menu items if there's a thumbnail */
+	/* Alignment adjustments if there's a thumbnail */
 	&:has(> .spectrum-Menu-itemThumbnail) {
 		> .spectrum-Menu-itemCheckbox,
 		> .spectrum-Menu-checkmark,
@@ -433,10 +433,12 @@
 		}
 
 		&:has(> .spectrum-Menu-itemDescription) {
+			/* Reduces perceived visual margin between label and description */
 			> .spectrum-Menu-itemDescription {
 				align-self: start;
 			}
 
+			/* Allows visual centering against the thumbnail */
 			> .spectrum-Menu-itemCheckbox,
 			> .spectrum-Menu-checkmark {
 				grid-row-end: selectedOverflow;
@@ -504,7 +506,8 @@
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-value-color-focus, var(--spectrum-menu-item-value-color-focus)));
 		}
 
-		> .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+		> .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark),
+		.spectrum-Menu-linkout {
 			fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-focus, var(--spectrum-menu-item-label-icon-color-focus)));
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-focus, var(--spectrum-menu-item-label-icon-color-focus)));
 		}
@@ -539,7 +542,8 @@
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-value-color-hover, var(--spectrum-menu-item-value-color-hover)));
 		}
 
-		> .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+		> .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark),
+		.spectrum-Menu-linkout {
 			fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-hover, var(--spectrum-menu-item-label-icon-color-hover)));
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-hover, var(--spectrum-menu-item-label-icon-color-hover)));
 		}
@@ -577,7 +581,8 @@
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-value-color-down, var(--spectrum-menu-item-value-color-down)));
 		}
 
-		> .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+		> .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark),
+		.spectrum-Menu-linkout {
 			fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-down, var(--spectrum-menu-item-label-icon-color-down)));
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-down, var(--spectrum-menu-item-label-icon-color-down)));
 		}
@@ -721,6 +726,7 @@
 	margin-block-start: calc(var(--mod-menu-item-top-to-thumbnail, var(--spectrum-menu-item-top-to-thumbnail)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
 	margin-inline-end: var(--mod-menu-item-thumbnail-to-label, var(--spectrum-menu-item-thumbnail-to-label));
 
+	/* Span two rows to properly align to description when present */
 	.spectrum-Menu-item:has(> &):has(> .spectrum-Menu-itemDescription) & {
 		grid-row-end: visualOverflow;
 		align-self: center;

@@ -470,8 +470,7 @@ export const Template = (
 							selectionMode,
 							shouldTruncate,
 							size,
-							// TODO: Figure out why this value isn't passing through
-							thumbnailUrl: i.thumbnailUrl || (hasThumbnail && "thumbnail.png"),
+							thumbnailUrl: (hasThumbnail && "thumbnail.png") || i.thumbnailUrl,
 							value: singleItemValue || i.value,
 						},
 						context,

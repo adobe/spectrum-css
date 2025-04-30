@@ -116,6 +116,7 @@ export const MenuItemGroup = Variants({
 				{
 					...args,
 					rootClass: "spectrum-Menu-item",
+					thumbnailUrl: (args.hasThumbnail && "thumbnail.png") || args.thumbnailUrl,
 				},
 				context,
 			)}
