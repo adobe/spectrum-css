@@ -204,6 +204,9 @@ ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * The default size of a tag is small, but tags are also available in medium and large sizes.
+ */
 export const Sizing = (args, context) => Sizes({
 	Template: TagsDefaultOptions,
 	withHeading: false,

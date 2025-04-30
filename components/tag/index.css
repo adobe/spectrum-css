@@ -131,7 +131,7 @@
 	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
 	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
 
-	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-100);
+	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-75);
 	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
 	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
 
@@ -211,6 +211,11 @@
 		margin-block-end: calc(var(--mod-tag-avatar-spacing-block-end, var(--spectrum-tag-avatar-spacing-block-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 	}
 
+	.spectrum-Thumbnail {
+		/* prevent thumbnail shrinking when label is longer */
+		flex-shrink: 0;
+	}
+
 	.spectrum-Tag-itemIcon,
 	.spectrum-Avatar,
 	.spectrum-Thumbnail {
@@ -223,8 +228,8 @@
 	.spectrum-Tag-clearButton {
 		box-sizing: border-box;
 
-		margin-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-		margin-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+		padding-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+		padding-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
 		/* move button negative calc to cancel label end margin, then add button start margin */
 		margin-inline-start: calc(var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon)) - (var(--mod-tag-label-spacing-inline, var(--spectrum-tag-label-spacing-inline))));
@@ -281,10 +286,7 @@
 			content: "";
 			display: inline-block;
 			position: absolute;
-			inset-block-start: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-			inset-block-end: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-			inset-inline-start: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-			inset-inline-end: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+			inset: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
 			border-color: var(--spectrum-tag-focus-ring-color); /* mod/highcontrast specified at top */
 			border-radius: calc(var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius)) + var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) + var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 			border-width: var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness));

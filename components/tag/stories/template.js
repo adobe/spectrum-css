@@ -57,6 +57,11 @@ export const Template = ({
 		>
 			${when(avatarUrl, () =>
 				Avatar({
+					size: ({
+						s: "50",
+						m: "75",
+						l: "100",
+					}[size] || "75"),
 					image: avatarUrl,
 				}, context)
 			)}
@@ -70,19 +75,26 @@ export const Template = ({
 			)}
 			${when(thumbnailUrl, () =>
 				Thumbnail({
+					size: ({
+						s: "50",
+						m: "75",
+						l: "100",
+					}[size] || "75"),
 					imageURL: thumbnailUrl,
 				}, context)
 			)}
 			<span class="${rootClass}-itemLabel">${label}</span>
 			${when(isRemovable, () =>
 				ClearButton({
+					size,
 					isDisabled,
+					isFocusable: false,
 					customClasses: [`${rootClass}-clearButton`],
 					onclick: (evt) => {
-						const el = evt.target;
-						if (!el) return;
+						const button = evt.currentTarget;
+						if (!button) return;
 
-						const wrapper = el.closest(rootClass);
+						const wrapper = button.closest(`.${rootClass}`);
 						wrapper.parentNode.removeChild(wrapper);
 					},
 				}, context)
