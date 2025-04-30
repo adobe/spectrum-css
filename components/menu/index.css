@@ -397,7 +397,7 @@
 
 	box-sizing: border-box;
 
-	background-color: var(--spectrum-menu-item-background-color-default);
+	background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default)));
 
 	line-height: var(--mod-menu-item-label-line-height, var(--spectrum-menu-item-label-line-height));
 
