@@ -7,7 +7,7 @@ import { AlertsWithStyleOptions } from "./template.js";
 /**
  * In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.
  * 
- * In-line alerts have five different variants: neutral (default), informative, positive, notice, and negative. Each variant is available with three fill styles (treatment): outline (default), subtle, and bold.
+ * In-line alerts have five different variants: neutral (default), informative, positive, notice, and negative. Each variant is available with three fill styles (treatment): border (default), subtle, and bold.
  */
 export default {
 	title: "In-line alert",
@@ -22,19 +22,29 @@ export default {
 				category: "Content",
 			},
 			control: { type: "text" },
+			if: { arg: "withoutHeader", truthy: false },
 		},
 		text: {
-			name: "Text",
+			name: "Body text",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
 				disable: false,
-				category: "Component",
+				category: "Content",
 			},
 			control: { type: "text" },
 		},
+		withoutHeader: {
+			name: "Without header",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		variant: {
-			name: "Variants",
+			name: "Variant",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -78,8 +88,9 @@ export default {
 		rootClass: "spectrum-InLineAlert",
 		headerText: "In-line alert header",
 		text: "This is an alert.",
+		withoutHeader: false,
 		variant: "neutral",
-		treatment: "default",
+		treatment: "border",
 		isClosable: false,
 		hasLink: false,
 	},
@@ -98,6 +109,18 @@ export default {
  */
 export const Default = InlineAlertGroup.bind({});
 Default.args = {};
+
+/**
+ * In-line alerts may be rendered without a header. Combine this strategy with any variant.
+ */
+export const WithoutHeader = InlineAlertGroup.bind({});
+WithoutHeader.args = {
+	withoutHeader: true,
+};
+WithoutHeader.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+WithoutHeader.tags = ["!dev"];
 
 // ********* DOCS ONLY ********* //
 /**

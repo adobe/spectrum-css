@@ -14,8 +14,9 @@ export const Template = ({
 	customStyles = {},
 	headerText,
 	text,
+	withoutHeader = false,
 	variant = "neutral",
-	treatment = "default",
+	treatment = "border",
 	isClosable = false,
 	hasLink = false,
 } = {}, context = {}) => {
@@ -47,6 +48,13 @@ export const Template = ({
 			}, context) : nothing;
 
 
+	const titleMarkup = !withoutHeader ? html`
+		<div class="${rootClass}-header">
+			${headerText}
+			${iconMarkup}
+		</div>
+	` : nothing;
+
 	const linkMarkup = hasLink ? html`
 		<div class="spectrum-InLineAlert-footer">
 			${Link({
@@ -73,16 +81,13 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--${treatment}`]: treatment !== "default",
+				[`${rootClass}--${treatment}`]: treatment !== "border",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
 
 		>
-			<div class="${rootClass}-header">
-				${headerText}
-				${iconMarkup}
-			</div>
+			${titleMarkup}
 			<div class="${rootClass}-content">${text}</div>
 			${linkMarkup}
 			${closableMarkup}
@@ -98,7 +103,7 @@ const toTitleCase = (string) => string.replace(/\w\S*/g, text => text.charAt(0).
 /**
  * Set the appropriate treatment header text
  */
-const setTreatmentHeaderText = (variant, treatment) => `${toTitleCase(variant)} variant with ${treatment !== "default" ? treatment : "outline"} fill`;
+const setTreatmentHeaderText = (variant, treatment) => `${toTitleCase(variant)} variant with ${treatment !== "border" ? treatment : "outline"} fill`;
 
 export const AlertsWithStyleOptions = ({
 	...args
@@ -111,7 +116,7 @@ export const AlertsWithStyleOptions = ({
 	content: html`
 		${Template({
 			...args,
-			headerText: setTreatmentHeaderText(args.variant, "default"),
+			headerText: setTreatmentHeaderText(args.variant, "border"),
 		}, context)}
 		${Template({
 			...args,

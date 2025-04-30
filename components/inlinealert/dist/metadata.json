@@ -119,11 +119,7 @@
     "--spectrum-white",
     "--spectrum-workflow-icon-size-100"
   ],
-  "passthroughs": [
-    "--mod-button-border-color-default",
-    "--mod-button-content-color-default",
-    "--mod-link-text-color"
-  ],
+  "passthroughs": ["--mod-link-text-color"],
   "high-contrast": [
     "--highcontrast-inlinealert-background-color",
     "--highcontrast-inlinealert-border-and-icon-color",

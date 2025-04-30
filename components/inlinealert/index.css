@@ -78,9 +78,6 @@
 		--spectrum-inlinealert-header-color: var(--spectrum-white);
 		--spectrum-inlinealert-content-color: var(--spectrum-white);
 		--spectrum-inlinealert-border-and-icon-color: var(--spectrum-white);
-
-		--mod-button-content-color-default: var(--spectrum-white);
-		--mod-button-border-color-default: var(--spectrum-white);
 	}
 }
 
@@ -209,9 +206,7 @@
 	.spectrum-InLineAlert {
 		--highcontrast-inlinealert-header-color: CanvasText;
 		--highcontrast-inlinealert-content-color: CanvasText;
-		--highcontrast-inlinealert-border-and-icon-color: ButtonBorder;
-
-		--mod-button-content-color-default: CanvasText;
+		--highcontrast-inlinealert-border-and-icon-color: CanvasText;
 
 		.spectrum-InLineAlert-header,
 		.spectrum-InLineAlert-content,
@@ -221,7 +216,7 @@
 
 		&.spectrum-InLineAlert--subtle:not(.spectrum-InLineAlert--bold),
 		&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle) {
-			--highcontrast-inlinealert-background-color: ButtonFace;
+			--highcontrast-inlinealert-background-color: Canvas;
 		}
 	}
 }

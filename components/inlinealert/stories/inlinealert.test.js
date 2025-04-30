@@ -24,6 +24,10 @@ export const InlineAlertGroup = Variants({
 			isClosable: true,
 		},
 		{
+			testHeading: "Without header",
+			withoutHeader: true,
+		},
+		{
 			testHeading: "Link",
 			hasLink: true,
 		},
