@@ -30,6 +30,8 @@
 	inline-size: var(--mod-color-slider-length, var(--spectrum-color-slider-length));
 	block-size: var(--mod-color-slider-control-track-width, var(--spectrum-color-slider-control-track-width));
 
+	touch-action: none; /* Disable touch scrolling on touch devices to allow for color picking */
+
 	/* Otherwise we randomly drag a file icon */
 	user-select: none;
 
