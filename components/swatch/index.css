@@ -36,7 +36,9 @@
 	--spectrum-add-button-background-hover: var(--spectrum-gray-200);
 	--spectrum-add-button-background-down: var(--spectrum-gray-200);
 	--spectrum-add-button-background-keyboard-focus: var(--spectrum-gray-200);
-	--spectrum-swatch-border-color-light: rgb(var(--spectrum-swatch-group-border-color) / 42%);
+
+	/* TODO update to use tokens once available */
+	--spectrum-swatch-border-color-light: rgb(var(--spectrum-gray-1000-rgb), 0.2);
 
 	/* Focus ring */
 	--spectrum-swatch-focus-indicator-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-focus-indicator-color)));
