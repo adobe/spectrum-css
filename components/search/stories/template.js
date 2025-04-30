@@ -45,7 +45,6 @@ export const Template = ({
 			setName: "workflow",
 			type: "search",
 			placeholder: "Search",
-			displayLabel: false,
 			name: "search",
 			customInputClasses: [`${rootClass}-input`],
 			customIconClasses: [`${rootClass}-icon`],
