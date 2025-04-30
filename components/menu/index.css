@@ -365,6 +365,17 @@
 	.spectrum-Menu-linkout {
 		block-size: var(--spectrum-menu-item-linkout-icon-height);
 		inline-size: var(--spectrum-menu-item-linkout-icon-width);
+
+		/* Improve vertical alignment of linkout icon */
+		/* TODO: revisit with #1194 when final icon available */
+		display: block;
+		margin-block-start: calc(var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size)) - var(--spectrum-menu-item-linkout-icon-height));
+	}
+
+	/* Improve vertical alignment of linkout icon */
+	/* TODO: revisit with #1194 when final icon available */
+	.spectrum-Menu-item:has(> .spectrum-Menu-itemIcon--workflowIcon) .spectrum-Menu-linkout {
+		margin-block-start: calc(var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size)) - var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height) / 2));
 	}
 
 	/* Presentational list items for sections and dividers. */
@@ -422,12 +433,6 @@
 		}
 
 		&:has(> .spectrum-Menu-itemDescription) {
-			> .spectrum-Menu-itemActions,
-			> .spectrum-Menu-itemValue,
-			> .spectrum-Menu-itemLabel {
-				align-self: end;
-			}
-
 			> .spectrum-Menu-itemDescription {
 				align-self: start;
 			}
