@@ -20,7 +20,7 @@ export const Template = (
 		isActive,
 		isInline,
 		tabIndex = 0,
-		onMinus,
+		onSubtract,
 		onAdd,
 		onclick,
 	} = {},
@@ -44,7 +44,7 @@ export const Template = (
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 				?disabled=${isDisabled}
-				@click=${onMinus}
+				@click=${onSubtract}
 				aria-haspopup="listbox"
 				type="button"
 				tabindex=${tabIndex}

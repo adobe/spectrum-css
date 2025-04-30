@@ -79,6 +79,7 @@ export const Template = ({
 	pattern,
 	placeholder,
 	name,
+	step,
 	helpText = "",
 	id = getRandomId("textfield"),
 	value = "",
@@ -187,6 +188,7 @@ export const Template = ({
 			/>`,
 			() => html`<input
 				type=${ifDefined(type)}
+				step=${ifDefined(step)}
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}

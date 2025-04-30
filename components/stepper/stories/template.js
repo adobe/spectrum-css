@@ -26,11 +26,26 @@ export const Template = ({
 	hideStepper = false,
 	helpText,
 	value = "0",
+	step = "1",
 	id = getRandomId("numberfield"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
+	/* these functions work on the story page, not the docs page. */
+	const incrementValue = () => {
+		const newValue = String(parseFloat(value) + parseFloat(step));
+		updateArgs?.({ value: newValue });
+		return newValue;
+	};
+
+	const decrementValue = () => {
+		const newValue = String(parseFloat(value) - parseFloat(step));
+		updateArgs?.({ value: newValue });
+		return newValue;
+	};
+
 	return html`
 		<div
 			class=${classMap({
@@ -83,9 +98,9 @@ export const Template = ({
 				${Textfield({
 					size,
 					type: "number",
-					min: "-2",
-					max: "2",
-					step: "0.5",
+					min: "-10",
+					max: "10",
+					step,
 					value,
 					isInvalid,
 					isFocused,
@@ -100,6 +115,8 @@ export const Template = ({
 						${InfieldButton({
 							isInline: true,
 							size,
+							onAdd: incrementValue,
+							onSubtract: decrementValue,
 							customClasses: [`${rootClass}-button`],
 							isDisabled: isDisabled || isReadOnly,
 						}, context)}

@@ -1,4 +1,4 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isKeyboardFocused, isReadOnly, size } from "@spectrum-css/preview/types";
 import { default as TextfieldStories } from "@spectrum-css/textfield/stories/textfield.stories.js";
@@ -8,7 +8,9 @@ import { NumberFieldGroup } from "./stepper.test.js";
 import { AllDefaultVariantsGroup, DisabledVariantsGroup, Template } from "./template.js";
 
 /**
- * A number field can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.
+ * A number field can be used to increment or decrement a value by a specified amount via add and subtract buttons. The input field displays the current value.
+ *
+ * Note that the number fields are non-functional on this page, but functionality is demonstrated on [the story page](/story/components-number-field--default).
  */
 export default {
 	title: "Number field",
@@ -45,6 +47,15 @@ export default {
 			...TextfieldStories?.argTypes?.helpText,
 		},
 		value: { table: { disable: true, } },
+		step: {
+			name: "Step value",
+			description: "The amount to increment or decrement the input value.",
+			table: {
+				type: { summary: "number" },
+				category: "Content",
+			},
+			control: "number",
+		},
 	},
 	args: {
 		rootClass: "spectrum-NumberField",
@@ -60,6 +71,7 @@ export default {
 		label: "Field label",
 		labelPosition: "top",
 		helpText: "",
+		step: "1",
 	},
 	parameters: {
 		design: {
@@ -70,9 +82,18 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
-		}
+		},
+		actions: {
+			handles: ["click .spectrum-InfieldButton:not([disabled])"],
+		},
+		downState: {
+			selectors: [".spectrum-InfieldButton:not(:disabled)"],
+		},
 	},
 	tags: ["migrated"],
+	decorators: [
+		withDownStateDimensionCapture,
+	],
 };
 
 export const Default = NumberFieldGroup.bind({});
@@ -97,8 +118,11 @@ Sizing.parameters = {
  *
  * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a
  * secondary option to be positioned on the side of the field. Having the label on the top is the default and is recommended
- * because this works better with long copy, localization, and responsive layouts. The [inline infield buttons](/docs/components-in-field-button--docs#inline) are usually visible, but can be hidden. When the label is too long for the available
- * space, it will wrap to the next line. If the value within the number field input overflows, it will truncate with an ellipsis.
+ * because this works better with long copy, localization, and responsive layouts. The [inline infield buttons](/docs/components-in-field-button--docs#inline)
+ * are usually visible, but can be hidden. The amount of the increment/decrement step is 1 by default.
+ *
+ * When the label is too long for the available space, it will wrap to the next line. If the value within the number field input
+ * overflows, it will truncate with an ellipsis.
  */
 export const DefaultStates = AllDefaultVariantsGroup.bind({});
 DefaultStates.args = {};
