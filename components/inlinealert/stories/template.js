@@ -90,7 +90,10 @@ export const Template = ({
 
 		>
 			${titleMarkup}
-			<div class="${rootClass}-content">${text}</div>
+			<div class="${rootClass}-content">
+				${text}
+				${withoutHeader ? iconMarkup : nothing}
+			</div>
 			${linkMarkup}
 			${closableMarkup}
 		</div>
