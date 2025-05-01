@@ -22,9 +22,11 @@ export const Picker = ({
 	size = "m",
 	labelPosition = "top",
 	placeholder,
+	currentValue,
 	contentIconName,
 	isQuiet = false,
 	isKeyboardFocused = false,
+	showWorkflowIcon = false,
 	isOpen = false,
 	isInvalid = false,
 	isLoading = false,
@@ -36,12 +38,6 @@ export const Picker = ({
 	customStyles = {},
 } = {}, context = {}) => {
 	const { updateArgs } = context;
-
-	// Use the chevron from the UI icon set for each size, as defined in the design spec.
-	let disclosureIconName = "ChevronDown100";
-	if (size == "s") { disclosureIconName = "ChevronDown75"; }
-	else if (size == "l") { disclosureIconName = "ChevronDown200"; }
-	else if (size == "xl") { disclosureIconName = "ChevronDown300"; }
 
 	return html`
 		<button
@@ -76,7 +72,22 @@ export const Picker = ({
 					customClasses: ["spectrum-Picker-icon"],
 				}, context))
 			}
-			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
+			${when(showWorkflowIcon, () =>
+				Icon({
+					size,
+					setName: "workflow",
+					iconName: "Image",
+					customClasses: [`${rootClass}-icon`],
+				}, context)
+			)}
+			<span
+				class=${classMap({
+					[`${rootClass}-label`]: true,
+					["is-placeholder"]: !currentValue,
+				})}
+			>
+				${currentValue ? currentValue : placeholder}
+			</span>
 			${when(isLoading, () =>
 				InfieldProgressCircle({
 					size: size,
@@ -86,7 +97,7 @@ export const Picker = ({
 			${when(isInvalid && !isLoading, () =>
 				Icon({
 					size,
-					iconName: "Alert",
+					iconName: "AlertTriangle",
 					setName: "workflow",
 					customClasses: [`${rootClass}-validationIcon`],
 				}, context)
@@ -94,7 +105,12 @@ export const Picker = ({
 			${Icon({
 				size,
 				setName: "ui",
-				iconName: disclosureIconName,
+				iconName: {
+					s:  "ChevronDown75",
+					m:  "ChevronDown100",
+					l:  "ChevronDown200",
+					xl: "ChevronDown300",
+				}[size ?? "m"],
 				customClasses: [`${rootClass}-menuIcon`],
 			}, context)}
 		</button>
@@ -105,15 +121,21 @@ export const Picker = ({
  * Picker template used along with other sibling components, such as Field label and Help text.
  */
 export const Template = ({
+	rootClass = "spectrum-Picker",
 	size = "m",
 	label,
 	labelPosition = "top",
 	placeholder,
+	currentValue,
 	helpText,
 	isQuiet = false,
 	isOpen = false,
 	isInvalid = false,
 	isDisabled = false,
+	showWorkflowIcon = false,
+	isHovered = false,
+	isActive = false,
+	isKeyboardFocused = false,
 	isLoading = false,
 	withSwitch = false,
 	fieldLabelStyle = {},
@@ -128,12 +150,18 @@ export const Template = ({
 	popoverContent = [],
 } = {}, context = {}) => {
 	const pickerMarkup = Picker({
+		rootClass,
 		size,
 		isQuiet,
+		currentValue,
+		showWorkflowIcon,
 		isOpen,
 		isInvalid,
 		isDisabled,
 		isLoading,
+		isHovered,
+		isActive,
+		isKeyboardFocused,
 		placeholder,
 		popoverContent,
 		labelPosition,
