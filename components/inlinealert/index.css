@@ -207,10 +207,11 @@
 		--highcontrast-inlinealert-content-color: CanvasText;
 		--highcontrast-inlinealert-border-and-icon-color: CanvasText;
 
+		--highcontrast-inlinealert-background-color: Canvas;
+
 		&.spectrum-InLineAlert--subtle,
 		&.spectrum-InLineAlert--bold {
-			--highcontrast-inlinealert-background-color: Canvas;
-			--highcontrast-inlinealert-border-width: var(--spectrum-inlinealert-border-width);
+			--highcontrast-inlinealert-border-width: var(--spectrum-border-width-200);
 		}
 	}
 }
