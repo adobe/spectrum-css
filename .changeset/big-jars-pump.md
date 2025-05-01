@@ -4,7 +4,7 @@
 
 #### S2 migration in-line alert
 
-This migrates the `in-line alert` component to S2. Custom properties have been remapped and added per the design specification.
+This migrates the `in-line alert` component to Spectrum 2. Custom properties have been updated and added per the design specification.
 
 Subtle and bold treatments have been added for each badge variant.
 
