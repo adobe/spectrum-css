@@ -153,7 +153,6 @@
 
 .spectrum-InLineAlert-header {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 
 	gap: var(--mod-inlinealert-min-spacing-header-to-icon, var(--spectrum-inlinealert-min-spacing-header-to-icon));
@@ -204,12 +203,6 @@
 		--highcontrast-inlinealert-header-color: CanvasText;
 		--highcontrast-inlinealert-content-color: CanvasText;
 		--highcontrast-inlinealert-border-and-icon-color: CanvasText;
-
-		.spectrum-InLineAlert-header,
-		.spectrum-InLineAlert-content,
-		.spectrum-InLineAlert-footer {
-			forced-color-adjust: none;
-		}
 
 		&.spectrum-InLineAlert--subtle,
 		&.spectrum-InLineAlert--bold {
