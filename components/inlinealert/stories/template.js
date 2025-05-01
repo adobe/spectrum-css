@@ -60,7 +60,7 @@ export const Template = ({
 			${Link({
 				url: "#",
 				text: "Link",
-				staticColor: treatment === "subtle" || variant === "notice" ? "black" : "white",
+				staticColor: treatment === "subtle" || treatment === "border" || variant === "notice" ? "black" : "white",
 			})}
 		</div>
 	` : nothing;
@@ -73,7 +73,7 @@ export const Template = ({
 				iconName: false,
 				hideLabel: false,
 				label: "Ok",
-				staticColor: treatment === "subtle" || variant === "notice" ? "black" : "white",
+				staticColor: treatment === "subtle" || treatment === "border" || variant === "notice" ? "black" : "white",
 			})}
 		</div>
 	` : nothing;
