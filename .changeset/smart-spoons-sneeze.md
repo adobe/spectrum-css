@@ -1,5 +1,6 @@
 ---
 "@spectrum-css/button": patch
+"@spectrum-css/switch": patch
 ---
 
 ### S2 button fixes
@@ -13,3 +14,11 @@ PRs used as reference:
 - [S2 button migration](https://github.com/adobe/spectrum-css/pull/2600)
 - [Add text wrapping option](https://github.com/adobe/spectrum-css/pull/3086)
 - [PostCSS plugin updates/fixes](https://github.com/adobe/spectrum-css/pull/3502)
+
+### S2 switch fixes
+
+This work addresses some very minor regressions noticed in the migrated S2 switch. We have reimplemented the switch animation durations tokens, and updated their usage within the style definitions correctly.
+
+PRs used as reference:
+
+- [S2 switch migration](https://github.com/adobe/spectrum-css/pull/2651)
