@@ -13,7 +13,6 @@
     ".spectrum-Switch .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch",
     ".spectrum-Switch .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before",
     ".spectrum-Switch--disabled",
-    ".spectrum-Switch--emphasized",
     ".spectrum-Switch--sizeL",
     ".spectrum-Switch--sizeS",
     ".spectrum-Switch--sizeXL",
@@ -35,6 +34,7 @@
     ".spectrum-Switch-switch",
     ".spectrum-Switch-switch:after",
     ".spectrum-Switch-switch:before",
+    ".spectrum-Switch.spectrum-Switch--emphasized",
     ".spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch",
     ".spectrum-Switch:active .spectrum-Switch-input:not(:disabled) + .spectrum-Switch-switch:before",
     ".spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before",
@@ -109,6 +109,8 @@
     "--mod-switch-spacing-top-to-label"
   ],
   "component": [
+    "--spectrum-switch-animation-duration-100",
+    "--spectrum-switch-animation-duration-200",
     "--spectrum-switch-background-color",
     "--spectrum-switch-background-color-disabled",
     "--spectrum-switch-background-color-selected-default",
