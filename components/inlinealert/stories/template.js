@@ -107,28 +107,26 @@ const toTitleCase = (string) => string.replace(/\w\S*/g, text => text.charAt(0).
  */
 const setTreatmentHeaderText = (variant, treatment) => `${toTitleCase(variant)} variant with ${treatment !== "border" ? treatment : "outline"} fill`;
 
-export const AlertsWithStyleOptions = ({
-	...args
-}, context = {}) => Container({
+export const AlertsWithStyleOptions = (args, context = {}) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
 		columnGap: "12px",
 	},
-	content: html`
-		${Template({
+	content: [
+		Template({
 			...args,
 			headerText: setTreatmentHeaderText(args.variant, "border"),
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			treatment: "subtle",
 			headerText: setTreatmentHeaderText(args.variant, "subtle"),
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			treatment: "bold",
 			headerText: setTreatmentHeaderText(args.variant, "bold"),
-		}, context)}
-	`,
+		}, context),
+	],
 }, context);

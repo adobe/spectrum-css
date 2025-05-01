@@ -45,11 +45,11 @@
 	--spectrum-inlinealert-content-color: var(--spectrum-body-color);
 
 	&.spectrum-InLineAlert--subtle {
-		--mod-inlinealert-border-width: 0px;
+		--spectrum-inlinealert-border-width: 0px;
 	}
 
 	&.spectrum-InLineAlert--bold {
-		--mod-inlinealert-border-width: 0px;
+		--spectrum-inlinealert-border-width: 0px;
 	}
 
 	&.spectrum-InLineAlert--bold:not(.spectrum-InLineAlert--subtle, .spectrum-InLineAlert--notice) {
@@ -135,7 +135,7 @@
 	padding-block: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 	padding-inline: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 
-	border-block-width: var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width));
+	border-block-width: var(--highcontrast-inlinealert-border-width, var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width)));
 	border-inline-width: var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width));
 	border-style: solid;
 	border-radius: var(--mod-inlinealert-border-radius, var(--spectrum-inlinealert-border-radius));
@@ -207,7 +207,7 @@
 		&.spectrum-InLineAlert--subtle,
 		&.spectrum-InLineAlert--bold {
 			--highcontrast-inlinealert-background-color: Canvas;
-			--mod-inlinealert-border-width: var(--spectrum-inlinealert-border-width);
+			--highcontrast-inlinealert-border-width: var(--spectrum-inlinealert-border-width);
 		}
 	}
 }
