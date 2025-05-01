@@ -135,8 +135,7 @@
 	padding-block: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 	padding-inline: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 
-	border-block-width: var(--highcontrast-inlinealert-border-width, var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width)));
-	border-inline-width: var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width));
+	border-width: var(--highcontrast-inlinealert-border-width, var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width)));
 	border-style: solid;
 	border-radius: var(--mod-inlinealert-border-radius, var(--spectrum-inlinealert-border-radius));
 
