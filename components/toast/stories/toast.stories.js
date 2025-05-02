@@ -65,6 +65,9 @@ export default {
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=2666-4482",
 		},
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
 };
 

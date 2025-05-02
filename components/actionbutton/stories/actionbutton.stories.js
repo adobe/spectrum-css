@@ -103,7 +103,10 @@ export default {
 			story: {
 				height: "auto",
 			},
-		}
+		},
+		status: {
+			type: "migrated",
+		},
 	},
 	decorators: [
 		withDownStateDimensionCapture,
