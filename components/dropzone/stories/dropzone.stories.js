@@ -50,6 +50,7 @@ export default {
 			type: "migrated",
 		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = DropzoneGroup.bind({});
