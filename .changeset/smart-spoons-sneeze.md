@@ -4,6 +4,7 @@
 "@spectrum-css/statuslight": patch
 "@spectrum-css/link": patch
 "@spectrum-css/picker": patch
+"@spectrum-css/floatingactionbutton": patch
 ---
 
 ### S2 button fixes
@@ -42,3 +43,7 @@ PRs used as reference:
 
 - [Picker docs to storybook migration](https://github.com/adobe/spectrum-css/pull/3200)
 - [S2 picker migration](https://github.com/adobe/spectrum-css/pull/2697)
+
+### S2 floating action button fix
+
+Opts to use the color property as opposed to fill for the icon. This correctly passes the floating action button icon colors to the component, to override the fill property style that is set on the embedded `.spectrum-Icon`.
