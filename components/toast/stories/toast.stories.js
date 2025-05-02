@@ -66,6 +66,7 @@ export default {
 		},
 		metadata,
 	},
+	tags: ["migrated"],
 };
 
 /**

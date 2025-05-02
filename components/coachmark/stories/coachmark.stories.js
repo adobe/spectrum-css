@@ -100,6 +100,7 @@ export default {
 			},
 		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = CoachMarkGroup.bind({});

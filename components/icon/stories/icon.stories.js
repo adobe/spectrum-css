@@ -99,6 +99,7 @@ export default {
 			url: "https://www.figma.com/design/9qeVZSJ9t0kv6r7njzgHx7/S2-%2F-Styles-visualizer-(WIP)?node-id=295-24257&t=ZC7fyaQ0VQYQ5VYM-1",
 		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = IconGroup.bind({});

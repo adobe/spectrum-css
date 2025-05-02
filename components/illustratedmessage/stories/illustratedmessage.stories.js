@@ -77,6 +77,7 @@ export default {
 		metadata,
 		layout: "centered"
 	},
+	tags: ["migrated"],
 };
 
 export const Default = IllustratedMessageGroup.bind({});
