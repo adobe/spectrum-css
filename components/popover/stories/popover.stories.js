@@ -246,7 +246,7 @@ DialogStyle.args = {
 		(passthroughs, context) => Dialog({
 			showModal: false,
 			size: "s",
-			isDismissable: false,
+			isDismissible: false,
 			heading: "Example heading",
 			hasFooter: false,
 			footer: [""],
