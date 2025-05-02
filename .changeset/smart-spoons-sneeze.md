@@ -5,6 +5,7 @@
 "@spectrum-css/link": patch
 "@spectrum-css/picker": patch
 "@spectrum-css/floatingactionbutton": patch
+"@spectrum-css/logicbutton": patch
 ---
 
 ### S2 button fixes
@@ -47,3 +48,7 @@ PRs used as reference:
 ### S2 floating action button fix
 
 Opts to use the color property as opposed to fill for the icon. This correctly passes the floating action button icon colors to the component, to override the fill property style that is set on the embedded `.spectrum-Icon`.
+
+### S2 logic button fix
+
+Adds `border-style: solid` to the styles to avoid a 3D effect on the border.
