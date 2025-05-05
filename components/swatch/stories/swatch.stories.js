@@ -110,6 +110,7 @@ export default {
 			control: "boolean",
 			if: { arg: "isMixedValue", truthy: false },
 		},
+		tags: ["migrated"],
 	},
 	args: {
 		rootClass: "spectrum-Swatch",

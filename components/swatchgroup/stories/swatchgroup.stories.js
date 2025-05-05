@@ -19,7 +19,7 @@ import { RoundingTemplate, Template } from "./template.js";
  *
  * ### Density
  *
- * Swatch groups come in several densities: regular (default), spacious, medium and large. Each density retains the same swatch size, but have less or more padding between each swatch, respectively.
+ * Swatch groups come in several densities: medium (default), extra small, small and large. Each density retains the same swatch size, but have less or more padding between each swatch, respectively.
  */
 export default {
 	title: "Swatch group",
@@ -41,7 +41,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["regular", "spacious", "sizeM", "sizeL"],
+			options: ["sizeXS", "sizeS", "sizeM", "sizeL"],
 			control: "select",
 		},
 		items: {
@@ -64,10 +64,11 @@ export default {
 			if: { arg: "isSelected", truthy: false },
 			options: ["noBorder", "border", "lightBorder"],
 		},
+		tags: ["migrated"],
 	},
 	args: {
 		rootClass: "spectrum-SwatchGroup",
-		density: "regular",
+		density: "sizeM",
 		borderStyle: "noBorder",
 		containerWidth: "200px",
 		items: [
@@ -106,31 +107,41 @@ export default {
 };
 
 /**
- * The default swatch group has regular density.
+ * The default swatch group has medium density.
  */
 export const Default = SwatchgroupGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-export const Medium = Template.bind({});
-Medium.args = {
-	density: "sizeM",
+export const ExtraSmall = Template.bind({});
+ExtraSmall.args = {
+	density: "sizeXS",
 };
-Medium.tags = ["!dev"];
-Medium.parameters = {
+ExtraSmall.tags = ["!dev"];
+ExtraSmall.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Medium.storyName = "Density - Medium";
+ExtraSmall.storyName = "Density - extra small";
 
-export const Spacious = Template.bind({});
-Spacious.args = {
-	density: "spacious",
+export const Small = Template.bind({});
+Small.args = {
+	density: "sizeS",
 };
-Spacious.tags = ["!dev"];
-Spacious.parameters = {
+Small.tags = ["!dev"];
+Small.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Spacious.storyName = "Density - Spacious";
+Small.storyName = "Density - small";
+
+export const Large = Template.bind({});
+Large.args = {
+	density: "sizeL",
+};
+Large.tags = ["!dev"];
+Large.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Large.storyName = "Density - large";
 
 /**
  * Only use rounded swatches if there is a single row.

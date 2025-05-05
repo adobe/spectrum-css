@@ -12,7 +12,7 @@
  */
 
 .spectrum-SwatchGroup {
-	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-75);
+	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
 }
 
 .spectrum-SwatchGroup {
@@ -23,14 +23,14 @@
 	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
 }
 
-/* Spacious */
-.spectrum-SwatchGroup--spacious {
-	--mod-swatchgroup-spacing: var(--mod-swatch-group-spacing-spacious, var(--spectrum-swatch-group-spacing-spacious));
+/* Extra small */
+.spectrum-SwatchGroup--sizeXS {
+	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-50);
 }
 
-/* Medium */
-.spectrum-SwatchGroup--sizeM {
-	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
+/* Small */
+.spectrum-SwatchGroup--sizeS {
+	--spectrum-swatchgroup-spacing: var(--spectrum-swatch-group-spacing-spacious);
 }
 
 /* Large */
