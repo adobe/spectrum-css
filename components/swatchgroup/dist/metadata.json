@@ -11,7 +11,11 @@
     "--spectrum-swatch-group-spacing-spacious",
     "--spectrum-swatchgroup-spacing"
   ],
-  "global": ["--spectrum-spacing-100", "--spectrum-spacing-50"],
+  "global": [
+    "--spectrum-spacing-100",
+    "--spectrum-spacing-50",
+    "--spectrum-swatch-border-opacity"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

@@ -19,13 +19,11 @@ export const Swatches = (args, context) => {
 			Template({
 				...args,
 				rounding: "none",
-				borderStyle: "noBorder",
 				swatchColor: "linear-gradient(to right, rgba(154, 116, 200, 0.5), rgb(174, 216, 230))",
 			}, context),
 			Template({
 				...args,
 				rounding: "full",
-				borderStyle: "lightBorder",
 				swatchColor: `center / contain no-repeat url("${exampleImage}")`,
 			}, context),
 			Template({
@@ -78,14 +76,6 @@ export const SwatchGroup = Variants({
 			rounding: "full"
 		},
 		{
-			testHeading: "Light border",
-			borderStyle: "lightBorder",
-		},
-		{
-			testHeading: "No border",
-			borderStyle: "noBorder",
-		},
-		{
 			testHeading: "Shape: rectangle",
 			shape: "rectangle",
 		},
@@ -117,7 +107,6 @@ export const SwatchGroup = Variants({
 			imageUrl: undefined,
 			isMixedValue: false,
 			isAddSwatch: false,
-			borderStyle: "default",
 		},
 		{
 			testHeading: "Selected",

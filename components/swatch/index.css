@@ -26,7 +26,6 @@
 
 	/* Color */
 	--spectrum-swatch-border-color-selected: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-gray-1000)));
-	--spectrum-swatch-border-color-rgb: var(--spectrum-gray-1000-rgb);
 	--spectrum-swatch-inner-border-color-selected: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-gray-25)));
 	--spectrum-swatch-disabled-icon-color: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-white)));
 	--spectrum-swatch-icon-color: var(--highcontrast-swatch-icon-color, var(--mod-swatch-icon-color, var(--spectrum-neutral-content-color-default)));
@@ -38,12 +37,25 @@
 	--spectrum-add-button-background-keyboard-focus: var(--spectrum-gray-200);
 
 	/* TODO update to use tokens once available */
-	--spectrum-swatch-border-color-light: rgb(var(--spectrum-gray-1000-rgb), 0.2);
+	--spectrum-swatch-border: rgb(from var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)) r g b / var(--mod-swatch-border-opacity, var(--spectrum-swatch-border-opacity)));
 
 	/* Focus ring */
 	--spectrum-swatch-focus-indicator-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-focus-indicator-color)));
 	--spectrum-swatch-focus-indicator-thickness: var(--mod-swatch-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 	--spectrum-swatch-focus-indicator-gap: var(--mod-swatch-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
+}
+
+/* The add-swatch's border color is the same as its background color for all states. */
+.spectrum-Swatch.is-addSwatch {
+	--spectrum-swatch-border: var(--spectrum-add-button-background);
+
+	&:hover {
+		--spectrum-swatch-border: var(--spectrum-add-button-background-hover);
+	}
+
+	&:active {
+		--spectrum-swatch-border: var(--spectrum-add-button-background-down);
+	}
 }
 
 .spectrum-Swatch--sizeXS {
@@ -249,34 +261,8 @@
 		background: var(--spectrum-picked-color, transparent);
 
 		/* Swatch border */
-		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, rgb(var(--mod-swatch-border-color-rgb, var(--spectrum-swatch-border-color-rgb)), var(--mod-swatch-border-opacity, var(--spectrum-swatch-border-opacity)))));
+		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border, var(--spectrum-swatch-border)));
 		border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
-	}
-}
-
-/* Variant: No border */
-.spectrum-Swatch--noBorder {
-	.spectrum-Swatch-fill {
-		&::before {
-			box-shadow: none;
-			background: var(--spectrum-picked-color, transparent);
-		}
-	}
-}
-
-.spectrum-Swatch--border {
-	.spectrum-Swatch-fill {
-		&::before {
-			box-shadow: inset 0 0 0 var(--spectrum-swatch-border-thickness) var(--mod-swatchgroup-border-color, var(--spectrum-swatchgroup-border-color));
-		}
-	}
-}
-
-.spectrum-Swatch--lightBorder {
-	.spectrum-Swatch-fill {
-		&::before {
-			box-shadow: inset 0 0 0 var(--spectrum-swatch-border-thickness) var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light));
-		}
 	}
 }
 
