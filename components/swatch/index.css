@@ -180,7 +180,7 @@
 	}
 
 	/* Swatch fill: Not fill with Slash */
-	&.is-nothing {
+	&.is-nothing:not(&.is-mixedValue, &.is-addSwatch) {
 		.spectrum-Swatch-fill {
 			background: var(--spectrum-picked-color, transparent);
 			background-image: none;
