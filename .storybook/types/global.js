@@ -18,19 +18,6 @@ export default {
 			dynamicTitle: true,
 		},
 	},
-	scale: {
-		title: "Platform scale",
-		description: "Controls the platform scale of the component",
-		defaultValue: "medium",
-		type: "string",
-		toolbar: {
-			items: [
-				{ value: "medium", title: "Medium", right: "default", icon: "browser" },
-				{ value: "large", title: "Large", icon: "mobile" },
-			],
-			dynamicTitle: true,
-		},
-	},
 	textDirection: {
 		title: "Text direction",
 		description: "Direction of the content flow",

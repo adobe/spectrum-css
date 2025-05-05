@@ -11,10 +11,15 @@
  * governing permissions and limitations under the License.
  */
 
-const fs = require("node:fs");
-const { join, basename } = require("node:path");
+import { writeFileSync } from "node:fs";
+import { basename, join } from "node:path";
 
-module.exports = ({
+import { fileURLToPath } from "url";
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+
+import "stylelint";
+
+export default ({
 	resolveImports = true,
 	lint = true,
 	verbose = true,
@@ -131,7 +136,7 @@ module.exports = ({
 			},
 			"postcss-modules": module ? {
 				getJSON: (cssFileName, json) =>
-					fs.writeFileSync(join(cwd, "dist", basename(cssFileName, ".css") + ".json"), JSON.stringify(json)),
+					writeFileSync(join(cwd, "dist", basename(cssFileName, ".css") + ".json"), JSON.stringify(json)),
 				exportGlobals: true,
 				generateScopedName: function (name) {
 					const cleanClass = name.toLowerCase().replaceAll(/-/g, "_");

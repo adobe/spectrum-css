@@ -1,25 +1,44 @@
-const { existsSync, statSync } = require("fs");
-const { readFile } = require("fs").promises;
-const { join, relative, dirname, basename, extname } = require("path");
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
-const fg = require("fast-glob");
-const tar = require("tar");
-const _ = require("lodash");
+import fs, { existsSync, statSync } from "node:fs";
+import { basename, dirname, extname, join, relative } from "node:path";
+const { readFile } = fs.promises;
 
-const nunjucks = require("nunjucks");
+import fg from "fast-glob";
+import _ from "lodash";
+import tar from "tar";
+
+import nunjucks from "nunjucks";
 const env = new nunjucks.Environment();
 
-const npmFetch = require("npm-registry-fetch");
+import npmFetch from "npm-registry-fetch";
 
-const { hideBin } = require("yargs/helpers");
-const yargs = require("yargs");
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
-const Diff = require("diff");
-const Diff2Html = require("diff2html");
+import Diff from "diff";
+import Diff2Html from "diff2html";
 
-const { dirs, log, bytesToSize, copy, writeConsoleTable, cleanAndMkdir, writeAndReport, getAllComponentNames } = require("./utilities.js");
+import { bytesToSize, cleanAndMkdir, copy, dirs, getAllComponentNames, log, writeAndReport, writeConsoleTable } from "./utilities.js";
 
-require("colors");
+import "colors";
+
+import { createRequire } from "module";
+import { fileURLToPath } from "url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const require = createRequire(import.meta.url);
 
 /**
  * A global object to store the paths to the output directories
