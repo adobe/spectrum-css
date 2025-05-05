@@ -96,10 +96,7 @@
 
 	/* disabled variant content */
 	--spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
-}
 
-.spectrum-Tag,
-.spectrum-Tag--sizeM {
 	--spectrum-tag-height: var(--spectrum-component-height-100);
 	--spectrum-tag-font-size: var(--spectrum-font-size-100);
 	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);

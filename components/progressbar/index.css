@@ -89,7 +89,7 @@
 	align-items: center;
 	font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
 	vertical-align: top;
-	word-break: break-word;
+	word-break: auto-phrase;
 
 	inline-size: var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));
 	max-inline-size: var(--mod-progressbar-max-size, var(--spectrum-progressbar-max-size));

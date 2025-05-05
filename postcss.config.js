@@ -119,6 +119,7 @@ module.exports = ({
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
 						normalizeWhitespace: minify || isProduction,
+						calc: false,
 					},
 				],
 			},

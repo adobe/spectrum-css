@@ -52,7 +52,6 @@ governing permissions and limitations under the License.
 	--spectrum-actionbutton-edge-to-text: var(--spectrum-component-edge-to-text-100);
 	--spectrum-actionbutton-edge-to-visual-only: var(--spectrum-component-edge-to-visual-only-100);
 
-	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
 	--spectrum-actionbutton-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
 
 	&:dir(rtl) {

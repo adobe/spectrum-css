@@ -53,9 +53,6 @@
 }
 
 .spectrum-TreeView {
-	--spectrum-treeview-item-background-color-hover: var(--spectrum-gray-100);
-	--spectrum-treeview-item-background-color-focus: var(--spectrum-gray-100);
-
 	--spectrum-treeview-item-border-size: var(--mod-treeview-item-border-size, var(--spectrum-border-width-200));
 	--spectrum-treeview-item-border-size-selected: var(--mod-treeview-item-border-size-selected, 1px);
 	--spectrum-treeview-item-border-radius: var(--mod-treeview-item-border-radius, 0px);
