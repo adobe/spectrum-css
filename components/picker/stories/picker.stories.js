@@ -145,6 +145,9 @@ export default {
 		downState: {
 			selectors: [".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"],
 		},
+		status: {
+			type: "migrated",
+		},
 	},
 	decorators: [
 		withDownStateDimensionCapture,
