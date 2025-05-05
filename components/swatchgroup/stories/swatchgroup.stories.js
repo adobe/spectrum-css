@@ -11,11 +11,7 @@ import { RoundingTemplate, Template } from "./template.js";
  *
  * ## Usage notes
  *
- * ### Apply border to low-contrast swatches only
- *
- * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), they have a less prominent border compared to a single swatch component used by itself, and should have the `.spectrum-Swatch--lightBorder` class. This reduces the likelihood of the UI interfering with color perception and comparisons. Otherwise, swatches within a swatch group that meet contrast should have the `.spectrum-Swatch--noBorder` class.
- *
- * Implementations should apply the `.spectrum-Swatch--lightBorder` to the individual swatches of a swatch group that do not meet 3:1 contrast.
+ * The border opacity of swatches in a swatch group is 20%.
  *
  * ### Density
  *
@@ -51,18 +47,6 @@ export default {
 		containerWidth: {
 			name: "Container width",
 			table: { disable: true },
-		},
-		borderStyle: {
-			...Swatch.argTypes.borderStyle,
-			defaultValue: "noBorder",
-			description: "Apply the `spectrum-Swatch--lightBorder` class to a swatch in the swatch group when it has a color contrast ratio of less than 3:1.",
-			table: {
-				type: { summary: "string", required: true },
-				category: "Component",
-				defaultValue: { summary: "noBorder" },
-			},
-			if: { arg: "isSelected", truthy: false },
-			options: ["noBorder", "border", "lightBorder"],
 		},
 		tags: ["migrated"],
 	},
@@ -172,50 +156,6 @@ export const Sizing = (args, context) => Sizes({
 Sizing.args = Default.args;
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), the `.spectrum-Swatch--lightBorder` class should be applied to those swatches only.
- *
- * The swatch group example below contains all swatches with low contrast in light mode, therefore each has the `.spectrum-Swatch--lightBorder` class applied.
- */
-export const WithLightBorder = Template.bind({});
-WithLightBorder.args = {
-	borderStyle: "lightBorder",
-	items: [
-		{swatchColor: "rgb(237, 196, 172)"},
-		{swatchColor: "rgb(255, 188, 180)"},
-		{swatchColor: "rgb(255, 193, 94)"},
-		{swatchColor: "rgb(245, 199, 0)"},
-		{swatchColor: "rgb(229, 200, 157)"},
-		{swatchColor: "rgb(182, 219, 0)"},
-		{swatchColor: "rgb(129, 228, 58)"},
-		{swatchColor: "rgb(107, 227, 162)"},
-		{swatchColor: "rgb(92, 225, 194)"},
-		{swatchColor: "rgb(111, 221, 228)"},
-		{swatchColor: "rgb(138, 213, 255)"},
-		{swatchColor: "rgb(172, 207, 253)"},
-		{swatchColor: "rgb(192, 201, 255)"},
-		{swatchColor: "rgb(221, 193, 246)"},
-		{swatchColor: "rgb(247, 181, 255)"},
-		{swatchColor: "rgb(255, 181, 230)"},
-		{swatchColor: "rgb(255, 185, 208)"},
-	],
-};
-WithLightBorder.tags = ["!dev"];
-WithLightBorder.storyName = "With light border";
-WithLightBorder.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const WithBorder = Template.bind({});
-WithBorder.args = {
-	borderStyle: "border",
-};
-WithBorder.tags = ["!dev"];
-WithBorder.storyName = "With border";
-WithBorder.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

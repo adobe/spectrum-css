@@ -4,9 +4,6 @@
     ".spectrum-Swatch",
     ".spectrum-Swatch .spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch .spectrum-Swatch-fill",
-    ".spectrum-Swatch--border .spectrum-Swatch-fill:before",
-    ".spectrum-Swatch--lightBorder .spectrum-Swatch-fill:before",
-    ".spectrum-Swatch--noBorder .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--rectangle",
     ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill",
     ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill:before",
@@ -66,9 +63,8 @@
     "--mod-animation-duration-100",
     "--mod-corner-radius-full",
     "--mod-mixed-button-background",
+    "--mod-swatch-border",
     "--mod-swatch-border-color",
-    "--mod-swatch-border-color-light",
-    "--mod-swatch-border-color-rgb",
     "--mod-swatch-border-color-selected",
     "--mod-swatch-border-opacity",
     "--mod-swatch-border-radius",
@@ -84,12 +80,11 @@
     "--mod-swatch-inner-border-color-selected",
     "--mod-swatch-size",
     "--mod-swatch-slash-icon-color",
-    "--mod-swatch-slash-thickness",
-    "--mod-swatchgroup-border-color"
+    "--mod-swatch-slash-thickness"
   ],
   "component": [
-    "--spectrum-swatch-border-color-light",
-    "--spectrum-swatch-border-color-rgb",
+    "--spectrum-swatch-border",
+    "--spectrum-swatch-border-color",
     "--spectrum-swatch-border-color-selected",
     "--spectrum-swatch-border-opacity",
     "--spectrum-swatch-border-radius",
@@ -115,8 +110,7 @@
     "--spectrum-swatch-slash-thickness-extra-small",
     "--spectrum-swatch-slash-thickness-large",
     "--spectrum-swatch-slash-thickness-medium",
-    "--spectrum-swatch-slash-thickness-small",
-    "--spectrum-swatchgroup-border-color"
+    "--spectrum-swatch-slash-thickness-small"
   ],
   "global": [
     "--spectrum-add-button-background",
@@ -134,7 +128,6 @@
     "--spectrum-focus-indicator-thickness",
     "--spectrum-gray-100",
     "--spectrum-gray-1000",
-    "--spectrum-gray-1000-rgb",
     "--spectrum-gray-200",
     "--spectrum-gray-25",
     "--spectrum-mixed-button-background",
