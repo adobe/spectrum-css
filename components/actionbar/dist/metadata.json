@@ -8,11 +8,11 @@
     ".spectrum-ActionBar .spectrum-FieldLabel:lang(ja)",
     ".spectrum-ActionBar .spectrum-FieldLabel:lang(ko)",
     ".spectrum-ActionBar .spectrum-FieldLabel:lang(zh)",
-    ".spectrum-ActionBar--emphasized",
     ".spectrum-ActionBar--fixed",
     ".spectrum-ActionBar--flexible .spectrum-ActionBar-popover",
     ".spectrum-ActionBar--sticky",
     ".spectrum-ActionBar.is-open",
+    ".spectrum-ActionBar.spectrum-ActionBar--emphasized",
     ".spectrum-ActionBar:lang(ja)",
     ".spectrum-ActionBar:lang(ko)",
     ".spectrum-ActionBar:lang(zh)"
@@ -22,8 +22,6 @@
     "--mod-actionbar-corner-radius",
     "--mod-actionbar-height",
     "--mod-actionbar-item-counter-color",
-    "--mod-actionbar-item-counter-font-size",
-    "--mod-actionbar-item-counter-line-height",
     "--mod-actionbar-item-counter-line-height-cjk",
     "--mod-actionbar-minimum-width",
     "--mod-actionbar-popover-background-color",
@@ -33,21 +31,25 @@
     "--mod-actionbar-shadow-horizontal",
     "--mod-actionbar-shadow-vertical",
     "--mod-actionbar-spacing-action-group-edge",
-    "--mod-actionbar-spacing-label-to-actiongroup",
-    "--mod-actionbar-spacing-outer-edge"
+    "--mod-actionbar-spacing-bottom-area",
+    "--mod-actionbar-spacing-label-to-action-group",
+    "--mod-actionbar-spacing-outer-edge",
+    "--mod-actionbar-spacing-top-area"
   ],
   "component": [
     "--spectrum-action-bar-border-color",
+    "--spectrum-action-bar-bottom-to-content-area",
     "--spectrum-action-bar-close-button-to-counter",
+    "--spectrum-action-bar-counter-font-size",
     "--spectrum-action-bar-edge-to-content-area",
     "--spectrum-action-bar-height",
     "--spectrum-action-bar-label-to-action-group-area",
     "--spectrum-action-bar-minimum-width",
+    "--spectrum-action-bar-top-to-content-area",
     "--spectrum-actionbar-close-button-to-counter",
     "--spectrum-actionbar-corner-radius",
     "--spectrum-actionbar-height",
     "--spectrum-actionbar-item-counter-color",
-    "--spectrum-actionbar-item-counter-font-size",
     "--spectrum-actionbar-item-counter-line-height",
     "--spectrum-actionbar-item-counter-line-height-cjk",
     "--spectrum-actionbar-minimum-width",
@@ -57,9 +59,11 @@
     "--spectrum-actionbar-shadow-color",
     "--spectrum-actionbar-shadow-horizontal",
     "--spectrum-actionbar-shadow-vertical",
-    "--spectrum-actionbar-spacing-action-group-edge",
+    "--spectrum-actionbar-spacing-bottom-area",
     "--spectrum-actionbar-spacing-label-to-action-group",
-    "--spectrum-actionbar-spacing-outer-edge"
+    "--spectrum-actionbar-spacing-outer-edge",
+    "--spectrum-actionbar-spacing-padding-inline",
+    "--spectrum-actionbar-spacing-top-area"
   ],
   "global": [
     "--spectrum-background-elevated-color",
@@ -69,12 +73,14 @@
     "--spectrum-drop-shadow-elevated-color",
     "--spectrum-drop-shadow-elevated-x",
     "--spectrum-drop-shadow-elevated-y",
-    "--spectrum-font-size-100",
     "--spectrum-gray-25",
     "--spectrum-line-height-100",
     "--spectrum-neutral-content-color-default",
     "--spectrum-spacing-300"
   ],
-  "passthroughs": [],
+  "passthroughs": [
+    "--mod-fieldlabel-font-size",
+    "--mod-fieldlabel-line-height"
+  ],
   "high-contrast": ["--highcontrast-actionbar-popover-border-color"]
 }

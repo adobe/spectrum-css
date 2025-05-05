@@ -13,7 +13,7 @@ The emphasized has changed from an `accent` background color to a `neutral` back
 `--spectrum-actionbar-emphasized-actionbutton-label-color`
 `--spectrum-actionbar-emphasized-icon-color`
 `--spectrum-actionbar-minimum-width`
-`--spectrum-actionbar-spacing-label-to-actiongroup`
+`--spectrum-actionbar-spacing-label-to-action-group`
 `--spectrum-actionbar-spacing-action-group-edge`
 `--spectrum-actionbar-close-button-to-counter`
 

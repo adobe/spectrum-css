@@ -17,11 +17,10 @@
 	--spectrum-actionbar-minimum-width: var(--spectrum-action-bar-minimum-width);
 	--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-medium-size-extra-large);
 	--spectrum-actionbar-spacing-label-to-action-group: var(--spectrum-action-bar-label-to-action-group-area);
-	--spectrum-actionbar-spacing-action-group-edge: var(--spectrum-action-bar-edge-to-content-area);
+	--spectrum-actionbar-spacing-padding-inline: var(--spectrum-action-bar-edge-to-content-area);
+	--spectrum-actionbar-spacing-top-area: var(--spectrum-action-bar-top-to-content-area);
+	--spectrum-actionbar-spacing-bottom-area: var(--spectrum-action-bar-bottom-to-content-area);
 	--spectrum-actionbar-close-button-to-counter: var(--spectrum-action-bar-close-button-to-counter);
-
-	/* item counter field label */
-	--spectrum-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
 	--spectrum-actionbar-item-counter-line-height: var(--spectrum-line-height-100);
 	--spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
 
@@ -37,6 +36,11 @@
 	--spectrum-actionbar-shadow-vertical: var(--spectrum-drop-shadow-elevated-y);
 	--spectrum-actionbar-shadow-blur: var(--spectrum-drop-shadow-elevated-blur);
 	--spectrum-actionbar-shadow-color: var(--spectrum-drop-shadow-elevated-color);
+
+	&.spectrum-ActionBar--emphasized {
+		--spectrum-actionbar-item-counter-color: var(--spectrum-gray-25);
+		--spectrum-actionbar-popover-background-color: var(--spectrum-neutral-content-color-default);
+	}
 
 	/* cjk language support for item counter */
 	&:lang(ja),
@@ -76,7 +80,8 @@
 		box-sizing: border-box;
 		inline-size: 100%;
 		margin: auto;
-		padding-inline: var(--mod-actionbar-spacing-action-group-edge, var(--spectrum-actionbar-spacing-action-group-edge));
+		padding-inline: var(--mod-actionbar-spacing-action-group-edge, var(--spectrum-actionbar-spacing-padding-inline));
+		padding-block: var(--mod-actionbar-spacing-top-area, var(--spectrum-actionbar-spacing-top-area)) var(--mod-actionbar-spacing-bottom-area, var(--spectrum-actionbar-spacing-bottom-area));
 
 		/* Be relative so our width can be restricted */
 		position: relative;
@@ -98,9 +103,9 @@
 
 	/* item counter */
 	.spectrum-FieldLabel {
-		font-size: var(--mod-actionbar-item-counter-font-size, var(--spectrum-actionbar-item-counter-font-size));
+		--mod-fieldlabel-font-size: var(--spectrum-action-bar-counter-font-size);
+		--mod-fieldlabel-line-height: var(--spectrum-actionbar-item-counter-line-height);
 		color: var(--mod-actionbar-item-counter-color, var(--spectrum-actionbar-item-counter-color));
-		line-height: var(--mod-actionbar-item-counter-line-height, var(--spectrum-actionbar-item-counter-line-height));
 		padding-inline-start: var(--mod-actionbar-close-button-to-counter, var(--spectrum-actionbar-close-button-to-counter));
 
 		/* cjk language support */
@@ -115,13 +120,8 @@
 	.spectrum-ActionGroup {
 		/* align to end by default */
 		margin-inline-start: auto;
-		padding-inline-start: var(--mod-actionbar-spacing-label-to-actiongroup, var(--spectrum-actionbar-spacing-label-to-action-group)); /* space between label and action group */
+		padding-inline-start: var(--mod-actionbar-spacing-label-to-action-group, var(--spectrum-actionbar-spacing-label-to-action-group)); /* space between label and action group */
 	}
-}
-
-.spectrum-ActionBar--emphasized {
-	--spectrum-actionbar-item-counter-color: var(--spectrum-gray-25);
-	--spectrum-actionbar-popover-background-color: var(--spectrum-neutral-content-color-default);
 }
 
 .spectrum-ActionBar--sticky {
