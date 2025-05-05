@@ -38,6 +38,9 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
 	tags: ["migrated"],
 };

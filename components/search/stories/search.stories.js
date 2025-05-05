@@ -71,15 +71,15 @@ export default {
 				"click .spectrum-Search-icon",
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 		design: {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13670-229",
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
 	tags: ["migrated"],
 };
