@@ -11,7 +11,6 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionBar",
-	size = "m",
 	isOpen = true,
 	isEmphasized = false,
 	isSticky = false,
@@ -25,7 +24,6 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--sticky`]: isSticky,
 				[`${rootClass}--fixed`]: isFixed,
