@@ -80,14 +80,14 @@ export default {
 		},
 		packageJson,
 		metadata,
-		status: {
-			type: "migrated",
-		},
 		actions: {
 			handles: ["click .spectrum-InfieldButton:not([disabled])"],
 		},
 		downState: {
 			selectors: [".spectrum-InfieldButton:not(:disabled)"],
+		},
+		status: {
+			type: "migrated",
 		},
 	},
 	tags: ["migrated"],
@@ -116,13 +116,15 @@ Sizing.parameters = {
  * Number fields come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most
  * frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
  *
- * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a
- * secondary option to be positioned on the side of the field. Having the label on the top is the default and is recommended
- * because this works better with long copy, localization, and responsive layouts. The [inline infield buttons](/docs/components-in-field-button--docs#inline)
- * are usually visible, but can be hidden. The amount of the increment/decrement step is 1 by default.
+ * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default. Having
+ * the label on the top is the default and is recommended because this works better with long copy, localization, and responsive
+ * layouts.
+ *
+ * The [inline infield buttons](/docs/components-in-field-button--docs#inline) are usually visible, but can be hidden.
+ * The amount of the increment/decrement step is 1 by default.
  *
  * When the label is too long for the available space, it will wrap to the next line. If the value within the number field input
- * overflows, it will truncate with an ellipsis.
+ * overflows, it will truncate with an ellipsis. To view truncated text, implementations can use a tooltip available on hover (desktop) or long press (mobile). If an error state is needed for smaller inputs, implementations should consider hiding the error icon so that more of the input value is visible.
  */
 export const DefaultStates = AllDefaultVariantsGroup.bind({});
 DefaultStates.args = {};
@@ -133,7 +135,8 @@ DefaultStates.parameters = {
 DefaultStates.storyName = "Default";
 
 /**
- * Labels can be placed either on top or on the side of the field. Having the label on the side is most useful for when vertical space is limited.
+ * Number fields have a [field label](/docs/components-field-label--docs) that is positioned above the field by default, with a
+ * secondary option to be positioned on the side of the field. Having the label on the side is most useful for when vertical space is limited.
  */
 export const SideLabel = AllDefaultVariantsGroup.bind({});
 SideLabel.args = {
@@ -143,6 +146,7 @@ SideLabel.tags = ["!dev"];
 SideLabel.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+SideLabel.storyName = "Side label";
 
 /**
  * Number fields have a read-only option for when disabled content still needs to be shown. This allows for content to be copied, but not interacted with or changed.
@@ -176,7 +180,6 @@ Disabled.tags = ["!dev"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Disabled.storyName = "Disabled";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = NumberFieldGroup.bind({});
