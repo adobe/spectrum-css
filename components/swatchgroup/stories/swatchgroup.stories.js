@@ -53,7 +53,6 @@ export default {
 	args: {
 		rootClass: "spectrum-SwatchGroup",
 		density: "sizeM",
-		borderStyle: "noBorder",
 		containerWidth: "200px",
 		items: [
 			{swatchColor: "rgb(184, 109, 70)",},
