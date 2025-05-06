@@ -47,8 +47,6 @@ The helptext S2 component has some updated spacing and typography tokens. The er
 
 📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-### New feature
-
 Minified and gzipped outputs available for all compiled CSS assets.
 
 ### Patch Changes

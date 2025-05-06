@@ -101,6 +101,9 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
 	decorators: [
 		withDownStateDimensionCapture,
@@ -317,6 +320,8 @@ DisableWrapping.tags = ["!dev"];
 DisableWrapping.storyName = "Text overflow - disabled text wrap";
 DisableWrapping.args = {
 	variant: "primary",
+	label: "Be a premium member",
+	noWrap: true,
 };
 
 DisableWrapping.parameters = {

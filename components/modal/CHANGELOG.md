@@ -21,8 +21,6 @@ In Spectrum 2, elements that would typically be children of a modal (like dialog
 
 📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-### New feature
-
 Minified and gzipped outputs available for all compiled CSS assets.
 
 ### Patch Changes

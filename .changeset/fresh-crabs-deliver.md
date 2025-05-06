@@ -2,7 +2,7 @@
 "@spectrum-css/breadcrumb": major
 ---
 
-#### Spectrum 2 Migration
+#### Spectrum 2 Breadcrumbs migration
 
 The breadcrumbs component is now updated to use the S2 specs and tokens. This includes updated spacing, heights, colors, font sizes, etc.
 

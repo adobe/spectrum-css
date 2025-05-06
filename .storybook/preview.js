@@ -85,6 +85,11 @@ export const parameters = {
 				color: "#fff",
 				description: "Should not be used and will not receive updates.",
 			},
+			migrated: {
+				background: "rgb(84, 36, 219)",
+				color: "#fff",
+				description: "Migrated to Spectrum 2.",
+			},
 		},
 	},
 	// Set an empty object to avoid the "undefined" value in the ComponentDetails doc block

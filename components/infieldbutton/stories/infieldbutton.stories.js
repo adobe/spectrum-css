@@ -59,10 +59,14 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
 	decorators: [
 		withDownStateDimensionCapture,
 	],
+	tags: ["migrated"],
 };
 
 export const Default = InfieldButtonGroup.bind({});

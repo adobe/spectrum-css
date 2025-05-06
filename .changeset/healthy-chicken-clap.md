@@ -2,7 +2,7 @@
 "@spectrum-css/textfield": major
 ---
 
-Migrate to Spectrum 2
+#### Migrate to Spectrum 2
 
 - Default styles are used for medium
 - Removal of quiet variant

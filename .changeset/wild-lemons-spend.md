@@ -2,11 +2,11 @@
 "@spectrum-css/helptext": major
 ---
 
-### Helptext S2 Migration
+#### Spectrum 2 migration
 
-The helptext S2 component has some updated spacing and typography tokens. The error message validation icon has also been updated.
+The help text S2 component has some updated spacing and typography tokens. The error message validation icon has also been updated.
 
-#### New mods
+##### New mods
 
 `--mod-helptext-font-family`
 `--mod-helptext-font-style`
@@ -14,11 +14,11 @@ The helptext S2 component has some updated spacing and typography tokens. The er
 `--mod-helptext-top-edge-to-workflow-icon`
 `--mod-helptext-bottom-edge-to-workflow-icon`
 
-#### Renamed mods
+##### Renamed mods
 
 `--mod-helptext-bottom-to-workflow-icon` >> `--mod-helptext-edge-to-workflow-icon`
 
-#### Deprecated tokens
+##### Deprecated tokens
 
 `--spectrum-help-text-top-to-workflow-icon-small`
 `--spectrum-help-text-top-to-workflow-icon-medium`

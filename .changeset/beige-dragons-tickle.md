@@ -3,11 +3,11 @@
 "@spectrum-css/dropzone": major
 ---
 
-# S2 Illustrated Message Migration
+### S2 Illustrated Message Migration
 
 This migration contains new tokens for t-shirt sizes (S, M, L), vertical and horizontal orientation along with their maximum width, illustration sizes, and content spacing. Dropzone `--mod` names are renamed to match the semantic tokens in illustrated message.
 
-## Illustrated Message
+#### Illustrated Message
 
 New properties
 `--spectrum-illustrated-message-heading-to-description`
@@ -35,13 +35,13 @@ Removed properties
 `--mod-illustrated-message-illustration-accent-color`
 `--highcontrast-illustrated-message-illustration-accent-color`
 
-## Dropzone
+#### Dropzone
 
 New mods
 `--mod-drop-zone-body-to-action`
 `--mod-drop-zone-illustration-to-title`
 
-## Dropzone nested mods
+#### Dropzone nested mods
 
 Renamed mods
 `--mod-illustrated-message-title-to-heading` > `--mod-illustrated-message-illustration-to-heading`

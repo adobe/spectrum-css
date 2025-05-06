@@ -2,7 +2,7 @@
 "@spectrum-css/button": major
 ---
 
-#### Spectrum 2 migration
+#### S2 Button migration
 
 Button now uses Spectrum 2 tokens and specifications, which includes many color changes to all variants. A few other notable changes:
 

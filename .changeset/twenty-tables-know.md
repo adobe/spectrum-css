@@ -3,7 +3,7 @@
 "@spectrum-css/thumbnail": minor
 ---
 
-# S2 migration
+#### S2 thumbnail migration
 
 Adds thumbnail specific `thumbnail-opacity-checkerboard-square-size` token aliased to `--spectrum-opacity-checkerboard-size`. This impacts the display of the `opacity-checkerboard` when used within the `thumbnail` component.
 

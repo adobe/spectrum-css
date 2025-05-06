@@ -45,6 +45,7 @@ export const Template = ({
 			></div>
 			${ColorHandle({
 				isDisabled,
+				isFocused,
 				customClasses: [`${rootClass}-handle`],
 				customStyles: {
 					"--spectrum-picked-color": selectedColor,
