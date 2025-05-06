@@ -23,7 +23,7 @@ export default {
 		size: size(["xs", "s", "m", "l"]),
 		swatchColor: {
 			name: "Color",
-			description: "Supports standard color input or any valid input for the <code>background</code> property such as, <code>linear-gradient(red, blue)</code>.",
+			description: "Supports standard color input or any valid input for the <code>background</code> property such as, <code>linear-gradient(red, blue)</code> or <code>transparent</code>.",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
