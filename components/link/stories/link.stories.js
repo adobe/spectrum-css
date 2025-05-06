@@ -89,7 +89,10 @@ export default {
 		},
 		packageJson,
 		metadata,
-	}
+		status: {
+			type: "migrated",
+		},
+	},
 };
 
 export const Default = LinkGroup.bind({});

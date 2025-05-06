@@ -5,9 +5,9 @@ import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import {
-	Template,
-	CoachmarkMenuStatesTemplate,
 	CoachMarkMediaOptionsTemplate,
+	CoachmarkMenuStatesTemplate,
+	Template,
 } from "./template.js";
 
 /**
@@ -98,6 +98,9 @@ export default {
 			story: {
 				height: "525px",
 			},
+		},
+		status: {
+			type: "migrated",
 		},
 	},
 };

@@ -6,7 +6,7 @@
 "@spectrum-css/slider": minor
 ---
 
-### Including the touch action rule for draggable content
+#### Including the touch action rule for draggable content
 
 The slider, color slider, color area, color wheel, color handle all deserve to have their touch-action property managed so that trying to set the value of those interfaces doesn't cause page scrolling in touch context.
 
