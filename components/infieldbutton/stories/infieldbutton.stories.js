@@ -66,6 +66,7 @@ export default {
 	decorators: [
 		withDownStateDimensionCapture,
 	],
+	tags: ["migrated"],
 };
 
 export const Default = InfieldButtonGroup.bind({});

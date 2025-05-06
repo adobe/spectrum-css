@@ -102,6 +102,7 @@ export default {
 			type: "migrated",
 		},
 	},
+	tags: ["migrated"],
 };
 
 /**
