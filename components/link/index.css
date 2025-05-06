@@ -99,6 +99,8 @@
 	--mod-link-text-color-hover: var(--mod-link-text-color-white, var(--spectrum-white));
 	--mod-link-text-color-active: var(--mod-link-text-color-white, var(--spectrum-white));
 	--mod-link-text-color-focus: var(--mod-link-text-color-white, var(--spectrum-white));
+
+	--spectrum-link-focus-indicator-color: var(--spectrum-static-white-focus-indicator-color);
 }
 
 .spectrum-Link--staticBlack {
@@ -106,6 +108,8 @@
 	--mod-link-text-color-hover: var(--mod-link-text-color-black, var(--spectrum-black));
 	--mod-link-text-color-active: var(--mod-link-text-color-black, var(--spectrum-black));
 	--mod-link-text-color-focus: var(--mod-link-text-color-black, var(--spectrum-black));
+
+	--spectrum-link-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 }
 
 /* Windows high contrast mode */
