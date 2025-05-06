@@ -49,6 +49,7 @@ export default {
 			type: "migrated",
 		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ProgressCircleGroup.bind({});

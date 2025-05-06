@@ -80,6 +80,7 @@ export default {
 		},
 		layout: "centered"
 	},
+	tags: ["migrated"],
 };
 
 export const Default = IllustratedMessageGroup.bind({});
