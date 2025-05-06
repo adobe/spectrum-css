@@ -181,16 +181,12 @@ export const TextWrapTemplate = (args, context = {}) => Container({
 		${Template({
 			...args,
 			customStyles: {},
-			label: "Be a premium member",
-			noWrap: true,
 		}, context)}
 		${Template({
 			...args,
 			customStyles: {
 				"max-inline-size": "100%",
 			},
-			label: "Be a premium member",
-			noWrap: true,
 		}, context)}
 		${Template({
 			...args,
@@ -199,8 +195,6 @@ export const TextWrapTemplate = (args, context = {}) => Container({
 			},
 			iconName: "Star",
 			iconSet: "workflow",
-			label: "Be a premium member",
-			noWrap: true,
 		}, context)}
 	`,
 }, context);
