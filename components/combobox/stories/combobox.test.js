@@ -23,10 +23,24 @@ export const ComboBoxGroup = Variants({
 			fieldLabelPosition: "top",
 		},
 		{
+			testHeading: "With field label top + help text",
+			showFieldLabel: true,
+			isOpen: false,
+			fieldLabelPosition: "top",
+			showHelpText: true,
+		},
+		{
 			testHeading: "With field label left",
 			showFieldLabel: true,
 			isOpen: false,
 			fieldLabelPosition: "left",
+		},
+		{
+			testHeading: "With field label left + help text ",
+			showFieldLabel: true,
+			isOpen: false,
+			fieldLabelPosition: "left",
+			showHelpText: true,
 		},
 		{
 			testHeading: "Truncation",
