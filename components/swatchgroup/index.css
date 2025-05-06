@@ -14,7 +14,7 @@
 .spectrum-SwatchGroup {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
 
-	/* Border opacity (swatches in a swatch group have a 20% opacity border instead of 42% default border opacity) */
+	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- Border opacity (swatches in a swatch group have a 20% opacity border instead of 42% default border opacity) */
 	--spectrum-swatch-border-opacity: 0.2;
 }
 
