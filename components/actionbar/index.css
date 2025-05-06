@@ -21,6 +21,7 @@
 	--spectrum-actionbar-spacing-top-area: var(--spectrum-action-bar-top-to-content-area);
 	--spectrum-actionbar-spacing-bottom-area: var(--spectrum-action-bar-bottom-to-content-area);
 	--spectrum-actionbar-close-button-to-counter: var(--spectrum-action-bar-close-button-to-counter);
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- defines the field label mod  */
 	--spectrum-actionbar-item-counter-line-height: var(--spectrum-line-height-100);
 	--spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
 
