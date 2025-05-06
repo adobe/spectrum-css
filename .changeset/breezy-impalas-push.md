@@ -4,8 +4,8 @@
 
 ### S2 switch fixes
 
-This work addresses some very minor regressions noticed in the migrated S2 switch. We have reimplemented the switch animation durations tokens, and updated their usage within the style definitions correctly.
+This work addresses minor regressions in the Switch component. Animation tokens are reimplemented and their usage updated within the style definitions.
 
-PRs used as reference:
+Reference:
 
 - [S2 switch migration](https://github.com/adobe/spectrum-css/pull/2651)

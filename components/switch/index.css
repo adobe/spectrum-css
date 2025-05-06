@@ -56,8 +56,8 @@
 	--spectrum-switch-handle-size: var(--spectrum-switch-handle-size-medium);
 	--spectrum-switch-handle-selected-size: var(--spectrum-switch-handle-selected-size-medium);
 
-	--spectrum-switch-animation-duration-100: var(--spectrum-animation-duration-100);
-	--spectrum-switch-animation-duration-200: var(--spectrum-animation-duration-200);
+	--spectrum-switch-animation-duration-switch: var(--spectrum-animation-duration-100);
+	--spectrum-switch-animation-duration-label: var(--spectrum-animation-duration-200);
 
 	/* Default size - medium */
 	--spectrum-switch-min-height: var(--spectrum-component-height-100);
@@ -173,7 +173,7 @@
 	margin-block-end: var(--mod-switch-spacing-bottom-to-label, var(--spectrum-switch-spacing-bottom-to-label));
 	font-size: var(--mod-switch-font-size, var(--spectrum-switch-font-size));
 	line-height: var(--mod-switch-line-height, var(--spectrum-switch-line-height));
-	transition: color var(--spectrum-switch-animation-duration-200) ease-in-out;
+	transition: color var(--spectrum-switch-animation-duration-label) ease-in-out;
 
 	&:lang(ja),
 	&:lang(zh),
@@ -211,8 +211,8 @@
 	vertical-align: middle;
 
 	transition:
-		background var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out,
-		border var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out;
+		background var(--mod-switch-animation-duration-switch, var(--spectrum-switch-animation-duration-switch)) ease-in-out,
+		border var(--mod-switch-animation-duration-switch, var(--spectrum-switch-animation-duration-switch)) ease-in-out;
 
 	block-size: var(--mod-switch-control-height, var(--spectrum-switch-control-height));
 
@@ -265,10 +265,10 @@
 		box-sizing: border-box;
 
 		transition:
-			background var(--spectrum-switch-animation-duration-100) ease-in-out,
-			border var(--spectrum-switch-animation-duration-100) ease-in-out,
-			transform var(--spectrum-switch-animation-duration-100) ease-in-out,
-			box-shadow var(--spectrum-switch-animation-duration-100) ease-in-out;
+			background var(--spectrum-switch-animation-duration-switch) ease-in-out,
+			border var(--spectrum-switch-animation-duration-switch) ease-in-out,
+			transform var(--spectrum-switch-animation-duration-switch) ease-in-out,
+			box-shadow var(--spectrum-switch-animation-duration-switch) ease-in-out;
 
 		inline-size: var(--mod-switch-handle-size, var(--spectrum-switch-handle-size));
 		block-size: var(--mod-switch-handle-size, var(--spectrum-switch-handle-size));
@@ -340,9 +340,9 @@
 		margin: 0;
 
 		transition:
-			opacity var(--spectrum-switch-animation-duration-100) ease-out,
-			outline-offset var(--spectrum-switch-animation-duration-100) ease-out,
-			border var(--spectrum-switch-animation-duration-100) ease-in-out;
+			opacity var(--spectrum-switch-animation-duration-switch) ease-out,
+			outline-offset var(--spectrum-switch-animation-duration-switch) ease-out,
+			border var(--spectrum-switch-animation-duration-switch) ease-in-out;
 
 		.spectrum-Switch-input:focus-visible + & {
 			outline: var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)) solid var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));

@@ -61,7 +61,7 @@
     "[dir=\"rtl\"] .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before"
   ],
   "modifiers": [
-    "--mod-switch-animation-duration-100",
+    "--mod-switch-animation-duration-switch",
     "--mod-switch-background-color",
     "--mod-switch-background-color-disabled",
     "--mod-switch-background-color-selected-default",
@@ -109,8 +109,8 @@
     "--mod-switch-spacing-top-to-label"
   ],
   "component": [
-    "--spectrum-switch-animation-duration-100",
-    "--spectrum-switch-animation-duration-200",
+    "--spectrum-switch-animation-duration-label",
+    "--spectrum-switch-animation-duration-switch",
     "--spectrum-switch-background-color",
     "--spectrum-switch-background-color-disabled",
     "--spectrum-switch-background-color-selected-default",
