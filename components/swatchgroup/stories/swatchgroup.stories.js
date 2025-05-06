@@ -37,7 +37,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["sizeXS", "sizeS", "sizeM", "sizeL"],
+			options: ["sizeS", "sizeL"],
 			control: "select",
 		},
 		items: {
@@ -96,16 +96,6 @@ export const Default = SwatchgroupGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-export const ExtraSmall = Template.bind({});
-ExtraSmall.args = {
-	density: "sizeXS",
-};
-ExtraSmall.tags = ["!dev"];
-ExtraSmall.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-ExtraSmall.storyName = "Density - extra small";
-
 export const Small = Template.bind({});
 Small.args = {
 	density: "sizeS",

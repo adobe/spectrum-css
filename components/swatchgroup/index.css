@@ -12,7 +12,7 @@
  */
 
 .spectrum-SwatchGroup {
-	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
+	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-75);
 
 	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- Border opacity (swatches in a swatch group have a 20% opacity border instead of 42% default border opacity) */
 	--spectrum-swatch-border-opacity: 0.2;
@@ -26,17 +26,16 @@
 	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
 }
 
-/* Extra small */
-.spectrum-SwatchGroup--sizeXS {
+/* Small */
+.spectrum-SwatchGroup--sizeS {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-50);
 }
 
-/* Small */
-.spectrum-SwatchGroup--sizeS {
+/* Large */
+.spectrum-SwatchGroup--sizeL:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS) {
 	--spectrum-swatchgroup-spacing: var(--spectrum-swatch-group-spacing-spacious);
 }
 
-/* Large */
-.spectrum-SwatchGroup--sizeL {
+.spectrum-SwatchGroup--sizeL:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL) {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
 }
