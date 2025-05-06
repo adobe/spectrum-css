@@ -75,8 +75,12 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 		layout: "centered"
 	},
+	tags: ["migrated"],
 };
 
 export const Default = IllustratedMessageGroup.bind({});

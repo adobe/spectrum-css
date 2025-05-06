@@ -2,7 +2,7 @@
 "@spectrum-css/search": major
 ---
 
-#### Search S2 migration
+#### Spectrum 2 migration
 
 Search now uses Spectrum 2 tokens and specifications. The following items have been adjusted:
 

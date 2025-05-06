@@ -1,8 +1,8 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen, size } from "@spectrum-css/preview/types";
-import { Template as Table } from "@spectrum-css/table/stories/template.js";
 import { Template as Steplist } from "@spectrum-css/steplist/stories/template.js";
+import { Template as Table } from "@spectrum-css/table/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -163,6 +163,9 @@ export default {
 		packageJson,
 		metadata,
 		layout: "fullscreen",
+		status: {
+			type: "migrated",
+		},
 	},
 	decorators: [
 		withUnderlayWrapper,

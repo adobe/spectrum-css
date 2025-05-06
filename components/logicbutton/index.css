@@ -40,6 +40,7 @@
 	padding: var(--mod-logic-button-padding, var(--spectrum-component-edge-to-text-50));
 
 	border-width: var(--mod-logic-button-border-width, var(--spectrum-border-width-200));
+	border-style: solid;
 	border-radius: var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius));
 
 	font-size: var(--mod-logic-button-font-size, var(--spectrum-font-size-100));

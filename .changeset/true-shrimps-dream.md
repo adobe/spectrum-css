@@ -2,13 +2,13 @@
 "@spectrum-css/infieldbutton": major
 ---
 
-### In-field button S2 Migration
+#### Spectrum 2 migration
 
-In-field buttons are used to represent actions within input fields. They’re currently used inside number field. This component has updated colors, corner radius, and icons compared to the Spectrum 1 version. The “Error” and “Key-focus” variants have been removed, since this now utilizes those states from the parent component.
+In-field buttons are used to represent actions within input fields. They're currently used inside number field. This component has updated colors, corner radius, and icons compared to the Spectrum 1 version. The "Error" and "Key-focus" variants have been removed, since this now utilizes those states from the parent component.
 
 The position styles and controls have also been removed now that there's a consistent corner radius.
 
-#### Removed mods
+##### Removed mods
 
 Due to deprecation of the position variants in the infield button, some spacing and border radius mods have been removed.
 
@@ -20,7 +20,7 @@ Due to deprecation of the position variants in the infield button, some spacing 
 `--mod-infield-button-stacked-fill-padding-inline`
 `--mod-infield-button-stacked-fill-padding-inner`
 
-#### New tokens
+##### New tokens
 
 These new tokens are the inline variant & stepper (number field) use case. The padding changes here.
 

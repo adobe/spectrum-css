@@ -2,6 +2,6 @@
 "@spectrum-css/colorarea": major
 ---
 
-# S2 migration
+#### Spectrum 2 migration
 
 This change migrates the `colorarea` component to S2. It leverages updated tokens and the `rgba(...)` color function, replacing the existing `TODO` and hardcoded values.

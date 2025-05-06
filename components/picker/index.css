@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -14,6 +14,7 @@
 @import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-Picker {
+	/* Color */
 	--spectrum-picker-background-color-default: var(--spectrum-gray-100);
 	--spectrum-picker-background-color-default-open: var(--spectrum-gray-200);
 	--spectrum-picker-background-color-hover: var(--spectrum-gray-200);
@@ -21,14 +22,12 @@
 	--spectrum-picker-background-color-active: var(--spectrum-gray-200);
 	--spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
 
-	--spectrum-picker-border-color-default: var(--spectrum-gray-500);
-	--spectrum-picker-border-color-default-open: var(--spectrum-gray-800);
-	--spectrum-picker-border-color-hover: var(--spectrum-gray-600);
-	--spectrum-picker-border-color-hover-open: var(--spectrum-gray-900);
-	--spectrum-picker-border-color-active: var(--spectrum-gray-700);
-	--spectrum-picker-border-color-key-focus: var(--spectrum-gray-900);
-
-	--spectrum-picker-border-width: var(--spectrum-border-width-100);
+	--spectrum-picker-border-color-default: transparent;
+	--spectrum-picker-border-color-default-open: transparent;
+	--spectrum-picker-border-color-hover: transparent;
+	--spectrum-picker-border-color-hover-open: transparent;
+	--spectrum-picker-border-color-active: transparent;
+	--spectrum-picker-border-color-key-focus: transparent;
 
 	/* Font */
 	--spectrum-picker-font-size: var(--spectrum-font-size-100);
@@ -39,10 +38,12 @@
 
 	/* Dimensions */
 	--spectrum-picker-block-size: var(--spectrum-component-height-100);
+	--spectrum-picker-inline-size: var(--spectrum-field-default-width-medium);
 	--spectrum-picker-min-inline-size: calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)));
 
 	/* Border */
 	--spectrum-picker-border-radius: var(--spectrum-corner-radius-medium-size-medium);
+	--spectrum-picker-border-width: var(--spectrum-border-width-200);
 
 	/* Spacing */
 	--spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
@@ -93,7 +94,6 @@
 
 	--spectrum-picker-icon-color-error: var(--spectrum-negative-visual-color);
 
-	--spectrum-picker-border-color-disabled: var(--spectrum-gray-300);
 	--spectrum-picker-background-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-picker-font-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-picker-icon-color-disabled: var(--spectrum-disabled-content-color);
@@ -182,7 +182,6 @@
 	--spectrum-picker-background-color-active: transparent;
 	--spectrum-picker-background-color-key-focus: transparent;
 	--spectrum-picker-background-color-disabled: transparent;
-	--spectrum-picker-border-color-disabled: transparent;
 
 	--spectrum-picker-min-inline-size: var(--mod-picker-min-inline-size-quiet, 0);
 	--spectrum-picker-inline-size: var(--mod-picker-inline-size-quiet, auto);
@@ -448,13 +447,13 @@
 }
 
 /* Disabled and loading states:
-   Make sure this appears after any use of :hover while postcss-hover-media-feature is being used. The plugin moves
-   all hover styles within a media query that changes the order of the CSS, affecting styles with the same specificity. */
+	 Make sure this appears after any use of :hover while postcss-hover-media-feature is being used. The plugin moves
+	 all hover styles within a media query that changes the order of the CSS, affecting styles with the same specificity. */
 .spectrum-Picker:disabled,
 .spectrum-Picker.is-disabled {
 	cursor: default;
 	transform: none;
-	border-color: var(--highcontrast-picker-border-color-disabled, var(--spectrum-picker-border-color-disabled));
+	border-color: var(--highcontrast-picker-border-color-disabled, transparent);
 	color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
 
 	&:not(.spectrum-Picker--quiet) {

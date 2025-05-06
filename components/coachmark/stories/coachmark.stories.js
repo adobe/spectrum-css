@@ -5,9 +5,9 @@ import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import {
-	Template,
-	CoachmarkMenuStatesTemplate,
 	CoachMarkMediaOptionsTemplate,
+	CoachmarkMenuStatesTemplate,
+	Template,
 } from "./template.js";
 
 /**
@@ -99,7 +99,11 @@ export default {
 				height: "525px",
 			},
 		},
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 export const Default = CoachMarkGroup.bind({});
