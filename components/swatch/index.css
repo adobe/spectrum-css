@@ -201,14 +201,15 @@
 				inline-size: var(--spectrum-swatch-slash-thickness);
 				content: "";
 				position: absolute;
-				transform: rotate(-45deg);
+				transform: rotate(45deg);
 				block-size: 200%; /* just needs to be bigger than a swatch */
 				background: var(--spectrum-swatch-slash-icon-color);
 			}
 		}
 
 		&.spectrum-Swatch--rectangle .spectrum-Swatch-fill::after {
-			transform: rotate(-25deg);
+			transform: rotate(65deg);
+			block-size: 215%;
 		}
 	}
 
