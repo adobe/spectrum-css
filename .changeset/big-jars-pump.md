@@ -1,8 +1,8 @@
 ---
-`@spectrum-css/inlinealert`: major
+"@spectrum-css/inlinealert": major
 ---
 
-#### S2 migration in-line alert
+#### Spectrum 2 migration
 
 This migrates the `in-line alert` component to Spectrum 2. Custom properties have been updated and added per the design specification.
 
