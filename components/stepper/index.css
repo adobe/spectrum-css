@@ -223,8 +223,6 @@
 	/* this mod overrides the inline-size of the nested textfield */
 	--mod-textfield-width: 100%;
 	--mod-textfield-height: calc(var(--mod-numberfield-block-size, var(--spectrum-numberfield-block-size)) - var(--mod-numberfield-border-width, var(--spectrum-numberfield-border-width)) * 2);
-	--mod-textfield-icon-spacing-inline-start-invalid: var(--mod-numberfield-spacing-min-inline-end-value-to-icon, var(--spectrum-numberfield-spacing-min-inline-end-value-to-icon));
-	--mod-textfield-icon-spacing-inline-end-invalid: var(--spectrum-numberfield-spacing-validation-icon-to-stepper);
 	--mod-textfield-background-color: var(--mod-numberfield-background-color, var(--spectrum-numberfield-background-color, transparent));
 	--mod-textfield-text-color-default: var(--mod-numberfield-text-color, var(--spectrum-numberfield-text-color));
 	--mod-textfield-text-color-disabled: var(--mod-numberfield-text-color-disabled, var(--spectrum-numberfield-text-color-disabled));
@@ -350,6 +348,10 @@
 		(which was being inherited from .spectrum-Textfield) */
 		outline: none;
 		border-radius: 0;
+	}
+
+	& .spectrum-Textfield.is-invalid .spectrum-NumberField-input {
+		padding-inline-end: calc(var(--spectrum-numberfield-spacing-min-inline-end-value-to-icon) + var(--spectrum-numberfield-alert-icon-size) + var(--spectrum-numberfield-spacing-validation-icon-to-stepper));
 	}
 }
 
