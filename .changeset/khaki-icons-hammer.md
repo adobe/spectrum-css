@@ -10,6 +10,9 @@ Tag now uses Spectrum 2 tokens and specifications:
 - Tag now has a max-inline-size.
 - Read-only tags are now supported.
 - Passthroughs for clear button have been updated to match the current spec.
+- Default t-shirt size for tag is small.
+- Clear button has accessibly sized target.
+- Emphasized tags have accent coloring only when they are selected.
 
 Changed mods:
 
