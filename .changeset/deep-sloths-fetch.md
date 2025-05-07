@@ -21,4 +21,4 @@ The emphasized has changed from an `accent` background color to a `neutral` back
 
 `--mod-actionbar-minimum-width`
 `--mod-actionbar-spacing-action-group-edge`
-`--mod-actionbar-spacing-label-to-actiongroup`
+`--mod-actionbar-spacing-label-to-action-group`
