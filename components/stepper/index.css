@@ -68,7 +68,7 @@
 	--spectrum-numberfield-alert-icon-size: var(--spectrum-workflow-icon-size-100);
 
 	/* Spacing */
-	--spectrum-numberfield-spacing-inline-edge-to-text: var(--spectrum-component-edge-to-text-100);
+	--spectrum-numberfield-spacing-inline-edge-to-text: calc(var(--spectrum-component-edge-to-text-100) - var(--spectrum-numberfield-border-width));
 	--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-100);
 
@@ -95,7 +95,7 @@
 		--spectrum-numberfield-block-size: var(--mod-numberfield-block-size, var(--spectrum-component-height-75));
 		--spectrum-numberfield-inline-size: var(--mod-numberfield-inline-size, var(--spectrum-field-default-width-small));
 		--spectrum-numberfield-min-inline-size: var(--mod-numberfield-min-inline-size, var(--spectrum-number-field-with-stepper-minimum-width-small));
-		--spectrum-numberfield-spacing-inline-edge-to-text: var(--spectrum-component-edge-to-text-75);
+		--spectrum-numberfield-spacing-inline-edge-to-text: calc(var(--spectrum-component-edge-to-text-75) - var(--spectrum-numberfield-border-width));
 		--spectrum-numberfield-font-size: var(--mod-numberfield-font-size, var(--spectrum-font-size-75));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-75);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-75);
@@ -121,7 +121,7 @@
 		--spectrum-numberfield-block-size: var(--mod-numberfield-block-size, var(--spectrum-component-height-200));
 		--spectrum-numberfield-inline-size: var(--mod-numberfield-inline-size, var(--spectrum-field-default-width-large));
 		--spectrum-numberfield-min-inline-size: var(--mod-numberfield-min-inline-size, var(--spectrum-number-field-with-stepper-minimum-width-large));
-		--spectrum-numberfield-spacing-inline-edge-to-text: var(--spectrum-component-edge-to-text-200);
+		--spectrum-numberfield-spacing-inline-edge-to-text: calc(var(--spectrum-component-edge-to-text-200) - var(--spectrum-numberfield-border-width));
 		--spectrum-numberfield-font-size: var(--mod-numberfield-font-size, var(--spectrum-font-size-200));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-200);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-200);
@@ -145,7 +145,7 @@
 		--spectrum-numberfield-block-size: var(--mod-numberfield-block-size, var(--spectrum-component-height-300));
 		--spectrum-numberfield-inline-size: var(--mod-numberfield-inline-size, var(--spectrum-field-default-width-extra-large));
 		--spectrum-numberfield-min-inline-size: var(--mod-numberfield-min-inline-size, var(--spectrum-number-field-with-stepper-minimum-width-extra-large));
-		--spectrum-numberfield-spacing-inline-edge-to-text: var(--spectrum-component-edge-to-text-300);
+		--spectrum-numberfield-spacing-inline-edge-to-text: calc(var(--spectrum-component-edge-to-text-300) - var(--spectrum-numberfield-border-width));
 		--spectrum-numberfield-font-size: var(--mod-numberfield-font-size, var(--spectrum-font-size-300));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-300);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-300);
