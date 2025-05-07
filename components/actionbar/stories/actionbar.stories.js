@@ -75,6 +75,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		tags: ["migrated"],
 	},
 };
 
