@@ -634,7 +634,7 @@ TextOverflow.parameters = {
 };
 TextOverflow.args = {
 	customStyles: {
-		"max-inline-size": "150px",
+		"max-inline-size": "175px",
 	}
 };
 

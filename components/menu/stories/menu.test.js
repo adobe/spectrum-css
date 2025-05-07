@@ -277,7 +277,7 @@ export const MenuItemGroup = Variants({
 			shouldTruncate: true,
 			value: undefined,
 			customStyles: {
-				"inline-size": "150px",
+				"inline-size": "175px",
 			},
 			thumbnailUrl: "thumbnail.png"
 		},
@@ -296,7 +296,7 @@ export const MenuItemGroup = Variants({
 			label: "Longer label will always wrap",
 			value: undefined,
 			customStyles: {
-				"inline-size": "150px",
+				"inline-size": "175px",
 			},
 			thumbnailUrl: "thumbnail.png"
 		}

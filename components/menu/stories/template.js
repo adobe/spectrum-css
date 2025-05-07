@@ -33,11 +33,11 @@ const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
 };
 
 const Label = ({
-	hasActions,
-	isCollapsible,
+	hasActions = false,
+	isCollapsible = false,
 	label,
 	rootClass,
-	shouldTruncate,
+	shouldTruncate = false,
 }) => {
 	if (isCollapsible) {
 		return html`<span
@@ -329,7 +329,14 @@ export const MenuGroup = (
 					aria-hidden="true"
 				>
 					${heading}
-					<span class="spectrum-Menu-sectionDescription" aria-hidden="true">${sectionDescription}</span>
+					<span
+						class=${classMap({
+						["spectrum-Menu-sectionDescription"]: true,
+						["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+					})}
+						aria-hidden="true">
+							${sectionDescription}
+					</span>
 				</span>
 			`,
 			() => html`
@@ -372,7 +379,14 @@ export const MenuGroup = (
 								aria-hidden="true"
 							>
 								${heading}
-								<span class="spectrum-Menu-sectionDescription" aria-hidden="true">${sectionDescription}</span>
+								<span
+									class=${classMap({
+									["spectrum-Menu-sectionDescription"]: true,
+									["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+								})}
+									aria-hidden="true">
+										${sectionDescription}
+								</span>
 							</span>
 						`,
 					)}
@@ -389,7 +403,7 @@ export const MenuGroup = (
 				isDisabled,
 				isSelectable,
 				selectionMode,
-				shouldTruncate: true,
+				shouldTruncate,
 				size,
 			},
 			context,
@@ -414,7 +428,7 @@ export const Template = (
 		role = "menu",
 		selectionMode = "none",
 		singleItemValue,
-		shouldTruncate,
+		shouldTruncate = false,
 		size = "m",
 		subrole = "menuitem",
 	} = {},
@@ -435,7 +449,10 @@ export const Template = (
 			role=${ifDefined(role)}
 			aria-labelledby=${ifDefined(labelledby)}
 			aria-disabled=${isDisabled ? "true" : "false"}
-			style=${styleMap(customStyles)}
+			style=${styleMap({
+				...customStyles,
+				...(shouldTruncate ? { "max-inline-size": "100%" } : {})
+			})}
 		>
 			${items.map((i, idx) => {
 				if (i.type === "divider")
@@ -671,7 +688,10 @@ export const OverflowGroup = (args, context) => {
 						shouldTruncate: group.shouldTruncate || false,
 						items: group.items,
 					}, context)}
-				`
+				`,
+				wrapperStyles: {
+					"max-inline-size": "200px",
+				},
 			}, context)}
 		`)
 	}, context);
