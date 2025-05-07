@@ -19,7 +19,9 @@
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-medium);
 	--spectrum-accordion-edge-to-disclosure-indicator-space: var(--spectrum-field-edge-to-disclosure-icon-100);
 	--spectrum-accordion-content-padding-inline: var(--spectrum-accordion-content-area-edge-to-content-medium);
+	--spectrum-accordion-edge-to-content-area: var(--spectrum-accordion-content-padding-inline);
 	--spectrum-accordion-edge-to-text-space: var(--spectrum-accordion-edge-to-text);
+	--spectrum-accordion-item-header-padding-inline-end: var(--spectrum-accordion-content-padding-inline);
 	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-medium);
 	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-medium);
 	--spectrum-accordion-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
@@ -189,6 +191,11 @@
 	--spectrum-accordion-item-header-color-key-focus: var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color));
 }
 
+.spectrum-Accordion.spectrum-Accordion--noInlinePadding {
+	--spectrum-accordion-edge-to-disclosure-indicator-space: 0px;
+	--spectrum-accordion-item-header-padding-inline-end: 0px;
+}
+
 .spectrum-Accordion {
 	display: block;
 	list-style: none;
@@ -237,7 +244,7 @@
 
 .spectrum-Accordion-itemTitle {
 	padding-block: var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space));
-	padding-inline-end: var(--mod-accordion-edge-to-text-space, var(--spectrum-accordion-edge-to-text-space));
+	padding-inline-end: calc(var(--spectrum-accordion-edge-) var(--mod-accordion-edge-to-text-space, var(--spectrum-accordion-edge-to-text-space)) +);
 }
 
 /* Focusable button that expands/collapses the accordion item. */
@@ -249,7 +256,7 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 
-	padding-inline: 0;
+	padding-inline: 0 var(--spectrum-accordion-item-header-padding-inline-end);
 	line-height: var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height));
 
 	text-overflow: ellipsis;
