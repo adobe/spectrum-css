@@ -149,12 +149,12 @@
 }
 
 .spectrum-Accordion--spacious {
-	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
+	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-300);
 	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-medium);
 	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-medium);
 
 	&.spectrum-Accordion--sizeS {
-		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-300);
+		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
 		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-small-top-to-text-spacious);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-small);
 	}
