@@ -2,8 +2,6 @@
 "@spectrum-css/ui-icons": major
 ---
 
-# Breaking change
-
 Iconography in v1 inclued 2 sizes, `medium` and `large`, as well as a single SVG asset that included both versions to be toggled with classes via CSS (found in folder`combined`). Icons in v2 no longer have multiple sizes and all assets are sourced from a single folder`svg` which can be found in the `dist` directory of this workspace. **Raw SVG assets can no longer be sourced from the top-level of the workspace and must be loaded from `@spectrum-css/ui-icons/dist/svg/*.svg` instead.** Please find below an outline of the new, deprecated, and unchanged icons.
 
 | Icon name         | Migration notes |

@@ -52,6 +52,15 @@ export default {
 			control: "boolean",
 			if: { arg: "labelPosition", eq: "side" },
 		},
+		showWorkflowIcon: {
+			name: "Show workflow icon",
+			description: "Display optional workflow icon before the value or placeholder",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Advanced",
+			},
+		},
 		placeholder: {
 			name: "Value or placeholder",
 			description: "The text within the Picker that represents its current value or placeholder.",
@@ -62,6 +71,7 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		currentValue: { table: { disable: true } },
 		contentIconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			name: "Icon",
@@ -144,6 +154,9 @@ export default {
 		metadata,
 		downState: {
 			selectors: [".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"],
+		},
+		status: {
+			type: "migrated",
 		},
 	},
 	decorators: [

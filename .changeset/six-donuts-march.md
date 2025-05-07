@@ -2,11 +2,11 @@
 "@spectrum-css/checkbox": major
 ---
 
-#### Checkbox S2 Migration
+#### Spectrum 2 migration
 
 Checkbox's control and color tokens have been updated by the latest S2 tokens:
 
-**Updates**
+##### Updates
 
 - Checkbox has a background color token: `--spectrum-checkbox-background-color`
 - New typography additions: line-height, font-weight, and font style

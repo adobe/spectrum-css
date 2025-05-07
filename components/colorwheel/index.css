@@ -20,7 +20,7 @@
 	--spectrum-colorwheel-border-color-rgb: var(--spectrum-gray-1000-rgb);
 
 	--spectrum-colorwheel-border-opacity: var(--spectrum-color-wheel-border-opacity);
-	--spectrum-colorwheel-border-color: rgba(var(--spectrum-colorwheel-border-color-rgb), var(--spectrum-colorwheel-border-opacity));
+	--spectrum-colorwheel-border-color: rgb(var(--spectrum-colorwheel-border-color-rgb), var(--spectrum-colorwheel-border-opacity));
 
 	--spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
 	--spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
@@ -37,6 +37,7 @@
 	min-inline-size: var(--mod-colorwheel-min-inline-size, var(--spectrum-colorwheel-min-inline-size));
 	inline-size: var(--mod-colorwheel-inline-size, var(--spectrum-colorwheel-inline-size));
 	block-size: var(--mod-colorwheel-block-size, var(--spectrum-colorwheel-block-size));
+	touch-action: none; /* Disable touch scrolling on touch devices to allow for color picking */
 	user-select: none;
 	cursor: default;
 

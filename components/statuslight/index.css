@@ -23,7 +23,7 @@
 	--spectrum-statuslight-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
 	/* Font */
-	--spectrum-statuslight-font-family: var(--spectrum-default-font-family);
+	--spectrum-statuslight-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-statuslight-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-statuslight-font-style: var(--spectrum-default-font-style);
 	--spectrum-statuslight-font-size: var(--spectrum-font-size-100);

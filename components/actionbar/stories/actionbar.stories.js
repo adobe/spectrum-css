@@ -72,6 +72,9 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
 };
 
@@ -92,7 +95,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 /**
- * The emphasized action bar has a blue background that adds visual emphasis on the actions and selection. Use this for when the bar should call attention (e.g., floating in a table).
+ * The emphasized action bar has a neutral background that adds visual emphasis on the actions and selection. Use this for when the bar should call attention (e.g., floating in a table).
  */
 export const Emphasized = BehavioralTemplate.bind({});
 Emphasized.tags = ["!dev"];

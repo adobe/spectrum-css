@@ -2,25 +2,25 @@
 "@spectrum-css/divider": major
 ---
 
-# S2 divider migration
+#### Spectrum 2 migration
 
 This migrates the `divider` component to S2. Custom properties have been remapped and updated per the design spec.
 
-### New properties
+##### New properties
 
 ```css
 --spectrum-divider-horizontal-minimum-width
 --spectrum-divider-vertical-minimum-height
 ```
 
-### New mods
+##### New mods
 
 ```css
 --mod-divider-inline-minimum-size
 --mod-divider-block-minimum-size
 ```
 
-### Removed mods
+##### Removed mods
 
 ```css
 --mod-divider-background-color-large-static-black
@@ -31,7 +31,7 @@ This migrates the `divider` component to S2. Custom properties have been remappe
 --mod-divider-background-color-small-static-white
 ```
 
-### Additions
+##### Additions
 
 This adds new minimum width and height tokens for the divider and the `minDimensionValues` arg has been removed in favor of these tokens and the rules with which they're applied.
 

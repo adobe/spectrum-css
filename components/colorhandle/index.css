@@ -25,12 +25,12 @@
 .spectrum-ColorHandle {
 	/* outer border as box shadow on the colorhandle */
 	/* TODO replace --spectrum-black-rgb with color-handle-outer-border-color when supported by RGBA */
-	--spectrum-colorhandle-outer-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-outer-border-opacity));
+	--spectrum-colorhandle-outer-border-color: rgb(var(--spectrum-black-rgb), var(--spectrum-color-handle-outer-border-opacity));
 	--spectrum-colorhandle-outer-border-width: var(--spectrum-color-handle-outer-border-width);
 
 	/* inner border as inset boxshadow on the colorhandle-inner */
 	/* TODO replace --spectrum-black-rgb with color-handle-inner-border-color when supported by RGBA */
-	--spectrum-colorhandle-inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity));
+	--spectrum-colorhandle-inner-border-color: rgb(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity));
 
 	/* @passthrough -- opacity checkerboard customization */
 	--mod-opacity-checkerboard-position: 50%;
@@ -54,6 +54,9 @@
 	border-radius: 100%;
 
 	transition: all var(--mod-colorhandle-animation-duration, var(--spectrum-animation-duration-100)) var(--mod-colorhandle-animation-easing, ease-in-out);
+
+	touch-action: none; /* Disable touch scrolling on touch devices to allow for color picking */
+	user-select: none; /* Prevent text selection when dragging the handle */
 
 	&::after {
 		content: "";

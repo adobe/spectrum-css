@@ -103,11 +103,15 @@ export default {
 			story: {
 				height: "auto",
 			},
-		}
+		},
+		status: {
+			type: "migrated",
+		},
 	},
 	decorators: [
 		withDownStateDimensionCapture,
 	],
+	tags: ["migrated"],
 };
 
 export const Default = ActionButtonGroup.bind({});
