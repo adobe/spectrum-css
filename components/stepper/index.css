@@ -71,7 +71,9 @@
 	--spectrum-numberfield-spacing-inline-edge-to-text: var(--spectrum-component-edge-to-text-100);
 	--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-100);
-	--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-text-to-visual-100);
+
+	/* the input to the stepper buttons spacing accommodates the built-in padding on the infield buttons */
+	--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: calc(var(--spectrum-text-to-visual-100) - var(--spectrum-numberfield-button-inline-padding));
 	--spectrum-numberfield-spacing-min-inline-end-value-to-icon: var(--spectrum-text-to-visual-100);
 	--spectrum-numberfield-spacing-field-to-helptext: var(--spectrum-help-text-to-component);
 	--spectrum-numberfield-spacing-label-to-field: var(--spectrum-field-label-to-component);
@@ -79,6 +81,7 @@
 	--spectrum-numberfield-spacing-side-label-to-field: var(--spectrum-spacing-200);
 
 	/* Button size and offset (to properly position the validation icons/padding) */
+	--spectrum-numberfield-button-inline-padding: var(--spectrum-infield-button-inline-edge-to-fill, var(--spectrum-in-field-button-side-edge-to-fill-medium));
 	--spectrum-numberfield-button-container-size: calc(calc(var(--spectrum-infield-button-width, var(--spectrum-component-height-100)) - var(--spectrum-infield-button-edge-to-fill, var(--spectrum-in-field-button-edge-to-fill-medium))) * 2);
 	--spectrum-numberfield-button-inline-offset: var(--mod-numberfield-button-inline-offset, var(--spectrum-in-field-stepper-to-end-medium));
 
@@ -96,10 +99,13 @@
 		--spectrum-numberfield-font-size: var(--mod-numberfield-font-size, var(--spectrum-font-size-75));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-75);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-75);
-		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-text-to-visual-75);
+		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: calc(var(--spectrum-text-to-visual-75) - var(--spectrum-numberfield-button-inline-padding));
 		--spectrum-numberfield-spacing-min-inline-end-value-to-icon: var(--spectrum-text-to-visual-75);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper: var(--spectrum-number-field-visual-to-in-field-stepper-small);
 
+		--spectrum-numberfield-button-inline-padding: var(--spectrum-infield-button-inline-edge-to-fill, var(--spectrum-in-field-button-side-edge-to-fill-small));
+
+		/* this 👇 container size does not include the infield buttons' inline-padding */
 		--spectrum-numberfield-button-container-size: calc(var(--spectrum-infield-button-width, var(--spectrum-component-height-75)) * 2);
 		--spectrum-numberfield-button-inline-offset: var(--mod-numberfield-button-inline-offset, var(--spectrum-in-field-stepper-to-end-small));
 
@@ -119,10 +125,11 @@
 		--spectrum-numberfield-font-size: var(--mod-numberfield-font-size, var(--spectrum-font-size-200));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-200);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-200);
-		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-text-to-visual-200);
+		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: calc(var(--spectrum-text-to-visual-200) - var(--spectrum-numberfield-button-inline-padding));
 		--spectrum-numberfield-spacing-min-inline-end-value-to-icon: var(--spectrum-text-to-visual-200);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper: var(--spectrum-number-field-visual-to-in-field-stepper-large);
 
+		--spectrum-numberfield-button-inline-padding: var(--spectrum-infield-button-inline-edge-to-fill, var(--spectrum-in-field-button-side-edge-to-fill-large));
 		--spectrum-numberfield-button-container-size: calc(calc(var(--spectrum-infield-button-width, var(--spectrum-component-height-200)) - var(--spectrum-infield-button-edge-to-fill, var(--spectrum-in-field-button-edge-to-fill-large))) * 2);
 		--spectrum-numberfield-button-inline-offset: var(--mod-numberfield-button-inline-offset, var(--spectrum-in-field-stepper-to-end-large));
 
@@ -142,10 +149,11 @@
 		--spectrum-numberfield-font-size: var(--mod-numberfield-font-size, var(--spectrum-font-size-300));
 		--spectrum-numberfield-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-300);
 		--spectrum-numberfield-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-300);
-		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: var(--spectrum-text-to-visual-300);
+		--spectrum-numberfield-spacing-min-inline-end-text-to-stepper: calc(var(--spectrum-text-to-visual-300) - var(--spectrum-numberfield-button-inline-padding));
 		--spectrum-numberfield-spacing-min-inline-end-value-to-icon: var(--spectrum-text-to-visual-300);
 		--spectrum-numberfield-spacing-validation-icon-to-stepper: var(--spectrum-number-field-visual-to-in-field-stepper-extra-large);
 
+		--spectrum-numberfield-button-inline-padding: var(--spectrum-infield-button-inline-edge-to-fill, var(--spectrum-in-field-button-side-edge-to-fill-extra-large));
 		--spectrum-numberfield-button-container-size: calc(calc(var(--spectrum-infield-button-width, var(--spectrum-component-height-300)) - var(--spectrum-infield-button-edge-to-fill, var(--spectrum-in-field-button-edge-to-fill-extra-large))) * 2);
 		--spectrum-numberfield-button-inline-offset: var(--mod-numberfield-button-inline-offset, var(--spectrum-in-field-stepper-to-end-extra-large));
 
