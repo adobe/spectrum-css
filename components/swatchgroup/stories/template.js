@@ -12,7 +12,7 @@ export const Template = ({
 	customClasses = [],
 	size = "m",
 	density = "regular",
-	rounding = "partial",
+	rounding = "none",
 	borderStyle = "noBorder",
 	containerWidth,
 	items = [],

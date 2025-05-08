@@ -14,9 +14,8 @@
   "global": [
     "--spectrum-spacing-100",
     "--spectrum-spacing-50",
-    "--spectrum-spacing-75",
-    "--spectrum-swatch-border-opacity"
+    "--spectrum-spacing-75"
   ],
-  "passthroughs": [],
+  "passthroughs": ["--mod-swatch-border-opacity"],
   "high-contrast": []
 }

@@ -27,7 +27,6 @@ The border should not be set when the swatch is selected as the border conflicts
 `--spectrum-swatch-disabled-icon-border-opacity`
 `--spectrum-swatch-icon-color`
 `--spectrum-swatch-rectangle-width-multiplier`
-`--spectrum-swatchgroup-border-color`
 
 ##### New mods
 
