@@ -134,7 +134,7 @@ Warning.args = {
 	isOpen: true,
 	variant: "warning",
 	heading: "Unverified format",
-	icon: true,
+	icon: "Warning",
 	buttons: [{
 		variant: "secondary",
 		treatment: "outline",
@@ -159,7 +159,7 @@ Error.args = {
 	isOpen: true,
 	variant: "error",
 	heading: "Unable to share",
-	icon: true,
+	icon: "Alert",
 	buttons: [{
 		variant: "secondary",
 		treatment: "outline",

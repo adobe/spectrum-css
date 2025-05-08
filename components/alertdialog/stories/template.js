@@ -1,5 +1,4 @@
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
@@ -38,18 +37,14 @@ export const Dialog = ({
 		>
 			<div class="${rootClass}-grid">
 				<div class="spectrum-AlertDialog-header">
-					<h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
 					${when(icon, () => Icon({
 						size: "m",
-						iconName: "Alert",
+						iconName: "AlertTriangle",
 						setName: "workflow",
 						customClasses: [`${rootClass}-icon`],
 					}, context))}
+					<h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
 				</div>
-				${Divider({
-					horizontal: true,
-					customClasses: [`${rootClass}-divider`],
-					}, context)}
 				<section class="${rootClass}-content">${content}</section>
 				${ButtonGroup({ items: buttons }, context)}
 			</div>
