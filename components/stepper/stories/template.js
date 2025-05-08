@@ -1,3 +1,5 @@
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
@@ -10,96 +12,133 @@ import { when } from "lit/directives/when.js";
 import "../index.css";
 
 export const Template = ({
-	rootClass = "spectrum-Stepper",
+	rootClass = "spectrum-NumberField",
 	size = "m",
-	isQuiet = false,
+	displayLabel = true,
+	label,
+	labelPosition = "top",
 	isFocused = false,
 	isHovered = false,
 	isKeyboardFocused = false,
+	isReadOnly = false,
 	isInvalid = false,
 	isDisabled = false,
 	hideStepper = false,
-	id = getRandomId("stepper"),
+	helpText,
+	value = "0",
+	step = "1",
+	id = getRandomId("numberfield"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
-	let iconSize = "75";
-	switch (size) {
-		case "s":
-			iconSize = "50";
-			break;
-		case "l":
-			iconSize = "100";
-			break;
-		case "xl":
-			iconSize = "200";
-			break;
-		default:
-			iconSize = "75";
-	}
+	const { updateArgs } = context;
+
+	/* these functions work on the story page, not the docs page. */
+	const incrementValue = () => {
+		const newValue = String(parseFloat(value) + parseFloat(step));
+		updateArgs?.({ value: newValue });
+		return newValue;
+	};
+
+	const decrementValue = () => {
+		const newValue = String(parseFloat(value) - parseFloat(step));
+		updateArgs?.({ value: newValue });
+		return newValue;
+	};
 
 	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
+				[`${rootClass}--sideLabel`]: labelPosition === "side",
+				[`${rootClass}--hiddenStepper`]: hideStepper,
 				"is-focused": isFocused,
 				"is-hover": isHovered,
 				"is-keyboardFocused": isKeyboardFocused,
+				"is-readOnly": isReadOnly && !isDisabled,
 				"is-invalid": isInvalid,
 				"is-disabled": isDisabled,
-				"hide-stepper": hideStepper,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			@keyup=${function(e) {
+				// Tab key was used.
+				if (e.keyCode === 9) {
+					// The element that was focused when the key was released is this textfield / input.
+					if (e.target == this || e.target?.parentNode == this) {
+						updateArgs?.({ isKeyboardFocused: true });
+						// Manually add class since updateArgs doesn't always work on the Docs page.
+						this.classList.add("is-keyboardFocused");
+					}
+				}
+			}}
+			@focusout=${function() {
+				updateArgs?.({
+					isFocused: false,
+					isKeyboardFocused: false,
+				});
+				// Manually remove class since updateArgs doesn't always work on the Docs page.
+				this.classList.remove("is-keyboardFocused");
+			}}
 			id=${ifDefined(id)}
 			style=${styleMap({
-				"--mod-actionbutton-icon-size": "10px",
 				...customStyles
 			})}
 		>
-			${Textfield({
-				size,
-				type: "number",
-				min: "-2",
-				max: "2",
-				step: "0.5",
-				value: "0",
-				isDisabled,
-				isQuiet,
-				id: id ? `${id}-input` : undefined,
-				customClasses: [`${rootClass}-textfield`],
-				customInputClasses: [`${rootClass}-input`],
-			}, context)}
-			${when(!hideStepper, () => html`
-				<span class="${rootClass}-buttons">
-					${InfieldButton({
+			${when(displayLabel && label, () => html`
+				${FieldLabel({
+					size,
+					label: label,
+					labelPosition: labelPosition,
+					isDisabled,
+					customClasses: [`${rootClass}-fieldLabel`],
+				}, context)}
+			`)}
+			<div class="${rootClass}-inputs">
+				${Textfield({
+					size,
+					type: "number",
+					min: "-10",
+					max: "10",
+					step,
+					value,
+					isInvalid,
+					isFocused,
+					isDisabled,
+					isReadOnly,
+					id: id ? `${id}-input` : undefined,
+					customClasses: [`${rootClass}-textfield`],
+					customInputClasses: [`${rootClass}-input`],
+				}, context)}
+				${when(!hideStepper, () => html`
+					<span class="${rootClass}-buttons">
+						${InfieldButton({
+							isInline: true,
+							size,
+							onAdd: incrementValue,
+							onSubtract: decrementValue,
+							customClasses: [`${rootClass}-button`],
+							isDisabled: isDisabled || isReadOnly,
+						}, context)}
+					</span>
+				`)}
+			</div>
+			${when(helpText, () => html`
+				<div class="${rootClass}-helpText">
+					${HelpText({
 						size,
-						customClasses: [`${rootClass}-button`],
-						iconName: `ChevronUp${iconSize}`,
-						iconSet: "ui",
-						isDisabled,
-						isQuiet,
-						position: "top",
-						tabIndex: "-1"
+						text: helpText,
+						variant: isInvalid ? "negative" : undefined,
+						hideIcon: true,
+						isDisabled: isDisabled || isReadOnly,
 					}, context)}
-					${InfieldButton({
-						size,
-						customClasses: [`${rootClass}-button`],
-						iconName: `ChevronDown${iconSize}`,
-						iconSet: "ui",
-						isDisabled,
-						isQuiet,
-						position: "bottom",
-						tabIndex: "-1"
-					}, context)}
-				</span>
+				</div>
 			`)}
 		</div>
 	`;
 };
 
-/* Shows all of the stepper states in one grouping. */
+/* Shows all of the number field states in one grouping. */
 export const AllDefaultVariantsGroup = (args, context) => Container({
 	withBorder: false,
 	content: html`
@@ -110,14 +149,6 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			},
 			heading: "Default",
 			content: Template(args, context)
-		}, context)}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Invalid",
-			content: Template({...args, isInvalid: true}, context)
 		}, context)}
 		${Container({
 			withBorder: false,
@@ -140,8 +171,8 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Invalid, focused",
-			content: Template({...args, isInvalid: true, isFocused: true}, context)
+			heading: "Focused, hovered",
+			content: Template({...args, isHovered: true, isFocused: true}, context)
 		}, context)}
 		${Container({
 			withBorder: false,
@@ -151,18 +182,10 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			heading: "Keyboard-focused",
 			content: Template({...args, isKeyboardFocused: true}, context)
 		}, context)}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Invalid, keyboard-focused",
-			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
-		}, context)}
 	`
 }, context);
 
-/* Shows the disabled variants of the default and quiet stories one grouping. */
+/* Shows the disabled states of the default and hidden stepper stories one grouping. */
 export const DisabledVariantsGroup = (args, context) => Container({
 	withBorder: false,
 	content: html`
@@ -179,8 +202,8 @@ export const DisabledVariantsGroup = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Quiet",
-			content: Template({...args, isQuiet: true}, context)
+			heading: "Hidden stepper buttons",
+			content: Template({...args, hideStepper: true}, context)
 		}, context)}
 	`
 }, context);
