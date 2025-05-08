@@ -108,6 +108,8 @@ export const SwatchGroup = Variants({
 	stateData: [
 		{
 			testHeading: "Empty",
+			swatchColor: undefined,
+			imageUrl: undefined,
 			ignore: ["Mixed value", "Add", "Empty"]
 		},
 		{

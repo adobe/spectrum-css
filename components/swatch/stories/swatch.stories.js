@@ -169,7 +169,7 @@ Disabled.parameters = {
 };
 
 /**
- * Partial (default) corner rounding and full rounding are usually used when a swatch is presented by itself near other components.
+ * Default rounding and full rounding are usually used when a swatch is presented by itself near other components. A rounding of "none" is used in a swatch group to help minimize the Hermann grid illusion that happens at the intersections of white space in the group.
  */
 export const Rounding = RoundingGroup.bind({});
 Rounding.tags = ["!dev"];
