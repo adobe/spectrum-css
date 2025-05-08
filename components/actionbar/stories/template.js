@@ -11,7 +11,6 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionBar",
-	size = "m",
 	isOpen = true,
 	isEmphasized = false,
 	isSticky = false,
@@ -25,7 +24,6 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--sticky`]: isSticky,
 				[`${rootClass}--fixed`]: isFixed,
@@ -42,13 +40,21 @@ export const Template = ({
 				content: [
 					CloseButton({
 						label: "Clear selection",
-						staticColor: isEmphasized ? "white" : undefined,
+						staticColor: isEmphasized
+							? context.globals?.color === "dark"
+								? "black"
+								: "white"
+							: undefined,
 					}, context),
-					FieldLabel({ size: "s", label: "2 Selected" }, context),
+					FieldLabel({ size: "s", label: "224 Selected" }, context),
 					ActionGroup({
 						size: "m",
 						areQuiet: true,
-						staticColor: isEmphasized ? "white" : undefined,
+						staticColor: isEmphasized
+							? context.globals?.color === "dark"
+								? "black"
+								: "white"
+							: undefined,
 						content: [
 							{
 								iconName: "Edit",
