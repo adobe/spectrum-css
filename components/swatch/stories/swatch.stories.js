@@ -169,7 +169,7 @@ Disabled.parameters = {
 };
 
 /**
- * Default, partial rounding and full rounding are usually used when a swatch is presented by itself near other components.
+ * Partial (default) corner rounding and full rounding are usually used when a swatch is presented by itself near other components.
  */
 export const Rounding = RoundingGroup.bind({});
 Rounding.tags = ["!dev"];
