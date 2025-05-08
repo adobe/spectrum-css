@@ -232,10 +232,6 @@
 	--mod-textfield-font-style: var(--mod-numberfield-font-style, var(--spectrum-numberfield-font-style));
 	--mod-textfield-font-size: var(--mod-numberfield-font-size, var(--spectrum-numberfield-font-size));
 
-	&.spectrum-NumberField--hiddenStepper {
-		--mod-textfield-min-width: var(--mod-numberfield-hidden-stepper-min-inline-size, var(--spectrum-numberfield-hidden-stepper-min-inline-size));
-	}
-
 	&:not(.is-disabled).is-hover,
 	&:not(.is-disabled):hover {
 		/* overrides the textfield mod */
@@ -363,7 +359,7 @@
 	/* gives the textfield container (instead of the input) the proper border styles */
 	border: var(--spectrum-numberfield-border-width) solid var(--spectrum-numberfield-border-color-default);
 	padding-inline-start: var(--spectrum-numberfield-spacing-inline-edge-to-text);
-	padding-inline-end: var(--spectrum-numberfield-button-container-size);
+	padding-inline-end: calc(var(--spectrum-numberfield-button-container-size) + var(--spectrum-numberfield-button-inline-offset));
 
 	/* gives the textfield container (instead of the input) the proper border-radius */
 	border-radius: var(--spectrum-numberfield-border-radius);
