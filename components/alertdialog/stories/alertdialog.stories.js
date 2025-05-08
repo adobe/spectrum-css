@@ -32,12 +32,31 @@ export default {
 			control: { type: "text" },
 		},
 		isOpen,
-		variant: { table: { disable: true } },
-		buttons: { table: { disable: true } },
+		variant: {
+			name: "Variant",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["confirmation", "information", "destructive", "warning", "error"],
+			control: "select",
+		},
+		buttonsAreVertical: {
+			name: "Vertical buttons",
+			description: "Buttons can be displayed horizontally (default) or vertically.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		}
 	},
 	args: {
 		rootClass: "spectrum-AlertDialog",
-		isOpen: false,
+		isOpen: true,
+		buttonsAreVertical: false,
 		variant: "confirmation",
 	},
 	parameters: {
@@ -57,6 +76,7 @@ export default {
 		packageJson,
 		metadata,
 	},
+	tags: ["migrated"],
 	decorators: [
 		withUnderlayWrapper,
 	],
@@ -66,15 +86,6 @@ export const Default = AlertDialogGroup.bind({});
 Default.args = {
 	isOpen: true,
 	heading: "Enable smart filters?",
-	buttons: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Remind me later"
-	}, {
-		treatment: "fill",
-		label: "Enable",
-		variant: "accent"
-	}],
 	content: "Smart filters are nondestructive and will preserve your original images.",
 };
 
@@ -101,19 +112,6 @@ Information.args = {
 	isOpen: true,
 	variant: "information",
 	heading: "Informative Dialog with a wrapping title text because the text is longer than the width of the alert dialog",
-	buttons: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "No, thanks"
-	},{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Remind me later"
-	}, {
-		variant: "primary",
-		treatment: "outline",
-		label: "Rate now",
-	}],
 	content: "If you enjoy our app, would you mind taking a moment to rate it?",
 };
 Information.parameters = {
@@ -134,16 +132,7 @@ Warning.args = {
 	isOpen: true,
 	variant: "warning",
 	heading: "Unverified format",
-	icon: true,
-	buttons: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Cancel"
-	}, {
-		treatment: "outline",
-		label: "Continue",
-		variant: "primary"
-	}],
+	icon: "Warning",
 	content: "This format has not been verified and may not be viewable for some users. Do you want to continue publishing?",
 };
 Warning.parameters = {
@@ -159,16 +148,7 @@ Error.args = {
 	isOpen: true,
 	variant: "error",
 	heading: "Unable to share",
-	icon: true,
-	buttons: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Cancel"
-	}, {
-		treatment: "outline",
-		label: "Continue",
-		variant: "primary"
-	}],
+	icon: "Alert",
 	content: "An error occured while sharing your project. Please verify the email address and try again.",
 };
 Error.parameters = {
@@ -184,15 +164,6 @@ Destructive.args = {
 	isOpen: true,
 	variant: "destructive",
 	heading: "Delete 3 documents?",
-	buttons: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Cancel"
-	}, {
-		treatment: "fill",
-		label: "Delete",
-		variant: "negative"
-	}],
 	content: "Are you sure you want to delete the 3 selected documents?",
 };
 Destructive.parameters = {
@@ -205,15 +176,6 @@ Scroll.args = {
 	isOpen: true,
 	variant: "confirmation",
 	heading: "Enable Smart Filters?",
-	buttons: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Remind me later"
-	}, {
-		treatment: "fill",
-		label: "Enable",
-		variant: "accent"
-	}],
 	content: "Smart filters are nondestructive and will preserve your original images. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices est eu lacus interdum, vitae volutpat tortor laoreet. Phasellus consectetur erat quis massa congue, vel placerat ipsum hendrerit. Aenean eleifend augue quam, quis blandit lacus pretium eget. Aliquam aliquam fermentum nunc, sed dictum metus varius in. Suspendisse in nisl libero. Nulla egestas massa eget lectus ullamcorper placerat. Vivamus cursus, nunc quis pharetra auctor, eros mi tempus elit, sit amet placerat ipsum velit ut dolor. Nam sit amet eleifend erat. Duis sollicitudin orci sit amet tellus tincidunt, vel lobortis risus pellentesque. Integer viverra urna elementum metus dignissim placerat. Nulla posuere eros ipsum. Pellentesque viverra urna justo, eu ultricies nisl fermentum et. Vivamus tristique porttitor dictum.",
 	customStyles: {
 		"max-block-size": "275px",

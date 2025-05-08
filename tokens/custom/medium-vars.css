@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -22,8 +22,7 @@
 	--spectrum-alert-banner-edge-to-divider: var(--spectrum-spacing-100);
 	--spectrum-alert-banner-text-to-button-vertical: var(--spectrum-spacing-100);
 
-	--spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-700);
-	--spectrum-alert-dialog-padding: var(--spectrum-spacing-500);
+	--spectrum-alert-dialog-edge-to-content: var(--spectrum-spacing-400);
 
 	--spectrum-assetcard-content-font-size: var(--spectrum-body-size-s);
 	--spectrum-assetcard-focus-ring-border-radius: 8px;
