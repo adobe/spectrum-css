@@ -1,5 +1,43 @@
 # Change log
 
+## 11.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 11.0.0-next.1
+
+### Major Changes
+
+- [#3555](https://github.com/adobe/spectrum-css/pull/3555) [`0af6461`](https://github.com/adobe/spectrum-css/commit/0af646180cd61e1872cde39bed5436f97d378cc9) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - # Radio S2 Migration
+
+  Updates:
+
+  - High contrast tokens have been modified
+  - Typography tokens modified
+
+  ## New tokens
+
+  `--spectrum-radio-border-width`
+  `--spectrum-radio-text-font-weight`
+  `--spectrum-radio-text-font-style`
+
+  ## Modified tokens
+
+  `--spectrum-radio-emphasized-accent-color`
+  `--spectrum-radio-emphasized-accent-color-hover`
+  `--spectrum-radio-emphasized-accent-color-down`
+  `--spectrum-radio-emphasized-accent-color-focus`
+
+## 11.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 10.1.0
 
 ### Minor Changes

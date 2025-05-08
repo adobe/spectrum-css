@@ -1,5 +1,20 @@
 # Change log
 
+## 10.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 10.0.0-next.0
+
+### Major Changes
+
+📝 [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b) Thanks [@pfulton](https://github.com/pfulton)!
+
+Updates the icon component to use the new Spectrum 2 icon sets. The `.spectrum-UIIcon--medium` and `.spectrum-UIIcon--large` classes have been removed, as UI icons are now delivered with a single SVG. The color property also now makes use of the `--iconPrimary` custom property that is defined in some of the SVG files. Storybook has been updated to use and load the new SVGs, whose name format and directories have changed.
+
 ## 9.1.0
 
 ### Minor Changes
@@ -168,6 +183,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ### 🛑 BREAKING CHANGE
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
+
 - Imports added to index.css and themes/express.css
 
 ## 6.0.5

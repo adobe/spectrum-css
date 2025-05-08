@@ -31,9 +31,6 @@ export default {
 			control: { type: "text" },
 		},
 		items: { table: { disable: true } },
-		id: { table: { disable: true } },
-		testId: { table: { disable: true } },
-		triggerId: { table: { disable: true } },
 	},
 	args: {
 		isOpen: false,

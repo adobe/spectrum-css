@@ -4,16 +4,16 @@ import { size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import {
-	DocsBodyVariants,
-	DocsCodeVariants,
-	DocsDetailVariants,
-	DocsHeadingBodyPairing,
-	DocsHeadingVariants,
-	DocsInternationalizedBodyVariants,
-	DocsInternationalizedCodeVariants,
-	DocsInternationalizedDetailVariants,
-	DocsInternationalizedHeadingBodyPairing,
-	DocsInternationalizedHeadingVariants, Template
+    DocsBodyVariants,
+    DocsCodeVariants,
+    DocsDetailVariants,
+    DocsHeadingBodyPairing,
+    DocsHeadingVariants,
+    DocsInternationalizedBodyVariants,
+    DocsInternationalizedCodeVariants,
+    DocsInternationalizedDetailVariants,
+    DocsInternationalizedHeadingBodyPairing,
+    DocsInternationalizedHeadingVariants, Template
 } from "./template.js";
 import { TypographyGroup } from "./typography.test.js";
 
