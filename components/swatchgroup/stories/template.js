@@ -58,11 +58,11 @@ export const RoundingTemplate = (args, context) => Container({
 		}, context)}
 		${Container({
 			withBorder: false,
-			heading: "Partial",
+			heading: "Regular",
 			containerStyles: {"gap": "8px",},
 			content: Template({
 				...args,
-				rounding: "partial",
+				rounding: "regular",
 			}, context)
 		}, context)}
 		${Container({

@@ -68,8 +68,8 @@ export const SwatchGroup = Variants({
 			rounding: "none"
 		},
 		{
-			testHeading: "Partial rounding",
-			rounding: "partial"
+			testHeading: "Regular rounding",
+			rounding: "regular"
 		},
 		{
 			testHeading: "Full rounding",

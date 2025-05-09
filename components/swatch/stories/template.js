@@ -23,7 +23,7 @@ export const Template = ({
 	isHovered = false,
 	isActive = false,
 	isKeyboardFocused = false,
-	rounding = "partial",
+	rounding = "regular",
 	customClasses = [],
 	swatchColor,
 	customStyles = {},
@@ -150,7 +150,7 @@ export const RoundingGroup = (args, context) => Container({
 	content: html`
 		${Container({
 			withBorder: false,
-			heading: "Partial (Default)",
+			heading: "Regular (Default)",
 			containerStyles: { "gap": "8px" },
 			content: Template(args, context),
 		}, context)}
