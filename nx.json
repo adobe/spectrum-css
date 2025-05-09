@@ -94,7 +94,11 @@
 		"clean": {
 			"cache": true,
 			"executor": "nx:run-commands",
-			"inputs": ["{projectRoot}/dist/*.css*", "{projectRoot}/dist/**/*.css*", { "externalDependencies": ["rimraf"] }],
+			"inputs": [
+				"{projectRoot}/dist/*.css*",
+				"{projectRoot}/dist/**/*.css*",
+				{ "externalDependencies": ["rimraf"] }
+			],
 			"options": {
 				"commands": ["rimraf {projectRoot}/dist/*.css* {projectRoot}/dist/**/"]
 			},
@@ -175,12 +179,7 @@
 		"report": {
 			"cache": true,
 			"executor": "nx:run-commands",
-			"inputs": [
-				"styles",
-				"postcss",
-				"stylelint",
-				"reporter"
-			],
+			"inputs": ["styles", "postcss", "stylelint", "reporter"],
 			"options": {
 				"commands": [
 					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
@@ -203,12 +202,16 @@
 				},
 				"scope": {
 					"commands": [
-						"chromatic --build-script-name build --junit-report --only-story-names --skip '@(changeset-release/**|dependabot/**)'"
+						"chromatic --build-script-name build --junit-report --only-story-names --skip '@(changeset-release/**|renovate/**)'"
 					]
 				}
 			},
 			"executor": "nx:run-commands",
-			"inputs": ["styles", "stories", { "externalDependencies": ["chromatic"] }],
+			"inputs": [
+				"styles",
+				"stories",
+				{ "externalDependencies": ["chromatic"] }
+			],
 			"options": {
 				"commands": [
 					"chromatic --only-changed --build-script-name build --junit-report"
