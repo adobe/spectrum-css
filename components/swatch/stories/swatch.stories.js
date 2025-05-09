@@ -34,14 +34,14 @@ export default {
 		rounding: {
 			name: "Rounding",
 			description: "The amount of corner rounding for a swatch.",
-			defaultValue: "partial",
+			defaultValue: "regular",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
-				defaultValue: { summary: "partial", },
+				defaultValue: { summary: "regular", },
 			},
-			options: ["partial", "none", "full"],
+			options: ["regular", "none", "full"],
 			control: "select",
 		},
 		isDisabled: {
@@ -112,7 +112,7 @@ export default {
 		isHovered: false,
 		isActive: false,
 		isKeyboardFocused: false,
-		rounding: "partial",
+		rounding: "regular",
 		swatchColor: "rgb(174, 216, 230)",
 		shape: "square",
 		isMixedValue: false,

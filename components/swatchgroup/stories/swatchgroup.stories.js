@@ -43,7 +43,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["compact", "spacious"],
+			options: ["regular", "compact", "spacious"],
 			control: "select",
 		},
 		items: {
@@ -69,6 +69,8 @@ export default {
 	args: {
 		rootClass: "spectrum-SwatchGroup",
 		containerWidth: "200px",
+		density: "regular",
+		rounding: "none",
 		items: [
 			{swatchColor: "rgb(184, 109, 70)",},
 			{swatchColor: "rgb(240, 56, 35)",},
