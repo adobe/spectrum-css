@@ -150,7 +150,7 @@ export const RoundingGroup = (args, context) => Container({
 	content: html`
 		${Container({
 			withBorder: false,
-			heading: "Regular",
+			heading: "Partial (Default)",
 			containerStyles: { "gap": "8px" },
 			content: Template(args, context),
 		}, context)}

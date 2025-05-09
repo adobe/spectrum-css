@@ -26,15 +26,15 @@
 }
 
 /* Small */
-.spectrum-SwatchGroup--sizeS {
+.spectrum-SwatchGroup--compact {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-50);
 }
 
 /* Large */
-.spectrum-SwatchGroup--sizeL:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS) {
+.spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS) {
 	--spectrum-swatchgroup-spacing: var(--spectrum-swatch-group-spacing-spacious);
 }
 
-.spectrum-SwatchGroup--sizeL:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL) {
+.spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL) {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
 }
