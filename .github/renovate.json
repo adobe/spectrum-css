@@ -1,0 +1,35 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"baseBranches": ["main", "spectrum-two"],
+	"extends": [
+		"config:recommended",
+		":widenPeerDependencies",
+		"group:githubArtifactActions",
+		"group:vite"
+	],
+	"labels": ["dependencies", "skip_vrt", "ready-for-review"],
+	"packageRules": [
+		{
+			"groupName": "storybook ecosystem",
+			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*"]
+		},
+		{
+			"groupName": "commitlint ecosystem",
+			"matchPackageNames": ["commitlint", "@commitlint/*"]
+		},
+		{
+			"groupName": "nx ecosystem",
+			"matchPackageNames": ["nx", "@nx/*"]
+		},
+		{
+			"groupName": "postcss ecosystem",
+			"matchPackageNames": ["postcss", "postcss-**"]
+		},
+		{
+			"groupName": "stylelint ecosystem",
+			"matchPackageNames": ["stylelint", "stylelint-**"]
+		}
+	],
+	"rebaseWhen": "behind-base-branch",
+	"reviewers": ["team:spectrum-css-maintainers"]
+}

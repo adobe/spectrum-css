@@ -29,7 +29,6 @@ The goal of this documentation is to provide an outline for the GitHub goodness 
 ├── --support-request.md
 ⎪ PULL_REQUEST_TEMPLATE.md
 ⎪ CONTRIBUTING.md
-⎪ dependabot.yml
 ```
 
 ## Actions
