@@ -15,6 +15,7 @@ export const Template = ({
 	isFocusable = true,
 	staticColor,
 	id = getRandomId("clearbutton"),
+	onclick = () => {},
 	customClasses = [],
 	customStyles = {},
 }, context) => html`
@@ -38,6 +39,7 @@ export const Template = ({
 		?disabled=${isDisabled}
 		tabindex=${isFocusable ? 0 : -1}
 		aria-hidden=${isFocusable}
+		@click=${onclick}
 	>
 		<div class="${rootClass}-fill">
 			${Icon({
