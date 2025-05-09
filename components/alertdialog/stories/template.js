@@ -10,14 +10,70 @@ import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
+const iconMap = {
+	warning: "AlertDiamond",
+	error: "AlertTriangle"
+}
+
+const buttonMap = {
+	confirmation: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Remind me later"
+	}, {
+		treatment: "fill",
+		label: "Enable",
+		variant: "accent"
+	}],
+	warning: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Cancel"
+	}, {
+		treatment: "outline",
+		label: "Continue",
+		variant: "primary"
+	}],
+	error: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Cancel"
+	}, {
+		treatment: "outline",
+		label: "Continue",
+		variant: "primary"
+	}],
+	destructive: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Cancel"
+	}, {
+		treatment: "fill",
+		label: "Delete",
+		variant: "negative"
+	}],
+	information: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "No, thanks"
+	},{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Remind me later"
+	}, {
+		variant: "primary",
+		treatment: "outline",
+		label: "Rate now",
+	}],
+}
+
 export const Dialog = ({
 	rootClass = "spectrum-AlertDialog",
 	heading,
 	content,
 	customClasses = [],
-	buttons,
 	variant,
-	icon = false,
+	buttonsAreVertical,
 	id = getRandomId("alertdialog"),
 	customStyles = {},
 } = {}, context = {}) => {
@@ -25,7 +81,7 @@ export const Dialog = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${variant}`]: true,
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -37,16 +93,16 @@ export const Dialog = ({
 		>
 			<div class="${rootClass}-grid">
 				<div class="spectrum-AlertDialog-header">
-					${when(icon, () => Icon({
+					${when(iconMap[variant], () => Icon({
 						size: "m",
-						iconName: "AlertTriangle",
+						iconName: iconMap[variant],
 						setName: "workflow",
 						customClasses: [`${rootClass}-icon`],
 					}, context))}
 					<h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
 				</div>
 				<section class="${rootClass}-content">${content}</section>
-				${ButtonGroup({ items: buttons }, context)}
+				${ButtonGroup({ items: buttonMap[variant], vertical: buttonsAreVertical }, context)}
 			</div>
 		</div>
 	`;

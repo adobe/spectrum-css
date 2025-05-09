@@ -59,7 +59,6 @@
 	.spectrum-Icon {
 		inline-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
 		block-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
-		margin-inline-start: var(--mod-alert-dialog-minimum-title-to-icon, var(--spectrum-alert-dialog-minimum-title-to-icon));
 		flex-shrink: 0;
 	}
 }
@@ -80,7 +79,7 @@
 
 .spectrum-AlertDialog-header {
 	display: flex;
-	justify-content: space-between;
+	gap: var(--mod-alert-dialog-minimum-title-to-icon, var(--spectrum-alert-dialog-minimum-title-to-icon));
 	align-items: baseline;
 }
 
