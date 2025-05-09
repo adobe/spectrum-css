@@ -9,7 +9,9 @@ This migrates the `swatch` and `swatchgroup` components to the latest Spectrum 2
 
 An `Add Swatch` variant has been added with the required color tokens and the specified add UI icon.
 
-The `Add Swatch` and `Mixed Value` variants may not be combined with background colors or images.
+The `Add Swatch` and `Mixed Value` variants may not be combined with background colors or images. To implement the `Add Swatch` you need to apply the `is-addSwatch` class to the `spectrum-Swatch` element. `Add swatch` keyboard focus may be applied by adding the `is-keyboardFocused` class to this combination of classes.
+
+The `spectrum-Swatch-icon` is used to set the expected color to icons contained within the swatch.
 
 The border should not be set when the swatch is selected as the border conflicts with the display of the selected state.
 
