@@ -2,9 +2,9 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-SwatchGroup",
-    ".spectrum-SwatchGroup--sizeL:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL)",
-    ".spectrum-SwatchGroup--sizeL:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS)",
-    ".spectrum-SwatchGroup--sizeS"
+    ".spectrum-SwatchGroup--compact",
+    ".spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL)",
+    ".spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS)"
   ],
   "modifiers": ["--mod-swatchgroup-spacing"],
   "component": [

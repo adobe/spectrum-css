@@ -11,11 +11,17 @@ import { RoundingTemplate, Template } from "./template.js";
  *
  * ## Usage notes
  *
+ *  * ### Corner rounding in swatch groups
+ *
+ * A corner rounding of "none" (`.spectrum-Swatch--roundingNone` class) should be used in a swatch group in order to help minimize the Hermann grid illusion that happens at the intersections of the white space within the group.
+ *
+ * The only exception is when a swatch group only takes up a single row. In that case, use any of the rounding options.
+ *
  * The border opacity of swatches in a swatch group is 20%.
  *
  * ### Density
  *
- * Swatch groups come in several densities: medium (default), extra small, small and large. Each density retains the same swatch size, but have less or more padding between each swatch, respectively.
+ * Swatch groups come in several densities: regular (default), compact and spacious. Each density retains the same swatch size, but have less or more padding between each swatch, respectively.
  */
 export default {
 	title: "Swatch group",
@@ -37,7 +43,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["sizeS", "sizeL"],
+			options: ["compact", "spacious"],
 			control: "select",
 		},
 		items: {
@@ -48,11 +54,20 @@ export default {
 			name: "Container width",
 			table: { disable: true },
 		},
+		rounding: {
+			...Swatch.argTypes.rounding,
+			description: "Only use rounded swatches if there is a single row.",
+			defaultValue: "none",
+			table: {
+				type: { summary: "string", required: true },
+				category: "Component",
+				defaultValue: { summary: "none", },
+			},
+		},
 		tags: ["migrated"],
 	},
 	args: {
 		rootClass: "spectrum-SwatchGroup",
-		density: "sizeM",
 		containerWidth: "200px",
 		items: [
 			{swatchColor: "rgb(184, 109, 70)",},
@@ -100,25 +115,25 @@ export const Default = SwatchgroupGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-export const Small = Template.bind({});
-Small.args = {
-	density: "sizeS",
+export const Compact = Template.bind({});
+Compact.args = {
+	density: "compact",
 };
-Small.tags = ["!dev"];
-Small.parameters = {
+Compact.tags = ["!dev"];
+Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Small.storyName = "Density - small";
+Compact.storyName = "Density - compact";
 
-export const Large = Template.bind({});
-Large.args = {
-	density: "sizeL",
+export const Spacious = Template.bind({});
+Spacious.args = {
+	density: "spacious",
 };
-Large.tags = ["!dev"];
-Large.parameters = {
+Spacious.tags = ["!dev"];
+Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Large.storyName = "Density - large";
+Spacious.storyName = "Density - spacious";
 
 /**
  * Only use rounded swatches if there is a single row.
