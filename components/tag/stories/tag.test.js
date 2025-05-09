@@ -7,36 +7,11 @@ export const TagGroups = Variants({
 	sizeDirection: "row",
 	testData: [
 		{
-			testHeading: "Default, not selected",
+			testHeading: "Default",
 		},
 		{
-			testHeading: "Emphasized, not selected",
+			testHeading: "Emphasized",
 			isEmphasized: true,
-		},
-		{
-			testHeading: "Selected",
-			isSelected: true,
-		},
-		{
-			testHeading: "Emphasized, selected",
-			isEmphasized: true,
-			isSelected: true,
-		},
-		// show removable tags for these variants so hover and focus can be captured
-		{
-			testHeading: "Default, removable",
-			isRemovable: true,
-		},
-		{
-			testHeading: "Emphasized & selected, removable",
-			isEmphasized: true,
-			isSelected: true,
-			isRemovable: true,
-		},
-		{
-			testHeading: "Selected, removable",
-			isSelected: true,
-			isRemovable: true,
 		},
 		{
 			testHeading: "Disabled with states",
@@ -62,7 +37,7 @@ export const TagGroups = Variants({
 			isReadOnly: true,
 		},
 		{
-			testHeading: "Emphasized & selected, read-only",
+			testHeading: "Emphasized, read-only",
 			isReadOnly: true,
 			isEmphasized: true,
 			isSelected: true,
@@ -74,11 +49,9 @@ export const TagGroups = Variants({
 		}
 	],
 	stateData: [
-		// show removable as a state for test headings that don't already test it
 		{
 			testHeading: "Removable",
 			isRemovable: true,
-			include: ["Default, with icon" , "Default, with avatar", "Emphasized, with thumbnail", "Truncated"],
 		},
 		{
 			testHeading: "Hovered",
@@ -99,6 +72,69 @@ export const TagGroups = Variants({
 			testHeading: "Disabled",
 			isDisabled: true,
 			ignore: ["Truncated", "Disabled with states"],
-		}
+		},
+		{
+			testHeading: "Selected",
+			isSelected: true,
+			ignore: ["Truncated"],
+		},
+		{
+			testHeading: "Selected & removable",
+			isSelected: true,
+			isRemovable: true,
+			ignore: ["Truncated"],
+		},
+		{
+			testHeading: "Selected & hovered",
+			isSelected: true,
+			isHovered: true,
+			ignore: ["Truncated"],
+		},
+		{
+			testHeading: "Selected & keyboard focused",
+			isSelected: true,
+			isKeyboardFocused: true,
+			ignore: ["Truncated"],
+		},
+		{
+			testHeading: "Selected & active",
+			isSelected: true,
+			isActive: true,
+			ignore: ["Truncated"],
+		},
+		// adding visuals as states so we can test them in the truncated section
+		{
+			testHeading: "With icon",
+			iconName: "Circle",
+			include: ["Truncated"],
+		},
+		{
+			testHeading: "With icon, removable",
+			iconName: "Circle",
+			isRemovable: true,
+			include: ["Truncated"],
+		},
+		{
+			testHeading: "With avatar",
+			avatarUrl: "example-ava.png",
+			include: ["Truncated"],
+		},
+		{
+			testHeading: "With avatar, removable",
+			avatarUrl: "example-ava.png",
+			isRemovable: true,
+			include: ["Truncated"],
+		},
+		{
+			testHeading: "With thumbnail",
+			thumbnailUrl: "example-card-landscape.png",
+			include: ["Truncated"],
+		},
+		{
+			testHeading: "With thumbnail, removable",
+			thumbnailUrl: "example-card-landscape.png",
+			isRemovable: true,
+			include: ["Truncated"],
+		},
 	]
 });
