@@ -110,6 +110,9 @@ export default {
 	decorators: [
 		withDownStateDimensionCapture,
 	],
+	status: {
+		type: "migrated",
+	},
 	tags: ["migrated"],
 };
 
