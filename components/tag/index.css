@@ -84,17 +84,10 @@
 	--mod-icon-size: var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size));
 
 	/* clear icon inline spacing + icon size */
-	--mod-clear-button-width: calc(
-		var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon)) +
-		var(--mod-tag-edge-to-clear-icon, var(--spectrum-tag-edge-to-clear-icon)) +
-		var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size))
-	);
+	--mod-clear-button-width: calc(var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon)) + var(--mod-tag-edge-to-clear-icon, var(--spectrum-tag-edge-to-clear-icon)) + var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size)));
 
 	/* clear icon block spacing + icon size */
-	--mod-clear-button-height: calc(
-		2 * var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) +
-		var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size))
-	);
+	--mod-clear-button-height: calc(2 * var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) + var(--mod-tag-clear-button-size, var(--spectrum-tag-clear-button-size)));
 	/* @passthrough end */
 
 	&:lang(ja),
@@ -261,6 +254,7 @@
 	/* clear button */
 	.spectrum-Tag-clearButton {
 		box-sizing: border-box;
+		flex-shrink: 0;
 
 		/* remove label inline-end spacing with negative margin */
 		margin-inline-start: calc((var(--mod-tag-label-spacing-inline, var(--spectrum-tag-label-spacing-inline)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))) * -1);
