@@ -238,6 +238,12 @@
 	}
 }
 
+.spectrum-Combobox-label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 /* PICKER BUTTON */
 .spectrum-Combobox-button {
 	position: absolute;

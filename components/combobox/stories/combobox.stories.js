@@ -15,11 +15,11 @@ import { Template, VariantGroup } from "./template.js";
  *
  * ### General notes
  *
- * - Combobox uses `.spectrum-PickerButton` instead of a `.spectrum-Picker`
+ * - Combobox uses `.spectrum-InfieldButton` instead of a `.spectrum-PickerButton`
  * - The following classes must be added:
  *   - `.spectrum-Combobox-textfield` is required on the Textfield outer element (`.spectrum-Textfield`)
  *   - `.spectrum-Combobox-input` is required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
- *   - `.spectrum-Combobox-button` is required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
+ *   - `.spectrum-Combobox-button` is required on the InfieldButton (`.spectrum-InfieldButton`)
  *
  * ### Indicating validity and focus
  *
@@ -28,7 +28,7 @@ import { Template, VariantGroup } from "./template.js";
  * - `.is-focused` - when the input or button is focused with the mouse
  * - `.is-keyboardFocused` - when the input or button is focused with the keyboard
  * - `.is-valid` - when the input has an explicit valid state
- * - `.is-invalid` - when the input has an explicit invalid state
+ * - `.is-invalid` - when the input has an explicit invalid state; should also show help text for error messaging
  * - `.is-disabled` - when the control is disabled; should also add to the `.spectrum-Combobox-textfield` and include a `[disabled]` attribute to the `.spectrum-Combobox-button`
  * - `.is-loading` - when the progress circle is being shown
  *
@@ -178,6 +178,10 @@ export default {
 		downState: {
 			selectors: [".spectrum-InfieldButton:not(:disabled)"],
 		},
+		status: {
+			type: "migrated",
+		},
+		tags: ["migrated"],
 		packageJson,
 		metadata,
 	},

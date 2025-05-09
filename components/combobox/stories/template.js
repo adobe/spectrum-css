@@ -73,6 +73,11 @@ const Combobox = ({
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId ?? id)}
 			style=${styleMap(customStyles)}
+			role="combobox"
+			aria-expanded=${isOpen}
+			aria-haspopup="listbox"
+			aria-controls=${`${comboboxId}-popover`}
+			aria-owns=${`${comboboxId}-popover`}
 		>
 		${when(showFieldLabel, () =>
 				FieldLabel({

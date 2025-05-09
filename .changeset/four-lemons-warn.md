@@ -2,9 +2,15 @@
 "@spectrum-css/combobox": major
 ---
 
-## Combobox S2 Migration
+### Combobox S2 Migration
 
-The new combo box is coming in with more pronounced corner radius, thicker outline, and the use of the infield button nested inside. The quiet styling has also been deprecated.
+#### New Changes
+
+- Removed quiet styling variant
+- Updated corner radius to match S2 specifications
+- Changed outline thickness for better visibility
+- Replaced picker button with in-field button component
+- Added help text along with invalid state
 
 ### New tokens
 
