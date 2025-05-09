@@ -10,20 +10,7 @@ export const ComboBoxGroup = Variants({
 			isOpen: false,
 		},
 		{
-			testHeading: "Quiet",
-			isQuiet: true,
-			isOpen: false,
-		},
-		{
 			testHeading: "Open",
-			isOpen: true,
-			wrapperStyles: {
-				"min-block-size": "250px",
-			},
-		},
-		{
-			testHeading: "Quiet + open",
-			isQuiet: true,
 			isOpen: true,
 			wrapperStyles: {
 				"min-block-size": "250px",
@@ -36,20 +23,28 @@ export const ComboBoxGroup = Variants({
 			fieldLabelPosition: "top",
 		},
 		{
+			testHeading: "With field label top + help text",
+			showFieldLabel: true,
+			isOpen: false,
+			fieldLabelPosition: "top",
+			showHelpText: true,
+		},
+		{
 			testHeading: "With field label left",
 			showFieldLabel: true,
 			isOpen: false,
 			fieldLabelPosition: "left",
 		},
 		{
-			testHeading: "Truncation",
+			testHeading: "With field label left + help text ",
+			showFieldLabel: true,
 			isOpen: false,
-			value: "United States of America and to the republic",
+			fieldLabelPosition: "left",
+			showHelpText: true,
 		},
 		{
-			testHeading: "Quiet + truncation",
+			testHeading: "Truncation",
 			isOpen: false,
-			isQuiet: true,
 			value: "United States of America and to the republic",
 		},
 	],

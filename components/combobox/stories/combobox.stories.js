@@ -1,6 +1,7 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isReadOnly, size } from "@spectrum-css/preview/types";
 import { within } from "@storybook/test";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -14,11 +15,11 @@ import { Template, VariantGroup } from "./template.js";
  *
  * ### General notes
  *
- * - Combobox uses `.spectrum-PickerButton` instead of a `.spectrum-Picker`
+ * - Combobox uses `.spectrum-InfieldButton` instead of a `.spectrum-PickerButton`
  * - The following classes must be added:
  *   - `.spectrum-Combobox-textfield` is required on the Textfield outer element (`.spectrum-Textfield`)
  *   - `.spectrum-Combobox-input` is required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
- *   - `.spectrum-Combobox-button` is required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
+ *   - `.spectrum-Combobox-button` is required on the InfieldButton (`.spectrum-InfieldButton`)
  *
  * ### Indicating validity and focus
  *
@@ -27,7 +28,7 @@ import { Template, VariantGroup } from "./template.js";
  * - `.is-focused` - when the input or button is focused with the mouse
  * - `.is-keyboardFocused` - when the input or button is focused with the keyboard
  * - `.is-valid` - when the input has an explicit valid state
- * - `.is-invalid` - when the input has an explicit invalid state
+ * - `.is-invalid` - when the input has an explicit invalid state; should also show help text for error messaging
  * - `.is-disabled` - when the control is disabled; should also add to the `.spectrum-Combobox-textfield` and include a `[disabled]` attribute to the `.spectrum-Combobox-button`
  * - `.is-loading` - when the progress circle is being shown
  *
@@ -45,13 +46,22 @@ export default {
 			...isOpen,
 			if: { arg: "isReadOnly", truthy: false },
 		},
-		isQuiet,
 		isInvalid,
 		isFocused,
 		isKeyboardFocused,
 		isLoading,
 		isDisabled,
 		isReadOnly,
+		isLabelRequired: {
+			name: "Label required",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+			if: { arg: "showFieldLabel", truthy: true },
+		},
 		showFieldLabel: {
 			name: "Show field label",
 			type: { name: "boolean" },
@@ -82,6 +92,25 @@ export default {
 			control: "select",
 			if: { arg: "showFieldLabel", truthy: true },
 		},
+		showHelpText: {
+			name: "Show help text",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		helpText: {
+			name: "Help text",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Component",
+			},
+			control: "text",
+			if: { arg: "showHelpText", truthy: true },
+		},
 		value: {
 			name: "Value",
 			description: "The value shows the option that a user has selected.",
@@ -98,15 +127,19 @@ export default {
 		rootClass: "spectrum-Combobox",
 		size: "m",
 		isOpen: false,
-		isQuiet: false,
 		isInvalid: false,
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
 		isReadOnly: false,
+		isLabelRequired: false,
 		showFieldLabel: false,
+		showHelpText: false,
 		testId: "combobox",
+		fieldLabelText: "Select location",
+		helpText: "This is a help text. Select an option",
+		value: "Ballard",
 		content: [
 			(passthroughs, context) => Menu({
 				role: "listbox",
@@ -142,9 +175,19 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=727-2550",
 		},
+		downState: {
+			selectors: [".spectrum-InfieldButton:not(:disabled)"],
+		},
+		status: {
+			type: "migrated",
+		},
+		tags: ["migrated"],
 		packageJson,
 		metadata,
 	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 
@@ -155,11 +198,7 @@ export default {
 
 export const Default = ComboBoxGroup.bind({});
 Default.tags = ["!autodocs"];
-Default.args = {
-	isOpen: true,
-	fieldLabelText: "Select location",
-	value: "Ballard",
-};
+Default.args = {};
 Default.parameters = {
 	chromatic: { delay: 1000 }
 };
@@ -167,25 +206,11 @@ Default.parameters = {
 // ********* DOCS ONLY ********* //
 export const DefaultGroup = VariantGroup.bind({});
 DefaultGroup.storyName = "Default";
-DefaultGroup.args = Default.args;
+DefaultGroup.args = {
+	isOpen: true,
+};
 DefaultGroup.tags = ["!dev"];
 DefaultGroup.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "360px",
-		},
-	},
-};
-
-export const QuietGroup = VariantGroup.bind({});
-QuietGroup.storyName = "Quiet";
-QuietGroup.args = {
-	...Default.args,
-	isQuiet: true,
-};
-QuietGroup.tags = ["!dev"];
-QuietGroup.parameters = {
 	chromatic: { disableSnapshot: true },
 	docs: {
 		story: {
@@ -208,6 +233,17 @@ ReadOnly.parameters = {
 };
 
 ReadOnly.storyName = "Read-only";
+
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withBorder: false,
+	withHeading: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ComboBoxGroup.bind({});
