@@ -22,13 +22,13 @@ import "../index.css";
 const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
 	switch (size) {
 		case "s":
-			return `${iconName}200`;
+			return `${iconName}75`;
 		case "l":
-			return `${iconName}400`;
+			return `${iconName}200`;
 		case "xl":
-			return `${iconName}500`;
-		default:
 			return `${iconName}300`;
+		default:
+			return `${iconName}100`;
 	}
 };
 

@@ -314,6 +314,11 @@ MenuItem.argTypes = {
 	isSelected: {
 		...isSelected,
 		description: "Used with single or multi-select mode turned on",
+		if: { arg: "selectionMode", neq: "none" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Selection",
+		},
 	},
 	label: {
 		name: "Label",
@@ -376,6 +381,16 @@ MenuItem.argTypes = {
 		},
 		control: "boolean"
 	},
+	isDrillIn: {
+		name: "Is drill-in",
+		description: "Displays drill-in menu indicator",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean"
+	},
 	// These settings are not used in the MenuItem story
 	hasDividers: { table: { disable: true } },
 	isTraySubmenu: { table: { disable: true } },
@@ -392,7 +407,8 @@ MenuItem.args = {
 	isSelected: false,
 	hasActions: false,
 	hasExternalLink: false,
-	hasThumbnail: false
+	hasThumbnail: false,
+	isDrillIn: false,
 };
 MenuItem.parameters = {
 	design: {
