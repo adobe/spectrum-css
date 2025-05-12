@@ -326,6 +326,7 @@
 /* disabled */
 .spectrum-Tag.is-disabled {
 	pointer-events: none;
+	user-select: none;
 
 	.spectrum-Avatar {
 		opacity: var(--mod-avatar-opacity-disabled, var(--spectrum-avatar-opacity-disabled));

@@ -106,13 +106,13 @@ export default {
 		downState: {
 			selectors: [".spectrum-Tag:not(:disabled)"],
 		},
+		status: {
+			type: "migrated",
+		},
 	},
 	decorators: [
 		withDownStateDimensionCapture,
 	],
-	status: {
-		type: "migrated",
-	},
 	tags: ["migrated"],
 };
 
