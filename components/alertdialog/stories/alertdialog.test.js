@@ -12,6 +12,10 @@ export const AlertDialogGroup = Variants({
 		"min-block-size": "auto",
 	},
 	testData: [{}, {
+		heading: "Vertical button group",
+		content: "This is what an alert dialog looks like with buttons arranged vertically.",
+		buttonsAreVertical: true,
+	}, {
 		variant: "warning",
 		heading: "Unverified format",
 		content: "This format has not been verified and may not be viewable for some users. Do you want to continue publishing?",

@@ -184,3 +184,12 @@ Scroll.args = {
 Scroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+
+export const VerticalButtons = Template.bind({});
+VerticalButtons.tags = ["!dev"];
+VerticalButtons.args = {
+	buttonsAreVertical: true,
+	isOpen: true,
+	heading: "Vertical button group",
+	content: "This is what an alert dialog looks like with buttons arranged vertically.",
+};
