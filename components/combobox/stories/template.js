@@ -182,6 +182,31 @@ export const Template = ({
 	`;
 };
 
+export const HelpTextTemplate = (args, context) => {
+	const variants = [
+		{
+			heading: "Help text",
+			args: {...args, showHelpText: true, helpText: "Choose a topic. Add a new topic by typing it in the field, then selecting 'Enter.'"},
+		},
+		{
+			heading: "Help text with error",
+			args: {...args, showHelpText: true, helpText: "Choose or add at least one topic.", isInvalid: true},
+		}
+	];
+
+	return Container({
+		direction: "row",
+		withHeading: false,
+		withBorder: false,
+		content: html`${variants.map(variant => Container({
+			withBorder: false,
+			heading: variant.heading,
+			containerStyles: {"display": "inline"},
+			content: Combobox(variant.args, context)},
+		context))}`,
+	}, context);
+};
+
 export const VariantGroup = (args, context) => {
 	const variants = [
 		{

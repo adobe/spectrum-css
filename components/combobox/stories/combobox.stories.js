@@ -6,7 +6,7 @@ import { within } from "@storybook/test";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
-import { Template, VariantGroup } from "./template.js";
+import { HelpTextTemplate, Template, VariantGroup } from "./template.js";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -218,6 +218,21 @@ DefaultGroup.parameters = {
 		},
 	},
 };
+
+/**
+ * Comboboxes can show help text to provide feedback to users. The description in the help text is flexible and encompasses a range of guidance. Sometimes this guidance is about what to input, and sometime it’s about how to input. This includes information such as:
+ *
+ * - An overall description of the input field
+ * - Hints for what kind of information needs to be input
+ * - Specific formatting examples or requirements
+ */
+export const HelpText = HelpTextTemplate.bind({});
+HelpText.tags = ["!dev"];
+HelpText.args = {
+	showHelpText: true,
+	helpText: "This is a help text. Select an option",
+};
+
 
 /**
  * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.isReadOnly` class to the combobox. To enable this feature, add the .isReadOnly class to the combobox. Then within the nested textfield component, add the .isReadOnly class and readonly attribute to the `<input>` element.
