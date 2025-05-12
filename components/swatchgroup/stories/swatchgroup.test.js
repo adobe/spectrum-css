@@ -5,18 +5,18 @@ export const SwatchgroupGroup = Variants({
 	Template,
 	testData: [
 		{
-			testHeading: "Default",
+			testHeading: "Default (regular density)",
 		},
 		{
-			testHeading: "Small size (compact density)",
+			testHeading: "Compact density",
 			density: "compact",
 		},
 		{
-			testHeading: "Full rounding",
+			testHeading: "Full rounding (regular density)",
 			rounding: "full",
 		},
 		{
-			testHeading: "Regular rounding",
+			testHeading: "Regular rounding (regular density)",
 			rounding: "regular",
 		},
 	],

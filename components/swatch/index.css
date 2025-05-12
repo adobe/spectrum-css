@@ -11,18 +11,17 @@
  * governing permissions and limitations under the License.
  */
 
-/* @note: default sizing for swatch is small */
 .spectrum-Swatch {
 	/* Placeholder tokens */
 	--spectrum-swatch-icon-border-color: var(--mod-swatch-icon-border-color, rgb(0 0 0 / var(--spectrum-swatch-disabled-icon-border-opacity)));
 
 	/* Size */
-	--spectrum-swatch-size: var(--mod-swatch-size, var(--spectrum-swatch-size-small));
-	--spectrum-swatch-border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-75));
+	--spectrum-swatch-size: var(--mod-swatch-size, var(--spectrum-swatch-size-medium));
+	--spectrum-swatch-border-radius: var(--mod-swatch-border-radius, var(--spectrum-corner-radius-100));
 	--spectrum-swatch-border-thickness: var(--mod-swatch-border-thickness, var(--spectrum-border-width-100));
 	--spectrum-swatch-border-thickness-selected: var(--mod-swatch-border-thickness-selected, var(--spectrum-border-width-200));
 	--spectrum-swatch-disabled-icon-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-workflow-icon-size-75));
-	--spectrum-swatch-slash-thickness: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness-small));
+	--spectrum-swatch-slash-thickness: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness-medium));
 
 	/* Color */
 	--spectrum-swatch-border-color-selected: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-gray-1000)));
@@ -64,10 +63,10 @@
 	--spectrum-swatch-slash-thickness: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness-extra-small));
 }
 
-.spectrum-Swatch--sizeM {
-	--spectrum-swatch-size: var(--mod-swatch-size, var(--spectrum-swatch-size-medium));
-	--spectrum-swatch-disabled-icon-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-workflow-icon-size-100));
-	--spectrum-swatch-slash-thickness: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness-medium));
+.spectrum-Swatch--sizeS {
+	--spectrum-swatch-size: var(--mod-swatch-size, var(--spectrum-swatch-size-small));
+	--spectrum-swatch-disabled-icon-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-workflow-icon-size-75));
+	--spectrum-swatch-slash-thickness: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness-small));
 }
 
 .spectrum-Swatch--sizeL {

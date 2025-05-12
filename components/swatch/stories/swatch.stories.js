@@ -47,6 +47,7 @@ export default {
 		isDisabled: {
 			...isDisabled,
 			if: { arg: "isAddSwatch", truthy: false },
+			category: "State",
 		},
 		isSelected,
 		isHovered: {

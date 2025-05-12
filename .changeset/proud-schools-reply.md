@@ -13,7 +13,7 @@ The `Add Swatch` and `Mixed Value` variants may not be combined with background 
 
 The `spectrum-Swatch-icon` is used to set the expected color to icons contained within the swatch.
 
-The border should not be set when the swatch is selected as the border conflicts with the display of the selected state.
+The light and no border variants have been removed. Individual swatches have a border set to `--spectrum-gray-1000` at `42%` opacity, while the border opacity is set to `20%` in swatch groups.
 
 ##### Removed custom properties
 

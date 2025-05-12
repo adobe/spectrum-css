@@ -13,7 +13,6 @@ export const Template = ({
 	size = "m",
 	density = "regular",
 	rounding = "none",
-	borderStyle = "noBorder",
 	containerWidth,
 	items = [],
 	customStyles = {},
@@ -36,7 +35,6 @@ export const Template = ({
 		${items.map((swatch) => Swatch({
 			size,
 			rounding,
-			borderStyle,
 			...swatch,
 		}, context))}
 	</div>

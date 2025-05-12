@@ -13,7 +13,6 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Swatch",
 	size = "m",
-	borderStyle = "default",
 	shape = "square",
 	imageUrl,
 	isMixedValue = false,
@@ -31,18 +30,6 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
-	switch (borderStyle) {
-		case "none":
-			borderStyle = "noBorder";
-			break;
-		case "border":
-			borderStyle = "border";
-			break;
-		case "light":
-			borderStyle = "lightBorder";
-			break;
-	}
-
 	let pickedColor = swatchColor;
 
 	if (isMixedValue) pickedColor = "var(--spectrum-gray-25)";
@@ -57,7 +44,6 @@ export const Template = ({
 				[`${rootClass}--rounding${capitalize(
 							lowerCase(rounding)
 						)}`]: typeof rounding !== "undefined" && rounding !== "partial",
-				[`${rootClass}--${borderStyle}`]: typeof borderStyle !== "undefined" && borderStyle !== "default",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
 				"is-hover": isHovered,
@@ -146,7 +132,6 @@ export const Template = ({
 
 /* Shows a single group of swatches with all rounding options. */
 export const RoundingGroup = (args, context) => Container({
-	withBorder: false,
 	content: html`
 		${Container({
 			withBorder: false,
@@ -169,34 +154,8 @@ export const RoundingGroup = (args, context) => Container({
 	`
 }, context);
 
-/* Shows a single group of swatches with all border options. */
-export const BorderGroup = (args, context) => Container({
-	withBorder: false,
-	content: html`
-		${Container({
-			withBorder: false,
-			heading: "Default",
-			containerStyles: { "gap": "8px" },
-			content: Template(args, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "No border",
-			containerStyles: { "gap": "8px" },
-			content: Template({...args, borderStyle: "noBorder"}, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Light Border",
-			containerStyles: { "gap": "8px" },
-			content: Template({...args, borderStyle: "lightBorder"}, context),
-		}, context)}
-	`
-}, context);
-
 /* Shows a single group of swatches that are empty/nothing in various shapes and rounding. */
 export const EmptyGroup = (args, context) => Container({
-	withBorder: false,
 	content: html`
 		${Container({
 			withBorder: false,
@@ -218,7 +177,6 @@ export const EmptyGroup = (args, context) => Container({
 
 /* Shows a single group of disabled swatches. */
 export const DisabledGroup = (args, context) => Container({
-	withBorder: false,
 	content: html`
 		${Container({
 			withBorder: false,
@@ -234,7 +192,6 @@ export const DisabledGroup = (args, context) => Container({
 }, context);
 
 export const SizingGroup = (args, context) =>Container({
-	withBorder: false,
 	content: html`
 		${Container({
 			withBorder: false,

@@ -11,13 +11,13 @@ import { RoundingTemplate, Template } from "./template.js";
  *
  * ## Usage notes
  *
- *  * ### Corner rounding in swatch groups
+ * The border opacity of swatches in a swatch group is 20%.
+ *
+ * ### Corner rounding in swatch groups
  *
  * A corner rounding of "none" (`.spectrum-Swatch--roundingNone` class) should be used in a swatch group in order to help minimize the Hermann grid illusion that happens at the intersections of the white space within the group.
  *
  * The only exception is when a swatch group only takes up a single row. In that case, use any of the rounding options.
- *
- * The border opacity of swatches in a swatch group is 20%.
  *
  * ### Density
  *
@@ -64,12 +64,12 @@ export default {
 				defaultValue: { summary: "none", },
 			},
 		},
-		tags: ["migrated"],
 	},
 	args: {
 		rootClass: "spectrum-SwatchGroup",
 		containerWidth: "200px",
 		density: "regular",
+		size: "m",
 		rounding: "none",
 		items: [
 			{swatchColor: "rgb(184, 109, 70)",},
