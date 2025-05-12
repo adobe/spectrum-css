@@ -172,7 +172,7 @@ module.exports = defineConfig({
 				if (versions.size <= 1) continue;
 
 				// Use semver to determine the highest version of the dependencies in the versions list and use that as the version
-				const highestVersion = Array.from(versions).sort(semverSort).pop();
+				const highestVersion = Array.from(versions).sort(semverSort).shift();
 
 				// Update all the workspaces with the highest version
 				for (const dep of Yarn.dependencies({ ident: dependencyName })) {

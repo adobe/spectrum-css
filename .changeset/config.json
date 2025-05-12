@@ -1,21 +1,23 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    {
-      "repo": "adobe/spectrum-css"
-    }
-  ],
-  "commit": false,
-  "fixed": [],
-  "linked": [],
-  "access": "public",
-  "baseBranch": "main",
-  "updateInternalDependencies": "minor",
-  "useCalculatedVersion": true,
-  "ignore": [],
-  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
-    "onlyUpdatePeerDependentsWhenOutOfRange": true,
-    "updateInternalDependents": "out-of-range"
-  }
+	"$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
+	"changelog": [
+		"@changesets/changelog-github",
+		{
+			"repo": "adobe/spectrum-css"
+		}
+	],
+	"commit": false,
+	"fixed": [],
+	"linked": [],
+	"access": "public",
+	"baseBranch": "main",
+	"updateInternalDependencies": "minor",
+	"ignore": [],
+	"___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+		"onlyUpdatePeerDependentsWhenOutOfRange": true,
+		"updateInternalDependents": "out-of-range"
+	},
+	"snapshot": {
+		"useCalculatedVersion": true
+	}
 }
