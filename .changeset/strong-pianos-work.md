@@ -10,7 +10,7 @@ Removes custom menu item background color tokens: `@adobe/spectrum-tokens` has b
 
 In addition to other small token and minor style changes, there were several new features that were added to this version of menu, including:
 
-- A thumbnail can now be can now used in place of an icon
+- A thumbnail can now be used in place of an icon
 - A section description can now be included below the menu section heading
 - The actions area previously held action switches for multi-select, and in this version, an external link action icon can be included in that area
 
@@ -24,6 +24,7 @@ In addition to other small token and minor style changes, there were several new
 - `--mod-menu-item-thumbnail-to-label`
 - `--mod-menu-item-thumbnail-width`
 - `--mod-menu-item-top-to-thumbnail`
+- `--mod-menu-item-top-to-workflow-icon`
 - `--mod-menu-section-description-color`
 - `--mod-menu-section-description-font-size`
 - `--mod-menu-section-description-font-weight`

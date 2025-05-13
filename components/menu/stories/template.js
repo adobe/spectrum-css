@@ -129,7 +129,6 @@ const StartAction = ({
 		return html`
 			${Checkbox({
 				size,
-				isEmphasized: true,
 				isChecked: isSelected,
 				isDisabled,
 				id: `menu-checkbox-${idx}`,

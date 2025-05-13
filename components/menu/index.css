@@ -88,6 +88,8 @@
 
 	--spectrum-menu-item-top-to-action: var(--spectrum-spacing-50);
 	--spectrum-menu-item-top-to-checkbox: var(--spectrum-spacing-50);
+	--spectrum-menu-item-top-to-workflow-icon: var(--spectrum-component-top-to-workflow-icon-100);
+
 	--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-100);
 	--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-100);
@@ -135,6 +137,8 @@
 		--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-75);
 		--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-75);
 
+		--spectrum-menu-item-top-to-workflow-icon: var(--spectrum-component-top-to-workflow-icon-75);
+
 		--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-75);
 
 		--spectrum-menu-item-description-font-size: var(--spectrum-font-size-50);
@@ -179,6 +183,8 @@
 		--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-200);
 		--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-200);
 
+		--spectrum-menu-item-top-to-workflow-icon: var(--spectrum-component-top-to-workflow-icon-200);
+
 		--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-200);
 
 		--spectrum-menu-item-description-font-size: var(--spectrum-font-size-100);
@@ -222,6 +228,8 @@
 		--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-300);
 		--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-300);
 		--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-300);
+
+		--spectrum-menu-item-top-to-workflow-icon: var(--spectrum-component-top-to-workflow-icon-300);
 
 		--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-300);
 
@@ -367,6 +375,7 @@
 	.spectrum-Menu-itemIcon--workflowIcon {
 		/* Always provide space at the end of a workflow icon. */
 		margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+		margin-block-start: calc(var(--mod-menu-item-top-to-workflow-icon, var(--spectrum-menu-item-top-to-workflow-icon)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
 	}
 
 	.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark, .spectrum-Menu-linkout) {
@@ -497,10 +506,9 @@
 		}
 	}
 
-	&:focus,
-	&.is-focused {
+	&:focus-visible,
+	&.is-focus-visible {
 		background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-keyboard-focus)));
-		outline: none;
 
 		> .spectrum-Menu-itemLabel {
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-content-color-focus, var(--spectrum-menu-item-label-content-color-focus)));
@@ -574,8 +582,11 @@
 	&:active {
 		background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-down, var(--spectrum-menu-item-background-color-down)));
 
-		/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
-		transform: perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down))) translateZ(var(--spectrum-component-size-difference-down));
+		/* The perceived motion can be a bit jarring given the size/complexity of a menu item */
+		@media (prefers-reduced-motion: no-preference) {
+			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
+			transform: perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down))) translateZ(var(--spectrum-component-size-difference-down));
+		}
 
 		> .spectrum-Menu-itemLabel {
 			color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-content-color-down, var(--spectrum-menu-item-label-content-color-down)));

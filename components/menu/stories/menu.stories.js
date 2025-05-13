@@ -1,5 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -86,9 +86,16 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=37252-553",
 		},
+		downState: {
+			selectors: [".spectrum-Menu-item:not(.is-disabled)"],
+		},
 		packageJson,
 		metadata,
 	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
+	tags: ["migrated"],
 };
 
 export const Default = MenuWithVariants.bind({});
