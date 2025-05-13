@@ -19604,8 +19604,8 @@ __metadata:
   linkType: hard
 
 "style-dictionary@npm:^4.3.3":
-  version: 4.3.3
-  resolution: "style-dictionary@npm:4.3.3"
+  version: 4.4.0
+  resolution: "style-dictionary@npm:4.4.0"
   dependencies:
     "@bundled-es-modules/deepmerge": "npm:^4.3.1"
     "@bundled-es-modules/glob": "npm:^10.4.2"
@@ -19622,7 +19622,7 @@ __metadata:
     tinycolor2: "npm:^1.6.0"
   bin:
     style-dictionary: bin/style-dictionary.js
-  checksum: 10c0/25b66885c80f00993a66916a9b064bf974baef59e387ce26265035dd8f35c55601d0c7d253506b3cea4de9d8c17fa693666ae4e1cea6e380f6a263065c824855
+  checksum: 10c0/fad9b95407922fff80b3b172639669198c49628a053d1b3dc65cada45f4f1031aef24cc0cbfc2e958652da192d2fc145ef90ab32a0cf01dc6764137193d164f3
   languageName: node
   linkType: hard
 
