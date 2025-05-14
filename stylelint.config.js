@@ -1,8 +1,12 @@
-module.exports = {
+/** --------------------------------------------------------------
+ * Stylelint config
+ * -------------------------------------------------------------- */
+/** @type {import('stylelint').Config} */
+export default {
+	extends: ["stylelint-config-standard"],
 	allowEmptyInput: true,
 	cache: true,
 	defaultSeverity: "warning",
-	extends: ["stylelint-config-standard"],
 	plugins: [
 		"stylelint-header",
 		"stylelint-selector-bem-pattern",

@@ -7,7 +7,7 @@
 <h1 align="center">Spectrum CSS</h1>
 <h3 align="center">A CSS-implementation of the Spectrum design language</h3>
 
-<img src=".storybook/assets/images/spectrum-css_illustration_desktop.png">
+<img src=".storybook/assets/images/spectrum-css_illustration_desktop.png" alt="Spectrum CSS illustration"/>
 
 ## Features
 
@@ -16,7 +16,7 @@
 - 🧪 **Rigorously tested**: These individually-versioned components have been vetted to be accessible and inclusive of global audiences.
 - 📱 **Multi-platform support**: We support [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support) for scalability and flexibility.
 
-&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000"/>](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785"/>](https://opensource.adobe.com/spectrum-css/)
+&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000" alt="Adobe logo"/>](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785" alt="Storybook logo"/>](https://opensource.adobe.com/spectrum-css/)
 
 ## Using Spectrum CSS
 
@@ -72,37 +72,49 @@ Tokens values are mapped to context-specific classes which can be applied to the
 
 All contexts you want to use must be defined in order to load all the appropriate custom properties for the components you are using.
 
-#### Global variables
-
-##### Visual language
-
-- `.spectrum` - The default visual language for Spectrum CSS; represents the Spectrum 2 visual language.
+#### Using custom property tokens for theming
 
 ##### Scales
 
 Scales represent the browsing context of the user. They are used to adjust the size of components to improve readability and usability on different devices.
 
-- `.spectrum--medium` - The default scale for Spectrum CSS, used for desktop and tablet devices
-- `.spectrum--large` - A larger scale for Spectrum CSS, used for mobile devices and other small screens to create a more touch-friendly experience
+- `Medium` - Used for desktop and tablet devices; this is the default scale for all components.
+- `Large` - A larger scale for Spectrum CSS, used for mobile devices and other small screens to create a more touch-friendly experience. Styles are applied to the large layer and can be set to override the medium layer by updating the cascading layers order:
+
+```css
+@layer defaults, medium, large;
+```
 
 ##### Themes (colorstops)
 
 Themes represent the color scheme of the user's browsing context. They are used to adjust the color of components to improve readability and usability in different environments.
 
-- `.spectrum--light` - The default theme for Spectrum CSS, used for light mode
-- `.spectrum--dark` - A darker theme for Spectrum CSS, used for dark mode
+- `color-scheme: light;` - The default theme for Spectrum CSS, used for light mode
+- `color-scheme: dark;` - A darker theme for Spectrum CSS, used for dark mode
 
 Other themes are available but are in the process of being deprecated and should not be used in new projects.
 
 #### Context example
 
-Put together, we would define the context for our application in the following way:
+Put together, an application can opt into a visual language by setting the application's preferred color-scheme. For apps who want to support only one color scheme, you can set the `color-scheme` property on the `<html>` element. For example, if you want to support only light mode, you can set the `color-scheme` property to `light`:
 
-```html
-<html class="spectrum spectrum--medium spectrum--light"></html>
+```css
+:root {
+  color-scheme: light;
+}
 ```
 
-Because CSS custom properties honor the cascading nature of CSS, you can infinitely nest different contexts. For example, you could have a `.spectrum--dark` context inside of a `.spectrum--light` context, and components will honor the innermost context.
+Individual containers or components can override this color-scheme by setting the `color-scheme` property on the component itself. For example, if you want to support only dark mode for a specific component, you can set the `color-scheme` property to `dark`:
+
+```css
+.my-container {
+  color-scheme: dark;
+}
+```
+
+If an application wants to allow customers' preferred color scheme to be honored, they can define the preferred order of themes by listing the preferred theme first (used in cases where users have no preference defined), followed by the alternate theme. For example, if you want to support both light and dark mode, but dark is the preferred theme for your app, you can set `color-scheme: dark light`.
+
+The only way to force a theme is to set only one value without a fallback. For example, if you want to ensure a popover renders only light mode, you can set `color-scheme: light` on that element.
 
 ### Modifying components
 
@@ -111,16 +123,6 @@ You can override variables and modify Spectrum CSS' look and feel by re-defining
 ### Importing UI icons
 
 Some components require certain "UI icons" to render. These icons are released within the [`@spectrum-css/ui-icons`](https://www.npmjs.com/package/@spectrum-css/ui-icons) package and are used by components like `@spectrum-css/icon` and `@spectrum-css/actionbutton`.
-
-Based on [which scales](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales) you'll be using, you can choose to load different files:
-
-- `spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
-
-- `spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
-
-- `spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
-
-**Note:** If you're using `spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
 
 ### Importing workflow icons
 

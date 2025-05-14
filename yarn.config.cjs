@@ -202,6 +202,7 @@ module.exports = defineConfig({
 			 */
 			workspace.set("license", "Apache-2.0");
 			workspace.set("author", "Adobe");
+			workspace.set("type", "module");
 
 			workspace.set("repository.type", "git");
 			workspace.set("repository.url", "https://github.com/adobe/spectrum-css.git");

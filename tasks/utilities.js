@@ -13,14 +13,17 @@
 
 /* eslint-disable no-console */
 
-const fs = require("fs");
+import fs, { existsSync, mkdirSync, readdirSync, statSync } from "fs";
+import { dirname, join, relative, sep } from "path";
 const fsp = fs.promises;
-const path = require("path");
 
-const fg = require("fast-glob");
-const { rimrafSync } = require("rimraf");
-const postcss = require("postcss");
-const valuesParser = require("postcss-values-parser");
+import fg from "fast-glob";
+import { parse } from "postcss";
+import { parse as _parse } from "postcss-values-parser";
+import { rimrafSync } from "rimraf";
+
+import { fileURLToPath } from "url";
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 /**
  * A source of truth for commonly used directories
@@ -31,11 +34,11 @@ const valuesParser = require("postcss-values-parser");
  * @property {string} dirs.storybook
  */
 const dirs = {
-	root: path.join(__dirname, ".."),
-	components: path.join(__dirname, "../components"),
-	tokens: path.join(__dirname, "../tokens"),
-	publish: path.join(__dirname, "../dist"),
-	storybook: path.join(__dirname, "../.storybook"),
+	root: join(__dirname, ".."),
+	components: join(__dirname, "../components"),
+	tokens: join(__dirname, "../tokens"),
+	publish: join(__dirname, "../dist"),
+	storybook: join(__dirname, "../.storybook"),
 };
 
 /**
@@ -65,7 +68,7 @@ const timeInMs = (seconds, nanoseconds) =>
 
 /** @type {(string) => string} */
 const relativePrint = (filename, { cwd = dirs.root } = {}) =>
-	path.relative(cwd, filename);
+	relative(cwd, filename);
 
 /**
  * Converts a number of bytes to a human-readable string
@@ -93,7 +96,7 @@ function bytesToSize(bytes) {
  * @returns {string}
  */
 function getPackageFromPath(filePath = process.cwd()) {
-	const parts = filePath.split(path.sep);
+	const parts = filePath.split(sep);
 
 	// Capture component name from a local or node_modules syntax
 	if (parts.includes("components") || parts.includes("@spectrum-css")) {
@@ -107,7 +110,7 @@ function getPackageFromPath(filePath = process.cwd()) {
 
 	// This is a fallback best-guess scenario:
 	// Split the path from root dir and capture the first folder as the package name
-	const guessParts = path.relative(dirs.root, filePath).split(path.sep);
+	const guessParts = relative(dirs.root, filePath).split(sep);
 	return guessParts[0];
 }
 
@@ -122,17 +125,16 @@ function getAllComponentNames(includeDeprecated = true) {
 	let deprecated = [];
 	if (
 		includeDeprecated &&
-		fs.existsSync(path.join(dirs.storybook, "deprecated"))
+		existsSync(join(dirs.storybook, "deprecated"))
 	) {
-		deprecated = fs.readdirSync(path.join(dirs.storybook, "deprecated"));
+		deprecated = readdirSync(join(dirs.storybook, "deprecated"));
 	}
 
 	return [
 		...new Set([
-			...fs
-				.readdirSync(dirs.components)
+			...readdirSync(dirs.components)
 				.filter((file) =>
-					fs.existsSync(path.join(dirs.components, file, "package.json")),
+					existsSync(join(dirs.components, file, "package.json")),
 				),
 			...deprecated,
 		]),
@@ -174,7 +176,7 @@ function extractProperties(content, meta = {}) {
 
 	// Process CSS content through the valuesParser an postcss to capture
 	// all the custom properties defined and used in the CSS
-	postcss.parse(content).walkDecls((decl) => {
+	parse(content).walkDecls((decl) => {
 		Object.entries(meta).forEach(([key, values]) => {
 			found[key] = found[key] ?? new Set();
 
@@ -185,7 +187,7 @@ function extractProperties(content, meta = {}) {
 			});
 
 			// Parse the value of the declaration to extract custom properties
-			valuesParser.parse(decl.value).walk((node) => {
+			_parse(decl.value).walk((node) => {
 				if (node.type !== "word" || !node.isVariable) return;
 
 				// Extract the custom property name from the var() function
@@ -229,8 +231,8 @@ async function fetchContent(
 
 	const fileData = await Promise.all(
 		files.map(async (file) => ({
-			input: path.join(cwd, file),
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
+			input: join(cwd, file),
+			content: await fsp.readFile(join(cwd, file), "utf8"),
 		})),
 	);
 
@@ -255,7 +257,7 @@ async function fetchContent(
 
 	return Promise.all(
 		files.map(async (file) => ({
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
+			content: await fsp.readFile(join(cwd, file), "utf8"),
 			input: file,
 		})),
 	);
@@ -270,23 +272,23 @@ async function fetchContent(
  * @returns Promise<string|void>
  */
 async function copy(from, to, { cwd, isDeprecated = true } = {}) {
-	if (!fs.existsSync(from)) return;
+	if (!existsSync(from)) return;
 
-	if (!fs.existsSync(path.dirname(to))) {
-		await fsp.mkdir(path.dirname(to), { recursive: true }).catch((err) => {
+	if (!existsSync(dirname(to))) {
+		await fsp.mkdir(dirname(to), { recursive: true }).catch((err) => {
 			if (!err) return;
-			return Promise.resolve(`${"✗".red}  problem making the ${relativePrint(path.dirname(to), { cwd }).yellow} directory`);
+			return Promise.resolve(`${"✗".red}  problem making the ${relativePrint(dirname(to), { cwd }).yellow} directory`);
 		});
 	}
 
 	// Check if the input is a file or a directory
-	const stats = fs.statSync(from);
+	const stats = statSync(from);
 	if (stats.isDirectory()) {
 		return fsp
 			.cp(from, to, { recursive: true, force: true })
 			.then(async () => {
 				// Determine the number of files and the size of the copied files
-				const stats = await fg(path.join(cwd, "components") + "/**/*", {
+				const stats = await fg(join(cwd, "components") + "/**/*", {
 					onlyFiles: true,
 					stats: true,
 				});
@@ -330,15 +332,15 @@ async function writeAndReport(
 	return fsp
 		.writeFile(output, content, { encoding })
 		.then(() => {
-			const stats = fs.statSync(output);
-			const relativePath = path.relative(cwd, output);
+			const stats = statSync(output);
+			const relativePath = relative(cwd, output);
 			return Promise.resolve([
 				`${"✓".green}  ${relativePath.padEnd(20, " ").yellow}${isDeprecated ? "  -- deprecated --".gray : `  ${bytesToSize(stats.size).gray}`}`,
 			]);
 		})
 		.catch((err) => {
 			if (!err) return;
-			const relativePath = path.relative(cwd, output);
+			const relativePath = relative(cwd, output);
 			console.log(`${"✗".red}  ${relativePath.yellow} not written`);
 			return Promise.reject(err);
 		});
@@ -356,28 +358,22 @@ function cleanAndMkdir(path, clean = true) {
 	let isFile = false;
 
 	// If the output directory exists, delete it but don't throw an error if it doesn't
-	if (clean && fs.existsSync(path)) {
-		isFile = fs.statSync(path).isFile();
+	if (clean && existsSync(path)) {
+		isFile = statSync(path).isFile();
 		rimrafSync(path, { preserveRoot: true });
 	}
 
 	// Create the output directory fresh
-	fs.mkdirSync(isFile ? path.dirname(path) : path, { recursive: true });
+	mkdirSync(isFile ? path.dirname(path) : path, { recursive: true });
 }
 
-module.exports = {
-	bytesToSize,
-	copy,
-	dirs,
-	log,
-	extractProperties,
-	fetchContent,
-	cleanAndMkdir,
-	getAllComponentNames,
-	getPackageFromPath,
-	relativePrint,
+export {
+	bytesToSize, cleanAndMkdir, copy,
+	dirs, extractProperties,
+	fetchContent, getAllComponentNames,
+	getPackageFromPath, log, relativePrint,
 	timeInMs,
 	validateComponentName,
 	writeAndReport,
-	writeConsoleTable,
+	writeConsoleTable
 };

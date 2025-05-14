@@ -1,12 +1,20 @@
 import fs from "node:fs";
 import path from "node:path";
-import remarkGfm from 'remark-gfm';
+import remarkGfm from "remark-gfm";
+
+import { fileURLToPath } from "url";
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 // Get a list of all the folders in the components directory
 const componentDir = path.resolve(__dirname, "../components");
-const components = fs.readdirSync(componentDir, { withFileTypes: true })
-	.filter(dirent => dirent.isDirectory() && fs.existsSync(path.resolve(componentDir, dirent.name, "package.json")))
-	.map(dirent => dirent.name);
+const components = fs
+	.readdirSync(componentDir, { withFileTypes: true })
+	.filter(
+		(dirent) =>
+			dirent.isDirectory() &&
+      fs.existsSync(path.resolve(componentDir, dirent.name, "package.json"))
+	)
+	.map((dirent) => dirent.name);
 
 export default {
 	stories: [
@@ -44,6 +52,10 @@ export default {
 		},
 		{
 			name: "@storybook/addon-measure",
+			options: {},
+		},
+		{
+			name: "@storybook/addon-viewport",
 			options: {},
 		},
 		{
@@ -86,6 +98,11 @@ export default {
 		disableWhatsNewNotifications: true,
 		builder: "@storybook/builder-vite",
 	},
+	features: {
+		viewportStoryGlobals: true,
+		/* Builds stories.json to help with on-demand loading */
+		buildStoriesJson: true,
+	},
 	async viteFinal(config, { configType }) {
 		const { mergeConfig } = await import("vite");
 
@@ -110,17 +127,20 @@ export default {
 			},
 			resolve: {
 				alias: [
-					...components.map(component => ({ find: `@spectrum-css/${component}`, replacement: path.resolve(__dirname, `../components/${component}`) })),
+					...components.map((component) => ({
+						find: `@spectrum-css/${component}`,
+						replacement: path.resolve(__dirname, `../components/${component}`),
+					})),
 					{
-						find: `@spectrum-css/tokens`,
-						replacement: path.resolve(__dirname, `../tokens`),
+						find: "@spectrum-css/tokens",
+						replacement: path.resolve(__dirname, "../tokens"),
 					},
 					{
-						find: `@spectrum-css/ui-icons`,
-						replacement: path.resolve(__dirname, `../ui-icons`),
+						find: "@spectrum-css/ui-icons",
+						replacement: path.resolve(__dirname, "../ui-icons"),
 					},
 				],
-			}
+			},
 		});
 	},
 	build: {
@@ -141,10 +161,6 @@ export default {
 		reactDocgen: "react-docgen",
 		// Not using typescript so disable the check
 		check: false,
-	},
-	features: {
-		/* Builds stories.json to help with on-demand loading */
-		buildStoriesJson: true,
 	},
 	refs: {
 		"web-components": {

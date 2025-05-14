@@ -13,32 +13,28 @@
 
 /* eslint-disable no-console */
 
-const fs = require("fs");
+import fs, { existsSync } from "fs";
+import { basename, dirname, join } from "path";
 const fsp = fs.promises;
-const path = require("path");
 
-const { hideBin } = require("yargs/helpers");
-const yargs = require("yargs");
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
-const { deflate } = require("zlib");
-const { promisify } = require("util");
+import { promisify } from "util";
+import { deflate } from "zlib";
 
-const postcss = require("postcss");
-const postcssrc = require("postcss-load-config");
-const prettier = require("prettier");
+import postcss from "postcss";
+import postcssrc from "postcss-load-config";
+import { format } from "prettier";
 
-require("colors");
+import "colors";
 
 const gzip = promisify(deflate);
 
-const {
-	dirs,
-	relativePrint,
-	getPackageFromPath,
-	validateComponentName,
-	fetchContent,
-	writeAndReport,
-} = require("./utilities.js");
+import { dirs, fetchContent, getPackageFromPath, relativePrint, validateComponentName, writeAndReport } from "./utilities.js";
+
+import { fileURLToPath } from "url";
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const report = {
 	failure: (message) => `${"✗".red}  ${message}`,
@@ -71,7 +67,7 @@ async function processCSS(
 	} = {},
 ) {
 	if (!content) {
-		if (!input || !fs.existsSync(input)) {
+		if (!input || !existsSync(input)) {
 			return Promise.reject(
 				new Error("[processCSS] Content or an input file path must be provided"),
 			);
@@ -87,7 +83,7 @@ async function processCSS(
 	}
 
 	// If the output file is a minified file, force the minify flag to true
-	if (output && path.basename(output, ".css").endsWith(".min")) minify = true;
+	if (output && basename(output, ".css").endsWith(".min")) minify = true;
 
 	const ctx = {
 		cwd,
@@ -127,7 +123,7 @@ async function processCSS(
 		result.css = `${customTagline}\n${result.css}`;
 	}
 
-	const formatted = !minify ? await prettier.format(result.css, {
+	const formatted = !minify ? await format(result.css, {
 		parser: "css",
 		filepath: input,
 		printWidth: 500,
@@ -140,8 +136,8 @@ async function processCSS(
 	if (!output) return Promise.resolve(formatted);
 
 	/* Ensure the directory exists */
-	const outputDir = path.dirname(output);
-	if (!fs.existsSync(outputDir)) {
+	const outputDir = dirname(output);
+	if (!existsSync(outputDir)) {
 		await fsp.mkdir(outputDir, { recursive: true }).catch((err) => {
 			if (!err) return;
 
@@ -178,14 +174,14 @@ async function processCSS(
  */
 async function build({ cwd = process.cwd(), clean = false, minify = false, componentName } = {}) {
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
+	if (!existsSync(join(cwd, "index.css"))) return;
 
 	if (!componentName || validateComponentName(componentName) !== true) {
 		componentName = getPackageFromPath(cwd);
 	}
 
 	return Promise.all([
-		processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), {
+		processCSS(undefined, join(cwd, "index.css"), join(cwd, "dist", "index.css"), {
 			cwd,
 			clean,
 			skipMapping: true,
@@ -193,7 +189,7 @@ async function build({ cwd = process.cwd(), clean = false, minify = false, compo
 			preserveVariables: true,
 			stripLocalSelectors: false,
 		}),
-		minify ? processCSS(undefined, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.min.css"), {
+		minify ? processCSS(undefined, join(cwd, "index.css"), join(cwd, "dist", "index.min.css"), {
 			cwd,
 			clean,
 			skipMapping: true,
@@ -219,10 +215,10 @@ async function main({
 	minify = false,
 } = {}) {
 	if (!cwd && componentName) {
-		cwd = path.join(dirs.components, componentName);
+		cwd = join(dirs.components, componentName);
 	}
 
-	if (!fs.existsSync(cwd)) {
+	if (!existsSync(cwd)) {
 		return Promise.resolve(
 			report.failure(`Component directory not found at ${relativePrint(cwd)}`)
 		);
@@ -248,7 +244,7 @@ async function main({
 	const reports = [];
 	const errors = [];
 
-	await build({ cwd, clean, minify }).then((report) => reports.push(report)).catch((err) => errors.push(err));
+	await build({ cwd, clean, minify, componentName }).then((report) => reports.push(report)).catch((err) => errors.push(err));
 
 	const logs = reports.flat(Infinity).filter(Boolean);
 	const errs = errors.flat(Infinity).filter(Boolean);
@@ -274,9 +270,7 @@ async function main({
 	else process.exit(0);
 }
 
-exports.processCSS = processCSS;
-exports.fetchContent = fetchContent;
-exports.default = main;
+export { main as default, fetchContent, processCSS };
 
 let {
 	_: components,

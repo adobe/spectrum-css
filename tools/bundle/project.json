@@ -10,11 +10,10 @@
 				"{projectRoot}/tasks/bundler.js",
 				"builder",
 				"postcss",
-				"stylelint",
 				{ "env": "NODE_ENV" }
 			],
 			"options": {
-				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'import(\"./tasks/bundler.js\").then(module => module.main() )'"],
+				"commands": ["node ./tasks/bundler.js"],
 				"cwd": "{projectRoot}"
 			},
 			"outputs": [
@@ -37,7 +36,7 @@
 			"dependsOn": [],
 			"executor": "nx:run-commands",
 			"inputs": [
-				"{projectRoot}/tasks/bundler.js",
+				"{projectRoot}/tasks/refresh.js",
 				"builder",
 				"postcss",
 				"stylelint",
@@ -45,7 +44,7 @@
 			],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'import(\"./tasks/bundler.js\").then(module => module.refresh() )'"
+					"node ./tasks/refresh.js"
 				],
 				"cwd": "{projectRoot}"
 			},

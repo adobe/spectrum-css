@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-const { statSync, existsSync, readdirSync } = require("fs");
-const { join, relative } = require("path");
+import { existsSync, readdirSync, statSync } from "fs";
+import { join, relative } from "path";
 
-const github = require("@actions/github");
-const glob = require("@actions/glob");
+import { context, getOctokit } from "@actions/github";
+import { create } from "@actions/glob";
 
 /**
  * List all files in the directory to help with debugging
@@ -39,7 +39,7 @@ function debugEmptyDirectory(path, pattern, { core }) {
             if (dirent.isFile()) {
                 const file = join(path, dirent.name);
                 if (dirent.name.startsWith(".")) return;
-                core.info(`- ${relative(path, file)}  |  ${exports.bytesToSize(statSync(file).size)}`);
+                core.info(`- ${relative(path, file)}  |  ${bytesToSize(statSync(file).size)}`);
             } else if (dirent.isDirectory()) {
                 const dir = join(path, dirent.name);
                 if (dirent.name.startsWith(".") || dirent.name === "node_modules") return;
@@ -61,7 +61,7 @@ function debugEmptyDirectory(path, pattern, { core }) {
  * @param {number} bytes
  * @returns {string} The size in human readable format
  */
-exports.bytesToSize = function (bytes) {
+export function bytesToSize (bytes) {
     if (!bytes) return "-";
     if (bytes === 0) return "0";
 
@@ -77,7 +77,7 @@ exports.bytesToSize = function (bytes) {
     }
 
     return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
-};
+}
 
 /** @typedef {import('@octokit/rest').RestEndpointMethodTypes['issues']} Issues */
 /**
@@ -86,20 +86,20 @@ exports.bytesToSize = function (bytes) {
  * @param {string} token - The GitHub token to use for authentication
  * @returns {Promise<Issues['createComment']['response'] | Issues['updateComment']['response']>}
  */
-exports.addComment = async function ({ search, content, token }) {
+export async function addComment ({ search, content, token }) {
     /**
      * @description Set up the octokit client
      * @type ReturnType<import('@actions/github').getOctokit>
      */
-    const octokit = new github.getOctokit(token);
+    const octokit = new getOctokit(token);
 
     // Fetch data about the action that triggered the workflow
     /** @type import('@actions/github/lib/interfaces').WebhookPayload['pull_request'] */
-    const pullRequest = github.context.payload.pull_request;
+    const pullRequest = context.payload.pull_request;
     /** @type string */
-    const owner = github.context.payload.repository.owner.login;
+    const owner = context.payload.repository.owner.login;
     /** @type string */
-    const repo = github.context.payload.repository.name;
+    const repo = context.payload.repository.name;
 
     if (!pullRequest) {
         core.warning(`No pull request found in the context, skipping comment`);
@@ -141,7 +141,7 @@ exports.addComment = async function ({ search, content, token }) {
     }
 
     return octokit.rest.issues[action](commentData);
-};
+}
 
 /**
  * Use the provided glob pattern to fetch the files and their sizes from the
@@ -150,11 +150,11 @@ exports.addComment = async function ({ search, content, token }) {
  * @param {string[]} patterns
  * @returns {Promise<Map<string, number>>} - Returns the relative path and size of the files
  */
-exports.fetchFilesAndSizes = async function (rootPath, patterns = [], { core }) {
+export async function fetchFilesAndSizes (rootPath, patterns = [], { core }) {
     if (!existsSync(rootPath)) return new Map();
 
     /** @type import('@actions/glob').Globber */
-    const globber = await glob.create(patterns.map((f) => join(rootPath, f)).join("\n"));
+    const globber = await create(patterns.map((f) => join(rootPath, f)).join("\n"));
 
     /** @type Awaited<ReturnType<import('@actions/glob').Globber['glob']>> */
     const files = await globber.glob();
@@ -178,4 +178,4 @@ exports.fetchFilesAndSizes = async function (rootPath, patterns = [], { core }) 
             })
             .filter(Boolean),
     );
-};
+}
