@@ -2,7 +2,8 @@ import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
-import { html, nothing } from "lit";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -12,20 +13,24 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tag",
-	size = "m",
-	iconName,
-	avatarUrl,
-	label,
+	size = "s",
+	iconName = "",
+	avatarUrl = "",
+	thumbnailUrl = "",
+	label = "",
 	isSelected = false,
 	isEmphasized = false,
 	isDisabled = false,
-	isInvalid = false,
-	hasClearButton = false,
+	isHovered = false,
+	isKeyboardFocused = false,
+	isActive = false,
+	isReadOnly = false,
+	isRemovable = false,
 	id = getRandomId("tag"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
-	if(isInvalid) iconName = "Alert";
+	const { updateArgs } = context;
 
 	return html`
 		<div
@@ -33,23 +38,34 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
-				"is-emphasized": isEmphasized,
+				[`${rootClass}--emphasized`]: isEmphasized,
 				"is-disabled": isDisabled,
-				"is-invalid": isInvalid,
 				"is-selected": isSelected,
+				"is-hover": isHovered,
+				"is-focus-visible": isKeyboardFocused,
+				"is-active": isActive,
+				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 			tabindex=${isDisabled ? "-1" : "0"}
 			style=${styleMap(customStyles)}
+			@click=${function() {
+				if (isReadOnly || isDisabled) return;
+				updateArgs({ isSelected: !isSelected });
+			}}
 		>
-			${when(avatarUrl && !isInvalid, () =>
+			${when(avatarUrl, () =>
 				Avatar({
+					size: ({
+						s: "50",
+						m: "75",
+						l: "100",
+					}[size] || "75"),
 					image: avatarUrl,
-					size: "50",
 				}, context)
 			)}
-			${when(iconName || isInvalid, () =>
+			${when(iconName, () =>
 				Icon({
 					size,
 					iconName,
@@ -57,16 +73,28 @@ export const Template = ({
 					customClasses: [`${rootClass}-itemIcon`],
 				}, context)
 			)}
+			${when(thumbnailUrl, () =>
+				Thumbnail({
+					size: ({
+						s: "50",
+						m: "75",
+						l: "100",
+					}[size] || "75"),
+					imageURL: thumbnailUrl,
+				}, context)
+			)}
 			<span class="${rootClass}-itemLabel">${label}</span>
-			${when(hasClearButton, () =>
+			${when(isRemovable, () =>
 				ClearButton({
 					size,
+					isDisabled,
+					isFocusable: false,
 					customClasses: [`${rootClass}-clearButton`],
 					onclick: (evt) => {
-						const el = evt.target;
-						if (!el) return;
+						const button = evt.currentTarget;
+						if (!button) return;
 
-						const wrapper = el.closest(rootClass);
+						const wrapper = button.closest(`.${rootClass}`);
 						wrapper.parentNode.removeChild(wrapper);
 					},
 				}, context)
@@ -85,36 +113,23 @@ export const TagsDefaultOptions = ({
 	},
 	content: html`
 		${Template(args, context)}
-		${!args.isInvalid ?
-			Template({
+		${args.isRemovable ? "" : Template({
+			...args,
+			isRemovable: true,
+			}, context)}
+		${Template({
 				...args,
 				hasIcon: true,
-				iconName: "CheckmarkCircle"
-			}, context): nothing }
-		${!args.isInvalid ?
-			Template({
+				iconName: "CheckmarkCircle",
+			}, context)}
+			${Template({
+				...args,
+				hasThumbnail: true,
+				thumbnailUrl: "example-card-landscape.png",
+			}, context)}
+		${Template({
 			...args,
 				hasAvatar: true,
 				avatarUrl: "example-ava.png",
-			}, context): nothing }`,
-}, context);
-
-export const SelectedTemplate = (args, context) => Container({
-	withBorder: false,
-	direction: "row",
-	wrapperStyles: {
-		rowGap: "12px",
-	},
-	content: html`${[
-		{ isSelected: true, isDisabled: false, heading: "Selected" },
-		{ isSelected: true, isDisabled: false, isInvalid: true, heading: "Selected + Invalid" },
-	].map(({isSelected, heading, isInvalid}) => Container({
-		withBorder: false,
-		heading: heading,
-		content: TagsDefaultOptions({
-			...args,
-			isSelected,
-			isInvalid
-		})
-	}, context))}`
+			}, context)}`,
 }, context);

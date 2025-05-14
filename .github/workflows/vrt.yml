@@ -1,85 +1,85 @@
 name: Visual regression testing
 
 on:
-    push:
-      branches:
-        - main
-        - spectrum-two
-        - "!changeset-release/**"
-        - "!dependabot/**"
-    workflow_dispatch:
-    workflow_call:
-        inputs:
-            skip:
-                description: "Skip running VRT"
-                required: false
-                type: boolean
-                default: false
-        outputs:
-            storybook-url:
-                description: "URL of the published Storybook"
-                value: ${{ jobs.vrt.outputs.storybook-url }}
+  push:
+    branches:
+      - main
+      - spectrum-two
+      - "!changeset-release/**"
+      - "!renovate/**"
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      skip:
+        description: "Skip running VRT"
+        required: false
+        type: boolean
+        default: false
+    outputs:
+      storybook-url:
+        description: "URL of the published Storybook"
+        value: ${{ jobs.vrt.outputs.storybook-url }}
 
 permissions:
-    contents: read
-    pull-requests: write
+  contents: read
+  pull-requests: write
 
 jobs:
-    vrt:
-        if: ${{!startsWith(github.ref, 'refs/heads/dependabot/') && !startsWith(github.ref, 'refs/heads/changeset-release/') }}
-        name: Chromatic
-        runs-on: ubuntu-latest
-        timeout-minutes: 20
-        outputs:
-          storybook-url: ${{ steps.chromatic.outputs.storybookUrl != 'undefined' && steps.chromatic.outputs.storybookUrl || '' }}
-        steps:
-            - name: Check out code
-              uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
+  vrt:
+    if: ${{!startsWith(github.ref, 'refs/heads/renovate/') && !startsWith(github.ref, 'refs/heads/changeset-release/') }}
+    name: Chromatic
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      storybook-url: ${{ steps.chromatic.outputs.storybookUrl != 'undefined' && steps.chromatic.outputs.storybookUrl || '' }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-            - name: Use Node LTS version
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 20
-                  cache: yarn
+      - name: Use Node LTS version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
 
-            - name: Enable Corepack
-              run: corepack enable
+      - name: Enable Corepack
+        run: corepack enable
 
-            ## --- YARN CACHE --- ##
-            - name: Check for cached dependencies
-              continue-on-error: true
-              id: cache-dependencies
-              uses: actions/cache@v4
-              with:
-                  path: |
-                      .cache/yarn
-                      node_modules
-                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+      ## --- YARN CACHE --- ##
+      - name: Check for cached dependencies
+        continue-on-error: true
+        id: cache-dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/yarn
+            node_modules
+          key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
 
-            ## --- INSTALL --- ##
-            - name: Install dependencies
-              shell: bash
-              run: yarn install --immutable
+      ## --- INSTALL --- ##
+      - name: Install dependencies
+        shell: bash
+        run: yarn install --immutable
 
-            - name: Generate metadata assets
-              shell: bash
-              run: yarn report
+      - name: Generate metadata assets
+        shell: bash
+        run: yarn report
 
-            - name: Publish to Chromatic
-              id: chromatic
-              uses: chromaui/action@latest
-              with:
-                  projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-                  buildScriptName: ci:storybook
-                  storybookConfigDir: .storybook
-                  storybookBaseDir: .storybook
-                  exitOnceUploaded: true
-                  onlyChanged: true
-                  traceChanged: true
-                  untraced: ".github/* plugins/stylelint-*/* tools/* .changeset/*"
-                  diagnostics: true
-                  autoAcceptChanges: "main"
-                  # Lets VRT pass without running so as not to waste snapshots
-                  skip: ${{ inputs.skip }}
+      - name: Publish to Chromatic
+        id: chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: ci:storybook
+          storybookConfigDir: .storybook
+          storybookBaseDir: .storybook
+          exitOnceUploaded: true
+          onlyChanged: true
+          traceChanged: true
+          untraced: ".github/* plugins/stylelint-*/* tools/* .changeset/*"
+          diagnostics: true
+          autoAcceptChanges: "main"
+          # Lets VRT pass without running so as not to waste snapshots
+          skip: ${{ inputs.skip }}
