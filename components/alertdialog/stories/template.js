@@ -25,33 +25,6 @@ const buttonMap = {
 		label: "Enable",
 		variant: "accent"
 	}],
-	warning: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Cancel"
-	}, {
-		treatment: "outline",
-		label: "Continue",
-		variant: "primary"
-	}],
-	error: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Cancel"
-	}, {
-		treatment: "outline",
-		label: "Continue",
-		variant: "primary"
-	}],
-	destructive: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Cancel"
-	}, {
-		treatment: "fill",
-		label: "Delete",
-		variant: "negative"
-	}],
 	information: [{
 		variant: "secondary",
 		treatment: "outline",
@@ -64,6 +37,33 @@ const buttonMap = {
 		variant: "primary",
 		treatment: "outline",
 		label: "Rate now",
+	}],
+	destructive: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Cancel"
+	}, {
+		treatment: "fill",
+		label: "Delete",
+		variant: "negative"
+	}],
+	warning: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Cancel"
+	}, {
+		treatment: "fill",
+		label: "Continue",
+		variant: "primary"
+	}],
+	error: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Cancel"
+	}, {
+		treatment: "fill",
+		label: "Continue",
+		variant: "primary"
 	}],
 };
 
