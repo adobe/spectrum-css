@@ -12,6 +12,10 @@ export const SwatchgroupGroup = Variants({
 			density: "compact",
 		},
 		{
+			testHeading: "Spacious density",
+			density: "spacious",
+		},
+		{
 			testHeading: "Full rounding (regular density)",
 			rounding: "full",
 		},

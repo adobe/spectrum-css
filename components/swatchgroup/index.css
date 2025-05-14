@@ -25,12 +25,10 @@
 	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
 }
 
-/* Small */
 .spectrum-SwatchGroup--compact {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-50);
 }
 
-/* Large */
 .spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS) {
 	--spectrum-swatchgroup-spacing: var(--spectrum-swatch-group-spacing-spacious);
 }
