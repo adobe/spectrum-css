@@ -5,12 +5,15 @@ import React, { useEffect, useState } from "react";
 
 import { Body, Code, Heading } from "./Typography.jsx";
 import { DDefinition, DList, DTerm } from "./Layouts.jsx";
-import { fetchToken } from "./utilities.js";
+import { fetchToken, getComponentsByStatus } from "./utilities.js";
 
 import AdobeSVG from "../assets/images/adobe_logo.svg?raw";
 import GitHubSVG from "../assets/images/github_logo.svg?raw";
 import NpmSVG from "../assets/images/npm_logo.svg?raw";
 import WCSVG from "../assets/images/wc_logo.svg?raw";
+
+// Import the pre-generated migrated components data
+import migratedComponentsData from '../data/migrated-components.json';
 
 export const DSet = ({ term, children }) => {
 	return (
@@ -439,6 +442,58 @@ export const TaggedReleases = () => {
 				</DList>
 				: ""
 			}
+		</ResetWrapper>
+	);
+};
+
+/**
+ * Displays a list of all components that have been migrated to Spectrum 2.
+ *
+ * Usage of this doc block within MDX template(s):
+ *  <MigratedComponentsList />
+ */
+export const MigratedComponentsList = () => {
+	const [components, setComponents] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		// Try to load components server-side first (Node.js environment)
+		try {
+			// Use the pre-generated data from our JSON file
+			if (migratedComponentsData && migratedComponentsData.components) {
+				setComponents(migratedComponentsData.components);
+				setIsLoading(false);
+				return;
+			}
+
+			// Dynamic loading as fallback
+			const migrated = getComponentsByStatus({ statusType: 'migrated' });
+
+			if (migrated && migrated.length > 0) {
+				setComponents(migrated);
+			}
+		} catch (error) {
+			console.warn('Failed to get migrated components:', error);
+		}
+
+		setIsLoading(false);
+	}, []);
+
+	return (
+		<ResetWrapper>
+			{!isLoading ? (
+				<>
+					<ul className="sb-unstyled" style={{ columnCount: 3, columnGap: '1rem', listStyle: 'none', padding: 0, marginTop: '1rem' }}>
+						{components.map((component, idx) => (
+							<li key={`${component}-${idx}`} style={{ marginBottom: '0.5rem' }}>
+								{component.charAt(0).toUpperCase() + component.slice(1)}
+							</li>
+						))}
+					</ul>
+				</>
+			) : (
+				<Body>Loading migrated components...</Body>
+			)}
 		</ResetWrapper>
 	);
 };

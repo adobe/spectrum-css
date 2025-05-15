@@ -1,6 +1,47 @@
 import spectrum from "@spectrum-css/tokens/dist/json/tokens.json";
-
 import { useTheme } from "@storybook/theming";
+
+// Import fs and path conditionally to avoid browser issues
+let isNode = false;
+let componentUtils = null;
+
+// Check if we're running in Node.js environment
+try {
+	isNode = typeof process !== 'undefined' &&
+		   typeof process.versions !== 'undefined' &&
+		   typeof process.versions.node !== 'undefined';
+
+	if (isNode) {
+		// Import the component utility functions from migrated-component-scanner.js
+		try {
+			componentUtils = require('../../tasks/migrated-component-scanner');
+		} catch (err) {
+			console.warn('Failed to import component utilities:', err);
+		}
+	}
+} catch (e) {
+	// We're in a browser environment
+	console.log('Running in browser environment, file system functions will be limited');
+}
+
+/**
+ * Gets all component directories that have a specific status
+ * Only works in Node.js environment
+ * @param {Object} options Options for filtering components
+ * @param {string} options.statusType Status type to filter by (e.g., 'migrated')
+ * @returns {string[]} Array of matching component directory names
+ */
+export function getComponentsByStatus(options = {}) {
+	// Check if we're in a Node.js environment
+	if (!isNode || !componentUtils) {
+		console.warn('getComponentsByStatus can only be used in a Node.js environment');
+		return [];
+	}
+
+	const { statusType } = options;
+
+	return componentUtils.getComponentsByStatus(statusType);
+}
 
 /**
  * A nestable function to search for a token value in the spectrum token data
