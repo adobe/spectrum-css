@@ -1,4 +1,4 @@
-import { Meta, Title } from "@storybook/blocks";
+import { Meta, Title, Markdown } from "@storybook/blocks";
 import { ThemeContainer, Heading } from "../blocks";
 
 import GrayMigrationGuide from "../assets/images/gray_migration-guide.png";
@@ -33,6 +33,8 @@ import GrayMigrationGuide from "../assets/images/gray_migration-guide.png";
 
 ### Transparent white
 
+<Markdown>{`
+
 |                   |           |  Spectrum 2 |  Spectrum 1 |
 | ----------------- | :-------: | ----------: | ----------: |
 | **Color**         | **Value** | **Opacity** | **Opacity** |
@@ -50,7 +52,11 @@ import GrayMigrationGuide from "../assets/images/gray_migration-guide.png";
 | transparent-white |    900    |        0.94 |           1 |
 | transparent-white |   1000    |           1 |             |
 
+`}</Markdown>
+
 ### Transparent black
+
+<Markdown>{`
 
 |                   |           |  Spectrum 2 |  Spectrum 1 |
 | ----------------- | :-------: | ----------: | ----------: |
@@ -68,3 +74,5 @@ import GrayMigrationGuide from "../assets/images/gray_migration-guide.png";
 | transparent-black |    800    |        0.84 |         0.9 |
 | transparent-black |    900    |        0.93 |           1 |
 | transparent-black |   1000    |           1 |             |
+
+`}</Markdown>

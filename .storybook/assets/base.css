@@ -1,5 +1,3 @@
-/* stylelint-disable selector-class-pattern -- Targeting pre-defined Storybook classes */
-
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -88,5 +86,3 @@ svg:has(symbol):not(:has(use)) {
 	story view), due to Storybook's inline style that sets overflow: auto */
 	overflow: visible !important;
 }
-
-/* stylelint-enable selector-class-pattern */
