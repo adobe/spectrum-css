@@ -85,6 +85,7 @@ export const Template = ({
 	size = "m",
 	density = "regular",
 	isQuiet = false,
+	hasNoInlinePadding = false,
 	items = [],
 	id = getRandomId("accordion"),
 	disableAll = false,
@@ -103,6 +104,7 @@ export const Template = ({
 				[`${rootClass}--${density}`]:
 					typeof density !== "undefined" && density !== "regular",
 				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--noInlinePadding`]: hasNoInlinePadding,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}"
 			id=${ifDefined(id)}
