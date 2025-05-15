@@ -32,6 +32,17 @@ export default {
 			if: false,
 		},
 		iconSet: { table: { disable: true } },
+		style: {
+			name: "Style",
+			description: "Changes the visual appearance",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["default", "subtle", "outline"],
+			control: "select",
+		},
 		variant: {
 			name: "Variants",
 			description: "Changes the badge's background color. The variant list includes both semantic and non-semantic options.",
@@ -57,6 +68,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Badge",
 		size: "m",
+		style: "default",
 		variant: "neutral",
 		iconSet: "workflow",
 		fixed: "none"
@@ -68,7 +80,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"]
 };
 
 /**
@@ -76,7 +92,7 @@ export default {
  */
 export const Default = BadgeGroup.bind({});
 Default.args = {
-	iconName: "Info",
+	iconName: "InfoCircle",
 	label: "Badge",
 };
 
@@ -108,6 +124,41 @@ NonSemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 NonSemanticVariants.storyName = "Non-semantic";
+
+/**
+ * The "outline" style is only valid for semantic color variants.
+ */
+export const StyleOutline = (args, context) => ArgGrid({
+	Template,
+	argKey: "variant",
+	options: ["neutral", "accent", "informative", "positive", "negative", "notice"],
+	withBorder: false,
+	...args,
+}, context);
+StyleOutline.args = {...Default.args, style: "outline"};
+StyleOutline.tags = ["!dev"];
+StyleOutline.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+StyleOutline.storyName = "Style: Outline";
+
+
+/**
+ * The "subtle" style is available for all color variants.
+ */
+export const StyleSubtle = (args, context) => ArgGrid({
+	Template,
+	argKey: "variant",
+	options: ["neutral", "accent", "informative", "positive", "negative", "notice", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
+	withBorder: false,
+	...args,
+}, context);
+StyleSubtle.args = {...Default.args, style: "subtle"};
+StyleSubtle.tags = ["!dev"];
+StyleSubtle.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+StyleSubtle.storyName = "Style: Subtle";
 
 /**
  * Fixed positioning impacts the border radius of the badge component. The border radius is 0 along the fixed edge of the component. The actual component position is not represented on this page.
