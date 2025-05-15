@@ -75,6 +75,9 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		}
 	},
 	tags: ["migrated"],
 	decorators: [
@@ -170,6 +173,29 @@ Destructive.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * When the title and description text are too long for the available horizontal space, they wrap to form another line.
+ */
+export const Overflow = Template.bind({});
+Overflow.tags = ["!dev"];
+Overflow.args = {
+	isOpen: true,
+	variant: "confirmation",
+	heading: "Alert dialogs allow for text overflow by wrapping when the description and dialog are too long",
+	content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices est eu lacus interdum, vitae volutpat tortor laoreet. Phasellus consectetur erat quis massa congue, vel placerat ipsum hendrerit. Aenean eleifend augue quam, quis blandit lacus pretium eget. Aliquam aliquam fermentum nunc, sed dictum metus varius in. Suspendisse in nisl libero. Nulla egestas massa eget lectus ullamcorper placerat. Vivamus cursus, nunc quis pharetra auctor, eros mi tempus elit, sit amet placerat ipsum velit ut dolor. Nam sit amet eleifend erat. Duis sollicitudin orci sit amet tellus tincidunt, vel lobortis risus pellentesque. Integer viverra urna elementum metus dignissim placerat. Nulla posuere eros ipsum."
+};
+Overflow.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "525px",
+		},
+	},
+};
+
+/**
+ * The dialog description may also scroll if the height of the dialog is constrained.
+ */
 export const Scroll = Template.bind({});
 Scroll.tags = ["!dev"];
 Scroll.args = {
