@@ -67,7 +67,7 @@ export const BadgeGroup = Variants({
 			})
 		),
 		{
-			testHeading: "Truncation",
+			testHeading: "Text Wrap",
 			wrapperStyles: {
 				"column-gap": "10px",
 			},

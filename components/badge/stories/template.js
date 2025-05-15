@@ -29,7 +29,7 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				[`${rootClass}--style-${style}`]: style !== "default",
-				[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
+				[`${rootClass}--${fixed}`]: typeof fixed !== "undefined" && fixed !== "none",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}

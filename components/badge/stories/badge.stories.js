@@ -9,9 +9,9 @@ import { BadgeGroup } from "./badge.test.js";
 import { ContentOptions, Template } from "./template.js";
 
 /**
- * A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention. Some notes about badge:
- * - Label and icon elements must be nested inside a parent container of class `.spectrum-Badge` in order to achieve the correct layout and wrapping behavior.
- * - The layout of badge is achieved by applying a display of `inline-flex`, allowing badge to display as inline, while the label and/or icon child elements can utilize flexbox for layout.
+ * Badges are for showing a small amount of color-categorized metadata. They're ideal for getting a user's attention. There are two additional styles - subtle fill and outline - in addition to the default, bold fill style.
+ *
+ * Because outline and subtle fill styles draw a similar level of attention, choose only one to use consistently within a single product. Bold fill can be paired with either style, and is reserved for high-attention badging only.
  */
 export default {
 	title: "Badge",

@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -12,14 +12,14 @@
  */
 
 .spectrum-Badge {
-	/* badge styling for all t-shirt sizes and all themes */
-	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-100);
+	/* base badge styling for all t-shirt sizes and all themes */
 	--spectrum-badge-border-width: var(--spectrum-border-width-200);
 	--spectrum-badge-border-color: transparent;
 
 	/* label text styles for all t-shirt sizes and all themes */
 	--spectrum-badge-line-height: var(--spectrum-line-height-100);
 	--spectrum-badge-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--spectrum-badge-font-weight: var(--spectrum-medium-font-weight);
 
 	/* text and icon color default white for all t-shirt sizes and all themes */
 	--spectrum-badge-label-icon-color: var(--spectrum-white);
@@ -102,21 +102,18 @@
 	--spectrum-badge-outline-border-color-positive: var(--spectrum-positive-visual-color);
 
 	/*** DEFAULT STYLE fallbacks if no t-shirt size - uses Medium t-shirt styles ***/
-	/* badge height - fallback if no t-shirt size */
+
+	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
+
 	--spectrum-badge-height: var(--spectrum-component-height-100);
 
-	/* label font size - fallback if no t-shirt size */
 	--spectrum-badge-font-size: var(--spectrum-font-size-100);
 
-	/* label spacing - fallback if no t-shirt size */
 	--spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-100);
 	--spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-100);
 
-	/* icon size - fallback if no t-shirt size */
 	--spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
-
-	/* icon spacing - fallback if no t-shirt size */
 	--spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-100);
 	--spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
 	--spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
@@ -135,6 +132,7 @@
 }
 
 .spectrum-Badge--sizeS {
+	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-medium-size-small);
 	--spectrum-badge-height: var(--spectrum-component-height-75);
 
 	/* label */
@@ -152,6 +150,7 @@
 }
 
 .spectrum-Badge--sizeL {
+	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-medium-size-large);
 	--spectrum-badge-height: var(--spectrum-component-height-100);
 
 	/* label */
@@ -169,6 +168,7 @@
 }
 
 .spectrum-Badge--sizeXL {
+	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-medium-size-extra-large);
 	--spectrum-badge-height: var(--spectrum-component-height-100);
 
 	/* label */
@@ -193,11 +193,6 @@
 }
 
 .spectrum-Badge {
-	/* &,
-	& > * {
-		box-sizing: border-box;
-	} */
-
 	min-block-size: var(--mod-badge-height, var(--spectrum-badge-height));
 	inline-size: auto;
 
@@ -207,17 +202,17 @@
 
 	cursor: default;
 
-	-webkit-font-smoothing: subpixel-antialiased;
-	-moz-osx-font-smoothing: auto;
-
 	border-radius: var(--mod-badge-corner-radius, var(--spectrum-badge-corner-radius));
 	border: var(--mod-badge-border-width, var(--spectrum-badge-border-width)) solid var(--mod-badge-border-color, var(--spectrum-badge-border-color));
 
 	background: var(--mod-badge-background-color-default, var(--spectrum-badge-background-color-default));
 	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
 
-	/* Pull background color under border */
+	/* Show background color under transparent border to correct visual height */
 	background-origin: border-box;
+
+	/* Prevent stretch height behavior next to other flex/grid children */
+	align-self: start;
 }
 
 /* background color variants */
@@ -485,12 +480,13 @@
 /* label */
 .spectrum-Badge-label {
 	font-size: var(--mod-badge-font-size, var(--spectrum-badge-font-size));
+	font-weight: var(--spectrum-badge-font-weight);
 	line-height: var(--mod-badge-line-height, var(--spectrum-badge-line-height));
 
-	padding-inline-end: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
+	padding-inline-end: calc(var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal)) - var(--spectrum-badge-border-width));
 	padding-inline-start: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
-	padding-block-start: var(--mod-badge-label-spacing-vertical-top, var(--spectrum-badge-label-spacing-vertical-top));
-	padding-block-end: var(--mod-badge-label-spacing-vertical-bottom, var(--spectrum-badge-label-spacing-vertical-bottom));
+	padding-block-start: calc(var(--mod-badge-label-spacing-vertical-top, var(--spectrum-badge-label-spacing-vertical-top)) - var(--spectrum-badge-border-width));
+	padding-block-end: calc(var(--mod-badge-label-spacing-vertical-bottom, var(--spectrum-badge-label-spacing-vertical-bottom)) - var(--spectrum-badge-border-width));
 
 	/* cjk language support */
 	&:lang(ja),
@@ -513,16 +509,22 @@
 	/* ensures icon does not shrink when badge width is limited */
 	flex: 0 0 var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
 
-	padding-inline-start: var(--mod-badge-icon-spacing-horizontal, var(--spectrum-badge-icon-spacing-horizontal));
+	margin-inline-start: calc(var(--mod-badge-icon-spacing-horizontal, var(--spectrum-badge-icon-spacing-horizontal)) - var(--spectrum-badge-border-width));
 
 	/* icon with label has reduced padding between icon and text */
-	padding-inline-end: var(--mod-badge-icon-text-spacing, var(--spectrum-badge-icon-text-spacing));
-	padding-block-start: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
-	padding-block-end: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
+	margin-inline-end: var(--mod-badge-icon-text-spacing, var(--spectrum-badge-icon-text-spacing));
+	margin-block-start: calc(var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top)) - var(--spectrum-badge-border-width));
+	margin-block-end: calc(var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top)) - var(--spectrum-badge-border-width));
 }
 
 .spectrum-Badge-icon--no-label {
 	/* icon without label has identical padding left and right */
-	padding-inline-start: var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal));
-	padding-inline-end: var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal));
+	margin-inline-start: calc(var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal)) - var(--spectrum-badge-border-width));
+	margin-inline-end: calc(var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal)) - var(--spectrum-badge-border-width));
+}
+
+.spectrum-Badge,
+.spectrum-Badge-label,
+.spectrum-Badge-icon {
+	box-sizing: border-box;
 }
