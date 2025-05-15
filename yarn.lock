@@ -119,7 +119,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@adobe/spectrum-css-monorepo@workspace:."
   dependencies:
-    "@adobe/token-diff-generator": "npm:^1.3.0"
+    "@adobe/token-diff-generator": "npm:^2.0.0"
     "@changesets/changelog-github": "npm:^0.5.0"
     "@changesets/cli": "npm:^2.27.11"
     "@commitlint/cli": "npm:^19.6.1"
@@ -197,23 +197,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/token-diff-generator@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@adobe/token-diff-generator@npm:1.3.0"
+"@adobe/token-diff-generator@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@adobe/token-diff-generator@npm:2.0.0"
   dependencies:
-    chalk: "npm:^5.3.0"
-    commander: "npm:^12.1.0"
+    chalk: "npm:^5.4.1"
+    commander: "npm:^13.1.0"
     deep-object-diff: "npm:^1.1.9"
-    emojilib: "npm:^4.0.0"
-    glob: "npm:^11.0.0"
-    inquirer: "npm:^12.0.0"
+    emojilib: "npm:^4.0.2"
+    inquirer: "npm:^12.5.2"
     nixt: "npm:^0.5.1"
-    node-emoji: "npm:^2.1.3"
+    node-emoji: "npm:^2.2.0"
     tar: "npm:^7.4.3"
     tmp-promise: "npm:^3.0.3"
   bin:
     tdiff: src/lib/cli.js
-  checksum: 10c0/e237d70fe9503a47d1e3b9ce163895bf84c46a41e256cc3ee218c493007d743dda5387e58f1aee619e329c8ee440535f5df183495ca6140e86bf47a2687f030a
+  checksum: 10c0/110a5dd0cc32f722ad7b33f1478ad3c1637cb5c8be75fc196eb7e83c6ef98e480d54eaf84a53672a7aba8dacaa3b93d63283230691496a75131ea9109f9e7f18
   languageName: node
   linkType: hard
 
@@ -5535,7 +5534,7 @@ __metadata:
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
     "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241121221506"
-    "@adobe/token-diff-generator": "npm:^1.3.0"
+    "@adobe/token-diff-generator": "npm:^2.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     deepmerge: "npm:^4.3.1"
     lodash-es: "npm:^4.17.21"
@@ -9906,10 +9905,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emojilib@npm:^4.0.0":
-  version: 4.0.1
-  resolution: "emojilib@npm:4.0.1"
-  checksum: 10c0/b9adccce90bf8ed3386439b44c425ea1900413a3a7323adf9ff11309c9148e2811d88611fde2bf27de809f22c94d013e9246ce430adaf25893c2284333b4dd68
+"emojilib@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "emojilib@npm:4.0.2"
+  checksum: 10c0/29724eb8f948947bfb4557b541ab4c3e8f92d4eb0154ed0f5dce41201695a32d2927b98c92cc6b0dd2c65566a4ca1a60d977dc8a6a6975263736dc29e0789c40
   languageName: node
   linkType: hard
 
@@ -12259,7 +12258,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inquirer@npm:^12.0.0":
+"inquirer@npm:^12.5.2":
   version: 12.6.1
   resolution: "inquirer@npm:12.6.1"
   dependencies:
@@ -15617,7 +15616,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-emoji@npm:^2.1.3":
+"node-emoji@npm:^2.2.0":
   version: 2.2.0
   resolution: "node-emoji@npm:2.2.0"
   dependencies:
