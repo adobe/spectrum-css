@@ -19,18 +19,24 @@ export const Swatches = (args, context) => {
 			Template({
 				...args,
 				rounding: "none",
-				borderStyle: "noBorder",
 				swatchColor: "linear-gradient(to right, rgba(154, 116, 200, 0.5), rgb(174, 216, 230))",
 			}, context),
 			Template({
 				...args,
 				rounding: "full",
-				borderStyle: "lightBorder",
 				swatchColor: `center / contain no-repeat url("${exampleImage}")`,
 			}, context),
 			Template({
 				...args,
 				isMixedValue: true,
+			}, context),
+			Template({
+				...args,
+				isDisabled: true,
+			}, context),
+			Template({
+				...args,
+				isAddSwatch: true,
 			}, context),
 			Template({
 				...args,
@@ -62,16 +68,12 @@ export const SwatchGroup = Variants({
 			rounding: "none"
 		},
 		{
+			testHeading: "Regular rounding",
+			rounding: "regular"
+		},
+		{
 			testHeading: "Full rounding",
 			rounding: "full"
-		},
-		{
-			testHeading: "Light border",
-			borderStyle: "lightBorder",
-		},
-		{
-			testHeading: "No border",
-			borderStyle: "noBorder",
 		},
 		{
 			testHeading: "Shape: rectangle",
@@ -93,22 +95,44 @@ export const SwatchGroup = Variants({
 			testHeading: "Mixed value",
 			isMixedValue: true,
 		},
-	],
-	stateData: [
 		{
-			testHeading: "Disabled",
-			isDisabled: true,
+			testHeading: "Add",
+			isAddSwatch: true,
 		},
 		{
 			testHeading: "Empty",
 			swatchColor: undefined,
 			imageUrl: undefined,
-			isMixedValue: false,
-			borderStyle: "default",
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Empty",
+			swatchColor: undefined,
+			imageUrl: undefined,
+			ignore: ["Mixed value", "Add", "Empty"]
 		},
 		{
 			testHeading: "Selected",
 			isSelected: true,
+		},
+		{
+			testHeading: "Keyboard focus",
+			isKeyboardFocused: true,
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Hovered",
+			isHovered: true,
+			include: ["Add"]
+		},
+		{
+			testHeading: "Active",
+			isActive: true,
+			include: ["Add"]
 		},
 	]
 });

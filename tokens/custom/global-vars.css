@@ -65,7 +65,4 @@
 	--spectrum-examples-gradient-static-white: linear-gradient(45deg, rgb(64 0 22), rgb(14 24 67));
 
 	--spectrum-coach-indicator-ring-static-white-color: var(--spectrum-white);
-
-	/* override for Spectrum Tokens value until a Style Dictionary transform gets written for our usage */
-	--spectrum-corner-radius-1000: 9999px;
 }
