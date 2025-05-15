@@ -1,7 +1,7 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isReadOnly, size } from "@spectrum-css/preview/types";
 import { within } from "@storybook/test";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -15,7 +15,7 @@ import { HelpTextTemplate, Template, VariantGroup } from "./template.js";
  *
  * ### General notes
  *
- * - Combobox uses `.spectrum-InfieldButton` instead of a `.spectrum-PickerButton`
+ * - Combobox uses `.spectrum-InfieldButton` as a menu trigger.
  * - The following classes must be added:
  *   - `.spectrum-Combobox-textfield` is required on the Textfield outer element (`.spectrum-Textfield`)
  *   - `.spectrum-Combobox-input` is required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
@@ -27,7 +27,6 @@ import { HelpTextTemplate, Template, VariantGroup } from "./template.js";
  *
  * - `.is-focused` - when the input or button is focused with the mouse
  * - `.is-keyboardFocused` - when the input or button is focused with the keyboard
- * - `.is-valid` - when the input has an explicit valid state
  * - `.is-invalid` - when the input has an explicit invalid state; should also show help text for error messaging
  * - `.is-disabled` - when the control is disabled; should also add to the `.spectrum-Combobox-textfield` and include a `[disabled]` attribute to the `.spectrum-Combobox-button`
  * - `.is-loading` - when the progress circle is being shown
@@ -47,6 +46,7 @@ export default {
 			if: { arg: "isReadOnly", truthy: false },
 		},
 		isInvalid,
+		isHovered,
 		isFocused,
 		isKeyboardFocused,
 		isLoading,
@@ -88,18 +88,9 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["top", "left"],
+			options: ["top", "side"],
 			control: "select",
 			if: { arg: "showFieldLabel", truthy: true },
-		},
-		showHelpText: {
-			name: "Show help text",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
 		},
 		helpText: {
 			name: "Help text",
@@ -109,7 +100,6 @@ export default {
 				category: "Component",
 			},
 			control: "text",
-			if: { arg: "showHelpText", truthy: true },
 		},
 		value: {
 			name: "Value",
@@ -128,6 +118,7 @@ export default {
 		size: "m",
 		isOpen: false,
 		isInvalid: false,
+		isHovered: false,
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
@@ -138,7 +129,7 @@ export default {
 		showHelpText: false,
 		testId: "combobox",
 		fieldLabelText: "Select location",
-		helpText: "This is a help text. Select an option",
+		helpText: "",
 		value: "Ballard",
 		content: [
 			(passthroughs, context) => Menu({
@@ -235,7 +226,7 @@ HelpText.args = {
 
 
 /**
- * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.isReadOnly` class to the combobox. To enable this feature, add the .isReadOnly class to the combobox. Then within the nested textfield component, add the .isReadOnly class and readonly attribute to the `<input>` element.
+ * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.is-readOnly` class to the combobox. To enable this feature, add the .isReadOnly class to the combobox. Then within the nested textfield component, add the .isReadOnly class and readonly attribute to the `<input>` element.
 */
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];

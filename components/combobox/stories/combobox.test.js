@@ -10,6 +10,10 @@ export const ComboBoxGroup = Variants({
 			isOpen: false,
 		},
 		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		},
+		{
 			testHeading: "Open",
 			isOpen: true,
 			wrapperStyles: {
@@ -17,30 +21,10 @@ export const ComboBoxGroup = Variants({
 			},
 		},
 		{
-			testHeading: "With field label top",
+			testHeading: "With field label on the side",
 			showFieldLabel: true,
 			isOpen: false,
-			fieldLabelPosition: "top",
-		},
-		{
-			testHeading: "With field label top + help text",
-			showFieldLabel: true,
-			isOpen: false,
-			fieldLabelPosition: "top",
-			showHelpText: true,
-		},
-		{
-			testHeading: "With field label left",
-			showFieldLabel: true,
-			isOpen: false,
-			fieldLabelPosition: "left",
-		},
-		{
-			testHeading: "With field label left + help text ",
-			showFieldLabel: true,
-			isOpen: false,
-			fieldLabelPosition: "left",
-			showHelpText: true,
+			fieldLabelPosition: "side",
 		},
 		{
 			testHeading: "Truncation",
@@ -50,16 +34,17 @@ export const ComboBoxGroup = Variants({
 	],
 	stateData: [
 		{
-			testHeading: "Disabled",
-			isDisabled: true,
-		},
-		{
-			testHeading: "Invalid",
-			isInvalid: true,
+			testHeading: "Hovered",
+			isHovered: true,
 		},
 		{
 			testHeading: "Focused",
 			isFocused: true,
+		},
+		{
+			testHeading: "Focused + Hovered",
+			isFocused: true,
+			isHovered: true,
 		},
 		{
 			testHeading: "Keyboard focused",
@@ -72,6 +57,10 @@ export const ComboBoxGroup = Variants({
 		{
 			testHeading: "Read-only",
 			isReadOnly: true
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
 		},
 	],
 });

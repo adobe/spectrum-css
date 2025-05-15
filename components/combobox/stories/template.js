@@ -22,12 +22,12 @@ const Combobox = ({
 	isOpen = true,
 	isInvalid = false,
 	isDisabled = false,
+	isHovered = false,
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
 	isReadOnly = false,
-	showHelpText = false,
-	helpText = "This is a help text",
+	helpText,
 	fieldLabelText = "Select location",
 	fieldLabelPosition = "top",
 	isLabelRequired = false,
@@ -62,12 +62,13 @@ const Combobox = ({
 					typeof size !== "undefined",
 				"is-open": !isDisabled && isOpen,
 				"is-invalid": !isDisabled && isInvalid,
+				"is-hovered": !isDisabled && isHovered,
 				"is-focused": !isDisabled && isFocused,
 				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
 				"is-loading": isLoading,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
-				[`${rootClass}--sideLabel`]: fieldLabelPosition === "left",
+				[`${rootClass}--sideLabel`]: fieldLabelPosition === "side",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -85,7 +86,7 @@ const Combobox = ({
 					label: fieldLabelText,
 					isDisabled,
 					customClasses: [`${rootClass}-label`],
-					alignment: fieldLabelPosition === "left" && "left",
+					alignment: fieldLabelPosition === "side" && "side",
 					isRequired: isLabelRequired,
 				}, context)
 			)}
@@ -95,6 +96,7 @@ const Combobox = ({
 					isDisabled,
 					isInvalid,
 					isFocused,
+					isHovered,
 					isKeyboardFocused,
 					customClasses: [
 						`${rootClass}-textfield`,
@@ -117,7 +119,7 @@ const Combobox = ({
 					],
 					size,
 					id: getRandomId("infieldbutton"),
-					isDisabled,
+					isDisabled: isDisabled || isReadOnly,
 					tabindex: "-1",
 					onclick: function () {
 						updateArgs({
@@ -126,7 +128,7 @@ const Combobox = ({
 					},
 				}, context)}
 		</div>
-		${when(showHelpText, () =>
+		${when(helpText, () =>
 				HelpText({
 					customClasses: [`${rootClass}-helptext`],
 					size,
@@ -164,6 +166,9 @@ export const Template = ({
 					withTip: false,
 					position: "bottom-start",
 					customClasses: [`${args.rootClass}-popover`],
+					customStyles: {
+						"inline-size": size === "s" ? "192px" : size === "l" ? "224px" : size === "xl" ? "240px" : "208px",
+					},
 					trigger: (passthrough) => Combobox({
 						size,
 						isOpen,
@@ -174,7 +179,6 @@ export const Template = ({
 						...passthrough,
 					}, context),
 					content,
-					popoverWidth: size === "s" ? 140 : size === "l" ? 191 : size === "xl" ? 192 : 166, // default value is "m"
 					popoverHeight,
 				}, context),
 			]}
@@ -202,7 +206,10 @@ export const HelpTextTemplate = (args, context) => {
 			withBorder: false,
 			heading: variant.heading,
 			containerStyles: {"display": "inline"},
-			content: Combobox(variant.args, context)},
+			content: Combobox({
+				...variant.args,
+				customStyles: {"margin-top": "8px"}
+			}, context)},
 		context))}`,
 	}, context);
 };
