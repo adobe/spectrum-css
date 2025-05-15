@@ -13,7 +13,7 @@
 
 .spectrum-Badge {
 	/* base badge styling for all t-shirt sizes and all themes */
-	--spectrum-badge-border-width: var(--spectrum-border-width-200);
+	--spectrum-badge-border-width: var(--mod-badge-border-width, var(--spectrum-border-width-200));
 	--spectrum-badge-border-color: transparent;
 
 	/* label text styles for all t-shirt sizes and all themes */
@@ -202,8 +202,9 @@
 
 	cursor: default;
 
+	/* Due to calc() for spacing, --mod is included in base border-width token */
+	border: var(--spectrum-badge-border-width) solid var(--mod-badge-border-color, var(--spectrum-badge-border-color));
 	border-radius: var(--mod-badge-corner-radius, var(--spectrum-badge-corner-radius));
-	border: var(--mod-badge-border-width, var(--spectrum-badge-border-width)) solid var(--mod-badge-border-color, var(--spectrum-badge-border-color));
 
 	background: var(--mod-badge-background-color-default, var(--spectrum-badge-background-color-default));
 	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
