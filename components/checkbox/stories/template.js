@@ -7,9 +7,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Checkbox",
@@ -22,6 +19,8 @@ export const Template = ({
 	isDisabled = false,
 	isInvalid = false,
 	isReadOnly = false,
+	isFocused = false,
+	isActive = false,
 	title,
 	value,
 	id = getRandomId("checkbox"),
@@ -58,6 +57,7 @@ export const Template = ({
 				["is-invalid"]: isInvalid,
 				["is-hover"]: isHovered && !isDisabled,
 				["is-readOnly"]: isReadOnly,
+				["is-active"]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -65,7 +65,10 @@ export const Template = ({
 		>
 			<input
 				type="checkbox"
-				class="${rootClass}-input"
+				class=${classMap({
+					["is-focus-visible"]: isFocused && !isDisabled,
+					["is-active"]: isActive,
+					[`${rootClass}-input`]: true })}
 				aria-labelledby=${ifDefined(ariaLabelledby)}
 				aria-disabled=${ifDefined(isReadOnly ? "true" : undefined)}
 				?checked=${isChecked}

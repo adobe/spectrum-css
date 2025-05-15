@@ -1,5 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -86,9 +86,16 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=37252-553",
 		},
+		downState: {
+			selectors: [".spectrum-Menu-item:not(.is-disabled)"],
+		},
 		packageJson,
 		metadata,
 	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
+	tags: ["migrated"],
 };
 
 export const Default = MenuWithVariants.bind({});
@@ -105,7 +112,7 @@ Default.args = {
 			items: [
 				{
 					label: "Default menu item",
-					iconName: "Export"
+					iconName: "Comment"
 				},
 				{
 					label: "Focused menu item",
@@ -114,11 +121,23 @@ Default.args = {
 					isActive: true,
 				},
 				{
-					label: "A menu item with a longer label that causes the text to wrap to the next line",
-					iconName: "Send",
+					label: "A menu item with a longer label that causes the text to wrap to the next line"
 				},
 				{
 					label: "Menu item with no icon",
+				},
+				{
+					label: "Menu item as external link",
+					hasExternalLink: true,
+				},
+				{
+					label: "Menu item as external link with icon",
+					hasExternalLink: true,
+					iconName: "Data"
+				},
+				{
+					label: "Menu item with a thumbnail",
+					thumbnailUrl: "thumbnail.png"
 				},
 				{
 					label: "Disabled menu item",
@@ -131,6 +150,7 @@ Default.args = {
 		{
 			idx: 2,
 			heading: "Menu header - With descriptions and icons",
+			sectionDescription: "This menu header also has a description",
 			id: "menu-heading-short-desc",
 			items: [
 				{
@@ -143,6 +163,17 @@ Default.args = {
 					isSelected: true,
 				},
 				{
+					label: "Selected item with thumbnail",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
+					label: "Selected item with thumbnail",
+					description: "This item is checked if single-select or multi-select mode is turned on",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
 					label: "Selected item with icon",
 					iconName: "Cloud",
 					description: "This item is checked if single-select or multi-select mode is turned on",
@@ -153,7 +184,8 @@ Default.args = {
 		{ type: "divider" },
 		{
 			idx: 3,
-			heading: "Menu header - With actions, icons, short descriptions, and values and longer header text that wraps",
+			heading: "Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
+			sectionDescription: "This menu header also has a description that is long enough to hopefully just maybe wrap if it's long enough",
 			id: "menu-heading-desc-icon-value",
 			hasActions: true,
 			items: [
@@ -175,11 +207,33 @@ Default.args = {
 					value: "⌘ C",
 				},
 				{
-					label: "Disabled menu item with action",
-					iconName: "Archive",
-					description: "Disabled menu item with description and icon",
+					label: "Disabled menu item with thumbnail",
+					description: "Disabled menu item with description and thumbnail",
 					isDisabled: true,
+					thumbnailUrl: "thumbnail.png",
 				},
+				{
+					label: "Menu item with thumbnail and value",
+					value: "⌘ C",
+					thumbnailUrl: "thumbnail.png",
+				},
+				{
+					label: "Menu item with thumbnail and value",
+					description: "And a description, too",
+					value: "⌘ C",
+					thumbnailUrl: "thumbnail.png",
+				},
+				{
+					label: "Menu item with external link action",
+					description: "Menu item with external link action (does not work in multi-select mode)",
+					hasExternalLink: true,
+				},
+				{
+					label: "Disabled menu item with external link action",
+					description: "Menu item with external link action (does not work in multi-select mode)",
+					hasExternalLink: true,
+					isDisabled: true,
+				}
 			],
 		},
 		{
@@ -267,6 +321,11 @@ MenuItem.argTypes = {
 	isSelected: {
 		...isSelected,
 		description: "Used with single or multi-select mode turned on",
+		if: { arg: "selectionMode", neq: "none" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Selection",
+		},
 	},
 	label: {
 		name: "Label",
@@ -296,7 +355,7 @@ MenuItem.argTypes = {
 	},
 	iconName: {
 		...(IconStories?.argTypes?.iconName ?? {}),
-		if: false,
+		if: { arg: "hasThumbnail", truthy: false },
 	},
 	hasActions: {
 		name: "Has switches",
@@ -309,13 +368,43 @@ MenuItem.argTypes = {
 		control: "boolean",
 		if: { arg: "selectionMode", eq: "multiple" },
 	},
+	hasExternalLink: {
+		name: "Has external link",
+		description: "Has external link action",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean",
+	},
+	hasThumbnail: {
+		name: "Has thumbnail",
+		description: "Displays a thumbnail in the label",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean"
+	},
+	isDrillIn: {
+		name: "Is drill-in",
+		description: "Displays drill-in menu indicator",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean"
+	},
 	// These settings are not used in the MenuItem story
 	hasDividers: { table: { disable: true } },
 	isTraySubmenu: { table: { disable: true } },
 };
 MenuItem.args = {
 	label: "Start a chat",
-	iconName: "Chat",
+	iconName: "Comment",
 	description: "Menu item description",
 	value: "⌘ N",
 	isDisabled: false,
@@ -324,6 +413,9 @@ MenuItem.args = {
 	isHovered: false,
 	isSelected: false,
 	hasActions: false,
+	hasExternalLink: false,
+	hasThumbnail: false,
+	isDrillIn: false,
 };
 MenuItem.parameters = {
 	design: {
@@ -353,7 +445,7 @@ Collapsible.args = {
 	items: [
 		{
 			label: "Web Design",
-			iconName: "DesktopAndMobile",
+			iconName: "DeviceMultiscreen",
 			isCollapsible: true,
 			isOpen: true,
 			items: [
@@ -408,7 +500,7 @@ Collapsible.args = {
 		},
 		{
 			label: "Watches",
-			iconName: "Watch",
+			iconName: "Clock",
 			isCollapsible: true,
 			items: [
 				{ label: "Defaults to not visible within closed item" },
@@ -462,6 +554,23 @@ Sizing.args = {
 			label: "Menu item with icon and description",
 			description: "Short description of menu item",
 			iconName: "Cloud",
+		},
+		{
+			idx: 6,
+			label: "Menu item as external link",
+			hasExternalLink: true
+		},
+		{
+			idx: 7,
+			label: "Menu item with thumbnail",
+			value: "Value",
+			thumbnailUrl: "thumbnail.png"
+		},
+		{
+			idx: 8,
+			label: "Menu item with thumbnail",
+			description: "and description",
+			thumbnailUrl: "thumbnail.png"
 		},
 	]
 };
@@ -548,7 +657,7 @@ TextOverflow.parameters = {
 };
 TextOverflow.args = {
 	customStyles: {
-		"max-inline-size": "150px",
+		"max-inline-size": "175px",
 	}
 };
 
@@ -578,7 +687,7 @@ WithDividers.args = {
 
 /**
  * Use a section header when a menu section requires a descriptor. Section headers are helpful when two or more
- * sections differ in their functionality or relationships.
+ * sections differ in their functionality or relationships. Section headers can also include an optional description.
  */
 export const WithDividersAndHeaders = Template.bind({});
 WithDividersAndHeaders.storyName = "Sections with dividers and headers";
@@ -599,15 +708,15 @@ WithDividersAndHeaders.args = {
 				{
 					label: "Marquee",
 					isSelected: true,
-					iconName: "Selection",
+					iconName: "SelectRectangle",
 				},
 				{
 					label: "Add",
-					iconName: "SelectAdd",
+					iconName: "SelectMulti",
 				},
 				{
 					label: "Subtract",
-					iconName: "SelectSubtract",
+					iconName: "SelectNone",
 				},
 			]
 		},
@@ -615,12 +724,13 @@ WithDividersAndHeaders.args = {
 		{
 			idx: 2,
 			heading: "Actions",
+			sectionDescription:"With an optional description",
 			id: "menu-actions",
 			selectionMode: "single",
 			items: [
 				{
 					label: "Deselect",
-					iconName: "Deselect",
+					iconName: "SelectNo",
 					isDisabled: true,
 				}
 			]

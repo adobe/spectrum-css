@@ -16,6 +16,7 @@ import { dirname, join, sep } from "path";
 import StyleDictionary from "style-dictionary";
 import {
 	AttributeSetsTransform,
+	CSSBorderRoundingTransform,
 	CSSOpenTypeTransform,
 	CSSSetsFormatter,
 	DataJsonFormatter,
@@ -23,6 +24,7 @@ import {
 } from "./utilities/index.js";
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
+StyleDictionary.registerTransform(CSSBorderRoundingTransform);
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
 
@@ -44,6 +46,7 @@ export default {
 			[AttributeSetsTransform.name]: AttributeSetsTransform,
 			[NameKebabTransfom.name]: NameKebabTransfom,
 			[CSSOpenTypeTransform.name]: CSSOpenTypeTransform,
+			[CSSBorderRoundingTransform.name]: CSSBorderRoundingTransform,
 		},
 	},
 	platforms: {
@@ -53,6 +56,7 @@ export default {
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
 				CSSOpenTypeTransform.name,
+				CSSBorderRoundingTransform.name,
 			],
 			prefix: "spectrum",
 			files: [
@@ -144,6 +148,7 @@ export default {
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
 				CSSOpenTypeTransform.name,
+				CSSBorderRoundingTransform.name,
 			],
 			prefix: "spectrum",
 			files: [

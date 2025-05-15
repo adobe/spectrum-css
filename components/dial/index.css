@@ -11,9 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Dial {
+	--spectrum-dial-background-color-default: var(--spectrum-gray-75);
+	--spectrum-dial-handle-marker-color-key-focus: var(--spectrum-gray-25);
+
 	--spectrum-dial-handle-marker-color: var(--spectrum-gray-700);
 	--spectrum-dial-border-color: var(--spectrum-gray-700);
 
@@ -23,6 +24,8 @@
 	--spectrum-dial-handle-marker-color-mouse-focus: var(--spectrum-gray-700);
 
 	--spectrum-dial-min-max-tick-color: var(--spectrum-gray-600);
+
+	--spectrum-dial-handle-marker-color-key-focus: var(--spectrum-gray-25);
 
 	--spectrum-dial-label-text-color: var(--spectrum-gray-700);
 	--spectrum-dial-label-text-color-disabled: var(--spectrum-gray-700);

@@ -11,127 +11,188 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-DropZone {
+	/* Sizing */
+	--spectrum-drop-zone-padding: var(--spectrum-spacing-400);
 	--spectrum-drop-zone-border-width: var(--spectrum-border-width-200);
+	--spectrum-drop-zone-corner-radius: var(--spectrum-corner-radius-700);
+	--spectrum-drop-zone-border-color: var(--spectrum-gray-300);
+	--spectrum-drop-zone-inline-size: var(--spectrum-drop-zone-width);
+
+	/* Color */
 	--spectrum-drop-zone-background-color: var(--spectrum-drop-zone-background-color-rgb);
 	--spectrum-drop-zone-border-color-hover: var(--spectrum-accent-visual-color);
-	--spectrum-drop-zone-illustration-color: var(--spectrum-neutral-visual-color);
+	--spectrum-drop-zone-illustration-color-hover: var(--spectrum-accent-content-color-default);
+	--spectrum-drop-zone-body-to-action: var(--spectrum-spacing-300);
+	--spectrum-drop-zone-stroke-dash-gap: var(--spectrum-drop-zone-border-dash-gap);
+	--spectrum-drop-zone-stroke-dash-length: var(--spectrum-drop-zone-border-dash-length);
+	--spectrum-drop-zone-dragged-background-color: var(--spectrum-drop-zone-background-color-opacity);
+
+	/* Filled styles */
+	--spectrum-drop-zone-content-max-width: var(--spectrum-drop-zone-content-maximum-width);
+	--spectrum-drop-zone-content-top-to-text: var(--spectrum-component-top-to-text-300);
+	--spectrum-drop-zone-content-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+	--spectrum-drop-zone-component-height: var(--spectrum-component-height-300);
+	--spectrum-drop-zone-edge-to-text: var(--spectrum-component-edge-to-text-300);
+
+	--spectrum-drop-zone-content-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-drop-zone-content-font-weight: var(--spectrum-bold-font-weight);
+	--spectrum-drop-zone-content-font-size: var(--spectrum-font-size-300);
+	--spectrum-drop-zone-title-line-height: var(--spectrum-line-height-100);
+
 	--spectrum-drop-zone-content-background-color: var(--spectrum-accent-visual-color);
 
-	/* @passthrough start -- IllustratedMessage -- settings for a nested illustrated message */
-	--mod-illustrated-message-content-maximum-width: var(--mod-drop-zone-content-maximum-width, var(--spectrum-drop-zone-content-maximum-width));
-	--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color, var(--spectrum-drop-zone-illustration-color));
-	--mod-illustrated-message-title-to-heading: var(--mod-drop-zone-illustration-to-heading, var(--spectrum-spacing-400));
-	--mod-illustrated-message-heading-to-body: var(--mod-drop-zone-heading-to-body, var(--spectrum-spacing-75));
-	--mod-illustrated-message-title-font-family: var(--mod-drop-zone-heading-font-family, var(--spectrum-sans-font-family-stack));
-	--mod-illustrated-message-title-font-weight: var(--mod-drop-zone-heading-font-weight, var(--spectrum-heading-sans-serif-font-weight));
-	--mod-illustrated-message-title-font-style: var(--mod-drop-zone-heading-font-style, var(--spectrum-heading-sans-serif-font-style));
-	--mod-illustrated-message-title-font-size: var(--mod-drop-zone-heading-font-size, var(--spectrum-drop-zone-title-size));
-	--mod-illustrated-message-title-line-height: var(--mod-drop-zone-heading-line-height, var(--spectrum-heading-line-height));
-	--mod-illustrated-message-title-color: var(--mod-drop-zone-heading-color, var(--spectrum-heading-color));
+	/* Settings for a nested illustrated message */
+	--mod-illustrated-message-vertical-maximum-width: var(--mod-drop-zone-content-maximum-width, var(--spectrum-drop-zone-content-maximum-width));
+	--mod-illustrated-message-description-to-action: var(--mod-drop-zone-body-to-action, var(--spectrum-drop-zone-body-to-action));
 	--mod-illustrated-message-description-position: relative;
 	--mod-illustrated-message-description-z-index: 10;
-	--mod-illustrated-message-heading-to-description: 0;
-	--mod-illustrated-message-description-font-family: var(--mod-drop-zone-body-font-family, var(--spectrum-sans-font-family-stack));
-	--mod-illustrated-message-description-font-weight: var(--mod-drop-zone-body-font-weight, var(--spectrum-body-sans-serif-font-weight));
-	--mod-illustrated-message-description-font-style: var(--mod-drop-zone-body-font-style, var(--spectrum-body-sans-serif-font-style));
-	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-size));
-	--mod-illustrated-message-description-line-height: var(--mod-drop-zone-body-line-height, var(--spectrum-body-line-height));
-	--mod-illustrated-message-description-color: var(--mod-drop-zone-body-color, var(--spectrum-body-color));
-	/* @passthrough end */
+	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
 
-	/* @passthrough start -- ActionButton settings for a nested actionbutton */
-	--mod-actionbutton-font-size: var(--mod-drop-zone-content-font-size, var(--spectrum-font-size-300));
-	--mod-actionbutton-label-color: var(--mod-drop-zone-content-color, var(--spectrum-white));
-	--mod-actionbutton-edge-to-text: var(--mod-drop-zone-content-edge-to-text, var(--spectrum-component-edge-to-text-300));
-	/* @passthrough end */
+	/* Adjusts height of filled & dragged dropzone state */
+	--mod-drop-zone-content-height: 280px;
+}
 
+.spectrum-DropZone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	box-sizing: border-box;
-	inline-size: var(--mod-drop-zone-width, var(--spectrum-drop-zone-width));
-	padding: calc(var(--mod-drop-zone-padding, var(--spectrum-spacing-400)) - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
-	text-align: center;
-	border-color: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
-	border-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
-	border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-corner-radius-100));
-	border-style: var(--mod-drop-zone-border-style, dashed);
-	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
+	inline-size: var(--mod-drop-zone-inline-size, var(--spectrum-drop-zone-inline-size));
+	padding: calc(var(--mod-drop-zone-padding, var(--spectrum-drop-zone-padding)) - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
+	border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
 	background-size: cover;
-
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		/* @passthrough -- updated value for cjk font size */
-		--mod-illustrated-message-title-font-size: var(--spectrum-drop-zone-cjk-title-size);
-	}
+	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
+	position: relative;
+	border: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)) dashed var(--highcontrast-drop-zone-border-color, var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color)));
 
 	&.is-dragged {
 		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style-dragged, solid);
-		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-background-color-opacity)));
-		--mod-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
+		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-dragged-background-color)));
+		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 
-		/* @passthrough -- Updated values for a nested illustrated message when state changes */
-		--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-accent-visual-color));
+		/* Updated values for a nested illustrated message when state changes */
+		--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
+		color: var(--spectrum-drop-zone-illustration-color-hover);
+		border-style: solid;
+
+		.spectrum-DropZone-strokePath {
+			stroke-dasharray: none;
+		}
 	}
 
 	&.is-filled {
 		/* note: the below applies to .is-filled.is-dragged but works here b/c dragged is the only state applying background color */
 		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled)));
 
-		/* @passthrough -- Updated values for a nested illustrated message when state changes */
+		/* Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-display: none;
 	}
 
 	&.is-filled.is-dragged {
-		--mod-drop-zone-content-display: flex;
+		background-position: center;
+		block-size: var(--mod-drop-zone-content-height);
+		background-blend-mode: multiply;
+
+		.spectrum-DropZone-content {
+			block-size: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.spectrum-DropZone-actions {
+			margin-block-start: 0;
+		}
 	}
 
 	&:focus-visible {
-		--mod-drop-zone-border-style: solid;
-		--mod-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
-
+		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 		outline: 0;
 	}
 }
 
-.spectrum-DropZone-content {
-	display: var(--mod-drop-zone-content-display, none);
+.spectrum-DropZone:has(.spectrum-DropZone-stroke) {
+	border: none;
+}
+
+.spectrum-DropZone-stroke {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 100%;
 	block-size: 100%;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	z-index: 10;
+	pointer-events: none;
+}
+
+.spectrum-DropZone-strokePath {
+	stroke: var(--highcontrast-drop-zone-border-color, var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color)));
+	stroke-dasharray: var(--mod-drop-zone-border-dash-length, var(--spectrum-drop-zone-stroke-dash-length)) var(--mod-drop-zone-border-dash-gap, var(--spectrum-drop-zone-stroke-dash-gap));
+	rx: var(--spectrum-drop-zone-corner-radius);
+	ry: var(--spectrum-drop-zone-corner-radius);
+	stroke-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
+	inline-size: calc(100% - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
+	block-size: calc(100% - var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)));
+}
+
+.spectrum-DropZone-content {
+	max-inline-size: var(--mod-illustrated-message-vertical-maximum-width);
+}
+
+.spectrum-DropZone-actions {
+	margin-block-start: var(--spectrum-drop-zone-body-to-action);
+	text-align: center;
 }
 
 .spectrum-DropZone-button {
+	/* Adjust corner radius of button component is dragged & filled state */
+	--mod-button-border-radius: var(--spectrum-corner-radius-500);
 	box-sizing: border-box;
 	border: none;
-	block-size: var(--mod-drop-zone-content-height, var(--spectrum-component-height-300));
-	max-inline-size: var(--mod-drop-zone-content-max-width, var(--spectrum-drop-zone-content-maximum-width));
-	padding-block-start: var(--mod-drop-zone-content-top-to-text, var(--spectrum-component-top-to-text-300));
-	padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-component-bottom-to-text-300));
-	background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
+	block-size: auto;
 
-	font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-sans-font-family-stack));
-	font-weight: var(--mod-drop-zone-content-font-weight, var(--spectrum-bold-font-weight));
-	font-style: var(--mod-drop-zone-content-font-style, var(--spectrum-default-font-style));
-	line-height: var(--mod-drop-zone-content-line-height, var(--spectrum-line-height-100));
+	max-inline-size: var(--mod-drop-zone-content-max-width, var(--spectrum-drop-zone-content-max-width));
+	padding-block-start: var(--mod-drop-zone-content-top-to-text, var(--spectrum-drop-zone-content-top-to-text));
+	padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-drop-zone-content-bottom-to-text));
+	padding-inline: var(--mod-drop-zone-edge-to-text, var(--spectrum-drop-zone-edge-to-text));
+	background-color: var(--highcontrast-drop-zone-button-color, var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color)));
+	max-block-size: var(--spectrum-drop-zone-component-height);
+
+	font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
+	font-weight: var(--mod-drop-zone-content-font-weight, var(--spectrum-drop-zone-content-font-weight));
+	line-height: var(--mod-drop-zone-title-line-height, var(--spectrum-drop-zone-title-line-height));
+
+	.spectrum-Button-label {
+		font-size: var(--mod-drop-zone-content-font-size, var(--spectrum-drop-zone-content-font-size));
+		padding: unset;
+	}
 
 	&:hover,
 	&:focus {
-		background-color: var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color));
+		background-color: var(--highcontrast-drop-zone-button-color, var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color)));
+	}
+}
+
+/********* Illustrated Message *********/
+.spectrum-DropZone {
+	.spectrum-IllustratedMessage {
+		justify-content: center;
 	}
 }
 
 /********* WHCM *********/
 @media (forced-colors: active) {
 	.spectrum-DropZone {
-		--highcontrast-drop-zone-illustration-color: CanvasText;
-
 		--highcontrast-drop-zone-border-color-hover: Highlight;
+		--highcontrast-drop-zone-button-color: ButtonText;
+		--highcontrast-drop-zone-border-color: ButtonText;
 
-		/* @passthrough -- updated values for a nested illustrated message when in a high contrast state */
-		--highcontrast-illustrated-message-illustration-color: var(--highcontrast-drop-zone-illustration-color);
+		&.is-dragged {
+			border-color: var(--highcontrast-drop-zone-border-color-hover);
+
+			.spectrum-DropZone-strokePath {
+				stroke: var(--highcontrast-drop-zone-border-color-hover);
+			}
+		}
 	}
 }

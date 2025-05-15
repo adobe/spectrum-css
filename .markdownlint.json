@@ -1,7 +1,7 @@
 {
     "extends": "markdownlint/style/prettier",
     "first-line-h1": false,
-	"no-inline-html": false,
+    "no-inline-html": false,
     "no-bare-urls": false,
     "no-duplicate-heading": {
       "siblings_only": true

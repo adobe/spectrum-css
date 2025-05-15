@@ -1,5 +1,42 @@
 # Change log
 
+## 7.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/colorarea@8.0.0-next.0
+  - @spectrum-css/colorhandle@11.0.0-next.0
+  - @spectrum-css/colorloupe@8.0.0-next.0
+
+## 7.0.0-next.0
+
+### Major Changes
+
+- [#3390](https://github.com/adobe/spectrum-css/pull/3390) [`b9f61e4`](https://github.com/adobe/spectrum-css/commit/b9f61e42486c3619de95423e0575e10ccc9be167) Thanks [@cdransf](https://github.com/cdransf)! - # colorwheel S2 migration
+
+  This change migrates the colorwheel component to S2. It adds the `--spectrum-colorwheel-border-color-rgb` and `--spectrum-colorwheel-border-opacity` custom properties. It updates `--spectrum-colorwheel-border-color` to leverage these tokens in an `rgba(...)` function.
+
+  This removes the `spectrum-ColorWheel-border` and associated template DOM node as the outside/underlying border are no longer present in the S2 designs. `::before` and `::after` pseudo elements are now used to draw the exterior and interior borders that overlay the exterior and interior edges of the color wheel.
+
+  Support is provided for the `240px` and `192px` sizes outlined in the design requirements.
+
+  The `forced-colors` media query has been moved to the bottom of the file consistent with our other component implementations.
+
+  Stories, tests and documentation have been updated to be consistent with these changes.
+
+  The following mods have been removed:
+
+  ```css
+  --mod-colorwheel-height
+  --mod-colorwheel-width
+  --mod-colorwheel-min-width
+  --mod-colorwheel-path-borders
+  --mod-colorwheel-colorarea-margin
+  --mod-colorwheel-border-width
+  ```
+
 ## 6.1.0
 
 ### Minor Changes

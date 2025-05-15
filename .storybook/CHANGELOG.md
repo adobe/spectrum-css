@@ -1,5 +1,26 @@
 # Change Log
 
+## 12.0.5-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`87d7d99`](https://github.com/adobe/spectrum-css/commit/87d7d99260e758e697668cc17962b0b36d075c65)]:
+  - @spectrum-css/tokens@16.1.0-next.2
+
+## 12.0.5-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`89a3f2b`](https://github.com/adobe/spectrum-css/commit/89a3f2bfeed257a5eefeef229efaa3cc7555980c)]:
+  - @spectrum-css/tokens@16.1.0-next.1
+
+## 12.0.5-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
 ## 12.0.4
 
 ### Patch Changes
@@ -503,7 +524,6 @@ This component has been deprecated. Use an action bar to allow users to perform 
 ### 🛑 BREAKING CHANGE
 
 - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
-
 - NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 
 ## 6.0.1

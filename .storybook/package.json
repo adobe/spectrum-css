@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/preview",
-	"version": "12.0.4",
+	"version": "12.0.5-next.2",
 	"description": "A Spectrum CSS preview",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -39,11 +39,10 @@
 		"build": "yarn docs:report && cross-env NODE_ENV=development storybook build --stats-json --config-dir ."
 	},
 	"dependencies": {
-		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
+		"@adobe/spectrum-css-workflow-icons": "^4.0.0",
 		"@spectrum-css/bundle": "1.0.1",
-		"@spectrum-css/tokens": "16.0.1",
-		"@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^15.0.0",
-		"@spectrum-css/ui-icons": "1.1.2"
+		"@spectrum-css/tokens": "16.1.0-next.2",
+		"@spectrum-css/ui-icons": "2.0.0-next.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.26.0",

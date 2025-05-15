@@ -1,6 +1,6 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as InfieldProgressCircle } from "@spectrum-css/infieldprogresscircle/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
-import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -9,9 +9,6 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Button",
@@ -92,15 +89,12 @@ export const Template = ({
 			Icon({ iconName, setName: iconSet, size }, context)
 		)}
 		${when(isPending, () =>
-			ProgressCircle(
-				{
-					size: "s",
-					testId: "progress-circle",
-					staticColor,
-					isIndeterminate: true,
-				},
-				context
-			)
+			InfieldProgressCircle({
+				size: size,
+				staticColor,
+				isIndeterminate: true,
+				testId: "infield-progress-circle"
+			}, context)
 		)}
 	</button>
 	`;
@@ -187,16 +181,12 @@ export const TextWrapTemplate = (args, context = {}) => Container({
 		${Template({
 			...args,
 			customStyles: {},
-			label: "Be a premium member",
-			noWrap: true,
 		}, context)}
 		${Template({
 			...args,
 			customStyles: {
 				"max-inline-size": "100%",
 			},
-			label: "Be a premium member",
-			noWrap: true,
 		}, context)}
 		${Template({
 			...args,
@@ -205,8 +195,6 @@ export const TextWrapTemplate = (args, context = {}) => Container({
 			},
 			iconName: "Star",
 			iconSet: "workflow",
-			label: "Be a premium member",
-			noWrap: true,
 		}, context)}
 	`,
 }, context);

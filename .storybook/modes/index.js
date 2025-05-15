@@ -20,16 +20,6 @@ const modes = {
 		color: "dark",
 		textDirection: "rtl",
 	},
-	"S1 | Light | LTR": {
-		context: "legacy",
-		color: "light",
-		textDirection: "ltr",
-	},
-	"Express | Light | LTR": {
-		context: "express",
-		color: "light",
-		textDirection: "ltr",
-	},
 };
 
 export default modes;

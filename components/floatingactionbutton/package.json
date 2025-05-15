@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/floatingactionbutton",
-	"version": "4.1.0",
+	"version": "5.0.0-next.0",
 	"description": "The Spectrum CSS floatingactionbutton component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -26,7 +26,7 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=16.0.1"
+		"@spectrum-css/tokens": ">=16.1.0-next.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/tokens": {
@@ -34,7 +34,7 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/tokens": "16.0.1"
+		"@spectrum-css/tokens": "16.1.0-next.2"
 	},
 	"keywords": [
 		"design-system",
