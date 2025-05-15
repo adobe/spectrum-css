@@ -191,10 +191,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241121221506":
-  version: 0.0.0-s2-foundations-20241121221506
-  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241121221506"
-  checksum: 10c0/64664995ca98170c2a089ecb215103c77bb5a3ff49848371e2dfc301dc3ca30ef4dafae3d44cda82a1609d877e54608cc2e591edef37095ee646c6cf185143ee
+"@adobe/spectrum-tokens@npm:13.7.0":
+  version: 13.7.0
+  resolution: "@adobe/spectrum-tokens@npm:13.7.0"
+  checksum: 10c0/e97b0bcb832c839b45c563a6ad5d68f86320989d8c7403af2512f81c7b1b15fcc68243270587728b95a2e6829fc113920c7e5a6b5a464b880ea3b17da5756892
   languageName: node
   linkType: hard
 
@@ -5535,7 +5535,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241121221506"
+    "@adobe/spectrum-tokens": "npm:13.7.0"
     "@adobe/token-diff-generator": "npm:^1.3.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     deepmerge: "npm:^4.3.1"
