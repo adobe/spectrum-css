@@ -6,8 +6,8 @@ __metadata:
   cacheKey: 10c0
 
 "@actions/artifact@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "@actions/artifact@npm:2.2.1"
+  version: 2.3.2
+  resolution: "@actions/artifact@npm:2.3.2"
   dependencies:
     "@actions/core": "npm:^1.10.0"
     "@actions/github": "npm:^5.1.1"
@@ -20,9 +20,8 @@ __metadata:
     "@protobuf-ts/plugin": "npm:^2.2.3-alpha.1"
     archiver: "npm:^7.0.1"
     jwt-decode: "npm:^3.1.2"
-    twirp-ts: "npm:^2.5.0"
     unzip-stream: "npm:^0.3.1"
-  checksum: 10c0/ed4689b9df2f362e7fead772953f1b13bf348104174482123d7ab247fc4a5bd39fc21d093155789203755a06415811e6705110b6dc0aa4209006ae9bb1aef3d9
+  checksum: 10c0/dc823a4a4b763a40894b56ae6dc585455edabe848146f9df95bdb2e62c8d7565d30d782d33eb528074c3fd31fcdb7df54f35b126c0bb8f86c73183bce97c56c9
   languageName: node
   linkType: hard
 
@@ -3560,7 +3559,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@protobuf-ts/plugin-framework@npm:^2.0.7, @protobuf-ts/plugin-framework@npm:^2.9.4":
+"@protobuf-ts/plugin-framework@npm:^2.9.4":
   version: 2.9.4
   resolution: "@protobuf-ts/plugin-framework@npm:2.9.4"
   dependencies:
@@ -8696,13 +8695,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.1.0":
-  version: 6.2.1
-  resolution: "commander@npm:6.2.1"
-  checksum: 10c0/85748abd9d18c8bc88febed58b98f66b7c591d9b5017cad459565761d7b29ca13b7783ea2ee5ce84bf235897333706c4ce29adf1ce15c8252780e7000e2ce9ea
-  languageName: node
-  linkType: hard
-
 "commander@npm:^7.2.0":
   version: 7.2.0
   resolution: "commander@npm:7.2.0"
@@ -9746,18 +9738,6 @@ __metadata:
     no-case: "npm:^3.0.4"
     tslib: "npm:^2.0.3"
   checksum: 10c0/5b859ea65097a7ea870e2c91b5768b72ddf7fa947223fd29e167bcdff58fe731d941c48e47a38ec8aa8e43044c8fbd15cd8fa21689a526bc34b6548197cd5b05
-  languageName: node
-  linkType: hard
-
-"dot-object@npm:^2.1.4":
-  version: 2.1.5
-  resolution: "dot-object@npm:2.1.5"
-  dependencies:
-    commander: "npm:^6.1.0"
-    glob: "npm:^7.1.6"
-  bin:
-    dot-object: bin/dot-object
-  checksum: 10c0/5a9cc1ec156bb3d1363b76946bb84ac062317ceffab52aecb6a751eb13cf2387dbf09fcbe243e4bf16dc47b7531331b25de604729daa5e6bbf105a8ce87418f2
   languageName: node
   linkType: hard
 
@@ -16695,13 +16675,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-to-regexp@npm:^6.2.0":
-  version: 6.3.0
-  resolution: "path-to-regexp@npm:6.3.0"
-  checksum: 10c0/73b67f4638b41cde56254e6354e46ae3a2ebc08279583f6af3d96fe4664fc75788f74ed0d18ca44fa4a98491b69434f9eee73b97bb5314bd1b5adb700f5c18d6
-  languageName: node
-  linkType: hard
-
 "path-type@npm:^4.0.0":
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
@@ -17928,7 +17901,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1, prettier@npm:^2.7.1":
+"prettier@npm:^2.7.1":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
@@ -20174,16 +20147,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-poet@npm:^4.5.0":
-  version: 4.15.0
-  resolution: "ts-poet@npm:4.15.0"
-  dependencies:
-    lodash: "npm:^4.17.15"
-    prettier: "npm:^2.5.1"
-  checksum: 10c0/87ce3589f071a66a9701c88ee830ce778f2e4c43bcfdee9308a8f38bb53b8fb36e7b5900749389b4bb8aaddf67e87043d51c2fbf36ec25aa98bcfff90bf6d742
-  languageName: node
-  linkType: hard
-
 "tsconfig-paths@npm:^4.1.2":
   version: 4.2.0
   resolution: "tsconfig-paths@npm:4.2.0"
@@ -20220,30 +20183,6 @@ __metadata:
   version: 1.2.0
   resolution: "tween-functions@npm:1.2.0"
   checksum: 10c0/7e59295b8b0ee4132ed2fe335f56a9db5c87056dad6b6fd3011be72239fd20398003ddb4403bc98ad9f5c94468890830f64016edbbde35581faf95b32cda8305
-  languageName: node
-  linkType: hard
-
-"twirp-ts@npm:^2.5.0":
-  version: 2.5.0
-  resolution: "twirp-ts@npm:2.5.0"
-  dependencies:
-    "@protobuf-ts/plugin-framework": "npm:^2.0.7"
-    camel-case: "npm:^4.1.2"
-    dot-object: "npm:^2.1.4"
-    path-to-regexp: "npm:^6.2.0"
-    ts-poet: "npm:^4.5.0"
-    yaml: "npm:^1.10.2"
-  peerDependencies:
-    "@protobuf-ts/plugin": ^2.5.0
-    ts-proto: ^1.81.3
-  peerDependenciesMeta:
-    "@protobuf-ts/plugin":
-      optional: true
-    ts-proto:
-      optional: true
-  bin:
-    protoc-gen-twirp_ts: protoc-gen-twirp_ts
-  checksum: 10c0/046ef483420105e92bb8429931e754d7046516fd4fc4f5eeeacbf57dd26ec06ab9c69eba934e587e525f24f49177b03667d18dea78741c408b3e69e1c9774bbd
   languageName: node
   linkType: hard
 
@@ -21275,13 +21214,6 @@ __metadata:
   version: 5.0.0
   resolution: "yallist@npm:5.0.0"
   checksum: 10c0/a499c81ce6d4a1d260d4ea0f6d49ab4da09681e32c3f0472dee16667ed69d01dae63a3b81745a24bd78476ec4fcf856114cb4896ace738e01da34b2c42235416
-  languageName: node
-  linkType: hard
-
-"yaml@npm:^1.10.2":
-  version: 1.10.2
-  resolution: "yaml@npm:1.10.2"
-  checksum: 10c0/5c28b9eb7adc46544f28d9a8d20c5b3cb1215a886609a2fd41f51628d8aaa5878ccd628b755dbcd29f6bb4921bd04ffbc6dcc370689bb96e594e2f9813d2605f
   languageName: node
   linkType: hard
 
