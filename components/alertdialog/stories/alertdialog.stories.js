@@ -185,6 +185,9 @@ Scroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * When horizontal space is limited, button groups stack vertically. They should appear in ascending order based on importance, with the most critical action at the bottom.
+ */
 export const VerticalButtons = Template.bind({});
 VerticalButtons.tags = ["!dev"];
 VerticalButtons.args = {
