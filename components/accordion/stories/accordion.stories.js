@@ -1,7 +1,7 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isQuiet, size } from "@spectrum-css/preview/types";
+import { hasNoInlinePadding, isQuiet, size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -48,6 +48,7 @@ export default {
 			control: "select",
 		},
 		isQuiet,
+		hasNoInlinePadding,
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
@@ -56,6 +57,7 @@ export default {
 		collapseAll: false,
 		disableAll: false,
 		isQuiet: false,
+		hasNoInlinePadding: false,
 	},
 	parameters: {
 		// Prevent an innacurate depiction of width due to "centered" layout's use of flex on the body.
@@ -213,6 +215,21 @@ Quiet.args = {
 	isQuiet: true,
 };
 Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The optional no inline padding style for accordion. This sets no overall horizontal padding on either side of the component
+ * (but the body text content always keeps its own padding from the edge). This can be applied by adding the `spectrum-Accordion----noInlinePadding` class alongside the
+ * parent `spectrum-Accordion` class.
+ */
+export const NoInlinePadding = Template.bind({});
+NoInlinePadding.tags = ["!dev"];
+NoInlinePadding.args = {
+	items: content,
+	hasNoInlinePadding: true,
+};
+NoInlinePadding.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

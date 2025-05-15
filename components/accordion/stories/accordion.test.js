@@ -140,6 +140,14 @@ export const AccordionGroup = Variants({
 			},
 		},
 		{
+			testHeading: "No Inline Padding",
+			items: testsContent,
+			hasNoInlinePadding: true,
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+		},
+		{
 			testHeading: "Compact",
 			items: testsContent,
 			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
