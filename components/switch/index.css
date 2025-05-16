@@ -229,7 +229,7 @@
 		border-color: var(--highcontrast-switch-border-color-hover, var(--mod-switch-border-color-hover, var(--spectrum-switch-border-color-hover)));
 	}
 
-	.spectrum-Switch:active & {
+	.spectrum-Switch.spectrum-Switch:active & {
 		border-color: var(--highcontrast-switch-border-color-down, var(--mod-switch-border-color-down, var(--spectrum-switch-border-color-down)));
 	}
 
@@ -246,7 +246,7 @@
 			border-color: var(--highcontrast-switch-border-color-selected-hover, var(--mod-switch-border-color-selected-hover, var(--spectrum-switch-border-color-selected-hover)));
 		}
 
-		.spectrum-Switch:active & {
+		.spectrum-Switch.spectrum-Switch:active & {
 			background-color: var(--highcontrast-switch-background-color-selected-down, var(--mod-switch-background-color-selected-down, var(--spectrum-switch-background-color-selected-down)));
 			border-color: var(--highcontrast-switch-border-color-selected-down, var(--mod-switch-border-color-selected-down, var(--spectrum-switch-border-color-selected-down)));
 		}
@@ -283,7 +283,7 @@
 			background-color: var(--highcontrast-switch-handle-background-color-hover, var(--mod-switch-handle-background-color-hover, var(--spectrum-switch-handle-background-color-hover)));
 		}
 
-		.spectrum-Switch:active & {
+		.spectrum-Switch.spectrum-Switch:active & {
 			background-color: var(--highcontrast-switch-handle-background-color-down, var(--mod-switch-handle-background-color-down, var(--spectrum-switch-handle-background-color-down)));
 		}
 
