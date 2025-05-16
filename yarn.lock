@@ -5066,7 +5066,7 @@ __metadata:
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
     "@spectrum-css/bundle": "npm:1.0.1"
     "@spectrum-css/tokens": "npm:16.0.1"
-    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^15.0.0"
+    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^16.0.0"
     "@spectrum-css/ui-icons": "npm:1.1.2"
     "@storybook/addon-a11y": "npm:8.4.7"
     "@storybook/addon-actions": "npm:8.4.7"
@@ -5500,14 +5500,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^15.0.0":
-  version: 15.2.0
-  resolution: "@spectrum-css/tokens@npm:15.2.0"
-  checksum: 10c0/dd8d1dd39fc72d57bc12e183b3fda7654a7ebf90902267e8c4145d54b09eecfc150f09c92ec837b6c501c0c9da573e2d9b0bc3745c7c8981c3a39ee03367fc24
-  languageName: node
-  linkType: hard
-
-"@spectrum-css/tokens@npm:16.0.1, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^16.0.0, @spectrum-css/tokens@npm:16.0.1, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
