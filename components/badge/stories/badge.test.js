@@ -35,6 +35,26 @@ export const BadgeGroup = Variants({
 				variant,
 			})
 		),
+		...["neutral", "accent", "informative", "positive", "negative", "notice"].map((variant) =>
+			({
+				testHeading: capitalize(variant),
+				wrapperStyles: {
+					"column-gap": "10px",
+				},
+				variant,
+				style: "outline"
+			})
+		),
+		...["neutral", "accent", "informative", "positive", "negative", "notice", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"].map((variant) =>
+			({
+				testHeading: capitalize(variant),
+				wrapperStyles: {
+					"column-gap": "10px",
+				},
+				variant,
+				style: "subtle"
+			})
+		),
 		...["none", "fixed-inline-start", "fixed-inline-end", "fixed-block-start", "fixed-block-end"].map((fixed) =>
 			({
 				testHeading: `Layout ${fixed}`,
@@ -47,7 +67,7 @@ export const BadgeGroup = Variants({
 			})
 		),
 		{
-			testHeading: "Truncation",
+			testHeading: "Text Wrap",
 			wrapperStyles: {
 				"column-gap": "10px",
 			},
