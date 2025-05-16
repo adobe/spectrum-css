@@ -23,6 +23,18 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Delete old deploy comments
+        run: |
+          $pr = "${{ github.event.pull_request.number }}"
+          gh api repos/${{ github.repository }}/issues/$pr/comments `
+            | ConvertFrom-Json `
+            | Where-Object body -like 'Azure Static Web Apps: Your stage site is ready! Visit it here: *' `
+            | ForEach-Object {
+                gh api repos/${{ github.repository }}/issues/comments/$($_.id) -X DELETE
+              }
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and deploy to Azure static web apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
