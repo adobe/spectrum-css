@@ -1,8 +1,7 @@
-name: Azure Static Web Apps CI/CD
-
-permissions:
-  contents: read
-  pull-requests: write
+name: Publish documentation (Azure)
+#
+# This workflow publishes the documentation to Azure static web apps
+#
 
 on:
   pull_request:
@@ -10,17 +9,32 @@ on:
     branches:
       - "**"
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v3
+      ## --- SETUP --- ##
+      - name: Check out code
+        uses: actions/checkout@v4
         with:
-          submodules: true
-          lfs: false
-      - name: Delete old deploy comments
+            fetch-depth: 0
+
+      - name: Use Node LTS version
+        uses: actions/setup-node@v4
+        with:
+            node-version: 20
+            cache: yarn
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Clean up comments from previous Azure deploys
         if: github.event_name == 'pull_request'
         shell: bash
         env:
@@ -36,7 +50,25 @@ jobs:
               gh api repos/${{ github.repository }}/issues/comments/$id -X DELETE
             fi
           done
-      - name: Build and deploy to Azure static web apps
+
+      ## --- YARN CACHE --- ##
+      - name: Check for cached dependencies
+        continue-on-error: true
+        id: cache-dependencies
+        uses: actions/cache@v4
+        with:
+            path: |
+                .cache/yarn
+                node_modules
+            key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+
+      ## --- INSTALL --- ##
+      # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
+      - name: Install dependencies
+        shell: bash
+        run: yarn install --immutable
+
+      - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -47,6 +79,7 @@ jobs:
           api_location: ""
           output_location: "dist"
           app_build_command: "yarn build:docs"
+        timeout-minutes: 10
 
   close_pull_request_job:
     if: github.event.action == 'closed'
