@@ -3,19 +3,19 @@
   "selectors": [
     ".spectrum-SwatchGroup",
     ".spectrum-SwatchGroup--compact",
-    ".spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL)",
-    ".spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS)"
+    ".spectrum-SwatchGroup--spacious"
   ],
-  "modifiers": ["--mod-swatchgroup-spacing"],
-  "component": [
-    "--spectrum-swatch-group-spacing-spacious",
-    "--spectrum-swatchgroup-spacing"
+  "modifiers": [
+    "--mod-swatchgroup-spacing-compact",
+    "--mod-swatchgroup-spacing-regular",
+    "--mod-swatchgroup-spacing-spacious"
   ],
+  "component": ["--spectrum-swatchgroup-spacing"],
   "global": [
     "--spectrum-spacing-100",
     "--spectrum-spacing-50",
     "--spectrum-spacing-75"
   ],
-  "passthroughs": ["--mod-swatch-border-opacity"],
+  "passthroughs": [],
   "high-contrast": []
 }
