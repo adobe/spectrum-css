@@ -1,5 +1,9 @@
 name: Azure Static Web Apps CI/CD
 
+permissions:
+  contents: read
+  pull-requests: write
+
 on:
   push:
     branches:
@@ -19,7 +23,7 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Build And Deploy
+      - name: Build and deploy to Azure static web apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
