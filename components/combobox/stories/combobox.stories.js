@@ -92,6 +92,11 @@ export default {
 			control: "select",
 			if: { arg: "showFieldLabel", truthy: true },
 		},
+		autocomplete: {
+			table: {
+				disable: true,
+			},
+		},
 		helpText: {
 			name: "Help text",
 			type: { name: "text" },
@@ -116,7 +121,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Combobox",
 		size: "m",
-		isOpen: false,
+		isOpen: true,
 		isInvalid: false,
 		isHovered: false,
 		isFocused: false,
@@ -126,7 +131,7 @@ export default {
 		isReadOnly: false,
 		isLabelRequired: false,
 		showFieldLabel: false,
-		showHelpText: false,
+		autocomplete: false,
 		testId: "combobox",
 		fieldLabelText: "Select location",
 		helpText: "",

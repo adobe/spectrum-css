@@ -33,6 +33,7 @@ const Combobox = ({
 	isLabelRequired = false,
 	showFieldLabel = false,
 	value = "",
+	autocomplete = true,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 	const comboboxId = id || getRandomId("combobox");
@@ -102,12 +103,13 @@ const Combobox = ({
 						`${rootClass}-textfield`,
 						...(isLoading ? ["is-loading"] : []),
 					],
-					customInputClasses: [`${rootClass}-input`],
+					customInputClasses: [`${rootClass}-input`, `${rootClass}-autocomplete`],
 					isLoading,
 					customInfieldProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 					name: "field",
 					isReadOnly,
 					value,
+					autocomplete: autocomplete ? undefined : "off",
 					onclick: function () {
 						if (!isOpen) updateArgs({ isOpen: true });
 					},
@@ -190,11 +192,11 @@ export const HelpTextTemplate = (args, context) => {
 	const variants = [
 		{
 			heading: "Help text",
-			args: {...args, showHelpText: true, helpText: "Choose a topic. Add a new topic by typing it in the field, then selecting 'Enter.'"},
+			args: {...args, helpText: "Choose a topic. Add a new topic by typing it in the field, then selecting 'Enter.'"},
 		},
 		{
 			heading: "Help text with error",
-			args: {...args, showHelpText: true, helpText: "Choose or add at least one topic.", isInvalid: true},
+			args: {...args, helpText: "Choose or add at least one topic.", isInvalid: true},
 		}
 	];
 
