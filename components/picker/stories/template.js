@@ -176,6 +176,7 @@ export const Template = ({
 		content: popoverContent,
 		size,
 		customStyles: customPopoverStyles,
+		customClasses: [`${rootClass}-popover`],
 		popoverWrapperStyles: {
 			"display": "block",
 		},
@@ -189,6 +190,13 @@ export const Template = ({
 		isDisabled,
 	}, context) : "";
 
+	const sizeMap = {
+		s: "small",
+		m: "medium",
+		l: "large",
+		xl: "extra-large",
+	};
+
 	const markup = html`
 		<div
 			style=${styleMap({
@@ -197,7 +205,8 @@ export const Template = ({
 				...(labelPosition == "side") && {
 					display: "flex",
 					flexWrap: "nowrap",
-				}
+				},
+				"--mod-picker-popover-animation-distance": `var(--spectrum-component-to-menu-${sizeMap[size] || "medium" })`,
 			})}
 		>
 			${when(label, () =>

@@ -102,10 +102,6 @@
 	--spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
-
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
-	}
 }
 
 .spectrum-Picker--sizeS {
@@ -124,10 +120,6 @@
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-75);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-75);
-
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-small);
-	}
 }
 
 .spectrum-Picker--sizeL {
@@ -146,10 +138,6 @@
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-large);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-200);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-200);
-
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-large);
-	}
 }
 
 .spectrum-Picker--sizeXL {
@@ -168,10 +156,7 @@
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
-
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-extra-large);
-	}
+	--mod-picker-popover-animation-distance: var(--spectrum-component-to-menu-extra-large);
 }
 
 .spectrum-Picker--quiet {
@@ -410,8 +395,8 @@
 	margin-inline-end: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
 }
 
-.spectrum-Picker + .spectrum-Popover--bottom-start.is-open {
-	transform: translateY(var(--mod-picker-spacing-picker-to-popover, var(--spectrum-picker-spacing-picker-to-popover)));
+.spectrum-Picker-popover {
+	--mod-popover-animation-distance: var(--mod-picker-popover-animation-distance, var(--spectrum-component-to-menu-medium));
 }
 
 .spectrum-Picker--quiet {
