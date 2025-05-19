@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -12,20 +12,20 @@
  */
 
 .spectrum-Badge {
-	/* badge styling for all t-shirt sizes and all themes */
-	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-100);
+	/* base badge styling for all t-shirt sizes and all themes */
+	--spectrum-badge-border-width: var(--mod-badge-border-width, var(--spectrum-border-width-200));
+	--spectrum-badge-border-color: transparent;
 
 	/* label text styles for all t-shirt sizes and all themes */
 	--spectrum-badge-line-height: var(--spectrum-line-height-100);
 	--spectrum-badge-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--spectrum-badge-font-weight: var(--spectrum-medium-font-weight);
 
 	/* text and icon color default white for all t-shirt sizes and all themes */
 	--spectrum-badge-label-icon-color: var(--spectrum-white);
 
-	/* background color default for all t-shirt sizes and all themes */
-	--spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
-
 	/* semantic background colors for all t-shirt sizes and all themes */
+	--spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 	--spectrum-badge-background-color-accent: var(--spectrum-accent-background-color-default);
 	--spectrum-badge-background-color-informative: var(--spectrum-informative-background-color-default);
 	--spectrum-badge-background-color-negative: var(--spectrum-negative-background-color-default);
@@ -47,23 +47,73 @@
 	--spectrum-badge-background-color-purple: var(--spectrum-purple-background-color-default);
 	--spectrum-badge-background-color-fuchsia: var(--spectrum-fuchsia-background-color-default);
 	--spectrum-badge-background-color-magenta: var(--spectrum-magenta-background-color-default);
+	--spectrum-badge-background-color-pink: var(--spectrum-pink-background-color-default);
+	--spectrum-badge-background-color-turquoise: var(--spectrum-turquoise-background-color-default);
+	--spectrum-badge-background-color-brown: var(--spectrum-brown-background-color-default);
+	--spectrum-badge-background-color-cinnamon: var(--spectrum-cinnamon-background-color-default);
+	--spectrum-badge-background-color-silver: var(--spectrum-silver-background-color-default);
+
+	/**
+		Style = subtle
+	*/
+
+	--spectrum-badge-subtle-label-icon-color: var(--spectrum-gray-1000);
+
+	/* semantic background colors */
+	--spectrum-badge-subtle-background-color-default: var(--spectrum-neutral-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-accent: var(--spectrum-accent-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-informative: var(--spectrum-informative-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-negative: var(--spectrum-negative-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-positive: var(--spectrum-positive-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-notice: var(--spectrum-notice-subtle-background-color-default);
+
+	/* non-semantic background colors */
+	--spectrum-badge-subtle-background-color-gray: var(--spectrum-gray-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-red: var(--spectrum-red-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-orange: var(--spectrum-orange-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-yellow: var(--spectrum-yellow-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-chartreuse: var(--spectrum-chartreuse-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-celery: var(--spectrum-celery-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-green: var(--spectrum-green-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-seafoam: var(--spectrum-seafoam-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-cyan: var(--spectrum-cyan-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-blue: var(--spectrum-blue-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-indigo: var(--spectrum-indigo-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-purple: var(--spectrum-purple-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-fuchsia: var(--spectrum-fuchsia-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-magenta: var(--spectrum-magenta-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-pink: var(--spectrum-pink-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-turquoise: var(--spectrum-turquoise-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-brown: var(--spectrum-brown-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-cinnamon: var(--spectrum-cinnamon-subtle-background-color-default);
+	--spectrum-badge-subtle-background-color-silver: var(--spectrum-silver-subtle-background-color-default);
+
+	/**
+		Style = outline
+		Only valid for semantic colors
+	*/
+	--spectrum-badge-outline-label-icon-color: var(--spectrum-gray-1000);
+	--spectrum-badge-outline-background-color: var(--spectrum-background-layer-2-color);
+	--spectrum-badge-outline-border-color-neutral: var(--spectrum-neutral-visual-color);
+	--spectrum-badge-outline-border-color-accent: var(--spectrum-accent-visual-color);
+	--spectrum-badge-outline-border-color-informative: var(--spectrum-informative-visual-color);
+	--spectrum-badge-outline-border-color-negative: var(--spectrum-negative-visual-color);
+	--spectrum-badge-outline-border-color-notice: var(--spectrum-notice-visual-color);
+	--spectrum-badge-outline-border-color-positive: var(--spectrum-positive-visual-color);
 
 	/*** DEFAULT STYLE fallbacks if no t-shirt size - uses Medium t-shirt styles ***/
-	/* badge height - fallback if no t-shirt size */
+
+	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
+
 	--spectrum-badge-height: var(--spectrum-component-height-100);
 
-	/* label font size - fallback if no t-shirt size */
 	--spectrum-badge-font-size: var(--spectrum-font-size-100);
 
-	/* label spacing - fallback if no t-shirt size */
 	--spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-100);
 	--spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-100);
 	--spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-100);
 
-	/* icon size - fallback if no t-shirt size */
 	--spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
-
-	/* icon spacing - fallback if no t-shirt size */
 	--spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-100);
 	--spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
 	--spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
@@ -73,6 +123,7 @@
 }
 
 /* text and icon color is black for these background colors */
+.spectrum-Badge--notice,
 .spectrum-Badge--orange,
 .spectrum-Badge--yellow,
 .spectrum-Badge--chartreuse,
@@ -80,21 +131,8 @@
 	--spectrum-badge-label-icon-color: var(--spectrum-black);
 }
 
-/* dark theme all non-semantic colors are black */
-.spectrum-Badge--gray,
-.spectrum-Badge--red,
-.spectrum-Badge--green,
-.spectrum-Badge--seafoam,
-.spectrum-Badge--cyan,
-.spectrum-Badge--blue,
-.spectrum-Badge--indigo,
-.spectrum-Badge--purple,
-.spectrum-Badge--fuchsia,
-.spectrum-Badge--magenta {
-	--spectrum-badge-label-icon-color: var(--spectrum-badge-label-icon-color-primary);
-}
-
 .spectrum-Badge--sizeS {
+	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-medium-size-small);
 	--spectrum-badge-height: var(--spectrum-component-height-75);
 
 	/* label */
@@ -112,6 +150,7 @@
 }
 
 .spectrum-Badge--sizeL {
+	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-medium-size-large);
 	--spectrum-badge-height: var(--spectrum-component-height-100);
 
 	/* label */
@@ -129,6 +168,7 @@
 }
 
 .spectrum-Badge--sizeXL {
+	--spectrum-badge-corner-radius: var(--spectrum-corner-radius-medium-size-extra-large);
 	--spectrum-badge-height: var(--spectrum-component-height-100);
 
 	/* label */
@@ -162,14 +202,18 @@
 
 	cursor: default;
 
-	-webkit-font-smoothing: subpixel-antialiased;
-	-moz-osx-font-smoothing: auto;
-
+	/* Due to calc() for spacing, --mod is included in base border-width token */
+	border: var(--spectrum-badge-border-width) solid var(--mod-badge-border-color, var(--spectrum-badge-border-color));
 	border-radius: var(--mod-badge-corner-radius, var(--spectrum-badge-corner-radius));
-	border: 1px solid transparent;
 
 	background: var(--mod-badge-background-color-default, var(--spectrum-badge-background-color-default));
 	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
+
+	/* Show background color under transparent border to correct visual height */
+	background-origin: border-box;
+
+	/* Prevent stretch height behavior next to other flex/grid children */
+	align-self: start;
 }
 
 /* background color variants */
@@ -193,7 +237,6 @@
 	background: var(--mod-badge-background-color-positive, var(--spectrum-badge-background-color-positive));
 }
 
-/* New in S2, not supporting in Foundations yet! */
 .spectrum-Badge--notice {
 	background: var(--mod-badge-background-color-notice, var(--spectrum-badge-background-color-notice));
 }
@@ -255,6 +298,165 @@
 	background: var(--mod-badge-background-color-magenta, var(--spectrum-badge-background-color-magenta));
 }
 
+.spectrum-Badge--pink {
+	background: var(--mod-badge-background-color-pink, var(--spectrum-badge-background-color-pink));
+}
+
+.spectrum-Badge--turquoise {
+	background: var(--mod-badge-background-color-turquoise, var(--spectrum-badge-background-color-turquoise));
+}
+
+.spectrum-Badge--brown {
+	background: var(--mod-badge-background-color-brown, var(--spectrum-badge-background-color-brown));
+}
+
+.spectrum-Badge--cinnamon {
+	background: var(--mod-badge-background-color-cinnamon, var(--spectrum-badge-background-color-cinnamon));
+}
+
+.spectrum-Badge--silver {
+	background: var(--mod-badge-background-color-silver, var(--spectrum-badge-background-color-silver));
+}
+
+/* Style = subtle */
+.spectrum-Badge--style-subtle {
+	color: var(--mod-badge-subtle-label-icon-color, var(--spectrum-badge-subtle-label-icon-color));
+
+	/* background color variants */
+	&.spectrum-Badge--neutral {
+		background: var(--mod-badge-subtle-background-color-default, var(--spectrum-badge-subtle-background-color-default));
+	}
+
+	&.spectrum-Badge--accent {
+		background: var(--mod-badge-subtle-background-color-accent, var(--spectrum-badge-subtle-background-color-accent));
+	}
+
+	&.spectrum-Badge--informative {
+		background: var(--mod-badge-subtle-background-color-informative, var(--spectrum-badge-subtle-background-color-informative));
+	}
+
+	&.spectrum-Badge--negative {
+		background: var(--mod-badge-subtle-background-color-negative, var(--spectrum-badge-subtle-background-color-negative));
+	}
+
+	&.spectrum-Badge--positive {
+		background: var(--mod-badge-subtle-background-color-positive, var(--spectrum-badge-subtle-background-color-positive));
+	}
+
+	&.spectrum-Badge--notice {
+		background: var(--mod-badge-subtle-background-color-notice, var(--spectrum-badge-subtle-background-color-notice));
+	}
+
+	/* non-semantic colors */
+	&.spectrum-Badge--gray {
+		background: var(--mod-badge-subtle-background-color-gray, var(--spectrum-badge-subtle-background-color-gray));
+	}
+
+	&.spectrum-Badge--red {
+		background: var(--mod-badge-subtle-background-color-red, var(--spectrum-badge-subtle-background-color-red));
+	}
+
+	&.spectrum-Badge--orange {
+		background: var(--mod-badge-subtle-background-color-orange, var(--spectrum-badge-subtle-background-color-orange));
+	}
+
+	&.spectrum-Badge--yellow {
+		background: var(--mod-badge-subtle-background-color-yellow, var(--spectrum-badge-subtle-background-color-yellow));
+	}
+
+	&.spectrum-Badge--chartreuse {
+		background: var(--mod-badge-subtle-background-color-chartreuse, var(--spectrum-badge-subtle-background-color-chartreuse));
+	}
+
+	&.spectrum-Badge--celery {
+		background: var(--mod-badge-subtle-background-color-celery, var(--spectrum-badge-subtle-background-color-celery));
+	}
+
+	&.spectrum-Badge--green {
+		background: var(--mod-badge-subtle-background-color-green, var(--spectrum-badge-subtle-background-color-green));
+	}
+
+	&.spectrum-Badge--seafoam {
+		background: var(--mod-badge-subtle-background-color-seafoam, var(--spectrum-badge-subtle-background-color-seafoam));
+	}
+
+	&.spectrum-Badge--cyan {
+		background: var(--mod-badge-subtle-background-color-cyan, var(--spectrum-badge-subtle-background-color-cyan));
+	}
+
+	&.spectrum-Badge--blue {
+		background: var(--mod-badge-subtle-background-color-blue, var(--spectrum-badge-subtle-background-color-blue));
+	}
+
+	&.spectrum-Badge--indigo {
+		background: var(--mod-badge-subtle-background-color-indigo, var(--spectrum-badge-subtle-background-color-indigo));
+	}
+
+	&.spectrum-Badge--purple {
+		background: var(--mod-badge-subtle-background-color-purple, var(--spectrum-badge-subtle-background-color-purple));
+	}
+
+	&.spectrum-Badge--fuchsia {
+		background: var(--mod-badge-subtle-background-color-fuchsia, var(--spectrum-badge-subtle-background-color-fuchsia));
+	}
+
+	&.spectrum-Badge--magenta {
+		background: var(--mod-badge-subtle-background-color-magenta, var(--spectrum-badge-subtle-background-color-magenta));
+	}
+
+	&.spectrum-Badge--pink {
+		background: var(--mod-badge-subtle-background-color-pink, var(--spectrum-badge-subtle-background-color-pink));
+	}
+
+	&.spectrum-Badge--turquoise {
+		background: var(--mod-badge-subtle-background-color-turquoise, var(--spectrum-badge-subtle-background-color-turquoise));
+	}
+
+	&.spectrum-Badge--brown {
+		background: var(--mod-badge-subtle-background-color-brown, var(--spectrum-badge-subtle-background-color-brown));
+	}
+
+	&.spectrum-Badge--cinnamon {
+		background: var(--mod-badge-subtle-background-color-cinnamon, var(--spectrum-badge-subtle-background-color-cinnamon));
+	}
+
+	&.spectrum-Badge--silver {
+		background: var(--mod-badge-subtle-background-color-silver, var(--spectrum-badge-subtle-background-color-silver));
+	}
+}
+
+/* Style = outline - only valid for semantic colors */
+.spectrum-Badge--style-outline {
+	&:is(.spectrum-Badge--neutral, .spectrum-Badge--accent, .spectrum-Badge--informative, .spectrum-Badge--negative, .spectrum-Badge--positive, .spectrum-Badge--notice) {
+		background: var(--mod-badge-outline-background-color-default, var(--spectrum-badge-outline-background-color));
+		color: var(--mod-badge-outline-label-icon-color, var(--spectrum-badge-outline-label-icon-color));
+	}
+
+	&.spectrum-Badge--neutral {
+		border-color: var(--mod-badge-outline-border-color-neutral, var(--spectrum-badge-outline-border-color-neutral));
+	}
+
+	&.spectrum-Badge--accent {
+		border-color: var(--mod-badge-outline-border-color-accent, var(--spectrum-badge-outline-border-color-accent));
+	}
+
+	&.spectrum-Badge--informative {
+		border-color: var(--mod-badge-outline-border-color-informative, var(--spectrum-badge-outline-border-color-informative));
+	}
+
+	&.spectrum-Badge--negative {
+		border-color: var(--mod-badge-outline-border-color-negative, var(--spectrum-badge-outline-border-color-negative));
+	}
+
+	&.spectrum-Badge--positive {
+		border-color: var(--mod-badge-outline-border-color-positive, var(--spectrum-badge-outline-border-color-positive));
+	}
+
+	&.spectrum-Badge--notice {
+		border-color: var(--mod-badge-outline-border-color-notice, var(--spectrum-badge-outline-border-color-notice));
+	}
+}
+
 /* fixed position variants with border radius 0 on the fixed edge of the component */
 .spectrum-Badge--fixed-inline-start {
 	border-start-start-radius: 0;
@@ -279,14 +481,13 @@
 /* label */
 .spectrum-Badge-label {
 	font-size: var(--mod-badge-font-size, var(--spectrum-badge-font-size));
+	font-weight: var(--spectrum-badge-font-weight);
 	line-height: var(--mod-badge-line-height, var(--spectrum-badge-line-height));
 
-	padding-inline-end: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
+	padding-inline-end: calc(var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal)) - var(--spectrum-badge-border-width));
 	padding-inline-start: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
-	padding-block-start: var(--mod-badge-label-spacing-vertical-top, var(--spectrum-badge-label-spacing-vertical-top));
-	padding-block-end: var(--mod-badge-label-spacing-vertical-bottom, var(--spectrum-badge-label-spacing-vertical-bottom));
-
-	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
+	padding-block-start: calc(var(--mod-badge-label-spacing-vertical-top, var(--spectrum-badge-label-spacing-vertical-top)) - var(--spectrum-badge-border-width));
+	padding-block-end: calc(var(--mod-badge-label-spacing-vertical-bottom, var(--spectrum-badge-label-spacing-vertical-bottom)) - var(--spectrum-badge-border-width));
 
 	/* cjk language support */
 	&:lang(ja),
@@ -309,18 +510,22 @@
 	/* ensures icon does not shrink when badge width is limited */
 	flex: 0 0 var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
 
-	padding-inline-start: var(--mod-badge-icon-spacing-horizontal, var(--spectrum-badge-icon-spacing-horizontal));
+	margin-inline-start: calc(var(--mod-badge-icon-spacing-horizontal, var(--spectrum-badge-icon-spacing-horizontal)) - var(--spectrum-badge-border-width));
 
 	/* icon with label has reduced padding between icon and text */
-	padding-inline-end: var(--mod-badge-icon-text-spacing, var(--spectrum-badge-icon-text-spacing));
-	padding-block-start: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
-	padding-block-end: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
-
-	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
+	margin-inline-end: var(--mod-badge-icon-text-spacing, var(--spectrum-badge-icon-text-spacing));
+	margin-block-start: calc(var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top)) - var(--spectrum-badge-border-width));
+	margin-block-end: calc(var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top)) - var(--spectrum-badge-border-width));
 }
 
 .spectrum-Badge-icon--no-label {
 	/* icon without label has identical padding left and right */
-	padding-inline-start: var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal));
-	padding-inline-end: var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal));
+	margin-inline-start: calc(var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal)) - var(--spectrum-badge-border-width));
+	margin-inline-end: calc(var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal)) - var(--spectrum-badge-border-width));
+}
+
+.spectrum-Badge,
+.spectrum-Badge-label,
+.spectrum-Badge-icon {
+	box-sizing: border-box;
 }

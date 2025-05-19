@@ -9,9 +9,9 @@ import { BadgeGroup } from "./badge.test.js";
 import { ContentOptions, Template } from "./template.js";
 
 /**
- * A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention. Some notes about badge:
- * - Label and icon elements must be nested inside a parent container of class `.spectrum-Badge` in order to achieve the correct layout and wrapping behavior.
- * - The layout of badge is achieved by applying a display of `inline-flex`, allowing badge to display as inline, while the label and/or icon child elements can utilize flexbox for layout.
+ * Badges are for showing a small amount of color-categorized metadata. They're ideal for getting a user's attention. There are two additional styles - subtle fill and outline - in addition to the default, bold fill style.
+ *
+ * Because outline and subtle fill styles draw a similar level of attention, choose only one to use consistently within a single product. Bold fill can be paired with either style, and is reserved for high-attention badging only.
  */
 export default {
 	title: "Badge",
@@ -32,6 +32,17 @@ export default {
 			if: false,
 		},
 		iconSet: { table: { disable: true } },
+		style: {
+			name: "Style",
+			description: "Changes the visual appearance",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["default", "subtle", "outline"],
+			control: "select",
+		},
 		variant: {
 			name: "Variants",
 			description: "Changes the badge's background color. The variant list includes both semantic and non-semantic options.",
@@ -57,6 +68,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Badge",
 		size: "m",
+		style: "default",
 		variant: "neutral",
 		iconSet: "workflow",
 		fixed: "none"
@@ -68,7 +80,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"]
 };
 
 /**
@@ -76,7 +92,7 @@ export default {
  */
 export const Default = BadgeGroup.bind({});
 Default.args = {
-	iconName: "Info",
+	iconName: "InfoCircle",
 	label: "Badge",
 };
 
@@ -108,6 +124,41 @@ NonSemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 NonSemanticVariants.storyName = "Non-semantic";
+
+/**
+ * The "outline" style is only valid for semantic color variants.
+ */
+export const StyleOutline = (args, context) => ArgGrid({
+	Template,
+	argKey: "variant",
+	options: ["neutral", "accent", "informative", "positive", "negative", "notice"],
+	withBorder: false,
+	...args,
+}, context);
+StyleOutline.args = {...Default.args, style: "outline"};
+StyleOutline.tags = ["!dev"];
+StyleOutline.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+StyleOutline.storyName = "Style: Outline";
+
+
+/**
+ * The "subtle" style is available for all color variants.
+ */
+export const StyleSubtle = (args, context) => ArgGrid({
+	Template,
+	argKey: "variant",
+	options: ["neutral", "accent", "informative", "positive", "negative", "notice", "gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"],
+	withBorder: false,
+	...args,
+}, context);
+StyleSubtle.args = {...Default.args, style: "subtle"};
+StyleSubtle.tags = ["!dev"];
+StyleSubtle.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+StyleSubtle.storyName = "Style: Subtle";
 
 /**
  * Fixed positioning impacts the border radius of the badge component. The border radius is 0 along the fixed edge of the component. The actual component position is not represented on this page.
