@@ -194,7 +194,6 @@ export default {
 
 export const Default = ComboBoxGroup.bind({});
 Default.tags = ["!autodocs"];
-Default.args = {};
 Default.parameters = {
 	chromatic: { delay: 1000 }
 };
