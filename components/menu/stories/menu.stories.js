@@ -91,6 +91,9 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		}
 	},
 	decorators: [
 		withDownStateDimensionCapture,
