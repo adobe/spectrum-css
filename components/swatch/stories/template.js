@@ -13,12 +13,15 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Swatch",
 	size = "m",
-	borderStyle = "default",
 	shape = "square",
 	imageUrl,
 	isMixedValue = false,
+	isAddSwatch = false,
 	isSelected = false,
 	isDisabled = false,
+	isHovered = false,
+	isActive = false,
+	isKeyboardFocused = false,
 	rounding = "regular",
 	customClasses = [],
 	swatchColor,
@@ -27,14 +30,10 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
-	switch (borderStyle) {
-		case "none":
-			borderStyle = "noBorder";
-			break;
-		case "light":
-			borderStyle = "lightBorder";
-			break;
-	}
+	let pickedColor = swatchColor;
+
+	if (isMixedValue) pickedColor = "var(--spectrum-gray-25)";
+	if (isAddSwatch) pickedColor = undefined;
 
 	return html`
 		<div
@@ -44,12 +43,15 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--rounding${capitalize(
 							lowerCase(rounding)
-						)}`]: typeof rounding !== "undefined" && rounding !== "regular",
-				[`${rootClass}--${borderStyle}`]: typeof borderStyle !== "undefined" && borderStyle !== "default",
+						)}`]: typeof rounding !== "undefined" && rounding !== "partial",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
-				"is-image": isMixedValue || typeof imageUrl !== "undefined",
-				"is-mixedValue": !isDisabled && isMixedValue,
+				"is-hover": isHovered,
+				"is-active": isActive,
+				"is-keyboardFocused": isKeyboardFocused,
+				"is-image": (isMixedValue || isAddSwatch) || typeof imageUrl !== "undefined",
+				"is-mixedValue": !isDisabled && !isAddSwatch && isMixedValue,
+				"is-addSwatch": !isDisabled && !isMixedValue && isAddSwatch,
 				[`${rootClass}--rectangle`]: typeof shape !== "undefined" && shape !== "square",
 				"is-nothing": !isDisabled && (typeof swatchColor === "undefined" || swatchColor === "transparent"),
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -57,7 +59,7 @@ export const Template = ({
 			?disabled=${isDisabled}
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap({
-				"--spectrum-picked-color": isMixedValue ? "var(--spectrum-gray-50)" : swatchColor,
+				"--spectrum-picked-color": pickedColor,
 				...customStyles,
 			}))}
 			tabindex="0"
@@ -72,7 +74,7 @@ export const Template = ({
 				updateArgs({ isSelected: !isSelected });
 			}}
 		>
-			${when((typeof imageUrl !== "undefined") && !isDisabled && !isMixedValue, () => html`
+			${when((typeof imageUrl !== "undefined") && !isDisabled && !isMixedValue && !isAddSwatch, () => html`
 				${when(imageUrl, () => html`
 					<div class="${rootClass}-fill" >
 						<img src="${imageUrl}" alt="" class="${rootClass}-image" />
@@ -104,7 +106,7 @@ export const Template = ({
 								</svg>
 						`] : []),
 							...(isMixedValue ? [Icon({
-								customClasses: [`${rootClass}-mixedValueIcon`],
+								customClasses: [`${rootClass}-icon`],
 								setName: "ui",
 								iconName: "Dash" + ({
 									xs: "75",
@@ -112,6 +114,13 @@ export const Template = ({
 									m: "100",
 									l: "200",
 								}[size] || "100"),
+								useRef: false,
+							}, context)] : []),
+							...(isAddSwatch ? [Icon({
+								customClasses: [`${rootClass}-icon`],
+								setName: "workflow",
+								size,
+								iconName: "Add",
 								useRef: false,
 							}, context)] : []),
 						]
@@ -123,11 +132,10 @@ export const Template = ({
 
 /* Shows a single group of swatches with all rounding options. */
 export const RoundingGroup = (args, context) => Container({
-	withBorder: false,
 	content: html`
 		${Container({
 			withBorder: false,
-			heading: "Regular",
+			heading: "Regular (Default)",
 			containerStyles: { "gap": "8px" },
 			content: Template(args, context),
 		}, context)}
@@ -146,34 +154,8 @@ export const RoundingGroup = (args, context) => Container({
 	`
 }, context);
 
-/* Shows a single group of swatches with all border options. */
-export const BorderGroup = (args, context) => Container({
-	withBorder: false,
-	content: html`
-		${Container({
-			withBorder: false,
-			heading: "Default",
-			containerStyles: { "gap": "8px" },
-			content: Template(args, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "No border",
-			containerStyles: { "gap": "8px" },
-			content: Template({...args, borderStyle: "noBorder"}, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Light Border",
-			containerStyles: { "gap": "8px" },
-			content: Template({...args, borderStyle: "lightBorder"}, context),
-		}, context)}
-	`
-}, context);
-
 /* Shows a single group of swatches that are empty/nothing in various shapes and rounding. */
 export const EmptyGroup = (args, context) => Container({
-	withBorder: false,
 	content: html`
 		${Container({
 			withBorder: false,
@@ -195,7 +177,6 @@ export const EmptyGroup = (args, context) => Container({
 
 /* Shows a single group of disabled swatches. */
 export const DisabledGroup = (args, context) => Container({
-	withBorder: false,
 	content: html`
 		${Container({
 			withBorder: false,
@@ -211,7 +192,6 @@ export const DisabledGroup = (args, context) => Container({
 }, context);
 
 export const SizingGroup = (args, context) =>Container({
-	withBorder: false,
 	content: html`
 		${Container({
 			withBorder: false,

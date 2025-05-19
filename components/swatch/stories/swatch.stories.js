@@ -1,10 +1,10 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
+import { isDisabled, isHovered, isActive, isKeyboardFocused, isSelected, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
-import { BorderGroup, DisabledGroup, EmptyGroup, RoundingGroup, SizingGroup, Template } from "./template.js";
+import { DisabledGroup, EmptyGroup, RoundingGroup, SizingGroup, Template } from "./template.js";
 
 /**
  * A swatch shows a small sample of a fill--such as a color, gradient, texture, or material--that is intended to be applied to an object.
@@ -12,6 +12,9 @@ import { BorderGroup, DisabledGroup, EmptyGroup, RoundingGroup, SizingGroup, Tem
  * ## Usage notes
  *
  * Set `--spectrum-picked-color` to customize the swatch fill background color.
+ *
+ * By default, swatches have a border with 42% opacity. However, when swatches are used within a swatch group, the default border opacity changes .
+ *
  */
 export default {
 	title: "Swatch",
@@ -20,7 +23,7 @@ export default {
 		size: size(["xs", "s", "m", "l"]),
 		swatchColor: {
 			name: "Color",
-			description: "Supports standard color input or any valid input for the <code>background</code> property such as, <code>linear-gradient(red, blue)</code>.",
+			description: "Supports standard color input or any valid input for the <code>background</code> property such as, <code>linear-gradient(red, blue)</code> or <code>transparent</code>.",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
@@ -38,21 +41,24 @@ export default {
 				category: "Component",
 				defaultValue: { summary: "regular", },
 			},
-			options: ["none", "regular", "full"],
+			options: ["regular", "none", "full"],
 			control: "select",
 		},
-		isDisabled,
+		isDisabled: {
+			...isDisabled,
+			if: { arg: "isAddSwatch", truthy: false },
+			category: "State",
+		},
 		isSelected,
-		borderStyle: {
-			name: "Border style",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string", required: true },
-				category: "Component",
-			},
-			options: ["default", "none", "light"],
-			control: "select",
+		isHovered: {
+			...isHovered,
+			if: { arg: "isAddSwatch", truthy: true },
 		},
+		isActive: {
+			...isActive,
+			if: { arg: "isAddSwatch", truthy: true },
+		},
+		isKeyboardFocused,
 		shape: {
 			name: "Swatch shape",
 			description: "Swatches can have a square or rectangle shape.",
@@ -85,6 +91,18 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "isAddSwatch", truthy: false },
+		},
+		isAddSwatch: {
+			name: "Add swatch",
+			description: "A swatch that allows a user to add a new value.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+			if: { arg: "isMixedValue", truthy: false },
 		},
 	},
 	args: {
@@ -92,11 +110,14 @@ export default {
 		size: "m",
 		isSelected: false,
 		isDisabled: false,
+		isHovered: false,
+		isActive: false,
+		isKeyboardFocused: false,
 		rounding: "regular",
 		swatchColor: "rgb(174, 216, 230)",
-		borderStyle: "default",
 		shape: "square",
 		isMixedValue: false,
+		isAddSwatch: false,
 	},
 	parameters: {
 		design: {
@@ -105,11 +126,15 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
- * The medium size is the default and most frequently used option. By default, a swatch has a square shape.
+ * The medium size is the default and most frequently used option. By default, a swatch has a square shape, with rounded corners.
  */
 export const Default = SwatchGroup.bind({});
 Default.args = {};
@@ -145,7 +170,7 @@ Disabled.parameters = {
 };
 
 /**
- * Default rounding and full rounding are usually used when a swatch is presented by itself near other components. A rounding of “none” is used in a swatch group to help minimize the Hermann grid illusion that happens at the intersections of white space in the group.
+ * Default rounding and full rounding are usually used when a swatch is presented by itself near other components. A rounding of "none" is used in a swatch group to help minimize the Hermann grid illusion that happens at the intersections of white space in the group.
  */
 export const Rounding = RoundingGroup.bind({});
 Rounding.tags = ["!dev"];
@@ -165,17 +190,6 @@ Selected.args = {
 };
 Selected.tags = ["!dev"];
 Selected.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * By default, swatches have a border. However, when swatches are used within a swatch group, there are additional border considerations.
- * - When color swatches are used in a [swatch group](?path=/docs/components-swatch-group--docs), they typically have the `.spectrum-Swatch--noBorder` class.
- * - When and only when color swatches used in a swatch group have low contrast (below 3:1 contrast with the background), those swatches will have a less prominent border compared to the swatch component when used by itself. They individually use the `.spectrum-Swatch--lightBorder` class.
- */
-export const Border = BorderGroup.bind({});
-Border.tags = ["!dev"];
-Border.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -220,6 +234,24 @@ MixedValue.tags = ["!dev"];
 MixedValue.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+MixedValue.storyName = "Mixed value";
+
+/**
+ * When a swatch allows a user to add a new value, the preview shows a `gray-50` fill and an add UI icon.
+ */
+export const AddSwatch  = (args, context) => Sizes({
+	Template: DisabledGroup,
+	withHeading: false,
+	...args,
+}, context);
+AddSwatch.args = {
+	isAddSwatch: true,
+};
+AddSwatch.tags = ["!dev"];
+AddSwatch.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+AddSwatch.storyName = "Add swatch";
 
 export const Gradient = Template.bind({});
 Gradient.args = {

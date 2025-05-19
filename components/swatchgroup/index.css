@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -14,23 +14,25 @@
 .spectrum-SwatchGroup {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-75);
 
+	--mod-swatch-border-opacity: 0.2;
+}
+
+.spectrum-SwatchGroup {
 	display: inline-flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
 	justify-content: flex-start;
-
-	/* Regular (Default) */
-	gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing));
+	gap: var(--mod-swatchgroup-spacing, var(--spectrum-swatchgroup-spacing));
 }
 
-/* Compact */
 .spectrum-SwatchGroup--compact {
-	--mod-swatchgroup-spacing-regular: var(--mod-swatchgroup-spacing-compact);
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-50);
 }
 
-/* Spacious */
-.spectrum-SwatchGroup--spacious {
-	--mod-swatchgroup-spacing-regular: var(--mod-swatchgroup-spacing-spacious);
+.spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS) {
+	--spectrum-swatchgroup-spacing: var(--spectrum-swatch-group-spacing-spacious);
+}
+
+.spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL) {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-100);
 }
