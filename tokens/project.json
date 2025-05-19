@@ -42,14 +42,13 @@
 		"diff": {
 			"cache": true,
 			"executor": "nx:run-commands",
-			"inputs": [{ "externalDependencies": ["@adobe/token-diff-generator", "@adobe/spectrum-tokens"] }],
+			"inputs": [{ "externalDependencies": ["@adobe/token-diff-generator"] }],
 			"options": {
 				"commands": [
-					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output {projectRoot}/dist/tokens-diff.md"
+					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output dist/tokens-diff.md"
 				],
-				"cwd": "{projectRoot}",
 				"forwardAllArgs": true,
-				"parallel": false
+				"v1": "13.7.0"
 			},
 			"outputs": [
 				"{projectRoot}/dist/tokens-diff.md"
