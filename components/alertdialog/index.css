@@ -28,6 +28,8 @@
 	--spectrum-alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
 	--spectrum-alert-dialog-title-line-height: var(--spectrum-heading-line-height);
 	--spectrum-alert-dialog-title-color: var(--spectrum-heading-color);
+	--spectrum-alert-dialog-heading-size: var(--spectrum-alert-dialog-title-font-size);
+	--spectrum-alert-dialog-description-content-size: var(--spectrum-alert-dialog-description-font-size);
 
 	--spectrum-alert-dialog-body-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-alert-dialog-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
@@ -89,7 +91,7 @@
 	font-family: var(--mod-alert-dialog-title-font-family, var(--spectrum-alert-dialog-title-font-family));
 	font-weight: var(--mod-alert-dialog-title-font-weight, var(--spectrum-alert-dialog-title-font-weight));
 	font-style: var(--mod-alert-dialog-title-font-style, var(--spectrum-alert-dialog-title-font-style));
-	font-size: var(--mod-alert-dialog-title-font-size, var(--spectrum-alert-dialog-title-font-size));
+	font-size: var(--mod-alert-dialog-heading-size, var(--spectrum-alert-dialog-heading-size));
 	line-height: var(--mod-alert-dialog-title-line-height, var(--spectrum-alert-dialog-title-line-height));
 	color: var(--mod-alert-dialog-title-color, var(--spectrum-alert-dialog-title-color));
 	margin: 0;
@@ -99,9 +101,7 @@
 	font-family: var(--mod-alert-dialog-body-font-family, var(--spectrum-alert-dialog-body-font-family));
 	font-weight: var(--mod-alert-dialog-body-font-weight, var(--spectrum-alert-dialog-body-font-weight));
 	font-style: var(--mod-alert-dialog-body-font-style, var(--spectrum-alert-dialog-body-font-style));
-
-	/* @TODO: update to `--spectrum-alert-dialog-body-font-size` when available	 */
-	font-size: var(--mod-alert-dialog-description-size, var(--spectrum-alert-dialog-description-size));
+	font-size: var(--mod-alert-dialog-description-content-size, var(--spectrum-alert-dialog-description-content-size));
 	line-height: var(--mod-alert-dialog-body-line-height, var(--spectrum-alert-dialog-body-line-height));
 	color: var(--mod-alert-dialog-body-color, var(--spectrum-alert-dialog-body-color));
 	margin: 0;

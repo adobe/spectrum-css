@@ -42,9 +42,9 @@ export default {
 			options: ["confirmation", "information", "destructive", "warning", "error"],
 			control: "select",
 		},
-		buttonsAreVertical: {
+		hasVerticalButtons: {
 			name: "Vertical buttons",
-			description: "Buttons can be displayed horizontally (default) or vertically.",
+			description: "In limited horizontal space, the button group may stack vertically.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -56,7 +56,7 @@ export default {
 	args: {
 		rootClass: "spectrum-AlertDialog",
 		isOpen: true,
-		buttonsAreVertical: false,
+		hasVerticalButtons: false,
 		variant: "confirmation",
 	},
 	parameters: {
@@ -86,6 +86,7 @@ export default {
 };
 
 export const Default = AlertDialogGroup.bind({});
+Default.storyName = "Default (confirmation)";
 Default.args = {
 	isOpen: true,
 	heading: "Enable smart filters?",
@@ -152,7 +153,7 @@ Error.args = {
 	variant: "error",
 	heading: "Unable to share",
 	icon: "Alert",
-	content: "An error occured while sharing your project. Please verify the email address and try again.",
+	content: "An error occurred while sharing your project. Please verify the email address and try again.",
 };
 Error.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -212,12 +213,13 @@ Scroll.parameters = {
 };
 
 /**
- * When horizontal space is limited, button groups stack vertically. They should appear in ascending order based on importance, with the most critical action at the bottom.
+ * Buttons are stacked by the importance of the action, with the most critical or primary action at the bottom.
  */
 export const VerticalButtons = Template.bind({});
+VerticalButtons.storyName = "Vertical buttons";
 VerticalButtons.tags = ["!dev"];
 VerticalButtons.args = {
-	buttonsAreVertical: true,
+	hasVerticalButtons: true,
 	isOpen: true,
 	heading: "Vertical button group",
 	content: "This is what an alert dialog looks like with buttons arranged vertically.",

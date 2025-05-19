@@ -21,9 +21,9 @@ const buttonMap = {
 		treatment: "outline",
 		label: "Remind me later"
 	}, {
+		variant: "accent",
 		treatment: "fill",
-		label: "Enable",
-		variant: "accent"
+		label: "Enable"
 	}],
 	information: [{
 		variant: "secondary",
@@ -35,35 +35,35 @@ const buttonMap = {
 		label: "Remind me later"
 	}, {
 		variant: "primary",
-		treatment: "outline",
-		label: "Rate now",
+		treatment: "fill",
+		label: "Rate now"
 	}],
 	destructive: [{
 		variant: "secondary",
 		treatment: "outline",
 		label: "Cancel"
 	}, {
+		variant: "negative",
 		treatment: "fill",
-		label: "Delete",
-		variant: "negative"
+		label: "Delete"
 	}],
 	warning: [{
 		variant: "secondary",
 		treatment: "outline",
 		label: "Cancel"
 	}, {
+		variant: "primary",
 		treatment: "fill",
-		label: "Continue",
-		variant: "primary"
+		label: "Continue"
 	}],
 	error: [{
 		variant: "secondary",
 		treatment: "outline",
 		label: "Cancel"
 	}, {
+		variant: "primary",
 		treatment: "fill",
-		label: "Continue",
-		variant: "primary"
+		label: "Continue"
 	}],
 };
 
@@ -73,7 +73,7 @@ export const Dialog = ({
 	content,
 	customClasses = [],
 	variant,
-	buttonsAreVertical,
+	hasVerticalButtons,
 	id = getRandomId("alertdialog"),
 	customStyles = {},
 } = {}, context = {}) => {
@@ -103,7 +103,7 @@ export const Dialog = ({
 				</div>
 				<section class="${rootClass}-content">${content}</section>
 				<section class="${rootClass}-buttongroup">
-					${ButtonGroup({ items: buttonMap[variant], vertical: buttonsAreVertical }, context)}
+					${ButtonGroup({ items: buttonMap[variant], vertical: hasVerticalButtons }, context)}
 				</section>
 			</div>
 		</div>
@@ -112,7 +112,6 @@ export const Dialog = ({
 
 export const Template = ({
 	isOpen = true,
-	customModalStyles = {},
 	skipWrapper = false,
 	...args
 } = {}, context = {}) => {
@@ -121,7 +120,6 @@ export const Template = ({
 		content: [
 			Dialog(args, context)
 		],
-		customStyles: customModalStyles,
 		skipWrapper,
 	}, context);
 };

@@ -12,7 +12,7 @@ The dialog divider has been removed.
 
 Primary button style has been updated to filled.
 
-Multiple variants are now supported:
+The following variants remain supported:
 
 - Confirmation
 - Information
@@ -24,7 +24,6 @@ Dialog buttons may be displayed either horizontally or vertically.
 
 ##### Removed custom properties
 
-`--spectrum-alert-dialog-body-font-size`
 `--spectrum-alert-dialog-description-to-buttons`
 `--spectrum-alert-dialog-divider-to-description`
 `--spectrum-alert-dialog-padding`
@@ -36,9 +35,10 @@ Dialog buttons may be displayed either horizontally or vertically.
 
 `--spectrum-alert-dialog-background-color`
 `--spectrum-alert-dialog-corner-radius`
+`--spectrum-alert-dialog-description-font-size`
 `--spectrum-alert-dialog-description-to-button-group`
 `--spectrum-alert-dialog-edge-to-content`
-`--spectrum-alert-dialog-minimum-title-to-icon`
+`--spectrum-alert-dialog-heading-size`
 `--spectrum-alert-dialog-title-to-description`
 
 ##### Removed mods
@@ -54,8 +54,9 @@ Dialog buttons may be displayed either horizontally or vertically.
 
 `--mod-alert-dialog-background-color`
 `--mod-alert-dialog-corner-radius`
-`--mod-alert-dialog-description-size`
+`--mod-alert-dialog-description-content-size`
 `--mod-alert-dialog-description-to-button-group`
 `--mod-alert-dialog-edge-to-content`
+`--mod-alert-dialog-heading-size`
 `--mod-alert-dialog-minimum-title-to-icon`
 `--mod-alert-dialog-title-to-description`
