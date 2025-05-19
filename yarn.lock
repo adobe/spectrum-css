@@ -5528,7 +5528,7 @@ __metadata:
     lodash-es: "npm:^4.17.21"
     postcss: "npm:^8.5.3"
     postcss-sorting: "npm:^9.1.0"
-    style-dictionary: "npm:^4.3.3"
+    style-dictionary: "npm:^5.0.0"
   languageName: unknown
   linkType: soft
 
@@ -6547,6 +6547,15 @@ __metadata:
   version: 12.20.55
   resolution: "@types/node@npm:12.20.55"
   checksum: 10c0/3b190bb0410047d489c49bbaab592d2e6630de6a50f00ba3d7d513d59401d279972a8f5a598b5bb8ddc1702f8a2f4ec57a65d93852f9c329639738e7053637d1
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.10.5":
+  version: 22.15.19
+  resolution: "@types/node@npm:22.15.19"
+  dependencies:
+    undici-types: "npm:~6.21.0"
+  checksum: 10c0/8ef52fa1a91b1c8891616d46f3921a9f3c65ad1c6bb62db7899c8c28643c13bf9d607a2403b1e5aceb3e6fa6749efc9e0ba5c39618a4872da6946437b0edbfbe
   languageName: node
   linkType: hard
 
@@ -19169,13 +19178,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^4.3.3":
-  version: 4.4.0
-  resolution: "style-dictionary@npm:4.4.0"
+"style-dictionary@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "style-dictionary@npm:5.0.0"
   dependencies:
     "@bundled-es-modules/deepmerge": "npm:^4.3.1"
     "@bundled-es-modules/glob": "npm:^10.4.2"
     "@bundled-es-modules/memfs": "npm:^4.9.4"
+    "@types/node": "npm:^22.10.5"
     "@zip.js/zip.js": "npm:^2.7.44"
     chalk: "npm:^5.3.0"
     change-case: "npm:^5.3.0"
@@ -19188,7 +19198,7 @@ __metadata:
     tinycolor2: "npm:^1.6.0"
   bin:
     style-dictionary: bin/style-dictionary.js
-  checksum: 10c0/fad9b95407922fff80b3b172639669198c49628a053d1b3dc65cada45f4f1031aef24cc0cbfc2e958652da192d2fc145ef90ab32a0cf01dc6764137193d164f3
+  checksum: 10c0/ba32331134f3b5eba8ae7e0009ff7a59241392fd4ed5cd241335b0a0e7addf153a4bcdb5a7f51c33e9a6c35db8f33dd9771e017fef2eddaea111bb0a56f0eadb
   languageName: node
   linkType: hard
 
@@ -20004,6 +20014,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 10c0/bb673d7876c2d411b6eb6c560e0c571eef4a01c1c19925175d16e3a30c4c428181fb8d7ae802a261f283e4166a0ac435e2f505743aa9e45d893f9a3df017b501
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 10c0/c01ed51829b10aa72fc3ce64b747f8e74ae9b60eafa19a7b46ef624403508a54c526ffab06a14a26b3120d055e1104d7abe7c9017e83ced038ea5cf52f8d5e04
   languageName: node
   linkType: hard
 
