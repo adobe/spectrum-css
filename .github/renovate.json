@@ -31,7 +31,6 @@
 			"matchPackageNames": ["stylelint", "stylelint-**"]
 		}
 	],
-	"bumpVersion": "patch",
 	"rebaseWhen": "behind-base-branch",
 	"reviewers": ["team:spectrum-css-maintainers"]
 }
