@@ -3,7 +3,7 @@ import { isEmphasized, isLoading, isQuiet } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TableGroup } from "./table.test.js";
-import { createRow, Template } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data.
@@ -46,26 +46,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		isSortable: {
-			name: "Sortable column",
-			description: "If a table column is sortable, the header cell displays a sort icon.",
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		sortableIcon: {
-			name: "Sortable icon",
-			description: "The icon to use for the sortable column.",
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["Sort", "SortDown", "SortUp", "none"],
-			control: "select",
-			if: { arg: "isSortable", eq: true },
-		},
 		selectionMode: {
 			name: "Selection mode",
 			description: "Determines whether items in the table can be selected, and if users can select only one or multiple items.",
@@ -73,6 +53,7 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Selection",
+				disable: true,
 			},
 			options: ["none", "single", "multiple"],
 			control: "select",
@@ -112,9 +93,23 @@ export default {
 		isDropTarget: false,
 		useScroller: false,
 		hasColumnDividers: false,
-		isSortable: false,
-		sortableIcon: "",
-		rowItems: [],
+		rowItems: [
+			{
+				cellContent: "Row item alpha",
+			},
+			{
+				cellContent: "Row item bravo",
+			},
+			{
+				cellContent: "Row item charlie",
+			},
+			{
+				cellContent: "Row item delta",
+			},
+			{
+				cellContent: "Row item echo",
+			},
+		],
 	},
 	parameters: {
 		design: {
@@ -126,31 +121,47 @@ export default {
 	},
 };
 
+
+const ExampleRowItems = [
+	{
+		cellContent: ["Table row alpha", "Alpha", "Table row alpha"],
+		showCheckbox: true,
+	},
+	{
+		cellContent: [
+			"Selected row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"Bravo",
+			"Table row bravo. Lorem ipsum dolor sit amet.",
+		],
+		showCheckbox: true,
+		isSelected: true,
+	},
+	{
+		cellContent: "Selected row charlie",
+		showCheckbox: true,
+		isSelected: true,
+	},
+	{
+		cellContent: "Table row delta",
+		showCheckbox: true,
+	},
+	{
+		cellContent: "Echo",
+		showCheckbox: true,
+	},
+	{
+		cellContent: "Foxtrot",
+		showCheckbox: true,
+	},
+];
+
 /**
  * The default table also uses the regular density. Similar to a paragraph of text, textual data is always left-aligned within a table. Never use center alignment.
+ *
+ * Tables with sortable columns can show different states of sorting: unsorted, ascending, and descending. Additionally, tables can also trigger a menu, as indicated by the chevron.
  */
 export const Default = TableGroup.bind({});
-Default.args = {
-	rowItems: [
-		/* In createRow, the first argument is the TableRow props, and the second is the content of the cells in the row, and the third is options like thumbnails, sortable, etc. */
-		createRow(
-			{isSectionHeader: true},
-			["Column 1", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isSummaryRow: true},
-			["Summary row", "Summary 2", "Summary 3"]
-		),
-		createRow(
-			{},
-			["Table row alpha", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row charlie", "Column 2", "Column 3"]
-		),
-	],
-};
+Default.args = {};
 
 // ********* DOCS ONLY ********* //
 /**
@@ -175,7 +186,7 @@ Loading.parameters = {
 };
 
 /**
- * The compact variant decreases the spacing used within the table.
+ * The compact variant decreases the spacing used within the table rows, except for the header row.
  */
 export const Compact = Template.bind({});
 Compact.args = {
@@ -189,7 +200,7 @@ Compact.parameters = {
 Compact.storyName = "Density - compact";
 
 /**
- * The spacious variant increases the spacing used within the table.
+ * The spacious variant increases the spacing used within the table rows, except for the header row.
  */
 export const Spacious = Template.bind({});
 Spacious.args = {
@@ -209,10 +220,9 @@ Spacious.storyName = "Density - spacious";
 export const MultiSelect = Template.bind({});
 MultiSelect.storyName = "Selection mode: multiple";
 MultiSelect.args = {
-	...Default.args,
+	rowItems: ExampleRowItems,
 	selectionMode: "multiple",
 };
-MultiSelect.tags = ["!dev"];
 MultiSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -223,10 +233,33 @@ MultiSelect.parameters = {
 export const SingleSelect = Template.bind({});
 SingleSelect.storyName = "Selection mode: single";
 SingleSelect.args = {
-	...Default.args,
 	selectionMode: "single",
+	rowItems: [
+		{
+			cellContent: ["Pikachu", "Electric", "35"],
+			textAlignment: {
+				2: "end"
+			},
+			showCheckbox: true,
+			isSelected: true,
+			isChecked: true,
+		},
+		{
+			cellContent: ["Charmander", "Fire", "39"],
+			textAlignment: {
+				2: "end"
+			},
+			showCheckbox: true,
+		},
+		{
+			cellContent: ["Mew", "Psychic", "100"],
+			textAlignment: {
+				2: "end"
+			},
+			showCheckbox: true,
+		}
+	],
 };
-SingleSelect.tags = ["!dev"];
 SingleSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -251,46 +284,65 @@ EmphasizedMultiSelect.parameters = {
 export const NumericalData = Template.bind({});
 NumericalData.args = {
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Pokemon", "Type", "Health"],
-			{
-				textAlignment: {
-					2: "end"
-				}
+		{
+			cellContent: ["Pikachu", "Electric", "35"],
+			textAlignment: {
+				2: "end"
 			}
-		),
-		createRow(
-			{},
-			["Pikachu", "Electric", "35"],
-			{
-				textAlignment: {
-					2: "end"
-				}
+		},
+		{
+			cellContent: ["Charmander", "Fire", "39"],
+			textAlignment: {
+				2: "end"
 			}
-		),
-		createRow(
-			{},
-			["Charmander", "Fire", "39"],
-			{
-				textAlignment: {
-					2: "end"
-				}
+		},
+		{
+			cellContent: ["Mew", "Psychic", "100"],
+			textAlignment: {
+				2: "end"
 			}
-		),
-		createRow(
-			{},
-			["Mew", "Psychic", "100"],
-			{
-				textAlignment: {
-					2: "end"
-				}
-			}
-		),
+		}
 	],
 };
 NumericalData.storyName = "Numerical data";
 NumericalData.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The cells and rows within the table have different states based on selection and focus.
+ */
+export const TableStates = Template.bind({});
+TableStates.args = {
+	rowItems: [
+		{
+			cellContent: "Focused selected row, no rounded corners",
+			isFocused: true,
+			isSelected: true,
+		},
+		{
+			cellContent: "Table row bravo",
+		},
+		{
+			cellContent: "Selected unfocused row, no rounded corners",
+			isSelected: true,
+		},
+		{
+			cellContent: "Focused unselected row, no rounded corners",
+			isFocused: true,
+		},
+		{
+			cellContent: "Table row echo",
+		},
+		{
+			cellContent: "Focused selected row, with rounded corners",
+			isFocused: true,
+			isSelected: true,
+		}
+	],
+};
+TableStates.storyName = "Row and cell states";
+TableStates.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -344,31 +396,23 @@ WithColumnDividers.parameters = {
 export const SummaryAndSelected = Template.bind({});
 SummaryAndSelected.args = {
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Column 1", "Column 2", "Column 3"],
-			{
-				hasMenu: {
-					0: true,
-				}
-			}
-		),
-		createRow(
-			{},
-			["Table row alpha", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isSelected: true},
-			["Table row bravo (selected)", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row charlie", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isSummaryRow: true},
-			["Summary row", "Summary 2", "Summary 3"]
-		)
+		{
+			cellContent: "Table row alpha",
+		},
+		{
+			cellContent: "Table row bravo",
+		},
+		{
+			cellContent: "Selected row charlie",
+			isSelected: true,
+		},
+		{
+			cellContent: "Table row delta",
+		},
+		{
+			cellContent: "Summary row",
+			isSummaryRow: true,
+		},
 	],
 };
 SummaryAndSelected.storyName = "Summary and selected";
@@ -382,31 +426,29 @@ SummaryAndSelected.parameters = {
 export const SectionHeader = Template.bind({});
 SectionHeader.args = {
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Section header", "Column 2", "Column 3"],
-			{
-				hasMenu: {
-					1: true
-				}
-			}
-		),
-		createRow(
-			{},
-			["Table row alpha", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row bravo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isSectionHeader: true},
-			["Another section header", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row charlie", "Column 2", "Column 3"]
-		)
+		{
+			cellContent: "Section header",
+			isSectionHeader: true,
+		},
+		{
+			cellContent: "Table row alpha",
+		},
+		{
+			cellContent: "Table row bravo",
+		},
+		{
+			cellContent: "Table row charlie",
+		},
+		{
+			cellContent: "Another section header",
+			isSectionHeader: true,
+		},
+		{
+			cellContent: "Table row delta",
+		},
+		{
+			cellContent: "Table row echo",
+		},
 	],
 };
 SectionHeader.storyName = "Section header";
@@ -437,39 +479,29 @@ export const Scrollable = Template.bind({});
 Scrollable.args = {
 	useScroller: true,
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Column 1", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row alpha", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row bravo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isSelected: true},
-			["Table row charlie (selected)", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row delta", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row echo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row foxtrot", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isSummaryRow: true},
-			["Summary row", "Column 2", "Column 3"]
-		)
-
+		{
+			cellContent: "Table row alpha",
+		},
+		{
+			cellContent: "Table row bravo",
+		},
+		{
+			cellContent: "Table row charlie",
+			isSelected: true,
+		},
+		{
+			cellContent: "Table row delta",
+		},
+		{
+			cellContent: "Table row echo",
+		},
+		{
+			cellContent: "Table row foxtrot",
+		},
+		{
+			cellContent: "Summary row",
+			isSummaryRow: true,
+		},
 	],
 };
 Scrollable.tags = ["!dev"];
@@ -497,67 +529,60 @@ DivsScrollable.parameters = {
 export const Collapsible = Template.bind({});
 Collapsible.args = {
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Collapsible options", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				isExpanded: true,
-				tier: 0,
-				ariaControls: "table-cr-bravo table-cr-delta",
-				id: "table-cr-alpha"
-			},
-			["Table row alpha", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				tier: 1,
-				ariaControls: "table-cr-charlie",
-				id: "table-cr-bravo"
-			},
-			["Table row bravo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				isHidden: true,
-				tier: 2,
-				id: "table-cr-charlie"
-			},
-			["Table row charlie", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isSelected: true,
-				isCollapsible: true,
-				isExpanded: true,
-				tier: 1,
-				ariaControls: "table-cr-echo table-cr-foxtrot",
-				id: "table-cr-delta"
-			},
-			["Table row delta", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				tier: 2,
-				isLastTier: true,
-				isCollapsible: true,
-				id: "table-cr-echo"
-			},
-			["Table row echo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				tier: 2,
-				isLastTier: true,
-				isCollapsible: true,
-				id: "table-cr-foxtrot"
-			},
-			["Table row foxtrot", "Column 2", "Column 3"]
-		)
+		{
+			cellContent: "Table row alpha",
+			isCollapsible: true,
+			isExpanded: true,
+			tier: 0,
+			ariaControls: "table-cr-bravo table-cr-delta",
+			id: "table-cr-alpha",
+		},
+		{
+			cellContent:
+				"Table row bravo. There is actually another collapsed row here that's not visible. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			isCollapsible: true,
+			tier: 1,
+			ariaControls: "table-cr-charlie",
+			id: "table-cr-bravo",
+		},
+		{
+			cellContent: [
+				"Table row charlie",
+				"Default not visible",
+				"Default not visible",
+			],
+			isCollapsible: true,
+			isHidden: true,
+			tier: 2,
+			id: "table-cr-charlie",
+		},
+		{
+			cellContent: "Selected row delta",
+			isSelected: true,
+			isCollapsible: true,
+			isExpanded: true,
+			tier: 1,
+			ariaControls: "table-cr-echo table-cr-foxtrot",
+			id: "table-cr-delta",
+		},
+		{
+			cellContent: "Table row echo",
+			tier: 2,
+			isLastTier: true,
+			isCollapsible: true,
+			id: "table-cr-echo",
+		},
+		{
+			cellContent: "Table row foxtrot",
+			tier: 2,
+			isLastTier: true,
+			isCollapsible: true,
+			id: "table-cr-foxtrot",
+		},
+		{
+			cellContent: "Summary row",
+			isSummaryRow: true,
+		},
 	],
 };
 Collapsible.parameters = {
@@ -569,65 +594,67 @@ CollapsibleMultiSelect.storyName = "Selection mode: multiple, collapsible rows";
 CollapsibleMultiSelect.args = {
 	selectionMode: "multiple",
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Collapsible options", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				isExpanded: true,
-				tier: 0,
-				ariaControls: "table-ms-bravo table-ms-charlie",
-				id: "table-ms-alpha"
-			},
-			["Table row alpha", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				tier: 1,
-				id: "table-ms-bravo"
-			},
-			["Table row bravo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				isSelected: true,
-				tier: 1,
-				isExpanded: true,
-				ariaControls: "table-ms-delta table-ms-echo",
-				id: "table-ms-charlie"
-			},
-			["Table row charlie (selected)", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				tier: 2,
-				isLastTier: true,
-				isCollapsible: true,
-				id: "table-ms-delta"
-			},
-			["Table row delta", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				tier: 2,
-				isLastTier: true,
-				isCollapsible: true,
-				id: "table-ms-echo"
-			},
-			["Table row echo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				tier: 0,
-				id: "table-ms-foxtrot"
-			},
-			["Table row foxtrot", "Column 2", "Column 3"]
-		)
+		{
+			showCheckbox: true,
+			cellContent: "Table row alpha",
+			isCollapsible: true,
+			isExpanded: true,
+			tier: 0,
+			ariaControls: "table-cr-bravo table-cr-delta",
+			id: "table-cr-alpha",
+		},
+		{
+			showCheckbox: true,
+			cellContent:
+				"Table row bravo. There is actually another collapsed row here that's not visible. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			isCollapsible: true,
+			tier: 1,
+			ariaControls: "table-cr-charlie",
+			id: "table-cr-bravo",
+		},
+		{
+			showCheckbox: true,
+			cellContent: [
+				"Table row charlie",
+				"Default not visible",
+				"Default not visible",
+			],
+			isCollapsible: true,
+			isHidden: true,
+			tier: 2,
+			id: "table-cr-charlie",
+		},
+		{
+			showCheckbox: true,
+			cellContent: "Selected row delta",
+			isSelected: true,
+			isCollapsible: true,
+			isExpanded: true,
+			tier: 1,
+			ariaControls: "table-cr-echo table-cr-foxtrot",
+			id: "table-cr-delta",
+		},
+		{
+			showCheckbox: true,
+			cellContent: "Table row echo",
+			tier: 2,
+			isLastTier: true,
+			isCollapsible: true,
+			id: "table-cr-echo",
+		},
+		{
+			showCheckbox: true,
+			cellContent: "Table row foxtrot",
+			tier: 2,
+			isLastTier: true,
+			isCollapsible: true,
+			id: "table-cr-foxtrot",
+		},
+		{
+			showCheckbox: true,
+			cellContent: "Summary row",
+			isSummaryRow: true,
+		},
 	],
 };
 CollapsibleMultiSelect.parameters = {
@@ -640,44 +667,19 @@ CollapsibleMultiSelect.parameters = {
 export const Visuals = Template.bind({});
 Visuals.args = {
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Avatar", "Icon", "Thumbnail"]
-		),
-		createRow(
-			{},
-			["Avatar Example", "Icons", "Thumbnail Example"],
-			{
-				visualElements: {
-					0: "avatar",
-					1: "icon",
-					2: "thumbnail"
-				}
-			}
-		),
-		createRow(
-			{},
-			["Avatar Example", "Icons", "Thumbnail Example"],
-			{
-				visualElements: {
-					0: "avatar",
-					1: "icon",
-					2: "thumbnail"
-				}
-			}
-		),
-		createRow(
-			{},
-			["Avatar Example", "Icons", "Thumbnail Example"],
-			{
-				visualElements: {
-					0: "avatar",
-					1: "icon",
-					2: "thumbnail"
-				}
-			}
-		)
-	]
+		{
+			cellContent: "Avatar example",
+			visualElement: "avatar",
+		},
+		{
+			cellContent: "Icon example",
+			visualElement: "icon",
+		},
+		{
+			cellContent: "Thumbnail example",
+			visualElement: "thumbnail",
+		},
+	],
 };
 Visuals.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -689,112 +691,69 @@ Visuals.parameters = {
 export const VisualsCollapsible = Template.bind({});
 VisualsCollapsible.args = {
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Visual options", "Column 2", "Column 3"]
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				isExpanded: true,
-				tier: 0,
-				ariaControls: "table-vc-bravo table-vc-charlie",
-				id: "table-vc-alpha"
-			},
-			["Visual row alpha", "Column 2", "Column 3"],
-			{
-				visualElements: {
-					0: "avatar",
-					1: "icon",
-					2: "thumbnail"
-				}
-			}
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				tier: 1,
-				id: "table-vc-bravo"
-			},
-			["Visual row bravo", "Column 2", "Column 3"],
-			{
-				visualElements: {
-					0: "icon",
-					1: "avatar",
-					2: "thumbnail"
-				}
-			}
-		),
-		createRow(
-			{
-				isCollapsible: true,
-				isExpanded: true,
-				tier: 1,
-				ariaControls: "table-vc-delta",
-				id: "table-vc-charlie"
-			},
-			["Visual row charlie", "Column 2", "Column 3"],
-			{
-				visualElements: {
-					0: "thumbnail",
-					1: "avatar",
-					2: "icon"
-				}
-			}
-		),
-		createRow(
-			{
-				tier: 2,
-				isLastTier: true,
-				isCollapsible: true,
-				id: "table-vc-delta"
-			},
-			["Visual row delta", "Column 2", "Column 3"],
-			{
-				visualElements: {
-					0: "avatar",
-					1: "icon",
-					2: "thumbnail"
-				}
-			}
-		)
-	]
+		{
+			cellContent: "Table row alpha",
+			isCollapsible: true,
+			isExpanded: true,
+			tier: 0,
+			ariaControls: "table-cr-bravo table-cr-delta",
+			id: "table-cr-alpha",
+		},
+		{
+			cellContent:
+				"Table row bravo. There is actually another collapsed row here that's not visible. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			isCollapsible: true,
+			tier: 1,
+			ariaControls: "table-cr-charlie",
+			id: "table-cr-bravo",
+			visualElement: "avatar",
+		},
+		{
+			cellContent: [
+				"Table row charlie",
+				"Default not visible",
+				"Default not visible",
+			],
+			isCollapsible: true,
+			isHidden: true,
+			tier: 2,
+			id: "table-cr-charlie",
+		},
+		{
+			cellContent: "Selected row delta",
+			isSelected: true,
+			isCollapsible: true,
+			isExpanded: true,
+			tier: 1,
+			ariaControls: "table-cr-echo table-cr-foxtrot",
+			id: "table-cr-delta",
+			visualElement: "icon",
+		},
+		{
+			cellContent: "Table row echo",
+			tier: 2,
+			isLastTier: true,
+			isCollapsible: true,
+			id: "table-cr-echo",
+			visualElement: "thumbnail",
+		},
+		{
+			cellContent: "Table row foxtrot",
+			tier: 2,
+			isLastTier: true,
+			isCollapsible: true,
+			id: "table-cr-foxtrot",
+		},
+		{
+			cellContent: "Summary row",
+			isSummaryRow: true,
+		},
+	],
 };
 VisualsCollapsible.storyName = "Visuals: collapsible";
 VisualsCollapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
-/**
- * Tables with sortable columns can show different states of sorting: unsorted, ascending, and descending.
- */
-export const SortIcons = Template.bind({});
-SortIcons.args = {
-	rowItems: [
-		createRow(
-			{ isSectionHeader: true },
-			["Default sort", "Ascending sort", "Descending sort"],
-			{
-				sortableColumns: [0, 1, 2],
-				sortableIconNames: {
-					0: "Sort",
-					1: "SortUp",
-					2: "SortDown",
-				}
-			}
-		),
-		createRow({}, ["Data A", "Data B", "Data C"]),
-		createRow({}, ["Data D", "Data E", "Data F"]),
-		createRow({}, ["Data G", "Data H", "Data I"]),
-	],
-	isSortable: true,
-};
-SortIcons.tags = ["!dev"];
-SortIcons.storyName = "Sort icons";
-SortIcons.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
 
 // TODO: The design team doesn't have dropzones in the table component, so they are removed from the docs page for now.
 /**
@@ -817,34 +776,27 @@ BodyDropZone.parameters = {
 export const RowDropZone = Template.bind({});
 RowDropZone.args = {
 	rowItems: [
-		createRow(
-			{isSectionHeader: true},
-			["Column 1", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isDropTarget: true},
-			["Table row alpha", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row bravo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isDropTarget: true},
-			["Table row charlie", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row delta", "Column 2", "Column 3"]
-		),
-		createRow(
-			{},
-			["Table row echo", "Column 2", "Column 3"]
-		),
-		createRow(
-			{isDropTarget: true},
-			["Table row foxtrot", "Column 2", "Column 3"]
-		)
+		{
+			cellContent: "Table row alpha",
+			isDropTarget: true,
+		},
+		{
+			cellContent: "Table row bravo",
+		},
+		{
+			cellContent: "Table row charlie",
+			isDropTarget: true,
+		},
+		{
+			cellContent: "Table row delta",
+		},
+		{
+			cellContent: "Table row echo",
+		},
+		{
+			cellContent: "Table row foxtrot",
+			isDropTarget: true,
+		},
 	],
 };
 RowDropZone.tags = ["!autodocs","!dev"];
