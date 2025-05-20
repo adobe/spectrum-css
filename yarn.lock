@@ -4683,7 +4683,7 @@ __metadata:
   resolution: "@spectrum-css/generator@workspace:tools/generator"
   dependencies:
     fuzzy: "npm:^0.1.3"
-    inquirer: "npm:^9.2.23"
+    inquirer: "npm:^9.3.7"
     inquirer-autocomplete-prompt: "npm:^3.0.1"
     plop: "npm:^4.0.1"
   languageName: unknown
@@ -12231,7 +12231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inquirer@npm:^9.2.10, inquirer@npm:^9.2.23":
+"inquirer@npm:^9.2.10, inquirer@npm:^9.3.7":
   version: 9.3.7
   resolution: "inquirer@npm:9.3.7"
   dependencies:
