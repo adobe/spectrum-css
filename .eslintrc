@@ -19,6 +19,7 @@
 		"semi": ["warn", "always"],
 		"space-before-blocks": ["warn", "always"]
 	},
+	"ignorePatterns": ["!.storybook"],
 	"overrides": [
 		{
 			"files": ["*.json"],

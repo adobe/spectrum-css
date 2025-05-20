@@ -1,0 +1,99 @@
+{
+  "animation-duration-0": {
+    "value": "0ms"
+  },
+  "animation-duration-100": {
+    "value": "130ms"
+  },
+  "animation-duration-1000": {
+    "value": "500ms"
+  },
+  "animation-duration-200": {
+    "value": "160ms"
+  },
+  "animation-duration-2000": {
+    "value": "1000ms"
+  },
+  "animation-duration-300": {
+    "value": "190ms"
+  },
+  "animation-duration-400": {
+    "value": "220ms"
+  },
+  "animation-duration-4000": {
+    "value": "2000ms"
+  },
+  "animation-duration-500": {
+    "value": "250ms"
+  },
+  "animation-duration-600": {
+    "value": "300ms"
+  },
+  "animation-duration-6000": {
+    "value": "3000ms"
+  },
+  "animation-duration-700": {
+    "value": "3500ms"
+  },
+  "animation-duration-800": {
+    "value": "400ms"
+  },
+  "animation-duration-900": {
+    "value": "450ms"
+  },
+  "animation-ease-in": {
+    "value": "cubic-bezier(0.5, 0, 1, 1)"
+  },
+  "animation-ease-in-out": {
+    "value": "cubic-bezier(0.45, 0, 0.4, 1)"
+  },
+  "animation-ease-linear": {
+    "value": "cubic-bezier(0, 0, 1, 1)"
+  },
+  "animation-ease-out": {
+    "value": "cubic-bezier(0, 0, 0.4, 1)"
+  },
+  "animation-linear": {
+    "value": "cubic-bezier(0, 0, 1, 1)"
+  },
+  "cjk-font": {
+    "value": "{cjk-font-family-stack}"
+  },
+  "cjk-font-family-stack": {
+    "value": "adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif"
+  },
+  "code-font-family-stack": {
+    "value": "\"Source Code Pro\", Monaco, monospace"
+  },
+  "corner-radius-1000": {
+    "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/dimension.json",
+    "value": "9999px"
+  },
+  "font-family": {
+    "value": "{sans-font-family-stack}"
+  },
+  "font-family-ar": {
+    "value": "myriad-arabic, adobe-clean, \"Source Sans Pro\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubuntu, \"Trebuchet MS\", \"Lucida Grande\", sans-serif"
+  },
+  "font-family-he": {
+    "value": "myriad-hebrew, adobe-clean, \"Source Sans Pro\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubuntu, \"Trebuchet MS\", \"Lucida Grande\", sans-serif"
+  },
+  "font-size": {
+    "value": "{font-size-100}"
+  },
+  "font-style": {
+    "value": "{default-font-style}"
+  },
+  "sans-font-family-stack": {
+    "value": "adobe-clean, var(--spectrum-sans-serif-font-family), \"Source Sans Pro\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubuntu, \"Trebuchet MS\", \"Lucida Grande\", sans-serif"
+  },
+  "sans-serif-font": {
+    "value": "{sans-font-family-stack}"
+  },
+  "serif-font": {
+    "value": "{serif-font-family-stack}"
+  },
+  "serif-font-family-stack": {
+    "value": "adobe-clean-serif, var(--spectrum-serif-font-family), \"Source Serif Pro\", Georgia, serif"
+  }
+}
