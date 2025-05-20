@@ -68,7 +68,7 @@
 
 	&.is-dragged {
 		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style-dragged, solid);
-		--mod-drop-zone-background-color: rgb(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-dragged-background-color)));
+		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-dragged-background-color)));
 		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 
 		/* Updated values for a nested illustrated message when state changes */
@@ -83,7 +83,7 @@
 
 	&.is-filled {
 		/* note: the below applies to .is-filled.is-dragged but works here b/c dragged is the only state applying background color */
-		--mod-drop-zone-background-color: rgb(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled)));
+		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled)));
 
 		/* Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-display: none;
