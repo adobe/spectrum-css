@@ -18,13 +18,11 @@ import "../index.css";
  */
 export const Picker = ({
 	rootClass = "spectrum-Picker",
-	id = getRandomId("picker"),
+	id = getRandomId("picker-button"),
 	size = "m",
-	labelPosition = "top",
 	placeholder,
 	currentValue,
 	contentIconName,
-	isQuiet = false,
 	isKeyboardFocused = false,
 	showWorkflowIcon = false,
 	isOpen = false,
@@ -42,11 +40,7 @@ export const Picker = ({
 	return html`
 		<button
 			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--sideLabel`]: labelPosition == "side",
+				[`${rootClass}-button`]: true,
 				["is-invalid"]: isInvalid,
 				["is-open"]: isOpen,
 				["is-loading"]: isLoading,
@@ -190,15 +184,16 @@ export const Template = ({
 		isDisabled,
 	}, context) : "";
 
-	const sizeMap = {
-		s: "small",
-		m: "medium",
-		l: "large",
-		xl: "extra-large",
-	};
 
 	const markup = html`
 		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--sideLabel`]: labelPosition == "side",
+			})}
 			style=${styleMap({
 				position: "relative",
 				display: "inline-block",
@@ -206,7 +201,6 @@ export const Template = ({
 					display: "flex",
 					flexWrap: "nowrap",
 				},
-				"--mod-picker-popover-animation-distance": `var(--spectrum-component-to-menu-${sizeMap[size] || "medium" })`,
 			})}
 		>
 			${when(label, () =>
