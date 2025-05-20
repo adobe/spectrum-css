@@ -165,6 +165,7 @@
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used in the popover */
 	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-extra-large);
 }
 
