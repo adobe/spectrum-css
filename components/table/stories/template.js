@@ -34,6 +34,7 @@ export const TableRowItem = ({
 	isDropTarget = false,
 	ariaControls,
 	customClasses = [],
+	cellCustomClasses = {},
 } = {}, context = {}) => {
 	const useVisuals = visualElement !== undefined && !isSummaryRow && !isSectionHeader;
 	const useColumnDividers = hasColumnDividers && !isSummaryRow && !isSectionHeader;
@@ -112,6 +113,7 @@ export const TableRowItem = ({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-checkboxCell`]: true,
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
+					...cellCustomClasses?.[0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 				tabindex="0"
 			>
@@ -136,6 +138,7 @@ export const TableRowItem = ({
 						[`${rootClass}-cell--visual`]: useVisuals,
 						[`${rootClass}-cell--divider`]: useColumnDividers,
 						[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
+						...cellCustomClasses?.[showCheckbox ? 1 : 0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 					})}
 					tabindex="0"
 				>
@@ -162,6 +165,7 @@ export const TableRowItem = ({
 						[`${rootClass}-cell--visual`]: useVisuals,
 						[`${rootClass}-cell--divider`]: useColumnDividers,
 						[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
+						...cellCustomClasses?.[showCheckbox ? 1 : 0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 					})}
 					colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
 					tabindex="0"
@@ -178,6 +182,7 @@ export const TableRowItem = ({
 					[`${rootClass}-cell--visual`]: useVisuals,
 					[`${rootClass}-cell--divider`]: useColumnDividers,
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(1) === "end",
+					...cellCustomClasses?.[showCheckbox ? 2 : 1]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 				tabindex="0"
 			>${getCellContent(1)}</${cellTag}>
@@ -188,6 +193,7 @@ export const TableRowItem = ({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-cell--divider`]: useColumnDividers,
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(2) === "end",
+					...cellCustomClasses?.[showCheckbox ? 3 : 2]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
 				tabindex="0"
 			>${getCellContent(2)}</${cellTag}>`

@@ -337,6 +337,12 @@ TableStates.args = {
 			isFocused: true,
 		},
 		{
+			cellContent: ["Table row with a focused cell", "Focused cell", "Unfocused cell"],
+			cellCustomClasses: {
+				1: ["is-focused"]
+			}
+		},
+		{
 			cellContent: "Table row echo",
 		},
 		{
