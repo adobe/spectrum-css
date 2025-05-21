@@ -126,7 +126,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.8.1"
     "@nx/devkit": "npm:^21.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
-    "@yarnpkg/types": "npm:^4.0.0"
+    "@yarnpkg/types": "npm:^4.0.1"
     at-rule-packer: "npm:^0.4.2"
     autoprefixer: "npm:^10.4.21"
     colors: "npm:^1.4.0"
@@ -6756,7 +6756,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/types@npm:^4.0.0":
+"@yarnpkg/types@npm:^4.0.1":
   version: 4.0.1
   resolution: "@yarnpkg/types@npm:4.0.1"
   dependencies:
