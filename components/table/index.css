@@ -222,11 +222,15 @@
 	}
 }
 
+.spectrum-Table-scroller {
+	--spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
+}
+
 .spectrum-Table-row--summary {
 	--spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-summary-row-background-color, var(--spectrum-table-summary-row-background-color)));
 }
 
-/********* REGULAR / DEFAULT *********/
+/********* REGULAR / DEFAULT TABLE *********/
 .spectrum-Table:not(.spectrum-Table-scroller),
 .spectrum-Table-main {
 	border-collapse: separate;
@@ -288,7 +292,7 @@
 	display: inline-block;
 }
 
-/********* ICONS- SORT,  *********/
+/********* ICONS- SORT, DISCLOSURE/MENU *********/
 .spectrum-Table-sortIcon {
 	vertical-align: baseline;
 	margin-inline-start: var(--mod-table-sort-icon-inline-start-spacing, 0);
@@ -303,6 +307,7 @@
 	margin-inline-start: var(--mod-table-icon-to-text, var(--spectrum-table-icon-to-text));
 }
 
+/********* TEXT ALIGNMENT *********/
 .spectrum-Table-cell--alignStart {
 	text-align: start;
 }
@@ -311,10 +316,12 @@
 	text-align: end;
 }
 
+/********* TABLE BODY *********/
 .spectrum-Table-body {
 	position: relative;
 	border: none;
-	border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+	border-end-start-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
+	border-end-end-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
 	display: table-row-group;
 
 	&.is-drop-target {
@@ -324,15 +331,17 @@
 		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
 		outline-style: solid;
 		outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
+		outline-offset: calc(-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)));
 	}
 }
 
-/* Outside border, row divider lines, and rounded corners:
+/********* CELLS *********/
+.spectrum-Table-cell {
+	/* Outside border, row divider lines, and rounded corners:
     The tbody tag doesn't allow setting a border or border-radius. To make them work, border styles are
     instead applied to the individual cells around the outside, while using border-collapse: separate. */
 
-/* Row divider lines */
-.spectrum-Table-cell {
+	/* Row divider lines */
 	border-block-start: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 
 	/* Cells within table body */
@@ -352,7 +361,28 @@
 	padding-inline: calc(var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content)) - var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)));
 }
 
-/* Outside border */
+/* Focus Indicator (Ring) */
+.spectrum-Table-cell,
+.spectrum-Table-headCell {
+	position: relative;
+	display: table-cell;
+
+	&:focus-visible,
+	&.is-focused {
+		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
+		outline-style: solid;
+		outline-color: var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
+		outline-offset: calc((-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness))) - var(--highcontrast-table-cell-focus-extra-offset, 0px));
+	}
+}
+
+/* Cells that display a column divider (vertical border). */
+.spectrum-Table-cell--divider {
+	border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
+}
+
+/********* ROWS *********/
+/* Outside border (the table's border) */
 .spectrum-Table-body .spectrum-Table-row {
 	&:first-child .spectrum-Table-cell {
 		border-block-start: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
@@ -379,18 +409,22 @@
 	cursor: var(--mod-table-cursor-row-default, pointer);
 	border-block-start: none;
 
-	&:first-child .spectrum-Table-cell:first-child {
-		border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+	/* most cells within the table body have no border-radius */
+	.spectrum-Table-cell {
+		border-radius: 0;
 	}
 
+	/* first cell of first row in table body */
 	&:first-child .spectrum-Table-cell:last-child {
-		border-start-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+		border-radius: 0;
 	}
 
+	/* first cell of last row in table body */
 	&:last-child .spectrum-Table-cell:first-child {
 		border-end-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 	}
 
+	/* last cell of last row in table body */
 	&:last-child .spectrum-Table-cell:last-child {
 		border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 	}
@@ -413,6 +447,8 @@
 	&.is-drop-target {
 		/* Make sure negative offset outline is not covered by borders. */
 		--mod-table-border-color: var(--highcontrast-table-focus-indicator-color, transparent);
+		border-start-start-radius: 0;
+		border-start-end-radius: 0;
 
 		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
 		outline-style: solid;
@@ -423,26 +459,6 @@
 			border-block-start-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
 		}
 	}
-}
-
-/* Focus Indicator (Ring) */
-.spectrum-Table-cell,
-.spectrum-Table-headCell {
-	position: relative;
-	display: table-cell;
-
-	&:focus-visible,
-	&.is-focused {
-		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
-		outline-style: solid;
-		outline-color: var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
-		outline-offset: calc((-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness))) - var(--highcontrast-table-cell-focus-extra-offset, 0px));
-	}
-}
-
-/* Cells that display a column divider (vertical border). */
-.spectrum-Table-cell--divider {
-	border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 }
 
 .spectrum-Table-row--summary {
@@ -488,6 +504,7 @@
 	}
 }
 
+/********* CHECKBOX CELLS *********/
 .spectrum-Table-checkboxCell {
 	/* Prevent width expansion with 100% width table. */
 	inline-size: var(--spectrum-checkbox-control-size-small);
@@ -530,8 +547,6 @@
 /********* SCROLLABLE *********/
 /* Wrapper that allows a scrollable body and sticky column header. */
 .spectrum-Table-scroller {
-	--spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
-
 	box-sizing: border-box;
 	display: inline-block;
 	position: relative;
@@ -555,11 +570,14 @@
 		z-index: 2;
 	}
 
-	.spectrum-Table-headCell {
+	/* Remove borders that have been replaced by borders on scroller wrapper or pseudo elements. */
+	.spectrum-Table-headRow:first-child .spectrum-Table-headCell {
 		border-block-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+		border-block-start: 0;
+		border-inline: 0;
+		border-radius: 0;
 	}
 
-	/* Remove borders that have been replaced by borders on wrapper or pseudo elements. */
 	.spectrum-Table-body .spectrum-Table-row {
 		&:first-child .spectrum-Table-cell {
 			border-block-start: none;
