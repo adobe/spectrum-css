@@ -161,7 +161,7 @@ __metadata:
     postcss-licensing: "npm:^3.0.0"
     postcss-load-config: "npm:^6.0.1"
     postcss-modules: "npm:^6.0.1"
-    postcss-preset-env: "npm:^10.1.5"
+    postcss-preset-env: "npm:^10.1.6"
     postcss-pseudo-classes: "npm:^0.4.0"
     postcss-reporter: "npm:^7.1.0"
     postcss-selector-replace: "npm:^1.0.2"
@@ -5643,7 +5643,7 @@ __metadata:
     ava: "npm:^6.2.0"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.3"
-    postcss-selector-parser: "npm:^7.0.0"
+    postcss-selector-parser: "npm:^7.1.0"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
     postcss: ">=8"
@@ -17285,7 +17285,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:^10.1.5":
+"postcss-preset-env@npm:^10.1.6":
   version: 10.1.6
   resolution: "postcss-preset-env@npm:10.1.6"
   dependencies:
