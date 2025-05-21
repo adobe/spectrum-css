@@ -5,7 +5,7 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@actions/artifact@npm:^2.2.1":
+"@actions/artifact@npm:^2.3.2":
   version: 2.3.2
   resolution: "@actions/artifact@npm:2.3.2"
   dependencies:
@@ -5627,7 +5627,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/gh-action-file-diff@workspace:.github/actions/file-diff"
   dependencies:
-    "@actions/artifact": "npm:^2.2.1"
+    "@actions/artifact": "npm:^2.3.2"
     "@actions/core": "npm:^1.11.1"
     "@actions/github": "npm:^6.0.1"
     "@actions/glob": "npm:^0.5.0"
