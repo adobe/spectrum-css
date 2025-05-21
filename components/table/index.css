@@ -62,8 +62,7 @@
 	--spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-default, var(--spectrum-table-icon-color-default)));
 
 	/* Alignment */
-	--spectrum-table-default-vertical-align: top;
-	--spectrum-table-header-vertical-align: middle;
+	--spectrum-table-default-vertical-align: middle;
 
 	/* Font */
 	--spectrum-table-header-font-weight: var(--spectrum-bold-font-weight);
@@ -249,7 +248,7 @@
 	.spectrum-Table-headCell {
 		box-sizing: border-box;
 		text-align: start;
-		vertical-align: var(--mod-table-header-vertical-align, var(--spectrum-table-header-vertical-align));
+		vertical-align: var(--mod-table-header-vertical-align, var(--spectrum-table-default-vertical-align));
 
 		font-family: var(--mod-table-header-font-family, var(--spectrum-table-row-font-family));
 		font-size: var(--mod-table-header-font-size, var(--spectrum-table-row-font-size));
@@ -323,7 +322,7 @@
 
 /********* ICONS- SORT, DISCLOSURE/MENU *********/
 .spectrum-Table-sortIcon {
-	vertical-align: var(--mod-table-header-vertical-align, var(--spectrum-table-header-vertical-align));
+	vertical-align: var(--mod-table-header-vertical-align, var(--spectrum-table-default-vertical-align));
 	margin-inline-start: var(--mod-table-sort-icon-inline-start-spacing, 0);
 	margin-inline-end: var(--mod-table-sort-icon-inline-end-spacing, var(--mod-table-visual-to-text, var(--spectrum-table-visual-to-text)));
 	transition: transform var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
@@ -682,11 +681,7 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-	align-items: flex-start;
-
-	.spectrum-Table-collapseContent {
-		padding-block-end: var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
-	}
+	align-items: center;
 }
 
 .spectrum-Table-disclosureIcon.spectrum-Table-disclosureIcon {
@@ -765,7 +760,7 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	gap: var(--spectrum-table-visual-to-text);
 	padding-block: var(--spectrum-table-thumbnail-cell-block-spacing);
 
