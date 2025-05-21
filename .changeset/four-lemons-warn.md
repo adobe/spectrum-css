@@ -11,6 +11,7 @@
 - Changed outline thickness for better visibility
 - Replaced picker button with in-field button component
 - Added help text along with invalid state
+- Modified the WHCM invalid/error state in help text
 
 ### New tokens
 

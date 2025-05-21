@@ -21,14 +21,23 @@ export const ComboBoxGroup = Variants({
 			},
 		},
 		{
+			testHeading: "Help text with label",
+			showFieldLabel: true,
+			helpText: "Choose a location. Add a new location by typing it in the field, then selecting 'Enter.'",
+		},
+		{
 			testHeading: "With field label on the side",
 			showFieldLabel: true,
-			isOpen: false,
+			fieldLabelPosition: "side",
+		},
+		{
+			testHeading: "Help text with label on the side",
+			showFieldLabel: true,
+			helpText: "Choose a location. Add a new location by typing it in the field, then selecting 'Enter.'",
 			fieldLabelPosition: "side",
 		},
 		{
 			testHeading: "Truncation",
-			isOpen: false,
 			value: "United States of America and to the republic",
 		},
 	],

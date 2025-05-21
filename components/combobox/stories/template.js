@@ -12,7 +12,7 @@ import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
-const Combobox = ({
+export const Template = ({
 	rootClass = "spectrum-Combobox",
 	id = getRandomId("combobox"),
 	testId,
@@ -34,6 +34,7 @@ const Combobox = ({
 	showFieldLabel = false,
 	value = "",
 	autocomplete = true,
+	content = [],
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 	const comboboxId = id || getRandomId("combobox");
@@ -55,6 +56,8 @@ const Combobox = ({
 		}, 0);
 	}
 
+	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
+
 	return html`
 		<div
 			class=${classMap({
@@ -74,14 +77,17 @@ const Combobox = ({
 			})}
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId ?? id)}
-			style=${styleMap(customStyles)}
+			style=${styleMap({
+				...customStyles,
+				["margin-block-end"]: !isReadOnly && isOpen && !isDisabled ? `${popoverHeight}px` : undefined,
+			})}
 			role="combobox"
 			aria-expanded=${isOpen}
 			aria-haspopup="listbox"
 			aria-controls=${`${comboboxId}-popover`}
 			aria-owns=${`${comboboxId}-popover`}
 		>
-		${when(showFieldLabel, () =>
+			${when(showFieldLabel, () =>
 				FieldLabel({
 					size,
 					label: fieldLabelText,
@@ -91,8 +97,8 @@ const Combobox = ({
 					isRequired: isLabelRequired,
 				}, context)
 			)}
-		<div class="${rootClass}-content">
-			${TextField({
+			<div class="${rootClass}-content">
+				${TextField({
 					size,
 					isDisabled,
 					isInvalid,
@@ -129,8 +135,19 @@ const Combobox = ({
 						});
 					},
 				}, context)}
-		</div>
-		${when(helpText, () =>
+			</div>
+			${Popover({
+				isOpen: isOpen && !isDisabled && !isReadOnly,
+				withTip: false,
+				position: "bottom-start",
+				customClasses: [`${rootClass}-popover`],
+				customStyles: {
+					"inline-size": size === "s" ? "192px" : size === "l" ? "224px" : size === "xl" ? "240px" : "208px",
+				},
+				content,
+				popoverHeight,
+			}, context)}
+			${when(helpText, () =>
 				HelpText({
 					customClasses: [`${rootClass}-helptext`],
 					size,
@@ -140,50 +157,7 @@ const Combobox = ({
 					variant: isInvalid ? "negative" : "neutral",
 				}, context)
 			)}
-		</div>
-	`;
-};
 
-export const Template = ({
-	size = "m",
-	isOpen = true,
-	isDisabled = false,
-	isReadOnly = false,
-	content = [],
-	value = "",
-	...args
-} = {}, context = {}) => {
-	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
-
-	return html`
-		<div style=${styleMap({
-			// This accounts for the height of the popover when it is open to prevent testing issues
-			// and allow docs containers to be the right height
-			["margin-block-end"]: !isReadOnly && isOpen && !isDisabled ? `${popoverHeight}px` : undefined,
-		})}>
-
-			${[
-				Popover({
-					isOpen: isOpen && !isDisabled && !isReadOnly,
-					withTip: false,
-					position: "bottom-start",
-					customClasses: [`${args.rootClass}-popover`],
-					customStyles: {
-						"inline-size": size === "s" ? "192px" : size === "l" ? "224px" : size === "xl" ? "240px" : "208px",
-					},
-					trigger: (passthrough) => Combobox({
-						size,
-						isOpen,
-						isDisabled,
-						isReadOnly,
-						value,
-						...args,
-						...passthrough,
-					}, context),
-					content,
-					popoverHeight,
-				}, context),
-			]}
 		</div>
 	`;
 };
@@ -208,7 +182,7 @@ export const HelpTextTemplate = (args, context) => {
 			withBorder: false,
 			heading: variant.heading,
 			containerStyles: {"display": "inline"},
-			content: Combobox({
+			content: Template({
 				...variant.args,
 				customStyles: {"margin-top": "8px"}
 			}, context)},
