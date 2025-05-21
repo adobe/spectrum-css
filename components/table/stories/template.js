@@ -18,6 +18,7 @@ export const TableRowItem = ({
 	cellContent = "Row Item Text",
 	showCheckbox = false,
 	isSelected = false,
+	isFocused = false,
 	isSummaryRow = false,
 	isSectionHeader = false,
 	isEmphasized = true,
@@ -48,7 +49,7 @@ export const TableRowItem = ({
 			? cellContent[columnIndex]
 			: cellContent;
 
-		if (useVisuals && columnIndex < 2) {
+		if (useVisuals) {
 			return html`
 				<div class="spectrum-Table-visualInner">
 					${visualElement === "thumbnail" ?
@@ -80,9 +81,7 @@ export const TableRowItem = ({
 
 	// For each column, apply the text alignment specified in textAlignment
 	const getTextAlignment = (columnIndex) => {
-		if (!textAlignment) return "start";
-
-		return textAlignment[columnIndex] || "start";
+		return textAlignment?.[columnIndex] || "start";
 	};
 
 	return html`
@@ -94,6 +93,7 @@ export const TableRowItem = ({
 			[`${rootClass}-row--collapsible`]: isCollapsible,
 			[`${rootClass}-cell--divider`]: useColumnDividers,
 			["is-selected"]: isSelected,
+			["is-focused"]: isFocused,
 			["is-expanded"]: isExpanded,
 			["is-last-tier"]: isLastTier,
 			["is-drop-target"]: isDropTarget,
@@ -103,6 +103,7 @@ export const TableRowItem = ({
 		aria-selected=${ifDefined(showCheckbox ? "true" : undefined)}
 		data-tier=${ifDefined(tier)}
 		?hidden=${isHidden}
+		tabindex="0"
 	>
 		${when(showCheckbox && !isSectionHeader, () => html`
 			<${cellTag}
@@ -112,6 +113,7 @@ export const TableRowItem = ({
 					[`${rootClass}-checkboxCell`]: true,
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
 				})}
+				tabindex="0"
 			>
 				${when(!isSummaryRow, () =>
 					Checkbox({
@@ -125,43 +127,47 @@ export const TableRowItem = ({
 		)}
 
 		${isCollapsible
-				? html`
-					<${cellTag}
-						role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
-						class=${classMap({
-							[`${rootClass}-cell`]: true,
-							[`${rootClass}-cell--collapsible`]: true,
-							[`${rootClass}-cell--visual`]: useVisuals,
-							[`${rootClass}-cell--divider`]: useColumnDividers,
-							[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
-						})}
-					>
-						<div class="${rootClass}-collapseInner">
-							${when(!isLastTier, () =>
-								Button({
-									size: "m",
-									iconName: "ChevronRight100",
-									iconSet: "ui",
-									hideLabel: true,
-									customClasses: [`${rootClass}-disclosureIcon`],
-									ariaExpanded: isExpanded,
-									ariaControls,
-								}, context)
-							)}
-							${useVisuals ? getCellContent(0) : html`<div class="${rootClass}-collapseContent">${getCellContent(0)}</div>`}
-						</div>
-					</${cellTag}>`
-				: html`
-					<${cellTag}
-						role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
-						class=${classMap({
-							[`${rootClass}-cell`]: true,
-							[`${rootClass}-cell--visual`]: useVisuals,
-							[`${rootClass}-cell--divider`]: useColumnDividers,
-							[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
-						})}
-						colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
-					>${getCellContent(0)}</${cellTag}>`
+			? html`
+				<${cellTag}
+					role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
+					class=${classMap({
+						[`${rootClass}-cell`]: true,
+						[`${rootClass}-cell--collapsible`]: true,
+						[`${rootClass}-cell--visual`]: useVisuals,
+						[`${rootClass}-cell--divider`]: useColumnDividers,
+						[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
+					})}
+					tabindex="0"
+				>
+					<div class="${rootClass}-collapseInner">
+						${when(!isLastTier, () =>
+							Button({
+								size: "m",
+								iconName: "ChevronRight100",
+								iconSet: "ui",
+								hideLabel: true,
+								customClasses: [`${rootClass}-disclosureIcon`],
+								ariaExpanded: isExpanded,
+								ariaControls,
+							}, context)
+						)}
+						${useVisuals ? getCellContent(0) : html`<div class="${rootClass}-collapseContent">${getCellContent(0)}</div>`}
+					</div>
+				</${cellTag}>`
+			: html`
+				<${cellTag}
+					role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
+					class=${classMap({
+						[`${rootClass}-cell`]: true,
+						[`${rootClass}-cell--visual`]: useVisuals,
+						[`${rootClass}-cell--divider`]: useColumnDividers,
+						[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
+					})}
+					colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
+					tabindex="0"
+				>
+					${getCellContent(0)}
+				</${cellTag}>`
 		}
 
 		${when(!isSectionHeader, () => html`
@@ -173,6 +179,7 @@ export const TableRowItem = ({
 					[`${rootClass}-cell--divider`]: useColumnDividers,
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(1) === "end",
 				})}
+				tabindex="0"
 			>${getCellContent(1)}</${cellTag}>
 
 			<${cellTag}
@@ -182,6 +189,7 @@ export const TableRowItem = ({
 					[`${rootClass}-cell--divider`]: useColumnDividers,
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(2) === "end",
 				})}
+				tabindex="0"
 			>${getCellContent(2)}</${cellTag}>`
 		)}
 	</${rowTag}>
@@ -197,7 +205,7 @@ export const Template = ({
 	useDivs = false,
 	selectionMode = "none",
 	useScroller = false,
-	visualElement = {},
+	visualElement,
 	isDropTarget = false,
 	hasColumnDividers = false,
 	rowItems = [],
@@ -262,7 +270,6 @@ export const Template = ({
 		id=${ifDefined(id)}
 		role=${ifDefined(useCheckboxCell ? "grid" : useDivs ? "table" : undefined)}
 		aria-multiselectable=${ifDefined(useCheckboxCell ? "true" : undefined)}
-		style="max-width: 800px;"
 	>
 		<${theadTag}
 			class="${rootClass}-head"
@@ -270,6 +277,7 @@ export const Template = ({
 		>
 			<${rowTag}
 				role=${ifDefined(useDivs ? "row" : undefined)}
+				class="${rootClass}-headRow"
 			>
 				${when(useCheckboxCell, () => html`
 					<${thTag}
