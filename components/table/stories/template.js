@@ -26,6 +26,7 @@ export const TableRowItem = ({
 	isExpanded = false,
 	isHidden = false,
 	hasColumnDividers = false,
+	density = "regular",
 	tier,
 	isLastTier = false,
 	useDivs = false,
@@ -50,18 +51,26 @@ export const TableRowItem = ({
 			? cellContent[columnIndex]
 			: cellContent;
 
-		if (useVisuals) {
+		if (useVisuals && columnIndex < 2) {
 			return html`
 				<div class="spectrum-Table-visualInner">
 					${visualElement === "thumbnail" ?
 						Thumbnail({
-							size: "75",
+							size: ({
+								compact: "75",
+								regular: "100",
+								spacious: "200",
+							}[density] || "100"),
 							imageURL: "example-card-landscape.png",
 							isCover: true,
 						}, context)
 					: visualElement === "avatar" ?
 						Avatar({
-							size: "75",
+							size: ({
+								compact: "50",
+								regular: "75",
+								spacious: "100",
+							}[density] || "75"),
 							imageURL: "example-card-landscape.png",
 							isCover: true,
 						}, context)
@@ -204,7 +213,7 @@ export const TableRowItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-Table",
-	density = "standard",
+	density = "regular",
 	isQuiet = false,
 	isEmphasized = true,
 	isLoading = false,
@@ -355,6 +364,7 @@ export const Template = ({
 			${rowItems.map((item) =>
 				TableRowItem({
 					rootClass,
+					density,
 					useDivs,
 					visualElement,
 					hasColumnDividers,
