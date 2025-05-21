@@ -174,17 +174,18 @@ EmptyState.args = {
 EmptyState.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+EmptyState.storyName = "Empty state";
 
-export const Loading = Template.bind({});
-Loading.args = {
+export const LoadingState = Template.bind({});
+LoadingState.args = {
 	...Default.args,
 	isLoading: true,
 };
-Loading.tags = ["!dev"];
-Loading.parameters = {
+LoadingState.tags = ["!dev"];
+LoadingState.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
+LoadingState.storyName = "Loading state";
 /**
  * The compact variant decreases the spacing used within the table rows, except for the header row.
  */
@@ -397,6 +398,10 @@ export const SummaryAndSelected = Template.bind({});
 SummaryAndSelected.args = {
 	rowItems: [
 		{
+			cellContent: "Summary row",
+			isSummaryRow: true,
+		},
+		{
 			cellContent: "Table row alpha",
 		},
 		{
@@ -409,13 +414,9 @@ SummaryAndSelected.args = {
 		{
 			cellContent: "Table row delta",
 		},
-		{
-			cellContent: "Summary row",
-			isSummaryRow: true,
-		},
 	],
 };
-SummaryAndSelected.storyName = "Summary and selected";
+SummaryAndSelected.storyName = "Summary and selected rows";
 SummaryAndSelected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -451,7 +452,7 @@ SectionHeader.args = {
 		},
 	],
 };
-SectionHeader.storyName = "Section header";
+SectionHeader.storyName = "Section headers";
 SectionHeader.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -461,7 +462,7 @@ SectionHeaderQuiet.args = {
 	...SectionHeader.args,
 	isQuiet: true,
 };
-SectionHeaderQuiet.storyName = "Section header: quiet";
+SectionHeaderQuiet.storyName = "Section headers: quiet styling";
 SectionHeaderQuiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -486,7 +487,7 @@ Scrollable.args = {
 			cellContent: "Table row bravo",
 		},
 		{
-			cellContent: "Table row charlie",
+			cellContent: "Selected row charlie",
 			isSelected: true,
 		},
 		{
@@ -513,7 +514,7 @@ Scrollable.parameters = {
  * A table can also be made up of `div` tags if needed, instead of a `<table>`. This example uses both the div markup, and the scrollable wrapper.
  */
 export const DivsScrollable = Template.bind({});
-DivsScrollable.storyName = "Scrollable with divs";
+DivsScrollable.storyName = "Scrollable table with divs";
 DivsScrollable.args = {
 	...Scrollable.args,
 	useDivs: true,
@@ -588,6 +589,7 @@ Collapsible.args = {
 Collapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Collapsible.storyName = "Collapsible rows";
 
 export const CollapsibleMultiSelect = Template.bind({});
 CollapsibleMultiSelect.storyName = "Selection mode: multiple, collapsible rows";
@@ -684,6 +686,7 @@ Visuals.args = {
 Visuals.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Visuals.storyName = "With visuals";
 
 /**
  * The table can also combine visuals with collapsible rows.
@@ -750,7 +753,7 @@ VisualsCollapsible.args = {
 		},
 	],
 };
-VisualsCollapsible.storyName = "Visuals: collapsible";
+VisualsCollapsible.storyName = "With visuals: collapsible rows";
 VisualsCollapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -764,7 +767,7 @@ BodyDropZone.args = {
 	...Default.args,
 	isDropTarget: true,
 };
-BodyDropZone.tags = ["!autodocs","!dev"];
+BodyDropZone.tags = ["!autodocs", "!dev"];
 BodyDropZone.storyName = "Dropzone: body";
 BodyDropZone.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -799,7 +802,7 @@ RowDropZone.args = {
 		},
 	],
 };
-RowDropZone.tags = ["!autodocs","!dev"];
+RowDropZone.tags = ["!autodocs", "!dev"];
 RowDropZone.storyName = "Dropzone: row";
 RowDropZone.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -810,7 +813,7 @@ RowDropZoneQuiet.args = {
 	...RowDropZone.args,
 	isQuiet: true,
 };
-RowDropZoneQuiet.tags = ["!autodocs","!dev"];
+RowDropZoneQuiet.tags = ["!autodocs", "!dev"];
 RowDropZoneQuiet.storyName = "Dropzone: row, quiet";
 RowDropZoneQuiet.parameters = {
 	chromatic: { disableSnapshot: true },
