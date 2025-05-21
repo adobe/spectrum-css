@@ -48,6 +48,7 @@
 	/* Focus indicators */
 	--spectrum-table-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-table-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-table-row-focus-indicator-width: var(--spectrum-side-focus-indicator);
 
 	--spectrum-table-selected-cell-background-color-focus: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
 
@@ -397,10 +398,20 @@
 
 	&:focus-visible,
 	&.is-focused {
-		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
-		outline-style: solid;
-		outline-color: var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
-		outline-offset: calc((-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness))) - var(--highcontrast-table-cell-focus-extra-offset, 0px));
+		position: relative;
+
+		/* Remove the outline since we'll replace it with an ::after pseudo-element */
+		outline: none;
+		z-index: 1; /* Ensure cell focus indicator appears above row focus indicator */
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: calc(-1 * var(--mod-table-border-width, var(--spectrum-table-border-width)));
+			border-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
+			border: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) solid var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
+			pointer-events: none;
+		}
 	}
 }
 
@@ -468,8 +479,30 @@
 		border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 	}
 
+	/* Row focus indicator */
+	&.is-focused,
+	&:focus-visible,
 	&:focus {
-		outline: 0;
+		.spectrum-Table-cell:first-child {
+			position: relative;
+			overflow: hidden;
+			outline: none;
+
+			&::before {
+				content: "";
+				position: absolute;
+				inset-block-start: 0;
+				inset-block-end: 0;
+				inset-inline-start: 0;
+				inline-size: var(--spectrum-side-focus-indicator);
+				background-color: var(--spectrum-table-focus-indicator-color);
+				z-index: 1;
+			}
+		}
+
+		&:last-child .spectrum-Table-cell:first-child::before {
+			border-end-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+		}
 	}
 
 	&.is-drop-target {
@@ -779,32 +812,6 @@
 	}
 }
 
-/********* TESTS DURING DEVELOPMENT *********/
-/* .spectrum-Table-cell {
-	border-radius: calc(var(--spectrum-table-border-radius) - var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)));
-}
-
-.spectrum-Table-cell.is-focused {
-	outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
-	outline-style: solid;
-	outline-color: var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
-	outline-offset: calc(var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) - 2px);
-}
-
-.spectrum-Table-cell.is-selected {
-	background-color: var(--spectrum-table-selected-row-background-color);
-}
-
-.spectrum-Table-row.is-selected {
-	--mod-table-row-background-color: var(--spectrum-table-selected-row-background-color);
-}
-
-.spectrum-Table-row.is-focused .spectrum-Table-cell:first-child {
-	--spectrum-table-focus-indicator-shadow: inset;
-	box-shadow: var(--spectrum-table-focus-indicator-shadow) var(--spectrum-side-focus-indicator) 0 0 0 var(--spectrum-table-focus-indicator-color);
-	outline: none;
-} */
-
 /********* HIGH CONTRAST *********/
 @media (forced-colors: active) {
 	.spectrum-Table {
@@ -838,6 +845,13 @@
 	.spectrum-Table-cell {
 		/* Removes unstylable readability backplate. */
 		forced-color-adjust: none;
+
+		&:focus-visible,
+		&.is-focused {
+			&::after {
+				border-color: Highlight;
+			}
+		}
 	}
 
 	.spectrum-Table-row {
@@ -846,6 +860,11 @@
 		&.is-focused {
 			.spectrum-Table-checkbox .spectrum-Checkbox-box::before {
 				outline: var(--highcontrast-table-row-text-color-hover) 1px solid;
+			}
+
+			/* corresponds to the row focus indicator with a ::before pseudo element */
+			.spectrum-Table-cell:first-child::before {
+				background-color: Highlight;
 			}
 		}
 	}
