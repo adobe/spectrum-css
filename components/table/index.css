@@ -36,9 +36,6 @@
 	/* Row Selection */
 	--spectrum-table-row-active-color: rgb(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-down-opacity)); /* active/down state background color */
 
-	--spectrum-table-header-row-checkbox-block-spacing: var(--spectrum-table-header-row-checkbox-to-top-medium);
-	--spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-medium-regular);
-
 	/* Border */
 	--spectrum-table-border-color: var(--spectrum-gray-300);
 	--spectrum-table-border-radius: var(--spectrum-corner-radius-medium-size-extra-small);
@@ -47,9 +44,6 @@
 
 	/* Divider */
 	--spectrum-table-divider-color: var(--spectrum-gray-300);
-
-	/* Cells */
-	--spectrum-table-cell-inline-space: var(--spectrum-table-edge-to-content);
 
 	/* Focus indicators */
 	--spectrum-table-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
@@ -89,11 +83,13 @@
 	--spectrum-table-min-header-row-height: var(--spectrum-component-height-100);
 	--spectrum-table-header-row-top-to-text: var(--spectrum-table-column-header-row-top-to-text-medium);
 	--spectrum-table-header-row-bottom-to-text: var(--spectrum-table-column-header-row-bottom-to-text-medium);
-	--spectrum-table-icon-to-text: var(--spectrum-text-to-visual-300);
 
 	--spectrum-table-min-row-height: var(--spectrum-table-row-height-medium);
-	--spectrum-table-row-top-to-text: var(--spectrum-table-row-top-to-text-medium-regular);
-	--spectrum-table-row-bottom-to-text: var(--spectrum-table-row-bottom-to-text-medium-regular);
+	--spectrum-table-row-top-to-text: var(--spectrum-table-row-top-to-text-medium);
+	--spectrum-table-row-bottom-to-text: var(--spectrum-table-row-bottom-to-text-medium);
+
+	--spectrum-table-header-row-checkbox-block-spacing: var(--spectrum-table-header-row-checkbox-to-top-medium);
+	--spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-medium);
 
 	--spectrum-table-section-header-min-height: var(--spectrum-table-section-header-row-height-medium);
 	--spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-100);
@@ -103,6 +99,7 @@
 	--spectrum-table-visual-to-text: var(--spectrum-text-to-visual-300);
 	--spectrum-table-thumbnail-size: var(--spectrum-thumbnail-size-300);
 
+	--spectrum-table-cell-inline-spacing: var(--spectrum-table-edge-to-content);
 	--spectrum-table-checkbox-to-cell-content: var(--spectrum-table-checkbox-to-text);
 
 	--spectrum-table-collapsible-tier-indent: var(--spectrum-spacing-300);
@@ -121,8 +118,8 @@
 .spectrum-Table--compact {
 	/* Size and Spacing */
 	--spectrum-table-min-row-height: var(--mod-table-min-row-height-compact, var(--spectrum-table-row-height-medium-compact));
-	--spectrum-table-header-row-top-to-text: var(--mod-table-row-top-to-text-compact, var(--spectrum-table-row-top-to-text-medium-compact));
-	--spectrum-table-header-row-bottom-to-text: var(--mod-table-row-bottom-to-text-compact, var(--spectrum-table-row-bottom-to-text-medium-compact));
+	--spectrum-table-row-top-to-text: var(--spectrum-table-row-top-to-text-medium-compact);
+	--spectrum-table-row-bottom-to-text: var(--spectrum-table-row-bottom-to-text-medium-compact);
 
 	/* Row Selection */
 	--spectrum-table-row-checkbox-block-spacing: var(--mod-table-row-checkbox-block-spacing-compact, var(--spectrum-table-row-checkbox-to-top-medium-compact));
@@ -135,8 +132,8 @@
 .spectrum-Table--spacious {
 	/* Size and Spacing */
 	--spectrum-table-min-row-height: var(--mod-table-min-row-height-spacious, var(--spectrum-table-row-height-medium-spacious));
-	--spectrum-table-header-row-top-to-text: var(--mod-table-row-top-to-text-spacious, var(--spectrum-table-row-top-to-text-medium-spacious));
-	--spectrum-table-header-row-bottom-to-text: var(--mod-table-row-bottom-to-text-spacious, var(--spectrum-table-row-bottom-to-text-medium-spacious));
+	--spectrum-table-row-top-to-text: var(--spectrum-table-row-top-to-text-medium-spacious);
+	--spectrum-table-row-bottom-to-text: var(--spectrum-table-row-bottom-to-text-medium-spacious);
 
 	/* Row Selection */
 	--spectrum-table-row-checkbox-block-spacing: var(--mod-table-row-checkbox-block-spacing-spacious, var(--spectrum-table-row-checkbox-to-top-medium-spacious));
@@ -230,6 +227,15 @@
 	--spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-summary-row-background-color, var(--spectrum-table-summary-row-background-color)));
 }
 
+.spectrum-Table-row--sectionHeader {
+	--spectrum-table-cell-background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
+
+	&:hover {
+		--highcontrast-table-row-text-color: var(--highcontrast-table-section-header-text-color);
+		--spectrum-table-cell-background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
+	}
+}
+
 /********* REGULAR / DEFAULT TABLE *********/
 .spectrum-Table:not(.spectrum-Table-scroller),
 .spectrum-Table-main {
@@ -255,7 +261,7 @@
 		block-size: var(--mod-table-min-header-height, var(--spectrum-table-min-header-row-height));
 
 		padding-block: var(--mod-table-header-row-top-to-text, var(--spectrum-table-header-row-top-to-text)) var(--mod-table-header-row-bottom-to-text, var(--spectrum-table-header-row-bottom-to-text));
-		padding-inline: var(--mod-table-cell-inline-space, var(--spectrum-table-cell-inline-space));
+		padding-inline: var(--mod-table-cell-inline-spacing, var(--spectrum-table-cell-inline-spacing));
 
 		color: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
 		background-color: var(--mod-table-header-background-color, var(--spectrum-table-header-background-color));
@@ -278,6 +284,29 @@
 	&:last-child .spectrum-Table-headCell:last-child {
 		border-start-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 		border-inline-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+	}
+
+	/* Checkbox cell in header row */
+	.spectrum-Table-checkboxCell {
+		padding-inline-start: calc(var(--mod-table-cell-inline-spacing, var(--spectrum-table-cell-inline-spacing)) - var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)));
+
+		/* the calc subtraction is because the --spectrum-table-checkbox-to-text spacing value
+		includes the inline start padding in the adjacent cell. */
+		padding-inline-end: calc(var(--mod-table-checkbox-to-cell-content, var(--spectrum-table-checkbox-to-cell-content)) - var(--mod-table-cell-inline-spacing, var(--spectrum-table-cell-inline-spacing)));
+		padding-block: var(--mod-table-header-row-checkbox-block-spacing, var(--spectrum-table-header-row-checkbox-block-spacing));
+
+		.spectrum-Table-checkbox {
+			--mod-checkbox-margin-block: 0px;
+
+			min-block-size: initial;
+		}
+	}
+}
+
+/* The quiet table's header row cells need a border-block-end to match the body cells. */
+.spectrum-Table--quiet {
+	.spectrum-Table-headCell {
+		border-block-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 	}
 }
 
@@ -462,12 +491,14 @@
 }
 
 .spectrum-Table-row--summary {
-	--spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-summary-row-background-color, var(--spectrum-table-summary-row-background-color)));
-
 	.spectrum-Table-cell {
 		font-weight: var(--mod-table-summary-row-font-weight, var(--spectrum-table-summary-row-font-weight));
 
-		/* Make unique summary row mods available to these default row styles: */
+		/* Summary rows are typically the same dimensions as other non-header rows, but we make
+		mods available to override the default row styles */
+		block-size: var(--mod-table-summary-row-min-height, var(--spectrum-table-min-row-height));
+		padding-block-start: calc(var(--mod-table-summary-row-top-to-text, var(--spectrum-table-row-top-to-text)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
+		padding-block-end: var(--mod-table-summary-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
 		font-size: var(--mod-table-summary-row-font-size, var(--spectrum-table-row-font-size));
 		font-family: var(--mod-table-summary-row-font-family, var(--spectrum-table-row-font-family));
 		font-style: var(--mod-table-summary-row-font-style, var(--spectrum-table-row-font-style));
@@ -477,7 +508,6 @@
 }
 
 .spectrum-Table-row--sectionHeader {
-	--spectrum-table-cell-background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
 	cursor: var(--mod-table-cursor-section-header, initial);
 
 	.spectrum-Table-cell {
@@ -491,19 +521,16 @@
 		padding-block-end: calc(var(--mod-table-section-header-block-end-spacing, var(--spectrum-table-section-header-block-end-spacing)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
 
 		/* Make unique section header mods available to these default row styles: */
+		padding-inline-start: calc(var(--mod-table-section-header-inline-start-spacing, var(--spectrum-table-cell-inline-spacing)) - var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)));
 		font-size: var(--mod-table-section-header-font-size, var(--spectrum-table-row-font-size));
 		font-family: var(--mod-table-section-header-font-family, var(--spectrum-table-row-font-family));
 		font-style: var(--mod-table-section-header-font-style, var(--spectrum-table-row-font-style));
 		line-height: var(--mod-table-section-header-line-height, var(--spectrum-table-row-line-height));
 		color: var(--highcontrast-table-section-header-text-color, var(--mod-table-section-header-text-color, var(--spectrum-table-row-text-color)));
 	}
-
-	&:hover {
-		--highcontrast-table-row-text-color: var(--highcontrast-table-section-header-text-color);
-		--spectrum-table-cell-background-color: var(--highcontrast-table-section-header-background-color, var(--mod-table-section-header-background-color, var(--spectrum-table-section-header-background-color)));
-	}
 }
 
+/* Checkbox cell styles are further down the cascade to override some of the checkbox styles for collapsible tables. */
 /********* CHECKBOX CELLS *********/
 .spectrum-Table-checkboxCell {
 	/* Prevent width expansion with 100% width table. */
@@ -511,20 +538,14 @@
 
 	/* The calc subtraction is because the --spectrum-table-checkbox-to-text spacing value
 	includes the inline start padding in the adjacent cell. */
-	padding-inline-end: calc(var(--mod-table-checkbox-to-text, var(--spectrum-table-checkbox-to-text)) - var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content)));
-
-	/* Block spacing must be moved to calculated margin on the checkbox element. */
-	padding-block: 0;
+	padding-inline-end: calc(var(--mod-table-checkbox-to-cell-content, var(--spectrum-table-checkbox-to-cell-content)) - var(--mod-table-cell-inline-spacing, var(--spectrum-table-cell-inline-spacing)));
+	padding-block-start: calc(var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
+	padding-block-end: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
 
 	.spectrum-Table-checkbox {
-		--mod-checkbox-spacing: 0px;
+		--mod-checkbox-margin-block: 0px;
 
 		min-block-size: initial;
-	}
-
-	&.spectrum-Table-cell .spectrum-Table-checkbox {
-		margin-block-start: calc(var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
-		margin-block-end: var(--mod-table-row-checkbox-block-spacing, var(--spectrum-table-row-checkbox-block-spacing));
 	}
 
 	&.spectrum-Table-headCell .spectrum-Table-checkbox {
@@ -654,7 +675,6 @@
 
 .spectrum-Table-cell--collapsible {
 	padding-inline-start: calc(var(--spectrum-table-row-tier, 0px) * var(--spectrum-table-collapsible-tier-indent));
-	padding-block: 0;
 }
 
 .spectrum-Table-collapseInner {
@@ -665,7 +685,6 @@
 	align-items: flex-start;
 
 	.spectrum-Table-collapseContent {
-		padding-block-start: calc(var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
 		padding-block-end: var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
 	}
 }
@@ -789,7 +808,7 @@
 	--spectrum-table-focus-indicator-shadow: inset;
 	box-shadow: var(--spectrum-table-focus-indicator-shadow) var(--spectrum-side-focus-indicator) 0 0 0 var(--spectrum-table-focus-indicator-color);
 	outline: none;
-}
+} */
 
 /********* HIGH CONTRAST *********/
 @media (forced-colors: active) {
