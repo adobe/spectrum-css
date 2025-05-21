@@ -294,9 +294,9 @@
 
 /********* ICONS- SORT, DISCLOSURE/MENU *********/
 .spectrum-Table-sortIcon {
-	vertical-align: baseline;
+	vertical-align: var(--mod-table-header-vertical-align, var(--spectrum-table-header-vertical-align));
 	margin-inline-start: var(--mod-table-sort-icon-inline-start-spacing, 0);
-	margin-inline-end: var(--mod-table-sort-icon-inline-end-spacing, var(--mod-table-icon-to-text, var(--spectrum-table-icon-to-text)));
+	margin-inline-end: var(--mod-table-sort-icon-inline-end-spacing, var(--mod-table-visual-to-text, var(--spectrum-table-visual-to-text)));
 	transition: transform var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
 	color: var(--spectrum-table-icon-color);
 	display: inline-block;
@@ -304,7 +304,7 @@
 
 .spectrum-Table-menuIcon {
 	vertical-align: middle;
-	margin-inline-start: var(--mod-table-icon-to-text, var(--spectrum-table-icon-to-text));
+	margin-inline-start: var(--mod-table-visual-to-text, var(--spectrum-table-visual-to-text));
 }
 
 /********* TEXT ALIGNMENT *********/
@@ -358,7 +358,7 @@
 
 	padding-block-start: calc(var(--mod-table-row-top-to-text, var(--spectrum-table-row-top-to-text)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
 	padding-block-end: var(--mod-table-row-bottom-to-text, var(--spectrum-table-row-bottom-to-text));
-	padding-inline: calc(var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content)) - var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)));
+	padding-inline: calc(var(--mod-table-cell-inline-spacing, var(--spectrum-table-cell-inline-spacing)) - var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)));
 }
 
 /* Focus Indicator (Ring) */
@@ -719,8 +719,8 @@
 	}
 }
 
-/********* THUMBNAILS *********/
-.spectrum-Table-row--thumbnail {
+/********* VISUALS- THUMBNAILS, AVATARS, ICONS *********/
+.spectrum-Table-row--visual {
 	--spectrum-table-thumbnail-cell-block-spacing: var(--mod-table-thumbnail-block-spacing, var(--spectrum-table-thumbnail-block-spacing));
 	--spectrum-table-thumbnail-inner-content-block-spacing: max(0px, calc((var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size)) - (var(--mod-table-row-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size)))) / 2));
 
@@ -730,7 +730,7 @@
 	}
 
 	/* Cell that does have a thumbnail has its padding moved within the "Inner" and "Content" alignment wrappers. */
-	.spectrum-Table-cell--thumbnail {
+	.spectrum-Table-cell--visual {
 		padding-block: 0;
 	}
 
@@ -741,29 +741,32 @@
 	}
 }
 
-.spectrum-Table-thumbnailInner {
+.spectrum-Table-visualInner {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
+	gap: var(--spectrum-table-visual-to-text);
 	padding-block: var(--spectrum-table-thumbnail-cell-block-spacing);
 
-	.spectrum-Thumbnail {
+	.spectrum-Thumbnail,
+	.spectrum-Icon,
+	.spectrum-Avatar {
 		flex-grow: 0;
 		flex-shrink: 0;
 		margin-inline-end: var(--mod-table-thumbnail-to-text, var(--spectrum-table-thumbnail-to-text));
 		line-height: var(--mod-table-row-line-height, var(--spectrum-table-row-line-height));
 	}
 
-	.spectrum-Table-thumbnailContent {
-		/* Vertically centers text with the middle of the thumbnail. */
-		padding-block: var(--spectrum-table-thumbnail-inner-content-block-spacing);
+	.spectrum-Table-visualContent {
+		/* Vertically centers text with the middle of the cell with the visual. */
+		padding-block: var(--spectrum-table-visual-inner-content-block-spacing);
 	}
 }
 
 /********* TESTS DURING DEVELOPMENT *********/
-.spectrum-Table-cell {
+/* .spectrum-Table-cell {
 	border-radius: calc(var(--spectrum-table-border-radius) - var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)));
 }
 
