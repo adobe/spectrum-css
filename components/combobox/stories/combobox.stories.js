@@ -227,7 +227,7 @@ HelpText.args = {
 
 
 /**
- * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.is-readOnly` class to the combobox. To enable this feature, add the `.is-readOnly` class to the combobox. Then within the nested textfield component, add the `.is-readOnly class and readonly attribute to the `<input>` element.
+ * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.is-readOnly` class to the combobox. To enable this feature, add the `.is-readOnly` class to the combobox. Then within the nested textfield component, add the `.is-readOnly class and readonly attribute to the `input` element.
 */
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];

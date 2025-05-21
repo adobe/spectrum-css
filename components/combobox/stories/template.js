@@ -57,6 +57,7 @@ export const Template = ({
 	}
 
 	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
+	const adjustedPopoverHeight = showFieldLabel ? popoverHeight : popoverHeight + 32; // Subtract label height when no label
 
 	return html`
 		<div
@@ -79,7 +80,7 @@ export const Template = ({
 			data-testid=${ifDefined(testId ?? id)}
 			style=${styleMap({
 				...customStyles,
-				["margin-block-end"]: !isReadOnly && isOpen && !isDisabled ? `${popoverHeight}px` : undefined,
+				["margin-block-end"]: !isReadOnly && isOpen && !isDisabled ? `${adjustedPopoverHeight}px` : undefined,
 			})}
 			role="combobox"
 			aria-expanded=${isOpen}
