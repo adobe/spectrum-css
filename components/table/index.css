@@ -160,9 +160,17 @@
 }
 
 .spectrum-Table-row {
-	&:hover,
+	&.is-focused,
 	&:focus-visible,
-	&.is-focused {
+	&:focus {
+		--spectrum-table-cell-background-color: aqua;
+
+		&:hover {
+			--spectrum-table-cell-background-color: green;
+		}
+	}
+
+	&:hover {
 		--highcontrast-table-row-text-color: var(--highcontrast-table-row-text-color-hover);
 		--highcontrast-table-icon-color: var(--highcontrast-table-row-text-color-hover);
 		--spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-background-color-hover, var(--spectrum-table-row-background-color-hover)));
@@ -178,6 +186,7 @@
 		--highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
 		--highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
 		--spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--spectrum-table-selected-cell-background-color));
+		--spectrum-table-cell-background-color: orange;
 
 		&:hover,
 		&:focus-visible,
@@ -185,6 +194,7 @@
 			--highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color-focus);
 			--highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color-focus);
 			--spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color-focus, var(--spectrum-table-selected-cell-background-color-focus));
+			--spectrum-table-cell-background-color: hotpink;
 		}
 	}
 
@@ -218,6 +228,12 @@
 		&.is-keyboardFocused {
 			--spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus)));
 		}
+	}
+}
+
+.spectrum-Table-cell {
+	&:focus-visible {
+		--spectrum-table-cell-background-color: lime;
 	}
 }
 
