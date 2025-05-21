@@ -135,7 +135,7 @@ __metadata:
     cross-env: "npm:^7.0.3"
     cssnano: "npm:^7.0.7"
     cssnano-preset-advanced: "npm:^7.0.7"
-    diff: "npm:^8.0.0"
+    diff: "npm:^8.0.1"
     diff2html: "npm:^3.4.51"
     eslint: "npm:^8.57.1"
     eslint-plugin-jsonc: "npm:^2.20.1"
@@ -5631,7 +5631,7 @@ __metadata:
     "@actions/core": "npm:^1.11.1"
     "@actions/github": "npm:^6.0.1"
     "@actions/glob": "npm:^0.5.0"
-    diff: "npm:^8.0.0"
+    diff: "npm:^8.0.1"
     diff2html: "npm:^3.4.51"
   languageName: unknown
   linkType: soft
@@ -9523,7 +9523,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff@npm:^8.0.0":
+"diff@npm:^8.0.1":
   version: 8.0.1
   resolution: "diff@npm:8.0.1"
   checksum: 10c0/43ebbe63881d34067d77d7b9d16220f1efb8013e04be58c7748ab296d2a9637f49424c69477e36c81a53f2c347b396956966e708e1b5b4dde3620f2b4bb93d02
