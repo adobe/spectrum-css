@@ -168,7 +168,7 @@ __metadata:
     prettier: "npm:^3.5.3"
     rimraf: "npm:^6.0.1"
     semver: "npm:^7.7.2"
-    stylelint: "npm:^16.18.0"
+    stylelint: "npm:^16.19.1"
     stylelint-config-standard: "npm:^38.0.0"
     stylelint-header: "npm:^3.0.0"
     stylelint-high-performance-animation: "npm:^1.11.0"
@@ -5707,7 +5707,7 @@ __metadata:
     ava: "npm:^6.3.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
-    stylelint: "npm:^16.18.0"
+    stylelint: "npm:^16.19.1"
   peerDependencies:
     stylelint: ">=16"
   languageName: unknown
@@ -5723,7 +5723,7 @@ __metadata:
     fast-glob: "npm:^3.3.3"
     postcss: "npm:^8.5.3"
     postcss-values-parser: "npm:^6.0.2"
-    stylelint: "npm:^16.18.0"
+    stylelint: "npm:^16.19.1"
   peerDependencies:
     stylelint: ">=16"
   languageName: unknown
@@ -5738,7 +5738,7 @@ __metadata:
     colors: "npm:^1.4.0"
     postcss: "npm:^8.5.3"
     postcss-values-parser: "npm:^6.0.2"
-    stylelint: "npm:^16.18.0"
+    stylelint: "npm:^16.19.1"
   peerDependencies:
     stylelint: ">=16"
   languageName: unknown
@@ -19194,7 +19194,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.18.0":
+"stylelint@npm:^16.19.1":
   version: 16.19.1
   resolution: "stylelint@npm:16.19.1"
   dependencies:
