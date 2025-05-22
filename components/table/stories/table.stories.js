@@ -388,7 +388,7 @@ QuietMultiSelect.parameters = {
 /**
  * Column dividers are for organizing table content and aid the user in parsing related data. These are optional; use them carefully to group related content.
  *
- * The standard table can display column dividers by including the `.spectrum-Table-cell--divider` class with `.spectrum-Table-cell`. Use sparingly to group related content.
+ * The standard table can display column dividers by including the `.spectrum-Table-cell--divider` class with `.spectrum-Table-cell`.
  */
 export const WithColumnDividers = Template.bind({});
 WithColumnDividers.args = {
@@ -534,6 +534,34 @@ DivsScrollable.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+
+/**
+ * Thumbnails, avatars, and other icons can be used in the table content, with some additional markup and classes for alignment.
+ */
+export const Visuals = Template.bind({});
+Visuals.args = {
+	rowItems: [
+		{
+			cellContent: "Avatar example",
+			visualElement: "avatar",
+		},
+		{
+			cellContent: "Icon example",
+			visualElement: "icon",
+		},
+		{
+			cellContent: "Thumbnail example",
+			visualElement: "thumbnail",
+		},
+	],
+};
+Visuals.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Visuals.storyName = "With visuals";
+
+
+// TODO: The design team doesn't have support for collapsible rows in the table component, so they are removed from the docs page for now.
 /**
  * In a table with collapsible rows, all child items must have columns that match the parent items. If they don’t, consider using multiple drill-in tables, [Miller columns](/docs/components-miller-columns--docs), or [breadcrumbs](/docs/components-breadcrumbs--docs) instead.
  */
@@ -600,6 +628,7 @@ Collapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 Collapsible.storyName = "Collapsible rows";
+Collapsible.tags = ["!autodocs", "!dev"];
 
 export const CollapsibleMultiSelect = Template.bind({});
 CollapsibleMultiSelect.storyName = "Selection mode: multiple, collapsible rows";
@@ -672,31 +701,7 @@ CollapsibleMultiSelect.args = {
 CollapsibleMultiSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
-/**
- * Thumbnails, avatars, and other icons can be used in the table content, with some additional markup and classes for alignment.
- */
-export const Visuals = Template.bind({});
-Visuals.args = {
-	rowItems: [
-		{
-			cellContent: "Avatar example",
-			visualElement: "avatar",
-		},
-		{
-			cellContent: "Icon example",
-			visualElement: "icon",
-		},
-		{
-			cellContent: "Thumbnail example",
-			visualElement: "thumbnail",
-		},
-	],
-};
-Visuals.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-Visuals.storyName = "With visuals";
+CollapsibleMultiSelect.tags = ["!autodocs", "!dev"];
 
 /**
  * The table can also combine visuals with collapsible rows.
@@ -763,6 +768,7 @@ VisualsCollapsible.args = {
 		},
 	],
 };
+VisualsCollapsible.tags = ["!autodocs", "!dev"];
 VisualsCollapsible.storyName = "With visuals: collapsible rows";
 VisualsCollapsible.parameters = {
 	chromatic: { disableSnapshot: true },
