@@ -299,14 +299,16 @@ export const Template = ({
 						class="spectrum-Table-headCell spectrum-Table-checkboxCell"
 						role=${ifDefined(useDivs ? "columnheader" : undefined)}
 					>
-						${Checkbox({
-							size: "m",
-							isEmphasized: isEmphasized,
-							isChecked: false,
-							isIndeterminate: selectionMode === "multiple" ? true : undefined,
-							customClasses: [`${rootClass}-checkbox`],
+						${when(selectionMode === "multiple", () => html`
+							${Checkbox({
+								size: "m",
+								isEmphasized: isEmphasized,
+								isChecked: false,
+								isIndeterminate: true,
+								customClasses: [`${rootClass}-checkbox`],
 						}, context)}
-					</${thTag}>`
+						`)}
+					</${thTag}>`,
 				)}
 				<${thTag}
 					class="${rootClass}-headCell is-sortable"
