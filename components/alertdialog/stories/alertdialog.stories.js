@@ -66,7 +66,7 @@ export default {
 		},
 		design: {
 			type: "figma",
-			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=21917-157",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2---Desktop?node-id=21917-157",
 		},
 		docs: {
 			story: {
