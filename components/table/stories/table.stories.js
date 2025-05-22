@@ -87,7 +87,7 @@ export default {
 		density: "regular",
 		isQuiet: false,
 		isLoading: false,
-		isEmphasized: false,
+		isEmphasized: true,
 		selectionMode: "none",
 		useDivs: false,
 		isDropTarget: false,
@@ -270,16 +270,16 @@ SingleSelect.parameters = {
 };
 
 /**
- * Including the `.spectrum-Table--emphasized` class will change the style of selected rows.
+ * Excluding the `.spectrum-Table--emphasized` class will change the style of selected rows.
  */
-export const EmphasizedMultiSelect = Template.bind({});
-EmphasizedMultiSelect.storyName = "Selection mode: multiple, emphasized styling";
-EmphasizedMultiSelect.args = {
+export const NonEmphasizedMultiSelect = Template.bind({});
+NonEmphasizedMultiSelect.storyName = "Selection mode: multiple, non-emphasized styling";
+NonEmphasizedMultiSelect.args = {
 	...MultiSelect.args,
-	isEmphasized: true,
+	isEmphasized: false,
 };
-EmphasizedMultiSelect.tags = ["!dev"];
-EmphasizedMultiSelect.parameters = {
+NonEmphasizedMultiSelect.tags = ["!dev"];
+NonEmphasizedMultiSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
