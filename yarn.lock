@@ -146,7 +146,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     markdownlint: "npm:^0.38.0"
     markdownlint-cli: "npm:^0.45.0"
-    node-gyp: "npm:^11.0.0"
+    node-gyp: "npm:^11.2.0"
     npm-registry-fetch: "npm:^18.0.2"
     nunjucks: "npm:^3.2.4"
     nx: "npm:^21.0.0"
@@ -15370,7 +15370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-gyp@npm:^11.0.0, node-gyp@npm:latest":
+"node-gyp@npm:^11.2.0, node-gyp@npm:latest":
   version: 11.2.0
   resolution: "node-gyp@npm:11.2.0"
   dependencies:
