@@ -59,18 +59,11 @@ export const Picker = ({
 			}}
 			aria-labelledby=${ifDefined(ariaLabeledBy)}
 		>
-			${when(contentIconName, () =>
-				Icon({
-					iconName: contentIconName,
-					size,
-					customClasses: ["spectrum-Picker-icon"],
-				}, context))
-			}
 			${when(showWorkflowIcon, () =>
 				Icon({
 					size,
 					setName: "workflow",
-					iconName: "Image",
+					iconName: contentIconName,
 					customClasses: [`${rootClass}-icon`],
 				}, context)
 			)}
@@ -127,6 +120,7 @@ export const Template = ({
 	isInvalid = false,
 	isDisabled = false,
 	showWorkflowIcon = false,
+	contentIconName,
 	isHovered = false,
 	isActive = false,
 	isKeyboardFocused = false,
@@ -149,6 +143,7 @@ export const Template = ({
 		isQuiet,
 		currentValue,
 		showWorkflowIcon,
+		contentIconName,
 		isOpen,
 		isInvalid,
 		isDisabled,

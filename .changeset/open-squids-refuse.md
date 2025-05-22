@@ -13,4 +13,4 @@
 
 #### New mods
 
-`--spectrum-picker-popover-animation-distance`
+`--mod-picker-popover-animation-distance`
