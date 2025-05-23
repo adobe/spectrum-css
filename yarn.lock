@@ -5062,7 +5062,7 @@ __metadata:
     "@storybook/theming": "npm:8.4.7"
     "@storybook/web-components-vite": "npm:8.4.7"
     "@whitespace/storybook-addon-html": "npm:^7.0.0"
-    chromatic: "npm:^11.28.2"
+    chromatic: "npm:^11.29.0"
     lit: "npm:^3.3.0"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
@@ -8306,7 +8306,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.15.0, chromatic@npm:^11.28.2":
+"chromatic@npm:^11.15.0":
   version: 11.28.2
   resolution: "chromatic@npm:11.28.2"
   peerDependencies:
@@ -8322,6 +8322,25 @@ __metadata:
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
   checksum: 10c0/0e30c01adae08708b871c5e27462af14a8426e0fe443d0c42afb2477326703504b02fa96a02e64c858072f535d149b96f207c43b147ba1492de83bb5f505e59e
+  languageName: node
+  linkType: hard
+
+"chromatic@npm:^11.29.0":
+  version: 11.29.0
+  resolution: "chromatic@npm:11.29.0"
+  peerDependencies:
+    "@chromatic-com/cypress": ^0.*.* || ^1.0.0
+    "@chromatic-com/playwright": ^0.*.* || ^1.0.0
+  peerDependenciesMeta:
+    "@chromatic-com/cypress":
+      optional: true
+    "@chromatic-com/playwright":
+      optional: true
+  bin:
+    chroma: dist/bin.js
+    chromatic: dist/bin.js
+    chromatic-cli: dist/bin.js
+  checksum: 10c0/4c26e00a170cb40b38f837358fbcab51ab0bdf3644a396b166074cd167696be6a34eeb5583e65425f4392845c8a3052f6d538ea9fb0d09a903100c52d858b4f9
   languageName: node
   linkType: hard
 
