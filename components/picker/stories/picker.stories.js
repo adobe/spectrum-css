@@ -76,7 +76,7 @@ export default {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			name: "Icon",
 			description: "Optional workflow icon that appears before the value/placeholder text within the picker.",
-			if: false,
+			if: { arg: "showWorkflowIcon", eq: true },
 		},
 		isQuiet: {
 			...isQuiet,
@@ -117,6 +117,7 @@ export default {
 		placeholder: "Select a country",
 		helpText: "",
 		currentValue: "",
+		contentIconName: "Image",
 		showWorkflowIcon: false,
 		isQuiet: false,
 		isKeyboardFocused: false,
