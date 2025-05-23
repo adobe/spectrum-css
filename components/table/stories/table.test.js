@@ -133,17 +133,25 @@ export const TableGroup = Variants({
 			hasColumnDividers: true,
 		},
 		{
-			testHeading: "Summary: selected",
+			testHeading: "Empty state",
+			rowItems: [],
+		},
+		{
+			testHeading: "Loading state",
+			isLoading: true,
+		},
+		{
+			testHeading: "Summary and selected rows",
 			rowItems: ExampleSummarySelectedContent,
 		},
 		{
-			testHeading: "Multi-select: emphasized",
+			testHeading: "Selection mode: multiple, emphasized",
 			rowItems: ExampleMultiSelectContent,
 		},
 		{
-			testHeading: "Multi-select: non-emphasized",
-			isEmphasized: false,
+			testHeading: "Selection mode: multiple, non-emphasized",
 			rowItems: ExampleMultiSelectContent,
+			isEmphasized: false,
 		},
 		{
 			testHeading: "Quiet multi-select: emphasized",
@@ -230,7 +238,8 @@ export const TableGroup = Variants({
 			],
 		},
 		{
-			testHeading: "Collapsible: multi-select",
+			testHeading: "Selection mode: multiple, collapsible",
+			selectionMode: "multiple",
 			rowItems: [
 				{
 					showCheckbox: true,
@@ -296,60 +305,100 @@ export const TableGroup = Variants({
 			],
 		},
 		{
-			testHeading: "Thumbnails",
-			showThumbnails: true,
+			testHeading: "End-alignment for numerical data",
 			rowItems: [
 				{
-					cellContent: ["Table row alpha", "Test", "2"],
+					cellContent: ["Pikachu", "Electric", "35"],
+					textAlignment: {
+						2: "end"
+					}
 				},
 				{
-					cellContent: ["Table row bravo", "Test", "28"],
+					cellContent: ["Charmander", "Fire", "39"],
+					textAlignment: {
+						2: "end"
+					}
 				},
 				{
-					cellContent: [
-						"Table row charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-						"Test",
-						"23",
-					],
-				},
-				{
-					cellContent: ["Table row delta", "Test", "7"],
+					cellContent: ["Mew", "Psychic", "100"],
+					textAlignment: {
+						2: "end"
+					}
 				},
 			],
 		},
 		{
-			testHeading: "Thumbnail: collapsible",
-			showThumbnails: true,
+			testHeading: "Visual elements",
+			rowItems: [
+				{
+					cellContent: "Avatar example",
+					visualElement: "avatar",
+				},
+				{
+					cellContent: "Icon example",
+					visualElement: "icon",
+				},
+				{
+					cellContent: "Thumbnail example",
+					visualElement: "thumbnail",
+				},
+			],
+		},
+		{
+			testHeading: "Visual elements: collapsible",
 			rowItems: [
 				{
 					cellContent: "Table row alpha",
 					isCollapsible: true,
 					isExpanded: true,
 					tier: 0,
-					ariaControls: "table-cr-bravo",
+					ariaControls: "table-cr-bravo table-cr-delta",
 					id: "table-cr-alpha",
 				},
 				{
 					cellContent:
-						"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+						"Table row bravo. There is actually another collapsed row here that's not visible. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
 					isCollapsible: true,
 					tier: 1,
 					ariaControls: "table-cr-charlie",
 					id: "table-cr-bravo",
+					visualElement: "avatar",
 				},
 				{
-					cellContent: "Table row charlie",
-					tier: 2,
-					isLastTier: true,
+					cellContent: [
+						"Table row charlie",
+						"Default not visible",
+						"Default not visible",
+					],
 					isCollapsible: true,
+					isHidden: true,
+					tier: 2,
 					id: "table-cr-charlie",
 				},
 				{
-					cellContent: "Table row delta",
+					cellContent: "Selected row delta",
+					isSelected: true,
+					isCollapsible: true,
+					isExpanded: true,
+					tier: 1,
+					ariaControls: "table-cr-echo table-cr-foxtrot",
+					id: "table-cr-delta",
+					visualElement: "icon",
+				},
+				{
+					cellContent: "Table row echo",
 					tier: 2,
 					isLastTier: true,
 					isCollapsible: true,
-					id: "table-cr-delta",
+					id: "table-cr-echo",
+					visualElement: "thumbnail",
+				},
+				{
+					cellContent: "Table row foxtrot",
+					tier: 2,
+					isLastTier: true,
+					isCollapsible: true,
+					id: "table-cr-foxtrot",
 				},
 				{
 					cellContent: "Summary row",
@@ -370,5 +419,40 @@ export const TableGroup = Variants({
 			testHeading: "Body drop target",
 			isDropTarget: true,
 		},
+		{
+			testHeading: "Focus, selected states for rows and cells",
+			rowItems: [
+				{
+					cellContent: "Focused selected row, no rounded corners",
+					isFocused: true,
+					isSelected: true,
+				},
+				{
+					cellContent: "Table row bravo",
+				},
+				{
+					cellContent: "Selected unfocused row, no rounded corners",
+					isSelected: true,
+				},
+				{
+					cellContent: "Focused unselected row, no rounded corners",
+					isFocused: true,
+				},
+				{
+					cellContent: ["Table row with a focused cell", "Focused cell", "Unfocused cell"],
+					cellCustomClasses: {
+						1: ["is-focused"]
+					}
+				},
+				{
+					cellContent: "Table row echo",
+				},
+				{
+					cellContent: "Focused selected row, with rounded corners",
+					isFocused: true,
+					isSelected: true,
+				}
+			],
+		}
 	],
 });

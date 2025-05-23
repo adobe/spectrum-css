@@ -1,7 +1,10 @@
+import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -15,23 +18,26 @@ export const TableRowItem = ({
 	cellContent = "Row Item Text",
 	showCheckbox = false,
 	isSelected = false,
+	isFocused = false,
 	isSummaryRow = false,
 	isSectionHeader = false,
-	tableIsEmphasized = true,
+	isEmphasized = true,
 	isCollapsible = false,
 	isExpanded = false,
 	isHidden = false,
 	hasColumnDividers = false,
+	density = "regular",
 	tier,
 	isLastTier = false,
 	useDivs = false,
-	showThumbnails = false,
+	visualElement,
+	textAlignment,
 	isDropTarget = false,
 	ariaControls,
 	customClasses = [],
-	size = "m",
+	cellCustomClasses = {},
 } = {}, context = {}) => {
-	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
+	const useVisuals = visualElement !== undefined && !isSummaryRow && !isSectionHeader;
 	const useColumnDividers = hasColumnDividers && !isSummaryRow && !isSectionHeader;
 
 	// Use Table tags or Div tags.
@@ -44,21 +50,48 @@ export const TableRowItem = ({
 		const content = Array.isArray(cellContent)
 			? cellContent[columnIndex]
 			: cellContent;
-		if (useThumbnail && columnIndex < 2) {
+
+		if (useVisuals && columnIndex < 2) {
 			return html`
-				<div class="spectrum-Table-thumbnailInner">
-					${Thumbnail({
-						size: "300",
-						imageURL: "example-card-landscape.png",
-						isCover: true,
-					}, context)}
-					<div class="spectrum-Table-thumbnailContent">${content}</div>
+				<div class="spectrum-Table-visualInner">
+					${visualElement === "thumbnail" ?
+						Thumbnail({
+							size: ({
+								compact: "75",
+								regular: "100",
+								spacious: "200",
+							}[density] || "100"),
+							imageURL: "example-card-landscape.png",
+							isCover: true,
+						}, context)
+					: visualElement === "avatar" ?
+						Avatar({
+							size: ({
+								compact: "50",
+								regular: "75",
+								spacious: "100",
+							}[density] || "75"),
+							imageURL: "example-card-landscape.png",
+							isCover: true,
+						}, context)
+						: visualElement === "icon" ?
+							Icon({
+								iconName: "Image",
+								setName: "workflow",
+							}, context)
+						: null}
+					<div class="spectrum-Table-visualContent">${content}</div>
 				</div>
 			`;
 		}
 		else {
 			return content;
 		}
+	};
+
+	// For each column, apply the text alignment specified in textAlignment
+	const getTextAlignment = (columnIndex) => {
+		return textAlignment?.[columnIndex] || "start";
 	};
 
 	return html`
@@ -68,9 +101,9 @@ export const TableRowItem = ({
 			[`${rootClass}-row--summary`]: isSummaryRow,
 			[`${rootClass}-row--sectionHeader`]: isSectionHeader,
 			[`${rootClass}-row--collapsible`]: isCollapsible,
-			[`${rootClass}-row--thumbnail`]: useThumbnail,
 			[`${rootClass}-cell--divider`]: useColumnDividers,
 			["is-selected"]: isSelected,
+			["is-focused"]: isFocused,
 			["is-expanded"]: isExpanded,
 			["is-last-tier"]: isLastTier,
 			["is-drop-target"]: isDropTarget,
@@ -80,6 +113,7 @@ export const TableRowItem = ({
 		aria-selected=${ifDefined(showCheckbox ? "true" : undefined)}
 		data-tier=${ifDefined(tier)}
 		?hidden=${isHidden}
+		tabindex="0"
 	>
 		${when(showCheckbox && !isSectionHeader, () => html`
 			<${cellTag}
@@ -87,12 +121,15 @@ export const TableRowItem = ({
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-checkboxCell`]: true,
+					[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
+					...cellCustomClasses?.[0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
+				tabindex="0"
 			>
 				${when(!isSummaryRow, () =>
 					Checkbox({
-						size,
-						isEmphasized: tableIsEmphasized,
+						size: "m",
+						isEmphasized,
 						isChecked: isSelected,
 						customClasses: [`${rootClass}-checkbox`],
 					}, context)
@@ -101,41 +138,49 @@ export const TableRowItem = ({
 		)}
 
 		${isCollapsible
-				? html`
-					<${cellTag}
-						role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
-						class=${classMap({
-							[`${rootClass}-cell`]: true,
-							[`${rootClass}-cell--collapsible`]: true,
-							[`${rootClass}-cell--thumbnail`]: useThumbnail,
-							[`${rootClass}-cell--divider`]: useColumnDividers,
-						})}
-					>
-						<div class="${rootClass}-collapseInner">
-							${when(!isLastTier, () =>
-								Button({
-									size,
-									iconName: "ChevronRight100",
-									iconSet: "ui",
-									hideLabel: true,
-									customClasses: [`${rootClass}-disclosureIcon`],
-									ariaExpanded: isExpanded,
-									ariaControls,
-								}, context)
-							)}
-							${useThumbnail ? getCellContent(0) : html`<div class="${rootClass}-collapseContent">${getCellContent(0)}</div>`}
-						</div>
-					</${cellTag}>`
-				: html`
-					<${cellTag}
-						role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
-						class=${classMap({
-							[`${rootClass}-cell`]: true,
-							[`${rootClass}-cell--thumbnail`]: useThumbnail,
-							[`${rootClass}-cell--divider`]: useColumnDividers,
-						})}
-						colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
-					>${getCellContent(0)}</${cellTag}>`
+			? html`
+				<${cellTag}
+					role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
+					class=${classMap({
+						[`${rootClass}-cell`]: true,
+						[`${rootClass}-cell--collapsible`]: true,
+						[`${rootClass}-cell--visual`]: useVisuals,
+						[`${rootClass}-cell--divider`]: useColumnDividers,
+						[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
+						...cellCustomClasses?.[showCheckbox ? 1 : 0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
+					})}
+					tabindex="0"
+				>
+					<div class="${rootClass}-collapseInner">
+						${when(!isLastTier, () =>
+							Button({
+								size: "m",
+								iconName: "ChevronRight100",
+								iconSet: "ui",
+								hideLabel: true,
+								customClasses: [`${rootClass}-disclosureIcon`],
+								ariaExpanded: isExpanded,
+								ariaControls,
+							}, context)
+						)}
+						${useVisuals ? getCellContent(0) : html`<div class="${rootClass}-collapseContent">${getCellContent(0)}</div>`}
+					</div>
+				</${cellTag}>`
+			: html`
+				<${cellTag}
+					role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
+					class=${classMap({
+						[`${rootClass}-cell`]: true,
+						[`${rootClass}-cell--visual`]: useVisuals,
+						[`${rootClass}-cell--divider`]: useColumnDividers,
+						[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
+						...cellCustomClasses?.[showCheckbox ? 1 : 0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
+					})}
+					colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
+					tabindex="0"
+				>
+					${getCellContent(0)}
+				</${cellTag}>`
 		}
 
 		${when(!isSectionHeader, () => html`
@@ -143,9 +188,12 @@ export const TableRowItem = ({
 				role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
-					[`${rootClass}-cell--thumbnail`]: useThumbnail,
+					[`${rootClass}-cell--visual`]: useVisuals,
 					[`${rootClass}-cell--divider`]: useColumnDividers,
+					[`${rootClass}-cell--alignEnd`]: getTextAlignment(1) === "end",
+					...cellCustomClasses?.[showCheckbox ? 2 : 1]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
+				tabindex="0"
 			>${getCellContent(1)}</${cellTag}>
 
 			<${cellTag}
@@ -153,7 +201,10 @@ export const TableRowItem = ({
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-cell--divider`]: useColumnDividers,
+					[`${rootClass}-cell--alignEnd`]: getTextAlignment(2) === "end",
+					...cellCustomClasses?.[showCheckbox ? 3 : 2]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
+				tabindex="0"
 			>${getCellContent(2)}</${cellTag}>`
 		)}
 	</${rowTag}>
@@ -162,20 +213,51 @@ export const TableRowItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-Table",
-	size = "m",
-	density = "standard",
+	density = "regular",
 	isQuiet = false,
 	isEmphasized = true,
+	isLoading = false,
 	useDivs = false,
+	selectionMode = "none",
 	useScroller = false,
-	showThumbnails = false,
+	visualElement,
 	isDropTarget = false,
 	hasColumnDividers = false,
 	rowItems = [],
 	customClasses = [],
 	id = getRandomId("table"),
 } = {}, context = {}) => {
-	if (!rowItems || !rowItems.length) return html``;
+
+	// Empty state
+	if (!rowItems || !rowItems.length) return html`
+		${IllustratedMessage({
+			illustration: "NoData",
+			illustrationSet: "workflow",
+			title: "Empty state title",
+			description: "No data to display. Description of status. Give more information about what a user can do or expect, or how to make items appear here.",
+			isHorizontal: true,
+			hasButtons: true,
+			size: ({
+				"compact": "s",
+				"regular": "m",
+				"spacious": "l",
+			}[density] || "regular"),
+		}, context)}
+	`;
+
+	// Loading state
+	if (isLoading) {
+		return html`
+			${ProgressCircle({
+				size: ({
+					"compact": "s",
+					"regular": "m",
+					"spacious": "l",
+				}[density] || "regular"),
+				isIndeterminate: true,
+			}, context)}
+		`;
+	}
 
 	// Use Table tags or Div tags.
 	const tableTag = useDivs ? literal`div` : literal`table`;
@@ -185,7 +267,6 @@ export const Template = ({
 	const thTag = useDivs ? literal`div` : literal`th`;
 
 	const rootClassMapVariants = {
-		[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 		[`${rootClass}--${density}`]: density !== "standard",
 		[`${rootClass}--quiet`]: isQuiet,
 		[`${rootClass}--emphasized`]: isEmphasized,
@@ -204,7 +285,6 @@ export const Template = ({
 		id=${ifDefined(id)}
 		role=${ifDefined(useCheckboxCell ? "grid" : useDivs ? "table" : undefined)}
 		aria-multiselectable=${ifDefined(useCheckboxCell ? "true" : undefined)}
-		style="max-width: 800px;"
 	>
 		<${theadTag}
 			class="${rootClass}-head"
@@ -212,40 +292,24 @@ export const Template = ({
 		>
 			<${rowTag}
 				role=${ifDefined(useDivs ? "row" : undefined)}
+				class="${rootClass}-headRow"
 			>
 				${when(useCheckboxCell, () => html`
 					<${thTag}
 						class="spectrum-Table-headCell spectrum-Table-checkboxCell"
 						role=${ifDefined(useDivs ? "columnheader" : undefined)}
 					>
-						${Checkbox({
-							size,
-							isEmphasized: isEmphasized,
-							isChecked: false,
-							isIndeterminate: true,
-							customClasses: [`${rootClass}-checkbox`],
+						${when(selectionMode === "multiple", () => html`
+							${Checkbox({
+								size: "m",
+								isEmphasized: isEmphasized,
+								isChecked: false,
+								isIndeterminate: true,
+								customClasses: [`${rootClass}-checkbox`],
 						}, context)}
-					</${thTag}>`
+						`)}
+					</${thTag}>`,
 				)}
-				<${thTag}
-					class="${rootClass}-headCell is-sortable is-sorted-desc"
-					role=${ifDefined(useDivs ? "columnheader" : undefined)}
-					aria-sort="descending"
-					tabindex="0"
-				>
-					${Icon({
-						iconName: "ArrowDown100",
-						setName: "ui",
-						size,
-						customClasses: [`${rootClass}-sortedIcon`],
-					}, context)}<span class="${rootClass}-columnTitle">Column title</span>${
-					Icon({
-						iconName: "ChevronDown100",
-						setName: "ui",
-						size,
-						customClasses: [`${rootClass}-menuIcon`],
-					}, context)}
-				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell is-sortable"
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
@@ -253,16 +317,43 @@ export const Template = ({
 					tabindex="0"
 				>
 					${Icon({
-						iconName: "ArrowDown100",
-						setName: "ui",
-						size,
-						customClasses: [`${rootClass}-sortedIcon`],
-					}, context)}<span class="${rootClass}-columnTitle">Column title</span>
+						iconName: "Sort",
+						setName: "workflow",
+						customClasses: [`${rootClass}-sortIcon`],
+					}, context)}
+					<span class="${rootClass}-columnTitle">Column title</span>
 				</${thTag}>
 				<${thTag}
-					class="${rootClass}-headCell"
+					class="${rootClass}-headCell is-sortable is-sorted-desc"
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
-				>Column title</${thTag}>
+					aria-sort="descending"
+					tabindex="0"
+				>
+					${Icon({
+						iconName: "SortDown",
+						setName: "workflow",
+						customClasses: [`${rootClass}-sortIcon`],
+					}, context)}
+					<span class="${rootClass}-columnTitle">Column title</span>
+					${Icon({
+						iconName: "ChevronDown100",
+						setName: "ui",
+						customClasses: [`${rootClass}-menuIcon`],
+					}, context)}
+				</${thTag}>
+				<${thTag}
+					class="${rootClass}-headCell is-sortable is-sorted-asc"
+					role=${ifDefined(useDivs ? "columnheader" : undefined)}
+					aria-sort="ascending"
+					tabindex="0"
+				>
+					${Icon({
+						iconName: "SortUp",
+						setName: "workflow",
+						customClasses: [`${rootClass}-sortIcon`],
+					}, context)}
+					<span class="${rootClass}-columnTitle">Column title</span>
+				</${thTag}>
 			</${rowTag}>
 		</${theadTag}>
 		<${tbodyTag}
@@ -275,11 +366,11 @@ export const Template = ({
 			${rowItems.map((item) =>
 				TableRowItem({
 					rootClass,
-					size,
+					density,
 					useDivs,
-					showThumbnails,
+					visualElement,
 					hasColumnDividers,
-					tableIsEmphasized: isEmphasized,
+					isEmphasized,
 					...item,
 				}, context)
 			)}
