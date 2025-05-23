@@ -5,7 +5,7 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@actions/artifact@npm:^2.2.1":
+"@actions/artifact@npm:^2.3.2":
   version: 2.3.2
   resolution: "@actions/artifact@npm:2.3.2"
   dependencies:
@@ -66,7 +66,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/github@npm:^6.0.0":
+"@actions/github@npm:^6.0.1":
   version: 6.0.1
   resolution: "@actions/github@npm:6.0.1"
   dependencies:
@@ -124,7 +124,7 @@ __metadata:
     "@changesets/cli": "npm:^2.29.4"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@nx/devkit": "npm:^21.0.0"
+    "@nx/devkit": "npm:^21.1.1"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     "@yarnpkg/types": "npm:^4.0.1"
     at-rule-packer: "npm:^0.4.2"
@@ -133,7 +133,7 @@ __metadata:
     cross-env: "npm:^7.0.3"
     cssnano: "npm:^7.0.7"
     cssnano-preset-advanced: "npm:^7.0.7"
-    diff: "npm:^8.0.0"
+    diff: "npm:^8.0.2"
     diff2html: "npm:^3.4.51"
     eslint: "npm:^8.57.1"
     eslint-plugin-jsonc: "npm:^2.20.1"
@@ -149,7 +149,7 @@ __metadata:
     node-gyp: "npm:^11.2.0"
     npm-registry-fetch: "npm:^18.0.2"
     nunjucks: "npm:^3.2.4"
-    nx: "npm:^21.0.0"
+    nx: "npm:^21.1.1"
     open: "npm:^10.1.2"
     pajv: "npm:^1.2.0"
     postcss: "npm:^8.5.3"
@@ -181,7 +181,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@adobe/spectrum-css-workflow-icons@npm:^4.0.0":
+"@adobe/spectrum-css-workflow-icons@npm:^4.1.0":
   version: 4.1.0
   resolution: "@adobe/spectrum-css-workflow-icons@npm:4.1.0"
   checksum: 10c0/0547f86ce4a0ca2f477a72b80d70c071c79ddd10fb6f0fc6ad7f144e4928c29dfc8af44327f67b54d61d18fd88523701aa5d02bf1b52792ed2e17fceff7f08f0
@@ -3153,9 +3153,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nx/devkit@npm:^21.0.0":
-  version: 21.0.3
-  resolution: "@nx/devkit@npm:21.0.3"
+"@nx/devkit@npm:^21.1.1":
+  version: 21.1.1
+  resolution: "@nx/devkit@npm:21.1.1"
   dependencies:
     ejs: "npm:^3.1.7"
     enquirer: "npm:~2.3.6"
@@ -3166,77 +3166,77 @@ __metadata:
     tslib: "npm:^2.3.0"
     yargs-parser: "npm:21.1.1"
   peerDependencies:
-    nx: 21.0.3
-  checksum: 10c0/d4262d692b83204afb71502d33fc7bc65f45d67d5ddb52035f29aecf8eba92a6911c2b6885641e24b71ccc333aeafc7360935ffed479dfb7340300d1dbc009cd
+    nx: 21.1.1
+  checksum: 10c0/e7cda72c81257ff72cf06b4da8956757de74ed4c9f645974787ee938f19171c7039a1244a80532533b981223196fa6ac3b52f27a476eeada44b8d19fda7d36d4
   languageName: node
   linkType: hard
 
-"@nx/nx-darwin-arm64@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-darwin-arm64@npm:21.0.3"
+"@nx/nx-darwin-arm64@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-darwin-arm64@npm:21.1.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@nx/nx-darwin-x64@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-darwin-x64@npm:21.0.3"
+"@nx/nx-darwin-x64@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-darwin-x64@npm:21.1.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@nx/nx-freebsd-x64@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-freebsd-x64@npm:21.0.3"
+"@nx/nx-freebsd-x64@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-freebsd-x64@npm:21.1.1"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm-gnueabihf@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-linux-arm-gnueabihf@npm:21.0.3"
+"@nx/nx-linux-arm-gnueabihf@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-linux-arm-gnueabihf@npm:21.1.1"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm64-gnu@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-linux-arm64-gnu@npm:21.0.3"
+"@nx/nx-linux-arm64-gnu@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-linux-arm64-gnu@npm:21.1.1"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm64-musl@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-linux-arm64-musl@npm:21.0.3"
+"@nx/nx-linux-arm64-musl@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-linux-arm64-musl@npm:21.1.1"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-x64-gnu@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-linux-x64-gnu@npm:21.0.3"
+"@nx/nx-linux-x64-gnu@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-linux-x64-gnu@npm:21.1.1"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-x64-musl@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-linux-x64-musl@npm:21.0.3"
+"@nx/nx-linux-x64-musl@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-linux-x64-musl@npm:21.1.1"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@nx/nx-win32-arm64-msvc@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-win32-arm64-msvc@npm:21.0.3"
+"@nx/nx-win32-arm64-msvc@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-win32-arm64-msvc@npm:21.1.1"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@nx/nx-win32-x64-msvc@npm:21.0.3":
-  version: 21.0.3
-  resolution: "@nx/nx-win32-x64-msvc@npm:21.0.3"
+"@nx/nx-win32-x64-msvc@npm:21.1.1":
+  version: 21.1.1
+  resolution: "@nx/nx-win32-x64-msvc@npm:21.1.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5098,7 +5098,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/preview@workspace:.storybook"
   dependencies:
-    "@adobe/spectrum-css-workflow-icons": "npm:^4.0.0"
+    "@adobe/spectrum-css-workflow-icons": "npm:^4.1.0"
     "@babel/core": "npm:^7.27.1"
     "@chromatic-com/storybook": "npm:^3.2.6"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
@@ -5121,7 +5121,7 @@ __metadata:
     "@storybook/theming": "npm:8.4.7"
     "@storybook/web-components-vite": "npm:8.4.7"
     "@whitespace/storybook-addon-html": "npm:^7.0.0"
-    chromatic: "npm:^11.28.2"
+    chromatic: "npm:^11.29.0"
     lit: "npm:^3.3.0"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
@@ -5132,7 +5132,7 @@ __metadata:
     react-syntax-highlighter: "npm:^15.6.1"
     remark-gfm: "npm:^4.0.1"
     storybook: "npm:8.4.7"
-    vite: "npm:^6.0.0"
+    vite: "npm:^6.3.5"
   languageName: unknown
   linkType: soft
 
@@ -5678,11 +5678,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/gh-action-file-diff@workspace:.github/actions/file-diff"
   dependencies:
-    "@actions/artifact": "npm:^2.2.1"
+    "@actions/artifact": "npm:^2.3.2"
     "@actions/core": "npm:^1.11.1"
-    "@actions/github": "npm:^6.0.0"
+    "@actions/github": "npm:^6.0.1"
     "@actions/glob": "npm:^0.5.0"
-    diff: "npm:^8.0.0"
+    diff: "npm:^8.0.2"
     diff2html: "npm:^3.4.51"
   languageName: unknown
   linkType: soft
@@ -8289,7 +8289,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.15.0, chromatic@npm:^11.28.2":
+"chromatic@npm:^11.15.0":
   version: 11.28.2
   resolution: "chromatic@npm:11.28.2"
   peerDependencies:
@@ -8305,6 +8305,25 @@ __metadata:
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
   checksum: 10c0/0e30c01adae08708b871c5e27462af14a8426e0fe443d0c42afb2477326703504b02fa96a02e64c858072f535d149b96f207c43b147ba1492de83bb5f505e59e
+  languageName: node
+  linkType: hard
+
+"chromatic@npm:^11.29.0":
+  version: 11.29.0
+  resolution: "chromatic@npm:11.29.0"
+  peerDependencies:
+    "@chromatic-com/cypress": ^0.*.* || ^1.0.0
+    "@chromatic-com/playwright": ^0.*.* || ^1.0.0
+  peerDependenciesMeta:
+    "@chromatic-com/cypress":
+      optional: true
+    "@chromatic-com/playwright":
+      optional: true
+  bin:
+    chroma: dist/bin.js
+    chromatic: dist/bin.js
+    chromatic-cli: dist/bin.js
+  checksum: 10c0/4c26e00a170cb40b38f837358fbcab51ab0bdf3644a396b166074cd167696be6a34eeb5583e65425f4392845c8a3052f6d538ea9fb0d09a903100c52d858b4f9
   languageName: node
   linkType: hard
 
@@ -9506,10 +9525,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff@npm:^8.0.0":
-  version: 8.0.1
-  resolution: "diff@npm:8.0.1"
-  checksum: 10c0/43ebbe63881d34067d77d7b9d16220f1efb8013e04be58c7748ab296d2a9637f49424c69477e36c81a53f2c347b396956966e708e1b5b4dde3620f2b4bb93d02
+"diff@npm:^8.0.2":
+  version: 8.0.2
+  resolution: "diff@npm:8.0.2"
+  checksum: 10c0/abfb387f033e089df3ec3be960205d17b54df8abf0924d982a7ced3a94c557a4e6cbff2e78b121f216b85f466b3d8d041673a386177c311aaea41459286cc9bc
   languageName: node
   linkType: hard
 
@@ -15555,21 +15574,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:^21.0.0":
-  version: 21.0.3
-  resolution: "nx@npm:21.0.3"
+"nx@npm:^21.1.1":
+  version: 21.1.1
+  resolution: "nx@npm:21.1.1"
   dependencies:
     "@napi-rs/wasm-runtime": "npm:0.2.4"
-    "@nx/nx-darwin-arm64": "npm:21.0.3"
-    "@nx/nx-darwin-x64": "npm:21.0.3"
-    "@nx/nx-freebsd-x64": "npm:21.0.3"
-    "@nx/nx-linux-arm-gnueabihf": "npm:21.0.3"
-    "@nx/nx-linux-arm64-gnu": "npm:21.0.3"
-    "@nx/nx-linux-arm64-musl": "npm:21.0.3"
-    "@nx/nx-linux-x64-gnu": "npm:21.0.3"
-    "@nx/nx-linux-x64-musl": "npm:21.0.3"
-    "@nx/nx-win32-arm64-msvc": "npm:21.0.3"
-    "@nx/nx-win32-x64-msvc": "npm:21.0.3"
+    "@nx/nx-darwin-arm64": "npm:21.1.1"
+    "@nx/nx-darwin-x64": "npm:21.1.1"
+    "@nx/nx-freebsd-x64": "npm:21.1.1"
+    "@nx/nx-linux-arm-gnueabihf": "npm:21.1.1"
+    "@nx/nx-linux-arm64-gnu": "npm:21.1.1"
+    "@nx/nx-linux-arm64-musl": "npm:21.1.1"
+    "@nx/nx-linux-x64-gnu": "npm:21.1.1"
+    "@nx/nx-linux-x64-musl": "npm:21.1.1"
+    "@nx/nx-win32-arm64-msvc": "npm:21.1.1"
+    "@nx/nx-win32-x64-msvc": "npm:21.1.1"
     "@yarnpkg/lockfile": "npm:^1.1.0"
     "@yarnpkg/parsers": "npm:3.0.2"
     "@zkochan/js-yaml": "npm:0.0.7"
@@ -15636,7 +15655,7 @@ __metadata:
   bin:
     nx: bin/nx.js
     nx-cloud: bin/nx-cloud.js
-  checksum: 10c0/369783793ea44fddd7f99085f564763dcc6aa831e8efb1424481ddb71a3682193c6ec035ca0a007cc18d0217c7ca9f7271d23da9dde71e2b856bf75019588fde
+  checksum: 10c0/f75499ab0d4cf04849cb82e7328d344fa53beb1792ea2fc26d6fd2690cbbb2322e35230684a50215cce29a77554edf78041b94feb3b08289894fb799f5a222b0
   languageName: node
   linkType: hard
 
@@ -20246,7 +20265,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^6.0.0":
+"vite@npm:^6.3.5":
   version: 6.3.5
   resolution: "vite@npm:6.3.5"
   dependencies:
