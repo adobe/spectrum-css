@@ -1,7 +1,7 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { hasNoInlinePadding, isQuiet, size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -11,9 +11,7 @@ import { Template } from "./template.js";
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
  *
- * ## Density options
- *
- * Accordion has three density options and requires that you specify one of the density types: compact, regular, or spacious.
+ * Accordion has three density options: regular (default), compact, or spacious. Each of the different densities have the same font size, but have tighter or looser vertical spacing between the rows.
  */
 export default {
 	title: "Accordion",
@@ -49,6 +47,8 @@ export default {
 			options: ["compact", "regular", "spacious"],
 			control: "select",
 		},
+		isQuiet,
+		hasNoInlinePadding,
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
@@ -56,8 +56,12 @@ export default {
 		density: "regular",
 		collapseAll: false,
 		disableAll: false,
+		isQuiet: false,
+		hasNoInlinePadding: false,
 	},
 	parameters: {
+		// Prevent an innacurate depiction of width due to "centered" layout's use of flex on the body.
+		layout: "padded",
 		actions: {
 			handles: ["click .spectrum-Accordion-item"],
 		},
@@ -78,7 +82,7 @@ const content = new Map([
 		{
 			content:
 				"Yes, Adobe offers free products like Acrobat Reader, Aero, Fill & Sign, Photoshop Express, and Adobe Scan. You can also use Creative Cloud Express, Fresco, and Lightroom Mobile for free, with the option of making in-app purchases.",
-			isDisabled: true,
+			isDisabled: false,
 		},
 	],
 	[
@@ -115,22 +119,10 @@ const content = new Map([
 	[
 		"How many products does Adobe have?",
 		{
-			content:
-				"Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as Adobe Experience Manager, Campaign, and Target.",
-			isOpen: true,
-		},
-	],
-	[
-		"How much do Adobe products cost?",
-		{
 			content: Typography({
 				semantics: "body",
 				content: [
-					"Creative Cloud plans start at US$9.99/mo. You can subscribe to specific Single App plans or get 20+ creative apps and services in the Creative Cloud All Apps plan.",
-					Link({
-						url: "https://www.adobe.com/creativecloud/plans.html",
-						text: "Explore Creative Cloud plans.",
-					}),
+					"Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator, InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as adobe experience manager, Campaign, and Target.",
 				],
 			}),
 		},
@@ -142,24 +134,11 @@ const content = new Map([
 				"Adobe makes some of the most widely used software in the world, including popular apps like Acrobat Pro, Photoshop, Illustrator, InDesign, Lightroom, and Premiere Pro.",
 		},
 	],
-	[
-		"How can I get a student discount on Adobe products?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					`Students who provide a valid school-issued email address at purchase are eligible to save over 60% on Creative Cloud All Apps, which includes 20+ apps such as Photoshop, Illustrator, InDesign, Acrobat Pro, and more. ${Link(
-						{
-							url: "https://www.adobe.com/creativecloud/buy/students.html",
-							text: "Learn more about Creative Cloud for students.",
-						}
-					)}`,
-				],
-			}),
-		},
-	]
 ]);
 
+/**
+ * The default accordion displays at medium size with a regular density.
+ */
 export const Default = AccordionGroup.bind({});
 Default.args = {
 	items: content,
@@ -180,6 +159,10 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
+
+/**
+ * The compact density has less spacing between rows.
+ */
 export const Compact = Template.bind({});
 Compact.tags = ["!dev"];
 Compact.args = {
@@ -189,8 +172,11 @@ Compact.args = {
 Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Compact.storyName = "Density - Compact";
+Compact.storyName = "Density: Compact";
 
+/**
+ * The spacious density has more spacing between rows.
+ */
 export const Spacious = Template.bind({});
 Spacious.tags = ["!dev"];
 Spacious.args = {
@@ -200,8 +186,56 @@ Spacious.args = {
 Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Spacious.storyName = "Density - Spacious";
+Spacious.storyName = "Density: Spacious";
 
+/**
+ * Individual accordion items (of class `.spectrum-Accordion-item`) can be styled as disabled by applying the `is-disabled` class.
+ * This example markup also applies the `disabled` attribute on the heading button.
+ */
+export const Disabled = Template.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	items: content,
+	disableAll: true,
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The optional quiet style for accordion has no dividers between sections. This style works best when a clear layout
+ * (vertical stack, table, grid) makes it easy see and understand. Too many quiet components in a small space can be
+ * hard to differentiate. This can be applied by adding the `spectrum-Accordion--quiet` class alongside the
+ * parent `spectrum-Accordion` class.
+ */
+export const Quiet = Template.bind({});
+Quiet.tags = ["!dev"];
+Quiet.args = {
+	items: content,
+	isQuiet: true,
+};
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The optional no inline padding style for accordion. This sets no overall horizontal padding on either side of the component
+ * (but the body text content always keeps its own padding from the edge). This can be applied by adding the `spectrum-Accordion----noInlinePadding` class alongside the
+ * parent `spectrum-Accordion` class.
+ */
+export const NoInlinePadding = Template.bind({});
+NoInlinePadding.tags = ["!dev"];
+NoInlinePadding.args = {
+	items: content,
+	hasNoInlinePadding: true,
+};
+NoInlinePadding.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Each of the different sizes have varying font sizes, and tighter or looser vertical spacing between the rows. Medium is the default size.
+ */
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withBorder: false,
