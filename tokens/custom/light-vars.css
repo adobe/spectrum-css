@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -22,19 +22,19 @@
 	--spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-blue-900);
 	--spectrum-assestcard-focus-indicator-color: var(--spectrum-blue-800);
 
-	--spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-900-rgb), 0.2);
-	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
+	--spectrum-assetlist-item-background-color-selected-hover: rgb(var(--spectrum-blue-900-rgb), 0.2);
+	--spectrum-assetlist-item-background-color-selected: rgb(var(--spectrum-blue-900-rgb), 0.1);
 	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-800);
 
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-white);
 
-	--spectrum-calendar-day-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
-	--spectrum-calendar-day-background-color-hover: rgba(var(--spectrum-black-rgb), 0.06);
-	--spectrum-calendar-day-today-background-color-selected-hover: rgba(var(--spectrum-blue-900-rgb), 0.2);
-	--spectrum-calendar-day-background-color-selected-hover: rgba(var(--spectrum-blue-900-rgb), 0.2);
+	--spectrum-calendar-day-background-color-selected: rgb(var(--spectrum-blue-900-rgb), 0.1);
+	--spectrum-calendar-day-background-color-hover: rgb(var(--spectrum-black-rgb), 0.06);
+	--spectrum-calendar-day-today-background-color-selected-hover: rgb(var(--spectrum-blue-900-rgb), 0.2);
+	--spectrum-calendar-day-background-color-selected-hover: rgb(var(--spectrum-blue-900-rgb), 0.2);
 	--spectrum-calendar-day-background-color-down: var(--spectrum-transparent-black-200);
-	--spectrum-calendar-day-background-color-cap-selected: rgba(var(--spectrum-blue-900-rgb), 0.2);
-	--spectrum-calendar-day-background-color-key-focus: rgba(var(--spectrum-black-rgb), 0.06);
+	--spectrum-calendar-day-background-color-cap-selected: rgb(var(--spectrum-blue-900-rgb), 0.2);
+	--spectrum-calendar-day-background-color-key-focus: rgb(var(--spectrum-black-rgb), 0.06);
 	--spectrum-calendar-day-border-color-key-focus: var(--spectrum-blue-800);
 	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 
@@ -55,9 +55,6 @@
 
 	--spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-800);
 
-	--spectrum-swatch-border-color: rgb(0 0 0 / 51%);
-	--spectrum-swatch-border-color-light: rgb(0 0 0 / 20%);
-
-	--spectrum-treeview-item-background-color-quiet-selected: rgba(var(--spectrum-gray-900-rgb), 0.06);
-	--spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
+	--spectrum-treeview-item-background-color-quiet-selected: rgb(var(--spectrum-gray-900-rgb), 0.06);
+	--spectrum-treeview-item-background-color-selected: rgb(var(--spectrum-blue-900-rgb), 0.1);
 }

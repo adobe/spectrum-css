@@ -1,10 +1,35 @@
 # Change log
 
+## 4.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 4.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`c6836fb`](https://github.com/adobe/spectrum-css/commit/c6836fb132effcfb09e4ca6d0d8923564bfe2914)]:
+  - @spectrum-css/divider@6.0.0-next.0
+
+## 4.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/button@15.0.0-next.0
+  - @spectrum-css/closebutton@7.0.0-next.0
+
 ## 3.1.1
 
 ### Patch Changes
 
-- [#3624](https://github.com/adobe/spectrum-css/pull/3624) [`754f99a`](https://github.com/adobe/spectrum-css/commit/754f99afc3c1918cdc0d173150989bcc1e6a7d2f) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - In the alert banner spectrum.css (the S1 stylesheet), --system: legacy was corrected in the container query.
+📝 [#3624](https://github.com/adobe/spectrum-css/pull/3624) [`754f99a`](https://github.com/adobe/spectrum-css/commit/754f99afc3c1918cdc0d173150989bcc1e6a7d2f) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+In the alert banner `spectrum.css` (the S1 stylesheet), `--system: legacy` was corrected in the container query.
 
 ## 3.1.0
 

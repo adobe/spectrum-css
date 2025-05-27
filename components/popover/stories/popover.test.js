@@ -30,8 +30,8 @@ export const PopoverGroup = Variants({
 			"end-top",
 			"end-bottom",
 		].map((position) => {
-			const popoverHeight = 142;
-			const popoverWidth = 89;
+			const popoverHeight = 158;
+			const popoverWidth = 105;
 
 			let wrapperStyles = {
 				"justify-content": "center",
@@ -139,7 +139,7 @@ export const PopoverGroup = Variants({
 				(passthroughs, context) => Dialog({
 					showModal: false,
 					size: "s",
-					isDismissable: false,
+					isDismissible: false,
 					heading: "Example heading",
 					hasFooter: false,
 					footer: [""],

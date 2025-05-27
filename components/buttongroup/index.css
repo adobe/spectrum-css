@@ -35,7 +35,7 @@
 .spectrum-ButtonGroup {
 	display: var(--spectrum-buttongroup-display);
 	flex-direction: var(--spectrum-buttongroup-flex-direction);
-	flex-wrap: wrap;
+	flex-wrap: var(--mod-buttongroup-flex-wrap, wrap);
 
 	gap: var(--spectrum-buttongroup-spacing);
 	justify-content: var(--spectrum-buttongroup-justify-content);

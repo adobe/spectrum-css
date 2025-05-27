@@ -1,5 +1,34 @@
 # Change log
 
+## 8.0.0-next.2
+
+### Minor Changes
+
+📝 [#3641](https://github.com/adobe/spectrum-css/pull/3641) [`0b730ea`](https://github.com/adobe/spectrum-css/commit/0b730ea73e16b98c4e01c7cc5e67beda8ef77e38) Thanks [@cdransf](https://github.com/cdransf)!
+
+#### S2: restore negative and informative semantic variants
+
+This restores the negative and informative tooltip semantic variant styles, story controls and test cases. Icons have been removed for all variants as they are not present in the specifications provided by design.
+
+##### Restored mods
+
+`--mod-tooltip-background-color-informative`
+`--mod-tooltip-background-color-negative"`
+
+## 8.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 7.1.0
 
 ### Minor Changes
