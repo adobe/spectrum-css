@@ -144,7 +144,7 @@ __metadata:
     gh-pages: "npm:^6.3.0"
     husky: "npm:^9.1.7"
     jsonc-eslint-parser: "npm:^2.4.0"
-    lint-staged: "npm:^16.0.0"
+    lint-staged: "npm:^16.1.0"
     lodash: "npm:^4.17.21"
     markdownlint: "npm:^0.38.0"
     markdownlint-cli: "npm:^0.45.0"
@@ -8778,6 +8778,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "commander@npm:14.0.0"
+  checksum: 10c0/73c4babfa558077868d84522b11ef56834165d472b9e86a634cd4c3ae7fc72d59af6377d8878e06bd570fe8f3161eced3cbe383c38f7093272bb65bd242b595b
+  languageName: node
+  linkType: hard
+
 "commander@npm:^2.14.1":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
@@ -9443,6 +9450,18 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10c0/db94f1a182bf886f57b4755f85b3a74c39b5114b9377b7ab375dc2cfa3454f09490cc6c30f829df3fc8042bc8b8995f6567ce5cd96f3bc3688bd24027197d9de
+  languageName: node
+  linkType: hard
+
+"debug@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "debug@npm:4.4.1"
+  dependencies:
+    ms: "npm:^2.1.3"
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 10c0/d2b44bc1afd912b49bb7ebb0d50a860dc93a4dd7d946e8de94abc957bb63726b7dd5aa48c18c2386c379ec024c46692e15ed3ed97d481729f929201e671fcd55
   languageName: node
   linkType: hard
 
@@ -14081,23 +14100,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^16.0.0":
-  version: 16.0.0
-  resolution: "lint-staged@npm:16.0.0"
+"lint-staged@npm:^16.1.0":
+  version: 16.1.0
+  resolution: "lint-staged@npm:16.1.0"
   dependencies:
     chalk: "npm:^5.4.1"
-    commander: "npm:^13.1.0"
-    debug: "npm:^4.4.0"
+    commander: "npm:^14.0.0"
+    debug: "npm:^4.4.1"
     lilconfig: "npm:^3.1.3"
     listr2: "npm:^8.3.3"
     micromatch: "npm:^4.0.8"
-    nano-spawn: "npm:^1.0.0"
+    nano-spawn: "npm:^1.0.2"
     pidtree: "npm:^0.6.0"
     string-argv: "npm:^0.3.2"
-    yaml: "npm:^2.7.1"
+    yaml: "npm:^2.8.0"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c0/8778dbe7892bbf14e378d612d1649c1e3df38a8ddf14cf35962b6e8a962be72efb1ebb48a697e38366be97d25b8d2599cad3c26ac5afc0d0460452484e27924d
+  checksum: 10c0/5cc33d61ec2c682e488eb3fcea5c153ce486623b80314f2c56af438ad78d73c7fcd3e7c911d273ac740bd34f1e030d35d4fb92d8e476984150c0c59724ac7fa4
   languageName: node
   linkType: hard
 
@@ -15455,7 +15474,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nano-spawn@npm:^1.0.0":
+"nano-spawn@npm:^1.0.2":
   version: 1.0.2
   resolution: "nano-spawn@npm:1.0.2"
   checksum: 10c0/d8cec78f127a44aa5e38be01746b3d963a8dcf8b00b4a05bf259b5369af2225b8c7dc9d12517050b90234e5c3eeea4ece5d18a5f9c6c3462b56f9f595f07e632
@@ -20953,7 +20972,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.6.0, yaml@npm:^2.7.1":
+"yaml@npm:^2.6.0, yaml@npm:^2.8.0":
   version: 2.8.0
   resolution: "yaml@npm:2.8.0"
   bin:
