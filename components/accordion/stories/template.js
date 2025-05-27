@@ -6,7 +6,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
+import "@spectrum-css/accordion/index.css";
 
 export const AccordionItem = ({
 	heading,
