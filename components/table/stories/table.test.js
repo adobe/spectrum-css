@@ -492,6 +492,31 @@ export const TableGroup = Variants({
 					isSelected: true,
 				}
 			],
+		},
+		{
+			testHeading: "Sparkline charts",
+			hasChartContent: true,
+			rowItems: [
+				{ cellContent: ["Informative sparkline", "200", "sparkline-informative.svg"],
+					textAlignment: {
+						1: "end"
+					}
+				},
+				{ cellContent: ["Negative sparkline", "0", "sparkline-negative.svg"],
+					textAlignment: {
+						1: "end"
+					}
+				},
+				{ cellContent: ["Positive sparkline", "600", "sparkline-positive.svg"],
+					textAlignment: {
+						1: "end"
+					}
+				},{ cellContent: ["Notice sparkline", "400", "sparkline-notice.svg"],
+					textAlignment: {
+						1: "end"
+					}
+				},
+			]
 		}
 	],
 });
