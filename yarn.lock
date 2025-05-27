@@ -188,10 +188,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:^13.7.0":
-  version: 13.7.0
-  resolution: "@adobe/spectrum-tokens@npm:13.7.0"
-  checksum: 10c0/e97b0bcb832c839b45c563a6ad5d68f86320989d8c7403af2512f81c7b1b15fcc68243270587728b95a2e6829fc113920c7e5a6b5a464b880ea3b17da5756892
+"@adobe/spectrum-tokens@npm:^13.10.0":
+  version: 13.10.0
+  resolution: "@adobe/spectrum-tokens@npm:13.10.0"
+  checksum: 10c0/1bd8007826ef22292ffd0eab96b5a7d90aa1619adccdc141991d08d3b48bc62cdd2eacc57a63bd6c5ab4eb1e52d081f619bac9b8bad2eafe4efad0073c5ef266
   languageName: node
   linkType: hard
 
@@ -5677,10 +5677,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:^13.7.0"
+    "@adobe/spectrum-tokens": "npm:^13.10.0"
     "@adobe/token-diff-generator": "npm:^2.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     deepmerge: "npm:^4.3.1"
+    glob: "npm:^11.0.2"
     lodash-es: "npm:^4.17.21"
     postcss: "npm:^8.5.3"
     postcss-sorting: "npm:^9.1.0"
@@ -11619,21 +11620,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.3, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6":
-  version: 7.2.3
-  resolution: "glob@npm:7.2.3"
-  dependencies:
-    fs.realpath: "npm:^1.0.0"
-    inflight: "npm:^1.0.4"
-    inherits: "npm:2"
-    minimatch: "npm:^3.1.1"
-    once: "npm:^1.3.0"
-    path-is-absolute: "npm:^1.0.0"
-  checksum: 10c0/65676153e2b0c9095100fe7f25a778bf45608eeb32c6048cf307f579649bcc30353277b3b898a3792602c65764e5baa4f643714dfbdfd64ea271d210c7a425fe
-  languageName: node
-  linkType: hard
-
-"glob@npm:~11.0.2":
+"glob@npm:^11.0.2, glob@npm:~11.0.2":
   version: 11.0.2
   resolution: "glob@npm:11.0.2"
   dependencies:
@@ -11646,6 +11633,20 @@ __metadata:
   bin:
     glob: dist/esm/bin.mjs
   checksum: 10c0/49f91c64ca882d5e3a72397bd45a146ca91fd3ca53dafb5254daf6c0e83fc510d39ea66f136f9ac7ca075cdd11fbe9aaa235b28f743bd477622e472f4fdc0240
+  languageName: node
+  linkType: hard
+
+"glob@npm:^7.0.3, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6":
+  version: 7.2.3
+  resolution: "glob@npm:7.2.3"
+  dependencies:
+    fs.realpath: "npm:^1.0.0"
+    inflight: "npm:^1.0.4"
+    inherits: "npm:2"
+    minimatch: "npm:^3.1.1"
+    once: "npm:^1.3.0"
+    path-is-absolute: "npm:^1.0.0"
+  checksum: 10c0/65676153e2b0c9095100fe7f25a778bf45608eeb32c6048cf307f579649bcc30353277b3b898a3792602c65764e5baa4f643714dfbdfd64ea271d210c7a425fe
   languageName: node
   linkType: hard
 
