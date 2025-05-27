@@ -81,7 +81,7 @@ export const Picker = ({
 					isIndeterminate: true,
 				}, context)
 			)}
-			${when(isInvalid && !isLoading, () =>
+			${when(isInvalid && !isLoading && !isDisabled, () =>
 				Icon({
 					size,
 					iconName: "AlertTriangle",
