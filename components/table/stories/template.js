@@ -19,6 +19,7 @@ export const TableRowItem = ({
 	showCheckbox = false,
 	isSelected = false,
 	isFocused = false,
+	isHovered = false,
 	isSummaryRow = false,
 	isSectionHeader = false,
 	isEmphasized = true,
@@ -36,6 +37,7 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	cellCustomClasses = {},
+	hasChartContent = false,
 } = {}, context = {}) => {
 	const useVisuals = visualElement !== undefined && !isSummaryRow && !isSectionHeader;
 	const useColumnDividers = hasColumnDividers && !isSummaryRow && !isSectionHeader;
@@ -103,7 +105,8 @@ export const TableRowItem = ({
 			[`${rootClass}-row--collapsible`]: isCollapsible,
 			[`${rootClass}-cell--divider`]: useColumnDividers,
 			["is-selected"]: isSelected,
-			["is-focused"]: isFocused,
+			["is-focus-visible"]: isFocused,
+			["is-hover"]: isHovered,
 			["is-expanded"]: isExpanded,
 			["is-last-tier"]: isLastTier,
 			["is-drop-target"]: isDropTarget,
@@ -199,7 +202,13 @@ export const TableRowItem = ({
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(2) === "end",
 					...cellCustomClasses?.[showCheckbox ? 3 : 2]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-			>${getCellContent(2)}</${cellTag}>`
+			>
+				${when(hasChartContent, () => html`
+					<div class="spectrum-Table-chartContent">
+						<img src=${getCellContent(2)} alt="Chart" class="spectrum-Table-chartImage">
+					</div>
+				`, () => getCellContent(2))}
+			</${cellTag}>`
 		)}
 	</${rowTag}>
   `;
@@ -220,6 +229,7 @@ export const Template = ({
 	isSortable = false,
 	sortIcon = "Sort",
 	hasMenu = false,
+	hasChartContent = false,
 	rowItems = [],
 	customClasses = [],
 	id = getRandomId("table"),
@@ -322,6 +332,7 @@ export const Template = ({
 					${when(hasMenu || isSortable, () => html`
 						${when(isSortable, () => Button({
 								size: "m",
+								variant: "secondary",
 								iconName: sortIcon,
 								iconSet: "workflow",
 								label: "Column title",
@@ -330,6 +341,7 @@ export const Template = ({
 						)}
 						${when(!isSortable, () => Button({
 								size: "m",
+								variant: "secondary",
 								iconName: "SortUp",
 								iconSet: "workflow",
 								label: "Column title",
@@ -368,6 +380,7 @@ export const Template = ({
 					visualElement,
 					hasColumnDividers,
 					hasMenu,
+					hasChartContent,
 					isEmphasized,
 					...item,
 				}, context)
