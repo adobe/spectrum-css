@@ -116,6 +116,17 @@ export default {
 		rowItems: {
 			table: { disable: true },
 		},
+		hasChartContent: {
+			name: "Chart content in cells",
+			description: "In some instances, a chart can be displayed in the cells of the table.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+				disable: true,
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Table",
@@ -129,6 +140,7 @@ export default {
 		useScroller: false,
 		hasColumnDividers: false,
 		hasMenu: false,
+		hasChartContent: false,
 		isSortable: false,
 		sortIcon: "Sort",
 		rowItems: [
@@ -464,6 +476,39 @@ WithMenuButton.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 WithMenuButton.tags = ["!dev"];
+
+/**
+ * In some use cases, a sparkline chart can be displayed in a cell of the table. There are informative, negative, positive, and notice sparkline charts available for implementations.
+ */
+export const WithChartContent = Template.bind({});
+WithChartContent.args = {
+	hasChartContent: true,
+	rowItems: [
+		{ cellContent: ["Informative sparkline", "200", "sparkline-informative.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+		{ cellContent: ["Negative sparkline", "0", "sparkline-negative.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+		{ cellContent: ["Positive sparkline", "600", "sparkline-positive.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},{ cellContent: ["Notice sparkline", "400", "sparkline-notice.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+	]
+};
+WithChartContent.storyName = "With chart content";
+WithChartContent.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * A quiet multi-select table has emphasized styling by default, but excluding the `.spectrum-Table--emphasized` class will change the style of selected rows.
