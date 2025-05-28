@@ -170,6 +170,10 @@ export const TableGroup = Variants({
 			rowItems: ExampleMultiSelectContent,
 		},
 		{
+			testHeading: "Sortable columns: Sort",
+			isSortable: true,
+		},
+		{
 			testHeading: "Section headers",
 			rowItems: ExampleSectionHeadersContent,
 		},
