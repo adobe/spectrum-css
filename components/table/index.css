@@ -357,13 +357,24 @@
 	display: table-row-group;
 
 	&.is-drop-target {
-		/* Make sure negative offset outline is not covered by borders. */
+		/* Make sure borders are not visible behind the pseudo-element */
 		--mod-table-border-color: transparent;
 
-		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
-		outline-style: solid;
-		outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
-		outline-offset: calc(-1 * var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)));
+		/* Remove the outline since we'll replace it with an ::after pseudo-element */
+		outline: none;
+		position: relative;
+		z-index: 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-end-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+			border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
+			border: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
+			pointer-events: none;
+			z-index: 1;
+		}
 	}
 }
 
@@ -632,7 +643,7 @@
 
 	/* Make sure shift-tab reverse keyboard navigation keeps the whole cell in focus.
      --mod-table-current-header-height should be dynamically updated with JS to match the table header height. */
-	scroll-padding-top: var(--mod-table-current-header-height, calc((var(--mod-table-header-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))) + var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) + var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text)) + var(--mod-table-border-width, var(--spectrum-table-border-width))));
+	scroll-padding-top: var(--mod-table-current-header-height, calc((var(--mod-table-header-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))) + var(--mod-table-header-row-top-to-text, var(--spectrum-table-header-row-top-to-text)) + var(--mod-table-header-row-bottom-to-text, var(--spectrum-table-header-row-bottom-to-text)) + var(--mod-table-border-width, var(--spectrum-table-border-width))));
 
 	&.spectrum-Table--quiet {
 		border-block-start: none;
