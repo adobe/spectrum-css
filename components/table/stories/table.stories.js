@@ -204,6 +204,9 @@ EmptyState.parameters = {
 };
 EmptyState.storyName = "Empty state";
 
+/**
+ * A table may render a [progress circle](/docs/components-progress-circle--docs) while populating data.
+ */
 export const LoadingState = Template.bind({});
 LoadingState.args = {
 	...Default.args,
@@ -214,6 +217,7 @@ LoadingState.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 LoadingState.storyName = "Loading state";
+
 /**
  * The compact variant decreases the spacing used within the table rows, except for the header row.
  */
@@ -308,7 +312,9 @@ NonEmphasizedMultiSelect.parameters = {
 };
 
 /**
- * Numerical data should generally be end-aligned for the ease of scanning and comparing. Numerical data should only be start-aligned when numbers are arbitrary identifiers, known as “nominal numbers,” which means they can’t be compared or combined arithmetically (e.g., ZIP codes, IP addresses, phone numbers). Column headers follow the alignment of the data, so for end-aligned numerical data, implementations should add the `.spectrum-Table-headCell--alignEnd` class to affected header cells (not shown below).
+ * Numerical data should generally be end-aligned for the ease of scanning and comparing. Numerical data should only be start-aligned when numbers are arbitrary identifiers, known as “nominal numbers,” which means they can’t be compared or combined arithmetically (e.g., ZIP codes, IP addresses, phone numbers).
+ *
+ * Column headers follow the alignment of the data, so for end-aligned numerical data, implementations should add the `.spectrum-Table-headCell--alignEnd` class to affected header cells (not shown below).
  */
 export const NumericalData = Template.bind({});
 NumericalData.args = {
