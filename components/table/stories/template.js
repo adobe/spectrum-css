@@ -113,7 +113,6 @@ export const TableRowItem = ({
 		aria-selected=${ifDefined(showCheckbox ? "true" : undefined)}
 		data-tier=${ifDefined(tier)}
 		?hidden=${isHidden}
-		tabindex="0"
 	>
 		${when(showCheckbox && !isSectionHeader, () => html`
 			<${cellTag}
@@ -124,7 +123,6 @@ export const TableRowItem = ({
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
 					...cellCustomClasses?.[0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-				tabindex="0"
 			>
 				${when(!isSummaryRow, () =>
 					Checkbox({
@@ -149,7 +147,6 @@ export const TableRowItem = ({
 						[`${rootClass}-cell--alignEnd`]: getTextAlignment(0) === "end",
 						...cellCustomClasses?.[showCheckbox ? 1 : 0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 					})}
-					tabindex="0"
 				>
 					<div class="${rootClass}-collapseInner">
 						${when(!isLastTier, () =>
@@ -177,7 +174,6 @@ export const TableRowItem = ({
 						...cellCustomClasses?.[showCheckbox ? 1 : 0]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 					})}
 					colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
-					tabindex="0"
 				>
 					${getCellContent(0)}
 				</${cellTag}>`
@@ -193,7 +189,6 @@ export const TableRowItem = ({
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(1) === "end",
 					...cellCustomClasses?.[showCheckbox ? 2 : 1]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-				tabindex="0"
 			>${getCellContent(1)}</${cellTag}>
 
 			<${cellTag}
@@ -204,7 +199,6 @@ export const TableRowItem = ({
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(2) === "end",
 					...cellCustomClasses?.[showCheckbox ? 3 : 2]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-				tabindex="0"
 			>${getCellContent(2)}</${cellTag}>`
 		)}
 	</${rowTag}>
