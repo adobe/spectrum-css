@@ -384,8 +384,11 @@ TableStates.args = {
 			cellContent: "Table row bravo",
 		},
 		{
-			cellContent: "Selected unfocused row, no rounded corners",
+			cellContent: ["Selected unfocused row, with a focused cell", "Focused cell", "Unfocused cell"],
 			isSelected: true,
+			cellCustomClasses: {
+				1: ["is-focused"]
+			}
 		},
 		{
 			cellContent: "Focused unselected row, no rounded corners",
