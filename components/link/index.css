@@ -64,7 +64,7 @@
 		--mod-link-text-color: var(--mod-link-text-color-focus, var(--spectrum-accent-content-color-key-focus));
 
 		outline: var(--spectrum-link-focus-indicator-thickness) solid var(--highcontrast-link-focus-indicator-color, var(--spectrum-link-focus-indicator-color));
-		padding: var(--spectrum-link-focus-indicator-gap);
+		outline-offset: var(--spectrum-link-focus-indicator-gap);
 		border-radius: var(--spectrum-link-corner-radius);
 	}
 
