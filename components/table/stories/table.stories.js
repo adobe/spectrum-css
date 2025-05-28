@@ -315,7 +315,7 @@ NumericalData.parameters = {
 };
 
 /**
- * The cells and rows within the table have different states based on selection and focus.
+ * The cells and rows within the table have different states based on selection and focus. Implementations should add appropriate tab stops to indicate focus on a row correctly.
  */
 export const TableStates = Template.bind({});
 TableStates.args = {
