@@ -68,6 +68,28 @@ export default {
 			},
 			control: "boolean",
 		},
+		isSortable: {
+			name: "Enable sortable columns",
+			description: "Table columns can be sortable and are indicated by appropriate sort icons.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		sortIcon: {
+			name: "Sort icon",
+			description: "Sort icons are used to indicate the sort direction of a column. The `none` option is used to indicate that the column is not sorted.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["Sort", "SortUp", "SortDown"],
+			control: "select",
+			if: { arg: "isSortable", eq: true },
+		},
 		isDropTarget: {
 			name: "Dropzone (drop target)",
 			type: { name: "boolean" },
@@ -93,6 +115,8 @@ export default {
 		isDropTarget: false,
 		useScroller: false,
 		hasColumnDividers: false,
+		isSortable: false,
+		sortIcon: "Sort",
 		rowItems: [
 			{
 				cellContent: "Row item alpha",
@@ -369,6 +393,25 @@ Quiet.tags = ["!dev"];
 Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+
+/**
+ * Tables can enable column sorting. The `aria-sort` attribute should be set on the `.spectrum-Table-headCell` element for the column that is currently sorted. `aria-sort` should not be set on more than one column at a time.
+ *
+ * When a column is sorted in ascending order, use the `SortUp` icon, as seen below. If sorted in descending order, use the `SortDown` icon. If the sort is undefined, use the more general `Sort` icon.
+ *
+ * Implementations will develop their own sorting functionality. Additionally, the `aria-sort` attribute should be removed from a column header when the column is not sorted.
+ */
+export const Sortable = Template.bind({});
+Sortable.args = {
+	...Default.args,
+	isSortable: true,
+	sortIcon: "SortUp",
+};
+Sortable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Sortable.storyName = "Sortable columns";
+Sortable.tags = ["!dev"];
 
 /**
  * A quiet multi-select table has emphasized styling by default, but excluding the `.spectrum-Table--emphasized` class will change the style of selected rows.
