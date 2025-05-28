@@ -217,6 +217,8 @@ export const Template = ({
 	visualElement,
 	isDropTarget = false,
 	hasColumnDividers = false,
+	isSortable = false,
+	sortIcon = "Sort",
 	rowItems = [],
 	customClasses = [],
 	id = getRandomId("table"),
@@ -268,6 +270,7 @@ export const Template = ({
 	};
 
 	const useCheckboxCell = rowItems.some((item) => item.showCheckbox === true);
+	const ariaSortValue = sortIcon === "SortUp" ? "ascending" : sortIcon === "SortDown" ? "descending" : "none";
 
 	const tableHtml = html`
 	<${tableTag}
@@ -305,47 +308,33 @@ export const Template = ({
 					</${thTag}>`,
 				)}
 				<${thTag}
-					class="${rootClass}-headCell is-sortable"
+					class=${classMap({
+						[`${rootClass}-headCell`]: true,
+						["is-sortable"]: isSortable,
+						["is-sorted-asc"]: sortIcon === "SortUp",
+						["is-sorted-desc"]: sortIcon === "SortDown",
+					})}
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
-					aria-sort="none"
-					tabindex="0"
+					aria-sort=${ifDefined(isSortable ? ariaSortValue : undefined)}
+					tabindex=${ifDefined(isSortable ? "0" : undefined)}
 				>
-					${Icon({
-						iconName: "Sort",
+					${when(isSortable, () => Icon({
+						iconName: sortIcon,
 						setName: "workflow",
 						customClasses: [`${rootClass}-sortIcon`],
-					}, context)}
+					}, context))}
 					<span class="${rootClass}-columnTitle">Column title</span>
 				</${thTag}>
 				<${thTag}
-					class="${rootClass}-headCell is-sortable is-sorted-desc"
+					class="${rootClass}-headCell"
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
-					aria-sort="descending"
-					tabindex="0"
 				>
-					${Icon({
-						iconName: "SortDown",
-						setName: "workflow",
-						customClasses: [`${rootClass}-sortIcon`],
-					}, context)}
 					<span class="${rootClass}-columnTitle">Column title</span>
-					${Icon({
-						iconName: "ChevronDown100",
-						setName: "ui",
-						customClasses: [`${rootClass}-menuIcon`],
-					}, context)}
 				</${thTag}>
 				<${thTag}
-					class="${rootClass}-headCell is-sortable is-sorted-asc"
+					class="${rootClass}-headCell"
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
-					aria-sort="ascending"
-					tabindex="0"
 				>
-					${Icon({
-						iconName: "SortUp",
-						setName: "workflow",
-						customClasses: [`${rootClass}-sortIcon`],
-					}, context)}
 					<span class="${rootClass}-columnTitle">Column title</span>
 				</${thTag}>
 			</${rowTag}>
