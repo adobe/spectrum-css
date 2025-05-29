@@ -49,7 +49,9 @@
 	--spectrum-table-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-table-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--spectrum-table-row-focus-indicator-width: var(--spectrum-side-focus-indicator);
-	--spectrum-table-row-focus-indicator-outline-width: 1px;
+
+	/* Individual focused table cells still have a border-radius */
+	--spectrum-table-focused-cell-border-radius: var(--spectrum-corner-radius-small-default);
 
 	--spectrum-table-selected-cell-background-color-focus: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus)));
 
@@ -415,7 +417,7 @@
 			content: "";
 			position: absolute;
 			inset: calc(-1 * var(--mod-table-border-width, var(--spectrum-table-border-width)));
-			border-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
+			border-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-focused-cell-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
 			border: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) solid var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
 			pointer-events: none;
 		}
