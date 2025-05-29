@@ -127,6 +127,12 @@
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-table-row-line-height: var(--spectrum-cjk-line-height-100);
+	}
 }
 
 /********* VARIANTS *********/
@@ -294,6 +300,7 @@
 		font-family: var(--mod-table-header-font-family, var(--spectrum-table-row-font-family));
 		font-size: var(--mod-table-header-font-size, var(--spectrum-table-row-font-size));
 		font-weight: var(--mod-table-header-font-weight, var(--spectrum-table-header-font-weight));
+		font-style: var(--mod-table-header-font-style, var(--spectrum-table-row-font-style));
 		line-height: var(--mod-table-header-line-height, var(--spectrum-table-row-line-height));
 		text-transform: var(--mod-table-header-text-transform, none);
 
@@ -420,6 +427,8 @@
 
 	/* Cells within table body */
 	box-sizing: border-box;
+	font-family: var(--mod-table-row-font-family, var(--spectrum-table-row-font-family));
+	font-style: var(--mod-table-row-font-style, var(--spectrum-table-row-font-style));
 	font-size: var(--mod-table-row-font-size, var(--spectrum-table-row-font-size));
 	font-weight: var(--mod-table-row-font-weight, var(--spectrum-table-row-font-weight));
 	line-height: var(--mod-table-row-line-height, var(--spectrum-table-row-line-height));
