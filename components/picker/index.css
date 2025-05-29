@@ -103,10 +103,11 @@
 	--spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-	--mod-picker-popover-animation-distance: var(--spectrum-component-to-menu-medium);
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-medium);
 
 	.spectrum-Picker-popover {
-		--mod-popover-animation-distance: var(--mod-picker-popover-animation-distance, var(--spectrum-component-to-menu-medium));
+		--mod-popover-animation-distance: var(--spectrum-picker-popover-animation-distance);
 	}
 }
 
@@ -126,7 +127,8 @@
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-75);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-75);
-	--mod-picker-popover-animation-distance: var(--spectrum-component-to-menu-small);
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-small);
 }
 
 .spectrum-Picker--sizeL {
@@ -145,7 +147,8 @@
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-large);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-200);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-200);
-	--mod-picker-popover-animation-distance: var(--spectrum-component-to-menu-large);
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-large);
 }
 
 .spectrum-Picker--sizeXL {
@@ -164,7 +167,8 @@
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
-	--mod-picker-popover-animation-distance: var(--spectrum-component-to-menu-extra-large);
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-extra-large);
 }
 
 .spectrum-Picker--quiet {
