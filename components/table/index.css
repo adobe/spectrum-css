@@ -181,7 +181,6 @@
 		--highcontrast-table-icon-color: var(--highcontrast-table-row-text-color-focus);
 		--spectrum-table-row-text-color: var(--spectrum-table-row-text-color-key-focus);
 		--spectrum-table-header-background-color: var(--spectrum-table-cell-background-color);
-		--spectrum-table-row-focus-indicator-outline-color: var(--spectrum-table-focus-indicator-color);
 
 		&:hover {
 			--spectrum-table-row-text-color: var(--spectrum-table-row-text-color-key-focus);
@@ -209,6 +208,8 @@
 		--highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
 		--highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
 		--spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--spectrum-table-selected-cell-background-color));
+		--spectrum-table-divider-color: var(--spectrum-table-focus-indicator-color);
+		--spectrum-table-border-color: var(--spectrum-table-focus-indicator-color);
 
 		&:hover,
 		&:focus-visible,
@@ -523,7 +524,20 @@
 		border-end-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 	}
 
-	/* Row selected+focus indicator */
+	/* Selected rows */
+	&.is-selected {
+		.spectrum-Table-cell {
+			/* Remove bottom border by default for all selected rows to conditionally add it back. */
+			border-block-end: none;
+		}
+	}
+
+	/* Adding the bottom border only to the last selected row in a sequence achieves 1px border between adjacent selected rows */
+	&.is-selected:not(:has(+ .is-selected)) .spectrum-Table-cell {
+		border-block-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+	}
+
+	/* Row focus indicator */
 	&.is-focused,
 	&:focus-visible,
 	&:focus {
@@ -533,7 +547,6 @@
 		.spectrum-Table-cell:first-child {
 			position: relative;
 			border-inline-start: 0;
-			border-block: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
 
 			/* Because the ::before element technically removes the table's inline border, the first cell needs the entire cell-inline-padding padding to avoid horizontal layout shift when a row is focused. */
 			padding-inline-start: var(--spectrum-table-cell-inline-spacing);
@@ -549,19 +562,6 @@
 				background-color: var(--spectrum-table-focus-indicator-color);
 				z-index: 1;
 			}
-		}
-
-		/* All other cells in focused rows (including the first rows after the header row and last rows in the table) need the focus indicator border */
-		&:first-child .spectrum-Table-cell,
-		&:last-child .spectrum-Table-cell,
-		.spectrum-Table-cell {
-			border-block: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
-		}
-
-		/* Last cell of focused row needs the fancy new focus indicator borders at the end */
-		.spectrum-Table-cell:last-child {
-			border-inline-end: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
-			border-block-end: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
 		}
 
 		/* In a focused row that is last in the table, the first cell needs rounded corners at the bottom of the row focus indicator line */
