@@ -306,13 +306,6 @@
 	}
 }
 
-/* The quiet table's header row cells need a border-block-end to match the body cells. */
-.spectrum-Table--quiet {
-	.spectrum-Table-headCell {
-		border-block-end: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-divider-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
-	}
-}
-
 .spectrum-Table-sortIcon {
 	&:last-child .spectrum-Table-headCell {
 		border-start-end-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
@@ -438,7 +431,7 @@
 /* Outside border (the table's border) */
 .spectrum-Table-body .spectrum-Table-row {
 	&:first-child .spectrum-Table-cell {
-		border-block-start: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
+		border-block-start: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-divider-color, var(--spectrum-table-divider-color)));
 	}
 
 	&:last-child .spectrum-Table-cell {
