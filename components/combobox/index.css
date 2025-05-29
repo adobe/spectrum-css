@@ -42,7 +42,6 @@
 
 	--spectrum-combobox-font-style: var(--spectrum-default-font-style);
 	--spectrum-combobox-font-weight: var(--spectrum-regular-font-weight);
-	--spectrum-combobox-line-height: var(--spectrum-line-height-100);
 	--spectrum-combobox-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
 	--spectrum-combobox-background-color-disabled: var(--spectrum-gray-25);
@@ -77,8 +76,8 @@
 	--mod-textfield-font-weight: var(--spectrum-combobox-font-weight);
 	--mod-textfield-font-size: var(--spectrum-combobox-font-size);
 	--mod-textfield-font-style: var(--spectrum-combobox-font-style);
-	--mod-textfield-spacing-block-start: calc(var(--mod-combobox-spacing-block-start-edge-to-text, var(--spectrum-combobox-spacing-block-start-edge-to-text)) - var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
-	--mod-textfield-spacing-block-end: calc(var(--mod-combobox-spacing-block-end-edge-to-text, var(--spectrum-combobox-spacing-block-end-edge-to-text)) - var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
+	--mod-textfield-spacing-block-start: var(--mod-combobox-spacing-block-start-edge-to-text, var(--spectrum-combobox-spacing-block-start-edge-to-text));
+	--mod-textfield-spacing-block-end: var(--mod-combobox-spacing-block-end-edge-to-text, var(--spectrum-combobox-spacing-block-end-edge-to-text));
 	--mod-textfield-text-color-default: var(--mod-combobox-font-color-default);
 	--mod-textfield-text-color-hover: var(--mod-combobox-font-color-hover);
 	--mod-textfield-text-color-focus: var(--mod-combobox-font-color-focus);
@@ -326,7 +325,7 @@
 	padding-inline-start: var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text));
 	padding-inline-end: calc(var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-icon-to-text, var(--spectrum-combobox-spacing-inline-icon-to-text)) - var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
 	backface-visibility: hidden;
-	line-height: var(--mod-combobox-line-height, var(--spectrum-combobox-line-height));
+	line-height: var(--mod-combobox-line-height, var(--spectrum-combobox-block-size));
 
 	&::placeholder {
 		--mod-textfield-text-color-default: var(--mod-combobox-font-color-placeholder);
