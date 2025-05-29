@@ -15,6 +15,7 @@
 	--spectrum-combobox-block-size: var(--spectrum-component-height-100);
 	--spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100);
 	--spectrum-combobox-font-size: var(--spectrum-font-size-100);
+	--spectrum-combobox-line-height: var(--spectrum-line-height-100);
 
 	--spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button);
 	--spectrum-combobox-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-medium);
@@ -92,6 +93,7 @@
 	--mod-textfield-border-color-focus-hover: var(--mod-combobox-border-color-focus-hover, var(--spectrum-combobox-border-color-focus-hover));
 	--mod-textfield-border-color-hover: var(--mod-combobox-border-color-hover, var(--spectrum-combobox-border-color-hover));
 	--mod-textfield-border-color-keyboard-focus: var(--mod-combobox-border-color-key-focus, var(--spectrum-combobox-border-color-key-focus));
+	--mod-textfield-corner-radius: var(--mod-combobox-border-radius, var(--spectrum-combobox-border-radius));
 
 	--mod-textfield-border-color-invalid-default: var(--mod-combobox-border-color-invalid-default, var(--spectrum-combobox-border-color-invalid-default));
 	--mod-textfield-border-color-invalid-hover: var(--mod-combobox-border-color-invalid-hover, var(--spectrum-combobox-border-color-invalid-hover));
@@ -177,8 +179,6 @@
 	display: inline-grid;
 	inline-size: var(--mod-combobox-inline-size, var(--spectrum-combobox-inline-size));
 	margin-block-start: var(--mod-combobox-spacing-label-to-combobox, var(--spectrum-combobox-spacing-label-to-combobox));
-
-	border-radius: var(--mod-combobox-border-radius, var(--spectrum-combobox-border-radius));
 
 	.spectrum-Combobox-label,
 	.spectrum-Combobox-content {
@@ -375,9 +375,15 @@
 	&:-webkit-autofill:active,
 	&:-internal-autofill-selected,
 	&.spectrum-Combobox-autocomplete {
-		box-shadow: 0 0 0 30px var(--spectrum-combobox-background-color-autofill) inset !important;
-		transition: background-color 5000s ease-in-out 0s;
+		border-color: var(--spectrum-gray-800);
+		box-shadow: 0 0 0 30px var(--spectrum-combobox-background-color-default) inset !important;
+		transition: background-color 5000s ease-in-out 0s; /* not sure about keeping this I'm just leaving it alone for now */
 		-webkit-text-fill-color: var(--spectrum-neutral-content-color-default) !important;
+		line-height: var(--spectrum-combobox-line-height);
+
+		&::selection {
+			background-color: var(--spectrum-combobox-background-color-autofill);
+		}
 	}
 }
 
