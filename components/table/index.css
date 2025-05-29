@@ -498,7 +498,7 @@
 		.spectrum-Table-cell:first-child {
 			position: relative;
 			border-inline-start: 0;
-			border-block: var(--spectrum-table-row-focus-indicator-outline-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+			border-block: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
 
 			/* Because the ::before element technically removes the table's inline border, the first cell needs the entire cell padding to avoid horizontal layout shift when a row is focused. */
 			padding-inline-start: var(--spectrum-table-cell-inline-spacing);
@@ -520,13 +520,13 @@
 		&:first-child .spectrum-Table-cell,
 		&:last-child .spectrum-Table-cell,
 		.spectrum-Table-cell {
-			border-block: var(--spectrum-table-row-focus-indicator-outline-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+			border-block: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
 		}
 
 		/* Last cell of focused row needs the fancy new focus indicator borders at the end */
 		.spectrum-Table-cell:last-child {
-			border-inline-end: var(--spectrum-table-row-focus-indicator-outline-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
-			border-block-end: var(--spectrum-table-row-focus-indicator-outline-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+			border-inline-end: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
+			border-block-end: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
 		}
 
 		/* In a focused row that is last in the table, the first cell needs rounded corners at the bottom of the row focus indicator line */
