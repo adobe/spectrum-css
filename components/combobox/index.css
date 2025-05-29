@@ -61,6 +61,8 @@
 	--spectrum-combobox-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover);
 	--spectrum-combobox-border-color-invalid-key-focus: var(--spectrum-negative-border-color-key-focus);
 
+	--spectrum-combobox-background-color-autofill: rgb(var(--spectrum-blue-900-rgb), 0.3);
+
 	--mod-combobox-popover-animation-distance: var(--spectrum-component-to-menu-medium);
 
 	/* @passthroughs start -- settings for nested Textfield component */
@@ -117,6 +119,10 @@
 	--spectrum-combobox-readonly-text-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-combobox-readonly-border-color-disabled: var(--spectrum-disabled-border-color);
 	--spectrum-combobox-readonly-input-border-color: var(--spectrum-combobox-border-color-default);
+
+	/* @passthroughs start -- settings for nested divider component */
+	--mod-divider-inline-minimum-size: auto;
+	/* @passthroughs end -- settings for nested divider component */
 }
 
 .spectrum-Combobox--sizeS {
@@ -170,12 +176,15 @@
 .spectrum-Combobox {
 	position: relative;
 	display: inline-grid;
-
 	inline-size: var(--mod-combobox-inline-size, var(--spectrum-combobox-inline-size));
-	min-inline-size: var(--mod-combobox-min-inline-size, var(--spectrum-combobox-min-inline-size));
 	margin-block-start: var(--mod-combobox-spacing-label-to-combobox, var(--spectrum-combobox-spacing-label-to-combobox));
 
 	border-radius: var(--mod-combobox-border-radius, var(--spectrum-combobox-border-radius));
+
+	.spectrum-Combobox-label,
+	.spectrum-Combobox-content {
+		min-inline-size: var(--mod-combobox-min-inline-size, var(--spectrum-combobox-min-inline-size));
+	}
 
 	.spectrum-Combobox-popover {
 		--mod-popover-animation-distance: var(--mod-combobox-popover-animation-distance);
@@ -314,7 +323,7 @@
 /* TEXT INPUT */
 .spectrum-Combobox-input {
 	background-color: var(--highcontrast-combobox-background-color-default, var(--mod-combobox-textfield-background-color, var(--spectrum-combobox-background-color-default)));
-	padding-inline-start: calc(var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text)) - var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
+	padding-inline-start: var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text));
 	padding-inline-end: calc(var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-icon-to-text, var(--spectrum-combobox-spacing-inline-icon-to-text)) - var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
 	backface-visibility: hidden;
 	line-height: var(--mod-combobox-line-height, var(--spectrum-combobox-line-height));
@@ -360,6 +369,17 @@
 	&:lang(ko) {
 		--mod-combobox-line-height: var(--mod-combobox-line-height-cjk, var(--spectrum-combobox-line-height-cjk));
 	}
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active,
+	&:-internal-autofill-selected,
+	&.spectrum-Combobox-autocomplete {
+		box-shadow: 0 0 0 30px var(--spectrum-combobox-background-color-autofill) inset !important;
+		transition: background-color 5000s ease-in-out 0s;
+		-webkit-text-fill-color: var(--spectrum-neutral-content-color-default) !important;
+	}
 }
 
 .spectrum-Combobox-helptext {
@@ -380,7 +400,8 @@
 	.spectrum-Combobox-label {
 		grid-row: 1;
 		grid-column: 1 / span 1;
-		margin-inline-end: var(--mod-combobox-spacing-side-label-to-field, var(--spectrum-combobox-spacing-side-label-to-field));
+		padding-inline-end: var(--mod-combobox-spacing-side-label-to-field, var(--spectrum-combobox-spacing-side-label-to-field));
+		overflow-wrap: anywhere;
 	}
 
 	.spectrum-Combobox-content {
@@ -391,11 +412,6 @@
 	.spectrum-Combobox-helptext {
 		grid-row: 2 / span 2;
 		grid-column: 2 / span 1;
-	}
-
-	.spectrum-Combobox-label,
-	.spectrum-Combobox-content {
-		min-inline-size: 50%;
 	}
 }
 

@@ -87,6 +87,7 @@ export const Template = ({
 			aria-haspopup="listbox"
 			aria-controls=${`${comboboxId}-popover`}
 			aria-owns=${`${comboboxId}-popover`}
+			aria-autocomplete=${ifDefined(autocomplete ? "list" : undefined)}
 		>
 			${when(showFieldLabel, () =>
 				FieldLabel({
@@ -110,7 +111,10 @@ export const Template = ({
 						`${rootClass}-textfield`,
 						...(isLoading ? ["is-loading"] : []),
 					],
-					customInputClasses: [`${rootClass}-input`, `${rootClass}-autocomplete`],
+					customInputClasses: [
+						`${rootClass}-input`,
+						...(autocomplete ? [`${rootClass}-autocomplete`] : [])
+					],
 					isLoading,
 					customInfieldProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 					name: "field",

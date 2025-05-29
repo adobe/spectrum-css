@@ -93,9 +93,13 @@ export default {
 			if: { arg: "showFieldLabel", truthy: true },
 		},
 		autocomplete: {
+			name: "Autocomplete",
+			type: { name: "boolean" },
 			table: {
-				disable: true,
+				type: { summary: "boolean" },
+				category: "Component",
 			},
+			control: "boolean",
 		},
 		helpText: {
 			name: "Help text",
@@ -153,6 +157,9 @@ export default {
 					},
 					{
 						label: "Greenwood",
+					},
+					{
+						type: "divider",
 					},
 					{
 						label: "United States of America",

@@ -1,5 +1,6 @@
 ---
 "@spectrum-css/combobox": major
+"@spectrum-css/helptext": minor
 ---
 
 ### Combobox S2 Migration

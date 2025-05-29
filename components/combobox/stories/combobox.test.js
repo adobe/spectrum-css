@@ -40,6 +40,10 @@ export const ComboBoxGroup = Variants({
 			testHeading: "Truncation",
 			value: "United States of America and to the republic",
 		},
+		{
+			testHeading: "Autocomplete",
+			autocomplete: true,
+		}
 	],
 	stateData: [
 		{

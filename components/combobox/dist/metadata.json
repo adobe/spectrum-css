@@ -4,6 +4,8 @@
     ".spectrum-Combobox",
     ".spectrum-Combobox .spectrum-Combobox-button.spectrum-PickerButton--quiet .spectrum-PickerButton-fill",
     ".spectrum-Combobox .spectrum-Combobox-button.spectrum-PickerButton--quiet .spectrum-PickerButton-icon",
+    ".spectrum-Combobox .spectrum-Combobox-content",
+    ".spectrum-Combobox .spectrum-Combobox-label",
     ".spectrum-Combobox .spectrum-Combobox-popover",
     ".spectrum-Combobox--sideLabel .spectrum-Combobox-content",
     ".spectrum-Combobox--sideLabel .spectrum-Combobox-helptext",
@@ -35,6 +37,12 @@
     ".spectrum-Combobox-helptext",
     ".spectrum-Combobox-helptext .spectrum-HelpText-text",
     ".spectrum-Combobox-input",
+    ".spectrum-Combobox-input.spectrum-Combobox-autocomplete",
+    ".spectrum-Combobox-input:-internal-autofill-selected",
+    ".spectrum-Combobox-input:-webkit-autofill",
+    ".spectrum-Combobox-input:-webkit-autofill:active",
+    ".spectrum-Combobox-input:-webkit-autofill:focus",
+    ".spectrum-Combobox-input:-webkit-autofill:hover",
     ".spectrum-Combobox-input::placeholder",
     ".spectrum-Combobox-input:active",
     ".spectrum-Combobox-input:focus",
@@ -135,6 +143,7 @@
   "component": [
     "--spectrum-combo-box-minimum-width-multiplier",
     "--spectrum-combo-box-visual-to-field-button",
+    "--spectrum-combobox-background-color-autofill",
     "--spectrum-combobox-background-color-default",
     "--spectrum-combobox-background-color-disabled",
     "--spectrum-combobox-block-size",
@@ -181,6 +190,7 @@
     "--spectrum-combobox-spacing-to-help-text"
   ],
   "global": [
+    "--spectrum-blue-900-rgb",
     "--spectrum-border-width-200",
     "--spectrum-cjk-line-height-100",
     "--spectrum-component-bottom-to-text-100",
@@ -243,6 +253,7 @@
     "--spectrum-negative-border-color-focus-hover",
     "--spectrum-negative-border-color-hover",
     "--spectrum-negative-border-color-key-focus",
+    "--spectrum-neutral-content-color-default",
     "--spectrum-regular-font-weight",
     "--spectrum-spacing-200",
     "--spectrum-text-to-visual-100",
@@ -255,6 +266,7 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "passthroughs": [
+    "--mod-divider-inline-minimum-size",
     "--mod-picker-button-background-color",
     "--mod-picker-button-background-color-disabled",
     "--mod-picker-button-border-color",
