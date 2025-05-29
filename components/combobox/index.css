@@ -322,7 +322,7 @@
 /* TEXT INPUT */
 .spectrum-Combobox-input {
 	background-color: var(--highcontrast-combobox-background-color-default, var(--mod-combobox-textfield-background-color, var(--spectrum-combobox-background-color-default)));
-	padding-inline-start: var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text));
+	padding-inline-start: calc(var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text)) - var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
 	padding-inline-end: calc(var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-icon-to-text, var(--spectrum-combobox-spacing-inline-icon-to-text)) - var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
 	backface-visibility: hidden;
 	line-height: var(--mod-combobox-line-height, var(--spectrum-combobox-block-size));
