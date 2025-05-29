@@ -152,7 +152,7 @@ __metadata:
     nx: "npm:^21.1.2"
     open: "npm:^10.1.2"
     pajv: "npm:^1.2.0"
-    postcss: "npm:^8.5.3"
+    postcss: "npm:^8.5.4"
     postcss-extend: "npm:^1.0.5"
     postcss-hover-media-feature: "npm:^1.0.2"
     postcss-import: "npm:^16.1.0"
@@ -4295,7 +4295,7 @@ __metadata:
     "@spectrum-css/underlay": "npm:7.0.0-next.0"
     "@spectrum-css/well": "npm:8.0.0-next.0"
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.3"
+    postcss: "npm:^8.5.4"
     postcss-licensing: "npm:^3.0.0"
   languageName: unknown
   linkType: soft
@@ -5261,7 +5261,7 @@ __metadata:
     lit: "npm:^3.3.0"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
-    postcss: "npm:^8.5.3"
+    postcss: "npm:^8.5.4"
     prettier: "npm:^3.5.3"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
@@ -5683,7 +5683,7 @@ __metadata:
     deepmerge: "npm:^4.3.1"
     glob: "npm:^11.0.2"
     lodash-es: "npm:^4.17.21"
-    postcss: "npm:^8.5.3"
+    postcss: "npm:^8.5.4"
     postcss-sorting: "npm:^9.1.0"
     style-dictionary: "npm:^4.4.0"
   languageName: unknown
@@ -5830,7 +5830,7 @@ __metadata:
   dependencies:
     ava: "npm:^6.3.0"
     c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.3"
+    postcss: "npm:^8.5.4"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
     postcss: ">=8"
@@ -5858,7 +5858,7 @@ __metadata:
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     fast-glob: "npm:^3.3.3"
-    postcss: "npm:^8.5.3"
+    postcss: "npm:^8.5.4"
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.19.1"
   peerDependencies:
@@ -5873,7 +5873,7 @@ __metadata:
     ava: "npm:^6.3.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.3"
+    postcss: "npm:^8.5.4"
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.19.1"
   peerDependencies:
@@ -15448,6 +15448,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.11":
+  version: 3.3.11
+  resolution: "nanoid@npm:3.3.11"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 10c0/40e7f70b3d15f725ca072dfc4f74e81fcf1fbb02e491cf58ac0c79093adc9b0a73b152bcde57df4b79cd097e13023d7504acb38404a4da7bc1cd8e887b82fe0b
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.8":
   version: 3.3.9
   resolution: "nanoid@npm:3.3.9"
@@ -17643,6 +17652,17 @@ __metadata:
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
   checksum: 10c0/b75510d7b28c3ab728c8733dd01538314a18c52af426f199a3c9177e63eb08602a3938bfb66b62dc01350b9aed62087eabbf229af97a1659eb8d3513cec823b3
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.5.4":
+  version: 8.5.4
+  resolution: "postcss@npm:8.5.4"
+  dependencies:
+    nanoid: "npm:^3.3.11"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10c0/0feff648614a834f7cd5396ea6b05b658ca0507e10a4eaad03b56c348f6aec93f42a885fc1b30522630c6a7e49ae53b38a061e3cba526f2d9857afbe095a22bb
   languageName: node
   linkType: hard
 
