@@ -171,9 +171,9 @@ export const FullIconSetTemplate = (args, context) => {
 			})}
 		>
 			${when(args.setName === "workflow", () => {
-				return workflowIconsCleaned.sort().map((iconName) => IconWithLabelTemplate({ ...args, iconName }, context));
+				return workflowIconsCleaned.map((iconName) => IconWithLabelTemplate({ ...args, iconName }, context));
 			}, () => {
-				return uiIconsWithDirections.sort().map((iconName) => IconWithLabelTemplate({ ...args, uiIconName: iconName }, context));
+				return uiIconsWithDirections.map((iconName) => IconWithLabelTemplate({ ...args, uiIconName: iconName }, context));
 			})}
 		</div>
 	`;

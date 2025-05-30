@@ -118,9 +118,14 @@ export const Template = ({
 							}, context)] : []),
 							...(isAddSwatch ? [Icon({
 								customClasses: [`${rootClass}-icon`],
-								setName: "workflow",
+								setName: "ui",
 								size,
-								iconName: "Add",
+								iconName: "Add" + ({
+									xs: "75",
+									s: "75",
+									m: "100",
+									l: "200",
+								}[size] || "100"),
 								useRef: false,
 							}, context)] : []),
 						]
