@@ -150,19 +150,19 @@
 	"githubPullRequests.queries": [
 		{
 			"label": "Waiting for my review",
-			"query": "is:open review-requested:${user}"
+			"query": "repo:${owner}/${repository} is:open review-requested:${user}"
 		},
 		{
 			"label": "Assigned to me",
-			"query": "is:open assignee:${user}"
+			"query": "repo:${owner}/${repository} is:open assignee:${user}"
 		},
 		{
 			"label": "Created by me",
-			"query": "is:open author:${user}"
+			"query": "repo:${owner}/${repository} is:open author:${user}"
 		},
 		{
 			"label": "Mentioned me",
-			"query": "is:open mentions:${user}"
+			"query": "repo:${owner}/${repository} is:open mentions:${user}"
 		}
 	],
 	"js/ts.implicitProjectConfig.experimentalDecorators": true,
@@ -184,5 +184,6 @@
 		".storybook/deprecated/*/*.mdx",
 		"components/*/stories/*.stories.js",
 		"components/*/stories/*.mdx"
-	]
+	],
+	"nxConsole.generateAiAgentRules": true
 }
