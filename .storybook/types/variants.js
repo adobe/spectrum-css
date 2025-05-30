@@ -49,6 +49,16 @@ export const isQuiet = {
 	control: { type: "boolean" },
 };
 
+export const hasNoInlinePadding = {
+	name: "No Inline Padding Styling",
+	type: { name: "boolean" },
+	table: {
+		type: { summary: "boolean" },
+		category: "Component",
+	},
+	control: { type: "boolean" },
+};
+
 export const staticColor = {
 	name: "Static color",
 	description:
