@@ -375,10 +375,10 @@
 	&:-webkit-autofill:active,
 	&:-internal-autofill-selected,
 	&.spectrum-Combobox-autocomplete {
-		border-color: var(--spectrum-gray-800);
-		box-shadow: 0 0 0 30px var(--spectrum-combobox-background-color-default) inset !important;
-		transition: background-color 5000s ease-in-out 0s; /* not sure about keeping this I'm just leaving it alone for now */
-		-webkit-text-fill-color: var(--spectrum-neutral-content-color-default) !important;
+		border-color: var(--spectrum-combobox-border-color-default);
+		box-shadow: 0 0 0 30px var(--highcontrast-combobox-background-color-default, var(--spectrum-combobox-background-color-default)) inset !important;
+		transition: background-color 200ms ease-in-out 0s;
+		-webkit-text-fill-color: var(--highcontrast-textfield-text-color-default, var(--spectrum-neutral-content-color-default)) !important;
 		line-height: var(--spectrum-combobox-line-height);
 
 		&::selection {
