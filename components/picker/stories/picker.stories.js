@@ -77,6 +77,10 @@ export default {
 			name: "Icon",
 			description: "Optional workflow icon that appears before the value/placeholder text within the picker.",
 			if: { arg: "showWorkflowIcon", eq: true },
+			table: {
+				type: { summary: "boolean" },
+				category: "Advanced",
+			},
 		},
 		isQuiet: {
 			...isQuiet,

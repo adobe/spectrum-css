@@ -439,10 +439,6 @@
 				margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
 			}
 		}
-
-		&.is-invalid {
-			border: none;
-		}
 	}
 }
 

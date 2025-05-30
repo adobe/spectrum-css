@@ -11,6 +11,10 @@
 - Adds `flex-shrink` to progress circle for better layout control when truncation and loading is visible
 - Updates Popover animation distance to use `spectrum-Picker` custom properties
 
-#### New mods
+#### New token
 
-`--mod-picker-popover-animation-distance`
+`--spectrum-picker-popover-animation-distance`
+
+#### Renamed tokens
+
+`spectrum-picker-spacing-picker-to-popover` --> `--spectrum-picker-popover-animation-distance`
