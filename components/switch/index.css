@@ -229,7 +229,8 @@
 		border-color: var(--highcontrast-switch-border-color-hover, var(--mod-switch-border-color-hover, var(--spectrum-switch-border-color-hover)));
 	}
 
-	.spectrum-Switch:active & {
+	.spectrum-Switch.spectrum-Switch:active &,
+	.spectrum-Switch--active {
 		border-color: var(--highcontrast-switch-border-color-down, var(--mod-switch-border-color-down, var(--spectrum-switch-border-color-down)));
 	}
 
@@ -246,7 +247,9 @@
 			border-color: var(--highcontrast-switch-border-color-selected-hover, var(--mod-switch-border-color-selected-hover, var(--spectrum-switch-border-color-selected-hover)));
 		}
 
-		.spectrum-Switch:active & {
+		/* Added specifity to ensure active state takes precedence over hover media queries */
+		.spectrum-Switch.spectrum-Switch:active &,
+		.spectrum-Switch--active & {
 			background-color: var(--highcontrast-switch-background-color-selected-down, var(--mod-switch-background-color-selected-down, var(--spectrum-switch-background-color-selected-down)));
 			border-color: var(--highcontrast-switch-border-color-selected-down, var(--mod-switch-border-color-selected-down, var(--spectrum-switch-border-color-selected-down)));
 		}
@@ -283,7 +286,7 @@
 			background-color: var(--highcontrast-switch-handle-background-color-hover, var(--mod-switch-handle-background-color-hover, var(--spectrum-switch-handle-background-color-hover)));
 		}
 
-		.spectrum-Switch:active & {
+		.spectrum-Switch.spectrum-Switch:active & {
 			background-color: var(--highcontrast-switch-handle-background-color-down, var(--mod-switch-handle-background-color-down, var(--spectrum-switch-handle-background-color-down)));
 		}
 
@@ -310,13 +313,20 @@
 			.spectrum-Switch:hover & {
 				background-color: var(--highcontrast-switch-handle-background-color-selected, var(--mod-switch-handle-background-color-selected, var(--spectrum-switch-handle-background-color-selected)));
 			}
+
+			.spectrum-Switch.spectrum-Switch:active &,
+			.spectrum-Switch--active & {
+				background-color: var(--spectrum-switch-handle-background-color-selected, var(--mod-switch-handle-background-color-selected, var(--spectrum-switch-handle-background-color-selected)));
+			}
 		}
 
-		.spectrum-Switch:active .spectrum-Switch-input:not(:disabled) + & {
+		.spectrum-Switch:active .spectrum-Switch-input:not(:disabled) + &,
+		.spectrum-Switch--active .spectrum-Switch-input:not(:disabled) + & {
 			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
 		}
 
-		.spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + & {
+		.spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + &,
+		.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + & {
 			/* Add down state without overriding translateX */
 			transform: translateX(calc(100% + (var(--mod-switch-border-width, var(--spectrum-switch-border-width)) * 0.25))) perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
 
