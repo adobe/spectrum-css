@@ -11,7 +11,15 @@
 	"packageRules": [
 		{
 			"groupName": "storybook ecosystem",
-			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*"]
+			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*"],
+			"matchUpdateTypes": ["minor", "patch"],
+			"baseBranches": ["main"]
+		},
+		{
+			"groupName": "storybook ecosystem (S2)",
+			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*", "@chromatic-com/storybook"],
+			"matchUpdateTypes": ["major", "minor", "patch"],
+			"baseBranches": ["spectrum-two"]
 		},
 		{
 			"groupName": "commitlint ecosystem",
