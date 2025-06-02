@@ -127,11 +127,11 @@
 
 	&.is-disabled {
 		.spectrum-HelpText-text {
-			color: var(--highcontrast-helptext-content-color-default, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
+			color: var(--highcontrast-helptext-content-color-disabled, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
 		}
 
 		.spectrum-HelpText-validationIcon {
-			color: var(--highcontrast-helptext-icon-color-default, var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default)));
+			color: var(--highcontrast-helptext-icon-color-disabled, var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default)));
 		}
 	}
 }
@@ -140,5 +140,7 @@
 	.spectrum-HelpText {
 		--highcontrast-helptext-content-color-default: CanvasText;
 		--highcontrast-helptext-icon-color-default: CanvasText;
+		--highcontrast-helptext-icon-color-disabled: GrayText;
+		--highcontrast-helptext-content-color-disabled: GrayText;
 	}
 }

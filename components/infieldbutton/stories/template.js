@@ -111,6 +111,7 @@ export const Template = (
 					type="button"
 					tabindex=${tabIndex}
 					@click=${onclick}
+					role="presentation"
 				>
 					<div class="${rootClass}-fill">
 						${when(iconName, () =>
