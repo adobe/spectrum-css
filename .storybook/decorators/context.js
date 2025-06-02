@@ -1,11 +1,8 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
-import legacyTokens from "@spectrum-css/tokens-legacy/dist/index.css?inline";
-import tokens from "@spectrum-css/tokens/dist/css/index.css?inline";
-
 /**
- * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
+ * @type import('storybook/internal/csf-tools').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Global properties added to each component; determines what stylesheets are loaded
  **/
 export const withContextWrapper = makeDecorator({
@@ -29,24 +26,9 @@ export const withContextWrapper = makeDecorator({
 			viewMode,
 		} = data;
 
-		const staticColorSettings = {
-			"black": {
-				background: "var(--spectrum-docs-static-black-background-color)",
-				color: "light"
-			},
-			"white": {
-				background: "var(--spectrum-docs-static-white-background-color)",
-				color: "dark"
-			},
-		};
+		const original = { color, context, scale };
 
-		const original = {
-			color,
-			context,
-			scale,
-		};
-
-		useEffect(() => {
+		useEffect(async () => {
 			const isDocs = viewMode === "docs";
 			const isTesting = showTestingGrid;
 			const isRaw = Boolean(context === "raw");
@@ -58,8 +40,17 @@ export const withContextWrapper = makeDecorator({
 				document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 			}
 
-			// Start by attaching the appropriate tokens to the container
-			toggleStyles(document.body, "tokens", isModern ? tokens : legacyTokens, !isRaw, context);
+			let styles;
+			if (isModern) {
+				styles = await import("@spectrum-css/tokens/dist/css/index.css?inline").then(m => m.default);
+			} else {
+				styles = await import("@spectrum-css/tokens-legacy/dist/index.css?inline").then(m => m.default);
+			}
+
+			if (styles && !isRaw) {
+				// Attach the appropriate tokens to the container
+				toggleStyles(document.body, "tokens", styles, true, context);
+			}
 
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
@@ -99,6 +90,17 @@ export const withContextWrapper = makeDecorator({
 					color = "dark";
 				}
 
+				const staticColorSettings = {
+					"black": {
+						background: "var(--spectrum-docs-static-black-background-color)",
+						color: "light"
+					},
+					"white": {
+						background: "var(--spectrum-docs-static-white-background-color)",
+						color: "dark"
+					},
+				};
+
 				// Let the static color override the color if it's set
 				if (!isTestingWrapper && hasStaticElement && staticColorSettings[staticKey]?.color) {
 					color = staticColorSettings[staticKey].color;
@@ -106,9 +108,7 @@ export const withContextWrapper = makeDecorator({
 
 				// Force a light theme for the body wrapper in testing preview mode
 				// because the individual containers will bring in the correct theme
-				if (isTestingWrapper) {
-					color = "light";
-				}
+				if (isTestingWrapper) color = "light";
 
 				for (let c of ["light", "dark", "darkest"]) {
 					container.classList.toggle(`spectrum--${c}`, c === color && !isRaw);
@@ -129,7 +129,7 @@ export const withContextWrapper = makeDecorator({
 				}
 			}
 
-		}, [context, color, scale, viewMode, original, staticColor, rootClass, tokens, legacyTokens, staticColorSettings, showTestingGrid]);
+		}, [context, color, scale, viewMode, original, staticColor, rootClass, showTestingGrid]);
 
 		return StoryFn(data);
 	},

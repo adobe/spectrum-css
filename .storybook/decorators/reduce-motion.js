@@ -1,8 +1,8 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
 /**
- * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
+ * @type import('storybook/internal/csf-tools').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  **/
 export const withReducedMotionWrapper = makeDecorator({
 	name: "withReducedMotionWrapper",
@@ -10,7 +10,7 @@ export const withReducedMotionWrapper = makeDecorator({
 	wrapper: (StoryFn, context) => {
 		const {
 			globals: {
-				reducedMotion = false,
+				reducedMotion /** @type {boolean} */ = false,
 			} = {},
 			id,
 			viewMode,

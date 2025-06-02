@@ -93,7 +93,7 @@
 				{ "env": "WATCH_MODE" }
 			],
 			"options": {
-				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" WATCH_MODE=true storybook dev --port 8080 --config-dir ."],
+				"commands": ["WATCH_MODE=true storybook dev --port 8080 --config-dir ."],
 				"cwd": "{projectRoot}"
 			}
 		},

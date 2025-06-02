@@ -1,7 +1,7 @@
 import legacy from "@spectrum-css/tokens-legacy/dist/json/tokens.json";
 import spectrum from "@spectrum-css/tokens/dist/json/tokens.json";
 
-import { useTheme } from "@storybook/theming";
+import { useTheme } from "storybook/theming";
 
 /**
  * A nestable function to search for a token value in the spectrum token data
@@ -72,7 +72,7 @@ function fetchTheme({ color, scale, context } = {}) {
 	const platform = scale === "medium" ? "desktop" : "mobile";
 	const tokens = context === "spectrum" ? spectrum : legacy;
 
-	return { color, scale, context, platform, tokens };
+	return { color, scale, context, platform, tokens: tokens ?? {} };
 }
 
 /**
@@ -91,8 +91,9 @@ export function fetchToken(key, fallback = undefined, presets = {}) {
 	const { color, platform, tokens } = fetchTheme(presets);
 
 	// Check if the spectrum data is available
-	if (!tokens || typeof tokens !== "object") return fallback;
+	if (typeof tokens !== "object") return fallback;
 
+	console.log(tokens?.[key]);
 	return parseData(tokens?.[key], { color, platform }) ?? fallback;
 }
 
@@ -117,7 +118,7 @@ export function fetchTokenSet(key, presets = {}) {
 		.filter((token) => key instanceof RegExp ? key.test(token) : token === key)
 		.sort(sortAlphaNumerically)
 		.reduce((acc, token) => {
-			acc[token] = parseData(tokens[token], { color, platform });
+			acc[token] = parseData(tokens?.[token], { color, platform });
 			return acc;
 		}, {});
 

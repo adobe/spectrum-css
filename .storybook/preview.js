@@ -1,6 +1,5 @@
 
 import {
-	withActions,
 	withArgEvents,
 	withContextWrapper,
 	withIconSpriteSheet,
@@ -9,7 +8,7 @@ import {
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 } from "./decorators";
-import { FontLoader, IconLoader } from "./loaders";
+// import { FontLoader } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
@@ -47,6 +46,7 @@ export const parameters = {
 		pauseAnimationAtEnd: true,
 		modes,
 	},
+	backgrounds: { disable: true },
 	controls: {
 		expanded: true,
 		hideNoControlsWarning: true,
@@ -96,6 +96,15 @@ export default {
 	parameters,
 	argTypes,
 	globalTypes,
+	initialGlobals: {
+		context: "spectrum",
+		color: "light",
+		scale: "medium",
+		textDirection: "ltr",
+		reducedMotion: false,
+		lang: "en-US",
+		testingPreview: false,
+	},
 	args: {
 		customClasses: [],
 		customStyles: {},
@@ -107,9 +116,9 @@ export default {
 		withContextWrapper,
 		withTestingPreviewWrapper,
 		withArgEvents,
-		withActions,
+		// withActions,
 		withIconSpriteSheet,
 	],
-	loaders: [FontLoader, IconLoader],
+	// loaders: [FontLoader],
 	tags: ["autodocs", "dev"],
 };

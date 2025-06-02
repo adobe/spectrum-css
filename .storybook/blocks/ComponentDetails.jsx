@@ -1,6 +1,6 @@
-import { useOf } from '@storybook/blocks';
-import { ResetWrapper } from "@storybook/components";
-import { styled } from "@storybook/theming";
+import { useOf } from "@storybook/addon-docs/blocks";
+import { ResetWrapper } from "storybook/internal/components";
+import { styled } from "storybook/theming";
 import React, { useEffect, useState } from "react";
 
 import { Body, Code, Heading } from "./Typography.jsx";
@@ -15,13 +15,16 @@ import WCSVG from "../assets/images/wc_logo.svg?raw";
 export const DSet = ({ term, children }) => {
 	return (
 		<>
-			<DTerm><Code style={{ display: "inline-block" }}>{term}</Code></DTerm>
+			<DTerm>
+				<Code style={{ display: "inline-block" }}>{term}</Code>
+			</DTerm>
 			<DDefinition>{children}</DDefinition>
 		</>
-	)
+	);
 };
 
-export const StatusLight = styled.span(({ variant = "positive", ...props }) => `
+export const StatusLight = styled.span(
+	({ variant = "positive", ...props }) => `
 	border-radius: 50%;
 	vertical-align: middle;
 	/* Scale this in relation to the typography */
@@ -32,7 +35,8 @@ export const StatusLight = styled.span(({ variant = "positive", ...props }) => `
 	line-height: 2;
 	margin-inline-end: ${["l", "xl"].includes(props.size) ? 10 : 8}px;
 	margin-block-end: 1px;
-`);
+`,
+);
 
 export const ResourceSection = styled.section`
 	display: flex;
@@ -74,7 +78,13 @@ export const ResourceTextWrapper = styled.div`
 	margin-inline: 16px;
 `;
 
-const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false, skipLink = false }) => {
+const VersionDetails = ({
+	tag,
+	data = {},
+	isDeprecated = false,
+	skipDate = false,
+	skipLink = false,
+}) => {
 	let statusType = "notice";
 	let statusMessage = "Not yet available on the npm registry.";
 
@@ -98,8 +108,14 @@ const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false
 
 	return (
 		<>
-			<StatusLight variant={statusType} title={statusMessage}/>
-			{!skipLink && data.link ? <a href={data.link} rel="noopener noreferrer">{data.version}</a> : data.version}
+			<StatusLight variant={statusType} title={statusMessage} />
+			{!skipLink && data.link ? (
+				<a href={data.link} rel="noopener noreferrer">
+					{data.version}
+				</a>
+			) : (
+				data.version
+			)}
 			{!skipDate && data.date ? ` ${data.date}` : ""}
 		</>
 	);
@@ -121,18 +137,25 @@ function processReleaseData(storyMeta, npmData) {
 		// Force "local" to be included in the list because we won't fetch it from npm
 		// but we want to show it in the list of tags
 		"local",
-		...Object.keys(npmData?.["dist-tags"] ?? {})
-	].filter(tag => !ignoredTags.includes(tag));
+		...Object.keys(npmData?.["dist-tags"] ?? {}),
+	].filter((tag) => !ignoredTags.includes(tag));
 
 	const mapVersions = new Map();
 	for (const tag of tags) {
 		let version = npmData?.versions?.[npmData?.["dist-tags"]?.[tag]]?.version;
-		let date = npmData?.time?.[npmData?.["dist-tags"]?.[tag]] ? "published " + new Date(npmData?.time?.[npmData?.["dist-tags"]?.[tag]]).toLocaleDateString("en-US", {
-			year: 'numeric',
-			month: 'short',
-			day: '2-digit',
-		}) : null;
-		const link = npmData?.["dist-tags"]?.[tag] ? `${previewURL}${packageJson.name}/v/${npmData?.["dist-tags"]?.[tag]}` : null;
+		let date = npmData?.time?.[npmData?.["dist-tags"]?.[tag]]
+			? "published " +
+				new Date(
+					npmData?.time?.[npmData?.["dist-tags"]?.[tag]],
+				).toLocaleDateString("en-US", {
+					year: "numeric",
+					month: "short",
+					day: "2-digit",
+				})
+			: null;
+		const link = npmData?.["dist-tags"]?.[tag]
+			? `${previewURL}${packageJson.name}/v/${npmData?.["dist-tags"]?.[tag]}`
+			: null;
 
 		// Prefer the version from the package.json file if this is the "local" tag
 		if (tag === "local") {
@@ -143,44 +166,64 @@ function processReleaseData(storyMeta, npmData) {
 		mapVersions.set(tag, {
 			version,
 			date,
-			link
+			link,
 		});
 	}
 
-	const allVersions = [...mapVersions.entries()].sort(([aTag, a], [bTag, b]) => {
-		// Sort the local tag to the top, followed by the latest tag
-		// then sort the rest of the tags by date in descending order
-		if (aTag === "local") return -1;
-		if (bTag === "local") return 1;
-		if (aTag === "latest") return -1;
-		if (bTag === "latest") return 1;
-		return new Date(b.date) - new Date(a.date);
-	});
+	const allVersions = [...mapVersions.entries()].sort(
+		([aTag, a], [bTag, b]) => {
+			// Sort the local tag to the top, followed by the latest tag
+			// then sort the rest of the tags by date in descending order
+			if (aTag === "local") return -1;
+			if (bTag === "local") return 1;
+			if (aTag === "latest") return -1;
+			if (bTag === "latest") return 1;
+			return new Date(b.date) - new Date(a.date);
+		},
+	);
 
 	// Remove the local tag from the list if the latest tag is available and it's larger than the local tag using semver
 	if (tags.includes("local") && tags.includes("latest")) {
-		const localVersion = allVersions.find(([tag]) => tag === "local")?.[1]?.version;
-		const latestVersion = allVersions.find(([tag]) => tag === "latest")?.[1]?.version;
+		const localVersion = allVersions.find(([tag]) => tag === "local")?.[1]
+			?.version;
+		const latestVersion = allVersions.find(([tag]) => tag === "latest")?.[1]
+			?.version;
 		if (localVersion && latestVersion && localVersion === latestVersion) {
-			allVersions.splice(allVersions.findIndex(([tag]) => tag === "local"), 1);
-		} else if (localVersion && latestVersion && localVersion !== latestVersion) {
+			allVersions.splice(
+				allVersions.findIndex(([tag]) => tag === "local"),
+				1,
+			);
+		} else if (
+			localVersion &&
+			latestVersion &&
+			localVersion !== latestVersion
+		) {
 			// Check if the local version is a lower semver than the latest version
 			const localSemver = localVersion.split(".");
 			const latestSemver = latestVersion.split(".");
 			const localMajor = parseInt(localSemver[0]);
 			const latestMajor = parseInt(latestSemver[0]);
 			if (localMajor < latestMajor) {
-				allVersions.splice(allVersions.findIndex(([tag, data]) => tag === "local"), 1);
+				allVersions.splice(
+					allVersions.findIndex(([tag, data]) => tag === "local"),
+					1,
+				);
 			} else if (localMajor === latestMajor) {
 				const localMinor = parseInt(localSemver[1]);
 				const latestMinor = parseInt(latestSemver[1]);
 				if (localMinor < latestMinor) {
-					allVersions.splice(allVersions.findIndex(([tag, data]) => tag === "local"), 1);
+					allVersions.splice(
+						allVersions.findIndex(([tag, data]) => tag === "local"),
+						1,
+					);
 				} else if (localMinor === latestMinor) {
 					const localPatch = parseInt(localSemver[2]);
 					const latestPatch = parseInt(latestSemver[2]);
 					if (localPatch < latestPatch) {
-						allVersions.splice(allVersions.findIndex(([tag, data]) => tag === "local"), 1);
+						allVersions.splice(
+							allVersions.findIndex(([tag, data]) => tag === "local"),
+							1,
+						);
 					}
 				}
 			}
@@ -197,12 +240,16 @@ function processReleaseData(storyMeta, npmData) {
 }
 
 function initCache(key) {
-	const [cache, setCache] = useState(JSON.parse(localStorage.getItem(key)) ?? {});
+	const [cache, setCache] = useState(
+		JSON.parse(localStorage.getItem(key)) ?? {},
+	);
 
 	useEffect(() => {
 		try {
 			localStorage.setItem(key, JSON.stringify(cache));
-		} catch (error) {/* empty */}
+		} catch (error) {
+			/* empty */
+		}
 	}, [key, cache]);
 
 	return [cache, setCache];
@@ -219,30 +266,32 @@ function fetchNpmData(packageName, setnpmData, setIsLoading) {
 			return;
 		}
 
-		fetch("https://registry.npmjs.org/" + packageName).then(async (response) => {
-			if (!response.ok) {
-				console.warn(`Failed to fetch npm data for ${packageName}`);
-				return;
-			}
+		fetch("https://registry.npmjs.org/" + packageName)
+			.then(async (response) => {
+				if (!response.ok) {
+					console.warn(`Failed to fetch npm data for ${packageName}`);
+					return;
+				}
 
-			const json = await response.json();
+				const json = await response.json();
 
-			if (!json) {
-				console.warn(`Failed to fetch npm data for ${packageName}`);
-				return;
-			}
+				if (!json) {
+					console.warn(`Failed to fetch npm data for ${packageName}`);
+					return;
+				}
 
-			setnpmData(json);
-			setCache(json);
-			setIsLoading(false);
-		}).catch((error) => {
-			console.warn(error?.message ?? error);
-		});
+				setnpmData(json);
+				setCache(json);
+				setIsLoading(false);
+			})
+			.catch((error) => {
+				console.warn(error?.message ?? error);
+			});
 	}, [cache, setCache, packageName, setnpmData, setIsLoading]);
 }
 
 const fetchLogo = (brand) => {
-	switch(brand) {
+	switch (brand) {
 		case "npm":
 			return NpmSVG;
 		case "GitHub":
@@ -254,7 +303,7 @@ const fetchLogo = (brand) => {
 	}
 
 	return;
-}
+};
 
 /**
  * Displays a resource card containing text and an image that links to a particular resource.
@@ -270,7 +319,9 @@ export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
 
 	return (
 		<ResourceLink href={href} className="sb-unstyled" title={alt}>
-			<ResourceIconWrapper dangerouslySetInnerHTML={{ __html: fetchLogo(logo) }} />
+			<ResourceIconWrapper
+				dangerouslySetInnerHTML={{ __html: fetchLogo(logo) }}
+			/>
 			<ResourceTextWrapper>
 				{heading ? <Heading size="xs">{heading}</Heading> : ""}
 				{alt ? <Body size="s">{alt}</Body> : ""}
@@ -295,13 +346,20 @@ export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
  * @param {string} rootClassName - a component's default rootClass arg
  * @returns {string}
  */
-export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassName, isDeprecated }) => {
+export const ResourceListDetails = ({
+	packageName,
+	spectrumData = [],
+	rootClassName,
+	isDeprecated,
+}) => {
 	if (!packageName) return;
 
 	let swc, href;
 
-	for(let i = 0; i < spectrumData?.length; i++) {
-		const thisComponent = !spectrumData[i]?.rootClass || spectrumData[i]?.rootClass === rootClassName;
+	for (let i = 0; i < spectrumData?.length; i++) {
+		const thisComponent =
+			!spectrumData[i]?.rootClass ||
+			spectrumData[i]?.rootClass === rootClassName;
 		if (spectrumData[i]?.guidelines && thisComponent) {
 			href = spectrumData[i]?.guidelines;
 		}
@@ -313,35 +371,48 @@ export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassN
 
 	return (
 		<ResourceSection className="sb-unstyled">
-			{href ?
+			{href ? (
 				<ResourceLinkContent
 					className="doc-block-resource-cards"
 					heading="Design guidelines"
 					alt="Spectrum website"
 					logo="Adobe"
-					href={href}/> : ""}
-			{swc ?
+					href={href}
+				/>
+			) : (
+				""
+			)}
+			{swc ? (
 				<ResourceLinkContent
 					className="doc-block-resource-cards"
 					heading="Web components"
 					alt="Spectrum web components"
 					logo="WC"
-					href={swc}/> : ""}
-				<ResourceLinkContent
-					className="doc-block-resource-cards"
-					heading="View package"
-					alt="npm"
-					logo="npm"
-					href={`https://npmjs.com/${packageName}`}/>
-			{!isDeprecated ?
+					href={swc}
+				/>
+			) : (
+				""
+			)}
+			<ResourceLinkContent
+				className="doc-block-resource-cards"
+				heading="View package"
+				alt="npm"
+				logo="npm"
+				href={`https://npmjs.com/${packageName}`}
+			/>
+			{!isDeprecated ? (
 				<ResourceLinkContent
 					className="doc-block-resource-cards"
 					heading="View repository"
 					alt="GitHub"
 					logo="GitHub"
-					href={`https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/> : ""}
+					href={`https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split("/").pop()}`}
+				/>
+			) : (
+				""
+			)}
 		</ResourceSection>
-	)
+	);
 };
 
 /**
@@ -357,9 +428,10 @@ export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassN
  *  <ComponentDetails />
  */
 export const ComponentDetails = () => {
-	const storyMeta = useOf('meta');
+	const storyMeta = useOf("meta");
 
-	const isDeprecated = storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated";
+	const isDeprecated =
+		storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated";
 	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
 	const rootClassName = storyMeta?.csfFile?.meta?.args?.rootClass ?? "";
 
@@ -377,33 +449,65 @@ export const ComponentDetails = () => {
 
 	fetchNpmData(packageJson.name, setnpmData, setIsLoading);
 
-	const { showLocalVersion, allVersions } = processReleaseData(storyMeta, npmData);
+	const { showLocalVersion, allVersions } = processReleaseData(
+		storyMeta,
+		npmData,
+	);
 
 	return (
 		<ResetWrapper>
-			{ !isLoading ? <>
+			{!isLoading ? (
+				<>
 					<DList className="docblock-metadata sb-unstyled">
-						{ isDeprecated
-							?	<>
-									<DTerm key={'status'}>Status:</DTerm>
-									<DDefinition key={'status-data'}>Deprecated</DDefinition>
-								</>
-							: ""
-						}
-						{ showLocalVersion
-							?	<>
-									<DTerm key={'version-label'}>Local version:</DTerm>
-									<DDefinition key={'version'}><VersionDetails tag={"local"} data={allVersions && allVersions.find(([tag]) => tag === "local")?.[1]} isDeprecated={isDeprecated} /></DDefinition>
-								</>
-							: <>
-								<DTerm key={'version-label'}>Latest version:</DTerm>
-								<DDefinition key={'version'}><VersionDetails tag={"latest"} data={allVersions && allVersions.find(([tag]) => tag === "latest")?.[1]} isDeprecated={isDeprecated} skipLink={true} /></DDefinition>
+						{isDeprecated ? (
+							<>
+								<DTerm key={"status"}>Status:</DTerm>
+								<DDefinition key={"status-data"}>Deprecated</DDefinition>
 							</>
-						}
+						) : (
+							""
+						)}
+						{showLocalVersion ? (
+							<>
+								<DTerm key={"version-label"}>Local version:</DTerm>
+								<DDefinition key={"version"}>
+									<VersionDetails
+										tag={"local"}
+										data={
+											allVersions &&
+											allVersions.find(([tag]) => tag === "local")?.[1]
+										}
+										isDeprecated={isDeprecated}
+									/>
+								</DDefinition>
+							</>
+						) : (
+							<>
+								<DTerm key={"version-label"}>Latest version:</DTerm>
+								<DDefinition key={"version"}>
+									<VersionDetails
+										tag={"latest"}
+										data={
+											allVersions &&
+											allVersions.find(([tag]) => tag === "latest")?.[1]
+										}
+										isDeprecated={isDeprecated}
+										skipLink={true}
+									/>
+								</DDefinition>
+							</>
+						)}
 					</DList>
-					<ResourceListDetails packageName={packageName} spectrumData={spectrumData} rootClassName={rootClassName} isDeprecated={isDeprecated}/>
+					<ResourceListDetails
+						packageName={packageName}
+						spectrumData={spectrumData}
+						rootClassName={rootClassName}
+						isDeprecated={isDeprecated}
+					/>
 				</>
-			: ""}
+			) : (
+				""
+			)}
 		</ResetWrapper>
 	);
 };
@@ -415,9 +519,10 @@ export const ComponentDetails = () => {
  *  <TaggedReleases />
  */
 export const TaggedReleases = () => {
-	const storyMeta = useOf('meta');
+	const storyMeta = useOf("meta");
 
-	const isDeprecated = storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated";
+	const isDeprecated =
+		storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated";
 	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
 
 	const [isLoading, setIsLoading] = useState(true);
@@ -429,16 +534,24 @@ export const TaggedReleases = () => {
 
 	return (
 		<ResetWrapper>
-			{ !isLoading ?
+			{!isLoading ? (
 				<DList skipBorder={true} className="docblock-releases sb-unstyled">
-					{ allVersions.filter(([tag]) => tag !== "local").map(([tag, data], idx) => (
-						<DSet key={`${tag}-${idx}`} term={tag}>
-							<VersionDetails tag={tag} data={data} isDeprecated={isDeprecated} skipDate={true} />
-						</DSet>
-					))}
+					{allVersions
+						.filter(([tag]) => tag !== "local")
+						.map(([tag, data], idx) => (
+							<DSet key={`${tag}-${idx}`} term={tag}>
+								<VersionDetails
+									tag={tag}
+									data={data}
+									isDeprecated={isDeprecated}
+									skipDate={true}
+								/>
+							</DSet>
+						))}
 				</DList>
-				: ""
-			}
+			) : (
+				""
+			)}
 		</ResetWrapper>
 	);
 };

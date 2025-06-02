@@ -1,6 +1,8 @@
 import fs from "node:fs";
-import path from "node:path";
-import remarkGfm from 'remark-gfm';
+import { createRequire } from "node:module";
+import path, { dirname, join } from "node:path";
+
+const require = createRequire(import.meta.url);
 
 // Get a list of all the folders in the components directory
 const componentDir = path.resolve(__dirname, "../components");
@@ -20,66 +22,26 @@ export default {
 			files: "*.@(stories.js|mdx)",
 			titlePrefix: "Guides",
 		},
-		{
-			directory: "./deprecated",
-			files: "**/*.@(stories.js|mdx)",
-			titlePrefix: "Deprecated",
-		},
+		// {
+		// 	directory: "./deprecated",
+		// 	files: "**/*.@(stories.js|mdx)",
+		// 	titlePrefix: "Deprecated",
+		// },
 	],
 	rootDir: "../",
 	staticDirs: ["./assets", "./assets/images"],
 	addons: [
-		{
-			name: "@storybook/addon-controls",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-toolbars",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-measure",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-outline",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-docs",
-			options: {
-				// Enables JSX support in MDX for projects that aren't configured to handle the format.
-				configureJSX: true,
-				// Support markdown in MDX files
-				transcludeMarkdown: true,
-				mdxPluginOptions: {
-					mdxCompileOptions: {
-						remarkPlugins: [remarkGfm],
-					},
-				},
-			},
-		},
-		{
-			name: "@storybook/addon-actions",
-			options: {},
-		},
-		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
+		"@storybook/addon-docs",
 		"@whitespace/storybook-addon-html",
-		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
 		"@storybook/addon-a11y",
-		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
-		"@storybook/addon-interactions",
-		// https://docs.chromatic.com/docs/visual-tests-addon/
 		"@chromatic-com/storybook",
-		// https://storybook.js.org/addons/@storybook/addon-designs/
 		"@storybook/addon-designs",
 	],
 	core: {
 		disableTelemetry: true,
 		disableWhatsNewNotifications: true,
-		builder: "@storybook/builder-vite",
+		builder: getAbsolutePath("@storybook/builder-vite"),
 	},
 	async viteFinal(config, { configType }) {
 		const { mergeConfig } = await import("vite");
@@ -90,9 +52,10 @@ export default {
 			optimizeDeps: {
 				include: [
 					"@whitespace/storybook-addon-html",
-					"@storybook/blocks",
-					"@storybook/theming",
-					"@storybook/components",
+					"lit",
+					"lodash-es",
+					"storybook/internal/components",
+					"storybook/theming",
 				],
 			},
 			build: {
@@ -123,7 +86,6 @@ export default {
 			disabledAddons: [
 				"@whitespace/storybook-addon-html",
 				"@etchteam/storybook-addon-status",
-				"@storybook/addon-interactions",
 			],
 			disableBlocks: false,
 			disableAutoDocs: false,
@@ -131,7 +93,7 @@ export default {
 			disableDocgen: false,
 		},
 	},
-	framework: "@storybook/web-components-vite",
+	framework: getAbsolutePath("@storybook/web-components-vite"),
 	typescript: {
 		reactDocgen: "react-docgen",
 		// Not using typescript so disable the check
@@ -151,3 +113,7 @@ export default {
 		},
 	},
 };
+
+function getAbsolutePath(value) {
+    return dirname(require.resolve(join(value, "package.json")));
+}

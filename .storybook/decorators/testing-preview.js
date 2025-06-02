@@ -1,8 +1,8 @@
-import { makeDecorator } from "@storybook/preview-api";
 import isChromatic from "chromatic/isChromatic";
+import { makeDecorator } from "storybook/preview-api";
 
 /**
- * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
+ * @type import('storybook/internal/csf-tools').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Lets you preview the Chromatic testing view locally
  **/
 export const withTestingPreviewWrapper = makeDecorator({

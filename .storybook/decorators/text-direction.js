@@ -1,8 +1,8 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "storybook/preview-api";
 import { fetchContainers } from "./helpers.js";
 
 /**
- * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
+ * @type import('storybook/internal/csf-tools').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Sets the text direction of the document, using the global set with a toolbar control. These properties are assigned to the document root element.
  **/
 export const withTextDirectionWrapper = makeDecorator({

@@ -1,4 +1,4 @@
-import { styled } from "@storybook/theming";
+import { styled } from "storybook/theming";
 import React from "react";
 import styles from "@spectrum-css/bundle/dist/index.module.css";
 

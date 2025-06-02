@@ -23,6 +23,6 @@ export { withTextDirectionWrapper } from "./text-direction.js";
 export { withUnderlayWrapper } from "./underlay.js";
 
 /* External decorators exported for use in stories */
-export { withActions } from "@storybook/addon-actions/decorator";
+export { withActions } from "storybook/actions/decorator";
 
 export * from "./utilities.js";

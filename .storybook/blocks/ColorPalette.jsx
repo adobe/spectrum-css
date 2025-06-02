@@ -1,4 +1,4 @@
-import { ResetWrapper } from "@storybook/components";
+import { ResetWrapper } from "storybook/internal/components";
 import { capitalize } from "lodash-es";
 import React from "react";
 import { List } from "./Layouts.jsx";

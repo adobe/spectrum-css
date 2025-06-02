@@ -1,11 +1,11 @@
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
-import { makeDecorator } from "@storybook/preview-api";
 import { html } from "lit";
 import { when } from "lit/directives/when.js";
+import { makeDecorator } from "storybook/preview-api";
 import { getRandomId } from "./utilities.js";
 
 /**
- * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
+ * @type import('storybook/internal/csf-tools').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Ensures the Underlay component is rendered only once.
  **/
 export const withUnderlayWrapper = makeDecorator({
