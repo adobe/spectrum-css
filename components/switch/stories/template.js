@@ -13,6 +13,7 @@ export const Template = ({
 	label = "Switch label",
 	isDisabled = false,
 	isChecked = false,
+	isActive = false,
 	isEmphasized = false,
 	customClasses = [],
 	customStyles = {},
@@ -29,6 +30,7 @@ export const Template = ({
 				[`${rootClass}--emphasized`] : isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
+				[`${rootClass}--active`]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
