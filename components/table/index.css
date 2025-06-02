@@ -114,6 +114,21 @@
 	--mod-avatar-block-size: var(--mod-table-avatar-size, var(--spectrum-table-avatar-size));
 	--mod-avatar-inline-size: var(--mod-table-avatar-size, var(--spectrum-table-avatar-size));
 
+	/* Action button for menus in header cells */
+	--mod-action-button-icon-size: var(--spectrum-table-disclosure-icon-size);
+	--mod-actionbutton-font-weight: var(--spectrum-table-header-font-weight);
+	--mod-actionbutton-font-size: var(--spectrum-table-row-font-size);
+	--mod-actionbutton-font-family: var(--spectrum-table-row-font-family);
+	--mod-actionbutton-line-height: var(--spectrum-table-row-line-height);
+	--mod-actionbutton-background-color-hover: transparent;
+	--mod-actionbutton-background-color-focus: transparent;
+	--mod-actionbutton-background-color-down: transparent;
+	--mod-actionbutton-content-color-default: var(--spectrum-table-header-text-color);
+	--mod-actionbutton-edge-to-text: var(--spectrum-table-cell-inline-spacing);
+	--mod-actionbutton-text-to-visual: var(--spectrum-table-visual-to-text);
+	--mod-actionbutton-edge-to-visual: var(--spectrum-table-cell-inline-spacing);
+	--mod-actionbutton-focus-indicator-border-radius: var(--spectrum-table-focused-cell-border-radius);
+
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
@@ -222,6 +237,32 @@
 			--spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus)));
 		}
 	}
+
+	/* These styles get applied to the headCell when the headCell has the --menuButton modifier class. */
+	&.spectrum-Table-menuButton {
+		--spectrum-table-cell-inline-spacing: 0;
+		--spectrum-table-header-row-top-to-text: 0;
+		--spectrum-table-header-row-bottom-to-text: 0;
+	}
+
+	/* These styles get applied to the icon within that menu button. */
+	& .spectrum-Table-menuButton {
+		--mod-icon-color: var(--spectrum-table-icon-color);
+
+		&:hover {
+			--mod-icon-color: var(--spectrum-table-icon-color-hover);
+		}
+
+		&:active {
+			--mod-icon-color: var(--spectrum-table-icon-color-active);
+		}
+
+		&:focus,
+		&:focus:hover,
+		&:focus-visible {
+			--mod-icon-color: var(--spectrum-table-icon-color-key-focus);
+		}
+	}
 }
 
 .spectrum-Table-scroller {
@@ -281,6 +322,11 @@
 		}
 	}
 
+	/* Places the focus indicator above the table cell borders. */
+	.spectrum-ActionButton::after {
+		z-index: 1;
+	}
+
 	&:first-child .spectrum-Table-headCell:first-child {
 		border-start-start-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 		border-inline-start: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
@@ -317,6 +363,19 @@
 /* Head cell column text */
 .spectrum-Table-columnTitle {
 	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Head cell column text in the action button */
+.spectrum-Table-menuButton {
+	.spectrum-ActionButton {
+		flex-direction: row-reverse;
+		min-block-size: var(--spectrum-table-min-header-row-height);
+
+		/* Allows the action button to wrap to the next line if the text + icon size is too long. */
+		min-inline-size: unset;
+		flex-wrap: wrap-reverse;
+	}
 }
 
 /********* ICONS- SORT, DISCLOSURE/MENU *********/
