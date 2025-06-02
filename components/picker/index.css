@@ -106,9 +106,7 @@
 	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
 	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-medium);
 
-	.spectrum-Picker-popover {
-		--mod-popover-animation-distance: var(--spectrum-picker-popover-animation-distance);
-	}
+	--mod-popover-animation-distance: var(--spectrum-picker-popover-animation-distance);
 }
 
 .spectrum-Picker--sizeS {

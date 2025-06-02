@@ -18,7 +18,6 @@ import "../index.css";
  */
 export const Picker = ({
 	rootClass = "spectrum-Picker",
-	id = getRandomId("picker-button"),
 	size = "m",
 	placeholder,
 	currentValue,
@@ -51,7 +50,6 @@ export const Picker = ({
 			})}
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
-			id=${id}
 			style=${styleMap(customStyles)}
 			type="button"
 			@click=${function() {
@@ -115,6 +113,7 @@ export const Template = ({
 	placeholder,
 	currentValue,
 	helpText,
+	id = getRandomId("picker"),
 	isQuiet = false,
 	isOpen = false,
 	isInvalid = false,
@@ -182,6 +181,7 @@ export const Template = ({
 
 	const markup = html`
 		<div
+		id=${id}
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:

@@ -2,7 +2,7 @@
 "@spectrum-css/picker": major
 ---
 
-### S2 Picker Component Refactor
+### S2 Picker component refactor
 
 - Refactors Picker component to use proper custom property naming conventions
 - Adds size-specific animation distances for Popover component
