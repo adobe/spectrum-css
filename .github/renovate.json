@@ -13,14 +13,19 @@
 		{
 			"groupName": "storybook ecosystem",
 			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*"],
-			"matchUpdateTypes": ["minor", "patch"],
-			"baseBranches": ["main"]
+			"matchUpdateTypes": ["minor", "patch"]
 		},
 		{
-			"groupName": "storybook ecosystem (S2)",
-			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*", "@chromatic-com/storybook"],
-			"matchUpdateTypes": ["major", "minor", "patch"],
-			"baseBranches": ["spectrum-two"]
+			"groupName": "storybook ecosystem (disabled)",
+			"matchPackageNames": [
+				"storybook",
+				"@storybook/*",
+				"@types/storybook*",
+				"@chromatic-com/storybook"
+			],
+			"matchUpdateTypes": ["major"],
+			"baseBranches": ["main"],
+			"enabled": false
 		},
 		{
 			"groupName": "commitlint ecosystem",
