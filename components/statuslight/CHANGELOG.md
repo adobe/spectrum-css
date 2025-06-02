@@ -1,5 +1,13 @@
 # Change log
 
+## 10.0.0-next.2
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 status light fix
+
+  This work removes the reference to `default-font-family` in favor for `sans-font-family-stack` to ensure the status light's font renders appropriately for web.
+
 ## 10.0.0-next.1
 
 ### Patch Changes

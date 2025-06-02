@@ -1,5 +1,11 @@
 # Change log
 
+## 10.0.0-next.2
+
+### Minor Changes
+
+- [#3866](https://github.com/adobe/spectrum-css/pull/3866) [`1b33315`](https://github.com/adobe/spectrum-css/commit/1b33315fa1b65d65fe940d3be4ea4395d5394655) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Updates the icon component to use size tokens for newly added ui icons.
+
 ## 10.0.0-next.1
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # Change log
 
+## 7.0.0-next.2
+
+### Minor Changes
+
+- [#3656](https://github.com/adobe/spectrum-css/pull/3656) [`911c390`](https://github.com/adobe/spectrum-css/commit/911c390b9fa0b43187e5ab535874f2ed1ffeb88d) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - #### Including the touch action rule for draggable content
+
+  The slider, color slider, color area, color wheel, color handle all deserve to have their touch-action property managed so that trying to set the value of those interfaces doesn't cause page scrolling in touch context.
+
+  Adding `touch-action: none` to a slider or any draggable component is necessary to prevent the browser's default touch behaviors—such as scrolling, pinch-zooming, or double-tap zooming from interfering with the component's intended interaction.
+
+  These components also include `user-select: none` to prevent selection or highlighting of any text elements.
+
 ## 7.0.0-next.1
 
 ### Patch Changes

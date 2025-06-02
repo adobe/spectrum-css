@@ -1,5 +1,13 @@
 # Change log
 
+## 5.0.0-next.1
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ## S2 floating action button fix
+
+  Opts to use the color property as opposed to fill for the icon. This correctly passes the floating action button icon colors to the component, to override the fill property style that is set on the embedded `.spectrum-Icon`.
+
 ## 5.0.0-next.0
 
 ### Patch Changes

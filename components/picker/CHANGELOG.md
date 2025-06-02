@@ -1,5 +1,18 @@
 # Change log
 
+## 10.0.0-next.2
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 picker fixes
+
+  This work addresses some regressions noticed in the migrated S2 picker component. Mainly, S2 border colors were fixed (most of them are transparent, including disabled).
+
+  PRs used as reference:
+
+  - [Picker docs to storybook migration](https://github.com/adobe/spectrum-css/pull/3200)
+  - [S2 picker migration](https://github.com/adobe/spectrum-css/pull/2697)
+
 ## 10.0.0-next.1
 
 ### Patch Changes
