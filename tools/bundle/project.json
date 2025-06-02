@@ -3,7 +3,7 @@
 	"tag": ["tooling"],
 	"targets": {
 		"build": {
-			"dependsOn": ["clean", "^build", "refresh"],
+			"dependsOn": ["clean", "^build"],
 			"executor": "nx:run-commands",
 			"inputs": [
 				"{projectRoot}/src/index.css",
@@ -31,25 +31,6 @@
 			}
 		},
 		"format": {},
-		"lint": {},
-		"refresh": {
-			"cache": false,
-			"dependsOn": [],
-			"executor": "nx:run-commands",
-			"inputs": [
-				"{projectRoot}/tasks/bundler.js",
-				"builder",
-				"postcss",
-				"stylelint",
-				{ "env": "NODE_ENV" }
-			],
-			"options": {
-				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'import(\"./tasks/bundler.js\").then(module => module.refresh() )'"
-				],
-				"cwd": "{projectRoot}"
-			},
-			"outputs": ["{projectRoot}/src/index.css"]
-		}
+		"lint": {}
 	}
 }

@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-next.0
+
+### Major Changes
+
+- Release bundle with the latest styles on the S2 feature branch.
+
 ## 1.0.1
 
 ### Patch Changes

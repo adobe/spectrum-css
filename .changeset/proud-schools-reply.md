@@ -1,7 +1,7 @@
 ---
-`@spectrum-css/swatchgroup`: major
-`@spectrum-css/swatch`: major
-`@spectrum-css/tokens`: minor
+"@spectrum-css/swatchgroup": major
+"@spectrum-css/swatch": major
+"@spectrum-css/tokens": minor
 ---
 
 #### S2 migration for Swatch group

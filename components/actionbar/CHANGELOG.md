@@ -1,5 +1,32 @@
 # Change log
 
+## 11.0.0-next.2
+
+### Major Changes
+
+- [#3657](https://github.com/adobe/spectrum-css/pull/3657) [`c06e995`](https://github.com/adobe/spectrum-css/commit/c06e9953caaaafa3c3f1841057e26c6212754ae5) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Action bar S2 migration
+
+Action bar now has some updated colors, corner radius, and icons. There's a new look to the default and emphasized variants.
+
+The emphasized has changed from an `accent` background color to a `neutral` background color. In light mode, the clear button and action buttons are `staticWhite` and in dark mode they are `staticBlack`.
+
+##### New tokens
+
+`--spectrum-actionbar-emphasized-actionbutton-label-color`
+`--spectrum-actionbar-emphasized-icon-color`
+`--spectrum-actionbar-minimum-width`
+`--spectrum-actionbar-spacing-label-to-action-group`
+`--spectrum-actionbar-spacing-action-group-edge`
+`--spectrum-actionbar-close-button-to-counter`
+
+##### New modifiers
+
+`--mod-actionbar-minimum-width`
+`--mod-actionbar-spacing-action-group-edge`
+`--mod-actionbar-spacing-label-to-action-group`
+
 ## 11.0.0-next.1
 
 ### Patch Changes
