@@ -1,3 +1,4 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
@@ -219,6 +220,7 @@ export const Template = ({
 	hasColumnDividers = false,
 	isSortable = false,
 	sortIcon = "Sort",
+	hasMenu = false,
 	rowItems = [],
 	customClasses = [],
 	id = getRandomId("table"),
@@ -326,10 +328,21 @@ export const Template = ({
 					<span class="${rootClass}-columnTitle">Column title</span>
 				</${thTag}>
 				<${thTag}
-					class="${rootClass}-headCell"
+					class="${rootClass}-headCell ${hasMenu ? `${rootClass}-menuButton` : ""}"
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
 				>
-					<span class="${rootClass}-columnTitle">Column title</span>
+					${when(hasMenu, () => ActionButton({
+						size: "m",
+						isQuiet: true,
+						iconName: "ChevronDown100",
+						iconSet: "ui",
+						iconOnly: true,
+						label: "Column title",
+						customClasses: [`${rootClass}-menuButton`],
+					}, context),
+					() => html`
+						<span class="${rootClass}-columnTitle">Column title</span>
+					`)}
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell"
@@ -353,6 +366,7 @@ export const Template = ({
 					useDivs,
 					visualElement,
 					hasColumnDividers,
+					hasMenu,
 					isEmphasized,
 					...item,
 				}, context)

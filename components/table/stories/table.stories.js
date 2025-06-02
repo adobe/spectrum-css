@@ -68,6 +68,16 @@ export default {
 			},
 			control: "boolean",
 		},
+		hasMenu: {
+			name: "Has a menu",
+			description: "Adds an action button to header cell to indicate that the column has a hidden menu.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		isSortable: {
 			name: "Enable sortable columns",
 			description: "Table columns can be sortable and are indicated by appropriate sort icons.",
@@ -418,6 +428,20 @@ Sortable.parameters = {
 };
 Sortable.storyName = "Sortable columns";
 Sortable.tags = ["!dev"];
+
+/**
+ * Tables can have additional actions in the header cells that could trigger a menu. The content of the header cell is an action button](/docs/components-action-button--docs).
+ */
+export const WithMenuButton = Template.bind({});
+WithMenuButton.args = {
+	...Default.args,
+	hasMenu: true,
+};
+WithMenuButton.storyName = "With action button";
+WithMenuButton.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+WithMenuButton.tags = ["!dev"];
 
 /**
  * A quiet multi-select table has emphasized styling by default, but excluding the `.spectrum-Table--emphasized` class will change the style of selected rows.
