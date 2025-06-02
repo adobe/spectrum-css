@@ -1,5 +1,21 @@
 # Change log
 
+## 15.0.0-next.2
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 button fixes
+
+  This work addresses some regressions noticed in the migrated S2 button. Mainly, the borders were gray where they were not supposed to be. Most of the changes are to ensure that the correct S2 tokens are being used appropriately in the styles and button follows the S2 design specs.
+
+  Additionally, there was some missing style support for the `.spectrum-Button--noWrap` option, so this work reimplements a "no wrapping" option for button components, and removes some of the repetitiveness in the no wrap test cases and story.
+
+  PRs used as reference:
+
+  - [S2 button migration](https://github.com/adobe/spectrum-css/pull/2600)
+  - [Add text wrapping option](https://github.com/adobe/spectrum-css/pull/3086)
+  - [PostCSS plugin updates/fixes](https://github.com/adobe/spectrum-css/pull/3502)
+
 ## 15.0.0-next.1
 
 ### Patch Changes

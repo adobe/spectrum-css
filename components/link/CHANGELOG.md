@@ -1,5 +1,17 @@
 # Change log
 
+## 8.0.0-next.2
+
+### Minor Changes
+
+- [#3861](https://github.com/adobe/spectrum-css/pull/3861) [`911a7cf`](https://github.com/adobe/spectrum-css/commit/911a7cf8b3a651f3e86d67b7b1c08ee1de540c17) Thanks [@cdransf](https://github.com/cdransf)! - Fixes keyboard focus shift by changing padding to outline-offset
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 link fix
+
+  This work adds the static color focus ring tokens to links (so that static white and static black links do _not_ have the usual blue focus ring).
+
 ## 8.0.0-next.1
 
 ### Patch Changes

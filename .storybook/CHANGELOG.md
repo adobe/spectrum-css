@@ -1,5 +1,14 @@
 # Change Log
 
+## 12.0.5-next.3
+
+### Patch Changes
+
+- Updated dependencies [[`d47295a`](https://github.com/adobe/spectrum-css/commit/d47295a06cf974c347d794ae4f71bc4c8c498025), [`f0d187f`](https://github.com/adobe/spectrum-css/commit/f0d187ff016d49c46ac125cb37ae274644608505), [`1cdfcbf`](https://github.com/adobe/spectrum-css/commit/1cdfcbff6cb3369d710cec78733536d5dd72e7d4), [`1b33315`](https://github.com/adobe/spectrum-css/commit/1b33315fa1b65d65fe940d3be4ea4395d5394655)]:
+  - @spectrum-css/bundle@2.0.0-next.0
+  - @spectrum-css/tokens@16.1.0-next.3
+  - @spectrum-css/ui-icons@2.0.0-next.1
+
 ## 12.0.5-next.2
 
 ### Patch Changes
