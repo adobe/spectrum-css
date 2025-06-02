@@ -45,7 +45,7 @@
 		"@spectrum-css/ui-icons": "2.0.0-next.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.27.3",
+		"@babel/core": "^7.27.4",
 		"@chromatic-com/storybook": "^3.2.6",
 		"@etchteam/storybook-addon-status": "^5.0.0",
 		"@storybook/addon-a11y": "8.4.7",
@@ -70,8 +70,8 @@
 		"npm-registry-fetch": "^18.0.2",
 		"postcss": "^8.5.4",
 		"prettier": "^3.5.3",
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
 		"react-syntax-highlighter": "^15.6.1",
 		"remark-gfm": "^4.0.1",
 		"storybook": "8.4.7",
