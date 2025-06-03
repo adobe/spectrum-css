@@ -199,7 +199,6 @@
 	&.is-focused,
 	&:focus-visible,
 	&:focus {
-		--highcontrast-table-row-text-color: var(--highcontrast-table-row-text-color-focus);
 		--highcontrast-table-icon-color: var(--highcontrast-table-row-text-color-focus);
 		--spectrum-table-row-text-color: var(--spectrum-table-row-text-color-key-focus);
 
@@ -277,20 +276,20 @@
 
 	/* These styles get applied to the icon within that menu button. */
 	& .spectrum-Table-menuButton {
-		--mod-icon-color: var(--spectrum-table-icon-color);
+		--mod-icon-color: var(--spectrum-table-header-icons-color-default);
 
 		&:hover {
-			--mod-icon-color: var(--spectrum-table-icon-color-hover);
+			--mod-icon-color: var(--spectrum-table-header-icons-color-hover);
 		}
 
 		&:active {
-			--mod-icon-color: var(--spectrum-table-icon-color-active);
+			--mod-icon-color: var(--spectrum-table-header-icons-color-active);
 		}
 
 		&:focus,
 		&:focus:hover,
 		&:focus-visible {
-			--mod-icon-color: var(--spectrum-table-icon-color-key-focus);
+			--mod-icon-color: var(--spectrum-table-header-icons-color-key-focus);
 		}
 	}
 }
