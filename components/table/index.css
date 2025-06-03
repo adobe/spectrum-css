@@ -945,6 +945,15 @@
 	}
 }
 
+/********* SPARKLINE CHARTS *********/
+.spectrum-Table-chartContent {
+	.spectrum-Table-chartImage {
+		display: block;
+		inline-size: fit-content;
+		block-size: auto;
+	}
+}
+
 /********* HIGH CONTRAST *********/
 @media (forced-colors: active) {
 	.spectrum-Table {
