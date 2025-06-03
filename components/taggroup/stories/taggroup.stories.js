@@ -1,8 +1,10 @@
+import { withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid } from "@spectrum-css/preview/types";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { TagGroups } from "./taggroup.test.js";
+import { exampleTagItems, TagGroups } from "./taggroup.test.js";
 import { Template } from "./template.js";
 
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
@@ -23,31 +25,78 @@ export default {
 			else value.table = { ...value.table, category: "Tag settings" };
 			return { ...acc, [key]: value };
 		}, {}),
-		ariaLabel: {
-			name: "Aria-label",
-			type: { name: "string" },
+		isInvalid: {
+			...isInvalid,
+			description: "Displays help text below the tag group with invalid icon and styling.",
+			if: { arg: "helpText", neq: "" },
+		},
+		ariaLabel: { table: { disable: true } },
+		label: { table: { disable: true } },
+		items: { table: { disable: true } },
+		actionButtonText: {
+			name: "Action button text",
+			description: "Displays an action button below the tag group, if left blank, the action button will not be displayed.",
+			type: { name: "text" },
 			table: {
-				type: { summary: "string" },
+				type: { summary: "text" },
 				category: "Content",
 			},
-			control: { type: "text" },
+			control: "text",
 		},
-		items: { table: { disable: true } },
-		isRemovable: {
-			name: "Removable tags",
-			description: "True if a button is present to clear the tag.",
+		fieldLabel: {
+			name: "Field label",
+			description: "Displays a label above the tag group, if left blank, the label will not be displayed.",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Content",
+			},
+			control: "text",
+		},
+		fieldLabelPosition: {
+			name: "Field label position",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Shared settings",
+				category: "Content",
 			},
-			control: "boolean",
+			options: ["top", "side"],
+			control: "select",
+			if: { arg: "fieldLabel", truthy: true },
+		},
+		helpText: {
+			name: "Help text",
+			description: "Displays help text below the tag group, if left blank, the help text will not be displayed.",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Content",
+			},
+			control: "text",
+		},
+		numberOfTags: {
+			name: "Number of tags",
+			description: "The number of tags to display in the tag group.",
+			type: { name: "number" },
+			table: {
+				type: { summary: "number" },
+				category: "Content",
+			},
+			control: { type: "number", min: 0, max: 30, step: 1 },
 		},
 	},
 	args: {
+		...TagStories.args,
 		rootClass: "spectrum-TagGroup",
 		isRemovable: false,
 		size: "m",
+		actionButtonText: "Show all",
+		helpText: "Help text description",
+		fieldLabel: "Tag group label",
+		fieldLabelPosition: "top",
+		isInvalid: false,
+		numberOfTags: 3,
+		ariaLabel: "Tags",
 	},
 	parameters: {
 		actions: {
@@ -61,64 +110,165 @@ export default {
 		},
 		packageJson,
 		metadata,
+		downState: {
+			selectors: [".spectrum-Tag", ".spectrum-ActionButton"],
+		},
+		status: {
+			type: "migrated",
+		},
 	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
+	tags: ["migrated"],
 };
 
+/**
+ * A tag group on its own should always have a label. Labels can be placed either on top or on the side on the tags, but top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts.
+ */
 export const Default = TagGroups.bind({});
-Default.args = {
-	ariaLabel: "Tags",
-	items: [
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 2",
-		},
-		{
-			label: "Tag 3",
-		},
-	],
-};
+Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
 /**
- * A tag group can contain removable tags when the context is for editing or non-removable tags when tags are read-only. Removable and non-removable tags cannot be combined within the tag group.
+ * A tag group on its own should always have a label. Labels can be placed either on top or on the side on the tags, but top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts.
  */
-export const Removable = Template.bind({});
-Removable.tags = ["!dev"];
-Removable.parameters = {
+export const DefaultWithLabel = TagGroups.bind({});
+DefaultWithLabel.storyName = "Label position - default/top";
+DefaultWithLabel.tags = ["!dev"];
+DefaultWithLabel.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
 };
-Removable.args = {
+DefaultWithLabel.args = {
+	actionButtonText: "",
+	helpText: "",
+	items: exampleTagItems,
+	fieldLabel: "Tags",
+};
+
+/**
+ * Tag group labels can also be placed on the side of the tag group. Side labels are most useful when vertical space is limited.
+ */
+export const SideLabel = Template.bind({});
+SideLabel.storyName = "Label position - side";
+SideLabel.tags = ["!dev"];
+SideLabel.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+SideLabel.args = {
+	fieldLabelPosition: "side",
+	items: exampleTagItems,
+	fieldLabel: "Tags",
+	helpText: "These tags were automatically added."
+};
+
+/**
+ * A tag group can contain removable tags when the context is for editing or non-removable tags when tags are read-only. Removable and non-removable tags cannot be combined within the tag group.
+ *
+ * When horizontal space is limited in a tag group, the tags wrap to form another line. Individual tags don't wrap between lines; they'll either move to the next line or the text within the tag will truncate.
+ */
+export const RemovableAndWrapping = Template.bind({});
+RemovableAndWrapping.storyName = "Removable and wrapping";
+RemovableAndWrapping.tags = ["!dev"];
+RemovableAndWrapping.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+RemovableAndWrapping.args = {
+	fieldLabel: "Tags",
+	actionButtonText: "",
+	helpText: "",
 	isRemovable: true,
-	isEmphasized: false,
 	customStyles: {"max-width": "300px"},
 	items: [
 		{
-			label: "Tag 1 Example",
+			label: "Hiking and camping",
 		},
 		{
-			label: "Tag 2 Example",
+			label: "Surfing",
 		},
 		{
-			label: "Tag 3 Example",
+			label: "Outdoors",
 		},
 		{
-			label: "Tag 4",
+			label: "Tag with avatar",
 			avatarUrl: "example-ava.png",
 		},
 		{
-			label: "Tag 5",
+			label: "Traveling",
 		},
 		{
-			label: "Tag 6",
+			label: "Tag with thumbnail",
+			thumbnailUrl: "flowers.png",
 		},
 		{
-			label: "Tag 7",
+			label: "Tag with icon",
+			iconName: "Cloud",
 		},
 	],
+};
+
+/**
+ * A single quiet action button may be included at the end of a tag group if the action affects the entire group. Common actions include "show all", "show less", and "clear all". A counter of the number of tags can be included in the action button label if appropriate for the context.
+ */
+export const WithActionButton = Template.bind({});
+WithActionButton.storyName = "With action button";
+WithActionButton.tags = ["!dev"];
+WithActionButton.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+WithActionButton.args = {
+	actionButtonText: "Show all (13)",
+	helpText: "",
+	items: exampleTagItems,
+	fieldLabel: "Tags",
+};
+
+/**
+ * A tag group can have help text below the group to give extra context or instruction. The help text may be invalid, indicating an error for when requirements aren't met.
+ */
+export const WithHelpText = Template.bind({});
+WithHelpText.storyName = "With help text";
+WithHelpText.tags = ["!dev"];
+WithHelpText.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+WithHelpText.args = {
+	fieldLabel: "Tags",
+	isInvalid: true,
+	actionButtonText: "",
+	helpText: "Add at least three tags.",
+	items: [
+		{ label: "2025" },
+		{ label: "Australia" },
+	],
+};
+
+/**
+ * When a stand alone tag group has no tags, it shows placeholder text to communicate the empty state. The wording of the placeholder text can be customizable.
+ */
+export const WithNoTags = Template.bind({});
+WithNoTags.storyName = "With no tags (empty state)";
+WithNoTags.tags = ["!dev"];
+WithNoTags.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+WithNoTags.args = {
+	fieldLabel: "Tags",
+	numberOfTags: 0,
+	helpText: "",
+	actionButtonText: "",
 };
 
 // ********* VRT ONLY ********* //
