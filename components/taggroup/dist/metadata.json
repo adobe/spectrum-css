@@ -1,15 +1,39 @@
 {
   "sourceFile": "index.css",
-  "selectors": [".spectrum-TagGroup", ".spectrum-TagGroup-item"],
+  "selectors": [
+    ".spectrum-TagGroup",
+    ".spectrum-TagGroup--sideLabel",
+    ".spectrum-TagGroup--sideLabel .spectrum-TagGroup-actionButton",
+    ".spectrum-TagGroup--sideLabel .spectrum-TagGroup-helpText",
+    ".spectrum-TagGroup--sideLabel .spectrum-TagGroup-label",
+    ".spectrum-TagGroup--sideLabel .spectrum-TagGroup-tags",
+    ".spectrum-TagGroup--sizeL",
+    ".spectrum-TagGroup--sizeS",
+    ".spectrum-TagGroup-actionButton",
+    ".spectrum-TagGroup-helpText",
+    ".spectrum-TagGroup-label",
+    ".spectrum-TagGroup-tags"
+  ],
   "modifiers": [
-    "--mod-tag-group-item-margin-block",
-    "--mod-tag-group-item-margin-inline"
+    "--mod-tag-group-block-spacing-label-to-tags",
+    "--mod-tag-group-block-tag-spacing",
+    "--mod-tag-group-inline-spacing-label-to-tags",
+    "--mod-tag-group-inline-tag-spacing",
+    "--mod-tag-group-spacing-help-text-to-tags"
   ],
   "component": [
-    "--spectrum-tag-group-item-margin-block",
-    "--spectrum-tag-group-item-margin-inline"
+    "--spectrum-tag-group-block-spacing-label-to-tags",
+    "--spectrum-tag-group-block-tag-spacing",
+    "--spectrum-tag-group-inline-spacing-label-to-tags",
+    "--spectrum-tag-group-inline-tag-spacing",
+    "--spectrum-tag-group-spacing-help-text-to-tags"
   ],
-  "global": ["--spectrum-spacing-75"],
+  "global": [
+    "--spectrum-field-label-to-component",
+    "--spectrum-help-text-to-component",
+    "--spectrum-spacing-100",
+    "--spectrum-spacing-200"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }
