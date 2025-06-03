@@ -1,4 +1,3 @@
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
@@ -315,34 +314,38 @@ export const Template = ({
 						["is-sortable"]: isSortable,
 						["is-sorted-asc"]: sortIcon === "SortUp",
 						["is-sorted-desc"]: sortIcon === "SortDown",
+						[`${rootClass}-menuButton`]: hasMenu,
 					})}
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
 					aria-sort=${ifDefined(isSortable ? ariaSortValue : undefined)}
-					tabindex=${ifDefined(isSortable ? "0" : undefined)}
 				>
-					${when(isSortable, () => Icon({
-						iconName: sortIcon,
-						setName: "workflow",
-						customClasses: [`${rootClass}-sortIcon`],
-					}, context))}
-					<span class="${rootClass}-columnTitle">Column title</span>
+					${when(isSortable,
+						() => Button({
+							size: "m",
+							iconName: sortIcon,
+							iconSet: "workflow",
+							label: "Column title",
+							customClasses: [`${rootClass}-tableButton`],
+						}, context),
+						() => when(hasMenu,
+							() => Button({
+								size: "m",
+								iconName: "SortUp",
+								iconSet: "workflow",
+								label: "Column title",
+								trailingIcon: "Chevron100",
+								trailingIconSet: "ui",
+								customClasses: [`${rootClass}-tableButton`],
+							}, context),
+							() => html`<span class="${rootClass}-columnTitle">Column title</span>`
+						)
+					)}
 				</${thTag}>
 				<${thTag}
-					class="${rootClass}-headCell ${hasMenu ? `${rootClass}-menuButton` : ""}"
+					class="${rootClass}-headCell"
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
 				>
-					${when(hasMenu, () => ActionButton({
-						size: "m",
-						isQuiet: true,
-						iconName: "ChevronDown100",
-						iconSet: "ui",
-						iconOnly: true,
-						label: "Column title",
-						customClasses: [`${rootClass}-menuButton`],
-					}, context),
-					() => html`
-						<span class="${rootClass}-columnTitle">Column title</span>
-					`)}
+					<span class="${rootClass}-columnTitle">Column title</span>
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell"
