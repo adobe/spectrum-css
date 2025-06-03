@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid } from "@spectrum-css/preview/types";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
@@ -32,6 +33,7 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		isInvalid,
 		items: { table: { disable: true } },
 		isRemovable: {
 			name: "Removable tags",
@@ -43,11 +45,68 @@ export default {
 			},
 			control: "boolean",
 		},
+		actionButtonText: {
+			name: "Action button text",
+			description: "Displays an action button below the tag group, if left blank, the action button will not be displayed.",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Content",
+			},
+			control: "text",
+		},
+		fieldLabel: {
+			name: "Field label",
+			description: "Displays a label above the tag group, if left blank, the label will not be displayed.",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Content",
+			},
+			control: "text",
+		},
+		fieldLabelPosition: {
+			name: "Field label position",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
+			options: ["top", "side"],
+			control: "select",
+			if: { arg: "fieldLabel", truthy: true },
+		},
+		helpText: {
+			name: "Help text",
+			description: "Displays help text below the tag group, if left blank, the help text will not be displayed.",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Content",
+			},
+			control: "text",
+		},
+		numberOfTags: {
+			name: "Number of tags",
+			description: "The number of tags to display in the tag group.",
+			type: { name: "number" },
+			table: {
+				type: { summary: "number" },
+				category: "Content",
+			},
+			control: "number",
+		},
 	},
 	args: {
 		rootClass: "spectrum-TagGroup",
 		isRemovable: false,
 		size: "m",
+		actionButtonText: "Show all",
+		helpText: "Help text description",
+		fieldLabel: "Tag group label",
+		fieldLabelPosition: "top",
+		isInvalid: false,
+		numberOfTags: 3,
 	},
 	parameters: {
 		actions: {
@@ -66,18 +125,7 @@ export default {
 
 export const Default = TagGroups.bind({});
 Default.args = {
-	ariaLabel: "Tags",
-	items: [
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 2",
-		},
-		{
-			label: "Tag 3",
-		},
-	],
+	ariaLabel: "Tags"
 };
 
 // ********* DOCS ONLY ********* //
