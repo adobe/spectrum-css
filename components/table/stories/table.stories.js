@@ -22,7 +22,10 @@ export default {
 			control: "select",
 		},
 		isQuiet,
-		isEmphasized,
+		isEmphasized: {
+			...isEmphasized,
+			description: "Emphasized styling on the table affects colors of selected rows and any checkboxes."
+		},
 		isLoading,
 		useDivs: {
 			name: "Use divs for markup",
@@ -125,6 +128,7 @@ export default {
 		isDropTarget: false,
 		useScroller: false,
 		hasColumnDividers: false,
+		hasMenu: false,
 		isSortable: false,
 		sortIcon: "Sort",
 		rowItems: [
@@ -194,7 +198,7 @@ const ExampleRowItems = [
 ];
 
 /**
- * The default table also uses the regular density. Similar to a paragraph of text, textual data is always left-aligned within a table. Never use center alignment.
+ * The default table also uses the regular density. Similar to a paragraph of text, textual data is always start-aligned within a table. Never use center alignment.
  *
  * Tables with sortable columns can show different states of sorting: unsorted, ascending, and descending. Additionally, tables can also trigger a menu, as indicated by the chevron.
  */
@@ -213,6 +217,18 @@ EmptyState.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 EmptyState.storyName = "Empty state";
+EmptyState.argTypes = {
+	isEmphasized: { table: { disable: true } },
+	isQuiet: { table: { disable: true } },
+	isLoading: { table: { disable: true } },
+	hasColumnDividers: { table: { disable: true } },
+	hasMenu: { table: { disable: true } },
+	isSortable: { table: { disable: true } },
+	sortIcon: { table: { disable: true } },
+	isDropTarget: { table: { disable: true } },
+	useDivs: { table: { disable: true } },
+	useScroller: { table: { disable: true } },
+};
 
 /**
  * A table may render a [progress circle](/docs/components-progress-circle--docs) while populating data.
@@ -421,7 +437,7 @@ export const Sortable = Template.bind({});
 Sortable.args = {
 	...Default.args,
 	isSortable: true,
-	sortIcon: "SortUp",
+	sortIcon: "Sort",
 };
 Sortable.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -430,14 +446,14 @@ Sortable.storyName = "Sortable columns";
 Sortable.tags = ["!dev"];
 
 /**
- * Tables can have additional actions in the header cells that could trigger a menu. The content of the header cell is an action button](/docs/components-action-button--docs).
+ * Tables can have additional actions in the header cells that could trigger a menu. The content of the header cell is an [button](/docs/components-button--docs). Oftentimes, the menu is used to show users the available sorting options.
  */
 export const WithMenuButton = Template.bind({});
 WithMenuButton.args = {
 	...Default.args,
 	hasMenu: true,
 };
-WithMenuButton.storyName = "With action button";
+WithMenuButton.storyName = "With menu button";
 WithMenuButton.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -549,6 +565,7 @@ SectionHeaderQuiet.storyName = "Section headers: quiet styling";
 SectionHeaderQuiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+SectionHeaderQuiet.tags = ["!dev"];
 
 /**
  * A table can be wrapped in a fixed height `div` with the `.spectrum-Table-scroller` class. This allows scrolling of the table body and makes the column headers sticky (i.e. fixed to the top on scroll).
