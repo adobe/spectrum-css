@@ -560,7 +560,7 @@
 			border-block: var(--spectrum-table-border-width) solid var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color)));
 
 			/* Because the ::before element technically removes the table's inline border, the first cell needs the entire cell padding to avoid horizontal layout shift when a row is focused. */
-			padding-inline-start: var(--spectrum-table-cell-inline-spacing);
+			padding-inline-start: var(--mod-table-cell-inline-spacing,var(--spectrum-table-cell-inline-spacing));
 
 			/* The side row focus indicator line */
 			&::before {
