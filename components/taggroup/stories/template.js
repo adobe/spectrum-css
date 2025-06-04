@@ -30,23 +30,25 @@ export const Template = ({
 	}));
 
 	return html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+			[`${rootClass}--sideLabel`]: fieldLabelPosition === "side",
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		style=${styleMap(customStyles)}
+	>
 		${when(fieldLabel, () => html`
-			<div class=${classMap({
-				[`${rootClass}-label`]: true,
-				[`${rootClass}-label--side`]: fieldLabelPosition === "side",
-			})}>
-				${FieldLabel({
-					size,
-					label: fieldLabel,
-				}, context)}
-			</div>
+			${FieldLabel({
+				size,
+				label: fieldLabel,
+				customClasses: [`${rootClass}-label`],
+			}, context)}
 		`)}
 		<div
-			class=${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${styleMap(customStyles)}
+			class=${`${rootClass}-tags`}
 			role="list"
 			aria-label=${ifDefined(ariaLabel)}
 		>
@@ -55,26 +57,25 @@ export const Template = ({
 				...args,
 				size,
 				hasClearButton: isRemovable,
-				customClasses: [`${rootClass}-item`],
+				customClasses: [`${rootClass}-tag`],
 			}, context))}
 		</div>
 		${when(actionButtonText, () => html`
-			<div class="${rootClass}-actionButtonArea">
 			${ActionButton({
 				size,
 				isQuiet: true,
 				label: actionButtonText,
+				customClasses: [`${rootClass}-actionButton`],
 			}, context)}
-			</div>
 		`)}
 		${when(helpText, () => html`
-			<div class="${rootClass}-helpText">
-				${HelpText({
-					size,
-					text: helpText,
-					variant: isInvalid ? "negative" : undefined,
-				}, context)}
-			</div>
+			${HelpText({
+				size,
+				text: helpText,
+				variant: isInvalid ? "negative" : undefined,
+				customClasses: [`${rootClass}-helpText`],
+			}, context)}
 		`)}
+		</div>
 	`;
 };
