@@ -675,11 +675,6 @@
 
 		min-block-size: initial;
 	}
-
-	&.spectrum-Table-headCell .spectrum-Table-checkbox {
-		margin-block-start: calc(var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-row-checkbox-block-spacing)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
-		margin-block-end: var(--mod-table-header-checkbox-block-spacing, var(--spectrum-table-header-row-checkbox-block-spacing));
-	}
 }
 
 /********* DIVS *********/
