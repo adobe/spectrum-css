@@ -147,16 +147,47 @@ export const TableGroup = Variants({
 		{
 			testHeading: "Selection mode: multiple, emphasized",
 			rowItems: ExampleMultiSelectContent,
+			selectionMode: "multiple",
+		},
+		{
+			testHeading: "Selection mode: single, emphasized",
+			rowItems: [
+				{
+					cellContent: ["Pikachu", "Electric", "35"],
+					textAlignment: {
+						2: "end"
+					},
+					showCheckbox: true,
+					isSelected: true,
+					isChecked: true,
+				},
+				{
+					cellContent: ["Charmander", "Fire", "39"],
+					textAlignment: {
+						2: "end"
+					},
+					showCheckbox: true,
+				},
+				{
+					cellContent: ["Mew", "Psychic", "100"],
+					textAlignment: {
+						2: "end"
+					},
+					showCheckbox: true,
+				}
+			],
 		},
 		{
 			testHeading: "Selection mode: multiple, non-emphasized",
 			rowItems: ExampleMultiSelectContent,
 			isEmphasized: false,
+			selectionMode: "multiple",
 		},
 		{
-			testHeading: "Quiet multi-select: emphasized",
+			testHeading: "Selection mode: multiple, quiet, emphasized",
 			isQuiet: true,
 			rowItems: ExampleMultiSelectContent,
+			selectionMode: "multiple",
 		},
 		{
 			testHeading: "Scrollable",
@@ -170,8 +201,12 @@ export const TableGroup = Variants({
 			rowItems: ExampleMultiSelectContent,
 		},
 		{
-			testHeading: "Sortable columns: Sort",
+			testHeading: "Sortable columns",
 			isSortable: true,
+		},
+		{
+			testHeading: "Head cell with menu button",
+			hasMenu: true,
 		},
 		{
 			testHeading: "Section headers",
