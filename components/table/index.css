@@ -646,7 +646,7 @@
 		block-size: var(--mod-table-section-header-min-height, var(--spectrum-table-section-header-min-height));
 
 		padding-block-start: calc(var(--mod-table-section-header-block-start-spacing, var(--spectrum-table-section-header-block-start-spacing)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
-		padding-block-end: calc(var(--mod-table-section-header-block-end-spacing, var(--spectrum-table-section-header-block-end-spacing)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
+		padding-block-end: var(--mod-table-section-header-block-end-spacing, var(--spectrum-table-section-header-block-end-spacing));
 
 		/* Make unique section header mods available to these default row styles: */
 		padding-inline-start: calc(var(--mod-table-section-header-inline-start-spacing, var(--spectrum-table-cell-inline-spacing)) - var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)));
