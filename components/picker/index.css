@@ -103,9 +103,10 @@
 	--spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
-	}
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-medium);
+
+	--mod-popover-animation-distance: var(--spectrum-picker-popover-animation-distance);
 }
 
 .spectrum-Picker--sizeS {
@@ -118,16 +119,14 @@
 	--spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-75);
 	--spectrum-picker-spacing-starting-icon-to-text: var(--spectrum-text-to-visual-75);
 	--spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-text-to-visual-75);
-	--spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
 	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
+	--spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
 	--spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-component-top-to-workflow-icon-75);
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-75);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-75);
-
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-small);
-	}
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-small);
 }
 
 .spectrum-Picker--sizeL {
@@ -135,21 +134,19 @@
 	--spectrum-picker-inline-size: var(--spectrum-field-default-width-large);
 	--spectrum-picker-block-size: var(--spectrum-component-height-200);
 	--spectrum-picker-border-radius: var(--spectrum-corner-radius-medium-size-large);
+	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
 	--spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
 	--spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
 	--spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-200);
 	--spectrum-picker-spacing-starting-icon-to-text: var(--spectrum-text-to-visual-200);
 	--spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-text-to-visual-200);
 	--spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
-	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
 	--spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-component-top-to-workflow-icon-200);
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-large);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-200);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-200);
-
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-large);
-	}
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-large);
 }
 
 .spectrum-Picker--sizeXL {
@@ -157,21 +154,19 @@
 	--spectrum-picker-inline-size: var(--spectrum-field-default-width-extra-large);
 	--spectrum-picker-block-size: var(--spectrum-component-height-300);
 	--spectrum-picker-border-radius: var(--spectrum-corner-radius-medium-size-extra-large);
+	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
 	--spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
 	--spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
 	--spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-300);
 	--spectrum-picker-spacing-starting-icon-to-text: var(--spectrum-text-to-visual-300);
 	--spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-text-to-visual-300);
 	--spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
-	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
 	--spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-component-top-to-workflow-icon-300);
 	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
 	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
-
-	& + .spectrum-Popover--bottom-start.is-open {
-		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-extra-large);
-	}
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-extra-large);
 }
 
 .spectrum-Picker--quiet {
@@ -188,9 +183,14 @@
 	--spectrum-picker-spacing-edge-to-text: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-field-edge-to-text-quiet));
 	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--mod-picker-spacing-edge-to-disclosure-icon-quiet, var(--spectrum-picker-end-edge-to-disclousure-icon-quiet));
 	--spectrum-picker-spacing-label-to-picker: var(--mod-picker-spacing-label-to-picker-quiet, var(--spectrum-picker-spacing-label-to-picker-quiet));
+
+	&.spectrum-Picker--sideLabel .spectrum-Picker-button {
+		margin-block-start: 0;
+	}
 }
 
-.spectrum-Picker {
+/* Note: .spectrum-Picker has been renamed to .spectrum-Picker-button. This selector now triggers the Popover component. */
+.spectrum-Picker-button {
 	@extend %spectrum-BaseButton;
 
 	display: flex;
@@ -218,27 +218,6 @@
 	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
 	background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
 	border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-default, var(--spectrum-picker-border-color-default)));
-
-	/* Focus indicator */
-	&::after {
-		pointer-events: none;
-		content: "";
-		position: absolute;
-		block-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
-
-		inline-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
-
-		margin-block-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
-
-		margin-inline-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
-
-		inset-inline: 0;
-		inset-block: 0;
-		border-style: solid;
-		border-width: var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness));
-		border-color: transparent;
-		border-radius: calc(var(--mod-picker-border-radius, var(--spectrum-picker-border-radius)) + var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
-	}
 
 	&:hover {
 		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
@@ -275,6 +254,27 @@
 		/* Focus indicator */
 		&::after {
 			border-color: var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+		}
+
+		/* Focus indicator */
+		&::after {
+			pointer-events: none;
+			content: "";
+			position: absolute;
+			block-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
+
+			inline-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
+
+			margin-block-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
+
+			margin-inline-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
+
+			inset-inline: 0;
+			inset-block: 0;
+			border-style: solid;
+			border-width: var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness));
+			border-color: transparent;
+			border-radius: calc(var(--mod-picker-border-radius, var(--spectrum-picker-border-radius)) + var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 		}
 
 		.spectrum-Picker-label.is-placeholder {
@@ -408,35 +408,34 @@
 	margin-block-start: calc(var(--mod-picker-spacing-top-to-progress-circle, var(--spectrum-picker-spacing-top-to-progress-circle)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 	margin-block-end: calc(var(--mod-picker-spacing-top-to-progress-circle, var(--spectrum-picker-spacing-top-to-progress-circle)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 	margin-inline-end: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
-}
-
-.spectrum-Picker + .spectrum-Popover--bottom-start.is-open {
-	transform: translateY(var(--mod-picker-spacing-picker-to-popover, var(--spectrum-picker-spacing-picker-to-popover)));
+	flex-shrink: 0;
 }
 
 .spectrum-Picker--quiet {
-	border: none;
-	border-radius: 0;
-	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-
 	&.spectrum-Picker--sideLabel {
 		margin-block-start: 0;
 	}
 
-	&::after {
+	.spectrum-Picker-button {
 		border: none;
-		block-size: auto;
-		inline-size: auto;
-	}
+		border-radius: 0;
+		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
 
-	&:focus-visible,
-	&.is-keyboardFocused {
-		/* Focus indicator changes from a ring to a line underneath. */
 		&::after {
 			border: none;
-			border-radius: 0;
-			box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
-			margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
+			block-size: auto;
+			inline-size: auto;
+		}
+
+		&:focus-visible,
+		&.is-keyboardFocused {
+			/* Focus indicator changes from a ring to a line underneath. */
+			&::after {
+				border: none;
+				border-radius: 0;
+				border-block-end: var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) solid var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+				margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
+			}
 		}
 	}
 }
@@ -449,8 +448,8 @@
 /* Disabled and loading states:
 	 Make sure this appears after any use of :hover while postcss-hover-media-feature is being used. The plugin moves
 	 all hover styles within a media query that changes the order of the CSS, affecting styles with the same specificity. */
-.spectrum-Picker:disabled,
-.spectrum-Picker.is-disabled {
+.spectrum-Picker-button:disabled,
+.spectrum-Picker-button.is-disabled {
 	cursor: default;
 	transform: none;
 	border-color: var(--highcontrast-picker-border-color-disabled, transparent);

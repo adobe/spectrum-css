@@ -18,13 +18,10 @@ import "../index.css";
  */
 export const Picker = ({
 	rootClass = "spectrum-Picker",
-	id = getRandomId("picker"),
 	size = "m",
-	labelPosition = "top",
 	placeholder,
 	currentValue,
 	contentIconName,
-	isQuiet = false,
 	isKeyboardFocused = false,
 	showWorkflowIcon = false,
 	isOpen = false,
@@ -42,11 +39,7 @@ export const Picker = ({
 	return html`
 		<button
 			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--sideLabel`]: labelPosition == "side",
+				[`${rootClass}-button`]: true,
 				["is-invalid"]: isInvalid,
 				["is-open"]: isOpen,
 				["is-loading"]: isLoading,
@@ -57,7 +50,6 @@ export const Picker = ({
 			})}
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
-			id=${id}
 			style=${styleMap(customStyles)}
 			type="button"
 			@click=${function() {
@@ -65,18 +57,11 @@ export const Picker = ({
 			}}
 			aria-labelledby=${ifDefined(ariaLabeledBy)}
 		>
-			${when(contentIconName, () =>
-				Icon({
-					iconName: contentIconName,
-					size,
-					customClasses: ["spectrum-Picker-icon"],
-				}, context))
-			}
 			${when(showWorkflowIcon, () =>
 				Icon({
 					size,
 					setName: "workflow",
-					iconName: "Image",
+					iconName: contentIconName,
 					customClasses: [`${rootClass}-icon`],
 				}, context)
 			)}
@@ -94,7 +79,7 @@ export const Picker = ({
 					isIndeterminate: true,
 				}, context)
 			)}
-			${when(isInvalid && !isLoading, () =>
+			${when(isInvalid && !isLoading && !isDisabled, () =>
 				Icon({
 					size,
 					iconName: "AlertTriangle",
@@ -128,11 +113,13 @@ export const Template = ({
 	placeholder,
 	currentValue,
 	helpText,
+	id = getRandomId("picker"),
 	isQuiet = false,
 	isOpen = false,
 	isInvalid = false,
 	isDisabled = false,
 	showWorkflowIcon = false,
+	contentIconName,
 	isHovered = false,
 	isActive = false,
 	isKeyboardFocused = false,
@@ -155,6 +142,7 @@ export const Template = ({
 		isQuiet,
 		currentValue,
 		showWorkflowIcon,
+		contentIconName,
 		isOpen,
 		isInvalid,
 		isDisabled,
@@ -176,6 +164,7 @@ export const Template = ({
 		content: popoverContent,
 		size,
 		customStyles: customPopoverStyles,
+		customClasses: [`${rootClass}-popover`],
 		popoverWrapperStyles: {
 			"display": "block",
 		},
@@ -189,15 +178,24 @@ export const Template = ({
 		isDisabled,
 	}, context) : "";
 
+
 	const markup = html`
 		<div
+		id=${id}
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--sideLabel`]: labelPosition == "side",
+			})}
 			style=${styleMap({
 				position: "relative",
 				display: "inline-block",
 				...(labelPosition == "side") && {
 					display: "flex",
 					flexWrap: "nowrap",
-				}
+				},
 			})}
 		>
 			${when(label, () =>
