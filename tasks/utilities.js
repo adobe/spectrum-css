@@ -290,10 +290,16 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 					onlyFiles: true,
 					stats: true,
 				});
+				return `${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow} ${`copied ${stats.length >= 0 ? stats.length : "0"} files (${bytesToSize(stats.reduce((acc, details) => acc + details.stats.size, 0))})`.gray}`;
+				const stats = await fg(path.join(cwd, "components") + "/**/*", {
+					onlyFiles: true,
+					stats: true,
+				});
 				return Promise.resolve(`${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow} ${`copied ${stats.length >= 0 ? stats.length : "0"} files (${bytesToSize(stats.reduce((acc, details) => acc + details.stats.size, 0))})`.gray}`);
 			})
 			.catch((err) => {
 				if (!err) return;
+				return `${"✗".red}  ${relativePrint(from, { cwd }).yellow} could not be copied to ${relativePrint(to, { cwd }).yellow}`;
 				return Promise.resolve(`${"✗".red}  ${relativePrint(from, { cwd }).yellow} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
 			});
 	}
@@ -310,6 +316,7 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 		)
 		.catch((err) => {
 			if (!err) return;
+			return `${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`;
 			return Promise.resolve(`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
 		});
 }
