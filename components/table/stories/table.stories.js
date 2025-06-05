@@ -426,9 +426,11 @@ Quiet.parameters = {
 };
 
 /**
- * Tables with enabled column sorting can show different states of sorting: unsorted, ascending, and descending. Additionally, tables can trigger a menu, as indicated by the chevron. The `aria-sort` attribute should be set on the `.spectrum-Table-headCell` element for the column that is currently sorted. `aria-sort` should not be set on more than one column at a time.
+ * Tables with enabled column sorting can show different states of sorting: unsorted, ascending, and descending. The content of the header cell is an [button](/docs/components-button--docs), that has a class of `.spectrum-Table-sortButton`, which should contain the sorting icon, as well as the header label.
  *
  * When a column is sorted in ascending order, use the `SortUp` icon, as seen below. If sorted in descending order, use the `SortDown` icon. If the sort is undefined, use the more general `Sort` icon.
+ *
+ * The `aria-sort` attribute should be set on the `.spectrum-Table-headCell .is-sortable` element for the column that is currently sorted, and when sorting is active. `aria-sort` should not be set on more than one column at a time.
  *
  * Implementations will develop their own sorting functionality. The `aria-sort` attribute should be removed from a column header when the column is not sorted.
  */
@@ -445,14 +447,16 @@ Sortable.storyName = "Sortable columns";
 Sortable.tags = ["!dev"];
 
 /**
- * Tables can have additional actions in the header cells that could trigger a menu. The content of the header cell is an [button](/docs/components-button--docs). Oftentimes, the menu is used to show users the available sorting options.
+ * Tables can have additional actions in the header cells that could trigger a menu, as indicated by the chevron. Oftentimes, the menu is used to show users the available sorting options. The content of the header cell is an [button](/docs/components-button--docs), that has a class of `.spectrum-Table-sortButton`, which should contain the sorting icon when applicable, as well as the header label.
+ *
+ * The `aria-sort` attribute should be set on the `.spectrum-Table-hasMenuButton` element for the column that is currently sorted, and when sorting is active.
  */
 export const WithMenuButton = Template.bind({});
 WithMenuButton.args = {
 	...Default.args,
 	hasMenu: true,
 };
-WithMenuButton.storyName = "With menu button";
+WithMenuButton.storyName = "Sortable columns: with menu button";
 WithMenuButton.parameters = {
 	chromatic: { disableSnapshot: true },
 };

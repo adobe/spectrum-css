@@ -220,7 +220,7 @@
 
 .spectrum-Table-headCell {
 	&.is-sortable,
-	&.spectrum-Table-menuButton {
+	&.spectrum-Table-hasMenuButton {
 		&:hover {
 			--spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-hover, var(--spectrum-table-icon-color-hover)));
 		}
@@ -243,8 +243,8 @@
 		}
 	}
 
-	/* These styles get applied to the headCell when the headCell has the --menuButton modifier class. */
-	&.spectrum-Table-menuButton {
+	/* These styles get applied to the headCell when the headCell has the --hasMenuButton class. */
+	&.spectrum-Table-hasMenuButton {
 		--spectrum-table-cell-inline-spacing: 0;
 		--spectrum-table-header-row-top-to-text: 0;
 		--spectrum-table-header-row-bottom-to-text: 0;
@@ -352,20 +352,20 @@
 	padding: 0;
 
 	/* Focus indicator- brings the focus indicator above the border and matches the table cell dimensions. */
-	.spectrum-Table-tableButton::after {
+	.spectrum-Table-sortButton::after {
 		inset: calc(3 * var(--mod-table-border-width, var(--spectrum-table-border-width)));
 		z-index: 1;
 	}
 
-	.spectrum-Table-tableButton .spectrum-Icon {
+	.spectrum-Table-sortButton .spectrum-Icon {
 		color: var(--spectrum-table-icon-color);
 		transition: transform var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
 	}
 }
 
 /* Head cell column text in the button that opens the menu */
-.spectrum-Table-headCell.spectrum-Table-menuButton {
-	.spectrum-Table-tableButton {
+.spectrum-Table-headCell.spectrum-Table-hasMenuButton {
+	.spectrum-Table-sortButton {
 		min-block-size: calc(var(--spectrum-table-min-header-row-height) + var(--mod-table-border-width, var(--spectrum-table-border-width)));
 
 		/* Focus indicator- brings the focus indicator above the border and matches the table cell dimensions. */

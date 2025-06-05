@@ -314,30 +314,30 @@ export const Template = ({
 						["is-sortable"]: isSortable,
 						["is-sorted-asc"]: sortIcon === "SortUp",
 						["is-sorted-desc"]: sortIcon === "SortDown",
-						[`${rootClass}-menuButton`]: hasMenu,
+						[`${rootClass}-hasMenuButton`]: hasMenu,
 					})}
 					role=${ifDefined(useDivs ? "columnheader" : undefined)}
-					aria-sort=${ifDefined(isSortable ? ariaSortValue : undefined)}
+					aria-sort=${ifDefined(isSortable || hasMenu ? ariaSortValue : undefined)}
 				>
-					${when(isSortable,
-						() => Button({
-							size: "m",
-							iconName: sortIcon,
-							iconSet: "workflow",
-							label: "Column title",
-							customClasses: [`${rootClass}-tableButton`],
-						}, context),
-						() => when(hasMenu,
-							() => Button({
+					${when(hasMenu || isSortable, () => html`
+						${when(isSortable, () => Button({
+								size: "m",
+								iconName: sortIcon,
+								iconSet: "workflow",
+								label: "Column title",
+								customClasses: [`${rootClass}-sortButton`],
+							}, context)
+						)}
+						${when(!isSortable, () => Button({
 								size: "m",
 								iconName: "SortUp",
 								iconSet: "workflow",
 								label: "Column title",
-								customClasses: [`${rootClass}-tableButton`],
-							}, context),
-							() => html`<span class="${rootClass}-columnTitle">Column title</span>`
-						)
-					)}
+								customClasses: [`${rootClass}-sortButton`],
+							}, context)
+						)}
+						`, () => html`<span class="${rootClass}-columnTitle">Column title</span>`
+						)}
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell"
