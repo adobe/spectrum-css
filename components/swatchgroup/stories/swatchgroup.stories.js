@@ -11,21 +11,17 @@ import { RoundingTemplate, Template } from "./template.js";
  *
  * ## Usage notes
  *
+ * The border opacity of swatches in a swatch group is 20%.
+ *
  * ### Corner rounding in swatch groups
  *
- * A corner rounding of “none” (`.spectrum-Swatch--roundingNone` class) should be used in a swatch group in order to help minimize the Hermann grid illusion that happens at the intersections of the white space within the group.
+ * A corner rounding of "none" (`.spectrum-Swatch--roundingNone` class) should be used in a swatch group in order to help minimize the Hermann grid illusion that happens at the intersections of the white space within the group.
  *
  * The only exception is when a swatch group only takes up a single row. In that case, use any of the rounding options.
  *
- * ### Apply border to low-contrast swatches only
- *
- * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), they have a less prominent border compared to a single swatch component used by itself, and should have the `.spectrum-Swatch--lightBorder` class. This reduces the likelihood of the UI interfering with color perception and comparisons. Otherwise, swatches within a swatch group that meet contrast should have the `.spectrum-Swatch--noBorder` class.
- *
- * Implementations should apply the `.spectrum-Swatch--lightBorder` to the individual swatches of a swatch group that do not meet 3:1 contrast.
- *
  * ### Density
  *
- * Swatch groups come in 3 densities: regular (default), compact, and spacious. Compact and spacious densities retain the same swatch size as regular density, but have less or more padding between each swatch, respectively.
+ * Swatch groups come in several densities: regular (default), compact and spacious. Each density retains the same swatch size, but have less or more padding between each swatch, respectively.
  */
 export default {
 	title: "Swatch group",
@@ -36,7 +32,10 @@ export default {
 		shape: { table: { disable: true } },
 		imageUrl: { table: { disable: true } },
 		isMixedValue: { table: { disable: true } },
-		gradient: { table: { disable: true } },
+		isKeyboardFocused: { table: { disable: true } },
+		isDisabled: { table: { disable: true } },
+		isSelected: { table: { disable: true } },
+		isAddSwatch: { table: { disable: true } },
 		density: {
 			name: "Density",
 			type: { name: "string" },
@@ -65,27 +64,13 @@ export default {
 				defaultValue: { summary: "none", },
 			},
 		},
-		borderStyle: {
-			...Swatch.argTypes.borderStyle,
-			defaultValue: "noBorder",
-			description: "Apply the `spectrum-Swatch--lightBorder` class to a swatch in the swatch group when it has a color contrast ratio of less than 3:1.",
-			table: {
-				type: { summary: "string", required: true },
-				category: "Component",
-				defaultValue: { summary: "noBorder" },
-			},
-			options: ["noBorder", "lightBorder"],
-		},
 	},
 	args: {
 		rootClass: "spectrum-SwatchGroup",
-		size: "m",
-		density: "regular",
-		rounding: "none",
-		borderStyle: "noBorder",
 		containerWidth: "200px",
-		isDisabled: false,
-		isSelected: false,
+		density: "regular",
+		size: "m",
+		rounding: "none",
 		items: [
 			{swatchColor: "rgb(184, 109, 70)",},
 			{swatchColor: "rgb(240, 56, 35)",},
@@ -118,11 +103,15 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
- * The default swatch group has regular density.
+ * The default swatch group has medium density.
  */
 export const Default = SwatchgroupGroup.bind({});
 Default.args = {};
@@ -136,7 +125,7 @@ Compact.tags = ["!dev"];
 Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Compact.storyName = "Density - Compact";
+Compact.storyName = "Density - compact";
 
 export const Spacious = Template.bind({});
 Spacious.args = {
@@ -146,7 +135,7 @@ Spacious.tags = ["!dev"];
 Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Spacious.storyName = "Density - Spacious";
+Spacious.storyName = "Density - spacious";
 
 /**
  * Only use rounded swatches if there is a single row.
@@ -177,40 +166,6 @@ export const Sizing = (args, context) => Sizes({
 Sizing.args = Default.args;
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), the `.spectrum-Swatch--lightBorder` class should be applied to those swatches only.
- *
- * The swatch group example below contains all swatches with low contrast in light mode, therefore each has the `.spectrum-Swatch--lightBorder` class applied.
- */
-export const WithLightBorder = Template.bind({});
-WithLightBorder.args = {
-	borderStyle: "lightBorder",
-	items: [
-		{swatchColor: "rgb(237, 196, 172)"},
-		{swatchColor: "rgb(255, 188, 180)"},
-		{swatchColor: "rgb(255, 193, 94)"},
-		{swatchColor: "rgb(245, 199, 0)"},
-		{swatchColor: "rgb(229, 200, 157)"},
-		{swatchColor: "rgb(182, 219, 0)"},
-		{swatchColor: "rgb(129, 228, 58)"},
-		{swatchColor: "rgb(107, 227, 162)"},
-		{swatchColor: "rgb(92, 225, 194)"},
-		{swatchColor: "rgb(111, 221, 228)"},
-		{swatchColor: "rgb(138, 213, 255)"},
-		{swatchColor: "rgb(172, 207, 253)"},
-		{swatchColor: "rgb(192, 201, 255)"},
-		{swatchColor: "rgb(221, 193, 246)"},
-		{swatchColor: "rgb(247, 181, 255)"},
-		{swatchColor: "rgb(255, 181, 230)"},
-		{swatchColor: "rgb(255, 185, 208)"},
-	],
-};
-WithLightBorder.tags = ["!dev"];
-WithLightBorder.storyName = "With light border";
-WithLightBorder.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

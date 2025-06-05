@@ -1,10 +1,43 @@
 # Change log
 
+## 10.0.0-next.2
+
+### Patch Changes
+
+- [#3687](https://github.com/adobe/spectrum-css/pull/3687) [`53d1e5e`](https://github.com/adobe/spectrum-css/commit/53d1e5e7eb7817c37be3cfe5a253363dea744046) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### S2 picker fixes
+
+  This work addresses some regressions noticed in the migrated S2 picker component. Mainly, S2 border colors were fixed (most of them are transparent, including disabled).
+
+  PRs used as reference:
+
+  - [Picker docs to storybook migration](https://github.com/adobe/spectrum-css/pull/3200)
+  - [S2 picker migration](https://github.com/adobe/spectrum-css/pull/2697)
+
+## 10.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/progresscircle@6.0.0-next.0
+
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/helptext@8.0.0-next.0
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+
 ## 9.1.4
 
 ### Patch Changes
 
-- [#3607](https://github.com/adobe/spectrum-css/pull/3607) [`7797847`](https://github.com/adobe/spectrum-css/commit/7797847c723d530f34d610516e04150092557af1) Thanks [@blunteshwar](https://github.com/blunteshwar)! - Updated border-color for Open not hover state of picker from --spectrum-gray-900 to --spectrum-gray-800 as specified in the spec
+- [#3607](https://github.com/adobe/spectrum-css/pull/3607) [`7797847`](https://github.com/adobe/spectrum-css/commit/7797847c723d530f34d610516e04150092557af1) Thanks [@blunteshwar](https://github.com/blunteshwar)!
+
+Updated border-color for open state of picker from `--spectrum-gray-900` to `--spectrum-gray-800`.
 
 ## 9.1.3
 
