@@ -18,18 +18,7 @@ export default {
 	title: "Progress bar",
 	component: "ProgressBar",
 	argTypes: {
-		customWidth: {
-			name: "Custom width",
-			defaultValue: 192,
-			description: "A number to adjust the width of the component. Spectrum 2 specifications limit the component width to be between 48px and 768px.",
-			type: { name: "number" },
-			table: {
-				type: { summary: "number" },
-				category: "Component",
-				defaultValue: { summary: 200 },
-			},
-			control: { type: "range", min: 48, max: 768,},
-		},
+		customWidth: { table: { disable: true } },
 		size: size(["s", "m", "l", "xl"]),
 		isIndeterminate,
 		labelPosition: {
@@ -87,7 +76,6 @@ export default {
 		label: "Loading",
 		labelPosition: "top",
 		value: 0,
-		customWidth: 200,
 		isIndeterminate: false,
 		showValueLabel: true,
 	},

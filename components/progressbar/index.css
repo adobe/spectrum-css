@@ -19,17 +19,8 @@
 
 	--spectrum-progressbar-fill-size-indeterminate: 70%;
 
-	/* --spectrum-global-dimension-static-size-2400 */
-	--spectrum-progressbar-size-2400: 192px;
-
-	/* --spectrum-global-dimension-static-size-2500 */
-	--spectrum-progressbar-size-2500: 200px;
-
-	/* --spectrum-global-dimension-static-size-2800 */
-	--spectrum-progressbar-size-2800: 224px;
-
 	/* Size */
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
+	--spectrum-progressbar-inline-size: var(--spectrum-meter-default-width);
 
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-100);
 	--spectrum-progressbar-line-height: var(--spectrum-line-height-100);
@@ -55,8 +46,6 @@
 }
 
 .spectrum-ProgressBar--sizeS {
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
-
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
 	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-small);
 
@@ -64,21 +53,10 @@
 }
 
 .spectrum-ProgressBar--sizeL {
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
-
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-200);
 	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
 
 	--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
-}
-
-.spectrum-ProgressBar--sizeXL {
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2800);
-
-	--spectrum-progressbar-font-size: var(--spectrum-font-size-300);
-	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-extra-large);
-
-	--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
 }
 
 .spectrum-ProgressBar {
@@ -89,9 +67,9 @@
 	align-items: center;
 	font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
 	vertical-align: top;
-	word-break: break-word;
+	overflow-wrap: break-word;
 
-	inline-size: var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));
+	inline-size: var(--mod-progressbar-inline-size, var(--spectrum-progressbar-inline-size));
 	max-inline-size: var(--mod-progressbar-max-size, var(--spectrum-progressbar-max-size));
 	min-inline-size: var(--mod-progressbar-min-size, var(--spectrum-progressbar-min-size));
 
