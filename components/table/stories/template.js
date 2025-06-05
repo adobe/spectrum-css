@@ -282,7 +282,7 @@ export const Template = ({
 		})}
 		id=${ifDefined(id)}
 		role=${ifDefined(useCheckboxCell ? "grid" : useDivs ? "table" : undefined)}
-		aria-multiselectable=${ifDefined(useCheckboxCell ? "true" : undefined)}
+		aria-multiselectable=${ifDefined(selectionMode === "multiple" ? "true" : undefined)}
 	>
 		<${theadTag}
 			class="${rootClass}-head"
@@ -333,8 +333,6 @@ export const Template = ({
 								iconName: "SortUp",
 								iconSet: "workflow",
 								label: "Column title",
-								trailingIcon: "Chevron100",
-								trailingIconSet: "ui",
 								customClasses: [`${rootClass}-tableButton`],
 							}, context),
 							() => html`<span class="${rootClass}-columnTitle">Column title</span>`

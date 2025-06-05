@@ -199,8 +199,6 @@ const ExampleRowItems = [
 
 /**
  * The default table also uses the regular density. Similar to a paragraph of text, textual data is always start-aligned within a table. Never use center alignment.
- *
- * Tables with sortable columns can show different states of sorting: unsorted, ascending, and descending. Additionally, tables can also trigger a menu, as indicated by the chevron.
  */
 export const Default = TableGroup.bind({});
 Default.args = {};
@@ -274,7 +272,8 @@ Spacious.storyName = "Density - spacious";
 
 /**
  * The standard multi-select table includes a column of checkboxes used for selecting rows. When the selection mode
- * is set to `multiple`, users may select more than one table row.
+ * is set to `multiple`, users may select more than one table row. Typically, an [indeterminate checkbox](/docs/components-checkbox--docs)
+ * is used to indicate that ability.
  */
 export const MultiSelect = Template.bind({});
 MultiSelect.storyName = "Selection mode: multiple";
@@ -427,11 +426,11 @@ Quiet.parameters = {
 };
 
 /**
- * Tables can enable column sorting. The `aria-sort` attribute should be set on the `.spectrum-Table-headCell` element for the column that is currently sorted. `aria-sort` should not be set on more than one column at a time.
+ * Tables with enabled column sorting can show different states of sorting: unsorted, ascending, and descending. Additionally, tables can trigger a menu, as indicated by the chevron. The `aria-sort` attribute should be set on the `.spectrum-Table-headCell` element for the column that is currently sorted. `aria-sort` should not be set on more than one column at a time.
  *
  * When a column is sorted in ascending order, use the `SortUp` icon, as seen below. If sorted in descending order, use the `SortDown` icon. If the sort is undefined, use the more general `Sort` icon.
  *
- * Implementations will develop their own sorting functionality. Additionally, the `aria-sort` attribute should be removed from a column header when the column is not sorted.
+ * Implementations will develop their own sorting functionality. The `aria-sort` attribute should be removed from a column header when the column is not sorted.
  */
 export const Sortable = Template.bind({});
 Sortable.args = {
@@ -611,7 +610,7 @@ Scrollable.parameters = {
 };
 
 /**
- * A table can also be made up of `div` tags if needed, instead of a `<table>`. This example uses both the div markup, and the scrollable wrapper.
+ * A table can also be made up of `div` tags if needed, instead of a `<table>`. This example uses both the `div` markup, and the scrollable wrapper.
  */
 export const DivsScrollable = Template.bind({});
 DivsScrollable.storyName = "Scrollable table with divs";
