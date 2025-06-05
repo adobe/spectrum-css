@@ -10,14 +10,14 @@ Compared to the S1 table, this component has updated corner rounding, updated co
 
 - The S2 table supports an empty state, rendering an illustrated message component.
 - As data is loading to the table, this component will render a progress circle during the loading state.
-- There are 2 selection modes: single-select and multi-select. Multi-select tables (`selectionMode: "multiple"`) render an indeterminate checkbox in the `thead`/`div` equivalent. Single-select tables (`selectionMode: "single"`) do not render the indeterminate checkbox in the header row.
+- There are 2 selection modes: single-select and multi-select. Multi-select tables (`selectionMode: "multiple"`) render an indeterminate checkbox in the `thead`/`div` equivalent. Single-select tables (`selectionMode: "single"`) do not render the indeterminate checkbox in the header row. (Note: the `selectionMode` arg is disabled and will not render in the Storybook control table.)
 - For tables with sortable column, there are three new S2 icons used: `Sort` to indicate "general" sorting, `SortUp` for ascending sort direction, `SortDown` for descending sort direction.
 - Tables support thumbnail, avatar, and icon components as content within a cell.
 - Focus indicators for entire rows have been updated for rows to include a side focus indicator.
 
 #### Description of other S2 table work
 
-T-shirt sizing for tables is not technically supported, so t-shirt size classes (i.e. `.spectrum-Table--sizeS`), has been removed across all density variants.
+T-shirt sizing for tables is not technically supported, so t-shirt size classes (i.e. `.spectrum-Table--sizeS`), have been removed across all density variants.
 
 The `.spectrum-Table-cell--alignRight` class has been renamed to `.spectrum-Table-cell--alignEnd` to reflect the preference for "logical" positioning. The `.spectrum-Table-cell--alignCenter` class has been refactored to `.spectrum-Table-cell--alignStart`.
 
