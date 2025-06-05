@@ -36,12 +36,12 @@ export const Template = ({
 				[`${rootClass}--indeterminate`]: isIndeterminate,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap({
+			style=${ifDefined(styleMap({
 				"width": `${customWidth}px`,
 				...customStyles,
 				"--mod-progressbar-track-color": trackFill,
 				"--mod-progressbar-fill-color": progressBarFill,
-			})}
+			}))}
 			value=${ifDefined(value ? `${value}%` : undefined)}
 			aria-valuenow=${ifDefined(value ? `${value}%` : undefined)}
 			role="progressbar"

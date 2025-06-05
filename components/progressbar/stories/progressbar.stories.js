@@ -87,7 +87,6 @@ export default {
 		label: "Loading",
 		labelPosition: "top",
 		value: 0,
-		customWidth: 192,
 		isIndeterminate: false,
 		showValueLabel: true,
 	},
