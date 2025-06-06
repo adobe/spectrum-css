@@ -31,13 +31,13 @@ export default {
 		iconName: {
 			name: "Icon",
 			type: { name: "string", required: true },
-			defaultValue: "Info",
+			defaultValue: "InfoCircle",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 				defaultValue: { summary: "Info" },
 			},
-			options: ["Info", "Help"],
+			options: ["InfoCircle", "HelpCircle"],
 			control: "select",
 		},
 		iconSet: { table: { disable: true } },
@@ -76,13 +76,43 @@ export default {
 			],
 			control: "select",
 		},
-		link: { table: { disable: true } },
+		link: {
+			name: "Display link",
+			type: { name: "boolean", required: false },
+			defaultValue: false,
+			table: {
+				summary: "boolean",
+				category: "Component",
+				defaultValue: { summary: false }
+			}
+		},
+		linkText: {
+			name: "Link text",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			if: { arg: "link", truthy: true },
+		},
+		linkTarget: {
+			name: "Link target",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			if: { arg: "link", truthy: true },
+		},
 	},
 	args: {
 		rootClass: "spectrum-ContextualHelp",
-		iconName: "Info",
+		iconName: "InfoCircle",
 		iconSet: "workflow",
 		popoverPlacement: "bottom-start",
+		link: false,
+		linkText: "Link text",
+		linkTarget: "#",
 		title: "Permission required",
 		body: "Your admin must grant you permission before you can create a new document. Please contact your admin for more information.",
 		customStyles: { "inline-size": "275px" },
@@ -180,7 +210,7 @@ TopPopover.storyName = "Default - top popover";
 export const HelpDefault = Template.bind({});
 HelpDefault.tags = ["!dev"];
 HelpDefault.args = {
-	iconName: "Help",
+	iconName: "HelpCircle",
 	title: "Need help?",
 };
 HelpDefault.parameters = {
@@ -195,7 +225,7 @@ HelpWithLink.args = {
 		text: "Learn about permissions",
 		url: "#",
 	},
-	iconName: "Help",
+	iconName: "HelpCircle",
 	title: "Need help?",
 	body: "Reach out to your admin for help regarding the document you are trying to create.",
 };
@@ -214,7 +244,7 @@ HelpTopPopover.args = {
 	},
 	title: "Need help?",
 	body: "Reach out to your admin for help regarding the document you are trying to create.",
-	iconName: "Help",
+	iconName: "HelpCircle",
 };
 HelpTopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -236,7 +266,7 @@ HelpMaxWidthPopover.args = {
 	},
 	title: "Need help?",
 	body: "Reach out to your admin for help regarding the document you are trying to create.",
-	iconName: "Help",
+	iconName: "HelpCircle",
 };
 HelpMaxWidthPopover.parameters = {
 	chromatic: { disableSnapshot: true },
