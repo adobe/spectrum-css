@@ -17,6 +17,8 @@ export const Template = ({
 	title,
 	body,
 	link,
+	linkText,
+	linkTarget,
 	popoverPlacement,
 	customStyles = {},
 	customClasses = [],
@@ -44,8 +46,8 @@ export const Template = ({
 					body ? html`<p class="${rootClass}-body">${body}</p>` : "",
 					link
 						? Link({
-								text: link.text,
-								url: link.url,
+								text: linkText,
+								url: linkTarget,
 								customClasses: [`${rootClass}-link`],
 						})
 						: nothing,

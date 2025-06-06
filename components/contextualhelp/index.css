@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -12,6 +12,22 @@
  */
 
 .spectrum-ContextualHelp {
+	--spectrum-contextual-help-title-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-contextual-help-title-font-weight: var(--spectrum-title-sans-serif-font-weight);
+	--spectrum-contextual-help-title-font-style: var(--spectrum-title-sans-serif-font-style);
+	--spectrum-contextual-help-title-line-height: var(--spectrum-title-line-height);
+
+	--spectrum-contextual-help-title-color: var(--spectrum-heading-color);
+
+	--spectrum-contextual-help-body-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-contextual-help-body-sans-serif-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--spectrum-contextual-help-body-sans-serif-font-style: var(--spectrum-body-sans-serif-font-style);
+	--spectrum-contextual-help-body-line-height: var(--spectrum-line-height-200);
+
+	--spectrum-contextual-help-body-color: var(--spectrum-body-color);
+}
+
+.spectrum-ContextualHelp {
 	position: relative;
 	min-inline-size: var(--mod-spectrum-contextual-help-minimum-width, var(--spectrum-contextual-help-minimum-width));
 }
@@ -21,8 +37,7 @@
 }
 
 .spectrum-ContextualHelp-popover {
-	padding-block: var(--mod-spectrum-contextual-help-padding, var(--spectrum-spacing-400));
-	padding-inline: var(--mod-spectrum-contextual-help-padding, var(--spectrum-spacing-400));
+	padding: var(--mod-spectrum-contextual-help-padding, var(--spectrum-spacing-400));
 	font-size: var(--mod-spectrum-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
 	color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-body-color)));
 
@@ -34,9 +49,22 @@
 	}
 
 	.spectrum-ContextualHelp-heading {
-		margin-block-end: var(--mod-spectrum-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
+		font-family: var(--mod-contextual-help-title-sans-serif-font-family, var(--spectrum-contextual-help-title-sans-serif-font-family));
+		font-weight: var(--mod-contextual-help-title-font-weight, var(--spectrum-contextual-help-title-font-weight));
 		font-size: var(--mod-spectrum-contextual-help-heading-size, var(--spectrum-contextual-help-title-size));
-		color: var(--highcontrast-contextual-help-heading-color, var(--mod-contextual-help-heading-color, var(--spectrum-heading-color)));
+		font-style: var(--mod-contextual-help-title-font-style, var(--spectrum-contextual-help-title-font-style));
+		line-height: var(--mod-contextual-help-title-line-height, var(--spectrum-contextual-help-title-line-height));
+		color: var(--highcontrast-contextual-help-title-color, var(--mod-contextual-help-title-color, var(--spectrum-contextual-help-title-color)));
+		margin-block-end: var(--mod-spectrum-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
+	}
+
+	.spectrum-ContextualHelp-body {
+		font-size: var(--mod-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
+		font-family: var(--mod-contextual-help-body-sans-serif-font-family, var(--spectrum-contextual-help-body-sans-serif-font-family));
+		font-weight: var(--mod-contextual-help-body-sans-serif-font-weight, var(--spectrum-contextual-help-body-sans-serif-font-weight));
+		font-style: var(--mod-contextual-help-body-sans-serif-font-style, var(--spectrum-contextual-help-body-sans-serif-font-style));
+		line-height: var(--mod-contextual-help-body-line-height, var(--spectrum-contextual-help-body-line-height));
+		color: var(--mod-contextual-help-body-color, var(--spectrum-contextual-help-body-color));
 	}
 }
 
@@ -46,7 +74,7 @@
 
 @media (forced-colors: active) {
 	.spectrum-ContextualHelp {
-		--highcontrast-contextual-help-heading-color: CanvasText;
+		--highcontrast-contextual-help-title-color: CanvasText;
 		--highcontrast-contextual-help-body-color: CanvasText;
 	}
 }
