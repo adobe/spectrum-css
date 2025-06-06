@@ -220,7 +220,7 @@
 	&:active {
 		--highcontrast-table-row-text-color: var(--highcontrast-table-row-text-color-hover);
 		--highcontrast-table-icon-color: var(--highcontrast-table-row-text-color-hover);
-		--spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-background-color-active-color, var(--spectrum-table-row-background-color-active)));
+		--spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color-hover, var(--mod-table-row-background-color-active, var(--spectrum-table-row-background-color-active)));
 		--spectrum-table-row-text-color: var(--highcontrast-table-row-text-color-hover, var(--mod-table-row-text-color-active, var(--spectrum-table-row-text-color-active)));
 	}
 
