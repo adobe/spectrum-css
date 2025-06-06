@@ -428,7 +428,7 @@ TableStates.parameters = {
 };
 
 /**
- * Quiet tables are for when a table is meant to be supplementary, subtle, or lightweight. The quiet table utilizes the `.spectrum-Table--quiet` class and has a transparent background and no borders on the left and right.
+ * Quiet tables are for when a table is meant to be supplementary, subtle, or lightweight. The quiet table utilizes the `.spectrum-Table--quiet` class and does not have borders on the left and right.
  */
 export const Quiet = Template.bind({});
 Quiet.args = {
@@ -542,7 +542,7 @@ WithColumnDividers.parameters = {
 };
 
 /**
- * Tables can have a summary row to show totals, at either the top or the bottom of the table. This example shows both the optional summary row at the bottom, and a row marked as selected.
+ * Tables can have a summary row to show totals, at either the top or the bottom of the table. This example shows both the optional summary row at the top, and a row marked as selected.
  */
 export const SummaryAndSelected = Template.bind({});
 SummaryAndSelected.args = {
