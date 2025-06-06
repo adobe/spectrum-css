@@ -125,7 +125,6 @@
 	--mod-avatar-inline-size: var(--mod-table-avatar-size, var(--spectrum-table-avatar-size));
 
 	/* Button for menus in header cells */
-	--mod-button-border-radius: 0;
 	--mod-button-font-weight: var(--spectrum-table-header-font-weight);
 	--mod-button-font-size: var(--spectrum-table-row-font-size);
 	--mod-button-font-family: var(--spectrum-table-row-font-family);
@@ -141,7 +140,7 @@
 	--mod-button-edge-to-text: var(--spectrum-table-cell-inline-spacing);
 	--mod-button-padding-label-to-icon: var(--spectrum-table-visual-to-text);
 	--mod-button-height: var(--spectrum-table-min-header-row-height);
-	--mod-button-focus-ring-border-radius: var(--spectrum-table-focused-cell-border-radius);
+	--mod-button-focus-ring-border-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-focused-cell-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
 
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
@@ -251,7 +250,10 @@
 
 .spectrum-Table-headCell {
 	&.is-sortable,
-	&.spectrum-Table-hasMenuButton {
+	&.spectrum-Table-hasMenuButton,
+	.spectrum-Table-sortButton {
+		--spectrum-table-icon-color: var(--mod-table-header-icons-color-default, var(--spectrum-table-header-icons-color-default));
+
 		&:hover {
 			--spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-header-icons-color-hover, var(--spectrum-table-header-icons-color-hover)));
 		}
@@ -433,12 +435,20 @@
 .spectrum-Table-headCell.spectrum-Table-hasMenuButton {
 	.spectrum-Table-sortButton {
 		min-block-size: calc(var(--spectrum-table-min-header-row-height) + var(--mod-table-border-width, var(--spectrum-table-border-width)));
+		min-inline-size: 100%;
+		justify-content: flex-start;
 
-		/* Focus indicator- brings the focus indicator above the border and matches the table cell dimensions. */
-		&::after {
-			/* Multiply by 3 to account for the borders on the top, side and bottom of the table cell. */
-			inset: calc(3 * var(--mod-table-border-width, var(--spectrum-table-border-width)));
+		/* Focus indicator- brings the focus indicator above the cell borders and matches the table cell dimensions. */
+		&:focus-visible::after,
+		&.is-focused::after {
+			inset: var(--mod-table-border-width, var(--spectrum-table-border-width));
 			z-index: 1;
+
+			/* Remove the box-shadow of .spectrum-Button, which was generating a different corner radius for the focus indicator. */
+			box-shadow: none;
+
+			/* Add focus indicator border to match the other table cell focus indicators. */
+			border: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness)) solid var(--highcontrast-table-cell-focus-indicator-color, var(--highcontrast-table-focus-indicator-color, var(--mod-table-focus-indicator-color, var(--spectrum-table-focus-indicator-color))));
 		}
 
 		.spectrum-Button-label {
