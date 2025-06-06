@@ -14,12 +14,15 @@ Compared to the S1 table, this component has updated corner rounding, updated co
 - For tables with sortable column, there are three new S2 icons used: `Sort` to indicate "general" sorting, `SortUp` for ascending sort direction, `SortDown` for descending sort direction.
 - Tables support thumbnail, avatar, and icon components as content within a cell.
 - Focus indicators for entire rows have been updated for rows to include a side focus indicator.
+- New sparkline SVGs available for cell content
 
 #### Description of other S2 table work
 
 T-shirt sizing for tables is not technically supported, so t-shirt size classes (i.e. `.spectrum-Table--sizeS`), have been removed across all density variants.
 
-The `.spectrum-Table-cell--alignRight` class has been renamed to `.spectrum-Table-cell--alignEnd` to reflect the preference for "logical" positioning. The `.spectrum-Table-cell--alignCenter` class has been refactored to `.spectrum-Table-cell--alignStart`.
+The `.spectrum-Table-cell--alignRight` class has been renamed to `.spectrum-Table-cell--alignEnd` to reflect the preference for "logical" positioning. The `.spectrum-Table-cell--alignCenter` class has been refactored to `.spectrum-Table-cell--alignStart`. A new `.spectrum-Table-headCell--alignEnd` class was created to correspond to tables that may have end-aligned numerical data so the head cell follows the text alignment correctly.
+
+Semantically, if a table should enable column sorting, the content of a column's head cell should actually be a button, since it is triggering an action. If the column header cell could trigger a menu, the content of that cell should also be a button. New markup has been included to improve the semantic design of the content of header cells, utilizing button components to signify an action can be triggered, or a menu can be triggered.
 
 In S1, the CSS table component only supported thumbnails. Because the S2 table supports thumbnails, as well as avatars and icons, most of the language regarding thumbnails has also changed. For instance, the `showThumbnail` storybook arg was refactored to `visualElement`. The following CSS classes have been removed or refactored to remove the thumbnail language in favor of "visual" instead:
 
@@ -39,7 +42,7 @@ Individual cell focus rings have rounded corners.
 
 The outer table border extends all the way around the `thead`/`div` equivalent.
 
-In Storybook, several new stories have been added to the docs page and the testing grid for Chromatic. These stories include `EmptyState`, `LoadingState`, `SingleSelect`, `NumericalData`, `TableStates`, `Sortable`. Documentation has been added for each of these stories, as well as expanded in other stories.
+In Storybook, several new stories have been added to the docs page and the testing grid for Chromatic. These stories include `EmptyState`, `LoadingState`, `SingleSelect`, `NumericalData`, `TableStates`, `Sortable`, `WithMenuButton`, `WithChartContent`. Documentation has been added for each of these stories, as well as expanded in other stories.
 
 #### Mods
 
@@ -62,6 +65,7 @@ In Storybook, several new stories have been added to the docs page and the testi
 | `--mod-table-row-checkbox-block-spacing--compact`  | `--mod-table-row-checkbox-block-spacing-compact`  |
 | `--mod-table-row-checkbox-block-spacing--spacious` | `--mod-table-row-checkbox-block-spacing-spacious` |
 | `--mod-table-thumbnail-to-text`                    | `--mod-table-visual-to-text`                      |
+| `--mod-table-row-active-color`                     | `--mod-table-row-background-color-active`         |
 
 ##### New Modifiers
 
@@ -72,6 +76,15 @@ In Storybook, several new stories have been added to the docs page and the testi
 - `--mod-table-summary-row-bottom-to-text`
 - `--mod-table-summary-row-min-height`
 - `--mod-table-summary-row-top-to-text`
+- `--mod-table-header-font-style`
+- `--mod-table-header-icons-color-active`
+- `--mod-table-header-icons-color-default`
+- `--mod-table-header-icons-color-hover`
+- `--mod-table-header-icons-color-key-focus`
+- `--mod-table-row-font-family`
+- `--mod-table-row-font-style`
+- `--mod-table-row-text-color-active`
+- `--mod-table-row-text-color-hover`
 
 ##### Removed Modifiers
 
@@ -82,6 +95,8 @@ In Storybook, several new stories have been added to the docs page and the testi
 - `--mod-table-row-bottom-to-text--spacious`
 - `--mod-table-row-top-to-text--compact`
 - `--mod-table-row-top-to-text--spacious`
-- `--mod-table-thumbnail-block-spacing"`
+- `--mod-table-thumbnail-block-spacing`
 - `--mod-table-thumbnail-block-spacing-compact`
 - `--mod-table-thumbnail-block-spacing-spacious`
+- `--mod-table-header-background-color-quiet`
+- `--mod-table-row-background-color-quiet`
