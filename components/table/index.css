@@ -193,6 +193,10 @@
 	--spectrum-table-outer-border-inline-width: var(--mod-table-outer-border-inline-width-quiet, 0px);
 }
 
+.spectrum-Table-scroller {
+	--spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-gray-75));
+}
+
 .spectrum-Table-row,
 .spectrum-Table-headRow {
 	&.is-focused,
