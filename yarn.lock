@@ -5802,7 +5802,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer"
   dependencies:
-    ava: "npm:^6.3.0"
+    ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.4"
     postcss-selector-parser: "npm:^7.1.0"
@@ -5816,7 +5816,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-property-rollup@workspace:plugins/postcss-property-rollup"
   dependencies:
-    ava: "npm:^6.3.0"
+    ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.4"
   peerDependencies:
@@ -5828,7 +5828,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping"
   dependencies:
-    ava: "npm:^6.3.0"
+    ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.4"
     postcss-values-parser: "npm:^6.0.2"
@@ -5841,7 +5841,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/stylelint-no-missing-var@workspace:plugins/stylelint-no-missing-var"
   dependencies:
-    ava: "npm:^6.3.0"
+    ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     stylelint: "npm:^16.20.0"
@@ -5854,7 +5854,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/stylelint-no-unknown-custom-properties@workspace:plugins/stylelint-no-unknown-custom-properties"
   dependencies:
-    ava: "npm:^6.3.0"
+    ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     fast-glob: "npm:^3.3.3"
@@ -5870,7 +5870,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/stylelint-no-unused-custom-properties@workspace:plugins/stylelint-no-unused-custom-properties"
   dependencies:
-    ava: "npm:^6.3.0"
+    ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     postcss: "npm:^8.5.4"
@@ -6796,9 +6796,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/nft@npm:^0.29.2":
-  version: 0.29.2
-  resolution: "@vercel/nft@npm:0.29.2"
+"@vercel/nft@npm:^0.29.4":
+  version: 0.29.4
+  resolution: "@vercel/nft@npm:0.29.4"
   dependencies:
     "@mapbox/node-pre-gyp": "npm:^2.0.0"
     "@rollup/pluginutils": "npm:^5.1.3"
@@ -6814,7 +6814,7 @@ __metadata:
     resolve-from: "npm:^5.0.0"
   bin:
     nft: out/cli.js
-  checksum: 10c0/3f1e3d3d2565e6e4ac191fc4f9b9b9676959de82165d6ae789410c5c0df058802f2ff9221ac325857ddc1f11f30509c73e01c43f0a91b56371d595a2eab5205f
+  checksum: 10c0/84ba32c685f9d7c2c849b1e8c963d3b7eb09d122e666143ed97c3776f5b04a4745605e1d29fd81383f72b1d1c0d7d58e39f06dc92f021b5de079dfa4e8523574
   languageName: node
   linkType: hard
 
@@ -7548,11 +7548,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ava@npm:^6.3.0":
-  version: 6.3.0
-  resolution: "ava@npm:6.3.0"
+"ava@npm:^6.4.0":
+  version: 6.4.0
+  resolution: "ava@npm:6.4.0"
   dependencies:
-    "@vercel/nft": "npm:^0.29.2"
+    "@vercel/nft": "npm:^0.29.4"
     acorn: "npm:^8.14.1"
     acorn-walk: "npm:^8.3.4"
     ansi-styles: "npm:^6.2.1"
@@ -7569,7 +7569,7 @@ __metadata:
     common-path-prefix: "npm:^3.0.0"
     concordance: "npm:^5.0.4"
     currently-unhandled: "npm:^0.4.1"
-    debug: "npm:^4.4.0"
+    debug: "npm:^4.4.1"
     emittery: "npm:^1.1.0"
     figures: "npm:^6.1.0"
     globby: "npm:^14.1.0"
@@ -7599,7 +7599,7 @@ __metadata:
       optional: true
   bin:
     ava: entrypoints/cli.mjs
-  checksum: 10c0/10abc34f2d323b74b27fa6cb3ba808603c898459b0807d506be22ced15c32e977c278de119612838718179511df91fed2bfa1767238255829cf0bafe4fd3b721
+  checksum: 10c0/d96a0bfa8758f0c0dcfc9437801e17702535f493a01fab401289ac538bb2b7633afb7b5363392499d9ebce98bc1f425767008a76c4edf2aa225f7e2195aaa54c
   languageName: node
   linkType: hard
 
@@ -9488,7 +9488,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.0.0, debug@npm:^4.1.1, debug@npm:^4.4.0":
+"debug@npm:^4.0.0, debug@npm:^4.1.1":
   version: 4.4.0
   resolution: "debug@npm:4.4.0"
   dependencies:
