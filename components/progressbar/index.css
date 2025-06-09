@@ -20,7 +20,7 @@
 	--spectrum-progressbar-fill-size-indeterminate: 70%;
 
 	/* Size */
-	--spectrum-progressbar-inline-size: var(--spectrum-meter-default-width);
+	--spectrum-progressbar-inline-size: var(--spectrum-meter-width);
 
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-100);
 	--spectrum-progressbar-line-height: var(--spectrum-line-height-100);
@@ -60,8 +60,6 @@
 }
 
 .spectrum-ProgressBar--sizeXL {
-	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2800);
-
 	--spectrum-progressbar-font-size: var(--spectrum-font-size-300);
 	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-extra-large);
 
