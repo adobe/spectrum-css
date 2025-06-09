@@ -7,7 +7,7 @@ import { Template } from "./template.js";
  * General accordion item content for tests.
  * Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions.
  */
-const testsContent = new Map([
+export const testsContent = new Map([
 	[
 		"Are any Adobe products free?",
 		{
@@ -67,22 +67,14 @@ const defaultContentText = "This is an example of text content within the conten
  */
 const statesTestContent = new Map([
 	[
-		"hovered",
+		"Hovered",
 		{
 			isHovered: true,
 			content: defaultContentText,
 		},
 	],
 	[
-		"disabled",
-		{
-			isDisabled: true,
-			isHovered: true,
-			content: defaultContentText,
-		},
-	],
-	[
-		"hovered + disabled",
+		"Disabled",
 		{
 			isDisabled: true,
 			isHovered: true,
@@ -90,21 +82,29 @@ const statesTestContent = new Map([
 		},
 	],
 	[
-		"focus-visible",
+		"Hovered + disabled",
+		{
+			isDisabled: true,
+			isHovered: true,
+			content: defaultContentText,
+		},
+	],
+	[
+		"Focus-visible",
 		{
 			isFocused: true,
 			content: defaultContentText,
 		},
 	],
 	[
-		"active/down",
+		"Active/down",
 		{
 			isActive: true,
 			content: defaultContentText,
 		},
 	],
 	[
-		"active/down + hovered",
+		"Active/down + hovered",
 		{
 			isActive: true,
 			isHovered: true,
@@ -112,7 +112,7 @@ const statesTestContent = new Map([
 		},
 	],
 	[
-		"focus-visible + hovered",
+		"Focus-visible + hovered",
 		{
 			isFocused: true,
 			isHovered: true,
@@ -148,28 +148,6 @@ export const AccordionGroup = Variants({
 			},
 		},
 		{
-			testHeading: "Compact",
-			items: testsContent,
-			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
-			density: "compact",
-			collapseAll: true,
-			customStyles: {
-				maxInlineSize: "500px",
-			},
-			withStates: false,
-		},
-		{
-			testHeading: "Spacious",
-			items: testsContent,
-			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
-			density: "spacious",
-			collapseAll: true,
-			customStyles: {
-				maxInlineSize: "500px",
-			},
-			withStates: false,
-		},
-		{
 			testHeading: "Heading text wrapping",
 			items: new Map([
 				[
@@ -196,6 +174,28 @@ export const AccordionGroup = Variants({
 			]),
 			customStyles: {
 				maxInlineSize: "300px",
+			},
+			withStates: false,
+		},
+		{
+			testHeading: "Compact",
+			items: testsContent,
+			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
+			density: "compact",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+			withStates: false,
+		},
+		{
+			testHeading: "Spacious",
+			items: testsContent,
+			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
+			density: "spacious",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "500px",
 			},
 			withStates: false,
 		},

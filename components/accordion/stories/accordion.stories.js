@@ -1,11 +1,9 @@
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { hasNoInlinePadding, isQuiet, size } from "@spectrum-css/preview/types";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { AccordionGroup } from "./accordion.test.js";
+import { AccordionGroup, testsContent as accordionContent } from "./accordion.test.js";
 import { Template } from "./template.js";
 
 /**
@@ -47,8 +45,16 @@ export default {
 			options: ["compact", "regular", "spacious"],
 			control: "select",
 		},
-		isQuiet,
-		hasNoInlinePadding,
+		hasNoInlinePadding: {
+			name: "No Inline Padding Styling",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: { type: "boolean" },
+		},
+		isQuiet
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
@@ -60,7 +66,7 @@ export default {
 		hasNoInlinePadding: false,
 	},
 	parameters: {
-		// Prevent an innacurate depiction of width due to "centered" layout's use of flex on the body.
+		// Prevent an inacurate depiction of width due to "centered" layout's use of flex on the body.
 		layout: "padded",
 		actions: {
 			handles: ["click .spectrum-Accordion-item"],
@@ -76,72 +82,13 @@ export default {
 };
 
 /* Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions. */
-const content = new Map([
-	[
-		"Are any Adobe products free?",
-		{
-			content:
-				"Yes, Adobe offers free products like Acrobat Reader, Aero, Fill & Sign, Photoshop Express, and Adobe Scan. You can also use Creative Cloud Express, Fresco, and Lightroom Mobile for free, with the option of making in-app purchases.",
-			isDisabled: false,
-		},
-	],
-	[
-		"Are Adobe products worth it?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					"Adobe makes some of the most widely used software applications in the world, many of which are industry standard. Get started with free apps like Adobe Acrobat Reader, Aero, Fill & Sign, Photoshop Express, and Adobe Scan. Or consider Creative Cloud, with plans starting at just US$9.99/mo. Every Adobe Creative Cloud plan includes perks like free stock images and fonts, collaboration tools, and cloud storage as well as regular feature updates to deliver the latest technology.",
-					Link({
-						url: "https://www.adobe.com/creativecloud/plans.html",
-						text: "Learn more about Adobe Creative Cloud plans and pricing.",
-					}),
-				],
-			}),
-			isOpen: true,
-		},
-	],
-	[
-		"Which Adobe product is best for editing PDFs?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					"You can edit PDFs with Adobe Acrobat, which is available in two editions: Standard and Pro. Acrobat Standard provides basic tools to create, edit, and sign PDFs on Windows devices. Acrobat Pro is the complete PDF solution with tools to edit, convert, and sign PDFs across web, mobile, and tablet, as well as on Windows and macOS computers. If you'd like to try before you buy, you can get a free 7-day trial of Acrobat Pro.",
-					Link({
-						url: "https://www.adobe.com/acrobat.html",
-						text: "Learn more about Acrobat.",
-					}),
-				],
-			}),
-		},
-	],
-	[
-		"How many products does Adobe have?",
-		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					"Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator, InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as adobe experience manager, Campaign, and Target.",
-				],
-			}),
-		},
-	],
-	[
-		"What are the most popular Adobe products?",
-		{
-			content:
-				"Adobe makes some of the most widely used software in the world, including popular apps like Acrobat Pro, Photoshop, Illustrator, InDesign, Lightroom, and Premiere Pro.",
-		},
-	],
-]);
 
 /**
  * The default accordion displays at medium size with a regular density.
  */
 export const Default = AccordionGroup.bind({});
 Default.args = {
-	items: content,
+	items: accordionContent,
 };
 Default.parameters = {
 	chromatic: { disableSnapshot: false },
@@ -166,7 +113,7 @@ WithForcedColors.parameters = {
 export const Compact = Template.bind({});
 Compact.tags = ["!dev"];
 Compact.args = {
-	items: content,
+	items: accordionContent,
 	density: "compact",
 };
 Compact.parameters = {
@@ -180,7 +127,7 @@ Compact.storyName = "Density: Compact";
 export const Spacious = Template.bind({});
 Spacious.tags = ["!dev"];
 Spacious.args = {
-	items: content,
+	items: accordionContent,
 	density: "spacious",
 };
 Spacious.parameters = {
@@ -195,7 +142,7 @@ Spacious.storyName = "Density: Spacious";
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
-	items: content,
+	items: accordionContent,
 	disableAll: true,
 };
 Disabled.parameters = {
@@ -211,7 +158,7 @@ Disabled.parameters = {
 export const Quiet = Template.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
-	items: content,
+	items: accordionContent,
 	isQuiet: true,
 };
 Quiet.parameters = {
@@ -220,13 +167,13 @@ Quiet.parameters = {
 
 /**
  * The optional no inline padding style for accordion. This sets no overall horizontal padding on either side of the component
- * (but the body text content always keeps its own padding from the edge). This can be applied by adding the `spectrum-Accordion----noInlinePadding` class alongside the
+ * (but the body text content always keeps its own padding from the edge). This can be applied by adding the `spectrum-Accordion--noInlinePadding` class alongside the
  * parent `spectrum-Accordion` class.
  */
 export const NoInlinePadding = Template.bind({});
 NoInlinePadding.tags = ["!dev"];
 NoInlinePadding.args = {
-	items: content,
+	items: accordionContent,
 	hasNoInlinePadding: true,
 };
 NoInlinePadding.parameters = {
@@ -240,7 +187,7 @@ export const Sizing = (args, context) => Sizes({
 	Template,
 	withBorder: false,
 	withHeading: false,
-	items: content,
+	items: accordionContent,
 	...args,
 }, context);
 Sizing.tags = ["!dev"];

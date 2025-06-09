@@ -14,6 +14,7 @@ the spacing around the content area.
 - Adds the optional "quiet" style, which does not show dividers between accordion items.
 - Adds CSS transition to animate the rotation of the disclosure indicator when expanding and
   collapsing the accordion item.
+- Adds No Inline Padding variant
 
 #### Markup changes
 
