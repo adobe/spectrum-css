@@ -1,5 +1,5 @@
 ---
-"@spectrum-css/progressbar": major
+"@spectrum-css/progressbar": minor
 "@spectrum-css/meter": minor
 ---
 

@@ -59,6 +59,15 @@
 	--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
 }
 
+.spectrum-ProgressBar--sizeXL {
+	--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2800);
+
+	--spectrum-progressbar-font-size: var(--spectrum-font-size-300);
+	--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-extra-large);
+
+	--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
+}
+
 .spectrum-ProgressBar {
 	position: relative;
 	display: inline-flex;
