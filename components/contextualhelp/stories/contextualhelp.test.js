@@ -26,8 +26,6 @@ export const ContextualHelpGroup = Variants({
 				"margin-bottom": "200px",
 			},
 			link: true,
-			linkText: "Link text",
-			linkTarget: "#",
 		},
 		{
 			testHeading: "Help",

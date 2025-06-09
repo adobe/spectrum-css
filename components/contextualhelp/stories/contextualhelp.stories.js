@@ -77,7 +77,7 @@ export default {
 			control: "select",
 		},
 		link: {
-			name: "Display link",
+			name: "Has link",
 			type: { name: "boolean", required: false },
 			defaultValue: false,
 			table: {
@@ -86,24 +86,6 @@ export default {
 				defaultValue: { summary: false }
 			}
 		},
-		linkText: {
-			name: "Link text",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Content",
-			},
-			if: { arg: "link", truthy: true },
-		},
-		linkTarget: {
-			name: "Link target",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Content",
-			},
-			if: { arg: "link", truthy: true },
-		},
 	},
 	args: {
 		rootClass: "spectrum-ContextualHelp",
@@ -111,8 +93,6 @@ export default {
 		iconSet: "workflow",
 		popoverPlacement: "bottom-start",
 		link: false,
-		linkText: "Link text",
-		linkTarget: "#",
 		title: "Permission required",
 		body: "Your admin must grant you permission before you can create a new document. Please contact your admin for more information.",
 		customStyles: { "inline-size": "275px" },
