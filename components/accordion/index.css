@@ -274,6 +274,7 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 
+	/* start spacing controlled by edge to disclosure icon spacing */
 	padding-inline: 0 var(--mod-accordion-edge-to-content-area, var(--spectrum-accordion-edge-to-content-area));
 	line-height: var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height));
 
