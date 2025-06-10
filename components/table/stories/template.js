@@ -330,6 +330,7 @@ export const Template = ({
 					${when(hasMenu || isSortable, () => html`
 						${when(isSortable, () => Button({
 								size: "m",
+								variant: "secondary",
 								iconName: sortIcon,
 								iconSet: "workflow",
 								label: "Column title",
@@ -338,6 +339,7 @@ export const Template = ({
 						)}
 						${when(!isSortable, () => Button({
 								size: "m",
+								variant: "secondary",
 								iconName: "SortUp",
 								iconSet: "workflow",
 								label: "Column title",
