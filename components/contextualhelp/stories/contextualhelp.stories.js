@@ -198,66 +198,6 @@ HelpDefault.parameters = {
 };
 HelpDefault.storyName = "Help icon";
 
-export const HelpWithLink = Template.bind({});
-HelpWithLink.tags = ["!dev"];
-HelpWithLink.args = {
-	link: {
-		text: "Learn about permissions",
-		url: "#",
-	},
-	iconName: "HelpCircle",
-	title: "Need help?",
-	body: "Reach out to your admin for help regarding the document you are trying to create.",
-};
-HelpWithLink.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-HelpWithLink.storyName = "Help icon - with link";
-
-export const HelpTopPopover = Template.bind({});
-HelpTopPopover.tags = ["!dev"];
-HelpTopPopover.args = {
-	popoverPlacement: "top",
-	customStyles: {
-		"inline-size": "275px",
-		"margin-top": "170px",
-	},
-	title: "Need help?",
-	body: "Reach out to your admin for help regarding the document you are trying to create.",
-	iconName: "HelpCircle",
-};
-HelpTopPopover.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "auto",
-		},
-	},
-};
-HelpTopPopover.storyName = "Help icon - top popover";
-
-export const HelpMaxWidthPopover = Template.bind({});
-HelpMaxWidthPopover.tags = ["!dev"];
-HelpMaxWidthPopover.args = {
-	customStyles: {
-		"inline-size": "275px",
-		"--mod-spectrum-contextual-help-popover-maximum-width": "180px",
-		"margin-bottom": "270px",
-	},
-	title: "Need help?",
-	body: "Reach out to your admin for help regarding the document you are trying to create.",
-	iconName: "HelpCircle",
-};
-HelpMaxWidthPopover.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "auto",
-		},
-	},
-};
-HelpMaxWidthPopover.storyName = "Help icon - max width popover";
-
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ContextualHelpGroup.bind({});
 WithForcedColors.args = Default.args;
