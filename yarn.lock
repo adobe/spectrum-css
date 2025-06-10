@@ -129,7 +129,7 @@ __metadata:
     "@spectrum-tools/postcss-property-rollup": "npm:0.0.1"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     "@yarnpkg/types": "npm:^4.0.1"
-    at-rule-packer: "npm:^0.4.2"
+    at-rule-packer: "npm:^0.5.0"
     autoprefixer: "npm:^10.4.21"
     colors: "npm:^1.4.0"
     cross-env: "npm:^7.0.3"
@@ -7521,12 +7521,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"at-rule-packer@npm:^0.4.2":
-  version: 0.4.2
-  resolution: "at-rule-packer@npm:0.4.2"
+"at-rule-packer@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "at-rule-packer@npm:0.5.0"
   peerDependencies:
     postcss: 8.x
-  checksum: 10c0/4c2d929054f1d1a49b753c05a3f5f3d79dfbf912459d57a139d63b62d4b79079d03644b08b2d21d3db88ce5a52801a523a3878dca25522bf7ad796b0957c9bd1
+  checksum: 10c0/8543e42606301ee5cf933b9b12b21b5107b08d5ddba6650704fdd29082d6a96b2793a9486791176bf23a86041086aed588ff8bd3aeb54bff442392b1f969cd53
   languageName: node
   linkType: hard
 
