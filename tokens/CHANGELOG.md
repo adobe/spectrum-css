@@ -1,14 +1,22 @@
 # Change log
 
+## 16.0.2
+
+### Patch Changes
+
+- [#3883](https://github.com/adobe/spectrum-css/pull/3883) [`4e3a120`](https://github.com/adobe/spectrum-css/commit/4e3a120339a6e7e6d0d19e3f2f7f608ab96621ed) Thanks [@byteakp](https://github.com/byteakp)!
+
+Fixed `--spectrum-cjk-font` variable to correctly reference `--spectrum-cjk-font-family-stack` instead of `--spectrum-code-font-family-stack`.
+
 ## 16.0.1
 
 ### Patch Changes
 
 📝 [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-- Dependency alignment across the project.
+Dependency alignment across the project.
 
-  Set component peerDependencies as optional to reduce console warnings on downstream projects.
+Set component peerDependencies as optional to reduce console warnings on downstream projects.
 
 ## 16.0.0
 
@@ -351,9 +359,12 @@ If you are looking to implement a fully S2 design, please explore the `next` rel
 - `--spectrum-switch-top-to-control-medium`
   - **value**: 9px (desktop)
   - **value**: 11px (mobile)
-- `--spectrum-switch-top-to-control-large`
-  - **value**: 12px (desktop)
-  - **value**: 15px (mobile)
+- `--spectrum-switch-top-to-control
+
+-large`
+
+- **value**: 12px (desktop)
+- **value**: 15px (mobile)
 - `--spectrum-switch-top-to-control-extra-large`
   - **value**: 15px (desktop)
   - **value**: 19px (mobile)
