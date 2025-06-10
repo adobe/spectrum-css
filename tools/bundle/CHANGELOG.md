@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`7971c77`](https://github.com/adobe/spectrum-css/commit/7971c7728b88e5e539b9d0974ab805d9ef6338fd)]:
+  - @spectrum-css/progressbar@7.0.0-next.2
+  - @spectrum-css/meter@2.0.0-next.2
+
 ## 2.0.0-next.1
 
 ### Major Changes
