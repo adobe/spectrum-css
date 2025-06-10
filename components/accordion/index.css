@@ -115,8 +115,8 @@
 	--spectrum-accordion-corner-radius: var(--spectrum-corner-radius-medium-size-large);
 	--spectrum-accordion-item-header-font-size: var(--spectrum-font-size-300);
 	--spectrum-accordion-item-content-font-size: var(--spectrum-body-size-m);
-	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-large);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-large);
+	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-large);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-large);
 	--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-large);
 }
 
@@ -131,8 +131,8 @@
 	--spectrum-accordion-corner-radius: var(--spectrum-corner-radius-medium-size-extra-large);
 	--spectrum-accordion-item-header-font-size: var(--spectrum-font-size-400);
 	--spectrum-accordion-item-content-font-size: var(--spectrum-body-size-l);
-	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-extra-large);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-extra-large);
+	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-extra-large);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-extra-large);
 	--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-extra-large);
 }
 
@@ -172,7 +172,7 @@
 
 	&.spectrum-Accordion--sizeS {
 		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-100);
-		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-small-top-to-text-spacious);
+		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-small);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-small);
 		--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-spacious-small);
 	}
