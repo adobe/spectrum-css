@@ -306,7 +306,7 @@
 		background-color: var(--mod-accordion-background-color-key-focus, var(--spectrum-accordion-background-color-key-focus));
 		color: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-accordion-item-header-color-key-focus));
 		outline: var(--mod-accordion-focus-indicator-thickness, var(--spectrum-accordion-focus-indicator-thickness)) solid var(--mod-accordion-focus-indicator-color, var(--spectrum-accordion-focus-indicator-color));
-		outline-offset: calc(var(--mod-accordion-focus-indicator-gap, var(--spectrum-accordion-focus-indicator-gap)) * -1);
+		outline-offset: var(--mod-accordion-focus-indicator-gap, var(--spectrum-accordion-focus-indicator-gap));
 	}
 
 	&:active {
