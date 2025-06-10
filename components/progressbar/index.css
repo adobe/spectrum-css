@@ -145,7 +145,7 @@
 	word-break: normal;
 
 	.spectrum-ProgressBar-track {
-		flex: 1 1 var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));
+		flex: 1 1 var(--mod-progressbar-inline-size, var(--spectrum-progressbar-inline-size));
 	}
 
 	.spectrum-ProgressBar-label {
@@ -196,17 +196,17 @@
 	}
 
 	to {
-		transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default)));
+		transform: translate(var(--mod-progressbar-inline-size, var(--spectrum-progressbar-inline-size)));
 	}
 }
 
 @keyframes indeterminate-loop-rtl {
 	from {
-		transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-fill-size-indeterminate)));
+		transform: translate(var(--mod-progressbar-inline-size, var(--spectrum-progressbar-fill-size-indeterminate)));
 	}
 
 	to {
-		transform: translate(calc(-1 * var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default))));
+		transform: translate(calc(-1 * var(--mod-progressbar-inline-size, var(--spectrum-progressbar-inline-size))));
 	}
 }
 
