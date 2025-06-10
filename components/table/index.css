@@ -133,10 +133,10 @@
 	--mod-button-background-color-hover: transparent;
 	--mod-button-background-color-focus: transparent;
 	--mod-button-background-color-down: transparent;
-	--mod-button-content-color-default: var(--spectrum-table-header-text-color);
-	--mod-button-content-color-hover: var(--spectrum-table-header-text-color);
-	--mod-button-content-color-focus: var(--spectrum-table-header-text-color);
-	--mod-button-content-color-down: var(--spectrum-table-header-text-color);
+	--mod-button-content-color-default: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
+	--mod-button-content-color-hover: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
+	--mod-button-content-color-focus: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
+	--mod-button-content-color-down: var(--mod-table-header-text-color, var(--spectrum-table-header-text-color));
 	--mod-button-edge-to-text: var(--spectrum-table-cell-inline-spacing);
 	--mod-button-padding-label-to-icon: var(--spectrum-table-visual-to-text);
 	--mod-button-border-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-focused-cell-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
@@ -197,8 +197,7 @@
 	--spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-gray-75));
 }
 
-.spectrum-Table-row,
-.spectrum-Table-headRow {
+.spectrum-Table-row {
 	&.is-focused,
 	&:focus-visible,
 	&:focus {
@@ -349,7 +348,6 @@
 		background-color: var(--mod-table-header-background-color, var(--spectrum-table-header-background-color));
 		border-block-start: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
 
-		transition: color var(--highcontrast-table-transition-duration, var(--mod-table-transition-duration, var(--spectrum-table-transition-duration))) ease-in-out;
 		cursor: var(--mod-table-cursor-header-default, initial);
 		outline: 0;
 
@@ -914,10 +912,10 @@
 	border: 0;
 	color: var(--spectrum-table-icon-color);
 
-	transform: var(--spectrum-logical-rotation,);
+	transform: var(--spectrum-logical-rotation);
 
 	&[aria-expanded="true"] {
-		transform: var(--spectrum-logical-rotation,) rotate(90deg);
+		transform: var(--spectrum-logical-rotation) rotate(90deg);
 	}
 
 	&::after {
