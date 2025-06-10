@@ -1018,6 +1018,9 @@
 		/* Removes unstylable readability backplate. */
 		forced-color-adjust: none;
 
+		/* Make sure border colors are visible in high contrast mode */
+		border: var(--spectrum-table-border-width) solid Highlight;
+
 		&:focus-visible,
 		&.is-focused {
 			&::after {
@@ -1038,11 +1041,6 @@
 			.spectrum-Table-cell:first-child::before {
 				background-color: Highlight;
 			}
-
-			/* Make sure border colors are visible in high contrast mode */
-			/* .spectrum-Table-cell {
-				border-color: Highlight;
-			} */
 		}
 	}
 
