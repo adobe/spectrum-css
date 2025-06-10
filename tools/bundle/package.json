@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/bundle",
-	"version": "2.0.0-next.0",
+	"version": "2.0.0-next.1",
 	"description": "A demo-ready bundle of the components in the Spectrum CSS library.",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -29,7 +29,7 @@
 		"./src/*": "./src/*"
 	},
 	"main": "dist/index.css",
-	"devDependencies": {
+	"dependencies": {
 		"@spectrum-css/accordion": "8.0.0-next.1",
 		"@spectrum-css/actionbar": "11.0.0-next.2",
 		"@spectrum-css/actionbutton": "8.0.0-next.2",
@@ -84,7 +84,7 @@
 		"@spectrum-css/opacitycheckerboard": "5.0.0-next.0",
 		"@spectrum-css/page": "10.0.0-next.0",
 		"@spectrum-css/pagination": "11.0.0-next.1",
-		"@spectrum-css/picker": "10.0.0-next.2",
+		"@spectrum-css/picker": "10.0.0-next.3",
 		"@spectrum-css/pickerbutton": "7.0.0-next.1",
 		"@spectrum-css/popover": "9.0.0-next.2",
 		"@spectrum-css/progressbar": "7.0.0-next.1",
@@ -101,7 +101,7 @@
 		"@spectrum-css/swatch": "9.0.0-next.1",
 		"@spectrum-css/swatchgroup": "6.0.0-next.1",
 		"@spectrum-css/switch": "7.0.0-next.1",
-		"@spectrum-css/table": "9.0.0-next.1",
+		"@spectrum-css/table": "9.0.0-next.2",
 		"@spectrum-css/tabs": "7.0.0-next.1",
 		"@spectrum-css/tag": "11.0.0-next.2",
 		"@spectrum-css/taggroup": "8.0.0-next.1",

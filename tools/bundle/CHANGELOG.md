@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-next.1
+
+### Major Changes
+
+- Updated picker and table changes brought into the released bundle.
+
 ## 2.0.0-next.0
 
 ### Major Changes

@@ -1,5 +1,28 @@
 # Change log
 
+## 10.0.0-next.3
+
+### Major Changes
+
+- [#3792](https://github.com/adobe/spectrum-css/pull/3792) [`032001b`](https://github.com/adobe/spectrum-css/commit/032001b4eb1e6f15bb30fcc18b42cd001f790024) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
+
+#### Component refactor
+
+- Refactors Picker component to use proper custom property naming conventions
+- Adds size-specific animation distances for Popover component
+- Improves component structure with proper class by renaming `spectrum-Picker` to `spectrum-Picker-button`
+- `spectrum-Picker` now encapsulates help text, label, and popover components
+- Adds `flex-shrink` to progress circle for better layout control when truncation and loading is visible
+- Updates Popover animation distance to use `spectrum-Picker` custom properties
+
+##### New token
+
+`--spectrum-picker-popover-animation-distance`
+
+##### Renamed tokens
+
+`spectrum-picker-spacing-picker-to-popover` --> `--spectrum-picker-popover-animation-distance`
+
 ## 10.0.0-next.2
 
 ### Patch Changes

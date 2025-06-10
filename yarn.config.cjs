@@ -246,13 +246,13 @@ module.exports = defineConfig({
 					// Don't remove tooling dependencies
 					if (!dependency.startsWith("@spectrum-css/")) continue;
 
-					if (!components.includes(dependency.replace("@spectrum-css/", "")) && dependency !== "@spectrum-css/tokens") {
-						// Remove the dependencies that are not in the components directory
-						workspace.remove(`dependencies.${dependency}`);
-					}
-					else {
+					if (Yarn.workspace({ ident: dependency })?.manifest?.version) {
 						// Update the version of the dependency to the latest local version
 						workspace.set(`dependencies.${dependency}`, Yarn.workspace({ ident: dependency }).manifest.version);
+					}
+					else {
+						// Remove the dependencies that are not in the components directory
+						workspace.unset(`dependencies.${dependency}`);
 					}
 				}
 			}
