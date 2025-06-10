@@ -14,7 +14,8 @@
 .spectrum-Accordion {
 	/* Layout and spacing */
 	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-100);
-	--spectrum-accordion-item-minimum-width: var(--spectrum-field-default-width-medium);
+	--spectrum-accordion-item-minimum-width: var(--spectrum-accordion-minimum-width);
+	--spectrum-accordion-item-width: var(--spectrum-field-default-width-medium);
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-100);
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-medium);
 	--spectrum-accordion-edge-to-disclosure-indicator-space: var(--spectrum-field-edge-to-disclosure-icon-100);
@@ -88,7 +89,7 @@
 
 .spectrum-Accordion--sizeS {
 	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-75);
-	--spectrum-accordion-item-minimum-width: var(--spectrum-accordion-minimum-width);
+	--spectrum-accordion-item-width: var(--spectrum-accordion-minimum-width); /* small size default width uses this min-width token */
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-75);
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-small);
 	--spectrum-accordion-edge-to-disclosure-indicator-space: var(--spectrum-field-edge-to-disclosure-icon-75);
@@ -104,7 +105,7 @@
 
 .spectrum-Accordion--sizeL {
 	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
-	--spectrum-accordion-item-minimum-width: var(--spectrum-field-default-width-large);
+	--spectrum-accordion-item-width: var(--spectrum-field-default-width-large);
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-200);
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-large);
 	--spectrum-accordion-edge-to-disclosure-indicator-space: var(--spectrum-field-edge-to-disclosure-icon-200);
@@ -120,7 +121,7 @@
 
 .spectrum-Accordion--sizeXL {
 	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-300);
-	--spectrum-accordion-item-minimum-width: var(--spectrum-field-default-width-extra-large);
+	--spectrum-accordion-item-width: var(--spectrum-field-default-width-extra-large);
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-300);
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-extra-large);
 	--spectrum-accordion-edge-to-disclosure-indicator-space: var(--spectrum-field-edge-to-disclosure-icon-300);
@@ -225,6 +226,7 @@
 	margin: 0;
 	min-block-size: var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size));
 	min-inline-size: var(--mod-accordion-item-minimum-width, var(--spectrum-accordion-item-minimum-width));
+	inline-size: var(--mod-accordion-item-width, var(--spectrum-accordion-item-width));
 	border-block-end: var(--mod-accordion-divider-thickness, var(--spectrum-accordion-divider-thickness)) solid var(--spectrum-accordion-divider-color);
 
 	&:first-child {
