@@ -139,7 +139,7 @@
 	--mod-button-content-color-down: var(--spectrum-table-header-text-color);
 	--mod-button-edge-to-text: var(--spectrum-table-cell-inline-spacing);
 	--mod-button-padding-label-to-icon: var(--spectrum-table-visual-to-text);
-	--mod-button-height: var(--spectrum-table-min-header-row-height);
+	--mod-button-border-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-focused-cell-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
 	--mod-button-focus-ring-border-radius: calc(var(--mod-table-border-radius, var(--spectrum-table-focused-cell-border-radius)) - var(--mod-table-border-width, var(--spectrum-table-border-width)));
 
 	&:dir(rtl) {
@@ -256,7 +256,7 @@
 	&.is-sortable,
 	&.spectrum-Table-hasMenuButton,
 	.spectrum-Table-sortButton {
-		--spectrum-table-icon-color: var(--mod-table-header-icons-color-default, var(--spectrum-table-header-icons-color-default));
+		--spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-header-icons-color-default, var(--spectrum-table-header-icons-color-default)));
 
 		&:hover {
 			--spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-header-icons-color-hover, var(--spectrum-table-header-icons-color-hover)));
@@ -401,17 +401,6 @@
 	}
 }
 
-/* Quiet table header rows do not have inline borders */
-.spectrum-Table--quiet .spectrum-Table-headRow:first-child {
-	.spectrum-Table-headCell:first-child {
-		border-inline-start: 0;
-	}
-
-	.spectrum-Table-headCell:last-child {
-		border-inline-end: 0;
-	}
-}
-
 /********* ICONS- SORT, DISCLOSURE/MENU *********/
 /* Head cell column text */
 .spectrum-Table-columnTitle {
@@ -422,6 +411,21 @@
 /* A "sortable-only" head cell has no padding around its button. */
 .spectrum-Table-headCell.is-sortable {
 	padding: 0;
+
+	/* Ensure the button text color is the same as the header text color, particularly in high contrast mode. */
+	.spectrum-Table-sortButton {
+		color: var(--highcontrast-table-header-text-color, var(--mod-table-header-text-color, var(--spectrum-table-header-text-color)));
+
+		/* Avoids flash of a different text color from the button in WHCM. */
+		forced-color-adjust: none;
+
+		&:hover,
+		&:focus,
+		&:focus-visible,
+		&:active {
+			color: var(--highcontrast-table-header-text-color-hover, var(--mod-table-header-text-color, var(--spectrum-table-header-text-color)));
+		}
+	}
 
 	/* Focus indicator- brings the focus indicator above the border and matches the table cell dimensions. */
 	.spectrum-Table-sortButton::after {
@@ -438,9 +442,16 @@
 /* Head cell column text in the button that opens the menu */
 .spectrum-Table-headCell.spectrum-Table-hasMenuButton {
 	.spectrum-Table-sortButton {
-		min-block-size: calc(var(--spectrum-table-min-header-row-height) + var(--mod-table-border-width, var(--spectrum-table-border-width)));
 		min-inline-size: 100%;
 		justify-content: flex-start;
+		color: var(--highcontrast-table-header-text-color, var(--mod-table-header-text-color, var(--spectrum-table-header-text-color)));
+
+		/* Avoids flash of a different text color from the button in WHCM. */
+		forced-color-adjust: none;
+
+		&:hover {
+			color: var(--highcontrast-table-header-text-color-hover, var(--mod-table-header-text-color, var(--spectrum-table-header-text-color)));
+		}
 
 		/* Focus indicator- brings the focus indicator above the cell borders and matches the table cell dimensions. */
 		&:focus-visible::after,
@@ -931,7 +942,7 @@
 
 	&:focus-visible,
 	&.is-keyboardFocused {
-		--spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus)));
+		--spectrum-table-icon-color: var(--highcontrast-table-icon-color-focus, var(--mod-table-icon-color-key-focus, var(--spectrum-table-icon-color-key-focus)));
 
 		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
 		outline-style: solid;
@@ -980,6 +991,10 @@
 
 		--highcontrast-table-selected-row-background-color: Highlight;
 		--highcontrast-table-selected-row-text-color: HighlightText;
+
+		/* Button text colors */
+		--highcontrast-table-header-text-color: CanvasText;
+		--highcontrast-table-header-text-color-hover: Highlight;
 
 		@supports (color: SelectedItem) {
 			--highcontrast-table-selected-row-background-color: SelectedItem;
