@@ -77,7 +77,6 @@ const statesTestContent = new Map([
 		"Disabled",
 		{
 			isDisabled: true,
-			isHovered: true,
 			content: defaultContentText,
 		},
 	],
