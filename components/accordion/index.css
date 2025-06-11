@@ -25,6 +25,7 @@
 	--spectrum-accordion-edge-to-text-space: var(--spectrum-accordion-edge-to-text);
 	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-medium);
 	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-medium);
+	--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-medium);
 	--spectrum-accordion-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-accordion-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
 	--spectrum-accordion-item-content-area-top-to-content: var(--spectrum-accordion-content-area-top-to-content);
@@ -70,10 +71,6 @@
 		var(--mod-accordion-item-minimum-height, var(--spectrum-accordion-item-minimum-height)),
 		var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) + var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) + (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height)))
 	);
-
-	/* Calculated top to disclosure icon space that takes into account density and line-height, to vertically align icon with first line of header text.
-	   This is needed because the spec field-top-to-disclosure-icon-* tokens can't be used because they are not affected by density. */
-	--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-medium);
 
 	/* Right-to-left adjustments for transforms */
 	&:dir(rtl) {
