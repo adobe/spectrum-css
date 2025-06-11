@@ -37,7 +37,3 @@ All existing popover positioning varations are supported.
 `--mod-contextual-help-title-sans-serif-font-family`
 `--highcontrast-contextual-help-heading-color`
 `--highcontrast-contextual-help-title-color`
-
-##### Removed mods
-
-`--highcontrast-contextual-help-heading-color`
