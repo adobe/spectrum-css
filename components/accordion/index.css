@@ -16,7 +16,6 @@
 	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-100);
 	--spectrum-accordion-item-minimum-width: var(--spectrum-accordion-minimum-width);
 	--spectrum-accordion-item-width: var(--spectrum-field-default-width-medium);
-	--spectrum-accordion-item-padding-block: var(--spectrum-accordion-item-to-divider);
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-100);
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-medium);
 	--spectrum-accordion-edge-to-disclosure-indicator-space: var(--spectrum-field-edge-to-disclosure-icon-100);
@@ -223,7 +222,6 @@
 	z-index: inherit;
 	position: relative;
 	margin: 0;
-	padding-block: var(--mod-accordion-item-padding-block, var(--spectrum-accordion-item-padding-block));
 	min-block-size: var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size));
 	min-inline-size: var(--mod-accordion-item-minimum-width, var(--spectrum-accordion-item-minimum-width));
 	inline-size: var(--mod-accordion-item-width, var(--spectrum-accordion-item-width));
