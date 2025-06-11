@@ -297,12 +297,12 @@
 	color: var(--mod-accordion-item-header-color-default, var(--spectrum-accordion-item-header-color-default));
 	background-color: var(--mod-accordion-background-color-default, var(--spectrum-accordion-background-color-default));
 
-	&:hover {
+	&:hover &:not(.is-disabled) {
 		color: var(--mod-accordion-item-header-color-hover, var(--spectrum-accordion-item-header-color-hover));
 		background-color: var(--mod-accordion-background-color-hover, var(--spectrum-accordion-background-color-hover));
 	}
 
-	&:focus-visible {
+	&:focus-visible &:not(.is-disabled) {
 		border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
 		background-color: var(--mod-accordion-background-color-key-focus, var(--spectrum-accordion-background-color-key-focus));
 		color: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-accordion-item-header-color-key-focus));
@@ -310,7 +310,7 @@
 		outline-offset: var(--mod-accordion-focus-indicator-gap, var(--spectrum-accordion-focus-indicator-gap));
 	}
 
-	&:active {
+	&:active &:not(.is-disabled) {
 		background-color: var(--mod-accordion-background-color-down, var(--spectrum-accordion-background-color-down));
 		color: var(--mod-accordion-item-header-color-down, var(--spectrum-accordion-item-header-color-down));
 	}
