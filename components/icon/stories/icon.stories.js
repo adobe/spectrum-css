@@ -7,6 +7,11 @@ import { IconGroup } from "./icon.test.js";
 import { IconListTemplate, Template, UIDefaultTemplate } from "./template.js";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import styles from "../index.css?inline";
+import packageJson from "../package.json";
+
 /**
  * Create a list of all UI Icons with their sizing numbers.
  *
@@ -102,6 +107,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: { styles },
 	},
 };
 
