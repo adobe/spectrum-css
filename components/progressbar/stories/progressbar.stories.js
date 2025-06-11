@@ -18,18 +18,6 @@ export default {
 	title: "Progress bar",
 	component: "ProgressBar",
 	argTypes: {
-		customWidth: {
-			name: "Custom width",
-			defaultValue: 192,
-			description: "A number to adjust the width of the component. Spectrum 2 specifications limit the component width to be between 48px and 768px.",
-			type: { name: "number" },
-			table: {
-				type: { summary: "number" },
-				category: "Component",
-				defaultValue: { summary: 200 },
-			},
-			control: { type: "range", min: 48, max: 768,},
-		},
 		size: size(["s", "m", "l", "xl"]),
 		isIndeterminate,
 		labelPosition: {
@@ -87,7 +75,6 @@ export default {
 		label: "Loading",
 		labelPosition: "top",
 		value: 0,
-		customWidth: 200,
 		isIndeterminate: false,
 		showValueLabel: true,
 	},
@@ -143,13 +130,15 @@ Indeterminate.parameters = {
 };
 
 /**
- * The minimum width of a progress bar is 48px and the maximum width of a progress bar is 768px, for both desktop and mobile platform scale. Smaller progress bars should only be used in places where it’s not necessary to have a label.
+ * By default, the progress bar has a minimum, maximum, and fixed size. The progress bar may be displayed at a custom width by setting `--mod-progressbar-inline-size` to the desired width. The progress bar below is displayed at `400px` using that modifiable custom property.
  */
 export const CustomWidth = Template.bind({});
 CustomWidth.storyName = "Custom width";
 CustomWidth.args = {
 	value: 83,
-	customWidth: 400,
+	customStyles: {
+		"--mod-progressbar-inline-size": "400px",
+	},
 };
 CustomWidth.tags = ["!dev"];
 CustomWidth.parameters = {

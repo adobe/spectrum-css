@@ -4231,7 +4231,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/bundle@npm:2.0.0-next.0, @spectrum-css/bundle@workspace:tools/bundle":
+"@spectrum-css/bundle@npm:2.0.0-next.1, @spectrum-css/bundle@workspace:tools/bundle":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/bundle@workspace:tools/bundle"
   dependencies:
@@ -4289,7 +4289,7 @@ __metadata:
     "@spectrum-css/opacitycheckerboard": "npm:5.0.0-next.0"
     "@spectrum-css/page": "npm:10.0.0-next.0"
     "@spectrum-css/pagination": "npm:11.0.0-next.1"
-    "@spectrum-css/picker": "npm:10.0.0-next.2"
+    "@spectrum-css/picker": "npm:10.0.0-next.3"
     "@spectrum-css/pickerbutton": "npm:7.0.0-next.1"
     "@spectrum-css/popover": "npm:9.0.0-next.2"
     "@spectrum-css/progressbar": "npm:7.0.0-next.1"
@@ -4306,7 +4306,7 @@ __metadata:
     "@spectrum-css/swatch": "npm:9.0.0-next.1"
     "@spectrum-css/swatchgroup": "npm:6.0.0-next.1"
     "@spectrum-css/switch": "npm:7.0.0-next.1"
-    "@spectrum-css/table": "npm:9.0.0-next.1"
+    "@spectrum-css/table": "npm:9.0.0-next.2"
     "@spectrum-css/tabs": "npm:7.0.0-next.1"
     "@spectrum-css/tag": "npm:11.0.0-next.2"
     "@spectrum-css/taggroup": "npm:8.0.0-next.1"
@@ -5167,7 +5167,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/picker@npm:10.0.0-next.2, @spectrum-css/picker@workspace:components/picker":
+"@spectrum-css/picker@npm:10.0.0-next.3, @spectrum-css/picker@workspace:components/picker":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/picker@workspace:components/picker"
   dependencies:
@@ -5264,7 +5264,7 @@ __metadata:
     "@babel/core": "npm:^7.27.4"
     "@chromatic-com/storybook": "npm:^3.2.6"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
-    "@spectrum-css/bundle": "npm:2.0.0-next.0"
+    "@spectrum-css/bundle": "npm:2.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.1.0-next.3"
     "@spectrum-css/ui-icons": "npm:2.0.0-next.1"
     "@storybook/addon-a11y": "npm:8.4.7"
@@ -5544,7 +5544,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/table@npm:9.0.0-next.1, @spectrum-css/table@workspace:components/table":
+"@spectrum-css/table@npm:9.0.0-next.2, @spectrum-css/table@workspace:components/table":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/table@workspace:components/table"
   dependencies:
@@ -5579,7 +5579,7 @@ __metadata:
   dependencies:
     "@spectrum-css/icon": "npm:10.0.0-next.2"
     "@spectrum-css/menu": "npm:10.0.0-next.3"
-    "@spectrum-css/picker": "npm:10.0.0-next.2"
+    "@spectrum-css/picker": "npm:10.0.0-next.3"
     "@spectrum-css/tokens": "npm:16.1.0-next.3"
   peerDependencies:
     "@spectrum-css/icon": ">=10.0.0-next.0"
