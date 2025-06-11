@@ -241,6 +241,8 @@
 }
 
 .spectrum-Accordion-itemIndicator {
+	inline-size: var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height));
+	block-size: var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height));
 	transform: var(--spectrum-logical-rotation);
 	transition: transform ease var(--mod-accordion-animation-duration, var(--spectrum-accordion-animation-duration));
 	flex-shrink: 0;
