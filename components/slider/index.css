@@ -19,6 +19,7 @@
 	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
 	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
+	--spectrum-slider-inline-size: var(--spectrum-field-default-width-medium);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
@@ -34,7 +35,7 @@
 	--spectrum-slider-track-margin-offset: calc(var(--spectrum-slider-controls-margin) * -1);
 	--spectrum-slider-track-middle-handleoffset: calc(var(--spectrum-slider-handle-gap) + calc(var(--spectrum-slider-handle-size) / 2));
 	--spectrum-slider-input-top-size: calc(var(--spectrum-slider-handle-size) / -2 / 4);
-	--spectrum-slider-track-fill-thickness: var(--spectrum-slider-track-thickness);
+	--spectrum-slider-track-fill-thickness: var(--spectrum-slider-track-height-medium);
 	--spectrum-slider-tick-mark-width: var(--spectrum-border-width-200);
 	--spectrum-slider-tick-mark-border-radius: 2px;
 	--spectrum-slider-tick-handle-background-color: var(--spectrum-gray-100);
@@ -71,6 +72,9 @@
 	--spectrum-slider-range-track-reset: 0;
 	--spectrum-slider-track-corner-radius: 2px;
 	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
+
+	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- used to assign downstate perspective */
+	--spectrum-slider-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
 }
 
 .spectrum-Slider--sizeS {
@@ -82,6 +86,8 @@
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
 	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-100);
 	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
+	--spectrum-slider-inline-size: var(--spectrum-field-default-width-small);
+	--spectrum-slider-downstate-perspective: var(--spectrum-component-size-minimum-perspective-down);
 }
 
 .spectrum-Slider--sizeL {
@@ -93,6 +99,7 @@
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
 	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
 	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
+	--spectrum-slider-inline-size: var(--spectrum-field-default-width-large);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
@@ -107,6 +114,7 @@
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
 	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
 	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
+	--spectrum-slider-inline-size: var(--spectrum-field-default-width-extra-large);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 22px;
@@ -119,6 +127,7 @@
 	z-index: 0;
 	display: block;
 	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
+	inline-size: var(--mod-slider-inline-size, var(--spectrum-slider-inline-size));
 
 	user-select: none;
 
@@ -204,7 +213,8 @@
 
 	padding-block: 0;
 	padding-inline-start: 0;
-	padding-inline-end: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
+
+	/* padding-inline-end: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap)); */
 	margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 
 	touch-action: none; /* Disable touch scrolling on touch devices to allow dragging slider */
@@ -243,7 +253,8 @@
 	inset-inline-start: auto;
 	inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
 	padding-block: 0;
-	padding-inline-start: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
+
+	/* padding-inline-start: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset)); */
 	padding-inline-end: 0;
 	margin-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
 	margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
@@ -348,6 +359,7 @@
 	&:active,
 	&.is-dragged {
 		border-width: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
+		transform: perspective(var(--spectrum-slider-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
 	&:active,
@@ -462,7 +474,7 @@
 	}
 
 	.spectrum-Slider-controls {
-		margin-block-start: calc(var(--spectrum-text-to-visual-75) - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2);
+		margin-block-start: calc(var(--spectrum-text-to-visual-75) - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 - var(--mod-slider-track-height-medium, var(--spectrum-slider-track-height-medium)) / 2);
 	}
 
 	.spectrum-Slider-tickLabel {

@@ -125,7 +125,6 @@ export const Template = ({
 			id=${ifDefined(id)}
 			style=${styleMap({
 				"--spectrum-slider-track-color": fillColor ? fillColor : undefined,
-				"inline-size": "240px",
 				...customStyles,
 			})}
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
