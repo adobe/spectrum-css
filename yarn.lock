@@ -154,7 +154,7 @@ __metadata:
     nx: "npm:^21.1.3"
     open: "npm:^10.1.2"
     pajv: "npm:^1.2.0"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     postcss-extend: "npm:^1.0.5"
     postcss-hover-media-feature: "npm:^1.0.2"
     postcss-import: "npm:^16.1.0"
@@ -4281,7 +4281,7 @@ __metadata:
     "@spectrum-css/underlay": "npm:6.1.0"
     "@spectrum-css/well": "npm:7.1.0"
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     postcss-licensing: "npm:^3.0.0"
   languageName: unknown
   linkType: soft
@@ -5228,7 +5228,7 @@ __metadata:
     lit: "npm:^3.3.0"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     prettier: "npm:^3.5.3"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
@@ -5656,7 +5656,7 @@ __metadata:
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     deepmerge: "npm:^4.3.1"
     lodash-es: "npm:^4.17.21"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     postcss-sorting: "npm:^9.1.0"
     style-dictionary: "npm:^4.4.0"
   languageName: unknown
@@ -5804,7 +5804,7 @@ __metadata:
   dependencies:
     ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     postcss-selector-parser: "npm:^7.1.0"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
@@ -5818,7 +5818,7 @@ __metadata:
   dependencies:
     ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
   peerDependencies:
     postcss: ">=8"
   languageName: unknown
@@ -5830,7 +5830,7 @@ __metadata:
   dependencies:
     ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
     postcss: ">=8"
@@ -5858,7 +5858,7 @@ __metadata:
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     fast-glob: "npm:^3.3.3"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.20.0"
   peerDependencies:
@@ -5873,7 +5873,7 @@ __metadata:
     ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.20.0"
   peerDependencies:
@@ -5886,7 +5886,7 @@ __metadata:
   resolution: "@spectrum-tools/stylelint-theme-alignment@workspace:plugins/stylelint-theme-alignment"
   dependencies:
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.5"
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.20.0"
   peerDependencies:
@@ -17781,14 +17781,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.4":
-  version: 8.5.4
-  resolution: "postcss@npm:8.5.4"
+"postcss@npm:^8.5.5":
+  version: 8.5.5
+  resolution: "postcss@npm:8.5.5"
   dependencies:
     nanoid: "npm:^3.3.11"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
-  checksum: 10c0/0feff648614a834f7cd5396ea6b05b658ca0507e10a4eaad03b56c348f6aec93f42a885fc1b30522630c6a7e49ae53b38a061e3cba526f2d9857afbe095a22bb
+  checksum: 10c0/6415873fab84de05c2d8fd18f72ea6654bca437bb4b9f02ca819c438501e4b3a450023e575e17587c6eaa5bedddaaa4dad3af210f5cf166e30cec09cac58baf8
   languageName: node
   linkType: hard
 
