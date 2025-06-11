@@ -1,3 +1,7 @@
+/**
+ * @description Generates a kebab-case name for a token
+ * @type {import('style-dictionary/types').ValueTransform}
+ */
 export default {
 	type: "value",
 	name: "border/rounding",
