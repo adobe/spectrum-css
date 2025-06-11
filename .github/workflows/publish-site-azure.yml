@@ -6,8 +6,6 @@ name: Publish documentation (Azure)
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
-    branches:
-      - "**"
 
 permissions:
   contents: read
@@ -15,7 +13,7 @@ permissions:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
@@ -40,8 +38,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pr=${{ github.event.pull_request.number }}
-          comments=$(gh api repos/${{ github.repository }}/issues/$pr/comments)
+          comments=$(gh api repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments)
           echo "$comments" | jq -c '.[]' | while read -r comment; do
             body=$(echo "$comment" | jq -r '.body')
             id=$(echo "$comment" | jq -r '.id')
