@@ -4231,7 +4231,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/bundle@npm:2.0.0-next.1, @spectrum-css/bundle@workspace:tools/bundle":
+"@spectrum-css/bundle@npm:2.0.0-next.2, @spectrum-css/bundle@workspace:tools/bundle":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/bundle@workspace:tools/bundle"
   dependencies:
@@ -4283,7 +4283,7 @@ __metadata:
     "@spectrum-css/link": "npm:8.0.0-next.2"
     "@spectrum-css/logicbutton": "npm:7.0.0-next.1"
     "@spectrum-css/menu": "npm:10.0.0-next.3"
-    "@spectrum-css/meter": "npm:2.0.0-next.1"
+    "@spectrum-css/meter": "npm:2.0.0-next.2"
     "@spectrum-css/miller": "npm:9.0.0-next.1"
     "@spectrum-css/modal": "npm:8.0.0-next.1"
     "@spectrum-css/opacitycheckerboard": "npm:5.0.0-next.0"
@@ -4292,7 +4292,7 @@ __metadata:
     "@spectrum-css/picker": "npm:10.0.0-next.3"
     "@spectrum-css/pickerbutton": "npm:7.0.0-next.1"
     "@spectrum-css/popover": "npm:9.0.0-next.2"
-    "@spectrum-css/progressbar": "npm:7.0.0-next.1"
+    "@spectrum-css/progressbar": "npm:7.0.0-next.2"
     "@spectrum-css/progresscircle": "npm:6.0.0-next.0"
     "@spectrum-css/radio": "npm:11.0.0-next.2"
     "@spectrum-css/rating": "npm:7.0.0-next.2"
@@ -5057,11 +5057,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/meter@npm:2.0.0-next.1, @spectrum-css/meter@workspace:components/meter":
+"@spectrum-css/meter@npm:2.0.0-next.2, @spectrum-css/meter@workspace:components/meter":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/meter@workspace:components/meter"
   dependencies:
-    "@spectrum-css/progressbar": "npm:7.0.0-next.1"
+    "@spectrum-css/progressbar": "npm:7.0.0-next.2"
     "@spectrum-css/tokens": "npm:16.1.0-next.3"
   peerDependencies:
     "@spectrum-css/progressbar": ">=7.0.0-next.0"
@@ -5264,7 +5264,7 @@ __metadata:
     "@babel/core": "npm:^7.27.4"
     "@chromatic-com/storybook": "npm:^3.2.6"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
-    "@spectrum-css/bundle": "npm:2.0.0-next.1"
+    "@spectrum-css/bundle": "npm:2.0.0-next.2"
     "@spectrum-css/tokens": "npm:16.1.0-next.3"
     "@spectrum-css/ui-icons": "npm:2.0.0-next.1"
     "@storybook/addon-a11y": "npm:8.4.7"
@@ -5298,7 +5298,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/progressbar@npm:7.0.0-next.1, @spectrum-css/progressbar@workspace:components/progressbar":
+"@spectrum-css/progressbar@npm:7.0.0-next.2, @spectrum-css/progressbar@workspace:components/progressbar":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/progressbar@workspace:components/progressbar"
   dependencies:

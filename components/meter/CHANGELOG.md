@@ -1,5 +1,24 @@
 # Change Log
 
+## 2.0.0-next.2
+
+### Minor Changes
+
+- [#3908](https://github.com/adobe/spectrum-css/pull/3908) [`7971c77`](https://github.com/adobe/spectrum-css/commit/7971c7728b88e5e539b9d0974ab805d9ef6338fd) Thanks [@cdransf](https://github.com/cdransf)!
+
+Adjust progressbar styles, story and template to support proper width token and sizes for medium (desktop) and large (mobile) platforms.
+
+- Progress bar and meter now use the same tokens to control their width.
+- Progress bar and meter now have a set width regardless of t-shirt size.
+
+#### Removed modifiers
+
+`--mod-meter-inline-size`
+
+#### New modifiers
+
+`--mod-progressbar-inline-size`
+
 ## 2.0.0-next.1
 
 ### Patch Changes
