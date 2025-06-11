@@ -327,7 +327,8 @@
 }
 
 .spectrum-Accordion--quiet .spectrum-Accordion-itemHeader {
-	&:hover {
+	&:hover,
+	&:active {
 		border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
 	}
 }
