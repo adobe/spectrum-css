@@ -14,7 +14,8 @@ the spacing around the content area.
 - Adds the optional "quiet" style, which does not show dividers between accordion items.
 - Adds CSS transition to animate the rotation of the disclosure indicator when expanding and
   collapsing the accordion item.
-- Adds No Inline Padding variant
+- Adds no inline padding variant (`.spectrum-Accordion--noInlinePadding`) in which the item
+  header does not have padding.
 
 #### Markup changes
 
@@ -29,6 +30,12 @@ text.
 The following `--mod` custom properties have been renamed to better reflect how they are used:
 
 - `--mod-accordion-item-height` has been renamed to `--mod-accordion-item-minimum-height`
-- `--mod-accordion-item-width` has been renamed to `--mod-accordion-item-minimum-width`
 - `--mod-accordion-min-block-size` has been renamed to `--mod-accordion-item-min-block-size`
 - `--mod-accordion-component-edge-to-text` has been renamed to `--mod-accordion-content-padding-inline`
+
+New mods:
+
+- `--mod-accordion-animation-duration`
+- `--mod-accordion-edge-to-content-area`
+- `--mod-accordion-item-minimum-width`
+- `--mod-accordion-top-to-disclosure-indicator`
