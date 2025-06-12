@@ -5723,14 +5723,14 @@ __metadata:
     deepmerge: "npm:^4.3.1"
     glob: "npm:^11.0.3"
     lodash-es: "npm:^4.17.21"
-    npm-run-all2: "npm:^8.0.2"
+    npm-run-all2: "npm:^8.0.4"
     postcss: "npm:^8.5.6"
     postcss-cli: "npm:^11.0.1"
     postcss-sorting: "npm:^9.1.0"
     prettier: "npm:^3.5.3"
     rimraf: "npm:^6.0.1"
     style-dictionary: "npm:^4.4.0"
-    yargs: "npm:^17.7.2"
+    yargs: "npm:^18.0.0"
   languageName: unknown
   linkType: soft
 
@@ -15898,9 +15898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:^8.0.2":
-  version: 8.0.2
-  resolution: "npm-run-all2@npm:8.0.2"
+"npm-run-all2@npm:^8.0.4":
+  version: 8.0.4
+  resolution: "npm-run-all2@npm:8.0.4"
   dependencies:
     ansi-styles: "npm:^6.2.1"
     cross-spawn: "npm:^7.0.6"
@@ -15915,7 +15915,7 @@ __metadata:
     npm-run-all2: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 10c0/f123741fc221bd6b51ec173f1e9345191599f087108d60a10e856e033a97903b0444db8a41af7a9548eeb14c48486ab109d091bc3489b72fae03cf0f014755d4
+  checksum: 10c0/cfc2987df224e55456629301991b5fa6980cc644d1836fe3c22d74a4508512737d30389795b759bb5d659103e54281c59741ecdc0241cfd2615cb9bffbf7cceb
   languageName: node
   linkType: hard
 

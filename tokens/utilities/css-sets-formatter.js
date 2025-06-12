@@ -1,63 +1,4 @@
-import { usesReferences } from "style-dictionary/utils";
 import { cssTemplate } from "./css.template.js";
-
-/**
- * @description Formats the value of a token for CSS
- * @param {import('style-dictionary').Token} token
- * @param {import('style-dictionary').PlatformConfig} [platform={}]
- * @param {boolean} [platform.outputReferences=true]
- * @param {string} [platform.prefix]
- * @param {string} [platform.color="light"]
- * @returns {string}
- */
-const valueFormatter = (token, { outputReferences = true, prefix } = {}) => {
-	if (
-		(!outputReferences && isReference(token)) &&
-		typeof token.value !== "object" &&
-		// Check the value doesn't use a token reference string
-		!(token.value.startsWith("{") && token.value.endsWith("}"))
-	) return token.value;
-
-	// If there's a value set for the current color, return the resolved value, otherwise we have to use the token reference
-	if (
-		(!outputReferences && isReference(token)) &&
-		typeof token.value === "object" &&
-		token.value.sets?.light
-	) {
-		return valueFormatter(token.value.sets.light, { outputReferences, prefix });
-	}
-
-	// console.log(token.name, token);
-	// If the color is light and the token has both light and dark values, return a light-dark() function
-	if (
-		(token.value.sets?.light?.value && token.value.sets?.dark?.value) &&
-		(token.value.sets?.light?.value !== token.value.sets?.dark?.value)
-	) {
-		console.log(token.name, token.value.sets.light.value, token.value.sets.dark.value);
-
-		return `light-dark(${token.value.sets.light.value}, ${token.value.sets.dark.value})`;
-	}
-
-	if (!outputReferences && !isReference(token) && typeof token.value !== "object") {
-		// console.log(token.name, token.value);
-		return token.value;
-	}
-
-	if (outputReferences && token?.original?.value?.toString()?.startsWith("{") && token?.original?.value?.toString()?.endsWith("}")) {
-		// If the platform is configured to output references, return the var function
-		// with the referenced token name as the value
-		const resultAr = token.original?.value
-			?.substring(1, token.original.value.length - 1)
-			?.split(".");
-
-		if (prefix) resultAr.splice(0, 0, prefix);
-
-		return `var(--${resultAr.join("-")})`;
-	}
-
-	// console.log("fallthrough", token.name, token);
-	return token.value;
-};
 
 /**
  * @description Pushes a value to a map; supports nested maps and arrays
@@ -101,13 +42,6 @@ const pushToMap = (map, key, value) => {
 };
 
 /**
- * @description Checks if a token is a reference; uses the `usesReferences` utility from Style Dictionary
- * @param {import('style-dictionary').Token} token
- * @returns {boolean}
- */
-const isReference = (token) => token?.original?.value ? usesReferences(token.original.value) : false;
-
-/**
  * @description Split out the token set data into distinct CSS variables
  * @type {import('style-dictionary/types').FormatFn} format
  */
@@ -118,21 +52,48 @@ const format = ({ dictionary, platform }) => {
 	const layers = new Map();
 	const tokenMap = dictionary.tokenMap;
 
+	const combinedTokens = new Map();
+
 	// Iterate over the provided tokens and sort them into buckets based on their set data
 	for (const token of [...tokenMap.values()]) {
-		// Skip tokens that don't have a name
-		if (!token.name) continue;
-		// Skip the wireframe tokens
-		// Skip dark sets as they are going to be combined with the light ones
-		if (["wireframe", "dark"].some(context => token.path?.includes(context))) continue;
+		const set = token.path.includes("sets") ? token.path?.pop() : undefined;
 
+		if (!combinedTokens.has(token.key)) {
+			if (typeof set === "undefined" || !["light", "dark"].includes(set)) {
+				combinedTokens.set(token.key, token);
+			}
+			else {
+				console.log({ value: token.value });
+				// If token.value has sets object and the light and dark values aren't the same string
+
+			}
+		}
+		else {
+			// const data = combinedTokens.get(token.name) ?? {};
+			// const context = data?.context ?? {};
+
+			// if (!context[set]) context[set] = resolveContext(token.value, set);
+			// else console.log('Error: duplicate values for the same context', set, context);
+
+			// combinedTokens.set(token.name, {
+			// 	...data,
+			// 	context,
+			// });
+		}
+	}
+
+	// console.log(combinedTokens);
+
+	for (const [key, token] of [...combinedTokens.entries()]) {
+		console.log(key);
+		console.log('-----------');
 		let value = valueFormatter(token, platform);
 		if (!value) continue;
 
 		const darkToken = tokenMap.get(token.key?.replace("light", "dark"));
 		if (darkToken) {
 			const darkValue = valueFormatter(darkToken, platform);
-			if (darkValue) {
+			if (darkValue && value !== darkValue) {
 				value = `light-dark(${value}, ${darkValue})`;
 			}
 		}
@@ -141,6 +102,7 @@ const format = ({ dictionary, platform }) => {
 
 		results.set(token.name, value);
 		pushToMap(layers, token.path?.includes("mobile") ? "large" : "global", results);
+		console.log('-----------');
 	}
 
 	return cssTemplate(layers, { dictionary, platform });
