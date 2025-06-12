@@ -50,19 +50,19 @@
 
 	/* Colors */
 	/* @TODO: use opacity tokens when available */
-	--spectrum-accordion-background-color-default: var(--spectrum-transparent-black-25);
-	--spectrum-accordion-background-color-hover: var(--spectrum-transparent-black-100);
-	--spectrum-accordion-background-color-down: var(--spectrum-transparent-black-300);
-	--spectrum-accordion-background-color-key-focus: var(--spectrum-transparent-black-100);
+	--spectrum-accordion-background-color-default: var(--mod-accordion-background-color-default, var(--spectrum-transparent-black-25));
+	--spectrum-accordion-background-color-hover: var(--mod-accordion-background-color-hover, var(--spectrum-transparent-black-100));
+	--spectrum-accordion-background-color-down: var(--mod-accordion-background-color-down, var(--spectrum-transparent-black-300));
+	--spectrum-accordion-background-color-key-focus: var(--mod-accordion-background-color-key-focus, var(--spectrum-transparent-black-100));
 
 	--spectrum-accordion-item-content-color: var(--mod-accordion-item-content-color, var(--spectrum-body-color));
 	--spectrum-accordion-divider-color: var(--mod-accordion-divider-color, var(--spectrum-gray-200));
-	--spectrum-accordion-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-accordion-focus-indicator-color: var(--mod-accordion-focus-indicator-color, var(--spectrum-focus-indicator-color));
 
-	--spectrum-accordion-item-header-color-default: var(--spectrum-neutral-content-color-default);
-	--spectrum-accordion-item-header-color-hover: var(--spectrum-neutral-content-color-hover);
-	--spectrum-accordion-item-header-color-down: var(--spectrum-neutral-content-color-down);
-	--spectrum-accordion-item-header-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	--spectrum-accordion-item-header-color-default: var(--mod-accordion-item-header-color-default, var(--spectrum-neutral-content-color-default));
+	--spectrum-accordion-item-header-color-hover: var(--mod-accordion-item-header-color-hover, var(--spectrum-neutral-content-color-hover));
+	--spectrum-accordion-item-header-color-down: var(--mod-accordion-item-header-color-down, var(--spectrum-neutral-content-color-down));
+	--spectrum-accordion-item-header-color-key-focus: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-neutral-content-color-key-focus));
 
 	/* Calculated minimum block-size that accounts for density spacing changes and/or increases in font size and line-height.
 	   This gives us the block-size of the header with a single line of text. */
@@ -291,25 +291,25 @@
 	text-align: start;
 	inline-size: 100%;
 
-	color: var(--mod-accordion-item-header-color-default, var(--spectrum-accordion-item-header-color-default));
-	background-color: var(--mod-accordion-background-color-default, var(--spectrum-accordion-background-color-default));
+	color: var(--spectrum-accordion-item-header-color-default);
+	background-color: var(--spectrum-accordion-background-color-default);
 
 	&:hover {
-		color: var(--mod-accordion-item-header-color-hover, var(--spectrum-accordion-item-header-color-hover));
-		background-color: var(--mod-accordion-background-color-hover, var(--spectrum-accordion-background-color-hover));
+		color: var(--spectrum-accordion-item-header-color-hover);
+		background-color: var(--spectrum-accordion-background-color-hover);
 	}
 
 	&:focus-visible {
 		border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
-		background-color: var(--mod-accordion-background-color-key-focus, var(--spectrum-accordion-background-color-key-focus));
-		color: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-accordion-item-header-color-key-focus));
-		outline: var(--mod-accordion-focus-indicator-thickness, var(--spectrum-accordion-focus-indicator-thickness)) solid var(--mod-accordion-focus-indicator-color, var(--spectrum-accordion-focus-indicator-color));
+		background-color: var(--spectrum-accordion-background-color-key-focus);
+		color: var(--spectrum-accordion-item-header-color-key-focus);
+		outline: var(--mod-accordion-focus-indicator-thickness, var(--spectrum-accordion-focus-indicator-thickness)) solid var(--spectrum-accordion-focus-indicator-color);
 		outline-offset: var(--mod-accordion-focus-indicator-gap, var(--spectrum-accordion-focus-indicator-gap));
 	}
 
 	&:active {
-		background-color: var(--mod-accordion-background-color-down, var(--spectrum-accordion-background-color-down));
-		color: var(--mod-accordion-item-header-color-down, var(--spectrum-accordion-item-header-color-down));
+		background-color: var(--spectrum-accordion-background-color-down);
+		color: var(--spectrum-accordion-item-header-color-down);
 	}
 }
 
