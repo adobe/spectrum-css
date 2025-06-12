@@ -61,7 +61,7 @@ export default {
 		isOpen: false,
 		variant: "neutral",
 		actionButtonText: "Action",
-		text: "Alert banner message. Use a short phrase to describe what's happening.",
+		text: "Your trial has expired",
 		showCloseButton: true,
 	},
 	parameters: {

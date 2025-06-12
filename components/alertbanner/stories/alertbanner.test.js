@@ -2,7 +2,7 @@ import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
 export const AlertBannerGroup = Variants({
-	Template: Template,
+	Template,
 	TestTemplate: Template,
 	stateDirection: "column",
 	wrapperStyles: {
