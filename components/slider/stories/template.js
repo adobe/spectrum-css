@@ -17,12 +17,14 @@ export const Template = ({
 	step = 2,
 	values = [],
 	variant,
+	trackHeight,
 	labelPosition,
 	fillColor,
 	showTicks = false,
 	showTickLabels = false,
 	isDisabled = false,
 	isFocused = false,
+	isPrecise = false,
 	customClasses = [],
 	customStyles = {},
 	id = getRandomId("slider"),
@@ -118,6 +120,8 @@ export const Template = ({
 				[`${rootClass}--range`]: values.length > 1,
 				[`${rootClass}--filled`]: variant === "filled",
 				[`${rootClass}--tick`]: showTicks,
+				[`${rootClass}--track-height-${trackHeight}`]: trackHeight,
+				[`${rootClass}--precise`]: isPrecise,
 				"is-disabled": isDisabled,
 				[`${rootClass}--sideLabel`]: labelPosition === "side",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -125,7 +129,6 @@ export const Template = ({
 			id=${ifDefined(id)}
 			style=${styleMap({
 				"--spectrum-slider-track-color": fillColor ? fillColor : undefined,
-				"inline-size": "240px",
 				...customStyles,
 			})}
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}

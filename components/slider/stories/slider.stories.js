@@ -1,4 +1,4 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -71,6 +71,16 @@ export default {
 			control: "select",
 			options: ["ramp", "offset", "filled"],
 		},
+		trackHeight: {
+			name: "Track height",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			control: "select",
+			options: ["medium", "large"],
+		},
 		labelPosition: {
 			name: "Label Position",
 			type: { name: "string" },
@@ -112,6 +122,15 @@ export default {
 			control: "boolean",
 			if: { arg: "showTicks", truthy: true },
 		},
+		isPrecise: {
+			name: "Precise",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		isDisabled,
 		isFocused: {
 			...isFocused,
@@ -132,6 +151,8 @@ export default {
 		max: 20,
 		values: [14],
 		step: 2,
+		trackHeight: "medium",
+		isPrecise: false,
 	},
 	parameters: {
 		actions: {
@@ -144,16 +165,28 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=842-1056",
 		},
+		downState: {
+			selectors: [".spectrum-Slider-handle:not(:disabled)"],
+		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
+	tags: ["migrated"],
 };
 
 /**
  * Sliders should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts.
  */
 export const Default = SliderGroup.bind({});
-Default.args = {};
+Default.args = {
+	variant: "filled",
+};
 
 // ********* DOCS ONLY ********* //
 /**
