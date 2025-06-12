@@ -308,7 +308,8 @@
 		outline-offset: var(--mod-accordion-item-focus-indicator-gap, var(--spectrum-accordion-item-focus-indicator-gap), 0);
 	}
 
-	&:active {
+	/* higher specificity to maintain active styles over @media hover styles */
+	&.spectrum-Accordion-itemHeader:active {
 		background-color: var(--spectrum-accordion-background-color-down);
 		color: var(--spectrum-accordion-item-header-color-down);
 	}
