@@ -25,7 +25,8 @@
 	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-medium);
 	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-medium);
 	--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-medium);
-	--spectrum-accordion-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-accordion-item-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-accordion-item-focus-indicator-gap: var(--spectrum-accordion-focus-indicator-gap);
 	--spectrum-accordion-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
 	--spectrum-accordion-item-content-area-top-to-content: var(--spectrum-accordion-content-area-top-to-content);
 	--spectrum-accordion-item-content-area-bottom-to-content: var(--spectrum-accordion-content-area-bottom-to-content);
@@ -57,7 +58,7 @@
 
 	--spectrum-accordion-item-content-color: var(--mod-accordion-item-content-color, var(--spectrum-body-color));
 	--spectrum-accordion-divider-color: var(--mod-accordion-divider-color, var(--spectrum-gray-200));
-	--spectrum-accordion-focus-indicator-color: var(--mod-accordion-focus-indicator-color, var(--spectrum-focus-indicator-color));
+	--spectrum-accordion-item-focus-indicator-color: var(--mod-accordion-item-focus-indicator-color, var(--spectrum-focus-indicator-color));
 
 	--spectrum-accordion-item-header-color-default: var(--mod-accordion-item-header-color-default, var(--spectrum-neutral-content-color-default));
 	--spectrum-accordion-item-header-color-hover: var(--mod-accordion-item-header-color-hover, var(--spectrum-neutral-content-color-hover));
@@ -303,8 +304,8 @@
 		border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
 		background-color: var(--spectrum-accordion-background-color-key-focus);
 		color: var(--spectrum-accordion-item-header-color-key-focus);
-		outline: var(--mod-accordion-focus-indicator-thickness, var(--spectrum-accordion-focus-indicator-thickness)) solid var(--spectrum-accordion-focus-indicator-color);
-		outline-offset: var(--mod-accordion-focus-indicator-gap, var(--spectrum-accordion-focus-indicator-gap));
+		outline: var(--mod-accordion-item-focus-indicator-thickness, var(--spectrum-accordion-item-focus-indicator-thickness)) solid var(--spectrum-accordion-item-focus-indicator-color);
+		outline-offset: var(--mod-accordion-item-focus-indicator-gap, var(--spectrum-accordion-item-focus-indicator-gap), 0);
 	}
 
 	&:active {
@@ -332,6 +333,6 @@
 
 @media (forced-colors: active) {
 	.spectrum-Accordion {
-		--spectrum-accordion-focus-indicator-color: Highlight;
+		--spectrum-accordion-item-focus-indicator-color: Highlight;
 	}
 }
