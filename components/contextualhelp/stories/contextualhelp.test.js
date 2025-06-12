@@ -25,14 +25,11 @@ export const ContextualHelpGroup = Variants({
 				"inline-size": "275px",
 				"margin-bottom": "200px",
 			},
-			link: {
-				text: "Learn about permissions",
-				url: "#",
-			},
+			link: true,
 		},
 		{
 			testHeading: "Help",
-			iconName: "Help",
+			iconName: "HelpCircle",
 			customStyles: {
 				"inline-size": "275px",
 				"margin-bottom": "170px",

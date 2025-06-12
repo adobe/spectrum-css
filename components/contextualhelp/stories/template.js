@@ -44,8 +44,8 @@ export const Template = ({
 					body ? html`<p class="${rootClass}-body">${body}</p>` : "",
 					link
 						? Link({
-								text: link.text,
-								url: link.url,
+								text: "Link text",
+								url: "#",
 								customClasses: [`${rootClass}-link`],
 						})
 						: nothing,
