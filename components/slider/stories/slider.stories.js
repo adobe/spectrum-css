@@ -71,6 +71,16 @@ export default {
 			control: "select",
 			options: ["ramp", "offset", "filled"],
 		},
+		trackHeight: {
+			name: "Track height",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			control: "select",
+			options: ["medium", "large"],
+		},
 		labelPosition: {
 			name: "Label Position",
 			type: { name: "string" },
@@ -112,6 +122,15 @@ export default {
 			control: "boolean",
 			if: { arg: "showTicks", truthy: true },
 		},
+		isPrecise: {
+			name: "Precise",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		isDisabled,
 		isFocused: {
 			...isFocused,
@@ -132,6 +151,8 @@ export default {
 		max: 20,
 		values: [14],
 		step: 2,
+		trackHeight: "medium",
+		isPrecise: false,
 	},
 	parameters: {
 		actions: {

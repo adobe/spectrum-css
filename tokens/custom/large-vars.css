@@ -99,6 +99,15 @@
 
 	--spectrum-slider-tick-mark-height: 13px;
 	--spectrum-slider-ramp-track-height: 20px;
+	--spectrum-slider-handle-small: 18px;
+	--spectrum-slider-handle-medium: 20px;
+	--spectrum-slider-handle-large: 22px;
+	--spectrum-slider-handle-extra-large: 24px;
+
+	--spectrum-slider-precision-handle-height-small: 20px;
+	--spectrum-slider-precision-handle-height-medium: 22px;
+	--spectrum-slider-precision-handle-height-large: 24px;
+	--spectrum-slider-precision-handle-height-extra-large: 26px;
 
 	--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
 	--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-400);
