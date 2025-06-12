@@ -16,6 +16,9 @@ the spacing around the content area.
   collapsing the accordion item.
 - Adds no inline padding variant (`.spectrum-Accordion--noInlinePadding`) in which the item
   header does not have padding.
+- Per design spec, accordion items have a min-width and default width. Default width can be
+  overridden with `--mod-accordion-item-width` but should not be smaller than
+  `--spectrum-accordion-item-minimum-width`.
 
 #### Markup changes
 

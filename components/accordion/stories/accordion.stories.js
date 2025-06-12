@@ -94,6 +94,23 @@ Default.parameters = {
 	chromatic: { disableSnapshot: false },
 };
 
+/**
+ * Accordion items have a default width, but a custom width can also be set, as long as it is not
+ * smaller than the minimum width.
+ */
+export const CustomWidth = AccordionGroup.bind({});
+CustomWidth.tags = ["!dev"];
+CustomWidth.storyName = "Custom width";
+CustomWidth.args = {
+	items: accordionContent,
+	customStyles: {
+		"--mod-accordion-item-width": "500px",
+	},
+};
+CustomWidth.parameters = {
+	chromatic: { disableSnapshot: false },
+};
+
 // ********* VRT ONLY ********* //
 export const WithForcedColors = AccordionGroup.bind({});
 WithForcedColors.args = Default.args;
