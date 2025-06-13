@@ -36,6 +36,7 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	cellCustomClasses = {},
+	hasChartContent = false,
 } = {}, context = {}) => {
 	const useVisuals = visualElement !== undefined && !isSummaryRow && !isSectionHeader;
 	const useColumnDividers = hasColumnDividers && !isSummaryRow && !isSectionHeader;
@@ -199,7 +200,13 @@ export const TableRowItem = ({
 					[`${rootClass}-cell--alignEnd`]: getTextAlignment(2) === "end",
 					...cellCustomClasses?.[showCheckbox ? 3 : 2]?.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-			>${getCellContent(2)}</${cellTag}>`
+			>
+				${when(hasChartContent, () => html`
+					<div class="spectrum-Table-chartContent">
+						<img src=${getCellContent(2)} alt="Chart" class="spectrum-Table-chartImage">
+					</div>
+				`, () => getCellContent(2))}
+			</${cellTag}>`
 		)}
 	</${rowTag}>
   `;
@@ -220,6 +227,7 @@ export const Template = ({
 	isSortable = false,
 	sortIcon = "Sort",
 	hasMenu = false,
+	hasChartContent = false,
 	rowItems = [],
 	customClasses = [],
 	id = getRandomId("table"),
@@ -322,6 +330,7 @@ export const Template = ({
 					${when(hasMenu || isSortable, () => html`
 						${when(isSortable, () => Button({
 								size: "m",
+								variant: "secondary",
 								iconName: sortIcon,
 								iconSet: "workflow",
 								label: "Column title",
@@ -330,6 +339,7 @@ export const Template = ({
 						)}
 						${when(!isSortable, () => Button({
 								size: "m",
+								variant: "secondary",
 								iconName: "SortUp",
 								iconSet: "workflow",
 								label: "Column title",
@@ -368,6 +378,7 @@ export const Template = ({
 					visualElement,
 					hasColumnDividers,
 					hasMenu,
+					hasChartContent,
 					isEmphasized,
 					...item,
 				}, context)
