@@ -7,9 +7,14 @@ import { AccordionGroup, testsContent as accordionContent } from "./accordion.te
 import { Template } from "./template.js";
 
 /**
- * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
+ * The accordion element contains a list of items that can be expanded or collapsed to reveal
+ * additional content or information associated with each item. There can be zero expanded items,
+ * exactly one expanded item, or more than one item expanded at a time, depending on the
+ * configuration. This list of items is defined by child accordion item elements.
  *
- * Accordion has three density options: regular (default), compact, or spacious. Each of the different densities have the same font size, but have tighter or looser vertical spacing between the rows.
+ * Accordion has three density options: regular (default), compact, or spacious. While all the
+ * densities maintain the same font size, compact density reduces vertical spacing between rows,
+ * while spacious density increases it.
  */
 export default {
 	title: "Accordion",
@@ -46,7 +51,8 @@ export default {
 			control: "select",
 		},
 		hasNoInlinePadding: {
-			name: "No Inline Padding Styling",
+			name: "No inline padding styling",
+			description: "Displays accordion item headers without default inline padding.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -66,8 +72,6 @@ export default {
 		hasNoInlinePadding: false,
 	},
 	parameters: {
-		// Prevent an inacurate depiction of width due to "centered" layout's use of flex on the body.
-		layout: "padded",
 		actions: {
 			handles: ["click .spectrum-Accordion-item"],
 		},
@@ -78,10 +82,12 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
+		tags: ["migrated"],
 	},
 };
-
-/* Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions. */
 
 /**
  * The default accordion displays at medium size with a regular density.
@@ -91,23 +97,6 @@ Default.args = {
 	items: accordionContent,
 };
 Default.parameters = {
-	chromatic: { disableSnapshot: false },
-};
-
-/**
- * Accordion items have a default width, but a custom width can also be set, as long as it is not
- * smaller than the minimum width.
- */
-export const CustomWidth = AccordionGroup.bind({});
-CustomWidth.tags = ["!dev"];
-CustomWidth.storyName = "Custom width";
-CustomWidth.args = {
-	items: accordionContent,
-	customStyles: {
-		"--mod-accordion-item-width": "500px",
-	},
-};
-CustomWidth.parameters = {
 	chromatic: { disableSnapshot: false },
 };
 
@@ -125,7 +114,24 @@ WithForcedColors.parameters = {
 // ********* DOCS ONLY ********* //
 
 /**
- * The compact density has less spacing between rows.
+ * Accordion items have a default width for each size, but a custom width can also be set to any
+ * width that meets or exceeds the minimum width.
+ */
+export const CustomWidth = AccordionGroup.bind({});
+CustomWidth.tags = ["!dev"];
+CustomWidth.storyName = "Custom width";
+CustomWidth.args = {
+	items: accordionContent,
+	customStyles: {
+		"--mod-accordion-item-width": "500px",
+	},
+};
+CustomWidth.parameters = {
+	chromatic: { disableSnapshot: false },
+};
+
+/**
+ * The compact density has less vertical spacing between rows.
  */
 export const Compact = Template.bind({});
 Compact.tags = ["!dev"];
@@ -139,7 +145,7 @@ Compact.parameters = {
 Compact.storyName = "Density: Compact";
 
 /**
- * The spacious density has more spacing between rows.
+ * The spacious density has more vertical spacing between rows.
  */
 export const Spacious = Template.bind({});
 Spacious.tags = ["!dev"];
@@ -153,8 +159,9 @@ Spacious.parameters = {
 Spacious.storyName = "Density: Spacious";
 
 /**
- * Individual accordion items (of class `.spectrum-Accordion-item`) can be styled as disabled by applying the `is-disabled` class.
- * This example markup also applies the `disabled` attribute on the heading button.
+ * Individual accordion items can be disabled by applying the `.is-disabled` class to the
+ * `.spectrum-Accordion-item` element. This example also demonstrates the use of the disabled
+ * attribute on the heading button.
  */
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
@@ -167,10 +174,10 @@ Disabled.parameters = {
 };
 
 /**
- * The optional quiet style for accordion has no dividers between sections. This style works best when a clear layout
- * (vertical stack, table, grid) makes it easy see and understand. Too many quiet components in a small space can be
- * hard to differentiate. This can be applied by adding the `spectrum-Accordion--quiet` class alongside the
- * parent `spectrum-Accordion` class.
+ * The optional quiet style for accordion has no dividers between sections. This style works best
+ * when a clear layout (vertical stack, table, grid) makes it easy to see and understand because
+ * too many quiet components in a small space can be hard to differentiate. This can be applied by
+ * adding the `.spectrum-Accordion--quiet` class alongside the parent `.spectrum-Accordion` class.
  */
 export const Quiet = Template.bind({});
 Quiet.tags = ["!dev"];
@@ -183,11 +190,13 @@ Quiet.parameters = {
 };
 
 /**
- * The optional no inline padding style for accordion. This sets no overall horizontal padding on either side of the component
- * (but the body text content always keeps its own padding from the edge). This can be applied by adding the `spectrum-Accordion--noInlinePadding` class alongside the
- * parent `spectrum-Accordion` class.
+ * Implementations may choose to remove inline padding from the accordion item headers by adding
+ * the `.spectrum-Accordion--noInlinePadding` class alongside the parent `.spectrum-Accordion`
+ * class. Accordion item header padding will be removed, but the body text content will keep its
+ * own padding from the edge.
  */
 export const NoInlinePadding = Template.bind({});
+NoInlinePadding.storyName = "No inline padding";
 NoInlinePadding.tags = ["!dev"];
 NoInlinePadding.args = {
 	items: accordionContent,
@@ -198,7 +207,8 @@ NoInlinePadding.parameters = {
 };
 
 /**
- * Each of the different sizes have varying font sizes, and tighter or looser vertical spacing between the rows. Medium is the default size.
+ * Each of the different sizes has varying font sizes, and varying vertical spacing between the
+ * rows. Medium is the default size.
  */
 export const Sizing = (args, context) => Sizes({
 	Template,
