@@ -26,7 +26,7 @@
 	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-medium);
 	--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-medium);
 	--spectrum-accordion-item-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--spectrum-accordion-item-focus-indicator-gap: var(--spectrum-accordion-focus-indicator-gap);
+	--spectrum-accordion-item-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-accordion-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
 	--spectrum-accordion-item-content-area-top-to-content: var(--spectrum-accordion-content-area-top-to-content);
 	--spectrum-accordion-item-content-area-bottom-to-content: var(--spectrum-accordion-content-area-bottom-to-content);
@@ -305,7 +305,7 @@
 		background-color: var(--spectrum-accordion-background-color-key-focus);
 		color: var(--spectrum-accordion-item-header-color-key-focus);
 		outline: var(--mod-accordion-item-focus-indicator-thickness, var(--spectrum-accordion-item-focus-indicator-thickness)) solid var(--spectrum-accordion-item-focus-indicator-color);
-		outline-offset: var(--mod-accordion-item-focus-indicator-gap, var(--spectrum-accordion-item-focus-indicator-gap), 0);
+		outline-offset: var(--mod-accordion-item-focus-indicator-gap, var(--spectrum-accordion-item-focus-indicator-gap));
 	}
 
 	/* higher specificity to maintain active styles over @media hover styles */

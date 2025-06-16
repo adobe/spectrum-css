@@ -23,7 +23,7 @@ the spacing around the content area.
 #### Markup changes
 
 The HTML markup has changed slightly for the accordion header. The disclosure icon has been moved
-from outside the the button (`spectrum-Accordion-itemHeader`), to within the button. The extra
+from outside the button (`spectrum-Accordion-itemHeader`), to within the button. The extra
 element with class `spectrum-Accordion-itemIconContainer`, previously wrapping the icon, has
 been removed. A span with class `spectrum-Accordion-itemTitle` has been added around the heading
 text.
