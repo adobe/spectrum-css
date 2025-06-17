@@ -23,7 +23,7 @@
 	/* --spectrum-popover-border-color-default: var(--spectrum-popover-border-color); */
 	--spectrum-popover-border-color-rgb: var(--spectrum-gray-200-rgb);
 	--spectrum-popover-border-transparency: var(--spectrum-popover-border-opacity);
-	--spectrum-popover-border-color-with-transparency: rgba(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency));
+	--spectrum-popover-border-color-with-transparency: rgb(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency));
 
 	/* popover inner padding */
 	--spectrum-popover-content-area-spacing: var(--spectrum-popover-edge-to-content-area);
@@ -92,11 +92,6 @@
 /* default opens and animates upward */
 .spectrum-Popover.is-open {
 	@extend %spectrum-overlay--open;
-}
-
-/* prevent nested popovers from affecting each others drop shadow filters */
-.spectrum-Popover * {
-	--mod-popover-filter: none;
 }
 
 /* position naming - first position term is popover position, second term is source position */
