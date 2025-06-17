@@ -30,9 +30,14 @@
 	--spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
 	--spectrum-contextual-help-padding: var(--spectrum-spacing-400);
 
+	--spectrum-contextual-help-border-radius: var(--mod-contextual-help-border-radius, var(--mod-popover-corner-radius));
+
 	/* @passthrough start */
-	--mod-popover-corner-radius: var(--spectrum-corner-radius-large-default);
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-medium);
+
 	--mod-popover-animation-distance: var(--spectrum-picker-popover-animation-distance);
+	--mod-popover-corner-radius: var(--spectrum-corner-radius-large-default);
 	/* @passthrough end */
 }
 
@@ -46,9 +51,13 @@
 }
 
 .spectrum-ContextualHelp-popover {
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Popover mods */
+	--spectrum-picker-popover-animation-distance: var(--spectrum-component-to-menu-large);
+
 	padding: var(--mod-contextual-help-padding, var(--spectrum-contextual-help-padding));
 	font-size: var(--mod-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
 	color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-body-color)));
+	border-radius: var(--spectrum-contextual-help-border-radius);
 
 	max-inline-size: var(--mod-contextual-help-popover-maximum-width);
 

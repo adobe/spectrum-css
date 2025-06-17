@@ -21,6 +21,9 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 } = {}, context = {}) => {
+	const { globals = {} } = context;
+	const scale = globals.scale ?? "medium";
+
 	return html`
 		<div
 			class=${classMap({
@@ -34,7 +37,7 @@ export const Template = ({
 				isOpen: true,
 				trigger: (passthrough) => ActionButton({
 					...passthrough,
-					size: "xs",
+					size: scale === "medium" ? "xs" : "s",
 					iconName,
 					iconSet,
 					customClasses: [`${rootClass}-button`],
