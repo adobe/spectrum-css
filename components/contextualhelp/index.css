@@ -25,11 +25,13 @@
 	--spectrum-contextual-help-body-line-height: var(--spectrum-line-height-200);
 
 	--spectrum-contextual-help-body-color: var(--spectrum-body-color);
+
+	--spectrum-contextual-help-min-inline-size: var(--spectrum-contextual-help-minimum-width);
 }
 
 .spectrum-ContextualHelp {
 	position: relative;
-	min-inline-size: var(--mod-spectrum-contextual-help-minimum-width, var(--spectrum-contextual-help-minimum-width));
+	min-inline-size: var(--mod-contextual-help-min-inline-size, var(--spectrum-contextual-help-min-inline-size));
 }
 
 .spectrum-ContextualHelp-button {
@@ -37,11 +39,11 @@
 }
 
 .spectrum-ContextualHelp-popover {
-	padding: var(--mod-spectrum-contextual-help-padding, var(--spectrum-spacing-400));
-	font-size: var(--mod-spectrum-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
+	padding: var(--mod-contextual-help-padding, var(--spectrum-spacing-400));
+	font-size: var(--mod-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
 	color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-body-color)));
 
-	max-inline-size: var(--mod-spectrum-contextual-help-popover-maximum-width);
+	max-inline-size: var(--mod-contextual-help-popover-maximum-width);
 
 	.spectrum-ContextualHelp-heading,
 	.spectrum-ContextualHelp-body {
@@ -51,11 +53,11 @@
 	.spectrum-ContextualHelp-heading {
 		font-family: var(--mod-contextual-help-title-sans-serif-font-family, var(--spectrum-contextual-help-title-sans-serif-font-family));
 		font-weight: var(--mod-contextual-help-title-font-weight, var(--spectrum-contextual-help-title-font-weight));
-		font-size: var(--mod-spectrum-contextual-help-heading-size, var(--spectrum-contextual-help-title-size));
+		font-size: var(--mod-contextual-help-heading-size, var(--spectrum-contextual-help-title-size));
 		font-style: var(--mod-contextual-help-title-font-style, var(--spectrum-contextual-help-title-font-style));
 		line-height: var(--mod-contextual-help-title-line-height, var(--spectrum-contextual-help-title-line-height));
 		color: var(--highcontrast-contextual-help-title-color, var(--mod-contextual-help-title-color, var(--spectrum-contextual-help-title-color)));
-		margin-block-end: var(--mod-spectrum-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
+		margin-block-end: var(--mod-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
 	}
 
 	.spectrum-ContextualHelp-body {
@@ -69,7 +71,7 @@
 }
 
 .spectrum-ContextualHelp-link {
-	margin-block-start: var(--mod-spectrum-contextual-help-link-spacing, var(--spectrum-spacing-300));
+	margin-block-start: var(--mod-contextual-help-link-spacing, var(--spectrum-spacing-300));
 }
 
 @media (forced-colors: active) {
