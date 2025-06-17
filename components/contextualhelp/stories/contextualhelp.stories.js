@@ -95,7 +95,7 @@ export default {
 		link: false,
 		title: "Permission required",
 		body: "Your admin must grant you permission before you can create a new document. Please contact your admin for more information.",
-		customStyles: { "inline-size": "275px" },
+		customStyles: { "inline-size": "var(--spectrum-contextual-help-min-inline-size)" },
 	},
 	parameters: {
 		actions: {
@@ -145,28 +145,6 @@ WithLink.parameters = {
 WithLink.storyName = "Default - info icon with link";
 
 /**
- * In order to further customize the contextual help popover, implementations can set `--mod-spectrum-contextual-help-popover-maximum-width` to their desired max width.
- */
-export const MaxWidthPopover = Template.bind({});
-MaxWidthPopover.tags = ["!dev"];
-MaxWidthPopover.args = {
-	customStyles: {
-		"inline-size": "275px",
-		"--mod-spectrum-contextual-help-popover-maximum-width": "180px",
-		"margin-bottom": "270px",
-	},
-};
-MaxWidthPopover.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "auto",
-		},
-	},
-};
-MaxWidthPopover.storyName = "Default - max width popover";
-
-/**
  * This is an example of the contextual help component within a popover with a placement of `top`. Read more about the 22 available placement positions in the [popover documentation](/docs/components-popover--docs).
  */
 export const TopPopover = Template.bind({});
@@ -174,7 +152,6 @@ TopPopover.tags = ["!dev"];
 TopPopover.args = {
 	popoverPlacement: "top",
 	customStyles: {
-		"inline-size": "275px",
 		"margin-top": "170px",
 	},
 };
@@ -190,6 +167,8 @@ TopPopover.storyName = "Default - top popover";
 
 /**
  * When displaying help or resources to learn more, the contextual help should use the help icon. The content in this variant provides more detailed, in-depth guidance about a task, UI element, tool or keyboard shortcuts.
+ *
+ * All variants and positions of the contextual help component can be configured with a help icon.
  */
 export const HelpDefault = Template.bind({});
 HelpDefault.tags = ["!dev"];
