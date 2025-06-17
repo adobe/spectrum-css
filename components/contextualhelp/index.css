@@ -17,7 +17,7 @@
 	--spectrum-contextual-help-title-font-style: var(--spectrum-title-sans-serif-font-style);
 	--spectrum-contextual-help-title-line-height: var(--spectrum-title-line-height);
 
-	--spectrum-contextual-help-title-color: var(--spectrum-heading-color);
+	--spectrum-contextual-help-title-color: var(--spectrum-title-color);
 
 	--spectrum-contextual-help-body-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-contextual-help-body-sans-serif-font-weight: var(--spectrum-body-sans-serif-font-weight);
@@ -27,6 +27,13 @@
 	--spectrum-contextual-help-body-color: var(--spectrum-body-color);
 
 	--spectrum-contextual-help-min-inline-size: var(--spectrum-contextual-help-minimum-width);
+	--spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
+	--spectrum-contextual-help-padding: var(--spectrum-spacing-400);
+
+	/* @passthrough start */
+	--mod-popover-corner-radius: var(--spectrum-corner-radius-large-default);
+	--mod-popover-animation-distance: var(--spectrum-picker-popover-animation-distance);
+	/* @passthrough end */
 }
 
 .spectrum-ContextualHelp {
@@ -39,7 +46,7 @@
 }
 
 .spectrum-ContextualHelp-popover {
-	padding: var(--mod-contextual-help-padding, var(--spectrum-spacing-400));
+	padding: var(--mod-contextual-help-padding, var(--spectrum-contextual-help-padding));
 	font-size: var(--mod-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
 	color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-body-color)));
 
@@ -71,7 +78,7 @@
 }
 
 .spectrum-ContextualHelp-link {
-	margin-block-start: var(--mod-contextual-help-link-spacing, var(--spectrum-spacing-300));
+	margin-block-start: var(--mod-contextual-help-link-spacing, var(--spectrum-contextual-help-link-spacing));
 }
 
 @media (forced-colors: active) {

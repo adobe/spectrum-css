@@ -113,7 +113,7 @@ export default {
 			},
 		},
 		status: {
-		  type: "migrated",
+			type: "migrated",
 		},
 	},
 	tags: ["migrated"]
