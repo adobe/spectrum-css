@@ -1,6 +1,6 @@
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isEmphasized, isFocused, isHovered, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SliderGroup } from "./slider.test.js";
@@ -131,6 +131,18 @@ export default {
 			},
 			control: "boolean",
 		},
+		isEditable: {
+			name: "Editable",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		isEmphasized,
+		isActive,
+		isHovered,
 		isDisabled,
 		isFocused: {
 			...isFocused,
@@ -140,19 +152,23 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Slider",
+		isEmphasized: false,
+		isActive: false,
+		isHovered: false,
 		isDisabled: false,
 		isFocused: false,
 		showTicks: false,
 		showTickLabels: false,
 		labelPosition: "top",
-		label: "Slider label",
+		label: "Label",
 		size: "m",
-		min: 10,
-		max: 20,
-		values: [14],
-		step: 2,
+		min: 0,
+		max: 30,
+		values: [15],
+		step: 5,
 		trackHeight: "medium",
 		isPrecise: false,
+		isEditable: false,
 	},
 	parameters: {
 		actions: {
@@ -236,18 +252,19 @@ Filled.parameters = {
 /**
  * With fill and offset. If the value represents an offset, the fill start can be set to represent the point of origin. This allows the slider fill to start from inside the track.
  */
-export const FilledOffset = Template.bind({});
-FilledOffset.args = {
+export const Offset = Template.bind({});
+Offset.args = {
 	...Default.args,
-	min: 0,
 	variant: "offset",
+	values: [0],
 };
-FilledOffset.tags = ["!dev"];
-FilledOffset.parameters = {
+Offset.tags = ["!dev"];
+Offset.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
 };
+
 
 export const Ramp = Template.bind({});
 Ramp.args = {
@@ -267,7 +284,7 @@ Ramp.parameters = {
 export const Range = Template.bind({});
 Range.args = {
 	...Default.args,
-	values: [14, 16],
+	values: [10, 20],
 };
 Range.tags = ["!dev"];
 Range.parameters = {

@@ -1,5 +1,6 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -23,18 +24,23 @@ export const Template = ({
 	showTicks = false,
 	showTickLabels = false,
 	isDisabled = false,
+	isHovered = false,
+	isActive = false,
 	isFocused = false,
 	isPrecise = false,
+	isEditable = false,
+	isEmphasized = false,
 	customClasses = [],
 	customStyles = {},
 	id = getRandomId("slider"),
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
-
+	let fillPercentage = 50;
 	const isRTL = globals.textDirection !== "rtl";
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;
 	const isRamp = variant === "ramp";
+	const maskWidth = (fillPercentage / 100) * 240;
 	const rampSVG = html`
 		<svg
 			viewBox="0 0 240 16"
@@ -42,7 +48,13 @@ export const Template = ({
 			aria-hidden="true"
 			focusable="false"
 		>
-			<path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+			<defs>
+				<mask id="rampMask">
+					<rect x="0" y="0" width=${maskWidth} height="16" fill="white"/>
+				</mask>
+			</defs>
+			<path class="spectrum-Slider-ramp-track" d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+			<path class="spectrum-Slider-ramp-track-fill" d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z" fill="currentColor" mask="url(#rampMask)"></path>
 		</svg>`;
 
 	const getPosition = (v) => ((v - min) / rangeLength) * 100;
@@ -70,7 +82,10 @@ export const Template = ({
 		const ticks = [];
 		for (let i = from; i <= to; i += step) {
 			ticks.push(html`
-				<div class="${rootClass}-tick">
+				<div class=${classMap({
+					[`${rootClass}-tick`]: true,
+					[`${rootClass}-tick--track-height-${trackHeight}`]: trackHeight
+				})}>
 					<div class="${rootClass}-tickLabel">
 						${when(showTickLabels, () => html`${i}`, undefined)}
 					</div>
@@ -86,7 +101,9 @@ export const Template = ({
 			<div
 				class=${classMap({
 					[`${rootClass}-handle`]: true,
+					"is-hover": isHovered,
 					"is-focused": isFocused,
+					"is-active": isActive,
 					"is-dragged": false, // note: this only applies z-index; no other styles
 					"is-tophandle": false, // todo: when is this supposed to be used
 				})}
@@ -122,6 +139,7 @@ export const Template = ({
 				[`${rootClass}--tick`]: showTicks,
 				[`${rootClass}--track-height-${trackHeight}`]: trackHeight,
 				[`${rootClass}--precise`]: isPrecise,
+				[`${rootClass}--emphasized`]: isEmphasized,
 				"is-disabled": isDisabled,
 				[`${rootClass}--sideLabel`]: labelPosition === "side",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -154,7 +172,7 @@ export const Template = ({
 					forInput: id ? `${id}-1` : undefined,
 					customClasses: [`${rootClass}-label`],
 				}, context)}
-				${when(values.length && labelPosition != "side", () => html`
+				${when(values.length && labelPosition != "side" && !isEditable, () => html`
 					<div
 						class="${rootClass}-value"
 						role="textbox"
@@ -168,6 +186,10 @@ export const Template = ({
 				`)}
 			</div>`)}
 
+			<div class=${classMap({
+				[`${rootClass}-content`]: true,
+				[`${rootClass}-content--offset`]: isEditable,
+			})}>
 			<!-- Slider controls -->
 			<div
 				class=${classMap({
@@ -210,12 +232,8 @@ export const Template = ({
 									})}
 									style=${ifDefined(
 										styleMap({
-											[isRTL ? "right" : "left"]: `${
-												value > centerPoint
-													? getPosition(centerPoint)
-													: getPosition(value)
-											}%`,
-											width: `${getWidth(value, centerPoint)}%`,
+											[isRTL ? "right" : "left"]: `${getPosition(centerPoint)}%`,
+											width: `${getWidth(centerPoint, value)}%`,
 										})
 									)}
 							  ></div>`
@@ -223,7 +241,17 @@ export const Template = ({
 					];
 				})}
 			</div>
-			${when(values.length && labelPosition === "side", () => html`
+			${when(isEditable, () => html`
+				${TextField({
+					value: values[0],
+					id: id ? `${id}-offset` : undefined,
+					customClasses: [`${rootClass}-editable`],
+					isFocused,
+					isDisabled,
+				}, context)}
+			`)}
+			</div>
+			${when(values.length && labelPosition === "side" && !isEditable, () => html`
 				<div
 					class="${rootClass}-labelContainer"
 					role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
