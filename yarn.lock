@@ -124,7 +124,7 @@ __metadata:
     "@changesets/cli": "npm:^2.29.4"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@nx/devkit": "npm:^21.1.3"
+    "@nx/devkit": "npm:^21.2.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     "@yarnpkg/types": "npm:^4.0.1"
     at-rule-packer: "npm:^0.5.0"
@@ -142,24 +142,24 @@ __metadata:
     gh-pages: "npm:^6.3.0"
     husky: "npm:^9.1.7"
     jsonc-eslint-parser: "npm:^2.4.0"
-    lint-staged: "npm:^16.1.0"
+    lint-staged: "npm:^16.1.2"
     lodash: "npm:^4.17.21"
     markdownlint: "npm:^0.38.0"
     markdownlint-cli: "npm:^0.45.0"
     node-gyp: "npm:^11.2.0"
     npm-registry-fetch: "npm:^18.0.2"
     nunjucks: "npm:^3.2.4"
-    nx: "npm:^21.1.3"
+    nx: "npm:^21.2.0"
     open: "npm:^10.1.2"
     pajv: "npm:^1.2.0"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.6"
     postcss-extend: "npm:^1.0.5"
     postcss-hover-media-feature: "npm:^1.0.2"
     postcss-import: "npm:^16.1.0"
     postcss-licensing: "npm:^3.0.0"
     postcss-load-config: "npm:^6.0.1"
     postcss-modules: "npm:^6.0.1"
-    postcss-preset-env: "npm:^10.2.2"
+    postcss-preset-env: "npm:^10.2.3"
     postcss-pseudo-classes: "npm:^0.4.0"
     postcss-reporter: "npm:^7.1.0"
     postcss-selector-replace: "npm:^1.0.2"
@@ -1770,15 +1770,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/postcss-is-pseudo-class@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "@csstools/postcss-is-pseudo-class@npm:5.0.2"
+"@csstools/postcss-is-pseudo-class@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@csstools/postcss-is-pseudo-class@npm:5.0.3"
   dependencies:
     "@csstools/selector-specificity": "npm:^5.0.0"
     postcss-selector-parser: "npm:^7.0.0"
   peerDependencies:
     postcss: ^8.4
-  checksum: 10c0/79b4149b9718799c240b72680f5a37dd4b04a50d8b4a05b3fb35b921d03b2338a7ffa1324019681101c1023076bb0d4950cec1da49cd305e9ab154aad199ff92
+  checksum: 10c0/7980f1cabf32850bac72552e4e9de47412359e36e259a92b9b9af25dae4cce42bbcc5fdca8f384a589565bf383ecb23dec3af9f084d8df18b82552318b2841b6
   languageName: node
   linkType: hard
 
@@ -2796,6 +2796,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@isaacs/balanced-match@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@isaacs/balanced-match@npm:4.0.1"
+  checksum: 10c0/7da011805b259ec5c955f01cee903da72ad97c5e6f01ca96197267d3f33103d5b2f8a1af192140f3aa64526c593c8d098ae366c2b11f7f17645d12387c2fd420
+  languageName: node
+  linkType: hard
+
+"@isaacs/brace-expansion@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@isaacs/brace-expansion@npm:5.0.0"
+  dependencies:
+    "@isaacs/balanced-match": "npm:^4.0.1"
+  checksum: 10c0/b4d4812f4be53afc2c5b6c545001ff7a4659af68d4484804e9d514e183d20269bb81def8682c01a22b17c4d6aed14292c8494f7d2ac664e547101c1a905aa977
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -3315,9 +3331,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nx/devkit@npm:^21.1.3":
-  version: 21.1.3
-  resolution: "@nx/devkit@npm:21.1.3"
+"@nx/devkit@npm:^21.2.0":
+  version: 21.2.0
+  resolution: "@nx/devkit@npm:21.2.0"
   dependencies:
     ejs: "npm:^3.1.7"
     enquirer: "npm:~2.3.6"
@@ -3328,77 +3344,77 @@ __metadata:
     tslib: "npm:^2.3.0"
     yargs-parser: "npm:21.1.1"
   peerDependencies:
-    nx: 21.1.3
-  checksum: 10c0/034576a8892a829540d81340db24ba0ac72ee0b14516909fcb30e5a056625ea97bcb772775fa071fb8c194537c4eb5bb47e55b02c9218dcfd45531c66320445e
+    nx: 21.2.0
+  checksum: 10c0/5dfe77fd778e66b78f5a217ee36aa59cd608e778d8785d0e335b7edc1caf342bf704078ca60cbf35732bb6dba5382ec2362e11a409f7826c13c4e6496ec267b1
   languageName: node
   linkType: hard
 
-"@nx/nx-darwin-arm64@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-darwin-arm64@npm:21.1.3"
+"@nx/nx-darwin-arm64@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-darwin-arm64@npm:21.2.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@nx/nx-darwin-x64@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-darwin-x64@npm:21.1.3"
+"@nx/nx-darwin-x64@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-darwin-x64@npm:21.2.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@nx/nx-freebsd-x64@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-freebsd-x64@npm:21.1.3"
+"@nx/nx-freebsd-x64@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-freebsd-x64@npm:21.2.0"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm-gnueabihf@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-linux-arm-gnueabihf@npm:21.1.3"
+"@nx/nx-linux-arm-gnueabihf@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-linux-arm-gnueabihf@npm:21.2.0"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm64-gnu@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-linux-arm64-gnu@npm:21.1.3"
+"@nx/nx-linux-arm64-gnu@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-linux-arm64-gnu@npm:21.2.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm64-musl@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-linux-arm64-musl@npm:21.1.3"
+"@nx/nx-linux-arm64-musl@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-linux-arm64-musl@npm:21.2.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-x64-gnu@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-linux-x64-gnu@npm:21.1.3"
+"@nx/nx-linux-x64-gnu@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-linux-x64-gnu@npm:21.2.0"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-x64-musl@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-linux-x64-musl@npm:21.1.3"
+"@nx/nx-linux-x64-musl@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-linux-x64-musl@npm:21.2.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@nx/nx-win32-arm64-msvc@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-win32-arm64-msvc@npm:21.1.3"
+"@nx/nx-win32-arm64-msvc@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-win32-arm64-msvc@npm:21.2.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@nx/nx-win32-x64-msvc@npm:21.1.3":
-  version: 21.1.3
-  resolution: "@nx/nx-win32-x64-msvc@npm:21.1.3"
+"@nx/nx-win32-x64-msvc@npm:21.2.0":
+  version: 21.2.0
+  resolution: "@nx/nx-win32-x64-msvc@npm:21.2.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4321,7 +4337,7 @@ __metadata:
     "@spectrum-css/underlay": "npm:7.0.0-next.0"
     "@spectrum-css/well": "npm:8.0.0-next.0"
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.6"
     postcss-licensing: "npm:^3.0.0"
   languageName: unknown
   linkType: soft
@@ -5287,7 +5303,7 @@ __metadata:
     lit: "npm:^3.3.0"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.6"
     prettier: "npm:^3.5.3"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
@@ -5707,9 +5723,9 @@ __metadata:
     "@adobe/token-diff-generator": "npm:^2.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     deepmerge: "npm:^4.3.1"
-    glob: "npm:^11.0.2"
+    glob: "npm:^11.0.3"
     lodash-es: "npm:^4.17.21"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.6"
     postcss-sorting: "npm:^9.1.0"
     style-dictionary: "npm:^4.4.0"
   languageName: unknown
@@ -5856,7 +5872,7 @@ __metadata:
   dependencies:
     ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.6"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
     postcss: ">=8"
@@ -5884,7 +5900,7 @@ __metadata:
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     fast-glob: "npm:^3.3.3"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.6"
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.20.0"
   peerDependencies:
@@ -5899,7 +5915,7 @@ __metadata:
     ava: "npm:^6.4.0"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
-    postcss: "npm:^8.5.4"
+    postcss: "npm:^8.5.6"
     postcss-values-parser: "npm:^6.0.2"
     stylelint: "npm:^16.20.0"
   peerDependencies:
@@ -9088,7 +9104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3, cross-spawn@npm:^7.0.5":
+"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3, cross-spawn@npm:^7.0.5, cross-spawn@npm:^7.0.6":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
   dependencies:
@@ -11323,6 +11339,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"foreground-child@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "foreground-child@npm:3.3.1"
+  dependencies:
+    cross-spawn: "npm:^7.0.6"
+    signal-exit: "npm:^4.0.1"
+  checksum: 10c0/8986e4af2430896e65bc2788d6679067294d6aee9545daefc84923a0a4b399ad9c7a3ea7bd8c0b2b80fdf4a92de4c69df3f628233ff3224260e9c1541a9e9ed3
+  languageName: node
+  linkType: hard
+
 "form-data@npm:^4.0.0":
   version: 4.0.0
   resolution: "form-data@npm:4.0.0"
@@ -11704,19 +11730,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^11.0.2, glob@npm:~11.0.2":
-  version: 11.0.2
-  resolution: "glob@npm:11.0.2"
+"glob@npm:^11.0.3":
+  version: 11.0.3
+  resolution: "glob@npm:11.0.3"
   dependencies:
-    foreground-child: "npm:^3.1.0"
-    jackspeak: "npm:^4.0.1"
-    minimatch: "npm:^10.0.0"
+    foreground-child: "npm:^3.3.1"
+    jackspeak: "npm:^4.1.1"
+    minimatch: "npm:^10.0.3"
     minipass: "npm:^7.1.2"
     package-json-from-dist: "npm:^1.0.0"
     path-scurry: "npm:^2.0.0"
   bin:
     glob: dist/esm/bin.mjs
-  checksum: 10c0/49f91c64ca882d5e3a72397bd45a146ca91fd3ca53dafb5254daf6c0e83fc510d39ea66f136f9ac7ca075cdd11fbe9aaa235b28f743bd477622e472f4fdc0240
+  checksum: 10c0/7d24457549ec2903920dfa3d8e76850e7c02aa709122f0164b240c712f5455c0b457e6f2a1eee39344c6148e39895be8094ae8cfef7ccc3296ed30bce250c661
   languageName: node
   linkType: hard
 
@@ -11731,6 +11757,22 @@ __metadata:
     once: "npm:^1.3.0"
     path-is-absolute: "npm:^1.0.0"
   checksum: 10c0/65676153e2b0c9095100fe7f25a778bf45608eeb32c6048cf307f579649bcc30353277b3b898a3792602c65764e5baa4f643714dfbdfd64ea271d210c7a425fe
+  languageName: node
+  linkType: hard
+
+"glob@npm:~11.0.2":
+  version: 11.0.2
+  resolution: "glob@npm:11.0.2"
+  dependencies:
+    foreground-child: "npm:^3.1.0"
+    jackspeak: "npm:^4.0.1"
+    minimatch: "npm:^10.0.0"
+    minipass: "npm:^7.1.2"
+    package-json-from-dist: "npm:^1.0.0"
+    path-scurry: "npm:^2.0.0"
+  bin:
+    glob: dist/esm/bin.mjs
+  checksum: 10c0/49f91c64ca882d5e3a72397bd45a146ca91fd3ca53dafb5254daf6c0e83fc510d39ea66f136f9ac7ca075cdd11fbe9aaa235b28f743bd477622e472f4fdc0240
   languageName: node
   linkType: hard
 
@@ -13232,6 +13274,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jackspeak@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "jackspeak@npm:4.1.1"
+  dependencies:
+    "@isaacs/cliui": "npm:^8.0.2"
+  checksum: 10c0/84ec4f8e21d6514db24737d9caf65361511f75e5e424980eebca4199f400874f45e562ac20fa8aeb1dd20ca2f3f81f0788b6e9c3e64d216a5794fd6f30e0e042
+  languageName: node
+  linkType: hard
+
 "jake@npm:^10.8.5":
   version: 10.9.2
   resolution: "jake@npm:10.9.2"
@@ -14132,9 +14183,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^16.1.0":
-  version: 16.1.0
-  resolution: "lint-staged@npm:16.1.0"
+"lint-staged@npm:^16.1.2":
+  version: 16.1.2
+  resolution: "lint-staged@npm:16.1.2"
   dependencies:
     chalk: "npm:^5.4.1"
     commander: "npm:^14.0.0"
@@ -14148,7 +14199,7 @@ __metadata:
     yaml: "npm:^2.8.0"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c0/5cc33d61ec2c682e488eb3fcea5c153ce486623b80314f2c56af438ad78d73c7fcd3e7c911d273ac740bd34f1e030d35d4fb92d8e476984150c0c59724ac7fa4
+  checksum: 10c0/2a299fc0d56e0a64ed0af8caf937e00eac47cb270df2917e2d4b939074eaa63ecd7f16d3b70b7e5e57bff75ffbbbf8aae5768dedf3dfd45e3ca1b9caaf7740cc
   languageName: node
   linkType: hard
 
@@ -15324,6 +15375,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:^10.0.3":
+  version: 10.0.3
+  resolution: "minimatch@npm:10.0.3"
+  dependencies:
+    "@isaacs/brace-expansion": "npm:^5.0.0"
+  checksum: 10c0/e43e4a905c5d70ac4cec8530ceaeccb9c544b1ba8ac45238e2a78121a01c17ff0c373346472d221872563204eabe929ad02669bb575cb1f0cc30facab369f70f
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.4, minimatch@npm:^3.0.5, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -15804,21 +15864,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:^21.1.3":
-  version: 21.1.3
-  resolution: "nx@npm:21.1.3"
+"nx@npm:^21.2.0":
+  version: 21.2.0
+  resolution: "nx@npm:21.2.0"
   dependencies:
     "@napi-rs/wasm-runtime": "npm:0.2.4"
-    "@nx/nx-darwin-arm64": "npm:21.1.3"
-    "@nx/nx-darwin-x64": "npm:21.1.3"
-    "@nx/nx-freebsd-x64": "npm:21.1.3"
-    "@nx/nx-linux-arm-gnueabihf": "npm:21.1.3"
-    "@nx/nx-linux-arm64-gnu": "npm:21.1.3"
-    "@nx/nx-linux-arm64-musl": "npm:21.1.3"
-    "@nx/nx-linux-x64-gnu": "npm:21.1.3"
-    "@nx/nx-linux-x64-musl": "npm:21.1.3"
-    "@nx/nx-win32-arm64-msvc": "npm:21.1.3"
-    "@nx/nx-win32-x64-msvc": "npm:21.1.3"
+    "@nx/nx-darwin-arm64": "npm:21.2.0"
+    "@nx/nx-darwin-x64": "npm:21.2.0"
+    "@nx/nx-freebsd-x64": "npm:21.2.0"
+    "@nx/nx-linux-arm-gnueabihf": "npm:21.2.0"
+    "@nx/nx-linux-arm64-gnu": "npm:21.2.0"
+    "@nx/nx-linux-arm64-musl": "npm:21.2.0"
+    "@nx/nx-linux-x64-gnu": "npm:21.2.0"
+    "@nx/nx-linux-x64-musl": "npm:21.2.0"
+    "@nx/nx-win32-arm64-msvc": "npm:21.2.0"
+    "@nx/nx-win32-x64-msvc": "npm:21.2.0"
     "@yarnpkg/lockfile": "npm:^1.1.0"
     "@yarnpkg/parsers": "npm:3.0.2"
     "@zkochan/js-yaml": "npm:0.0.7"
@@ -15885,7 +15945,7 @@ __metadata:
   bin:
     nx: bin/nx.js
     nx-cloud: bin/nx-cloud.js
-  checksum: 10c0/cca83b5cab40732c50695b607f2de70d9fcdab35710af1412e0114b5981bf1ca5f24309249e0442376d10d8f0a6eff271ff0cc1f7bc8a1b9dcebf5090e7e00ca
+  checksum: 10c0/5521c094b459fe0bb4560be54193f9e30866fed849af65a7f5ac7f70b478c0b1da4ce86774888d92c8e0d34774e1367a0cdbbbe2667627e0737cad1b7fbd536a
   languageName: node
   linkType: hard
 
@@ -17420,9 +17480,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:^10.2.2":
-  version: 10.2.2
-  resolution: "postcss-preset-env@npm:10.2.2"
+"postcss-preset-env@npm:^10.2.3":
+  version: 10.2.3
+  resolution: "postcss-preset-env@npm:10.2.3"
   dependencies:
     "@csstools/postcss-cascade-layers": "npm:^5.0.1"
     "@csstools/postcss-color-function": "npm:^4.0.10"
@@ -17436,7 +17496,7 @@ __metadata:
     "@csstools/postcss-hwb-function": "npm:^4.0.10"
     "@csstools/postcss-ic-unit": "npm:^4.0.2"
     "@csstools/postcss-initial": "npm:^2.0.1"
-    "@csstools/postcss-is-pseudo-class": "npm:^5.0.2"
+    "@csstools/postcss-is-pseudo-class": "npm:^5.0.3"
     "@csstools/postcss-light-dark-function": "npm:^2.0.9"
     "@csstools/postcss-logical-float-and-clear": "npm:^3.0.0"
     "@csstools/postcss-logical-overflow": "npm:^2.0.0"
@@ -17490,7 +17550,7 @@ __metadata:
     postcss-selector-not: "npm:^8.0.1"
   peerDependencies:
     postcss: ^8.4
-  checksum: 10c0/314774ed0cfb2880d82d0056e1a26ab5c04b9e5584e5c41045231374a7e080eda7ed6e5506fbc1c1c6bc7a05700576bfb0b5f334ae25f125bcbb772e2aa337e8
+  checksum: 10c0/f3d2ea8b95083acad2cf74aca93904dd3158639bf692d1d471598b538e0c6b4447ae306e7bc1c2426dd465e7c9715373678855b7e211e194b507ef8184e83f99
   languageName: node
   linkType: hard
 
@@ -17720,14 +17780,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.4":
-  version: 8.5.4
-  resolution: "postcss@npm:8.5.4"
+"postcss@npm:^8.5.6":
+  version: 8.5.6
+  resolution: "postcss@npm:8.5.6"
   dependencies:
     nanoid: "npm:^3.3.11"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
-  checksum: 10c0/0feff648614a834f7cd5396ea6b05b658ca0507e10a4eaad03b56c348f6aec93f42a885fc1b30522630c6a7e49ae53b38a061e3cba526f2d9857afbe095a22bb
+  checksum: 10c0/5127cc7c91ed7a133a1b7318012d8bfa112da9ef092dddf369ae699a1f10ebbd89b1b9f25f3228795b84585c72aabd5ced5fc11f2ba467eedf7b081a66fad024
   languageName: node
   linkType: hard
 
