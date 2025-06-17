@@ -17,5 +17,8 @@ export const buildPreviewURLComment = (prNumber) => {
     const prHash = `pr-${prNumber}`;
     const baseUrl = 'https://spectrumcss.z13.web.core.windows.net';
 
-    return `PR #${prNumber} has been deployed to Azure Blob Storage: ${baseUrl}/${prHash}/index.html.`;
+    return `## 📚 Branch preview
+
+PR #${prNumber} has been deployed to Azure Blob Storage: [${baseUrl}/${prHash}/index.html](${baseUrl}/${prHash}/index.html).`;
+
 };

@@ -108,7 +108,7 @@ jobs:
             const { commentOrUpdate } = await import('${{ github.workspace }}/.github/scripts/comment-or-update.js');
             const prNumber = context.payload.pull_request.number;
             const body = buildPreviewURLComment(prNumber);
-            commentOrUpdate(github, context, '## 📚 Branch Preview', body);
+            commentOrUpdate(github, context, '## 📚 Branch preview', body);
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
