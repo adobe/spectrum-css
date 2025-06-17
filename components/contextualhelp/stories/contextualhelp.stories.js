@@ -112,7 +112,11 @@ export default {
 				height: "200px",
 			},
 		},
+		status: {
+		  type: "migrated",
+		},
 	},
+	tags: ["migrated"]
 };
 
 /**
