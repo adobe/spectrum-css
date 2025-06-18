@@ -15,16 +15,7 @@
 .spectrum-Meter {
 	--mod-progressbar-max-size: var(--mod-meter-max-width, var(--spectrum-meter-maximum-width));
 	--mod-progressbar-min-size: var(--mod-meter-min-width, var(--spectrum-meter-minimum-width));
-
-	--mod-progressbar-thickness: var(--spectrum-meter-thickness-small);
-	--mod-progressbar-font-size: var(--spectrum-font-size-75);
-	--mod-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-
-	&.spectrum-Meter--sizeL {
-		--mod-progressbar-thickness: var(--spectrum-meter-thickness-large);
-		--mod-progressbar-font-size: var(--spectrum-font-size-100);
-		--mod-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
-	}
+	--spectrum-meter-field-label-progress-bar: var(--spectrum-spacing-75);
 
 	&.is-positive {
 		--mod-progressbar-fill-color: var(--spectrum-positive-visual-color);
@@ -36,6 +27,10 @@
 
 	&.is-negative {
 		--mod-progressbar-fill-color: var(--spectrum-negative-visual-color);
+	}
+
+	.spectrum-ProgressBar-helptext {
+		margin-block-start: var(--mod-meter-field-label-progress-bar, var(--spectrum-meter-field-label-progress-bar));
 	}
 }
 /* @passthrough end */

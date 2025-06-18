@@ -126,6 +126,8 @@
 		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
 		transition: width 1s;
 		background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
+		border-start-end-radius: var(--spectrum-progressbar-corner-radius);
+		border-end-end-radius: var(--spectrum-progressbar-corner-radius);
 	}
 }
 

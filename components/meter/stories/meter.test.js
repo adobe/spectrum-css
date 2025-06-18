@@ -28,6 +28,10 @@ export const MeterGroup = Variants({
 			testHeading: "Without value label",
 			showValueLabel: false,
 		},
+		{
+			testHeading: "Help text",
+			helpText: "Help text message to add more context",
+		},
 		/* The gradient story below supports linear-gradients used by Express. For use cases that require a custom
 		linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS.
 		*/
