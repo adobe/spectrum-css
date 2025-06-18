@@ -11,7 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-import { dirname, join, sep } from "path";
+import fg from "fast-glob";
+import { capitalize } from "lodash-es";
+import { basename, dirname, join, resolve, sep } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 import StyleDictionary from "style-dictionary";
 import {
@@ -20,13 +25,11 @@ import {
 	CSSOpenTypeTransform,
 	CSSSetsFormatter,
 	DataJsonFormatter,
-	NameKebabTransform,
 } from "./utilities/index.js";
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
 StyleDictionary.registerTransform(CSSBorderRoundingTransform);
 StyleDictionary.registerTransform(CSSOpacityPercentTransform);
-StyleDictionary.registerTransform(NameKebabTransform);
 StyleDictionary.registerFormat(CSSSetsFormatter);
 StyleDictionary.registerFormat(DataJsonFormatter);
 
@@ -42,10 +45,9 @@ const tokensDir = dirname(tokensPath);
  * @type {import('style-dictionary').Config}
  */
 export default {
-	source: [join(tokensDir, "src", "*.json"), "custom-tokens.json", "../components/*/tokens.json"],
+	source: [join(tokensDir, "src", "*.json"), "custom-tokens.json", "../components/accordion/tokens.json"],
 	hooks: {
 		transforms: {
-			[NameKebabTransform.name]: NameKebabTransform,
 			[CSSOpenTypeTransform.name]: CSSOpenTypeTransform,
 			[CSSBorderRoundingTransform.name]: CSSBorderRoundingTransform,
 			[CSSOpacityPercentTransform.name]: CSSOpacityPercentTransform,
@@ -55,8 +57,11 @@ export default {
 		css: {
 			buildPath: join("dist", "css") + sep,
 			prefix: "spectrum",
+			outputReferences: true,
+			outputReferenceFallbacks: false,
+			showFileHeader: false,
 			transforms: [
-				NameKebabTransform.name,
+				"name/kebab",
 				CSSOpenTypeTransform.name,
 				CSSBorderRoundingTransform.name,
 				CSSOpacityPercentTransform.name,
@@ -64,23 +69,61 @@ export default {
 			files: [
 				{
 					format: "css/sets",
-					options: {
-						showFileHeader: false,
-						outputReferences: true,
-					},
-					destination: "index.css",
 					filter: (token) => {
+						// filter out tokens that are in the local components folder
+						if (token.filePath?.split(sep)?.includes("components")) return false;
 						if (token.name.includes("android-")) return false;
+						if (token.path.includes("sets") && token.path.includes("mobile")) return false;
 						return true;
 					},
+					destination: "index.css",
 				},
+				{
+					format: "css/sets",
+					destination: "mobile.css",
+					filter: (token) => {
+						// filter out tokens that are in the local components folder
+						if (token.filePath?.split(sep)?.includes("components")) return false;
+						if (token.name.includes("android-")) return false;
+						if (token.path.includes("sets") && token.path.includes("mobile")) return true;
+						return false;
+					},
+				},
+			],
+		},
+		components: {
+			buildPath: resolve(__dirname, "..", "components") + sep,
+			prefix: "spectrum",
+			outputReferences: true,
+			outputReferenceFallbacks: true,
+			showFileHeader: false,
+			transforms: [
+				"name/kebab",
+				CSSOpenTypeTransform.name,
+				CSSBorderRoundingTransform.name,
+				CSSOpacityPercentTransform.name,
+			],
+			files: [
+				// Iterate over all files in the components folder and build a css file for each
+				...(fg.sync("accordion/tokens.json", { cwd: resolve(__dirname, "..", "components") })).map((pkg) => ({
+					format: "css/sets",
+					destination: `${dirname(pkg)}/dist/${basename(pkg, ".json")}.css`,
+					options: {
+						selector: `.spectrum-${capitalize(dirname(pkg))}`,
+					},
+					filter: (token) => {
+						if (token.filePath?.includes(pkg)) return true;
+						if (token.component == dirname(pkg)) return true;
+						return false;
+					},
+				})),
 			],
 		},
 		JSON: {
 			buildPath: join("dist", "json") + sep,
 			prefix: "spectrum",
 			transforms: [
-				NameKebabTransform.name,
+				"name/kebab",
 				CSSOpenTypeTransform.name,
 				CSSBorderRoundingTransform.name,
 				CSSOpacityPercentTransform.name,
@@ -89,11 +132,6 @@ export default {
 				{
 					format: "json/sets",
 					destination: "tokens.json",
-					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.includes("wireframe")) return false;
-						return true;
-					},
 					options: {
 						showFileHeader: false,
 						outputReferences: true,

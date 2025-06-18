@@ -124,6 +124,7 @@ __metadata:
     "@changesets/cli": "npm:^2.29.4"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
+    "@csstools/postcss-design-tokens": "npm:^4.0.5"
     "@nx/devkit": "npm:^21.2.1"
     "@yarnpkg/types": "npm:^4.0.1"
     at-rule-packer: "npm:^0.5.0"
@@ -1676,6 +1677,19 @@ __metadata:
   peerDependencies:
     postcss: ^8.4
   checksum: 10c0/e7d21002a84d0fba4fe815fb7d3d19b81fb1719a7b6fdd240eb6639d58937b64d6f5c9aa11ffe8a64891a2ed181818cd56d346f58949c2eaa9df7c82ee95ef8e
+  languageName: node
+  linkType: hard
+
+"@csstools/postcss-design-tokens@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "@csstools/postcss-design-tokens@npm:4.0.5"
+  dependencies:
+    "@csstools/css-parser-algorithms": "npm:^3.0.5"
+    "@csstools/css-tokenizer": "npm:^3.0.4"
+    postcss-value-parser: "npm:^4.2.0"
+  peerDependencies:
+    postcss: ^8.4
+  checksum: 10c0/cc02c0d2d15a3ee1fff95ec43be4395ee7f13a9483a3fd2edd8724c7c73ec97fbd43be5509d95ca9eccf2f65874262514bff752e8aa96f3bc407e74bdfbdfa93
   languageName: node
   linkType: hard
 

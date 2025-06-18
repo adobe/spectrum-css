@@ -4,7 +4,6 @@
 export { default as CSSBorderRoundingTransform } from "./css-border-rounding-transform.js";
 export { default as CSSOpenTypeTransform } from "./css-font-open-type-transform.js";
 export { default as CSSOpacityPercentTransform } from "./css-opacity-percent-transform.js";
-export { default as NameKebabTransform } from "./name-kebab-transform.js";
 
 /**
  * @note These are custom formatters that are used by Style Dictionary
