@@ -467,11 +467,16 @@ export const TableGroup = Variants({
 					isSelected: true,
 				},
 				{
-					cellContent: "Table row bravo",
+					cellContent: "Selected, hovered row",
+					isSelected: true,
+					isHovered: true,
 				},
 				{
-					cellContent: "Selected unfocused row, no rounded corners",
+					cellContent: ["Selected unfocused row, with a focused cell", "Focused cell", "Unfocused cell"],
 					isSelected: true,
+					cellCustomClasses: {
+						1: ["is-focus-visible"]
+					}
 				},
 				{
 					cellContent: "Focused unselected row, no rounded corners",
@@ -480,18 +485,45 @@ export const TableGroup = Variants({
 				{
 					cellContent: ["Table row with a focused cell", "Focused cell", "Unfocused cell"],
 					cellCustomClasses: {
-						1: ["is-focused"]
+						1: ["is-focus-visible"]
 					}
 				},
 				{
-					cellContent: "Table row echo",
+					cellContent: "Hovered row",
+					isHovered: true,
+
 				},
 				{
 					cellContent: "Focused selected row, with rounded corners",
 					isFocused: true,
 					isSelected: true,
 				}
-			],
+			]
+		},
+		{
+			testHeading: "Sparkline charts",
+			hasChartContent: true,
+			rowItems: [
+				{ cellContent: ["Informative sparkline", "200", "sparkline-informative.svg"],
+					textAlignment: {
+						1: "end"
+					}
+				},
+				{ cellContent: ["Negative sparkline", "0", "sparkline-negative.svg"],
+					textAlignment: {
+						1: "end"
+					}
+				},
+				{ cellContent: ["Positive sparkline", "600", "sparkline-positive.svg"],
+					textAlignment: {
+						1: "end"
+					}
+				},{ cellContent: ["Notice sparkline", "400", "sparkline-notice.svg"],
+					textAlignment: {
+						1: "end"
+					}
+				},
+			]
 		}
 	],
 });
