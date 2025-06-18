@@ -64,7 +64,7 @@ export default {
 					format: "css/sets",
 					options: { showFileHeader: false, outputReferences: true },
 					destination: "global-vars.css",
-					filter: (token) => {
+					filter: (token, platform) => {
 						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
 						if (tokenSets.includes("wireframe")) return false;
 						if (tokenSets.length === 0) return true;
@@ -76,7 +76,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--medium",
 						sets: ["desktop"],
 					},
 					destination: "medium-vars.css",
@@ -93,7 +92,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--large",
 						sets: ["mobile"],
 					},
 					destination: "large-vars.css",
@@ -111,7 +109,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--light",
 						sets: ["light"],
 					},
 					destination: "light-vars.css",
@@ -128,7 +125,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--dark",
 						sets: ["dark"],
 					},
 					destination: "dark-vars.css",
