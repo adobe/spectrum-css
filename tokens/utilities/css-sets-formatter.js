@@ -19,18 +19,22 @@ export const generateNameArray = (token, prefix) => {
  * @description Formats the value of a token for CSS
  * @param {import('style-dictionary').Token} token
  * @param {import('style-dictionary').PlatformConfig} platform
- * @returns {string}
+ * @returns {string[]}
  */
-const valueFormatter = (token, platform) => {
-	if (!usesReferences(token.original.value)) return token.value;
+const valueFormatter = (value, prefix) => {
+	if (!value) return;
 
-	const resultAr = token.original.value
-		.substring(1, token.original.value.length - 1)
-		.split(".");
+	/* @todo resolve for the new typography objects */
+	if (typeof value === "object") {
+		return Object.keys(value).map(key => valueFormatter(key, prefix))?.flat();
+	}
 
-	if (platform.prefix) resultAr.splice(0, 0, platform.prefix);
+	if (!usesReferences(value)) return [String(value)];
 
-	return `var(--${resultAr.join("-")})`;
+	const resultAr = String(value).substring(1, value.length - 1).split(".");
+	if (prefix) resultAr.splice(0, 0, prefix);
+
+	return [`var(--${resultAr.join("-")})`];
 };
 
 /**
@@ -38,23 +42,29 @@ const valueFormatter = (token, platform) => {
  * @type {import('style-dictionary/types').FormatFn} format
  */
 const format = ({ dictionary, platform, options }) => {
+	let selector = '.spectrum';
+	const context = options.sets?.[0];
+
 	const resultAr = [];
 
 	dictionary.allTokens.forEach((token) => {
-		const name = generateNameArray(token, platform.prefix);
-		const value = valueFormatter(token, platform);
+		if (!token) return;
 
-		if (!value) return;
+		const name = generateNameArray(token, platform.prefix);
+		const values = valueFormatter(token.original?.value ?? token.value, platform.prefix);
+
+		if (!values || values.length === 0) return;
 		if (name[1]?.startsWith("android-")) {
 			return;
 		}
 
-		resultAr.push(`  --${name.join("-")}: ${value};`);
+		resultAr.push(...values.map(value => `  --${name.join("-")}: ${value};`));
 	});
 
-	const selector = options.selector ? options.selector : ".spectrum";
+	const mediaQuery = context === 'dark' ? '@media (prefers-color-scheme: dark) {\n' : '';
+	if (context && ['desktop', 'light', 'dark'].every(c => context !== c)) selector = `.spectrum--${context === 'mobile' ? 'large' : context}`;
 
-	return `${selector} {\n${resultAr.join("\n")}\n}\n`;
+	return `${mediaQuery}${selector} {\n${resultAr.join("\n")}\n}\n${mediaQuery ? '}\n' : ''}`;
 };
 format.nested = true;
 
