@@ -55,6 +55,7 @@ module.exports = ({
 					return join(basedir, id);
 				}
 			} : false,
+			"@csstools/postcss-design-tokens": {},
 			/* --------------------------------------------------- */
 			/* ------------------- LINTING ---------------- */
 			// Linter needs to run before the minifier removes comments (such as the stylelint-ignore comments)

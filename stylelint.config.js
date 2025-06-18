@@ -52,7 +52,7 @@ module.exports = {
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: ["extend", "each", "include", "mixin"],
+				ignoreAtRules: ["extend", "each", "include", "mixin", "design-tokens"],
 			},
 		],
 		"block-no-empty": [true, {
@@ -80,6 +80,12 @@ module.exports = {
 				ignoreProperties: {
 					"/.+/": ["CanvasText", "preserve-parent-color"],
 				},
+				propertiesSyntax: {
+					"/.+/": "| <design-token()>",
+				},
+				typesSyntax: {
+					"<design-token()>": "design-token( <string> [ to <ident> ]? )",
+				},
 			},
 		],
 		"declaration-block-no-shorthand-property-overrides": true,
@@ -87,6 +93,7 @@ module.exports = {
 			true,
 			{
 				severity: "warning",
+				ignoreFunctions: ["design-token"],
 			},
 		],
 		"max-nesting-depth": [3, { severity: "warning" }],

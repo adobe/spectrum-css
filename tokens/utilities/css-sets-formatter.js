@@ -1,119 +1,164 @@
 import { cssTemplate } from "./css.template.js";
+import { pushToMap, referenceToVarFunction } from "./utilities.js";
+
+const DEFAULT_SETS = ["light", "desktop"];
 
 /**
- * @description Pushes a value to a map; supports nested maps and arrays
- * @param {Map} map
- * @param {string} key
- * @param {any} value
- * @returns {Map}
+ * @param {import('style-dictionary/types').DesignToken} token
+ * @param {string} set The context of the set to resolve
+ * @param {import('style-dictionary/types').PlatformConfig} [platform={}]
+ * @returns {string}
  */
-const pushToMap = (map, key, value) => {
-	if (!map.has(key)) {
-		map.set(key, value);
-		return map;
-	}
-
-	let existing = map.get(key);
-
-	// Check if the value is a Map
-	if (value instanceof Map) {
-		// Merge the two maps
-		for (const [k, v] of value.entries()) {
-			existing.set(k, v);
+function resolveSetValues(value, set, platform = {}) {
+	const { outputReferences = true, outputReferenceFallbacks = true, modifier = false } = platform;
+	if (typeof value === "object") {
+		// If we're outputing the references, return it in the format of {<token-name>}
+		if (outputReferences && typeof value.name !== "undefined") {
+			// If we're outputing the references, return it in the format of {<token-name>}
+			return referenceToVarFunction(`{${value.name}}`, { prefix: platform.prefix, fallback: outputReferenceFallbacks ? value.value : undefined, modifier });
 		}
-	}
-	else if (value instanceof Object) {
-		// Merge the two objects
-		for (const [k, v] of Object.entries(value)) {
-			existing[k] = v;
+		else if (!outputReferences && typeof value.value !== "undefined") {
+			// If we're not outputing the references, return the value
+			return resolveSetValues(value.value, set, platform);
 		}
-	}
-	else if (Array.isArray(value)) {
-		// Merge the two arrays
-		existing.push(...value);
-	}
-	else {
-		// If it's a primitive value, just set it
-		existing = value;
-	}
+		else if (typeof value.sets !== "undefined") {
+			// Check if the value has a sets object
+			if (typeof set === "undefined") {
+				// Capture the default set value if found, otherwise it gets lost in the forEach loop context
+				let capture;
 
-	map.set(key, existing);
-	return map;
-};
+				// Check for default set values
+				DEFAULT_SETS.forEach((defaultSet) => {
+					if (typeof value.sets[defaultSet] !== "undefined") {
+						capture = resolveSetValues(value.sets[defaultSet], set, platform);
+					}
+				});
 
-/**
- * @description Split out the token set data into distinct CSS variables
- * @type {import('style-dictionary/types').FormatFn} format
- */
-const format = ({ dictionary, platform }) => {
-	/**
-	 * @type {Map<string, Map<string, string>>}
-	 */
-	const layers = new Map();
-	const tokenMap = dictionary.tokenMap;
-
-	const combinedTokens = new Map();
-
-	// Iterate over the provided tokens and sort them into buckets based on their set data
-	for (const token of [...tokenMap.values()]) {
-		const set = token.path.includes("sets") ? token.path?.pop() : undefined;
-
-		if (!combinedTokens.has(token.key)) {
-			if (typeof set === "undefined" || !["light", "dark"].includes(set)) {
-				combinedTokens.set(token.key, token);
+				// If a default set value was found, return it
+				if (typeof capture !== "undefined") return capture;
 			}
-			else {
-				console.log({ value: token.value });
-				// If token.value has sets object and the light and dark values aren't the same string
-
+			else if (typeof value.sets[set] !== "undefined") {
+				return resolveSetValues(value.sets[set], set, platform);
 			}
 		}
-		else {
-			// const data = combinedTokens.get(token.name) ?? {};
-			// const context = data?.context ?? {};
-
-			// if (!context[set]) context[set] = resolveContext(token.value, set);
-			// else console.log('Error: duplicate values for the same context', set, context);
-
-			// combinedTokens.set(token.name, {
-			// 	...data,
-			// 	context,
-			// });
-		}
 	}
 
-	// console.log(combinedTokens);
-
-	for (const [key, token] of [...combinedTokens.entries()]) {
-		console.log(key);
-		console.log('-----------');
-		let value = valueFormatter(token, platform);
-		if (!value) continue;
-
-		const darkToken = tokenMap.get(token.key?.replace("light", "dark"));
-		if (darkToken) {
-			const darkValue = valueFormatter(darkToken, platform);
-			if (darkValue && value !== darkValue) {
-				value = `light-dark(${value}, ${darkValue})`;
-			}
-		}
-
-		const results = new Map();
-
-		results.set(token.name, value);
-		pushToMap(layers, token.path?.includes("mobile") ? "large" : "global", results);
-		console.log('-----------');
-	}
-
-	return cssTemplate(layers, { dictionary, platform });
-};
-
-format.nested = true;
+	// If the value is not an object, we can do a minor conversion of the reference to a CSS variable if needed
+	return referenceToVarFunction(value, { prefix: platform.prefix, modifier });
+}
 
 /**
  * @type {import('style-dictionary/types').Format}
  */
 export default {
 	name: "css/sets",
-	format,
+	format: async function ({ dictionary, options = {}, file, platform = {} }) {
+		let layers = new Map();
+		// @todo: this should be a configuration option
+		const layerDefinitions = {
+			core: [...DEFAULT_SETS, "size-m"],
+			dark: ["dark"],
+			large: ["mobile"],
+		};
+
+		// Iterate over the provided tokens and sort them into buckets based on their set data
+		for (const token of [...dictionary.tokenMap.values()]) {
+			const set = token.path && token.path.includes("sets") ? token.path[token.path.length - 1] : undefined;
+			const prop = token.path[0];
+			platform.modifier = token.modifier;
+
+			const value = resolveSetValues(token.value, set, platform);
+
+			// Why would a value not be found?
+			if (typeof value === "undefined") continue;
+
+			if (typeof set === "undefined") {
+				layers = pushToMap(layers, "core", new Map([[prop, {
+					value,
+					deprecated: token.deprecated,
+					deprecated_comment: token.deprecated_comment,
+				}]]));
+				continue;
+			}
+
+			// Skip wireframe tokens for CSS
+			if (set === "wireframe") continue;
+
+			// @todo: move the light-dark logic to a value formatter
+			if (["light", "dark"].includes(set)) {
+				// The light-dark function can only be used with color values
+				// @todo: should we use a color package to handle this so that it accounts for all types of colors?
+				if (value.startsWith("rgb")) {
+					if (set === "light") {
+						const darkToken = dictionary.tokenMap.get(token.key?.replace("light", "dark"));
+						const { value: darkValue } = resolveSetValues(darkToken.value, "dark", platform);
+						if (typeof darkValue !== "undefined" && darkValue.startsWith("rgb")) {
+							layers = pushToMap(layers, "core", new Map([[prop, {
+								value: `light-dark(${value}, ${darkValue})`,
+								deprecated: token.deprecated,
+								deprecated_comment: token.deprecated_comment,
+							}]]));
+							continue;
+						}
+					}
+
+					// Let the dark value fall through as it's already accounted for in the light-dark function
+					continue;
+				}
+			}
+
+			let added = false;
+			for (const layer of Object.keys(layerDefinitions)) {
+				if (layerDefinitions[layer].includes(set)) {
+					layers = pushToMap(layers, layer, new Map([[prop, {
+						value,
+						deprecated: token.deprecated,
+						deprecated_comment: token.deprecated_comment,
+					}]]));
+					added = true;
+					break;
+				}
+			}
+
+			if (added) continue;
+		}
+
+		if (layers.has("dark") && layers.get("dark").size > 0) {
+			// Check if any of the dark values match the light values and delete the extra entries from the dark layer
+			for (const [darkKey, darkData] of layers.get("dark")) {
+				// Get the light value with the same key
+				const lightData = layers.get("core")?.get(darkKey) ?? {};
+
+				// So far only 2 edge-cases match this
+				if (typeof lightData.value === "undefined") {
+					const initial = dictionary.tokenMap.get(`{${darkKey.replace("spectrum-", "")}.sets.light}`);
+					if (initial?.original?.value) {
+						const originalValue = referenceToVarFunction(initial.original.value, { prefix: platform.prefix, modifier: initial?.original?.modifier });
+						if (typeof originalValue === "undefined") continue;
+
+						lightData.value = originalValue;
+						lightData.deprecated = initial.original.deprecated;
+						lightData.deprecated_comment = initial.original.deprecated_comment;
+
+						// Update the core layer with the new value
+						layers.get("core")?.set(darkKey, lightData);
+					}
+
+					continue;
+				}
+
+				if (lightData?.value === darkData?.value) {
+					layers.get("dark")?.delete(darkKey);
+					continue;
+				}
+			}
+		}
+
+		return await cssTemplate(layers, {
+			...options,
+			file,
+			dictionary,
+			platform,
+		});
+	},
 };
