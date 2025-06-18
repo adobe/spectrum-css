@@ -16,6 +16,9 @@ export const AccordionItem = ({
 	idx = 0,
 	isDisabled = false,
 	isOpen = false,
+	isHovered = false,
+	isActive = false,
+	isFocused = false,
 	iconSize = "m",
 	customStyles = {},
 	customClasses = [],
@@ -38,25 +41,33 @@ export const AccordionItem = ({
 			<h3 class="${rootClass}Heading">
 				<!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
 				<button
-					class="${rootClass}Header"
+					class=${classMap({
+						[`${rootClass}Header`]: true,
+						"is-hover": isHovered,
+						"is-active": isActive,
+						"is-focus-visible": isFocused,
+					})}
 					type="button"
 					?disabled=${isDisabled}
 					id="spectrum-accordion-item-${idx}-header"
 					aria-controls="spectrum-accordion-item-${idx}-content"
 					aria-expanded="${open ? "true" : "false"}"
 				>
-					${heading}
-				</button>
-				<span class="${rootClass}IconContainer">
 					${Icon({
-						iconName: !isOpen ? "ChevronRight" : "ChevronDown",
+						iconName: (!isOpen ? "ChevronRight" : "ChevronDown") + ({
+							s: "75",
+							m: "100",
+							l: "200",
+							xl: "300",
+						}[iconSize] || "100"),
 						setName: "ui",
 						size: iconSize,
 						customClasses: [`${rootClass}Indicator`],
 					}, context)}
-				</span>
+					<span class="${rootClass}Title">${heading}</span>
+				</button>
 			</h3>
-			<!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+			<!-- WAI-ARIA 1.1: Item content uses a role of "region" -->
 			<div
 				class="${rootClass}Content"
 				role="region"
@@ -73,6 +84,8 @@ export const Template = ({
 	rootClass = "spectrum-Accordion",
 	size = "m",
 	density = "regular",
+	isQuiet = false,
+	hasNoInlinePadding = false,
 	items = [],
 	id = getRandomId("accordion"),
 	disableAll = false,
@@ -87,9 +100,11 @@ export const Template = ({
 			class="${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
+					typeof size !== "undefined" && size !== "m",
 				[`${rootClass}--${density}`]:
 					typeof density !== "undefined" && density !== "regular",
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--noInlinePadding`]: hasNoInlinePadding,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}"
 			id=${ifDefined(id)}
