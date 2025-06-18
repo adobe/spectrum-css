@@ -82,6 +82,6 @@ In Storybook, several new stories have been added to the docs page and the testi
 - `--mod-table-row-bottom-to-text--spacious`
 - `--mod-table-row-top-to-text--compact`
 - `--mod-table-row-top-to-text--spacious`
-- `--mod-table-thumbnail-block-spacing"`
+- `--mod-table-thumbnail-block-spacing`
 - `--mod-table-thumbnail-block-spacing-compact`
 - `--mod-table-thumbnail-block-spacing-spacious`

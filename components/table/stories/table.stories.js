@@ -116,6 +116,17 @@ export default {
 		rowItems: {
 			table: { disable: true },
 		},
+		hasChartContent: {
+			name: "Chart content in cells",
+			description: "In some instances, a chart can be displayed in the cells of the table.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+				disable: true,
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Table",
@@ -129,6 +140,7 @@ export default {
 		useScroller: false,
 		hasColumnDividers: false,
 		hasMenu: false,
+		hasChartContent: false,
 		isSortable: false,
 		sortIcon: "Sort",
 		rowItems: [
@@ -381,11 +393,16 @@ TableStates.args = {
 			isSelected: true,
 		},
 		{
-			cellContent: "Table row bravo",
+			cellContent: "Selected, hovered row",
+			isSelected: true,
+			isHovered: true,
 		},
 		{
-			cellContent: "Selected unfocused row, no rounded corners",
+			cellContent: ["Selected unfocused row, with a focused cell", "Focused cell", "Unfocused cell"],
 			isSelected: true,
+			cellCustomClasses: {
+				1: ["is-focus-visible"]
+			}
 		},
 		{
 			cellContent: "Focused unselected row, no rounded corners",
@@ -394,11 +411,13 @@ TableStates.args = {
 		{
 			cellContent: ["Table row with a focused cell", "Focused cell", "Unfocused cell"],
 			cellCustomClasses: {
-				1: ["is-focused"]
+				1: ["is-focus-visible"]
 			}
 		},
 		{
-			cellContent: "Table row echo",
+			cellContent: "Hovered row",
+			isHovered: true,
+
 		},
 		{
 			cellContent: "Focused selected row, with rounded corners",
@@ -413,7 +432,7 @@ TableStates.parameters = {
 };
 
 /**
- * Quiet tables are for when a table is meant to be supplementary, subtle, or lightweight. The quiet table utilizes the `.spectrum-Table--quiet` class and has a transparent background and no borders on the left and right.
+ * Quiet tables are for when a table is meant to be supplementary, subtle, or lightweight. The quiet table utilizes the `.spectrum-Table--quiet` class and does not have borders on the left and right.
  */
 export const Quiet = Template.bind({});
 Quiet.args = {
@@ -463,6 +482,39 @@ WithMenuButton.parameters = {
 WithMenuButton.tags = ["!dev"];
 
 /**
+ * In some use cases, a sparkline chart can be displayed in a cell of the table. There are informative, negative, positive, and notice sparkline charts available for implementations.
+ */
+export const WithChartContent = Template.bind({});
+WithChartContent.args = {
+	hasChartContent: true,
+	rowItems: [
+		{ cellContent: ["Informative sparkline", "200", "sparkline-informative.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+		{ cellContent: ["Negative sparkline", "0", "sparkline-negative.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+		{ cellContent: ["Positive sparkline", "600", "sparkline-positive.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},{ cellContent: ["Notice sparkline", "400", "sparkline-notice.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+	]
+};
+WithChartContent.storyName = "With chart content";
+WithChartContent.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
  * A quiet multi-select table has emphasized styling by default, but excluding the `.spectrum-Table--emphasized` class will change the style of selected rows.
  */
 export const QuietMultiSelect = Template.bind({});
@@ -494,7 +546,7 @@ WithColumnDividers.parameters = {
 };
 
 /**
- * Tables can have a summary row to show totals, at either the top or the bottom of the table. This example shows both the optional summary row at the bottom, and a row marked as selected.
+ * Tables can have a summary row to show totals, at either the top or the bottom of the table. This example shows both the optional summary row at the top, and a row marked as selected.
  */
 export const SummaryAndSelected = Template.bind({});
 SummaryAndSelected.args = {
