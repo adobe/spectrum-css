@@ -55,6 +55,8 @@
 
 	--spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-800);
 
+	--spectrum-table-selected-row-background-color-rgb: var(--spectrum-blue-900-rgb);
+
 	--spectrum-treeview-item-background-color-quiet-selected: rgb(var(--spectrum-gray-900-rgb), 0.06);
 	--spectrum-treeview-item-background-color-selected: rgb(var(--spectrum-blue-900-rgb), 0.1);
 }
