@@ -13,7 +13,7 @@
 
 /* This file contains overrides and additions to core tokens */
 
-.spectrum--medium {
+.spectrum {
 	/* stylelint-disable-next-line custom-property-pattern -- context identification */
 	--scale: medium;
 
