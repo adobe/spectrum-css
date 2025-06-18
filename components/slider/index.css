@@ -12,13 +12,15 @@
  */
 
 .spectrum-Slider {
-	--spectrum-slider-font-size: var(--spectrum-font-size-75);
+	--spectrum-slider-font-size: var(--spectrum-font-size-100);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-medium);
 	--spectrum-slider-control-height: var(--spectrum-component-height-100);
 	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
 	--spectrum-slider-value-side-padding-inline: var(--spectrum-slider-control-to-side-field-label-medium);
 	--spectrum-slider-inline-size: var(--spectrum-field-default-width-medium);
+	--spectrum-slider-label-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-slider-label-font-style: var(--spectrum-default-font-style);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
@@ -46,12 +48,13 @@
 	--spectrum-slider-label-text-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-slider-tick-label-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-slider-label-text-color-disabled: var(--spectrum-disabled-content-color);
-	--spectrum-slider-tick-mark-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-slider-handle-background-color: var(--spectrum-gray-25);
 	--spectrum-slider-handle-background-color-disabled: var(--spectrum-slider-handle-background-color);
 	--spectrum-slider-ticks-handle-background-color: var(--spectrum-gray-75);
 	--spectrum-slider-handle-border-color: var(--spectrum-gray-700);
 	--spectrum-slider-tick-mark-color: var(--spectrum-gray-400);
+	--spectrum-slider-tick-mark-color-filled-track: var(--spectrum-gray-800);
+	--spectrum-slider-emphasized-tick-mark-color: var(--spectrum-accent-color-1000);
 	--spectrum-slider-emphasized-track-fill-color: var(--spectrum-accent-content-color-default);
 
 	--spectrum-slider-handle-border-color-hover: var(--spectrum-gray-800);
@@ -97,7 +100,7 @@
 }
 
 .spectrum-Slider--sizeL {
-	--spectrum-slider-font-size: var(--spectrum-font-size-100);
+	--spectrum-slider-font-size: var(--spectrum-font-size-200);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-large);
 	--spectrum-slider-control-height: var(--spectrum-component-height-200);
 	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
@@ -115,7 +118,7 @@
 }
 
 .spectrum-Slider--sizeXL {
-	--spectrum-slider-font-size: var(--spectrum-font-size-200);
+	--spectrum-slider-font-size: var(--spectrum-font-size-300);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-extra-large);
 	--spectrum-slider-control-height: var(--spectrum-component-height-300);
 
@@ -469,6 +472,8 @@
 
 	font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
 	line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
+	font-weight: var(--mod-slider-label-font-weight, var(--spectrum-slider-label-font-weight));
+	font-style: var(--mod-slider-label-font-style, var(--spectrum-slider-label-font-style));
 
 	margin-block-start: var(--mod-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
 
@@ -666,7 +671,7 @@
 	}
 
 	.spectrum-Slider-ramp-track-fill {
-		fill: var(--spectrum-slider-track-fill-color);
+		fill: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-ramp-track-fill-color, var(--spectrum-slider-track-fill-color)));
 	}
 }
 
@@ -698,12 +703,6 @@
 	background: transparent;
 }
 
-.spectrum-Slider-tick {
-	&::after {
-		background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
-	}
-}
-
 .spectrum-Slider-handle {
 	&.is-dragged {
 		border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
@@ -720,8 +719,35 @@
 		}
 
 		&:first-of-type::before {
-			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-color)));
+			background: var(--highcontrast-slider-track-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-color)));
 		}
+	}
+
+	/* .spectrum-Slider-tick:nth-child(n+3):nth-child(-n+5) {
+		&::after {
+			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
+		}
+	} */
+}
+
+.spectrum-Slider--emphasized {
+	.spectrum-Slider-tick:nth-child(-n + 4) {
+		&::after {
+			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-emphasized-tick-mark-color, var(--spectrum-slider-emphasized-tick-mark-color)));
+		}
+	}
+}
+
+.spectrum-Slider-tick:nth-child(-n + 4) {
+	&::after {
+		background-color: var(--highcontrast-slider-tick-mark-color-filled-track, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
+	}
+}
+
+.spectrum-Slider-tick,
+.spectrum-Slider.is-disabled .spectrum-Slider-tick {
+	&::after {
+		background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
 	}
 }
 
@@ -779,7 +805,7 @@
 
 	.spectrum-Slider-tick {
 		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled)));
+			background-color: var(--highcontrast-slider-tick-mark-color-disabled);
 		}
 	}
 
@@ -802,6 +828,7 @@
 		--highcontrast-slider-ramp-track-color-disabled: GrayText;
 		--highcontrast-slider-tick-mark-color: ButtonText;
 		--highcontrast-slider-tick-mark-color-disabled: GrayText;
+		--highcontrast-slider-tick-mark-color-filled-track: Highlight;
 
 		--highcontrast-slider-handle-border-color: ButtonText;
 		--highcontrast-slider-handle-border-color-hover: Highlight;
@@ -811,7 +838,7 @@
 		--highcontrast-slider-handle-focus-ring-color-key-focus: CanvasText;
 		--highcontrast-slider-handle-background-color: ButtonFace;
 		--highcontrast-slider-handle-background-color-disabled: GrayText;
-		--highcontrast-slider-handle-disabled-background-color: GrayText;
+		--highcontrast-slider-handle-disabled-background-color: Canvas;
 
 		--highcontrast-slider-ramp-handle-border-color-active: ButtonFace;
 		--highcontrast-slider-ramp-handle-background-color: ButtonFace;
@@ -837,8 +864,6 @@
 			.spectrum-Slider-controls.is-focused {
 				--highcontrast-slider-track-color: Highlight;
 				--highcontrast-slider-handle-border-color: Highlight;
-				--highcontrast-slider-ramp-track-color: Highlight;
-				--highcontrast-slider-tick-mark-color: Highlight;
 			}
 		}
 

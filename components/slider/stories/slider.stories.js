@@ -211,6 +211,7 @@ Default.args = {
 export const WithoutLabel = Template.bind({});
 WithoutLabel.args = {
 	label: "",
+	variant: "filled",
 };
 WithoutLabel.tags = ["!dev"];
 WithoutLabel.storyName = "Without label";
