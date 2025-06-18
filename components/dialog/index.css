@@ -63,6 +63,14 @@
 	--spectrum-takeover-dialog-block-size: var(--spectrum-takeover-dialog-height);
 }
 
+.spectrum-Dialog--sizeS {
+	--spectrum-standard-dialog-max-width: var(--mod-standard-dialog-max-width-small, var(--spectrum-standard-dialog-maximum-width-small));
+}
+
+.spectrum-Dialog--sizeL {
+	--spectrum-standard-dialog-max-width: var(--mod-standard-dialog-max-width-large, var(--spectrum-standard-dialog-maximum-width-large));
+}
+
 .spectrum-Dialog {
 	/* Be a flexbox to allow a full sized content area that scrolls */
 	display: flex;
@@ -79,16 +87,6 @@
 	outline: none;
 	border-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius));
 	overflow: hidden;
-}
-
-.spectrum-Dialog--sizeS {
-	--spectrum-standard-dialog-max-width: var(--spectrum-standard-dialog-maximum-width-small);
-	inline-size: var(--mod-standard-dialog-max-width-small, var(--spectrum-standard-dialog-max-width));
-}
-
-.spectrum-Dialog--sizeL {
-	--spectrum-standard-dialog-max-width: var(--spectrum-standard-dialog-maximum-width-large);
-	inline-size: var(--mod-standard-dialog-max-width-large, var(--spectrum-standard-dialog-max-width));
 }
 
 .spectrum-Dialog-hero {
@@ -436,6 +434,6 @@
 
 @media (forced-colors: active) {
 	.spectrum-Dialog {
-		border: 1px solid rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
+		border: 1px solid rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
 	}
 }
