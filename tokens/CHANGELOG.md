@@ -1,5 +1,21 @@
 # Change log
 
+## 16.1.0-next.5
+
+### Patch Changes
+
+- [#3969](https://github.com/adobe/spectrum-css/pull/3969) [`d952e0c`](https://github.com/adobe/spectrum-css/commit/d952e0c4d234f5e742432fe906965a52a50b228e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated from [@adobe/spectrum-tokens](https://github.com/adobe/spectrum-tokens) v13.10.0 -> [13.10.1](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.10.1).
+
+  - [#517](https://github.com/adobe/spectrum-tokens/pull/517) [`8f8f8a6`](https://github.com/adobe/spectrum-tokens/commit/8f8f8a60b7adf5105ced4f914cf30928117ddc5e) Thanks [@larz0](https://github.com/larz0)!
+
+  #### Updated tokens
+
+  - `accordion-focus-indicator-gap`
+    - value: `0px` -> `2px`
+  - `accordion-top-to-text-medium`
+    - desktop.value: `12px` -> `9px`
+    - mobile.value: `16px` -> `10px`
+
 ## 16.1.0-next.4
 
 ### Patch Changes
