@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.0.0-next.3
+
+### Patch Changes
+
+- Updated dependencies [[`f0c6273`](https://github.com/adobe/spectrum-css/commit/f0c6273310a8a7d8f392d6113919a3982ab07b2e), [`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e), [`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e)]:
+  - @spectrum-css/accordion@8.0.0-next.2
+  - @spectrum-css/tokens@16.1.0-next.4
+  - @spectrum-css/table@9.0.0-next.3
+
 ## 2.0.0-next.2
 
 ### Patch Changes

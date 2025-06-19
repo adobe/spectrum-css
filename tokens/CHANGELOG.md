@@ -1,5 +1,11 @@
 # Change log
 
+## 16.1.0-next.4
+
+### Patch Changes
+
+- [#3818](https://github.com/adobe/spectrum-css/pull/3818) [`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds `--spectrum-table-selected-row-background-color-rgb` to `light-vars.css` and `dark-vars.css` for custom tokens.
+
 ## 16.1.0-next.3
 
 ### Minor Changes
