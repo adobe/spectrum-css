@@ -52,6 +52,13 @@
 - Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
   - @spectrum-css/tokens@16.1.0-next.0
 
+## 12.0.5
+
+### Patch Changes
+
+- Updated dependencies [[`4e3a120`](https://github.com/adobe/spectrum-css/commit/4e3a120339a6e7e6d0d19e3f2f7f608ab96621ed)]:
+  - @spectrum-css/tokens@16.0.2
+
 ## 12.0.4
 
 ### Patch Changes
