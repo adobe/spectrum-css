@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/preview",
-	"version": "12.0.5-next.5",
+	"version": "12.0.5-next.7",
 	"description": "A Spectrum CSS preview",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -40,13 +40,13 @@
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^4.1.0",
-		"@spectrum-css/bundle": "2.0.0-next.2",
-		"@spectrum-css/tokens": "16.1.0-next.3",
+		"@spectrum-css/bundle": "2.0.0-next.4",
+		"@spectrum-css/tokens": "16.1.0-next.5",
 		"@spectrum-css/ui-icons": "2.0.0-next.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.27.4",
-		"@chromatic-com/storybook": "^3.2.6",
+		"@chromatic-com/storybook": "^3.2.7",
 		"@etchteam/storybook-addon-status": "^5.0.0",
 		"@storybook/addon-a11y": "8.4.7",
 		"@storybook/addon-actions": "8.4.7",
@@ -64,7 +64,7 @@
 		"@storybook/theming": "8.4.7",
 		"@storybook/web-components-vite": "8.4.7",
 		"@whitespace/storybook-addon-html": "^7.0.0",
-		"chromatic": "^12.2.0",
+		"chromatic": "^13.0.1",
 		"lit": "^3.3.0",
 		"lodash-es": "^4.17.21",
 		"npm-registry-fetch": "^18.0.2",

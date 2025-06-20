@@ -1,5 +1,21 @@
 # Change Log
 
+## 12.0.5-next.7
+
+### Patch Changes
+
+- Updated dependencies [[`d952e0c`](https://github.com/adobe/spectrum-css/commit/d952e0c4d234f5e742432fe906965a52a50b228e)]:
+  - @spectrum-css/tokens@16.1.0-next.5
+  - @spectrum-css/bundle@2.0.0-next.4
+
+## 12.0.5-next.6
+
+### Patch Changes
+
+- Updated dependencies [[`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e)]:
+  - @spectrum-css/tokens@16.1.0-next.4
+  - @spectrum-css/bundle@2.0.0-next.3
+
 ## 12.0.5-next.5
 
 ### Patch Changes
@@ -43,6 +59,13 @@
 
 - Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
   - @spectrum-css/tokens@16.1.0-next.0
+
+## 12.0.5
+
+### Patch Changes
+
+- Updated dependencies [[`4e3a120`](https://github.com/adobe/spectrum-css/commit/4e3a120339a6e7e6d0d19e3f2f7f608ab96621ed)]:
+  - @spectrum-css/tokens@16.0.2
 
 ## 12.0.4
 

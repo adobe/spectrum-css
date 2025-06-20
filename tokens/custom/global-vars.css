@@ -55,7 +55,7 @@
 	--spectrum-font-size: var(--spectrum-font-size-100);
 
 	--spectrum-cjk-font-family-stack: adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif;
-	--spectrum-cjk-font: var(--spectrum-code-font-family-stack);
+	--spectrum-cjk-font: var(--spectrum-cjk-font-family-stack);
 
 	/* Gradient that changes with the color theme. */
 	--spectrum-examples-gradient: linear-gradient(45deg, var(--spectrum-magenta-1500), var(--spectrum-blue-1500));
