@@ -134,6 +134,7 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--ramp`]: variant === "ramp",
+				[`${rootClass}--offset`]: variant === "offset",
 				[`${rootClass}--range`]: values.length > 1,
 				[`${rootClass}--filled`]: variant === "filled",
 				[`${rootClass}--tick`]: showTicks,

@@ -301,6 +301,49 @@ export const testData = [
 		values: [10, 20]
 	},
 	{
+		testHeading: "Emphasized Range Precise",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		isPrecise: true
+	},
+	{
+		testHeading: "Emphasized Range Large Track",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		trackHeight: "large"
+	},
+	{
+		testHeading: "Emphasized Range Precise Large Track",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		isPrecise: true,
+		trackHeight: "large"
+	},
+	{
+		testHeading: "Emphasized Range Side Label",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		labelPosition: "side"
+	},
+	{
+		testHeading: "Emphasized Range Editable",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		isEditable: true
+	},
+	{
+		testHeading: "Emphasized Range No Label",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		label: ""
+	},
+	{
 		testHeading: "Emphasized Offset",
 		variant: "offset",
 		isEmphasized: true,

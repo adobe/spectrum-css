@@ -710,6 +710,33 @@
 	}
 }
 
+.spectrum-Slider--emphasized {
+	.spectrum-Slider-tick:nth-child(-n + 4) {
+		&::after {
+			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-emphasized-tick-mark-color, var(--spectrum-slider-emphasized-tick-mark-color)));
+		}
+	}
+}
+
+.spectrum-Slider--filled,
+.spectrum-Slider--offset {
+	&:not(.spectrum-Slider--range, .is-disabled, .spectrum-Slider--emphasized) .spectrum-Slider-tick:nth-child(-n + 4) {
+		&::after {
+			background-color: var(--highcontrast-slider-tick-mark-color-filled-track, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
+		}
+	}
+}
+
+.spectrum-Slider--range {
+	.spectrum-Slider-tick:nth-child(3),
+	.spectrum-Slider-tick:nth-child(4),
+	.spectrum-Slider-tick:nth-child(5) {
+		&::after {
+			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
+		}
+	}
+}
+
 .spectrum-Slider--range {
 	.spectrum-Slider-track {
 		&:not(:first-of-type, :last-of-type)::before {
@@ -721,26 +748,6 @@
 		&:first-of-type::before {
 			background: var(--highcontrast-slider-track-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-color)));
 		}
-	}
-
-	/* .spectrum-Slider-tick:nth-child(n+3):nth-child(-n+5) {
-		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
-		}
-	} */
-}
-
-.spectrum-Slider--emphasized {
-	.spectrum-Slider-tick:nth-child(-n + 4) {
-		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-emphasized-tick-mark-color, var(--spectrum-slider-emphasized-tick-mark-color)));
-		}
-	}
-}
-
-.spectrum-Slider-tick:nth-child(-n + 4) {
-	&::after {
-		background-color: var(--highcontrast-slider-tick-mark-color-filled-track, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
 	}
 }
 
@@ -805,7 +812,7 @@
 
 	.spectrum-Slider-tick {
 		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-disabled);
+			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
 		}
 	}
 
@@ -839,10 +846,6 @@
 		--highcontrast-slider-handle-background-color: ButtonFace;
 		--highcontrast-slider-handle-background-color-disabled: GrayText;
 		--highcontrast-slider-handle-disabled-background-color: Canvas;
-
-		--highcontrast-slider-ramp-handle-border-color-active: ButtonFace;
-		--highcontrast-slider-ramp-handle-background-color: ButtonFace;
-
 		--highcontrast-slider-label-text-color: CanvasText;
 		--highcontrast-slider-label-text-color-disabled: GrayText;
 
