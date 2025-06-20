@@ -32,7 +32,7 @@ jobs:
   build_and_deploy_job:
     if: github.event_name == 'pull_request' && github.event.action != 'closed'
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
+    name: Publish
     steps:
       ## --- SETUP --- ##
       - name: Check out code
