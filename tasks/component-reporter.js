@@ -69,6 +69,9 @@ async function extractModifiers(
 	const selectors = new Set();
 	const root = postcss.parse(content);
 	root.walkRules((rule) => {
+		// Check that the selector is not inside a keyframe
+		if (rule.parent.type === "atrule" && rule.parent.name === "keyframes") return;
+
 		if (rule.selectors) {
 			rule.selectors.forEach((selector) => {
 				// If the selector is not a base selector, add it to the set
@@ -173,10 +176,6 @@ async function main({
 
 	const processed = await processCSS(undefined, sourceCSS, undefined, {
 		cwd,
-		skipMapping: false,
-		referencesOnly: false,
-		preserveVariables: true,
-		stripLocalSelectors: false,
 		map: false,
 		env: "production",
 	});
@@ -187,11 +186,10 @@ async function main({
 			cwd,
 			sourcePath: sourceCSS,
 			componentName,
-			baseSelectors: [".spectrum", ".spectrum--express", ".spectrum--legacy"],
+			baseSelectors: [".spectrum"],
 			dataModel: {
 				modifiers: ["mod"],
 				spectrum: ["spectrum"],
-				"system-theme": ["system"],
 				"high-contrast": ["highcontrast"],
 			},
 		}
@@ -206,7 +204,6 @@ async function main({
 					modifiers: meta.modifiers,
 					component: meta.component,
 					global: meta.global,
-					"system-theme": meta["system-theme"],
 					passthroughs: meta.passthroughs,
 					"high-contrast": meta["high-contrast"],
 				}, null, 2),

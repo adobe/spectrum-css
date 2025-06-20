@@ -25,6 +25,11 @@ export const PickerGroup = Variants({
 			labelPosition: "side",
 		},
 		{
+			testHeading: "Side label, quiet",
+			labelPosition: "side",
+			isQuiet: true,
+		},
+		{
 			testHeading: "Side label, alignment with switch",
 			labelPosition: "side",
 			withSwitch: true,
@@ -32,6 +37,7 @@ export const PickerGroup = Variants({
 		{
 			testHeading: "With thumbnail icon",
 			showWorkflowIcon: true,
+			contentIconName: "Image",
 		},
 	],
 	stateData: [

@@ -6,17 +6,16 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ClearButton",
 	isDisabled = false,
 	size = "m",
 	isQuiet = false,
+	isFocusable = true,
 	staticColor,
 	id = getRandomId("clearbutton"),
+	onclick = () => {},
 	customClasses = [],
 	customStyles = {},
 }, context) => html`
@@ -38,6 +37,9 @@ export const Template = ({
 		id=${ifDefined(id)}
 		style=${styleMap(customStyles)}
 		?disabled=${isDisabled}
+		tabindex=${isFocusable ? 0 : -1}
+		aria-hidden=${isFocusable}
+		@click=${onclick}
 	>
 		<div class="${rootClass}-fill">
 			${Icon({

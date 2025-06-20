@@ -3,9 +3,11 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
+
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -13,33 +15,224 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 /**
- * Get the tray submenu back arrow name with scale number (defined in design spec).
+ * Get icon name with scale number (defined in design spec).
  */
 const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
 	switch (size) {
 		case "s":
-			return `${iconName}200`;
+			return `${iconName}75`;
 		case "l":
-			return `${iconName}400`;
+			return `${iconName}200`;
 		case "xl":
-			return `${iconName}500`;
-		default:
 			return `${iconName}300`;
+		default:
+			return `${iconName}100`;
 	}
 };
+
+const Label = ({
+	hasActions = false,
+	isCollapsible = false,
+	label,
+	rootClass,
+	shouldTruncate = false,
+}) => {
+	if (isCollapsible) {
+		return html`<span
+					class=${classMap({
+						["spectrum-Menu-sectionHeading"]: true,
+						[`${rootClass}Label--truncate`]: shouldTruncate,
+					})}
+				>
+					${label}
+				</span>`;
+	}
+	else {
+		return html`<span
+				class=${classMap({
+					[`${rootClass}Label`]: true,
+					["spectrum-Switch-label"]: hasActions,
+					["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+				})}>
+				${label}
+				</span>`;
+	}
+};
+
+const Visual = ({
+	iconName,
+	iconSet,
+	rootClass,
+	size,
+	thumbnailUrl
+}) => {
+	if (thumbnailUrl) {
+		return html`
+    ${Thumbnail({
+        imageURL: thumbnailUrl,
+        altText: "Thumbnail alt text",
+        size,
+        customClasses: [`${rootClass}Thumbnail`],
+    })}
+    `;
+	}
+	else if (iconName) {
+		return html`
+    ${Icon({
+        iconName,
+		setName: iconSet,
+        size,
+        customClasses: [
+            `${rootClass}Icon`,
+            `${rootClass}Icon--workflowIcon`
+        ]
+        })}
+    `;
+	}
+	return;
+};
+
+const StartAction = ({
+	hasActions,
+	idx,
+	isCollapsible,
+	isDisabled,
+	isSelected,
+	rootClass,
+	selectionMode,
+	size,
+	context
+}) => {
+	if (isCollapsible || (selectionMode == "single" && isSelected)) {
+		return html`
+			${Icon(
+				{
+					iconName: iconWithScale(
+						size,
+						isCollapsible ? "ChevronRight" : "Checkmark",
+					),
+					setName: "ui",
+					useRef: false,
+					size,
+					customClasses: [
+						`${rootClass}Icon`,
+						isCollapsible ? "spectrum-Menu-chevron" : "spectrum-Menu-checkmark",
+					],
+				},
+				context,
+			)}
+			`;
+	}
+	else if (selectionMode == "multiple" && !hasActions) {
+		return html`
+			${Checkbox({
+				size,
+				isChecked: isSelected,
+				isDisabled,
+				id: `menu-checkbox-${idx}`,
+				customClasses: [`${rootClass}Checkbox`],
+			},
+			context)}`;
+	}
+	return null;
+};
+
+const EndAction = ({
+	hasExternalLink,
+	hasActions,
+	idx,
+	isDisabled,
+	isDrillIn,
+	isSelected,
+	rootClass,
+	selectionMode,
+	size,
+	value,
+	context
+}) => html`
+	${when(value, () => html`
+		<span
+			class=${classMap({
+				[`${rootClass}Value`]: true,
+			})}
+		>
+			${value}
+		</span>
+	`)}
+
+	${when(
+		hasActions && selectionMode == "multiple",
+		() => html`
+			<div
+				class=${classMap({
+							[`${rootClass}Actions`]: true,
+						})}>
+				${Switch({
+					size,
+					isChecked: isSelected,
+					isDisabled,
+					label: null,
+					id: `menu-switch-${idx}`,
+					customClasses: [`${rootClass}Switch`],
+				},
+				context)}
+			</div>`
+	)}
+
+	${when(
+		hasExternalLink && !(hasActions && selectionMode === "multiple"),
+		() => html`<div class="${rootClass}Actions">
+			${Icon({
+			// TODO: Update name once available in "UI" icon set #1194
+			iconName: "ExportTo",
+			size,
+			customClasses: [
+				`${rootClass}Icon`,
+				"spectrum-Menu-linkout",
+			],
+			},
+			context)}
+		</div>`
+	)}
+
+	${when(isDrillIn, () =>
+		Icon(
+			{
+				iconName: iconWithScale(size, "ChevronRight"),
+				setName: "ui",
+				useRef: false,
+				size,
+				customClasses: [`${rootClass}Icon`, "spectrum-Menu-chevron"],
+			},
+			context,
+		),
+	)}
+`;
+
+const Description = ({
+	description,
+	rootClass
+}) => html`
+		<span
+			class=${classMap({
+				[`${rootClass}Description`]: true,
+			})}
+		>
+			${description}
+		</span>
+`;
 
 export const MenuItem = (
 	{
 		rootClass = "spectrum-Menu-item",
 		label,
 		description,
+		thumbnailUrl = "",
 		iconName,
 		iconSet = "workflow",
+		hasExternalLink = false,
 		hasActions = false,
 		id = getRandomId("menuitem"),
 		idx = 0,
@@ -84,130 +277,11 @@ export const MenuItem = (
 		aria-disabled=${isDisabled ? "true" : "false"}
 		tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
 	>
-		${when(isCollapsible || (selectionMode == "single" && isSelected), () =>
-			Icon(
-				{
-					iconName: iconWithScale(
-						size,
-						isCollapsible ? "ChevronRight" : "Checkmark",
-					),
-					setName: "ui",
-					useRef: false,
-					size,
-					customClasses: [
-						`${rootClass}Icon`,
-						isCollapsible ? "spectrum-Menu-chevron" : "spectrum-Menu-checkmark",
-					],
-				},
-				context,
-			),
-		)}
-		${when(selectionMode === "multiple" && !hasActions, () =>
-			Checkbox(
-				{
-					size,
-					isEmphasized: true,
-					isChecked: isSelected,
-					isDisabled,
-					id: `menu-checkbox-${idx}`,
-					customClasses: [`${rootClass}Checkbox`],
-				},
-				context,
-			),
-		)}
-		${when(iconName, () =>
-			Icon(
-				{
-					iconName,
-					setName: iconSet,
-					size,
-					customClasses: [`${rootClass}Icon`, `${rootClass}Icon--workflowIcon`],
-				},
-				context,
-			),
-		)}
-		${when(
-			isCollapsible,
-			() => html`
-				<span
-					class=${classMap({
-						["spectrum-Menu-sectionHeading"]: true,
-						[`${rootClass}Label--truncate`]: shouldTruncate,
-					})}
-				>
-					${label}
-				</span>
-			`,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Label`]: true,
-						["spectrum-Switch-label"]: hasActions,
-						[`${rootClass}Label--truncate`]: shouldTruncate,
-					})}
-				>
-					${label}
-				</span>
-			`,
-		)}
-		${when(
-			description,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Description`]: true,
-					})}
-				>
-					${description}
-				</span>
-			`,
-		)}
-		${when(
-			value,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Value`]: true,
-					})}
-				>
-					${value}
-				</span>
-			`,
-		)}
-		${when(
-			hasActions && selectionMode == "multiple",
-			() => html`
-				<div
-					class=${classMap({
-						[`${rootClass}Actions`]: true,
-					})}
-				>
-					${Switch(
-						{
-							size,
-							isChecked: isSelected,
-							isDisabled,
-							label: null,
-							id: `menu-switch-${idx}`,
-							customClasses: [`${rootClass}Switch`],
-						},
-						context,
-					)}
-				</div>
-			`,
-		)}
-		${when(isDrillIn, () =>
-			Icon(
-				{
-					iconName: iconWithScale(size, "ChevronRight"),
-					setName: "ui",
-					useRef: false,
-					size,
-					customClasses: [`${rootClass}Icon`, "spectrum-Menu-chevron"],
-				},
-				context,
-			),
-		)}
+		${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, rootClass, selectionMode, size, context })}
+		${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl })}
+		${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
+		${when(description, () => Description({ description, rootClass }))}
+		${EndAction({ hasExternalLink, hasActions, idx, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}
 		${when(isCollapsible && items.length > 0, () =>
 			Template(
 				{
@@ -233,6 +307,7 @@ export const MenuGroup = (
 		isSelectable = false,
 		isTraySubmenu = false,
 		shouldTruncate = false,
+		sectionDescription,
 		subrole = "menuitem",
 		size = "m",
 		selectionMode = "none",
@@ -253,6 +328,14 @@ export const MenuGroup = (
 					aria-hidden="true"
 				>
 					${heading}
+					<span
+						class=${classMap({
+						["spectrum-Menu-sectionDescription"]: true,
+						["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+					})}
+						aria-hidden="true">
+							${sectionDescription}
+					</span>
 				</span>
 			`,
 			() => html`
@@ -269,7 +352,12 @@ export const MenuGroup = (
 					>
 						${Icon(
 							{
-								iconName: iconWithScale(size),
+								iconName: "ArrowRight" + ({
+									s: "100",
+									m: "100",
+									l: "400",
+									xl: "400",
+								}[size] || "100"),
 								setName: "ui",
 								size,
 								customClasses: ["spectrum-Menu-backIcon"],
@@ -290,6 +378,14 @@ export const MenuGroup = (
 								aria-hidden="true"
 							>
 								${heading}
+								<span
+									class=${classMap({
+									["spectrum-Menu-sectionDescription"]: true,
+									["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+								})}
+									aria-hidden="true">
+										${sectionDescription}
+								</span>
 							</span>
 						`,
 					)}
@@ -306,7 +402,7 @@ export const MenuGroup = (
 				isDisabled,
 				isSelectable,
 				selectionMode,
-				shouldTruncate: true,
+				shouldTruncate,
 				size,
 			},
 			context,
@@ -322,6 +418,7 @@ export const Template = (
 		id = getRandomId("menu"),
 		hasActions = false,
 		hasDividers = false,
+		hasThumbnail = false,
 		isDisabled = false,
 		isOpen = false,
 		isTraySubmenu = false,
@@ -330,7 +427,7 @@ export const Template = (
 		role = "menu",
 		selectionMode = "none",
 		singleItemValue,
-		shouldTruncate,
+		shouldTruncate = false,
 		size = "m",
 		subrole = "menuitem",
 	} = {},
@@ -351,7 +448,10 @@ export const Template = (
 			role=${ifDefined(role)}
 			aria-labelledby=${ifDefined(labelledby)}
 			aria-disabled=${isDisabled ? "true" : "false"}
-			style=${styleMap(customStyles)}
+			style=${styleMap({
+				...customStyles,
+				...(shouldTruncate ? { "max-inline-size": "100%" } : {})
+			})}
 		>
 			${items.map((i, idx) => {
 				if (i.type === "divider")
@@ -386,6 +486,7 @@ export const Template = (
 							selectionMode,
 							shouldTruncate,
 							size,
+							thumbnailUrl: (hasThumbnail && "thumbnail.png") || i.thumbnailUrl,
 							value: singleItemValue || i.value,
 						},
 						context,
@@ -448,7 +549,7 @@ export const DisabledItemGroup = (args, context) => {
 				{
 					label: "Quick export",
 					description: "Share a snapshot",
-					iconName: "Export",
+					iconName: "ExportTo",
 				},
 				{
 					label: "Open a copy",
@@ -476,7 +577,7 @@ export const DisabledItemGroup = (args, context) => {
 						context,
 						shouldTruncate: group.shouldTruncate || false,
 						items: group.items,
-					})}
+					}, context)}
 				`
 			}, context)}
 		`)
@@ -556,7 +657,7 @@ export const OverflowGroup = (args, context) => {
 			items: [
 				{
 					label: "Quick export truncated text",
-					iconName: "Export",
+					iconName: "ExportTo",
 					description: "Share a low-res snapshot",
 				},
 				{
@@ -567,7 +668,7 @@ export const OverflowGroup = (args, context) => {
 				},
 				{
 					label: "Preview timelapse truncated text",
-					iconName: "Pending",
+					iconName: "Preview",
 					value: "Value",
 				}
 			]
@@ -585,11 +686,14 @@ export const OverflowGroup = (args, context) => {
 						context,
 						shouldTruncate: group.shouldTruncate || false,
 						items: group.items,
-					})}
-				`
-			})}
+					}, context)}
+				`,
+				wrapperStyles: {
+					"max-inline-size": "200px",
+				},
+			}, context)}
 		`)
-	});
+	}, context);
 };
 
 export const SelectionGroup = (args, context) => {
@@ -619,6 +723,25 @@ export const SelectionGroup = (args, context) => {
 			],
 		},
 		{
+			heading: "Single selection with thumbnails",
+			selectionMode: "single",
+			items: [
+				{
+					label: "Preview 1",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
+					label: "Preview 2",
+					thumbnailUrl: "flowers.png"
+				},
+				{
+					label: "Preview 3",
+					thumbnailUrl: "example-ava.png"
+				}
+			],
+		},
+		{
 			heading: "Multiple selection with checkboxes",
 			selectionMode: "multiple",
 			items: [
@@ -640,16 +763,35 @@ export const SelectionGroup = (args, context) => {
 			items: [
 				{
 					label: "Marquee",
-					iconName: "Selection",
+					iconName: "SelectRectangle",
 					isSelected: true,
 				},
 				{
 					label: "Add",
-					iconName: "SelectAdd",
+					iconName: "SelectMulti",
 				},
 				{
 					label: "Subtract",
-					iconName: "SelectSubtract",
+					iconName: "SelectNone",
+				}
+			],
+		},
+		{
+			heading: "Multiple selection with thumbnails",
+			selectionMode: "multiple",
+			items: [
+				{
+					label: "Preview 1",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
+					label: "Preview 2",
+					thumbnailUrl: "flowers.png"
+				},
+				{
+					label: "Preview 3",
+					thumbnailUrl: "example-ava.png"
 				}
 			],
 		},
@@ -678,16 +820,36 @@ export const SelectionGroup = (args, context) => {
 			items: [
 				{
 					label: "Marquee",
-					iconName: "Selection",
+					iconName: "SelectRectangle",
 					isSelected: true,
 				},
 				{
 					label: "Add",
-					iconName: "SelectAdd",
+					iconName: "SelectMulti",
 				},
 				{
 					label: "Subtract",
-					iconName: "SelectSubtract",
+					iconName: "SelectNone",
+				}
+			],
+		},
+		{
+			heading: "Multiple selection with switches and thumbnails",
+			selectionMode: "multiple",
+			hasActions: true,
+			items: [
+				{
+					label: "Preview 1",
+					isSelected: true,
+					thumbnailUrl: "thumbnail.png"
+				},
+				{
+					label: "Preview 2",
+					thumbnailUrl: "flowers.png"
+				},
+				{
+					label: "Preview 3",
+					thumbnailUrl: "example-ava.png"
 				}
 			],
 		},
@@ -703,16 +865,16 @@ export const SelectionGroup = (args, context) => {
 				selectionMode: group.selectionMode || "none",
 				hasActions: group.hasActions || false,
 				items: group.items,
-			})
+			}, context)
 		}, context))
 	});
 };
 
-export const SubmenuInPopover = (context) => Popover({
+export const SubmenuInPopover = (args, context) => Popover({
 	isOpen: true,
 	position: "end-top",
 	customStyles: {
-		"inline-size": "200px",
+		"inline-size": "202px",
 	},
 	trigger: (args, context) => ActionButton({
 		label: "Settings",
@@ -720,7 +882,8 @@ export const SubmenuInPopover = (context) => Popover({
 		...args,
 	}, context),
 	content: [
-		(args, context) => Template({
+		Template({
+			...args,
 			items: [
 				{
 					label: "Language",
@@ -735,17 +898,18 @@ export const SubmenuInPopover = (context) => Popover({
 					label: "Show grid",
 				}
 			],
-			...args
 		}, context),
-		(args, context) => Popover({
+		Popover({
 			isOpen: true,
 			position: "end-top",
 			customStyles: {
-				top: "-120px",
+				top: "-110px",
 				"inline-size": "120px",
+				"inset-inline-start": "calc(100% - 10px)"
 			},
 			content: [
-				(args, context) => Template({
+				Template({
+					...args,
 					selectionMode: "single",
 					items: [
 						{
@@ -768,10 +932,8 @@ export const SubmenuInPopover = (context) => Popover({
 							label: "日本語",
 						}
 					],
-					...args,
 				}, context)
 			],
-			...args,
 		}, context)
 	],
 }, context);

@@ -1,20 +1,50 @@
 # Change log
 
+## 7.0.0-next.2
+
+### Minor Changes
+
+- [#3656](https://github.com/adobe/spectrum-css/pull/3656) [`911c390`](https://github.com/adobe/spectrum-css/commit/911c390b9fa0b43187e5ab535874f2ed1ffeb88d) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - #### Including the touch action rule for draggable content
+
+  The slider, color slider, color area, color wheel, color handle all deserve to have their touch-action property managed so that trying to set the value of those interfaces doesn't cause page scrolling in touch context.
+
+  Adding `touch-action: none` to a slider or any draggable component is necessary to prevent the browser's default touch behaviors—such as scrolling, pinch-zooming, or double-tap zooming from interfering with the component's intended interaction.
+
+  These components also include `user-select: none` to prevent selection or highlighting of any text elements.
+
+## 7.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies:
+  - @spectrum-css/stepper@8.0.0-next.0
+
 ## 6.3.0
 
 ### Minor Changes
 
-- [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)! - By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
+📝 [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
 
 ## 6.2.0
 
 ### Minor Changes
 
-- [#3611](https://github.com/adobe/spectrum-css/pull/3611) [`8cb98c6`](https://github.com/adobe/spectrum-css/commit/8cb98c6127a91f902f305faeb800e3c787e97e66) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - # Slider: offset variant track fix
+📝 [#3611](https://github.com/adobe/spectrum-css/pull/3611) [`8cb98c6`](https://github.com/adobe/spectrum-css/commit/8cb98c6127a91f902f305faeb800e3c787e97e66) Thanks [@aramos-adobe](https://github.com/aramos-adobe)!
 
-  The border radius styles were not being applied to the second instance of the `spectrum-Slider-track` when the offset variant is activated. The reason for this bug is because when the `offset` is selected, the template structure changes as `spectrum-Slider-fill` gets added to the slider.
+#### Slider: offset variant track fix
 
-  Adding a sibling combinator `&~.spectrum-Slider-track` to `spectrum-Slider-track` when offset is activated resolved the issue.
+The border radius styles were not being applied to the second instance of the `spectrum-Slider-track` when the offset variant is activated. The reason for this bug is because when the `offset` is selected, the template structure changes as `spectrum-Slider-fill` gets added to the slider.
+
+Adding a sibling combinator `&~.spectrum-Slider-track` to `spectrum-Slider-track` when offset is activated resolved the issue.
 
 ## 6.1.0
 

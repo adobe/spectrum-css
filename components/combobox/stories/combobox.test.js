@@ -4,64 +4,60 @@ import { Template } from "./template.js";
 export const ComboBoxGroup = Variants({
 	Template,
 	sizeDirection: "row",
-	wrapperStyles: {
-		"align-items": "flex-start",
-	},
 	testData: [
 		{
 			testHeading: "Default",
 			isOpen: false,
 		},
 		{
-			testHeading: "Quiet",
-			isQuiet: true,
-			isOpen: false,
-		},
-		{
-			testHeading: "Open",
-			isOpen: true,
-		},
-		{
-			testHeading: "Quiet + open",
-			isQuiet: true,
-			isOpen: true,
-		},
-		{
-			testHeading: "With field label top",
-			showFieldLabel: true,
-			isOpen: false,
-			fieldLabelPosition: "top",
-		},
-		{
-			testHeading: "With field label left",
-			showFieldLabel: true,
-			isOpen: false,
-			fieldLabelPosition: "left",
-		},
-		{
-			testHeading: "Truncation",
-			isOpen: false,
-			value: "United States of America and to the republic",
-		},
-		{
-			testHeading: "Quiet + truncation",
-			isOpen: false,
-			isQuiet: true,
-			value: "United States of America and to the republic",
-		},
-	],
-	stateData: [
-		{
-			testHeading: "Disabled",
-			isDisabled: true,
-		},
-		{
 			testHeading: "Invalid",
 			isInvalid: true,
 		},
 		{
+			testHeading: "Open",
+			isOpen: true,
+			wrapperStyles: {
+				"min-block-size": "250px",
+			},
+		},
+		{
+			testHeading: "Help text with label",
+			showFieldLabel: true,
+			helpText: "Choose a location. Add a new location by typing it in the field, then selecting 'Enter.'",
+		},
+		{
+			testHeading: "With field label on the side",
+			showFieldLabel: true,
+			fieldLabelPosition: "side",
+		},
+		{
+			testHeading: "Help text with label on the side",
+			showFieldLabel: true,
+			helpText: "Choose a location. Add a new location by typing it in the field, then selecting 'Enter.'",
+			fieldLabelPosition: "side",
+		},
+		{
+			testHeading: "Truncation",
+			value: "United States of America and to the republic",
+		},
+		{
+			testHeading: "Autocomplete",
+			autocomplete: true,
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Hovered",
+			isHovered: true,
+		},
+		{
 			testHeading: "Focused",
 			isFocused: true,
+		},
+		{
+			testHeading: "Focused + Hovered",
+			isFocused: true,
+			isHovered: true,
 		},
 		{
 			testHeading: "Keyboard focused",
@@ -74,6 +70,10 @@ export const ComboBoxGroup = Variants({
 		{
 			testHeading: "Read-only",
 			isReadOnly: true
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
 		},
 	],
 });

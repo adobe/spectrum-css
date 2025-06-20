@@ -79,7 +79,7 @@
 		background-color: var(--highcontrast-floating-action-button-background-color-hover, var(--mod-floating-action-button-background-color-hover, var(--spectrum-floating-action-button-background-color-hover)));
 
 		.spectrum-FloatingActionButton-icon {
-			fill: var(--highcontrast-floating-action-button-icon-color-hover, var(--mod-floating-action-button-icon-color-hover, var(--spectrum-floating-action-button-icon-color-hover)));
+			color: var(--highcontrast-floating-action-button-icon-color-hover, var(--mod-floating-action-button-icon-color-hover, var(--spectrum-floating-action-button-icon-color-hover)));
 		}
 	}
 
@@ -87,7 +87,7 @@
 		background-color: var(--highcontrast-floating-action-button-background-color-down, var(--mod-floating-action-button-background-color-down, var(--spectrum-floating-action-button-background-color-down)));
 
 		.spectrum-FloatingActionButton-icon {
-			fill: var(--highcontrast-floating-action-button-icon-color-down, var(--mod-floating-action-button-icon-color-down, var(--spectrum-floating-action-button-icon-color-down)));
+			color: var(--highcontrast-floating-action-button-icon-color-down, var(--mod-floating-action-button-icon-color-down, var(--spectrum-floating-action-button-icon-color-down)));
 		}
 	}
 
@@ -96,7 +96,7 @@
 		outline: 0;
 
 		.spectrum-FloatingActionButton-icon {
-			fill: var(--highcontrast-floating-action-button-icon-color-key-focus, var(--mod-floating-action-button-icon-color-key-focus, var(--spectrum-floating-action-button-icon-color-key-focus)));
+			color: var(--highcontrast-floating-action-button-icon-color-key-focus, var(--mod-floating-action-button-icon-color-key-focus, var(--spectrum-floating-action-button-icon-color-key-focus)));
 		}
 
 		&::after {
@@ -114,5 +114,5 @@
 .spectrum-Icon.spectrum-FloatingActionButton-icon {
 	block-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
 	inline-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
-	fill: var(--highcontrast-floating-action-button-icon-color, var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color)));
+	color: var(--highcontrast-floating-action-button-icon-color, var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color)));
 }

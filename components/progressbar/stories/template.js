@@ -7,16 +7,12 @@ import { styleMap } from "lit/directives/style-map.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",
 	customClasses = [],
 	labelPosition,
 	staticColor,
-	customWidth,
 	isIndeterminate = false,
 	label,
 	value,
@@ -36,12 +32,11 @@ export const Template = ({
 				[`${rootClass}--indeterminate`]: isIndeterminate,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap({
-				"width": `${customWidth}px`,
+			style=${ifDefined(styleMap({
 				...customStyles,
 				"--mod-progressbar-track-color": trackFill,
 				"--mod-progressbar-fill-color": progressBarFill,
-			})}
+			}))}
 			value=${ifDefined(value ? `${value}%` : undefined)}
 			aria-valuenow=${ifDefined(value ? `${value}%` : undefined)}
 			role="progressbar"

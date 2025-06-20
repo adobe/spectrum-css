@@ -1,14 +1,64 @@
 # Change log
 
+## 5.0.0-next.2
+
+### Major Changes
+
+- [#3683](https://github.com/adobe/spectrum-css/pull/3683) [`e309613`](https://github.com/adobe/spectrum-css/commit/e309613c356ba5586b65cdcc26787d161a3b39e1) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - ### Combobox S2 Migration
+
+  #### New Changes
+
+  - Removed quiet styling variant
+  - Updated corner radius to match S2 specifications
+  - Changed outline thickness for better visibility
+  - Replaced picker button with in-field button component
+  - Added help text along with invalid state
+  - Modified the WHCM invalid/error state in help text
+
+  ### New tokens
+
+  `--spectrum-combobox-font-weight`
+  `--spectrum-combobox-line-height-cjk`
+  `--spectrum-combobox-spacing-alert-icon-to-text`
+  `--spectrum-combobox-spacing-to-help-text`
+
+  ### New mods
+
+  `--mod-combobox-line-height-cjk`
+  `--mod-combobox-popover-animation-distance`
+  `--mod-combobox-spacing-alert-icon-to-text`
+  `--mod-combobox-spacing-to-help-text`
+  `--mod-combobox-textfield-background-color`
+
+## 5.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/progresscircle@6.0.0-next.0
+
+## 5.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies:
+  - @spectrum-css/menu@10.0.0-next.0
+  - @spectrum-css/pickerbutton@7.0.0-next.0
+  - @spectrum-css/popover@9.0.0-next.0
+  - @spectrum-css/textfield@9.0.0-next.0
+
 ## 4.1.2
 
 ### Patch Changes
 
-- [#3609](https://github.com/adobe/spectrum-css/pull/3609) [`851be13`](https://github.com/adobe/spectrum-css/commit/851be13295f9d42d548894fee6626009f053de61) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Fast follow fixes for combobox
+📝 [#3609](https://github.com/adobe/spectrum-css/pull/3609) [`851be13`](https://github.com/adobe/spectrum-css/commit/851be13295f9d42d548894fee6626009f053de61) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
-  - corrects container query for the `--system` reference to "legacy" in the combobox/themes/spectrum.css file
-  - corrects the border colors for several combobox states including focus, keyboardFocus, focus+hover, disabled, read-only for all themes
-  - adds `--spectrum-combobox-readonly-input-border-color: var(--spectrum-gray-400);` to express.css theme so that the default border and read-only border colors are the same
+#### Fast follow fixes for combobox
+
+- corrects container query for the `--system` reference to "legacy" in the combobox/themes/spectrum.css file
+- corrects the border colors for several combobox states including focus, keyboardFocus, focus+hover, disabled, read-only for all themes
+- adds `--spectrum-combobox-readonly-input-border-color: var(--spectrum-gray-400);` to express.css theme so that the default border and read-only border colors are the same
 
 ## 4.1.1
 

@@ -1,18 +1,68 @@
 # Change log
 
-## 9.2.0
+## 10.0.0-next.3
 
-### Minor Changes
+### Major Changes
 
-- [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)! - By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
+- [#3686](https://github.com/adobe/spectrum-css/pull/3686) [`cda60f4`](https://github.com/adobe/spectrum-css/commit/cda60f4f68ea1863b605fe992682664379d51278) Thanks [@5t3ph](https://github.com/5t3ph)! - ### Spectrum 2 migration
+
+  Menu now uses Spectrum 2 tokens and specifications.
+
+  Removes custom menu item background color tokens: `@adobe/spectrum-tokens` has been updated to include many tokens relating to the menu component, including some that replace custom tokens that had previously been added. As such, these custom menu item color tokens that are now available from `@adobe/spectrum-tokens` have been removed.
+
+  In addition to other small token and minor style changes, there were several new features that were added to this version of menu, including:
+
+  - A thumbnail can now be used in place of an icon
+  - A section description can now be included below the menu section heading
+  - The actions area previously held action switches for multi-select, and in this version, an external link action icon can be included in that area
+
+  ### New mods
+
+  - `--mod-menu-item-corner-radius`
+  - `--mod-menu-item-linkout-icon-height`
+  - `--mod-menu-item-linkout-icon-width`
+  - `--mod-menu-item-thumbnail-height`
+  - `--mod-menu-item-thumbnail-opacity-disabled`
+  - `--mod-menu-item-thumbnail-to-label`
+  - `--mod-menu-item-thumbnail-width`
+  - `--mod-menu-item-top-to-thumbnail`
+  - `--mod-menu-item-top-to-workflow-icon`
+  - `--mod-menu-section-description-color`
+  - `--mod-menu-section-description-font-size`
+  - `--mod-menu-section-description-font-weight`
+  - `--mod-menu-section-description-line-height`
+  - `--mod-menu-section-description-line-height-cjk`
+  - `--mod-menu-section-header-to-description`
+
+## 10.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+  - @spectrum-css/switch@7.0.0-next.0
+
+## 10.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`c6836fb`](https://github.com/adobe/spectrum-css/commit/c6836fb132effcfb09e4ca6d0d8923564bfe2914)]:
+  - @spectrum-css/divider@6.0.0-next.0
+
+## 10.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+  - @spectrum-css/checkbox@11.0.0-next.0
+  - @spectrum-css/tray@6.0.0-next.0
 
 ## 10.0.0
 
 ### Minor Changes
 
 📝 [`205182b`](https://github.com/adobe/spectrum-css/commit/205182bebcbe82813457aa098d8799b0a23423ee) Thanks [@castastrophe](https://github.com/castastrophe)!
-
-## New feature
 
 Minified and gzipped outputs available for all compiled CSS assets.
 
@@ -31,6 +81,14 @@ Minified and gzipped outputs available for all compiled CSS assets.
   - @spectrum-css/switch@6.1.0
   - @spectrum-css/tray@6.0.0
   - @spectrum-css/tokens@16.0.1
+
+## 9.2.0
+
+### Minor Changes
+
+📝 [#3527](https://github.com/adobe/spectrum-css/pull/3527) [`5f1751c`](https://github.com/adobe/spectrum-css/commit/5f1751c82a5fe55ae0d999f5f50cfeca4c8a5c75) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+By updating the postcss-preset-env to the latest breaking change version, output for this component no longer injects the `.js-focus-within` and '[focus-within]` selectors for the focus-within polyfill. As this feature is not used in the SWC consumption, risk to the end user for this removal is low.
 
 ## 9.1.1
 

@@ -1,5 +1,19 @@
 # Change log
 
+## 7.0.0-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 7.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/actionbutton@8.0.0-next.0
+
 ## 7.0.0
 
 ### Minor Changes
@@ -218,7 +232,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 4.1.10
 
-📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.9...@spectrum-css/actiongroup@4.1.10)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.9...@spectrum-css/actiongroup@4.1.10)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
@@ -334,7 +348,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - refactor(actiongroup)!: replace focus-ring with focus-visible([d792847](https://github.com/adobe/spectrum-css/commit/d792847))
 
-### 🛑 BREAKING CHANGE
+### 🛑 BREAKING CHANGES
 
 - use native focus-visible pseudo class for focus styling
 
@@ -370,7 +384,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 3.0.56
 
-📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.55...@spectrum-css/actiongroup@3.0.56)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.55...@spectrum-css/actiongroup@3.0.56)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
@@ -423,6 +437,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ## 3.0.48
 
 🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.47...@spectrum-css/actiongroup@3.0.48)
+
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 ## 3.0.47
