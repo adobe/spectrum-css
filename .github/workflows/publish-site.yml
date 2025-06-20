@@ -131,7 +131,8 @@ jobs:
           AZURE_STORAGE_SAS_TOKEN: ${{ secrets.AZURE_STORAGE_SAS_TOKEN }}
           PR_HASH: ${{ steps.pr_hash.outputs.hash }}
         run: |
+          CLEAN_SAS_TOKEN=$(echo "${AZURE_STORAGE_SAS_TOKEN}" | tr -d '\n\r\t ')
           echo "Cleaning up deployment: ${PR_HASH}/"
-          azcopy remove "https://spectrumcss.z13.web.core.windows.net/\$web/${PR_HASH}/?${AZURE_STORAGE_SAS_TOKEN}" \
+          azcopy remove "https://spectrumcss.blob.core.windows.net/\$web/${PR_HASH}/?${CLEAN_SAS_TOKEN}" \
             --recursive || echo "Cleanup completed (some files may not exist)"
           echo "Cleanup completed for PR deployment: ${PR_HASH}/"
