@@ -10,6 +10,12 @@ name: Compare
 on:
     workflow_call:
         inputs:
+            deploy-message:
+                required: false
+                type: string
+            alias:
+                required: false
+                type: string
             base-sha:
                 description: The branch or tag to compare against
                 required: false
@@ -99,6 +105,16 @@ jobs:
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}
                   merge-multiple: true
 
+            - name: Copy static assets to the new workspaces
+              shell: bash
+              run: |
+                  cp -r ${{ github.workspace }}/components/* ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}/components/
+                  cp -r ${{ github.workspace }}/tokens ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}/
+                  cp -r ${{ github.workspace }}/ui-icons ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}/
+                  cp -r ${{ github.workspace }}/components/* ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}/components/
+                  cp -r ${{ github.workspace }}/tokens ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}/
+                  cp -r ${{ github.workspace }}/ui-icons ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}/
+
             - name: Compare compiled output file size
               id: compare
               uses: ./.github/actions/file-diff
@@ -106,36 +122,36 @@ jobs:
               with:
                   head-path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}/
                   base-path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}/
-                  file-glob-pattern: |
-                    components/*/dist/**
-                    tokens/dist/**
-                    ui-icons/dist/**
+                  package-pattern: |
+                      components/*
+                      tokens
+                      ui-icons
                   token: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Generate rich diff if changes detected
-              id: rich-diff
+            - name: Generate rich diff for compiled assets
               if: ${{ steps.compare.outputs.has-changed }}
+              id: rich-diff
               shell: bash
               run: yarn compare
 
-            - name: Upload changes
+            ## --- DEPLOY DIFFS TO NETLIFY --- ##
+            - name: Deploy rich diff to Netlify
+              uses: nwtgck/actions-netlify@v3
               if: ${{ steps.compare.outputs.has-changed }}
-              uses: actions/upload-artifact@v4
               with:
-                name: rich-diff
-                path: |
-                  .diff-output/index.html
-                  .diff-output/diffs/*/*.html
-                  components/typography/dist/index.css
-                  components/table/dist/index.css
-                  components/badge/dist/index.css
-                  components/button/dist/index.css
-                  components/card/dist/index.css
-                  components/icon/dist/index.css
-                  components/sidenav/dist/index.css
-                  tokens/dist/css/index.css
-                  node_modules/diff2html/bundles/css/diff2html.min.css
-                  node_modules/diff2html/bundles/js/diff2html.min.js
+                  publish-dir: .diff-output
+                  production-branch: main
+                  production-deploy: false
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: ${{ inputs.deploy-message }}
+                  enable-pull-request-comment: true
+                  enable-commit-comment: false
+                  overwrites-pull-request-comment: true
+                  alias: ${{ inputs.alias }}
+              env:
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_DIFF }}
+              timeout-minutes: 10
 
     fetch-build-artifacts:
         name: Fetch & validate build artifacts
@@ -209,9 +225,9 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   path: |
-                    ${{ github.workspace }}/components/*/dist/**
-                    ${{ github.workspace }}/tokens/dist/**
-                    ${{ github.workspace }}/ui-icons/dist/**
+                      ${{ github.workspace }}/components/*
+                      ${{ github.workspace }}/tokens
+                      ${{ github.workspace }}/ui-icons
                   name: ${{ steps.derive-key.outputs.key }}
 
             - name: Build
@@ -226,9 +242,9 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                   path: |
-                    ${{ github.workspace }}/components/*/dist/**
-                    ${{ github.workspace }}/tokens/dist/**
-                    ${{ github.workspace }}/ui-icons/dist/**
+                    ${{ github.workspace }}/components/*
+                    ${{ github.workspace }}/tokens
+                    ${{ github.workspace }}/ui-icons
                   name: ${{ steps.derive-key.outputs.key }}
                   # this is important, it lets us catch if the build failed silently
                   # by alterting us that no compiled assets were generated

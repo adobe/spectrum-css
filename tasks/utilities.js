@@ -286,14 +286,15 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 			.cp(from, to, { recursive: true, force: true })
 			.then(async () => {
 				// Determine the number of files and the size of the copied files
-				const stats = await fg(path.join(cwd, "components") + "/**/*", {
+				const s = await fg(path.join(cwd, "components") + "/**/*", {
 					onlyFiles: true,
 					stats: true,
 				});
-				return Promise.resolve(`${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow} ${`copied ${stats.length >= 0 ? stats.length : "0"} files (${bytesToSize(stats.reduce((acc, details) => acc + details.stats.size, 0))})`.gray}`);
+				return Promise.resolve(`${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow} ${`copied ${s.length >= 0 ? s.length : "0"} files (${bytesToSize(s.reduce((acc, details) => acc + details.s.size, 0))})`.gray}`);
 			})
 			.catch((err) => {
 				if (!err) return;
+				return `${"✗".red}  ${relativePrint(from, { cwd }).yellow} could not be copied to ${relativePrint(to, { cwd }).yellow}`;
 				return Promise.resolve(`${"✗".red}  ${relativePrint(from, { cwd }).yellow} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
 			});
 	}
@@ -310,6 +311,7 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 		)
 		.catch((err) => {
 			if (!err) return;
+			return `${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`;
 			return Promise.resolve(`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
 		});
 }
