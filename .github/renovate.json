@@ -12,18 +12,6 @@
 		{
 			"groupName": "storybook ecosystem",
 			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*"],
-			"matchUpdateTypes": ["minor", "patch"]
-		},
-		{
-			"groupName": "storybook ecosystem (disabled)",
-			"matchPackageNames": [
-				"storybook",
-				"@storybook/*",
-				"@types/storybook*",
-				"@chromatic-com/storybook"
-			],
-			"matchUpdateTypes": ["major"],
-			"baseBranches": ["main"],
 			"enabled": false
 		},
 		{

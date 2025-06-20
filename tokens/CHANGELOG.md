@@ -1,5 +1,27 @@
 # Change log
 
+## 16.1.0-next.5
+
+### Patch Changes
+
+- [#3969](https://github.com/adobe/spectrum-css/pull/3969) [`d952e0c`](https://github.com/adobe/spectrum-css/commit/d952e0c4d234f5e742432fe906965a52a50b228e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated from [@adobe/spectrum-tokens](https://github.com/adobe/spectrum-tokens) v13.10.0 -> [13.10.1](https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe/spectrum-tokens%4013.10.1).
+
+  - [#517](https://github.com/adobe/spectrum-tokens/pull/517) [`8f8f8a6`](https://github.com/adobe/spectrum-tokens/commit/8f8f8a60b7adf5105ced4f914cf30928117ddc5e) Thanks [@larz0](https://github.com/larz0)!
+
+  #### Updated tokens
+
+  - `accordion-focus-indicator-gap`
+    - value: `0px` -> `2px`
+  - `accordion-top-to-text-medium`
+    - desktop.value: `12px` -> `9px`
+    - mobile.value: `16px` -> `10px`
+
+## 16.1.0-next.4
+
+### Patch Changes
+
+- [#3818](https://github.com/adobe/spectrum-css/pull/3818) [`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds `--spectrum-table-selected-row-background-color-rgb` to `light-vars.css` and `dark-vars.css` for custom tokens.
+
 ## 16.1.0-next.3
 
 ### Minor Changes
@@ -601,13 +623,21 @@ Adds custom vars for coachmark action menu vertical spacing. These help provide 
 In `tokens/custom/large-vars.css`: `--spectrum-coachmark-action-menu-vertical-offset`.
 In `tokens/custom/medium-vars.css`: `--spectrum-coachmark-action-menu-vertical-offset`.
 
+## 16.0.2
+
+### Patch Changes
+
+- [#3883](https://github.com/adobe/spectrum-css/pull/3883) [`4e3a120`](https://github.com/adobe/spectrum-css/commit/4e3a120339a6e7e6d0d19e3f2f7f608ab96621ed) Thanks [@byteakp](https://github.com/byteakp)!
+
+Fixed `--spectrum-cjk-font` variable to correctly reference `--spectrum-cjk-font-family-stack` instead of `--spectrum-code-font-family-stack`.
+
 ## 16.0.1
 
 ### Patch Changes
 
 📝 [#3541](https://github.com/adobe/spectrum-css/pull/3541) [`1a3245c`](https://github.com/adobe/spectrum-css/commit/1a3245c3a660bc52ed260f18b6cceab5ee81541d) Thanks [@castastrophe](https://github.com/castastrophe)!
 
-- Dependency alignment across the project.
+Dependency alignment across the project.
 
 Set component peerDependencies as optional to reduce console warnings on downstream projects.
 
@@ -952,9 +982,12 @@ If you are looking to implement a fully S2 design, please explore the `next` rel
 - `--spectrum-switch-top-to-control-medium`
   - **value**: 9px (desktop)
   - **value**: 11px (mobile)
-- `--spectrum-switch-top-to-control-large`
-  - **value**: 12px (desktop)
-  - **value**: 15px (mobile)
+- `--spectrum-switch-top-to-control
+
+-large`
+
+- **value**: 12px (desktop)
+- **value**: 15px (mobile)
 - `--spectrum-switch-top-to-control-extra-large`
   - **value**: 15px (desktop)
   - **value**: 19px (mobile)
