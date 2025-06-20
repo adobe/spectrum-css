@@ -19,7 +19,7 @@ export default {
 	component: "Meter",
 	argTypes: {
 		...ProgressBar.argTypes,
-		size: size(["s", "l"]),
+		size: size(["s", "m", "l", "xl"]),
 		isIndeterminate: { table: { disable: true } },
 		fill: {
 			name: "Fill color",
@@ -33,12 +33,22 @@ export default {
 			options: ["info", "notice", "positive", "negative"],
 			control: "select",
 		},
+		helpText: {
+			name: "Help text",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Component",
+			},
+			control: "text",
+		},
 	},
 	args: {
 		...ProgressBar.args,
 		rootClass: "spectrum-Meter",
-		size: "l",
+		size: "m",
 		label: "Storage space",
+		helpText: "",
 	},
 	parameters: {
 		design: {
@@ -47,7 +57,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
