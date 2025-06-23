@@ -267,7 +267,7 @@ Disabled.args = {
 };
 
 /**
- * When a stand alone tag group has no tags, it shows placeholder text to communicate the empty state. The wording of the placeholder text can be customizable.
+ * When a stand alone tag group has no tags, it may show placeholder text to communicate the empty state. The placeholder text can be customized, or another element may be shown to communicate the empty state rather than placeholder text.
  */
 export const WithNoTags = Template.bind({});
 WithNoTags.storyName = "With no tags (empty state)";

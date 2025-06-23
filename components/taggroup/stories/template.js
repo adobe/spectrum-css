@@ -73,7 +73,6 @@ export const Template = ({
 			</div>
 		`, () => html`
 			${Typography({
-				size,
 				semantics: "body",
 				content: ["None"],
 			}, context)}

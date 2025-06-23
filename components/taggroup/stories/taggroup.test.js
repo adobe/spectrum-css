@@ -87,7 +87,7 @@ export const TagGroups = Variants({
 		{
 			testHeading: "Empty state, top label",
 			numberOfTags: 0,
-			helpText: "",
+			helpText: "No tags added",
 			actionButtonText: "",
 			items: [],
 		},
@@ -95,7 +95,7 @@ export const TagGroups = Variants({
 			testHeading: "Empty state, side label",
 			fieldLabelPosition: "side",
 			numberOfTags: 0,
-			helpText: "",
+			helpText: "No tags added",
 			actionButtonText: "",
 			items: [],
 		},

@@ -28,3 +28,11 @@ To support custom spacing of the embedded components, several other new mod prop
 - `--mod-tag-group-block-spacing-label-to-tags`
 - `--mod-tag-group-inline-spacing-label-to-tags`
 - `--mod-tag-group-spacing-help-text-to-tags`
+
+To support the optional empty state (when there are no tags in the tag group), several passthroughs to modify the body typography text element have been added, including:
+
+- `--mod-body-cjk-line-height`
+- `--mod-body-font-size`
+- `--mod-body-line-height`
+- `--mod-body-margin-end`
+- `--mod-body-margin-start`
