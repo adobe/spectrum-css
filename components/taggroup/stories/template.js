@@ -65,8 +65,8 @@ export const Template = ({
 					...args,
 					size,
 					isRemovable,
+					isDisabled: i.isDisabled,
 					label: i.label,
-					iconName: i.iconName || "",
 					id: getRandomId("tag-item"),
 					customClasses: [`${rootClass}-tag`],
 				}, context))}

@@ -1,10 +1,10 @@
-import { withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid } from "@spectrum-css/preview/types";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { exampleTagItems, TagGroups } from "./taggroup.test.js";
+import { exampleTagItems, TagGroupDisabledItem, TagGroups, TagGroupSizingTemplate } from "./taggroup.test.js";
 import { Template } from "./template.js";
 
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
@@ -76,7 +76,7 @@ export default {
 		},
 		numberOfTags: {
 			name: "Number of tags",
-			description: "The number of tags to display in the tag group.",
+			description: "The number of tags to display in the tag group. If the number of tags is 0, the tag group will show a placeholder text to communicate the empty state.",
 			type: { name: "number" },
 			table: {
 				type: { summary: "number" },
@@ -123,15 +123,12 @@ export default {
 	tags: ["migrated"],
 };
 
-/**
- * A tag group on its own should always have a label. Labels can be placed either on top or on the side on the tags, but top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts.
- */
 export const Default = TagGroups.bind({});
 Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
 /**
- * A tag group on its own should always have a label. Labels can be placed either on top or on the side on the tags, but top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts.
+ * A tag group on its own should always have a label. Labels can be placed either on top or on the side of the tags, but top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts.
  */
 export const DefaultWithLabel = TagGroups.bind({});
 DefaultWithLabel.storyName = "Label position - default/top";
@@ -214,7 +211,7 @@ RemovableAndWrapping.args = {
 };
 
 /**
- * A single quiet action button may be included at the end of a tag group if the action affects the entire group. Common actions include "show all", "show less", and "clear all". A counter of the number of tags can be included in the action button label if appropriate for the context.
+ * A single quiet [action button](?path=/docs/components-action-button--docs) may be included at the end of a tag group if the action affects the entire group. Common actions include "show all," "show less," and "clear all." A counter of the number of tags can be included in the action button label if appropriate for the context.
  */
 export const WithActionButton = Template.bind({});
 WithActionButton.storyName = "With action button";
@@ -232,7 +229,7 @@ WithActionButton.args = {
 };
 
 /**
- * A tag group can have help text below the group to give extra context or instruction. The help text may be invalid, indicating an error for when requirements aren't met.
+ * A tag group can have [help text](?path=/docs/components-help-text--docs) below the group to give extra context or instruction. The help text may be invalid, indicating an error for when requirements aren't met.
  */
 export const WithHelpText = Template.bind({});
 WithHelpText.storyName = "With help text";
@@ -254,6 +251,22 @@ WithHelpText.args = {
 };
 
 /**
+ * Avoid disabling an entire tag group. In cases where users can't interact with an entire group of tags, consider either using non-removable tags or hiding the tag group altogether. Don't disable all individual tags; having a tag group that's disabled isn't accessible and it can be frustrating for users.
+ */
+export const Disabled = TagGroupDisabledItem.bind({});
+Disabled.storyName = "With disabled tag";
+Disabled.tags = ["!dev"];
+Disabled.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+Disabled.args = {
+	fieldLabel: "Tags",
+	helpText: "These tags were automatically added."
+};
+
+/**
  * When a stand alone tag group has no tags, it shows placeholder text to communicate the empty state. The wording of the placeholder text can be customizable.
  */
 export const WithNoTags = Template.bind({});
@@ -269,6 +282,20 @@ WithNoTags.args = {
 	numberOfTags: 0,
 	helpText: "",
 	actionButtonText: "",
+};
+
+/**
+ * The default size of a tag group is medium, but tags are also available in small and large sizes.
+ */
+export const Sizing = (args, context) => Sizes({
+	Template: TagGroupSizingTemplate,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

@@ -19,7 +19,12 @@ const overflowingTagItems = [
 	{ label: "Hawaii" },
 ];
 
-const TagGroupSizingTemplate = (args, context) => {
+const itemsWithDisabledTag = [
+	...exampleTagItems,
+	{ label: "Disabled tag", isDisabled: true },
+];
+
+export const TagGroupSizingTemplate = (args, context) => {
 	return html`
 		${Template({
 			...args,
@@ -27,6 +32,15 @@ const TagGroupSizingTemplate = (args, context) => {
 			customStyles: {
 				"max-width": "300px",
 			},
+		}, context)}
+	`;
+};
+
+export const TagGroupDisabledItem = (args, context) => {
+	return html`
+		${Template({
+			...args,
+			items: itemsWithDisabledTag,
 		}, context)}
 	`;
 };
