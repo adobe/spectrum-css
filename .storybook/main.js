@@ -90,6 +90,7 @@ export default {
 		const { mergeConfig } = await import("vite");
 
 		return mergeConfig(config, {
+			base: process.env.BASE_PATH || config.base,
 			publicDir: "./assets",
 			// Add dependencies to pre-optimization
 			optimizeDeps: {
