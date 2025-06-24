@@ -15,7 +15,7 @@
 .spectrum-Meter {
 	--mod-progressbar-max-size: var(--mod-meter-max-width, var(--spectrum-meter-maximum-width));
 	--mod-progressbar-min-size: var(--mod-meter-min-width, var(--spectrum-meter-minimum-width));
-	--spectrum-meter-field-label-progress-bar: var(--spectrum-spacing-75);
+	--spectrum-meter-help-text-to-progress-bar: var(--spectrum-spacing-75);
 
 	&.is-positive {
 		--mod-progressbar-fill-color: var(--spectrum-positive-visual-color);
@@ -30,7 +30,7 @@
 	}
 
 	.spectrum-ProgressBar-helptext {
-		margin-block-start: var(--mod-meter-field-label-progress-bar, var(--spectrum-meter-field-label-progress-bar));
+		margin-block-start: var(--mod-meter-help-text-to-progress-bar, var(--spectrum-meter-help-text-to-progress-bar));
 	}
 }
 /* @passthrough end */

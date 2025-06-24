@@ -12,10 +12,6 @@ export const MeterGroup = Variants({
 			fill,
 		})),
 		{
-			testHeading: "Side label",
-			labelPosition: "side",
-		},
-		{
 			testHeading: "Text overflow",
 			label: "Storage space remaining for XYZ user"
 		},
@@ -43,6 +39,10 @@ export const MeterGroup = Variants({
 		{
 			testHeading: "Static white",
 			staticColor: "white",
+		},
+		{
+			testHeading: "Static black",
+			staticColor: "black",
 		},
 	],
 });

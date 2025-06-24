@@ -40,9 +40,12 @@
 	--spectrum-progressbar-text-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-progressbar-track-color: var(--spectrum-gray-300);
 	--spectrum-progressbar-fill-color: var(--spectrum-accent-content-color-default);
-	--spectrum-progressbar-label-and-value-white: var(--spectrum-transparent-white-700);
-	--spectrum-progressbar-track-color-white: var(--spectrum-transparent-white-300);
-	--spectrum-progressbar-fill-color-white: var(--spectrum-transparent-white-900);
+	--spectrum-progressbar-label-and-value-white: var(--spectrum-static-white-text-color);
+	--spectrum-progressbar-track-color-white: var(--spectrum-static-white-track-color);
+	--spectrum-progressbar-fill-color-white: var(--spectrum-static-white-track-indicator-color);
+	--spectrum-progressbar-label-and-value-black: var(--spectrum-static-black-text-color);
+	--spectrum-progressbar-track-color-black: var(--spectrum-static-black-track-color);
+	--spectrum-progressbar-fill-color-black: var(--spectrum-static-black-track-indicator-color);
 }
 
 .spectrum-ProgressBar--sizeS {
@@ -155,6 +158,7 @@
 		margin-inline-end: var(--mod-progressbar-spacing-label-to-text, var(--spectrum-progressbar-spacing-label-to-text));
 		margin-block-end: 0;
 		margin-block-start: 0;
+		align-self: center;
 	}
 
 	.spectrum-ProgressBar-percentage {
@@ -180,6 +184,23 @@
 
 	.spectrum-ProgressBar-track {
 		background: var(--spectrum-progressbar-track-color-white);
+	}
+}
+
+/* Static Black */
+.spectrum-ProgressBar--staticBlack {
+	.spectrum-ProgressBar-fill {
+		color: var(--mod-progressbar-label-and-value-black, var(--spectrum-progressbar-label-and-value-black));
+		background: var(--highcontrast-progressbar-fill-color-black, var(--mod-progressbar-fill-color-black, var(--spectrum-progressbar-fill-color-black)));
+	}
+
+	.spectrum-ProgressBar-label,
+	.spectrum-ProgressBar-percentage {
+		color: var(--mod-progressbar-label-and-value-black, var(--spectrum-progressbar-label-and-value-black));
+	}
+
+	.spectrum-ProgressBar-track {
+		background: var(--spectrum-progressbar-track-color-black);
 	}
 }
 
@@ -217,6 +238,7 @@
 		--highcontrast-progressbar-fill-color: ButtonText;
 		--highcontrast-progressbar-track-color: ButtonFace;
 		--highcontrast-progressbar-fill-color-white: ButtonText;
+		--highcontrast-progressbar-fill-color-black: ButtonText;
 
 		forced-color-adjust: none;
 		border: 1px solid ButtonText;

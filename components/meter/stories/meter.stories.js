@@ -8,7 +8,7 @@ import { MeterGroup } from "./meter.test.js";
 import { FillGroup, Template } from "./template.js";
 
 /**
- * The meter component is a visual representations of a quantity or an achievement. The progress is determined by user actions, rather than system actions.
+ * The meter component is a visual representation of a quantity or an achievement. The progress is determined by user actions, rather than system actions.
  *
  * Meter is implemented using [the progress bar component](/docs/components-progress-bar--docs). Refer to the progress bar documentation for additional details.
  *
@@ -65,7 +65,7 @@ export default {
 };
 
 /**
- * By default, meters have a blue fill and are the large sizes.
+ * By default, meters have a blue fill and are medium-sized.
  *
  * Meters should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These meters without a visible label should still include an “aria-label” or “aria-labelledby” in HTML, depending on the context. The label is always placed above the track.
  *
@@ -77,7 +77,7 @@ Default.args = {
 };
 
 /**
- * Meters come in two sizes: large and small. By default, meters are large. Use the small size when there are multiple meters shown at the same time in a more confined space, such as in tables or cards.
+ * Meters come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequently used option. Use the small size when there are multiple meters shown at the same time in a more confined space, such as in tables or cards.
  */
 export const Sizing = (args, context) => Sizes({
 	Template,
@@ -101,6 +101,26 @@ FillColors.storyName = "Fill colors";
 FillColors.args = Default.args;
 FillColors.tags = ["!dev"];
 FillColors.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticWhite = MeterGroup.bind({});
+StaticWhite.args = {
+	staticColor: "white",
+	value: 50,
+};
+StaticWhite.tags = ["!dev"];
+StaticWhite.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlack = MeterGroup.bind({});
+StaticBlack.args = {
+	staticColor: "black",
+	value: 50,
+};
+StaticBlack.tags = ["!dev"];
+StaticBlack.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
