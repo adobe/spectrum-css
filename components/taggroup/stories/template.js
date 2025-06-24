@@ -27,6 +27,7 @@ export const Template = ({
 	fieldLabelPosition = "top",
 	helpText,
 	isInvalid = false,
+	hasDisabledActionButton = false,
 	...args
 } = {}, context = {}) => {
 	const tags = Array.isArray(items) && items.length > 0
@@ -81,6 +82,7 @@ export const Template = ({
 			${ActionButton({
 				size,
 				isQuiet: true,
+				isDisabled: hasDisabledActionButton,
 				label: actionButtonText,
 				customClasses: [`${rootClass}-actionButton`],
 			}, context)}

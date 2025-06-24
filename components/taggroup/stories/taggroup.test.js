@@ -36,11 +36,12 @@ export const TagGroupSizingTemplate = (args, context) => {
 	`;
 };
 
-export const TagGroupDisabledItem = (args, context) => {
+export const TagGroupDisabledItemAndActionButton = (args, context) => {
 	return html`
 		${Template({
 			...args,
 			items: itemsWithDisabledTag,
+			hasDisabledActionButton: true,
 		}, context)}
 	`;
 };

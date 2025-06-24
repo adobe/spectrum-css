@@ -4,7 +4,7 @@ import { isInvalid } from "@spectrum-css/preview/types";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { exampleTagItems, TagGroupDisabledItem, TagGroups, TagGroupSizingTemplate } from "./taggroup.test.js";
+import { exampleTagItems, TagGroupDisabledItemAndActionButton, TagGroups, TagGroupSizingTemplate } from "./taggroup.test.js";
 import { Template } from "./template.js";
 
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
@@ -39,9 +39,18 @@ export default {
 			type: { name: "text" },
 			table: {
 				type: { summary: "text" },
-				category: "Content",
+				category: "Action button settings",
 			},
 			control: "text",
+		},
+		hasDisabledActionButton: {
+			name: "Has disabled action button",
+			description: "Displays the action button in a disabled state.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Action button settings",
+			},
 		},
 		fieldLabel: {
 			name: "Field label",
@@ -97,6 +106,7 @@ export default {
 		isInvalid: false,
 		numberOfTags: 3,
 		ariaLabel: "Tags",
+		hasDisabledActionButton: false,
 	},
 	parameters: {
 		actions: {
@@ -252,9 +262,11 @@ WithHelpText.args = {
 
 /**
  * Avoid disabling an entire tag group. In cases where users can't interact with an entire group of tags, consider either using non-removable tags or hiding the tag group altogether. Don't disable all individual tags; having a tag group that's disabled isn't accessible and it can be frustrating for users.
+ *
+ * Individual tags may be disabled, and the action button may also be disabled, as seen below.
  */
-export const Disabled = TagGroupDisabledItem.bind({});
-Disabled.storyName = "With disabled tag";
+export const Disabled = TagGroupDisabledItemAndActionButton.bind({});
+Disabled.storyName = "With disabled tag and action button";
 Disabled.tags = ["!dev"];
 Disabled.parameters = {
 	chromatic: {
