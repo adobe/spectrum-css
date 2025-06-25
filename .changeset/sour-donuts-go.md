@@ -15,11 +15,11 @@ This migration updates the meter component and the progress bar component. Both 
 - Added help text visual test
 - Added static black variant
 
-Since the progress bar and meter are now using the same tokens for width, font size, and spacing, the following mods have been redacted:
+Since the progress bar and meter are now using the same tokens for track thickness in size variants, font size, and spacing, the following mods have been redacted:
 
-- `--mod-meter-thickness`
-- `--mod-meter-font-size`
-- `--mod-meter-spacing-top-to-text`
+- `--mod-progressbar-thickness`
+- `--mod-progressbar-font-size`
+- `--mod-progressbar-spacing-top-to-text`
 
 If you were using any of the above mods, please use the progress bar's mods instead.
 
