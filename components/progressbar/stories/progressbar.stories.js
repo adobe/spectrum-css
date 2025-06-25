@@ -26,8 +26,6 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Component",
-				// todo: side labels are not supported according to S1 documentation, but will be in S2. Remove the disable: true once S2 is released
-				disable: true,
 			},
 			options: ["top", "side"],
 			control: "select",
@@ -171,6 +169,20 @@ WithoutValue.args = {
 };
 WithoutValue.tags = ["!dev"];
 WithoutValue.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Labels are placed by default on top of the progress bar, but can also be positioned on the side. Side labels are most useful when vertical space is limited.
+ */
+export const SideLabel = Template.bind({});
+SideLabel.storyName = "Side label";
+SideLabel.args = {
+	labelPosition: "side",
+	value: 50,
+};
+SideLabel.tags = ["!dev"];
+SideLabel.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
