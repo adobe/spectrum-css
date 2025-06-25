@@ -167,7 +167,7 @@ __metadata:
     postcss-selector-replace: "npm:^1.0.2"
     postcss-sorting: "npm:^9.1.0"
     postcss-values-parser: "npm:^6.0.2"
-    prettier: "npm:^3.6.0"
+    prettier: "npm:^3.6.1"
     rimraf: "npm:^6.0.1"
     semver: "npm:^7.7.2"
     stylelint: "npm:^16.21.0"
@@ -5203,7 +5203,7 @@ __metadata:
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
     postcss: "npm:^8.5.6"
-    prettier: "npm:^3.6.0"
+    prettier: "npm:^3.6.1"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-syntax-highlighter: "npm:^15.6.1"
@@ -17814,12 +17814,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "prettier@npm:3.6.0"
+"prettier@npm:^3.6.1":
+  version: 3.6.1
+  resolution: "prettier@npm:3.6.1"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/636897c8084b71ef1f740a46199df0d8f6ed896aa497212cc8cc229d3026b9dca82fa92f61e55924c4708cea11e39a88478e2d93c4818741c55b7408a9ac6d91
+  checksum: 10c0/cf54254b9ddf1a8dff12f84bf0089e6aef3eeb9d0ce9d0344e39549ddc4f5c290fc5060d7d5a597848b9617e53e05b33a4118e37cd560f9e132ecc19c211300a
   languageName: node
   linkType: hard
 
