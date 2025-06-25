@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -23,7 +23,7 @@
 	/* --spectrum-popover-border-color-default: var(--spectrum-popover-border-color); */
 	--spectrum-popover-border-color-rgb: var(--spectrum-gray-200-rgb);
 	--spectrum-popover-border-transparency: var(--spectrum-popover-border-opacity);
-	--spectrum-popover-border-color-with-transparency: rgba(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency));
+	--spectrum-popover-border-color-with-transparency: rgb(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency));
 
 	/* popover inner padding */
 	--spectrum-popover-content-area-spacing: var(--spectrum-popover-edge-to-content-area);
@@ -49,7 +49,12 @@
 }
 
 .spectrum-Popover {
-	--spectrum-popover-filter: drop-shadow(var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color)));
+	/* filter is for popovers with a tip. we divide the blur by 2 to match the box-shadow rendering better. */
+	--spectrum-popover-filter: drop-shadow(var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) calc(var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) / 2) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color)));
+
+	/* box-shadow is for popovers without a tip. */
+	--spectrum-popover-box-shadow: var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color));
+
 	@extend %spectrum-overlay;
 
 	box-sizing: border-box;
@@ -69,12 +74,14 @@
 	border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 
 	background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
-	filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
+	box-shadow: var(--mod-popover-box-shadow, var(--spectrum-popover-box-shadow));
 
 	/* has tip triangle */
 	&.spectrum-Popover--withTip {
 		/* Prevents clipping of the tip */
 		overflow: visible;
+		filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
+		box-shadow: none;
 
 		.spectrum-Popover-tip {
 			/* triangle polygon */
@@ -92,11 +99,6 @@
 /* default opens and animates upward */
 .spectrum-Popover.is-open {
 	@extend %spectrum-overlay--open;
-}
-
-/* prevent nested popovers from affecting each others drop shadow filters */
-.spectrum-Popover * {
-	--mod-popover-filter: none;
 }
 
 /* position naming - first position term is popover position, second term is source position */
