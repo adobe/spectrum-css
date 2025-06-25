@@ -18,6 +18,7 @@
 	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
 
 	--spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
+	--spectrum-popover-border-width: var(--spectrum-border-width-100);
 
 	/* TODO: Cannot use popover-border-color token until the value no longer has the rgba() function alpha/opacity. We should be able to refactor instances of `--spectrum-popover-border-color-rgb` with `--spectrum-popover-border-color` once this is available. */
 	/* --spectrum-popover-border-color-default: var(--spectrum-popover-border-color); */
