@@ -9,7 +9,7 @@ export const MeterSizingTemplate  = (args, context) => {
 			helpText: "Upgrade membership to get more storage space"
 		}, context)}
 	`;
-}
+};
 
 export const MeterGroup = Variants({
 	Template,
