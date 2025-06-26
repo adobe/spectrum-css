@@ -51,6 +51,7 @@ export default {
 				type: { summary: "boolean" },
 				category: "Action button settings",
 			},
+			if: { arg: "actionButtonText", truthy: true },
 		},
 		fieldLabel: {
 			name: "Field label",
@@ -191,7 +192,7 @@ RemovableAndWrapping.args = {
 	actionButtonText: "",
 	helpText: "",
 	isRemovable: true,
-	customStyles: {"max-width": "300px"},
+	customStyles: {"max-inline-size": "300px"},
 	items: [
 		{
 			label: "Hiking and camping",
