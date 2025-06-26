@@ -16,6 +16,19 @@
 	--mod-progressbar-max-size: var(--mod-meter-max-width, var(--spectrum-meter-maximum-width));
 	--mod-progressbar-min-size: var(--mod-meter-min-width, var(--spectrum-meter-minimum-width));
 	--spectrum-meter-help-text-to-progress-bar: var(--spectrum-spacing-75);
+	--mod-progressbar-thickness: var(--spectrum-meter-thickness-medium);
+
+	&.spectrum-Meter--sizeS {
+		--mod-progressbar-thickness: var(--spectrum-meter-thickness-small);
+	}
+
+	&.spectrum-Meter--sizeL {
+		--mod-progressbar-thickness: var(--spectrum-meter-thickness-large);
+	}
+
+	&.spectrum-Meter--sizeXL {
+		--mod-progressbar-thickness: var(--spectrum-meter-thickness-extra-large);
+	}
 
 	&.is-positive {
 		--mod-progressbar-fill-color: var(--spectrum-positive-visual-color);

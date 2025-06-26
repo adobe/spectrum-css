@@ -38,7 +38,7 @@
 
 	/* Color */
 	--spectrum-progressbar-text-color: var(--spectrum-neutral-subdued-content-color-default);
-	--spectrum-progressbar-track-color: var(--spectrum-gray-300);
+	--spectrum-progressbar-track-color: var(--spectrum-track-color);
 	--spectrum-progressbar-fill-color: var(--spectrum-accent-content-color-default);
 	--spectrum-progressbar-label-and-value-white: var(--spectrum-static-white-text-color);
 	--spectrum-progressbar-track-color-white: var(--spectrum-static-white-track-color);
@@ -75,7 +75,6 @@
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
-	font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
 	vertical-align: top;
 	overflow-wrap: break-word;
 
@@ -89,7 +88,7 @@
 		text-align: start;
 		margin-block-start: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
 		margin-block-end: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
-
+		font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
 		line-height: var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height));
 
 		&:lang(ja),
@@ -129,8 +128,7 @@
 		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
 		transition: width 1s;
 		background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
-		border-start-end-radius: var(--spectrum-progressbar-corner-radius);
-		border-end-end-radius: var(--spectrum-progressbar-corner-radius);
+		border-radius: var(--spectrum-progressbar-corner-radius);
 	}
 }
 
@@ -187,7 +185,7 @@
 	}
 }
 
-/* Static Black */
+/* Static Black -- Only used for the meter component in S2 */
 .spectrum-ProgressBar--staticBlack {
 	.spectrum-ProgressBar-fill {
 		color: var(--mod-progressbar-label-and-value-black, var(--spectrum-progressbar-label-and-value-black));
@@ -214,23 +212,23 @@
 }
 
 @keyframes indeterminate-loop-ltr {
-	from {
-		transform: translate(calc(-1 * var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate))));
-	}
+	0% {
+		transform: translate(-100%);
+}
 
-	to {
-		transform: translate(var(--mod-progressbar-inline-size, var(--spectrum-progressbar-inline-size)));
-	}
+100% {
+		transform: translate(var(--spectrum-progressbar-inline-size));
+}
 }
 
 @keyframes indeterminate-loop-rtl {
-	from {
-		transform: translate(var(--mod-progressbar-inline-size, var(--spectrum-progressbar-fill-size-indeterminate)));
-	}
+	0% {
+		transform: translate(100%);
+}
 
-	to {
-		transform: translate(calc(-1 * var(--mod-progressbar-inline-size, var(--spectrum-progressbar-inline-size))));
-	}
+100% {
+		transform: translate(calc(var(--spectrum-progressbar-inline-size) * -1));
+}
 }
 
 @media (forced-colors: active) {

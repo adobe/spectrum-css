@@ -1,8 +1,19 @@
 import { Variants } from "@spectrum-css/preview/decorators";
+import { html } from "lit";
 import { Template } from "./template.js";
+
+export const MeterSizingTemplate  = (args, context) => {
+	return html`
+		${Template({
+			...args,
+			helpText: "Upgrade membership to get more storage space"
+		}, context)}
+	`;
+}
 
 export const MeterGroup = Variants({
 	Template,
+	SizeTemplate: MeterSizingTemplate,
 	testData: [
 		{
 			testHeading: "Default",

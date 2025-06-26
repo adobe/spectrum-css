@@ -44,7 +44,6 @@ export default {
 		},
 		staticColor: {
 			...staticColor,
-			options: ["white", "black"],
 		},
 	},
 	args: {
@@ -108,7 +107,7 @@ FillColors.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticWhite = MeterGroup.bind({});
+export const StaticWhite = Template.bind({});
 StaticWhite.args = {
 	staticColor: "white",
 	value: 50,
@@ -118,13 +117,26 @@ StaticWhite.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticBlack = MeterGroup.bind({});
+export const StaticBlack = Template.bind({});
 StaticBlack.args = {
 	staticColor: "black",
 	value: 50,
 };
 StaticBlack.tags = ["!dev"];
 StaticBlack.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The help text is placed below the meter. This helps to provide additional context for the user.
+ */
+export const HelpText = Template.bind({});
+HelpText.args = {
+	helpText: "This is a help text",
+	value: 50,
+};
+HelpText.tags = ["!dev"];
+HelpText.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

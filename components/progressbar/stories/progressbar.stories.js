@@ -173,11 +173,7 @@ WithoutValue.parameters = {
 };
 
 /**
-<<<<<<< aramos-adobe/css1030-meter-s2-migration
- * The example below shows a progress bar with a side label.
-=======
  * Labels are placed by default on top of the progress bar, but can also be positioned on the side. Side labels are most useful when vertical space is limited.
->>>>>>> spectrum-two
  */
 export const SideLabel = Template.bind({});
 SideLabel.storyName = "Side label";

@@ -5,7 +5,10 @@
     ".spectrum-Meter .spectrum-ProgressBar-helptext",
     ".spectrum-Meter.is-negative",
     ".spectrum-Meter.is-notice",
-    ".spectrum-Meter.is-positive"
+    ".spectrum-Meter.is-positive",
+    ".spectrum-Meter.spectrum-Meter--sizeL",
+    ".spectrum-Meter.spectrum-Meter--sizeS",
+    ".spectrum-Meter.spectrum-Meter--sizeXL"
   ],
   "modifiers": [
     "--mod-meter-help-text-to-progress-bar",
@@ -15,7 +18,11 @@
   "component": [
     "--spectrum-meter-help-text-to-progress-bar",
     "--spectrum-meter-maximum-width",
-    "--spectrum-meter-minimum-width"
+    "--spectrum-meter-minimum-width",
+    "--spectrum-meter-thickness-extra-large",
+    "--spectrum-meter-thickness-large",
+    "--spectrum-meter-thickness-medium",
+    "--spectrum-meter-thickness-small"
   ],
   "global": [
     "--spectrum-negative-visual-color",
@@ -26,7 +33,8 @@
   "passthroughs": [
     "--mod-progressbar-fill-color",
     "--mod-progressbar-max-size",
-    "--mod-progressbar-min-size"
+    "--mod-progressbar-min-size",
+    "--mod-progressbar-thickness"
   ],
   "high-contrast": []
 }
