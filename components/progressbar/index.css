@@ -88,8 +88,8 @@
 		text-align: start;
 		margin-block-start: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
 		margin-block-end: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
-		font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
 		line-height: var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height));
+		font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
 
 		&:lang(ja),
 		&:lang(zh),
@@ -214,21 +214,21 @@
 @keyframes indeterminate-loop-ltr {
 	0% {
 		transform: translate(-100%);
-}
+	}
 
-100% {
+	100% {
 		transform: translate(var(--spectrum-progressbar-inline-size));
-}
+	}
 }
 
 @keyframes indeterminate-loop-rtl {
 	0% {
 		transform: translate(100%);
-}
+	}
 
-100% {
+	100% {
 		transform: translate(calc(var(--spectrum-progressbar-inline-size) * -1));
-}
+	}
 }
 
 @media (forced-colors: active) {

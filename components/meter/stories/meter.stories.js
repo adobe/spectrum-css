@@ -42,9 +42,7 @@ export default {
 			},
 			control: "text",
 		},
-		staticColor: {
-			...staticColor,
-		},
+		staticColor,
 	},
 	args: {
 		...ProgressBar.args,
@@ -139,7 +137,7 @@ HelpText.tags = ["!dev"];
 HelpText.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
+HelpText.storyName = "Help text";
 // ********* VRT ONLY ********* //
 export const WithForcedColors = MeterGroup.bind({});
 WithForcedColors.args = Default.args;
