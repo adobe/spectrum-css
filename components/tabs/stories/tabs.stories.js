@@ -11,10 +11,10 @@ import { CompactGroup, OverflowGroup, QuietGroup, Template, VerticalGroup } from
  * ## Usage notes
  *
  * ### Use icons consistently
- * Icons are optional, but don’t mix the use of icons in tabs if they are utilized. Navigation controls require a clear spacial relationship to one another, and mixing the use of icons can dramatically impact the visual balance and presence for each tab item.
+ * Icons are optional, but don't mix the use of icons in tabs if they are utilized. Navigation controls require a clear spacial relationship to one another, and mixing the use of icons can dramatically impact the visual balance and presence for each tab item.
  *
  * ### Setting the selected tab item
- * Only one tab item can be selected at any given time. The selected tab item is designated by the `is-selected` class. A selection indicator line is shown under or next to the selected tab item.
+ * Only one tab item can be selected at any given time. The selected tab item is designated by the `.is-selected` class. A selection indicator line is shown under or next to the selected tab item.
  *
  */
 
@@ -116,11 +116,15 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
- * Basic, default tab items should have a label for accessibility. If a label isn’t present, it must include an icon and becomes an icon-only tab item.
+ * Basic, default tab items should have a label for accessibility. If a label isn't present, it must include an icon and becomes an icon-only tab item.
  *
  * By default, tabs have a divider that spans across all tab items. This style works as a way to anchor them to the page. These types of tabs are best used at the top of a page, as a top-level navigation.
  *
@@ -131,6 +135,19 @@ export const Default = TabsGroups.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
+/**
+ * Icons can be displayed in tab items. Icons should only be used in a tab item when absolutely necessary: when adding essential value and having a strong association with the label. Icons should not be used just as decoration. If the tab item does not have a visible label, it must still have a tooltip to disclose the label.
+ */
+export const IconOnly = Template.bind({});
+IconOnly.storyName = "Default: icon only";
+IconOnly.args = {
+	iconOnly: true,
+};
+IconOnly.tags = ["!dev"];
+IconOnly.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 /**
  * Vertical tabs should be used when horizontal space is more generous and when the list of sections is greater than can be presented to the user in a horizontal format.
  */
@@ -184,6 +201,7 @@ Quiet.parameters = {
  * Compact tabs should never be used without the quiet variation.
  */
 export const Compact = CompactGroup.bind({});
+Compact.storyName = "Density: Compact";
 Compact.args = {
 	isCompact: true,
 	isQuiet: true,
@@ -221,7 +239,7 @@ Disabled.parameters = {
 };
 
 /**
- * Emphasized tabs have blue text for the selected state for visual prominence and to draw more attention to them. This is optimal for when the selection should call attention, such as the main navigation for a website.
+ * By default, tabs are not emphasized. Emphasized tabs have blue text for the selected state for visual prominence and to draw more attention to them. This is optimal for when the selection should call attention, such as the main navigation for a website.
  */
 export const Emphasized = Template.bind({});
 Emphasized.args = {
