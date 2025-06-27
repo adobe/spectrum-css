@@ -67,7 +67,11 @@ export const DialogFullscreen = Variants({
 	},
 	withSizes: false,
 	wrapperStyles: {
-		"background-color": "var(--spectrum-gray-50)"
+		"background-color": "var(--spectrum-gray-50)",
+		"width": "100%", // forces the data-inner-container to be full width so the container query doesn't break.
+	},
+	containerStyles: {
+		"width": "100%", // forces the data-outer-container to be full width so the container query doesn't break.
 	},
 	testData: [
 		{
@@ -80,6 +84,12 @@ export const DialogFullscreen = Variants({
 export const DialogFullscreenTakeover = Variants({
 	Template,
 	withSizes: false,
+	wrapperStyles: {
+		"width": "100%", // forces the data-inner-container to be full width so the container query doesn't break.
+	},
+	containerStyles: {
+		"width": "100%", // forces the data-outer-container to be full width so the container query doesn't break.
+	},
 	testData: [
 		{
 			showModal: false,
