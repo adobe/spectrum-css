@@ -101,6 +101,7 @@ Iconography in v1 inclued 2 sizes, `medium` and `large`, as well as a single SVG
 | SingleGripper     | Deprecated      |
 | DoubleGripper     | Deprecated      |
 | TripleGripper     | Deprecated      |
+| LinkOut75         | **New**         |
 | LinkOut100        | **New**         |
 | LinkOut200        | **New**         |
 | LinkOut300        | **New**         |

@@ -459,6 +459,10 @@
 }
 
 /* Link out */
+.spectrum-UIIcon-LinkOut75 {
+	--spectrum-icon-size: var(--spectrum-link-out-icon-size-75);
+}
+
 .spectrum-UIIcon-LinkOut100 {
 	--spectrum-icon-size: var(--spectrum-link-out-icon-size-100);
 }
