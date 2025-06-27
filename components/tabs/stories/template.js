@@ -14,7 +14,6 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Tabs",
 	customClasses = [],
-	size = "m",
 	orientation = "horizontal",
 	isQuiet = false,
 	isOpen = false,
@@ -61,8 +60,6 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
 				[`${rootClass}--horizontal`]: isHorizontal || isOverflow,
 				[`${rootClass}--vertical`]: isVertical,
 				[`${rootClass}--vertical-right`]: hasRightAlignedTabs,
@@ -93,7 +90,6 @@ export const Template = ({
 									Icon({
 										iconName: item.icon,
 										setName: "workflow",
-										size,
 									}, context)
 								)}
 								${when(item.label && !iconOnly, () => html`
@@ -112,12 +108,10 @@ export const Template = ({
 			), () => html`
 				${Picker({
 					isQuiet: true,
-					size,
 					isOpen,
 					placeholder: !iconOnly ? content?.[0].label : Icon({
 						iconName: content?.[0].icon,
 						setName: "workflow",
-						size,
 					}, context),
 					name: content?.[0].label,
 					id: "tab-selector",
@@ -127,7 +121,6 @@ export const Template = ({
 					popoverContent: [
 						() => Menu({
 							selectionMode: "none",
-							size,
 							role: "listbox",
 							subrole: "option",
 							customStyles: { minWidth: "max-content" },
