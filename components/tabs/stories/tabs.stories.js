@@ -1,6 +1,5 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
+import { isEmphasized, isQuiet } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TabsGroups } from "./tabs.test.js";
@@ -24,7 +23,6 @@ export default {
 	component: "Tabs",
 	argTypes: {
 		content: { table: { disable: true } },
-		size: size(["s", "m", "l", "xl"]),
 		orientation: {
 			name: "Orientation",
 			type: { name: "string", required: true },
@@ -88,7 +86,6 @@ export default {
 		isEmphasized: false,
 		isCompact: false,
 		iconOnly: false,
-		size: "m",
 		orientation: "horizontal",
 		hasRightAlignedTabs: false,
 		useAnchors: false,
@@ -168,21 +165,6 @@ Overflow.args = {
 };
 Overflow.tags = ["!dev"];
 Overflow.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
- */
-export const Sizing = (args, context) => Sizes({
-	Template,
-	withHeading: false,
-	withBorder: false,
-	...args,
-}, context);
-Sizing.args = Default.args;
-Sizing.tags = ["!dev"];
-Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
