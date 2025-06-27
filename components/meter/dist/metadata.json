@@ -2,33 +2,38 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Meter",
+    ".spectrum-Meter .spectrum-ProgressBar-helptext",
     ".spectrum-Meter.is-negative",
     ".spectrum-Meter.is-notice",
     ".spectrum-Meter.is-positive",
-    ".spectrum-Meter.spectrum-Meter--sizeL"
+    ".spectrum-Meter.spectrum-Meter--sizeL",
+    ".spectrum-Meter.spectrum-Meter--sizeS",
+    ".spectrum-Meter.spectrum-Meter--sizeXL"
   ],
-  "modifiers": ["--mod-meter-max-width", "--mod-meter-min-width"],
+  "modifiers": [
+    "--mod-meter-help-text-to-progress-bar",
+    "--mod-meter-max-width",
+    "--mod-meter-min-width"
+  ],
   "component": [
+    "--spectrum-meter-help-text-to-progress-bar",
     "--spectrum-meter-maximum-width",
     "--spectrum-meter-minimum-width",
+    "--spectrum-meter-thickness-extra-large",
     "--spectrum-meter-thickness-large",
+    "--spectrum-meter-thickness-medium",
     "--spectrum-meter-thickness-small"
   ],
   "global": [
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-75",
     "--spectrum-negative-visual-color",
     "--spectrum-notice-visual-color",
-    "--spectrum-positive-visual-color"
+    "--spectrum-positive-visual-color",
+    "--spectrum-spacing-75"
   ],
   "passthroughs": [
     "--mod-progressbar-fill-color",
-    "--mod-progressbar-font-size",
     "--mod-progressbar-max-size",
     "--mod-progressbar-min-size",
-    "--mod-progressbar-spacing-top-to-text",
     "--mod-progressbar-thickness"
   ],
   "high-contrast": []
