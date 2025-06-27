@@ -203,8 +203,8 @@ jobs:
         secrets: inherit
 
     # -------------------------------------------------------------
-    # PUBLISH TO NETLIFY --- #
-    # Publish to netlify by leveraging the previous build and then building the site as well
+    # PUBLISH TO AZURE --- #
+    # Publish to azure by leveraging the previous build and then building the site as well
     # -------------------------------------------------------------
     publish_site:
         name: Publish

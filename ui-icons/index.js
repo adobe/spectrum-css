@@ -97,6 +97,12 @@ async function copySVGs() {
 function alphaNumericSort (a, b) {
 	const aSet = a.match(/^([a-z]+)([0-9]+)\.svg$/i);
 	const bSet = b.match(/^([a-z]+)([0-9]+)\.svg$/i);
+
+	// Handle files that don't match the pattern
+	if (!aSet || !bSet) {
+		return a.localeCompare(b); // Fallback to alphabetical sort
+	}
+
 	const aChar = aSet[1];
 	const bChar = bSet[1];
 

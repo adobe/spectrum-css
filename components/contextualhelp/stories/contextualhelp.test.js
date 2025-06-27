@@ -8,15 +8,7 @@ export const ContextualHelpGroup = Variants({
 			testHeading: "Default",
 			customStyles: {
 				"inline-size": "275px",
-				"margin-bottom": "170px",
-			},
-		},
-		{
-			testHeading: "Max-width popover",
-			customStyles: {
-				"inline-size": "275px",
-				"margin-bottom": "275px",
-				"--mod-spectrum-contextual-help-popover-maximum-width": "150px",
+				"margin-bottom": "200px",
 			},
 		},
 		{
@@ -25,17 +17,14 @@ export const ContextualHelpGroup = Variants({
 				"inline-size": "275px",
 				"margin-bottom": "200px",
 			},
-			link: {
-				text: "Learn about permissions",
-				url: "#",
-			},
+			link: true,
 		},
 		{
 			testHeading: "Help",
-			iconName: "Help",
+			iconName: "HelpCircle",
 			customStyles: {
 				"inline-size": "275px",
-				"margin-bottom": "170px",
+				"margin-bottom": "200px",
 			},
 		},
 	],

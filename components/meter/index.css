@@ -15,15 +15,19 @@
 .spectrum-Meter {
 	--mod-progressbar-max-size: var(--mod-meter-max-width, var(--spectrum-meter-maximum-width));
 	--mod-progressbar-min-size: var(--mod-meter-min-width, var(--spectrum-meter-minimum-width));
+	--spectrum-meter-help-text-to-progress-bar: var(--spectrum-spacing-75);
+	--mod-progressbar-thickness: var(--spectrum-meter-thickness-medium);
 
-	--mod-progressbar-thickness: var(--spectrum-meter-thickness-small);
-	--mod-progressbar-font-size: var(--spectrum-font-size-75);
-	--mod-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+	&.spectrum-Meter--sizeS {
+		--mod-progressbar-thickness: var(--spectrum-meter-thickness-small);
+	}
 
 	&.spectrum-Meter--sizeL {
 		--mod-progressbar-thickness: var(--spectrum-meter-thickness-large);
-		--mod-progressbar-font-size: var(--spectrum-font-size-100);
-		--mod-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
+	}
+
+	&.spectrum-Meter--sizeXL {
+		--mod-progressbar-thickness: var(--spectrum-meter-thickness-extra-large);
 	}
 
 	&.is-positive {
@@ -36,6 +40,10 @@
 
 	&.is-negative {
 		--mod-progressbar-fill-color: var(--spectrum-negative-visual-color);
+	}
+
+	.spectrum-ProgressBar-helptext {
+		margin-block-start: var(--mod-meter-help-text-to-progress-bar, var(--spectrum-meter-help-text-to-progress-bar));
 	}
 }
 /* @passthrough end */
