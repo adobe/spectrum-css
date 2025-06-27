@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -12,17 +12,93 @@
  */
 
 .spectrum-TagGroup {
-	--spectrum-tag-group-item-margin-block: var(--spectrum-spacing-75);
-	--spectrum-tag-group-item-margin-inline: var(--spectrum-spacing-75);
+	--spectrum-tag-group-inline-tag-spacing: var(--spectrum-spacing-200);
+	--spectrum-tag-group-block-tag-spacing: var(--spectrum-spacing-200);
+	--spectrum-tag-group-block-spacing-label-to-tags: var(--spectrum-field-label-to-component);
+	--spectrum-tag-group-inline-spacing-label-to-tags: var(--spectrum-spacing-200);
+	--spectrum-tag-group-spacing-help-text-to-tags: var(--spectrum-help-text-to-component);
 
-	display: inline-flex;
-	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	/* passthroughs for body typography element in empty state */
+	--mod-body-line-height: var(--spectrum-line-height-100);
+	--mod-body-font-size: var(--spectrum-font-size-100);
+	--mod-body-margin-start: var(--spectrum-component-top-to-text-100);
+	--mod-body-margin-end: var(--spectrum-component-bottom-to-text-100);
+
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--mod-body-cjk-line-height: var(--spectrum-cjk-line-height-100);
+	}
 }
 
-.spectrum-TagGroup-item {
-	margin-block: var(--mod-tag-group-item-margin-block, var(--spectrum-tag-group-item-margin-block));
-	margin-inline: var(--mod-tag-group-item-margin-inline, var(--spectrum-tag-group-item-margin-inline));
+.spectrum-TagGroup--sizeS {
+	--spectrum-tag-group-inline-tag-spacing: var(--spectrum-spacing-100);
+	--spectrum-tag-group-block-tag-spacing: var(--spectrum-spacing-100);
+
+	/* passthroughs for body typography element in empty state */
+	--mod-body-font-size: var(--spectrum-font-size-75);
+	--mod-body-margin-start: var(--spectrum-component-top-to-text-75);
+	--mod-body-margin-end: var(--spectrum-component-bottom-to-text-75);
+}
+
+.spectrum-TagGroup--sizeL {
+	--spectrum-tag-group-inline-tag-spacing: var(--spectrum-spacing-200);
+	--spectrum-tag-group-block-tag-spacing: var(--spectrum-spacing-200);
+
+	/* passthroughs for body typography element in empty state */
+	--mod-body-font-size: var(--spectrum-font-size-200);
+	--mod-body-margin-start: var(--spectrum-component-top-to-text-200);
+	--mod-body-margin-end: var(--spectrum-component-bottom-to-text-200);
+}
+
+.spectrum-TagGroup {
+	display: grid;
+	grid-template-rows: auto auto auto auto;
+}
+
+.spectrum-TagGroup-tags {
+	display: inline-flex;
+	flex-wrap: wrap;
+	column-gap: var(--mod-tag-group-inline-tag-spacing, var(--spectrum-tag-group-inline-tag-spacing));
+	row-gap: var(--mod-tag-group-block-tag-spacing, var(--spectrum-tag-group-block-tag-spacing));
+	margin-block-end: var(--mod-tag-group-block-tag-spacing, var(--spectrum-tag-group-block-tag-spacing));
+}
+
+.spectrum-TagGroup-label {
+	margin-block-end: var(--mod-tag-group-block-spacing-label-to-tags, var(--spectrum-tag-group-block-spacing-label-to-tags));
+}
+
+.spectrum-TagGroup-actionButton {
+	justify-self: start;
+}
+
+.spectrum-TagGroup-helpText {
+	margin-block-start: var(--mod-tag-group-spacing-help-text-to-tags, var(--spectrum-tag-group-spacing-help-text-to-tags));
+}
+
+.spectrum-TagGroup--sideLabel {
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto;
+
+	.spectrum-TagGroup-label {
+		grid-row: 1;
+		grid-column: 1;
+		margin-block-end: 0;
+		margin-inline-end: var(--mod-tag-group-inline-spacing-label-to-tags, var(--spectrum-tag-group-inline-spacing-label-to-tags));
+	}
+
+	.spectrum-TagGroup-tags {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	.spectrum-TagGroup-actionButton {
+		grid-row: 2;
+		grid-column: 2;
+	}
+
+	.spectrum-TagGroup-helpText {
+		grid-row: 3;
+		grid-column: 2;
+	}
 }
