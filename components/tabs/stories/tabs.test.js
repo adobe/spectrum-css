@@ -1,4 +1,4 @@
-import { Sizes, Variants } from "@spectrum-css/preview/decorators";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
 const ExampleLabelOnlyTabContent = [
@@ -17,7 +17,7 @@ const ExampleLabelOnlyTabContent = [
 
 export const TabsGroups = Variants({
 	Template,
-	withSizes: false, // manually add sizes with a different heading at the end of the test data
+	withSizes: false,
 	wrapperStyles: {
 		"column-gap": "80px",
 	},
@@ -83,33 +83,6 @@ export const TabsGroups = Variants({
 			testHeading: "With anchor tags",
 			useAnchors: true,
 		},
-		// sizing tests
-		{
-			testHeading: "Default sizing",
-			withBorder: false,
-			withHeading: false,
-			withWrapperBorder: false,
-			withStates: false,
-			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
-		},
-		{
-			testHeading: "Compact sizing",
-			isCompact: true,
-			withBorder: false,
-			withHeading: false,
-			withWrapperBorder: false,
-			withStates: false,
-			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
-		},
-		{
-			testHeading: "Vertical sizing",
-			orientation: "vertical",
-			withBorder: false,
-			withHeading: false,
-			withWrapperBorder: false,
-			withStates: false,
-			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
-		}
 	],
 	stateData: [
 		{
