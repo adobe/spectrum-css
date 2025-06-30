@@ -16,7 +16,6 @@ export const Template = ({
 	customClasses = [],
 	orientation = "horizontal",
 	isOpen = false,
-	isEmphasized = false,
 	isCompact = false,
 	iconOnly = false,
 	hasRightAlignedTabs = false,
@@ -62,7 +61,6 @@ export const Template = ({
 				[`${rootClass}--horizontal`]: isHorizontal || isOverflow,
 				[`${rootClass}--vertical`]: isVertical,
 				[`${rootClass}--vertical-right`]: hasRightAlignedTabs,
-				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--compact`]: isCompact,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -189,21 +187,9 @@ export const VerticalGroup = (args, context) => Container({
 		}, context)}
 		${Container({
 			withBorder: false,
-			heading: "Emphasized, with label and icon",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isEmphasized: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
 			heading: "Label only",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, content: LabelOnlyTabsContent, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Emphasized, with label only",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, }, context),
 		}, context)}
 		${Container({
 			withBorder: false,
@@ -213,21 +199,9 @@ export const VerticalGroup = (args, context) => Container({
 		}, context)}
 		${Container({
 			withBorder: false,
-			heading: "Compact, emphasized, with label and icon",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isEmphasized: true, isCompact: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
 			heading: "Compact, label only",
 			containerStyles: {"gap": "8px"},
 			content: Template({...args, content: LabelOnlyTabsContent, isCompact: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Compact, emphasized label only",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, isCompact: true, }, context),
 		}, context)}
 	`
 }, context);
@@ -245,28 +219,13 @@ export const CompactGroup = (args, context) => Container({
 		}, context)}
 		${Container({
 			withBorder: false,
-			heading: "Emphasized, with label and icon",
-			content: Template({...args, isEmphasized: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
 			heading: "Label only",
 			content: Template({...args, content: LabelOnlyTabsContent, }, context),
 		}, context)}
 		${Container({
 			withBorder: false,
-			heading: "Emphasized, with label only",
-			content: Template({...args, isEmphasized: true, content: LabelOnlyTabsContent, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
 			heading: "Icon only",
 			content: Template({...args, iconOnly: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Emphasized, icon-only",
-			content: Template({...args, isEmphasized: true, iconOnly: true, }, context),
 		}, context)}
 	`
 }, context);
