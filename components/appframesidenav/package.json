@@ -13,23 +13,37 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"exports": {
+		".": "./dist/index.css",
+		"./*.md": "./*.md",
+		"./dist/*": "./dist/*",
+		"./index-*.css": "./dist/index-*.css",
+		"./index.css": "./dist/index.css",
+		"./metadata.json": "./dist/metadata.json",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
+	},
 	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"CHANGELOG.md",
-		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
-	],
 	"peerDependencies": {
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/tokens": "^14.0.0-next.9"
+		"@spectrum-css/icon": ">=10.0.0-next.0",
+		"@spectrum-css/tokens": ">=16.1.0-next.0"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"

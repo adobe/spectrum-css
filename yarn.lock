@@ -4180,9 +4180,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/appframe@workspace:components/appframe"
   peerDependencies:
-    "@spectrum-css/tokens": ^14.0.0-next.9
-    "@spectrum-css/typography": ">=6"
+    "@spectrum-css/tokens": ">=16.1.0-next.0"
+    "@spectrum-css/typography": ">=9.0.0-next.0"
   peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
     "@spectrum-css/typography":
       optional: true
   languageName: unknown
@@ -4192,8 +4194,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/appframesidenav@workspace:components/appframesidenav"
   peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ^14.0.0-next.9
+    "@spectrum-css/icon": ">=10.0.0-next.0"
+    "@spectrum-css/tokens": ">=16.1.0-next.0"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
