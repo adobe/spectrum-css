@@ -53,26 +53,26 @@
 }
 
 .spectrum-Tabs--vertical {
-	--mod-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
+	--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
 }
 
 .spectrum-Tabs--vertical-right {
-	--mod-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical-right, left);
+	--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical-right, left);
 }
 
 .spectrum-Tabs--vertical:dir(rtl) {
-	--mod-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, left);
+	--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, left);
 }
 
 .spectrum-Tabs--vertical-right:dir(rtl) {
-	--mod-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
+	--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
 }
 
 .spectrum-Tabs.spectrum-Tabs--compact {
-	--mod-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium));
-	--mod-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
-	--mod-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
-	--mod-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium));
+	--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium));
+	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
+	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
+	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium));
 }
 
 .spectrum-Tabs {
