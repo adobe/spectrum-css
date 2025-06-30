@@ -50,14 +50,6 @@
 
 	--spectrum-tabs-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-tabs-animation-ease: var(--spectrum-animation-ease-in-out);
-
-	&.spectrum-Tabs--emphasized {
-		--mod-tabs-color-selected: var(--mod-tabs-color-selected-emphasized, var(--spectrum-accent-content-color-default));
-		--mod-tabs-color-hover: var(--mod-tabs-color-hover-emphasized, var(--spectrum-accent-content-color-hover));
-		--mod-tabs-color-key-focus: var(--mod-tabs-color-key-focus-emphasized, var(--spectrum-accent-content-color-key-focus));
-
-		--mod-tabs-selection-indicator-color: var(--mod-tabs-selection-indicator-color-emphasized, var(--spectrum-accent-content-color-default));
-	}
 }
 
 .spectrum-Tabs--vertical {
