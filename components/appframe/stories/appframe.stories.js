@@ -3,11 +3,11 @@ import { Template } from "./template.js";
 
 /**
  * The app frame component is a starting point for an app's overall layout. It contains the header, side navigation, and main content area.
- * 
+ *
  * ⚠️ This is currently an early prototype based on a draft version of design specs.
  */
 export default {
-	title: "Components/App frame",
+	title: "App frame",
 	component: "AppFrame",
 	argTypes: {
 		hasSideNavigation: {
