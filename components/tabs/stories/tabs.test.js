@@ -30,23 +30,12 @@ export const TabsGroups = Variants({
 			isEmphasized: true,
 		},
 		{
-			testHeading: "Quiet",
-			isQuiet: true,
-		},
-		{
-			testHeading: "Quiet emphasized",
-			isQuiet: true,
-			isEmphasized: true,
-		},
-		{
 			testHeading: "Compact",
 			isCompact: true,
-			isQuiet: true,
 		},
 		{
 			testHeading: "Compact emphasized",
 			isCompact: true,
-			isQuiet: true,
 			isEmphasized: true,
 		},
 		{
@@ -62,7 +51,6 @@ export const TabsGroups = Variants({
 			testHeading: "Compact vertical tabs",
 			orientation: "vertical",
 			isCompact: true,
-			isQuiet: true,
 		},
 		{
 			testHeading: "Right vertical tabs",
@@ -77,7 +65,6 @@ export const TabsGroups = Variants({
 			testHeading: "Compact overflow",
 			orientation: "overflow",
 			isCompact: true,
-			isQuiet: true,
 		},
 		{
 			testHeading: "With anchor tags",
