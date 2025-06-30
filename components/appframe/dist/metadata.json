@@ -1,0 +1,67 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum--dark .spectrum-AppFrame",
+    ".spectrum-AppFrame",
+    ".spectrum-AppFrame--noSideNav",
+    ".spectrum-AppFrame-content",
+    ".spectrum-AppFrame-content .spectrum-AppFrame-section:last-of-type",
+    ".spectrum-AppFrame-content > main",
+    ".spectrum-AppFrame-content--rounded",
+    ".spectrum-AppFrame-content--rounded .spectrum-AppFrame-section:last-of-type",
+    ".spectrum-AppFrame-content-intro",
+    ".spectrum-AppFrame-header",
+    ".spectrum-AppFrame-section",
+    ".spectrum-AppFrame-section + .spectrum-AppFrame-section",
+    ".spectrum-AppFrame-section .spectrum-AppFrame-section-heading",
+    ".spectrum-AppFrame-section-grid",
+    ".spectrum-AppFrame-section-grid > .spectrum-AppFrame-section-grid-item--wide",
+    ".spectrum-AppFrame-section-grid:is(ul)",
+    ".spectrum-AppFrame-section-inner > .spectrum-Body",
+    ".spectrum-AppFrame-section-inner > .spectrum-Heading",
+    ".spectrum-AppFrame-section-inner:not(:last-child)",
+    ".spectrum-AppFrame-side-nav"
+  ],
+  "modifiers": [
+    "--mod-app-frame-background",
+    "--mod-app-frame-content-background",
+    "--mod-app-frame-content-corner-radius",
+    "--mod-app-frame-header-height",
+    "--mod-app-frame-intro-background",
+    "--mod-app-frame-max-readable-characters",
+    "--mod-app-frame-section-grid-gap",
+    "--mod-app-frame-section-inner-area-vertical-gap",
+    "--mod-app-frame-section-padding"
+  ],
+  "component": [
+    "--spectrum-app-frame-background",
+    "--spectrum-app-frame-content-background",
+    "--spectrum-app-frame-content-corner-radius",
+    "--spectrum-app-frame-end-side-column-inline-size",
+    "--spectrum-app-frame-header-height",
+    "--spectrum-app-frame-intro-background",
+    "--spectrum-app-frame-max-readable-characters",
+    "--spectrum-app-frame-section-gap",
+    "--spectrum-app-frame-section-grid-gap",
+    "--spectrum-app-frame-section-heading-margin-block",
+    "--spectrum-app-frame-section-inner-area-vertical-gap",
+    "--spectrum-app-frame-section-padding",
+    "--spectrum-app-frame-start-side-column-inline-size",
+    "--spectrum-app-frame-to-edge"
+  ],
+  "global": [
+    "--spectrum-background-base-color",
+    "--spectrum-background-layer-1-color",
+    "--spectrum-component-height-400",
+    "--spectrum-corner-radius-extra-large-default",
+    "--spectrum-spacing-200",
+    "--spectrum-spacing-300",
+    "--spectrum-spacing-400",
+    "--spectrum-spacing-600"
+  ],
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-app-frame-background",
+    "--highcontrast-app-frame-content-background"
+  ]
+}
