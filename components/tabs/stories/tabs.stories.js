@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isEmphasized } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TabsGroups } from "./tabs.test.js";
@@ -37,7 +36,6 @@ export default {
 			control: "select",
 			default: "horizontal",
 		},
-		isEmphasized,
 		hasRightAlignedTabs: {
 			name: "Right-aligned tabs",
 			type: { name: "boolean" },
@@ -81,7 +79,6 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Tabs",
-		isEmphasized: false,
 		isCompact: false,
 		iconOnly: false,
 		orientation: "horizontal",
@@ -206,18 +203,6 @@ Disabled.args = {
 };
 Disabled.tags = ["!dev"];
 Disabled.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * By default, tabs are not emphasized. Emphasized tabs have blue text and selection indicatorfor the selected state for visual prominence and to draw more attention to them. This is optimal for when the selection should call attention, such as the main navigation for a website.
- */
-export const Emphasized = Template.bind({});
-Emphasized.args = {
-	isEmphasized: true,
-};
-Emphasized.tags = ["!dev"];
-Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

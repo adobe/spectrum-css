@@ -26,26 +26,12 @@ export const TabsGroups = Variants({
 			testHeading: "Default",
 		},
 		{
-			testHeading: "Emphasized",
-			isEmphasized: true,
-		},
-		{
 			testHeading: "Compact",
 			isCompact: true,
 		},
 		{
-			testHeading: "Compact emphasized",
-			isCompact: true,
-			isEmphasized: true,
-		},
-		{
 			testHeading: "Vertical tabs",
 			orientation: "vertical",
-		},
-		{
-			testHeading: "Emphasized vertical tabs",
-			orientation: "vertical",
-			isEmphasized: true,
 		},
 		{
 			testHeading: "Compact vertical tabs",
