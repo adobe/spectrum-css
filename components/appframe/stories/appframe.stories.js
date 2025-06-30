@@ -43,6 +43,7 @@ export default {
 			options: ["default", "rounded"],
 			control: "select",
 		},
+		items: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-AppFrame",

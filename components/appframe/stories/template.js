@@ -25,6 +25,7 @@ export const Template = ({
 	hasMinimizedSideNav = false,
 	contentLayout = "default",
 	id,
+	items = [],
 	customClasses = [],
 	customStyles = {},
 }) => {
@@ -32,6 +33,7 @@ export const Template = ({
 
 	const sideNavigationMarkup = AppFrameSideNav({
 		isMinimized: hasMinimizedSideNav,
+		items,
 		customClasses: ["spectrum-AppFrame-side-nav"],
 	});
 
@@ -59,7 +61,7 @@ export const Template = ({
 							<h1 class="spectrum-Heading spectrum-Heading--sizeM spectrum-AppFrame-section-heading">Welcome to Example App, Frodo</h1>
 							<div class="spectrum-AppFrame-section-grid">
 								<div class="spectrum-AppFrame-section-grid-item--wide" style=${styleMap(emphasizedContainerStyles)}></div>
-								${Array.from({length: 3}, () => 
+								${Array.from({length: 3}, () =>
 									html`<div style=${styleMap(emphasizedContainerStyles)}></div>`
 								)}
 							</div>
@@ -75,7 +77,7 @@ export const Template = ({
 							})}
 							<div class="spectrum-AppFrame-section-grid">
 								<div class="spectrum-AppFrame-section-grid-item--wide" style=${styleMap(emphasizedContainerStyles)}></div>
-								${Array.from({length: 3}, () => 
+								${Array.from({length: 3}, () =>
 									html`<div style=${styleMap(emphasizedContainerStyles)}></div>`
 								)}
 							</div>
@@ -88,7 +90,7 @@ export const Template = ({
 								customClasses: ["spectrum-AppFrame-section-heading"],
 							})}
 							<ul class="spectrum-AppFrame-section-grid">
-								${Array.from({length: 20}, () => 
+								${Array.from({length: 20}, () =>
 									html`<li style=${styleMap(emphasizedContainerStyles)}></li>`
 								)}
 							</ul>
@@ -130,7 +132,7 @@ export const Template = ({
 
 /**
  * Example content within the header, for prototyping.
- * 
+ *
  * To-do: this should go away when Header becomes its own full-fledged component.
  */
 var headerExampleMarkup = (hasMinimizedSideNav, updateArgs) => html`
@@ -147,8 +149,7 @@ var headerExampleMarkup = (hasMinimizedSideNav, updateArgs) => html`
 		})}
 	>
 		${ActionButton({
-			/* To-do: Uses S2 icon name "MenuHamburger" instead of "ShowMenu". */
-			iconName: hasMinimizedSideNav ? "ShowMenu" : "ChevronDoubleLeft",
+			iconName: hasMinimizedSideNav ? "MenuHamburger" : "ChevronDoubleLeft",
 			isQuiet: true,
 			hideLabel: true,
 			onclick: () => {
@@ -165,5 +166,5 @@ var headerExampleMarkup = (hasMinimizedSideNav, updateArgs) => html`
 			fontSize: "var(--spectrum-font-size-200)",
 			fontWeight: "700",
 		})}>Example App</span>
-	</div>
+	</header>
 `;
