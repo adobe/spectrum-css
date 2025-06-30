@@ -235,26 +235,11 @@
 	}
 }
 
-/* Quiet tabs should not extend all the way across the screen as their line doesn't */
-.spectrum-Tabs--quiet {
-	display: inline-flex;
-	background: none;
-	border-color: transparent;
-
-	.spectrum-Tabs-selectionIndicator {
-		padding-inline-start: var(--mod-tabs-start-to-item-quiet);
-	}
-}
-
 .spectrum-Tabs--vertical,
 .spectrum-Tabs--vertical-right {
 	display: inline-flex;
 	flex-direction: column;
 	padding: 0;
-
-	&.spectrum-Tabs--quiet {
-		border-color: transparent;
-	}
 
 	.spectrum-Tabs-item {
 		block-size: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
@@ -332,11 +317,6 @@
 				block-size: 100%;
 				inset-block-start: 0;
 			}
-		}
-
-		/* Quiet tabs get a bottom border in WHCM */
-		&.spectrum-Tabs--quiet {
-			background: linear-gradient(to var(--mod-tabs-list-background-direction, var(--spectrum-tabs-list-background-direction)), var(--highcontrast-tabs-divider-background-color, var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color))) 0 var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)), transparent var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)));
 		}
 	}
 }
