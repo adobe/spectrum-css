@@ -138,4 +138,10 @@
 	--spectrum-field-edge-to-icon-100: 9px;
 	--spectrum-field-edge-to-icon-200: 11px;
 	--spectrum-field-edge-to-icon-300: 14px;
+
+	/* To-do: For app frame demo purposes only;
+		would not convert to SWC. Would need a token.
+		This value is just a guesstimate. */
+		--spectrum-app-side-nav-min-inline-size-expanded: 160px;
+		--spectrum-app-side-nav-min-inline-size-minimized: 64px;
 }

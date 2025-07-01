@@ -136,4 +136,8 @@
 	--spectrum-field-edge-to-icon-100: 5px;
 	--spectrum-field-edge-to-icon-200: 6px;
 	--spectrum-field-edge-to-icon-300: 10px;
+
+	/* To-do: For app frame demo purposes only. This token is not in the design spec. */
+	--spectrum-app-side-nav-min-inline-size-expanded: 140px;
+	--spectrum-app-side-nav-min-inline-size-minimized: 56px;
 }
