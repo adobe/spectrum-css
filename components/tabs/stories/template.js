@@ -66,6 +66,7 @@ export const Template = ({
 			})}
 			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
+			role="tablist"
 		>
 			${when(!isOverflow, () => repeat(
 				content,
@@ -79,8 +80,12 @@ export const Template = ({
 									"is-selected": item?.isSelected ?? false,
 									"is-disabled": item?.isDisabled ?? false,
 								})}
-								tabindex="0"
+								tabindex=${item?.isDisabled ? "-1" : "0"}
 								id=${getRandomId("tab-item")}
+								role="tab"
+								aria-selected=${item?.isSelected ?? false}
+								aria-disabled=${item?.isDisabled ?? false}
+
 							>
 								${when(item.icon, () =>
 									Icon({
@@ -89,7 +94,10 @@ export const Template = ({
 									}, context)
 								)}
 								${when(item.label && !iconOnly, () => html`
-									<span class="${rootClass}-itemLabel">
+									<span
+										class="${rootClass}-itemLabel"
+										id=${getRandomId("tab-item-label")}
+									>
 										${item.label}
 									</span>
 								`)}
