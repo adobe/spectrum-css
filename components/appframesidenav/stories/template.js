@@ -1,11 +1,11 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { useArgs } from "@storybook/preview-api";
 import { when } from "lit/directives/when.js";
 
 import "@spectrum-css/appframesidenav/index.css";
@@ -18,6 +18,8 @@ export const Template = ({
 	items = [],
 	isMinimized = false,
 	id,
+	showDividers = false,
+	customContent = [],
 	customClasses = [],
 	customStyles = {},
 }) => {
@@ -42,13 +44,18 @@ export const Template = ({
 			style=${ifDefined(styleMap(customStyles))}
 		>
 			${when(showTopButton && topButtonText, () => topButtonMarkup)}
+			${when(showDividers, () => html`<div class="spectrum-AppFrameSideNav-divider"></div>`)}
 			<ul class="spectrum-AppFrameSideNav-list">
 				${(items.length > 0 ? items : defaultSideNavItems).map(navItem =>
-					html`<li class=${classMap({
-						[`${rootClass}-list-item`]: true,
-						[`${rootClass}-list-item--current`]: navItem.isCurrent,
-						[`${rootClass}-list-item--endSectionStart`]: navItem.isEndSectionStart,
-					})}>
+					html`<li
+						class=${classMap({
+							[`${rootClass}-list-item`]: true,
+							[`${rootClass}-list-item--current`]: navItem.isCurrent,
+							[`${rootClass}-list-item--endSectionStart`]: navItem.isEndSectionStart,
+							["is-expanded"]: navItem.isExpanded
+						})}
+						data-tier=${ifDefined(navItem.tier)}
+					>
 						<a
 							class="spectrum-AppFrameSideNav-list-item-link"
 							href="#"
@@ -65,6 +72,39 @@ export const Template = ({
 					</li>`
 				)}
 			</ul>
+
+			${when(customContent.length > 0, () => html`
+				<div class="spectrum-AppFrameSideNav-divider"></div>
+				<ul class="spectrum-AppFrameSideNav-list">
+				${customContent.map(navItem =>
+					html`<li
+						class=${classMap({
+							[`${rootClass}-list-item`]: true,
+							[`${rootClass}-list-item--current`]: navItem.isCurrent,
+							[`${rootClass}-list-item--endSectionStart`]: navItem.isEndSectionStart,
+							["is-expanded"]: navItem.isExpanded,
+						})}
+						data-tier=${ifDefined(navItem.tier)}
+					>
+						<a
+							class="spectrum-AppFrameSideNav-list-item-link"
+							href="#"
+							@click=${demoCurrentItemOnClick}
+						>
+							<span class="spectrum-AppFrameSideNav-list-item-icon">
+								${Icon({
+									iconName: navItem.workflowIconName,
+									setName: "workflow",
+								})}
+							</span>
+							<span class="spectrum-AppFrameSideNav-list-item-label">${navItem.label}</span>
+						</a>
+					</li>`
+				)}
+			</ul>
+			`)}
+
+			${when(showDividers, () => html`<div class="spectrum-AppFrameSideNav-divider"></div>`)}
 			${ActionButton({
 				iconName: isMinimized ? "ChevronDoubleRight" : "ChevronDoubleLeft",
 				isQuiet: true,
