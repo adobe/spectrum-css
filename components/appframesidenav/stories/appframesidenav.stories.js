@@ -23,7 +23,7 @@ export default {
 			control: "boolean",
 		},
 		showTopButton: {
-			name: "Show top button",
+			name: "Optional button above navigation items",
 			description: "Displays a button above the navigation items.",
 			table: {
 				type: { summary: "boolean" },
@@ -34,7 +34,7 @@ export default {
 			control: "boolean",
 		},
 		topButtonText: {
-			name: "Top button label text",
+			name: "Optional button label text",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -75,8 +75,16 @@ Default.args = {};
 export const EndSection = Template.bind({});
 EndSection.args = {
 	customStyles: {
-		minBlockSize: "450px",
+		minBlockSize: "600px",
 	},
+	items: [
+		...defaultSideNavItems,
+		{
+			label: "Settings",
+			workflowIconName: "Settings",
+			isEndSectionStart: true,
+		},
+	]
 };
 
 /**
