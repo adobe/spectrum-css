@@ -42,6 +42,17 @@ export default {
 			},
 			control: "text",
 		},
+		showDividers: {
+			name: "Show dividers",
+			description: "Displays dividers between navigation sections.",
+			table: {
+				type: { summary: "boolean" },
+				defaultValue: { summary: false },
+				category: "Component",
+			},
+			type: { required: true },
+			control: "boolean",
+		},
 		items: {
 			name: "Navigation items",
 			description: "Array of objects with `label` and `workflowIconName`. Optionally, `isCurrent` marks the current page. `isEndSectionBoundary` marks the first nav item that should be aligned at the optional bottom \"end section\"; this should only be applied to one item.",
@@ -51,6 +62,7 @@ export default {
 			type: { required: true },
 			control: "object",
 		},
+		customContent: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-AppFrameSideNav",
@@ -58,6 +70,7 @@ export default {
 		topButtonText: "Create",
 		items: defaultSideNavItems,
 		isMinimized: false,
+		showDividers: false,
 	},
 };
 
@@ -97,4 +110,28 @@ EndSection.args = {
 export const Minimized = Template.bind({});
 Minimized.args = {
 	isMinimized: true,
+};
+
+export const Dividers = Template.bind({});
+Dividers.args = {
+	showDividers: true,
+};
+Dividers.storyName = "With navigation dividers";
+
+export const CustomContent = Template.bind({});
+CustomContent.args = {
+	showDividers: true,
+	customContent: [
+		{
+			label: "All photos",
+			workflowIconName: "Image",
+			isExpanded: true,
+			tier: 0,
+		},
+		{
+			label: "Publish",
+			workflowIconName: "Publish",
+			tier: 1,
+		},
+	],
 };
