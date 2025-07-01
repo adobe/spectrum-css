@@ -1,9 +1,11 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { useArgs } from "@storybook/preview-api";
 import { when } from "lit/directives/when.js";
 
 import "@spectrum-css/appframesidenav/index.css";
@@ -19,6 +21,8 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 }) => {
+	const [, updateArgs] = useArgs();
+
 	const topButtonMarkup = Button({
 		variant: "accent",
 		label: topButtonText,
@@ -61,6 +65,16 @@ export const Template = ({
 					</li>`
 				)}
 			</ul>
+			${ActionButton({
+				iconName: isMinimized ? "ChevronDoubleRight" : "ChevronDoubleLeft",
+				isQuiet: true,
+				hideLabel: true,
+				customClasses: [`${rootClass}-expand-button`],
+				onclick: () => {
+					// Toggle minimized or expanded side nav on click.
+					updateArgs?.({ isMinimized: !isMinimized });
+				},
+			})}
 		</nav>
 	`;
 };
@@ -75,7 +89,7 @@ const demoCurrentItemOnClick = (e) => {
 		item?.classList.remove("spectrum-AppFrameSideNav-list-item--current");
 	});
 	e?.target?.closest(".spectrum-AppFrameSideNav-list-item")?.classList.add("spectrum-AppFrameSideNav-list-item--current");
-}
+};
 
 /**
  * Fallback data for the side navigation items.
@@ -113,10 +127,5 @@ export const defaultSideNavItems = [
 	{
 		label: "Plugins",
 		workflowIconName: "Plugin",
-	},
-	{
-		label: "Settings",
-		workflowIconName: "Settings",
-		isEndSectionStart: true,
 	},
 ];
