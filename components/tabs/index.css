@@ -146,15 +146,14 @@
 	&::before {
 		content: "";
 		position: absolute;
-
 		box-sizing: border-box;
 
-		block-size: calc(100% - var(--spectrum-tabs-top-to-text));
-		inline-size: calc(100% +  var(--spectrum-tabs-focus-indicator-gap) * 2);
-
-		inset-block-start: calc(var(--spectrum-tabs-top-to-text) / 2);
-		inset-inline-start: calc(-1 * var(--spectrum-tabs-focus-indicator-gap));
-		inset-inline-end: calc(-1 * var(--spectrum-tabs-focus-indicator-gap));
+		block-size: calc(100% + var(--spectrum-tabs-focus-indicator-gap) * 2 + var(--spectrum-tabs-focus-indicator-width) * 2);
+		inline-size: calc(100% + var(--spectrum-tabs-focus-indicator-gap) * 2 + var(--spectrum-tabs-focus-indicator-width) * 2);
+		margin-block-start: calc(-1 * (var(--spectrum-tabs-focus-indicator-gap) + var(--spectrum-tabs-focus-indicator-width)));
+		margin-block-end: calc(-1 * (var(--spectrum-tabs-focus-indicator-gap) + var(--spectrum-tabs-focus-indicator-width)));
+		margin-inline-start: calc(-1 * (var(--spectrum-tabs-focus-indicator-gap) + var(--spectrum-tabs-focus-indicator-width)));
+		margin-inline-end: calc(-1 * (var(--spectrum-tabs-focus-indicator-gap) + var(--spectrum-tabs-focus-indicator-width)));
 
 		border: var(--spectrum-tabs-focus-indicator-width) solid transparent;
 		border-radius: var(--spectrum-tabs-focus-indicator-border-radius);
