@@ -1,5 +1,5 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2025 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -11,15 +11,17 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-AppFrameSideNav {
-	--spectrum-app-side-nav-min-inline-size: 140px;
-	--spectrum-app-side-nav-max-inline-size: 260px;
-	--spectrum-app-side-nav-padding: var(--spectrum-spacing-200);
+	--spectrum-app-side-nav-min-inline-size: var(--spectrum-app-side-nav-min-inline-size-expanded);
+	--spectrum-app-side-nav-max-inline-size: 240px;
+	--spectrum-app-side-nav-padding-inline: var(--spectrum-spacing-200);
+	--spectrum-app-side-nav-padding-block-start: var(--spectrum-spacing-300);
+	--spectrum-app-side-nav-padding-block-end: var(--spectrum-spacing-200);
 	--spectrum-app-side-nav-item-gap: var(--spectrum-spacing-100);
 	--spectrum-app-side-nav-top-button-to-items: var(--spectrum-spacing-300);
-	--spectrum-app-side-nav-items-to-end-section: var(--spectrum-spacing-300);
-	--spectrum-app-side-nav-label-padding-block: var(--spectrum-component-top-to-text-100) var(--spectrum-component-bottom-to-text-100);
-	--spectrum-app-side-nav-label-padding-inline: var(--spectrum-spacing-100);
-	--spectrum-app-side-nav-icon-border-radius: var(--spectrum-corner-radius-medium-default);
+	--spectrum-app-side-nav-label-padding-block: var(--spectrum-component-top-to-text-100) var(--spectrum-spacing-100);
+	--spectrum-app-side-nav-label-padding-inline-start: 6px;
+	--spectrum-app-side-nav-label-padding-inline-end: var(--spectrum-spacing-100);
+	--spectrum-app-side-nav-expand-button-spacing-block-start: var(--spectrum-spacing-300);
 
 	--spectrum-app-side-nav-line-height: var(--spectrum-line-height-100);
 	--spectrum-app-side-nav-font-family: var(--spectrum-sans-font-family-stack);
@@ -28,13 +30,16 @@ governing permissions and limitations under the License.
 	--spectrum-app-side-nav-font-size: var(--spectrum-font-size-100);
 
 	--spectrum-app-side-nav-content-color: var(--spectrum-neutral-content-color-default);
-	--spectrum-app-side-nav-icon-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-app-side-nav-icon-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-app-side-nav-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--spectrum-app-side-nav-icon-background-default: transparent;
-	--spectrum-app-side-nav-icon-background-focus: var(--spectrum-gray-200);
 
-	--spectrum-app-side-nav-icon-background-current: #292929;
-	--spectrum-app-side-nav-icon-color-current: var(--spectrum-white);
+	--spectrum-app-side-nav-icon-indicator-color: var(--spectrum-app-side-nav-icon-color);
+	--spectrum-app-side-nav-icon-indicator-color-current: var(--spectrum-app-side-nav-content-color);
+	--spectrum-app-side-nav-icon-indicator-color-hover: var(--spectrum-gray-400);
+	--spectrum-app-side-nav-icon-indicator-inline-size: 2px;
+	--spectrum-app-side-nav-icon-indicator-block-size: 18px;
+	--spectrum-app-side-nav-expand-icon-color: var(--spectrum-gray-600);
 
 	&:lang(ja),
 	&:lang(zh),
@@ -42,14 +47,22 @@ governing permissions and limitations under the License.
 		--spectrum-app-side-nav-line-height: var(--spectrum-cjk-line-height-100);
 	}
 
-	/* To-do: For demo purposes only; would not convert to SWC. Would need a token. This value is just a guesstimate. */
-	.spectrum--large & {
-		--spectrum-app-side-nav-min-inline-size: 160px;
+	&.spectrum-AppFrameSideNav--minimized {
+		--spectrum-app-side-nav-min-inline-size: var(--spectrum-app-side-nav-min-inline-size-minimized);
 	}
-}
 
-.spectrum-AppFrameSideNav.spectrum-AppFrameSideNav--minimized {
-	--spectrum-app-side-nav-min-inline-size: var(--spectrum-component-height-400);
+	.spectrum-AppFrameSideNav-list-item-link {
+		&:hover {
+			--spectrum-app-side-nav-icon-indicator-color: var(--spectrum-app-side-nav-icon-indicator-color-hover);
+		}
+	}
+
+	/* passthroughs for expand button action button */
+	--mod-actionbutton-content-color-default: var(--spectrum-app-side-nav-expand-icon-color);
+	--mod-actionbutton-background-color-hover: transparent;
+	--mod-actionbutton-background-color-down: transparent;
+	--mod-actionbutton-background-color-focus: transparent;
+	/* end passthroughs */
 }
 
 .spectrum-AppFrameSideNav {
@@ -58,7 +71,8 @@ governing permissions and limitations under the License.
 
 	box-sizing: border-box;
 	margin: 0;
-	padding: var(--spectrum-app-side-nav-padding);
+	padding-block: var(--spectrum-app-side-nav-padding-block-start) var(--spectrum-app-side-nav-padding-block-end);
+	padding-inline: var(--spectrum-app-side-nav-padding-inline);
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -67,8 +81,15 @@ governing permissions and limitations under the License.
 	max-inline-size: var(--spectrum-app-side-nav-max-inline-size);
 }
 
+/* Optional button at the top of the side nav */
 .spectrum-AppFrameSideNav .spectrum-AppFrameSideNav-button {
 	margin-block-end: var(--spectrum-app-side-nav-top-button-to-items);
+}
+
+/* Expand/collapse button at the bottom of the side nav */
+.spectrum-AppFrameSideNav-expand-button {
+	margin-block-start: var(--spectrum-app-side-nav-expand-button-spacing-block-start);
+	color: var(--spectrum-app-side-nav-expand-icon-color);
 }
 
 .spectrum-AppFrameSideNav-list {
@@ -102,8 +123,8 @@ governing permissions and limitations under the License.
 .spectrum-AppFrameSideNav-list-item-icon {
 	inline-size: var(--spectrum-component-height-100);
 	block-size: var(--spectrum-component-height-100);
-	border-radius: var(--spectrum-app-side-nav-icon-border-radius);
 	display: flex;
+	flex-shrink: 0;
 	align-items: center;
 	justify-content: center;
 	background: var(--_spectrum-app-side-nav-icon-background);
@@ -114,21 +135,35 @@ governing permissions and limitations under the License.
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+	align-items: center;
 
 	text-decoration: none;
 	outline: none;
 	color: var(--spectrum-app-side-nav-content-color);
 
+	position: relative;
+
 	&:focus-visible {
 		outline: 2px solid var(--spectrum-app-side-nav-focus-indicator-color);
+		border-radius: var(--spectrum-corner-radius-medium-default);
 		outline-offset: 2px;
-		border-radius: var(--spectrum-app-side-nav-icon-border-radius);
 	}
 
-	&:focus-visible,
-	&:active,
+	/* Indicator line for hover and current item */
+		&::before {
+			position: absolute;
+			content: "";
+			inset-inline-start: calc(var(--spectrum-app-side-nav-icon-indicator-inline-size) * -1);
+			block-size: var(--spectrum-app-side-nav-icon-indicator-block-size);
+			inline-size: var(--spectrum-app-side-nav-icon-indicator-inline-size);
+			background: transparent;
+			border-radius: var(--spectrum-corner-radius-full);
+	}
+
 	&:hover {
-		--_spectrum-app-side-nav-icon-background: var(--spectrum-app-side-nav-icon-background-focus);
+		&::before {
+			background: var(--spectrum-app-side-nav-icon-indicator-color);
+		}
 	}
 
 	&:active {
@@ -138,14 +173,17 @@ governing permissions and limitations under the License.
 	}
 
 	.spectrum-AppFrameSideNav-list-item.spectrum-AppFrameSideNav-list-item--current & {
-		--_spectrum-app-side-nav-icon-background: var(--spectrum-app-side-nav-icon-background-current);
-		--_spectrum-app-side-nav-icon-color: var(--spectrum-app-side-nav-icon-color-current);
+		--_spectrum-app-side-nav-icon-color: var(--spectrum-app-side-nav-icon-indicator-color-current);
+
+		&::before {
+			background: var(--spectrum-app-side-nav-icon-indicator-color-current);
+		}
 	}
 }
 
 .spectrum-AppFrameSideNav-list-item-label {
 	padding-block: var(--spectrum-app-side-nav-label-padding-block);
-	padding-inline: var(--spectrum-app-side-nav-label-padding-inline);
+	padding-inline: var(--spectrum-app-side-nav-label-padding-inline-start) var(--spectrum-app-side-nav-label-padding-inline-end);
 }
 
 .spectrum-AppFrameSideNav--minimized .spectrum-AppFrameSideNav-list-item-label {
