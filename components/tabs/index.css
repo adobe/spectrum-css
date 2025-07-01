@@ -13,12 +13,12 @@
 
 .spectrum-Tabs {
 	--spectrum-tabs-item-height: var(--mod-tabs-item-height, var(--spectrum-tab-item-height-medium));
-	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing, var(--spectrum-tab-item-to-tab-item-horizontal-medium));
-	--spectrum-tabs-item-vertical-spacing: var(--mod-tabs-item-vertical-spacing, var(--spectrum-tab-item-to-tab-item-vertical-medium));
 	--spectrum-tabs-start-to-edge: var(--mod-tabs-start-to-edge, var(--spectrum-tab-item-start-to-edge-medium));
 	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text, var(--spectrum-tab-item-top-to-text-medium));
 	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text, var(--spectrum-tab-item-bottom-to-text-medium));
 	--spectrum-tabs-label-to-selection-indicator: var(--mod-tabs-label-to-selection-indicator, var(--spectrum-spacing-200));
+	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing, var(--spectrum-tab-item-to-tab-item-horizontal-medium));
+	--spectrum-tabs-item-vertical-spacing: var(--mod-tabs-item-vertical-spacing, var(--spectrum-tab-item-to-tab-item-vertical-medium));
 
 	--spectrum-tabs-icon-size: var(--mod-tabs-icon-size, var(--spectrum-workflow-icon-size-75));
 	--spectrum-tabs-icon-to-text: var(--mod-tabs-icon-to-text, var(--spectrum-text-to-visual-100));
@@ -42,15 +42,14 @@
 	--spectrum-tabs-font-size: var(--mod-tabs-font-size, var(--spectrum-font-size-100));
 	--spectrum-tabs-line-height: var(--mod-tabs-line-height, var(--spectrum-line-height-100));
 
-	/* Focus Indicator */
 	--spectrum-tabs-focus-indicator-width: var(--mod-tabs-focus-indicator-width, var(--spectrum-focus-indicator-thickness));
 	--spectrum-tabs-focus-indicator-border-radius: var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-corner-radius-100));
 	--spectrum-tabs-focus-indicator-gap: var(--mod-tabs-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
 	--spectrum-tabs-focus-indicator-color: var(--highcontrast-tabs-focus-indicator-color, var(--mod-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color)));
-	--spectrum-tabs-selection-indicator-color: var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down)));
 
-	--spectrum-tabs-selected-item-thickness: var(--mod-tabs-selected-item-thickness, var(--spectrum-tab-selection-indicator-thickness));
-	--spectrum-tabs-divider-border-radius: var(--mod-tabs-divider-border-radius, 1px); /* TODO: remove */
+	--spectrum-tabs-selection-indicator-color: var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down)));
+	--spectrum-tabs-selection-indicator-thickness: var(--mod-tabs-selection-indicator-thickness, var(--spectrum-tab-selection-indicator-thickness));
+	--spectrum-tabs-selection-indicator-border-radius: var(--mod-tabs-selection-indicator-border-radius, 2px); /* TODO: add token when there is one */
 
 	--spectrum-tabs-animation-duration: var(--mod-tabs-animation-duration, var(--spectrum-animation-duration-100));
 	--spectrum-tabs-animation-ease: var(--mod-tabs-animation-ease, var(--spectrum-animation-ease-in-out));
@@ -60,24 +59,40 @@
 	--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium));
 	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
 	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
+	--spectrum-tabs-label-to-selection-indicator: var(--mod-tabs-label-to-selection-indicator-compact, var(--spectrum-spacing-75));
+	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing-compact, var(--spectrum-tab-item-to-tab-item-compact-horizontal-medium));
 	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium));
 	--spectrum-tabs-side-to-icon: var(--mod-tabs-side-to-icon-compact, var(--spectrum-tab-item-side-to-workflow-icon-compact-medium));
-	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing-compact, var(--spectrum-tab-item-to-tab-item-compact-horizontal-medium));
-	--spectrum-tabs-label-to-selection-indicator: var(--mod-tabs-label-to-selection-indicator-compact, var(--spectrum-spacing-75));
 }
 
-/* some tokens weren't defined/defined correctly, so this section is temporary */
+/* some tokens weren't defined/defined correctly, so these sections are temporary */
 .spectrum-Tabs {
-	--spectrum-tabs-top-to-icon: 14px;
-	--spectrum-tab-item-side-to-workflow-icon-medium: 6px;
-	--spectrum-tab-item-bottom-to-text-medium: 16px;
-	--spectrum-tabs-item-horizontal-spacing: 32px;
-	--spectrum-tab-selection-indicator-thickness: 2px;
+	--spectrum-tab-item-top-to-workflow-icon-medium: 14px; /* 14px desktop/18px mobile */
+	--spectrum-tab-item-side-to-workflow-icon-medium: 6px; /* 6px desktop/mobile */
+	--spectrum-tab-item-bottom-to-text-medium: 16px; /* 16px desktop/21px mobile */
+	--spectrum-tab-item-to-tab-item-horizontal-medium: 32px; /* 32px desktop/30px mobile */
+	--spectrum-tab-selection-indicator-thickness: 2px; /* 2px desktop/mobile */
 
 	&.spectrum-Tabs--compact {
-		--spectrum-tabs-top-to-icon: 6px;
-		--spectrum-tab-item-side-to-workflow-icon-compact-medium: 6px;
-		--spectrum-tab-item-to-tab-item-compact-horizontal-medium: 24px;
+		--spectrum-tab-item-top-to-workflow-icon-compact-medium: 6px; /* 6px desktop/7px mobile */
+		--spectrum-tab-item-side-to-workflow-icon-compact-medium: 6px; /* 6px desktop/mobile */
+		--spectrum-tab-item-to-tab-item-compact-horizontal-medium: 24px; /* 24px desktop/30px mobile */
+	}
+}
+
+.spectrum--large {
+	.spectrum-Tabs {
+		--spectrum-tab-item-top-to-workflow-icon-medium: 18px; /* 14px desktop/18px mobile */
+		--spectrum-tab-item-side-to-workflow-icon-medium: 6px; /* 6px desktop/mobile */
+		--spectrum-tab-item-bottom-to-text-medium: 21px; /* 16px desktop/21px mobile */
+		--spectrum-tab-item-to-tab-item-horizontal-medium: 30px; /* 32px desktop/30px mobile */
+		--spectrum-tab-selection-indicator-thickness: 2px; /* 2px desktop/mobile */
+
+		&.spectrum-Tabs--compact {
+			--spectrum-tab-item-top-to-workflow-icon-compact-medium: 7px; /* 6px desktop/7px mobile */
+			--spectrum-tab-item-side-to-workflow-icon-compact-medium: 6px; /* 6px desktop/mobile */
+			--spectrum-tab-item-to-tab-item-compact-horizontal-medium: 30px; /* 24px desktop/30px mobile */
+		}
 	}
 }
 
@@ -219,7 +234,7 @@
 	transition: transform var(--spectrum-tabs-animation-duration) var(--spectrum-tabs-animation-ease);
 	transform-origin: top left;
 
-	border-radius: var(--spectrum-tabs-divider-border-radius);
+	border-radius: var(--spectrum-tabs-selection-indicator-border-radius);
 }
 
 .spectrum-Tabs--horizontal {
@@ -237,7 +252,7 @@
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
 		inset-block-end: 0;
-		block-size: var(--spectrum-tabs-selected-item-thickness);
+		block-size: var(--spectrum-tabs-selection-indicator-thickness);
 	}
 
 	&.spectrum-Tabs--compact {
@@ -275,7 +290,7 @@
 		position: absolute;
 		inset-inline-start: 0;
 		inset-block-start: 0;
-		inline-size: var(--spectrum-tabs-selected-item-thickness);
+		inline-size: var(--spectrum-tabs-selection-indicator-thickness);
 	}
 }
 
