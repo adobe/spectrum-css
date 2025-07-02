@@ -62,13 +62,14 @@ export const Template = ({
 									[`${rootClass}-item`]: true,
 									"is-selected": item?.isSelected ?? false,
 									"is-disabled": item?.isDisabled ?? false,
+									"is-focus-visible": item?.isFocused ?? false,
+									"is-hover": item?.isHovered ?? false,
 								})}
 								tabindex=${item?.isDisabled ? "-1" : "0"}
 								id=${getRandomId("tab-item")}
 								role="tab"
 								aria-selected=${item?.isSelected ?? false}
 								aria-disabled=${item?.isDisabled ?? false}
-
 							>
 								${when(item.icon, () =>
 									Icon({
