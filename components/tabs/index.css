@@ -251,6 +251,7 @@
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
 		inset-block-end: 0;
+		inline-size: 100%;
 		block-size: var(--spectrum-tabs-selection-indicator-thickness);
 	}
 
@@ -287,15 +288,16 @@
 
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
-		inset-inline-start: 0;
+		inset-inline-start: calc(-1 * var(--spectrum-tabs-start-to-edge));
 		inset-block-start: 0;
 		inline-size: var(--spectrum-tabs-selection-indicator-thickness);
+		block-size: 100%;
 	}
 }
 
 .spectrum-Tabs--vertical-right {
 	.spectrum-Tabs-selectionIndicator {
-		inset-inline: auto 0;
+		inset-inline: auto calc(-1* var(--spectrum-tabs-start-to-edge));
 	}
 }
 

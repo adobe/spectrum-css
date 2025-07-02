@@ -37,23 +37,6 @@ export const Template = ({
 	// Note: Lit must use the 'literal' function for dynamic tags to work.
 	const tabMarkup = useAnchors ? literal`a` : literal`div`;
 
-	const selectionIndicator = (isSelected) => when(
-		isSelected,
-		() => html`
-			<div
-				class="${rootClass}-selectionIndicator"
-				style=${ifDefined(
-					styleMap({
-						blockSize: isVertical ? "100%" : undefined,
-						inlineSize: !isVertical ? "100%" : undefined,
-						maxInlineSize: isOverflow ? "50px" : undefined,
-						marginInlineStart: isVertical ? "calc(-1 * var(--spectrum-tabs-start-to-edge))" : undefined,
-						insetInline: hasRightAlignedTabs ? "auto calc(-1* var(--spectrum-tabs-start-to-edge))" : undefined,
-					})
-				)}
-			></div>`
-	);
-
 	return html`
 		<div
 			class=${classMap({
@@ -101,7 +84,9 @@ export const Template = ({
 										${item.label}
 									</span>
 								`)}
-								${selectionIndicator(item.isSelected)}
+								${when(item.isSelected, () => html`
+									<div class="${rootClass}-selectionIndicator"></div>
+								`)}
 							</${tabMarkup}>
 						`;
 					}
@@ -139,7 +124,7 @@ export const Template = ({
 						}, context),
 					]
 				}, context)}
-				${selectionIndicator(true)}
+				<div class="${rootClass}-selectionIndicator"></div>
 			`)}
 		</div>
 	`;
