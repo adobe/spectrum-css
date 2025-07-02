@@ -96,7 +96,7 @@ export default {
 			},
 			{
 				label: "Tab 3",
-				icon: "Document",
+				icon: "File",
 				isDisabled: true,
 			},
 		],

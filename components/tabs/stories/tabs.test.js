@@ -53,6 +53,32 @@ export const TabsGroups = Variants({
 			isCompact: true,
 		},
 		{
+			testHeading: "Hover colors",
+			withStates: false,
+			content: [
+				{
+					label: "Hovered unselected tab",
+					icon: "Folder",
+					isHovered: true,
+				},
+				{
+					label: "Hovered selected tab",
+					icon: "Image",
+					isSelected: true,
+					isHovered: true,
+				},
+				{
+					label: "Unhovered unselected tab",
+					icon: "File",
+				},
+				{
+					label: "Disabled tab",
+					icon: "Archive",
+					isDisabled: true,
+				}
+			]
+		},
+		{
 			testHeading: "With anchor tags",
 			useAnchors: true,
 		},
@@ -64,7 +90,27 @@ export const TabsGroups = Variants({
 		},
 		{
 			testHeading: "Icon only",
-			iconOnly: true
+			iconOnly: true,
 		},
+		{
+			testHeading: "Selected tab focused",
+			content: [
+				{
+					label: "Tab 1",
+					icon: "Folder",
+				},
+				{
+					label: "Selected focused tab",
+					icon: "Image",
+					isSelected: true,
+					isFocused: true,
+				},
+				{
+					label: "Tab 3",
+					icon: "File",
+				}
+			],
+			ignore: ["Overflow", "Compact overflow"],
+		}
 	]
 });
