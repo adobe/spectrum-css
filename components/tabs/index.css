@@ -18,7 +18,6 @@
 	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text, var(--spectrum-tab-item-bottom-to-text-medium));
 	--spectrum-tabs-label-to-selection-indicator: var(--mod-tabs-label-to-selection-indicator, var(--spectrum-spacing-200));
 	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing, var(--spectrum-tab-item-to-tab-item-horizontal-medium));
-	--spectrum-tabs-item-vertical-spacing: var(--mod-tabs-item-vertical-spacing, var(--spectrum-tab-item-to-tab-item-vertical-medium));
 
 	--spectrum-tabs-icon-size: var(--mod-tabs-icon-size, var(--spectrum-workflow-icon-size-75));
 	--spectrum-tabs-icon-to-text: var(--mod-tabs-icon-to-text, var(--spectrum-text-to-visual-100));
@@ -43,7 +42,7 @@
 	--spectrum-tabs-line-height: var(--mod-tabs-line-height, var(--spectrum-line-height-100));
 
 	--spectrum-tabs-focus-indicator-width: var(--mod-tabs-focus-indicator-width, var(--spectrum-focus-indicator-thickness));
-	--spectrum-tabs-focus-indicator-border-radius: var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-corner-radius-100));
+	--spectrum-tabs-focus-indicator-border-radius: var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-corner-radius-300));
 	--spectrum-tabs-focus-indicator-gap: var(--mod-tabs-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
 	--spectrum-tabs-focus-indicator-color: var(--highcontrast-tabs-focus-indicator-color, var(--mod-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color)));
 
@@ -96,8 +95,14 @@
 	}
 }
 
+/* @passthrough -- picker styling for overflow tabs */
+.spectrum-Tabs .spectrum-Picker-button {
+	--mod-picker-block-size: var(--spectrum-tabs-item-height);
+}
+
 .spectrum-Tabs {
 	display: flex;
+	gap: var(--spectrum-tabs-item-horizontal-spacing);
 
 	/* Contain the selection indicator */
 	position: relative;
@@ -223,13 +228,13 @@
 
 .spectrum-Tabs-selectionIndicator {
 	position: absolute;
-	margin-block-start: var(--spectrum-tabs-label-to-selection-indicator);
 	inset-inline-start: 0;
 	background-color: var(--spectrum-tabs-selection-indicator-color);
 
 	/* Be below the tab */
 	z-index: 0;
 
+	/* @todo: set transition: none for initial positioning */
 	transition: transform var(--spectrum-tabs-animation-duration) var(--spectrum-tabs-animation-ease);
 	transform-origin: top left;
 
@@ -241,11 +246,6 @@
 
 	.spectrum-Tabs-item {
 		vertical-align: top;
-
-		/* Target anything since React likes to add lots of happy <div>s around all things */
-		& + *:not(.spectrum-Tabs-selectionIndicator) {
-			margin-inline-start: var(--spectrum-tabs-item-horizontal-spacing);
-		}
 	}
 
 	.spectrum-Tabs-selectionIndicator {
@@ -253,10 +253,11 @@
 		inset-block-end: 0;
 		inline-size: 100%;
 		block-size: var(--spectrum-tabs-selection-indicator-thickness);
+		margin-block-start: var(--spectrum-tabs-label-to-selection-indicator);
 	}
 
 	&.spectrum-Tabs--compact {
-		/* The ActionButton is taller than the tabs, so don't push tabs around */
+		/* The overflow ActionButton is taller than the tabs, so don't push tabs around */
 		box-sizing: content-box;
 		align-items: end;
 	}
@@ -273,12 +274,11 @@
 		line-height: var(--spectrum-tabs-item-height);
 		padding-block: 0;
 
-		margin-block-end: var(--spectrum-tabs-item-vertical-spacing);
 		margin-inline-start: var(--spectrum-tabs-start-to-edge);
 		margin-inline-end:  var(--spectrum-tabs-start-to-edge);
 
 		&::before {
-			inset-inline-start: calc(-1 * var(--spectrum-tabs-focus-indicator-gap));
+			margin-inline-start: calc(-1 * var(--spectrum-tabs-focus-indicator-gap));
 		}
 	}
 
@@ -297,7 +297,7 @@
 
 .spectrum-Tabs--vertical-right {
 	.spectrum-Tabs-selectionIndicator {
-		inset-inline: auto calc(-1* var(--spectrum-tabs-start-to-edge));
+		inset-inline: auto calc(-1 * var(--spectrum-tabs-start-to-edge));
 	}
 }
 
