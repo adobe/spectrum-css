@@ -5,6 +5,10 @@
     ".spectrum-AppFrameSideNav .spectrum-AppFrameSideNav-button",
     ".spectrum-AppFrameSideNav .spectrum-AppFrameSideNav-list-item-link:hover",
     ".spectrum-AppFrameSideNav--minimized .spectrum-AppFrameSideNav-list-item-label",
+    ".spectrum-AppFrameSideNav--minimized .spectrum-AppFrameSideNav-list-item[data-tier=\"0\"] .spectrum-AppFrameSideNav-list-item-link:after",
+    ".spectrum-AppFrameSideNav--minimized .spectrum-AppFrameSideNav-list-item[data-tier=\"1\"]",
+    ".spectrum-AppFrameSideNav-divider",
+    ".spectrum-AppFrameSideNav-divider + .spectrum-AppFrameSideNav-list",
     ".spectrum-AppFrameSideNav-expand-button",
     ".spectrum-AppFrameSideNav-list",
     ".spectrum-AppFrameSideNav-list-item",
@@ -18,6 +22,10 @@
     ".spectrum-AppFrameSideNav-list-item-link:hover:before",
     ".spectrum-AppFrameSideNav-list-item.spectrum-AppFrameSideNav-list-item--current .spectrum-AppFrameSideNav-list-item-link",
     ".spectrum-AppFrameSideNav-list-item.spectrum-AppFrameSideNav-list-item--current .spectrum-AppFrameSideNav-list-item-link:before",
+    ".spectrum-AppFrameSideNav-list-item[data-tier=\"0\"]",
+    ".spectrum-AppFrameSideNav-list-item[data-tier=\"0\"] .spectrum-AppFrameSideNav-list-item-disclosureIcon",
+    ".spectrum-AppFrameSideNav-list-item[data-tier=\"1\"]",
+    ".spectrum-AppFrameSideNav-list.spectrum-AppFrameSideNav-list",
     ".spectrum-AppFrameSideNav.spectrum-AppFrameSideNav--minimized",
     ".spectrum-AppFrameSideNav:lang(ja)",
     ".spectrum-AppFrameSideNav:lang(ko)",
@@ -27,6 +35,8 @@
   "component": [],
   "global": [
     "--spectrum-app-side-nav-content-color",
+    "--spectrum-app-side-nav-divider-block-size",
+    "--spectrum-app-side-nav-divider-color",
     "--spectrum-app-side-nav-expand-button-spacing-block-start",
     "--spectrum-app-side-nav-expand-icon-color",
     "--spectrum-app-side-nav-focus-indicator-color",
@@ -54,6 +64,7 @@
     "--spectrum-app-side-nav-padding-block-start",
     "--spectrum-app-side-nav-padding-inline",
     "--spectrum-app-side-nav-top-button-to-items",
+    "--spectrum-border-width-200",
     "--spectrum-cjk-line-height-100",
     "--spectrum-component-height-100",
     "--spectrum-component-size-difference-down",
@@ -64,6 +75,7 @@
     "--spectrum-default-font-style",
     "--spectrum-focus-indicator-color",
     "--spectrum-font-size-100",
+    "--spectrum-gray-300",
     "--spectrum-gray-400",
     "--spectrum-gray-600",
     "--spectrum-line-height-100",
@@ -79,7 +91,8 @@
     "--mod-actionbutton-background-color-down",
     "--mod-actionbutton-background-color-focus",
     "--mod-actionbutton-background-color-hover",
-    "--mod-actionbutton-content-color-default"
+    "--mod-actionbutton-content-color-default",
+    "--mod-tooltip-animation-distance"
   ],
   "high-contrast": []
 }
