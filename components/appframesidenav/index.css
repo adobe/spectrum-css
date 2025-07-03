@@ -41,6 +41,9 @@ governing permissions and limitations under the License.
 	--spectrum-app-side-nav-icon-indicator-block-size: 18px;
 	--spectrum-app-side-nav-expand-icon-color: var(--spectrum-gray-600);
 
+	--spectrum-app-side-nav-divider-block-size: var(--spectrum-border-width-200);
+	--spectrum-app-side-nav-divider-color: var(--spectrum-gray-300);
+
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
@@ -62,6 +65,10 @@ governing permissions and limitations under the License.
 	--mod-actionbutton-background-color-hover: transparent;
 	--mod-actionbutton-background-color-down: transparent;
 	--mod-actionbutton-background-color-focus: transparent;
+
+	/* passthroughs for tooltip */
+	--mod-tooltip-animation-distance: -4px; /* accounts for icon spacing */
+
 	/* end passthroughs */
 }
 
@@ -79,6 +86,16 @@ governing permissions and limitations under the License.
 
 	min-inline-size: var(--spectrum-app-side-nav-min-inline-size);
 	max-inline-size: var(--spectrum-app-side-nav-max-inline-size);
+}
+
+.spectrum-AppFrameSideNav-divider {
+	block-size: var(--spectrum-app-side-nav-divider-block-size);
+	background: var(--spectrum-app-side-nav-divider-color);
+	inline-size: 100%;
+
+	& + .spectrum-AppFrameSideNav-list {
+		margin-block: calc(var(--spectrum-app-side-nav-top-button-to-items) - var(--spectrum-component-top-to-text-100));
+	}
 }
 
 /* Optional button at the top of the side nav */
@@ -109,10 +126,28 @@ governing permissions and limitations under the License.
 	font-weight: var(--spectrum-app-side-nav-font-weight);
 	font-style: var(--spectrum-app-side-nav-font-style);
 	font-size: var(--spectrum-app-side-nav-font-size);
+
+	&.spectrum-AppFrameSideNav-list {
+		margin-block-end: var(--spectrum-app-side-nav-item-gap);
+	}
 }
 
 .spectrum-AppFrameSideNav-list-item {
 	display: block;
+
+	&[data-tier="0"] {
+		position: relative;
+
+		.spectrum-AppFrameSideNav-list-item-disclosureIcon {
+			transform: rotate(90deg);
+			padding-block-end: calc(var(--spectrum-app-side-nav-padding-inline) / 2);
+			padding-inline-start: var(--spectrum-app-side-nav-label-padding-inline-start);
+		}
+	}
+
+	&[data-tier="1"] {
+		margin-inline-start: var(--spectrum-app-side-nav-item-gap);
+	}
 }
 
 /* Class to apply to the first nav item that should be aligned at the bottom (end section). Should only be applied to one item. */
@@ -186,6 +221,10 @@ governing permissions and limitations under the License.
 	padding-inline: var(--spectrum-app-side-nav-label-padding-inline-start) var(--spectrum-app-side-nav-label-padding-inline-end);
 }
 
-.spectrum-AppFrameSideNav--minimized .spectrum-AppFrameSideNav-list-item-label {
-	display: none;
+.spectrum-AppFrameSideNav--minimized {
+	.spectrum-AppFrameSideNav-list-item-label,
+	.spectrum-AppFrameSideNav-list-item[data-tier="0"] .spectrum-AppFrameSideNav-list-item-link::after,
+	.spectrum-AppFrameSideNav-list-item[data-tier="1"] {
+		display: none;
+	}
 }
