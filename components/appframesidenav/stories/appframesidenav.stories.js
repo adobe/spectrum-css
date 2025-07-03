@@ -125,7 +125,6 @@ CustomContent.args = {
 		{
 			label: "All photos",
 			workflowIconName: "Image",
-			isExpanded: true,
 			tier: 0,
 		},
 		{

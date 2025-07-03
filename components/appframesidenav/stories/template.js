@@ -67,7 +67,18 @@ export const Template = ({
 									setName: "workflow",
 								})}
 							</span>
-							<span class="spectrum-AppFrameSideNav-list-item-label">${navItem.label}</span>
+							<span class="spectrum-AppFrameSideNav-list-item-label">
+								${navItem.label}
+								${when(navItem.tier === 0, () => html`
+									<span class="spectrum-AppFrameSideNav-list-item-disclosureIcon">
+										${Icon({
+											iconName: "ChevronRight100",
+											setName: "ui",
+											customClasses: ["spectrum-AppFrameSideNav-list-item-disclosureIcon"],
+										})}
+									</span>`
+								)}
+							</span>
 						</a>
 					</li>`
 				)}
@@ -82,7 +93,7 @@ export const Template = ({
 							[`${rootClass}-list-item`]: true,
 							[`${rootClass}-list-item--current`]: navItem.isCurrent,
 							[`${rootClass}-list-item--endSectionStart`]: navItem.isEndSectionStart,
-							["is-expanded"]: navItem.isExpanded,
+							["is-expanded"]: navItem.isCurrent,
 						})}
 						data-tier=${ifDefined(navItem.tier)}
 					>
@@ -97,7 +108,18 @@ export const Template = ({
 									setName: "workflow",
 								})}
 							</span>
-							<span class="spectrum-AppFrameSideNav-list-item-label">${navItem.label}</span>
+							<span class="spectrum-AppFrameSideNav-list-item-label">
+								${navItem.label}
+								${when(navItem.tier === 0, () => html`
+									<span class="spectrum-AppFrameSideNav-list-item-disclosureIcon">
+										${Icon({
+											iconName: "ChevronRight100",
+											setName: "ui",
+											customClasses: ["spectrum-AppFrameSideNav-list-item-disclosureIcon"],
+										})}
+									</span>`
+								)}
+							</span>
 						</a>
 					</li>`
 				)}
