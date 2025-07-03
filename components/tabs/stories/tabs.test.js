@@ -79,6 +79,23 @@ export const TabsGroups = Variants({
 			]
 		},
 		{
+			testHeading: "Disabled tabs",
+			withStates: false,
+			content: [
+				{
+					label: "Selected tab",
+					icon: "Archive",
+					isSelected: true,
+					isDisabled: true,
+				},
+				{
+					label: "Unselected tab",
+					icon: "File",
+					isDisabled: true,
+				}
+			]
+		},
+		{
 			testHeading: "With anchor tags",
 			useAnchors: true,
 		},

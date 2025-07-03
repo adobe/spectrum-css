@@ -182,7 +182,7 @@
 		}
 
 		&.is-disabled {
-			color: var(--spectrum-tabs-selection-indicator-color-disabled);
+			color: var(--spectrum-tabs-color-disabled);
 		}
 	}
 
@@ -192,6 +192,10 @@
 
 		.spectrum-Tabs-itemLabel {
 			cursor: default;
+		}
+
+		.spectrum-Tabs-selectionIndicator {
+			background-color: var(--spectrum-tabs-selection-indicator-color-disabled);
 		}
 	}
 
@@ -276,10 +280,6 @@
 
 		margin-inline-start: var(--spectrum-tabs-start-to-edge);
 		margin-inline-end:  var(--spectrum-tabs-start-to-edge);
-
-		&::before {
-			margin-inline-start: calc(-1 * var(--spectrum-tabs-focus-indicator-gap));
-		}
 	}
 
 	.spectrum-Icon {
@@ -303,49 +303,36 @@
 
 @media (forced-colors: active) {
 	.spectrum-Tabs {
-		--highcontrast-tabs-selection-indicator-color: Highlight;
-		--highcontrast-tabs-focus-indicator-color: CanvasText;
-		--highcontrast-tabs-focus-indicator-background-color: Highlight;
-
+		--highcontrast-tabs-background-color-selected: SelectedItem;
+		--highcontrast-tabs-color-selected: SelectedItemText;
+		--highcontrast-tabs-color-selected-key-focus: SelectedItemText;
+		--highcontrast-tabs-color-selected-hover: SelectedItemText;
+		--highcontrast-tabs-selection-indicator-color: CanvasText;
+		--highcontrast-tabs-focus-indicator-color: Highlight;
 		--highcontrast-tabs-color: ButtonText;
 		--highcontrast-tabs-color-hover: ButtonText;
-		--highcontrast-tabs-color-selected: HighlightText;
 		--highcontrast-tabs-color-key-focus: ButtonText;
 		--highcontrast-tabs-color-disabled: GrayText;
 		--highcontrast-tabs-selection-indicator-color-disabled: GrayText;
-		--highcontrast-tabs-color-selected-hover: HighlightText;
-		--highcontrast-tabs-color-selected-key-focus: HighlightText;
 
-		/* Prevents black box behind text on Highlight background */
+		/* Prevents black box behind text on SelectedItem background */
 		forced-color-adjust: none;
 
-		.spectrum-Tabs-item {
+		.spectrum-Tabs-item.is-selected {
+			background-color: var(--highcontrast-tabs-background-color-selected);
+
 			.spectrum-Icon {
-				z-index: 1;
-				position: relative;
-			}
-
-			.spectrum-Tabs-itemLabel {
-				position: relative;
-				z-index: 1;
-			}
-		}
-
-		.is-selected {
-			&::before {
-				background-color: var(--highcontrast-tabs-focus-indicator-background-color);
-			}
-
-			&:focus,
-			&:focus-visible {
 				color: var(--highcontrast-tabs-color-selected);
 			}
-		}
 
-		&.spectrum-Tabs--vertical.spectrum-Tabs--compact .spectrum-Tabs-item {
-			&::before {
-				block-size: 100%;
-				inset-block-start: 0;
+			&.is-disabled {
+				.spectrum-Icon {
+					color: var(--highcontrast-tabs-color-disabled);
+				}
+
+				.spectrum-Tabs-selectionIndicator {
+					background-color: var(--highcontrast-tabs-selection-indicator-color-disabled);
+				}
 			}
 		}
 	}
