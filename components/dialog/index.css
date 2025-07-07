@@ -395,7 +395,7 @@
 	}
 
 	.spectrum-Dialog-heading {
-		margin-block-end: var(--spectrum-standard-dialog-spacing-title-to-description);
+		margin-block-end: var(--mod-standard-dialog-spacing-title-to-description, var(--spectrum-standard-dialog-spacing-title-to-description));
 	}
 }
 
