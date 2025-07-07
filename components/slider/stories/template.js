@@ -262,6 +262,7 @@ export const Template = ({
 					id: id ? `${id}-offset` : undefined,
 					customClasses: [`${rootClass}-editable`],
 					isFocused,
+					isKeyboardFocused: isFocused,
 					isDisabled,
 					size,
 				}, context)}
