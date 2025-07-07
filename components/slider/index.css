@@ -21,6 +21,7 @@
 	--spectrum-slider-inline-size: var(--spectrum-field-default-width-medium);
 	--spectrum-slider-label-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-slider-label-font-style: var(--spectrum-default-font-style);
+	--spectrum-slider-label-font-family: var(--spectrum-sans-font-family-stack);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
@@ -37,6 +38,7 @@
 	--spectrum-slider-track-fill-thickness: var(--spectrum-slider-track-height-medium);
 	--spectrum-slider-tick-mark-width: var(--spectrum-border-width-200);
 	--spectrum-slider-tick-mark-border-radius: 2px;
+	--spectrum-slider-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
 	/* colors */
 	--spectrum-slider-track-color: var(--spectrum-gray-300);
@@ -45,7 +47,7 @@
 	--spectrum-slider-ramp-track-color-disabled: var(--spectrum-slider-track-color-disabled);
 	--spectrum-slider-track-fill-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-slider-handle-border-color-disabled: var(--spectrum-disabled-border-color);
-	--spectrum-slider-label-text-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-slider-label-text-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-slider-tick-label-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-slider-label-text-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-slider-handle-background-color: var(--spectrum-gray-25);
@@ -174,8 +176,8 @@
 		&.is-focused {
 			&::before {
 				border-radius: var(--spectrum-slider-handle-border-radius);
-				block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-focus-indicator-gap) * 2);
-				inline-size: calc(var(--spectrum-slider-precision-handle-width) + var(--spectrum-focus-indicator-gap) * 2);
+				block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-slider-focus-indicator-gap) * 2);
+				inline-size: calc(var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-focus-indicator-gap) * 2);
 				transition: none;
 			}
 		}
@@ -357,6 +359,7 @@
 .spectrum-Slider-ramp {
 	block-size: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
 	position: absolute;
+	inline-size: 100%;
 
 	svg {
 		inline-size: 100%;
@@ -428,8 +431,8 @@
 	/* Keyboard focused */
 	&.is-focused {
 		&::before {
-			inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
-			block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
+			inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
+			block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
 		}
 	}
 }
@@ -473,6 +476,7 @@
 	line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
 	font-weight: var(--mod-slider-label-font-weight, var(--spectrum-slider-label-font-weight));
 	font-style: var(--mod-slider-label-font-style, var(--spectrum-slider-label-font-style));
+	font-family: var(--mod-slider-label-font-family, var(--spectrum-slider-label-font-family));
 
 	margin-block-start: var(--mod-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
 
