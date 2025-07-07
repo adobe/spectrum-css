@@ -1,3 +1,4 @@
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, size } from "@spectrum-css/preview/types";
@@ -60,7 +61,36 @@ export default {
 			},
 			control: { type: "boolean" },
 		},
-		isQuiet
+		isQuiet,
+		hasActionButtons: {
+			name: "Has action buttons",
+			description: "Adds an action button to each accordion item header, in the direct actions section.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Direct actions",
+			},
+			control: { type: "boolean" },
+		},
+		actionButtonIconName: {
+			name: "Action button icon",
+			...(IconStories?.argTypes?.iconName ?? {}),
+			if: { arg: "hasActionButtons", truthy: true },
+			table: {
+				type: { summary: "string" },
+				category: "Direct actions",
+			},
+		},
+		hasSwitches: {
+			name: "Has switches",
+			description: "Adds a switch to each accordion item header, in the direct actions section.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Direct actions",
+			},
+			control: { type: "boolean" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
@@ -70,6 +100,9 @@ export default {
 		disableAll: false,
 		isQuiet: false,
 		hasNoInlinePadding: false,
+		hasActionButtons: false,
+		actionButtonIconName: "Circle",
+		hasSwitches: false,
 	},
 	parameters: {
 		actions: {
