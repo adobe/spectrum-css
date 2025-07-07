@@ -14,7 +14,7 @@ export const Template = ({
 	size,
 	label,
 	min = 0,
-	max = 10,
+	max = 15,
 	step = 2,
 	values = [],
 	variant,
@@ -34,11 +34,25 @@ export const Template = ({
 	customStyles = {},
 	id = getRandomId("slider"),
 } = {}, context = {}) => {
+	// Auto-set values and range for offset variant
+	let finalValues = values;
+	let finalMin = min;
+	let finalMax = max;
+
+	if (variant === "offset") {
+		// Only set default value if no values are provided
+		if (values.length === 0) {
+			finalValues = [0]; // Default to center (0)
+		}
+		finalMin = -15; // Left edge = negative
+		finalMax = 15;  // Right edge = positive
+	}
+
 	const { globals = {}, updateArgs } = context;
 	let fillPercentage = 50;
 	const isRTL = globals.textDirection !== "rtl";
-	const rangeLength = max - min;
-	const centerPoint = rangeLength / 2 + min;
+	const rangeLength = finalMax - finalMin;
+	const centerPoint = rangeLength / 2 + finalMin;
 	const isRamp = variant === "ramp";
 	const maskWidth = (fillPercentage / 100) * 240;
 	const rampSVG = html`
@@ -57,7 +71,7 @@ export const Template = ({
 			<path class="spectrum-Slider-ramp-track-fill" d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z" fill="currentColor" mask="url(#rampMask)"></path>
 		</svg>`;
 
-	const getPosition = (v) => ((v - min) / rangeLength) * 100;
+	const getPosition = (v) => ((v - finalMin) / rangeLength) * 100;
 
 	const getWidth = (start, end) => {
 		const distance = end > start ? end - start : start - end;
@@ -117,8 +131,8 @@ export const Template = ({
 					class="${rootClass}-input"
 					value=${ifDefined(value)}
 					step=${ifDefined(step)}
-					min=${ifDefined(min)}
-					max=${ifDefined(max)}
+					min=${ifDefined(finalMin)}
+					max=${ifDefined(finalMax)}
 					@change=${function(event) {
 						if (isDisabled) return;
 						updateArgs({ value: event.target.value });
@@ -135,7 +149,7 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--ramp`]: variant === "ramp",
 				[`${rootClass}--offset`]: variant === "offset",
-				[`${rootClass}--range`]: values.length > 1,
+				[`${rootClass}--range`]: finalValues.length > 1,
 				[`${rootClass}--filled`]: variant === "filled",
 				[`${rootClass}--tick`]: showTicks,
 				[`${rootClass}--track-height-${trackHeight}`]: trackHeight,
@@ -150,7 +164,7 @@ export const Template = ({
 				"--spectrum-slider-track-color": fillColor ? fillColor : undefined,
 				...customStyles,
 			})}
-			role=${ifDefined(values.length > 1 ? "group" : undefined)}
+			role=${ifDefined(finalValues.length > 1 ? "group" : undefined)}
 			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
 			@focusin=${function() {
 				updateArgs({ isFocused: true });
@@ -163,7 +177,7 @@ export const Template = ({
 			${when(label, () => html`
 			<div
 				class="${rootClass}-labelContainer"
-				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+				role=${ifDefined(finalValues.length > 1 ? "presentation" : undefined)}
 			>
 				${FieldLabel({
 					size,
@@ -173,7 +187,7 @@ export const Template = ({
 					forInput: id ? `${id}-1` : undefined,
 					customClasses: [`${rootClass}-label`],
 				}, context)}
-				${when(values.length && labelPosition != "side" && !isEditable, () => html`
+				${when(finalValues.length && labelPosition != "side" && !isEditable, () => html`
 					<div
 						class="${rootClass}-value"
 						role="textbox"
@@ -182,14 +196,14 @@ export const Template = ({
 							id && label ? `${id}-label` : undefined
 						)}
 					>
-						${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+						${finalValues[0]}${finalValues.length > 1 ? ` - ${finalValues[1]}` : ""}
 					</div>
 				`)}
 			</div>`)}
 
 			<div class=${classMap({
 				[`${rootClass}-content`]: true,
-				[`${rootClass}-content--offset`]: isEditable,
+				[`${rootClass}-content--editable`]: isEditable,
 			})}>
 			<!-- Slider controls -->
 			<div
@@ -200,10 +214,10 @@ export const Template = ({
 				})}
 				role=${ifDefined(isRamp ? "presentation" : undefined)}
 			>
-				${values.map((value, idx) => {
-					const prevPoint = idx === 0 ? min : values[idx - 1];
+				${finalValues.map((value, idx) => {
+					const prevPoint = idx === 0 ? finalMin : finalValues[idx - 1];
 					const isFirst = idx === 0;
-					const isLast = idx === values.length - 1;
+					const isLast = idx === finalValues.length - 1;
 					return [
 						!isRamp
 							? renderTrack({
@@ -215,7 +229,7 @@ export const Template = ({
 							? html`<div class="${rootClass}-ramp">${rampSVG}</div>`
 							: "",
 						isFirst && showTicks && !isRamp
-							? renderTick({ from: min, to: max })
+							? renderTick({ from: finalMin, to: finalMax })
 							: "",
 						renderHandle({
 							position: getPosition(value),
@@ -223,7 +237,7 @@ export const Template = ({
 							idx,
 						}),
 						isLast && !isRamp
-							? renderTrack({ width: getWidth(value, max) })
+							? renderTrack({ width: getWidth(value, finalMax) })
 							: "",
 						isLast && variant === "offset"
 							? html` <div
@@ -244,18 +258,19 @@ export const Template = ({
 			</div>
 			${when(isEditable, () => html`
 				${TextField({
-					value: values[0],
+					value: finalValues[0],
 					id: id ? `${id}-offset` : undefined,
 					customClasses: [`${rootClass}-editable`],
 					isFocused,
 					isDisabled,
+					size,
 				}, context)}
 			`)}
 			</div>
-			${when(values.length && labelPosition === "side" && !isEditable, () => html`
+			${when(finalValues.length && labelPosition === "side" && !isEditable, () => html`
 				<div
 					class="${rootClass}-labelContainer"
-					role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+					role=${ifDefined(finalValues.length > 1 ? "presentation" : undefined)}
 				>
 					<div
 						class="${rootClass}-value"
@@ -265,7 +280,7 @@ export const Template = ({
 							id && label ? `${id}-label` : undefined
 						)}
 					>
-						${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+						${finalValues[0]}${finalValues.length > 1 ? ` - ${finalValues[1]}` : ""}
 					</div>
 				</div>
 			`)}

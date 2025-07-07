@@ -62,7 +62,6 @@
 	--spectrum-slider-handle-border-color-key-focus: var(--spectrum-gray-800);
 	--spectrum-slider-handle-focus-ring-color-key-focus: var(--spectrum-focus-indicator-color);
 
-	--spectrum-slider-precision-handle-width: 6px;
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-medium);
 
 	--spectrum-slider-editable-control-to-text-field: var(--spectrum-slider-control-to-text-field-medium);
@@ -210,7 +209,7 @@
 	inline-size: 100%;
 }
 
-.spectrum-Slider-content--offset {
+.spectrum-Slider-content--editable {
 	display: flex;
 	align-items: center;
 	gap: var(--mod-slider-editable-control-to-text-field, var(--spectrum-slider-editable-control-to-text-field));
@@ -237,7 +236,7 @@
 	margin-block-start: var(--spectrum-slider-control-to-field-label);
 }
 
-.spectrum-Slider-labelContainer + .spectrum-Slider-content--offset {
+.spectrum-Slider-labelContainer + .spectrum-Slider-content--editable {
 	margin-block-start: var(--spectrum-slider-editable-control-to-field-label);
 }
 
