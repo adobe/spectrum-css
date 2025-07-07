@@ -4,12 +4,8 @@
     ".spectrum-DatePicker",
     ".spectrum-DatePicker--quiet",
     ".spectrum-DatePicker--quiet .spectrum-DatePicker-button",
-    ".spectrum-DatePicker--quiet .spectrum-DatePicker-button:not(.is-open)",
-    ".spectrum-DatePicker--quiet .spectrum-DatePicker-button:not(:disabled, .is-open)",
     ".spectrum-DatePicker--quiet.is-disabled",
-    ".spectrum-DatePicker--quiet.is-invalid",
     ".spectrum-DatePicker--quiet.is-invalid .spectrum-DatePicker-input:not(.spectrum-DatePicker-startField)",
-    ".spectrum-DatePicker--quiet:hover:not(.is-focused, .is-keyboardFocused, .is-disabled, .is-invalid)",
     ".spectrum-DatePicker--range",
     ".spectrum-DatePicker--range .spectrum-DatePicker-textfield",
     ".spectrum-DatePicker--range .spectrum-DatePicker-textfield:first-of-type",
@@ -32,9 +28,7 @@
     ".spectrum-DatePicker-rangeDash:before",
     ".spectrum-DatePicker.is-disabled",
     ".spectrum-DatePicker.is-invalid",
-    ".spectrum-DatePicker.is-invalid:not(.spectrum-DatePicker--quiet, .is-disabled)",
-    ".spectrum-DatePicker.spectrum-DatePicker--quiet.is-invalid",
-    ".spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled)"
+    ".spectrum-DatePicker.spectrum-DatePicker--quiet.is-invalid"
   ],
   "modifiers": [
     "--mod-datepicker-border-color-disabled",
@@ -141,10 +135,6 @@
     "--spectrum-workflow-icon-size-100"
   ],
   "passthroughs": [
-    "--mod-picker-button-background-color",
-    "--mod-picker-button-background-color-hover-disabled",
-    "--mod-picker-button-border-color",
-    "--mod-picker-button-border-color-disabled",
     "--mod-textfield-border-color-disabled",
     "--mod-textfield-icon-spacing-inline-end-invalid",
     "--mod-textfield-icon-spacing-inline-end-quiet-invalid"

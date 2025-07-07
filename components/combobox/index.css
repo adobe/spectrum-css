@@ -105,12 +105,12 @@
 	/* @passthroughs end -- settings for nested Textfield component */
 
 	/* @passthroughs start -- settings for nested Picker Button component */
-	--mod-picker-button-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
+	/* --mod-picker-button-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
 	--mod-picker-button-border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
 	--mod-picker-button-background-color: var(--mod-combobox-background-color-default);
 	--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled);
 	--mod-picker-button-font-color-disabled: var(--mod-combobox-font-color-disabled);
-	--mod-picker-button-border-color-disabled: var(--mod-combobox-border-color-disabled, var(--spectrum-combobox-border-color-disabled));
+	--mod-picker-button-border-color-disabled: var(--mod-combobox-border-color-disabled, var(--spectrum-combobox-border-color-disabled)); */
 	/* @passthroughs end -- settings for nested Picker Button component */
 
 	/*** Read-only Colors ***/
@@ -248,7 +248,7 @@
 	position: absolute;
 	inset-inline-end: 0;
 
-	/* Default */
+	/* Default
 	&:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet) {
 		--mod-picker-button-border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
 
@@ -280,7 +280,7 @@
 		}
 	}
 
-	/* Invalid */
+	/* Invalid
 	&.is-invalid:not(:disabled, .spectrum-PickerButton--quiet) {
 		--mod-picker-button-border-color: var(--highcontrast-combobox-border-color-invalid, var(--mod-combobox-border-color-invalid-default, var(--spectrum-combobox-border-color-invalid-default)));
 
@@ -310,7 +310,7 @@
 		.spectrum-Combobox.is-focused:hover & {
 			--mod-picker-button-border-color: var(--highcontrast-combobox-border-color-invalid, var(--mod-combobox-border-color-invalid-focus-hover, var(--spectrum-combobox-border-color-invalid-focus-hover)));
 		}
-	}
+	} */
 }
 
 .spectrum-Combobox-content {

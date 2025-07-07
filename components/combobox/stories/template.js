@@ -133,6 +133,7 @@ export const Template = ({
 					size,
 					id: getRandomId("infieldbutton"),
 					isDisabled: isDisabled || isReadOnly,
+					iconSet: "ui",
 					tabindex: "-1",
 					onclick: function () {
 						updateArgs({
