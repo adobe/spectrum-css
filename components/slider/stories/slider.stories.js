@@ -123,7 +123,8 @@ export default {
 			if: { arg: "showTicks", truthy: true },
 		},
 		isPrecise: {
-			name: "Precise",
+			name: "Precise handle control",
+			description: "Provides precise control for accurate values",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -132,7 +133,8 @@ export default {
 			control: "boolean",
 		},
 		isEditable: {
-			name: "Editable",
+			name: "Editable text input",
+			description: "Enables text input to also control the slider value",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -148,7 +150,9 @@ export default {
 			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
-		values: { table: { disable: true } },
+		values: {
+			table: { disable: true }
+		},
 	},
 	args: {
 		rootClass: "spectrum-Slider",
@@ -169,6 +173,7 @@ export default {
 		trackHeight: "medium",
 		isPrecise: false,
 		isEditable: false,
+		variant: "filled",
 	},
 	parameters: {
 		actions: {
@@ -207,7 +212,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 /**
- * If a slider's label is undefined, it should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
+ * If a slider's label is undefined, it should still include an aria-label in HTML (depending on the context, "aria-label" or "aria-labelledby").
  */
 export const WithoutLabel = Template.bind({});
 WithoutLabel.args = {
@@ -217,6 +222,18 @@ WithoutLabel.args = {
 WithoutLabel.tags = ["!dev"];
 WithoutLabel.storyName = "Without label";
 WithoutLabel.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
+export const Editable = Template.bind({});
+Editable.args = {
+	...Default.args,
+	isEditable: true,
+};
+Editable.tags = ["!dev"];
+Editable.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
@@ -237,13 +254,13 @@ Sizing.parameters = {
 };
 
 /**
- * With fill and offset. If the value represents an offset, the fill start can be set to represent the point of origin. This allows the slider fill to start from inside the track.
+ * If the value represents an offset, the fill start can be set to represent the point of origin. This allows the slider fill to start from inside the track.
  */
 export const Offset = Template.bind({});
 Offset.args = {
 	...Default.args,
 	variant: "offset",
-	values: [0],
+	values: [-15],
 };
 Offset.tags = ["!dev"];
 Offset.parameters = {
@@ -252,6 +269,17 @@ Offset.parameters = {
 	},
 };
 
+export const Precise = Template.bind({});
+Precise.args = {
+	...Default.args,
+	isPrecise: true,
+};
+Precise.tags = ["!dev"];
+Precise.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 export const Ramp = Template.bind({});
 Ramp.args = {
@@ -311,6 +339,24 @@ TickWithLabels.parameters = {
 	},
 };
 TickWithLabels.storyName = "Tick with labels";
+
+/**
+ * Large track height.
+ */
+export const TrackHeight = Template.bind({});
+TrackHeight.args = {
+	...Default.args,
+	trackHeight: "large",
+};
+TrackHeight.tags = ["!dev"];
+TrackHeight.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+TrackHeight.storyName = "Large track height";
+
+
 
 export const Disabled = Template.bind({});
 Disabled.args = {

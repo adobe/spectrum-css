@@ -7,7 +7,7 @@ export const testData = [
 	...["filled", "offset", "ramp"].map((variant) => ({
 		testHeading: capitalize(variant),
 		variant,
-		values: variant === "offset" ? [0] : [15]
+		values: variant === "offset" ? [-15] : [15]
 	})),
 	{
 		testHeading: "Range",
@@ -19,11 +19,6 @@ export const testData = [
 		variant: "filled",
 		showTicks: true,
 		showTickLabels: true
-	},
-	{
-		testHeading: "Focused",
-		variant: "filled",
-		isFocused: true
 	},
 	{
 		testHeading: "Precise",
@@ -71,19 +66,19 @@ export const testData = [
 	{
 		testHeading: "Offset Precise",
 		variant: "offset",
-		values: [0],
+		values: [-15],
 		isPrecise: true
 	},
 	{
 		testHeading: "Offset Large Track",
 		variant: "offset",
-		values: [0],
+		values: [-15],
 		trackHeight: "large"
 	},
 	{
 		testHeading: "Offset Precise Large Track",
 		variant: "offset",
-		values: [0],
+		values: [-15],
 		isPrecise: true,
 		trackHeight: "large"
 	},
@@ -123,7 +118,7 @@ export const testData = [
 		variant: "offset",
 		showTicks: true,
 		showTickLabels: true,
-		values: [0],
+		values: [-15],
 		trackHeight: "large"
 	},
 	// Side label variants
@@ -154,7 +149,7 @@ export const testData = [
 		testHeading: "Side Label Offset",
 		variant: "offset",
 		labelPosition: "side",
-		values: [0]
+		values: [-15]
 	},
 	{
 		testHeading: "Side Label Ticks",
@@ -185,7 +180,7 @@ export const testData = [
 		testHeading: "Editable Offset",
 		variant: "offset",
 		isEditable: true,
-		values: [0]
+		values: [-15]
 	},
 	{
 		testHeading: "Editable Side Label",
@@ -221,7 +216,7 @@ export const testData = [
 		testHeading: "No Label Offset",
 		variant: "offset",
 		label: "",
-		values: [0]
+		values: [-15]
 	},
 	{
 		testHeading: "No Label Ticks",
@@ -256,7 +251,7 @@ export const testData = [
 		variant: "offset",
 		label: "",
 		isEditable: true,
-		values: [0]
+		values: [-15]
 	},
 	// Disabled variants
 	{
@@ -347,7 +342,7 @@ export const testData = [
 		testHeading: "Emphasized Offset",
 		variant: "offset",
 		isEmphasized: true,
-		values: [0]
+		values: [-15]
 	},
 	{
 		testHeading: "Emphasized Ticks",
@@ -381,6 +376,11 @@ export const SliderGroup = Variants({
 		{
 			testHeading: "Focused",
 			isFocused: true
+		},
+		{
+			testHeading: "Focused + Hovered",
+			isFocused: true,
+			isHovered: true
 		},
 		{
 			testHeading: "Disabled",
