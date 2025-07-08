@@ -254,7 +254,7 @@ Sizing.parameters = {
 };
 
 /**
- * If the value represents an offset, the fill start can be set to represent the point of origin. This allows the slider fill to start from inside the track.
+ * If the value represents an offset, the fill start can be set to represent the point of origin. The handle is positoned in the center of the track where the value is 0.
  */
 export const Offset = Template.bind({});
 Offset.args = {
