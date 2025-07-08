@@ -161,8 +161,7 @@
     ".spectrum-Table:lang(ja)",
     ".spectrum-Table:lang(ko)",
     ".spectrum-Table:lang(zh)",
-    ".spectrum-Table:not(.spectrum-Table-scroller)",
-    "[dir=\"rtl\"] .spectrum-Table"
+    ".spectrum-Table:not(.spectrum-Table-scroller)"
   ],
   "modifiers": [
     "--mod-table-avatar-size",
