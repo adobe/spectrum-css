@@ -124,7 +124,7 @@ export default {
 		},
 		isPrecise: {
 			name: "Precise handle control",
-			description: "Provides precise control for accurate values",
+			description: "Provides precise control for accurate values.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -134,7 +134,7 @@ export default {
 		},
 		isEditable: {
 			name: "Editable text input",
-			description: "Enables text input to also control the slider value",
+			description: "Enables text input to also control the slider value.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -203,7 +203,7 @@ export default {
 
 /**
  * Sliders should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts.
- * The track of the slider can have a fill. By default, the fill originates from the left side of the track.
+ * The track of the slider can have a fill. By default, the fill originates from the left side of the track when the global direction is LTR and from the right side of the track when the global direction is RTL.
  */
 export const Default = SliderGroup.bind({});
 Default.args = {
