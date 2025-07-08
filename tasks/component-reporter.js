@@ -244,6 +244,7 @@ async function main({
 
 exports.extractModifiers = extractModifiers;
 exports.default = main;
+
 let {
 	_: components,
 } = yargs(hideBin(process.argv)).argv;
