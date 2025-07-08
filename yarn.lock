@@ -5341,7 +5341,7 @@ __metadata:
     react-syntax-highlighter: "npm:^15.6.1"
     remark-gfm: "npm:^4.0.1"
     storybook: "npm:8.4.7"
-    vite: "npm:^7.0.2"
+    vite: "npm:^7.0.3"
   languageName: unknown
   linkType: soft
 
@@ -20667,9 +20667,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "vite@npm:7.0.2"
+"vite@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "vite@npm:7.0.3"
   dependencies:
     esbuild: "npm:^0.25.0"
     fdir: "npm:^6.4.6"
@@ -20718,7 +20718,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/a68c0302c820b39fe1119c2bc9dda865f48f6abd1629346c189e4983aef7d30e698c55ffff879d4ca6858cb3650c94b085a822215af9bd74d1eb8ceb2ce3e8c6
+  checksum: 10c0/9173a1bf9fee82606f39c7b3e785638c1ac7f3473879fc88593f3a2093ed766140a08b845050fd790adb8a36e2cbc81b71401407da05d5dd747ae4f3adb89794
   languageName: node
   linkType: hard
 
