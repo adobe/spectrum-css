@@ -1,0 +1,79 @@
+import { Meta, Title } from "@storybook/blocks";
+
+<Meta title="Visual regression testing" />
+<Title>Visual regression testing</Title>
+
+This guide explains how to run visual regression tests using Chromatic for the `spectrum-two` branch.
+
+## Prerequisites
+
+Before running tests in Chromatic, you must have:
+
+- Access to the Spectrum CSS project in Chromatic (request access from project maintainers)
+- A valid `CHROMATIC_PROJECT_TOKEN` in your local `.env` file, do not commit this file to version control as it contains sensitive information
+
+## Set up your environment
+
+### Install dependencies
+
+From the project root, install all dependencies if you have not already done so:
+
+```bash
+yarn install
+```
+
+### Configure Chromatic access
+
+Run `yarn refresh` to create or update your `.env` file with the necessary environment variables. Ensure the `CHROMATIC_PROJECT_TOKEN` is set correctly.
+
+```bash
+CHROMATIC_PROJECT_TOKEN=your_project_token_here
+```
+
+**Note:** Never commit the `.env` file to version control as it contains sensitive information.
+
+Any global environment updates should be added to `.env.example`, which is used as a template. Tooling will always prefer your settings from `~/.env` if a variable exists there, but will fall back to the `.env.example` value otherwise. No other values from your local `.env` will be used unless it is explicitly set in `.env.example`.
+
+## Running manual tests
+
+### Basic test execution
+
+Because the base branch is not `main`, VRT builds are kicked off locally. This makes the build available in the Chromatic UI in order to create a manual review. To get an up-to-date comparison of your branch against the base branch, run the following command on the branch you are testing.
+
+```bash
+yarn test
+```
+
+## Manual UI review
+
+Chromatic's [Manual UI review](https://www.chromatic.com/docs/manual-ui-review/) feature allows you to compare visual differences between any pair of branches. This is particularly useful for feature branches based off of `spectrum-two`.
+
+### Creating manual reviews
+
+1. **Create a review**: Navigate to the Reviews page and click "Create review"
+2. **Select branches**:
+   - **Base branch**: The branch we are comparing against (`spectrum-two`)
+   - **Head branch**: The branch with changes (e.g., feature branch)
+3. **Generate review**: Enter a title (be sure to include the Jira ticket number if available) and click "Compare branches"
+4. **Post to the PR for review**: Copy the review URL and post it to the PR for validation
+
+## Getting help
+
+If you encounter issues not covered in this guide:
+
+1. **Chromatic documentation**:
+   - [Main documentation](https://www.chromatic.com/docs/)
+   - [Manual UI review](https://www.chromatic.com/docs/manual-ui-review/) for branch comparisons
+   - [Visual testing guide](https://www.chromatic.com/docs/visual/) for best practices
+2. **Project resources**:
+   - Review existing test files in the project for examples
+   - Check the GitHub issues for known problems
+   - Contact the project maintainers for access and support
+3. **Community support**:
+   - Chromatic's [Discord community](https://discord.gg/chromatic)
+   - [GitHub discussions](https://github.com/chromaui/chromatic/discussions)
+
+## Additional resources
+
+- [Chromatic CLI documentation](https://www.chromatic.com/docs/cli)
+- [Storybook testing guide](https://storybook.js.org/docs/writing-tests)
