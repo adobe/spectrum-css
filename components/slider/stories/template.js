@@ -119,11 +119,16 @@ export const Template = ({
 					"is-focused": isFocused,
 					"is-active": isActive,
 					"is-dragged": false, // note: this only applies z-index; no other styles
-					"is-tophandle": false, // todo: when is this supposed to be used
 				})}
 				style=${styleMap({
 					[direction]: position ? `${position}%` : undefined,
 				})}
+				@focusin=${function() {
+					updateArgs({ isFocused: true });
+				}}
+				@focusout=${function() {
+					updateArgs({ isFocused: false });
+				}}
 			>
 				<input
 					type="range"
@@ -133,6 +138,7 @@ export const Template = ({
 					step=${ifDefined(step)}
 					min=${ifDefined(finalMin)}
 					max=${ifDefined(finalMax)}
+					tabindex="0"
 					@change=${function(event) {
 						if (isDisabled) return;
 						updateArgs({ value: event.target.value });

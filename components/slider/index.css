@@ -39,7 +39,7 @@
 	--spectrum-slider-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
 	/* colors */
-	--spectrum-slider-track-color: var(--spectrum-gray-300);
+	--spectrum-slider-track-color: var(--spectrum-track-color);
 	--spectrum-slider-track-fill-color: var(--spectrum-gray-700);
 	--spectrum-slider-track-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-slider-ramp-track-color-disabled: var(--spectrum-slider-track-color-disabled);
@@ -51,15 +51,15 @@
 	--spectrum-slider-handle-background-color: var(--spectrum-gray-25);
 	--spectrum-slider-handle-background-color-disabled: var(--spectrum-slider-handle-background-color);
 	--spectrum-slider-ticks-handle-background-color: var(--spectrum-gray-75);
-	--spectrum-slider-handle-border-color: var(--spectrum-gray-700);
+	--spectrum-slider-handle-border-color: var(--spectrum-gray-800);
 	--spectrum-slider-tick-mark-color: var(--spectrum-gray-400);
 	--spectrum-slider-tick-mark-color-filled-track: var(--spectrum-gray-800);
 	--spectrum-slider-emphasized-tick-mark-color: var(--spectrum-accent-color-1000);
 	--spectrum-slider-emphasized-track-fill-color: var(--spectrum-accent-content-color-default);
 
-	--spectrum-slider-handle-border-color-hover: var(--spectrum-gray-800);
-	--spectrum-slider-handle-border-color-down: var(--spectrum-gray-800);
-	--spectrum-slider-handle-border-color-key-focus: var(--spectrum-gray-800);
+	--spectrum-slider-handle-border-color-hover: var(--spectrum-gray-900);
+	--spectrum-slider-handle-border-color-down: var(--spectrum-gray-900);
+	--spectrum-slider-handle-border-color-key-focus: var(--spectrum-gray-900);
 	--spectrum-slider-handle-focus-ring-color-key-focus: var(--spectrum-focus-indicator-color);
 
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-medium);
@@ -170,7 +170,7 @@
 		inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--spectrum-slider-precision-handle-height) / 2);
 		margin-inline-start: calc((var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-handle-border-width)) * -0.5);
 
-		&.is-focused {
+		&.is-focused, &:focus {
 			&::before {
 				border-radius: var(--spectrum-slider-handle-border-radius);
 				block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-slider-focus-indicator-gap) * 2);
@@ -426,7 +426,7 @@
 	}
 
 	/* Keyboard focused */
-	&.is-focused {
+	&.is-focused, &:focus {
 		&::before {
 			inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
 			block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
@@ -648,6 +648,8 @@
 .spectrum-Slider-fill {
 	&::before {
 		background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+		border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+			border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
 	}
 }
 
@@ -684,8 +686,9 @@
 	}
 
 	/* Keyboard focused with focus indicator. */
-	&.is-focused {
+	&.is-focused, &:focus {
 		border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
+		outline: 0;
 
 		&::before {
 			box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
@@ -781,7 +784,7 @@
 
 		&:hover,
 		&:active {
-			border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-disabled-border-color, var(--spectrum-disabled-border-color)));
+			border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-disabled-border-color, var(--spectrum-slider-handle-border-color-disabled)));
 			background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
 		}
 	}
