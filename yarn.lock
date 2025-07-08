@@ -134,7 +134,7 @@ __metadata:
     cssnano: "npm:^7.0.7"
     cssnano-preset-advanced: "npm:^7.0.7"
     diff: "npm:^8.0.2"
-    diff2html: "npm:^3.4.51"
+    diff2html: "npm:^3.4.52"
     eslint: "npm:^8.57.1"
     eslint-plugin-jsonc: "npm:^2.20.1"
     eslint-plugin-prettier: "npm:^5.5.1"
@@ -5893,7 +5893,7 @@ __metadata:
     "@actions/github": "npm:^6.0.1"
     "@actions/glob": "npm:^0.5.0"
     diff: "npm:^8.0.2"
-    diff2html: "npm:^3.4.51"
+    diff2html: "npm:^3.4.52"
   languageName: unknown
   linkType: soft
 
@@ -9765,9 +9765,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff2html@npm:^3.4.51":
-  version: 3.4.51
-  resolution: "diff2html@npm:3.4.51"
+"diff2html@npm:^3.4.52":
+  version: 3.4.52
+  resolution: "diff2html@npm:3.4.52"
   dependencies:
     diff: "npm:^7.0.0"
     highlight.js: "npm:11.9.0"
@@ -9775,7 +9775,7 @@ __metadata:
   dependenciesMeta:
     highlight.js:
       optional: true
-  checksum: 10c0/e840459a4e8a88ea5ed27053918e0adce54d7a8fb4b0b675a1a08099919d13cacb9b94557e6fa312ee0aa10f7ddfccce7253d024da950412bf44f16e61795de0
+  checksum: 10c0/068404bfeb0b740207397d5ac968c8d7a3458fa69afc05891b1033a2e8896624e8ef168b5c67b30505b61ec56ce9a4b9a3e2aa79fb463bc1ab08df2533528e85
   languageName: node
   linkType: hard
 
