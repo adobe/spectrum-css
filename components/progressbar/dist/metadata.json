@@ -29,8 +29,7 @@
     ".spectrum-ProgressBar--staticWhite .spectrum-ProgressBar-label",
     ".spectrum-ProgressBar--staticWhite .spectrum-ProgressBar-percentage",
     ".spectrum-ProgressBar--staticWhite .spectrum-ProgressBar-track",
-    ".spectrum-ProgressBar-track",
-    "[dir=\"rtl\"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill"
+    ".spectrum-ProgressBar-track"
   ],
   "modifiers": [
     "--mod-progressbar-animation-duration-indeterminate",
