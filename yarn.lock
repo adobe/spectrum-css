@@ -134,7 +134,7 @@ __metadata:
     cssnano: "npm:^7.0.7"
     cssnano-preset-advanced: "npm:^7.0.7"
     diff: "npm:^8.0.2"
-    diff2html: "npm:^3.4.51"
+    diff2html: "npm:^3.4.52"
     eslint: "npm:^8.57.1"
     eslint-plugin-jsonc: "npm:^2.20.1"
     eslint-plugin-prettier: "npm:^5.5.1"
@@ -176,7 +176,7 @@ __metadata:
     stylelint-selector-bem-pattern: "npm:^4.0.1"
     stylelint-use-logical: "npm:^2.1.2"
     tar: "npm:^7.4.3"
-    yargs: "npm:^17.7.2"
+    yargs: "npm:^18.0.0"
     zlib: "npm:^1.0.5"
   languageName: unknown
   linkType: soft
@@ -5893,7 +5893,7 @@ __metadata:
     "@actions/github": "npm:^6.0.1"
     "@actions/glob": "npm:^0.5.0"
     diff: "npm:^8.0.2"
-    diff2html: "npm:^3.4.51"
+    diff2html: "npm:^3.4.52"
   languageName: unknown
   linkType: soft
 
@@ -8689,6 +8689,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cliui@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "cliui@npm:9.0.1"
+  dependencies:
+    string-width: "npm:^7.2.0"
+    strip-ansi: "npm:^7.1.0"
+    wrap-ansi: "npm:^9.0.0"
+  checksum: 10c0/13441832e9efe7c7a76bd2b8e683555c478d461a9f249dc5db9b17fe8d4b47fa9277b503914b90bd00e4a151abb6b9b02b2288972ffe2e5e3ca40bcb1c2330d3
+  languageName: node
+  linkType: hard
+
 "clone@npm:^1.0.2":
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
@@ -9754,9 +9765,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff2html@npm:^3.4.51":
-  version: 3.4.51
-  resolution: "diff2html@npm:3.4.51"
+"diff2html@npm:^3.4.52":
+  version: 3.4.52
+  resolution: "diff2html@npm:3.4.52"
   dependencies:
     diff: "npm:^7.0.0"
     highlight.js: "npm:11.9.0"
@@ -9764,7 +9775,7 @@ __metadata:
   dependenciesMeta:
     highlight.js:
       optional: true
-  checksum: 10c0/e840459a4e8a88ea5ed27053918e0adce54d7a8fb4b0b675a1a08099919d13cacb9b94557e6fa312ee0aa10f7ddfccce7253d024da950412bf44f16e61795de0
+  checksum: 10c0/068404bfeb0b740207397d5ac968c8d7a3458fa69afc05891b1033a2e8896624e8ef168b5c67b30505b61ec56ce9a4b9a3e2aa79fb463bc1ab08df2533528e85
   languageName: node
   linkType: hard
 
@@ -19329,7 +19340,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string-width@npm:^7.0.0":
+"string-width@npm:^7.0.0, string-width@npm:^7.2.0":
   version: 7.2.0
   resolution: "string-width@npm:7.2.0"
   dependencies:
@@ -20657,8 +20668,8 @@ __metadata:
   linkType: hard
 
 "vite@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "vite@npm:7.0.2"
+  version: 7.0.3
+  resolution: "vite@npm:7.0.3"
   dependencies:
     esbuild: "npm:^0.25.0"
     fdir: "npm:^6.4.6"
@@ -20707,7 +20718,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/a68c0302c820b39fe1119c2bc9dda865f48f6abd1629346c189e4983aef7d30e698c55ffff879d4ca6858cb3650c94b085a822215af9bd74d1eb8ceb2ce3e8c6
+  checksum: 10c0/9173a1bf9fee82606f39c7b3e785638c1ac7f3473879fc88593f3a2093ed766140a08b845050fd790adb8a36e2cbc81b71401407da05d5dd747ae4f3adb89794
   languageName: node
   linkType: hard
 
@@ -21175,6 +21186,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yargs-parser@npm:^22.0.0":
+  version: 22.0.0
+  resolution: "yargs-parser@npm:22.0.0"
+  checksum: 10c0/cb7ef81759c4271cb1d96b9351dbbc9a9ce35d3e1122d2b739bf6c432603824fa02c67cc12dcef6ea80283379d63495686e8f41cc7b06c6576e792aba4d33e1c
+  languageName: node
+  linkType: hard
+
 "yargs@npm:^15.0.2":
   version: 15.4.1
   resolution: "yargs@npm:15.4.1"
@@ -21206,6 +21224,20 @@ __metadata:
     y18n: "npm:^5.0.5"
     yargs-parser: "npm:^21.1.1"
   checksum: 10c0/ccd7e723e61ad5965fffbb791366db689572b80cca80e0f96aad968dfff4156cd7cd1ad18607afe1046d8241e6fb2d6c08bf7fa7bfb5eaec818735d8feac8f05
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^18.0.0":
+  version: 18.0.0
+  resolution: "yargs@npm:18.0.0"
+  dependencies:
+    cliui: "npm:^9.0.1"
+    escalade: "npm:^3.1.1"
+    get-caller-file: "npm:^2.0.5"
+    string-width: "npm:^7.2.0"
+    y18n: "npm:^5.0.5"
+    yargs-parser: "npm:^22.0.0"
+  checksum: 10c0/bf290e4723876ea9c638c786a5c42ac28e03c9ca2325e1424bf43b94e5876456292d3ed905b853ebbba6daf43ed29e772ac2a6b3c5fb1b16533245d6211778f3
   languageName: node
   linkType: hard
 
