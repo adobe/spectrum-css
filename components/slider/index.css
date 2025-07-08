@@ -17,7 +17,7 @@
 	--spectrum-slider-control-height: var(--spectrum-component-height-100);
 	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
-	--spectrum-slider-value-side-padding-inline: var(--spectrum-slider-control-to-side-field-label-medium);
+	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-medium);
 	--spectrum-slider-inline-size: var(--spectrum-field-default-width-medium);
 	--spectrum-slider-label-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-slider-label-font-style: var(--spectrum-default-font-style);
@@ -27,8 +27,6 @@
 	--spectrum-slider-value-inline-size: 18px;
 
 	--spectrum-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
-
-	--spectrum-slider-min-size: var(--spectrum-spacing-900);
 
 	--spectrum-slider-label-margin-start: var(--spectrum-spacing-300);
 	--spectrum-slider-handle-border-width: var(--spectrum-border-width-200);
@@ -66,7 +64,7 @@
 
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-medium);
 
-	--spectrum-slider-editable-control-to-text-field: var(--spectrum-slider-control-to-text-field-medium);
+	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-medium);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-medium);
 
 	/* values */
@@ -90,12 +88,12 @@
 	--spectrum-slider-control-height: var(--spectrum-component-height-75);
 	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
-	--spectrum-slider-value-side-padding-inline: var(--spectrum-slider-control-to-side-field-label-small);
+	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-small);
 	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
 	--spectrum-slider-inline-size: var(--spectrum-field-default-width-small);
 	--spectrum-slider-downstate-perspective: var(--spectrum-component-size-minimum-perspective-down);
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-small);
-	--spectrum-slider-editable-control-to-text-field: var(--spectrum-slider-control-to-text-field-small);
+	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-small);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-small);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-small);
 }
@@ -106,11 +104,11 @@
 	--spectrum-slider-control-height: var(--spectrum-component-height-200);
 	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
-	--spectrum-slider-value-side-padding-inline: var(--spectrum-slider-control-to-side-field-label-large);
+	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-large);
 	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
 	--spectrum-slider-inline-size: var(--spectrum-field-default-width-large);
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-large);
-	--spectrum-slider-editable-control-to-text-field: var(--spectrum-slider-control-to-text-field-large);
+	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-large);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-large);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-large);
 
@@ -125,11 +123,11 @@
 
 	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
-	--spectrum-slider-value-side-padding-inline: var(--spectrum-slider-control-to-side-field-label-extra-large);
+	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-extra-large);
 	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
 	--spectrum-slider-inline-size: var(--spectrum-field-default-width-extra-large);
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-extra-large);
-	--spectrum-slider-editable-control-to-text-field: var(--spectrum-slider-control-to-text-field-extra-large);
+	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-extra-large);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-extra-large);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-extra-large);
 
@@ -143,7 +141,6 @@
 	/* Don't let z-index'd child elements float above other things on the page */
 	z-index: 0;
 	display: block;
-	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 	inline-size: var(--mod-slider-inline-size, var(--spectrum-slider-inline-size));
 
 	user-select: none;
@@ -192,7 +189,7 @@
 		margin-block-start: 0;
 
 		.spectrum-Slider-label {
-			margin-inline-end: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
+			margin-inline-end: var(--mod-slider-control-to-side-field-label, var(--spectrum-slider-control-to-side-field-label));
 		}
 	}
 
@@ -201,7 +198,7 @@
 	}
 
 	.spectrum-Slider-value {
-		margin-inline-start: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
+		margin-inline-start: var(--mod-slider-control-to-text-field, var(--spectrum-slider-control-to-text-field));
 		inline-size: var(--mod-slider-value-inline-size, var(--spectrum-slider-value-inline-size));
 		text-align: start;
 	}
@@ -214,7 +211,7 @@
 .spectrum-Slider-content--editable {
 	display: flex;
 	align-items: center;
-	gap: var(--mod-slider-editable-control-to-text-field, var(--spectrum-slider-editable-control-to-text-field));
+	gap: var(--mod-slider-control-to-text-field, var(--spectrum-slider-control-to-text-field));
 }
 
 .spectrum-Slider-controls {
@@ -716,7 +713,7 @@
 .spectrum-Slider--emphasized {
 	.spectrum-Slider-tick:nth-child(-n + 4) {
 		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-emphasized-tick-mark-color, var(--spectrum-slider-emphasized-tick-mark-color)));
+			background-color: var(--highcontrast-slider-tick-mark-color-filled-track, var(--mod-slider-emphasized-tick-mark-color, var(--spectrum-slider-emphasized-tick-mark-color)));
 		}
 	}
 }
@@ -735,7 +732,7 @@
 	.spectrum-Slider-tick:nth-child(4),
 	.spectrum-Slider-tick:nth-child(5) {
 		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
+			background-color: var(--highcontrast-slider-tick-mark-color-filled-track, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
 		}
 	}
 }
@@ -784,8 +781,8 @@
 
 		&:hover,
 		&:active {
-			border-color: var(--mod-slider-disabled-border-color, var(--spectrum-disabled-border-color));
-			background: var(--highcontrast-slider-handle-background-color-disabled, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
+			border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-disabled-border-color, var(--spectrum-disabled-border-color)));
+			background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
 		}
 	}
 
@@ -847,7 +844,6 @@
 		--highcontrast-slider-handle-border-color-disabled: GrayText;
 		--highcontrast-slider-handle-focus-ring-color-key-focus: CanvasText;
 		--highcontrast-slider-handle-background-color: ButtonFace;
-		--highcontrast-slider-handle-background-color-disabled: GrayText;
 		--highcontrast-slider-handle-disabled-background-color: Canvas;
 		--highcontrast-slider-label-text-color: CanvasText;
 		--highcontrast-slider-label-text-color-disabled: GrayText;
