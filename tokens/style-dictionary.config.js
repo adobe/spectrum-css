@@ -64,7 +64,7 @@ export default {
 					format: "css/sets",
 					options: { showFileHeader: false, outputReferences: true },
 					destination: "global-vars.css",
-					filter: (token, platform) => {
+					filter: (token) => {
 						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
 						if (tokenSets.includes("wireframe")) return false;
 						if (tokenSets.length === 0) return true;

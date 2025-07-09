@@ -12,9 +12,7 @@
  */
 
 /* This file contains overrides and additions to core tokens */
-
-.spectrum {
-	/* stylelint-disable-next-line custom-property-pattern -- context identification */
+.spectrum--medium {
 	--scale: medium;
 
 	--spectrum-alert-banner-close-button-spacing: var(--spectrum-spacing-100);

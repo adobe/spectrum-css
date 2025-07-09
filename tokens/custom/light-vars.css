@@ -12,9 +12,7 @@
  */
 
 /* This file contains overrides and additions to core tokens */
-.spectrum {
-	color-scheme: light;
-
+.spectrum--light {
 	--spectrum-assetcard-border-color-selected: var(--spectrum-blue-900);
 	--spectrum-assetcard-border-color-selected-hover: var(--spectrum-blue-900);
 	--spectrum-assetcard-border-color-selected-down: var(--spectrum-blue-1000);
@@ -58,4 +56,6 @@
 
 	--spectrum-treeview-item-background-color-quiet-selected: rgb(var(--spectrum-gray-900-rgb), 0.06);
 	--spectrum-treeview-item-background-color-selected: rgb(var(--spectrum-blue-900-rgb), 0.1);
+
+	color-scheme: light;
 }
