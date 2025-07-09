@@ -17,7 +17,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	.spectrum {
+	:root {
 		/** COMPONENT-SPECIFIC OVERRIDES **/
 		--spectrum-assetcard-border-color-selected: var(--spectrum-blue-800);
 		--spectrum-assetcard-border-color-selected-hover: var(--spectrum-blue-800);

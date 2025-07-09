@@ -1,7 +1,7 @@
 module.exports = {
 	"*.css": [
 		"stylelint --fix --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables",
-		"prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
+		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
 	],
 	"*.{js,json},!package.json": [
 		"eslint --fix --cache --no-error-on-unmatched-pattern"
