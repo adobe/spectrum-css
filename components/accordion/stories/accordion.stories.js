@@ -4,7 +4,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { AccordionGroup, testsContent as accordionContent } from "./accordion.test.js";
+import { AccordionGroup, testsContent as accordionContent, directActionsContent, longerContent } from "./accordion.test.js";
 import { Template } from "./template.js";
 
 /**
@@ -154,9 +154,9 @@ export const CustomWidth = AccordionGroup.bind({});
 CustomWidth.tags = ["!dev"];
 CustomWidth.storyName = "Custom width";
 CustomWidth.args = {
-	items: accordionContent,
+	items: longerContent,
 	customStyles: {
-		"--mod-accordion-item-width": "500px",
+		"--mod-accordion-item-width": "auto",
 	},
 };
 CustomWidth.parameters = {
@@ -190,6 +190,18 @@ Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 Spacious.storyName = "Density: Spacious";
+
+/**
+ * Direct actions within accordion items are supported. A quiet
+ * [action button](/?path=/docs/actionbutton--default), a
+ * [switch](/?path=/docs/switch--default), or both can be added to
+ * each accordion item header.
+ */
+export const DirectActions = Template.bind({});
+DirectActions.tags = ["!dev"];
+DirectActions.args = {
+	items: directActionsContent
+};
 
 /**
  * Individual accordion items can be disabled by applying the `.is-disabled` class to the
