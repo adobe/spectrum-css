@@ -15,7 +15,6 @@
 	--spectrum-slider-font-size: var(--spectrum-font-size-100);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-medium);
 	--spectrum-slider-control-height: var(--spectrum-component-height-100);
-	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
 	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-medium);
 	--spectrum-slider-inline-size: var(--spectrum-field-default-width-medium);
@@ -76,6 +75,9 @@
 	/* Textfield passthrough */
 	--mod-textfield-width: var(--mod-slider-editable-field-inline-size, var(--spectrum-slider-editable-field-inline-size-medium));
 
+	/* Field label passthrough */
+	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
+
 	.spectrum-Slider-handle {
 		/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- used to assign downstate perspective */
 		--spectrum-slider-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
@@ -86,7 +88,6 @@
 	--spectrum-slider-font-size: var(--spectrum-font-size-75);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-small);
 	--spectrum-slider-control-height: var(--spectrum-component-height-75);
-	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
 	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-small);
 	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
@@ -96,13 +97,14 @@
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-small);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-small);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-small);
+	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
 }
 
 .spectrum-Slider--sizeL {
 	--spectrum-slider-font-size: var(--spectrum-font-size-200);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-large);
 	--spectrum-slider-control-height: var(--spectrum-component-height-200);
-	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
+
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
 	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-large);
 	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
@@ -111,6 +113,7 @@
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-large);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-large);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-large);
+	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
@@ -120,8 +123,6 @@
 	--spectrum-slider-font-size: var(--spectrum-font-size-300);
 	--spectrum-slider-handle-size: var(--spectrum-slider-handle-extra-large);
 	--spectrum-slider-control-height: var(--spectrum-component-height-300);
-
-	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
 	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
 	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-extra-large);
 	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
@@ -130,6 +131,7 @@
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-extra-large);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-extra-large);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-extra-large);
+	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-300);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 22px;
@@ -170,7 +172,7 @@
 		inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--spectrum-slider-precision-handle-height) / 2);
 		margin-inline-start: calc((var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-handle-border-width)) * -0.5);
 
-		&.is-focused, &:focus {
+		&.is-focused, &:focus, &:focus-visible {
 			&::before {
 				border-radius: var(--spectrum-slider-handle-border-radius);
 				block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-slider-focus-indicator-gap) * 2);
@@ -426,7 +428,7 @@
 	}
 
 	/* Keyboard focused */
-	&.is-focused, &:focus {
+	&.is-focused, &:focus, &:focus-visible {
 		&::before {
 			inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
 			block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
@@ -474,8 +476,6 @@
 	font-weight: var(--mod-slider-label-font-weight, var(--spectrum-slider-label-font-weight));
 	font-style: var(--mod-slider-label-font-style, var(--spectrum-slider-label-font-style));
 	font-family: var(--mod-slider-label-font-family, var(--spectrum-slider-label-font-family));
-
-	margin-block-start: var(--mod-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
 
 	/* international support */
 	&:lang(ja),
@@ -686,7 +686,7 @@
 	}
 
 	/* Keyboard focused with focus indicator. */
-	&.is-focused, &:focus {
+	&.is-focused, &:focus, &:focus-visible {
 		border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
 		outline: 0;
 
