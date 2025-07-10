@@ -82,7 +82,7 @@ export default {
 			options: ["medium", "large"],
 		},
 		labelPosition: {
-			name: "Label Position",
+			name: "Label position",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
