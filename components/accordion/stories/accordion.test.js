@@ -5,7 +5,6 @@ import { Template } from "./template.js";
 
 /**
  * General accordion item content for tests.
- * Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions.
  */
 export const testsContent = new Map([
 	[
@@ -62,6 +61,89 @@ export const testsContent = new Map([
 		"Landscape and longer text that wraps",
 		{
 			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
+		},
+	],
+]);
+
+/**
+ * Longer content for a custom width accordion.
+ * Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions.
+ */
+export const longerContent = new Map([
+	[
+		"Are any Adobe products free?",
+		{
+			content: "Yes, Adobe offers free products like Acrobat Reader, Aero, Fill & Sign, Photoshop Express, and Adobe Scan. You can also use Creative Cloud Express, Fresco, and Lightroom Mobile for free, with the option of making in-app purchases.",
+		},
+	],
+	[
+		"Are Adobe products worth it?",
+		{
+			content: Typography({
+				semantics: "body",
+				content: [
+					"This is an example of text content within the content area that uses the spectrum-Body typography class on the paragraphs. Adobe makes some of the most widely used software applications in the world, many of which are industry standard.",
+					Link({
+						url: "https://www.adobe.com/creativecloud/plans.html",
+						text: "Learn more about Adobe Creative Cloud plans and pricing.",
+					}),
+				],
+			}),
+			isOpen: true,
+		},
+	],
+	[
+		"Which Adobe product is best for editing PDFs?",
+		{
+			content: Typography({
+				semantics: "body",
+				content: [
+					"You can edit PDFs with Adobe Acrobat, which is available in two editions: Standard and Pro. Acrobat Standard provides basic tools to create, edit, and sign PDFs on Windows devices. Acrobat Pro is the complete PDF solution with tools to edit, convert, and sign PDFs across web, mobile, and tablet, as well as on Windows and macOS computers. If you'd like to try before you buy, you can get a free 7-day trial of Acrobat Pro.",
+					Link({
+						url: "https://www.adobe.com/acrobat.html",
+						text: "Learn more about Acrobat.",
+					}),
+				],
+			}),
+		},
+	],
+	[
+		"How many products does Adobe have?",
+		{
+			content: "This is an example of text content within the content area that is not wrapped by any typography classes or elements. Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as Adobe Experience Manager, Campaign, and Target.",
+			isOpen: true,
+		},
+	],
+	[
+		"What are the most popular Adobe products?",
+		{
+			content: "This is an example of text content within the content area that is not wrapped by any typography classes or elements. Adobe makes some of the most widely used software in the world, including popular apps like Acrobat Pro, Photoshop, Illustrator, InDesign, Lightroom, and Premiere Pro.",
+		},
+	],
+]);
+
+export const directActionsContent = new Map([
+	[
+		"Heading 1",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			hasActionButton: true,
+		},
+	],
+	[
+		"Heading 2",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			hasSwitch: true,
+		},
+	],
+	[
+		"Heading 3",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			hasActionButton: true,
+			hasSwitch: true,
+			isOpen: true,
 		},
 	],
 ]);
@@ -127,6 +209,7 @@ const statesTestContent = new Map([
 ]);
 
 export const AccordionGroup = Variants({
+	withSizes: false,
 	Template,
 	testData: [
 		{
@@ -183,8 +266,8 @@ export const AccordionGroup = Variants({
 			withStates: false,
 		},
 		{
-			testHeading: "Compact",
-			items: testsContent,
+			testHeading: "Compact density",
+			items: new Map([...testsContent, ...directActionsContent]),
 			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
 			density: "compact",
 			collapseAll: true,
@@ -194,8 +277,19 @@ export const AccordionGroup = Variants({
 			withStates: false,
 		},
 		{
-			testHeading: "Spacious",
-			items: testsContent,
+			testHeading: "Regular density",
+			items: new Map([...testsContent, ...directActionsContent]),
+			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
+			density: "regular",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+			withStates: false,
+		},
+		{
+			testHeading: "Spacious density",
+			items: new Map([...testsContent, ...directActionsContent]),
 			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
 			density: "spacious",
 			collapseAll: true,
