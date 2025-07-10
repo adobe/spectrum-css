@@ -83,7 +83,7 @@ export const AccordionItem = ({
 										label: "", // icon-only
 										isQuiet: true,
 										customClasses: [`${rootClass}ActionButton`],
-										iconName: actionButtonIconName,
+										iconName: actionButtonIconName || "Circle",
 										size,
 									}, context)
 								)}
