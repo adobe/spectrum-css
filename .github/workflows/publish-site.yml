@@ -28,6 +28,12 @@ permissions:
   contents: read
   pull-requests: write
 
+env:
+  AZCOPY_AUTO_LOGIN_TYPE: SPN
+  AZCOPY_SPA_APPLICATION_ID: ${{ secrets.AZURE_CLIENT_ID }}
+  AZCOPY_SPA_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+  AZCOPY_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'pull_request' && github.event.action != 'closed'
@@ -88,13 +94,11 @@ jobs:
       - name: Deploy to Azure Blob Storage
         id: deploy
         env:
-          AZURE_STORAGE_SAS_TOKEN: ${{ secrets.AZURE_STORAGE_SAS_TOKEN }}
           PR_HASH: ${{ steps.pr_hash.outputs.hash }}
         run: |
-          CLEAN_SAS_TOKEN=$(echo "${AZURE_STORAGE_SAS_TOKEN}" | tr -d '\n\r\t ')
           echo "Uploading Storybook to ${PR_HASH}"
           azcopy copy "/home/runner/work/spectrum-css/spectrum-css/dist/*" --log-level=INFO \
-            "https://spectrumcss.blob.core.windows.net/\$web/${PR_HASH}/?${CLEAN_SAS_TOKEN}" \
+            "https://spectrumcss.blob.core.windows.net/\$web/${PR_HASH}/" \
             --recursive \
             --from-to LocalBlob
           docs_url="https://spectrumcss.z13.web.core.windows.net/${PR_HASH}"
@@ -128,10 +132,9 @@ jobs:
           sudo mv azcopy /usr/local/bin/
       - name: Clean up PR deployment
         env:
-          AZURE_STORAGE_SAS_TOKEN: ${{ secrets.AZURE_STORAGE_SAS_TOKEN }}
           PR_HASH: ${{ steps.pr_hash.outputs.hash }}
         run: |
           echo "Cleaning up deployment: ${PR_HASH}/"
-          azcopy remove "https://spectrumcss.z13.web.core.windows.net/\$web/${PR_HASH}/?${AZURE_STORAGE_SAS_TOKEN}" \
+          azcopy remove "https://spectrumcss.blob.core.windows.net/\$web/${PR_HASH}/" \
             --recursive || echo "Cleanup completed (some files may not exist)"
           echo "Cleanup completed for PR deployment: ${PR_HASH}/"
