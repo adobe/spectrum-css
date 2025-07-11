@@ -95,7 +95,6 @@ module.exports = ({
 				stage: 2,
 				env,
 				features: {
-					"dir-pseudo-class": { preserve: true },
 					"nesting-rules": {
 						preserve: true,
 						edition: "2021",

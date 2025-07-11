@@ -24,8 +24,7 @@
     ".spectrum-AssetList-itemChildIndicator",
     ".spectrum-AssetList-itemLabel",
     ".spectrum-AssetList-itemSelector",
-    ".spectrum-AssetList:dir(rtl)",
-    "[dir=\"rtl\"] .spectrum-AssetList"
+    ".spectrum-AssetList:dir(rtl)"
   ],
   "modifiers": [
     "--mod-assetlist-border-color-key-focus",
