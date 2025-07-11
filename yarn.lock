@@ -5256,7 +5256,7 @@ __metadata:
     "@storybook/web-components-vite": "npm:8.4.7"
     "@whitespace/storybook-addon-html": "npm:^7.0.0"
     chromatic: "npm:^13.1.2"
-    lit: "npm:^3.3.0"
+    lit: "npm:^3.3.1"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^18.0.2"
     postcss: "npm:^8.5.6"
@@ -14284,14 +14284,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "lit@npm:3.3.0"
+"lit@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "lit@npm:3.3.1"
   dependencies:
     "@lit/reactive-element": "npm:^2.1.0"
     lit-element: "npm:^4.2.0"
     lit-html: "npm:^3.3.0"
-  checksum: 10c0/27e6d109c04c8995f47c82a546407c5ed8d399705f9511d1f3ee562eb1ab4bc00fae5ec897da55fb50f202b2a659466e23cccd809d039e7d4f935fcecb2bc6a7
+  checksum: 10c0/9f3e171e211be7cd3e01693eac4ba4752fc7bafebc8298fc5b9cb70ff279dd4dc292f1cb425ca42f61c3767a75b7557295c2f6b16335719bc8cf1ca6f3622fb7
   languageName: node
   linkType: hard
 
