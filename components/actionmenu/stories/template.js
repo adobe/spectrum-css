@@ -4,7 +4,7 @@ import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 
 export const Template = ({
-	id = getRandomId("actionmenu"),
+	id = getRandomId("action-menu"),
 	testId,
 	triggerId = getRandomId("actionmenu-trigger"),
 	customClasses = [],

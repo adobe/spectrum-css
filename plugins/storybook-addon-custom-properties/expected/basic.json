@@ -1,0 +1,462 @@
+{
+  "--spectrum-logical-rotation": [
+    {
+      "selector": ".spectrum-Widget:dir(rtl)",
+      "value": "matrix(-1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "selector": "[dir=\"rtl\"] .spectrum-Widget",
+      "value": "matrix(-1, 0, 0, 1, 0, 0)"
+    }
+  ],
+  "--spectrum-widget-background-color-default": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "rgba(var(--spectrum-gray-900-rgb), var(--spectrum-background-opacity-default))"
+    }
+  ],
+  "--spectrum-widget-background-color-down": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "rgba(var(--spectrum-gray-900-rgb), var(--spectrum-background-opacity-down))"
+    }
+  ],
+  "--spectrum-widget-background-color-hover": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "rgba(var(--spectrum-gray-900-rgb), var(--spectrum-background-opacity-hover))"
+    }
+  ],
+  "--spectrum-widget-background-color-key-focus": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "rgba(var(--spectrum-gray-900-rgb), var(--spectrum-background-opacity-key-focus))"
+    }
+  ],
+  "--spectrum-widget-component-edge-to-text": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-component-edge-to-text-75)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeS",
+      "value": "var(--spectrum-component-edge-to-text-50)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeL",
+      "value": "var(--spectrum-component-edge-to-text-100)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-component-edge-to-text-200)"
+    }
+  ],
+  "--spectrum-widget-corner-radius": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-corner-radius-100)"
+    }
+  ],
+  "--spectrum-widget-disclosure-indicator-height": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-component-height-100)",
+      "name": "--spectrum-widget-item-width will be removed in favor of --spectrum-widget-item-inline-size",
+      "isDeprecated": true
+    },
+    {
+      "selector": ".spectrum-Widget--sizeS",
+      "value": "var(--spectrum-component-height-75)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeL",
+      "value": "var(--spectrum-component-height-200)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-component-height-300)"
+    }
+  ],
+  "--spectrum-widget-disclosure-indicator-to-text-space": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-widget-disclosure-indicator-to-text)"
+    }
+  ],
+  "--spectrum-widget-divider-color": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--system-widget-divider-color)"
+    }
+  ],
+  "--spectrum-widget-edge-to-disclosure-indicator-space": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-widget-edge-to-disclosure-indicator)"
+    }
+  ],
+  "--spectrum-widget-edge-to-text-space": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-widget-edge-to-text)"
+    }
+  ],
+  "--spectrum-widget-focus-indicator-color": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-focus-indicator-color)"
+    }
+  ],
+  "--spectrum-widget-focus-indicator-gap": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-focus-indicator-gap)"
+    }
+  ],
+  "--spectrum-widget-focus-indicator-thickness": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-focus-indicator-thickness)"
+    }
+  ],
+  "--spectrum-widget-item-content-area-bottom-to-content": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-widget-content-area-bottom-to-content)"
+    }
+  ],
+  "--spectrum-widget-item-content-area-top-to-content": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-widget-content-area-top-to-content)"
+    }
+  ],
+  "--spectrum-widget-item-content-color": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-body-color)"
+    }
+  ],
+  "--spectrum-widget-item-content-disabled-color": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-disabled-content-color)"
+    }
+  ],
+  "--spectrum-widget-item-content-font": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-sans-font-family-stack)"
+    }
+  ],
+  "--spectrum-widget-item-content-font-size": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-body-size-s)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeS",
+      "value": "var(--spectrum-body-size-xs)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeL",
+      "value": "var(--spectrum-body-size-m)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-body-size-l)"
+    }
+  ],
+  "--spectrum-widget-item-content-font-style": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-body-sans-serif-font-style)"
+    }
+  ],
+  "--spectrum-widget-item-content-font-weight": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-body-sans-serif-font-weight)"
+    }
+  ],
+  "--spectrum-widget-item-content-line-height": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-line-height-100)"
+    },
+    {
+      "selector": ".spectrum-Widget:lang(ja)",
+      "value": "var(--spectrum-cjk-line-height-100)"
+    },
+    {
+      "selector": ".spectrum-Widget:lang(ko)",
+      "value": "var(--spectrum-cjk-line-height-100)"
+    },
+    {
+      "selector": ".spectrum-Widget:lang(zh)",
+      "value": "var(--spectrum-cjk-line-height-100)"
+    }
+  ],
+  "--spectrum-widget-item-header-bottom-to-text-space": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-widget-bottom-to-text-regular-medium)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact",
+      "value": "var(--spectrum-widget-bottom-to-text-compact-medium)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeS",
+      "value": "var(--spectrum-widget-bottom-to-text-compact-small)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeL",
+      "value": "var(--spectrum-widget-bottom-to-text-compact-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-widget-bottom-to-text-compact-extra-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious",
+      "value": "var(--spectrum-widget-bottom-to-text-spacious-medium)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeS",
+      "value": "var(--spectrum-widget-bottom-to-text-spacious-small)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeL",
+      "value": "var(--spectrum-widget-bottom-to-text-spacious-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-widget-bottom-to-text-spacious-extra-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeS",
+      "value": "var(--spectrum-widget-bottom-to-text-regular-small)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeL",
+      "value": "var(--spectrum-widget-bottom-to-text-regular-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-widget-bottom-to-text-regular-extra-large)"
+    }
+  ],
+  "--spectrum-widget-item-header-color-default": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-neutral-content-color-default)"
+    }
+  ],
+  "--spectrum-widget-item-header-color-down": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-neutral-content-color-down)"
+    }
+  ],
+  "--spectrum-widget-item-header-color-hover": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-neutral-content-color-hover)"
+    }
+  ],
+  "--spectrum-widget-item-header-color-key-focus": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-neutral-content-color-key-focus)"
+    }
+  ],
+  "--spectrum-widget-item-header-disabled-color": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-disabled-content-color)"
+    }
+  ],
+  "--spectrum-widget-item-header-font": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-sans-font-family-stack)"
+    }
+  ],
+  "--spectrum-widget-item-header-font-size": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-font-size-300)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeS",
+      "value": "var(--spectrum-font-size-200)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeL",
+      "value": "var(--spectrum-font-size-500)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-font-size-700)"
+    }
+  ],
+  "--spectrum-widget-item-header-font-style": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-default-font-style)"
+    }
+  ],
+  "--spectrum-widget-item-header-font-weight": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-bold-font-weight)"
+    }
+  ],
+  "--spectrum-widget-item-header-line-height": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "1.25"
+    },
+    {
+      "selector": ".spectrum-Widget:lang(ja)",
+      "value": "var(--spectrum-cjk-line-height-100)"
+    },
+    {
+      "selector": ".spectrum-Widget:lang(ko)",
+      "value": "var(--spectrum-cjk-line-height-100)"
+    },
+    {
+      "selector": ".spectrum-Widget:lang(zh)",
+      "value": "var(--spectrum-cjk-line-height-100)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious",
+      "value": "1.278"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeS",
+      "value": "1.25"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeL",
+      "value": "1.273"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeXL",
+      "value": "1.25"
+    }
+  ],
+  "--spectrum-widget-item-header-top-to-text-space": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-widget-top-to-text-regular-medium)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact",
+      "value": "var(--spectrum-widget-top-to-text-compact-medium)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeS",
+      "value": "var(--spectrum-widget-top-to-text-compact-small)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeL",
+      "value": "var(--spectrum-widget-top-to-text-compact-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-widget-top-to-text-compact-extra-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious",
+      "value": "var(--spectrum-widget-top-to-text-spacious-medium)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeS",
+      "value": "var(--spectrum-widget-small-top-to-text-spacious)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeL",
+      "value": "var(--spectrum-widget-top-to-text-spacious-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--spacious.spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-widget-top-to-text-spacious-extra-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeS",
+      "value": "var(--spectrum-widget-top-to-text-regular-small)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeL",
+      "value": "var(--spectrum-widget-top-to-text-regular-large)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-widget-top-to-text-regular-extra-large)"
+    }
+  ],
+  "--spectrum-widget-item-height": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-component-height-200)",
+      "name": "--spectrum-widget-item-height will be removed in favor of --spectrum-widget-item-block-size",
+      "isDeprecated": true
+    },
+    {
+      "selector": ".spectrum-Widget--compact",
+      "value": "var(--spectrum-component-height-100)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeS",
+      "value": "var(--spectrum-component-height-75)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeL",
+      "value": "var(--spectrum-component-height-200)"
+    },
+    {
+      "selector": ".spectrum-Widget--compact.spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-component-height-300)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeS",
+      "value": "var(--spectrum-component-height-100)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeL",
+      "value": "var(--spectrum-component-height-300)"
+    },
+    {
+      "selector": ".spectrum-Widget--sizeXL",
+      "value": "var(--spectrum-component-height-400)"
+    }
+  ],
+  "--spectrum-widget-item-width": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "var(--spectrum-widget-minimum-width)"
+    }
+  ],
+  "--spectrum-widget-min-block-size": [
+    {
+      "selector": ".spectrum-Widget",
+      "value": "max( var(--mod-widget-item-height, var(--spectrum-widget-item-height)), calc(var(--mod-widget-item-header-top-to-text-space, var(--spectrum-widget-item-header-top-to-text-space)) + var(--mod-widget-item-header-bottom-to-text-space, var(--spectrum-widget-item-header-bottom-to-text-space)) + var(--mod-widget-item-header-font-size, var(--spectrum-widget-item-header-font-size)) * var(--mod-widget-item-header-line-height, var(--spectrum-widget-item-header-line-height))) )"
+    }
+  ],
+  "--system-widget-divider-color": [
+    {
+      "selector": ".spectrum",
+      "value": "var(--spectrum-gray-200)"
+    },
+    {
+      "selector": ".spectrum.spectrum--legacy",
+      "value": "var(--spectrum-gray-300)"
+    },
+    {
+      "selector": ".spectrum.spectrum--express",
+      "value": "var(--spectrum-gray-300)"
+    }
+  ]
+}
