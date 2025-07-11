@@ -51,39 +51,56 @@ export const DialogGroup = Variants({
 	],
 });
 
-export const DialogFullscreen = Variants({
-	Template: (args, context) => {
-		const { parameters: { showTestingGrid = false } = {} } = context;
+export const DialogFullscreen = (args, context) => {
+	const { parameters: { showTestingGrid = false } = {} } = context;
 
-		return Template({
-			...args,
-			/*
-			 * Custom styles were added to make sure the VRTs catch the rounded corners
-			 */
-			customStyles: {
-				margin: showTestingGrid ? "16px" : undefined,
+	return Variants({
+		Template: (args, context) => {
+			return Template({
+				...args,
+				/*
+				 * Custom styles were added to make sure the VRTs catch the rounded corners
+				 */
+				customStyles: {
+					margin: showTestingGrid ? "16px" : undefined,
+				},
+			}, context);
+		},
+		withSizes: false,
+		wrapperStyles: {
+			"background-color": "var(--spectrum-gray-50)",
+			...(showTestingGrid && { "inline-size": "100%" }), // Applies conditional styles based on showTestingGrid- forces the data-inner-container to be full width so the container query doesn't break.
+		},
+		containerStyles: {
+			...(showTestingGrid && { "inline-size": "100%" }), // forces the data-outer-container to be full width so the container query doesn't break.
+		},
+		testData: [
+			{
+				showModal: false,
+				layout: "fullscreen",
 			},
-		}, context);
-	},
-	withSizes: false,
-	wrapperStyles: {
-		"background-color": "var(--spectrum-gray-50)"
-	},
-	testData: [
-		{
-			showModal: false,
-			layout: "fullscreen",
-		},
-	],
-});
+		],
+	})(args, context);
+};
 
-export const DialogFullscreenTakeover = Variants({
-	Template,
-	withSizes: false,
-	testData: [
-		{
-			showModal: false,
-			layout: "fullscreenTakeover",
+export const DialogFullscreenTakeover = (args, context) => {
+	const { parameters: { showTestingGrid = false } = {} } = context;
+
+	return Variants({
+		Template,
+		withSizes: false,
+		wrapperStyles: {
+			...(showTestingGrid && { "inline-size": "100%" }), // Applies conditional styles based on showTestingGrid- forces the data-inner-container to be full width so the container query doesn't break.
 		},
-	],
-});
+		// Apply conditional styles based on showTestingGrid
+		containerStyles: {
+			...(showTestingGrid && { "inline-size": "100%" }), // forces the data-outer-container to be full width so the container query doesn't break.
+		},
+		testData: [
+			{
+				showModal: false,
+				layout: "fullscreenTakeover",
+			},
+		],
+	})(args, context);
+};
