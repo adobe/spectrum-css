@@ -1,8 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { SteplistGroup } from "./steplist.test.js";
 import { DocsSteplistGroup } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A steplist can communicate the progress of a task or workflow. It can help users understand where they are in a process and what they need to do next.
@@ -76,6 +78,18 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers.reduce((acc, modifier) => {
+				const name = modifier.replace(/^--/, "");
+				acc[name] = {
+					category: "Modifier",
+					description: "",
+					value: undefined,
+					control: name.includes("color") ? "color" : "text",
+				};
+				return acc;
+			}, {}),
+		},
 	},
 };
 

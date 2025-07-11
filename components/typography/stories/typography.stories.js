@@ -1,21 +1,25 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
+
 import {
-	DocsBodyVariants,
-	DocsCodeVariants,
-	DocsDetailVariants,
-	DocsHeadingBodyPairing,
-	DocsHeadingVariants,
-	DocsInternationalizedBodyVariants,
-	DocsInternationalizedCodeVariants,
-	DocsInternationalizedDetailVariants,
-	DocsInternationalizedHeadingBodyPairing,
-	DocsInternationalizedHeadingVariants, Template
+    DocsBodyVariants,
+    DocsCodeVariants,
+    DocsDetailVariants,
+    DocsHeadingBodyPairing,
+    DocsHeadingVariants,
+    DocsInternationalizedBodyVariants,
+    DocsInternationalizedCodeVariants,
+    DocsInternationalizedDetailVariants,
+    DocsInternationalizedHeadingBodyPairing,
+    DocsInternationalizedHeadingVariants,
+    Template
 } from "./template.js";
 import { TypographyGroup } from "./typography.test.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Spectrum typography is broken out into several separate components: heading, body, detail, and code. Internationalized typography examples are also shown.
@@ -83,6 +87,18 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers.reduce((acc, modifier) => {
+				const name = modifier.replace(/^--/, "");
+				acc[name] = {
+					category: "Modifier",
+					description: "",
+					value: undefined,
+					control: name.includes("color") ? "color" : "text",
+				};
+				return acc;
+			}, {}),
+		},
 	},
 };
 
