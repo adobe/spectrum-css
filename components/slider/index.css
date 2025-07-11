@@ -190,6 +190,9 @@
 	.spectrum-Slider-labelContainer {
 		margin-block-start: 0;
 
+		/* This helps prevent the slider from shrinking when the label is long */
+		flex: 1;
+
 		.spectrum-Slider-label {
 			margin-inline-end: var(--mod-slider-control-to-side-field-label, var(--spectrum-slider-control-to-side-field-label));
 		}
@@ -214,6 +217,11 @@
 	display: flex;
 	align-items: center;
 	gap: var(--mod-slider-control-to-text-field, var(--spectrum-slider-control-to-text-field));
+
+	.spectrum-Slider-controls {
+		/* This allows the text field to grow to design spec inline size */
+		flex: 1;
+	}
 }
 
 .spectrum-Slider-controls {
@@ -370,6 +378,8 @@
 }
 
 .spectrum-Slider-handle {
+	border-color: var(--highcontrast-slider-handle-border-color, var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color)));
+	background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
 	position: absolute;
 	inset-inline-start: 0;
 	z-index: 2;
@@ -391,8 +401,13 @@
 
 	outline: none;
 
+	&:hover {
+		border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
+	}
+
 	&:active,
 	&.is-dragged {
+		border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
 		transform: perspective(var(--spectrum-slider-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
@@ -429,7 +444,11 @@
 
 	/* Keyboard focused */
 	&.is-focused, &:focus, &:focus-visible {
+		border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
+		outline: 0;
+
 		&::before {
+			box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
 			inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
 			block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
 		}
@@ -677,40 +696,8 @@
 	}
 }
 
-.spectrum-Slider-handle {
-	border-color: var(--highcontrast-slider-handle-border-color, var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color)));
-	background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
-
-	&:hover {
-		border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
-	}
-
-	/* Keyboard focused with focus indicator. */
-	&.is-focused, &:focus, &:focus-visible {
-		border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
-		outline: 0;
-
-		&::before {
-			box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
-		}
-	}
-
-	&:active,
-	&.is-dragged {
-		transform: perspective(var(--spectrum-slider-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
-		border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
-	}
-}
-
 .spectrum-Slider-input {
 	background: transparent;
-}
-
-.spectrum-Slider-handle {
-	&.is-dragged {
-		border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
-		background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
-	}
 }
 
 .spectrum-Slider--emphasized {

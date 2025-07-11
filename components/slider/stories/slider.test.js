@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Sizes, Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
 const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
@@ -358,7 +358,29 @@ export const testData = [
 		showTicks: true,
 		showTickLabels: true,
 		trackHeight: "large"
-	}
+	},
+	{
+		testHeading: "Large Track Height Sizes",
+		variant: "filled",
+		Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
+		trackHeight: "large",
+		withStates: false,
+	},
+	{
+		testHeading: "Large Track Height Sizes + precise",
+		variant: "filled",
+		isPrecise: true,
+		Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
+		trackHeight: "large",
+		withStates: false,
+	},
+	{
+		testHeading: "Sizes + precise",
+		variant: "filled",
+		isPrecise: true,
+		Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
+		withStates: false,
+	},
 ];
 
 export const SliderGroup = Variants({

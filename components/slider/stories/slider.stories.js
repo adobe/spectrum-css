@@ -80,6 +80,7 @@ export default {
 			},
 			control: "select",
 			options: ["medium", "large"],
+			if: { arg: "variant", neq: "ramp" },
 		},
 		labelPosition: {
 			name: "Label position",
