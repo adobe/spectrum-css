@@ -5833,7 +5833,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer"
   dependencies:
-    ava: "npm:^6.4.0"
+    ava: "npm:^6.4.1"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.6"
     postcss-selector-parser: "npm:^7.1.0"
@@ -5847,7 +5847,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-property-rollup@workspace:plugins/postcss-property-rollup"
   dependencies:
-    ava: "npm:^6.4.0"
+    ava: "npm:^6.4.1"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.6"
   peerDependencies:
@@ -5859,7 +5859,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping"
   dependencies:
-    ava: "npm:^6.4.0"
+    ava: "npm:^6.4.1"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.6"
     postcss-values-parser: "npm:^6.0.2"
@@ -5872,7 +5872,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/stylelint-no-missing-var@workspace:plugins/stylelint-no-missing-var"
   dependencies:
-    ava: "npm:^6.4.0"
+    ava: "npm:^6.4.1"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     stylelint: "npm:^16.21.1"
@@ -5885,7 +5885,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/stylelint-no-unknown-custom-properties@workspace:plugins/stylelint-no-unknown-custom-properties"
   dependencies:
-    ava: "npm:^6.4.0"
+    ava: "npm:^6.4.1"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     fast-glob: "npm:^3.3.3"
@@ -5901,7 +5901,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-tools/stylelint-no-unused-custom-properties@workspace:plugins/stylelint-no-unused-custom-properties"
   dependencies:
-    ava: "npm:^6.4.0"
+    ava: "npm:^6.4.1"
     c8: "npm:^10.1.3"
     colors: "npm:^1.4.0"
     postcss: "npm:^8.5.6"
@@ -7042,12 +7042,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.14.0, acorn@npm:^8.14.1":
+"acorn@npm:^8.14.0":
   version: 8.14.1
   resolution: "acorn@npm:8.14.1"
   bin:
     acorn: bin/acorn
   checksum: 10c0/dbd36c1ed1d2fa3550140000371fcf721578095b18777b85a79df231ca093b08edc6858d75d6e48c73e431c174dcf9214edbd7e6fa5911b93bd8abfa54e47123
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^8.15.0":
+  version: 8.15.0
+  resolution: "acorn@npm:8.15.0"
+  bin:
+    acorn: bin/acorn
+  checksum: 10c0/dec73ff59b7d6628a01eebaece7f2bdb8bb62b9b5926dcad0f8931f2b8b79c2be21f6c68ac095592adb5adb15831a3635d9343e6a91d028bbe85d564875ec3ec
   languageName: node
   linkType: hard
 
@@ -7579,21 +7588,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ava@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "ava@npm:6.4.0"
+"ava@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "ava@npm:6.4.1"
   dependencies:
     "@vercel/nft": "npm:^0.29.4"
-    acorn: "npm:^8.14.1"
+    acorn: "npm:^8.15.0"
     acorn-walk: "npm:^8.3.4"
     ansi-styles: "npm:^6.2.1"
     arrgv: "npm:^1.0.2"
     arrify: "npm:^3.0.0"
     callsites: "npm:^4.2.0"
-    cbor: "npm:^10.0.3"
+    cbor: "npm:^10.0.9"
     chalk: "npm:^5.4.1"
     chunkd: "npm:^2.0.1"
-    ci-info: "npm:^4.2.0"
+    ci-info: "npm:^4.3.0"
     ci-parallel-vars: "npm:^1.0.1"
     cli-truncate: "npm:^4.0.0"
     code-excerpt: "npm:^4.0.0"
@@ -7601,7 +7610,7 @@ __metadata:
     concordance: "npm:^5.0.4"
     currently-unhandled: "npm:^0.4.1"
     debug: "npm:^4.4.1"
-    emittery: "npm:^1.1.0"
+    emittery: "npm:^1.2.0"
     figures: "npm:^6.1.0"
     globby: "npm:^14.1.0"
     ignore-by-default: "npm:^2.1.0"
@@ -7630,7 +7639,7 @@ __metadata:
       optional: true
   bin:
     ava: entrypoints/cli.mjs
-  checksum: 10c0/d96a0bfa8758f0c0dcfc9437801e17702535f493a01fab401289ac538bb2b7633afb7b5363392499d9ebce98bc1f425767008a76c4edf2aa225f7e2195aaa54c
+  checksum: 10c0/21972df1031ef46533ea1b7daa132a5fc66841c8a221b6901163d12d2a1cac39bfd8a6d3459da7eb9344fa90fc02f237f2fe2aac8785d04bf5894fa43625be28
   languageName: node
   linkType: hard
 
@@ -8242,12 +8251,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cbor@npm:^10.0.3":
-  version: 10.0.3
-  resolution: "cbor@npm:10.0.3"
+"cbor@npm:^10.0.9":
+  version: 10.0.9
+  resolution: "cbor@npm:10.0.9"
   dependencies:
     nofilter: "npm:^3.0.2"
-  checksum: 10c0/d1657a24799ab35cb262aef91205431100def90c0200917e42eec4580726880c090d5a0a77620b665248447a36db8cc5ea6b7fd6eac8e083a64098c7179ea2d1
+  checksum: 10c0/49b59036c340ab0c6f4fa39aaf37ed6cb2bec6d54ec27b45a03f5df0fcd5767594b0abb5cbf44d69bdd8593d6a2e131c3e7017c511bacf05f5aa4ff2af82d07d
   languageName: node
   linkType: hard
 
@@ -8593,10 +8602,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "ci-info@npm:4.2.0"
-  checksum: 10c0/37a2f4b6a213a5cf835890eb0241f0d5b022f6cfefde58a69e9af8e3a0e71e06d6ad7754b0d4efb9cd2613e58a7a33996d71b56b0d04242722e86666f3f3d058
+"ci-info@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "ci-info@npm:4.3.0"
+  checksum: 10c0/60d3dfe95d75c01454ec1cfd5108617dd598a28a2a3e148bd7e1523c1c208b5f5a3007cafcbe293e6fd0a5a310cc32217c5dc54743eeabc0a2bec80072fc055c
   languageName: node
   linkType: hard
 
@@ -10114,10 +10123,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emittery@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "emittery@npm:1.1.0"
-  checksum: 10c0/645d4d7307b52c81bb2d2f9f320aa6a3c0225f53a4bfef2d337be8086df975746f7dd619f1dd7b2ffd4f2288103f28019e7b8567718677600e47507496d3af5f
+"emittery@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "emittery@npm:1.2.0"
+  checksum: 10c0/3b16d67b2cbbc19d44fa124684039956dc94c376cefa8c7b29f4c934d9d370e6819f642cddaa343b83b1fc03fda554a1498e12f5861caf9d6f6394ff4b6e808a
   languageName: node
   linkType: hard
 
