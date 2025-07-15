@@ -103,6 +103,16 @@
 	--spectrum-takeover-dialog-spacing-header-gap: var(--spectrum-spacing-400);
 	--spectrum-takeover-dialog-spacing-title-to-body: var(--spectrum-spacing-500);
 
+	/* @todo: remove when tabs tokens are updated */
+	--spectrum-tab-item-top-to-workflow-icon-medium: 14px;
+	--spectrum-tab-item-side-to-workflow-icon-medium: 6px;
+	--spectrum-tab-item-bottom-to-text-medium: 16px;
+	--spectrum-tab-item-to-tab-item-horizontal-medium: 32px;
+	--spectrum-tab-selection-indicator-thickness: 2px;
+	--spectrum-tab-item-top-to-workflow-icon-compact-medium: 6px;
+	--spectrum-tab-item-side-to-workflow-icon-compact-medium: 6px;
+	--spectrum-tab-item-to-tab-item-compact-horizontal-medium: 24px;
+
 	--spectrum-treeview-indicator-inset-block-start: 5px;
 	--spectrum-treeview-item-indentation-small: var(--spectrum-spacing-200);
 	--spectrum-treeview-item-indentation-medium: var(--spectrum-spacing-300);
