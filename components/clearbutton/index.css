@@ -1,5 +1,5 @@
 /*!
-* Copyright 2024 Adobe. All rights reserved.
+* Copyright 2025 Adobe. All rights reserved.
 *
 * This file is licensed to you under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License. You may obtain a copy
@@ -14,7 +14,7 @@
 .spectrum-ClearButton {
 	--spectrum-clear-button-height: var(--spectrum-component-height-100);
 	--spectrum-clear-button-width: var(--spectrum-component-height-100);
-	--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
+	--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill-medium);
 
 	--spectrum-clear-button-icon-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -26,46 +26,25 @@
 	--spectrum-clear-button-background-color-down: transparent;
 	--spectrum-clear-button-background-color-key-focus: transparent;
 
-	&.spectrum-ClearButton--staticWhite {
-		--spectrum-clear-button-background-color-hover: var(--spectrum-transparent-white-400);
-		--spectrum-clear-button-background-color-down: var(--spectrum-transparent-white-500);
-		--spectrum-clear-button-background-color-key-focus: var(--spectrum-transparent-white-400);
-	}
-
 	&.spectrum-ClearButton--sizeS {
 		--spectrum-clear-button-height: var(--spectrum-component-height-75);
 		--spectrum-clear-button-width: var(--spectrum-component-height-75);
+
+		--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill-small);
 	}
 
 	&.spectrum-ClearButton--sizeL {
 		--spectrum-clear-button-height: var(--spectrum-component-height-200);
 		--spectrum-clear-button-width: var(--spectrum-component-height-200);
+
+		--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill-large);
 	}
 
 	&.spectrum-ClearButton--sizeXL {
 		--spectrum-clear-button-height: var(--spectrum-component-height-300);
 		--spectrum-clear-button-width: var(--spectrum-component-height-300);
-	}
 
-	&.spectrum-ClearButton--quiet {
-		--mod-clear-button-background-color: transparent;
-		--mod-clear-button-background-color-hover: transparent;
-		--mod-clear-button-background-color-down: transparent;
-		--mod-clear-button-background-color-key-focus: transparent;
-	}
-
-	&.spectrum-ClearButton--staticWhite {
-		--spectrum-clear-button-background-color-hover: var(--spectrum-transparent-white-400);
-		--spectrum-clear-button-background-color-down: var(--spectrum-transparent-white-500);
-		--spectrum-clear-button-background-color-key-focus: var(--spectrum-transparent-white-400);
-
-		--mod-clear-button-icon-color: var(--spectrum-white);
-		--mod-clear-button-icon-color-hover: var(--spectrum-white);
-		--mod-clear-button-icon-color-down: var(--spectrum-white);
-		--mod-clear-button-icon-color-key-focus: var(--spectrum-white);
-		--mod-clear-button-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);
-
-		--mod-clear-button-background-color: transparent;
+		--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill-extra-large);
 	}
 
 	&:disabled,
@@ -80,7 +59,6 @@
 .spectrum-ClearButton {
 	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
 	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
-	border-radius: 100%;
 
 	background-color: var(--mod-clear-button-background-color, transparent);
 	margin: 0;
@@ -134,19 +112,10 @@
 
 	inline-size: 100%;
 	block-size: 100%;
-	border-radius: 100%;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-/* @deprecated .spectrum-ClearButton--overBackground */
-.spectrum-ClearButton--staticWhite,
-.spectrum-ClearButton--overBackground {
-	&:focus-visible {
-		outline: none;
-	}
 }
 
 @media (forced-colors: active) {
