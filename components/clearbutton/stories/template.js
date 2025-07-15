@@ -11,9 +11,7 @@ export const Template = ({
 	rootClass = "spectrum-ClearButton",
 	isDisabled = false,
 	size = "m",
-	isQuiet = false,
 	isFocusable = true,
-	staticColor,
 	id = getRandomId("clearbutton"),
 	onclick = () => {},
 	customClasses = [],
@@ -24,13 +22,6 @@ export const Template = ({
 		class=${classMap({
 			[rootClass]: true,
 			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-			[`${rootClass}--quiet`]: isQuiet,
-			[`${rootClass}--overBackground`]: staticColor === "white",
-			/**
-			 * There aren't styles for `--staticWhite` in clear button (yet)
-			 * but this makes it easier to support in the testing grid
-			 */
-			[`${rootClass}--staticWhite`]: staticColor === "white",
 			"is-disabled": isDisabled,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}

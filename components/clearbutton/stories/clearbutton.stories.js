@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isQuiet, size, staticColor } from "@spectrum-css/preview/types";
+import { isDisabled, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ClearButtonGroup } from "./clearbutton.test.js";
@@ -46,11 +46,6 @@ export default {
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
 		isDisabled,
-		isQuiet,
-		staticColor: {
-			...staticColor,
-			options: ["white"],
-		},
 		isFocusable: {
 			table: { disable: true },
 			type: { name: "boolean" },
@@ -60,7 +55,6 @@ export default {
 		rootClass: "spectrum-ClearButton",
 		size: "m",
 		isDisabled: false,
-		isQuiet: false,
 	},
 	parameters: {
 		packageJson,
@@ -68,13 +62,12 @@ export default {
 	},
 };
 
-/**
- * The default size for clear button is medium.
- */
-
 export const Default = ClearButtonGroup.bind({});
 Default.args = {};
 
+/**
+ * When disabled, the clear button color changes to `--spectrum-disabled-content-color` and is not interactive.
+ */
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
@@ -85,17 +78,14 @@ Disabled.parameters = {
 };
 
 /**
- * The `.spectrum-ClearButton--quiet` class will use a transparent background (including when the Express theme is active).
+ * The clear button component supports the following sizes:
+ * - `s`: 75px
+ * - `m`: 100px
+ * - `l`: 200px
+ * - `xl`: 300px
+ *
+* The default size is medium.
  */
-export const Quiet = Template.bind({});
-Quiet.args = {
-	isQuiet: true,
-};
-Quiet.tags = ["!dev"];
-Quiet.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withHeading: false,
@@ -107,15 +97,6 @@ Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 
-};
-
-export const OverBackground = ClearButtonGroup.bind({});
-OverBackground.tags = ["!dev"];
-OverBackground.args = {
-	staticColor: "white",
-};
-OverBackground.parameters = {
-	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
