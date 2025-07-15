@@ -1,11 +1,13 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { IconGroup } from "./icon.test.js";
 import { IconListTemplate, Template, UIDefaultTemplate } from "./template.js";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Create a list of all UI Icons with their sizing numbers.
@@ -102,6 +104,18 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers.reduce((acc, modifier) => {
+				const name = modifier.replace(/^--/, "");
+				acc[name] = {
+					category: "Modifier",
+					description: "",
+					value: undefined,
+					control: name.includes("color") ? "color" : "text",
+				};
+				return acc;
+			}, {}),
+		},
 	},
 };
 

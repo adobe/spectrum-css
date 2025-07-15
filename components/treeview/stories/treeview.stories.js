@@ -1,10 +1,12 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { Template } from "./template.js";
 import { TreeViewGroup } from "./treeview.test.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The typical usage of a treeview involves nesting a `.spectrum-Treeview element` within the `.spectrum-TreeView-item` parent element.
@@ -43,6 +45,18 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers.reduce((acc, modifier) => {
+				const name = modifier.replace(/^--/, "");
+				acc[name] = {
+					category: "Modifier",
+					description: "",
+					value: undefined,
+					control: name.includes("color") ? "color" : "text",
+				};
+				return acc;
+			}, {}),
+		},
 	},
 };
 
