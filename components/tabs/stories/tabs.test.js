@@ -1,20 +1,6 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
-const ExampleLabelOnlyTabContent = [
-	{
-		label: "Selected",
-		isSelected: true,
-	},
-	{
-		label: "Disabled",
-		isDisabled: true,
-	},
-	{
-		label: "Tab 3",
-	},
-];
-
 export const TabsGroups = Variants({
 	Template,
 	withSizes: false,
@@ -103,7 +89,7 @@ export const TabsGroups = Variants({
 	stateData: [
 		{
 			testHeading: "Label only",
-			content: ExampleLabelOnlyTabContent,
+			labelOnly: true,
 		},
 		{
 			testHeading: "Icon only",

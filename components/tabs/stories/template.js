@@ -18,6 +18,7 @@ export const Template = ({
 	isOpen = false,
 	isCompact = false,
 	iconOnly = false,
+	labelOnly = false,
 	hasRightAlignedTabs = false,
 	useAnchors = false,
 	id = getRandomId("tabs"),
@@ -71,7 +72,7 @@ export const Template = ({
 								aria-selected=${item?.isSelected ?? false}
 								aria-disabled=${item?.isDisabled ?? false}
 							>
-								${when(item.icon, () =>
+								${when(item.icon && !labelOnly, () =>
 									Icon({
 										iconName: item.icon,
 										setName: "workflow",

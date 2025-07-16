@@ -19,7 +19,7 @@
 	--spectrum-tabs-label-to-selection-indicator: var(--mod-tabs-label-to-selection-indicator, var(--spectrum-spacing-200));
 	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing, var(--spectrum-tab-item-to-tab-item-horizontal-medium));
 
-	--spectrum-tabs-icon-size: var(--mod-tabs-icon-size, var(--spectrum-workflow-icon-size-75));
+	--spectrum-tabs-icon-size: var(--mod-tabs-icon-size, var(--spectrum-workflow-icon-size-100));
 	--spectrum-tabs-icon-to-text: var(--mod-tabs-icon-to-text, var(--spectrum-text-to-visual-100));
 	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon, var(--spectrum-tab-item-top-to-workflow-icon-medium));
 	--spectrum-tabs-side-to-icon: var(--mod-tabs-side-to-icon, var(--spectrum-tab-item-side-to-workflow-icon-medium));
@@ -57,7 +57,7 @@
 .spectrum-Tabs.spectrum-Tabs--compact {
 	--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium));
 	--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
-	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
+	--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-bottom-to-text-compact-medium));
 	--spectrum-tabs-label-to-selection-indicator: var(--mod-tabs-label-to-selection-indicator-compact, var(--spectrum-spacing-75));
 	--spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing-compact, var(--spectrum-tab-item-to-tab-item-compact-horizontal-medium));
 	--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium));
@@ -112,7 +112,7 @@
 		margin-inline: var(--spectrum-tabs-side-to-icon);
 
 		& + .spectrum-Tabs-itemLabel {
-			margin-inline-start: var(--spectrum-tabs-icon-to-text);
+			margin-inline-start: calc(var(--spectrum-tabs-icon-to-text) - var(--spectrum-tabs-side-to-icon));
 		}
 	}
 

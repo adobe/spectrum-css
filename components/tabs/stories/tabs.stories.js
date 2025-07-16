@@ -76,11 +76,21 @@ export default {
 			},
 			control: "boolean",
 		},
+		labelOnly: {
+			name: "Label only",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Tabs",
 		isCompact: false,
 		iconOnly: false,
+		labelOnly: false,
 		orientation: "horizontal",
 		hasRightAlignedTabs: false,
 		useAnchors: false,
@@ -136,7 +146,7 @@ export const Vertical = VerticalGroup.bind({});
 Vertical.args = {
 	orientation: "vertical",
 };
-Vertical.tags = ["!dev"];
+Vertical.tags = ["!dev", "!autodocs"]; // TODO: remove "!autodocs" when vertical tabs are supported in S2
 Vertical.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -147,7 +157,7 @@ VerticalRight.args = {
 	hasRightAlignedTabs: true,
 };
 VerticalRight.storyName = "Vertical right";
-VerticalRight.tags = ["!dev"];
+VerticalRight.tags = ["!dev", "!autodocs"]; // TODO: remove "!autodocs" when vertical tabs are supported in S2
 VerticalRight.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -161,7 +171,7 @@ export const Overflow = OverflowGroup.bind({});
 Overflow.args = {
 	orientation: "overflow",
 };
-Overflow.tags = ["!dev"];
+Overflow.tags = ["!dev", "!autodocs"]; // TODO: remove "!autodocs" when overflow tabs are supported in S2
 Overflow.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -170,7 +180,7 @@ Overflow.parameters = {
  * In addition to the default, regular density, tabs also come in a compact density which has tighter spacing.
  */
 export const Compact = CompactGroup.bind({});
-Compact.storyName = "Density: Compact";
+Compact.storyName = "Density: compact";
 Compact.args = {
 	isCompact: true,
 };
