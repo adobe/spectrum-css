@@ -1,14 +1,11 @@
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
-import { startCase } from "lodash";
+import { startCase } from "lodash-es";
 
 import "./assets/index.css";
 
 import logo from "./assets/logo.svg";
 import pkg from "./package.json";
-
-const root = document.body ?? document.documentElement;
-if (root) root.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 
 addons.setConfig({
 	theme: create({
@@ -65,6 +62,6 @@ addons.setConfig({
 	}),
 	sidebar: {
 		showRoots: false,
-		renderLabel: ({ name, type }) => (type === 'story' ? name : startCase(name)) + " 📚",
+		renderLabel: ({ name, type }) => (type === "story" ? name : startCase(name)) + " 📚",
 	},
 });
