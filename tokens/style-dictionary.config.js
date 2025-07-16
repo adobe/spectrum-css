@@ -76,7 +76,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--medium",
 						sets: ["desktop"],
 					},
 					destination: "medium-vars.css",
@@ -93,7 +92,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--large",
 						sets: ["mobile"],
 					},
 					destination: "large-vars.css",
@@ -111,7 +109,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--light",
 						sets: ["light"],
 					},
 					destination: "light-vars.css",
@@ -128,7 +125,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--dark",
 						sets: ["dark"],
 					},
 					destination: "dark-vars.css",

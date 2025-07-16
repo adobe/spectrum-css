@@ -1,70 +1,38 @@
-import { format as JSONSetsFormat } from "./json-sets-formatter.js";
+import { valueFormatter, varToRef } from "./shared-logic.js";
 
-export const format = ({ dictionary, platform, file, options }) => {
-	const prefix = platform.prefix ? platform.prefix : false;
+export const format = ({ dictionary, platform }) => {
+	const { prefix } = platform;
 	let result = {};
 
-	const jsonSets = JSON.parse(
-		JSONSetsFormat({ dictionary, platform, file, options })
-	);
+	dictionary.allTokens.forEach((token) => {
+		if (!token) return;
 
-	const convertRef = (ref) => {
-		return typeof ref === "string" ? ref.replace(/\{(.*?)\}/g, `var(--${prefix}-$1)`) : ref;
-	};
+		const context = token.attributes?.sets?.[0];
 
-	const deconstructSets = (obj, scope = undefined) => {
-		let ret = obj;
-		Object.entries(obj.sets ?? {}).forEach(([context, data]) => {
-			if (context === "wireframe") return;
-			if (typeof scope !== "undefined" && scope !== context) return;
+		const values = valueFormatter(token.original?.value ?? token.value, { path: token.path, prefix, context });
+		if (!values || values.length === 0) return;
 
-			delete data.uuid;
-
-			if (data.ref) {
-				data.ref = convertRef(data.ref);
-
-				if (String(data.ref) === String(data.value)) {
-					delete data.ref;
-				}
-			}
-
-			if (data.sets) {
-				data = deconstructSets(data, context);
-
-				ret = {
-					...ret,
-					...data
-				};
-			}
-			else {
-				ret[context] = data;
-			}
-
-			delete ret.sets;
+		values.forEach(({ key, ...data }) => {
+			if (key.includes("android")) return;
+			result[key] = {
+				...(result[key] ?? {}),
+				...data,
+			};
 		});
-
-		delete ret.uuid;
-		if (ret.ref) ret.ref = convertRef(ret.ref);
-
-		if (ret.ref === ret.value) {
-			delete ret.ref;
-		}
-
-		return ret;
-	};
-
-	Object.keys(jsonSets).forEach((tokenName) => {
-		const tokenValue = jsonSets[tokenName];
-
-		// Add the property to the results object
-		result[tokenName] = {
-			prop: (prefix)? `--${prefix}-${tokenName}` : `--${tokenName}`,
-			...(deconstructSets(tokenValue) ?? {}),
-		};
 	});
 
 	// Sort the result alphabetically by keys
 	result = Object.entries(result).sort().reduce((acc, [key, value]) => {
+		if (value.ref && !value.value) {
+			const subKey = varToRef(value.ref, prefix);
+			const subValue = result[subKey];
+			if (subValue) {
+				Object.entries(subValue).forEach(([k, v]) => {
+					if (["ref", "prop"].includes(k)) return;
+					value[k] = v;
+				});
+			}
+		}
 		acc[key] = value;
 		return acc;
 	}, {});
