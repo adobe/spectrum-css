@@ -29,7 +29,7 @@
 		"cleaner": "nx run-many --target clean --projects",
 		"compare": "cross-env NODE_ENV=production yarn bundle && yarn component:compare",
 		"component:build": "node --no-warnings ./tasks/component-builder.js",
-		"component:compare": "node --no-warnings ./tasks/component-compare.js",
+		"component:compare": "node --no-warnings ./tasks/component-compare.js --tag next",
 		"component:report": "node --no-warnings ./tasks/component-reporter.js",
 		"dev": "cross-env NODE_ENV=development nx run storybook:build:docs",
 		"docs:report": "yarn report",
