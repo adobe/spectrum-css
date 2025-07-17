@@ -183,6 +183,8 @@ jobs:
             ## --- Run plugins test suites --- ##
             - name: Run plugin tests
               run: yarn test:plugins
+              env:
+                GITHUB_TOKEN: ${{ secrets.GH_ACCESS_FOR_CHANGESETS }}
 
     # -------------------------------------------------------------
     # RUN VISUAL REGRESSION TESTS --- #
