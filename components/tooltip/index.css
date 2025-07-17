@@ -301,6 +301,9 @@
 	line-height: var(--mod-tooltip-line-height, var(--spectrum-tooltip-line-height));
 	margin-block-start: var(--mod-tooltip-spacing-block-start, var(--spectrum-tooltip-spacing-block-start));
 	margin-block-end: var(--mod-tooltip-spacing-block-end, var(--spectrum-tooltip-spacing-block-end));
+
+	/* Allow overflow-wrap to work and prevent text overflow */
+	inline-size: 100%;
 }
 
 /****** Tooltip Placement and Animation Direction ******/
