@@ -20,7 +20,7 @@ export const Template = ({
 	variant,
 	trackHeight,
 	labelPosition,
-	fillColor,
+	trackColor,
 	showTicks = false,
 	showTickLabels = false,
 	isDisabled = false,
@@ -167,7 +167,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap({
-				"--spectrum-slider-track-color": fillColor ? fillColor : undefined,
+				"--spectrum-slider-track-color": trackColor ? trackColor : undefined,
 				...customStyles,
 			})}
 			role=${ifDefined(finalValues.length > 1 ? "group" : undefined)}

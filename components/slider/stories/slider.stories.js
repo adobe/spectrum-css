@@ -1,4 +1,4 @@
-import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -92,8 +92,9 @@ export default {
 			control: "select",
 			options: ["top", "side"],
 		},
-		fillColor: {
-			name: "Fill color",
+		trackColor: {
+			name: "Track color",
+			description: "Supports standard color input or any valid input for the <code>background</code> property such as, <code>linear-gradient(red, blue)</code> or <code>transparent</code>. Not available for ramp variant.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -187,18 +188,12 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=842-1056",
 		},
-		downState: {
-			selectors: [".spectrum-Slider-handle:not(:disabled)"],
-		},
 		packageJson,
 		metadata,
 		status: {
 			type: "migrated",
 		},
 	},
-	decorators: [
-		withDownStateDimensionCapture,
-	],
 	tags: ["migrated"],
 };
 
@@ -255,7 +250,7 @@ Sizing.parameters = {
 };
 
 /**
- * If the value represents an offset, the fill start can be set to represent the point of origin. The handle is positoned in the center of the track where the value is 0.
+ * If the value represents an offset, the fill start or end can be set to represent the point of origin. This allows the slider fill to extend from the origin toward the handle, in either direction along the track.
  */
 export const Offset = Template.bind({});
 Offset.args = {
