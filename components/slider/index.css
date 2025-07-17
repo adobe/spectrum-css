@@ -36,6 +36,7 @@
 	--spectrum-slider-tick-mark-width: var(--spectrum-border-width-200);
 	--spectrum-slider-tick-mark-border-radius: 2px;
 	--spectrum-slider-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-slider-downstate-perspective: var(--spectrum-component-size-minimum-perspective-down);
 
 	/* colors */
 	--spectrum-slider-track-color: var(--spectrum-track-color);
@@ -77,11 +78,7 @@
 
 	/* Field label passthrough */
 	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
-
-	.spectrum-Slider-handle {
-		/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- used to assign downstate perspective */
-		--spectrum-slider-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
-	}
+	--mod-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
 }
 
 .spectrum-Slider--sizeS {
@@ -92,12 +89,12 @@
 	--spectrum-slider-control-to-side-field-label: var(--spectrum-slider-control-to-field-label-side-small);
 	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
 	--spectrum-slider-inline-size: var(--spectrum-field-default-width-small);
-	--spectrum-slider-downstate-perspective: var(--spectrum-component-size-minimum-perspective-down);
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-small);
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-small);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-small);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-small);
 	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
+	--mod-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
 }
 
 .spectrum-Slider--sizeL {
@@ -114,6 +111,7 @@
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-large);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-large);
 	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
+	--mod-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
@@ -132,6 +130,7 @@
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-extra-large);
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-extra-large);
 	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-300);
+	--mod-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 22px;
@@ -172,14 +171,7 @@
 		inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--spectrum-slider-precision-handle-height) / 2);
 		margin-inline-start: calc((var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-handle-border-width)) * -0.5);
 
-		&.is-focused, &:focus, &:focus-visible {
-			&::before {
-				border-radius: var(--spectrum-slider-handle-border-radius);
-				block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-slider-focus-indicator-gap) * 2);
-				inline-size: calc(var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-focus-indicator-gap) * 2);
-				transition: none;
-			}
-		}
+
 	}
 }
 
@@ -443,7 +435,7 @@
 	}
 
 	/* Keyboard focused */
-	&.is-focused, &:focus, &:focus-visible {
+	.spectrum-Slider:not(.is-disabled) &.is-focused, .spectrum-Slider:not(.is-disabled) &:focus, .spectrum-Slider:not(.is-disabled) &:focus-visible {
 		border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
 		outline: 0;
 
@@ -811,6 +803,16 @@
 			background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
 		}
 	}
+}
+
+/* Highly specific override: ensure precise handle focus ring matches the thin handle shape for enabled sliders */
+.spectrum-Slider.spectrum-Slider--precise:not(.is-disabled) .spectrum-Slider-handle.is-focused::before,
+.spectrum-Slider.spectrum-Slider--precise:not(.is-disabled) .spectrum-Slider-handle:focus::before,
+.spectrum-Slider.spectrum-Slider--precise:not(.is-disabled) .spectrum-Slider-handle:focus-visible::before {
+  border-radius: var(--spectrum-slider-handle-border-radius);
+  block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-slider-focus-indicator-gap) * 2);
+  inline-size: calc(var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-focus-indicator-gap) * 2);
+  transition: none;
 }
 
 @media (forced-colors: active) {
