@@ -189,7 +189,7 @@
 	display: inline-flex;
 	justify-content: start;
 	box-sizing: border-box;
-	word-break: break-word;
+	overflow-wrap: break-word;
 	hyphens: auto;
 	cursor: pointer;
 	transition:
@@ -216,6 +216,9 @@
 	.spectrum-SideNav-link-text {
 		margin-block-start: var(--mod-sidenav-top-to-label, var(--spectrum-sidenav-top-to-label));
 		margin-block-end: var(--mod-sidenav-bottom-to-label, var(--spectrum-sidenav-bottom-to-label));
+
+		/* Allow overflow-wrap to work and prevent text overflow */
+		inline-size: 100%;
 	}
 
 	.spectrum-Icon {
