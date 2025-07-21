@@ -32,138 +32,669 @@
     ".spectrum-StatusLight:lang(ko)",
     ".spectrum-StatusLight:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-statuslight-border-width",
-    "--mod-statuslight-content-color-default",
-    "--mod-statuslight-corner-radius",
-    "--mod-statuslight-dot-size",
-    "--mod-statuslight-font-size",
-    "--mod-statuslight-font-weight",
-    "--mod-statuslight-height",
-    "--mod-statuslight-line-height",
-    "--mod-statuslight-line-height-cjk",
-    "--mod-statuslight-nonsemantic-blue-color",
-    "--mod-statuslight-nonsemantic-celery-color",
-    "--mod-statuslight-nonsemantic-chartreuse-color",
-    "--mod-statuslight-nonsemantic-cyan-color",
-    "--mod-statuslight-nonsemantic-fuchsia-color",
-    "--mod-statuslight-nonsemantic-gray-color",
-    "--mod-statuslight-nonsemantic-green-color",
-    "--mod-statuslight-nonsemantic-indigo-color",
-    "--mod-statuslight-nonsemantic-magenta-color",
-    "--mod-statuslight-nonsemantic-orange-color",
-    "--mod-statuslight-nonsemantic-purple-color",
-    "--mod-statuslight-nonsemantic-red-color",
-    "--mod-statuslight-nonsemantic-seafoam-color",
-    "--mod-statuslight-nonsemantic-yellow-color",
-    "--mod-statuslight-semantic-accent-color",
-    "--mod-statuslight-semantic-info-color",
-    "--mod-statuslight-semantic-negative-color",
-    "--mod-statuslight-semantic-neutral-color",
-    "--mod-statuslight-semantic-notice-color",
-    "--mod-statuslight-semantic-positive-color",
-    "--mod-statuslight-spacing-bottom-to-label",
-    "--mod-statuslight-spacing-dot-to-label",
-    "--mod-statuslight-spacing-top-to-dot",
-    "--mod-statuslight-spacing-top-to-label",
-    "--mod-statuslight-subdued-content-color-default"
-  ],
-  "component": [
-    "--spectrum-status-light-dot-size-extra-large",
-    "--spectrum-status-light-dot-size-large",
-    "--spectrum-status-light-dot-size-medium",
-    "--spectrum-status-light-dot-size-small",
-    "--spectrum-status-light-top-to-dot-extra-large",
-    "--spectrum-status-light-top-to-dot-large",
-    "--spectrum-status-light-top-to-dot-medium",
-    "--spectrum-status-light-top-to-dot-small",
-    "--spectrum-statuslight-border-width",
-    "--spectrum-statuslight-content-color-default",
-    "--spectrum-statuslight-corner-radius",
-    "--spectrum-statuslight-dot-size",
-    "--spectrum-statuslight-font-size",
-    "--spectrum-statuslight-font-weight",
-    "--spectrum-statuslight-height",
-    "--spectrum-statuslight-line-height",
-    "--spectrum-statuslight-line-height-cjk",
-    "--spectrum-statuslight-nonsemantic-blue-color",
-    "--spectrum-statuslight-nonsemantic-celery-color",
-    "--spectrum-statuslight-nonsemantic-chartreuse-color",
-    "--spectrum-statuslight-nonsemantic-cyan-color",
-    "--spectrum-statuslight-nonsemantic-fuchsia-color",
-    "--spectrum-statuslight-nonsemantic-gray-color",
-    "--spectrum-statuslight-nonsemantic-green-color",
-    "--spectrum-statuslight-nonsemantic-indigo-color",
-    "--spectrum-statuslight-nonsemantic-magenta-color",
-    "--spectrum-statuslight-nonsemantic-orange-color",
-    "--spectrum-statuslight-nonsemantic-purple-color",
-    "--spectrum-statuslight-nonsemantic-red-color",
-    "--spectrum-statuslight-nonsemantic-seafoam-color",
-    "--spectrum-statuslight-nonsemantic-yellow-color",
-    "--spectrum-statuslight-semantic-accent-color",
-    "--spectrum-statuslight-semantic-info-color",
-    "--spectrum-statuslight-semantic-negative-color",
-    "--spectrum-statuslight-semantic-neutral-color",
-    "--spectrum-statuslight-semantic-notice-color",
-    "--spectrum-statuslight-semantic-positive-color",
-    "--spectrum-statuslight-spacing-bottom-to-label",
-    "--spectrum-statuslight-spacing-computed-top-to-dot",
-    "--spectrum-statuslight-spacing-dot-to-label",
-    "--spectrum-statuslight-spacing-top-to-dot",
-    "--spectrum-statuslight-spacing-top-to-label",
-    "--spectrum-statuslight-subdued-content-color-default"
-  ],
-  "global": [
-    "--spectrum-accent-visual-color",
-    "--spectrum-blue-visual-color",
-    "--spectrum-border-width-100",
-    "--spectrum-celery-visual-color",
-    "--spectrum-chartreuse-visual-color",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-300",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-cyan-visual-color",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-fuchsia-visual-color",
-    "--spectrum-gray-visual-color",
-    "--spectrum-green-visual-color",
-    "--spectrum-indigo-visual-color",
-    "--spectrum-informative-visual-color",
-    "--spectrum-line-height-100",
-    "--spectrum-magenta-visual-color",
-    "--spectrum-negative-visual-color",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-subdued-content-color-default",
-    "--spectrum-neutral-visual-color",
-    "--spectrum-notice-visual-color",
-    "--spectrum-orange-visual-color",
-    "--spectrum-positive-visual-color",
-    "--spectrum-purple-visual-color",
-    "--spectrum-red-visual-color",
-    "--spectrum-seafoam-visual-color",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-text-to-visual-200",
-    "--spectrum-text-to-visual-300",
-    "--spectrum-text-to-visual-75",
-    "--spectrum-yellow-visual-color"
-  ],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-statuslight-content-color-default",
-    "--highcontrast-statuslight-subdued-content-color-default"
-  ]
+  "modifiers": {
+    "mod-statuslight-height": {
+      "description": "Used by `.spectrum-StatusLight`. Defaults to `var(--spectrum-statuslight-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-spacing-top-to-label": {
+      "description": "Used by `.spectrum-StatusLight`, `--spectrum-statuslight-spacing-computed-top-to-dot`. Defaults to `var(--spectrum-statuslight-spacing-top-to-label)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-spacing-bottom-to-label": {
+      "description": "Used by `.spectrum-StatusLight`. Defaults to `var(--spectrum-statuslight-spacing-bottom-to-label)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-font-size": {
+      "description": "Used by `.spectrum-StatusLight`. Defaults to `var(--spectrum-statuslight-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-font-weight": {
+      "description": "Used by `.spectrum-StatusLight`. Defaults to `var(--spectrum-statuslight-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-line-height": {
+      "description": "Used by `.spectrum-StatusLight`. Defaults to `var(--spectrum-statuslight-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-content-color-default": {
+      "description": "Used by `.spectrum-StatusLight`. Defaults to `var(--spectrum-statuslight-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-line-height-cjk": {
+      "description": "Used by `.spectrum-StatusLight:lang(ja), .spectrum-StatusLight:lang(ko), .spectrum-StatusLight:lang(zh)`. Defaults to `var(--spectrum-statuslight-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-spacing-top-to-dot": {
+      "description": "Used by `--spectrum-statuslight-spacing-computed-top-to-dot`. Defaults to `var(--spectrum-statuslight-spacing-top-to-dot)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-dot-size": {
+      "description": "Used by `.spectrum-StatusLight:before`. Defaults to `var(--spectrum-statuslight-dot-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-corner-radius": {
+      "description": "Used by `.spectrum-StatusLight:before`. Defaults to `var(--spectrum-statuslight-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-spacing-dot-to-label": {
+      "description": "Used by `.spectrum-StatusLight:before`. Defaults to `var(--spectrum-statuslight-spacing-dot-to-label)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-statuslight-subdued-content-color-default": {
+      "description": "Used by `.spectrum-StatusLight--neutral`. Defaults to `var(--spectrum-statuslight-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-semantic-neutral-color": {
+      "description": "Used by `.spectrum-StatusLight--neutral:before`. Defaults to `var(--spectrum-statuslight-semantic-neutral-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-semantic-accent-color": {
+      "description": "Used by `.spectrum-StatusLight--accent:before`. Defaults to `var(--spectrum-statuslight-semantic-accent-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-semantic-info-color": {
+      "description": "Used by `.spectrum-StatusLight--info:before`. Defaults to `var(--spectrum-statuslight-semantic-info-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-semantic-negative-color": {
+      "description": "Used by `.spectrum-StatusLight--negative:before`. Defaults to `var(--spectrum-statuslight-semantic-negative-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-semantic-notice-color": {
+      "description": "Used by `.spectrum-StatusLight--notice:before`. Defaults to `var(--spectrum-statuslight-semantic-notice-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-semantic-positive-color": {
+      "description": "Used by `.spectrum-StatusLight--positive:before`. Defaults to `var(--spectrum-statuslight-semantic-positive-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-gray-color": {
+      "description": "Used by `.spectrum-StatusLight--gray:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-gray-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-red-color": {
+      "description": "Used by `.spectrum-StatusLight--red:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-red-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-orange-color": {
+      "description": "Used by `.spectrum-StatusLight--orange:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-orange-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-yellow-color": {
+      "description": "Used by `.spectrum-StatusLight--yellow:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-yellow-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-chartreuse-color": {
+      "description": "Used by `.spectrum-StatusLight--chartreuse:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-chartreuse-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-celery-color": {
+      "description": "Used by `.spectrum-StatusLight--celery:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-celery-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-green-color": {
+      "description": "Used by `.spectrum-StatusLight--green:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-green-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-seafoam-color": {
+      "description": "Used by `.spectrum-StatusLight--seafoam:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-seafoam-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-cyan-color": {
+      "description": "Used by `.spectrum-StatusLight--cyan:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-cyan-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-blue-color": {
+      "description": "Used by `.spectrum-StatusLight--blue:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-blue-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-indigo-color": {
+      "description": "Used by `.spectrum-StatusLight--indigo:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-indigo-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-purple-color": {
+      "description": "Used by `.spectrum-StatusLight--purple:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-purple-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-fuchsia-color": {
+      "description": "Used by `.spectrum-StatusLight--fuchsia:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-fuchsia-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-nonsemantic-magenta-color": {
+      "description": "Used by `.spectrum-StatusLight--magenta:before`. Defaults to `var(--spectrum-statuslight-nonsemantic-magenta-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-statuslight-border-width": {
+      "description": "Used by `.spectrum-StatusLight:before`. Defaults to `var(--spectrum-statuslight-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-statuslight-height": {
+      "value": "var(--spectrum-component-height-300)",
+      "description": "Defined in `.spectrum-StatusLight, .spectrum-StatusLight--sizeM`, `.spectrum-StatusLight--sizeS`, `.spectrum-StatusLight--sizeL`, `.spectrum-StatusLight--sizeXL`. Used by `.spectrum-StatusLight`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-dot-size": {
+      "value": "var(--spectrum-status-light-dot-size-extra-large)",
+      "description": "Defined in `.spectrum-StatusLight, .spectrum-StatusLight--sizeM`, `.spectrum-StatusLight--sizeS`, `.spectrum-StatusLight--sizeL`, `.spectrum-StatusLight--sizeXL`. Used by `.spectrum-StatusLight:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-status-light-dot-size-medium": {
+      "description": "Used by `--spectrum-statuslight-dot-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-font-size": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Defined in `.spectrum-StatusLight, .spectrum-StatusLight--sizeM`, `.spectrum-StatusLight--sizeS`, `.spectrum-StatusLight--sizeL`, `.spectrum-StatusLight--sizeXL`. Used by `.spectrum-StatusLight`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-spacing-dot-to-label": {
+      "value": "var(--spectrum-text-to-visual-300)",
+      "description": "Defined in `.spectrum-StatusLight, .spectrum-StatusLight--sizeM`, `.spectrum-StatusLight--sizeS`, `.spectrum-StatusLight--sizeL`, `.spectrum-StatusLight--sizeXL`. Used by `.spectrum-StatusLight:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-spacing-top-to-dot": {
+      "value": "var(--spectrum-status-light-top-to-dot-extra-large)",
+      "description": "Defined in `.spectrum-StatusLight, .spectrum-StatusLight--sizeM`, `.spectrum-StatusLight--sizeS`, `.spectrum-StatusLight--sizeL`, `.spectrum-StatusLight--sizeXL`. Used by `--spectrum-statuslight-spacing-computed-top-to-dot`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-status-light-top-to-dot-medium": {
+      "description": "Used by `--spectrum-statuslight-spacing-top-to-dot`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-spacing-top-to-label": {
+      "value": "var(--spectrum-component-top-to-text-300)",
+      "description": "Defined in `.spectrum-StatusLight, .spectrum-StatusLight--sizeM`, `.spectrum-StatusLight--sizeS`, `.spectrum-StatusLight--sizeL`, `.spectrum-StatusLight--sizeXL`. Used by `.spectrum-StatusLight`, `--spectrum-statuslight-spacing-computed-top-to-dot`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-spacing-bottom-to-label": {
+      "value": "var(--spectrum-component-bottom-to-text-300)",
+      "description": "Defined in `.spectrum-StatusLight, .spectrum-StatusLight--sizeM`, `.spectrum-StatusLight--sizeS`, `.spectrum-StatusLight--sizeL`, `.spectrum-StatusLight--sizeXL`. Used by `.spectrum-StatusLight`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-status-light-dot-size-small": {
+      "description": "Used by `--spectrum-statuslight-dot-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-status-light-top-to-dot-small": {
+      "description": "Used by `--spectrum-statuslight-spacing-top-to-dot`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-status-light-dot-size-large": {
+      "description": "Used by `--spectrum-statuslight-dot-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-status-light-top-to-dot-large": {
+      "description": "Used by `--spectrum-statuslight-spacing-top-to-dot`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-status-light-dot-size-extra-large": {
+      "description": "Used by `--spectrum-statuslight-dot-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-status-light-top-to-dot-extra-large": {
+      "description": "Used by `--spectrum-statuslight-spacing-top-to-dot`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-corner-radius": {
+      "value": "50%",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-border-width": {
+      "value": "var(--spectrum-border-width-100)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-line-height": {
+      "value": "var(--spectrum-line-height-100)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-line-height-cjk": {
+      "value": "var(--spectrum-cjk-line-height-100)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight:lang(ja), .spectrum-StatusLight:lang(ko), .spectrum-StatusLight:lang(zh)`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-statuslight-content-color-default": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-subdued-content-color-default": {
+      "value": "var(--spectrum-neutral-subdued-content-color-default)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--neutral`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-semantic-neutral-color": {
+      "value": "var(--spectrum-neutral-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--neutral:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-semantic-accent-color": {
+      "value": "var(--spectrum-accent-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--accent:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-semantic-negative-color": {
+      "value": "var(--spectrum-negative-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--negative:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-semantic-info-color": {
+      "value": "var(--spectrum-informative-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--info:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-semantic-notice-color": {
+      "value": "var(--spectrum-notice-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--notice:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-semantic-positive-color": {
+      "value": "var(--spectrum-positive-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--positive:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-gray-color": {
+      "value": "var(--spectrum-gray-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--gray:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-red-color": {
+      "value": "var(--spectrum-red-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--red:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-orange-color": {
+      "value": "var(--spectrum-orange-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--orange:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-yellow-color": {
+      "value": "var(--spectrum-yellow-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--yellow:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-chartreuse-color": {
+      "value": "var(--spectrum-chartreuse-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--chartreuse:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-celery-color": {
+      "value": "var(--spectrum-celery-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--celery:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-green-color": {
+      "value": "var(--spectrum-green-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--green:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-seafoam-color": {
+      "value": "var(--spectrum-seafoam-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--seafoam:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-cyan-color": {
+      "value": "var(--spectrum-cyan-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--cyan:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-blue-color": {
+      "value": "var(--spectrum-blue-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--blue:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-indigo-color": {
+      "value": "var(--spectrum-indigo-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--indigo:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-purple-color": {
+      "value": "var(--spectrum-purple-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--purple:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-fuchsia-color": {
+      "value": "var(--spectrum-fuchsia-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--fuchsia:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-nonsemantic-magenta-color": {
+      "value": "var(--spectrum-magenta-visual-color)",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--magenta:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-statuslight-spacing-computed-top-to-dot": {
+      "value": "calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)))",
+      "description": "Defined in `.spectrum-StatusLight:before`. Used by `.spectrum-StatusLight:before`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-component-height-100": {
+      "description": "Used by `--spectrum-statuslight-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "description": "Used by `--spectrum-statuslight-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "description": "Used by `--spectrum-statuslight-spacing-dot-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "description": "Used by `--spectrum-statuslight-spacing-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "description": "Used by `--spectrum-statuslight-spacing-bottom-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "description": "Used by `--spectrum-statuslight-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "description": "Used by `--spectrum-statuslight-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "description": "Used by `--spectrum-statuslight-spacing-dot-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "description": "Used by `--spectrum-statuslight-spacing-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "description": "Used by `--spectrum-statuslight-spacing-bottom-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "description": "Used by `--spectrum-statuslight-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "description": "Used by `--spectrum-statuslight-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-200": {
+      "description": "Used by `--spectrum-statuslight-spacing-dot-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "description": "Used by `--spectrum-statuslight-spacing-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "description": "Used by `--spectrum-statuslight-spacing-bottom-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "description": "Used by `--spectrum-statuslight-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "description": "Used by `--spectrum-statuslight-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-300": {
+      "description": "Used by `--spectrum-statuslight-spacing-dot-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "description": "Used by `--spectrum-statuslight-spacing-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-300": {
+      "description": "Used by `--spectrum-statuslight-spacing-bottom-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "description": "Used by `--spectrum-statuslight-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "description": "Used by `--spectrum-statuslight-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "description": "Used by `--spectrum-statuslight-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "description": "Used by `--spectrum-statuslight-content-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-default": {
+      "description": "Used by `--spectrum-statuslight-subdued-content-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-visual-color": {
+      "description": "Used by `--spectrum-statuslight-semantic-neutral-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-visual-color": {
+      "description": "Used by `--spectrum-statuslight-semantic-accent-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-visual-color": {
+      "description": "Used by `--spectrum-statuslight-semantic-negative-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-informative-visual-color": {
+      "description": "Used by `--spectrum-statuslight-semantic-info-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-notice-visual-color": {
+      "description": "Used by `--spectrum-statuslight-semantic-notice-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-positive-visual-color": {
+      "description": "Used by `--spectrum-statuslight-semantic-positive-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-gray-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-red-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-red-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-orange-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-orange-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-yellow-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-yellow-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-chartreuse-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-chartreuse-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-celery-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-celery-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-green-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-green-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-seafoam-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-seafoam-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-cyan-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-cyan-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-blue-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-blue-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-indigo-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-indigo-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-purple-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-purple-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-fuchsia-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-fuchsia-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-magenta-visual-color": {
+      "description": "Used by `--spectrum-statuslight-nonsemantic-magenta-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-statuslight-content-color-default": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight`. Defaults to `var(--mod-statuslight-content-color-default, var(--spectrum-statuslight-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-statuslight-subdued-content-color-default": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-StatusLight`. Used by `.spectrum-StatusLight--neutral`. Defaults to `var(--mod-statuslight-subdued-content-color-default, var(--spectrum-statuslight-subdued-content-color-default))`, if not set.",
+      "control": "color"
+    }
+  }
 }

@@ -8,6 +8,13 @@
     ".spectrum-InfieldButton--top .spectrum-InfieldButton-fill",
     ".spectrum-InfieldButton-fill",
     ".spectrum-InfieldButton-icon",
+    ".spectrum-InfieldButton:active",
+    ".spectrum-InfieldButton:disabled",
+    ".spectrum-InfieldButton:focus-visible",
+    ".spectrum-InfieldButton:hover",
+    ".spectrum-InfieldButton:not(:disabled):active",
+    ".spectrum-InfieldButton:not(:disabled):focus-visible",
+    ".spectrum-InfieldButton:not(:disabled):hover",
     ".spectrum-InfieldButton.spectrum-InfieldButton--bottom",
     ".spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeL",
     ".spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeS",
@@ -20,140 +27,633 @@
     ".spectrum-InfieldButton.spectrum-InfieldButton--top",
     ".spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeL",
     ".spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeS",
-    ".spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeXL",
-    ".spectrum-InfieldButton:active",
-    ".spectrum-InfieldButton:disabled",
-    ".spectrum-InfieldButton:focus-visible",
-    ".spectrum-InfieldButton:hover",
-    ".spectrum-InfieldButton:not(:disabled):active",
-    ".spectrum-InfieldButton:not(:disabled):focus-visible",
-    ".spectrum-InfieldButton:not(:disabled):hover"
+    ".spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeXL"
   ],
-  "modifiers": [
-    "--mod-infield-border-color",
-    "--mod-infield-border-color-quiet",
-    "--mod-infield-button-background-color",
-    "--mod-infield-button-background-color-disabled",
-    "--mod-infield-button-background-color-down",
-    "--mod-infield-button-background-color-down-disabled",
-    "--mod-infield-button-background-color-down-quiet",
-    "--mod-infield-button-background-color-hover",
-    "--mod-infield-button-background-color-hover-disabled",
-    "--mod-infield-button-background-color-hover-quiet",
-    "--mod-infield-button-background-color-key-focus",
-    "--mod-infield-button-background-color-key-focus-quiet",
-    "--mod-infield-button-background-color-quiet",
-    "--mod-infield-button-background-color-quiet-disabled",
-    "--mod-infield-button-border-color",
-    "--mod-infield-button-border-color-disabled",
-    "--mod-infield-button-border-color-quiet-disabled",
-    "--mod-infield-button-border-radius",
-    "--mod-infield-button-border-radius-reset",
-    "--mod-infield-button-border-width",
-    "--mod-infield-button-border-width-quiet",
-    "--mod-infield-button-edge-to-fill",
-    "--mod-infield-button-fill-justify-content",
-    "--mod-infield-button-fill-padding",
-    "--mod-infield-button-height",
-    "--mod-infield-button-icon-color",
-    "--mod-infield-button-icon-color-disabled",
-    "--mod-infield-button-icon-color-down",
-    "--mod-infield-button-icon-color-down-disabled",
-    "--mod-infield-button-icon-color-hover",
-    "--mod-infield-button-icon-color-hover-disabled",
-    "--mod-infield-button-icon-color-key-focus",
-    "--mod-infield-button-icon-color-key-focus-disabled",
-    "--mod-infield-button-inner-edge-to-fill",
-    "--mod-infield-button-stacked-border-radius-reset",
-    "--mod-infield-button-stacked-bottom-border-block-end-width",
-    "--mod-infield-button-stacked-bottom-border-radius-end-end",
-    "--mod-infield-button-stacked-bottom-border-radius-end-start",
-    "--mod-infield-button-stacked-fill-padding-inline",
-    "--mod-infield-button-stacked-fill-padding-inner",
-    "--mod-infield-button-stacked-fill-padding-outer",
-    "--mod-infield-button-stacked-top-border-radius-start-start",
-    "--mod-infield-button-width",
-    "--mod-infield-button-width-stacked"
-  ],
-  "component": [
-    "--spectrum-in-field-button-edge-to-disclosure-icon-stacked-extra-large",
-    "--spectrum-in-field-button-edge-to-disclosure-icon-stacked-large",
-    "--spectrum-in-field-button-edge-to-disclosure-icon-stacked-medium",
-    "--spectrum-in-field-button-edge-to-disclosure-icon-stacked-small",
-    "--spectrum-in-field-button-edge-to-fill",
-    "--spectrum-in-field-button-fill-stacked-inner-border-rounding",
-    "--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-extra-large",
-    "--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-large",
-    "--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-medium",
-    "--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-small",
-    "--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-extra-large",
-    "--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-large",
-    "--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-medium",
-    "--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-small",
-    "--spectrum-in-field-button-stacked-inner-edge-to-fill",
-    "--spectrum-in-field-button-width-stacked-extra-large",
-    "--spectrum-in-field-button-width-stacked-large",
-    "--spectrum-in-field-button-width-stacked-medium",
-    "--spectrum-in-field-button-width-stacked-small",
-    "--spectrum-infield-button-background-color",
-    "--spectrum-infield-button-background-color-down",
-    "--spectrum-infield-button-background-color-hover",
-    "--spectrum-infield-button-background-color-key-focus",
-    "--spectrum-infield-button-border-color",
-    "--spectrum-infield-button-border-radius",
-    "--spectrum-infield-button-border-radius-reset",
-    "--spectrum-infield-button-border-width",
-    "--spectrum-infield-button-edge-to-fill",
-    "--spectrum-infield-button-fill-justify-content",
-    "--spectrum-infield-button-fill-padding",
-    "--spectrum-infield-button-height",
-    "--spectrum-infield-button-icon-color",
-    "--spectrum-infield-button-icon-color-down",
-    "--spectrum-infield-button-icon-color-hover",
-    "--spectrum-infield-button-icon-color-key-focus",
-    "--spectrum-infield-button-inner-edge-to-fill",
-    "--spectrum-infield-button-stacked-border-radius-reset",
-    "--spectrum-infield-button-stacked-bottom-border-radius-end-start",
-    "--spectrum-infield-button-stacked-fill-padding-inline",
-    "--spectrum-infield-button-stacked-fill-padding-inner",
-    "--spectrum-infield-button-stacked-fill-padding-outer",
-    "--spectrum-infield-button-stacked-top-border-radius-start-start",
-    "--spectrum-infield-button-width"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-border-width-100",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-corner-radius-100",
-    "--spectrum-disabled-background-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-gray-300",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus"
-  ],
-  "system-theme": [
-    "--system-infield-button-background-color",
-    "--system-infield-button-background-color-down",
-    "--system-infield-button-background-color-hover",
-    "--system-infield-button-background-color-key-focus",
-    "--system-infield-button-border-color",
-    "--system-infield-button-border-radius",
-    "--system-infield-button-border-radius-reset",
-    "--system-infield-button-border-width",
-    "--system-infield-button-disabled-border-color",
-    "--system-infield-button-stacked-bottom-border-radius-end-start",
-    "--system-infield-button-stacked-top-border-radius-start-start"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-infield-button-border-color",
-    "--highcontrast-infield-button-border-color-active"
-  ]
+  "modifiers": {
+    "mod-infield-button-background-color": {
+      "value": "var(--mod-infield-button-background-color-key-focus, var(--spectrum-infield-button-background-color-key-focus))",
+      "description": "Defined in `.spectrum-InfieldButton:disabled`, `.spectrum-InfieldButton.spectrum-InfieldButton--quiet`, `.spectrum-InfieldButton.spectrum-InfieldButton--quiet:disabled`, `.spectrum-InfieldButton:hover`, `.spectrum-InfieldButton:active`, `.spectrum-InfieldButton:focus-visible`. Used by `.spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-disabled": {
+      "description": "Used by `--mod-infield-button-background-color`. Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-hover": {
+      "value": "var(--mod-infield-button-background-color-hover-quiet, transparent)",
+      "description": "Defined in `.spectrum-InfieldButton:disabled`, `.spectrum-InfieldButton.spectrum-InfieldButton--quiet`. Used by `--mod-infield-button-background-color`. Defaults to `var(--spectrum-infield-button-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-hover-disabled": {
+      "description": "Used by `--mod-infield-button-background-color-hover`. Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-down": {
+      "value": "var(--mod-infield-button-background-color-down-quiet, transparent)",
+      "description": "Defined in `.spectrum-InfieldButton:disabled`, `.spectrum-InfieldButton.spectrum-InfieldButton--quiet`. Used by `--mod-infield-button-background-color`. Defaults to `var(--spectrum-infield-button-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-down-disabled": {
+      "description": "Used by `--mod-infield-button-background-color-down`. Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-border-color": {
+      "value": "var(--mod-infield-button-border-color-quiet-disabled, transparent)",
+      "description": "Defined in `.spectrum-InfieldButton:disabled`, `.spectrum-InfieldButton.spectrum-InfieldButton--quiet:disabled`. Used by `.spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-border-color-disabled": {
+      "description": "Used by `--mod-infield-button-border-color`. Defaults to `var(--spectrum-infield-button-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-icon-color": {
+      "value": "var(--mod-infield-button-icon-color-key-focus, var(--spectrum-infield-button-icon-color-key-focus))",
+      "description": "Defined in `.spectrum-InfieldButton:disabled`, `.spectrum-InfieldButton:hover`, `.spectrum-InfieldButton:active`, `.spectrum-InfieldButton:focus-visible`. Used by `.spectrum-InfieldButton-icon`. Defaults to `var(--spectrum-infield-button-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-icon-color-disabled": {
+      "description": "Used by `--mod-infield-button-icon-color`. Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-icon-color-hover": {
+      "value": "var(--mod-infield-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-InfieldButton:disabled`. Used by `--mod-infield-button-icon-color`. Defaults to `var(--spectrum-infield-button-icon-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-icon-color-hover-disabled": {
+      "description": "Used by `--mod-infield-button-icon-color-hover`. Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-icon-color-down": {
+      "value": "var(--mod-infield-button-icon-color-down-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-InfieldButton:disabled`. Used by `--mod-infield-button-icon-color`. Defaults to `var(--spectrum-infield-button-icon-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-icon-color-down-disabled": {
+      "description": "Used by `--mod-infield-button-icon-color-down`. Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-icon-color-key-focus": {
+      "value": "var(--mod-infield-button-icon-color-key-focus-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-InfieldButton:disabled`. Used by `--mod-infield-button-icon-color`. Defaults to `var(--spectrum-infield-button-icon-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-icon-color-key-focus-disabled": {
+      "description": "Used by `--mod-infield-button-icon-color-key-focus`. Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-width": {
+      "value": "var(--mod-infield-button-width-stacked, var(--spectrum-in-field-button-width-stacked-extra-large))",
+      "description": "Defined in `.spectrum-InfieldButton.spectrum-InfieldButton--bottom, .spectrum-InfieldButton.spectrum-InfieldButton--top`, `.spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeS, .spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeS`, `.spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeL, .spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeL`, `.spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeXL, .spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeXL`. Used by `.spectrum-InfieldButton`. Defaults to `var(--spectrum-infield-button-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-width-stacked": {
+      "description": "Used by `--mod-infield-button-width`. Defaults to `var(--spectrum-in-field-button-width-stacked-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-quiet": {
+      "description": "Used by `--mod-infield-button-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-hover-quiet": {
+      "description": "Used by `--mod-infield-button-background-color-hover`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-down-quiet": {
+      "description": "Used by `--mod-infield-button-background-color-down`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-key-focus": {
+      "value": "var(--mod-infield-button-background-color-key-focus-quiet, transparent)",
+      "description": "Defined in `.spectrum-InfieldButton.spectrum-InfieldButton--quiet`. Used by `--mod-infield-button-background-color`. Defaults to `var(--spectrum-infield-button-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-key-focus-quiet": {
+      "description": "Used by `--mod-infield-button-background-color-key-focus`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-border-color": {
+      "value": "var(--mod-infield-border-color-quiet, transparent)",
+      "description": "Defined in `.spectrum-InfieldButton.spectrum-InfieldButton--quiet`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-border-color-quiet": {
+      "description": "Used by `--mod-infield-border-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-border-width": {
+      "value": "var(--mod-infield-button-border-width-quiet, 0)",
+      "description": "Defined in `.spectrum-InfieldButton.spectrum-InfieldButton--quiet`. Used by `.spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill, .spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-border-width-quiet": {
+      "description": "Used by `--mod-infield-button-border-width`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-background-color-quiet-disabled": {
+      "description": "Used by `--mod-infield-button-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-border-color-quiet-disabled": {
+      "description": "Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-infield-button-height": {
+      "description": "Used by `.spectrum-InfieldButton`, `.spectrum-InfieldButton.spectrum-InfieldButton--bottom, .spectrum-InfieldButton.spectrum-InfieldButton--top`. Defaults to `var(--spectrum-infield-button-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-edge-to-fill": {
+      "description": "Used by `.spectrum-InfieldButton`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill, .spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-edge-to-fill)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-inner-edge-to-fill": {
+      "description": "Used by `.spectrum-InfieldButton.spectrum-InfieldButton--top`, `.spectrum-InfieldButton.spectrum-InfieldButton--bottom`, `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-inner-edge-to-fill)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-border-radius": {
+      "description": "Used by `.spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-fill-padding": {
+      "description": "Used by `.spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-fill-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-fill-justify-content": {
+      "description": "Used by `.spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-fill-justify-content)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-border-radius-reset": {
+      "description": "Used by `.spectrum-InfieldButton--right .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--left .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-border-radius-reset)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-stacked-fill-padding-inline": {
+      "description": "Used by `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill, .spectrum-InfieldButton--top .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-stacked-fill-padding-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-stacked-fill-padding-outer": {
+      "description": "Used by `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-stacked-fill-padding-outer)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-stacked-fill-padding-inner": {
+      "description": "Used by `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-stacked-fill-padding-inner)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-stacked-top-border-radius-start-start": {
+      "description": "Used by `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-stacked-top-border-radius-start-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-stacked-border-radius-reset": {
+      "description": "Used by `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-stacked-border-radius-reset)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-stacked-bottom-border-radius-end-start": {
+      "description": "Used by `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--spectrum-infield-button-stacked-bottom-border-radius-end-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-stacked-bottom-border-radius-end-end": {
+      "description": "Used by `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-infield-button-stacked-bottom-border-block-end-width": {
+      "description": "Used by `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`. Defaults to `var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-infield-button-height": {
+      "value": "var(--spectrum-component-height-300)",
+      "description": "Defined in `.spectrum-InfieldButton`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeS`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeL`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeXL`. Used by `.spectrum-InfieldButton`, `.spectrum-InfieldButton.spectrum-InfieldButton--bottom, .spectrum-InfieldButton.spectrum-InfieldButton--top`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-width": {
+      "value": "var(--spectrum-component-height-300)",
+      "description": "Defined in `.spectrum-InfieldButton`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeS`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeL`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeXL`. Used by `.spectrum-InfieldButton`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-stacked-border-radius-reset": {
+      "value": "var(--spectrum-in-field-button-fill-stacked-inner-border-rounding)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-fill-stacked-inner-border-rounding": {
+      "description": "Used by `--spectrum-infield-button-stacked-border-radius-reset`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-edge-to-fill": {
+      "value": "var(--spectrum-in-field-button-edge-to-fill)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill, .spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-edge-to-fill": {
+      "description": "Used by `--spectrum-infield-button-edge-to-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-inner-edge-to-fill": {
+      "value": "var(--spectrum-in-field-button-stacked-inner-edge-to-fill)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton.spectrum-InfieldButton--top`, `.spectrum-InfieldButton.spectrum-InfieldButton--bottom`, `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-stacked-inner-edge-to-fill": {
+      "description": "Used by `--spectrum-infield-button-inner-edge-to-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-fill-padding": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-stacked-fill-padding-inline": {
+      "value": "var(--spectrum-in-field-button-edge-to-disclosure-icon-stacked-extra-large)",
+      "description": "Defined in `.spectrum-InfieldButton`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeS`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeL`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeXL`. Used by `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill, .spectrum-InfieldButton--top .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-edge-to-disclosure-icon-stacked-medium": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-stacked-fill-padding-outer": {
+      "value": "var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-extra-large)",
+      "description": "Defined in `.spectrum-InfieldButton`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeS`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeL`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeXL`. Used by `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-medium": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-outer`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-stacked-fill-padding-inner": {
+      "value": "var(--spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-extra-large)",
+      "description": "Defined in `.spectrum-InfieldButton`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeS`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeL`, `.spectrum-InfieldButton.spectrum-InfieldButton--sizeXL`. Used by `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-medium": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-inner`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-icon-color": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton-icon`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-infield-button-icon-color-hover": {
+      "value": "var(--spectrum-neutral-content-color-hover)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `--mod-infield-button-icon-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-infield-button-icon-color-down": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `--mod-infield-button-icon-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-infield-button-icon-color-key-focus": {
+      "value": "var(--spectrum-neutral-content-color-key-focus)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `--mod-infield-button-icon-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-infield-button-fill-justify-content": {
+      "value": "center",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-border-color": {
+      "value": "var(--system-infield-button-disabled-border-color)",
+      "description": "Defined in `.spectrum-InfieldButton`, `.spectrum-InfieldButton:disabled`. Used by `--mod-infield-button-border-color`, `.spectrum-InfieldButton-fill`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-edge-to-disclosure-icon-stacked-small": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-small": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-outer`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-small": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-inner`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-edge-to-disclosure-icon-stacked-large": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-large": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-outer`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-large": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-inner`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-edge-to-disclosure-icon-stacked-extra-large": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-extra-large": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-outer`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-extra-large": {
+      "description": "Used by `--spectrum-infield-button-stacked-fill-padding-inner`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-width-stacked-medium": {
+      "description": "Used by `--mod-infield-button-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-width-stacked-small": {
+      "description": "Used by `--mod-infield-button-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-width-stacked-large": {
+      "description": "Used by `--mod-infield-button-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-button-width-stacked-extra-large": {
+      "description": "Used by `--mod-infield-button-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-background-color-hover": {
+      "value": "var(--system-infield-button-background-color-hover)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `--mod-infield-button-background-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-infield-button-background-color-down": {
+      "value": "var(--system-infield-button-background-color-down)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `--mod-infield-button-background-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-infield-button-background-color-key-focus": {
+      "value": "var(--system-infield-button-background-color-key-focus)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `--mod-infield-button-background-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-infield-button-background-color": {
+      "value": "var(--system-infield-button-background-color)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton-fill`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-infield-button-border-width": {
+      "value": "var(--system-infield-button-border-width)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill, .spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-border-radius": {
+      "value": "var(--system-infield-button-border-radius)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-border-radius-reset": {
+      "value": "var(--system-infield-button-border-radius-reset)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton--right .spectrum-InfieldButton-fill`, `.spectrum-InfieldButton--left .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-stacked-top-border-radius-start-start": {
+      "value": "var(--system-infield-button-stacked-top-border-radius-start-start)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton--top .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infield-button-stacked-bottom-border-radius-end-start": {
+      "value": "var(--system-infield-button-stacked-bottom-border-radius-end-start)",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `.spectrum-InfieldButton--bottom .spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-border-width-100": {
+      "description": "Used by `--system-infield-button-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "description": "Used by `--system-infield-button-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-100": {
+      "description": "Used by `--system-infield-button-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-200": {
+      "description": "Used by `--system-infield-button-background-color-hover`, `--system-infield-button-background-color-down`, `--system-infield-button-background-color-key-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-300": {
+      "description": "Used by `--system-infield-button-disabled-border-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "description": "Used by `--spectrum-infield-button-height`, `--spectrum-infield-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "description": "Used by `--spectrum-infield-button-icon-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "description": "Used by `--spectrum-infield-button-icon-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "description": "Used by `--spectrum-infield-button-icon-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "description": "Used by `--spectrum-infield-button-icon-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-background-color": {
+      "description": "Used by `--mod-infield-button-background-color`, `--mod-infield-button-background-color-hover`, `--mod-infield-button-background-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "description": "Used by `--mod-infield-button-icon-color`, `--mod-infield-button-icon-color-hover`, `--mod-infield-button-icon-color-down`, `--mod-infield-button-icon-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "description": "Used by `--spectrum-infield-button-height`, `--spectrum-infield-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "description": "Used by `--spectrum-infield-button-height`, `--spectrum-infield-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "description": "Used by `--spectrum-infield-button-height`, `--spectrum-infield-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-InfieldButton-fill`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-infield-button-border-width": {
+      "value": "var(--spectrum-border-width-100)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-border-width`.",
+      "control": "text"
+    },
+    "system-infield-button-border-color": {
+      "value": "inherit",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-border-color`.",
+      "control": "color"
+    },
+    "system-infield-button-border-radius": {
+      "value": "var(--spectrum-corner-radius-100)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-border-radius`.",
+      "control": "text"
+    },
+    "system-infield-button-border-radius-reset": {
+      "value": "0",
+      "description": "Defined in `.spectrum`. Used by `--system-infield-button-stacked-top-border-radius-start-start`, `--system-infield-button-stacked-bottom-border-radius-end-start`, `--spectrum-infield-button-border-radius-reset`.",
+      "control": "text"
+    },
+    "system-infield-button-stacked-top-border-radius-start-start": {
+      "value": "var(--system-infield-button-border-radius-reset)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-stacked-top-border-radius-start-start`.",
+      "control": "text"
+    },
+    "system-infield-button-stacked-bottom-border-radius-end-start": {
+      "value": "var(--system-infield-button-border-radius-reset)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-stacked-bottom-border-radius-end-start`.",
+      "control": "text"
+    },
+    "system-infield-button-background-color": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-background-color`.",
+      "control": "color"
+    },
+    "system-infield-button-background-color-hover": {
+      "value": "var(--spectrum-gray-200)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-background-color-hover`.",
+      "control": "color"
+    },
+    "system-infield-button-background-color-down": {
+      "value": "var(--spectrum-gray-200)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-background-color-down`.",
+      "control": "color"
+    },
+    "system-infield-button-background-color-key-focus": {
+      "value": "var(--spectrum-gray-200)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-background-color-key-focus`.",
+      "control": "color"
+    },
+    "system-infield-button-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-infield-button-border-color`.",
+      "control": "color"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-infield-button-border-color": {
+      "value": "var(--highcontrast-infield-button-border-color-active)",
+      "description": "Defined in `.spectrum-InfieldButton`, `.spectrum-InfieldButton:disabled`, `.spectrum-InfieldButton:not(:disabled):active, .spectrum-InfieldButton:not(:disabled):focus-visible`, `.spectrum-InfieldButton:not(:disabled):hover`. Used by `.spectrum-InfieldButton-fill`. Defaults to `var(--mod-infield-button-border-color, var(--spectrum-infield-button-border-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-infield-button-border-color-active": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-InfieldButton`. Used by `--highcontrast-infield-button-border-color`.",
+      "control": "color"
+    }
+  }
 }

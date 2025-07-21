@@ -5,6 +5,8 @@ import packageJson from "../package.json";
 import { AlertBannerGroup } from "./alertbanner.test.js";
 import { ActionableOptionsTemplate, Template, TextOverflowTemplate } from "./template.js";
 
+// Local assets to render the component styles and structure
+
 /**
  * The alert banner shows pressing and high-signal messages, such as system alerts. It is meant to be noticed and prompt users to take action.
  * It should occupy all of the available horizontal space until it reaches its maximum allowed width.
@@ -75,6 +77,10 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 };
 

@@ -9,73 +9,308 @@
     ".spectrum-FieldLabel--sizeS",
     ".spectrum-FieldLabel--sizeXL",
     ".spectrum-FieldLabel-requiredIcon",
-    ".spectrum-FieldLabel.is-disabled",
     ".spectrum-FieldLabel:lang(ja)",
     ".spectrum-FieldLabel:lang(ko)",
-    ".spectrum-FieldLabel:lang(zh)"
+    ".spectrum-FieldLabel:lang(zh)",
+    ".spectrum-FieldLabel.is-disabled"
   ],
-  "modifiers": [
-    "--mod-disabled-content-color",
-    "--mod-field-label-asterisk-vertical-align",
-    "--mod-field-label-bottom-to-text",
-    "--mod-field-label-text-to-asterisk",
-    "--mod-field-label-top-to-text",
-    "--mod-fieldlabel-color",
-    "--mod-fieldlabel-font-size",
-    "--mod-fieldlabel-font-weight",
-    "--mod-fieldlabel-line-height",
-    "--mod-fieldlabel-line-height-cjk",
-    "--mod-fieldlabel-margin-block",
-    "--mod-fieldlabel-margin-block-end",
-    "--mod-fieldlabel-margin-block-start",
-    "--mod-fieldlabel-margin-inline",
-    "--mod-fieldlabel-margin-inline-end",
-    "--mod-fieldlabel-margin-inline-start",
-    "--mod-fieldlabel-min-height",
-    "--mod-fieldlabel-padding-block",
-    "--mod-fieldlabel-padding-inline",
-    "--mod-fieldlabel-side-margin-block-start",
-    "--mod-fieldlabel-side-padding-right"
-  ],
-  "component": [
-    "--spectrum-field-label-bottom-to-text",
-    "--spectrum-field-label-font-size",
-    "--spectrum-field-label-min-height",
-    "--spectrum-field-label-side-margin-block-start",
-    "--spectrum-field-label-side-padding-right",
-    "--spectrum-field-label-text-to-asterisk",
-    "--spectrum-field-label-text-to-asterisk-extra-large",
-    "--spectrum-field-label-text-to-asterisk-large",
-    "--spectrum-field-label-text-to-asterisk-medium",
-    "--spectrum-field-label-text-to-asterisk-small",
-    "--spectrum-field-label-top-margin-extra-large",
-    "--spectrum-field-label-top-margin-large",
-    "--spectrum-field-label-top-margin-medium",
-    "--spectrum-field-label-top-margin-small",
-    "--spectrum-field-label-top-to-text"
-  ],
-  "global": [
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-75",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-disabled-content-color",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-75",
-    "--spectrum-line-height-100",
-    "--spectrum-neutral-subdued-content-color-default",
-    "--spectrum-regular-font-weight",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-200"
-  ],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-field-label-content-color"]
+  "modifiers": {
+    "mod-fieldlabel-min-height": {
+      "description": "Used by `.spectrum-FieldLabel`. Defaults to `var(--spectrum-field-label-min-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-padding-block": {
+      "description": "Used by `.spectrum-FieldLabel`. Defaults to `var(--mod-field-label-bottom-to-text, var(--spectrum-field-label-bottom-to-text))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-field-label-top-to-text": {
+      "description": "Used by `.spectrum-FieldLabel`. Defaults to `var(--spectrum-field-label-top-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-field-label-bottom-to-text": {
+      "description": "Used by `.spectrum-FieldLabel`. Defaults to `var(--spectrum-field-label-bottom-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-padding-inline": {
+      "description": "Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-margin-block": {
+      "description": "Used by `.spectrum-FieldLabel`. Defaults to `var(--mod-fieldlabel-margin-block-end, 0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-margin-block-start": {
+      "description": "Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-margin-block-end": {
+      "description": "Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-margin-inline": {
+      "description": "Used by `.spectrum-FieldLabel`. Defaults to `var(--mod-fieldlabel-margin-inline-end, 0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-margin-inline-start": {
+      "description": "Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-margin-inline-end": {
+      "description": "Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-font-size": {
+      "description": "Used by `.spectrum-FieldLabel`. Defaults to `var(--spectrum-field-label-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-font-weight": {
+      "description": "Used by `.spectrum-FieldLabel`. Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-line-height": {
+      "value": "var(--mod-fieldlabel-line-height-cjk, var(--spectrum-cjk-line-height-100))",
+      "description": "Defined in `.spectrum-FieldLabel:lang(ja), .spectrum-FieldLabel:lang(ko), .spectrum-FieldLabel:lang(zh)`. Used by `.spectrum-FieldLabel`. Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-color": {
+      "value": "var(--mod-disabled-content-color, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-FieldLabel.is-disabled`. Used by `.spectrum-FieldLabel`. Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-line-height-cjk": {
+      "description": "Used by `--mod-fieldlabel-line-height`. Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-disabled-content-color": {
+      "description": "Used by `--mod-fieldlabel-color`. Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-field-label-text-to-asterisk": {
+      "description": "Used by `.spectrum-FieldLabel-requiredIcon`. Defaults to `var(--spectrum-field-label-text-to-asterisk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-field-label-asterisk-vertical-align": {
+      "description": "Used by `.spectrum-FieldLabel-requiredIcon`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-side-margin-block-start": {
+      "description": "Used by `.spectrum-FieldLabel--left, .spectrum-FieldLabel--right`. Defaults to `var(--spectrum-field-label-side-margin-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-fieldlabel-side-padding-right": {
+      "description": "Used by `.spectrum-FieldLabel--left, .spectrum-FieldLabel--right`. Defaults to `var(--spectrum-field-label-side-padding-right)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-field-label-min-height": {
+      "value": "var(--spectrum-component-height-200)",
+      "description": "Defined in `.spectrum-FieldLabel, .spectrum-FieldLabel--sizeM`, `.spectrum-FieldLabel--sizeS`, `.spectrum-FieldLabel--sizeL`, `.spectrum-FieldLabel--sizeXL`. Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-top-to-text": {
+      "value": "var(--spectrum-component-top-to-text-200)",
+      "description": "Defined in `.spectrum-FieldLabel, .spectrum-FieldLabel--sizeM`, `.spectrum-FieldLabel--sizeS`, `.spectrum-FieldLabel--sizeL`, `.spectrum-FieldLabel--sizeXL`. Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-bottom-to-text": {
+      "value": "var(--spectrum-component-bottom-to-text-200)",
+      "description": "Defined in `.spectrum-FieldLabel, .spectrum-FieldLabel--sizeM`, `.spectrum-FieldLabel--sizeS`, `.spectrum-FieldLabel--sizeL`, `.spectrum-FieldLabel--sizeXL`. Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-font-size": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Defined in `.spectrum-FieldLabel, .spectrum-FieldLabel--sizeM`, `.spectrum-FieldLabel--sizeS`, `.spectrum-FieldLabel--sizeL`, `.spectrum-FieldLabel--sizeXL`. Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-side-margin-block-start": {
+      "value": "var(--spectrum-field-label-top-margin-extra-large)",
+      "description": "Defined in `.spectrum-FieldLabel, .spectrum-FieldLabel--sizeM`, `.spectrum-FieldLabel--sizeS`, `.spectrum-FieldLabel--sizeL`, `.spectrum-FieldLabel--sizeXL`. Used by `.spectrum-FieldLabel--left, .spectrum-FieldLabel--right`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-top-margin-medium": {
+      "description": "Used by `--spectrum-field-label-side-margin-block-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-side-padding-right": {
+      "value": "var(--spectrum-spacing-200)",
+      "description": "Defined in `.spectrum-FieldLabel, .spectrum-FieldLabel--sizeM`, `.spectrum-FieldLabel--sizeS`, `.spectrum-FieldLabel--sizeL`, `.spectrum-FieldLabel--sizeXL`. Used by `.spectrum-FieldLabel--left, .spectrum-FieldLabel--right`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-text-to-asterisk": {
+      "value": "var(--spectrum-field-label-text-to-asterisk-extra-large)",
+      "description": "Defined in `.spectrum-FieldLabel, .spectrum-FieldLabel--sizeM`, `.spectrum-FieldLabel--sizeS`, `.spectrum-FieldLabel--sizeL`, `.spectrum-FieldLabel--sizeXL`. Used by `.spectrum-FieldLabel-requiredIcon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-text-to-asterisk-medium": {
+      "description": "Used by `--spectrum-field-label-text-to-asterisk`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-top-margin-small": {
+      "description": "Used by `--spectrum-field-label-side-margin-block-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-text-to-asterisk-small": {
+      "description": "Used by `--spectrum-field-label-text-to-asterisk`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-top-margin-large": {
+      "description": "Used by `--spectrum-field-label-side-margin-block-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-text-to-asterisk-large": {
+      "description": "Used by `--spectrum-field-label-text-to-asterisk`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-top-margin-extra-large": {
+      "description": "Used by `--spectrum-field-label-side-margin-block-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-field-label-text-to-asterisk-extra-large": {
+      "description": "Used by `--spectrum-field-label-text-to-asterisk`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-component-height-75": {
+      "description": "Used by `--spectrum-field-label-min-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "description": "Used by `--spectrum-field-label-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "description": "Used by `--spectrum-field-label-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "description": "Used by `--spectrum-field-label-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "description": "Used by `--spectrum-field-label-side-padding-right`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "description": "Used by `--spectrum-field-label-side-padding-right`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "description": "Used by `--spectrum-field-label-min-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "description": "Used by `--spectrum-field-label-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "description": "Used by `--spectrum-field-label-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "description": "Used by `--spectrum-field-label-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "description": "Used by `--spectrum-field-label-min-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "description": "Used by `--spectrum-field-label-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "description": "Used by `--spectrum-field-label-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "description": "Used by `--spectrum-field-label-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "description": "Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "description": "Used by `.spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-default": {
+      "description": "Used by `.spectrum-FieldLabel`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "description": "Used by `--mod-fieldlabel-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "description": "Used by `--mod-fieldlabel-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-field-label-content-color": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-FieldLabel.is-disabled`. Used by `.spectrum-FieldLabel`. Defaults to `var(--mod-fieldlabel-color, var(--spectrum-neutral-subdued-content-color-default))`, if not set.",
+      "control": "color"
+    }
+  }
 }

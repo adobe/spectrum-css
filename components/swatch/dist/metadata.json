@@ -7,20 +7,20 @@
     ".spectrum-Swatch--lightBorder .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--noBorder .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--rectangle",
-    ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill",
-    ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--roundingFull:not(.spectrum-Swatch--rectangle)",
     ".spectrum-Swatch--roundingFull:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill",
     ".spectrum-Swatch--roundingFull:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--roundingFull:not(.spectrum-Swatch--rectangle):after",
     ".spectrum-Swatch--roundingFull:not(.spectrum-Swatch--rectangle):before",
+    ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill",
+    ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--roundingNone",
     ".spectrum-Swatch--roundingNone .spectrum-Swatch-fill",
     ".spectrum-Swatch--roundingNone .spectrum-Swatch-fill:before",
-    ".spectrum-Swatch--roundingNone.is-selected .spectrum-Swatch-fill",
-    ".spectrum-Swatch--roundingNone.is-selected .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--roundingNone:after",
     ".spectrum-Swatch--roundingNone:before",
+    ".spectrum-Swatch--roundingNone.is-selected .spectrum-Swatch-fill",
+    ".spectrum-Swatch--roundingNone.is-selected .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--sizeL",
     ".spectrum-Swatch--sizeM",
     ".spectrum-Swatch--sizeS",
@@ -32,6 +32,9 @@
     ".spectrum-Swatch-fill:before",
     ".spectrum-Swatch-image",
     ".spectrum-Swatch-mixedValueIcon",
+    ".spectrum-Swatch:after",
+    ".spectrum-Swatch:before",
+    ".spectrum-Swatch:focus-visible:after",
     ".spectrum-Swatch.is-disabled",
     ".spectrum-Swatch.is-disabled .spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch.is-image .spectrum-Swatch-fill:before",
@@ -44,95 +47,405 @@
     ".spectrum-Swatch.is-selected .spectrum-Swatch-fill",
     ".spectrum-Swatch.is-selected .spectrum-Swatch-fill:before",
     ".spectrum-Swatch.is-selected:before",
-    ".spectrum-Swatch:after",
-    ".spectrum-Swatch:before",
-    ".spectrum-Swatch:focus-visible:after",
     ".spectrum-Swatch[disabled]",
     ".spectrum-Swatch[disabled] .spectrum-Swatch-disabledIcon"
   ],
-  "modifiers": [
-    "--mod-animation-duration-100",
-    "--mod-swatch-border-color",
-    "--mod-swatch-border-color-light",
-    "--mod-swatch-border-color-selected",
-    "--mod-swatch-border-radius",
-    "--mod-swatch-border-thickness",
-    "--mod-swatch-border-thickness-selected",
-    "--mod-swatch-disabled-icon-color",
-    "--mod-swatch-disabled-icon-size",
-    "--mod-swatch-focus-indicator-border-radius",
-    "--mod-swatch-focus-indicator-color",
-    "--mod-swatch-focus-indicator-gap",
-    "--mod-swatch-focus-indicator-thickness",
-    "--mod-swatch-icon-border-color",
-    "--mod-swatch-inner-border-color-selected",
-    "--mod-swatch-size",
-    "--mod-swatch-slash-icon-color",
-    "--mod-swatch-slash-thickness"
-  ],
-  "component": [
-    "--spectrum-swatch-border-color",
-    "--spectrum-swatch-border-color-light",
-    "--spectrum-swatch-border-color-opacity",
-    "--spectrum-swatch-border-color-selected",
-    "--spectrum-swatch-border-radius",
-    "--spectrum-swatch-border-thickness",
-    "--spectrum-swatch-border-thickness-selected",
-    "--spectrum-swatch-dash-icon-color",
-    "--spectrum-swatch-disabled-icon-border-opacity",
-    "--spectrum-swatch-disabled-icon-color",
-    "--spectrum-swatch-disabled-icon-size",
-    "--spectrum-swatch-focus-indicator-border-radius",
-    "--spectrum-swatch-focus-indicator-color",
-    "--spectrum-swatch-focus-indicator-gap",
-    "--spectrum-swatch-focus-indicator-thickness",
-    "--spectrum-swatch-icon-border-color",
-    "--spectrum-swatch-inner-border-color-selected",
-    "--spectrum-swatch-size",
-    "--spectrum-swatch-size-extra-small",
-    "--spectrum-swatch-size-large",
-    "--spectrum-swatch-size-medium",
-    "--spectrum-swatch-size-small",
-    "--spectrum-swatch-slash-icon-color",
-    "--spectrum-swatch-slash-thickness",
-    "--spectrum-swatch-slash-thickness-extra-small",
-    "--spectrum-swatch-slash-thickness-large",
-    "--spectrum-swatch-slash-thickness-medium",
-    "--spectrum-swatch-slash-thickness-small"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-black-rgb",
-    "--spectrum-border-width-100",
-    "--spectrum-border-width-200",
-    "--spectrum-corner-radius-75",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-gray-1000-rgb",
-    "--spectrum-gray-25",
-    "--spectrum-gray-800",
-    "--spectrum-gray-900",
-    "--spectrum-picked-color",
-    "--spectrum-red-900",
-    "--spectrum-white",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-50",
-    "--spectrum-workflow-icon-size-75"
-  ],
-  "system-theme": [
-    "--system-swatch-border-color",
-    "--system-swatch-border-radius",
-    "--system-swatch-inner-border-color-selected"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-swatch-background-color-selected",
-    "--highcontrast-swatch-border-color",
-    "--highcontrast-swatch-border-color-selected",
-    "--highcontrast-swatch-disabled-icon-color",
-    "--highcontrast-swatch-fill-foreground-color",
-    "--highcontrast-swatch-focus-indicator-color"
-  ]
+  "modifiers": {
+    "mod-swatch-size": {
+      "description": "Used by `.spectrum-Swatch`, `.spectrum-Swatch--rectangle`. Defaults to `var(--spectrum-swatch-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-disabled-icon-size": {
+      "description": "Used by `.spectrum-Swatch .spectrum-Swatch-disabledIcon`. Defaults to `var(--spectrum-swatch-disabled-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-border-radius": {
+      "description": "Used by `.spectrum-Swatch, .spectrum-Swatch:before`, `.spectrum-Swatch-fill, .spectrum-Swatch-fill:before`. Defaults to `var(--spectrum-swatch-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-inner-border-color-selected": {
+      "description": "Used by `.spectrum-Swatch.is-selected`. Defaults to `var(--spectrum-swatch-inner-border-color-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-swatch-border-thickness-selected": {
+      "description": "Used by `.spectrum-Swatch.is-selected .spectrum-Swatch-fill`, `.spectrum-Swatch:before`, `.spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill`. Defaults to `var(--spectrum-swatch-border-thickness-selected)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-slash-thickness": {
+      "description": "Used by `.spectrum-Swatch.is-nothing .spectrum-Swatch-fill:after`. Defaults to `var(--spectrum-swatch-slash-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-slash-icon-color": {
+      "description": "Used by `.spectrum-Swatch.is-nothing .spectrum-Swatch-fill:after`. Defaults to `var(--spectrum-swatch-slash-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-swatch-border-color-selected": {
+      "description": "Used by `.spectrum-Swatch:before`. Defaults to `var(--spectrum-swatch-border-color-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-swatch-focus-indicator-gap": {
+      "description": "Used by `.spectrum-Swatch:after`. Defaults to `var(--spectrum-swatch-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-Swatch:after`. Defaults to `var(--spectrum-swatch-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-focus-indicator-color": {
+      "description": "Used by `.spectrum-Swatch:after`. Defaults to `var(--spectrum-swatch-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-swatch-focus-indicator-border-radius": {
+      "description": "Used by `.spectrum-Swatch:after`. Defaults to `var(--spectrum-swatch-focus-indicator-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-animation-duration-100": {
+      "description": "Used by `.spectrum-Swatch:after`, `.spectrum-Swatch-image`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-border-thickness": {
+      "description": "Used by `.spectrum-Swatch-fill:before`, `.spectrum-Swatch--lightBorder .spectrum-Swatch-fill:before`. Defaults to `var(--spectrum-swatch-border-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-swatch-border-color": {
+      "description": "Used by `.spectrum-Swatch-fill:before`. Defaults to `var(--spectrum-swatch-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-swatch-border-color-light": {
+      "description": "Used by `.spectrum-Swatch--lightBorder .spectrum-Swatch-fill:before`. Defaults to `var(--spectrum-swatch-border-color-light)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-swatch-disabled-icon-color": {
+      "description": "Used by `.spectrum-Swatch-disabledIcon`, `.spectrum-Swatch-disabledIcon path:first-child`. Defaults to `var(--spectrum-swatch-disabled-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-swatch-icon-border-color": {
+      "description": "Used by `.spectrum-Swatch-disabledIcon path:last-child`. Defaults to `var(--spectrum-swatch-icon-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-swatch-border-color-opacity": {
+      "description": "Used by `--system-swatch-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-size": {
+      "value": "var(--spectrum-swatch-size-large)",
+      "description": "Defined in `.spectrum-Swatch, .spectrum-Swatch--sizeS`, `.spectrum-Swatch--sizeXS`, `.spectrum-Swatch--sizeM`, `.spectrum-Swatch--sizeL`. Used by `.spectrum-Swatch`, `.spectrum-Swatch--rectangle`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-size-small": {
+      "description": "Used by `--spectrum-swatch-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-disabled-icon-size": {
+      "value": "var(--spectrum-workflow-icon-size-200)",
+      "description": "Defined in `.spectrum-Swatch, .spectrum-Swatch--sizeS`, `.spectrum-Swatch--sizeXS`, `.spectrum-Swatch--sizeM`, `.spectrum-Swatch--sizeL`. Used by `.spectrum-Swatch .spectrum-Swatch-disabledIcon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-slash-thickness": {
+      "value": "var(--spectrum-swatch-slash-thickness-large)",
+      "description": "Defined in `.spectrum-Swatch, .spectrum-Swatch--sizeS`, `.spectrum-Swatch--sizeXS`, `.spectrum-Swatch--sizeM`, `.spectrum-Swatch--sizeL`. Used by `.spectrum-Swatch.is-nothing .spectrum-Swatch-fill:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-slash-thickness-small": {
+      "description": "Used by `--spectrum-swatch-slash-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-size-extra-small": {
+      "description": "Used by `--spectrum-swatch-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-slash-thickness-extra-small": {
+      "description": "Used by `--spectrum-swatch-slash-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-size-medium": {
+      "description": "Used by `--spectrum-swatch-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-slash-thickness-medium": {
+      "description": "Used by `--spectrum-swatch-slash-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-size-large": {
+      "description": "Used by `--spectrum-swatch-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-slash-thickness-large": {
+      "description": "Used by `--spectrum-swatch-slash-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-focus-indicator-border-radius": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-icon-border-color": {
+      "value": "rgb(var(--spectrum-black-rgb), var(--spectrum-swatch-disabled-icon-border-opacity))",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch-disabledIcon path:last-child`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-disabled-icon-border-opacity": {
+      "description": "Used by `--spectrum-swatch-icon-border-color`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-disabled-icon-color": {
+      "value": "var(--spectrum-white)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch-disabledIcon`, `.spectrum-Swatch-disabledIcon path:first-child`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-border-thickness": {
+      "value": "var(--spectrum-border-width-100)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch-fill:before`, `.spectrum-Swatch--lightBorder .spectrum-Swatch-fill:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-border-thickness-selected": {
+      "value": "var(--spectrum-border-width-200)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch.is-selected .spectrum-Swatch-fill`, `.spectrum-Swatch:before`, `.spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-focus-indicator-thickness": {
+      "value": "var(--spectrum-focus-indicator-thickness)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-focus-indicator-gap": {
+      "value": "var(--spectrum-focus-indicator-gap)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-border-color-selected": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-dash-icon-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch.is-mixedValue .spectrum-Swatch-mixedValueIcon`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-slash-icon-color": {
+      "value": "var(--spectrum-red-900)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch.is-nothing .spectrum-Swatch-fill:after`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-focus-indicator-color": {
+      "value": "var(--spectrum-focus-indicator-color)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch:after`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-border-radius": {
+      "value": "var(--system-swatch-border-radius)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch, .spectrum-Swatch:before`, `.spectrum-Swatch-fill, .spectrum-Swatch-fill:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-inner-border-color-selected": {
+      "value": "var(--system-swatch-inner-border-color-selected)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch.is-selected`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-border-color": {
+      "value": "var(--system-swatch-border-color)",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch-fill:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-swatch-border-color-light": {
+      "description": "Used by `.spectrum-Swatch--lightBorder .spectrum-Swatch-fill:before`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-1000-rgb": {
+      "description": "Used by `--system-swatch-border-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "description": "Used by `--system-swatch-inner-border-color-selected`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-75": {
+      "description": "Used by `--system-swatch-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-75": {
+      "description": "Used by `--spectrum-swatch-disabled-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-50": {
+      "description": "Used by `--spectrum-swatch-disabled-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "description": "Used by `--spectrum-swatch-disabled-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "description": "Used by `--spectrum-swatch-disabled-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-black-rgb": {
+      "description": "Used by `--spectrum-swatch-icon-border-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "description": "Used by `--spectrum-swatch-disabled-icon-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "description": "Used by `--spectrum-swatch-border-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "description": "Used by `--spectrum-swatch-border-thickness-selected`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "description": "Used by `--spectrum-swatch-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "description": "Used by `--spectrum-swatch-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-900": {
+      "description": "Used by `--spectrum-swatch-border-color-selected`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "description": "Used by `--spectrum-swatch-dash-icon-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-red-900": {
+      "description": "Used by `--spectrum-swatch-slash-icon-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "description": "Used by `--spectrum-swatch-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-picked-color": {
+      "description": "Used by `.spectrum-Swatch.is-mixedValue .spectrum-Swatch-fill`, `.spectrum-Swatch.is-nothing .spectrum-Swatch-fill`, `.spectrum-Swatch-fill:before`, `.spectrum-Swatch--noBorder .spectrum-Swatch-fill:before`, `.spectrum-Swatch-mixedValueIcon`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-Swatch:after`, `.spectrum-Swatch-image`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-swatch-border-color": {
+      "value": "rgb(var(--spectrum-gray-1000-rgb), var(--spectrum-swatch-border-color-opacity))",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-swatch-border-color`.",
+      "control": "color"
+    },
+    "system-swatch-inner-border-color-selected": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-swatch-inner-border-color-selected`.",
+      "control": "color"
+    },
+    "system-swatch-border-radius": {
+      "value": "var(--spectrum-corner-radius-75)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-swatch-border-radius`.",
+      "control": "text"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-swatch-disabled-icon-color": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch-disabledIcon`, `.spectrum-Swatch-disabledIcon path:first-child`. Defaults to `var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-swatch-focus-indicator-color": {
+      "value": "ButtonText",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch:after`. Defaults to `var(--mod-swatch-focus-indicator-color, var(--spectrum-swatch-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-swatch-background-color-selected": {
+      "value": "Background",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch.is-selected`. Defaults to `var(--mod-swatch-inner-border-color-selected, var(--spectrum-swatch-inner-border-color-selected))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-swatch-border-color-selected": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch:before`. Defaults to `var(--mod-swatch-border-color-selected, var(--spectrum-swatch-border-color-selected))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-swatch-border-color": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-Swatch`, `.spectrum-Swatch.is-disabled, .spectrum-Swatch[disabled]`. Used by `.spectrum-Swatch-fill:before`. Defaults to `var(--mod-swatch-border-color, var(--spectrum-swatch-border-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-swatch-fill-foreground-color": {
+      "value": "ButtonText",
+      "description": "Defined in `.spectrum-Swatch`. Used by `.spectrum-Swatch.is-nothing .spectrum-Swatch-fill:after`. Defaults to `var(--mod-swatch-slash-icon-color, var(--spectrum-swatch-slash-icon-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

@@ -10,12 +10,12 @@
     ".is-invalid .spectrum-Textfield-input:focus-visible",
     ".is-invalid .spectrum-Textfield-input:focus:hover",
     ".is-invalid .spectrum-Textfield-input:hover:not(.is-disabled)",
-    ".is-invalid.is-focused .spectrum-Textfield-input",
-    ".is-invalid.is-focused .spectrum-Textfield-input:hover",
-    ".is-invalid.is-keyboardFocused .spectrum-Textfield-input",
     ".is-invalid:focus .spectrum-Textfield-input",
     ".is-invalid:focus .spectrum-Textfield-input:hover",
     ".is-invalid:hover:not(.is-disabled) .spectrum-Textfield-input",
+    ".is-invalid.is-focused .spectrum-Textfield-input",
+    ".is-invalid.is-focused .spectrum-Textfield-input:hover",
+    ".is-invalid.is-keyboardFocused .spectrum-Textfield-input",
     ".is-keyboardFocused .spectrum-Textfield-input",
     ".is-keyboardFocused .spectrum-Textfield-input::placeholder",
     ".is-valid .spectrum-Textfield-input",
@@ -33,6 +33,7 @@
     ".spectrum-Textfield--quiet .spectrum-Textfield-characterCount",
     ".spectrum-Textfield--quiet .spectrum-Textfield-input",
     ".spectrum-Textfield--quiet .spectrum-Textfield-validationIcon",
+    ".spectrum-Textfield--quiet:after",
     ".spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input",
     ".spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input::placeholder",
     ".spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input",
@@ -42,7 +43,6 @@
     ".spectrum-Textfield--quiet.is-keyboardFocused:after",
     ".spectrum-Textfield--quiet.is-valid .spectrum-Textfield-input",
     ".spectrum-Textfield--quiet.is-valid .spectrum-Textfield-validationIcon",
-    ".spectrum-Textfield--quiet:after",
     ".spectrum-Textfield--sideLabel",
     ".spectrum-Textfield--sideLabel .spectrum-FieldLabel",
     ".spectrum-Textfield--sideLabel .spectrum-HelpText",
@@ -73,6 +73,8 @@
     ".spectrum-Textfield-input[type=\"number\"]",
     ".spectrum-Textfield-input[type=\"number\"]::-webkit-inner-spin-button",
     ".spectrum-Textfield-input[type=\"number\"]::-webkit-outer-spin-button",
+    ".spectrum-Textfield:hover .spectrum-Textfield-input",
+    ".spectrum-Textfield:hover .spectrum-Textfield-input::placeholder",
     ".spectrum-Textfield.is-disabled .spectrum-FieldLabel",
     ".spectrum-Textfield.is-disabled .spectrum-Textfield-input",
     ".spectrum-Textfield.is-disabled .spectrum-Textfield-input::placeholder",
@@ -90,280 +92,1389 @@
     ".spectrum-Textfield.spectrum-Textfield--sideLabel .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.spectrum-Textfield--sizeL",
     ".spectrum-Textfield.spectrum-Textfield--sizeS",
-    ".spectrum-Textfield.spectrum-Textfield--sizeXL",
-    ".spectrum-Textfield:hover .spectrum-Textfield-input",
-    ".spectrum-Textfield:hover .spectrum-Textfield-input::placeholder"
+    ".spectrum-Textfield.spectrum-Textfield--sizeXL"
   ],
-  "modifiers": [
-    "--mod-texfield-animation-duration",
-    "--mod-text-area-min-block-size",
-    "--mod-text-area-min-block-size-quiet",
-    "--mod-text-area-min-inline-size",
-    "--mod-textfield-background-color",
-    "--mod-textfield-background-color-disabled",
-    "--mod-textfield-border-color",
-    "--mod-textfield-border-color-disabled",
-    "--mod-textfield-border-color-focus",
-    "--mod-textfield-border-color-focus-hover",
-    "--mod-textfield-border-color-hover",
-    "--mod-textfield-border-color-invalid-default",
-    "--mod-textfield-border-color-invalid-focus",
-    "--mod-textfield-border-color-invalid-focus-hover",
-    "--mod-textfield-border-color-invalid-hover",
-    "--mod-textfield-border-color-invalid-keyboard-focus",
-    "--mod-textfield-border-color-keyboard-focus",
-    "--mod-textfield-border-width",
-    "--mod-textfield-character-count-font-family",
-    "--mod-textfield-character-count-font-size",
-    "--mod-textfield-character-count-font-weight",
-    "--mod-textfield-character-count-spacing-block",
-    "--mod-textfield-character-count-spacing-block-quiet",
-    "--mod-textfield-character-count-spacing-block-side",
-    "--mod-textfield-character-count-spacing-inline",
-    "--mod-textfield-character-count-spacing-inline-side",
-    "--mod-textfield-corner-radius",
-    "--mod-textfield-focus-indicator-color",
-    "--mod-textfield-focus-indicator-gap",
-    "--mod-textfield-focus-indicator-width",
-    "--mod-textfield-font-family",
-    "--mod-textfield-font-weight",
-    "--mod-textfield-height",
-    "--mod-textfield-helptext-spacing-block",
-    "--mod-textfield-icon-color-invalid",
-    "--mod-textfield-icon-color-valid",
-    "--mod-textfield-icon-size-invalid",
-    "--mod-textfield-icon-size-valid",
-    "--mod-textfield-icon-spacing-block-invalid",
-    "--mod-textfield-icon-spacing-block-valid",
-    "--mod-textfield-icon-spacing-inline-end-invalid",
-    "--mod-textfield-icon-spacing-inline-end-quiet-invalid",
-    "--mod-textfield-icon-spacing-inline-end-quiet-valid",
-    "--mod-textfield-icon-spacing-inline-end-valid",
-    "--mod-textfield-icon-spacing-inline-start-invalid",
-    "--mod-textfield-icon-spacing-inline-start-valid",
-    "--mod-textfield-label-spacing-block",
-    "--mod-textfield-label-spacing-block-quiet",
-    "--mod-textfield-label-spacing-inline-side-label",
-    "--mod-textfield-min-width",
-    "--mod-textfield-placeholder-font-size",
-    "--mod-textfield-spacing-block-end",
-    "--mod-textfield-spacing-block-quiet",
-    "--mod-textfield-spacing-block-start",
-    "--mod-textfield-spacing-inline",
-    "--mod-textfield-spacing-inline-quiet",
-    "--mod-textfield-text-color-default",
-    "--mod-textfield-text-color-disabled",
-    "--mod-textfield-text-color-focus",
-    "--mod-textfield-text-color-focus-hover",
-    "--mod-textfield-text-color-hover",
-    "--mod-textfield-text-color-invalid",
-    "--mod-textfield-text-color-keyboard-focus",
-    "--mod-textfield-text-color-readonly",
-    "--mod-textfield-text-color-valid",
-    "--mod-textfield-width"
-  ],
-  "component": [
-    "--spectrum-text-field-minimum-width-multiplier",
-    "--spectrum-textfield-background-color",
-    "--spectrum-textfield-background-color-disabled",
-    "--spectrum-textfield-border-color",
-    "--spectrum-textfield-border-color-disabled",
-    "--spectrum-textfield-border-color-focus",
-    "--spectrum-textfield-border-color-focus-hover",
-    "--spectrum-textfield-border-color-hover",
-    "--spectrum-textfield-border-color-invalid-default",
-    "--spectrum-textfield-border-color-invalid-focus",
-    "--spectrum-textfield-border-color-invalid-focus-hover",
-    "--spectrum-textfield-border-color-invalid-hover",
-    "--spectrum-textfield-border-color-invalid-keyboard-focus",
-    "--spectrum-textfield-border-color-keyboard-focus",
-    "--spectrum-textfield-border-width",
-    "--spectrum-textfield-character-count-font-family",
-    "--spectrum-textfield-character-count-font-size",
-    "--spectrum-textfield-character-count-font-weight",
-    "--spectrum-textfield-character-count-spacing-block",
-    "--spectrum-textfield-character-count-spacing-block-quiet",
-    "--spectrum-textfield-character-count-spacing-block-side",
-    "--spectrum-textfield-character-count-spacing-inline",
-    "--spectrum-textfield-character-count-spacing-inline-side",
-    "--spectrum-textfield-corner-radius",
-    "--spectrum-textfield-focus-indicator-color",
-    "--spectrum-textfield-focus-indicator-gap",
-    "--spectrum-textfield-focus-indicator-width",
-    "--spectrum-textfield-font-family",
-    "--spectrum-textfield-font-weight",
-    "--spectrum-textfield-height",
-    "--spectrum-textfield-helptext-spacing-block",
-    "--spectrum-textfield-icon-color-invalid",
-    "--spectrum-textfield-icon-color-valid",
-    "--spectrum-textfield-icon-size-invalid",
-    "--spectrum-textfield-icon-size-valid",
-    "--spectrum-textfield-icon-spacing-block-invalid",
-    "--spectrum-textfield-icon-spacing-block-valid",
-    "--spectrum-textfield-icon-spacing-inline-end-invalid",
-    "--spectrum-textfield-icon-spacing-inline-end-quiet-invalid",
-    "--spectrum-textfield-icon-spacing-inline-end-quiet-valid",
-    "--spectrum-textfield-icon-spacing-inline-end-valid",
-    "--spectrum-textfield-icon-spacing-inline-start-invalid",
-    "--spectrum-textfield-icon-spacing-inline-start-valid",
-    "--spectrum-textfield-input-line-height",
-    "--spectrum-textfield-label-spacing-block",
-    "--spectrum-textfield-label-spacing-block-quiet",
-    "--spectrum-textfield-label-spacing-inline-side-label",
-    "--spectrum-textfield-min-width",
-    "--spectrum-textfield-placeholder-font-size",
-    "--spectrum-textfield-spacing-block-end",
-    "--spectrum-textfield-spacing-block-quiet",
-    "--spectrum-textfield-spacing-block-start",
-    "--spectrum-textfield-spacing-inline",
-    "--spectrum-textfield-spacing-inline-quiet",
-    "--spectrum-textfield-text-color-default",
-    "--spectrum-textfield-text-color-disabled",
-    "--spectrum-textfield-text-color-focus",
-    "--spectrum-textfield-text-color-focus-hover",
-    "--spectrum-textfield-text-color-hover",
-    "--spectrum-textfield-text-color-invalid",
-    "--spectrum-textfield-text-color-keyboard-focus",
-    "--spectrum-textfield-text-color-readonly",
-    "--spectrum-textfield-text-color-valid",
-    "--spectrum-textfield-width"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-border-width-100",
-    "--spectrum-character-count-to-field-quiet-extra-large",
-    "--spectrum-character-count-to-field-quiet-large",
-    "--spectrum-character-count-to-field-quiet-medium",
-    "--spectrum-character-count-to-field-quiet-small",
-    "--spectrum-checkmark-icon-size-100",
-    "--spectrum-checkmark-icon-size-200",
-    "--spectrum-checkmark-icon-size-300",
-    "--spectrum-checkmark-icon-size-75",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-edge-to-text-200",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-component-top-to-workflow-icon-200",
-    "--spectrum-component-top-to-workflow-icon-300",
-    "--spectrum-component-top-to-workflow-icon-75",
-    "--spectrum-corner-radius-100",
-    "--spectrum-disabled-content-color",
-    "--spectrum-field-edge-to-alert-icon-extra-large",
-    "--spectrum-field-edge-to-alert-icon-large",
-    "--spectrum-field-edge-to-alert-icon-medium",
-    "--spectrum-field-edge-to-alert-icon-quiet",
-    "--spectrum-field-edge-to-alert-icon-small",
-    "--spectrum-field-edge-to-border-quiet",
-    "--spectrum-field-edge-to-text-quiet",
-    "--spectrum-field-edge-to-validation-icon-extra-large",
-    "--spectrum-field-edge-to-validation-icon-large",
-    "--spectrum-field-edge-to-validation-icon-medium",
-    "--spectrum-field-edge-to-validation-icon-quiet",
-    "--spectrum-field-edge-to-validation-icon-small",
-    "--spectrum-field-label-to-component",
-    "--spectrum-field-label-to-component-quiet-extra-large",
-    "--spectrum-field-label-to-component-quiet-large",
-    "--spectrum-field-label-to-component-quiet-medium",
-    "--spectrum-field-label-to-component-quiet-small",
-    "--spectrum-field-text-to-alert-icon-extra-large",
-    "--spectrum-field-text-to-alert-icon-large",
-    "--spectrum-field-text-to-alert-icon-medium",
-    "--spectrum-field-text-to-alert-icon-small",
-    "--spectrum-field-text-to-validation-icon-extra-large",
-    "--spectrum-field-text-to-validation-icon-large",
-    "--spectrum-field-text-to-validation-icon-medium",
-    "--spectrum-field-text-to-validation-icon-small",
-    "--spectrum-field-top-to-validation-icon-extra-large",
-    "--spectrum-field-top-to-validation-icon-large",
-    "--spectrum-field-top-to-validation-icon-medium",
-    "--spectrum-field-top-to-validation-icon-small",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-25",
-    "--spectrum-gray-300",
-    "--spectrum-gray-500",
-    "--spectrum-gray-600",
-    "--spectrum-gray-800",
-    "--spectrum-gray-900",
-    "--spectrum-help-text-to-component",
-    "--spectrum-negative-border-color-default",
-    "--spectrum-negative-border-color-focus",
-    "--spectrum-negative-border-color-focus-hover",
-    "--spectrum-negative-border-color-hover",
-    "--spectrum-negative-border-color-key-focus",
-    "--spectrum-negative-visual-color",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-focus",
-    "--spectrum-neutral-content-color-focus-hover",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-positive-visual-color",
-    "--spectrum-regular-font-weight",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-side-label-character-count-to-field",
-    "--spectrum-side-label-character-count-top-margin-extra-large",
-    "--spectrum-side-label-character-count-top-margin-large",
-    "--spectrum-side-label-character-count-top-margin-medium",
-    "--spectrum-side-label-character-count-top-margin-small",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-200",
-    "--spectrum-texfield-animation-duration",
-    "--spectrum-text-area-min-block-size",
-    "--spectrum-text-area-min-block-size-quiet",
-    "--spectrum-text-area-min-inline-size",
-    "--spectrum-text-area-minimum-height",
-    "--spectrum-text-area-minimum-width",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-300",
-    "--spectrum-workflow-icon-size-75"
-  ],
-  "system-theme": [
-    "--system-textfield-background-color",
-    "--system-textfield-background-color-disabled",
-    "--system-textfield-border-color",
-    "--system-textfield-border-color-disabled",
-    "--system-textfield-border-color-focus",
-    "--system-textfield-border-color-focus-hover",
-    "--system-textfield-border-color-hover",
-    "--system-textfield-border-color-keyboard-focus",
-    "--system-textfield-border-width",
-    "--system-textfield-icon-spacing-block-invalid",
-    "--system-textfield-quiet-border-color-disabled",
-    "--system-textfield-size-l-icon-spacing-block-invalid",
-    "--system-textfield-size-s-icon-spacing-block-invalid",
-    "--system-textfield-size-xl-icon-spacing-block-invalid"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-textfield-border-color",
-    "--highcontrast-textfield-border-color-focus",
-    "--highcontrast-textfield-border-color-hover",
-    "--highcontrast-textfield-border-color-invalid-default",
-    "--highcontrast-textfield-border-color-invalid-focus",
-    "--highcontrast-textfield-border-color-invalid-hover",
-    "--highcontrast-textfield-border-color-invalid-keyboard-focus",
-    "--highcontrast-textfield-border-color-keyboard-focus",
-    "--highcontrast-textfield-focus-indicator-color",
-    "--highcontrast-textfield-text-color-default",
-    "--highcontrast-textfield-text-color-disabled",
-    "--highcontrast-textfield-text-color-hover",
-    "--highcontrast-textfield-text-color-invalid",
-    "--highcontrast-textfield-text-color-keyboard-focus",
-    "--highcontrast-textfield-text-color-readonly",
-    "--highcontrast-textfield-text-color-valid"
-  ]
+  "modifiers": {
+    "mod-textfield-width": {
+      "description": "Used by `.spectrum-Textfield`. Defaults to `var(--spectrum-textfield-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-spacing-block-valid": {
+      "description": "Used by `.spectrum-Textfield.is-valid .spectrum-Textfield-validationIcon`. Defaults to `var(--spectrum-textfield-icon-spacing-block-valid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-spacing-inline-end-valid": {
+      "description": "Used by `.spectrum-Textfield.is-valid .spectrum-Textfield-validationIcon`, `.is-valid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-icon-spacing-inline-end-valid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-color-valid": {
+      "description": "Used by `.spectrum-Textfield.is-valid .spectrum-Textfield-validationIcon`. Defaults to `var(--spectrum-textfield-icon-color-valid)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-size-invalid": {
+      "description": "Used by `.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`, `.is-invalid .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-invalid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-icon-size-invalid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-spacing-block-invalid": {
+      "description": "Used by `.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`. Defaults to `var(--spectrum-textfield-icon-spacing-block-invalid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-spacing-inline-end-invalid": {
+      "description": "Used by `.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`, `.is-invalid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-icon-spacing-inline-end-invalid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-color-invalid": {
+      "description": "Used by `.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`. Defaults to `var(--spectrum-textfield-icon-color-invalid)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-spacing-inline-end-quiet-valid": {
+      "description": "Used by `.spectrum-Textfield--quiet.is-valid .spectrum-Textfield-validationIcon`. Defaults to `var(--spectrum-textfield-icon-spacing-inline-end-quiet-valid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-spacing-inline-end-quiet-invalid": {
+      "description": "Used by `.spectrum-Textfield--quiet.is-invalid .spectrum-Textfield-validationIcon`. Defaults to `var(--spectrum-textfield-icon-spacing-inline-end-quiet-invalid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-label-spacing-block": {
+      "description": "Used by `.spectrum-Textfield .spectrum-FieldLabel`. Defaults to `var(--spectrum-textfield-label-spacing-block)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-label-spacing-block-quiet": {
+      "description": "Used by `.spectrum-Textfield--quiet .spectrum-FieldLabel`. Defaults to `var(--spectrum-textfield-label-spacing-block-quiet)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-helptext-spacing-block": {
+      "description": "Used by `.spectrum-Textfield .spectrum-HelpText`. Defaults to `var(--spectrum-textfield-helptext-spacing-block)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-character-count-spacing-block": {
+      "description": "Used by `.spectrum-Textfield-characterCount`. Defaults to `var(--spectrum-textfield-character-count-spacing-block)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-character-count-spacing-inline": {
+      "description": "Used by `.spectrum-Textfield-characterCount`. Defaults to `var(--spectrum-textfield-character-count-spacing-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-character-count-font-size": {
+      "description": "Used by `.spectrum-Textfield-characterCount`. Defaults to `var(--spectrum-textfield-character-count-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-character-count-font-family": {
+      "description": "Used by `.spectrum-Textfield-characterCount`. Defaults to `var(--spectrum-textfield-character-count-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-character-count-font-weight": {
+      "description": "Used by `.spectrum-Textfield-characterCount`. Defaults to `var(--spectrum-textfield-character-count-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-corner-radius": {
+      "description": "Used by `.spectrum-Textfield-characterCount`, `.spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-character-count-spacing-block-quiet": {
+      "description": "Used by `.spectrum-Textfield--quiet .spectrum-Textfield-characterCount`. Defaults to `var(--spectrum-textfield-character-count-spacing-block-quiet)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-min-width": {
+      "description": "Used by `.spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-min-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-height": {
+      "description": "Used by `.spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-spacing-block-start": {
+      "description": "Used by `.spectrum-Textfield-input`, `.spectrum-Textfield--quiet .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-spacing-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-width": {
+      "description": "Used by `.spectrum-Textfield-input`, `.is-valid .spectrum-Textfield-input`, `.is-invalid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-spacing-block-end": {
+      "description": "Used by `.spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-spacing-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-spacing-inline": {
+      "description": "Used by `.spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-spacing-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-background-color": {
+      "description": "Used by `.spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color": {
+      "description": "Used by `.spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-texfield-animation-duration": {
+      "description": "Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-texfield-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-placeholder-font-size": {
+      "description": "Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-textfield-placeholder-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-font-family": {
+      "description": "Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-textfield-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-font-weight": {
+      "description": "Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-textfield-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-default": {
+      "description": "Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-textfield-text-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-focus": {
+      "description": "Used by `.is-focused .spectrum-Textfield-input, .spectrum-Textfield-input:focus`. Defaults to `var(--spectrum-textfield-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-focus": {
+      "description": "Used by `.is-focused .spectrum-Textfield-input, .is-focused .spectrum-Textfield-input::placeholder, .spectrum-Textfield-input:focus, .spectrum-Textfield-input:focus::placeholder`. Defaults to `var(--spectrum-textfield-text-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-keyboard-focus": {
+      "description": "Used by `.is-keyboardFocused .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-color-keyboard-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-focus-indicator-width": {
+      "description": "Used by `.is-keyboardFocused .spectrum-Textfield-input`, `.spectrum-Textfield--quiet:after`. Defaults to `var(--spectrum-textfield-focus-indicator-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-focus-indicator-color": {
+      "description": "Used by `.is-keyboardFocused .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-keyboardFocused:after`. Defaults to `var(--spectrum-textfield-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-focus-indicator-gap": {
+      "description": "Used by `.is-keyboardFocused .spectrum-Textfield-input`, `.spectrum-Textfield--quiet:after`. Defaults to `var(--spectrum-textfield-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-keyboard-focus": {
+      "description": "Used by `.is-keyboardFocused .spectrum-Textfield-input, .is-keyboardFocused .spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-textfield-text-color-keyboard-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-spacing-inline-start-valid": {
+      "description": "Used by `.is-valid .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-valid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-icon-spacing-inline-start-valid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-size-valid": {
+      "description": "Used by `.is-valid .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-valid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-icon-size-valid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-valid": {
+      "description": "Used by `.is-valid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-text-color-valid)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-icon-spacing-inline-start-invalid": {
+      "description": "Used by `.is-invalid .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-invalid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-icon-spacing-inline-start-invalid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-invalid": {
+      "description": "Used by `.is-invalid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-text-color-invalid)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-invalid-default": {
+      "description": "Used by `.is-invalid .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-color-invalid-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-invalid-focus": {
+      "description": "Used by `.is-invalid .spectrum-Textfield-input:focus, .is-invalid.is-focused .spectrum-Textfield-input, .is-invalid:focus .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-color-invalid-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-invalid-keyboard-focus": {
+      "description": "Used by `.is-invalid .spectrum-Textfield-input:focus-visible, .is-invalid.is-keyboardFocused .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-color-invalid-keyboard-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-background-color-disabled": {
+      "description": "Used by `.spectrum-Textfield-input:disabled, .spectrum-Textfield.is-disabled .spectrum-Textfield-input`, `.spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-background-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-disabled": {
+      "description": "Used by `.spectrum-Textfield-input:disabled, .spectrum-Textfield.is-disabled .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input, .spectrum-Textfield-input:disabled`, `.spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-disabled": {
+      "description": "Used by `.spectrum-Textfield-input:disabled, .spectrum-Textfield-input:disabled::placeholder, .spectrum-Textfield.is-disabled .spectrum-Textfield-input, .spectrum-Textfield.is-disabled .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input, .spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input::placeholder, .spectrum-Textfield-input:disabled, .spectrum-Textfield-input:disabled::placeholder`, `.spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input, .spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input, .spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-textfield-text-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-spacing-block-quiet": {
+      "description": "Used by `.spectrum-Textfield--quiet .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-spacing-block-quiet)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-spacing-inline-quiet": {
+      "description": "Used by `.spectrum-Textfield--quiet .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-spacing-inline-quiet)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-readonly": {
+      "description": "Used by `.spectrum-Textfield-input:read-only, .spectrum-Textfield.is-readOnly .spectrum-Textfield-input`, `.spectrum-Textfield-input:read-only::placeholder, .spectrum-Textfield.is-readOnly .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield.is-readOnly:hover .spectrum-Textfield-input, .spectrum-Textfield.is-readOnly:hover .spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-textfield-text-color-readonly)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-hover": {
+      "description": "Used by `.spectrum-Textfield-input:hover, .spectrum-Textfield:hover .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-hover": {
+      "description": "Used by `.spectrum-Textfield-input:hover, .spectrum-Textfield-input:hover::placeholder, .spectrum-Textfield:hover .spectrum-Textfield-input, .spectrum-Textfield:hover .spectrum-Textfield-input::placeholder`. Defaults to `var(--spectrum-textfield-text-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-focus-hover": {
+      "description": "Used by `.is-focused .spectrum-Textfield-input:hover, .spectrum-Textfield-input:focus:hover`. Defaults to `var(--spectrum-textfield-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-text-color-focus-hover": {
+      "description": "Used by `.is-focused .spectrum-Textfield-input:hover, .is-focused .spectrum-Textfield-input:hover::placeholder, .spectrum-Textfield-input:focus:hover, .spectrum-Textfield-input:focus:hover::placeholder`. Defaults to `var(--spectrum-textfield-text-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-invalid-hover": {
+      "description": "Used by `.is-invalid .spectrum-Textfield-input:hover:not(.is-disabled), .is-invalid:hover:not(.is-disabled) .spectrum-Textfield-input`. Defaults to `var(--spectrum-textfield-border-color-invalid-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-border-color-invalid-focus-hover": {
+      "description": "Used by `.is-invalid .spectrum-Textfield-input:focus:hover, .is-invalid.is-focused .spectrum-Textfield-input:hover, .is-invalid:focus .spectrum-Textfield-input:hover`. Defaults to `var(--spectrum-textfield-border-color-invalid-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-textfield-label-spacing-inline-side-label": {
+      "description": "Used by `.spectrum-Textfield--sideLabel .spectrum-FieldLabel`. Defaults to `var(--spectrum-textfield-label-spacing-inline-side-label)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-character-count-spacing-block-side": {
+      "description": "Used by `.spectrum-Textfield--sideLabel .spectrum-Textfield-characterCount`. Defaults to `var(--spectrum-textfield-character-count-spacing-block-side)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-textfield-character-count-spacing-inline-side": {
+      "description": "Used by `.spectrum-Textfield--sideLabel .spectrum-Textfield-characterCount`. Defaults to `var(--spectrum-textfield-character-count-spacing-inline-side)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-text-area-min-inline-size": {
+      "description": "Used by `.spectrum-Textfield--multiline .spectrum-Textfield-input`. Defaults to `var(--spectrum-text-area-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-text-area-min-block-size": {
+      "description": "Used by `.spectrum-Textfield--multiline .spectrum-Textfield-input`. Defaults to `var(--spectrum-text-area-min-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-text-area-min-block-size-quiet": {
+      "description": "Used by `.spectrum-Textfield--multiline.spectrum-Textfield--quiet .spectrum-Textfield-input`. Defaults to `var(--spectrum-text-area-min-block-size-quiet)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-textfield-input-line-height": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--multiline`. Used by `.spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-height": {
+      "value": "var(--spectrum-component-height-300)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `--spectrum-textfield-input-line-height`, `.spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-width": {
+      "value": "240px",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-min-width": {
+      "value": "var(--spectrum-text-field-minimum-width-multiplier)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-text-field-minimum-width-multiplier": {
+      "description": "Used by `--spectrum-textfield-min-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-corner-radius": {
+      "value": "var(--spectrum-corner-radius-100)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-characterCount`, `.spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-spacing-inline-quiet": {
+      "value": "var(--spectrum-field-edge-to-text-quiet)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield--quiet .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-spacing-block-start": {
+      "value": "var(--spectrum-component-top-to-text-100)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`, `.spectrum-Textfield--quiet .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-spacing-block-end": {
+      "value": "var(--spectrum-component-bottom-to-text-100)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-spacing-block-quiet": {
+      "value": "var(--spectrum-field-edge-to-border-quiet)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield--quiet .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-label-spacing-block": {
+      "value": "var(--spectrum-field-label-to-component)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield .spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-helptext-spacing-block": {
+      "value": "var(--spectrum-help-text-to-component)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield .spectrum-HelpText`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-spacing-inline-end-quiet-invalid": {
+      "value": "var(--spectrum-field-edge-to-alert-icon-quiet)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield--quiet.is-invalid .spectrum-Textfield-validationIcon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-spacing-inline-end-quiet-valid": {
+      "value": "var(--spectrum-field-edge-to-validation-icon-quiet)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield--quiet.is-valid .spectrum-Textfield-validationIcon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-font-weight": {
+      "value": "var(--spectrum-regular-font-weight)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-character-count-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-characterCount`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-character-count-font-weight": {
+      "value": "var(--spectrum-regular-font-weight)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-characterCount`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-character-count-spacing-inline": {
+      "value": "var(--spectrum-spacing-200)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-characterCount`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-character-count-spacing-inline-side": {
+      "value": "var(--spectrum-side-label-character-count-to-field)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield--sideLabel .spectrum-Textfield-characterCount`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-focus-indicator-width": {
+      "value": "var(--spectrum-focus-indicator-thickness)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-keyboardFocused .spectrum-Textfield-input`, `.spectrum-Textfield--quiet:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-focus-indicator-gap": {
+      "value": "var(--spectrum-focus-indicator-gap)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-keyboardFocused .spectrum-Textfield-input`, `.spectrum-Textfield--quiet:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-default": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-hover": {
+      "value": "var(--spectrum-neutral-content-color-hover)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input:hover, .spectrum-Textfield-input:hover::placeholder, .spectrum-Textfield:hover .spectrum-Textfield-input, .spectrum-Textfield:hover .spectrum-Textfield-input::placeholder`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-focus": {
+      "value": "var(--spectrum-neutral-content-color-focus)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-focused .spectrum-Textfield-input, .is-focused .spectrum-Textfield-input::placeholder, .spectrum-Textfield-input:focus, .spectrum-Textfield-input:focus::placeholder`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-focus-hover": {
+      "value": "var(--spectrum-neutral-content-color-focus-hover)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-focused .spectrum-Textfield-input:hover, .is-focused .spectrum-Textfield-input:hover::placeholder, .spectrum-Textfield-input:focus:hover, .spectrum-Textfield-input:focus:hover::placeholder`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-keyboard-focus": {
+      "value": "var(--spectrum-neutral-content-color-key-focus)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-keyboardFocused .spectrum-Textfield-input, .is-keyboardFocused .spectrum-Textfield-input::placeholder`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-readonly": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input:read-only, .spectrum-Textfield.is-readOnly .spectrum-Textfield-input`, `.spectrum-Textfield-input:read-only::placeholder, .spectrum-Textfield.is-readOnly .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield.is-readOnly:hover .spectrum-Textfield-input, .spectrum-Textfield.is-readOnly:hover .spectrum-Textfield-input::placeholder`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-disabled": {
+      "value": "var(--spectrum-disabled-content-color)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield.is-disabled .spectrum-FieldLabel`, `.spectrum-Textfield-input:disabled, .spectrum-Textfield-input:disabled::placeholder, .spectrum-Textfield.is-disabled .spectrum-Textfield-input, .spectrum-Textfield.is-disabled .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input, .spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input::placeholder, .spectrum-Textfield-input:disabled, .spectrum-Textfield-input:disabled::placeholder`, `.spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input, .spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input, .spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input::placeholder`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-invalid-default": {
+      "value": "var(--spectrum-negative-border-color-default)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-invalid-hover": {
+      "value": "var(--spectrum-negative-border-color-hover)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input:hover:not(.is-disabled), .is-invalid:hover:not(.is-disabled) .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-invalid-focus": {
+      "value": "var(--spectrum-negative-border-color-focus)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input:focus, .is-invalid.is-focused .spectrum-Textfield-input, .is-invalid:focus .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-invalid-focus-hover": {
+      "value": "var(--spectrum-negative-border-color-focus-hover)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input:focus:hover, .is-invalid.is-focused .spectrum-Textfield-input:hover, .is-invalid:focus .spectrum-Textfield-input:hover`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-invalid-keyboard-focus": {
+      "value": "var(--spectrum-negative-border-color-key-focus)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input:focus-visible, .is-invalid.is-keyboardFocused .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-color-invalid": {
+      "value": "var(--spectrum-negative-visual-color)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-invalid": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-text-color-valid": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-valid .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-color-valid": {
+      "value": "var(--spectrum-positive-visual-color)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield.is-valid .spectrum-Textfield-validationIcon`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-focus-indicator-color": {
+      "value": "var(--spectrum-focus-indicator-color)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-keyboardFocused .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-keyboardFocused:after`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-label-spacing-block-quiet": {
+      "value": "var(--spectrum-field-label-to-component-quiet-extra-large)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield--quiet .spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-label-spacing-inline-side-label": {
+      "value": "var(--spectrum-spacing-200)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield--sideLabel .spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-placeholder-font-size": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-spacing-inline": {
+      "value": "var(--spectrum-component-edge-to-text-200)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-size-invalid": {
+      "value": "var(--spectrum-workflow-icon-size-300)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`, `.is-invalid .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-invalid .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-size-valid": {
+      "value": "var(--spectrum-checkmark-icon-size-300)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.is-valid .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-valid .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-spacing-inline-end-invalid": {
+      "value": "var(--spectrum-field-edge-to-alert-icon-extra-large)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`, `.is-invalid .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-spacing-inline-end-valid": {
+      "value": "var(--spectrum-field-edge-to-validation-icon-extra-large)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield.is-valid .spectrum-Textfield-validationIcon`, `.is-valid .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-spacing-block-valid": {
+      "value": "var(--spectrum-field-top-to-validation-icon-extra-large)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield.is-valid .spectrum-Textfield-validationIcon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-spacing-inline-start-invalid": {
+      "value": "var(--spectrum-field-text-to-alert-icon-extra-large)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.is-invalid .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-invalid .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-spacing-inline-start-valid": {
+      "value": "var(--spectrum-field-text-to-validation-icon-extra-large)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.is-valid .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-valid .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-character-count-font-size": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield-characterCount`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-character-count-spacing-block": {
+      "value": "var(--spectrum-component-bottom-to-text-200)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield-characterCount`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-character-count-spacing-block-quiet": {
+      "value": "var(--spectrum-character-count-to-field-quiet-extra-large)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield--quiet .spectrum-Textfield-characterCount`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-character-count-spacing-block-side": {
+      "value": "var(--spectrum-side-label-character-count-top-margin-extra-large)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield--sideLabel .spectrum-Textfield-characterCount`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-icon-spacing-block-invalid": {
+      "value": "var(--system-textfield-size-xl-icon-spacing-block-invalid)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield.spectrum-Textfield--sizeS`, `.spectrum-Textfield.spectrum-Textfield--sizeL`, `.spectrum-Textfield.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-width": {
+      "value": "var(--system-textfield-border-width)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`, `.is-valid .spectrum-Textfield-input`, `.is-invalid .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-textfield-background-color": {
+      "value": "var(--system-textfield-background-color)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color": {
+      "value": "var(--system-textfield-border-color)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-focus": {
+      "value": "var(--system-textfield-border-color-focus)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-focused .spectrum-Textfield-input, .spectrum-Textfield-input:focus`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-keyboard-focus": {
+      "value": "var(--system-textfield-border-color-keyboard-focus)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-keyboardFocused .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-background-color-disabled": {
+      "value": "var(--system-textfield-background-color-disabled)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input:disabled, .spectrum-Textfield.is-disabled .spectrum-Textfield-input`, `.spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-disabled": {
+      "value": "var(--system-textfield-quiet-border-color-disabled)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield.spectrum-Textfield--quiet`. Used by `.spectrum-Textfield-input:disabled, .spectrum-Textfield.is-disabled .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input, .spectrum-Textfield-input:disabled`, `.spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-hover": {
+      "value": "var(--system-textfield-border-color-hover)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input:hover, .spectrum-Textfield:hover .spectrum-Textfield-input`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-textfield-border-color-focus-hover": {
+      "value": "var(--system-textfield-border-color-focus-hover)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-focused .spectrum-Textfield-input:hover, .spectrum-Textfield-input:focus:hover`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-25": {
+      "description": "Used by `--system-textfield-background-color`, `--system-textfield-background-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-500": {
+      "description": "Used by `--system-textfield-border-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-600": {
+      "description": "Used by `--system-textfield-border-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "description": "Used by `--system-textfield-border-color-focus`, `--system-textfield-border-color-keyboard-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-900": {
+      "description": "Used by `--system-textfield-border-color-focus-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-300": {
+      "description": "Used by `--system-textfield-border-color-disabled`, `--system-textfield-quiet-border-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "description": "Used by `--system-textfield-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-100": {
+      "description": "Used by `--system-textfield-icon-spacing-block-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-75": {
+      "description": "Used by `--system-textfield-size-s-icon-spacing-block-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-200": {
+      "description": "Used by `--system-textfield-size-l-icon-spacing-block-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-300": {
+      "description": "Used by `--system-textfield-size-xl-icon-spacing-block-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-texfield-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-texfield-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "description": "Used by `--spectrum-textfield-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-text-quiet": {
+      "description": "Used by `--spectrum-textfield-spacing-inline-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "description": "Used by `--spectrum-textfield-spacing-block-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "description": "Used by `--spectrum-textfield-spacing-block-end`, `--spectrum-textfield-character-count-spacing-block`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-border-quiet": {
+      "description": "Used by `--spectrum-textfield-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-label-to-component": {
+      "description": "Used by `--spectrum-textfield-label-spacing-block`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-help-text-to-component": {
+      "description": "Used by `--spectrum-textfield-helptext-spacing-block`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-alert-icon-quiet": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-quiet-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-validation-icon-quiet": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-quiet-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-textfield-font-family`, `--spectrum-textfield-character-count-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "description": "Used by `--spectrum-textfield-font-weight`, `--spectrum-textfield-character-count-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-inline`, `--spectrum-textfield-label-spacing-inline-side-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-side-label-character-count-to-field": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-inline-side`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "description": "Used by `--spectrum-textfield-focus-indicator-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "description": "Used by `--spectrum-textfield-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "description": "Used by `--spectrum-textfield-text-color-default`, `--spectrum-textfield-text-color-readonly`, `--spectrum-textfield-text-color-invalid`, `--spectrum-textfield-text-color-valid`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "description": "Used by `--spectrum-textfield-text-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-focus": {
+      "description": "Used by `--spectrum-textfield-text-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-focus-hover": {
+      "description": "Used by `--spectrum-textfield-text-color-focus-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "description": "Used by `--spectrum-textfield-text-color-keyboard-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "description": "Used by `--spectrum-textfield-text-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-default": {
+      "description": "Used by `--spectrum-textfield-border-color-invalid-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-hover": {
+      "description": "Used by `--spectrum-textfield-border-color-invalid-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus": {
+      "description": "Used by `--spectrum-textfield-border-color-invalid-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus-hover": {
+      "description": "Used by `--spectrum-textfield-border-color-invalid-focus-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-key-focus": {
+      "description": "Used by `--spectrum-textfield-border-color-invalid-keyboard-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-visual-color": {
+      "description": "Used by `--spectrum-textfield-icon-color-invalid`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-positive-visual-color": {
+      "description": "Used by `--spectrum-textfield-icon-color-valid`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "description": "Used by `--spectrum-textfield-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-text-area-min-inline-size": {
+      "value": "var(--spectrum-text-area-minimum-width)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield--multiline .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-area-minimum-width": {
+      "description": "Used by `--spectrum-text-area-min-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-area-min-block-size": {
+      "value": "var(--spectrum-text-area-minimum-height)",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield--multiline .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-area-minimum-height": {
+      "description": "Used by `--spectrum-text-area-min-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "description": "Used by `--spectrum-textfield-height`, `--spectrum-text-area-min-block-size-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-label-to-component-quiet-medium": {
+      "description": "Used by `--spectrum-textfield-label-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "description": "Used by `--spectrum-textfield-placeholder-font-size`, `--spectrum-textfield-character-count-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "description": "Used by `--spectrum-textfield-spacing-inline`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "description": "Used by `--spectrum-textfield-icon-size-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-checkmark-icon-size-100": {
+      "description": "Used by `--spectrum-textfield-icon-size-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-alert-icon-medium": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-validation-icon-medium": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-validation-icon-medium": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-block-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-text-to-alert-icon-medium": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-start-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-text-to-validation-icon-medium": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-start-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "description": "Used by `--spectrum-textfield-character-count-font-size`, `--spectrum-textfield-placeholder-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-character-count-to-field-quiet-medium": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-side-label-character-count-top-margin-medium": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block-side`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-area-min-block-size-quiet": {
+      "value": "var(--spectrum-component-height-300)",
+      "description": "Defined in `.spectrum-Textfield`, `.spectrum-Textfield--sizeS`, `.spectrum-Textfield--sizeL`, `.spectrum-Textfield--sizeXL`. Used by `.spectrum-Textfield--multiline.spectrum-Textfield--quiet .spectrum-Textfield-input`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "description": "Used by `--spectrum-textfield-height`, `--spectrum-text-area-min-block-size-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-label-to-component-quiet-small": {
+      "description": "Used by `--spectrum-textfield-label-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "description": "Used by `--spectrum-textfield-label-spacing-inline-side-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "description": "Used by `--spectrum-textfield-spacing-inline`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-75": {
+      "description": "Used by `--spectrum-textfield-icon-size-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-checkmark-icon-size-75": {
+      "description": "Used by `--spectrum-textfield-icon-size-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-alert-icon-small": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-validation-icon-small": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-validation-icon-small": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-block-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-text-to-alert-icon-small": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-start-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-text-to-validation-icon-small": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-start-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-character-count-to-field-quiet-small": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-side-label-character-count-top-margin-small": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block-side`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "description": "Used by `--spectrum-textfield-height`, `--spectrum-text-area-min-block-size-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-label-to-component-quiet-large": {
+      "description": "Used by `--spectrum-textfield-label-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "description": "Used by `--spectrum-textfield-placeholder-font-size`, `--spectrum-textfield-character-count-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-200": {
+      "description": "Used by `--spectrum-textfield-spacing-inline`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "description": "Used by `--spectrum-textfield-icon-size-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-checkmark-icon-size-200": {
+      "description": "Used by `--spectrum-textfield-icon-size-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-alert-icon-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-validation-icon-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-validation-icon-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-block-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-text-to-alert-icon-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-start-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-text-to-validation-icon-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-start-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-character-count-to-field-quiet-large": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-side-label-character-count-top-margin-large": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block-side`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "description": "Used by `--spectrum-textfield-height`, `--spectrum-text-area-min-block-size-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-label-to-component-quiet-extra-large": {
+      "description": "Used by `--spectrum-textfield-label-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "description": "Used by `--spectrum-textfield-placeholder-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-300": {
+      "description": "Used by `--spectrum-textfield-icon-size-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-checkmark-icon-size-300": {
+      "description": "Used by `--spectrum-textfield-icon-size-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-alert-icon-extra-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-validation-icon-extra-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-end-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-validation-icon-extra-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-block-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-text-to-alert-icon-extra-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-start-invalid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-text-to-validation-icon-extra-large": {
+      "description": "Used by `--spectrum-textfield-icon-spacing-inline-start-valid`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-character-count-to-field-quiet-extra-large": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-side-label-character-count-top-margin-extra-large": {
+      "description": "Used by `--spectrum-textfield-character-count-spacing-block-side`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-textfield-background-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-background-color`.",
+      "control": "color"
+    },
+    "system-textfield-background-color-disabled": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-background-color-disabled`.",
+      "control": "color"
+    },
+    "system-textfield-border-color": {
+      "value": "var(--spectrum-gray-500)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-border-color`.",
+      "control": "color"
+    },
+    "system-textfield-border-color-hover": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-border-color-hover`.",
+      "control": "color"
+    },
+    "system-textfield-border-color-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-border-color-focus`.",
+      "control": "color"
+    },
+    "system-textfield-border-color-focus-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-border-color-focus-hover`.",
+      "control": "color"
+    },
+    "system-textfield-border-color-keyboard-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-border-color-keyboard-focus`.",
+      "control": "color"
+    },
+    "system-textfield-border-color-disabled": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-border-color-disabled`.",
+      "control": "color"
+    },
+    "system-textfield-border-width": {
+      "value": "var(--spectrum-border-width-100)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-border-width`.",
+      "control": "text"
+    },
+    "system-textfield-icon-spacing-block-invalid": {
+      "value": "var(--spectrum-component-top-to-workflow-icon-100)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-icon-spacing-block-invalid`.",
+      "control": "text"
+    },
+    "system-textfield-size-s-icon-spacing-block-invalid": {
+      "value": "var(--spectrum-component-top-to-workflow-icon-75)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-icon-spacing-block-invalid`.",
+      "control": "text"
+    },
+    "system-textfield-size-l-icon-spacing-block-invalid": {
+      "value": "var(--spectrum-component-top-to-workflow-icon-200)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-icon-spacing-block-invalid`.",
+      "control": "text"
+    },
+    "system-textfield-size-xl-icon-spacing-block-invalid": {
+      "value": "var(--spectrum-component-top-to-workflow-icon-300)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-icon-spacing-block-invalid`.",
+      "control": "text"
+    },
+    "system-textfield-quiet-border-color-disabled": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-textfield-border-color-disabled`.",
+      "control": "color"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-textfield-border-color": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input`. Defaults to `var(--mod-textfield-border-color, var(--spectrum-textfield-border-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-text-color-default": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-Textfield .spectrum-Textfield-input`, `.spectrum-Textfield .spectrum-Textfield-input::placeholder`. Used by `.spectrum-Textfield-input`, `.spectrum-Textfield-input::placeholder`. Defaults to `var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-border-color-focus": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-focused .spectrum-Textfield-input, .spectrum-Textfield-input:focus`. Defaults to `var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-border-color-keyboard-focus": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-keyboardFocused .spectrum-Textfield-input`. Defaults to `var(--mod-textfield-border-color-keyboard-focus, var(--spectrum-textfield-border-color-keyboard-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-focus-indicator-color": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-keyboardFocused .spectrum-Textfield-input`, `.spectrum-Textfield--quiet.is-keyboardFocused:after`. Defaults to `var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-text-color-keyboard-focus": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-Textfield .spectrum-Textfield-input`, `.spectrum-Textfield .spectrum-Textfield-input::placeholder`. Used by `.is-keyboardFocused .spectrum-Textfield-input, .is-keyboardFocused .spectrum-Textfield-input::placeholder`. Defaults to `var(--mod-textfield-text-color-keyboard-focus, var(--spectrum-textfield-text-color-keyboard-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-text-color-valid": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-valid .spectrum-Textfield-input`. Defaults to `var(--mod-textfield-text-color-valid, var(--spectrum-textfield-text-color-valid))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-text-color-invalid": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input`. Defaults to `var(--mod-textfield-text-color-invalid, var(--spectrum-textfield-text-color-invalid))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-border-color-invalid-default": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input`. Defaults to `var(--mod-textfield-border-color-invalid-default, var(--spectrum-textfield-border-color-invalid-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-border-color-invalid-focus": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input:focus, .is-invalid.is-focused .spectrum-Textfield-input, .is-invalid:focus .spectrum-Textfield-input`. Defaults to `var(--mod-textfield-border-color-invalid-focus, var(--spectrum-textfield-border-color-invalid-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-border-color-invalid-keyboard-focus": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input:focus-visible, .is-invalid.is-keyboardFocused .spectrum-Textfield-input`. Defaults to `var(--mod-textfield-border-color-invalid-keyboard-focus, var(--spectrum-textfield-border-color-invalid-keyboard-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-text-color-disabled": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-Textfield .spectrum-Textfield-input`, `.spectrum-Textfield .spectrum-Textfield-input::placeholder`. Used by `.spectrum-Textfield-input:disabled, .spectrum-Textfield-input:disabled::placeholder, .spectrum-Textfield.is-disabled .spectrum-Textfield-input, .spectrum-Textfield.is-disabled .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input, .spectrum-Textfield--quiet.is-disabled .spectrum-Textfield-input::placeholder, .spectrum-Textfield-input:disabled, .spectrum-Textfield-input:disabled::placeholder`, `.spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input, .spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input, .spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield--quiet.is-disabled:hover .spectrum-Textfield-input::placeholder`. Defaults to `var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-text-color-readonly": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Textfield .spectrum-Textfield-input`, `.spectrum-Textfield .spectrum-Textfield-input::placeholder`. Used by `.spectrum-Textfield-input:read-only, .spectrum-Textfield.is-readOnly .spectrum-Textfield-input`, `.spectrum-Textfield-input:read-only::placeholder, .spectrum-Textfield.is-readOnly .spectrum-Textfield-input::placeholder`, `.spectrum-Textfield.is-readOnly:hover .spectrum-Textfield-input, .spectrum-Textfield.is-readOnly:hover .spectrum-Textfield-input::placeholder`. Defaults to `var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-border-color-hover": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.spectrum-Textfield-input:hover, .spectrum-Textfield:hover .spectrum-Textfield-input`. Defaults to `var(--mod-textfield-border-color-hover, var(--spectrum-textfield-border-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-text-color-hover": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-Textfield .spectrum-Textfield-input`, `.spectrum-Textfield .spectrum-Textfield-input::placeholder`. Used by `.spectrum-Textfield-input:hover, .spectrum-Textfield-input:hover::placeholder, .spectrum-Textfield:hover .spectrum-Textfield-input, .spectrum-Textfield:hover .spectrum-Textfield-input::placeholder`. Defaults to `var(--mod-textfield-text-color-hover, var(--spectrum-textfield-text-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-border-color-invalid-hover": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Textfield`. Used by `.is-invalid .spectrum-Textfield-input:hover:not(.is-disabled), .is-invalid:hover:not(.is-disabled) .spectrum-Textfield-input`. Defaults to `var(--mod-textfield-border-color-invalid-hover, var(--spectrum-textfield-border-color-invalid-hover))`, if not set.",
+      "control": "color"
+    }
+  }
 }

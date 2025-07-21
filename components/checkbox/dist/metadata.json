@@ -10,6 +10,10 @@
     ".spectrum-Checkbox .spectrum-Checkbox-partialCheckmark",
     ".spectrum-Checkbox--emphasized .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox--emphasized:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox--emphasized:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before",
@@ -18,15 +22,11 @@
     ".spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-invalid .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-invalid:active .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-invalid:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox--emphasized:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox--emphasized:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--sizeL",
     ".spectrum-Checkbox--sizeM",
     ".spectrum-Checkbox--sizeS",
@@ -47,6 +47,12 @@
     ".spectrum-Checkbox-label:lang(ja)",
     ".spectrum-Checkbox-label:lang(ko)",
     ".spectrum-Checkbox-label:lang(zh)",
+    ".spectrum-Checkbox:active .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox:active .spectrum-Checkbox-label",
+    ".spectrum-Checkbox:hover .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox:hover .spectrum-Checkbox-label",
     ".spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-checkmark",
     ".spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark",
     ".spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box:before",
@@ -59,177 +65,777 @@
     ".spectrum-Checkbox.is-invalid .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box:before",
+    ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-label",
-    ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label",
     ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label",
-    ".spectrum-Checkbox:active .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox:active .spectrum-Checkbox-label",
-    ".spectrum-Checkbox:hover .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox:hover .spectrum-Checkbox-label"
+    ".spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label"
   ],
-  "modifiers": [
-    "--mod-checkbox-animation-duration",
-    "--mod-checkbox-border-width",
-    "--mod-checkbox-checkmark-color",
-    "--mod-checkbox-content-color-default",
-    "--mod-checkbox-content-color-disabled",
-    "--mod-checkbox-content-color-down",
-    "--mod-checkbox-content-color-focus",
-    "--mod-checkbox-content-color-hover",
-    "--mod-checkbox-control-color-default",
-    "--mod-checkbox-control-color-disabled",
-    "--mod-checkbox-control-color-down",
-    "--mod-checkbox-control-color-focus",
-    "--mod-checkbox-control-color-hover",
-    "--mod-checkbox-control-corner-radius",
-    "--mod-checkbox-control-invalid-color-down",
-    "--mod-checkbox-control-selected-color-default",
-    "--mod-checkbox-control-selected-color-down",
-    "--mod-checkbox-control-selected-color-focus",
-    "--mod-checkbox-control-selected-color-hover",
-    "--mod-checkbox-control-size",
-    "--mod-checkbox-emphasized-color-default",
-    "--mod-checkbox-emphasized-color-down",
-    "--mod-checkbox-emphasized-color-focus",
-    "--mod-checkbox-emphasized-color-hover",
-    "--mod-checkbox-focus-indicator-color",
-    "--mod-checkbox-focus-indicator-gap",
-    "--mod-checkbox-focus-indicator-thinkness",
-    "--mod-checkbox-font-size",
-    "--mod-checkbox-height",
-    "--mod-checkbox-invalid-color-default",
-    "--mod-checkbox-invalid-color-focus",
-    "--mod-checkbox-invalid-color-hover",
-    "--mod-checkbox-line-height",
-    "--mod-checkbox-line-height-cjk",
-    "--mod-checkbox-selected-border-width",
-    "--mod-checkbox-spacing",
-    "--mod-checkbox-text-to-control",
-    "--mod-checkbox-top-to-text",
-    "--mod-focus-indicator-thickness"
-  ],
-  "component": [
-    "--spectrum-checkbox-animation-duration",
-    "--spectrum-checkbox-border-width",
-    "--spectrum-checkbox-checkmark-color",
-    "--spectrum-checkbox-content-color-default",
-    "--spectrum-checkbox-content-color-disabled",
-    "--spectrum-checkbox-content-color-down",
-    "--spectrum-checkbox-content-color-focus",
-    "--spectrum-checkbox-content-color-hover",
-    "--spectrum-checkbox-control-color-default",
-    "--spectrum-checkbox-control-color-disabled",
-    "--spectrum-checkbox-control-color-down",
-    "--spectrum-checkbox-control-color-focus",
-    "--spectrum-checkbox-control-color-hover",
-    "--spectrum-checkbox-control-corner-radius",
-    "--spectrum-checkbox-control-selected-color-default",
-    "--spectrum-checkbox-control-selected-color-down",
-    "--spectrum-checkbox-control-selected-color-focus",
-    "--spectrum-checkbox-control-selected-color-hover",
-    "--spectrum-checkbox-control-size",
-    "--spectrum-checkbox-control-size-extra-large",
-    "--spectrum-checkbox-control-size-large",
-    "--spectrum-checkbox-control-size-medium",
-    "--spectrum-checkbox-control-size-small",
-    "--spectrum-checkbox-emphasized-color-default",
-    "--spectrum-checkbox-emphasized-color-down",
-    "--spectrum-checkbox-emphasized-color-focus",
-    "--spectrum-checkbox-emphasized-color-hover",
-    "--spectrum-checkbox-focus-indicator-color",
-    "--spectrum-checkbox-focus-indicator-gap",
-    "--spectrum-checkbox-focus-indicator-thickness",
-    "--spectrum-checkbox-font-size",
-    "--spectrum-checkbox-height",
-    "--spectrum-checkbox-invalid-color-default",
-    "--spectrum-checkbox-invalid-color-down",
-    "--spectrum-checkbox-invalid-color-focus",
-    "--spectrum-checkbox-invalid-color-hover",
-    "--spectrum-checkbox-line-height",
-    "--spectrum-checkbox-line-height-cjk",
-    "--spectrum-checkbox-selected-border-width",
-    "--spectrum-checkbox-spacing",
-    "--spectrum-checkbox-text-to-control",
-    "--spectrum-checkbox-top-to-text"
-  ],
-  "global": [
-    "--spectrum-accent-color-1000",
-    "--spectrum-accent-color-1100",
-    "--spectrum-accent-color-900",
-    "--spectrum-animation-duration-100",
-    "--spectrum-border-width-200",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-disabled-content-color",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-50",
-    "--spectrum-gray-700",
-    "--spectrum-gray-800",
-    "--spectrum-line-height-100",
-    "--spectrum-negative-color-1000",
-    "--spectrum-negative-color-1100",
-    "--spectrum-negative-color-900",
-    "--spectrum-neutral-background-color-selected-default",
-    "--spectrum-neutral-background-color-selected-down",
-    "--spectrum-neutral-background-color-selected-hover",
-    "--spectrum-neutral-background-color-selected-key-focus",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-text-to-control-100",
-    "--spectrum-text-to-control-200",
-    "--spectrum-text-to-control-300",
-    "--spectrum-text-to-control-75"
-  ],
-  "system-theme": [
-    "--system-checkbox-checkmark-color",
-    "--system-checkbox-control-color-default",
-    "--system-checkbox-control-color-down",
-    "--system-checkbox-control-color-focus",
-    "--system-checkbox-control-color-hover",
-    "--system-checkbox-control-corner-radius"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-checkbox-background-color-default",
-    "--highcontrast-checkbox-color-default",
-    "--highcontrast-checkbox-color-focus",
-    "--highcontrast-checkbox-color-hover",
-    "--highcontrast-checkbox-content-color-default",
-    "--highcontrast-checkbox-content-color-down",
-    "--highcontrast-checkbox-content-color-focus",
-    "--highcontrast-checkbox-content-color-hover",
-    "--highcontrast-checkbox-disabled-color-default",
-    "--highcontrast-checkbox-focus-indicator-color",
-    "--highcontrast-checkbox-highlight-color-default",
-    "--highcontrast-checkbox-highlight-color-down",
-    "--highcontrast-checkbox-highlight-color-focus",
-    "--highcontrast-checkbox-highlight-color-hover"
-  ]
+  "modifiers": {
+    "mod-checkbox-content-color-default": {
+      "description": "Used by `.spectrum-Checkbox`, `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-height": {
+      "description": "Used by `.spectrum-Checkbox`, `--spectrum-checkbox-spacing`. Defaults to `var(--spectrum-checkbox-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-color-down": {
+      "description": "Used by `.spectrum-Checkbox:active .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-selected-color-down": {
+      "description": "Used by `.spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-selected-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-content-color-down": {
+      "description": "Used by `.spectrum-Checkbox:active .spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-invalid-color-default": {
+      "description": "Used by `.spectrum-Checkbox.is-invalid .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-invalid-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-invalid-color-hover": {
+      "description": "Used by `.spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-invalid-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-selected-color-default": {
+      "description": "Used by `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-selected-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-checkmark-color": {
+      "description": "Used by `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox .spectrum-Checkbox-checkmark, .spectrum-Checkbox .spectrum-Checkbox-partialCheckmark`, `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-checkmark-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-selected-border-width": {
+      "description": "Used by `.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-selected-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-selected-color-focus": {
+      "description": "Used by `.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-selected-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-emphasized-color-default": {
+      "description": "Used by `.spectrum-Checkbox--emphasized .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-emphasized-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-emphasized-color-focus": {
+      "description": "Used by `.spectrum-Checkbox--emphasized .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-emphasized-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-invalid-color-focus": {
+      "description": "Used by `.spectrum-Checkbox--emphasized.is-invalid .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-invalid-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-color-hover": {
+      "description": "Used by `.spectrum-Checkbox:hover .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-selected-color-hover": {
+      "description": "Used by `.spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-selected-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-content-color-hover": {
+      "description": "Used by `.spectrum-Checkbox:hover .spectrum-Checkbox-label`, `.spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-emphasized-color-hover": {
+      "description": "Used by `.spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-emphasized-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-emphasized-color-down": {
+      "description": "Used by `.spectrum-Checkbox--emphasized.is-indeterminate:active .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-emphasized-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-invalid-color-down": {
+      "description": "Used by `.spectrum-Checkbox--emphasized.is-invalid:active .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-invalid-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-color-focus": {
+      "description": "Used by `.spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-text-to-control": {
+      "description": "Used by `.spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-text-to-control)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-top-to-text": {
+      "description": "Used by `.spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-top-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-font-size": {
+      "description": "Used by `.spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-animation-duration": {
+      "description": "Used by `.spectrum-Checkbox-label`, `.spectrum-Checkbox-box:before`, `.spectrum-Checkbox-box:after`, `.spectrum-Checkbox .spectrum-Checkbox-checkmark, .spectrum-Checkbox .spectrum-Checkbox-partialCheckmark`. Defaults to `var(--spectrum-checkbox-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-line-height": {
+      "description": "Used by `.spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-line-height-cjk": {
+      "description": "Used by `.spectrum-Checkbox-label:lang(ja), .spectrum-Checkbox-label:lang(ko), .spectrum-Checkbox-label:lang(zh)`. Defaults to `var(--spectrum-checkbox-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-color-default": {
+      "description": "Used by `.spectrum-Checkbox-input`, `.spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-focus-indicator-thinkness": {
+      "description": "Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:after`. Defaults to `var(--spectrum-checkbox-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-focus-indicator-color": {
+      "description": "Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:after`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box`. Defaults to `var(--spectrum-checkbox-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-focus-indicator-gap": {
+      "description": "Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:after`, `.spectrum-Checkbox-box:after`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box`. Defaults to `var(--spectrum-checkbox-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-content-color-focus": {
+      "description": "Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-content-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-size": {
+      "description": "Used by `--spectrum-checkbox-spacing`, `.spectrum-Checkbox-box, .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-spacing": {
+      "description": "Used by `.spectrum-Checkbox-box`. Defaults to `var(--spectrum-checkbox-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-corner-radius": {
+      "description": "Used by `.spectrum-Checkbox-box:before`, `.spectrum-Checkbox-box:after`. Defaults to `var(--spectrum-checkbox-control-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-border-width": {
+      "description": "Used by `.spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-checkbox-control-color-disabled": {
+      "description": "Used by `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`. Defaults to `var(--spectrum-checkbox-control-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-checkbox-content-color-disabled": {
+      "description": "Used by `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label, .spectrum-Checkbox .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label`. Defaults to `var(--spectrum-checkbox-content-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box`. Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-checkbox-content-color-default": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox`, `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-content-color-hover": {
+      "value": "var(--spectrum-neutral-content-color-hover)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:hover .spectrum-Checkbox-label`, `.spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-label`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-content-color-down": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:active .spectrum-Checkbox-label`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-content-color-focus": {
+      "value": "var(--spectrum-neutral-content-color-key-focus)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-label`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-focus-indicator-color": {
+      "value": "var(--spectrum-focus-indicator-color)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:after`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-content-color-disabled": {
+      "value": "var(--spectrum-disabled-content-color)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label, .spectrum-Checkbox .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-color-disabled": {
+      "value": "var(--spectrum-disabled-content-color)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-invalid-color-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-invalid .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-invalid-color-hover": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-invalid-color-down": {
+      "value": "var(--spectrum-negative-color-1100)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox--emphasized.is-invalid:active .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-invalid-color-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox--emphasized.is-invalid .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-emphasized-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox--emphasized .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-emphasized-color-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-emphasized-color-down": {
+      "value": "var(--spectrum-accent-color-1100)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox--emphasized.is-indeterminate:active .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-emphasized-color-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox--emphasized .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-selected-color-default": {
+      "value": "var(--spectrum-neutral-background-color-selected-default)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-selected-color-hover": {
+      "value": "var(--spectrum-neutral-background-color-selected-hover)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-selected-color-down": {
+      "value": "var(--spectrum-neutral-background-color-selected-down)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-selected-color-focus": {
+      "value": "var(--spectrum-neutral-background-color-selected-key-focus)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-line-height": {
+      "value": "var(--spectrum-line-height-100)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-line-height-cjk": {
+      "value": "var(--spectrum-cjk-line-height-100)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-label:lang(ja), .spectrum-Checkbox-label:lang(ko), .spectrum-Checkbox-label:lang(zh)`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-focus-indicator-gap": {
+      "value": "var(--spectrum-focus-indicator-gap)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:after`, `.spectrum-Checkbox-box:after`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-focus-indicator-thickness": {
+      "value": "var(--spectrum-focus-indicator-thickness)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-border-width": {
+      "value": "var(--spectrum-border-width-200)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-box:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-selected-border-width": {
+      "value": "calc(var(--spectrum-checkbox-control-size) / 2)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-size": {
+      "value": "var(--spectrum-checkbox-control-size-extra-large)",
+      "description": "Defined in `.spectrum-Checkbox, .spectrum-Checkbox--sizeM`, `.spectrum-Checkbox--sizeS`, `.spectrum-Checkbox--sizeL`, `.spectrum-Checkbox--sizeXL`. Used by `--spectrum-checkbox-selected-border-width`, `--spectrum-checkbox-spacing`, `.spectrum-Checkbox-box, .spectrum-Checkbox-box:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-label`, `.spectrum-Checkbox-box:before`, `.spectrum-Checkbox-box:after`, `.spectrum-Checkbox .spectrum-Checkbox-checkmark, .spectrum-Checkbox .spectrum-Checkbox-partialCheckmark`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-font-size": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Defined in `.spectrum-Checkbox, .spectrum-Checkbox--sizeM`, `.spectrum-Checkbox--sizeS`, `.spectrum-Checkbox--sizeL`, `.spectrum-Checkbox--sizeXL`. Used by `.spectrum-Checkbox-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-height": {
+      "value": "var(--spectrum-component-height-300)",
+      "description": "Defined in `.spectrum-Checkbox, .spectrum-Checkbox--sizeM`, `.spectrum-Checkbox--sizeS`, `.spectrum-Checkbox--sizeL`, `.spectrum-Checkbox--sizeXL`. Used by `.spectrum-Checkbox`, `--spectrum-checkbox-spacing`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-size-medium": {
+      "description": "Used by `--spectrum-checkbox-control-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-top-to-text": {
+      "value": "var(--spectrum-component-top-to-text-300)",
+      "description": "Defined in `.spectrum-Checkbox, .spectrum-Checkbox--sizeM`, `.spectrum-Checkbox--sizeS`, `.spectrum-Checkbox--sizeL`, `.spectrum-Checkbox--sizeXL`. Used by `.spectrum-Checkbox-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-text-to-control": {
+      "value": "var(--spectrum-text-to-control-300)",
+      "description": "Defined in `.spectrum-Checkbox, .spectrum-Checkbox--sizeM`, `.spectrum-Checkbox--sizeS`, `.spectrum-Checkbox--sizeL`, `.spectrum-Checkbox--sizeXL`. Used by `.spectrum-Checkbox-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-size-small": {
+      "description": "Used by `--spectrum-checkbox-control-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-size-large": {
+      "description": "Used by `--spectrum-checkbox-control-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-size-extra-large": {
+      "description": "Used by `--spectrum-checkbox-control-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-color-down": {
+      "value": "var(--system-checkbox-control-color-down)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:active .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-checkmark-color": {
+      "value": "var(--system-checkbox-checkmark-color)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox .spectrum-Checkbox-checkmark, .spectrum-Checkbox .spectrum-Checkbox-partialCheckmark`, `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-color-hover": {
+      "value": "var(--system-checkbox-control-color-hover)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:hover .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-color-focus": {
+      "value": "var(--system-checkbox-control-color-focus)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-color-default": {
+      "value": "var(--system-checkbox-control-color-default)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-input`, `.spectrum-Checkbox-box:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-checkbox-spacing": {
+      "value": "calc(var(--mod-checkbox-height, var(--spectrum-checkbox-height)) - var(--mod-checkbox-control-size, var(--spectrum-checkbox-control-size)))",
+      "description": "Defined in `.spectrum-Checkbox-box`. Used by `.spectrum-Checkbox-box`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-checkbox-control-corner-radius": {
+      "value": "var(--system-checkbox-control-corner-radius)",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-box:before`, `.spectrum-Checkbox-box:after`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-neutral-content-color-default": {
+      "description": "Used by `--system-checkbox-control-color-default`, `--spectrum-checkbox-content-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-700": {
+      "description": "Used by `--system-checkbox-control-color-hover`, `--system-checkbox-control-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "description": "Used by `--system-checkbox-control-color-down`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-50": {
+      "description": "Used by `--system-checkbox-checkmark-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "description": "Used by `--spectrum-checkbox-content-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "description": "Used by `--spectrum-checkbox-content-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "description": "Used by `--spectrum-checkbox-content-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "description": "Used by `--spectrum-checkbox-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "description": "Used by `--spectrum-checkbox-content-color-disabled`, `--spectrum-checkbox-control-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-color-900": {
+      "description": "Used by `--spectrum-checkbox-invalid-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-color-1000": {
+      "description": "Used by `--spectrum-checkbox-invalid-color-hover`, `--spectrum-checkbox-invalid-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-color-1100": {
+      "description": "Used by `--spectrum-checkbox-invalid-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-color-900": {
+      "description": "Used by `--spectrum-checkbox-emphasized-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-color-1000": {
+      "description": "Used by `--spectrum-checkbox-emphasized-color-hover`, `--spectrum-checkbox-emphasized-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-color-1100": {
+      "description": "Used by `--spectrum-checkbox-emphasized-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-selected-default": {
+      "description": "Used by `--spectrum-checkbox-control-selected-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-selected-hover": {
+      "description": "Used by `--spectrum-checkbox-control-selected-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-selected-down": {
+      "description": "Used by `--spectrum-checkbox-control-selected-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-selected-key-focus": {
+      "description": "Used by `--spectrum-checkbox-control-selected-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "description": "Used by `--spectrum-checkbox-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "description": "Used by `--spectrum-checkbox-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "description": "Used by `--spectrum-checkbox-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "description": "Used by `--spectrum-checkbox-focus-indicator-thickness`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "description": "Used by `--spectrum-checkbox-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-checkbox-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "description": "Used by `--spectrum-checkbox-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "description": "Used by `--spectrum-checkbox-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "description": "Used by `--spectrum-checkbox-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-control-100": {
+      "description": "Used by `--spectrum-checkbox-text-to-control`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "description": "Used by `--spectrum-checkbox-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "description": "Used by `--spectrum-checkbox-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "description": "Used by `--spectrum-checkbox-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-control-75": {
+      "description": "Used by `--spectrum-checkbox-text-to-control`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "description": "Used by `--spectrum-checkbox-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "description": "Used by `--spectrum-checkbox-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "description": "Used by `--spectrum-checkbox-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-control-200": {
+      "description": "Used by `--spectrum-checkbox-text-to-control`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "description": "Used by `--spectrum-checkbox-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "description": "Used by `--spectrum-checkbox-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "description": "Used by `--spectrum-checkbox-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-control-300": {
+      "description": "Used by `--spectrum-checkbox-text-to-control`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-checkbox-control-color-default": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-checkbox-control-color-default`.",
+      "control": "color"
+    },
+    "system-checkbox-control-color-hover": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-checkbox-control-color-hover`.",
+      "control": "color"
+    },
+    "system-checkbox-control-color-down": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-checkbox-control-color-down`.",
+      "control": "color"
+    },
+    "system-checkbox-control-color-focus": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-checkbox-control-color-focus`.",
+      "control": "color"
+    },
+    "system-checkbox-checkmark-color": {
+      "value": "var(--spectrum-gray-50)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-checkbox-checkmark-color`.",
+      "control": "color"
+    },
+    "system-checkbox-control-corner-radius": {
+      "value": "2px",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-checkbox-control-corner-radius`.",
+      "control": "text"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-checkbox-content-color-default": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox`. Defaults to `var(--mod-checkbox-content-color-default, var(--spectrum-checkbox-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-highlight-color-down": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:active .spectrum-Checkbox-box:before`, `.spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--mod-checkbox-control-selected-color-down, var(--spectrum-checkbox-control-selected-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-content-color-down": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:active .spectrum-Checkbox-label`. Defaults to `var(--mod-checkbox-content-color-down, var(--spectrum-checkbox-content-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-color-default": {
+      "value": "ButtonText",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-invalid .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label`, `.spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized.is-invalid .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-box:before`. Defaults to `var(--mod-checkbox-control-color-default, var(--spectrum-checkbox-control-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-color-hover": {
+      "value": "ButtonText",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-background-color-default": {
+      "value": "Canvas",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox .spectrum-Checkbox-checkmark, .spectrum-Checkbox .spectrum-Checkbox-partialCheckmark`, `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`. Defaults to `var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-highlight-color-default": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized.is-indeterminate:active .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized.is-invalid:active .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-invalid:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-highlight-color-focus": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--mod-checkbox-control-selected-color-focus, var(--spectrum-checkbox-control-selected-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-highlight-color-hover": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:hover .spectrum-Checkbox-box:before`, `.spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`. Defaults to `var(--mod-checkbox-emphasized-color-hover, var(--spectrum-checkbox-emphasized-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-content-color-hover": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox:hover .spectrum-Checkbox-label`, `.spectrum-Checkbox.is-invalid.is-indeterminate:hover .spectrum-Checkbox-label`. Defaults to `var(--mod-checkbox-content-color-hover, var(--spectrum-checkbox-content-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-color-focus": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-box:before, .spectrum-Checkbox--emphasized:focus-visible .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before`. Defaults to `var(--mod-checkbox-control-color-focus, var(--spectrum-checkbox-control-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-focus-indicator-color": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:after`, `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box`. Defaults to `var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-content-color-focus": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-label`. Defaults to `var(--mod-checkbox-content-color-focus, var(--spectrum-checkbox-content-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-checkbox-disabled-color-default": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-Checkbox`. Used by `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled + .spectrum-Checkbox-box:before, .spectrum-Checkbox .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box:before`, `.spectrum-Checkbox .spectrum-Checkbox-input:checked:disabled ~ .spectrum-Checkbox-label, .spectrum-Checkbox .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label`. Defaults to `var(--mod-checkbox-content-color-disabled, var(--spectrum-checkbox-content-color-disabled))`, if not set.",
+      "control": "color"
+    }
+  }
 }

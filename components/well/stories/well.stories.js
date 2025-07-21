@@ -1,9 +1,11 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { WellGroup } from "./well.test.js";
+
+// Local assets to render the component styles and structure
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { WellGroup } from "./well.test.js";
 
 /**
  * A well is a content container that displays non-editable content separate from other content on the screen. Often this is used to display preformatted text, such as code/markup examples on a documentation page. The well may also be labeled by an optional heading outside of the component.
@@ -23,6 +25,10 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 };
 

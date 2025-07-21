@@ -1,10 +1,12 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { PaginationGroup } from "./pagination.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The pagination component displays numbered buttons or an input field to allow for navigation.
@@ -70,6 +72,10 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 };
 

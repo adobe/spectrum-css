@@ -1,19 +1,47 @@
 {
   "sourceFile": "index.css",
   "selectors": [".spectrum-OpacityCheckerboard"],
-  "modifiers": [
-    "--mod-opacity-checkerboard-dark",
-    "--mod-opacity-checkerboard-light",
-    "--mod-opacity-checkerboard-position",
-    "--mod-opacity-checkerboard-size"
-  ],
-  "component": [
-    "--spectrum-opacity-checkerboard-square-dark",
-    "--spectrum-opacity-checkerboard-square-light",
-    "--spectrum-opacity-checkerboard-square-size"
-  ],
-  "global": [],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-opacity-checkerboard-light": {
+      "description": "Used by `.spectrum-OpacityCheckerboard`. Defaults to `var(--spectrum-opacity-checkerboard-square-light)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-opacity-checkerboard-dark": {
+      "description": "Used by `.spectrum-OpacityCheckerboard`. Defaults to `var(--spectrum-opacity-checkerboard-square-dark)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-opacity-checkerboard-position": {
+      "description": "Used by `.spectrum-OpacityCheckerboard`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-opacity-checkerboard-size": {
+      "description": "Used by `.spectrum-OpacityCheckerboard`. Defaults to `var(--spectrum-opacity-checkerboard-square-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-opacity-checkerboard-square-light": {
+      "description": "Used by `.spectrum-OpacityCheckerboard`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-opacity-checkerboard-square-dark": {
+      "description": "Used by `.spectrum-OpacityCheckerboard`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-opacity-checkerboard-square-size": {
+      "description": "Used by `.spectrum-OpacityCheckerboard`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {},
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {}
 }

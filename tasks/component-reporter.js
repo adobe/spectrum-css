@@ -23,6 +23,8 @@ const prettier = require("prettier");
 
 require("colors");
 
+const tokens = require("../tokens/dist/json/tokens.json");
+
 const {
 	dirs,
 	extractProperties,
@@ -79,11 +81,25 @@ async function extractModifiers(
 		}
 	});
 
-	meta.selectors = [...selectors].sort();
+	meta.selectors = [...selectors].sort((a, b) => a.localeCompare(b));
+
+	const getTokenValue = (key) => {
+		if (tokens?.[key]) {
+			const tokenObj = tokens[key] ?? {};
+			return tokenObj.value ?? tokenObj.ref ?? tokenObj.desktop?.value ?? tokenObj.light?.value ? `light-dark(${tokenObj.light.value}, ${tokenObj.dark.value})` : undefined;
+		}
+		return undefined;
+	};
 
 	// Iterate over the spectrum values and see if the 2nd part of the variable
 	// name matches the component name
-	const spectrum = meta.spectrum ?? [];
+	const spectrum = Object.keys(meta.spectrum ?? {}).reduce((acc, key) => {
+		acc[key] = {
+			...meta.spectrum[key],
+			value: meta.spectrum[key]?.value ?? getTokenValue(key),
+		};
+		return acc;
+	}, {});
 
 	function isComponentVar(value, componentName) {
 		if (!componentName) return value;
@@ -100,13 +116,25 @@ async function extractModifiers(
 		return;
 	}
 
-	const componentLevel = new Set(spectrum.map((value) => isComponentVar(value, componentName)).filter(Boolean));
+	const componentLevel = Object.keys(spectrum).filter((value) => isComponentVar(value, componentName)).reduce((acc, value) => {
+		acc[value] = {
+			...spectrum[value],
+			category: "Component",
+		};
+		return acc;
+	}, {});
 
 	// Filter out the component level values from the global spectrum values
-	meta.global = spectrum.filter((value) => !componentLevel.has(value));
+	meta.global = Object.keys(spectrum).filter((value) => !Object.keys(componentLevel).includes(value)).reduce((acc, value) => {
+		acc[value] = {
+			...spectrum[value],
+			category: "Global",
+		};
+		return acc;
+	}, {});
 
 	// Filter out mods that reference other components --mod-<componentName>-*
-	meta.passthroughs = meta.modifiers.filter((mod) => {
+	meta.passthroughs = Object.keys(meta.modifiers).filter((mod) => {
 		if (!componentName) return false;
 
 		if (isComponentVar(mod, componentName)) return false;
@@ -117,14 +145,28 @@ async function extractModifiers(
 		if (!otherComponents.some((component) => isComponentVar(mod, component))) return false;
 
 		// Remove the mod from the modifiers list if it's a passthrough
-		meta.modifiers = meta.modifiers.filter((m) => m !== mod);
+		delete meta.modifiers[mod];
 		return true;
-	});
+	}).reduce((acc, mod) => {
+		acc[mod] = {
+			...meta.modifiers[mod],
+			category: "Passthrough",
+		};
+		return acc;
+	}, {});
 
 	// Remove the spectrum values from the meta object
 	delete meta.spectrum;
 
-	meta.component = [...componentLevel].sort();
+	meta.component = componentLevel;
+	meta.modifiers = Object.keys(meta.modifiers).reduce((acc, mod) => {
+		acc[mod] = {
+			...meta.modifiers[mod],
+			value: meta.modifiers[mod]?.value ?? getTokenValue(mod),
+			category: "Modifier",
+		};
+		return acc;
+	}, {});
 
 	return meta;
 }

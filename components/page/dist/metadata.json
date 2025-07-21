@@ -1,16 +1,56 @@
 {
   "sourceFile": "index.css",
   "selectors": [":root"],
-  "modifiers": ["--mod-page-background", "--mod-page-content-tap-highlight"],
-  "component": [
-    "--spectrum-page-background-color",
-    "--spectrum-page-content-tap-highlight"
-  ],
-  "global": ["--spectrum-gray-75", "--spectrum-transparent-black-25"],
-  "system-theme": [
-    "--system-root-page-background-color",
-    "--system-root-page-content-tap-highlight"
-  ],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-page-background": {
+      "description": "Used by `:root`. Defaults to `var(--spectrum-page-background-color)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-page-content-tap-highlight": {
+      "description": "Used by `:root`. Defaults to `var(--spectrum-page-content-tap-highlight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-page-background-color": {
+      "value": "var(--system-root-page-background-color)",
+      "description": "Defined in `:root`. Used by `:root`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-page-content-tap-highlight": {
+      "value": "var(--system-root-page-content-tap-highlight)",
+      "description": "Defined in `:root`. Used by `:root`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-75": {
+      "description": "Used by `--system-root-page-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-25": {
+      "description": "Used by `--system-root-page-content-tap-highlight`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-root-page-background-color": {
+      "value": "var(--spectrum-gray-75)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-page-background-color`.",
+      "control": "color"
+    },
+    "system-root-page-content-tap-highlight": {
+      "value": "var(--spectrum-transparent-black-25)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-page-content-tap-highlight`.",
+      "control": "text"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {}
 }
