@@ -281,6 +281,7 @@
 /* Focusable button that expands/collapses the accordion item. */
 .spectrum-Accordion-itemHeader {
 	overflow-wrap: anywhere;
+	word-break: normal;
 	box-sizing: border-box;
 	position: relative;
 	display: flex;
@@ -333,13 +334,8 @@
 	display: inline-flex;
 	gap: var(--mod-accordion-item-direct-actions-spacing, var(--spectrum-accordion-item-direct-actions-spacing));
 
-	& .spectrum-ActionButton,
-	& .spectrum-Switch {
-		margin-block-start: var(--mod-accordion-item-direct-actions-vertical-spacing, var(--spectrum-accordion-item-direct-actions-vertical-spacing));
-
-		/* needs to be set to prevent compact XL items from growing vertically to accommodate the direct actions */
-		margin-block-end: var(--mod-accordion-item-direct-actions-vertical-spacing, var(--spectrum-accordion-item-direct-actions-vertical-spacing));
-	}
+	/* margin needs to be set on top and bottom to keep compact XL items vertically centered and prevent them from growing vertically */
+	margin-block: var(--mod-accordion-item-direct-actions-vertical-spacing, var(--spectrum-accordion-item-direct-actions-vertical-spacing));
 }
 
 .spectrum-Accordion-item.is-open {
