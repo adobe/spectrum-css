@@ -16,22 +16,26 @@
   ],
   "modifiers": {
     "mod-sans-font-family-stack": {
-      "description": "Used by `.spectrum-LogicButton`. Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Used by `.spectrum-LogicButton`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-line-height-100": {
-      "description": "Used by `.spectrum-LogicButton`. Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "value": "1.3",
+      "description": "Used by `.spectrum-LogicButton`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-animation-duration-100": {
-      "description": "Used by `.spectrum-LogicButton`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Used by `.spectrum-LogicButton`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-focus-indicator-gap": {
-      "description": "Used by `.spectrum-LogicButton:focus-visible:after`. Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "value": "2px",
+      "description": "Used by `.spectrum-LogicButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -41,238 +45,242 @@
       "category": "Modifier"
     },
     "mod-logic-button-padding": {
-      "description": "Used by `.spectrum-LogicButton`. Defaults to `var(--spectrum-component-edge-to-text-50)`, if not set.",
+      "value": "8px",
+      "description": "Used by `.spectrum-LogicButton`. <br/>Defaults to `var(--spectrum-component-edge-to-text-50)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-logic-button-border-width": {
-      "description": "Used by `.spectrum-LogicButton`. Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "value": "2px",
+      "description": "Used by `.spectrum-LogicButton`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-logic-button-border-radius": {
-      "description": "Used by `.spectrum-LogicButton`, `.spectrum-LogicButton:after`. Defaults to `var(--spectrum-logic-button-border-radius)`, if not set.",
+      "value": "var(--spectrum-logic-button-border-radius)",
+      "description": "Used by `.spectrum-LogicButton`, `.spectrum-LogicButton:after`. <br/>Defaults to `var(--spectrum-logic-button-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-logic-button-font-size": {
-      "description": "Used by `.spectrum-LogicButton`. Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "value": "14px",
+      "description": "Used by `.spectrum-LogicButton`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-logic-button-font-weight": {
-      "description": "Used by `.spectrum-LogicButton`. Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "value": "700",
+      "description": "Used by `.spectrum-LogicButton`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-logic-button-focus-indicator-gap": {
-      "description": "Used by `.spectrum-LogicButton:after`. Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "value": "2px",
+      "description": "Used by `.spectrum-LogicButton:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-logic-button-focus-indicator-width": {
-      "description": "Used by `.spectrum-LogicButton:focus-visible:after`. Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "value": "2px",
+      "description": "Used by `.spectrum-LogicButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-logic-button-focus-indicator-color": {
-      "description": "Used by `.spectrum-LogicButton:focus-visible:after`. Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `.spectrum-LogicButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-background-color": {
-      "value": "var(--mod-logic-button-and-background-color-disabled, var(--spectrum-logic-button-and-background-color-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--and`. Defaults to `var(--spectrum-logic-button-and-background-color)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-background-color)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--and`. <br/>Defaults to `var(--spectrum-logic-button-and-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-background-color-disabled": {
-      "description": "Used by `--mod-logic-button-and-background-color`. Defaults to `var(--spectrum-logic-button-and-background-color-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-background-color-disabled)",
+      "description": "Used by `--mod-logic-button-and-background-color`. <br/>Defaults to `var(--spectrum-logic-button-and-background-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-border-color": {
-      "value": "var(--mod-logic-button-and-border-color-disabled, var(--spectrum-logic-button-and-border-color-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--and`. Defaults to `var(--spectrum-logic-button-and-border-color)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-border-color)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--and`. <br/>Defaults to `var(--spectrum-logic-button-and-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-border-color-disabled": {
-      "description": "Used by `--mod-logic-button-and-border-color`. Defaults to `var(--spectrum-logic-button-and-border-color-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-border-color-disabled)",
+      "description": "Used by `--mod-logic-button-and-border-color`. <br/>Defaults to `var(--spectrum-logic-button-and-border-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-text-color": {
-      "value": "var(--mod-logic-button-and-text-color-disabled, var(--spectrum-logic-button-text-color-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--and`. Defaults to `var(--spectrum-logic-button-and-text-color)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-text-color)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--and`. <br/>Defaults to `var(--spectrum-logic-button-and-text-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-text-color-disabled": {
-      "description": "Used by `--mod-logic-button-and-text-color`. Defaults to `var(--spectrum-logic-button-text-color-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-text-color-disabled)",
+      "description": "Used by `--mod-logic-button-and-text-color`. <br/>Defaults to `var(--spectrum-logic-button-text-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-background-color-hover": {
-      "value": "var(--mod-logic-button-and-background-color-hover-disabled, var(--spectrum-logic-button-and-background-color-hover-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--and:hover:not([disabled])`. Defaults to `var(--spectrum-logic-button-and-background-color-hover)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-background-color-hover)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--and:hover:not([disabled])`. <br/>Defaults to `var(--spectrum-logic-button-and-background-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-background-color-hover-disabled": {
-      "description": "Used by `--mod-logic-button-and-background-color-hover`. Defaults to `var(--spectrum-logic-button-and-background-color-hover-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-background-color-hover-disabled)",
+      "description": "Used by `--mod-logic-button-and-background-color-hover`. <br/>Defaults to `var(--spectrum-logic-button-and-background-color-hover-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-border-color-hover": {
-      "value": "var(--mod-logic-button-and-border-color-hover-disabled, var(--spectrum-logic-button-and-border-color-hover-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--and:hover:not([disabled])`. Defaults to `var(--spectrum-logic-button-and-border-color-hover)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-border-color-hover)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--and:hover:not([disabled])`. <br/>Defaults to `var(--spectrum-logic-button-and-border-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-and-border-color-hover-disabled": {
-      "description": "Used by `--mod-logic-button-and-border-color-hover`. Defaults to `var(--spectrum-logic-button-and-border-color-hover-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-and-border-color-hover-disabled)",
+      "description": "Used by `--mod-logic-button-and-border-color-hover`. <br/>Defaults to `var(--spectrum-logic-button-and-border-color-hover-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-background-color": {
-      "value": "var(--mod-logic-button-or-background-color-disabled, var(--spectrum-logic-button-or-background-color-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--or`. Defaults to `var(--spectrum-logic-button-or-background-color)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-background-color)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--or`. <br/>Defaults to `var(--spectrum-logic-button-or-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-background-color-disabled": {
-      "description": "Used by `--mod-logic-button-or-background-color`. Defaults to `var(--spectrum-logic-button-or-background-color-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-background-color-disabled)",
+      "description": "Used by `--mod-logic-button-or-background-color`. <br/>Defaults to `var(--spectrum-logic-button-or-background-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-border-color": {
-      "value": "var(--mod-logic-button-or-border-color-disabled, var(--spectrum-logic-button-or-border-color-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--or`. Defaults to `var(--spectrum-logic-button-or-border-color)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-border-color)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--or`. <br/>Defaults to `var(--spectrum-logic-button-or-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-border-color-disabled": {
-      "description": "Used by `--mod-logic-button-or-border-color`. Defaults to `var(--spectrum-logic-button-or-border-color-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-border-color-disabled)",
+      "description": "Used by `--mod-logic-button-or-border-color`. <br/>Defaults to `var(--spectrum-logic-button-or-border-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-text-color": {
-      "value": "var(--mod-logic-button-or-text-color-disabled, var(--spectrum-logic-button-text-color-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--or`. Defaults to `var(--spectrum-logic-button-or-text-color)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-text-color)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--or`. <br/>Defaults to `var(--spectrum-logic-button-or-text-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-text-color-disabled": {
-      "description": "Used by `--mod-logic-button-or-text-color`. Defaults to `var(--spectrum-logic-button-text-color-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-text-color-disabled)",
+      "description": "Used by `--mod-logic-button-or-text-color`. <br/>Defaults to `var(--spectrum-logic-button-text-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-background-color-hover": {
-      "value": "var(--mod-logic-button-or-background-color-hover-disabled, var(--spectrum-logic-button-or-background-color-hover-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--or:hover:not([disabled])`. Defaults to `var(--spectrum-logic-button-or-background-color-hover)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-background-color-hover)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--or:hover:not([disabled])`. <br/>Defaults to `var(--spectrum-logic-button-or-background-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-background-color-hover-disabled": {
-      "description": "Used by `--mod-logic-button-or-background-color-hover`. Defaults to `var(--spectrum-logic-button-or-background-color-hover-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-background-color-hover-disabled)",
+      "description": "Used by `--mod-logic-button-or-background-color-hover`. <br/>Defaults to `var(--spectrum-logic-button-or-background-color-hover-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-border-color-hover": {
-      "value": "var(--mod-logic-button-or-border-color-hover-disabled, var(--spectrum-logic-button-or-border-color-hover-disabled))",
-      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--or:hover:not([disabled])`. Defaults to `var(--spectrum-logic-button-or-border-color-hover)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-border-color-hover)",
+      "description": "Defined in `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--or:hover:not([disabled])`. <br/>Defaults to `var(--spectrum-logic-button-or-border-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-logic-button-or-border-color-hover-disabled": {
-      "description": "Used by `--mod-logic-button-or-border-color-hover`. Defaults to `var(--spectrum-logic-button-or-border-color-hover-disabled)`, if not set.",
+      "value": "var(--spectrum-logic-button-or-border-color-hover-disabled)",
+      "description": "Used by `--mod-logic-button-or-border-color-hover`. <br/>Defaults to `var(--spectrum-logic-button-or-border-color-hover-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-logic-button-border-radius": {
-      "value": "var(--spectrum-corner-radius-100)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton`, `.spectrum-LogicButton:after`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton`, `.spectrum-LogicButton:after`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-logic-button-and-text-color": {
-      "value": "var(--spectrum-white)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton--and`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton--and`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-and-background-color-hover": {
-      "value": "var(--spectrum-blue-1100)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton--and:hover:not([disabled])`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton--and:hover:not([disabled])`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-and-border-color-hover": {
-      "value": "var(--spectrum-blue-1100)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton--and:hover:not([disabled])`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton--and:hover:not([disabled])`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-or-text-color": {
-      "value": "var(--spectrum-white)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton--or`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton--or`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-text-color-disabled": {
-      "value": "var(--spectrum-gray-500)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-and-text-color`, `--mod-logic-button-or-text-color`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-and-text-color`, `--mod-logic-button-or-text-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-and-background-color-disabled": {
-      "value": "var(--system-logic-button-and-background-color-disabled)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-and-background-color`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-and-background-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-and-border-color-disabled": {
-      "value": "var(--system-logic-button-and-border-color-disabled)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-and-border-color`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-and-border-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-and-background-color-hover-disabled": {
-      "value": "var(--system-logic-button-and-background-color-hover-disabled)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-and-background-color-hover`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-and-background-color-hover`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-and-border-color-hover-disabled": {
-      "value": "var(--system-logic-button-and-border-color-hover-disabled)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-and-border-color-hover`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-and-border-color-hover`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-or-background-color-disabled": {
-      "value": "var(--system-logic-button-or-background-color-disabled)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-or-background-color`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-or-background-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-or-border-color-disabled": {
-      "value": "var(--system-logic-button-or-border-color-disabled)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-or-border-color`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-or-border-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-or-background-color-hover-disabled": {
-      "value": "var(--system-logic-button-or-background-color-hover-disabled)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-or-background-color-hover`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-or-background-color-hover`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-logic-button-or-border-color-hover-disabled": {
-      "value": "var(--system-logic-button-or-border-color-hover-disabled)",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `--mod-logic-button-or-border-color-hover`.",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `--mod-logic-button-or-border-color-hover`.",
       "control": "color",
       "category": "Component"
     },
@@ -314,6 +322,7 @@
       "category": "Global"
     },
     "spectrum-line-height-100": {
+      "value": "1.3",
       "description": "Used by `.spectrum-LogicButton`.",
       "control": "text",
       "category": "Global"
@@ -324,61 +333,73 @@
       "category": "Global"
     },
     "spectrum-focus-indicator-gap": {
+      "value": "2px",
       "description": "Used by `.spectrum-LogicButton:after`, `.spectrum-LogicButton:focus-visible:after`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
       "description": "Used by `--system-logic-button-and-background-color-disabled`, `--system-logic-button-and-border-color-disabled`, `--system-logic-button-and-background-color-hover-disabled`, `--system-logic-button-and-border-color-hover-disabled`, `--system-logic-button-or-background-color-disabled`, `--system-logic-button-or-border-color-disabled`, `--system-logic-button-or-background-color-hover-disabled`, `--system-logic-button-or-border-color-hover-disabled`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-corner-radius-100": {
+      "value": "8px",
       "description": "Used by `--spectrum-logic-button-border-radius`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-white": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
       "description": "Used by `--spectrum-logic-button-and-text-color`, `--spectrum-logic-button-or-text-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-blue-1100": {
+      "value": "light-dark(rgb(29, 62, 207), rgb(124, 169, 252))",
       "description": "Used by `--spectrum-logic-button-and-background-color-hover`, `--spectrum-logic-button-and-border-color-hover`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-500": {
+      "value": "light-dark(rgb(143, 143, 143), rgb(109, 109, 109))",
       "description": "Used by `--spectrum-logic-button-text-color-disabled`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-edge-to-text-50": {
+      "value": "8px",
       "description": "Used by `.spectrum-LogicButton`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-border-width-200": {
+      "value": "2px",
       "description": "Used by `.spectrum-LogicButton`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-100": {
+      "value": "14px",
       "description": "Used by `.spectrum-LogicButton`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-bold-font-weight": {
+      "value": "700",
       "description": "Used by `.spectrum-LogicButton`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-thickness": {
+      "value": "2px",
       "description": "Used by `.spectrum-LogicButton:focus-visible:after`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
       "description": "Used by `.spectrum-LogicButton:focus-visible:after`.",
       "control": "color",
       "category": "Global"
@@ -386,43 +407,35 @@
   },
   "system-theme": {
     "system-logic-button-and-background-color-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-logic-button-and-background-color-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-logic-button-and-background-color-disabled`.",
       "control": "color"
     },
     "system-logic-button-and-border-color-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-logic-button-and-border-color-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-logic-button-and-border-color-disabled`.",
       "control": "color"
     },
     "system-logic-button-and-background-color-hover-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-logic-button-and-background-color-hover-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-logic-button-and-background-color-hover-disabled`.",
       "control": "color"
     },
     "system-logic-button-and-border-color-hover-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-logic-button-and-border-color-hover-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-logic-button-and-border-color-hover-disabled`.",
       "control": "color"
     },
     "system-logic-button-or-background-color-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-logic-button-or-background-color-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-logic-button-or-background-color-disabled`.",
       "control": "color"
     },
     "system-logic-button-or-border-color-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-logic-button-or-border-color-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-logic-button-or-border-color-disabled`.",
       "control": "color"
     },
     "system-logic-button-or-background-color-hover-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-logic-button-or-background-color-hover-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-logic-button-or-background-color-hover-disabled`.",
       "control": "color"
     },
     "system-logic-button-or-border-color-hover-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-logic-button-or-border-color-hover-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-logic-button-or-border-color-hover-disabled`.",
       "control": "color"
     }
   },
@@ -442,58 +455,58 @@
   },
   "high-contrast": {
     "highcontrast-logic-button-focus-indicator-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-LogicButton:after`. Used by `.spectrum-LogicButton:focus-visible:after`. Defaults to `var(--mod-logic-button-focus-indicator-color, var(--spectrum-focus-indicator-color))`, if not set.",
+      "value": "var(--mod-logic-button-focus-indicator-color, var(--spectrum-focus-indicator-color))",
+      "description": "Defined in `.spectrum-LogicButton:after`. <br/>Used by `.spectrum-LogicButton:focus-visible:after`. <br/>Defaults to `var(--mod-logic-button-focus-indicator-color, var(--spectrum-focus-indicator-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-and-background-color": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--and`. Defaults to `var(--mod-logic-button-and-background-color, var(--spectrum-logic-button-and-background-color))`, if not set.",
+      "value": "var(--mod-logic-button-and-background-color, var(--spectrum-logic-button-and-background-color))",
+      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--and`. <br/>Defaults to `var(--mod-logic-button-and-background-color, var(--spectrum-logic-button-and-background-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-and-border-color": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--and`. Defaults to `var(--mod-logic-button-and-border-color, var(--spectrum-logic-button-and-border-color))`, if not set.",
+      "value": "var(--mod-logic-button-and-border-color, var(--spectrum-logic-button-and-border-color))",
+      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--and`. <br/>Defaults to `var(--mod-logic-button-and-border-color, var(--spectrum-logic-button-and-border-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-and-text-color": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--and`. Defaults to `var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color))`, if not set.",
+      "value": "var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color))",
+      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--and`. <br/>Defaults to `var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-or-background-color": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--or`. Defaults to `var(--mod-logic-button-or-background-color, var(--spectrum-logic-button-or-background-color))`, if not set.",
+      "value": "var(--mod-logic-button-or-background-color, var(--spectrum-logic-button-or-background-color))",
+      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--or`. <br/>Defaults to `var(--mod-logic-button-or-background-color, var(--spectrum-logic-button-or-background-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-or-border-color": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--or`. Defaults to `var(--mod-logic-button-or-border-color, var(--spectrum-logic-button-or-border-color))`, if not set.",
+      "value": "var(--mod-logic-button-or-border-color, var(--spectrum-logic-button-or-border-color))",
+      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--or`. <br/>Defaults to `var(--mod-logic-button-or-border-color, var(--spectrum-logic-button-or-border-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-or-text-color": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. Used by `.spectrum-LogicButton--or`. Defaults to `var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color))`, if not set.",
+      "value": "var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color))",
+      "description": "Defined in `.spectrum-LogicButton`, `.spectrum-LogicButton.is-disabled, .spectrum-LogicButton:disabled`. <br/>Used by `.spectrum-LogicButton--or`. <br/>Defaults to `var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-and-background-color-hover": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton--and:hover:not([disabled])`. Defaults to `var(--mod-logic-button-and-background-color-hover, var(--spectrum-logic-button-and-background-color-hover))`, if not set.",
+      "value": "var(--mod-logic-button-and-background-color-hover, var(--spectrum-logic-button-and-background-color-hover))",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton--and:hover:not([disabled])`. <br/>Defaults to `var(--mod-logic-button-and-background-color-hover, var(--spectrum-logic-button-and-background-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-and-border-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton--and:hover:not([disabled])`. Defaults to `var(--mod-logic-button-and-border-color-hover, var(--spectrum-logic-button-and-border-color-hover))`, if not set.",
+      "value": "var(--mod-logic-button-and-border-color-hover, var(--spectrum-logic-button-and-border-color-hover))",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton--and:hover:not([disabled])`. <br/>Defaults to `var(--mod-logic-button-and-border-color-hover, var(--spectrum-logic-button-and-border-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-or-background-color-hover": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton--or:hover:not([disabled])`. Defaults to `var(--mod-logic-button-or-background-color-hover, var(--spectrum-logic-button-or-background-color-hover))`, if not set.",
+      "value": "var(--mod-logic-button-or-background-color-hover, var(--spectrum-logic-button-or-background-color-hover))",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton--or:hover:not([disabled])`. <br/>Defaults to `var(--mod-logic-button-or-background-color-hover, var(--spectrum-logic-button-or-background-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-logic-button-or-border-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-LogicButton`. Used by `.spectrum-LogicButton--or:hover:not([disabled])`. Defaults to `var(--mod-logic-button-or-border-color-hover, var(--spectrum-logic-button-or-border-color-hover))`, if not set.",
+      "value": "var(--mod-logic-button-or-border-color-hover, var(--spectrum-logic-button-or-border-color-hover))",
+      "description": "Defined in `.spectrum-LogicButton`. <br/>Used by `.spectrum-LogicButton--or:hover:not([disabled])`. <br/>Defaults to `var(--mod-logic-button-or-border-color-hover, var(--spectrum-logic-button-or-border-color-hover))`, if not set.",
       "control": "color"
     }
   }

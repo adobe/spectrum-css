@@ -83,12 +83,38 @@ async function extractModifiers(
 
 	meta.selectors = [...selectors].sort((a, b) => a.localeCompare(b));
 
-	const getTokenValue = (key) => {
-		if (tokens?.[key]) {
-			const tokenObj = tokens[key] ?? {};
-			return tokenObj.value ?? tokenObj.ref ?? tokenObj.desktop?.value ?? tokenObj.light?.value ? `light-dark(${tokenObj.light.value}, ${tokenObj.dark.value})` : undefined;
+	const getTokenValue = (key, value) => {
+		let fallthrough = false;
+		if (!value) {
+			value = key;
+			fallthrough = true;
 		}
-		return undefined;
+
+		const cleanKey = value.replace(/^var\((.*)\)$/, "$1").replace(/^--/, "").replace(/^spectrum-/, "");
+		if (tokens?.[cleanKey]) {
+			const tokenObj = tokens[cleanKey] ?? {};
+			if (tokenObj.value) {
+				return tokenObj.value;
+			}
+			if (tokenObj.ref) {
+				return tokenObj.ref;
+			}
+			if (tokenObj.desktop?.value) {
+				return tokenObj.desktop.value;
+			}
+			if (tokenObj.light?.value && tokenObj.dark?.value) {
+				return `light-dark(${tokenObj.light.value}, ${tokenObj.dark.value})`;
+			}
+			if (tokenObj.light?.value) {
+				return tokenObj.light.value;
+			}
+		}
+
+		if (fallthrough) {
+			return undefined;
+		}
+
+		return getTokenValue(key) ?? value;
 	};
 
 	// Iterate over the spectrum values and see if the 2nd part of the variable
@@ -96,8 +122,9 @@ async function extractModifiers(
 	const spectrum = Object.keys(meta.spectrum ?? {}).reduce((acc, key) => {
 		acc[key] = {
 			...meta.spectrum[key],
-			value: meta.spectrum[key]?.value ?? getTokenValue(key),
+			value: getTokenValue(key, meta.spectrum[key].value),
 		};
+
 		return acc;
 	}, {});
 
@@ -162,7 +189,7 @@ async function extractModifiers(
 	meta.modifiers = Object.keys(meta.modifiers).reduce((acc, mod) => {
 		acc[mod] = {
 			...meta.modifiers[mod],
-			value: meta.modifiers[mod]?.value ?? getTokenValue(mod),
+			value: getTokenValue(mod, meta.modifiers[mod]?.value),
 			category: "Modifier",
 		};
 		return acc;

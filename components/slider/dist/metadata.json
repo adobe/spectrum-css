@@ -99,501 +99,531 @@
   ],
   "modifiers": {
     "mod-slider-min-size": {
-      "description": "Used by `.spectrum-Slider`. Defaults to `var(--spectrum-slider-min-size)`, if not set.",
+      "value": "var(--spectrum-slider-min-size)",
+      "description": "Used by `.spectrum-Slider`. <br/>Defaults to `var(--spectrum-slider-min-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-ramp-track-height": {
-      "description": "Used by `.spectrum-Slider:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp)`, `.spectrum-Slider-ramp`. Defaults to `var(--spectrum-slider-ramp-track-height)`, if not set.",
+      "value": "var(--spectrum-slider-ramp-track-height)",
+      "description": "Used by `.spectrum-Slider:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp)`, `.spectrum-Slider-ramp`. <br/>Defaults to `var(--spectrum-slider-ramp-track-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-value-side-padding-inline": {
-      "description": "Used by `.spectrum-Slider--sideLabel .spectrum-Slider-labelContainer .spectrum-Slider-label`, `.spectrum-Slider--sideLabel .spectrum-Slider-value`. Defaults to `var(--spectrum-slider-value-side-padding-inline)`, if not set.",
+      "value": "var(--spectrum-slider-value-side-padding-inline)",
+      "description": "Used by `.spectrum-Slider--sideLabel .spectrum-Slider-labelContainer .spectrum-Slider-label`, `.spectrum-Slider--sideLabel .spectrum-Slider-value`. <br/>Defaults to `var(--spectrum-slider-value-side-padding-inline)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-controls-margin": {
-      "description": "Used by `.spectrum-Slider--sideLabel .spectrum-Slider-controls`, `.spectrum-Slider-controls`, `.spectrum-Slider-fill`, `.spectrum-Slider-fill--right`. Defaults to `var(--spectrum-slider-controls-margin)`, if not set.",
+      "value": "var(--spectrum-slider-controls-margin)",
+      "description": "Used by `.spectrum-Slider--sideLabel .spectrum-Slider-controls`, `.spectrum-Slider-controls`, `.spectrum-Slider-fill`, `.spectrum-Slider-fill--right`. <br/>Defaults to `var(--spectrum-slider-controls-margin)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-value-inline-size": {
-      "description": "Used by `.spectrum-Slider--sideLabel .spectrum-Slider-value`. Defaults to `var(--spectrum-slider-value-inline-size)`, if not set.",
+      "value": "var(--spectrum-slider-value-inline-size)",
+      "description": "Used by `.spectrum-Slider--sideLabel .spectrum-Slider-value`. <br/>Defaults to `var(--spectrum-slider-value-inline-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-control-height": {
-      "description": "Used by `.spectrum-Slider-controls`, `.spectrum-Slider--tick`, `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-handle`, `.spectrum-Slider-trackContainer`. Defaults to `var(--spectrum-slider-control-height)`, if not set.",
+      "value": "var(--spectrum-slider-control-height)",
+      "description": "Used by `.spectrum-Slider-controls`, `.spectrum-Slider--tick`, `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-handle`, `.spectrum-Slider-trackContainer`. <br/>Defaults to `var(--spectrum-slider-control-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-track-fill-thickness": {
-      "description": "Used by `.spectrum-Slider-fill, .spectrum-Slider-track`. Defaults to `var(--spectrum-slider-track-fill-thickness)`, if not set.",
+      "value": "var(--spectrum-slider-track-fill-thickness)",
+      "description": "Used by `.spectrum-Slider-fill, .spectrum-Slider-track`. <br/>Defaults to `var(--spectrum-slider-track-fill-thickness)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-handle-gap": {
-      "description": "Used by `.spectrum-Slider-fill, .spectrum-Slider-track`. Defaults to `var(--spectrum-slider-handle-gap)`, if not set.",
+      "value": "4px",
+      "description": "Used by `.spectrum-Slider-fill, .spectrum-Slider-track`. <br/>Defaults to `var(--spectrum-slider-handle-gap)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-track-margin-offset": {
-      "description": "Used by `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`, `.spectrum-Slider-ticks`. Defaults to `var(--spectrum-slider-track-margin-offset)`, if not set.",
+      "value": "var(--spectrum-slider-track-margin-offset)",
+      "description": "Used by `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`, `.spectrum-Slider-ticks`. <br/>Defaults to `var(--spectrum-slider-track-margin-offset)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-track-corner-radius": {
-      "description": "Used by `.spectrum-Slider-track:first-of-type:before`, `.spectrum-Slider-track:last-of-type:before`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type:before`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type:before`, `.spectrum-Slider-track ~ .spectrum-Slider-track:before`. Defaults to `var(--spectrum-slider-track-corner-radius)`, if not set.",
+      "value": "var(--spectrum-slider-track-corner-radius)",
+      "description": "Used by `.spectrum-Slider-track:first-of-type:before`, `.spectrum-Slider-track:last-of-type:before`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type:before`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type:before`, `.spectrum-Slider-track ~ .spectrum-Slider-track:before`. <br/>Defaults to `var(--spectrum-slider-track-corner-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-range-track-reset": {
-      "description": "Used by `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`. Defaults to `var(--spectrum-slider-range-track-reset)`, if not set.",
+      "value": "var(--spectrum-slider-range-track-reset)",
+      "description": "Used by `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`. <br/>Defaults to `var(--spectrum-slider-range-track-reset)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-track-handleoffset": {
-      "description": "Used by `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`. Defaults to `var(--spectrum-slider-track-handleoffset)`, if not set.",
+      "value": "var(--spectrum-slider-track-handleoffset)",
+      "description": "Used by `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`. <br/>Defaults to `var(--spectrum-slider-track-handleoffset)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-track-middle-handleoffset": {
-      "description": "Used by `.spectrum-Slider--range .spectrum-Slider-track ~ .spectrum-Slider-track`. Defaults to `var(--spectrum-slider-track-middle-handleoffset)`, if not set.",
+      "value": "var(--spectrum-slider-track-middle-handleoffset)",
+      "description": "Used by `.spectrum-Slider--range .spectrum-Slider-track ~ .spectrum-Slider-track`. <br/>Defaults to `var(--spectrum-slider-track-middle-handleoffset)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-handle-size": {
-      "description": "Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle:before`, `.spectrum-Slider-handle.is-focused:before`, `.spectrum-Slider-input`. Defaults to `var(--spectrum-slider-handle-size)`, if not set.",
+      "value": "var(--spectrum-slider-handle-size)",
+      "description": "Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle:before`, `.spectrum-Slider-handle.is-focused:before`, `.spectrum-Slider-input`. <br/>Defaults to `var(--spectrum-slider-handle-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-handle-border-width": {
-      "description": "Used by `.spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-handle-border-width)`, if not set.",
+      "value": "var(--spectrum-slider-handle-border-width)",
+      "description": "Used by `.spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-handle-border-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-handle-border-radius": {
-      "description": "Used by `.spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-handle-border-radius)`, if not set.",
+      "value": "var(--spectrum-slider-handle-border-radius)",
+      "description": "Used by `.spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-handle-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-animation-duration-100": {
-      "description": "Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle:before`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle:before`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-handle-border-width-down": {
-      "description": "Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`. Defaults to `var(--spectrum-slider-handle-border-width-down)`, if not set.",
+      "value": "var(--spectrum-slider-handle-border-width-down)",
+      "description": "Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`. <br/>Defaults to `var(--spectrum-slider-handle-border-width-down)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-focus-indicator-gap": {
-      "description": "Used by `.spectrum-Slider-handle.is-focused:before`. Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "value": "2px",
+      "description": "Used by `.spectrum-Slider-handle.is-focused:before`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-input-top-size": {
-      "description": "Used by `.spectrum-Slider-input`. Defaults to `var(--spectrum-slider-input-top-size)`, if not set.",
+      "value": "var(--spectrum-slider-input-top-size)",
+      "description": "Used by `.spectrum-Slider-input`. <br/>Defaults to `var(--spectrum-slider-input-top-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-input-left": {
-      "description": "Used by `.spectrum-Slider-input`. Defaults to `var(--spectrum-slider-input-left)`, if not set.",
+      "value": "var(--spectrum-slider-input-left)",
+      "description": "Used by `.spectrum-Slider-input`. <br/>Defaults to `var(--spectrum-slider-input-left)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-font-size": {
-      "description": "Used by `.spectrum-Slider-labelContainer`, `.spectrum-Slider-label`. Defaults to `var(--spectrum-slider-font-size)`, if not set.",
+      "value": "var(--spectrum-slider-font-size)",
+      "description": "Used by `.spectrum-Slider-labelContainer`, `.spectrum-Slider-label`. <br/>Defaults to `var(--spectrum-slider-font-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-line-height-100": {
-      "description": "Used by `.spectrum-Slider-labelContainer`, `.spectrum-Slider-tick .spectrum-Slider-tickLabel`. Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "value": "1.3",
+      "description": "Used by `.spectrum-Slider-labelContainer`, `.spectrum-Slider-tick .spectrum-Slider-tickLabel`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-label-top-to-text": {
-      "description": "Used by `.spectrum-Slider-labelContainer`. Defaults to `var(--spectrum-slider-label-top-to-text)`, if not set.",
+      "value": "var(--spectrum-slider-label-top-to-text)",
+      "description": "Used by `.spectrum-Slider-labelContainer`. <br/>Defaults to `var(--spectrum-slider-label-top-to-text)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-cjk-line-height": {
-      "description": "Used by `.spectrum-Slider-labelContainer:lang(ja), .spectrum-Slider-labelContainer:lang(ko), .spectrum-Slider-labelContainer:lang(zh)`. Defaults to `var(--spectrum-slider-cjk-line-height)`, if not set.",
+      "value": "var(--spectrum-slider-cjk-line-height)",
+      "description": "Used by `.spectrum-Slider-labelContainer:lang(ja), .spectrum-Slider-labelContainer:lang(ko), .spectrum-Slider-labelContainer:lang(zh)`. <br/>Defaults to `var(--spectrum-slider-cjk-line-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-label-margin-start": {
-      "description": "Used by `.spectrum-Slider-value`. Defaults to `var(--spectrum-slider-label-margin-start)`, if not set.",
+      "value": "var(--spectrum-slider-label-margin-start)",
+      "description": "Used by `.spectrum-Slider-value`. <br/>Defaults to `var(--spectrum-slider-label-margin-start)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-tick-handle-background-color": {
-      "description": "Used by `.spectrum-Slider--tick .spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-tick-handle-background-color)`, if not set.",
+      "value": "var(--spectrum-slider-tick-handle-background-color)",
+      "description": "Used by `.spectrum-Slider--tick .spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-tick-handle-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-tick-mark-height": {
-      "description": "Used by `.spectrum-Slider--tick .spectrum-Slider-controls`, `.spectrum-Slider--tick .spectrum-Slider-tickLabel`, `.spectrum-Slider-tick`, `.spectrum-Slider-tick:after`. Defaults to `var(--spectrum-slider-tick-mark-height)`, if not set.",
+      "value": "var(--spectrum-slider-tick-mark-height)",
+      "description": "Used by `.spectrum-Slider--tick .spectrum-Slider-controls`, `.spectrum-Slider--tick .spectrum-Slider-tickLabel`, `.spectrum-Slider-tick`, `.spectrum-Slider-tick:after`. <br/>Defaults to `var(--spectrum-slider-tick-mark-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-track-thickness": {
-      "description": "Used by `.spectrum-Slider--tick .spectrum-Slider-controls`, `.spectrum-Slider-tick`. Defaults to `var(--spectrum-slider-control-height)`, if not set.",
+      "value": "var(--spectrum-slider-control-height)",
+      "description": "Used by `.spectrum-Slider--tick .spectrum-Slider-controls`, `.spectrum-Slider-tick`. <br/>Defaults to `var(--spectrum-slider-control-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-ticks-handle-background-color": {
-      "description": "Used by `.spectrum-Slider-ticks ~ .spectrum-Slider-handleContainer .spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-ticks-handle-background-color)`, if not set.",
+      "value": "var(--spectrum-slider-ticks-handle-background-color)",
+      "description": "Used by `.spectrum-Slider-ticks ~ .spectrum-Slider-handleContainer .spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-ticks-handle-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-tick-mark-width": {
-      "description": "Used by `.spectrum-Slider-tick, .spectrum-Slider-tick:after`, `.spectrum-Slider-tick:after`, `.spectrum-Slider-tick:first-of-type`, `.spectrum-Slider-tick:last-of-type`. Defaults to `var(--spectrum-slider-tick-mark-width)`, if not set.",
+      "value": "var(--spectrum-slider-tick-mark-width)",
+      "description": "Used by `.spectrum-Slider-tick, .spectrum-Slider-tick:after`, `.spectrum-Slider-tick:after`, `.spectrum-Slider-tick:first-of-type`, `.spectrum-Slider-tick:last-of-type`. <br/>Defaults to `var(--spectrum-slider-tick-mark-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-tick-mark-border-radius": {
-      "description": "Used by `.spectrum-Slider-tick:after`. Defaults to `var(--spectrum-slider-tick-mark-border-radius)`, if not set.",
+      "value": "var(--spectrum-slider-tick-mark-border-radius)",
+      "description": "Used by `.spectrum-Slider-tick:after`. <br/>Defaults to `var(--spectrum-slider-tick-mark-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-font-size-75": {
-      "description": "Used by `.spectrum-Slider-tick .spectrum-Slider-tickLabel`. Defaults to `var(--spectrum-font-size-75)`, if not set.",
+      "value": "12px",
+      "description": "Used by `.spectrum-Slider-tick .spectrum-Slider-tickLabel`. <br/>Defaults to `var(--spectrum-font-size-75)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-slider-tick-label-color": {
-      "description": "Used by `.spectrum-Slider-tick .spectrum-Slider-tickLabel`. Defaults to `var(--spectrum-slider-tick-label-color)`, if not set.",
+      "value": "var(--spectrum-slider-tick-label-color)",
+      "description": "Used by `.spectrum-Slider-tick .spectrum-Slider-tickLabel`. <br/>Defaults to `var(--spectrum-slider-tick-label-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-track-color": {
-      "description": "Used by `.spectrum-Slider-track:before`, `.spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)):before`. Defaults to `var(--spectrum-slider-track-color)`, if not set.",
+      "value": "var(--spectrum-slider-track-color)",
+      "description": "Used by `.spectrum-Slider-track:before`, `.spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)):before`. <br/>Defaults to `var(--spectrum-slider-track-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-label-text-color": {
-      "description": "Used by `.spectrum-Slider-labelContainer`. Defaults to `var(--spectrum-slider-label-text-color)`, if not set.",
+      "value": "var(--spectrum-slider-label-text-color)",
+      "description": "Used by `.spectrum-Slider-labelContainer`. <br/>Defaults to `var(--spectrum-slider-label-text-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-track-fill-color": {
-      "description": "Used by `.spectrum-Slider--filled .spectrum-Slider-track:first-child:before, .spectrum-Slider-fill:before`, `.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`. Defaults to `var(--spectrum-slider-track-fill-color)`, if not set.",
+      "value": "var(--spectrum-slider-track-fill-color)",
+      "description": "Used by `.spectrum-Slider--filled .spectrum-Slider-track:first-child:before, .spectrum-Slider-fill:before`, `.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`. <br/>Defaults to `var(--spectrum-slider-track-fill-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-ramp-track-color": {
-      "description": "Used by `.spectrum-Slider-ramp path`. Defaults to `var(--spectrum-slider-ramp-track-color)`, if not set.",
+      "value": "var(--spectrum-slider-ramp-track-color)",
+      "description": "Used by `.spectrum-Slider-ramp path`. <br/>Defaults to `var(--spectrum-slider-ramp-track-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-border-color": {
-      "description": "Used by `.spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-handle-border-color)`, if not set.",
+      "value": "var(--spectrum-slider-handle-border-color)",
+      "description": "Used by `.spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-handle-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-background-color": {
-      "description": "Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle.is-dragged`. Defaults to `var(--spectrum-slider-handle-background-color)`, if not set.",
+      "value": "var(--spectrum-slider-handle-background-color)",
+      "description": "Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle.is-dragged`. <br/>Defaults to `var(--spectrum-slider-handle-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-border-color-key-focus": {
-      "description": "Used by `.spectrum-Slider-handle.is-focused`. Defaults to `var(--spectrum-slider-handle-border-color-key-focus)`, if not set.",
+      "value": "var(--spectrum-slider-handle-border-color-key-focus)",
+      "description": "Used by `.spectrum-Slider-handle.is-focused`. <br/>Defaults to `var(--spectrum-slider-handle-border-color-key-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-focus-ring-color-key-focus": {
-      "description": "Used by `.spectrum-Slider-handle.is-focused:before`. Defaults to `var(--spectrum-slider-handle-focus-ring-color-key-focus)`, if not set.",
+      "value": "var(--spectrum-slider-handle-focus-ring-color-key-focus)",
+      "description": "Used by `.spectrum-Slider-handle.is-focused:before`. <br/>Defaults to `var(--spectrum-slider-handle-focus-ring-color-key-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-border-color-down": {
-      "description": "Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`, `.spectrum-Slider-handle.is-dragged`. Defaults to `var(--spectrum-slider-handle-border-color-down)`, if not set.",
+      "value": "var(--spectrum-slider-handle-border-color-down)",
+      "description": "Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`, `.spectrum-Slider-handle.is-dragged`. <br/>Defaults to `var(--spectrum-slider-handle-border-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-sectrum-slider-ramp-handle-border-color-active": {
-      "description": "Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-ramp-handle-border-color-active)`, if not set.",
+      "value": "var(--spectrum-slider-ramp-handle-border-color-active)",
+      "description": "Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-ramp-handle-border-color-active)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-ramp-handle-background-color": {
-      "description": "Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`. Defaults to `var(--highcontrast-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color))`, if not set.",
+      "value": "var(--highcontrast-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color))",
+      "description": "Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`. <br/>Defaults to `var(--highcontrast-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color))`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-tick-mark-color": {
-      "description": "Used by `.spectrum-Slider-tick:after`. Defaults to `var(--spectrum-slider-tick-mark-color)`, if not set.",
+      "value": "var(--spectrum-slider-tick-mark-color)",
+      "description": "Used by `.spectrum-Slider-tick:after`. <br/>Defaults to `var(--spectrum-slider-tick-mark-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-label-text-color-disabled": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-labelContainer, .spectrum-Slider.is-disabled .spectrum-Slider-tickLabel`. Defaults to `var(--spectrum-slider-label-text-color-disabled)`, if not set.",
+      "value": "var(--spectrum-slider-label-text-color-disabled)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-labelContainer, .spectrum-Slider.is-disabled .spectrum-Slider-tickLabel`. <br/>Defaults to `var(--spectrum-slider-label-text-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-border-color-disabled": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-handle-border-color-disabled)`, if not set.",
+      "value": "var(--spectrum-slider-handle-border-color-disabled)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-handle-border-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-disabled-background-color": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-handle-disabled-background-color)`, if not set.",
+      "value": "var(--spectrum-slider-handle-disabled-background-color)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-handle-disabled-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-disabled-border-color": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`. Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
+      "value": "var(--spectrum-gray-300)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`. <br/>Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-background-color-disabled": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`. Defaults to `var(--spectrum-slider-handle-background-color-disabled)`, if not set.",
+      "value": "var(--spectrum-slider-handle-background-color-disabled)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`. <br/>Defaults to `var(--spectrum-slider-handle-background-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-handle-border-color-hover": {
-      "description": "Used by `.spectrum-Slider-handle:hover`. Defaults to `var(--spectrum-slider-handle-border-color-hover)`, if not set.",
+      "value": "var(--spectrum-slider-handle-border-color-hover)",
+      "description": "Used by `.spectrum-Slider-handle:hover`. <br/>Defaults to `var(--spectrum-slider-handle-border-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-track-color-disabled": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-track:before`, `.spectrum-Slider.is-disabled.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`. Defaults to `var(--spectrum-slider-track-color-disabled)`, if not set.",
+      "value": "var(--spectrum-slider-track-color-disabled)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-track:before`, `.spectrum-Slider.is-disabled.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`. <br/>Defaults to `var(--spectrum-slider-track-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-track-fill-color-disabled": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-fill:before, .spectrum-Slider.is-disabled.spectrum-Slider--filled .spectrum-Slider-track:first-child:before`. Defaults to `var(--spectrum-slider-track-fill-color-disabled)`, if not set.",
+      "value": "var(--spectrum-slider-track-fill-color-disabled)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-fill:before, .spectrum-Slider.is-disabled.spectrum-Slider--filled .spectrum-Slider-track:first-child:before`. <br/>Defaults to `var(--spectrum-slider-track-fill-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-ramp-track-color-disabled": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-ramp path`. Defaults to `var(--spectrum-slider-ramp-track-color-disabled)`, if not set.",
+      "value": "var(--spectrum-slider-ramp-track-color-disabled)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-ramp path`. <br/>Defaults to `var(--spectrum-slider-ramp-track-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-slider-tick-mark-color-disabled": {
-      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-tick:after`. Defaults to `var(--spectrum-slider-tick-mark-color-disabled)`, if not set.",
+      "value": "var(--spectrum-slider-tick-mark-color-disabled)",
+      "description": "Used by `.spectrum-Slider.is-disabled .spectrum-Slider-tick:after`. <br/>Defaults to `var(--spectrum-slider-tick-mark-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-slider-font-size": {
-      "value": "var(--spectrum-font-size-200)",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. Used by `.spectrum-Slider-labelContainer`, `.spectrum-Slider-label`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. <br/>Used by `.spectrum-Slider-labelContainer`, `.spectrum-Slider-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-size": {
-      "value": "var(--spectrum-slider-handle-size-extra-large)",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. Used by `--spectrum-slider-handle-margin-left`, `--spectrum-slider-controls-margin`, `--spectrum-slider-track-middle-handleoffset`, `--spectrum-slider-input-top-size`, `.spectrum-Slider-handle`, `.spectrum-Slider-handle:before`, `.spectrum-Slider-handle.is-focused:before`, `.spectrum-Slider-input`, `.spectrum-Slider-handleContainer, .spectrum-Slider-trackContainer`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. <br/>Used by `--spectrum-slider-handle-margin-left`, `--spectrum-slider-controls-margin`, `--spectrum-slider-track-middle-handleoffset`, `--spectrum-slider-input-top-size`, `.spectrum-Slider-handle`, `.spectrum-Slider-handle:before`, `.spectrum-Slider-handle.is-focused:before`, `.spectrum-Slider-input`, `.spectrum-Slider-handleContainer, .spectrum-Slider-trackContainer`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-size-medium": {
+      "value": "16px",
       "description": "Used by `--spectrum-slider-handle-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-control-height": {
-      "value": "var(--spectrum-component-height-300)",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. Used by `.spectrum-Slider-controls`, `.spectrum-Slider--tick`, `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-handle`, `.spectrum-Slider-tick`, `.spectrum-Slider-trackContainer`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. <br/>Used by `.spectrum-Slider-controls`, `.spectrum-Slider--tick`, `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-handle`, `.spectrum-Slider-tick`, `.spectrum-Slider-trackContainer`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-border-width-down": {
-      "value": "var(--spectrum-slider-handle-border-width-down-extra-large)",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. <br/>Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-border-width-down-medium": {
+      "value": "6px",
       "description": "Used by `--spectrum-slider-handle-border-width-down`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-label-top-to-text": {
-      "value": "var(--spectrum-component-top-to-text-200)",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. Used by `.spectrum-Slider-labelContainer`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. <br/>Used by `.spectrum-Slider-labelContainer`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-control-to-field-label": {
-      "value": "var(--spectrum-slider-control-to-field-label-extra-large)",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. Used by `.spectrum-Slider-labelContainer + .spectrum-Slider-controls`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. <br/>Used by `.spectrum-Slider-labelContainer + .spectrum-Slider-controls`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-control-to-field-label-medium": {
+      "value": "8px",
       "description": "Used by `--spectrum-slider-control-to-field-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-value-side-padding-inline": {
-      "value": "var(--spectrum-spacing-200)",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. Used by `.spectrum-Slider--sideLabel .spectrum-Slider-labelContainer .spectrum-Slider-label`, `.spectrum-Slider--sideLabel .spectrum-Slider-value`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeS`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. <br/>Used by `.spectrum-Slider--sideLabel .spectrum-Slider-labelContainer .spectrum-Slider-label`, `.spectrum-Slider--sideLabel .spectrum-Slider-value`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-value-inline-size": {
-      "value": "22px",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. Used by `.spectrum-Slider--sideLabel .spectrum-Slider-value`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider--sizeL`, `.spectrum-Slider--sizeXL`. <br/>Used by `.spectrum-Slider--sideLabel .spectrum-Slider-value`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-cjk-line-height": {
-      "value": "var(--spectrum-cjk-line-height-100)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-labelContainer:lang(ja), .spectrum-Slider-labelContainer:lang(ko), .spectrum-Slider-labelContainer:lang(zh)`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-labelContainer:lang(ja), .spectrum-Slider-labelContainer:lang(ko), .spectrum-Slider-labelContainer:lang(zh)`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-min-size": {
-      "value": "var(--spectrum-spacing-900)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-label-margin-start": {
-      "value": "var(--spectrum-spacing-300)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-value`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-value`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-border-width": {
-      "value": "var(--spectrum-border-width-200)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-margin-left": {
-      "value": "calc(var(--spectrum-slider-handle-size) / -2)",
-      "description": "Defined in `.spectrum-Slider`. Used by `--spectrum-slider-input-left`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `--spectrum-slider-input-left`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-controls-margin": {
-      "value": "calc(var(--spectrum-slider-handle-size) / 2)",
-      "description": "Defined in `.spectrum-Slider`. Used by `--spectrum-slider-track-margin-offset`, `.spectrum-Slider--sideLabel .spectrum-Slider-controls`, `.spectrum-Slider-controls`, `.spectrum-Slider-fill`, `.spectrum-Slider-fill--right`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `--spectrum-slider-track-margin-offset`, `.spectrum-Slider--sideLabel .spectrum-Slider-controls`, `.spectrum-Slider-controls`, `.spectrum-Slider-fill`, `.spectrum-Slider-fill--right`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-track-margin-offset": {
-      "value": "calc(var(--spectrum-slider-controls-margin) * -1)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`, `.spectrum-Slider-ramp`, `.spectrum-Slider-ticks`. Defaults to `var(--spectrum-slider-track-margin-offset)`, if not set.",
+      "value": "var(--spectrum-slider-track-margin-offset)",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`, `.spectrum-Slider-ramp`, `.spectrum-Slider-ticks`. <br/>Defaults to `var(--spectrum-slider-track-margin-offset)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-track-middle-handleoffset": {
-      "value": "calc(var(--spectrum-slider-handle-gap) + var(--spectrum-slider-handle-size) / 2)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider--range .spectrum-Slider-track ~ .spectrum-Slider-track`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider--range .spectrum-Slider-track ~ .spectrum-Slider-track`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-gap": {
-      "description": "Used by `--spectrum-slider-track-middle-handleoffset`, `--spectrum-slider-track-handleoffset`, `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-fill`, `.spectrum-Slider-fill--right`, `.spectrum-Slider--ramp .spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-handle-gap)`, if not set.",
+      "value": "4px",
+      "description": "Used by `--spectrum-slider-track-middle-handleoffset`, `--spectrum-slider-track-handleoffset`, `.spectrum-Slider-fill, .spectrum-Slider-track`, `.spectrum-Slider-fill`, `.spectrum-Slider-fill--right`, `.spectrum-Slider--ramp .spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-handle-gap)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-input-top-size": {
-      "value": "calc(var(--spectrum-slider-handle-size) / -2 / 4)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-input`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-input`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-track-fill-thickness": {
-      "value": "var(--spectrum-slider-track-thickness)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-fill, .spectrum-Slider-track`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-fill, .spectrum-Slider-track`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-track-thickness": {
+      "value": "2px",
       "description": "Used by `--spectrum-slider-track-fill-thickness`, `.spectrum-Slider--tick .spectrum-Slider-controls`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-tick-mark-width": {
-      "value": "var(--spectrum-border-width-200)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-tick, .spectrum-Slider-tick:after`, `.spectrum-Slider-tick:after`, `.spectrum-Slider-tick:first-of-type`, `.spectrum-Slider-tick:last-of-type`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-tick, .spectrum-Slider-tick:after`, `.spectrum-Slider-tick:after`, `.spectrum-Slider-tick:first-of-type`, `.spectrum-Slider-tick:last-of-type`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-tick-mark-border-radius": {
-      "value": "2px",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-tick:after`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-tick:after`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-tick-handle-background-color": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider--tick .spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider--tick .spectrum-Slider-handle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-track-color-disabled": {
-      "value": "var(--spectrum-disabled-background-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-track:before`, `.spectrum-Slider.is-disabled.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-track:before`, `.spectrum-Slider.is-disabled.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-track-fill-color-disabled": {
-      "value": "var(--spectrum-disabled-background-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-fill:before, .spectrum-Slider.is-disabled.spectrum-Slider--filled .spectrum-Slider-track:first-child:before`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-fill:before, .spectrum-Slider.is-disabled.spectrum-Slider--filled .spectrum-Slider-track:first-child:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-border-color-disabled": {
-      "value": "var(--spectrum-disabled-border-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-label-text-color": {
-      "value": "var(--spectrum-neutral-content-color-default)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-labelContainer`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-labelContainer`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-tick-label-color": {
-      "value": "var(--spectrum-neutral-content-color-default)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-tick .spectrum-Slider-tickLabel`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-tick .spectrum-Slider-tickLabel`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-label-text-color-disabled": {
-      "value": "var(--spectrum-disabled-content-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-labelContainer, .spectrum-Slider.is-disabled .spectrum-Slider-tickLabel`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-labelContainer, .spectrum-Slider.is-disabled .spectrum-Slider-tickLabel`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-tick-mark-color-disabled": {
-      "value": "var(--spectrum-disabled-background-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-tick:after`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-tick:after`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-ramp-handle-border-color-active": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-input-left": {
-      "value": "calc(var(--spectrum-slider-handle-margin-left) / 4)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-input`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-input`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-track-handleoffset": {
-      "value": "var(--spectrum-slider-handle-gap)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-range-track-reset": {
-      "value": "0",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track ~ .spectrum-Slider-track`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type`.",
       "control": "text",
       "category": "Component"
     },
@@ -603,59 +633,66 @@
       "category": "Component"
     },
     "spectrum-slider-handle-size-small": {
+      "value": "14px",
       "description": "Used by `--spectrum-slider-handle-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-border-width-down-small": {
+      "value": "5px",
       "description": "Used by `--spectrum-slider-handle-border-width-down`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-control-to-field-label-small": {
+      "value": "5px",
       "description": "Used by `--spectrum-slider-control-to-field-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-size-large": {
+      "value": "18px",
       "description": "Used by `--spectrum-slider-handle-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-border-width-down-large": {
+      "value": "7px",
       "description": "Used by `--spectrum-slider-handle-border-width-down`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-control-to-field-label-large": {
+      "value": "11px",
       "description": "Used by `--spectrum-slider-control-to-field-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-size-extra-large": {
+      "value": "20px",
       "description": "Used by `--spectrum-slider-handle-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-border-width-down-extra-large": {
+      "value": "8px",
       "description": "Used by `--spectrum-slider-handle-border-width-down`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-control-to-field-label-extra-large": {
+      "value": "14px",
       "description": "Used by `--spectrum-slider-control-to-field-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-track-corner-radius": {
-      "value": "var(--system-slider-track-corner-radius)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-track:first-of-type:before`, `.spectrum-Slider-track:last-of-type:before`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type:before`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type:before`, `.spectrum-Slider-track ~ .spectrum-Slider-track:before`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-track:first-of-type:before`, `.spectrum-Slider-track:last-of-type:before`, `.spectrum-Slider--range .spectrum-Slider-track:first-of-type:before`, `.spectrum-Slider--range .spectrum-Slider-track:last-of-type:before`, `.spectrum-Slider-track ~ .spectrum-Slider-track:before`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-slider-handle-border-radius": {
-      "value": "var(--system-slider-size-xl-handle-border-radius)",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider.spectrum-Slider--sizeM`, `.spectrum-Slider.spectrum-Slider--sizeS`, `.spectrum-Slider.spectrum-Slider--sizeL`, `.spectrum-Slider.spectrum-Slider--sizeXL`. Used by `.spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider.spectrum-Slider--sizeM`, `.spectrum-Slider.spectrum-Slider--sizeS`, `.spectrum-Slider.spectrum-Slider--sizeL`, `.spectrum-Slider.spectrum-Slider--sizeXL`. <br/>Used by `.spectrum-Slider-handle`.",
       "control": "text",
       "category": "Component"
     },
@@ -665,239 +702,251 @@
       "category": "Component"
     },
     "spectrum-slider-ticks-handle-background-color": {
-      "value": "var(--system-slider-ticks-handle-background-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-ticks ~ .spectrum-Slider-handleContainer .spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-ticks ~ .spectrum-Slider-handleContainer .spectrum-Slider-handle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-track-color": {
-      "value": "var(--system-slider-track-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-track:before`, `.spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)):before`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-track:before`, `.spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)):before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-track-fill-color": {
-      "value": "var(--system-slider-track-fill-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider--filled .spectrum-Slider-track:first-child:before, .spectrum-Slider-fill:before`, `.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider--filled .spectrum-Slider-track:first-child:before, .spectrum-Slider-fill:before`, `.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-ramp-track-color": {
-      "value": "var(--system-slider-ramp-track-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-ramp path`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-ramp path`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-border-color": {
-      "value": "var(--system-slider-handle-border-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-background-color": {
-      "value": "var(--system-slider-handle-background-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle.is-dragged`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle.is-dragged`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-border-color-key-focus": {
-      "value": "var(--system-slider-handle-border-color-key-focus)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle.is-focused`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle.is-focused`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-focus-ring-color-key-focus": {
-      "value": "var(--system-slider-handle-focus-ring-color-key-focus)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle.is-focused:before`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle.is-focused:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-border-color-down": {
-      "value": "var(--system-slider-handle-border-color-down)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`, `.spectrum-Slider-handle.is-dragged`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`, `.spectrum-Slider-handle.is-dragged`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-ramp-handle-background-color": {
-      "value": "var(--system-slider-ramp-handle-background-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-tick-mark-color": {
-      "value": "var(--system-slider-tick-mark-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-tick:after`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-tick:after`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-disabled-background-color": {
-      "value": "var(--system-slider-handle-disabled-background-color)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-background-color-disabled": {
-      "value": "var(--system-slider-handle-background-color-disabled)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-handle-border-color-hover": {
-      "value": "var(--system-slider-handle-border-color-hover)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle:hover`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle:hover`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-slider-ramp-track-color-disabled": {
-      "value": "var(--system-slider-ramp-track-color-disabled)",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-ramp path`.",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-ramp path`.",
       "control": "color",
       "category": "Component"
     }
   },
   "global": {
     "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
       "description": "Used by `--system-slider-track-color`, `--system-slider-tick-mark-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-700": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
       "description": "Used by `--system-slider-track-fill-color`, `--system-slider-handle-border-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-400": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
       "description": "Used by `--system-slider-ramp-track-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
       "description": "Used by `--system-slider-ramp-track-color-disabled`, `--spectrum-slider-tick-handle-background-color`, `--spectrum-slider-ramp-handle-border-color-active`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-75": {
+      "value": "light-dark(rgb(243, 243, 243), rgb(34, 34, 34))",
       "description": "Used by `--system-slider-ramp-handle-background-color`, `--system-slider-ticks-handle-background-color`, `--system-slider-handle-disabled-background-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
       "description": "Used by `--system-slider-handle-border-color-hover`, `--system-slider-handle-border-color-down`, `--system-slider-handle-border-color-key-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
       "description": "Used by `--system-slider-handle-focus-ring-color-key-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-corner-radius-500": {
+      "value": "8px",
       "description": "Used by `--system-slider-handle-border-radius`, `--system-slider-size-m-handle-border-radius`, `--system-slider-size-s-handle-border-radius`, `--system-slider-size-l-handle-border-radius`, `--system-slider-size-xl-handle-border-radius`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-75": {
+      "value": "12px",
       "description": "Used by `--spectrum-slider-font-size`, `.spectrum-Slider-tick .spectrum-Slider-tickLabel`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-100": {
+      "value": "32px",
       "description": "Used by `--spectrum-slider-control-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-slider-label-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-200": {
+      "value": "12px",
       "description": "Used by `--spectrum-slider-value-side-padding-inline`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-cjk-line-height-100": {
+      "value": "1.5",
       "description": "Used by `--spectrum-slider-cjk-line-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-900": {
+      "value": "80px",
       "description": "Used by `--spectrum-slider-min-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-300": {
+      "value": "16px",
       "description": "Used by `--spectrum-slider-label-margin-start`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-border-width-200": {
+      "value": "2px",
       "description": "Used by `--spectrum-slider-handle-border-width`, `--spectrum-slider-tick-mark-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
       "description": "Used by `--spectrum-slider-track-color-disabled`, `--spectrum-slider-track-fill-color-disabled`, `--spectrum-slider-tick-mark-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
       "description": "Used by `--spectrum-slider-handle-border-color-disabled`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-slider-label-text-color`, `--spectrum-slider-tick-label-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `--spectrum-slider-label-text-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-logical-rotation": {
-      "value": "matrix(-1, 0, 0, 1, 0, 0)",
-      "description": "Defined in `.spectrum-Slider:dir(rtl), [dir=\"rtl\"] .spectrum-Slider`. Used by `.spectrum-Slider-ramp svg`.",
+      "description": "Defined in `.spectrum-Slider:dir(rtl), [dir=\"rtl\"] .spectrum-Slider`. <br/>Used by `.spectrum-Slider-ramp svg`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-75": {
+      "value": "24px",
       "description": "Used by `--spectrum-slider-control-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-100": {
+      "value": "8px",
       "description": "Used by `--spectrum-slider-value-side-padding-inline`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-100": {
+      "value": "14px",
       "description": "Used by `--spectrum-slider-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-200": {
+      "value": "40px",
       "description": "Used by `--spectrum-slider-control-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-100": {
+      "value": "6px",
       "description": "Used by `--spectrum-slider-label-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-200": {
+      "value": "16px",
       "description": "Used by `--spectrum-slider-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-300": {
+      "value": "48px",
       "description": "Used by `--spectrum-slider-control-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-200": {
+      "value": "9px",
       "description": "Used by `--spectrum-slider-label-top-to-text`.",
       "control": "text",
       "category": "Global"
@@ -908,21 +957,25 @@
       "category": "Global"
     },
     "spectrum-focus-indicator-gap": {
+      "value": "2px",
       "description": "Used by `.spectrum-Slider-handle.is-focused:before`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-line-height-100": {
+      "value": "1.3",
       "description": "Used by `.spectrum-Slider-labelContainer`, `.spectrum-Slider-tick .spectrum-Slider-tickLabel`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-visual-75": {
+      "value": "5px",
       "description": "Used by `.spectrum-Slider--tick .spectrum-Slider-controls`, `.spectrum-Slider--tick .spectrum-Slider-tickLabel`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-thickness": {
+      "value": "2px",
       "description": "Used by `.spectrum-Slider-handle.is-focused:before`.",
       "control": "text",
       "category": "Global"
@@ -930,221 +983,200 @@
   },
   "system-theme": {
     "system-slider-track-color": {
-      "value": "var(--spectrum-gray-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-track-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-track-color`.",
       "control": "color"
     },
     "system-slider-track-fill-color": {
-      "value": "var(--spectrum-gray-700)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-track-fill-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-track-fill-color`.",
       "control": "color"
     },
     "system-slider-ramp-track-color": {
-      "value": "var(--spectrum-gray-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-ramp-track-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-ramp-track-color`.",
       "control": "color"
     },
     "system-slider-ramp-track-color-disabled": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-ramp-track-color-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-ramp-track-color-disabled`.",
       "control": "color"
     },
     "system-slider-handle-background-color": {
-      "value": "transparent",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-background-color`.",
       "control": "color"
     },
     "system-slider-handle-background-color-disabled": {
-      "value": "transparent",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-background-color-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-background-color-disabled`.",
       "control": "color"
     },
     "system-slider-ramp-handle-background-color": {
-      "value": "var(--spectrum-gray-75)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-ramp-handle-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-ramp-handle-background-color`.",
       "control": "color"
     },
     "system-slider-ticks-handle-background-color": {
-      "value": "var(--spectrum-gray-75)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-ticks-handle-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-ticks-handle-background-color`.",
       "control": "color"
     },
     "system-slider-handle-border-color": {
-      "value": "var(--spectrum-gray-700)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-color`.",
       "control": "color"
     },
     "system-slider-handle-disabled-background-color": {
-      "value": "var(--spectrum-gray-75)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-disabled-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-disabled-background-color`.",
       "control": "color"
     },
     "system-slider-tick-mark-color": {
-      "value": "var(--spectrum-gray-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-tick-mark-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-tick-mark-color`.",
       "control": "color"
     },
     "system-slider-handle-border-color-hover": {
-      "value": "var(--spectrum-gray-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-color-hover`.",
       "control": "color"
     },
     "system-slider-handle-border-color-down": {
-      "value": "var(--spectrum-gray-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-color-down`.",
       "control": "color"
     },
     "system-slider-handle-border-color-key-focus": {
-      "value": "var(--spectrum-gray-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-color-key-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-color-key-focus`.",
       "control": "color"
     },
     "system-slider-handle-focus-ring-color-key-focus": {
-      "value": "var(--spectrum-focus-indicator-color)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-focus-ring-color-key-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-focus-ring-color-key-focus`.",
       "control": "color"
     },
     "system-slider-track-corner-radius": {
-      "value": "2px",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-track-corner-radius`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-track-corner-radius`.",
       "control": "text"
     },
     "system-slider-handle-border-radius": {
-      "value": "var(--spectrum-corner-radius-500)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-radius`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-radius`.",
       "control": "text"
     },
     "system-slider-size-m-handle-border-radius": {
-      "value": "var(--spectrum-corner-radius-500)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-radius`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-radius`.",
       "control": "text"
     },
     "system-slider-size-s-handle-border-radius": {
-      "value": "var(--spectrum-corner-radius-500)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-radius`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-radius`.",
       "control": "text"
     },
     "system-slider-size-l-handle-border-radius": {
-      "value": "calc(var(--spectrum-corner-radius-500) * 4)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-radius`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-radius`.",
       "control": "text"
     },
     "system-slider-size-xl-handle-border-radius": {
-      "value": "calc(var(--spectrum-corner-radius-500) * 4)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-slider-handle-border-radius`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-slider-handle-border-radius`.",
       "control": "text"
     }
   },
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-slider-label-text-color": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-tick .spectrum-Slider-tickLabel`, `.spectrum-Slider-labelContainer`. Defaults to `var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color))`, if not set.",
+      "value": "var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-tick .spectrum-Slider-tickLabel`, `.spectrum-Slider-labelContainer`. <br/>Defaults to `var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-track-color-static": {
-      "value": "ButtonText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-track:before`. Defaults to `var(--mod-slider-track-color, var(--spectrum-slider-track-color))`, if not set.",
+      "value": "var(--mod-slider-track-color, var(--spectrum-slider-track-color))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-track:before`. <br/>Defaults to `var(--mod-slider-track-color, var(--spectrum-slider-track-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-track-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover`. Used by `.spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)):before`. Defaults to `var(--mod-slider-track-color, var(--spectrum-slider-track-color))`, if not set.",
+      "value": "var(--mod-slider-track-color, var(--spectrum-slider-track-color))",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover`. <br/>Used by `.spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)):before`. <br/>Defaults to `var(--mod-slider-track-color, var(--spectrum-slider-track-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-filled-track-fill-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider--filled .spectrum-Slider-track:first-child:before, .spectrum-Slider-fill:before`, `.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`. Defaults to `var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color))`, if not set.",
+      "value": "var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider--filled .spectrum-Slider-track:first-child:before, .spectrum-Slider-fill:before`, `.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`. <br/>Defaults to `var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-ramp-track-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover`. Used by `.spectrum-Slider-ramp path`. Defaults to `var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color))`, if not set.",
+      "value": "var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color))",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover`. <br/>Used by `.spectrum-Slider-ramp path`. <br/>Defaults to `var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-border-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover`. Used by `.spectrum-Slider-handle`. Defaults to `var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color))`, if not set.",
+      "value": "var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color))",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover`. <br/>Used by `.spectrum-Slider-handle`. <br/>Defaults to `var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-background-color": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle.is-dragged`. Defaults to `var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color))`, if not set.",
+      "value": "var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle`, `.spectrum-Slider-handle.is-dragged`. <br/>Defaults to `var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-border-color-key-focus": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle.is-focused`. Defaults to `var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus))`, if not set.",
+      "value": "var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle.is-focused`. <br/>Defaults to `var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-focus-ring-color-key-focus": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle.is-focused:before`. Defaults to `var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus))`, if not set.",
+      "value": "var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle.is-focused:before`. <br/>Defaults to `var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-border-color-down": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`, `.spectrum-Slider-handle.is-dragged`. Defaults to `var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down))`, if not set.",
+      "value": "var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle.is-dragged, .spectrum-Slider-handle:active`, `.spectrum-Slider-handle.is-dragged`. <br/>Defaults to `var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-ramp-handle-border-color-active": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`. Defaults to `var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active))`, if not set.",
+      "value": "var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`. <br/>Defaults to `var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-ramp-handle-background-color": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`. Defaults to `var(--spectrum-slider-ramp-handle-background-color)`, if not set.",
+      "value": "var(--spectrum-slider-ramp-handle-background-color)",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider--ramp .spectrum-Slider-handle`. <br/>Defaults to `var(--spectrum-slider-ramp-handle-background-color)`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-tick-mark-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover`. Used by `.spectrum-Slider-tick:after`. Defaults to `var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color))`, if not set.",
+      "value": "var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color))",
+      "description": "Defined in `.spectrum-Slider`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls.is-focused, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active, .spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within`, `.spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover`. <br/>Used by `.spectrum-Slider-tick:after`. <br/>Defaults to `var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-label-text-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-labelContainer, .spectrum-Slider.is-disabled .spectrum-Slider-tickLabel`. Defaults to `var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled))`, if not set.",
+      "value": "var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-labelContainer, .spectrum-Slider.is-disabled .spectrum-Slider-tickLabel`. <br/>Defaults to `var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-border-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`. Defaults to `var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled))`, if not set.",
+      "value": "var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`. <br/>Defaults to `var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-disabled-background-color": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`. Defaults to `var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color))`, if not set.",
+      "value": "var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle`. <br/>Defaults to `var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-background-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`. Defaults to `var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled))`, if not set.",
+      "value": "var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-handle:active`, `.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover`. <br/>Defaults to `var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-handle-border-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider-handle:hover`. Defaults to `var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover))`, if not set.",
+      "value": "var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider-handle:hover`. <br/>Defaults to `var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-track-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-track:before`, `.spectrum-Slider.is-disabled.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`. Defaults to `var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled))`, if not set.",
+      "value": "var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-track:before`, `.spectrum-Slider.is-disabled.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type):before`. <br/>Defaults to `var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-track-fill-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-fill:before, .spectrum-Slider.is-disabled.spectrum-Slider--filled .spectrum-Slider-track:first-child:before`. Defaults to `var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled))`, if not set.",
+      "value": "var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-fill:before, .spectrum-Slider.is-disabled.spectrum-Slider--filled .spectrum-Slider-track:first-child:before`. <br/>Defaults to `var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-ramp-track-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-ramp path`. Defaults to `var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled))`, if not set.",
+      "value": "var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-ramp path`. <br/>Defaults to `var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled))`, if not set.",
       "control": "color"
     },
     "highcontrast-slider-tick-mark-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Slider`. Used by `.spectrum-Slider.is-disabled .spectrum-Slider-tick:after`. Defaults to `var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled))`, if not set.",
+      "value": "var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled))",
+      "description": "Defined in `.spectrum-Slider`. <br/>Used by `.spectrum-Slider.is-disabled .spectrum-Slider-tick:after`. <br/>Defaults to `var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled))`, if not set.",
       "control": "color"
     }
   }

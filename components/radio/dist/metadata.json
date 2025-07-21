@@ -48,503 +48,530 @@
   ],
   "modifiers": {
     "mod-radio-height": {
-      "description": "Used by `.spectrum-Radio`. Defaults to `var(--spectrum-radio-height)`, if not set.",
+      "value": "var(--spectrum-radio-height)",
+      "description": "Used by `.spectrum-Radio`. <br/>Defaults to `var(--spectrum-radio-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-button-border-color-down": {
-      "description": "Used by `.spectrum-Radio:active .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-border-color-down)`, if not set.",
+      "value": "var(--spectrum-radio-button-border-color-down)",
+      "description": "Used by `.spectrum-Radio:active .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-border-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-button-checked-border-color-down": {
-      "description": "Used by `.spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-checked-border-color-down)`, if not set.",
+      "value": "var(--spectrum-radio-button-checked-border-color-down)",
+      "description": "Used by `.spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-checked-border-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-neutral-content-color-down": {
-      "description": "Used by `.spectrum-Radio:active .spectrum-Radio-label`. Defaults to `var(--spectrum-radio-neutral-content-color-down)`, if not set.",
+      "value": "var(--spectrum-radio-neutral-content-color-down)",
+      "description": "Used by `.spectrum-Radio:active .spectrum-Radio-label`. <br/>Defaults to `var(--spectrum-radio-neutral-content-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-button-border-color-focus": {
-      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-border-color-focus)`, if not set.",
+      "value": "var(--spectrum-radio-button-border-color-focus)",
+      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-border-color-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-focus-indicator-color": {
-      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`. Defaults to `var(--spectrum-radio-focus-indicator-color)`, if not set.",
+      "value": "var(--spectrum-radio-focus-indicator-color)",
+      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`. <br/>Defaults to `var(--spectrum-radio-focus-indicator-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-focus-indicator-thickness": {
-      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`. Defaults to `var(--spectrum-radio-focus-indicator-thickness)`, if not set.",
+      "value": "var(--spectrum-radio-focus-indicator-thickness)",
+      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`. <br/>Defaults to `var(--spectrum-radio-focus-indicator-thickness)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-button-checked-border-color-focus": {
-      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-checked-border-color-focus)`, if not set.",
+      "value": "var(--spectrum-radio-button-checked-border-color-focus)",
+      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-checked-border-color-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-neutral-content-color-focus": {
-      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-label`. Defaults to `var(--spectrum-radio-neutral-content-color-focus)`, if not set.",
+      "value": "var(--spectrum-radio-neutral-content-color-focus)",
+      "description": "Used by `.spectrum-Radio:focus .spectrum-Radio-label`. <br/>Defaults to `var(--spectrum-radio-neutral-content-color-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-neutral-content-color": {
-      "description": "Used by `.spectrum-Radio.is-readOnly .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-input:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-label`, `.spectrum-Radio-label`. Defaults to `var(--spectrum-radio-neutral-content-color)`, if not set.",
+      "value": "var(--spectrum-radio-neutral-content-color)",
+      "description": "Used by `.spectrum-Radio.is-readOnly .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-input:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-label`, `.spectrum-Radio-label`. <br/>Defaults to `var(--spectrum-radio-neutral-content-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-emphasized-accent-color": {
-      "description": "Used by `.spectrum-Radio--emphasized .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-emphasized-accent-color)`, if not set.",
+      "value": "var(--spectrum-radio-emphasized-accent-color)",
+      "description": "Used by `.spectrum-Radio--emphasized .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-emphasized-accent-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-button-border-color-hover": {
-      "description": "Used by `.spectrum-Radio:hover .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-border-color-hover)`, if not set.",
+      "value": "var(--spectrum-radio-button-border-color-hover)",
+      "description": "Used by `.spectrum-Radio:hover .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-border-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-button-checked-border-color-hover": {
-      "description": "Used by `.spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-checked-border-color-hover)`, if not set.",
+      "value": "var(--spectrum-radio-button-checked-border-color-hover)",
+      "description": "Used by `.spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-checked-border-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-neutral-content-color-hover": {
-      "description": "Used by `.spectrum-Radio:hover .spectrum-Radio-label`. Defaults to `var(--spectrum-radio-neutral-content-color-hover)`, if not set.",
+      "value": "var(--spectrum-radio-neutral-content-color-hover)",
+      "description": "Used by `.spectrum-Radio:hover .spectrum-Radio-label`. <br/>Defaults to `var(--spectrum-radio-neutral-content-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-emphasized-accent-color-hover": {
-      "description": "Used by `.spectrum-Radio--emphasized:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-emphasized-accent-color-hover)`, if not set.",
+      "value": "var(--spectrum-radio-emphasized-accent-color-hover)",
+      "description": "Used by `.spectrum-Radio--emphasized:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-emphasized-accent-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-emphasized-accent-color-down": {
-      "description": "Used by `.spectrum-Radio--emphasized:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-emphasized-accent-color-down)`, if not set.",
+      "value": "var(--spectrum-radio-emphasized-accent-color-down)",
+      "description": "Used by `.spectrum-Radio--emphasized:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-emphasized-accent-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-emphasized-accent-color-focus": {
-      "description": "Used by `.spectrum-Radio--emphasized:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-emphasized-accent-color-focus)`, if not set.",
+      "value": "var(--spectrum-radio-emphasized-accent-color-focus)",
+      "description": "Used by `.spectrum-Radio--emphasized:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-emphasized-accent-color-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-disabled-border-color": {
-      "description": "Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled + .spectrum-Radio-button:before, .spectrum-Radio .spectrum-Radio-input:disabled + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-disabled-border-color)`, if not set.",
+      "value": "var(--spectrum-radio-disabled-border-color)",
+      "description": "Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled + .spectrum-Radio-button:before, .spectrum-Radio .spectrum-Radio-input:disabled + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-disabled-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-disabled-content-color": {
-      "description": "Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio .spectrum-Radio-input:disabled ~ .spectrum-Radio-label`. Defaults to `var(--spectrum-radio-disabled-content-color)`, if not set.",
+      "value": "var(--spectrum-radio-disabled-content-color)",
+      "description": "Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio .spectrum-Radio-input:disabled ~ .spectrum-Radio-label`. <br/>Defaults to `var(--spectrum-radio-disabled-content-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-line-height": {
-      "description": "Used by `.spectrum-Radio-input`, `.spectrum-Radio-label`. Defaults to `var(--spectrum-radio-line-height)`, if not set.",
+      "value": "var(--spectrum-radio-line-height)",
+      "description": "Used by `.spectrum-Radio-input`, `.spectrum-Radio-label`. <br/>Defaults to `var(--spectrum-radio-line-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-button-checked-border-color-default": {
-      "description": "Used by `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-checked-border-color-default)`, if not set.",
+      "value": "var(--spectrum-radio-button-checked-border-color-default)",
+      "description": "Used by `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-checked-border-color-default)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-text-to-control": {
-      "description": "Used by `.spectrum-Radio-label`. Defaults to `var(--spectrum-radio-text-to-control)`, if not set.",
+      "value": "var(--spectrum-radio-text-to-control)",
+      "description": "Used by `.spectrum-Radio-label`. <br/>Defaults to `var(--spectrum-radio-text-to-control)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-font-size": {
-      "description": "Used by `.spectrum-Radio-label`. Defaults to `var(--spectrum-radio-font-size)`, if not set.",
+      "value": "var(--spectrum-radio-font-size)",
+      "description": "Used by `.spectrum-Radio-label`. <br/>Defaults to `var(--spectrum-radio-font-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-animation-duration": {
-      "description": "Used by `.spectrum-Radio-label`, `.spectrum-Radio-button:before`, `.spectrum-Radio-button:after`. Defaults to `var(--spectrum-radio-animation-duration)`, if not set.",
+      "value": "var(--spectrum-radio-animation-duration)",
+      "description": "Used by `.spectrum-Radio-label`, `.spectrum-Radio-button:before`, `.spectrum-Radio-button:after`. <br/>Defaults to `var(--spectrum-radio-animation-duration)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-line-height-cjk": {
-      "description": "Used by `.spectrum-Radio-label:lang(ja), .spectrum-Radio-label:lang(ko), .spectrum-Radio-label:lang(zh)`. Defaults to `var(--spectrum-radio-line-height-cjk)`, if not set.",
+      "value": "var(--spectrum-radio-line-height-cjk)",
+      "description": "Used by `.spectrum-Radio-label:lang(ja), .spectrum-Radio-label:lang(ko), .spectrum-Radio-label:lang(zh)`. <br/>Defaults to `var(--spectrum-radio-line-height-cjk)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-button-control-size": {
-      "description": "Used by `.spectrum-Radio-button`, `.spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-control-size)`, if not set.",
+      "value": "var(--spectrum-radio-button-control-size)",
+      "description": "Used by `.spectrum-Radio-button`, `.spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-control-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-button-top-to-control": {
-      "description": "Used by `.spectrum-Radio-button`. Defaults to `var(--spectrum-radio-button-top-to-control)`, if not set.",
+      "value": "var(--spectrum-radio-button-top-to-control)",
+      "description": "Used by `.spectrum-Radio-button`. <br/>Defaults to `var(--spectrum-radio-button-top-to-control)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-button-background-color": {
-      "description": "Used by `.spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-background-color)`, if not set.",
+      "value": "var(--spectrum-radio-button-background-color)",
+      "description": "Used by `.spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-radio-border-width": {
-      "description": "Used by `.spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-border-width)`, if not set.",
+      "value": "var(--spectrum-radio-border-width)",
+      "description": "Used by `.spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-border-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-radio-button-border-color-default": {
-      "description": "Used by `.spectrum-Radio-button:before`. Defaults to `var(--spectrum-radio-button-border-color-default)`, if not set.",
+      "value": "var(--spectrum-radio-button-border-color-default)",
+      "description": "Used by `.spectrum-Radio-button:before`. <br/>Defaults to `var(--spectrum-radio-button-border-color-default)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-radio-neutral-content-color": {
-      "value": "var(--spectrum-neutral-content-color-default)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio.is-readOnly .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-input:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-label`, `.spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio.is-readOnly .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-input:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-label`, `.spectrum-Radio-label`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-neutral-content-color-hover": {
-      "value": "var(--spectrum-neutral-content-color-hover)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:hover .spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:hover .spectrum-Radio-label`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-neutral-content-color-down": {
-      "value": "var(--spectrum-neutral-content-color-down)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:active .spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:active .spectrum-Radio-label`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-neutral-content-color-focus": {
-      "value": "var(--spectrum-neutral-content-color-key-focus)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-label`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-focus-indicator-thickness": {
-      "value": "var(--spectrum-focus-indicator-thickness)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-focus-indicator-gap": {
-      "value": "var(--spectrum-focus-indicator-gap)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-focus-indicator-color": {
-      "value": "var(--spectrum-focus-indicator-color)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-disabled-content-color": {
-      "value": "var(--spectrum-disabled-content-color)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio .spectrum-Radio-input:disabled ~ .spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio .spectrum-Radio-input:disabled ~ .spectrum-Radio-label`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-disabled-border-color": {
-      "value": "var(--spectrum-disabled-content-color)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled + .spectrum-Radio-button:before, .spectrum-Radio .spectrum-Radio-input:disabled + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled + .spectrum-Radio-button:before, .spectrum-Radio .spectrum-Radio-input:disabled + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-emphasized-accent-color": {
-      "value": "var(--spectrum-accent-color-900)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio--emphasized .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio--emphasized .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-emphasized-accent-color-hover": {
-      "value": "var(--spectrum-accent-color-1000)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio--emphasized:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio--emphasized:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-emphasized-accent-color-down": {
-      "value": "var(--spectrum-accent-color-1100)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio--emphasized:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio--emphasized:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-emphasized-accent-color-focus": {
-      "value": "var(--spectrum-accent-color-1000)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio--emphasized:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio--emphasized:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-border-width": {
-      "value": "var(--spectrum-border-width-200)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio-button:before`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-checked-border-color-default": {
-      "value": "var(--spectrum-neutral-background-color-selected-default)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-button-checked-border-color-hover": {
-      "value": "var(--spectrum-neutral-background-color-selected-hover)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-button-checked-border-color-down": {
-      "value": "var(--spectrum-neutral-background-color-selected-down)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-button-checked-border-color-focus": {
-      "value": "var(--spectrum-neutral-background-color-selected-key-focus)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-line-height": {
-      "value": "var(--spectrum-line-height-100)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio-input`, `.spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio-input`, `.spectrum-Radio-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-animation-duration": {
-      "value": "var(--spectrum-animation-duration-100)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio-label`, `.spectrum-Radio-button:before`, `.spectrum-Radio-button:after`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio-label`, `.spectrum-Radio-button:before`, `.spectrum-Radio-button:after`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-line-height-cjk": {
-      "value": "var(--spectrum-cjk-line-height-100)",
-      "description": "Defined in `.spectrum-Radio:lang(ja), .spectrum-Radio:lang(ko), .spectrum-Radio:lang(zh)`. Used by `.spectrum-Radio-label:lang(ja), .spectrum-Radio-label:lang(ko), .spectrum-Radio-label:lang(zh)`.",
+      "description": "Defined in `.spectrum-Radio:lang(ja), .spectrum-Radio:lang(ko), .spectrum-Radio:lang(zh)`. <br/>Used by `.spectrum-Radio-label:lang(ja), .spectrum-Radio-label:lang(ko), .spectrum-Radio-label:lang(zh)`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-height": {
-      "value": "var(--spectrum-component-height-300)",
-      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. Used by `.spectrum-Radio`.",
+      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. <br/>Used by `.spectrum-Radio`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-control-size": {
-      "value": "var(--spectrum-radio-button-control-size-extra-large)",
-      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`, `.spectrum-Radio-button`, `.spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`, `.spectrum-Radio-button`, `.spectrum-Radio-button:before`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-control-size-medium": {
+      "value": "14px",
       "description": "Used by `--spectrum-radio-button-control-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-text-to-control": {
-      "value": "var(--spectrum-text-to-control-300)",
-      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. Used by `.spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. <br/>Used by `.spectrum-Radio-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-label-top-to-text": {
-      "value": "var(--spectrum-component-top-to-text-300)",
-      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. Used by `.spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. <br/>Used by `.spectrum-Radio-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-label-bottom-to-text": {
-      "value": "var(--spectrum-component-bottom-to-text-300)",
-      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. Used by `.spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. <br/>Used by `.spectrum-Radio-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-top-to-control": {
-      "value": "var(--spectrum-radio-button-top-to-control-extra-large)",
-      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. Used by `.spectrum-Radio-button`.",
+      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. <br/>Used by `.spectrum-Radio-button`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-top-to-control-medium": {
+      "value": "9px",
       "description": "Used by `--spectrum-radio-button-top-to-control`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-font-size": {
-      "value": "var(--spectrum-font-size-300)",
-      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. Used by `.spectrum-Radio-label`.",
+      "description": "Defined in `.spectrum-Radio, .spectrum-Radio--sizeM`, `.spectrum-Radio--sizeS`, `.spectrum-Radio--sizeL`, `.spectrum-Radio--sizeXL`. <br/>Used by `.spectrum-Radio-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-control-size-small": {
+      "value": "12px",
       "description": "Used by `--spectrum-radio-button-control-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-top-to-control-small": {
+      "value": "6px",
       "description": "Used by `--spectrum-radio-button-top-to-control`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-control-size-large": {
+      "value": "16px",
       "description": "Used by `--spectrum-radio-button-control-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-top-to-control-large": {
+      "value": "12px",
       "description": "Used by `--spectrum-radio-button-top-to-control`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-control-size-extra-large": {
+      "value": "18px",
       "description": "Used by `--spectrum-radio-button-control-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-top-to-control-extra-large": {
+      "value": "15px",
       "description": "Used by `--spectrum-radio-button-top-to-control`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-border-color-down": {
-      "value": "var(--system-radio-button-border-color-down)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:active .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:active .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-button-border-color-focus": {
-      "value": "var(--system-radio-button-border-color-focus)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-button-border-color-hover": {
-      "value": "var(--system-radio-button-border-color-hover)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:hover .spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:hover .spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-button-selection-indicator": {
+      "value": "4px",
       "description": "Used by `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-radio-button-background-color": {
-      "value": "var(--system-radio-button-background-color)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-radio-button-border-color-default": {
-      "value": "var(--system-radio-button-border-color-default)",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio-button:before`.",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio-button:before`.",
       "control": "color",
       "category": "Component"
     }
   },
   "global": {
     "spectrum-gray-600": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
       "description": "Used by `--system-radio-button-border-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-700": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
       "description": "Used by `--system-radio-button-border-color-hover`, `--system-radio-button-border-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
       "description": "Used by `--system-radio-button-border-color-down`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-50": {
+      "value": "light-dark(rgb(248, 248, 248), rgb(27, 27, 27))",
       "description": "Used by `--system-radio-button-background-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-radio-neutral-content-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-radio-neutral-content-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-radio-neutral-content-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-radio-neutral-content-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-focus-indicator-thickness": {
+      "value": "2px",
       "description": "Used by `--spectrum-radio-focus-indicator-thickness`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-gap": {
+      "value": "2px",
       "description": "Used by `--spectrum-radio-focus-indicator-gap`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
       "description": "Used by `--spectrum-radio-focus-indicator-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `--spectrum-radio-disabled-content-color`, `--spectrum-radio-disabled-border-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-color-900": {
+      "value": "var(--spectrum-blue-900)",
       "description": "Used by `--spectrum-radio-emphasized-accent-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-color-1000": {
+      "value": "var(--spectrum-blue-1000)",
       "description": "Used by `--spectrum-radio-emphasized-accent-color-hover`, `--spectrum-radio-emphasized-accent-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-color-1100": {
+      "value": "var(--spectrum-blue-1100)",
       "description": "Used by `--spectrum-radio-emphasized-accent-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-border-width-200": {
+      "value": "2px",
       "description": "Used by `--spectrum-radio-border-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-neutral-background-color-selected-default": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-radio-button-checked-border-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-background-color-selected-hover": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-radio-button-checked-border-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-background-color-selected-down": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-radio-button-checked-border-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-background-color-selected-key-focus": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-radio-button-checked-border-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-line-height-100": {
+      "value": "1.3",
       "description": "Used by `--spectrum-radio-line-height`.",
       "control": "text",
       "category": "Global"
@@ -555,106 +582,127 @@
       "category": "Global"
     },
     "spectrum-cjk-line-height-100": {
+      "value": "1.5",
       "description": "Used by `--spectrum-radio-line-height-cjk`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-100": {
+      "value": "32px",
       "description": "Used by `--spectrum-radio-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-control-100": {
+      "value": "10px",
       "description": "Used by `--spectrum-radio-text-to-control`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-100": {
+      "value": "6px",
       "description": "Used by `--spectrum-radio-label-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
       "description": "Used by `--spectrum-radio-label-bottom-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-100": {
+      "value": "14px",
       "description": "Used by `--spectrum-radio-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-75": {
+      "value": "24px",
       "description": "Used by `--spectrum-radio-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-control-75": {
+      "value": "9px",
       "description": "Used by `--spectrum-radio-text-to-control`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-radio-label-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
       "description": "Used by `--spectrum-radio-label-bottom-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-75": {
+      "value": "12px",
       "description": "Used by `--spectrum-radio-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-200": {
+      "value": "40px",
       "description": "Used by `--spectrum-radio-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-control-200": {
+      "value": "11px",
       "description": "Used by `--spectrum-radio-text-to-control`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-200": {
+      "value": "9px",
       "description": "Used by `--spectrum-radio-label-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
       "description": "Used by `--spectrum-radio-label-bottom-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-200": {
+      "value": "16px",
       "description": "Used by `--spectrum-radio-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-300": {
+      "value": "48px",
       "description": "Used by `--spectrum-radio-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-control-300": {
+      "value": "13px",
       "description": "Used by `--spectrum-radio-text-to-control`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-300": {
+      "value": "12px",
       "description": "Used by `--spectrum-radio-label-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
       "description": "Used by `--spectrum-radio-label-bottom-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-300": {
+      "value": "18px",
       "description": "Used by `--spectrum-radio-font-size`.",
       "control": "text",
       "category": "Global"
@@ -662,131 +710,125 @@
   },
   "system-theme": {
     "system-radio-button-border-color-default": {
-      "value": "var(--spectrum-gray-600)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-radio-button-border-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-radio-button-border-color-default`.",
       "control": "color"
     },
     "system-radio-button-border-color-hover": {
-      "value": "var(--spectrum-gray-700)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-radio-button-border-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-radio-button-border-color-hover`.",
       "control": "color"
     },
     "system-radio-button-border-color-down": {
-      "value": "var(--spectrum-gray-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-radio-button-border-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-radio-button-border-color-down`.",
       "control": "color"
     },
     "system-radio-button-border-color-focus": {
-      "value": "var(--spectrum-gray-700)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-radio-button-border-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-radio-button-border-color-focus`.",
       "control": "color"
     },
     "system-radio-button-background-color": {
-      "value": "var(--spectrum-gray-50)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-radio-button-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-radio-button-background-color`.",
       "control": "color"
     }
   },
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-radio-button-background-color": {
-      "value": "ButtonFace",
       "description": "Defined in `.spectrum-Radio`.",
       "control": "color"
     },
     "highcontrast-radio-neutral-content-color": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio.is-readOnly .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-input:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-label`, `.spectrum-Radio-label`. Defaults to `var(--mod-radio-neutral-content-color, var(--spectrum-radio-neutral-content-color))`, if not set.",
+      "value": "var(--mod-radio-neutral-content-color, var(--spectrum-radio-neutral-content-color))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio.is-readOnly .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-input:disabled ~ .spectrum-Radio-label, .spectrum-Radio.is-readOnly .spectrum-Radio-label`, `.spectrum-Radio-label`. <br/>Defaults to `var(--mod-radio-neutral-content-color, var(--spectrum-radio-neutral-content-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-neutral-content-color-hover": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:hover .spectrum-Radio-label`. Defaults to `var(--mod-radio-neutral-content-color-hover, var(--spectrum-radio-neutral-content-color-hover))`, if not set.",
+      "value": "var(--mod-radio-neutral-content-color-hover, var(--spectrum-radio-neutral-content-color-hover))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:hover .spectrum-Radio-label`. <br/>Defaults to `var(--mod-radio-neutral-content-color-hover, var(--spectrum-radio-neutral-content-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-neutral-content-color-down": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:active .spectrum-Radio-label`. Defaults to `var(--mod-radio-neutral-content-color-down, var(--spectrum-radio-neutral-content-color-down))`, if not set.",
+      "value": "var(--mod-radio-neutral-content-color-down, var(--spectrum-radio-neutral-content-color-down))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:active .spectrum-Radio-label`. <br/>Defaults to `var(--mod-radio-neutral-content-color-down, var(--spectrum-radio-neutral-content-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-neutral-content-color-focus": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-label`. Defaults to `var(--mod-radio-neutral-content-color-focus, var(--spectrum-radio-neutral-content-color-focus))`, if not set.",
+      "value": "var(--mod-radio-neutral-content-color-focus, var(--spectrum-radio-neutral-content-color-focus))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-label`. <br/>Defaults to `var(--mod-radio-neutral-content-color-focus, var(--spectrum-radio-neutral-content-color-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-button-border-color-default": {
-      "value": "ButtonText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio-button:before`. Defaults to `var(--mod-radio-button-border-color-default, var(--spectrum-radio-button-border-color-default))`, if not set.",
+      "value": "var(--mod-radio-button-border-color-default, var(--spectrum-radio-button-border-color-default))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-button-border-color-default, var(--spectrum-radio-button-border-color-default))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-button-border-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:hover .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-button-border-color-hover, var(--spectrum-radio-button-border-color-hover))`, if not set.",
+      "value": "var(--mod-radio-button-border-color-hover, var(--spectrum-radio-button-border-color-hover))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:hover .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-button-border-color-hover, var(--spectrum-radio-button-border-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-button-border-color-down": {
-      "value": "ButtonText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:active .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-button-border-color-down, var(--spectrum-radio-button-border-color-down))`, if not set.",
+      "value": "var(--mod-radio-button-border-color-down, var(--spectrum-radio-button-border-color-down))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:active .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-button-border-color-down, var(--spectrum-radio-button-border-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-button-border-color-focus": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-button-border-color-focus, var(--spectrum-radio-button-border-color-focus))`, if not set.",
+      "value": "var(--mod-radio-button-border-color-focus, var(--spectrum-radio-button-border-color-focus))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-button-border-color-focus, var(--spectrum-radio-button-border-color-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-emphasized-accent-color": {
-      "value": "ButtonText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio--emphasized .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-emphasized-accent-color, var(--spectrum-radio-emphasized-accent-color))`, if not set.",
+      "value": "var(--mod-radio-emphasized-accent-color, var(--spectrum-radio-emphasized-accent-color))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio--emphasized .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-emphasized-accent-color, var(--spectrum-radio-emphasized-accent-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-emphasized-accent-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio--emphasized:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-emphasized-accent-color-hover, var(--spectrum-radio-emphasized-accent-color-hover))`, if not set.",
+      "value": "var(--mod-radio-emphasized-accent-color-hover, var(--spectrum-radio-emphasized-accent-color-hover))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio--emphasized:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-emphasized-accent-color-hover, var(--spectrum-radio-emphasized-accent-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-emphasized-accent-color-down": {
-      "value": "ButtonText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio--emphasized:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-emphasized-accent-color-down, var(--spectrum-radio-emphasized-accent-color-down))`, if not set.",
+      "value": "var(--mod-radio-emphasized-accent-color-down, var(--spectrum-radio-emphasized-accent-color-down))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio--emphasized:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-emphasized-accent-color-down, var(--spectrum-radio-emphasized-accent-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-emphasized-accent-color-focus": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio--emphasized:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-emphasized-accent-color-focus, var(--spectrum-radio-emphasized-accent-color-focus))`, if not set.",
+      "value": "var(--mod-radio-emphasized-accent-color-focus, var(--spectrum-radio-emphasized-accent-color-focus))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio--emphasized:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-emphasized-accent-color-focus, var(--spectrum-radio-emphasized-accent-color-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-button-checked-border-color-default": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-button-checked-border-color-default, var(--spectrum-radio-button-checked-border-color-default))`, if not set.",
+      "value": "var(--mod-radio-button-checked-border-color-default, var(--spectrum-radio-button-checked-border-color-default))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-button-checked-border-color-default, var(--spectrum-radio-button-checked-border-color-default))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-button-checked-border-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-button-checked-border-color-hover, var(--spectrum-radio-button-checked-border-color-hover))`, if not set.",
+      "value": "var(--mod-radio-button-checked-border-color-hover, var(--spectrum-radio-button-checked-border-color-hover))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-button-checked-border-color-hover, var(--spectrum-radio-button-checked-border-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-button-checked-border-color-down": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-button-checked-border-color-down, var(--spectrum-radio-button-checked-border-color-down))`, if not set.",
+      "value": "var(--mod-radio-button-checked-border-color-down, var(--spectrum-radio-button-checked-border-color-down))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-button-checked-border-color-down, var(--spectrum-radio-button-checked-border-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-button-checked-border-color-focus": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-button-checked-border-color-focus, var(--spectrum-radio-button-checked-border-color-focus))`, if not set.",
+      "value": "var(--mod-radio-button-checked-border-color-focus, var(--spectrum-radio-button-checked-border-color-focus))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-button-checked-border-color-focus, var(--spectrum-radio-button-checked-border-color-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-disabled-content-color": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio .spectrum-Radio-input:disabled ~ .spectrum-Radio-label`. Defaults to `var(--mod-radio-disabled-content-color, var(--spectrum-radio-disabled-content-color))`, if not set.",
+      "value": "var(--mod-radio-disabled-content-color, var(--spectrum-radio-disabled-content-color))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, .spectrum-Radio .spectrum-Radio-input:disabled ~ .spectrum-Radio-label`. <br/>Defaults to `var(--mod-radio-disabled-content-color, var(--spectrum-radio-disabled-content-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-disabled-border-color": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled + .spectrum-Radio-button:before, .spectrum-Radio .spectrum-Radio-input:disabled + .spectrum-Radio-button:before`. Defaults to `var(--mod-radio-disabled-border-color, var(--spectrum-radio-disabled-border-color))`, if not set.",
+      "value": "var(--mod-radio-disabled-border-color, var(--spectrum-radio-disabled-border-color))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio .spectrum-Radio-input:checked:disabled + .spectrum-Radio-button:before, .spectrum-Radio .spectrum-Radio-input:disabled + .spectrum-Radio-button:before`. <br/>Defaults to `var(--mod-radio-disabled-border-color, var(--spectrum-radio-disabled-border-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-radio-focus-indicator-color": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Radio`. Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`. Defaults to `var(--mod-radio-focus-indicator-color, var(--spectrum-radio-focus-indicator-color))`, if not set.",
+      "value": "var(--mod-radio-focus-indicator-color, var(--spectrum-radio-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Radio`. <br/>Used by `.spectrum-Radio:focus .spectrum-Radio-button:after`, `.spectrum-Radio-input:focus-visible + .spectrum-Radio-button:after`. <br/>Defaults to `var(--mod-radio-focus-indicator-color, var(--spectrum-radio-focus-indicator-color))`, if not set.",
       "control": "color"
     }
   }

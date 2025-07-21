@@ -3,17 +3,17 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 
 import {
-	DocsBodyVariants,
-	DocsCodeVariants,
-	DocsDetailVariants,
-	DocsHeadingBodyPairing,
-	DocsHeadingVariants,
-	DocsInternationalizedBodyVariants,
-	DocsInternationalizedCodeVariants,
-	DocsInternationalizedDetailVariants,
-	DocsInternationalizedHeadingBodyPairing,
-	DocsInternationalizedHeadingVariants,
-	Template
+    DocsBodyVariants,
+    DocsCodeVariants,
+    DocsDetailVariants,
+    DocsHeadingBodyPairing,
+    DocsHeadingVariants,
+    DocsInternationalizedBodyVariants,
+    DocsInternationalizedCodeVariants,
+    DocsInternationalizedDetailVariants,
+    DocsInternationalizedHeadingBodyPairing,
+    DocsInternationalizedHeadingVariants,
+    Template
 } from "./template.js";
 import { TypographyGroup } from "./typography.test.js";
 
@@ -87,10 +87,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers,
-			...metadata.component,
-		},
+		cssprops: metadata.modifiers,
 	},
 };
 

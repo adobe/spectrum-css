@@ -26,32 +26,38 @@
   ],
   "modifiers": {
     "mod-progressbar-size-default": {
-      "description": "Used by `--spectrum-progressbar-size-default`. Defaults to `var(--spectrum-progressbar-sized-size-default)`, if not set.",
+      "value": "var(--spectrum-progressbar-sized-size-default)",
+      "description": "Used by `--spectrum-progressbar-size-default`. <br/>Defaults to `var(--spectrum-progressbar-sized-size-default)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-font-size": {
-      "description": "Used by `--spectrum-progressbar-font-size`. Defaults to `var(--spectrum-progressbar-sized-font-size)`, if not set.",
+      "value": "var(--spectrum-progressbar-sized-font-size)",
+      "description": "Used by `--spectrum-progressbar-font-size`. <br/>Defaults to `var(--spectrum-progressbar-sized-font-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-thickness": {
-      "description": "Used by `--spectrum-progressbar-thickness`. Defaults to `var(--spectrum-progressbar-sized-thickness)`, if not set.",
+      "value": "var(--spectrum-progressbar-sized-thickness)",
+      "description": "Used by `--spectrum-progressbar-thickness`. <br/>Defaults to `var(--spectrum-progressbar-sized-thickness)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-spacing-top-to-text": {
-      "description": "Used by `--spectrum-progressbar-spacing-top-to-text`. Defaults to `var(--spectrum-progressbar-sized-spacing-top-to-text)`, if not set.",
+      "value": "var(--spectrum-progressbar-sized-spacing-top-to-text)",
+      "description": "Used by `--spectrum-progressbar-spacing-top-to-text`. <br/>Defaults to `var(--spectrum-progressbar-sized-spacing-top-to-text)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-animation-ease-in-out-indeterminate": {
-      "description": "Used by `--spectrum-progressbar-animation-ease-in-out-indeterminate`. Defaults to `var(--spectrum-animation-ease-in-out)`, if not set.",
+      "value": "var(--spectrum-animation-ease-in-out)",
+      "description": "Used by `--spectrum-progressbar-animation-ease-in-out-indeterminate`. <br/>Defaults to `var(--spectrum-animation-ease-in-out)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-animation-duration-indeterminate": {
-      "description": "Used by `--spectrum-progressbar-animation-duration-indeterminate`. Defaults to `var(--spectrum-animation-duration-2000)`, if not set.",
+      "value": "var(--spectrum-animation-duration-2000)",
+      "description": "Used by `--spectrum-progressbar-animation-duration-indeterminate`. <br/>Defaults to `var(--spectrum-animation-duration-2000)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -61,314 +67,305 @@
       "category": "Modifier"
     },
     "mod-progressbar-line-height-cjk": {
-      "description": "Used by `--spectrum-progressbar-line-height-cjk`. Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "value": "1.5",
+      "description": "Used by `--spectrum-progressbar-line-height-cjk`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-min-size": {
-      "description": "Used by `--spectrum-progressbar-min-size`. Defaults to `var(--spectrum-progress-bar-minimum-width)`, if not set.",
+      "value": "48px",
+      "description": "Used by `--spectrum-progressbar-min-size`. <br/>Defaults to `var(--spectrum-progress-bar-minimum-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-max-size": {
-      "description": "Used by `--spectrum-progressbar-max-size`. Defaults to `var(--spectrum-progress-bar-maximum-width)`, if not set.",
+      "value": "768px",
+      "description": "Used by `--spectrum-progressbar-max-size`. <br/>Defaults to `var(--spectrum-progress-bar-maximum-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-line-height": {
-      "value": "var(--spectrum-progressbar-line-height-cjk)",
-      "description": "Defined in `.spectrum-ProgressBar:lang(ja), .spectrum-ProgressBar:lang(ko), .spectrum-ProgressBar:lang(zh)`. Used by `--spectrum-progressbar-line-height`. Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "value": "1.3",
+      "description": "Defined in `.spectrum-ProgressBar:lang(ja), .spectrum-ProgressBar:lang(ko), .spectrum-ProgressBar:lang(zh)`. <br/>Used by `--spectrum-progressbar-line-height`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-spacing-label-to-progressbar": {
-      "description": "Used by `--spectrum-progressbar-spacing-label-to-progressbar`. Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "value": "4px",
+      "description": "Used by `--spectrum-progressbar-spacing-label-to-progressbar`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-spacing-label-to-text": {
-      "description": "Used by `--spectrum-progressbar-spacing-label-to-text`. Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "value": "12px",
+      "description": "Used by `--spectrum-progressbar-spacing-label-to-text`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-fill-color": {
-      "value": "var(--spectrum-progressbar-fill-color-white)",
-      "description": "Defined in `.spectrum-ProgressBar.spectrum-ProgressBar--staticWhite`. Used by `--spectrum-progressbar-fill-color`. Defaults to `var(--spectrum-accent-color-900)`, if not set.",
+      "value": "var(--spectrum-blue-900)",
+      "description": "Defined in `.spectrum-ProgressBar.spectrum-ProgressBar--staticWhite`. <br/>Used by `--spectrum-progressbar-fill-color`. <br/>Defaults to `var(--spectrum-accent-color-900)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-progressbar-track-color": {
-      "value": "var(--spectrum-progressbar-static-white-track-color)",
-      "description": "Defined in `.spectrum-ProgressBar.spectrum-ProgressBar--staticWhite`. Used by `--spectrum-progressbar-track-color-default`. Defaults to `var(--spectrum-progressbar-track-color)`, if not set.",
+      "value": "var(--spectrum-progressbar-track-color)",
+      "description": "Defined in `.spectrum-ProgressBar.spectrum-ProgressBar--staticWhite`. <br/>Used by `--spectrum-progressbar-track-color-default`. <br/>Defaults to `var(--spectrum-progressbar-track-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-progressbar-text-color": {
-      "value": "var(--spectrum-progressbar-label-and-value-white)",
-      "description": "Defined in `.spectrum-ProgressBar.spectrum-ProgressBar--staticWhite`. Used by `--spectrum-progressbar-text-color`. Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-ProgressBar.spectrum-ProgressBar--staticWhite`. <br/>Used by `--spectrum-progressbar-text-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-progressbar-label-and-value-white": {
-      "description": "Used by `--spectrum-progressbar-label-and-value-white`. Defaults to `var(--spectrum-white)`, if not set.",
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
+      "description": "Used by `--spectrum-progressbar-label-and-value-white`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-progressbar-fill-color-white": {
-      "description": "Used by `--spectrum-progressbar-fill-color-white`. Defaults to `var(--spectrum-white)`, if not set.",
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
+      "description": "Used by `--spectrum-progressbar-fill-color-white`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-progressbar-sized-size-default": {
-      "value": "var(--spectrum-progressbar-size-2800)",
-      "description": "Defined in `.spectrum-ProgressBar, .spectrum-ProgressBar--sizeM`, `.spectrum-ProgressBar--sizeS`, `.spectrum-ProgressBar--sizeL`, `.spectrum-ProgressBar--sizeXL`. Used by `--spectrum-progressbar-size-default`.",
+      "description": "Defined in `.spectrum-ProgressBar, .spectrum-ProgressBar--sizeM`, `.spectrum-ProgressBar--sizeS`, `.spectrum-ProgressBar--sizeL`, `.spectrum-ProgressBar--sizeXL`. <br/>Used by `--spectrum-progressbar-size-default`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-size-2400": {
-      "value": "192px",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--spectrum-progressbar-sized-size-default`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--spectrum-progressbar-sized-size-default`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-sized-font-size": {
-      "value": "var(--spectrum-font-size-200)",
-      "description": "Defined in `.spectrum-ProgressBar, .spectrum-ProgressBar--sizeM`, `.spectrum-ProgressBar--sizeS`, `.spectrum-ProgressBar--sizeL`, `.spectrum-ProgressBar--sizeXL`. Used by `--spectrum-progressbar-font-size`.",
+      "description": "Defined in `.spectrum-ProgressBar, .spectrum-ProgressBar--sizeM`, `.spectrum-ProgressBar--sizeS`, `.spectrum-ProgressBar--sizeL`, `.spectrum-ProgressBar--sizeXL`. <br/>Used by `--spectrum-progressbar-font-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-sized-thickness": {
-      "value": "var(--spectrum-progress-bar-thickness-extra-large)",
-      "description": "Defined in `.spectrum-ProgressBar, .spectrum-ProgressBar--sizeM`, `.spectrum-ProgressBar--sizeS`, `.spectrum-ProgressBar--sizeL`, `.spectrum-ProgressBar--sizeXL`. Used by `--spectrum-progressbar-thickness`.",
+      "description": "Defined in `.spectrum-ProgressBar, .spectrum-ProgressBar--sizeM`, `.spectrum-ProgressBar--sizeS`, `.spectrum-ProgressBar--sizeL`, `.spectrum-ProgressBar--sizeXL`. <br/>Used by `--spectrum-progressbar-thickness`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progress-bar-thickness-large": {
+      "value": "8px",
       "description": "Used by `--spectrum-progressbar-sized-thickness`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-sized-spacing-top-to-text": {
-      "value": "var(--spectrum-component-top-to-text-300)",
-      "description": "Defined in `.spectrum-ProgressBar, .spectrum-ProgressBar--sizeM`, `.spectrum-ProgressBar--sizeS`, `.spectrum-ProgressBar--sizeL`, `.spectrum-ProgressBar--sizeXL`. Used by `--spectrum-progressbar-spacing-top-to-text`.",
+      "description": "Defined in `.spectrum-ProgressBar, .spectrum-ProgressBar--sizeM`, `.spectrum-ProgressBar--sizeS`, `.spectrum-ProgressBar--sizeL`, `.spectrum-ProgressBar--sizeXL`. <br/>Used by `--spectrum-progressbar-spacing-top-to-text`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progress-bar-thickness-small": {
+      "value": "4px",
       "description": "Used by `--spectrum-progressbar-sized-thickness`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-size-2500": {
-      "value": "200px",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--spectrum-progressbar-sized-size-default`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--spectrum-progressbar-sized-size-default`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-size-2800": {
-      "value": "224px",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--spectrum-progressbar-sized-size-default`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--spectrum-progressbar-sized-size-default`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progress-bar-thickness-extra-large": {
+      "value": "10px",
       "description": "Used by `--spectrum-progressbar-sized-thickness`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-size-default": {
-      "value": "var(--mod-progressbar-size-default, var(--spectrum-progressbar-sized-size-default))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar`, `.spectrum-ProgressBar--sideLabel .spectrum-ProgressBar-track`, `to`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar`, `.spectrum-ProgressBar--sideLabel .spectrum-ProgressBar-track`, `to`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-font-size": {
-      "value": "var(--mod-progressbar-font-size, var(--spectrum-progressbar-sized-font-size))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--mod-fieldlabel-font-size`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--mod-fieldlabel-font-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-thickness": {
-      "value": "var(--mod-progressbar-thickness, var(--spectrum-progressbar-sized-thickness))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar-track`, `.spectrum-ProgressBar-fill`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar-track`, `.spectrum-ProgressBar-fill`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-spacing-top-to-text": {
-      "value": "var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-sized-spacing-top-to-text))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar-label, .spectrum-ProgressBar-percentage`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar-label, .spectrum-ProgressBar-percentage`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-animation-ease-in-out-indeterminate": {
-      "value": "var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-animation-ease-in-out))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-animation-duration-indeterminate": {
-      "value": "var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-animation-duration-2000))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-corner-radius": {
-      "value": "var(--spectrum-corner-radius-100)",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar-track`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar-track`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-fill-size-indeterminate": {
-      "value": "var(--mod-progressbar-fill-size-indeterminate, 70%)",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill`, `0%`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill`, `0%`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-dir-indeterminate-multiplier": {
-      "value": "-1",
-      "description": "Defined in `.spectrum-ProgressBar`, `.spectrum-ProgressBar:dir(rtl), [dir=\"rtl\"] .spectrum-ProgressBar`. Used by `0%`, `to`.",
+      "description": "Defined in `.spectrum-ProgressBar`, `.spectrum-ProgressBar:dir(rtl), [dir=\"rtl\"] .spectrum-ProgressBar`. <br/>Used by `0%`, `to`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-line-height-cjk": {
-      "value": "var(--mod-progressbar-line-height-cjk, var(--spectrum-cjk-line-height-100))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--mod-progressbar-line-height`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--mod-progressbar-line-height`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-min-size": {
-      "value": "var(--mod-progressbar-min-size, var(--spectrum-progress-bar-minimum-width))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progress-bar-minimum-width": {
+      "value": "48px",
       "description": "Used by `--spectrum-progressbar-min-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-max-size": {
-      "value": "var(--mod-progressbar-max-size, var(--spectrum-progress-bar-maximum-width))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progress-bar-maximum-width": {
+      "value": "768px",
       "description": "Used by `--spectrum-progressbar-max-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-line-height": {
-      "value": "var(--mod-progressbar-line-height, var(--spectrum-line-height-100))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar-label, .spectrum-ProgressBar-percentage`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar-label, .spectrum-ProgressBar-percentage`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-spacing-label-to-progressbar": {
-      "value": "var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-spacing-75))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar-label, .spectrum-ProgressBar-percentage`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar-label, .spectrum-ProgressBar-percentage`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-spacing-label-to-text": {
-      "value": "var(--mod-progressbar-spacing-label-to-text, var(--spectrum-spacing-200))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar--sideLabel .spectrum-ProgressBar-label`, `.spectrum-ProgressBar-percentage`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar--sideLabel .spectrum-ProgressBar-label`, `.spectrum-ProgressBar-percentage`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-fill-color": {
-      "value": "var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-accent-color-900)))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar-fill`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar-fill`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-progressbar-track-color-default": {
-      "value": "var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar-track`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar-track`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-progressbar-track-color": {
-      "value": "var(--system-progress-bar-track-color)",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--spectrum-progressbar-track-color-default`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--spectrum-progressbar-track-color-default`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-progressbar-text-color": {
-      "value": "var(--mod-progressbar-text-color, var(--spectrum-neutral-content-color-default))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `.spectrum-ProgressBar-label, .spectrum-ProgressBar-percentage`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `.spectrum-ProgressBar-label, .spectrum-ProgressBar-percentage`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-progressbar-label-and-value-white": {
-      "value": "var(--mod-progressbar-label-and-value-white, var(--spectrum-white))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--mod-progressbar-text-color`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--mod-progressbar-text-color`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-progressbar-fill-color-white": {
-      "value": "var(--mod-progressbar-fill-color-white, var(--spectrum-white))",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--mod-progressbar-fill-color`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--mod-progressbar-fill-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-progressbar-static-white-track-color": {
-      "value": "var(--spectrum-progressbar-track-color-white)",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--mod-progressbar-track-color`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--mod-progressbar-track-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-progressbar-track-color-white": {
-      "value": "var(--system-progress-bar-track-color-white)",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--spectrum-progressbar-static-white-track-color`.",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--spectrum-progressbar-static-white-track-color`.",
       "control": "color",
       "category": "Component"
     }
   },
   "global": {
     "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
       "description": "Used by `--system-progress-bar-track-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-400": {
+      "value": "light-dark(rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.21))",
       "description": "Used by `--system-progress-bar-track-color-white`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-75": {
+      "value": "12px",
       "description": "Used by `--spectrum-progressbar-sized-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-100": {
+      "value": "6px",
       "description": "Used by `--spectrum-progressbar-sized-spacing-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-progressbar-sized-spacing-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-100": {
+      "value": "14px",
       "description": "Used by `--spectrum-progressbar-sized-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-200": {
+      "value": "9px",
       "description": "Used by `--spectrum-progressbar-sized-spacing-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-200": {
+      "value": "16px",
       "description": "Used by `--spectrum-progressbar-sized-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-300": {
+      "value": "12px",
       "description": "Used by `--spectrum-progressbar-sized-spacing-top-to-text`.",
       "control": "text",
       "category": "Global"
@@ -384,41 +381,49 @@
       "category": "Global"
     },
     "spectrum-corner-radius-100": {
+      "value": "8px",
       "description": "Used by `--spectrum-progressbar-corner-radius`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-cjk-line-height-100": {
+      "value": "1.5",
       "description": "Used by `--spectrum-progressbar-line-height-cjk`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-line-height-100": {
+      "value": "1.3",
       "description": "Used by `--spectrum-progressbar-line-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-progressbar-spacing-label-to-progressbar`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-200": {
+      "value": "12px",
       "description": "Used by `--spectrum-progressbar-spacing-label-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-accent-color-900": {
+      "value": "var(--spectrum-blue-900)",
       "description": "Used by `--spectrum-progressbar-fill-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-progressbar-text-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-white": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
       "description": "Used by `--spectrum-progressbar-label-and-value-white`, `--spectrum-progressbar-fill-color-white`.",
       "control": "text",
       "category": "Global"
@@ -426,13 +431,11 @@
   },
   "system-theme": {
     "system-progress-bar-track-color": {
-      "value": "var(--spectrum-gray-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-progressbar-track-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-progressbar-track-color`.",
       "control": "color"
     },
     "system-progress-bar-track-color-white": {
-      "value": "var(--spectrum-transparent-white-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-progressbar-track-color-white`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-progressbar-track-color-white`.",
       "control": "color"
     }
   },
@@ -443,13 +446,13 @@
   },
   "high-contrast": {
     "highcontrast-progressbar-fill-color": {
-      "value": "ButtonText",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--spectrum-progressbar-fill-color`. Defaults to `var(--mod-progressbar-fill-color, var(--spectrum-accent-color-900))`, if not set.",
+      "value": "var(--mod-progressbar-fill-color, var(--spectrum-accent-color-900))",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--spectrum-progressbar-fill-color`. <br/>Defaults to `var(--mod-progressbar-fill-color, var(--spectrum-accent-color-900))`, if not set.",
       "control": "color"
     },
     "highcontrast-progressbar-track-color": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-ProgressBar`. Used by `--spectrum-progressbar-track-color-default`. Defaults to `var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color))`, if not set.",
+      "value": "var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color))",
+      "description": "Defined in `.spectrum-ProgressBar`. <br/>Used by `--spectrum-progressbar-track-color-default`. <br/>Defaults to `var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color))`, if not set.",
       "control": "color"
     }
   }

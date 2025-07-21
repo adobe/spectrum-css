@@ -23,144 +23,149 @@
   ],
   "modifiers": {
     "mod-helptext-content-color-default": {
-      "description": "Used by `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-text`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-text`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-text`. Defaults to `var(--spectrum-helptext-content-color-default)`, if not set.",
+      "value": "var(--spectrum-helptext-content-color-default)",
+      "description": "Used by `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-text`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-text`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-text`. <br/>Defaults to `var(--spectrum-helptext-content-color-default)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-helptext-font-size": {
-      "description": "Used by `.spectrum-HelpText`. Defaults to `var(--spectrum-helptext-font-size)`, if not set.",
+      "value": "var(--spectrum-helptext-font-size)",
+      "description": "Used by `.spectrum-HelpText`. <br/>Defaults to `var(--spectrum-helptext-font-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-min-height": {
-      "description": "Used by `.spectrum-HelpText`. Defaults to `var(--spectrum-helptext-min-height)`, if not set.",
+      "value": "var(--spectrum-helptext-min-height)",
+      "description": "Used by `.spectrum-HelpText`. <br/>Defaults to `var(--spectrum-helptext-min-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-line-height": {
-      "value": "var(--mod-helptext-line-height-cjk, var(--spectrum-cjk-line-height-100))",
-      "description": "Defined in `.spectrum-HelpText:lang(ja), .spectrum-HelpText:lang(ko), .spectrum-HelpText:lang(zh)`. Used by `.spectrum-HelpText .spectrum-HelpText-text`. Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "value": "1.3",
+      "description": "Defined in `.spectrum-HelpText:lang(ja), .spectrum-HelpText:lang(ko), .spectrum-HelpText:lang(zh)`. <br/>Used by `.spectrum-HelpText .spectrum-HelpText-text`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-line-height-cjk": {
-      "description": "Used by `--mod-helptext-line-height`. Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "value": "1.5",
+      "description": "Used by `--mod-helptext-line-height`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-text-to-visual": {
-      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`. Defaults to `var(--spectrum-helptext-text-to-visual)`, if not set.",
+      "value": "var(--spectrum-helptext-text-to-visual)",
+      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`. <br/>Defaults to `var(--spectrum-helptext-text-to-visual)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-top-to-workflow-icon": {
-      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`. Defaults to `var(--spectrum-helptext-top-to-workflow-icon)`, if not set.",
+      "value": "var(--spectrum-helptext-top-to-workflow-icon)",
+      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`. <br/>Defaults to `var(--spectrum-helptext-top-to-workflow-icon)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-bottom-to-workflow-icon": {
-      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`. Defaults to `var(--spectrum-helptext-bottom-to-workflow-icon)`, if not set.",
+      "value": "var(--spectrum-helptext-bottom-to-workflow-icon)",
+      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`. <br/>Defaults to `var(--spectrum-helptext-bottom-to-workflow-icon)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-icon-size": {
-      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`. Defaults to `var(--spectrum-helptext-icon-size)`, if not set.",
+      "value": "var(--spectrum-helptext-icon-size)",
+      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`. <br/>Defaults to `var(--spectrum-helptext-icon-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-top-to-text": {
-      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-text`. Defaults to `var(--spectrum-helptext-top-to-text)`, if not set.",
+      "value": "var(--spectrum-helptext-top-to-text)",
+      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-text`. <br/>Defaults to `var(--spectrum-helptext-top-to-text)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-bottom-to-text": {
-      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-text`. Defaults to `var(--spectrum-helptext-bottom-to-text)`, if not set.",
+      "value": "var(--spectrum-helptext-bottom-to-text)",
+      "description": "Used by `.spectrum-HelpText .spectrum-HelpText-text`. <br/>Defaults to `var(--spectrum-helptext-bottom-to-text)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-helptext-icon-color-default": {
-      "description": "Used by `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-validationIcon`. Defaults to `var(--spectrum-helptext-icon-color-default)`, if not set.",
+      "value": "var(--spectrum-helptext-icon-color-default)",
+      "description": "Used by `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-validationIcon`. <br/>Defaults to `var(--spectrum-helptext-icon-color-default)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-helptext-content-color-default": {
-      "value": "var(--spectrum-disabled-content-color)",
-      "description": "Defined in `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral`, `.spectrum-HelpText.spectrum-HelpText--negative`, `.spectrum-HelpText.is-disabled`. Used by `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-text`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-text`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-text`.",
+      "description": "Defined in `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral`, `.spectrum-HelpText.spectrum-HelpText--negative`, `.spectrum-HelpText.is-disabled`. <br/>Used by `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-text`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-text`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-text`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-helptext-icon-color-default": {
-      "value": "var(--spectrum-disabled-content-color)",
-      "description": "Defined in `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral`, `.spectrum-HelpText.spectrum-HelpText--negative`, `.spectrum-HelpText.is-disabled`. Used by `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-validationIcon`.",
+      "description": "Defined in `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral`, `.spectrum-HelpText.spectrum-HelpText--negative`, `.spectrum-HelpText.is-disabled`. <br/>Used by `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-validationIcon`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-helptext-font-size": {
-      "value": "var(--spectrum-font-size-200)",
-      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. Used by `.spectrum-HelpText`.",
+      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. <br/>Used by `.spectrum-HelpText`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-helptext-min-height": {
-      "value": "var(--spectrum-component-height-200)",
-      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. Used by `.spectrum-HelpText`.",
+      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. <br/>Used by `.spectrum-HelpText`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-helptext-icon-size": {
-      "value": "var(--spectrum-workflow-icon-size-300)",
-      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`.",
+      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. <br/>Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-helptext-text-to-visual": {
-      "value": "var(--spectrum-text-to-visual-200)",
-      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`.",
+      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. <br/>Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-helptext-top-to-workflow-icon": {
-      "value": "var(--spectrum-help-text-top-to-workflow-icon-extra-large)",
-      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. Used by `--spectrum-helptext-bottom-to-workflow-icon`, `.spectrum-HelpText .spectrum-HelpText-validationIcon`.",
+      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. <br/>Used by `--spectrum-helptext-bottom-to-workflow-icon`, `.spectrum-HelpText .spectrum-HelpText-validationIcon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-help-text-top-to-workflow-icon-small": {
+      "value": "4px",
       "description": "Used by `--spectrum-helptext-top-to-workflow-icon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-helptext-bottom-to-workflow-icon": {
-      "value": "var(--spectrum-helptext-top-to-workflow-icon)",
-      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`.",
+      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. <br/>Used by `.spectrum-HelpText .spectrum-HelpText-validationIcon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-helptext-top-to-text": {
-      "value": "var(--spectrum-component-top-to-text-200)",
-      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. Used by `.spectrum-HelpText .spectrum-HelpText-text`.",
+      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. <br/>Used by `.spectrum-HelpText .spectrum-HelpText-text`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-helptext-bottom-to-text": {
-      "value": "var(--spectrum-component-bottom-to-text-200)",
-      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. Used by `.spectrum-HelpText .spectrum-HelpText-text`.",
+      "description": "Defined in `.spectrum-HelpText.spectrum-HelpText--sizeS`, `.spectrum-HelpText, .spectrum-HelpText.spectrum-HelpText--sizeM`, `.spectrum-HelpText.spectrum-HelpText--sizeL`, `.spectrum-HelpText.spectrum-HelpText--sizeXL`. <br/>Used by `.spectrum-HelpText .spectrum-HelpText-text`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-help-text-top-to-workflow-icon-medium": {
+      "value": "3px",
       "description": "Used by `--spectrum-helptext-top-to-workflow-icon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-help-text-top-to-workflow-icon-large": {
+      "value": "6px",
       "description": "Used by `--spectrum-helptext-top-to-workflow-icon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-help-text-top-to-workflow-icon-extra-large": {
+      "value": "9px",
       "description": "Used by `--spectrum-helptext-top-to-workflow-icon`.",
       "control": "text",
       "category": "Component"
@@ -168,121 +173,145 @@
   },
   "global": {
     "spectrum-neutral-subdued-content-color-default": {
+      "value": "var(--spectrum-gray-700)",
       "description": "Used by `--spectrum-helptext-content-color-default`, `--spectrum-helptext-icon-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-component-height-75": {
+      "value": "24px",
       "description": "Used by `--spectrum-helptext-min-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-workflow-icon-size-75": {
+      "value": "16px",
       "description": "Used by `--spectrum-helptext-icon-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-75": {
+      "value": "12px",
       "description": "Used by `--spectrum-helptext-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-visual-75": {
+      "value": "5px",
       "description": "Used by `--spectrum-helptext-text-to-visual`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-helptext-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
       "description": "Used by `--spectrum-helptext-bottom-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-workflow-icon-size-100": {
+      "value": "20px",
       "description": "Used by `--spectrum-helptext-icon-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-100": {
+      "value": "32px",
       "description": "Used by `--spectrum-helptext-min-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-workflow-icon-size-200": {
+      "value": "22px",
       "description": "Used by `--spectrum-helptext-icon-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-100": {
+      "value": "14px",
       "description": "Used by `--spectrum-helptext-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-visual-100": {
+      "value": "6px",
       "description": "Used by `--spectrum-helptext-text-to-visual`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-100": {
+      "value": "6px",
       "description": "Used by `--spectrum-helptext-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
       "description": "Used by `--spectrum-helptext-bottom-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-200": {
+      "value": "40px",
       "description": "Used by `--spectrum-helptext-min-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-workflow-icon-size-300": {
+      "value": "26px",
       "description": "Used by `--spectrum-helptext-icon-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-200": {
+      "value": "16px",
       "description": "Used by `--spectrum-helptext-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-visual-200": {
+      "value": "7px",
       "description": "Used by `--spectrum-helptext-text-to-visual`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-text-200": {
+      "value": "9px",
       "description": "Used by `--spectrum-helptext-top-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
       "description": "Used by `--spectrum-helptext-bottom-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-negative-color-900": {
+      "value": "var(--spectrum-red-900)",
       "description": "Used by `--spectrum-helptext-content-color-default`, `--spectrum-helptext-icon-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `--spectrum-helptext-content-color-default`, `--spectrum-helptext-icon-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-cjk-line-height-100": {
+      "value": "1.5",
       "description": "Used by `--mod-helptext-line-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-line-height-100": {
+      "value": "1.3",
       "description": "Used by `.spectrum-HelpText .spectrum-HelpText-text`.",
       "control": "text",
       "category": "Global"
@@ -292,13 +321,13 @@
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-helptext-content-color-default": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-HelpText`. Used by `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-text`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-text`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-text`. Defaults to `var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default))`, if not set.",
+      "value": "var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default))",
+      "description": "Defined in `.spectrum-HelpText`. <br/>Used by `.spectrum-HelpText`, `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-text`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-text`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-text`. <br/>Defaults to `var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default))`, if not set.",
       "control": "color"
     },
     "highcontrast-helptext-icon-color-default": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-HelpText`. Used by `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-validationIcon`. Defaults to `var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default))`, if not set.",
+      "value": "var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default))",
+      "description": "Defined in `.spectrum-HelpText`. <br/>Used by `.spectrum-HelpText.spectrum-HelpText--neutral .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.spectrum-HelpText--negative .spectrum-HelpText-validationIcon`, `.spectrum-HelpText.is-disabled .spectrum-HelpText-validationIcon`. <br/>Defaults to `var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default))`, if not set.",
       "control": "color"
     }
   }

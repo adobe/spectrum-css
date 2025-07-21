@@ -63,48 +63,56 @@
   ],
   "modifiers": {
     "mod-button-font-family": {
-      "description": "Used by `.spectrum-Button`. Defaults to `var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack))`, if not set.",
+      "value": "var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack))",
+      "description": "Used by `.spectrum-Button`. <br/>Defaults to `var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack))`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-sans-font-family-stack": {
-      "description": "Used by `.spectrum-Button`. Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Used by `.spectrum-Button`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-line-height": {
-      "description": "Used by `.spectrum-Button`, `--spectrum-button-line-height`. Defaults to `var(--mod-line-height-100, var(--spectrum-line-height-100))`, if not set.",
+      "value": "var(--mod-line-height-100, var(--spectrum-line-height-100))",
+      "description": "Used by `.spectrum-Button`, `--spectrum-button-line-height`. <br/>Defaults to `var(--mod-line-height-100, var(--spectrum-line-height-100))`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-line-height-100": {
-      "description": "Used by `.spectrum-Button`. Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "value": "1.3",
+      "description": "Used by `.spectrum-Button`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-animation-duration": {
-      "description": "Used by `.spectrum-Button`, `.spectrum-Button:after`, `--spectrum-button-animation-duration`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Used by `.spectrum-Button`, `.spectrum-Button:after`, `--spectrum-button-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-animation-duration-100": {
-      "description": "Used by `.spectrum-Button`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Used by `.spectrum-Button`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-focus-indicator-gap": {
-      "description": "Used by `.spectrum-Button:after`. Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "value": "2px",
+      "description": "Used by `.spectrum-Button:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-focus-indicator-gap": {
-      "description": "Used by `.spectrum-Button:focus-visible:after`, `--spectrum-button-focus-ring-gap`. Defaults to `var(--mod-button-focus-ring-gap, var(--spectrum-focus-indicator-gap))`, if not set.",
+      "value": "var(--mod-button-focus-ring-gap, var(--spectrum-focus-indicator-gap))",
+      "description": "Used by `.spectrum-Button:focus-visible:after`, `--spectrum-button-focus-ring-gap`. <br/>Defaults to `var(--mod-button-focus-ring-gap, var(--spectrum-focus-indicator-gap))`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-content-color-default": {
-      "value": "var(--mod-button-static-content-color)",
-      "description": "Defined in `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`. Used by `.spectrum-Button`. Defaults to `var(--spectrum-button-content-color-default, inherit)`, if not set.",
+      "value": "var(--spectrum-button-content-color-default, inherit)",
+      "description": "Defined in `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`. <br/>Used by `.spectrum-Button`. <br/>Defaults to `var(--spectrum-button-content-color-default, inherit)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
@@ -114,105 +122,122 @@
       "category": "Modifier"
     },
     "mod-button-content-color-hover": {
-      "value": "var(--mod-button-static-content-color)",
-      "description": "Defined in `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`. Used by `.spectrum-Button:hover`. Defaults to `var(--spectrum-button-content-color-hover)`, if not set.",
+      "value": "var(--spectrum-button-content-color-hover)",
+      "description": "Defined in `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`. <br/>Used by `.spectrum-Button:hover`. <br/>Defaults to `var(--spectrum-button-content-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-content-color-down": {
-      "value": "var(--mod-button-static-content-color)",
-      "description": "Defined in `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`. Used by `.spectrum-Button:active`. Defaults to `var(--spectrum-button-content-color-down)`, if not set.",
+      "value": "var(--spectrum-button-content-color-down)",
+      "description": "Defined in `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`. <br/>Used by `.spectrum-Button:active`. <br/>Defaults to `var(--spectrum-button-content-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-content-color-focus": {
-      "value": "var(--mod-button-static-content-color)",
-      "description": "Defined in `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`. Used by `.spectrum-Button:focus-visible`. Defaults to `var(--spectrum-button-content-color-focus)`, if not set.",
+      "value": "var(--spectrum-button-content-color-focus)",
+      "description": "Defined in `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`. <br/>Used by `.spectrum-Button:focus-visible`. <br/>Defaults to `var(--spectrum-button-content-color-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-static-black-focus-indicator-color": {
-      "description": "Used by `--spectrum-button-focus-indicator-color`. Defaults to `var(--spectrum-static-black-focus-indicator-color)`, if not set.",
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--spectrum-button-focus-indicator-color`. <br/>Defaults to `var(--spectrum-static-black-focus-indicator-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-height": {
-      "description": "Used by `--spectrum-button-height`. Defaults to `var(--spectrum-button-sized-height)`, if not set.",
+      "value": "var(--spectrum-button-sized-height)",
+      "description": "Used by `--spectrum-button-height`. <br/>Defaults to `var(--spectrum-button-sized-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-min-width": {
-      "description": "Used by `--spectrum-button-min-width`. Defaults to `calc(var(--spectrum-button-height) * var(--spectrum-button-minimum-width-multiplier))`, if not set.",
+      "value": "calc(var(--spectrum-button-height) * var(--spectrum-button-minimum-width-multiplier))",
+      "description": "Used by `--spectrum-button-min-width`. <br/>Defaults to `calc(var(--spectrum-button-height) * var(--spectrum-button-minimum-width-multiplier))`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-font-size": {
-      "description": "Used by `--spectrum-button-font-size`. Defaults to `var(--spectrum-button-sized-font-size)`, if not set.",
+      "value": "var(--spectrum-button-sized-font-size)",
+      "description": "Used by `--spectrum-button-font-size`. <br/>Defaults to `var(--spectrum-button-sized-font-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-padding-label-to-icon": {
-      "description": "Used by `--spectrum-button-padding-label-to-icon`. Defaults to `var(--spectrum-button-sized-padding-label-to-icon)`, if not set.",
+      "value": "var(--spectrum-button-sized-padding-label-to-icon)",
+      "description": "Used by `--spectrum-button-padding-label-to-icon`. <br/>Defaults to `var(--spectrum-button-sized-padding-label-to-icon)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-edge-to-visual": {
-      "description": "Used by `--spectrum-button-edge-to-visual`, `.spectrum-Button .spectrum-Icon`. Defaults to `var(--spectrum-button-edge-to-visual)`, if not set.",
+      "value": "var(--spectrum-button-edge-to-visual)",
+      "description": "Used by `--spectrum-button-edge-to-visual`, `.spectrum-Button .spectrum-Icon`. <br/>Defaults to `var(--spectrum-button-edge-to-visual)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-edge-to-visual-only": {
-      "description": "Used by `--spectrum-button-edge-to-visual-only`, `.spectrum-Button.spectrum-Button--iconOnly`. Defaults to `var(--spectrum-button-edge-to-visual-only)`, if not set.",
+      "value": "var(--spectrum-button-edge-to-visual-only)",
+      "description": "Used by `--spectrum-button-edge-to-visual-only`, `.spectrum-Button.spectrum-Button--iconOnly`. <br/>Defaults to `var(--spectrum-button-edge-to-visual-only)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-edge-to-text": {
-      "description": "Used by `--spectrum-button-edge-to-text`, `.spectrum-Button .spectrum-Icon`. Defaults to `var(--spectrum-button-edge-to-text)`, if not set.",
+      "value": "var(--spectrum-button-edge-to-text)",
+      "description": "Used by `--spectrum-button-edge-to-text`, `.spectrum-Button .spectrum-Icon`. <br/>Defaults to `var(--spectrum-button-edge-to-text)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-top-to-text": {
-      "description": "Used by `--spectrum-button-top-to-text`. Defaults to `var(--spectrum-button-sized-top-to-text)`, if not set.",
+      "value": "var(--spectrum-button-sized-top-to-text)",
+      "description": "Used by `--spectrum-button-top-to-text`. <br/>Defaults to `var(--spectrum-button-sized-top-to-text)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-bottom-to-text": {
-      "description": "Used by `--spectrum-button-bottom-to-text`. Defaults to `var(--spectrum-button-sized-bottom-to-text)`, if not set.",
+      "value": "var(--spectrum-button-sized-bottom-to-text)",
+      "description": "Used by `--spectrum-button-bottom-to-text`. <br/>Defaults to `var(--spectrum-button-sized-bottom-to-text)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-top-to-icon": {
-      "description": "Used by `--spectrum-button-top-to-icon`, `.spectrum-Button .spectrum-Icon`. Defaults to `var(--spectrum-button-top-to-icon)`, if not set.",
+      "value": "var(--spectrum-button-top-to-icon)",
+      "description": "Used by `--spectrum-button-top-to-icon`, `.spectrum-Button .spectrum-Icon`. <br/>Defaults to `var(--spectrum-button-top-to-icon)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-focus-ring-thickness": {
-      "description": "Used by `--spectrum-button-focus-ring-thickness`. Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "value": "2px",
+      "description": "Used by `--spectrum-button-focus-ring-thickness`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-focus-ring-color": {
-      "description": "Used by `--spectrum-button-focus-indicator-color`. Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-button-focus-indicator-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-border-width": {
-      "description": "Used by `--spectrum-button-border-width`, `.spectrum-Button .spectrum-Icon`, `.spectrum-Button.spectrum-Button--iconOnly`. Defaults to `var(--spectrum-button-border-width)`, if not set.",
+      "value": "var(--spectrum-button-border-width)",
+      "description": "Used by `--spectrum-button-border-width`, `.spectrum-Button .spectrum-Icon`, `.spectrum-Button.spectrum-Button--iconOnly`. <br/>Defaults to `var(--spectrum-button-border-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-focus-ring-gap": {
-      "description": "Used by `--spectrum-button-focus-ring-gap`. Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "value": "2px",
+      "description": "Used by `--spectrum-button-focus-ring-gap`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-border-radius": {
-      "description": "Used by `--spectrum-button-border-radius`. Defaults to `calc(var(--spectrum-button-height) / 2)`, if not set.",
+      "value": "calc(var(--spectrum-button-height) / 2)",
+      "description": "Used by `--spectrum-button-border-radius`. <br/>Defaults to `calc(var(--spectrum-button-height) / 2)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-bold-font-weight": {
-      "description": "Used by `.spectrum-Button`. Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "value": "700",
+      "description": "Used by `.spectrum-Button`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -237,67 +262,80 @@
       "category": "Modifier"
     },
     "mod-button-background-color-default": {
-      "description": "Used by `.spectrum-Button`. Defaults to `var(--spectrum-button-background-color-default)`, if not set.",
+      "value": "var(--spectrum-button-background-color-default)",
+      "description": "Used by `.spectrum-Button`. <br/>Defaults to `var(--spectrum-button-background-color-default)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-border-color-default": {
-      "description": "Used by `.spectrum-Button`. Defaults to `var(--spectrum-button-border-color-default)`, if not set.",
+      "value": "var(--spectrum-button-border-color-default)",
+      "description": "Used by `.spectrum-Button`. <br/>Defaults to `var(--spectrum-button-border-color-default)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-focus-ring-border-radius": {
-      "description": "Used by `.spectrum-Button:after`. Defaults to `calc((var(--spectrum-button-focus-ring-gap) + var(--spectrum-button-border-width)) * -1)`, if not set.",
+      "value": "calc((var(--spectrum-button-focus-ring-gap) + var(--spectrum-button-border-width)) * -1)",
+      "description": "Used by `.spectrum-Button:after`. <br/>Defaults to `calc((var(--spectrum-button-focus-ring-gap) + var(--spectrum-button-border-width)) * -1)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-button-background-color-focus": {
-      "description": "Used by `.spectrum-Button:focus-visible`. Defaults to `var(--spectrum-button-background-color-focus)`, if not set.",
+      "value": "var(--spectrum-button-background-color-focus)",
+      "description": "Used by `.spectrum-Button:focus-visible`. <br/>Defaults to `var(--spectrum-button-background-color-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-border-color-focus": {
-      "description": "Used by `.spectrum-Button:focus-visible`. Defaults to `var(--spectrum-button-border-color-focus)`, if not set.",
+      "value": "var(--spectrum-button-border-color-focus)",
+      "description": "Used by `.spectrum-Button:focus-visible`. <br/>Defaults to `var(--spectrum-button-border-color-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-background-color-down": {
-      "description": "Used by `.spectrum-Button:active`. Defaults to `var(--spectrum-button-background-color-down)`, if not set.",
+      "value": "var(--spectrum-button-background-color-down)",
+      "description": "Used by `.spectrum-Button:active`. <br/>Defaults to `var(--spectrum-button-background-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-border-color-down": {
-      "description": "Used by `.spectrum-Button:active`. Defaults to `var(--spectrum-button-border-color-down)`, if not set.",
+      "value": "var(--spectrum-button-border-color-down)",
+      "description": "Used by `.spectrum-Button:active`. <br/>Defaults to `var(--spectrum-button-border-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-background-color-hover": {
-      "description": "Used by `.spectrum-Button:hover`. Defaults to `var(--spectrum-button-background-color-hover)`, if not set.",
+      "value": "var(--spectrum-button-background-color-hover)",
+      "description": "Used by `.spectrum-Button:hover`. <br/>Defaults to `var(--spectrum-button-background-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-border-color-hover": {
-      "description": "Used by `.spectrum-Button:hover`. Defaults to `var(--spectrum-button-border-color-hover)`, if not set.",
+      "value": "var(--spectrum-button-border-color-hover)",
+      "description": "Used by `.spectrum-Button:hover`. <br/>Defaults to `var(--spectrum-button-border-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-background-color-disabled": {
-      "description": "Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. Defaults to `var(--spectrum-button-background-color-disabled)`, if not set.",
+      "value": "var(--spectrum-button-background-color-disabled)",
+      "description": "Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. <br/>Defaults to `var(--spectrum-button-background-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-border-color-disabled": {
-      "description": "Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. Defaults to `var(--spectrum-button-border-color-disabled)`, if not set.",
+      "value": "var(--spectrum-button-border-color-disabled)",
+      "description": "Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. <br/>Defaults to `var(--spectrum-button-border-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-content-color-disabled": {
-      "description": "Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. Defaults to `var(--spectrum-button-content-color-disabled)`, if not set.",
+      "value": "var(--spectrum-button-content-color-disabled)",
+      "description": "Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. <br/>Defaults to `var(--spectrum-button-content-color-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-button-icon-margin-block-start": {
-      "description": "Used by `.spectrum-Button .spectrum-Icon`. Defaults to `max(0px, calc(var(--spectrum-button-top-to-icon) - var(--spectrum-button-border-width) + var(--_icon-size-difference, 0px) / 2))`, if not set.",
+      "value": "max(0px, calc(var(--spectrum-button-top-to-icon) - var(--spectrum-button-border-width) + var(--_icon-size-difference, 0px) / 2))",
+      "description": "Used by `.spectrum-Button .spectrum-Icon`. <br/>Defaults to `max(0px, calc(var(--spectrum-button-top-to-icon) - var(--spectrum-button-border-width) + var(--_icon-size-difference, 0px) / 2))`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -314,50 +352,42 @@
   },
   "component": {
     "spectrum-button-sized-height": {
-      "value": "var(--spectrum-component-height-300)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-height`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-height`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-sized-font-size": {
-      "value": "var(--spectrum-font-size-300)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-font-size`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-font-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-sized-edge-to-visual": {
-      "value": "calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--spectrum-button-border-width))",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-edge-to-visual`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-edge-to-visual`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-border-width": {
-      "value": "var(--mod-button-border-width, var(--spectrum-border-width-200))",
-      "description": "Defined in `.spectrum-Button`. Used by `--spectrum-button-sized-edge-to-visual`, `--spectrum-button-sized-edge-to-text`, `.spectrum-Button`, `.spectrum-Button:after`, `.spectrum-Button .spectrum-Icon`, `.spectrum-Button.spectrum-Button--iconOnly`, `.spectrum-Button-label`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `--spectrum-button-sized-edge-to-visual`, `--spectrum-button-sized-edge-to-text`, `.spectrum-Button`, `.spectrum-Button:after`, `.spectrum-Button .spectrum-Icon`, `.spectrum-Button.spectrum-Button--iconOnly`, `.spectrum-Button-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-sized-edge-to-visual-only": {
-      "value": "var(--spectrum-component-pill-edge-to-visual-only-300)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-edge-to-visual-only`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-edge-to-visual-only`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-sized-edge-to-text": {
-      "value": "calc(var(--spectrum-component-pill-edge-to-text-300) - var(--spectrum-button-border-width))",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-edge-to-text`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-edge-to-text`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-sized-padding-label-to-icon": {
-      "value": "var(--spectrum-text-to-visual-300)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-padding-label-to-icon`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-padding-label-to-icon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-sized-top-to-text": {
-      "value": "var(--spectrum-button-top-to-text-extra-large)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-top-to-text`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-top-to-text`.",
       "control": "text",
       "category": "Component"
     },
@@ -367,8 +397,7 @@
       "category": "Component"
     },
     "spectrum-button-sized-bottom-to-text": {
-      "value": "var(--spectrum-button-bottom-to-text-extra-large)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-bottom-to-text`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-bottom-to-text`.",
       "control": "text",
       "category": "Component"
     },
@@ -378,14 +407,12 @@
       "category": "Component"
     },
     "spectrum-button-sized-top-to-icon": {
-      "value": "var(--spectrum-component-top-to-workflow-icon-300)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--spectrum-button-top-to-icon`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--spectrum-button-top-to-icon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-intended-icon-size": {
-      "value": "var(--spectrum-workflow-icon-size-300)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. Used by `--_icon-size-difference`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button--sizeS`, `.spectrum-Button--sizeL`, `.spectrum-Button--sizeXL`. <br/>Used by `--_icon-size-difference`.",
       "control": "text",
       "category": "Component"
     },
@@ -420,193 +447,163 @@
       "category": "Component"
     },
     "spectrum-button-content-color-default": {
-      "value": "var(--system-button-static-black-secondary-content-color-default)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`. Used by `.spectrum-Button`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`. <br/>Used by `.spectrum-Button`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-content-color-hover": {
-      "value": "var(--system-button-static-black-secondary-content-color-hover)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`. Used by `.spectrum-Button:hover`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`. <br/>Used by `.spectrum-Button:hover`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-content-color-down": {
-      "value": "var(--system-button-static-black-secondary-content-color-down)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`. Used by `.spectrum-Button:active`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`. <br/>Used by `.spectrum-Button:active`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-content-color-focus": {
-      "value": "var(--system-button-static-black-secondary-content-color-focus)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`. Used by `.spectrum-Button:focus-visible`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`. <br/>Used by `.spectrum-Button:focus-visible`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-content-color-disabled": {
-      "value": "var(--spectrum-disabled-static-black-content-color)",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`. Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`.",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`. <br/>Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-border-color-default": {
-      "value": "var(--system-button-static-black-secondary-outline-border-color-default)",
-      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. Used by `.spectrum-Button`.",
+      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. <br/>Used by `.spectrum-Button`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-border-color-hover": {
-      "value": "var(--system-button-static-black-secondary-outline-border-color-hover)",
-      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. Used by `.spectrum-Button:hover`.",
+      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. <br/>Used by `.spectrum-Button:hover`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-border-color-down": {
-      "value": "var(--system-button-static-black-secondary-outline-border-color-down)",
-      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. Used by `.spectrum-Button:active`.",
+      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. <br/>Used by `.spectrum-Button:active`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-border-color-focus": {
-      "value": "var(--system-button-static-black-secondary-outline-border-color-focus)",
-      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. Used by `.spectrum-Button:focus-visible`.",
+      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. <br/>Used by `.spectrum-Button:focus-visible`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-background-color-disabled": {
-      "value": "var(--system-button-background-color-disabled)",
-      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--outline, .spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`. Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`.",
+      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--outline, .spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`. <br/>Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-border-color-disabled": {
-      "value": "var(--system-button-border-color-disabled)",
-      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button`. Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`.",
+      "description": "Defined in `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticBlack, .spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack.is-selected, .spectrum-Button.spectrum-Button--staticWhite.is-selected`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet, .spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button`. <br/>Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-background-color-default": {
-      "value": "var(--system-button-static-black-secondary-outline-background-color-default)",
-      "description": "Defined in `.spectrum-Button.is-selected.spectrum-Button--emphasized, .spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--outline, .spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. Used by `.spectrum-Button`.",
+      "description": "Defined in `.spectrum-Button.is-selected.spectrum-Button--emphasized, .spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--outline, .spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. <br/>Used by `.spectrum-Button`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-background-color-hover": {
-      "value": "var(--system-button-static-black-secondary-outline-background-color-hover)",
-      "description": "Defined in `.spectrum-Button.is-selected.spectrum-Button--emphasized, .spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. Used by `.spectrum-Button:hover`.",
+      "description": "Defined in `.spectrum-Button.is-selected.spectrum-Button--emphasized, .spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. <br/>Used by `.spectrum-Button:hover`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-background-color-down": {
-      "value": "var(--system-button-static-black-secondary-outline-background-color-down)",
-      "description": "Defined in `.spectrum-Button.is-selected.spectrum-Button--emphasized, .spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. Used by `.spectrum-Button:active`.",
+      "description": "Defined in `.spectrum-Button.is-selected.spectrum-Button--emphasized, .spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. <br/>Used by `.spectrum-Button:active`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-background-color-focus": {
-      "value": "var(--system-button-static-black-secondary-outline-background-color-focus)",
-      "description": "Defined in `.spectrum-Button.is-selected.spectrum-Button--emphasized, .spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. Used by `.spectrum-Button:focus-visible`.",
+      "description": "Defined in `.spectrum-Button.is-selected.spectrum-Button--emphasized, .spectrum-Button.spectrum-Button--accent`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--negative`, `.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--primary`, `.spectrum-Button.spectrum-Button--quiet`, `.spectrum-Button`, `.spectrum-Button.is-selected`, `.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary`, `.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline`. <br/>Used by `.spectrum-Button:focus-visible`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-focus-indicator-color": {
-      "value": "var(--mod-button-focus-ring-color, var(--spectrum-focus-indicator-color))",
-      "description": "Defined in `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button`. Used by `.spectrum-Button.is-focused:after, .spectrum-Button:focus-visible:after`.",
+      "description": "Defined in `.spectrum-Button.spectrum-Button--staticWhite`, `.spectrum-Button.spectrum-Button--staticBlack`, `.spectrum-Button`. <br/>Used by `.spectrum-Button.is-focused:after, .spectrum-Button:focus-visible:after`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-button-height": {
-      "value": "var(--mod-button-height, var(--spectrum-button-sized-height))",
-      "description": "Defined in `.spectrum-Button`. Used by `--spectrum-button-min-width`, `--spectrum-button-border-radius`, `.spectrum-Button`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `--spectrum-button-min-width`, `--spectrum-button-border-radius`, `.spectrum-Button`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-min-width": {
-      "value": "var(--mod-button-min-width, calc(var(--spectrum-button-height) * var(--spectrum-button-minimum-width-multiplier)))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-minimum-width-multiplier": {
+      "value": "2.25",
       "description": "Used by `--spectrum-button-min-width`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-line-height": {
-      "value": "var(--mod-button-line-height, 1.2)",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button-label`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-font-size": {
-      "value": "var(--mod-button-font-size, var(--spectrum-button-sized-font-size))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-padding-label-to-icon": {
-      "value": "var(--mod-button-padding-label-to-icon, var(--spectrum-button-sized-padding-label-to-icon))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-edge-to-visual": {
-      "value": "var(--mod-button-edge-to-visual, var(--spectrum-button-sized-edge-to-visual))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button .spectrum-Icon`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button .spectrum-Icon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-edge-to-visual-only": {
-      "value": "var(--mod-button-edge-to-visual-only, var(--spectrum-button-sized-edge-to-visual-only))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button.spectrum-Button--iconOnly`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button.spectrum-Button--iconOnly`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-edge-to-text": {
-      "value": "var(--mod-button-edge-to-text, var(--spectrum-button-sized-edge-to-text))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button`, `.spectrum-Button .spectrum-Icon`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button`, `.spectrum-Button .spectrum-Icon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-top-to-text": {
-      "value": "var(--mod-button-top-to-text, var(--spectrum-button-sized-top-to-text))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button-label`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-bottom-to-text": {
-      "value": "var(--mod-button-bottom-to-text, var(--spectrum-button-sized-bottom-to-text))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button-label`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button-label`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-top-to-icon": {
-      "value": "var(--mod-button-top-to-icon, var(--spectrum-button-sized-top-to-icon))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button .spectrum-Icon`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button .spectrum-Icon`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-focus-ring-thickness": {
-      "value": "var(--mod-button-focus-ring-thickness, var(--spectrum-focus-indicator-thickness))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button.is-focused:after, .spectrum-Button:focus-visible:after`, `.spectrum-Button:focus-visible:after`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button.is-focused:after, .spectrum-Button:focus-visible:after`, `.spectrum-Button:focus-visible:after`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-animation-duration": {
-      "value": "0s",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button`, `.spectrum-Button:after`, `.spectrum-Button .spectrum-Button-label, .spectrum-Button .spectrum-Icon`, `.spectrum-Button .spectrum-ProgressCircle`, `.spectrum-Button.is-pending .spectrum-Button-label, .spectrum-Button.is-pending .spectrum-Icon, .spectrum-Button[pending] .spectrum-Button-label, .spectrum-Button[pending] .spectrum-Icon`, `.spectrum-Button.is-pending .spectrum-ProgressCircle, .spectrum-Button[pending] .spectrum-ProgressCircle`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button`, `.spectrum-Button:after`, `.spectrum-Button .spectrum-Button-label, .spectrum-Button .spectrum-Icon`, `.spectrum-Button .spectrum-ProgressCircle`, `.spectrum-Button.is-pending .spectrum-Button-label, .spectrum-Button.is-pending .spectrum-Icon, .spectrum-Button[pending] .spectrum-Button-label, .spectrum-Button[pending] .spectrum-Icon`, `.spectrum-Button.is-pending .spectrum-ProgressCircle, .spectrum-Button[pending] .spectrum-ProgressCircle`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-focus-ring-gap": {
-      "value": "var(--mod-focus-indicator-gap, var(--mod-button-focus-ring-gap, var(--spectrum-focus-indicator-gap)))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button:after`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button:after`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-button-border-radius": {
-      "value": "var(--mod-button-border-radius, calc(var(--spectrum-button-height) / 2))",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button`, `.spectrum-Button:after`.",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button`, `.spectrum-Button:after`.",
       "control": "text",
       "category": "Component"
     }
@@ -618,6 +615,7 @@
       "category": "Global"
     },
     "spectrum-line-height-100": {
+      "value": "1.3",
       "description": "Used by `.spectrum-Button`.",
       "control": "text",
       "category": "Global"
@@ -628,571 +626,685 @@
       "category": "Global"
     },
     "spectrum-focus-indicator-gap": {
+      "value": "2px",
       "description": "Used by `.spectrum-Button:after`, `.spectrum-Button:focus-visible:after`, `--spectrum-button-focus-ring-gap`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-50": {
+      "value": "light-dark(rgb(248, 248, 248), rgb(27, 27, 27))",
       "description": "Used by `--system-button-background-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
       "description": "Used by `--system-button-background-color-hover`, `--system-button-background-color-focus`, `--system-button-primary-outline-background-color-hover`, `--system-button-primary-outline-background-color-down`, `--system-button-primary-outline-background-color-focus`, `--system-button-secondary-background-color-default`, `--system-button-secondary-outline-background-color-hover`, `--system-button-secondary-outline-background-color-down`, `--system-button-secondary-outline-background-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
       "description": "Used by `--system-button-background-color-down`, `--system-button-secondary-background-color-hover`, `--system-button-secondary-background-color-down`, `--system-button-secondary-background-color-focus`, `--spectrum-button-background-color-hover`, `--spectrum-button-background-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-400": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
       "description": "Used by `--system-button-border-color-default`, `--system-button-secondary-outline-border-color-down`, `--spectrum-button-background-color-down`, `--spectrum-button-border-color-hover`, `--spectrum-button-border-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-500": {
+      "value": "light-dark(rgb(143, 143, 143), rgb(109, 109, 109))",
       "description": "Used by `--system-button-border-color-hover`, `--system-button-border-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-600": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
       "description": "Used by `--system-button-border-color-down`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
       "description": "Used by `--system-button-border-color-disabled`, `--spectrum-button-border-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-subdued-background-color-default": {
+      "value": "var(--spectrum-gray-500)",
       "description": "Used by `--system-button-selected-background-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-subdued-background-color-hover": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `--system-button-selected-background-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-subdued-background-color-down": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `--system-button-selected-background-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-subdued-background-color-key-focus": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `--system-button-selected-background-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
       "description": "Used by `--system-button-primary-content-color-default`, `--system-button-primary-content-color-hover`, `--system-button-primary-content-color-down`, `--system-button-primary-content-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-300": {
+      "value": "light-dark(rgb(218, 218, 218), rgb(57, 57, 57))",
       "description": "Used by `--system-button-secondary-outline-border-color-default`, `--spectrum-button-border-color-default`, `--spectrum-button-background-color-down`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-800": {
+      "value": "light-dark(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85))",
       "description": "Used by `--system-button-static-white-background-color-default`, `--system-button-static-white-outline-content-color-default`, `--system-button-static-white-outline-border-color-default`, `--system-button-static-white-secondary-content-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-900": {
+      "value": "light-dark(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94))",
       "description": "Used by `--system-button-static-white-background-color-hover`, `--system-button-static-white-background-color-down`, `--system-button-static-white-background-color-focus`, `--system-button-static-white-outline-content-color-hover`, `--system-button-static-white-outline-content-color-down`, `--system-button-static-white-outline-content-color-focus`, `--system-button-static-white-outline-border-color-hover`, `--system-button-static-white-outline-border-color-down`, `--system-button-static-white-outline-border-color-focus`, `--system-button-static-white-secondary-content-color-hover`, `--system-button-static-white-secondary-content-color-down`, `--system-button-static-white-secondary-content-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-black": {
+      "value": "rgb(0, 0, 0)",
       "description": "Used by `--system-button-static-white-content-color-default`, `--system-button-static-white-content-color-hover`, `--system-button-static-white-content-color-down`, `--system-button-static-white-content-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-25": {
+      "value": "light-dark(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0))",
       "description": "Used by `--system-button-static-white-outline-background-color-default`, `--system-button-static-white-secondary-outline-background-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-100": {
+      "value": "light-dark(rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.11))",
       "description": "Used by `--system-button-static-white-outline-background-color-hover`, `--system-button-static-white-outline-background-color-down`, `--system-button-static-white-outline-background-color-focus`, `--system-button-static-white-secondary-background-color-default`, `--system-button-static-white-secondary-outline-background-color-hover`, `--system-button-static-white-secondary-outline-background-color-down`, `--system-button-static-white-secondary-outline-background-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-200": {
+      "value": "light-dark(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14))",
       "description": "Used by `--system-button-static-white-secondary-background-color-hover`, `--system-button-static-white-secondary-background-color-down`, `--system-button-static-white-secondary-background-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-300": {
+      "value": "light-dark(rgba(255, 255, 255, 0.17), rgba(255, 255, 255, 0.17))",
       "description": "Used by `--system-button-static-white-secondary-outline-border-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-400": {
+      "value": "light-dark(rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.21))",
       "description": "Used by `--system-button-static-white-secondary-outline-border-color-hover`, `--system-button-static-white-secondary-outline-border-color-down`, `--system-button-static-white-secondary-outline-border-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-black-800": {
+      "value": "light-dark(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84))",
       "description": "Used by `--system-button-static-black-background-color-default`, `--system-button-static-black-outline-content-color-default`, `--system-button-static-black-outline-border-color-default`, `--system-button-static-black-secondary-content-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-black-900": {
+      "value": "light-dark(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.93))",
       "description": "Used by `--system-button-static-black-background-color-hover`, `--system-button-static-black-background-color-down`, `--system-button-static-black-background-color-focus`, `--system-button-static-black-outline-content-color-hover`, `--system-button-static-black-outline-content-color-down`, `--system-button-static-black-outline-content-color-focus`, `--system-button-static-black-outline-border-color-hover`, `--system-button-static-black-outline-border-color-down`, `--system-button-static-black-outline-border-color-focus`, `--system-button-static-black-secondary-content-color-hover`, `--system-button-static-black-secondary-content-color-down`, `--system-button-static-black-secondary-content-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-white": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
       "description": "Used by `--system-button-static-black-content-color-default`, `--system-button-static-black-content-color-hover`, `--system-button-static-black-content-color-down`, `--system-button-static-black-content-color-focus`, `--spectrum-button-content-color-default`, `--spectrum-button-content-color-hover`, `--spectrum-button-content-color-down`, `--spectrum-button-content-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-black-25": {
+      "value": "light-dark(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))",
       "description": "Used by `--system-button-static-black-outline-background-color-default`, `--system-button-static-black-secondary-outline-background-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-black-100": {
+      "value": "light-dark(rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.09))",
       "description": "Used by `--system-button-static-black-outline-background-color-hover`, `--system-button-static-black-outline-background-color-down`, `--system-button-static-black-outline-background-color-focus`, `--system-button-static-black-secondary-background-color-default`, `--system-button-static-black-secondary-outline-background-color-hover`, `--system-button-static-black-secondary-outline-background-color-down`, `--system-button-static-black-secondary-outline-background-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-black-200": {
+      "value": "light-dark(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12))",
       "description": "Used by `--system-button-static-black-secondary-background-color-hover`, `--system-button-static-black-secondary-background-color-down`, `--system-button-static-black-secondary-background-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-black-300": {
+      "value": "light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15))",
       "description": "Used by `--system-button-static-black-secondary-outline-border-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-black-400": {
+      "value": "light-dark(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22))",
       "description": "Used by `--system-button-static-black-secondary-outline-border-color-hover`, `--system-button-static-black-secondary-outline-border-color-down`, `--system-button-static-black-secondary-outline-border-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-100": {
+      "value": "32px",
       "description": "Used by `--spectrum-button-sized-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-100": {
+      "value": "14px",
       "description": "Used by `--spectrum-button-sized-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-visual-100": {
+      "value": "14px",
       "description": "Used by `--spectrum-button-sized-edge-to-visual`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-visual-only-100": {
+      "value": "6px",
       "description": "Used by `--spectrum-button-sized-edge-to-visual-only`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-text-100": {
+      "value": "16px",
       "description": "Used by `--spectrum-button-sized-edge-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-visual-100": {
+      "value": "6px",
       "description": "Used by `--spectrum-button-sized-padding-label-to-icon`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-workflow-icon-100": {
+      "value": "6px",
       "description": "Used by `--spectrum-button-sized-top-to-icon`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-workflow-icon-size-100": {
+      "value": "20px",
       "description": "Used by `--spectrum-button-intended-icon-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-75": {
+      "value": "24px",
       "description": "Used by `--spectrum-button-sized-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-75": {
+      "value": "12px",
       "description": "Used by `--spectrum-button-sized-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-visual-75": {
+      "value": "11px",
       "description": "Used by `--spectrum-button-sized-edge-to-visual`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-visual-only-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-button-sized-edge-to-visual-only`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-text-75": {
+      "value": "13px",
       "description": "Used by `--spectrum-button-sized-edge-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-visual-75": {
+      "value": "5px",
       "description": "Used by `--spectrum-button-sized-padding-label-to-icon`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-workflow-icon-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-button-sized-top-to-icon`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-workflow-icon-size-75": {
+      "value": "16px",
       "description": "Used by `--spectrum-button-intended-icon-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-200": {
+      "value": "40px",
       "description": "Used by `--spectrum-button-sized-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-200": {
+      "value": "16px",
       "description": "Used by `--spectrum-button-sized-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-visual-200": {
+      "value": "18px",
       "description": "Used by `--spectrum-button-sized-edge-to-visual`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-visual-only-200": {
+      "value": "9px",
       "description": "Used by `--spectrum-button-sized-edge-to-visual-only`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-text-200": {
+      "value": "20px",
       "description": "Used by `--spectrum-button-sized-edge-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-visual-200": {
+      "value": "7px",
       "description": "Used by `--spectrum-button-sized-padding-label-to-icon`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-workflow-icon-200": {
+      "value": "9px",
       "description": "Used by `--spectrum-button-sized-top-to-icon`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-workflow-icon-size-200": {
+      "value": "22px",
       "description": "Used by `--spectrum-button-intended-icon-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-300": {
+      "value": "48px",
       "description": "Used by `--spectrum-button-sized-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-font-size-300": {
+      "value": "18px",
       "description": "Used by `--spectrum-button-sized-font-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-visual-300": {
+      "value": "20px",
       "description": "Used by `--spectrum-button-sized-edge-to-visual`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-visual-only-300": {
+      "value": "11px",
       "description": "Used by `--spectrum-button-sized-edge-to-visual-only`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-text-300": {
+      "value": "23px",
       "description": "Used by `--spectrum-button-sized-edge-to-text`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-text-to-visual-300": {
+      "value": "8px",
       "description": "Used by `--spectrum-button-sized-padding-label-to-icon`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-top-to-workflow-icon-300": {
+      "value": "11px",
       "description": "Used by `--spectrum-button-sized-top-to-icon`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-workflow-icon-size-300": {
+      "value": "26px",
       "description": "Used by `--spectrum-button-intended-icon-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-button-content-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-button-content-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-button-content-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-button-content-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `--spectrum-button-content-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
       "description": "Used by `--spectrum-button-background-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-background-color-default": {
+      "value": "var(--spectrum-accent-color-800)",
       "description": "Used by `--spectrum-button-background-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-background-color-hover": {
+      "value": "var(--spectrum-accent-color-700)",
       "description": "Used by `--spectrum-button-background-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-background-color-down": {
+      "value": "var(--spectrum-accent-color-700)",
       "description": "Used by `--spectrum-button-background-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-background-color-key-focus": {
+      "value": "var(--spectrum-accent-color-700)",
       "description": "Used by `--spectrum-button-background-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-color-200": {
+      "value": "var(--spectrum-blue-200)",
       "description": "Used by `--spectrum-button-background-color-hover`, `--spectrum-button-background-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-color-300": {
+      "value": "var(--spectrum-blue-300)",
       "description": "Used by `--spectrum-button-background-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-color-900": {
+      "value": "var(--spectrum-blue-900)",
       "description": "Used by `--spectrum-button-border-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-color-1000": {
+      "value": "var(--spectrum-blue-1000)",
       "description": "Used by `--spectrum-button-border-color-hover`, `--spectrum-button-border-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-color-1100": {
+      "value": "var(--spectrum-blue-1100)",
       "description": "Used by `--spectrum-button-border-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-content-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
       "description": "Used by `--spectrum-button-content-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-content-color-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
       "description": "Used by `--spectrum-button-content-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-content-color-down": {
+      "value": "var(--spectrum-accent-color-1000)",
       "description": "Used by `--spectrum-button-content-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-content-color-key-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
       "description": "Used by `--spectrum-button-content-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-background-color-default": {
+      "value": "var(--spectrum-negative-color-800)",
       "description": "Used by `--spectrum-button-background-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-background-color-hover": {
+      "value": "var(--spectrum-negative-color-700)",
       "description": "Used by `--spectrum-button-background-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-background-color-down": {
+      "value": "var(--spectrum-negative-color-700)",
       "description": "Used by `--spectrum-button-background-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-background-color-key-focus": {
+      "value": "var(--spectrum-negative-color-700)",
       "description": "Used by `--spectrum-button-background-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-color-200": {
+      "value": "var(--spectrum-red-200)",
       "description": "Used by `--spectrum-button-background-color-hover`, `--spectrum-button-background-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-color-300": {
+      "value": "var(--spectrum-red-300)",
       "description": "Used by `--spectrum-button-background-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-color-900": {
+      "value": "var(--spectrum-red-900)",
       "description": "Used by `--spectrum-button-border-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-color-1000": {
+      "value": "var(--spectrum-red-1000)",
       "description": "Used by `--spectrum-button-border-color-hover`, `--spectrum-button-border-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-color-1100": {
+      "value": "var(--spectrum-red-1100)",
       "description": "Used by `--spectrum-button-border-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-content-color-default": {
+      "value": "var(--spectrum-negative-color-900)",
       "description": "Used by `--spectrum-button-content-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-content-color-hover": {
+      "value": "var(--spectrum-negative-color-1000)",
       "description": "Used by `--spectrum-button-content-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-content-color-down": {
+      "value": "var(--spectrum-negative-color-1000)",
       "description": "Used by `--spectrum-button-content-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-negative-content-color-key-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
       "description": "Used by `--spectrum-button-content-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-background-color-default": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-button-background-color-default`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-background-color-hover": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-button-background-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-background-color-down": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-button-background-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-background-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-button-background-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
       "description": "Used by `--spectrum-button-border-color-default`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-900": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
       "description": "Used by `--spectrum-button-border-color-hover`, `--spectrum-button-border-color-down`, `--spectrum-button-border-color-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-disabled-static-white-content-color": {
+      "value": "var(--spectrum-transparent-white-400)",
       "description": "Used by `--spectrum-button-content-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-static-white-background-color": {
+      "value": "var(--spectrum-transparent-white-100)",
       "description": "Used by `--spectrum-button-background-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-static-white-focus-indicator-color": {
+      "value": "var(--spectrum-white)",
       "description": "Used by `--spectrum-button-focus-indicator-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-static-white-border-color": {
+      "value": "var(--spectrum-transparent-white-300)",
       "description": "Used by `--spectrum-button-border-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-static-black-content-color": {
+      "value": "var(--spectrum-transparent-black-400)",
       "description": "Used by `--spectrum-button-content-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-static-black-background-color": {
+      "value": "var(--spectrum-transparent-black-100)",
       "description": "Used by `--spectrum-button-background-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-static-black-focus-indicator-color": {
+      "value": "rgb(0, 0, 0)",
       "description": "Used by `--spectrum-button-focus-indicator-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-static-black-border-color": {
+      "value": "var(--spectrum-transparent-black-300)",
       "description": "Used by `--spectrum-button-border-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-focus-indicator-thickness": {
+      "value": "2px",
       "description": "Used by `--spectrum-button-focus-ring-thickness`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
       "description": "Used by `--spectrum-button-focus-indicator-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-border-width-200": {
+      "value": "2px",
       "description": "Used by `--spectrum-button-border-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-bold-font-weight": {
+      "value": "700",
       "description": "Used by `.spectrum-Button`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-icon-block-size": {
-      "description": "Used by `--_icon-size-difference`. Defaults to `var(--spectrum-button-intended-icon-size)`, if not set.",
+      "value": "var(--spectrum-button-intended-icon-size)",
+      "description": "Used by `--_icon-size-difference`. <br/>Defaults to `var(--spectrum-button-intended-icon-size)`, if not set.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-progress-circle-thickness-medium": {
+      "value": "3px",
       "description": "Used by `--mod-progress-circle-thickness`.",
       "control": "text",
       "category": "Global"
@@ -1200,513 +1312,411 @@
   },
   "system-theme": {
     "system-button-background-color-default": {
-      "value": "var(--spectrum-gray-50)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-background-color-hover": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-background-color-down": {
-      "value": "var(--spectrum-gray-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-background-color-focus": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-border-color-default": {
-      "value": "var(--spectrum-gray-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-default`.",
       "control": "color"
     },
     "system-button-border-color-hover": {
-      "value": "var(--spectrum-gray-500)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-hover`.",
       "control": "color"
     },
     "system-button-border-color-down": {
-      "value": "var(--spectrum-gray-600)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-down`.",
       "control": "color"
     },
     "system-button-border-color-focus": {
-      "value": "var(--spectrum-gray-500)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-focus`.",
       "control": "color"
     },
     "system-button-background-color-disabled": {
-      "value": "transparent",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-disabled`.",
       "control": "color"
     },
     "system-button-border-color-disabled": {
-      "value": "var(--spectrum-disabled-border-color)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-disabled`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-disabled`.",
       "control": "color"
     },
     "system-button-selected-background-color-default": {
-      "value": "var(--spectrum-neutral-subdued-background-color-default)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-selected-background-color-hover": {
-      "value": "var(--spectrum-neutral-subdued-background-color-hover)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-selected-background-color-down": {
-      "value": "var(--spectrum-neutral-subdued-background-color-down)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-selected-background-color-focus": {
-      "value": "var(--spectrum-neutral-subdued-background-color-key-focus)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-primary-content-color-default": {
-      "value": "var(--spectrum-gray-25)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-default`.",
       "control": "color"
     },
     "system-button-primary-content-color-hover": {
-      "value": "var(--spectrum-gray-25)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-hover`.",
       "control": "color"
     },
     "system-button-primary-content-color-down": {
-      "value": "var(--spectrum-gray-25)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-down`.",
       "control": "color"
     },
     "system-button-primary-content-color-focus": {
-      "value": "var(--spectrum-gray-25)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-focus`.",
       "control": "color"
     },
     "system-button-primary-outline-background-color-hover": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-primary-outline-background-color-down": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-primary-outline-background-color-focus": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-secondary-background-color-default": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-secondary-background-color-hover": {
-      "value": "var(--spectrum-gray-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-secondary-background-color-down": {
-      "value": "var(--spectrum-gray-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-secondary-background-color-focus": {
-      "value": "var(--spectrum-gray-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-secondary-outline-background-color-hover": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-secondary-outline-background-color-down": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-secondary-outline-background-color-focus": {
-      "value": "var(--spectrum-gray-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-secondary-outline-border-color-default": {
-      "value": "var(--spectrum-gray-300)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-default`.",
       "control": "color"
     },
     "system-button-secondary-outline-border-color-down": {
-      "value": "var(--spectrum-gray-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-down`.",
       "control": "color"
     },
     "system-button-static-white-background-color-default": {
-      "value": "var(--spectrum-transparent-white-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-static-white-background-color-hover": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-background-color-down": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-static-white-background-color-focus": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-static-white-content-color-default": {
-      "value": "var(--spectrum-black)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-default`.",
       "control": "color"
     },
     "system-button-static-white-content-color-hover": {
-      "value": "var(--spectrum-black)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-content-color-down": {
-      "value": "var(--spectrum-black)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-down`.",
       "control": "color"
     },
     "system-button-static-white-content-color-focus": {
-      "value": "var(--spectrum-black)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-focus`.",
       "control": "color"
     },
     "system-button-static-white-outline-background-color-default": {
-      "value": "var(--spectrum-transparent-white-25)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-static-white-outline-background-color-hover": {
-      "value": "var(--spectrum-transparent-white-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-outline-background-color-down": {
-      "value": "var(--spectrum-transparent-white-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-static-white-outline-background-color-focus": {
-      "value": "var(--spectrum-transparent-white-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-static-white-outline-content-color-default": {
-      "value": "var(--spectrum-transparent-white-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-default`.",
       "control": "color"
     },
     "system-button-static-white-outline-content-color-hover": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-outline-content-color-down": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-down`.",
       "control": "color"
     },
     "system-button-static-white-outline-content-color-focus": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-focus`.",
       "control": "color"
     },
     "system-button-static-white-outline-border-color-default": {
-      "value": "var(--spectrum-transparent-white-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-default`.",
       "control": "color"
     },
     "system-button-static-white-outline-border-color-hover": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-outline-border-color-down": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-down`.",
       "control": "color"
     },
     "system-button-static-white-outline-border-color-focus": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-focus`.",
       "control": "color"
     },
     "system-button-static-white-secondary-background-color-default": {
-      "value": "var(--spectrum-transparent-white-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-static-white-secondary-background-color-hover": {
-      "value": "var(--spectrum-transparent-white-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-secondary-background-color-down": {
-      "value": "var(--spectrum-transparent-white-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-static-white-secondary-background-color-focus": {
-      "value": "var(--spectrum-transparent-white-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-static-white-secondary-content-color-default": {
-      "value": "var(--spectrum-transparent-white-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-default`.",
       "control": "color"
     },
     "system-button-static-white-secondary-content-color-hover": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-secondary-content-color-down": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-down`.",
       "control": "color"
     },
     "system-button-static-white-secondary-content-color-focus": {
-      "value": "var(--spectrum-transparent-white-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-focus`.",
       "control": "color"
     },
     "system-button-static-white-secondary-outline-border-color-default": {
-      "value": "var(--spectrum-transparent-white-300)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-default`.",
       "control": "color"
     },
     "system-button-static-white-secondary-outline-border-color-hover": {
-      "value": "var(--spectrum-transparent-white-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-secondary-outline-border-color-down": {
-      "value": "var(--spectrum-transparent-white-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-down`.",
       "control": "color"
     },
     "system-button-static-white-secondary-outline-border-color-focus": {
-      "value": "var(--spectrum-transparent-white-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-focus`.",
       "control": "color"
     },
     "system-button-static-white-secondary-outline-background-color-default": {
-      "value": "var(--spectrum-transparent-white-25)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-static-white-secondary-outline-background-color-hover": {
-      "value": "var(--spectrum-transparent-white-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-static-white-secondary-outline-background-color-down": {
-      "value": "var(--spectrum-transparent-white-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-static-white-secondary-outline-background-color-focus": {
-      "value": "var(--spectrum-transparent-white-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-background-color-default": {
-      "value": "var(--spectrum-transparent-black-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-static-black-background-color-hover": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-background-color-down": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-static-black-background-color-focus": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-content-color-default": {
-      "value": "var(--spectrum-white)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-default`.",
       "control": "color"
     },
     "system-button-static-black-content-color-hover": {
-      "value": "var(--spectrum-white)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-content-color-down": {
-      "value": "var(--spectrum-white)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-down`.",
       "control": "color"
     },
     "system-button-static-black-content-color-focus": {
-      "value": "var(--spectrum-white)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-outline-background-color-default": {
-      "value": "var(--spectrum-transparent-black-25)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-static-black-outline-background-color-hover": {
-      "value": "var(--spectrum-transparent-black-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-outline-background-color-down": {
-      "value": "var(--spectrum-transparent-black-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-static-black-outline-background-color-focus": {
-      "value": "var(--spectrum-transparent-black-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-outline-content-color-default": {
-      "value": "var(--spectrum-transparent-black-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-default`.",
       "control": "color"
     },
     "system-button-static-black-outline-content-color-hover": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-outline-content-color-down": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-down`.",
       "control": "color"
     },
     "system-button-static-black-outline-content-color-focus": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-outline-border-color-default": {
-      "value": "var(--spectrum-transparent-black-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-default`.",
       "control": "color"
     },
     "system-button-static-black-outline-border-color-hover": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-outline-border-color-down": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-down`.",
       "control": "color"
     },
     "system-button-static-black-outline-border-color-focus": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-secondary-background-color-default": {
-      "value": "var(--spectrum-transparent-black-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-static-black-secondary-background-color-hover": {
-      "value": "var(--spectrum-transparent-black-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-secondary-background-color-down": {
-      "value": "var(--spectrum-transparent-black-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-static-black-secondary-background-color-focus": {
-      "value": "var(--spectrum-transparent-black-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-secondary-content-color-default": {
-      "value": "var(--spectrum-transparent-black-800)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-default`.",
       "control": "color"
     },
     "system-button-static-black-secondary-content-color-hover": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-secondary-content-color-down": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-down`.",
       "control": "color"
     },
     "system-button-static-black-secondary-content-color-focus": {
-      "value": "var(--spectrum-transparent-black-900)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-content-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-content-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-secondary-outline-border-color-default": {
-      "value": "var(--spectrum-transparent-black-300)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-default`.",
       "control": "color"
     },
     "system-button-static-black-secondary-outline-border-color-hover": {
-      "value": "var(--spectrum-transparent-black-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-secondary-outline-border-color-down": {
-      "value": "var(--spectrum-transparent-black-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-down`.",
       "control": "color"
     },
     "system-button-static-black-secondary-outline-border-color-focus": {
-      "value": "var(--spectrum-transparent-black-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-border-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-border-color-focus`.",
       "control": "color"
     },
     "system-button-static-black-secondary-outline-background-color-default": {
-      "value": "var(--spectrum-transparent-black-25)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-default`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-default`.",
       "control": "color"
     },
     "system-button-static-black-secondary-outline-background-color-hover": {
-      "value": "var(--spectrum-transparent-black-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-hover`.",
       "control": "color"
     },
     "system-button-static-black-secondary-outline-background-color-down": {
-      "value": "var(--spectrum-transparent-black-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-down`.",
       "control": "color"
     },
     "system-button-static-black-secondary-outline-background-color-focus": {
-      "value": "var(--spectrum-transparent-black-100)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-button-background-color-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-button-background-color-focus`.",
       "control": "color"
     }
   },
@@ -1726,78 +1736,78 @@
   },
   "high-contrast": {
     "highcontrast-button-background-color-default": {
-      "value": "ButtonText",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button`. Defaults to `var(--mod-button-background-color-default, var(--spectrum-button-background-color-default))`, if not set.",
+      "value": "var(--mod-button-background-color-default, var(--spectrum-button-background-color-default))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button`. <br/>Defaults to `var(--mod-button-background-color-default, var(--spectrum-button-background-color-default))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-border-color-default": {
-      "value": "ButtonText",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button`. Defaults to `var(--mod-button-border-color-default, var(--spectrum-button-border-color-default))`, if not set.",
+      "value": "var(--mod-button-border-color-default, var(--spectrum-button-border-color-default))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button`. <br/>Defaults to `var(--mod-button-border-color-default, var(--spectrum-button-border-color-default))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-content-color-default": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button`. Defaults to `var(--mod-button-content-color-default, var(--spectrum-button-content-color-default, inherit))`, if not set.",
+      "value": "var(--mod-button-content-color-default, var(--spectrum-button-content-color-default, inherit))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button`. <br/>Defaults to `var(--mod-button-content-color-default, var(--spectrum-button-content-color-default, inherit))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-background-color-focus": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:focus-visible`. Defaults to `var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus))`, if not set.",
+      "value": "var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:focus-visible`. <br/>Defaults to `var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-border-color-focus": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:focus-visible`. Defaults to `var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus))`, if not set.",
+      "value": "var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:focus-visible`. <br/>Defaults to `var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-content-color-focus": {
-      "value": "HighlightText",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:focus-visible`. Defaults to `var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus))`, if not set.",
+      "value": "var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:focus-visible`. <br/>Defaults to `var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-background-color-down": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:active`. Defaults to `var(--mod-button-background-color-down, var(--spectrum-button-background-color-down))`, if not set.",
+      "value": "var(--mod-button-background-color-down, var(--spectrum-button-background-color-down))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:active`. <br/>Defaults to `var(--mod-button-background-color-down, var(--spectrum-button-background-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-border-color-down": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:active`. Defaults to `var(--mod-button-border-color-down, var(--spectrum-button-border-color-down))`, if not set.",
+      "value": "var(--mod-button-border-color-down, var(--spectrum-button-border-color-down))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:active`. <br/>Defaults to `var(--mod-button-border-color-down, var(--spectrum-button-border-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-content-color-down": {
-      "value": "HighlightText",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:active`. Defaults to `var(--mod-button-content-color-down, var(--spectrum-button-content-color-down))`, if not set.",
+      "value": "var(--mod-button-content-color-down, var(--spectrum-button-content-color-down))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:active`. <br/>Defaults to `var(--mod-button-content-color-down, var(--spectrum-button-content-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-background-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:hover`. Defaults to `var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover))`, if not set.",
+      "value": "var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:hover`. <br/>Defaults to `var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-border-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:hover`. Defaults to `var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover))`, if not set.",
+      "value": "var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:hover`. <br/>Defaults to `var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-content-color-hover": {
-      "value": "HighlightText",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button:hover`. Defaults to `var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover))`, if not set.",
+      "value": "var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button:hover`. <br/>Defaults to `var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-background-color-disabled": {
-      "value": "ButtonFace",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. Defaults to `var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled))`, if not set.",
+      "value": "var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--accent.spectrum-Button--fill`. <br/>Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. <br/>Defaults to `var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-border-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Button`. Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. Defaults to `var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled))`, if not set.",
+      "value": "var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled))",
+      "description": "Defined in `.spectrum-Button`. <br/>Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. <br/>Defaults to `var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled))`, if not set.",
       "control": "color"
     },
     "highcontrast-button-content-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--accent`. Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. Defaults to `var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled))`, if not set.",
+      "value": "var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled))",
+      "description": "Defined in `.spectrum-Button`, `.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--accent`. <br/>Used by `.spectrum-Button.is-disabled, .spectrum-Button.is-pending, .spectrum-Button:disabled, .spectrum-Button[pending]`. <br/>Defaults to `var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled))`, if not set.",
       "control": "color"
     }
   }

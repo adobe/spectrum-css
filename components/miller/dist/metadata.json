@@ -7,7 +7,8 @@
   ],
   "modifiers": {
     "mod-millercolumns-padding": {
-      "description": "Used by `.spectrum-MillerColumns`. Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "value": "8px",
+      "description": "Used by `.spectrum-MillerColumns`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -17,12 +18,14 @@
       "category": "Modifier"
     },
     "mod-millercolumns-margin-inline-end": {
-      "description": "Used by `.spectrum-MillerColumns-item`. Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "value": "8px",
+      "description": "Used by `.spectrum-MillerColumns-item`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-millercolumns-margin-inline-start": {
-      "description": "Used by `.spectrum-MillerColumns-item:first-child`. Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "value": "8px",
+      "description": "Used by `.spectrum-MillerColumns-item:first-child`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     }
@@ -30,6 +33,7 @@
   "component": {},
   "global": {
     "spectrum-spacing-100": {
+      "value": "8px",
       "description": "Used by `.spectrum-MillerColumns`, `.spectrum-MillerColumns-item`, `.spectrum-MillerColumns-item:first-child`.",
       "control": "text",
       "category": "Global"

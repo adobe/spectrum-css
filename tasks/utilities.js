@@ -224,7 +224,7 @@ function extractProperties(content, meta = {}) {
 			descriptions.push(`Defaults to \`${defaultValue}\`, if not set.`);
 		}
 
-		return { value, description: descriptions.join(" ")?.trim(), control };
+		return { value: defaultValue, description: descriptions.join(" <br/>")?.trim(), control };
 	}
 
 	// Process CSS content through the valuesParser an postcss to capture

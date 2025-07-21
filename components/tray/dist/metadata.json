@@ -23,7 +23,8 @@
       "category": "Modifier"
     },
     "mod-tray-entry-animation-duration": {
-      "description": "Used by `--spectrum-tray-entry-animation-duration`. Defaults to `var(--spectrum-animation-duration-500)`, if not set.",
+      "value": "var(--spectrum-animation-duration-500)",
+      "description": "Used by `--spectrum-tray-entry-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-500)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -33,27 +34,32 @@
       "category": "Modifier"
     },
     "mod-tray-exit-animation-duration": {
-      "description": "Used by `--spectrum-tray-exit-animation-duration`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Used by `--spectrum-tray-exit-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-tray-corner-radius": {
-      "description": "Used by `--spectrum-tray-corner-radius`. Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "value": "8px",
+      "description": "Used by `--spectrum-tray-corner-radius`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-tray-background-color": {
-      "description": "Used by `--spectrum-tray-background-color`. Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "value": "var(--spectrum-gray-75)",
+      "description": "Used by `--spectrum-tray-background-color`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-tray-top-to-content-area": {
-      "description": "Used by `.spectrum-Tray`. Defaults to `var(--spectrum-tray-top-to-content-area)`, if not set.",
+      "value": "4px",
+      "description": "Used by `.spectrum-Tray`. <br/>Defaults to `var(--spectrum-tray-top-to-content-area)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-tray-bottom-to-content-area": {
-      "description": "Used by `.spectrum-Tray`. Defaults to `var(--spectrum-tray-top-to-content-area)`, if not set.",
+      "value": "4px",
+      "description": "Used by `.spectrum-Tray`. <br/>Defaults to `var(--spectrum-tray-top-to-content-area)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -65,54 +71,47 @@
   },
   "component": {
     "spectrum-tray-max-inline-size": {
-      "value": "var(--mod-tray-max-inline-size, 375px)",
-      "description": "Defined in `.spectrum-Tray`. Used by `.spectrum-Tray`.",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-tray-spacing-edge-to-tray-safe-zone": {
-      "value": "var(--mod-tray-spacing-edge-to-tray-safe-zone, 64px)",
-      "description": "Defined in `.spectrum-Tray`. Used by `.spectrum-Tray`.",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-tray-entry-animation-delay": {
-      "value": "var(--mod-tray-entry-animation-delay, 160ms)",
-      "description": "Defined in `.spectrum-Tray`. Used by `.spectrum-Tray.is-open`.",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray.is-open`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-tray-entry-animation-duration": {
-      "value": "var(--mod-tray-entry-animation-duration, var(--spectrum-animation-duration-500))",
-      "description": "Defined in `.spectrum-Tray`. Used by `.spectrum-Tray.is-open`.",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray.is-open`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-tray-exit-animation-delay": {
-      "value": "var(--mod-tray-exit-animation-delay, 0ms)",
-      "description": "Defined in `.spectrum-Tray`. Used by `.spectrum-Tray`.",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-tray-exit-animation-duration": {
-      "value": "var(--mod-tray-exit-animation-duration, var(--spectrum-animation-duration-100))",
-      "description": "Defined in `.spectrum-Tray`. Used by `.spectrum-Tray`.",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-tray-corner-radius": {
-      "value": "var(--mod-tray-corner-radius, var(--spectrum-corner-radius-100))",
-      "description": "Defined in `.spectrum-Tray`. Used by `.spectrum-Tray`.",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-tray-background-color": {
-      "value": "var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-background-layer-2-color)))",
-      "description": "Defined in `.spectrum-Tray`. Used by `.spectrum-Tray`.",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-tray-top-to-content-area": {
+      "value": "4px",
       "description": "Used by `.spectrum-Tray`.",
       "control": "text",
       "category": "Component"
@@ -130,11 +129,13 @@
       "category": "Global"
     },
     "spectrum-corner-radius-100": {
+      "value": "8px",
       "description": "Used by `--spectrum-tray-corner-radius`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-background-layer-2-color": {
+      "value": "var(--spectrum-gray-75)",
       "description": "Used by `--spectrum-tray-background-color`.",
       "control": "color",
       "category": "Global"
@@ -148,8 +149,8 @@
   },
   "high-contrast": {
     "highcontrast-tray-background-color": {
-      "value": "Canvas",
-      "description": "Defined in `.spectrum-Tray`. Used by `--spectrum-tray-background-color`. Defaults to `var(--mod-tray-background-color, var(--spectrum-background-layer-2-color))`, if not set.",
+      "value": "var(--mod-tray-background-color, var(--spectrum-background-layer-2-color))",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `--spectrum-tray-background-color`. <br/>Defaults to `var(--mod-tray-background-color, var(--spectrum-background-layer-2-color))`, if not set.",
       "control": "color"
     }
   }

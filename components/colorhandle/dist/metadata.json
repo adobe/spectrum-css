@@ -11,32 +11,38 @@
   ],
   "modifiers": {
     "mod-colorhandle-size": {
-      "description": "Used by `.spectrum-ColorHandle`, `.spectrum-ColorHandle.is-focused, .spectrum-ColorHandle:focus-visible`. Defaults to `var(--spectrum-color-handle-size)`, if not set.",
+      "value": "16px",
+      "description": "Used by `.spectrum-ColorHandle`, `.spectrum-ColorHandle.is-focused, .spectrum-ColorHandle:focus-visible`. <br/>Defaults to `var(--spectrum-color-handle-size)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-border-width": {
-      "description": "Used by `.spectrum-ColorHandle`. Defaults to `var(--spectrum-color-handle-border-width)`, if not set.",
+      "value": "2px",
+      "description": "Used by `.spectrum-ColorHandle`. <br/>Defaults to `var(--spectrum-color-handle-border-width)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-border-color": {
-      "description": "Used by `.spectrum-ColorHandle`. Defaults to `var(--spectrum-white)`, if not set.",
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
+      "description": "Used by `.spectrum-ColorHandle`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-outer-border-width": {
-      "description": "Used by `.spectrum-ColorHandle`. Defaults to `var(--spectrum-colorhandle-outer-border-width)`, if not set.",
+      "value": "var(--spectrum-colorhandle-outer-border-width)",
+      "description": "Used by `.spectrum-ColorHandle`. <br/>Defaults to `var(--spectrum-colorhandle-outer-border-width)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-outer-border-color": {
-      "description": "Used by `.spectrum-ColorHandle`. Defaults to `var(--spectrum-colorhandle-outer-border-color)`, if not set.",
+      "value": "var(--spectrum-colorhandle-outer-border-color)",
+      "description": "Used by `.spectrum-ColorHandle`. <br/>Defaults to `var(--spectrum-colorhandle-outer-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-animation-duration": {
-      "description": "Used by `.spectrum-ColorHandle`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Used by `.spectrum-ColorHandle`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
@@ -46,7 +52,8 @@
       "category": "Modifier"
     },
     "mod-colorhandle-hitarea-size": {
-      "description": "Used by `.spectrum-ColorHandle:after`. Defaults to `var(--spectrum-color-control-track-width)`, if not set.",
+      "value": "24px",
+      "description": "Used by `.spectrum-ColorHandle:after`. <br/>Defaults to `var(--spectrum-color-control-track-width)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
@@ -56,81 +63,90 @@
       "category": "Modifier"
     },
     "mod-colorhandle-focused-size": {
-      "description": "Used by `.spectrum-ColorHandle.is-focused, .spectrum-ColorHandle:focus-visible`. Defaults to `var(--spectrum-color-handle-size-key-focus)`, if not set.",
+      "value": "32px",
+      "description": "Used by `.spectrum-ColorHandle.is-focused, .spectrum-ColorHandle:focus-visible`. <br/>Defaults to `var(--spectrum-color-handle-size-key-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-border-color-disabled": {
-      "description": "Used by `.spectrum-ColorHandle.is-disabled`. Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `.spectrum-ColorHandle.is-disabled`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-fill-color-disabled": {
-      "description": "Used by `.spectrum-ColorHandle.is-disabled`. Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "value": "var(--spectrum-gray-100)",
+      "description": "Used by `.spectrum-ColorHandle.is-disabled`. <br/>Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-inner-border-width": {
-      "description": "Used by `.spectrum-ColorHandle-inner`. Defaults to `var(--spectrum-color-handle-inner-border-width)`, if not set.",
+      "value": "1px",
+      "description": "Used by `.spectrum-ColorHandle-inner`. <br/>Defaults to `var(--spectrum-color-handle-inner-border-width)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorhandle-inner-border-color": {
-      "description": "Used by `.spectrum-ColorHandle-inner`. Defaults to `var(--spectrum-colorhandle-inner-border-color)`, if not set.",
+      "value": "var(--spectrum-colorhandle-inner-border-color)",
+      "description": "Used by `.spectrum-ColorHandle-inner`. <br/>Defaults to `var(--spectrum-colorhandle-inner-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-colorhandle-outer-border-color": {
-      "value": "rgb(var(--spectrum-black-rgb), var(--spectrum-color-handle-outer-border-opacity))",
-      "description": "Defined in `.spectrum-ColorHandle`. Used by `.spectrum-ColorHandle`.",
+      "description": "Defined in `.spectrum-ColorHandle`. <br/>Used by `.spectrum-ColorHandle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-handle-outer-border-opacity": {
+      "value": "0.42",
       "description": "Used by `--spectrum-colorhandle-outer-border-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-colorhandle-outer-border-width": {
-      "value": "var(--spectrum-color-handle-outer-border-width)",
-      "description": "Defined in `.spectrum-ColorHandle`. Used by `.spectrum-ColorHandle`.",
+      "description": "Defined in `.spectrum-ColorHandle`. <br/>Used by `.spectrum-ColorHandle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-handle-outer-border-width": {
+      "value": "1px",
       "description": "Used by `--spectrum-colorhandle-outer-border-width`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-colorhandle-inner-border-color": {
-      "value": "rgb(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity))",
-      "description": "Defined in `.spectrum-ColorHandle`. Used by `.spectrum-ColorHandle-inner`.",
+      "description": "Defined in `.spectrum-ColorHandle`. <br/>Used by `.spectrum-ColorHandle-inner`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-handle-inner-border-opacity": {
+      "value": "0.42",
       "description": "Used by `--spectrum-colorhandle-inner-border-color`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-handle-size": {
+      "value": "16px",
       "description": "Used by `.spectrum-ColorHandle`, `.spectrum-ColorHandle.is-focused, .spectrum-ColorHandle:focus-visible`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-handle-border-width": {
+      "value": "2px",
       "description": "Used by `.spectrum-ColorHandle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-handle-size-key-focus": {
+      "value": "32px",
       "description": "Used by `.spectrum-ColorHandle.is-focused, .spectrum-ColorHandle:focus-visible`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-handle-inner-border-width": {
+      "value": "1px",
       "description": "Used by `.spectrum-ColorHandle-inner`.",
       "control": "color",
       "category": "Component"
@@ -143,6 +159,7 @@
       "category": "Global"
     },
     "spectrum-white": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
       "description": "Used by `.spectrum-ColorHandle`.",
       "control": "text",
       "category": "Global"
@@ -153,16 +170,19 @@
       "category": "Global"
     },
     "spectrum-color-control-track-width": {
+      "value": "24px",
       "description": "Used by `.spectrum-ColorHandle:after`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `.spectrum-ColorHandle.is-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
       "description": "Used by `.spectrum-ColorHandle.is-disabled`.",
       "control": "color",
       "category": "Global"
@@ -181,13 +201,13 @@
   },
   "high-contrast": {
     "highcontrast-colorhandle-border-color-disabled": {
-      "value": "GrayText",
-      "description": "Defined in `.spectrum-ColorHandle.is-disabled`. Used by `.spectrum-ColorHandle.is-disabled`. Defaults to `var(--mod-colorhandle-border-color-disabled, var(--spectrum-disabled-content-color))`, if not set.",
+      "value": "var(--mod-colorhandle-border-color-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-ColorHandle.is-disabled`. <br/>Used by `.spectrum-ColorHandle.is-disabled`. <br/>Defaults to `var(--mod-colorhandle-border-color-disabled, var(--spectrum-disabled-content-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-colorhandle-fill-color-disabled": {
-      "value": "Canvas",
-      "description": "Defined in `.spectrum-ColorHandle.is-disabled`. Used by `.spectrum-ColorHandle.is-disabled`. Defaults to `var(--mod-colorhandle-fill-color-disabled, var(--spectrum-disabled-background-color))`, if not set.",
+      "value": "var(--mod-colorhandle-fill-color-disabled, var(--spectrum-disabled-background-color))",
+      "description": "Defined in `.spectrum-ColorHandle.is-disabled`. <br/>Used by `.spectrum-ColorHandle.is-disabled`. <br/>Defaults to `var(--mod-colorhandle-fill-color-disabled, var(--spectrum-disabled-background-color))`, if not set.",
       "control": "color"
     }
   }

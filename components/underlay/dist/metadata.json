@@ -3,86 +3,87 @@
   "selectors": [".spectrum-Underlay", ".spectrum-Underlay.is-open"],
   "modifiers": {
     "mod-underlay-background-exit-animation-duration": {
-      "description": "Used by `--spectrum-underlay-background-exit-animation-duration`. Defaults to `var(--spectrum-animation-duration-300)`, if not set.",
+      "value": "var(--spectrum-animation-duration-300)",
+      "description": "Used by `--spectrum-underlay-background-exit-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-300)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-underlay-background-exit-animation-ease": {
-      "description": "Used by `--spectrum-underlay-background-exit-animation-ease`. Defaults to `var(--spectrum-animation-ease-in)`, if not set.",
+      "value": "var(--spectrum-animation-ease-in)",
+      "description": "Used by `--spectrum-underlay-background-exit-animation-ease`. <br/>Defaults to `var(--spectrum-animation-ease-in)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-underlay-background-exit-animation-delay": {
-      "description": "Used by `--spectrum-underlay-background-exit-animation-delay`. Defaults to `var(--spectrum-animation-duration-200)`, if not set.",
+      "value": "var(--spectrum-animation-duration-200)",
+      "description": "Used by `--spectrum-underlay-background-exit-animation-delay`. <br/>Defaults to `var(--spectrum-animation-duration-200)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-underlay-background-entry-animation-duration": {
-      "description": "Used by `--spectrum-underlay-background-entry-animation-duration`. Defaults to `var(--spectrum-animation-duration-600)`, if not set.",
+      "value": "var(--spectrum-animation-duration-600)",
+      "description": "Used by `--spectrum-underlay-background-entry-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-600)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-underlay-background-entry-animation-ease": {
-      "description": "Used by `--spectrum-underlay-background-entry-animation-ease`. Defaults to `var(--spectrum-animation-ease-out)`, if not set.",
+      "value": "var(--spectrum-animation-ease-out)",
+      "description": "Used by `--spectrum-underlay-background-entry-animation-ease`. <br/>Defaults to `var(--spectrum-animation-ease-out)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-underlay-background-entry-animation-delay": {
-      "description": "Used by `--spectrum-underlay-background-entry-animation-delay`. Defaults to `var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0))`, if not set.",
+      "value": "var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0))",
+      "description": "Used by `--spectrum-underlay-background-entry-animation-delay`. <br/>Defaults to `var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0))`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-overlay-animation-duration-opened": {
-      "description": "Used by `--spectrum-underlay-background-entry-animation-delay`. Defaults to `var(--spectrum-animation-duration-0)`, if not set.",
+      "value": "var(--spectrum-animation-duration-0)",
+      "description": "Used by `--spectrum-underlay-background-entry-animation-delay`. <br/>Defaults to `var(--spectrum-animation-duration-0)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-underlay-background-color": {
-      "description": "Used by `--spectrum-underlay-background-color`. Defaults to `rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity))`, if not set.",
+      "value": "rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity))",
+      "description": "Used by `--spectrum-underlay-background-color`. <br/>Defaults to `rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity))`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-underlay-background-exit-animation-duration": {
-      "value": "var(--mod-underlay-background-exit-animation-duration, var(--spectrum-animation-duration-300))",
-      "description": "Defined in `.spectrum-Underlay`. Used by `.spectrum-Underlay`.",
+      "description": "Defined in `.spectrum-Underlay`. <br/>Used by `.spectrum-Underlay`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-underlay-background-exit-animation-ease": {
-      "value": "var(--mod-underlay-background-exit-animation-ease, var(--spectrum-animation-ease-in))",
-      "description": "Defined in `.spectrum-Underlay`. Used by `.spectrum-Underlay`.",
+      "description": "Defined in `.spectrum-Underlay`. <br/>Used by `.spectrum-Underlay`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-underlay-background-exit-animation-delay": {
-      "value": "var(--mod-underlay-background-exit-animation-delay, var(--spectrum-animation-duration-200))",
-      "description": "Defined in `.spectrum-Underlay`. Used by `.spectrum-Underlay`.",
+      "description": "Defined in `.spectrum-Underlay`. <br/>Used by `.spectrum-Underlay`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-underlay-background-entry-animation-duration": {
-      "value": "var(--mod-underlay-background-entry-animation-duration, var(--spectrum-animation-duration-600))",
-      "description": "Defined in `.spectrum-Underlay`. Used by `.spectrum-Underlay.is-open`.",
+      "description": "Defined in `.spectrum-Underlay`. <br/>Used by `.spectrum-Underlay.is-open`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-underlay-background-entry-animation-ease": {
-      "value": "var(--mod-underlay-background-entry-animation-ease, var(--spectrum-animation-ease-out))",
-      "description": "Defined in `.spectrum-Underlay`. Used by `.spectrum-Underlay.is-open`.",
+      "description": "Defined in `.spectrum-Underlay`. <br/>Used by `.spectrum-Underlay.is-open`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-underlay-background-entry-animation-delay": {
-      "value": "var(--mod-underlay-background-entry-animation-delay, var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0)))",
-      "description": "Defined in `.spectrum-Underlay`. Used by `.spectrum-Underlay.is-open`.",
+      "description": "Defined in `.spectrum-Underlay`. <br/>Used by `.spectrum-Underlay.is-open`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-underlay-background-color": {
-      "value": "var(--mod-underlay-background-color, rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity)))",
-      "description": "Defined in `.spectrum-Underlay`. Used by `.spectrum-Underlay`.",
+      "description": "Defined in `.spectrum-Underlay`. <br/>Used by `.spectrum-Underlay`.",
       "control": "color",
       "category": "Component"
     }
@@ -124,6 +125,7 @@
       "category": "Global"
     },
     "spectrum-overlay-opacity": {
+      "value": "light-dark(0.4, 0.6)",
       "description": "Used by `--spectrum-underlay-background-color`.",
       "control": "text",
       "category": "Global"
