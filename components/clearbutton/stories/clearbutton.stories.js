@@ -7,7 +7,7 @@ import { ClearButtonGroup } from "./clearbutton.test.js";
 import { Template } from "./template.js";
 
 /**
- * The clear button component is an in-field button used in search and tags.
+ * The clear button component is an in-field button used in [search](/docs/components-search-field--docs) and [tags](/docs/components-tag--docs).
  *
  * ## Usage Notes
 
