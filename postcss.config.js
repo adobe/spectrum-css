@@ -55,6 +55,7 @@ module.exports = ({
 					return join(basedir, id);
 				}
 			} : false,
+			"@csstools/postcss-design-tokens": {},
 			/* --------------------------------------------------- */
 			/* ------------------- LINTING ---------------- */
 			// Linter needs to run before the minifier removes comments (such as the stylelint-ignore comments)
@@ -114,11 +115,11 @@ module.exports = ({
 						reduceIdents: false,
 						discardUnused: false,
 						discardComments: {
-							remove: (comment) => !comment.includes("stylelint-"),
+							remove: (comment) => !comment.includes("stylelint-") && !comment.includes("deprecated"),
 						},
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
-						normalizeWhitespace: minify || isProduction,
+						normalizeWhitespace: minify,
 					},
 				],
 			},

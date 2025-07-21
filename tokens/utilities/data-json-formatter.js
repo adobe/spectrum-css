@@ -1,5 +1,9 @@
 import { format as JSONSetsFormat } from "./json-sets-formatter.js";
 
+/**
+ * @description Formats the JSON sets
+ * @type {import('style-dictionary/types').FormatFn}
+ */
 export const format = ({ dictionary, platform, file, options }) => {
 	const prefix = platform.prefix ? platform.prefix : false;
 	let result = {};
@@ -74,6 +78,9 @@ export const format = ({ dictionary, platform, file, options }) => {
 
 format.nested = true;
 
+/**
+ * @type {import('style-dictionary/types').Format}
+ */
 export default {
 	name: "json/sets",
 	format,
