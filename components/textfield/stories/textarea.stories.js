@@ -29,10 +29,7 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=725-2579",
 		},
-		cssprops: {
-			...metadata.modifiers,
-			...metadata.component,
-		},
+		cssprops: metadata.modifiers,
 	}
 };
 

@@ -79,10 +79,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers,
-			...metadata.component,
-		},
+		cssprops: metadata.modifiers,
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);

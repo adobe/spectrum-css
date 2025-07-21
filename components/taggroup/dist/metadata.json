@@ -3,32 +3,33 @@
   "selectors": [".spectrum-TagGroup", ".spectrum-TagGroup-item"],
   "modifiers": {
     "mod-tag-group-item-margin-block": {
-      "description": "Used by `.spectrum-TagGroup-item`. Defaults to `var(--spectrum-tag-group-item-margin-block)`, if not set.",
+      "description": "Used by `.spectrum-TagGroup-item`. <br/>Defaults to `var(--spectrum-tag-group-item-margin-block)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-tag-group-item-margin-inline": {
-      "description": "Used by `.spectrum-TagGroup-item`. Defaults to `var(--spectrum-tag-group-item-margin-inline)`, if not set.",
+      "description": "Used by `.spectrum-TagGroup-item`. <br/>Defaults to `var(--spectrum-tag-group-item-margin-inline)`, if not set.",
       "control": "text",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-tag-group-item-margin-block": {
-      "value": "var(--spectrum-spacing-75)",
-      "description": "Defined in `.spectrum-TagGroup`. Used by `.spectrum-TagGroup-item`.",
+      "value": "4px",
+      "description": "Defined in `.spectrum-TagGroup`. <br/>Used by `.spectrum-TagGroup-item`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-tag-group-item-margin-inline": {
-      "value": "var(--spectrum-spacing-75)",
-      "description": "Defined in `.spectrum-TagGroup`. Used by `.spectrum-TagGroup-item`.",
+      "value": "4px",
+      "description": "Defined in `.spectrum-TagGroup`. <br/>Used by `.spectrum-TagGroup-item`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
       "control": "text",
       "category": "Component"
     }
   },
   "global": {
     "spectrum-spacing-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-tag-group-item-margin-block`, `--spectrum-tag-group-item-margin-inline`.",
       "control": "text",
       "category": "Global"

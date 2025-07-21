@@ -26,71 +26,62 @@
   ],
   "modifiers": {
     "mod-clear-button-height": {
-      "description": "Used by `.spectrum-ClearButton`. Defaults to `var(--spectrum-clear-button-height)`, if not set.",
+      "description": "Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-clear-button-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-clear-button-width": {
-      "description": "Used by `.spectrum-ClearButton`. Defaults to `var(--spectrum-clear-button-width)`, if not set.",
+      "description": "Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-clear-button-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-clear-button-background-color": {
-      "value": "var(--mod-clear-button-background-color-disabled, transparent)",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--quiet`, `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`, `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. Used by `.spectrum-ClearButton`, `.spectrum-ClearButton-fill`. Defaults to `var(--spectrum-clear-button-background-color)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--quiet`, `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`, `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. <br/>Used by `.spectrum-ClearButton`, `.spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-clear-button-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-clear-button-padding": {
-      "description": "Used by `.spectrum-ClearButton`. Defaults to `var(--spectrum-clear-button-padding)`, if not set.",
+      "description": "Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-clear-button-padding)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-clear-button-icon-color": {
-      "value": "var(--mod-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color))",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`, `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. Used by `.spectrum-ClearButton`. Defaults to `var(--spectrum-clear-button-icon-color)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`, `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-clear-button-icon-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-clear-button-background-color-hover": {
-      "value": "transparent",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--quiet`. Used by `.spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill`. Defaults to `var(--spectrum-clear-button-background-color-hover)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--quiet`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-clear-button-background-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-clear-button-background-color-down": {
-      "value": "transparent",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--quiet`. Used by `.spectrum-ClearButton:not(:disabled):active .spectrum-ClearButton-fill`. Defaults to `var(--spectrum-clear-button-background-color-down)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--quiet`. <br/>Used by `.spectrum-ClearButton:not(:disabled):active .spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-clear-button-background-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-clear-button-background-color-key-focus": {
-      "value": "transparent",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--quiet`. Used by `.spectrum-ClearButton:not(:disabled):focus-visible .spectrum-ClearButton-fill, .spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill`. Defaults to `var(--spectrum-clear-button-background-color-key-focus)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--quiet`. <br/>Used by `.spectrum-ClearButton:not(:disabled):focus-visible .spectrum-ClearButton-fill, .spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-clear-button-background-color-key-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-clear-button-icon-color-hover": {
-      "value": "var(--spectrum-disabled-content-color)",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`, `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. Used by `.spectrum-ClearButton:not(:disabled):hover`. Defaults to `var(--spectrum-clear-button-icon-color-hover)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`, `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover`. <br/>Defaults to `var(--spectrum-clear-button-icon-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-clear-button-icon-color-down": {
-      "value": "var(--spectrum-disabled-content-color)",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`, `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. Used by `.spectrum-ClearButton:not(:disabled):active`. Defaults to `var(--spectrum-clear-button-icon-color-down)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`, `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. <br/>Used by `.spectrum-ClearButton:not(:disabled):active`. <br/>Defaults to `var(--spectrum-clear-button-icon-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-clear-button-icon-color-key-focus": {
-      "value": "var(--spectrum-white)",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. Used by `.spectrum-ClearButton:not(:disabled):focus-visible, .spectrum-ClearButton:not(:disabled):focus-within`. Defaults to `var(--spectrum-clear-button-icon-color-key-focus)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. <br/>Used by `.spectrum-ClearButton:not(:disabled):focus-visible, .spectrum-ClearButton:not(:disabled):focus-within`. <br/>Defaults to `var(--spectrum-clear-button-icon-color-key-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-clear-button-icon-color-disabled": {
-      "value": "var(--spectrum-disabled-static-white-content-color)",
-      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. Used by `--mod-clear-button-icon-color`. Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "description": "Defined in `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. <br/>Used by `--mod-clear-button-icon-color`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
@@ -102,139 +93,153 @@
   },
   "component": {
     "spectrum-clear-button-height": {
-      "value": "var(--spectrum-component-height-300)",
-      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--sizeS`, `.spectrum-ClearButton.spectrum-ClearButton--sizeL`, `.spectrum-ClearButton.spectrum-ClearButton--sizeXL`. Used by `.spectrum-ClearButton`.",
+      "value": "48px",
+      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--sizeS`, `.spectrum-ClearButton.spectrum-ClearButton--sizeL`, `.spectrum-ClearButton.spectrum-ClearButton--sizeXL`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-clear-button-width": {
-      "value": "var(--spectrum-component-height-300)",
-      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--sizeS`, `.spectrum-ClearButton.spectrum-ClearButton--sizeL`, `.spectrum-ClearButton.spectrum-ClearButton--sizeXL`. Used by `.spectrum-ClearButton`.",
+      "value": "48px",
+      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--sizeS`, `.spectrum-ClearButton.spectrum-ClearButton--sizeL`, `.spectrum-ClearButton.spectrum-ClearButton--sizeXL`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-clear-button-padding": {
-      "value": "var(--spectrum-in-field-button-edge-to-fill)",
-      "description": "Defined in `.spectrum-ClearButton`. Used by `.spectrum-ClearButton`.",
+      "value": "0px",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-in-field-button-edge-to-fill)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-clear-button-icon-color": {
-      "value": "var(--spectrum-neutral-content-color-default)",
-      "description": "Defined in `.spectrum-ClearButton`. Used by `.spectrum-ClearButton`.",
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-clear-button-icon-color-hover": {
-      "value": "var(--spectrum-neutral-content-color-hover)",
-      "description": "Defined in `.spectrum-ClearButton`. Used by `.spectrum-ClearButton:not(:disabled):hover`.",
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-clear-button-icon-color-down": {
-      "value": "var(--spectrum-neutral-content-color-down)",
-      "description": "Defined in `.spectrum-ClearButton`. Used by `.spectrum-ClearButton:not(:disabled):active`.",
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-clear-button-icon-color-key-focus": {
-      "value": "var(--spectrum-neutral-content-color-key-focus)",
-      "description": "Defined in `.spectrum-ClearButton`. Used by `.spectrum-ClearButton:not(:disabled):focus-visible, .spectrum-ClearButton:not(:disabled):focus-within`.",
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):focus-visible, .spectrum-ClearButton:not(:disabled):focus-within`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-clear-button-background-color-hover": {
       "value": "var(--system-clear-button-static-white-background-color-hover)",
-      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. Used by `.spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill`.",
+      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill`. <br/>Defaults to `var(--system-clear-button-static-white-background-color-hover)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-clear-button-background-color-down": {
       "value": "var(--system-clear-button-static-white-background-color-down)",
-      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. Used by `.spectrum-ClearButton:not(:disabled):active .spectrum-ClearButton-fill`.",
+      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. <br/>Used by `.spectrum-ClearButton:not(:disabled):active .spectrum-ClearButton-fill`. <br/>Defaults to `var(--system-clear-button-static-white-background-color-down)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-clear-button-background-color-key-focus": {
       "value": "var(--system-clear-button-static-white-background-color-key-focus)",
-      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. Used by `.spectrum-ClearButton:not(:disabled):focus-visible .spectrum-ClearButton-fill, .spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill`.",
+      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--staticWhite`. <br/>Used by `.spectrum-ClearButton:not(:disabled):focus-visible .spectrum-ClearButton-fill, .spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill`. <br/>Defaults to `var(--system-clear-button-static-white-background-color-key-focus)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-clear-button-background-color": {
       "value": "var(--system-clear-button-background-color)",
-      "description": "Defined in `.spectrum-ClearButton`. Used by `.spectrum-ClearButton-fill`.",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton-fill`. <br/>Defaults to `var(--system-clear-button-background-color)`, if not set.",
       "control": "color",
       "category": "Component"
     }
   },
   "global": {
     "spectrum-transparent-white-400": {
+      "value": "light-dark(rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.21))",
       "description": "Used by `--system-clear-button-static-white-background-color-hover`, `--system-clear-button-static-white-background-color-key-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-transparent-white-500": {
+      "value": "light-dark(rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0.39))",
       "description": "Used by `--system-clear-button-static-white-background-color-down`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-100": {
+      "value": "32px",
       "description": "Used by `--spectrum-clear-button-height`, `--spectrum-clear-button-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-in-field-button-edge-to-fill": {
+      "value": "0px",
       "description": "Used by `--spectrum-clear-button-padding`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-clear-button-icon-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-clear-button-icon-color-hover`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-clear-button-icon-color-down`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-clear-button-icon-color-key-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-component-height-75": {
+      "value": "24px",
       "description": "Used by `--spectrum-clear-button-height`, `--spectrum-clear-button-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-200": {
+      "value": "40px",
       "description": "Used by `--spectrum-clear-button-height`, `--spectrum-clear-button-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-300": {
+      "value": "48px",
       "description": "Used by `--spectrum-clear-button-height`, `--spectrum-clear-button-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-white": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
       "description": "Used by `--mod-clear-button-icon-color`, `--mod-clear-button-icon-color-hover`, `--mod-clear-button-icon-color-down`, `--mod-clear-button-icon-color-key-focus`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-disabled-static-white-content-color": {
+      "value": "var(--spectrum-transparent-white-400)",
       "description": "Used by `--mod-clear-button-icon-color-disabled`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
       "description": "Used by `--mod-clear-button-icon-color`, `--mod-clear-button-icon-color-hover`, `--mod-clear-button-icon-color-down`.",
       "control": "color",
       "category": "Global"
@@ -243,45 +248,45 @@
   "system-theme": {
     "system-clear-button-background-color": {
       "value": "transparent",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-clear-button-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-clear-button-background-color`. <br/>Defaults to `transparent`, if not set.",
       "control": "color"
     },
     "system-clear-button-background-color-hover": {
       "value": "transparent",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-clear-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-clear-button-background-color-hover`. <br/>Defaults to `transparent`, if not set.",
       "control": "color"
     },
     "system-clear-button-background-color-down": {
       "value": "transparent",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-clear-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-clear-button-background-color-down`. <br/>Defaults to `transparent`, if not set.",
       "control": "color"
     },
     "system-clear-button-background-color-key-focus": {
       "value": "transparent",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-clear-button-background-color-key-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-clear-button-background-color-key-focus`. <br/>Defaults to `transparent`, if not set.",
       "control": "color"
     },
     "system-clear-button-static-white-background-color-hover": {
       "value": "var(--spectrum-transparent-white-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-clear-button-background-color-hover`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-clear-button-background-color-hover`. <br/>Defaults to `var(--spectrum-transparent-white-400)`, if not set.",
       "control": "color"
     },
     "system-clear-button-static-white-background-color-down": {
       "value": "var(--spectrum-transparent-white-500)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-clear-button-background-color-down`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-clear-button-background-color-down`. <br/>Defaults to `var(--spectrum-transparent-white-500)`, if not set.",
       "control": "color"
     },
     "system-clear-button-static-white-background-color-key-focus": {
       "value": "var(--spectrum-transparent-white-400)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-clear-button-background-color-key-focus`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-clear-button-background-color-key-focus`. <br/>Defaults to `var(--spectrum-transparent-white-400)`, if not set.",
       "control": "color"
     }
   },
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-clear-button-icon-color-hover": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-ClearButton:not(:disabled)`. Used by `.spectrum-ClearButton:not(:disabled):hover`. Defaults to `var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover))`, if not set.",
+      "value": "var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover))",
+      "description": "Defined in `.spectrum-ClearButton:not(:disabled)`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover`. <br/>Defaults to `var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover))`, if not set.",
       "control": "color"
     }
   }

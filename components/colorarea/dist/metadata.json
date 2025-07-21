@@ -14,42 +14,42 @@
   ],
   "modifiers": {
     "mod-colorarea-min-width": {
-      "description": "Used by `.spectrum-ColorArea`. Defaults to `var(--spectrum-color-area-minimum-width)`, if not set.",
+      "description": "Used by `.spectrum-ColorArea`. <br/>Defaults to `var(--spectrum-color-area-minimum-width)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorarea-min-height": {
-      "description": "Used by `.spectrum-ColorArea`. Defaults to `var(--spectrum-color-area-minimum-height)`, if not set.",
+      "description": "Used by `.spectrum-ColorArea`. <br/>Defaults to `var(--spectrum-color-area-minimum-height)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorarea-width": {
-      "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea-handle`. Defaults to `var(--spectrum-color-area-width)`, if not set.",
+      "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea-handle`. <br/>Defaults to `var(--spectrum-color-area-width)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorarea-height": {
-      "description": "Used by `.spectrum-ColorArea`. Defaults to `var(--spectrum-color-area-height)`, if not set.",
+      "description": "Used by `.spectrum-ColorArea`. <br/>Defaults to `var(--spectrum-color-area-height)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorarea-border-radius": {
-      "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea-gradient`. Defaults to `var(--spectrum-color-area-border-rounding)`, if not set.",
+      "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea-gradient`. <br/>Defaults to `var(--spectrum-color-area-border-rounding)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorarea-border-width": {
-      "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea.is-disabled`. Defaults to `var(--spectrum-color-area-border-width)`, if not set.",
+      "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea.is-disabled`. <br/>Defaults to `var(--spectrum-color-area-border-width)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorarea-border-color": {
-      "description": "Used by `.spectrum-ColorArea`. Defaults to `var(--spectrum-colorarea-border-color)`, if not set.",
+      "description": "Used by `.spectrum-ColorArea`. <br/>Defaults to `var(--spectrum-colorarea-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-colorarea-disabled-background-color": {
-      "description": "Used by `.spectrum-ColorArea.is-disabled`. Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "description": "Used by `.spectrum-ColorArea.is-disabled`. <br/>Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
@@ -57,36 +57,42 @@
   "component": {
     "spectrum-colorarea-border-color": {
       "value": "rgb(0 0 0/10%)",
-      "description": "Defined in `.spectrum-ColorArea`. Used by `.spectrum-ColorArea`.",
+      "description": "Defined in `.spectrum-ColorArea`. <br/>Used by `.spectrum-ColorArea`. <br/>Defaults to `rgb(0 0 0/10%)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-area-minimum-width": {
+      "value": "64px",
       "description": "Used by `.spectrum-ColorArea`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-area-minimum-height": {
+      "value": "64px",
       "description": "Used by `.spectrum-ColorArea`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-area-width": {
+      "value": "192px",
       "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea-handle`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-area-height": {
+      "value": "192px",
       "description": "Used by `.spectrum-ColorArea`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-area-border-rounding": {
+      "value": "7px",
       "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea-gradient`.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-color-area-border-width": {
+      "value": "1px",
       "description": "Used by `.spectrum-ColorArea`, `.spectrum-ColorArea.is-disabled`, `.spectrum-ColorArea-handle`.",
       "control": "color",
       "category": "Component"
@@ -94,6 +100,7 @@
   },
   "global": {
     "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
       "description": "Used by `.spectrum-ColorArea.is-disabled`.",
       "control": "color",
       "category": "Global"
@@ -104,17 +111,17 @@
   "high-contrast": {
     "highcontrast-colorarea-border-color-disabled": {
       "value": "GrayText",
-      "description": "Defined in `.spectrum-ColorArea`. Used by `.spectrum-ColorArea.is-disabled`.",
+      "description": "Defined in `.spectrum-ColorArea`. <br/>Used by `.spectrum-ColorArea.is-disabled`. <br/>Defaults to `GrayText`, if not set.",
       "control": "color"
     },
     "highcontrast-colorarea-border-color": {
-      "value": "Canvas",
-      "description": "Defined in `.spectrum-ColorArea`. Used by `.spectrum-ColorArea`. Defaults to `var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color))`, if not set.",
+      "value": "var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color))",
+      "description": "Defined in `.spectrum-ColorArea`. <br/>Used by `.spectrum-ColorArea`. <br/>Defaults to `var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-colorarea-fill-color-disabled": {
-      "value": "Canvas",
-      "description": "Defined in `.spectrum-ColorArea`. Used by `.spectrum-ColorArea.is-disabled`. Defaults to `var(--mod-colorarea-disabled-background-color, var(--spectrum-disabled-background-color))`, if not set.",
+      "value": "var(--mod-colorarea-disabled-background-color, var(--spectrum-disabled-background-color))",
+      "description": "Defined in `.spectrum-ColorArea`. <br/>Used by `.spectrum-ColorArea.is-disabled`. <br/>Defaults to `var(--mod-colorarea-disabled-background-color, var(--spectrum-disabled-background-color))`, if not set.",
       "control": "color"
     }
   }

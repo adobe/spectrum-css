@@ -177,14 +177,13 @@ function extractProperties(content, meta = {}) {
 
 		const control = key.includes("color") ? "color" : "text";
 
-		let value;
 		let defined = new Set();
 		let used = new Set();
 		let defaultValue;
 
 		// Start by parsing the definition data
 		data.filter((item) => item.type === "definition").forEach((item) => {
-			if (item.value) value = item.value;
+			if (item.value) defaultValue = item.value;
 
 			if (item.usedBy?.length) {
 				item.usedBy.forEach((ub) => {
@@ -224,7 +223,7 @@ function extractProperties(content, meta = {}) {
 			descriptions.push(`Defaults to \`${defaultValue}\`, if not set.`);
 		}
 
-		return { value, description: descriptions.join(" ")?.trim(), control };
+		return { value: defaultValue, description: descriptions.join(" <br/>")?.trim(), control };
 	}
 
 	// Process CSS content through the valuesParser an postcss to capture

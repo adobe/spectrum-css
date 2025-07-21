@@ -33,10 +33,7 @@ export default {
 		chromatic: { disableSnapshot: true },
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers,
-			...metadata.component,
-		},
+		cssprops: metadata.modifiers,
 	}
 };
 

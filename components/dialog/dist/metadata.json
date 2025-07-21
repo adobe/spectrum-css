@@ -39,8 +39,7 @@
   ],
   "modifiers": {
     "mod-dialog-width": {
-      "value": "var(--mod-dialog-confirm-large-width, 640px)",
-      "description": "Defined in `.spectrum-Dialog--sizeS`, `.spectrum-Dialog--sizeL`. Used by `.spectrum-Dialog`. Defaults to `var(--mod-dialog-confirm-medium-width, 480px)`, if not set.",
+      "description": "Defined in `.spectrum-Dialog--sizeS`, `.spectrum-Dialog--sizeL`. <br/>Used by `.spectrum-Dialog`. <br/>Defaults to `var(--mod-dialog-confirm-medium-width, 480px)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -65,107 +64,107 @@
       "category": "Modifier"
     },
     "mod-dialog-confirm-hero-height": {
-      "description": "Used by `.spectrum-Dialog-hero`. Defaults to `var(--spectrum-dialog-confirm-hero-height)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-hero`. <br/>Defaults to `var(--spectrum-dialog-confirm-hero-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-border-radius": {
-      "description": "Used by `.spectrum-Dialog-hero`. Defaults to `var(--spectrum-dialog-confirm-border-radius)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-hero`. <br/>Defaults to `var(--spectrum-dialog-confirm-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-padding-grid": {
-      "description": "Used by `.spectrum-Dialog .spectrum-Dialog-grid`, `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid`, `.spectrum-Dialog--fullscreen.spectrum-Dialog .spectrum-Dialog-grid, .spectrum-Dialog--fullscreenTakeover.spectrum-Dialog .spectrum-Dialog-grid`, `.spectrum-Dialog .spectrum-Dialog-grid, .spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid`, `.spectrum-Dialog--fullscreen.spectrum-Dialog .spectrum-Dialog-grid, .spectrum-Dialog--fullscreenTakeover.spectrum-Dialog .spectrum-Dialog-grid`. Defaults to `var(--spectrum-dialog-confirm-padding-grid)`, if not set.",
+      "description": "Used by `.spectrum-Dialog .spectrum-Dialog-grid`, `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid`, `.spectrum-Dialog--fullscreen.spectrum-Dialog .spectrum-Dialog-grid, .spectrum-Dialog--fullscreenTakeover.spectrum-Dialog .spectrum-Dialog-grid`, `.spectrum-Dialog .spectrum-Dialog-grid, .spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid`, `.spectrum-Dialog--fullscreen.spectrum-Dialog .spectrum-Dialog-grid, .spectrum-Dialog--fullscreenTakeover.spectrum-Dialog .spectrum-Dialog-grid`. <br/>Defaults to `var(--spectrum-dialog-confirm-padding-grid)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-title-text-size": {
-      "description": "Used by `.spectrum-Dialog-heading`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-heading`. Defaults to `var(--spectrum-dialog-confirm-title-text-size)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-heading`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-dialog-confirm-title-text-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-heading-font-weight": {
-      "description": "Used by `.spectrum-Dialog-heading`. Defaults to `var(--spectrum-heading-sans-serif-font-weight)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-weight)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-title-text-line-height": {
-      "description": "Used by `.spectrum-Dialog-heading`. Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-title-text-color": {
-      "description": "Used by `.spectrum-Dialog-heading`. Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-dialog-confirm-gap-size": {
-      "description": "Used by `.spectrum-Dialog-heading`, `.spectrum-Dialog-buttonGroup`. Defaults to `var(--spectrum-dialog-confirm-gap-size)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-heading`, `.spectrum-Dialog-buttonGroup`. <br/>Defaults to `var(--spectrum-dialog-confirm-gap-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-divider-block-spacing-end": {
-      "description": "Used by `.spectrum-Dialog .spectrum-Dialog-divider`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`. Defaults to `var(--spectrum-dialog-confirm-divider-block-spacing-end)`, if not set.",
+      "description": "Used by `.spectrum-Dialog .spectrum-Dialog-divider`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-dialog-confirm-divider-block-spacing-end)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-divider-block-spacing-start": {
-      "description": "Used by `.spectrum-Dialog .spectrum-Dialog-divider`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`. Defaults to `var(--spectrum-dialog-confirm-divider-block-spacing-start)`, if not set.",
+      "description": "Used by `.spectrum-Dialog .spectrum-Dialog-divider`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-dialog-confirm-divider-block-spacing-start)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-description-padding": {
-      "description": "Used by `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider`, `.spectrum-Dialog-content`. Defaults to `var(--spectrum-dialog-confirm-description-padding)`, if not set.",
+      "description": "Used by `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider`, `.spectrum-Dialog-content`. <br/>Defaults to `var(--spectrum-dialog-confirm-description-padding)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-divider-height": {
-      "description": "Used by `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`. Defaults to `var(--spectrum-spacing-50)`, if not set.",
+      "description": "Used by `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-spacing-50)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-description-text-size": {
-      "description": "Used by `.spectrum-Dialog-content`. Defaults to `var(--spectrum-dialog-confirm-description-text-size)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-content`. <br/>Defaults to `var(--spectrum-dialog-confirm-description-text-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-description-font-weight": {
-      "description": "Used by `.spectrum-Dialog-content`. Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-content`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-description-text-line-height": {
-      "description": "Used by `.spectrum-Dialog-content`. Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-content`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-description-text-color": {
-      "description": "Used by `.spectrum-Dialog-content`, `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid .spectrum-Dialog-footer`. Defaults to `var(--spectrum-dialog-confirm-description-text-color)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-content`, `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid .spectrum-Dialog-footer`. <br/>Defaults to `var(--spectrum-dialog-confirm-description-text-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-dialog-confirm-description-margin": {
-      "description": "Used by `.spectrum-Dialog-content`. Defaults to `calc(var(--spectrum-spacing-50) * -1)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-content`. <br/>Defaults to `calc(var(--spectrum-spacing-50) * -1)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-footer-padding-top": {
-      "description": "Used by `.spectrum-Dialog-footer`. Defaults to `var(--spectrum-spacing-600)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-footer`. <br/>Defaults to `var(--spectrum-spacing-600)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-buttongroup-padding-top": {
-      "description": "Used by `.spectrum-Dialog-buttonGroup`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-buttonGroup, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-buttonGroup`. Defaults to `var(--spectrum-dialog-confirm-buttongroup-padding-top)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-buttonGroup`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-buttonGroup, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-buttonGroup`. <br/>Defaults to `var(--spectrum-dialog-confirm-buttongroup-padding-top)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-close-button-size": {
-      "description": "Used by `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid`. Defaults to `var(--spectrum-dialog-confirm-close-button-size)`, if not set.",
+      "description": "Used by `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid`. <br/>Defaults to `var(--spectrum-dialog-confirm-close-button-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dialog-confirm-close-button-padding": {
-      "description": "Used by `.spectrum-Dialog-closeButton`. Defaults to `var(--spectrum-dialog-confirm-close-button-padding)`, if not set.",
+      "description": "Used by `.spectrum-Dialog-closeButton`. <br/>Defaults to `var(--spectrum-dialog-confirm-close-button-padding)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -177,50 +176,50 @@
   },
   "component": {
     "spectrum-dialog-confirm-divider-block-spacing-start": {
-      "value": "var(--spectrum-spacing-300)",
-      "description": "Defined in `.spectrum-Dialog`. Used by `.spectrum-Dialog .spectrum-Dialog-divider`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`.",
+      "value": "16px",
+      "description": "Defined in `.spectrum-Dialog`. <br/>Used by `.spectrum-Dialog .spectrum-Dialog-divider`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-dialog-confirm-divider-block-spacing-end": {
-      "value": "var(--spectrum-spacing-200)",
-      "description": "Defined in `.spectrum-Dialog`. Used by `.spectrum-Dialog .spectrum-Dialog-divider`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`.",
+      "value": "12px",
+      "description": "Defined in `.spectrum-Dialog`. <br/>Used by `.spectrum-Dialog .spectrum-Dialog-divider`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-dialog-confirm-description-text-color": {
-      "value": "var(--spectrum-gray-800)",
-      "description": "Defined in `.spectrum-Dialog`. Used by `.spectrum-Dialog-content`, `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid .spectrum-Dialog-footer`.",
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Dialog`. <br/>Used by `.spectrum-Dialog-content`, `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid .spectrum-Dialog-footer`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-dialog-confirm-description-padding": {
-      "value": "var(--spectrum-spacing-50)",
-      "description": "Defined in `.spectrum-Dialog`. Used by `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider`, `.spectrum-Dialog-content`.",
+      "value": "2px",
+      "description": "Defined in `.spectrum-Dialog`. <br/>Used by `.spectrum-Dialog--fullscreen .spectrum-Dialog-heading + .spectrum-Dialog-divider`, `.spectrum-Dialog-content`. <br/>Defaults to `var(--spectrum-spacing-50)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-dialog-confirm-gap-size": {
-      "value": "var(--spectrum-component-pill-edge-to-text-100)",
-      "description": "Defined in `.spectrum-Dialog`. Used by `.spectrum-Dialog-heading`, `.spectrum-Dialog-buttonGroup`.",
+      "value": "16px",
+      "description": "Defined in `.spectrum-Dialog`. <br/>Used by `.spectrum-Dialog-heading`, `.spectrum-Dialog-buttonGroup`. <br/>Defaults to `var(--spectrum-component-pill-edge-to-text-100)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-dialog-confirm-buttongroup-padding-top": {
-      "value": "var(--spectrum-spacing-600)",
-      "description": "Defined in `.spectrum-Dialog`. Used by `.spectrum-Dialog-buttonGroup`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-buttonGroup, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-buttonGroup`.",
+      "value": "40px",
+      "description": "Defined in `.spectrum-Dialog`. <br/>Used by `.spectrum-Dialog-buttonGroup`, `.spectrum-Dialog--fullscreen .spectrum-Dialog-buttonGroup, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-buttonGroup`. <br/>Defaults to `var(--spectrum-spacing-600)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-dialog-confirm-close-button-size": {
-      "value": "var(--spectrum-component-height-100)",
-      "description": "Defined in `.spectrum-Dialog`. Used by `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid`.",
+      "value": "32px",
+      "description": "Defined in `.spectrum-Dialog`. <br/>Used by `.spectrum-Dialog.spectrum-Dialog--dismissable .spectrum-Dialog-grid`. <br/>Defaults to `var(--spectrum-component-height-100)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-dialog-confirm-close-button-padding": {
       "value": "calc(26px - var(--spectrum-component-bottom-to-text-300))",
-      "description": "Defined in `.spectrum-Dialog`. Used by `.spectrum-Dialog-closeButton`.",
+      "description": "Defined in `.spectrum-Dialog`. <br/>Used by `.spectrum-Dialog-closeButton`. <br/>Defaults to `calc(26px - var(--spectrum-component-bottom-to-text-300))`, if not set.",
       "control": "text",
       "category": "Component"
     },
@@ -252,61 +251,73 @@
   },
   "global": {
     "spectrum-spacing-300": {
+      "value": "16px",
       "description": "Used by `--spectrum-dialog-confirm-divider-block-spacing-start`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-200": {
+      "value": "12px",
       "description": "Used by `--spectrum-dialog-confirm-divider-block-spacing-end`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
       "description": "Used by `--spectrum-dialog-confirm-description-text-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-50": {
+      "value": "2px",
       "description": "Used by `--spectrum-dialog-confirm-description-padding`, `.spectrum-Dialog--noDivider .spectrum-Dialog-heading`, `.spectrum-Dialog-content`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-pill-edge-to-text-100": {
+      "value": "16px",
       "description": "Used by `--spectrum-dialog-confirm-gap-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-600": {
+      "value": "40px",
       "description": "Used by `--spectrum-dialog-confirm-buttongroup-padding-top`, `.spectrum-Dialog-footer`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-height-100": {
+      "value": "32px",
       "description": "Used by `--spectrum-dialog-confirm-close-button-size`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
       "description": "Used by `--spectrum-dialog-confirm-close-button-padding`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-heading-sans-serif-font-weight": {
+      "value": "700",
       "description": "Used by `.spectrum-Dialog-heading`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-line-height-100": {
+      "value": "1.3",
       "description": "Used by `.spectrum-Dialog-heading`, `.spectrum-Dialog-content`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-900": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
       "description": "Used by `.spectrum-Dialog-heading`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-regular-font-weight": {
+      "value": "400",
       "description": "Used by `.spectrum-Dialog-content`.",
       "control": "text",
       "category": "Global"

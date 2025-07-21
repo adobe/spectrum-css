@@ -37,82 +37,82 @@
   ],
   "modifiers": {
     "mod-splitview-background-color": {
-      "description": "Used by `.spectrum-SplitView-pane`. Defaults to `var(--spectrum-splitview-background-color)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-pane`. <br/>Defaults to `var(--spectrum-splitview-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-splitview-content-color": {
-      "description": "Used by `.spectrum-SplitView-pane`. Defaults to `var(--spectrum-splitview-content-color)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-pane`. <br/>Defaults to `var(--spectrum-splitview-content-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-splitview-gripper-border-radius": {
-      "description": "Used by `.spectrum-SplitView-gripper`. Defaults to `var(--spectrum-splitview-gripper-border-radius)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-gripper`. <br/>Defaults to `var(--spectrum-splitview-gripper-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-handle-background-color": {
-      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter`. Defaults to `var(--spectrum-splitview-handle-background-color)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter`. <br/>Defaults to `var(--spectrum-splitview-handle-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-splitview-gripper-width": {
-      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. Defaults to `var(--spectrum-splitview-gripper-width)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. <br/>Defaults to `var(--spectrum-splitview-gripper-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-gripper-border-width-vertical": {
-      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. Defaults to `var(--spectrum-splitview-gripper-border-width-vertical)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. <br/>Defaults to `var(--spectrum-splitview-gripper-border-width-vertical)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-gripper-height": {
-      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. Defaults to `var(--spectrum-splitview-gripper-height)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. <br/>Defaults to `var(--spectrum-splitview-gripper-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-gripper-border-width-horizontal": {
-      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. Defaults to `var(--spectrum-splitview-gripper-border-width-horizontal)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. <br/>Defaults to `var(--spectrum-splitview-gripper-border-width-horizontal)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-handle-width": {
-      "description": "Used by `.spectrum-SplitView-splitter`, `.spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. Defaults to `var(--spectrum-splitview-handle-width)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-splitter`, `.spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-splitview-handle-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-handle-background-color-hover": {
-      "description": "Used by `.spectrum-SplitView-splitter.is-draggable.is-hovered`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter.is-draggable:hover`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before`. Defaults to `var(--spectrum-splitview-handle-background-color-hover)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-splitter.is-draggable.is-hovered`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter.is-draggable:hover`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-splitview-handle-background-color-hover)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-splitview-handle-background-color-down": {
-      "description": "Used by `.spectrum-SplitView-splitter.is-draggable.is-active, .spectrum-SplitView-splitter.is-draggable:active`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before`. Defaults to `var(--spectrum-splitview-handle-background-color-down)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-splitter.is-draggable.is-active, .spectrum-SplitView-splitter.is-draggable:active`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-splitview-handle-background-color-down)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-splitview-handle-background-color-focus": {
-      "description": "Used by `.spectrum-SplitView-splitter.is-draggable:focus-visible`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper:before`. Defaults to `var(--spectrum-splitview-handle-background-color-focus)`, if not set.",
+      "description": "Used by `.spectrum-SplitView-splitter.is-draggable:focus-visible`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-splitview-handle-background-color-focus)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-splitview-vertical-width": {
-      "description": "Used by `.spectrum-SplitView--vertical .spectrum-SplitView-pane`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter`. Defaults to `var(--spectrum-splitview-vertical-width)`, if not set.",
+      "description": "Used by `.spectrum-SplitView--vertical .spectrum-SplitView-pane`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter`. <br/>Defaults to `var(--spectrum-splitview-vertical-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-vertical-gripper-width": {
-      "description": "Used by `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. Defaults to `var(--spectrum-splitview-vertical-gripper-width)`, if not set.",
+      "description": "Used by `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-splitview-vertical-gripper-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-vertical-gripper-reset": {
-      "description": "Used by `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper`. Defaults to `var(--spectrum-splitview-vertical-gripper-reset)`, if not set.",
+      "description": "Used by `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper`. <br/>Defaults to `var(--spectrum-splitview-vertical-gripper-reset)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-splitview-vertical-gripper-outer-width": {
-      "description": "Used by `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. Defaults to `var(--spectrum-splitview-vertical-gripper-outer-width)`, if not set.",
+      "description": "Used by `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-splitview-vertical-gripper-outer-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     }
@@ -120,138 +120,146 @@
   "component": {
     "spectrum-splitview-vertical-width": {
       "value": "100%",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView--vertical .spectrum-SplitView-pane`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView--vertical .spectrum-SplitView-pane`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter`. <br/>Defaults to `100%`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-vertical-gripper-width": {
       "value": "50%",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. <br/>Defaults to `50%`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-vertical-gripper-outer-width": {
       "value": "100%",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. <br/>Defaults to `100%`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-vertical-gripper-reset": {
       "value": "0",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper`. <br/>Defaults to `0`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-content-color": {
-      "value": "var(--spectrum-body-color)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-pane`.",
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-pane`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-splitview-handle-background-color-hover": {
-      "value": "var(--spectrum-gray-400)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-splitter.is-draggable.is-hovered`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter.is-draggable:hover`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before`.",
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-splitter.is-draggable.is-hovered`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter.is-draggable:hover`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-gray-400)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-splitview-handle-background-color-down": {
-      "value": "var(--spectrum-gray-800)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-splitter.is-draggable.is-active, .spectrum-SplitView-splitter.is-draggable:active`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before`.",
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-splitter.is-draggable.is-active, .spectrum-SplitView-splitter.is-draggable:active`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-splitview-handle-background-color-focus": {
-      "value": "var(--spectrum-focus-indicator-color)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-splitter.is-draggable:focus-visible`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper:before`.",
+      "value": "var(--spectrum-blue-800)",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-splitter.is-draggable:focus-visible`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-splitview-handle-width": {
-      "value": "var(--spectrum-border-width-200)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-splitter`, `.spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`.",
+      "value": "2px",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-splitter`, `.spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter`, `.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-gripper-width": {
-      "value": "var(--spectrum-border-width-400)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`.",
+      "value": "4px",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. <br/>Defaults to `var(--spectrum-border-width-400)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-gripper-height": {
       "value": "16px",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. <br/>Defaults to `16px`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-gripper-border-width-horizontal": {
       "value": "3px",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. <br/>Defaults to `3px`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-gripper-border-width-vertical": {
-      "value": "var(--spectrum-border-width-400)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`.",
+      "value": "4px",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView--vertical .spectrum-SplitView-gripper`. <br/>Defaults to `var(--spectrum-border-width-400)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-background-color": {
       "value": "var(--system-split-view-background-color)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-pane`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-pane`. <br/>Defaults to `var(--system-split-view-background-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-splitview-gripper-border-radius": {
       "value": "var(--system-split-view-gripper-border-radius)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-gripper`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-gripper`. <br/>Defaults to `var(--system-split-view-gripper-border-radius)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-splitview-handle-background-color": {
       "value": "var(--system-split-view-handle-background-color)",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter`.",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter`. <br/>Defaults to `var(--system-split-view-handle-background-color)`, if not set.",
       "control": "color",
       "category": "Component"
     }
   },
   "global": {
     "spectrum-gray-75": {
+      "value": "light-dark(rgb(243, 243, 243), rgb(34, 34, 34))",
       "description": "Used by `--system-split-view-background-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
       "description": "Used by `--system-split-view-handle-background-color`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-splitview-content-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-gray-400": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
       "description": "Used by `--spectrum-splitview-handle-background-color-hover`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
       "description": "Used by `--spectrum-splitview-handle-background-color-down`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
       "description": "Used by `--spectrum-splitview-handle-background-color-focus`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-border-width-200": {
+      "value": "2px",
       "description": "Used by `--spectrum-splitview-handle-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-border-width-400": {
+      "value": "4px",
       "description": "Used by `--spectrum-splitview-gripper-width`, `--spectrum-splitview-gripper-border-width-vertical`.",
       "control": "text",
       "category": "Global"
@@ -260,40 +268,40 @@
   "system-theme": {
     "system-split-view-background-color": {
       "value": "var(--spectrum-gray-75)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-splitview-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-splitview-background-color`. <br/>Defaults to `var(--spectrum-gray-75)`, if not set.",
       "control": "color"
     },
     "system-split-view-handle-background-color": {
       "value": "var(--spectrum-gray-200)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-splitview-handle-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-splitview-handle-background-color`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
       "control": "color"
     },
     "system-split-view-gripper-border-radius": {
       "value": "2px",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-splitview-gripper-border-radius`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-splitview-gripper-border-radius`. <br/>Defaults to `2px`, if not set.",
       "control": "text"
     }
   },
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-splitview-handle-background-color": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter`. Defaults to `var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color))`, if not set.",
+      "value": "var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color))",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-gripper`, `.spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter`. <br/>Defaults to `var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-splitview-handle-background-color-hover": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-splitter.is-draggable.is-hovered`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter.is-draggable:hover`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before`. Defaults to `var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover))`, if not set.",
+      "value": "var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover))",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-splitter.is-draggable.is-hovered`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before`, `.spectrum-SplitView-splitter.is-draggable:hover`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--mod-splitview-handle-background-color-hover, var(--spectrum-splitview-handle-background-color-hover))`, if not set.",
       "control": "color"
     },
     "highcontrast-splitview-handle-background-color-down": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-splitter.is-draggable.is-active, .spectrum-SplitView-splitter.is-draggable:active`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before`. Defaults to `var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down))`, if not set.",
+      "value": "var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down))",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-splitter.is-draggable.is-active, .spectrum-SplitView-splitter.is-draggable:active`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--mod-splitview-handle-background-color-down, var(--spectrum-splitview-handle-background-color-down))`, if not set.",
       "control": "color"
     },
     "highcontrast-splitview-handle-background-color-focus": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-SplitView`. Used by `.spectrum-SplitView-splitter.is-draggable:focus-visible`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper:before`. Defaults to `var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus))`, if not set.",
+      "value": "var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus))",
+      "description": "Defined in `.spectrum-SplitView`. <br/>Used by `.spectrum-SplitView-splitter.is-draggable:focus-visible`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper`, `.spectrum-SplitView-splitter.is-draggable:focus-visible .spectrum-SplitView-gripper:before`. <br/>Defaults to `var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus))`, if not set.",
       "control": "color"
     }
   }

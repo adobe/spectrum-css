@@ -30,239 +30,253 @@
   ],
   "modifiers": {
     "mod-thumbnail-size": {
-      "description": "Used by `--spectrum-thumbnail-size`. Defaults to `var(--spectrum-thumbnail-sized-size)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-size`. <br/>Defaults to `var(--spectrum-thumbnail-sized-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-thumbnail-border-color": {
-      "description": "Used by `--spectrum-thumbnail-border-color`. Defaults to `rgb(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity))`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-border-color`. <br/>Defaults to `rgb(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity))`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-thumbnail-border-color-selected": {
-      "description": "Used by `--spectrum-thumbnail-border-color-selected`. Defaults to `var(--spectrum-accent-color-800)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-border-color-selected`. <br/>Defaults to `var(--spectrum-accent-color-800)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-thumbnail-border-width": {
-      "description": "Used by `--spectrum-thumbnail-border-width`. Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-border-width`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-thumbnail-border-width-selected": {
-      "description": "Used by `--spectrum-thumbnail-border-width-selected`. Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-border-width-selected`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-thumbnail-border-radius": {
-      "description": "Used by `--spectrum-thumbnail-border-radius-default`. Defaults to `var(--spectrum-thumbnail-border-radius)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-border-radius-default`. <br/>Defaults to `var(--spectrum-thumbnail-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-thumbnail-layer-border-color-inner": {
-      "description": "Used by `--spectrum-thumbnail-layer-border-color-inner`. Defaults to `var(--spectrum-white)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-layer-border-color-inner`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-thumbnail-layer-border-color-outer": {
-      "description": "Used by `--spectrum-thumbnail-layer-border-color-outer`. Defaults to `var(--spectrum-gray-500)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-layer-border-color-outer`. <br/>Defaults to `var(--spectrum-gray-500)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-thumbnail-layer-border-width-inner": {
-      "description": "Used by `--spectrum-thumbnail-layer-border-width-inner`. Defaults to `var(--spectrum-border-width-400)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-layer-border-width-inner`. <br/>Defaults to `var(--spectrum-border-width-400)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-thumbnail-layer-border-width-outer": {
-      "description": "Used by `--spectrum-thumbnail-layer-border-width-outer`. Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-layer-border-width-outer`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-thumbnail-focus-indicator-thickness": {
-      "description": "Used by `--spectrum-thumbnail-focus-indicator-thickness`. Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-focus-indicator-thickness`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-thumbnail-focus-indicator-gap": {
-      "description": "Used by `--spectrum-thumbnail-focus-indicator-gap`. Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-focus-indicator-gap`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-thumbnail-focus-indicator-color": {
-      "description": "Used by `--spectrum-thumbnail-focus-indicator-color`. Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "description": "Used by `--spectrum-thumbnail-focus-indicator-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-thumbnail-color-opacity-disabled": {
-      "description": "Used by `.spectrum-Thumbnail.is-disabled`. Defaults to `var(--spectrum-thumbnail-color-opacity-disabled)`, if not set.",
+      "description": "Used by `.spectrum-Thumbnail.is-disabled`. <br/>Defaults to `var(--spectrum-thumbnail-color-opacity-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-thumbnail-sized-size": {
-      "value": "var(--spectrum-thumbnail-size-1000)",
-      "description": "Defined in `.spectrum-Thumbnail, .spectrum-Thumbnail--size500`, `.spectrum-Thumbnail--size50`, `.spectrum-Thumbnail--size75`, `.spectrum-Thumbnail--size100`, `.spectrum-Thumbnail--size200`, `.spectrum-Thumbnail--size300`, `.spectrum-Thumbnail--size400`, `.spectrum-Thumbnail--size600`, `.spectrum-Thumbnail--size700`, `.spectrum-Thumbnail--size800`, `.spectrum-Thumbnail--size900`, `.spectrum-Thumbnail--size1000`. Used by `--spectrum-thumbnail-size`.",
+      "value": "56px",
+      "description": "Defined in `.spectrum-Thumbnail, .spectrum-Thumbnail--size500`, `.spectrum-Thumbnail--size50`, `.spectrum-Thumbnail--size75`, `.spectrum-Thumbnail--size100`, `.spectrum-Thumbnail--size200`, `.spectrum-Thumbnail--size300`, `.spectrum-Thumbnail--size400`, `.spectrum-Thumbnail--size600`, `.spectrum-Thumbnail--size700`, `.spectrum-Thumbnail--size800`, `.spectrum-Thumbnail--size900`, `.spectrum-Thumbnail--size1000`. <br/>Used by `--spectrum-thumbnail-size`. <br/>Defaults to `var(--spectrum-thumbnail-size-1000)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-500": {
+      "value": "32px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-50": {
+      "value": "16px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-75": {
+      "value": "18px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-100": {
+      "value": "20px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-200": {
+      "value": "22px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-300": {
+      "value": "26px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-400": {
+      "value": "28px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-600": {
+      "value": "36px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-700": {
+      "value": "40px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-800": {
+      "value": "44px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-900": {
+      "value": "50px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size-1000": {
+      "value": "56px",
       "description": "Used by `--spectrum-thumbnail-sized-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-size": {
       "value": "var(--mod-thumbnail-size, var(--spectrum-thumbnail-sized-size))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail`, `.spectrum-Thumbnail-layer-inner`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail`, `.spectrum-Thumbnail-layer-inner`. <br/>Defaults to `var(--mod-thumbnail-size, var(--spectrum-thumbnail-sized-size))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-border-color": {
-      "value": "var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, rgb(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity))))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail:before`.",
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail:before`. <br/>Defaults to `var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, rgb(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity))))`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-thumbnail-border-opacity": {
+      "value": "0.1",
       "description": "Used by `--spectrum-thumbnail-border-color`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-border-color-selected": {
       "value": "var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-accent-color-800)))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail-layer.is-selected`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail-layer.is-selected`. <br/>Defaults to `var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-accent-color-800)))`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-thumbnail-border-width": {
       "value": "var(--mod-thumbnail-border-width, var(--spectrum-border-width-100))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail:before`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail:before`. <br/>Defaults to `var(--mod-thumbnail-border-width, var(--spectrum-border-width-100))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-border-width-selected": {
       "value": "var(--mod-thumbnail-border-width-selected, var(--spectrum-border-width-200))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail-layer.is-selected`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail-layer.is-selected`. <br/>Defaults to `var(--mod-thumbnail-border-width-selected, var(--spectrum-border-width-200))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-border-radius-default": {
       "value": "var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail, .spectrum-Thumbnail:before`, `.spectrum-Thumbnail.is-focused:after`, `.spectrum-Thumbnail.is-focused .spectrum-Thumbnail-image-wrapper`, `.spectrum-Thumbnail-background`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail, .spectrum-Thumbnail:before`, `.spectrum-Thumbnail.is-focused:after`, `.spectrum-Thumbnail.is-focused .spectrum-Thumbnail-image-wrapper`, `.spectrum-Thumbnail-background`. <br/>Defaults to `var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-border-radius": {
       "value": "var(--system-thumbnail-border-radius)",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `--spectrum-thumbnail-border-radius-default`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `--spectrum-thumbnail-border-radius-default`. <br/>Defaults to `var(--system-thumbnail-border-radius)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-layer-border-color-inner": {
       "value": "var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-white)))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail-layer-inner`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail-layer-inner`. <br/>Defaults to `var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-white)))`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-thumbnail-layer-border-color-outer": {
       "value": "var(--highcontrast-thumbnail-layer-border-color-outer, var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-gray-500)))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail-layer`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail-layer`. <br/>Defaults to `var(--highcontrast-thumbnail-layer-border-color-outer, var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-gray-500)))`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-thumbnail-layer-border-width-inner": {
       "value": "var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-border-width-400))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail-layer.is-selected`, `.spectrum-Thumbnail-layer-inner`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail-layer.is-selected`, `.spectrum-Thumbnail-layer-inner`. <br/>Defaults to `var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-border-width-400))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-layer-border-width-outer": {
       "value": "var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-border-width-100))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail-layer`, `.spectrum-Thumbnail-layer-inner`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail-layer`, `.spectrum-Thumbnail-layer-inner`. <br/>Defaults to `var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-border-width-100))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-focus-indicator-thickness": {
       "value": "var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail.is-focused:after`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail.is-focused:after`. <br/>Defaults to `var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-focus-indicator-gap": {
       "value": "var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-focus-indicator-gap))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail.is-focused:after`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail.is-focused:after`. <br/>Defaults to `var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-focus-indicator-gap))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-thumbnail-focus-indicator-color": {
       "value": "var(--highcontrast-thumbnail-focus-indicator-color, var(--mod-thumbnail-focus-indicator-color, var(--spectrum-focus-indicator-color)))",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail.is-focused:after`.",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail.is-focused:after`. <br/>Defaults to `var(--highcontrast-thumbnail-focus-indicator-color, var(--mod-thumbnail-focus-indicator-color, var(--spectrum-focus-indicator-color)))`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-thumbnail-color-opacity-disabled": {
-      "value": "var(--spectrum-thumbnail-opacity-disabled)",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `.spectrum-Thumbnail.is-disabled`.",
+      "value": "0.3",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `.spectrum-Thumbnail.is-disabled`. <br/>Defaults to `var(--spectrum-thumbnail-opacity-disabled)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-thumbnail-opacity-disabled": {
+      "value": "0.3",
       "description": "Used by `--spectrum-thumbnail-color-opacity-disabled`.",
       "control": "text",
       "category": "Component"
@@ -275,46 +289,55 @@
       "category": "Global"
     },
     "spectrum-accent-color-800": {
+      "value": "var(--spectrum-blue-800)",
       "description": "Used by `--spectrum-thumbnail-border-color-selected`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-border-width-100": {
+      "value": "1px",
       "description": "Used by `--spectrum-thumbnail-border-width`, `--spectrum-thumbnail-layer-border-width-outer`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-border-width-200": {
+      "value": "2px",
       "description": "Used by `--spectrum-thumbnail-border-width-selected`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-white": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
       "description": "Used by `--spectrum-thumbnail-layer-border-color-inner`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-gray-500": {
+      "value": "light-dark(rgb(143, 143, 143), rgb(109, 109, 109))",
       "description": "Used by `--spectrum-thumbnail-layer-border-color-outer`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-border-width-400": {
+      "value": "4px",
       "description": "Used by `--spectrum-thumbnail-layer-border-width-inner`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-thickness": {
+      "value": "2px",
       "description": "Used by `--spectrum-thumbnail-focus-indicator-thickness`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-gap": {
+      "value": "2px",
       "description": "Used by `--spectrum-thumbnail-focus-indicator-gap`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
       "description": "Used by `--spectrum-thumbnail-focus-indicator-color`.",
       "control": "color",
       "category": "Global"
@@ -323,35 +346,35 @@
   "system-theme": {
     "system-thumbnail-border-radius": {
       "value": "2px",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-thumbnail-border-radius`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-thumbnail-border-radius`. <br/>Defaults to `2px`, if not set.",
       "control": "text"
     }
   },
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-thumbnail-border-color": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `--spectrum-thumbnail-border-color`. Defaults to `var(--mod-thumbnail-border-color, rgb(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity)))`, if not set.",
+      "value": "var(--mod-thumbnail-border-color, rgb(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity)))",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `--spectrum-thumbnail-border-color`. <br/>Defaults to `var(--mod-thumbnail-border-color, rgb(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity)))`, if not set.",
       "control": "color"
     },
     "highcontrast-thumbnail-border-color-selected": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `--spectrum-thumbnail-border-color-selected`. Defaults to `var(--mod-thumbnail-border-color-selected, var(--spectrum-accent-color-800))`, if not set.",
+      "value": "var(--mod-thumbnail-border-color-selected, var(--spectrum-accent-color-800))",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `--spectrum-thumbnail-border-color-selected`. <br/>Defaults to `var(--mod-thumbnail-border-color-selected, var(--spectrum-accent-color-800))`, if not set.",
       "control": "color"
     },
     "highcontrast-thumbnail-layer-border-color-inner": {
-      "value": "Canvas",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `--spectrum-thumbnail-layer-border-color-inner`. Defaults to `var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-white))`, if not set.",
+      "value": "var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-white))",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `--spectrum-thumbnail-layer-border-color-inner`. <br/>Defaults to `var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-white))`, if not set.",
       "control": "color"
     },
     "highcontrast-thumbnail-layer-border-color-outer": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `--spectrum-thumbnail-layer-border-color-outer`. Defaults to `var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-gray-500))`, if not set.",
+      "value": "var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-gray-500))",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `--spectrum-thumbnail-layer-border-color-outer`. <br/>Defaults to `var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-gray-500))`, if not set.",
       "control": "color"
     },
     "highcontrast-thumbnail-focus-indicator-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-Thumbnail`. Used by `--spectrum-thumbnail-focus-indicator-color`. Defaults to `var(--mod-thumbnail-focus-indicator-color, var(--spectrum-focus-indicator-color))`, if not set.",
+      "value": "var(--mod-thumbnail-focus-indicator-color, var(--spectrum-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Thumbnail`. <br/>Used by `--spectrum-thumbnail-focus-indicator-color`. <br/>Defaults to `var(--mod-thumbnail-focus-indicator-color, var(--spectrum-focus-indicator-color))`, if not set.",
       "control": "color"
     }
   }

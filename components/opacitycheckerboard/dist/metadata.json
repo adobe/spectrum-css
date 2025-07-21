@@ -3,12 +3,12 @@
   "selectors": [".spectrum-OpacityCheckerboard"],
   "modifiers": {
     "mod-opacity-checkerboard-light": {
-      "description": "Used by `.spectrum-OpacityCheckerboard`. Defaults to `var(--spectrum-opacity-checkerboard-square-light)`, if not set.",
+      "description": "Used by `.spectrum-OpacityCheckerboard`. <br/>Defaults to `var(--spectrum-opacity-checkerboard-square-light)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-opacity-checkerboard-dark": {
-      "description": "Used by `.spectrum-OpacityCheckerboard`. Defaults to `var(--spectrum-opacity-checkerboard-square-dark)`, if not set.",
+      "description": "Used by `.spectrum-OpacityCheckerboard`. <br/>Defaults to `var(--spectrum-opacity-checkerboard-square-dark)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -18,23 +18,26 @@
       "category": "Modifier"
     },
     "mod-opacity-checkerboard-size": {
-      "description": "Used by `.spectrum-OpacityCheckerboard`. Defaults to `var(--spectrum-opacity-checkerboard-square-size)`, if not set.",
+      "description": "Used by `.spectrum-OpacityCheckerboard`. <br/>Defaults to `var(--spectrum-opacity-checkerboard-square-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-opacity-checkerboard-square-light": {
+      "value": "var(--spectrum-white)",
       "description": "Used by `.spectrum-OpacityCheckerboard`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-opacity-checkerboard-square-dark": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `.spectrum-OpacityCheckerboard`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-opacity-checkerboard-square-size": {
+      "value": "8px",
       "description": "Used by `.spectrum-OpacityCheckerboard`.",
       "control": "text",
       "category": "Component"

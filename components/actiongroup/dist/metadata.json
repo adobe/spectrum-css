@@ -30,42 +30,42 @@
   ],
   "modifiers": {
     "mod-actiongroup-horizontal-spacing-regular": {
-      "description": "Used by `.spectrum-ActionGroup`. Defaults to `var(--spectrum-actiongroup-horizontal-spacing-regular)`, if not set.",
+      "description": "Used by `.spectrum-ActionGroup`. <br/>Defaults to `var(--spectrum-actiongroup-horizontal-spacing-regular)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-actiongroup-vertical-spacing-regular": {
-      "description": "Used by `.spectrum-ActionGroup--vertical`. Defaults to `var(--spectrum-actiongroup-vertical-spacing-regular)`, if not set.",
+      "description": "Used by `.spectrum-ActionGroup--vertical`. <br/>Defaults to `var(--spectrum-actiongroup-vertical-spacing-regular)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-actiongroup-gap-size-compact": {
-      "description": "Used by `.spectrum-ActionGroup--compact`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet)`. Defaults to `var(--spectrum-actiongroup-gap-size-compact)`, if not set.",
+      "description": "Used by `.spectrum-ActionGroup--compact`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet)`. <br/>Defaults to `var(--spectrum-actiongroup-gap-size-compact)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-actiongroup-border-radius-reset": {
-      "description": "Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item`. Defaults to `var(--spectrum-actiongroup-border-radius-reset)`, if not set.",
+      "description": "Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item`. <br/>Defaults to `var(--spectrum-actiongroup-border-radius-reset)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-actiongroup-border-radius": {
-      "description": "Used by `--mod-actionbutton-focus-indicator-border-radius`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. Defaults to `var(--spectrum-actiongroup-border-radius)`, if not set.",
+      "description": "Used by `--mod-actionbutton-focus-indicator-border-radius`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. <br/>Defaults to `var(--spectrum-actiongroup-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-actiongroup-button-spacing-reset": {
-      "description": "Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. Defaults to `var(--spectrum-actiongroup-button-spacing-reset)`, if not set.",
+      "description": "Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. <br/>Defaults to `var(--spectrum-actiongroup-button-spacing-reset)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-actiongroup-horizontal-spacing-compact": {
-      "description": "Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. Defaults to `var(--spectrum-actiongroup-horizontal-spacing-compact)`, if not set.",
+      "description": "Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. <br/>Defaults to `var(--spectrum-actiongroup-horizontal-spacing-compact)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-actiongroup-vertical-spacing-compact": {
-      "description": "Used by `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. Defaults to `var(--spectrum-actiongroup-vertical-spacing-compact)`, if not set.",
+      "description": "Used by `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. <br/>Defaults to `var(--spectrum-actiongroup-vertical-spacing-compact)`, if not set.",
       "control": "text",
       "category": "Modifier"
     }
@@ -73,65 +73,68 @@
   "component": {
     "spectrum-actiongroup-button-spacing-reset": {
       "value": "0",
-      "description": "Defined in `.spectrum-ActionGroup`. Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`.",
+      "description": "Defined in `.spectrum-ActionGroup`. <br/>Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. <br/>Defaults to `0`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-actiongroup-border-radius-reset": {
       "value": "0",
-      "description": "Defined in `.spectrum-ActionGroup`. Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item`.",
+      "description": "Defined in `.spectrum-ActionGroup`. <br/>Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item`. <br/>Defaults to `0`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-actiongroup-border-radius": {
-      "value": "var(--spectrum-corner-radius-100)",
-      "description": "Defined in `.spectrum-ActionGroup`. Used by `--mod-actionbutton-focus-indicator-border-radius`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`.",
+      "value": "8px",
+      "description": "Defined in `.spectrum-ActionGroup`. <br/>Used by `--mod-actionbutton-focus-indicator-border-radius`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-actiongroup-horizontal-spacing-regular": {
-      "value": "var(--spectrum-spacing-100)",
-      "description": "Defined in `.spectrum-ActionGroup--sizeS, .spectrum-ActionGroup--sizeXS`, `.spectrum-ActionGroup--sizeL, .spectrum-ActionGroup--sizeM, .spectrum-ActionGroup--sizeXL`. Used by `.spectrum-ActionGroup`.",
+      "value": "8px",
+      "description": "Defined in `.spectrum-ActionGroup--sizeS, .spectrum-ActionGroup--sizeXS`, `.spectrum-ActionGroup--sizeL, .spectrum-ActionGroup--sizeM, .spectrum-ActionGroup--sizeXL`. <br/>Used by `.spectrum-ActionGroup`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-actiongroup-vertical-spacing-regular": {
-      "value": "var(--spectrum-spacing-100)",
-      "description": "Defined in `.spectrum-ActionGroup--sizeS, .spectrum-ActionGroup--sizeXS`, `.spectrum-ActionGroup--sizeL, .spectrum-ActionGroup--sizeM, .spectrum-ActionGroup--sizeXL`. Used by `.spectrum-ActionGroup--vertical`.",
+      "value": "8px",
+      "description": "Defined in `.spectrum-ActionGroup--sizeS, .spectrum-ActionGroup--sizeXS`, `.spectrum-ActionGroup--sizeL, .spectrum-ActionGroup--sizeM, .spectrum-ActionGroup--sizeXL`. <br/>Used by `.spectrum-ActionGroup--vertical`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-actiongroup-gap-size-compact": {
       "value": "var(--system-action-group-gap-size-compact)",
-      "description": "Defined in `.spectrum-ActionGroup`. Used by `.spectrum-ActionGroup--compact`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet)`.",
+      "description": "Defined in `.spectrum-ActionGroup`. <br/>Used by `.spectrum-ActionGroup--compact`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet)`. <br/>Defaults to `var(--system-action-group-gap-size-compact)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-actiongroup-horizontal-spacing-compact": {
       "value": "var(--system-action-group-horizontal-spacing-compact)",
-      "description": "Defined in `.spectrum-ActionGroup`. Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`.",
+      "description": "Defined in `.spectrum-ActionGroup`. <br/>Used by `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. <br/>Defaults to `var(--system-action-group-horizontal-spacing-compact)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-actiongroup-vertical-spacing-compact": {
       "value": "var(--system-action-group-vertical-spacing-compact)",
-      "description": "Defined in `.spectrum-ActionGroup`. Used by `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`.",
+      "description": "Defined in `.spectrum-ActionGroup`. <br/>Used by `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item`, `.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child`. <br/>Defaults to `var(--system-action-group-vertical-spacing-compact)`, if not set.",
       "control": "text",
       "category": "Component"
     }
   },
   "global": {
     "spectrum-corner-radius-100": {
+      "value": "8px",
       "description": "Used by `--spectrum-actiongroup-border-radius`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-actiongroup-horizontal-spacing-regular`, `--spectrum-actiongroup-vertical-spacing-regular`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-100": {
+      "value": "8px",
       "description": "Used by `--spectrum-actiongroup-horizontal-spacing-regular`, `--spectrum-actiongroup-vertical-spacing-regular`.",
       "control": "text",
       "category": "Global"
@@ -140,17 +143,17 @@
   "system-theme": {
     "system-action-group-gap-size-compact": {
       "value": "0",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-actiongroup-gap-size-compact`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-actiongroup-gap-size-compact`. <br/>Defaults to `0`, if not set.",
       "control": "text"
     },
     "system-action-group-horizontal-spacing-compact": {
       "value": "-1px",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-actiongroup-horizontal-spacing-compact`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-actiongroup-horizontal-spacing-compact`. <br/>Defaults to `-1px`, if not set.",
       "control": "text"
     },
     "system-action-group-vertical-spacing-compact": {
       "value": "-1px",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-actiongroup-vertical-spacing-compact`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-actiongroup-vertical-spacing-compact`. <br/>Defaults to `-1px`, if not set.",
       "control": "text"
     }
   },

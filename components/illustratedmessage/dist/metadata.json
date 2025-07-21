@@ -27,52 +27,52 @@
       "category": "Modifier"
     },
     "mod-illustrated-message-title-to-heading": {
-      "description": "Used by `.spectrum-IllustratedMessage-illustration`. Defaults to `var(--spectrum-illustrated-message-title-to-heading)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-illustration`. <br/>Defaults to `var(--spectrum-illustrated-message-title-to-heading)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-illustration-color": {
-      "description": "Used by `.spectrum-IllustratedMessage-illustration`. Defaults to `var(--spectrum-illustrated-message-illustration-color)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-illustration`. <br/>Defaults to `var(--spectrum-illustrated-message-illustration-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-illustrated-message-illustration-accent-color": {
-      "description": "Used by `.spectrum-IllustratedMessage-accent`. Defaults to `var(--spectrum-illustrated-message-illustration-accent-color)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-accent`. <br/>Defaults to `var(--spectrum-illustrated-message-illustration-accent-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-illustrated-message-title-font-family": {
-      "description": "Used by `.spectrum-IllustratedMessage-heading`. Defaults to `var(--spectrum-illustrated-message-title-font-family)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-title-font-family)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-title-font-weight": {
-      "description": "Used by `.spectrum-IllustratedMessage-heading`. Defaults to `var(--spectrum-illustrated-message-title-font-weight)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-title-font-weight)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-title-font-style": {
-      "description": "Used by `.spectrum-IllustratedMessage-heading`. Defaults to `var(--spectrum-illustrated-message-title-font-style)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-title-font-style)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-title-font-size": {
-      "description": "Used by `.spectrum-IllustratedMessage-heading`. Defaults to `var(--spectrum-illustrated-message-title-font-size)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-title-font-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-title-line-height": {
-      "description": "Used by `.spectrum-IllustratedMessage-heading`. Defaults to `var(--spectrum-illustrated-message-title-line-height)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-title-line-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-title-color": {
-      "description": "Used by `.spectrum-IllustratedMessage-heading`. Defaults to `var(--spectrum-illustrated-message-title-color)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-title-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-illustrated-message-heading-max-inline-size": {
-      "description": "Used by `.spectrum-IllustratedMessage-heading`. Defaults to `var(--spectrum-illustrated-message-heading-max-inline-size)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-heading-max-inline-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -97,171 +97,175 @@
       "category": "Modifier"
     },
     "mod-illustrated-message-description-font-family": {
-      "description": "Used by `.spectrum-IllustratedMessage-description`. Defaults to `var(--spectrum-illustrated-message-description-font-family)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-description-font-family)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-description-font-weight": {
-      "description": "Used by `.spectrum-IllustratedMessage-description`. Defaults to `var(--spectrum-illustrated-message-description-font-weight)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-description-font-weight)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-description-font-style": {
-      "description": "Used by `.spectrum-IllustratedMessage-description`. Defaults to `var(--spectrum-illustrated-message-description-font-style)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-description-font-style)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-description-font-size": {
-      "description": "Used by `.spectrum-IllustratedMessage-description`. Defaults to `var(--spectrum-illustrated-message-description-font-size)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-description-font-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-description-line-height": {
-      "description": "Used by `.spectrum-IllustratedMessage-description`. Defaults to `var(--spectrum-illustrated-message-description-line-height)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-description-line-height)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-description-color": {
-      "description": "Used by `.spectrum-IllustratedMessage-description`. Defaults to `var(--spectrum-illustrated-message-description-color)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-description-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-illustrated-message-description-max-inline-size": {
-      "description": "Used by `.spectrum-IllustratedMessage-description`. Defaults to `var(--spectrum-illustrated-message-description-max-inline-size)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-description-max-inline-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-illustrated-message-heading-to-description": {
-      "description": "Used by `.spectrum-IllustratedMessage-description`. Defaults to `var(--spectrum-illustrated-message-heading-to-description)`, if not set.",
+      "description": "Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-heading-to-description)`, if not set.",
       "control": "text",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-illustrated-message-description-max-inline-size": {
-      "value": "var(--spectrum-illustrated-message-maximum-width)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-description`.",
+      "value": "380px",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-maximum-width)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-maximum-width": {
+      "value": "380px",
       "description": "Used by `--spectrum-illustrated-message-description-max-inline-size`, `--spectrum-illustrated-message-heading-max-inline-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-heading-max-inline-size": {
-      "value": "var(--spectrum-illustrated-message-maximum-width)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-heading`.",
+      "value": "380px",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-maximum-width)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-title-to-heading": {
-      "value": "var(--spectrum-spacing-400)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-illustration`.",
+      "value": "24px",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-illustration`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-heading-to-description": {
-      "value": "var(--spectrum-spacing-75)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-description`.",
+      "value": "4px",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-illustration-color": {
-      "value": "var(--spectrum-neutral-visual-color)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-illustration`.",
+      "value": "var(--spectrum-gray-600)",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-illustration`. <br/>Defaults to `var(--spectrum-neutral-visual-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-illustrated-message-illustration-accent-color": {
-      "value": "var(--spectrum-accent-visual-color)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-accent`.",
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-accent`. <br/>Defaults to `var(--spectrum-accent-visual-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-illustrated-message-title-font-family": {
       "value": "var(--spectrum-sans-font-family-stack)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-heading`.",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-title-font-weight": {
-      "value": "var(--spectrum-heading-sans-serif-font-weight)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-heading`.",
+      "value": "700",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-weight)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-title-font-style": {
-      "value": "var(--spectrum-heading-sans-serif-font-style)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-heading`.",
+      "value": "normal",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-style)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-title-font-size": {
-      "value": "var(--spectrum-illustrated-message-cjk-title-size)",
-      "description": "Defined in `.spectrum-IllustratedMessage`, `.spectrum-IllustratedMessage:lang(ja), .spectrum-IllustratedMessage:lang(ko), .spectrum-IllustratedMessage:lang(zh)`. Used by `.spectrum-IllustratedMessage-heading`.",
+      "value": "var(--spectrum-heading-cjk-size-s)",
+      "description": "Defined in `.spectrum-IllustratedMessage`, `.spectrum-IllustratedMessage:lang(ja), .spectrum-IllustratedMessage:lang(ko), .spectrum-IllustratedMessage:lang(zh)`. <br/>Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-illustrated-message-cjk-title-size)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-title-size": {
+      "value": "var(--spectrum-heading-size-s)",
       "description": "Used by `--spectrum-illustrated-message-title-font-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-title-line-height": {
-      "value": "var(--spectrum-heading-line-height)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-heading`.",
+      "value": "1.3",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-heading-line-height)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-title-color": {
-      "value": "var(--spectrum-heading-color)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-heading`.",
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-heading`. <br/>Defaults to `var(--spectrum-heading-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-illustrated-message-description-font-family": {
       "value": "var(--spectrum-sans-font-family-stack)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-description`.",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-description-font-weight": {
-      "value": "var(--spectrum-body-sans-serif-font-weight)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-description`.",
+      "value": "400",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-weight)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-description-font-style": {
-      "value": "var(--spectrum-body-sans-serif-font-style)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-description`.",
+      "value": "normal",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-style)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-description-font-size": {
-      "value": "var(--spectrum-illustrated-message-body-size)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-description`.",
+      "value": "var(--spectrum-body-size-xs)",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-illustrated-message-body-size)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-body-size": {
+      "value": "var(--spectrum-body-size-xs)",
       "description": "Used by `--spectrum-illustrated-message-description-font-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-description-line-height": {
-      "value": "var(--spectrum-body-line-height)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-description`.",
+      "value": "1.5",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-body-line-height)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-illustrated-message-description-color": {
-      "value": "var(--spectrum-body-color)",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-description`.",
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-description`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-illustrated-message-cjk-title-size": {
+      "value": "var(--spectrum-heading-cjk-size-s)",
       "description": "Used by `--spectrum-illustrated-message-title-font-size`.",
       "control": "text",
       "category": "Component"
@@ -269,21 +273,25 @@
   },
   "global": {
     "spectrum-spacing-400": {
+      "value": "24px",
       "description": "Used by `--spectrum-illustrated-message-title-to-heading`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-spacing-75": {
+      "value": "4px",
       "description": "Used by `--spectrum-illustrated-message-heading-to-description`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-neutral-visual-color": {
+      "value": "var(--spectrum-gray-600)",
       "description": "Used by `--spectrum-illustrated-message-illustration-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-accent-visual-color": {
+      "value": "var(--spectrum-accent-color-900)",
       "description": "Used by `--spectrum-illustrated-message-illustration-accent-color`.",
       "control": "color",
       "category": "Global"
@@ -294,41 +302,49 @@
       "category": "Global"
     },
     "spectrum-heading-sans-serif-font-weight": {
+      "value": "700",
       "description": "Used by `--spectrum-illustrated-message-title-font-weight`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-heading-sans-serif-font-style": {
+      "value": "normal",
       "description": "Used by `--spectrum-illustrated-message-title-font-style`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-heading-line-height": {
+      "value": "1.3",
       "description": "Used by `--spectrum-illustrated-message-title-line-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-heading-color": {
+      "value": "var(--spectrum-gray-900)",
       "description": "Used by `--spectrum-illustrated-message-title-color`.",
       "control": "color",
       "category": "Global"
     },
     "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
       "description": "Used by `--spectrum-illustrated-message-description-font-weight`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-body-sans-serif-font-style": {
+      "value": "normal",
       "description": "Used by `--spectrum-illustrated-message-description-font-style`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-body-line-height": {
+      "value": "1.5",
       "description": "Used by `--spectrum-illustrated-message-description-line-height`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-illustrated-message-description-color`.",
       "control": "color",
       "category": "Global"
@@ -338,13 +354,13 @@
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-illustrated-message-illustration-color": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-illustration`. Defaults to `var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color))`, if not set.",
+      "value": "var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color))",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-illustration`. <br/>Defaults to `var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color))`, if not set.",
       "control": "color"
     },
     "highcontrast-illustrated-message-illustration-accent-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-IllustratedMessage`. Used by `.spectrum-IllustratedMessage-accent`. Defaults to `var(--mod-illustrated-message-illustration-accent-color, var(--spectrum-illustrated-message-illustration-accent-color))`, if not set.",
+      "value": "var(--mod-illustrated-message-illustration-accent-color, var(--spectrum-illustrated-message-illustration-accent-color))",
+      "description": "Defined in `.spectrum-IllustratedMessage`. <br/>Used by `.spectrum-IllustratedMessage-accent`. <br/>Defaults to `var(--mod-illustrated-message-illustration-accent-color, var(--spectrum-illustrated-message-illustration-accent-color))`, if not set.",
       "control": "color"
     }
   }

@@ -86,3 +86,15 @@ svg:has(symbol):not(:has(use)) {
 	story view), due to Storybook's inline style that sets overflow: auto */
 	overflow: visible !important;
 }
+
+#panel-tab-content tr th:nth-child(1),
+#panel-tab-content tr th:nth-child(3),
+#panel-tab-content tr td:nth-child(1),
+#panel-tab-content tr td:nth-child(3) {
+	min-inline-size: 100px !important;
+}
+
+#panel-tab-content tr th:nth-child(2),
+#panel-tab-content tr td:nth-child(2) {
+	max-inline-size: 500px !important;
+}

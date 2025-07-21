@@ -19,42 +19,42 @@
   ],
   "modifiers": {
     "mod-avatar-inline-size": {
-      "description": "Used by `.spectrum-Avatar`, `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`, `.spectrum-Avatar-image`. Defaults to `var(--spectrum-avatar-inline-size)`, if not set.",
+      "description": "Used by `.spectrum-Avatar`, `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`, `.spectrum-Avatar-image`. <br/>Defaults to `var(--spectrum-avatar-inline-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-avatar-block-size": {
-      "description": "Used by `.spectrum-Avatar`, `.spectrum-Avatar-image`. Defaults to `var(--spectrum-avatar-block-size)`, if not set.",
+      "description": "Used by `.spectrum-Avatar`, `.spectrum-Avatar-image`. <br/>Defaults to `var(--spectrum-avatar-block-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-avatar-border-radius": {
-      "description": "Used by `.spectrum-Avatar`, `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`, `.spectrum-Avatar-image`. Defaults to `var(--spectrum-avatar-border-radius)`, if not set.",
+      "description": "Used by `.spectrum-Avatar`, `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`, `.spectrum-Avatar-image`. <br/>Defaults to `var(--spectrum-avatar-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-avatar-color-opacity": {
-      "description": "Used by `.spectrum-Avatar`. Defaults to `var(--spectrum-avatar-color-opacity)`, if not set.",
+      "description": "Used by `.spectrum-Avatar`. <br/>Defaults to `var(--spectrum-avatar-color-opacity)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-avatar-color-opacity-disabled": {
-      "description": "Used by `.spectrum-Avatar.is-disabled`. Defaults to `var(--spectrum-avatar-color-opacity-disabled)`, if not set.",
+      "description": "Used by `.spectrum-Avatar.is-disabled`. <br/>Defaults to `var(--spectrum-avatar-color-opacity-disabled)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-avatar-focus-indicator-gap": {
-      "description": "Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. Defaults to `var(--spectrum-avatar-focus-indicator-gap)`, if not set.",
+      "description": "Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. <br/>Defaults to `var(--spectrum-avatar-focus-indicator-gap)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-avatar-focus-indicator-thickness": {
-      "description": "Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. Defaults to `var(--spectrum-avatar-focus-indicator-thickness)`, if not set.",
+      "description": "Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. <br/>Defaults to `var(--spectrum-avatar-focus-indicator-thickness)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-avatar-focus-indicator-color": {
-      "description": "Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. Defaults to `var(--spectrum-avatar-focus-indicator-color)`, if not set.",
+      "description": "Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. <br/>Defaults to `var(--spectrum-avatar-focus-indicator-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
@@ -62,98 +62,108 @@
   "component": {
     "spectrum-avatar-color-opacity": {
       "value": "1",
-      "description": "Defined in `.spectrum-Avatar`. Used by `.spectrum-Avatar`.",
+      "description": "Defined in `.spectrum-Avatar`. <br/>Used by `.spectrum-Avatar`. <br/>Defaults to `1`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-avatar-inline-size": {
-      "value": "var(--spectrum-avatar-size-700)",
-      "description": "Defined in `.spectrum-Avatar`, `.spectrum-Avatar--size50`, `.spectrum-Avatar--size75`, `.spectrum-Avatar--size100`, `.spectrum-Avatar--size200`, `.spectrum-Avatar--size300`, `.spectrum-Avatar--size400`, `.spectrum-Avatar--size500`, `.spectrum-Avatar--size600`, `.spectrum-Avatar--size700`. Used by `.spectrum-Avatar`, `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`, `.spectrum-Avatar-image`.",
+      "value": "40px",
+      "description": "Defined in `.spectrum-Avatar`, `.spectrum-Avatar--size50`, `.spectrum-Avatar--size75`, `.spectrum-Avatar--size100`, `.spectrum-Avatar--size200`, `.spectrum-Avatar--size300`, `.spectrum-Avatar--size400`, `.spectrum-Avatar--size500`, `.spectrum-Avatar--size600`, `.spectrum-Avatar--size700`. <br/>Used by `.spectrum-Avatar`, `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`, `.spectrum-Avatar-image`. <br/>Defaults to `var(--spectrum-avatar-size-700)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-100": {
+      "value": "20px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-block-size": {
-      "value": "var(--spectrum-avatar-size-700)",
-      "description": "Defined in `.spectrum-Avatar`, `.spectrum-Avatar--size50`, `.spectrum-Avatar--size75`, `.spectrum-Avatar--size100`, `.spectrum-Avatar--size200`, `.spectrum-Avatar--size300`, `.spectrum-Avatar--size400`, `.spectrum-Avatar--size500`, `.spectrum-Avatar--size600`, `.spectrum-Avatar--size700`. Used by `--spectrum-avatar-border-radius`, `.spectrum-Avatar`, `.spectrum-Avatar-image`.",
+      "value": "40px",
+      "description": "Defined in `.spectrum-Avatar`, `.spectrum-Avatar--size50`, `.spectrum-Avatar--size75`, `.spectrum-Avatar--size100`, `.spectrum-Avatar--size200`, `.spectrum-Avatar--size300`, `.spectrum-Avatar--size400`, `.spectrum-Avatar--size500`, `.spectrum-Avatar--size600`, `.spectrum-Avatar--size700`. <br/>Used by `--spectrum-avatar-border-radius`, `.spectrum-Avatar`, `.spectrum-Avatar-image`. <br/>Defaults to `var(--spectrum-avatar-size-700)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-border-radius": {
       "value": "var(--spectrum-avatar-block-size)",
-      "description": "Defined in `.spectrum-Avatar`. Used by `.spectrum-Avatar`, `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`, `.spectrum-Avatar-image`.",
+      "description": "Defined in `.spectrum-Avatar`. <br/>Used by `.spectrum-Avatar`, `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`, `.spectrum-Avatar-image`. <br/>Defaults to `var(--spectrum-avatar-block-size)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-focus-indicator-thickness": {
-      "value": "var(--spectrum-focus-indicator-thickness)",
-      "description": "Defined in `.spectrum-Avatar`. Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`.",
+      "value": "2px",
+      "description": "Defined in `.spectrum-Avatar`. <br/>Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-focus-indicator-gap": {
-      "value": "var(--spectrum-focus-indicator-gap)",
-      "description": "Defined in `.spectrum-Avatar`. Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`.",
+      "value": "2px",
+      "description": "Defined in `.spectrum-Avatar`. <br/>Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-focus-indicator-color": {
-      "value": "var(--spectrum-focus-indicator-color)",
-      "description": "Defined in `.spectrum-Avatar`. Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`.",
+      "value": "var(--spectrum-blue-800)",
+      "description": "Defined in `.spectrum-Avatar`. <br/>Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-avatar-color-opacity-disabled": {
-      "value": "var(--spectrum-avatar-opacity-disabled)",
-      "description": "Defined in `.spectrum-Avatar`. Used by `.spectrum-Avatar.is-disabled`.",
+      "value": "0.3",
+      "description": "Defined in `.spectrum-Avatar`. <br/>Used by `.spectrum-Avatar.is-disabled`. <br/>Defaults to `var(--spectrum-avatar-opacity-disabled)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-avatar-opacity-disabled": {
+      "value": "0.3",
       "description": "Used by `--spectrum-avatar-color-opacity-disabled`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-50": {
+      "value": "16px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-75": {
+      "value": "18px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-200": {
+      "value": "22px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-300": {
+      "value": "26px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-400": {
+      "value": "28px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-500": {
+      "value": "32px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-600": {
+      "value": "36px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-avatar-size-700": {
+      "value": "40px",
       "description": "Used by `--spectrum-avatar-inline-size`, `--spectrum-avatar-block-size`.",
       "control": "text",
       "category": "Component"
@@ -161,16 +171,19 @@
   },
   "global": {
     "spectrum-focus-indicator-thickness": {
+      "value": "2px",
       "description": "Used by `--spectrum-avatar-focus-indicator-thickness`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-gap": {
+      "value": "2px",
       "description": "Used by `--spectrum-avatar-focus-indicator-gap`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
       "description": "Used by `--spectrum-avatar-focus-indicator-color`.",
       "control": "color",
       "category": "Global"
@@ -180,8 +193,8 @@
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-avatar-focus-indicator-color": {
-      "value": "CanvasText",
-      "description": "Defined in `.spectrum-Avatar`. Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. Defaults to `var(--mod-avatar-focus-indicator-color, var(--spectrum-avatar-focus-indicator-color))`, if not set.",
+      "value": "var(--mod-avatar-focus-indicator-color, var(--spectrum-avatar-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Avatar`. <br/>Used by `.spectrum-Avatar.is-focused:not(.is-disabled):after, .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after`. <br/>Defaults to `var(--mod-avatar-focus-indicator-color, var(--spectrum-avatar-focus-indicator-color))`, if not set.",
       "control": "color"
     }
   }

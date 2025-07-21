@@ -13,36 +13,36 @@
   ],
   "modifiers": {
     "mod-dropindicator-border-color": {
-      "description": "Used by `.spectrum-DropIndicator`. Defaults to `var(--spectrum-dropindicator-color)`, if not set.",
+      "description": "Used by `.spectrum-DropIndicator`. <br/>Defaults to `var(--spectrum-dropindicator-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-dropindicator-circle-size": {
-      "description": "Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`, `.spectrum-DropIndicator--horizontal`, `.spectrum-DropIndicator--horizontal:after, .spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--horizontal:after`, `.spectrum-DropIndicator--vertical`, `.spectrum-DropIndicator--vertical:after, .spectrum-DropIndicator--vertical:before`, `.spectrum-DropIndicator--vertical:before`, `.spectrum-DropIndicator--vertical:after`. Defaults to `var(--spectrum-dropindicator-circle-size)`, if not set.",
+      "description": "Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`, `.spectrum-DropIndicator--horizontal`, `.spectrum-DropIndicator--horizontal:after, .spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--horizontal:after`, `.spectrum-DropIndicator--vertical`, `.spectrum-DropIndicator--vertical:after, .spectrum-DropIndicator--vertical:before`, `.spectrum-DropIndicator--vertical:before`, `.spectrum-DropIndicator--vertical:after`. <br/>Defaults to `var(--spectrum-dropindicator-circle-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dropindicator-border-size": {
-      "description": "Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`, `.spectrum-DropIndicator--horizontal`, `.spectrum-DropIndicator--horizontal:after, .spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--vertical`, `.spectrum-DropIndicator--vertical:after, .spectrum-DropIndicator--vertical:before`. Defaults to `var(--spectrum-dropindicator-border-size)`, if not set.",
+      "description": "Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`, `.spectrum-DropIndicator--horizontal`, `.spectrum-DropIndicator--horizontal:after, .spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--vertical`, `.spectrum-DropIndicator--vertical:after, .spectrum-DropIndicator--vertical:before`. <br/>Defaults to `var(--spectrum-dropindicator-border-size)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-dropindicator-circle-color": {
-      "description": "Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`. Defaults to `var(--spectrum-dropindicator-color)`, if not set.",
+      "description": "Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`. <br/>Defaults to `var(--spectrum-dropindicator-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-dropindicator-border-size": {
-      "value": "var(--spectrum-border-width-200)",
-      "description": "Defined in `.spectrum-DropIndicator`. Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`, `.spectrum-DropIndicator--horizontal`, `.spectrum-DropIndicator--horizontal:after, .spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--vertical`, `.spectrum-DropIndicator--vertical:after, .spectrum-DropIndicator--vertical:before`.",
+      "value": "2px",
+      "description": "Defined in `.spectrum-DropIndicator`. <br/>Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`, `.spectrum-DropIndicator--horizontal`, `.spectrum-DropIndicator--horizontal:after, .spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--vertical`, `.spectrum-DropIndicator--vertical:after, .spectrum-DropIndicator--vertical:before`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-dropindicator-circle-size": {
       "value": "12px",
-      "description": "Defined in `.spectrum-DropIndicator`. Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`, `.spectrum-DropIndicator--horizontal`, `.spectrum-DropIndicator--horizontal:after, .spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--horizontal:after`, `.spectrum-DropIndicator--vertical`, `.spectrum-DropIndicator--vertical:after, .spectrum-DropIndicator--vertical:before`, `.spectrum-DropIndicator--vertical:before`, `.spectrum-DropIndicator--vertical:after`.",
+      "description": "Defined in `.spectrum-DropIndicator`. <br/>Used by `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`, `.spectrum-DropIndicator--horizontal`, `.spectrum-DropIndicator--horizontal:after, .spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--horizontal:before`, `.spectrum-DropIndicator--horizontal:after`, `.spectrum-DropIndicator--vertical`, `.spectrum-DropIndicator--vertical:after, .spectrum-DropIndicator--vertical:before`, `.spectrum-DropIndicator--vertical:before`, `.spectrum-DropIndicator--vertical:after`. <br/>Defaults to `12px`, if not set.",
       "control": "text",
       "category": "Component"
     },
@@ -54,6 +54,7 @@
   },
   "global": {
     "spectrum-border-width-200": {
+      "value": "2px",
       "description": "Used by `--spectrum-dropindicator-border-size`.",
       "control": "text",
       "category": "Global"
@@ -63,8 +64,8 @@
   "passthroughs": {},
   "high-contrast": {
     "highcontrast-dropindicator-color": {
-      "value": "Highlight",
-      "description": "Defined in `.spectrum-DropIndicator`. Used by `.spectrum-DropIndicator`, `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`. Defaults to `var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-color))`, if not set.",
+      "value": "var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-color))",
+      "description": "Defined in `.spectrum-DropIndicator`. <br/>Used by `.spectrum-DropIndicator`, `.spectrum-DropIndicator:after, .spectrum-DropIndicator:before`. <br/>Defaults to `var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-color))`, if not set.",
       "control": "color"
     }
   }

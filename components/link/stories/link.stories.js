@@ -78,10 +78,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		cssprops: {
-			...metadata.modifiers,
-			...metadata.component,
-		},
+		cssprops: metadata.modifiers,
 	},
 };
 

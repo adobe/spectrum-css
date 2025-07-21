@@ -3,62 +3,62 @@
   "selectors": [".spectrum-Well"],
   "modifiers": {
     "mod-well-min-width": {
-      "description": "Used by `.spectrum-Well`. Defaults to `var(--spectrum-well-min-width)`, if not set.",
+      "description": "Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-well-min-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-well-padding": {
-      "description": "Used by `.spectrum-Well`. Defaults to `var(--spectrum-well-padding)`, if not set.",
+      "description": "Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-well-padding)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-well-margin-top": {
-      "description": "Used by `.spectrum-Well`. Defaults to `var(--spectrum-well-margin-top)`, if not set.",
+      "description": "Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-well-margin-top)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-well-border-width": {
-      "description": "Used by `.spectrum-Well`. Defaults to `var(--spectrum-well-border-width)`, if not set.",
+      "description": "Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-well-border-width)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-well-border-radius": {
-      "description": "Used by `.spectrum-Well`. Defaults to `var(--spectrum-well-border-radius)`, if not set.",
+      "description": "Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-well-border-radius)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-well-background-color": {
-      "description": "Used by `.spectrum-Well`. Defaults to `var(--spectrum-well-background-color)`, if not set.",
+      "description": "Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-well-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-well-border-color": {
-      "description": "Used by `.spectrum-Well`. Defaults to `var(--spectrum-well-border-color)`, if not set.",
+      "description": "Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-well-border-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-well-content-color": {
-      "description": "Used by `.spectrum-Well`. Defaults to `var(--spectrum-well-content-color)`, if not set.",
+      "description": "Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-well-content-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     }
   },
   "component": {
     "spectrum-well-border-width": {
-      "value": "var(--spectrum-border-width-100)",
-      "description": "Defined in `.spectrum-Well`. Used by `.spectrum-Well`.",
+      "value": "1px",
+      "description": "Defined in `.spectrum-Well`. <br/>Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-well-content-color": {
-      "value": "var(--spectrum-body-color)",
-      "description": "Defined in `.spectrum-Well`. Used by `.spectrum-Well`.",
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Well`. <br/>Used by `.spectrum-Well`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
       "control": "color",
       "category": "Component"
     },
     "spectrum-well-background-color": {
       "value": "rgb(var(--spectrum-gray-800-rgb), 0.02)",
-      "description": "Defined in `.spectrum-Well`. Used by `.spectrum-Well`.",
+      "description": "Defined in `.spectrum-Well`. <br/>Used by `.spectrum-Well`. <br/>Defaults to `rgb(var(--spectrum-gray-800-rgb), 0.02)`, if not set.",
       "control": "color",
       "category": "Component"
     },
@@ -84,7 +84,7 @@
     },
     "spectrum-well-border-color": {
       "value": "var(--system-well-border-color)",
-      "description": "Defined in `.spectrum-Well`. Used by `.spectrum-Well`.",
+      "description": "Defined in `.spectrum-Well`. <br/>Used by `.spectrum-Well`. <br/>Defaults to `var(--system-well-border-color)`, if not set.",
       "control": "color",
       "category": "Component"
     }
@@ -96,11 +96,13 @@
       "category": "Global"
     },
     "spectrum-border-width-100": {
+      "value": "1px",
       "description": "Used by `--spectrum-well-border-width`.",
       "control": "text",
       "category": "Global"
     },
     "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
       "description": "Used by `--spectrum-well-content-color`.",
       "control": "color",
       "category": "Global"
@@ -114,7 +116,7 @@
   "system-theme": {
     "system-well-border-color": {
       "value": "rgb(var(--spectrum-gray-1000-rgb), 0.05)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-well-border-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-well-border-color`. <br/>Defaults to `rgb(var(--spectrum-gray-1000-rgb), 0.05)`, if not set.",
       "control": "color"
     }
   },

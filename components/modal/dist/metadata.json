@@ -13,32 +13,32 @@
   ],
   "modifiers": {
     "mod-modal-confirm-entry-animation-duration": {
-      "description": "Used by `--spectrum-modal-confirm-entry-animation-duration`. Defaults to `var(--spectrum-animation-duration-500)`, if not set.",
+      "description": "Used by `--spectrum-modal-confirm-entry-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-500)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-overlay-animation-duration-opened": {
-      "description": "Used by `--spectrum-modal-confirm-entry-animation-delay`. Defaults to `var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200))`, if not set.",
+      "description": "Used by `--spectrum-modal-confirm-entry-animation-delay`. <br/>Defaults to `var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200))`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-modal-confirm-entry-animation-delay": {
-      "description": "Used by `--spectrum-modal-confirm-entry-animation-delay`. Defaults to `var(--spectrum-animation-duration-200)`, if not set.",
+      "description": "Used by `--spectrum-modal-confirm-entry-animation-delay`. <br/>Defaults to `var(--spectrum-animation-duration-200)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-overlay-animation-duration": {
-      "description": "Used by `--spectrum-modal-confirm-exit-animation-duration`. Defaults to `var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100))`, if not set.",
+      "description": "Used by `--spectrum-modal-confirm-exit-animation-duration`. <br/>Defaults to `var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100))`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-modal-confirm-exit-animation-duration": {
-      "description": "Used by `--spectrum-modal-confirm-exit-animation-duration`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "description": "Used by `--spectrum-modal-confirm-exit-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-modal-confirm-exit-animation-delay": {
-      "description": "Used by `--spectrum-modal-confirm-exit-animation-delay`. Defaults to `var(--spectrum-animation-duration-0)`, if not set.",
+      "description": "Used by `--spectrum-modal-confirm-exit-animation-delay`. <br/>Defaults to `var(--spectrum-animation-duration-0)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -48,12 +48,12 @@
       "category": "Modifier"
     },
     "mod-modal-transition-animation-duration": {
-      "description": "Used by `.spectrum-Modal-wrapper`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "description": "Used by `.spectrum-Modal-wrapper`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
     "mod-modal-confirm-entry-animation-distance": {
-      "description": "Used by `.spectrum-Modal`. Defaults to `var(--spectrum-dialog-confirm-entry-animation-distance)`, if not set.",
+      "description": "Used by `.spectrum-Modal`. <br/>Defaults to `var(--spectrum-dialog-confirm-entry-animation-distance)`, if not set.",
       "control": "text",
       "category": "Modifier"
     },
@@ -68,12 +68,12 @@
       "category": "Modifier"
     },
     "mod-modal-background-color": {
-      "description": "Used by `.spectrum-Modal`. Defaults to `var(--spectrum-modal-background-color)`, if not set.",
+      "description": "Used by `.spectrum-Modal`. <br/>Defaults to `var(--spectrum-modal-background-color)`, if not set.",
       "control": "color",
       "category": "Modifier"
     },
     "mod-modal-confirm-border-radius": {
-      "description": "Used by `.spectrum-Modal`. Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "description": "Used by `.spectrum-Modal`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
       "control": "text",
       "category": "Modifier"
     }
@@ -81,43 +81,44 @@
   "component": {
     "spectrum-modal-confirm-entry-animation-duration": {
       "value": "var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-animation-duration-500))",
-      "description": "Defined in `.spectrum-Modal`. Used by `.spectrum-Modal.is-open`.",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal.is-open`. <br/>Defaults to `var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-animation-duration-500))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-modal-confirm-entry-animation-delay": {
       "value": "var(--mod-overlay-animation-duration-opened, var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200)))",
-      "description": "Defined in `.spectrum-Modal`. Used by `.spectrum-Modal.is-open`.",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal.is-open`. <br/>Defaults to `var(--mod-overlay-animation-duration-opened, var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200)))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-modal-confirm-exit-animation-duration": {
       "value": "var(--mod-overlay-animation-duration, var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100)))",
-      "description": "Defined in `.spectrum-Modal`. Used by `.spectrum-Modal`.",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `var(--mod-overlay-animation-duration, var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100)))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-modal-confirm-exit-animation-delay": {
       "value": "var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-animation-duration-0))",
-      "description": "Defined in `.spectrum-Modal`. Used by `.spectrum-Modal`.",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-animation-duration-0))`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-modal-fullscreen-margin": {
       "value": "var(--mod-modal-fullscreen-margin, 32px)",
-      "description": "Defined in `.spectrum-Modal`. Used by `.spectrum-Modal--fullscreen`.",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal--fullscreen`. <br/>Defaults to `var(--mod-modal-fullscreen-margin, 32px)`, if not set.",
       "control": "text",
       "category": "Component"
     },
     "spectrum-modal-background-color": {
       "value": "var(--system-modal-background-color)",
-      "description": "Defined in `.spectrum-Modal`. Used by `.spectrum-Modal`.",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `var(--system-modal-background-color)`, if not set.",
       "control": "color",
       "category": "Component"
     }
   },
   "global": {
     "spectrum-background-layer-2-color": {
+      "value": "var(--spectrum-gray-75)",
       "description": "Used by `--system-modal-background-color`.",
       "control": "color",
       "category": "Global"
@@ -148,6 +149,7 @@
       "category": "Global"
     },
     "spectrum-corner-radius-100": {
+      "value": "8px",
       "description": "Used by `.spectrum-Modal`.",
       "control": "text",
       "category": "Global"
@@ -171,7 +173,7 @@
   "system-theme": {
     "system-modal-background-color": {
       "value": "var(--spectrum-background-layer-2-color)",
-      "description": "Defined in `.spectrum`. Used by `--spectrum-modal-background-color`.",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-modal-background-color`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
       "control": "color"
     }
   },
