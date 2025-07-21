@@ -87,6 +87,7 @@
 
 	&:not(:disabled):active {
 		color: var(--mod-clear-button-icon-color-down, var(--spectrum-clear-button-icon-color-down));
+		transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
 
 		.spectrum-ClearButton-fill {
 			background-color: var(--mod-clear-button-background-color-down, var(--spectrum-clear-button-background-color-down));

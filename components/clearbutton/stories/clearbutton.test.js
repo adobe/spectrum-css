@@ -15,5 +15,13 @@ export const ClearButtonGroup = Variants({
 			testHeading: "Disabled",
 			isDisabled: true,
 		},
+		{
+			testHeading: "Hover",
+			isHover: true,
+		},
+		{
+			testHeading: "Down",
+			isDown: true,
+		},
 	]
 });
