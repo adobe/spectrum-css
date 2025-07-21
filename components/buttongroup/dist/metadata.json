@@ -6,20 +6,68 @@
     ".spectrum-ButtonGroup.spectrum-ButtonGroup--sizeS",
     ".spectrum-ButtonGroup.spectrum-ButtonGroup--vertical"
   ],
-  "modifiers": [
-    "--mod-buttongroup-justify-content",
-    "--mod-buttongroup-spacing",
-    "--mod-buttongroup-spacing-horizontal",
-    "--mod-buttongroup-spacing-vertical"
-  ],
-  "component": [
-    "--spectrum-buttongroup-display",
-    "--spectrum-buttongroup-flex-direction",
-    "--spectrum-buttongroup-justify-content",
-    "--spectrum-buttongroup-spacing"
-  ],
-  "global": ["--spectrum-spacing-200", "--spectrum-spacing-300"],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-buttongroup-spacing": {
+      "value": "var(--mod-buttongroup-spacing-vertical)",
+      "description": "Defined in `.spectrum-ButtonGroup.spectrum-ButtonGroup--vertical`. Used by `--spectrum-buttongroup-spacing`. Defaults to `var(--mod-buttongroup-spacing-horizontal, var(--spectrum-spacing-200))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-buttongroup-spacing-horizontal": {
+      "description": "Used by `--spectrum-buttongroup-spacing`. Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-buttongroup-justify-content": {
+      "description": "Used by `--spectrum-buttongroup-justify-content`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-buttongroup-spacing-vertical": {
+      "description": "Used by `--mod-buttongroup-spacing`.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-buttongroup-spacing": {
+      "value": "var(--mod-buttongroup-spacing, var(--mod-buttongroup-spacing-horizontal, var(--spectrum-spacing-200)))",
+      "description": "Defined in `.spectrum-ButtonGroup`, `.spectrum-ButtonGroup.spectrum-ButtonGroup--sizeS`. Used by `.spectrum-ButtonGroup`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-buttongroup-display": {
+      "value": "inline-flex",
+      "description": "Defined in `.spectrum-ButtonGroup`, `.spectrum-ButtonGroup.spectrum-ButtonGroup--vertical`. Used by `.spectrum-ButtonGroup`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-buttongroup-flex-direction": {
+      "value": "column",
+      "description": "Defined in `.spectrum-ButtonGroup`, `.spectrum-ButtonGroup.spectrum-ButtonGroup--vertical`. Used by `.spectrum-ButtonGroup`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-buttongroup-justify-content": {
+      "value": "var(--mod-buttongroup-justify-content, normal)",
+      "description": "Defined in `.spectrum-ButtonGroup`. Used by `.spectrum-ButtonGroup`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-spacing-300": {
+      "description": "Used by `--spectrum-buttongroup-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "description": "Used by `--spectrum-buttongroup-spacing`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {}
 }

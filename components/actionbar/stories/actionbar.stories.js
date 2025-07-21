@@ -3,10 +3,12 @@ import { default as CloseButton } from "@spectrum-css/closebutton/stories/closeb
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isEmphasized, isOpen } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ActionBarGroup } from "./actionbar.test.js";
 import { BehavioralTemplate } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The action bar component is a floating full width bar that appears upon selection. Action bars are used for single and bulk selection patterns, when a user needs to perform actions on either a single or multiple items at the same time.
@@ -72,6 +74,10 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 };
 

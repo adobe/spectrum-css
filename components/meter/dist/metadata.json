@@ -8,36 +8,110 @@
     ".spectrum-Meter.spectrum-Meter--sizeL",
     ".spectrum-Meter.spectrum-Meter--sizeS"
   ],
-  "modifiers": [
-    "--mod-meter-inline-size",
-    "--mod-meter-max-width",
-    "--mod-meter-min-width"
-  ],
-  "component": [
-    "--spectrum-meter-default-width",
-    "--spectrum-meter-maximum-width",
-    "--spectrum-meter-minimum-width",
-    "--spectrum-meter-thickness-large",
-    "--spectrum-meter-thickness-small"
-  ],
-  "global": [
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-75",
-    "--spectrum-negative-visual-color",
-    "--spectrum-notice-visual-color",
-    "--spectrum-positive-visual-color"
-  ],
-  "system-theme": [],
-  "passthroughs": [
-    "--mod-progressbar-fill-color",
-    "--mod-progressbar-font-size",
-    "--mod-progressbar-max-size",
-    "--mod-progressbar-min-size",
-    "--mod-progressbar-size-default",
-    "--mod-progressbar-spacing-top-to-text",
-    "--mod-progressbar-thickness"
-  ],
-  "high-contrast": []
+  "modifiers": {
+    "mod-meter-inline-size": {
+      "description": "Used by `--mod-progressbar-size-default`. Defaults to `var(--spectrum-meter-default-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-meter-max-width": {
+      "description": "Used by `--mod-progressbar-max-size`. Defaults to `var(--spectrum-meter-maximum-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-meter-min-width": {
+      "description": "Used by `--mod-progressbar-min-size`. Defaults to `var(--spectrum-meter-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-meter-default-width": {
+      "description": "Used by `--mod-progressbar-size-default`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-meter-maximum-width": {
+      "description": "Used by `--mod-progressbar-max-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-meter-minimum-width": {
+      "description": "Used by `--mod-progressbar-min-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-meter-thickness-small": {
+      "description": "Used by `--mod-progressbar-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-meter-thickness-large": {
+      "description": "Used by `--mod-progressbar-thickness`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-font-size-75": {
+      "description": "Used by `--mod-progressbar-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "description": "Used by `--mod-progressbar-spacing-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "description": "Used by `--mod-progressbar-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "description": "Used by `--mod-progressbar-spacing-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-positive-visual-color": {
+      "description": "Used by `--mod-progressbar-fill-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-notice-visual-color": {
+      "description": "Used by `--mod-progressbar-fill-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-visual-color": {
+      "description": "Used by `--mod-progressbar-fill-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {
+    "mod-progressbar-size-default": {
+      "category": "Passthrough"
+    },
+    "mod-progressbar-max-size": {
+      "category": "Passthrough"
+    },
+    "mod-progressbar-min-size": {
+      "category": "Passthrough"
+    },
+    "mod-progressbar-thickness": {
+      "category": "Passthrough"
+    },
+    "mod-progressbar-font-size": {
+      "category": "Passthrough"
+    },
+    "mod-progressbar-spacing-top-to-text": {
+      "category": "Passthrough"
+    },
+    "mod-progressbar-fill-color": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {}
 }

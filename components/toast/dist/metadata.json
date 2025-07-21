@@ -9,9 +9,9 @@
     ".spectrum-Toast--positive",
     ".spectrum-Toast--positive .spectrum-Toast-closeButton:focus-visible:not(:active)",
     ".spectrum-Toast-body",
-    ".spectrum-Toast-body + .spectrum-Toast-buttons",
     ".spectrum-Toast-body .spectrum-Button",
     ".spectrum-Toast-body .spectrum-Button:dir(rtl)",
+    ".spectrum-Toast-body + .spectrum-Toast-buttons",
     ".spectrum-Toast-buttons",
     ".spectrum-Toast-buttons .spectrum-CloseButton",
     ".spectrum-Toast-content",
@@ -21,88 +21,416 @@
     ".spectrum-Toast-typeIcon",
     "[dir=\"rtl\"] .spectrum-Toast-body .spectrum-Button"
   ],
-  "modifiers": [
-    "--mod-toast-background-color-default",
-    "--mod-toast-block-size",
-    "--mod-toast-border-width",
-    "--mod-toast-corner-radius",
-    "--mod-toast-divider-color",
-    "--mod-toast-font-size",
-    "--mod-toast-font-weight",
-    "--mod-toast-informative-background-color-default",
-    "--mod-toast-line-height",
-    "--mod-toast-line-height-cjk",
-    "--mod-toast-max-inline-size",
-    "--mod-toast-negative-background-color-default",
-    "--mod-toast-positive-background-color-default",
-    "--mod-toast-spacing-block-end",
-    "--mod-toast-spacing-block-start",
-    "--mod-toast-spacing-bottom-edge-to-divider",
-    "--mod-toast-spacing-bottom-edge-to-text",
-    "--mod-toast-spacing-close-button",
-    "--mod-toast-spacing-icon-to-text",
-    "--mod-toast-spacing-start-edge-to-text-and-icon",
-    "--mod-toast-spacing-text-and-action-button-to-divider",
-    "--mod-toast-spacing-text-to-action-button-horizontal",
-    "--mod-toast-spacing-top-edge-to-divider",
-    "--mod-toast-spacing-top-edge-to-icon",
-    "--mod-toast-spacing-top-edge-to-text",
-    "--mod-toast-text-and-icon-color"
-  ],
-  "component": [
-    "--spectrum-toast-background-color-default",
-    "--spectrum-toast-block-size",
-    "--spectrum-toast-border-width",
-    "--spectrum-toast-bottom-to-text",
-    "--spectrum-toast-corner-radius",
-    "--spectrum-toast-divider-color",
-    "--spectrum-toast-font-size",
-    "--spectrum-toast-font-weight",
-    "--spectrum-toast-height",
-    "--spectrum-toast-informative-background-color-default",
-    "--spectrum-toast-line-height",
-    "--spectrum-toast-line-height-cjk",
-    "--spectrum-toast-max-inline-size",
-    "--spectrum-toast-maximum-width",
-    "--spectrum-toast-negative-background-color-default",
-    "--spectrum-toast-positive-background-color-default",
-    "--spectrum-toast-spacing-block-end",
-    "--spectrum-toast-spacing-block-start",
-    "--spectrum-toast-spacing-bottom-edge-to-divider",
-    "--spectrum-toast-spacing-bottom-edge-to-text",
-    "--spectrum-toast-spacing-close-button",
-    "--spectrum-toast-spacing-icon-to-text",
-    "--spectrum-toast-spacing-start-edge-to-text-and-icon",
-    "--spectrum-toast-spacing-text-and-action-button-to-divider",
-    "--spectrum-toast-spacing-text-to-action-button-horizontal",
-    "--spectrum-toast-spacing-top-edge-to-divider",
-    "--spectrum-toast-spacing-top-edge-to-icon",
-    "--spectrum-toast-spacing-top-edge-to-text",
-    "--spectrum-toast-text-and-icon-color",
-    "--spectrum-toast-top-to-text",
-    "--spectrum-toast-top-to-workflow-icon"
-  ],
-  "global": [
-    "--spectrum-border-width-100",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-corner-radius-100",
-    "--spectrum-font-size-100",
-    "--spectrum-informative-background-color-default",
-    "--spectrum-line-height-100",
-    "--spectrum-negative-background-color-default",
-    "--spectrum-neutral-subdued-background-color-default",
-    "--spectrum-positive-background-color-default",
-    "--spectrum-regular-font-weight",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-300",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-transparent-white-400",
-    "--spectrum-white"
-  ],
-  "system-theme": [
-    "--system-toast-background-color-default",
-    "--system-toast-divider-color"
-  ],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-toast-border-color"]
+  "modifiers": {
+    "mod-toast-border-width": {
+      "description": "Used by `.spectrum-Toast`. Defaults to `var(--spectrum-toast-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-block-size": {
+      "description": "Used by `.spectrum-Toast`. Defaults to `var(--spectrum-toast-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-max-inline-size": {
+      "description": "Used by `.spectrum-Toast`. Defaults to `var(--spectrum-toast-max-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-corner-radius": {
+      "description": "Used by `.spectrum-Toast`. Defaults to `var(--spectrum-toast-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-start-edge-to-text-and-icon": {
+      "description": "Used by `.spectrum-Toast`. Defaults to `var(--spectrum-toast-spacing-start-edge-to-text-and-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-font-size": {
+      "description": "Used by `.spectrum-Toast`. Defaults to `var(--spectrum-toast-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-font-weight": {
+      "description": "Used by `.spectrum-Toast`. Defaults to `var(--spectrum-toast-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-background-color-default": {
+      "description": "Used by `.spectrum-Toast`. Defaults to `var(--spectrum-toast-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-toast-negative-background-color-default": {
+      "description": "Used by `.spectrum-Toast--negative`, `.spectrum-Toast--negative, .spectrum-Toast--negative .spectrum-Toast-closeButton:focus-visible:not(:active)`. Defaults to `var(--spectrum-toast-negative-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-toast-informative-background-color-default": {
+      "description": "Used by `.spectrum-Toast--info`, `.spectrum-Toast--info, .spectrum-Toast--info .spectrum-Toast-closeButton:focus-visible:not(:active)`. Defaults to `var(--spectrum-toast-informative-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-toast-positive-background-color-default": {
+      "description": "Used by `.spectrum-Toast--positive`, `.spectrum-Toast--positive, .spectrum-Toast--positive .spectrum-Toast-closeButton:focus-visible:not(:active)`. Defaults to `var(--spectrum-toast-positive-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-top-edge-to-icon": {
+      "description": "Used by `.spectrum-Toast-typeIcon`. Defaults to `var(--spectrum-toast-spacing-top-edge-to-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-icon-to-text": {
+      "description": "Used by `.spectrum-Toast-typeIcon`. Defaults to `var(--spectrum-toast-spacing-icon-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-text-and-icon-color": {
+      "description": "Used by `.spectrum-Toast-content, .spectrum-Toast-typeIcon`. Defaults to `var(--spectrum-toast-text-and-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-top-edge-to-text": {
+      "description": "Used by `.spectrum-Toast-content`. Defaults to `var(--spectrum-toast-spacing-top-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-block-start": {
+      "description": "Used by `.spectrum-Toast-content`, `.spectrum-Toast-body`. Defaults to `var(--spectrum-toast-spacing-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-bottom-edge-to-text": {
+      "description": "Used by `.spectrum-Toast-content`. Defaults to `var(--spectrum-toast-spacing-bottom-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-block-end": {
+      "description": "Used by `.spectrum-Toast-content`, `.spectrum-Toast-body`. Defaults to `var(--spectrum-toast-spacing-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-text-to-action-button-horizontal": {
+      "description": "Used by `.spectrum-Toast-content`. Defaults to `var(--spectrum-toast-spacing-text-to-action-button-horizontal)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-line-height": {
+      "description": "Used by `.spectrum-Toast-content`. Defaults to `var(--spectrum-toast-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-line-height-cjk": {
+      "description": "Used by `.spectrum-Toast-content:lang(ja), .spectrum-Toast-content:lang(ko), .spectrum-Toast-content:lang(zh)`. Defaults to `var(--spectrum-toast-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-top-edge-to-divider": {
+      "description": "Used by `.spectrum-Toast-buttons`. Defaults to `var(--spectrum-toast-spacing-top-edge-to-divider)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-bottom-edge-to-divider": {
+      "description": "Used by `.spectrum-Toast-buttons`. Defaults to `var(--spectrum-toast-spacing-bottom-edge-to-divider)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-divider-color": {
+      "description": "Used by `.spectrum-Toast-buttons`. Defaults to `var(--spectrum-toast-divider-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-close-button": {
+      "description": "Used by `.spectrum-Toast-buttons`, `.spectrum-Toast-body + .spectrum-Toast-buttons`. Defaults to `var(--spectrum-toast-spacing-close-button)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-toast-spacing-text-and-action-button-to-divider": {
+      "description": "Used by `.spectrum-Toast-body .spectrum-Button`, `.spectrum-Toast-body .spectrum-Button:dir(rtl), [dir=\"rtl\"] .spectrum-Toast-body .spectrum-Button`. Defaults to `var(--spectrum-toast-spacing-text-and-action-button-to-divider)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-toast-font-weight": {
+      "value": "var(--spectrum-regular-font-weight)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-font-size": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-corner-radius": {
+      "value": "var(--spectrum-corner-radius-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-block-size": {
+      "value": "var(--spectrum-toast-height)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-height": {
+      "description": "Used by `--spectrum-toast-block-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-max-inline-size": {
+      "value": "var(--spectrum-toast-maximum-width)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-maximum-width": {
+      "description": "Used by `--spectrum-toast-max-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-border-width": {
+      "value": "var(--spectrum-border-width-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-line-height": {
+      "value": "var(--spectrum-line-height-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-content`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-line-height-cjk": {
+      "value": "var(--spectrum-cjk-line-height-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-content:lang(ja), .spectrum-Toast-content:lang(ko), .spectrum-Toast-content:lang(zh)`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-icon-to-text": {
+      "value": "var(--spectrum-text-to-visual-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-typeIcon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-start-edge-to-text-and-icon": {
+      "value": "var(--spectrum-spacing-300)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-text-and-action-button-to-divider": {
+      "value": "var(--spectrum-spacing-300)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-body .spectrum-Button`, `.spectrum-Toast-body .spectrum-Button:dir(rtl), [dir=\"rtl\"] .spectrum-Toast-body .spectrum-Button`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-top-edge-to-divider": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-buttons`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-bottom-edge-to-divider": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-buttons`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-top-edge-to-icon": {
+      "value": "var(--spectrum-toast-top-to-workflow-icon)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-typeIcon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-top-to-workflow-icon": {
+      "description": "Used by `--spectrum-toast-spacing-top-edge-to-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-text-to-action-button-horizontal": {
+      "value": "var(--spectrum-spacing-300)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-content`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-close-button": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-buttons`, `.spectrum-Toast-body + .spectrum-Toast-buttons`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-block-start": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-content`, `.spectrum-Toast-body`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-block-end": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-content`, `.spectrum-Toast-body`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-top-edge-to-text": {
+      "value": "var(--spectrum-toast-top-to-text)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-content`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-top-to-text": {
+      "description": "Used by `--spectrum-toast-spacing-top-edge-to-text`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-spacing-bottom-edge-to-text": {
+      "value": "var(--spectrum-toast-bottom-to-text)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-content`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-bottom-to-text": {
+      "description": "Used by `--spectrum-toast-spacing-bottom-edge-to-text`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-toast-negative-background-color-default": {
+      "value": "var(--spectrum-negative-background-color-default)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast--negative`, `.spectrum-Toast--negative, .spectrum-Toast--negative .spectrum-Toast-closeButton:focus-visible:not(:active)`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-toast-positive-background-color-default": {
+      "value": "var(--spectrum-positive-background-color-default)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast--positive`, `.spectrum-Toast--positive, .spectrum-Toast--positive .spectrum-Toast-closeButton:focus-visible:not(:active)`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-toast-informative-background-color-default": {
+      "value": "var(--spectrum-informative-background-color-default)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast--info`, `.spectrum-Toast--info, .spectrum-Toast--info .spectrum-Toast-closeButton:focus-visible:not(:active)`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-toast-text-and-icon-color": {
+      "value": "var(--spectrum-white)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-content, .spectrum-Toast-typeIcon`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-toast-background-color-default": {
+      "value": "var(--system-toast-background-color-default)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-toast-divider-color": {
+      "value": "var(--system-toast-divider-color)",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast-buttons`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-neutral-subdued-background-color-default": {
+      "description": "Used by `--system-toast-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-400": {
+      "description": "Used by `--system-toast-divider-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "description": "Used by `--spectrum-toast-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "description": "Used by `--spectrum-toast-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "description": "Used by `--spectrum-toast-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "description": "Used by `--spectrum-toast-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "description": "Used by `--spectrum-toast-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "description": "Used by `--spectrum-toast-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "description": "Used by `--spectrum-toast-spacing-icon-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "description": "Used by `--spectrum-toast-spacing-start-edge-to-text-and-icon`, `--spectrum-toast-spacing-text-and-action-button-to-divider`, `--spectrum-toast-spacing-text-to-action-button-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "description": "Used by `--spectrum-toast-spacing-top-edge-to-divider`, `--spectrum-toast-spacing-bottom-edge-to-divider`, `--spectrum-toast-spacing-close-button`, `--spectrum-toast-spacing-block-start`, `--spectrum-toast-spacing-block-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-negative-background-color-default": {
+      "description": "Used by `--spectrum-toast-negative-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-positive-background-color-default": {
+      "description": "Used by `--spectrum-toast-positive-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-informative-background-color-default": {
+      "description": "Used by `--spectrum-toast-informative-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "description": "Used by `--spectrum-toast-text-and-icon-color`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-toast-background-color-default": {
+      "value": "var(--spectrum-neutral-subdued-background-color-default)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-toast-background-color-default`.",
+      "control": "color"
+    },
+    "system-toast-divider-color": {
+      "value": "var(--spectrum-transparent-white-400)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-toast-divider-color`.",
+      "control": "color"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-toast-border-color": {
+      "value": "ButtonText",
+      "description": "Defined in `.spectrum-Toast`. Used by `.spectrum-Toast`.",
+      "control": "color"
+    }
+  }
 }

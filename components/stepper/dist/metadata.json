@@ -3,38 +3,12 @@
   "selectors": [
     ".spectrum-Stepper",
     ".spectrum-Stepper--quiet",
+    ".spectrum-Stepper--quiet:after",
     ".spectrum-Stepper--quiet.hide-stepper .spectrum-Stepper-input",
     ".spectrum-Stepper--quiet.is-keyboardFocused:not(.is-disabled)",
-    ".spectrum-Stepper--quiet:after",
     ".spectrum-Stepper-button",
     ".spectrum-Stepper-buttons",
     ".spectrum-Stepper-input",
-    ".spectrum-Stepper.hide-stepper .spectrum-Stepper-input",
-    ".spectrum-Stepper.is-disabled",
-    ".spectrum-Stepper.is-focused:not(.is-disabled)",
-    ".spectrum-Stepper.is-focused:not(.is-disabled):hover",
-    ".spectrum-Stepper.is-invalid",
-    ".spectrum-Stepper.is-invalid.is-focused",
-    ".spectrum-Stepper.is-invalid.is-focused:hover",
-    ".spectrum-Stepper.is-invalid.is-keyboardFocused",
-    ".spectrum-Stepper.is-invalid:focus",
-    ".spectrum-Stepper.is-invalid:focus-visible",
-    ".spectrum-Stepper.is-invalid:focus:hover",
-    ".spectrum-Stepper.is-invalid:hover",
-    ".spectrum-Stepper.is-keyboardFocused:not(.is-disabled)",
-    ".spectrum-Stepper.spectrum-Stepper--quiet",
-    ".spectrum-Stepper.spectrum-Stepper--quiet.is-focused:not(.is-disabled)",
-    ".spectrum-Stepper.spectrum-Stepper--quiet.is-focused:not(.is-disabled):hover",
-    ".spectrum-Stepper.spectrum-Stepper--quiet.is-invalid",
-    ".spectrum-Stepper.spectrum-Stepper--quiet.is-keyboardFocused:not(.is-disabled)",
-    ".spectrum-Stepper.spectrum-Stepper--quiet.is-keyboardFocused:not(.is-disabled):hover",
-    ".spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):focus",
-    ".spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):focus:hover",
-    ".spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):hover",
-    ".spectrum-Stepper.spectrum-Stepper--sizeL",
-    ".spectrum-Stepper.spectrum-Stepper--sizeM",
-    ".spectrum-Stepper.spectrum-Stepper--sizeS",
-    ".spectrum-Stepper.spectrum-Stepper--sizeXL",
     ".spectrum-Stepper:before",
     ".spectrum-Stepper:hover:not(.is-invalid, .is-disabled, .is-focused)",
     ".spectrum-Stepper:not(.is-disabled) .is-focused",
@@ -43,163 +17,768 @@
     ".spectrum-Stepper:not(.is-disabled):focus-visible",
     ".spectrum-Stepper:not(.is-disabled):focus:hover",
     ".spectrum-Stepper:not(.is-disabled):hover",
-    ".spectrum-Stepper:not(.spectrum-Stepper--quiet)"
+    ".spectrum-Stepper:not(.spectrum-Stepper--quiet)",
+    ".spectrum-Stepper.hide-stepper .spectrum-Stepper-input",
+    ".spectrum-Stepper.is-disabled",
+    ".spectrum-Stepper.is-focused:not(.is-disabled)",
+    ".spectrum-Stepper.is-focused:not(.is-disabled):hover",
+    ".spectrum-Stepper.is-invalid",
+    ".spectrum-Stepper.is-invalid:focus",
+    ".spectrum-Stepper.is-invalid:focus-visible",
+    ".spectrum-Stepper.is-invalid:focus:hover",
+    ".spectrum-Stepper.is-invalid:hover",
+    ".spectrum-Stepper.is-invalid.is-focused",
+    ".spectrum-Stepper.is-invalid.is-focused:hover",
+    ".spectrum-Stepper.is-invalid.is-keyboardFocused",
+    ".spectrum-Stepper.is-keyboardFocused:not(.is-disabled)",
+    ".spectrum-Stepper.spectrum-Stepper--quiet",
+    ".spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):focus",
+    ".spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):focus:hover",
+    ".spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):hover",
+    ".spectrum-Stepper.spectrum-Stepper--quiet.is-focused:not(.is-disabled)",
+    ".spectrum-Stepper.spectrum-Stepper--quiet.is-focused:not(.is-disabled):hover",
+    ".spectrum-Stepper.spectrum-Stepper--quiet.is-invalid",
+    ".spectrum-Stepper.spectrum-Stepper--quiet.is-keyboardFocused:not(.is-disabled)",
+    ".spectrum-Stepper.spectrum-Stepper--quiet.is-keyboardFocused:not(.is-disabled):hover",
+    ".spectrum-Stepper.spectrum-Stepper--sizeL",
+    ".spectrum-Stepper.spectrum-Stepper--sizeM",
+    ".spectrum-Stepper.spectrum-Stepper--sizeS",
+    ".spectrum-Stepper.spectrum-Stepper--sizeXL"
   ],
-  "modifiers": [
-    "--mod-stepper-animation-duration",
-    "--mod-stepper-border-color",
-    "--mod-stepper-border-color-focus",
-    "--mod-stepper-border-color-focus-hover",
-    "--mod-stepper-border-color-focus-hover-invalid",
-    "--mod-stepper-border-color-focus-invalid",
-    "--mod-stepper-border-color-hover",
-    "--mod-stepper-border-color-hover-invalid",
-    "--mod-stepper-border-color-invalid",
-    "--mod-stepper-border-color-keyboard-focus",
-    "--mod-stepper-border-color-keyboard-focus-invalid",
-    "--mod-stepper-border-radius",
-    "--mod-stepper-border-width",
-    "--mod-stepper-button-border-width",
-    "--mod-stepper-button-width",
-    "--mod-stepper-button-width-quiet",
-    "--mod-stepper-buttons-background-color",
-    "--mod-stepper-buttons-border-color",
-    "--mod-stepper-buttons-border-color-focus",
-    "--mod-stepper-buttons-border-color-focus-hover",
-    "--mod-stepper-buttons-border-color-hover",
-    "--mod-stepper-buttons-border-color-keyboard-focus",
-    "--mod-stepper-buttons-border-style",
-    "--mod-stepper-buttons-border-width",
-    "--mod-stepper-focus-indicator-color",
-    "--mod-stepper-focus-indicator-gap",
-    "--mod-stepper-focus-indicator-visibility",
-    "--mod-stepper-focus-indicator-width",
-    "--mod-stepper-height",
-    "--mod-stepper-min-width-multiplier",
-    "--mod-stepper-width"
-  ],
-  "component": [
-    "--spectrum-stepper-animation-duration",
-    "--spectrum-stepper-border-color",
-    "--spectrum-stepper-border-color-default",
-    "--spectrum-stepper-border-color-disabled",
-    "--spectrum-stepper-border-color-focus",
-    "--spectrum-stepper-border-color-focus-hover",
-    "--spectrum-stepper-border-color-focus-hover-invalid",
-    "--spectrum-stepper-border-color-focus-invalid",
-    "--spectrum-stepper-border-color-hover",
-    "--spectrum-stepper-border-color-invalid",
-    "--spectrum-stepper-border-color-keyboard-focus",
-    "--spectrum-stepper-border-color-keyboard-focus-invalid",
-    "--spectrum-stepper-border-radius",
-    "--spectrum-stepper-border-width",
-    "--spectrum-stepper-button-border-width",
-    "--spectrum-stepper-button-border-width-disabled",
-    "--spectrum-stepper-button-edge-to-fill",
-    "--spectrum-stepper-button-width",
-    "--spectrum-stepper-buttons-background-color",
-    "--spectrum-stepper-buttons-background-color-disabled",
-    "--spectrum-stepper-buttons-border-color",
-    "--spectrum-stepper-buttons-border-color-focus",
-    "--spectrum-stepper-buttons-border-color-focus-hover",
-    "--spectrum-stepper-buttons-border-color-hover",
-    "--spectrum-stepper-buttons-border-color-keyboard-focus",
-    "--spectrum-stepper-buttons-border-style",
-    "--spectrum-stepper-buttons-border-width",
-    "--spectrum-stepper-focus-indicator-color",
-    "--spectrum-stepper-focus-indicator-gap",
-    "--spectrum-stepper-focus-indicator-width",
-    "--spectrum-stepper-height",
-    "--spectrum-stepper-width"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-border-width-100",
-    "--spectrum-border-width-200",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-corner-radius-100",
-    "--spectrum-disabled-border-color",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-gray-100",
-    "--spectrum-gray-300",
-    "--spectrum-gray-50",
-    "--spectrum-gray-500",
-    "--spectrum-gray-600",
-    "--spectrum-gray-800",
-    "--spectrum-gray-900",
-    "--spectrum-in-field-button-width-stacked-extra-large",
-    "--spectrum-in-field-button-width-stacked-large",
-    "--spectrum-in-field-button-width-stacked-medium",
-    "--spectrum-in-field-button-width-stacked-small",
-    "--spectrum-negative-border-color-default",
-    "--spectrum-negative-border-color-focus",
-    "--spectrum-negative-border-color-focus-hover",
-    "--spectrum-negative-border-color-hover",
-    "--spectrum-negative-border-color-key-focus",
-    "--spectrum-text-field-minimum-width-multiplier"
-  ],
-  "system-theme": [
-    "--system-stepper-border-color-default",
-    "--system-stepper-border-color-disabled",
-    "--system-stepper-border-color-focus",
-    "--system-stepper-border-color-focus-hover",
-    "--system-stepper-border-color-focus-hover-invalid",
-    "--system-stepper-border-color-focus-invalid",
-    "--system-stepper-border-color-hover",
-    "--system-stepper-border-color-invalid",
-    "--system-stepper-border-color-keyboard-focus",
-    "--system-stepper-border-color-keyboard-focus-invalid",
-    "--system-stepper-border-width",
-    "--system-stepper-button-border-width",
-    "--system-stepper-button-border-width-disabled",
-    "--system-stepper-buttons-background-color",
-    "--system-stepper-buttons-background-color-disabled",
-    "--system-stepper-buttons-border-color",
-    "--system-stepper-buttons-border-color-focus",
-    "--system-stepper-buttons-border-color-hover",
-    "--system-stepper-buttons-border-color-keyboard-focus",
-    "--system-stepper-buttons-border-style",
-    "--system-stepper-buttons-border-width",
-    "--system-stepper-quiet-button-edge-to-fill",
-    "--system-stepper-quiet-buttons-border-style"
-  ],
-  "passthroughs": [
-    "--mod-infield-button-border-block-end-width",
-    "--mod-infield-button-border-color",
-    "--mod-infield-button-border-color-quiet",
-    "--mod-infield-button-border-color-quiet-disabled",
-    "--mod-infield-button-border-width",
-    "--mod-infield-button-edge-to-fill",
-    "--mod-infield-button-fill-justify-content",
-    "--mod-infield-button-inner-edge-to-fill",
-    "--mod-infield-button-stacked-bottom-border-block-end-width",
-    "--mod-infield-button-stacked-bottom-border-radius-end-end",
-    "--mod-infield-button-stacked-bottom-border-radius-end-start",
-    "--mod-infield-button-width-stacked",
-    "--mod-textfield-background-color",
-    "--mod-textfield-border-color",
-    "--mod-textfield-border-color-disabled",
-    "--mod-textfield-border-color-hover",
-    "--mod-textfield-border-width",
-    "--mod-textfield-focus-indicator-color",
-    "--mod-textfield-focus-indicator-width",
-    "--mod-textfield-icon-spacing-inline-start-invalid"
-  ],
-  "high-contrast": [
-    "--highcontrast-infield-button-border-color",
-    "--highcontrast-infield-button-border-color-active",
-    "--highcontrast-stepper-border-color",
-    "--highcontrast-stepper-border-color-focus",
-    "--highcontrast-stepper-border-color-focus-hover",
-    "--highcontrast-stepper-border-color-hover",
-    "--highcontrast-stepper-border-color-keyboard-focus",
-    "--highcontrast-stepper-buttons-border-width",
-    "--highcontrast-stepper-focus-indicator-color",
-    "--highcontrast-textfield-border-color"
-  ]
+  "modifiers": {
+    "mod-stepper-border-width": {
+      "description": "Used by `--highcontrast-stepper-buttons-border-width`, `--mod-textfield-border-width`, `--mod-infield-button-border-block-end-width`, `--mod-infield-button-stacked-bottom-border-block-end-width`, `--spectrum-stepper-width`, `.spectrum-Stepper.hide-stepper .spectrum-Stepper-input`. Defaults to `var(--spectrum-stepper-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color": {
+      "value": "var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)))",
+      "description": "Defined in `.spectrum-Stepper.is-invalid`, `.spectrum-Stepper.is-focused:not(.is-disabled), .spectrum-Stepper:not(.is-disabled):focus`, `.spectrum-Stepper.is-keyboardFocused:not(.is-disabled)`, `.spectrum-Stepper.spectrum-Stepper--quiet.is-invalid`, `.spectrum-Stepper:not(.is-disabled):hover`, `.spectrum-Stepper.is-focused:not(.is-disabled):hover, .spectrum-Stepper:not(.is-disabled):focus:hover`. Used by `--spectrum-stepper-border-color`. Defaults to `var(--spectrum-stepper-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-radius": {
+      "description": "Used by `--spectrum-stepper-border-radius`. Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-focus-indicator-width": {
+      "description": "Used by `--spectrum-stepper-focus-indicator-width`. Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-focus-indicator-gap": {
+      "description": "Used by `--spectrum-stepper-focus-indicator-gap`. Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-focus-indicator-color": {
+      "description": "Used by `--spectrum-stepper-focus-indicator-color`. Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-animation-duration": {
+      "description": "Used by `--spectrum-stepper-animation-duration`. Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-button-width": {
+      "description": "Used by `--spectrum-stepper-button-width`. Defaults to `var(--spectrum-in-field-button-width-stacked-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-height": {
+      "description": "Used by `--spectrum-stepper-height`. Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-invalid": {
+      "description": "Used by `--mod-stepper-border-color`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-border-color-invalid)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-hover": {
+      "value": "var(--mod-stepper-border-color-hover-invalid, var(--spectrum-negative-border-color-hover))",
+      "description": "Defined in `.spectrum-Stepper.is-invalid`. Used by `--mod-textfield-border-color-hover`, `--mod-stepper-border-color`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-hover-invalid": {
+      "description": "Used by `--mod-stepper-border-color-hover`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-negative-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-focus": {
+      "value": "var(--mod-stepper-border-color-focus-invalid, var(--spectrum-negative-border-color-focus))",
+      "description": "Defined in `.spectrum-Stepper.is-invalid`. Used by `--mod-stepper-border-color`, `--mod-stepper-buttons-border-color`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-focus-invalid": {
+      "description": "Used by `--mod-stepper-border-color-focus`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-border-color-focus-invalid)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-focus-hover": {
+      "value": "var(--mod-stepper-border-color-focus-hover-invalid, var(--spectrum-negative-border-color-focus-hover))",
+      "description": "Defined in `.spectrum-Stepper.is-invalid`. Used by `--mod-stepper-border-color`, `--mod-stepper-buttons-border-color`, `--mod-textfield-border-color`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-focus-hover-invalid": {
+      "description": "Used by `--mod-stepper-border-color-focus-hover`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-border-color-focus-hover-invalid)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-keyboard-focus": {
+      "value": "var(--mod-stepper-border-color-keyboard-focus-invalid, var(--spectrum-negative-border-color-key-focus))",
+      "description": "Defined in `.spectrum-Stepper.is-invalid`. Used by `--mod-textfield-border-color`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-border-color-keyboard-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-border-color-keyboard-focus-invalid": {
+      "description": "Used by `--mod-stepper-border-color-keyboard-focus`, `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-border-color-keyboard-focus-invalid)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-buttons-border-color": {
+      "value": "var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover)))",
+      "description": "Defined in `.spectrum-Stepper.is-focused:not(.is-disabled), .spectrum-Stepper:not(.is-disabled):focus`, `.spectrum-Stepper.is-focused:not(.is-disabled):hover, .spectrum-Stepper:not(.is-disabled):focus:hover`. Used by `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-buttons-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-buttons-background-color": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Stepper.spectrum-Stepper--quiet`, `.spectrum-Stepper.spectrum-Stepper--quiet:not(.is-disabled):hover`. Used by `.spectrum-Stepper-buttons`. Defaults to `var(--spectrum-stepper-buttons-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-focus-indicator-visibility": {
+      "value": "visible",
+      "description": "Defined in `.spectrum-Stepper.spectrum-Stepper--quiet.is-keyboardFocused:not(.is-disabled)`. Used by `.spectrum-Stepper--quiet:after`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-button-border-width": {
+      "description": "Used by `--mod-infield-button-border-width`. Defaults to `var(--spectrum-stepper-button-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-buttons-border-color-focus": {
+      "description": "Used by `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-buttons-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-buttons-border-color-keyboard-focus": {
+      "description": "Used by `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-buttons-border-color-keyboard-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-button-width-quiet": {
+      "description": "Used by `--mod-infield-button-width-stacked`. Defaults to `var(--spectrum-stepper-button-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-buttons-border-color-hover": {
+      "description": "Used by `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-buttons-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-buttons-border-color-focus-hover": {
+      "description": "Used by `--mod-infield-button-border-color`. Defaults to `var(--spectrum-stepper-buttons-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-stepper-width": {
+      "description": "Used by `--spectrum-stepper-width`. Defaults to `calc(var(--spectrum-stepper-height) * var(--mod-stepper-min-width-multiplier, var(--spectrum-text-field-minimum-width-multiplier)) + var(--spectrum-stepper-button-width) + var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)) * 2)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-min-width-multiplier": {
+      "description": "Used by `--spectrum-stepper-width`. Defaults to `var(--spectrum-text-field-minimum-width-multiplier)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-buttons-border-style": {
+      "description": "Used by `.spectrum-Stepper-buttons`. Defaults to `var(--spectrum-stepper-buttons-border-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-stepper-buttons-border-width": {
+      "description": "Used by `.spectrum-Stepper-buttons`. Defaults to `var(--spectrum-stepper-buttons-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-stepper-border-width": {
+      "value": "var(--system-stepper-border-width)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--highcontrast-stepper-buttons-border-width`, `--mod-textfield-border-width`, `--mod-infield-button-border-block-end-width`, `--mod-infield-button-stacked-bottom-border-block-end-width`, `--spectrum-stepper-width`, `.spectrum-Stepper.hide-stepper .spectrum-Stepper-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color": {
+      "value": "var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color-default)))",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-textfield-border-color`, `--mod-infield-button-border-color`, `--mod-infield-button-border-color-quiet`, `.spectrum-Stepper-buttons`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-default": {
+      "value": "var(--system-stepper-border-color-default)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--spectrum-stepper-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-radius": {
+      "value": "var(--mod-stepper-border-radius, var(--spectrum-corner-radius-100))",
+      "description": "Defined in `.spectrum-Stepper`. Used by `.spectrum-Stepper`, `.spectrum-Stepper-buttons, .spectrum-Stepper.hide-stepper .spectrum-Stepper-input`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-focus-indicator-width": {
+      "value": "var(--mod-stepper-focus-indicator-width, var(--spectrum-focus-indicator-thickness))",
+      "description": "Defined in `.spectrum-Stepper`. Used by `.spectrum-Stepper.is-keyboardFocused:not(.is-disabled), .spectrum-Stepper:not(.is-disabled):focus-visible`, `.spectrum-Stepper--quiet:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-focus-indicator-gap": {
+      "value": "var(--mod-stepper-focus-indicator-gap, var(--spectrum-focus-indicator-gap))",
+      "description": "Defined in `.spectrum-Stepper`. Used by `.spectrum-Stepper.is-keyboardFocused:not(.is-disabled), .spectrum-Stepper:not(.is-disabled):focus-visible`, `.spectrum-Stepper--quiet:after`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-focus-indicator-color": {
+      "value": "var(--highcontrast-stepper-focus-indicator-color, var(--mod-stepper-focus-indicator-color, var(--spectrum-focus-indicator-color)))",
+      "description": "Defined in `.spectrum-Stepper`. Used by `.spectrum-Stepper.is-keyboardFocused:not(.is-disabled), .spectrum-Stepper:not(.is-disabled):focus-visible`, `.spectrum-Stepper--quiet:after`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-animation-duration": {
+      "value": "var(--mod-stepper-animation-duration, var(--spectrum-animation-duration-100))",
+      "description": "Defined in `.spectrum-Stepper`. Used by `.spectrum-Stepper-buttons`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-button-width": {
+      "value": "var(--mod-stepper-button-width, var(--spectrum-in-field-button-width-stacked-extra-large))",
+      "description": "Defined in `.spectrum-Stepper, .spectrum-Stepper.spectrum-Stepper--sizeM`, `.spectrum-Stepper.spectrum-Stepper--sizeS`, `.spectrum-Stepper.spectrum-Stepper--sizeL`, `.spectrum-Stepper.spectrum-Stepper--sizeXL`. Used by `--mod-infield-button-width-stacked`, `--spectrum-stepper-width`, `.spectrum-Stepper-buttons`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-height": {
+      "value": "var(--mod-stepper-height, var(--spectrum-component-height-300))",
+      "description": "Defined in `.spectrum-Stepper, .spectrum-Stepper.spectrum-Stepper--sizeM`, `.spectrum-Stepper.spectrum-Stepper--sizeS`, `.spectrum-Stepper.spectrum-Stepper--sizeL`, `.spectrum-Stepper.spectrum-Stepper--sizeXL`. Used by `--spectrum-stepper-width`, `.spectrum-Stepper`, `.spectrum-Stepper-buttons`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-border-width": {
+      "value": "var(--system-stepper-buttons-border-width)",
+      "description": "Defined in `.spectrum-Stepper.is-disabled`, `.spectrum-Stepper`. Used by `.spectrum-Stepper-buttons`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-button-border-width-disabled": {
+      "value": "var(--system-stepper-button-border-width-disabled)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--spectrum-stepper-buttons-border-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-background-color": {
+      "value": "var(--system-stepper-buttons-background-color)",
+      "description": "Defined in `.spectrum-Stepper.is-disabled`, `.spectrum-Stepper`. Used by `.spectrum-Stepper-buttons`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-background-color-disabled": {
+      "value": "var(--system-stepper-buttons-background-color-disabled)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--spectrum-stepper-buttons-background-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-focus": {
+      "value": "var(--system-stepper-border-color-focus)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-stepper-border-color`, `--mod-stepper-buttons-border-color`, `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-keyboard-focus": {
+      "value": "var(--system-stepper-border-color-keyboard-focus)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-stepper-border-color`, `--mod-textfield-border-color`, `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-border-color": {
+      "value": "var(--system-stepper-buttons-border-color)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-button-border-width": {
+      "value": "var(--system-stepper-button-border-width)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-disabled": {
+      "value": "var(--system-stepper-border-color-disabled)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-textfield-border-color-disabled`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-border-color-focus": {
+      "value": "var(--system-stepper-buttons-border-color-focus)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-border-color-keyboard-focus": {
+      "value": "var(--system-stepper-buttons-border-color-keyboard-focus)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-invalid": {
+      "value": "var(--system-stepper-border-color-invalid)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-focus-invalid": {
+      "value": "var(--system-stepper-border-color-focus-invalid)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-keyboard-focus-invalid": {
+      "value": "var(--system-stepper-border-color-keyboard-focus-invalid)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-button-edge-to-fill": {
+      "value": "var(--system-stepper-quiet-button-edge-to-fill)",
+      "description": "Defined in `.spectrum-Stepper--quiet`. Used by `--mod-infield-button-inner-edge-to-fill`, `--mod-infield-button-edge-to-fill`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-hover": {
+      "value": "var(--system-stepper-border-color-hover)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-textfield-border-color-hover`, `--mod-stepper-border-color`, `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-focus-hover": {
+      "value": "var(--system-stepper-border-color-focus-hover)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-stepper-border-color`, `--mod-stepper-buttons-border-color`, `--mod-textfield-border-color`, `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-border-color-hover": {
+      "value": "var(--system-stepper-buttons-border-color-hover)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-border-color-focus-hover": {
+      "description": "Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-border-color-focus-hover-invalid": {
+      "value": "var(--system-stepper-border-color-focus-hover-invalid)",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-stepper-width": {
+      "value": "var(--mod-stepper-width, calc(var(--spectrum-stepper-height) * var(--mod-stepper-min-width-multiplier, var(--spectrum-text-field-minimum-width-multiplier)) + var(--spectrum-stepper-button-width) + var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)) * 2))",
+      "description": "Defined in `.spectrum-Stepper`. Used by `.spectrum-Stepper`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-stepper-buttons-border-style": {
+      "value": "var(--system-stepper-quiet-buttons-border-style)",
+      "description": "Defined in `.spectrum-Stepper`, `.spectrum-Stepper--quiet`. Used by `.spectrum-Stepper-buttons`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-border-width-100": {
+      "description": "Used by `--system-stepper-border-width`, `--system-stepper-button-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-500": {
+      "description": "Used by `--system-stepper-border-color-default`, `--system-stepper-buttons-border-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-600": {
+      "description": "Used by `--system-stepper-border-color-hover`, `--system-stepper-buttons-border-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "description": "Used by `--system-stepper-border-color-focus`, `--system-stepper-border-color-keyboard-focus`, `--system-stepper-buttons-border-color-focus`, `--system-stepper-buttons-border-color-keyboard-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-900": {
+      "description": "Used by `--system-stepper-border-color-focus-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-100": {
+      "description": "Used by `--system-stepper-buttons-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-default": {
+      "description": "Used by `--system-stepper-border-color-invalid`, `--mod-stepper-border-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus": {
+      "description": "Used by `--system-stepper-border-color-focus-invalid`, `--mod-stepper-border-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus-hover": {
+      "description": "Used by `--system-stepper-border-color-focus-hover-invalid`, `--mod-stepper-border-color-focus-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-key-focus": {
+      "description": "Used by `--system-stepper-border-color-keyboard-focus-invalid`, `--mod-stepper-border-color-keyboard-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-300": {
+      "description": "Used by `--system-stepper-border-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "description": "Used by `--system-stepper-button-border-width-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-50": {
+      "description": "Used by `--system-stepper-buttons-background-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "description": "Used by `--spectrum-stepper-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "description": "Used by `--spectrum-stepper-focus-indicator-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "description": "Used by `--spectrum-stepper-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "description": "Used by `--spectrum-stepper-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-stepper-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-width-stacked-medium": {
+      "description": "Used by `--spectrum-stepper-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "description": "Used by `--spectrum-stepper-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-width-stacked-small": {
+      "description": "Used by `--spectrum-stepper-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "description": "Used by `--spectrum-stepper-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-width-stacked-large": {
+      "description": "Used by `--spectrum-stepper-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "description": "Used by `--spectrum-stepper-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-width-stacked-extra-large": {
+      "description": "Used by `--spectrum-stepper-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "description": "Used by `--spectrum-stepper-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-hover": {
+      "description": "Used by `--mod-stepper-border-color-hover`, `--mod-infield-button-border-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-border-color": {
+      "description": "Used by `--mod-infield-button-border-color-quiet-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-text-field-minimum-width-multiplier": {
+      "description": "Used by `--spectrum-stepper-width`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-stepper-border-width": {
+      "value": "var(--spectrum-border-width-100)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-width`.",
+      "control": "text"
+    },
+    "system-stepper-border-color-default": {
+      "value": "var(--spectrum-gray-500)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-default`.",
+      "control": "color"
+    },
+    "system-stepper-border-color-hover": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-hover`.",
+      "control": "color"
+    },
+    "system-stepper-border-color-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-focus`.",
+      "control": "color"
+    },
+    "system-stepper-border-color-focus-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-focus-hover`.",
+      "control": "color"
+    },
+    "system-stepper-border-color-keyboard-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-keyboard-focus`.",
+      "control": "color"
+    },
+    "system-stepper-buttons-border-style": {
+      "value": "none",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-border-style`.",
+      "control": "text"
+    },
+    "system-stepper-buttons-border-width": {
+      "value": "0",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-border-width`.",
+      "control": "text"
+    },
+    "system-stepper-buttons-border-color": {
+      "value": "var(--spectrum-gray-500)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-border-color`.",
+      "control": "color"
+    },
+    "system-stepper-buttons-background-color": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-background-color`.",
+      "control": "color"
+    },
+    "system-stepper-buttons-border-color-hover": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-border-color-hover`.",
+      "control": "color"
+    },
+    "system-stepper-buttons-border-color-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-border-color-focus`.",
+      "control": "color"
+    },
+    "system-stepper-buttons-border-color-keyboard-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-border-color-keyboard-focus`.",
+      "control": "color"
+    },
+    "system-stepper-button-border-width": {
+      "value": "var(--spectrum-border-width-100)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-button-border-width`.",
+      "control": "text"
+    },
+    "system-stepper-border-color-invalid": {
+      "value": "var(--spectrum-negative-border-color-default)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-invalid`.",
+      "control": "color"
+    },
+    "system-stepper-border-color-focus-invalid": {
+      "value": "var(--spectrum-negative-border-color-focus)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-focus-invalid`.",
+      "control": "color"
+    },
+    "system-stepper-border-color-focus-hover-invalid": {
+      "value": "var(--spectrum-negative-border-color-focus-hover)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-focus-hover-invalid`.",
+      "control": "color"
+    },
+    "system-stepper-border-color-keyboard-focus-invalid": {
+      "value": "var(--spectrum-negative-border-color-key-focus)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-keyboard-focus-invalid`.",
+      "control": "color"
+    },
+    "system-stepper-border-color-disabled": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-border-color-disabled`.",
+      "control": "color"
+    },
+    "system-stepper-button-border-width-disabled": {
+      "value": "var(--spectrum-border-width-200)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-button-border-width-disabled`.",
+      "control": "text"
+    },
+    "system-stepper-buttons-background-color-disabled": {
+      "value": "var(--spectrum-gray-50)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-background-color-disabled`.",
+      "control": "color"
+    },
+    "system-stepper-quiet-buttons-border-style": {
+      "value": "none",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-buttons-border-style`.",
+      "control": "text"
+    },
+    "system-stepper-quiet-button-edge-to-fill": {
+      "value": "0",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-stepper-button-edge-to-fill`.",
+      "control": "text"
+    }
+  },
+  "passthroughs": {
+    "mod-infield-button-border-color": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-border-color-quiet-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-border-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-focus-indicator-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-icon-spacing-inline-start-invalid": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-width-stacked": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-border-color-quiet": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-border-block-end-width": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-stacked-bottom-border-block-end-width": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-stacked-bottom-border-radius-end-end": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-stacked-bottom-border-radius-end-start": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-fill-justify-content": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-inner-edge-to-fill": {
+      "category": "Passthrough"
+    },
+    "mod-infield-button-edge-to-fill": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-focus-indicator-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-background-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-hover": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-stepper-border-color": {
+      "value": "var(--highcontrast-stepper-border-color-keyboard-focus)",
+      "description": "Defined in `.spectrum-Stepper`, `.spectrum-Stepper.is-invalid`, `.spectrum-Stepper.is-disabled`, `.spectrum-Stepper.is-focused:not(.is-disabled), .spectrum-Stepper:not(.is-disabled):focus`, `.spectrum-Stepper:not(.is-disabled):hover`, `.spectrum-Stepper.is-focused:not(.is-disabled):hover, \t.spectrum-Stepper:not(.is-disabled):focus:hover`, `.spectrum-Stepper.is-keyboardFocused:not(.is-disabled), .spectrum-Stepper:not(.is-disabled):focus-visible`. Used by `--highcontrast-textfield-border-color`, `--highcontrast-infield-button-border-color`, `--highcontrast-infield-button-border-color-active`, `--spectrum-stepper-border-color`, `--mod-infield-button-border-color`, `--mod-textfield-border-color-hover`. Defaults to `var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-stepper-border-color-hover": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Stepper`, `.spectrum-Stepper.is-invalid`. Used by `--highcontrast-stepper-border-color`, `--mod-stepper-border-color`. Defaults to `var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-stepper-border-color-focus": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Stepper`, `.spectrum-Stepper.is-invalid`. Used by `--highcontrast-stepper-border-color`, `--mod-stepper-border-color`, `--mod-stepper-buttons-border-color`, `--mod-infield-button-border-color`. Defaults to `var(--mod-stepper-buttons-border-color-focus, var(--spectrum-stepper-buttons-border-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-stepper-border-color-focus-hover": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Stepper`, `.spectrum-Stepper.is-invalid`. Used by `--highcontrast-stepper-border-color`, `--mod-stepper-border-color`, `--mod-stepper-buttons-border-color`, `--mod-textfield-border-color`. Defaults to `var(--mod-stepper-border-color-focus-hover, var(--spectrum-stepper-border-color-focus-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-stepper-border-color-keyboard-focus": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Stepper`, `.spectrum-Stepper.is-invalid`. Used by `--highcontrast-stepper-border-color`, `--mod-infield-button-border-color`, `--mod-textfield-border-color`. Defaults to `var(--mod-stepper-border-color-keyboard-focus, var(--spectrum-stepper-border-color-keyboard-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-stepper-focus-indicator-color": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Stepper`. Used by `--spectrum-stepper-focus-indicator-color`. Defaults to `var(--mod-stepper-focus-indicator-color, var(--spectrum-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-stepper-buttons-border-width": {
+      "value": "var(--mod-stepper-border-width, var(--spectrum-stepper-border-width))",
+      "description": "Defined in `.spectrum-Stepper.is-disabled`. Used by `.spectrum-Stepper-buttons`. Defaults to `var(--mod-stepper-buttons-border-width, var(--spectrum-stepper-buttons-border-width))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-textfield-border-color": {
+      "value": "var(--highcontrast-stepper-border-color)",
+      "description": "Defined in `.spectrum-Stepper-input`.",
+      "control": "color"
+    },
+    "highcontrast-infield-button-border-color": {
+      "value": "var(--highcontrast-stepper-border-color)",
+      "description": "Defined in `.spectrum-Stepper-button`.",
+      "control": "color"
+    },
+    "highcontrast-infield-button-border-color-active": {
+      "value": "var(--highcontrast-stepper-border-color)",
+      "description": "Defined in `.spectrum-Stepper-button`.",
+      "control": "color"
+    }
+  }
 }

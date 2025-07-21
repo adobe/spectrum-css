@@ -14,84 +14,372 @@
     ".spectrum-ActionBar--fixed",
     ".spectrum-ActionBar--flexible .spectrum-ActionBar-popover",
     ".spectrum-ActionBar--sticky",
-    ".spectrum-ActionBar.is-open",
     ".spectrum-ActionBar:lang(ja)",
     ".spectrum-ActionBar:lang(ko)",
-    ".spectrum-ActionBar:lang(zh)"
+    ".spectrum-ActionBar:lang(zh)",
+    ".spectrum-ActionBar.is-open"
   ],
-  "modifiers": [
-    "--mod-actionbar-corner-radius",
-    "--mod-actionbar-emphasized-background-color",
-    "--mod-actionbar-emphasized-item-counter-color",
-    "--mod-actionbar-height",
-    "--mod-actionbar-item-counter-color",
-    "--mod-actionbar-item-counter-font-size",
-    "--mod-actionbar-item-counter-line-height",
-    "--mod-actionbar-item-counter-line-height-cjk",
-    "--mod-actionbar-popover-background-color",
-    "--mod-actionbar-popover-border-color",
-    "--mod-actionbar-shadow-blur",
-    "--mod-actionbar-shadow-color",
-    "--mod-actionbar-shadow-horizontal",
-    "--mod-actionbar-shadow-vertical",
-    "--mod-actionbar-spacing-action-group-end",
-    "--mod-actionbar-spacing-action-group-top",
-    "--mod-actionbar-spacing-close-button-end",
-    "--mod-actionbar-spacing-close-button-start",
-    "--mod-actionbar-spacing-close-button-top",
-    "--mod-actionbar-spacing-item-counter-end",
-    "--mod-actionbar-spacing-item-counter-top",
-    "--mod-actionbar-spacing-outer-edge"
-  ],
-  "component": [
-    "--spectrum-action-bar-height",
-    "--spectrum-action-bar-top-to-item-counter",
-    "--spectrum-actionbar-corner-radius",
-    "--spectrum-actionbar-emphasized-background-color",
-    "--spectrum-actionbar-emphasized-item-counter-color",
-    "--spectrum-actionbar-height",
-    "--spectrum-actionbar-item-counter-color",
-    "--spectrum-actionbar-item-counter-font-size",
-    "--spectrum-actionbar-item-counter-line-height",
-    "--spectrum-actionbar-item-counter-line-height-cjk",
-    "--spectrum-actionbar-popover-background-color",
-    "--spectrum-actionbar-popover-border-color",
-    "--spectrum-actionbar-shadow-blur",
-    "--spectrum-actionbar-shadow-color",
-    "--spectrum-actionbar-shadow-horizontal",
-    "--spectrum-actionbar-shadow-vertical",
-    "--spectrum-actionbar-spacing-action-group-end",
-    "--spectrum-actionbar-spacing-action-group-top",
-    "--spectrum-actionbar-spacing-close-button-end",
-    "--spectrum-actionbar-spacing-close-button-start",
-    "--spectrum-actionbar-spacing-close-button-top",
-    "--spectrum-actionbar-spacing-item-counter-end",
-    "--spectrum-actionbar-spacing-item-counter-top",
-    "--spectrum-actionbar-spacing-outer-edge"
-  ],
-  "global": [
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-corner-radius-100",
-    "--spectrum-drop-shadow-blur",
-    "--spectrum-drop-shadow-color",
-    "--spectrum-drop-shadow-x",
-    "--spectrum-drop-shadow-y",
-    "--spectrum-font-size-100",
-    "--spectrum-gray-25",
-    "--spectrum-gray-400",
-    "--spectrum-informative-background-color-default",
-    "--spectrum-line-height-100",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-400",
-    "--spectrum-spacing-75",
-    "--spectrum-white"
-  ],
-  "system-theme": [
-    "--system-action-bar-popover-background-color",
-    "--system-action-bar-popover-border-color"
-  ],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-actionbar-popover-border-color"]
+  "modifiers": {
+    "mod-actionbar-spacing-outer-edge": {
+      "description": "Used by `.spectrum-ActionBar`, `.spectrum-ActionBar.is-open`. Defaults to `var(--spectrum-actionbar-spacing-outer-edge)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-height": {
+      "description": "Used by `.spectrum-ActionBar.is-open`, `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-corner-radius": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-popover-border-color": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-popover-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbar-popover-background-color": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-popover-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbar-shadow-horizontal": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-shadow-horizontal)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-shadow-vertical": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-shadow-vertical)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-shadow-blur": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-shadow-blur)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-shadow-color": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-shadow-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbar-spacing-close-button-start": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-CloseButton`. Defaults to `var(--spectrum-actionbar-spacing-close-button-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-spacing-close-button-end": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-CloseButton`. Defaults to `var(--spectrum-actionbar-spacing-close-button-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-spacing-close-button-top": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-CloseButton`. Defaults to `var(--spectrum-actionbar-spacing-close-button-top)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-spacing-item-counter-end": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-FieldLabel`. Defaults to `var(--spectrum-actionbar-spacing-item-counter-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-spacing-item-counter-top": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-FieldLabel`. Defaults to `var(--spectrum-actionbar-spacing-item-counter-top)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-item-counter-font-size": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-FieldLabel`. Defaults to `var(--spectrum-actionbar-item-counter-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-item-counter-color": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-FieldLabel`. Defaults to `var(--spectrum-actionbar-item-counter-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbar-item-counter-line-height": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-FieldLabel`. Defaults to `var(--spectrum-actionbar-item-counter-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-item-counter-line-height-cjk": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-FieldLabel:lang(ja), .spectrum-ActionBar .spectrum-FieldLabel:lang(ko), .spectrum-ActionBar .spectrum-FieldLabel:lang(zh)`. Defaults to `var(--spectrum-actionbar-item-counter-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-spacing-action-group-end": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionGroup`. Defaults to `var(--spectrum-actionbar-spacing-action-group-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-spacing-action-group-top": {
+      "description": "Used by `.spectrum-ActionBar .spectrum-ActionGroup`. Defaults to `var(--spectrum-actionbar-spacing-action-group-top)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbar-emphasized-background-color": {
+      "description": "Used by `.spectrum-ActionBar--emphasized .spectrum-ActionBar-popover`. Defaults to `var(--spectrum-actionbar-emphasized-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbar-emphasized-item-counter-color": {
+      "description": "Used by `.spectrum-ActionBar--emphasized .spectrum-FieldLabel`. Defaults to `var(--spectrum-actionbar-emphasized-item-counter-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-actionbar-height": {
+      "value": "var(--spectrum-action-bar-height)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar.is-open`, `.spectrum-ActionBar .spectrum-ActionBar-popover`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-action-bar-height": {
+      "description": "Used by `--spectrum-actionbar-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-corner-radius": {
+      "value": "var(--spectrum-corner-radius-100)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-item-counter-font-size": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-item-counter-line-height": {
+      "value": "var(--spectrum-line-height-100)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-item-counter-color": {
+      "value": "var(--spectrum-neutral-content-color-default)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-FieldLabel`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbar-emphasized-background-color": {
+      "value": "var(--spectrum-informative-background-color-default)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar--emphasized .spectrum-ActionBar-popover`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbar-emphasized-item-counter-color": {
+      "value": "var(--spectrum-white)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar--emphasized .spectrum-FieldLabel`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbar-spacing-outer-edge": {
+      "value": "var(--spectrum-spacing-300)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar`, `.spectrum-ActionBar.is-open`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-spacing-close-button-top": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-CloseButton`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-spacing-close-button-start": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-CloseButton`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-spacing-close-button-end": {
+      "value": "var(--spectrum-spacing-75)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-CloseButton`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-spacing-item-counter-top": {
+      "value": "var(--spectrum-action-bar-top-to-item-counter)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-action-bar-top-to-item-counter": {
+      "description": "Used by `--spectrum-actionbar-spacing-item-counter-top`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-spacing-item-counter-end": {
+      "value": "var(--spectrum-spacing-400)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-FieldLabel`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-spacing-action-group-top": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionGroup`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-spacing-action-group-end": {
+      "value": "var(--spectrum-spacing-100)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionGroup`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-shadow-horizontal": {
+      "value": "var(--spectrum-drop-shadow-x)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-shadow-vertical": {
+      "value": "var(--spectrum-drop-shadow-y)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-shadow-blur": {
+      "value": "var(--spectrum-drop-shadow-blur)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-shadow-color": {
+      "value": "var(--spectrum-drop-shadow-color)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbar-item-counter-line-height-cjk": {
+      "value": "var(--spectrum-cjk-line-height-100)",
+      "description": "Defined in `.spectrum-ActionBar:lang(ja), .spectrum-ActionBar:lang(ko), .spectrum-ActionBar:lang(zh)`. Used by `.spectrum-ActionBar .spectrum-FieldLabel:lang(ja), .spectrum-ActionBar .spectrum-FieldLabel:lang(ko), .spectrum-ActionBar .spectrum-FieldLabel:lang(zh)`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbar-popover-border-color": {
+      "value": "var(--system-action-bar-popover-border-color)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbar-popover-background-color": {
+      "value": "var(--system-action-bar-popover-background-color)",
+      "description": "Defined in `.spectrum-ActionBar`. Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-25": {
+      "description": "Used by `--system-action-bar-popover-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-400": {
+      "description": "Used by `--system-action-bar-popover-border-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "description": "Used by `--spectrum-actionbar-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "description": "Used by `--spectrum-actionbar-item-counter-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "description": "Used by `--spectrum-actionbar-item-counter-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "description": "Used by `--spectrum-actionbar-item-counter-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-informative-background-color-default": {
+      "description": "Used by `--spectrum-actionbar-emphasized-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "description": "Used by `--spectrum-actionbar-emphasized-item-counter-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "description": "Used by `--spectrum-actionbar-spacing-outer-edge`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "description": "Used by `--spectrum-actionbar-spacing-close-button-top`, `--spectrum-actionbar-spacing-close-button-start`, `--spectrum-actionbar-spacing-action-group-top`, `--spectrum-actionbar-spacing-action-group-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-75": {
+      "description": "Used by `--spectrum-actionbar-spacing-close-button-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-400": {
+      "description": "Used by `--spectrum-actionbar-spacing-item-counter-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-x": {
+      "description": "Used by `--spectrum-actionbar-shadow-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-y": {
+      "description": "Used by `--spectrum-actionbar-shadow-vertical`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-blur": {
+      "description": "Used by `--spectrum-actionbar-shadow-blur`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-color": {
+      "description": "Used by `--spectrum-actionbar-shadow-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "description": "Used by `--spectrum-actionbar-item-counter-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-action-bar-popover-background-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-actionbar-popover-background-color`.",
+      "control": "color"
+    },
+    "system-action-bar-popover-border-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum`. Used by `--spectrum-actionbar-popover-border-color`.",
+      "control": "color"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-actionbar-popover-border-color": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-ActionBar, .spectrum-ActionBar--emphasized .spectrum-ActionBar-popover`. Used by `.spectrum-ActionBar .spectrum-ActionBar-popover`. Defaults to `var(--mod-actionbar-popover-border-color, var(--spectrum-actionbar-popover-border-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }
