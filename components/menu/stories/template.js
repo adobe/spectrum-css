@@ -185,13 +185,13 @@ const EndAction = ({
 		hasExternalLink && !(hasActions && selectionMode === "multiple"),
 		() => html`<div class="${rootClass}Actions">
 			${Icon({
-			// TODO: Update name once available in "UI" icon set #1194
-			iconName: "ExportTo",
-			size,
-			customClasses: [
-				`${rootClass}Icon`,
-				"spectrum-Menu-linkout",
-			],
+				setName: "ui",
+				iconName: "LinkOut",
+				size,
+				customClasses: [
+					`${rootClass}Icon`,
+					"spectrum-Menu-linkout",
+				],
 			},
 			context)}
 		</div>`

@@ -386,17 +386,6 @@
 	.spectrum-Menu-linkout {
 		block-size: var(--mod-menu-item-linkout-icon-height, var(--spectrum-menu-item-linkout-icon-height));
 		inline-size: var(--mod-menu-item-linkout-icon-width, var(--spectrum-menu-item-linkout-icon-width));
-
-		/* Improve vertical alignment of linkout icon */
-		/* TODO: revisit with #1194 when final icon available */
-		display: block;
-		margin-block-start: calc(var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size)) - var(--spectrum-menu-item-linkout-icon-height));
-	}
-
-	/* Improve vertical alignment of linkout icon */
-	/* TODO: revisit with #1194 when final icon available */
-	.spectrum-Menu-item:has(> .spectrum-Menu-itemIcon--workflowIcon) .spectrum-Menu-linkout {
-		margin-block-start: calc(var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size)) - var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height) / 2));
 	}
 
 	/* Presentational list items for sections and dividers. */
@@ -702,6 +691,10 @@
 	grid-area: actionsArea;
 	align-self: start;
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
+
+	&:has(.spectrum-Menu-linkout) {
+		align-self: center;
+	}
 }
 
 .spectrum-Menu-sectionHeading {
