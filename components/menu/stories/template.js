@@ -143,6 +143,7 @@ const EndAction = ({
 	hasExternalLink,
 	hasActions,
 	idx,
+	isUnavailable,
 	isDisabled,
 	isDrillIn,
 	isSelected,
@@ -182,15 +183,31 @@ const EndAction = ({
 	)}
 
 	${when(
-		hasExternalLink && !(hasActions && selectionMode === "multiple"),
+		hasExternalLink && !isUnavailable && !(hasActions && selectionMode === "multiple"),
 		() => html`<div class="${rootClass}Actions">
 			${Icon({
 				setName: "ui",
-				iconName: "LinkOut",
+				iconName: iconWithScale(size, "LinkOut"),
 				size,
 				customClasses: [
 					`${rootClass}Icon`,
 					"spectrum-Menu-linkout",
+				],
+			},
+			context)}
+		</div>`
+	)}
+
+
+	${when(
+		isUnavailable && !hasExternalLink && !(hasActions && selectionMode === "multiple"),
+		() => html`<div class="${rootClass}Actions">
+			${Icon({
+				iconName: "InfoCircle",
+				size,
+				customClasses: [
+					`${rootClass}Icon`,
+					"spectrum-Menu-unavailable",
 				],
 			},
 			context)}
@@ -238,6 +255,7 @@ export const MenuItem = (
 		idx = 0,
 		isActive = false,
 		isCollapsible = false,
+		isUnavailable = false,
 		isDisabled = false,
 		isDrillIn = false,
 		isFocused = false,
@@ -281,7 +299,7 @@ export const MenuItem = (
 		${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl })}
 		${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
 		${when(description, () => Description({ description, rootClass }))}
-		${EndAction({ hasExternalLink, hasActions, idx, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}
+		${EndAction({ hasExternalLink, hasActions, idx, isUnavailable, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}
 		${when(isCollapsible && items.length > 0, () =>
 			Template(
 				{
