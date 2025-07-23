@@ -32,6 +32,7 @@
 	--spectrum-accordion-item-content-area-bottom-to-content: var(--spectrum-accordion-content-area-bottom-to-content);
 	--spectrum-accordion-divider-thickness: var(--spectrum-divider-thickness-small);
 	--spectrum-accordion-item-direct-actions-height: var(--spectrum-component-height-100);
+	--spectrum-accordion-item-header-to-direct-actions-space: var(--spectrum-spacing-100); /* same for all sizes */
 
 	/* Text header */
 	--spectrum-accordion-item-header-font: var(--spectrum-sans-font-family-stack);
@@ -326,6 +327,11 @@
 	&.spectrum-Accordion-itemHeader:active {
 		background-color: var(--spectrum-accordion-background-color-down);
 		color: var(--spectrum-accordion-item-header-color-down);
+	}
+
+	&:has(+ .spectrum-Accordion-itemDirectActions) {
+		/* set spacing between header and direct actions, whether or not noInlinePadding variant is used */
+		padding-inline-end: var(--mod-accordion-item-header-to-direct-actions-space, var(--spectrum-accordion-item-header-to-direct-actions-space));
 	}
 }
 

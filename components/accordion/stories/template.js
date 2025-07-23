@@ -84,6 +84,7 @@ export const AccordionItem = ({
 										isQuiet: true,
 										customClasses: [`${rootClass}ActionButton`],
 										iconName: actionButtonIconName || "Circle",
+										isDisabled,
 										size,
 									}, context)
 								)}
@@ -91,6 +92,7 @@ export const AccordionItem = ({
 									Switch({
 										label: "",
 										customClasses: [`${rootClass}Switch`],
+										isDisabled,
 										size
 									}, context))}
 							</div>
