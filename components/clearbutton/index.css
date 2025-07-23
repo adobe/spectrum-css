@@ -60,7 +60,7 @@
 	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
 	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
 
-	background-color: var(--mod-clear-button-background-color, transparent);
+	background-color: transparent;
 	margin: 0;
 	padding: var(--mod-clear-button-padding, var(--spectrum-clear-button-padding));
 
@@ -69,6 +69,10 @@
 
 	&:not(:disabled) {
 		cursor: pointer;
+	}
+
+	&:focus-visible {
+		outline: none;
 	}
 
 	> .spectrum-Icon {
