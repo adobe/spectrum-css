@@ -8,37 +8,6 @@ import { Template } from "./template.js";
 
 /**
  * The clear button component is an in-field button used in [search](/docs/components-search-field--docs) and [tags](/docs/components-tag--docs).
- *
- * ## Usage Notes
-
-	Use the correct cross icon size that corresponds to the t-shirt size you require for the clear button.
-
-	<table>
-		<thead>
-			<tr>
-				<th>**T-Shirt Size**</th>
-				<th>**Icon Size**</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>spectrum-ClearButton--sizeS</td>
-				<td>spectrum-css-icon-Cross75</td>
-			</tr>
-			<tr>
-				<td>spectrum-ClearButton--sizeM</td>
-				<td>spectrum-css-icon-Cross100</td>
-			</tr>
-			<tr>
-				<td>spectrum-ClearButton--sizeL</td>
-				<td>spectrum-css-icon-Cross200</td>
-			</tr>
-			<tr>
-				<td>spectrum-ClearButton--sizeXL</td>
-				<td>spectrum-css-icon-Cross300</td>
-			</tr>
-		</tbody>
-	</table>
  */
 export default {
 	title: "Clear button",
@@ -86,13 +55,35 @@ Disabled.parameters = {
 };
 
 /**
- * The clear button component supports the following sizes:
- * - `s`: 75px
- * - `m`: 100px
- * - `l`: 200px
- * - `xl`: 300px
+ * Use the correct cross icon size that corresponds to the t-shirt size you require for the clear button. The default size is medium.
+
+	<table>
+		<thead>
+			<tr>
+				<th>**T-Shirt Size**</th>
+				<th>**Icon Size**</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>spectrum-ClearButton--sizeS</td>
+				<td>spectrum-css-icon-Cross75</td>
+			</tr>
+			<tr>
+				<td>spectrum-ClearButton--sizeM</td>
+				<td>spectrum-css-icon-Cross100</td>
+			</tr>
+			<tr>
+				<td>spectrum-ClearButton--sizeL</td>
+				<td>spectrum-css-icon-Cross200</td>
+			</tr>
+			<tr>
+				<td>spectrum-ClearButton--sizeXL</td>
+				<td>spectrum-css-icon-Cross300</td>
+			</tr>
+		</tbody>
+	</table>
  *
-* The default size is medium.
  */
 export const Sizing = (args, context) => Sizes({
 	Template,
