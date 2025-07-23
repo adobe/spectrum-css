@@ -329,7 +329,6 @@
 		color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
 
 		grid-area: iconArea;
-		align-self: start;
 	}
 
 	.spectrum-Menu-checkmark {
@@ -347,7 +346,6 @@
 		margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 
 		grid-area: checkmarkArea;
-		align-self: start;
 	}
 
 	.spectrum-Menu-chevron {
@@ -358,7 +356,6 @@
 		margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 
 		grid-area: chevronArea;
-		align-self: center;
 
 		&:dir(rtl) {
 			transform: rotate(-180deg);
@@ -683,18 +680,13 @@
 	color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-value-color-default, var(--spectrum-menu-item-value-color-default)));
 	font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
 	justify-self: end;
-	align-self: start;
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
 .spectrum-Menu-itemActions {
+	display: grid;
 	grid-area: actionsArea;
-	align-self: start;
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
-
-	&:has(.spectrum-Menu-linkout) {
-		align-self: center;
-	}
 }
 
 .spectrum-Menu-sectionHeading {
@@ -744,7 +736,6 @@
 	/* Span two rows to properly align to description when present */
 	.spectrum-Menu-item:has(> &):has(> .spectrum-Menu-itemDescription) & {
 		grid-row-end: visualOverflow;
-		align-self: center;
 	}
 }
 
