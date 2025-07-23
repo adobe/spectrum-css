@@ -9,3 +9,4 @@ This migrates the clear button component to the latest Spectrum 2 designs. Custo
 - The quiet variant has been remove as all clear buttons have a transparent background.
 - The over-background and static color variants have been removed.
 - Test and stories for deprecated variants have been removed.
+- The down state has been added, corresponding controls and tests have been added.
