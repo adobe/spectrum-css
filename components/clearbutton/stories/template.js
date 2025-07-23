@@ -10,8 +10,8 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-ClearButton",
 	isDisabled = false,
-	isHover = false,
-	isDown = false,
+	isHovered = false,
+	isActive = false,
 	size = "m",
 	isFocusable = true,
 	id = getRandomId("clearbutton"),
@@ -25,8 +25,8 @@ export const Template = ({
 			[rootClass]: true,
 			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 			"is-disabled": isDisabled,
-			"is-hover": isHover,
-			"is-active": isDown,
+			"is-hover": isHovered,
+			"is-active": isActive,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}

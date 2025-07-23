@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isHovered, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ClearButtonGroup } from "./clearbutton.test.js";
@@ -46,6 +46,8 @@ export default {
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
 		isDisabled,
+		isHovered,
+		isActive,
 		isFocusable: {
 			table: { disable: true },
 			type: { name: "boolean" },
@@ -55,10 +57,16 @@ export default {
 		rootClass: "spectrum-ClearButton",
 		size: "m",
 		isDisabled: false,
+		isHovered: false,
+		isActive: false,
 	},
 	parameters: {
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
+		tags: ["migrated"],
 	},
 };
 
