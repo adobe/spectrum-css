@@ -17,11 +17,11 @@ export const ClearButtonGroup = Variants({
 		},
 		{
 			testHeading: "Hover",
-			isHover: true,
+			isHovered: true,
 		},
 		{
 			testHeading: "Down",
-			isDown: true,
+			isActive: true,
 		},
 	]
 });
