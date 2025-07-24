@@ -53,10 +53,10 @@ export default {
 		css: {
 			buildPath: join("dist", "css") + sep,
 			transforms: [
+				CSSBorderRoundingTransform.name,
+				CSSOpenTypeTransform.name,
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
-				CSSOpenTypeTransform.name,
-				CSSBorderRoundingTransform.name,
 			],
 			prefix: "spectrum",
 			files: [
@@ -141,21 +141,28 @@ export default {
 		JSON: {
 			buildPath: join("dist", "json") + sep,
 			transforms: [
+				"attribute/cti",
+				"attribute/color",
+				"name/kebab",
+				"fontFamily/css",
 				AttributeSetsTransform.name,
-				NameKebabTransfom.name,
+				// NameKebabTransfom.name,
 				CSSOpenTypeTransform.name,
 				CSSBorderRoundingTransform.name,
 			],
 			prefix: "spectrum",
 			files: [
 				{
+					format: "json/nested",
+					destination: "raw.json",
+					options: {
+						showFileHeader: false,
+						outputReferences: true,
+					},
+				},
+				{
 					format: "json/sets",
 					destination: "tokens.json",
-					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.includes("wireframe")) return false;
-						return true;
-					},
 					options: {
 						showFileHeader: false,
 						outputReferences: true,

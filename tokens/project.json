@@ -16,7 +16,7 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"node --no-warnings ./tasks/token-rollup.js",
+					"node --no-warnings ./tasks/token-rollup.js"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
