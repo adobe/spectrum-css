@@ -53,10 +53,10 @@ export default {
 		css: {
 			buildPath: join("dist", "css") + sep,
 			transforms: [
+				CSSBorderRoundingTransform.name,
+				CSSOpenTypeTransform.name,
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
-				CSSOpenTypeTransform.name,
-				CSSBorderRoundingTransform.name,
 			],
 			prefix: "spectrum",
 			files: [

@@ -1,5 +1,6 @@
 export default {
 	type: "value",
+	transitive: true,
 	name: "font/openType",
 	filter: (token) => token.name.includes("font-weight"),
 	transform: (token) => {
