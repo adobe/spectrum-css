@@ -363,6 +363,19 @@ export const MenuItemGroup = Variants({
 			include: ["Drill-in", "Drill-in with thumbnails", "Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"],
 		},
 		{
+			testHeading: "Unavailable",
+			isUnavailable: true,
+			value: undefined,
+			include: ["No selection", "No selection, with description","Truncation","Text wrapping"]
+		},
+		{
+			testHeading: "Unavailable without icon",
+			isUnavailable: true,
+			value: undefined,
+			iconName: undefined,
+			include: ["No selection", "No selection, with description","Truncation","Text wrapping"]
+		},
+		{
 			testHeading: "External link",
 			hasExternalLink: true,
 			include: ["No selection", "No selection, with thumbnails", "No selection, with description", "No selection, with thumbnails, description", "Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"]

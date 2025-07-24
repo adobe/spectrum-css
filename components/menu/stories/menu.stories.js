@@ -1,23 +1,44 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
+import {
+	Sizes,
+	withDownStateDimensionCapture,
+} from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isFocused, isHovered, isSelected, size } from "@spectrum-css/preview/types";
+import {
+	isActive,
+	isDisabled,
+	isFocused,
+	isHovered,
+	isSelected,
+	size,
+} from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { MenuItemGroup, MenuTraySubmenu, MenuWithVariants } from "./menu.test.js";
-import { DisabledItemGroup, OverflowGroup, SelectionGroup, SubmenuInPopover, Template } from "./template.js";
+import {
+	MenuItemGroup,
+	MenuTraySubmenu,
+	MenuWithVariants,
+} from "./menu.test.js";
+import {
+	DisabledItemGroup,
+	OverflowGroup,
+	SelectionGroup,
+	SubmenuInPopover,
+	Template,
+} from "./template.js";
 
 /**
  * A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a
  * menu divider. Often a menu will appear in a popover so that it displays as a toggling menu.
-*/
+ */
 export default {
 	title: "Menu",
 	component: "Menu",
 	argTypes: {
 		selectionMode: {
 			name: "Selection mode",
-			description: "Determines whether items in the menu can be selected, and how many",
+			description:
+				"Determines whether items in the menu can be selected, and how many",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
@@ -79,8 +100,8 @@ export default {
 		},
 		docs: {
 			story: {
-				height: "300px"
-			}
+				height: "300px",
+			},
 		},
 		design: {
 			type: "figma",
@@ -93,11 +114,9 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
-		}
+		},
 	},
-	decorators: [
-		withDownStateDimensionCapture,
-	],
+	decorators: [withDownStateDimensionCapture],
 	tags: ["migrated"],
 };
 
@@ -115,7 +134,7 @@ Default.args = {
 			items: [
 				{
 					label: "Default menu item",
-					iconName: "Comment"
+					iconName: "Comment",
 				},
 				{
 					label: "Focused menu item",
@@ -124,7 +143,8 @@ Default.args = {
 					isActive: true,
 				},
 				{
-					label: "A menu item with a longer label that causes the text to wrap to the next line"
+					label:
+						"A menu item with a longer label that causes the text to wrap to the next line",
 				},
 				{
 					label: "Menu item with no icon",
@@ -136,11 +156,11 @@ Default.args = {
 				{
 					label: "Menu item as external link with icon",
 					hasExternalLink: true,
-					iconName: "Data"
+					iconName: "Data",
 				},
 				{
 					label: "Menu item with a thumbnail",
-					thumbnailUrl: "thumbnail.png"
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Disabled menu item",
@@ -162,24 +182,27 @@ Default.args = {
 				},
 				{
 					label: "Selected item",
-					description: "This item is checked if single-select or multi-select mode is turned on",
+					description:
+						"This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
 				},
 				{
 					label: "Selected item with thumbnail",
 					isSelected: true,
-					thumbnailUrl: "thumbnail.png"
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Selected item with thumbnail",
-					description: "This item is checked if single-select or multi-select mode is turned on",
+					description:
+						"This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
-					thumbnailUrl: "thumbnail.png"
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Selected item with icon",
 					iconName: "Cloud",
-					description: "This item is checked if single-select or multi-select mode is turned on",
+					description:
+						"This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
 				},
 			],
@@ -187,26 +210,32 @@ Default.args = {
 		{ type: "divider" },
 		{
 			idx: 3,
-			heading: "Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
-			sectionDescription: "This menu header also has a description that is long enough to hopefully just maybe wrap if it's long enough",
+			heading:
+				"Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
+			sectionDescription:
+				"This menu header also has a description that is long enough to hopefully just maybe wrap if it's long enough",
 			id: "menu-heading-desc-icon-value",
 			hasActions: true,
 			items: [
 				{
-					label: "Menu item with action and a longer label that truncates if it is long enough to truncate",
+					label:
+						"Menu item with action and a longer label that truncates if it is long enough to truncate",
 					iconName: "Cut",
-					description: "This item has a switch if multi-select mode is turned on.",
+					description:
+						"This item has a switch if multi-select mode is turned on.",
 				},
 				{
 					label: "Menu item with action",
 					iconName: "Copy",
-					description: "In multi-select mode, this item will be switched on. In single-select mode, this item will be checked.",
+					description:
+						"In multi-select mode, this item will be switched on. In single-select mode, this item will be checked.",
 					isSelected: true,
 				},
 				{
 					label: "Menu item with action and value",
 					iconName: "Paste",
-					description: "This item has a value. If multi-select mode is turned on, it also has a switch and the value can be used to label the switch.",
+					description:
+						"This item has a value. If multi-select mode is turned on, it also has a switch and the value can be used to label the switch.",
 					value: "⌘ C",
 				},
 				{
@@ -228,15 +257,17 @@ Default.args = {
 				},
 				{
 					label: "Menu item with external link action",
-					description: "Menu item with external link action (does not work in multi-select mode)",
+					description:
+						"Menu item with external link action (does not work in multi-select mode)",
 					hasExternalLink: true,
 				},
 				{
 					label: "Disabled menu item with external link action",
-					description: "Menu item with external link action (does not work in multi-select mode)",
+					description:
+						"Menu item with external link action (does not work in multi-select mode)",
 					hasExternalLink: true,
 					isDisabled: true,
-				}
+				},
 			],
 		},
 		{
@@ -262,7 +293,7 @@ Default.args = {
 					label: "Disabled menu item with drill-in",
 					isDrillIn: true,
 					isDisabled: true,
-				}
+				},
 			],
 		},
 	],
@@ -297,8 +328,8 @@ TraySubmenu.args = {
 				{
 					label: "Rulers",
 				},
-			]
-		}
+			],
+		},
 	],
 };
 TraySubmenu.parameters = {
@@ -307,10 +338,10 @@ TraySubmenu.parameters = {
 		story: {
 			inline: false,
 			height: "300px",
-		}
+		},
 	},
 	viewport: {
-		defaultViewport: "mobile2"
+		defaultViewport: "mobile2",
 	},
 };
 
@@ -362,7 +393,8 @@ MenuItem.argTypes = {
 	},
 	hasActions: {
 		name: "Has switches",
-		description: "If multiple selection is enabled, show switches instead of checkboxes to show which items have been selected",
+		description:
+			"If multiple selection is enabled, show switches instead of checkboxes to show which items have been selected",
 		type: { name: "boolean" },
 		table: {
 			type: { summary: "boolean" },
@@ -389,7 +421,7 @@ MenuItem.argTypes = {
 			type: { summary: "boolean" },
 			category: "Content",
 		},
-		control: "boolean"
+		control: "boolean",
 	},
 	isDrillIn: {
 		name: "Is drill-in",
@@ -399,7 +431,18 @@ MenuItem.argTypes = {
 			type: { summary: "boolean" },
 			category: "Content",
 		},
-		control: "boolean"
+		control: "boolean",
+	},
+	isUnavailable: {
+		name: "Is unavailable",
+		description:
+			"Displays unavailable icon intended to toggle explanatory popover",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean",
 	},
 	// These settings are not used in the MenuItem story
 	hasDividers: { table: { disable: true } },
@@ -410,6 +453,7 @@ MenuItem.args = {
 	iconName: "Comment",
 	description: "Menu item description",
 	value: "⌘ N",
+	isUnavailable: false,
 	isDisabled: false,
 	isActive: false,
 	isFocused: false,
@@ -489,25 +533,19 @@ Collapsible.args = {
 			label: "Tablet",
 			iconName: "DeviceTablet",
 			isCollapsible: true,
-			items: [
-				{ label: "Defaults to not visible within closed item" },
-			],
+			items: [{ label: "Defaults to not visible within closed item" }],
 		},
 		{
 			label: "Social Media",
 			iconName: "ShareAndroid",
 			isCollapsible: true,
-			items: [
-				{ label: "Defaults to not visible within closed item" },
-			],
+			items: [{ label: "Defaults to not visible within closed item" }],
 		},
 		{
 			label: "Watches",
 			iconName: "Clock",
 			isCollapsible: true,
-			items: [
-				{ label: "Defaults to not visible within closed item" },
-			],
+			items: [{ label: "Defaults to not visible within closed item" }],
 		},
 	],
 };
@@ -523,12 +561,16 @@ Collapsible.args = {
  * [action button](?path=/docs/components-action-button--docs)). Similarly, any components displayed inside a menu item
  * (such as a [switch](?path=/docs/components-switch--docs)) must also be of the same size.
  */
-export const Sizing = (args, context) => Sizes({
-	Template,
-	withHeading: false,
-	withBorder: false,
-	...args,
-}, context);
+export const Sizing = (args, context) =>
+	Sizes(
+		{
+			Template,
+			withHeading: false,
+			withBorder: false,
+			...args,
+		},
+		context,
+	);
 Sizing.storyName = "Default";
 Sizing.tags = ["!dev"];
 Sizing.args = {
@@ -561,21 +603,21 @@ Sizing.args = {
 		{
 			idx: 6,
 			label: "Menu item as external link",
-			hasExternalLink: true
+			hasExternalLink: true,
 		},
 		{
 			idx: 7,
 			label: "Menu item with thumbnail",
 			value: "Value",
-			thumbnailUrl: "thumbnail.png"
+			thumbnailUrl: "thumbnail.png",
 		},
 		{
 			idx: 8,
 			label: "Menu item with thumbnail",
 			description: "and description",
-			thumbnailUrl: "thumbnail.png"
+			thumbnailUrl: "thumbnail.png",
 		},
-	]
+	],
 };
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -602,7 +644,7 @@ DrillInChevron.args = {
 		},
 		{
 			label: "Menu item",
-		}
+		},
 	],
 };
 
@@ -661,7 +703,7 @@ TextOverflow.parameters = {
 TextOverflow.args = {
 	customStyles: {
 		"max-inline-size": "175px",
-	}
+	},
 };
 
 // story used in Picker component as well as docs page
@@ -721,13 +763,13 @@ WithDividersAndHeaders.args = {
 					label: "Subtract",
 					iconName: "SelectNone",
 				},
-			]
+			],
 		},
 		{ type: "divider" },
 		{
 			idx: 2,
 			heading: "Actions",
-			sectionDescription:"With an optional description",
+			sectionDescription: "With an optional description",
 			id: "menu-actions",
 			selectionMode: "single",
 			items: [
@@ -735,9 +777,9 @@ WithDividersAndHeaders.args = {
 					label: "Deselect",
 					iconName: "SelectNo",
 					isDisabled: true,
-				}
-			]
-		}
+				},
+			],
+		},
 	],
 };
 
@@ -747,6 +789,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };
