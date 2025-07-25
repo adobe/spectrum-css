@@ -486,7 +486,7 @@ export const MigratedComponentsList = () => {
 					<ul className="sb-unstyled" style={{ columnCount: 3, columnGap: '1rem', listStyle: 'none', padding: 0, marginTop: '1rem' }}>
 						{components.map((component, idx) => (
 							<li key={`${component.name || component}-${idx}`} style={{ marginBottom: '0.5rem' }}>
-								<a href={`/?path=/docs/components-${component.url}--docs`}>
+								<a href={`./?path=/docs/components-${component.url}--docs`}>
 									{component.title || (typeof component === 'string' ? component.charAt(0).toUpperCase() + component.slice(1) : '')}
 								</a>
 							</li>
