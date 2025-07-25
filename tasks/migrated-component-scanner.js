@@ -86,17 +86,80 @@ function getComponentsByStatus(statusType) {
 }
 
 /**
- * Generates a list of migrated components
+ * Extracts the title from a Storybook .stories.js file (to display the title in a list with proper capitalization)
+ * @param {string} storyFilePath - Absolute path to the .stories.js file
+ * @returns {string|null} The extracted title, or null if not found
+ */
+function extractTitleFromStoryFile(storyFilePath) {
+	try {
+		const content = fs.readFileSync(storyFilePath, "utf8");
+		const match = content.match(/title:\s*["'`](.+?)["'`]/);
+		if (match && match[1]) {
+			return match[1];
+		}
+	} catch (error) {
+		console.warn(`Could not extract title from ${storyFilePath}:`, error);
+	}
+	return null;
+}
+
+/**
+ * Generates the URL fragment from a component's title
+ * @param {string} title - The title to generate a URL fragment from
+ * @returns {string} The generated URL fragment
+ */
+function generateUrlFragmentFromTitle(title) {
+	return title
+		.split("/")
+		.map(segment =>
+			segment
+				.trim()
+				.toLowerCase()
+				.replace(/[^a-z0-9 -]/g, "") // remove special chars except space and dash (i.e "in-line alert")
+				.replace(/\s+/g, "-")       // replace spaces with dash
+		)
+		.join("-")
+		.replace(/-+/g, "-"); // collapse multiple dashes
+}
+
+/**
+ * Generates a list of migrated components with their titles, and docs links
  * @returns {Object} Information about migrated components
  */
 function generateMigratedComponentsReport() {
 	const allComponents = getAllComponentDirectories();
 	const migratedComponents = getComponentsByStatus("migrated");
 
+	const componentsWithData = migratedComponents.map((dir) => {
+		const storiesDir = path.resolve(process.cwd(), "components", dir, "stories");
+		if (!fs.existsSync(storiesDir)) {
+			return {
+				name: dir,
+				title: dir,
+				url: dir,
+			};
+		}
+
+		const storyFiles = fs.readdirSync(storiesDir).filter(file => file.endsWith(".stories.js"));
+		let title = null;
+		for (const file of storyFiles) {
+			title = extractTitleFromStoryFile(path.join(storiesDir, file));
+			if (title) break;
+		}
+
+		const urlFragment = generateUrlFragmentFromTitle(title || dir);
+
+		return {
+			name: dir,
+			title: title || dir,
+			url: urlFragment,
+		};
+	});
+
 	return {
 		total: allComponents.length,
 		migrated: migratedComponents.length,
-		components: migratedComponents,
+		components: componentsWithData,
 		generatedAt: new Date().toISOString()
 	};
 }
