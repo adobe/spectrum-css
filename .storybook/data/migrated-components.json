@@ -1,65 +1,302 @@
 {
   "total": 85,
-  "migrated": 58,
+  "migrated": 59,
   "components": [
-    "accordion",
-    "actionbar",
-    "actionbutton",
-    "actiongroup",
-    "alertbanner",
-    "alertdialog",
-    "avatar",
-    "badge",
-    "breadcrumb",
-    "button",
-    "buttongroup",
-    "checkbox",
-    "closebutton",
-    "coachmark",
-    "colorarea",
-    "colorhandle",
-    "colorloupe",
-    "colorslider",
-    "colorwheel",
-    "combobox",
-    "contextualhelp",
-    "dial",
-    "dialog",
-    "divider",
-    "dropzone",
-    "fieldgroup",
-    "fieldlabel",
-    "form",
-    "helptext",
-    "icon",
-    "illustratedmessage",
-    "infieldbutton",
-    "infieldprogresscircle",
-    "inlinealert",
-    "link",
-    "menu",
-    "meter",
-    "opacitycheckerboard",
-    "pagination",
-    "picker",
-    "popover",
-    "progressbar",
-    "progresscircle",
-    "radio",
-    "rating",
-    "search",
-    "statuslight",
-    "stepper",
-    "swatch",
-    "swatchgroup",
-    "switch",
-    "table",
-    "tag",
-    "taggroup",
-    "textfield",
-    "thumbnail",
-    "toast",
-    "tooltip"
+    {
+      "name": "accordion",
+      "title": "Accordion",
+      "url": "accordion"
+    },
+    {
+      "name": "actionbar",
+      "title": "Action bar",
+      "url": "action-bar"
+    },
+    {
+      "name": "actionbutton",
+      "title": "Action button",
+      "url": "action-button"
+    },
+    {
+      "name": "actiongroup",
+      "title": "Action group",
+      "url": "action-group"
+    },
+    {
+      "name": "alertbanner",
+      "title": "Alert banner",
+      "url": "alert-banner"
+    },
+    {
+      "name": "alertdialog",
+      "title": "Alert dialog",
+      "url": "alert-dialog"
+    },
+    {
+      "name": "avatar",
+      "title": "Avatar",
+      "url": "avatar"
+    },
+    {
+      "name": "badge",
+      "title": "Badge",
+      "url": "badge"
+    },
+    {
+      "name": "breadcrumb",
+      "title": "Breadcrumbs",
+      "url": "breadcrumbs"
+    },
+    {
+      "name": "button",
+      "title": "Button",
+      "url": "button"
+    },
+    {
+      "name": "buttongroup",
+      "title": "Button group",
+      "url": "button-group"
+    },
+    {
+      "name": "checkbox",
+      "title": "Checkbox",
+      "url": "checkbox"
+    },
+    {
+      "name": "clearbutton",
+      "title": "Clear button",
+      "url": "clear-button"
+    },
+    {
+      "name": "closebutton",
+      "title": "Close button",
+      "url": "close-button"
+    },
+    {
+      "name": "coachmark",
+      "title": "Coach mark",
+      "url": "coach-mark"
+    },
+    {
+      "name": "colorarea",
+      "title": "Color area",
+      "url": "color-area"
+    },
+    {
+      "name": "colorhandle",
+      "title": "Color handle",
+      "url": "color-handle"
+    },
+    {
+      "name": "colorloupe",
+      "title": "Color loupe",
+      "url": "color-loupe"
+    },
+    {
+      "name": "colorslider",
+      "title": "Color slider",
+      "url": "color-slider"
+    },
+    {
+      "name": "colorwheel",
+      "title": "Color wheel",
+      "url": "color-wheel"
+    },
+    {
+      "name": "combobox",
+      "title": "Combobox",
+      "url": "combobox"
+    },
+    {
+      "name": "contextualhelp",
+      "title": "Contextual help",
+      "url": "contextual-help"
+    },
+    {
+      "name": "dial",
+      "title": "Dial",
+      "url": "dial"
+    },
+    {
+      "name": "dialog",
+      "title": "Dialog",
+      "url": "dialog"
+    },
+    {
+      "name": "divider",
+      "title": "Divider",
+      "url": "divider"
+    },
+    {
+      "name": "dropzone",
+      "title": "Drop zone",
+      "url": "drop-zone"
+    },
+    {
+      "name": "fieldgroup",
+      "title": "Field group",
+      "url": "field-group"
+    },
+    {
+      "name": "fieldlabel",
+      "title": "Field label",
+      "url": "field-label"
+    },
+    {
+      "name": "form",
+      "title": "Form",
+      "url": "form"
+    },
+    {
+      "name": "helptext",
+      "title": "Help text",
+      "url": "help-text"
+    },
+    {
+      "name": "icon",
+      "title": "Icon",
+      "url": "icon"
+    },
+    {
+      "name": "illustratedmessage",
+      "title": "Illustrated message",
+      "url": "illustrated-message"
+    },
+    {
+      "name": "infieldbutton",
+      "title": "In-field button",
+      "url": "in-field-button"
+    },
+    {
+      "name": "infieldprogresscircle",
+      "title": "In-field progress circle",
+      "url": "in-field-progress-circle"
+    },
+    {
+      "name": "inlinealert",
+      "title": "In-line alert",
+      "url": "in-line-alert"
+    },
+    {
+      "name": "link",
+      "title": "Link",
+      "url": "link"
+    },
+    {
+      "name": "menu",
+      "title": "Menu",
+      "url": "menu"
+    },
+    {
+      "name": "meter",
+      "title": "Meter",
+      "url": "meter"
+    },
+    {
+      "name": "opacitycheckerboard",
+      "title": "Opacity checkerboard",
+      "url": "opacity-checkerboard"
+    },
+    {
+      "name": "pagination",
+      "title": "Pagination",
+      "url": "pagination"
+    },
+    {
+      "name": "picker",
+      "title": "Picker",
+      "url": "picker"
+    },
+    {
+      "name": "popover",
+      "title": "Popover",
+      "url": "popover"
+    },
+    {
+      "name": "progressbar",
+      "title": "Progress bar",
+      "url": "progress-bar"
+    },
+    {
+      "name": "progresscircle",
+      "title": "Progress circle",
+      "url": "progress-circle"
+    },
+    {
+      "name": "radio",
+      "title": "Radio",
+      "url": "radio"
+    },
+    {
+      "name": "rating",
+      "title": "Rating",
+      "url": "rating"
+    },
+    {
+      "name": "search",
+      "title": "Search field",
+      "url": "search-field"
+    },
+    {
+      "name": "statuslight",
+      "title": "Status light",
+      "url": "status-light"
+    },
+    {
+      "name": "stepper",
+      "title": "Number field",
+      "url": "number-field"
+    },
+    {
+      "name": "swatch",
+      "title": "Swatch",
+      "url": "swatch"
+    },
+    {
+      "name": "swatchgroup",
+      "title": "Swatch group",
+      "url": "swatch-group"
+    },
+    {
+      "name": "switch",
+      "title": "Switch",
+      "url": "switch"
+    },
+    {
+      "name": "table",
+      "title": "Table",
+      "url": "table"
+    },
+    {
+      "name": "tag",
+      "title": "Tag",
+      "url": "tag"
+    },
+    {
+      "name": "taggroup",
+      "title": "Tag group",
+      "url": "tag-group"
+    },
+    {
+      "name": "textfield",
+      "title": "Text area",
+      "url": "text-area"
+    },
+    {
+      "name": "thumbnail",
+      "title": "Thumbnail",
+      "url": "thumbnail"
+    },
+    {
+      "name": "toast",
+      "title": "Toast",
+      "url": "toast"
+    },
+    {
+      "name": "tooltip",
+      "title": "Tooltip",
+      "url": "tooltip"
+    }
   ],
-  "generatedAt": "2025-07-10T15:15:49.411Z"
+  "generatedAt": "2025-07-25T15:33:32.820Z"
 }
