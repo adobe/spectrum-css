@@ -148,7 +148,7 @@ __metadata:
     markdownlint: "npm:^0.38.0"
     markdownlint-cli: "npm:^0.45.0"
     node-gyp: "npm:^11.2.0"
-    npm-registry-fetch: "npm:^18.0.2"
+    npm-registry-fetch: "npm:^19.0.0"
     nunjucks: "npm:^3.2.4"
     nx: "npm:^21.3.5"
     open: "npm:^10.2.0"
@@ -2787,6 +2787,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@isaacs/balanced-match@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@isaacs/balanced-match@npm:4.0.1"
+  checksum: 10c0/7da011805b259ec5c955f01cee903da72ad97c5e6f01ca96197267d3f33103d5b2f8a1af192140f3aa64526c593c8d098ae366c2b11f7f17645d12387c2fd420
+  languageName: node
+  linkType: hard
+
+"@isaacs/brace-expansion@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@isaacs/brace-expansion@npm:5.0.0"
+  dependencies:
+    "@isaacs/balanced-match": "npm:^4.0.1"
+  checksum: 10c0/b4d4812f4be53afc2c5b6c545001ff7a4659af68d4484804e9d514e183d20269bb81def8682c01a22b17c4d6aed14292c8494f7d2ac664e547101c1a905aa977
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -5269,7 +5285,7 @@ __metadata:
     chromatic: "npm:^13.1.2"
     lit: "npm:^3.3.1"
     lodash-es: "npm:^4.17.21"
-    npm-registry-fetch: "npm:^18.0.2"
+    npm-registry-fetch: "npm:^19.0.0"
     postcss: "npm:^8.5.6"
     prettier: "npm:^3.6.2"
     react: "npm:^18.3.1"
@@ -8106,6 +8122,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cacache@npm:^20.0.0":
+  version: 20.0.0
+  resolution: "cacache@npm:20.0.0"
+  dependencies:
+    "@npmcli/fs": "npm:^4.0.0"
+    fs-minipass: "npm:^3.0.0"
+    glob: "npm:^11.0.3"
+    lru-cache: "npm:^11.1.0"
+    minipass: "npm:^7.0.3"
+    minipass-collect: "npm:^2.0.1"
+    minipass-flush: "npm:^1.0.5"
+    minipass-pipeline: "npm:^1.2.4"
+    p-map: "npm:^7.0.2"
+    ssri: "npm:^12.0.0"
+    tar: "npm:^7.4.3"
+    unique-filename: "npm:^4.0.0"
+  checksum: 10c0/0f42eccf529a23d8e139a79ecea37c290aab90d135b0385e245305b106f31fab529b288a188135f1d0f2436c5fdbd27b8c56043ac872a272326925fbcb3e779c
+  languageName: node
+  linkType: hard
+
 "cacheable@npm:^1.10.0":
   version: 1.10.0
   resolution: "cacheable@npm:1.10.0"
@@ -9183,7 +9219,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3, cross-spawn@npm:^7.0.5":
+"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3, cross-spawn@npm:^7.0.5, cross-spawn@npm:^7.0.6":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
   dependencies:
@@ -11399,6 +11435,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"foreground-child@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "foreground-child@npm:3.3.1"
+  dependencies:
+    cross-spawn: "npm:^7.0.6"
+    signal-exit: "npm:^4.0.1"
+  checksum: 10c0/8986e4af2430896e65bc2788d6679067294d6aee9545daefc84923a0a4b399ad9c7a3ea7bd8c0b2b80fdf4a92de4c69df3f628233ff3224260e9c1541a9e9ed3
+  languageName: node
+  linkType: hard
+
 "form-data@npm:^4.0.0":
   version: 4.0.0
   resolution: "form-data@npm:4.0.0"
@@ -11777,6 +11823,22 @@ __metadata:
   bin:
     glob: dist/esm/bin.mjs
   checksum: 10c0/419866015d8795258a8ac51de5b9d1a99c72634fc3ead93338e4da388e89773ab21681e494eac0fbc4250b003451ca3110bb4f1c9393d15d14466270094fdb4e
+  languageName: node
+  linkType: hard
+
+"glob@npm:^11.0.3":
+  version: 11.0.3
+  resolution: "glob@npm:11.0.3"
+  dependencies:
+    foreground-child: "npm:^3.3.1"
+    jackspeak: "npm:^4.1.1"
+    minimatch: "npm:^10.0.3"
+    minipass: "npm:^7.1.2"
+    package-json-from-dist: "npm:^1.0.0"
+    path-scurry: "npm:^2.0.0"
+  bin:
+    glob: dist/esm/bin.mjs
+  checksum: 10c0/7d24457549ec2903920dfa3d8e76850e7c02aa709122f0164b240c712f5455c0b457e6f2a1eee39344c6148e39895be8094ae8cfef7ccc3296ed30bce250c661
   languageName: node
   linkType: hard
 
@@ -12190,12 +12252,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "hosted-git-info@npm:8.0.0"
+"hosted-git-info@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "hosted-git-info@npm:9.0.0"
   dependencies:
-    lru-cache: "npm:^10.0.1"
-  checksum: 10c0/3eb932a99e8a3c7f3a4513a5a61b81d0789741abf41ebb2d9679644e4b4c730c68e1925fbaeae2c6b35eb0bab57a59027b89c21ab588981c8b0989c454adde46
+    lru-cache: "npm:^11.1.0"
+  checksum: 10c0/567d36e26f63f654991eca53ef3787e55c6e48d38ed70107bf4828f5b1c506d590553de605f08bb5ed242e7044976406681070292d7d9ed9d8eb4833a4f3520d
   languageName: node
   linkType: hard
 
@@ -13331,6 +13393,15 @@ __metadata:
     "@pkgjs/parseargs":
       optional: true
   checksum: 10c0/c87997d9c9c5b7366259b1f2a444ef148692f8eedad5307caca939babbb60af2b47d306e5c63bf9d5fefbab2ab48d4da275188c3de525d0e716cc21b784bbccb
+  languageName: node
+  linkType: hard
+
+"jackspeak@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "jackspeak@npm:4.1.1"
+  dependencies:
+    "@isaacs/cliui": "npm:^8.0.2"
+  checksum: 10c0/84ec4f8e21d6514db24737d9caf65361511f75e5e424980eebca4199f400874f45e562ac20fa8aeb1dd20ca2f3f81f0788b6e9c3e64d216a5794fd6f30e0e042
   languageName: node
   linkType: hard
 
@@ -14581,6 +14652,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lru-cache@npm:^11.1.0":
+  version: 11.1.0
+  resolution: "lru-cache@npm:11.1.0"
+  checksum: 10c0/85c312f7113f65fae6a62de7985348649937eb34fb3d212811acbf6704dc322a421788aca253b62838f1f07049a84cc513d88f494e373d3756514ad263670a64
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -14626,7 +14704,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-fetch-happen@npm:^14.0.0, make-fetch-happen@npm:^14.0.3":
+"make-fetch-happen@npm:^14.0.3":
   version: 14.0.3
   resolution: "make-fetch-happen@npm:14.0.3"
   dependencies:
@@ -14642,6 +14720,25 @@ __metadata:
     promise-retry: "npm:^2.0.1"
     ssri: "npm:^12.0.0"
   checksum: 10c0/c40efb5e5296e7feb8e37155bde8eb70bc57d731b1f7d90e35a092fde403d7697c56fb49334d92d330d6f1ca29a98142036d6480a12681133a0a1453164cb2f0
+  languageName: node
+  linkType: hard
+
+"make-fetch-happen@npm:^15.0.0":
+  version: 15.0.0
+  resolution: "make-fetch-happen@npm:15.0.0"
+  dependencies:
+    "@npmcli/agent": "npm:^3.0.0"
+    cacache: "npm:^20.0.0"
+    http-cache-semantics: "npm:^4.1.1"
+    minipass: "npm:^7.0.2"
+    minipass-fetch: "npm:^4.0.0"
+    minipass-flush: "npm:^1.0.5"
+    minipass-pipeline: "npm:^1.2.4"
+    negotiator: "npm:^1.0.0"
+    proc-log: "npm:^5.0.0"
+    promise-retry: "npm:^2.0.1"
+    ssri: "npm:^12.0.0"
+  checksum: 10c0/5d8ac7f3d5947c5606ef22e9ed6d135d5f04cb05c351f0ab790673056fc56097edd9c2d03b7165100e0115d55cc05412179b741d220fcf0f5c50aafc69c83fe4
   languageName: node
   linkType: hard
 
@@ -15424,6 +15521,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:^10.0.3":
+  version: 10.0.3
+  resolution: "minimatch@npm:10.0.3"
+  dependencies:
+    "@isaacs/brace-expansion": "npm:^5.0.0"
+  checksum: 10c0/e43e4a905c5d70ac4cec8530ceaeccb9c544b1ba8ac45238e2a78121a01c17ff0c373346472d221872563204eabe929ad02669bb575cb1f0cc30facab369f70f
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.4, minimatch@npm:^3.0.5, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -15849,31 +15955,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-package-arg@npm:^12.0.0":
-  version: 12.0.0
-  resolution: "npm-package-arg@npm:12.0.0"
+"npm-package-arg@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "npm-package-arg@npm:13.0.0"
   dependencies:
-    hosted-git-info: "npm:^8.0.0"
+    hosted-git-info: "npm:^9.0.0"
     proc-log: "npm:^5.0.0"
     semver: "npm:^7.3.5"
     validate-npm-package-name: "npm:^6.0.0"
-  checksum: 10c0/a2e4e60b16b52715786ba854ef93c4f489b4379c54aa9179b6dac3f4e44fb6fad0a1d937e25cf04b3496bd61b90fc356b44ecd02ce98a6fe0f348e1563b7b00c
+  checksum: 10c0/cb5d3378b5fa69320547ad80227932efedcbf772caf9f1350c28527eb6ac5c5d0085d3f2a09ce0a65cae34d7956b9bf40674dd8be91cd35a376bbb30888b2997
   languageName: node
   linkType: hard
 
-"npm-registry-fetch@npm:^18.0.2":
-  version: 18.0.2
-  resolution: "npm-registry-fetch@npm:18.0.2"
+"npm-registry-fetch@npm:^19.0.0":
+  version: 19.0.0
+  resolution: "npm-registry-fetch@npm:19.0.0"
   dependencies:
     "@npmcli/redact": "npm:^3.0.0"
     jsonparse: "npm:^1.3.1"
-    make-fetch-happen: "npm:^14.0.0"
+    make-fetch-happen: "npm:^15.0.0"
     minipass: "npm:^7.0.2"
     minipass-fetch: "npm:^4.0.0"
     minizlib: "npm:^3.0.1"
-    npm-package-arg: "npm:^12.0.0"
+    npm-package-arg: "npm:^13.0.0"
     proc-log: "npm:^5.0.0"
-  checksum: 10c0/43e02befb393f67d5014d690a96d55f0b5f837a3eb9a79b17738ff0e3a1f081968480f2f280d1ad77a088ebd88c196793d929b0e4d24a8389a324dfd4006bc39
+  checksum: 10c0/1b5c5cf2a89e60f83be43edc62ef31cb942565a583c07dacdfd9d2a339cd8f1dee340b502656fbf23fe17a4380e58aca36c85f06d632c1b3e89131ee68b0b86c
   languageName: node
   linkType: hard
 
