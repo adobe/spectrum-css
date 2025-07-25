@@ -1,10 +1,13 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -19,6 +22,10 @@ export const AccordionItem = ({
 	isHovered = false,
 	isActive = false,
 	isFocused = false,
+	hasActionButton = false,
+	hasSwitch = false,
+	actionButtonIconName = "",
+	size = "m",
 	iconSize = "m",
 	customStyles = {},
 	customClasses = [],
@@ -66,6 +73,30 @@ export const AccordionItem = ({
 					}, context)}
 					<span class="${rootClass}Title">${heading}</span>
 				</button>
+				${when(
+					hasActionButton || hasSwitch,
+					() =>
+						html`
+							<div class="${rootClass}DirectActions">
+								${when(hasActionButton, () =>
+									ActionButton({
+										label: "", // icon-only
+										isQuiet: true,
+										customClasses: [`${rootClass}ActionButton`],
+										iconName: actionButtonIconName || "Circle",
+										isDisabled,
+										size,
+									}, context)
+								)}
+								${when(hasSwitch, () =>
+									Switch({
+										label: "",
+										customClasses: [`${rootClass}Switch`],
+										isDisabled,
+										size
+									}, context))}
+							</div>
+						`)}
 			</h3>
 			<!-- WAI-ARIA 1.1: Item content uses a role of "region" -->
 			<div
@@ -90,6 +121,9 @@ export const Template = ({
 	id = getRandomId("accordion"),
 	disableAll = false,
 	collapseAll = false,
+	hasActionButtons = false,
+	actionButtonIconName = "",
+	hasSwitches = false,
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
@@ -118,6 +152,10 @@ export const Template = ({
 					rootClass: `${rootClass}-item`,
 					heading,
 					idx,
+					size,
+					hasActionButton: item.hasActionButton || hasActionButtons,
+					actionButtonIconName: item.actionButtonIconName || actionButtonIconName,
+					hasSwitch: item.hasSwitch || hasSwitches,
 					iconSize: `${size}`,
 					isDisabled: item.isDisabled || disableAll,
 					isOpen: collapseAll === true ? false : item.isOpen,
