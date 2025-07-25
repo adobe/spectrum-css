@@ -43,6 +43,10 @@ export default {
 				height: "100px"
 			}
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=202-2563",
+		},
 		packageJson,
 		metadata,
 	},

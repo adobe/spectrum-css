@@ -30,6 +30,10 @@ export default {
 		}
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=202-4135",
+		},
 		packageJson,
 		metadata,
 	},
