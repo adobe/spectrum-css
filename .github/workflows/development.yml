@@ -202,6 +202,8 @@ jobs:
         uses: ./.github/workflows/vrt.yml
         with:
             skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
+            ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+            sha: ${{ github.event.pull_request.head.sha || github.ref }}
         secrets: inherit
 
     # -------------------------------------------------------------
