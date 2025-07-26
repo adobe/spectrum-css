@@ -53,6 +53,8 @@ jobs:
         uses: ./.github/workflows/vrt.yml
         with:
             skip: ${{ github.base_ref != 'main' }}
+            ref: ${{ github.ref_name }}
+            sha: ${{ github.ref }}
         secrets: inherit
 
     # -------------------------------------------------------------
