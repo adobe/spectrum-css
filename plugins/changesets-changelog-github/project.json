@@ -1,0 +1,10 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "changesets-changelog-github",
+	"tags": ["tooling", "changesets", "plugin"],
+	"targets": {
+		"format": { "defaultConfiguration": "plugins" },
+		"lint": { "defaultConfiguration": "plugins" },
+		"test": { "defaultConfiguration": "plugins" }
+	}
+}
