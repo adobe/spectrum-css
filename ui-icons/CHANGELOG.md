@@ -1,5 +1,13 @@
 # Change log
 
+## 2.0.0-next.2
+
+### Minor Changes
+
+📝 [#3988](https://github.com/adobe/spectrum-css/pull/3988) [`86dd51d`](https://github.com/adobe/spectrum-css/commit/86dd51d884878a3090cb8463ca0bf44f21ee9f87) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Updates ui-icons to include linkout-75 icon.
+
 ## 2.0.0-next.1
 
 ### Minor Changes

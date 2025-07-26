@@ -1,5 +1,23 @@
 # Change Log
 
+## 2.0.0-next.5
+
+### Patch Changes
+
+Updated dependencies [[`b1166bd`](https://github.com/adobe/spectrum-css/commit/b1166bd9e4542b3a665cc95498011a633c56e72a), [`86dd51d`](https://github.com/adobe/spectrum-css/commit/86dd51d884878a3090cb8463ca0bf44f21ee9f87), [`f6843c6`](https://github.com/adobe/spectrum-css/commit/f6843c698a2aac7c15ba949e28c56e4ff49c8c4a), [`61f3c04`](https://github.com/adobe/spectrum-css/commit/61f3c04a4211f19be2c5db883653fb25309a39ea), [`08b3345`](https://github.com/adobe/spectrum-css/commit/08b33457975293c07b5c7d2f60a305f5fd8be77e), [`0242f7f`](https://github.com/adobe/spectrum-css/commit/0242f7f69ec24ef6c6f000324a7b44106e4603fa), [`f654c8d`](https://github.com/adobe/spectrum-css/commit/f654c8d950e6a1f0a77ce0f2413cb205a3b5e276), [`88948bf`](https://github.com/adobe/spectrum-css/commit/88948bf722acde7176716879968cb2f1f0fdb5e1), [`18c69aa`](https://github.com/adobe/spectrum-css/commit/18c69aa52f6e598aecd67d2b5e7dd945473402e6), [`75e847f`](https://github.com/adobe/spectrum-css/commit/75e847f1ae38a889b43888b3ac19505aadb4e24d)]:
+
+- @spectrum-css/sidenav@8.0.0-next.2
+- @spectrum-css/tooltip@8.0.0-next.3
+- @spectrum-css/icon@10.0.0-next.3
+- @spectrum-css/tokens@16.1.0-next.6
+- @spectrum-css/popover@9.0.0-next.3
+- @spectrum-css/contextualhelp@6.0.0-next.3
+- @spectrum-css/clearbutton@8.0.0-next.2
+- @spectrum-css/dialog@13.0.0-next.4
+- @spectrum-css/taggroup@8.0.0-next.2
+- @spectrum-css/meter@2.0.0-next.3
+- @spectrum-css/progressbar@7.0.0-next.3
+
 ## 2.0.0-next.4
 
 ### Patch Changes
