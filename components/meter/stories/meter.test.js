@@ -1,8 +1,19 @@
 import { Variants } from "@spectrum-css/preview/decorators";
+import { html } from "lit";
 import { Template } from "./template.js";
+
+export const MeterSizingTemplate  = (args, context) => {
+	return html`
+		${Template({
+			...args,
+			helpText: "Upgrade membership to get more storage space"
+		}, context)}
+	`;
+};
 
 export const MeterGroup = Variants({
 	Template,
+	SizeTemplate: MeterSizingTemplate,
 	testData: [
 		{
 			testHeading: "Default",
@@ -11,10 +22,6 @@ export const MeterGroup = Variants({
 			testHeading: `Fill: ${fill}`,
 			fill,
 		})),
-		{
-			testHeading: "Side label",
-			labelPosition: "side",
-		},
 		{
 			testHeading: "Text overflow",
 			label: "Storage space remaining for XYZ user"
@@ -28,6 +35,10 @@ export const MeterGroup = Variants({
 			testHeading: "Without value label",
 			showValueLabel: false,
 		},
+		{
+			testHeading: "Help text",
+			helpText: "Help text message to add more context",
+		},
 		/* The gradient story below supports linear-gradients used by Express. For use cases that require a custom
 		linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS.
 		*/
@@ -39,6 +50,10 @@ export const MeterGroup = Variants({
 		{
 			testHeading: "Static white",
 			staticColor: "white",
+		},
+		{
+			testHeading: "Static black",
+			staticColor: "black",
 		},
 	],
 });

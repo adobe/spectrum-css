@@ -2,6 +2,7 @@
 **/dist/*
 !components/*/dist/metadata.json
 !tokens/dist/json/*
+!ui-icons/dist
 
 # Not committing the map assets, these are dev-only
 *.map

@@ -1,5 +1,65 @@
 # Change Log
 
+## 12.0.5-next.7
+
+### Patch Changes
+
+- Updated dependencies [[`d952e0c`](https://github.com/adobe/spectrum-css/commit/d952e0c4d234f5e742432fe906965a52a50b228e)]:
+  - @spectrum-css/tokens@16.1.0-next.5
+  - @spectrum-css/bundle@2.0.0-next.4
+
+## 12.0.5-next.6
+
+### Patch Changes
+
+- Updated dependencies [[`f20e1e7`](https://github.com/adobe/spectrum-css/commit/f20e1e7ff402b591706cc791d9207fdedb80cd1e)]:
+  - @spectrum-css/tokens@16.1.0-next.4
+  - @spectrum-css/bundle@2.0.0-next.3
+
+## 12.0.5-next.5
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/bundle@2.0.0-next.2
+
+## 12.0.5-next.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @spectrum-css/bundle@2.0.0-next.1
+
+## 12.0.5-next.3
+
+### Patch Changes
+
+- Updated dependencies [[`d47295a`](https://github.com/adobe/spectrum-css/commit/d47295a06cf974c347d794ae4f71bc4c8c498025), [`f0d187f`](https://github.com/adobe/spectrum-css/commit/f0d187ff016d49c46ac125cb37ae274644608505), [`1cdfcbf`](https://github.com/adobe/spectrum-css/commit/1cdfcbff6cb3369d710cec78733536d5dd72e7d4), [`1b33315`](https://github.com/adobe/spectrum-css/commit/1b33315fa1b65d65fe940d3be4ea4395d5394655)]:
+  - @spectrum-css/bundle@2.0.0-next.0
+  - @spectrum-css/tokens@16.1.0-next.3
+  - @spectrum-css/ui-icons@2.0.0-next.1
+
+## 12.0.5-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`87d7d99`](https://github.com/adobe/spectrum-css/commit/87d7d99260e758e697668cc17962b0b36d075c65)]:
+  - @spectrum-css/tokens@16.1.0-next.2
+
+## 12.0.5-next.1
+
+### Patch Changes
+
+- Updated dependencies [[`89a3f2b`](https://github.com/adobe/spectrum-css/commit/89a3f2bfeed257a5eefeef229efaa3cc7555980c)]:
+  - @spectrum-css/tokens@16.1.0-next.1
+
+## 12.0.5-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
 ## 12.0.5
 
 ### Patch Changes
@@ -510,7 +570,6 @@ This component has been deprecated. Use an action bar to allow users to perform 
 ### 🛑 BREAKING CHANGE
 
 - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
-
 - NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 
 ## 6.0.1

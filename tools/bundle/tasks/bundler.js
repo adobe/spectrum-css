@@ -16,64 +16,11 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { processCSS } from "../../../tasks/component-builder.js";
-import { dirs, getAllComponentNames } from "../../../tasks/utilities.js";
+import { dirs } from "../../../tasks/utilities.js";
 
 import "colors";
 
 const bundleRoot = path.resolve(dirs.root, "tools", "bundle");
-
-/**
- * Refresh the list of component imports
- * @returns {Promise<string[]>}
- */
-export async function refresh() {
-	const components = getAllComponentNames(false);
-
-	// Refresh the src/index.css file with the latest component imports
-	const imports = `
-/** This file is machine generated. */
-
-/* --- CORE TOKENS --- */
-@import "@spectrum-css/tokens/dist/css/index.css";
-
-/* --- COMPONENTS --- */
-${components.map((component) => {
-		// Check if the package has an index.css file
-		if (
-			fs.existsSync(path.join(dirs.components, component, "index.css")) &&
-			!["commons"].includes(component)
-		) {
-			return `@import "@spectrum-css/${component}";`;
-		}
-		return `/* skip @spectrum-css/${component} -- does not ship CSS */`;
-}).join("\n")}
-`;
-
-	const reports = await processCSS(imports, undefined, path.join(bundleRoot, "src", "index.css"), {
-		cwd: bundleRoot,
-		env: "development",
-		configPath: bundleRoot,
-	}).catch((err) => {
-		console.log("\n\n🔄  refresh bundle");
-		console.log(`${"".padStart(30, "-")}`);
-
-		console.trace(err);
-
-		console.log(`${"".padStart(30, "-")}`);
-		console.log("");
-
-		process.exit(1);
-	});
-
-	const logs = reports.flat(Infinity).filter(Boolean);
-	console.log("\n\n🔄  refresh bundle");
-	console.log(`${"".padStart(30, "-")}`);
-	if (logs && logs.length > 0) {
-		logs.forEach(log => console.log(log));
-		console.log(`${"".padStart(30, "-")}`);
-		console.log("");
-	}
-}
 
 /**
  * Bundle all the components into a single CSS file

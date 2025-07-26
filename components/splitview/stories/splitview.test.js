@@ -32,14 +32,14 @@ export const SplitViewGroup = Variants({
 		},
 		{
 			testHeading: "Top collapsed",
-			orientation: "horizontal",
+			orientation: "vertical",
 			collapsePosition: "top",
 			panelLabels: ["Top", "Bottom"],
 			panelStyles: ["height: 0;", "flex: 1;"],
 		},
 		{
 			testHeading: "Bottom collapsed",
-			orientation: "horizontal",
+			orientation: "vertical",
 			collapsePosition: "bottom",
 			panelLabels: ["Top", "Bottom"],
 			panelStyles: ["flex: 1;", "height: 0;"],
@@ -47,16 +47,19 @@ export const SplitViewGroup = Variants({
 	],
 	stateData: [
 		{
-			testHeading: "Focused",
-			isFocused: true,
-		},
-		{
-			testHeading: "Collapsible",
+			testHeading: "Resizable/collapsible",
+			isResizable: true,
 			isCollapsible: true,
 		},
 		{
-			testHeading: "Resizable",
+			testHeading: "Resizable, focused",
+			isFocused: true,
 			isResizable: true,
+		},
+		{
+			testHeading: "Resizable, active",
+			isResizable: true,
+			isActive: true,
 		},
 	]
 });

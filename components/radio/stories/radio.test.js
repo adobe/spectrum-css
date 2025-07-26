@@ -18,7 +18,6 @@ export const RadioGroup = Variants({
 			customStyles: {
 				"max-width": "220px",
 			}
-
 		}
 	],
 	stateData: [
@@ -27,12 +26,50 @@ export const RadioGroup = Variants({
 			isChecked: true,
 		},
 		{
+			testHeading: "Checked + hovered",
+			isChecked: true,
+		},
+		{
+			testHeading: "Hover",
+			isHovered: true,
+		},
+		{
 			testHeading: "Disabled",
 			isDisabled: true,
 		},
 		{
+			testHeading: "Disabled + checked",
+			isDisabled: true,
+			isChecked: true,
+		},
+		{
+			testHeading: "Disabled + checked + hovered",
+			isDisabled: true,
+			isChecked: true,
+			isHovered: true,
+		},
+		{
 			testHeading: "Read-only",
 			isReadOnly: true,
+		},
+		{
+			testHeading: "Read-only + checked",
+			isReadOnly: true,
+			isChecked: true,
+		},
+		{
+			testHeading: "Read-only + checked + hovered",
+			isHovered: true,
+			isReadOnly: true,
+			isChecked: true,
+		},
+		{
+			testHeading: "Active",
+			isActive: true
+		},
+		{
+			testHeading: "Focus-visible",
+			isFocused: true,
 		},
 	]
 });

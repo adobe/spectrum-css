@@ -1,6 +1,5 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
+import { isEmphasized, isLoading, isQuiet } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { TableGroup } from "./table.test.js";
@@ -13,7 +12,6 @@ export default {
 	title: "Table",
 	component: "Table",
 	argTypes: {
-		size: size(["s", "m", "l", "xl"]),
 		density: {
 			name: "Density",
 			table: {
@@ -24,11 +22,15 @@ export default {
 			control: "select",
 		},
 		isQuiet,
-		isEmphasized,
+		isEmphasized: {
+			...isEmphasized,
+			description: "Emphasized styling on the table affects colors of selected rows and any checkboxes."
+		},
+		isLoading,
 		useDivs: {
 			name: "Use divs for markup",
 			description:
-				"Use 'div' elements for all of the table markup instead of the 'table' element.",
+				"Use `div` elements for all of the table markup instead of the `table` element.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -47,16 +49,17 @@ export default {
 			},
 			control: "boolean",
 		},
-		showThumbnails: {
-			name: "Show thumbnails in content",
-			description:
-				"Uses the thumbnail component at the start of the first column's cells.",
-			type: { name: "boolean" },
+		selectionMode: {
+			name: "Selection mode",
+			description: "Determines whether items in the table can be selected, and if users can select only one or multiple items.",
+			type: { name: "string", required: true },
 			table: {
-				type: { summary: "boolean" },
-				category: "Component",
+				type: { summary: "string" },
+				category: "Selection",
+				disable: true,
 			},
-			control: "boolean",
+			options: ["none", "single", "multiple"],
+			control: "select",
 		},
 		hasColumnDividers: {
 			name: "Show dividers between columns",
@@ -68,30 +71,78 @@ export default {
 			},
 			control: "boolean",
 		},
+		hasMenu: {
+			name: "Has a menu",
+			description: "Adds an action button to header cell to indicate that the column has a hidden menu.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		isSortable: {
+			name: "Enable sortable columns",
+			description: "Table columns can be sortable and are indicated by appropriate sort icons.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		sortIcon: {
+			name: "Sort icon",
+			description: "Sort icons are used to indicate the sort direction of a column. The `none` option is used to indicate that the column is not sorted.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["Sort", "SortUp", "SortDown"],
+			control: "select",
+			if: { arg: "isSortable", eq: true },
+		},
 		isDropTarget: {
 			name: "Dropzone (drop target)",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
 				category: "State",
+				disable: true,
 			},
 			control: "boolean",
 		},
 		rowItems: {
 			table: { disable: true },
 		},
+		hasChartContent: {
+			name: "Chart content in cells",
+			description: "In some instances, a chart can be displayed in the cells of the table.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+				disable: true,
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Table",
-		size: "m",
-		density: "standard",
+		density: "regular",
 		isQuiet: false,
+		isLoading: false,
 		isEmphasized: true,
+		selectionMode: "none",
 		useDivs: false,
-		showThumbnails: false,
 		isDropTarget: false,
 		useScroller: false,
 		hasColumnDividers: false,
+		hasMenu: false,
+		hasChartContent: false,
+		isSortable: false,
+		sortIcon: "Sort",
 		rowItems: [
 			{
 				cellContent: "Row item alpha",
@@ -117,8 +168,13 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated"
+		},
 	},
+	tags: ["migrated"],
 };
+
 
 const ExampleRowItems = [
 	{
@@ -127,7 +183,7 @@ const ExampleRowItems = [
 	},
 	{
 		cellContent: [
-			"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"Selected row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			"Bravo",
 			"Table row bravo. Lorem ipsum dolor sit amet.",
 		],
@@ -135,7 +191,7 @@ const ExampleRowItems = [
 		isSelected: true,
 	},
 	{
-		cellContent: "Table row charlie",
+		cellContent: "Selected row charlie",
 		showCheckbox: true,
 		isSelected: true,
 	},
@@ -154,29 +210,52 @@ const ExampleRowItems = [
 ];
 
 /**
- * The medium size is the default and recommended option. The default table also uses the regular density.
+ * The default table also uses the regular density. Similar to a paragraph of text, textual data is always start-aligned within a table. Never use center alignment.
  */
 export const Default = TableGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
 /**
- * Tables come in four different sizes: small, medium, large, and extra-large. The medium size is the default and recommended option.
+ * The empty state variant displays an [illustrated message](/docs/components-illustrated-message--docs) when there is no data to display.
  */
-export const Sizing = (args, context) => Sizes({
-	Template,
-	withHeading: false,
-	withBorder: false,
-	...args,
-}, context);
-Sizing.args = {};
-Sizing.tags = ["!dev"];
-Sizing.parameters = {
+export const EmptyState = Template.bind({});
+EmptyState.args = {
+	rowItems: [],
+};
+EmptyState.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+EmptyState.storyName = "Empty state";
+EmptyState.argTypes = {
+	isEmphasized: { table: { disable: true } },
+	isQuiet: { table: { disable: true } },
+	isLoading: { table: { disable: true } },
+	hasColumnDividers: { table: { disable: true } },
+	hasMenu: { table: { disable: true } },
+	isSortable: { table: { disable: true } },
+	sortIcon: { table: { disable: true } },
+	isDropTarget: { table: { disable: true } },
+	useDivs: { table: { disable: true } },
+	useScroller: { table: { disable: true } },
 };
 
 /**
- * The compact variant decreases the spacing used within the table.
+ * A table may render a [progress circle](/docs/components-progress-circle--docs) while populating data.
+ */
+export const LoadingState = Template.bind({});
+LoadingState.args = {
+	...Default.args,
+	isLoading: true,
+};
+LoadingState.tags = ["!dev"];
+LoadingState.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+LoadingState.storyName = "Loading state";
+
+/**
+ * The compact variant decreases the spacing used within the table rows, except for the header row.
  */
 export const Compact = Template.bind({});
 Compact.args = {
@@ -190,7 +269,7 @@ Compact.parameters = {
 Compact.storyName = "Density - compact";
 
 /**
- * The spacious variant increases the spacing used within the table.
+ * The spacious variant increases the spacing used within the table rows, except for the header row.
  */
 export const Spacious = Template.bind({});
 Spacious.args = {
@@ -204,14 +283,54 @@ Spacious.parameters = {
 Spacious.storyName = "Density - spacious";
 
 /**
- * The standard multi-select table includes a column of checkboxes used for selecting rows.
+ * The standard multi-select table includes a column of checkboxes used for selecting rows. When the selection mode
+ * is set to `multiple`, users may select more than one table row. Typically, an [indeterminate checkbox](/docs/components-checkbox--docs)
+ * is used to indicate that ability.
  */
 export const MultiSelect = Template.bind({});
-MultiSelect.storyName = "Multi-select";
+MultiSelect.storyName = "Selection mode: multiple";
 MultiSelect.args = {
 	rowItems: ExampleRowItems,
+	selectionMode: "multiple",
 };
 MultiSelect.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * When the selection mode is set to `single`, users may select only one table row.
+ */
+export const SingleSelect = Template.bind({});
+SingleSelect.storyName = "Selection mode: single";
+SingleSelect.args = {
+	selectionMode: "single",
+	rowItems: [
+		{
+			cellContent: ["Pikachu", "Electric", "35"],
+			textAlignment: {
+				2: "end"
+			},
+			showCheckbox: true,
+			isSelected: true,
+			isChecked: true,
+		},
+		{
+			cellContent: ["Charmander", "Fire", "39"],
+			textAlignment: {
+				2: "end"
+			},
+			showCheckbox: true,
+		},
+		{
+			cellContent: ["Mew", "Psychic", "100"],
+			textAlignment: {
+				2: "end"
+			},
+			showCheckbox: true,
+		}
+	],
+};
+SingleSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -219,7 +338,7 @@ MultiSelect.parameters = {
  * Excluding the `.spectrum-Table--emphasized` class will change the style of selected rows.
  */
 export const NonEmphasizedMultiSelect = Template.bind({});
-NonEmphasizedMultiSelect.storyName = "Non-emphasized multi-select";
+NonEmphasizedMultiSelect.storyName = "Selection mode: multiple, non-emphasized styling";
 NonEmphasizedMultiSelect.args = {
 	...MultiSelect.args,
 	isEmphasized: false,
@@ -230,7 +349,90 @@ NonEmphasizedMultiSelect.parameters = {
 };
 
 /**
- * The quiet table has a transparent background and no borders on the left and right.
+ * Numerical data should generally be end-aligned for the ease of scanning and comparing. Numerical data should only be start-aligned when numbers are arbitrary identifiers, known as “nominal numbers,” which means they can’t be compared or combined arithmetically (e.g., ZIP codes, IP addresses, phone numbers).
+ *
+ * Column headers follow the alignment of the data, so for end-aligned numerical data, implementations should add the `.spectrum-Table-headCell--alignEnd` class to affected header cells (not shown below).
+ */
+export const NumericalData = Template.bind({});
+NumericalData.args = {
+	rowItems: [
+		{
+			cellContent: ["Pikachu", "Electric", "35"],
+			textAlignment: {
+				2: "end"
+			}
+		},
+		{
+			cellContent: ["Charmander", "Fire", "39"],
+			textAlignment: {
+				2: "end"
+			}
+		},
+		{
+			cellContent: ["Mew", "Psychic", "100"],
+			textAlignment: {
+				2: "end"
+			}
+		}
+	],
+};
+NumericalData.storyName = "Numerical data";
+NumericalData.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The cells and rows within the table have different states based on selection and focus. Implementations should add appropriate tab stops to indicate focus on a row correctly.
+ */
+export const TableStates = Template.bind({});
+TableStates.args = {
+	rowItems: [
+		{
+			cellContent: "Focused selected row, no rounded corners",
+			isFocused: true,
+			isSelected: true,
+		},
+		{
+			cellContent: "Selected, hovered row",
+			isSelected: true,
+			isHovered: true,
+		},
+		{
+			cellContent: ["Selected unfocused row, with a focused cell", "Focused cell", "Unfocused cell"],
+			isSelected: true,
+			cellCustomClasses: {
+				1: ["is-focus-visible"]
+			}
+		},
+		{
+			cellContent: "Focused unselected row, no rounded corners",
+			isFocused: true,
+		},
+		{
+			cellContent: ["Table row with a focused cell", "Focused cell", "Unfocused cell"],
+			cellCustomClasses: {
+				1: ["is-focus-visible"]
+			}
+		},
+		{
+			cellContent: "Hovered row",
+			isHovered: true,
+
+		},
+		{
+			cellContent: "Focused selected row, with rounded corners",
+			isFocused: true,
+			isSelected: true,
+		}
+	],
+};
+TableStates.storyName = "Row and cell states";
+TableStates.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Quiet tables are for when a table is meant to be supplementary, subtle, or lightweight. The quiet table utilizes the `.spectrum-Table--quiet` class and does not have borders on the left and right.
  */
 export const Quiet = Template.bind({});
 Quiet.args = {
@@ -243,21 +445,94 @@ Quiet.parameters = {
 };
 
 /**
+ * Tables with enabled column sorting can show different states of sorting: unsorted, ascending, and descending. The content of the header cell is an [button](/docs/components-button--docs), that has a class of `.spectrum-Table-sortButton`, which should contain the sorting icon, as well as the header label.
+ *
+ * When a column is sorted in ascending order, use the `SortUp` icon, as seen below. If sorted in descending order, use the `SortDown` icon. If the sort is undefined, use the more general `Sort` icon.
+ *
+ * The `aria-sort` attribute should be set on the `.spectrum-Table-headCell .is-sortable` element for the column that is currently sorted, and when sorting is active. `aria-sort` should not be set on more than one column at a time.
+ *
+ * Implementations will develop their own sorting functionality. The `aria-sort` attribute should be removed from a column header when the column is not sorted.
+ */
+export const Sortable = Template.bind({});
+Sortable.args = {
+	...Default.args,
+	isSortable: true,
+	sortIcon: "Sort",
+};
+Sortable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Sortable.storyName = "Sortable columns";
+Sortable.tags = ["!dev"];
+
+/**
+ * Tables can have additional actions in the header cells that could trigger a menu, as indicated by the chevron. Oftentimes, the menu is used to show users the available sorting options. The content of the header cell is an [button](/docs/components-button--docs), that has a class of `.spectrum-Table-sortButton`, which should contain the sorting icon when applicable, as well as the header label.
+ *
+ * The `aria-sort` attribute should be set on the `.spectrum-Table-hasMenuButton` element for the column that is currently sorted, and when sorting is active.
+ */
+export const WithMenuButton = Template.bind({});
+WithMenuButton.args = {
+	...Default.args,
+	hasMenu: true,
+};
+WithMenuButton.storyName = "Sortable columns: with menu button";
+WithMenuButton.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+WithMenuButton.tags = ["!dev"];
+
+/**
+ * In some use cases, a sparkline chart can be displayed in a cell of the table. There are informative, negative, positive, and notice sparkline charts available for implementations.
+ */
+export const WithChartContent = Template.bind({});
+WithChartContent.args = {
+	hasChartContent: true,
+	rowItems: [
+		{ cellContent: ["Informative sparkline", "200", "sparkline-informative.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+		{ cellContent: ["Negative sparkline", "0", "sparkline-negative.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+		{ cellContent: ["Positive sparkline", "600", "sparkline-positive.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},{ cellContent: ["Notice sparkline", "400", "sparkline-notice.svg"],
+			textAlignment: {
+				1: "end"
+			}
+		},
+	]
+};
+WithChartContent.storyName = "With chart content";
+WithChartContent.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
  * A quiet multi-select table has emphasized styling by default, but excluding the `.spectrum-Table--emphasized` class will change the style of selected rows.
  */
 export const QuietMultiSelect = Template.bind({});
 QuietMultiSelect.args = {
 	...MultiSelect.args,
 	isQuiet: true,
+	selectionMode: "multiple",
 };
 QuietMultiSelect.tags = ["!dev"];
-QuietMultiSelect.storyName = "Quiet multi-select";
+QuietMultiSelect.storyName = "Selection mode: multiple, quiet styling";
 QuietMultiSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 /**
- * The standard table can display column dividers by including the `.spectrum-Table-cell--divider` class with `.spectrum-Table-cell`. Use sparingly to group related content.
+ * Column dividers are for organizing table content and aid the user in parsing related data. These are optional; use them carefully to group related content.
+ *
+ * The standard table can display column dividers by including the `.spectrum-Table-cell--divider` class with `.spectrum-Table-cell`.
  */
 export const WithColumnDividers = Template.bind({});
 WithColumnDividers.args = {
@@ -271,11 +546,15 @@ WithColumnDividers.parameters = {
 };
 
 /**
- * Tables can have a summary row to show totals, at either the top or the bottom of the table. This example shows both the optional summary row at the bottom, and a row marked as selected.
+ * Tables can have a summary row to show totals, at either the top or the bottom of the table. This example shows both the optional summary row at the top, and a row marked as selected.
  */
 export const SummaryAndSelected = Template.bind({});
 SummaryAndSelected.args = {
 	rowItems: [
+		{
+			cellContent: "Summary row",
+			isSummaryRow: true,
+		},
 		{
 			cellContent: "Table row alpha",
 		},
@@ -283,19 +562,15 @@ SummaryAndSelected.args = {
 			cellContent: "Table row bravo",
 		},
 		{
-			cellContent: "Table row charlie",
+			cellContent: "Selected row charlie",
 			isSelected: true,
 		},
 		{
 			cellContent: "Table row delta",
 		},
-		{
-			cellContent: "Summary row",
-			isSummaryRow: true,
-		},
 	],
 };
-SummaryAndSelected.storyName = "Summary and selected";
+SummaryAndSelected.storyName = "Summary and selected rows";
 SummaryAndSelected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -331,7 +606,7 @@ SectionHeader.args = {
 		},
 	],
 };
-SectionHeader.storyName = "Section header";
+SectionHeader.storyName = "Section headers";
 SectionHeader.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -341,13 +616,13 @@ SectionHeaderQuiet.args = {
 	...SectionHeader.args,
 	isQuiet: true,
 };
-SectionHeaderQuiet.storyName = "Section header: quiet";
+SectionHeaderQuiet.storyName = "Section headers: quiet styling";
 SectionHeaderQuiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+SectionHeaderQuiet.tags = ["!dev"];
 
 /**
- *
  * A table can be wrapped in a fixed height `div` with the `.spectrum-Table-scroller` class. This allows scrolling of the table body and makes the column headers sticky (i.e. fixed to the top on scroll).
  *
  * When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized to match the parent background with the custom property `--mod-table-header-background-color-scrollable`.
@@ -367,7 +642,7 @@ Scrollable.args = {
 			cellContent: "Table row bravo",
 		},
 		{
-			cellContent: "Table row charlie",
+			cellContent: "Selected row charlie",
 			isSelected: true,
 		},
 		{
@@ -391,20 +666,47 @@ Scrollable.parameters = {
 };
 
 /**
- * A table can also be made up of `div` tags if needed, instead of a `<table>`. This example uses both the div markup, and the scrollable wrapper.
+ * A table can also be made up of `div` tags if needed, instead of a `<table>`. This example uses both the `div` markup, and the scrollable wrapper.
  */
 export const DivsScrollable = Template.bind({});
-DivsScrollable.storyName = "Scrollable with divs";
+DivsScrollable.storyName = "Scrollable table with divs";
 DivsScrollable.args = {
 	...Scrollable.args,
 	useDivs: true,
-	rowItems: ExampleRowItems,
 };
 DivsScrollable.tags = ["!dev"];
 DivsScrollable.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+
+/**
+ * Thumbnails, avatars, and other icons can be used in the table content, with some additional markup and classes for alignment.
+ */
+export const Visuals = Template.bind({});
+Visuals.args = {
+	rowItems: [
+		{
+			cellContent: "Avatar example",
+			visualElement: "avatar",
+		},
+		{
+			cellContent: "Icon example",
+			visualElement: "icon",
+		},
+		{
+			cellContent: "Thumbnail example",
+			visualElement: "thumbnail",
+		},
+	],
+};
+Visuals.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Visuals.storyName = "With visuals";
+
+
+// TODO: The design team doesn't have support for collapsible rows in the table component, so they are removed from the docs page for now.
 /**
  * In a table with collapsible rows, all child items must have columns that match the parent items. If they don’t, consider using multiple drill-in tables, [Miller columns](/docs/components-miller-columns--docs), or [breadcrumbs](/docs/components-breadcrumbs--docs) instead.
  */
@@ -421,7 +723,7 @@ Collapsible.args = {
 		},
 		{
 			cellContent:
-				"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"Table row bravo. There is actually another collapsed row here that's not visible. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
 			isCollapsible: true,
 			tier: 1,
 			ariaControls: "table-cr-charlie",
@@ -439,7 +741,7 @@ Collapsible.args = {
 			id: "table-cr-charlie",
 		},
 		{
-			cellContent: "Table row delta",
+			cellContent: "Selected row delta",
 			isSelected: true,
 			isCollapsible: true,
 			isExpanded: true,
@@ -470,10 +772,13 @@ Collapsible.args = {
 Collapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Collapsible.storyName = "Collapsible rows";
+Collapsible.tags = ["!autodocs", "!dev"];
 
 export const CollapsibleMultiSelect = Template.bind({});
-CollapsibleMultiSelect.storyName = "Collapsible multi-select";
+CollapsibleMultiSelect.storyName = "Selection mode: multiple, collapsible rows";
 CollapsibleMultiSelect.args = {
+	selectionMode: "multiple",
 	rowItems: [
 		{
 			showCheckbox: true,
@@ -487,7 +792,7 @@ CollapsibleMultiSelect.args = {
 		{
 			showCheckbox: true,
 			cellContent:
-				"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"Table row bravo. There is actually another collapsed row here that's not visible. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
 			isCollapsible: true,
 			tier: 1,
 			ariaControls: "table-cr-charlie",
@@ -507,7 +812,7 @@ CollapsibleMultiSelect.args = {
 		},
 		{
 			showCheckbox: true,
-			cellContent: "Table row delta",
+			cellContent: "Selected row delta",
 			isSelected: true,
 			isCollapsible: true,
 			isExpanded: true,
@@ -541,73 +846,66 @@ CollapsibleMultiSelect.args = {
 CollapsibleMultiSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+CollapsibleMultiSelect.tags = ["!autodocs", "!dev"];
 
 /**
- * Thumbnails can be used in the table content, with some additional markup and classes for alignment.
+ * The table can also combine visuals with collapsible rows.
  */
-export const Thumbnails = Template.bind({});
-Thumbnails.args = {
-	showThumbnails: true,
-	rowItems: [
-		{
-			cellContent: ["Table row alpha", "Test", "2"],
-		},
-		{
-			cellContent: ["Table row bravo", "Test", "28"],
-		},
-		{
-			cellContent: [
-				"Table row charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-				"Test",
-				"23",
-			],
-		},
-		{
-			cellContent: ["Table row delta", "Test", "7"],
-		},
-	],
-};
-Thumbnails.tags = ["!dev"];
-Thumbnails.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * The thumbnail table variant can also be combined with collapsible rows.
- */
-export const ThumbnailsCollapsible = Template.bind({});
-ThumbnailsCollapsible.args = {
-	showThumbnails: true,
+export const VisualsCollapsible = Template.bind({});
+VisualsCollapsible.args = {
 	rowItems: [
 		{
 			cellContent: "Table row alpha",
 			isCollapsible: true,
 			isExpanded: true,
 			tier: 0,
-			ariaControls: "table-cr-bravo",
+			ariaControls: "table-cr-bravo table-cr-delta",
 			id: "table-cr-alpha",
 		},
 		{
 			cellContent:
-				"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"Table row bravo. There is actually another collapsed row here that's not visible. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
 			isCollapsible: true,
 			tier: 1,
 			ariaControls: "table-cr-charlie",
 			id: "table-cr-bravo",
+			visualElement: "avatar",
 		},
 		{
-			cellContent: "Table row charlie",
-			tier: 2,
-			isLastTier: true,
+			cellContent: [
+				"Table row charlie",
+				"Default not visible",
+				"Default not visible",
+			],
 			isCollapsible: true,
+			isHidden: true,
+			tier: 2,
 			id: "table-cr-charlie",
 		},
 		{
-			cellContent: "Table row delta",
+			cellContent: "Selected row delta",
+			isSelected: true,
+			isCollapsible: true,
+			isExpanded: true,
+			tier: 1,
+			ariaControls: "table-cr-echo table-cr-foxtrot",
+			id: "table-cr-delta",
+			visualElement: "icon",
+		},
+		{
+			cellContent: "Table row echo",
 			tier: 2,
 			isLastTier: true,
 			isCollapsible: true,
-			id: "table-cr-delta",
+			id: "table-cr-echo",
+			visualElement: "thumbnail",
+		},
+		{
+			cellContent: "Table row foxtrot",
+			tier: 2,
+			isLastTier: true,
+			isCollapsible: true,
+			id: "table-cr-foxtrot",
 		},
 		{
 			cellContent: "Summary row",
@@ -615,19 +913,22 @@ ThumbnailsCollapsible.args = {
 		},
 	],
 };
-ThumbnailsCollapsible.storyName = "Thumbnails: collapsible";
-ThumbnailsCollapsible.parameters = {
+VisualsCollapsible.tags = ["!autodocs", "!dev"];
+VisualsCollapsible.storyName = "With visuals: collapsible rows";
+VisualsCollapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+// TODO: The design team doesn't have dropzones in the table component, so they are removed from the docs page for now.
 /**
  * The table body can accept dropped content.
  */
 export const BodyDropZone = Template.bind({});
 BodyDropZone.args = {
+	...Default.args,
 	isDropTarget: true,
 };
-BodyDropZone.tags = ["!dev"];
+BodyDropZone.tags = ["!autodocs", "!dev"];
 BodyDropZone.storyName = "Dropzone: body";
 BodyDropZone.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -662,6 +963,7 @@ RowDropZone.args = {
 		},
 	],
 };
+RowDropZone.tags = ["!autodocs", "!dev"];
 RowDropZone.storyName = "Dropzone: row";
 RowDropZone.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -672,7 +974,7 @@ RowDropZoneQuiet.args = {
 	...RowDropZone.args,
 	isQuiet: true,
 };
-RowDropZoneQuiet.tags = ["!dev"];
+RowDropZoneQuiet.tags = ["!autodocs", "!dev"];
 RowDropZoneQuiet.storyName = "Dropzone: row, quiet";
 RowDropZoneQuiet.parameters = {
 	chromatic: { disableSnapshot: true },

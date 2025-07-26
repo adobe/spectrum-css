@@ -7,9 +7,6 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 /**
  * @todo load order should not influence the icon size but it is; fix this
@@ -70,7 +67,6 @@ export const Template = ({
 	role = "button",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
-
 	return html`
 		<button
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
@@ -112,7 +108,13 @@ export const Template = ({
 			${when(hasPopup && hasPopup !== "false", () =>
 				Icon({
 					size,
-					iconName: "CornerTriangle",
+					iconName: "CornerTriangle" + ({
+						xs: "75",
+						s: "75",
+						m: "100",
+						l: "200",
+						xl: "300",
+					}[size] || "100"),
 					setName: "ui",
 					customClasses: [`${rootClass}-hold`],
 				}, context)
@@ -134,64 +136,74 @@ export const Template = ({
 	`;
 };
 
+/**
+ * Displays multiple action buttons in a row, with different combinations of
+ * label, icon, and hold button (has popup).
+ */
 export const ActionButtonsWithIconOptions = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
 		columnGap: "12px",
 	},
-	content: html`
-		${Template({
+	content: [
+		Template({
 			...args,
 			iconName: undefined,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			iconName: undefined,
 			hasPopup: "true",
-		}, context)}
-	`
+		}, context)
+	],
 }, context);
 
+/**
+ * Displays two action buttons in a row:
+ * - icon only action button
+ * - icon only action button with hold button (has popup)
+ */
 export const IconOnlyOption = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
 		columnGap: "12px",
 	},
-	content: html`
-		${Template({
+	content: [
+		Template({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
-		}, context)}
-		${Template({
+		}, context),
+		Template({
 			...args,
 			hideLabel: true,
 			isQuiet: true,
 			hasPopup: "true",
-		}, context)}
-	`
+		}, context),
+	],
 }, context);
 
+/**
+ * Displays multiple groups of action buttons for:
+ * default, selected, disabled, and selected + disabled
+ */
 export const TreatmentTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
-	wrapperStyles: {
-		rowGap: "12px",
-	},
 	content: html`${[
 		{ isSelected: false, isDisabled: false, heading: "Default" },
 		{ isSelected: true, isDisabled: false, heading: "Selected" },
@@ -200,10 +212,13 @@ export const TreatmentTemplate = (args, context) => Container({
 	].map(({ isSelected, isDisabled, heading }) => Container({
 		withBorder: false,
 		heading: heading,
+		containerStyles: {
+			rowGap: "8px",
+		},
 		content: ActionButtonsWithIconOptions({
 			...args,
 			isSelected,
 			isDisabled,
-		})
+		}, context)
 	}, context))}`,
 }, context);
