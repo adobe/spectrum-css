@@ -1,5 +1,27 @@
 # Change log
 
+## 9.0.0-next.3
+
+### Minor Changes
+
+📝 [#3965](https://github.com/adobe/spectrum-css/pull/3965) [`61f3c04`](https://github.com/adobe/spectrum-css/commit/61f3c04a4211f19be2c5db883653fb25309a39ea) Thanks [@cdransf](https://github.com/cdransf)!
+
+Restores drop shadow for nested popovers. This is done by moving the default popover to `box-shadow` and using `filter` for popovers with tip. This allows for visual consistency across all popovers.
+
+#### New mods
+
+`--mod-popover-box-shadow`
+
+#### New custom properties
+
+`--spectrum-popover-box-shadow`
+
+### Patch Changes
+
+📝 [#3995](https://github.com/adobe/spectrum-css/pull/3995) [`18c69aa`](https://github.com/adobe/spectrum-css/commit/18c69aa52f6e598aecd67d2b5e7dd945473402e6) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+Defines the missing `--spectrum-popover-border-width` custom property. The variable was already being used in our style definitions, but its value was lost at some point so it was undefined in the browser. This work should correct that.
+
 ## 9.0.0-next.2
 
 ### Patch Changes

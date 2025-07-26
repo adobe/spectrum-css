@@ -1,5 +1,15 @@
 # Change Log
 
+## 12.0.5-next.8
+
+### Patch Changes
+
+Updated dependencies [[`86dd51d`](https://github.com/adobe/spectrum-css/commit/86dd51d884878a3090cb8463ca0bf44f21ee9f87), [`f6843c6`](https://github.com/adobe/spectrum-css/commit/f6843c698a2aac7c15ba949e28c56e4ff49c8c4a)]:
+
+- @spectrum-css/ui-icons@2.0.0-next.2
+- @spectrum-css/tokens@16.1.0-next.6
+- @spectrum-css/bundle@2.0.0-next.5
+
 ## 12.0.5-next.7
 
 ### Patch Changes
@@ -170,7 +180,6 @@ This release also includes:
 📝 [#3458](https://github.com/adobe/spectrum-css/pull/3458) [`e1b7102`](https://github.com/adobe/spectrum-css/commit/e1b71027f92ce18feb3a63c100d2b4871fc73b9f) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Update the Chromatic add-on to the currently maintained package:
-
   - from "@chromaui/addon-visual-tests": "^1.0.0"
   - to "@chromatic-com/storybook": "^3.2.3"
 
@@ -396,7 +405,6 @@ This release also includes:
 📝 [#2820](https://github.com/adobe/spectrum-css/pull/2820) [`1711ef8`](https://github.com/adobe/spectrum-css/commit/1711ef8a7aa8da1858019b77ed52e1dd1b86d3bf) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Fixes for Storybook instance
-
   - Bring back testing preview global toggle to toolbar after it was accidentally removed in a previous release
   - Chromatic disable snapshot syntax corrected in multiple stories
   - Update when token assets are loaded to correct snapshot inconsistencies

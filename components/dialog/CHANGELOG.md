@@ -1,5 +1,13 @@
 # Change log
 
+## 13.0.0-next.4
+
+### Minor Changes
+
+📝 [#4000](https://github.com/adobe/spectrum-css/pull/4000) [`f654c8d`](https://github.com/adobe/spectrum-css/commit/f654c8d950e6a1f0a77ce0f2413cb205a3b5e276) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+Increases flexibility and responsiveness of the dialog header. A container query for the `.spectrum-Dialog` was added, which now triggers the reflow of the `.spectrum-Dialog--fullscreen`/`.spectrum-Dialog--fullscreenTakeover` content grid. This is particularly useful when the component slot is utilized to add other components as additional content in fullscreen/fullscreenTakeover dialogs' header areas by allowing the content to reflow sooner.
+
 ## 13.0.0-next.3
 
 ### Patch Changes
@@ -140,7 +148,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
-
   - `index-base.css`
   - `index-theme.css`
   - `themes/spectrum.css`
