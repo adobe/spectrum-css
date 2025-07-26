@@ -10,6 +10,7 @@ export const Template = ({
 	orientation = "horizontal",
 	isResizable = false,
 	isFocused = false,
+	isActive = false,
 	isCollapsible = false,
 	collapsePosition,
 	panelLabels = [],
@@ -46,7 +47,8 @@ export const Template = ({
 				class=${classMap({
 					[`${rootClass}-splitter`]: true,
 					["is-draggable"]: isResizable,
-					"is-focused": isFocused,
+					["is-active"]: isActive,
+					["is-focus-visible"]: isFocused,
 					[`is-collapsed-${collapsibleClassName}`]: isCollapsible,
 				})}
 				tabindex="0"
