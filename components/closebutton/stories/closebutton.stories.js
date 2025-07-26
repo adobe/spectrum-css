@@ -1,10 +1,12 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isKeyboardFocused, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { CloseButtonGroup } from "./closebutton.test.js";
 import { CloseButtonExample, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Close button is used to close or dismiss its parent component. It is used inside of other components such
@@ -52,6 +54,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: metadata.modifiers,
 	},
 };
 
@@ -134,7 +137,6 @@ StaticBlack.tags = ["!dev"];
 StaticBlack.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = CloseButtonGroup.bind({});

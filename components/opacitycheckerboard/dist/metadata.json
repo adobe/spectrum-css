@@ -1,19 +1,53 @@
 {
   "sourceFile": "index.css",
   "selectors": [".spectrum-OpacityCheckerboard"],
-  "modifiers": [
-    "--mod-opacity-checkerboard-dark",
-    "--mod-opacity-checkerboard-light",
-    "--mod-opacity-checkerboard-position",
-    "--mod-opacity-checkerboard-size"
-  ],
-  "component": [
-    "--spectrum-opacity-checkerboard-square-dark",
-    "--spectrum-opacity-checkerboard-square-light",
-    "--spectrum-opacity-checkerboard-square-size"
-  ],
-  "global": [],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-opacity-checkerboard-light": {
+      "value": "var(--spectrum-white)",
+      "description": "Used by `.spectrum-OpacityCheckerboard`. <br/>Defaults to `var(--spectrum-opacity-checkerboard-square-light)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-opacity-checkerboard-dark": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `.spectrum-OpacityCheckerboard`. <br/>Defaults to `var(--spectrum-opacity-checkerboard-square-dark)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-opacity-checkerboard-position": {
+      "description": "Used by `.spectrum-OpacityCheckerboard`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-opacity-checkerboard-size": {
+      "value": "8px",
+      "description": "Used by `.spectrum-OpacityCheckerboard`. <br/>Defaults to `var(--spectrum-opacity-checkerboard-square-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-opacity-checkerboard-square-light": {
+      "value": "var(--spectrum-white)",
+      "description": "Used by `.spectrum-OpacityCheckerboard`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-opacity-checkerboard-square-dark": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `.spectrum-OpacityCheckerboard`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-opacity-checkerboard-square-size": {
+      "value": "8px",
+      "description": "Used by `.spectrum-OpacityCheckerboard`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {},
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {}
 }

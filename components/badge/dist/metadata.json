@@ -37,145 +37,775 @@
     ".spectrum-Badge-label:lang(ko)",
     ".spectrum-Badge-label:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-badge-background-color-accent",
-    "--mod-badge-background-color-blue",
-    "--mod-badge-background-color-celery",
-    "--mod-badge-background-color-chartreuse",
-    "--mod-badge-background-color-cyan",
-    "--mod-badge-background-color-default",
-    "--mod-badge-background-color-fuchsia",
-    "--mod-badge-background-color-gray",
-    "--mod-badge-background-color-green",
-    "--mod-badge-background-color-indigo",
-    "--mod-badge-background-color-informative",
-    "--mod-badge-background-color-magenta",
-    "--mod-badge-background-color-negative",
-    "--mod-badge-background-color-notice",
-    "--mod-badge-background-color-orange",
-    "--mod-badge-background-color-positive",
-    "--mod-badge-background-color-purple",
-    "--mod-badge-background-color-red",
-    "--mod-badge-background-color-seafoam",
-    "--mod-badge-background-color-yellow",
-    "--mod-badge-corner-radius",
-    "--mod-badge-font-size",
-    "--mod-badge-height",
-    "--mod-badge-icon-only-spacing-horizontal",
-    "--mod-badge-icon-spacing-horizontal",
-    "--mod-badge-icon-spacing-vertical-top",
-    "--mod-badge-icon-text-spacing",
-    "--mod-badge-label-icon-color",
-    "--mod-badge-label-spacing-horizontal",
-    "--mod-badge-label-spacing-vertical-bottom",
-    "--mod-badge-label-spacing-vertical-top",
-    "--mod-badge-line-height",
-    "--mod-badge-line-height-cjk",
-    "--mod-badge-workflow-icon-size"
-  ],
-  "component": [
-    "--spectrum-badge-background-color-accent",
-    "--spectrum-badge-background-color-blue",
-    "--spectrum-badge-background-color-celery",
-    "--spectrum-badge-background-color-chartreuse",
-    "--spectrum-badge-background-color-cyan",
-    "--spectrum-badge-background-color-default",
-    "--spectrum-badge-background-color-fuchsia",
-    "--spectrum-badge-background-color-gray",
-    "--spectrum-badge-background-color-green",
-    "--spectrum-badge-background-color-indigo",
-    "--spectrum-badge-background-color-informative",
-    "--spectrum-badge-background-color-magenta",
-    "--spectrum-badge-background-color-negative",
-    "--spectrum-badge-background-color-notice",
-    "--spectrum-badge-background-color-orange",
-    "--spectrum-badge-background-color-positive",
-    "--spectrum-badge-background-color-purple",
-    "--spectrum-badge-background-color-red",
-    "--spectrum-badge-background-color-seafoam",
-    "--spectrum-badge-background-color-yellow",
-    "--spectrum-badge-corner-radius",
-    "--spectrum-badge-font-size",
-    "--spectrum-badge-height",
-    "--spectrum-badge-icon-only-spacing-horizontal",
-    "--spectrum-badge-icon-spacing-horizontal",
-    "--spectrum-badge-icon-spacing-vertical-top",
-    "--spectrum-badge-icon-text-spacing",
-    "--spectrum-badge-label-icon-color",
-    "--spectrum-badge-label-icon-color-primary",
-    "--spectrum-badge-label-spacing-horizontal",
-    "--spectrum-badge-label-spacing-vertical-bottom",
-    "--spectrum-badge-label-spacing-vertical-top",
-    "--spectrum-badge-line-height",
-    "--spectrum-badge-line-height-cjk",
-    "--spectrum-badge-workflow-icon-size"
-  ],
-  "global": [
-    "--spectrum-accent-background-color-default",
-    "--spectrum-black",
-    "--spectrum-blue-background-color-default",
-    "--spectrum-celery-background-color-default",
-    "--spectrum-chartreuse-background-color-default",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-300",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-edge-to-text-200",
-    "--spectrum-component-edge-to-text-300",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-edge-to-visual-100",
-    "--spectrum-component-edge-to-visual-200",
-    "--spectrum-component-edge-to-visual-300",
-    "--spectrum-component-edge-to-visual-75",
-    "--spectrum-component-edge-to-visual-only-100",
-    "--spectrum-component-edge-to-visual-only-200",
-    "--spectrum-component-edge-to-visual-only-300",
-    "--spectrum-component-edge-to-visual-only-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-75",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-component-top-to-workflow-icon-200",
-    "--spectrum-component-top-to-workflow-icon-300",
-    "--spectrum-component-top-to-workflow-icon-75",
-    "--spectrum-corner-radius-100",
-    "--spectrum-cyan-background-color-default",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-fuchsia-background-color-default",
-    "--spectrum-gray-background-color-default",
-    "--spectrum-green-background-color-default",
-    "--spectrum-indigo-background-color-default",
-    "--spectrum-informative-background-color-default",
-    "--spectrum-line-height-100",
-    "--spectrum-magenta-background-color-default",
-    "--spectrum-negative-background-color-default",
-    "--spectrum-neutral-subdued-background-color-default",
-    "--spectrum-notice-background-color-default",
-    "--spectrum-orange-background-color-default",
-    "--spectrum-positive-background-color-default",
-    "--spectrum-purple-background-color-default",
-    "--spectrum-red-background-color-default",
-    "--spectrum-seafoam-background-color-default",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-text-to-visual-200",
-    "--spectrum-text-to-visual-300",
-    "--spectrum-text-to-visual-75",
-    "--spectrum-white",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-300",
-    "--spectrum-workflow-icon-size-75",
-    "--spectrum-yellow-background-color-default"
-  ],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-badge-border-color"]
+  "modifiers": {
+    "mod-badge-height": {
+      "value": "var(--spectrum-badge-height)",
+      "description": "Used by `.spectrum-Badge`. <br/>Defaults to `var(--spectrum-badge-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-corner-radius": {
+      "value": "var(--spectrum-badge-corner-radius)",
+      "description": "Used by `.spectrum-Badge`. <br/>Defaults to `var(--spectrum-badge-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-label-icon-color": {
+      "value": "var(--spectrum-badge-label-icon-color)",
+      "description": "Used by `.spectrum-Badge`, `.spectrum-Badge-label`, `.spectrum-Badge-icon`. <br/>Defaults to `var(--spectrum-badge-label-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-default": {
+      "value": "var(--spectrum-badge-background-color-default)",
+      "description": "Used by `.spectrum-Badge, .spectrum-Badge--neutral`. <br/>Defaults to `var(--spectrum-badge-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-accent": {
+      "value": "var(--spectrum-badge-background-color-accent)",
+      "description": "Used by `.spectrum-Badge--accent`. <br/>Defaults to `var(--spectrum-badge-background-color-accent)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-informative": {
+      "value": "var(--spectrum-badge-background-color-informative)",
+      "description": "Used by `.spectrum-Badge--informative`. <br/>Defaults to `var(--spectrum-badge-background-color-informative)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-negative": {
+      "value": "var(--spectrum-badge-background-color-negative)",
+      "description": "Used by `.spectrum-Badge--negative`. <br/>Defaults to `var(--spectrum-badge-background-color-negative)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-positive": {
+      "value": "var(--spectrum-badge-background-color-positive)",
+      "description": "Used by `.spectrum-Badge--positive`. <br/>Defaults to `var(--spectrum-badge-background-color-positive)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-notice": {
+      "value": "var(--spectrum-badge-background-color-notice)",
+      "description": "Used by `.spectrum-Badge--notice`. <br/>Defaults to `var(--spectrum-badge-background-color-notice)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-gray": {
+      "value": "var(--spectrum-badge-background-color-gray)",
+      "description": "Used by `.spectrum-Badge--gray`. <br/>Defaults to `var(--spectrum-badge-background-color-gray)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-red": {
+      "value": "var(--spectrum-badge-background-color-red)",
+      "description": "Used by `.spectrum-Badge--red`. <br/>Defaults to `var(--spectrum-badge-background-color-red)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-orange": {
+      "value": "var(--spectrum-badge-background-color-orange)",
+      "description": "Used by `.spectrum-Badge--orange`. <br/>Defaults to `var(--spectrum-badge-background-color-orange)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-yellow": {
+      "value": "var(--spectrum-badge-background-color-yellow)",
+      "description": "Used by `.spectrum-Badge--yellow`. <br/>Defaults to `var(--spectrum-badge-background-color-yellow)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-chartreuse": {
+      "value": "var(--spectrum-badge-background-color-chartreuse)",
+      "description": "Used by `.spectrum-Badge--chartreuse`. <br/>Defaults to `var(--spectrum-badge-background-color-chartreuse)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-celery": {
+      "value": "var(--spectrum-badge-background-color-celery)",
+      "description": "Used by `.spectrum-Badge--celery`. <br/>Defaults to `var(--spectrum-badge-background-color-celery)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-green": {
+      "value": "var(--spectrum-badge-background-color-green)",
+      "description": "Used by `.spectrum-Badge--green`. <br/>Defaults to `var(--spectrum-badge-background-color-green)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-seafoam": {
+      "value": "var(--spectrum-badge-background-color-seafoam)",
+      "description": "Used by `.spectrum-Badge--seafoam`. <br/>Defaults to `var(--spectrum-badge-background-color-seafoam)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-cyan": {
+      "value": "var(--spectrum-badge-background-color-cyan)",
+      "description": "Used by `.spectrum-Badge--cyan`. <br/>Defaults to `var(--spectrum-badge-background-color-cyan)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-blue": {
+      "value": "var(--spectrum-badge-background-color-blue)",
+      "description": "Used by `.spectrum-Badge--blue`. <br/>Defaults to `var(--spectrum-badge-background-color-blue)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-indigo": {
+      "value": "var(--spectrum-badge-background-color-indigo)",
+      "description": "Used by `.spectrum-Badge--indigo`. <br/>Defaults to `var(--spectrum-badge-background-color-indigo)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-purple": {
+      "value": "var(--spectrum-badge-background-color-purple)",
+      "description": "Used by `.spectrum-Badge--purple`. <br/>Defaults to `var(--spectrum-badge-background-color-purple)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-fuchsia": {
+      "value": "var(--spectrum-badge-background-color-fuchsia)",
+      "description": "Used by `.spectrum-Badge--fuchsia`. <br/>Defaults to `var(--spectrum-badge-background-color-fuchsia)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-background-color-magenta": {
+      "value": "var(--spectrum-badge-background-color-magenta)",
+      "description": "Used by `.spectrum-Badge--magenta`. <br/>Defaults to `var(--spectrum-badge-background-color-magenta)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-badge-font-size": {
+      "value": "var(--spectrum-badge-font-size)",
+      "description": "Used by `.spectrum-Badge-label`. <br/>Defaults to `var(--spectrum-badge-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-line-height": {
+      "value": "var(--spectrum-badge-line-height)",
+      "description": "Used by `.spectrum-Badge-label`. <br/>Defaults to `var(--spectrum-badge-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-label-spacing-horizontal": {
+      "value": "var(--spectrum-badge-label-spacing-horizontal)",
+      "description": "Used by `.spectrum-Badge-label`. <br/>Defaults to `var(--spectrum-badge-label-spacing-horizontal)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-label-spacing-vertical-top": {
+      "value": "var(--spectrum-badge-label-spacing-vertical-top)",
+      "description": "Used by `.spectrum-Badge-label`. <br/>Defaults to `var(--spectrum-badge-label-spacing-vertical-top)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-label-spacing-vertical-bottom": {
+      "value": "var(--spectrum-badge-label-spacing-vertical-bottom)",
+      "description": "Used by `.spectrum-Badge-label`. <br/>Defaults to `var(--spectrum-badge-label-spacing-vertical-bottom)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-line-height-cjk": {
+      "value": "var(--spectrum-badge-line-height-cjk)",
+      "description": "Used by `.spectrum-Badge-label:lang(ja), .spectrum-Badge-label:lang(ko), .spectrum-Badge-label:lang(zh)`. <br/>Defaults to `var(--spectrum-badge-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-workflow-icon-size": {
+      "value": "var(--spectrum-badge-workflow-icon-size)",
+      "description": "Used by `.spectrum-Badge-icon`. <br/>Defaults to `var(--spectrum-badge-workflow-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-icon-spacing-horizontal": {
+      "value": "var(--spectrum-badge-icon-spacing-horizontal)",
+      "description": "Used by `.spectrum-Badge-icon`. <br/>Defaults to `var(--spectrum-badge-icon-spacing-horizontal)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-icon-text-spacing": {
+      "value": "var(--spectrum-badge-icon-text-spacing)",
+      "description": "Used by `.spectrum-Badge-icon`. <br/>Defaults to `var(--spectrum-badge-icon-text-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-icon-spacing-vertical-top": {
+      "value": "var(--spectrum-badge-icon-spacing-vertical-top)",
+      "description": "Used by `.spectrum-Badge-icon`. <br/>Defaults to `var(--spectrum-badge-icon-spacing-vertical-top)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-badge-icon-only-spacing-horizontal": {
+      "value": "var(--spectrum-badge-icon-only-spacing-horizontal)",
+      "description": "Used by `.spectrum-Badge-icon--no-label`. <br/>Defaults to `var(--spectrum-badge-icon-only-spacing-horizontal)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-badge-corner-radius": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-line-height": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-line-height-cjk": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge-label:lang(ja), .spectrum-Badge-label:lang(ko), .spectrum-Badge-label:lang(zh)`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-label-icon-color": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--celery, .spectrum-Badge--chartreuse, .spectrum-Badge--orange, .spectrum-Badge--yellow`, `.spectrum-Badge--blue, .spectrum-Badge--cyan, .spectrum-Badge--fuchsia, .spectrum-Badge--gray, .spectrum-Badge--green, .spectrum-Badge--indigo, .spectrum-Badge--magenta, .spectrum-Badge--purple, .spectrum-Badge--red, .spectrum-Badge--seafoam`. <br/>Used by `.spectrum-Badge`, `.spectrum-Badge-label`, `.spectrum-Badge-icon`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-default": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge, .spectrum-Badge--neutral`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-accent": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--accent`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-informative": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--informative`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-negative": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--negative`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-positive": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--positive`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-notice": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--notice`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-gray": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--gray`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-red": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--red`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-orange": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--orange`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-yellow": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--yellow`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-chartreuse": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--chartreuse`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-celery": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--celery`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-green": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--green`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-seafoam": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--seafoam`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-cyan": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--cyan`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-blue": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--blue`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-indigo": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--indigo`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-purple": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--purple`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-fuchsia": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--fuchsia`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-background-color-magenta": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge--magenta`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-badge-height": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-font-size": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-label-spacing-vertical-top": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-label-spacing-vertical-bottom": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-label-spacing-horizontal": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-workflow-icon-size": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-icon-text-spacing": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-icon-spacing-horizontal": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-icon-spacing-vertical-top": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-icon-only-spacing-horizontal": {
+      "description": "Defined in `.spectrum-Badge`, `.spectrum-Badge--sizeS`, `.spectrum-Badge--sizeL`, `.spectrum-Badge--sizeXL`. <br/>Used by `.spectrum-Badge-icon--no-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-badge-label-icon-color-primary": {
+      "description": "Used by `--spectrum-badge-label-icon-color`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-corner-radius-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-badge-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-badge-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-badge-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
+      "description": "Used by `--spectrum-badge-label-icon-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-background-color-default": {
+      "value": "var(--spectrum-gray-500)",
+      "description": "Used by `--spectrum-badge-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-default": {
+      "value": "var(--spectrum-accent-color-800)",
+      "description": "Used by `--spectrum-badge-background-color-accent`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-informative-background-color-default": {
+      "value": "var(--spectrum-informative-color-800)",
+      "description": "Used by `--spectrum-badge-background-color-informative`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-background-color-default": {
+      "value": "var(--spectrum-negative-color-800)",
+      "description": "Used by `--spectrum-badge-background-color-negative`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-positive-background-color-default": {
+      "value": "var(--spectrum-positive-color-800)",
+      "description": "Used by `--spectrum-badge-background-color-positive`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-notice-background-color-default": {
+      "value": "var(--spectrum-notice-color-600)",
+      "description": "Used by `--spectrum-badge-background-color-notice`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-background-color-default": {
+      "value": "var(--spectrum-gray-500)",
+      "description": "Used by `--spectrum-badge-background-color-gray`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-red-background-color-default": {
+      "value": "var(--spectrum-red-800)",
+      "description": "Used by `--spectrum-badge-background-color-red`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-orange-background-color-default": {
+      "value": "var(--spectrum-orange-900)",
+      "description": "Used by `--spectrum-badge-background-color-orange`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-yellow-background-color-default": {
+      "value": "var(--spectrum-yellow-1100)",
+      "description": "Used by `--spectrum-badge-background-color-yellow`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-chartreuse-background-color-default": {
+      "value": "var(--spectrum-chartreuse-1000)",
+      "description": "Used by `--spectrum-badge-background-color-chartreuse`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-celery-background-color-default": {
+      "value": "var(--spectrum-celery-900)",
+      "description": "Used by `--spectrum-badge-background-color-celery`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-green-background-color-default": {
+      "value": "var(--spectrum-green-800)",
+      "description": "Used by `--spectrum-badge-background-color-green`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-seafoam-background-color-default": {
+      "value": "var(--spectrum-seafoam-800)",
+      "description": "Used by `--spectrum-badge-background-color-seafoam`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-cyan-background-color-default": {
+      "value": "var(--spectrum-cyan-800)",
+      "description": "Used by `--spectrum-badge-background-color-cyan`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-blue-background-color-default": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-badge-background-color-blue`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-indigo-background-color-default": {
+      "value": "var(--spectrum-indigo-800)",
+      "description": "Used by `--spectrum-badge-background-color-indigo`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-purple-background-color-default": {
+      "value": "var(--spectrum-purple-800)",
+      "description": "Used by `--spectrum-badge-background-color-purple`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-fuchsia-background-color-default": {
+      "value": "var(--spectrum-fuchsia-800)",
+      "description": "Used by `--spectrum-badge-background-color-fuchsia`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-magenta-background-color-default": {
+      "value": "var(--spectrum-magenta-800)",
+      "description": "Used by `--spectrum-badge-background-color-magenta`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-badge-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-badge-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-badge-label-spacing-vertical-top`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
+      "description": "Used by `--spectrum-badge-label-spacing-vertical-bottom`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-badge-label-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-badge-workflow-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-badge-icon-text-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-100": {
+      "value": "10px",
+      "description": "Used by `--spectrum-badge-icon-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-badge-icon-spacing-vertical-top`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-badge-icon-only-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-black": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--spectrum-badge-label-icon-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-badge-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-badge-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-badge-label-spacing-vertical-top`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-badge-label-spacing-vertical-bottom`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "value": "10px",
+      "description": "Used by `--spectrum-badge-label-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-75": {
+      "value": "16px",
+      "description": "Used by `--spectrum-badge-workflow-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-badge-icon-text-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-75": {
+      "value": "8px",
+      "description": "Used by `--spectrum-badge-icon-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-badge-icon-spacing-vertical-top`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-badge-icon-only-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-badge-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-badge-label-spacing-vertical-top`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
+      "description": "Used by `--spectrum-badge-label-spacing-vertical-bottom`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-200": {
+      "value": "15px",
+      "description": "Used by `--spectrum-badge-label-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "value": "22px",
+      "description": "Used by `--spectrum-badge-workflow-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-200": {
+      "value": "7px",
+      "description": "Used by `--spectrum-badge-icon-text-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-200": {
+      "value": "13px",
+      "description": "Used by `--spectrum-badge-icon-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-badge-icon-spacing-vertical-top`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-badge-icon-only-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-badge-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "value": "12px",
+      "description": "Used by `--spectrum-badge-label-spacing-vertical-top`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-badge-label-spacing-vertical-bottom`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-300": {
+      "value": "17px",
+      "description": "Used by `--spectrum-badge-label-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-300": {
+      "value": "26px",
+      "description": "Used by `--spectrum-badge-workflow-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-300": {
+      "value": "8px",
+      "description": "Used by `--spectrum-badge-icon-text-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-badge-icon-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-300": {
+      "value": "11px",
+      "description": "Used by `--spectrum-badge-icon-spacing-vertical-top`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-300": {
+      "value": "11px",
+      "description": "Used by `--spectrum-badge-icon-only-spacing-horizontal`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-badge-border-color": {
+      "description": "Defined in `.spectrum-Badge`. <br/>Used by `.spectrum-Badge`.",
+      "control": "color"
+    }
+  }
 }

@@ -1,8 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { OpacityCheckboardGroup } from "./opacitycheckerboard.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Opacity checkerboard is used with other components to highlight opacity.
@@ -32,6 +34,7 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		cssprops: metadata.modifiers,
 	},
 };
 

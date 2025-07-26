@@ -12,41 +12,169 @@
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeS",
     ".spectrum-Divider--vertical"
   ],
-  "modifiers": [
-    "--mod-divider-background-color",
-    "--mod-divider-background-color-large-static-black",
-    "--mod-divider-background-color-large-static-white",
-    "--mod-divider-background-color-medium-static-black",
-    "--mod-divider-background-color-medium-static-white",
-    "--mod-divider-background-color-small-static-black",
-    "--mod-divider-background-color-small-static-white",
-    "--mod-divider-thickness",
-    "--mod-divider-vertical-align",
-    "--mod-divider-vertical-height",
-    "--mod-divider-vertical-margin"
-  ],
-  "component": [
-    "--spectrum-divider-background-color",
-    "--spectrum-divider-background-color-static-black",
-    "--spectrum-divider-background-color-static-white",
-    "--spectrum-divider-thickness",
-    "--spectrum-divider-thickness-large",
-    "--spectrum-divider-thickness-medium",
-    "--spectrum-divider-thickness-small"
-  ],
-  "global": [
-    "--spectrum-gray-200",
-    "--spectrum-gray-800",
-    "--spectrum-transparent-black-200",
-    "--spectrum-transparent-black-800",
-    "--spectrum-transparent-white-200",
-    "--spectrum-transparent-white-800"
-  ],
-  "system-theme": [
-    "--system-divider-background-color",
-    "--system-divider-background-color-static-black",
-    "--system-divider-background-color-static-white"
-  ],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-divider-background-color"]
+  "modifiers": {
+    "mod-divider-background-color": {
+      "value": "var(--spectrum-divider-background-color)",
+      "description": "Defined in `.spectrum-Divider--staticWhite`, `.spectrum-Divider--staticWhite.spectrum-Divider--sizeS`, `.spectrum-Divider--staticWhite.spectrum-Divider--sizeL`, `.spectrum-Divider--staticBlack`, `.spectrum-Divider--staticBlack.spectrum-Divider--sizeS`, `.spectrum-Divider--staticBlack.spectrum-Divider--sizeL`. <br/>Used by `.spectrum-Divider`. <br/>Defaults to `var(--spectrum-divider-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-divider-background-color-medium-static-white": {
+      "value": "var(--spectrum-divider-background-color-static-white)",
+      "description": "Used by `--mod-divider-background-color`. <br/>Defaults to `var(--spectrum-divider-background-color-static-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-divider-background-color-small-static-white": {
+      "value": "var(--spectrum-divider-background-color-static-white)",
+      "description": "Used by `--mod-divider-background-color`. <br/>Defaults to `var(--spectrum-divider-background-color-static-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-divider-background-color-large-static-white": {
+      "value": "light-dark(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85))",
+      "description": "Used by `--mod-divider-background-color`. <br/>Defaults to `var(--spectrum-transparent-white-800)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-divider-background-color-medium-static-black": {
+      "value": "var(--spectrum-divider-background-color-static-black)",
+      "description": "Used by `--mod-divider-background-color`. <br/>Defaults to `var(--spectrum-divider-background-color-static-black)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-divider-background-color-small-static-black": {
+      "value": "var(--spectrum-divider-background-color-static-black)",
+      "description": "Used by `--mod-divider-background-color`. <br/>Defaults to `var(--spectrum-divider-background-color-static-black)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-divider-background-color-large-static-black": {
+      "value": "light-dark(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84))",
+      "description": "Used by `--mod-divider-background-color`. <br/>Defaults to `var(--spectrum-transparent-black-800)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-divider-thickness": {
+      "value": "var(--spectrum-divider-thickness)",
+      "description": "Used by `.spectrum-Divider`, `.spectrum-Divider--vertical`. <br/>Defaults to `var(--spectrum-divider-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-divider-vertical-height": {
+      "description": "Used by `.spectrum-Divider--vertical`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-divider-vertical-margin": {
+      "description": "Used by `.spectrum-Divider--vertical`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-divider-vertical-align": {
+      "description": "Used by `.spectrum-Divider--vertical`.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-divider-thickness": {
+      "description": "Defined in `.spectrum-Divider`, `.spectrum-Divider--sizeS`, `.spectrum-Divider--sizeL`. <br/>Used by `.spectrum-Divider`, `.spectrum-Divider--vertical`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-divider-thickness-medium": {
+      "value": "2px",
+      "description": "Used by `--spectrum-divider-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-divider-thickness-small": {
+      "value": "1px",
+      "description": "Used by `--spectrum-divider-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-divider-thickness-large": {
+      "value": "4px",
+      "description": "Used by `--spectrum-divider-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-divider-background-color": {
+      "description": "Defined in `.spectrum-Divider--sizeL`, `.spectrum-Divider`. <br/>Used by `.spectrum-Divider`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-divider-background-color-static-white": {
+      "description": "Defined in `.spectrum-Divider`. <br/>Used by `--mod-divider-background-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-divider-background-color-static-black": {
+      "description": "Defined in `.spectrum-Divider`. <br/>Used by `--mod-divider-background-color`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--system-divider-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-200": {
+      "value": "light-dark(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14))",
+      "description": "Used by `--system-divider-background-color-static-white`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-200": {
+      "value": "light-dark(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12))",
+      "description": "Used by `--system-divider-background-color-static-black`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Used by `--spectrum-divider-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-800": {
+      "value": "light-dark(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85))",
+      "description": "Used by `--mod-divider-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-800": {
+      "value": "light-dark(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84))",
+      "description": "Used by `--mod-divider-background-color`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-divider-background-color": {
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-divider-background-color`.",
+      "control": "color"
+    },
+    "system-divider-background-color-static-white": {
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-divider-background-color-static-white`.",
+      "control": "color"
+    },
+    "system-divider-background-color-static-black": {
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-divider-background-color-static-black`.",
+      "control": "color"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-divider-background-color": {
+      "value": "var(--mod-divider-background-color, var(--spectrum-divider-background-color))",
+      "description": "Defined in `.spectrum-Divider`. <br/>Used by `.spectrum-Divider`. <br/>Defaults to `var(--mod-divider-background-color, var(--spectrum-divider-background-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }
