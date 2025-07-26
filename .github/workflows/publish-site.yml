@@ -78,7 +78,6 @@ jobs:
                   publish-dir: dist
                   production-branch: main
                   production-deploy: false
-                  netlify-config-path: ./netlify.toml
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   deploy-message: ${{ inputs.deploy-message }}
                   enable-pull-request-comment: true
