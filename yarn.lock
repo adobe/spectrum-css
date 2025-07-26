@@ -5931,7 +5931,7 @@ __metadata:
     "@changesets/types": "npm:^6.1.0"
     ava: "npm:^6.4.1"
     dotenv: "npm:^16.6.1"
-    sinon: "npm:^20.0.0"
+    sinon: "npm:^21.0.0"
   languageName: unknown
   linkType: soft
 
@@ -19124,16 +19124,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sinon@npm:^20.0.0":
-  version: 20.0.0
-  resolution: "sinon@npm:20.0.0"
+"sinon@npm:^21.0.0":
+  version: 21.0.0
+  resolution: "sinon@npm:21.0.0"
   dependencies:
     "@sinonjs/commons": "npm:^3.0.1"
     "@sinonjs/fake-timers": "npm:^13.0.5"
     "@sinonjs/samsam": "npm:^8.0.1"
     diff: "npm:^7.0.0"
     supports-color: "npm:^7.2.0"
-  checksum: 10c0/98198e9608f9844a00d2dc733bc8d75cfd1826b2214ed07bbfcd05cdfa24eb0ac0866be116079febd9f20c715a41fe62db62f70961f941750b24281c97f04136
+  checksum: 10c0/4a60ef1e2685b716232a30dfea22bf62c0a8a8c9904a3cb053f30794cc2a3bbd470f0e615fe8d8f4424e9af48b3a9f8cb67f07eabeb9fb7b8ed50bd0f5f50dd9
   languageName: node
   linkType: hard
 
