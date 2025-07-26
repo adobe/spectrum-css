@@ -1,5 +1,13 @@
 # Change log
 
+## 8.0.0-next.2
+
+### Patch Changes
+
+📝 [#4044](https://github.com/adobe/spectrum-css/pull/4044) [`b1166bd`](https://github.com/adobe/spectrum-css/commit/b1166bd9e4542b3a665cc95498011a633c56e72a) Thanks [@5t3ph](https://github.com/5t3ph)!
+
+Replace deprecated `word-break: break-word` with `overflow-wrap: break-word` to align with modern CSS standards and improve cross-browser compatibility. This property was deprecated in Chrome 44 (July 2015) in favor of the standardized `overflow-wrap` property.
+
 ## 8.0.0-next.1
 
 ### Patch Changes
@@ -110,7 +118,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
-
   - `index-base.css`
   - `index-theme.css`
   - `themes/spectrum.css`

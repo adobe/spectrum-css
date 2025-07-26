@@ -1,5 +1,13 @@
 # Change log
 
+## 8.0.0-next.3
+
+### Patch Changes
+
+📝 [#4044](https://github.com/adobe/spectrum-css/pull/4044) [`b1166bd`](https://github.com/adobe/spectrum-css/commit/b1166bd9e4542b3a665cc95498011a633c56e72a) Thanks [@5t3ph](https://github.com/5t3ph)!
+
+Replace deprecated `word-break: break-word` with `overflow-wrap: break-word` to align with modern CSS standards and improve cross-browser compatibility. This property was deprecated in Chrome 44 (July 2015) in favor of the standardized `overflow-wrap` property.
+
 ## 8.0.0-next.2
 
 ### Minor Changes
