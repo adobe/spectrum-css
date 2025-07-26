@@ -5870,7 +5870,7 @@ __metadata:
     "@changesets/get-github-info": "npm:^0.6.0"
     "@changesets/parse": "npm:^0.4.1"
     "@changesets/types": "npm:^6.1.0"
-    ava: "npm:^6.4.0"
+    ava: "npm:^6.4.1"
     dotenv: "npm:^16.5.0"
     sinon: "npm:^20.0.0"
   languageName: unknown
@@ -7648,7 +7648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ava@npm:^6.4.0, ava@npm:^6.4.1":
+"ava@npm:^6.4.1":
   version: 6.4.1
   resolution: "ava@npm:6.4.1"
   dependencies:
