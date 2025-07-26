@@ -12,18 +12,13 @@
  */
 
 /* This file contains overrides and additions to core tokens */
-
 .spectrum--dark {
-	/* stylelint-disable-next-line custom-property-pattern -- context identification */
-	--color-scheme: dark;
-
 	/** COMPONENT-SPECIFIC OVERRIDES **/
 	--spectrum-assetcard-border-color-selected: var(--spectrum-blue-800);
 	--spectrum-assetcard-border-color-selected-hover: var(--spectrum-blue-800);
 	--spectrum-assetcard-border-color-selected-down: var(--spectrum-blue-900);
 	--spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-blue-800);
 	--spectrum-assestcard-focus-indicator-color: var(--spectrum-blue-700);
-
 	--spectrum-assetlist-item-background-color-selected-hover: rgb(var(--spectrum-blue-800-rgb), 0.25);
 	--spectrum-assetlist-item-background-color-selected: rgb(var(--spectrum-blue-800-rgb), 0.15);
 	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
@@ -61,4 +56,6 @@
 
 	--spectrum-treeview-item-background-color-quiet-selected: rgb(var(--spectrum-gray-900-rgb), 0.07);
 	--spectrum-treeview-item-background-color-selected: rgb(var(--spectrum-blue-800-rgb), 0.15);
+
+	color-scheme: dark;
 }
