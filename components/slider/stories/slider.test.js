@@ -1,24 +1,11 @@
 import { Sizes, Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
-const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-
 export const testData = [
-	...["filled", "offset", "ramp"].map((variant) => ({
-		testHeading: capitalize(variant),
-		variant,
-		values: variant === "offset" ? [-15] : [15]
-	})),
+	// Default variants
 	{
-		testHeading: "Range",
-		variant: "filled",
-		values: [10, 20]
-	},
-	{
-		testHeading: "With Ticks",
-		variant: "filled",
-		showTicks: true,
-		showTickLabels: true
+		testHeading: "Default filled",
+		variant: "filled"
 	},
 	{
 		testHeading: "Precise",
@@ -26,133 +13,65 @@ export const testData = [
 		isPrecise: true
 	},
 	{
-		testHeading: "Large Track",
+		testHeading: "Large track",
 		variant: "filled",
 		trackHeight: "large"
 	},
 	{
-		testHeading: "Precise Large Track",
+		testHeading: "Precise large track",
 		variant: "filled",
-		isPrecise: true,
-		trackHeight: "large"
-	},
-	// Ramp variants
-	{
-		testHeading: "Ramp Precise",
-		variant: "ramp",
-		isPrecise: true
-	},
-	// Range variants
-	{
-		testHeading: "Range Precise",
-		variant: "filled",
-		values: [10, 20],
-		isPrecise: true
-	},
-	{
-		testHeading: "Range Large Track",
-		variant: "filled",
-		values: [10, 20],
-		trackHeight: "large"
-	},
-	{
-		testHeading: "Range Precise Large Track",
-		variant: "filled",
-		values: [10, 20],
-		isPrecise: true,
-		trackHeight: "large"
-	},
-	// Offset variants
-	{
-		testHeading: "Offset Precise",
-		variant: "offset",
-		values: [-15],
-		isPrecise: true
-	},
-	{
-		testHeading: "Offset Large Track",
-		variant: "offset",
-		values: [-15],
-		trackHeight: "large"
-	},
-	{
-		testHeading: "Offset Precise Large Track",
-		variant: "offset",
-		values: [-15],
 		isPrecise: true,
 		trackHeight: "large"
 	},
 	// Ticks variants
 	{
-		testHeading: "Ticks Precise",
+		testHeading: "With ticks",
+		variant: "filled",
+		showTicks: true,
+		showTickLabels: true
+	},
+	{
+		testHeading: "Precise with ticks",
 		variant: "filled",
 		showTicks: true,
 		showTickLabels: true,
 		isPrecise: true
 	},
 	{
-		testHeading: "Ticks Large Track",
+		testHeading: "Large track with ticks",
 		variant: "filled",
 		showTicks: true,
 		showTickLabels: true,
 		trackHeight: "large"
 	},
 	{
-		testHeading: "Ticks Precise Large Track",
+		testHeading: "Large track with ticks and precise",
 		variant: "filled",
 		showTicks: true,
 		showTickLabels: true,
 		isPrecise: true,
 		trackHeight: "large"
 	},
-	{
-		testHeading: "Ticks Range Large Track",
-		variant: "filled",
-		showTicks: true,
-		showTickLabels: true,
-		values: [10, 20],
-		trackHeight: "large"
-	},
-	{
-		testHeading: "Ticks Offset Large Track",
-		variant: "offset",
-		showTicks: true,
-		showTickLabels: true,
-		values: [-15],
-		trackHeight: "large"
-	},
 	// Side label variants
 	{
-		testHeading: "Side Label",
+		testHeading: "Side label",
 		variant: "filled",
 		labelPosition: "side"
 	},
 	{
-		testHeading: "Side Label Precise",
+		testHeading: "Side label with precise",
 		variant: "filled",
 		labelPosition: "side",
 		isPrecise: true
 	},
 	{
-		testHeading: "Side Label Large Track",
+		testHeading: "Large track with side label",
 		variant: "filled",
 		labelPosition: "side",
 		trackHeight: "large"
 	},
 	{
-		testHeading: "Side Label Range",
-		variant: "filled",
-		labelPosition: "side",
-		values: [10, 20]
-	},
-	{
-		testHeading: "Side Label Offset",
-		variant: "offset",
-		labelPosition: "side",
-		values: [-15]
-	},
-	{
-		testHeading: "Side Label Ticks",
+		testHeading: "Side label with ticks",
 		variant: "filled",
 		labelPosition: "side",
 		showTicks: true,
@@ -165,93 +84,67 @@ export const testData = [
 		isEditable: true
 	},
 	{
-		testHeading: "Editable Precise",
+		testHeading: "Editable with precise",
 		variant: "filled",
 		isEditable: true,
 		isPrecise: true
 	},
 	{
-		testHeading: "Editable Large Track",
+		testHeading: "Editable with large track",
 		variant: "filled",
 		isEditable: true,
 		trackHeight: "large"
 	},
 	{
-		testHeading: "Editable Offset",
-		variant: "offset",
-		isEditable: true,
-		values: [-15]
-	},
-	{
-		testHeading: "Editable Side Label",
+		testHeading: "Editable with side label",
 		variant: "filled",
 		isEditable: true,
 		labelPosition: "side"
 	},
 	// No label variants
 	{
-		testHeading: "No Label",
+		testHeading: "No label",
 		variant: "filled",
 		label: ""
 	},
 	{
-		testHeading: "No Label Precise",
+		testHeading: "No label with precise",
 		variant: "filled",
 		label: "",
 		isPrecise: true
 	},
 	{
-		testHeading: "No Label Large Track",
+		testHeading: "No label with large track",
 		variant: "filled",
 		label: "",
 		trackHeight: "large"
 	},
 	{
-		testHeading: "No Label Range",
-		variant: "filled",
-		label: "",
-		values: [10, 20]
-	},
-	{
-		testHeading: "No Label Offset",
-		variant: "offset",
-		label: "",
-		values: [-15]
-	},
-	{
-		testHeading: "No Label Ticks",
+		testHeading: "No label with ticks",
 		variant: "filled",
 		label: "",
 		showTicks: true,
 		showTickLabels: true
 	},
-	// No label editable variants
 	{
-		testHeading: "No Label Editable",
+		testHeading: "No label editable",
 		variant: "filled",
 		label: "",
 		isEditable: true
 	},
 	{
-		testHeading: "No Label Editable Precise",
+		testHeading: "No label editable with precise",
 		variant: "filled",
 		label: "",
 		isEditable: true,
 		isPrecise: true
 	},
 	{
-		testHeading: "No Label Editable Large Track",
+		testHeading: "No label editable with large track",
 		variant: "filled",
 		label: "",
 		isEditable: true,
 		trackHeight: "large"
-	},
-	{
-		testHeading: "No Label Editable Offset",
-		variant: "offset",
-		label: "",
-		isEditable: true,
-		values: [-15]
 	},
 	// Disabled variants
 	{
@@ -260,114 +153,61 @@ export const testData = [
 		isDisabled: true
 	},
 	{
-		testHeading: "Disabled + precise",
+		testHeading: "Disabled with precise",
 		variant: "filled",
 		isDisabled: true,
 		isPrecise: true
 	},
 	{
-		testHeading: "Disabled + precise + large track",
+		testHeading: "Disabled with precise and large track",
 		variant: "filled",
 		isDisabled: true,
 		isPrecise: true,
 		trackHeight: "large"
 	},
+	// Emphasized variants
 	{
 		testHeading: "Emphasized",
 		variant: "filled",
 		isEmphasized: true
 	},
 	{
-		testHeading: "Emphasized Precise",
+		testHeading: "Emphasized with precise",
 		variant: "filled",
 		isEmphasized: true,
 		isPrecise: true
 	},
 	{
-		testHeading: "Emphasized Large Track",
+		testHeading: "Emphasized with large track",
 		variant: "filled",
 		isEmphasized: true,
 		trackHeight: "large"
 	},
 	{
-		testHeading: "Emphasized Range",
-		variant: "filled",
-		isEmphasized: true,
-		values: [10, 20]
-	},
-	{
-		testHeading: "Emphasized Range Precise",
-		variant: "filled",
-		isEmphasized: true,
-		values: [10, 20],
-		isPrecise: true
-	},
-	{
-		testHeading: "Emphasized Range Large Track",
-		variant: "filled",
-		isEmphasized: true,
-		values: [10, 20],
-		trackHeight: "large"
-	},
-	{
-		testHeading: "Emphasized Range Precise Large Track",
-		variant: "filled",
-		isEmphasized: true,
-		values: [10, 20],
-		isPrecise: true,
-		trackHeight: "large"
-	},
-	{
-		testHeading: "Emphasized Range Side Label",
-		variant: "filled",
-		isEmphasized: true,
-		values: [10, 20],
-		labelPosition: "side"
-	},
-	{
-		testHeading: "Emphasized Range Editable",
-		variant: "filled",
-		isEmphasized: true,
-		values: [10, 20],
-		isEditable: true
-	},
-	{
-		testHeading: "Emphasized Range No Label",
-		variant: "filled",
-		isEmphasized: true,
-		values: [10, 20],
-		label: ""
-	},
-	{
-		testHeading: "Emphasized Offset",
-		variant: "offset",
-		isEmphasized: true,
-		values: [-15]
-	},
-	{
-		testHeading: "Emphasized Ticks",
+		testHeading: "Emphasized with ticks",
 		variant: "filled",
 		isEmphasized: true,
 		showTicks: true,
 		showTickLabels: true
 	},
 	{
-		testHeading: "Emphasized Ticks Large Track",
+		testHeading: "Emphasized with ticks and large track",
 		variant: "filled",
 		isEmphasized: true,
 		showTicks: true,
 		showTickLabels: true,
 		trackHeight: "large"
 	},
+	// Sizes variants
 	{
-		testHeading: "Large Track Height Sizes",
+		testHeading: "Large track height sizes",
 		variant: "filled",
 		Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
 		trackHeight: "large",
 		withStates: false,
 	},
 	{
-		testHeading: "Large Track Height Sizes + precise",
+		testHeading: "Large track height sizes with precise",
 		variant: "filled",
 		isPrecise: true,
 		Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
@@ -375,7 +215,7 @@ export const testData = [
 		withStates: false,
 	},
 	{
-		testHeading: "Sizes + precise",
+		testHeading: "Sizes with precise",
 		variant: "filled",
 		isPrecise: true,
 		Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
@@ -383,7 +223,194 @@ export const testData = [
 	},
 ];
 
-export const SliderGroup = Variants({
+const rangeTestData = [
+	// Default variants
+	{
+		testHeading: "Range",
+		variant: "filled",
+		values: [10, 20]
+	},
+	{
+		testHeading: "Range with precise",
+		variant: "filled",
+		values: [10, 20],
+		isPrecise: true
+	},
+	{
+		testHeading: "Range with large track",
+		variant: "filled",
+		values: [10, 20],
+		trackHeight: "large"
+	},
+	{
+		testHeading: "Range with precise and large track",
+		variant: "filled",
+		values: [10, 20],
+		isPrecise: true,
+		trackHeight: "large"
+	},
+	// Ticks variants
+	{
+		testHeading: "Range with ticks and large track",
+		variant: "filled",
+		showTicks: true,
+		showTickLabels: true,
+		values: [10, 20],
+		trackHeight: "large"
+	},
+	// Side label variants
+	{
+		testHeading: "Range with side label",
+		variant: "filled",
+		labelPosition: "side",
+		values: [10, 20]
+	},
+	// No label variants
+	{
+		testHeading: "Range with no label",
+		variant: "filled",
+		label: "",
+		values: [10, 20]
+	},
+	// Emphasized variants
+	{
+		testHeading: "Emphasized range",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20]
+	},
+	{
+		testHeading: "Emphasized range with precise",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		isPrecise: true
+	},
+	{
+		testHeading: "Emphasized range with large track",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		trackHeight: "large"
+	},
+	{
+		testHeading: "Emphasized range with precise and large track",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		isPrecise: true,
+		trackHeight: "large"
+	},
+	{
+		testHeading: "Emphasized range with side label",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		labelPosition: "side"
+	},
+	{
+		testHeading: "Emphasized range with editable",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		isEditable: true
+	},
+	{
+		testHeading: "Emphasized range with no label",
+		variant: "filled",
+		isEmphasized: true,
+		values: [10, 20],
+		label: ""
+	},
+];
+
+const rampTestData = [
+	// Default variants
+	{
+		testHeading: "Ramp",
+		variant: "ramp"
+	},
+	{
+		testHeading: "Ramp with precise",
+		variant: "ramp",
+		isPrecise: true
+	},
+];
+
+const offsetTestData = [
+	// Default variants
+	{
+		testHeading: "Offset",
+		variant: "offset",
+		values: [-15]
+	},
+	{
+		testHeading: "Offset with precise",
+		variant: "offset",
+		values: [-15],
+		isPrecise: true
+	},
+	{
+		testHeading: "Offset with large track",
+		variant: "offset",
+		values: [-15],
+		trackHeight: "large"
+	},
+	{
+		testHeading: "Offset with precise and large track",
+		variant: "offset",
+		values: [-15],
+		isPrecise: true,
+		trackHeight: "large"
+	},
+	// Ticks variants
+	{
+		testHeading: "Offset with ticks and large track",
+		variant: "offset",
+		showTicks: true,
+		showTickLabels: true,
+		values: [-15],
+		trackHeight: "large"
+	},
+	// Side label variants
+	{
+		testHeading: "Offset with side label",
+		variant: "offset",
+		labelPosition: "side",
+		values: [-15]
+	},
+	// Editable variants
+	{
+		testHeading: "Offset with editable",
+		variant: "offset",
+		isEditable: true,
+		values: [-15]
+	},
+	// No label variants
+	{
+		testHeading: "Offset with no label",
+		variant: "offset",
+		label: "",
+		values: [-15]
+	},
+	{
+		testHeading: "Offset with no label and editable",
+		variant: "offset",
+		label: "",
+		isEditable: true,
+		values: [-15]
+	},
+	// Emphasized variants
+	{
+		testHeading: "Emphasized offset",
+		variant: "offset",
+		isEmphasized: true,
+		values: [-15]
+	},
+];
+
+// Helper function to create a group with specific test data
+const createGroup = (testData) => Variants({
 	Template,
 	testData,
 	stateData: [
@@ -410,3 +437,8 @@ export const SliderGroup = Variants({
 		}
 	]
 });
+
+export const SliderGroup = createGroup(testData);
+export const RangeGroup = createGroup(rangeTestData);
+export const RampGroup = createGroup(rampTestData);
+export const OffsetGroup = createGroup(offsetTestData);

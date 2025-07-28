@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { SliderGroup } from "./slider.test.js";
+import { OffsetGroup, RampGroup, RangeGroup, SliderGroup } from "./slider.test.js";
 import { Template } from "./template.js";
 
 /**
@@ -415,3 +415,16 @@ WithForcedColors.parameters = {
 		modes: disableDefaultModes,
 	},
 };
+
+// test with /?path=/story/components-slider--offset-tests&globals=testingPreview:!true
+export const OffsetTests = OffsetGroup.bind({});
+OffsetTests.tags = ["!autodocs", "!dev"];
+
+// test with /?path=/story/components-slider--ramp-tests&globals=testingPreview:!true
+
+export const RampTests = RampGroup.bind({});
+RampTests.tags = ["!autodocs", "!dev"];
+
+// test with /?path=/story/components-slider--range-tests&globals=testingPreview:!true
+export const RangeTests = RangeGroup.bind({});
+RangeTests.tags = ["!autodocs", "!dev"];
