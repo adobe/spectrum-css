@@ -439,6 +439,4 @@ const createGroup = (testData) => Variants({
 });
 
 export const SliderGroup = createGroup(testData);
-export const RangeGroup = createGroup(rangeTestData);
-export const RampGroup = createGroup(rampTestData);
-export const OffsetGroup = createGroup(offsetTestData);
+export const VariantGroup = createGroup([...rangeTestData, ...rampTestData, ...offsetTestData]);
