@@ -66,9 +66,11 @@ const Visual = ({
 	iconSet,
 	rootClass,
 	size,
-	thumbnailUrl
+	thumbnailUrl,
+	hasExternalLink,
+	isDrillIn
 }) => {
-	if (thumbnailUrl) {
+	if (thumbnailUrl && !(hasExternalLink || isDrillIn)) {
 		return html`
     ${Thumbnail({
         imageURL: thumbnailUrl,
@@ -100,11 +102,14 @@ const StartAction = ({
 	isCollapsible,
 	isDisabled,
 	isSelected,
+	isUnavailable,
 	rootClass,
 	selectionMode,
 	size,
 	context
 }) => {
+	if (isUnavailable) return null;
+
 	if (isCollapsible || (selectionMode == "single" && isSelected)) {
 		return html`
 			${Icon(
@@ -183,7 +188,7 @@ const EndAction = ({
 	)}
 
 	${when(
-		hasExternalLink && !isUnavailable && !(hasActions && selectionMode === "multiple"),
+		hasExternalLink && !(isUnavailable || isDrillIn) && !(hasActions && selectionMode === "multiple"),
 		() => html`<div class="${rootClass}Actions">
 			${Icon({
 				setName: "ui",
@@ -214,7 +219,7 @@ const EndAction = ({
 		</div>`
 	)}
 
-	${when(isDrillIn, () =>
+	${when(isDrillIn && !(isUnavailable || hasExternalLink), () =>
 		Icon(
 			{
 				iconName: iconWithScale(size, "ChevronRight"),
@@ -295,8 +300,8 @@ export const MenuItem = (
 		aria-disabled=${isDisabled ? "true" : "false"}
 		tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
 	>
-		${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, rootClass, selectionMode, size, context })}
-		${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl })}
+		${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, isUnavailable, rootClass, selectionMode, size, context })}
+		${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl, hasExternalLink, isDrillIn })}
 		${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
 		${when(description, () => Description({ description, rootClass }))}
 		${EndAction({ hasExternalLink, hasActions, idx, isUnavailable, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}

@@ -150,6 +150,10 @@ Default.args = {
 					label: "Menu item with no icon",
 				},
 				{
+					label: "Menu item as unavailable",
+					isUnavailable: true,
+				},
+				{
 					label: "Menu item as external link",
 					hasExternalLink: true,
 				},
@@ -254,6 +258,11 @@ Default.args = {
 					description: "And a description, too",
 					value: "⌘ C",
 					thumbnailUrl: "thumbnail.png",
+				},
+				{
+					label: "Menu item as unavailable",
+					description: "And a description, too",
+					isUnavailable: true,
 				},
 				{
 					label: "Menu item with external link action",
@@ -412,6 +421,7 @@ MenuItem.argTypes = {
 			category: "Content",
 		},
 		control: "boolean",
+		if: { arg: "selectionMode", eq: "none" },
 	},
 	hasThumbnail: {
 		name: "Has thumbnail",
@@ -422,6 +432,7 @@ MenuItem.argTypes = {
 			category: "Content",
 		},
 		control: "boolean",
+		if: { arg: "hasExternalLink", truthy: false },
 	},
 	isDrillIn: {
 		name: "Is drill-in",
@@ -432,6 +443,8 @@ MenuItem.argTypes = {
 			category: "Content",
 		},
 		control: "boolean",
+		if: { arg: "hasExternalLink", truthy: false },
+
 	},
 	isUnavailable: {
 		name: "Is unavailable",
@@ -443,6 +456,7 @@ MenuItem.argTypes = {
 			category: "Content",
 		},
 		control: "boolean",
+		if: { arg: "hasExternalLink", truthy: false },
 	},
 	// These settings are not used in the MenuItem story
 	hasDividers: { table: { disable: true } },
@@ -581,18 +595,18 @@ Sizing.args = {
 		},
 		{
 			idx: 2,
-			label: "Menu item with icon",
-			iconName: "Cloud",
-		},
-		{
-			idx: 3,
 			label: "Menu item with optional description",
 			description: "Short description of menu item",
 		},
 		{
-			idx: 4,
+			idx: 3,
 			label: "Menu item with value",
 			value: "Value",
+		},
+		{
+			idx: 4,
+			label: "Menu item with icon",
+			iconName: "Cloud",
 		},
 		{
 			idx: 5,
@@ -607,16 +621,21 @@ Sizing.args = {
 		},
 		{
 			idx: 7,
+			label: "Menu item as unavailable",
+			isUnavailable: true,
+		},
+		{
+			idx: 8,
 			label: "Menu item with thumbnail",
 			value: "Value",
 			thumbnailUrl: "thumbnail.png",
 		},
 		{
-			idx: 8,
+			idx: 9,
 			label: "Menu item with thumbnail",
 			description: "and description",
 			thumbnailUrl: "thumbnail.png",
-		},
+		}
 	],
 };
 Sizing.parameters = {
