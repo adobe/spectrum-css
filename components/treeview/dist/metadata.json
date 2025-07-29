@@ -48,8 +48,7 @@
     ".spectrum-TreeView.spectrum-TreeView--detached",
     ".spectrum-TreeView.spectrum-TreeView--quiet",
     ".spectrum-TreeView.spectrum-TreeView--thumbnail",
-    ".spectrum-TreeView:dir(rtl)",
-    "[dir=\"rtl\"] .spectrum-TreeView"
+    ".spectrum-TreeView:dir(rtl)"
   ],
   "modifiers": [
     "--mod-treeview-font-size",
