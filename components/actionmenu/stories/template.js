@@ -4,6 +4,7 @@ import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 
 export const Template = ({
+	rootClass = "spectrum-ActionMenu",
 	id = getRandomId("actionmenu"),
 	testId,
 	triggerId = getRandomId("actionmenu-trigger"),
@@ -33,13 +34,16 @@ export const Template = ({
 				iconName,
 				iconSet,
 				id: triggerId,
-				customClasses,
+				customClasses: [`${rootClass}-trigger`],
 			}, context),
 		position: "bottom-start",
 		customStyles,
+		customClasses: [`${rootClass}-popover`],
+		customWrapperClasses: [rootClass, ...customClasses],
 		content: [
 			(passthroughs) => Menu({
 				...passthroughs,
+				customClasses: [`${rootClass}-menu`],
 				items,
 				isOpen,
 				size

@@ -39,6 +39,7 @@ export const Template = ({
 	fill,
 	id = getRandomId("icon"),
 	customClasses = [],
+	customStyles = {},
 	useRef = true,
 } = {}, context = {}) => {
 	// All icons SVG markup from the global IconLoader are in loaded.icons
@@ -113,6 +114,8 @@ export const Template = ({
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 	};
 
+	if (fill) customStyles.color = fill;
+
 	/**
 	 * Display full SVG file markup from global IconLoader data, when not using a reference to the sprite sheet.
 	 */
@@ -129,8 +132,13 @@ export const Template = ({
 				return acc;
 			}, "");
 
+			const stylesAsString = Object.entries(customStyles).reduce((acc, [key, value]) => {
+				acc += `${key}: ${value};`;
+				return acc;
+			}, "");
+
 			return html`${unsafeSVG(
-				svgString.replace(/<svg/, `<svg class="${classesAsString}" ${fill ? `style="color: ${fill};"` : ""} focusable="false" aria-hidden="true" role="img"`)
+				svgString.replace(/<svg/, `<svg class="${classesAsString}" style="${stylesAsString}" focusable="false" aria-hidden="true" role="img"`)
 			)}`;
 		}
 		else {
@@ -145,7 +153,7 @@ export const Template = ({
 	return html`<svg
 		class=${classMap(classList)}
 		id=${ifDefined(id)}
-		style=${ifDefined(fill ? `color: ${fill};` : undefined)}
+		style=${styleMap(customStyles)}
 		focusable="false"
 		aria-hidden="true"
 		aria-label=${iconName}
