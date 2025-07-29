@@ -1,6 +1,7 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -8,7 +9,7 @@ import { html } from "lit";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PopoverGroup } from "./popover.test.js";
-import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./template.js";
+import { FixedWidthSourceTemplate, Template } from "./template.js";
 
 /**
  * A popover is used to display transient content (menus, options, additional actions, etc.) and appears when clicking/tapping on a source (tools, buttons, etc.).
@@ -290,7 +291,11 @@ DialogStyle.parameters = {
  * - Top and bottom popover positions use the same SVG. The CSS handles flipping the SVG vertically.
  * - Left, right, start, and end popover positions use the same SVG. The CSS handles flipping the SVG horizontally.
  */
-export const Positioning = TipPlacementVariants.bind({});
+export const Positioning = (args, context) => ArgGrid({
+	Template,
+	argKey: "position",
+	...args,
+}, context);
 Positioning.storyName = "Positioning options";
 Positioning.args = {
 	withTip: true,
