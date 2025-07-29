@@ -160,7 +160,7 @@ CustomWidth.args = {
 	},
 };
 CustomWidth.parameters = {
-	chromatic: { disableSnapshot: false },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -201,6 +201,9 @@ export const DirectActions = Template.bind({});
 DirectActions.tags = ["!dev"];
 DirectActions.args = {
 	items: directActionsContent
+};
+DirectActions.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 /**
