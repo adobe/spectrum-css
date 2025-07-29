@@ -130,9 +130,11 @@ export default {
 
 /**
  * #### Labels
+ *
  * Basic, default tab items should have a label for accessibility. If a label isn't present, it must include an icon and becomes an icon-only tab item.
  *
  * #### Icons
+ *
  * Icons can be displayed in tab items. Icons should only be used in a tab item when absolutely necessary: when adding essential value and having a strong association with the label. Icons should not be used just as decoration. If the tab item does not have a visible label, it must still have a tooltip to disclose the label.
  */
 export const Default = TabsGroups.bind({});
