@@ -1,9 +1,10 @@
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { AccordionGroup, testsContent as accordionContent } from "./accordion.test.js";
+import { AccordionGroup, testsContent as accordionContent, directActionsContent, longerContent } from "./accordion.test.js";
 import { Template } from "./template.js";
 
 /**
@@ -60,7 +61,36 @@ export default {
 			},
 			control: { type: "boolean" },
 		},
-		isQuiet
+		isQuiet,
+		hasActionButtons: {
+			name: "Has action buttons",
+			description: "Adds an action button to each accordion item header, in the direct actions section.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Direct actions",
+			},
+			control: { type: "boolean" },
+		},
+		actionButtonIconName: {
+			name: "Action button icon",
+			...(IconStories?.argTypes?.iconName ?? {}),
+			if: { arg: "hasActionButtons", truthy: true },
+			table: {
+				type: { summary: "string" },
+				category: "Direct actions",
+			},
+		},
+		hasSwitches: {
+			name: "Has switches",
+			description: "Adds a switch to each accordion item header, in the direct actions section.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Direct actions",
+			},
+			control: { type: "boolean" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
@@ -70,6 +100,9 @@ export default {
 		disableAll: false,
 		isQuiet: false,
 		hasNoInlinePadding: false,
+		hasActionButtons: false,
+		actionButtonIconName: "Circle",
+		hasSwitches: false,
 	},
 	parameters: {
 		actions: {
@@ -121,9 +154,9 @@ export const CustomWidth = AccordionGroup.bind({});
 CustomWidth.tags = ["!dev"];
 CustomWidth.storyName = "Custom width";
 CustomWidth.args = {
-	items: accordionContent,
+	items: longerContent,
 	customStyles: {
-		"--mod-accordion-item-width": "500px",
+		"--mod-accordion-item-width": "auto",
 	},
 };
 CustomWidth.parameters = {
@@ -157,6 +190,18 @@ Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 Spacious.storyName = "Density: Spacious";
+
+/**
+ * Direct actions within accordion items are supported. A quiet
+ * [action button](/?path=/docs/actionbutton--default), a
+ * [switch](/?path=/docs/switch--default), or both can be added to
+ * each accordion item header.
+ */
+export const DirectActions = Template.bind({});
+DirectActions.tags = ["!dev"];
+DirectActions.args = {
+	items: directActionsContent
+};
 
 /**
  * Individual accordion items can be disabled by applying the `.is-disabled` class to the

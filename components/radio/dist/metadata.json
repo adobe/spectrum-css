@@ -48,8 +48,7 @@
     ".spectrum-Radio:lang(ja)",
     ".spectrum-Radio:lang(ko)",
     ".spectrum-Radio:lang(zh)",
-    ".spectrum-Radio:not(.is-readOnly):active .spectrum-Radio-input:not(:disabled) + .spectrum-Radio-button",
-    "[dir=\"rtl\"] .spectrum-Radio .spectrum-Radio-button:after"
+    ".spectrum-Radio:not(.is-readOnly):active .spectrum-Radio-input:not(:disabled) + .spectrum-Radio-button"
   ],
   "modifiers": [
     "--mod-radio-animation-duration",

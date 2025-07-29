@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/preview",
-	"version": "12.0.5-next.7",
+	"version": "12.0.5-next.8",
 	"description": "A Spectrum CSS preview",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -40,9 +40,9 @@
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^4.1.0",
-		"@spectrum-css/bundle": "2.0.0-next.4",
-		"@spectrum-css/tokens": "16.1.0-next.5",
-		"@spectrum-css/ui-icons": "2.0.0-next.1"
+		"@spectrum-css/bundle": "2.0.0-next.5",
+		"@spectrum-css/tokens": "16.1.0-next.6",
+		"@spectrum-css/ui-icons": "2.0.0-next.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.28.0",
@@ -67,15 +67,15 @@
 		"chromatic": "^13.1.2",
 		"lit": "^3.3.1",
 		"lodash-es": "^4.17.21",
-		"npm-registry-fetch": "^18.0.2",
+		"npm-registry-fetch": "^19.0.0",
 		"postcss": "^8.5.6",
 		"prettier": "^3.6.2",
-		"react": "^19.1.0",
-		"react-dom": "^19.1.0",
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1",
 		"react-syntax-highlighter": "^15.6.1",
 		"remark-gfm": "^4.0.1",
 		"storybook": "8.4.7",
-		"vite": "^7.0.4"
+		"vite": "^7.0.6"
 	},
 	"keywords": [
 		"design-system",

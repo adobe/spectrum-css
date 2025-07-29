@@ -16,7 +16,7 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"node --no-warnings ./tasks/token-rollup.js",
+					"node --no-warnings ./tasks/token-rollup.js"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
@@ -45,10 +45,10 @@
 			"inputs": [{ "externalDependencies": ["glob", "@adobe/token-diff-generator"] }],
 			"options": {
 				"commands": [
-					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output ./dist/tokens-diff.md"
+					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output {projectRoot}/dist/tokens-diff.md"
 				],
 				"forwardAllArgs": true,
-				"v1": "13.10.0"
+				"v1": "13.12.0"
 			},
 			"outputs": [
 				"{projectRoot}/dist/tokens-diff.md"

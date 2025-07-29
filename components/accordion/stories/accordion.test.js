@@ -5,9 +5,71 @@ import { Template } from "./template.js";
 
 /**
  * General accordion item content for tests.
- * Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions.
  */
 export const testsContent = new Map([
+	[
+		"Abstract",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
+		},
+	],
+	[
+		"Architecture",
+		{
+			content: Typography({
+				semantics: "body",
+				content: [
+					"This is an example of text content within the content area that uses the spectrum-Body typography class on the paragraphs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit.",
+					Link({
+						url: "https://www.adobe.com/creativecloud/plans.html",
+						text: "Learn more about Adobe Creative Cloud plans and pricing.",
+					}),
+				],
+			}),
+			isOpen: true,
+		},
+	],
+	[
+		"Nature",
+		{
+			content: Typography({
+				semantics: "body",
+				content: [
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
+					Link({
+						url: "https://www.adobe.com/acrobat.html",
+						text: "Learn more about Acrobat.",
+					}),
+				],
+			}),
+		},
+	],
+	[
+		"Illustrations",
+		{
+			content: "This is an example of text content within the content area that is not wrapped by any typography classes or elements. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit.",
+			isOpen: true,
+		},
+	],
+	[
+		"Business",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
+		},
+	],
+	[
+		"Landscape and longer text that wraps",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
+		},
+	],
+]);
+
+/**
+ * Longer content for a custom width accordion.
+ * Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions.
+ */
+export const longerContent = new Map([
 	[
 		"Are any Adobe products free?",
 		{
@@ -56,6 +118,32 @@ export const testsContent = new Map([
 		"What are the most popular Adobe products?",
 		{
 			content: "This is an example of text content within the content area that is not wrapped by any typography classes or elements. Adobe makes some of the most widely used software in the world, including popular apps like Acrobat Pro, Photoshop, Illustrator, InDesign, Lightroom, and Premiere Pro.",
+		},
+	],
+]);
+
+export const directActionsContent = new Map([
+	[
+		"Heading 1",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			hasActionButton: true,
+		},
+	],
+	[
+		"Heading 2",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			hasSwitch: true,
+		},
+	],
+	[
+		"Heading 3",
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			hasActionButton: true,
+			hasSwitch: true,
+			isOpen: true,
 		},
 	],
 ]);
@@ -121,6 +209,7 @@ const statesTestContent = new Map([
 ]);
 
 export const AccordionGroup = Variants({
+	withSizes: false,
 	Template,
 	testData: [
 		{
@@ -177,8 +266,8 @@ export const AccordionGroup = Variants({
 			withStates: false,
 		},
 		{
-			testHeading: "Compact",
-			items: testsContent,
+			testHeading: "Compact density",
+			items: new Map([...testsContent, ...directActionsContent]),
 			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
 			density: "compact",
 			collapseAll: true,
@@ -188,8 +277,19 @@ export const AccordionGroup = Variants({
 			withStates: false,
 		},
 		{
-			testHeading: "Spacious",
-			items: testsContent,
+			testHeading: "Regular density",
+			items: new Map([...testsContent, ...directActionsContent]),
+			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
+			density: "regular",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+			withStates: false,
+		},
+		{
+			testHeading: "Spacious density",
+			items: new Map([...testsContent, ...directActionsContent]),
 			Template: (args, context) => { return Sizes({Template: Template, ...args}, context); },
 			density: "spacious",
 			collapseAll: true,
