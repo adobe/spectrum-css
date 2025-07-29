@@ -55,6 +55,7 @@ export const Template = ({
 	isActive = false,
 	isDisabled = false,
 	hasPopup = "false",
+	showPopup = false,
 	popupId,
 	hideLabel = false,
 	staticColor,
@@ -105,7 +106,7 @@ export const Template = ({
 				updateArgs({ isFocused: false });
 			}}
 		>
-			${when(hasPopup && hasPopup !== "false", () =>
+			${when(showPopup && hasPopup && hasPopup !== "false", () =>
 				Icon({
 					size,
 					iconName: "CornerTriangle" + ({

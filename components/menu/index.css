@@ -267,7 +267,7 @@
 
 .spectrum-Menu {
 	display: inline-block;
-	inline-size: var(--mod-menu-inline-size, auto);
+	inline-size: var(--mod-menu-inline-size, max-content);
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
