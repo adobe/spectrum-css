@@ -34,6 +34,7 @@
 	--spectrum-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
 	--spectrum-alert-banner-font-color: var(--spectrum-white);
 
+	/* @passthrough start */
 	/* settings for nested Divider */
 	--mod-divider-vertical-margin: var(--mod-alert-banner-edge-to-divider, var(--spectrum-alert-banner-edge-to-divider));
 	--mod-divider-vertical-height: auto;
@@ -48,6 +49,7 @@
 	--mod-closebutton-margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
 	--mod-closebutton-margin-top: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
 	--mod-closebutton-align-self: flex-start;
+	/* @passthrough end */
 
 	display: none;
 	justify-content: space-between;

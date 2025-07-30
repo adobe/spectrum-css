@@ -107,7 +107,7 @@
 	margin-inline-end: 0;
 	padding: 0;
 
-	word-wrap: break-word;
+	overflow-wrap: break-word;
 
 	font-weight: var(--mod-inlinealert-content-font-weight, var(--spectrum-inlinealert-content-font-weight));
 	font-family: var(--mod-inlinealert-content-font-family, var(--spectrum-inlinealert-content-font-family));

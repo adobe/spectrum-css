@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-📝 [#3617](https://github.com/adobe/spectrum-css/pull/3617) [`a02f1d1`](https://github.com/adobe/spectrum-css/commit/a02f1d13d07106465a3236c5bfe3d029f3e64426) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! 
+📝 [#3617](https://github.com/adobe/spectrum-css/pull/3617) [`a02f1d1`](https://github.com/adobe/spectrum-css/commit/a02f1d13d07106465a3236c5bfe3d029f3e64426) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
 Adds a `::before` pseudo element to properly target the `.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box` element. The selector update, specifically in the invalid+checked+hover state should now get the proper error background color, as opposed to the default background color.
 
@@ -112,7 +112,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3359](https://github.com/adobe/spectrum-css/pull/3359) [`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b) Thanks [@cdransf](https://github.com/cdransf)!
 
 - This resolves our remaining stylelint issues around undefined tokens, rule order, unused values and color syntax.
-
   - Updates invalid color syntax from `rgba(N, N, N, N)` to `rgba(N N N / N)`.
   - In cases of duplicate properties, preserves the property that would be applied given current code structure.
   - Updates misnamed tokens to use valid tokens (`table/index.css`).

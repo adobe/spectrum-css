@@ -17,6 +17,6 @@
 
 @container style(--system: legacy) {
 	.spectrum-Well {
-		--spectrum-well-border-color: rgba(var(--spectrum-gray-900-rgb), 0.05);
+		--spectrum-well-border-color: rgb(var(--spectrum-gray-900-rgb), 0.05);
 	}
 }

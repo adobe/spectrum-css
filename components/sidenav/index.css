@@ -175,7 +175,7 @@
 	display: inline-flex;
 	justify-content: start;
 	box-sizing: border-box;
-	word-break: break-word;
+	overflow-wrap: break-word;
 	hyphens: auto;
 	cursor: pointer;
 	transition:

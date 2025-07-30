@@ -17,6 +17,6 @@
 
 @container style(--system: legacy) {
 	.spectrum-Calendar {
-		--spectrum-calendar-day-background-color-selected-disabled: rgba(var(--spectrum-gray-200-rgb), 0.4);
+		--spectrum-calendar-day-background-color-selected-disabled: rgb(var(--spectrum-gray-200-rgb), 0.4);
 	}
 }

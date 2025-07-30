@@ -13,9 +13,9 @@
 
 @container style(--system: spectrum) {
 	.spectrum-AssetCard {
-		--spectrum-assetcard-overlay-background-color: rgba(27 127 245 / 10%);
+		--spectrum-assetcard-overlay-background-color: rgb(27 127 245 / 10%);
 		--spectrum-assetcard-background-color: var(--spectrum-gray-75);
-		--spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-75-rgb), 0.9);
+		--spectrum-assetcard-selectionindicator-background-color-default: rgb(var(--spectrum-gray-75-rgb), 0.9);
 		--spectrum-assetcard-selectionindicator-box-shadow-color: var(--spectrum-transparent-black-300);
 	}
 }

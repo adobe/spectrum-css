@@ -115,7 +115,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
-
   - `index-base.css`
   - `index-theme.css`
   - `themes/spectrum.css`
@@ -350,7 +349,6 @@ Create custom properties with tokens from the default "Table" and
 "Selection" sections of the design.
 
 - feat(table): use new tokens in styles
-
   - Use new tokens in styles, first pass with regular/default
   - Set custom properties for variants + sizes to simplify styles
   - Remove repeated %drop-target placeholder selector style rule
@@ -447,7 +445,6 @@ Add control to Table storybook to use the div element markup instead of
 table element markup, to match the example in the docs.
 
 - feat(table): new collapsible variant and minor adjustments
-
   - Adds new Collapsible variant.
   - Puts heading row text into span and adds note to docs.
   - Allows optional array of strings for cellContent in Storybook.
@@ -469,14 +466,12 @@ Add variant that includes the thumbnail component within the table. Adds
 to storybook and examples.
 
 - feat(table): thumbnail variant and storybook refactor
-
   - Add new thumbnails variant.
   - Avoid duplication of divs and table markup in Storybook by including
     a conditional dynamic tag.
   - Remove inline flex styles from div example markup.
 
 - refactor(table)!: change div to table display and refactor dropzone
-
   - Changes div-based table to use table display properties, to ensure
     that it displays the same as the table-based markup. The flex based
     styles incorporated from the example markup have issues with handling
@@ -491,7 +486,6 @@ to storybook and examples.
   Using CSS grid is currently a no-go because of the lingering
   accessibility bugs associated with 'display: contents' (and subgrid
   still farther out from browser support).
-
   - Refactors out unnecessary CSS after the previously noted change. No
     longer necessary to handle 'tbody' differently when it is a div.
 
@@ -504,12 +498,10 @@ to storybook and examples.
   This also fixes the existing bug where table dropzone will not show
   the blue color across the entire table (scrolling down on existing
   example).
-
   - Adds dropzone to Storybook. Control for table dropzone and row data +
     a new story for row dropzone.
 
 - fix(table): update mods and dropzone outline offset
-
   - Update generated moddable custom properties.
   - Remove negative outline offset for dropzone to avoid child cell
     borders showing 1px on top of it.
@@ -560,7 +552,6 @@ Fixes
 - Move header colors out of sortable (dark theme fix)
 - Typo fix for one of the borders
 - Change one of the lingering margin properties to its logical property
-
   - feat(table): unique mods for all variants
 
 Technique to include unique custom property mods for the different
@@ -580,7 +571,6 @@ Add custom property mods for the value of the 'cursor' property. Regular
 rows may not always need to show a pointer.
 
 - feat(table): new hover and active bg colors prototype
-
   - Active color on rows
   - Hover color on selected rows
 
@@ -601,7 +591,6 @@ some of these states.
 ## Also updates generated mods
 
 - fix(table): additional high contrast colors update
-
   - Adds hover and focus high contrast color styles.
   - Changes high contrast colors on section header.
   - Addresses high contrast icon colors for various states. Gives them the
@@ -609,7 +598,6 @@ some of these states.
     icon on hover and focus.
 
 - fix(table): checkboxCell spacing adjustment and freshen up branch
-
   - Fixes spacing with checkboxCells, by switching to margin instead of
     padding. Spacing token is right from the edge of the checkbox, and
     otherwise there is too much extra space from the row's line-height
@@ -643,7 +631,6 @@ Use newly released tokens to:
 
 - Replace hardcoded values for hover and active background colors.
 - Set thumbnail variant spacing, now with both density + size values.
-
   - feat(table): finalize vertical alignment spacing with new tokens
 
 Adjustments to make sure that cells maintain the same padding-block and
@@ -658,7 +645,6 @@ density + sizing.
 New snapshot tokens version with one more missing token.
 
 - fix(table): fix sizing token names with densities and whcm supports
-
   - Fix name of tokens for large and extra large with densities
   - Include @supports with fallback for usage of SelectedItem and
     SelectedItemText system colors, because they are fairly new.
@@ -724,7 +710,6 @@ tabindex from rows in multi-select variants with the checkbox cells.
 - style(checkbox): fix tabs indentation on additions for indeterminate
 
 - fix(table): cleanup for scrollable and swc
-
   - General cleanup for scrollable.
   - Simplify some checkbox box styles.
   - Avoid use of 'div' in selector to improve conversion to SWC.
@@ -736,12 +721,10 @@ requested "Column title". Following the Adobe Grammar & Mechanics UX
 writing style.
 
 - docs(table): minor example docs updates
-
   - Clarify some language.
   - Make sure all (second) columns marked as sortable are focusable.
 
 - fix(table): adjustments to quiet scrollable
-
   - Finalize quiet scrollable.
   - Use sentence case in Storybook as well.
 
