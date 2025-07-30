@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.0-next.7
+
+### Patch Changes
+
+Updated dependencies [[`8a39697`](https://github.com/adobe/spectrum-css/commit/8a3969751718d45ff1a4a0656e842cf490a8da94)]:
+
+- @spectrum-css/slider@7.0.0-next.4
+
 ## 2.0.0-next.6
 
 ### Patch Changes
