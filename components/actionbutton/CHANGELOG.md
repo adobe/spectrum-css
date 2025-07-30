@@ -23,7 +23,6 @@ This also includes a forced-colors/high contrast mode fix for the selected + dis
 📝 [#3540](https://github.com/adobe/spectrum-css/pull/3540) [`a8bb0b8`](https://github.com/adobe/spectrum-css/commit/a8bb0b89a5fe1cc9d09edf6a1d2249dde930757a) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
 - S2 Foundations fixes
-
   - Adjusts corner rounding for S2 foundations to follow S2 action button corner rounding, particularly to help give additional space to the help/corner triangle icon:
     - corner-radius-medium-size-extra-small
     - corner-radius-medium-size-small

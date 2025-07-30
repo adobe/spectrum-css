@@ -100,7 +100,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
-
   - `index-base.css`
   - `index-theme.css`
   - `themes/spectrum.css`
@@ -807,18 +806,15 @@ for the hover background color.
 ### Migration guide
 
 - **Additional classes**
-
   - `.spectrum-TreeView-label` is now required to wrap labels to enable truncation behavior
   - `.spectrum-Treeview-icon` is now required on all non-indicator icons
 
 - **Renamed classes**
-
   - `.spectrum-TreeView-standalone` renamed to `.spectrum-TreeView-detached`
   - `.spectrum-TreeView-indicator` renamed to `.spectrum-TreeView-itemIndicator`
   - `.spectrum-TreeView-icon` renamed to `.spectrum-TreeView-itemIcon`
 
 - **Moved classes**
-
   - `.is-drop-target` and `.is-selected` must be placed on the `.spectrum-TreeView-item` element
 
 - **Workflow icon size**

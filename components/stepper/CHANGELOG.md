@@ -22,7 +22,6 @@
 📝 [#3536](https://github.com/adobe/spectrum-css/pull/3536) [`f77aa72`](https://github.com/adobe/spectrum-css/commit/f77aa72486f98c7b7d4f449c0d54fb6801881b7e) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
 - S2 Foundations fixes
-
   - Adjusts the background-color of the infield button components within stepper to use `gray-100` as opposed to `gray-25`.
     - This corresponds to the background-color updates picker has for S2.
   - Corrects the border color for the default picker for S2 foundations, using `gray-500` (instead of `gray-800`) to align with other field/form components.
@@ -136,7 +135,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3359](https://github.com/adobe/spectrum-css/pull/3359) [`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b) Thanks [@cdransf](https://github.com/cdransf)!
 
 - This resolves our remaining stylelint issues around undefined tokens, rule order, unused values and color syntax.
-
   - Updates invalid color syntax from `rgba(N, N, N, N)` to `rgba(N N N / N)`.
   - In cases of duplicate properties, preserves the property that would be applied given current code structure.
   - Updates misnamed tokens to use valid tokens (`table/index.css`).
