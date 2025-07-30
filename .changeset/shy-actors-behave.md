@@ -1,8 +1,6 @@
 ---
-@spectrum-css/slider: major
+"@spectrum-css/slider": major
 ---
-
-### S2 Slider Migration
 
 #### New features
 
@@ -16,7 +14,6 @@
 - No longer a gap between slider handle and the track
 - Updated dimensions of slider handles for each size variant
 - Updated WHCM for all variants
-
 
 #### New tokens
 
