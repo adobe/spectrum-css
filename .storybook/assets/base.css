@@ -1,5 +1,3 @@
-/* stylelint-disable selector-class-pattern -- Targeting pre-defined Storybook classes */
-
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -89,4 +87,14 @@ svg:has(symbol):not(:has(use)) {
 	overflow: visible !important;
 }
 
-/* stylelint-enable selector-class-pattern */
+#panel-tab-content tr th:nth-child(1),
+#panel-tab-content tr th:nth-child(3),
+#panel-tab-content tr td:nth-child(1),
+#panel-tab-content tr td:nth-child(3) {
+	min-inline-size: 100px !important;
+}
+
+#panel-tab-content tr th:nth-child(2),
+#panel-tab-content tr td:nth-child(2) {
+	max-inline-size: 500px !important;
+}

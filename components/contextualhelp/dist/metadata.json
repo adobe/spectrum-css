@@ -8,33 +8,116 @@
     ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body",
     ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading"
   ],
-  "modifiers": [
-    "--mod-contextual-help-body-color",
-    "--mod-contextual-help-heading-color",
-    "--mod-spectrum-contextual-help-body-size",
-    "--mod-spectrum-contextual-help-content-spacing",
-    "--mod-spectrum-contextual-help-heading-size",
-    "--mod-spectrum-contextual-help-link-spacing",
-    "--mod-spectrum-contextual-help-minimum-width",
-    "--mod-spectrum-contextual-help-padding",
-    "--mod-spectrum-contextual-help-popover-maximum-width"
-  ],
-  "component": [
-    "--spectrum-contextual-help-body-size",
-    "--spectrum-contextual-help-content-spacing",
-    "--spectrum-contextual-help-minimum-width",
-    "--spectrum-contextual-help-title-size"
-  ],
-  "global": [
-    "--spectrum-body-color",
-    "--spectrum-heading-color",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-400"
-  ],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-contextual-help-body-color",
-    "--highcontrast-contextual-help-heading-color"
-  ]
+  "modifiers": {
+    "mod-spectrum-contextual-help-minimum-width": {
+      "description": "Used by `.spectrum-ContextualHelp`. <br/>Defaults to `var(--spectrum-contextual-help-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-spectrum-contextual-help-padding": {
+      "description": "Used by `.spectrum-ContextualHelp-popover`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-spectrum-contextual-help-body-size": {
+      "description": "Used by `.spectrum-ContextualHelp-popover`. <br/>Defaults to `var(--spectrum-contextual-help-body-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-body-color": {
+      "description": "Used by `.spectrum-ContextualHelp-popover`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-spectrum-contextual-help-popover-maximum-width": {
+      "description": "Used by `.spectrum-ContextualHelp-popover`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-spectrum-contextual-help-content-spacing": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-content-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-spectrum-contextual-help-heading-size": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-title-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-heading-color": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-heading-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-spectrum-contextual-help-link-spacing": {
+      "description": "Used by `.spectrum-ContextualHelp-link`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-contextual-help-minimum-width": {
+      "value": "268px",
+      "description": "Used by `.spectrum-ContextualHelp`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-body-size": {
+      "value": "var(--spectrum-body-size-xs)",
+      "description": "Used by `.spectrum-ContextualHelp-popover`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-content-spacing": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-title-size": {
+      "value": "var(--spectrum-heading-size-xxs)",
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-spacing-400": {
+      "value": "24px",
+      "description": "Used by `.spectrum-ContextualHelp-popover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `.spectrum-ContextualHelp-popover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-heading-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `.spectrum-ContextualHelp-link`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-contextual-help-body-color": {
+      "value": "var(--mod-contextual-help-body-color, var(--spectrum-body-color))",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover`. <br/>Defaults to `var(--mod-contextual-help-body-color, var(--spectrum-body-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-contextual-help-heading-color": {
+      "value": "var(--mod-contextual-help-heading-color, var(--spectrum-heading-color))",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--mod-contextual-help-heading-color, var(--spectrum-heading-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

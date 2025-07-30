@@ -178,6 +178,7 @@
 		},
 		"report": {
 			"cache": true,
+			"dependsOn": [{ "projects": ["tokens"], "target": "build" }],
 			"executor": "nx:run-commands",
 			"inputs": ["styles", "postcss", "stylelint", "reporter"],
 			"options": {

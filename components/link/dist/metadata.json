@@ -11,38 +11,158 @@
     ".spectrum-Link:focus-visible",
     ".spectrum-Link:hover"
   ],
-  "modifiers": [
-    "--mod-link-animation-duration",
-    "--mod-link-text-color",
-    "--mod-link-text-color-active",
-    "--mod-link-text-color-black",
-    "--mod-link-text-color-focus",
-    "--mod-link-text-color-hover",
-    "--mod-link-text-color-primary-active",
-    "--mod-link-text-color-primary-default",
-    "--mod-link-text-color-primary-focus",
-    "--mod-link-text-color-primary-hover",
-    "--mod-link-text-color-secondary-active",
-    "--mod-link-text-color-secondary-default",
-    "--mod-link-text-color-secondary-focus",
-    "--mod-link-text-color-secondary-hover",
-    "--mod-link-text-color-white"
-  ],
-  "component": [],
-  "global": [
-    "--spectrum-accent-content-color-default",
-    "--spectrum-accent-content-color-down",
-    "--spectrum-accent-content-color-hover",
-    "--spectrum-accent-content-color-key-focus",
-    "--spectrum-animation-duration-100",
-    "--spectrum-black",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-white"
-  ],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-link-text-color"]
+  "modifiers": {
+    "mod-link-text-color": {
+      "description": "Defined in `.spectrum-Link--secondary`, `.spectrum-Link:active`, `.spectrum-Link:focus-visible`, `.spectrum-Link:hover`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--mod-link-text-color-primary-default, var(--spectrum-accent-content-color-default))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-secondary-default": {
+      "description": "Used by `--mod-link-text-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-hover": {
+      "description": "Defined in `.spectrum-Link--secondary`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `--mod-link-text-color`. <br/>Defaults to `var(--mod-link-text-color-primary-hover, var(--spectrum-accent-content-color-hover))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-secondary-hover": {
+      "description": "Used by `--mod-link-text-color-hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-active": {
+      "description": "Defined in `.spectrum-Link--secondary`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `--mod-link-text-color`. <br/>Defaults to `var(--mod-link-text-color-primary-active, var(--spectrum-accent-content-color-down))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-secondary-active": {
+      "description": "Used by `--mod-link-text-color-active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-focus": {
+      "description": "Defined in `.spectrum-Link--secondary`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `--mod-link-text-color`. <br/>Defaults to `var(--mod-link-text-color-primary-focus, var(--spectrum-accent-content-color-key-focus))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-secondary-focus": {
+      "description": "Used by `--mod-link-text-color-focus`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-animation-duration": {
+      "description": "Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-primary-default": {
+      "description": "Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-accent-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-primary-active": {
+      "description": "Used by `--mod-link-text-color`. <br/>Defaults to `var(--spectrum-accent-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-primary-focus": {
+      "description": "Used by `--mod-link-text-color`. <br/>Defaults to `var(--spectrum-accent-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-primary-hover": {
+      "description": "Used by `--mod-link-text-color`. <br/>Defaults to `var(--spectrum-accent-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-white": {
+      "description": "Used by `--mod-link-text-color`, `--mod-link-text-color-hover`, `--mod-link-text-color-active`, `--mod-link-text-color-focus`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-black": {
+      "description": "Used by `--mod-link-text-color`, `--mod-link-text-color-hover`, `--mod-link-text-color-active`, `--mod-link-text-color-focus`. <br/>Defaults to `var(--spectrum-black)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {},
+  "global": {
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--mod-link-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-link-text-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-link-text-color-active`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-link-text-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-Link`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Used by `.spectrum-Link`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-down": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-link-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-key-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-link-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-link-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(255, 255, 255))",
+      "description": "Used by `--mod-link-text-color`, `--mod-link-text-color-hover`, `--mod-link-text-color-active`, `--mod-link-text-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-black": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--mod-link-text-color`, `--mod-link-text-color-hover`, `--mod-link-text-color-active`, `--mod-link-text-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-link-text-color": {
+      "value": "var(--mod-link-text-color, var(--mod-link-text-color-primary-default, var(--spectrum-accent-content-color-default)))",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--mod-link-text-color, var(--mod-link-text-color-primary-default, var(--spectrum-accent-content-color-default)))`, if not set.",
+      "control": "color"
+    }
+  }
 }

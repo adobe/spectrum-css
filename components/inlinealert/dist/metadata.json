@@ -16,94 +16,463 @@
     ".spectrum-InLineAlert-header",
     ".spectrum-InLineAlert-icon"
   ],
-  "modifiers": [
-    "--mod-inlinealert-background-color",
-    "--mod-inlinealert-border-and-icon-color",
-    "--mod-inlinealert-border-and-icon-color-info",
-    "--mod-inlinealert-border-and-icon-color-negative",
-    "--mod-inlinealert-border-and-icon-color-notice",
-    "--mod-inlinealert-border-and-icon-color-positive",
-    "--mod-inlinealert-border-radius",
-    "--mod-inlinealert-border-width",
-    "--mod-inlinealert-content-color",
-    "--mod-inlinealert-content-font-family",
-    "--mod-inlinealert-content-font-size",
-    "--mod-inlinealert-content-font-style",
-    "--mod-inlinealert-content-font-weight",
-    "--mod-inlinealert-content-line-height",
-    "--mod-inlinealert-header-color",
-    "--mod-inlinealert-header-min-block-size",
-    "--mod-inlinealert-heading-font-family",
-    "--mod-inlinealert-heading-font-size",
-    "--mod-inlinealert-heading-font-style",
-    "--mod-inlinealert-heading-font-weight",
-    "--mod-inlinealert-heading-line-height",
-    "--mod-inlinealert-icon-size",
-    "--mod-inlinealert-min-inline-size",
-    "--mod-inlinealert-spacing-edge-to-text",
-    "--mod-inlinealert-spacing-header-content-button",
-    "--mod-inlinealert-spacing-header-to-icon"
-  ],
-  "component": [
-    "--spectrum-in-line-alert-minimum-width",
-    "--spectrum-inlinealert-background-color",
-    "--spectrum-inlinealert-border-and-icon-color",
-    "--spectrum-inlinealert-border-and-icon-color-info",
-    "--spectrum-inlinealert-border-and-icon-color-negative",
-    "--spectrum-inlinealert-border-and-icon-color-notice",
-    "--spectrum-inlinealert-border-and-icon-color-positive",
-    "--spectrum-inlinealert-border-radius",
-    "--spectrum-inlinealert-border-width",
-    "--spectrum-inlinealert-content-color",
-    "--spectrum-inlinealert-content-font-family",
-    "--spectrum-inlinealert-content-font-size",
-    "--spectrum-inlinealert-content-font-style",
-    "--spectrum-inlinealert-content-font-weight",
-    "--spectrum-inlinealert-content-line-height",
-    "--spectrum-inlinealert-header-color",
-    "--spectrum-inlinealert-header-min-block-size",
-    "--spectrum-inlinealert-heading-font-family",
-    "--spectrum-inlinealert-heading-font-size",
-    "--spectrum-inlinealert-heading-font-style",
-    "--spectrum-inlinealert-heading-font-weight",
-    "--spectrum-inlinealert-heading-line-height",
-    "--spectrum-inlinealert-icon-size",
-    "--spectrum-inlinealert-min-inline-size",
-    "--spectrum-inlinealert-spacing-edge-to-text",
-    "--spectrum-inlinealert-spacing-header-content-button",
-    "--spectrum-inlinealert-spacing-header-to-icon"
-  ],
-  "global": [
-    "--spectrum-background-layer-2-color",
-    "--spectrum-body-color",
-    "--spectrum-body-line-height",
-    "--spectrum-body-sans-serif-font-style",
-    "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-body-size-s",
-    "--spectrum-border-width-200",
-    "--spectrum-component-height-50",
-    "--spectrum-corner-radius-100",
-    "--spectrum-heading-color",
-    "--spectrum-heading-line-height",
-    "--spectrum-heading-sans-serif-font-style",
-    "--spectrum-heading-sans-serif-font-weight",
-    "--spectrum-heading-size-xxs",
-    "--spectrum-informative-visual-color",
-    "--spectrum-negative-visual-color",
-    "--spectrum-neutral-visual-color",
-    "--spectrum-notice-visual-color",
-    "--spectrum-positive-visual-color",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-400",
-    "--spectrum-workflow-icon-size-100"
-  ],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-inlinealert-background-color",
-    "--highcontrast-inlinealert-border-and-icon-color",
-    "--highcontrast-inlinealert-content-color",
-    "--highcontrast-inlinealert-header-color"
-  ]
+  "modifiers": {
+    "mod-inlinealert-min-inline-size": {
+      "description": "Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-inlinealert-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-spacing-edge-to-text": {
+      "description": "Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-inlinealert-spacing-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-border-width": {
+      "description": "Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-inlinealert-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-border-radius": {
+      "description": "Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-inlinealert-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-background-color": {
+      "description": "Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-inlinealert-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-border-and-icon-color": {
+      "description": "Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-inlinealert-border-and-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-icon-size": {
+      "description": "Used by `.spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-inlinealert-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-spacing-header-to-icon": {
+      "description": "Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-inlinealert-spacing-header-to-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-heading-font-weight": {
+      "description": "Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-inlinealert-heading-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-heading-font-family": {
+      "description": "Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-inlinealert-heading-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-heading-font-style": {
+      "description": "Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-inlinealert-heading-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-heading-font-size": {
+      "description": "Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-inlinealert-heading-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-heading-line-height": {
+      "description": "Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-inlinealert-heading-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-header-min-block-size": {
+      "description": "Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-inlinealert-header-min-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-header-color": {
+      "description": "Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-inlinealert-header-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-content-font-weight": {
+      "description": "Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-inlinealert-content-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-content-font-family": {
+      "description": "Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-inlinealert-content-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-content-font-style": {
+      "description": "Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-inlinealert-content-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-content-font-size": {
+      "description": "Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-inlinealert-content-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-content-line-height": {
+      "description": "Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-inlinealert-content-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-content-color": {
+      "description": "Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-inlinealert-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-spacing-header-content-button": {
+      "description": "Used by `.spectrum-InLineAlert-content, .spectrum-InLineAlert-footer`. <br/>Defaults to `var(--spectrum-inlinealert-spacing-header-content-button)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-border-and-icon-color-info": {
+      "description": "Used by `.spectrum-InLineAlert--info`, `.spectrum-InLineAlert--info .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-inlinealert-border-and-icon-color-info)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-border-and-icon-color-notice": {
+      "description": "Used by `.spectrum-InLineAlert--notice`, `.spectrum-InLineAlert--notice .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-inlinealert-border-and-icon-color-notice)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-border-and-icon-color-positive": {
+      "description": "Used by `.spectrum-InLineAlert--positive`, `.spectrum-InLineAlert--positive .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-inlinealert-border-and-icon-color-positive)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-inlinealert-border-and-icon-color-negative": {
+      "description": "Used by `.spectrum-InLineAlert--negative`, `.spectrum-InLineAlert--negative .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-inlinealert-border-and-icon-color-negative)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-inlinealert-heading-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-heading-font-weight": {
+      "value": "700",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-heading-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-heading-font-size": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-heading-size-xxs)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-heading-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-heading-line-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-content-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-content-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-content-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-content-font-size": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-body-size-s)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-content-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-body-line-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-border-width": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-border-radius": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-icon-size": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-workflow-icon-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-min-inline-size": {
+      "value": "240px",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-in-line-alert-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-line-alert-minimum-width": {
+      "value": "240px",
+      "description": "Used by `--spectrum-inlinealert-min-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-header-min-block-size": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-component-height-50)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-spacing-edge-to-text": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-spacing-header-to-icon": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-spacing-header-content-button": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-content, .spectrum-InLineAlert-footer`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-background-color": {
+      "value": "var(--spectrum-gray-75)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-border-and-icon-color": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--spectrum-neutral-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-header-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--spectrum-heading-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-content-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-border-and-icon-color-info": {
+      "value": "var(--spectrum-informative-color-900)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert--info`, `.spectrum-InLineAlert--info .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-informative-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-border-and-icon-color-positive": {
+      "value": "var(--spectrum-positive-color-900)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert--positive`, `.spectrum-InLineAlert--positive .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-positive-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-border-and-icon-color-notice": {
+      "value": "var(--spectrum-notice-color-900)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert--notice`, `.spectrum-InLineAlert--notice .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-notice-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-inlinealert-border-and-icon-color-negative": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert--negative`, `.spectrum-InLineAlert--negative .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--spectrum-negative-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-inlinealert-heading-font-family`, `--spectrum-inlinealert-content-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-inlinealert-heading-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-inlinealert-heading-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-xxs": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-inlinealert-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-line-height": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-inlinealert-heading-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-inlinealert-content-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-inlinealert-content-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-s": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-inlinealert-content-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-line-height": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-inlinealert-content-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-inlinealert-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-inlinealert-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-inlinealert-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-50": {
+      "value": "20px",
+      "description": "Used by `--spectrum-inlinealert-header-min-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-400": {
+      "value": "24px",
+      "description": "Used by `--spectrum-inlinealert-spacing-edge-to-text`, `--spectrum-inlinealert-spacing-header-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-inlinealert-spacing-header-content-button`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-background-layer-2-color": {
+      "value": "var(--spectrum-gray-75)",
+      "description": "Used by `--spectrum-inlinealert-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-visual-color": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Used by `--spectrum-inlinealert-border-and-icon-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-heading-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-inlinealert-header-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-inlinealert-content-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-informative-visual-color": {
+      "value": "var(--spectrum-informative-color-900)",
+      "description": "Used by `--spectrum-inlinealert-border-and-icon-color-info`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-positive-visual-color": {
+      "value": "var(--spectrum-positive-color-900)",
+      "description": "Used by `--spectrum-inlinealert-border-and-icon-color-positive`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-notice-visual-color": {
+      "value": "var(--spectrum-notice-color-900)",
+      "description": "Used by `--spectrum-inlinealert-border-and-icon-color-notice`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-visual-color": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Used by `--spectrum-inlinealert-border-and-icon-color-negative`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-inlinealert-background-color": {
+      "value": "var(--mod-inlinealert-background-color, var(--spectrum-inlinealert-background-color))",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert`. <br/>Defaults to `var(--mod-inlinealert-background-color, var(--spectrum-inlinealert-background-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-inlinealert-border-and-icon-color": {
+      "value": "var(--mod-inlinealert-border-and-icon-color-negative, var(--spectrum-inlinealert-border-and-icon-color-negative))",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert`, `.spectrum-InLineAlert--info`, `.spectrum-InLineAlert--info .spectrum-InLineAlert-icon`, `.spectrum-InLineAlert--notice`, `.spectrum-InLineAlert--notice .spectrum-InLineAlert-icon`, `.spectrum-InLineAlert--positive`, `.spectrum-InLineAlert--positive .spectrum-InLineAlert-icon`, `.spectrum-InLineAlert--negative`, `.spectrum-InLineAlert--negative .spectrum-InLineAlert-icon`. <br/>Defaults to `var(--mod-inlinealert-border-and-icon-color-negative, var(--spectrum-inlinealert-border-and-icon-color-negative))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-inlinealert-header-color": {
+      "value": "var(--mod-inlinealert-header-color, var(--spectrum-inlinealert-header-color))",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-header`. <br/>Defaults to `var(--mod-inlinealert-header-color, var(--spectrum-inlinealert-header-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-inlinealert-content-color": {
+      "value": "var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color))",
+      "description": "Defined in `.spectrum-InLineAlert`. <br/>Used by `.spectrum-InLineAlert-content`. <br/>Defaults to `var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

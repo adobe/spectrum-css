@@ -1,10 +1,12 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { AlertDialogGroup } from "./alertdialog.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.
@@ -56,6 +58,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: metadata.modifiers,
 	},
 	decorators: [
 		withUnderlayWrapper,

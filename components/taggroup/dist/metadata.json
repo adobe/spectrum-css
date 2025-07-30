@@ -1,16 +1,41 @@
 {
   "sourceFile": "index.css",
   "selectors": [".spectrum-TagGroup", ".spectrum-TagGroup-item"],
-  "modifiers": [
-    "--mod-tag-group-item-margin-block",
-    "--mod-tag-group-item-margin-inline"
-  ],
-  "component": [
-    "--spectrum-tag-group-item-margin-block",
-    "--spectrum-tag-group-item-margin-inline"
-  ],
-  "global": ["--spectrum-spacing-75"],
-  "system-theme": [],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-tag-group-item-margin-block": {
+      "description": "Used by `.spectrum-TagGroup-item`. <br/>Defaults to `var(--spectrum-tag-group-item-margin-block)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-group-item-margin-inline": {
+      "description": "Used by `.spectrum-TagGroup-item`. <br/>Defaults to `var(--spectrum-tag-group-item-margin-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-tag-group-item-margin-block": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-TagGroup`. <br/>Used by `.spectrum-TagGroup-item`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-group-item-margin-inline": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-TagGroup`. <br/>Used by `.spectrum-TagGroup-item`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-spacing-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tag-group-item-margin-block`, `--spectrum-tag-group-item-margin-inline`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {},
+  "passthroughs": {},
+  "high-contrast": {}
 }

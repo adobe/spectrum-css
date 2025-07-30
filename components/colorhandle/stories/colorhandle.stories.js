@@ -1,9 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ColorHandleGroup } from "./colorhandle.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The color handle component is used with [color area](/docs/components-color-area--docs), [color slider](/docs/components-color-slider--docs) and [color wheel](/docs/components-color-wheel--docs) as the color selector.
@@ -52,6 +54,7 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: metadata.modifiers,
 	},
 };
 

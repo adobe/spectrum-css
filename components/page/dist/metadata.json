@@ -1,16 +1,58 @@
 {
   "sourceFile": "index.css",
   "selectors": [":root"],
-  "modifiers": ["--mod-page-background", "--mod-page-content-tap-highlight"],
-  "component": [
-    "--spectrum-page-background-color",
-    "--spectrum-page-content-tap-highlight"
-  ],
-  "global": ["--spectrum-gray-75", "--spectrum-transparent-black-25"],
-  "system-theme": [
-    "--system-root-page-background-color",
-    "--system-root-page-content-tap-highlight"
-  ],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-page-background": {
+      "description": "Used by `:root`. <br/>Defaults to `var(--spectrum-page-background-color)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-page-content-tap-highlight": {
+      "description": "Used by `:root`. <br/>Defaults to `var(--spectrum-page-content-tap-highlight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-page-background-color": {
+      "value": "var(--system-root-page-background-color)",
+      "description": "Defined in `:root`. <br/>Used by `:root`. <br/>Defaults to `var(--system-root-page-background-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-page-content-tap-highlight": {
+      "value": "var(--system-root-page-content-tap-highlight)",
+      "description": "Defined in `:root`. <br/>Used by `:root`. <br/>Defaults to `var(--system-root-page-content-tap-highlight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-75": {
+      "value": "light-dark(rgb(243, 243, 243), rgb(34, 34, 34))",
+      "description": "Used by `--system-root-page-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-25": {
+      "value": "light-dark(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))",
+      "description": "Used by `--system-root-page-content-tap-highlight`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "system-theme": {
+    "system-root-page-background-color": {
+      "value": "var(--spectrum-gray-75)",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-page-background-color`. <br/>Defaults to `var(--spectrum-gray-75)`, if not set.",
+      "control": "color"
+    },
+    "system-root-page-content-tap-highlight": {
+      "value": "var(--spectrum-transparent-black-25)",
+      "description": "Defined in `.spectrum`. <br/>Used by `--spectrum-page-content-tap-highlight`. <br/>Defaults to `var(--spectrum-transparent-black-25)`, if not set.",
+      "control": "text"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {}
 }
