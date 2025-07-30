@@ -344,10 +344,9 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - fix(menu)!: reimplement text truncating (#2299)([9752d02](https://github.com/adobe/spectrum-css/commit/9752d02)), closes[#2299](https://github.com/adobe/spectrum-css/issues/2299)
 
-  ###
+### 🛑 BREAKING CHANGES
 
-  🛑 BREAKING CHANGES
-  - removes flex-based display, renames classes, reintroduces truncation
+- removes flex-based display, renames classes, reintroduces truncation
 
 Additionally:
 

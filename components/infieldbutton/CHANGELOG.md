@@ -301,67 +301,41 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - feat(stepper)!: stepper migrate tokens (#1960)([3a4c217](https://github.com/adobe/spectrum-css/commit/3a4c217)), closes[#1960](https://github.com/adobe/spectrum-css/issues/1960)
 
-  ###
+### 🛑 BREAKING CHANGES
 
-  🛑 BREAKING CHANGES
-  - migrates Stepper to use `@adobe/spectrum-tokens`
+- migrates Stepper to use `@adobe/spectrum-tokens`
 
 Additionally:
 
 - style(infieldbutton!): begin updating css to tokens
-
 - style(infieldbutton): updating css to tokens
-
 - style(infieldbutton): add color styling and spacing
-
 - style(infieldbutton): disabled colors and quiet colors
-
 - feat(infieldbutton): add icon t shirt sizing
-
 - docs(infieldbutton): update mods and remove unneeded file
-
 - refactor(infieldbutton): fix stylelint errors and remove invalid
-
 - chore(infieldbutton): removing dependency for tokens
-
 - fix(infieldbutton): remove dependency from package json
-
 - fix(infieldbutton): reset yarn file to main
-
 - fix(infieldbutton): fix express border radius
-
 - style(infieldbutton): removed disabled background color change on hover
-
 - docs(infieldbutton): update aria labels and remove icon only example
-
 - refactor(infieldbutton): update to utilize tokens that have express values
-
 - style(stepper): get borders for buttons migrated and working
-
 - style(stepper): add additional stepper button tokens
-
 - style(stepper): fixing express button spacing
-
 - refactor(stepper): clean up css
 
 remove duplicate css and use mods
 
 - docs(stepper): update mods
-
 - chore(stepper): update storybook defaults and remove skin import
-
 - style(stepper): finish invalid and high contrast styling
-
 - fix(stepper): remove border width from padding
-
 - chore(stepper): bump tokens release
-
 - docs(stepper): adding sizing examples
-
 - fix(stepper): fix quiet no-stepper variant from showing border
-
 - fix(icon): updating icon to prevent size overrides
-
 - chore(stepper): fix linter errors
 
 use logical properties
@@ -369,23 +343,14 @@ use flex-flow shorthand property
 fix max nesting depth
 
 - feat(stepper): use infield button and new small chevron
-
 - fix(stepper): fix express button placement
-
 - chore(stepper): update docs examples to all use infield button
-
 - fix(stepper): update express and quiet styling
-
 - chore(stepper): update storybook stories
-
 - chore(stepper): update story to use number type textfield
-
 - chore(stepper): removing stepUp and stepDown classes
-
 - chore(stepper): remove unused variables
-
 - chore(stepper): manual version increase for beta release
-
 - docs: specify type attribute on button elements
 
 Button elements should specify a type of "button", otherwise they

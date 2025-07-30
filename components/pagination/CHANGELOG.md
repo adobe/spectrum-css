@@ -294,10 +294,9 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - feat(pagination)!: migrate to spectrum tokens package([f29a74d](https://github.com/adobe/spectrum-css/commit/f29a74d))
 
-  ###
+### 🛑 BREAKING CHANGES
 
-  🛑 BREAKING CHANGES
-  - Replaces DNA tokens with Spectrum tokens.
+- Replaces DNA tokens with Spectrum tokens.
 
 Update build to use Spectrum tokens.
 Remove skin.css and incorporate its CSS into index.css.
