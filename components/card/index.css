@@ -149,7 +149,7 @@
 	}
 
 	&.is-selected::before {
-		background-color: rgba(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--spectrum-card-selected-background-opacity));
+		background-color: rgb(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--spectrum-card-selected-background-opacity));
 	}
 
 	&.is-drop-target {
@@ -179,7 +179,7 @@
 	inline-size: var(--spectrum-card-actions-size);
 	block-size: var(--spectrum-card-actions-size);
 	border-radius: var(--spectrum-card-actions-border-radius);
-	background-color: rgba(var(--spectrum-card-actions-background-color-rgb), var(--spectrum-card-actions-background-color-opacity));
+	background-color: rgb(var(--spectrum-card-actions-background-color-rgb), var(--spectrum-card-actions-background-color-opacity));
 
 	inset-inline-start: calc(var(--spectrum-card-actions-spacing) - var(--spectrum-card-border-width));
 	inset-block-start: calc(var(--spectrum-card-actions-spacing) - var(--spectrum-card-border-width));
@@ -406,7 +406,7 @@
 	}
 
 	&.is-selected .spectrum-Card-preview::before {
-		background-color: rgba(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--mod-card-selected-background-opacity, var(--spectrum-card-selected-background-opacity)));
+		background-color: rgb(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--mod-card-selected-background-opacity, var(--spectrum-card-selected-background-opacity)));
 	}
 
 	.spectrum-Card-body {

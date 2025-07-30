@@ -13,9 +13,9 @@
 
 @container style(--system: spectrum) {
 	.spectrum-Menu {
-		--spectrum-menu-item-background-color-hover: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
-		--spectrum-menu-item-background-color-down: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
-		--spectrum-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+		--spectrum-menu-item-background-color-hover: rgb(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+		--spectrum-menu-item-background-color-down: rgb(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+		--spectrum-menu-item-background-color-key-focus: rgb(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
 
 		--spectrum-menu-item-corner-radius: var(--spectrum-corner-radius-100);
 

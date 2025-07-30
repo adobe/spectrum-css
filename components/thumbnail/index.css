@@ -66,7 +66,7 @@
 	--spectrum-thumbnail-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-sized-size));
 
 	/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-	--spectrum-thumbnail-border-color: var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity))));
+	--spectrum-thumbnail-border-color: var(--highcontrast-thumbnail-border-color, var(--mod-thumbnail-border-color, rgb(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity))));
 	--spectrum-thumbnail-border-color-selected: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-accent-color-800)));
 	--spectrum-thumbnail-border-width: var(--mod-thumbnail-border-width, var(--spectrum-border-width-100));
 	--spectrum-thumbnail-border-width-selected: var(--mod-thumbnail-border-width-selected, var(--spectrum-border-width-200));
