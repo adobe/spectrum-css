@@ -254,6 +254,7 @@ export const MenuItem = (
 		thumbnailUrl = "",
 		iconName,
 		iconSet = "workflow",
+		exclusiveFeatures = "none",
 		hasExternalLink = false,
 		hasActions = false,
 		id = getRandomId("menuitem"),
@@ -278,46 +279,65 @@ export const MenuItem = (
 		customStyles = {},
 	} = {},
 	context = {},
-) => html`
-	<li
-		class=${classMap({
-			[rootClass]: true,
-			"is-highlighted": isHighlighted,
-			"is-active": isActive,
-			"is-focus-visible": isFocused,
-			"is-selected": isSelected,
-			"is-disabled": isDisabled,
-			"is-hover": isHovered,
-			[`${rootClass}--drillIn`]: isDrillIn,
-			[`${rootClass}--collapsible`]: isCollapsible,
-			"is-open": isOpen,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${styleMap(customStyles)}
-		id=${ifDefined(id)}
-		role=${ifDefined(role)}
-		aria-selected=${isSelected ? "true" : "false"}
-		aria-disabled=${isDisabled ? "true" : "false"}
-		tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
-	>
-		${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, isUnavailable, rootClass, selectionMode, size, context })}
-		${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl, hasExternalLink, isDrillIn })}
-		${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
-		${when(description, () => Description({ description, rootClass }))}
-		${EndAction({ hasExternalLink, hasActions, idx, isUnavailable, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}
-		${when(isCollapsible && items.length > 0, () =>
-			Template(
-				{
-					items,
-					isOpen,
-					size,
-					shouldTruncate,
-				},
-				context,
-			),
-		)}
-	</li>
-`;
+) => {
+
+	if (exclusiveFeatures !== "none") {
+		switch (exclusiveFeatures) {
+			case "hasExternalLink":
+				hasExternalLink = true;
+				break;
+			case "hasThumbnail":
+				thumbnailUrl = "thumbnail.png";
+				break;
+			case "isDrillIn":
+				isDrillIn = true;
+				break;
+			default:
+				break;
+		}
+	}
+
+	return html`
+		<li
+			class=${classMap({
+				[rootClass]: true,
+				"is-highlighted": isHighlighted,
+				"is-active": isActive,
+				"is-focus-visible": isFocused,
+				"is-selected": isSelected,
+				"is-disabled": isDisabled,
+				"is-hover": isHovered,
+				[`${rootClass}--drillIn`]: isDrillIn,
+				[`${rootClass}--collapsible`]: isCollapsible,
+				"is-open": isOpen,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+			id=${ifDefined(id)}
+			role=${ifDefined(role)}
+			aria-selected=${isSelected ? "true" : "false"}
+			aria-disabled=${isDisabled ? "true" : "false"}
+			tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
+		>
+			${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, isUnavailable, rootClass, selectionMode, size, context })}
+			${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl, hasExternalLink, isDrillIn })}
+			${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
+			${when(description, () => Description({ description, rootClass }))}
+			${EndAction({ hasExternalLink, hasActions, idx, isUnavailable, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}
+			${when(isCollapsible && items.length > 0, () =>
+				Template(
+					{
+						items,
+						isOpen,
+						size,
+						shouldTruncate,
+					},
+					context,
+				),
+			)}
+		</li>
+	`;
+	};
 
 export const MenuGroup = (
 	{

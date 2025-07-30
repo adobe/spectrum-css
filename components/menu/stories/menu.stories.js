@@ -398,7 +398,7 @@ MenuItem.argTypes = {
 	},
 	iconName: {
 		...(IconStories?.argTypes?.iconName ?? {}),
-		if: { arg: "hasThumbnail", truthy: false },
+		if: { arg: "exclusiveFeatures", neq: "hasThumbnail" },
 	},
 	hasActions: {
 		name: "Has switches",
@@ -412,51 +412,27 @@ MenuItem.argTypes = {
 		control: "boolean",
 		if: { arg: "selectionMode", eq: "multiple" },
 	},
-	hasExternalLink: {
-		name: "Has external link",
-		description: "Has external link action",
-		type: { name: "boolean" },
+	exclusiveFeatures: {
+		name: "Mutually exclusive features",
+		description: "These options are intended to never be used in combination with each other:\n- `hasExternalLink`: Displays external link icon\n- `hasThumbnail`: Displays a thumbnail, taking the place of an icon\n- `isDrillIn`: Displays submenu indicator",
+		options: ['none', 'hasExternalLink', 'hasThumbnail', 'isDrillIn'],
+		control: "select",
 		table: {
-			type: { summary: "boolean" },
+			type: { summary: "string" },
 			category: "Content",
 		},
-		control: "boolean",
-		if: { arg: "selectionMode", eq: "none" },
-	},
-	hasThumbnail: {
-		name: "Has thumbnail",
-		description: "Displays a thumbnail in the label",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Content",
-		},
-		control: "boolean",
-		if: { arg: "hasExternalLink", truthy: false },
-	},
-	isDrillIn: {
-		name: "Is drill-in",
-		description: "Displays drill-in menu indicator",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Content",
-		},
-		control: "boolean",
-		if: { arg: "hasExternalLink", truthy: false },
-
 	},
 	isUnavailable: {
 		name: "Is unavailable",
 		description:
-			"Displays unavailable icon intended to toggle explanatory popover",
+			"Displays unavailable icon intended to toggle explanatory popover.\n\nShould not be used with external links, drill-ins, or selectable items",
 		type: { name: "boolean" },
 		table: {
 			type: { summary: "boolean" },
 			category: "Content",
 		},
 		control: "boolean",
-		if: { arg: "hasExternalLink", truthy: false },
+		if: { arg: "exclusiveFeatures", neq: "hasExternalLink" },
 	},
 	// These settings are not used in the MenuItem story
 	hasDividers: { table: { disable: true } },
@@ -464,19 +440,17 @@ MenuItem.argTypes = {
 };
 MenuItem.args = {
 	label: "Start a chat",
-	iconName: "Comment",
 	description: "Menu item description",
 	value: "⌘ N",
+	iconName: "Comment",
+	exclusiveFeatures: "none",
 	isUnavailable: false,
 	isDisabled: false,
 	isActive: false,
 	isFocused: false,
 	isHovered: false,
 	isSelected: false,
-	hasActions: false,
-	hasExternalLink: false,
-	hasThumbnail: false,
-	isDrillIn: false,
+	hasActions: false
 };
 MenuItem.parameters = {
 	design: {
