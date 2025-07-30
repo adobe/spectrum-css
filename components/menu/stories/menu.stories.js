@@ -667,12 +667,80 @@ MenuItemSelection.parameters = {
  * The last item in each of these menus is disabled. A menu item in a disabled state shows that an option exists, but
  * is not available in that circumstance. This state can be used to maintain layout continuity and to communicate that
  * an action may become available later.
+ *
+ * To explain why an option is not actionable and keep it navigable, instead use the [_unavailable_ menu item type](#unavailable%20items).
  */
 export const DisabledItems = DisabledItemGroup.bind({});
 DisabledItems.storyName = "Disabled items";
 DisabledItems.tags = ["!dev"];
 DisabledItems.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The "Unavailable" menu item type may be used when the item is inactive and requires further explanation.
+ * The menu item should toggle a popover containing the explanation of why the item is unavailable.
+ * In the example, the first item is marked as "unavailable" as noted by the icon.
+ *
+ * This is not the same as disabled, since the item can still be navigated to, but just has unavailable functionality.
+ *
+ * Items with drill-in submenus, external links, or that are selectable cannot be made unavailable.
+ */
+export const UnavailableItems = Template.bind({});
+UnavailableItems.storyName = "Unavailable items";
+UnavailableItems.tags = ["!dev"];
+UnavailableItems.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+UnavailableItems.args = {
+	items: [
+		{
+			label: "Marquee",
+			isSelected: true,
+			iconName: "SelectRectangle",
+			isUnavailable: true
+		},
+		{
+			label: "Add",
+			iconName: "SelectMulti",
+		},
+		{
+			label: "Subtract",
+			iconName: "SelectNone",
+		},
+	],
+};
+
+/**
+ * If a menu item will navigate away from the application, it may use the external link icon.
+ *
+ * Menu item types not valid as external links include those with thumbnails, selection modes,
+ * drill-in submenus, or marked as "unavailable".
+ */
+export const ExternalLinks = Template.bind({});
+ExternalLinks.storyName = "External links";
+ExternalLinks.tags = ["!dev"];
+ExternalLinks.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+ExternalLinks.args = {
+	items: [
+		{
+			label: "An offsite link item",
+			hasExternalLink: true
+		},
+		{
+			label: "Link with item icon",
+			iconName: "Chat",
+			hasExternalLink: true
+		},
+		{
+			label: "An external link",
+			iconName: "Folder",
+			description: "And an additional description",
+			hasExternalLink: true
+		},
+	],
 };
 
 /**
