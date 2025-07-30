@@ -4314,7 +4314,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/bundle@npm:2.0.0-next.6, @spectrum-css/bundle@workspace:tools/bundle":
+"@spectrum-css/bundle@npm:2.0.0-next.7, @spectrum-css/bundle@workspace:tools/bundle":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/bundle@workspace:tools/bundle"
   dependencies:
@@ -4381,7 +4381,7 @@ __metadata:
     "@spectrum-css/rating": "npm:7.0.0-next.2"
     "@spectrum-css/search": "npm:9.0.0-next.2"
     "@spectrum-css/sidenav": "npm:8.0.0-next.2"
-    "@spectrum-css/slider": "npm:7.0.0-next.3"
+    "@spectrum-css/slider": "npm:7.0.0-next.4"
     "@spectrum-css/splitview": "npm:8.0.0-next.0"
     "@spectrum-css/statuslight": "npm:10.0.0-next.2"
     "@spectrum-css/steplist": "npm:8.0.0-next.2"
@@ -5347,7 +5347,7 @@ __metadata:
     "@babel/core": "npm:^7.28.0"
     "@chromatic-com/storybook": "npm:^3.2.7"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
-    "@spectrum-css/bundle": "npm:2.0.0-next.6"
+    "@spectrum-css/bundle": "npm:2.0.0-next.7"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
     "@spectrum-css/ui-icons": "npm:2.0.0-next.2"
     "@storybook/addon-a11y": "npm:8.4.7"
@@ -5487,7 +5487,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/slider@npm:7.0.0-next.3, @spectrum-css/slider@workspace:components/slider":
+"@spectrum-css/slider@npm:7.0.0-next.4, @spectrum-css/slider@workspace:components/slider":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/slider@workspace:components/slider"
   dependencies:
