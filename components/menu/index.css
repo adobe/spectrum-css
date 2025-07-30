@@ -300,11 +300,14 @@
 		}
 	}
 
+	&.is-selectable,
 	&.is-selectableMultiple {
 		.spectrum-Menu-item {
 			align-items: start;
 		}
+	}
 
+	&.is-selectableMultiple {
 		.spectrum-Menu-itemCheckbox {
 			grid-area: checkmarkArea;
 		}
@@ -429,7 +432,7 @@
 	grid-template-rows: 1fr auto;
 
 	/* Alignment adjustments if there's a thumbnail */
-	&:has(> .spectrum-Menu-itemThumbnail) {
+	&:has(> .spectrum-Menu-itemThumbnail):not(:has(.spectrum-Menu-itemSwitch)) {
 		> .spectrum-Menu-itemCheckbox,
 		> .spectrum-Menu-checkmark,
 		> .spectrum-Menu-itemActions,
