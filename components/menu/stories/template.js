@@ -337,7 +337,7 @@ export const MenuItem = (
 			)}
 		</li>
 	`;
-	};
+};
 
 export const MenuGroup = (
 	{

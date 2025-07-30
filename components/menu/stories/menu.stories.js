@@ -415,7 +415,7 @@ MenuItem.argTypes = {
 	exclusiveFeatures: {
 		name: "Mutually exclusive features",
 		description: "These options are intended to never be used in combination with each other:\n- `hasExternalLink`: Displays external link icon\n- `hasThumbnail`: Displays a thumbnail, taking the place of an icon\n- `isDrillIn`: Displays submenu indicator",
-		options: ['none', 'hasExternalLink', 'hasThumbnail', 'isDrillIn'],
+		options: ["none", "hasExternalLink", "hasThumbnail", "isDrillIn"],
 		control: "select",
 		table: {
 			type: { summary: "string" },
