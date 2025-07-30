@@ -1,5 +1,14 @@
 # Change Log
 
+## 12.0.5-next.9
+
+### Patch Changes
+
+Updated dependencies [[`7f48b7c`](https://github.com/adobe/spectrum-css/commit/7f48b7c6384f8c7d598637226a17aff1c8e8b61c)]:
+
+- @spectrum-css/tokens@16.1.0-next.7
+- @spectrum-css/bundle@2.0.0-next.6
+
 ## 12.0.5-next.8
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # Change log
 
+## 5.0.0-next.3
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
 ## 5.0.0-next.2
 
 ### Major Changes
@@ -7,7 +15,6 @@
 - [#3683](https://github.com/adobe/spectrum-css/pull/3683) [`e309613`](https://github.com/adobe/spectrum-css/commit/e309613c356ba5586b65cdcc26787d161a3b39e1) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - ### Combobox S2 Migration
 
   #### New Changes
-
   - Removed quiet styling variant
   - Updated corner radius to match S2 specifications
   - Changed outline thickness for better visibility

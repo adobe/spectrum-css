@@ -1,5 +1,13 @@
 # Change log
 
+## 10.0.0-next.4
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
 ## 10.0.0-next.3
 
 ### Major Changes
@@ -11,13 +19,11 @@
   Removes custom menu item background color tokens: `@adobe/spectrum-tokens` has been updated to include many tokens relating to the menu component, including some that replace custom tokens that had previously been added. As such, these custom menu item color tokens that are now available from `@adobe/spectrum-tokens` have been removed.
 
   In addition to other small token and minor style changes, there were several new features that were added to this version of menu, including:
-
   - A thumbnail can now be used in place of an icon
   - A section description can now be included below the menu section heading
   - The actions area previously held action switches for multi-select, and in this version, an external link action icon can be included in that area
 
   ### New mods
-
   - `--mod-menu-item-corner-radius`
   - `--mod-menu-item-linkout-icon-height`
   - `--mod-menu-item-linkout-icon-width`
@@ -192,7 +198,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
-
   - `index-base.css`
   - `index-theme.css`
   - `themes/spectrum.css`
@@ -403,11 +408,9 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - fix(menu)!: reimplement text truncating (#2299)([9752d02](https://github.com/adobe/spectrum-css/commit/9752d02)), closes[#2299](https://github.com/adobe/spectrum-css/issues/2299)
 
-  ###
+### 🛑 BREAKING CHANGES
 
-  🛑 BREAKING CHANGES
-
-  - removes flex-based display, renames classes, reintroduces truncation
+- removes flex-based display, renames classes, reintroduces truncation
 
 Additionally:
 
