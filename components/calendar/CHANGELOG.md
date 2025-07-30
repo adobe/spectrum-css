@@ -1,5 +1,13 @@
 # Change log
 
+## 8.0.0-next.2
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
 ## 8.0.0-next.1
 
 ### Patch Changes
@@ -110,7 +118,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
-
   - `index-base.css`
   - `index-theme.css`
   - `themes/spectrum.css`
@@ -121,7 +128,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3359](https://github.com/adobe/spectrum-css/pull/3359) [`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b) Thanks [@cdransf](https://github.com/cdransf)!
 
 - This resolves our remaining stylelint issues around undefined tokens, rule order, unused values and color syntax.
-
   - Updates invalid color syntax from `rgba(N, N, N, N)` to `rgba(N N N / N)`.
   - In cases of duplicate properties, preserves the property that would be applied given current code structure.
   - Updates misnamed tokens to use valid tokens (`table/index.css`).

@@ -1,5 +1,35 @@
 # Change Log
 
+## 2.0.0-next.6
+
+### Patch Changes
+
+Updated dependencies [[`7f48b7c`](https://github.com/adobe/spectrum-css/commit/7f48b7c6384f8c7d598637226a17aff1c8e8b61c), [`7f48b7c`](https://github.com/adobe/spectrum-css/commit/7f48b7c6384f8c7d598637226a17aff1c8e8b61c), [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84), [`dc5f820`](https://github.com/adobe/spectrum-css/commit/dc5f8202a330910c0af51b7c172aca35ec99a1e7)]:
+
+- @spectrum-css/tabs@7.0.0-next.2
+- @spectrum-css/tokens@16.1.0-next.7
+- @spectrum-css/actionbutton@8.0.0-next.3
+- @spectrum-css/colorslider@9.0.0-next.2
+- @spectrum-css/progressbar@7.0.0-next.4
+- @spectrum-css/breadcrumb@12.0.0-next.2
+- @spectrum-css/colorloupe@8.0.0-next.1
+- @spectrum-css/colorwheel@7.0.0-next.3
+- @spectrum-css/pagination@11.0.0-next.2
+- @spectrum-css/accordion@8.0.0-next.3
+- @spectrum-css/assetlist@9.0.0-next.2
+- @spectrum-css/colorarea@8.0.0-next.2
+- @spectrum-css/calendar@8.0.0-next.2
+- @spectrum-css/combobox@5.0.0-next.3
+- @spectrum-css/steplist@8.0.0-next.2
+- @spectrum-css/treeview@13.0.0-next.2
+- @spectrum-css/popover@9.0.0-next.4
+- @spectrum-css/tooltip@8.0.0-next.4
+- @spectrum-css/slider@7.0.0-next.3
+- @spectrum-css/switch@7.0.0-next.2
+- @spectrum-css/radio@11.0.0-next.3
+- @spectrum-css/table@9.0.0-next.4
+- @spectrum-css/menu@10.0.0-next.4
+
 ## 2.0.0-next.5
 
 ### Patch Changes

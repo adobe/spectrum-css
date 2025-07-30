@@ -1,5 +1,13 @@
 # Change log
 
+## 8.0.0-next.3
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
 ## 8.0.0-next.2
 
 ### Patch Changes
@@ -69,7 +77,6 @@ This also includes a forced-colors/high contrast mode fix for the selected + dis
 📝 [#3540](https://github.com/adobe/spectrum-css/pull/3540) [`a8bb0b8`](https://github.com/adobe/spectrum-css/commit/a8bb0b89a5fe1cc9d09edf6a1d2249dde930757a) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
 - S2 Foundations fixes
-
   - Adjusts corner rounding for S2 foundations to follow S2 action button corner rounding, particularly to help give additional space to the help/corner triangle icon:
     - corner-radius-medium-size-extra-small
     - corner-radius-medium-size-small

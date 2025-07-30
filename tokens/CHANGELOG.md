@@ -1,5 +1,13 @@
 # Change log
 
+## 16.1.0-next.7
+
+### Minor Changes
+
+📝 [#4003](https://github.com/adobe/spectrum-css/pull/4003) [`7f48b7c`](https://github.com/adobe/spectrum-css/commit/7f48b7c6384f8c7d598637226a17aff1c8e8b61c) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Adds custom tokens for Tabs in Spectrum 2. This is intended to be a temporary change until the tokens have been added to the spectrum-tokens package.
+
 ## 16.1.0-next.6
 
 ### Minor Changes
