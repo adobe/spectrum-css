@@ -97,8 +97,23 @@
 	--spectrum-pagination-textfield-width: 60px;
 	--spectrum-pagination-item-inline-spacing: 6px;
 
+	--spectrum-slider-precision-handle-width: 6px;
 	--spectrum-slider-tick-mark-height: 13px;
 	--spectrum-slider-ramp-track-height: 20px;
+	--spectrum-slider-handle-small: 22px;
+	--spectrum-slider-handle-medium: 24px;
+	--spectrum-slider-handle-large: 28px;
+	--spectrum-slider-handle-extra-large: 30px;
+
+	--spectrum-slider-precision-handle-height-small: 24px;
+	--spectrum-slider-precision-handle-height-medium: 26px;
+	--spectrum-slider-precision-handle-height-large: 30px;
+	--spectrum-slider-precision-handle-height-extra-large: 32px;
+
+	--spectrum-slider-editable-field-inline-size-small: 56px;
+	--spectrum-slider-editable-field-inline-size-medium: 70px;
+	--spectrum-slider-editable-field-inline-size-large: 82px;
+	--spectrum-slider-editable-field-inline-size-extra-large: 94px;
 
 	--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
 	--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-400);
