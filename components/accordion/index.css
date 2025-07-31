@@ -76,10 +76,7 @@
 	);
 
 	/* Calculated vertical spacing for action button and switch to center them within the accordion item */
-	--spectrum-accordion-item-direct-actions-vertical-spacing: calc(
-		(var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size)) -
-		var(--mod-accordion-item-direct-actions-height, var(--spectrum-accordion-item-direct-actions-height))) / 2
-	);
+	--spectrum-accordion-item-direct-actions-vertical-spacing: calc((var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size)) - var(--mod-accordion-item-direct-actions-height, var(--spectrum-accordion-item-direct-actions-height))) / 2);
 
 	/* Right-to-left adjustments for transforms */
 	&:dir(rtl) {

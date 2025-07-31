@@ -300,11 +300,14 @@
 		}
 	}
 
+	&.is-selectable,
 	&.is-selectableMultiple {
 		.spectrum-Menu-item {
 			align-items: start;
 		}
+	}
 
+	&.is-selectableMultiple {
 		.spectrum-Menu-itemCheckbox {
 			grid-area: checkmarkArea;
 		}
@@ -329,7 +332,6 @@
 		color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
 
 		grid-area: iconArea;
-		align-self: start;
 	}
 
 	.spectrum-Menu-checkmark {
@@ -347,7 +349,6 @@
 		margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 
 		grid-area: checkmarkArea;
-		align-self: start;
 	}
 
 	.spectrum-Menu-chevron {
@@ -358,7 +359,6 @@
 		margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 
 		grid-area: chevronArea;
-		align-self: center;
 
 		&:dir(rtl) {
 			transform: rotate(-180deg);
@@ -386,17 +386,6 @@
 	.spectrum-Menu-linkout {
 		block-size: var(--mod-menu-item-linkout-icon-height, var(--spectrum-menu-item-linkout-icon-height));
 		inline-size: var(--mod-menu-item-linkout-icon-width, var(--spectrum-menu-item-linkout-icon-width));
-
-		/* Improve vertical alignment of linkout icon */
-		/* TODO: revisit with #1194 when final icon available */
-		display: block;
-		margin-block-start: calc(var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size)) - var(--spectrum-menu-item-linkout-icon-height));
-	}
-
-	/* Improve vertical alignment of linkout icon */
-	/* TODO: revisit with #1194 when final icon available */
-	.spectrum-Menu-item:has(> .spectrum-Menu-itemIcon--workflowIcon) .spectrum-Menu-linkout {
-		margin-block-start: calc(var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size)) - var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height) / 2));
 	}
 
 	/* Presentational list items for sections and dividers. */
@@ -443,7 +432,7 @@
 	grid-template-rows: 1fr auto;
 
 	/* Alignment adjustments if there's a thumbnail */
-	&:has(> .spectrum-Menu-itemThumbnail) {
+	&:has(> .spectrum-Menu-itemThumbnail):not(:has(.spectrum-Menu-itemSwitch)) {
 		> .spectrum-Menu-itemCheckbox,
 		> .spectrum-Menu-checkmark,
 		> .spectrum-Menu-itemActions,
@@ -694,13 +683,12 @@
 	color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-value-color-default, var(--spectrum-menu-item-value-color-default)));
 	font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
 	justify-self: end;
-	align-self: start;
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
 .spectrum-Menu-itemActions {
+	display: grid;
 	grid-area: actionsArea;
-	align-self: start;
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
@@ -751,7 +739,6 @@
 	/* Span two rows to properly align to description when present */
 	.spectrum-Menu-item:has(> &):has(> .spectrum-Menu-itemDescription) & {
 		grid-row-end: visualOverflow;
-		align-self: center;
 	}
 }
 

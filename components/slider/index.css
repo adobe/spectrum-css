@@ -170,8 +170,6 @@
 		margin-inline: 0;
 		inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--spectrum-slider-precision-handle-height) / 2);
 		margin-inline-start: calc((var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-handle-border-width)) * -0.5);
-
-
 	}
 }
 
@@ -435,7 +433,9 @@
 	}
 
 	/* Keyboard focused */
-	.spectrum-Slider:not(.is-disabled) &.is-focused, .spectrum-Slider:not(.is-disabled) &:focus, .spectrum-Slider:not(.is-disabled) &:focus-visible {
+	.spectrum-Slider:not(.is-disabled) &.is-focused,
+	.spectrum-Slider:not(.is-disabled) &:focus,
+	.spectrum-Slider:not(.is-disabled) &:focus-visible {
 		border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
 		outline: 0;
 
@@ -660,7 +660,7 @@
 	&::before {
 		background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
 		border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-			border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+		border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
 	}
 }
 
@@ -809,10 +809,10 @@
 .spectrum-Slider.spectrum-Slider--precise:not(.is-disabled) .spectrum-Slider-handle.is-focused::before,
 .spectrum-Slider.spectrum-Slider--precise:not(.is-disabled) .spectrum-Slider-handle:focus::before,
 .spectrum-Slider.spectrum-Slider--precise:not(.is-disabled) .spectrum-Slider-handle:focus-visible::before {
-  border-radius: var(--spectrum-slider-handle-border-radius);
-  block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-slider-focus-indicator-gap) * 2);
-  inline-size: calc(var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-focus-indicator-gap) * 2);
-  transition: none;
+	border-radius: var(--spectrum-slider-handle-border-radius);
+	block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-slider-focus-indicator-gap) * 2);
+	inline-size: calc(var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-focus-indicator-gap) * 2);
+	transition: none;
 }
 
 @media (forced-colors: active) {

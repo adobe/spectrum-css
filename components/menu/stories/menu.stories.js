@@ -1,23 +1,44 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
+import {
+	Sizes,
+	withDownStateDimensionCapture,
+} from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isFocused, isHovered, isSelected, size } from "@spectrum-css/preview/types";
+import {
+	isActive,
+	isDisabled,
+	isFocused,
+	isHovered,
+	isSelected,
+	size,
+} from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { MenuItemGroup, MenuTraySubmenu, MenuWithVariants } from "./menu.test.js";
-import { DisabledItemGroup, OverflowGroup, SelectionGroup, SubmenuInPopover, Template } from "./template.js";
+import {
+	MenuItemGroup,
+	MenuTraySubmenu,
+	MenuWithVariants,
+} from "./menu.test.js";
+import {
+	DisabledItemGroup,
+	OverflowGroup,
+	SelectionGroup,
+	SubmenuInPopover,
+	Template,
+} from "./template.js";
 
 /**
  * A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a
  * menu divider. Often a menu will appear in a popover so that it displays as a toggling menu.
-*/
+ */
 export default {
 	title: "Menu",
 	component: "Menu",
 	argTypes: {
 		selectionMode: {
 			name: "Selection mode",
-			description: "Determines whether items in the menu can be selected, and how many",
+			description:
+				"Determines whether items in the menu can be selected, and how many",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
@@ -79,8 +100,8 @@ export default {
 		},
 		docs: {
 			story: {
-				height: "300px"
-			}
+				height: "300px",
+			},
 		},
 		design: {
 			type: "figma",
@@ -93,11 +114,9 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
-		}
+		},
 	},
-	decorators: [
-		withDownStateDimensionCapture,
-	],
+	decorators: [withDownStateDimensionCapture],
 	tags: ["migrated"],
 };
 
@@ -115,7 +134,7 @@ Default.args = {
 			items: [
 				{
 					label: "Default menu item",
-					iconName: "Comment"
+					iconName: "Comment",
 				},
 				{
 					label: "Focused menu item",
@@ -124,10 +143,15 @@ Default.args = {
 					isActive: true,
 				},
 				{
-					label: "A menu item with a longer label that causes the text to wrap to the next line"
+					label:
+						"A menu item with a longer label that causes the text to wrap to the next line",
 				},
 				{
 					label: "Menu item with no icon",
+				},
+				{
+					label: "Menu item as unavailable",
+					isUnavailable: true,
 				},
 				{
 					label: "Menu item as external link",
@@ -136,11 +160,11 @@ Default.args = {
 				{
 					label: "Menu item as external link with icon",
 					hasExternalLink: true,
-					iconName: "Data"
+					iconName: "Data",
 				},
 				{
 					label: "Menu item with a thumbnail",
-					thumbnailUrl: "thumbnail.png"
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Disabled menu item",
@@ -162,24 +186,27 @@ Default.args = {
 				},
 				{
 					label: "Selected item",
-					description: "This item is checked if single-select or multi-select mode is turned on",
+					description:
+						"This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
 				},
 				{
 					label: "Selected item with thumbnail",
 					isSelected: true,
-					thumbnailUrl: "thumbnail.png"
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Selected item with thumbnail",
-					description: "This item is checked if single-select or multi-select mode is turned on",
+					description:
+						"This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
-					thumbnailUrl: "thumbnail.png"
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Selected item with icon",
 					iconName: "Cloud",
-					description: "This item is checked if single-select or multi-select mode is turned on",
+					description:
+						"This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
 				},
 			],
@@ -187,26 +214,32 @@ Default.args = {
 		{ type: "divider" },
 		{
 			idx: 3,
-			heading: "Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
-			sectionDescription: "This menu header also has a description that is long enough to hopefully just maybe wrap if it's long enough",
+			heading:
+				"Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
+			sectionDescription:
+				"This menu header also has a description that is long enough to hopefully just maybe wrap if it's long enough",
 			id: "menu-heading-desc-icon-value",
 			hasActions: true,
 			items: [
 				{
-					label: "Menu item with action and a longer label that truncates if it is long enough to truncate",
+					label:
+						"Menu item with action and a longer label that truncates if it is long enough to truncate",
 					iconName: "Cut",
-					description: "This item has a switch if multi-select mode is turned on.",
+					description:
+						"This item has a switch if multi-select mode is turned on.",
 				},
 				{
 					label: "Menu item with action",
 					iconName: "Copy",
-					description: "In multi-select mode, this item will be switched on. In single-select mode, this item will be checked.",
+					description:
+						"In multi-select mode, this item will be switched on. In single-select mode, this item will be checked.",
 					isSelected: true,
 				},
 				{
 					label: "Menu item with action and value",
 					iconName: "Paste",
-					description: "This item has a value. If multi-select mode is turned on, it also has a switch and the value can be used to label the switch.",
+					description:
+						"This item has a value. If multi-select mode is turned on, it also has a switch and the value can be used to label the switch.",
 					value: "⌘ C",
 				},
 				{
@@ -227,16 +260,23 @@ Default.args = {
 					thumbnailUrl: "thumbnail.png",
 				},
 				{
+					label: "Menu item as unavailable",
+					description: "And a description, too",
+					isUnavailable: true,
+				},
+				{
 					label: "Menu item with external link action",
-					description: "Menu item with external link action (does not work in multi-select mode)",
+					description:
+						"Menu item with external link action (does not work in multi-select mode)",
 					hasExternalLink: true,
 				},
 				{
 					label: "Disabled menu item with external link action",
-					description: "Menu item with external link action (does not work in multi-select mode)",
+					description:
+						"Menu item with external link action (does not work in multi-select mode)",
 					hasExternalLink: true,
 					isDisabled: true,
-				}
+				},
 			],
 		},
 		{
@@ -262,7 +302,7 @@ Default.args = {
 					label: "Disabled menu item with drill-in",
 					isDrillIn: true,
 					isDisabled: true,
-				}
+				},
 			],
 		},
 	],
@@ -297,8 +337,8 @@ TraySubmenu.args = {
 				{
 					label: "Rulers",
 				},
-			]
-		}
+			],
+		},
 	],
 };
 TraySubmenu.parameters = {
@@ -307,10 +347,10 @@ TraySubmenu.parameters = {
 		story: {
 			inline: false,
 			height: "300px",
-		}
+		},
 	},
 	viewport: {
-		defaultViewport: "mobile2"
+		defaultViewport: "mobile2",
 	},
 };
 
@@ -358,11 +398,12 @@ MenuItem.argTypes = {
 	},
 	iconName: {
 		...(IconStories?.argTypes?.iconName ?? {}),
-		if: { arg: "hasThumbnail", truthy: false },
+		if: { arg: "exclusiveFeatures", neq: "hasThumbnail" },
 	},
 	hasActions: {
 		name: "Has switches",
-		description: "If multiple selection is enabled, show switches instead of checkboxes to show which items have been selected",
+		description:
+			"If multiple selection is enabled, show switches instead of checkboxes to show which items have been selected",
 		type: { name: "boolean" },
 		table: {
 			type: { summary: "boolean" },
@@ -371,35 +412,27 @@ MenuItem.argTypes = {
 		control: "boolean",
 		if: { arg: "selectionMode", eq: "multiple" },
 	},
-	hasExternalLink: {
-		name: "Has external link",
-		description: "Has external link action",
+	exclusiveFeatures: {
+		name: "Mutually exclusive features",
+		description: "These options are intended to never be used in combination with each other:\n- `hasExternalLink`: Displays external link icon\n- `hasThumbnail`: Displays a thumbnail, taking the place of an icon\n- `isDrillIn`: Displays submenu indicator",
+		options: ["none", "hasExternalLink", "hasThumbnail", "isDrillIn"],
+		control: "select",
+		table: {
+			type: { summary: "string" },
+			category: "Content",
+		},
+	},
+	isUnavailable: {
+		name: "Is unavailable",
+		description:
+			"Displays unavailable icon intended to toggle explanatory popover.\n\nShould not be used with external links, drill-ins, or selectable items",
 		type: { name: "boolean" },
 		table: {
 			type: { summary: "boolean" },
 			category: "Content",
 		},
 		control: "boolean",
-	},
-	hasThumbnail: {
-		name: "Has thumbnail",
-		description: "Displays a thumbnail in the label",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Content",
-		},
-		control: "boolean"
-	},
-	isDrillIn: {
-		name: "Is drill-in",
-		description: "Displays drill-in menu indicator",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Content",
-		},
-		control: "boolean"
+		if: { arg: "exclusiveFeatures", neq: "hasExternalLink" },
 	},
 	// These settings are not used in the MenuItem story
 	hasDividers: { table: { disable: true } },
@@ -407,18 +440,17 @@ MenuItem.argTypes = {
 };
 MenuItem.args = {
 	label: "Start a chat",
-	iconName: "Comment",
 	description: "Menu item description",
 	value: "⌘ N",
+	iconName: "Comment",
+	exclusiveFeatures: "none",
+	isUnavailable: false,
 	isDisabled: false,
 	isActive: false,
 	isFocused: false,
 	isHovered: false,
 	isSelected: false,
-	hasActions: false,
-	hasExternalLink: false,
-	hasThumbnail: false,
-	isDrillIn: false,
+	hasActions: false
 };
 MenuItem.parameters = {
 	design: {
@@ -489,25 +521,19 @@ Collapsible.args = {
 			label: "Tablet",
 			iconName: "DeviceTablet",
 			isCollapsible: true,
-			items: [
-				{ label: "Defaults to not visible within closed item" },
-			],
+			items: [{ label: "Defaults to not visible within closed item" }],
 		},
 		{
 			label: "Social Media",
 			iconName: "ShareAndroid",
 			isCollapsible: true,
-			items: [
-				{ label: "Defaults to not visible within closed item" },
-			],
+			items: [{ label: "Defaults to not visible within closed item" }],
 		},
 		{
 			label: "Watches",
 			iconName: "Clock",
 			isCollapsible: true,
-			items: [
-				{ label: "Defaults to not visible within closed item" },
-			],
+			items: [{ label: "Defaults to not visible within closed item" }],
 		},
 	],
 };
@@ -523,12 +549,16 @@ Collapsible.args = {
  * [action button](?path=/docs/components-action-button--docs)). Similarly, any components displayed inside a menu item
  * (such as a [switch](?path=/docs/components-switch--docs)) must also be of the same size.
  */
-export const Sizing = (args, context) => Sizes({
-	Template,
-	withHeading: false,
-	withBorder: false,
-	...args,
-}, context);
+export const Sizing = (args, context) =>
+	Sizes(
+		{
+			Template,
+			withHeading: false,
+			withBorder: false,
+			...args,
+		},
+		context,
+	);
 Sizing.storyName = "Default";
 Sizing.tags = ["!dev"];
 Sizing.args = {
@@ -539,18 +569,18 @@ Sizing.args = {
 		},
 		{
 			idx: 2,
-			label: "Menu item with icon",
-			iconName: "Cloud",
-		},
-		{
-			idx: 3,
 			label: "Menu item with optional description",
 			description: "Short description of menu item",
 		},
 		{
-			idx: 4,
+			idx: 3,
 			label: "Menu item with value",
 			value: "Value",
+		},
+		{
+			idx: 4,
+			label: "Menu item with icon",
+			iconName: "Cloud",
 		},
 		{
 			idx: 5,
@@ -561,21 +591,26 @@ Sizing.args = {
 		{
 			idx: 6,
 			label: "Menu item as external link",
-			hasExternalLink: true
+			hasExternalLink: true,
 		},
 		{
 			idx: 7,
-			label: "Menu item with thumbnail",
-			value: "Value",
-			thumbnailUrl: "thumbnail.png"
+			label: "Menu item as unavailable",
+			isUnavailable: true,
 		},
 		{
 			idx: 8,
 			label: "Menu item with thumbnail",
-			description: "and description",
-			thumbnailUrl: "thumbnail.png"
+			value: "Value",
+			thumbnailUrl: "thumbnail.png",
 		},
-	]
+		{
+			idx: 9,
+			label: "Menu item with thumbnail",
+			description: "and description",
+			thumbnailUrl: "thumbnail.png",
+		}
+	],
 };
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -602,7 +637,7 @@ DrillInChevron.args = {
 		},
 		{
 			label: "Menu item",
-		}
+		},
 	],
 };
 
@@ -632,12 +667,80 @@ MenuItemSelection.parameters = {
  * The last item in each of these menus is disabled. A menu item in a disabled state shows that an option exists, but
  * is not available in that circumstance. This state can be used to maintain layout continuity and to communicate that
  * an action may become available later.
+ *
+ * To explain why an option is not actionable and keep it navigable, instead use the [_unavailable_ menu item type](#unavailable%20items).
  */
 export const DisabledItems = DisabledItemGroup.bind({});
 DisabledItems.storyName = "Disabled items";
 DisabledItems.tags = ["!dev"];
 DisabledItems.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The "Unavailable" menu item type may be used when the item is inactive and requires further explanation.
+ * The menu item should toggle a popover containing the explanation of why the item is unavailable.
+ * In the example, the first item is marked as "unavailable" as noted by the icon.
+ *
+ * This is not the same as disabled, since the item can still be navigated to, but just has unavailable functionality.
+ *
+ * Items with drill-in submenus, external links, or that are selectable cannot be made unavailable.
+ */
+export const UnavailableItems = Template.bind({});
+UnavailableItems.storyName = "Unavailable items";
+UnavailableItems.tags = ["!dev"];
+UnavailableItems.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+UnavailableItems.args = {
+	items: [
+		{
+			label: "Marquee",
+			isSelected: true,
+			iconName: "SelectRectangle",
+			isUnavailable: true
+		},
+		{
+			label: "Add",
+			iconName: "SelectMulti",
+		},
+		{
+			label: "Subtract",
+			iconName: "SelectNone",
+		},
+	],
+};
+
+/**
+ * If a menu item will navigate away from the application, it may use the external link icon.
+ *
+ * Menu item types not valid as external links include those with thumbnails, selection modes,
+ * drill-in submenus, or marked as "unavailable".
+ */
+export const ExternalLinks = Template.bind({});
+ExternalLinks.storyName = "External links";
+ExternalLinks.tags = ["!dev"];
+ExternalLinks.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+ExternalLinks.args = {
+	items: [
+		{
+			label: "An offsite link item",
+			hasExternalLink: true
+		},
+		{
+			label: "Link with item icon",
+			iconName: "Chat",
+			hasExternalLink: true
+		},
+		{
+			label: "An external link",
+			iconName: "Folder",
+			description: "And an additional description",
+			hasExternalLink: true
+		},
+	],
 };
 
 /**
@@ -661,7 +764,7 @@ TextOverflow.parameters = {
 TextOverflow.args = {
 	customStyles: {
 		"max-inline-size": "175px",
-	}
+	},
 };
 
 // story used in Picker component as well as docs page
@@ -721,13 +824,13 @@ WithDividersAndHeaders.args = {
 					label: "Subtract",
 					iconName: "SelectNone",
 				},
-			]
+			],
 		},
 		{ type: "divider" },
 		{
 			idx: 2,
 			heading: "Actions",
-			sectionDescription:"With an optional description",
+			sectionDescription: "With an optional description",
 			id: "menu-actions",
 			selectionMode: "single",
 			items: [
@@ -735,9 +838,9 @@ WithDividersAndHeaders.args = {
 					label: "Deselect",
 					iconName: "SelectNo",
 					isDisabled: true,
-				}
-			]
-		}
+				},
+			],
+		},
 	],
 };
 
@@ -747,6 +850,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };

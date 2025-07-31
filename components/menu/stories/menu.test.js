@@ -193,6 +193,7 @@ export const MenuItemGroup = Variants({
 		},
 		{
 			testHeading: "Multi-selection: unselected",
+			description: undefined,
 			selectionMode: "multiple",
 			label: "Share",
 			iconName: "Share",
@@ -200,6 +201,7 @@ export const MenuItemGroup = Variants({
 		},
 		{
 			testHeading: "Multi-selection with thumbnails: unselected",
+			description: undefined,
 			selectionMode: "multiple",
 			label: "Share",
 			iconName: "Share",
@@ -239,13 +241,13 @@ export const MenuItemGroup = Variants({
 			thumbnailUrl: "thumbnail.png"
 		},
 		{
-			testHeading: "Multi-selection: switches + labels",
+			testHeading: "Multi-selection: switches + description",
 			selectionMode: "multiple",
 			hasActions: true,
 			label: "Menu item",
 		},
 		{
-			testHeading: "Multi-selection with thumbnails: switches + labels",
+			testHeading: "Multi-selection with thumbnails: switches + description",
 			selectionMode: "multiple",
 			hasActions: true,
 			label: "Menu item",
@@ -254,11 +256,6 @@ export const MenuItemGroup = Variants({
 		{
 			testHeading: "Drill-in",
 			isDrillIn: true,
-		},
-		{
-			testHeading: "Drill-in with thumbnails",
-			isDrillIn: true,
-			thumbnailUrl: "thumbnail.png"
 		},
 		{
 			testHeading: "Truncation",
@@ -326,23 +323,23 @@ export const MenuItemGroup = Variants({
 		{
 			testHeading: "Without icon",
 			iconName: undefined,
-			include: ["No selection", "No selection, with description", "Single selection: selected", "Single selection: unselected", "Multi-selection: selected", "Multi-selection: unselected", "Multi-selection: unselected switches", "Multi-selection: selected switches", "Multi-selection: switches + labels", "Drill-in", "Truncation", "Text wrapping"],
+			include: ["No selection", "No selection, with description", "Single selection: selected", "Single selection: unselected", "Multi-selection: selected", "Multi-selection: unselected", "Multi-selection: unselected switches", "Multi-selection: selected switches", "Multi-selection: switches + description", "Drill-in", "Truncation", "Text wrapping"],
 		},
 		{
 			testHeading: "Without value",
 			value: undefined,
-			include: ["No selection", "No selection, with thumbnails", "No selection, with description", "No selection, with thumbnails, description", "Multi-selection: unselected", "Multi-selection with thumbnails: unselected", "Multi-selection: switches + labels", "Multi-selection with thumbnails: switches + labels", "Drill-in", "Drill-in with thumbnails"],
+			include: ["No selection", "No selection, with thumbnails", "No selection, with description", "No selection, with thumbnails, description", "Multi-selection: unselected", "Multi-selection with thumbnails: unselected", "Multi-selection: switches + description", "Multi-selection with thumbnails: switches + description", "Drill-in", "Drill-in with thumbnails"],
 		},
 		{
 			testHeading: "Without value or icon",
 			iconName: undefined,
 			value: undefined,
-			include: ["No selection", "No selection, with description", "Multi-selection: unselected", "Multi-selection: switches + labels", "Drill-in"],
+			include: ["No selection", "No selection, with description", "Multi-selection: unselected", "Multi-selection: switches + description", "Drill-in"],
 		},
 		{
 			testHeading: "With value",
 			value: "⌘ N",
-			include: ["Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"],
+			include: ["Single selection: selected", "Single selection: unselected", "Multi-selection: selected", "Multi-selection: unselected", "Multi-selection: unselected switches", "Multi-selection: selected switches", "Multi-selection: switches + description", "Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"],
 		},
 		{
 			testHeading: "With multi-select switch",
@@ -363,15 +360,34 @@ export const MenuItemGroup = Variants({
 			include: ["Drill-in", "Drill-in with thumbnails", "Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"],
 		},
 		{
+			testHeading: "With description",
+			description: "Menu item description",
+			include: ["Single selection: selected", "Single selection with thumbnails: selected", "Single selection: unselected", "Single selection with thumbnails: unselected", "Multi-selection: selected","Multi-selection with thumbnails: selected","Multi-selection: unselected","Multi-selection with thumbnails: unselected","Multi-selection: unselected switches","Multi-selection with thumbnails: unselected switches","Multi-selection: selected switches","Multi-selection with thumbnails: selected switches",]
+		},
+		{
+			testHeading: "Unavailable",
+			isUnavailable: true,
+			value: undefined,
+			include: ["No selection", "No selection, with thumbnails", "No selection, with description", "No selection, with thumbnails, description", "Truncation","Text wrapping"]
+		},
+		{
+			testHeading: "Unavailable without icon",
+			isUnavailable: true,
+			value: undefined,
+			iconName: undefined,
+			include: ["No selection", "No selection, with description","Truncation","Text wrapping"]
+		},
+		{
+			// Not allowed for use with thumbnails
 			testHeading: "External link",
 			hasExternalLink: true,
-			include: ["No selection", "No selection, with thumbnails", "No selection, with description", "No selection, with thumbnails, description", "Truncation", "Truncation with thumbnails", "Text wrapping", "Text wrapping with thumbnails"]
+			include: ["No selection", "No selection, with description", "Truncation", "Text wrapping"]
 		},
 		{
 			testHeading: "External link without value",
 			hasExternalLink: true,
 			value: undefined,
-			include: ["No selection", "No selection, with thumbnails", "No selection, with description", "No selection, with thumbnails, description"]
+			include: ["No selection", "No selection, with description"]
 		},
 		{
 			testHeading: "External link without value, icon",
