@@ -1,4 +1,4 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "storybook/preview-api";
 import { fetchContainers } from "./helpers.js";
 
 export const withDownStateDimensionCapture = makeDecorator({
@@ -6,7 +6,7 @@ export const withDownStateDimensionCapture = makeDecorator({
   parameterName: "downState",
   wrapper: (StoryFn, context) => {
     const { args = {}, parameters = {}, viewMode, id } = context;
-    
+
     /* Selectors are defined in the downState parameter */
     const {
       // Fall back to the rootClass if no selectors are provided

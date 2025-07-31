@@ -1,11 +1,11 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
-import { action } from "@storybook/addon-actions";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { action } from "storybook/actions";
 
 import "../index.css";
 

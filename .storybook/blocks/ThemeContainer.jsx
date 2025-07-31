@@ -1,5 +1,5 @@
-import { DocsContext } from "@storybook/blocks";
-import { ThemeProvider } from "@storybook/theming";
+import { DocsContext } from "@storybook/addon-docs/blocks";
+import { ThemeProvider } from "storybook/theming";
 import React, { useContext } from "react";
 import { Container } from "./Layouts.jsx";
 

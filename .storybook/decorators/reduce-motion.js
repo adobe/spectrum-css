@@ -1,4 +1,4 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
 /**

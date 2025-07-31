@@ -1,7 +1,7 @@
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
-import { makeDecorator } from "@storybook/preview-api";
 import { html } from "lit";
 import { when } from "lit/directives/when.js";
+import { makeDecorator } from "storybook/preview-api";
 import { getRandomId } from "./utilities.js";
 
 /**

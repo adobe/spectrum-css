@@ -48,7 +48,7 @@ import "../index.css";
 /**
  *
  * @param {API} args
- * @param {import('@storybook/types').StoryContext<import('@storybook/web-components').WebComponentsRenderer, API>} context
+ * @param {import('storybook/internal/types').StoryContext<import('@storybook/web-components-vite').WebComponentsRenderer, API>} context
  * @returns {import('lit').TemplateResult}
  */
 export const Template = ({

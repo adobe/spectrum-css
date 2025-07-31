@@ -1,4 +1,4 @@
-import { makeDecorator, useArgs } from "@storybook/preview-api";
+import { makeDecorator, useArgs } from "storybook/preview-api";
 
 /**
  * @type import('@storybook/csf').Args

@@ -1,6 +1,6 @@
-import { addons } from "@storybook/manager-api";
-import { create } from "@storybook/theming";
 import { startCase } from "lodash";
+import { addons } from "storybook/manager-api";
+import { create } from "storybook/theming";
 
 import "./assets/index.css";
 
@@ -65,6 +65,8 @@ addons.setConfig({
 	}),
 	sidebar: {
 		showRoots: false,
-		renderLabel: ({ name, type }) => (type === 'story' ? name : startCase(name)) + " 📚",
+		renderLabel: ({ name, type }) => {
+			return (type === 'story' ? name : startCase(name));
+		},
 	},
 });

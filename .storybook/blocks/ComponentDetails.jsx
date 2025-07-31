@@ -1,6 +1,6 @@
-import { useOf } from '@storybook/blocks';
-import { ResetWrapper } from "@storybook/components";
-import { styled } from "@storybook/theming";
+import { useOf } from '@storybook/addon-docs/blocks';
+import { ResetWrapper } from "storybook/internal/components";
+import { styled } from "storybook/theming";
 import React, { useEffect, useState } from "react";
 
 import { Body, Code, Heading } from "./Typography.jsx";

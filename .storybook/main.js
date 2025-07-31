@@ -35,22 +35,6 @@ export default {
 	staticDirs: ["./assets", "./assets/images"],
 	addons: [
 		{
-			name: "@storybook/addon-controls",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-toolbars",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-measure",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-outline",
-			options: {},
-		},
-		{
 			name: "@storybook/addon-docs",
 			options: {
 				// Enables JSX support in MDX for projects that aren't configured to handle the format.
@@ -74,8 +58,6 @@ export default {
 		"@storybook/addon-a11y",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
-		"@storybook/addon-interactions",
 		// https://docs.chromatic.com/docs/visual-tests-addon/
 		"@chromatic-com/storybook",
 		// https://storybook.js.org/addons/@storybook/addon-designs/
@@ -96,9 +78,6 @@ export default {
 			optimizeDeps: {
 				include: [
 					"@whitespace/storybook-addon-html",
-					"@storybook/blocks",
-					"@storybook/theming",
-					"@storybook/components",
 				],
 			},
 			build: {
@@ -129,7 +108,6 @@ export default {
 			disabledAddons: [
 				"@whitespace/storybook-addon-html",
 				"@etchteam/storybook-addon-status",
-				"@storybook/addon-interactions",
 			],
 			disableBlocks: false,
 			disableAutoDocs: false,

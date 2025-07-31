@@ -1,7 +1,7 @@
 // Used in the icon sprite decorator to inject the sprite sheets into the document
 import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/assets/svg-spriteSheet/icons.svg?raw";
 import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "storybook/preview-api";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>

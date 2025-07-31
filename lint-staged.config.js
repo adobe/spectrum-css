@@ -6,7 +6,7 @@ module.exports = {
 	"*.{js,json},!package.json": [
 		"eslint --fix --cache --no-error-on-unmatched-pattern"
 	],
-	"*.{md,mdx}": [
+	"*.md": [
 		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
 		"markdownlint --config .markdownlint.json --fix"
 	],
