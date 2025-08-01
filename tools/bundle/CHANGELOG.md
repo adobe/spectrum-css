@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.0-next.8
+
+### Patch Changes
+
+Updated dependencies [[`d831bd0`](https://github.com/adobe/spectrum-css/commit/d831bd09e3a32cb0245692d73a4272101d5a0b88)]:
+
+- @spectrum-css/menu@10.0.0-next.5
+
 ## 2.0.0-next.7
 
 ### Patch Changes
