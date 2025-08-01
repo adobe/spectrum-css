@@ -1,5 +1,24 @@
 # Change log
 
+## 10.0.0-next.5
+
+### Minor Changes
+
+📝 [#4058](https://github.com/adobe/spectrum-css/pull/4058) [`d831bd0`](https://github.com/adobe/spectrum-css/commit/d831bd09e3a32cb0245692d73a4272101d5a0b88) Thanks [@5t3ph](https://github.com/5t3ph)!
+
+This handles a few remaining items from the initial S2 migration:
+
+- update to use the correct "LinkOut" icon (previously unavailable)
+- add "Unavailable" icon
+  - the functionality in WC will be to open an explanatory popover
+
+Additionally, per design review, updates were made regarding valid feature combos:
+
+- **Not allowed:**
+  - external links with: thumbnails, drill-in, unavailable, or selection modes
+  - thumbnails with: drill-in, external links
+  - new "unavailable" with: selection modes, external links
+
 ## 10.0.0-next.4
 
 ### Major Changes
