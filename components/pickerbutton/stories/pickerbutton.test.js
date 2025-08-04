@@ -26,12 +26,20 @@ export const PickerGroup = Variants({
 	],
 	stateData: [
 		{
-			testHeading: "Disabled",
-			isDisabled: true,
+			testHeading: "Hovered",
+			isHovered: true,
 		},
 		{
 			testHeading: "Focused",
 			isFocused: true,
+		},
+		{
+			testHeading: "Active",
+			isActive: true,
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
 		},
 	]
 });
