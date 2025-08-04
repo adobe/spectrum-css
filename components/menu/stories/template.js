@@ -246,6 +246,36 @@ const Description = ({
 		</span>
 `;
 
+/**
+ * @param {Object} args
+ * @param {string} args.rootClass
+ * @param {string} args.label
+ * @param {string} args.description
+ * @param {string} args.thumbnailUrl
+ * @param {string} args.iconName
+ * @param {string} args.iconSet
+ * @param {string} args.exclusiveFeatures
+ * @param {boolean} args.hasExternalLink
+ * @param {boolean} args.hasActions
+ * @param {string} args.id
+ * @param {number} args.idx
+ * @param {boolean} args.isActive
+ * @param {boolean} args.isCollapsible
+ * @param {boolean} args.isUnavailable
+ * @param {boolean} args.isDisabled
+ * @param {boolean} args.isDrillIn
+ * @param {boolean} args.isFocused
+ * @param {boolean} args.isHighlighted
+ * @param {boolean} args.isHovered
+ * @param {boolean} args.isOpen
+ * @param {boolean} args.isSelected
+ * @param {Array<Object>} args.items
+ * @param {ARIAMixin['role']} args.role
+ * @param {boolean} args.shouldTruncate
+ * @param {string} args.size
+ * @param {string} args.selectionMode
+ * @param {string} args.value
+*/
 export const MenuItem = (
 	{
 		rootClass = "spectrum-Menu-item",
@@ -304,7 +334,6 @@ export const MenuItem = (
 				"is-highlighted": isHighlighted,
 				"is-active": isActive,
 				"is-focus-visible": isFocused,
-				"is-selected": isSelected,
 				"is-disabled": isDisabled,
 				"is-hover": isHovered,
 				[`${rootClass}--drillIn`]: isDrillIn,
@@ -317,6 +346,7 @@ export const MenuItem = (
 			role=${ifDefined(role)}
 			aria-selected=${isSelected ? "true" : "false"}
 			aria-disabled=${isDisabled ? "true" : "false"}
+			aria-expanded=${isOpen ? "true" : "false"}
 			tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
 		>
 			${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, isUnavailable, rootClass, selectionMode, size, context })}

@@ -1,43 +1,21 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { html } from "lit";
 import { Template } from "./template.js";
 
 export const PickerGroup = Variants({
-	Template: (args, context) => html`<div>${Template(args, context)}</div>`,
+	Template,
 	wrapperStyles: {
 		"align-items": "flex-start",
-		"min-block-size": "auto",
+		"min-block-size": "225px",
 	},
 	testData: [
 		{
 			testHeading: "Default, with placeholder",
-		},
-		{
-			testHeading: "Default, with value and text overflow",
-			currentValue: "The selected value of the picker, with long text the triggers the overflow behavior with ellipsis",
+			isOpen: true,
 		},
 		{
 			testHeading: "Quiet",
 			isQuiet: true,
-		},
-		{
-			testHeading: "Side label",
-			labelPosition: "side",
-		},
-		{
-			testHeading: "Side label, quiet",
-			labelPosition: "side",
-			isQuiet: true,
-		},
-		{
-			testHeading: "Side label, alignment with switch",
-			labelPosition: "side",
-			withSwitch: true,
-		},
-		{
-			testHeading: "With thumbnail icon",
-			showWorkflowIcon: true,
-			contentIconName: "Image",
+			isOpen: true,
 		},
 	],
 	stateData: [
@@ -86,19 +64,57 @@ export const PickerGroup = Variants({
 			isDisabled: true,
 		},
 		{
-			testHeading: "Open",
-			isOpen: true,
+			testHeading: "Closed",
+			isOpen: false,
 			wrapperStyles: {
-				"min-block-size": "225px",
+				"min-block-size": "auto",
 			},
 		},
 		{
-			testHeading: "Open + hover",
-			isOpen: true,
+			testHeading: "Closed + hover",
+			isOpen: false,
 			isHovered: true,
 			wrapperStyles: {
-				"min-block-size": "225px",
+				"min-block-size": "auto",
 			},
+		},
+	],
+});
+
+export const PickerGroupVariants = Variants({
+	Template,
+	wrapperStyles: {
+		"align-items": "flex-start",
+		"min-block-size": "225px",
+	},
+	testData: [
+		{
+			testHeading: "Default, with value and text overflow",
+			currentValue: "The selected value of the picker, with long text the triggers the overflow behavior with ellipsis",
+			isOpen: true,
+		},
+		{
+			testHeading: "Side label",
+			labelPosition: "side",
+			isOpen: true,
+		},
+		{
+			testHeading: "Side label, quiet",
+			labelPosition: "side",
+			isQuiet: true,
+			isOpen: true,
+		},
+		{
+			testHeading: "Side label, alignment with switch",
+			labelPosition: "side",
+			withSwitch: true,
+			isOpen: true,
+		},
+		{
+			testHeading: "With thumbnail icon",
+			showWorkflowIcon: true,
+			contentIconName: "Image",
+			isOpen: true,
 		},
 	],
 });
