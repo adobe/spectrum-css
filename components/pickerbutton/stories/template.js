@@ -17,6 +17,8 @@ export const Template = ({
 	position,
 	iconSet = "ui",
 	iconName = "ChevronDown",
+	isActive = false,
+	isHovered = false,
 	isDisabled = false,
 	isFocused = false,
 	isOpen = false,
@@ -40,6 +42,8 @@ export const Template = ({
 				[`${rootClass}--rounded`]: isRounded,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
+				"is-active": isActive,
+				"is-hover": isHovered,
 				"is-disabled": isDisabled,
 				"is-focused": isFocused,
 				"is-open": isOpen && !isDisabled,

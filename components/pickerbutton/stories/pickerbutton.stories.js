@@ -1,7 +1,7 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isFocused, isHovered, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PickerGroup } from "./pickerbutton.test.js";
@@ -52,6 +52,8 @@ export default {
 			},
 			control: "boolean",
 		},
+		isActive,
+		isHovered,
 		isQuiet,
 		isDisabled,
 		isFocused: {
@@ -75,6 +77,8 @@ export default {
 		rootClass: "spectrum-PickerButton",
 		label: undefined,
 		size: "m",
+		isActive: false,
+		isHovered: false,
 		isOpen: false,
 		isRounded: false,
 		isQuiet: false,
