@@ -15,7 +15,6 @@ export const Template = (
 		iconName = "ChevronDown",
 		iconSet = "ui",
 		isDisabled,
-		isInvalid,
 		isHovered,
 		isActive,
 		isInline,
@@ -38,7 +37,6 @@ export const Template = (
 					[`${rootClass}--size${size?.toUpperCase()}`]:
 						typeof size !== "undefined",
 					[`${rootClass}--quiet`]: isQuiet,
-					"is-invalid": isInvalid,
 					"is-hover": isHovered,
 					"is-active": isActive,
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -68,7 +66,6 @@ export const Template = (
 						[`${rootClass}--size${size?.toUpperCase()}`]:
 							typeof size !== "undefined",
 						[`${rootClass}--quiet`]: isQuiet,
-						"is-invalid": isInvalid,
 						"is-hover": isHovered,
 						"is-active": isActive,
 						...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -101,7 +98,6 @@ export const Template = (
 						[`${rootClass}--size${size?.toUpperCase()}`]:
 							typeof size !== "undefined",
 						[`${rootClass}--quiet`]: isQuiet,
-						"is-invalid": isInvalid,
 						"is-hover": isHovered,
 						"is-active": isActive,
 						...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
