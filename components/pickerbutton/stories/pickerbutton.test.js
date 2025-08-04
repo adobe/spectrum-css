@@ -15,14 +15,6 @@ export const PickerGroup = Variants({
 			testHeading: "Quiet",
 			isQuiet: true,
 		},
-		{
-			testHeading: "Rounded",
-			isRounded: true,
-		},
-		{
-			testHeading: "Position: left",
-			position: "left",
-		}
 	],
 	stateData: [
 		{

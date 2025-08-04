@@ -39,10 +39,7 @@
 
 	--spectrum-picker-button-border-color: inherit;
 	--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-picker-button-border-radius-rounded-sided: 0;
-	--spectrum-picker-button-border-radius-sided: 0;
 	--spectrum-picker-button-border-width: var(--spectrum-border-width-100);
-	--spectrum-picker-button-border-radius-rounded: var(--spectrum-corner-radius-200);
 
 	--spectrum-picker-button-background-color: var(--spectrum-gray-50);
 	--spectrum-picker-button-background-color-hover: var(--spectrum-gray-100);
@@ -177,33 +174,6 @@
 	border-start-start-radius: var(--mod-picker-button-border-radius, var(--spectrum-picker-button-border-radius));
 
 	transition: border-color var(--mod-picker-button-background-animation-duration, var(--spectrum-picker-button-background-animation-duration)) ease-in-out;
-
-	.spectrum-PickerButton--right & {
-		border-end-start-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
-		border-start-start-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
-	}
-
-	.spectrum-PickerButton--right.spectrum-PickerButton--rounded & {
-		border-end-start-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
-		border-start-start-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
-	}
-
-	.spectrum-PickerButton--left & {
-		border-end-end-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
-		border-start-end-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
-	}
-
-	.spectrum-PickerButton--left.spectrum-PickerButton--rounded & {
-		border-end-end-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
-		border-start-end-radius: var(--mod-picker-button-border-radius-rounded-sided, var(--spectrum-picker-button-border-radius-rounded-sided));
-	}
-
-	.spectrum-PickerButton--rounded & {
-		border-end-end-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
-		border-end-start-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
-		border-start-end-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
-		border-start-start-radius: var(--mod-picker-button-border-radius-rounded, var(--spectrum-picker-button-border-radius-rounded));
-	}
 
 	.spectrum-PickerButton--uiicononly & {
 		padding: 0;
