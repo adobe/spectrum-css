@@ -42,16 +42,6 @@ export default {
 			...isOpen,
 			if: { arg: "isDisabled", truthy: false }
 		},
-		isRounded: {
-			name: "Rounded",
-			description: "Increases the amount of rounding on the rounded corners.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
 		isActive,
 		isHovered,
 		isQuiet,
@@ -59,18 +49,6 @@ export default {
 		isFocused: {
 			...isFocused,
 			if: { arg: "isDisabled", truthy: false }
-		},
-		position: {
-			name: "Position",
-			description:
-				"Denotes which side of a form field the button is displayed; this influences which corners are rounded.",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["right", "left"],
-			control: "inline-radio",
 		},
 	},
 	args: {
@@ -80,13 +58,11 @@ export default {
 		isActive: false,
 		isHovered: false,
 		isOpen: false,
-		isRounded: false,
 		isQuiet: false,
 		isDisabled: false,
 		isFocused: false,
 		iconSet: "ui",
 		iconName: "ChevronDown",
-		position: "right",
 	},
 	parameters: {
 		packageJson,
@@ -170,18 +146,6 @@ export const CustomIcon = CustomIconTemplate.bind({});
 CustomIcon.storyName = "With custom icon";
 CustomIcon.tags = ["!dev"];
 CustomIcon.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * The `spectrum-PickerButton--rounded` class increases the amount of rounding on the rounded corners.
- */
-export const Rounded = Template.bind({});
-Rounded.tags = ["!dev"];
-Rounded.args = {
-	isRounded: true,
-};
-Rounded.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
