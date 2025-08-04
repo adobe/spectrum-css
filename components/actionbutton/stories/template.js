@@ -54,6 +54,7 @@ export const Template = ({
 	isFocused = false,
 	isActive = false,
 	isDisabled = false,
+	isOpen = false,
 	hasPopup = "false",
 	showPopup = false,
 	popupId,
@@ -74,6 +75,7 @@ export const Template = ({
 			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
 			aria-pressed=${isSelected ? "true" : "false"}
+			aria-expanded=${ifDefined(hasPopup && hasPopup !== "false" ? isOpen ? "true" : "false" : undefined)}
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -83,7 +85,6 @@ export const Template = ({
 				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
 				["is-disabled"]: isDisabled,
-				["is-selected"]: isSelected,
 				["is-hover"]: isHovered,
 				["is-focus-visible"]: isFocused,
 				["is-active"]: isActive,

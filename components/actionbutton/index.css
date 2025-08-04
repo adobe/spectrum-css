@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
 		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-disabled: transparent;
 
-		&.is-selected {
+		&:has([aria-pressed="true"]) {
 			--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
 		}
 	}
@@ -118,7 +118,7 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	&.is-selected {
+	&:has([aria-pressed="true"]) {
 		--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected, var(--spectrum-neutral-background-color-selected-default));
 		--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-neutral-background-color-selected-hover));
 		--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected, var(--spectrum-neutral-background-color-selected-down));
@@ -388,7 +388,7 @@ a.spectrum-ActionButton {
 			--highcontrast-actionbutton-background-color-disabled: Canvas;
 			--highcontrast-actionbutton-content-color-default: CanvasText;
 
-			&:disabled:not(.is-selected) {
+			&:disabled:not(:has([aria-pressed="true"])) {
 				--highcontrast-actionbutton-border-color: Canvas;
 			}
 		}
@@ -401,7 +401,7 @@ a.spectrum-ActionButton {
 		}
 
 		/* Selected always shows as a solid highlighted color. */
-		&.is-selected {
+		&:has([aria-pressed="true"]) {
 			--highcontrast-actionbutton-border-color: Highlight;
 			--highcontrast-actionbutton-background-color-default: Highlight;
 			--highcontrast-actionbutton-content-color-default: HighlightText;
