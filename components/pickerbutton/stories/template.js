@@ -33,8 +33,7 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--textuiicon`]: label && iconSet === "ui",
-				[`${rootClass}--uiicononly`]: !label && iconSet === "ui",
-				[`${rootClass}--icononly`]: !label && iconSet !== "ui",
+				[`${rootClass}--workflowicon`]: !label && iconSet !== "ui",
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				"is-active": isActive,
@@ -54,6 +53,7 @@ export const Template = ({
 				updateArgs({ isOpen: !isOpen });
 			}}
 			tabindex=${ifDefined(tabindex)}
+			type="button"
 		>
 			<div class="${rootClass}-fill">
 				${when(label, () => html`
