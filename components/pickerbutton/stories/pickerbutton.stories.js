@@ -1,5 +1,5 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -91,7 +91,24 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		actions: {
+			handles: ["click .spectrum-PickerButton"],
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2---Desktop?node-id=126176-34080&m=dev"
+		},
+		downState: {
+			selectors: [".spectrum-PickerButton:not(:disabled)"],
+		},
 	},
+	status: {
+		type: "migrated",
+	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
+	tags: ["migrated"],
 };
 
 export const Default = PickerGroup.bind({});
