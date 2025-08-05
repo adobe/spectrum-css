@@ -100,6 +100,14 @@ Because subtle and bold treatments draw a similar level of attention you should 
   - @spectrum-css/icon@10.0.0-next.0
   - @spectrum-css/button@15.0.0-next.0
 
+## 10.1.1
+
+### Patch Changes
+
+📝 [#4088](https://github.com/adobe/spectrum-css/pull/4088) [`24d75bf`](https://github.com/adobe/spectrum-css/commit/24d75bfe4d8e627f9d8e019ae379bdd4787712dd) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Minor linting fix of replacing `rgba` to the `rgb` shorthand syntax.
+
 ## 10.1.0
 
 ### Minor Changes
@@ -198,7 +206,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
-
   - `index-base.css`
   - `index-theme.css`
   - `themes/spectrum.css`

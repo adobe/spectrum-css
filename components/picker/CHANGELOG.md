@@ -32,7 +32,6 @@
   This work addresses some regressions noticed in the migrated S2 picker component. Mainly, S2 border colors were fixed (most of them are transparent, including disabled).
 
   PRs used as reference:
-
   - [Picker docs to storybook migration](https://github.com/adobe/spectrum-css/pull/3200)
   - [S2 picker migration](https://github.com/adobe/spectrum-css/pull/2697)
 
@@ -77,7 +76,6 @@ Updated border-color for open state of picker from `--spectrum-gray-900` to `--s
 📝 [#3536](https://github.com/adobe/spectrum-css/pull/3536) [`f77aa72`](https://github.com/adobe/spectrum-css/commit/f77aa72486f98c7b7d4f449c0d54fb6801881b7e) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
 - S2 Foundations fixes
-
   - Adjusts the background-color of the infield button components within stepper to use `gray-100` as opposed to `gray-25`.
     - This corresponds to the background-color updates picker has for S2.
   - Corrects the border color for the default picker for S2 foundations, using `gray-500` (instead of `gray-800`) to align with other field/form components.

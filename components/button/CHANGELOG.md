@@ -11,7 +11,6 @@
   Additionally, there was some missing style support for the `.spectrum-Button--noWrap` option, so this work reimplements a "no wrapping" option for button components, and removes some of the repetitiveness in the no wrap test cases and story.
 
   PRs used as reference:
-
   - [S2 button migration](https://github.com/adobe/spectrum-css/pull/2600)
   - [Add text wrapping option](https://github.com/adobe/spectrum-css/pull/3086)
   - [PostCSS plugin updates/fixes](https://github.com/adobe/spectrum-css/pull/3502)
@@ -196,7 +195,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3359](https://github.com/adobe/spectrum-css/pull/3359) [`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b) Thanks [@cdransf](https://github.com/cdransf)!
 
 - This resolves our remaining stylelint issues around undefined tokens, rule order, unused values and color syntax.
-
   - Updates invalid color syntax from `rgba(N, N, N, N)` to `rgba(N N N / N)`.
   - In cases of duplicate properties, preserves the property that would be applied given current code structure.
   - Updates misnamed tokens to use valid tokens (`table/index.css`).

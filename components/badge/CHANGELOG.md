@@ -5,7 +5,6 @@
 ### Major Changes
 
 - [#3740](https://github.com/adobe/spectrum-css/pull/3740) [`075fc91`](https://github.com/adobe/spectrum-css/commit/075fc91dd2be332cc8d3005e14bd361bf5630d0a) Thanks [@5t3ph](https://github.com/5t3ph)! - This migrates the base Badge component to S2 designs, but does not include the "Notification" or "Highlight" types.
-
   - New semantic color: "notice"
   - Updated/expanded non-semantic colors
     - **New colors**:
@@ -137,7 +136,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3502](https://github.com/adobe/spectrum-css/pull/3502) [`562396e`](https://github.com/adobe/spectrum-css/commit/562396eaf21769341f78ea3761393b65f00e751b) Thanks [@castastrophe](https://github.com/castastrophe)!
 
 - Remove empty theme references to reduce complexity for components that don't need to define any mappings. This involves removing the source `themes` directories with the empty `spectrum.css` and `express.com` files as well as removing the following empty or unnecessary exports:
-
   - `index-base.css`
   - `index-theme.css`
   - `themes/spectrum.css`

@@ -29,6 +29,14 @@ This update removes the `dir` attribute polyfill (served via a PostCSS transform
   - @spectrum-css/colorhandle@11.0.0-next.0
   - @spectrum-css/opacitycheckerboard@5.0.0-next.0
 
+## 8.1.1
+
+### Patch Changes
+
+📝 [#4088](https://github.com/adobe/spectrum-css/pull/4088) [`24d75bf`](https://github.com/adobe/spectrum-css/commit/24d75bfe4d8e627f9d8e019ae379bdd4787712dd) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Minor linting fix of replacing `rgba` to the `rgb` shorthand syntax.
+
 ## 8.1.0
 
 ### Minor Changes

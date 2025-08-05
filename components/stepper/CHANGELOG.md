@@ -7,7 +7,6 @@
 - [#3681](https://github.com/adobe/spectrum-css/pull/3681) [`0a23664`](https://github.com/adobe/spectrum-css/commit/0a23664bd74cd7966c19381a01ddda51c95dc097) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - ### Number field S2 Migration
 
   This work migrations the stepper/number field component to Spectrum 2! 🎉 The S1 stepper was very minimal, and didn't align with SWC or React's implementation. This migration should bring parity to the CSS component. New features include:
-
   - the display name for this component has changed from `stepper` to `number field` (based on design's, React's and SWC's naming conventions.)
     - _**Note:**_ The NPM package name has remained as "stepper," and hasn't yet changed to "number field.""
   - an error state with alert icon
@@ -17,7 +16,6 @@
   #### Quick overview
 
   Because of all the new features and to align more with design, SWC and React, below is a quick recap of the following tokens & classes that have been renamed in the CSS:
-
   - All `.spectrum-Stepper*` class names have been converted to `.spectrum-NumberField*`
   - The `.hide-stepper` class has been converted to `.spectrum-NumberField--hiddenStepper`
   - Custom properties have been renamed from `--spectrum-stepper*` to `--spectrum-numberfield*`
@@ -124,7 +122,6 @@
 📝 [#3536](https://github.com/adobe/spectrum-css/pull/3536) [`f77aa72`](https://github.com/adobe/spectrum-css/commit/f77aa72486f98c7b7d4f449c0d54fb6801881b7e) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
 - S2 Foundations fixes
-
   - Adjusts the background-color of the infield button components within stepper to use `gray-100` as opposed to `gray-25`.
     - This corresponds to the background-color updates picker has for S2.
   - Corrects the border color for the default picker for S2 foundations, using `gray-500` (instead of `gray-800`) to align with other field/form components.
@@ -238,7 +235,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3359](https://github.com/adobe/spectrum-css/pull/3359) [`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b) Thanks [@cdransf](https://github.com/cdransf)!
 
 - This resolves our remaining stylelint issues around undefined tokens, rule order, unused values and color syntax.
-
   - Updates invalid color syntax from `rgba(N, N, N, N)` to `rgba(N N N / N)`.
   - In cases of duplicate properties, preserves the property that would be applied given current code structure.
   - Updates misnamed tokens to use valid tokens (`table/index.css`).

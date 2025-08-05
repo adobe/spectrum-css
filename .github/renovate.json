@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"baseBranches": ["main", "spectrum-two"],
+	"baseBranchPatterns": ["main", "spectrum-two"],
 	"extends": [
 		"config:recommended",
 		":widenPeerDependencies",
@@ -9,6 +9,11 @@
 	],
 	"labels": ["dependencies", "skip_vrt", "ready-for-review"],
 	"packageRules": [
+		{
+			"matchUpdateTypes": ["major"],
+			"matchBaseBranches": ["main"],
+			"enabled": false
+		},
 		{
 			"groupName": "storybook ecosystem",
 			"matchPackageNames": ["storybook", "@storybook/*", "@types/storybook*"],

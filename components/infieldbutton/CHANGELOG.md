@@ -68,7 +68,6 @@ Updated infield button disabled border color to use `--spectrum-gray-300` for sp
 📝 [#3536](https://github.com/adobe/spectrum-css/pull/3536) [`f77aa72`](https://github.com/adobe/spectrum-css/commit/f77aa72486f98c7b7d4f449c0d54fb6801881b7e) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
 
 - S2 Foundations fixes
-
   - Adjusts the background-color of the infield button components within stepper to use `gray-100` as opposed to `gray-25`.
     - This corresponds to the background-color updates picker has for S2.
   - Corrects the border color for the default picker for S2 foundations, using `gray-500` (instead of `gray-800`) to align with other field/form components.
@@ -170,7 +169,6 @@ To render a component that can be easily swapped between the S2 Foundations, S1,
 📝 [#3359](https://github.com/adobe/spectrum-css/pull/3359) [`c8194b0`](https://github.com/adobe/spectrum-css/commit/c8194b0a5b6e115d7db680f287eb8a2a9709906b) Thanks [@cdransf](https://github.com/cdransf)!
 
 - This resolves our remaining stylelint issues around undefined tokens, rule order, unused values and color syntax.
-
   - Updates invalid color syntax from `rgba(N, N, N, N)` to `rgba(N N N / N)`.
   - In cases of duplicate properties, preserves the property that would be applied given current code structure.
   - Updates misnamed tokens to use valid tokens (`table/index.css`).
@@ -357,68 +355,41 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 - feat(stepper)!: stepper migrate tokens (#1960)([3a4c217](https://github.com/adobe/spectrum-css/commit/3a4c217)), closes[#1960](https://github.com/adobe/spectrum-css/issues/1960)
 
-  ###
+### 🛑 BREAKING CHANGES
 
-  🛑 BREAKING CHANGES
-
-  - migrates Stepper to use `@adobe/spectrum-tokens`
+- migrates Stepper to use `@adobe/spectrum-tokens`
 
 Additionally:
 
 - style(infieldbutton!): begin updating css to tokens
-
 - style(infieldbutton): updating css to tokens
-
 - style(infieldbutton): add color styling and spacing
-
 - style(infieldbutton): disabled colors and quiet colors
-
 - feat(infieldbutton): add icon t shirt sizing
-
 - docs(infieldbutton): update mods and remove unneeded file
-
 - refactor(infieldbutton): fix stylelint errors and remove invalid
-
 - chore(infieldbutton): removing dependency for tokens
-
 - fix(infieldbutton): remove dependency from package json
-
 - fix(infieldbutton): reset yarn file to main
-
 - fix(infieldbutton): fix express border radius
-
 - style(infieldbutton): removed disabled background color change on hover
-
 - docs(infieldbutton): update aria labels and remove icon only example
-
 - refactor(infieldbutton): update to utilize tokens that have express values
-
 - style(stepper): get borders for buttons migrated and working
-
 - style(stepper): add additional stepper button tokens
-
 - style(stepper): fixing express button spacing
-
 - refactor(stepper): clean up css
 
 remove duplicate css and use mods
 
 - docs(stepper): update mods
-
 - chore(stepper): update storybook defaults and remove skin import
-
 - style(stepper): finish invalid and high contrast styling
-
 - fix(stepper): remove border width from padding
-
 - chore(stepper): bump tokens release
-
 - docs(stepper): adding sizing examples
-
 - fix(stepper): fix quiet no-stepper variant from showing border
-
 - fix(icon): updating icon to prevent size overrides
-
 - chore(stepper): fix linter errors
 
 use logical properties
@@ -426,23 +397,14 @@ use flex-flow shorthand property
 fix max nesting depth
 
 - feat(stepper): use infield button and new small chevron
-
 - fix(stepper): fix express button placement
-
 - chore(stepper): update docs examples to all use infield button
-
 - fix(stepper): update express and quiet styling
-
 - chore(stepper): update storybook stories
-
 - chore(stepper): update story to use number type textfield
-
 - chore(stepper): removing stepUp and stepDown classes
-
 - chore(stepper): remove unused variables
-
 - chore(stepper): manual version increase for beta release
-
 - docs: specify type attribute on button elements
 
 Button elements should specify a type of "button", otherwise they
