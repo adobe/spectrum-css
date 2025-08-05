@@ -16,109 +16,536 @@
     ".spectrum-CoachMark-step",
     ".spectrum-CoachMark-title"
   ],
-  "modifiers": [
-    "--mod-coachmark-action-menu-vertical-offset",
-    "--mod-coachmark-body-to-footer",
-    "--mod-coachmark-border-radius",
-    "--mod-coachmark-border-size",
-    "--mod-coachmark-content-font-color",
-    "--mod-coachmark-content-font-family",
-    "--mod-coachmark-content-font-size",
-    "--mod-coachmark-content-font-style",
-    "--mod-coachmark-content-font-weight",
-    "--mod-coachmark-content-line-height",
-    "--mod-coachmark-header-to-body",
-    "--mod-coachmark-heading-to-action-button",
-    "--mod-coachmark-image-to-heading",
-    "--mod-coachmark-max-width",
-    "--mod-coachmark-media-fixed-height",
-    "--mod-coachmark-media-min-height",
-    "--mod-coachmark-min-width",
-    "--mod-coachmark-padding",
-    "--mod-coachmark-step-color",
-    "--mod-coachmark-step-font-size",
-    "--mod-coachmark-step-font-style",
-    "--mod-coachmark-step-text-font-weight",
-    "--mod-coachmark-step-text-line-height",
-    "--mod-coachmark-step-to-bottom",
-    "--mod-coachmark-title-color",
-    "--mod-coachmark-title-font-family",
-    "--mod-coachmark-title-font-size",
-    "--mod-coachmark-title-font-style",
-    "--mod-coachmark-title-text-font-weight",
-    "--mod-coachmark-title-text-line-height",
-    "--mod-coachmark-width"
-  ],
-  "component": [
-    "--spectrum-coach-mark-body-font-size",
-    "--spectrum-coach-mark-edge-to-content",
-    "--spectrum-coach-mark-maximum-width",
-    "--spectrum-coach-mark-media-height",
-    "--spectrum-coach-mark-media-minimum-height",
-    "--spectrum-coach-mark-minimum-width",
-    "--spectrum-coach-mark-pagination-body-font-size",
-    "--spectrum-coach-mark-pagination-color",
-    "--spectrum-coach-mark-pagination-text-to-bottom-edge",
-    "--spectrum-coach-mark-title-font-size",
-    "--spectrum-coach-mark-width",
-    "--spectrum-coachmark-action-menu-vertical-offset",
-    "--spectrum-coachmark-body-to-footer",
-    "--spectrum-coachmark-border-radius",
-    "--spectrum-coachmark-border-size",
-    "--spectrum-coachmark-buttongroup-display",
-    "--spectrum-coachmark-buttongroup-mobile-display",
-    "--spectrum-coachmark-content-font-size",
-    "--spectrum-coachmark-content-font-weight",
-    "--spectrum-coachmark-header-to-body",
-    "--spectrum-coachmark-image-to-heading",
-    "--spectrum-coachmark-max-width",
-    "--spectrum-coachmark-media-fixed-height",
-    "--spectrum-coachmark-media-min-height",
-    "--spectrum-coachmark-menu-display",
-    "--spectrum-coachmark-menu-mobile-display",
-    "--spectrum-coachmark-min-width",
-    "--spectrum-coachmark-padding",
-    "--spectrum-coachmark-step-color",
-    "--spectrum-coachmark-step-font-size",
-    "--spectrum-coachmark-step-font-style",
-    "--spectrum-coachmark-step-text-font-weight",
-    "--spectrum-coachmark-step-text-line-height",
-    "--spectrum-coachmark-step-to-bottom",
-    "--spectrum-coachmark-title-color",
-    "--spectrum-coachmark-title-font-family",
-    "--spectrum-coachmark-title-font-size",
-    "--spectrum-coachmark-title-font-style",
-    "--spectrum-coachmark-title-text-font-weight",
-    "--spectrum-coachmark-title-text-line-height",
-    "--spectrum-coachmark-width"
-  ],
-  "global": [
-    "--spectrum-body-color",
-    "--spectrum-body-line-height",
-    "--spectrum-body-sans-serif-font-style",
-    "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-body-serif-font-style",
-    "--spectrum-border-width-100",
-    "--spectrum-corner-radius-large-default",
-    "--spectrum-heading-color",
-    "--spectrum-line-height-200",
-    "--spectrum-medium-font-weight",
-    "--spectrum-popover-edge-to-content-area",
-    "--spectrum-sans-serif-font",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-200",
-    "--spectrum-spacing-300",
-    "--spectrum-title-line-height",
-    "--spectrum-title-sans-serif-font-weight",
-    "--spectrum-title-serif-font-style"
-  ],
-  "passthroughs": [
-    "--mod-button-edge-to-visual-only",
-    "--mod-buttongroup-justify-content",
-    "--mod-buttongroup-spacing",
-    "--mod-popover-border-width",
-    "--mod-popover-content-area-spacing",
-    "--mod-popover-corner-radius"
-  ],
-  "high-contrast": []
+  "modifiers": {
+    "mod-coachmark-border-size": {
+      "description": "Used by `--spectrum-coachmark-border-size`. <br/>Defaults to `var(--mod-popover-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-border-radius": {
+      "description": "Used by `--spectrum-coachmark-border-radius`. <br/>Defaults to `var(--mod-popover-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-min-width": {
+      "description": "Used by `.spectrum-CoachMark`. <br/>Defaults to `var(--spectrum-coachmark-min-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-max-width": {
+      "description": "Used by `.spectrum-CoachMark`. <br/>Defaults to `var(--spectrum-coachmark-max-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-width": {
+      "description": "Used by `.spectrum-CoachMark`, `.spectrum-CoachMark-image-wrapper`. <br/>Defaults to `var(--spectrum-coach-mark-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-media-min-height": {
+      "description": "Used by `.spectrum-CoachMark-image-wrapper`, `.spectrum-CoachMark-image`. <br/>Defaults to `var(--spectrum-coachmark-media-min-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-media-fixed-height": {
+      "description": "Used by `.spectrum-CoachMark-image-wrapper--fixedHeight`. <br/>Defaults to `var(--spectrum-coachmark-media-fixed-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-padding": {
+      "description": "Used by `.spectrum-CoachMark-content, .spectrum-CoachMark-footer, .spectrum-CoachMark-header`, `.spectrum-CoachMark-footer`, `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coachmark-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-image-to-heading": {
+      "description": "Used by `.spectrum-CoachMark-header`. <br/>Defaults to `var(--spectrum-coachmark-image-to-heading)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-header-to-body": {
+      "description": "Used by `.spectrum-CoachMark-header`. <br/>Defaults to `var(--spectrum-coachmark-header-to-body)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-title-color": {
+      "description": "Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-coachmark-title-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-coachmark-title-font-size": {
+      "description": "Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-coachmark-title-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-title-text-font-weight": {
+      "description": "Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-coachmark-title-text-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-title-font-family": {
+      "description": "Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-coachmark-title-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-title-font-style": {
+      "description": "Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-coachmark-title-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-title-text-line-height": {
+      "description": "Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-coachmark-title-text-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-heading-to-action-button": {
+      "description": "Used by `.spectrum-CoachMark-action-menu`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-action-menu-vertical-offset": {
+      "description": "Used by `.spectrum-CoachMark-action-menu`. <br/>Defaults to `var(--spectrum-coachmark-action-menu-vertical-offset)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-body-to-footer": {
+      "description": "Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-coachmark-body-to-footer)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-content-font-color": {
+      "description": "Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-coachmark-content-font-size": {
+      "description": "Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-coachmark-content-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-content-font-weight": {
+      "description": "Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-coachmark-content-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-content-font-family": {
+      "description": "Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-sans-serif-font)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-content-font-style": {
+      "description": "Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-content-line-height": {
+      "description": "Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-body-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-step-to-bottom": {
+      "description": "Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coachmark-step-to-bottom)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-step-color": {
+      "description": "Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coachmark-step-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-coachmark-step-font-size": {
+      "description": "Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coachmark-step-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-step-text-font-weight": {
+      "description": "Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coachmark-step-text-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-step-font-style": {
+      "description": "Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coachmark-step-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coachmark-step-text-line-height": {
+      "description": "Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coachmark-step-text-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-coachmark-width": {
+      "value": "296px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark`. <br/>Defaults to `var(--spectrum-coach-mark-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-width": {
+      "value": "296px",
+      "description": "Used by `--spectrum-coachmark-width`, `.spectrum-CoachMark-image-wrapper`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-min-width": {
+      "value": "296px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark`. <br/>Defaults to `var(--spectrum-coach-mark-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-minimum-width": {
+      "value": "296px",
+      "description": "Used by `--spectrum-coachmark-min-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-max-width": {
+      "value": "380px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark`. <br/>Defaults to `var(--spectrum-coach-mark-maximum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-maximum-width": {
+      "value": "380px",
+      "description": "Used by `--spectrum-coachmark-max-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-media-min-height": {
+      "value": "166px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-image-wrapper`, `.spectrum-CoachMark-image`. <br/>Defaults to `var(--spectrum-coach-mark-media-minimum-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-media-minimum-height": {
+      "value": "166px",
+      "description": "Used by `--spectrum-coachmark-media-min-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-border-size": {
+      "value": "var(--mod-coachmark-border-size, var(--mod-popover-border-width))",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-image-wrapper`, `.spectrum-CoachMark-image`. <br/>Defaults to `var(--mod-coachmark-border-size, var(--mod-popover-border-width))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-border-radius": {
+      "value": "var(--mod-coachmark-border-radius, var(--mod-popover-corner-radius))",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-image`. <br/>Defaults to `var(--mod-coachmark-border-radius, var(--mod-popover-corner-radius))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-media-fixed-height": {
+      "value": "222px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-image-wrapper--fixedHeight`. <br/>Defaults to `var(--spectrum-coach-mark-media-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-media-height": {
+      "value": "222px",
+      "description": "Used by `--spectrum-coachmark-media-fixed-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-padding": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-content, .spectrum-CoachMark-footer, .spectrum-CoachMark-header`, `.spectrum-CoachMark-footer`, `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coach-mark-edge-to-content)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-edge-to-content": {
+      "value": "16px",
+      "description": "Used by `--spectrum-coachmark-padding`, `--spectrum-coachmark-image-to-heading`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-image-to-heading": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-header`. <br/>Defaults to `var(--spectrum-coach-mark-edge-to-content)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-header-to-body": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-header`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-body-to-footer": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-title-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-heading-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-coachmark-title-font-family": {
+      "value": "var(--spectrum-sans-serif-font)",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-sans-serif-font)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-title-font-size": {
+      "value": "var(--spectrum-title-size-s)",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-coach-mark-title-font-size)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-title-font-size": {
+      "value": "var(--spectrum-title-size-s)",
+      "description": "Used by `--spectrum-coachmark-title-font-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-title-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-title-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-title-text-font-weight": {
+      "value": "700",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-title-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-title-text-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-title`. <br/>Defaults to `var(--spectrum-title-line-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-content-font-size": {
+      "value": "var(--spectrum-body-size-s)",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-coach-mark-body-font-size)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-body-font-size": {
+      "value": "var(--spectrum-body-size-s)",
+      "description": "Used by `--spectrum-coachmark-content-font-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-content-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-content`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-step-color": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coach-mark-pagination-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-pagination-color": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Used by `--spectrum-coachmark-step-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-coachmark-step-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-body-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-step-font-size": {
+      "value": "var(--spectrum-body-size-xs)",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coach-mark-pagination-body-font-size)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-pagination-body-font-size": {
+      "value": "var(--spectrum-body-size-xs)",
+      "description": "Used by `--spectrum-coachmark-step-font-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-step-text-font-weight": {
+      "value": "500",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-medium-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-step-text-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-line-height-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-step-to-bottom": {
+      "value": "33px",
+      "description": "Defined in `.spectrum-CoachMark`. <br/>Used by `.spectrum-CoachMark-step`. <br/>Defaults to `var(--spectrum-coach-mark-pagination-text-to-bottom-edge)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-mark-pagination-text-to-bottom-edge": {
+      "value": "33px",
+      "description": "Used by `--spectrum-coachmark-step-to-bottom`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-action-menu-vertical-offset": {
+      "description": "Used by `.spectrum-CoachMark-action-menu`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-menu-display": {
+      "value": "var(--spectrum-coachmark-menu-mobile-display)",
+      "description": "Defined in `.spectrum-CoachMark-menu--mobile`. <br/>Used by `.spectrum-CoachMark-menu`. <br/>Defaults to `var(--spectrum-coachmark-menu-mobile-display)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-menu-mobile-display": {
+      "description": "Used by `--spectrum-coachmark-menu-display`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-buttongroup-display": {
+      "value": "var(--spectrum-coachmark-buttongroup-mobile-display)",
+      "description": "Defined in `.spectrum-CoachMark-buttongroup--mobile`. <br/>Used by `.spectrum-CoachMark-buttongroup`. <br/>Defaults to `var(--spectrum-coachmark-buttongroup-mobile-display)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coachmark-buttongroup-mobile-display": {
+      "description": "Used by `--spectrum-coachmark-buttongroup-display`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-spacing-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-coachmark-header-to-body`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-coachmark-body-to-footer`, `.spectrum-CoachMark-action-menu`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-coachmark-title-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-sans-serif-font": {
+      "description": "Used by `--spectrum-coachmark-title-font-family`, `.spectrum-CoachMark-content`, `.spectrum-CoachMark-step`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-title-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-coachmark-title-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-title-sans-serif-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-coachmark-title-text-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-title-line-height": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-coachmark-title-text-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-coachmark-content-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-coachmark-step-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-medium-font-weight": {
+      "value": "500",
+      "description": "Used by `--spectrum-coachmark-step-text-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-200": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-coachmark-step-text-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "value": "1px",
+      "description": "Used by `--mod-popover-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-large-default": {
+      "value": "10px",
+      "description": "Used by `--mod-popover-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-popover-edge-to-content-area": {
+      "value": "8px",
+      "description": "Used by `--mod-popover-content-area-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `.spectrum-CoachMark-content`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-CoachMark-content`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-line-height": {
+      "value": "1.5",
+      "description": "Used by `.spectrum-CoachMark-content`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `--mod-buttongroup-spacing`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-popover-border-width": {
+      "category": "Passthrough"
+    },
+    "mod-popover-corner-radius": {
+      "category": "Passthrough"
+    },
+    "mod-buttongroup-justify-content": {
+      "category": "Passthrough"
+    },
+    "mod-popover-content-area-spacing": {
+      "category": "Passthrough"
+    },
+    "mod-button-edge-to-visual-only": {
+      "category": "Passthrough"
+    },
+    "mod-buttongroup-spacing": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {}
 }

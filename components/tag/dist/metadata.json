@@ -9,6 +9,13 @@
     ".spectrum-Tag .spectrum-Thumbnail",
     ".spectrum-Tag--sizeL",
     ".spectrum-Tag--sizeM",
+    ".spectrum-Tag:lang(ja)",
+    ".spectrum-Tag:lang(ko)",
+    ".spectrum-Tag:lang(zh)",
+    ".spectrum-Tag:not(.is-disabled, .is-readOnly):active",
+    ".spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible",
+    ".spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after",
+    ".spectrum-Tag:not(.is-disabled, .is-readOnly):hover",
     ".spectrum-Tag.is-disabled",
     ".spectrum-Tag.is-disabled .spectrum-Avatar",
     ".spectrum-Tag.is-disabled .spectrum-Thumbnail",
@@ -16,247 +23,1235 @@
     ".spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)",
     ".spectrum-Tag.spectrum-Tag--emphasized",
     ".spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)",
-    ".spectrum-Tag.spectrum-Tag.is-disabled",
-    ".spectrum-Tag:lang(ja)",
-    ".spectrum-Tag:lang(ko)",
-    ".spectrum-Tag:lang(zh)",
-    ".spectrum-Tag:not(.is-disabled, .is-readOnly):active",
-    ".spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible",
-    ".spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after",
-    ".spectrum-Tag:not(.is-disabled, .is-readOnly):hover"
+    ".spectrum-Tag.spectrum-Tag.is-disabled"
   ],
-  "modifiers": [
-    "--mod-tag-animation-duration",
-    "--mod-tag-avatar-size",
-    "--mod-tag-avatar-spacing-block-end",
-    "--mod-tag-avatar-spacing-block-start",
-    "--mod-tag-background-color",
-    "--mod-tag-background-color-active",
-    "--mod-tag-background-color-disabled",
-    "--mod-tag-background-color-emphasized",
-    "--mod-tag-background-color-emphasized-active",
-    "--mod-tag-background-color-emphasized-focus",
-    "--mod-tag-background-color-emphasized-hover",
-    "--mod-tag-background-color-focus",
-    "--mod-tag-background-color-hover",
-    "--mod-tag-background-color-selected",
-    "--mod-tag-background-color-selected-active",
-    "--mod-tag-background-color-selected-focus",
-    "--mod-tag-background-color-selected-hover",
-    "--mod-tag-border-color",
-    "--mod-tag-border-color-active",
-    "--mod-tag-border-color-disabled",
-    "--mod-tag-border-color-emphasized",
-    "--mod-tag-border-color-focus",
-    "--mod-tag-border-color-hover",
-    "--mod-tag-border-color-selected",
-    "--mod-tag-border-width",
-    "--mod-tag-clear-button-size",
-    "--mod-tag-clear-button-spacing-block",
-    "--mod-tag-content-color",
-    "--mod-tag-content-color-active",
-    "--mod-tag-content-color-disabled",
-    "--mod-tag-content-color-emphasized",
-    "--mod-tag-content-color-focus",
-    "--mod-tag-content-color-hover",
-    "--mod-tag-content-color-selected",
-    "--mod-tag-corner-radius",
-    "--mod-tag-edge-to-clear-icon",
-    "--mod-tag-focus-ring-color",
-    "--mod-tag-focus-ring-gap",
-    "--mod-tag-focus-ring-thickness",
-    "--mod-tag-font-size",
-    "--mod-tag-height",
-    "--mod-tag-icon-size",
-    "--mod-tag-icon-spacing-block-end",
-    "--mod-tag-icon-spacing-block-start",
-    "--mod-tag-label-font-family",
-    "--mod-tag-label-font-style",
-    "--mod-tag-label-font-weight",
-    "--mod-tag-label-line-height",
-    "--mod-tag-label-line-height-cjk",
-    "--mod-tag-label-spacing-block",
-    "--mod-tag-label-spacing-inline",
-    "--mod-tag-label-to-clear-icon",
-    "--mod-tag-maximum-width-multiplier",
-    "--mod-tag-min-inline-size",
-    "--mod-tag-thumbnail-size",
-    "--mod-tag-visual-spacing-inline-end",
-    "--mod-tag-visual-spacing-inline-start"
-  ],
-  "component": [
-    "--spectrum-tag-animation-duration",
-    "--spectrum-tag-avatar-size",
-    "--spectrum-tag-avatar-spacing-block-end",
-    "--spectrum-tag-avatar-spacing-block-start",
-    "--spectrum-tag-background-color",
-    "--spectrum-tag-background-color-active",
-    "--spectrum-tag-background-color-focus",
-    "--spectrum-tag-background-color-hover",
-    "--spectrum-tag-border-color",
-    "--spectrum-tag-border-color-active",
-    "--spectrum-tag-border-color-focus",
-    "--spectrum-tag-border-color-hover",
-    "--spectrum-tag-border-width",
-    "--spectrum-tag-clear-button-size",
-    "--spectrum-tag-clear-button-spacing-block",
-    "--spectrum-tag-content-color",
-    "--spectrum-tag-content-color-active",
-    "--spectrum-tag-content-color-focus",
-    "--spectrum-tag-content-color-hover",
-    "--spectrum-tag-corner-radius",
-    "--spectrum-tag-edge-to-clear-icon",
-    "--spectrum-tag-edge-to-clear-icon-large",
-    "--spectrum-tag-edge-to-clear-icon-medium",
-    "--spectrum-tag-edge-to-clear-icon-small",
-    "--spectrum-tag-focus-ring-color",
-    "--spectrum-tag-focus-ring-gap",
-    "--spectrum-tag-focus-ring-thickness",
-    "--spectrum-tag-font-size",
-    "--spectrum-tag-height",
-    "--spectrum-tag-icon-size",
-    "--spectrum-tag-icon-spacing-block-end",
-    "--spectrum-tag-icon-spacing-block-start",
-    "--spectrum-tag-label-font-family",
-    "--spectrum-tag-label-font-style",
-    "--spectrum-tag-label-font-weight",
-    "--spectrum-tag-label-line-height",
-    "--spectrum-tag-label-line-height-cjk",
-    "--spectrum-tag-label-spacing-block",
-    "--spectrum-tag-label-spacing-inline",
-    "--spectrum-tag-label-to-clear-icon",
-    "--spectrum-tag-label-to-clear-icon-large",
-    "--spectrum-tag-label-to-clear-icon-medium",
-    "--spectrum-tag-label-to-clear-icon-small",
-    "--spectrum-tag-maximum-width-multiplier",
-    "--spectrum-tag-min-inline-size",
-    "--spectrum-tag-minimum-width-large",
-    "--spectrum-tag-minimum-width-medium",
-    "--spectrum-tag-minimum-width-small",
-    "--spectrum-tag-thumbnail-size",
-    "--spectrum-tag-top-to-avatar-large",
-    "--spectrum-tag-top-to-avatar-medium",
-    "--spectrum-tag-top-to-avatar-small",
-    "--spectrum-tag-top-to-cross-icon-large",
-    "--spectrum-tag-top-to-cross-icon-medium",
-    "--spectrum-tag-top-to-cross-icon-small",
-    "--spectrum-tag-visual-spacing-inline-end",
-    "--spectrum-tag-visual-spacing-inline-start"
-  ],
-  "global": [
-    "--spectrum-accent-background-color-default",
-    "--spectrum-accent-background-color-down",
-    "--spectrum-accent-background-color-hover",
-    "--spectrum-accent-background-color-key-focus",
-    "--spectrum-animation-duration-100",
-    "--spectrum-avatar-opacity-disabled",
-    "--spectrum-avatar-size-100",
-    "--spectrum-avatar-size-50",
-    "--spectrum-avatar-size-75",
-    "--spectrum-border-width-100",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-edge-to-text-200",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-edge-to-visual-100",
-    "--spectrum-component-edge-to-visual-200",
-    "--spectrum-component-edge-to-visual-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-75",
-    "--spectrum-component-size-difference-down",
-    "--spectrum-component-size-width-ratio-down",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-component-top-to-workflow-icon-200",
-    "--spectrum-component-top-to-workflow-icon-75",
-    "--spectrum-corner-radius-medium-size-large",
-    "--spectrum-corner-radius-medium-size-medium",
-    "--spectrum-corner-radius-medium-size-small",
-    "--spectrum-cross-icon-size-100",
-    "--spectrum-cross-icon-size-200",
-    "--spectrum-cross-icon-size-75",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-background-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-downstate-height",
-    "--spectrum-downstate-width",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-gray-25",
-    "--spectrum-line-height-100",
-    "--spectrum-medium-font-weight",
-    "--spectrum-neutral-background-color-default",
-    "--spectrum-neutral-background-color-down",
-    "--spectrum-neutral-background-color-hover",
-    "--spectrum-neutral-background-color-key-focus",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-text-to-visual-200",
-    "--spectrum-text-to-visual-75",
-    "--spectrum-thumbnail-opacity-disabled",
-    "--spectrum-thumbnail-size-100",
-    "--spectrum-thumbnail-size-50",
-    "--spectrum-thumbnail-size-75",
-    "--spectrum-white",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-75"
-  ],
-  "passthroughs": [
-    "--mod-avatar-block-size",
-    "--mod-avatar-inline-size",
-    "--mod-avatar-opacity-disabled",
-    "--mod-clear-button-background-color",
-    "--mod-clear-button-height",
-    "--mod-clear-button-icon-color",
-    "--mod-clear-button-icon-color-hover",
-    "--mod-clear-button-icon-color-key-focus",
-    "--mod-clear-button-width",
-    "--mod-icon-size",
-    "--mod-thumbnail-opacity-disabled",
-    "--mod-thumbnail-size"
-  ],
-  "high-contrast": [
-    "--highcontrast-tag-background-color",
-    "--highcontrast-tag-background-color-active",
-    "--highcontrast-tag-background-color-disabled",
-    "--highcontrast-tag-background-color-emphasized",
-    "--highcontrast-tag-background-color-emphasized-active",
-    "--highcontrast-tag-background-color-emphasized-focus",
-    "--highcontrast-tag-background-color-emphasized-hover",
-    "--highcontrast-tag-background-color-focus",
-    "--highcontrast-tag-background-color-hover",
-    "--highcontrast-tag-background-color-selected",
-    "--highcontrast-tag-background-color-selected-active",
-    "--highcontrast-tag-background-color-selected-focus",
-    "--highcontrast-tag-background-color-selected-hover",
-    "--highcontrast-tag-border-color",
-    "--highcontrast-tag-border-color-active",
-    "--highcontrast-tag-border-color-disabled",
-    "--highcontrast-tag-border-color-emphasized",
-    "--highcontrast-tag-border-color-focus",
-    "--highcontrast-tag-border-color-hover",
-    "--highcontrast-tag-border-color-selected",
-    "--highcontrast-tag-content-color",
-    "--highcontrast-tag-content-color-active",
-    "--highcontrast-tag-content-color-disabled",
-    "--highcontrast-tag-content-color-emphasized",
-    "--highcontrast-tag-content-color-focus",
-    "--highcontrast-tag-content-color-hover",
-    "--highcontrast-tag-content-color-selected",
-    "--highcontrast-tag-focus-ring-color"
-  ]
+  "modifiers": {
+    "mod-tag-border-color": {
+      "description": "Used by `--spectrum-tag-border-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-border-color-hover": {
+      "description": "Used by `--spectrum-tag-border-color-hover`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-border-color-active": {
+      "description": "Used by `--spectrum-tag-border-color-active`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-border-color-focus": {
+      "description": "Used by `--spectrum-tag-border-color-focus`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color": {
+      "description": "Used by `--spectrum-tag-background-color`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-hover": {
+      "description": "Used by `--spectrum-tag-background-color-hover`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-active": {
+      "description": "Used by `--spectrum-tag-background-color-active`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-focus": {
+      "description": "Used by `--spectrum-tag-background-color-focus`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-content-color": {
+      "description": "Used by `--spectrum-tag-content-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-content-color-hover": {
+      "description": "Used by `--spectrum-tag-content-color-hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-content-color-active": {
+      "description": "Used by `--spectrum-tag-content-color-active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-content-color-focus": {
+      "description": "Used by `--spectrum-tag-content-color-focus`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-focus-ring-color": {
+      "description": "Used by `--spectrum-tag-focus-ring-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-avatar-size": {
+      "description": "Used by `--mod-avatar-inline-size`, `--mod-avatar-block-size`. <br/>Defaults to `var(--spectrum-tag-avatar-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-thumbnail-size": {
+      "description": "Used by `--mod-thumbnail-size`. <br/>Defaults to `var(--spectrum-tag-thumbnail-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-clear-button-size": {
+      "description": "Used by `--mod-icon-size`, `--mod-clear-button-width`, `--mod-clear-button-height`. <br/>Defaults to `var(--spectrum-tag-clear-button-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-label-to-clear-icon": {
+      "description": "Used by `--mod-clear-button-width`. <br/>Defaults to `var(--spectrum-tag-label-to-clear-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-edge-to-clear-icon": {
+      "description": "Used by `--mod-clear-button-width`. <br/>Defaults to `var(--spectrum-tag-edge-to-clear-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-clear-button-spacing-block": {
+      "description": "Used by `--mod-clear-button-height`. <br/>Defaults to `var(--spectrum-tag-clear-button-spacing-block)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-label-line-height": {
+      "description": "Defined in `.spectrum-Tag:lang(ja), .spectrum-Tag:lang(ko), .spectrum-Tag:lang(zh)`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-tag-label-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-label-line-height-cjk": {
+      "description": "Used by `--mod-tag-label-line-height`. <br/>Defaults to `var(--spectrum-tag-label-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-border-color-selected": {
+      "description": "Used by `--spectrum-tag-border-color`, `--spectrum-tag-border-color-hover`, `--spectrum-tag-border-color-active`, `--spectrum-tag-border-color-focus`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-selected": {
+      "description": "Used by `--spectrum-tag-background-color`. <br/>Defaults to `var(--spectrum-neutral-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-content-color-selected": {
+      "description": "Used by `--spectrum-tag-content-color`, `--spectrum-tag-content-color-hover`, `--spectrum-tag-content-color-active`, `--spectrum-tag-content-color-focus`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-selected-hover": {
+      "description": "Used by `--spectrum-tag-background-color-hover`. <br/>Defaults to `var(--spectrum-neutral-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-selected-active": {
+      "description": "Used by `--spectrum-tag-background-color-active`. <br/>Defaults to `var(--spectrum-neutral-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-selected-focus": {
+      "description": "Used by `--spectrum-tag-background-color-focus`. <br/>Defaults to `var(--spectrum-neutral-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-border-color-emphasized": {
+      "description": "Used by `--spectrum-tag-border-color`, `--spectrum-tag-border-color-hover`, `--spectrum-tag-border-color-active`, `--spectrum-tag-border-color-focus`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-emphasized": {
+      "description": "Used by `--spectrum-tag-background-color`. <br/>Defaults to `var(--spectrum-accent-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-content-color-emphasized": {
+      "description": "Used by `--spectrum-tag-content-color`, `--spectrum-tag-content-color-hover`, `--spectrum-tag-content-color-active`, `--spectrum-tag-content-color-focus`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-emphasized-hover": {
+      "description": "Used by `--spectrum-tag-background-color-hover`. <br/>Defaults to `var(--spectrum-accent-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-emphasized-active": {
+      "description": "Used by `--spectrum-tag-background-color-active`. <br/>Defaults to `var(--spectrum-accent-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-emphasized-focus": {
+      "description": "Used by `--spectrum-tag-background-color-focus`. <br/>Defaults to `var(--spectrum-accent-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-border-color-disabled": {
+      "description": "Used by `--spectrum-tag-border-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-background-color-disabled": {
+      "description": "Used by `--spectrum-tag-background-color`. <br/>Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-content-color-disabled": {
+      "description": "Used by `--spectrum-tag-content-color`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tag-corner-radius": {
+      "description": "Used by `.spectrum-Tag`, `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--spectrum-tag-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-border-width": {
+      "description": "Used by `.spectrum-Tag`, `.spectrum-Tag .spectrum-Tag-itemIcon`, `.spectrum-Tag .spectrum-Avatar`, `.spectrum-Tag .spectrum-Tag-clearButton`, `.spectrum-Tag .spectrum-Tag-itemLabel`, `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--spectrum-tag-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-label-spacing-inline": {
+      "description": "Used by `.spectrum-Tag`, `.spectrum-Tag .spectrum-Avatar, .spectrum-Tag .spectrum-Tag-itemIcon, .spectrum-Tag .spectrum-Thumbnail`, `.spectrum-Tag .spectrum-Tag-clearButton`, `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-tag-label-spacing-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-height": {
+      "description": "Used by `.spectrum-Tag`. <br/>Defaults to `var(--spectrum-tag-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-min-inline-size": {
+      "description": "Used by `.spectrum-Tag`. <br/>Defaults to `var(--spectrum-tag-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-maximum-width-multiplier": {
+      "description": "Used by `.spectrum-Tag`. <br/>Defaults to `var(--spectrum-tag-maximum-width-multiplier)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-animation-duration": {
+      "description": "Used by `.spectrum-Tag`. <br/>Defaults to `var(--spectrum-tag-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-icon-size": {
+      "description": "Used by `.spectrum-Tag .spectrum-Tag-itemIcon`. <br/>Defaults to `var(--spectrum-tag-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-icon-spacing-block-start": {
+      "description": "Used by `.spectrum-Tag .spectrum-Tag-itemIcon`. <br/>Defaults to `var(--spectrum-tag-icon-spacing-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-icon-spacing-block-end": {
+      "description": "Used by `.spectrum-Tag .spectrum-Tag-itemIcon`. <br/>Defaults to `var(--spectrum-tag-icon-spacing-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-avatar-spacing-block-start": {
+      "description": "Used by `.spectrum-Tag .spectrum-Avatar`. <br/>Defaults to `var(--spectrum-tag-avatar-spacing-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-avatar-spacing-block-end": {
+      "description": "Used by `.spectrum-Tag .spectrum-Avatar`. <br/>Defaults to `var(--spectrum-tag-avatar-spacing-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-visual-spacing-inline-start": {
+      "description": "Used by `.spectrum-Tag .spectrum-Avatar, .spectrum-Tag .spectrum-Tag-itemIcon, .spectrum-Tag .spectrum-Thumbnail`. <br/>Defaults to `var(--spectrum-tag-visual-spacing-inline-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-visual-spacing-inline-end": {
+      "description": "Used by `.spectrum-Tag .spectrum-Avatar, .spectrum-Tag .spectrum-Tag-itemIcon, .spectrum-Tag .spectrum-Thumbnail`. <br/>Defaults to `var(--spectrum-tag-visual-spacing-inline-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-label-font-family": {
+      "description": "Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-tag-label-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-label-font-style": {
+      "description": "Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-tag-label-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-label-font-weight": {
+      "description": "Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-tag-label-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-font-size": {
+      "description": "Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-tag-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-label-spacing-block": {
+      "description": "Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-tag-label-spacing-block)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-focus-ring-gap": {
+      "description": "Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--spectrum-tag-focus-ring-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tag-focus-ring-thickness": {
+      "description": "Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--spectrum-tag-focus-ring-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-tag-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-border-width": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag`, `.spectrum-Tag .spectrum-Tag-itemIcon`, `.spectrum-Tag .spectrum-Avatar`, `.spectrum-Tag .spectrum-Tag-clearButton`, `.spectrum-Tag .spectrum-Tag-itemLabel`, `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-border-color": {
+      "value": "var(--highcontrast-tag-border-color-disabled, var(--mod-tag-border-color-disabled, transparent))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag.is-disabled`. <br/>Used by `.spectrum-Tag`. <br/>Defaults to `var(--highcontrast-tag-border-color-disabled, var(--mod-tag-border-color-disabled, transparent))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-border-color-hover": {
+      "value": "var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):hover`. <br/>Defaults to `var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-border-color-active": {
+      "value": "var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):active`. <br/>Defaults to `var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-border-color-focus": {
+      "value": "var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible`. <br/>Defaults to `var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-background-color": {
+      "value": "var(--highcontrast-tag-background-color-disabled, var(--mod-tag-background-color-disabled, var(--spectrum-disabled-background-color)))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag.is-disabled`. <br/>Used by `.spectrum-Tag`. <br/>Defaults to `var(--highcontrast-tag-background-color-disabled, var(--mod-tag-background-color-disabled, var(--spectrum-disabled-background-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-background-color-hover": {
+      "value": "var(--highcontrast-tag-background-color-emphasized-hover, var(--mod-tag-background-color-emphasized-hover, var(--spectrum-accent-background-color-hover)))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):hover`. <br/>Defaults to `var(--highcontrast-tag-background-color-emphasized-hover, var(--mod-tag-background-color-emphasized-hover, var(--spectrum-accent-background-color-hover)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-background-color-active": {
+      "value": "var(--highcontrast-tag-background-color-emphasized-active, var(--mod-tag-background-color-emphasized-active, var(--spectrum-accent-background-color-down)))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):active`. <br/>Defaults to `var(--highcontrast-tag-background-color-emphasized-active, var(--mod-tag-background-color-emphasized-active, var(--spectrum-accent-background-color-down)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-background-color-focus": {
+      "value": "var(--highcontrast-tag-background-color-emphasized-focus, var(--mod-tag-background-color-emphasized-focus, var(--spectrum-accent-background-color-key-focus)))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible`. <br/>Defaults to `var(--highcontrast-tag-background-color-emphasized-focus, var(--mod-tag-background-color-emphasized-focus, var(--spectrum-accent-background-color-key-focus)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-content-color": {
+      "value": "var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-disabled-content-color)))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag.is-disabled`. <br/>Used by `.spectrum-Tag`. <br/>Defaults to `var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-disabled-content-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-content-color-hover": {
+      "value": "var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):hover`. <br/>Defaults to `var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-content-color-active": {
+      "value": "var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):active`. <br/>Defaults to `var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-content-color-focus": {
+      "value": "var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)))",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag.is-selected:not(.is-disabled, .is-readOnly)`, `.spectrum-Tag.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly)`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible`. <br/>Defaults to `var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-focus-ring-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-focus-ring-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-focus-ring-color": {
+      "value": "var(--highcontrast-tag-focus-ring-color, var(--mod-tag-focus-ring-color, var(--spectrum-focus-indicator-color)))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--highcontrast-tag-focus-ring-color, var(--mod-tag-focus-ring-color, var(--spectrum-focus-indicator-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tag-label-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-line-height-cjk": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--mod-tag-label-line-height`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-font-weight": {
+      "value": "500",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-medium-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-height": {
+      "value": "40px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag`. <br/>Defaults to `var(--spectrum-component-height-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-min-inline-size": {
+      "value": "33px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag`. <br/>Defaults to `var(--spectrum-tag-minimum-width-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-minimum-width-small": {
+      "value": "21px",
+      "description": "Used by `--spectrum-tag-min-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-font-size": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-font-size-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-icon-size": {
+      "value": "22px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemIcon`. <br/>Defaults to `var(--spectrum-workflow-icon-size-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-corner-radius": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag`, `.spectrum-Tag:not(.is-disabled, .is-readOnly):focus-visible:after`. <br/>Defaults to `var(--spectrum-corner-radius-medium-size-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-clear-button-size": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `--mod-icon-size`, `--mod-clear-button-width`, `--mod-clear-button-height`. <br/>Defaults to `var(--spectrum-cross-icon-size-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-clear-button-spacing-block": {
+      "value": "15px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `--mod-clear-button-height`. <br/>Defaults to `var(--spectrum-tag-top-to-cross-icon-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-top-to-cross-icon-small": {
+      "value": "8px",
+      "description": "Used by `--spectrum-tag-clear-button-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-to-clear-icon": {
+      "value": "15px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `--mod-clear-button-width`. <br/>Defaults to `var(--spectrum-tag-label-to-clear-icon-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-to-clear-icon-small": {
+      "value": "8px",
+      "description": "Used by `--spectrum-tag-label-to-clear-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-edge-to-clear-icon": {
+      "value": "15px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `--mod-clear-button-width`. <br/>Defaults to `var(--spectrum-tag-edge-to-clear-icon-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-edge-to-clear-icon-small": {
+      "value": "8px",
+      "description": "Used by `--spectrum-tag-edge-to-clear-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-visual-spacing-inline-start": {
+      "value": "13px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Avatar, .spectrum-Tag .spectrum-Tag-itemIcon, .spectrum-Tag .spectrum-Thumbnail`. <br/>Defaults to `var(--spectrum-component-edge-to-visual-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-visual-spacing-inline-end": {
+      "value": "7px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Avatar, .spectrum-Tag .spectrum-Tag-itemIcon, .spectrum-Tag .spectrum-Thumbnail`. <br/>Defaults to `var(--spectrum-text-to-visual-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-icon-spacing-block-start": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemIcon`. <br/>Defaults to `var(--spectrum-component-top-to-workflow-icon-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-icon-spacing-block-end": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemIcon`. <br/>Defaults to `var(--spectrum-component-top-to-workflow-icon-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-avatar-size": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `--mod-avatar-inline-size`, `--mod-avatar-block-size`. <br/>Defaults to `var(--spectrum-avatar-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-avatar-spacing-block-start": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Avatar`. <br/>Defaults to `var(--spectrum-tag-top-to-avatar-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-top-to-avatar-small": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tag-avatar-spacing-block-start`, `--spectrum-tag-avatar-spacing-block-end`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-avatar-spacing-block-end": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Avatar`. <br/>Defaults to `var(--spectrum-tag-top-to-avatar-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-thumbnail-size": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `--mod-thumbnail-size`. <br/>Defaults to `var(--spectrum-thumbnail-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-spacing-block": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-component-top-to-text-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-spacing-inline": {
+      "value": "15px",
+      "description": "Defined in `.spectrum-Tag`, `.spectrum-Tag--sizeM`, `.spectrum-Tag--sizeL`. <br/>Used by `.spectrum-Tag`, `.spectrum-Tag .spectrum-Avatar, .spectrum-Tag .spectrum-Tag-itemIcon, .spectrum-Tag .spectrum-Thumbnail`, `.spectrum-Tag .spectrum-Tag-clearButton`, `.spectrum-Tag .spectrum-Tag-itemLabel`. <br/>Defaults to `var(--spectrum-component-edge-to-text-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-minimum-width-medium": {
+      "value": "27px",
+      "description": "Used by `--spectrum-tag-min-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-top-to-cross-icon-medium": {
+      "value": "12px",
+      "description": "Used by `--spectrum-tag-clear-button-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-to-clear-icon-medium": {
+      "value": "12px",
+      "description": "Used by `--spectrum-tag-label-to-clear-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-edge-to-clear-icon-medium": {
+      "value": "12px",
+      "description": "Used by `--spectrum-tag-edge-to-clear-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-top-to-avatar-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-tag-avatar-spacing-block-start`, `--spectrum-tag-avatar-spacing-block-end`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-minimum-width-large": {
+      "value": "33px",
+      "description": "Used by `--spectrum-tag-min-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-top-to-cross-icon-large": {
+      "value": "15px",
+      "description": "Used by `--spectrum-tag-clear-button-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-label-to-clear-icon-large": {
+      "value": "15px",
+      "description": "Used by `--spectrum-tag-label-to-clear-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-edge-to-clear-icon-large": {
+      "value": "15px",
+      "description": "Used by `--spectrum-tag-edge-to-clear-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-top-to-avatar-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-tag-avatar-spacing-block-start`, `--spectrum-tag-avatar-spacing-block-end`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tag-maximum-width-multiplier": {
+      "value": "7",
+      "description": "Used by `.spectrum-Tag`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-tag-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "value": "1px",
+      "description": "Used by `--spectrum-tag-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Used by `--spectrum-tag-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-tag-background-color-hover`, `--spectrum-tag-background-color-active`, `--spectrum-tag-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-tag-content-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-tag-content-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-tag-content-color-active`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-tag-content-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-tag-focus-ring-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-tag-focus-ring-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-tag-focus-ring-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-tag-label-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-tag-label-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-tag-label-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-tag-label-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-medium-font-weight": {
+      "value": "500",
+      "description": "Used by `--spectrum-tag-label-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-tag-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-tag-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-75": {
+      "value": "16px",
+      "description": "Used by `--spectrum-tag-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-tag-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cross-icon-size-75": {
+      "value": "8px",
+      "description": "Used by `--spectrum-tag-clear-button-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-75": {
+      "value": "7px",
+      "description": "Used by `--spectrum-tag-visual-spacing-inline-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-tag-visual-spacing-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tag-icon-spacing-block-start`, `--spectrum-tag-icon-spacing-block-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-avatar-size-50": {
+      "value": "16px",
+      "description": "Used by `--spectrum-tag-avatar-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-thumbnail-size-50": {
+      "value": "16px",
+      "description": "Used by `--spectrum-tag-thumbnail-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tag-label-spacing-block`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "value": "9px",
+      "description": "Used by `--spectrum-tag-label-spacing-inline`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-tag-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--spectrum-tag-content-color`, `--spectrum-tag-content-color-hover`, `--spectrum-tag-content-color-active`, `--spectrum-tag-content-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-tag-background-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-tag-background-color-active`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-tag-background-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Used by `--spectrum-tag-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-tag-content-color`, `--spectrum-tag-content-color-hover`, `--spectrum-tag-content-color-active`, `--spectrum-tag-content-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-tag-background-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-down": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-tag-background-color-active`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-key-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-tag-background-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Used by `--spectrum-tag-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-tag-content-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-tag-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-tag-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-tag-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-tag-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cross-icon-size-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-tag-clear-button-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-100": {
+      "value": "10px",
+      "description": "Used by `--spectrum-tag-visual-spacing-inline-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-tag-visual-spacing-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-tag-icon-spacing-block-start`, `--spectrum-tag-icon-spacing-block-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-avatar-size-75": {
+      "value": "20px",
+      "description": "Used by `--spectrum-tag-avatar-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-thumbnail-size-75": {
+      "value": "20px",
+      "description": "Used by `--spectrum-tag-thumbnail-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-tag-label-spacing-block`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-tag-label-spacing-inline`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-tag-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-tag-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "value": "22px",
+      "description": "Used by `--spectrum-tag-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-tag-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cross-icon-size-200": {
+      "value": "10px",
+      "description": "Used by `--spectrum-tag-clear-button-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-200": {
+      "value": "13px",
+      "description": "Used by `--spectrum-tag-visual-spacing-inline-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-200": {
+      "value": "7px",
+      "description": "Used by `--spectrum-tag-visual-spacing-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-tag-icon-spacing-block-start`, `--spectrum-tag-icon-spacing-block-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-avatar-size-100": {
+      "value": "24px",
+      "description": "Used by `--spectrum-tag-avatar-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-thumbnail-size-100": {
+      "value": "24px",
+      "description": "Used by `--spectrum-tag-thumbnail-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-tag-label-spacing-block`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-200": {
+      "value": "15px",
+      "description": "Used by `--spectrum-tag-label-spacing-inline`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-downstate-height": {
+      "description": "Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):active`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-downstate-width": {
+      "description": "Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):active`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-width-ratio-down": {
+      "value": "0.3333",
+      "description": "Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):active`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-difference-down": {
+      "value": "-2px",
+      "description": "Used by `.spectrum-Tag:not(.is-disabled, .is-readOnly):active`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-avatar-opacity-disabled": {
+      "value": "0.3",
+      "description": "Used by `.spectrum-Tag.is-disabled .spectrum-Avatar`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-thumbnail-opacity-disabled": {
+      "value": "0.3",
+      "description": "Used by `.spectrum-Tag.is-disabled .spectrum-Thumbnail`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-avatar-inline-size": {
+      "category": "Passthrough"
+    },
+    "mod-avatar-block-size": {
+      "category": "Passthrough"
+    },
+    "mod-thumbnail-size": {
+      "category": "Passthrough"
+    },
+    "mod-clear-button-background-color": {
+      "category": "Passthrough"
+    },
+    "mod-clear-button-icon-color": {
+      "category": "Passthrough"
+    },
+    "mod-clear-button-icon-color-hover": {
+      "category": "Passthrough"
+    },
+    "mod-clear-button-icon-color-key-focus": {
+      "category": "Passthrough"
+    },
+    "mod-icon-size": {
+      "category": "Passthrough"
+    },
+    "mod-clear-button-width": {
+      "category": "Passthrough"
+    },
+    "mod-clear-button-height": {
+      "category": "Passthrough"
+    },
+    "mod-avatar-opacity-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-thumbnail-opacity-disabled": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-tag-border-color": {
+      "value": "var(--mod-tag-border-color, transparent)",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-border-color`. <br/>Defaults to `var(--mod-tag-border-color, transparent)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-border-color-hover": {
+      "value": "var(--mod-tag-border-color-hover, transparent)",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-border-color-hover`. <br/>Defaults to `var(--mod-tag-border-color-hover, transparent)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-border-color-active": {
+      "value": "var(--mod-tag-border-color-active, transparent)",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-border-color-active`. <br/>Defaults to `var(--mod-tag-border-color-active, transparent)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-border-color-focus": {
+      "value": "var(--mod-tag-border-color-focus, transparent)",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-border-color-focus`. <br/>Defaults to `var(--mod-tag-border-color-focus, transparent)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color": {
+      "value": "var(--mod-tag-background-color, var(--spectrum-gray-100))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-background-color`. <br/>Defaults to `var(--mod-tag-background-color, var(--spectrum-gray-100))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-hover": {
+      "value": "var(--mod-tag-background-color-hover, var(--spectrum-gray-200))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-background-color-hover`. <br/>Defaults to `var(--mod-tag-background-color-hover, var(--spectrum-gray-200))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-active": {
+      "value": "var(--mod-tag-background-color-active, var(--spectrum-gray-200))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-background-color-active`. <br/>Defaults to `var(--mod-tag-background-color-active, var(--spectrum-gray-200))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-focus": {
+      "value": "var(--mod-tag-background-color-focus, var(--spectrum-gray-200))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-background-color-focus`. <br/>Defaults to `var(--mod-tag-background-color-focus, var(--spectrum-gray-200))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-content-color": {
+      "value": "var(--mod-tag-content-color, var(--spectrum-neutral-content-color-default))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-content-color`. <br/>Defaults to `var(--mod-tag-content-color, var(--spectrum-neutral-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-content-color-hover": {
+      "value": "var(--mod-tag-content-color-hover, var(--spectrum-neutral-content-color-hover))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-content-color-hover`. <br/>Defaults to `var(--mod-tag-content-color-hover, var(--spectrum-neutral-content-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-content-color-active": {
+      "value": "var(--mod-tag-content-color-active, var(--spectrum-neutral-content-color-down))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-content-color-active`. <br/>Defaults to `var(--mod-tag-content-color-active, var(--spectrum-neutral-content-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-content-color-focus": {
+      "value": "var(--mod-tag-content-color-focus, var(--spectrum-neutral-content-color-key-focus))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-content-color-focus`. <br/>Defaults to `var(--mod-tag-content-color-focus, var(--spectrum-neutral-content-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-focus-ring-color": {
+      "value": "var(--mod-tag-focus-ring-color, var(--spectrum-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Tag`. <br/>Used by `--spectrum-tag-focus-ring-color`. <br/>Defaults to `var(--mod-tag-focus-ring-color, var(--spectrum-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-border-color-selected": {
+      "value": "var(--mod-tag-border-color-selected, transparent)",
+      "description": "Defined in `.spectrum-Tag.is-selected`. <br/>Used by `--spectrum-tag-border-color`, `--spectrum-tag-border-color-hover`, `--spectrum-tag-border-color-active`, `--spectrum-tag-border-color-focus`. <br/>Defaults to `var(--mod-tag-border-color-selected, transparent)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-selected": {
+      "value": "var(--mod-tag-background-color-selected, var(--spectrum-neutral-background-color-default))",
+      "description": "Defined in `.spectrum-Tag.is-selected`. <br/>Used by `--spectrum-tag-background-color`. <br/>Defaults to `var(--mod-tag-background-color-selected, var(--spectrum-neutral-background-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-content-color-selected": {
+      "value": "var(--mod-tag-content-color-selected, var(--spectrum-gray-25))",
+      "description": "Defined in `.spectrum-Tag.is-selected`. <br/>Used by `--spectrum-tag-content-color`, `--spectrum-tag-content-color-hover`, `--spectrum-tag-content-color-active`, `--spectrum-tag-content-color-focus`. <br/>Defaults to `var(--mod-tag-content-color-selected, var(--spectrum-gray-25))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-selected-hover": {
+      "value": "var(--mod-tag-background-color-selected-hover, var(--spectrum-neutral-background-color-hover))",
+      "description": "Defined in `.spectrum-Tag.is-selected`. <br/>Used by `--spectrum-tag-background-color-hover`. <br/>Defaults to `var(--mod-tag-background-color-selected-hover, var(--spectrum-neutral-background-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-selected-active": {
+      "value": "var(--mod-tag-background-color-selected-active, var(--spectrum-neutral-background-color-down))",
+      "description": "Defined in `.spectrum-Tag.is-selected`. <br/>Used by `--spectrum-tag-background-color-active`. <br/>Defaults to `var(--mod-tag-background-color-selected-active, var(--spectrum-neutral-background-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-selected-focus": {
+      "value": "var(--mod-tag-background-color-selected-focus, var(--spectrum-neutral-background-color-key-focus))",
+      "description": "Defined in `.spectrum-Tag.is-selected`. <br/>Used by `--spectrum-tag-background-color-focus`. <br/>Defaults to `var(--mod-tag-background-color-selected-focus, var(--spectrum-neutral-background-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-border-color-emphasized": {
+      "value": "var(--mod-tag-border-color-emphasized, transparent)",
+      "description": "Defined in `.spectrum-Tag.spectrum-Tag--emphasized`. <br/>Used by `--spectrum-tag-border-color`, `--spectrum-tag-border-color-hover`, `--spectrum-tag-border-color-active`, `--spectrum-tag-border-color-focus`. <br/>Defaults to `var(--mod-tag-border-color-emphasized, transparent)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-emphasized": {
+      "value": "var(--mod-tag-background-color-emphasized, var(--spectrum-accent-background-color-default))",
+      "description": "Defined in `.spectrum-Tag.spectrum-Tag--emphasized`. <br/>Used by `--spectrum-tag-background-color`. <br/>Defaults to `var(--mod-tag-background-color-emphasized, var(--spectrum-accent-background-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-content-color-emphasized": {
+      "value": "var(--mod-tag-content-color-emphasized, var(--spectrum-white))",
+      "description": "Defined in `.spectrum-Tag.spectrum-Tag--emphasized`. <br/>Used by `--spectrum-tag-content-color`, `--spectrum-tag-content-color-hover`, `--spectrum-tag-content-color-active`, `--spectrum-tag-content-color-focus`. <br/>Defaults to `var(--mod-tag-content-color-emphasized, var(--spectrum-white))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-emphasized-hover": {
+      "value": "var(--mod-tag-background-color-emphasized-hover, var(--spectrum-accent-background-color-hover))",
+      "description": "Defined in `.spectrum-Tag.spectrum-Tag--emphasized`. <br/>Used by `--spectrum-tag-background-color-hover`. <br/>Defaults to `var(--mod-tag-background-color-emphasized-hover, var(--spectrum-accent-background-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-emphasized-active": {
+      "value": "var(--mod-tag-background-color-emphasized-active, var(--spectrum-accent-background-color-down))",
+      "description": "Defined in `.spectrum-Tag.spectrum-Tag--emphasized`. <br/>Used by `--spectrum-tag-background-color-active`. <br/>Defaults to `var(--mod-tag-background-color-emphasized-active, var(--spectrum-accent-background-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-emphasized-focus": {
+      "value": "var(--mod-tag-background-color-emphasized-focus, var(--spectrum-accent-background-color-key-focus))",
+      "description": "Defined in `.spectrum-Tag.spectrum-Tag--emphasized`. <br/>Used by `--spectrum-tag-background-color-focus`. <br/>Defaults to `var(--mod-tag-background-color-emphasized-focus, var(--spectrum-accent-background-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-border-color-disabled": {
+      "value": "var(--mod-tag-border-color-disabled, transparent)",
+      "description": "Defined in `.spectrum-Tag.is-disabled`. <br/>Used by `--spectrum-tag-border-color`. <br/>Defaults to `var(--mod-tag-border-color-disabled, transparent)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-background-color-disabled": {
+      "value": "var(--mod-tag-background-color-disabled, var(--spectrum-disabled-background-color))",
+      "description": "Defined in `.spectrum-Tag.is-disabled`. <br/>Used by `--spectrum-tag-background-color`. <br/>Defaults to `var(--mod-tag-background-color-disabled, var(--spectrum-disabled-background-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tag-content-color-disabled": {
+      "value": "var(--mod-tag-content-color-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-Tag.is-disabled`. <br/>Used by `--spectrum-tag-content-color`. <br/>Defaults to `var(--mod-tag-content-color-disabled, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

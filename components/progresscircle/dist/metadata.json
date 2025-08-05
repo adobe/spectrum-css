@@ -7,41 +7,149 @@
     ".spectrum-ProgressCircle--sizeS",
     ".spectrum-ProgressCircle-fill",
     ".spectrum-ProgressCircle-track",
-    ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticBlack",
-    ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite",
     ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-innerCircle",
-    ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-outerCircle"
+    ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-outerCircle",
+    ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticBlack",
+    ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite"
   ],
-  "modifiers": [
-    "--mod-progress-circle-fill-border-color",
-    "--mod-progress-circle-position",
-    "--mod-progress-circle-size",
-    "--mod-progress-circle-thickness",
-    "--mod-progress-circle-track-border-color"
-  ],
-  "component": [
-    "--spectrum-progress-circle-fill-border-color",
-    "--spectrum-progress-circle-size",
-    "--spectrum-progress-circle-size-large",
-    "--spectrum-progress-circle-size-medium",
-    "--spectrum-progress-circle-size-small",
-    "--spectrum-progress-circle-thickness",
-    "--spectrum-progress-circle-thickness-large",
-    "--spectrum-progress-circle-thickness-medium",
-    "--spectrum-progress-circle-thickness-small",
-    "--spectrum-progress-circle-track-border-color"
-  ],
-  "global": [
-    "--spectrum-accent-content-color-default",
-    "--spectrum-static-black-track-color",
-    "--spectrum-static-black-track-indicator-color",
-    "--spectrum-static-white-track-color",
-    "--spectrum-static-white-track-indicator-color",
-    "--spectrum-track-color"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-progress-circle-fill-border-color",
-    "--highcontrast-progress-circle-track-color"
-  ]
+  "modifiers": {
+    "mod-progress-circle-size": {
+      "description": "Used by `.spectrum-ProgressCircle`, `.spectrum-ProgressCircle-fill, .spectrum-ProgressCircle-track`. <br/>Defaults to `var(--spectrum-progress-circle-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-progress-circle-position": {
+      "description": "Used by `.spectrum-ProgressCircle`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-progress-circle-thickness": {
+      "description": "Used by `.spectrum-ProgressCircle-track`, `.spectrum-ProgressCircle-fill`. <br/>Defaults to `var(--spectrum-progress-circle-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-progress-circle-track-border-color": {
+      "description": "Used by `.spectrum-ProgressCircle-track`. <br/>Defaults to `var(--spectrum-progress-circle-track-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-progress-circle-fill-border-color": {
+      "description": "Used by `.spectrum-ProgressCircle-fill`. <br/>Defaults to `var(--spectrum-progress-circle-fill-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-progress-circle-track-border-color": {
+      "value": "rgba(0, 0, 0, 0.15)",
+      "description": "Defined in `.spectrum-ProgressCircle`, `.spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite`, `.spectrum-ProgressCircle.spectrum-ProgressCircle--staticBlack`. <br/>Used by `.spectrum-ProgressCircle-track`. <br/>Defaults to `var(--spectrum-static-black-track-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-fill-border-color": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Defined in `.spectrum-ProgressCircle`, `.spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite`, `.spectrum-ProgressCircle.spectrum-ProgressCircle--staticBlack`. <br/>Used by `.spectrum-ProgressCircle-fill`. <br/>Defaults to `var(--spectrum-static-black-track-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-size": {
+      "value": "64px",
+      "description": "Defined in `.spectrum-ProgressCircle`, `.spectrum-ProgressCircle--sizeS`, `.spectrum-ProgressCircle--sizeL`. <br/>Used by `.spectrum-ProgressCircle`, `.spectrum-ProgressCircle-fill, .spectrum-ProgressCircle-track`. <br/>Defaults to `var(--spectrum-progress-circle-size-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-size-medium": {
+      "value": "32px",
+      "description": "Used by `--spectrum-progress-circle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-thickness": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-ProgressCircle`, `.spectrum-ProgressCircle--sizeS`, `.spectrum-ProgressCircle--sizeL`. <br/>Used by `.spectrum-ProgressCircle-track`, `.spectrum-ProgressCircle-fill`. <br/>Defaults to `var(--spectrum-progress-circle-thickness-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-thickness-medium": {
+      "value": "3px",
+      "description": "Used by `--spectrum-progress-circle-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-size-small": {
+      "value": "16px",
+      "description": "Used by `--spectrum-progress-circle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-thickness-small": {
+      "value": "2px",
+      "description": "Used by `--spectrum-progress-circle-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-size-large": {
+      "value": "64px",
+      "description": "Used by `--spectrum-progress-circle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-progress-circle-thickness-large": {
+      "value": "4px",
+      "description": "Used by `--spectrum-progress-circle-thickness`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-track-color": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Used by `--spectrum-progress-circle-track-border-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Used by `--spectrum-progress-circle-fill-border-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-static-white-track-color": {
+      "value": "rgba(255, 255, 255, 0.17)",
+      "description": "Used by `--spectrum-progress-circle-track-border-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-static-white-track-indicator-color": {
+      "value": "rgba(255, 255, 255, 0.94)",
+      "description": "Used by `--spectrum-progress-circle-fill-border-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-static-black-track-color": {
+      "value": "rgba(0, 0, 0, 0.15)",
+      "description": "Used by `--spectrum-progress-circle-track-border-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-static-black-track-indicator-color": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Used by `--spectrum-progress-circle-fill-border-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-progress-circle-track-color": {
+      "value": "var(--mod-progress-circle-track-border-color, var(--spectrum-progress-circle-track-border-color))",
+      "description": "Defined in `.spectrum-ProgressCircle`. <br/>Used by `.spectrum-ProgressCircle-track`. <br/>Defaults to `var(--mod-progress-circle-track-border-color, var(--spectrum-progress-circle-track-border-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-progress-circle-fill-border-color": {
+      "value": "var(--mod-progress-circle-fill-border-color, var(--spectrum-progress-circle-fill-border-color))",
+      "description": "Defined in `.spectrum-ProgressCircle`. <br/>Used by `.spectrum-ProgressCircle-fill`. <br/>Defaults to `var(--mod-progress-circle-fill-border-color, var(--spectrum-progress-circle-fill-border-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

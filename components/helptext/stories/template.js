@@ -15,7 +15,7 @@ export const Template = ({
 	hideIcon = false,
 	text,
 	variant,
-	id = getRandomId("helptext"),
+	id = getRandomId("help-text"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {

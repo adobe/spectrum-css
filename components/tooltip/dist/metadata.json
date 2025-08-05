@@ -97,11 +97,34 @@
     ".spectrum-Tooltip--top.is-open",
     ".spectrum-Tooltip-label",
     ".spectrum-Tooltip-tip",
-    ".spectrum-Tooltip.is-open",
     ".spectrum-Tooltip:lang(ja)",
     ".spectrum-Tooltip:lang(ko)",
     ".spectrum-Tooltip:lang(zh)",
+    ".spectrum-Tooltip.is-open",
     ".u-tooltip-showOnHover",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-end",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-left",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-right",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-start",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--end",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--end-bottom",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--end-top",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--left",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--left-bottom",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--left-top",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--right",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--right-bottom",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--right-top",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--start",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--start-bottom",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--start-top",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top-end",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top-left",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top-right",
+    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top-start",
     ".u-tooltip-showOnHover .spectrum-Tooltip",
     ".u-tooltip-showOnHover .spectrum-Tooltip--bottom",
     ".u-tooltip-showOnHover .spectrum-Tooltip--bottom-end",
@@ -126,70 +149,18 @@
     ".u-tooltip-showOnHover .spectrum-Tooltip--top-right",
     ".u-tooltip-showOnHover .spectrum-Tooltip--top-start",
     ".u-tooltip-showOnHover .spectrum-Tooltip-label",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-end",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-left",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-right",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-start",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--end",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--end-bottom",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--end-top",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--left",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--left-bottom",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--left-top",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--right",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--right-bottom",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--right-top",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--start",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--start-bottom",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--start-top",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top-end",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top-left",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top-right",
-    ".u-tooltip-showOnHover :focus .spectrum-Tooltip--top-start",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-end",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-left",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-right",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-start",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-bottom",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-top",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-bottom",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-top",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right-bottom",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right-top",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-bottom",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-top",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-end",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-left",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-right",
-    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-start",
-    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end",
-    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end-bottom",
-    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end-top",
-    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start",
-    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start-bottom",
-    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start-top",
-    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--end",
-    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--end-bottom",
-    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--end-top",
-    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--start",
-    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--start-bottom",
-    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--start-top",
     ".u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end",
     ".u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end-bottom",
     ".u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end-top",
     ".u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start",
     ".u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start-bottom",
     ".u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start-top",
+    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--end",
+    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--end-bottom",
+    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--end-top",
+    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--start",
+    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--start-bottom",
+    ".u-tooltip-showOnHover:dir(rtl) .spectrum-Tooltip--start-top",
     ".u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end",
     ".u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end-bottom",
     ".u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end-top",
@@ -247,81 +218,411 @@
     ".u-tooltip-showOnHover:hover .spectrum-Tooltip--top-end",
     ".u-tooltip-showOnHover:hover .spectrum-Tooltip--top-left",
     ".u-tooltip-showOnHover:hover .spectrum-Tooltip--top-right",
-    ".u-tooltip-showOnHover:hover .spectrum-Tooltip--top-start"
+    ".u-tooltip-showOnHover:hover .spectrum-Tooltip--top-start",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-end",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-left",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-right",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-start",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-bottom",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-top",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-bottom",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-top",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right-bottom",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right-top",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-bottom",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-top",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-end",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-left",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-right",
+    ".u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-start",
+    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end",
+    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end-bottom",
+    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end-top",
+    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start",
+    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start-bottom",
+    ".u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start-top"
   ],
-  "modifiers": [
-    "--mod-overlay-animation-duration",
-    "--mod-overlay-animation-duration-opened",
-    "--mod-tooltip-animation-distance",
-    "--mod-tooltip-background-color-default",
-    "--mod-tooltip-background-color-informative",
-    "--mod-tooltip-background-color-negative",
-    "--mod-tooltip-border-radius",
-    "--mod-tooltip-cjk-line-height",
-    "--mod-tooltip-content-color",
-    "--mod-tooltip-font-size",
-    "--mod-tooltip-font-weight",
-    "--mod-tooltip-height",
-    "--mod-tooltip-line-height",
-    "--mod-tooltip-margin",
-    "--mod-tooltip-max-inline-size",
-    "--mod-tooltip-pointer-corner-spacing",
-    "--mod-tooltip-spacing-block-end",
-    "--mod-tooltip-spacing-block-start",
-    "--mod-tooltip-spacing-inline",
-    "--mod-tooltip-tip-antialiasing-inset",
-    "--mod-tooltip-tip-block-size",
-    "--mod-tooltip-tip-corner-radius",
-    "--mod-tooltip-tip-height-percentage",
-    "--mod-tooltip-tip-square-size"
-  ],
-  "component": [
-    "--spectrum-tooltip-animation-distance",
-    "--spectrum-tooltip-animation-duration",
-    "--spectrum-tooltip-background-color-default",
-    "--spectrum-tooltip-background-color-informative",
-    "--spectrum-tooltip-background-color-negative",
-    "--spectrum-tooltip-border-radius",
-    "--spectrum-tooltip-cjk-line-height",
-    "--spectrum-tooltip-content-color",
-    "--spectrum-tooltip-font-size",
-    "--spectrum-tooltip-font-weight",
-    "--spectrum-tooltip-height",
-    "--spectrum-tooltip-line-height",
-    "--spectrum-tooltip-margin",
-    "--spectrum-tooltip-max-inline-size",
-    "--spectrum-tooltip-maximum-width",
-    "--spectrum-tooltip-pointer-corner-spacing",
-    "--spectrum-tooltip-spacing-block-end",
-    "--spectrum-tooltip-spacing-block-start",
-    "--spectrum-tooltip-spacing-inline",
-    "--spectrum-tooltip-tip-antialiasing-inset",
-    "--spectrum-tooltip-tip-block-size",
-    "--spectrum-tooltip-tip-corner-radius",
-    "--spectrum-tooltip-tip-height",
-    "--spectrum-tooltip-tip-height-percentage",
-    "--spectrum-tooltip-tip-square-size"
-  ],
-  "global": [
-    "--spectrum-animation-duration-0",
-    "--spectrum-animation-duration-100",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-height-75",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-corner-radius-400",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-25",
-    "--spectrum-informative-background-color-default",
-    "--spectrum-negative-background-color-default",
-    "--spectrum-neutral-background-color-default",
-    "--spectrum-regular-font-weight",
-    "--spectrum-spacing-75"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-tooltip-background-color-default",
-    "--highcontrast-tooltip-border-width"
-  ]
+  "modifiers": {
+    "mod-overlay-animation-duration": {
+      "description": "Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-animation-duration-100, 0.13s)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-overlay-animation-duration-opened": {
+      "description": "Used by `.spectrum-Tooltip.is-open`. <br/>Defaults to `var(--spectrum-animation-duration-0, 0s)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-border-radius": {
+      "description": "Used by `--spectrum-tooltip-pointer-corner-spacing`, `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-tooltip-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-spacing-inline": {
+      "description": "Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-tooltip-spacing-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-height": {
+      "description": "Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-tooltip-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-max-inline-size": {
+      "description": "Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-tooltip-max-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-background-color-default": {
+      "description": "Used by `.spectrum-Tooltip`, `.spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-tooltip-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tooltip-content-color": {
+      "description": "Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-tooltip-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tooltip-font-size": {
+      "description": "Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-tooltip-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-font-weight": {
+      "description": "Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-tooltip-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-line-height": {
+      "description": "Used by `.spectrum-Tooltip`, `.spectrum-Tooltip-label`. <br/>Defaults to `var(--spectrum-tooltip-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-cjk-line-height": {
+      "description": "Used by `.spectrum-Tooltip:lang(ja), .spectrum-Tooltip:lang(ko), .spectrum-Tooltip:lang(zh)`. <br/>Defaults to `var(--spectrum-tooltip-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-background-color-informative": {
+      "description": "Used by `.spectrum-Tooltip--info`, `.spectrum-Tooltip--info .spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-tooltip-background-color-informative)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tooltip-background-color-negative": {
+      "description": "Used by `.spectrum-Tooltip--negative`, `.spectrum-Tooltip--negative .spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-tooltip-background-color-negative)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tooltip-tip-square-size": {
+      "description": "Used by `.spectrum-Tooltip-tip`, `.spectrum-Tooltip--top .spectrum-Tooltip-tip, .spectrum-Tooltip--top-end .spectrum-Tooltip-tip, .spectrum-Tooltip--top-left .spectrum-Tooltip-tip, .spectrum-Tooltip--top-right .spectrum-Tooltip-tip, .spectrum-Tooltip--top-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-left .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-right .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip, .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--left .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip, .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--left .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-top .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--right .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-top .spectrum-Tooltip-tip:dir(rtl)`. <br/>Defaults to `var(--spectrum-tooltip-tip-square-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-tip-antialiasing-inset": {
+      "description": "Used by `.spectrum-Tooltip-tip`, `.spectrum-Tooltip--top .spectrum-Tooltip-tip, .spectrum-Tooltip--top-end .spectrum-Tooltip-tip, .spectrum-Tooltip--top-left .spectrum-Tooltip-tip, .spectrum-Tooltip--top-right .spectrum-Tooltip-tip, .spectrum-Tooltip--top-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-left .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-right .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip, .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--left .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-top .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--right .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-top .spectrum-Tooltip-tip:dir(rtl)`. <br/>Defaults to `var(--spectrum-tooltip-tip-antialiasing-inset)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-tip-height-percentage": {
+      "description": "Used by `.spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-tooltip-tip-height-percentage)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-tip-corner-radius": {
+      "description": "Used by `.spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-tooltip-tip-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-pointer-corner-spacing": {
+      "description": "Used by `.spectrum-Tooltip--bottom-left .spectrum-Tooltip-tip, .spectrum-Tooltip--top-left .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom-right .spectrum-Tooltip-tip, .spectrum-Tooltip--top-right .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip, .spectrum-Tooltip--top-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--top-start .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip, .spectrum-Tooltip--top-end .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--top-end .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-tooltip-pointer-corner-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-spacing-block-start": {
+      "description": "Used by `.spectrum-Tooltip-label`. <br/>Defaults to `var(--spectrum-tooltip-spacing-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-spacing-block-end": {
+      "description": "Used by `.spectrum-Tooltip-label`. <br/>Defaults to `var(--spectrum-tooltip-spacing-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-tip-block-size": {
+      "description": "Used by `.spectrum-Tooltip, .spectrum-Tooltip--top, .spectrum-Tooltip--top-end, .spectrum-Tooltip--top-left, .spectrum-Tooltip--top-right, .spectrum-Tooltip--top-start`, `.spectrum-Tooltip--bottom, .spectrum-Tooltip--bottom-end, .spectrum-Tooltip--bottom-left, .spectrum-Tooltip--bottom-right, .spectrum-Tooltip--bottom-start`, `.spectrum-Tooltip--right, .spectrum-Tooltip--right-bottom, .spectrum-Tooltip--right-top`, `.spectrum-Tooltip--left, .spectrum-Tooltip--left-bottom, .spectrum-Tooltip--left-top`, `.spectrum-Tooltip--start, .spectrum-Tooltip--start-bottom, .spectrum-Tooltip--start-top`, `.spectrum-Tooltip--end, .spectrum-Tooltip--end-bottom, .spectrum-Tooltip--end-top`. <br/>Defaults to `var(--spectrum-tooltip-tip-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-margin": {
+      "description": "Used by `.spectrum-Tooltip, .spectrum-Tooltip--top, .spectrum-Tooltip--top-end, .spectrum-Tooltip--top-left, .spectrum-Tooltip--top-right, .spectrum-Tooltip--top-start`, `.spectrum-Tooltip--bottom, .spectrum-Tooltip--bottom-end, .spectrum-Tooltip--bottom-left, .spectrum-Tooltip--bottom-right, .spectrum-Tooltip--bottom-start`, `.spectrum-Tooltip--right, .spectrum-Tooltip--right-bottom, .spectrum-Tooltip--right-top`, `.spectrum-Tooltip--left, .spectrum-Tooltip--left-bottom, .spectrum-Tooltip--left-top`, `.spectrum-Tooltip--start, .spectrum-Tooltip--start-bottom, .spectrum-Tooltip--start-top`, `.spectrum-Tooltip--end, .spectrum-Tooltip--end-bottom, .spectrum-Tooltip--end-top`. <br/>Defaults to `var(--spectrum-tooltip-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tooltip-animation-distance": {
+      "description": "Used by `.spectrum-Tooltip--top-end.is-open, .spectrum-Tooltip--top-left.is-open, .spectrum-Tooltip--top-right.is-open, .spectrum-Tooltip--top-start.is-open, .spectrum-Tooltip--top.is-open, .spectrum-Tooltip.is-open`, `.spectrum-Tooltip--bottom-end.is-open, .spectrum-Tooltip--bottom-left.is-open, .spectrum-Tooltip--bottom-right.is-open, .spectrum-Tooltip--bottom-start.is-open, .spectrum-Tooltip--bottom.is-open`, `.spectrum-Tooltip--right-bottom.is-open, .spectrum-Tooltip--right-top.is-open, .spectrum-Tooltip--right.is-open`, `.spectrum-Tooltip--left-bottom.is-open, .spectrum-Tooltip--left-top.is-open, .spectrum-Tooltip--left.is-open`, `.spectrum-Tooltip--start-bottom.is-open, .spectrum-Tooltip--start-top.is-open, .spectrum-Tooltip--start.is-open`, `.spectrum-Tooltip--start-bottom.is-open:dir(rtl), .spectrum-Tooltip--start-top.is-open:dir(rtl), .spectrum-Tooltip--start.is-open:dir(rtl)`, `.spectrum-Tooltip--end-bottom.is-open, .spectrum-Tooltip--end-top.is-open, .spectrum-Tooltip--end.is-open`, `.spectrum-Tooltip--end-bottom.is-open:dir(rtl), .spectrum-Tooltip--end-top.is-open:dir(rtl), .spectrum-Tooltip--end.is-open:dir(rtl)`, `.u-tooltip-showOnHover :focus .spectrum-Tooltip--top, .u-tooltip-showOnHover :focus .spectrum-Tooltip--top-end, .u-tooltip-showOnHover :focus .spectrum-Tooltip--top-left, .u-tooltip-showOnHover :focus .spectrum-Tooltip--top-right, .u-tooltip-showOnHover :focus .spectrum-Tooltip--top-start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-end, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-right, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-end, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-right, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-start`, `.u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-start`, `.u-tooltip-showOnHover :focus .spectrum-Tooltip--left, .u-tooltip-showOnHover :focus .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--left-top, .u-tooltip-showOnHover :focus .spectrum-Tooltip--start, .u-tooltip-showOnHover :focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--start-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start-top`, `.u-tooltip-showOnHover :focus .spectrum-Tooltip--end, .u-tooltip-showOnHover :focus .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--end-top, .u-tooltip-showOnHover :focus .spectrum-Tooltip--right, .u-tooltip-showOnHover :focus .spectrum-Tooltip--right-bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--right-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right-top, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--start, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--end, .u-tooltip-showOnHover:focus .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--end-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--right, .u-tooltip-showOnHover:focus .spectrum-Tooltip--right-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--right-top`, `.u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end-top, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end-top, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end-top`, `.u-tooltip-showOnHover:hover .spectrum-Tooltip--top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-end, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-right, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-start`, `.u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-start`, `.u-tooltip-showOnHover:hover .spectrum-Tooltip--left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--left-top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start-top`, `.u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--start, .u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--end, .u-tooltip-showOnHover:hover .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--end-top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--right, .u-tooltip-showOnHover:hover .spectrum-Tooltip--right-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--right-top`, `.u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--end, .u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--end-top`. <br/>Defaults to `var(--spectrum-tooltip-animation-distance)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-tooltip-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.u-tooltip-showOnHover .spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-animation-distance": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip--top-end.is-open, .spectrum-Tooltip--top-left.is-open, .spectrum-Tooltip--top-right.is-open, .spectrum-Tooltip--top-start.is-open, .spectrum-Tooltip--top.is-open, .spectrum-Tooltip.is-open`, `.spectrum-Tooltip--bottom-end.is-open, .spectrum-Tooltip--bottom-left.is-open, .spectrum-Tooltip--bottom-right.is-open, .spectrum-Tooltip--bottom-start.is-open, .spectrum-Tooltip--bottom.is-open`, `.spectrum-Tooltip--right-bottom.is-open, .spectrum-Tooltip--right-top.is-open, .spectrum-Tooltip--right.is-open`, `.spectrum-Tooltip--left-bottom.is-open, .spectrum-Tooltip--left-top.is-open, .spectrum-Tooltip--left.is-open`, `.spectrum-Tooltip--start-bottom.is-open, .spectrum-Tooltip--start-top.is-open, .spectrum-Tooltip--start.is-open`, `.spectrum-Tooltip--start-bottom.is-open:dir(rtl), .spectrum-Tooltip--start-top.is-open:dir(rtl), .spectrum-Tooltip--start.is-open:dir(rtl)`, `.spectrum-Tooltip--end-bottom.is-open, .spectrum-Tooltip--end-top.is-open, .spectrum-Tooltip--end.is-open`, `.spectrum-Tooltip--end-bottom.is-open:dir(rtl), .spectrum-Tooltip--end-top.is-open:dir(rtl), .spectrum-Tooltip--end.is-open:dir(rtl)`, `.u-tooltip-showOnHover :focus .spectrum-Tooltip--top, .u-tooltip-showOnHover :focus .spectrum-Tooltip--top-end, .u-tooltip-showOnHover :focus .spectrum-Tooltip--top-left, .u-tooltip-showOnHover :focus .spectrum-Tooltip--top-right, .u-tooltip-showOnHover :focus .spectrum-Tooltip--top-start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-end, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-right, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--top-start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-end, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-right, .u-tooltip-showOnHover:focus .spectrum-Tooltip--top-start`, `.u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover :focus .spectrum-Tooltip--bottom-start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--bottom-start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover:focus .spectrum-Tooltip--bottom-start`, `.u-tooltip-showOnHover :focus .spectrum-Tooltip--left, .u-tooltip-showOnHover :focus .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--left-top, .u-tooltip-showOnHover :focus .spectrum-Tooltip--start, .u-tooltip-showOnHover :focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--start-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--left-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--left-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--start-top`, `.u-tooltip-showOnHover :focus .spectrum-Tooltip--end, .u-tooltip-showOnHover :focus .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--end-top, .u-tooltip-showOnHover :focus .spectrum-Tooltip--right, .u-tooltip-showOnHover :focus .spectrum-Tooltip--right-bottom, .u-tooltip-showOnHover :focus .spectrum-Tooltip--right-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--end-top, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right-bottom, .u-tooltip-showOnHover.is-focused .spectrum-Tooltip--right-top, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--start, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--end, .u-tooltip-showOnHover:focus .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--end-top, .u-tooltip-showOnHover:focus .spectrum-Tooltip--right, .u-tooltip-showOnHover:focus .spectrum-Tooltip--right-bottom, .u-tooltip-showOnHover:focus .spectrum-Tooltip--right-top`, `.u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover.is-focused:dir(rtl) .spectrum-Tooltip--end-top, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:dir(rtl) :focus .spectrum-Tooltip--end-top, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:dir(rtl):focus .spectrum-Tooltip--end-top`, `.u-tooltip-showOnHover:hover .spectrum-Tooltip--top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-end, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-right, .u-tooltip-showOnHover:hover .spectrum-Tooltip--top-start`, `.u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-end, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-right, .u-tooltip-showOnHover:hover .spectrum-Tooltip--bottom-start`, `.u-tooltip-showOnHover:hover .spectrum-Tooltip--left, .u-tooltip-showOnHover:hover .spectrum-Tooltip--left-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--left-top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--start-top`, `.u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--start, .u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--start-bottom, .u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--start-top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--end, .u-tooltip-showOnHover:hover .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--end-top, .u-tooltip-showOnHover:hover .spectrum-Tooltip--right, .u-tooltip-showOnHover:hover .spectrum-Tooltip--right-bottom, .u-tooltip-showOnHover:hover .spectrum-Tooltip--right-top`, `.u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--end, .u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--end-bottom, .u-tooltip-showOnHover:dir(rtl):hover .spectrum-Tooltip--end-top`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-margin": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip, .spectrum-Tooltip--top, .spectrum-Tooltip--top-end, .spectrum-Tooltip--top-left, .spectrum-Tooltip--top-right, .spectrum-Tooltip--top-start`, `.spectrum-Tooltip--bottom, .spectrum-Tooltip--bottom-end, .spectrum-Tooltip--bottom-left, .spectrum-Tooltip--bottom-right, .spectrum-Tooltip--bottom-start`, `.spectrum-Tooltip--right, .spectrum-Tooltip--right-bottom, .spectrum-Tooltip--right-top`, `.spectrum-Tooltip--left, .spectrum-Tooltip--left-bottom, .spectrum-Tooltip--left-top`, `.spectrum-Tooltip--start, .spectrum-Tooltip--start-bottom, .spectrum-Tooltip--start-top`, `.spectrum-Tooltip--end, .spectrum-Tooltip--end-bottom, .spectrum-Tooltip--end-top`. <br/>Defaults to `0px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-height": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-component-height-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-max-inline-size": {
+      "value": "160px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-tooltip-maximum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-maximum-width": {
+      "value": "160px",
+      "description": "Used by `--spectrum-tooltip-max-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-border-radius": {
+      "value": "7px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `--spectrum-tooltip-pointer-corner-spacing`, `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-corner-radius-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-font-size": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-font-size-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-line-height": {
+      "value": "1.2",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip`, `.spectrum-Tooltip-label`. <br/>Defaults to `1.2`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-cjk-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip:lang(ja), .spectrum-Tooltip:lang(ko), .spectrum-Tooltip:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-spacing-inline": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-component-edge-to-text-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-spacing-block-start": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip-label`. <br/>Defaults to `var(--spectrum-component-top-to-text-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-spacing-block-end": {
+      "value": "5px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip-label`. <br/>Defaults to `var(--spectrum-component-bottom-to-text-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-content-color": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tooltip-background-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip`, `.spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-neutral-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tooltip-background-color-informative": {
+      "value": "var(--spectrum-informative-color-900)",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip--info`, `.spectrum-Tooltip--info .spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-informative-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tooltip-background-color-negative": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip--negative`, `.spectrum-Tooltip--negative .spectrum-Tooltip-tip`. <br/>Defaults to `var(--spectrum-negative-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tooltip-tip-block-size": {
+      "value": "5px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip, .spectrum-Tooltip--top, .spectrum-Tooltip--top-end, .spectrum-Tooltip--top-left, .spectrum-Tooltip--top-right, .spectrum-Tooltip--top-start`, `.spectrum-Tooltip--bottom, .spectrum-Tooltip--bottom-end, .spectrum-Tooltip--bottom-left, .spectrum-Tooltip--bottom-right, .spectrum-Tooltip--bottom-start`, `.spectrum-Tooltip--right, .spectrum-Tooltip--right-bottom, .spectrum-Tooltip--right-top`, `.spectrum-Tooltip--left, .spectrum-Tooltip--left-bottom, .spectrum-Tooltip--left-top`, `.spectrum-Tooltip--start, .spectrum-Tooltip--start-bottom, .spectrum-Tooltip--start-top`, `.spectrum-Tooltip--end, .spectrum-Tooltip--end-bottom, .spectrum-Tooltip--end-top`. <br/>Defaults to `var(--spectrum-tooltip-tip-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-tip-height": {
+      "value": "5px",
+      "description": "Used by `--spectrum-tooltip-tip-block-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-tip-height-percentage": {
+      "value": "100%",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip-tip`. <br/>Defaults to `100%`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-tip-antialiasing-inset": {
+      "value": "0.5px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip-tip`, `.spectrum-Tooltip--top .spectrum-Tooltip-tip, .spectrum-Tooltip--top-end .spectrum-Tooltip-tip, .spectrum-Tooltip--top-left .spectrum-Tooltip-tip, .spectrum-Tooltip--top-right .spectrum-Tooltip-tip, .spectrum-Tooltip--top-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-left .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-right .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip, .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--left .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-top .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--right .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-top .spectrum-Tooltip-tip:dir(rtl)`. <br/>Defaults to `0.5px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-pointer-corner-spacing": {
+      "value": "var(--mod-tooltip-border-radius, var(--spectrum-tooltip-border-radius))",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip--bottom-left .spectrum-Tooltip-tip, .spectrum-Tooltip--top-left .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom-right .spectrum-Tooltip-tip, .spectrum-Tooltip--top-right .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip, .spectrum-Tooltip--top-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--top-start .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip, .spectrum-Tooltip--top-end .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--top-end .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip`. <br/>Defaults to `var(--mod-tooltip-border-radius, var(--spectrum-tooltip-border-radius))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-tip-square-size": {
+      "description": "Used by `.spectrum-Tooltip-tip`, `.spectrum-Tooltip--top .spectrum-Tooltip-tip, .spectrum-Tooltip--top-end .spectrum-Tooltip-tip, .spectrum-Tooltip--top-left .spectrum-Tooltip-tip, .spectrum-Tooltip--top-right .spectrum-Tooltip-tip, .spectrum-Tooltip--top-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-left .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-right .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip, .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--left .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip, .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--left .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-top .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--right .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-top .spectrum-Tooltip-tip:dir(rtl)`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tooltip-tip-corner-radius": {
+      "value": "1px",
+      "description": "Used by `.spectrum-Tooltip-tip`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-Tooltip`, `--spectrum-tooltip-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-0": {
+      "description": "Used by `.spectrum-Tooltip.is-open`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tooltip-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-tooltip-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-400": {
+      "value": "7px",
+      "description": "Used by `--spectrum-tooltip-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-tooltip-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-tooltip-cjk-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-tooltip-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "value": "9px",
+      "description": "Used by `--spectrum-tooltip-spacing-inline`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tooltip-spacing-block-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-tooltip-spacing-block-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--spectrum-tooltip-content-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-tooltip-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-informative-background-color-default": {
+      "value": "var(--spectrum-informative-color-900)",
+      "description": "Used by `--spectrum-tooltip-background-color-informative`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-background-color-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Used by `--spectrum-tooltip-background-color-negative`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-tooltip-border-width": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-Tooltip`. <br/>Used by `.spectrum-Tooltip-tip`, `.spectrum-Tooltip--top .spectrum-Tooltip-tip, .spectrum-Tooltip--top-end .spectrum-Tooltip-tip, .spectrum-Tooltip--top-left .spectrum-Tooltip-tip, .spectrum-Tooltip--top-right .spectrum-Tooltip-tip, .spectrum-Tooltip--top-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-end .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-left .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-right .spectrum-Tooltip-tip, .spectrum-Tooltip--bottom-start .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip, .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--end-top .spectrum-Tooltip-tip, .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--right-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--left .spectrum-Tooltip-tip, .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--left-top .spectrum-Tooltip-tip, .spectrum-Tooltip--start .spectrum-Tooltip-tip, .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--start-top .spectrum-Tooltip-tip`, `.spectrum-Tooltip--end .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--end-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--left-top .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip--right .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--right-top .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-bottom .spectrum-Tooltip-tip:dir(rtl), .spectrum-Tooltip--start-top .spectrum-Tooltip-tip:dir(rtl)`, `.spectrum-Tooltip`. <br/>Defaults to `1px`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-tooltip-background-color-default": {
+      "value": "var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative))",
+      "description": "Defined in `.spectrum-Tooltip-tip`. <br/>Used by `.spectrum-Tooltip`, `.spectrum-Tooltip--info`, `.spectrum-Tooltip--negative`, `.spectrum-Tooltip-tip`, `.spectrum-Tooltip--info .spectrum-Tooltip-tip`, `.spectrum-Tooltip--negative .spectrum-Tooltip-tip`. <br/>Defaults to `var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative))`, if not set.",
+      "control": "color"
+    }
+  }
 }

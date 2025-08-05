@@ -69,12 +69,12 @@ const buttonMap = {
 
 export const Dialog = ({
 	rootClass = "spectrum-AlertDialog",
+	id = getRandomId("alert-dialog"),
 	heading,
 	content,
 	customClasses = [],
 	variant,
 	hasVerticalButtons,
-	id = getRandomId("alertdialog"),
 	customStyles = {},
 } = {}, context = {}) => {
 	return html`

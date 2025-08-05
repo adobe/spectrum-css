@@ -1,7 +1,8 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Container, renderContent } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize } from "lodash-es";
 
@@ -9,6 +10,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionGroup",
+	id = getRandomId("accordion-group"),
 	size = "m",
 	areQuiet = false,
 	areEmphasized = false,
@@ -38,6 +40,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
+			id=${ifDefined(id)}
 		>
 			${renderContent(content, {
 				callback: ActionButton,
