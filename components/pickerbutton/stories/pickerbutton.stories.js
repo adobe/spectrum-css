@@ -29,15 +29,6 @@ export default {
 			...Icon.argTypes.iconName,
 			if: { arg: "iconSet", eq: "workflow" },
 		},
-		label: {
-			name: "Label",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Content",
-			},
-			control: { type: "text" },
-		},
 		isOpen: {
 			...isOpen,
 			if: { arg: "isDisabled", truthy: false }
@@ -49,7 +40,6 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-PickerButton",
-		label: undefined,
 		size: "m",
 		isActive: false,
 		isHovered: false,
@@ -96,15 +86,6 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const WithLabel = Template.bind({});
-WithLabel.tags = ["!dev"];
-WithLabel.args = {
-	label: "Select",
-};
-WithLabel.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
 export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {

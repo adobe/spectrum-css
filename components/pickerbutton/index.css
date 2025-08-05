@@ -28,23 +28,12 @@
 
 	--spectrum-picker-button-background-animation-duration: var(--spectrum-animation-duration-100);
 
-	--spectrum-picker-button-label-padding: var(--spectrum-text-to-visual-50);
 	--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-100); /* equivalent to --spectrum-infield-button-inline-edge-to-disclosure-icon */
 
 	--spectrum-picker-button-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
 
 	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
 	--spectrum-picker-button-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
-
-	/* label */
-	--spectrum-picker-button-font-color: var(--spectrum-neutral-content-color-default);
-	--spectrum-picker-button-font-color-hover: var(--spectrum-neutral-content-color-hover);
-	--spectrum-picker-button-font-color-down: var(--spectrum-neutral-content-color-down);
-	--spectrum-picker-button-font-family: var(--spectrum-sans-font-family-stack);
-	--spectrum-picker-button-font-style: var(--spectrum-default-font-style);
-	--spectrum-picker-button-font-weight: var(--spectrum-body-sans-serif-font-weight);
-	--spectrum-picker-button-font-size: var(--spectrum-font-size-100);
-	--spectrum-picker-button-gap: var(--spectrum-text-to-visual-50);
 
 	&:disabled {
 		--mod-picker-button-background-color: var(--mod-picker-button-background-color-disabled, var(--spectrum-disabled-background-color));
@@ -54,23 +43,17 @@
 		--mod-picker-button-icon-color: var(--mod-picker-button-icon-color-disabled, var(--spectrum-disabled-content-color));
 		--mod-picker-button-icon-color-hover: var(--mod-picker-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
 		--mod-picker-button-icon-color-down: var(--mod-picker-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
-
-		--mod-picker-button-font-color: var(--mod-picker-button-font-color-disabled, var(--spectrum-disabled-content-color));
-		--mod-picker-button-font-color-hover: var(--mod-picker-button-font-color-hover-disabled, var(--spectrum-disabled-content-color));
-		--mod-picker-button-font-color-down: var(--mod-picker-button-font-color-down-disabled, var(--spectrum-disabled-content-color));
 	}
 
 	&:hover {
 		--mod-picker-button-background-color: var(--mod-picker-button-background-color-hover, var(--spectrum-picker-button-background-color-hover));
 		--mod-picker-button-icon-color: var(--mod-picker-button-icon-color-hover, var(--spectrum-picker-button-icon-color-hover));
-		--mod-picker-button-font-color: var(--mod-picker-button-font-color-hover, var(--spectrum-picker-button-font-color-hover));
 	}
 
 	&:active,
 	&.is-open {
 		--mod-picker-button-background-color: var(--mod-picker-button-background-color-down, var(--spectrum-picker-button-background-color-down));
 		--mod-picker-button-icon-color: var(--mod-picker-button-icon-color-down, var(--spectrum-picker-button-icon-color-down));
-		--mod-picker-button-font-color: var(--mod-picker-button-font-color-down, var(--spectrum-picker-button-font-color-down));
 	}
 
 	&.spectrum-PickerButton--quiet {
@@ -89,9 +72,7 @@
 		--spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill-small);
 		--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-small-size-small);
 		--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-75);
-		--spectrum-picker-button-label-padding: var(--spectrum-spacing-75);
 		--spectrum-picker-button-workflow-icon-size: var(--spectrum-workflow-icon-size-75);
-		--spectrum-picker-button-font-size: var(--spectrum-font-size-75);
 	}
 
 	&.spectrum-PickerButton--sizeL {
@@ -100,9 +81,7 @@
 		--spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill-large);
 		--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-small-size-large);
 		--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-200);
-		--spectrum-picker-button-label-padding: var(--spectrum-text-to-visual-200);
 		--spectrum-picker-button-workflow-icon-size: var(--spectrum-workflow-icon-size-200);
-		--spectrum-picker-button-font-size: var(--spectrum-font-size-200);
 	}
 
 	&.spectrum-PickerButton--sizeXL {
@@ -111,9 +90,7 @@
 		--spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill-extra-large);
 		--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-small-size-extra-large);
 		--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-300);
-		--spectrum-picker-button-label-padding: var(--spectrum-text-to-visual-300);
 		--spectrum-picker-button-workflow-icon-size: var(--spectrum-workflow-icon-size-300);
-		--spectrum-picker-button-font-size: var(--spectrum-font-size-300);
 	}
 }
 
@@ -144,22 +121,6 @@
 	}
 }
 
-/* not existing in infield button */
-.spectrum-PickerButton-label {
-	/* Be the biggest, but also shrink! */
-	flex: 1 1 auto;
-	color: var(--mod-picker-button-font-color, var(--spectrum-picker-button-font-color));
-
-	white-space: nowrap;
-	overflow: hidden;
-	padding-block: var(--mod-picker-button-label-padding, var(--spectrum-picker-button-label-padding));
-
-	font-family: var(--mod-picker-button-font-family, var(--spectrum-picker-button-font-family));
-	font-style: var(--mod-picker-button-font-style, var(--spectrum-picker-button-font-style));
-	font-weight: var(--mod-picker-button-font-weight, var(--spectrum-picker-button-font-weight));
-	font-size: var(--mod-picker-button-font-size, var(--spectrum-picker-button-font-size));
-}
-
 .spectrum-PickerButton-fill {
 	block-size: 100%;
 	inline-size: 100%;
@@ -174,17 +135,12 @@
 	justify-content: center;
 
 	box-sizing: border-box;
-	gap: var(--mod-picker-button-gap, var(--spectrum-picker-button-gap)); /* only if label and icon are present */
 
 	transition: background-color var(--mod-picker-button-background-animation-duration, var(--spectrum-picker-button-background-animation-duration)) ease-in-out;
 
 	.spectrum-PickerButton--workflowicon & {
 		/* half of component height minus icon size because there are no edge-to-disclosure-icon tokens for workflow icons, then subtract picker button padding */
 		padding: calc((var(--mod-picker-button-height, var(--spectrum-picker-button-height)) - var(--mod-picker-button-workflow-icon-size, var(--spectrum-picker-button-workflow-icon-size))) / 2 - var(--mod-picker-button-padding, var(--spectrum-picker-button-padding)));
-	}
-
-	.spectrum-PickerButton--textuiicon & {
-		inline-size: auto; /* only if label is present */
 	}
 }
 
