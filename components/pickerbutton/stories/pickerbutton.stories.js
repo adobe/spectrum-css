@@ -1,7 +1,7 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isFocused, isHovered, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isHovered, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PickerGroup } from "./pickerbutton.test.js";
@@ -46,10 +46,6 @@ export default {
 		isHovered,
 		isQuiet,
 		isDisabled,
-		isFocused: {
-			...isFocused,
-			if: { arg: "isDisabled", truthy: false }
-		},
 	},
 	args: {
 		rootClass: "spectrum-PickerButton",
@@ -60,7 +56,6 @@ export default {
 		isOpen: false,
 		isQuiet: false,
 		isDisabled: false,
-		isFocused: false,
 		iconSet: "ui",
 		iconName: "ChevronDown",
 	},

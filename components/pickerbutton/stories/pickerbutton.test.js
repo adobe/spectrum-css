@@ -22,10 +22,6 @@ export const PickerGroup = Variants({
 			isHovered: true,
 		},
 		{
-			testHeading: "Focused",
-			isFocused: true,
-		},
-		{
 			testHeading: "Active",
 			isActive: true,
 		},
