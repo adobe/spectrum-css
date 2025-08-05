@@ -52,15 +52,9 @@ jobs:
                 system:
                     - macos-latest
                     - ubuntu-latest
+                    # - windows-latest # todo: debug token style-dictionary failures on windows
                 node-version:
                     - 20
-                # experimental:
-                #     - false
-                # include:
-                #     - system: windows-latest
-                #       experimental: true
-                #     - system: windows-latest
-                #       experimental: true
         uses: ./.github/workflows/build.yml
         with:
             system: ${{ matrix.system }}
@@ -76,6 +70,8 @@ jobs:
         if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
         uses: ./.github/workflows/compare-results.yml
         with:
+            deploy-message: ${{ github.event.pull_request.title }}
+            alias: pr-${{ github.event.number }}
             base-sha: ${{ github.event.pull_request.base.ref }}
             head-sha: ${{ github.event.pull_request.head.ref }}
         secrets: inherit
@@ -101,7 +97,7 @@ jobs:
         steps:
             - name: Get changed files
               id: changed-files
-              uses: step-security/changed-files@v46
+              uses: step-security/changed-files@v45
               with:
                   files_yaml: |
                       styles:
@@ -137,8 +133,6 @@ jobs:
             styles_modified_files: ${{ needs.changed_files.outputs.styles_modified_files }}
             eslint_added_files: ${{ needs.changed_files.outputs.eslint_added_files }}
             eslint_modified_files: ${{ needs.changed_files.outputs.eslint_modified_files }}
-            mdlint_added_files: ${{ needs.changed_files.outputs.mdlint_added_files }}
-            mdlint_modified_files: ${{ needs.changed_files.outputs.mdlint_modified_files }}
         secrets: inherit
 
     # -------------------------------------------------------------
@@ -200,7 +194,7 @@ jobs:
     # -------------------------------------------------------------
     vrt:
         name: Testing
-        if: ${{ contains(github.event.pull_request.labels.*.name, 'run_vrt') || ((github.event.pull_request.draft != true || contains(github.event.pull_request.labels.*.name, 'run_ci')) && github.event.pull_request.mergeable == true) }}
+        if: contains(github.event.pull_request.labels.*.name, 'run_vrt') || ((github.event.pull_request.draft != true || contains(github.event.pull_request.labels.*.name, 'run_ci')) && github.event.pull_request.mergeable == true)
         uses: ./.github/workflows/vrt.yml
         with:
             skip: ${{ github.base_ref == 'spectrum-two' || contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
