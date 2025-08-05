@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -126,3 +126,21 @@ export const CustomIconTemplate = (args) => html`
 		</div>
 	</div>
 `;
+
+export const PickerIconOptions = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+		${Template(args, context)}
+		${Template({
+			...args,
+			iconSet: "workflow",
+			iconName: "Calendar",
+		}, context)}
+	`,
+});

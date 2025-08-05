@@ -145,6 +145,9 @@
 }
 
 .spectrum-PickerButton-icon {
+	/* @passthrough -- icon-size */
+	--mod-icon-size: var(--mod-picker-button-workflow-icon-size);
+
 	/* don't be small, ever */
 	flex-shrink: 0;
 	color: var(--mod-picker-button-icon-color, var(--spectrum-picker-button-icon-color));

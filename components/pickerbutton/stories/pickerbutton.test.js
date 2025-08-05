@@ -1,8 +1,9 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template.js";
+import { PickerIconOptions, Template } from "./template.js";
 
 export const PickerGroup = Variants({
 	Template,
+	SizeTemplate: PickerIconOptions,
 	testData: [
 		{
 			testHeading: "Default",
@@ -11,6 +12,14 @@ export const PickerGroup = Variants({
 			testHeading: "Quiet",
 			isQuiet: true,
 		},
+		{
+			testHeading: "Custom sized workflow icon",
+			iconName: "Calendar",
+			iconSet: "workflow",
+			customStyles: {
+				"--mod-picker-button-workflow-icon-size": "var(--spectrum-workflow-icon-size-50)",
+			},
+		}
 	],
 	stateData: [
 		{
