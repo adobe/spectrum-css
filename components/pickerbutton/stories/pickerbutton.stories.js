@@ -5,7 +5,7 @@ import { isActive, isDisabled, isHovered, isOpen, isQuiet, size } from "@spectru
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PickerGroup } from "./pickerbutton.test.js";
-import { CustomIconTemplate, Template } from "./template.js";
+import { PickerIconOptions, Template } from "./template.js";
 
 /**
  * The picker button component is used as a dropdown trigger within other components such as [combobox](?path=/docs/components-combobox--docs).
@@ -25,9 +25,15 @@ export default {
 			options: ["ui", "workflow"],
 			control: "inline-radio",
 		},
-		iconName: {
+		uiIconName: {
+			...Icon.argTypes.uiIconName,
+			if: { arg: "iconSet", eq: "ui" },
+			category: "Content",
+		},
+		workflowIconName: {
 			...Icon.argTypes.iconName,
 			if: { arg: "iconSet", eq: "workflow" },
+			category: "Content",
 		},
 		isOpen: {
 			...isOpen,
@@ -47,7 +53,8 @@ export default {
 		isQuiet: false,
 		isDisabled: false,
 		iconSet: "ui",
-		iconName: "ChevronDown",
+		workflowIconName: "Calendar",
+		uiIconName: "ChevronDown",
 	},
 	parameters: {
 		packageJson,
@@ -116,9 +123,13 @@ Open.parameters = {
 };
 
 /**
- * This example uses a custom icon instead of the chevron UI icon.
+ * These examples use custom icons. The icon on the left is a custom UI icon, and the icon on the right is a custom workflow icon. The size of the icon can also be modified by using the `--mod-icon-size` custom property.
  */
-export const CustomIcon = CustomIconTemplate.bind({});
+export const CustomIcon = PickerIconOptions.bind({});
+CustomIcon.args = {
+	uiIconName: "ArrowDown100",
+	workflowIconName: "Calendar",
+};
 CustomIcon.storyName = "With custom icon";
 CustomIcon.tags = ["!dev"];
 CustomIcon.parameters = {
