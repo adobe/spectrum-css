@@ -8,10 +8,6 @@ export const PickerGroup = Variants({
 			testHeading: "Default",
 		},
 		{
-			testHeading: "With label",
-			label: "Select",
-		},
-		{
 			testHeading: "Quiet",
 			isQuiet: true,
 		},

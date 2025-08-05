@@ -5,7 +5,6 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -13,7 +12,6 @@ export const Template = ({
 	rootClass = "spectrum-PickerButton",
 	id = getRandomId("pickerbutton"),
 	size = "m",
-	label,
 	iconSet = "ui",
 	iconName = "ChevronDown",
 	isActive = false,
@@ -32,8 +30,7 @@ export const Template = ({
 		<button
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--textuiicon`]: label && iconSet === "ui",
-				[`${rootClass}--workflowicon`]: !label && iconSet !== "ui",
+				[`${rootClass}--workflowicon`]: iconSet !== "ui",
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				"is-active": isActive,
@@ -56,11 +53,6 @@ export const Template = ({
 			type="button"
 		>
 			<div class="${rootClass}-fill">
-				${when(label, () => html`
-					<span class="${rootClass}-label is-placeholder">
-						${label}
-					</span>
-				`)}
 				${Icon({
 					iconName: iconName ?? "ChevronDown",
 					setName: iconSet,
