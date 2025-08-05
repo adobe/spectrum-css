@@ -1,6 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -13,7 +12,8 @@ export const Template = ({
 	id = getRandomId("pickerbutton"),
 	size = "m",
 	iconSet = "ui",
-	iconName = "ChevronDown",
+	workflowIconName = "Calendar",
+	uiIconName = "ChevronDown",
 	isActive = false,
 	isHovered = false,
 	isDisabled = false,
@@ -54,7 +54,7 @@ export const Template = ({
 		>
 			<div class="${rootClass}-fill">
 				${Icon({
-					iconName: iconName ?? "ChevronDown",
+					iconName: iconSet === "ui" ? (uiIconName ?? "ChevronDown") : iconSet === "workflow" ? (workflowIconName ?? "ChevronDown") : "ChevronDown",
 					setName: iconSet,
 					size,
 					customClasses: [`${rootClass}-icon`],
@@ -64,70 +64,9 @@ export const Template = ({
 	`;
 };
 
-/**
- * Displays the component with a custom icon (instead of the chevron UI icon).
- * Two examples are shown; with a custom UI icon and a custom Workflow icon.
- */
-export const CustomIconTemplate = (args) => html`
-	<div
-		style=${styleMap({
-			display: "flex",
-			gap: "24px",
-			flexWrap: "wrap",
-		})}
-	>
-		<div
-			style=${styleMap({
-				display: "flex",
-				gap: "16px",
-				flexDirection: "column",
-				alignItems: "center",
-				flexBasis: "80px",
-			})}
-		>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["UI icon"],
-				customStyles: {
-					"white-space": "nowrap",
-					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
-				},
-			})}
-			${Template({
-				...args,
-				iconName: "ArrowDown100",
-				iconSet: "ui",
-			})}
-		</div>
-		<div
-			style=${styleMap({
-				display: "flex",
-				gap: "16px",
-				flexDirection: "column",
-				alignItems: "center",
-				flexBasis: "80px",
-			})}
-		>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Workflow icon"],
-				customStyles: {
-					"white-space": "nowrap",
-					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
-				},
-			})}
-			${Template({
-				...args,
-				iconName: "Add",
-				iconSet: "workflow",
-			})}
-		</div>
-	</div>
-`;
-
 export const PickerIconOptions = ({
+	uiIconName,
+	workflowIconName,
 	...args
 }, context ) => Container({
 	withBorder: false,
@@ -136,11 +75,15 @@ export const PickerIconOptions = ({
 		columnGap: "12px",
 	},
 	content: html`
-		${Template(args, context)}
+		${Template({
+			...args,
+			iconSet: "ui",
+			uiIconName: uiIconName ?? "ChevronDown",
+		}, context)}
 		${Template({
 			...args,
 			iconSet: "workflow",
-			iconName: "Calendar",
+			workflowIconName: workflowIconName ?? "Calendar",
 		}, context)}
 	`,
 });
