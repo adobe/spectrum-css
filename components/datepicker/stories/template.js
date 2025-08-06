@@ -85,12 +85,12 @@ export const DatePicker = ({
 				},
 			}, context))}
 			${PickerButton({
-				customClasses: [`${rootClass}-button`],
+				customClasses: [`${rootClass}-button`, "spectrum-PickerButton--workflowicon"],
 				size: "m",
 				iconName: "Calendar",
 				iconSet: "workflow",
 				isQuiet,
-				customStyles: isReadOnly ? { "display": "none" } : undefined,
+				customStyles: isReadOnly ? { "display": "none" } : { "--mod-icon-size": "var(--spectrum-workflow-icon-size-50)" },
 				// @todo this is not added to the button on the website; need to make sure it's not a bug
 				// isOpen,
 				isInvalid,
