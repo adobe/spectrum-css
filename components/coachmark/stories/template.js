@@ -57,18 +57,20 @@ export const CoachContainer = (
 							{
 								isOpen,
 								position: "bottom-start",
-								iconName: "More",
-								size: scale === "large" ? "s" : "m",
-								items: [
-									{
-										label: "Skip tour",
-									},
-									{
-										label: "Reset tour",
-									},
-								],
-								popoverHeight: 68,
-								popoverWidth: 84,
+								triggerArgs: {
+									iconName: "More",
+									size: scale === "large" ? "s" : "m",
+								},
+								menuArgs: {
+									items: [
+										{
+											label: "Skip tour",
+										},
+										{
+											label: "Reset tour",
+										},
+									],
+								}
 							},
 							context,
 						)}

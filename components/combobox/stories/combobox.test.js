@@ -16,9 +16,6 @@ export const ComboBoxGroup = Variants({
 		{
 			testHeading: "Open",
 			isOpen: true,
-			wrapperStyles: {
-				"min-block-size": "250px",
-			},
 		},
 		{
 			testHeading: "Help text with label",

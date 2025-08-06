@@ -68,6 +68,16 @@ export default {
 			control: "select",
 			options: ["true", "menu", "listbox", "tree", "grid", "dialog", "false"],
 		},
+		hasLongPress: {
+			name: "Long press",
+			description: "If the trigger supports a long-press action which triggers the menu, this should be set to true.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Accessibility",
+			},
+			control: "boolean",
+		},
 		isOpen: {
 			...isOpen,
 			if: { arg: "hasPopup", truthy: true },
@@ -83,6 +93,7 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: "false",
+		hasLongPress: false,
 		isActive: false,
 		isFocused: false,
 		isHovered: false,

@@ -73,8 +73,6 @@ export default {
 				"end-bottom",
 			],
 		},
-		popoverHeight: { table: { disable: true } },
-		popoverWidth: { table: { disable: true } },
 		popoverAlignment: { table: { disable: true } },
 		popoverWrapperStyles: { table: { disable: true } },
 	},
@@ -83,8 +81,6 @@ export default {
 		isOpen: true,
 		withTip: false,
 		position: "bottom",
-		popoverHeight: 158,
-		popoverWidth: 105,
 	},
 	parameters: {
 		layout: "centered",
@@ -246,7 +242,7 @@ DialogStyle.tags = ["!dev"];
 DialogStyle.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
+	trigger: undefined,
 	content: [
 		(passthroughs, context) => Dialog({
 			showModal: false,
@@ -294,19 +290,15 @@ DialogStyle.parameters = {
 export const Positioning = (args, context) => ArgGrid({
 	Template,
 	argKey: "position",
+	withBorder: false,
 	...args,
 }, context);
 Positioning.storyName = "Positioning options";
 Positioning.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
-	content: [() => html`<span style="padding: 0 7px">Basic text content, with some added padding.</span>`],
-	skipAlignment: true,
-	popoverWrapperStyles: {
-		"display": "block",
-		"height": "150px",
-	},
+	trigger: undefined,
+	content: [() => html`<p style="padding: 0 7px; margin: 0; inline-size: 150px;">Basic text content, with some added padding.</p>`],
 };
 Positioning.tags = ["!dev"];
 Positioning.parameters = {
@@ -332,7 +324,7 @@ TipOffset.storyName = "Tip positioning and inline offset";
 TipOffset.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
+	trigger: undefined,
 	content: [
 		() => Menu({
 			items: [
@@ -353,9 +345,6 @@ TipOffset.args = {
 	],
 	customStyles: {
 		"--spectrum-popover-pointer-edge-offset": "50px",
-	},
-	popoverWrapperStyles: {
-		"display": "block",
 	},
 };
 TipOffset.tags = ["!dev"];

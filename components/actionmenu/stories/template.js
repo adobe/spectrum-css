@@ -8,18 +8,19 @@ export const Template = ({
 	id = getRandomId("actionmenu"),
 	testId,
 	triggerId = getRandomId("actionmenu-trigger"),
-	customClasses = [],
+	customClasses =[],
 	customStyles = {},
-	items = [],
 	isOpen = false,
-	label,
-	iconName = "More",
-	iconSet = "workflow",
-	size = "m",
+	hasLongPress = false,
+	position,
+	// Object should match the schema of the Menu component
+	menuArgs = {},
+	// Object should match the schema of the ActionButton component (or whatever component is used for the trigger)
+	triggerArgs = {},
 	...popoverArgs
 } = {}, context = {}) => {
 	return Popover({
-		size,
+		...popoverArgs,
 		isOpen,
 		withTip: false,
 		id,
@@ -28,27 +29,23 @@ export const Template = ({
 		trigger: (passthroughs) =>
 			ActionButton({
 				...passthroughs,
-				size,
-				label,
+				...triggerArgs,
 				hasPopup: "menu",
-				iconName,
-				iconSet,
+				hasLongPress,
 				id: triggerId,
 				customClasses: [`${rootClass}-trigger`],
 			}, context),
-		position: "bottom-start",
+		position,
 		customStyles,
 		customClasses: [`${rootClass}-popover`],
 		customWrapperClasses: [rootClass, ...customClasses],
 		content: [
 			(passthroughs) => Menu({
 				...passthroughs,
+				...menuArgs,
 				customClasses: [`${rootClass}-menu`],
-				items,
 				isOpen,
-				size
 			}, context)
 		],
-		...popoverArgs,
 	}, context);
 };

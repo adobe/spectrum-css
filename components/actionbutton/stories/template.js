@@ -56,7 +56,7 @@ export const Template = ({
 	isDisabled = false,
 	isOpen = false,
 	hasPopup = "false",
-	showPopup = false,
+	hasLongPress = false,
 	popupId,
 	hideLabel = false,
 	staticColor,
@@ -74,7 +74,7 @@ export const Template = ({
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
 			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
-			aria-pressed=${isSelected ? "true" : "false"}
+			aria-pressed=${ifDefined(isSelected ? "true" : undefined)}
 			aria-expanded=${ifDefined(hasPopup && hasPopup !== "false" ? isOpen ? "true" : "false" : undefined)}
 			class=${classMap({
 				[rootClass]: true,
@@ -92,6 +92,7 @@ export const Template = ({
 			})}
 			id=${id}
 			data-testid=${testId ?? id}
+			popovertarget=${ifDefined(hasPopup && hasPopup !== "false" ? popupId : undefined)}
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
@@ -107,7 +108,7 @@ export const Template = ({
 				updateArgs({ isFocused: false });
 			}}
 		>
-			${when(showPopup && hasPopup && hasPopup !== "false", () =>
+			${when(hasLongPress, () =>
 				Icon({
 					size,
 					iconName: "CornerTriangle" + ({
@@ -164,11 +165,13 @@ export const ActionButtonsWithIconOptions = (args, context) => Container({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
+			hasLongPress: true,
 		}, context),
 		Template({
 			...args,
 			iconName: undefined,
 			hasPopup: "true",
+			hasLongPress: true,
 		}, context)
 	],
 }, context);
@@ -189,12 +192,14 @@ export const IconOnlyOption = (args, context) => Container({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
+			hasLongPress: true,
 		}, context),
 		Template({
 			...args,
 			hideLabel: true,
 			isQuiet: true,
 			hasPopup: "true",
+			hasLongPress: true,
 		}, context),
 	],
 }, context);

@@ -74,8 +74,6 @@ export const Template = ({
 						],
 					}, context),
 				],
-				popoverHeight: 42,
-				popoverWidth: 500,
 			}, context)}
 		</div>
 	`;

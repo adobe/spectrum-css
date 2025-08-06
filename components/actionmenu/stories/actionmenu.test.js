@@ -10,7 +10,7 @@ export const ActionMenuGroup = Variants({
 		Template: (args, context) => ArgGrid({
 			Template,
 			argKey: "position",
-			widthBorder: false,
+			withBorder: false,
 			...args,
 		}, context),
 	}],

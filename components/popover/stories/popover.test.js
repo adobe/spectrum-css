@@ -5,6 +5,11 @@ import { Template } from "./template.js";
 
 export const PopoverGroup = Variants({
 	Template,
+	wrapperStyles: {
+		// Makes sure that padding does not add to the min-block-size set through the use of the story's parameters.docs.story.height setting.
+		"box-sizing": "border-box",
+		"padding": "16px",
+	},
 	testData: [
 		...[
 			"top",
@@ -29,14 +34,12 @@ export const PopoverGroup = Variants({
 			"end",
 			"end-top",
 			"end-bottom",
-		].map((position) => ({
-			testHeading: `Position: ${position}`,
-			position,
-			popoverHeight: 178,
-			popoverWidth: 113,
-			triggerHeight: 32,
-			triggerWidth: 66,
-		})),
+		].map((position) => {
+			return {
+				testHeading: `Position: ${position}`,
+				position,
+			};
+		}),
 		{
 			testHeading: "Dialog style content",
 			position: "bottom-start",
