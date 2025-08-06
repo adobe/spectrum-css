@@ -11,51 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@media (forced-colors: active) {
-	.spectrum-TreeView {
-		--highcontrast-treeview-item-background-color-selected: Highlight;
-		--highcontrast-treeview-item-border-color-selected: Highlight;
-		--highcontrast-treeview-item-text-color-selected: HighlightText;
-		--highcontrast-treeview-item-icon-color-selected: HighlightText;
-
-		--highcontrast-treeview-item-icon-color: LinkText;
-		--highcontrast-treeview-item-text-color: LinkText;
-
-		--highcontrast-treeview-item-background-color-focus: Highlight;
-		--highcontrast-treeview-item-text-color-focus: HighlightText;
-		--highcontrast-treeview-item-border-color-focus: CanvasText;
-		--highcontrast-treeview-item-icon-color-focus: HighlightText;
-
-		--highcontrast-treeview-item-background-color-disabled: Canvas;
-		--highcontrast-treeview-item-text-color-disabled: GrayText;
-		--highcontrast-treeview-item-icon-color-disabled: GrayText;
-
-		--highcontrast-treeview-heading-color: CanvasText;
-	}
-
-	@supports (color: SelectedItem) {
-		.spectrum-TreeView {
-			--highcontrast-treeview-item-background-color-selected: SelectedItem;
-			--highcontrast-treeview-item-border-color-selected: SelectedItem;
-			--highcontrast-treeview-item-text-color-selected: SelectedItemText;
-			--highcontrast-treeview-item-icon-color-selected: SelectedItemText;
-		}
-	}
-
-	.spectrum-TreeView-itemLabel {
-		forced-color-adjust: none;
-		background: transparent;
-	}
-
-	.spectrum-TreeView-itemLink::before {
-		forced-color-adjust: none;
-	}
-}
-
 .spectrum-TreeView {
-	--spectrum-treeview-item-background-color-hover: var(--spectrum-gray-100);
-	--spectrum-treeview-item-background-color-focus: var(--spectrum-gray-100);
-
 	--spectrum-treeview-item-border-size: var(--mod-treeview-item-border-size, var(--spectrum-border-width-200));
 	--spectrum-treeview-item-border-size-selected: var(--mod-treeview-item-border-size-selected, 1px);
 	--spectrum-treeview-item-border-radius: var(--mod-treeview-item-border-radius, 0px);
@@ -426,4 +382,45 @@
 .spectrum-TreeView--thumbnail .spectrum-TreeView-itemThumbnail {
 	flex-shrink: 0;
 	margin-inline-end: var(--spectrum-treeview-item-icon-gap);
+}
+
+@media (forced-colors: active) {
+	.spectrum-TreeView {
+		--highcontrast-treeview-item-background-color-selected: Highlight;
+		--highcontrast-treeview-item-border-color-selected: Highlight;
+		--highcontrast-treeview-item-text-color-selected: HighlightText;
+		--highcontrast-treeview-item-icon-color-selected: HighlightText;
+
+		--highcontrast-treeview-item-icon-color: LinkText;
+		--highcontrast-treeview-item-text-color: LinkText;
+
+		--highcontrast-treeview-item-background-color-focus: Highlight;
+		--highcontrast-treeview-item-text-color-focus: HighlightText;
+		--highcontrast-treeview-item-border-color-focus: CanvasText;
+		--highcontrast-treeview-item-icon-color-focus: HighlightText;
+
+		--highcontrast-treeview-item-background-color-disabled: Canvas;
+		--highcontrast-treeview-item-text-color-disabled: GrayText;
+		--highcontrast-treeview-item-icon-color-disabled: GrayText;
+
+		--highcontrast-treeview-heading-color: CanvasText;
+	}
+
+	@supports (color: SelectedItem) {
+		.spectrum-TreeView {
+			--highcontrast-treeview-item-background-color-selected: SelectedItem;
+			--highcontrast-treeview-item-border-color-selected: SelectedItem;
+			--highcontrast-treeview-item-text-color-selected: SelectedItemText;
+			--highcontrast-treeview-item-icon-color-selected: SelectedItemText;
+		}
+	}
+
+	.spectrum-TreeView-itemLabel {
+		forced-color-adjust: none;
+		background: transparent;
+	}
+
+	.spectrum-TreeView-itemLink::before {
+		forced-color-adjust: none;
+	}
 }

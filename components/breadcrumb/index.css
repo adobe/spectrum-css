@@ -61,7 +61,7 @@
 	--spectrum-breadcrumbs-action-button-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--spectrum-breadcrumbs-item-dragged-background: rgba(var(--spectrum-drop-zone-background-color-rgb), var(--spectrum-drop-zone-background-color-opacity));
+	--spectrum-breadcrumbs-item-dragged-background: rgb(var(--spectrum-drop-zone-background-color-rgb), var(--spectrum-drop-zone-background-color-opacity));
 
 	/* Sub-component: heading */
 	--mod-heading-margin-end: 0px;

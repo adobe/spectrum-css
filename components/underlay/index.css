@@ -21,7 +21,7 @@
 	--spectrum-underlay-background-entry-animation-delay: var(--mod-underlay-background-entry-animation-delay, var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0)));
 
 	/* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
-	--spectrum-underlay-background-color: var(--mod-underlay-background-color, rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity)));
+	--spectrum-underlay-background-color: var(--mod-underlay-background-color, rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity)));
 
 	pointer-events: none;
 	visibility: hidden;
