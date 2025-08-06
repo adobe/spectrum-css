@@ -138,7 +138,7 @@ __metadata:
     diff2html: "npm:^3.4.52"
     eslint: "npm:^8.57.1"
     eslint-plugin-jsonc: "npm:^2.20.1"
-    eslint-plugin-prettier: "npm:^5.5.3"
+    eslint-plugin-prettier: "npm:^5.5.4"
     fast-glob: "npm:^3.3.3"
     gh-pages: "npm:^6.3.0"
     husky: "npm:^9.1.7"
@@ -10716,9 +10716,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^5.5.3":
-  version: 5.5.3
-  resolution: "eslint-plugin-prettier@npm:5.5.3"
+"eslint-plugin-prettier@npm:^5.5.4":
+  version: 5.5.4
+  resolution: "eslint-plugin-prettier@npm:5.5.4"
   dependencies:
     prettier-linter-helpers: "npm:^1.0.0"
     synckit: "npm:^0.11.7"
@@ -10732,7 +10732,7 @@ __metadata:
       optional: true
     eslint-config-prettier:
       optional: true
-  checksum: 10c0/7524e381b400fec67dd2bd1a71779c220a5410f0063cd220d144431f291ec800bee1985709ef0dd38d666d01e0e53bec93824063912784d4021db8473fafe73e
+  checksum: 10c0/5cc780e0ab002f838ad8057409e86de4ff8281aa2704a50fa8511abff87028060c2e45741bc9cbcbd498712e8d189de8026e70aed9e20e50fe5ba534ee5a8442
   languageName: node
   linkType: hard
 
