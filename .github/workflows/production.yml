@@ -4,7 +4,7 @@ name: Build and verify production
     # - Build the main branch
     # - Report on the compiled output
     # - Run visual regression tests
-    # - Publish the PR branch to Netlify
+    # - Publish the PR branch to Azure
     # -------------------------------------------------------------
 
 on:
@@ -58,8 +58,8 @@ jobs:
         secrets: inherit
 
     # -------------------------------------------------------------
-    # PUBLISH TO NETLIFY --- #
-    # Publish to netlify by leveraging the previous build and then building the site as well
+    # PUBLISH TO AZURE --- #
+    # Publish to azure by leveraging the previous build and then building the site as well
     # -------------------------------------------------------------
     publish_site:
         name: Publish
