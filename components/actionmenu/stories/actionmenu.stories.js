@@ -23,7 +23,6 @@ export default {
 	title: "Action menu",
 	component: "ActionMenu",
 	argTypes: {
-		withTip: Popover.argTypes.withTip,
 		position: {
 			...Popover.argTypes.position,
 			options: [
@@ -47,14 +46,23 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		hasLongPress: {
+			name: "Long press",
+			description: "If the trigger supports a long-press action which triggers the menu, this should be set to true.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Accessibility",
+			},
+			control: "boolean",
+		},
 		items: { table: { disable: true } },
+		menuArgs: { table: { disable: true } },
 	},
 	args: {
-		isOpen: false,
-		withTip: Popover.args.withTip,
+		isOpen: true,
 		position: "bottom-start",
-		iconName: "AddCircle",
-		label: "Add",
+		hasLongPress: false,
 	},
 	parameters: {
 		actions: {
@@ -82,40 +90,90 @@ export default {
 	tags: ["migrated"],
 };
 
+/**
+ * Action menu allows users to access and execute various commands or tasks related to their current workflow. It's typically triggered from an action button by user interaction.
+ *
+ * Note that the accessibility roles are different for an action menu compared to a normal menu. The action menu is a combination of a menu, popover, and action button.
+ */
 export const Default = ActionMenuGroup.bind({});
 Default.args = {
-	isOpen: true,
 	iconName: "AddCircle",
 	label: "Add",
+	menuArgs: {
+		hasActions: true,
+		selectionMode: "multiple",
+	},
+	popoverHeight: 340,
+	popoverWidth: 242,
 	items: [{
-		heading: "Add new page",
-		items: [
-			{
-				label: "Same size",
-				iconName: "Copy"
-			},
-			{
-				label: "Custom size",
-				iconName: "Properties"
-			},
-			{
-				label: "Duplicate",
-				iconName: "Duplicate"
-			}
-		]
-	}, {
-		type: "divider"
-	}, {
-		heading: "Edit page",
+		heading: "Menu section header",
+		description: "Menu section description",
 		items: [{
-			label: "Edit timeline",
-			iconName: "Clock",
-			description: "Add time to this page"
+			label: "Menu item",
+			iconName: "Circle",
+		},
+		{
+			label: "Menu item",
+			iconName: "Circle",
+		},
+		{
+			label: "Menu item",
+			iconName: "Circle",
 		}],
+	}, {
+		heading: "Menu section header",
+		description: "Menu section description",
+		selectionMode: "none",
+		hasActions: false,
+		items: [{
+			label: "Menu item",
+			iconName: "Circle",
+		},
+		{
+			label: "Menu item",
+			iconName: "Circle",
+		},
+		{
+			label: "Menu item",
+			iconName: "Circle",
+		},],
 	}],
 };
 
 // ********* DOCS ONLY ********* //
+/**
+ * By default, the menu is opened by pressing the trigger element or activating it via the <kbd>Space</kbd> or <kbd>Enter</kbd> keys. However, there may be cases where the trigger should perform a separate action on press such as selection, and should only display the menu when long pressed. For this use-case, the menu will only be opened when pressing and holding the trigger or by using the <kbd>Option</kbd> (Alt on Windows) + <kbd>Down arrow</kbd>/<kbd>Up arrow</kbd> keys while focusing the trigger.
+ *
+ * This example illustrates the expected visuals and states of the action menu for a trigger with both long press and short press behaviors.
+ */
+export const LongPress = Template.bind({});
+LongPress.args = {
+	hasLongPress: true,
+	iconName: "CropRotate",
+	isOpen: true,
+	menuArgs: {
+		selectionMode: "single",
+	},
+	items: [{
+		label: "Crop rotate",
+		iconName: "CropRotate",
+		isSelected: true,
+	}, {
+		label: "Slice",
+		iconName: "VectorDraw",
+	}, {
+		label: "Clone stamp",
+		iconName: "StampClone",
+	}],
+	popoverHeight: 139,
+	popoverWidth: 167,
+};
+LongPress.tags = ["!dev"];
+LongPress.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 /**
  * Action menus can be positioned in four locals relative to the trigger but <u>only one menu can be triggered at a single time</u>.
@@ -123,10 +181,24 @@ Default.args = {
 export const PlacementOptions = (args, context) => ArgGrid({
 	Template,
 	argKey: "position",
-	widthBorder: false,
+	withBorder: false,
 	...args,
 }, context);
-PlacementOptions.args = Default.args;
+PlacementOptions.args = {
+	iconName: "More",
+	items: [{
+		label: "Details",
+		iconName: "FileText"
+	}, {
+		label: "Share",
+		iconName: "Share"
+	}, {
+		label: "Remove",
+		iconName: "Delete"
+	}],
+	popoverHeight: 139,
+	popoverWidth: 123,
+};
 PlacementOptions.tags = ["!dev"];
 PlacementOptions.parameters = {
 	chromatic: {
@@ -149,7 +221,35 @@ export const PlaceholderIcon = (args, context) => Container({
 				"margin-block-start": "var(--spectrum-spacing-200)",
 			},
 		}, context),
-		Template(Default.args, context),
+		Template({
+			isOpen: true,
+			iconName: "AddCircle",
+			label: "Add",
+			items: [{
+				heading: "Add new page",
+				items: [
+					{
+						label: "Same size",
+						iconName: "Copy"
+					},
+					{
+						label: "Custom size",
+						iconName: "Properties"
+					},
+					{
+						label: "Duplicate",
+						iconName: "Duplicate"
+					}
+				]
+			}, {
+				heading: "Edit page",
+				items: [{
+					label: "Edit timeline",
+					iconName: "Clock",
+					description: "Add time to this page"
+				}],
+			}]
+		}, context),
 	],
 });
 PlaceholderIcon.args = {

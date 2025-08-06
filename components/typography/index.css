@@ -142,8 +142,8 @@
 		font-weight: var(--mod-heading-sans-serif-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-strong-emphasized-font-weight));
 	}
 
-	&:lang(zh),
 	&:lang(ja),
+	&:lang(zh),
 	&:lang(ko) {
 		font-family: var(--mod-heading-cjk-font-family, var(--spectrum-heading-cjk-font-family));
 		font-style: var(--mod-heading-cjk-font-style, var(--spectrum-heading-cjk-font-style));
@@ -198,8 +198,8 @@
 		font-weight: var(--mod-heading-sans-serif-heavy-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight));
 	}
 
-	&:lang(zh),
 	&:lang(ja),
+	&:lang(zh),
 	&:lang(ko) {
 		font-style: var(--mod-heading-cjk-heavy-font-style, var(--spectrum-heading-cjk-heavy-font-style));
 		font-weight: var(--mod-heading-cjk-heavy-font-weight, var(--spectrum-heading-cjk-heavy-font-weight));
@@ -249,8 +249,8 @@
 		font-weight: var(--mod-heading-sans-serif-light-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight));
 	}
 
-	&:lang(zh),
 	&:lang(ja),
+	&:lang(zh),
 	&:lang(ko) {
 		font-style: var(--mod-heading-cjk-light-font-style, var(--spectrum-heading-cjk-light-font-style));
 		font-weight: var(--mod-heading-cjk-light-font-weight, var(--spectrum-heading-cjk-light-font-weight));
@@ -421,8 +421,8 @@
 		font-weight: var(--mod-body-sans-serif-strong-emphasized-font-weight, var(--spectrum-body-sans-serif-strong-emphasized-font-weight));
 	}
 
-	&:lang(zh),
 	&:lang(ja),
+	&:lang(zh),
 	&:lang(ko) {
 		font-family: var(--mod-body-cjk-font-family, var(--spectrum-body-cjk-font-family));
 		font-style: var(--mod-body-cjk-font-style, var(--spectrum-body-cjk-font-style));
@@ -539,8 +539,8 @@
 		font-weight: var(--mod-detail-sans-serif-strong-emphasized-font-weight, var(--spectrum-detail-sans-serif-strong-emphasized-font-weight));
 	}
 
-	&:lang(zh),
 	&:lang(ja),
+	&:lang(zh),
 	&:lang(ko) {
 		font-family: var(--mod-detail-cjk-font-family, var(--spectrum-detail-cjk-font-family));
 		font-style: var(--mod-detail-cjk-font-style, var(--spectrum-detail-cjk-font-style));
@@ -619,8 +619,8 @@
 		font-weight: var(--mod-detail-sans-serif-light-strong-emphasized-font-weight, var(--spectrum-detail-sans-serif-light-strong-emphasized-font-weight));
 	}
 
-	&:lang(zh),
 	&:lang(ja),
+	&:lang(zh),
 	&:lang(ko) {
 		font-style: var(--mod-detail-cjk-light-font-style, var(--spectrum-detail-cjk-light-font-style));
 		font-weight: var(--mod-detail-cjk-light-font-weight, var(--spectrum-detail-cjk-light-font-weight));
@@ -726,8 +726,8 @@
 		font-weight: var(--mod-code-strong-emphasized-font-weight, var(--spectrum-code-strong-emphasized-font-weight));
 	}
 
-	&:lang(zh),
 	&:lang(ja),
+	&:lang(zh),
 	&:lang(ko) {
 		font-family: var(--mod-code-cjk-font-family, var(--spectrum-code-cjk-font-family));
 		font-style: var(--mod-code-cjk-font-style, var(--spectrum-code-cjk-font-style));

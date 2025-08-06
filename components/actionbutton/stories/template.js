@@ -74,7 +74,7 @@ export const Template = ({
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
 			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
-			aria-pressed=${isSelected ? "true" : "false"}
+			aria-pressed=${ifDefined(isSelected ? "true" : undefined)}
 			aria-expanded=${ifDefined(hasPopup && hasPopup !== "false" ? isOpen ? "true" : "false" : undefined)}
 			class=${classMap({
 				[rootClass]: true,
@@ -107,20 +107,7 @@ export const Template = ({
 				updateArgs({ isFocused: false });
 			}}
 		>
-			${when(showPopup && hasPopup && hasPopup !== "false", () =>
-				Icon({
-					size,
-					iconName: "CornerTriangle" + ({
-						xs: "75",
-						s: "75",
-						m: "100",
-						l: "200",
-						xl: "300",
-					}[size] || "100"),
-					setName: "ui",
-					customClasses: [`${rootClass}-hold`],
-				}, context)
-			)}
+			${when(showPopup && hasPopup && hasPopup !== "false", () => html`<span class=${classMap({ [`${rootClass}-hold`]: true })}></span>`)}
 			${when(iconName, () =>
 				Icon({
 					size,

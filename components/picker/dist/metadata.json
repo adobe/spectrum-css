@@ -68,9 +68,7 @@
     ".spectrum-Picker.is-loading .spectrum-Picker-menuIcon",
     ".spectrum-Picker:after",
     ".spectrum-Picker:focus-visible",
-    ".spectrum-Picker:lang(ja) .spectrum-Picker-label",
-    ".spectrum-Picker:lang(ko) .spectrum-Picker-label",
-    ".spectrum-Picker:lang(zh) .spectrum-Picker-label"
+    ".spectrum-Picker:lang(ja, zh, ko) .spectrum-Picker-label"
   ],
   "modifiers": [
     "--mod-picker-animation-duration",

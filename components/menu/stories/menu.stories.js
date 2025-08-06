@@ -173,7 +173,6 @@ Default.args = {
 				},
 			],
 		},
-		{ type: "divider" },
 		{
 			idx: 2,
 			heading: "Menu header - With descriptions and icons",
@@ -211,7 +210,6 @@ Default.args = {
 				},
 			],
 		},
-		{ type: "divider" },
 		{
 			idx: 3,
 			heading:
@@ -826,7 +824,6 @@ WithDividersAndHeaders.args = {
 				},
 			],
 		},
-		{ type: "divider" },
 		{
 			idx: 2,
 			heading: "Actions",

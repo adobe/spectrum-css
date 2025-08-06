@@ -68,6 +68,17 @@ export default {
 			control: "select",
 			options: ["true", "menu", "listbox", "tree", "grid", "dialog", "false"],
 		},
+		showPopup: {
+			name: "Show popup",
+			description: "If the button triggers a popup action, this should be set to reflect the type of element that pops-up.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Accessibility",
+			},
+			control: "boolean",
+			if: { arg: "hasPopup", truthy: true },
+		},
 		isOpen: {
 			...isOpen,
 			if: { arg: "hasPopup", truthy: true },
@@ -83,6 +94,7 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: "false",
+		showPopup: false,
 		isActive: false,
 		isFocused: false,
 		isHovered: false,

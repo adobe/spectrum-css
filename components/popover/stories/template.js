@@ -30,6 +30,7 @@ export const Template = ({
 	skipAlignment = false,
 	trigger,
 	content = [],
+	contentArgs = {},
 } = {}, context = {}) => {
 	// We need to wait for the popover to render before we can get the actual height and width
 	// of the popover to set the custom properties. This is a temporary solution until we can
@@ -258,7 +259,7 @@ export const Template = ({
 				id=${ifDefined(id)}
 				data-testid=${ifDefined(testId ?? id)}
 			>
-				${renderContent(content)}
+				${renderContent(content, { context, args: contentArgs })}
 				${withTip
 					? position && ["top", "bottom"].some((e) => position.startsWith(e))
 						? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`
