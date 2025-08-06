@@ -30,7 +30,6 @@
 
 	--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-100); /* equivalent to --spectrum-infield-button-inline-edge-to-disclosure-icon */
 
-	--spectrum-picker-button-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
 
 	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
 	--spectrum-picker-button-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
@@ -72,7 +71,6 @@
 		--spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill-small);
 		--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-small-size-small);
 		--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-75);
-		--spectrum-picker-button-workflow-icon-size: var(--spectrum-workflow-icon-size-75);
 	}
 
 	&.spectrum-PickerButton--sizeL {
@@ -81,7 +79,6 @@
 		--spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill-large);
 		--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-small-size-large);
 		--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-200);
-		--spectrum-picker-button-workflow-icon-size: var(--spectrum-workflow-icon-size-200);
 	}
 
 	&.spectrum-PickerButton--sizeXL {
@@ -90,7 +87,6 @@
 		--spectrum-picker-button-padding: var(--spectrum-in-field-button-edge-to-fill-extra-large);
 		--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-small-size-extra-large);
 		--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-300);
-		--spectrum-picker-button-workflow-icon-size: var(--spectrum-workflow-icon-size-300);
 	}
 }
 
@@ -139,15 +135,12 @@
 	transition: background-color var(--mod-picker-button-background-animation-duration, var(--spectrum-picker-button-background-animation-duration)) ease-in-out;
 
 	.spectrum-PickerButton--workflowicon & {
-		/* half of component height minus icon size because there are no edge-to-disclosure-icon tokens for workflow icons, then subtract picker button padding */
-		padding: calc((var(--mod-picker-button-height, var(--spectrum-picker-button-height)) - var(--mod-picker-button-workflow-icon-size, var(--spectrum-picker-button-workflow-icon-size))) / 2 - var(--mod-picker-button-padding, var(--spectrum-picker-button-padding)));
+		/* don't use padding tokens, rely on flexbox to center icons */
+		padding: 0;
 	}
 }
 
 .spectrum-PickerButton-icon {
-	/* @passthrough -- icon-size */
-	--mod-icon-size: var(--mod-picker-button-workflow-icon-size);
-
 	/* don't be small, ever */
 	flex-shrink: 0;
 	color: var(--mod-picker-button-icon-color, var(--spectrum-picker-button-icon-color));

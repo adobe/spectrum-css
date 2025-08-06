@@ -38,8 +38,7 @@
     "--mod-picker-button-icon-color-hover",
     "--mod-picker-button-icon-color-hover-disabled",
     "--mod-picker-button-padding",
-    "--mod-picker-button-width",
-    "--mod-picker-button-workflow-icon-size"
+    "--mod-picker-button-width"
   ],
   "component": [
     "--spectrum-picker-button-background-animation-duration",
@@ -54,8 +53,7 @@
     "--spectrum-picker-button-icon-color-down",
     "--spectrum-picker-button-icon-color-hover",
     "--spectrum-picker-button-padding",
-    "--spectrum-picker-button-width",
-    "--spectrum-picker-button-workflow-icon-size"
+    "--spectrum-picker-button-width"
   ],
   "global": [
     "--spectrum-animation-duration-100",
@@ -85,12 +83,8 @@
     "--spectrum-in-field-button-edge-to-fill-small",
     "--spectrum-neutral-content-color-default",
     "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-300",
-    "--spectrum-workflow-icon-size-75"
+    "--spectrum-neutral-content-color-hover"
   ],
-  "passthroughs": ["--mod-icon-size"],
+  "passthroughs": [],
   "high-contrast": []
 }
