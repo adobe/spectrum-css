@@ -65,8 +65,6 @@
 	/* Selected */
 	--spectrum-card-selected-background-opacity: var(--mod-card-selected-background-opacity, 0.1); /* table-selected-row-background-opacity does not exist in tokens yet */
 
-	--spectrum-card-preview-border-width-selected: var(--mod-card-preview-border-width-selected, var(--spectrum-border-width-100));
-
 	/* Horizontal */
 	--spectrum-card-horizontal-body-padding: var(--mod-card-horizontal-body-padding, var(--spectrum-spacing-300));
 	--spectrum-card-horizontal-preview-padding: var(--mod-card-horizontal-preview-padding, var(--spectrum-spacing-200));
@@ -378,7 +376,7 @@
 	}
 
 	&.is-selected .spectrum-Card-preview::before {
-		background-color: rgba(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--mod-card-selected-background-opacity, var(--spectrum-card-selected-background-opacity)));
+		background-color: rgb(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--mod-card-selected-background-opacity, var(--spectrum-card-selected-background-opacity)));
 	}
 
 	.spectrum-Card-body {

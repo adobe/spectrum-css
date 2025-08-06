@@ -186,6 +186,7 @@ module.exports = {
 							/^--mod-/,
 							/^--system-/,
 							/^--spectrum-picked-color$/,
+							/^--spectrum-downstate-(height|width)$/,
 						],
 						skipDependencies: false,
 						disableFix: true,

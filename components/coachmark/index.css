@@ -119,7 +119,7 @@
 
 /* Wrapper element around the nested action menu sub-component */
 .spectrum-CoachMark-action-menu {
-	--mod-popover-content-area-spacing: var(--spectrum-popover-content-area-spacing);
+	--mod-popover-content-area-spacing: var(--spectrum-popover-edge-to-content-area);
 
 	white-space: nowrap;
 	z-index: 1;
