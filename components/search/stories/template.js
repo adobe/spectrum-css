@@ -1,3 +1,4 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Container } from "@spectrum-css/preview/decorators";
@@ -19,7 +20,9 @@ export const Template = ({
 	size = "m",
 	showHelpText = false,
 	helpTextLabel = "",
+	isCollapsed = false,
 } = {}, context = {}) => {
+	const { updateArgs } = context;
 	return html`
 	<form
 		class=${classMap({
@@ -28,30 +31,48 @@ export const Template = ({
 				typeof size !== "undefined" && size !== "m",
 			"is-disabled": isDisabled,
 			"is-keyboardFocused": isKeyboardFocused,
+			"is-collapsed": isCollapsed,
+			"is-expanded": !isCollapsed,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		aria-label="Search"
 	>
-		${TextField({
-			isDisabled,
-			size,
-			customClasses: [
-				`${rootClass}-textfield`,
-				isFocused && "is-focused",
-				isKeyboardFocused && "is-keyboardFocused",
-				isHovered && "is-hover"
-			],
-			iconName: "Search",
-			setName: "workflow",
-			type: "search",
-			placeholder: "Search",
-			name: "search",
-			customInputClasses: [`${rootClass}-input`],
-			customIconClasses: [`${rootClass}-icon`],
-			autocomplete: false,
-			value: inputValue,
-		}, context)}
-		${when(inputValue, () =>
+		${when(isCollapsed, () =>
+			ActionButton({
+				iconName: "Search",
+				size,
+				customClasses: [
+					`${rootClass}-actionButton`,
+					isHovered && "is-hover",
+					isDisabled && "is-disabled",
+				],
+				onclick: () => {
+					updateArgs({ isCollapsed: !isCollapsed });
+				},
+			}, context)
+		)}
+		${when(!isCollapsed, () =>
+			TextField({
+				isDisabled,
+				size,
+				customClasses: [
+					`${rootClass}-textfield`,
+					isFocused && "is-focused",
+					isKeyboardFocused && "is-keyboardFocused",
+					isHovered && "is-hover"
+				],
+				iconName: "Search",
+				setName: "workflow",
+				type: "search",
+				placeholder: "Search",
+				name: "search",
+				customInputClasses: [`${rootClass}-input`],
+				customIconClasses: [`${rootClass}-icon`],
+				autocomplete: false,
+				value: inputValue,
+			}, context)
+		)}
+		${when(inputValue && !isCollapsed, () =>
 			ClearButton({
 				isDisabled,
 				size,
@@ -59,7 +80,7 @@ export const Template = ({
 				isFocusable: false,
 			}, context)
 		)}
-		${when(showHelpText, () =>
+		${when(showHelpText && !isCollapsed, () =>
 			HelpText({
 				text: helpTextLabel,
 				size,

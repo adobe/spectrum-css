@@ -17,6 +17,10 @@ export const SearchGroup = Variants({
 			inputValue: "What should we search for?",
 			withStates: false,
 		},
+		{
+			testHeading: "Collapsed",
+			isCollapsed: true,
+		}
 	],
 	stateData: [
 		{
@@ -30,15 +34,18 @@ export const SearchGroup = Variants({
 		{
 			testHeading: "Focused",
 			isFocused: true,
+			ignore: ["Collapsed"],
 		},
 		{
 			testHeading: "Focused + hovered",
 			isFocused: true,
 			isHovered: true,
+			ignore: ["Collapsed"],
 		},
 		{
 			testHeading: "Keyboard focused",
 			isKeyboardFocused: true,
+			ignore: ["Collapsed"],
 		},
 	]
 });
