@@ -4149,7 +4149,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/alertbanner@npm:4.0.0-next.2, @spectrum-css/alertbanner@workspace:components/alertbanner":
+"@spectrum-css/alertbanner@npm:4.0.0-next.3, @spectrum-css/alertbanner@workspace:components/alertbanner":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/alertbanner@workspace:components/alertbanner"
   dependencies:
@@ -4187,7 +4187,7 @@ __metadata:
     "@spectrum-css/icon": "npm:10.0.0-next.3"
     "@spectrum-css/modal": "npm:8.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
-    "@spectrum-css/underlay": "npm:7.0.0-next.0"
+    "@spectrum-css/underlay": "npm:7.0.0-next.1"
   peerDependencies:
     "@spectrum-css/buttongroup": ">=10.0.0-next.0"
     "@spectrum-css/divider": ">=6.0.0-next.0"
@@ -4224,7 +4224,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/assetcard@npm:6.0.0-next.1, @spectrum-css/assetcard@workspace:components/assetcard":
+"@spectrum-css/assetcard@npm:6.0.0-next.2, @spectrum-css/assetcard@workspace:components/assetcard":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/assetcard@workspace:components/assetcard"
   dependencies:
@@ -4292,7 +4292,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/breadcrumb@npm:12.0.0-next.2, @spectrum-css/breadcrumb@workspace:components/breadcrumb":
+"@spectrum-css/breadcrumb@npm:12.0.0-next.3, @spectrum-css/breadcrumb@workspace:components/breadcrumb":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/breadcrumb@workspace:components/breadcrumb"
   dependencies:
@@ -4313,7 +4313,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/bundle@npm:2.0.0-next.8, @spectrum-css/bundle@workspace:tools/bundle":
+"@spectrum-css/bundle@npm:2.0.0-next.9, @spectrum-css/bundle@workspace:tools/bundle":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/bundle@workspace:tools/bundle"
   dependencies:
@@ -4322,37 +4322,37 @@ __metadata:
     "@spectrum-css/actionbutton": "npm:8.0.0-next.3"
     "@spectrum-css/actiongroup": "npm:7.0.0-next.1"
     "@spectrum-css/actionmenu": "npm:8.0.0-next.1"
-    "@spectrum-css/alertbanner": "npm:4.0.0-next.2"
+    "@spectrum-css/alertbanner": "npm:4.0.0-next.3"
     "@spectrum-css/alertdialog": "npm:5.0.0-next.4"
     "@spectrum-css/asset": "npm:8.0.0-next.0"
-    "@spectrum-css/assetcard": "npm:6.0.0-next.1"
+    "@spectrum-css/assetcard": "npm:6.0.0-next.2"
     "@spectrum-css/assetlist": "npm:9.0.0-next.2"
     "@spectrum-css/avatar": "npm:10.0.0-next.0"
     "@spectrum-css/badge": "npm:7.0.0-next.2"
-    "@spectrum-css/breadcrumb": "npm:12.0.0-next.2"
+    "@spectrum-css/breadcrumb": "npm:12.0.0-next.3"
     "@spectrum-css/button": "npm:15.0.0-next.2"
     "@spectrum-css/buttongroup": "npm:10.0.0-next.1"
-    "@spectrum-css/calendar": "npm:8.0.0-next.2"
-    "@spectrum-css/card": "npm:12.0.0-next.2"
+    "@spectrum-css/calendar": "npm:8.0.0-next.3"
+    "@spectrum-css/card": "npm:12.0.0-next.3"
     "@spectrum-css/checkbox": "npm:11.0.0-next.2"
     "@spectrum-css/clearbutton": "npm:8.0.0-next.2"
     "@spectrum-css/closebutton": "npm:7.0.0-next.1"
-    "@spectrum-css/coachindicator": "npm:5.0.0-next.0"
+    "@spectrum-css/coachindicator": "npm:5.0.0-next.1"
     "@spectrum-css/coachmark": "npm:10.0.0-next.1"
     "@spectrum-css/colorarea": "npm:8.0.0-next.2"
-    "@spectrum-css/colorhandle": "npm:11.0.0-next.1"
+    "@spectrum-css/colorhandle": "npm:11.0.0-next.2"
     "@spectrum-css/colorloupe": "npm:8.0.0-next.1"
-    "@spectrum-css/colorslider": "npm:9.0.0-next.2"
-    "@spectrum-css/colorwheel": "npm:7.0.0-next.3"
-    "@spectrum-css/combobox": "npm:5.0.0-next.3"
+    "@spectrum-css/colorslider": "npm:9.0.0-next.3"
+    "@spectrum-css/colorwheel": "npm:7.0.0-next.4"
+    "@spectrum-css/combobox": "npm:5.0.0-next.4"
     "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/contextualhelp": "npm:6.0.0-next.3"
-    "@spectrum-css/datepicker": "npm:5.0.0-next.1"
-    "@spectrum-css/dial": "npm:6.0.0-next.0"
+    "@spectrum-css/datepicker": "npm:5.0.0-next.2"
+    "@spectrum-css/dial": "npm:6.0.0-next.1"
     "@spectrum-css/dialog": "npm:13.0.0-next.4"
     "@spectrum-css/divider": "npm:6.0.0-next.1"
     "@spectrum-css/dropindicator": "npm:8.0.0-next.1"
-    "@spectrum-css/dropzone": "npm:9.0.0-next.3"
+    "@spectrum-css/dropzone": "npm:9.0.0-next.4"
     "@spectrum-css/fieldgroup": "npm:8.0.0-next.1"
     "@spectrum-css/fieldlabel": "npm:11.0.0-next.2"
     "@spectrum-css/floatingactionbutton": "npm:5.0.0-next.1"
@@ -4361,7 +4361,7 @@ __metadata:
     "@spectrum-css/icon": "npm:10.0.0-next.3"
     "@spectrum-css/illustratedmessage": "npm:10.0.0-next.0"
     "@spectrum-css/infieldbutton": "npm:7.0.0-next.2"
-    "@spectrum-css/inlinealert": "npm:11.0.0-next.2"
+    "@spectrum-css/inlinealert": "npm:11.0.0-next.3"
     "@spectrum-css/link": "npm:8.0.0-next.2"
     "@spectrum-css/logicbutton": "npm:7.0.0-next.1"
     "@spectrum-css/menu": "npm:10.0.0-next.5"
@@ -4369,7 +4369,7 @@ __metadata:
     "@spectrum-css/miller": "npm:9.0.0-next.1"
     "@spectrum-css/modal": "npm:8.0.0-next.1"
     "@spectrum-css/opacitycheckerboard": "npm:5.0.0-next.0"
-    "@spectrum-css/page": "npm:10.0.0-next.0"
+    "@spectrum-css/page": "npm:10.0.0-next.1"
     "@spectrum-css/pagination": "npm:11.0.0-next.2"
     "@spectrum-css/picker": "npm:10.0.0-next.3"
     "@spectrum-css/pickerbutton": "npm:7.0.0-next.1"
@@ -4379,12 +4379,12 @@ __metadata:
     "@spectrum-css/radio": "npm:11.0.0-next.3"
     "@spectrum-css/rating": "npm:7.0.0-next.2"
     "@spectrum-css/search": "npm:9.0.0-next.2"
-    "@spectrum-css/sidenav": "npm:8.0.0-next.2"
+    "@spectrum-css/sidenav": "npm:8.0.0-next.3"
     "@spectrum-css/slider": "npm:7.0.0-next.4"
     "@spectrum-css/splitview": "npm:8.0.0-next.0"
     "@spectrum-css/statuslight": "npm:10.0.0-next.2"
     "@spectrum-css/steplist": "npm:8.0.0-next.2"
-    "@spectrum-css/stepper": "npm:8.0.0-next.2"
+    "@spectrum-css/stepper": "npm:8.0.0-next.3"
     "@spectrum-css/swatch": "npm:9.0.0-next.1"
     "@spectrum-css/swatchgroup": "npm:6.0.0-next.1"
     "@spectrum-css/switch": "npm:7.0.0-next.2"
@@ -4393,15 +4393,15 @@ __metadata:
     "@spectrum-css/tag": "npm:11.0.0-next.2"
     "@spectrum-css/taggroup": "npm:8.0.0-next.2"
     "@spectrum-css/textfield": "npm:9.0.0-next.1"
-    "@spectrum-css/thumbnail": "npm:9.0.0-next.0"
+    "@spectrum-css/thumbnail": "npm:9.0.0-next.1"
     "@spectrum-css/toast": "npm:12.0.0-next.2"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
     "@spectrum-css/tooltip": "npm:8.0.0-next.4"
     "@spectrum-css/tray": "npm:6.0.0-next.3"
-    "@spectrum-css/treeview": "npm:13.0.0-next.2"
+    "@spectrum-css/treeview": "npm:13.0.0-next.3"
     "@spectrum-css/typography": "npm:9.0.0-next.0"
-    "@spectrum-css/underlay": "npm:7.0.0-next.0"
-    "@spectrum-css/well": "npm:8.0.0-next.0"
+    "@spectrum-css/underlay": "npm:7.0.0-next.1"
+    "@spectrum-css/well": "npm:8.0.0-next.1"
     colors: "npm:^1.4.0"
     postcss: "npm:^8.5.6"
     postcss-licensing: "npm:^3.0.0"
@@ -4447,7 +4447,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/calendar@npm:8.0.0-next.2, @spectrum-css/calendar@workspace:components/calendar":
+"@spectrum-css/calendar@npm:8.0.0-next.3, @spectrum-css/calendar@workspace:components/calendar":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/calendar@workspace:components/calendar"
   dependencies:
@@ -4464,7 +4464,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/card@npm:12.0.0-next.2, @spectrum-css/card@workspace:components/card":
+"@spectrum-css/card@npm:12.0.0-next.3, @spectrum-css/card@workspace:components/card":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/card@workspace:components/card"
   dependencies:
@@ -4552,7 +4552,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/coachindicator@npm:5.0.0-next.0, @spectrum-css/coachindicator@workspace:components/coachindicator":
+"@spectrum-css/coachindicator@npm:5.0.0-next.1, @spectrum-css/coachindicator@workspace:components/coachindicator":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/coachindicator@workspace:components/coachindicator"
   dependencies:
@@ -4606,7 +4606,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorarea@workspace:components/colorarea"
   dependencies:
-    "@spectrum-css/colorhandle": "npm:11.0.0-next.1"
+    "@spectrum-css/colorhandle": "npm:11.0.0-next.2"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
   peerDependencies:
     "@spectrum-css/colorhandle": ">=11.0.0-next.0"
@@ -4619,7 +4619,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/colorhandle@npm:11.0.0-next.1, @spectrum-css/colorhandle@workspace:components/colorhandle":
+"@spectrum-css/colorhandle@npm:11.0.0-next.2, @spectrum-css/colorhandle@workspace:components/colorhandle":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorhandle@workspace:components/colorhandle"
   dependencies:
@@ -4653,11 +4653,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/colorslider@npm:9.0.0-next.2, @spectrum-css/colorslider@workspace:components/colorslider":
+"@spectrum-css/colorslider@npm:9.0.0-next.3, @spectrum-css/colorslider@workspace:components/colorslider":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorslider@workspace:components/colorslider"
   dependencies:
-    "@spectrum-css/colorhandle": "npm:11.0.0-next.1"
+    "@spectrum-css/colorhandle": "npm:11.0.0-next.2"
     "@spectrum-css/opacitycheckerboard": "npm:5.0.0-next.0"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
   peerDependencies:
@@ -4674,12 +4674,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/colorwheel@npm:7.0.0-next.3, @spectrum-css/colorwheel@workspace:components/colorwheel":
+"@spectrum-css/colorwheel@npm:7.0.0-next.4, @spectrum-css/colorwheel@workspace:components/colorwheel":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/colorwheel@workspace:components/colorwheel"
   dependencies:
     "@spectrum-css/colorarea": "npm:8.0.0-next.2"
-    "@spectrum-css/colorhandle": "npm:11.0.0-next.1"
+    "@spectrum-css/colorhandle": "npm:11.0.0-next.2"
     "@spectrum-css/colorloupe": "npm:8.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
   peerDependencies:
@@ -4699,7 +4699,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/combobox@npm:5.0.0-next.3, @spectrum-css/combobox@workspace:components/combobox":
+"@spectrum-css/combobox@npm:5.0.0-next.4, @spectrum-css/combobox@workspace:components/combobox":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/combobox@workspace:components/combobox"
   dependencies:
@@ -4767,11 +4767,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/datepicker@npm:5.0.0-next.1, @spectrum-css/datepicker@workspace:components/datepicker":
+"@spectrum-css/datepicker@npm:5.0.0-next.2, @spectrum-css/datepicker@workspace:components/datepicker":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/datepicker@workspace:components/datepicker"
   dependencies:
-    "@spectrum-css/calendar": "npm:8.0.0-next.2"
+    "@spectrum-css/calendar": "npm:8.0.0-next.3"
     "@spectrum-css/pickerbutton": "npm:7.0.0-next.1"
     "@spectrum-css/popover": "npm:9.0.0-next.4"
     "@spectrum-css/textfield": "npm:9.0.0-next.1"
@@ -4796,7 +4796,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/dial@npm:6.0.0-next.0, @spectrum-css/dial@workspace:components/dial":
+"@spectrum-css/dial@npm:6.0.0-next.1, @spectrum-css/dial@workspace:components/dial":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dial@workspace:components/dial"
   dependencies:
@@ -4820,7 +4820,7 @@ __metadata:
     "@spectrum-css/modal": "npm:8.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
     "@spectrum-css/typography": "npm:9.0.0-next.0"
-    "@spectrum-css/underlay": "npm:7.0.0-next.0"
+    "@spectrum-css/underlay": "npm:7.0.0-next.1"
   peerDependencies:
     "@spectrum-css/button": ">=15.0.0-next.0"
     "@spectrum-css/buttongroup": ">=10.0.0-next.0"
@@ -4877,7 +4877,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/dropzone@npm:9.0.0-next.3, @spectrum-css/dropzone@workspace:components/dropzone":
+"@spectrum-css/dropzone@npm:9.0.0-next.4, @spectrum-css/dropzone@workspace:components/dropzone":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dropzone@workspace:components/dropzone"
   dependencies:
@@ -5058,7 +5058,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/inlinealert@npm:11.0.0-next.2, @spectrum-css/inlinealert@workspace:components/inlinealert":
+"@spectrum-css/inlinealert@npm:11.0.0-next.3, @spectrum-css/inlinealert@workspace:components/inlinealert":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/inlinealert@workspace:components/inlinealert"
   dependencies:
@@ -5207,7 +5207,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/page@npm:10.0.0-next.0, @spectrum-css/page@workspace:components/page":
+"@spectrum-css/page@npm:10.0.0-next.1, @spectrum-css/page@workspace:components/page":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/page@workspace:components/page"
   dependencies:
@@ -5346,7 +5346,7 @@ __metadata:
     "@babel/core": "npm:^7.28.0"
     "@chromatic-com/storybook": "npm:^3.2.7"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
-    "@spectrum-css/bundle": "npm:2.0.0-next.8"
+    "@spectrum-css/bundle": "npm:2.0.0-next.9"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
     "@spectrum-css/ui-icons": "npm:2.0.0-next.2"
     "@storybook/addon-a11y": "npm:8.4.7"
@@ -5469,7 +5469,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/sidenav@npm:8.0.0-next.2, @spectrum-css/sidenav@workspace:components/sidenav":
+"@spectrum-css/sidenav@npm:8.0.0-next.3, @spectrum-css/sidenav@workspace:components/sidenav":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/sidenav@workspace:components/sidenav"
   dependencies:
@@ -5490,7 +5490,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/slider@workspace:components/slider"
   dependencies:
-    "@spectrum-css/stepper": "npm:8.0.0-next.2"
+    "@spectrum-css/stepper": "npm:8.0.0-next.3"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
   peerDependencies:
     "@spectrum-css/stepper": ">=8.0.0-next.0"
@@ -5550,7 +5550,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/stepper@npm:8.0.0-next.2, @spectrum-css/stepper@workspace:components/stepper":
+"@spectrum-css/stepper@npm:8.0.0-next.3, @spectrum-css/stepper@workspace:components/stepper":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/stepper@workspace:components/stepper"
   dependencies:
@@ -5633,7 +5633,7 @@ __metadata:
     "@spectrum-css/button": "npm:15.0.0-next.2"
     "@spectrum-css/checkbox": "npm:11.0.0-next.2"
     "@spectrum-css/icon": "npm:10.0.0-next.3"
-    "@spectrum-css/thumbnail": "npm:9.0.0-next.0"
+    "@spectrum-css/thumbnail": "npm:9.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
   peerDependencies:
     "@spectrum-css/button": ">=15.0.0-next.0"
@@ -5739,7 +5739,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/thumbnail@npm:9.0.0-next.0, @spectrum-css/thumbnail@workspace:components/thumbnail":
+"@spectrum-css/thumbnail@npm:9.0.0-next.1, @spectrum-css/thumbnail@workspace:components/thumbnail":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/thumbnail@workspace:components/thumbnail"
   dependencies:
@@ -5848,12 +5848,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/treeview@npm:13.0.0-next.2, @spectrum-css/treeview@workspace:components/treeview":
+"@spectrum-css/treeview@npm:13.0.0-next.3, @spectrum-css/treeview@workspace:components/treeview":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/treeview@workspace:components/treeview"
   dependencies:
     "@spectrum-css/icon": "npm:10.0.0-next.3"
-    "@spectrum-css/thumbnail": "npm:9.0.0-next.0"
+    "@spectrum-css/thumbnail": "npm:9.0.0-next.1"
     "@spectrum-css/tokens": "npm:16.1.0-next.7"
   peerDependencies:
     "@spectrum-css/icon": ">=10.0.0-next.0"
@@ -5892,7 +5892,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/underlay@npm:7.0.0-next.0, @spectrum-css/underlay@workspace:components/underlay":
+"@spectrum-css/underlay@npm:7.0.0-next.1, @spectrum-css/underlay@workspace:components/underlay":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/underlay@workspace:components/underlay"
   dependencies:
@@ -5906,7 +5906,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/well@npm:8.0.0-next.0, @spectrum-css/well@workspace:components/well":
+"@spectrum-css/well@npm:8.0.0-next.1, @spectrum-css/well@workspace:components/well":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/well@workspace:components/well"
   dependencies:
