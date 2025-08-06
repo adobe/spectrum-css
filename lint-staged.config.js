@@ -4,16 +4,16 @@ module.exports = {
 		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
 	],
 	"*.{js,json},!package.json": [
-		"eslint --fix --cache --no-error-on-unmatched-pattern"
+		"eslint --fix --cache --no-error-on-unmatched-pattern --config .eslintrc"
 	],
-	"*.{md,mdx}": [
+	"*.md": [
 		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
 		"markdownlint --config .markdownlint.json --fix"
 	],
 	"package.json": (files) => ([
 		"yarn constraints --fix",
 		"yarn install --refresh-lockfile",
-		`eslint --fix --cache --no-error-on-unmatched-pattern ${files.join(" ")}`,
+		`eslint --fix --cache --no-error-on-unmatched-pattern --config .eslintrc ${files.join(" ")}`,
 		"git add yarn.lock"
 	]),
 	"dist/*.css": [

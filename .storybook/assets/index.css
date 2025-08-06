@@ -1,5 +1,3 @@
-/* stylelint-disable selector-class-pattern -- Targeting pre-defined Storybook classes */
-
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -125,5 +123,3 @@ div.sb-bar {
 	color: var(--spectrum-neutral-content-color-default) !important;
 	background-color: var(--spectrum-background-layer-2-color) !important;
 }
-
-/* stylelint-enable selector-class-pattern */

@@ -2,10 +2,12 @@ import { default as CalendarStories } from "@spectrum-css/calendar/stories/calen
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isInvalid, isOpen, isQuiet, isReadOnly, isRequired, isValid } from "@spectrum-css/preview/types";
 import { within } from "@storybook/test";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { DatePickerGroup } from "./datepicker.test.js";
 import { OpenClosedTemplate, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A date picker displays a text field input with a button next to it, and can display two text fields next to each other for choosing a date range.
@@ -77,6 +79,10 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);

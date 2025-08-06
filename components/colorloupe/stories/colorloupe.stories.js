@@ -1,8 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isOpen } from "@spectrum-css/preview/types";
+import { ColorLoupeGroup } from "./colorloupe.test.js";
+
+// Local assets to render the component styles and structure
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { ColorLoupeGroup } from "./colorloupe.test.js";
 
 /**
  * The color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.
@@ -47,6 +49,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

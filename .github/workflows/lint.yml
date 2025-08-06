@@ -116,10 +116,11 @@ jobs:
                   reporter: github-pr-review
                   filter_mode: diff_context
                 #   eslint_flags: "components/*/stories/*.js"
-                  eslint_flags: "${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"
+                  eslint_flags: "--config ${{ github.workspace }}/.eslintrc ${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"
 
             - name: Run markdownlint on documentation
               uses: reviewdog/action-markdownlint@v0.26.2
+              if: ${{ inputs.mdlint_added_files != '' || inputs.mdlint_modified_files != '' }}
               with:
                 reporter: github-pr-review
                 filter_mode: diff_context

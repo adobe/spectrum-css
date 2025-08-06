@@ -40,11 +40,6 @@
     ".spectrum-Switch-switch .spectrum-Switch--active",
     ".spectrum-Switch-switch:after",
     ".spectrum-Switch-switch:before",
-    ".spectrum-Switch.spectrum-Switch--emphasized",
-    ".spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch",
-    ".spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch:before",
-    ".spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch",
-    ".spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch:before",
     ".spectrum-Switch:active .spectrum-Switch-input:not(:disabled) + .spectrum-Switch-switch:before",
     ".spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before",
     ".spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl)",
@@ -63,202 +58,1065 @@
     ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before",
     ".spectrum-Switch:hover .spectrum-Switch-switch",
     ".spectrum-Switch:hover .spectrum-Switch-switch:before",
-    ".spectrum-Switch:hover ~ .spectrum-Switch-label"
+    ".spectrum-Switch:hover ~ .spectrum-Switch-label",
+    ".spectrum-Switch.spectrum-Switch--emphasized",
+    ".spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch",
+    ".spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch:before",
+    ".spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch",
+    ".spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch:before"
   ],
-  "modifiers": [
-    "--mod-switch-animation-duration-switch",
-    "--mod-switch-background-color",
-    "--mod-switch-background-color-disabled",
-    "--mod-switch-background-color-selected-default",
-    "--mod-switch-background-color-selected-disabled",
-    "--mod-switch-background-color-selected-down",
-    "--mod-switch-background-color-selected-focus",
-    "--mod-switch-background-color-selected-hover",
-    "--mod-switch-border-color-default",
-    "--mod-switch-border-color-disabled",
-    "--mod-switch-border-color-down",
-    "--mod-switch-border-color-focus",
-    "--mod-switch-border-color-hover",
-    "--mod-switch-border-color-selected-default",
-    "--mod-switch-border-color-selected-down",
-    "--mod-switch-border-color-selected-focus",
-    "--mod-switch-border-color-selected-hover",
-    "--mod-switch-border-radius",
-    "--mod-switch-border-width",
-    "--mod-switch-cjk-line-height",
-    "--mod-switch-control-height",
-    "--mod-switch-control-label-spacing",
-    "--mod-switch-control-width",
-    "--mod-switch-focus-indicator-color",
-    "--mod-switch-focus-indicator-gap",
-    "--mod-switch-focus-indicator-thickness",
-    "--mod-switch-font-size",
-    "--mod-switch-handle-background-color-default",
-    "--mod-switch-handle-background-color-disabled",
-    "--mod-switch-handle-background-color-down",
-    "--mod-switch-handle-background-color-focus",
-    "--mod-switch-handle-background-color-hover",
-    "--mod-switch-handle-background-color-selected",
-    "--mod-switch-handle-background-color-selected-disabled",
-    "--mod-switch-handle-selected-size",
-    "--mod-switch-handle-size",
-    "--mod-switch-height",
-    "--mod-switch-label-color-default",
-    "--mod-switch-label-color-disabled",
-    "--mod-switch-label-color-down",
-    "--mod-switch-label-color-focus",
-    "--mod-switch-label-color-hover",
-    "--mod-switch-line-height",
-    "--mod-switch-spacing-bottom-to-label",
-    "--mod-switch-spacing-top-to-control",
-    "--mod-switch-spacing-top-to-label"
-  ],
-  "component": [
-    "--spectrum-switch-animation-duration-label",
-    "--spectrum-switch-animation-duration-switch",
-    "--spectrum-switch-background-color",
-    "--spectrum-switch-background-color-disabled",
-    "--spectrum-switch-background-color-selected-default",
-    "--spectrum-switch-background-color-selected-disabled",
-    "--spectrum-switch-background-color-selected-down",
-    "--spectrum-switch-background-color-selected-focus",
-    "--spectrum-switch-background-color-selected-hover",
-    "--spectrum-switch-border-color-default",
-    "--spectrum-switch-border-color-disabled",
-    "--spectrum-switch-border-color-down",
-    "--spectrum-switch-border-color-focus",
-    "--spectrum-switch-border-color-hover",
-    "--spectrum-switch-border-color-selected-default",
-    "--spectrum-switch-border-color-selected-down",
-    "--spectrum-switch-border-color-selected-focus",
-    "--spectrum-switch-border-color-selected-hover",
-    "--spectrum-switch-border-radius",
-    "--spectrum-switch-border-width",
-    "--spectrum-switch-cjk-line-height",
-    "--spectrum-switch-control-height",
-    "--spectrum-switch-control-height-extra-large",
-    "--spectrum-switch-control-height-large",
-    "--spectrum-switch-control-height-medium",
-    "--spectrum-switch-control-height-small",
-    "--spectrum-switch-control-label-spacing",
-    "--spectrum-switch-control-width",
-    "--spectrum-switch-control-width-extra-large",
-    "--spectrum-switch-control-width-large",
-    "--spectrum-switch-control-width-medium",
-    "--spectrum-switch-control-width-small",
-    "--spectrum-switch-focus-indicator-color",
-    "--spectrum-switch-focus-indicator-gap",
-    "--spectrum-switch-focus-indicator-thickness",
-    "--spectrum-switch-font-size",
-    "--spectrum-switch-handle-background-color-default",
-    "--spectrum-switch-handle-background-color-disabled",
-    "--spectrum-switch-handle-background-color-down",
-    "--spectrum-switch-handle-background-color-focus",
-    "--spectrum-switch-handle-background-color-hover",
-    "--spectrum-switch-handle-background-color-selected",
-    "--spectrum-switch-handle-background-color-selected-disabled",
-    "--spectrum-switch-handle-selected-size",
-    "--spectrum-switch-handle-selected-size-extra-large",
-    "--spectrum-switch-handle-selected-size-large",
-    "--spectrum-switch-handle-selected-size-medium",
-    "--spectrum-switch-handle-selected-size-small",
-    "--spectrum-switch-handle-size",
-    "--spectrum-switch-handle-size-extra-large",
-    "--spectrum-switch-handle-size-large",
-    "--spectrum-switch-handle-size-medium",
-    "--spectrum-switch-handle-size-small",
-    "--spectrum-switch-label-color-default",
-    "--spectrum-switch-label-color-disabled",
-    "--spectrum-switch-label-color-down",
-    "--spectrum-switch-label-color-focus",
-    "--spectrum-switch-label-color-hover",
-    "--spectrum-switch-line-height",
-    "--spectrum-switch-min-height",
-    "--spectrum-switch-spacing-bottom-to-label",
-    "--spectrum-switch-spacing-top-to-control",
-    "--spectrum-switch-spacing-top-to-label",
-    "--spectrum-switch-top-to-control-extra-large",
-    "--spectrum-switch-top-to-control-large",
-    "--spectrum-switch-top-to-control-medium",
-    "--spectrum-switch-top-to-control-small"
-  ],
-  "global": [
-    "--spectrum-accent-background-color-default",
-    "--spectrum-accent-background-color-down",
-    "--spectrum-accent-background-color-hover",
-    "--spectrum-accent-background-color-key-focus",
-    "--spectrum-animation-duration-100",
-    "--spectrum-animation-duration-200",
-    "--spectrum-border-width-200",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-300",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-size-difference-down",
-    "--spectrum-component-size-minimum-perspective-down",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-corner-radius-full",
-    "--spectrum-disabled-content-color",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-25",
-    "--spectrum-line-height-100",
-    "--spectrum-neutral-background-color-default",
-    "--spectrum-neutral-background-color-down",
-    "--spectrum-neutral-background-color-hover",
-    "--spectrum-neutral-background-color-key-focus",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-text-to-control-100",
-    "--spectrum-text-to-control-200",
-    "--spectrum-text-to-control-300",
-    "--spectrum-text-to-control-75"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-switch-background-color",
-    "--highcontrast-switch-background-color-disabled",
-    "--highcontrast-switch-background-color-selected-default",
-    "--highcontrast-switch-background-color-selected-disabled",
-    "--highcontrast-switch-background-color-selected-down",
-    "--highcontrast-switch-background-color-selected-focus",
-    "--highcontrast-switch-background-color-selected-hover",
-    "--highcontrast-switch-border-color-default",
-    "--highcontrast-switch-border-color-disabled",
-    "--highcontrast-switch-border-color-down",
-    "--highcontrast-switch-border-color-focus",
-    "--highcontrast-switch-border-color-hover",
-    "--highcontrast-switch-border-color-selected-default",
-    "--highcontrast-switch-border-color-selected-down",
-    "--highcontrast-switch-border-color-selected-focus",
-    "--highcontrast-switch-border-color-selected-hover",
-    "--highcontrast-switch-focus-indicator-color",
-    "--highcontrast-switch-handle-background-color-default",
-    "--highcontrast-switch-handle-background-color-disabled",
-    "--highcontrast-switch-handle-background-color-down",
-    "--highcontrast-switch-handle-background-color-focus",
-    "--highcontrast-switch-handle-background-color-hover",
-    "--highcontrast-switch-handle-background-color-selected",
-    "--highcontrast-switch-handle-background-color-selected-disabled",
-    "--highcontrast-switch-label-color-default",
-    "--highcontrast-switch-label-color-disabled",
-    "--highcontrast-switch-label-color-down",
-    "--highcontrast-switch-label-color-focus",
-    "--highcontrast-switch-label-color-hover"
-  ]
+  "modifiers": {
+    "mod-switch-height": {
+      "description": "Used by `.spectrum-Switch`, `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-min-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-label-color-default": {
+      "description": "Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-label-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-control-label-spacing": {
+      "description": "Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-control-label-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-spacing-top-to-label": {
+      "description": "Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-spacing-top-to-label)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-spacing-bottom-to-label": {
+      "description": "Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-spacing-bottom-to-label)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-font-size": {
+      "description": "Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-line-height": {
+      "description": "Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-cjk-line-height": {
+      "description": "Used by `.spectrum-Switch-label:lang(ja), .spectrum-Switch-label:lang(ko), .spectrum-Switch-label:lang(zh)`. <br/>Defaults to `var(--spectrum-switch-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-label-color-down": {
+      "description": "Used by `.spectrum-Switch:active ~ .spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-label-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-label-color-focus": {
+      "description": "Used by `.spectrum-Switch-input:focus-visible ~ .spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-label-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-control-width": {
+      "description": "Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-control-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-control-height": {
+      "description": "Used by `.spectrum-Switch-switch`, `.spectrum-Switch-switch:before`, `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-control-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-spacing-top-to-control": {
+      "description": "Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-spacing-top-to-control)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-animation-duration-switch": {
+      "description": "Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-animation-duration-switch)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-background-color": {
+      "description": "Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-radius": {
+      "description": "Used by `.spectrum-Switch-switch`, `.spectrum-Switch-switch:before`, `.spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-switch-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-border-width": {
+      "description": "Used by `.spectrum-Switch-switch`, `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before:dir(rtl)`, `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before, .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before`, `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl), .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl)`. <br/>Defaults to `var(--spectrum-switch-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-default": {
+      "description": "Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-down": {
+      "description": "Used by `.spectrum-Switch-switch .spectrum-Switch--active, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-focus": {
+      "description": "Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-background-color-selected-default": {
+      "description": "Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-background-color-selected-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-selected-default": {
+      "description": "Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-selected-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-background-color-selected-down": {
+      "description": "Used by `.spectrum-Switch--active .spectrum-Switch-input:checked + .spectrum-Switch-switch, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-background-color-selected-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-selected-down": {
+      "description": "Used by `.spectrum-Switch--active .spectrum-Switch-input:checked + .spectrum-Switch-switch, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-selected-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-background-color-selected-focus": {
+      "description": "Used by `.spectrum-Switch-input:checked:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-background-color-selected-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-selected-focus": {
+      "description": "Used by `.spectrum-Switch-input:checked:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-selected-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-size": {
+      "description": "Used by `.spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-background-color-default": {
+      "description": "Used by `.spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-background-color-down": {
+      "description": "Used by `.spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-background-color-focus": {
+      "description": "Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-background-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-background-color-selected": {
+      "description": "Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch--active .spectrum-Switch-input:checked + .spectrum-Switch-switch:before, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-background-color-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-selected-size": {
+      "description": "Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-selected-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-switch-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-focus-indicator-color": {
+      "description": "Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-switch-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-focus-indicator-gap": {
+      "description": "Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-switch-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-switch-background-color-disabled": {
+      "description": "Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-background-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-disabled": {
+      "description": "Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-background-color-disabled": {
+      "description": "Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch:before, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch:before, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-background-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-background-color-selected-disabled": {
+      "description": "Used by `.spectrum-Switch .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-background-color-selected-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-background-color-selected-disabled": {
+      "description": "Used by `.spectrum-Switch .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch:before, .spectrum-Switch .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch:before, .spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-background-color-selected-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-label-color-disabled": {
+      "description": "Used by `.spectrum-Switch .spectrum-Switch-input:disabled ~ .spectrum-Switch-label, .spectrum-Switch .spectrum-Switch-input[disabled] ~ .spectrum-Switch-label`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled ~ .spectrum-Switch-label, .spectrum-Switch:hover .spectrum-Switch-input[disabled] ~ .spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-label-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-label-color-hover": {
+      "description": "Used by `.spectrum-Switch:hover ~ .spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-switch-label-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-hover": {
+      "description": "Used by `.spectrum-Switch:hover .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-background-color-selected-hover": {
+      "description": "Used by `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-background-color-selected-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-border-color-selected-hover": {
+      "description": "Used by `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-border-color-selected-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-switch-handle-background-color-hover": {
+      "description": "Used by `.spectrum-Switch:hover .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-switch-label-color-default": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--disabled`. <br/>Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-label-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:hover ~ .spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-label-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:active ~ .spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-label-color-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible ~ .spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-label-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled ~ .spectrum-Switch-label, .spectrum-Switch .spectrum-Switch-input[disabled] ~ .spectrum-Switch-label`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled ~ .spectrum-Switch-label, .spectrum-Switch:hover .spectrum-Switch-input[disabled] ~ .spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-width": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch`, `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before:dir(rtl)`, `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before, .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before`, `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl), .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl)`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:hover .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch .spectrum-Switch--active, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-selected-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch.spectrum-Switch--emphasized`. <br/>Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-accent-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-selected-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch.spectrum-Switch--emphasized`. <br/>Used by `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-accent-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-selected-down": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch.spectrum-Switch--emphasized`. <br/>Used by `.spectrum-Switch--active .spectrum-Switch-input:checked + .spectrum-Switch-switch, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-accent-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-border-color-selected-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch.spectrum-Switch--emphasized`. <br/>Used by `.spectrum-Switch-input:checked:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-accent-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-background-color": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-background-color-disabled": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-background-color-selected-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch.spectrum-Switch--emphasized`. <br/>Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-accent-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-background-color-selected-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch.spectrum-Switch--emphasized`. <br/>Used by `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-accent-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-background-color-selected-down": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch.spectrum-Switch--emphasized`. <br/>Used by `.spectrum-Switch--active .spectrum-Switch-input:checked + .spectrum-Switch-switch, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-accent-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-background-color-selected-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch.spectrum-Switch--emphasized`. <br/>Used by `.spectrum-Switch-input:checked:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-accent-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-background-color-selected-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-background-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-background-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:hover .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-background-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-background-color-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-background-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch:before, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch:before, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-background-color-selected": {
+      "value": "var(--mod-switch-handle-background-color-selected, var(--spectrum-switch-handle-background-color-selected))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch--active .spectrum-Switch-input:checked + .spectrum-Switch-switch:before, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--mod-switch-handle-background-color-selected, var(--spectrum-switch-handle-background-color-selected))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-background-color-selected-disabled": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch:before, .spectrum-Switch .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch:before, .spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-size": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-size-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-size-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-switch-handle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-selected-size": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-handle-selected-size-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-selected-size-medium": {
+      "value": "10px",
+      "description": "Used by `--spectrum-switch-handle-selected-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-animation-duration-switch": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch`, `.spectrum-Switch-switch:before`, `.spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-animation-duration-label": {
+      "value": "var(--spectrum-animation-duration-200)",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-animation-duration-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-min-height": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch`, `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-width": {
+      "value": "34px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-control-width-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-width-medium": {
+      "value": "26px",
+      "description": "Used by `--spectrum-switch-control-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-height": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-switch`, `.spectrum-Switch-switch:before`, `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--spectrum-switch-control-height-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-height-medium": {
+      "value": "16px",
+      "description": "Used by `--spectrum-switch-control-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-label-spacing": {
+      "value": "13px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-text-to-control-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-spacing-top-to-control": {
+      "value": "15px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--spectrum-switch-top-to-control-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-top-to-control-medium": {
+      "value": "9px",
+      "description": "Used by `--spectrum-switch-spacing-top-to-control`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-spacing-top-to-label": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-component-top-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-spacing-bottom-to-label": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-component-bottom-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-font-size": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-Switch`, `.spectrum-Switch--sizeS`, `.spectrum-Switch--sizeL`, `.spectrum-Switch--sizeXL`. <br/>Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-font-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-cjk-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-label:lang(ja), .spectrum-Switch-label:lang(ko), .spectrum-Switch-label:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-border-radius": {
+      "value": "9999px",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch`, `.spectrum-Switch-switch:before`, `.spectrum-Switch-switch:after`. <br/>Defaults to `var(--spectrum-corner-radius-full)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-width-small": {
+      "value": "22px",
+      "description": "Used by `--spectrum-switch-control-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-height-small": {
+      "value": "14px",
+      "description": "Used by `--spectrum-switch-control-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-top-to-control-small": {
+      "value": "6px",
+      "description": "Used by `--spectrum-switch-spacing-top-to-control`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-size-small": {
+      "value": "6px",
+      "description": "Used by `--spectrum-switch-handle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-selected-size-small": {
+      "value": "8px",
+      "description": "Used by `--spectrum-switch-handle-selected-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-width-large": {
+      "value": "30px",
+      "description": "Used by `--spectrum-switch-control-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-height-large": {
+      "value": "18px",
+      "description": "Used by `--spectrum-switch-control-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-top-to-control-large": {
+      "value": "12px",
+      "description": "Used by `--spectrum-switch-spacing-top-to-control`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-size-large": {
+      "value": "10px",
+      "description": "Used by `--spectrum-switch-handle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-selected-size-large": {
+      "value": "12px",
+      "description": "Used by `--spectrum-switch-handle-selected-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-width-extra-large": {
+      "value": "34px",
+      "description": "Used by `--spectrum-switch-control-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-control-height-extra-large": {
+      "value": "20px",
+      "description": "Used by `--spectrum-switch-control-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-top-to-control-extra-large": {
+      "value": "15px",
+      "description": "Used by `--spectrum-switch-spacing-top-to-control`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-size-extra-large": {
+      "value": "12px",
+      "description": "Used by `--spectrum-switch-handle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-switch-handle-selected-size-extra-large": {
+      "value": "14px",
+      "description": "Used by `--spectrum-switch-handle-selected-size`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-switch-label-color-default`, `--spectrum-switch-border-color-default`, `--spectrum-switch-border-color-selected-default`, `--spectrum-switch-handle-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-switch-label-color-hover`, `--spectrum-switch-border-color-hover`, `--spectrum-switch-border-color-selected-hover`, `--spectrum-switch-handle-background-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-switch-label-color-down`, `--spectrum-switch-border-color-down`, `--spectrum-switch-border-color-selected-down`, `--spectrum-switch-handle-background-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-switch-label-color-focus`, `--spectrum-switch-border-color-focus`, `--spectrum-switch-border-color-selected-focus`, `--spectrum-switch-handle-background-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-switch-label-color-disabled`, `--spectrum-switch-border-color-disabled`, `--spectrum-switch-background-color-selected-disabled`, `--spectrum-switch-handle-background-color-disabled`, `--spectrum-switch-label-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-switch-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--spectrum-switch-background-color`, `--spectrum-switch-background-color-disabled`, `--spectrum-switch-handle-background-color-selected`, `--spectrum-switch-handle-background-color-selected-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-switch-background-color-selected-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-switch-background-color-selected-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-switch-background-color-selected-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-switch-background-color-selected-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-switch-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-switch-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-switch-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-switch-animation-duration-switch`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-200": {
+      "description": "Used by `--spectrum-switch-animation-duration-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-switch-min-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-control-100": {
+      "value": "10px",
+      "description": "Used by `--spectrum-switch-control-label-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-switch-spacing-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
+      "description": "Used by `--spectrum-switch-spacing-bottom-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-switch-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-switch-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-switch-cjk-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-full": {
+      "value": "9999px",
+      "description": "Used by `--spectrum-switch-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Used by `--spectrum-switch-background-color-selected-default`, `--spectrum-switch-border-color-selected-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-switch-background-color-selected-hover`, `--spectrum-switch-border-color-selected-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-down": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-switch-background-color-selected-down`, `--spectrum-switch-border-color-selected-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-key-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-switch-background-color-selected-focus`, `--spectrum-switch-border-color-selected-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-switch-min-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-control-75": {
+      "value": "9px",
+      "description": "Used by `--spectrum-switch-control-label-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-switch-spacing-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-switch-spacing-bottom-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-switch-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-switch-min-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-control-200": {
+      "value": "11px",
+      "description": "Used by `--spectrum-switch-control-label-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-switch-spacing-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
+      "description": "Used by `--spectrum-switch-spacing-bottom-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-switch-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-switch-min-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-control-300": {
+      "value": "13px",
+      "description": "Used by `--spectrum-switch-control-label-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "value": "12px",
+      "description": "Used by `--spectrum-switch-spacing-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-switch-spacing-bottom-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-switch-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-minimum-perspective-down": {
+      "value": "24px",
+      "description": "Used by `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled) + .spectrum-Switch-switch:before, .spectrum-Switch:active .spectrum-Switch-input:not(:disabled) + .spectrum-Switch-switch:before`, `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before, .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before`, `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl), .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-difference-down": {
+      "value": "-2px",
+      "description": "Used by `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled) + .spectrum-Switch-switch:before, .spectrum-Switch:active .spectrum-Switch-input:not(:disabled) + .spectrum-Switch-switch:before`, `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before, .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before`, `.spectrum-Switch--active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl), .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + .spectrum-Switch-switch:before:dir(rtl)`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-switch-label-color-default": {
+      "value": "var(--mod-switch-label-color-default, var(--spectrum-switch-label-color-default))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-label`. <br/>Defaults to `var(--mod-switch-label-color-default, var(--spectrum-switch-label-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-label-color-down": {
+      "value": "var(--mod-switch-label-color-down, var(--spectrum-switch-label-color-down))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:active ~ .spectrum-Switch-label`. <br/>Defaults to `var(--mod-switch-label-color-down, var(--spectrum-switch-label-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-label-color-focus": {
+      "value": "var(--mod-switch-label-color-focus, var(--spectrum-switch-label-color-focus))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible ~ .spectrum-Switch-label`. <br/>Defaults to `var(--mod-switch-label-color-focus, var(--spectrum-switch-label-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-background-color": {
+      "value": "var(--mod-switch-background-color, var(--spectrum-switch-background-color))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-background-color, var(--spectrum-switch-background-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-default": {
+      "value": "var(--mod-switch-border-color-default, var(--spectrum-switch-border-color-default))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-default, var(--spectrum-switch-border-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-down": {
+      "value": "var(--mod-switch-border-color-down, var(--spectrum-switch-border-color-down))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch .spectrum-Switch--active, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-down, var(--spectrum-switch-border-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-focus": {
+      "value": "var(--mod-switch-border-color-focus, var(--spectrum-switch-border-color-focus))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-focus, var(--spectrum-switch-border-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-background-color-selected-default": {
+      "value": "var(--mod-switch-background-color-selected-default, var(--spectrum-switch-background-color-selected-default))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-background-color-selected-default, var(--spectrum-switch-background-color-selected-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-selected-default": {
+      "value": "var(--mod-switch-border-color-selected-default, var(--spectrum-switch-border-color-selected-default))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-selected-default, var(--spectrum-switch-border-color-selected-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-background-color-selected-down": {
+      "value": "var(--mod-switch-background-color-selected-down, var(--spectrum-switch-background-color-selected-down))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch--active .spectrum-Switch-input:checked + .spectrum-Switch-switch, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-background-color-selected-down, var(--spectrum-switch-background-color-selected-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-selected-down": {
+      "value": "var(--mod-switch-border-color-selected-down, var(--spectrum-switch-border-color-selected-down))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch--active .spectrum-Switch-input:checked + .spectrum-Switch-switch, .spectrum-Switch.spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-selected-down, var(--spectrum-switch-border-color-selected-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-background-color-selected-focus": {
+      "value": "var(--mod-switch-background-color-selected-focus, var(--spectrum-switch-background-color-selected-focus))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:checked:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-background-color-selected-focus, var(--spectrum-switch-background-color-selected-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-selected-focus": {
+      "value": "var(--mod-switch-border-color-selected-focus, var(--spectrum-switch-border-color-selected-focus))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:checked:focus-visible + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-selected-focus, var(--spectrum-switch-border-color-selected-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-handle-background-color-default": {
+      "value": "var(--mod-switch-handle-background-color-default, var(--spectrum-switch-handle-background-color-default))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-switch:before`. <br/>Defaults to `var(--mod-switch-handle-background-color-default, var(--spectrum-switch-handle-background-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-handle-background-color-down": {
+      "value": "var(--mod-switch-handle-background-color-down, var(--spectrum-switch-handle-background-color-down))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch.spectrum-Switch:active .spectrum-Switch-switch:before`. <br/>Defaults to `var(--mod-switch-handle-background-color-down, var(--spectrum-switch-handle-background-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-handle-background-color-focus": {
+      "value": "var(--mod-switch-handle-background-color-focus, var(--spectrum-switch-handle-background-color-focus))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--mod-switch-handle-background-color-focus, var(--spectrum-switch-handle-background-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-handle-background-color-selected": {
+      "value": "var(--mod-switch-handle-background-color-selected, var(--spectrum-switch-handle-background-color-selected))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--mod-switch-handle-background-color-selected, var(--spectrum-switch-handle-background-color-selected))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-focus-indicator-color": {
+      "value": "var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch-input:focus-visible + .spectrum-Switch-switch:after`. <br/>Defaults to `var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-background-color-disabled": {
+      "value": "var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-disabled": {
+      "value": "var(--mod-switch-border-color-disabled, var(--spectrum-switch-border-color-disabled))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-disabled, var(--spectrum-switch-border-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-handle-background-color-disabled": {
+      "value": "var(--mod-switch-handle-background-color-disabled, var(--spectrum-switch-handle-background-color-disabled))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled + .spectrum-Switch-switch:before, .spectrum-Switch .spectrum-Switch-input[disabled] + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled + .spectrum-Switch-switch:before, .spectrum-Switch:hover .spectrum-Switch-input[disabled] + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--mod-switch-handle-background-color-disabled, var(--spectrum-switch-handle-background-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-background-color-selected-disabled": {
+      "value": "var(--mod-switch-background-color-selected-disabled, var(--spectrum-switch-background-color-selected-disabled))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch, .spectrum-Switch .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch, .spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-background-color-selected-disabled, var(--spectrum-switch-background-color-selected-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-handle-background-color-selected-disabled": {
+      "value": "var(--mod-switch-handle-background-color-selected-disabled, var(--spectrum-switch-handle-background-color-selected-disabled))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch:before, .spectrum-Switch .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled:checked + .spectrum-Switch-switch:before, .spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before`. <br/>Defaults to `var(--mod-switch-handle-background-color-selected-disabled, var(--spectrum-switch-handle-background-color-selected-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-label-color-disabled": {
+      "value": "var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch .spectrum-Switch-input:disabled ~ .spectrum-Switch-label, .spectrum-Switch .spectrum-Switch-input[disabled] ~ .spectrum-Switch-label`, `.spectrum-Switch:hover .spectrum-Switch-input:disabled ~ .spectrum-Switch-label, .spectrum-Switch:hover .spectrum-Switch-input[disabled] ~ .spectrum-Switch-label`. <br/>Defaults to `var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-label-color-hover": {
+      "value": "var(--mod-switch-label-color-hover, var(--spectrum-switch-label-color-hover))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:hover ~ .spectrum-Switch-label`. <br/>Defaults to `var(--mod-switch-label-color-hover, var(--spectrum-switch-label-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-hover": {
+      "value": "var(--mod-switch-border-color-hover, var(--spectrum-switch-border-color-hover))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:hover .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-hover, var(--spectrum-switch-border-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-background-color-selected-hover": {
+      "value": "var(--mod-switch-background-color-selected-hover, var(--spectrum-switch-background-color-selected-hover))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-background-color-selected-hover, var(--spectrum-switch-background-color-selected-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-border-color-selected-hover": {
+      "value": "var(--mod-switch-border-color-selected-hover, var(--spectrum-switch-border-color-selected-hover))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:hover .spectrum-Switch-input:checked + .spectrum-Switch-switch`. <br/>Defaults to `var(--mod-switch-border-color-selected-hover, var(--spectrum-switch-border-color-selected-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-switch-handle-background-color-hover": {
+      "value": "var(--mod-switch-handle-background-color-hover, var(--spectrum-switch-handle-background-color-hover))",
+      "description": "Defined in `.spectrum-Switch`. <br/>Used by `.spectrum-Switch:hover .spectrum-Switch-switch:before`. <br/>Defaults to `var(--mod-switch-handle-background-color-hover, var(--spectrum-switch-handle-background-color-hover))`, if not set.",
+      "control": "color"
+    }
+  }
 }

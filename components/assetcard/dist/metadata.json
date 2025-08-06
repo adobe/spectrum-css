@@ -5,9 +5,9 @@
     ".spectrum-AssetCard .spectrum-AssetCard-selectionOrder",
     ".spectrum-AssetCard--checkboxSelection .spectrum-AssetCard-selectionIndicator",
     ".spectrum-AssetCard--checkboxSelection .spectrum-AssetCard-selectionIndicator .spectrum-AssetCard-selectionOrder",
-    ".spectrum-AssetCard--checkboxSelection.is-selected .spectrum-AssetCard-selectionIndicator",
     ".spectrum-AssetCard--checkboxSelection:focus-visible .spectrum-AssetCard-selectionIndicator",
     ".spectrum-AssetCard--checkboxSelection:hover .spectrum-AssetCard-selectionIndicator",
+    ".spectrum-AssetCard--checkboxSelection.is-selected .spectrum-AssetCard-selectionIndicator",
     ".spectrum-AssetCard--highlightSelection.is-selected .spectrum-AssetCard-asset",
     ".spectrum-AssetCard--orderedSelection .spectrum-AssetCard-selectionIndicator",
     ".spectrum-AssetCard--orderedSelection .spectrum-AssetCard-selectionIndicator .spectrum-AssetCard-checkbox",
@@ -23,15 +23,6 @@
     ".spectrum-AssetCard-selectionOrder",
     ".spectrum-AssetCard-selectionOverlay",
     ".spectrum-AssetCard-title",
-    ".spectrum-AssetCard.is-drop-target .spectrum-AssetCard-assetContainer:after",
-    ".spectrum-AssetCard.is-drop-target .spectrum-AssetCard-selectionOverlay",
-    ".spectrum-AssetCard.is-drop-target:active .spectrum-AssetCard-assetContainer:after",
-    ".spectrum-AssetCard.is-drop-target:hover .spectrum-AssetCard-assetContainer:after",
-    ".spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer:after",
-    ".spectrum-AssetCard.is-selected .spectrum-AssetCard-selectionOverlay",
-    ".spectrum-AssetCard.is-selected .spectrum-Checkbox-box:before",
-    ".spectrum-AssetCard.is-selected:active .spectrum-AssetCard-assetContainer:after",
-    ".spectrum-AssetCard.is-selected:hover .spectrum-AssetCard-assetContainer:after",
     ".spectrum-AssetCard:active .spectrum-AssetCard-assetContainer:after",
     ".spectrum-AssetCard:focus-visible .spectrum-AssetCard-assetContainer:after",
     ".spectrum-AssetCard:focus-visible .spectrum-AssetCard-assetContainer:before",
@@ -40,149 +31,762 @@
     ".spectrum-AssetCard:hover .spectrum-Checkbox-box:before",
     ".spectrum-AssetCard:lang(ja)",
     ".spectrum-AssetCard:lang(ko)",
-    ".spectrum-AssetCard:lang(zh)"
+    ".spectrum-AssetCard:lang(zh)",
+    ".spectrum-AssetCard.is-drop-target .spectrum-AssetCard-assetContainer:after",
+    ".spectrum-AssetCard.is-drop-target .spectrum-AssetCard-selectionOverlay",
+    ".spectrum-AssetCard.is-drop-target:active .spectrum-AssetCard-assetContainer:after",
+    ".spectrum-AssetCard.is-drop-target:hover .spectrum-AssetCard-assetContainer:after",
+    ".spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer:after",
+    ".spectrum-AssetCard.is-selected .spectrum-AssetCard-selectionOverlay",
+    ".spectrum-AssetCard.is-selected .spectrum-Checkbox-box:before",
+    ".spectrum-AssetCard.is-selected:active .spectrum-AssetCard-assetContainer:after",
+    ".spectrum-AssetCard.is-selected:hover .spectrum-AssetCard-assetContainer:after"
   ],
-  "modifiers": [
-    "--mod-assectcard-border-color-selected-down",
-    "--mod-assectcard-focus-indicator-color",
-    "--mod-assetcard-asset-animation-duration",
-    "--mod-assetcard-asset-container-border-size",
-    "--mod-assetcard-asset-size",
-    "--mod-assetcard-background-color",
-    "--mod-assetcard-border-color",
-    "--mod-assetcard-border-color-down",
-    "--mod-assetcard-border-color-hover",
-    "--mod-assetcard-border-color-selected",
-    "--mod-assetcard-border-color-selected-hover",
-    "--mod-assetcard-border-radius",
-    "--mod-assetcard-content-font-family",
-    "--mod-assetcard-content-font-size",
-    "--mod-assetcard-content-font-style",
-    "--mod-assetcard-content-font-weight",
-    "--mod-assetcard-content-letter-spacing",
-    "--mod-assetcard-content-line-height",
-    "--mod-assetcard-content-margin-block-start",
-    "--mod-assetcard-content-text-color",
-    "--mod-assetcard-focus-indicator-thickness",
-    "--mod-assetcard-focus-ring-border-radius",
-    "--mod-assetcard-focus-ring-gap",
-    "--mod-assetcard-header-content-font-family",
-    "--mod-assetcard-header-content-font-size",
-    "--mod-assetcard-header-content-font-stlye",
-    "--mod-assetcard-header-content-font-weight",
-    "--mod-assetcard-header-content-letter-spacing",
-    "--mod-assetcard-header-content-line-height",
-    "--mod-assetcard-header-content-text-color",
-    "--mod-assetcard-header-margin-block-start",
-    "--mod-assetcard-overlay-background-color",
-    "--mod-assetcard-selectionindicator-background-color-default",
-    "--mod-assetcard-selectionindicator-background-color-ordered",
-    "--mod-assetcard-selectionindicator-border-radius",
-    "--mod-assetcard-selectionindicator-color",
-    "--mod-assetcard-selectionindicator-font-size",
-    "--mod-assetcard-selectionindicator-font-weight",
-    "--mod-assetcard-selectionindicator-margin",
-    "--mod-assetcard-selectionindicator-size",
-    "--mod-assetcard-title-font-family",
-    "--mod-assetcard-title-font-size",
-    "--mod-assetcard-title-font-style",
-    "--mod-assetcard-title-font-weight",
-    "--mod-assetcard-title-letter-spacing",
-    "--mod-assetcard-title-line-height",
-    "--mod-assetcard-title-text-color"
-  ],
-  "component": [
-    "--spectrum-assetcard-asset-animation-duration",
-    "--spectrum-assetcard-asset-container-border-size",
-    "--spectrum-assetcard-asset-size",
-    "--spectrum-assetcard-background-color",
-    "--spectrum-assetcard-border-color",
-    "--spectrum-assetcard-border-color-down",
-    "--spectrum-assetcard-border-color-hover",
-    "--spectrum-assetcard-border-color-selected",
-    "--spectrum-assetcard-border-color-selected-down",
-    "--spectrum-assetcard-border-color-selected-hover",
-    "--spectrum-assetcard-border-radius",
-    "--spectrum-assetcard-content-font-family",
-    "--spectrum-assetcard-content-font-size",
-    "--spectrum-assetcard-content-font-style",
-    "--spectrum-assetcard-content-font-weight",
-    "--spectrum-assetcard-content-letter-spacing",
-    "--spectrum-assetcard-content-line-height",
-    "--spectrum-assetcard-content-margin-block-start",
-    "--spectrum-assetcard-content-text-color",
-    "--spectrum-assetcard-focus-indicator-thickness",
-    "--spectrum-assetcard-focus-ring-border-radius",
-    "--spectrum-assetcard-focus-ring-gap",
-    "--spectrum-assetcard-header-content-font-family",
-    "--spectrum-assetcard-header-content-font-size",
-    "--spectrum-assetcard-header-content-font-style",
-    "--spectrum-assetcard-header-content-font-weight",
-    "--spectrum-assetcard-header-content-letter-spacing",
-    "--spectrum-assetcard-header-content-line-height",
-    "--spectrum-assetcard-header-content-text-color",
-    "--spectrum-assetcard-header-margin-block-start",
-    "--spectrum-assetcard-overlay-background-color",
-    "--spectrum-assetcard-selectionindicator-background-color-default",
-    "--spectrum-assetcard-selectionindicator-background-color-ordered",
-    "--spectrum-assetcard-selectionindicator-blur",
-    "--spectrum-assetcard-selectionindicator-border-radius",
-    "--spectrum-assetcard-selectionindicator-box-shadow-color",
-    "--spectrum-assetcard-selectionindicator-color",
-    "--spectrum-assetcard-selectionindicator-font-size",
-    "--spectrum-assetcard-selectionindicator-font-weight",
-    "--spectrum-assetcard-selectionindicator-margin",
-    "--spectrum-assetcard-selectionindicator-offset-y",
-    "--spectrum-assetcard-selectionindicator-size",
-    "--spectrum-assetcard-title-font-family",
-    "--spectrum-assetcard-title-font-size",
-    "--spectrum-assetcard-title-font-style",
-    "--spectrum-assetcard-title-font-weight",
-    "--spectrum-assetcard-title-letter-spacing",
-    "--spectrum-assetcard-title-line-height",
-    "--spectrum-assetcard-title-text-color"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-assestcard-focus-indicator-color",
-    "--spectrum-body-cjk-font-style",
-    "--spectrum-body-cjk-font-weight",
-    "--spectrum-body-cjk-line-height",
-    "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-bold-font-weight",
-    "--spectrum-card-selection-background-size",
-    "--spectrum-cjk-font-family-stack",
-    "--spectrum-cjk-letter-spacing",
-    "--spectrum-corner-radius-100",
-    "--spectrum-default-font-style",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-400",
-    "--spectrum-gray-500",
-    "--spectrum-gray-600",
-    "--spectrum-gray-700",
-    "--spectrum-gray-75",
-    "--spectrum-gray-75-rgb",
-    "--spectrum-gray-900",
-    "--spectrum-heading-cjk-font-style",
-    "--spectrum-heading-cjk-font-weight",
-    "--spectrum-heading-cjk-line-height",
-    "--spectrum-heading-cjk-size-xs",
-    "--spectrum-heading-sans-serif-font-weight",
-    "--spectrum-line-height-100",
-    "--spectrum-line-height-200",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-75",
-    "--spectrum-transparent-black-300",
-    "--spectrum-white"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-assectcard-border-color-selected-down",
-    "--highcontrast-assetcard-border-color-hover",
-    "--highcontrast-assetcard-border-color-selected",
-    "--highcontrast-assetcard-border-color-selected-hover",
-    "--highcontrast-assetcard-selectionindicator-background-color-ordered",
-    "--highcontrast-assetcard-selectionindicator-color"
-  ]
+  "modifiers": {
+    "mod-assetcard-asset-size": {
+      "description": "Used by `.spectrum-AssetCard`, `.spectrum-AssetCard-assetContainer`. <br/>Defaults to `var(--spectrum-assetcard-asset-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-border-color-hover": {
+      "description": "Used by `.spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected .spectrum-Checkbox-box:before, .spectrum-AssetCard:focus-visible .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard:focus-visible .spectrum-Checkbox-box:before`, `.spectrum-AssetCard:hover .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard:hover .spectrum-Checkbox-box:before`. <br/>Defaults to `var(--spectrum-assetcard-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-border-color-down": {
+      "description": "Used by `.spectrum-AssetCard:active .spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--spectrum-assetcard-border-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-border-radius": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer`, `.spectrum-AssetCard-asset, .spectrum-AssetCard-assetContainer:after`, `.spectrum-AssetCard-selectionOverlay`. <br/>Defaults to `var(--spectrum-assetcard-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-background-color": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer`. <br/>Defaults to `var(--spectrum-assetcard-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-asset-animation-duration": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer`, `.spectrum-AssetCard-assetContainer:before`, `.spectrum-AssetCard-asset`, `.spectrum-AssetCard-selectionOverlay`, `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-asset-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-focus-ring-gap": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer:before`. <br/>Defaults to `var(--spectrum-assetcard-focus-ring-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer:before`. <br/>Defaults to `var(--spectrum-assetcard-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assectcard-focus-indicator-color": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer:before`. <br/>Defaults to `var(--spectrum-assestcard-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-focus-ring-border-radius": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer:before`. <br/>Defaults to `var(--spectrum-assetcard-focus-ring-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-asset-container-border-size": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--spectrum-assetcard-asset-container-border-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-border-color": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--spectrum-assetcard-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-header-margin-block-start": {
+      "description": "Used by `.spectrum-AssetCard-header`. <br/>Defaults to `var(--spectrum-assetcard-header-margin-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-title-text-color": {
+      "description": "Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-assetcard-title-text-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-title-font-family": {
+      "description": "Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-assetcard-title-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-title-font-weight": {
+      "description": "Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-assetcard-title-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-title-font-size": {
+      "description": "Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-assetcard-title-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-title-line-height": {
+      "description": "Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-assetcard-title-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-title-font-style": {
+      "description": "Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-assetcard-title-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-title-letter-spacing": {
+      "description": "Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-assetcard-title-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-header-content-text-color": {
+      "description": "Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-assetcard-header-content-text-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-header-content-font-family": {
+      "description": "Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-assetcard-header-content-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-header-content-font-size": {
+      "description": "Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-assetcard-header-content-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-header-content-font-weight": {
+      "description": "Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-assetcard-header-content-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-header-content-line-height": {
+      "description": "Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-assetcard-header-content-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-header-content-font-stlye": {
+      "description": "Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-assetcard-header-content-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-header-content-letter-spacing": {
+      "description": "Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-assetcard-header-content-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-content-margin-block-start": {
+      "description": "Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-assetcard-content-margin-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-content-text-color": {
+      "description": "Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-assetcard-content-text-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-content-font-family": {
+      "description": "Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-assetcard-content-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-content-font-size": {
+      "description": "Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-assetcard-content-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-content-font-weight": {
+      "description": "Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-assetcard-content-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-content-line-height": {
+      "description": "Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-assetcard-content-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-content-font-style": {
+      "description": "Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-assetcard-content-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-content-letter-spacing": {
+      "description": "Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-assetcard-content-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-selectionindicator-margin": {
+      "description": "Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-selectionindicator-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-selectionindicator-size": {
+      "description": "Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-selectionindicator-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-selectionindicator-border-radius": {
+      "description": "Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-selectionindicator-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-selectionindicator-color": {
+      "description": "Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-selectionindicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-selectionindicator-font-weight": {
+      "description": "Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-selectionindicator-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-selectionindicator-font-size": {
+      "description": "Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-selectionindicator-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetcard-border-color-selected": {
+      "description": "Used by `.spectrum-AssetCard.is-drop-target .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--spectrum-assetcard-border-color-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-overlay-background-color": {
+      "description": "Used by `.spectrum-AssetCard.is-drop-target .spectrum-AssetCard-selectionOverlay, .spectrum-AssetCard.is-selected .spectrum-AssetCard-selectionOverlay`. <br/>Defaults to `var(--spectrum-assetcard-overlay-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assectcard-border-color-selected-down": {
+      "description": "Used by `.spectrum-AssetCard.is-drop-target:active .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected:active .spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--spectrum-assetcard-border-color-selected-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-selectionindicator-background-color-default": {
+      "description": "Used by `.spectrum-AssetCard--checkboxSelection .spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-selectionindicator-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-border-color-selected-hover": {
+      "description": "Used by `.spectrum-AssetCard.is-drop-target:hover .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected:hover .spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--spectrum-assetcard-border-color-selected-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetcard-selectionindicator-background-color-ordered": {
+      "description": "Used by `.spectrum-AssetCard--orderedSelection .spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-assetcard-selectionindicator-background-color-ordered)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-assetcard-background-color": {
+      "value": "light-dark(rgb(243, 243, 243), rgb(34, 34, 34))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-assetContainer`. <br/>Defaults to `var(--spectrum-gray-75)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-asset-size": {
+      "value": "224px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard`, `.spectrum-AssetCard-assetContainer`. <br/>Defaults to `224px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-overlay-background-color": {
+      "value": "rgb(27 127 245/10%)",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard.is-drop-target .spectrum-AssetCard-selectionOverlay, .spectrum-AssetCard.is-selected .spectrum-AssetCard-selectionOverlay`. <br/>Defaults to `rgb(27 127 245/10%)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-asset-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-assetContainer`, `.spectrum-AssetCard-assetContainer:before`, `.spectrum-AssetCard-asset`, `.spectrum-AssetCard-selectionOverlay`, `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-asset-container-border-size": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `1px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-header-margin-block-start": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-header`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-border-radius": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-assetContainer`, `.spectrum-AssetCard-asset, .spectrum-AssetCard-assetContainer:after`, `.spectrum-AssetCard-selectionOverlay`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-border-color": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-border-color-hover": {
+      "value": "light-dark(rgb(143, 143, 143), rgb(109, 109, 109))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected .spectrum-Checkbox-box:before, .spectrum-AssetCard:focus-visible .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard:focus-visible .spectrum-Checkbox-box:before`, `.spectrum-AssetCard:hover .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard:hover .spectrum-Checkbox-box:before`. <br/>Defaults to `var(--spectrum-gray-500)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-border-color-down": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard:active .spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--spectrum-gray-600)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-focus-ring-gap": {
+      "value": "5px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-assetContainer:before`. <br/>Defaults to `5px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-assetContainer:before`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-size": {
+      "value": "40px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-card-selection-background-size)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-border-radius": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-offset-y": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `4px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-blur": {
+      "value": "6px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `6px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-color": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-font-weight": {
+      "value": "700",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-font-size": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-font-size-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-background-color-default": {
+      "value": "rgb(var(--spectrum-gray-75-rgb), 0.9)",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard--checkboxSelection .spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `rgb(var(--spectrum-gray-75-rgb), 0.9)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-box-shadow-color": {
+      "value": "rgba(0, 0, 0, 0.15)",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--spectrum-transparent-black-300)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-title-text-color": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-title-font-family": {
+      "value": "var(--spectrum-cjk-font-family-stack)",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-cjk-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-title-font-weight": {
+      "value": "800",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-heading-cjk-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-title-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-heading-cjk-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-title-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-heading-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-title-letter-spacing": {
+      "value": "0em",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-header-content-text-color": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-header-content-font-family": {
+      "value": "var(--spectrum-cjk-font-family-stack)",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-cjk-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-header-content-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-body-cjk-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-header-content-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-body-cjk-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-header-content-line-height": {
+      "value": "1.7",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-body-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-header-content-letter-spacing": {
+      "value": "0em",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-headerContent`. <br/>Defaults to `var(--spectrum-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-content-text-color": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-gray-700)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-content-font-family": {
+      "value": "var(--spectrum-cjk-font-family-stack)",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-cjk-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-content-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-body-cjk-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-content-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-body-cjk-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-content-line-height": {
+      "value": "1.7",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-body-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-content-letter-spacing": {
+      "value": "0em",
+      "description": "Defined in `.spectrum-AssetCard`, `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-content-margin-block-start": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-content`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-title-font-size": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Defined in `.spectrum-AssetCard:lang(ja), .spectrum-AssetCard:lang(ko), .spectrum-AssetCard:lang(zh)`. <br/>Used by `.spectrum-AssetCard-title`. <br/>Defaults to `var(--spectrum-heading-cjk-size-xs)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-focus-ring-border-radius": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer:before`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-header-content-font-size": {
+      "description": "Used by `.spectrum-AssetCard-headerContent`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-content-font-size": {
+      "description": "Used by `.spectrum-AssetCard-content`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-margin": {
+      "description": "Used by `.spectrum-AssetCard-selectionIndicator`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetcard-border-color-selected": {
+      "description": "Used by `.spectrum-AssetCard.is-drop-target .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer:after`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-border-color-selected-down": {
+      "description": "Used by `.spectrum-AssetCard.is-drop-target:active .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected:active .spectrum-AssetCard-assetContainer:after`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-border-color-selected-hover": {
+      "description": "Used by `.spectrum-AssetCard.is-drop-target:hover .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected:hover .spectrum-AssetCard-assetContainer:after`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetcard-selectionindicator-background-color-ordered": {
+      "description": "Used by `.spectrum-AssetCard--orderedSelection .spectrum-AssetCard-selectionIndicator`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-75": {
+      "value": "light-dark(rgb(243, 243, 243), rgb(34, 34, 34))",
+      "description": "Used by `--spectrum-assetcard-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-assetcard-asset-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-assetcard-header-margin-block-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "value": "4px",
+      "description": "Used by `--spectrum-assetcard-border-radius`, `--spectrum-assetcard-selectionindicator-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-500": {
+      "value": "light-dark(rgb(143, 143, 143), rgb(109, 109, 109))",
+      "description": "Used by `--spectrum-assetcard-border-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-600": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Used by `--spectrum-assetcard-border-color-down`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-assetcard-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-card-selection-background-size": {
+      "value": "40px",
+      "description": "Used by `--spectrum-assetcard-selectionindicator-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-assetcard-selectionindicator-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-bold-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-assetcard-selectionindicator-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-400": {
+      "value": "20px",
+      "description": "Used by `--spectrum-assetcard-selectionindicator-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-75-rgb": {
+      "description": "Used by `--spectrum-assetcard-selectionindicator-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-300": {
+      "value": "rgba(0, 0, 0, 0.15)",
+      "description": "Used by `--spectrum-assetcard-selectionindicator-box-shadow-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-900": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Used by `--spectrum-assetcard-title-text-color`, `--spectrum-assetcard-header-content-text-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-assetcard-title-font-family`, `--spectrum-assetcard-header-content-font-family`, `--spectrum-assetcard-content-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-weight": {
+      "value": "800",
+      "description": "Used by `--spectrum-assetcard-title-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-assetcard-title-font-style`, `--spectrum-assetcard-header-content-font-style`, `--spectrum-assetcard-content-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-assetcard-title-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-assetcard-header-content-font-weight`, `--spectrum-assetcard-content-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-200": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-assetcard-header-content-line-height`, `--spectrum-assetcard-content-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-700": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Used by `--spectrum-assetcard-content-text-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-assetcard-content-margin-block-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-font-family-stack": {
+      "description": "Used by `--spectrum-assetcard-title-font-family`, `--spectrum-assetcard-header-content-font-family`, `--spectrum-assetcard-content-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-assetcard-title-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-font-weight": {
+      "value": "800",
+      "description": "Used by `--spectrum-assetcard-title-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-xs": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Used by `--spectrum-assetcard-title-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-line-height": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-assetcard-title-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-letter-spacing": {
+      "value": "0em",
+      "description": "Used by `--spectrum-assetcard-title-letter-spacing`, `--spectrum-assetcard-header-content-letter-spacing`, `--spectrum-assetcard-content-letter-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-assetcard-header-content-font-weight`, `--spectrum-assetcard-content-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-line-height": {
+      "value": "1.7",
+      "description": "Used by `--spectrum-assetcard-header-content-line-height`, `--spectrum-assetcard-content-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-assetcard-header-content-font-style`, `--spectrum-assetcard-content-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-assestcard-focus-indicator-color": {
+      "description": "Used by `.spectrum-AssetCard-assetContainer:before`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-assetcard-border-color-hover": {
+      "value": "var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected .spectrum-Checkbox-box:before, .spectrum-AssetCard:focus-visible .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard:focus-visible .spectrum-Checkbox-box:before`, `.spectrum-AssetCard:hover .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard:hover .spectrum-Checkbox-box:before`. <br/>Defaults to `var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assetcard-selectionindicator-color": {
+      "value": "var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assetcard-border-color-selected": {
+      "value": "var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard.is-drop-target .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected .spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assectcard-border-color-selected-down": {
+      "value": "var(--mod-assectcard-border-color-selected-down, var(--spectrum-assetcard-border-color-selected-down))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard.is-drop-target:active .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected:active .spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--mod-assectcard-border-color-selected-down, var(--spectrum-assetcard-border-color-selected-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assetcard-border-color-selected-hover": {
+      "value": "var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard.is-drop-target:hover .spectrum-AssetCard-assetContainer:after, .spectrum-AssetCard.is-selected:hover .spectrum-AssetCard-assetContainer:after`. <br/>Defaults to `var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assetcard-selectionindicator-background-color-ordered": {
+      "value": "var(--mod-assetcard-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered))",
+      "description": "Defined in `.spectrum-AssetCard`. <br/>Used by `.spectrum-AssetCard--orderedSelection .spectrum-AssetCard-selectionIndicator`. <br/>Defaults to `var(--mod-assetcard-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered))`, if not set.",
+      "control": "color"
+    }
+  }
 }

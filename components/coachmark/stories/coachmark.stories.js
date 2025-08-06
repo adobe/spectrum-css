@@ -1,14 +1,16 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import {
 	CoachMarkMediaOptionsTemplate,
 	CoachmarkMenuStatesTemplate,
 	Template,
 } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The coach mark component can be used to bring added attention to specific parts of a page, like during a tour. It is a separate component from [the coach indicator](/docs/components-coach-indicator--docs) and similar to [a popover](/docs/components-purpose--docs).
@@ -94,6 +96,10 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 		docs: {
 			story: {
 				height: "525px",

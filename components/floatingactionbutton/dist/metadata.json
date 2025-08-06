@@ -13,74 +13,351 @@
     ".spectrum-FloatingActionButton:hover .spectrum-FloatingActionButton-icon",
     ".spectrum-Icon.spectrum-FloatingActionButton-icon"
   ],
-  "modifiers": [
-    "--mod-afloating-action-button-focus-ring-color",
-    "--mod-floating-action-button-background-color",
-    "--mod-floating-action-button-background-color-down",
-    "--mod-floating-action-button-background-color-hover",
-    "--mod-floating-action-button-background-color-key-focus",
-    "--mod-floating-action-button-border-radius",
-    "--mod-floating-action-button-drop-shadow-blur",
-    "--mod-floating-action-button-drop-shadow-color",
-    "--mod-floating-action-button-drop-shadow-x",
-    "--mod-floating-action-button-drop-shadow-y",
-    "--mod-floating-action-button-focus-ring-gap",
-    "--mod-floating-action-button-focus-ring-width",
-    "--mod-floating-action-button-icon-color",
-    "--mod-floating-action-button-icon-color-down",
-    "--mod-floating-action-button-icon-color-hover",
-    "--mod-floating-action-button-icon-color-key-focus",
-    "--mod-floating-action-button-icon-size",
-    "--mod-floating-action-button-margin",
-    "--mod-floating-action-button-padding",
-    "--mod-floating-action-button-size"
-  ],
-  "component": [
-    "--spectrum-floating-action-button-background-color",
-    "--spectrum-floating-action-button-background-color-down",
-    "--spectrum-floating-action-button-background-color-hover",
-    "--spectrum-floating-action-button-background-color-key-focus",
-    "--spectrum-floating-action-button-drop-shadow-blur",
-    "--spectrum-floating-action-button-drop-shadow-color",
-    "--spectrum-floating-action-button-drop-shadow-y",
-    "--spectrum-floating-action-button-icon-color",
-    "--spectrum-floating-action-button-icon-color-down",
-    "--spectrum-floating-action-button-icon-color-hover",
-    "--spectrum-floating-action-button-icon-color-key-focus",
-    "--spectrum-floating-action-button-icon-size",
-    "--spectrum-floating-action-button-margin",
-    "--spectrum-floating-action-button-padding",
-    "--spectrum-floating-action-button-size"
-  ],
-  "global": [
-    "--spectrum-accent-background-color-default",
-    "--spectrum-accent-background-color-down",
-    "--spectrum-accent-background-color-hover",
-    "--spectrum-accent-background-color-key-focus",
-    "--spectrum-background-layer-2-color",
-    "--spectrum-component-height-200",
-    "--spectrum-component-pill-edge-to-visual-only-200",
-    "--spectrum-drop-shadow-x",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-neutral-subdued-content-color-default",
-    "--spectrum-neutral-subdued-content-color-down",
-    "--spectrum-neutral-subdued-content-color-hover",
-    "--spectrum-neutral-subdued-content-color-key-focus",
-    "--spectrum-spacing-200",
-    "--spectrum-white",
-    "--spectrum-workflow-icon-size-200"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-floating-action-button-background-color",
-    "--highcontrast-floating-action-button-background-color-down",
-    "--highcontrast-floating-action-button-background-color-hover",
-    "--highcontrast-floating-action-button-background-color-key-focus",
-    "--highcontrast-floating-action-button-icon-color",
-    "--highcontrast-floating-action-button-icon-color-down",
-    "--highcontrast-floating-action-button-icon-color-hover",
-    "--highcontrast-floating-action-button-icon-color-key-focus"
-  ]
+  "modifiers": {
+    "mod-floating-action-button-size": {
+      "description": "Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-floating-action-button-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-border-radius": {
+      "description": "Used by `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton:focus-visible:after`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-padding": {
+      "description": "Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-floating-action-button-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-margin": {
+      "description": "Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-floating-action-button-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-drop-shadow-x": {
+      "description": "Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-drop-shadow-x)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-drop-shadow-y": {
+      "description": "Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-floating-action-button-drop-shadow-y)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-drop-shadow-blur": {
+      "description": "Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-floating-action-button-drop-shadow-blur)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-drop-shadow-color": {
+      "description": "Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-floating-action-button-drop-shadow-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-background-color": {
+      "description": "Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-floating-action-button-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-background-color-hover": {
+      "description": "Used by `.spectrum-FloatingActionButton:hover`. <br/>Defaults to `var(--spectrum-floating-action-button-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-icon-color-hover": {
+      "description": "Used by `.spectrum-FloatingActionButton:hover .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-floating-action-button-icon-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-background-color-down": {
+      "description": "Used by `.spectrum-FloatingActionButton:active`. <br/>Defaults to `var(--spectrum-floating-action-button-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-icon-color-down": {
+      "description": "Used by `.spectrum-FloatingActionButton:active .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-floating-action-button-icon-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-background-color-key-focus": {
+      "description": "Used by `.spectrum-FloatingActionButton:focus-visible`. <br/>Defaults to `var(--spectrum-floating-action-button-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-icon-color-key-focus": {
+      "description": "Used by `.spectrum-FloatingActionButton:focus-visible .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-floating-action-button-icon-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-focus-ring-gap": {
+      "description": "Used by `.spectrum-FloatingActionButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-focus-ring-width": {
+      "description": "Used by `.spectrum-FloatingActionButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-afloating-action-button-focus-ring-color": {
+      "description": "Used by `.spectrum-FloatingActionButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-icon-size": {
+      "description": "Used by `.spectrum-Icon.spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-floating-action-button-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-floating-action-button-icon-color": {
+      "description": "Used by `.spectrum-Icon.spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-floating-action-button-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-floating-action-button-size": {
+      "value": "40px",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-component-height-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-icon-size": {
+      "value": "22px",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-Icon.spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-workflow-icon-size-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-padding": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-component-pill-edge-to-visual-only-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-margin": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-background-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton--secondary`. <br/>Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-background-color-hover": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton--secondary`. <br/>Used by `.spectrum-FloatingActionButton:hover`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-background-color-down": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton--secondary`. <br/>Used by `.spectrum-FloatingActionButton:active`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-background-color-key-focus": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton--secondary`. <br/>Used by `.spectrum-FloatingActionButton:focus-visible`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-icon-color": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Defined in `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton--secondary`. <br/>Used by `.spectrum-Icon.spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-icon-color-hover": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton--secondary`. <br/>Used by `.spectrum-FloatingActionButton:hover .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-icon-color-down": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton--secondary`. <br/>Used by `.spectrum-FloatingActionButton:active .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-icon-color-key-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-FloatingActionButton`, `.spectrum-FloatingActionButton--secondary`. <br/>Used by `.spectrum-FloatingActionButton:focus-visible .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-drop-shadow-y": {
+      "value": "4px",
+      "description": "Used by `.spectrum-FloatingActionButton`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-drop-shadow-blur": {
+      "value": "12px",
+      "description": "Used by `.spectrum-FloatingActionButton`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-floating-action-button-drop-shadow-color": {
+      "value": "rgba(0, 0, 0, 0.15)",
+      "description": "Used by `.spectrum-FloatingActionButton`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-floating-action-button-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "value": "22px",
+      "description": "Used by `--spectrum-floating-action-button-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-pill-edge-to-visual-only-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-floating-action-button-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-floating-action-button-margin`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Used by `--spectrum-floating-action-button-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-floating-action-button-background-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-down": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-floating-action-button-background-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-key-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--spectrum-floating-action-button-background-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-floating-action-button-icon-color`, `--spectrum-floating-action-button-icon-color-hover`, `--spectrum-floating-action-button-icon-color-down`, `--spectrum-floating-action-button-icon-color-key-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-background-layer-2-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Used by `--spectrum-floating-action-button-background-color`, `--spectrum-floating-action-button-background-color-hover`, `--spectrum-floating-action-button-background-color-down`, `--spectrum-floating-action-button-background-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-default": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Used by `--spectrum-floating-action-button-icon-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-hover": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-floating-action-button-icon-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-down": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-floating-action-button-icon-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-key-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-floating-action-button-icon-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-x": {
+      "value": "0px",
+      "description": "Used by `.spectrum-FloatingActionButton`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `.spectrum-FloatingActionButton:focus-visible:after`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `.spectrum-FloatingActionButton:focus-visible:after`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `.spectrum-FloatingActionButton:focus-visible:after`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-floating-action-button-background-color": {
+      "value": "var(--mod-floating-action-button-background-color, var(--spectrum-floating-action-button-background-color))",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton`. <br/>Defaults to `var(--mod-floating-action-button-background-color, var(--spectrum-floating-action-button-background-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-floating-action-button-background-color-hover": {
+      "value": "var(--mod-floating-action-button-background-color-hover, var(--spectrum-floating-action-button-background-color-hover))",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton:hover`. <br/>Defaults to `var(--mod-floating-action-button-background-color-hover, var(--spectrum-floating-action-button-background-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-floating-action-button-background-color-down": {
+      "value": "var(--mod-floating-action-button-background-color-down, var(--spectrum-floating-action-button-background-color-down))",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton:active`. <br/>Defaults to `var(--mod-floating-action-button-background-color-down, var(--spectrum-floating-action-button-background-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-floating-action-button-background-color-key-focus": {
+      "value": "var(--mod-floating-action-button-background-color-key-focus, var(--spectrum-floating-action-button-background-color-key-focus))",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton:focus-visible`. <br/>Defaults to `var(--mod-floating-action-button-background-color-key-focus, var(--spectrum-floating-action-button-background-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-floating-action-button-icon-color": {
+      "value": "var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color))",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-Icon.spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-floating-action-button-icon-color-hover": {
+      "value": "var(--mod-floating-action-button-icon-color-hover, var(--spectrum-floating-action-button-icon-color-hover))",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton:hover .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--mod-floating-action-button-icon-color-hover, var(--spectrum-floating-action-button-icon-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-floating-action-button-icon-color-down": {
+      "value": "var(--mod-floating-action-button-icon-color-down, var(--spectrum-floating-action-button-icon-color-down))",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton:active .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--mod-floating-action-button-icon-color-down, var(--spectrum-floating-action-button-icon-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-floating-action-button-icon-color-key-focus": {
+      "value": "var(--mod-floating-action-button-icon-color-key-focus, var(--spectrum-floating-action-button-icon-color-key-focus))",
+      "description": "Defined in `.spectrum-FloatingActionButton`. <br/>Used by `.spectrum-FloatingActionButton:focus-visible .spectrum-FloatingActionButton-icon`. <br/>Defaults to `var(--mod-floating-action-button-icon-color-key-focus, var(--spectrum-floating-action-button-icon-color-key-focus))`, if not set.",
+      "control": "color"
+    }
+  }
 }

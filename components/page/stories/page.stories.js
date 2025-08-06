@@ -25,6 +25,10 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 	tags: ["!autodocs", "!dev"]
 };
