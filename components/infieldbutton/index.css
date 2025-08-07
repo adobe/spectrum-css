@@ -176,6 +176,7 @@
 	.spectrum-InfieldButton {
 		--highcontrast-infield-button-background-color: ButtonText;
 		--highcontrast-infield-button-icon-color: ButtonFace;
+		forced-color-adjust: none; /* keeps button from flashing when hovered */
 
 		&:disabled {
 			--highcontrast-infield-button-background-color: GrayText;
