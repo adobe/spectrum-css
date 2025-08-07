@@ -6,6 +6,7 @@ The picker button component has been migrated to Spectrum 2. The picker button u
 
 - Corner rounding updates - corner rounding differs by the component's t-shirt size, but otherwise is a standard size. This means that the rounded variant of picker button with increased corner rounding and the position variants of picker button that helped the picker button fit snugly within either side of an input have been removed.
 - Color and spacing updates to match S2 spec
+- Added WHCM support
 - Updated S2 down state
 - Removed focus styles: there are no spec'd focus styles in S2, therefore these styles have been removed.
 - The label variant of picker button has been removed.
