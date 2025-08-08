@@ -119,6 +119,15 @@
 				],
 				"cwd": "{projectRoot}"
 			}
+		},
+		"report": {
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"node tasks/migrated-component-scanner.js --output=.storybook/data/migrated-components.json"
+				],
+				"cwd": "{workspaceRoot}"
+			}
 		}
 	}
 }
