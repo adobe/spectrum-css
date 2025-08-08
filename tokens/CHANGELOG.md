@@ -1,5 +1,21 @@
 # Change log
 
+## 16.1.0-next.8
+
+### Minor Changes
+
+📝 [#4120](https://github.com/adobe/spectrum-css/pull/4120) [`5b694c5`](https://github.com/adobe/spectrum-css/commit/5b694c58be813fd82315252dab721e94bf769a71) Thanks [@renovate](https://github.com/apps/renovate)!
+
+`@adobe/spectrum-tokens@13.12.0` ->`@adobe/spectrum-tokens@13.13.0`
+
+### Added
+
+- `--spectrum-select-box-horizontal-minimum-width`: `188px` (desktop), `220px` (mobile)
+
+### Updated
+
+- `--spectrum-select-box-edge-to-checkbox`: Updated from a variable sizing based on the viewport to a fixed value (`8px`).
+
 ## 16.1.0-next.7
 
 ### Minor Changes
