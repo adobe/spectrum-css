@@ -28,6 +28,7 @@ export default {
 				category: "Content",
 			},
 			control: "boolean",
+			if: { arg: "isCollapsed", eq: false },
 		},
 		helpTextLabel: {
 			name: "Help text (description)",
@@ -50,6 +51,16 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
+			if: { arg: "isCollapsed", eq: false },
+		},
+		isCollapsed: {
+			name: "Collapsed",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
 		},
 	},
 	args: {
@@ -62,6 +73,7 @@ export default {
 		showHelpText: false,
 		helpTextLabel: "Help text with a suggestion of what to search for",
 		inputValue: "",
+		isCollapsed: false,
 	},
 	parameters: {
 		actions: {
@@ -69,6 +81,7 @@ export default {
 				"change .spectrum-Search-input",
 				"click .spectrum-Search-clearButton",
 				"click .spectrum-Search-icon",
+				"click .spectrum-Search-actionButton",
 			],
 		},
 		design: {
@@ -140,6 +153,18 @@ WithValue.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 WithValue.storyName = "With value and clear button";
+
+/**
+ * A search field can be collapsed to show only the search button. This is useful when there is limited space available. It is most commonly used next a filter button to allow users to quickly search and filter content.
+ */
+export const Collapsed = Template.bind({});
+Collapsed.args = {
+	isCollapsed: true,
+};
+Collapsed.tags = ["!dev"];
+Collapsed.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
