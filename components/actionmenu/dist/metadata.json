@@ -1,0 +1,9 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [".spectrum-ActionMenu", ".spectrum-ActionMenu-popover"],
+  "modifiers": ["--mod-actionmenu-button-to-menu-gap"],
+  "component": ["--spectrum-actionmenu-button-to-menu-gap"],
+  "global": ["--spectrum-spacing-100"],
+  "passthroughs": ["--mod-popover-animation-distance"],
+  "high-contrast": []
+}

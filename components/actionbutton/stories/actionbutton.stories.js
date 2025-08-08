@@ -1,11 +1,13 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
+import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isOpen, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
 import { ActionButtonGroup } from "./actionbutton.test.js";
 import { ActionButtonsWithIconOptions, IconOnlyOption, Template, TreatmentTemplate } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The action button component represents an action a user can take.
@@ -66,6 +68,21 @@ export default {
 			control: "select",
 			options: ["true", "menu", "listbox", "tree", "grid", "dialog", "false"],
 		},
+		showPopup: {
+			name: "Show popup",
+			description: "If the button triggers a popup action, this should be set to reflect the type of element that pops-up.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Accessibility",
+			},
+			control: "boolean",
+			if: { arg: "hasPopup", truthy: true },
+		},
+		isOpen: {
+			...isOpen,
+			if: { arg: "hasPopup", truthy: true },
+		},
 		staticColor: {
 			...staticColor,
 			if: { arg: "isEmphasized", truthy: false },
@@ -77,6 +94,7 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: "false",
+		showPopup: false,
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
