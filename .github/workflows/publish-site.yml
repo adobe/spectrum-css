@@ -1,91 +1,140 @@
 name: Publish documentation
 #
-# This workflow publishes the documentation to Netlify
+# This workflow publishes the documentation to Azure blob storage
 #
 
 on:
-    workflow_dispatch:
-        inputs:
-            deploy-message:
-                required: false
-                type: string
-            alias:
-                required: false
-                type: string
-    workflow_call:
-        inputs:
-            deploy-message:
-                required: false
-                type: string
-            alias:
-                required: false
-                type: string
+  pull_request:
+    types:
+      - closed
+  workflow_dispatch:
+    inputs:
+      deploy-message:
+        required: false
+        type: string
+      alias:
+        required: false
+        type: string
+  workflow_call:
+    inputs:
+      deploy-message:
+        required: false
+        type: string
+      alias:
+        required: false
+        type: string
 
 permissions:
-    contents: read
-    pull-requests: write
+  contents: read
+  pull-requests: write
+
+env:
+  AZCOPY_AUTO_LOGIN_TYPE: SPN
+  AZCOPY_SPA_APPLICATION_ID: ${{ secrets.AZURE_CLIENT_ID }}
+  AZCOPY_SPA_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+  AZCOPY_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
 jobs:
-    # --- PUBLISH TO NETLIFY --- #
-    # Publish to netlify by leveraging the previous build and then building the site as well
-    # --- #
-    publish_site:
-        name: Publish
-        runs-on: ubuntu-latest
+  build_and_deploy_job:
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    name: Publish
+    steps:
+      ## --- SETUP --- ##
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
+
+      - name: Use Node LTS version
+        uses: actions/setup-node@v4
+        with:
+            node-version: 20
+            cache: yarn
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Generate PR hash
+        id: pr_hash
+        run: |
+          pr_hash="pr-${{ github.event.pull_request.number }}"
+          echo "hash=${pr_hash}" >> $GITHUB_OUTPUT
+          echo "Generated PR hash: ${pr_hash}"
+
+      ## --- YARN CACHE --- ##
+      - name: Check for cached dependencies
+        continue-on-error: true
+        id: cache-dependencies
+        uses: actions/cache@v4
+        with:
+            path: |
+                .cache/yarn
+                node_modules
+            key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
+
+      ## --- INSTALL --- ##
+      - name: Install dependencies
+        shell: bash
+        run: yarn install --immutable
+
+      ## --- BUILD --- ##
+      - name: Build storybook
+        shell: bash
+        run: BASE_PATH="/${{ steps.pr_hash.outputs.hash }}" yarn build:docs
+
+      ## --- DEPLOY TO AZURE BLOB STORAGE --- ##
+      - name: Install AzCopy
+        run: |
+          wget -O azcopy.tar.gz https://aka.ms/downloadazcopy-v10-linux
+          tar -xf azcopy.tar.gz --strip-components=1
+          sudo mv azcopy /usr/local/bin/
+          azcopy --version
+
+      - name: Deploy to Azure Blob Storage
+        id: deploy
+        env:
+          PR_HASH: ${{ steps.pr_hash.outputs.hash }}
+        run: |
+          echo "Uploading Storybook to ${PR_HASH}"
+          azcopy copy "/home/runner/work/spectrum-css/spectrum-css/dist/*" --log-level=INFO \
+            "https://spectrumcss.blob.core.windows.net/\$web/${PR_HASH}/" \
+            --recursive \
+            --from-to LocalBlob
+          docs_url="https://spectrumcss.z13.web.core.windows.net/${PR_HASH}"
+          echo "docs_url=${docs_url}" >> $GITHUB_OUTPUT
+          echo "Deployed to: ${docs_url}"
+      - name: Post Previews Comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { buildPreviewURLComment } = await import('${{ github.workspace }}/.github/scripts/build-preview-urls-comment.js');
+            const { commentOrUpdate } = await import('${{ github.workspace }}/.github/scripts/comment-or-update.js');
+            const prNumber = context.payload.pull_request.number;
+            const body = buildPreviewURLComment(prNumber);
+            commentOrUpdate(github, context, '## 📚 Branch preview', body);
         timeout-minutes: 10
-        steps:
-            ## --- SETUP --- ##
-            - name: Check out code
-              uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
 
-            - name: Use Node LTS version
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 20
-                  cache: yarn
-
-            - name: Enable Corepack
-              run: corepack enable
-
-            ## --- YARN CACHE --- ##
-            - name: Check for cached dependencies
-              continue-on-error: true
-              id: cache-dependencies
-              uses: actions/cache@v4
-              with:
-                  path: |
-                      .cache/yarn
-                      node_modules
-                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
-
-            ## --- INSTALL --- ##
-            # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
-            - name: Install dependencies
-              shell: bash
-              run: yarn install --immutable
-
-            ## --- BUILD --- ##
-            - name: Build storybook
-              shell: bash
-              run: yarn build:docs
-
-            ## --- DEPLOY WEBSITE TO NETLIFY --- ##
-            - name: Deploy
-              uses: nwtgck/actions-netlify@v3
-              with:
-                  publish-dir: dist
-                  production-branch: main
-                  production-deploy: false
-                  netlify-config-path: ./netlify.toml
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  deploy-message: ${{ inputs.deploy-message }}
-                  enable-pull-request-comment: true
-                  enable-commit-comment: false
-                  overwrites-pull-request-comment: true
-                  alias: ${{ inputs.alias }}
-              env:
-                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
-                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-              timeout-minutes: 10
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Clean up PR deployment
+    steps:
+      - name: Generate PR hash
+        id: pr_hash
+        run: |
+          pr_hash="pr-${{ github.event.pull_request.number }}"
+          echo "hash=${pr_hash}" >> $GITHUB_OUTPUT
+      - name: Install AzCopy
+        run: |
+          wget -O azcopy.tar.gz https://aka.ms/downloadazcopy-v10-linux
+          tar -xf azcopy.tar.gz --strip-components=1
+          sudo mv azcopy /usr/local/bin/
+      - name: Clean up PR deployment
+        env:
+          PR_HASH: ${{ steps.pr_hash.outputs.hash }}
+        run: |
+          echo "Cleaning up deployment: ${PR_HASH}/"
+          azcopy remove "https://spectrumcss.blob.core.windows.net/\$web/${PR_HASH}/" \
+            --recursive || echo "Cleanup completed (some files may not exist)"
+          echo "Cleanup completed for PR deployment: ${PR_HASH}/"

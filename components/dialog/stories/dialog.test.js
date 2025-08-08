@@ -16,10 +16,6 @@ export const DialogGroup = Variants({
 			// TODO: The dialog's heading arg is getting passed as the "Sizing" heading arg (instead of the
 			// TODO: word "Sizing"). We should be able to remove this arg once that no longers happens.
 			heading: showTestingGrid ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit" : args.heading,
-			customStyles: {
-				...(args.customStyles ?? {}),
-				"background-color": showTestingGrid ? "var(--spectrum-gray-100)" : undefined,
-			},
 		}, context);
 	},
 	sizeDirection: "column",
@@ -42,63 +38,69 @@ export const DialogGroup = Variants({
 		},
 		{
 			testHeading: "With hero/cover image",
+			hasHeroImage: true,
 			heroImageUrl: "example-card-portrait.png",
 		},
 		{
 			testHeading: "With hero/cover image, dismissible",
+			hasHeroImage: true,
 			heroImageUrl: "example-card-portrait.png",
 			isDismissible: true,
 			hasFooter: false,
-		},
-		{
-			testHeading: "No divider",
-			hasDivider: false,
-		},
-		{
-			testHeading: "No divider, dismissible",
-			hasDivider: false,
-			isDismissible: true,
-			hasFooter: false,
-		},
-		{
-			testHeading: "With hero/cover image, no divider",
-			hasDivider: false,
-			heroImageUrl: "example-card-portrait.png",
-		},
-		{
-			testHeading: "With hero/cover image, no divider, dismissible",
-			hasDivider: false,
-			isDismissible: true,
-			hasFooter: false,
-			heroImageUrl: "example-card-portrait.png",
 		},
 	],
 });
 
-export const DialogFullscreen = Variants({
-	Template,
-	withSizes: false,
-	wrapperStyles: {
-		"background-color": "var(--spectrum-gray-50)"
-	},
-	testData: [
-		{
-			showModal: false,
-			layout: "fullscreen",
-		},
-	],
-});
+export const DialogFullscreen = (args, context) => {
+	const { parameters: { showTestingGrid = false } = {} } = context;
 
-export const DialogFullscreenTakeover = Variants({
-	Template,
-	withSizes: false,
-	wrapperStyles: {
-		"background-color": "var(--spectrum-gray-50)"
-	},
-	testData: [
-		{
-			showModal: false,
-			layout: "fullscreenTakeover",
+	return Variants({
+		Template: (args, context) => {
+			return Template({
+				...args,
+				/*
+				 * Custom styles were added to make sure the VRTs catch the rounded corners
+				 */
+				customStyles: {
+					margin: showTestingGrid ? "16px" : undefined,
+				},
+			}, context);
 		},
-	],
-});
+		withSizes: false,
+		wrapperStyles: {
+			"background-color": "var(--spectrum-gray-50)",
+			...(showTestingGrid && { "inline-size": "100%" }), // Applies conditional styles based on showTestingGrid- forces the data-inner-container to be full width so the container query doesn't break.
+		},
+		containerStyles: {
+			...(showTestingGrid && { "inline-size": "100%" }), // forces the data-outer-container to be full width so the container query doesn't break.
+		},
+		testData: [
+			{
+				showModal: false,
+				layout: "fullscreen",
+			},
+		],
+	})(args, context);
+};
+
+export const DialogFullscreenTakeover = (args, context) => {
+	const { parameters: { showTestingGrid = false } = {} } = context;
+
+	return Variants({
+		Template,
+		withSizes: false,
+		wrapperStyles: {
+			...(showTestingGrid && { "inline-size": "100%" }), // Applies conditional styles based on showTestingGrid- forces the data-inner-container to be full width so the container query doesn't break.
+		},
+		// Apply conditional styles based on showTestingGrid
+		containerStyles: {
+			...(showTestingGrid && { "inline-size": "100%" }), // forces the data-outer-container to be full width so the container query doesn't break.
+		},
+		testData: [
+			{
+				showModal: false,
+				layout: "fullscreenTakeover",
+			},
+		],
+	})(args, context);
+};

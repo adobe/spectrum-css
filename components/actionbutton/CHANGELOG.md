@@ -1,5 +1,57 @@
 # Change log
 
+## 8.0.0-next.3
+
+### Major Changes
+
+📝 [#4014](https://github.com/adobe/spectrum-css/pull/4014) [`35c066b`](https://github.com/adobe/spectrum-css/commit/35c066b29c311b1bfcf4507075f13b41222ffc84) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes the `dir` attribute polyfill (served via a PostCSS transform to compiled assets) as the fallback is no longer necessary. The`dir` attribute support is available in all supported browsers and has been tested to correctly inherit inside web component shadow DOMs. This is a breaking change **only** to those relying on the `dir` attribute being present for styling, however, the `:dir` pseudo will correctly inherit values from their containers. To correctly determine the `dir` value of a node using JavaScript, you can use `getComputedStyle(node).direction`.
+
+## 8.0.0-next.2
+
+### Patch Changes
+
+- Updated dependencies [[`60a156d`](https://github.com/adobe/spectrum-css/commit/60a156d7c0efcc999bc440274bbbbf586beb274b)]:
+  - @spectrum-css/tokens@16.1.0-next.0
+
+## 8.0.0-next.1
+
+### Major Changes
+
+📝 [#2669](https://github.com/adobe/spectrum-css/pull/2669) [`b2c6357`](https://github.com/adobe/spectrum-css/commit/b2c6357c542737fb996cf8378354f525adde1fc2) Thanks [@mdt2](https://github.com/mdt2)!
+
+Action button now uses Spectrum 2 tokens and design specifications. A few notable changes:
+
+- Medium is now the default size and `.spectrum-ActionButton--sizeM` has been removed.
+- Includes the Spectrum 2 down state transform.
+- The component border was not removed and its color was changed to `transparent` in order to continue support for Windows High Contrast / forced colors, which still shows a border. The mod custom properties for border were removed to avoid interference with Windows High Contrast / forced colors accessibility.
+- Some selectors to target the icon + text button and the icon-only button have been simplified using `:has`. This removes some overly complex `calc()` functions used for inline spacing, uses the design tokens more directly, and removes the previously documented need for the component's child elements to use a specific source order.
+- Background and content colors were updated.
+- Mod custom properties have been adjusted:
+  - Renamed:
+    - `--mod-line-height-100` renamed to `--mod-actionbutton-line-height`.
+    - `--mod-sans-font-family-stack` renamed to `--mod-button-font-family`.
+    - `--mod-animation-duration-100` renamed to `--mod-button-animation-duration`.
+  - Removed:
+    - `--mod-actionbutton-border-color-default`
+    - `--mod-actionbutton-border-color-disabled`
+    - `--mod-actionbutton-border-color-down`
+    - `--mod-actionbutton-border-color-focus`
+    - `--mod-actionbutton-border-color-hover`
+    - `--mod-actionbutton-border-width`
+    - `--mod-actionbutton-static-content-color`
+  - New:
+    - `--mod-actionbutton-font-weight`
+    - `--mod-actionbutton-font-style`
+
+## 8.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
+  - @spectrum-css/icon@10.0.0-next.0
+
 ## 7.1.4
 
 ### Patch Changes
@@ -12,7 +64,9 @@ Minor linting fix of replacing `rgba` to the `rgb` shorthand syntax.
 
 ### Patch Changes
 
-- [#3644](https://github.com/adobe/spectrum-css/pull/3644) [`5adef1d`](https://github.com/adobe/spectrum-css/commit/5adef1d15d07516dc9c1aac7bbcf9ac5bdeb9e97) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Fix support for `--mod-actionbutton-border-radius` to make sure it is surfaced to consumers, and properly overwrites the default border radius setting.
+📝 [#3644](https://github.com/adobe/spectrum-css/pull/3644) [`5adef1d`](https://github.com/adobe/spectrum-css/commit/5adef1d15d07516dc9c1aac7bbcf9ac5bdeb9e97) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+Fix support for `--mod-actionbutton-border-radius` to make sure it is surfaced to consumers, and properly overwrites the default border radius setting.
 
 ## 7.1.2
 

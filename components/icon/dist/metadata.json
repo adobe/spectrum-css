@@ -11,8 +11,11 @@
     ".spectrum-Icon--sizeXXL",
     ".spectrum-Icon--sizeXXS",
     ".spectrum-UIIcon",
-    ".spectrum-UIIcon--large",
-    ".spectrum-UIIcon--medium",
+    ".spectrum-UIIcon-Add100",
+    ".spectrum-UIIcon-Add200",
+    ".spectrum-UIIcon-Add300",
+    ".spectrum-UIIcon-Add50",
+    ".spectrum-UIIcon-Add75",
     ".spectrum-UIIcon-ArrowDown100",
     ".spectrum-UIIcon-ArrowDown200",
     ".spectrum-UIIcon-ArrowDown300",
@@ -99,15 +102,23 @@
     ".spectrum-UIIcon-Dash50",
     ".spectrum-UIIcon-Dash500",
     ".spectrum-UIIcon-Dash600",
-    ".spectrum-UIIcon-Dash75"
+    ".spectrum-UIIcon-Dash75",
+    ".spectrum-UIIcon-DragHandle100",
+    ".spectrum-UIIcon-DragHandle200",
+    ".spectrum-UIIcon-DragHandle300",
+    ".spectrum-UIIcon-DragHandle75",
+    ".spectrum-UIIcon-Gripper100",
+    ".spectrum-UIIcon-LinkOut100",
+    ".spectrum-UIIcon-LinkOut200",
+    ".spectrum-UIIcon-LinkOut300",
+    ".spectrum-UIIcon-LinkOut400",
+    ".spectrum-UIIcon-LinkOut75"
   ],
   "modifiers": [
     "--mod-icon-block-size",
     "--mod-icon-color",
     "--mod-icon-inline-size",
-    "--mod-icon-size",
-    "--mod-ui-icon-large-display",
-    "--mod-ui-icon-medium-display"
+    "--mod-icon-size"
   ],
   "component": [
     "--spectrum-icon-block-size",
@@ -115,6 +126,11 @@
     "--spectrum-icon-size"
   ],
   "global": [
+    "--spectrum-add-icon-size-100",
+    "--spectrum-add-icon-size-200",
+    "--spectrum-add-icon-size-300",
+    "--spectrum-add-icon-size-50",
+    "--spectrum-add-icon-size-75",
     "--spectrum-arrow-icon-size-100",
     "--spectrum-arrow-icon-size-200",
     "--spectrum-arrow-icon-size-300",
@@ -160,8 +176,16 @@
     "--spectrum-dash-icon-size-500",
     "--spectrum-dash-icon-size-600",
     "--spectrum-dash-icon-size-75",
-    "--spectrum-ui-icon-large-display",
-    "--spectrum-ui-icon-medium-display",
+    "--spectrum-drag-handle-icon-size-100",
+    "--spectrum-drag-handle-icon-size-200",
+    "--spectrum-drag-handle-icon-size-300",
+    "--spectrum-drag-handle-icon-size-75",
+    "--spectrum-gripper-icon-size-100",
+    "--spectrum-link-out-icon-size-100",
+    "--spectrum-link-out-icon-size-200",
+    "--spectrum-link-out-icon-size-300",
+    "--spectrum-link-out-icon-size-400",
+    "--spectrum-link-out-icon-size-75",
     "--spectrum-workflow-icon-size-100",
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-300",
@@ -170,7 +194,6 @@
     "--spectrum-workflow-icon-size-xxl",
     "--spectrum-workflow-icon-size-xxs"
   ],
-  "system-theme": [],
   "passthroughs": [],
   "high-contrast": []
 }

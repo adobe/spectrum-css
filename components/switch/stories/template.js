@@ -6,9 +6,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Switch",
@@ -16,6 +13,7 @@ export const Template = ({
 	label = "Switch label",
 	isDisabled = false,
 	isChecked = false,
+	isActive = false,
 	isEmphasized = false,
 	customClasses = [],
 	customStyles = {},
@@ -32,6 +30,7 @@ export const Template = ({
 				[`${rootClass}--emphasized`] : isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
+				[`${rootClass}--active`]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
