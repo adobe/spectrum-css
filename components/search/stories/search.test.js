@@ -45,7 +45,6 @@ export const SearchGroup = Variants({
 		{
 			testHeading: "Keyboard focused",
 			isKeyboardFocused: true,
-			ignore: ["Collapsed"],
 		},
 	]
 });

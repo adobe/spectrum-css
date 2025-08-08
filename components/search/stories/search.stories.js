@@ -155,6 +155,18 @@ WithValue.parameters = {
 WithValue.storyName = "With value and clear button";
 
 /**
+ * A search field can be collapsed to show only the search button. This is useful when there is limited space available. It is most commonly used next a filter button to allow users to quickly search and filter content.
+ */
+export const Collapsed = Template.bind({});
+Collapsed.args = {
+	isCollapsed: true,
+};
+Collapsed.tags = ["!dev"];
+Collapsed.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
  * The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
 */
 export const Sizing = (args, context) => Sizes({
