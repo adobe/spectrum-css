@@ -208,13 +208,13 @@
 		}
 
 		&.is-invalid .spectrum-Combobox-input:read-only {
-			border-color: var(--highcontrast-textfield-border-color-invalid-default, var(--mod-textfield-border-color-invalid-default, var(--spectrum-combobox-readonly-border-color-invalid-default)));
+			border-color: var(--highcontrast-combobox-border-color-invalid, var(--mod-textfield-border-color-invalid-default, var(--spectrum-combobox-readonly-border-color-invalid-default)));
 		}
 
 		&.is-disabled .spectrum-Combobox-input:read-only {
 			background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-combobox-readonly-background-color-disabled));
 			border-color: var(--mod-combobox-readonly-border-color-disabled, var(--spectrum-combobox-readonly-border-color-disabled, transparent));
-			color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-combobox-readonly-text-color-disabled)));
+			color: var(--mod-textfield-text-color-disabled, var(--spectrum-combobox-readonly-text-color-disabled));
 
 			&:hover {
 				background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-combobox-readonly-background-color-disabled));
@@ -378,7 +378,7 @@
 		border-color: var(--spectrum-combobox-border-color-default);
 		box-shadow: 0 0 0 30px var(--highcontrast-combobox-background-color-default, var(--spectrum-combobox-background-color-default)) inset !important;
 		transition: background-color 200ms ease-in-out 0s;
-		-webkit-text-fill-color: var(--highcontrast-textfield-text-color-default, var(--spectrum-neutral-content-color-default)) !important;
+		-webkit-text-fill-color: var(--spectrum-neutral-content-color-default) !important;
 		line-height: var(--spectrum-combobox-line-height);
 
 		&::selection {
@@ -392,7 +392,7 @@
 
 	.spectrum-HelpText-text {
 		inline-size: 100%;
-		word-wrap: break-word;
+		overflow-wrap: break-word;
 		text-wrap: wrap;
 	}
 }

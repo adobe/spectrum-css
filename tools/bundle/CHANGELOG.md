@@ -1,5 +1,41 @@
 # Change Log
 
+## 2.0.0-next.10
+
+### Patch Changes
+
+Updated dependencies [[`5b694c5`](https://github.com/adobe/spectrum-css/commit/5b694c58be813fd82315252dab721e94bf769a71)]:
+
+- @spectrum-css/tokens@16.1.0-next.8
+
+## 2.0.0-next.9
+
+### Patch Changes
+
+Updated dependencies [[`cf4fc1a`](https://github.com/adobe/spectrum-css/commit/cf4fc1a01d23ba810f45a903ecc29a5c8aae33d1)]:
+
+- @spectrum-css/coachindicator@5.0.0-next.1
+- @spectrum-css/alertbanner@4.0.0-next.3
+- @spectrum-css/colorhandle@11.0.0-next.2
+- @spectrum-css/colorslider@9.0.0-next.3
+- @spectrum-css/inlinealert@11.0.0-next.3
+- @spectrum-css/breadcrumb@12.0.0-next.3
+- @spectrum-css/colorwheel@7.0.0-next.4
+- @spectrum-css/datepicker@5.0.0-next.2
+- @spectrum-css/assetcard@6.0.0-next.2
+- @spectrum-css/thumbnail@9.0.0-next.1
+- @spectrum-css/calendar@8.0.0-next.3
+- @spectrum-css/combobox@5.0.0-next.4
+- @spectrum-css/dropzone@9.0.0-next.4
+- @spectrum-css/treeview@13.0.0-next.3
+- @spectrum-css/underlay@7.0.0-next.1
+- @spectrum-css/sidenav@8.0.0-next.3
+- @spectrum-css/stepper@8.0.0-next.3
+- @spectrum-css/card@12.0.0-next.3
+- @spectrum-css/dial@6.0.0-next.1
+- @spectrum-css/page@10.0.0-next.1
+- @spectrum-css/well@8.0.0-next.1
+
 ## 2.0.0-next.8
 
 ### Patch Changes
