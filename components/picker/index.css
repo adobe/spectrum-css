@@ -375,9 +375,7 @@
 	}
 
 	/* CJK (Chinese, Japanese, and Korean) language support */
-	.spectrum-Picker:lang(ja) &,
-	.spectrum-Picker:lang(zh) &,
-	.spectrum-Picker:lang(ko) & {
+	.spectrum-Picker:lang(ja, zh, ko) & {
 		line-height: var(--mod-picker-line-height-cjk, var(--spectrum-picker-line-height-cjk));
 	}
 }

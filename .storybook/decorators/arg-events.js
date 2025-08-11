@@ -13,10 +13,11 @@ export const withArgEvents = makeDecorator({
 	parameterName: "argEvents",
 	wrapper: (StoryFn, context) => {
 		/** @type {[Args, (newArgs: Partial<Args>) => void, (argNames?: (keyof Args)[]) => void]} */
-		const [, updateArgs] = useArgs(context.args);
+		const [, updateArgs, resetArgs] = useArgs(Object.keys(context.args));
 
 		// Bind the updateArgs function for use in nested templates
 		context.updateArgs = updateArgs;
+		context.resetArgs = resetArgs;
 
 		return StoryFn(context);
 	},

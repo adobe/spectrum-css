@@ -54,7 +54,9 @@ export const Template = ({
 	isFocused = false,
 	isActive = false,
 	isDisabled = false,
+	isOpen = false,
 	hasPopup = "false",
+	showPopup = false,
 	popupId,
 	hideLabel = false,
 	staticColor,
@@ -72,7 +74,8 @@ export const Template = ({
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
 			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
-			aria-pressed=${isSelected ? "true" : "false"}
+			aria-pressed=${ifDefined(isSelected ? "true" : undefined)}
+			aria-expanded=${ifDefined(hasPopup && hasPopup !== "false" ? isOpen ? "true" : "false" : undefined)}
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -82,7 +85,6 @@ export const Template = ({
 				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
 				["is-disabled"]: isDisabled,
-				["is-selected"]: isSelected,
 				["is-hover"]: isHovered,
 				["is-focus-visible"]: isFocused,
 				["is-active"]: isActive,
@@ -105,20 +107,7 @@ export const Template = ({
 				updateArgs({ isFocused: false });
 			}}
 		>
-			${when(hasPopup && hasPopup !== "false", () =>
-				Icon({
-					size,
-					iconName: "CornerTriangle" + ({
-						xs: "75",
-						s: "75",
-						m: "100",
-						l: "200",
-						xl: "300",
-					}[size] || "100"),
-					setName: "ui",
-					customClasses: [`${rootClass}-hold`],
-				}, context)
-			)}
+			${when(showPopup && hasPopup && hasPopup !== "false", () => html`<span class=${classMap({ [`${rootClass}-hold`]: true })}></span>`)}
 			${when(iconName, () =>
 				Icon({
 					size,

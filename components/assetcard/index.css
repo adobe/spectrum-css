@@ -77,8 +77,8 @@
 
 	cursor: pointer;
 
-	&:lang(zh),
 	&:lang(ja),
+	&:lang(zh),
 	&:lang(ko) {
 		--spectrum-assetcard-title-font-family: var(--spectrum-cjk-font-family-stack);
 		--spectrum-assetcard-title-font-style: var(--spectrum-heading-cjk-font-style);

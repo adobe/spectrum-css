@@ -5,7 +5,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { PickerGroup } from "./picker.test.js";
+import { PickerGroup, PickerGroupVariants } from "./picker.test.js";
 import { ClosedAndOpenTemplate, DisabledTemplate, Template } from "./template.js";
 
 /**
@@ -182,6 +182,17 @@ Default.parameters = {
 };
 
 // ********* VRT ONLY ********* //
+export const WithVariants = PickerGroupVariants.bind({});
+WithVariants.args = {};
+WithVariants.tags = ["!autodocs"];
+WithVariants.parameters = {
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
+};
+
 export const WithForcedColors = PickerGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
