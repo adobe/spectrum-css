@@ -8,7 +8,7 @@ import { PickerGroup } from "./pickerbutton.test.js";
 import { PickerIconOptions, Template } from "./template.js";
 
 /**
- * The picker button component is used as a dropdown trigger within other components such as [combobox](?path=/docs/components-combobox--docs).
+ * The picker button component is used as a dropdown trigger within other components such as [combobox](?path=/docs/components-combobox--docs) and [date picker](?path=/docs/components-date-picker--docs).
  */
 export default {
 	title: "Picker button",
@@ -102,6 +102,36 @@ Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * Use the correct UI icon size that corresponds to the t-shirt size you require. For instance, if using the chevron icon seen below:
+ *
+	<table>
+		<thead>
+			<tr>
+				<th>**T-Shirt Size**</th>
+				<th>**Icon Size**</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>spectrum-PickerButton--sizeS</td>
+				<td>spectrum-css-icon-Chevron75</td>
+			</tr>
+			<tr>
+				<td>spectrum-PickerButton--sizeM</td>
+				<td>spectrum-css-icon-Chevron100</td>
+			</tr>
+			<tr>
+				<td>spectrum-PickerButton--sizeL</td>
+				<td>spectrum-css-icon-Chevron200</td>
+			</tr>
+			<tr>
+				<td>spectrum-PickerButton--sizeXL</td>
+				<td>spectrum-css-icon-Chevron300</td>
+			</tr>
+		</tbody>
+	</table>
+ */
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withHeading: false,
