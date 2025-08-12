@@ -2,7 +2,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PickerGroup } from "./picker.test.js";
@@ -82,11 +82,6 @@ export default {
 				category: "Advanced",
 			},
 		},
-		isQuiet: {
-			...isQuiet,
-			description: "An alternative way to display the Picker without a visible background.",
-			name: "Quiet styling",
-		},
 		helpText: {
 			name: "Help text",
 			description: "Optional help text that can be informational or an error message. Displays a separate help text component after the picker. For error messages, the invalid control must also be set to true.",
@@ -123,7 +118,6 @@ export default {
 		currentValue: "",
 		contentIconName: "Image",
 		showWorkflowIcon: false,
-		isQuiet: false,
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
@@ -311,52 +305,6 @@ Loading.args = {
 };
 Loading.parameters = {
 	chromatic: { disableSnapshot: true },
-};
-
-/**
- * Quiet pickers have no visible background. This style works best when a clear layout (vertical stack, table, grid)
- * makes it easy to parse the buttons. Too many quiet components in a small space can be hard to read.
- */
-export const Quiet = ClosedAndOpenTemplate.bind({});
-Quiet.tags = ["!dev"];
-Quiet.args = {
-	isQuiet: true,
-};
-Quiet.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
-};
-
-export const QuietDisabled = DisabledTemplate.bind({});
-QuietDisabled.storyName = "Quiet and disabled";
-QuietDisabled.tags = ["!dev"];
-QuietDisabled.args = {
-	isDisabled: true,
-	isQuiet: true,
-};
-QuietDisabled.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const QuietInvalid = ClosedAndOpenTemplate.bind({});
-QuietInvalid.storyName = "Quiet and invalid";
-QuietInvalid.tags = ["!dev"];
-QuietInvalid.args = {
-	isInvalid: true,
-	isQuiet: true,
-	helpText: "Select a country.",
-};
-QuietInvalid.parameters = {
-	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
 };
 
 /**
