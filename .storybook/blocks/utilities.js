@@ -25,8 +25,11 @@ try {
 }
 
 /**
- * Gets all component directories that have a specific status
- * Only works in Node.js environment
+ * Gets all component directories that have a specific status.
+ * This is a Storybook-facing "wrapper" that defers the actual work to the
+ * Node.js script in tasks/migrated-component-scanner.js. In this browser this
+ * wrapper returns an empty array and prevents bundlers from pulling in fs/path
+ * and avoiding runtime errors.
  * @param {Object} options Options for filtering components
  * @param {string} options.statusType Status type to filter by (e.g., 'migrated')
  * @returns {string[]} Array of matching component directory names
