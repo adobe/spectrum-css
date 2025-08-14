@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 import { Body, Code, Heading } from "./Typography.jsx";
 import { DDefinition, DList, DTerm } from "./Layouts.jsx";
-import { fetchToken, getComponentsByStatus } from "./utilities.js";
+import { fetchToken, getComponentsByStatusWrapper } from "./utilities.js";
 
 import AdobeSVG from "../assets/images/adobe_logo.svg?raw";
 import GitHubSVG from "../assets/images/github_logo.svg?raw";
@@ -467,7 +467,7 @@ export const MigratedComponentsList = () => {
 			}
 
 			// Dynamic loading as fallback
-			const migrated = getComponentsByStatus({ statusType: 'migrated' });
+			const migrated = getComponentsByStatusWrapper({ statusType: 'migrated' });
 
 			if (migrated && migrated.length > 0) {
 				setComponents(migrated);

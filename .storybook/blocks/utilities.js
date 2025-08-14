@@ -31,7 +31,7 @@ try {
  * @param {string} options.statusType Status type to filter by (e.g., 'migrated')
  * @returns {string[]} Array of matching component directory names
  */
-export function getComponentsByStatus(options = {}) {
+export function getComponentsByStatusWrapper(options = {}) {
 	// Check if we're in a Node.js environment
 	if (!isNode || !componentUtils) {
 		console.warn('getComponentsByStatus can only be used in a Node.js environment');
