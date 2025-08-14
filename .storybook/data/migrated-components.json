@@ -1,6 +1,6 @@
 {
   "total": 85,
-  "migrated": 59,
+  "migrated": 62,
   "components": [
     {
       "name": "accordion",
@@ -208,6 +208,11 @@
       "url": "picker"
     },
     {
+      "name": "pickerbutton",
+      "title": "Picker button",
+      "url": "picker-button"
+    },
+    {
       "name": "popover",
       "title": "Popover",
       "url": "popover"
@@ -236,6 +241,11 @@
       "name": "search",
       "title": "Search field",
       "url": "search-field"
+    },
+    {
+      "name": "slider",
+      "title": "Slider",
+      "url": "slider"
     },
     {
       "name": "statuslight",
@@ -268,6 +278,11 @@
       "url": "table"
     },
     {
+      "name": "tabs",
+      "title": "Tabs",
+      "url": "tabs"
+    },
+    {
       "name": "tag",
       "title": "Tag",
       "url": "tag"
@@ -298,5 +313,5 @@
       "url": "tooltip"
     }
   ],
-  "generatedAt": "2025-07-25T16:09:33.286Z"
+  "generatedAt": "2025-08-14T14:29:31.682Z"
 }
