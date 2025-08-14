@@ -114,7 +114,6 @@ export const Template = ({
 	currentValue,
 	helpText,
 	id = getRandomId("picker"),
-	isQuiet = false,
 	isOpen = false,
 	isInvalid = false,
 	isDisabled = false,
@@ -139,7 +138,6 @@ export const Template = ({
 	const pickerMarkup = Picker({
 		rootClass,
 		size,
-		isQuiet,
 		currentValue,
 		showWorkflowIcon,
 		contentIconName,
@@ -160,7 +158,6 @@ export const Template = ({
 		isOpen: isOpen && !isDisabled && !isLoading,
 		withTip: false,
 		position: "bottom-start",
-		isQuiet,
 		content: popoverContent,
 		size,
 		customStyles: customPopoverStyles,
@@ -186,7 +183,6 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--sideLabel`]: labelPosition == "side",
 			})}
 			style=${styleMap({
