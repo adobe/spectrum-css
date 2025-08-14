@@ -42,6 +42,7 @@ export const Template = ({
 				iconName: "Search",
 				size,
 				isFocused: isFocused || isKeyboardFocused,
+				isQuiet: true,
 				customClasses: [
 					`${rootClass}-actionButton`,
 					isHovered && "is-hover",
