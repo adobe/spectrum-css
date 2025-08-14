@@ -152,15 +152,16 @@
 
 	/* Animation for collapsible search expansion */
 	&.is-collapsed {
-		transition: inline-size 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		transition: inline-size 0.3s ease-in-out;
 		inline-size: var(--mod-search-button-inline-size, var(--spectrum-search-block-size));
 		min-inline-size: var(--mod-search-button-inline-size, var(--spectrum-search-block-size));
 		transform-origin: left center;
 	}
 
 	&.is-expanded {
-		transition: inline-size 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		transition: inline-size 0.3s ease-in-out;
 		inline-size: var(--mod-search-inline-size, var(--spectrum-search-inline-size));
+		min-inline-size: auto;
 		transform-origin: left center;
 	}
 }
