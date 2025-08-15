@@ -75,6 +75,24 @@
 		var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) + var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) + (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height)))
 	);
 
+	/* If we use min-height token, we need a different calculation for the item title's vertical spacing, subtract what we need for font and line height, then divide by 2 */
+	--spectrum-accordion-item-title-calculated-padding: calc(
+		(var(--mod-accordion-item-minimum-height, var(--spectrum-accordion-item-minimum-height)) -
+		(var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height))))
+		/ 2
+	);
+
+	/* ok and then let's go ahead and figure out the max right here */
+	--spectrum-accordion-item-title-top-padding: max(
+		var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)),
+		var(--spectrum-accordion-item-title-calculated-padding)
+	);
+
+	--spectrum-accordion-item-title-bottom-padding: max(
+		var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)),
+		var(--spectrum-accordion-item-title-calculated-padding)
+	);
+
 	/* Calculated vertical spacing for action button and switch to center them within the accordion item */
 	--spectrum-accordion-item-direct-actions-vertical-spacing: calc((var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size)) - var(--mod-accordion-item-direct-actions-height, var(--spectrum-accordion-item-direct-actions-height))) / 2);
 
@@ -272,7 +290,9 @@
 }
 
 .spectrum-Accordion-itemTitle {
-	padding-block: var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space));
+	padding-block: var(--spectrum-accordion-item-title-top-padding) var(--spectrum-accordion-item-title-bottom-padding);
+
+	/* padding-block: var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)); */
 	padding-inline-end: var(--mod-accordion-edge-to-text-space, var(--spectrum-accordion-edge-to-text-space));
 }
 
