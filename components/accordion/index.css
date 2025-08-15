@@ -13,7 +13,7 @@
 
 .spectrum-Accordion {
 	/* Layout and spacing */
-	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-100);
+	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
 	--spectrum-accordion-item-minimum-width: var(--spectrum-accordion-minimum-width);
 	--spectrum-accordion-item-width: var(--spectrum-field-default-width-medium);
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-100);
@@ -93,7 +93,7 @@
 }
 
 .spectrum-Accordion--sizeS {
-	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-75);
+	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-100);
 	--spectrum-accordion-item-width: var(--spectrum-accordion-minimum-width); /* small size default width uses this min-width token */
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-75);
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-small);
@@ -110,7 +110,7 @@
 }
 
 .spectrum-Accordion--sizeL {
-	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
+	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-300);
 	--spectrum-accordion-item-width: var(--spectrum-field-default-width-large);
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-200);
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-large);
@@ -127,7 +127,7 @@
 }
 
 .spectrum-Accordion--sizeXL {
-	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-300);
+	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-400);
 	--spectrum-accordion-item-width: var(--spectrum-field-default-width-extra-large);
 	--spectrum-accordion-disclosure-indicator-height: var(--spectrum-chevron-icon-size-300);
 	--spectrum-accordion-disclosure-indicator-to-text-space: var(--spectrum-accordion-disclosure-indicator-to-text-extra-large);
@@ -144,27 +144,27 @@
 }
 
 .spectrum-Accordion--compact {
-	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-75);
+	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-100);
 	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-medium);
 	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-medium);
 	--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-compact-medium);
 
 	&.spectrum-Accordion--sizeS {
-		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-50);
+		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-75);
 		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-small);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-small);
 		--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-compact-small);
 	}
 
 	&.spectrum-Accordion--sizeL {
-		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-100);
+		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
 		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-large);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-large);
 		--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-compact-large);
 	}
 
 	&.spectrum-Accordion--sizeXL {
-		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
+		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-300);
 		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-compact-extra-large);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-compact-extra-large);
 		--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-compact-extra-large);
@@ -172,27 +172,27 @@
 }
 
 .spectrum-Accordion--spacious {
-	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
+	--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-300);
 	--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-medium);
 	--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-medium);
 	--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-spacious-medium);
 
 	&.spectrum-Accordion--sizeS {
-		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-100);
+		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-200);
 		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-small);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-small);
 		--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-spacious-small);
 	}
 
 	&.spectrum-Accordion--sizeL {
-		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-300);
+		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-400);
 		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-large);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-large);
 		--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-spacious-large);
 	}
 
 	&.spectrum-Accordion--sizeXL {
-		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-400);
+		--spectrum-accordion-item-minimum-height: var(--spectrum-component-height-500);
 		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-spacious-extra-large);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-spacious-extra-large);
 		--spectrum-accordion-top-to-disclosure-indicator: var(--spectrum-field-top-to-disclosure-icon-spacious-extra-large);
