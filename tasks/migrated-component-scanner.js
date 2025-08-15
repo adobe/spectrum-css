@@ -16,10 +16,18 @@
 /* eslint-disable no-console */
 
 /**
- * This script scans the components directory and generates a list of components
- * with a migrated status. The output can be saved to a JSON file or printed to console.
+ * this script scans the `components` directory and builds a list of storybook
+ * components that are marked as migrated. it can either print a human-friendly
+ * list to the console or write a structured json report to disk.
  *
- * Usage:
+ * important behavior:
+ * - a single component directory can contain multiple story files (for example,
+ *   text field and text area). when multiple story files are marked as migrated,
+ *   this script returns one entry per story so each item appears in the output.
+ * - console output is alphabetically sorted by title (case- and accent-insensitive)
+ *   to make it easier to scan.
+ *
+ * usage:
  *   node tasks/migrated-component-scanner.js [--output=path/to/output.json]
  */
 
@@ -123,43 +131,84 @@ function generateUrlFragmentFromTitle(title) {
 }
 
 /**
- * Generates a list of migrated components with their titles, and docs links
- * @returns {Object} Information about migrated components
+ * generate a list of migrated components with titles and doc links.
+ *
+ * notes on shape of data:
+ * - the returned `components` array can include multiple entries for a single
+ *   component directory when there are multiple migrated story files present.
+ * - each entry includes the human-friendly title and a url fragment derived
+ *   from that title for linking.
+ *
+ * @returns {{ total: number, migrated: number, components: Array<{name: string, title: string, url: string}>, generatedAt: string }}
+ *   information about migrated components and counts.
  */
 function generateMigratedComponentsReport() {
 	const allComponents = getAllComponentDirectories();
 	const migratedComponents = getComponentsByStatus("migrated");
 
-	const componentsWithData = migratedComponents.map((dir) => {
+	// build entries per component directory depending on how many story files
+	// inside the directory are marked as `type: "migrated"`.
+	const migratedComponentData = migratedComponents.flatMap((dir) => {
 		const storiesDir = path.resolve(process.cwd(), "components", dir, "stories");
 		if (!fs.existsSync(storiesDir)) {
-			return {
+			// no stories directory; fall back to a single, generic entry so the component still shows up in the report.
+			return [{
 				name: dir,
 				title: dir,
 				url: dir,
-			};
+			}];
 		}
 
 		const storyFiles = fs.readdirSync(storiesDir).filter(file => file.endsWith(".stories.js"));
-		let title = null;
+
+		const entries = [];
 		for (const file of storyFiles) {
-			title = extractTitleFromStoryFile(path.join(storiesDir, file));
-			if (title) break;
+			const filePath = path.join(storiesDir, file);
+			let content = "";
+			try {
+				content = fs.readFileSync(filePath, "utf8");
+			} catch (_) {
+				// if a file cannot be read, skip it and continue with others.
+				continue;
+			}
+
+			// only include story files that declare `type: "migrated"` in their metadata.
+			if (!content.includes("type: \"migrated\"")) continue;
+
+			const title = extractTitleFromStoryFile(filePath) || dir;
+			const urlFragment = generateUrlFragmentFromTitle(title);
+			entries.push({
+				name: dir,
+				title,
+				url: urlFragment,
+			});
 		}
 
-		const urlFragment = generateUrlFragmentFromTitle(title || dir);
+		// if there are stories but none are marked as migrated, include a single
+		// fallback entry for the directory to keep counts consistent.
+		if (entries.length === 0) {
+			const urlFragment = generateUrlFragmentFromTitle(dir);
+			return [{
+				name: dir,
+				title: dir,
+				url: urlFragment,
+			}];
+		}
 
-		return {
-			name: dir,
-			title: title || dir,
-			url: urlFragment,
-		};
+		return entries;
 	});
+
+	// sort the final array alphabetically by title (fallback to name),
+	// keeping the full objects intact for json output and rendering.
+	const componentsSorted = migratedComponentData
+		.slice()
+		.sort((a, b) => (a.title || a.name)
+			.localeCompare(b.title || b.name, undefined, { sensitivity: "base" }));
 
 	return {
 		total: allComponents.length,
-		migrated: migratedComponents.length,
-		components: componentsWithData,
+		migrated: migratedComponentData.length,
+		components: componentsSorted,
 		generatedAt: new Date().toISOString()
 	};
 }
@@ -192,7 +241,10 @@ if (require.main === module) {
 			console.log(`Found ${report.migrated} migrated components out of ${report.total} total components.`);
 		} else {
 			console.log("Migrated Components:");
-			console.log(report.components.join(", "));
+			const componentNames = report.components
+				.map(component => component.title || component.name || component)
+				.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+			console.log(componentNames.join(", "));
 			console.log(`\nTotal: ${report.migrated} out of ${report.total} components are migrated.`);
 		}
 	})();
