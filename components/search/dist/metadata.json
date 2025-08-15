@@ -22,7 +22,9 @@
     ".spectrum-Search-textfield.is-focused:hover .spectrum-Search-icon",
     ".spectrum-Search-textfield.is-keyboardFocused .spectrum-Search-icon",
     ".spectrum-Search-textfield:hover .spectrum-Search-icon",
+    ".spectrum-Search.is-collapsed",
     ".spectrum-Search.is-disabled .spectrum-Search-clearButton",
+    ".spectrum-Search.is-expanded",
     ".spectrum-Search:lang(ja)",
     ".spectrum-Search:lang(ko)",
     ".spectrum-Search:lang(zh)"
@@ -41,6 +43,7 @@
     "--mod-search-border-width",
     "--mod-search-bottom-to-text",
     "--mod-search-button-inline-size",
+    "--mod-search-collapsed-animation-duration",
     "--mod-search-color-default",
     "--mod-search-color-disabled",
     "--mod-search-color-focus",
@@ -77,6 +80,7 @@
     "--spectrum-search-border-width",
     "--spectrum-search-bottom-to-text",
     "--spectrum-search-button-inline-size",
+    "--spectrum-search-collapsed-animation-duration",
     "--spectrum-search-color",
     "--spectrum-search-color-default",
     "--spectrum-search-color-disabled",
@@ -102,6 +106,7 @@
     "--spectrum-search-top-to-text"
   ],
   "global": [
+    "--spectrum-animation-duration-800",
     "--spectrum-border-width-200",
     "--spectrum-cjk-line-height-100",
     "--spectrum-component-bottom-to-text-100",

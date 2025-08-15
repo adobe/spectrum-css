@@ -66,6 +66,9 @@
 	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Textfield mods */
 	--spectrum-search-border-color-disabled: var(--spectrum-disabled-border-color);
 
+	/* Collapsed Search */
+	--spectrum-search-collapsed-animation-duration: var(--spectrum-animation-duration-800);
+
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
@@ -148,6 +151,21 @@
 
 	.spectrum-HelpText {
 		margin-block-start: var(--mod-search-to-help-text, var(--spectrum-search-to-help-text));
+	}
+
+	/* Animation for collapsible search expansion */
+	&.is-collapsed {
+		transition: inline-size var(--mod-search-collapsed-animation-duration, var(--spectrum-search-collapsed-animation-duration)) ease-in-out;
+		inline-size: var(--mod-search-button-inline-size, var(--spectrum-search-block-size));
+		min-inline-size: var(--mod-search-button-inline-size, var(--spectrum-search-block-size));
+		transform-origin: left center;
+	}
+
+	&.is-expanded {
+		transition: inline-size var(--mod-search-collapsed-animation-duration, var(--spectrum-search-collapsed-animation-duration)) ease-in-out;
+		inline-size: var(--mod-search-inline-size, var(--spectrum-search-inline-size));
+		min-inline-size: auto;
+		transform-origin: left center;
 	}
 }
 
