@@ -1,6 +1,6 @@
 {
   "total": 85,
-  "migrated": 62,
+  "migrated": 63,
   "components": [
     {
       "name": "accordion",
@@ -193,6 +193,11 @@
       "url": "meter"
     },
     {
+      "name": "stepper",
+      "title": "Number field",
+      "url": "number-field"
+    },
+    {
       "name": "opacitycheckerboard",
       "title": "Opacity checkerboard",
       "url": "opacity-checkerboard"
@@ -253,11 +258,6 @@
       "url": "status-light"
     },
     {
-      "name": "stepper",
-      "title": "Number field",
-      "url": "number-field"
-    },
-    {
       "name": "swatch",
       "title": "Swatch",
       "url": "swatch"
@@ -298,6 +298,11 @@
       "url": "text-area"
     },
     {
+      "name": "textfield",
+      "title": "Text field",
+      "url": "text-field"
+    },
+    {
       "name": "thumbnail",
       "title": "Thumbnail",
       "url": "thumbnail"
@@ -313,5 +318,5 @@
       "url": "tooltip"
     }
   ],
-  "generatedAt": "2025-08-14T14:29:31.682Z"
+  "generatedAt": "2025-08-15T21:14:18.477Z"
 }
