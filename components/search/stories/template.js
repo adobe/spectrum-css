@@ -41,7 +41,7 @@ export const Template = ({
 			ActionButton({
 				iconName: "Search",
 				size,
-				isFocused: isFocused || isKeyboardFocused,
+				isFocused: !isDisabled && (isFocused || isKeyboardFocused),
 				isQuiet: true,
 				customClasses: [
 					`${rootClass}-actionButton`,

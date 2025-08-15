@@ -152,14 +152,14 @@
 
 	/* Animation for collapsible search expansion */
 	&.is-collapsed {
-		transition: inline-size 0.3s ease-in-out;
+		transition: inline-size var(--spectrum-animation-duration-800) ease-in-out;
 		inline-size: var(--mod-search-button-inline-size, var(--spectrum-search-block-size));
 		min-inline-size: var(--mod-search-button-inline-size, var(--spectrum-search-block-size));
 		transform-origin: left center;
 	}
 
 	&.is-expanded {
-		transition: inline-size 0.3s ease-in-out;
+		transition: inline-size var(--spectrum-animation-duration-800) ease-in-out;
 		inline-size: var(--mod-search-inline-size, var(--spectrum-search-inline-size));
 		min-inline-size: auto;
 		transform-origin: left center;
