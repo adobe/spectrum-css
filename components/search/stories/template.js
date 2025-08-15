@@ -40,6 +40,7 @@ export const Template = ({
 		${when(isCollapsed, () =>
 			ActionButton({
 				iconName: "Search",
+				isDisabled,
 				size,
 				isFocused: !isDisabled && (isFocused || isKeyboardFocused),
 				isQuiet: true,
