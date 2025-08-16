@@ -58,7 +58,7 @@ jobs:
         steps:
             # install but don't build - we're linting pre-compiled assets
             - name: Check out code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
               with:
                   fetch-depth: 0
 
