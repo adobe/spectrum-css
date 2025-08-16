@@ -72,7 +72,7 @@ jobs:
         timeout-minutes: 5
         steps:
             - name: Check out code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
 
             - name: Convert new TODO items to issues
               uses: alstr/todo-to-issue-action@v5
