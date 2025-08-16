@@ -1,5 +1,13 @@
 # Change Log
 
+## 12.0.5-next.14
+
+### Patch Changes
+
+Updated dependencies []:
+
+- @spectrum-css/bundle@2.0.0-next.11
+
 ## 12.0.5-next.13
 
 ### Patch Changes
