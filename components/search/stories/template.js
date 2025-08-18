@@ -41,13 +41,12 @@ export const Template = ({
 			ActionButton({
 				iconName: "Search",
 				isDisabled,
+				isHovered,
 				size,
 				isFocused: !isDisabled && (isFocused || isKeyboardFocused),
 				isQuiet: true,
 				customClasses: [
 					`${rootClass}-actionButton`,
-					isHovered && "is-hover",
-					isDisabled && "is-disabled",
 				],
 				onclick: () => {
 					updateArgs({ isCollapsed: !isCollapsed });
