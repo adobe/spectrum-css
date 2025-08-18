@@ -573,7 +573,6 @@
 
 		/* The perceived motion can be a bit jarring given the size/complexity of a menu item */
 		@media (prefers-reduced-motion: no-preference) {
-			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
 			transform: perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down))) translateZ(var(--spectrum-component-size-difference-down));
 		}
 

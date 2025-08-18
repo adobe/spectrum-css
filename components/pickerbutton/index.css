@@ -29,9 +29,6 @@
 	--spectrum-picker-button-background-animation-duration: var(--spectrum-animation-duration-100);
 
 	--spectrum-picker-button-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-100); /* equivalent to --spectrum-infield-button-inline-edge-to-disclosure-icon */
-
-
-	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
 	--spectrum-picker-button-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
 
 	&:disabled {
