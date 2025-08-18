@@ -334,7 +334,7 @@
 
 	&:has(+ .spectrum-Accordion-itemDirectActions) {
 		/* set spacing between header and direct actions, whether or not noInlinePadding variant is used */
-		padding-inline-end: var(--mod-accordion-item-header-to-direct-actions-space, var(--spectrum-accordion-item-header-to-direct-actions-space));
+		margin-inline-end: var(--mod-accordion-item-header-to-direct-actions-space, var(--spectrum-accordion-item-header-to-direct-actions-space));
 	}
 }
 
