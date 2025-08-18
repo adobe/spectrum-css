@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.0.0-next.11
+
+### Patch Changes
+
+Updated dependencies [[`7061eee`](https://github.com/adobe/spectrum-css/commit/7061eee2ada0b64bb68e37f93329c57e8dba4586), [`7061eee`](https://github.com/adobe/spectrum-css/commit/7061eee2ada0b64bb68e37f93329c57e8dba4586), [`7ac2952`](https://github.com/adobe/spectrum-css/commit/7ac2952d16e9760121e3a33390d14f6e336d587d), [`e467fe0`](https://github.com/adobe/spectrum-css/commit/e467fe00cfef00311b77ec4b32c6ab1791b6923a)]:
+
+- @spectrum-css/pickerbutton@7.0.0-next.2
+- @spectrum-css/infieldbutton@7.0.0-next.3
+- @spectrum-css/picker@10.0.0-next.4
+- @spectrum-css/search@9.0.0-next.3
+
 ## 2.0.0-next.10
 
 ### Patch Changes

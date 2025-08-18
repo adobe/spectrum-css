@@ -1,5 +1,17 @@
 # Change log
 
+## 7.0.0-next.3
+
+### Patch Changes
+
+📝 [#4114](https://github.com/adobe/spectrum-css/pull/4114) [`7061eee`](https://github.com/adobe/spectrum-css/commit/7061eee2ada0b64bb68e37f93329c57e8dba4586) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Remove unused key-focus and border mods. Note that border and key focus styles were previously removed in the migration to Spectrum 2, and the mod removals here do not have any visual impact to the infield button.
+
+Also updates transition to use `background-color` instead of `border-color`.
+
+Also fixes a flash bug in WHCM: when hovered, the infield button was flashing/blinking before changing to the appropriate hover color.
+
 ## 7.0.0-next.2
 
 ### Major Changes
