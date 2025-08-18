@@ -91,7 +91,6 @@
 	text-decoration: none;
 
 	min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
-	block-size: 100%;
 
 	border: var(--spectrum-card-border-width) solid transparent;
 	border-radius: var(--spectrum-card-corner-radius);
@@ -337,6 +336,7 @@
 	overflow: visible;
 	border-color: transparent;
 	background-color: transparent;
+	block-size: 100%;
 
 	&::before {
 		display: none;
