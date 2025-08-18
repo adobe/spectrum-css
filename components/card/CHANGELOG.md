@@ -1,5 +1,13 @@
 # Change log
 
+## 11.1.2
+
+### Patch Changes
+
+📝 [#4137](https://github.com/adobe/spectrum-css/pull/4137) [`b7e67ba`](https://github.com/adobe/spectrum-css/commit/b7e67ba3559d62949deb0add211542a8dd02335a) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+The property `block-size: 100%` had been removed accidentally from `.spectrum-Card–gallery` and `.spectrum-Card–quiet`, and put on the `.spectrum-Card` parent card. This patch correctly reapplies `block-size: 100%` to the gallery and quiet variants.
+
 ## 11.1.1
 
 ### Patch Changes
