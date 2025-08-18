@@ -10,31 +10,63 @@
   ],
   "modifiers": [
     "--mod-contextual-help-body-color",
-    "--mod-contextual-help-heading-color",
-    "--mod-spectrum-contextual-help-body-size",
-    "--mod-spectrum-contextual-help-content-spacing",
-    "--mod-spectrum-contextual-help-heading-size",
-    "--mod-spectrum-contextual-help-link-spacing",
-    "--mod-spectrum-contextual-help-minimum-width",
-    "--mod-spectrum-contextual-help-padding",
-    "--mod-spectrum-contextual-help-popover-maximum-width"
+    "--mod-contextual-help-body-line-height",
+    "--mod-contextual-help-body-sans-serif-font-family",
+    "--mod-contextual-help-body-sans-serif-font-style",
+    "--mod-contextual-help-body-sans-serif-font-weight",
+    "--mod-contextual-help-body-size",
+    "--mod-contextual-help-content-spacing",
+    "--mod-contextual-help-heading-size",
+    "--mod-contextual-help-link-spacing",
+    "--mod-contextual-help-min-inline-size",
+    "--mod-contextual-help-padding",
+    "--mod-contextual-help-popover-maximum-width",
+    "--mod-contextual-help-title-color",
+    "--mod-contextual-help-title-font-style",
+    "--mod-contextual-help-title-font-weight",
+    "--mod-contextual-help-title-line-height",
+    "--mod-contextual-help-title-sans-serif-font-family"
   ],
   "component": [
+    "--spectrum-contextual-help-body-color",
+    "--spectrum-contextual-help-body-line-height",
+    "--spectrum-contextual-help-body-sans-serif-font-family",
+    "--spectrum-contextual-help-body-sans-serif-font-style",
+    "--spectrum-contextual-help-body-sans-serif-font-weight",
     "--spectrum-contextual-help-body-size",
     "--spectrum-contextual-help-content-spacing",
+    "--spectrum-contextual-help-link-spacing",
+    "--spectrum-contextual-help-min-inline-size",
     "--spectrum-contextual-help-minimum-width",
+    "--spectrum-contextual-help-padding",
+    "--spectrum-contextual-help-title-color",
+    "--spectrum-contextual-help-title-font-style",
+    "--spectrum-contextual-help-title-font-weight",
+    "--spectrum-contextual-help-title-line-height",
+    "--spectrum-contextual-help-title-sans-serif-font-family",
     "--spectrum-contextual-help-title-size"
   ],
   "global": [
     "--spectrum-body-color",
-    "--spectrum-heading-color",
+    "--spectrum-body-sans-serif-font-style",
+    "--spectrum-body-sans-serif-font-weight",
+    "--spectrum-corner-radius-large-default",
+    "--spectrum-line-height-200",
+    "--spectrum-sans-font-family-stack",
+    "--spectrum-spacing-100",
     "--spectrum-spacing-300",
-    "--spectrum-spacing-400"
+    "--spectrum-spacing-400",
+    "--spectrum-title-color",
+    "--spectrum-title-line-height",
+    "--spectrum-title-sans-serif-font-style",
+    "--spectrum-title-sans-serif-font-weight"
   ],
-  "system-theme": [],
-  "passthroughs": [],
+  "passthroughs": [
+    "--mod-popover-animation-distance",
+    "--mod-popover-corner-radius"
+  ],
   "high-contrast": [
     "--highcontrast-contextual-help-body-color",
-    "--highcontrast-contextual-help-heading-color"
+    "--highcontrast-contextual-help-title-color"
   ]
 }

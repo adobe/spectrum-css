@@ -44,7 +44,7 @@ jobs:
             has-changed: ${{ steps.compare.outputs.has-changed }}
             total-size: ${{ steps.compare.outputs.total-size }}
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v5
               with:
                   fetch-depth: 0
 
@@ -86,14 +86,14 @@ jobs:
                   echo "base-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
 
             - name: Download build artifacts for head
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v5
               with:
                   name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.head-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}
                   merge-multiple: true
 
             - name: Download build artifacts for base
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v5
               with:
                   name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.base-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}
@@ -158,7 +158,7 @@ jobs:
                   echo "key=ubuntu-latest-node20-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
 
             - name: Check if build artifacts already exist
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v5
               id: artifact-found
               continue-on-error: true
               with:
@@ -170,7 +170,7 @@ jobs:
               run: exit 0
 
             - name: Check out code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
               with:
                   fetch-depth: 0
                   ref: ${{ matrix.branch }}
@@ -206,7 +206,7 @@ jobs:
             - name: Check for built assets
               continue-on-error: true
               id: download
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v5
               with:
                   path: |
                     ${{ github.workspace }}/components/*/dist/**

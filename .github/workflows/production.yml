@@ -4,7 +4,7 @@ name: Build and verify production
     # - Build the main branch
     # - Report on the compiled output
     # - Run visual regression tests
-    # - Publish the PR branch to Netlify
+    # - Publish the PR branch to Azure
     # -------------------------------------------------------------
 
 on:
@@ -58,8 +58,8 @@ jobs:
         secrets: inherit
 
     # -------------------------------------------------------------
-    # PUBLISH TO NETLIFY --- #
-    # Publish to netlify by leveraging the previous build and then building the site as well
+    # PUBLISH TO AZURE --- #
+    # Publish to azure by leveraging the previous build and then building the site as well
     # -------------------------------------------------------------
     publish_site:
         name: Publish
@@ -72,7 +72,7 @@ jobs:
         timeout-minutes: 5
         steps:
             - name: Check out code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
 
             - name: Convert new TODO items to issues
               uses: alstr/todo-to-issue-action@v5

@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isRequired, size } from "@spectrum-css/preview/types";
+import { isDisabled, isRequired, size, staticColor } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { FieldLabelGroup } from "./fieldlabel.test.js";
@@ -35,6 +35,7 @@ export default {
 		},
 		isDisabled,
 		isRequired,
+		staticColor,
 	},
 	args: {
 		rootClass: "spectrum-FieldLabel",
@@ -51,7 +52,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
@@ -102,6 +107,8 @@ RightAligned.storyName = "Right-aligned";
  * Field labels for required inputs can be marked with an asterisk at the end of the label. Optional inputs would then be understood to not have the asterisk. If using the asterisk icon, do not leave any space between the label text and the start of the `<svg>` element in the markup. Extra space should not be added in addition to the inline margin.
  *
  * The field label for a required field can display either the text “(required)”, or an asterisk.
+ *
+ * When marking a field as required, a word-joiner character (e.g. `U+2060` or `&#8288;`) should be placed between the label text and the required marker to prevent the marker from appearing on its own line.
  */
 export const Required = Template.bind({});
 Required.args = {
@@ -133,6 +140,32 @@ Disabled.args = {
 };
 Disabled.tags = ["!dev"];
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Use static white on dark color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
+ */
+export const StaticWhite = Default.bind({});
+StaticWhite.storyName = "Static white";
+StaticWhite.args = {
+	staticColor: "white",
+};
+StaticWhite.tags = ["!dev"];
+StaticWhite.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Use static black on light color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
+ */
+export const StaticBlack = Default.bind({});
+StaticBlack.storyName = "Static black";
+StaticBlack.args = {
+	staticColor: "black",
+};
+StaticBlack.tags = ["!dev"];
+StaticBlack.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

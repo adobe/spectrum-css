@@ -1,5 +1,5 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
+ * Copyright 2025 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -12,9 +12,7 @@
  */
 
 /* This file contains overrides and additions to core tokens */
-
 .spectrum--large {
-	/* stylelint-disable-next-line custom-property-pattern -- context identification */
 	--scale: large;
 
 	--spectrum-alert-banner-close-button-spacing: var(--spectrum-spacing-200);
@@ -22,8 +20,7 @@
 	--spectrum-alert-banner-edge-to-button: var(--spectrum-spacing-200);
 	--spectrum-alert-banner-text-to-button-vertical: var(--spectrum-spacing-200);
 
-	--spectrum-alert-dialog-padding: var(--spectrum-spacing-400);
-	--spectrum-alert-dialog-description-to-buttons: var(--spectrum-spacing-600);
+	--spectrum-alert-dialog-edge-to-content: var(--spectrum-spacing-400);
 
 	--spectrum-assetcard-focus-ring-border-radius: 9px;
 	--spectrum-assetcard-selectionindicator-margin: 15px;
@@ -43,6 +40,7 @@
 	--spectrum-coach-indicator-gap: 8px;
 	--spectrum-coach-indicator-ring-diameter: 20px;
 	--spectrum-coach-indicator-quiet-ring-diameter: 10px;
+	--spectrum-coachmark-action-menu-vertical-offset: -6px;
 	--spectrum-coachmark-buttongroup-display: none;
 	--spectrum-coachmark-buttongroup-mobile-display: flex;
 	--spectrum-coachmark-menu-display: none;
@@ -99,10 +97,38 @@
 	--spectrum-pagination-textfield-width: 60px;
 	--spectrum-pagination-item-inline-spacing: 6px;
 
-	--spectrum-rating-icon-spacing: var(--spectrum-spacing-100);
-
+	--spectrum-slider-precision-handle-width: 6px;
 	--spectrum-slider-tick-mark-height: 13px;
 	--spectrum-slider-ramp-track-height: 20px;
+	--spectrum-slider-handle-small: 22px;
+	--spectrum-slider-handle-medium: 24px;
+	--spectrum-slider-handle-large: 28px;
+	--spectrum-slider-handle-extra-large: 30px;
+
+	--spectrum-slider-precision-handle-height-small: 24px;
+	--spectrum-slider-precision-handle-height-medium: 26px;
+	--spectrum-slider-precision-handle-height-large: 30px;
+	--spectrum-slider-precision-handle-height-extra-large: 32px;
+
+	--spectrum-slider-editable-field-inline-size-small: 56px;
+	--spectrum-slider-editable-field-inline-size-medium: 70px;
+	--spectrum-slider-editable-field-inline-size-large: 82px;
+	--spectrum-slider-editable-field-inline-size-extra-large: 94px;
+
+	--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
+	--spectrum-takeover-dialog-spacing-grid-padding: var(--spectrum-spacing-400);
+	--spectrum-takeover-dialog-spacing-header-gap: var(--spectrum-spacing-300);
+	--spectrum-takeover-dialog-spacing-title-to-body: var(--spectrum-spacing-400);
+
+	/* @todo: remove when tabs tokens are updated */
+	--spectrum-tab-item-top-to-workflow-icon-medium: 18px;
+	--spectrum-tab-item-side-to-workflow-icon-medium: 6px;
+	--spectrum-tab-item-bottom-to-text-medium: 21px;
+	--spectrum-tab-item-to-tab-item-horizontal-medium: 30px;
+	--spectrum-tab-selection-indicator-thickness: 2px;
+	--spectrum-tab-item-top-to-workflow-icon-compact-medium: 7px;
+	--spectrum-tab-item-side-to-workflow-icon-compact-medium: 6px;
+	--spectrum-tab-item-to-tab-item-compact-horizontal-medium: 30px;
 
 	--spectrum-treeview-item-indentation-medium: 20px;
 	--spectrum-treeview-item-indentation-small: 15px;
@@ -111,7 +137,9 @@
 	--spectrum-treeview-indicator-inset-block-start: 6px;
 	--spectrum-treeview-item-min-block-size-thumbnail-offset-medium: 2px;
 
-	--spectrum-tooltip-animation-distance: 5px;
+	/* To get a square that measures 12px on the diagonal, the sides have to be 10px */
+	--spectrum-tooltip-tip-square-size: 10px;
+
 	--spectrum-ui-icon-medium-display: none;
 	--spectrum-ui-icon-large-display: block;
 
@@ -123,4 +151,14 @@
 	/* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
 	--spectrum-workflow-icon-size-xxl: 40px;
 	--spectrum-workflow-icon-size-xxs: 15px;
+
+	--spectrum-in-field-button-side-edge-to-fill-small: 3px;
+	--spectrum-in-field-button-side-edge-to-fill-medium: 4px;
+	--spectrum-in-field-button-side-edge-to-fill-large: 4px;
+	--spectrum-in-field-button-side-edge-to-fill-extra-large: 4px;
+
+	--spectrum-field-edge-to-icon-75: 6px;
+	--spectrum-field-edge-to-icon-100: 9px;
+	--spectrum-field-edge-to-icon-200: 11px;
+	--spectrum-field-edge-to-icon-300: 14px;
 }

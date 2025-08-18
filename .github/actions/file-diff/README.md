@@ -48,5 +48,4 @@ with:
   base-path: ${{ github.workspace }}/base-branch
   file-glob-pattern: |
     components/*/dist/*.{css,json}
-    components/*/dist/themes/*.css
 ```

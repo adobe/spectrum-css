@@ -16,6 +16,7 @@ import { dirname, join, sep } from "path";
 import StyleDictionary from "style-dictionary";
 import {
 	AttributeSetsTransform,
+	CSSBorderRoundingTransform,
 	CSSOpenTypeTransform,
 	CSSSetsFormatter,
 	DataJsonFormatter,
@@ -23,6 +24,7 @@ import {
 } from "./utilities/index.js";
 
 StyleDictionary.registerTransform(CSSOpenTypeTransform);
+StyleDictionary.registerTransform(CSSBorderRoundingTransform);
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
 
@@ -44,6 +46,7 @@ export default {
 			[AttributeSetsTransform.name]: AttributeSetsTransform,
 			[NameKebabTransfom.name]: NameKebabTransfom,
 			[CSSOpenTypeTransform.name]: CSSOpenTypeTransform,
+			[CSSBorderRoundingTransform.name]: CSSBorderRoundingTransform,
 		},
 	},
 	platforms: {
@@ -53,6 +56,7 @@ export default {
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
 				CSSOpenTypeTransform.name,
+				CSSBorderRoundingTransform.name,
 			],
 			prefix: "spectrum",
 			files: [
@@ -72,7 +76,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--medium",
 						sets: ["desktop"],
 					},
 					destination: "medium-vars.css",
@@ -89,7 +92,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--large",
 						sets: ["mobile"],
 					},
 					destination: "large-vars.css",
@@ -107,7 +109,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--light",
 						sets: ["light"],
 					},
 					destination: "light-vars.css",
@@ -124,7 +125,6 @@ export default {
 					options: {
 						showFileHeader: false,
 						outputReferences: true,
-						selector: ".spectrum--dark",
 						sets: ["dark"],
 					},
 					destination: "dark-vars.css",
@@ -141,20 +141,27 @@ export default {
 		JSON: {
 			buildPath: join("dist", "json") + sep,
 			transforms: [
+				"attribute/cti",
+				"attribute/color",
+				"name/kebab",
+				"fontFamily/css",
 				AttributeSetsTransform.name,
-				NameKebabTransfom.name,
 				CSSOpenTypeTransform.name,
+				CSSBorderRoundingTransform.name,
 			],
 			prefix: "spectrum",
 			files: [
 				{
+					format: "json/nested",
+					destination: "raw.json",
+					options: {
+						showFileHeader: false,
+						outputReferences: true,
+					},
+				},
+				{
 					format: "json/sets",
 					destination: "tokens.json",
-					filter: (token) => {
-						const tokenSets = token.path.filter((_, idx, array) => array[idx - 1] == "sets");
-						if (tokenSets.includes("wireframe")) return false;
-						return true;
-					},
 					options: {
 						showFileHeader: false,
 						outputReferences: true,

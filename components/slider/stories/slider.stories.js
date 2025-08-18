@@ -1,9 +1,9 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, size } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isEmphasized, isFocused, isHovered, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { SliderGroup } from "./slider.test.js";
+import { SliderGroup, VariantGroup } from "./slider.test.js";
 import { Template } from "./template.js";
 
 /**
@@ -71,8 +71,19 @@ export default {
 			control: "select",
 			options: ["ramp", "offset", "filled"],
 		},
+		trackHeight: {
+			name: "Track height",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			control: "select",
+			options: ["medium", "large"],
+			if: { arg: "variant", neq: "ramp" },
+		},
 		labelPosition: {
-			name: "Label Position",
+			name: "Label position",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -81,8 +92,9 @@ export default {
 			control: "select",
 			options: ["top", "side"],
 		},
-		fillColor: {
-			name: "Fill color",
+		trackColor: {
+			name: "Track color",
+			description: "Supports standard color input or any valid input for the <code>background</code> property such as, <code>linear-gradient(red, blue)</code> or <code>transparent</code>. Not available for ramp variant.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -112,26 +124,58 @@ export default {
 			control: "boolean",
 			if: { arg: "showTicks", truthy: true },
 		},
+		isPrecise: {
+			name: "Precise handle control",
+			description: "Provides precise control for accurate values.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		isEditable: {
+			name: "Editable text input",
+			description: "Enables text input to also control the slider value.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		isEmphasized,
+		isActive,
+		isHovered,
 		isDisabled,
 		isFocused: {
 			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
-		values: { table: { disable: true } },
+		values: {
+			table: { disable: true }
+		},
 	},
 	args: {
 		rootClass: "spectrum-Slider",
+		isEmphasized: false,
+		isActive: false,
+		isHovered: false,
 		isDisabled: false,
 		isFocused: false,
 		showTicks: false,
 		showTickLabels: false,
 		labelPosition: "top",
-		label: "Slider label",
+		label: "Label",
 		size: "m",
-		min: 10,
-		max: 20,
-		values: [14],
-		step: 2,
+		min: 0,
+		max: 30,
+		values: [15],
+		step: 5,
+		trackHeight: "medium",
+		isPrecise: false,
+		isEditable: false,
+		variant: "filled",
 	},
 	parameters: {
 		actions: {
@@ -146,26 +190,46 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "migrated",
+		},
 	},
+	tags: ["migrated"],
 };
 
 /**
  * Sliders should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts.
+ * The track of the slider can have a fill. By default, the fill originates from the left side of the track when the global direction is LTR and from the right side of the track when the global direction is RTL.
  */
 export const Default = SliderGroup.bind({});
-Default.args = {};
+Default.args = {
+	variant: "filled",
+};
 
 // ********* DOCS ONLY ********* //
 /**
- * If a slider's label is undefined, it should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
+ * If a slider's label is undefined, it should still include an aria-label in HTML (depending on the context, "aria-label" or "aria-labelledby").
  */
 export const WithoutLabel = Template.bind({});
 WithoutLabel.args = {
 	label: "",
+	variant: "filled",
 };
 WithoutLabel.tags = ["!dev"];
 WithoutLabel.storyName = "Without label";
 WithoutLabel.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
+export const Editable = Template.bind({});
+Editable.args = {
+	...Default.args,
+	isEditable: true,
+};
+Editable.tags = ["!dev"];
+Editable.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
@@ -186,31 +250,28 @@ Sizing.parameters = {
 };
 
 /**
- * The track of the slider can have a fill. By default, the fill originates from the left side of the track.
+ * If the value represents an offset, the fill start or end can be set to represent the point of origin. This allows the slider fill to extend from the origin toward the handle, in either direction along the track.
  */
-export const Filled = Template.bind({});
-Filled.args = {
+export const Offset = Template.bind({});
+Offset.args = {
 	...Default.args,
-	variant: "filled",
+	variant: "offset",
+	values: [-15],
 };
-Filled.tags = ["!dev"];
-Filled.parameters = {
+Offset.tags = ["!dev"];
+Offset.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
 };
 
-/**
- * With fill and offset. If the value represents an offset, the fill start can be set to represent the point of origin. This allows the slider fill to start from inside the track.
- */
-export const FilledOffset = Template.bind({});
-FilledOffset.args = {
+export const Precise = Template.bind({});
+Precise.args = {
 	...Default.args,
-	min: 0,
-	variant: "offset",
+	isPrecise: true,
 };
-FilledOffset.tags = ["!dev"];
-FilledOffset.parameters = {
+Precise.tags = ["!dev"];
+Precise.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
@@ -234,7 +295,7 @@ Ramp.parameters = {
 export const Range = Template.bind({});
 Range.args = {
 	...Default.args,
-	values: [14, 16],
+	values: [10, 20],
 };
 Range.tags = ["!dev"];
 Range.parameters = {
@@ -275,6 +336,24 @@ TickWithLabels.parameters = {
 };
 TickWithLabels.storyName = "Tick with labels";
 
+/**
+ * Large track height.
+ */
+export const TrackHeight = Template.bind({});
+TrackHeight.args = {
+	...Default.args,
+	trackHeight: "large",
+};
+TrackHeight.tags = ["!dev"];
+TrackHeight.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+TrackHeight.storyName = "Large track height";
+
+
+
 export const Disabled = Template.bind({});
 Disabled.args = {
 	...Default.args,
@@ -287,6 +366,18 @@ Disabled.parameters = {
 	},
 };
 
+export const Emphasized = Template.bind({});
+Emphasized.args = {
+	...Default.args,
+	isEmphasized: true,
+};
+Emphasized.tags = ["!dev"];
+Emphasized.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
 export const Focused = Template.bind({});
 Focused.args = {
 	...Default.args,
@@ -294,27 +385,6 @@ Focused.args = {
 };
 Focused.tags = ["!dev"];
 Focused.parameters = {
-	chromatic: {
-		disableSnapshot: true,
-	},
-};
-
-/**
- * A gradient can be added to the track of any slider to give more meaning to the range of values. Tracks with a gradient can also have a fill. A gradient track should not be used for choosing a precise color; use a [color slider](/docs/components-color-slider--docs), [color area](/docs/components-color-area--docs), or [color wheel](/docs/components-color-wheel--docs) instead.
- */
-export const Gradient = Template.bind({});
-Gradient.args = {
-	...Default.args,
-	customStyles: {
-		"--spectrum-slider-track-color":
-			"linear-gradient(to right, red, green 100%)",
-		"--spectrum-slider-track-color-rtl":
-			"linear-gradient(to left, red, green 100%)",
-	},
-	label: "Slider label that is long and wraps to the next line",
-};
-Gradient.tags = ["!dev"];
-Gradient.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
@@ -345,3 +415,7 @@ WithForcedColors.parameters = {
 		modes: disableDefaultModes,
 	},
 };
+
+// test with /?path=/story/components-slider--variant-tests&globals=testingPreview:!true
+export const VariantTests = VariantGroup.bind({});
+VariantTests.tags = ["!autodocs", "!dev"];

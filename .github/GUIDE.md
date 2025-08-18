@@ -66,7 +66,7 @@ Runs stylelint or eslint if any relevant assets have been updated in this PR.
 
 ##### 📝 Publish documentation site
 
-After the build and visual regression tests have passed, this will build the documentation site and publish it to Netlify.
+After the build and visual regression tests have passed, this will build the documentation site and publish it to Azure.
 
 ##### 📸 Visual regression testing
 
@@ -92,7 +92,7 @@ Builds the `main` branch and outputs the compiled assets as artifacts.
 
 ##### 📝 2. Publish site
 
-Publish the documentation site to Netlify.
+Publish the documentation site to Azure.
 
 ##### 📸 3. Visual regression testing
 

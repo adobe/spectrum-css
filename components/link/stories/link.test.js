@@ -12,6 +12,15 @@ export const LinkGroup = Variants({
 			variant: "secondary",
 		},
 		{
+			testHeading: "Inline",
+			isInline: true,
+		},
+		{
+			testHeading: "Inline - secondary",
+			isInline: true,
+			variant: "secondary",
+		},
+		{
 			testHeading: "Quiet",
 			isQuiet: true,
 		},
@@ -47,7 +56,7 @@ export const LinkGroup = Variants({
 			testHeading: "Static white - quiet",
 			staticColor: "white",
 			isQuiet: true,
-		},
+		}
 	],
 	stateData: [
 		{
