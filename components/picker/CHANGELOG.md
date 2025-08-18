@@ -1,5 +1,27 @@
 # Change log
 
+## 10.0.0-next.4
+
+### Major Changes
+
+📝 [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`7ac2952`](https://github.com/adobe/spectrum-css/commit/7ac2952d16e9760121e3a33390d14f6e336d587d) Thanks [@pfulton](https://github.com/pfulton)!
+
+#### Picker: remove quiet variant
+
+This removes the quiet variant for the picker component based on design feedback. Prior to this change, there was an odd state where the quiet picker scaled with the foundations down state applied.
+
+##### Removed mods
+
+`--mod-picker-background-color-disabled`
+
+**Additionally:** all of the quiet variant mods have been removed.
+
+`--mod-picker-inline-size-quiet`
+`--mod-picker-min-inline-size-quiet`
+`--mod-picker-spacing-edge-to-disclosure-icon-quiet`
+`--mod-picker-spacing-edge-to-text-quiet`
+`--mod-picker-spacing-label-to-picker-quiet`
+
 ## 10.0.0-next.3
 
 ### Major Changes
