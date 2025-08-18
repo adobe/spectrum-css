@@ -35,8 +35,6 @@
 	--spectrum-infield-button-field-edge-to-disclosure-icon: var(--spectrum-field-edge-to-disclosure-icon-100);
 
 	--spectrum-infield-button-fill-justify-content: center;
-
-	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
 	--spectrum-infield-button-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
 
 	&:disabled {
