@@ -271,6 +271,7 @@ export const ArgGrid = ({
 	...args
 } = {}, context = {}) => {
 	const isDocs = context.viewMode === "docs";
+	context.parameters.showTestingGrid = true;
 
 	if (typeof argKey === "undefined") {
 		console.warn("ArgGrid: argKey is required to render the grid.");

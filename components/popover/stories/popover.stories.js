@@ -1,6 +1,7 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -8,7 +9,7 @@ import { html } from "lit";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PopoverGroup } from "./popover.test.js";
-import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./template.js";
+import { FixedWidthSourceTemplate, Template } from "./template.js";
 
 /**
  * A popover is used to display transient content (menus, options, additional actions, etc.) and appears when clicking/tapping on a source (tools, buttons, etc.).
@@ -72,8 +73,6 @@ export default {
 				"end-bottom",
 			],
 		},
-		popoverHeight: { table: { disable: true } },
-		popoverWidth: { table: { disable: true } },
 		popoverAlignment: { table: { disable: true } },
 		popoverWrapperStyles: { table: { disable: true } },
 	},
@@ -82,8 +81,6 @@ export default {
 		isOpen: true,
 		withTip: false,
 		position: "bottom",
-		popoverHeight: 158,
-		popoverWidth: 105,
 	},
 	parameters: {
 		layout: "centered",
@@ -245,7 +242,7 @@ DialogStyle.tags = ["!dev"];
 DialogStyle.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
+	trigger: undefined,
 	content: [
 		(passthroughs, context) => Dialog({
 			showModal: false,
@@ -290,18 +287,18 @@ DialogStyle.parameters = {
  * - Top and bottom popover positions use the same SVG. The CSS handles flipping the SVG vertically.
  * - Left, right, start, and end popover positions use the same SVG. The CSS handles flipping the SVG horizontally.
  */
-export const Positioning = TipPlacementVariants.bind({});
+export const Positioning = (args, context) => ArgGrid({
+	Template,
+	argKey: "position",
+	withBorder: false,
+	...args,
+}, context);
 Positioning.storyName = "Positioning options";
 Positioning.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
-	content: [() => html`<span style="padding: 0 7px">Basic text content, with some added padding.</span>`],
-	skipAlignment: true,
-	popoverWrapperStyles: {
-		"display": "block",
-		"height": "150px",
-	},
+	trigger: undefined,
+	content: [() => html`<p style="padding: 0 7px; margin: 0; inline-size: 150px;">Basic text content, with some added padding.</p>`],
 };
 Positioning.tags = ["!dev"];
 Positioning.parameters = {
@@ -327,7 +324,7 @@ TipOffset.storyName = "Tip positioning and inline offset";
 TipOffset.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
+	trigger: undefined,
 	content: [
 		() => Menu({
 			items: [
@@ -348,9 +345,6 @@ TipOffset.args = {
 	],
 	customStyles: {
 		"--spectrum-popover-pointer-edge-offset": "50px",
-	},
-	popoverWrapperStyles: {
-		"display": "block",
 	},
 };
 TipOffset.tags = ["!dev"];

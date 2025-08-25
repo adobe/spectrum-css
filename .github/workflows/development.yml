@@ -105,22 +105,21 @@ jobs:
               with:
                   files_yaml: |
                       styles:
-                        - components/*/index.css
+                        - 'components/*/index.css'
                       eslint:
-                        - components/*/stories/*.js
+                        - 'components/*/stories/*.js'
                       mdlint:
                         - '*.md'
-                        - .storybook/*.md
-                        - .storybook/*/*.md
-                        - .storybook/*/*.mdx
-                        - components/*/*.md
-                        - components/*/stories/*.mdx
-                        - plugins/*/*.md
-                        - tokens/*.md
-                        - tools/*/*.md
-                        - ui-icons/*.md
+                        - '.storybook/*.md'
+                        - '.storybook/*/*.md'
+                        - 'components/*/*.md'
+                        - 'plugins/*/*.md'
+                        - 'tokens/*.md'
+                        - 'tools/*/*.md'
+                        - 'ui-icons/*.md'
+                        - '!yarn.lock'
                       plugins:
-                        - plugins/**/*
+                        - 'plugins/**/*'
 
     # -------------------------------------------------------------
     # Lint pre-compiled assets for consistency

@@ -7,8 +7,8 @@ import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
-import { html } from "lit";
+import { Container, getRandomId, renderContent } from "@spectrum-css/preview/decorators";
+import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -97,27 +97,23 @@ const Visual = ({
 };
 
 const StartAction = ({
-	hasActions,
-	idx,
-	isCollapsible,
-	isDisabled,
-	isSelected,
-	isUnavailable,
+	hasActions = false,
+	idx = 0,
+	isCollapsible = false,
+	isDisabled = false,
+	isSelected = false,
+	isUnavailable = false,
 	rootClass,
-	selectionMode,
-	size,
-	context
-}) => {
-	if (isUnavailable) return null;
+	selectionMode = "none",
+	size = "m",
+} = {}, context = {}) => {
+	if (isUnavailable) return nothing;
 
 	if (isCollapsible || (selectionMode == "single" && isSelected)) {
 		return html`
 			${Icon(
 				{
-					iconName: iconWithScale(
-						size,
-						isCollapsible ? "ChevronRight" : "Checkmark",
-					),
+					iconName: iconWithScale(size, isCollapsible ? "ChevronRight" : "Checkmark"),
 					setName: "ui",
 					useRef: false,
 					size,
@@ -141,12 +137,12 @@ const StartAction = ({
 			},
 			context)}`;
 	}
-	return null;
+	return nothing;
 };
 
 const EndAction = ({
-	hasExternalLink,
-	hasActions,
+	hasExternalLink = false,
+	hasActions = false,
 	idx,
 	isUnavailable,
 	isDisabled,
@@ -156,8 +152,7 @@ const EndAction = ({
 	selectionMode,
 	size,
 	value,
-	context
-}) => html`
+} = {}, context = {}) => html`
 	${when(value, () => html`
 		<span
 			class=${classMap({
@@ -179,7 +174,7 @@ const EndAction = ({
 					size,
 					isChecked: isSelected,
 					isDisabled,
-					label: null,
+					label: "",
 					id: `menu-switch-${idx}`,
 					customClasses: [`${rootClass}Switch`],
 				},
@@ -233,18 +228,7 @@ const EndAction = ({
 	)}
 `;
 
-const Description = ({
-	description,
-	rootClass
-}) => html`
-		<span
-			class=${classMap({
-				[`${rootClass}Description`]: true,
-			})}
-		>
-			${description}
-		</span>
-`;
+const Description = ({ rootClass, content } = {}, context = {}) => html`<span class=${classMap({ [rootClass]: true })}>${renderContent(content, { context })}</span>`;
 
 export const MenuItem = (
 	{
@@ -304,7 +288,6 @@ export const MenuItem = (
 				"is-highlighted": isHighlighted,
 				"is-active": isActive,
 				"is-focus-visible": isFocused,
-				"is-selected": isSelected,
 				"is-disabled": isDisabled,
 				"is-hover": isHovered,
 				[`${rootClass}--drillIn`]: isDrillIn,
@@ -317,13 +300,14 @@ export const MenuItem = (
 			role=${ifDefined(role)}
 			aria-selected=${isSelected ? "true" : "false"}
 			aria-disabled=${isDisabled ? "true" : "false"}
+			aria-expanded=${isOpen ? "true" : "false"}
 			tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
 		>
-			${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, isUnavailable, rootClass, selectionMode, size, context })}
+			${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, isUnavailable, rootClass, selectionMode, size }, context)}
 			${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl, hasExternalLink, isDrillIn })}
 			${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
-			${when(description, () => Description({ description, rootClass }))}
-			${EndAction({ hasExternalLink, hasActions, idx, isUnavailable, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}
+			${when(description, () => Description({ content: description, rootClass: `${rootClass}Description` }, context))}
+			${EndAction({ hasExternalLink, hasActions, idx, isUnavailable, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value }, context)}
 			${when(isCollapsible && items.length > 0, () =>
 				Template(
 					{
@@ -497,28 +481,31 @@ export const Template = (
 			})}
 		>
 			${items.map((i, idx) => {
-				if (i.type === "divider")
-					return html`${hasDividers
-						? Divider({
+				const content = [];
+				if ((hasDividers && i.type === "divider") || (items[idx - 1]?.heading && i?.heading))
+					content.push(Divider({
 								tag: "li",
 								size: "s",
 								customClasses: [`${rootClass}-divider`],
-							})
-						: ""}`;
-				else if (i.heading || i.isTraySubmenu)
-					return MenuGroup(
+					}));
+
+				if (i.type === "divider") return content;
+
+				if (i.heading || i.isTraySubmenu)
+					content.push(MenuGroup(
 						{
-							...i,
 							subrole,
 							size,
 							selectionMode,
 							isTraySubmenu,
 							shouldTruncate,
+							hasActions,
+							...i,
 						},
 						context,
-					);
+					));
 				else
-					return MenuItem(
+					content.push(MenuItem(
 						{
 							...i,
 							hasActions,
@@ -533,7 +520,8 @@ export const Template = (
 							value: singleItemValue || i.value,
 						},
 						context,
-					);
+					));
+				return content;
 			})}
 		</ul>
 	`;
@@ -548,7 +536,7 @@ export const Template = (
 	return menuMarkup;
 };
 
-export const DisabledItemGroup = (args, context) => {
+export const DisabledItemGroup = (args = {}, context = {}) => {
 	const groupData = [
 		{
 			heading: "Menu with icons",
@@ -617,7 +605,6 @@ export const DisabledItemGroup = (args, context) => {
 				content: html`
 					${Template({
 						...args,
-						context,
 						shouldTruncate: group.shouldTruncate || false,
 						items: group.items,
 					}, context)}
@@ -627,7 +614,7 @@ export const DisabledItemGroup = (args, context) => {
 	}, context);
 };
 
-export const OverflowGroup = (args, context) => {
+export const OverflowGroup = (args = {}, context = {}) => {
 	const groupData = [
 		{
 			heading: "Text overflow without descriptions",
@@ -726,7 +713,6 @@ export const OverflowGroup = (args, context) => {
 				content: html`
 					${Template({
 						...args,
-						context,
 						shouldTruncate: group.shouldTruncate || false,
 						items: group.items,
 					}, context)}
@@ -739,7 +725,7 @@ export const OverflowGroup = (args, context) => {
 	}, context);
 };
 
-export const SelectionGroup = (args, context) => {
+export const SelectionGroup = (args = {}, context = {}) => {
 	const groupData = [
 		{
 			heading: "No selection",
@@ -904,7 +890,6 @@ export const SelectionGroup = (args, context) => {
 			heading: group.heading,
 			content: Template({
 				...args,
-				context,
 				selectionMode: group.selectionMode || "none",
 				hasActions: group.hasActions || false,
 				items: group.items,
@@ -913,16 +898,16 @@ export const SelectionGroup = (args, context) => {
 	});
 };
 
-export const SubmenuInPopover = (args, context) => Popover({
+export const SubmenuInPopover = (args = {}, context = {}) => Popover({
 	isOpen: true,
 	position: "end-top",
 	customStyles: {
 		"inline-size": "202px",
 	},
-	trigger: (args, context) => ActionButton({
+	trigger: (passthroughs) => ActionButton({
 		label: "Settings",
 		iconName: "Settings",
-		...args,
+		...passthroughs,
 	}, context),
 	content: [
 		Template({

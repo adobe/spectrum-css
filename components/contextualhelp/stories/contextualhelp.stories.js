@@ -151,9 +151,6 @@ export const TopPopover = Template.bind({});
 TopPopover.tags = ["!dev"];
 TopPopover.args = {
 	popoverPlacement: "top",
-	customStyles: {
-		"margin-top": "170px",
-	},
 };
 TopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
