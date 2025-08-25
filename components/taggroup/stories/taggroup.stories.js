@@ -2,10 +2,12 @@ import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/deco
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid } from "@spectrum-css/preview/types";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { exampleTagItems, TagGroupDisabledItemAndActionButton, TagGroups, TagGroupSizingTemplate } from "./taggroup.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
@@ -123,6 +125,10 @@ export default {
 		metadata,
 		downState: {
 			selectors: [".spectrum-Tag", ".spectrum-ActionButton"],
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 		status: {
 			type: "migrated",

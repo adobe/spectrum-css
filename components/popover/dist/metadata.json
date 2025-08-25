@@ -85,62 +85,298 @@
     ".spectrum-Popover.spectrum-Popover--withTip",
     ".spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle"
   ],
-  "modifiers": [
-    "--mod-overlay-animation-duration",
-    "--mod-overlay-animation-duration-opened",
-    "--mod-popover-animation-distance",
-    "--mod-popover-background-color",
-    "--mod-popover-border-color",
-    "--mod-popover-border-width",
-    "--mod-popover-box-shadow",
-    "--mod-popover-content-area-spacing",
-    "--mod-popover-corner-radius",
-    "--mod-popover-drop-shadow-blur",
-    "--mod-popover-drop-shadow-color",
-    "--mod-popover-drop-shadow-x",
-    "--mod-popover-drop-shadow-y",
-    "--mod-popover-filter",
-    "--mod-popover-pointer-edge-spacing",
-    "--mod-popover-pointer-height",
-    "--mod-popover-pointer-width"
-  ],
-  "component": [
-    "--spectrum-popover-animation-distance",
-    "--spectrum-popover-background-color",
-    "--spectrum-popover-border-color-rgb",
-    "--spectrum-popover-border-color-with-transparency",
-    "--spectrum-popover-border-opacity",
-    "--spectrum-popover-border-transparency",
-    "--spectrum-popover-border-width",
-    "--spectrum-popover-box-shadow",
-    "--spectrum-popover-content-area-spacing",
-    "--spectrum-popover-corner-radius",
-    "--spectrum-popover-drop-shadow-blur",
-    "--spectrum-popover-drop-shadow-color",
-    "--spectrum-popover-drop-shadow-x",
-    "--spectrum-popover-drop-shadow-y",
-    "--spectrum-popover-edge-to-content-area",
-    "--spectrum-popover-filter",
-    "--spectrum-popover-pointer-edge-offset",
-    "--spectrum-popover-pointer-edge-spacing",
-    "--spectrum-popover-pointer-height",
-    "--spectrum-popover-pointer-width",
-    "--spectrum-popover-tip-height",
-    "--spectrum-popover-tip-width"
-  ],
-  "global": [
-    "--spectrum-animation-duration-0",
-    "--spectrum-animation-duration-100",
-    "--spectrum-background-layer-2-color",
-    "--spectrum-border-width-100",
-    "--spectrum-corner-radius-large-default",
-    "--spectrum-drop-shadow-elevated-blur",
-    "--spectrum-drop-shadow-elevated-color",
-    "--spectrum-drop-shadow-elevated-x",
-    "--spectrum-drop-shadow-elevated-y",
-    "--spectrum-gray-200-rgb",
-    "--spectrum-spacing-100"
-  ],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-popover-border-color"]
+  "modifiers": {
+    "mod-overlay-animation-duration": {
+      "description": "Used by `.spectrum-Popover`. <br/>Defaults to `var(--spectrum-animation-duration-100, 0.13s)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-overlay-animation-duration-opened": {
+      "description": "Used by `.spectrum-Popover.is-open`. <br/>Defaults to `var(--spectrum-animation-duration-0, 0s)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-drop-shadow-x": {
+      "description": "Used by `--spectrum-popover-filter`, `--spectrum-popover-box-shadow`. <br/>Defaults to `var(--spectrum-popover-drop-shadow-x)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-drop-shadow-y": {
+      "description": "Used by `--spectrum-popover-filter`, `--spectrum-popover-box-shadow`. <br/>Defaults to `var(--spectrum-popover-drop-shadow-y)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-drop-shadow-blur": {
+      "description": "Used by `--spectrum-popover-filter`, `--spectrum-popover-box-shadow`. <br/>Defaults to `var(--spectrum-popover-drop-shadow-blur)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-drop-shadow-color": {
+      "description": "Used by `--spectrum-popover-filter`, `--spectrum-popover-box-shadow`. <br/>Defaults to `var(--spectrum-popover-drop-shadow-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-popover-content-area-spacing": {
+      "description": "Used by `.spectrum-Popover`. <br/>Defaults to `var(--spectrum-popover-content-area-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-corner-radius": {
+      "description": "Used by `.spectrum-Popover`. <br/>Defaults to `var(--spectrum-popover-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-border-color": {
+      "description": "Used by `.spectrum-Popover`, `.spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle`. <br/>Defaults to `var(--spectrum-popover-border-color-with-transparency)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-popover-border-width": {
+      "description": "Used by `.spectrum-Popover`, `.spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle`, `.spectrum-Popover--top-end.spectrum-Popover--withTip, .spectrum-Popover--top-left.spectrum-Popover--withTip, .spectrum-Popover--top-right.spectrum-Popover--withTip, .spectrum-Popover--top-start.spectrum-Popover--withTip, .spectrum-Popover--top.spectrum-Popover--withTip`, `.spectrum-Popover--bottom-end.spectrum-Popover--withTip, .spectrum-Popover--bottom-left.spectrum-Popover--withTip, .spectrum-Popover--bottom-right.spectrum-Popover--withTip, .spectrum-Popover--bottom-start.spectrum-Popover--withTip, .spectrum-Popover--bottom.spectrum-Popover--withTip`, `.spectrum-Popover--right-bottom.spectrum-Popover--withTip, .spectrum-Popover--right-top.spectrum-Popover--withTip, .spectrum-Popover--right.spectrum-Popover--withTip`, `.spectrum-Popover--left-bottom.spectrum-Popover--withTip, .spectrum-Popover--left-top.spectrum-Popover--withTip, .spectrum-Popover--left.spectrum-Popover--withTip`, `.spectrum-Popover--start-bottom.spectrum-Popover--withTip, .spectrum-Popover--start-top.spectrum-Popover--withTip, .spectrum-Popover--start.spectrum-Popover--withTip`, `.spectrum-Popover--end-bottom.spectrum-Popover--withTip, .spectrum-Popover--end-top.spectrum-Popover--withTip, .spectrum-Popover--end.spectrum-Popover--withTip`. <br/>Defaults to `var(--spectrum-popover-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-background-color": {
+      "description": "Used by `.spectrum-Popover`, `.spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle`. <br/>Defaults to `var(--spectrum-popover-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-popover-box-shadow": {
+      "description": "Used by `.spectrum-Popover`. <br/>Defaults to `var(--spectrum-popover-box-shadow)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-filter": {
+      "description": "Used by `.spectrum-Popover.spectrum-Popover--withTip`. <br/>Defaults to `var(--spectrum-popover-filter)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-pointer-height": {
+      "description": "Used by `.spectrum-Popover--top-end.spectrum-Popover--withTip, .spectrum-Popover--top-left.spectrum-Popover--withTip, .spectrum-Popover--top-right.spectrum-Popover--withTip, .spectrum-Popover--top-start.spectrum-Popover--withTip, .spectrum-Popover--top.spectrum-Popover--withTip`, `.spectrum-Popover--bottom-end.spectrum-Popover--withTip, .spectrum-Popover--bottom-left.spectrum-Popover--withTip, .spectrum-Popover--bottom-right.spectrum-Popover--withTip, .spectrum-Popover--bottom-start.spectrum-Popover--withTip, .spectrum-Popover--bottom.spectrum-Popover--withTip`, `.spectrum-Popover--right-bottom.spectrum-Popover--withTip, .spectrum-Popover--right-top.spectrum-Popover--withTip, .spectrum-Popover--right.spectrum-Popover--withTip`, `.spectrum-Popover--left-bottom.spectrum-Popover--withTip, .spectrum-Popover--left-top.spectrum-Popover--withTip, .spectrum-Popover--left.spectrum-Popover--withTip`, `.spectrum-Popover--start-bottom.spectrum-Popover--withTip, .spectrum-Popover--start-top.spectrum-Popover--withTip, .spectrum-Popover--start.spectrum-Popover--withTip`, `.spectrum-Popover--end-bottom.spectrum-Popover--withTip, .spectrum-Popover--end-top.spectrum-Popover--withTip, .spectrum-Popover--end.spectrum-Popover--withTip`, `.spectrum-Popover--withTip.spectrum-Popover .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-start .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--end-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--end-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-top .spectrum-Popover-tip`. <br/>Defaults to `var(--spectrum-popover-pointer-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-animation-distance": {
+      "description": "Used by `.spectrum-Popover--top-end.is-open, .spectrum-Popover--top-left.is-open, .spectrum-Popover--top-right.is-open, .spectrum-Popover--top-start.is-open, .spectrum-Popover--top.is-open`, `.spectrum-Popover--bottom-end.is-open, .spectrum-Popover--bottom-left.is-open, .spectrum-Popover--bottom-right.is-open, .spectrum-Popover--bottom-start.is-open, .spectrum-Popover--bottom.is-open`, `.spectrum-Popover--right-bottom.is-open, .spectrum-Popover--right-top.is-open, .spectrum-Popover--right.is-open`, `.spectrum-Popover--left-bottom.is-open, .spectrum-Popover--left-top.is-open, .spectrum-Popover--left.is-open`, `.spectrum-Popover--start-bottom.is-open, .spectrum-Popover--start-top.is-open, .spectrum-Popover--start.is-open`, `.spectrum-Popover--start-bottom.is-open:dir(rtl), .spectrum-Popover--start-top.is-open:dir(rtl), .spectrum-Popover--start.is-open:dir(rtl)`, `.spectrum-Popover--end-bottom.is-open, .spectrum-Popover--end-top.is-open, .spectrum-Popover--end.is-open`, `.spectrum-Popover--end-bottom.is-open:dir(rtl), .spectrum-Popover--end-top.is-open:dir(rtl), .spectrum-Popover--end.is-open:dir(rtl)`. <br/>Defaults to `var(--spectrum-popover-animation-distance)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-pointer-width": {
+      "description": "Used by `.spectrum-Popover--withTip.spectrum-Popover .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-start .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--end-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--end-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-top .spectrum-Popover-tip`. <br/>Defaults to `var(--spectrum-popover-pointer-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-popover-pointer-edge-spacing": {
+      "description": "Used by `.spectrum-Popover--withTip.spectrum-Popover--top-left .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--top-right .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--top-start .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--top-end .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--bottom-left .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--bottom-right .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--bottom-start .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--bottom-end .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--end-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-top .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--end-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-bottom .spectrum-Popover-tip`. <br/>Defaults to `var(--spectrum-popover-pointer-edge-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-popover-animation-distance": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover--top-end.is-open, .spectrum-Popover--top-left.is-open, .spectrum-Popover--top-right.is-open, .spectrum-Popover--top-start.is-open, .spectrum-Popover--top.is-open`, `.spectrum-Popover--bottom-end.is-open, .spectrum-Popover--bottom-left.is-open, .spectrum-Popover--bottom-right.is-open, .spectrum-Popover--bottom-start.is-open, .spectrum-Popover--bottom.is-open`, `.spectrum-Popover--right-bottom.is-open, .spectrum-Popover--right-top.is-open, .spectrum-Popover--right.is-open`, `.spectrum-Popover--left-bottom.is-open, .spectrum-Popover--left-top.is-open, .spectrum-Popover--left.is-open`, `.spectrum-Popover--start-bottom.is-open, .spectrum-Popover--start-top.is-open, .spectrum-Popover--start.is-open`, `.spectrum-Popover--start-bottom.is-open:dir(rtl), .spectrum-Popover--start-top.is-open:dir(rtl), .spectrum-Popover--start.is-open:dir(rtl)`, `.spectrum-Popover--end-bottom.is-open, .spectrum-Popover--end-top.is-open, .spectrum-Popover--end.is-open`, `.spectrum-Popover--end-bottom.is-open:dir(rtl), .spectrum-Popover--end-top.is-open:dir(rtl), .spectrum-Popover--end.is-open:dir(rtl)`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-background-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover`, `.spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-popover-border-width": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover`, `.spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle`, `.spectrum-Popover--top-end.spectrum-Popover--withTip, .spectrum-Popover--top-left.spectrum-Popover--withTip, .spectrum-Popover--top-right.spectrum-Popover--withTip, .spectrum-Popover--top-start.spectrum-Popover--withTip, .spectrum-Popover--top.spectrum-Popover--withTip`, `.spectrum-Popover--bottom-end.spectrum-Popover--withTip, .spectrum-Popover--bottom-left.spectrum-Popover--withTip, .spectrum-Popover--bottom-right.spectrum-Popover--withTip, .spectrum-Popover--bottom-start.spectrum-Popover--withTip, .spectrum-Popover--bottom.spectrum-Popover--withTip`, `.spectrum-Popover--right-bottom.spectrum-Popover--withTip, .spectrum-Popover--right-top.spectrum-Popover--withTip, .spectrum-Popover--right.spectrum-Popover--withTip`, `.spectrum-Popover--left-bottom.spectrum-Popover--withTip, .spectrum-Popover--left-top.spectrum-Popover--withTip, .spectrum-Popover--left.spectrum-Popover--withTip`, `.spectrum-Popover--start-bottom.spectrum-Popover--withTip, .spectrum-Popover--start-top.spectrum-Popover--withTip, .spectrum-Popover--start.spectrum-Popover--withTip`, `.spectrum-Popover--end-bottom.spectrum-Popover--withTip, .spectrum-Popover--end-top.spectrum-Popover--withTip, .spectrum-Popover--end.spectrum-Popover--withTip`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-border-color-rgb": {
+      "value": "var(--spectrum-gray-200-rgb)",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `--spectrum-popover-border-color-with-transparency`. <br/>Defaults to `var(--spectrum-gray-200-rgb)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-popover-border-transparency": {
+      "value": "light-dark(0, 1.0)",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `--spectrum-popover-border-color-with-transparency`. <br/>Defaults to `var(--spectrum-popover-border-opacity)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-border-opacity": {
+      "value": "light-dark(0, 1.0)",
+      "description": "Used by `--spectrum-popover-border-transparency`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-border-color-with-transparency": {
+      "value": "rgb(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency))",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover`, `.spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle`. <br/>Defaults to `rgb(var(--spectrum-popover-border-color-rgb), var(--spectrum-popover-border-transparency))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-popover-content-area-spacing": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover`. <br/>Defaults to `var(--spectrum-popover-edge-to-content-area)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-edge-to-content-area": {
+      "value": "8px",
+      "description": "Used by `--spectrum-popover-content-area-spacing`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-drop-shadow-x": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `--spectrum-popover-filter`, `--spectrum-popover-box-shadow`. <br/>Defaults to `var(--spectrum-drop-shadow-elevated-x)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-drop-shadow-y": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `--spectrum-popover-filter`, `--spectrum-popover-box-shadow`. <br/>Defaults to `var(--spectrum-drop-shadow-elevated-y)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-drop-shadow-blur": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `--spectrum-popover-filter`, `--spectrum-popover-box-shadow`. <br/>Defaults to `var(--spectrum-drop-shadow-elevated-blur)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-drop-shadow-color": {
+      "value": "var(--spectrum-drop-shadow-color-200)",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `--spectrum-popover-filter`, `--spectrum-popover-box-shadow`. <br/>Defaults to `var(--spectrum-drop-shadow-elevated-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-popover-corner-radius": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `--spectrum-popover-pointer-edge-offset`, `.spectrum-Popover`. <br/>Defaults to `var(--spectrum-corner-radius-large-default)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-pointer-width": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover--withTip.spectrum-Popover .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-start .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--end-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--end-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-top .spectrum-Popover-tip`. <br/>Defaults to `var(--spectrum-popover-tip-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-tip-width": {
+      "value": "16px",
+      "description": "Used by `--spectrum-popover-pointer-width`, `--spectrum-popover-pointer-edge-offset`, `--spectrum-popover-pointer-edge-spacing`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-pointer-height": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover--top-end.spectrum-Popover--withTip, .spectrum-Popover--top-left.spectrum-Popover--withTip, .spectrum-Popover--top-right.spectrum-Popover--withTip, .spectrum-Popover--top-start.spectrum-Popover--withTip, .spectrum-Popover--top.spectrum-Popover--withTip`, `.spectrum-Popover--bottom-end.spectrum-Popover--withTip, .spectrum-Popover--bottom-left.spectrum-Popover--withTip, .spectrum-Popover--bottom-right.spectrum-Popover--withTip, .spectrum-Popover--bottom-start.spectrum-Popover--withTip, .spectrum-Popover--bottom.spectrum-Popover--withTip`, `.spectrum-Popover--right-bottom.spectrum-Popover--withTip, .spectrum-Popover--right-top.spectrum-Popover--withTip, .spectrum-Popover--right.spectrum-Popover--withTip`, `.spectrum-Popover--left-bottom.spectrum-Popover--withTip, .spectrum-Popover--left-top.spectrum-Popover--withTip, .spectrum-Popover--left.spectrum-Popover--withTip`, `.spectrum-Popover--start-bottom.spectrum-Popover--withTip, .spectrum-Popover--start-top.spectrum-Popover--withTip, .spectrum-Popover--start.spectrum-Popover--withTip`, `.spectrum-Popover--end-bottom.spectrum-Popover--withTip, .spectrum-Popover--end-top.spectrum-Popover--withTip, .spectrum-Popover--end.spectrum-Popover--withTip`, `.spectrum-Popover--withTip.spectrum-Popover .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--bottom-start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--top-start .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--end .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--end-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--end-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-top .spectrum-Popover-tip`. <br/>Defaults to `var(--spectrum-popover-tip-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-tip-height": {
+      "value": "8px",
+      "description": "Used by `--spectrum-popover-pointer-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-pointer-edge-offset": {
+      "value": "calc(var(--spectrum-popover-corner-radius) + var(--spectrum-popover-tip-width) / 2)",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `--spectrum-popover-pointer-edge-spacing`. <br/>Defaults to `calc(var(--spectrum-popover-corner-radius) + var(--spectrum-popover-tip-width) / 2)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-pointer-edge-spacing": {
+      "value": "calc(var(--spectrum-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width) / 2)",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover--withTip.spectrum-Popover--top-left .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--top-right .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--top-start .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--top-end .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--bottom-left .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--bottom-right .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--bottom-start .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--bottom-end .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--end-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-top .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-top .spectrum-Popover-tip`, `.spectrum-Popover--withTip.spectrum-Popover--end-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--left-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--right-bottom .spectrum-Popover-tip, .spectrum-Popover--withTip.spectrum-Popover--start-bottom .spectrum-Popover-tip`. <br/>Defaults to `calc(var(--spectrum-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width) / 2)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-filter": {
+      "value": "drop-shadow(var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) calc(var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) / 2) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color)))",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover.spectrum-Popover--withTip`. <br/>Defaults to `drop-shadow(var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) calc(var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) / 2) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-popover-box-shadow": {
+      "value": "var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color))",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover`. <br/>Defaults to `var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-Popover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-0": {
+      "description": "Used by `.spectrum-Popover.is-open`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-background-layer-2-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Used by `--spectrum-popover-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "value": "1px",
+      "description": "Used by `--spectrum-popover-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-200-rgb": {
+      "description": "Used by `--spectrum-popover-border-color-rgb`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-elevated-x": {
+      "value": "0px",
+      "description": "Used by `--spectrum-popover-drop-shadow-x`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-elevated-y": {
+      "value": "2px",
+      "description": "Used by `--spectrum-popover-drop-shadow-y`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-elevated-blur": {
+      "value": "8px",
+      "description": "Used by `--spectrum-popover-drop-shadow-blur`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-elevated-color": {
+      "value": "var(--spectrum-drop-shadow-color-200)",
+      "description": "Used by `--spectrum-popover-drop-shadow-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-large-default": {
+      "value": "10px",
+      "description": "Used by `--spectrum-popover-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-popover-border-color": {
+      "value": "var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency))",
+      "description": "Defined in `.spectrum-Popover`. <br/>Used by `.spectrum-Popover`, `.spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle`. <br/>Defaults to `var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency))`, if not set.",
+      "control": "color"
+    }
+  }
 }

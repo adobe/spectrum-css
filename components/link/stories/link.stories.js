@@ -1,9 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { LinkGroup } from "./link.test.js";
 import { LinkGroupText, MultilineText, TemplateWithFillerText } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A link allows users to navigate to a different location. They can be presented in-line inside a paragraph or as standalone text.
@@ -91,6 +93,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

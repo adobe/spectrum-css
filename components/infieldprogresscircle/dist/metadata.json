@@ -7,19 +7,60 @@
     ".spectrum-InfieldProgressCircle--sizeS",
     ".spectrum-InfieldProgressCircle--sizeXL"
   ],
-  "modifiers": [],
-  "component": [
-    "--spectrum-in-field-progress-circle-edge-to-fill",
-    "--spectrum-in-field-progress-circle-size-100",
-    "--spectrum-in-field-progress-circle-size-200",
-    "--spectrum-in-field-progress-circle-size-300",
-    "--spectrum-in-field-progress-circle-size-75",
-    "--spectrum-infieldprogresscircle-padding-block"
-  ],
-  "global": ["--spectrum-progress-circle-thickness-small"],
-  "passthroughs": [
-    "--mod-progress-circle-size",
-    "--mod-progress-circle-thickness"
-  ],
-  "high-contrast": []
+  "modifiers": {},
+  "component": {
+    "spectrum-in-field-progress-circle-size-100": {
+      "value": "20px",
+      "description": "Used by `--mod-progress-circle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-infieldprogresscircle-padding-block": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-InfieldProgressCircle`. <br/>Used by `.spectrum-InfieldProgressCircle`. <br/>Defaults to `var(--spectrum-in-field-progress-circle-edge-to-fill)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-progress-circle-edge-to-fill": {
+      "value": "1px",
+      "description": "Used by `--spectrum-infieldprogresscircle-padding-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-progress-circle-size-75": {
+      "value": "16px",
+      "description": "Used by `--mod-progress-circle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-progress-circle-size-200": {
+      "value": "22px",
+      "description": "Used by `--mod-progress-circle-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-in-field-progress-circle-size-300": {
+      "value": "26px",
+      "description": "Used by `--mod-progress-circle-size`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-progress-circle-thickness-small": {
+      "value": "2px",
+      "description": "Used by `--mod-progress-circle-thickness`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-progress-circle-thickness": {
+      "category": "Passthrough"
+    },
+    "mod-progress-circle-size": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {}
 }

@@ -12,8 +12,6 @@ import {
 	isSelected,
 	size,
 } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import {
 	MenuItemGroup,
 	MenuTraySubmenu,
@@ -26,6 +24,10 @@ import {
 	SubmenuInPopover,
 	Template,
 } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a
@@ -114,6 +116,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	decorators: [withDownStateDimensionCapture],

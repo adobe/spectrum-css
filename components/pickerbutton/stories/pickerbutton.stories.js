@@ -2,10 +2,12 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isHovered, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { PickerGroup } from "./pickerbutton.test.js";
 import { PickerIconOptions, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The picker button component is used as a dropdown trigger within other components such as [combobox](?path=/docs/components-combobox--docs) and [date picker](?path=/docs/components-date-picker--docs).
@@ -68,6 +70,10 @@ export default {
 		},
 		downState: {
 			selectors: [".spectrum-PickerButton:not(:disabled)"],
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	status: {

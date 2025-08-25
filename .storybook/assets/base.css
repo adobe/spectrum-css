@@ -1,5 +1,3 @@
-/* stylelint-disable selector-class-pattern -- Targeting pre-defined Storybook classes */
-
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -31,7 +29,7 @@ body {
 .spectrum {
 	color: var(--spectrum-neutral-content-color-default);
 	background-color: var(--spectrum-background-base-color);
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0%);
+	-webkit-tap-highlight-color: rgb(0, 0, 0, 0%);
 }
 
 .spectrum .spectrum-examples-static-black {
@@ -61,7 +59,7 @@ svg:has(symbol):not(:has(use)) {
 	line-height: normal;
 	letter-spacing: normal;
 	text-transform: none;
-	border-block-end: 1px solid hsla(203deg, 50%, 30%, 15%);
+	border-block-end: 1px solid hsl(203deg, 50%, 30%, 15%);
 }
 
 /* Force the modal wrapper to be contained by the frame not the viewport */
@@ -77,4 +75,14 @@ svg:has(symbol):not(:has(use)) {
 	overflow: visible !important;
 }
 
-/* stylelint-enable selector-class-pattern */
+#panel-tab-content tr th:nth-child(1),
+#panel-tab-content tr th:nth-child(3),
+#panel-tab-content tr td:nth-child(1),
+#panel-tab-content tr td:nth-child(3) {
+	min-inline-size: 100px !important;
+}
+
+#panel-tab-content tr th:nth-child(2),
+#panel-tab-content tr td:nth-child(2) {
+	max-inline-size: 500px !important;
+}

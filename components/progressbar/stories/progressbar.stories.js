@@ -1,10 +1,12 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ProgressBarGroup } from "./progressbar.test.js";
 import { IndeterminateGroup, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.
@@ -83,9 +85,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		status: {
-			type: "migrated",
-		},
+		cssprops: metadata.modifiers,
 	},
 	tags: ["migrated"],
 };

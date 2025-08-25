@@ -68,6 +68,8 @@ export default {
 			name: "@storybook/addon-actions",
 			options: {},
 		},
+		// https://github.com/ljcl/storybook-addon-cssprops
+		"@ljcl/storybook-addon-cssprops",
 		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@whitespace/storybook-addon-html",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
