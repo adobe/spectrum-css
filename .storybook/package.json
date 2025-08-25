@@ -39,7 +39,7 @@
 		"build": "yarn docs:report && cross-env NODE_ENV=development storybook build --stats-json --config-dir ."
 	},
 	"dependencies": {
-		"@adobe/spectrum-css-workflow-icons": "^4.1.0",
+		"@adobe/spectrum-css-workflow-icons": "^5.0.0",
 		"@spectrum-css/bundle": "2.0.0-next.11",
 		"@spectrum-css/tokens": "16.1.0-next.8",
 		"@spectrum-css/ui-icons": "2.0.0-next.2"
