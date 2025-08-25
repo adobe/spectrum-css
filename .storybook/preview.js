@@ -15,6 +15,7 @@ import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
 
 // Import the custom base styles
+import "@spectrum-css/bundle/dist/index.css";
 import "./assets/base.css";
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */

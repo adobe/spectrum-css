@@ -1,9 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ColorWheelGroup } from "./colorwheel.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The color wheel component lets users visually change an individual channel of a color on a circular track.
@@ -65,6 +67,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

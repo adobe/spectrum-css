@@ -6,36 +6,153 @@
     ".spectrum-Tray-wrapper",
     ".spectrum-Tray.is-open"
   ],
-  "modifiers": [
-    "--mod-tray-background-color",
-    "--mod-tray-bottom-to-content-area",
-    "--mod-tray-corner-radius",
-    "--mod-tray-corner-radius-portrait",
-    "--mod-tray-entry-animation-delay",
-    "--mod-tray-entry-animation-duration",
-    "--mod-tray-exit-animation-delay",
-    "--mod-tray-exit-animation-duration",
-    "--mod-tray-max-inline-size",
-    "--mod-tray-spacing-edge-to-tray-safe-zone",
-    "--mod-tray-top-to-content-area"
-  ],
-  "component": [
-    "--spectrum-tray-background-color",
-    "--spectrum-tray-corner-radius",
-    "--spectrum-tray-entry-animation-delay",
-    "--spectrum-tray-entry-animation-duration",
-    "--spectrum-tray-exit-animation-delay",
-    "--spectrum-tray-exit-animation-duration",
-    "--spectrum-tray-max-inline-size",
-    "--spectrum-tray-spacing-edge-to-tray-safe-zone",
-    "--spectrum-tray-top-to-content-area"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-animation-duration-500",
-    "--spectrum-background-layer-2-color",
-    "--spectrum-corner-radius-100"
-  ],
-  "passthroughs": ["--mod-modal-max-width"],
-  "high-contrast": ["--highcontrast-tray-background-color"]
+  "modifiers": {
+    "mod-tray-max-inline-size": {
+      "description": "Used by `--spectrum-tray-max-inline-size`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-spacing-edge-to-tray-safe-zone": {
+      "description": "Used by `--spectrum-tray-spacing-edge-to-tray-safe-zone`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-entry-animation-delay": {
+      "description": "Used by `--spectrum-tray-entry-animation-delay`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-entry-animation-duration": {
+      "description": "Used by `--spectrum-tray-entry-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-500)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-exit-animation-delay": {
+      "description": "Used by `--spectrum-tray-exit-animation-delay`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-exit-animation-duration": {
+      "description": "Used by `--spectrum-tray-exit-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-corner-radius": {
+      "description": "Used by `--spectrum-tray-corner-radius`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-background-color": {
+      "description": "Used by `--spectrum-tray-background-color`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tray-top-to-content-area": {
+      "description": "Used by `.spectrum-Tray`. <br/>Defaults to `var(--spectrum-tray-top-to-content-area)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-bottom-to-content-area": {
+      "description": "Used by `.spectrum-Tray`. <br/>Defaults to `var(--spectrum-tray-top-to-content-area)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tray-corner-radius-portrait": {
+      "description": "Used by `.spectrum-Tray`.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-tray-max-inline-size": {
+      "value": "var(--mod-tray-max-inline-size, 375px)",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`. <br/>Defaults to `var(--mod-tray-max-inline-size, 375px)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tray-spacing-edge-to-tray-safe-zone": {
+      "value": "var(--mod-tray-spacing-edge-to-tray-safe-zone, 64px)",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`. <br/>Defaults to `var(--mod-tray-spacing-edge-to-tray-safe-zone, 64px)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tray-entry-animation-delay": {
+      "value": "var(--mod-tray-entry-animation-delay, 160ms)",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray.is-open`. <br/>Defaults to `var(--mod-tray-entry-animation-delay, 160ms)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tray-entry-animation-duration": {
+      "value": "var(--mod-tray-entry-animation-duration, var(--spectrum-animation-duration-500))",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray.is-open`. <br/>Defaults to `var(--mod-tray-entry-animation-duration, var(--spectrum-animation-duration-500))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tray-exit-animation-delay": {
+      "value": "var(--mod-tray-exit-animation-delay, 0ms)",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`. <br/>Defaults to `var(--mod-tray-exit-animation-delay, 0ms)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tray-exit-animation-duration": {
+      "value": "var(--mod-tray-exit-animation-duration, var(--spectrum-animation-duration-100))",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`. <br/>Defaults to `var(--mod-tray-exit-animation-duration, var(--spectrum-animation-duration-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tray-corner-radius": {
+      "value": "var(--mod-tray-corner-radius, var(--spectrum-corner-radius-100))",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`. <br/>Defaults to `var(--mod-tray-corner-radius, var(--spectrum-corner-radius-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tray-background-color": {
+      "value": "var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-background-layer-2-color)))",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `.spectrum-Tray`. <br/>Defaults to `var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-background-layer-2-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tray-top-to-content-area": {
+      "value": "4px",
+      "description": "Used by `.spectrum-Tray`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-animation-duration-500": {
+      "description": "Used by `--spectrum-tray-entry-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-tray-exit-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tray-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-background-layer-2-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Used by `--spectrum-tray-background-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-modal-max-width": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-tray-background-color": {
+      "value": "var(--mod-tray-background-color, var(--spectrum-background-layer-2-color))",
+      "description": "Defined in `.spectrum-Tray`. <br/>Used by `--spectrum-tray-background-color`. <br/>Defaults to `var(--mod-tray-background-color, var(--spectrum-background-layer-2-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

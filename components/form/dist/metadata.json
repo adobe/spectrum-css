@@ -11,26 +11,96 @@
     ".spectrum-Form-itemLabel.is-disabled",
     ".spectrum-Form-itemLabel.is-disabled .spectrum-FieldLabel-requiredIcon"
   ],
-  "modifiers": [
-    "--mod-disabled-content-color",
-    "--mod-form-grid-template-columns",
-    "--mod-form-grid-template-columns-labels-above",
-    "--mod-form-inline-size",
-    "--mod-form-item-block-spacing",
-    "--mod-form-item-block-spacing-labels-above"
-  ],
-  "component": [
-    "--spectrum-form-grid-template-columns",
-    "--spectrum-form-grid-template-columns-labels-above",
-    "--spectrum-form-item-block-spacing",
-    "--spectrum-form-item-block-spacing-labels-above",
-    "--spectrum-form-item-disabled-content-color"
-  ],
-  "global": [
-    "--spectrum-disabled-content-color",
-    "--spectrum-spacing-200",
-    "--spectrum-spacing-300"
-  ],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-form-item-disabled-content-color"]
+  "modifiers": {
+    "mod-form-grid-template-columns": {
+      "description": "Defined in `.spectrum-Form--labelsAbove`. <br/>Used by `.spectrum-Form`. <br/>Defaults to `var(--spectrum-form-grid-template-columns)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-form-inline-size": {
+      "description": "Used by `.spectrum-Form`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-form-item-block-spacing": {
+      "description": "Defined in `.spectrum-Form--labelsAbove`. <br/>Used by `.spectrum-Form`. <br/>Defaults to `var(--spectrum-form-item-block-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-form-item-block-spacing-labels-above": {
+      "description": "Used by `--mod-form-item-block-spacing`. <br/>Defaults to `var(--spectrum-form-item-block-spacing-labels-above)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-form-grid-template-columns-labels-above": {
+      "description": "Used by `--mod-form-grid-template-columns`. <br/>Defaults to `var(--spectrum-form-grid-template-columns-labels-above)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-disabled-content-color": {
+      "description": "Used by `.spectrum-Form-itemLabel.is-disabled, .spectrum-Form-itemLabel.is-disabled .spectrum-FieldLabel-requiredIcon`. <br/>Defaults to `var(--spectrum-form-item-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-form-item-block-spacing": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-Form`. <br/>Used by `.spectrum-Form`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-form-item-block-spacing-labels-above": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Form`. <br/>Used by `--mod-form-item-block-spacing`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-form-grid-template-columns": {
+      "value": "auto auto",
+      "description": "Defined in `.spectrum-Form`. <br/>Used by `.spectrum-Form`. <br/>Defaults to `auto auto`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-form-grid-template-columns-labels-above": {
+      "value": "auto",
+      "description": "Defined in `.spectrum-Form`. <br/>Used by `--mod-form-grid-template-columns`. <br/>Defaults to `auto`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-form-item-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Form`. <br/>Used by `.spectrum-Form-itemLabel.is-disabled, .spectrum-Form-itemLabel.is-disabled .spectrum-FieldLabel-requiredIcon`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-form-item-block-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-form-item-block-spacing-labels-above`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-form-item-disabled-content-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-form-item-disabled-content-color": {
+      "value": "var(--mod-disabled-content-color, var(--spectrum-form-item-disabled-content-color))",
+      "description": "Defined in `.spectrum-Form`. <br/>Used by `.spectrum-Form-itemLabel.is-disabled, .spectrum-Form-itemLabel.is-disabled .spectrum-FieldLabel-requiredIcon`. <br/>Defaults to `var(--mod-disabled-content-color, var(--spectrum-form-item-disabled-content-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

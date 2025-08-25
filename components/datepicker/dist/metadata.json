@@ -4,15 +4,16 @@
     ".spectrum-DatePicker",
     ".spectrum-DatePicker--quiet",
     ".spectrum-DatePicker--quiet .spectrum-DatePicker-button",
-    ".spectrum-DatePicker--quiet .spectrum-DatePicker-button:not(.is-open)",
     ".spectrum-DatePicker--quiet .spectrum-DatePicker-button:not(:disabled, .is-open)",
+    ".spectrum-DatePicker--quiet .spectrum-DatePicker-button:not(.is-open)",
+    ".spectrum-DatePicker--quiet:hover:not(.is-focused, .is-keyboardFocused, .is-disabled, .is-invalid)",
     ".spectrum-DatePicker--quiet.is-disabled",
     ".spectrum-DatePicker--quiet.is-invalid",
     ".spectrum-DatePicker--quiet.is-invalid .spectrum-DatePicker-input:not(.spectrum-DatePicker-startField)",
-    ".spectrum-DatePicker--quiet:hover:not(.is-focused, .is-keyboardFocused, .is-disabled, .is-invalid)",
     ".spectrum-DatePicker--range",
     ".spectrum-DatePicker--range .spectrum-DatePicker-textfield",
     ".spectrum-DatePicker--range .spectrum-DatePicker-textfield:first-of-type",
+    ".spectrum-DatePicker--range:after",
     ".spectrum-DatePicker--range.is-keyboardFocused:not(.spectrum-DatePicker--quiet) .spectrum-DatePicker-textfield:after",
     ".spectrum-DatePicker--range.is-keyboardFocused:not(.spectrum-DatePicker--quiet):after",
     ".spectrum-DatePicker--range.spectrum-DatePicker--datetimeRange .spectrum-DatePicker-textfield",
@@ -23,135 +24,607 @@
     ".spectrum-DatePicker--range.spectrum-DatePicker--quiet .spectrum-DatePicker-textfield",
     ".spectrum-DatePicker--range.spectrum-DatePicker--quiet .spectrum-DatePicker-textfield:first-of-type",
     ".spectrum-DatePicker--range.spectrum-DatePicker--quiet.is-keyboardFocused:after",
-    ".spectrum-DatePicker--range:after",
     ".spectrum-DatePicker-button",
     ".spectrum-DatePicker-input",
     ".spectrum-DatePicker-input.spectrum-DatePicker-endField",
     ".spectrum-DatePicker-input.spectrum-DatePicker-startField",
     ".spectrum-DatePicker-rangeDash",
     ".spectrum-DatePicker-rangeDash:before",
+    ".spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled)",
     ".spectrum-DatePicker.is-disabled",
     ".spectrum-DatePicker.is-invalid",
     ".spectrum-DatePicker.is-invalid:not(.spectrum-DatePicker--quiet, .is-disabled)",
-    ".spectrum-DatePicker.spectrum-DatePicker--quiet.is-invalid",
-    ".spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled)"
+    ".spectrum-DatePicker.spectrum-DatePicker--quiet.is-invalid"
   ],
-  "modifiers": [
-    "--mod-datepicker-border-color-disabled",
-    "--mod-datepicker-border-radius",
-    "--mod-datepicker-border-radius-quiet",
-    "--mod-datepicker-dash-color",
-    "--mod-datepicker-dash-color-disabled",
-    "--mod-datepicker-dash-font-size",
-    "--mod-datepicker-dash-line-height",
-    "--mod-datepicker-datetime-input-width",
-    "--mod-datepicker-datetime-input-width-first",
-    "--mod-datepicker-datetime-quiet-input-width",
-    "--mod-datepicker-datetime-quiet-input-width-first",
-    "--mod-datepicker-focus-animation",
-    "--mod-datepicker-focus-line-gap",
-    "--mod-datepicker-focus-ring-color",
-    "--mod-datepicker-focus-ring-gap",
-    "--mod-datepicker-focus-ring-width",
-    "--mod-datepicker-focus-thickness",
-    "--mod-datepicker-generic-padding",
-    "--mod-datepicker-input-width",
-    "--mod-datepicker-input-width-quiet",
-    "--mod-datepicker-invalid-quiet-color",
-    "--mod-datepicker-min-width",
-    "--mod-datepicker-padding-inline",
-    "--mod-datepicker-padding-inline-end-invalid-quiet",
-    "--mod-datepicker-padding-inline-quiet",
-    "--mod-datepicker-pickerbutton-border-color",
-    "--mod-datepicker-pickerbutton-border-color-invalid",
-    "--mod-datepicker-quiet-border-color-hover",
-    "--mod-datepicker-quiet-button-offset",
-    "--mod-datepicker-range-dash-margin-left",
-    "--mod-datepicker-range-dash-padding-top",
-    "--mod-datepicker-range-input-width-first",
-    "--mod-datepicker-range-input-width-quiet-first"
-  ],
-  "component": [
-    "--spectrum-datepicker-border-color-disabled",
-    "--spectrum-datepicker-border-radius",
-    "--spectrum-datepicker-border-radius-quiet",
-    "--spectrum-datepicker-border-width",
-    "--spectrum-datepicker-dash-color",
-    "--spectrum-datepicker-dash-font-size",
-    "--spectrum-datepicker-dash-line-height",
-    "--spectrum-datepicker-datetime-input-width",
-    "--spectrum-datepicker-datetime-input-width-first",
-    "--spectrum-datepicker-datetime-quiet-input-width",
-    "--spectrum-datepicker-datetime-quiet-input-width-first",
-    "--spectrum-datepicker-datetime-width-first",
-    "--spectrum-datepicker-focus-animation",
-    "--spectrum-datepicker-focus-line-gap",
-    "--spectrum-datepicker-focus-ring-color",
-    "--spectrum-datepicker-focus-ring-gap",
-    "--spectrum-datepicker-focus-ring-width",
-    "--spectrum-datepicker-focus-thickness",
-    "--spectrum-datepicker-generic-padding",
-    "--spectrum-datepicker-icon-size",
-    "--spectrum-datepicker-icon-to-text",
-    "--spectrum-datepicker-initial-height",
-    "--spectrum-datepicker-initial-width",
-    "--spectrum-datepicker-input-datetime-width",
-    "--spectrum-datepicker-input-width",
-    "--spectrum-datepicker-input-width-base",
-    "--spectrum-datepicker-input-width-quiet",
-    "--spectrum-datepicker-invalid-icon-to-button",
-    "--spectrum-datepicker-invalid-icon-to-button-quiet",
-    "--spectrum-datepicker-invalid-quiet-color",
-    "--spectrum-datepicker-min-width",
-    "--spectrum-datepicker-padding-inline-end",
-    "--spectrum-datepicker-padding-inline-end-invalid-quiet",
-    "--spectrum-datepicker-padding-inline-end-quiet",
-    "--spectrum-datepicker-pickerbutton-border-color",
-    "--spectrum-datepicker-pickerbutton-border-color-invalid",
-    "--spectrum-datepicker-pickerbutton-width",
-    "--spectrum-datepicker-pickerbutton-width-quiet",
-    "--spectrum-datepicker-quiet-border-color-hover",
-    "--spectrum-datepicker-quiet-button-offset",
-    "--spectrum-datepicker-range-dash-marin-inline-start",
-    "--spectrum-datepicker-range-dash-padding-top",
-    "--spectrum-datepicker-range-input-width-first",
-    "--spectrum-datepicker-range-input-width-quiet-first",
-    "--spectrum-datepicker-width-quiet-first",
-    "--spectrum-datepicker-width-quiet-second"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-border-width-100",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-height-100",
-    "--spectrum-corner-radius-100",
-    "--spectrum-disabled-border-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-field-edge-to-disclosure-icon-100",
-    "--spectrum-field-width",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-gray-500",
-    "--spectrum-negative-border-color-default",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-spacing-75",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-workflow-icon-size-100"
-  ],
-  "passthroughs": [
-    "--mod-picker-button-background-color",
-    "--mod-picker-button-background-color-hover-disabled",
-    "--mod-picker-button-border-color",
-    "--mod-picker-button-border-color-disabled",
-    "--mod-textfield-border-color-disabled",
-    "--mod-textfield-icon-spacing-inline-end-invalid",
-    "--mod-textfield-icon-spacing-inline-end-quiet-invalid"
-  ],
-  "high-contrast": [
-    "--highcontrast-datepicker-dash-color",
-    "--highcontrast-datepicker-focus-ring-color",
-    "--highcontrast-datepicker-pickerbutton-border-color"
-  ]
+  "modifiers": {
+    "mod-datepicker-border-radius": {
+      "description": "Defined in `.spectrum-DatePicker--quiet`, `.spectrum-DatePicker--range`, `.spectrum-DatePicker--range.spectrum-DatePicker--quiet`. <br/>Used by `--spectrum-datepicker-border-radius`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-border-radius-quiet": {
+      "description": "Used by `--spectrum-datepicker-border-radius-quiet`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-min-width": {
+      "description": "Used by `--spectrum-datepicker-min-width`. <br/>Defaults to `var(--spectrum-field-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-pickerbutton-border-color": {
+      "description": "Used by `--spectrum-datepicker-pickerbutton-border-color`. <br/>Defaults to `var(--spectrum-gray-500)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-datepicker-pickerbutton-border-color-invalid": {
+      "description": "Used by `--spectrum-datepicker-pickerbutton-border-color-invalid`. <br/>Defaults to `var(--spectrum-negative-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-datepicker-quiet-button-offset": {
+      "description": "Used by `--spectrum-datepicker-quiet-button-offset`. <br/>Defaults to `var(--spectrum-text-to-visual-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-focus-ring-gap": {
+      "description": "Used by `--spectrum-datepicker-focus-ring-gap`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-focus-thickness": {
+      "description": "Used by `--spectrum-datepicker-focus-thickness`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-focus-animation": {
+      "description": "Used by `--spectrum-datepicker-focus-animation`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-focus-ring-width": {
+      "description": "Used by `--spectrum-datepicker-focus-ring-width`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-focus-ring-color": {
+      "description": "Used by `--spectrum-datepicker-focus-ring-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-datepicker-focus-line-gap": {
+      "description": "Used by `--spectrum-datepicker-focus-line-gap`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-invalid-quiet-color": {
+      "description": "Used by `--spectrum-datepicker-invalid-quiet-color`. <br/>Defaults to `var(--spectrum-negative-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-datepicker-quiet-border-color-hover": {
+      "description": "Used by `--spectrum-datepicker-quiet-border-color-hover`. <br/>Defaults to `var(--spectrum-gray-500)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-datepicker-border-color-disabled": {
+      "description": "Used by `--spectrum-datepicker-border-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-datepicker-dash-font-size": {
+      "description": "Used by `--spectrum-datepicker-dash-font-size`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-dash-color": {
+      "description": "Defined in `.spectrum-DatePicker.is-disabled`. <br/>Used by `--spectrum-datepicker-dash-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-datepicker-range-dash-padding-top": {
+      "description": "Used by `--spectrum-datepicker-range-dash-padding-top`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-range-dash-margin-left": {
+      "description": "Used by `--spectrum-datepicker-range-dash-marin-inline-start`. <br/>Defaults to `calc(var(--spectrum-datepicker-dash-font-size) * -0.5)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-range-input-width-first": {
+      "description": "Used by `--spectrum-datepicker-range-input-width-first`. <br/>Defaults to `calc(var(--spectrum-datepicker-initial-width) - var(--spectrum-datepicker-generic-padding) * 2)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-input-width": {
+      "description": "Used by `--spectrum-datepicker-input-width`. <br/>Defaults to `calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-initial-height))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-range-input-width-quiet-first": {
+      "description": "Used by `--spectrum-datepicker-range-input-width-quiet-first`. <br/>Defaults to `calc(var(--spectrum-datepicker-width-quiet-first) + var(--spectrum-datepicker-width-quiet-second))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-input-width-quiet": {
+      "description": "Used by `--spectrum-datepicker-input-width-quiet`. <br/>Defaults to `calc(var(--spectrum-datepicker-range-input-width-quiet-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-datetime-input-width-first": {
+      "description": "Used by `--spectrum-datepicker-datetime-input-width-first`. <br/>Defaults to `calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-datetime-width-first))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-datetime-input-width": {
+      "description": "Used by `--spectrum-datepicker-datetime-input-width`. <br/>Defaults to `calc(var(--spectrum-datepicker-datetime-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-datetime-quiet-input-width-first": {
+      "description": "Used by `--spectrum-datepicker-datetime-quiet-input-width-first`. <br/>Defaults to `calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-input-datetime-width))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-datetime-quiet-input-width": {
+      "description": "Used by `--spectrum-datepicker-datetime-quiet-input-width`. <br/>Defaults to `calc(var(--spectrum-datepicker-datetime-quiet-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-padding-inline": {
+      "description": "Defined in `.spectrum-DatePicker--quiet`. <br/>Used by `--spectrum-datepicker-padding-inline-end`. <br/>Defaults to `calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--spectrum-datepicker-border-width) * 2)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-padding-inline-quiet": {
+      "description": "Used by `--spectrum-datepicker-padding-inline-end-quiet`. <br/>Defaults to `calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--spectrum-datepicker-quiet-button-offset))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-padding-inline-end-invalid-quiet": {
+      "description": "Used by `--spectrum-datepicker-padding-inline-end-invalid-quiet`. <br/>Defaults to `calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-icon-to-text))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-dash-color-disabled": {
+      "description": "Used by `--mod-datepicker-dash-color`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-datepicker-generic-padding": {
+      "description": "Used by `.spectrum-DatePicker-input.spectrum-DatePicker-startField`, `.spectrum-DatePicker-input.spectrum-DatePicker-endField`. <br/>Defaults to `var(--spectrum-datepicker-generic-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-datepicker-dash-line-height": {
+      "description": "Used by `.spectrum-DatePicker-rangeDash`. <br/>Defaults to `var(--spectrum-datepicker-dash-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-datepicker-border-radius": {
+      "value": "var(--mod-datepicker-border-radius, var(--spectrum-corner-radius-100))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker`, `--mod-datepicker-border-radius`, `.spectrum-DatePicker--range:after`. <br/>Defaults to `var(--mod-datepicker-border-radius, var(--spectrum-corner-radius-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-border-radius-quiet": {
+      "value": "var(--mod-datepicker-border-radius-quiet, 0)",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--mod-datepicker-border-radius`. <br/>Defaults to `var(--mod-datepicker-border-radius-quiet, 0)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-border-width": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-padding-inline-end`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-min-width": {
+      "value": "var(--mod-datepicker-min-width, var(--spectrum-field-width))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker`. <br/>Defaults to `var(--mod-datepicker-min-width, var(--spectrum-field-width))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-initial-height": {
+      "value": "32px",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-input-width`, `--spectrum-datepicker-input-width-quiet`, `--spectrum-datepicker-datetime-input-width`, `--spectrum-datepicker-datetime-quiet-input-width`. <br/>Defaults to `var(--spectrum-component-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-icon-size": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-input-width-base`, `--spectrum-datepicker-input-width-quiet`, `--spectrum-datepicker-datetime-input-width`, `--spectrum-datepicker-datetime-quiet-input-width`, `--spectrum-datepicker-padding-inline-end-invalid-quiet`. <br/>Defaults to `var(--spectrum-workflow-icon-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-pickerbutton-border-color": {
+      "value": "var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color, var(--spectrum-gray-500)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--mod-picker-button-border-color`. <br/>Defaults to `var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color, var(--spectrum-gray-500)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-datepicker-pickerbutton-border-color-invalid": {
+      "value": "var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-negative-border-color-default)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--mod-picker-button-border-color`. <br/>Defaults to `var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-negative-border-color-default)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-datepicker-pickerbutton-width": {
+      "value": "calc(var(--spectrum-field-edge-to-disclosure-icon-100) * 2 + var(--spectrum-workflow-icon-size-100))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-pickerbutton-width-quiet`, `--spectrum-datepicker-padding-inline-end`, `--spectrum-datepicker-padding-inline-end-quiet`, `--mod-textfield-icon-spacing-inline-end-invalid`. <br/>Defaults to `calc(var(--spectrum-field-edge-to-disclosure-icon-100) * 2 + var(--spectrum-workflow-icon-size-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-quiet-button-offset": {
+      "value": "var(--mod-datepicker-quiet-button-offset, var(--spectrum-text-to-visual-100))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-pickerbutton-width-quiet`, `--spectrum-datepicker-padding-inline-end-quiet`, `.spectrum-DatePicker--quiet .spectrum-DatePicker-button`. <br/>Defaults to `var(--mod-datepicker-quiet-button-offset, var(--spectrum-text-to-visual-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-icon-to-text": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-padding-inline-end-invalid-quiet`. <br/>Defaults to `var(--spectrum-component-edge-to-text-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-pickerbutton-width-quiet": {
+      "value": "calc(var(--spectrum-datepicker-pickerbutton-width) - var(--spectrum-datepicker-quiet-button-offset))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-padding-inline-end-invalid-quiet`, `--mod-textfield-icon-spacing-inline-end-quiet-invalid`. <br/>Defaults to `calc(var(--spectrum-datepicker-pickerbutton-width) - var(--spectrum-datepicker-quiet-button-offset))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-focus-ring-gap": {
+      "value": "var(--mod-datepicker-focus-ring-gap, var(--spectrum-focus-indicator-gap))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range:after`. <br/>Defaults to `var(--mod-datepicker-focus-ring-gap, var(--spectrum-focus-indicator-gap))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-focus-thickness": {
+      "value": "var(--mod-datepicker-focus-thickness, var(--spectrum-focus-indicator-thickness))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range.spectrum-DatePicker--quiet.is-keyboardFocused:after`. <br/>Defaults to `var(--mod-datepicker-focus-thickness, var(--spectrum-focus-indicator-thickness))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-focus-animation": {
+      "value": "var(--mod-datepicker-focus-animation, var(--spectrum-animation-duration-100))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range:after`. <br/>Defaults to `var(--mod-datepicker-focus-animation, var(--spectrum-animation-duration-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-focus-ring-width": {
+      "value": "var(--mod-datepicker-focus-ring-width, var(--spectrum-border-width-100))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range.is-keyboardFocused:not(.spectrum-DatePicker--quiet):after`. <br/>Defaults to `var(--mod-datepicker-focus-ring-width, var(--spectrum-border-width-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-focus-ring-color": {
+      "value": "var(--highcontrast-datepicker-focus-ring-color, var(--mod-datepicker-focus-ring-color, var(--spectrum-focus-indicator-color)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range.is-keyboardFocused:not(.spectrum-DatePicker--quiet):after`, `.spectrum-DatePicker--range.spectrum-DatePicker--quiet.is-keyboardFocused:after`. <br/>Defaults to `var(--highcontrast-datepicker-focus-ring-color, var(--mod-datepicker-focus-ring-color, var(--spectrum-focus-indicator-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-datepicker-focus-line-gap": {
+      "value": "var(--mod-datepicker-focus-line-gap, var(--spectrum-spacing-75))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range.spectrum-DatePicker--quiet.is-keyboardFocused:after`. <br/>Defaults to `var(--mod-datepicker-focus-line-gap, var(--spectrum-spacing-75))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-invalid-quiet-color": {
+      "value": "var(--mod-datepicker-invalid-quiet-color, var(--spectrum-negative-border-color-default))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--mod-picker-button-border-color`. <br/>Defaults to `var(--mod-datepicker-invalid-quiet-color, var(--spectrum-negative-border-color-default))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-datepicker-quiet-border-color-hover": {
+      "value": "var(--mod-datepicker-quiet-border-color-hover, var(--spectrum-gray-500))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--mod-picker-button-border-color`. <br/>Defaults to `var(--mod-datepicker-quiet-border-color-hover, var(--spectrum-gray-500))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-datepicker-border-color-disabled": {
+      "value": "var(--mod-datepicker-border-color-disabled, var(--spectrum-disabled-border-color))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--mod-picker-button-border-color-disabled`, `--mod-picker-button-background-color-hover-disabled`, `--mod-textfield-border-color-disabled`. <br/>Defaults to `var(--mod-datepicker-border-color-disabled, var(--spectrum-disabled-border-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-datepicker-dash-font-size": {
+      "value": "var(--mod-datepicker-dash-font-size, var(--spectrum-font-size-100))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-range-dash-marin-inline-start`, `.spectrum-DatePicker-rangeDash:before`. <br/>Defaults to `var(--mod-datepicker-dash-font-size, var(--spectrum-font-size-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-dash-color": {
+      "value": "var(--highcontrast-datepicker-dash-color, var(--mod-datepicker-dash-color, var(--spectrum-neutral-content-color-default)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker-rangeDash`. <br/>Defaults to `var(--highcontrast-datepicker-dash-color, var(--mod-datepicker-dash-color, var(--spectrum-neutral-content-color-default)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-datepicker-range-dash-padding-top": {
+      "value": "var(--mod-datepicker-range-dash-padding-top, 0)",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker-rangeDash`. <br/>Defaults to `var(--mod-datepicker-range-dash-padding-top, 0)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-range-dash-marin-inline-start": {
+      "value": "var(--mod-datepicker-range-dash-margin-left, calc(var(--spectrum-datepicker-dash-font-size) * -0.5))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker-rangeDash:before`. <br/>Defaults to `var(--mod-datepicker-range-dash-margin-left, calc(var(--spectrum-datepicker-dash-font-size) * -0.5))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-range-input-width-first": {
+      "value": "var(--mod-datepicker-range-input-width-first, calc(var(--spectrum-datepicker-initial-width) - var(--spectrum-datepicker-generic-padding) * 2))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-input-width-base`, `.spectrum-DatePicker--range .spectrum-DatePicker-textfield:first-of-type`. <br/>Defaults to `var(--mod-datepicker-range-input-width-first, calc(var(--spectrum-datepicker-initial-width) - var(--spectrum-datepicker-generic-padding) * 2))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-initial-width": {
+      "description": "Used by `--spectrum-datepicker-range-input-width-first`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-generic-padding": {
+      "description": "Used by `--spectrum-datepicker-range-input-width-first`, `.spectrum-DatePicker-input.spectrum-DatePicker-startField`, `.spectrum-DatePicker-input.spectrum-DatePicker-endField`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-input-width-base": {
+      "value": "calc(var(--spectrum-datepicker-range-input-width-first) + var(--spectrum-datepicker-icon-size))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-input-width`, `--spectrum-datepicker-datetime-input-width-first`, `--spectrum-datepicker-datetime-quiet-input-width-first`. <br/>Defaults to `calc(var(--spectrum-datepicker-range-input-width-first) + var(--spectrum-datepicker-icon-size))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-input-width": {
+      "value": "var(--mod-datepicker-input-width, calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-initial-height)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range .spectrum-DatePicker-textfield`. <br/>Defaults to `var(--mod-datepicker-input-width, calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-initial-height)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-range-input-width-quiet-first": {
+      "value": "var(--mod-datepicker-range-input-width-quiet-first, calc(var(--spectrum-datepicker-width-quiet-first) + var(--spectrum-datepicker-width-quiet-second)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-input-width-quiet`, `.spectrum-DatePicker--range.spectrum-DatePicker--quiet .spectrum-DatePicker-textfield:first-of-type`. <br/>Defaults to `var(--mod-datepicker-range-input-width-quiet-first, calc(var(--spectrum-datepicker-width-quiet-first) + var(--spectrum-datepicker-width-quiet-second)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-width-quiet-first": {
+      "description": "Used by `--spectrum-datepicker-range-input-width-quiet-first`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-width-quiet-second": {
+      "description": "Used by `--spectrum-datepicker-range-input-width-quiet-first`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-input-width-quiet": {
+      "value": "var(--mod-datepicker-input-width-quiet, calc(var(--spectrum-datepicker-range-input-width-quiet-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range.spectrum-DatePicker--quiet .spectrum-DatePicker-textfield`. <br/>Defaults to `var(--mod-datepicker-input-width-quiet, calc(var(--spectrum-datepicker-range-input-width-quiet-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-datetime-input-width-first": {
+      "value": "var(--mod-datepicker-datetime-input-width-first, calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-datetime-width-first)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-datetime-input-width`, `.spectrum-DatePicker--range.spectrum-DatePicker--datetimeRange .spectrum-DatePicker-textfield:first-of-type`. <br/>Defaults to `var(--mod-datepicker-datetime-input-width-first, calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-datetime-width-first)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-datetime-width-first": {
+      "description": "Used by `--spectrum-datepicker-datetime-input-width-first`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-datetime-input-width": {
+      "value": "var(--mod-datepicker-datetime-input-width, calc(var(--spectrum-datepicker-datetime-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range.spectrum-DatePicker--datetimeRange .spectrum-DatePicker-textfield`. <br/>Defaults to `var(--mod-datepicker-datetime-input-width, calc(var(--spectrum-datepicker-datetime-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-datetime-quiet-input-width-first": {
+      "value": "var(--mod-datepicker-datetime-quiet-input-width-first, calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-input-datetime-width)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-datetime-quiet-input-width`, `.spectrum-DatePicker--range.spectrum-DatePicker--datetimeRange.spectrum-DatePicker--quiet .spectrum-DatePicker-textfield:first-of-type`. <br/>Defaults to `var(--mod-datepicker-datetime-quiet-input-width-first, calc(var(--spectrum-datepicker-input-width-base) + var(--spectrum-datepicker-input-datetime-width)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-input-datetime-width": {
+      "description": "Used by `--spectrum-datepicker-datetime-quiet-input-width-first`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-datetime-quiet-input-width": {
+      "value": "var(--mod-datepicker-datetime-quiet-input-width, calc(var(--spectrum-datepicker-datetime-quiet-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--range.spectrum-DatePicker--datetimeRange.spectrum-DatePicker--quiet .spectrum-DatePicker-textfield`. <br/>Defaults to `var(--mod-datepicker-datetime-quiet-input-width, calc(var(--spectrum-datepicker-datetime-quiet-input-width-first) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-initial-height)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-padding-inline-end": {
+      "value": "var(--mod-datepicker-padding-inline, calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--spectrum-datepicker-border-width) * 2))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker-input`. <br/>Defaults to `var(--mod-datepicker-padding-inline, calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--spectrum-datepicker-border-width) * 2))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-padding-inline-end-quiet": {
+      "value": "var(--mod-datepicker-padding-inline-quiet, calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--spectrum-datepicker-quiet-button-offset)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--mod-datepicker-padding-inline`. <br/>Defaults to `var(--mod-datepicker-padding-inline-quiet, calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--spectrum-datepicker-quiet-button-offset)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-padding-inline-end-invalid-quiet": {
+      "value": "var(--mod-datepicker-padding-inline-end-invalid-quiet, calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-icon-to-text)))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `.spectrum-DatePicker--quiet.is-invalid .spectrum-DatePicker-input:not(.spectrum-DatePicker-startField)`. <br/>Defaults to `var(--mod-datepicker-padding-inline-end-invalid-quiet, calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-icon-size) + var(--spectrum-datepicker-icon-to-text)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-invalid-icon-to-button": {
+      "description": "Used by `--mod-textfield-icon-spacing-inline-end-invalid`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-invalid-icon-to-button-quiet": {
+      "description": "Used by `--mod-textfield-icon-spacing-inline-end-quiet-invalid`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-datepicker-dash-line-height": {
+      "description": "Used by `.spectrum-DatePicker-rangeDash`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-corner-radius-100": {
+      "value": "4px",
+      "description": "Used by `--spectrum-datepicker-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "value": "1px",
+      "description": "Used by `--spectrum-datepicker-border-width`, `--spectrum-datepicker-focus-ring-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-width": {
+      "value": "var(--spectrum-field-width-small)",
+      "description": "Used by `--spectrum-datepicker-min-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-datepicker-initial-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-datepicker-icon-size`, `--spectrum-datepicker-pickerbutton-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-500": {
+      "value": "light-dark(rgb(143, 143, 143), rgb(109, 109, 109))",
+      "description": "Used by `--spectrum-datepicker-pickerbutton-border-color`, `--spectrum-datepicker-quiet-border-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Used by `--spectrum-datepicker-pickerbutton-border-color-invalid`, `--spectrum-datepicker-invalid-quiet-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-disclosure-icon-100": {
+      "value": "11px",
+      "description": "Used by `--spectrum-datepicker-pickerbutton-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-datepicker-quiet-button-offset`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-datepicker-icon-to-text`, `--spectrum-datepicker-padding-inline-end`, `--spectrum-datepicker-padding-inline-end-quiet`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-datepicker-focus-ring-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-datepicker-focus-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-datepicker-focus-animation`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-datepicker-focus-ring-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-spacing-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-datepicker-focus-line-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Used by `--spectrum-datepicker-border-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-datepicker-dash-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-datepicker-dash-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--mod-datepicker-dash-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-textfield-border-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-icon-spacing-inline-end-invalid": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-icon-spacing-inline-end-quiet-invalid": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-border-color": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-border-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-background-color-hover-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-background-color": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-datepicker-pickerbutton-border-color": {
+      "value": "var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-negative-border-color-default))",
+      "description": "Defined in `.spectrum-DatePicker`, `.spectrum-DatePicker.spectrum-DatePicker--quiet.is-invalid`. <br/>Used by `--spectrum-datepicker-pickerbutton-border-color`, `--spectrum-datepicker-pickerbutton-border-color-invalid`. <br/>Defaults to `var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-negative-border-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-datepicker-focus-ring-color": {
+      "value": "var(--mod-datepicker-focus-ring-color, var(--spectrum-focus-indicator-color))",
+      "description": "Defined in `.spectrum-DatePicker`. <br/>Used by `--spectrum-datepicker-focus-ring-color`. <br/>Defaults to `var(--mod-datepicker-focus-ring-color, var(--spectrum-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-datepicker-dash-color": {
+      "value": "var(--mod-datepicker-dash-color, var(--spectrum-neutral-content-color-default))",
+      "description": "Defined in `.spectrum-DatePicker`, `.spectrum-DatePicker.is-disabled`. <br/>Used by `--spectrum-datepicker-dash-color`. <br/>Defaults to `var(--mod-datepicker-dash-color, var(--spectrum-neutral-content-color-default))`, if not set.",
+      "control": "color"
+    }
+  }
 }

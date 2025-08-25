@@ -16,182 +16,850 @@
     ".spectrum-Search-input::-webkit-search-cancel-button",
     ".spectrum-Search-input::-webkit-search-decoration",
     ".spectrum-Search-textfield",
+    ".spectrum-Search-textfield:hover .spectrum-Search-icon",
     ".spectrum-Search-textfield.is-disabled .spectrum-Search-icon",
     ".spectrum-Search-textfield.is-disabled:hover .spectrum-Search-icon",
     ".spectrum-Search-textfield.is-focused .spectrum-Search-icon",
     ".spectrum-Search-textfield.is-focused:hover .spectrum-Search-icon",
     ".spectrum-Search-textfield.is-keyboardFocused .spectrum-Search-icon",
-    ".spectrum-Search-textfield:hover .spectrum-Search-icon",
-    ".spectrum-Search.is-collapsed",
-    ".spectrum-Search.is-disabled .spectrum-Search-clearButton",
-    ".spectrum-Search.is-expanded",
     ".spectrum-Search:lang(ja)",
     ".spectrum-Search:lang(ko)",
-    ".spectrum-Search:lang(zh)"
+    ".spectrum-Search:lang(zh)",
+    ".spectrum-Search.is-collapsed",
+    ".spectrum-Search.is-disabled .spectrum-Search-clearButton",
+    ".spectrum-Search.is-expanded"
   ],
-  "modifiers": [
-    "--mod-search-background-color",
-    "--mod-search-background-color-disabled",
-    "--mod-search-block-size",
-    "--mod-search-border-color-default",
-    "--mod-search-border-color-disabled",
-    "--mod-search-border-color-focus",
-    "--mod-search-border-color-focus-hover",
-    "--mod-search-border-color-hover",
-    "--mod-search-border-color-key-focus",
-    "--mod-search-border-radius",
-    "--mod-search-border-width",
-    "--mod-search-bottom-to-text",
-    "--mod-search-button-inline-size",
-    "--mod-search-collapsed-animation-duration",
-    "--mod-search-color-default",
-    "--mod-search-color-disabled",
-    "--mod-search-color-focus",
-    "--mod-search-color-focus-hover",
-    "--mod-search-color-hover",
-    "--mod-search-color-key-focus",
-    "--mod-search-edge-to-visual",
-    "--mod-search-focus-indicator-color",
-    "--mod-search-focus-indicator-gap",
-    "--mod-search-focus-indicator-thickness",
-    "--mod-search-font-family",
-    "--mod-search-font-style",
-    "--mod-search-font-weight",
-    "--mod-search-icon-size",
-    "--mod-search-inline-size",
-    "--mod-search-line-height",
-    "--mod-search-min-inline-size",
-    "--mod-search-text-to-icon",
-    "--mod-search-to-help-text",
-    "--mod-search-top-to-icon",
-    "--mod-search-top-to-text"
-  ],
-  "component": [
-    "--spectrum-search-background-color",
-    "--spectrum-search-background-color-disabled",
-    "--spectrum-search-block-size",
-    "--spectrum-search-border-color-default",
-    "--spectrum-search-border-color-disabled",
-    "--spectrum-search-border-color-focus",
-    "--spectrum-search-border-color-focus-hover",
-    "--spectrum-search-border-color-hover",
-    "--spectrum-search-border-color-key-focus",
-    "--spectrum-search-border-radius",
-    "--spectrum-search-border-width",
-    "--spectrum-search-bottom-to-text",
-    "--spectrum-search-button-inline-size",
-    "--spectrum-search-collapsed-animation-duration",
-    "--spectrum-search-color",
-    "--spectrum-search-color-default",
-    "--spectrum-search-color-disabled",
-    "--spectrum-search-color-focus",
-    "--spectrum-search-color-focus-hover",
-    "--spectrum-search-color-hover",
-    "--spectrum-search-color-key-focus",
-    "--spectrum-search-edge-to-visual",
-    "--spectrum-search-field-minimum-width-multiplier",
-    "--spectrum-search-focus-indicator-color",
-    "--spectrum-search-focus-indicator-gap",
-    "--spectrum-search-focus-indicator-thickness",
-    "--spectrum-search-font-family",
-    "--spectrum-search-font-style",
-    "--spectrum-search-font-weight",
-    "--spectrum-search-icon-size",
-    "--spectrum-search-inline-size",
-    "--spectrum-search-line-height",
-    "--spectrum-search-min-inline-size",
-    "--spectrum-search-text-to-icon",
-    "--spectrum-search-to-help-text",
-    "--spectrum-search-top-to-icon",
-    "--spectrum-search-top-to-text"
-  ],
-  "global": [
-    "--spectrum-animation-duration-800",
-    "--spectrum-border-width-200",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-300",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-pill-edge-to-visual-100",
-    "--spectrum-component-pill-edge-to-visual-200",
-    "--spectrum-component-pill-edge-to-visual-300",
-    "--spectrum-component-pill-edge-to-visual-75",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-component-top-to-workflow-icon-200",
-    "--spectrum-component-top-to-workflow-icon-300",
-    "--spectrum-component-top-to-workflow-icon-75",
-    "--spectrum-corner-radius-full",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-border-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-field-width",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-25",
-    "--spectrum-gray-300",
-    "--spectrum-gray-400",
-    "--spectrum-gray-800",
-    "--spectrum-gray-900",
-    "--spectrum-help-text-to-component",
-    "--spectrum-line-height-100",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-focus",
-    "--spectrum-neutral-content-color-focus-hover",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-regular-font-weight",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-text-to-visual-200",
-    "--spectrum-text-to-visual-300",
-    "--spectrum-text-to-visual-75",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-300",
-    "--spectrum-workflow-icon-size-75"
-  ],
-  "passthroughs": [
-    "--mod-textfield-background-color",
-    "--mod-textfield-background-color-disabled",
-    "--mod-textfield-border-color",
-    "--mod-textfield-border-color-disabled",
-    "--mod-textfield-border-color-focus",
-    "--mod-textfield-border-color-focus-hover",
-    "--mod-textfield-border-color-hover",
-    "--mod-textfield-border-color-keyboard-focus",
-    "--mod-textfield-border-width",
-    "--mod-textfield-corner-radius",
-    "--mod-textfield-focus-indicator-color",
-    "--mod-textfield-focus-indicator-gap",
-    "--mod-textfield-focus-indicator-width",
-    "--mod-textfield-font-family",
-    "--mod-textfield-font-weight",
-    "--mod-textfield-placeholder-font-size",
-    "--mod-textfield-text-color-default",
-    "--mod-textfield-text-color-disabled",
-    "--mod-textfield-text-color-focus",
-    "--mod-textfield-text-color-focus-hover",
-    "--mod-textfield-text-color-hover",
-    "--mod-textfield-text-color-keyboard-focus"
-  ],
-  "high-contrast": [
-    "--highcontrast-search-color-default",
-    "--highcontrast-search-color-disabled",
-    "--highcontrast-search-color-focus",
-    "--highcontrast-search-color-hover"
-  ]
+  "modifiers": {
+    "mod-search-font-family": {
+      "description": "Used by `--mod-textfield-font-family`. <br/>Defaults to `var(--spectrum-search-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-font-weight": {
+      "description": "Used by `--mod-textfield-font-weight`. <br/>Defaults to `var(--spectrum-search-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-border-radius": {
+      "description": "Used by `--mod-textfield-corner-radius`, `.spectrum-Search-clearButton, .spectrum-Search-clearButton .spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-search-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-border-width": {
+      "description": "Used by `--mod-textfield-border-width`, `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-focus-indicator-gap": {
+      "description": "Used by `--mod-textfield-focus-indicator-gap`. <br/>Defaults to `var(--spectrum-search-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-focus-indicator-thickness": {
+      "description": "Used by `--mod-textfield-focus-indicator-width`. <br/>Defaults to `var(--spectrum-search-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-focus-indicator-color": {
+      "description": "Used by `--mod-textfield-focus-indicator-color`. <br/>Defaults to `var(--spectrum-search-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-color-default": {
+      "description": "Used by `--mod-textfield-text-color-default`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-search-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-color-hover": {
+      "description": "Used by `--mod-textfield-text-color-hover`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-search-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-color-focus": {
+      "description": "Used by `--mod-textfield-text-color-focus`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-search-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-color-focus-hover": {
+      "description": "Used by `--mod-textfield-text-color-focus-hover`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-search-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-color-key-focus": {
+      "description": "Used by `--mod-textfield-text-color-keyboard-focus`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-search-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-color-disabled": {
+      "description": "Used by `--mod-textfield-text-color-disabled`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-search-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-border-color-default": {
+      "description": "Used by `--mod-textfield-border-color`. <br/>Defaults to `var(--spectrum-search-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-border-color-hover": {
+      "description": "Used by `--mod-textfield-border-color-hover`. <br/>Defaults to `var(--spectrum-search-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-border-color-focus": {
+      "description": "Used by `--mod-textfield-border-color-focus`. <br/>Defaults to `var(--spectrum-search-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-border-color-focus-hover": {
+      "description": "Used by `--mod-textfield-border-color-focus-hover`. <br/>Defaults to `var(--spectrum-search-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-border-color-key-focus": {
+      "description": "Used by `--mod-textfield-border-color-keyboard-focus`. <br/>Defaults to `var(--spectrum-search-border-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-border-color-disabled": {
+      "description": "Used by `--mod-textfield-border-color-disabled`. <br/>Defaults to `var(--spectrum-search-border-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-background-color": {
+      "description": "Used by `--mod-textfield-background-color`. <br/>Defaults to `var(--spectrum-search-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-background-color-disabled": {
+      "description": "Used by `--mod-textfield-background-color-disabled`. <br/>Defaults to `var(--spectrum-search-background-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-search-inline-size": {
+      "description": "Used by `.spectrum-Search`, `.spectrum-Search.is-expanded`. <br/>Defaults to `var(--spectrum-search-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-min-inline-size": {
+      "description": "Used by `.spectrum-Search`. <br/>Defaults to `var(--spectrum-search-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-to-help-text": {
+      "description": "Used by `.spectrum-Search .spectrum-HelpText`. <br/>Defaults to `var(--spectrum-search-to-help-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-button-inline-size": {
+      "description": "Used by `.spectrum-Search.is-collapsed`, `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-button-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-collapsed-animation-duration": {
+      "description": "Used by `.spectrum-Search.is-collapsed, .spectrum-Search.is-expanded`. <br/>Defaults to `var(--spectrum-search-collapsed-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-edge-to-visual": {
+      "description": "Used by `.spectrum-Search-icon`, `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-edge-to-visual)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-top-to-icon": {
+      "description": "Used by `.spectrum-Search-icon`. <br/>Defaults to `var(--spectrum-search-top-to-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-block-size": {
+      "description": "Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-top-to-text": {
+      "description": "Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-top-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-bottom-to-text": {
+      "description": "Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-bottom-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-icon-size": {
+      "description": "Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-text-to-icon": {
+      "description": "Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-text-to-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-font-style": {
+      "description": "Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-search-line-height": {
+      "description": "Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-search-background-color": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-background-color`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-border-color-default": {
+      "value": "light-dark(rgb(218, 218, 218), rgb(57, 57, 57))",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-border-color`. <br/>Defaults to `var(--spectrum-gray-300)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-border-color-hover": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-border-color-hover`. <br/>Defaults to `var(--spectrum-gray-400)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-border-color-focus": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-border-color-focus`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-border-color-focus-hover": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-border-color-focus-hover`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-border-color-key-focus": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-border-color-keyboard-focus`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-border-width": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-border-width`, `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-border-radius": {
+      "value": "9999px",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-corner-radius`, `.spectrum-Search-clearButton, .spectrum-Search-clearButton .spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-corner-radius-full)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-inline-size": {
+      "value": "var(--spectrum-field-width-small)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `.spectrum-Search`, `.spectrum-Search.is-expanded`. <br/>Defaults to `var(--spectrum-field-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-block-size": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-Search`, `.spectrum-Search--sizeS`, `.spectrum-Search--sizeL`, `.spectrum-Search--sizeXL`. <br/>Used by `--spectrum-search-button-inline-size`, `--spectrum-search-min-inline-size`, `.spectrum-Search.is-collapsed`, `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-button-inline-size": {
+      "value": "var(--spectrum-search-block-size)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-search-block-size)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-min-inline-size": {
+      "value": "calc(var(--spectrum-search-field-minimum-width-multiplier) * var(--spectrum-search-block-size))",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `.spectrum-Search`. <br/>Defaults to `calc(var(--spectrum-search-field-minimum-width-multiplier) * var(--spectrum-search-block-size))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-field-minimum-width-multiplier": {
+      "value": "4",
+      "description": "Used by `--spectrum-search-min-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-icon-size": {
+      "value": "26px",
+      "description": "Defined in `.spectrum-Search`, `.spectrum-Search--sizeS`, `.spectrum-Search--sizeL`, `.spectrum-Search--sizeXL`. <br/>Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-workflow-icon-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-text-to-icon": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Search`, `.spectrum-Search--sizeS`, `.spectrum-Search--sizeL`, `.spectrum-Search--sizeXL`. <br/>Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-text-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-to-help-text": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `.spectrum-Search .spectrum-HelpText`. <br/>Defaults to `var(--spectrum-help-text-to-component)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-top-to-text": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Search`, `.spectrum-Search--sizeS`, `.spectrum-Search--sizeL`, `.spectrum-Search--sizeXL`. <br/>Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-component-top-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-bottom-to-text": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-Search`, `.spectrum-Search--sizeS`, `.spectrum-Search--sizeL`, `.spectrum-Search--sizeXL`. <br/>Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-component-bottom-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-edge-to-visual": {
+      "value": "21px",
+      "description": "Defined in `.spectrum-Search`, `.spectrum-Search--sizeS`, `.spectrum-Search--sizeL`, `.spectrum-Search--sizeXL`. <br/>Used by `.spectrum-Search-icon`, `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-component-pill-edge-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-top-to-icon": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-Search`, `.spectrum-Search--sizeS`, `.spectrum-Search--sizeL`, `.spectrum-Search--sizeXL`. <br/>Used by `.spectrum-Search-icon`. <br/>Defaults to `var(--spectrum-component-top-to-workflow-icon-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-focus-indicator-width`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-focus-indicator-gap`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-focus-indicator-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-font-family`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-font-weight`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Search`, `.spectrum-Search:lang(ja), .spectrum-Search:lang(ko), .spectrum-Search:lang(zh)`. <br/>Used by `.spectrum-Search-input`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-text-color-default`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-text-color-hover`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-color-focus": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-text-color-focus`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-color-focus-hover": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-text-color-focus-hover`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-text-color-keyboard-focus`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-text-color-disabled`, `--spectrum-search-color`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-background-color-disabled": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-background-color-disabled`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-border-color-disabled": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `--mod-textfield-border-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-search-collapsed-animation-duration": {
+      "value": "var(--spectrum-animation-duration-800)",
+      "description": "Defined in `.spectrum-Search`. <br/>Used by `.spectrum-Search.is-collapsed, .spectrum-Search.is-expanded`. <br/>Defaults to `var(--spectrum-animation-duration-800)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-search-color": {
+      "value": "var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)))",
+      "description": "Defined in `.spectrum-Search-icon`, `.spectrum-Search-textfield.is-focused .spectrum-Search-icon`, `.spectrum-Search-textfield.is-keyboardFocused .spectrum-Search-icon`, `.spectrum-Search-textfield.is-disabled .spectrum-Search-icon`, `.spectrum-Search-textfield:hover .spectrum-Search-icon`, `.spectrum-Search-textfield.is-focused:hover .spectrum-Search-icon`, `.spectrum-Search-textfield.is-disabled:hover .spectrum-Search-icon`. <br/>Used by `.spectrum-Search-icon`. <br/>Defaults to `var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--spectrum-search-background-color`, `--spectrum-search-background-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-300": {
+      "value": "light-dark(rgb(218, 218, 218), rgb(57, 57, 57))",
+      "description": "Used by `--spectrum-search-border-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-400": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
+      "description": "Used by `--spectrum-search-border-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Used by `--spectrum-search-border-color-focus`, `--spectrum-search-border-color-key-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-900": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Used by `--spectrum-search-border-color-focus-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-search-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-full": {
+      "value": "9999px",
+      "description": "Used by `--spectrum-search-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-width": {
+      "value": "var(--spectrum-field-width-small)",
+      "description": "Used by `--spectrum-search-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-search-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-search-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-search-text-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-help-text-to-component": {
+      "value": "0px",
+      "description": "Used by `--spectrum-search-to-help-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-search-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
+      "description": "Used by `--spectrum-search-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-pill-edge-to-visual-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-search-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-search-top-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-search-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-search-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-search-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-search-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-search-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-search-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-search-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-search-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-search-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-focus": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Used by `--spectrum-search-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-focus-hover": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Used by `--spectrum-search-color-focus-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-search-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-search-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Used by `--spectrum-search-border-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-800": {
+      "description": "Used by `--spectrum-search-collapsed-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--mod-textfield-placeholder-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-search-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-search-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-75": {
+      "value": "16px",
+      "description": "Used by `--spectrum-search-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-search-text-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-pill-edge-to-visual-75": {
+      "value": "10px",
+      "description": "Used by `--spectrum-search-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-search-top-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-search-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-search-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--mod-textfield-placeholder-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-search-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "value": "22px",
+      "description": "Used by `--spectrum-search-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-200": {
+      "value": "7px",
+      "description": "Used by `--spectrum-search-text-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-pill-edge-to-visual-200": {
+      "value": "18px",
+      "description": "Used by `--spectrum-search-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-search-top-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-search-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
+      "description": "Used by `--spectrum-search-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--mod-textfield-placeholder-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-search-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-300": {
+      "value": "26px",
+      "description": "Used by `--spectrum-search-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-300": {
+      "value": "8px",
+      "description": "Used by `--spectrum-search-text-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-pill-edge-to-visual-300": {
+      "value": "21px",
+      "description": "Used by `--spectrum-search-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-300": {
+      "value": "11px",
+      "description": "Used by `--spectrum-search-top-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "value": "12px",
+      "description": "Used by `--spectrum-search-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-search-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--mod-textfield-placeholder-font-size`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-textfield-font-family": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-weight": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-placeholder-font-size": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-corner-radius": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-focus-indicator-gap": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-focus-indicator-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-focus-indicator-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-default": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-focus-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-keyboard-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-focus-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-keyboard-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-background-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-background-color-disabled": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-search-color-default": {
+      "value": "var(--mod-search-color-default, var(--spectrum-search-color-default))",
+      "description": "Defined in `.spectrum-Search .spectrum-Search-textfield, .spectrum-Search .spectrum-Search-textfield .spectrum-Search-input`. <br/>Used by `--spectrum-search-color`. <br/>Defaults to `var(--mod-search-color-default, var(--spectrum-search-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-search-color-focus": {
+      "value": "var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover))",
+      "description": "Defined in `.spectrum-Search .spectrum-Search-textfield, .spectrum-Search .spectrum-Search-textfield .spectrum-Search-input`. <br/>Used by `--spectrum-search-color`. <br/>Defaults to `var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-search-color-disabled": {
+      "value": "var(--mod-search-color-disabled, var(--spectrum-search-color-disabled))",
+      "description": "Defined in `.spectrum-Search .spectrum-Search-textfield, .spectrum-Search .spectrum-Search-textfield .spectrum-Search-input`. <br/>Used by `--spectrum-search-color`. <br/>Defaults to `var(--mod-search-color-disabled, var(--spectrum-search-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-search-color-hover": {
+      "value": "var(--mod-search-color-hover, var(--spectrum-search-color-hover))",
+      "description": "Defined in `.spectrum-Search .spectrum-Search-textfield, .spectrum-Search .spectrum-Search-textfield .spectrum-Search-input`. <br/>Used by `--spectrum-search-color`. <br/>Defaults to `var(--mod-search-color-hover, var(--spectrum-search-color-hover))`, if not set.",
+      "control": "color"
+    }
+  }
 }

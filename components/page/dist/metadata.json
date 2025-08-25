@@ -1,12 +1,46 @@
 {
   "sourceFile": "index.css",
   "selectors": [":root"],
-  "modifiers": ["--mod-page-background", "--mod-page-content-tap-highlight"],
-  "component": [
-    "--spectrum-page-background-color",
-    "--spectrum-page-content-tap-highlight"
-  ],
-  "global": ["--spectrum-gray-75", "--spectrum-transparent-black-25"],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-page-background": {
+      "description": "Used by `--spectrum-page-background-color`. <br/>Defaults to `var(--spectrum-gray-75)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-page-content-tap-highlight": {
+      "description": "Used by `--spectrum-page-content-tap-highlight`. <br/>Defaults to `var(--spectrum-transparent-black-25)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-page-background-color": {
+      "value": "var(--mod-page-background, var(--spectrum-gray-75))",
+      "description": "Defined in `:root`. <br/>Used by `:root`. <br/>Defaults to `var(--mod-page-background, var(--spectrum-gray-75))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-page-content-tap-highlight": {
+      "value": "var(--mod-page-content-tap-highlight, var(--spectrum-transparent-black-25))",
+      "description": "Defined in `:root`. <br/>Used by `:root`. <br/>Defaults to `var(--mod-page-content-tap-highlight, var(--spectrum-transparent-black-25))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-75": {
+      "value": "light-dark(rgb(243, 243, 243), rgb(34, 34, 34))",
+      "description": "Used by `--spectrum-page-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-25": {
+      "value": "rgba(0, 0, 0, 0)",
+      "description": "Used by `--spectrum-page-content-tap-highlight`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {}
 }

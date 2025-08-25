@@ -11,42 +11,175 @@
     ".spectrum-Modal-wrapper.is-open",
     ".spectrum-Modal.is-open"
   ],
-  "modifiers": [
-    "--mod-modal-background-color",
-    "--mod-modal-confirm-border-radius",
-    "--mod-modal-confirm-entry-animation-delay",
-    "--mod-modal-confirm-entry-animation-duration",
-    "--mod-modal-confirm-exit-animation-delay",
-    "--mod-modal-confirm-exit-animation-duration",
-    "--mod-modal-fullscreen-margin",
-    "--mod-modal-max-height",
-    "--mod-modal-max-width",
-    "--mod-modal-transition-animation-duration"
-  ],
-  "component": [
-    "--spectrum-modal-background-color",
-    "--spectrum-modal-confirm-border-radius",
-    "--spectrum-modal-confirm-entry-animation-delay",
-    "--spectrum-modal-confirm-entry-animation-duration",
-    "--spectrum-modal-confirm-exit-animation-delay",
-    "--spectrum-modal-confirm-exit-animation-duration",
-    "--spectrum-modal-fullscreen-margin",
-    "--spectrum-modal-max-height",
-    "--spectrum-modal-max-width",
-    "--spectrum-modal-takeover-window-to-edge",
-    "--spectrum-modal-transition-animation-duration"
-  ],
-  "global": [
-    "--spectrum-animation-duration-0",
-    "--spectrum-animation-duration-100",
-    "--spectrum-animation-duration-200",
-    "--spectrum-animation-duration-500",
-    "--spectrum-animation-ease-in",
-    "--spectrum-animation-ease-out",
-    "--spectrum-corner-radius-extra-large-default",
-    "--spectrum-dialog-confirm-entry-animation-distance",
-    "--spectrum-window-to-edge"
-  ],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-modal-confirm-entry-animation-duration": {
+      "description": "Used by `--spectrum-modal-confirm-entry-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-500)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-modal-confirm-entry-animation-delay": {
+      "description": "Used by `--spectrum-modal-confirm-entry-animation-delay`. <br/>Defaults to `var(--spectrum-animation-duration-200)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-modal-confirm-exit-animation-duration": {
+      "description": "Used by `--spectrum-modal-confirm-exit-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-modal-confirm-exit-animation-delay": {
+      "description": "Used by `--spectrum-modal-confirm-exit-animation-delay`. <br/>Defaults to `var(--spectrum-animation-duration-0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-modal-background-color": {
+      "description": "Used by `--spectrum-modal-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-modal-confirm-border-radius": {
+      "description": "Used by `--spectrum-modal-confirm-border-radius`. <br/>Defaults to `var(--spectrum-corner-radius-extra-large-default)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-modal-transition-animation-duration": {
+      "description": "Used by `--spectrum-modal-transition-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-modal-max-height": {
+      "description": "Used by `.spectrum-Modal`. <br/>Defaults to `var(--spectrum-modal-max-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-modal-max-width": {
+      "description": "Used by `.spectrum-Modal`. <br/>Defaults to `var(--spectrum-modal-max-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-modal-fullscreen-margin": {
+      "description": "Used by `.spectrum-Modal--fullscreen`. <br/>Defaults to `var(--spectrum-modal-fullscreen-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-modal-confirm-entry-animation-duration": {
+      "value": "var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-animation-duration-500))",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal.is-open`. <br/>Defaults to `var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-animation-duration-500))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-confirm-entry-animation-delay": {
+      "value": "var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200))",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal.is-open`. <br/>Defaults to `var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-animation-duration-200))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-confirm-exit-animation-duration": {
+      "value": "var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100))",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-animation-duration-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-confirm-exit-animation-delay": {
+      "value": "var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-animation-duration-0))",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-animation-duration-0))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-fullscreen-margin": {
+      "value": "40px",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal--fullscreen`. <br/>Defaults to `var(--spectrum-window-to-edge)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-takeover-window-to-edge": {
+      "value": "0",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal--fullscreenTakeover`. <br/>Defaults to `0`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-max-height": {
+      "value": "90vh",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `90vh`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-max-width": {
+      "value": "90%",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `90%`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-background-color": {
+      "value": "var(--mod-modal-background-color, transparent)",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `var(--mod-modal-background-color, transparent)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-modal-confirm-border-radius": {
+      "value": "var(--mod-modal-confirm-border-radius, var(--spectrum-corner-radius-extra-large-default))",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal`. <br/>Defaults to `var(--mod-modal-confirm-border-radius, var(--spectrum-corner-radius-extra-large-default))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-modal-transition-animation-duration": {
+      "value": "var(--mod-modal-transition-animation-duration, var(--spectrum-animation-duration-100))",
+      "description": "Defined in `.spectrum-Modal`. <br/>Used by `.spectrum-Modal-wrapper`. <br/>Defaults to `var(--mod-modal-transition-animation-duration, var(--spectrum-animation-duration-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-animation-duration-500": {
+      "description": "Used by `--spectrum-modal-confirm-entry-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-200": {
+      "description": "Used by `--spectrum-modal-confirm-entry-animation-delay`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-modal-confirm-exit-animation-duration`, `--spectrum-modal-transition-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-0": {
+      "description": "Used by `--spectrum-modal-confirm-exit-animation-delay`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-window-to-edge": {
+      "value": "40px",
+      "description": "Used by `--spectrum-modal-fullscreen-margin`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-extra-large-default": {
+      "value": "16px",
+      "description": "Used by `--spectrum-modal-confirm-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-dialog-confirm-entry-animation-distance": {
+      "description": "Used by `.spectrum-Modal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-ease-in": {
+      "description": "Used by `.spectrum-Modal`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-ease-out": {
+      "description": "Used by `.spectrum-Modal.is-open`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {}
 }

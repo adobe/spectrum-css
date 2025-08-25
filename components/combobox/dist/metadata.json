@@ -15,30 +15,28 @@
     ".spectrum-Combobox--sizeS",
     ".spectrum-Combobox--sizeXL",
     ".spectrum-Combobox-button",
-    ".spectrum-Combobox-button.is-focused:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox-button.is-focused:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet):hover",
-    ".spectrum-Combobox-button.is-invalid.is-focused:not(:disabled, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox-button.is-invalid.is-focused:not(:disabled, .spectrum-PickerButton--quiet):hover",
-    ".spectrum-Combobox-button.is-invalid.is-keyboardFocused:not(:disabled, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):active",
-    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):focus",
-    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):focus-visible",
-    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):focus:hover",
-    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):hover",
-    ".spectrum-Combobox-button.is-keyboardFocused:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet):active",
     ".spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet):focus",
     ".spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet):focus-visible",
     ".spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet):focus:hover",
     ".spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet):hover",
+    ".spectrum-Combobox-button.is-focused:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox-button.is-focused:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet):hover",
+    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):active",
+    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):focus",
+    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):focus-visible",
+    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):focus:hover",
+    ".spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet):hover",
+    ".spectrum-Combobox-button.is-invalid.is-focused:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox-button.is-invalid.is-focused:not(:disabled, .spectrum-PickerButton--quiet):hover",
+    ".spectrum-Combobox-button.is-invalid.is-keyboardFocused:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox-button.is-keyboardFocused:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox-content",
     ".spectrum-Combobox-helptext",
     ".spectrum-Combobox-helptext .spectrum-HelpText-text",
     ".spectrum-Combobox-input",
-    ".spectrum-Combobox-input.spectrum-Combobox-autocomplete",
-    ".spectrum-Combobox-input.spectrum-Combobox-autocomplete::selection",
     ".spectrum-Combobox-input:-internal-autofill-selected",
     ".spectrum-Combobox-input:-internal-autofill-selected::selection",
     ".spectrum-Combobox-input:-webkit-autofill",
@@ -57,264 +55,1172 @@
     ".spectrum-Combobox-input:lang(ja)",
     ".spectrum-Combobox-input:lang(ko)",
     ".spectrum-Combobox-input:lang(zh)",
+    ".spectrum-Combobox-input.spectrum-Combobox-autocomplete",
+    ".spectrum-Combobox-input.spectrum-Combobox-autocomplete::selection",
     ".spectrum-Combobox-label",
     ".spectrum-Combobox-progress-circle",
     ".spectrum-Combobox-progress-circle:dir(rtl)",
+    ".spectrum-Combobox-textfield:hover .spectrum-Combobox-input",
     ".spectrum-Combobox-textfield.is-focused .spectrum-Combobox-input",
     ".spectrum-Combobox-textfield.is-focused .spectrum-Combobox-input:hover",
     ".spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input",
     ".spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon",
     ".spectrum-Combobox-textfield.is-keyboardFocused .spectrum-Combobox-input",
     ".spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input",
-    ".spectrum-Combobox-textfield:hover .spectrum-Combobox-input",
-    ".spectrum-Combobox.is-focused .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox:has(:active) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox:has(:active) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox:has(:focus) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox:has(:focus) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox:hover .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox:hover .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox:hover:has(:focus) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox:hover:has(:focus) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox.is-focused .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox.is-focused:hover .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox.is-focused .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox.is-focused:hover .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox.is-keyboardFocused .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox.is-focused:hover .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox.is-keyboardFocused .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox.is-keyboardFocused .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox.is-readOnly .spectrum-Combobox-input:read-only",
     ".spectrum-Combobox.is-readOnly .spectrum-Combobox-input:read-only:hover",
     ".spectrum-Combobox.is-readOnly .spectrum-Combobox-textfield.is-keyboardFocused .spectrum-Combobox-input",
     ".spectrum-Combobox.is-readOnly.is-disabled .spectrum-Combobox-input:read-only",
     ".spectrum-Combobox.is-readOnly.is-disabled .spectrum-Combobox-input:read-only:hover",
     ".spectrum-Combobox.is-readOnly.is-invalid .spectrum-Combobox-input:read-only",
-    ".spectrum-Combobox:has(:active) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox:has(:active) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox:has(:focus) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox:has(:focus) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox:hover .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox:hover .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox:hover:has(:focus) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox:hover:has(:focus) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Textfield.is-disabled .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-loading .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-readOnly .spectrum-Textfield-validationIcon"
   ],
-  "modifiers": [
-    "--mod-combobox-alert-icon-color",
-    "--mod-combobox-background-color-default",
-    "--mod-combobox-background-color-disabled",
-    "--mod-combobox-background-color-focus",
-    "--mod-combobox-background-color-focus-hover",
-    "--mod-combobox-background-color-hover",
-    "--mod-combobox-background-color-key-focus",
-    "--mod-combobox-block-size",
-    "--mod-combobox-block-spacing-edge-to-icon",
-    "--mod-combobox-block-spacing-edge-to-progress-circle",
-    "--mod-combobox-border-color-default",
-    "--mod-combobox-border-color-disabled",
-    "--mod-combobox-border-color-focus",
-    "--mod-combobox-border-color-focus-hover",
-    "--mod-combobox-border-color-hover",
-    "--mod-combobox-border-color-invalid-default",
-    "--mod-combobox-border-color-invalid-focus",
-    "--mod-combobox-border-color-invalid-focus-hover",
-    "--mod-combobox-border-color-invalid-hover",
-    "--mod-combobox-border-color-invalid-key-focus",
-    "--mod-combobox-border-color-key-focus",
-    "--mod-combobox-border-radius",
-    "--mod-combobox-border-width",
-    "--mod-combobox-button-width",
-    "--mod-combobox-focus-indicator-color",
-    "--mod-combobox-focus-indicator-gap",
-    "--mod-combobox-focus-indicator-thickness",
-    "--mod-combobox-font-color-default",
-    "--mod-combobox-font-color-disabled",
-    "--mod-combobox-font-color-focus",
-    "--mod-combobox-font-color-focus-hover",
-    "--mod-combobox-font-color-hover",
-    "--mod-combobox-font-color-key-focus",
-    "--mod-combobox-font-color-placeholder",
-    "--mod-combobox-font-family",
-    "--mod-combobox-icon-size",
-    "--mod-combobox-inline-size",
-    "--mod-combobox-line-height",
-    "--mod-combobox-line-height-cjk",
-    "--mod-combobox-min-inline-size",
-    "--mod-combobox-popover-animation-distance",
-    "--mod-combobox-readonly-border-color-disabled",
-    "--mod-combobox-spacing-alert-icon-to-text",
-    "--mod-combobox-spacing-block-end-edge-to-text",
-    "--mod-combobox-spacing-block-start-edge-to-text",
-    "--mod-combobox-spacing-inline-icon-to-button",
-    "--mod-combobox-spacing-inline-icon-to-text",
-    "--mod-combobox-spacing-inline-start-edge-to-text",
-    "--mod-combobox-spacing-label-to-combobox",
-    "--mod-combobox-spacing-side-label-to-field",
-    "--mod-combobox-spacing-to-help-text",
-    "--mod-combobox-textfield-background-color"
-  ],
-  "component": [
-    "--spectrum-combo-box-minimum-width-multiplier",
-    "--spectrum-combo-box-visual-to-field-button",
-    "--spectrum-combobox-background-color-autofill",
-    "--spectrum-combobox-background-color-default",
-    "--spectrum-combobox-background-color-disabled",
-    "--spectrum-combobox-block-size",
-    "--spectrum-combobox-block-spacing-edge-to-icon",
-    "--spectrum-combobox-block-spacing-edge-to-progress-circle",
-    "--spectrum-combobox-border-color-default",
-    "--spectrum-combobox-border-color-disabled",
-    "--spectrum-combobox-border-color-focus",
-    "--spectrum-combobox-border-color-focus-hover",
-    "--spectrum-combobox-border-color-hover",
-    "--spectrum-combobox-border-color-invalid-default",
-    "--spectrum-combobox-border-color-invalid-focus",
-    "--spectrum-combobox-border-color-invalid-focus-hover",
-    "--spectrum-combobox-border-color-invalid-hover",
-    "--spectrum-combobox-border-color-invalid-key-focus",
-    "--spectrum-combobox-border-color-key-focus",
-    "--spectrum-combobox-border-radius",
-    "--spectrum-combobox-border-width",
-    "--spectrum-combobox-button-width",
-    "--spectrum-combobox-focus-indicator-color",
-    "--spectrum-combobox-focus-indicator-gap",
-    "--spectrum-combobox-focus-indicator-thickness",
-    "--spectrum-combobox-font-size",
-    "--spectrum-combobox-font-style",
-    "--spectrum-combobox-font-weight",
-    "--spectrum-combobox-icon-size",
-    "--spectrum-combobox-inline-size",
-    "--spectrum-combobox-line-height",
-    "--spectrum-combobox-line-height-cjk",
-    "--spectrum-combobox-min-inline-size",
-    "--spectrum-combobox-readonly-background-color-disabled",
-    "--spectrum-combobox-readonly-border-color-disabled",
-    "--spectrum-combobox-readonly-border-color-invalid-default",
-    "--spectrum-combobox-readonly-input-background-color",
-    "--spectrum-combobox-readonly-input-border-color",
-    "--spectrum-combobox-readonly-text-color-disabled",
-    "--spectrum-combobox-spacing-block-end-edge-to-text",
-    "--spectrum-combobox-spacing-block-start-edge-to-text",
-    "--spectrum-combobox-spacing-inline-icon-to-button",
-    "--spectrum-combobox-spacing-inline-icon-to-text",
-    "--spectrum-combobox-spacing-inline-start-edge-to-text",
-    "--spectrum-combobox-spacing-label-to-combobox",
-    "--spectrum-combobox-spacing-side-label-to-field",
-    "--spectrum-combobox-spacing-to-help-text"
-  ],
-  "global": [
-    "--spectrum-blue-900-rgb",
-    "--spectrum-border-width-200",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-300",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-edge-to-text-200",
-    "--spectrum-component-edge-to-text-300",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-to-menu-extra-large",
-    "--spectrum-component-to-menu-large",
-    "--spectrum-component-to-menu-medium",
-    "--spectrum-component-to-menu-small",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-component-top-to-workflow-icon-200",
-    "--spectrum-component-top-to-workflow-icon-300",
-    "--spectrum-component-top-to-workflow-icon-75",
-    "--spectrum-corner-radius-medium-size-extra-large",
-    "--spectrum-corner-radius-medium-size-large",
-    "--spectrum-corner-radius-medium-size-medium",
-    "--spectrum-corner-radius-medium-size-small",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-background-color",
-    "--spectrum-disabled-border-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-field-label-to-component",
-    "--spectrum-field-top-to-progress-circle-extra-large",
-    "--spectrum-field-top-to-progress-circle-large",
-    "--spectrum-field-top-to-progress-circle-medium",
-    "--spectrum-field-top-to-progress-circle-small",
-    "--spectrum-field-width-extra-large",
-    "--spectrum-field-width-large",
-    "--spectrum-field-width-medium",
-    "--spectrum-field-width-small",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-25",
-    "--spectrum-gray-300",
-    "--spectrum-gray-400",
-    "--spectrum-gray-800",
-    "--spectrum-gray-900",
-    "--spectrum-help-text-to-component",
-    "--spectrum-line-height-100",
-    "--spectrum-negative-border-color-default",
-    "--spectrum-negative-border-color-focus",
-    "--spectrum-negative-border-color-focus-hover",
-    "--spectrum-negative-border-color-hover",
-    "--spectrum-negative-border-color-key-focus",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-regular-font-weight",
-    "--spectrum-spacing-200",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-text-to-visual-200",
-    "--spectrum-text-to-visual-300",
-    "--spectrum-text-to-visual-75",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-300",
-    "--spectrum-workflow-icon-size-75"
-  ],
-  "passthroughs": [
-    "--mod-divider-inline-minimum-size",
-    "--mod-picker-button-background-color",
-    "--mod-picker-button-background-color-disabled",
-    "--mod-picker-button-border-color",
-    "--mod-picker-button-border-color-disabled",
-    "--mod-picker-button-border-width",
-    "--mod-picker-button-font-color-disabled",
-    "--mod-popover-animation-distance",
-    "--mod-textfield-background-color",
-    "--mod-textfield-background-color-disabled",
-    "--mod-textfield-border-color",
-    "--mod-textfield-border-color-disabled",
-    "--mod-textfield-border-color-focus",
-    "--mod-textfield-border-color-focus-hover",
-    "--mod-textfield-border-color-hover",
-    "--mod-textfield-border-color-invalid-default",
-    "--mod-textfield-border-color-invalid-focus",
-    "--mod-textfield-border-color-invalid-focus-hover",
-    "--mod-textfield-border-color-invalid-hover",
-    "--mod-textfield-border-color-invalid-keyboard-focus",
-    "--mod-textfield-border-color-keyboard-focus",
-    "--mod-textfield-border-width",
-    "--mod-textfield-corner-radius",
-    "--mod-textfield-focus-indicator-color",
-    "--mod-textfield-focus-indicator-gap",
-    "--mod-textfield-focus-indicator-width",
-    "--mod-textfield-font-family",
-    "--mod-textfield-font-size",
-    "--mod-textfield-font-style",
-    "--mod-textfield-font-weight",
-    "--mod-textfield-icon-color-invalid",
-    "--mod-textfield-spacing-block-end",
-    "--mod-textfield-spacing-block-start",
-    "--mod-textfield-text-color-default",
-    "--mod-textfield-text-color-disabled",
-    "--mod-textfield-text-color-focus",
-    "--mod-textfield-text-color-focus-hover",
-    "--mod-textfield-text-color-hover",
-    "--mod-textfield-text-color-keyboard-focus"
-  ],
-  "high-contrast": [
-    "--highcontrast-combobox-background-color-default",
-    "--highcontrast-combobox-border-color-highlight",
-    "--highcontrast-combobox-border-color-invalid",
-    "--highcontrast-combobox-readonly-border-color"
-  ]
+  "modifiers": {
+    "mod-combobox-popover-animation-distance": {
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `--mod-popover-animation-distance`. <br/>Defaults to `var(--spectrum-component-to-menu-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-focus-indicator-gap": {
+      "description": "Used by `--mod-textfield-focus-indicator-gap`. <br/>Defaults to `var(--spectrum-combobox-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-focus-indicator-thickness": {
+      "description": "Used by `--mod-textfield-focus-indicator-width`. <br/>Defaults to `var(--spectrum-combobox-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-focus-indicator-color": {
+      "description": "Used by `--mod-textfield-focus-indicator-color`. <br/>Defaults to `var(--spectrum-combobox-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-background-color-default": {
+      "description": "Used by `--mod-textfield-background-color`, `--mod-picker-button-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-background-color-disabled": {
+      "description": "Used by `--mod-textfield-background-color-disabled`, `--mod-picker-button-background-color-disabled`. <br/>Defaults to `var(--spectrum-combobox-background-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-font-family": {
+      "description": "Used by `--mod-textfield-font-family`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-block-start-edge-to-text": {
+      "description": "Used by `--mod-textfield-spacing-block-start`. <br/>Defaults to `var(--spectrum-combobox-spacing-block-start-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-block-end-edge-to-text": {
+      "description": "Used by `--mod-textfield-spacing-block-end`. <br/>Defaults to `var(--spectrum-combobox-spacing-block-end-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-font-color-default": {
+      "description": "Used by `--mod-textfield-text-color-default`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-font-color-hover": {
+      "description": "Used by `--mod-textfield-text-color-hover`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-font-color-focus": {
+      "description": "Used by `--mod-textfield-text-color-focus`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-font-color-focus-hover": {
+      "description": "Used by `--mod-textfield-text-color-focus-hover`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-font-color-key-focus": {
+      "description": "Used by `--mod-textfield-text-color-keyboard-focus`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-font-color-disabled": {
+      "description": "Used by `--mod-textfield-text-color-disabled`, `--mod-picker-button-font-color-disabled`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-width": {
+      "description": "Used by `--mod-textfield-border-width`, `--mod-picker-button-border-width`, `.spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`. <br/>Defaults to `var(--spectrum-combobox-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-default": {
+      "description": "Defined in `.spectrum-Combobox-input:focus, .spectrum-Combobox-textfield.is-focused .spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-keyboardFocused .spectrum-Combobox-input`, `.spectrum-Combobox-input:focus:hover, .spectrum-Combobox-textfield.is-focused .spectrum-Combobox-input:hover`. <br/>Used by `--mod-textfield-border-color`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-disabled": {
+      "description": "Used by `--mod-textfield-border-color-disabled`, `--mod-picker-button-border-color-disabled`. <br/>Defaults to `var(--spectrum-combobox-border-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-focus": {
+      "description": "Used by `--mod-textfield-border-color-focus`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-focus-hover": {
+      "description": "Used by `--mod-textfield-border-color-focus-hover`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-hover": {
+      "description": "Used by `--mod-textfield-border-color-hover`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-key-focus": {
+      "description": "Used by `--mod-textfield-border-color-keyboard-focus`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-radius": {
+      "description": "Used by `--mod-textfield-corner-radius`. <br/>Defaults to `var(--spectrum-combobox-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-invalid-default": {
+      "description": "Used by `--mod-textfield-border-color-invalid-default`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-invalid-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-invalid-hover": {
+      "description": "Used by `--mod-textfield-border-color-invalid-hover`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-invalid-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-invalid-focus": {
+      "description": "Used by `--mod-textfield-border-color-invalid-focus`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-invalid-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-invalid-focus-hover": {
+      "description": "Used by `--mod-textfield-border-color-invalid-focus-hover`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-invalid-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-border-color-invalid-key-focus": {
+      "description": "Used by `--mod-textfield-border-color-invalid-keyboard-focus`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-combobox-border-color-invalid-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-alert-icon-color": {
+      "description": "Used by `--mod-textfield-icon-color-invalid`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-inline-size": {
+      "description": "Used by `.spectrum-Combobox`. <br/>Defaults to `var(--spectrum-combobox-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-label-to-combobox": {
+      "description": "Used by `.spectrum-Combobox`. <br/>Defaults to `var(--spectrum-combobox-spacing-label-to-combobox)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-min-inline-size": {
+      "description": "Used by `.spectrum-Combobox .spectrum-Combobox-content, .spectrum-Combobox .spectrum-Combobox-label`. <br/>Defaults to `var(--spectrum-combobox-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-readonly-border-color-disabled": {
+      "description": "Used by `.spectrum-Combobox.is-readOnly.is-disabled .spectrum-Combobox-input:read-only`. <br/>Defaults to `var(--spectrum-combobox-readonly-border-color-disabled, transparent)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-inline-icon-to-button": {
+      "description": "Used by `.spectrum-Combobox-progress-circle`, `.spectrum-Combobox-progress-circle:dir(rtl)`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-combobox-spacing-inline-icon-to-button)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-button-width": {
+      "description": "Used by `.spectrum-Combobox-progress-circle`, `.spectrum-Combobox-progress-circle:dir(rtl)`, `.spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-combobox-button-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-block-spacing-edge-to-progress-circle": {
+      "description": "Used by `.spectrum-Combobox-progress-circle`. <br/>Defaults to `var(--spectrum-combobox-block-spacing-edge-to-progress-circle)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-block-spacing-edge-to-icon": {
+      "description": "Used by `.spectrum-Combobox-progress-circle`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-combobox-block-spacing-edge-to-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-inline-icon-to-text": {
+      "description": "Used by `.spectrum-Combobox-progress-circle`, `.spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-combobox-spacing-inline-icon-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-block-size": {
+      "description": "Used by `.spectrum-Combobox-content`. <br/>Defaults to `var(--spectrum-combobox-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-textfield-background-color": {
+      "description": "Used by `.spectrum-Combobox-input`. <br/>Defaults to `var(--spectrum-combobox-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-inline-start-edge-to-text": {
+      "description": "Used by `.spectrum-Combobox-input`. <br/>Defaults to `var(--spectrum-combobox-spacing-inline-start-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-line-height": {
+      "description": "Defined in `.spectrum-Combobox-input:lang(ja), .spectrum-Combobox-input:lang(ko), .spectrum-Combobox-input:lang(zh)`. <br/>Used by `.spectrum-Combobox-input`. <br/>Defaults to `var(--spectrum-combobox-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-font-color-placeholder": {
+      "description": "Used by `--mod-textfield-text-color-default`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-background-color-hover": {
+      "description": "Used by `--mod-textfield-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-background-color-focus": {
+      "description": "Used by `--mod-textfield-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-background-color-key-focus": {
+      "description": "Used by `--mod-textfield-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-icon-size": {
+      "description": "Used by `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-combobox-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-alert-icon-to-text": {
+      "description": "Used by `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`. <br/>Defaults to `var(--spectrum-combobox-spacing-inline-icon-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-line-height-cjk": {
+      "description": "Used by `--mod-combobox-line-height`. <br/>Defaults to `var(--spectrum-combobox-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-background-color-focus-hover": {
+      "description": "Used by `--mod-textfield-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-to-help-text": {
+      "description": "Used by `.spectrum-Combobox-helptext`. <br/>Defaults to `var(--spectrum-combobox-spacing-to-help-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-combobox-spacing-side-label-to-field": {
+      "description": "Used by `.spectrum-Combobox--sideLabel .spectrum-Combobox-label`. <br/>Defaults to `var(--spectrum-combobox-spacing-side-label-to-field)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-combobox-block-size": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `--spectrum-combobox-min-inline-size`, `--spectrum-combobox-button-width`, `.spectrum-Combobox-content`, `.spectrum-Combobox-input`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-icon-size": {
+      "value": "26px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-workflow-icon-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-font-size": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `--mod-textfield-font-size`. <br/>Defaults to `var(--spectrum-font-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox-input.spectrum-Combobox-autocomplete, .spectrum-Combobox-input:-internal-autofill-selected, .spectrum-Combobox-input:-webkit-autofill, .spectrum-Combobox-input:-webkit-autofill:active, .spectrum-Combobox-input:-webkit-autofill:focus`, `.spectrum-Combobox-input:-webkit-autofill:hover`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-spacing-inline-icon-to-button": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox-progress-circle`, `.spectrum-Combobox-progress-circle:dir(rtl)`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-combo-box-visual-to-field-button)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combo-box-visual-to-field-button": {
+      "value": "0px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-icon-to-button`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-block-spacing-edge-to-progress-circle": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `.spectrum-Combobox-progress-circle`. <br/>Defaults to `var(--spectrum-field-top-to-progress-circle-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-block-spacing-edge-to-icon": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `.spectrum-Combobox-progress-circle`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-component-top-to-workflow-icon-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-spacing-block-start-edge-to-text": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `--mod-textfield-spacing-block-start`. <br/>Defaults to `var(--spectrum-component-top-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-spacing-block-end-edge-to-text": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `--mod-textfield-spacing-block-end`. <br/>Defaults to `var(--spectrum-component-bottom-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-spacing-inline-start-edge-to-text": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `.spectrum-Combobox-input`. <br/>Defaults to `var(--spectrum-component-edge-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-spacing-inline-icon-to-text": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `.spectrum-Combobox-progress-circle`, `.spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-text-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-spacing-to-help-text": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox-helptext`. <br/>Defaults to `var(--spectrum-help-text-to-component)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-inline-size": {
+      "value": "var(--spectrum-field-default-width-extra-large)",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `.spectrum-Combobox`. <br/>Defaults to `var(--spectrum-field-width-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-min-inline-size": {
+      "value": "calc(var(--spectrum-combo-box-minimum-width-multiplier) * var(--spectrum-combobox-block-size))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox .spectrum-Combobox-content, .spectrum-Combobox .spectrum-Combobox-label`. <br/>Defaults to `calc(var(--spectrum-combo-box-minimum-width-multiplier) * var(--spectrum-combobox-block-size))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combo-box-minimum-width-multiplier": {
+      "value": "2.5",
+      "description": "Used by `--spectrum-combobox-min-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-button-width": {
+      "value": "var(--spectrum-combobox-block-size)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox-progress-circle`, `.spectrum-Combobox-progress-circle:dir(rtl)`, `.spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `var(--spectrum-combobox-block-size)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-focus-indicator-width`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-focus-indicator-gap`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-focus-indicator-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-radius": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-Combobox`, `.spectrum-Combobox--sizeS`, `.spectrum-Combobox--sizeL`, `.spectrum-Combobox--sizeXL`. <br/>Used by `--mod-textfield-corner-radius`. <br/>Defaults to `var(--spectrum-corner-radius-medium-size-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-width": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-width`, `--mod-picker-button-border-width`, `.spectrum-Combobox-input`, `.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input, .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-spacing-label-to-combobox": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox`. <br/>Defaults to `var(--spectrum-field-label-to-component)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-spacing-side-label-to-field": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox--sideLabel .spectrum-Combobox-label`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-font-style`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-font-weight`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-line-height-cjk": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-combobox-line-height`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-combobox-background-color-disabled": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-background-color-disabled`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-background-color-default": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--spectrum-combobox-readonly-input-background-color`, `.spectrum-Combobox-input`, `.spectrum-Combobox-input.spectrum-Combobox-autocomplete, .spectrum-Combobox-input:-internal-autofill-selected, .spectrum-Combobox-input:-webkit-autofill, .spectrum-Combobox-input:-webkit-autofill:active, .spectrum-Combobox-input:-webkit-autofill:focus`, `.spectrum-Combobox-input:-webkit-autofill:hover`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-default": {
+      "value": "light-dark(rgb(218, 218, 218), rgb(57, 57, 57))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color`, `--mod-picker-button-border-color`, `--spectrum-combobox-readonly-input-border-color`, `.spectrum-Combobox-input.spectrum-Combobox-autocomplete, .spectrum-Combobox-input:-internal-autofill-selected, .spectrum-Combobox-input:-webkit-autofill, .spectrum-Combobox-input:-webkit-autofill:active, .spectrum-Combobox-input:-webkit-autofill:focus`, `.spectrum-Combobox-input:-webkit-autofill:hover`. <br/>Defaults to `var(--spectrum-gray-300)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-hover": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-hover`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-gray-400)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-focus": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-focus`, `--mod-picker-button-border-color`, `--mod-combobox-border-color-default`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-focus-hover": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-focus-hover`, `--mod-picker-button-border-color`, `--mod-combobox-border-color-default`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-key-focus": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-keyboard-focus`, `--mod-picker-button-border-color`, `--mod-combobox-border-color-default`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-disabled": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-disabled`, `--mod-picker-button-border-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-invalid-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-invalid-default`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-negative-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-invalid-hover": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-invalid-hover`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-negative-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-invalid-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-invalid-focus`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-negative-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-invalid-focus-hover": {
+      "value": "var(--spectrum-negative-border-color-down)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-invalid-focus-hover`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-negative-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-border-color-invalid-key-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-textfield-border-color-invalid-keyboard-focus`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--spectrum-negative-border-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-background-color-autofill": {
+      "value": "rgb(var(--spectrum-blue-900-rgb), 0.3)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox-input.spectrum-Combobox-autocomplete::selection, .spectrum-Combobox-input:-internal-autofill-selected::selection, .spectrum-Combobox-input:-webkit-autofill::selection, .spectrum-Combobox-input:-webkit-autofill:active::selection, .spectrum-Combobox-input:-webkit-autofill:focus::selection`, `.spectrum-Combobox-input:-webkit-autofill:hover::selection`. <br/>Defaults to `rgb(var(--spectrum-blue-900-rgb), 0.3)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-readonly-input-background-color": {
+      "value": "var(--spectrum-combobox-background-color-default)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly .spectrum-Combobox-input:read-only`. <br/>Defaults to `var(--spectrum-combobox-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-readonly-border-color-invalid-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly.is-invalid .spectrum-Combobox-input:read-only`. <br/>Defaults to `var(--spectrum-negative-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-readonly-background-color-disabled": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly.is-disabled .spectrum-Combobox-input:read-only`, `.spectrum-Combobox.is-readOnly.is-disabled .spectrum-Combobox-input:read-only:hover`. <br/>Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-readonly-text-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly.is-disabled .spectrum-Combobox-input:read-only`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-readonly-border-color-disabled": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly.is-disabled .spectrum-Combobox-input:read-only`. <br/>Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-combobox-readonly-input-border-color": {
+      "value": "var(--spectrum-combobox-border-color-default)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly .spectrum-Combobox-input:read-only`. <br/>Defaults to `var(--spectrum-combobox-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-combobox-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-combobox-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-combobox-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-combobox-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-progress-circle-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-combobox-block-spacing-edge-to-progress-circle`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-combobox-block-spacing-edge-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-combobox-spacing-block-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
+      "description": "Used by `--spectrum-combobox-spacing-block-end-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-icon-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-help-text-to-component": {
+      "value": "0px",
+      "description": "Used by `--spectrum-combobox-spacing-to-help-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-width-medium": {
+      "value": "var(--spectrum-field-default-width-medium)",
+      "description": "Used by `--spectrum-combobox-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-combobox-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-combobox-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-combobox-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-combobox-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-combobox-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-label-to-component": {
+      "value": "0px",
+      "description": "Used by `--spectrum-combobox-spacing-label-to-combobox`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-combobox-spacing-side-label-to-field`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-combobox-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-combobox-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-combobox-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--spectrum-combobox-background-color-disabled`, `--spectrum-combobox-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-300": {
+      "value": "light-dark(rgb(218, 218, 218), rgb(57, 57, 57))",
+      "description": "Used by `--spectrum-combobox-border-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-400": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
+      "description": "Used by `--spectrum-combobox-border-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Used by `--spectrum-combobox-border-color-focus`, `--spectrum-combobox-border-color-key-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-900": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Used by `--spectrum-combobox-border-color-focus-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Used by `--spectrum-combobox-border-color-disabled`, `--spectrum-combobox-readonly-border-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Used by `--spectrum-combobox-border-color-invalid-default`, `--spectrum-combobox-readonly-border-color-invalid-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-hover": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-combobox-border-color-invalid-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-combobox-border-color-invalid-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus-hover": {
+      "value": "var(--spectrum-negative-border-color-down)",
+      "description": "Used by `--spectrum-combobox-border-color-invalid-focus-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-key-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-combobox-border-color-invalid-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-blue-900-rgb": {
+      "description": "Used by `--spectrum-combobox-background-color-autofill`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-to-menu-medium": {
+      "value": "6px",
+      "description": "Used by `--mod-combobox-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Used by `--spectrum-combobox-readonly-background-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-combobox-readonly-text-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-combobox-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-75": {
+      "value": "16px",
+      "description": "Used by `--spectrum-combobox-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-combobox-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-progress-circle-small": {
+      "value": "4px",
+      "description": "Used by `--spectrum-combobox-block-spacing-edge-to-progress-circle`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-combobox-block-spacing-edge-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-combobox-spacing-block-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-combobox-spacing-block-end-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "value": "9px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-icon-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-width-small": {
+      "value": "var(--spectrum-field-default-width-small)",
+      "description": "Used by `--spectrum-combobox-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-combobox-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-to-menu-small": {
+      "value": "6px",
+      "description": "Used by `--mod-combobox-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-combobox-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "value": "22px",
+      "description": "Used by `--spectrum-combobox-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-combobox-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-progress-circle-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-combobox-block-spacing-edge-to-progress-circle`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-combobox-block-spacing-edge-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-combobox-spacing-block-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
+      "description": "Used by `--spectrum-combobox-spacing-block-end-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-200": {
+      "value": "15px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-200": {
+      "value": "7px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-icon-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-width-large": {
+      "value": "var(--spectrum-field-default-width-large)",
+      "description": "Used by `--spectrum-combobox-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-combobox-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-to-menu-large": {
+      "value": "7px",
+      "description": "Used by `--mod-combobox-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-combobox-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-300": {
+      "value": "26px",
+      "description": "Used by `--spectrum-combobox-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-combobox-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-progress-circle-extra-large": {
+      "value": "11px",
+      "description": "Used by `--spectrum-combobox-block-spacing-edge-to-progress-circle`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-300": {
+      "value": "11px",
+      "description": "Used by `--spectrum-combobox-block-spacing-edge-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "value": "12px",
+      "description": "Used by `--spectrum-combobox-spacing-block-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-combobox-spacing-block-end-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-300": {
+      "value": "8px",
+      "description": "Used by `--spectrum-combobox-spacing-inline-icon-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-width-extra-large": {
+      "value": "var(--spectrum-field-default-width-extra-large)",
+      "description": "Used by `--spectrum-combobox-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-extra-large": {
+      "value": "10px",
+      "description": "Used by `--spectrum-combobox-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-to-menu-extra-large": {
+      "value": "8px",
+      "description": "Used by `--mod-combobox-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `.spectrum-Combobox-input.spectrum-Combobox-autocomplete, .spectrum-Combobox-input:-internal-autofill-selected, .spectrum-Combobox-input:-webkit-autofill, .spectrum-Combobox-input:-webkit-autofill:active, .spectrum-Combobox-input:-webkit-autofill:focus`, `.spectrum-Combobox-input:-webkit-autofill:hover`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-textfield-focus-indicator-gap": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-focus-indicator-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-focus-indicator-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-background-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-background-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-family": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-weight": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-size": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-style": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-spacing-block-start": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-spacing-block-end": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-default": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-focus-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-keyboard-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-focus-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-keyboard-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-corner-radius": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-invalid-default": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-invalid-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-invalid-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-invalid-focus-hover": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-border-color-invalid-keyboard-focus": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-icon-color-invalid": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-border-width": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-border-color": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-background-color": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-background-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-font-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-picker-button-border-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-divider-inline-minimum-size": {
+      "category": "Passthrough"
+    },
+    "mod-popover-animation-distance": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-combobox-background-color-default": {
+      "value": "var(--spectrum-combobox-background-color-default)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly .spectrum-Combobox-input:read-only`, `.spectrum-Combobox-input`, `.spectrum-Combobox-input.spectrum-Combobox-autocomplete, .spectrum-Combobox-input:-internal-autofill-selected, .spectrum-Combobox-input:-webkit-autofill, .spectrum-Combobox-input:-webkit-autofill:active, .spectrum-Combobox-input:-webkit-autofill:focus`, `.spectrum-Combobox-input:-webkit-autofill:hover`. <br/>Defaults to `var(--spectrum-combobox-background-color-default)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-combobox-readonly-border-color": {
+      "value": "var(--spectrum-combobox-readonly-input-border-color)",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly .spectrum-Combobox-input:read-only`. <br/>Defaults to `var(--spectrum-combobox-readonly-input-border-color)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-combobox-border-color-invalid": {
+      "value": "var(--mod-combobox-border-color-invalid-focus-hover, var(--spectrum-combobox-border-color-invalid-focus-hover))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `.spectrum-Combobox.is-readOnly.is-invalid .spectrum-Combobox-input:read-only`, `--mod-picker-button-border-color`. <br/>Defaults to `var(--mod-combobox-border-color-invalid-focus-hover, var(--spectrum-combobox-border-color-invalid-focus-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-combobox-border-color-highlight": {
+      "value": "var(--mod-combobox-border-color-focus-hover, var(--spectrum-combobox-border-color-focus-hover))",
+      "description": "Defined in `.spectrum-Combobox`. <br/>Used by `--mod-picker-button-border-color`. <br/>Defaults to `var(--mod-combobox-border-color-focus-hover, var(--spectrum-combobox-border-color-focus-hover))`, if not set.",
+      "control": "color"
+    }
+  }
 }

@@ -1,11 +1,13 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { IconGroup } from "./icon.test.js";
 import { FullIconSetTemplate, Template, UIArrowsTemplate, UIDefaultTemplate, WorkflowDefaultTemplate } from "./template";
 import { uiIconsWithDirections, workflowIconsCleaned, workflowSizes } from "./utilities.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
@@ -100,6 +102,10 @@ export default {
 		},
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

@@ -9,7 +9,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-PickerButton",
-	id = getRandomId("pickerbutton"),
+	id = getRandomId("picker-button"),
 	size = "m",
 	iconSet = "ui",
 	workflowIconName = "Calendar",

@@ -5,14 +5,37 @@
     ".spectrum-MillerColumns-item",
     ".spectrum-MillerColumns-item:first-child"
   ],
-  "modifiers": [
-    "--mod-millercolumns-inline-size",
-    "--mod-millercolumns-margin-inline-end",
-    "--mod-millercolumns-margin-inline-start",
-    "--mod-millercolumns-padding"
-  ],
-  "component": [],
-  "global": ["--spectrum-spacing-100"],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-millercolumns-padding": {
+      "description": "Used by `.spectrum-MillerColumns`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-millercolumns-inline-size": {
+      "description": "Used by `.spectrum-MillerColumns-item`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-millercolumns-margin-inline-end": {
+      "description": "Used by `.spectrum-MillerColumns-item`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-millercolumns-margin-inline-start": {
+      "description": "Used by `.spectrum-MillerColumns-item:first-child`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {},
+  "global": {
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `.spectrum-MillerColumns`, `.spectrum-MillerColumns-item`, `.spectrum-MillerColumns-item:first-child`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {}
 }

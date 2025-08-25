@@ -1,9 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { SemanticVariantGroup, TooltipPlacementGroup, TooltipShowOnHover } from "./template.js";
 import { PlacementVariants } from "./tooltip.test.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A tooltip shows contextual help or information about specific components when a user hovers or focuses on it.
@@ -98,6 +100,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

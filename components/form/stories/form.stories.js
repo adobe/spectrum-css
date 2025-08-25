@@ -3,10 +3,12 @@ import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as NumberField } from "@spectrum-css/stepper/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { FormGroup } from "./form.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The form component is used for aligning multiple inputs and field groups within a form. It provides structure and spacing for your form fields.
@@ -109,6 +111,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

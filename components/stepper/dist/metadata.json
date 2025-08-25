@@ -11,47 +11,18 @@
     ".spectrum-NumberField-inputs .spectrum-Textfield.is-invalid .spectrum-NumberField-input",
     ".spectrum-NumberField-textfield",
     ".spectrum-NumberField-textfield.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon",
-    ".spectrum-NumberField.is-disabled",
-    ".spectrum-NumberField.is-focused.is-hover:not(.is-disabled)",
-    ".spectrum-NumberField.is-focused.is-hover:not(.is-disabled, .is-readOnly)",
-    ".spectrum-NumberField.is-focused:not(.is-disabled)",
-    ".spectrum-NumberField.is-focused:not(.is-disabled):hover",
-    ".spectrum-NumberField.is-focused:not(.is-disabled, .is-readOnly)",
-    ".spectrum-NumberField.is-focused:not(.is-disabled, .is-readOnly):hover",
-    ".spectrum-NumberField.is-hover:not(.is-disabled)",
-    ".spectrum-NumberField.is-hover:not(.is-disabled):focus",
-    ".spectrum-NumberField.is-hover:not(.is-disabled):focus-visible",
-    ".spectrum-NumberField.is-hover:not(.is-disabled):focus-within",
-    ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly)",
-    ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus",
-    ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-visible",
-    ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-within",
-    ".spectrum-NumberField.is-invalid",
-    ".spectrum-NumberField.is-keyboardFocused.is-hover:not(.is-disabled)",
-    ".spectrum-NumberField.is-keyboardFocused.is-hover:not(.is-disabled, .is-readOnly)",
-    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled)",
-    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled):hover",
-    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly)",
-    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly) .spectrum-NumberField-inputs",
-    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly):hover",
-    ".spectrum-NumberField.is-readOnly",
-    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper",
-    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield",
-    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield .spectrum-NumberField-input",
-    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon",
-    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield:not(:has(.spectrum-Textfield-validationIcon)) .spectrum-NumberField-input",
-    ".spectrum-NumberField.spectrum-NumberField--sideLabel",
-    ".spectrum-NumberField.spectrum-NumberField--sideLabel .spectrum-NumberField-fieldLabel",
-    ".spectrum-NumberField.spectrum-NumberField--sideLabel .spectrum-NumberField-helpText",
-    ".spectrum-NumberField.spectrum-NumberField--sideLabel .spectrum-NumberField-inputs",
-    ".spectrum-NumberField.spectrum-NumberField--sizeL",
-    ".spectrum-NumberField.spectrum-NumberField--sizeS",
-    ".spectrum-NumberField.spectrum-NumberField--sizeXL",
     ".spectrum-NumberField:before",
     ".spectrum-NumberField:focus-visible .spectrum-NumberField-inputs",
     ".spectrum-NumberField:lang(ja)",
     ".spectrum-NumberField:lang(ko)",
     ".spectrum-NumberField:lang(zh)",
+    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus",
+    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-visible",
+    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-visible:hover",
+    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-within",
+    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-within:hover",
+    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus:hover",
+    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):hover",
     ".spectrum-NumberField:not(.is-disabled):focus",
     ".spectrum-NumberField:not(.is-disabled):focus-visible",
     ".spectrum-NumberField:not(.is-disabled):focus-visible:hover",
@@ -59,223 +30,1164 @@
     ".spectrum-NumberField:not(.is-disabled):focus-within:hover",
     ".spectrum-NumberField:not(.is-disabled):focus:hover",
     ".spectrum-NumberField:not(.is-disabled):hover",
-    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus",
-    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-visible",
-    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-visible:hover",
-    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-within",
-    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-within:hover",
-    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):focus:hover",
-    ".spectrum-NumberField:not(.is-disabled, .is-readOnly):hover"
+    ".spectrum-NumberField.is-disabled",
+    ".spectrum-NumberField.is-focused:not(.is-disabled, .is-readOnly)",
+    ".spectrum-NumberField.is-focused:not(.is-disabled, .is-readOnly):hover",
+    ".spectrum-NumberField.is-focused:not(.is-disabled)",
+    ".spectrum-NumberField.is-focused:not(.is-disabled):hover",
+    ".spectrum-NumberField.is-focused.is-hover:not(.is-disabled, .is-readOnly)",
+    ".spectrum-NumberField.is-focused.is-hover:not(.is-disabled)",
+    ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly)",
+    ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus",
+    ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-visible",
+    ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-within",
+    ".spectrum-NumberField.is-hover:not(.is-disabled)",
+    ".spectrum-NumberField.is-hover:not(.is-disabled):focus",
+    ".spectrum-NumberField.is-hover:not(.is-disabled):focus-visible",
+    ".spectrum-NumberField.is-hover:not(.is-disabled):focus-within",
+    ".spectrum-NumberField.is-invalid",
+    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly)",
+    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly) .spectrum-NumberField-inputs",
+    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly):hover",
+    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled)",
+    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled):hover",
+    ".spectrum-NumberField.is-keyboardFocused.is-hover:not(.is-disabled, .is-readOnly)",
+    ".spectrum-NumberField.is-keyboardFocused.is-hover:not(.is-disabled)",
+    ".spectrum-NumberField.is-readOnly",
+    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper",
+    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield",
+    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield .spectrum-NumberField-input",
+    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield:not(:has(.spectrum-Textfield-validationIcon)) .spectrum-NumberField-input",
+    ".spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon",
+    ".spectrum-NumberField.spectrum-NumberField--sideLabel",
+    ".spectrum-NumberField.spectrum-NumberField--sideLabel .spectrum-NumberField-fieldLabel",
+    ".spectrum-NumberField.spectrum-NumberField--sideLabel .spectrum-NumberField-helpText",
+    ".spectrum-NumberField.spectrum-NumberField--sideLabel .spectrum-NumberField-inputs",
+    ".spectrum-NumberField.spectrum-NumberField--sizeL",
+    ".spectrum-NumberField.spectrum-NumberField--sizeS",
+    ".spectrum-NumberField.spectrum-NumberField--sizeXL"
   ],
-  "modifiers": [
-    "--mod-numberfield-background-color",
-    "--mod-numberfield-background-color-disabled",
-    "--mod-numberfield-block-size",
-    "--mod-numberfield-border-color",
-    "--mod-numberfield-border-color-disabled",
-    "--mod-numberfield-border-color-focus",
-    "--mod-numberfield-border-color-focus-hover",
-    "--mod-numberfield-border-color-focus-hover-invalid",
-    "--mod-numberfield-border-color-focus-invalid",
-    "--mod-numberfield-border-color-hover",
-    "--mod-numberfield-border-color-hover-invalid",
-    "--mod-numberfield-border-color-invalid",
-    "--mod-numberfield-border-color-invalid-default",
-    "--mod-numberfield-border-color-invalid-focus",
-    "--mod-numberfield-border-color-invalid-focus-hover",
-    "--mod-numberfield-border-color-invalid-hover",
-    "--mod-numberfield-border-color-invalid-keyboard-focus",
-    "--mod-numberfield-border-color-keyboard-focus",
-    "--mod-numberfield-border-color-keyboard-focus-invalid",
-    "--mod-numberfield-border-radius",
-    "--mod-numberfield-border-width",
-    "--mod-numberfield-button-inline-offset",
-    "--mod-numberfield-focus-indicator-color",
-    "--mod-numberfield-focus-indicator-gap",
-    "--mod-numberfield-focus-indicator-width",
-    "--mod-numberfield-font-family",
-    "--mod-numberfield-font-size",
-    "--mod-numberfield-font-style",
-    "--mod-numberfield-font-weight",
-    "--mod-numberfield-hidden-stepper-min-inline-size",
-    "--mod-numberfield-inline-size",
-    "--mod-numberfield-label-to-field",
-    "--mod-numberfield-line-height",
-    "--mod-numberfield-min-inline-size",
-    "--mod-numberfield-spacing-block-end-edge-to-text",
-    "--mod-numberfield-spacing-block-start-edge-to-text",
-    "--mod-numberfield-spacing-field-to-helptext",
-    "--mod-numberfield-text-color",
-    "--mod-numberfield-text-color-disabled",
-    "--mod-numberfield-text-color-focus",
-    "--mod-numberfield-text-color-focus-hover",
-    "--mod-numberfield-text-color-hover",
-    "--mod-numberfield-text-color-keyboard-focus"
-  ],
-  "component": [],
-  "global": [
-    "--spectrum-border-width-200",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-300",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-edge-to-text-200",
-    "--spectrum-component-edge-to-text-300",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-component-top-to-workflow-icon-200",
-    "--spectrum-component-top-to-workflow-icon-300",
-    "--spectrum-component-top-to-workflow-icon-75",
-    "--spectrum-corner-radius-medium-size-extra-large",
-    "--spectrum-corner-radius-medium-size-large",
-    "--spectrum-corner-radius-medium-size-medium",
-    "--spectrum-corner-radius-medium-size-small",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-border-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-field-default-width-extra-large",
-    "--spectrum-field-default-width-large",
-    "--spectrum-field-default-width-medium",
-    "--spectrum-field-default-width-small",
-    "--spectrum-field-label-to-component",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-25",
-    "--spectrum-gray-300",
-    "--spectrum-gray-400",
-    "--spectrum-gray-800",
-    "--spectrum-gray-900",
-    "--spectrum-help-text-to-component",
-    "--spectrum-in-field-button-edge-to-fill-extra-large",
-    "--spectrum-in-field-button-edge-to-fill-large",
-    "--spectrum-in-field-button-edge-to-fill-medium",
-    "--spectrum-in-field-button-side-edge-to-fill-extra-large",
-    "--spectrum-in-field-button-side-edge-to-fill-large",
-    "--spectrum-in-field-button-side-edge-to-fill-medium",
-    "--spectrum-in-field-button-side-edge-to-fill-small",
-    "--spectrum-in-field-stepper-to-end-extra-large",
-    "--spectrum-in-field-stepper-to-end-large",
-    "--spectrum-in-field-stepper-to-end-medium",
-    "--spectrum-in-field-stepper-to-end-small",
-    "--spectrum-line-height-100",
-    "--spectrum-negative-border-color-default",
-    "--spectrum-negative-border-color-focus",
-    "--spectrum-negative-border-color-focus-hover",
-    "--spectrum-negative-border-color-hover",
-    "--spectrum-negative-border-color-key-focus",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-focus",
-    "--spectrum-neutral-content-color-focus-hover",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-number-field-minimum-width-multiplier",
-    "--spectrum-number-field-visual-to-in-field-stepper-extra-large",
-    "--spectrum-number-field-visual-to-in-field-stepper-large",
-    "--spectrum-number-field-visual-to-in-field-stepper-medium",
-    "--spectrum-number-field-visual-to-in-field-stepper-small",
-    "--spectrum-number-field-with-stepper-minimum-width-extra-large",
-    "--spectrum-number-field-with-stepper-minimum-width-large",
-    "--spectrum-number-field-with-stepper-minimum-width-medium",
-    "--spectrum-number-field-with-stepper-minimum-width-small",
-    "--spectrum-numberfield-alert-icon-size",
-    "--spectrum-numberfield-background-color",
-    "--spectrum-numberfield-background-color-disabled",
-    "--spectrum-numberfield-block-size",
-    "--spectrum-numberfield-border-color-default",
-    "--spectrum-numberfield-border-color-disabled",
-    "--spectrum-numberfield-border-color-focus",
-    "--spectrum-numberfield-border-color-focus-hover",
-    "--spectrum-numberfield-border-color-hover",
-    "--spectrum-numberfield-border-color-invalid-default",
-    "--spectrum-numberfield-border-color-invalid-focus",
-    "--spectrum-numberfield-border-color-invalid-focus-hover",
-    "--spectrum-numberfield-border-color-invalid-hover",
-    "--spectrum-numberfield-border-color-invalid-keyboard-focus",
-    "--spectrum-numberfield-border-color-keyboard-focus",
-    "--spectrum-numberfield-border-radius",
-    "--spectrum-numberfield-border-width",
-    "--spectrum-numberfield-button-container-size",
-    "--spectrum-numberfield-button-inline-offset",
-    "--spectrum-numberfield-button-inline-padding",
-    "--spectrum-numberfield-focus-indicator-color",
-    "--spectrum-numberfield-focus-indicator-gap",
-    "--spectrum-numberfield-focus-indicator-width",
-    "--spectrum-numberfield-font-family",
-    "--spectrum-numberfield-font-size",
-    "--spectrum-numberfield-font-style",
-    "--spectrum-numberfield-font-weight",
-    "--spectrum-numberfield-hidden-stepper-min-inline-size",
-    "--spectrum-numberfield-inline-size",
-    "--spectrum-numberfield-line-height",
-    "--spectrum-numberfield-min-inline-size",
-    "--spectrum-numberfield-spacing-block-end-edge-to-alert-icon",
-    "--spectrum-numberfield-spacing-block-end-edge-to-text",
-    "--spectrum-numberfield-spacing-block-start-edge-to-alert-icon",
-    "--spectrum-numberfield-spacing-block-start-edge-to-text",
-    "--spectrum-numberfield-spacing-field-to-helptext",
-    "--spectrum-numberfield-spacing-inline-edge-to-text",
-    "--spectrum-numberfield-spacing-label-to-field",
-    "--spectrum-numberfield-spacing-min-inline-end-text-to-stepper",
-    "--spectrum-numberfield-spacing-min-inline-end-value-to-icon",
-    "--spectrum-numberfield-spacing-side-label-to-field",
-    "--spectrum-numberfield-spacing-validation-icon-to-stepper",
-    "--spectrum-numberfield-text-color",
-    "--spectrum-numberfield-text-color-disabled",
-    "--spectrum-numberfield-text-color-focus",
-    "--spectrum-numberfield-text-color-focus-hover",
-    "--spectrum-numberfield-text-color-hover",
-    "--spectrum-numberfield-text-color-keyboard-focus",
-    "--spectrum-regular-font-weight",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-200",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-text-to-visual-200",
-    "--spectrum-text-to-visual-300",
-    "--spectrum-text-to-visual-75",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-300",
-    "--spectrum-workflow-icon-size-75"
-  ],
-  "passthroughs": [
-    "--mod-textfield-background-color",
-    "--mod-textfield-background-color-disabled",
-    "--mod-textfield-font-family",
-    "--mod-textfield-font-size",
-    "--mod-textfield-font-style",
-    "--mod-textfield-font-weight",
-    "--mod-textfield-height",
-    "--mod-textfield-icon-spacing-block-invalid",
-    "--mod-textfield-spacing-block-end",
-    "--mod-textfield-spacing-block-start",
-    "--mod-textfield-text-color-default",
-    "--mod-textfield-text-color-disabled",
-    "--mod-textfield-text-color-focus",
-    "--mod-textfield-width"
-  ],
-  "high-contrast": [
-    "--highcontrast-numberfield-background-color",
-    "--highcontrast-numberfield-border-color",
-    "--highcontrast-numberfield-border-color-focus",
-    "--highcontrast-numberfield-border-color-focus-hover",
-    "--highcontrast-numberfield-border-color-hover",
-    "--highcontrast-numberfield-border-color-keyboard-focus",
-    "--highcontrast-numberfield-focus-indicator-color",
-    "--highcontrast-textfield-border-color"
-  ]
+  "modifiers": {
+    "mod-numberfield-border-radius": {
+      "description": "Used by `--spectrum-numberfield-border-radius`. <br/>Defaults to `var(--spectrum-corner-radius-medium-size-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-width": {
+      "description": "Used by `--spectrum-numberfield-border-width`, `--mod-textfield-height`. <br/>Defaults to `var(--spectrum-numberfield-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color": {
+      "description": "Defined in `.spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly)`, `.spectrum-NumberField.is-invalid`, `.spectrum-NumberField.is-focused:not(.is-disabled, .is-readOnly), .spectrum-NumberField:not(.is-disabled, .is-readOnly):focus, .spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-within`, `.spectrum-NumberField.is-focused.is-hover:not(.is-disabled, .is-readOnly), .spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus, .spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-within`, `.spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly), .spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-visible, .spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-within`, `.spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-visible, .spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-within, .spectrum-NumberField.is-keyboardFocused.is-hover:not(.is-disabled, .is-readOnly)`, `.spectrum-NumberField.is-disabled, .spectrum-NumberField.is-readOnly`, `.spectrum-NumberField:not(.is-disabled, .is-readOnly):hover`, `.spectrum-NumberField.is-focused:not(.is-disabled, .is-readOnly):hover, .spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly):hover, .spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-visible:hover, .spectrum-NumberField:not(.is-disabled, .is-readOnly):focus-within:hover, .spectrum-NumberField:not(.is-disabled, .is-readOnly):focus:hover`. <br/>Used by `--spectrum-numberfield-border-color-default`. <br/>Defaults to `var(--spectrum-gray-300)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-hover": {
+      "description": "Defined in `.spectrum-NumberField.is-invalid`. <br/>Used by `--spectrum-numberfield-border-color-hover`, `--mod-numberfield-border-color`. <br/>Defaults to `var(--spectrum-numberfield-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-focus": {
+      "description": "Defined in `.spectrum-NumberField.is-invalid`. <br/>Used by `--spectrum-numberfield-border-color-focus`, `--mod-numberfield-border-color`. <br/>Defaults to `var(--spectrum-numberfield-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-keyboard-focus": {
+      "description": "Defined in `.spectrum-NumberField.is-invalid`. <br/>Used by `--spectrum-numberfield-border-color-keyboard-focus`, `--mod-numberfield-border-color`. <br/>Defaults to `var(--spectrum-numberfield-border-color-keyboard-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-focus-hover": {
+      "description": "Defined in `.spectrum-NumberField.is-invalid`. <br/>Used by `--spectrum-numberfield-border-color-focus-hover`, `--mod-numberfield-border-color`. <br/>Defaults to `var(--spectrum-numberfield-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-disabled": {
+      "description": "Used by `--spectrum-numberfield-border-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-invalid-default": {
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-default`. <br/>Defaults to `var(--spectrum-negative-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-invalid-hover": {
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-hover`. <br/>Defaults to `var(--spectrum-negative-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-invalid-focus": {
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-focus`. <br/>Defaults to `var(--spectrum-negative-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-invalid-focus-hover": {
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-focus-hover`. <br/>Defaults to `var(--spectrum-negative-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-invalid-keyboard-focus": {
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-keyboard-focus`. <br/>Defaults to `var(--spectrum-negative-border-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-text-color": {
+      "description": "Used by `--spectrum-numberfield-text-color`, `--mod-textfield-text-color-default`. <br/>Defaults to `var(--spectrum-numberfield-text-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-text-color-hover": {
+      "description": "Used by `--spectrum-numberfield-text-color-hover`, `--mod-textfield-text-color-default`. <br/>Defaults to `var(--spectrum-numberfield-text-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-text-color-focus": {
+      "description": "Used by `--spectrum-numberfield-text-color-focus`, `--mod-textfield-text-color-focus`. <br/>Defaults to `var(--spectrum-numberfield-text-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-text-color-focus-hover": {
+      "description": "Used by `--spectrum-numberfield-text-color-focus-hover`, `--mod-textfield-text-color-focus`. <br/>Defaults to `var(--spectrum-numberfield-text-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-text-color-keyboard-focus": {
+      "description": "Used by `--spectrum-numberfield-text-color-keyboard-focus`, `--mod-textfield-text-color-default`. <br/>Defaults to `var(--spectrum-numberfield-text-color-keyboard-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-text-color-disabled": {
+      "description": "Used by `--spectrum-numberfield-text-color-disabled`, `--mod-textfield-text-color-disabled`. <br/>Defaults to `var(--spectrum-numberfield-text-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-background-color": {
+      "description": "Defined in `.spectrum-NumberField.is-disabled`. <br/>Used by `--spectrum-numberfield-background-color`, `--mod-textfield-background-color`. <br/>Defaults to `var(--spectrum-numberfield-background-color, transparent)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-background-color-disabled": {
+      "description": "Used by `--spectrum-numberfield-background-color-disabled`, `--mod-textfield-background-color-disabled`. <br/>Defaults to `var(--spectrum-numberfield-background-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-font-family": {
+      "description": "Used by `--spectrum-numberfield-font-family`, `--mod-textfield-font-family`. <br/>Defaults to `var(--spectrum-numberfield-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-font-weight": {
+      "description": "Used by `--spectrum-numberfield-font-weight`, `--mod-textfield-font-weight`. <br/>Defaults to `var(--spectrum-numberfield-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-font-size": {
+      "description": "Used by `--spectrum-numberfield-font-size`, `--mod-textfield-font-size`. <br/>Defaults to `var(--spectrum-font-size-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-font-style": {
+      "description": "Used by `--spectrum-numberfield-font-style`, `--mod-textfield-font-style`. <br/>Defaults to `var(--spectrum-numberfield-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-line-height": {
+      "description": "Used by `--spectrum-numberfield-line-height`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-focus-indicator-width": {
+      "description": "Used by `--spectrum-numberfield-focus-indicator-width`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-focus-indicator-gap": {
+      "description": "Used by `--spectrum-numberfield-focus-indicator-gap`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-focus-indicator-color": {
+      "description": "Used by `--spectrum-numberfield-focus-indicator-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-block-size": {
+      "description": "Used by `--spectrum-numberfield-block-size`, `--mod-textfield-height`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-inline-size": {
+      "description": "Used by `--spectrum-numberfield-inline-size`. <br/>Defaults to `var(--spectrum-field-default-width-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-min-inline-size": {
+      "description": "Used by `--spectrum-numberfield-min-inline-size`. <br/>Defaults to `var(--spectrum-number-field-with-stepper-minimum-width-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-button-inline-offset": {
+      "description": "Used by `--spectrum-numberfield-button-inline-offset`, `.spectrum-NumberField-buttons`. <br/>Defaults to `var(--spectrum-numberfield-button-inline-offset, 0px)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-spacing-block-start-edge-to-text": {
+      "description": "Used by `--mod-textfield-spacing-block-start`. <br/>Defaults to `var(--spectrum-numberfield-spacing-block-start-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-spacing-block-end-edge-to-text": {
+      "description": "Used by `--mod-textfield-spacing-block-end`. <br/>Defaults to `var(--spectrum-numberfield-spacing-block-end-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-invalid": {
+      "description": "Used by `--mod-numberfield-border-color`. <br/>Defaults to `var(--spectrum-numberfield-border-color-invalid-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-hover-invalid": {
+      "description": "Used by `--mod-numberfield-border-color-hover`. <br/>Defaults to `var(--spectrum-numberfield-border-color-invalid-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-focus-invalid": {
+      "description": "Used by `--mod-numberfield-border-color-focus`. <br/>Defaults to `var(--spectrum-numberfield-border-color-invalid-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-focus-hover-invalid": {
+      "description": "Used by `--mod-numberfield-border-color-focus-hover`. <br/>Defaults to `var(--spectrum-numberfield-border-color-invalid-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-border-color-keyboard-focus-invalid": {
+      "description": "Used by `--mod-numberfield-border-color-keyboard-focus`. <br/>Defaults to `var(--spectrum-numberfield-border-color-invalid-keyboard-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-numberfield-hidden-stepper-min-inline-size": {
+      "description": "Used by `.spectrum-NumberField.spectrum-NumberField--hiddenStepper`. <br/>Defaults to `var(--spectrum-numberfield-hidden-stepper-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-label-to-field": {
+      "description": "Used by `.spectrum-NumberField-fieldLabel`. <br/>Defaults to `var(--spectrum-numberfield-spacing-label-to-field)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-numberfield-spacing-field-to-helptext": {
+      "description": "Used by `.spectrum-NumberField-helpText`. <br/>Defaults to `var(--spectrum-numberfield-spacing-field-to-helptext)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {},
+  "global": {
+    "spectrum-numberfield-border-radius": {
+      "value": "var(--mod-numberfield-border-radius, var(--spectrum-corner-radius-medium-size-extra-large))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField-inputs`, `.spectrum-NumberField-textfield`. <br/>Defaults to `var(--mod-numberfield-border-radius, var(--spectrum-corner-radius-medium-size-extra-large))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-numberfield-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-width": {
+      "value": "var(--mod-numberfield-border-width, var(--spectrum-border-width-200))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--spectrum-numberfield-spacing-inline-edge-to-text`, `--mod-textfield-icon-spacing-block-invalid`, `--mod-textfield-height`, `.spectrum-NumberField-textfield`. <br/>Defaults to `var(--mod-numberfield-border-width, var(--spectrum-border-width-200))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-numberfield-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-default": {
+      "value": "var(--highcontrast-numberfield-border-color, var(--mod-numberfield-border-color, var(--spectrum-gray-300)))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `.spectrum-NumberField-textfield`. <br/>Defaults to `var(--highcontrast-numberfield-border-color, var(--mod-numberfield-border-color, var(--spectrum-gray-300)))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-300": {
+      "value": "light-dark(rgb(218, 218, 218), rgb(57, 57, 57))",
+      "description": "Used by `--spectrum-numberfield-border-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-hover": {
+      "value": "var(--highcontrast-numberfield-border-color-hover, var(--mod-numberfield-border-color-hover, var(--spectrum-gray-400)))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color`. <br/>Defaults to `var(--highcontrast-numberfield-border-color-hover, var(--mod-numberfield-border-color-hover, var(--spectrum-gray-400)))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-400": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
+      "description": "Used by `--spectrum-numberfield-border-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-focus": {
+      "value": "var(--highcontrast-numberfield-border-color-focus, var(--mod-numberfield-border-color-focus, var(--spectrum-gray-800)))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color`. <br/>Defaults to `var(--highcontrast-numberfield-border-color-focus, var(--mod-numberfield-border-color-focus, var(--spectrum-gray-800)))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Used by `--spectrum-numberfield-border-color-focus`, `--spectrum-numberfield-border-color-keyboard-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-keyboard-focus": {
+      "value": "var(--highcontrast-numberfield-border-color-keyboard-focus, var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-gray-800)))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color`. <br/>Defaults to `var(--highcontrast-numberfield-border-color-keyboard-focus, var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-gray-800)))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-focus-hover": {
+      "value": "var(--highcontrast-numberfield-border-color-focus-hover, var(--mod-numberfield-border-color-focus-hover, var(--spectrum-gray-900)))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color`. <br/>Defaults to `var(--highcontrast-numberfield-border-color-focus-hover, var(--mod-numberfield-border-color-focus-hover, var(--spectrum-gray-900)))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-900": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Used by `--spectrum-numberfield-border-color-focus-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-disabled": {
+      "value": "var(--mod-numberfield-border-color-disabled, var(--spectrum-disabled-border-color))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color`. <br/>Defaults to `var(--mod-numberfield-border-color-disabled, var(--spectrum-disabled-border-color))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Used by `--spectrum-numberfield-border-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-invalid-default": {
+      "value": "var(--mod-numberfield-border-color-invalid-default, var(--spectrum-negative-border-color-default))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color`. <br/>Defaults to `var(--mod-numberfield-border-color-invalid-default, var(--spectrum-negative-border-color-default))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-invalid-hover": {
+      "value": "var(--mod-numberfield-border-color-invalid-hover, var(--spectrum-negative-border-color-hover))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color-hover`. <br/>Defaults to `var(--mod-numberfield-border-color-invalid-hover, var(--spectrum-negative-border-color-hover))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-hover": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-invalid-focus": {
+      "value": "var(--mod-numberfield-border-color-invalid-focus, var(--spectrum-negative-border-color-focus))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color-focus`. <br/>Defaults to `var(--mod-numberfield-border-color-invalid-focus, var(--spectrum-negative-border-color-focus))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-invalid-focus-hover": {
+      "value": "var(--mod-numberfield-border-color-invalid-focus-hover, var(--spectrum-negative-border-color-focus-hover))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color-focus-hover`. <br/>Defaults to `var(--mod-numberfield-border-color-invalid-focus-hover, var(--spectrum-negative-border-color-focus-hover))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus-hover": {
+      "value": "var(--spectrum-negative-border-color-down)",
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-focus-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-border-color-invalid-keyboard-focus": {
+      "value": "var(--mod-numberfield-border-color-invalid-keyboard-focus, var(--spectrum-negative-border-color-key-focus))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-numberfield-border-color-keyboard-focus`. <br/>Defaults to `var(--mod-numberfield-border-color-invalid-keyboard-focus, var(--spectrum-negative-border-color-key-focus))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-key-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-numberfield-border-color-invalid-keyboard-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-text-color": {
+      "value": "var(--mod-numberfield-text-color, var(--spectrum-neutral-content-color-default))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-text-color-default`. <br/>Defaults to `var(--mod-numberfield-text-color, var(--spectrum-neutral-content-color-default))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-numberfield-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-text-color-hover": {
+      "value": "var(--mod-numberfield-text-color-hover, var(--spectrum-neutral-content-color-hover))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-text-color-default`. <br/>Defaults to `var(--mod-numberfield-text-color-hover, var(--spectrum-neutral-content-color-hover))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-numberfield-text-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-text-color-focus": {
+      "value": "var(--mod-numberfield-text-color-focus, var(--spectrum-neutral-content-color-focus))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-text-color-focus`. <br/>Defaults to `var(--mod-numberfield-text-color-focus, var(--spectrum-neutral-content-color-focus))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-focus": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Used by `--spectrum-numberfield-text-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-text-color-focus-hover": {
+      "value": "var(--mod-numberfield-text-color-focus-hover, var(--spectrum-neutral-content-color-focus-hover))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-text-color-focus`. <br/>Defaults to `var(--mod-numberfield-text-color-focus-hover, var(--spectrum-neutral-content-color-focus-hover))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-focus-hover": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Used by `--spectrum-numberfield-text-color-focus-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-text-color-keyboard-focus": {
+      "value": "var(--mod-numberfield-text-color-keyboard-focus, var(--spectrum-neutral-content-color-key-focus))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-text-color-default`. <br/>Defaults to `var(--mod-numberfield-text-color-keyboard-focus, var(--spectrum-neutral-content-color-key-focus))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-numberfield-text-color-keyboard-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-text-color-disabled": {
+      "value": "var(--mod-numberfield-text-color-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-text-color-disabled`. <br/>Defaults to `var(--mod-numberfield-text-color-disabled, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-numberfield-text-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-background-color": {
+      "value": "var(--highcontrast-numberfield-background-color, var(--mod-numberfield-background-color, var(--spectrum-gray-25)))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-background-color`, `.spectrum-NumberField-textfield`. <br/>Defaults to `var(--highcontrast-numberfield-background-color, var(--mod-numberfield-background-color, var(--spectrum-gray-25)))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--spectrum-numberfield-background-color`, `--spectrum-numberfield-background-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-background-color-disabled": {
+      "value": "var(--mod-numberfield-background-color-disabled, var(--spectrum-gray-25))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-background-color-disabled`, `--mod-numberfield-background-color`. <br/>Defaults to `var(--mod-numberfield-background-color-disabled, var(--spectrum-gray-25))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-font-family": {
+      "value": "var(--mod-numberfield-font-family, var(--spectrum-sans-font-family-stack))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-font-family`. <br/>Defaults to `var(--mod-numberfield-font-family, var(--spectrum-sans-font-family-stack))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-numberfield-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-font-weight": {
+      "value": "var(--mod-numberfield-font-weight, var(--spectrum-regular-font-weight))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-font-weight`. <br/>Defaults to `var(--mod-numberfield-font-weight, var(--spectrum-regular-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-numberfield-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-font-size": {
+      "value": "var(--mod-numberfield-font-size, var(--spectrum-font-size-300))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `--mod-textfield-font-size`. <br/>Defaults to `var(--mod-numberfield-font-size, var(--spectrum-font-size-300))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-numberfield-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-font-style": {
+      "value": "var(--mod-numberfield-font-style, var(--spectrum-default-font-style))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--mod-textfield-font-style`. <br/>Defaults to `var(--mod-numberfield-font-style, var(--spectrum-default-font-style))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-numberfield-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField:lang(ja), .spectrum-NumberField:lang(ko), .spectrum-NumberField:lang(zh)`. <br/>Used by `.spectrum-NumberField-input`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-numberfield-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-focus-indicator-width": {
+      "value": "var(--mod-numberfield-focus-indicator-width, var(--spectrum-focus-indicator-thickness))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `.spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly) .spectrum-NumberField-inputs, .spectrum-NumberField:focus-visible .spectrum-NumberField-inputs`. <br/>Defaults to `var(--mod-numberfield-focus-indicator-width, var(--spectrum-focus-indicator-thickness))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-numberfield-focus-indicator-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-focus-indicator-gap": {
+      "value": "var(--mod-numberfield-focus-indicator-gap, var(--spectrum-focus-indicator-gap))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `.spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly) .spectrum-NumberField-inputs, .spectrum-NumberField:focus-visible .spectrum-NumberField-inputs`. <br/>Defaults to `var(--mod-numberfield-focus-indicator-gap, var(--spectrum-focus-indicator-gap))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-numberfield-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-focus-indicator-color": {
+      "value": "var(--highcontrast-numberfield-focus-indicator-color, var(--mod-numberfield-focus-indicator-color, var(--spectrum-focus-indicator-color)))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `.spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly) .spectrum-NumberField-inputs, .spectrum-NumberField:focus-visible .spectrum-NumberField-inputs`. <br/>Defaults to `var(--highcontrast-numberfield-focus-indicator-color, var(--mod-numberfield-focus-indicator-color, var(--spectrum-focus-indicator-color)))`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-numberfield-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-numberfield-block-size": {
+      "value": "var(--mod-numberfield-block-size, var(--spectrum-component-height-300))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `--spectrum-numberfield-hidden-stepper-min-inline-size`, `--mod-textfield-height`. <br/>Defaults to `var(--mod-numberfield-block-size, var(--spectrum-component-height-300))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-numberfield-block-size`, `--spectrum-numberfield-button-container-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-inline-size": {
+      "value": "var(--mod-numberfield-inline-size, var(--spectrum-field-default-width-extra-large))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField`. <br/>Defaults to `var(--mod-numberfield-inline-size, var(--spectrum-field-default-width-extra-large))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-medium": {
+      "value": "208px",
+      "description": "Used by `--spectrum-numberfield-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-min-inline-size": {
+      "value": "var(--mod-numberfield-min-inline-size, var(--spectrum-number-field-with-stepper-minimum-width-extra-large))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField`. <br/>Defaults to `var(--mod-numberfield-min-inline-size, var(--spectrum-number-field-with-stepper-minimum-width-extra-large))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-with-stepper-minimum-width-medium": {
+      "value": "120px",
+      "description": "Used by `--spectrum-numberfield-min-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-hidden-stepper-min-inline-size": {
+      "value": "calc(var(--spectrum-number-field-minimum-width-multiplier) * var(--spectrum-numberfield-block-size))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `.spectrum-NumberField.spectrum-NumberField--hiddenStepper`. <br/>Defaults to `calc(var(--spectrum-number-field-minimum-width-multiplier) * var(--spectrum-numberfield-block-size))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-minimum-width-multiplier": {
+      "value": "1.25",
+      "description": "Used by `--spectrum-numberfield-hidden-stepper-min-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-alert-icon-size": {
+      "value": "26px",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield .spectrum-NumberField-input`, `.spectrum-NumberField-inputs .spectrum-Textfield.is-invalid .spectrum-NumberField-input`. <br/>Defaults to `var(--spectrum-workflow-icon-size-300)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-numberfield-alert-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-inline-edge-to-text": {
+      "value": "calc(var(--spectrum-component-edge-to-text-300) - var(--spectrum-numberfield-border-width))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield`, `.spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`, `.spectrum-NumberField-textfield`. <br/>Defaults to `calc(var(--spectrum-component-edge-to-text-300) - var(--spectrum-numberfield-border-width))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-numberfield-spacing-inline-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-block-start-edge-to-text": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `--mod-textfield-spacing-block-start`. <br/>Defaults to `var(--spectrum-component-top-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-block-end-edge-to-text": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `--mod-textfield-spacing-block-end`. <br/>Defaults to `var(--spectrum-component-bottom-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-end-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-button-inline-padding": {
+      "value": "var(--spectrum-in-field-button-side-edge-to-fill-extra-large)",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `--spectrum-numberfield-spacing-min-inline-end-text-to-stepper`, `--spectrum-numberfield-spacing-validation-icon-to-stepper`. <br/>Defaults to `var(--spectrum-in-field-button-side-edge-to-fill-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-side-edge-to-fill-medium": {
+      "description": "Used by `--spectrum-numberfield-button-inline-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-button-container-size": {
+      "value": "calc((var(--spectrum-component-height-300) - var(--spectrum-in-field-button-edge-to-fill-extra-large)) * 2)",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField-textfield`, `.spectrum-NumberField-textfield.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `calc((var(--spectrum-component-height-300) - var(--spectrum-in-field-button-edge-to-fill-extra-large)) * 2)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-edge-to-fill-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-numberfield-button-container-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-button-inline-offset": {
+      "value": "var(--mod-numberfield-button-inline-offset, var(--spectrum-in-field-stepper-to-end-extra-large))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField-textfield`, `.spectrum-NumberField-buttons`. <br/>Defaults to `var(--mod-numberfield-button-inline-offset, var(--spectrum-in-field-stepper-to-end-extra-large))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-stepper-to-end-medium": {
+      "value": "3px",
+      "description": "Used by `--spectrum-numberfield-button-inline-offset`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-min-inline-end-text-to-stepper": {
+      "value": "calc(var(--spectrum-text-to-visual-300) - var(--spectrum-numberfield-button-inline-padding))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField-input`. <br/>Defaults to `calc(var(--spectrum-text-to-visual-300) - var(--spectrum-numberfield-button-inline-padding))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-numberfield-spacing-min-inline-end-text-to-stepper`, `--spectrum-numberfield-spacing-min-inline-end-value-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-min-inline-end-value-to-icon": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField.spectrum-NumberField--hiddenStepper .spectrum-NumberField-textfield .spectrum-NumberField-input`, `.spectrum-NumberField-inputs .spectrum-Textfield.is-invalid .spectrum-NumberField-input`. <br/>Defaults to `var(--spectrum-text-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-field-to-helptext": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `.spectrum-NumberField-helpText`. <br/>Defaults to `var(--spectrum-help-text-to-component)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-help-text-to-component": {
+      "value": "0px",
+      "description": "Used by `--spectrum-numberfield-spacing-field-to-helptext`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-label-to-field": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `.spectrum-NumberField-fieldLabel`. <br/>Defaults to `var(--spectrum-field-label-to-component)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-label-to-component": {
+      "value": "0px",
+      "description": "Used by `--spectrum-numberfield-spacing-label-to-field`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-validation-icon-to-stepper": {
+      "value": "calc(var(--spectrum-number-field-visual-to-in-field-stepper-extra-large) - var(--spectrum-numberfield-button-inline-padding))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `.spectrum-NumberField-inputs .spectrum-Textfield.is-invalid .spectrum-NumberField-input`, `.spectrum-NumberField-textfield.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon`. <br/>Defaults to `calc(var(--spectrum-number-field-visual-to-in-field-stepper-extra-large) - var(--spectrum-numberfield-button-inline-padding))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-visual-to-in-field-stepper-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-numberfield-spacing-validation-icon-to-stepper`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-side-label-to-field": {
+      "value": "var(--spectrum-numberfield-spacing-side-label-to-field)",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `.spectrum-NumberField.spectrum-NumberField--sideLabel .spectrum-NumberField-fieldLabel`. <br/>Defaults to `var(--spectrum-numberfield-spacing-side-label-to-field)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-numberfield-spacing-side-label-to-field`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-block-start-edge-to-alert-icon": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Used by `--mod-textfield-icon-spacing-block-invalid`. <br/>Defaults to `var(--spectrum-component-top-to-workflow-icon-300)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-start-edge-to-alert-icon`, `--spectrum-numberfield-spacing-block-end-edge-to-alert-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-numberfield-spacing-block-end-edge-to-alert-icon": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.spectrum-NumberField--sizeS`, `.spectrum-NumberField.spectrum-NumberField--sizeL`, `.spectrum-NumberField.spectrum-NumberField--sizeXL`. <br/>Defaults to `var(--spectrum-component-top-to-workflow-icon-300)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-numberfield-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-numberfield-block-size`, `--spectrum-numberfield-button-container-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-small": {
+      "value": "192px",
+      "description": "Used by `--spectrum-numberfield-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-with-stepper-minimum-width-small": {
+      "value": "104px",
+      "description": "Used by `--spectrum-numberfield-min-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "value": "9px",
+      "description": "Used by `--spectrum-numberfield-spacing-inline-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-numberfield-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-end-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-numberfield-spacing-min-inline-end-text-to-stepper`, `--spectrum-numberfield-spacing-min-inline-end-value-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-visual-to-in-field-stepper-small": {
+      "value": "5px",
+      "description": "Used by `--spectrum-numberfield-spacing-validation-icon-to-stepper`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-side-edge-to-fill-small": {
+      "description": "Used by `--spectrum-numberfield-button-inline-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-stepper-to-end-small": {
+      "value": "0px",
+      "description": "Used by `--spectrum-numberfield-button-inline-offset`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-start-edge-to-alert-icon`, `--spectrum-numberfield-spacing-block-end-edge-to-alert-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-75": {
+      "value": "16px",
+      "description": "Used by `--spectrum-numberfield-alert-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-numberfield-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-numberfield-block-size`, `--spectrum-numberfield-button-container-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-large": {
+      "value": "224px",
+      "description": "Used by `--spectrum-numberfield-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-with-stepper-minimum-width-large": {
+      "value": "144px",
+      "description": "Used by `--spectrum-numberfield-min-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-200": {
+      "value": "15px",
+      "description": "Used by `--spectrum-numberfield-spacing-inline-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-numberfield-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-end-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-200": {
+      "value": "7px",
+      "description": "Used by `--spectrum-numberfield-spacing-min-inline-end-text-to-stepper`, `--spectrum-numberfield-spacing-min-inline-end-value-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-visual-to-in-field-stepper-large": {
+      "value": "7px",
+      "description": "Used by `--spectrum-numberfield-spacing-validation-icon-to-stepper`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-side-edge-to-fill-large": {
+      "description": "Used by `--spectrum-numberfield-button-inline-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-edge-to-fill-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-numberfield-button-container-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-stepper-to-end-large": {
+      "value": "4px",
+      "description": "Used by `--spectrum-numberfield-button-inline-offset`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-start-edge-to-alert-icon`, `--spectrum-numberfield-spacing-block-end-edge-to-alert-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "value": "22px",
+      "description": "Used by `--spectrum-numberfield-alert-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-extra-large": {
+      "value": "10px",
+      "description": "Used by `--spectrum-numberfield-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-numberfield-block-size`, `--spectrum-numberfield-button-container-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-extra-large": {
+      "value": "240px",
+      "description": "Used by `--spectrum-numberfield-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-with-stepper-minimum-width-extra-large": {
+      "value": "168px",
+      "description": "Used by `--spectrum-numberfield-min-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-numberfield-spacing-inline-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-numberfield-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "value": "12px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-start-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-end-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-300": {
+      "value": "8px",
+      "description": "Used by `--spectrum-numberfield-spacing-min-inline-end-text-to-stepper`, `--spectrum-numberfield-spacing-min-inline-end-value-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-number-field-visual-to-in-field-stepper-extra-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-numberfield-spacing-validation-icon-to-stepper`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-side-edge-to-fill-extra-large": {
+      "description": "Used by `--spectrum-numberfield-button-inline-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-edge-to-fill-extra-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-numberfield-button-container-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-stepper-to-end-extra-large": {
+      "value": "4px",
+      "description": "Used by `--spectrum-numberfield-button-inline-offset`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-300": {
+      "value": "11px",
+      "description": "Used by `--spectrum-numberfield-spacing-block-start-edge-to-alert-icon`, `--spectrum-numberfield-spacing-block-end-edge-to-alert-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-300": {
+      "value": "26px",
+      "description": "Used by `--spectrum-numberfield-alert-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-numberfield-line-height`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-textfield-spacing-block-start": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-spacing-block-end": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-icon-spacing-block-invalid": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-height": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-background-color": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-default": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-background-color-disabled": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-family": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-weight": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-style": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-font-size": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-text-color-focus": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-numberfield-border-color": {
+      "value": "var(--mod-numberfield-border-color, var(--spectrum-gray-300))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.is-invalid`, `.spectrum-NumberField.is-disabled`, `.spectrum-NumberField.is-hover:not(.is-disabled)`, `.spectrum-NumberField.is-focused:not(.is-disabled), .spectrum-NumberField:not(.is-disabled):focus, .spectrum-NumberField:not(.is-disabled):focus-within`, `.spectrum-NumberField.is-focused.is-hover:not(.is-disabled), .spectrum-NumberField.is-hover:not(.is-disabled):focus, .spectrum-NumberField.is-hover:not(.is-disabled):focus-within`, `.spectrum-NumberField.is-keyboardFocused:not(.is-disabled), .spectrum-NumberField:not(.is-disabled):focus-visible, .spectrum-NumberField:not(.is-disabled):focus-within`, `.spectrum-NumberField.is-hover:not(.is-disabled):focus-visible, .spectrum-NumberField.is-hover:not(.is-disabled):focus-within, .spectrum-NumberField.is-keyboardFocused.is-hover:not(.is-disabled)`, `.spectrum-NumberField:not(.is-disabled):hover`, `.spectrum-NumberField.is-focused:not(.is-disabled):hover, \t.spectrum-NumberField.is-keyboardFocused:not(.is-disabled):hover, \t.spectrum-NumberField:not(.is-disabled):focus-visible:hover, \t.spectrum-NumberField:not(.is-disabled):focus-within:hover, \t.spectrum-NumberField:not(.is-disabled):focus:hover`. <br/>Used by `--spectrum-numberfield-border-color-default`, `--highcontrast-textfield-border-color`. <br/>Defaults to `var(--mod-numberfield-border-color, var(--spectrum-gray-300))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-numberfield-border-color-hover": {
+      "value": "var(--mod-numberfield-border-color-hover, var(--spectrum-numberfield-border-color-hover))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.is-invalid`. <br/>Used by `--spectrum-numberfield-border-color-hover`, `--mod-numberfield-border-color`, `--highcontrast-numberfield-border-color`. <br/>Defaults to `var(--mod-numberfield-border-color-hover, var(--spectrum-numberfield-border-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-numberfield-border-color-focus": {
+      "value": "var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-numberfield-border-color-keyboard-focus))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.is-invalid`. <br/>Used by `--spectrum-numberfield-border-color-focus`, `--mod-numberfield-border-color`, `--highcontrast-numberfield-border-color`. <br/>Defaults to `var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-numberfield-border-color-keyboard-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-numberfield-border-color-keyboard-focus": {
+      "value": "var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-gray-800))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.is-invalid`. <br/>Used by `--spectrum-numberfield-border-color-keyboard-focus`, `--highcontrast-numberfield-border-color`. <br/>Defaults to `var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-gray-800))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-numberfield-border-color-focus-hover": {
+      "value": "var(--mod-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover))",
+      "description": "Defined in `.spectrum-NumberField`, `.spectrum-NumberField.is-invalid`. <br/>Used by `--spectrum-numberfield-border-color-focus-hover`, `--mod-numberfield-border-color`, `--highcontrast-numberfield-border-color`. <br/>Defaults to `var(--mod-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-numberfield-background-color": {
+      "value": "var(--mod-numberfield-background-color, var(--spectrum-gray-25))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--spectrum-numberfield-background-color`. <br/>Defaults to `var(--mod-numberfield-background-color, var(--spectrum-gray-25))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-numberfield-focus-indicator-color": {
+      "value": "var(--mod-numberfield-focus-indicator-color, var(--spectrum-focus-indicator-color))",
+      "description": "Defined in `.spectrum-NumberField`. <br/>Used by `--spectrum-numberfield-focus-indicator-color`. <br/>Defaults to `var(--mod-numberfield-focus-indicator-color, var(--spectrum-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-textfield-border-color": {
+      "value": "var(--highcontrast-numberfield-border-color)",
+      "description": "Defined in `.spectrum-NumberField-textfield`. <br/>Defaults to `var(--highcontrast-numberfield-border-color)`, if not set.",
+      "control": "color"
+    }
+  }
 }

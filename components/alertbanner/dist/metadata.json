@@ -8,90 +8,397 @@
     ".spectrum-AlertBanner-content",
     ".spectrum-AlertBanner-icon",
     ".spectrum-AlertBanner-text",
-    ".spectrum-AlertBanner.is-open",
     ".spectrum-AlertBanner:has(.spectrum-CloseButton) .spectrum-AlertBanner-body",
     ".spectrum-AlertBanner:lang(ja)",
     ".spectrum-AlertBanner:lang(ko)",
-    ".spectrum-AlertBanner:lang(zh)"
+    ".spectrum-AlertBanner:lang(zh)",
+    ".spectrum-AlertBanner.is-open"
   ],
-  "modifiers": [
-    "--mod-alert-banner-background",
-    "--mod-alert-banner-block-edge-to-button",
-    "--mod-alert-banner-bottom-to-text",
-    "--mod-alert-banner-close-button-to-content",
-    "--mod-alert-banner-close-button-to-inline-end",
-    "--mod-alert-banner-font-color",
-    "--mod-alert-banner-font-family",
-    "--mod-alert-banner-font-size",
-    "--mod-alert-banner-icon-size",
-    "--mod-alert-banner-icon-to-text",
-    "--mod-alert-banner-informative-background",
-    "--mod-alert-banner-inline-end-to-content",
-    "--mod-alert-banner-inline-size",
-    "--mod-alert-banner-inline-start-to-content",
-    "--mod-alert-banner-line-height",
-    "--mod-alert-banner-max-inline-size",
-    "--mod-alert-banner-min-height",
-    "--mod-alert-banner-negative-background",
-    "--mod-alert-banner-neutral-background",
-    "--mod-alert-banner-text-margin-block-end",
-    "--mod-alert-banner-text-margin-block-start",
-    "--mod-alert-banner-text-to-button-horizontal",
-    "--mod-alert-banner-text-to-button-vertical",
-    "--mod-alert-banner-top-to-close-button",
-    "--mod-alert-banner-top-to-icon",
-    "--mod-alert-banner-top-to-text"
-  ],
-  "component": [
-    "--spectrum-alert-banner-background",
-    "--spectrum-alert-banner-block-edge-to-button",
-    "--spectrum-alert-banner-bottom-to-text",
-    "--spectrum-alert-banner-close-button-spacing",
-    "--spectrum-alert-banner-close-button-to-content",
-    "--spectrum-alert-banner-close-button-to-inline-end",
-    "--spectrum-alert-banner-font-color",
-    "--spectrum-alert-banner-font-family",
-    "--spectrum-alert-banner-font-size",
-    "--spectrum-alert-banner-icon-size",
-    "--spectrum-alert-banner-icon-to-text",
-    "--spectrum-alert-banner-inline-end-to-content",
-    "--spectrum-alert-banner-inline-size",
-    "--spectrum-alert-banner-inline-start-to-content",
-    "--spectrum-alert-banner-line-height",
-    "--spectrum-alert-banner-max-inline-size",
-    "--spectrum-alert-banner-min-height",
-    "--spectrum-alert-banner-minimum-height",
-    "--spectrum-alert-banner-text-margin-block-end",
-    "--spectrum-alert-banner-text-margin-block-start",
-    "--spectrum-alert-banner-text-to-button-horizontal",
-    "--spectrum-alert-banner-text-to-button-vertical",
-    "--spectrum-alert-banner-top-to-text",
-    "--spectrum-alert-banner-top-to-workflow-icon",
-    "--spectrum-alert-banner-width"
-  ],
-  "global": [
-    "--spectrum-border-width-100",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-font-size-100",
-    "--spectrum-informative-background-color-default",
-    "--spectrum-line-height-100",
-    "--spectrum-negative-background-color-default",
-    "--spectrum-neutral-subdued-background-color-default",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-200",
-    "--spectrum-spacing-300",
-    "--spectrum-text-to-visual-300",
-    "--spectrum-white",
-    "--spectrum-workflow-icon-size-100"
-  ],
-  "passthroughs": [
-    "--mod-closebutton-align-self",
-    "--mod-closebutton-margin-inline",
-    "--mod-closebutton-margin-top",
-    "--mod-icon-size"
-  ],
-  "high-contrast": [
-    "--highcontrast-alert-banner-border-color",
-    "--highcontrast-alert-banner-border-width"
-  ]
+  "modifiers": {
+    "mod-alert-banner-top-to-text": {
+      "description": "Used by `--spectrum-alert-banner-text-margin-block-start`. <br/>Defaults to `var(--spectrum-alert-banner-top-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-block-edge-to-button": {
+      "description": "Used by `--spectrum-alert-banner-text-margin-block-start`, `--spectrum-alert-banner-text-margin-block-end`, `.spectrum-AlertBanner-body`, `.spectrum-AlertBanner-icon`. <br/>Defaults to `var(--spectrum-alert-banner-block-edge-to-button)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-bottom-to-text": {
+      "description": "Used by `--spectrum-alert-banner-text-margin-block-end`. <br/>Defaults to `var(--spectrum-alert-banner-bottom-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-neutral-background": {
+      "description": "Used by `--spectrum-alert-banner-background`. <br/>Defaults to `var(--spectrum-neutral-subdued-background-color-default)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-close-button-to-content": {
+      "description": "Used by `--mod-closebutton-margin-inline`. <br/>Defaults to `var(--spectrum-alert-banner-close-button-to-content)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-close-button-to-inline-end": {
+      "description": "Used by `--mod-closebutton-margin-inline`. <br/>Defaults to `var(--spectrum-alert-banner-close-button-to-inline-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-top-to-close-button": {
+      "description": "Used by `--mod-closebutton-margin-top`. <br/>Defaults to `var(--spectrum-alert-banner-block-edge-to-button)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-informative-background": {
+      "description": "Used by `--spectrum-alert-banner-background`. <br/>Defaults to `var(--spectrum-informative-background-color-default)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-negative-background": {
+      "description": "Used by `--spectrum-alert-banner-background`. <br/>Defaults to `var(--spectrum-negative-background-color-default)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-inline-size": {
+      "description": "Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-max-inline-size": {
+      "description": "Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-max-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-min-height": {
+      "description": "Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-min-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-font-size": {
+      "description": "Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-font-family": {
+      "description": "Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-line-height": {
+      "description": "Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-font-color": {
+      "description": "Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-font-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-background": {
+      "description": "Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-background)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-text-to-button-horizontal": {
+      "description": "Used by `.spectrum-AlertBanner-body`. <br/>Defaults to `var(--spectrum-alert-banner-text-to-button-horizontal)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-text-to-button-vertical": {
+      "description": "Used by `.spectrum-AlertBanner-body`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-inline-start-to-content": {
+      "description": "Used by `.spectrum-AlertBanner-body`. <br/>Defaults to `var(--spectrum-alert-banner-inline-start-to-content)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-inline-end-to-content": {
+      "description": "Used by `.spectrum-AlertBanner-body`. <br/>Defaults to `var(--spectrum-alert-banner-inline-end-to-content)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-icon-size": {
+      "description": "Used by `--mod-icon-size`. <br/>Defaults to `var(--spectrum-alert-banner-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-top-to-icon": {
+      "description": "Used by `.spectrum-AlertBanner-icon`. <br/>Defaults to `var(--spectrum-alert-banner-top-to-workflow-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-icon-to-text": {
+      "description": "Used by `.spectrum-AlertBanner-icon`. <br/>Defaults to `var(--spectrum-alert-banner-icon-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-text-margin-block-start": {
+      "description": "Used by `.spectrum-AlertBanner-text`. <br/>Defaults to `var(--spectrum-alert-banner-text-margin-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-banner-text-margin-block-end": {
+      "description": "Used by `.spectrum-AlertBanner-text`. <br/>Defaults to `var(--spectrum-alert-banner-text-margin-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-alert-banner-min-height": {
+      "value": "56px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-minimum-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-minimum-height": {
+      "value": "56px",
+      "description": "Used by `--spectrum-alert-banner-min-height`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-max-inline-size": {
+      "value": "832px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-alert-banner-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-width": {
+      "value": "832px",
+      "description": "Used by `--spectrum-alert-banner-max-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-inline-size": {
+      "value": "auto",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `auto`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-font-size": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-AlertBanner`, `.spectrum-AlertBanner:lang(ja), .spectrum-AlertBanner:lang(ko), .spectrum-AlertBanner:lang(zh)`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-icon-size": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `--mod-icon-size`. <br/>Defaults to `var(--spectrum-workflow-icon-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-icon-to-text": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner-icon`. <br/>Defaults to `var(--spectrum-text-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-inline-start-to-content": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner-body`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-inline-end-to-content": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner-body`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-text-to-button-horizontal": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner-body`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-block-edge-to-button": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `--spectrum-alert-banner-text-margin-block-start`, `--spectrum-alert-banner-text-margin-block-end`, `--mod-closebutton-margin-top`, `.spectrum-AlertBanner-body`, `.spectrum-AlertBanner-icon`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-close-button-to-content": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `--mod-closebutton-margin-inline`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-close-button-to-inline-end": {
+      "value": "var(--spectrum-alert-banner-close-button-spacing)",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `--mod-closebutton-margin-inline`. <br/>Defaults to `var(--spectrum-alert-banner-close-button-spacing)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-close-button-spacing": {
+      "description": "Used by `--spectrum-alert-banner-close-button-to-inline-end`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-text-margin-block-start": {
+      "value": "max(0px, var(--mod-alert-banner-top-to-text, var(--spectrum-alert-banner-top-to-text)) - var(--mod-alert-banner-block-edge-to-button, var(--spectrum-alert-banner-block-edge-to-button)))",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner-text`. <br/>Defaults to `max(0px, var(--mod-alert-banner-top-to-text, var(--spectrum-alert-banner-top-to-text)) - var(--mod-alert-banner-block-edge-to-button, var(--spectrum-alert-banner-block-edge-to-button)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-top-to-text": {
+      "value": "18px",
+      "description": "Used by `--spectrum-alert-banner-text-margin-block-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-text-margin-block-end": {
+      "value": "max(0px, var(--mod-alert-banner-bottom-to-text, var(--spectrum-alert-banner-bottom-to-text)) - var(--mod-alert-banner-block-edge-to-button, var(--spectrum-alert-banner-block-edge-to-button)))",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner-body`, `.spectrum-AlertBanner-text`. <br/>Defaults to `max(0px, var(--mod-alert-banner-bottom-to-text, var(--spectrum-alert-banner-bottom-to-text)) - var(--mod-alert-banner-block-edge-to-button, var(--spectrum-alert-banner-block-edge-to-button)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-bottom-to-text": {
+      "value": "20px",
+      "description": "Used by `--spectrum-alert-banner-text-margin-block-end`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-background": {
+      "value": "var(--mod-alert-banner-negative-background, var(--spectrum-negative-background-color-default))",
+      "description": "Defined in `.spectrum-AlertBanner`, `.spectrum-AlertBanner--info`, `.spectrum-AlertBanner--negative`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--mod-alert-banner-negative-background, var(--spectrum-negative-background-color-default))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-font-color": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-text-to-button-vertical": {
+      "description": "Used by `.spectrum-AlertBanner-body`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-banner-top-to-workflow-icon": {
+      "value": "18px",
+      "description": "Used by `.spectrum-AlertBanner-icon`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-alert-banner-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-alert-banner-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-alert-banner-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-alert-banner-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-300": {
+      "value": "8px",
+      "description": "Used by `--spectrum-alert-banner-icon-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-alert-banner-inline-start-to-content`, `--spectrum-alert-banner-inline-end-to-content`, `--spectrum-alert-banner-text-to-button-horizontal`, `--spectrum-alert-banner-close-button-to-content`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-alert-banner-block-edge-to-button`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-background-color-default": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Used by `--spectrum-alert-banner-background`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-alert-banner-font-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-alert-banner-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-informative-background-color-default": {
+      "value": "var(--spectrum-informative-color-900)",
+      "description": "Used by `--spectrum-alert-banner-background`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-background-color-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Used by `--spectrum-alert-banner-background`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "value": "1px",
+      "description": "Used by `--highcontrast-alert-banner-border-width`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-closebutton-margin-inline": {
+      "category": "Passthrough"
+    },
+    "mod-closebutton-margin-top": {
+      "category": "Passthrough"
+    },
+    "mod-closebutton-align-self": {
+      "category": "Passthrough"
+    },
+    "mod-icon-size": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-alert-banner-border-width": {
+      "value": "var(--spectrum-border-width-100)",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-alert-banner-border-color": {
+      "value": "CanvasText",
+      "description": "Defined in `.spectrum-AlertBanner`. <br/>Used by `.spectrum-AlertBanner`. <br/>Defaults to `CanvasText`, if not set.",
+      "control": "color"
+    }
+  }
 }

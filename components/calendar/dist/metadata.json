@@ -5,38 +5,6 @@
     ".spectrum-Calendar--padded",
     ".spectrum-Calendar-body",
     ".spectrum-Calendar-date",
-    ".spectrum-Calendar-date.is-disabled",
-    ".spectrum-Calendar-date.is-disabled.is-selected",
-    ".spectrum-Calendar-date.is-focused",
-    ".spectrum-Calendar-date.is-focused.is-range-selection",
-    ".spectrum-Calendar-date.is-focused.is-selected",
-    ".spectrum-Calendar-date.is-focused.is-selected:not(.is-range-selection)",
-    ".spectrum-Calendar-date.is-focused:not(.is-range-selection)",
-    ".spectrum-Calendar-date.is-focused:not(.is-range-selection):active",
-    ".spectrum-Calendar-date.is-outsideMonth",
-    ".spectrum-Calendar-date.is-range-selection",
-    ".spectrum-Calendar-date.is-range-selection.is-range-end",
-    ".spectrum-Calendar-date.is-range-selection.is-range-end:after",
-    ".spectrum-Calendar-date.is-range-selection.is-range-end:before",
-    ".spectrum-Calendar-date.is-range-selection.is-range-start",
-    ".spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end",
-    ".spectrum-Calendar-date.is-range-selection.is-range-start:after",
-    ".spectrum-Calendar-date.is-range-selection.is-range-start:before",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-end",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-end.is-range-start",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-end:after",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-end:before",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-start",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-start.is-range-end",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-start.is-selection-end",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-start:after",
-    ".spectrum-Calendar-date.is-range-selection.is-selection-start:before",
-    ".spectrum-Calendar-date.is-range-selection:hover",
-    ".spectrum-Calendar-date.is-selected",
-    ".spectrum-Calendar-date.is-selected:hover:not(.is-selection-end, .is-selection-start)",
-    ".spectrum-Calendar-date.is-selected:not(.is-range-selection)",
-    ".spectrum-Calendar-date.is-today",
-    ".spectrum-Calendar-date.is-today.is-selected:not(.is-range-selection)",
     ".spectrum-Calendar-date:active",
     ".spectrum-Calendar-date:after",
     ".spectrum-Calendar-date:before",
@@ -45,6 +13,38 @@
     ".spectrum-Calendar-date:lang(ja)",
     ".spectrum-Calendar-date:lang(ko)",
     ".spectrum-Calendar-date:lang(zh)",
+    ".spectrum-Calendar-date.is-disabled",
+    ".spectrum-Calendar-date.is-disabled.is-selected",
+    ".spectrum-Calendar-date.is-focused",
+    ".spectrum-Calendar-date.is-focused:not(.is-range-selection)",
+    ".spectrum-Calendar-date.is-focused:not(.is-range-selection):active",
+    ".spectrum-Calendar-date.is-focused.is-range-selection",
+    ".spectrum-Calendar-date.is-focused.is-selected",
+    ".spectrum-Calendar-date.is-focused.is-selected:not(.is-range-selection)",
+    ".spectrum-Calendar-date.is-outsideMonth",
+    ".spectrum-Calendar-date.is-range-selection",
+    ".spectrum-Calendar-date.is-range-selection:hover",
+    ".spectrum-Calendar-date.is-range-selection.is-range-end",
+    ".spectrum-Calendar-date.is-range-selection.is-range-end:after",
+    ".spectrum-Calendar-date.is-range-selection.is-range-end:before",
+    ".spectrum-Calendar-date.is-range-selection.is-range-start",
+    ".spectrum-Calendar-date.is-range-selection.is-range-start:after",
+    ".spectrum-Calendar-date.is-range-selection.is-range-start:before",
+    ".spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-end",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-end:after",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-end:before",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-end.is-range-start",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-start",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-start:after",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-start:before",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-start.is-range-end",
+    ".spectrum-Calendar-date.is-range-selection.is-selection-start.is-selection-end",
+    ".spectrum-Calendar-date.is-selected",
+    ".spectrum-Calendar-date.is-selected:hover:not(.is-selection-end, .is-selection-start)",
+    ".spectrum-Calendar-date.is-selected:not(.is-range-selection)",
+    ".spectrum-Calendar-date.is-today",
+    ".spectrum-Calendar-date.is-today.is-selected:not(.is-range-selection)",
     ".spectrum-Calendar-dayOfWeek",
     ".spectrum-Calendar-dayOfWeek[title]",
     ".spectrum-Calendar-header",
@@ -56,145 +56,721 @@
     ".spectrum-Calendar-title",
     ".spectrum-Calendar:dir(rtl)"
   ],
-  "modifiers": [
-    "--mod-calendar-border-radius-reset",
-    "--mod-calendar-border-width-reset",
-    "--mod-calendar-button-icon-color",
-    "--mod-calendar-day-background-color",
-    "--mod-calendar-day-background-color-cap-selected",
-    "--mod-calendar-day-background-color-down",
-    "--mod-calendar-day-background-color-focus",
-    "--mod-calendar-day-background-color-hover",
-    "--mod-calendar-day-background-color-key-focus",
-    "--mod-calendar-day-background-color-selected",
-    "--mod-calendar-day-background-color-selected-hover",
-    "--mod-calendar-day-background-layer-color",
-    "--mod-calendar-day-border-color",
-    "--mod-calendar-day-border-color-key-focus",
-    "--mod-calendar-day-border-size",
-    "--mod-calendar-day-fill-content",
-    "--mod-calendar-day-fill-display",
-    "--mod-calendar-day-height",
-    "--mod-calendar-day-padding",
-    "--mod-calendar-day-text-color",
-    "--mod-calendar-day-text-color-cap-selected",
-    "--mod-calendar-day-text-color-disabled",
-    "--mod-calendar-day-text-color-hover",
-    "--mod-calendar-day-text-color-key-focus",
-    "--mod-calendar-day-text-color-selected",
-    "--mod-calendar-day-text-font-weight",
-    "--mod-calendar-day-text-font-weight-cap-selected",
-    "--mod-calendar-day-text-font-weight-selected",
-    "--mod-calendar-day-text-size",
-    "--mod-calendar-day-text-size-han",
-    "--mod-calendar-day-title-text-color",
-    "--mod-calendar-day-title-text-font-weight",
-    "--mod-calendar-day-title-text-size",
-    "--mod-calendar-day-today-background-color-selected-hover",
-    "--mod-calendar-day-today-border-color",
-    "--mod-calendar-day-today-border-color-disabled",
-    "--mod-calendar-day-today-text-color",
-    "--mod-calendar-day-today-text-font-weight",
-    "--mod-calendar-day-visibility",
-    "--mod-calendar-day-width",
-    "--mod-calendar-margin-x",
-    "--mod-calendar-margin-y",
-    "--mod-calendar-title-height",
-    "--mod-calendar-title-text-letter-spacing",
-    "--mod-calendar-title-text-size",
-    "--mod-calendar-width"
-  ],
-  "component": [
-    "--spectrum-calendar-border-radius-reset",
-    "--spectrum-calendar-border-width-reset",
-    "--spectrum-calendar-button-icon-color",
-    "--spectrum-calendar-day-background",
-    "--spectrum-calendar-day-background-cap-selected",
-    "--spectrum-calendar-day-background-color-cap-selected",
-    "--spectrum-calendar-day-background-color-down",
-    "--spectrum-calendar-day-background-color-hover",
-    "--spectrum-calendar-day-background-color-key-focus",
-    "--spectrum-calendar-day-background-color-selected",
-    "--spectrum-calendar-day-background-color-selected-disabled",
-    "--spectrum-calendar-day-background-color-selected-hover",
-    "--spectrum-calendar-day-background-down",
-    "--spectrum-calendar-day-background-focus",
-    "--spectrum-calendar-day-background-hover",
-    "--spectrum-calendar-day-background-layer-color",
-    "--spectrum-calendar-day-background-selected",
-    "--spectrum-calendar-day-background-selected-hover",
-    "--spectrum-calendar-day-border-color",
-    "--spectrum-calendar-day-border-color-focus",
-    "--spectrum-calendar-day-border-color-key-focus",
-    "--spectrum-calendar-day-border-size",
-    "--spectrum-calendar-day-height",
-    "--spectrum-calendar-day-padding",
-    "--spectrum-calendar-day-text-color",
-    "--spectrum-calendar-day-text-color-cap-selected",
-    "--spectrum-calendar-day-text-color-disabled",
-    "--spectrum-calendar-day-text-color-hover",
-    "--spectrum-calendar-day-text-color-key-focus",
-    "--spectrum-calendar-day-text-color-selected",
-    "--spectrum-calendar-day-text-font-weight",
-    "--spectrum-calendar-day-text-font-weight-cap-selected",
-    "--spectrum-calendar-day-text-font-weight-selected",
-    "--spectrum-calendar-day-text-size",
-    "--spectrum-calendar-day-today-background-color-selected-hover",
-    "--spectrum-calendar-day-today-background-selected-hover",
-    "--spectrum-calendar-day-today-border-color",
-    "--spectrum-calendar-day-today-border-color-disabled",
-    "--spectrum-calendar-day-today-text-color",
-    "--spectrum-calendar-day-today-text-font-weight",
-    "--spectrum-calendar-day-width",
-    "--spectrum-calendar-heading-text-size",
-    "--spectrum-calendar-margin-x",
-    "--spectrum-calendar-margin-y",
-    "--spectrum-calendar-title-height",
-    "--spectrum-calendar-title-text-color",
-    "--spectrum-calendar-title-text-font-weight",
-    "--spectrum-calendar-title-text-letter-spacing",
-    "--spectrum-calendar-title-text-size",
-    "--spectrum-calendar-width"
-  ],
-  "global": [
-    "--spectrum-bold-font-weight",
-    "--spectrum-border-width-200",
-    "--spectrum-component-height-100",
-    "--spectrum-disabled-border-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-50",
-    "--spectrum-gray-100-rgb",
-    "--spectrum-gray-800",
-    "--spectrum-logical-rotation",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-neutral-subdued-content-color-default",
-    "--spectrum-regular-font-weight"
-  ],
-  "passthroughs": [
-    "--mod-actionbutton-content-color-default",
-    "--mod-actionbutton-edge-to-text",
-    "--mod-actionbutton-min-width"
-  ],
-  "high-contrast": [
-    "--highcontrast-calendar-day-background-cap-selected",
-    "--highcontrast-calendar-day-background-down",
-    "--highcontrast-calendar-day-background-focus",
-    "--highcontrast-calendar-day-background-hover",
-    "--highcontrast-calendar-day-background-selected",
-    "--highcontrast-calendar-day-background-selected-hover",
-    "--highcontrast-calendar-day-border-color-focus",
-    "--highcontrast-calendar-day-text-color-cap-selected",
-    "--highcontrast-calendar-day-text-color-hover",
-    "--highcontrast-calendar-day-text-color-key-focus",
-    "--highcontrast-calendar-day-text-color-selected",
-    "--highcontrast-calendar-day-title-text-color",
-    "--highcontrast-calendar-day-today-background-selected-hover",
-    "--highcontrast-calendar-day-today-border-color",
-    "--highcontrast-calendar-day-today-text-color"
-  ]
+  "modifiers": {
+    "mod-calendar-day-width": {
+      "description": "Used by `--spectrum-calendar-day-width`. <br/>Defaults to `var(--spectrum-component-height-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-height": {
+      "description": "Used by `--spectrum-calendar-day-height`. <br/>Defaults to `var(--spectrum-component-height-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-border-size": {
+      "description": "Used by `--spectrum-calendar-day-border-size`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-padding": {
+      "description": "Used by `--spectrum-calendar-day-padding`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-border-radius-reset": {
+      "description": "Used by `--spectrum-calendar-border-radius-reset`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-border-width-reset": {
+      "description": "Used by `--spectrum-calendar-border-width-reset`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-margin-y": {
+      "description": "Used by `--spectrum-calendar-margin-y`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-margin-x": {
+      "description": "Used by `--spectrum-calendar-margin-x`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-width": {
+      "description": "Used by `--spectrum-calendar-width`. <br/>Defaults to `calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-title-text-letter-spacing": {
+      "description": "Used by `--spectrum-calendar-title-text-letter-spacing`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-title-height": {
+      "description": "Used by `--spectrum-calendar-title-height`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-title-text-size": {
+      "description": "Used by `--spectrum-calendar-title-text-size`. <br/>Defaults to `var(--spectrum-font-size-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-title-text-font-weight": {
+      "description": "Used by `--spectrum-calendar-title-text-font-weight`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-title-text-color": {
+      "description": "Used by `--spectrum-calendar-title-text-color`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-title-text-size": {
+      "description": "Used by `--spectrum-calendar-heading-text-size`. <br/>Defaults to `var(--spectrum-font-size-50)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-button-icon-color": {
+      "description": "Used by `--spectrum-calendar-button-icon-color`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-color": {
+      "description": "Defined in `.spectrum-Calendar-date:hover:not(.is-selection-end, .is-selection-start)`, `.spectrum-Calendar-date.is-range-selection:hover, .spectrum-Calendar-date.is-selected:hover:not(.is-selection-end, .is-selection-start)`, `.spectrum-Calendar-date.is-focused.is-range-selection, .spectrum-Calendar-date.is-focused.is-selected`, `.spectrum-Calendar-date.is-focused:not(.is-range-selection)`, `.spectrum-Calendar-date.is-selected:not(.is-range-selection)`, `.spectrum-Calendar-date.is-selected`. <br/>Used by `--spectrum-calendar-day-background`. <br/>Defaults to `var(--spectrum-calendar-day-background-cap-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-color-selected": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-background-selected`. <br/>Defaults to `var(--spectrum-calendar-day-background-color-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-color-selected-hover": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-background-selected-hover`. <br/>Defaults to `var(--spectrum-calendar-day-background-color-selected-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-color-cap-selected": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-background-cap-selected`. <br/>Defaults to `var(--spectrum-calendar-day-background-color-cap-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-color-hover": {
+      "description": "Defined in `.spectrum-Calendar-date.is-today.is-selected:not(.is-range-selection)`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-background-hover`. <br/>Defaults to `var(--spectrum-calendar-day-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-color-key-focus": {
+      "description": "Defined in `.spectrum-Calendar-date.is-focused.is-selected:not(.is-range-selection), .spectrum-Calendar-date.is-focused:not(.is-range-selection):active`. <br/>Used by `--spectrum-calendar-day-background-focus`. <br/>Defaults to `var(--spectrum-calendar-day-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-color-down": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-background-down`. <br/>Defaults to `var(--spectrum-calendar-day-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-layer-color": {
+      "description": "Defined in `.spectrum-Calendar-date:active`, `.spectrum-Calendar-date.is-selected:not(.is-range-selection)`, `.spectrum-Calendar-date.is-selected`, `.spectrum-Calendar-date.is-disabled.is-selected`. <br/>Used by `--spectrum-calendar-day-background-layer-color`. <br/>Defaults to `var(--spectrum-calendar-day-background-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-border-color": {
+      "description": "Defined in `.spectrum-Calendar-date.is-focused`, `.spectrum-Calendar-date.is-focused:not(.is-range-selection)`, `.spectrum-Calendar-date.is-today`. <br/>Used by `--spectrum-calendar-day-border-color`, `.spectrum-Calendar-date:before`. <br/>Defaults to `var(--spectrum-calendar-day-today-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-border-color-key-focus": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-border-color-focus`. <br/>Defaults to `var(--spectrum-calendar-day-border-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-size": {
+      "description": "Used by `--spectrum-calendar-day-text-size`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-font-weight": {
+      "description": "Defined in `.spectrum-Calendar-date.is-range-selection.is-selection-end, .spectrum-Calendar-date.is-range-selection.is-selection-start`, `.spectrum-Calendar-date.is-selected:not(.is-range-selection)`, `.spectrum-Calendar-date.is-today`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-font-weight`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-font-weight-selected": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-font-weight-selected`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-font-weight-cap-selected": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-font-weight-cap-selected`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-today-background-color-selected-hover": {
+      "description": "Used by `--spectrum-calendar-day-today-background-selected-hover`. <br/>Defaults to `var(--spectrum-calendar-day-today-background-color-selected-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-today-text-font-weight": {
+      "description": "Used by `--spectrum-calendar-day-today-text-font-weight`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-today-text-color": {
+      "description": "Used by `--spectrum-calendar-day-today-text-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-today-border-color": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-today-border-color`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-color": {
+      "description": "Defined in `.spectrum-Calendar-date:hover`, `.spectrum-Calendar-date.is-range-selection.is-selection-end, .spectrum-Calendar-date.is-range-selection.is-selection-start`, `.spectrum-Calendar-date.is-focused:not(.is-range-selection)`, `.spectrum-Calendar-date.is-selected:not(.is-range-selection)`, `.spectrum-Calendar-date.is-selected`, `.spectrum-Calendar-date.is-today`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-color`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-color-selected": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-color-selected`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-color-cap-selected": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-color-cap-selected`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-color-hover": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-color-hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-color-key-focus": {
+      "description": "Defined in `.spectrum-Calendar-date.is-focused.is-selected:not(.is-range-selection), .spectrum-Calendar-date.is-focused:not(.is-range-selection):active`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-color-key-focus`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-color-disabled": {
+      "description": "Used by `--spectrum-calendar-day-text-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-today-border-color-disabled": {
+      "description": "Used by `--spectrum-calendar-day-today-border-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-text-size-han": {
+      "description": "Used by `--spectrum-calendar-day-text-size`. <br/>Defaults to `var(--spectrum-font-size-50)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-fill-content": {
+      "description": "Defined in `.spectrum-Calendar-date.is-range-selection.is-selection-end, .spectrum-Calendar-date.is-range-selection.is-selection-start`. <br/>Used by `.spectrum-Calendar-date:after`. <br/>Defaults to `none`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-visibility": {
+      "description": "Defined in `.spectrum-Calendar-date.is-outsideMonth`. <br/>Used by `.spectrum-Calendar-date`. <br/>Defaults to `none`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-fill-display": {
+      "description": "Defined in `.spectrum-Calendar-date.is-range-selection.is-selection-end, .spectrum-Calendar-date.is-range-selection.is-selection-start`. <br/>Used by `.spectrum-Calendar-date:after`. <br/>Defaults to `block`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-calendar-day-background-color-focus": {
+      "description": "Defined in `.spectrum-Calendar-date.is-disabled`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-calendar-day-background-color-selected-disabled": {
+      "value": "rgb(var(--spectrum-gray-100-rgb), 0.4)",
+      "description": "Defined in `.spectrum-Calendar`, `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-background-color-selected`. <br/>Defaults to `rgb(var(--spectrum-gray-100-rgb), 0.4)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-width": {
+      "value": "var(--mod-calendar-day-width, var(--spectrum-component-height-100))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `--spectrum-calendar-width`, `--mod-actionbutton-min-width`, `.spectrum-Calendar-dayOfWeek`, `.spectrum-Calendar-tableCell`, `.spectrum-Calendar-date`, `.spectrum-Calendar-date, .spectrum-Calendar-date:before`, `.spectrum-Calendar-date:before`, `.spectrum-Calendar-date:after`, `.spectrum-Calendar-date.is-range-selection`, `.spectrum-Calendar-date.is-range-selection.is-range-start, .spectrum-Calendar-date.is-range-selection.is-selection-end, .spectrum-Calendar-date.is-range-selection.is-selection-start`, `.spectrum-Calendar-date.is-range-selection.is-range-start, .spectrum-Calendar-date.is-range-selection.is-selection-start`, `.spectrum-Calendar-date.is-range-selection.is-range-end, .spectrum-Calendar-date.is-range-selection.is-selection-end`, `.spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end, .spectrum-Calendar-date.is-range-selection.is-selection-end.is-range-start, .spectrum-Calendar-date.is-range-selection.is-selection-start.is-range-end, .spectrum-Calendar-date.is-range-selection.is-selection-start.is-selection-end`. <br/>Defaults to `var(--mod-calendar-day-width, var(--spectrum-component-height-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-height": {
+      "value": "var(--mod-calendar-day-height, var(--spectrum-component-height-100))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-tableCell`, `.spectrum-Calendar-date, .spectrum-Calendar-date:before`, `.spectrum-Calendar-date:after`, `.spectrum-Calendar-date.is-range-selection`. <br/>Defaults to `var(--mod-calendar-day-height, var(--spectrum-component-height-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-border-size": {
+      "value": "var(--mod-calendar-day-border-size, var(--spectrum-border-width-200))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-date`, `.spectrum-Calendar-date:before`. <br/>Defaults to `var(--mod-calendar-day-border-size, var(--spectrum-border-width-200))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-padding": {
+      "value": "var(--mod-calendar-day-padding, 4px)",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `--spectrum-calendar-width`, `--mod-actionbutton-edge-to-text`, `.spectrum-Calendar-tableCell`, `.spectrum-Calendar-date`, `.spectrum-Calendar-date.is-range-selection`, `.spectrum-Calendar-date.is-range-selection.is-range-start, .spectrum-Calendar-date.is-range-selection.is-selection-end, .spectrum-Calendar-date.is-range-selection.is-selection-start`, `.spectrum-Calendar-date.is-range-selection.is-range-start, .spectrum-Calendar-date.is-range-selection.is-selection-start`, `.spectrum-Calendar-date.is-range-selection.is-range-end, .spectrum-Calendar-date.is-range-selection.is-selection-end`. <br/>Defaults to `var(--mod-calendar-day-padding, 4px)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-border-radius-reset": {
+      "value": "var(--mod-calendar-border-radius-reset, 0)",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-date.is-range-selection`. <br/>Defaults to `var(--mod-calendar-border-radius-reset, 0)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-border-width-reset": {
+      "value": "var(--mod-calendar-border-width-reset, 0)",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-date.is-range-selection`. <br/>Defaults to `var(--mod-calendar-border-width-reset, 0)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-margin-y": {
+      "value": "var(--mod-calendar-margin-y, 24px)",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar--padded`. <br/>Defaults to `var(--mod-calendar-margin-y, 24px)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-margin-x": {
+      "value": "var(--mod-calendar-margin-x, 32px)",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar--padded`. <br/>Defaults to `var(--mod-calendar-margin-x, 32px)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-width": {
+      "value": "var(--mod-calendar-width, calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar`. <br/>Defaults to `var(--mod-calendar-width, calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-title-text-letter-spacing": {
+      "value": "var(--mod-calendar-title-text-letter-spacing, 0.06em)",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-dayOfWeek[title]`. <br/>Defaults to `var(--mod-calendar-title-text-letter-spacing, 0.06em)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-title-height": {
+      "value": "var(--mod-calendar-title-height, 32px)",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-title`. <br/>Defaults to `var(--mod-calendar-title-height, 32px)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-title-text-size": {
+      "value": "var(--mod-calendar-title-text-size, var(--spectrum-font-size-300))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-title`. <br/>Defaults to `var(--mod-calendar-title-text-size, var(--spectrum-font-size-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-title-text-font-weight": {
+      "value": "var(--mod-calendar-day-title-text-font-weight, var(--spectrum-bold-font-weight))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-title`, `.spectrum-Calendar-dayOfWeek`. <br/>Defaults to `var(--mod-calendar-day-title-text-font-weight, var(--spectrum-bold-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-title-text-color": {
+      "value": "var(--highcontrast-calendar-day-title-text-color, var(--mod-calendar-day-title-text-color, var(--spectrum-neutral-subdued-content-color-default)))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-title`, `.spectrum-Calendar-dayOfWeek`. <br/>Defaults to `var(--highcontrast-calendar-day-title-text-color, var(--mod-calendar-day-title-text-color, var(--spectrum-neutral-subdued-content-color-default)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-heading-text-size": {
+      "value": "var(--mod-calendar-day-title-text-size, var(--spectrum-font-size-50))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `.spectrum-Calendar-dayOfWeek`. <br/>Defaults to `var(--mod-calendar-day-title-text-size, var(--spectrum-font-size-50))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-button-icon-color": {
+      "value": "var(--mod-calendar-button-icon-color, var(--spectrum-neutral-subdued-content-color-default))",
+      "description": "Defined in `.spectrum-Calendar`. <br/>Used by `--mod-actionbutton-content-color-default`. <br/>Defaults to `var(--mod-calendar-button-icon-color, var(--spectrum-neutral-subdued-content-color-default))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background": {
+      "value": "var(--mod-calendar-day-background-color, transparent)",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `.spectrum-Calendar-date:before`. <br/>Defaults to `var(--mod-calendar-day-background-color, transparent)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-selected": {
+      "value": "var(--highcontrast-calendar-day-background-selected, var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-background-color`, `--mod-calendar-day-background-layer-color`. <br/>Defaults to `var(--highcontrast-calendar-day-background-selected, var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-color-selected": {
+      "description": "Used by `--spectrum-calendar-day-background-selected`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-selected-hover": {
+      "value": "var(--highcontrast-calendar-day-background-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-background-color`. <br/>Defaults to `var(--highcontrast-calendar-day-background-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-color-selected-hover": {
+      "description": "Used by `--spectrum-calendar-day-background-selected-hover`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-cap-selected": {
+      "value": "var(--highcontrast-calendar-day-background-cap-selected, var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-background-color-key-focus`, `--mod-calendar-day-background-color`. <br/>Defaults to `var(--highcontrast-calendar-day-background-cap-selected, var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-color-cap-selected": {
+      "description": "Used by `--spectrum-calendar-day-background-cap-selected`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-hover": {
+      "value": "var(--highcontrast-calendar-day-background-hover, var(--mod-calendar-day-background-color-hover, var(--spectrum-calendar-day-background-color-hover)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-background-color`. <br/>Defaults to `var(--highcontrast-calendar-day-background-hover, var(--mod-calendar-day-background-color-hover, var(--spectrum-calendar-day-background-color-hover)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-color-hover": {
+      "description": "Used by `--spectrum-calendar-day-background-hover`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-focus": {
+      "value": "var(--highcontrast-calendar-day-background-focus, var(--mod-calendar-day-background-color-key-focus, var(--spectrum-calendar-day-background-color-key-focus)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-background-color`. <br/>Defaults to `var(--highcontrast-calendar-day-background-focus, var(--mod-calendar-day-background-color-key-focus, var(--spectrum-calendar-day-background-color-key-focus)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-color-key-focus": {
+      "description": "Used by `--spectrum-calendar-day-background-focus`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-down": {
+      "value": "var(--highcontrast-calendar-day-background-down, var(--mod-calendar-day-background-color-down, var(--spectrum-calendar-day-background-color-down)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-background-layer-color`. <br/>Defaults to `var(--highcontrast-calendar-day-background-down, var(--mod-calendar-day-background-color-down, var(--spectrum-calendar-day-background-color-down)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-color-down": {
+      "description": "Used by `--spectrum-calendar-day-background-down`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-background-layer-color": {
+      "value": "var(--mod-calendar-day-background-layer-color, transparent)",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `.spectrum-Calendar-date`. <br/>Defaults to `var(--mod-calendar-day-background-layer-color, transparent)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-border-color": {
+      "value": "var(--mod-calendar-day-border-color, transparent)",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `.spectrum-Calendar-date`. <br/>Defaults to `var(--mod-calendar-day-border-color, transparent)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-border-color-focus": {
+      "value": "var(--highcontrast-calendar-day-border-color-focus, var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-border-color`. <br/>Defaults to `var(--highcontrast-calendar-day-border-color-focus, var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-border-color-key-focus": {
+      "description": "Used by `--spectrum-calendar-day-border-color-focus`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-size": {
+      "value": "var(--mod-calendar-day-text-size-han, var(--spectrum-font-size-50))",
+      "description": "Defined in `.spectrum-Calendar-date`, `.spectrum-Calendar-date:lang(ja), .spectrum-Calendar-date:lang(ko), .spectrum-Calendar-date:lang(zh)`. <br/>Used by `.spectrum-Calendar-date`. <br/>Defaults to `var(--mod-calendar-day-text-size-han, var(--spectrum-font-size-50))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-font-weight": {
+      "value": "var(--mod-calendar-day-text-font-weight, var(--spectrum-regular-font-weight))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `.spectrum-Calendar-date`. <br/>Defaults to `var(--mod-calendar-day-text-font-weight, var(--spectrum-regular-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-font-weight-selected": {
+      "value": "var(--mod-calendar-day-text-font-weight-selected, var(--spectrum-bold-font-weight))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-font-weight`. <br/>Defaults to `var(--mod-calendar-day-text-font-weight-selected, var(--spectrum-bold-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-font-weight-cap-selected": {
+      "value": "var(--mod-calendar-day-text-font-weight-cap-selected, var(--spectrum-bold-font-weight))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-font-weight`. <br/>Defaults to `var(--mod-calendar-day-text-font-weight-cap-selected, var(--spectrum-bold-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-today-background-selected-hover": {
+      "value": "var(--highcontrast-calendar-day-today-background-selected-hover, var(--mod-calendar-day-today-background-color-selected-hover, var(--spectrum-calendar-day-today-background-color-selected-hover)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-background-color-hover`. <br/>Defaults to `var(--highcontrast-calendar-day-today-background-selected-hover, var(--mod-calendar-day-today-background-color-selected-hover, var(--spectrum-calendar-day-today-background-color-selected-hover)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-today-background-color-selected-hover": {
+      "description": "Used by `--spectrum-calendar-day-today-background-selected-hover`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-today-text-font-weight": {
+      "value": "var(--mod-calendar-day-today-text-font-weight, var(--spectrum-bold-font-weight))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-font-weight`. <br/>Defaults to `var(--mod-calendar-day-today-text-font-weight, var(--spectrum-bold-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-today-text-color": {
+      "value": "var(--highcontrast-calendar-day-today-text-color, var(--mod-calendar-day-today-text-color, var(--spectrum-neutral-content-color-default)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-color`. <br/>Defaults to `var(--highcontrast-calendar-day-today-text-color, var(--mod-calendar-day-today-text-color, var(--spectrum-neutral-content-color-default)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-today-border-color": {
+      "value": "var(--highcontrast-calendar-day-today-border-color, var(--mod-calendar-day-today-border-color, var(--spectrum-gray-800)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-border-color`. <br/>Defaults to `var(--highcontrast-calendar-day-today-border-color, var(--mod-calendar-day-today-border-color, var(--spectrum-gray-800)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-color": {
+      "value": "var(--mod-calendar-day-text-color, var(--spectrum-neutral-subdued-content-color-default))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `.spectrum-Calendar-date`. <br/>Defaults to `var(--mod-calendar-day-text-color, var(--spectrum-neutral-subdued-content-color-default))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-color-selected": {
+      "value": "var(--highcontrast-calendar-day-text-color-selected, var(--mod-calendar-day-text-color-selected, var(--spectrum-neutral-content-color-down)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-color`. <br/>Defaults to `var(--highcontrast-calendar-day-text-color-selected, var(--mod-calendar-day-text-color-selected, var(--spectrum-neutral-content-color-down)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-color-cap-selected": {
+      "value": "var(--highcontrast-calendar-day-text-color-cap-selected, var(--mod-calendar-day-text-color-cap-selected, var(--spectrum-neutral-content-color-down)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-color`, `--mod-calendar-day-text-color-key-focus`. <br/>Defaults to `var(--highcontrast-calendar-day-text-color-cap-selected, var(--mod-calendar-day-text-color-cap-selected, var(--spectrum-neutral-content-color-down)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-color-hover": {
+      "value": "var(--highcontrast-calendar-day-text-color-hover, var(--mod-calendar-day-text-color-hover, var(--spectrum-neutral-content-color-hover)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-color`. <br/>Defaults to `var(--highcontrast-calendar-day-text-color-hover, var(--mod-calendar-day-text-color-hover, var(--spectrum-neutral-content-color-hover)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-color-key-focus": {
+      "value": "var(--highcontrast-calendar-day-text-color-key-focus, var(--mod-calendar-day-text-color-key-focus, var(--spectrum-neutral-content-color-key-focus)))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-color`. <br/>Defaults to `var(--highcontrast-calendar-day-text-color-key-focus, var(--mod-calendar-day-text-color-key-focus, var(--spectrum-neutral-content-color-key-focus)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-text-color-disabled": {
+      "value": "var(--mod-calendar-day-text-color-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-text-color`, `--mod-calendar-day-text-color-selected`, `--mod-calendar-day-text-color-cap-selected`, `--mod-calendar-day-text-color-hover`, `--mod-calendar-day-text-color-key-focus`. <br/>Defaults to `var(--mod-calendar-day-text-color-disabled, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-calendar-day-today-border-color-disabled": {
+      "value": "var(--mod-calendar-day-today-border-color-disabled, var(--spectrum-disabled-border-color))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--mod-calendar-day-today-border-color`. <br/>Defaults to `var(--mod-calendar-day-today-border-color-disabled, var(--spectrum-disabled-border-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-100-rgb": {
+      "description": "Used by `--spectrum-calendar-day-background-color-selected-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-calendar-day-width`, `--spectrum-calendar-day-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-calendar-day-border-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-calendar-title-text-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-bold-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-calendar-title-text-font-weight`, `--spectrum-calendar-day-text-font-weight-selected`, `--spectrum-calendar-day-text-font-weight-cap-selected`, `--spectrum-calendar-day-today-text-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-default": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Used by `--spectrum-calendar-title-text-color`, `--spectrum-calendar-button-icon-color`, `--spectrum-calendar-day-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-font-size-50": {
+      "value": "11px",
+      "description": "Used by `--spectrum-calendar-heading-text-size`, `--spectrum-calendar-day-text-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-logical-rotation": {
+      "value": "matrix(-1, 0, 0, 1, 0, 0)",
+      "description": "Defined in `.spectrum-Calendar:dir(rtl)`. <br/>Used by `.spectrum-Calendar-nextMonth, .spectrum-Calendar-prevMonth`. <br/>Defaults to `matrix(-1, 0, 0, 1, 0, 0)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-calendar-day-text-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-calendar-day-text-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-calendar-day-today-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Used by `--spectrum-calendar-day-today-border-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-calendar-day-text-color-selected`, `--spectrum-calendar-day-text-color-cap-selected`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-calendar-day-text-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-calendar-day-text-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-calendar-day-text-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Used by `--spectrum-calendar-day-today-border-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-actionbutton-edge-to-text": {
+      "category": "Passthrough"
+    },
+    "mod-actionbutton-min-width": {
+      "category": "Passthrough"
+    },
+    "mod-actionbutton-content-color-default": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-calendar-day-title-text-color": {
+      "value": "var(--mod-calendar-day-title-text-color, var(--spectrum-neutral-subdued-content-color-default))",
+      "description": "Defined in `.spectrum-Calendar-date`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-title-text-color`. <br/>Defaults to `var(--mod-calendar-day-title-text-color, var(--spectrum-neutral-subdued-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-calendar-day-background-selected": {
+      "value": "var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-background-selected`. <br/>Defaults to `var(--mod-calendar-day-background-color-selected, var(--spectrum-calendar-day-background-color-selected))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-calendar-day-background-selected-hover": {
+      "value": "var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-background-selected-hover`. <br/>Defaults to `var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-calendar-day-background-cap-selected": {
+      "value": "var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-background-cap-selected`. <br/>Defaults to `var(--mod-calendar-day-background-color-cap-selected, var(--spectrum-calendar-day-background-color-cap-selected))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-calendar-day-background-hover": {
+      "value": "var(--mod-calendar-day-background-color-hover, var(--spectrum-calendar-day-background-color-hover))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-background-hover`. <br/>Defaults to `var(--mod-calendar-day-background-color-hover, var(--spectrum-calendar-day-background-color-hover))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-calendar-day-background-focus": {
+      "value": "var(--mod-calendar-day-background-color-key-focus, var(--spectrum-calendar-day-background-color-key-focus))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-background-focus`. <br/>Defaults to `var(--mod-calendar-day-background-color-key-focus, var(--spectrum-calendar-day-background-color-key-focus))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-calendar-day-background-down": {
+      "value": "var(--mod-calendar-day-background-color-down, var(--spectrum-calendar-day-background-color-down))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-background-down`. <br/>Defaults to `var(--mod-calendar-day-background-color-down, var(--spectrum-calendar-day-background-color-down))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-calendar-day-border-color-focus": {
+      "value": "var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-border-color-focus`. <br/>Defaults to `var(--mod-calendar-day-border-color-key-focus, var(--spectrum-calendar-day-border-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-calendar-day-today-background-selected-hover": {
+      "value": "var(--mod-calendar-day-today-background-color-selected-hover, var(--spectrum-calendar-day-today-background-color-selected-hover))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-today-background-selected-hover`. <br/>Defaults to `var(--mod-calendar-day-today-background-color-selected-hover, var(--spectrum-calendar-day-today-background-color-selected-hover))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-calendar-day-today-text-color": {
+      "value": "var(--mod-calendar-day-today-text-color, var(--spectrum-neutral-content-color-default))",
+      "description": "Defined in `.spectrum-Calendar-date`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-today-text-color`. <br/>Defaults to `var(--mod-calendar-day-today-text-color, var(--spectrum-neutral-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-calendar-day-today-border-color": {
+      "value": "var(--mod-calendar-day-today-border-color, var(--spectrum-gray-800))",
+      "description": "Defined in `.spectrum-Calendar-date`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-today-border-color`. <br/>Defaults to `var(--mod-calendar-day-today-border-color, var(--spectrum-gray-800))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-calendar-day-text-color-selected": {
+      "value": "var(--mod-calendar-day-text-color-selected, var(--spectrum-neutral-content-color-down))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-text-color-selected`. <br/>Defaults to `var(--mod-calendar-day-text-color-selected, var(--spectrum-neutral-content-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-calendar-day-text-color-cap-selected": {
+      "value": "var(--mod-calendar-day-text-color-cap-selected, var(--spectrum-neutral-content-color-down))",
+      "description": "Defined in `.spectrum-Calendar-date`. <br/>Used by `--spectrum-calendar-day-text-color-cap-selected`. <br/>Defaults to `var(--mod-calendar-day-text-color-cap-selected, var(--spectrum-neutral-content-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-calendar-day-text-color-hover": {
+      "value": "var(--mod-calendar-day-text-color-hover, var(--spectrum-neutral-content-color-hover))",
+      "description": "Defined in `.spectrum-Calendar-date`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-color-hover`. <br/>Defaults to `var(--mod-calendar-day-text-color-hover, var(--spectrum-neutral-content-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-calendar-day-text-color-key-focus": {
+      "value": "var(--mod-calendar-day-text-color-key-focus, var(--spectrum-neutral-content-color-key-focus))",
+      "description": "Defined in `.spectrum-Calendar-date`, `.spectrum-Calendar-date.is-disabled`. <br/>Used by `--spectrum-calendar-day-text-color-key-focus`. <br/>Defaults to `var(--mod-calendar-day-text-color-key-focus, var(--spectrum-neutral-content-color-key-focus))`, if not set.",
+      "control": "color"
+    }
+  }
 }

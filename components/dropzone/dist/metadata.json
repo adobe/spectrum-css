@@ -11,107 +11,471 @@
     ".spectrum-DropZone-content",
     ".spectrum-DropZone-stroke",
     ".spectrum-DropZone-strokePath",
+    ".spectrum-DropZone:focus-visible",
+    ".spectrum-DropZone:has(.spectrum-DropZone-stroke)",
     ".spectrum-DropZone.is-dragged",
     ".spectrum-DropZone.is-dragged .spectrum-DropZone-strokePath",
     ".spectrum-DropZone.is-filled",
     ".spectrum-DropZone.is-filled.is-dragged",
     ".spectrum-DropZone.is-filled.is-dragged .spectrum-DropZone-actions",
-    ".spectrum-DropZone.is-filled.is-dragged .spectrum-DropZone-content",
-    ".spectrum-DropZone:focus-visible",
-    ".spectrum-DropZone:has(.spectrum-DropZone-stroke)"
+    ".spectrum-DropZone.is-filled.is-dragged .spectrum-DropZone-content"
   ],
-  "modifiers": [
-    "--mod-drop-zone-background-color",
-    "--mod-drop-zone-background-color-opacity",
-    "--mod-drop-zone-background-color-opacity-filled",
-    "--mod-drop-zone-body-font-size",
-    "--mod-drop-zone-body-to-action",
-    "--mod-drop-zone-border-color",
-    "--mod-drop-zone-border-color-hover",
-    "--mod-drop-zone-border-dash-gap",
-    "--mod-drop-zone-border-dash-length",
-    "--mod-drop-zone-border-style",
-    "--mod-drop-zone-border-style-dragged",
-    "--mod-drop-zone-border-width",
-    "--mod-drop-zone-content-background-color",
-    "--mod-drop-zone-content-bottom-to-text",
-    "--mod-drop-zone-content-font-family",
-    "--mod-drop-zone-content-font-size",
-    "--mod-drop-zone-content-font-weight",
-    "--mod-drop-zone-content-height",
-    "--mod-drop-zone-content-max-width",
-    "--mod-drop-zone-content-maximum-width",
-    "--mod-drop-zone-content-top-to-text",
-    "--mod-drop-zone-corner-radius",
-    "--mod-drop-zone-edge-to-text",
-    "--mod-drop-zone-illustration-color-hover",
-    "--mod-drop-zone-inline-size",
-    "--mod-drop-zone-padding",
-    "--mod-drop-zone-title-line-height"
-  ],
-  "component": [
-    "--spectrum-drop-zone-background-color",
-    "--spectrum-drop-zone-background-color-opacity",
-    "--spectrum-drop-zone-background-color-opacity-filled",
-    "--spectrum-drop-zone-background-color-rgb",
-    "--spectrum-drop-zone-body-font-size",
-    "--spectrum-drop-zone-body-to-action",
-    "--spectrum-drop-zone-border-color",
-    "--spectrum-drop-zone-border-color-hover",
-    "--spectrum-drop-zone-border-dash-gap",
-    "--spectrum-drop-zone-border-dash-length",
-    "--spectrum-drop-zone-border-width",
-    "--spectrum-drop-zone-component-height",
-    "--spectrum-drop-zone-content-background-color",
-    "--spectrum-drop-zone-content-bottom-to-text",
-    "--spectrum-drop-zone-content-font-family",
-    "--spectrum-drop-zone-content-font-size",
-    "--spectrum-drop-zone-content-font-weight",
-    "--spectrum-drop-zone-content-max-width",
-    "--spectrum-drop-zone-content-maximum-width",
-    "--spectrum-drop-zone-content-top-to-text",
-    "--spectrum-drop-zone-corner-radius",
-    "--spectrum-drop-zone-dragged-background-color",
-    "--spectrum-drop-zone-edge-to-text",
-    "--spectrum-drop-zone-illustration-color-hover",
-    "--spectrum-drop-zone-inline-size",
-    "--spectrum-drop-zone-padding",
-    "--spectrum-drop-zone-stroke-dash-gap",
-    "--spectrum-drop-zone-stroke-dash-length",
-    "--spectrum-drop-zone-title-line-height",
-    "--spectrum-drop-zone-width"
-  ],
-  "global": [
-    "--spectrum-accent-content-color-default",
-    "--spectrum-accent-visual-color",
-    "--spectrum-bold-font-weight",
-    "--spectrum-border-width-200",
-    "--spectrum-component-bottom-to-text-300",
-    "--spectrum-component-edge-to-text-300",
-    "--spectrum-component-height-300",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-corner-radius-500",
-    "--spectrum-corner-radius-700",
-    "--spectrum-font-size-300",
-    "--spectrum-gray-300",
-    "--spectrum-line-height-100",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-400"
-  ],
-  "passthroughs": [
-    "--mod-button-border-radius",
-    "--mod-illustrated-message-description-font-size",
-    "--mod-illustrated-message-description-position",
-    "--mod-illustrated-message-description-to-action",
-    "--mod-illustrated-message-description-z-index",
-    "--mod-illustrated-message-display",
-    "--mod-illustrated-message-illustration-color",
-    "--mod-illustrated-message-vertical-maximum-width"
-  ],
-  "high-contrast": [
-    "--highcontrast-drop-zone-border-color",
-    "--highcontrast-drop-zone-border-color-hover",
-    "--highcontrast-drop-zone-button-color"
-  ]
+  "modifiers": {
+    "mod-drop-zone-content-maximum-width": {
+      "description": "Used by `--mod-illustrated-message-vertical-maximum-width`. <br/>Defaults to `var(--spectrum-drop-zone-content-maximum-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-body-to-action": {
+      "description": "Used by `--mod-illustrated-message-description-to-action`. <br/>Defaults to `var(--spectrum-drop-zone-body-to-action)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-body-font-size": {
+      "description": "Used by `--mod-illustrated-message-description-font-size`. <br/>Defaults to `var(--spectrum-drop-zone-body-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-content-height": {
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone.is-filled.is-dragged`. <br/>Defaults to `280px`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-inline-size": {
+      "description": "Used by `.spectrum-DropZone`. <br/>Defaults to `var(--spectrum-drop-zone-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-padding": {
+      "description": "Used by `.spectrum-DropZone`. <br/>Defaults to `var(--spectrum-drop-zone-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-border-width": {
+      "description": "Used by `.spectrum-DropZone`, `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--spectrum-drop-zone-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-corner-radius": {
+      "description": "Used by `.spectrum-DropZone`. <br/>Defaults to `var(--spectrum-drop-zone-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-background-color": {
+      "description": "Defined in `.spectrum-DropZone.is-dragged`, `.spectrum-DropZone.is-filled`. <br/>Used by `.spectrum-DropZone`. <br/>Defaults to `var(--spectrum-drop-zone-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-border-color": {
+      "description": "Used by `.spectrum-DropZone`, `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--spectrum-drop-zone-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-border-style": {
+      "description": "Defined in `.spectrum-DropZone.is-dragged`. <br/>Defaults to `var(--mod-drop-zone-border-style-dragged, solid)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-border-style-dragged": {
+      "description": "Used by `--mod-drop-zone-border-style`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-background-color-opacity": {
+      "description": "Used by `--mod-drop-zone-background-color`. <br/>Defaults to `var(--spectrum-drop-zone-dragged-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-border-color-hover": {
+      "description": "Used by `--spectrum-drop-zone-border-color`. <br/>Defaults to `var(--spectrum-drop-zone-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-illustration-color-hover": {
+      "description": "Used by `--mod-illustrated-message-illustration-color`. <br/>Defaults to `var(--spectrum-drop-zone-illustration-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-background-color-opacity-filled": {
+      "description": "Used by `--mod-drop-zone-background-color`. <br/>Defaults to `var(--spectrum-drop-zone-background-color-opacity-filled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-border-dash-length": {
+      "description": "Used by `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--spectrum-drop-zone-stroke-dash-length)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-border-dash-gap": {
+      "description": "Used by `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--spectrum-drop-zone-stroke-dash-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-content-max-width": {
+      "description": "Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-drop-zone-content-max-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-content-top-to-text": {
+      "description": "Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-drop-zone-content-top-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-content-bottom-to-text": {
+      "description": "Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-drop-zone-content-bottom-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-edge-to-text": {
+      "description": "Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-drop-zone-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-content-background-color": {
+      "description": "Used by `.spectrum-DropZone-button`, `.spectrum-DropZone-button:focus`, `.spectrum-DropZone-button:hover`. <br/>Defaults to `var(--spectrum-drop-zone-content-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-content-font-family": {
+      "description": "Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-drop-zone-content-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-content-font-weight": {
+      "description": "Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-drop-zone-content-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-title-line-height": {
+      "description": "Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-drop-zone-title-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-drop-zone-content-font-size": {
+      "description": "Used by `.spectrum-DropZone-button .spectrum-Button-label`. <br/>Defaults to `var(--spectrum-drop-zone-content-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-drop-zone-padding": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-border-width": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone`, `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-corner-radius": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone`, `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--spectrum-corner-radius-700)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-border-color": {
+      "value": "var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)))",
+      "description": "Defined in `.spectrum-DropZone`, `.spectrum-DropZone.is-dragged`, `.spectrum-DropZone:focus-visible`. <br/>Used by `.spectrum-DropZone`, `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-inline-size": {
+      "value": "428px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone`. <br/>Defaults to `var(--spectrum-drop-zone-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-width": {
+      "value": "428px",
+      "description": "Used by `--spectrum-drop-zone-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-background-color": {
+      "value": "var(--spectrum-accent-visual-color)",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone`, `--mod-drop-zone-background-color`. <br/>Defaults to `var(--spectrum-drop-zone-background-color-rgb)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-background-color-rgb": {
+      "description": "Used by `--spectrum-drop-zone-background-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-border-color-hover": {
+      "value": "var(--spectrum-accent-color-800)",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `--spectrum-drop-zone-border-color`. <br/>Defaults to `var(--spectrum-accent-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-illustration-color-hover": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `--mod-illustrated-message-illustration-color`, `.spectrum-DropZone.is-dragged`. <br/>Defaults to `var(--spectrum-accent-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-body-to-action": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `--mod-illustrated-message-description-to-action`, `.spectrum-DropZone-actions`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-stroke-dash-gap": {
+      "value": "6px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--spectrum-drop-zone-border-dash-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-border-dash-gap": {
+      "value": "6px",
+      "description": "Used by `--spectrum-drop-zone-stroke-dash-gap`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-stroke-dash-length": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--spectrum-drop-zone-border-dash-length)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-border-dash-length": {
+      "value": "8px",
+      "description": "Used by `--spectrum-drop-zone-stroke-dash-length`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-dragged-background-color": {
+      "value": "0.1",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `--mod-drop-zone-background-color`. <br/>Defaults to `var(--spectrum-drop-zone-background-color-opacity)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-background-color-opacity": {
+      "value": "0.1",
+      "description": "Used by `--spectrum-drop-zone-dragged-background-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-content-max-width": {
+      "value": "380px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-drop-zone-content-maximum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-content-maximum-width": {
+      "value": "380px",
+      "description": "Used by `--spectrum-drop-zone-content-max-width`, `--mod-illustrated-message-vertical-maximum-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-content-top-to-text": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-component-top-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-content-bottom-to-text": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-component-bottom-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-component-height": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-edge-to-text": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-component-edge-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-content-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-content-font-weight": {
+      "value": "700",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-content-font-size": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button .spectrum-Button-label`. <br/>Defaults to `var(--spectrum-font-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-title-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-content-background-color": {
+      "value": "var(--spectrum-accent-color-800)",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`, `.spectrum-DropZone-button:focus`, `.spectrum-DropZone-button:hover`. <br/>Defaults to `var(--spectrum-accent-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-body-font-size": {
+      "value": "var(--spectrum-illustrated-message-medium-body-font-size)",
+      "description": "Used by `--mod-illustrated-message-description-font-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-drop-zone-background-color-opacity-filled": {
+      "value": "0.3",
+      "description": "Used by `--mod-drop-zone-background-color`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-spacing-400": {
+      "value": "24px",
+      "description": "Used by `--spectrum-drop-zone-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-drop-zone-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-700": {
+      "value": "10px",
+      "description": "Used by `--spectrum-drop-zone-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-300": {
+      "value": "light-dark(rgb(218, 218, 218), rgb(57, 57, 57))",
+      "description": "Used by `--spectrum-drop-zone-border-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-accent-visual-color": {
+      "value": "var(--spectrum-accent-color-800)",
+      "description": "Used by `--spectrum-drop-zone-border-color-hover`, `--spectrum-drop-zone-content-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Used by `--spectrum-drop-zone-illustration-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-drop-zone-body-to-action`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "value": "12px",
+      "description": "Used by `--spectrum-drop-zone-content-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-drop-zone-content-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-drop-zone-component-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-drop-zone-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-drop-zone-content-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-bold-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-drop-zone-content-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-drop-zone-content-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-drop-zone-title-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-500": {
+      "value": "8px",
+      "description": "Used by `--mod-button-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-illustrated-message-vertical-maximum-width": {
+      "category": "Passthrough"
+    },
+    "mod-illustrated-message-description-to-action": {
+      "category": "Passthrough"
+    },
+    "mod-illustrated-message-description-position": {
+      "category": "Passthrough"
+    },
+    "mod-illustrated-message-description-z-index": {
+      "category": "Passthrough"
+    },
+    "mod-illustrated-message-description-font-size": {
+      "category": "Passthrough"
+    },
+    "mod-illustrated-message-illustration-color": {
+      "category": "Passthrough"
+    },
+    "mod-illustrated-message-display": {
+      "category": "Passthrough"
+    },
+    "mod-button-border-radius": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-drop-zone-border-color": {
+      "value": "var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color))",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone`, `.spectrum-DropZone-strokePath`. <br/>Defaults to `var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-drop-zone-border-color-hover": {
+      "value": "var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover))",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `--spectrum-drop-zone-border-color`, `.spectrum-DropZone.is-dragged`, `.spectrum-DropZone.is-dragged .spectrum-DropZone-strokePath`. <br/>Defaults to `var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-drop-zone-button-color": {
+      "value": "var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color))",
+      "description": "Defined in `.spectrum-DropZone`. <br/>Used by `.spectrum-DropZone-button`, `.spectrum-DropZone-button:focus`, `.spectrum-DropZone-button:hover`. <br/>Defaults to `var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

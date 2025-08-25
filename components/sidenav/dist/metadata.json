@@ -12,189 +12,924 @@
     ".spectrum-SideNav-item",
     ".spectrum-SideNav-item.is-disabled .spectrum-SideNav-itemLink",
     ".spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink",
-    ".spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink.is-keyboardFocused",
     ".spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:active",
     ".spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:focus-visible",
     ".spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:hover",
+    ".spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink.is-keyboardFocused",
     ".spectrum-SideNav-itemLink",
     ".spectrum-SideNav-itemLink .spectrum-Icon",
     ".spectrum-SideNav-itemLink .spectrum-SideNav-link-text",
-    ".spectrum-SideNav-itemLink.is-keyboardFocused",
     ".spectrum-SideNav-itemLink:active",
     ".spectrum-SideNav-itemLink:focus-visible",
     ".spectrum-SideNav-itemLink:hover",
+    ".spectrum-SideNav-itemLink.is-keyboardFocused",
     ".spectrum-SideNav:lang(ja)",
     ".spectrum-SideNav:lang(ko)",
     ".spectrum-SideNav:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-sidenav-background-default",
-    "--mod-sidenav-background-disabled",
-    "--mod-sidenav-background-hover",
-    "--mod-sidenav-background-hover-selected",
-    "--mod-sidenav-background-key-focus",
-    "--mod-sidenav-background-key-focus-selected",
-    "--mod-sidenav-border-radius",
-    "--mod-sidenav-bottom-to-label",
-    "--mod-sidenav-content-color-default",
-    "--mod-sidenav-content-color-default-selected",
-    "--mod-sidenav-content-color-down",
-    "--mod-sidenav-content-color-down-selected",
-    "--mod-sidenav-content-color-hover",
-    "--mod-sidenav-content-color-hover-selected",
-    "--mod-sidenav-content-color-key-focus",
-    "--mod-sidenav-content-color-key-focus-selected",
-    "--mod-sidenav-content-disabled-color",
-    "--mod-sidenav-focus-ring-color",
-    "--mod-sidenav-focus-ring-gap",
-    "--mod-sidenav-focus-ring-size",
-    "--mod-sidenav-gap",
-    "--mod-sidenav-header-color",
-    "--mod-sidenav-header-font-size",
-    "--mod-sidenav-header-font-style",
-    "--mod-sidenav-header-font-weight",
-    "--mod-sidenav-header-line-height",
-    "--mod-sidenav-heading-bottom-margin",
-    "--mod-sidenav-heading-top-margin",
-    "--mod-sidenav-icon-size",
-    "--mod-sidenav-icon-spacing",
-    "--mod-sidenav-inline-padding",
-    "--mod-sidenav-item-background-default-selected",
-    "--mod-sidenav-item-background-down",
-    "--mod-sidenav-item-background-down-selected",
-    "--mod-sidenav-max-width",
-    "--mod-sidenav-min-height",
-    "--mod-sidenav-min-width",
-    "--mod-sidenav-start-to-content-second-level",
-    "--mod-sidenav-start-to-content-third-level",
-    "--mod-sidenav-start-to-content-with-icon-second-level",
-    "--mod-sidenav-start-to-content-with-icon-third-level",
-    "--mod-sidenav-text-font-family",
-    "--mod-sidenav-text-font-size",
-    "--mod-sidenav-text-font-style",
-    "--mod-sidenav-text-font-weight",
-    "--mod-sidenav-text-line-height",
-    "--mod-sidenav-top-level-font-family",
-    "--mod-sidenav-top-level-font-size",
-    "--mod-sidenav-top-level-font-style",
-    "--mod-sidenav-top-level-font-weight",
-    "--mod-sidenav-top-level-line-height",
-    "--mod-sidenav-top-to-icon",
-    "--mod-sidenav-top-to-label",
-    "--mod-sidenav-width"
-  ],
-  "component": [
-    "--spectrum-side-navigation-bottom-to-text",
-    "--spectrum-side-navigation-header-to-item",
-    "--spectrum-side-navigation-item-to-header",
-    "--spectrum-side-navigation-item-to-item",
-    "--spectrum-side-navigation-maximum-width",
-    "--spectrum-side-navigation-minimum-width",
-    "--spectrum-side-navigation-second-level-edge-to-text",
-    "--spectrum-side-navigation-third-level-edge-to-text",
-    "--spectrum-side-navigation-with-icon-second-level-edge-to-text",
-    "--spectrum-side-navigation-with-icon-third-level-edge-to-text",
-    "--spectrum-sidenav-background-default",
-    "--spectrum-sidenav-background-disabled",
-    "--spectrum-sidenav-background-hover",
-    "--spectrum-sidenav-background-hover-selected",
-    "--spectrum-sidenav-background-key-focus",
-    "--spectrum-sidenav-background-key-focus-selected",
-    "--spectrum-sidenav-border-radius",
-    "--spectrum-sidenav-bottom-to-label",
-    "--spectrum-sidenav-content-color-default",
-    "--spectrum-sidenav-content-color-default-selected",
-    "--spectrum-sidenav-content-color-down",
-    "--spectrum-sidenav-content-color-down-selected",
-    "--spectrum-sidenav-content-color-hover",
-    "--spectrum-sidenav-content-color-hover-selected",
-    "--spectrum-sidenav-content-color-key-focus",
-    "--spectrum-sidenav-content-color-key-focus-selected",
-    "--spectrum-sidenav-content-disabled-color",
-    "--spectrum-sidenav-focus-ring-color",
-    "--spectrum-sidenav-focus-ring-gap",
-    "--spectrum-sidenav-focus-ring-size",
-    "--spectrum-sidenav-gap",
-    "--spectrum-sidenav-header-color",
-    "--spectrum-sidenav-header-font-family",
-    "--spectrum-sidenav-header-font-size",
-    "--spectrum-sidenav-header-font-style",
-    "--spectrum-sidenav-header-font-weight",
-    "--spectrum-sidenav-header-line-height",
-    "--spectrum-sidenav-heading-bottom-margin",
-    "--spectrum-sidenav-heading-top-margin",
-    "--spectrum-sidenav-icon-size",
-    "--spectrum-sidenav-icon-spacing",
-    "--spectrum-sidenav-inline-padding",
-    "--spectrum-sidenav-item-background-default-selected",
-    "--spectrum-sidenav-item-background-down",
-    "--spectrum-sidenav-item-background-down-selected",
-    "--spectrum-sidenav-max-width",
-    "--spectrum-sidenav-min-height",
-    "--spectrum-sidenav-min-width",
-    "--spectrum-sidenav-start-to-content-second-level",
-    "--spectrum-sidenav-start-to-content-third-level",
-    "--spectrum-sidenav-start-to-content-with-icon-second-level",
-    "--spectrum-sidenav-start-to-content-with-icon-third-level",
-    "--spectrum-sidenav-text-font-family",
-    "--spectrum-sidenav-text-font-size",
-    "--spectrum-sidenav-text-font-style",
-    "--spectrum-sidenav-text-font-weight",
-    "--spectrum-sidenav-text-line-height",
-    "--spectrum-sidenav-top-level-font-family",
-    "--spectrum-sidenav-top-level-font-size",
-    "--spectrum-sidenav-top-level-font-style",
-    "--spectrum-sidenav-top-level-font-weight",
-    "--spectrum-sidenav-top-level-line-height",
-    "--spectrum-sidenav-top-to-icon",
-    "--spectrum-sidenav-top-to-label",
-    "--spectrum-sidenav-width"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-bold-font-weight",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-height-100",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-corner-radius-100",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-content-color",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-gray-600",
-    "--spectrum-line-height-100",
-    "--spectrum-medium-font-weight",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-regular-font-weight",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-workflow-icon-size-100"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-sidenav-background-hover",
-    "--highcontrast-sidenav-background-hover-selected",
-    "--highcontrast-sidenav-background-key-focus",
-    "--highcontrast-sidenav-background-key-focus-selected",
-    "--highcontrast-sidenav-content-color-default",
-    "--highcontrast-sidenav-content-color-default-selected",
-    "--highcontrast-sidenav-content-color-down",
-    "--highcontrast-sidenav-content-color-hover",
-    "--highcontrast-sidenav-content-disabled-color",
-    "--highcontrast-sidenav-focus-ring-color",
-    "--highcontrast-sidenav-item-background-default-selected",
-    "--highcontrast-sidenav-item-background-down",
-    "--highcontrast-sidenav-item-background-down-selected",
-    "--highcontrast-sidenav-top-level-font-color"
-  ]
+  "modifiers": {
+    "mod-sidenav-background-disabled": {
+      "description": "Used by `.spectrum-SideNav-item.is-disabled .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-background-disabled)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-disabled-color": {
+      "description": "Used by `.spectrum-SideNav-item.is-disabled .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-content-disabled-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-item-background-default-selected": {
+      "description": "Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-item-background-default-selected)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-color-default-selected": {
+      "description": "Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-content-color-default-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-item-background-down-selected": {
+      "description": "Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--spectrum-sidenav-item-background-down-selected)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-color-down-selected": {
+      "description": "Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--spectrum-sidenav-content-color-down-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-background-key-focus-selected": {
+      "description": "Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-sidenav-background-key-focus-selected)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-color-key-focus-selected": {
+      "description": "Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-sidenav-content-color-key-focus-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-inline-padding": {
+      "description": "Used by `.spectrum-SideNav-itemLink`, `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-inline-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-gap": {
+      "description": "Used by `.spectrum-SideNav-itemLink`, `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-border-radius": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-background-default": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-background-default)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-color-default": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-width": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-min-width": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-min-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-max-width": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-max-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-min-height": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-min-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-text-font-family": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-text-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-text-font-size": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-text-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-text-font-weight": {
+      "description": "Used by `.spectrum-SideNav-itemLink`, `.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-text-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-text-font-style": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-text-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-text-line-height": {
+      "description": "Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-text-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-top-to-label": {
+      "description": "Used by `.spectrum-SideNav-itemLink .spectrum-SideNav-link-text`. <br/>Defaults to `var(--spectrum-sidenav-top-to-label)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-bottom-to-label": {
+      "description": "Used by `.spectrum-SideNav-itemLink .spectrum-SideNav-link-text`. <br/>Defaults to `var(--spectrum-sidenav-bottom-to-label)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-icon-size": {
+      "description": "Used by `.spectrum-SideNav-itemLink .spectrum-Icon`. <br/>Defaults to `var(--spectrum-sidenav-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-icon-spacing": {
+      "description": "Used by `.spectrum-SideNav-itemLink .spectrum-Icon`. <br/>Defaults to `var(--spectrum-sidenav-icon-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-top-to-icon": {
+      "description": "Used by `.spectrum-SideNav-itemLink .spectrum-Icon`. <br/>Defaults to `var(--spectrum-sidenav-top-to-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-background-hover-selected": {
+      "description": "Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--spectrum-sidenav-background-hover-selected)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-color-hover-selected": {
+      "description": "Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--spectrum-sidenav-content-color-hover-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-background-hover": {
+      "description": "Used by `.spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--spectrum-sidenav-background-hover)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-color-hover": {
+      "description": "Used by `.spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--spectrum-sidenav-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-item-background-down": {
+      "description": "Used by `.spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--spectrum-sidenav-item-background-down)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-color-down": {
+      "description": "Used by `.spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--spectrum-sidenav-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-focus-ring-color": {
+      "description": "Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-sidenav-focus-ring-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-focus-ring-size": {
+      "description": "Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-sidenav-focus-ring-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-focus-ring-gap": {
+      "description": "Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-sidenav-focus-ring-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-background-key-focus": {
+      "description": "Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-sidenav-background-key-focus)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-content-color-key-focus": {
+      "description": "Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-sidenav-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-heading-top-margin": {
+      "description": "Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-heading-top-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-heading-bottom-margin": {
+      "description": "Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-heading-bottom-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-header-color": {
+      "description": "Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-header-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-sidenav-header-font-size": {
+      "description": "Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-header-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-header-font-weight": {
+      "description": "Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-header-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-header-font-style": {
+      "description": "Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-header-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-header-line-height": {
+      "description": "Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sidenav-header-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-top-level-font-family": {
+      "description": "Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-top-level-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-top-level-font-weight": {
+      "description": "Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-top-level-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-top-level-font-style": {
+      "description": "Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-top-level-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-top-level-font-size": {
+      "description": "Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-top-level-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-top-level-line-height": {
+      "description": "Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-top-level-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-start-to-content-second-level": {
+      "description": "Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-start-to-content-second-level)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-start-to-content-third-level": {
+      "description": "Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-start-to-content-third-level)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-start-to-content-with-icon-second-level": {
+      "description": "Used by `.spectrum-SideNav--hasIcon.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-start-to-content-with-icon-second-level)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-sidenav-start-to-content-with-icon-third-level": {
+      "description": "Used by `.spectrum-SideNav--hasIcon.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sidenav-start-to-content-with-icon-third-level)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-sidenav-focus-ring-size": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-focus-ring-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-focus-ring-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-min-height": {
+      "value": "32px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-component-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-width": {
+      "value": "100%",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `100%`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-min-width": {
+      "value": "160px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-side-navigation-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-minimum-width": {
+      "value": "160px",
+      "description": "Used by `--spectrum-sidenav-min-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-max-width": {
+      "value": "240px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-side-navigation-maximum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-maximum-width": {
+      "value": "240px",
+      "description": "Used by `--spectrum-sidenav-max-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-border-radius": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-icon-size": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink .spectrum-Icon`. <br/>Defaults to `var(--spectrum-workflow-icon-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-icon-spacing": {
+      "value": "6px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink .spectrum-Icon`. <br/>Defaults to `var(--spectrum-text-to-visual-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-inline-padding": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`, `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-component-edge-to-text-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-gap": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`, `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-side-navigation-item-to-item)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-item-to-item": {
+      "value": "4px",
+      "description": "Used by `--spectrum-sidenav-gap`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-top-to-icon": {
+      "value": "6px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink .spectrum-Icon`. <br/>Defaults to `var(--spectrum-component-top-to-workflow-icon-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-top-to-label": {
+      "value": "6px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink .spectrum-SideNav-link-text`. <br/>Defaults to `var(--spectrum-component-top-to-text-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-bottom-to-label": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink .spectrum-SideNav-link-text`. <br/>Defaults to `var(--spectrum-side-navigation-bottom-to-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-bottom-to-text": {
+      "value": "8px",
+      "description": "Used by `--spectrum-sidenav-bottom-to-label`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-start-to-content-second-level": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-side-navigation-second-level-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-second-level-edge-to-text": {
+      "value": "24px",
+      "description": "Used by `--spectrum-sidenav-start-to-content-second-level`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-start-to-content-third-level": {
+      "value": "36px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-side-navigation-third-level-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-third-level-edge-to-text": {
+      "value": "36px",
+      "description": "Used by `--spectrum-sidenav-start-to-content-third-level`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-start-to-content-with-icon-second-level": {
+      "value": "50px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav--hasIcon.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-side-navigation-with-icon-second-level-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-with-icon-second-level-edge-to-text": {
+      "value": "50px",
+      "description": "Used by `--spectrum-sidenav-start-to-content-with-icon-second-level`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-start-to-content-with-icon-third-level": {
+      "value": "62px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav--hasIcon.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-side-navigation-with-icon-third-level-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-with-icon-third-level-edge-to-text": {
+      "value": "62px",
+      "description": "Used by `--spectrum-sidenav-start-to-content-with-icon-third-level`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-heading-top-margin": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-side-navigation-item-to-header)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-item-to-header": {
+      "value": "24px",
+      "description": "Used by `--spectrum-sidenav-heading-top-margin`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-heading-bottom-margin": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-side-navigation-header-to-item)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-side-navigation-header-to-item": {
+      "value": "8px",
+      "description": "Used by `--spectrum-sidenav-heading-bottom-margin`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-background-disabled": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-disabled .spectrum-SideNav-itemLink`. <br/>Defaults to `transparent`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-background-default": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `transparent`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-background-hover": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-item-background-down": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-background-key-focus": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-item-background-default-selected": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-background-hover-selected": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-item-background-down-selected": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-background-key-focus-selected": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-header-color": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-gray-600)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-disabled-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-disabled .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-color-default-selected": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-color-hover-selected": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-color-down-selected": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-content-color-key-focus-selected": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-sidenav-text-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-text-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`, `.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-text-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-text-font-size": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-text-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-SideNav`, `.spectrum-SideNav:lang(ja), .spectrum-SideNav:lang(ko), .spectrum-SideNav:lang(zh)`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-top-level-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-top-level-font-weight": {
+      "value": "700",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-top-level-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-top-level-font-size": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-top-level-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-SideNav`, `.spectrum-SideNav:lang(ja), .spectrum-SideNav:lang(ko), .spectrum-SideNav:lang(zh)`. <br/>Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-header-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-header-font-weight": {
+      "value": "500",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-medium-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-header-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-header-font-size": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-SideNav`. <br/>Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-font-size-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-sidenav-header-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-SideNav`, `.spectrum-SideNav:lang(ja), .spectrum-SideNav:lang(ko), .spectrum-SideNav:lang(zh)`. <br/>Used by `.spectrum-SideNav-heading`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-sidenav-focus-ring-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-sidenav-focus-ring-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-sidenav-focus-ring-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-sidenav-min-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "value": "4px",
+      "description": "Used by `--spectrum-sidenav-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-sidenav-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-sidenav-icon-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-sidenav-inline-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-sidenav-top-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-sidenav-top-to-label`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Used by `--spectrum-sidenav-background-hover`, `--spectrum-sidenav-background-key-focus`, `--spectrum-sidenav-item-background-default-selected`, `--spectrum-sidenav-background-key-focus-selected`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-sidenav-item-background-down`, `--spectrum-sidenav-background-hover-selected`, `--spectrum-sidenav-item-background-down-selected`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-600": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Used by `--spectrum-sidenav-header-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-sidenav-content-disabled-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-sidenav-content-color-default`, `--spectrum-sidenav-content-color-default-selected`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-sidenav-content-color-hover`, `--spectrum-sidenav-content-color-hover-selected`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-sidenav-content-color-down`, `--spectrum-sidenav-content-color-down-selected`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-sidenav-content-color-key-focus`, `--spectrum-sidenav-content-color-key-focus-selected`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-sidenav-text-font-family`, `--spectrum-sidenav-top-level-font-family`, `--spectrum-sidenav-header-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-sidenav-text-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-sidenav-text-font-style`, `--spectrum-sidenav-top-level-font-style`, `--spectrum-sidenav-header-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-sidenav-text-font-size`, `--spectrum-sidenav-top-level-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-sidenav-text-line-height`, `--spectrum-sidenav-top-level-line-height`, `--spectrum-sidenav-header-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-bold-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-sidenav-top-level-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-medium-font-weight": {
+      "value": "500",
+      "description": "Used by `--spectrum-sidenav-header-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-sidenav-header-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-sidenav-text-line-height`, `--spectrum-sidenav-top-level-line-height`, `--spectrum-sidenav-header-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-SideNav-itemLink`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-sidenav-content-disabled-color": {
+      "value": "var(--mod-sidenav-content-disabled-color, var(--spectrum-sidenav-content-disabled-color))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-item.is-disabled .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--mod-sidenav-content-disabled-color, var(--spectrum-sidenav-content-disabled-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-sidenav-item-background-default-selected": {
+      "value": "var(--mod-sidenav-item-background-default-selected, var(--spectrum-sidenav-item-background-default-selected))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--mod-sidenav-item-background-default-selected, var(--spectrum-sidenav-item-background-default-selected))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-sidenav-content-color-default-selected": {
+      "value": "var(--mod-sidenav-content-color-default-selected, var(--spectrum-sidenav-content-color-default-selected))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink`. <br/>Defaults to `var(--mod-sidenav-content-color-default-selected, var(--spectrum-sidenav-content-color-default-selected))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-sidenav-item-background-down-selected": {
+      "value": "var(--mod-sidenav-item-background-down-selected, var(--spectrum-sidenav-item-background-down-selected))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--mod-sidenav-item-background-down-selected, var(--spectrum-sidenav-item-background-down-selected))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-sidenav-background-key-focus-selected": {
+      "value": "var(--mod-sidenav-background-key-focus-selected, var(--spectrum-sidenav-background-key-focus-selected))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--mod-sidenav-background-key-focus-selected, var(--spectrum-sidenav-background-key-focus-selected))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-sidenav-content-color-default": {
+      "value": "var(--mod-sidenav-content-color-default, var(--spectrum-sidenav-content-color-default))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-itemLink`. <br/>Defaults to `var(--mod-sidenav-content-color-default, var(--spectrum-sidenav-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-sidenav-background-hover-selected": {
+      "value": "var(--mod-sidenav-background-hover-selected, var(--spectrum-sidenav-background-hover-selected))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-item.is-selected .spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--mod-sidenav-background-hover-selected, var(--spectrum-sidenav-background-hover-selected))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-sidenav-background-hover": {
+      "value": "var(--mod-sidenav-background-hover, var(--spectrum-sidenav-background-hover))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--mod-sidenav-background-hover, var(--spectrum-sidenav-background-hover))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-sidenav-content-color-hover": {
+      "value": "var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-itemLink:hover`. <br/>Defaults to `var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-sidenav-item-background-down": {
+      "value": "var(--mod-sidenav-item-background-down, var(--spectrum-sidenav-item-background-down))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--mod-sidenav-item-background-down, var(--spectrum-sidenav-item-background-down))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-sidenav-content-color-down": {
+      "value": "var(--mod-sidenav-content-color-down, var(--spectrum-sidenav-content-color-down))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-itemLink:active`. <br/>Defaults to `var(--mod-sidenav-content-color-down, var(--spectrum-sidenav-content-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-sidenav-focus-ring-color": {
+      "value": "var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-sidenav-background-key-focus": {
+      "value": "var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus))",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav-itemLink.is-keyboardFocused, .spectrum-SideNav-itemLink:focus-visible`. <br/>Defaults to `var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-sidenav-top-level-font-color": {
+      "value": "ButtonText",
+      "description": "Defined in `.spectrum-SideNav-item`. <br/>Used by `.spectrum-SideNav--multiLevel .spectrum-SideNav-itemLink`. <br/>Defaults to `ButtonText`, if not set.",
+      "control": "color"
+    }
+  }
 }
