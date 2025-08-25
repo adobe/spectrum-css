@@ -16,39 +16,20 @@ export const testsContent = new Map([
 	[
 		"Architecture",
 		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					"This is an example of text content within the content area that uses the spectrum-Body typography class on the paragraphs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit.",
-					Link({
-						url: "https://www.adobe.com/creativecloud/plans.html",
-						text: "Learn more about Adobe Creative Cloud plans and pricing.",
-					}),
-				],
-			}),
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 			isOpen: true,
 		},
 	],
 	[
 		"Nature",
 		{
-			content: Typography({
-				semantics: "body",
-				content: [
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
-					Link({
-						url: "https://www.adobe.com/acrobat.html",
-						text: "Learn more about Acrobat.",
-					}),
-				],
-			}),
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 		},
 	],
 	[
 		"Illustrations",
 		{
-			content: "This is an example of text content within the content area that is not wrapped by any typography classes or elements. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit.",
-			isOpen: true,
+			content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 		},
 	],
 	[
@@ -80,9 +61,10 @@ export const longerContent = new Map([
 		"Are Adobe products worth it?",
 		{
 			content: Typography({
+				size: "s",
 				semantics: "body",
 				content: [
-					"This is an example of text content within the content area that uses the spectrum-Body typography class on the paragraphs. Adobe makes some of the most widely used software applications in the world, many of which are industry standard.",
+					"Adobe makes some of the most widely used software applications in the world, many of which are industry standard. Get started with free apps like Adobe Acrobat Reader, Aero, Fill & Sign, Photoshop Express, and Adobe Scan. Or consider Creative Cloud, with plans starting at just US$9.99/mo. Every Adobe Creative Cloud plan includes perks like free stock images and fonts, collaboration tools, and cloud storage as well as regular feature updates to deliver the latest technology.",
 					Link({
 						url: "https://www.adobe.com/creativecloud/plans.html",
 						text: "Learn more about Adobe Creative Cloud plans and pricing.",
@@ -96,6 +78,7 @@ export const longerContent = new Map([
 		"Which Adobe product is best for editing PDFs?",
 		{
 			content: Typography({
+				size: "s",
 				semantics: "body",
 				content: [
 					"You can edit PDFs with Adobe Acrobat, which is available in two editions: Standard and Pro. Acrobat Standard provides basic tools to create, edit, and sign PDFs on Windows devices. Acrobat Pro is the complete PDF solution with tools to edit, convert, and sign PDFs across web, mobile, and tablet, as well as on Windows and macOS computers. If you'd like to try before you buy, you can get a free 7-day trial of Acrobat Pro.",
@@ -110,14 +93,14 @@ export const longerContent = new Map([
 	[
 		"How many products does Adobe have?",
 		{
-			content: "This is an example of text content within the content area that is not wrapped by any typography classes or elements. Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as Adobe Experience Manager, Campaign, and Target.",
+			content: "Adobe offers nearly 100 products. Get creative with industry-standard apps like Adobe Photoshop, Illustrator, InDesign, and Lightroom. Create, edit, and sign PDFs with Adobe Acrobat and Acrobat Sign. And deliver exceptional customer experiences with our marketing and commerce apps such as adobe experience manager, Campaign, and Target.",
 			isOpen: true,
 		},
 	],
 	[
 		"What are the most popular Adobe products?",
 		{
-			content: "This is an example of text content within the content area that is not wrapped by any typography classes or elements. Adobe makes some of the most widely used software in the world, including popular apps like Acrobat Pro, Photoshop, Illustrator, InDesign, Lightroom, and Premiere Pro.",
+			content: "Adobe makes some of the most widely used software in the world, including popular apps like Acrobat Pro, Photoshop, Illustrator, InDesign, Lightroom, and Premiere Pro.",
 		},
 	],
 ]);
