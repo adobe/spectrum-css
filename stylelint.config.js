@@ -90,6 +90,7 @@ module.exports = {
 			true,
 			{
 				severity: "warning",
+				ignoreFunctions: ["token"],
 			},
 		],
 		"max-nesting-depth": [3, { severity: "warning" }],

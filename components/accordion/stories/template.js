@@ -35,10 +35,10 @@ export const AccordionItem = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				"is-open": isOpen && !isDisabled,
-				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			?disabled=${isDisabled}
+			?open=${isOpen && !isDisabled}
 			id=${ifDefined(id)}
 			style=${styleMap(customStyles)}
 			role="presentation"
@@ -133,17 +133,16 @@ export const Template = ({
 		<div
 			class="${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined" && size !== "m",
-				[`${rootClass}--${density}`]:
-					typeof density !== "undefined" && density !== "regular",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--noInlinePadding`]: hasNoInlinePadding,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}"
 			id=${ifDefined(id)}
 			role="region"
 			style=${styleMap(customStyles)}
+			size=${size}
+			?compact=${density === "compact"}
+			?spacious=${density === "spacious"}
+			?quiet=${isQuiet}
+			?noInlinePadding=${hasNoInlinePadding}
 		>
 			${repeat(Array.from(items.keys()), (heading, idx) => {
 				const item = items.get(heading);

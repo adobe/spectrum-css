@@ -13,6 +13,7 @@
 
 const fs = require("node:fs");
 const { join, basename } = require("node:path");
+const tokenData = require("./tokens/dist/json/tokens.json");
 
 module.exports = ({
 	resolveImports = true,
@@ -55,6 +56,18 @@ module.exports = ({
 					return join(basedir, id);
 				}
 			} : false,
+			"postcss-functions": {
+				functions: {
+					token: (token, name, resolve = false) => {
+						const resolution = tokenData[token]?.value || tokenData[token]?.ref;
+						if (resolve && resolution) {
+							return typeof name === "string" ? `var(--mod-${name}, ${resolution})` : resolution;
+						}
+
+						return `var(--spectrum-${token})`;
+					}
+				}
+			},
 			/* --------------------------------------------------- */
 			/* ------------------- LINTING ---------------- */
 			// Linter needs to run before the minifier removes comments (such as the stylelint-ignore comments)

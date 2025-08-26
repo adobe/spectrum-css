@@ -152,6 +152,7 @@ __metadata:
     pajv: "npm:^1.2.0"
     postcss: "npm:^8.5.6"
     postcss-extend: "npm:^1.0.5"
+    postcss-functions: "npm:^4.0.2"
     postcss-hover-media-feature: "npm:^1.0.2"
     postcss-import: "npm:^16.1.1"
     postcss-licensing: "npm:^3.0.0"
@@ -17225,6 +17226,17 @@ __metadata:
   peerDependencies:
     postcss: ^8.1.0
   checksum: 10c0/ccc96460cf6a52b5439c26c9a5ea0589882e46161e3c2331d4353de7574448f5feef667d1a68f7f39b9fe3ee75d85957383ae82bbfcf87c3162c7345df4a444e
+  languageName: node
+  linkType: hard
+
+"postcss-functions@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "postcss-functions@npm:4.0.2"
+  dependencies:
+    postcss-value-parser: "npm:^4.0.0"
+  peerDependencies:
+    postcss: ^8.0.0
+  checksum: 10c0/1ee271a639ba08a7abdb53eddd434eb4f13574ef7d26adf4b8623fd141422713672044becb9273c9d7373ddc7f399b4ef5659afb5c1073a2a344b7cd1f460489
   languageName: node
   linkType: hard
 
