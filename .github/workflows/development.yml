@@ -5,7 +5,7 @@ name:
     # - Build the base branch and the PR branch
     # - Compare the compiled output of the two branches
     # - Run visual regression tests on the PR branch
-    # - Publish the PR branch to Netlify for review
+    # - Publish the PR branch to Azure for review
     # -------------------------------------------------------------
 
 on:
@@ -114,9 +114,7 @@ jobs:
                         - '*.md'
                         - .storybook/*.md
                         - .storybook/*/*.md
-                        - .storybook/*/*.mdx
                         - components/*/*.md
-                        - components/*/stories/*.mdx
                         - plugins/*/*.md
                         - tokens/*.md
                         - tools/*/*.md
@@ -152,7 +150,7 @@ jobs:
         if: ${{ needs.changed_files.outputs.plugins_added_files != '' || needs.changed_files.outputs.plugins_modified_files != '' }}
         steps:
             - name: Check out code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
 
             - name: Use Node LTS version
               uses: actions/setup-node@v4
