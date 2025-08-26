@@ -5369,7 +5369,7 @@ __metadata:
     prettier: "npm:^3.6.2"
     react: "npm:^19.1.1"
     react-dom: "npm:^19.1.1"
-    react-syntax-highlighter: "npm:^15.6.5"
+    react-syntax-highlighter: "npm:^15.6.6"
     remark-gfm: "npm:^4.0.1"
     storybook: "npm:8.4.7"
     vite: "npm:^7.1.3"
@@ -18236,9 +18236,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-syntax-highlighter@npm:^15.6.5":
-  version: 15.6.5
-  resolution: "react-syntax-highlighter@npm:15.6.5"
+"react-syntax-highlighter@npm:^15.6.6":
+  version: 15.6.6
+  resolution: "react-syntax-highlighter@npm:15.6.6"
   dependencies:
     "@babel/runtime": "npm:^7.3.1"
     highlight.js: "npm:^10.4.1"
@@ -18248,7 +18248,7 @@ __metadata:
     refractor: "npm:^3.6.0"
   peerDependencies:
     react: ">= 0.14.0"
-  checksum: 10c0/a360e165d68cc37ae79574be35b40a4bd6b937f3fcffb9606a8d15451d0fc49bdf38da71ef4780322e496a23ab3fa76dc2646d966433601b5a37da774921876c
+  checksum: 10c0/894f8b7c79ed40866c0fc542ad0a2040128a8c7e6e6decfd06ef092d8af9c63788ecdd911ea9b2b433e361a4a33a14f721bcec81fd59f1e7394442ade4e7ea46
   languageName: node
   linkType: hard
 
