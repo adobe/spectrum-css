@@ -38,5 +38,9 @@
 		}
 	],
 	"rebaseWhen": "behind-base-branch",
-	"reviewers": ["team:spectrum-css-maintainers"]
+	"reviewers": ["team:spectrum-css-maintainers"],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"extends": ["schedule:monthly"]
+	}
 }
