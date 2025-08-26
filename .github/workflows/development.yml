@@ -112,9 +112,7 @@ jobs:
                         - '*.md'
                         - .storybook/*.md
                         - .storybook/*/*.md
-                        - .storybook/*/*.mdx
                         - components/*/*.md
-                        - components/*/stories/*.mdx
                         - plugins/*/*.md
                         - tokens/*.md
                         - tools/*/*.md
