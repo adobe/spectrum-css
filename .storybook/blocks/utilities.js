@@ -1,6 +1,6 @@
 import spectrum from "@spectrum-css/tokens/dist/json/tokens.json";
 
-import { useTheme } from "@storybook/theming";
+import { useTheme } from "storybook/theming";
 
 /**
  * A nestable function to search for a token value in the spectrum token data

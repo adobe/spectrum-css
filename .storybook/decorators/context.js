@@ -1,10 +1,10 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
 import tokens from "@spectrum-css/tokens/dist/css/index.css?inline";
 
 /**
- * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
+ * @type import('storybook/internal/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Global properties added to each component; determines what stylesheets are loaded
  **/
 export const withContextWrapper = makeDecorator({

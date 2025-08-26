@@ -1,12 +1,12 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
+import { Container, getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 

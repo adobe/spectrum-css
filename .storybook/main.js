@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import remarkGfm from 'remark-gfm';
 
 // Get a list of all the folders in the components directory
 const componentDir = path.resolve(__dirname, "../components");
@@ -8,6 +7,9 @@ const components = fs.readdirSync(componentDir, { withFileTypes: true })
 	.filter(dirent => dirent.isDirectory() && fs.existsSync(path.resolve(componentDir, dirent.name, "package.json")))
 	.map(dirent => dirent.name);
 
+/**
+ * @type {import('@storybook/web-components-vite').StorybookConfig}
+ */
 export default {
 	stories: [
 		{
@@ -25,57 +27,20 @@ export default {
 			files: "**/*.@(stories.js|mdx)",
 			titlePrefix: "Foundations",
 		},
-		{
-			directory: "./deprecated",
-			files: "**/*.@(stories.js|mdx)",
-			titlePrefix: "Deprecated",
-		},
+		// @todo: add back in when we have deprecated components to show
+		// {
+		// 	directory: "./deprecated",
+		// 	files: "**/*.@(stories.js|mdx)",
+		// 	titlePrefix: "Deprecated",
+		// },
 	],
 	rootDir: "../",
 	staticDirs: ["./assets", "./assets/images"],
 	addons: [
-		{
-			name: "@storybook/addon-controls",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-toolbars",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-measure",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-outline",
-			options: {},
-		},
-		{
-			name: "@storybook/addon-docs",
-			options: {
-				// Enables JSX support in MDX for projects that aren't configured to handle the format.
-				configureJSX: true,
-				// Support markdown in MDX files
-				transcludeMarkdown: true,
-				mdxPluginOptions: {
-					mdxCompileOptions: {
-						remarkPlugins: [remarkGfm],
-					},
-				},
-			},
-		},
-		{
-			name: "@storybook/addon-actions",
-			options: {},
-		},
-		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
-		"@whitespace/storybook-addon-html",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
 		"@storybook/addon-a11y",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
-		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
-		"@storybook/addon-interactions",
 		// https://docs.chromatic.com/docs/visual-tests-addon/
 		"@chromatic-com/storybook",
 		// https://storybook.js.org/addons/@storybook/addon-designs/
@@ -92,15 +57,6 @@ export default {
 		return mergeConfig(config, {
 			base: process.env.BASE_PATH || config.base,
 			publicDir: "./assets",
-			// Add dependencies to pre-optimization
-			optimizeDeps: {
-				include: [
-					"@whitespace/storybook-addon-html",
-					"@storybook/blocks",
-					"@storybook/theming",
-					"@storybook/components",
-				],
-			},
 			build: {
 				sourcemap: configType === "DEVELOPMENT",
 				manifest: true,
@@ -127,9 +83,7 @@ export default {
 	build: {
 		test: {
 			disabledAddons: [
-				"@whitespace/storybook-addon-html",
 				"@etchteam/storybook-addon-status",
-				"@storybook/addon-interactions",
 			],
 			disableBlocks: false,
 			disableAutoDocs: false,

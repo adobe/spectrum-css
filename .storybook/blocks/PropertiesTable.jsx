@@ -1,5 +1,5 @@
-import { DocsContext, useOf } from "@storybook/blocks";
-import { NAVIGATE_URL } from "@storybook/core-events";
+import { DocsContext, useOf } from "@storybook/addon-docs/blocks";
+import { NAVIGATE_URL } from "storybook/internal/core-events";
 import React, { useContext } from 'react';
 import { Table } from "./Layouts.jsx";
 import { ThemeContainer } from "./ThemeContainer.jsx";

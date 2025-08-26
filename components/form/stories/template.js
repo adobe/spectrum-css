@@ -1,11 +1,11 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { getRandomId, renderContent } from "../../../.storybook/decorators";
 
 import "../index.css";
 

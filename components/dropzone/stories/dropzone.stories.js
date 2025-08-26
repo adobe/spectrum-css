@@ -1,8 +1,8 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDragged } from "@spectrum-css/preview/types";
+import { Sizes } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isDragged } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { DropzoneGroup } from "./dropzone.test.js";

@@ -1,5 +1,5 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ContextualHelpGroup } from "./contextualhelp.test.js";

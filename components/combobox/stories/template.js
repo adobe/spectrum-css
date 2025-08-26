@@ -2,13 +2,13 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { Container, getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 

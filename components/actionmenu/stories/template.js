@@ -1,7 +1,7 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "../../../.storybook/decorators";
 
 export const Template = ({
 	id = getRandomId("actionmenu"),

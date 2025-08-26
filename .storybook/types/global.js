@@ -2,7 +2,7 @@
  * Rendered as controls; these properties are assigned to the document root element
  */
 
-/** @type import('@storybook/types').GlobalTypes */
+/** @type import('storybook/internal/types').GlobalTypes */
 export default {
 	color: {
 		title: "Color",

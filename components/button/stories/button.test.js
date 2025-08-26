@@ -1,4 +1,4 @@
-import { ArgGrid, Container, Variants } from "@spectrum-css/preview/decorators";
+import { ArgGrid, Container, Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 /**

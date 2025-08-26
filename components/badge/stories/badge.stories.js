@@ -1,8 +1,8 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { ArgGrid } from "@spectrum-css/preview/decorators";
-import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { ArgGrid } from "../../../.storybook/decorators";
+import { Sizes } from "../../../.storybook/decorators/utilities.js";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { BadgeGroup } from "./badge.test.js";

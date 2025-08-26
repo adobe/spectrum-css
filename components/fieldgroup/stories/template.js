@@ -1,12 +1,12 @@
 import { Template as CheckBox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
+import { Container, getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 

@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants } from "../../../.storybook/decorators";
 import { BreadcrumbTitleHeadings, Template } from "./template.js";
 
 export const BreadcrumbGroup = Variants({

@@ -2,12 +2,12 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as InfieldProgressCircle } from "@spectrum-css/infieldprogresscircle/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { Container, getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 
@@ -48,7 +48,7 @@ import "../index.css";
 /**
  *
  * @param {API} args
- * @param {import('@storybook/types').StoryContext<import('@storybook/web-components').WebComponentsRenderer, API>} context
+ * @param {import('storybook/internal/types').StoryContext<import('@storybook/web-components').WebComponentsRenderer, API>} context
  * @returns {import('lit').TemplateResult}
  */
 export const Template = ({

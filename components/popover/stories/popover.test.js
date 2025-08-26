@@ -1,6 +1,6 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 export const PopoverGroup = Variants({

@@ -1,6 +1,6 @@
 import { Default as ModalStory } from "@spectrum-css/modal/stories/modal.stories.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { isOpen } from "@spectrum-css/preview/types";
+import { isOpen } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { Template } from "./template.js";

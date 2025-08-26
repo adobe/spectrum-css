@@ -1,4 +1,4 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { MillerGroup } from "./miller.test.js";

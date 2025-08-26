@@ -1,5 +1,5 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled } from "@spectrum-css/preview/types";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isDisabled } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { LogicButtonGroup } from "./logicbutton.test.js";

@@ -1,8 +1,8 @@
 import { Template as Fieldgroup } from "@spectrum-css/fieldgroup/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as NumberField } from "@spectrum-css/stepper/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { FormGroup } from "./form.test.js";

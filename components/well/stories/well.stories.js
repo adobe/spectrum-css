@@ -1,6 +1,6 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { WellGroup } from "./well.test.js";

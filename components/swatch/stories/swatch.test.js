@@ -1,5 +1,5 @@
-import { Container, Variants } from "@spectrum-css/preview/decorators";
 import exampleImage from "../../../.storybook/assets/images/example-ava@2x.png";
+import { Container, Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 export const Swatches = (args, context) => {

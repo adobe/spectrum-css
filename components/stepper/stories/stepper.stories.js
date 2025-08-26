@@ -1,7 +1,7 @@
-import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isHovered, isKeyboardFocused, isReadOnly, size } from "@spectrum-css/preview/types";
 import { default as TextfieldStories } from "@spectrum-css/textfield/stories/textfield.stories.js";
+import { Sizes, withDownStateDimensionCapture } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isDisabled, isFocused, isHovered, isKeyboardFocused, isReadOnly, size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { NumberFieldGroup } from "./stepper.test.js";

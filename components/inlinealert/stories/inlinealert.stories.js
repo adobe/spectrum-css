@@ -1,4 +1,4 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { InlineAlertGroup } from "./inlinealert.test.js";
@@ -6,7 +6,7 @@ import { AlertsWithStyleOptions } from "./template.js";
 
 /**
  * In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.
- * 
+ *
  * In-line alerts have five different variants: neutral (default), informative, positive, notice, and negative. Each variant is available with three fill styles (treatment): border (default), subtle, and bold.
  */
 export default {

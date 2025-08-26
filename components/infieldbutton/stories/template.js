@@ -3,7 +3,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
-import { Container } from "@spectrum-css/preview/decorators";
+import { Container } from "../../../.storybook/decorators";
 import "../index.css";
 
 export const Template = (

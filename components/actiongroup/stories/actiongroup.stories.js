@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { Sizes } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ActionGroups } from "./actiongroup.test.js";

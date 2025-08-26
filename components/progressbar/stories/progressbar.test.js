@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 export const ProgressBarGroup = Variants({
@@ -24,7 +24,7 @@ export const ProgressBarGroup = Variants({
 			testHeading: "Without value label",
 			showValueLabel: false,
 		},
-		/* The gradient story below supports linear-gradients used by Express. For use cases that require a custom 
+		/* The gradient story below supports linear-gradients used by Express. For use cases that require a custom
 		linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS.
 		*/
 		{

@@ -1,7 +1,7 @@
-import { Container, Variants } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
+import { Container, Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 import { uiIconsWithDirections, uniqueUiIconBaseNames, workflowSizes } from "./utilities.js";
 

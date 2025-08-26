@@ -1,19 +1,15 @@
 // Used in the icon sprite decorator to inject the sprite sheets into the document
 import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/assets/svg-spriteSheet/icons.svg?raw";
 import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "storybook/preview-api";
 
 /**
- * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
+ * @type import('storybook/internal/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  **/
 export const withIconSpriteSheet = makeDecorator({
 	name: "withIconSpriteSheet",
 	parameterName: "spritesheet",
 	wrapper: (StoryFn, context) => {
-		const {
-			loaded = {},
-		} = context;
-
 		useEffect(() => {
 			// Inject the sprite sheets into the document
 			let sprite = document.getElementById("spritesheets");

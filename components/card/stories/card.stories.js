@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused, isSelected } from "@spectrum-css/preview/types";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isFocused, isSelected } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CardGroup } from "./card.test.js";

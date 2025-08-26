@@ -2,12 +2,12 @@ import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/templ
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { getRandomId, renderContent } from "../../../.storybook/decorators";
 
 import "../index.css";
 

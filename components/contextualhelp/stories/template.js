@@ -1,11 +1,11 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 

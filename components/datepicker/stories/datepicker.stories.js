@@ -1,7 +1,7 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isInvalid, isOpen, isQuiet, isReadOnly, isRequired, isValid } from "@spectrum-css/preview/types";
-import { within } from "@storybook/test";
+import { within } from "storybook/test";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isDisabled, isInvalid, isOpen, isQuiet, isReadOnly, isRequired, isValid } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { DatePickerGroup } from "./datepicker.test.js";

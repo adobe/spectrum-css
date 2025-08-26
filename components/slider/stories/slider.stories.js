@@ -1,6 +1,6 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isEmphasized, isFocused, isHovered, size } from "@spectrum-css/preview/types";
+import { Sizes } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isActive, isDisabled, isEmphasized, isFocused, isHovered, size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SliderGroup, VariantGroup } from "./slider.test.js";

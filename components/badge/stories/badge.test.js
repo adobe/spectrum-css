@@ -1,6 +1,6 @@
-import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { capitalize } from "lodash-es";
+import { Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 const Badges = (args, context) => {

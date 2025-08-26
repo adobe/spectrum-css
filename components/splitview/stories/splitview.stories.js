@@ -1,5 +1,5 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused } from "@spectrum-css/preview/types";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isFocused } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SplitViewGroup } from "./splitview.test.js";

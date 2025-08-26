@@ -1,30 +1,30 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import {
-	Sizes,
-	withDownStateDimensionCapture,
-} from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
+    Sizes,
+    withDownStateDimensionCapture,
+} from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import {
-	isActive,
-	isDisabled,
-	isFocused,
-	isHovered,
-	isSelected,
-	size,
-} from "@spectrum-css/preview/types";
+    isActive,
+    isDisabled,
+    isFocused,
+    isHovered,
+    isSelected,
+    size,
+} from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import {
-	MenuItemGroup,
-	MenuTraySubmenu,
-	MenuWithVariants,
+    MenuItemGroup,
+    MenuTraySubmenu,
+    MenuWithVariants,
 } from "./menu.test.js";
 import {
-	DisabledItemGroup,
-	OverflowGroup,
-	SelectionGroup,
-	SubmenuInPopover,
-	Template,
+    DisabledItemGroup,
+    OverflowGroup,
+    SelectionGroup,
+    SubmenuInPopover,
+    Template,
 } from "./template.js";
 
 /**

@@ -1,7 +1,7 @@
-import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { Container } from "../../../.storybook/decorators";
 
 import "../index.css";
 

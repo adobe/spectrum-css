@@ -2,8 +2,8 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isOpen } from "@spectrum-css/preview/types";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isOpen } from "../../../.storybook/types";
 import packageJson from "../package.json";
 import { ActionMenuGroup } from "./actionmenu.test.js";
 

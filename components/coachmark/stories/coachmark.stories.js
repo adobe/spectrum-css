@@ -1,13 +1,13 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import {
-	CoachMarkMediaOptionsTemplate,
-	CoachmarkMenuStatesTemplate,
-	Template,
+    CoachMarkMediaOptionsTemplate,
+    CoachmarkMenuStatesTemplate,
+    Template,
 } from "./template.js";
 
 /**

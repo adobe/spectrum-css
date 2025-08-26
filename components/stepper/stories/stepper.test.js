@@ -1,6 +1,6 @@
-import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template.js";
 import { capitalize } from "lodash-es";
+import { Variants } from "../../../.storybook/decorators";
+import { Template } from "./template.js";
 
 export const NumberFieldGroup = Variants({
 	Template,

@@ -1,12 +1,12 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
-import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
+import { Container } from "../../../.storybook/decorators";
 
 import "../index.css";
 

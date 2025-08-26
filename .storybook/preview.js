@@ -17,7 +17,7 @@ import { argTypes, globalTypes } from "./types";
 // Import the custom base styles
 import "./assets/base.css";
 
-/** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
+/** @type import('storybook/internal/types').StorybookParameters & import('storybook/internal/types').API_Layout */
 export const parameters = {
 	layout: "centered",
 	showNav: true,

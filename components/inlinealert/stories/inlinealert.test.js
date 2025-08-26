@@ -1,5 +1,5 @@
-import { Variants } from "@spectrum-css/preview/decorators";
 import { capitalize } from "lodash-es";
+import { Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 export const InlineAlertGroup = Variants({

@@ -1,8 +1,8 @@
-import { renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { renderContent } from "../../../.storybook/decorators";
 
 import "../index.css";
 

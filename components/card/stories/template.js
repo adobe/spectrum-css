@@ -3,12 +3,12 @@ import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 

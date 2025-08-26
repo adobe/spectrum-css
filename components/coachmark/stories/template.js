@@ -2,11 +2,11 @@ import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/templat
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as CoachIndicator } from "@spectrum-css/coachindicator/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { Container } from "../../../.storybook/decorators";
 
 import "../index.css";
 

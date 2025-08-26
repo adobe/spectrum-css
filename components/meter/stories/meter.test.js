@@ -1,5 +1,5 @@
-import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
+import { Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 export const MeterSizingTemplate  = (args, context) => {

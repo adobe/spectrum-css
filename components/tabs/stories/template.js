@@ -1,13 +1,13 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
+import { Container, getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 

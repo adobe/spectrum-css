@@ -1,8 +1,8 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isEmphasized, isOpen } from "@spectrum-css/preview/types";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isEmphasized, isOpen } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ActionBarGroup } from "./actionbar.test.js";

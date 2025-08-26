@@ -1,5 +1,5 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-css/preview/types";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isActive, isFocused, isHovered, isQuiet, staticColor } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { LinkGroup } from "./link.test.js";

@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants } from "../../../.storybook/decorators";
 import { Template } from "./textarea.template";
 
 export const TextAreaGroup = Variants({

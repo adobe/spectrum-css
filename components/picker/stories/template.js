@@ -3,13 +3,13 @@ import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as InfieldProgressCircle } from "@spectrum-css/infieldprogresscircle/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { Container, getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 

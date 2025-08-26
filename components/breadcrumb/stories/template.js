@@ -1,11 +1,11 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Container } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
+import { Container } from "../../../.storybook/decorators";
 
 import "../index.css";
 

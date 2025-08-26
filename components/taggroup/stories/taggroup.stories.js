@@ -1,7 +1,7 @@
-import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isInvalid } from "@spectrum-css/preview/types";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
+import { Sizes, withDownStateDimensionCapture } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isInvalid } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { exampleTagItems, TagGroupDisabledItemAndActionButton, TagGroups, TagGroupSizingTemplate } from "./taggroup.test.js";

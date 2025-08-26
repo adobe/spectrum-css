@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 export const LogicButtonGroup = Variants({

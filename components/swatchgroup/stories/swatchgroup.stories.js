@@ -1,6 +1,6 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
+import { Sizes } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SwatchgroupGroup } from "./swatchgroup.test.js";

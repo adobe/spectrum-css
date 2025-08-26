@@ -1,4 +1,4 @@
-import { ArgGrid, Variants } from "@spectrum-css/preview/decorators";
+import { ArgGrid, Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 const CloseButtons = (args, context) => ArgGrid({

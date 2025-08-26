@@ -1,5 +1,5 @@
-import { renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
+import { renderContent } from "../../../.storybook/decorators";
 
 import "../index.css";
 

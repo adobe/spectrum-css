@@ -1,8 +1,8 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isReadOnly, size } from "@spectrum-css/preview/types";
-import { within } from "@storybook/test";
+import { within } from "storybook/test";
+import { Sizes, withDownStateDimensionCapture } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isReadOnly, size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";

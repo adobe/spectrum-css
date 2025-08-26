@@ -1,6 +1,6 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
+import { Sizes } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isReadOnly, isRequired, isValid, size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptions, InvalidOptions, RequiredOptions, Template, TextFieldOptions } from "./template.js";

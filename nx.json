@@ -215,8 +215,7 @@
 			"options": {
 				"commands": [
 					"chromatic --only-changed --build-script-name build --junit-report"
-				],
-				"cwd": ".storybook"
+				]
 			}
 		},
 		"validate": {

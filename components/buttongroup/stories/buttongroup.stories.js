@@ -1,6 +1,6 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ButtonGroup } from "./buttongroup.test.js";

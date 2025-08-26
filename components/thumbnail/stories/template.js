@@ -1,10 +1,10 @@
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { getRandomId } from "../../../.storybook/decorators";
 
 import "../index.css";
 

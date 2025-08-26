@@ -1,11 +1,11 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
-import { Container } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
+import { Container } from "../../../.storybook/decorators";
 
 import "../index.css";
 

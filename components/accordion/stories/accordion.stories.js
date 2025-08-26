@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isQuiet, size } from "@spectrum-css/preview/types";
+import { Sizes } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isQuiet, size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { AccordionGroup, testsContent as accordionContent, directActionsContent, longerContent } from "./accordion.test.js";

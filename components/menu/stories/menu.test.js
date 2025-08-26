@@ -1,6 +1,6 @@
-import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { Variants } from "../../../.storybook/decorators";
 import { MenuItem, Template } from "./template.js";
 
 export const MenuWithVariants = Variants({

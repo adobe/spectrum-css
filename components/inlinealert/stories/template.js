@@ -4,7 +4,7 @@ import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { Container } from "@spectrum-css/preview/decorators";
+import { Container } from "../../../.storybook/decorators";
 
 import "../index.css";
 

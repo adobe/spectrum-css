@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants } from "../../../.storybook/decorators";
 import { TagsDefaultOptions, Template } from "./template.js";
 
 export const TagGroups = Variants({

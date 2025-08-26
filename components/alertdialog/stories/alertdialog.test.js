@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants } from "../../../.storybook/decorators";
 import { Dialog, Template } from "./template.js";
 
 export const AlertDialogGroup = Variants({

@@ -1,10 +1,10 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isOpen } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PopoverGroup } from "./popover.test.js";

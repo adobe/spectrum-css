@@ -1,4 +1,3 @@
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -6,6 +5,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
+import { getRandomId } from "../../../.storybook/decorators";
 import { appendUiIconDefaultSizing, getSpriteSheetName, uiIconsWithDirections, workflowIconsCleaned } from "./utilities.js";
 
 import "../index.css";

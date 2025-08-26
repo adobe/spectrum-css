@@ -1,7 +1,7 @@
-import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { withUnderlayWrapper } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isOpen } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { ModalGroup } from "./modal.test.js";

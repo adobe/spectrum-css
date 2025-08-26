@@ -1,5 +1,5 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Sizes } from "../../../.storybook/decorators";
+import { disableDefaultModes } from "../../../.storybook/modes";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { HelpTextOptionsTextArea, InvalidOptionsTextArea, RequiredOptionsTextArea, Template, TextAreaOptions } from "./textarea.template.js";

@@ -1,6 +1,6 @@
-import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { Template as ProgressBar } from "@spectrum-css/progressbar/stories/template.js";
 import { capitalize } from "lodash-es";
+import { ArgGrid } from "../../../.storybook/decorators";
 
 import "../index.css";
 

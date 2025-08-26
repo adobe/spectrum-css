@@ -1,5 +1,5 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isDragged, isFocused, size } from "@spectrum-css/preview/types";
+import { disableDefaultModes } from "../../../.storybook/modes";
+import { isDisabled, isDragged, isFocused, size } from "../../../.storybook/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { DialGroup } from "./dial.test.js";

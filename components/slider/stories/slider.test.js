@@ -1,4 +1,4 @@
-import { Sizes, Variants } from "@spectrum-css/preview/decorators";
+import { Sizes, Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 export const testData = [

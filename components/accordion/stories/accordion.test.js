@@ -1,6 +1,6 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
-import { Sizes, Variants } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Sizes, Variants } from "../../../.storybook/decorators";
 import { Template } from "./template.js";
 
 /**
