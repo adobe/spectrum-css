@@ -48,7 +48,8 @@
 					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output {projectRoot}/dist/tokens-diff.md"
 				],
 				"forwardAllArgs": true,
-				"v1": "13.12.0"
+				"v1": "13.13.0",
+				"v2": "13.14.0"
 			},
 			"outputs": [
 				"{projectRoot}/dist/tokens-diff.md"
