@@ -47,32 +47,34 @@ export const CoachContainer = (
 				</div>
 			`,
 		)}
-		<div class="spectrum-CoachMark-header">
+		<div class="spectrum-CoachMark-header" style=${styleMap({
+			"--mod-popover-width": "0px",
+			"--mod-popover-height": "0px",
+			"--mod-popover-wrapper-spacing": "0px",
+		})}>
 			<div class="spectrum-CoachMark-title">${title}</div>
 			${when(
 				hasActionMenu,
-				() =>
-					html` <div class="spectrum-CoachMark-action-menu">
-						${ActionMenu(
+				() => ActionMenu(
+					{
+						isOpen,
+						position: "bottom-start",
+						iconName: "More",
+						size: scale === "large" ? "s" : "m",
+						customClasses: [
+							`${rootClass}-action-menu`
+						],
+						items: [
 							{
-								isOpen,
-								position: "bottom-start",
-								iconName: "More",
-								size: scale === "large" ? "s" : "m",
-								items: [
-									{
-										label: "Skip tour",
-									},
-									{
-										label: "Reset tour",
-									},
-								],
-								popoverHeight: 68,
-								popoverWidth: 84,
+								label: "Skip tour",
 							},
-							context,
-						)}
-					</div>`,
+							{
+								label: "Reset tour",
+							},
+						],
+					},
+					context,
+				),
 			)}
 		</div>
 		<div class="spectrum-CoachMark-content">
@@ -127,29 +129,24 @@ export const CoachContainer = (
 };
 
 export const Template = (args, context) => {
-	return html`
-		<div
-			class=${classMap({
-				[args.rootClass]: true,
-				...args.customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${styleMap(args.customStyles)}
-		>
-			${Popover(
-				{
-					customStyles: {
-						"inline-size": "var(--spectrum-coach-mark-width)",
-					},
-					customClasses: [`${args.rootClass}-popover`],
-					isOpen: true,
-					position: "right-top",
-					trigger: (passthrough) => CoachIndicator(passthrough, context),
-					content: [CoachContainer(args, context)],
-				},
-				context,
-			)}
-		</div>
-	`;
+	return Popover(
+		{
+			customWrapperClasses: [
+				args.rootClass,
+				...args?.customClasses ?? []
+			],
+			customStyles: {
+				...args?.customStyles ?? {},
+				"inline-size": "var(--spectrum-coach-mark-width)",
+			},
+			customClasses: [`${args.rootClass}-popover`],
+			isOpen: true,
+			position: "right-top",
+			trigger: (passthrough) => CoachIndicator(passthrough, context),
+			content: [CoachContainer(args, context)],
+		},
+		context,
+	);
 };
 
 /* Displays open and closed action menus in a single story. */
@@ -165,15 +162,7 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 			Container({
 				withBorder: false,
 				heading: "With action menu (closed) and media",
-				content: Template(
-					{
-						...args,
-						customStyles: {
-							"height": "265px"
-						}
-					},
-					context,
-				),
+				content: Template(args, context),
 			}),
 			Container({
 				withBorder: false,
@@ -183,10 +172,7 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 						...args,
 						hasImage: false,
 						hasActionMenu: true,
-						isOpen: true,
-						customStyles: {
-							"height": "260px"
-						}
+						isOpen: true
 					},
 					context,
 				),

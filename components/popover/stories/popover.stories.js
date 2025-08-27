@@ -1,6 +1,7 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { ArgGrid } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -8,7 +9,7 @@ import { html } from "lit";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { PopoverGroup } from "./popover.test.js";
-import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * A popover is used to display transient content (menus, options, additional actions, etc.) and appears when clicking/tapping on a source (tools, buttons, etc.).
@@ -72,26 +73,17 @@ export default {
 				"end-bottom",
 			],
 		},
-		popoverHeight: { table: { disable: true } },
-		popoverWidth: { table: { disable: true } },
 		popoverAlignment: { table: { disable: true } },
-		popoverWrapperStyles: { table: { disable: true } },
+		customWrapperStyles: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Popover",
 		isOpen: true,
 		withTip: false,
 		position: "bottom",
-		popoverHeight: 158,
-		popoverWidth: 105,
 	},
 	parameters: {
 		layout: "centered",
-		docs: {
-			story: {
-				height: "200px",
-			}
-		},
 		design: {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=42086-5684",
@@ -155,6 +147,10 @@ Nested.args = {
 		label: "Actions",
 		...passthroughs,
 	}, context),
+	customStyles: {
+		"--mod-popover-width": "0px",
+		"--mod-popover-height": "0px",
+	},
 	content: [
 		(passthroughs, context) => Menu({
 			items: [
@@ -203,6 +199,14 @@ Nested.args = {
 		}, context),
 	],
 };
+Nested.parameters = {
+	docs: {
+		story: {
+			height: "250px"
+		},
+
+	}
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = PopoverGroup.bind({});
@@ -245,7 +249,7 @@ DialogStyle.tags = ["!dev"];
 DialogStyle.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
+	trigger: undefined,
 	content: [
 		(passthroughs, context) => Dialog({
 			showModal: false,
@@ -269,11 +273,6 @@ DialogStyle.args = {
 };
 DialogStyle.parameters = {
 	layout: "padded",
-	docs: {
-		story: {
-			height: "350px",
-		},
-	},
 	chromatic: {
 		disableSnapshot: true,
 	},
@@ -290,18 +289,18 @@ DialogStyle.parameters = {
  * - Top and bottom popover positions use the same SVG. The CSS handles flipping the SVG vertically.
  * - Left, right, start, and end popover positions use the same SVG. The CSS handles flipping the SVG horizontally.
  */
-export const Positioning = TipPlacementVariants.bind({});
+export const Positioning = (args, context) => ArgGrid({
+	Template,
+	argKey: "position",
+	withBorder: false,
+	...args,
+}, context);
 Positioning.storyName = "Positioning options";
 Positioning.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
-	content: [() => html`<span style="padding: 0 7px">Basic text content, with some added padding.</span>`],
-	skipAlignment: true,
-	popoverWrapperStyles: {
-		"display": "block",
-		"height": "150px",
-	},
+	trigger: undefined,
+	content: [() => html`<p style="padding: 0 7px; margin: 0; inline-size: 150px;">Basic text content, with some added padding.</p>`],
 };
 Positioning.tags = ["!dev"];
 Positioning.parameters = {
@@ -322,12 +321,20 @@ Positioning.parameters = {
  * top and bottom popovers, or half the height of the source for side popovers. The following
  * example sets this custom property to `50px` for a source button that is `100px` wide.
  */
-export const TipOffset = FixedWidthSourceTemplate.bind({});
+export const TipOffset = Template.bind({});
 TipOffset.storyName = "Tip positioning and inline offset";
 TipOffset.args = {
 	withTip: true,
 	isOpen: true,
-	trigger: () => null,
+	position: "bottom-start",
+	trigger: (passthroughs, context) => ActionButton({
+		...passthroughs,
+		label: "Source",
+		customStyles: {
+			...passthroughs?.customStyles ?? {},
+			"min-width": "100px",
+		},
+	}, context),
 	content: [
 		() => Menu({
 			items: [
@@ -346,11 +353,11 @@ TipOffset.args = {
 			],
 		}),
 	],
+	customWrapperStyles: {
+		"width": "300px",
+	},
 	customStyles: {
 		"--spectrum-popover-pointer-edge-offset": "50px",
-	},
-	popoverWrapperStyles: {
-		"display": "block",
 	},
 };
 TipOffset.tags = ["!dev"];

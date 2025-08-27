@@ -233,11 +233,6 @@ export const WithHero = Template.bind({});
 WithHero.tags = ["!dev"];
 WithHero.storyName = "With hero image";
 WithHero.parameters = {
-	docs: {
-		story: {
-			height: "650px",
-		},
-	},
 	chromatic: { disableSnapshot: true },
 };
 WithHero.args = {
