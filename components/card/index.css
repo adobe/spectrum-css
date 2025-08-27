@@ -376,7 +376,7 @@
 	}
 
 	&.is-selected .spectrum-Card-preview::before {
-		background-color: rgb(var(--mod-card-selected-background-color-rgb, var(--spectrum-card-selected-background-color-rgb)), var(--mod-card-selected-background-opacity, var(--spectrum-card-selected-background-opacity)));
+		background-color: var(--mod-card-selected-background-color, color-mix(in sRGB, var(--spectrum-card-selected-background-color) var(--spectrum-card-selected-background-opacity), transparent));
 	}
 
 	.spectrum-Card-body {

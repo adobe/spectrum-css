@@ -23,22 +23,24 @@
 	--spectrum-table-section-header-background-color: var(--spectrum-gray-200);
 
 	/* @todo Refactor or remove these properties once the RGB stripped value is available. */
-	--spectrum-table-selected-row-background-color: rgb(var(--spectrum-table-selected-row-background-color-rgb), var(--spectrum-table-selected-row-background-opacity));
-	--spectrum-table-selected-row-background-color-non-emphasized: rgb(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized));
-	--spectrum-table-selected-row-background-color-hover: rgb(var(--spectrum-table-selected-row-background-color-rgb), var(--spectrum-table-selected-row-background-opacity-hover));
-	--spectrum-table-selected-row-background-color-active: rgb(var(--spectrum-table-selected-row-background-color-rgb), var(--spectrum-table-selected-row-background-opacity-hover));
-	--spectrum-table-selected-row-background-color-non-emphasized-focus: rgb(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized-hover));
+	--spectrum-table-selected-row-background-color: color-mix(in sRGB, var(--spectrum-table-selected-row-background-color) var(--spectrum-table-selected-row-background-opacity), transparent);
+	--spectrum-table-selected-row-background-color-non-emphasized: color-mix(in sRGB, var(--spectrum-gray-700) var(--spectrum-table-selected-row-background-opacity-non-emphasized), transparent);
+	--spectrum-table-selected-row-background-color-hover: color-mix(in sRGB, var(--spectrum-table-selected-row-background-color) var(--spectrum-table-selected-row-background-opacity-hover), transparent);
+	--spectrum-table-selected-row-background-color-active: color-mix(in sRGB, var(--spectrum-table-selected-row-background-color) var(--spectrum-table-selected-row-background-opacity-hover), transparent);
+	--spectrum-table-selected-row-background-color-non-emphasized-focus: color-mix(in sRGB, var(--spectrum-gray-700) var(--spectrum-table-selected-row-background-opacity-non-emphasized-hover), transparent);
 
 	--spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--spectrum-table-row-background-color)));
 	--spectrum-table-selected-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--spectrum-table-selected-row-background-color-non-emphasized)));
 
-	--spectrum-table-drop-zone-background-color: rgb(var(--spectrum-drop-zone-background-color-rgb), var(--spectrum-drop-zone-background-color-opacity));
 	--spectrum-table-drop-zone-outline-color: var(--spectrum-accent-visual-color);
+
+	/* Row Selection */
+	--spectrum-table-row-active-color: color-mix(in sRGB, var(--spectrum-gray-900) var(--spectrum-table-row-down-opacity), transparent); /* active/down state background color */
 
 	/* Row States */
 	/* @todo Refactor or remove these properties once the RGB stripped value is available. */
-	--spectrum-table-row-background-color-hover: rgb(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-hover-opacity));
-	--spectrum-table-row-background-color-active: rgb(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-down-opacity)); /* active/down state background color */
+	--spectrum-table-row-background-color-hover: color-mix(in sRGB, var(--spectrum-gray-900) var(--spectrum-table-row-hover-opacity), transparent);
+	--spectrum-table-row-background-color-active: color-mix(in sRGB, var(--spectrum-gray-900) var(--spectrum-table-row-down-opacity), transparent); /* active/down state background color */
 
 	/* Border */
 	--spectrum-table-border-color: var(--spectrum-gray-300);
@@ -245,7 +247,7 @@
 	.spectrum-Table-body.is-drop-target & {
 		--highcontrast-table-row-text-color: var(--highcontrast-table-selected-row-text-color);
 		--highcontrast-table-icon-color: var(--highcontrast-table-selected-row-text-color);
-		--spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-drop-zone-background-color, var(--spectrum-table-drop-zone-background-color)));
+		--spectrum-table-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-drop-zone-background-color, color-mix(in sRGB, var(--spectrum-drop-zone-background-color) var(--spectrum-drop-zone-background-color-opacity), transparent)));
 	}
 }
 

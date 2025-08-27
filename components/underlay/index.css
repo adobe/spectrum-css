@@ -20,8 +20,7 @@
 	/* @deprecated --mod-overlay-animation-duration-opened in favor of --mod-underlay-background-entry-animation-delay */
 	--spectrum-underlay-background-entry-animation-delay: var(--mod-underlay-background-entry-animation-delay, var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0)));
 
-	/* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
-	--spectrum-underlay-background-color: var(--mod-underlay-background-color, rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity)));
+	--spectrum-underlay-background-color: var(--mod-underlay-background-color, color-mix(in sRGB, var(--spectrum-overlay-color) var(--spectrum-overlay-opacity), transparent));
 
 	pointer-events: none;
 	visibility: hidden;

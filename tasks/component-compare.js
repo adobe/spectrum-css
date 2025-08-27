@@ -5,6 +5,7 @@ const { join, relative, dirname, basename, extname } = require("path");
 const fg = require("fast-glob");
 const tar = require("tar");
 const _ = require("lodash");
+const semver = require("semver");
 
 const nunjucks = require("nunjucks");
 const env = new nunjucks.Environment();
@@ -158,12 +159,23 @@ async function fetchPublishedComponent(packageName, {
 			warnings.push(err ?? `Failed to fetch ${packageName.yellow} from npm.\n`);
 		})) ?? {};
 
-	// If the component exists on npm, fetch the base release data
-	if (npmData["dist-tags"]?.[baseTag]) {
-		tag = npmData["dist-tags"]?.[baseTag];
-	}
 
-	if (!tag) return;
+	// If a base was configured and it exists as a specific tag, use that
+	if (baseTag) {
+		if (npmData["dist-tags"]?.[baseTag]) {
+			tag = npmData["dist-tags"]?.[baseTag];
+		}
+		// Otherwise try to use the base as a version number
+		else if (semver.valid(baseTag) && npmData.versions?.[baseTag]) {
+			tag = baseTag;
+		}
+	}
+	else if (npmData["dist-tags"]?.latest) {
+		tag = npmData["dist-tags"]?.latest;
+	}
+	// @todo: else fetch built assets from the main branch?
+
+	if (!tag) return { warnings: [`No base version found for ${packageName.yellow}.`] };
 
 	// Check locally to see if we have already fetched the tarball
 	// for this tag; if not, fetch it and extract it
@@ -206,7 +218,7 @@ async function processComponent(
 		cwd,
 		output = pathing.output,
 		cacheLocation = pathing.cache,
-		tag,
+		base,
 	} = {}
 ) {
 	if (!component) return Promise.reject("No component specified.");
@@ -551,14 +563,24 @@ async function main(
 	}
 }
 
-let {
-	_: components,
-	output = join(dirs.root, ".diff-output"),
-	cache = true,
-	tag = "latest",
-	// @todo allow to run against local main or published versions
-} = yargs(hideBin(process.argv)).argv;
+let { _: components, output, cache, base } = yargs(hideBin(process.argv))
+	.option("output", {
+		type: "string",
+		description: "The output directory for the diffs",
+		default: join(dirs.root, ".diff-output"),
+	})
+	.option("cache", {
+		type: "boolean",
+		description: "Whether to cache the tarballs from npm",
+		default: true,
+	})
+	.option("base", {
+		type: "string",
+		description: "The base version of the component to compare against",
+		default: "next",
+	})
+	.argv;
 
-main(components, output, { skipCache: !cache, tag }).then((code) => {
+main(components, output, { base, skipCache: !cache }).then((code) => {
 	process.exit(code);
 });
