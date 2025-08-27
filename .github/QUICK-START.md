@@ -10,11 +10,38 @@ Install the components you want along with their dependencies. Here's an example
 yarn add -DW @spectrum-css/tokens @spectrum-css/typography @spectrum-css/page @spectrum-css/icon @spectrum-css/button
 ```
 
-Spectrum CSS components utilize custom properties in order to change themes and scales. For these to apply, a couple of classes need to be added to the document’s `<html>` tag based on the [visual language](https://github.com/adobe/spectrum-css?tab=readme-ov-file#visual-language), [scale](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales), and [theme](https://github.com/adobe/spectrum-css?tab=readme-ov-file#themes-colorstops) you wish to use. For example, the following code snippet will display styling for the default Spectrum visual language using medium scale and light color theme:
+Spectrum CSS components utilize custom properties in order to express our design language through a set of core tokens. We leverage the `@adobe/spectrum-tokens` data as a source of this design data and convert it into a set of CSS custom properties. This allows us to use the tokens in our components and to create a consistent design language across all of our components.
+
+Some of these tokens have different values depending on the visual language or scale being used. The default values for all tokens are set to the default values for the light theme and medium scale.
+
+To force the dark theme, you can add `color-scheme: dark` to your container element. Doing this will force the dark value to be used for all tokens that have one. This can be done at any level of the DOM and by leveraging the cascade, the color schemes can be nested or changed at any level. For example, if you want to force the dark theme for a specific component, you can add `color-scheme: dark` to that component's container element.
 
 ```html
-<html class="spectrum spectrum--medium spectrum--light"></html>
+<style>
+	:root {
+		/* Allow user preference to control the color scheme at first */
+		color-scheme: light dark;
+	}
+</style>
+<div class="container" style="color-scheme: dark">
+	<p>A dark themed container</p>
+	<div class="container" style="color-scheme: light">
+		<p>A light themed container</p>
+	</div>
+</div>
 ```
+
+The design language also includes a set of token values that represent different device sizes. At the moment, these values are only defined as "medium" and "large", with "medium" as the default which maps generally to a desktop or laptop screen. The "large" value is intended for smaller devices, such as phones and tablets. The default value for all tokens is set to the default value for the medium scale. To force the large scale, you can update the cascading layers inheritance:
+
+```css
+@layers defaults, medium;
+
+@media screen and (min-width: 768px) {
+	@layers defaults, large;
+}
+```
+
+What's happening here is that the `defaults` layer is being overridden by the `large` layer when the screen size is greater than 768px. This means that all tokens that have a value for the `large` scale will be used instead of the default value. The most useful feature of this approach is that each application can make their own decision about which scale to leverage and at what screen size. This allows for a lot of flexibility in how the design language is applied to different applications.
 
 Use the `index.css` files in your project to include component and global styles ([background theme/colorstop](https://github.com/adobe/spectrum-css?tab=readme-ov-file#themes-colorstops), [platform scaling](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales), etc.) for the component. If you don't need all of the global styles, peek at the docs for [including assets](https://github.com/adobe/spectrum-css?tab=readme-ov-file#including-assets)). Use this file by including the stylesheet (plus stylesheets for dependencies) in the `<head>` tag:
 

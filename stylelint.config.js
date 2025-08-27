@@ -14,8 +14,6 @@ module.exports = {
 		// "stylelint-high-performance-animation",
 	],
 	ignoreFiles: [
-		// Static utility assets
-		"tokens/custom-*/*.css",
 		"tools/generator/**/*.css",
 		// Compiled and generated files
 		"**/dist/**",
@@ -55,7 +53,7 @@ module.exports = {
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: ["extend", "each", "include", "mixin"],
+				ignoreAtRules: ["extend", "each", "include", "mixin", "design-tokens"],
 			},
 		],
 		"block-no-empty": [true, {
@@ -83,6 +81,12 @@ module.exports = {
 				ignoreProperties: {
 					"/.+/": ["CanvasText", "preserve-parent-color"],
 				},
+				propertiesSyntax: {
+					"/.+/": "| <design-token()>",
+				},
+				typesSyntax: {
+					"<design-token()>": "design-token( <string> [ to <ident> ]? )",
+				},
 			},
 		],
 		"declaration-block-no-shorthand-property-overrides": true,
@@ -90,6 +94,7 @@ module.exports = {
 			true,
 			{
 				severity: "warning",
+				ignoreFunctions: ["design-token"],
 			},
 		],
 		"max-nesting-depth": [3, { severity: "warning" }],
@@ -171,7 +176,7 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["components/*/index.css", "components/*/themes/spectrum.css"],
+			files: ["components/*/index.css"],
 			rules: {
 				"selector-class-pattern": [
 					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
@@ -184,9 +189,7 @@ module.exports = {
 						/** @note this is a list of custom properties that are allowed to be unknown */
 						ignoreList: [
 							/^--mod-/,
-							/^--system-/,
 							/^--spectrum-picked-color$/,
-							/^--spectrum-downstate-(height|width)$/,
 						],
 						skipDependencies: false,
 						disableFix: true,
@@ -218,7 +221,7 @@ module.exports = {
 		{
 			files: ["tokens*/**/*.css(?inline)?", "tokens/**/*.css"],
 			rules: {
-				"custom-property-pattern": [/^(spectrum|color|scale|system)/, {}],
+				"custom-property-pattern": [/^(spectrum|scale)/, {}],
 			}
 		},
 		{

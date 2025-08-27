@@ -10,10 +10,6 @@ export const withIconSpriteSheet = makeDecorator({
 	name: "withIconSpriteSheet",
 	parameterName: "spritesheet",
 	wrapper: (StoryFn, context) => {
-		const {
-			loaded = {},
-		} = context;
-
 		useEffect(() => {
 			// Inject the sprite sheets into the document
 			let sprite = document.getElementById("spritesheets");

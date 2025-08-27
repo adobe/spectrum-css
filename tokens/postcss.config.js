@@ -13,32 +13,25 @@
 
 import postcssConfig from "../postcss.config.js";
 
-export default (options) => postcssConfig({
-	...options,
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+
+const { ext } = yargs(hideBin(process.argv))
+	.option("ext", {
+		type: "string",
+		default: ".css",
+	})
+	.argv;
+
+/** @type {import("postcss").ProcessOptions} */
+export default (ctx = {}) => postcssConfig({
+	...ctx,
+	minify: ext?.includes("min.") ?? false,
 	env: "production",
-	map: false,
 	additionalPlugins: {
-		"@spectrum-tools/postcss-rgb-mapping": {
-			colorFunctionalNotation: false,
-		},
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
-		},
-		cssnano: {
-			preset: [
-				"cssnano-preset-advanced",
-				{
-					colormin: false,
-					discardComments: { removeAll: true },
-					// @todo yarn add -DW css-declaration-sorter
-					cssDeclarationSorter: false, // @todo { order: "smacss" },
-					normalizeWhitespace: false,
-				},
-			],
-		},
-		"postcss-licensing": {
-			filename: "../COPYRIGHT",
 		},
 	},
 });

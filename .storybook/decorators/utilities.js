@@ -116,7 +116,7 @@ export const Container = ({
 	if (withBorder) {
 		borderStyles["padding-inline"] = "24px";
 		borderStyles["padding-block"] = "24px";
-		borderStyles["border"] = "1px solid rgba(var(--spectrum-gray-600-rgb), 20%)";
+		borderStyles["border"] = "1px solid color-mix(in srgb, var(--spectrum-gray-600) 20%, transparent)";
 		borderStyles["border-radius"] = "4px";
 		gap = 80;
 	}
@@ -158,6 +158,7 @@ export const Container = ({
 					"row-gap": "24px",
 					"align-items": heading && level > 1 ? "flex-start" : undefined,
 					"justify-content": direction === "column" ? "center" : "flex-start",
+					"background": level === 1 && !isDocs ? "var(--spectrum-background-base-color)" : undefined,
 					...borderStyles,
 					...wrapperStyles,
 				})}

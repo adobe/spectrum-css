@@ -12,11 +12,11 @@
  */
 
 .spectrum-Well {
-	--spectrum-well-border-color: rgb(var(--spectrum-gray-1000-rgb), 0.05);
+	--spectrum-well-border-color: color-mix(in sRGB, var(--spectrum-gray-1000) 5%, transparent);
 
 	--spectrum-well-border-width: var(--spectrum-border-width-100);
 	--spectrum-well-content-color: var(--spectrum-body-color);
-	--spectrum-well-background-color: rgb(var(--spectrum-gray-800-rgb), 0.02);
+	--spectrum-well-background-color: color-mix(in sRGB, var(--spectrum-gray-800) 2%, transparent);
 
 	text-align: start;
 	display: block;
