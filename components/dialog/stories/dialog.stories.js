@@ -150,12 +150,6 @@ export default {
 		actions: {
 			handles: [],
 		},
-		docs: {
-			story: {
-				// TODO: restore `inline: false,`
-				height: "500px",
-			},
-		},
 		design: {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=839-1128",
@@ -236,11 +230,6 @@ export const WithHero = Template.bind({});
 WithHero.tags = ["!dev"];
 WithHero.storyName = "With hero image";
 WithHero.parameters = {
-	docs: {
-		story: {
-			height: "650px",
-		},
-	},
 	chromatic: { disableSnapshot: true },
 };
 WithHero.args = {

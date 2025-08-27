@@ -140,11 +140,6 @@ export default {
 		],
 	},
 	parameters: {
-		docs: {
-			story: {
-				height: "400px"
-			}
-		},
 		design: {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=739-1453",
@@ -167,13 +162,6 @@ export default {
 export const Default = PickerGroup.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
-Default.parameters = {
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
-};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = PickerGroup.bind({});
@@ -198,11 +186,6 @@ Standard.storyName = "Default";
 Standard.tags = ["!dev"];
 Standard.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
 };
 
 /**
@@ -231,11 +214,6 @@ SelectedValue.args = {
 SelectedValue.tags = ["!dev"];
 SelectedValue.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
 };
 
 /**
@@ -288,11 +266,6 @@ Invalid.args = {
 };
 Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "300px",
-		}
-	},
 };
 
 export const Loading = Template.bind({});

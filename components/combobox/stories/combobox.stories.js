@@ -181,10 +181,10 @@ export default {
 		status: {
 			type: "migrated",
 		},
-		tags: ["migrated"],
 		packageJson,
 		metadata,
 	},
+	tags: ["migrated"],
 	decorators: [
 		withDownStateDimensionCapture,
 	],
@@ -211,11 +211,6 @@ DefaultGroup.args = {
 DefaultGroup.tags = ["!dev"];
 DefaultGroup.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "360px",
-		},
-	},
 };
 
 /**

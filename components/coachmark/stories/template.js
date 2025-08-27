@@ -55,20 +55,22 @@ export const CoachContainer = (
 					html` <div class="spectrum-CoachMark-action-menu">
 						${ActionMenu(
 							{
-								isOpen,
+								isOpen: false,
 								position: "bottom-start",
-								iconName: "More",
-								size: scale === "large" ? "s" : "m",
-								items: [
-									{
-										label: "Skip tour",
-									},
-									{
-										label: "Reset tour",
-									},
-								],
-								popoverHeight: 68,
-								popoverWidth: 84,
+								triggerArgs: {
+									iconName: "More",
+									size: scale === "large" ? "s" : "m",
+								},
+								menuArgs: {
+									items: [
+										{
+											label: "Skip tour",
+										},
+										{
+											label: "Reset tour",
+										},
+									],
+								}
 							},
 							context,
 						)}
@@ -165,15 +167,7 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 			Container({
 				withBorder: false,
 				heading: "With action menu (closed) and media",
-				content: Template(
-					{
-						...args,
-						customStyles: {
-							"height": "265px"
-						}
-					},
-					context,
-				),
+				content: Template(args, context),
 			}),
 			Container({
 				withBorder: false,
@@ -183,10 +177,7 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 						...args,
 						hasImage: false,
 						hasActionMenu: true,
-						isOpen: true,
-						customStyles: {
-							"height": "260px"
-						}
+						isOpen: true
 					},
 					context,
 				),
