@@ -138,8 +138,7 @@ module.exports = defineConfig({
 				".": "./dist/index.css",
 				"./*.md": "./*.md",
 				"./dist/*": "./dist/*",
-				"./index-*.css": "./dist/index-*.css",
-				"./index.css": "./dist/index.css",
+				"./index*.css": "./dist/index*.css",
 				"./metadata.json": "./dist/metadata.json",
 				"./package.json": "./package.json",
 				"./stories/*": "./stories/*"

@@ -1,5 +1,14 @@
 # Change Log
 
+## 12.1.0-next.15
+
+### Minor Changes
+
+📝 [#4165](https://github.com/adobe/spectrum-css/pull/4165) [`fa7a1b4`](https://github.com/adobe/spectrum-css/commit/fa7a1b4fc3b9feca7a0568eb1fd998fcdcb905fa) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+- _feature_: Add the `resetArgs` function to the argEvents decorator
+- _fix_: Resolve minor lint warnings in the Storybook CSS assets
+
 ## 12.0.5-next.14
 
 ### Patch Changes
