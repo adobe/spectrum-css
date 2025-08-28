@@ -75,8 +75,8 @@ export default {
 		status: {
 			type: "migrated",
 		},
-		tags: ["migrated"],
 	},
+	tags: ["migrated"],
 };
 
 export const Default = ActionBarGroup.bind({});
