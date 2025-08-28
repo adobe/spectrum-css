@@ -11,11 +11,88 @@
  * governing permissions and limitations under the License.
  */
 
-const { statSync, existsSync, readdirSync } = require("fs");
-const { join, relative } = require("path");
+const { statSync, readFileSync, existsSync, readdirSync } = require("fs");
+const { join, relative, extname, basename, resolve } = require("path");
 
 const github = require("@actions/github");
 const glob = require("@actions/glob");
+
+/**
+ * @typedef {string} PackageName - The name of the component package
+ * @typedef {string} FileName - The name of the file in the component package
+ * @typedef {{ isMain: boolean, hasChanged: boolean, size: { head: number, base: number }, content: { head: string | undefined, base: string | undefined } }} FileDetails - The details of the component package including the main file and the file map as well as other short-hand properties for reporting
+ * @typedef {Map<FileName, FileDetails>} PackageFiles - A map of file sizes from the head and base branches keyed by filename (full path, not shorthand)
+ * @typedef {(FileDetails & { packageName: PackageName, filePath: FileName, fileMap: PackageFiles })[]} DataSections - An array of file details represented as objects
+ * @typedef {Map<PackageName, PackageFiles>} PackageDetails - A map of file sizes from the head and base branches keyed by filename (full path, not shorthand)
+ */
+
+/** A few helpful utility functions; v1 == PR (change); v0 == base (initial) */
+
+/** @type {(v1: number, v0: number) => number} */
+const difference = (v1, v0) => v1 - v0;
+/** @type {(v1: number, v0: number) => number} */
+const isRemoved = (v1, v0) => (!v1 || v1 === 0) && (v0 && v0 > 0);
+/** @type {(v1: number, v0: number) => number} */
+const isNew = (v1, v0) => (v1 && v1 > 0) && (!v0 || v0 === 0);
+
+/**
+ * Convert the provided difference between file sizes into a human
+ * readable representation of the change.
+ * @param {number} v1
+ * @param {number} v0
+ * @returns {string}
+ */
+const printChange = function (v1, v0) {
+    /** Calculate the change in size: v1 - v0 = change */
+    const d = difference(v1, v0);
+    return d === 0
+        ? "-"
+        : `${d > 0 ? "🔴 ⬆" : "🟢 ⬇"} ${bytesToSize(Math.abs(d))}`;
+};
+
+/**
+ * Convert the provided difference between file sizes into a percent
+ * value of the change.
+ * @param {number} v1
+ * @param {number} v2
+ * @returns {string} The percent change in size
+ */
+const printPercentChange = function (v1, v0) {
+    const delta = ((v1 - v0) / v0) * 100;
+    if (delta === 0) return "no change";
+    return `${delta.toFixed(2)}%`;
+};
+
+/**
+ * From the data indexed by filename, create a detailed table of the changes in the compiled assets
+ * with a full view of all files present in the head and base branches.
+ * @param {PackageDetails} packageDetails
+  * @returns {DataSections}
+ */
+const makeDataSections = function (packageDetails) {
+    const sections = [];
+
+    /** Next convert that component data into a detailed object for reporting */
+    for (const [folderPath, fileMap] of packageDetails) {
+        const packageName = basename(folderPath);
+        for (const [filePath, details] of fileMap) {
+            /** We don't need to report on components that haven't changed unless they're new or removed */
+            if (!details.hasChanged) continue;
+
+            sections.push({
+                packageName,
+                filePath: join(folderPath, filePath),
+                minified: join(folderPath, basename(filePath) + ".min." + extname(filePath)),
+                gZipped: join(folderPath, basename(filePath) + ".min." + extname(filePath) + ".gz"),
+                fileMap,
+                ...details,
+            });
+        }
+    }
+
+    core.info(sections);
+    return sections;
+};
 
 /**
  * List all files in the directory to help with debugging
@@ -39,7 +116,7 @@ function debugEmptyDirectory(path, pattern, { core }) {
             if (dirent.isFile()) {
                 const file = join(path, dirent.name);
                 if (dirent.name.startsWith(".")) return;
-                core.info(`- ${relative(path, file)}  |  ${exports.bytesToSize(statSync(file).size)}`);
+                core.info(`- ${relative(path, file)}  |  ${bytesToSize(statSync(file).size)}`);
             } else if (dirent.isDirectory()) {
                 const dir = join(path, dirent.name);
                 if (dirent.name.startsWith(".") || dirent.name === "node_modules") return;
@@ -61,7 +138,7 @@ function debugEmptyDirectory(path, pattern, { core }) {
  * @param {number} bytes
  * @returns {string} The size in human readable format
  */
-exports.bytesToSize = function (bytes) {
+const bytesToSize = function (bytes) {
     if (!bytes) return "-";
     if (bytes === 0) return "0";
 
@@ -86,7 +163,7 @@ exports.bytesToSize = function (bytes) {
  * @param {string} token - The GitHub token to use for authentication
  * @returns {Promise<Issues['createComment']['response'] | Issues['updateComment']['response']>}
  */
-exports.addComment = async function ({ search, content, token }) {
+const addComment = async function ({ search, content, token }) {
     /**
      * @description Set up the octokit client
      * @type ReturnType<import('@actions/github').getOctokit>
@@ -146,36 +223,157 @@ exports.addComment = async function ({ search, content, token }) {
 /**
  * Use the provided glob pattern to fetch the files and their sizes from the
  * filesystem and return a Map of the files and their sizes.
- * @param {string} rootPath
  * @param {string[]} patterns
- * @returns {Promise<Map<string, number>>} - Returns the relative path and size of the files
+ * @returns {Promise<PackageDetails>} - Returns the relative path and size of the files sorted by package
  */
-exports.fetchFilesAndSizes = async function (rootPath, patterns = [], { core }) {
-    if (!existsSync(rootPath)) return new Map();
+const fetchPackageDetails = async function (patterns = [], { headPath, basePath, core }) {
+    if (patterns.length === 0) {
+        core.warning(`No file pattern provided for project packages.`);
+        return;
+    }
+
+    if (!existsSync(headPath) && !existsSync(basePath)) {
+        core.warning(`Neither ${headPath} no ${basePath} exist in the workspace`);
+        return;
+    }
 
     /** @type import('@actions/glob').Globber */
-    const globber = await glob.create(patterns.map((f) => join(rootPath, f)).join("\n"));
+    const globber = await glob.create(patterns.map((f) => join(headPath, f)).join("\n"), {
+        implicitDescendants: false
+    });
 
     /** @type Awaited<ReturnType<import('@actions/glob').Globber['glob']>> */
-    const files = await globber.glob();
+    let packages = await globber.glob();
+
+    // Remove any folders that don't have a package.json file
+    packages = packages.filter((p) => {
+        // Check that every package folder has a package.json asset
+        if (!existsSync(join(p, "package.json"))) {
+            core.warning(`The folder ${p.replace(headPath, "")} does not have a package.json; skipping. This utility can only compare packages.`);
+            return false;
+        }
+
+        return existsSync(join(p, "package.json"));
+    });
 
     // If no files are found, fail the action with a helpful message
-    if (files.length === 0) {
-        debugEmptyDirectory(rootPath, patterns, { core });
+    if (packages.length === 0) {
+        if (headPath) debugEmptyDirectory(headPath, patterns, { core });
+        if (basePath) debugEmptyDirectory(basePath, patterns, { core });
         return new Map();
     }
 
-    core.info(`From ${rootPath}, found ${files.length} files matching the glob pattern ${patterns.join(", ")}.`);
+    /** @type PackageDetails */
+    const details = new Map();
+
+    core.info(`From ${headPath}, found ${packages.length} packages matching the pattern ${patterns.join(", ")}.`);
+
+    core.startGroup(`Packages`);
+    // Check the exports of the packages to determine which assets to include in the comparison
+    for (const packagePath of packages) {
+        const files = new Map();
+
+        /**
+         * Add a file to the files map
+         * @param {string} filePath
+         * @param {{ isMain: boolean, size: number, content: string }} details
+         * @returns {void}
+         */
+        function addToFiles(filePath, { isMain = false, isHead = true, cwd } = {}) {
+            const fullPath = join(cwd, filePath);
+            const componentName = basename(cwd);
+            // Check to see if the file exists
+            if (!existsSync(fullPath)) {
+                core.info(`[${componentName}] ${filePath} does not exist, skipping. (${fullPath})`);
+                return;
+            }
+
+            const stat = statSync(fullPath);
+            const content = stat.size > 0 && readFileSync(fullPath, "utf8");
+
+            let hasChanged = true;
+            const existingFile = files.get(filePath);
+            // If the content is the same, report that the file has not changed
+            if (existingFile) {
+                const altContent = existingFile.content[isHead ? 'base' : 'head'];
+                hasChanged = altContent !== content;
+            }
+
+            // core.info(`[${componentName}] ${filePath} added to files with { isMain: ${isMain}, hasChanged: ${hasChanged ? "true" : "false"}, size: ${stat.size ?? 0}}`);
+            files.set(filePath, {
+                isMain,
+                hasChanged,
+                size: {
+                    [isHead ? 'head' : 'base']: stat.size ?? 0,
+                },
+                content: {
+                    [isHead ? 'head' : 'base']: content,
+                }
+            });
+        }
+
+        // Remove the headPath from the package paths for context swapping
+        const pkg = packagePath.replace(headPath, "");
+        // Iterate over both the head and base paths to get the main and exports fields (in case the package is different in the head and base branches)
+        await Promise.all([headPath, basePath].map(async (rootFolder, idx) => {
+            const isHead = idx === 0;
+            const cwd = join(rootFolder, pkg);
+            const packageJsonPath = join(cwd, "package.json");
+            // Check if the package.json file exists
+            if (!existsSync(packageJsonPath)) {
+                // If the package.json file doesn't exist, skip the package
+                return;
+            }
+
+            // Get the main and exports fields from the package.json file
+            // Note: If a package.json file has both a main field and an exports field with a "." entry, the exports field takes precedence
+            const { main, exports } = require(packageJsonPath) ?? {};
+
+            // If the package.json doesn't have an exports or main field, skip the package
+            if (!exports && !main) {
+                core.warning(`${join(cwd, "package.json")} does not have an exports or main field, skipping.`);
+                return;
+            }
+
+            // If the exports field is a string, add it to the files array if it exists
+            // Note: export strings cannot be glob patterns so we don't need to resolve them
+            if (typeof exports === "string") {
+                addToFiles(exports, { isMain: true, isHead, cwd });
+            }
+            // If the exports field is an object, add each key to the files array
+            else if (typeof exports === "object") {
+                // Iterate over each key in the exports object
+                await Promise.all(Object.keys(exports).map(async (key) => {
+                    // Resolve if the export content is a glob pattern
+                    const exportGlobber = await glob.create(resolve(cwd, exports[key]), {
+                        matchDirectories: false,
+                        implicitDescendants: false
+                    });
+
+                    const resolvedPaths = await exportGlobber.glob();
+
+                    if (resolvedPaths.length === 0) {
+                        core.info(`No files found matching the glob pattern: ${exports[key]} at ${cwd}.`);
+                        return;
+                    }
+
+                    // Attempt to add each file to the files map
+                    resolvedPaths.forEach((p) => {
+                        addToFiles(p.replace(cwd, ""), { isMain: key === '.', isHead, cwd });
+                    });
+                }));
+            }
+            else {
+                addToFiles(main, { isMain: true, isHead, cwd });
+            }
+
+            details.set(pkg, files);
+        }));
+    }
+    core.endGroup();
 
     // Fetch the files and their sizes, creates an array of arrays to be used in the table
-    return new Map(
-        files
-            .map((f) => {
-                const relativePath = relative(rootPath, f);
-                const stat = statSync(f);
-                if (!stat || stat.isDirectory()) return;
-                return [relativePath, stat.size];
-            })
-            .filter(Boolean),
-    );
+    return details;
 };
+
+module.exports = { addComment, bytesToSize, debugEmptyDirectory, difference, fetchPackageDetails, isNew, isRemoved, makeDataSections, printChange, printPercentChange };
