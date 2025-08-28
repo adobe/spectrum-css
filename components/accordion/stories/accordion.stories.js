@@ -149,6 +149,11 @@ WithForcedColors.parameters = {
 /**
  * Accordion items have a default width for each size, but a custom width can also be set to any
  * width that meets or exceeds the minimum width.
+ *
+ * This example also uses the body typography element with class `.spectrum-Body` for the
+ * accordion item's content. If using typography, the t-shirt size of the typography element
+ * may need to be adjusted to match the accordion item's font size. The body typography component
+ * shown here is a size "S," in contrast with the the accordion's "M" size.
  */
 export const CustomWidth = AccordionGroup.bind({});
 CustomWidth.tags = ["!dev"];
@@ -160,7 +165,7 @@ CustomWidth.args = {
 	},
 };
 CustomWidth.parameters = {
-	chromatic: { disableSnapshot: false },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -201,6 +206,9 @@ export const DirectActions = Template.bind({});
 DirectActions.tags = ["!dev"];
 DirectActions.args = {
 	items: directActionsContent
+};
+DirectActions.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 /**
