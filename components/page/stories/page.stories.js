@@ -25,8 +25,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
-	tags: ["!autodocs", "!dev"]
+	tags: ["unmigrated", "!autodocs", "!dev"]
 };
 
 export const Default = PageGroup.bind({});

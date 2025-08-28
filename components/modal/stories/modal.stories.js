@@ -51,10 +51,14 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
 	decorators: [
 		withUnderlayWrapper,
 	],
+	tags: ["unmigrated"],
 };
 
 /**

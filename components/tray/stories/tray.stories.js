@@ -40,7 +40,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 };
 
 /**

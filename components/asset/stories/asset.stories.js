@@ -38,7 +38,11 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 };
 
 export const Default = AssetGroup.bind({});

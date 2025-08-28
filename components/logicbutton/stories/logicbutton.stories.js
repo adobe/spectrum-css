@@ -32,7 +32,11 @@ export default {
 	parameters: {
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 };
 
 /**
