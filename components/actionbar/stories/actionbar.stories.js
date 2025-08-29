@@ -12,7 +12,7 @@ import { BehavioralTemplate } from "./template.js";
  * The action bar component is a floating full width bar that appears upon selection. Action bars are used for single and bulk selection patterns, when a user needs to perform actions on either a single or multiple items at the same time.
  *
  * ## Popover dependency
- * Action bar requires popover, which is nested within the action bar. Action bar background, border, and corner radius are applied to the nested popover component and can be overridden by using action bar's `--mod-*` prefixed custom properties. A [list of the properties](#modifiable-properties) can be found below.
+ * Action bar requires popover, which is nested within the action bar. Action bar background, border, and corner radius are applied to the nested popover component.
  */
 export default {
 	title: "Action bar",

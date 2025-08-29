@@ -12,8 +12,8 @@
  */
 
 :root {
-	--spectrum-page-background-color: var(--mod-page-background, var(--spectrum-gray-75));
-	--spectrum-page-content-tap-highlight: var(--mod-page-content-tap-highlight, var(--spectrum-transparent-black-25));
+	--spectrum-page-background-color: var(--spectrum-gray-75);
+	--spectrum-page-content-tap-highlight: var(--spectrum-transparent-black-25);
 
 	background: var(--spectrum-page-background-color);
 
