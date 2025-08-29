@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.0-next.12
+
+### Patch Changes
+
+Updated dependencies [[`6d835ff`](https://github.com/adobe/spectrum-css/commit/6d835ffeb77bc27bd5b2e4ddf48e2f5aa157a56b)]:
+
+- @spectrum-css/accordion@8.0.0-next.4
+
 ## 2.0.0-next.11
 
 ### Patch Changes
