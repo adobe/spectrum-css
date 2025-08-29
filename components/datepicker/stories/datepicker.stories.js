@@ -77,7 +77,11 @@ export default {
 		},
 		packageJson,
 		metadata,
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 

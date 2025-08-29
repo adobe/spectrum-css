@@ -50,8 +50,12 @@ export default {
 			story: {
 				height: "200px",
 			}
-		}
+		},
+		status: {
+			type: "unmigrated",
+		},
 	},
+	tags: ["unmigrated"],
 };
 
 export const Default = ActionMenuGroup.bind({});

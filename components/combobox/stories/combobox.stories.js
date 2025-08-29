@@ -178,13 +178,13 @@ export default {
 		downState: {
 			selectors: [".spectrum-InfieldButton:not(:disabled)"],
 		},
+		packageJson,
+		metadata,
 		status: {
 			type: "migrated",
 		},
-		tags: ["migrated"],
-		packageJson,
-		metadata,
 	},
+	tags: ["migrated"],
 	decorators: [
 		withDownStateDimensionCapture,
 	],

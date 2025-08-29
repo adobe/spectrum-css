@@ -147,9 +147,7 @@ export default {
 		hasHeroImage: false,
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
+		layout: "fullscreen",
 		docs: {
 			story: {
 				// TODO: restore `inline: false,`
@@ -162,7 +160,6 @@ export default {
 		},
 		packageJson,
 		metadata,
-		layout: "fullscreen",
 		status: {
 			type: "migrated",
 		},

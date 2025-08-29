@@ -69,9 +69,9 @@ export default {
 		downState: {
 			selectors: [".spectrum-PickerButton:not(:disabled)"],
 		},
-	},
-	status: {
-		type: "migrated",
+		status: {
+			type: "migrated",
+		},
 	},
 	decorators: [
 		withDownStateDimensionCapture,
