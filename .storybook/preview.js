@@ -49,6 +49,7 @@ export const parameters = {
 		pauseAnimationAtEnd: true,
 		modes,
 	},
+	a11y: { test: "error" },
 	controls: {
 		expanded: true,
 		hideNoControlsWarning: true,
