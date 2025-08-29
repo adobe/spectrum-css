@@ -17,14 +17,6 @@
                 "type": "string"
             }
         },
-        "modifiers": {
-            "description": "These are the modifiers available for the component.",
-            "type": "array",
-            "items": {
-                "type": "string",
-                "pattern": "^--mod-"
-            }
-        },
         "component": {
             "description": "The component-level custom properties for the component.",
             "type": "array",
@@ -46,7 +38,7 @@
             "type": "array",
             "items": {
                 "type": "string",
-                "pattern": "^--mod-"
+                "pattern": "^--spectrum-"
             }
         },
         "high-contrast": {
@@ -58,6 +50,6 @@
             }
         }
 	},
-	"required": ["sourceFile", "selectors", "modifiers", "component", "global", "passthroughs", "high-contrast"],
+	"required": ["sourceFile", "selectors", "component", "global", "passthroughs", "high-contrast"],
 	"additionalProperties": false
 }

@@ -12,16 +12,15 @@
  */
 
 .spectrum-Underlay {
-	--spectrum-underlay-background-exit-animation-duration: var(--mod-underlay-background-exit-animation-duration, var(--spectrum-animation-duration-300));
-	--spectrum-underlay-background-exit-animation-ease: var(--mod-underlay-background-exit-animation-ease, var(--spectrum-animation-ease-in));
-	--spectrum-underlay-background-exit-animation-delay: var(--mod-underlay-background-exit-animation-delay, var(--spectrum-animation-duration-200));
-	--spectrum-underlay-background-entry-animation-duration: var(--mod-underlay-background-entry-animation-duration, var(--spectrum-animation-duration-600));
-	--spectrum-underlay-background-entry-animation-ease: var(--mod-underlay-background-entry-animation-ease, var(--spectrum-animation-ease-out));
-	/* @deprecated --mod-overlay-animation-duration-opened in favor of --mod-underlay-background-entry-animation-delay */
-	--spectrum-underlay-background-entry-animation-delay: var(--mod-underlay-background-entry-animation-delay, var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0)));
+	--spectrum-underlay-background-exit-animation-duration: var(--spectrum-animation-duration-300);
+	--spectrum-underlay-background-exit-animation-ease: var(--spectrum-animation-ease-in);
+	--spectrum-underlay-background-exit-animation-delay: var(--spectrum-animation-duration-200);
+	--spectrum-underlay-background-entry-animation-duration: var(--spectrum-animation-duration-600);
+	--spectrum-underlay-background-entry-animation-ease: var(--spectrum-animation-ease-out);
+	--spectrum-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);
 
 	/* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
-	--spectrum-underlay-background-color: var(--mod-underlay-background-color, rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity)));
+	--spectrum-underlay-background-color: rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
 
 	pointer-events: none;
 	visibility: hidden;

@@ -49,7 +49,7 @@ export const Template = ({
 					${when(
 						["negative", "info"].some(type => variant === type),
 						() => Icon({
-							iconName: variant === "negative" ? "Alert" : "Info",
+							iconName: variant === "negative" ? "AlertTriangle" : "InfoCircle",
 							setName: "workflow",
 							customClasses: [`${rootClass}-icon`],
 						}, context)
