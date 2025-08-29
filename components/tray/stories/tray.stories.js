@@ -1,9 +1,11 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
+import { TrayGroup } from "./tray.test.js";
+
+// Local assets to render the component styles and structure
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { TrayGroup } from "./tray.test.js";
 
 /**
  * A tray is typically used to display transient content (menus, options, additional actions, etc.) on mobile devices or smaller screens, exposing types of content that may be too overwhelming for [popovers](?path=/docs/components-popover--docs).
@@ -30,6 +32,11 @@ export default {
 	},
 	parameters: {
 		layout: "fullscreen",
+		docs: {
+			story: {
+				height: "300px",
+			},
+		},
 		viewport: {
 			defaultViewport: "mobile2"
 		},
@@ -37,6 +44,10 @@ export default {
 		metadata,
 		status: {
 			type: "unmigrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["unmigrated"],

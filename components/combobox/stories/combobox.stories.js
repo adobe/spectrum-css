@@ -3,10 +3,12 @@ import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/deco
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, isReadOnly, size } from "@spectrum-css/preview/types";
 import { within } from "@storybook/test";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
 import { HelpTextTemplate, Template, VariantGroup } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -183,11 +185,15 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
-	tags: ["migrated"],
 	decorators: [
 		withDownStateDimensionCapture,
 	],
+	tags: ["migrated"],
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 
@@ -211,6 +217,11 @@ DefaultGroup.args = {
 DefaultGroup.tags = ["!dev"];
 DefaultGroup.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "360px",
+		},
+	},
 };
 
 /**

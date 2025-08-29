@@ -1,8 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { TabsGroups } from "./tabs.test.js";
 import { CompactGroup, OverflowGroup, Template, VerticalGroup } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit. Tabs can be either horizontal or vertical.
@@ -18,7 +20,6 @@ import { CompactGroup, OverflowGroup, Template, VerticalGroup } from "./template
  * ### Quiet tabs
  * The quiet variant has been deprecated for Spectrum 2. By default, all tabs look similar to what was formerly the quiet variant, with no divider spanning across all tab items.
  */
-
 export default {
 	title: "Tabs",
 	component: "Tabs",
@@ -121,9 +122,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		status: {
-			type: "migrated",
-		},
+		cssprops: metadata.modifiers,
 	},
 	tags: ["migrated"],
 };

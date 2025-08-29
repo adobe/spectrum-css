@@ -4,8 +4,11 @@ import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import packageJson from "../package.json";
 import { ActionMenuGroup } from "./actionmenu.test.js";
+
+// Local assets to render the component styles and structure
+// import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The action menu component is an action button with a popover. The `is-selected` class should be applied to the button when the menu is open. Note that the accessibility roles are different for an action menu compared to a normal menu.
@@ -46,6 +49,10 @@ export default {
 			],
 		},
 		packageJson,
+		// cssprops: {
+		// 	...metadata.modifiers,
+		// 	...metadata.component,
+		// },
 		docs: {
 			story: {
 				height: "200px",

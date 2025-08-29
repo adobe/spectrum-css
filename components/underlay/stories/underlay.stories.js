@@ -1,9 +1,11 @@
 import { Default as ModalStory } from "@spectrum-css/modal/stories/modal.stories.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { isOpen } from "@spectrum-css/preview/types";
+import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { Template } from "./template.js";
 
 /**
  * An underlay component is used with [modal](?path=/docs/components-modal--docs) and [dialog](?path=/docs/components-dialog--docs). It lays over the rest of the page to deliver a blocking layer between the two contexts.
@@ -33,6 +35,10 @@ export default {
 		metadata,
 		status: {
 			type: "unmigrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["unmigrated"],

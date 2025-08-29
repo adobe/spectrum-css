@@ -4,6 +4,12 @@
     ".spectrum-AssetList",
     ".spectrum-AssetList-item",
     ".spectrum-AssetList-item .spectrum-AssetList-itemThumbnail",
+    ".spectrum-AssetList-item:before",
+    ".spectrum-AssetList-item:focus .spectrum-Checkbox",
+    ".spectrum-AssetList-item:focus-within:focus-visible",
+    ".spectrum-AssetList-item:focus-within:focus-visible:before",
+    ".spectrum-AssetList-item:hover",
+    ".spectrum-AssetList-item:hover .spectrum-Checkbox",
     ".spectrum-AssetList-item.is-branch .spectrum-AssetList-itemChildIndicator",
     ".spectrum-AssetList-item.is-focused:focus-within",
     ".spectrum-AssetList-item.is-focused:focus-within:before",
@@ -15,81 +21,331 @@
     ".spectrum-AssetList-item.is-selected .spectrum-Checkbox",
     ".spectrum-AssetList-item.is-selected:focus",
     ".spectrum-AssetList-item.is-selected:hover",
-    ".spectrum-AssetList-item:before",
-    ".spectrum-AssetList-item:focus .spectrum-Checkbox",
-    ".spectrum-AssetList-item:focus-within:focus-visible",
-    ".spectrum-AssetList-item:focus-within:focus-visible:before",
-    ".spectrum-AssetList-item:hover",
-    ".spectrum-AssetList-item:hover .spectrum-Checkbox",
     ".spectrum-AssetList-itemChildIndicator",
     ".spectrum-AssetList-itemLabel",
     ".spectrum-AssetList-itemSelector",
     ".spectrum-AssetList:dir(rtl)"
   ],
-  "modifiers": [
-    "--mod-assetlist-border-color-key-focus",
-    "--mod-assetlist-child-indicator-animation",
-    "--mod-assetlist-item-animation",
-    "--mod-assetlist-item-background-color-down",
-    "--mod-assetlist-item-background-color-hover",
-    "--mod-assetlist-item-background-color-selected",
-    "--mod-assetlist-item-background-color-selected-hover",
-    "--mod-assetlist-item-border-radius",
-    "--mod-assetlist-item-font-size",
-    "--mod-assetlist-item-font-weight",
-    "--mod-assetlist-item-height",
-    "--mod-assetlist-item-label-padding-inline-start",
-    "--mod-assetlist-item-margin-bottom",
-    "--mod-assetlist-item-padding-inline-end",
-    "--mod-assetlist-item-padding-inline-start",
-    "--mod-assetlist-label-color",
-    "--mod-assetlist-thumbnail-margin-left",
-    "--mod-assetlist-thumbnail-width",
-    "--mod-assetlist-thumnail-height",
-    "--mod-assetlist-width"
-  ],
-  "component": [
-    "--spectrum-assetlist-border-color-key-focus",
-    "--spectrum-assetlist-child-indicator-animation",
-    "--spectrum-assetlist-item-animation",
-    "--spectrum-assetlist-item-background-color-down",
-    "--spectrum-assetlist-item-background-color-hover",
-    "--spectrum-assetlist-item-background-color-selected",
-    "--spectrum-assetlist-item-background-color-selected-hover",
-    "--spectrum-assetlist-item-border-radius",
-    "--spectrum-assetlist-item-font-size",
-    "--spectrum-assetlist-item-font-weight",
-    "--spectrum-assetlist-item-height",
-    "--spectrum-assetlist-item-label-padding-inline-start",
-    "--spectrum-assetlist-item-margin-block-end",
-    "--spectrum-assetlist-item-padding-inline-end",
-    "--spectrum-assetlist-item-padding-inline-start",
-    "--spectrum-assetlist-label-color",
-    "--spectrum-assetlist-thumbnail-height",
-    "--spectrum-assetlist-thumbnail-margin-inline-start",
-    "--spectrum-assetlist-thumbnail-width",
-    "--spectrum-assetlist-width"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-font-size-100",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-logical-rotation",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-regular-font-weight",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-400",
-    "--spectrum-spacing-600",
-    "--spectrum-spacing-75"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-assetlist-border-color-key-focus",
-    "--highcontrast-assetlist-item-background-color-hover",
-    "--highcontrast-assetlist-item-background-color-selected",
-    "--highcontrast-assetlist-item-background-color-selected-hover",
-    "--highcontrast-assetlist-label-color"
-  ]
+  "modifiers": {
+    "mod-assetlist-label-color": {
+      "description": "Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-assetlist-label-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetlist-width": {
+      "description": "Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-assetlist-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-padding-inline-start": {
+      "description": "Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-assetlist-item-padding-inline-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-padding-inline-end": {
+      "description": "Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-assetlist-item-padding-inline-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-margin-bottom": {
+      "description": "Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-assetlist-item-margin-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-animation": {
+      "description": "Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-assetlist-item-animation)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-font-size": {
+      "description": "Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-assetlist-item-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-font-weight": {
+      "description": "Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-assetlist-item-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-height": {
+      "description": "Used by `.spectrum-AssetList-item, .spectrum-AssetList-item:before`. <br/>Defaults to `var(--spectrum-assetlist-item-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-border-radius": {
+      "description": "Used by `.spectrum-AssetList-item, .spectrum-AssetList-item:before`. <br/>Defaults to `var(--spectrum-assetlist-item-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-thumbnail-width": {
+      "description": "Used by `.spectrum-AssetList-item .spectrum-AssetList-itemThumbnail`. <br/>Defaults to `var(--spectrum-assetlist-thumbnail-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-thumnail-height": {
+      "description": "Used by `.spectrum-AssetList-item .spectrum-AssetList-itemThumbnail`. <br/>Defaults to `var(--spectrum-assetlist-thumbnail-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-thumbnail-margin-left": {
+      "description": "Used by `.spectrum-AssetList-item .spectrum-AssetList-itemThumbnail`. <br/>Defaults to `var(--spectrum-assetlist-thumbnail-margin-inline-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-background-color-hover": {
+      "description": "Used by `.spectrum-AssetList-item.is-focused:focus-within, .spectrum-AssetList-item:focus-within:focus-visible`, `.spectrum-AssetList-item:hover`. <br/>Defaults to `var(--spectrum-assetlist-item-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetlist-border-color-key-focus": {
+      "description": "Used by `.spectrum-AssetList-item.is-focused:focus-within:before, .spectrum-AssetList-item:focus-within:focus-visible:before`. <br/>Defaults to `var(--spectrum-assetlist-border-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-background-color-down": {
+      "description": "Used by `.spectrum-AssetList-item.is-navigated, .spectrum-AssetList-item.is-navigated:focus`, `.spectrum-AssetList-item.is-navigated:hover`. <br/>Defaults to `var(--spectrum-assetlist-item-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-background-color-selected": {
+      "description": "Used by `.spectrum-AssetList-item.is-selected`. <br/>Defaults to `var(--spectrum-assetlist-item-background-color-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-background-color-selected-hover": {
+      "description": "Used by `.spectrum-AssetList-item.is-selected:focus`, `.spectrum-AssetList-item.is-selected:hover`. <br/>Defaults to `var(--spectrum-assetlist-item-background-color-selected-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-assetlist-child-indicator-animation": {
+      "description": "Used by `.spectrum-AssetList-itemChildIndicator`. <br/>Defaults to `var(--spectrum-assetlist-child-indicator-animation)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-assetlist-item-label-padding-inline-start": {
+      "description": "Used by `.spectrum-AssetList-itemLabel`. <br/>Defaults to `var(--spectrum-assetlist-item-label-padding-inline-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-assetlist-item-background-color-down": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item.is-navigated, .spectrum-AssetList-item.is-navigated:focus`, `.spectrum-AssetList-item.is-navigated:hover`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-background-color-hover": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item.is-focused:focus-within, .spectrum-AssetList-item:focus-within:focus-visible`, `.spectrum-AssetList-item:hover`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetlist-width": {
+      "value": "272px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `272px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-child-indicator-animation": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-itemChildIndicator`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-height": {
+      "value": "40px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item, .spectrum-AssetList-item:before`. <br/>Defaults to `var(--spectrum-spacing-600)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-padding-inline-start": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-padding-inline-end": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-margin-block-end": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-border-radius": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item, .spectrum-AssetList-item:before`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-animation": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-font-size": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-thumbnail-width": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item .spectrum-AssetList-itemThumbnail`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-thumbnail-height": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item .spectrum-AssetList-itemThumbnail`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-thumbnail-margin-inline-start": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item .spectrum-AssetList-itemThumbnail`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-label-padding-inline-start": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-itemLabel`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-assetlist-label-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-AssetList`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetlist-border-color-key-focus": {
+      "description": "Used by `.spectrum-AssetList-item.is-focused:focus-within:before, .spectrum-AssetList-item:focus-within:focus-visible:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-background-color-selected": {
+      "description": "Used by `.spectrum-AssetList-item.is-selected`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-assetlist-item-background-color-selected-hover": {
+      "description": "Used by `.spectrum-AssetList-item.is-selected:focus`, `.spectrum-AssetList-item.is-selected:hover`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-assetlist-item-background-color-down`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Used by `--spectrum-assetlist-item-background-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-assetlist-child-indicator-animation`, `--spectrum-assetlist-item-animation`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-600": {
+      "value": "40px",
+      "description": "Used by `--spectrum-assetlist-item-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-assetlist-item-padding-inline-start`, `--spectrum-assetlist-item-padding-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-assetlist-item-margin-block-end`, `--spectrum-assetlist-item-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-assetlist-item-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-assetlist-item-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-400": {
+      "value": "24px",
+      "description": "Used by `--spectrum-assetlist-thumbnail-width`, `--spectrum-assetlist-thumbnail-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-assetlist-thumbnail-margin-inline-start`, `--spectrum-assetlist-item-label-padding-inline-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-assetlist-label-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-logical-rotation": {
+      "value": "matrix(-1, 0, 0, 1, 0, 0)",
+      "description": "Defined in `.spectrum-AssetList:dir(rtl)`. <br/>Used by `.spectrum-AssetList-itemChildIndicator`. <br/>Defaults to `matrix(-1, 0, 0, 1, 0, 0)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-assetlist-label-color": {
+      "value": "var(--mod-assetlist-label-color, var(--spectrum-assetlist-label-color))",
+      "description": "Defined in `.spectrum-AssetList-item`, `.spectrum-AssetList-item.is-navigated, .spectrum-AssetList-item.is-selected`, `.spectrum-AssetList-item:hover`. <br/>Used by `.spectrum-AssetList-item`. <br/>Defaults to `var(--mod-assetlist-label-color, var(--spectrum-assetlist-label-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assetlist-item-background-color-hover": {
+      "value": "var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover))",
+      "description": "Defined in `.spectrum-AssetList-item`. <br/>Used by `.spectrum-AssetList-item.is-focused:focus-within, .spectrum-AssetList-item:focus-within:focus-visible`, `.spectrum-AssetList-item:hover`. <br/>Defaults to `var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assetlist-border-color-key-focus": {
+      "value": "var(--mod-assetlist-border-color-key-focus, var(--spectrum-assetlist-border-color-key-focus))",
+      "description": "Defined in `.spectrum-AssetList-item`. <br/>Used by `.spectrum-AssetList-item.is-focused:focus-within:before, .spectrum-AssetList-item:focus-within:focus-visible:before`. <br/>Defaults to `var(--mod-assetlist-border-color-key-focus, var(--spectrum-assetlist-border-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assetlist-item-background-color-selected": {
+      "value": "var(--mod-assetlist-item-background-color-selected, var(--spectrum-assetlist-item-background-color-selected))",
+      "description": "Defined in `.spectrum-AssetList-item`. <br/>Used by `.spectrum-AssetList-item.is-selected`. <br/>Defaults to `var(--mod-assetlist-item-background-color-selected, var(--spectrum-assetlist-item-background-color-selected))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-assetlist-item-background-color-selected-hover": {
+      "value": "var(--mod-assetlist-item-background-color-selected-hover, var(--spectrum-assetlist-item-background-color-selected-hover))",
+      "description": "Defined in `.spectrum-AssetList-item`. <br/>Used by `.spectrum-AssetList-item.is-selected:focus`, `.spectrum-AssetList-item.is-selected:hover`. <br/>Defaults to `var(--mod-assetlist-item-background-color-selected-hover, var(--spectrum-assetlist-item-background-color-selected-hover))`, if not set.",
+      "control": "color"
+    }
+  }
 }

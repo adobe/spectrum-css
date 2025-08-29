@@ -15,67 +15,320 @@
     ".spectrum-Link:lang(ko)",
     ".spectrum-Link:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-link-animation-duration",
-    "--mod-link-inline-font-weight",
-    "--mod-link-line-height-cjk",
-    "--mod-link-text-color",
-    "--mod-link-text-color-active",
-    "--mod-link-text-color-black",
-    "--mod-link-text-color-focus",
-    "--mod-link-text-color-hover",
-    "--mod-link-text-color-secondary-active",
-    "--mod-link-text-color-secondary-default",
-    "--mod-link-text-color-secondary-focus",
-    "--mod-link-text-color-secondary-hover",
-    "--mod-link-text-color-white"
-  ],
-  "component": [
-    "--spectrum-link-corner-radius",
-    "--spectrum-link-default-font-family",
-    "--spectrum-link-focus-indicator-color",
-    "--spectrum-link-focus-indicator-gap",
-    "--spectrum-link-focus-indicator-thickness",
-    "--spectrum-link-font-size",
-    "--spectrum-link-font-style",
-    "--spectrum-link-font-weight",
-    "--spectrum-link-inline-font-weight",
-    "--spectrum-link-line-height",
-    "--spectrum-link-line-height-cjk",
-    "--spectrum-link-text-underline-gap",
-    "--spectrum-link-text-underline-thickness"
-  ],
-  "global": [
-    "--spectrum-accent-content-color-default",
-    "--spectrum-accent-content-color-down",
-    "--spectrum-accent-content-color-hover",
-    "--spectrum-accent-content-color-key-focus",
-    "--spectrum-animation-duration-100",
-    "--spectrum-black",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-corner-radius-100",
-    "--spectrum-default-font-style",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-line-height-100",
-    "--spectrum-medium-font-weight",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-regular-font-weight",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-static-black-focus-indicator-color",
-    "--spectrum-static-white-focus-indicator-color",
-    "--spectrum-text-underline-gap",
-    "--spectrum-text-underline-thickness",
-    "--spectrum-white"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-link-focus-indicator-color",
-    "--highcontrast-link-text-color"
-  ]
+  "modifiers": {
+    "mod-link-animation-duration": {
+      "description": "Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-link-text-color": {
+      "description": "Defined in `.spectrum-Link:active`, `.spectrum-Link:focus-visible`, `.spectrum-Link--secondary`, `.spectrum-Link:hover`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-accent-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-active": {
+      "description": "Defined in `.spectrum-Link--secondary`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `--mod-link-text-color`. <br/>Defaults to `var(--spectrum-accent-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-focus": {
+      "description": "Defined in `.spectrum-Link--secondary`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `--mod-link-text-color`. <br/>Defaults to `var(--spectrum-accent-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-line-height-cjk": {
+      "description": "Used by `.spectrum-Link:lang(ja), .spectrum-Link:lang(ko), .spectrum-Link:lang(zh)`. <br/>Defaults to `var(--spectrum-link-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-secondary-default": {
+      "description": "Used by `--mod-link-text-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-hover": {
+      "description": "Defined in `.spectrum-Link--secondary`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `--mod-link-text-color`. <br/>Defaults to `var(--spectrum-accent-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-secondary-hover": {
+      "description": "Used by `--mod-link-text-color-hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-secondary-active": {
+      "description": "Used by `--mod-link-text-color-active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-secondary-focus": {
+      "description": "Used by `--mod-link-text-color-focus`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-inline-font-weight": {
+      "description": "Used by `--spectrum-link-font-weight`. <br/>Defaults to `var(--spectrum-link-inline-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-white": {
+      "description": "Used by `--mod-link-text-color`, `--mod-link-text-color-hover`, `--mod-link-text-color-active`, `--mod-link-text-color-focus`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-link-text-color-black": {
+      "description": "Used by `--mod-link-text-color`, `--mod-link-text-color-hover`, `--mod-link-text-color-active`, `--mod-link-text-color-focus`. <br/>Defaults to `var(--spectrum-black)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-link-focus-indicator-color": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Defined in `.spectrum-Link`, `.spectrum-Link--staticWhite`, `.spectrum-Link--staticBlack`. <br/>Used by `.spectrum-Link:focus-visible`. <br/>Defaults to `var(--spectrum-static-black-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-link-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link:focus-visible`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link:focus-visible`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-corner-radius": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link:focus-visible`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-default-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-line-height-cjk": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link:lang(ja), .spectrum-Link:lang(ko), .spectrum-Link:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-font-size": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-font-weight": {
+      "value": "var(--mod-link-inline-font-weight, var(--spectrum-link-inline-font-weight))",
+      "description": "Defined in `.spectrum-Link`, `.spectrum-Link--inline`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--mod-link-inline-font-weight, var(--spectrum-link-inline-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-text-underline-thickness": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-text-underline-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-text-underline-gap": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--spectrum-text-underline-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-link-inline-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `--spectrum-link-font-weight`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-link-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-link-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-link-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "value": "4px",
+      "description": "Used by `--spectrum-link-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-link-default-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-link-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-link-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-link-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-link-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-medium-font-weight": {
+      "value": "500",
+      "description": "Used by `--spectrum-link-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-underline-thickness": {
+      "value": "1px",
+      "description": "Used by `--spectrum-link-text-underline-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-underline-gap": {
+      "value": "1px",
+      "description": "Used by `--spectrum-link-text-underline-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-link-inline-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-Link`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Used by `.spectrum-Link`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-down": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-link-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-key-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-link-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--mod-link-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-link-text-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-link-text-color-active`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-link-text-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-content-color-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-link-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--mod-link-text-color`, `--mod-link-text-color-hover`, `--mod-link-text-color-active`, `--mod-link-text-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-static-white-focus-indicator-color": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-link-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-black": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--mod-link-text-color`, `--mod-link-text-color-hover`, `--mod-link-text-color-active`, `--mod-link-text-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-static-black-focus-indicator-color": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--spectrum-link-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-link-text-color": {
+      "value": "var(--mod-link-text-color, var(--spectrum-accent-content-color-default))",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link`. <br/>Defaults to `var(--mod-link-text-color, var(--spectrum-accent-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-link-focus-indicator-color": {
+      "value": "var(--spectrum-link-focus-indicator-color)",
+      "description": "Defined in `.spectrum-Link`. <br/>Used by `.spectrum-Link:focus-visible`. <br/>Defaults to `var(--spectrum-link-focus-indicator-color)`, if not set.",
+      "control": "color"
+    }
+  }
 }

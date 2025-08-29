@@ -28,6 +28,10 @@ export default {
 		status: {
 			type: "unmigrated",
 		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 	tags: ["unmigrated", "!autodocs", "!dev"]
 };

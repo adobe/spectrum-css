@@ -22,153 +22,719 @@
     ".spectrum-Tabs-item",
     ".spectrum-Tabs-item .spectrum-Icon",
     ".spectrum-Tabs-item .spectrum-Icon + .spectrum-Tabs-itemLabel",
-    ".spectrum-Tabs-item.is-disabled",
-    ".spectrum-Tabs-item.is-disabled .spectrum-Tabs-itemLabel",
-    ".spectrum-Tabs-item.is-disabled .spectrum-Tabs-selectionIndicator",
-    ".spectrum-Tabs-item.is-selected",
-    ".spectrum-Tabs-item.is-selected.is-disabled",
-    ".spectrum-Tabs-item.is-selected:focus-visible",
-    ".spectrum-Tabs-item.is-selected:hover",
     ".spectrum-Tabs-item:before",
     ".spectrum-Tabs-item:focus-visible",
     ".spectrum-Tabs-item:focus-visible:before",
     ".spectrum-Tabs-item:hover",
+    ".spectrum-Tabs-item.is-disabled",
+    ".spectrum-Tabs-item.is-disabled .spectrum-Tabs-itemLabel",
+    ".spectrum-Tabs-item.is-disabled .spectrum-Tabs-selectionIndicator",
+    ".spectrum-Tabs-item.is-selected",
+    ".spectrum-Tabs-item.is-selected:focus-visible",
+    ".spectrum-Tabs-item.is-selected:hover",
+    ".spectrum-Tabs-item.is-selected.is-disabled",
     ".spectrum-Tabs-itemLabel",
     ".spectrum-Tabs-itemLabel:empty",
     ".spectrum-Tabs-selectionIndicator",
     ".spectrum-Tabs.spectrum-Tabs--compact"
   ],
-  "modifiers": [
-    "--mod-tabs-animation-duration",
-    "--mod-tabs-animation-ease",
-    "--mod-tabs-bottom-to-text",
-    "--mod-tabs-bottom-to-text-compact",
-    "--mod-tabs-color",
-    "--mod-tabs-color-disabled",
-    "--mod-tabs-color-hover",
-    "--mod-tabs-color-key-focus",
-    "--mod-tabs-color-selected",
-    "--mod-tabs-color-selected-hover",
-    "--mod-tabs-color-selected-key-focus",
-    "--mod-tabs-focus-indicator-border-radius",
-    "--mod-tabs-focus-indicator-color",
-    "--mod-tabs-focus-indicator-gap",
-    "--mod-tabs-focus-indicator-width",
-    "--mod-tabs-font-family",
-    "--mod-tabs-font-size",
-    "--mod-tabs-font-style",
-    "--mod-tabs-font-weight",
-    "--mod-tabs-icon-size",
-    "--mod-tabs-icon-to-text",
-    "--mod-tabs-item-border-radius",
-    "--mod-tabs-item-height",
-    "--mod-tabs-item-height-compact",
-    "--mod-tabs-item-horizontal-spacing",
-    "--mod-tabs-item-horizontal-spacing-compact",
-    "--mod-tabs-label-to-selection-indicator",
-    "--mod-tabs-label-to-selection-indicator-compact",
-    "--mod-tabs-line-height",
-    "--mod-tabs-selection-indicator-border-radius",
-    "--mod-tabs-selection-indicator-color",
-    "--mod-tabs-selection-indicator-color-disabled",
-    "--mod-tabs-selection-indicator-thickness",
-    "--mod-tabs-side-to-icon",
-    "--mod-tabs-side-to-icon-compact",
-    "--mod-tabs-start-to-edge",
-    "--mod-tabs-top-to-icon",
-    "--mod-tabs-top-to-icon-compact",
-    "--mod-tabs-top-to-text",
-    "--mod-tabs-top-to-text-compact"
-  ],
-  "component": [
-    "--spectrum-tab-selection-indicator-thickness",
-    "--spectrum-tabs-animation-duration",
-    "--spectrum-tabs-animation-ease",
-    "--spectrum-tabs-bottom-to-text",
-    "--spectrum-tabs-color",
-    "--spectrum-tabs-color-disabled",
-    "--spectrum-tabs-color-hover",
-    "--spectrum-tabs-color-key-focus",
-    "--spectrum-tabs-color-selected",
-    "--spectrum-tabs-color-selected-hover",
-    "--spectrum-tabs-color-selected-key-focus",
-    "--spectrum-tabs-focus-indicator-border-radius",
-    "--spectrum-tabs-focus-indicator-color",
-    "--spectrum-tabs-focus-indicator-gap",
-    "--spectrum-tabs-focus-indicator-width",
-    "--spectrum-tabs-font-family",
-    "--spectrum-tabs-font-size",
-    "--spectrum-tabs-font-style",
-    "--spectrum-tabs-font-weight",
-    "--spectrum-tabs-icon-size",
-    "--spectrum-tabs-icon-to-text",
-    "--spectrum-tabs-item-border-radius",
-    "--spectrum-tabs-item-height",
-    "--spectrum-tabs-item-horizontal-spacing",
-    "--spectrum-tabs-label-to-selection-indicator",
-    "--spectrum-tabs-line-height",
-    "--spectrum-tabs-selection-indicator-border-radius",
-    "--spectrum-tabs-selection-indicator-color",
-    "--spectrum-tabs-selection-indicator-color-disabled",
-    "--spectrum-tabs-selection-indicator-thickness",
-    "--spectrum-tabs-side-to-icon",
-    "--spectrum-tabs-start-to-edge",
-    "--spectrum-tabs-top-to-icon",
-    "--spectrum-tabs-top-to-text"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-animation-ease-in-out",
-    "--spectrum-corner-radius-0",
-    "--spectrum-corner-radius-100",
-    "--spectrum-corner-radius-full",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-border-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-line-height-100",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-neutral-subdued-content-color-default",
-    "--spectrum-neutral-subdued-content-color-down",
-    "--spectrum-neutral-subdued-content-color-hover",
-    "--spectrum-neutral-subdued-content-color-key-focus",
-    "--spectrum-regular-font-weight",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-200",
-    "--spectrum-spacing-75",
-    "--spectrum-tab-item-bottom-to-text-compact-medium",
-    "--spectrum-tab-item-bottom-to-text-medium",
-    "--spectrum-tab-item-compact-height-medium",
-    "--spectrum-tab-item-height-medium",
-    "--spectrum-tab-item-side-to-workflow-icon-compact-medium",
-    "--spectrum-tab-item-side-to-workflow-icon-medium",
-    "--spectrum-tab-item-start-to-edge-medium",
-    "--spectrum-tab-item-to-tab-item-compact-horizontal-medium",
-    "--spectrum-tab-item-to-tab-item-horizontal-medium",
-    "--spectrum-tab-item-top-to-text-compact-medium",
-    "--spectrum-tab-item-top-to-text-medium",
-    "--spectrum-tab-item-top-to-workflow-icon-compact-medium",
-    "--spectrum-tab-item-top-to-workflow-icon-medium",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-workflow-icon-size-100"
-  ],
-  "passthroughs": ["--mod-picker-block-size"],
-  "high-contrast": [
-    "--highcontrast-tabs-background-color-selected",
-    "--highcontrast-tabs-color",
-    "--highcontrast-tabs-color-disabled",
-    "--highcontrast-tabs-color-hover",
-    "--highcontrast-tabs-color-key-focus",
-    "--highcontrast-tabs-color-selected",
-    "--highcontrast-tabs-color-selected-hover",
-    "--highcontrast-tabs-color-selected-key-focus",
-    "--highcontrast-tabs-focus-indicator-color",
-    "--highcontrast-tabs-selection-indicator-color",
-    "--highcontrast-tabs-selection-indicator-color-disabled"
-  ]
+  "modifiers": {
+    "mod-tabs-item-height": {
+      "description": "Used by `--spectrum-tabs-item-height`. <br/>Defaults to `var(--spectrum-tab-item-height-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-start-to-edge": {
+      "description": "Used by `--spectrum-tabs-start-to-edge`. <br/>Defaults to `var(--spectrum-tab-item-start-to-edge-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-top-to-text": {
+      "description": "Used by `--spectrum-tabs-top-to-text`. <br/>Defaults to `var(--spectrum-tab-item-top-to-text-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-bottom-to-text": {
+      "description": "Used by `--spectrum-tabs-bottom-to-text`. <br/>Defaults to `var(--spectrum-tab-item-bottom-to-text-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-label-to-selection-indicator": {
+      "description": "Used by `--spectrum-tabs-label-to-selection-indicator`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-item-horizontal-spacing": {
+      "description": "Used by `--spectrum-tabs-item-horizontal-spacing`. <br/>Defaults to `var(--spectrum-tab-item-to-tab-item-horizontal-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-icon-size": {
+      "description": "Used by `--spectrum-tabs-icon-size`. <br/>Defaults to `var(--spectrum-workflow-icon-size-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-icon-to-text": {
+      "description": "Used by `--spectrum-tabs-icon-to-text`. <br/>Defaults to `var(--spectrum-text-to-visual-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-top-to-icon": {
+      "description": "Used by `--spectrum-tabs-top-to-icon`. <br/>Defaults to `var(--spectrum-tab-item-top-to-workflow-icon-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-side-to-icon": {
+      "description": "Used by `--spectrum-tabs-side-to-icon`. <br/>Defaults to `var(--spectrum-tab-item-side-to-workflow-icon-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-item-border-radius": {
+      "description": "Used by `--spectrum-tabs-item-border-radius`. <br/>Defaults to `var(--spectrum-corner-radius-0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-color": {
+      "description": "Used by `--spectrum-tabs-color`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-color-hover": {
+      "description": "Used by `--spectrum-tabs-color-hover`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-color-key-focus": {
+      "description": "Used by `--spectrum-tabs-color-key-focus`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-color-selected": {
+      "description": "Used by `--spectrum-tabs-color-selected`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-color-selected-hover": {
+      "description": "Used by `--spectrum-tabs-color-selected-hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-color-selected-key-focus": {
+      "description": "Used by `--spectrum-tabs-color-selected-key-focus`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-color-disabled": {
+      "description": "Used by `--spectrum-tabs-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-selection-indicator-color-disabled": {
+      "description": "Used by `--spectrum-tabs-selection-indicator-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-font-weight": {
+      "description": "Used by `--spectrum-tabs-font-weight`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-font-family": {
+      "description": "Used by `--spectrum-tabs-font-family`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-font-style": {
+      "description": "Used by `--spectrum-tabs-font-style`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-font-size": {
+      "description": "Used by `--spectrum-tabs-font-size`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-line-height": {
+      "description": "Used by `--spectrum-tabs-line-height`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-focus-indicator-width": {
+      "description": "Used by `--spectrum-tabs-focus-indicator-width`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-focus-indicator-border-radius": {
+      "description": "Used by `--spectrum-tabs-focus-indicator-border-radius`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-focus-indicator-gap": {
+      "description": "Used by `--spectrum-tabs-focus-indicator-gap`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-focus-indicator-color": {
+      "description": "Used by `--spectrum-tabs-focus-indicator-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-selection-indicator-color": {
+      "description": "Used by `--spectrum-tabs-selection-indicator-color`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-tabs-selection-indicator-thickness": {
+      "description": "Used by `--spectrum-tabs-selection-indicator-thickness`. <br/>Defaults to `var(--spectrum-tab-selection-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-selection-indicator-border-radius": {
+      "description": "Used by `--spectrum-tabs-selection-indicator-border-radius`. <br/>Defaults to `var(--spectrum-corner-radius-full)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-animation-duration": {
+      "description": "Used by `--spectrum-tabs-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-animation-ease": {
+      "description": "Used by `--spectrum-tabs-animation-ease`. <br/>Defaults to `var(--spectrum-animation-ease-in-out)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-item-height-compact": {
+      "description": "Used by `--spectrum-tabs-item-height`. <br/>Defaults to `var(--spectrum-tab-item-compact-height-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-top-to-text-compact": {
+      "description": "Used by `--spectrum-tabs-top-to-text`. <br/>Defaults to `var(--spectrum-tab-item-top-to-text-compact-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-bottom-to-text-compact": {
+      "description": "Used by `--spectrum-tabs-bottom-to-text`. <br/>Defaults to `var(--spectrum-tab-item-bottom-to-text-compact-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-label-to-selection-indicator-compact": {
+      "description": "Used by `--spectrum-tabs-label-to-selection-indicator`. <br/>Defaults to `var(--spectrum-spacing-75)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-item-horizontal-spacing-compact": {
+      "description": "Used by `--spectrum-tabs-item-horizontal-spacing`. <br/>Defaults to `var(--spectrum-tab-item-to-tab-item-compact-horizontal-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-top-to-icon-compact": {
+      "description": "Used by `--spectrum-tabs-top-to-icon`. <br/>Defaults to `var(--spectrum-tab-item-top-to-workflow-icon-compact-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-tabs-side-to-icon-compact": {
+      "description": "Used by `--spectrum-tabs-side-to-icon`. <br/>Defaults to `var(--spectrum-tab-item-side-to-workflow-icon-compact-medium)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-tabs-item-height": {
+      "value": "var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium))",
+      "description": "Defined in `.spectrum-Tabs`, `.spectrum-Tabs.spectrum-Tabs--compact`. <br/>Used by `--mod-picker-block-size`, `.spectrum-Tabs-item`, `.spectrum-Tabs--vertical .spectrum-Tabs-item, .spectrum-Tabs--vertical-right .spectrum-Tabs-item`, `.spectrum-Tabs--vertical .spectrum-Icon, .spectrum-Tabs--vertical-right .spectrum-Icon`. <br/>Defaults to `var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-start-to-edge": {
+      "value": "var(--mod-tabs-start-to-edge, var(--spectrum-tab-item-start-to-edge-medium))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs--vertical .spectrum-Tabs-item, .spectrum-Tabs--vertical-right .spectrum-Tabs-item`, `.spectrum-Tabs--vertical .spectrum-Tabs-selectionIndicator, .spectrum-Tabs--vertical-right .spectrum-Tabs-selectionIndicator`, `.spectrum-Tabs--vertical-right .spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--mod-tabs-start-to-edge, var(--spectrum-tab-item-start-to-edge-medium))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-top-to-text": {
+      "value": "var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium))",
+      "description": "Defined in `.spectrum-Tabs`, `.spectrum-Tabs.spectrum-Tabs--compact`. <br/>Used by `.spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-bottom-to-text": {
+      "value": "var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-bottom-to-text-compact-medium))",
+      "description": "Defined in `.spectrum-Tabs`, `.spectrum-Tabs.spectrum-Tabs--compact`. <br/>Used by `.spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-bottom-to-text-compact-medium))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-label-to-selection-indicator": {
+      "value": "var(--mod-tabs-label-to-selection-indicator-compact, var(--spectrum-spacing-75))",
+      "description": "Defined in `.spectrum-Tabs`, `.spectrum-Tabs.spectrum-Tabs--compact`. <br/>Used by `.spectrum-Tabs--horizontal .spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--mod-tabs-label-to-selection-indicator-compact, var(--spectrum-spacing-75))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-item-horizontal-spacing": {
+      "value": "var(--mod-tabs-item-horizontal-spacing-compact, var(--spectrum-tab-item-to-tab-item-compact-horizontal-medium))",
+      "description": "Defined in `.spectrum-Tabs`, `.spectrum-Tabs.spectrum-Tabs--compact`. <br/>Used by `.spectrum-Tabs`. <br/>Defaults to `var(--mod-tabs-item-horizontal-spacing-compact, var(--spectrum-tab-item-to-tab-item-compact-horizontal-medium))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-icon-size": {
+      "value": "var(--mod-tabs-icon-size, var(--spectrum-workflow-icon-size-100))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item .spectrum-Icon`. <br/>Defaults to `var(--mod-tabs-icon-size, var(--spectrum-workflow-icon-size-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-icon-to-text": {
+      "value": "var(--mod-tabs-icon-to-text, var(--spectrum-text-to-visual-100))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item .spectrum-Icon + .spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-icon-to-text, var(--spectrum-text-to-visual-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-top-to-icon": {
+      "value": "var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium))",
+      "description": "Defined in `.spectrum-Tabs`, `.spectrum-Tabs.spectrum-Tabs--compact`. <br/>Used by `.spectrum-Tabs-item .spectrum-Icon`. <br/>Defaults to `var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-side-to-icon": {
+      "value": "var(--mod-tabs-side-to-icon-compact, var(--spectrum-tab-item-side-to-workflow-icon-compact-medium))",
+      "description": "Defined in `.spectrum-Tabs`, `.spectrum-Tabs.spectrum-Tabs--compact`. <br/>Used by `.spectrum-Tabs-item .spectrum-Icon`, `.spectrum-Tabs-item .spectrum-Icon + .spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-side-to-icon-compact, var(--spectrum-tab-item-side-to-workflow-icon-compact-medium))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-item-border-radius": {
+      "value": "var(--mod-tabs-item-border-radius, var(--spectrum-corner-radius-0))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item`. <br/>Defaults to `var(--mod-tabs-item-border-radius, var(--spectrum-corner-radius-0))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-color": {
+      "value": "var(--highcontrast-tabs-color, var(--mod-tabs-color, var(--spectrum-neutral-subdued-content-color-default)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item`. <br/>Defaults to `var(--highcontrast-tabs-color, var(--mod-tabs-color, var(--spectrum-neutral-subdued-content-color-default)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-color-hover": {
+      "value": "var(--highcontrast-tabs-color-hover, var(--mod-tabs-color-hover, var(--spectrum-neutral-subdued-content-color-hover)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item:hover`. <br/>Defaults to `var(--highcontrast-tabs-color-hover, var(--mod-tabs-color-hover, var(--spectrum-neutral-subdued-content-color-hover)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-color-key-focus": {
+      "value": "var(--highcontrast-tabs-color-key-focus, var(--mod-tabs-color-key-focus, var(--spectrum-neutral-subdued-content-color-key-focus)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item:focus-visible`. <br/>Defaults to `var(--highcontrast-tabs-color-key-focus, var(--mod-tabs-color-key-focus, var(--spectrum-neutral-subdued-content-color-key-focus)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-color-selected": {
+      "value": "var(--highcontrast-tabs-color-selected, var(--mod-tabs-color-selected, var(--spectrum-neutral-content-color-default)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item.is-selected`. <br/>Defaults to `var(--highcontrast-tabs-color-selected, var(--mod-tabs-color-selected, var(--spectrum-neutral-content-color-default)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-color-selected-hover": {
+      "value": "var(--highcontrast-tabs-color-selected-hover, var(--mod-tabs-color-selected-hover, var(--spectrum-neutral-content-color-hover)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item.is-selected:hover`. <br/>Defaults to `var(--highcontrast-tabs-color-selected-hover, var(--mod-tabs-color-selected-hover, var(--spectrum-neutral-content-color-hover)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-color-selected-key-focus": {
+      "value": "var(--highcontrast-tabs-color-selected-key-focus, var(--mod-tabs-color-selected-key-focus, var(--spectrum-neutral-content-color-key-focus)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item.is-selected:focus-visible`. <br/>Defaults to `var(--highcontrast-tabs-color-selected-key-focus, var(--mod-tabs-color-selected-key-focus, var(--spectrum-neutral-content-color-key-focus)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-color-disabled": {
+      "value": "var(--highcontrast-tabs-color-disabled, var(--mod-tabs-color-disabled, var(--spectrum-disabled-content-color)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item.is-disabled, .spectrum-Tabs-item.is-selected.is-disabled`. <br/>Defaults to `var(--highcontrast-tabs-color-disabled, var(--mod-tabs-color-disabled, var(--spectrum-disabled-content-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-selection-indicator-color-disabled": {
+      "value": "var(--highcontrast-tabs-selection-indicator-color-disabled, var(--mod-tabs-selection-indicator-color-disabled, var(--spectrum-disabled-border-color)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item.is-disabled .spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--highcontrast-tabs-selection-indicator-color-disabled, var(--mod-tabs-selection-indicator-color-disabled, var(--spectrum-disabled-border-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-font-weight": {
+      "value": "var(--mod-tabs-font-weight, var(--spectrum-regular-font-weight))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-font-weight, var(--spectrum-regular-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-font-family": {
+      "value": "var(--mod-tabs-font-family, var(--spectrum-sans-font-family-stack))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-font-family, var(--spectrum-sans-font-family-stack))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-font-style": {
+      "value": "var(--mod-tabs-font-style, var(--spectrum-default-font-style))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-font-style, var(--spectrum-default-font-style))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-font-size": {
+      "value": "var(--mod-tabs-font-size, var(--spectrum-font-size-100))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-font-size, var(--spectrum-font-size-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-line-height": {
+      "value": "var(--mod-tabs-line-height, var(--spectrum-line-height-100))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-itemLabel`. <br/>Defaults to `var(--mod-tabs-line-height, var(--spectrum-line-height-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-focus-indicator-width": {
+      "value": "var(--mod-tabs-focus-indicator-width, var(--spectrum-focus-indicator-thickness))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item:before`. <br/>Defaults to `var(--mod-tabs-focus-indicator-width, var(--spectrum-focus-indicator-thickness))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-focus-indicator-border-radius": {
+      "value": "var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-corner-radius-100))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item:before`. <br/>Defaults to `var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-corner-radius-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-focus-indicator-gap": {
+      "value": "var(--mod-tabs-focus-indicator-gap, var(--spectrum-focus-indicator-gap))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item:before`. <br/>Defaults to `var(--mod-tabs-focus-indicator-gap, var(--spectrum-focus-indicator-gap))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-focus-indicator-color": {
+      "value": "var(--highcontrast-tabs-focus-indicator-color, var(--mod-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item:focus-visible:before`. <br/>Defaults to `var(--highcontrast-tabs-focus-indicator-color, var(--mod-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-selection-indicator-color": {
+      "value": "var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down)))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-tabs-selection-indicator-thickness": {
+      "value": "var(--mod-tabs-selection-indicator-thickness, var(--spectrum-tab-selection-indicator-thickness))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs--horizontal .spectrum-Tabs-selectionIndicator`, `.spectrum-Tabs--vertical .spectrum-Tabs-selectionIndicator, .spectrum-Tabs--vertical-right .spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--mod-tabs-selection-indicator-thickness, var(--spectrum-tab-selection-indicator-thickness))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tab-selection-indicator-thickness": {
+      "description": "Used by `--spectrum-tabs-selection-indicator-thickness`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-selection-indicator-border-radius": {
+      "value": "var(--mod-tabs-selection-indicator-border-radius, var(--spectrum-corner-radius-full))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--mod-tabs-selection-indicator-border-radius, var(--spectrum-corner-radius-full))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-animation-duration": {
+      "value": "var(--mod-tabs-animation-duration, var(--spectrum-animation-duration-100))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-item`, `.spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--mod-tabs-animation-duration, var(--spectrum-animation-duration-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-tabs-animation-ease": {
+      "value": "var(--mod-tabs-animation-ease, var(--spectrum-animation-ease-in-out))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--mod-tabs-animation-ease, var(--spectrum-animation-ease-in-out))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-tab-item-height-medium": {
+      "value": "var(--spectrum-component-height-300)",
+      "description": "Used by `--spectrum-tabs-item-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-start-to-edge-medium": {
+      "value": "12px",
+      "description": "Used by `--spectrum-tabs-start-to-edge`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-top-to-text-medium": {
+      "value": "14px",
+      "description": "Used by `--spectrum-tabs-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-bottom-to-text-medium": {
+      "value": "14px",
+      "description": "Used by `--spectrum-tabs-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-tabs-label-to-selection-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-to-tab-item-horizontal-medium": {
+      "value": "24px",
+      "description": "Used by `--spectrum-tabs-item-horizontal-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-tabs-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-tabs-icon-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-top-to-workflow-icon-medium": {
+      "value": "15px",
+      "description": "Used by `--spectrum-tabs-top-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-side-to-workflow-icon-medium": {
+      "description": "Used by `--spectrum-tabs-side-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-0": {
+      "value": "0px",
+      "description": "Used by `--spectrum-tabs-item-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-default": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Used by `--spectrum-tabs-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-hover": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-tabs-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-key-focus": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-tabs-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-tabs-color-selected`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-tabs-color-selected-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-tabs-color-selected-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-tabs-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-border-color": {
+      "value": "var(--spectrum-gray-300)",
+      "description": "Used by `--spectrum-tabs-selection-indicator-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-tabs-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-tabs-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-tabs-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-tabs-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-tabs-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-tabs-focus-indicator-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tabs-focus-indicator-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-tabs-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-tabs-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-down": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-tabs-selection-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-full": {
+      "value": "9999px",
+      "description": "Used by `--spectrum-tabs-selection-indicator-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-tabs-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-ease-in-out": {
+      "description": "Used by `--spectrum-tabs-animation-ease`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-compact-height-medium": {
+      "value": "var(--spectrum-component-height-100)",
+      "description": "Used by `--spectrum-tabs-item-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-top-to-text-compact-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-tabs-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-bottom-to-text-compact-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-tabs-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-tabs-label-to-selection-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-to-tab-item-compact-horizontal-medium": {
+      "description": "Used by `--spectrum-tabs-item-horizontal-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-top-to-workflow-icon-compact-medium": {
+      "value": "7px",
+      "description": "Used by `--spectrum-tabs-top-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-tab-item-side-to-workflow-icon-compact-medium": {
+      "description": "Used by `--spectrum-tabs-side-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-picker-block-size": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-tabs-color": {
+      "value": "var(--mod-tabs-color, var(--spectrum-neutral-subdued-content-color-default))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-color`. <br/>Defaults to `var(--mod-tabs-color, var(--spectrum-neutral-subdued-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-color-hover": {
+      "value": "var(--mod-tabs-color-hover, var(--spectrum-neutral-subdued-content-color-hover))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-color-hover`. <br/>Defaults to `var(--mod-tabs-color-hover, var(--spectrum-neutral-subdued-content-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-color-key-focus": {
+      "value": "var(--mod-tabs-color-key-focus, var(--spectrum-neutral-subdued-content-color-key-focus))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-color-key-focus`. <br/>Defaults to `var(--mod-tabs-color-key-focus, var(--spectrum-neutral-subdued-content-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-color-selected": {
+      "value": "var(--mod-tabs-color-selected, var(--spectrum-neutral-content-color-default))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-color-selected`, `.spectrum-Tabs .spectrum-Tabs-item.is-selected .spectrum-Icon`. <br/>Defaults to `var(--mod-tabs-color-selected, var(--spectrum-neutral-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-color-selected-hover": {
+      "value": "var(--mod-tabs-color-selected-hover, var(--spectrum-neutral-content-color-hover))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-color-selected-hover`. <br/>Defaults to `var(--mod-tabs-color-selected-hover, var(--spectrum-neutral-content-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-color-selected-key-focus": {
+      "value": "var(--mod-tabs-color-selected-key-focus, var(--spectrum-neutral-content-color-key-focus))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-color-selected-key-focus`. <br/>Defaults to `var(--mod-tabs-color-selected-key-focus, var(--spectrum-neutral-content-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-color-disabled": {
+      "value": "var(--mod-tabs-color-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-color-disabled`, `.spectrum-Tabs .spectrum-Tabs-item.is-selected.is-disabled .spectrum-Icon`. <br/>Defaults to `var(--mod-tabs-color-disabled, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-selection-indicator-color-disabled": {
+      "value": "var(--mod-tabs-selection-indicator-color-disabled, var(--spectrum-disabled-border-color))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-selection-indicator-color-disabled`, `.spectrum-Tabs .spectrum-Tabs-item.is-selected.is-disabled .spectrum-Tabs-selectionIndicator`. <br/>Defaults to `var(--mod-tabs-selection-indicator-color-disabled, var(--spectrum-disabled-border-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-focus-indicator-color": {
+      "value": "var(--mod-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-focus-indicator-color`. <br/>Defaults to `var(--mod-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-selection-indicator-color": {
+      "value": "var(--mod-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down))",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `--spectrum-tabs-selection-indicator-color`. <br/>Defaults to `var(--mod-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-tabs-background-color-selected": {
+      "value": "SelectedItem",
+      "description": "Defined in `.spectrum-Tabs`. <br/>Used by `.spectrum-Tabs .spectrum-Tabs-item.is-selected`. <br/>Defaults to `SelectedItem`, if not set.",
+      "control": "color"
+    }
+  }
 }

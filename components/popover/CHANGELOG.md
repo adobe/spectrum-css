@@ -1,13 +1,5 @@
 # Change log
 
-## 9.0.0-next.5
-
-### Patch Changes
-
-📝 [#4174](https://github.com/adobe/spectrum-css/pull/4174) [`1895ddb`](https://github.com/adobe/spectrum-css/commit/1895ddbe962989c8813cb1bf41f8bb0425b67e76) Thanks [@castastrophe](https://github.com/castastrophe)!
-
-Popover positioning "top-left" and "top-right" were using inline properties which caused the spacings to swap in RTL mode. This was unintended as the "right" and "left" naming conventions are meant to retain their location in LTR or RTL mode.
-
 ## 9.0.0-next.4
 
 ### Major Changes

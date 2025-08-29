@@ -2,10 +2,12 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { AccordionGroup, testsContent as accordionContent, directActionsContent, longerContent } from "./accordion.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal
@@ -117,6 +119,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

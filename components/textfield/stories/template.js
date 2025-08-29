@@ -53,6 +53,7 @@ import "../index.css";
  */
 export const Template = ({
 	rootClass = "spectrum-Textfield",
+	id = getRandomId("text-field"),
 	size = "m",
 	customClasses = [],
 	customInputClasses = [],
@@ -81,7 +82,6 @@ export const Template = ({
 	name,
 	step,
 	helpText = "",
-	id = getRandomId("textfield"),
 	value = "",
 	type = "text",
 	autocomplete = true,

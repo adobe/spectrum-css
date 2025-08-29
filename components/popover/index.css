@@ -256,18 +256,14 @@
 	/* popover is at top of source, tip left and pointing down ▽ */
 	&.spectrum-Popover--top-left {
 		.spectrum-Popover-tip {
-			/* stylelint-disable-next-line csstools/use-logical -- intentional, left stays on the same side even for RTL */
-			left: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-			right: auto;
+			inset-inline: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
 		}
 	}
 
 	/* popover is at top of source, tip right and pointing down ▽ */
 	&.spectrum-Popover--top-right {
 		.spectrum-Popover-tip {
-			/* stylelint-disable-next-line csstools/use-logical -- intentional, right stays on the same side even for RTL */
-			left: auto;
-			right: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			inset-inline: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
 		}
 	}
 
@@ -302,18 +298,14 @@
 	/* popover position is bottom, source is at left, tip pointing up △ */
 	&.spectrum-Popover--bottom-left {
 		.spectrum-Popover-tip {
-			/* stylelint-disable-next-line csstools/use-logical -- intentional, left stays on the same side even for RTL */
-			left: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-			right: auto;
+			inset-inline: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
 		}
 	}
 
 	/* popover position is bottom, source is at right, tip pointing up △ */
 	&.spectrum-Popover--bottom-right {
 		.spectrum-Popover-tip {
-			/* stylelint-disable-next-line csstools/use-logical -- intentional, right stays on the same side even for RTL */
-			left: auto;
-			right: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+			inset-inline: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
 		}
 	}
 

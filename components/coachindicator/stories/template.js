@@ -1,7 +1,5 @@
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
-import { ifDefined } from "lit-html/directives/if-defined.js";
 import { styleMap } from "lit-html/directives/style-map.js";
 
 import "../index.css";
@@ -12,7 +10,6 @@ export const Template = ({
 	staticColor,
 	customClasses = [],
 	customStyles = {},
-	id = getRandomId("coach-indicator"),
 } = {}) => {
 	return html`
 		<div
@@ -24,7 +21,6 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
-			id=${ifDefined(id)}
 		>
 			${Array.from({ length: 3 }).map(() => html`
 				<div class=${classMap({ [`${rootClass}-ring`]: true })}></div>

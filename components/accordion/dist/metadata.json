@@ -17,230 +17,1171 @@
     ".spectrum-Accordion--spacious.spectrum-Accordion--sizeS",
     ".spectrum-Accordion--spacious.spectrum-Accordion--sizeXL",
     ".spectrum-Accordion-item",
+    ".spectrum-Accordion-item:first-child",
     ".spectrum-Accordion-item.is-disabled",
     ".spectrum-Accordion-item.is-open > .spectrum-Accordion-itemContent",
     ".spectrum-Accordion-item.is-open > .spectrum-Accordion-itemHeading .spectrum-Accordion-itemIndicator",
-    ".spectrum-Accordion-item:first-child",
     ".spectrum-Accordion-itemContent",
     ".spectrum-Accordion-itemDirectActions",
     ".spectrum-Accordion-itemHeader",
-    ".spectrum-Accordion-itemHeader.spectrum-Accordion-itemHeader:active",
     ".spectrum-Accordion-itemHeader:focus-visible",
     ".spectrum-Accordion-itemHeader:has(+ .spectrum-Accordion-itemDirectActions)",
     ".spectrum-Accordion-itemHeader:hover",
+    ".spectrum-Accordion-itemHeader.spectrum-Accordion-itemHeader:active",
     ".spectrum-Accordion-itemHeading",
     ".spectrum-Accordion-itemIndicator",
     ".spectrum-Accordion-itemTitle",
-    ".spectrum-Accordion.spectrum-Accordion--noInlinePadding",
     ".spectrum-Accordion:dir(rtl)",
     ".spectrum-Accordion:lang(ja)",
     ".spectrum-Accordion:lang(ko)",
-    ".spectrum-Accordion:lang(zh)"
+    ".spectrum-Accordion:lang(zh)",
+    ".spectrum-Accordion.spectrum-Accordion--noInlinePadding"
   ],
-  "modifiers": [
-    "--mod-accordion-animation-duration",
-    "--mod-accordion-background-color-default",
-    "--mod-accordion-background-color-down",
-    "--mod-accordion-background-color-hover",
-    "--mod-accordion-background-color-key-focus",
-    "--mod-accordion-content-padding-inline",
-    "--mod-accordion-corner-radius",
-    "--mod-accordion-disclosure-indicator-height",
-    "--mod-accordion-disclosure-indicator-to-text-space",
-    "--mod-accordion-divider-color",
-    "--mod-accordion-divider-thickness",
-    "--mod-accordion-edge-to-content-area",
-    "--mod-accordion-edge-to-disclosure-indicator-space",
-    "--mod-accordion-edge-to-text-space",
-    "--mod-accordion-item-content-area-bottom-to-content",
-    "--mod-accordion-item-content-area-top-to-content",
-    "--mod-accordion-item-content-color",
-    "--mod-accordion-item-content-disabled-color",
-    "--mod-accordion-item-content-font",
-    "--mod-accordion-item-content-font-size",
-    "--mod-accordion-item-content-font-style",
-    "--mod-accordion-item-content-font-weight",
-    "--mod-accordion-item-content-line-height",
-    "--mod-accordion-item-direct-actions-height",
-    "--mod-accordion-item-direct-actions-spacing",
-    "--mod-accordion-item-direct-actions-vertical-spacing",
-    "--mod-accordion-item-focus-indicator-color",
-    "--mod-accordion-item-focus-indicator-gap",
-    "--mod-accordion-item-focus-indicator-thickness",
-    "--mod-accordion-item-header-bottom-to-text-space",
-    "--mod-accordion-item-header-color-default",
-    "--mod-accordion-item-header-color-down",
-    "--mod-accordion-item-header-color-hover",
-    "--mod-accordion-item-header-color-key-focus",
-    "--mod-accordion-item-header-disabled-color",
-    "--mod-accordion-item-header-font",
-    "--mod-accordion-item-header-font-size",
-    "--mod-accordion-item-header-font-style",
-    "--mod-accordion-item-header-font-weight",
-    "--mod-accordion-item-header-line-height",
-    "--mod-accordion-item-header-to-direct-actions-space",
-    "--mod-accordion-item-header-top-to-text-space",
-    "--mod-accordion-item-min-block-size",
-    "--mod-accordion-item-minimum-height",
-    "--mod-accordion-item-minimum-width",
-    "--mod-accordion-item-width",
-    "--mod-accordion-top-to-disclosure-indicator"
-  ],
-  "component": [
-    "--spectrum-accordion-animation-duration",
-    "--spectrum-accordion-background-color-default",
-    "--spectrum-accordion-background-color-down",
-    "--spectrum-accordion-background-color-hover",
-    "--spectrum-accordion-background-color-key-focus",
-    "--spectrum-accordion-bottom-to-text-compact-extra-large",
-    "--spectrum-accordion-bottom-to-text-compact-large",
-    "--spectrum-accordion-bottom-to-text-compact-medium",
-    "--spectrum-accordion-bottom-to-text-compact-small",
-    "--spectrum-accordion-bottom-to-text-extra-large",
-    "--spectrum-accordion-bottom-to-text-large",
-    "--spectrum-accordion-bottom-to-text-medium",
-    "--spectrum-accordion-bottom-to-text-small",
-    "--spectrum-accordion-bottom-to-text-spacious-extra-large",
-    "--spectrum-accordion-bottom-to-text-spacious-large",
-    "--spectrum-accordion-bottom-to-text-spacious-medium",
-    "--spectrum-accordion-bottom-to-text-spacious-small",
-    "--spectrum-accordion-content-area-bottom-to-content",
-    "--spectrum-accordion-content-area-edge-to-content-extra-large",
-    "--spectrum-accordion-content-area-edge-to-content-large",
-    "--spectrum-accordion-content-area-edge-to-content-medium",
-    "--spectrum-accordion-content-area-edge-to-content-small",
-    "--spectrum-accordion-content-area-top-to-content",
-    "--spectrum-accordion-content-padding-inline",
-    "--spectrum-accordion-corner-radius",
-    "--spectrum-accordion-disclosure-indicator-height",
-    "--spectrum-accordion-disclosure-indicator-to-text-extra-large",
-    "--spectrum-accordion-disclosure-indicator-to-text-large",
-    "--spectrum-accordion-disclosure-indicator-to-text-medium",
-    "--spectrum-accordion-disclosure-indicator-to-text-small",
-    "--spectrum-accordion-disclosure-indicator-to-text-space",
-    "--spectrum-accordion-divider-color",
-    "--spectrum-accordion-divider-thickness",
-    "--spectrum-accordion-edge-to-content-area",
-    "--spectrum-accordion-edge-to-content-area-extra-large",
-    "--spectrum-accordion-edge-to-content-area-large",
-    "--spectrum-accordion-edge-to-content-area-medium",
-    "--spectrum-accordion-edge-to-content-area-small",
-    "--spectrum-accordion-edge-to-disclosure-indicator-space",
-    "--spectrum-accordion-edge-to-text",
-    "--spectrum-accordion-edge-to-text-space",
-    "--spectrum-accordion-item-content-area-bottom-to-content",
-    "--spectrum-accordion-item-content-area-top-to-content",
-    "--spectrum-accordion-item-content-color",
-    "--spectrum-accordion-item-content-font",
-    "--spectrum-accordion-item-content-font-size",
-    "--spectrum-accordion-item-content-font-style",
-    "--spectrum-accordion-item-content-font-weight",
-    "--spectrum-accordion-item-content-line-height",
-    "--spectrum-accordion-item-direct-actions-height",
-    "--spectrum-accordion-item-direct-actions-spacing",
-    "--spectrum-accordion-item-direct-actions-vertical-spacing",
-    "--spectrum-accordion-item-focus-indicator-color",
-    "--spectrum-accordion-item-focus-indicator-gap",
-    "--spectrum-accordion-item-focus-indicator-thickness",
-    "--spectrum-accordion-item-header-bottom-to-text-space",
-    "--spectrum-accordion-item-header-color-default",
-    "--spectrum-accordion-item-header-color-down",
-    "--spectrum-accordion-item-header-color-hover",
-    "--spectrum-accordion-item-header-color-key-focus",
-    "--spectrum-accordion-item-header-cursor",
-    "--spectrum-accordion-item-header-font",
-    "--spectrum-accordion-item-header-font-size",
-    "--spectrum-accordion-item-header-font-style",
-    "--spectrum-accordion-item-header-font-weight",
-    "--spectrum-accordion-item-header-line-height",
-    "--spectrum-accordion-item-header-to-direct-actions-space",
-    "--spectrum-accordion-item-header-top-to-text-space",
-    "--spectrum-accordion-item-min-block-size",
-    "--spectrum-accordion-item-minimum-height",
-    "--spectrum-accordion-item-minimum-width",
-    "--spectrum-accordion-item-width",
-    "--spectrum-accordion-minimum-width",
-    "--spectrum-accordion-top-to-disclosure-indicator",
-    "--spectrum-accordion-top-to-text-compact-extra-large",
-    "--spectrum-accordion-top-to-text-compact-large",
-    "--spectrum-accordion-top-to-text-compact-medium",
-    "--spectrum-accordion-top-to-text-compact-small",
-    "--spectrum-accordion-top-to-text-extra-large",
-    "--spectrum-accordion-top-to-text-large",
-    "--spectrum-accordion-top-to-text-medium",
-    "--spectrum-accordion-top-to-text-small",
-    "--spectrum-accordion-top-to-text-spacious-extra-large",
-    "--spectrum-accordion-top-to-text-spacious-large",
-    "--spectrum-accordion-top-to-text-spacious-medium",
-    "--spectrum-accordion-top-to-text-spacious-small"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-body-color",
-    "--spectrum-body-sans-serif-font-style",
-    "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-body-size-l",
-    "--spectrum-body-size-m",
-    "--spectrum-body-size-s",
-    "--spectrum-body-size-xs",
-    "--spectrum-bold-font-weight",
-    "--spectrum-chevron-icon-size-100",
-    "--spectrum-chevron-icon-size-200",
-    "--spectrum-chevron-icon-size-300",
-    "--spectrum-chevron-icon-size-75",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-400",
-    "--spectrum-component-height-500",
-    "--spectrum-component-height-75",
-    "--spectrum-corner-radius-medium-size-extra-large",
-    "--spectrum-corner-radius-medium-size-large",
-    "--spectrum-corner-radius-medium-size-medium",
-    "--spectrum-corner-radius-medium-size-small",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-content-color",
-    "--spectrum-divider-thickness-small",
-    "--spectrum-field-default-width-extra-large",
-    "--spectrum-field-default-width-large",
-    "--spectrum-field-default-width-medium",
-    "--spectrum-field-edge-to-disclosure-icon-100",
-    "--spectrum-field-edge-to-disclosure-icon-200",
-    "--spectrum-field-edge-to-disclosure-icon-300",
-    "--spectrum-field-edge-to-disclosure-icon-75",
-    "--spectrum-field-top-to-disclosure-icon-compact-extra-large",
-    "--spectrum-field-top-to-disclosure-icon-compact-large",
-    "--spectrum-field-top-to-disclosure-icon-compact-medium",
-    "--spectrum-field-top-to-disclosure-icon-compact-small",
-    "--spectrum-field-top-to-disclosure-icon-extra-large",
-    "--spectrum-field-top-to-disclosure-icon-large",
-    "--spectrum-field-top-to-disclosure-icon-medium",
-    "--spectrum-field-top-to-disclosure-icon-small",
-    "--spectrum-field-top-to-disclosure-icon-spacious-extra-large",
-    "--spectrum-field-top-to-disclosure-icon-spacious-large",
-    "--spectrum-field-top-to-disclosure-icon-spacious-medium",
-    "--spectrum-field-top-to-disclosure-icon-spacious-small",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-400",
-    "--spectrum-gray-200",
-    "--spectrum-line-height-100",
-    "--spectrum-logical-rotation",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-100",
-    "--spectrum-transparent-black-100",
-    "--spectrum-transparent-black-25",
-    "--spectrum-transparent-black-300"
-  ],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-accordion-background-color-default": {
+      "description": "Used by `--spectrum-accordion-background-color-default`. <br/>Defaults to `var(--spectrum-transparent-black-25)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-background-color-hover": {
+      "description": "Used by `--spectrum-accordion-background-color-hover`. <br/>Defaults to `var(--spectrum-transparent-black-100)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-background-color-down": {
+      "description": "Used by `--spectrum-accordion-background-color-down`. <br/>Defaults to `var(--spectrum-transparent-black-300)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-background-color-key-focus": {
+      "description": "Used by `--spectrum-accordion-background-color-key-focus`. <br/>Defaults to `var(--spectrum-transparent-black-100)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-color": {
+      "description": "Used by `--spectrum-accordion-item-content-color`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-divider-color": {
+      "description": "Used by `--spectrum-accordion-divider-color`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-focus-indicator-color": {
+      "description": "Used by `--spectrum-accordion-item-focus-indicator-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-color-default": {
+      "description": "Used by `--spectrum-accordion-item-header-color-default`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-color-hover": {
+      "description": "Used by `--spectrum-accordion-item-header-color-hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-color-down": {
+      "description": "Used by `--spectrum-accordion-item-header-color-down`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-color-key-focus": {
+      "description": "Used by `--spectrum-accordion-item-header-color-key-focus`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-minimum-height": {
+      "description": "Used by `--spectrum-accordion-item-min-block-size`. <br/>Defaults to `var(--spectrum-accordion-item-minimum-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-top-to-text-space": {
+      "description": "Used by `--spectrum-accordion-item-min-block-size`, `.spectrum-Accordion-itemTitle`. <br/>Defaults to `var(--spectrum-accordion-item-header-top-to-text-space)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-bottom-to-text-space": {
+      "description": "Used by `--spectrum-accordion-item-min-block-size`, `.spectrum-Accordion-itemTitle`. <br/>Defaults to `var(--spectrum-accordion-item-header-bottom-to-text-space)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-font-size": {
+      "description": "Used by `--spectrum-accordion-item-min-block-size`, `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-accordion-item-header-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-line-height": {
+      "description": "Used by `--spectrum-accordion-item-min-block-size`, `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-accordion-item-header-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-min-block-size": {
+      "description": "Used by `--spectrum-accordion-item-direct-actions-vertical-spacing`, `.spectrum-Accordion-item`, `.spectrum-Accordion-itemTitle`. <br/>Defaults to `var(--spectrum-accordion-item-min-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-direct-actions-height": {
+      "description": "Used by `--spectrum-accordion-item-direct-actions-vertical-spacing`. <br/>Defaults to `var(--spectrum-accordion-item-direct-actions-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-disabled-color": {
+      "description": "Used by `--spectrum-accordion-item-content-color`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-disabled-color": {
+      "description": "Used by `--spectrum-accordion-item-header-color-default`, `--spectrum-accordion-item-header-color-hover`, `--spectrum-accordion-item-header-color-down`, `--spectrum-accordion-item-header-color-key-focus`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-minimum-width": {
+      "description": "Used by `.spectrum-Accordion-item`. <br/>Defaults to `var(--spectrum-accordion-item-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-width": {
+      "description": "Used by `.spectrum-Accordion-item`. <br/>Defaults to `var(--spectrum-accordion-item-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-divider-thickness": {
+      "description": "Used by `.spectrum-Accordion-item`, `.spectrum-Accordion-item:first-child`. <br/>Defaults to `var(--spectrum-accordion-divider-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-disclosure-indicator-height": {
+      "description": "Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-accordion-disclosure-indicator-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-animation-duration": {
+      "description": "Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-accordion-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-top-to-disclosure-indicator": {
+      "description": "Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-accordion-top-to-disclosure-indicator)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-edge-to-disclosure-indicator-space": {
+      "description": "Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-accordion-edge-to-disclosure-indicator-space)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-disclosure-indicator-to-text-space": {
+      "description": "Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-accordion-disclosure-indicator-to-text-space)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-area-top-to-content": {
+      "description": "Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-item-content-area-top-to-content)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-area-bottom-to-content": {
+      "description": "Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-item-content-area-bottom-to-content)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-content-padding-inline": {
+      "description": "Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-content-padding-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-font-weight": {
+      "description": "Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-item-content-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-font-style": {
+      "description": "Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-item-content-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-font-size": {
+      "description": "Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-item-content-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-font": {
+      "description": "Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-item-content-font)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-content-line-height": {
+      "description": "Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-item-content-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-edge-to-text-space": {
+      "description": "Used by `.spectrum-Accordion-itemTitle`. <br/>Defaults to `var(--spectrum-accordion-edge-to-text-space)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-edge-to-content-area": {
+      "description": "Used by `.spectrum-Accordion-itemHeader`, `.spectrum-Accordion-itemDirectActions`. <br/>Defaults to `var(--spectrum-accordion-edge-to-content-area)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-font-weight": {
+      "description": "Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-accordion-item-header-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-font-style": {
+      "description": "Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-accordion-item-header-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-font": {
+      "description": "Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-accordion-item-header-font)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-corner-radius": {
+      "description": "Used by `.spectrum-Accordion-itemHeader:focus-visible`, `.spectrum-Accordion--quiet .spectrum-Accordion-itemHeader:active`, `.spectrum-Accordion--quiet .spectrum-Accordion-itemHeader:hover`. <br/>Defaults to `var(--spectrum-accordion-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-Accordion-itemHeader:focus-visible`. <br/>Defaults to `var(--spectrum-accordion-item-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-focus-indicator-gap": {
+      "description": "Used by `.spectrum-Accordion-itemHeader:focus-visible`. <br/>Defaults to `var(--spectrum-accordion-item-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-header-to-direct-actions-space": {
+      "description": "Used by `.spectrum-Accordion-itemHeader:has(+ .spectrum-Accordion-itemDirectActions)`. <br/>Defaults to `var(--spectrum-accordion-item-header-to-direct-actions-space)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-direct-actions-spacing": {
+      "description": "Used by `.spectrum-Accordion-itemDirectActions`. <br/>Defaults to `var(--spectrum-accordion-item-direct-actions-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-accordion-item-direct-actions-vertical-spacing": {
+      "description": "Used by `.spectrum-Accordion-itemDirectActions`. <br/>Defaults to `var(--spectrum-accordion-item-direct-actions-vertical-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-accordion-item-minimum-height": {
+      "value": "64px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`, `.spectrum-Accordion--compact`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeS`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeL`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeXL`, `.spectrum-Accordion--spacious`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeS`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeL`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeXL`. <br/>Used by `--spectrum-accordion-item-min-block-size`. <br/>Defaults to `var(--spectrum-component-height-500)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-minimum-width": {
+      "value": "200px",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-item`. <br/>Defaults to `var(--spectrum-accordion-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-minimum-width": {
+      "value": "200px",
+      "description": "Used by `--spectrum-accordion-item-minimum-width`, `--spectrum-accordion-item-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-width": {
+      "value": "240px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`. <br/>Used by `.spectrum-Accordion-item`. <br/>Defaults to `var(--spectrum-field-default-width-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-disclosure-indicator-height": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`. <br/>Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-chevron-icon-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-disclosure-indicator-to-text-space": {
+      "value": "17px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`. <br/>Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-accordion-disclosure-indicator-to-text-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-disclosure-indicator-to-text-medium": {
+      "value": "11px",
+      "description": "Used by `--spectrum-accordion-disclosure-indicator-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-edge-to-disclosure-indicator-space": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`, `.spectrum-Accordion.spectrum-Accordion--noInlinePadding`. <br/>Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `0px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-content-padding-inline": {
+      "value": "15px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-content-area-edge-to-content-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-content-area-edge-to-content-medium": {
+      "value": "9px",
+      "description": "Used by `--spectrum-accordion-content-padding-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-edge-to-content-area": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`, `.spectrum-Accordion.spectrum-Accordion--noInlinePadding`. <br/>Used by `.spectrum-Accordion-itemHeader`, `.spectrum-Accordion-itemDirectActions`. <br/>Defaults to `0px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-edge-to-content-area-medium": {
+      "value": "11px",
+      "description": "Used by `--spectrum-accordion-edge-to-content-area`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-edge-to-text-space": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemTitle`. <br/>Defaults to `var(--spectrum-accordion-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-edge-to-text": {
+      "value": "0px",
+      "description": "Used by `--spectrum-accordion-edge-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-top-to-text-space": {
+      "value": "17px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`, `.spectrum-Accordion--compact`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeS`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeL`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeXL`, `.spectrum-Accordion--spacious`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeS`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeL`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeXL`. <br/>Used by `--spectrum-accordion-item-min-block-size`, `.spectrum-Accordion-itemTitle`. <br/>Defaults to `var(--spectrum-accordion-top-to-text-spacious-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-medium": {
+      "value": "9px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-bottom-to-text-space": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`, `.spectrum-Accordion--compact`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeS`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeL`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeXL`, `.spectrum-Accordion--spacious`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeS`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeL`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeXL`. <br/>Used by `--spectrum-accordion-item-min-block-size`, `.spectrum-Accordion-itemTitle`. <br/>Defaults to `var(--spectrum-accordion-bottom-to-text-spacious-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-medium": {
+      "value": "9px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-disclosure-indicator": {
+      "value": "25px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`, `.spectrum-Accordion--compact`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeS`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeL`, `.spectrum-Accordion--compact.spectrum-Accordion--sizeXL`, `.spectrum-Accordion--spacious`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeS`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeL`, `.spectrum-Accordion--spacious.spectrum-Accordion--sizeXL`. <br/>Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-field-top-to-disclosure-icon-spacious-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemHeader:focus-visible`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemHeader:focus-visible`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-corner-radius": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`. <br/>Used by `.spectrum-Accordion-itemHeader:focus-visible`, `.spectrum-Accordion--quiet .spectrum-Accordion-itemHeader:active`, `.spectrum-Accordion--quiet .spectrum-Accordion-itemHeader:hover`. <br/>Defaults to `var(--spectrum-corner-radius-medium-size-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-content-area-top-to-content": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-content-area-top-to-content)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-content-area-top-to-content": {
+      "value": "8px",
+      "description": "Used by `--spectrum-accordion-item-content-area-top-to-content`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-content-area-bottom-to-content": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-accordion-content-area-bottom-to-content)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-content-area-bottom-to-content": {
+      "value": "16px",
+      "description": "Used by `--spectrum-accordion-item-content-area-bottom-to-content`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-divider-thickness": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--quiet`. <br/>Used by `.spectrum-Accordion-item`, `.spectrum-Accordion-item:first-child`. <br/>Defaults to `0px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-direct-actions-height": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`. <br/>Used by `--spectrum-accordion-item-direct-actions-vertical-spacing`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-to-direct-actions-space": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemHeader:has(+ .spectrum-Accordion-itemDirectActions)`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-font": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-font-weight": {
+      "value": "700",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-font-size": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`. <br/>Used by `--spectrum-accordion-item-min-block-size`, `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-font-size-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion:lang(ja), .spectrum-Accordion:lang(ko), .spectrum-Accordion:lang(zh)`. <br/>Used by `--spectrum-accordion-item-min-block-size`, `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-cursor": {
+      "value": "default",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `default`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-direct-actions-spacing": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemDirectActions`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemIndicator`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-content-font": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-content-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-content-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-content-font-size": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion--sizeS`, `.spectrum-Accordion--sizeL`, `.spectrum-Accordion--sizeXL`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-body-size-l)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-content-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion:lang(ja), .spectrum-Accordion:lang(ko), .spectrum-Accordion:lang(zh)`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-background-color-default": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-background-color-hover": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader:hover`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-background-color-down": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader.spectrum-Accordion-itemHeader:active`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-background-color-key-focus": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader:focus-visible`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-content-color": {
+      "value": "var(--mod-accordion-item-content-disabled-color, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemContent`. <br/>Defaults to `var(--mod-accordion-item-content-disabled-color, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-divider-color": {
+      "value": "var(--mod-accordion-divider-color, var(--spectrum-gray-200))",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-item`, `.spectrum-Accordion-item:first-child`. <br/>Defaults to `var(--mod-accordion-divider-color, var(--spectrum-gray-200))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-focus-indicator-color": {
+      "value": "Highlight",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemHeader:focus-visible`. <br/>Defaults to `Highlight`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-color-default": {
+      "value": "var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader`. <br/>Defaults to `var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-color-hover": {
+      "value": "var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader:hover`. <br/>Defaults to `var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-color-down": {
+      "value": "var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader.spectrum-Accordion-itemHeader:active`. <br/>Defaults to `var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-header-color-key-focus": {
+      "value": "var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-Accordion`, `.spectrum-Accordion-item.is-disabled`. <br/>Used by `.spectrum-Accordion-itemHeader:focus-visible`. <br/>Defaults to `var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-min-block-size": {
+      "value": "max(var(--mod-accordion-item-minimum-height, var(--spectrum-accordion-item-minimum-height)),var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) + var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) + (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height))))",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `--spectrum-accordion-item-direct-actions-vertical-spacing`, `.spectrum-Accordion-item`, `.spectrum-Accordion-itemTitle`. <br/>Defaults to `max(var(--mod-accordion-item-minimum-height, var(--spectrum-accordion-item-minimum-height)),var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) + var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) + (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height))))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-item-direct-actions-vertical-spacing": {
+      "value": "calc((var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size)) - var(--mod-accordion-item-direct-actions-height, var(--spectrum-accordion-item-direct-actions-height))) / 2)",
+      "description": "Defined in `.spectrum-Accordion`. <br/>Used by `.spectrum-Accordion-itemDirectActions`. <br/>Defaults to `calc((var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size)) - var(--mod-accordion-item-direct-actions-height, var(--spectrum-accordion-item-direct-actions-height))) / 2)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-disclosure-indicator-to-text-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-accordion-disclosure-indicator-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-content-area-edge-to-content-small": {
+      "value": "8px",
+      "description": "Used by `--spectrum-accordion-content-padding-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-edge-to-content-area-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-accordion-edge-to-content-area`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-disclosure-indicator-to-text-large": {
+      "value": "14px",
+      "description": "Used by `--spectrum-accordion-disclosure-indicator-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-content-area-edge-to-content-large": {
+      "value": "12px",
+      "description": "Used by `--spectrum-accordion-content-padding-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-edge-to-content-area-large": {
+      "value": "14px",
+      "description": "Used by `--spectrum-accordion-edge-to-content-area`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-large": {
+      "value": "12px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-large": {
+      "value": "11px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-disclosure-indicator-to-text-extra-large": {
+      "value": "17px",
+      "description": "Used by `--spectrum-accordion-disclosure-indicator-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-content-area-edge-to-content-extra-large": {
+      "value": "15px",
+      "description": "Used by `--spectrum-accordion-content-padding-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-edge-to-content-area-extra-large": {
+      "value": "17px",
+      "description": "Used by `--spectrum-accordion-edge-to-content-area`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-extra-large": {
+      "value": "13px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-extra-large": {
+      "value": "12px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-compact-medium": {
+      "value": "5px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-compact-medium": {
+      "value": "5px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-compact-small": {
+      "value": "3px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-compact-small": {
+      "value": "2px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-compact-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-compact-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-compact-extra-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-compact-extra-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-spacious-medium": {
+      "value": "13px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-spacious-medium": {
+      "value": "13px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-spacious-small": {
+      "value": "11px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-spacious-small": {
+      "value": "11px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-spacious-large": {
+      "value": "16px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-spacious-large": {
+      "value": "16px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-top-to-text-spacious-extra-large": {
+      "value": "17px",
+      "description": "Used by `--spectrum-accordion-item-header-top-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-accordion-bottom-to-text-spacious-extra-large": {
+      "value": "16px",
+      "description": "Used by `--spectrum-accordion-item-header-bottom-to-text-space`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-accordion-item-minimum-height`, `--spectrum-accordion-item-direct-actions-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-medium": {
+      "value": "208px",
+      "description": "Used by `--spectrum-accordion-item-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-chevron-icon-size-100": {
+      "value": "10px",
+      "description": "Used by `--spectrum-accordion-disclosure-indicator-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-disclosure-icon-100": {
+      "value": "11px",
+      "description": "Used by `--spectrum-accordion-edge-to-disclosure-indicator-space`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-medium": {
+      "value": "15px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-accordion-item-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-accordion-item-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-accordion-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-divider-thickness-small": {
+      "value": "1px",
+      "description": "Used by `--spectrum-accordion-divider-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-accordion-item-direct-actions-height`, `--spectrum-accordion-item-minimum-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-accordion-item-header-to-direct-actions-space`, `--spectrum-accordion-item-direct-actions-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-accordion-item-header-font`, `--spectrum-accordion-item-content-font`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-bold-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-accordion-item-header-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-accordion-item-header-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-accordion-item-header-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-accordion-item-header-line-height`, `--spectrum-accordion-item-content-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-accordion-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-accordion-item-content-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-accordion-item-content-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-s": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-accordion-item-content-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-25": {
+      "value": "rgba(0, 0, 0, 0)",
+      "description": "Used by `--spectrum-accordion-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-100": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Used by `--spectrum-accordion-background-color-hover`, `--spectrum-accordion-background-color-key-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-300": {
+      "value": "rgba(0, 0, 0, 0.15)",
+      "description": "Used by `--spectrum-accordion-background-color-down`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-accordion-item-content-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-accordion-divider-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-accordion-item-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-accordion-item-header-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-accordion-item-header-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-accordion-item-header-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-accordion-item-header-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-logical-rotation": {
+      "value": "matrix(-1, 0, 0, 1, 0, 0)",
+      "description": "Defined in `.spectrum-Accordion:dir(rtl)`. <br/>Used by `.spectrum-Accordion-itemIndicator`, `.spectrum-Accordion-item.is-open > .spectrum-Accordion-itemHeading .spectrum-Accordion-itemIndicator`. <br/>Defaults to `matrix(-1, 0, 0, 1, 0, 0)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-accordion-item-header-line-height`, `--spectrum-accordion-item-content-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-chevron-icon-size-75": {
+      "value": "10px",
+      "description": "Used by `--spectrum-accordion-disclosure-indicator-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-disclosure-icon-75": {
+      "value": "7px",
+      "description": "Used by `--spectrum-accordion-edge-to-disclosure-indicator-space`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-accordion-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-accordion-item-header-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-xs": {
+      "value": "var(--spectrum-font-size-75)",
+      "description": "Used by `--spectrum-accordion-item-content-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-small": {
+      "value": "11px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-accordion-item-direct-actions-height`, `--spectrum-accordion-item-minimum-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-accordion-item-minimum-height`, `--spectrum-accordion-item-direct-actions-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-large": {
+      "value": "224px",
+      "description": "Used by `--spectrum-accordion-item-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-chevron-icon-size-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-accordion-disclosure-indicator-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-disclosure-icon-200": {
+      "value": "14px",
+      "description": "Used by `--spectrum-accordion-edge-to-disclosure-indicator-space`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-accordion-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-accordion-item-header-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-m": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Used by `--spectrum-accordion-item-content-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-large": {
+      "value": "18px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-400": {
+      "value": "56px",
+      "description": "Used by `--spectrum-accordion-item-minimum-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-extra-large": {
+      "value": "240px",
+      "description": "Used by `--spectrum-accordion-item-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-chevron-icon-size-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-accordion-disclosure-indicator-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-edge-to-disclosure-icon-300": {
+      "value": "17px",
+      "description": "Used by `--spectrum-accordion-edge-to-disclosure-indicator-space`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-extra-large": {
+      "value": "10px",
+      "description": "Used by `--spectrum-accordion-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-400": {
+      "value": "20px",
+      "description": "Used by `--spectrum-accordion-item-header-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-l": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Used by `--spectrum-accordion-item-content-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-extra-large": {
+      "value": "21px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-compact-medium": {
+      "value": "11px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-compact-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-compact-large": {
+      "value": "14px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-compact-extra-large": {
+      "value": "17px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-spacious-medium": {
+      "value": "19px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-spacious-small": {
+      "value": "15px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-spacious-large": {
+      "value": "22px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-500": {
+      "value": "64px",
+      "description": "Used by `--spectrum-accordion-item-minimum-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-spacious-extra-large": {
+      "value": "25px",
+      "description": "Used by `--spectrum-accordion-top-to-disclosure-indicator`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-accordion-item-content-color`, `--spectrum-accordion-item-header-color-default`, `--spectrum-accordion-item-header-color-hover`, `--spectrum-accordion-item-header-color-down`, `--spectrum-accordion-item-header-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {}
 }

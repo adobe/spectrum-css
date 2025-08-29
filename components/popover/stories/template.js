@@ -1,4 +1,6 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -8,76 +10,8 @@ import { when } from "lit/directives/when.js";
 import "../index.css";
 
 export const Template = ({
-	isOpen = false,
-	position = "top",
-	id = getRandomId("popover"),
-	triggerId = getRandomId("popover-trigger"),
-	customWrapperStyles = {},
-	customWrapperClasses = [],
-	trigger,
-	...args
-} = {}, context = {}) => {
-	// If the popover is open, create a min-container size for VRTs
-	if (isOpen) {
-		if (["top", "bottom"].some((e) => position.startsWith(e))) {
-			customWrapperStyles["min-inline-size"] = "var(--spectrum-popover-width)";
-			customWrapperStyles["min-block-size"] = "calc(var(--spectrum-popover-height) + var(--spectrum-popover-trigger-height, 0px) + var(--mod-popover-wrapper-spacing, var(--spectrum-spacing-100) * 2))";
-		}
-		else {
-			customWrapperStyles["min-inline-size"] = "calc(var(--spectrum-popover-width) + var(--spectrum-popover-trigger-width, 0px))";
-			customWrapperStyles["min-block-size"] = "max(var(--spectrum-popover-trigger-height), var(--spectrum-popover-height))";
-		}
-	}
-
-	if (trigger) {
-		customWrapperStyles["position"] = "relative";
-
-		// Position the trigger in the container to replicate the positioning of the popover.
-		if (position.startsWith("top") || position.endsWith("-bottom")) {
-			customWrapperStyles["align-items"] = "end";
-		}
-		else if (position.startsWith("bottom") || position.endsWith("-top")) {
-			customWrapperStyles["align-items"] = "start";
-		}
-
-		if (position.endsWith("-right") || position.startsWith("left")) {
-			customWrapperStyles["justify-content"] = "right";
-		}
-		else if (position.endsWith("-start") || position.startsWith("end")) {
-			customWrapperStyles["justify-content"] = "start";
-		}
-		else if (position.endsWith("-left") || position.startsWith("right")) {
-			customWrapperStyles["justify-content"] = "left";
-		}
-		else if (position.endsWith("-end") || position.startsWith("start")) {
-			customWrapperStyles["justify-content"] = "end";
-		}
-	}
-
-	return html`
-		<div class=${classMap({
-			...customWrapperClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})} style=${styleMap({
-			"display": "inline-flex",
-			"align-items": "center",
-			"justify-content": "center",
-			...customWrapperStyles,
-		})}>
-			${Popover({
-				...args,
-				isOpen,
-				position,
-				id,
-				triggerId,
-				trigger,
-			}, context)}
-		</div>
-	`;
-};
-
-
-export const Popover = ({
 	rootClass = "spectrum-Popover",
+	size = "m",
 	isOpen = false,
 	withTip = false,
 	position = "top",
@@ -86,123 +20,277 @@ export const Popover = ({
 	testId,
 	triggerId = getRandomId("popover-trigger"),
 	customStyles = {},
+	popoverWrapperStyles = {},
+	popoverHeight = 158,
+	popoverWidth = 105,
 	popoverAlignment = {},
+	skipAlignment = false,
 	trigger,
 	content = [],
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
-	if (trigger) {
-		// Translate the popover to the correct position, keeping the default spacing between the trigger and the popover in mind.
-		if (position.startsWith("top")) {
-			popoverAlignment["transform"] = "translateY(calc(var(--spectrum-popover-trigger-height, 0px) * -1 - var(--spectrum-spacing-100)))";
-		}
-		else if (position.startsWith("bottom")) {
-			popoverAlignment["transform"] = "translateY(calc(var(--spectrum-popover-trigger-height, 0px) + var(--spectrum-spacing-100)))";
-		}
-
-		// Position the popover to the correct position at the correct side of the trigger.
-		if (position.startsWith("right")) {
-			popoverAlignment["left"] = "var(--spectrum-popover-trigger-width)";
-		}
-		else if (position.startsWith("left")) {
-			popoverAlignment["right"] = "var(--spectrum-popover-trigger-width)";
-		}
-		else if (position.startsWith("start")) {
-			popoverAlignment["inset-inline-end"] = "var(--spectrum-popover-trigger-width)";
-		}
-		else if (position.startsWith("end")) {
-			popoverAlignment["inset-inline-start"] = "var(--spectrum-popover-trigger-width)";
-		}
-	}
-
-	if (!trigger && isOpen) {
-		// Without a trigger, no other positioning is necessary.
-		popoverAlignment["position"] = "relative";
-	}
-
 	// We need to wait for the popover to render before we can get the actual height and width
-	// of the popover to set the custom properties.
+	// of the popover to set the custom properties. This is a temporary solution until we can
+	// set up anchor positioning successfully via CSS.
 	document.addEventListener("DOMContentLoaded", function() {
-		if (!isOpen || !id) return;
-
-		// Wait until the popover element is rendered to the DOM
-		const popoverEl = document.getElementById(id);
-		if (!popoverEl) return;
-
-		const triggerEl = trigger && triggerId ? document.getElementById(triggerId) : popoverEl.previousElementSibling;
-
-		function resizeObserverCallback(entries) {
-			for (const entry of entries) {
-				const isPopover = entry.target === popoverEl;
-				const size = entry.contentRect;
-				// Update dimensions when size stabilizes
-
-				// Get the actual height and width of the popover
-				if (!size) return;
-
-				// Write the actual height and width of the popover to the CSS custom properties
-				if (isPopover) {
-					if (size.width) entry.target.parentElement.style.setProperty("--spectrum-popover-width", `var(--mod-popover-width, ${parseInt(size.width, 10)}px)`);
-					if (size.height) entry.target.parentElement.style.setProperty("--spectrum-popover-height", `var(--mod-popover-height, ${parseInt(size.height, 10)}px)`);
-				}
-				else {
-					if (size.width) entry.target.parentElement.style.setProperty("--spectrum-popover-trigger-width", `${parseInt(size.width, 10)}px`);
-					if (size.height) entry.target.parentElement.style.setProperty("--spectrum-popover-trigger-height", `${parseInt(size.height, 10)}px`);
-				}
-			}
+		if (typeof popoverHeight !== "undefined" && typeof popoverWidth !== "undefined") {
+			return;
 		}
 
-		const resizeObserver = new ResizeObserver(resizeObserverCallback);
-
-		if (triggerEl) resizeObserver.observe(triggerEl);
-		resizeObserver.observe(popoverEl);
-
-		// Run the resize observer callback immediately to get the initial size
 		setTimeout(() => {
-			resizeObserverCallback([{
-				target: popoverEl,
-				contentRect: popoverEl.getBoundingClientRect(),
-			}, {
-				target: triggerEl,
-				contentRect: triggerEl.getBoundingClientRect(),
-			}]);
-		}, 100);
+			// Get the actual height and width of the popover
+			const popover = document.getElementById(id);
+			if (!popover) return;
+
+			const rect = popover.getBoundingClientRect();
+			if (!rect) return;
+
+			let shouldChange = false;
+			if (popoverHeight !== parseInt(rect.height, 10)) {
+				shouldChange = true;
+			}
+			else if (popoverWidth !== parseInt(rect.width, 10)) {
+				shouldChange = true;
+			}
+
+			// Do nothing if the height and width are the same; prevent loops
+			if (!shouldChange) return;
+
+			// Write the actual height and width of the popover to the CSS custom properties
+			updateArgs({
+				popoverWidth: parseInt(rect.width, 10),
+				popoverHeight: parseInt(rect.height, 10),
+			});
+		}, 500);
 	});
 
-	return html`
-		${when(typeof trigger === "function", (passthroughs) => trigger({
-			...passthroughs,
-			isOpen,
-			id: triggerId,
-			popupId: id,
-			onclick: function() {
-				updateArgs({ isOpen: !isOpen });
-			},
-		}, context))}
+	if (!skipAlignment) {
+		switch (position) {
+			case "top":
+				popoverWrapperStyles["inline-size"] = "var(--spectrum-popover-width)";
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["inset-inline-start"] = "0";
+				break;
+			case "top-left":
+				// Ignore the width of the popover and make it left-aligned
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["left"] = "0";
+				break;
+			case "top-right":
+				// Ignore the width of the popover and make it right-aligned
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["right"] = "0";
+				break;
+			case "top-start":
+				// Ignore the width of the popover and make it start-aligned
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["inset-inline-start"] = "0";
+				break;
+			case "top-end":
+				// Ignore the width of the popover and make it end-aligned
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["inset-inline-end"] = "0";
+				break;
+			case "bottom":
+				popoverWrapperStyles["inline-size"] = "var(--spectrum-popover-width)";
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["inset-inline-start"] = "0";
+				break;
+			case "bottom-left":
+				// Ignore the width of the popover and make it left-aligned
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["left"] = "0";
+				break;
+			case "bottom-right":
+				// Ignore the width of the popover and make it right-aligned
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["right"] = "0";
+				break;
+			case "bottom-start":
+				// Ignore the width of the popover and make it start-aligned
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["inset-inline-start"] = "0";
+				break;
+			case "bottom-end":
+				// Ignore the width of the popover and make it end-aligned
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["inset-inline-end"] = "0";
+				break;
+			case "right":
+				popoverAlignment["left"] = withTip ? "100%" : "100%";
+				break;
+			case "right-top":
+				popoverAlignment["left"] = withTip ? "100%" : "100%";
+				popoverAlignment["top"] = "0";
+				break;
+			case "right-bottom":
+				popoverAlignment["left"] = withTip ? "100%" : "100%";
+				popoverAlignment["bottom"] = "0";
+				break;
+			case "left":
+				popoverAlignment["right"] = withTip ? "100%" : "100%";
+				break;
+			case "left-top":
+				popoverAlignment["right"] = withTip ? "100%" : "100%";
+				popoverAlignment["top"] = "0";
+				break;
+			case "left-bottom":
+				popoverAlignment["right"] = withTip ? "100%" : "100%";
+				popoverAlignment["bottom"] = "0";
+				break;
+			case "start":
+				popoverAlignment["inset-inline-end"] = withTip ? "100%" : "100%";
+				break;
+			case "start-top":
+				popoverAlignment["inset-inline-end"] = withTip ? "100%" : "100%";
+				popoverAlignment["top"] = "0";
+				break;
+			case "start-bottom":
+				popoverAlignment["inset-inline-end"] = withTip ? "100%" : "100%";
+				popoverAlignment["bottom"] = "0";
+				break;
+			case "end":
+				popoverAlignment["inset-inline-start"] = withTip ? "100%" : "100%";
+				break;
+			case "end-top":
+				popoverAlignment["inset-inline-start"] = withTip ? "100%" : "100%";
+				popoverAlignment["top"] = "0";
+				break;
+			case "end-bottom":
+				popoverAlignment["inset-inline-start"] = withTip ? "100%" : "100%";
+				popoverAlignment["bottom"] = "0";
+				break;
+		}
+	}
 
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				"is-open": isOpen,
-				[`${rootClass}--withTip`]: withTip,
-				[`${rootClass}--${position}`]: typeof position !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${styleMap({
-				...popoverAlignment,
-				...customStyles
-			})}
-			role="presentation"
-			id=${ifDefined(id)}
-			data-testid=${ifDefined(testId ?? id)}
-		>
-			${renderContent(content)}
-			${withTip
-				? position && ["top", "bottom"].some((e) => position.startsWith(e))
-					? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`
-					: html`<svg class="${rootClass}-tip" viewBox="0 -0.5 9 16" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 -1,17"></svg>`
-				: ""}
+	return html`
+		<div style=${styleMap({
+			"--spectrum-popover-height": `${popoverHeight}px`,
+			"--spectrum-popover-width": `${popoverWidth}px`,
+			"position": "relative",
+			"display": "inline-flex",
+			"align-items": "center",
+			"justify-content": "center",
+			...popoverWrapperStyles,
+		})}>
+			${when(typeof trigger === "function", (passthroughs) => trigger({
+				...passthroughs,
+				isSelected: isOpen,
+				isOpen,
+				id: triggerId,
+				popupId: id,
+				onclick: function() {
+					updateArgs({ isOpen: !isOpen });
+				},
+			}, context))}
+
+			<div
+				class=${classMap({
+					[rootClass]: true,
+					"is-open": isOpen,
+					[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+					[`${rootClass}--withTip`]: withTip,
+					[`${rootClass}--${position}`]: typeof position !== "undefined",
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+				style=${ifDefined(styleMap({
+					...popoverAlignment,
+					...customStyles
+				}))}
+				role="presentation"
+				id=${ifDefined(id)}
+				data-testid=${ifDefined(testId ?? id)}
+			>
+				${renderContent(content)}
+				${withTip
+					? position && ["top", "bottom"].some((e) => position.startsWith(e))
+						? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`
+						: html`<svg class="${rootClass}-tip" viewBox="0 -0.5 9 16" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 -1,17"></svg>`
+					: ""}
+			</div>
 		</div>
 	`;
 };
+
+/**
+ * Template that displays a Popover with every value of the "position" option.
+ */
+export const TipPlacementVariants = (args, context) => {
+	const placementOptions = context?.argTypes?.position?.options ?? [];
+	return html`
+		<div
+			style=${styleMap({
+				"display": "grid",
+				"gap": "16px",
+				"row-gap": "32px",
+				"grid-template-columns": "repeat(auto-fit, minmax(232px, 1fr))",
+				"max-width": "1000px",
+			})}
+		>
+			${placementOptions.map(option => {
+				let optionDescription;
+				if (option.startsWith("start") || option.startsWith("end"))
+					optionDescription = "Changes side with text direction (like a logical property)";
+				if (option.startsWith("left") || option.startsWith("right"))
+					optionDescription = "Text direction does not affect the position";
+
+				return html`
+					<div>
+						${Typography({
+							semantics: "detail",
+							size: "l",
+							content: [option],
+							customClasses: ["chromatic-ignore"],
+						}, context)}
+						<div style=${styleMap({
+							"padding": "16px",
+							"block-size": "100px",
+							"inline-size": "200px",
+							"border": "1px solid var(--spectrum-gray-200)",
+							"border-radius": "4px",
+						})}>
+							<div style="position: relative">
+								${Template({
+									...args,
+									position: option,
+									isOpen: true,
+									trigger: () => null,
+								}, context)}
+							</div>
+						</div>
+						${when(optionDescription, () => html`
+							${Typography({
+								semantics: "body",
+								size: "s",
+								content: [html`<sup>*</sup> ${optionDescription}`],
+								customClasses: ["chromatic-ignore"],
+							}, context)}
+						`)}
+					</div>
+				`;
+			})}
+		</div>
+	`;
+};
+
+/**
+ * Contains a source button with a fixed width, and an always open Popover.
+ */
+export const FixedWidthSourceTemplate = (args, context) => html`
+	<div style="min-width: 300px;">
+		${ActionButton({
+			label: "Source",
+			customStyles: {
+				width: "100px",
+				display: "block",
+			},
+		}, context)}
+		${Template({
+			...args,
+			position: "bottom-start",
+			isOpen: true,
+			trigger: () => null,
+		}, context)}
+	</div>
+`;
