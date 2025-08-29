@@ -162,7 +162,7 @@ export const Template = ({
 		size,
 		customStyles: customPopoverStyles,
 		customClasses: [`${rootClass}-popover`],
-		popoverWrapperStyles: {
+		customWrapperStyles: {
 			"display": "block",
 		},
 	}, context) : "";

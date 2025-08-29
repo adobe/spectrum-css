@@ -43,8 +43,8 @@ export const Template = ({
 					customClasses: [`${rootClass}-button`],
 				}, context),
 				content: [
-					title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : "",
-					body ? html`<p class="${rootClass}-body">${body}</p>` : "",
+					title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : nothing,
+					body ? html`<p class="${rootClass}-body">${body}</p>` : nothing,
 					link
 						? Link({
 								text: "Link text",
@@ -56,8 +56,6 @@ export const Template = ({
 				position: popoverPlacement,
 				customClasses: [`${rootClass}-popover`],
 				customStyles,
-				popoverWidth: 275,
-				popoverHeight: 150,
 			}, context)}
 		</div>
 	`;

@@ -30,11 +30,6 @@ export default {
 	},
 	parameters: {
 		layout: "fullscreen",
-		docs: {
-			story: {
-				height: "300px",
-			},
-		},
 		viewport: {
 			defaultViewport: "mobile2"
 		},

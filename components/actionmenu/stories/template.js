@@ -33,10 +33,10 @@ export const Template = ({
 				iconName,
 				iconSet,
 				id: triggerId,
-				customClasses,
 			}, context),
 		position: "bottom-start",
-		customStyles,
+		customWrapperClasses: customClasses,
+		customWrapperStyles: customStyles,
 		content: [
 			(passthroughs) => Menu({
 				...passthroughs,

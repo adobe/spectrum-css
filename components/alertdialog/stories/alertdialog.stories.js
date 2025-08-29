@@ -68,11 +68,6 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2---Desktop?node-id=21917-157",
 		},
-		docs: {
-			story: {
-				height: "300px",
-			}
-		},
 		packageJson,
 		metadata,
 		status: {
@@ -119,11 +114,6 @@ Information.args = {
 	content: "If you enjoy our app, would you mind taking a moment to rate it?",
 };
 Information.parameters = {
-	docs: {
-		story: {
-			height: "400px",
-		}
-	},
 	chromatic: { disableSnapshot: true },
 };
 
@@ -187,11 +177,6 @@ Overflow.args = {
 };
 Overflow.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "525px",
-		},
-	},
 };
 
 /**

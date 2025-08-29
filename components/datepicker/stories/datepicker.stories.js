@@ -70,11 +70,6 @@ export default {
 				...(CalendarStories.parameters.actions.handles ?? [])
 			],
 		},
-		docs: {
-			story: {
-				height: "50px"
-			}
-		},
 		packageJson,
 		metadata,
 		status: {
@@ -105,11 +100,6 @@ DefaultGroup.args = {};
 DefaultGroup.tags = [ "!dev"];
 DefaultGroup.storyName = "Default";
 DefaultGroup.parameters = {
-	docs: {
-		story: {
-			height: "350px",
-		}
-	},
 	chromatic: { disableSnapshot: true },
 };
 
@@ -123,11 +113,6 @@ Quiet.args = {
 };
 Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "350px",
-		}
-	},
 };
 
 /**

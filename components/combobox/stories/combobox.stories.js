@@ -211,11 +211,6 @@ DefaultGroup.args = {
 DefaultGroup.tags = ["!dev"];
 DefaultGroup.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "360px",
-		},
-	},
 };
 
 /**
