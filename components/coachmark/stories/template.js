@@ -48,9 +48,9 @@ export const CoachContainer = (
 			`,
 		)}
 		<div class="spectrum-CoachMark-header" style=${styleMap({
-			"--mod-popover-width": "0px",
-			"--mod-popover-height": "0px",
-			"--mod-popover-wrapper-spacing": "0px",
+			"--spectrum-popover-width-override": "0px",
+			"--spectrum-popover-height-override": "0px",
+			"--spectrum-popover-wrapper-spacing": "0px",
 		})}>
 			<div class="spectrum-CoachMark-title">${title}</div>
 			${when(

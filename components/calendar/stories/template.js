@@ -262,7 +262,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap({
-				"--mod-actionbutton-icon-size": "10px",
+				"--spectrum-actionbutton-icon-size": "10px",
 				...customStyles
 			})}
 			id=${ifDefined(id)}

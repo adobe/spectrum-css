@@ -22,7 +22,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${ifDefined(styleMap({
-				"--mod-opacity-checkerboard-position": backgroundPosition,
+				"--spectrum-opacity-checkerboard-position": backgroundPosition,
 				...customStyles,
 			}))}
 			role=${ifDefined(role)}
