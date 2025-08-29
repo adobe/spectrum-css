@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.0-next.13
+
+### Patch Changes
+
+Updated dependencies [[`1895ddb`](https://github.com/adobe/spectrum-css/commit/1895ddbe962989c8813cb1bf41f8bb0425b67e76)]:
+
+- @spectrum-css/popover@9.0.0-next.5
+
 ## 2.0.0-next.12
 
 ### Patch Changes
