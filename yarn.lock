@@ -5361,7 +5361,7 @@ __metadata:
     "@storybook/theming": "npm:8.4.7"
     "@storybook/web-components-vite": "npm:8.4.7"
     "@whitespace/storybook-addon-html": "npm:^8.0.1"
-    chromatic: "npm:^13.1.3"
+    chromatic: "npm:^13.1.4"
     lit: "npm:^3.3.1"
     lodash-es: "npm:^4.17.21"
     npm-registry-fetch: "npm:^19.0.0"
@@ -8612,9 +8612,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^13.1.3":
-  version: 13.1.3
-  resolution: "chromatic@npm:13.1.3"
+"chromatic@npm:^13.1.4":
+  version: 13.1.4
+  resolution: "chromatic@npm:13.1.4"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
@@ -8627,7 +8627,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 10c0/5fa2d381e06d1b089ecb790247844cfb510b063c4d8f8c0d2a3d0620ff94864003158e34338246bb1d07504d554e73dc8d5b639dc3e176ce3c88816fdc853285
+  checksum: 10c0/62b8f26f03941d4cf5c2d70c94295d704f07948c57e5f3b77059c61b0f76750c72c421f2d8a999d6468d20e26ac59b89ac48f54b96d5124fdb5a09f1ae983d45
   languageName: node
   linkType: hard
 
