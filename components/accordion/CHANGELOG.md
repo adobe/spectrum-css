@@ -1,5 +1,22 @@
 # Change log
 
+## 8.0.0-next.4
+
+### Minor Changes
+
+📝 [#4139](https://github.com/adobe/spectrum-css/pull/4139) [`6d835ff`](https://github.com/adobe/spectrum-css/commit/6d835ffeb77bc27bd5b2e4ddf48e2f5aa157a56b) Thanks [@rise-erpelding](https://github.com/rise-erpelding)!
+
+Changes values of `--spectrum-accordion-item-minimum-height` to align more closely with design spec, this affects the minimum height of accordion items for some combinations of size/density by giving them more space.
+
+New accordion minimum heights will use the heights/tokens:
+
+| Size | Compact                     | Regular                     | Spacious                    |
+| ---- | --------------------------- | --------------------------- | --------------------------- |
+| S    | 24px/`component-height-75`  | 32px/`component-height-100` | 40px/`component-height-200` |
+| M    | 32px/`component-height-100` | 40px/`component-height-200` | 48px/`component-height-300` |
+| L    | 40px/`component-height-200` | 48px/`component-height-300` | 56px/`component-height-400` |
+| XL   | 48px/`component-height-300` | 56px/`component-height-400` | 64px/`component-height-500` |
+
 ## 8.0.0-next.3
 
 ### Major Changes
