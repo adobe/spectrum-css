@@ -1,8 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { AssetGroup } from "./asset.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.
@@ -40,6 +42,10 @@ export default {
 		metadata,
 		status: {
 			type: "unmigrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["unmigrated"],

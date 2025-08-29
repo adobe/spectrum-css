@@ -8,65 +8,293 @@
     ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body",
     ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading"
   ],
-  "modifiers": [
-    "--mod-contextual-help-body-color",
-    "--mod-contextual-help-body-line-height",
-    "--mod-contextual-help-body-sans-serif-font-family",
-    "--mod-contextual-help-body-sans-serif-font-style",
-    "--mod-contextual-help-body-sans-serif-font-weight",
-    "--mod-contextual-help-body-size",
-    "--mod-contextual-help-content-spacing",
-    "--mod-contextual-help-heading-size",
-    "--mod-contextual-help-link-spacing",
-    "--mod-contextual-help-min-inline-size",
-    "--mod-contextual-help-padding",
-    "--mod-contextual-help-popover-maximum-width",
-    "--mod-contextual-help-title-color",
-    "--mod-contextual-help-title-font-style",
-    "--mod-contextual-help-title-font-weight",
-    "--mod-contextual-help-title-line-height",
-    "--mod-contextual-help-title-sans-serif-font-family"
-  ],
-  "component": [
-    "--spectrum-contextual-help-body-color",
-    "--spectrum-contextual-help-body-line-height",
-    "--spectrum-contextual-help-body-sans-serif-font-family",
-    "--spectrum-contextual-help-body-sans-serif-font-style",
-    "--spectrum-contextual-help-body-sans-serif-font-weight",
-    "--spectrum-contextual-help-body-size",
-    "--spectrum-contextual-help-content-spacing",
-    "--spectrum-contextual-help-link-spacing",
-    "--spectrum-contextual-help-min-inline-size",
-    "--spectrum-contextual-help-minimum-width",
-    "--spectrum-contextual-help-padding",
-    "--spectrum-contextual-help-title-color",
-    "--spectrum-contextual-help-title-font-style",
-    "--spectrum-contextual-help-title-font-weight",
-    "--spectrum-contextual-help-title-line-height",
-    "--spectrum-contextual-help-title-sans-serif-font-family",
-    "--spectrum-contextual-help-title-size"
-  ],
-  "global": [
-    "--spectrum-body-color",
-    "--spectrum-body-sans-serif-font-style",
-    "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-corner-radius-large-default",
-    "--spectrum-line-height-200",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-400",
-    "--spectrum-title-color",
-    "--spectrum-title-line-height",
-    "--spectrum-title-sans-serif-font-style",
-    "--spectrum-title-sans-serif-font-weight"
-  ],
-  "passthroughs": [
-    "--mod-popover-animation-distance",
-    "--mod-popover-corner-radius"
-  ],
-  "high-contrast": [
-    "--highcontrast-contextual-help-body-color",
-    "--highcontrast-contextual-help-title-color"
-  ]
+  "modifiers": {
+    "mod-contextual-help-min-inline-size": {
+      "description": "Used by `.spectrum-ContextualHelp`. <br/>Defaults to `var(--spectrum-contextual-help-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-padding": {
+      "description": "Used by `.spectrum-ContextualHelp-popover`. <br/>Defaults to `var(--spectrum-contextual-help-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-body-size": {
+      "description": "Used by `.spectrum-ContextualHelp-popover`, `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-contextual-help-body-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-body-color": {
+      "description": "Used by `.spectrum-ContextualHelp-popover`, `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-contextual-help-body-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-popover-maximum-width": {
+      "description": "Used by `.spectrum-ContextualHelp-popover`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-title-sans-serif-font-family": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-title-sans-serif-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-title-font-weight": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-title-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-heading-size": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-title-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-title-font-style": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-title-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-title-line-height": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-title-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-title-color": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-title-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-content-spacing": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-contextual-help-content-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-body-sans-serif-font-family": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-contextual-help-body-sans-serif-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-body-sans-serif-font-weight": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-contextual-help-body-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-body-sans-serif-font-style": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-contextual-help-body-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-body-line-height": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-contextual-help-body-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-contextual-help-link-spacing": {
+      "description": "Used by `.spectrum-ContextualHelp-link`. <br/>Defaults to `var(--spectrum-contextual-help-link-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-contextual-help-title-sans-serif-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-title-font-weight": {
+      "value": "700",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-title-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-title-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-title-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-title-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-title-line-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-title-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--spectrum-title-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-body-sans-serif-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-body-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-body-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-line-height-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-min-inline-size": {
+      "value": "268px",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp`. <br/>Defaults to `var(--spectrum-contextual-help-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-minimum-width": {
+      "value": "268px",
+      "description": "Used by `--spectrum-contextual-help-min-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-link-spacing": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-link`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-padding": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-body-size": {
+      "value": "var(--spectrum-contextual-help-body-font-size)",
+      "description": "Used by `.spectrum-ContextualHelp-popover`, `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-title-size": {
+      "value": "var(--spectrum-contextual-help-title-font-size)",
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-contextual-help-content-spacing": {
+      "description": "Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-contextual-help-title-sans-serif-font-family`, `--spectrum-contextual-help-body-sans-serif-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-title-sans-serif-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-contextual-help-title-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-title-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-contextual-help-title-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-title-line-height": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-contextual-help-title-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-title-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-contextual-help-title-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-contextual-help-body-sans-serif-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-contextual-help-body-sans-serif-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-200": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-contextual-help-body-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-contextual-help-body-color`, `.spectrum-ContextualHelp-popover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-contextual-help-link-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-400": {
+      "value": "24px",
+      "description": "Used by `--spectrum-contextual-help-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `--mod-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-large-default": {
+      "value": "10px",
+      "description": "Used by `--mod-popover-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-popover-animation-distance": {
+      "category": "Passthrough"
+    },
+    "mod-popover-corner-radius": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-contextual-help-body-color": {
+      "value": "var(--mod-contextual-help-body-color, var(--spectrum-body-color))",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover`. <br/>Defaults to `var(--mod-contextual-help-body-color, var(--spectrum-body-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-contextual-help-title-color": {
+      "value": "var(--mod-contextual-help-title-color, var(--spectrum-contextual-help-title-color))",
+      "description": "Defined in `.spectrum-ContextualHelp`. <br/>Used by `.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading`. <br/>Defaults to `var(--mod-contextual-help-title-color, var(--spectrum-contextual-help-title-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

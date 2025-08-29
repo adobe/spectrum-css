@@ -73,9 +73,9 @@ export const AssetListItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-AssetList",
+	id = getRandomId("asset-list"),
 	items = [],
 	customClasses = [],
-	id = getRandomId("assetlist"),
 } = {}, context = {}) => {
 	return html`
 		<ul

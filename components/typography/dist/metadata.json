@@ -298,464 +298,2511 @@
     ".spectrum-Typography:lang(ar)",
     ".spectrum-Typography:lang(he)"
   ],
-  "modifiers": [
-    "--mod-body-cjk-emphasized-font-style",
-    "--mod-body-cjk-emphasized-font-weight",
-    "--mod-body-cjk-font-family",
-    "--mod-body-cjk-font-style",
-    "--mod-body-cjk-font-weight",
-    "--mod-body-cjk-letter-spacing",
-    "--mod-body-cjk-line-height",
-    "--mod-body-cjk-strong-emphasized-font-style",
-    "--mod-body-cjk-strong-emphasized-font-weight",
-    "--mod-body-cjk-strong-font-style",
-    "--mod-body-cjk-strong-font-weight",
-    "--mod-body-font-color",
-    "--mod-body-font-size",
-    "--mod-body-line-height",
-    "--mod-body-margin",
-    "--mod-body-margin-end",
-    "--mod-body-margin-start",
-    "--mod-body-sans-serif-emphasized-font-style",
-    "--mod-body-sans-serif-emphasized-font-weight",
-    "--mod-body-sans-serif-font-family",
-    "--mod-body-sans-serif-font-style",
-    "--mod-body-sans-serif-font-weight",
-    "--mod-body-sans-serif-strong-emphasized-font-style",
-    "--mod-body-sans-serif-strong-emphasized-font-weight",
-    "--mod-body-sans-serif-strong-font-style",
-    "--mod-body-sans-serif-strong-font-weight",
-    "--mod-body-serif-emphasized-font-style",
-    "--mod-body-serif-emphasized-font-weight",
-    "--mod-body-serif-font-family",
-    "--mod-body-serif-font-style",
-    "--mod-body-serif-font-weight",
-    "--mod-body-serif-strong-emphasized-font-style",
-    "--mod-body-serif-strong-emphasized-font-weight",
-    "--mod-body-serif-strong-font-style",
-    "--mod-body-serif-strong-font-weight",
-    "--mod-code-cjk-emphasized-font-style",
-    "--mod-code-cjk-emphasized-font-weight",
-    "--mod-code-cjk-font-family",
-    "--mod-code-cjk-font-style",
-    "--mod-code-cjk-font-weight",
-    "--mod-code-cjk-letter-spacing",
-    "--mod-code-cjk-line-height",
-    "--mod-code-cjk-strong-emphasized-font-style",
-    "--mod-code-cjk-strong-emphasized-font-weight",
-    "--mod-code-cjk-strong-font-style",
-    "--mod-code-cjk-strong-font-weight",
-    "--mod-code-emphasized-font-style",
-    "--mod-code-emphasized-font-weight",
-    "--mod-code-font-color",
-    "--mod-code-font-family",
-    "--mod-code-font-size",
-    "--mod-code-font-style",
-    "--mod-code-font-weight",
-    "--mod-code-line-height",
-    "--mod-code-margin-end",
-    "--mod-code-margin-start",
-    "--mod-code-strong-emphasized-font-style",
-    "--mod-code-strong-emphasized-font-weight",
-    "--mod-code-strong-font-style",
-    "--mod-code-strong-font-weight",
-    "--mod-detail-cjk-emphasized-font-style",
-    "--mod-detail-cjk-emphasized-font-weight",
-    "--mod-detail-cjk-font-family",
-    "--mod-detail-cjk-font-style",
-    "--mod-detail-cjk-font-weight",
-    "--mod-detail-cjk-light-emphasized-font-style",
-    "--mod-detail-cjk-light-emphasized-font-weight",
-    "--mod-detail-cjk-light-font-style",
-    "--mod-detail-cjk-light-font-weight",
-    "--mod-detail-cjk-light-strong-emphasized-font-style",
-    "--mod-detail-cjk-light-strong-emphasized-font-weight",
-    "--mod-detail-cjk-light-strong-font-style",
-    "--mod-detail-cjk-light-strong-font-weight",
-    "--mod-detail-cjk-line-height",
-    "--mod-detail-cjk-strong-emphasized-font-style",
-    "--mod-detail-cjk-strong-emphasized-font-weight",
-    "--mod-detail-cjk-strong-font-style",
-    "--mod-detail-cjk-strong-font-weight",
-    "--mod-detail-font-color",
-    "--mod-detail-font-size",
-    "--mod-detail-letter-spacing",
-    "--mod-detail-line-height",
-    "--mod-detail-margin-end",
-    "--mod-detail-margin-start",
-    "--mod-detail-sans-serif-emphasized-font-style",
-    "--mod-detail-sans-serif-emphasized-font-weight",
-    "--mod-detail-sans-serif-font-family",
-    "--mod-detail-sans-serif-font-style",
-    "--mod-detail-sans-serif-font-weight",
-    "--mod-detail-sans-serif-light-emphasized-font-style",
-    "--mod-detail-sans-serif-light-emphasized-font-weight",
-    "--mod-detail-sans-serif-light-font-style",
-    "--mod-detail-sans-serif-light-strong-emphasized-font-style",
-    "--mod-detail-sans-serif-light-strong-emphasized-font-weight",
-    "--mod-detail-sans-serif-light-strong-font-style",
-    "--mod-detail-sans-serif-light-strong-font-weight",
-    "--mod-detail-sans-serif-strong-emphasized-font-style",
-    "--mod-detail-sans-serif-strong-emphasized-font-weight",
-    "--mod-detail-sans-serif-strong-font-style",
-    "--mod-detail-sans-serif-strong-font-weight",
-    "--mod-detail-serif-emphasized-font-style",
-    "--mod-detail-serif-emphasized-font-weight",
-    "--mod-detail-serif-font-family",
-    "--mod-detail-serif-font-style",
-    "--mod-detail-serif-font-weight",
-    "--mod-detail-serif-light-emphasized-font-style",
-    "--mod-detail-serif-light-emphasized-font-weight",
-    "--mod-detail-serif-light-font-style",
-    "--mod-detail-serif-light-font-weight",
-    "--mod-detail-serif-light-strong-emphasized-font-style",
-    "--mod-detail-serif-light-strong-emphasized-font-weight",
-    "--mod-detail-serif-light-strong-font-style",
-    "--mod-detail-serif-light-strong-font-weight",
-    "--mod-detail-serif-strong-emphasized-font-style",
-    "--mod-detail-serif-strong-emphasized-font-weight",
-    "--mod-detail-serif-strong-font-style",
-    "--mod-detail-serif-strong-font-weight",
-    "--mod-heading-cjk-emphasized-font-style",
-    "--mod-heading-cjk-emphasized-font-weight",
-    "--mod-heading-cjk-font-family",
-    "--mod-heading-cjk-font-size",
-    "--mod-heading-cjk-font-style",
-    "--mod-heading-cjk-font-weight",
-    "--mod-heading-cjk-heavy-emphasized-font-style",
-    "--mod-heading-cjk-heavy-emphasized-font-weight",
-    "--mod-heading-cjk-heavy-font-style",
-    "--mod-heading-cjk-heavy-font-weight",
-    "--mod-heading-cjk-heavy-strong-emphasized-font-style",
-    "--mod-heading-cjk-heavy-strong-emphasized-font-weight",
-    "--mod-heading-cjk-heavy-strong-font-style",
-    "--mod-heading-cjk-heavy-strong-font-weight",
-    "--mod-heading-cjk-letter-spacing",
-    "--mod-heading-cjk-light-emphasized-font-style",
-    "--mod-heading-cjk-light-emphasized-font-weight",
-    "--mod-heading-cjk-light-font-style",
-    "--mod-heading-cjk-light-font-weight",
-    "--mod-heading-cjk-light-strong-emphasized-font-style",
-    "--mod-heading-cjk-light-strong-emphasized-font-weight",
-    "--mod-heading-cjk-light-strong-font-style",
-    "--mod-heading-cjk-light-strong-font-weight",
-    "--mod-heading-cjk-line-height",
-    "--mod-heading-cjk-strong-emphasized-font-style",
-    "--mod-heading-cjk-strong-emphasized-font-weight",
-    "--mod-heading-cjk-strong-font-style",
-    "--mod-heading-cjk-strong-font-weight",
-    "--mod-heading-font-color",
-    "--mod-heading-font-size",
-    "--mod-heading-line-height",
-    "--mod-heading-margin-end",
-    "--mod-heading-margin-start",
-    "--mod-heading-sans-serif-emphasized-font-style",
-    "--mod-heading-sans-serif-emphasized-font-weight",
-    "--mod-heading-sans-serif-font-family",
-    "--mod-heading-sans-serif-font-style",
-    "--mod-heading-sans-serif-font-weight",
-    "--mod-heading-sans-serif-heavy-emphasized-font-style",
-    "--mod-heading-sans-serif-heavy-emphasized-font-weight",
-    "--mod-heading-sans-serif-heavy-font-style",
-    "--mod-heading-sans-serif-heavy-font-weight",
-    "--mod-heading-sans-serif-heavy-strong-emphasized-font-style",
-    "--mod-heading-sans-serif-heavy-strong-emphasized-font-weight",
-    "--mod-heading-sans-serif-heavy-strong-font-style",
-    "--mod-heading-sans-serif-heavy-strong-font-weight",
-    "--mod-heading-sans-serif-light-emphasized-font-style",
-    "--mod-heading-sans-serif-light-emphasized-font-weight",
-    "--mod-heading-sans-serif-light-font-style",
-    "--mod-heading-sans-serif-light-font-weight",
-    "--mod-heading-sans-serif-light-strong-emphasized-font-style",
-    "--mod-heading-sans-serif-light-strong-emphasized-font-weight",
-    "--mod-heading-sans-serif-light-strong-font-style",
-    "--mod-heading-sans-serif-light-strong-font-weight",
-    "--mod-heading-sans-serif-strong-emphasized-font-style",
-    "--mod-heading-sans-serif-strong-emphasized-font-weight",
-    "--mod-heading-sans-serif-strong-font-style",
-    "--mod-heading-sans-serif-strong-font-weight",
-    "--mod-heading-serif-emphasized-font-style",
-    "--mod-heading-serif-emphasized-font-weight",
-    "--mod-heading-serif-font-family",
-    "--mod-heading-serif-font-style",
-    "--mod-heading-serif-font-weight",
-    "--mod-heading-serif-heavy-emphasized-font-style",
-    "--mod-heading-serif-heavy-emphasized-font-weight",
-    "--mod-heading-serif-heavy-font-style",
-    "--mod-heading-serif-heavy-font-weight",
-    "--mod-heading-serif-heavy-strong-emphasized-font-style",
-    "--mod-heading-serif-heavy-strong-emphasized-font-weight",
-    "--mod-heading-serif-heavy-strong-font-style",
-    "--mod-heading-serif-heavy-strong-font-weight",
-    "--mod-heading-serif-light-emphasized-font-style",
-    "--mod-heading-serif-light-emphasized-font-weight",
-    "--mod-heading-serif-light-font-style",
-    "--mod-heading-serif-light-font-weight",
-    "--mod-heading-serif-light-strong-emphasized-font-style",
-    "--mod-heading-serif-light-strong-emphasized-font-weight",
-    "--mod-heading-serif-light-strong-font-style",
-    "--mod-heading-serif-light-strong-font-weight",
-    "--mod-heading-serif-strong-emphasized-font-style",
-    "--mod-heading-serif-strong-emphasized-font-weight",
-    "--mod-heading-serif-strong-font-style",
-    "--mod-heading-serif-strong-font-weight"
-  ],
-  "component": [],
-  "global": [
-    "--spectrum-body-cjk-emphasized-font-style",
-    "--spectrum-body-cjk-emphasized-font-weight",
-    "--spectrum-body-cjk-font-family",
-    "--spectrum-body-cjk-font-style",
-    "--spectrum-body-cjk-font-weight",
-    "--spectrum-body-cjk-letter-spacing",
-    "--spectrum-body-cjk-line-height",
-    "--spectrum-body-cjk-strong-emphasized-font-style",
-    "--spectrum-body-cjk-strong-emphasized-font-weight",
-    "--spectrum-body-cjk-strong-font-style",
-    "--spectrum-body-cjk-strong-font-weight",
-    "--spectrum-body-color",
-    "--spectrum-body-font-color",
-    "--spectrum-body-font-size",
-    "--spectrum-body-line-height",
-    "--spectrum-body-margin-end",
-    "--spectrum-body-margin-multiplier",
-    "--spectrum-body-sans-serif-emphasized-font-style",
-    "--spectrum-body-sans-serif-emphasized-font-weight",
-    "--spectrum-body-sans-serif-font-family",
-    "--spectrum-body-sans-serif-font-style",
-    "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-body-sans-serif-strong-emphasized-font-style",
-    "--spectrum-body-sans-serif-strong-emphasized-font-weight",
-    "--spectrum-body-sans-serif-strong-font-style",
-    "--spectrum-body-sans-serif-strong-font-weight",
-    "--spectrum-body-serif-emphasized-font-style",
-    "--spectrum-body-serif-emphasized-font-weight",
-    "--spectrum-body-serif-font-family",
-    "--spectrum-body-serif-font-style",
-    "--spectrum-body-serif-font-weight",
-    "--spectrum-body-serif-strong-emphasized-font-style",
-    "--spectrum-body-serif-strong-emphasized-font-weight",
-    "--spectrum-body-serif-strong-font-style",
-    "--spectrum-body-serif-strong-font-weight",
-    "--spectrum-body-size-l",
-    "--spectrum-body-size-m",
-    "--spectrum-body-size-s",
-    "--spectrum-body-size-xl",
-    "--spectrum-body-size-xs",
-    "--spectrum-body-size-xxl",
-    "--spectrum-body-size-xxxl",
-    "--spectrum-cjk-font-family-stack",
-    "--spectrum-cjk-letter-spacing",
-    "--spectrum-code-cjk-emphasized-font-style",
-    "--spectrum-code-cjk-emphasized-font-weight",
-    "--spectrum-code-cjk-font-family",
-    "--spectrum-code-cjk-font-style",
-    "--spectrum-code-cjk-font-weight",
-    "--spectrum-code-cjk-letter-spacing",
-    "--spectrum-code-cjk-line-height",
-    "--spectrum-code-cjk-strong-emphasized-font-style",
-    "--spectrum-code-cjk-strong-emphasized-font-weight",
-    "--spectrum-code-cjk-strong-font-style",
-    "--spectrum-code-cjk-strong-font-weight",
-    "--spectrum-code-color",
-    "--spectrum-code-emphasized-font-style",
-    "--spectrum-code-emphasized-font-weight",
-    "--spectrum-code-font-color",
-    "--spectrum-code-font-family",
-    "--spectrum-code-font-family-stack",
-    "--spectrum-code-font-size",
-    "--spectrum-code-font-style",
-    "--spectrum-code-font-weight",
-    "--spectrum-code-line-height",
-    "--spectrum-code-size-l",
-    "--spectrum-code-size-m",
-    "--spectrum-code-size-s",
-    "--spectrum-code-size-xl",
-    "--spectrum-code-size-xs",
-    "--spectrum-code-strong-emphasized-font-style",
-    "--spectrum-code-strong-emphasized-font-weight",
-    "--spectrum-code-strong-font-style",
-    "--spectrum-code-strong-font-weight",
-    "--spectrum-detail-cjk-emphasized-font-style",
-    "--spectrum-detail-cjk-emphasized-font-weight",
-    "--spectrum-detail-cjk-font-family",
-    "--spectrum-detail-cjk-font-style",
-    "--spectrum-detail-cjk-font-weight",
-    "--spectrum-detail-cjk-light-emphasized-font-style",
-    "--spectrum-detail-cjk-light-emphasized-font-weight",
-    "--spectrum-detail-cjk-light-font-style",
-    "--spectrum-detail-cjk-light-font-weight",
-    "--spectrum-detail-cjk-light-strong-emphasized-font-style",
-    "--spectrum-detail-cjk-light-strong-emphasized-font-weight",
-    "--spectrum-detail-cjk-light-strong-font-style",
-    "--spectrum-detail-cjk-light-strong-font-weight",
-    "--spectrum-detail-cjk-line-height",
-    "--spectrum-detail-cjk-strong-emphasized-font-style",
-    "--spectrum-detail-cjk-strong-emphasized-font-weight",
-    "--spectrum-detail-cjk-strong-font-style",
-    "--spectrum-detail-cjk-strong-font-weight",
-    "--spectrum-detail-color",
-    "--spectrum-detail-font-color",
-    "--spectrum-detail-font-size",
-    "--spectrum-detail-letter-spacing",
-    "--spectrum-detail-line-height",
-    "--spectrum-detail-margin-bottom-multiplier",
-    "--spectrum-detail-margin-end",
-    "--spectrum-detail-margin-start",
-    "--spectrum-detail-margin-top-multiplier",
-    "--spectrum-detail-sans-serif-emphasized-font-style",
-    "--spectrum-detail-sans-serif-emphasized-font-weight",
-    "--spectrum-detail-sans-serif-font-family",
-    "--spectrum-detail-sans-serif-font-style",
-    "--spectrum-detail-sans-serif-font-weight",
-    "--spectrum-detail-sans-serif-light-emphasized-font-style",
-    "--spectrum-detail-sans-serif-light-emphasized-font-weight",
-    "--spectrum-detail-sans-serif-light-font-style",
-    "--spectrum-detail-sans-serif-light-font-weight",
-    "--spectrum-detail-sans-serif-light-strong-emphasized-font-style",
-    "--spectrum-detail-sans-serif-light-strong-emphasized-font-weight",
-    "--spectrum-detail-sans-serif-light-strong-font-style",
-    "--spectrum-detail-sans-serif-light-strong-font-weight",
-    "--spectrum-detail-sans-serif-strong-emphasized-font-style",
-    "--spectrum-detail-sans-serif-strong-emphasized-font-weight",
-    "--spectrum-detail-sans-serif-strong-font-style",
-    "--spectrum-detail-sans-serif-strong-font-weight",
-    "--spectrum-detail-serif-emphasized-font-style",
-    "--spectrum-detail-serif-emphasized-font-weight",
-    "--spectrum-detail-serif-font-family",
-    "--spectrum-detail-serif-font-style",
-    "--spectrum-detail-serif-font-weight",
-    "--spectrum-detail-serif-light-emphasized-font-style",
-    "--spectrum-detail-serif-light-emphasized-font-weight",
-    "--spectrum-detail-serif-light-font-style",
-    "--spectrum-detail-serif-light-font-weight",
-    "--spectrum-detail-serif-light-strong-emphasized-font-style",
-    "--spectrum-detail-serif-light-strong-emphasized-font-weight",
-    "--spectrum-detail-serif-light-strong-font-style",
-    "--spectrum-detail-serif-light-strong-font-weight",
-    "--spectrum-detail-serif-strong-emphasized-font-style",
-    "--spectrum-detail-serif-strong-emphasized-font-weight",
-    "--spectrum-detail-serif-strong-font-style",
-    "--spectrum-detail-serif-strong-font-weight",
-    "--spectrum-detail-size-l",
-    "--spectrum-detail-size-m",
-    "--spectrum-detail-size-s",
-    "--spectrum-detail-size-xl",
-    "--spectrum-font-family",
-    "--spectrum-font-family-ar",
-    "--spectrum-font-family-he",
-    "--spectrum-font-size",
-    "--spectrum-font-style",
-    "--spectrum-heading-cjk-emphasized-font-style",
-    "--spectrum-heading-cjk-emphasized-font-weight",
-    "--spectrum-heading-cjk-font-family",
-    "--spectrum-heading-cjk-font-size",
-    "--spectrum-heading-cjk-font-style",
-    "--spectrum-heading-cjk-font-weight",
-    "--spectrum-heading-cjk-heavy-emphasized-font-style",
-    "--spectrum-heading-cjk-heavy-emphasized-font-weight",
-    "--spectrum-heading-cjk-heavy-font-style",
-    "--spectrum-heading-cjk-heavy-font-weight",
-    "--spectrum-heading-cjk-heavy-strong-emphasized-font-style",
-    "--spectrum-heading-cjk-heavy-strong-emphasized-font-weight",
-    "--spectrum-heading-cjk-heavy-strong-font-style",
-    "--spectrum-heading-cjk-heavy-strong-font-weight",
-    "--spectrum-heading-cjk-letter-spacing",
-    "--spectrum-heading-cjk-light-emphasized-font-style",
-    "--spectrum-heading-cjk-light-emphasized-font-weight",
-    "--spectrum-heading-cjk-light-font-style",
-    "--spectrum-heading-cjk-light-font-weight",
-    "--spectrum-heading-cjk-light-strong-emphasized-font-style",
-    "--spectrum-heading-cjk-light-strong-emphasized-font-weight",
-    "--spectrum-heading-cjk-light-strong-font-style",
-    "--spectrum-heading-cjk-light-strong-font-weight",
-    "--spectrum-heading-cjk-line-height",
-    "--spectrum-heading-cjk-size-l",
-    "--spectrum-heading-cjk-size-m",
-    "--spectrum-heading-cjk-size-s",
-    "--spectrum-heading-cjk-size-xl",
-    "--spectrum-heading-cjk-size-xs",
-    "--spectrum-heading-cjk-size-xxl",
-    "--spectrum-heading-cjk-size-xxs",
-    "--spectrum-heading-cjk-size-xxxl",
-    "--spectrum-heading-cjk-strong-emphasized-font-style",
-    "--spectrum-heading-cjk-strong-emphasized-font-weight",
-    "--spectrum-heading-cjk-strong-font-style",
-    "--spectrum-heading-cjk-strong-font-weight",
-    "--spectrum-heading-color",
-    "--spectrum-heading-font-color",
-    "--spectrum-heading-font-size",
-    "--spectrum-heading-line-height",
-    "--spectrum-heading-margin-bottom-multiplier",
-    "--spectrum-heading-margin-end",
-    "--spectrum-heading-margin-start",
-    "--spectrum-heading-margin-top-multiplier",
-    "--spectrum-heading-sans-serif-emphasized-font-style",
-    "--spectrum-heading-sans-serif-emphasized-font-weight",
-    "--spectrum-heading-sans-serif-font-family",
-    "--spectrum-heading-sans-serif-font-style",
-    "--spectrum-heading-sans-serif-font-weight",
-    "--spectrum-heading-sans-serif-heavy-emphasized-font-style",
-    "--spectrum-heading-sans-serif-heavy-emphasized-font-weight",
-    "--spectrum-heading-sans-serif-heavy-font-style",
-    "--spectrum-heading-sans-serif-heavy-font-weight",
-    "--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style",
-    "--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight",
-    "--spectrum-heading-sans-serif-heavy-strong-font-style",
-    "--spectrum-heading-sans-serif-heavy-strong-font-weight",
-    "--spectrum-heading-sans-serif-light-emphasized-font-style",
-    "--spectrum-heading-sans-serif-light-emphasized-font-weight",
-    "--spectrum-heading-sans-serif-light-font-style",
-    "--spectrum-heading-sans-serif-light-font-weight",
-    "--spectrum-heading-sans-serif-light-strong-emphasized-font-style",
-    "--spectrum-heading-sans-serif-light-strong-emphasized-font-weight",
-    "--spectrum-heading-sans-serif-light-strong-font-style",
-    "--spectrum-heading-sans-serif-light-strong-font-weight",
-    "--spectrum-heading-sans-serif-strong-emphasized-font-style",
-    "--spectrum-heading-sans-serif-strong-emphasized-font-weight",
-    "--spectrum-heading-sans-serif-strong-font-style",
-    "--spectrum-heading-sans-serif-strong-font-weight",
-    "--spectrum-heading-serif-emphasized-font-style",
-    "--spectrum-heading-serif-emphasized-font-weight",
-    "--spectrum-heading-serif-font-family",
-    "--spectrum-heading-serif-font-style",
-    "--spectrum-heading-serif-font-weight",
-    "--spectrum-heading-serif-heavy-emphasized-font-style",
-    "--spectrum-heading-serif-heavy-emphasized-font-weight",
-    "--spectrum-heading-serif-heavy-font-style",
-    "--spectrum-heading-serif-heavy-font-weight",
-    "--spectrum-heading-serif-heavy-strong-emphasized-font-style",
-    "--spectrum-heading-serif-heavy-strong-emphasized-font-weight",
-    "--spectrum-heading-serif-heavy-strong-font-style",
-    "--spectrum-heading-serif-heavy-strong-font-weight",
-    "--spectrum-heading-serif-light-emphasized-font-style",
-    "--spectrum-heading-serif-light-emphasized-font-weight",
-    "--spectrum-heading-serif-light-font-style",
-    "--spectrum-heading-serif-light-font-weight",
-    "--spectrum-heading-serif-light-strong-emphasized-font-style",
-    "--spectrum-heading-serif-light-strong-emphasized-font-weight",
-    "--spectrum-heading-serif-light-strong-font-style",
-    "--spectrum-heading-serif-light-strong-font-weight",
-    "--spectrum-heading-serif-strong-emphasized-font-style",
-    "--spectrum-heading-serif-strong-emphasized-font-weight",
-    "--spectrum-heading-serif-strong-font-style",
-    "--spectrum-heading-serif-strong-font-weight",
-    "--spectrum-heading-size-l",
-    "--spectrum-heading-size-m",
-    "--spectrum-heading-size-s",
-    "--spectrum-heading-size-xl",
-    "--spectrum-heading-size-xs",
-    "--spectrum-heading-size-xxl",
-    "--spectrum-heading-size-xxs",
-    "--spectrum-heading-size-xxxl",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-serif-font-family-stack"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-body-font-color",
-    "--highcontrast-code-font-color",
-    "--highcontrast-detail-font-color",
-    "--highcontrast-heading-font-color"
-  ]
+  "modifiers": {
+    "mod-heading-font-size": {
+      "description": "Used by `--spectrum-heading-margin-start`, `--spectrum-heading-margin-end`, `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-font-size": {
+      "description": "Used by `--spectrum-body-margin-end`, `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-font-size": {
+      "description": "Used by `--spectrum-detail-margin-start`, `--spectrum-detail-margin-end`, `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-font-family": {
+      "description": "Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-font-style": {
+      "description": "Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-font-weight": {
+      "description": "Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-font-color": {
+      "description": "Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-font-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-heading-line-height": {
+      "description": "Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-margin-start": {
+      "description": "Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-margin-start, 0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-margin-end": {
+      "description": "Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-margin-end, 0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-strong-font-style": {
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-strong, .spectrum-Heading strong`. <br/>Defaults to `var(--spectrum-heading-sans-serif-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-strong, .spectrum-Heading strong`. <br/>Defaults to `var(--spectrum-heading-sans-serif-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-emphasized, .spectrum-Heading em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-emphasized, .spectrum-Heading em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading em strong, .spectrum-Heading strong em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading em strong, .spectrum-Heading strong em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-font-family": {
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-font-style": {
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-font-weight": {
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-font-size": {
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-line-height": {
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-letter-spacing": {
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading:lang(ja) em, .spectrum-Heading:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading:lang(ko) em, .spectrum-Heading:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading:lang(zh) em`. <br/>Defaults to `var(--spectrum-heading-cjk-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading:lang(ja) em, .spectrum-Heading:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading:lang(ko) em, .spectrum-Heading:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading:lang(zh) em`. <br/>Defaults to `var(--spectrum-heading-cjk-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-strong-font-style": {
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-strong, .spectrum-Heading:lang(ja) strong, .spectrum-Heading:lang(ko) .spectrum-Heading-strong, .spectrum-Heading:lang(ko) strong, .spectrum-Heading:lang(zh) .spectrum-Heading-strong, .spectrum-Heading:lang(zh) strong`. <br/>Defaults to `var(--spectrum-heading-cjk-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-strong, .spectrum-Heading:lang(ja) strong, .spectrum-Heading:lang(ko) .spectrum-Heading-strong, .spectrum-Heading:lang(ko) strong, .spectrum-Heading:lang(zh) .spectrum-Heading-strong, .spectrum-Heading:lang(zh) strong`. <br/>Defaults to `var(--spectrum-heading-cjk-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(ja) em strong, .spectrum-Heading:lang(ja) strong em, .spectrum-Heading:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(ko) em strong, .spectrum-Heading:lang(ko) strong em, .spectrum-Heading:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(zh) em strong, .spectrum-Heading:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-heading-cjk-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(ja) em strong, .spectrum-Heading:lang(ja) strong em, .spectrum-Heading:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(ko) em strong, .spectrum-Heading:lang(ko) strong em, .spectrum-Heading:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(zh) em strong, .spectrum-Heading:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-heading-cjk-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-heavy-font-style": {
+      "description": "Used by `.spectrum-Heading--heavy`. <br/>Defaults to `var(--spectrum-heading-sans-serif-heavy-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-heavy-font-weight": {
+      "description": "Used by `.spectrum-Heading--heavy`. <br/>Defaults to `var(--spectrum-heading-sans-serif-heavy-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-heavy-strong-font-style": {
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-strong, .spectrum-Heading--heavy strong`. <br/>Defaults to `var(--spectrum-heading-sans-serif-heavy-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-heavy-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-strong, .spectrum-Heading--heavy strong`. <br/>Defaults to `var(--spectrum-heading-sans-serif-heavy-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-heavy-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-emphasized, .spectrum-Heading--heavy em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-heavy-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-heavy-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-emphasized, .spectrum-Heading--heavy em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-heavy-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-heavy-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy em strong, .spectrum-Heading--heavy strong em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-heavy-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy em strong, .spectrum-Heading--heavy strong em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-heavy-font-style": {
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja), .spectrum-Heading--heavy:lang(ko), .spectrum-Heading--heavy:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-heavy-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-heavy-font-weight": {
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja), .spectrum-Heading--heavy:lang(ko), .spectrum-Heading--heavy:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-heavy-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-heavy-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ja) em, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ko) em, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(zh) em`. <br/>Defaults to `var(--spectrum-heading-cjk-heavy-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-heavy-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ja) em, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ko) em, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(zh) em`. <br/>Defaults to `var(--spectrum-heading-cjk-heavy-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-heavy-strong-font-style": {
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(ja) strong, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(ko) strong, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(zh) strong`. <br/>Defaults to `var(--spectrum-heading-cjk-heavy-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-heavy-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(ja) strong, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(ko) strong, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(zh) strong`. <br/>Defaults to `var(--spectrum-heading-cjk-heavy-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-heavy-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ja) em strong, .spectrum-Heading--heavy:lang(ja) strong em, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ko) em strong, .spectrum-Heading--heavy:lang(ko) strong em, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(zh) em strong, .spectrum-Heading--heavy:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-heading-cjk-heavy-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-heavy-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ja) em strong, .spectrum-Heading--heavy:lang(ja) strong em, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ko) em strong, .spectrum-Heading--heavy:lang(ko) strong em, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(zh) em strong, .spectrum-Heading--heavy:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-light-font-style": {
+      "description": "Used by `.spectrum-Heading--light`. <br/>Defaults to `var(--spectrum-heading-sans-serif-light-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-light-font-weight": {
+      "description": "Used by `.spectrum-Heading--light`. <br/>Defaults to `var(--spectrum-heading-sans-serif-light-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-light-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-emphasized, .spectrum-Heading--light em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-light-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-light-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-emphasized, .spectrum-Heading--light em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-light-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-light-strong-font-style": {
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-strong, .spectrum-Heading--light strong`. <br/>Defaults to `var(--spectrum-heading-sans-serif-light-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-light-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-strong, .spectrum-Heading--light strong`. <br/>Defaults to `var(--spectrum-heading-sans-serif-light-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-light-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light em strong, .spectrum-Heading--light strong em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-light-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-sans-serif-light-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light em strong, .spectrum-Heading--light strong em`. <br/>Defaults to `var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-light-font-style": {
+      "description": "Used by `.spectrum-Heading--light:lang(ja), .spectrum-Heading--light:lang(ko), .spectrum-Heading--light:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-light-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-light-font-weight": {
+      "description": "Used by `.spectrum-Heading--light:lang(ja), .spectrum-Heading--light:lang(ko), .spectrum-Heading--light:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-light-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-light-strong-font-style": {
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-strong, .spectrum-Heading--light:lang(ja) strong, .spectrum-Heading--light:lang(ko) .spectrum-Heading-strong, .spectrum-Heading--light:lang(ko) strong, .spectrum-Heading--light:lang(zh) .spectrum-Heading-strong, .spectrum-Heading--light:lang(zh) strong`. <br/>Defaults to `var(--spectrum-heading-cjk-light-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-light-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-strong, .spectrum-Heading--light:lang(ja) strong, .spectrum-Heading--light:lang(ko) .spectrum-Heading-strong, .spectrum-Heading--light:lang(ko) strong, .spectrum-Heading--light:lang(zh) .spectrum-Heading-strong, .spectrum-Heading--light:lang(zh) strong`. <br/>Defaults to `var(--spectrum-heading-cjk-light-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-light-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ja) em, .spectrum-Heading--light:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ko) em, .spectrum-Heading--light:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(zh) em`. <br/>Defaults to `var(--spectrum-heading-cjk-light-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-light-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ja) em, .spectrum-Heading--light:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ko) em, .spectrum-Heading--light:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(zh) em`. <br/>Defaults to `var(--spectrum-heading-cjk-light-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-light-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ja) em strong, .spectrum-Heading--light:lang(ja) strong em, .spectrum-Heading--light:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ko) em strong, .spectrum-Heading--light:lang(ko) strong em, .spectrum-Heading--light:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(zh) em strong, .spectrum-Heading--light:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-heading-cjk-light-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-cjk-light-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ja) em strong, .spectrum-Heading--light:lang(ja) strong em, .spectrum-Heading--light:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ko) em strong, .spectrum-Heading--light:lang(ko) strong em, .spectrum-Heading--light:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(zh) em strong, .spectrum-Heading--light:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-heading-cjk-light-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-font-family": {
+      "description": "Used by `.spectrum-Heading--serif`. <br/>Defaults to `var(--spectrum-heading-serif-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-font-style": {
+      "description": "Used by `.spectrum-Heading--serif`. <br/>Defaults to `var(--spectrum-heading-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif`. <br/>Defaults to `var(--spectrum-heading-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-emphasized, .spectrum-Heading--serif em`. <br/>Defaults to `var(--spectrum-heading-serif-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-emphasized, .spectrum-Heading--serif em`. <br/>Defaults to `var(--spectrum-heading-serif-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-strong-font-style": {
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-strong, .spectrum-Heading--serif strong`. <br/>Defaults to `var(--spectrum-heading-serif-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-strong, .spectrum-Heading--serif strong`. <br/>Defaults to `var(--spectrum-heading-serif-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif em strong, .spectrum-Heading--serif strong em`. <br/>Defaults to `var(--spectrum-heading-serif-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif em strong, .spectrum-Heading--serif strong em`. <br/>Defaults to `var(--spectrum-heading-serif-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-heavy-font-style": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy`. <br/>Defaults to `var(--spectrum-heading-serif-heavy-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-heavy-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy`. <br/>Defaults to `var(--spectrum-heading-serif-heavy-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-heavy-strong-font-style": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-strong, .spectrum-Heading--serif.spectrum-Heading--heavy strong`. <br/>Defaults to `var(--spectrum-heading-serif-heavy-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-heavy-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-strong, .spectrum-Heading--serif.spectrum-Heading--heavy strong`. <br/>Defaults to `var(--spectrum-heading-serif-heavy-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-heavy-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--heavy em`. <br/>Defaults to `var(--spectrum-heading-serif-heavy-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-heavy-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--heavy em`. <br/>Defaults to `var(--spectrum-heading-serif-heavy-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-heavy-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--heavy em strong, .spectrum-Heading--serif.spectrum-Heading--heavy strong em`. <br/>Defaults to `var(--spectrum-heading-serif-heavy-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-heavy-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--heavy em strong, .spectrum-Heading--serif.spectrum-Heading--heavy strong em`. <br/>Defaults to `var(--spectrum-heading-serif-heavy-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-light-font-style": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light`. <br/>Defaults to `var(--spectrum-heading-serif-light-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-light-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light`. <br/>Defaults to `var(--spectrum-heading-serif-light-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-light-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--light em`. <br/>Defaults to `var(--spectrum-heading-serif-light-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-light-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--light em`. <br/>Defaults to `var(--spectrum-heading-serif-light-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-light-strong-font-style": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-strong, .spectrum-Heading--serif.spectrum-Heading--light strong`. <br/>Defaults to `var(--spectrum-heading-serif-light-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-light-strong-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-strong, .spectrum-Heading--serif.spectrum-Heading--light strong`. <br/>Defaults to `var(--spectrum-heading-serif-light-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-light-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--light em strong, .spectrum-Heading--serif.spectrum-Heading--light strong em`. <br/>Defaults to `var(--spectrum-heading-serif-light-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-serif-light-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--light em strong, .spectrum-Heading--serif.spectrum-Heading--light strong em`. <br/>Defaults to `var(--spectrum-heading-serif-light-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-font-family": {
+      "description": "Used by `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-font-style": {
+      "description": "Used by `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-font-weight": {
+      "description": "Used by `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-font-color": {
+      "description": "Used by `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-font-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-body-margin-start": {
+      "description": "Used by `.spectrum-Body`. <br/>Defaults to `var(--mod-body-margin, 0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-margin": {
+      "description": "Used by `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-margin-end, 0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-margin-end": {
+      "description": "Used by `.spectrum-Body`. <br/>Defaults to `var(--mod-body-margin, var(--spectrum-body-margin-end, 0))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-line-height": {
+      "description": "Used by `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-strong-font-style": {
+      "description": "Used by `.spectrum-Body .spectrum-Body-strong, .spectrum-Body strong`. <br/>Defaults to `var(--spectrum-body-sans-serif-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-strong-font-weight": {
+      "description": "Used by `.spectrum-Body .spectrum-Body-strong, .spectrum-Body strong`. <br/>Defaults to `var(--spectrum-body-sans-serif-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-emphasized-font-style": {
+      "description": "Used by `.spectrum-Body .spectrum-Body-emphasized, .spectrum-Body em`. <br/>Defaults to `var(--spectrum-body-sans-serif-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Body .spectrum-Body-emphasized, .spectrum-Body em`. <br/>Defaults to `var(--spectrum-body-sans-serif-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Body .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body em strong, .spectrum-Body strong em`. <br/>Defaults to `var(--spectrum-body-sans-serif-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-sans-serif-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Body .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body em strong, .spectrum-Body strong em`. <br/>Defaults to `var(--spectrum-body-sans-serif-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-font-family": {
+      "description": "Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`. <br/>Defaults to `var(--spectrum-body-cjk-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-font-style": {
+      "description": "Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`. <br/>Defaults to `var(--spectrum-body-cjk-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-font-weight": {
+      "description": "Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`. <br/>Defaults to `var(--spectrum-body-cjk-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-line-height": {
+      "description": "Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`. <br/>Defaults to `var(--spectrum-body-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-letter-spacing": {
+      "description": "Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`. <br/>Defaults to `var(--spectrum-body-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-strong-font-style": {
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-strong, .spectrum-Body:lang(ja) strong, .spectrum-Body:lang(ko) .spectrum-Body-strong, .spectrum-Body:lang(ko) strong, .spectrum-Body:lang(zh) .spectrum-Body-strong, .spectrum-Body:lang(zh) strong`. <br/>Defaults to `var(--spectrum-body-cjk-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-strong-font-weight": {
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-strong, .spectrum-Body:lang(ja) strong, .spectrum-Body:lang(ko) .spectrum-Body-strong, .spectrum-Body:lang(ko) strong, .spectrum-Body:lang(zh) .spectrum-Body-strong, .spectrum-Body:lang(zh) strong`. <br/>Defaults to `var(--spectrum-body-cjk-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-emphasized-font-style": {
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-emphasized, .spectrum-Body:lang(ja) em, .spectrum-Body:lang(ko) .spectrum-Body-emphasized, .spectrum-Body:lang(ko) em, .spectrum-Body:lang(zh) .spectrum-Body-emphasized, .spectrum-Body:lang(zh) em`. <br/>Defaults to `var(--spectrum-body-cjk-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-emphasized, .spectrum-Body:lang(ja) em, .spectrum-Body:lang(ko) .spectrum-Body-emphasized, .spectrum-Body:lang(ko) em, .spectrum-Body:lang(zh) .spectrum-Body-emphasized, .spectrum-Body:lang(zh) em`. <br/>Defaults to `var(--spectrum-body-cjk-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(ja) em strong, .spectrum-Body:lang(ja) strong em, .spectrum-Body:lang(ko) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(ko) em strong, .spectrum-Body:lang(ko) strong em, .spectrum-Body:lang(zh) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(zh) em strong, .spectrum-Body:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-body-cjk-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-cjk-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(ja) em strong, .spectrum-Body:lang(ja) strong em, .spectrum-Body:lang(ko) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(ko) em strong, .spectrum-Body:lang(ko) strong em, .spectrum-Body:lang(zh) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(zh) em strong, .spectrum-Body:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-body-cjk-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-font-family": {
+      "description": "Used by `.spectrum-Body--serif`. <br/>Defaults to `var(--spectrum-body-serif-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-font-weight": {
+      "description": "Used by `.spectrum-Body--serif`. <br/>Defaults to `var(--spectrum-body-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-font-style": {
+      "description": "Used by `.spectrum-Body--serif`. <br/>Defaults to `var(--spectrum-body-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-strong-font-style": {
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-strong, .spectrum-Body--serif strong`. <br/>Defaults to `var(--spectrum-body-serif-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-strong-font-weight": {
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-strong, .spectrum-Body--serif strong`. <br/>Defaults to `var(--spectrum-body-serif-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-emphasized-font-style": {
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-emphasized, .spectrum-Body--serif em`. <br/>Defaults to `var(--spectrum-body-serif-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-emphasized, .spectrum-Body--serif em`. <br/>Defaults to `var(--spectrum-body-serif-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body--serif em strong, .spectrum-Body--serif strong em`. <br/>Defaults to `var(--spectrum-body-serif-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-body-serif-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body--serif em strong, .spectrum-Body--serif strong em`. <br/>Defaults to `var(--spectrum-body-serif-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-font-family": {
+      "description": "Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-sans-serif-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-font-style": {
+      "description": "Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-font-weight": {
+      "description": "Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-margin-start": {
+      "description": "Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-margin-start, 0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-margin-end": {
+      "description": "Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-margin-end, 0)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-font-color": {
+      "description": "Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-font-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-detail-line-height": {
+      "description": "Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-letter-spacing": {
+      "description": "Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-strong-font-style": {
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-strong, .spectrum-Detail strong`. <br/>Defaults to `var(--spectrum-detail-sans-serif-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-strong-font-weight": {
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-strong, .spectrum-Detail strong`. <br/>Defaults to `var(--spectrum-detail-sans-serif-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-emphasized, .spectrum-Detail em`. <br/>Defaults to `var(--spectrum-detail-sans-serif-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-emphasized, .spectrum-Detail em`. <br/>Defaults to `var(--spectrum-detail-sans-serif-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail em strong, .spectrum-Detail strong em`. <br/>Defaults to `var(--spectrum-detail-sans-serif-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail em strong, .spectrum-Detail strong em`. <br/>Defaults to `var(--spectrum-detail-sans-serif-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-font-family": {
+      "description": "Used by `.spectrum-Detail:lang(ja), .spectrum-Detail:lang(ko), .spectrum-Detail:lang(zh)`. <br/>Defaults to `var(--spectrum-detail-cjk-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-font-style": {
+      "description": "Used by `.spectrum-Detail:lang(ja), .spectrum-Detail:lang(ko), .spectrum-Detail:lang(zh)`. <br/>Defaults to `var(--spectrum-detail-cjk-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-font-weight": {
+      "description": "Used by `.spectrum-Detail:lang(ja), .spectrum-Detail:lang(ko), .spectrum-Detail:lang(zh)`. <br/>Defaults to `var(--spectrum-detail-cjk-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-line-height": {
+      "description": "Used by `.spectrum-Detail:lang(ja), .spectrum-Detail:lang(ko), .spectrum-Detail:lang(zh)`. <br/>Defaults to `var(--spectrum-detail-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-strong-font-style": {
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-strong, .spectrum-Detail:lang(ja) strong, .spectrum-Detail:lang(ko) .spectrum-Detail-strong, .spectrum-Detail:lang(ko) strong, .spectrum-Detail:lang(zh) .spectrum-Detail-strong, .spectrum-Detail:lang(zh) strong`. <br/>Defaults to `var(--spectrum-detail-cjk-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-strong-font-weight": {
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-strong, .spectrum-Detail:lang(ja) strong, .spectrum-Detail:lang(ko) .spectrum-Detail-strong, .spectrum-Detail:lang(ko) strong, .spectrum-Detail:lang(zh) .spectrum-Detail-strong, .spectrum-Detail:lang(zh) strong`. <br/>Defaults to `var(--spectrum-detail-cjk-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-emphasized, .spectrum-Detail:lang(ja) em, .spectrum-Detail:lang(ko) .spectrum-Detail-emphasized, .spectrum-Detail:lang(ko) em, .spectrum-Detail:lang(zh) .spectrum-Detail-emphasized, .spectrum-Detail:lang(zh) em`. <br/>Defaults to `var(--spectrum-detail-cjk-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-emphasized, .spectrum-Detail:lang(ja) em, .spectrum-Detail:lang(ko) .spectrum-Detail-emphasized, .spectrum-Detail:lang(ko) em, .spectrum-Detail:lang(zh) .spectrum-Detail-emphasized, .spectrum-Detail:lang(zh) em`. <br/>Defaults to `var(--spectrum-detail-cjk-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(ja) em strong, .spectrum-Detail:lang(ja) strong em, .spectrum-Detail:lang(ko) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(ko) em strong, .spectrum-Detail:lang(ko) strong em, .spectrum-Detail:lang(zh) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(zh) em strong, .spectrum-Detail:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-detail-cjk-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(ja) em strong, .spectrum-Detail:lang(ja) strong em, .spectrum-Detail:lang(ko) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(ko) em strong, .spectrum-Detail:lang(ko) strong em, .spectrum-Detail:lang(zh) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(zh) em strong, .spectrum-Detail:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-detail-cjk-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-font-family": {
+      "description": "Used by `.spectrum-Detail--serif`. <br/>Defaults to `var(--spectrum-detail-serif-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-font-style": {
+      "description": "Used by `.spectrum-Detail--serif`. <br/>Defaults to `var(--spectrum-detail-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-font-weight": {
+      "description": "Used by `.spectrum-Detail--serif`. <br/>Defaults to `var(--spectrum-detail-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-strong-font-style": {
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-strong, .spectrum-Detail--serif strong`. <br/>Defaults to `var(--spectrum-detail-serif-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-strong-font-weight": {
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-strong, .spectrum-Detail--serif strong`. <br/>Defaults to `var(--spectrum-detail-serif-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-emphasized, .spectrum-Detail--serif em`. <br/>Defaults to `var(--spectrum-detail-serif-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-emphasized, .spectrum-Detail--serif em`. <br/>Defaults to `var(--spectrum-detail-serif-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--serif em strong, .spectrum-Detail--serif strong em`. <br/>Defaults to `var(--spectrum-detail-serif-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--serif em strong, .spectrum-Detail--serif strong em`. <br/>Defaults to `var(--spectrum-detail-serif-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-light-font-style": {
+      "description": "Used by `.spectrum-Detail--light`. <br/>Defaults to `var(--spectrum-detail-sans-serif-light-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-light-strong-font-style": {
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-strong, .spectrum-Detail--light strong`. <br/>Defaults to `var(--spectrum-detail-sans-serif-light-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-light-strong-font-weight": {
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-strong, .spectrum-Detail--light strong`. <br/>Defaults to `var(--spectrum-detail-sans-serif-light-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-light-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-emphasized, .spectrum-Detail--light em`. <br/>Defaults to `var(--spectrum-detail-sans-serif-light-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-light-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-emphasized, .spectrum-Detail--light em`. <br/>Defaults to `var(--spectrum-detail-sans-serif-light-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-light-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-strong.spectrum-Body-emphasized, .spectrum-Detail--light em strong, .spectrum-Detail--light strong em`. <br/>Defaults to `var(--spectrum-detail-sans-serif-light-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-sans-serif-light-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-strong.spectrum-Body-emphasized, .spectrum-Detail--light em strong, .spectrum-Detail--light strong em`. <br/>Defaults to `var(--spectrum-detail-sans-serif-light-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-light-font-style": {
+      "description": "Used by `.spectrum-Detail--light:lang(ja), .spectrum-Detail--light:lang(ko), .spectrum-Detail--light:lang(zh)`. <br/>Defaults to `var(--spectrum-detail-cjk-light-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-light-font-weight": {
+      "description": "Used by `.spectrum-Detail--light:lang(ja), .spectrum-Detail--light:lang(ko), .spectrum-Detail--light:lang(zh)`. <br/>Defaults to `var(--spectrum-detail-cjk-light-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-light-strong-font-style": {
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-strong, .spectrum-Detail--light:lang(ja) strong, .spectrum-Detail--light:lang(ko) .spectrum-Detail-strong, .spectrum-Detail--light:lang(ko) strong, .spectrum-Detail--light:lang(zh) .spectrum-Detail-strong, .spectrum-Detail--light:lang(zh) strong`. <br/>Defaults to `var(--spectrum-detail-cjk-light-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-light-strong-font-weight": {
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-strong, .spectrum-Detail--light:lang(ja) strong, .spectrum-Detail--light:lang(ko) .spectrum-Detail-strong, .spectrum-Detail--light:lang(ko) strong, .spectrum-Detail--light:lang(zh) .spectrum-Detail-strong, .spectrum-Detail--light:lang(zh) strong`. <br/>Defaults to `var(--spectrum-detail-cjk-light-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-light-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ja) em, .spectrum-Detail--light:lang(ko) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ko) em, .spectrum-Detail--light:lang(zh) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(zh) em`. <br/>Defaults to `var(--spectrum-detail-cjk-light-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-light-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ja) em, .spectrum-Detail--light:lang(ko) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ko) em, .spectrum-Detail--light:lang(zh) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(zh) em`. <br/>Defaults to `var(--spectrum-detail-cjk-light-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-light-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ko) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--light:lang(zh) .spectrum-Detail-strong.spectrum-Detail-emphasized`. <br/>Defaults to `var(--spectrum-detail-cjk-light-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-cjk-light-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ko) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--light:lang(zh) .spectrum-Detail-strong.spectrum-Detail-emphasized`. <br/>Defaults to `var(--spectrum-detail-cjk-light-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-light-font-style": {
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light`. <br/>Defaults to `var(--spectrum-detail-serif-light-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-light-font-weight": {
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light`. <br/>Defaults to `var(--spectrum-detail-serif-light-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-light-strong-font-style": {
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-strong, .spectrum-Detail--serif.spectrum-Detail--light strong`. <br/>Defaults to `var(--spectrum-detail-serif-light-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-light-strong-font-weight": {
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-strong, .spectrum-Detail--serif.spectrum-Detail--light strong`. <br/>Defaults to `var(--spectrum-detail-serif-light-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-light-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-emphasized, .spectrum-Detail--serif.spectrum-Detail--light em`. <br/>Defaults to `var(--spectrum-detail-serif-light-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-light-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-emphasized, .spectrum-Detail--serif.spectrum-Detail--light em`. <br/>Defaults to `var(--spectrum-detail-serif-light-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-light-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-strong.spectrum-Body-emphasized, .spectrum-Detail--serif.spectrum-Detail--light em strong, .spectrum-Detail--serif.spectrum-Detail--light strong em`. <br/>Defaults to `var(--spectrum-detail-serif-light-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-detail-serif-light-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-strong.spectrum-Body-emphasized, .spectrum-Detail--serif.spectrum-Detail--light em strong, .spectrum-Detail--serif.spectrum-Detail--light strong em`. <br/>Defaults to `var(--spectrum-detail-serif-light-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-font-family": {
+      "description": "Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-font-style": {
+      "description": "Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-font-weight": {
+      "description": "Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-font-size": {
+      "description": "Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-margin-start": {
+      "description": "Used by `.spectrum-Code`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-margin-end": {
+      "description": "Used by `.spectrum-Code`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-line-height": {
+      "description": "Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-font-color": {
+      "description": "Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-font-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-code-strong-font-style": {
+      "description": "Used by `.spectrum-Code .spectrum-Code-strong, .spectrum-Code strong`. <br/>Defaults to `var(--spectrum-code-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-strong-font-weight": {
+      "description": "Used by `.spectrum-Code .spectrum-Code-strong, .spectrum-Code strong`. <br/>Defaults to `var(--spectrum-code-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-emphasized-font-style": {
+      "description": "Used by `.spectrum-Code .spectrum-Code-emphasized, .spectrum-Code em`. <br/>Defaults to `var(--spectrum-code-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Code .spectrum-Code-emphasized, .spectrum-Code em`. <br/>Defaults to `var(--spectrum-code-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Code .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code em strong, .spectrum-Code strong em`. <br/>Defaults to `var(--spectrum-code-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Code .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code em strong, .spectrum-Code strong em`. <br/>Defaults to `var(--spectrum-code-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-font-family": {
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`. <br/>Defaults to `var(--spectrum-code-cjk-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-font-style": {
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`. <br/>Defaults to `var(--spectrum-code-cjk-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-font-weight": {
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`. <br/>Defaults to `var(--spectrum-code-cjk-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-line-height": {
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`. <br/>Defaults to `var(--spectrum-code-cjk-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-letter-spacing": {
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`. <br/>Defaults to `var(--spectrum-code-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-strong-font-style": {
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-strong, .spectrum-Code:lang(ja) strong, .spectrum-Code:lang(ko) .spectrum-Code-strong, .spectrum-Code:lang(ko) strong, .spectrum-Code:lang(zh) .spectrum-Code-strong, .spectrum-Code:lang(zh) strong`. <br/>Defaults to `var(--spectrum-code-cjk-strong-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-strong-font-weight": {
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-strong, .spectrum-Code:lang(ja) strong, .spectrum-Code:lang(ko) .spectrum-Code-strong, .spectrum-Code:lang(ko) strong, .spectrum-Code:lang(zh) .spectrum-Code-strong, .spectrum-Code:lang(zh) strong`. <br/>Defaults to `var(--spectrum-code-cjk-strong-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-emphasized-font-style": {
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-emphasized, .spectrum-Code:lang(ja) em, .spectrum-Code:lang(ko) .spectrum-Code-emphasized, .spectrum-Code:lang(ko) em, .spectrum-Code:lang(zh) .spectrum-Code-emphasized, .spectrum-Code:lang(zh) em`. <br/>Defaults to `var(--spectrum-code-cjk-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-emphasized, .spectrum-Code:lang(ja) em, .spectrum-Code:lang(ko) .spectrum-Code-emphasized, .spectrum-Code:lang(ko) em, .spectrum-Code:lang(zh) .spectrum-Code-emphasized, .spectrum-Code:lang(zh) em`. <br/>Defaults to `var(--spectrum-code-cjk-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-strong-emphasized-font-style": {
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(ja) em strong, .spectrum-Code:lang(ja) strong em, .spectrum-Code:lang(ko) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(ko) em strong, .spectrum-Code:lang(ko) strong em, .spectrum-Code:lang(zh) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(zh) em strong, .spectrum-Code:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-code-cjk-strong-emphasized-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-code-cjk-strong-emphasized-font-weight": {
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(ja) em strong, .spectrum-Code:lang(ja) strong em, .spectrum-Code:lang(ko) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(ko) em strong, .spectrum-Code:lang(ko) strong em, .spectrum-Code:lang(zh) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(zh) em strong, .spectrum-Code:lang(zh) strong em`. <br/>Defaults to `var(--spectrum-code-cjk-strong-emphasized-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {},
+  "global": {
+    "spectrum-font-family": {
+      "description": "Used by `.spectrum-Typography`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-style": {
+      "description": "Used by `.spectrum-Typography`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size": {
+      "description": "Used by `.spectrum-Typography`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-family-ar": {
+      "description": "Used by `.spectrum-Typography:lang(ar)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-family-he": {
+      "description": "Used by `.spectrum-Typography:lang(he)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-margin-start": {
+      "value": "calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier))",
+      "description": "Defined in `.spectrum-Typography .spectrum-Heading`, `.spectrum-Heading`. <br/>Used by `.spectrum-Heading`. <br/>Defaults to `calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-font-size": {
+      "value": "var(--spectrum-font-size-1300)",
+      "description": "Defined in `.spectrum-Heading, .spectrum-Heading--sizeM`, `.spectrum-Heading--sizeXXS`, `.spectrum-Heading--sizeXS`, `.spectrum-Heading--sizeS`, `.spectrum-Heading--sizeL`, `.spectrum-Heading--sizeXL`, `.spectrum-Heading--sizeXXL`, `.spectrum-Heading--sizeXXXL`. <br/>Used by `--spectrum-heading-margin-start`, `--spectrum-heading-margin-end`, `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-size-xxxl)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-margin-top-multiplier": {
+      "value": "0.88888889",
+      "description": "Used by `--spectrum-heading-margin-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-margin-end": {
+      "value": "calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier))",
+      "description": "Defined in `.spectrum-Typography .spectrum-Heading`, `.spectrum-Heading`. <br/>Used by `.spectrum-Heading`. <br/>Defaults to `calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-margin-bottom-multiplier": {
+      "value": "0.25",
+      "description": "Used by `--spectrum-heading-margin-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-margin-end": {
+      "value": "calc(var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier))",
+      "description": "Defined in `.spectrum-Typography .spectrum-Body`. <br/>Used by `.spectrum-Body`. <br/>Defaults to `calc(var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-font-size": {
+      "value": "var(--spectrum-font-size-600)",
+      "description": "Defined in `.spectrum-Body, .spectrum-Body--sizeM`, `.spectrum-Body--sizeXS`, `.spectrum-Body--sizeS`, `.spectrum-Body--sizeL`, `.spectrum-Body--sizeXL`, `.spectrum-Body--sizeXXL`, `.spectrum-Body--sizeXXXL`. <br/>Used by `--spectrum-body-margin-end`, `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-size-xxxl)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-margin-multiplier": {
+      "value": "0.75",
+      "description": "Used by `--spectrum-body-margin-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-margin-start": {
+      "value": "calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier))",
+      "description": "Defined in `.spectrum-Typography .spectrum-Detail`, `.spectrum-Detail`. <br/>Used by `.spectrum-Detail`. <br/>Defaults to `calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-font-size": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Defined in `.spectrum-Detail, .spectrum-Detail--sizeM`, `.spectrum-Detail--sizeS`, `.spectrum-Detail--sizeL`, `.spectrum-Detail--sizeXL`. <br/>Used by `--spectrum-detail-margin-start`, `--spectrum-detail-margin-end`, `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-size-xl)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-margin-top-multiplier": {
+      "value": "0.88888889",
+      "description": "Used by `--spectrum-detail-margin-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-margin-end": {
+      "value": "calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier))",
+      "description": "Defined in `.spectrum-Typography .spectrum-Detail`, `.spectrum-Detail`. <br/>Used by `.spectrum-Detail`. <br/>Defaults to `calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier))`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-margin-bottom-multiplier": {
+      "value": "0.25",
+      "description": "Used by `--spectrum-detail-margin-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-m": {
+      "value": "var(--spectrum-font-size-500)",
+      "description": "Used by `--spectrum-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-font-size": {
+      "value": "var(--spectrum-font-size-1200)",
+      "description": "Defined in `.spectrum-Heading, .spectrum-Heading--sizeM`, `.spectrum-Heading--sizeXXS`, `.spectrum-Heading--sizeXS`, `.spectrum-Heading--sizeS`, `.spectrum-Heading--sizeL`, `.spectrum-Heading--sizeXL`, `.spectrum-Heading--sizeXXL`, `.spectrum-Heading--sizeXXXL`. <br/>Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-heading-cjk-size-xxxl)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-m": {
+      "value": "var(--spectrum-font-size-400)",
+      "description": "Used by `--spectrum-heading-cjk-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-xxs": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-xxs": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-heading-cjk-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-xs": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Used by `--spectrum-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-xs": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Used by `--spectrum-heading-cjk-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-s": {
+      "value": "var(--spectrum-font-size-400)",
+      "description": "Used by `--spectrum-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-s": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Used by `--spectrum-heading-cjk-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-l": {
+      "value": "var(--spectrum-font-size-700)",
+      "description": "Used by `--spectrum-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-l": {
+      "value": "var(--spectrum-font-size-600)",
+      "description": "Used by `--spectrum-heading-cjk-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-xl": {
+      "value": "var(--spectrum-font-size-900)",
+      "description": "Used by `--spectrum-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-xl": {
+      "value": "var(--spectrum-font-size-800)",
+      "description": "Used by `--spectrum-heading-cjk-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-xxl": {
+      "value": "var(--spectrum-font-size-1100)",
+      "description": "Used by `--spectrum-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-xxl": {
+      "value": "var(--spectrum-font-size-1000)",
+      "description": "Used by `--spectrum-heading-cjk-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-xxxl": {
+      "value": "var(--spectrum-font-size-1300)",
+      "description": "Used by `--spectrum-heading-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-size-xxxl": {
+      "value": "var(--spectrum-font-size-1200)",
+      "description": "Used by `--spectrum-heading-cjk-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-family": {
+      "value": "Adobe Clean Spectrum VF",
+      "description": "Defined in `.spectrum-Heading`. <br/>Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-heading-sans-serif-font-family`, `--spectrum-body-sans-serif-font-family`, `--spectrum-detail-sans-serif-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-font-family": {
+      "value": "Adobe Clean Serif",
+      "description": "Defined in `.spectrum-Heading`. <br/>Used by `.spectrum-Heading--serif`. <br/>Defaults to `var(--spectrum-serif-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-serif-font-family-stack": {
+      "description": "Used by `--spectrum-heading-serif-font-family`, `--spectrum-body-serif-font-family`, `--spectrum-detail-serif-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-font-family": {
+      "value": "Adobe Clean Han",
+      "description": "Defined in `.spectrum-Heading`. <br/>Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-font-family-stack": {
+      "description": "Used by `--spectrum-heading-cjk-font-family`, `--spectrum-body-cjk-font-family`, `--spectrum-detail-cjk-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-letter-spacing": {
+      "value": "0em",
+      "description": "Defined in `.spectrum-Heading`. <br/>Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-letter-spacing": {
+      "value": "0em",
+      "description": "Used by `--spectrum-heading-cjk-letter-spacing`, `--spectrum-body-cjk-letter-spacing`, `--spectrum-code-cjk-letter-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-font-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Heading`. <br/>Used by `.spectrum-Heading`. <br/>Defaults to `var(--spectrum-heading-color)`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-heading-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-heading-font-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Heading`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-line-height": {
+      "value": "1.3",
+      "description": "Used by `.spectrum-Heading`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-strong, .spectrum-Heading strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-strong-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-strong, .spectrum-Heading strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-emphasized, .spectrum-Heading em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-emphasized-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-emphasized, .spectrum-Heading em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading em strong, .spectrum-Heading strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-strong-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading em strong, .spectrum-Heading strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-line-height": {
+      "value": "1.5",
+      "description": "Used by `.spectrum-Heading:lang(ja), .spectrum-Heading:lang(ko), .spectrum-Heading:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading:lang(ja) em, .spectrum-Heading:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading:lang(ko) em, .spectrum-Heading:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading:lang(ja) em, .spectrum-Heading:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading:lang(ko) em, .spectrum-Heading:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-strong, .spectrum-Heading:lang(ja) strong, .spectrum-Heading:lang(ko) .spectrum-Heading-strong, .spectrum-Heading:lang(ko) strong, .spectrum-Heading:lang(zh) .spectrum-Heading-strong, .spectrum-Heading:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-strong-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-strong, .spectrum-Heading:lang(ja) strong, .spectrum-Heading:lang(ko) .spectrum-Heading-strong, .spectrum-Heading:lang(ko) strong, .spectrum-Heading:lang(zh) .spectrum-Heading-strong, .spectrum-Heading:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-strong-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(ja) em strong, .spectrum-Heading:lang(ja) strong em, .spectrum-Heading:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(ko) em strong, .spectrum-Heading:lang(ko) strong em, .spectrum-Heading:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(zh) em strong, .spectrum-Heading:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-strong-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(ja) em strong, .spectrum-Heading:lang(ja) strong em, .spectrum-Heading:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(ko) em strong, .spectrum-Heading:lang(ko) strong em, .spectrum-Heading:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading:lang(zh) em strong, .spectrum-Heading:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-heavy-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--heavy`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-heavy-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--heavy`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-heavy-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-strong, .spectrum-Heading--heavy strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-heavy-strong-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-strong, .spectrum-Heading--heavy strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-heavy-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-emphasized, .spectrum-Heading--heavy em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-heavy-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-emphasized, .spectrum-Heading--heavy em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-heavy-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy em strong, .spectrum-Heading--heavy strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--heavy .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy em strong, .spectrum-Heading--heavy strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-heavy-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja), .spectrum-Heading--heavy:lang(ko), .spectrum-Heading--heavy:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-heavy-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja), .spectrum-Heading--heavy:lang(ko), .spectrum-Heading--heavy:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-heavy-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ja) em, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ko) em, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-heavy-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ja) em, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ko) em, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-heavy-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(ja) strong, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(ko) strong, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-heavy-strong-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(ja) strong, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(ko) strong, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-strong, .spectrum-Heading--heavy:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-heavy-strong-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ja) em strong, .spectrum-Heading--heavy:lang(ja) strong em, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ko) em strong, .spectrum-Heading--heavy:lang(ko) strong em, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(zh) em strong, .spectrum-Heading--heavy:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-heavy-strong-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--heavy:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ja) em strong, .spectrum-Heading--heavy:lang(ja) strong em, .spectrum-Heading--heavy:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(ko) em strong, .spectrum-Heading--heavy:lang(ko) strong em, .spectrum-Heading--heavy:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--heavy:lang(zh) em strong, .spectrum-Heading--heavy:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-light-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--light`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-light-font-weight": {
+      "value": "300",
+      "description": "Used by `.spectrum-Heading--light`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-light-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-emphasized, .spectrum-Heading--light em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-light-emphasized-font-weight": {
+      "value": "300",
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-emphasized, .spectrum-Heading--light em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-light-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-strong, .spectrum-Heading--light strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-light-strong-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-strong, .spectrum-Heading--light strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-light-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light em strong, .spectrum-Heading--light strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-light-strong-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Heading--light .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light em strong, .spectrum-Heading--light strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-light-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--light:lang(ja), .spectrum-Heading--light:lang(ko), .spectrum-Heading--light:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-light-font-weight": {
+      "value": "300",
+      "description": "Used by `.spectrum-Heading--light:lang(ja), .spectrum-Heading--light:lang(ko), .spectrum-Heading--light:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-light-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-strong, .spectrum-Heading--light:lang(ja) strong, .spectrum-Heading--light:lang(ko) .spectrum-Heading-strong, .spectrum-Heading--light:lang(ko) strong, .spectrum-Heading--light:lang(zh) .spectrum-Heading-strong, .spectrum-Heading--light:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-light-strong-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-strong, .spectrum-Heading--light:lang(ja) strong, .spectrum-Heading--light:lang(ko) .spectrum-Heading-strong, .spectrum-Heading--light:lang(ko) strong, .spectrum-Heading--light:lang(zh) .spectrum-Heading-strong, .spectrum-Heading--light:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-light-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ja) em, .spectrum-Heading--light:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ko) em, .spectrum-Heading--light:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-light-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ja) em, .spectrum-Heading--light:lang(ko) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ko) em, .spectrum-Heading--light:lang(zh) .spectrum-Heading-emphasized, .spectrum-Heading--light:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-light-strong-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ja) em strong, .spectrum-Heading--light:lang(ja) strong em, .spectrum-Heading--light:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ko) em strong, .spectrum-Heading--light:lang(ko) strong em, .spectrum-Heading--light:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(zh) em strong, .spectrum-Heading--light:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-cjk-light-strong-emphasized-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Heading--light:lang(ja) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ja) em strong, .spectrum-Heading--light:lang(ja) strong em, .spectrum-Heading--light:lang(ko) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(ko) em strong, .spectrum-Heading--light:lang(ko) strong em, .spectrum-Heading--light:lang(zh) .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--light:lang(zh) em strong, .spectrum-Heading--light:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--serif`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Heading--serif`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-emphasized, .spectrum-Heading--serif em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-emphasized, .spectrum-Heading--serif em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-strong, .spectrum-Heading--serif strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-strong-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-strong, .spectrum-Heading--serif strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif em strong, .spectrum-Heading--serif strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-strong-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--serif .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif em strong, .spectrum-Heading--serif strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-heavy-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-heavy-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-heavy-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-strong, .spectrum-Heading--serif.spectrum-Heading--heavy strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-heavy-strong-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-strong, .spectrum-Heading--serif.spectrum-Heading--heavy strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-heavy-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--heavy em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-heavy-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--heavy em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-heavy-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--heavy em strong, .spectrum-Heading--serif.spectrum-Heading--heavy strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-heavy-strong-emphasized-font-weight": {
+      "value": "900",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--heavy .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--heavy em strong, .spectrum-Heading--serif.spectrum-Heading--heavy strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-light-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-light-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-light-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--light em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-light-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--light em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-light-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-strong, .spectrum-Heading--serif.spectrum-Heading--light strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-light-strong-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-strong, .spectrum-Heading--serif.spectrum-Heading--light strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-light-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--light em strong, .spectrum-Heading--serif.spectrum-Heading--light strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-serif-light-strong-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Heading--serif.spectrum-Heading--light .spectrum-Heading-strong.spectrum-Heading-emphasized, .spectrum-Heading--serif.spectrum-Heading--light em strong, .spectrum-Heading--serif.spectrum-Heading--light strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-m": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Used by `--spectrum-body-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-xs": {
+      "value": "var(--spectrum-font-size-75)",
+      "description": "Used by `--spectrum-body-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-s": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-body-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-l": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Used by `--spectrum-body-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-xl": {
+      "value": "var(--spectrum-font-size-400)",
+      "description": "Used by `--spectrum-body-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-xxl": {
+      "value": "var(--spectrum-font-size-500)",
+      "description": "Used by `--spectrum-body-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-size-xxxl": {
+      "value": "var(--spectrum-font-size-600)",
+      "description": "Used by `--spectrum-body-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-family": {
+      "value": "Adobe Clean Spectrum VF",
+      "description": "Defined in `.spectrum-Body`. <br/>Used by `.spectrum-Body`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-font-family": {
+      "value": "Adobe Clean Serif",
+      "description": "Defined in `.spectrum-Body`. <br/>Used by `.spectrum-Body--serif`. <br/>Defaults to `var(--spectrum-serif-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-font-family": {
+      "value": "Adobe Clean Han",
+      "description": "Defined in `.spectrum-Body`. <br/>Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-letter-spacing": {
+      "value": "0em",
+      "description": "Defined in `.spectrum-Body`. <br/>Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-font-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Body`. <br/>Used by `.spectrum-Body`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-body-font-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Body`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Body`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-line-height": {
+      "value": "1.5",
+      "description": "Used by `.spectrum-Body`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Body .spectrum-Body-strong, .spectrum-Body strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-strong-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Body .spectrum-Body-strong, .spectrum-Body strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Body .spectrum-Body-emphasized, .spectrum-Body em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Body .spectrum-Body-emphasized, .spectrum-Body em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Body .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body em strong, .spectrum-Body strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-strong-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Body .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body em strong, .spectrum-Body strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-line-height": {
+      "value": "1.7",
+      "description": "Used by `.spectrum-Body:lang(ja), .spectrum-Body:lang(ko), .spectrum-Body:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-strong, .spectrum-Body:lang(ja) strong, .spectrum-Body:lang(ko) .spectrum-Body-strong, .spectrum-Body:lang(ko) strong, .spectrum-Body:lang(zh) .spectrum-Body-strong, .spectrum-Body:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-strong-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-strong, .spectrum-Body:lang(ja) strong, .spectrum-Body:lang(ko) .spectrum-Body-strong, .spectrum-Body:lang(ko) strong, .spectrum-Body:lang(zh) .spectrum-Body-strong, .spectrum-Body:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-emphasized, .spectrum-Body:lang(ja) em, .spectrum-Body:lang(ko) .spectrum-Body-emphasized, .spectrum-Body:lang(ko) em, .spectrum-Body:lang(zh) .spectrum-Body-emphasized, .spectrum-Body:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-emphasized-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-emphasized, .spectrum-Body:lang(ja) em, .spectrum-Body:lang(ko) .spectrum-Body-emphasized, .spectrum-Body:lang(ko) em, .spectrum-Body:lang(zh) .spectrum-Body-emphasized, .spectrum-Body:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-strong-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(ja) em strong, .spectrum-Body:lang(ja) strong em, .spectrum-Body:lang(ko) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(ko) em strong, .spectrum-Body:lang(ko) strong em, .spectrum-Body:lang(zh) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(zh) em strong, .spectrum-Body:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-cjk-strong-emphasized-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Body:lang(ja) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(ja) em strong, .spectrum-Body:lang(ja) strong em, .spectrum-Body:lang(ko) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(ko) em strong, .spectrum-Body:lang(ko) strong em, .spectrum-Body:lang(zh) .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body:lang(zh) em strong, .spectrum-Body:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Body--serif`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Body--serif`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-strong, .spectrum-Body--serif strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-strong-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-strong, .spectrum-Body--serif strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-emphasized, .spectrum-Body--serif em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-emphasized, .spectrum-Body--serif em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body--serif em strong, .spectrum-Body--serif strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-serif-strong-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Body--serif .spectrum-Body-strong.spectrum-Body-emphasized, .spectrum-Body--serif em strong, .spectrum-Body--serif strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-size-m": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-detail-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-size-s": {
+      "value": "var(--spectrum-font-size-75)",
+      "description": "Used by `--spectrum-detail-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-size-l": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Used by `--spectrum-detail-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-size-xl": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Used by `--spectrum-detail-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-font-family": {
+      "value": "Adobe Clean Spectrum VF",
+      "description": "Defined in `.spectrum-Detail`. <br/>Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-font-family": {
+      "value": "Adobe Clean Serif",
+      "description": "Defined in `.spectrum-Detail`. <br/>Used by `.spectrum-Detail--serif`. <br/>Defaults to `var(--spectrum-serif-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-font-family": {
+      "value": "Adobe Clean Han",
+      "description": "Defined in `.spectrum-Detail`. <br/>Used by `.spectrum-Detail:lang(ja), .spectrum-Detail:lang(ko), .spectrum-Detail:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-font-color": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Defined in `.spectrum-Detail`. <br/>Used by `.spectrum-Detail`. <br/>Defaults to `var(--spectrum-detail-color)`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-detail-color": {
+      "value": "var(--spectrum-gray-600)",
+      "description": "Used by `--spectrum-detail-font-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-font-weight": {
+      "value": "500",
+      "description": "Used by `.spectrum-Detail`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-line-height": {
+      "value": "1.3",
+      "description": "Used by `.spectrum-Detail`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-letter-spacing": {
+      "value": "0.06em",
+      "description": "Used by `.spectrum-Detail`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-strong, .spectrum-Detail strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-strong-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-strong, .spectrum-Detail strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-emphasized, .spectrum-Detail em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-emphasized, .spectrum-Detail em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail em strong, .spectrum-Detail strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-strong-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Detail .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail em strong, .spectrum-Detail strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail:lang(ja), .spectrum-Detail:lang(ko), .spectrum-Detail:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Detail:lang(ja), .spectrum-Detail:lang(ko), .spectrum-Detail:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-line-height": {
+      "value": "1.5",
+      "description": "Used by `.spectrum-Detail:lang(ja), .spectrum-Detail:lang(ko), .spectrum-Detail:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-strong, .spectrum-Detail:lang(ja) strong, .spectrum-Detail:lang(ko) .spectrum-Detail-strong, .spectrum-Detail:lang(ko) strong, .spectrum-Detail:lang(zh) .spectrum-Detail-strong, .spectrum-Detail:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-strong-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-strong, .spectrum-Detail:lang(ja) strong, .spectrum-Detail:lang(ko) .spectrum-Detail-strong, .spectrum-Detail:lang(ko) strong, .spectrum-Detail:lang(zh) .spectrum-Detail-strong, .spectrum-Detail:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-emphasized, .spectrum-Detail:lang(ja) em, .spectrum-Detail:lang(ko) .spectrum-Detail-emphasized, .spectrum-Detail:lang(ko) em, .spectrum-Detail:lang(zh) .spectrum-Detail-emphasized, .spectrum-Detail:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-emphasized-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-emphasized, .spectrum-Detail:lang(ja) em, .spectrum-Detail:lang(ko) .spectrum-Detail-emphasized, .spectrum-Detail:lang(ko) em, .spectrum-Detail:lang(zh) .spectrum-Detail-emphasized, .spectrum-Detail:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-strong-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(ja) em strong, .spectrum-Detail:lang(ja) strong em, .spectrum-Detail:lang(ko) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(ko) em strong, .spectrum-Detail:lang(ko) strong em, .spectrum-Detail:lang(zh) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(zh) em strong, .spectrum-Detail:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-strong-emphasized-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Detail:lang(ja) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(ja) em strong, .spectrum-Detail:lang(ja) strong em, .spectrum-Detail:lang(ko) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(ko) em strong, .spectrum-Detail:lang(ko) strong em, .spectrum-Detail:lang(zh) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail:lang(zh) em strong, .spectrum-Detail:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--serif`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-font-weight": {
+      "value": "500",
+      "description": "Used by `.spectrum-Detail--serif`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-strong, .spectrum-Detail--serif strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-strong-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-strong, .spectrum-Detail--serif strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-emphasized, .spectrum-Detail--serif em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-emphasized-font-weight": {
+      "value": "500",
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-emphasized, .spectrum-Detail--serif em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--serif em strong, .spectrum-Detail--serif strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-strong-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Detail--serif .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--serif em strong, .spectrum-Detail--serif strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-light-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--light`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-light-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--light`. <br/>Defaults to `var(--spectrum-detail-sans-serif-light-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-light-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-strong, .spectrum-Detail--light strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-light-strong-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-strong, .spectrum-Detail--light strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-light-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-emphasized, .spectrum-Detail--light em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-light-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-emphasized, .spectrum-Detail--light em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-light-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-strong.spectrum-Body-emphasized, .spectrum-Detail--light em strong, .spectrum-Detail--light strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-sans-serif-light-strong-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--light .spectrum-Detail-strong.spectrum-Body-emphasized, .spectrum-Detail--light em strong, .spectrum-Detail--light strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-light-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--light:lang(ja), .spectrum-Detail--light:lang(ko), .spectrum-Detail--light:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-light-font-weight": {
+      "value": "300",
+      "description": "Used by `.spectrum-Detail--light:lang(ja), .spectrum-Detail--light:lang(ko), .spectrum-Detail--light:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-light-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-strong, .spectrum-Detail--light:lang(ja) strong, .spectrum-Detail--light:lang(ko) .spectrum-Detail-strong, .spectrum-Detail--light:lang(ko) strong, .spectrum-Detail--light:lang(zh) .spectrum-Detail-strong, .spectrum-Detail--light:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-light-strong-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-strong, .spectrum-Detail--light:lang(ja) strong, .spectrum-Detail--light:lang(ko) .spectrum-Detail-strong, .spectrum-Detail--light:lang(ko) strong, .spectrum-Detail--light:lang(zh) .spectrum-Detail-strong, .spectrum-Detail--light:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-light-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ja) em, .spectrum-Detail--light:lang(ko) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ko) em, .spectrum-Detail--light:lang(zh) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-light-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ja) em, .spectrum-Detail--light:lang(ko) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ko) em, .spectrum-Detail--light:lang(zh) .spectrum-Detail-emphasized, .spectrum-Detail--light:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-light-strong-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ko) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--light:lang(zh) .spectrum-Detail-strong.spectrum-Detail-emphasized`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-cjk-light-strong-emphasized-font-weight": {
+      "value": "800",
+      "description": "Used by `.spectrum-Detail--light:lang(ja) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--light:lang(ko) .spectrum-Detail-strong.spectrum-Detail-emphasized, .spectrum-Detail--light:lang(zh) .spectrum-Detail-strong.spectrum-Detail-emphasized`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-light-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-light-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-light-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-strong, .spectrum-Detail--serif.spectrum-Detail--light strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-light-strong-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-strong, .spectrum-Detail--serif.spectrum-Detail--light strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-light-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-emphasized, .spectrum-Detail--serif.spectrum-Detail--light em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-light-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-emphasized, .spectrum-Detail--serif.spectrum-Detail--light em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-light-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-strong.spectrum-Body-emphasized, .spectrum-Detail--serif.spectrum-Detail--light em strong, .spectrum-Detail--serif.spectrum-Detail--light strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-detail-serif-light-strong-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Detail--serif.spectrum-Detail--light .spectrum-Detail-strong.spectrum-Body-emphasized, .spectrum-Detail--serif.spectrum-Detail--light em strong, .spectrum-Detail--serif.spectrum-Detail--light strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-font-size": {
+      "value": "var(--spectrum-font-size-400)",
+      "description": "Defined in `.spectrum-Code, .spectrum-Code--sizeM`, `.spectrum-Code--sizeXS`, `.spectrum-Code--sizeS`, `.spectrum-Code--sizeL`, `.spectrum-Code--sizeXL`. <br/>Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-size-xl)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-size-m": {
+      "value": "var(--spectrum-font-size-200)",
+      "description": "Used by `--spectrum-code-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-size-xs": {
+      "value": "var(--spectrum-font-size-75)",
+      "description": "Used by `--spectrum-code-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-size-s": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-code-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-size-l": {
+      "value": "var(--spectrum-font-size-300)",
+      "description": "Used by `--spectrum-code-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-size-xl": {
+      "value": "var(--spectrum-font-size-400)",
+      "description": "Used by `--spectrum-code-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-font-family": {
+      "value": "Source Code Pro",
+      "description": "Defined in `.spectrum-Code`. <br/>Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-font-family-stack": {
+      "description": "Used by `--spectrum-code-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-letter-spacing": {
+      "value": "0em",
+      "description": "Defined in `.spectrum-Code`. <br/>Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`. <br/>Defaults to `var(--spectrum-cjk-letter-spacing)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-font-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Code`. <br/>Used by `.spectrum-Code`. <br/>Defaults to `var(--spectrum-code-color)`, if not set.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-code-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-code-font-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-code-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Code`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Code`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-line-height": {
+      "value": "1.5",
+      "description": "Used by `.spectrum-Code`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Code .spectrum-Code-strong, .spectrum-Code strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-strong-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Code .spectrum-Code-strong, .spectrum-Code strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Code .spectrum-Code-emphasized, .spectrum-Code em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-emphasized-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Code .spectrum-Code-emphasized, .spectrum-Code em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-strong-emphasized-font-style": {
+      "value": "italic",
+      "description": "Used by `.spectrum-Code .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code em strong, .spectrum-Code strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-strong-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Code .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code em strong, .spectrum-Code strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-font-family": {
+      "value": "Source Code Pro",
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-font-weight": {
+      "value": "400",
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-line-height": {
+      "value": "1.7",
+      "description": "Used by `.spectrum-Code:lang(ja), .spectrum-Code:lang(ko), .spectrum-Code:lang(zh)`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-strong-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-strong, .spectrum-Code:lang(ja) strong, .spectrum-Code:lang(ko) .spectrum-Code-strong, .spectrum-Code:lang(ko) strong, .spectrum-Code:lang(zh) .spectrum-Code-strong, .spectrum-Code:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-strong-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-strong, .spectrum-Code:lang(ja) strong, .spectrum-Code:lang(ko) .spectrum-Code-strong, .spectrum-Code:lang(ko) strong, .spectrum-Code:lang(zh) .spectrum-Code-strong, .spectrum-Code:lang(zh) strong`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-emphasized, .spectrum-Code:lang(ja) em, .spectrum-Code:lang(ko) .spectrum-Code-emphasized, .spectrum-Code:lang(ko) em, .spectrum-Code:lang(zh) .spectrum-Code-emphasized, .spectrum-Code:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-emphasized, .spectrum-Code:lang(ja) em, .spectrum-Code:lang(ko) .spectrum-Code-emphasized, .spectrum-Code:lang(ko) em, .spectrum-Code:lang(zh) .spectrum-Code-emphasized, .spectrum-Code:lang(zh) em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-strong-emphasized-font-style": {
+      "value": "normal",
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(ja) em strong, .spectrum-Code:lang(ja) strong em, .spectrum-Code:lang(ko) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(ko) em strong, .spectrum-Code:lang(ko) strong em, .spectrum-Code:lang(zh) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(zh) em strong, .spectrum-Code:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-code-cjk-strong-emphasized-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-Code:lang(ja) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(ja) em strong, .spectrum-Code:lang(ja) strong em, .spectrum-Code:lang(ko) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(ko) em strong, .spectrum-Code:lang(ko) strong em, .spectrum-Code:lang(zh) .spectrum-Code-strong.spectrum-Code-emphasized, .spectrum-Code:lang(zh) em strong, .spectrum-Code:lang(zh) strong em`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-heading-font-color": {
+      "value": "var(--mod-heading-font-color, var(--spectrum-heading-font-color))",
+      "description": "Defined in `.spectrum-Heading`. <br/>Used by `.spectrum-Heading`. <br/>Defaults to `var(--mod-heading-font-color, var(--spectrum-heading-font-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-body-font-color": {
+      "value": "var(--mod-body-font-color, var(--spectrum-body-font-color))",
+      "description": "Defined in `.spectrum-Body`. <br/>Used by `.spectrum-Body`. <br/>Defaults to `var(--mod-body-font-color, var(--spectrum-body-font-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-detail-font-color": {
+      "value": "var(--mod-detail-font-color, var(--spectrum-detail-font-color))",
+      "description": "Defined in `.spectrum-Detail`. <br/>Used by `.spectrum-Detail`. <br/>Defaults to `var(--mod-detail-font-color, var(--spectrum-detail-font-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-code-font-color": {
+      "value": "var(--mod-code-font-color, var(--spectrum-code-font-color))",
+      "description": "Defined in `.spectrum-Code`. <br/>Used by `.spectrum-Code`. <br/>Defaults to `var(--mod-code-font-color, var(--spectrum-code-font-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

@@ -10,49 +10,211 @@
     ".spectrum-CoachIndicator.spectrum-CoachIndicator--staticBlack",
     ".spectrum-CoachIndicator.spectrum-CoachIndicator--staticWhite"
   ],
-  "modifiers": [
-    "--mod-coach-animation-indicator-ring-center-delay-multiple",
-    "--mod-coach-animation-indicator-ring-duration",
-    "--mod-coach-animation-indicator-ring-outer-delay-multiple",
-    "--mod-coach-indicator-animation-name",
-    "--mod-coach-indicator-block-size",
-    "--mod-coach-indicator-gap",
-    "--mod-coach-indicator-inline-size",
-    "--mod-coach-indicator-inner-animation-delay-multiple",
-    "--mod-coach-indicator-left",
-    "--mod-coach-indicator-min-block-size",
-    "--mod-coach-indicator-min-inline-size",
-    "--mod-coach-indicator-quiet-animation-ring-inner-delay-multiple",
-    "--mod-coach-indicator-quiet-ring-diameter",
-    "--mod-coach-indicator-ring-block-size",
-    "--mod-coach-indicator-ring-border-size",
-    "--mod-coach-indicator-ring-default-color",
-    "--mod-coach-indicator-ring-diameter",
-    "--mod-coach-indicator-ring-inline-size",
-    "--mod-coach-indicator-top"
-  ],
-  "component": [
-    "--spectrum-coach-indicator-animation-keyframe-scale-initial",
-    "--spectrum-coach-indicator-animation-ring-inner-delay-multiple",
-    "--spectrum-coach-indicator-block-size",
-    "--spectrum-coach-indicator-gap",
-    "--spectrum-coach-indicator-inline-size",
-    "--spectrum-coach-indicator-min-block-size",
-    "--spectrum-coach-indicator-min-inline-size",
-    "--spectrum-coach-indicator-quiet-ring-diameter",
-    "--spectrum-coach-indicator-ring-border-size",
-    "--spectrum-coach-indicator-ring-default-color",
-    "--spectrum-coach-indicator-ring-diameter",
-    "--spectrum-coach-indicator-ring-diameter-size",
-    "--spectrum-coach-indicator-sizing-multiple"
-  ],
-  "global": [
-    "--spectrum-animation-duration-6000",
-    "--spectrum-black",
-    "--spectrum-border-width-200",
-    "--spectrum-coach-animation-indicator-ring-duration",
-    "--spectrum-white"
-  ],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-coach-indicator-ring-diameter": {
+      "description": "Used by `--spectrum-coach-indicator-ring-diameter-size`. <br/>Defaults to `var(--spectrum-coach-indicator-ring-diameter)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-inline-size": {
+      "description": "Used by `--spectrum-coach-indicator-inline-size`. <br/>Defaults to `var(--spectrum-coach-indicator-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-block-size": {
+      "description": "Used by `--spectrum-coach-indicator-block-size`. <br/>Defaults to `var(--spectrum-coach-indicator-min-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-inner-animation-delay-multiple": {
+      "description": "Used by `--spectrum-coach-indicator-animation-ring-inner-delay-multiple`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-gap": {
+      "description": "Used by `.spectrum-CoachIndicator`. <br/>Defaults to `var(--spectrum-coach-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-min-inline-size": {
+      "description": "Used by `.spectrum-CoachIndicator`. <br/>Defaults to `var(--spectrum-coach-indicator-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-min-block-size": {
+      "description": "Used by `.spectrum-CoachIndicator`. <br/>Defaults to `var(--spectrum-coach-indicator-min-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-quiet-ring-diameter": {
+      "description": "Used by `--spectrum-coach-indicator-ring-diameter-size`. <br/>Defaults to `var(--spectrum-coach-indicator-quiet-ring-diameter)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-quiet-animation-ring-inner-delay-multiple": {
+      "description": "Used by `--spectrum-coach-indicator-animation-ring-inner-delay-multiple`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-ring-border-size": {
+      "description": "Used by `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--spectrum-coach-indicator-ring-border-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-ring-default-color": {
+      "description": "Used by `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--spectrum-coach-indicator-ring-default-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-top": {
+      "description": "Used by `.spectrum-CoachIndicator-ring`. <br/>Defaults to `calc(var(--spectrum-coach-indicator-block-size) / 3 - var(--spectrum-coach-indicator-ring-border-size))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-left": {
+      "description": "Used by `.spectrum-CoachIndicator-ring`. <br/>Defaults to `calc(var(--spectrum-coach-indicator-inline-size) / 3 - var(--spectrum-coach-indicator-ring-border-size))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-ring-inline-size": {
+      "description": "Used by `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--spectrum-coach-indicator-ring-diameter-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-ring-block-size": {
+      "description": "Used by `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--spectrum-coach-indicator-ring-diameter-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-indicator-animation-name": {
+      "description": "Used by `.spectrum-CoachIndicator-ring`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-animation-indicator-ring-duration": {
+      "description": "Used by `.spectrum-CoachIndicator-ring`, `.spectrum-CoachIndicator-ring:first-child`, `.spectrum-CoachIndicator-ring:nth-child(2)`, `.spectrum-CoachIndicator-ring:nth-child(3)`. <br/>Defaults to `var(--spectrum-coach-animation-indicator-ring-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-animation-indicator-ring-center-delay-multiple": {
+      "description": "Used by `.spectrum-CoachIndicator-ring:nth-child(2)`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-coach-animation-indicator-ring-outer-delay-multiple": {
+      "description": "Used by `.spectrum-CoachIndicator-ring:nth-child(3)`.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-coach-indicator-ring-border-size": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-CoachIndicator`. <br/>Used by `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-sizing-multiple": {
+      "value": "2.75",
+      "description": "Defined in `.spectrum-CoachIndicator`, `.spectrum-CoachIndicator.spectrum-CoachIndicator--quiet`. <br/>Used by `--spectrum-coach-indicator-min-inline-size`, `--spectrum-coach-indicator-min-block-size`. <br/>Defaults to `2.75`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-ring-diameter-size": {
+      "value": "var(--mod-coach-indicator-quiet-ring-diameter, var(--spectrum-coach-indicator-quiet-ring-diameter))",
+      "description": "Defined in `.spectrum-CoachIndicator`, `.spectrum-CoachIndicator.spectrum-CoachIndicator--quiet`. <br/>Used by `--spectrum-coach-indicator-min-inline-size`, `--spectrum-coach-indicator-min-block-size`, `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--mod-coach-indicator-quiet-ring-diameter, var(--spectrum-coach-indicator-quiet-ring-diameter))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-ring-diameter": {
+      "description": "Used by `--spectrum-coach-indicator-ring-diameter-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-min-inline-size": {
+      "value": "calc(var(--spectrum-coach-indicator-ring-diameter-size) * var(--spectrum-coach-indicator-sizing-multiple))",
+      "description": "Defined in `.spectrum-CoachIndicator`. <br/>Used by `--spectrum-coach-indicator-inline-size`, `.spectrum-CoachIndicator`. <br/>Defaults to `calc(var(--spectrum-coach-indicator-ring-diameter-size) * var(--spectrum-coach-indicator-sizing-multiple))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-min-block-size": {
+      "value": "calc(var(--spectrum-coach-indicator-ring-diameter-size) * var(--spectrum-coach-indicator-sizing-multiple))",
+      "description": "Defined in `.spectrum-CoachIndicator`. <br/>Used by `--spectrum-coach-indicator-block-size`, `.spectrum-CoachIndicator`. <br/>Defaults to `calc(var(--spectrum-coach-indicator-ring-diameter-size) * var(--spectrum-coach-indicator-sizing-multiple))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-inline-size": {
+      "value": "var(--mod-coach-indicator-inline-size, var(--spectrum-coach-indicator-min-inline-size))",
+      "description": "Defined in `.spectrum-CoachIndicator`. <br/>Used by `.spectrum-CoachIndicator`, `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--mod-coach-indicator-inline-size, var(--spectrum-coach-indicator-min-inline-size))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-block-size": {
+      "value": "var(--mod-coach-indicator-block-size, var(--spectrum-coach-indicator-min-block-size))",
+      "description": "Defined in `.spectrum-CoachIndicator`. <br/>Used by `.spectrum-CoachIndicator`, `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--mod-coach-indicator-block-size, var(--spectrum-coach-indicator-min-block-size))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-animation-keyframe-scale-initial": {
+      "value": "0.8",
+      "description": "Defined in `.spectrum-CoachIndicator`, `.spectrum-CoachIndicator.spectrum-CoachIndicator--quiet`. <br/>Used by `0%`. <br/>Defaults to `0.8`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-animation-ring-inner-delay-multiple": {
+      "value": "var(--mod-coach-indicator-quiet-animation-ring-inner-delay-multiple, -0.33)",
+      "description": "Defined in `.spectrum-CoachIndicator`, `.spectrum-CoachIndicator.spectrum-CoachIndicator--quiet`. <br/>Used by `.spectrum-CoachIndicator-ring:first-child`. <br/>Defaults to `var(--mod-coach-indicator-quiet-animation-ring-inner-delay-multiple, -0.33)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-gap": {
+      "description": "Used by `.spectrum-CoachIndicator`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-quiet-ring-diameter": {
+      "description": "Used by `--spectrum-coach-indicator-ring-diameter-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-coach-indicator-ring-default-color": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Defined in `.spectrum-CoachIndicator.spectrum-CoachIndicator--staticWhite`, `.spectrum-CoachIndicator.spectrum-CoachIndicator--staticBlack`. <br/>Used by `.spectrum-CoachIndicator-ring`. <br/>Defaults to `var(--spectrum-black)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-coach-indicator-ring-border-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-coach-animation-indicator-ring-duration": {
+      "value": "var(--spectrum-animation-duration-6000)",
+      "description": "Defined in `.spectrum-CoachIndicator`. <br/>Used by `.spectrum-CoachIndicator-ring`, `.spectrum-CoachIndicator-ring:first-child`, `.spectrum-CoachIndicator-ring:nth-child(2)`, `.spectrum-CoachIndicator-ring:nth-child(3)`. <br/>Defaults to `var(--spectrum-animation-duration-6000)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-6000": {
+      "description": "Used by `--spectrum-coach-animation-indicator-ring-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-coach-indicator-ring-default-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-black": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--spectrum-coach-indicator-ring-default-color`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {}
 }

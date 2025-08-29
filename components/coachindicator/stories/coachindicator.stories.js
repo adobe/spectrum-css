@@ -1,9 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
@@ -32,6 +34,10 @@ export default {
 		metadata,
 		status: {
 			type: "unmigrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["unmigrated"],

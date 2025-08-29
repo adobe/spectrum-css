@@ -1,10 +1,12 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { SliderGroup, VariantGroup } from "./slider.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.
@@ -190,9 +192,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		status: {
-			type: "migrated",
-		},
+		cssprops: metadata.modifiers,
 	},
 	tags: ["migrated"],
 };

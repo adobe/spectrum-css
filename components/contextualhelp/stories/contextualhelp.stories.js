@@ -1,9 +1,9 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { ContextualHelpGroup } from "./contextualhelp.test.js";
 import { Template } from "./template.js";
 
+// Local assets to render the component styles and structure
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 
@@ -44,8 +44,39 @@ export default {
 		},
 		iconSet: { table: { disable: true } },
 		popoverPlacement: {
-			...Popover.argTypes.position,
-			name: "Popover placement",
+			name: "Popover Placement",
+			type: { name: "string", required: true },
+			defaultValue: "bottom-start",
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+				defaultValue: { summary: "Info" },
+			},
+			options: [
+				"top",
+				"top-left",
+				"top-right",
+				"top-start",
+				"top-end",
+				"bottom",
+				"bottom-left",
+				"bottom-right",
+				"bottom-start",
+				"bottom-end",
+				"left",
+				"left-top",
+				"left-bottom",
+				"start",
+				"start-top",
+				"start-bottom",
+				"right",
+				"right-top",
+				"right-bottom",
+				"end",
+				"end-top",
+				"end-bottom",
+			],
+			control: "select",
 		},
 		link: {
 			name: "Has link",
@@ -78,6 +109,15 @@ export default {
 		},
 		packageJson,
 		metadata,
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
+		docs: {
+			story: {
+				height: "200px",
+			},
+		},
 		status: {
 			type: "migrated",
 		},
@@ -117,9 +157,17 @@ export const TopPopover = Template.bind({});
 TopPopover.tags = ["!dev"];
 TopPopover.args = {
 	popoverPlacement: "top",
+	customStyles: {
+		"margin-top": "170px",
+	},
 };
 TopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "auto",
+		},
+	},
 };
 TopPopover.storyName = "Default - top popover";
 

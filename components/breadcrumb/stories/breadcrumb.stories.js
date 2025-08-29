@@ -1,9 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDragged, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { BreadcrumbGroup } from "./breadcrumb.test.js";
 import { BreadcrumbTitleHeadings, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
@@ -141,7 +143,11 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
-		}
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 	tags: ["migrated"],
 };

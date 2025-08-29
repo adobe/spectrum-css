@@ -6,16 +6,51 @@
     ".spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL)",
     ".spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS)"
   ],
-  "modifiers": ["--mod-swatchgroup-spacing"],
-  "component": [
-    "--spectrum-swatch-group-spacing-spacious",
-    "--spectrum-swatchgroup-spacing"
-  ],
-  "global": [
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-50",
-    "--spectrum-spacing-75"
-  ],
-  "passthroughs": ["--mod-swatch-border-opacity"],
-  "high-contrast": []
+  "modifiers": {
+    "mod-swatchgroup-spacing": {
+      "description": "Used by `.spectrum-SwatchGroup`. <br/>Defaults to `var(--spectrum-swatchgroup-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-swatchgroup-spacing": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-SwatchGroup`, `.spectrum-SwatchGroup--compact`, `.spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS)`, `.spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL)`. <br/>Used by `.spectrum-SwatchGroup`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-swatch-group-spacing-spacious": {
+      "value": "6px",
+      "description": "Used by `--spectrum-swatchgroup-spacing`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-spacing-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-swatchgroup-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-50": {
+      "value": "2px",
+      "description": "Used by `--spectrum-swatchgroup-spacing`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-swatchgroup-spacing`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-swatch-border-opacity": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {}
 }

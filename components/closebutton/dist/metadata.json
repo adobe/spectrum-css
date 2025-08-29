@@ -8,10 +8,6 @@
     ".spectrum-CloseButton--staticBlack",
     ".spectrum-CloseButton--staticWhite",
     ".spectrum-CloseButton-UIIcon",
-    ".spectrum-CloseButton.is-disabled",
-    ".spectrum-CloseButton.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon",
-    ".spectrum-CloseButton.is-keyboardFocused:not(:disabled)",
-    ".spectrum-CloseButton.is-keyboardFocused:not(:disabled) .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton::-moz-focus-inner",
     ".spectrum-CloseButton:after",
     ".spectrum-CloseButton:disabled",
@@ -28,86 +24,404 @@
     ".spectrum-CloseButton:not(:disabled):focus-visible .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton:not(:disabled):hover",
     ".spectrum-CloseButton:not(:disabled):hover .spectrum-CloseButton-UIIcon",
+    ".spectrum-CloseButton.is-disabled",
+    ".spectrum-CloseButton.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon",
+    ".spectrum-CloseButton.is-keyboardFocused:not(:disabled)",
+    ".spectrum-CloseButton.is-keyboardFocused:not(:disabled) .spectrum-CloseButton-UIIcon",
     "a.spectrum-CloseButton"
   ],
-  "modifiers": [
-    "--mod-closebutton-align-self",
-    "--mod-closebutton-animation-duraction",
-    "--mod-closebutton-animation-duration",
-    "--mod-closebutton-background-color-default",
-    "--mod-closebutton-background-color-down",
-    "--mod-closebutton-background-color-focus",
-    "--mod-closebutton-background-color-hover",
-    "--mod-closebutton-border-radius",
-    "--mod-closebutton-focus-indicator-color",
-    "--mod-closebutton-focus-indicator-gap",
-    "--mod-closebutton-focus-indicator-thickness",
-    "--mod-closebutton-icon-color-default",
-    "--mod-closebutton-icon-color-disabled",
-    "--mod-closebutton-icon-color-down",
-    "--mod-closebutton-icon-color-focus",
-    "--mod-closebutton-icon-color-hover",
-    "--mod-closebutton-margin-inline",
-    "--mod-closebutton-margin-top",
-    "--mod-closebutton-size"
-  ],
-  "component": [
-    "--spectrum-closebutton-animation-duration",
-    "--spectrum-closebutton-background-color-default",
-    "--spectrum-closebutton-background-color-down",
-    "--spectrum-closebutton-background-color-focus",
-    "--spectrum-closebutton-background-color-hover",
-    "--spectrum-closebutton-border-radius",
-    "--spectrum-closebutton-focus-indicator-color",
-    "--spectrum-closebutton-focus-indicator-gap",
-    "--spectrum-closebutton-focus-indicator-thickness",
-    "--spectrum-closebutton-icon-color-default",
-    "--spectrum-closebutton-icon-color-disabled",
-    "--spectrum-closebutton-icon-color-down",
-    "--spectrum-closebutton-icon-color-focus",
-    "--spectrum-closebutton-icon-color-hover",
-    "--spectrum-closebutton-size"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-corner-radius-full",
-    "--spectrum-disabled-content-color",
-    "--spectrum-disabled-static-black-background-color",
-    "--spectrum-disabled-static-white-background-color",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-gray-100",
-    "--spectrum-line-height-100",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-static-black-focus-indicator-color",
-    "--spectrum-static-white-focus-indicator-color",
-    "--spectrum-transparent-black-100",
-    "--spectrum-transparent-black-800",
-    "--spectrum-transparent-black-900",
-    "--spectrum-transparent-white-100",
-    "--spectrum-transparent-white-800",
-    "--spectrum-transparent-white-900"
-  ],
-  "passthroughs": [
-    "--mod-button-animation-duration",
-    "--mod-button-font-family",
-    "--mod-button-line-height"
-  ],
-  "high-contrast": [
-    "--highcontrast-closebutton-background-color-default",
-    "--highcontrast-closebutton-focus-indicator-color",
-    "--highcontrast-closebutton-icon-color-disabled",
-    "--highcontrast-closebutton-icon-color-down",
-    "--highcontrast-closebutton-icon-color-focus",
-    "--highcontrast-closebutton-icon-color-hover"
-  ]
+  "modifiers": {
+    "mod-closebutton-focus-indicator-gap": {
+      "description": "Used by `.spectrum-CloseButton:focus-visible:after`, `.spectrum-CloseButton:after`. <br/>Defaults to `var(--spectrum-closebutton-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-animation-duration": {
+      "description": "Used by `.spectrum-CloseButton:focus-visible:after`, `.spectrum-CloseButton`, `.spectrum-CloseButton:after`. <br/>Defaults to `var(--spectrum-closebutton-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-animation-duraction": {
+      "description": "Used by `.spectrum-CloseButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-closebutton-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-size": {
+      "description": "Used by `.spectrum-CloseButton`. <br/>Defaults to `var(--spectrum-closebutton-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-border-radius": {
+      "description": "Used by `.spectrum-CloseButton`, `.spectrum-CloseButton:after`. <br/>Defaults to `var(--spectrum-closebutton-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-margin-inline": {
+      "description": "Used by `.spectrum-CloseButton`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-margin-top": {
+      "description": "Used by `.spectrum-CloseButton`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-align-self": {
+      "description": "Used by `.spectrum-CloseButton`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-CloseButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-closebutton-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-closebutton-focus-indicator-color": {
+      "description": "Used by `.spectrum-CloseButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-closebutton-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-background-color-default": {
+      "description": "Used by `.spectrum-CloseButton:not(:disabled)`, `.spectrum-CloseButton:disabled`. <br/>Defaults to `var(--spectrum-closebutton-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-background-color-hover": {
+      "description": "Used by `.spectrum-CloseButton:not(:disabled):hover`. <br/>Defaults to `var(--spectrum-closebutton-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-icon-color-hover": {
+      "description": "Used by `.spectrum-CloseButton:not(:disabled):hover .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-closebutton-icon-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-background-color-down": {
+      "description": "Used by `.spectrum-CloseButton:not(:disabled):active`. <br/>Defaults to `var(--spectrum-closebutton-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-icon-color-down": {
+      "description": "Used by `.spectrum-CloseButton:not(:disabled):active .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-closebutton-icon-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-background-color-focus": {
+      "description": "Used by `.spectrum-CloseButton.is-keyboardFocused:not(:disabled), .spectrum-CloseButton:not(:disabled):focus-visible`. <br/>Defaults to `var(--spectrum-closebutton-background-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-icon-color-focus": {
+      "description": "Used by `.spectrum-CloseButton.is-keyboardFocused:not(:disabled) .spectrum-CloseButton-UIIcon, .spectrum-CloseButton:not(:disabled):focus-visible .spectrum-CloseButton-UIIcon`, `.spectrum-CloseButton.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon, .spectrum-CloseButton:not(:disabled):focus .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-closebutton-icon-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-icon-color-default": {
+      "description": "Used by `.spectrum-CloseButton:not(:disabled) .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-closebutton-icon-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-closebutton-icon-color-disabled": {
+      "description": "Used by `.spectrum-CloseButton:disabled .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-closebutton-icon-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-closebutton-border-radius": {
+      "value": "9999px",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton`, `.spectrum-CloseButton:after`. <br/>Defaults to `var(--spectrum-corner-radius-full)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-closebutton-icon-color-default": {
+      "value": "rgba(0, 0, 0, 0.84)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton:not(:disabled) .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-transparent-black-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-icon-color-hover": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton:not(:disabled):hover .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-transparent-black-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-icon-color-down": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton:not(:disabled):active .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-transparent-black-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-icon-color-focus": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton.is-keyboardFocused:not(:disabled) .spectrum-CloseButton-UIIcon, .spectrum-CloseButton:not(:disabled):focus-visible .spectrum-CloseButton-UIIcon`, `.spectrum-CloseButton.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon, .spectrum-CloseButton:not(:disabled):focus .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-transparent-black-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-icon-color-disabled": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton:disabled .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--spectrum-disabled-static-black-background-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-closebutton-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton:focus-visible:after`, `.spectrum-CloseButton:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-closebutton-focus-indicator-color": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-static-black-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-size": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--sizeS`, `.spectrum-CloseButton--sizeL`, `.spectrum-CloseButton--sizeXL`. <br/>Used by `.spectrum-CloseButton`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-closebutton-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton:focus-visible:after`, `.spectrum-CloseButton`, `.spectrum-CloseButton:after`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-closebutton-background-color-default": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton:not(:disabled)`, `.spectrum-CloseButton:disabled`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-background-color-hover": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton:not(:disabled):hover`. <br/>Defaults to `var(--spectrum-transparent-black-100)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-background-color-down": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton:not(:disabled):active`. <br/>Defaults to `var(--spectrum-transparent-black-100)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-closebutton-background-color-focus": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`, `.spectrum-CloseButton--staticBlack`. <br/>Used by `.spectrum-CloseButton.is-keyboardFocused:not(:disabled), .spectrum-CloseButton:not(:disabled):focus-visible`. <br/>Defaults to `var(--spectrum-transparent-black-100)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `.spectrum-CloseButton`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `.spectrum-CloseButton`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-CloseButton`, `--spectrum-closebutton-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-full": {
+      "value": "9999px",
+      "description": "Used by `--spectrum-closebutton-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-closebutton-icon-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-closebutton-icon-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-closebutton-icon-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-closebutton-icon-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-closebutton-icon-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-closebutton-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-closebutton-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-closebutton-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-closebutton-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Used by `--spectrum-closebutton-background-color-hover`, `--spectrum-closebutton-background-color-down`, `--spectrum-closebutton-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-closebutton-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-closebutton-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-closebutton-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-800": {
+      "value": "rgba(255, 255, 255, 0.85)",
+      "description": "Used by `--spectrum-closebutton-icon-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-900": {
+      "value": "rgba(255, 255, 255, 0.94)",
+      "description": "Used by `--spectrum-closebutton-icon-color-hover`, `--spectrum-closebutton-icon-color-down`, `--spectrum-closebutton-icon-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-static-white-background-color": {
+      "value": "rgba(255, 255, 255, 0.11)",
+      "description": "Used by `--spectrum-closebutton-icon-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-100": {
+      "value": "rgba(255, 255, 255, 0.11)",
+      "description": "Used by `--spectrum-closebutton-background-color-hover`, `--spectrum-closebutton-background-color-down`, `--spectrum-closebutton-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-static-white-focus-indicator-color": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-closebutton-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-800": {
+      "value": "rgba(0, 0, 0, 0.84)",
+      "description": "Used by `--spectrum-closebutton-icon-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-900": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Used by `--spectrum-closebutton-icon-color-hover`, `--spectrum-closebutton-icon-color-down`, `--spectrum-closebutton-icon-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-static-black-background-color": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Used by `--spectrum-closebutton-icon-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-100": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Used by `--spectrum-closebutton-background-color-hover`, `--spectrum-closebutton-background-color-down`, `--spectrum-closebutton-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-static-black-focus-indicator-color": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--spectrum-closebutton-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-button-font-family": {
+      "category": "Passthrough"
+    },
+    "mod-button-line-height": {
+      "category": "Passthrough"
+    },
+    "mod-button-animation-duration": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-closebutton-icon-color-disabled": {
+      "value": "var(--mod-closebutton-icon-color-disabled, var(--spectrum-closebutton-icon-color-disabled))",
+      "description": "Defined in `.spectrum-CloseButton`, `.spectrum-CloseButton--staticWhite`. <br/>Used by `.spectrum-CloseButton:disabled .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--mod-closebutton-icon-color-disabled, var(--spectrum-closebutton-icon-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-closebutton-icon-color-down": {
+      "value": "var(--mod-closebutton-icon-color-down, var(--spectrum-closebutton-icon-color-down))",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton:not(:disabled):active .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--mod-closebutton-icon-color-down, var(--spectrum-closebutton-icon-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-closebutton-icon-color-hover": {
+      "value": "var(--mod-closebutton-icon-color-hover, var(--spectrum-closebutton-icon-color-hover))",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton:not(:disabled):hover .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--mod-closebutton-icon-color-hover, var(--spectrum-closebutton-icon-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-closebutton-icon-color-focus": {
+      "value": "var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus))",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton.is-keyboardFocused:not(:disabled) .spectrum-CloseButton-UIIcon, .spectrum-CloseButton:not(:disabled):focus-visible .spectrum-CloseButton-UIIcon`, `.spectrum-CloseButton.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon, .spectrum-CloseButton:not(:disabled):focus .spectrum-CloseButton-UIIcon`. <br/>Defaults to `var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-closebutton-background-color-default": {
+      "value": "var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default))",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton:not(:disabled)`. <br/>Defaults to `var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-closebutton-focus-indicator-color": {
+      "value": "var(--mod-closebutton-focus-indicator-color, var(--spectrum-closebutton-focus-indicator-color))",
+      "description": "Defined in `.spectrum-CloseButton`. <br/>Used by `.spectrum-CloseButton:focus-visible:after`. <br/>Defaults to `var(--mod-closebutton-focus-indicator-color, var(--spectrum-closebutton-focus-indicator-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

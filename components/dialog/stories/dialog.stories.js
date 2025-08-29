@@ -4,10 +4,12 @@ import { isOpen, size } from "@spectrum-css/preview/types";
 import { Template as Steplist } from "@spectrum-css/steplist/stories/template.js";
 import { Template as Table } from "@spectrum-css/table/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions. Standard dialogs are the most frequent type of dialogs. They appear in the center of the screen over the interface and should be used for moderately complex tasks. Takeover dialogs are large types of dialogs. They use the totality of the screen and should be used for modal experiences with complex workflows.
@@ -163,6 +165,10 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
 	decorators: [
 		withUnderlayWrapper,
@@ -233,6 +239,11 @@ export const WithHero = Template.bind({});
 WithHero.tags = ["!dev"];
 WithHero.storyName = "With hero image";
 WithHero.parameters = {
+	docs: {
+		story: {
+			height: "650px",
+		},
+	},
 	chromatic: { disableSnapshot: true },
 };
 WithHero.args = {

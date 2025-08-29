@@ -11,79 +11,396 @@
     ".spectrum-AlertDialog-header",
     ".spectrum-AlertDialog-heading"
   ],
-  "modifiers": [
-    "--mod-alert-dialog-background-color",
-    "--mod-alert-dialog-body-color",
-    "--mod-alert-dialog-body-font-family",
-    "--mod-alert-dialog-body-font-style",
-    "--mod-alert-dialog-body-font-weight",
-    "--mod-alert-dialog-body-line-height",
-    "--mod-alert-dialog-corner-radius",
-    "--mod-alert-dialog-description-content-size",
-    "--mod-alert-dialog-description-to-button-group",
-    "--mod-alert-dialog-edge-to-content",
-    "--mod-alert-dialog-error-icon-color",
-    "--mod-alert-dialog-heading-size",
-    "--mod-alert-dialog-icon-size",
-    "--mod-alert-dialog-max-width",
-    "--mod-alert-dialog-min-width",
-    "--mod-alert-dialog-minimum-title-to-icon",
-    "--mod-alert-dialog-title-color",
-    "--mod-alert-dialog-title-font-family",
-    "--mod-alert-dialog-title-font-style",
-    "--mod-alert-dialog-title-font-weight",
-    "--mod-alert-dialog-title-line-height",
-    "--mod-alert-dialog-title-to-description",
-    "--mod-alert-dialog-warning-icon-color"
-  ],
-  "component": [
-    "--spectrum-alert-dialog-background-color",
-    "--spectrum-alert-dialog-body-color",
-    "--spectrum-alert-dialog-body-font-family",
-    "--spectrum-alert-dialog-body-font-style",
-    "--spectrum-alert-dialog-body-font-weight",
-    "--spectrum-alert-dialog-body-line-height",
-    "--spectrum-alert-dialog-corner-radius",
-    "--spectrum-alert-dialog-description-content-size",
-    "--spectrum-alert-dialog-description-font-size",
-    "--spectrum-alert-dialog-description-to-button-group",
-    "--spectrum-alert-dialog-edge-to-content",
-    "--spectrum-alert-dialog-error-icon-color",
-    "--spectrum-alert-dialog-heading-size",
-    "--spectrum-alert-dialog-icon-size",
-    "--spectrum-alert-dialog-max-width",
-    "--spectrum-alert-dialog-maximum-width",
-    "--spectrum-alert-dialog-min-width",
-    "--spectrum-alert-dialog-minimum-title-to-icon",
-    "--spectrum-alert-dialog-minimum-width",
-    "--spectrum-alert-dialog-title-color",
-    "--spectrum-alert-dialog-title-font-family",
-    "--spectrum-alert-dialog-title-font-size",
-    "--spectrum-alert-dialog-title-font-style",
-    "--spectrum-alert-dialog-title-font-weight",
-    "--spectrum-alert-dialog-title-line-height",
-    "--spectrum-alert-dialog-title-to-description",
-    "--spectrum-alert-dialog-warning-icon-color"
-  ],
-  "global": [
-    "--spectrum-background-layer-2-color",
-    "--spectrum-body-color",
-    "--spectrum-body-sans-serif-font-style",
-    "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-corner-radius-extra-large-default",
-    "--spectrum-heading-color",
-    "--spectrum-heading-line-height",
-    "--spectrum-heading-sans-serif-font-style",
-    "--spectrum-heading-sans-serif-font-weight",
-    "--spectrum-line-height-200",
-    "--spectrum-negative-visual-color",
-    "--spectrum-notice-visual-color",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-500",
-    "--spectrum-workflow-icon-size-100"
-  ],
-  "passthroughs": ["--mod-buttongroup-justify-content", "--mod-icon-color"],
-  "high-contrast": []
+  "modifiers": {
+    "mod-alert-dialog-min-width": {
+      "description": "Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-alert-dialog-min-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-max-width": {
+      "description": "Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-alert-dialog-max-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-background-color": {
+      "description": "Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-alert-dialog-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-edge-to-content": {
+      "description": "Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-alert-dialog-edge-to-content)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-corner-radius": {
+      "description": "Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-alert-dialog-corner-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-icon-size": {
+      "description": "Used by `.spectrum-AlertDialog .spectrum-Icon`. <br/>Defaults to `var(--spectrum-alert-dialog-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-warning-icon-color": {
+      "description": "Used by `--mod-icon-color`. <br/>Defaults to `var(--spectrum-alert-dialog-warning-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-error-icon-color": {
+      "description": "Used by `--mod-icon-color`. <br/>Defaults to `var(--spectrum-alert-dialog-error-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-minimum-title-to-icon": {
+      "description": "Used by `.spectrum-AlertDialog-header`. <br/>Defaults to `var(--spectrum-alert-dialog-minimum-title-to-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-title-to-description": {
+      "description": "Used by `.spectrum-AlertDialog-header`. <br/>Defaults to `var(--spectrum-alert-dialog-title-to-description)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-title-font-family": {
+      "description": "Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-alert-dialog-title-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-title-font-weight": {
+      "description": "Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-alert-dialog-title-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-title-font-style": {
+      "description": "Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-alert-dialog-title-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-heading-size": {
+      "description": "Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-alert-dialog-heading-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-title-line-height": {
+      "description": "Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-alert-dialog-title-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-title-color": {
+      "description": "Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-alert-dialog-title-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-body-font-family": {
+      "description": "Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-alert-dialog-body-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-body-font-weight": {
+      "description": "Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-alert-dialog-body-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-body-font-style": {
+      "description": "Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-alert-dialog-body-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-description-content-size": {
+      "description": "Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-alert-dialog-description-content-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-body-line-height": {
+      "description": "Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-alert-dialog-body-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-body-color": {
+      "description": "Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-alert-dialog-body-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-alert-dialog-description-to-button-group": {
+      "description": "Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-alert-dialog-description-to-button-group)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-alert-dialog-min-width": {
+      "value": "288px",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-alert-dialog-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-minimum-width": {
+      "value": "288px",
+      "description": "Used by `--spectrum-alert-dialog-min-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-max-width": {
+      "value": "480px",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-alert-dialog-maximum-width)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-maximum-width": {
+      "value": "480px",
+      "description": "Used by `--spectrum-alert-dialog-max-width`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-icon-size": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog .spectrum-Icon`. <br/>Defaults to `var(--spectrum-workflow-icon-size-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-corner-radius": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-corner-radius-extra-large-default)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-warning-icon-color": {
+      "value": "var(--spectrum-notice-color-800)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `--mod-icon-color`. <br/>Defaults to `var(--spectrum-notice-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-error-icon-color": {
+      "value": "var(--spectrum-negative-color-800)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `--mod-icon-color`. <br/>Defaults to `var(--spectrum-negative-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-background-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-title-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-title-font-weight": {
+      "value": "800",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-title-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-title-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-heading-line-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-title-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-heading-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-heading-size": {
+      "value": "var(--spectrum-title-size-xl)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-heading`. <br/>Defaults to `var(--spectrum-alert-dialog-title-font-size)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-title-font-size": {
+      "value": "var(--spectrum-title-size-xl)",
+      "description": "Used by `--spectrum-alert-dialog-heading-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-description-content-size": {
+      "value": "var(--spectrum-body-size-s)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-alert-dialog-description-font-size)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-description-font-size": {
+      "value": "var(--spectrum-body-size-s)",
+      "description": "Used by `--spectrum-alert-dialog-description-content-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-body-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-body-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-body-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-body-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-line-height-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-title-to-description": {
+      "value": "16px",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-header`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-minimum-title-to-icon": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-header`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-description-to-button-group": {
+      "value": "32px",
+      "description": "Defined in `.spectrum-AlertDialog`. <br/>Used by `.spectrum-AlertDialog-content`. <br/>Defaults to `var(--spectrum-spacing-500)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-alert-dialog-edge-to-content": {
+      "description": "Used by `.spectrum-AlertDialog`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-alert-dialog-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-extra-large-default": {
+      "value": "16px",
+      "description": "Used by `--spectrum-alert-dialog-corner-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-notice-visual-color": {
+      "value": "var(--spectrum-notice-color-800)",
+      "description": "Used by `--spectrum-alert-dialog-warning-icon-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-visual-color": {
+      "value": "var(--spectrum-negative-color-800)",
+      "description": "Used by `--spectrum-alert-dialog-error-icon-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-background-layer-2-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Used by `--spectrum-alert-dialog-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-alert-dialog-title-font-family`, `--spectrum-alert-dialog-body-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-weight": {
+      "value": "800",
+      "description": "Used by `--spectrum-alert-dialog-title-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-alert-dialog-title-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-line-height": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-alert-dialog-title-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-alert-dialog-title-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-alert-dialog-body-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-alert-dialog-body-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-200": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-alert-dialog-body-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-alert-dialog-body-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-alert-dialog-title-to-description`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-alert-dialog-minimum-title-to-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-500": {
+      "value": "32px",
+      "description": "Used by `--spectrum-alert-dialog-description-to-button-group`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-buttongroup-justify-content": {
+      "category": "Passthrough"
+    },
+    "mod-icon-color": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {}
 }

@@ -1,10 +1,12 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { AlertDialogGroup } from "./alertdialog.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.
@@ -68,16 +70,25 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2---Desktop?node-id=21917-157",
 		},
+		docs: {
+			story: {
+				height: "300px",
+			}
+		},
 		packageJson,
 		metadata,
 		status: {
 			type: "migrated",
-		}
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
+		},
 	},
-	tags: ["migrated"],
 	decorators: [
 		withUnderlayWrapper,
 	],
+	tags: ["migrated"],
 };
 
 export const Default = AlertDialogGroup.bind({});
@@ -114,6 +125,11 @@ Information.args = {
 	content: "If you enjoy our app, would you mind taking a moment to rate it?",
 };
 Information.parameters = {
+	docs: {
+		story: {
+			height: "400px",
+		}
+	},
 	chromatic: { disableSnapshot: true },
 };
 
@@ -177,6 +193,11 @@ Overflow.args = {
 };
 Overflow.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "525px",
+		},
+	},
 };
 
 /**

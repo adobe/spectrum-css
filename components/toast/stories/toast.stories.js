@@ -1,8 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ActionTemplate, Template, ToastWrapOptions } from "./template.js";
 import { ToastGroup } from "./toast.test.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.
@@ -67,6 +69,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

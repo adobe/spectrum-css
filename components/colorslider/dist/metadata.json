@@ -15,41 +15,168 @@
     ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-gradient",
     ".spectrum-ColorSlider.is-focused"
   ],
-  "modifiers": [
-    "--mod-color-slider-background-color-disabled",
-    "--mod-color-slider-border-color",
-    "--mod-color-slider-border-color-disabled",
-    "--mod-color-slider-border-rounding",
-    "--mod-color-slider-border-width",
-    "--mod-color-slider-control-track-height",
-    "--mod-color-slider-control-track-width",
-    "--mod-color-slider-handle-hitarea-border-radius",
-    "--mod-color-slider-length",
-    "--mod-color-slider-minimum-length",
-    "--mod-color-slider-vertical-control-track-width",
-    "--mod-color-slider-vertical-height",
-    "--mod-color-slider-vertical-minimum-height"
-  ],
-  "component": [
-    "--spectrum-color-slider-border-color-default",
-    "--spectrum-color-slider-border-color-local",
-    "--spectrum-color-slider-border-opacity",
-    "--spectrum-color-slider-border-rounding",
-    "--spectrum-color-slider-border-width",
-    "--spectrum-color-slider-control-track-width",
-    "--spectrum-color-slider-fill-color-disabled",
-    "--spectrum-color-slider-length",
-    "--spectrum-color-slider-minimum-length"
-  ],
-  "global": [
-    "--spectrum-color-control-track-width",
-    "--spectrum-disabled-background-color",
-    "--spectrum-gray-1000-rgb"
-  ],
-  "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
-  "high-contrast": [
-    "--highcontrast-color-slider-background-color-disabled",
-    "--highcontrast-color-slider-border-color",
-    "--highcontrast-color-slider-border-color-disabled"
-  ]
+  "modifiers": {
+    "mod-color-slider-handle-hitarea-border-radius": {
+      "description": "Used by `--mod-colorhandle-hitarea-border-radius`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-minimum-length": {
+      "description": "Used by `.spectrum-ColorSlider`, `.spectrum-ColorSlider--vertical`. <br/>Defaults to `var(--spectrum-color-slider-minimum-length)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-length": {
+      "description": "Used by `.spectrum-ColorSlider`, `.spectrum-ColorSlider--vertical`. <br/>Defaults to `var(--spectrum-color-slider-length)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-control-track-width": {
+      "description": "Used by `.spectrum-ColorSlider`. <br/>Defaults to `var(--spectrum-color-slider-control-track-width)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-vertical-minimum-height": {
+      "description": "Used by `.spectrum-ColorSlider--vertical`. <br/>Defaults to `var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-vertical-height": {
+      "description": "Used by `.spectrum-ColorSlider--vertical`. <br/>Defaults to `var(--mod-color-slider-length, var(--spectrum-color-slider-length))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-vertical-control-track-width": {
+      "description": "Used by `.spectrum-ColorSlider--vertical`. <br/>Defaults to `var(--mod-color-slider-control-track-height, var(--spectrum-color-slider-control-track-width))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-control-track-height": {
+      "description": "Used by `.spectrum-ColorSlider--vertical`. <br/>Defaults to `var(--spectrum-color-slider-control-track-width)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-border-color": {
+      "description": "Used by `--spectrum-color-slider-border-color-local`. <br/>Defaults to `var(--spectrum-color-slider-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-border-width": {
+      "description": "Used by `.spectrum-ColorSlider-checkerboard:before`. <br/>Defaults to `var(--spectrum-color-slider-border-width)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-border-rounding": {
+      "description": "Used by `.spectrum-ColorSlider-checkerboard:before`, `.spectrum-ColorSlider-checkerboard, .spectrum-ColorSlider-gradient`. <br/>Defaults to `var(--spectrum-color-slider-border-rounding)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-border-color-disabled": {
+      "description": "Used by `--spectrum-color-slider-border-color-local`. <br/>Defaults to `var(--spectrum-color-slider-fill-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-color-slider-background-color-disabled": {
+      "description": "Used by `.spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-checkerboard`. <br/>Defaults to `var(--spectrum-color-slider-fill-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-color-slider-control-track-width": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-ColorSlider`. <br/>Used by `.spectrum-ColorSlider`, `.spectrum-ColorSlider--vertical`. <br/>Defaults to `var(--spectrum-color-control-track-width)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-slider-border-color-default": {
+      "value": "rgb(var(--spectrum-gray-1000-rgb), var(--spectrum-color-slider-border-opacity))",
+      "description": "Defined in `.spectrum-ColorSlider`. <br/>Used by `--spectrum-color-slider-border-color-local`. <br/>Defaults to `rgb(var(--spectrum-gray-1000-rgb), var(--spectrum-color-slider-border-opacity))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-slider-border-opacity": {
+      "value": "0.1",
+      "description": "Used by `--spectrum-color-slider-border-color-default`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-slider-fill-color-disabled": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Defined in `.spectrum-ColorSlider`. <br/>Used by `--spectrum-color-slider-border-color-local`, `.spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-checkerboard`. <br/>Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-slider-minimum-length": {
+      "value": "80px",
+      "description": "Used by `.spectrum-ColorSlider`, `.spectrum-ColorSlider--vertical`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-slider-length": {
+      "value": "192px",
+      "description": "Used by `.spectrum-ColorSlider`, `.spectrum-ColorSlider--vertical`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-slider-border-color-local": {
+      "value": "var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-color-slider-fill-color-disabled)))",
+      "description": "Defined in `.spectrum-ColorSlider-checkerboard`, `.spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-checkerboard`. <br/>Used by `.spectrum-ColorSlider-checkerboard:before`. <br/>Defaults to `var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-color-slider-fill-color-disabled)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-slider-border-width": {
+      "value": "1px",
+      "description": "Used by `.spectrum-ColorSlider-checkerboard:before`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-slider-border-rounding": {
+      "value": "7px",
+      "description": "Used by `.spectrum-ColorSlider-checkerboard:before`, `.spectrum-ColorSlider-checkerboard, .spectrum-ColorSlider-gradient`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-color-control-track-width": {
+      "value": "24px",
+      "description": "Used by `--spectrum-color-slider-control-track-width`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-1000-rgb": {
+      "description": "Used by `--spectrum-color-slider-border-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Used by `--spectrum-color-slider-fill-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-colorhandle-hitarea-border-radius": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-color-slider-border-color": {
+      "value": "var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-default))",
+      "description": "Defined in `.spectrum-ColorSlider`. <br/>Used by `--spectrum-color-slider-border-color-local`. <br/>Defaults to `var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-color-slider-border-color-disabled": {
+      "value": "var(--mod-color-slider-border-color-disabled, var(--spectrum-color-slider-fill-color-disabled))",
+      "description": "Defined in `.spectrum-ColorSlider`. <br/>Used by `--spectrum-color-slider-border-color-local`. <br/>Defaults to `var(--mod-color-slider-border-color-disabled, var(--spectrum-color-slider-fill-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-color-slider-background-color-disabled": {
+      "value": "var(--mod-color-slider-background-color-disabled, var(--spectrum-color-slider-fill-color-disabled))",
+      "description": "Defined in `.spectrum-ColorSlider`. <br/>Used by `.spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-checkerboard`. <br/>Defaults to `var(--mod-color-slider-background-color-disabled, var(--spectrum-color-slider-fill-color-disabled))`, if not set.",
+      "control": "color"
+    }
+  }
 }

@@ -2,58 +2,185 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-ColorWheel",
+    ".spectrum-ColorWheel-colorarea-container",
     ".spectrum-ColorWheel-ColorArea-handle",
     ".spectrum-ColorWheel-ColorArea-handle:dir(rtl)",
-    ".spectrum-ColorWheel-colorarea-container",
     ".spectrum-ColorWheel-handle",
     ".spectrum-ColorWheel-inner",
     ".spectrum-ColorWheel-slider",
     ".spectrum-ColorWheel-wheel",
     ".spectrum-ColorWheel-wheel.is-disabled",
+    ".spectrum-ColorWheel:after",
+    ".spectrum-ColorWheel:before",
     ".spectrum-ColorWheel.is-disabled",
     ".spectrum-ColorWheel.is-disabled .spectrum-ColorWheel-inner:before",
     ".spectrum-ColorWheel.is-disabled:after",
     ".spectrum-ColorWheel.is-disabled:before",
     ".spectrum-ColorWheel.is-dragged",
-    ".spectrum-ColorWheel.is-focused",
-    ".spectrum-ColorWheel:after",
-    ".spectrum-ColorWheel:before"
+    ".spectrum-ColorWheel.is-focused"
   ],
-  "modifiers": [
-    "--mod-colorwheel-block-size",
-    "--mod-colorwheel-border-color",
-    "--mod-colorwheel-colorarea-container-size",
-    "--mod-colorwheel-fill-color-disabled",
-    "--mod-colorwheel-inline-size",
-    "--mod-colorwheel-min-inline-size",
-    "--mod-colorwheel-path",
-    "--mod-colorwheel-track-width"
-  ],
-  "component": [
-    "--spectrum-color-wheel-border-opacity",
-    "--spectrum-color-wheel-minimum-width",
-    "--spectrum-color-wheel-width",
-    "--spectrum-colorwheel-block-size",
-    "--spectrum-colorwheel-border-color",
-    "--spectrum-colorwheel-border-color-rgb",
-    "--spectrum-colorwheel-border-opacity",
-    "--spectrum-colorwheel-border-width",
-    "--spectrum-colorwheel-colorarea-container-size",
-    "--spectrum-colorwheel-fill-color-disabled",
-    "--spectrum-colorwheel-inline-size",
-    "--spectrum-colorwheel-min-inline-size",
-    "--spectrum-colorwheel-path",
-    "--spectrum-colorwheel-track-width"
-  ],
-  "global": [
-    "--spectrum-border-width-100",
-    "--spectrum-color-control-track-width",
-    "--spectrum-disabled-background-color",
-    "--spectrum-gray-1000-rgb"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-colorwheel-border-color-disabled",
-    "--highcontrast-colorwheel-fill-color-disabled"
-  ]
+  "modifiers": {
+    "mod-colorwheel-track-width": {
+      "description": "Used by `--_track-width`, `.spectrum-ColorWheel:after`, `.spectrum-ColorWheel-handle`. <br/>Defaults to `var(--spectrum-colorwheel-track-width)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorwheel-min-inline-size": {
+      "description": "Used by `.spectrum-ColorWheel`. <br/>Defaults to `var(--spectrum-colorwheel-min-inline-size)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorwheel-inline-size": {
+      "description": "Used by `.spectrum-ColorWheel`, `.spectrum-ColorWheel:before`, `.spectrum-ColorWheel-handle`. <br/>Defaults to `var(--spectrum-colorwheel-inline-size)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorwheel-block-size": {
+      "description": "Used by `.spectrum-ColorWheel`. <br/>Defaults to `var(--spectrum-colorwheel-block-size)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorwheel-border-color": {
+      "description": "Used by `.spectrum-ColorWheel:after, .spectrum-ColorWheel:before`. <br/>Defaults to `var(--spectrum-colorwheel-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorwheel-colorarea-container-size": {
+      "description": "Used by `.spectrum-ColorWheel-inner`. <br/>Defaults to `var(--spectrum-colorwheel-colorarea-container-size)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorwheel-path": {
+      "description": "Used by `.spectrum-ColorWheel-wheel`. <br/>Defaults to `var(--spectrum-colorwheel-path)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorwheel-fill-color-disabled": {
+      "description": "Used by `.spectrum-ColorWheel-wheel.is-disabled`. <br/>Defaults to `var(--spectrum-colorwheel-fill-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-colorwheel-inline-size": {
+      "value": "192px",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `.spectrum-ColorWheel`, `.spectrum-ColorWheel:before`, `.spectrum-ColorWheel-handle`. <br/>Defaults to `var(--spectrum-color-wheel-width)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-wheel-width": {
+      "value": "192px",
+      "description": "Used by `--spectrum-colorwheel-inline-size`, `--spectrum-colorwheel-block-size`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-block-size": {
+      "value": "192px",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `.spectrum-ColorWheel`. <br/>Defaults to `var(--spectrum-color-wheel-width)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-min-inline-size": {
+      "value": "175px",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `.spectrum-ColorWheel`. <br/>Defaults to `var(--spectrum-color-wheel-minimum-width)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-wheel-minimum-width": {
+      "value": "175px",
+      "description": "Used by `--spectrum-colorwheel-min-inline-size`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-border-color-rgb": {
+      "value": "var(--spectrum-gray-1000-rgb)",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `--spectrum-colorwheel-border-color`. <br/>Defaults to `var(--spectrum-gray-1000-rgb)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-border-opacity": {
+      "value": "0.1",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `--spectrum-colorwheel-border-color`. <br/>Defaults to `var(--spectrum-color-wheel-border-opacity)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-wheel-border-opacity": {
+      "value": "0.1",
+      "description": "Used by `--spectrum-colorwheel-border-opacity`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-border-color": {
+      "value": "rgb(var(--spectrum-colorwheel-border-color-rgb), var(--spectrum-colorwheel-border-opacity))",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `.spectrum-ColorWheel:after, .spectrum-ColorWheel:before`. <br/>Defaults to `rgb(var(--spectrum-colorwheel-border-color-rgb), var(--spectrum-colorwheel-border-opacity))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-border-width": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `--_border-width`, `.spectrum-ColorWheel:before`, `.spectrum-ColorWheel:after, .spectrum-ColorWheel:before`, `.spectrum-ColorWheel:after`, `.spectrum-ColorWheel-wheel`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-track-width": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `--_track-width`, `.spectrum-ColorWheel:after`, `.spectrum-ColorWheel-handle`. <br/>Defaults to `var(--spectrum-color-control-track-width)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-fill-color-disabled": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `.spectrum-ColorWheel-wheel.is-disabled`. <br/>Defaults to `var(--spectrum-disabled-background-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-colorarea-container-size": {
+      "description": "Used by `.spectrum-ColorWheel-inner`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorwheel-path": {
+      "description": "Used by `.spectrum-ColorWheel-wheel`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-1000-rgb": {
+      "description": "Used by `--spectrum-colorwheel-border-color-rgb`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "value": "1px",
+      "description": "Used by `--spectrum-colorwheel-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-color-control-track-width": {
+      "value": "24px",
+      "description": "Used by `--spectrum-colorwheel-track-width`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Used by `--spectrum-colorwheel-fill-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-colorwheel-border-color-disabled": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `.spectrum-ColorWheel.is-disabled .spectrum-ColorWheel-inner:before, .spectrum-ColorWheel.is-disabled:after, .spectrum-ColorWheel.is-disabled:before`. <br/>Defaults to `GrayText`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-colorwheel-fill-color-disabled": {
+      "value": "var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled))",
+      "description": "Defined in `.spectrum-ColorWheel`. <br/>Used by `.spectrum-ColorWheel-wheel.is-disabled`. <br/>Defaults to `var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled))`, if not set.",
+      "control": "color"
+    }
+  }
 }

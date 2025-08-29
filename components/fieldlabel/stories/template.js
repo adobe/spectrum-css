@@ -15,7 +15,7 @@ export const Template = ({
 	customStyles = {},
 	size = "m",
 	label,
-	id = getRandomId("fieldlabel"),
+	id = getRandomId("field-label"),
 	testId,
 	forInput,
 	alignment,

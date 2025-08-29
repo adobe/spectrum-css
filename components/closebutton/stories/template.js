@@ -9,6 +9,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-CloseButton",
+	id = getRandomId("close-button"),
 	size = "m",
 	iconSize = "regular",
 	label = "Close",
@@ -18,7 +19,6 @@ export const Template = ({
 	isFocused = false,
 	isKeyboardFocused = false,
 	customClasses = [],
-	id = getRandomId("closebutton"),
 	onclick,
 } = {}, context = {}) => {
 	return html`

@@ -10,27 +10,6 @@
     ".spectrum-Picker--sizeS",
     ".spectrum-Picker--sizeXL",
     ".spectrum-Picker-button",
-    ".spectrum-Picker-button.is-disabled",
-    ".spectrum-Picker-button.is-disabled .spectrum-Picker-icon",
-    ".spectrum-Picker-button.is-disabled .spectrum-Picker-label.is-placeholder",
-    ".spectrum-Picker-button.is-disabled .spectrum-Picker-menuIcon",
-    ".spectrum-Picker-button.is-disabled .spectrum-Picker-validationIcon",
-    ".spectrum-Picker-button.is-invalid.is-keyboardFocused:not(:disabled, .is-disabled)",
-    ".spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled)",
-    ".spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled):hover",
-    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled)",
-    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled) .spectrum-Picker-validationIcon",
-    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):active",
-    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):focus-visible",
-    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):hover",
-    ".spectrum-Picker-button.is-keyboardFocused",
-    ".spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-label.is-placeholder",
-    ".spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-menuIcon",
-    ".spectrum-Picker-button.is-keyboardFocused:after",
-    ".spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)",
-    ".spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading) .spectrum-Picker-menuIcon",
-    ".spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover",
-    ".spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover .spectrum-Picker-menuIcon",
     ".spectrum-Picker-button::-moz-focus-inner",
     ".spectrum-Picker-button:active",
     ".spectrum-Picker-button:active .spectrum-Picker-label.is-placeholder",
@@ -47,6 +26,27 @@
     ".spectrum-Picker-button:focus-visible:after",
     ".spectrum-Picker-button:hover",
     ".spectrum-Picker-button:hover .spectrum-Picker-menuIcon",
+    ".spectrum-Picker-button.is-disabled",
+    ".spectrum-Picker-button.is-disabled .spectrum-Picker-icon",
+    ".spectrum-Picker-button.is-disabled .spectrum-Picker-label.is-placeholder",
+    ".spectrum-Picker-button.is-disabled .spectrum-Picker-menuIcon",
+    ".spectrum-Picker-button.is-disabled .spectrum-Picker-validationIcon",
+    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled)",
+    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled) .spectrum-Picker-validationIcon",
+    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):active",
+    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):focus-visible",
+    ".spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):hover",
+    ".spectrum-Picker-button.is-invalid.is-keyboardFocused:not(:disabled, .is-disabled)",
+    ".spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled)",
+    ".spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled):hover",
+    ".spectrum-Picker-button.is-keyboardFocused",
+    ".spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-label.is-placeholder",
+    ".spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-menuIcon",
+    ".spectrum-Picker-button.is-keyboardFocused:after",
+    ".spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)",
+    ".spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading) .spectrum-Picker-menuIcon",
+    ".spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover",
+    ".spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover .spectrum-Picker-menuIcon",
     ".spectrum-Picker-label",
     ".spectrum-Picker-label.is-placeholder",
     ".spectrum-Picker-label.is-placeholder:active",
@@ -54,240 +54,1243 @@
     ".spectrum-Picker-menuIcon",
     ".spectrum-Picker-menuIcon:active",
     ".spectrum-Picker-validationIcon",
-    ".spectrum-Picker.is-keyboardFocused",
-    ".spectrum-Picker.is-loading",
-    ".spectrum-Picker.is-loading .spectrum-Picker-menuIcon",
     ".spectrum-Picker:after",
     ".spectrum-Picker:focus-visible",
     ".spectrum-Picker:lang(ja) .spectrum-Picker-label",
     ".spectrum-Picker:lang(ko) .spectrum-Picker-label",
-    ".spectrum-Picker:lang(zh) .spectrum-Picker-label"
+    ".spectrum-Picker:lang(zh) .spectrum-Picker-label",
+    ".spectrum-Picker.is-keyboardFocused",
+    ".spectrum-Picker.is-loading",
+    ".spectrum-Picker.is-loading .spectrum-Picker-menuIcon"
   ],
-  "modifiers": [
-    "--mod-picker-animation-duration",
-    "--mod-picker-background-color-active",
-    "--mod-picker-background-color-default",
-    "--mod-picker-background-color-default-open",
-    "--mod-picker-background-color-hover",
-    "--mod-picker-background-color-hover-open",
-    "--mod-picker-background-color-key-focus",
-    "--mod-picker-block-size",
-    "--mod-picker-border-active",
-    "--mod-picker-border-color-default",
-    "--mod-picker-border-color-error-active",
-    "--mod-picker-border-color-error-default",
-    "--mod-picker-border-color-error-default-open",
-    "--mod-picker-border-color-error-hover",
-    "--mod-picker-border-color-error-hover-open",
-    "--mod-picker-border-color-error-key-focus",
-    "--mod-picker-border-color-hover",
-    "--mod-picker-border-color-hover-open",
-    "--mod-picker-border-color-key-focus",
-    "--mod-picker-border-default-open",
-    "--mod-picker-border-radius",
-    "--mod-picker-border-width",
-    "--mod-picker-focus-indicator-color",
-    "--mod-picker-focus-indicator-gap",
-    "--mod-picker-focus-indicator-thickness",
-    "--mod-picker-font-color-active",
-    "--mod-picker-font-color-default",
-    "--mod-picker-font-color-default-open",
-    "--mod-picker-font-color-disabled",
-    "--mod-picker-font-color-hover",
-    "--mod-picker-font-color-hover-open",
-    "--mod-picker-font-color-key-focus",
-    "--mod-picker-font-size",
-    "--mod-picker-font-weight",
-    "--mod-picker-icon-color-active",
-    "--mod-picker-icon-color-default",
-    "--mod-picker-icon-color-default-open",
-    "--mod-picker-icon-color-disabled",
-    "--mod-picker-icon-color-error",
-    "--mod-picker-icon-color-hover",
-    "--mod-picker-icon-color-hover-open",
-    "--mod-picker-icon-color-key-focus",
-    "--mod-picker-inline-size",
-    "--mod-picker-line-height",
-    "--mod-picker-line-height-cjk",
-    "--mod-picker-min-inline-size",
-    "--mod-picker-placeholder-font-style",
-    "--mod-picker-placeholder-font-weight",
-    "--mod-picker-spacing-bottom-to-text",
-    "--mod-picker-spacing-edge-to-disclosure-icon",
-    "--mod-picker-spacing-edge-to-text",
-    "--mod-picker-spacing-icon-to-disclosure-icon",
-    "--mod-picker-spacing-label-to-picker",
-    "--mod-picker-spacing-starting-icon-to-text",
-    "--mod-picker-spacing-text-to-icon-inline-end",
-    "--mod-picker-spacing-top-to-alert-icon",
-    "--mod-picker-spacing-top-to-disclosure-icon",
-    "--mod-picker-spacing-top-to-progress-circle",
-    "--mod-picker-spacing-top-to-text"
-  ],
-  "component": [
-    "--spectrum-picker-animation-duration",
-    "--spectrum-picker-background-color-active",
-    "--spectrum-picker-background-color-default",
-    "--spectrum-picker-background-color-default-open",
-    "--spectrum-picker-background-color-hover",
-    "--spectrum-picker-background-color-hover-open",
-    "--spectrum-picker-background-color-key-focus",
-    "--spectrum-picker-block-size",
-    "--spectrum-picker-border-color-active",
-    "--spectrum-picker-border-color-default",
-    "--spectrum-picker-border-color-default-open",
-    "--spectrum-picker-border-color-error-active",
-    "--spectrum-picker-border-color-error-default",
-    "--spectrum-picker-border-color-error-default-open",
-    "--spectrum-picker-border-color-error-hover",
-    "--spectrum-picker-border-color-error-hover-open",
-    "--spectrum-picker-border-color-error-key-focus",
-    "--spectrum-picker-border-color-hover",
-    "--spectrum-picker-border-color-hover-open",
-    "--spectrum-picker-border-color-key-focus",
-    "--spectrum-picker-border-radius",
-    "--spectrum-picker-border-width",
-    "--spectrum-picker-focus-indicator-color",
-    "--spectrum-picker-focus-indicator-gap",
-    "--spectrum-picker-focus-indicator-thickness",
-    "--spectrum-picker-font-color-active",
-    "--spectrum-picker-font-color-default",
-    "--spectrum-picker-font-color-default-open",
-    "--spectrum-picker-font-color-disabled",
-    "--spectrum-picker-font-color-hover",
-    "--spectrum-picker-font-color-hover-open",
-    "--spectrum-picker-font-color-key-focus",
-    "--spectrum-picker-font-size",
-    "--spectrum-picker-font-weight",
-    "--spectrum-picker-icon-color-active",
-    "--spectrum-picker-icon-color-default",
-    "--spectrum-picker-icon-color-default-open",
-    "--spectrum-picker-icon-color-disabled",
-    "--spectrum-picker-icon-color-error",
-    "--spectrum-picker-icon-color-hover",
-    "--spectrum-picker-icon-color-hover-open",
-    "--spectrum-picker-icon-color-key-focus",
-    "--spectrum-picker-inline-size",
-    "--spectrum-picker-line-height",
-    "--spectrum-picker-line-height-cjk",
-    "--spectrum-picker-min-inline-size",
-    "--spectrum-picker-minimum-width-multiplier",
-    "--spectrum-picker-placeholder-font-style",
-    "--spectrum-picker-popover-animation-distance",
-    "--spectrum-picker-spacing-bottom-to-text",
-    "--spectrum-picker-spacing-edge-to-disclosure-icon",
-    "--spectrum-picker-spacing-edge-to-text",
-    "--spectrum-picker-spacing-icon-to-disclosure-icon",
-    "--spectrum-picker-spacing-label-to-picker",
-    "--spectrum-picker-spacing-starting-icon-to-text",
-    "--spectrum-picker-spacing-text-to-icon-inline-end",
-    "--spectrum-picker-spacing-top-to-alert-icon",
-    "--spectrum-picker-spacing-top-to-disclosure-icon",
-    "--spectrum-picker-spacing-top-to-progress-circle",
-    "--spectrum-picker-spacing-top-to-text",
-    "--spectrum-picker-visual-to-disclosure-icon-extra-large",
-    "--spectrum-picker-visual-to-disclosure-icon-large",
-    "--spectrum-picker-visual-to-disclosure-icon-medium",
-    "--spectrum-picker-visual-to-disclosure-icon-small"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-border-width-200",
-    "--spectrum-cjk-line-height-100",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-bottom-to-text-300",
-    "--spectrum-component-bottom-to-text-75",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-edge-to-text-200",
-    "--spectrum-component-edge-to-text-300",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-size-difference-down",
-    "--spectrum-component-size-width-ratio-down",
-    "--spectrum-component-to-menu-extra-large",
-    "--spectrum-component-to-menu-large",
-    "--spectrum-component-to-menu-medium",
-    "--spectrum-component-to-menu-small",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-component-top-to-text-300",
-    "--spectrum-component-top-to-text-75",
-    "--spectrum-component-top-to-workflow-icon-100",
-    "--spectrum-component-top-to-workflow-icon-200",
-    "--spectrum-component-top-to-workflow-icon-300",
-    "--spectrum-component-top-to-workflow-icon-75",
-    "--spectrum-corner-radius-medium-size-extra-large",
-    "--spectrum-corner-radius-medium-size-large",
-    "--spectrum-corner-radius-medium-size-medium",
-    "--spectrum-corner-radius-medium-size-small",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-content-color",
-    "--spectrum-downstate-height",
-    "--spectrum-downstate-width",
-    "--spectrum-field-default-width-extra-large",
-    "--spectrum-field-default-width-large",
-    "--spectrum-field-default-width-medium",
-    "--spectrum-field-default-width-small",
-    "--spectrum-field-end-edge-to-disclosure-icon-100",
-    "--spectrum-field-end-edge-to-disclosure-icon-200",
-    "--spectrum-field-end-edge-to-disclosure-icon-300",
-    "--spectrum-field-end-edge-to-disclosure-icon-75",
-    "--spectrum-field-label-to-component",
-    "--spectrum-field-top-to-disclosure-icon-100",
-    "--spectrum-field-top-to-disclosure-icon-200",
-    "--spectrum-field-top-to-disclosure-icon-300",
-    "--spectrum-field-top-to-disclosure-icon-75",
-    "--spectrum-field-top-to-progress-circle-extra-large",
-    "--spectrum-field-top-to-progress-circle-large",
-    "--spectrum-field-top-to-progress-circle-medium",
-    "--spectrum-field-top-to-progress-circle-small",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-line-height-100",
-    "--spectrum-negative-border-color-default",
-    "--spectrum-negative-border-color-down",
-    "--spectrum-negative-border-color-focus",
-    "--spectrum-negative-border-color-focus-hover",
-    "--spectrum-negative-border-color-hover",
-    "--spectrum-negative-border-color-key-focus",
-    "--spectrum-negative-visual-color",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-focus",
-    "--spectrum-neutral-content-color-focus-hover",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-regular-font-weight",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-text-to-visual-200",
-    "--spectrum-text-to-visual-300",
-    "--spectrum-text-to-visual-75"
-  ],
-  "passthroughs": [
-    "--mod-button-animation-duration",
-    "--mod-button-font-family",
-    "--mod-button-line-height",
-    "--mod-popover-animation-distance"
-  ],
-  "high-contrast": [
-    "--highcontrast-picker-background-color",
-    "--highcontrast-picker-border-color-default",
-    "--highcontrast-picker-border-color-disabled",
-    "--highcontrast-picker-border-color-hover",
-    "--highcontrast-picker-content-color-default",
-    "--highcontrast-picker-content-color-disabled",
-    "--highcontrast-picker-focus-indicator-color"
-  ]
+  "modifiers": {
+    "mod-picker-block-size": {
+      "description": "Used by `--spectrum-picker-min-inline-size`, `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-picker-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-min-inline-size": {
+      "description": "Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-picker-min-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-inline-size": {
+      "description": "Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-picker-inline-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-label-to-picker": {
+      "description": "Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-picker-spacing-label-to-picker)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-edge-to-text": {
+      "description": "Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-picker-spacing-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-edge-to-disclosure-icon": {
+      "description": "Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-picker-spacing-edge-to-disclosure-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-border-width": {
+      "description": "Used by `.spectrum-Picker-button`, `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`, `.spectrum-Picker-label`, `.spectrum-Picker-validationIcon`, `.spectrum-Picker .spectrum-ProgressCircle`. <br/>Defaults to `var(--spectrum-picker-border-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-border-radius": {
+      "description": "Used by `.spectrum-Picker-button`, `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--spectrum-picker-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-animation-duration": {
+      "description": "Used by `.spectrum-Picker-button`, `.spectrum-Picker-label.is-placeholder`, `.spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-picker-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-font-color-default": {
+      "description": "Used by `.spectrum-Picker-button`, `.spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-picker-font-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-background-color-default": {
+      "description": "Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-picker-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-default": {
+      "description": "Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-picker-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-background-color-active": {
+      "description": "Used by `.spectrum-Picker-button:active`. <br/>Defaults to `var(--spectrum-picker-background-color-active)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-active": {
+      "description": "Used by `.spectrum-Picker-button:active`. <br/>Defaults to `var(--spectrum-picker-border-color-active)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-font-color-active": {
+      "description": "Used by `.spectrum-Picker-button:active .spectrum-Picker-label.is-placeholder`, `.spectrum-Picker-label.is-placeholder:active`. <br/>Defaults to `var(--spectrum-picker-font-color-active)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-background-color-key-focus": {
+      "description": "Used by `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`. <br/>Defaults to `var(--spectrum-picker-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-key-focus": {
+      "description": "Used by `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`. <br/>Defaults to `var(--spectrum-picker-border-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-font-color-key-focus": {
+      "description": "Used by `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`, `.spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-label.is-placeholder, .spectrum-Picker-button:focus-visible .spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-picker-font-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-focus-indicator-color": {
+      "description": "Used by `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--spectrum-picker-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-focus-indicator-gap": {
+      "description": "Used by `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--spectrum-picker-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--spectrum-picker-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-icon-color-key-focus": {
+      "description": "Used by `.spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-menuIcon, .spectrum-Picker-button:focus-visible .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-picker-icon-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-font-color-default-open": {
+      "description": "Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`. <br/>Defaults to `var(--spectrum-picker-font-color-default-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-background-color-default-open": {
+      "description": "Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`. <br/>Defaults to `var(--spectrum-picker-background-color-default-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-default-open": {
+      "description": "Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`. <br/>Defaults to `var(--spectrum-picker-border-color-default-open)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-icon-color-default-open": {
+      "description": "Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading) .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-picker-icon-color-default-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-error-default": {
+      "description": "Used by `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled)`. <br/>Defaults to `var(--spectrum-picker-border-color-error-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-icon-color-error": {
+      "description": "Used by `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled) .spectrum-Picker-validationIcon`. <br/>Defaults to `var(--spectrum-picker-icon-color-error)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-error-active": {
+      "description": "Used by `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):active`. <br/>Defaults to `var(--spectrum-picker-border-color-error-active)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-error-default-open": {
+      "description": "Used by `.spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled)`. <br/>Defaults to `var(--spectrum-picker-border-color-error-default-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-error-key-focus": {
+      "description": "Used by `.spectrum-Picker-button.is-invalid.is-keyboardFocused:not(:disabled, .is-disabled), .spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):focus-visible`. <br/>Defaults to `var(--spectrum-picker-border-color-error-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-starting-icon-to-text": {
+      "description": "Used by `.spectrum-Picker .spectrum-Picker-icon`. <br/>Defaults to `var(--spectrum-picker-spacing-starting-icon-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-font-size": {
+      "description": "Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-picker-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-line-height": {
+      "description": "Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-picker-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-font-weight": {
+      "description": "Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-picker-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-top-to-text": {
+      "description": "Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-picker-spacing-top-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-bottom-to-text": {
+      "description": "Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-picker-spacing-bottom-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-text-to-icon-inline-end": {
+      "description": "Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-picker-spacing-text-to-icon-inline-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-placeholder-font-weight": {
+      "description": "Used by `.spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-picker-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-placeholder-font-style": {
+      "description": "Used by `.spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-picker-placeholder-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-font-color-hover": {
+      "description": "Used by `.spectrum-Picker-button:hover`, `.spectrum-Picker-label.is-placeholder:hover`. <br/>Defaults to `var(--spectrum-picker-font-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-background-color-hover": {
+      "description": "Used by `.spectrum-Picker-button:hover`. <br/>Defaults to `var(--spectrum-picker-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-hover": {
+      "description": "Used by `.spectrum-Picker-button:hover`. <br/>Defaults to `var(--spectrum-picker-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-icon-color-hover": {
+      "description": "Used by `.spectrum-Picker-button:hover .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-picker-icon-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-font-color-hover-open": {
+      "description": "Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`. <br/>Defaults to `var(--spectrum-picker-font-color-hover-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-background-color-hover-open": {
+      "description": "Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`. <br/>Defaults to `var(--spectrum-picker-background-color-hover-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-hover-open": {
+      "description": "Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`. <br/>Defaults to `var(--spectrum-picker-border-color-hover-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-icon-color-hover-open": {
+      "description": "Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-picker-icon-color-hover-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-error-hover": {
+      "description": "Used by `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):hover`. <br/>Defaults to `var(--spectrum-picker-border-color-error-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-border-color-error-hover-open": {
+      "description": "Used by `.spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled):hover`. <br/>Defaults to `var(--spectrum-picker-border-color-error-hover-open)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-line-height-cjk": {
+      "description": "Used by `.spectrum-Picker:lang(ja) .spectrum-Picker-label, .spectrum-Picker:lang(ko) .spectrum-Picker-label, .spectrum-Picker:lang(zh) .spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-picker-line-height-cjk)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-top-to-disclosure-icon": {
+      "description": "Used by `.spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-picker-spacing-top-to-disclosure-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-icon-color-default": {
+      "description": "Used by `.spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-picker-icon-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-icon-color-active": {
+      "description": "Used by `.spectrum-Picker-menuIcon:active`. <br/>Defaults to `var(--spectrum-picker-icon-color-active)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-top-to-alert-icon": {
+      "description": "Used by `.spectrum-Picker-validationIcon`. <br/>Defaults to `var(--spectrum-picker-spacing-top-to-alert-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-icon-to-disclosure-icon": {
+      "description": "Used by `.spectrum-Picker .spectrum-ProgressCircle, .spectrum-Picker-validationIcon`. <br/>Defaults to `var(--spectrum-picker-spacing-icon-to-disclosure-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-spacing-top-to-progress-circle": {
+      "description": "Used by `.spectrum-Picker .spectrum-ProgressCircle`. <br/>Defaults to `var(--spectrum-picker-spacing-top-to-progress-circle)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-picker-font-color-disabled": {
+      "description": "Used by `.spectrum-Picker-button.is-disabled, .spectrum-Picker-button:disabled`, `.spectrum-Picker-button.is-disabled .spectrum-Picker-label.is-placeholder, .spectrum-Picker-button:disabled .spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-picker-font-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-picker-icon-color-disabled": {
+      "description": "Used by `.spectrum-Picker-button.is-disabled .spectrum-Picker-icon, .spectrum-Picker-button.is-disabled .spectrum-Picker-menuIcon, .spectrum-Picker-button.is-disabled .spectrum-Picker-validationIcon, .spectrum-Picker-button:disabled .spectrum-Picker-icon, .spectrum-Picker-button:disabled .spectrum-Picker-menuIcon, .spectrum-Picker-button:disabled .spectrum-Picker-validationIcon`, `.spectrum-Picker.is-loading .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-picker-icon-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-picker-background-color-default": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-background-color-default-open": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-background-color-hover": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button:hover`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-background-color-hover-open": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-background-color-active": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button:active`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-background-color-key-focus": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-default": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-default-open": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-hover": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button:hover`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-hover-open": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-active": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button:active`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-key-focus": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-font-size": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-font-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-label`, `.spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-placeholder-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-line-height-cjk": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker:lang(ja) .spectrum-Picker-label, .spectrum-Picker:lang(ko) .spectrum-Picker-label, .spectrum-Picker:lang(zh) .spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-cjk-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-block-size": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `--spectrum-picker-min-inline-size`, `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-inline-size": {
+      "value": "240px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-field-default-width-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-min-inline-size": {
+      "value": "calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`. <br/>Defaults to `calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-minimum-width-multiplier": {
+      "value": "2",
+      "description": "Used by `--spectrum-picker-min-inline-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-border-radius": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-button`, `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--spectrum-corner-radius-medium-size-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-border-width": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`, `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`, `.spectrum-Picker-label`, `.spectrum-Picker-validationIcon`, `.spectrum-Picker .spectrum-ProgressCircle`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-top-to-text": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-component-top-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-bottom-to-text": {
+      "value": "14px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-component-bottom-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-edge-to-text": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-component-edge-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-label-to-picker": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-field-label-to-component)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-starting-icon-to-text": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker .spectrum-Picker-icon`. <br/>Defaults to `var(--spectrum-text-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-text-to-icon-inline-end": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-label`. <br/>Defaults to `var(--spectrum-text-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-icon-to-disclosure-icon": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker .spectrum-ProgressCircle, .spectrum-Picker-validationIcon`. <br/>Defaults to `var(--spectrum-picker-visual-to-disclosure-icon-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-visual-to-disclosure-icon-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-picker-spacing-icon-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-top-to-alert-icon": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-validationIcon`. <br/>Defaults to `var(--spectrum-component-top-to-workflow-icon-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-top-to-progress-circle": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker .spectrum-ProgressCircle`. <br/>Defaults to `var(--spectrum-field-top-to-progress-circle-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-top-to-disclosure-icon": {
+      "value": "17px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-field-top-to-disclosure-icon-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-spacing-edge-to-disclosure-icon": {
+      "value": "17px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `.spectrum-Picker-button`. <br/>Defaults to `var(--spectrum-field-end-edge-to-disclosure-icon-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`, `.spectrum-Picker-label.is-placeholder`, `.spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-font-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`, `.spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-font-color-default-open": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`. <br/>Defaults to `var(--spectrum-neutral-content-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-font-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button:hover`, `.spectrum-Picker-label.is-placeholder:hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-font-color-hover-open": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-font-color-active": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button:active .spectrum-Picker-label.is-placeholder`, `.spectrum-Picker-label.is-placeholder:active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-font-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`, `.spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-label.is-placeholder, .spectrum-Picker-button:focus-visible .spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-icon-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-icon-color-default-open": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading) .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-neutral-content-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-icon-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button:hover .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-icon-color-hover-open": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-neutral-content-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-icon-color-active": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-menuIcon:active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-icon-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-menuIcon, .spectrum-Picker-button:focus-visible .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-error-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled)`. <br/>Defaults to `var(--spectrum-negative-border-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-error-default-open": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled)`. <br/>Defaults to `var(--spectrum-negative-border-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-error-hover": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):hover`. <br/>Defaults to `var(--spectrum-negative-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-error-hover-open": {
+      "value": "var(--spectrum-negative-border-color-down)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled):hover`. <br/>Defaults to `var(--spectrum-negative-border-color-focus-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-error-active": {
+      "value": "var(--spectrum-negative-color-1100)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):active`. <br/>Defaults to `var(--spectrum-negative-border-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-border-color-error-key-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-invalid.is-keyboardFocused:not(:disabled, .is-disabled), .spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):focus-visible`. <br/>Defaults to `var(--spectrum-negative-border-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-icon-color-error": {
+      "value": "var(--spectrum-negative-color-800)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled) .spectrum-Picker-validationIcon`. <br/>Defaults to `var(--spectrum-negative-visual-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-font-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-disabled, .spectrum-Picker-button:disabled`, `.spectrum-Picker-button.is-disabled .spectrum-Picker-label.is-placeholder, .spectrum-Picker-button:disabled .spectrum-Picker-label.is-placeholder`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-icon-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-disabled .spectrum-Picker-icon, .spectrum-Picker-button.is-disabled .spectrum-Picker-menuIcon, .spectrum-Picker-button.is-disabled .spectrum-Picker-validationIcon, .spectrum-Picker-button:disabled .spectrum-Picker-icon, .spectrum-Picker-button:disabled .spectrum-Picker-menuIcon, .spectrum-Picker-button:disabled .spectrum-Picker-validationIcon`, `.spectrum-Picker.is-loading .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-picker-popover-animation-distance": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker--sizeS`, `.spectrum-Picker--sizeL`, `.spectrum-Picker--sizeXL`. <br/>Used by `--mod-popover-animation-distance`. <br/>Defaults to `var(--spectrum-component-to-menu-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-visual-to-disclosure-icon-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-picker-spacing-icon-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-visual-to-disclosure-icon-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-picker-spacing-icon-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-picker-visual-to-disclosure-icon-extra-large": {
+      "value": "10px",
+      "description": "Used by `--spectrum-picker-spacing-icon-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `.spectrum-Picker-button`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `.spectrum-Picker-button`, `--spectrum-picker-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-Picker-button`, `--spectrum-picker-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Used by `--spectrum-picker-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-picker-background-color-default-open`, `--spectrum-picker-background-color-hover`, `--spectrum-picker-background-color-hover-open`, `--spectrum-picker-background-color-active`, `--spectrum-picker-background-color-key-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-picker-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-picker-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-picker-placeholder-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-cjk-line-height-100": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-picker-line-height-cjk`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-picker-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-medium": {
+      "value": "208px",
+      "description": "Used by `--spectrum-picker-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-picker-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-picker-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
+      "description": "Used by `--spectrum-picker-spacing-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-picker-spacing-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-label-to-component": {
+      "value": "0px",
+      "description": "Used by `--spectrum-picker-spacing-label-to-picker`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-picker-spacing-starting-icon-to-text`, `--spectrum-picker-spacing-text-to-icon-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-alert-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-progress-circle-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-progress-circle`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-100": {
+      "value": "11px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-end-edge-to-disclosure-icon-100": {
+      "value": "11px",
+      "description": "Used by `--spectrum-picker-spacing-edge-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-picker-font-color-default`, `--spectrum-picker-icon-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-focus": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Used by `--spectrum-picker-font-color-default-open`, `--spectrum-picker-icon-color-default-open`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-picker-font-color-hover`, `--spectrum-picker-icon-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-focus-hover": {
+      "value": "var(--spectrum-neutral-content-color-down)",
+      "description": "Used by `--spectrum-picker-font-color-hover-open`, `--spectrum-picker-icon-color-hover-open`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-picker-font-color-active`, `--spectrum-picker-icon-color-active`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-picker-font-color-key-focus`, `--spectrum-picker-icon-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-default": {
+      "value": "var(--spectrum-negative-color-900)",
+      "description": "Used by `--spectrum-picker-border-color-error-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-picker-border-color-error-default-open`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-hover": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-picker-border-color-error-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-focus-hover": {
+      "value": "var(--spectrum-negative-border-color-down)",
+      "description": "Used by `--spectrum-picker-border-color-error-hover-open`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-down": {
+      "value": "var(--spectrum-negative-color-1100)",
+      "description": "Used by `--spectrum-picker-border-color-error-active`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-border-color-key-focus": {
+      "value": "var(--spectrum-negative-color-1000)",
+      "description": "Used by `--spectrum-picker-border-color-error-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-negative-visual-color": {
+      "value": "var(--spectrum-negative-color-800)",
+      "description": "Used by `--spectrum-picker-icon-color-error`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-picker-font-color-disabled`, `--spectrum-picker-icon-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-picker-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-picker-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-picker-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-to-menu-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-picker-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-picker-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-picker-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-small": {
+      "value": "192px",
+      "description": "Used by `--spectrum-picker-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-picker-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-picker-spacing-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "value": "9px",
+      "description": "Used by `--spectrum-picker-spacing-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-picker-spacing-starting-icon-to-text`, `--spectrum-picker-spacing-text-to-icon-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-alert-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-progress-circle-small": {
+      "value": "4px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-progress-circle`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-75": {
+      "value": "7px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-end-edge-to-disclosure-icon-75": {
+      "value": "7px",
+      "description": "Used by `--spectrum-picker-spacing-edge-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-to-menu-small": {
+      "value": "6px",
+      "description": "Used by `--spectrum-picker-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-picker-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-large": {
+      "value": "224px",
+      "description": "Used by `--spectrum-picker-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-picker-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-picker-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
+      "description": "Used by `--spectrum-picker-spacing-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-200": {
+      "value": "15px",
+      "description": "Used by `--spectrum-picker-spacing-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-200": {
+      "value": "7px",
+      "description": "Used by `--spectrum-picker-spacing-starting-icon-to-text`, `--spectrum-picker-spacing-text-to-icon-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-alert-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-progress-circle-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-progress-circle`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-200": {
+      "value": "14px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-end-edge-to-disclosure-icon-200": {
+      "value": "14px",
+      "description": "Used by `--spectrum-picker-spacing-edge-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-to-menu-large": {
+      "value": "7px",
+      "description": "Used by `--spectrum-picker-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-picker-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-default-width-extra-large": {
+      "value": "240px",
+      "description": "Used by `--spectrum-picker-inline-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-picker-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-extra-large": {
+      "value": "10px",
+      "description": "Used by `--spectrum-picker-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-300": {
+      "value": "12px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-300": {
+      "value": "14px",
+      "description": "Used by `--spectrum-picker-spacing-bottom-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-picker-spacing-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-300": {
+      "value": "8px",
+      "description": "Used by `--spectrum-picker-spacing-starting-icon-to-text`, `--spectrum-picker-spacing-text-to-icon-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-workflow-icon-300": {
+      "value": "11px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-alert-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-progress-circle-extra-large": {
+      "value": "11px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-progress-circle`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-top-to-disclosure-icon-300": {
+      "value": "17px",
+      "description": "Used by `--spectrum-picker-spacing-top-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-field-end-edge-to-disclosure-icon-300": {
+      "value": "17px",
+      "description": "Used by `--spectrum-picker-spacing-edge-to-disclosure-icon`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-to-menu-extra-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-picker-popover-animation-distance`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-downstate-height": {
+      "description": "Used by `.spectrum-Picker-button:active`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-downstate-width": {
+      "description": "Used by `.spectrum-Picker-button:active`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-width-ratio-down": {
+      "value": "0.3333",
+      "description": "Used by `.spectrum-Picker-button:active`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-difference-down": {
+      "value": "-2px",
+      "description": "Used by `.spectrum-Picker-button:active`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-button-font-family": {
+      "category": "Passthrough"
+    },
+    "mod-button-line-height": {
+      "category": "Passthrough"
+    },
+    "mod-button-animation-duration": {
+      "category": "Passthrough"
+    },
+    "mod-popover-animation-distance": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-picker-content-color-default": {
+      "value": "var(--mod-picker-icon-color-active, var(--spectrum-picker-icon-color-active))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`, `.spectrum-Picker-button:active .spectrum-Picker-label.is-placeholder`, `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`, `.spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-label.is-placeholder, .spectrum-Picker-button:focus-visible .spectrum-Picker-label.is-placeholder`, `.spectrum-Picker-button.is-keyboardFocused .spectrum-Picker-menuIcon, .spectrum-Picker-button:focus-visible .spectrum-Picker-menuIcon`, `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`, `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading) .spectrum-Picker-menuIcon`, `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled) .spectrum-Picker-validationIcon`, `.spectrum-Picker-label.is-placeholder`, `.spectrum-Picker-button:hover`, `.spectrum-Picker-button:hover .spectrum-Picker-menuIcon`, `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`, `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover .spectrum-Picker-menuIcon`, `.spectrum-Picker-label.is-placeholder:hover`, `.spectrum-Picker-label.is-placeholder:active`, `.spectrum-Picker-menuIcon`, `.spectrum-Picker-menuIcon:active`. <br/>Defaults to `var(--mod-picker-icon-color-active, var(--spectrum-picker-icon-color-active))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-picker-background-color": {
+      "value": "var(--mod-picker-background-color-hover-open, var(--spectrum-picker-background-color-hover-open))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`, `.spectrum-Picker-button:active`, `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`, `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`, `.spectrum-Picker-button:hover`, `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`. <br/>Defaults to `var(--mod-picker-background-color-hover-open, var(--spectrum-picker-background-color-hover-open))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-picker-border-color-default": {
+      "value": "var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button`, `.spectrum-Picker-button:active`, `.spectrum-Picker-button.is-keyboardFocused, .spectrum-Picker-button:focus-visible`, `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading)`, `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled)`, `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):active`, `.spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled)`, `.spectrum-Picker-button.is-invalid.is-keyboardFocused:not(:disabled, .is-disabled), .spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):focus-visible`. <br/>Defaults to `var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-picker-focus-indicator-color": {
+      "value": "var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-keyboardFocused:after, .spectrum-Picker-button:focus-visible:after`. <br/>Defaults to `var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-picker-border-color-hover": {
+      "value": "var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open))",
+      "description": "Defined in `.spectrum-Picker`, `.spectrum-Picker.is-keyboardFocused, .spectrum-Picker:focus-visible`. <br/>Used by `.spectrum-Picker-button:hover`, `.spectrum-Picker-button.is-open:not(:disabled, .is-disabled, .is-loading):hover`, `.spectrum-Picker-button.is-invalid:not(:disabled, .is-disabled):hover`, `.spectrum-Picker-button.is-invalid.is-open:not(:disabled, .is-disabled):hover`. <br/>Defaults to `var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-picker-border-color-disabled": {
+      "value": "GrayText",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-disabled, .spectrum-Picker-button:disabled`. <br/>Defaults to `GrayText`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-picker-content-color-disabled": {
+      "value": "var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled))",
+      "description": "Defined in `.spectrum-Picker`. <br/>Used by `.spectrum-Picker-button.is-disabled, .spectrum-Picker-button:disabled`, `.spectrum-Picker-button.is-disabled .spectrum-Picker-icon, .spectrum-Picker-button.is-disabled .spectrum-Picker-menuIcon, .spectrum-Picker-button.is-disabled .spectrum-Picker-validationIcon, .spectrum-Picker-button:disabled .spectrum-Picker-icon, .spectrum-Picker-button:disabled .spectrum-Picker-menuIcon, .spectrum-Picker-button:disabled .spectrum-Picker-validationIcon`, `.spectrum-Picker-button.is-disabled .spectrum-Picker-label.is-placeholder, .spectrum-Picker-button:disabled .spectrum-Picker-label.is-placeholder`, `.spectrum-Picker.is-loading .spectrum-Picker-menuIcon`. <br/>Defaults to `var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled))`, if not set.",
+      "control": "color"
+    }
+  }
 }

@@ -1,10 +1,12 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { HelpTextOptionsTextArea, InvalidOptionsTextArea, RequiredOptionsTextArea, Template, TextAreaOptions } from "./textarea.template.js";
 import { TextAreaGroup } from "./textarea.test.js";
 import { default as Textfield } from "./textfield.stories.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A text area is multi-line text field using the `<textarea>` element that lets a user input a longer amount of text than a standard text field. It
@@ -32,6 +34,10 @@ export default {
 		},
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["migrated"],

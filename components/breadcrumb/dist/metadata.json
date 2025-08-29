@@ -9,16 +9,16 @@
     ".spectrum-Breadcrumbs-item",
     ".spectrum-Breadcrumbs-item > .spectrum-ActionButton",
     ".spectrum-Breadcrumbs-item > .spectrum-ActionButton:disabled",
-    ".spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before",
     ".spectrum-Breadcrumbs-item:first-of-type > .spectrum-ActionButton",
     ".spectrum-Breadcrumbs-item:first-of-type > .spectrum-Breadcrumbs-itemLink",
     ".spectrum-Breadcrumbs-item:last-of-type",
     ".spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemLink",
     ".spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemSeparator",
+    ".spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before",
     ".spectrum-Breadcrumbs-itemLink",
     ".spectrum-Breadcrumbs-itemLink + .spectrum-Breadcrumbs-itemSeparator",
-    ".spectrum-Breadcrumbs-itemLink.is-disabled",
     ".spectrum-Breadcrumbs-itemLink:focus-visible:before",
+    ".spectrum-Breadcrumbs-itemLink.is-disabled",
     ".spectrum-Breadcrumbs-itemLink[aria-disabled=\"true\"]",
     ".spectrum-Breadcrumbs-itemLink[href]",
     ".spectrum-Breadcrumbs-itemLink[href]:active",
@@ -31,134 +31,695 @@
     ".spectrum-Breadcrumbs-itemSeparator",
     ".spectrum-Breadcrumbs-itemSeparator:dir(rtl)"
   ],
-  "modifiers": [
-    "--mod-breadcrumbs-action-button-color",
-    "--mod-breadcrumbs-action-button-color-disabled",
-    "--mod-breadcrumbs-action-button-spacing-block",
-    "--mod-breadcrumbs-action-button-spacing-inline",
-    "--mod-breadcrumbs-block-size",
-    "--mod-breadcrumbs-focus-indicator-color",
-    "--mod-breadcrumbs-focus-indicator-gap",
-    "--mod-breadcrumbs-focus-indicator-thickness",
-    "--mod-breadcrumbs-font-family",
-    "--mod-breadcrumbs-font-family-current",
-    "--mod-breadcrumbs-font-size",
-    "--mod-breadcrumbs-font-size-current",
-    "--mod-breadcrumbs-font-style",
-    "--mod-breadcrumbs-font-weight",
-    "--mod-breadcrumbs-font-weight-current",
-    "--mod-breadcrumbs-icon-spacing-block",
-    "--mod-breadcrumbs-inline-end",
-    "--mod-breadcrumbs-inline-start",
-    "--mod-breadcrumbs-inline-start-to-truncated-menu",
-    "--mod-breadcrumbs-item-dragged-background",
-    "--mod-breadcrumbs-item-link-border-radius",
-    "--mod-breadcrumbs-line-height",
-    "--mod-breadcrumbs-separator-color",
-    "--mod-breadcrumbs-separator-spacing-inline",
-    "--mod-breadcrumbs-text-color",
-    "--mod-breadcrumbs-text-color-current",
-    "--mod-breadcrumbs-text-color-disabled",
-    "--mod-breadcrumbs-text-decoration-gap",
-    "--mod-breadcrumbs-text-decoration-thickness",
-    "--mod-breadcrumbs-text-spacing-block-end",
-    "--mod-breadcrumbs-text-spacing-block-start",
-    "--mod-breadcrumbs-title-spacing-block-end",
-    "--mod-breadcrumbs-title-spacing-block-start",
-    "--mod-heading-margin-end",
-    "--mod-heading-margin-start"
-  ],
-  "component": [
-    "--spectrum-breadcrumbs-action-button-color",
-    "--spectrum-breadcrumbs-action-button-color-disabled",
-    "--spectrum-breadcrumbs-action-button-spacing-block",
-    "--spectrum-breadcrumbs-action-button-spacing-inline",
-    "--spectrum-breadcrumbs-block-size",
-    "--spectrum-breadcrumbs-bottom-to-text-multiline",
-    "--spectrum-breadcrumbs-end-edge-to-text",
-    "--spectrum-breadcrumbs-focus-indicator-color",
-    "--spectrum-breadcrumbs-focus-indicator-gap",
-    "--spectrum-breadcrumbs-focus-indicator-thickness",
-    "--spectrum-breadcrumbs-font-family",
-    "--spectrum-breadcrumbs-font-family-current",
-    "--spectrum-breadcrumbs-font-size",
-    "--spectrum-breadcrumbs-font-size-current",
-    "--spectrum-breadcrumbs-font-style",
-    "--spectrum-breadcrumbs-font-weight",
-    "--spectrum-breadcrumbs-font-weight-current",
-    "--spectrum-breadcrumbs-height-multiline",
-    "--spectrum-breadcrumbs-icon-spacing-block",
-    "--spectrum-breadcrumbs-inline-end",
-    "--spectrum-breadcrumbs-inline-start",
-    "--spectrum-breadcrumbs-inline-start-to-truncated-menu",
-    "--spectrum-breadcrumbs-item-dragged-background",
-    "--spectrum-breadcrumbs-item-link-border-radius",
-    "--spectrum-breadcrumbs-line-height",
-    "--spectrum-breadcrumbs-separator-color",
-    "--spectrum-breadcrumbs-separator-spacing-inline",
-    "--spectrum-breadcrumbs-separator-to-bottom-text-multiline",
-    "--spectrum-breadcrumbs-start-edge-to-text-large",
-    "--spectrum-breadcrumbs-start-edge-to-text-medium",
-    "--spectrum-breadcrumbs-start-edge-to-text-multiline",
-    "--spectrum-breadcrumbs-start-edge-to-truncated-menu",
-    "--spectrum-breadcrumbs-text-color",
-    "--spectrum-breadcrumbs-text-color-current",
-    "--spectrum-breadcrumbs-text-color-disabled",
-    "--spectrum-breadcrumbs-text-decoration-gap",
-    "--spectrum-breadcrumbs-text-decoration-thickness",
-    "--spectrum-breadcrumbs-text-spacing-block-end",
-    "--spectrum-breadcrumbs-text-spacing-block-start",
-    "--spectrum-breadcrumbs-text-to-separator-large",
-    "--spectrum-breadcrumbs-text-to-separator-medium",
-    "--spectrum-breadcrumbs-text-to-separator-multiline",
-    "--spectrum-breadcrumbs-title-spacing-block-end",
-    "--spectrum-breadcrumbs-title-spacing-block-start",
-    "--spectrum-breadcrumbs-top-text-to-bottom-text",
-    "--spectrum-breadcrumbs-top-to-separator-large",
-    "--spectrum-breadcrumbs-top-to-separator-medium",
-    "--spectrum-breadcrumbs-top-to-separator-multiline",
-    "--spectrum-breadcrumbs-top-to-text-multiline",
-    "--spectrum-breadcrumbs-top-to-truncated-menu",
-    "--spectrum-breadcrumbs-truncated-menu-to-bottom-text",
-    "--spectrum-breadcrumbs-truncated-menu-to-separator"
-  ],
-  "global": [
-    "--spectrum-bold-font-weight",
-    "--spectrum-component-bottom-to-text-100",
-    "--spectrum-component-bottom-to-text-200",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-top-to-text-100",
-    "--spectrum-component-top-to-text-200",
-    "--spectrum-corner-radius-small-default",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-content-color",
-    "--spectrum-drop-zone-background-color-opacity",
-    "--spectrum-drop-zone-background-color-rgb",
-    "--spectrum-extra-bold-font-weight",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-75",
-    "--spectrum-heading-size-l",
-    "--spectrum-line-height-100",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-subdued-content-color-default",
-    "--spectrum-regular-font-weight",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-text-underline-gap",
-    "--spectrum-text-underline-thickness"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-breadcrumbs-action-button-color",
-    "--highcontrast-breadcrumbs-action-button-color-disabled",
-    "--highcontrast-breadcrumbs-focus-indicator-color",
-    "--highcontrast-breadcrumbs-separator-color",
-    "--highcontrast-breadcrumbs-text-color",
-    "--highcontrast-breadcrumbs-text-color-current",
-    "--highcontrast-breadcrumbs-text-color-disabled"
-  ]
+  "modifiers": {
+    "mod-heading-margin-end": {
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Defaults to `0px`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-heading-margin-start": {
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Defaults to `0px`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-inline-end": {
+      "description": "Used by `.spectrum-Breadcrumbs`. <br/>Defaults to `var(--spectrum-breadcrumbs-inline-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-block-size": {
+      "description": "Used by `.spectrum-Breadcrumbs`. <br/>Defaults to `var(--spectrum-breadcrumbs-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-icon-spacing-block": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemSeparator`. <br/>Defaults to `var(--spectrum-breadcrumbs-icon-spacing-block)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-separator-color": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemSeparator`. <br/>Defaults to `var(--spectrum-breadcrumbs-separator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-font-family": {
+      "description": "Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-breadcrumbs-font-family)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-font-size": {
+      "description": "Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-breadcrumbs-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-font-weight": {
+      "description": "Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-breadcrumbs-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-font-style": {
+      "description": "Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-breadcrumbs-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-line-height": {
+      "description": "Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-breadcrumbs-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-font-family-current": {
+      "description": "Used by `.spectrum-Breadcrumbs-item:last-of-type`. <br/>Defaults to `var(--spectrum-breadcrumbs-font-family-current)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-font-size-current": {
+      "description": "Used by `.spectrum-Breadcrumbs-item:last-of-type`. <br/>Defaults to `var(--spectrum-breadcrumbs-font-size-current)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-font-weight-current": {
+      "description": "Used by `.spectrum-Breadcrumbs-item:last-of-type`. <br/>Defaults to `var(--spectrum-breadcrumbs-font-weight-current)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-action-button-spacing-inline": {
+      "description": "Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-breadcrumbs-action-button-spacing-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-action-button-spacing-block": {
+      "description": "Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-breadcrumbs-action-button-spacing-block)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-action-button-color": {
+      "description": "Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-breadcrumbs-action-button-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-action-button-color-disabled": {
+      "description": "Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--spectrum-breadcrumbs-action-button-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-inline-start": {
+      "description": "Used by `.spectrum-Breadcrumbs-item:first-of-type > .spectrum-Breadcrumbs-itemLink`, `.spectrum-Breadcrumbs--multiline .spectrum-Breadcrumbs-item:last-of-type > .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-inline-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-inline-start-to-truncated-menu": {
+      "description": "Used by `.spectrum-Breadcrumbs-item:first-of-type > .spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-breadcrumbs-inline-start-to-truncated-menu)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-item-link-border-radius": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemLink`, `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-breadcrumbs-item-link-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-text-color": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-text-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-text-spacing-block-start": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-text-spacing-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-text-spacing-block-end": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-text-spacing-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-separator-spacing-inline": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemLink`, `.spectrum-Breadcrumbs-itemLink + .spectrum-Breadcrumbs-itemSeparator`. <br/>Defaults to `var(--spectrum-breadcrumbs-separator-spacing-inline)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-text-color-disabled": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemLink.is-disabled, .spectrum-Breadcrumbs-itemLink[aria-disabled=\"true\"]`. <br/>Defaults to `var(--spectrum-breadcrumbs-text-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-text-color-current": {
+      "description": "Used by `.spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-text-color-current)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-title-spacing-block-start": {
+      "description": "Used by `.spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-title-spacing-block-start)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-title-spacing-block-end": {
+      "description": "Used by `.spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-title-spacing-block-end)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-text-decoration-thickness": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemLink[href]:active, .spectrum-Breadcrumbs-itemLink[href]:focus-visible, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:active, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:focus-visible`, `.spectrum-Breadcrumbs-itemLink[href]:hover, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:hover`. <br/>Defaults to `var(--spectrum-breadcrumbs-text-decoration-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-text-decoration-gap": {
+      "description": "Used by `.spectrum-Breadcrumbs-itemLink[href]:active, .spectrum-Breadcrumbs-itemLink[href]:focus-visible, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:active, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:focus-visible`, `.spectrum-Breadcrumbs-itemLink[href]:hover, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:hover`. <br/>Defaults to `var(--spectrum-breadcrumbs-text-decoration-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-focus-indicator-gap": {
+      "description": "Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-breadcrumbs-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-breadcrumbs-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-focus-indicator-color": {
+      "description": "Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-breadcrumbs-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-breadcrumbs-item-dragged-background": {
+      "description": "Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before`. <br/>Defaults to `var(--spectrum-breadcrumbs-item-dragged-background)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-breadcrumbs-block-size": {
+      "value": "72px",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--sizeL`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs`. <br/>Defaults to `var(--spectrum-breadcrumbs-height-multiline)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-line-height": {
+      "value": "1.3",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-font-size": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--sizeL`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-font-size-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-font-family": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-font-weight": {
+      "value": "400",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-regular-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-font-size-current": {
+      "value": "var(--spectrum-font-size-700)",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--sizeL`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-item:last-of-type`. <br/>Defaults to `var(--spectrum-heading-size-l)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-font-family-current": {
+      "value": "var(--spectrum-sans-font-family-stack)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item:last-of-type`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-font-weight-current": {
+      "value": "800",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-item:last-of-type`. <br/>Defaults to `var(--spectrum-extra-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-decoration-thickness": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemLink[href]:active, .spectrum-Breadcrumbs-itemLink[href]:focus-visible, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:active, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:focus-visible`, `.spectrum-Breadcrumbs-itemLink[href]:hover, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:hover`. <br/>Defaults to `var(--spectrum-text-underline-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-decoration-gap": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemLink[href]:active, .spectrum-Breadcrumbs-itemLink[href]:focus-visible, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:active, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:focus-visible`, `.spectrum-Breadcrumbs-itemLink[href]:hover, .spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:hover`. <br/>Defaults to `var(--spectrum-text-underline-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-separator-spacing-inline": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--sizeL`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-itemLink`, `.spectrum-Breadcrumbs-itemLink + .spectrum-Breadcrumbs-itemSeparator`. <br/>Defaults to `var(--spectrum-breadcrumbs-text-to-separator-multiline)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-to-separator-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-breadcrumbs-separator-spacing-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-spacing-block-start": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--sizeL`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `--spectrum-breadcrumbs-title-spacing-block-start`, `.spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-top-to-text-multiline)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-spacing-block-end": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--sizeL`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `--spectrum-breadcrumbs-title-spacing-block-end`, `.spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-top-text-to-bottom-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-icon-spacing-block": {
+      "value": "var(--spectrum-breadcrumbs-top-to-separator-multiline) var(--spectrum-breadcrumbs-separator-to-bottom-text-multiline)",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--sizeL`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-itemSeparator`. <br/>Defaults to `var(--spectrum-breadcrumbs-top-to-separator-multiline) var(--spectrum-breadcrumbs-separator-to-bottom-text-multiline)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-top-to-separator-medium": {
+      "value": "11px",
+      "description": "Used by `--spectrum-breadcrumbs-icon-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-title-spacing-block-start": {
+      "value": "0",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `0`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-title-spacing-block-end": {
+      "value": "9px",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-bottom-to-text-multiline)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-inline-start": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--sizeL`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-item:first-of-type > .spectrum-Breadcrumbs-itemLink`, `.spectrum-Breadcrumbs--multiline .spectrum-Breadcrumbs-item:last-of-type > .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-breadcrumbs-start-edge-to-text-multiline)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-start-edge-to-text-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-breadcrumbs-inline-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-inline-end": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs`. <br/>Defaults to `var(--spectrum-breadcrumbs-end-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-end-edge-to-text": {
+      "value": "0px",
+      "description": "Used by `--spectrum-breadcrumbs-inline-end`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-inline-start-to-truncated-menu": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item:first-of-type > .spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-breadcrumbs-start-edge-to-truncated-menu)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-start-edge-to-truncated-menu": {
+      "value": "0px",
+      "description": "Used by `--spectrum-breadcrumbs-inline-start-to-truncated-menu`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-action-button-spacing-inline": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-breadcrumbs-truncated-menu-to-separator)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-truncated-menu-to-separator": {
+      "value": "0px",
+      "description": "Used by `--spectrum-breadcrumbs-action-button-spacing-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-action-button-spacing-block": {
+      "value": "var(--spectrum-breadcrumbs-top-to-truncated-menu) var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text)",
+      "description": "Defined in `.spectrum-Breadcrumbs`, `.spectrum-Breadcrumbs--multiline`. <br/>Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-breadcrumbs-top-to-truncated-menu) var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-top-to-truncated-menu": {
+      "value": "0px",
+      "description": "Used by `--spectrum-breadcrumbs-action-button-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-item-link-border-radius": {
+      "value": "4px",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemLink`, `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-corner-radius-small-default)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-color": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-color-current": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemLink.is-disabled, .spectrum-Breadcrumbs-itemLink[aria-disabled=\"true\"]`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-separator-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemSeparator`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-action-button-color": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-action-button-color-disabled": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-item-dragged-background": {
+      "value": "rgb(var(--spectrum-drop-zone-background-color-rgb), var(--spectrum-drop-zone-background-color-opacity))",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before`. <br/>Defaults to `rgb(var(--spectrum-drop-zone-background-color-rgb), var(--spectrum-drop-zone-background-color-opacity))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-to-separator-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-breadcrumbs-separator-spacing-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-top-to-separator-large": {
+      "value": "15px",
+      "description": "Used by `--spectrum-breadcrumbs-icon-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-start-edge-to-text-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-breadcrumbs-inline-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-height-multiline": {
+      "value": "72px",
+      "description": "Used by `--spectrum-breadcrumbs-block-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-text-to-separator-multiline": {
+      "value": "4px",
+      "description": "Used by `--spectrum-breadcrumbs-separator-spacing-inline`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-top-to-text-multiline": {
+      "value": "4px",
+      "description": "Used by `--spectrum-breadcrumbs-text-spacing-block-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-top-text-to-bottom-text": {
+      "value": "9px",
+      "description": "Used by `--spectrum-breadcrumbs-text-spacing-block-end`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-top-to-separator-multiline": {
+      "value": "7px",
+      "description": "Used by `--spectrum-breadcrumbs-icon-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-separator-to-bottom-text-multiline": {
+      "value": "11px",
+      "description": "Used by `--spectrum-breadcrumbs-icon-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-bottom-to-text-multiline": {
+      "value": "9px",
+      "description": "Used by `--spectrum-breadcrumbs-title-spacing-block-end`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-start-edge-to-text-multiline": {
+      "value": "4px",
+      "description": "Used by `--spectrum-breadcrumbs-inline-start`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-breadcrumbs-truncated-menu-to-bottom-text": {
+      "value": "4px",
+      "description": "Used by `--spectrum-breadcrumbs-action-button-spacing-block`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-breadcrumbs-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-breadcrumbs-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-breadcrumbs-font-size`, `--spectrum-breadcrumbs-font-size-current`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-breadcrumbs-font-family`, `--spectrum-breadcrumbs-font-family-current`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-regular-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-breadcrumbs-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-breadcrumbs-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-bold-font-weight": {
+      "value": "700",
+      "description": "Used by `--spectrum-breadcrumbs-font-weight-current`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-underline-thickness": {
+      "value": "1px",
+      "description": "Used by `--spectrum-breadcrumbs-text-decoration-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-underline-gap": {
+      "value": "1px",
+      "description": "Used by `--spectrum-breadcrumbs-text-decoration-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-breadcrumbs-text-spacing-block-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-100": {
+      "value": "9px",
+      "description": "Used by `--spectrum-breadcrumbs-text-spacing-block-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-breadcrumbs-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-breadcrumbs-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-small-default": {
+      "value": "4px",
+      "description": "Used by `--spectrum-breadcrumbs-item-link-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-subdued-content-color-default": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Used by `--spectrum-breadcrumbs-text-color`, `--spectrum-breadcrumbs-action-button-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-breadcrumbs-text-color-current`, `--spectrum-breadcrumbs-separator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-breadcrumbs-text-color-disabled`, `--spectrum-breadcrumbs-action-button-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-breadcrumbs-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-drop-zone-background-color-rgb": {
+      "description": "Used by `--spectrum-breadcrumbs-item-dragged-background`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-drop-zone-background-color-opacity": {
+      "value": "0.1",
+      "description": "Used by `--spectrum-breadcrumbs-item-dragged-background`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-breadcrumbs-block-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-breadcrumbs-font-size`, `--spectrum-breadcrumbs-font-size-current`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-top-to-text-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-breadcrumbs-text-spacing-block-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-bottom-to-text-200": {
+      "value": "11px",
+      "description": "Used by `--spectrum-breadcrumbs-text-spacing-block-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-breadcrumbs-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-l": {
+      "value": "var(--spectrum-font-size-700)",
+      "description": "Used by `--spectrum-breadcrumbs-font-size-current`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-extra-bold-font-weight": {
+      "value": "800",
+      "description": "Used by `--spectrum-breadcrumbs-font-weight-current`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-breadcrumbs-separator-color": {
+      "value": "var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color))",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemSeparator`. <br/>Defaults to `var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-breadcrumbs-action-button-color": {
+      "value": "var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color))",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton`. <br/>Defaults to `var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-breadcrumbs-action-button-color-disabled": {
+      "value": "var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled))",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item > .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-breadcrumbs-text-color": {
+      "value": "var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color))",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-breadcrumbs-text-color-disabled": {
+      "value": "var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled))",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-itemLink.is-disabled, .spectrum-Breadcrumbs-itemLink[aria-disabled=\"true\"]`. <br/>Defaults to `var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-breadcrumbs-text-color-current": {
+      "value": "var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current))",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item:last-of-type .spectrum-Breadcrumbs-itemLink`. <br/>Defaults to `var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-breadcrumbs-focus-indicator-color": {
+      "value": "var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Breadcrumbs`. <br/>Used by `.spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before, .spectrum-Breadcrumbs-itemLink:focus-visible:before`. <br/>Defaults to `var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

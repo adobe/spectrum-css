@@ -151,7 +151,7 @@
 				"commands": [
 					"stylelint --fix --cache --allow-empty-input {projectRoot}/*.css",
 					"eslint --fix --cache --no-ignore --no-error-on-unmatched-pattern {projectRoot}/*.{js,json} {projectRoot}/**/*.{js,json} --ignore-pattern {projectRoot}/dist || exit 0",
-					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx} && markdownlint --fix --config .markdownlint.json {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx}"
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx} && markdownlint --fix --config .markdownlint.json {projectRoot}/*.md {projectRoot}/**/*.md"
 				]
 			}
 		},
@@ -172,12 +172,13 @@
 				"commands": [
 					"stylelint --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables {projectRoot}/*.css {projectRoot}/**/*.css --ignore-pattern {projectRoot}/dist",
 					"eslint --cache --no-ignore --no-error-on-unmatched-pattern --report-unused-disable-directives {projectRoot}/*.{js,json} {projectRoot}/**/*.{js,json} --ignore-pattern {projectRoot}/dist || exit 0",
-					"markdownlint --config .markdownlint.json {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx}"
+					"markdownlint --config .markdownlint.json {projectRoot}/*.md {projectRoot}/**/*.md"
 				]
 			}
 		},
 		"report": {
 			"cache": true,
+			"dependsOn": [{ "projects": ["tokens"], "target": "build" }],
 			"executor": "nx:run-commands",
 			"inputs": ["styles", "postcss", "stylelint", "reporter"],
 			"options": {

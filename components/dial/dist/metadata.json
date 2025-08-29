@@ -6,8 +6,6 @@
     ".spectrum-Dial-controls:after",
     ".spectrum-Dial-controls:before",
     ".spectrum-Dial-handle",
-    ".spectrum-Dial-handle.is-dragged",
-    ".spectrum-Dial-handle.is-dragged:after",
     ".spectrum-Dial-handle:active",
     ".spectrum-Dial-handle:active:after",
     ".spectrum-Dial-handle:after",
@@ -18,6 +16,8 @@
     ".spectrum-Dial-handle:focus-within:after",
     ".spectrum-Dial-handle:hover",
     ".spectrum-Dial-handle:hover:after",
+    ".spectrum-Dial-handle.is-dragged",
+    ".spectrum-Dial-handle.is-dragged:after",
     ".spectrum-Dial-input",
     ".spectrum-Dial-input:focus",
     ".spectrum-Dial-label",
@@ -35,92 +35,441 @@
     ".u-isGrabbing .spectrum-Dial .spectrum-Dial-label",
     ".u-isGrabbing .spectrum-Dial .spectrum-Dial-value"
   ],
-  "modifiers": [
-    "--mod-dial-background-color-default",
-    "--mod-dial-border-color",
-    "--mod-dial-border-color-hover",
-    "--mod-dial-border-radius",
-    "--mod-dial-container-width",
-    "--mod-dial-controls-margin",
-    "--mod-dial-controls-min-height",
-    "--mod-dial-handle-block-margin",
-    "--mod-dial-handle-border-color-disabled",
-    "--mod-dial-handle-border-size",
-    "--mod-dial-handle-inline-margin",
-    "--mod-dial-handle-marker-border-radius",
-    "--mod-dial-handle-marker-color",
-    "--mod-dial-handle-marker-color-hover",
-    "--mod-dial-handle-marker-color-key-focus",
-    "--mod-dial-handle-marker-color-mouse-focus",
-    "--mod-dial-handle-marker-height",
-    "--mod-dial-handle-marker-width",
-    "--mod-dial-handle-position",
-    "--mod-dial-handle-size",
-    "--mod-dial-height",
-    "--mod-dial-label-container-top-to-text",
-    "--mod-dial-label-gap-y",
-    "--mod-dial-label-line-height",
-    "--mod-dial-label-text-color",
-    "--mod-dial-label-text-color-disabled",
-    "--mod-dial-label-text-size",
-    "--mod-dial-min-height",
-    "--mod-dial-min-max-tick-angles",
-    "--mod-dial-min-max-tick-color",
-    "--mod-dial-width"
-  ],
-  "component": [
-    "--spectrum-dial-background-color-default",
-    "--spectrum-dial-border-color",
-    "--spectrum-dial-border-color-hover",
-    "--spectrum-dial-border-radius",
-    "--spectrum-dial-container-width",
-    "--spectrum-dial-controls-margin",
-    "--spectrum-dial-controls-min-height",
-    "--spectrum-dial-handle-block-margin",
-    "--spectrum-dial-handle-border-color-disabled",
-    "--spectrum-dial-handle-border-size",
-    "--spectrum-dial-handle-inline-margin",
-    "--spectrum-dial-handle-marker-border-radius",
-    "--spectrum-dial-handle-marker-color",
-    "--spectrum-dial-handle-marker-color-hover",
-    "--spectrum-dial-handle-marker-color-key-focus",
-    "--spectrum-dial-handle-marker-color-mouse-focus",
-    "--spectrum-dial-handle-marker-height",
-    "--spectrum-dial-handle-marker-width",
-    "--spectrum-dial-handle-position",
-    "--spectrum-dial-handle-size",
-    "--spectrum-dial-height",
-    "--spectrum-dial-label-container-top-to-text",
-    "--spectrum-dial-label-gap-y",
-    "--spectrum-dial-label-line-height",
-    "--spectrum-dial-label-text-color",
-    "--spectrum-dial-label-text-color-disabled",
-    "--spectrum-dial-label-text-size",
-    "--spectrum-dial-min-height",
-    "--spectrum-dial-min-max-tick-angles",
-    "--spectrum-dial-min-max-tick-color",
-    "--spectrum-dial-width"
-  ],
-  "global": [
-    "--spectrum-border-width-200",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-25",
-    "--spectrum-gray-400",
-    "--spectrum-gray-600",
-    "--spectrum-gray-700",
-    "--spectrum-gray-75",
-    "--spectrum-gray-800",
-    "--spectrum-line-height-200"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-dial-border-color",
-    "--highcontrast-dial-border-color-hover",
-    "--highcontrast-dial-handle-border-color-disabled",
-    "--highcontrast-dial-handle-marker-color",
-    "--highcontrast-dial-handle-marker-color-hover",
-    "--highcontrast-dial-handle-marker-color-key-focus",
-    "--highcontrast-dial-label-text-color-disabled",
-    "--highcontrast-dial-min-max-tick-color"
-  ]
+  "modifiers": {
+    "mod-dial-min-height": {
+      "description": "Used by `.spectrum-Dial`. <br/>Defaults to `var(--spectrum-dial-min-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-container-width": {
+      "description": "Used by `.spectrum-Dial`. <br/>Defaults to `var(--spectrum-dial-container-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-label-text-color-disabled": {
+      "description": "Used by `.spectrum-Dial.is-disabled .spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-dial-label-text-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-border-color-disabled": {
+      "description": "Used by `.spectrum-Dial.is-disabled .spectrum-Dial-controls:after, .spectrum-Dial.is-disabled .spectrum-Dial-controls:before`, `.spectrum-Dial.is-disabled .spectrum-Dial-handle`, `.spectrum-Dial.is-disabled .spectrum-Dial-handle:after, .spectrum-Dial.is-disabled .spectrum-Dial-handle:before`. <br/>Defaults to `var(--spectrum-dial-handle-border-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-background-color-default": {
+      "description": "Used by `.spectrum-Dial.is-disabled .spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-dial-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-label-text-color": {
+      "description": "Used by `.spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-dial-label-text-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-label-container-top-to-text": {
+      "description": "Used by `.spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-dial-label-container-top-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-label-text-size": {
+      "description": "Used by `.spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-dial-label-text-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-label-line-height": {
+      "description": "Used by `.spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-dial-label-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-label-gap-y": {
+      "description": "Used by `.spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-dial-label-gap-y)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-width": {
+      "description": "Used by `.spectrum-Dial-controls`. <br/>Defaults to `var(--spectrum-dial-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-height": {
+      "description": "Used by `.spectrum-Dial-controls`. <br/>Defaults to `var(--spectrum-dial-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-controls-min-height": {
+      "description": "Used by `.spectrum-Dial-controls`. <br/>Defaults to `var(--spectrum-dial-controls-min-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-controls-margin": {
+      "description": "Used by `.spectrum-Dial-controls`. <br/>Defaults to `var(--spectrum-dial-controls-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-border-radius": {
+      "description": "Used by `.spectrum-Dial-controls`, `.spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-dial-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-min-max-tick-color": {
+      "description": "Used by `.spectrum-Dial-controls:after, .spectrum-Dial-controls:before`. <br/>Defaults to `var(--spectrum-dial-min-max-tick-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-marker-height": {
+      "description": "Used by `.spectrum-Dial-controls:after, .spectrum-Dial-controls:before`, `.spectrum-Dial-controls:before`, `.spectrum-Dial-controls:after`, `.spectrum-Dial-handle:after`. <br/>Defaults to `var(--spectrum-dial-handle-marker-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-marker-border-radius": {
+      "description": "Used by `.spectrum-Dial-controls:after, .spectrum-Dial-controls:before`, `.spectrum-Dial-handle:after`. <br/>Defaults to `var(--spectrum-dial-handle-marker-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-min-max-tick-angles": {
+      "description": "Used by `.spectrum-Dial-controls:before`, `.spectrum-Dial-controls:after, .spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-dial-min-max-tick-angles)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-border-color": {
+      "description": "Used by `.spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-dial-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-block-margin": {
+      "description": "Used by `.spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-dial-handle-block-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-inline-margin": {
+      "description": "Used by `.spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-dial-handle-inline-margin)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-size": {
+      "description": "Used by `.spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-dial-handle-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-border-size": {
+      "description": "Used by `.spectrum-Dial-handle`, `.spectrum-Dial-handle.is-dragged, .spectrum-Dial-handle:active, .spectrum-Dial-handle:focus-visible, .spectrum-Dial-handle:focus-within`. <br/>Defaults to `var(--spectrum-dial-handle-border-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-position": {
+      "description": "Used by `.spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-dial-handle-position)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-marker-width": {
+      "description": "Used by `.spectrum-Dial-handle:after`. <br/>Defaults to `var(--spectrum-dial-handle-marker-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-marker-color": {
+      "description": "Used by `.spectrum-Dial-handle:after`. <br/>Defaults to `var(--spectrum-dial-handle-marker-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-border-color-hover": {
+      "description": "Used by `.spectrum-Dial-handle:hover`, `.spectrum-Dial-handle.is-dragged, .spectrum-Dial-handle:active`. <br/>Defaults to `var(--spectrum-dial-border-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-marker-color-hover": {
+      "description": "Used by `.spectrum-Dial-handle:hover:after`. <br/>Defaults to `var(--spectrum-dial-handle-marker-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-marker-color-mouse-focus": {
+      "description": "Used by `.spectrum-Dial-handle:focus-visible, .spectrum-Dial-handle:focus-within`. <br/>Defaults to `var(--spectrum-dial-handle-marker-color-mouse-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-dial-handle-marker-color-key-focus": {
+      "description": "Used by `.spectrum-Dial-handle:focus-visible:after, .spectrum-Dial-handle:focus-within:after`, `.spectrum-Dial-handle.is-dragged:after, .spectrum-Dial-handle:active:after`. <br/>Defaults to `var(--spectrum-dial-handle-marker-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-dial-background-color-default": {
+      "value": "light-dark(rgb(243, 243, 243), rgb(34, 34, 34))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial.is-disabled .spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-gray-75)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-marker-color-key-focus": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:focus-visible:after, .spectrum-Dial-handle:focus-within:after`, `.spectrum-Dial-handle.is-dragged:after, .spectrum-Dial-handle:active:after`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-marker-color": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:after`. <br/>Defaults to `var(--spectrum-gray-700)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-border-color": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle`. <br/>Defaults to `var(--spectrum-gray-700)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-marker-color-hover": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:hover:after`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-border-color-hover": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:hover`, `.spectrum-Dial-handle.is-dragged, .spectrum-Dial-handle:active`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-marker-color-mouse-focus": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:focus-visible, .spectrum-Dial-handle:focus-within`. <br/>Defaults to `var(--spectrum-gray-700)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-min-max-tick-color": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-controls:after, .spectrum-Dial-controls:before`. <br/>Defaults to `var(--spectrum-gray-600)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-label-text-color": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-gray-700)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-label-text-color-disabled": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial.is-disabled .spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-gray-700)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-border-color-disabled": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial.is-disabled .spectrum-Dial-controls:after, .spectrum-Dial.is-disabled .spectrum-Dial-controls:before`, `.spectrum-Dial.is-disabled .spectrum-Dial-handle`, `.spectrum-Dial.is-disabled .spectrum-Dial-handle:after, .spectrum-Dial.is-disabled .spectrum-Dial-handle:before`. <br/>Defaults to `var(--spectrum-gray-400)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-dial-container-width": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial`. <br/>Defaults to `48px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-marker-width": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:after`. <br/>Defaults to `12px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-marker-height": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-controls:after, .spectrum-Dial-controls:before`, `.spectrum-Dial-controls:before`, `.spectrum-Dial-controls:after`, `.spectrum-Dial-handle:after`. <br/>Defaults to `2px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-marker-border-radius": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-controls:after, .spectrum-Dial-controls:before`, `.spectrum-Dial-handle:after`. <br/>Defaults to `1px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-size": {
+      "value": "100%",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle`, `.spectrum-Dial-input`. <br/>Defaults to `100%`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-min-height": {
+      "value": "0",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial`. <br/>Defaults to `0`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-controls-min-height": {
+      "value": "0",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-controls`. <br/>Defaults to `0`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-min-max-tick-angles": {
+      "value": "45deg",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-controls:before`, `.spectrum-Dial-controls:after, .spectrum-Dial-handle`. <br/>Defaults to `45deg`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-width": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-Dial`, `.spectrum-Dial.spectrum-Dial--small`. <br/>Used by `.spectrum-Dial-controls`. <br/>Defaults to `24px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-height": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-Dial`, `.spectrum-Dial.spectrum-Dial--small`. <br/>Used by `.spectrum-Dial-controls`. <br/>Defaults to `24px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-border-size": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle`, `.spectrum-Dial-handle.is-dragged, .spectrum-Dial-handle:active, .spectrum-Dial-handle:focus-visible, .spectrum-Dial-handle:focus-within`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-label-text-size": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-font-size-75)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-label-line-height": {
+      "value": "1.5",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-labelContainer`. <br/>Defaults to `var(--spectrum-line-height-200)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-label-container-top-to-text": {
+      "description": "Used by `.spectrum-Dial-labelContainer`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-label-gap-y": {
+      "description": "Used by `.spectrum-Dial-labelContainer`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-controls-margin": {
+      "description": "Used by `.spectrum-Dial-controls`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-border-radius": {
+      "description": "Used by `.spectrum-Dial-controls`, `.spectrum-Dial-handle`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-block-margin": {
+      "description": "Used by `.spectrum-Dial-handle`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-inline-margin": {
+      "description": "Used by `.spectrum-Dial-handle`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-dial-handle-position": {
+      "description": "Used by `.spectrum-Dial-handle`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-75": {
+      "value": "light-dark(rgb(243, 243, 243), rgb(34, 34, 34))",
+      "description": "Used by `--spectrum-dial-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--spectrum-dial-handle-marker-color-key-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-700": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Used by `--spectrum-dial-handle-marker-color`, `--spectrum-dial-border-color`, `--spectrum-dial-handle-marker-color-mouse-focus`, `--spectrum-dial-label-text-color`, `--spectrum-dial-label-text-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Used by `--spectrum-dial-handle-marker-color-hover`, `--spectrum-dial-border-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-600": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Used by `--spectrum-dial-min-max-tick-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-400": {
+      "value": "light-dark(rgb(198, 198, 198), rgb(68, 68, 68))",
+      "description": "Used by `--spectrum-dial-handle-border-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-dial-handle-border-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-dial-label-text-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-200": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-dial-label-line-height`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-dial-label-text-color-disabled": {
+      "value": "var(--mod-dial-label-text-color-disabled, var(--spectrum-dial-label-text-color-disabled))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial.is-disabled .spectrum-Dial-labelContainer`. <br/>Defaults to `var(--mod-dial-label-text-color-disabled, var(--spectrum-dial-label-text-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-dial-handle-border-color-disabled": {
+      "value": "var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial.is-disabled .spectrum-Dial-controls:after, .spectrum-Dial.is-disabled .spectrum-Dial-controls:before`, `.spectrum-Dial.is-disabled .spectrum-Dial-handle`, `.spectrum-Dial.is-disabled .spectrum-Dial-handle:after, .spectrum-Dial.is-disabled .spectrum-Dial-handle:before`. <br/>Defaults to `var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-dial-min-max-tick-color": {
+      "value": "var(--mod-dial-min-max-tick-color, var(--spectrum-dial-min-max-tick-color))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-controls:after, .spectrum-Dial-controls:before`. <br/>Defaults to `var(--mod-dial-min-max-tick-color, var(--spectrum-dial-min-max-tick-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-dial-border-color": {
+      "value": "var(--mod-dial-border-color, var(--spectrum-dial-border-color))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle`. <br/>Defaults to `var(--mod-dial-border-color, var(--spectrum-dial-border-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-dial-handle-marker-color": {
+      "value": "var(--mod-dial-handle-marker-color, var(--spectrum-dial-handle-marker-color))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:after`. <br/>Defaults to `var(--mod-dial-handle-marker-color, var(--spectrum-dial-handle-marker-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-dial-border-color-hover": {
+      "value": "var(--mod-dial-border-color-hover, var(--spectrum-dial-border-color-hover))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:hover`, `.spectrum-Dial-handle.is-dragged, .spectrum-Dial-handle:active`. <br/>Defaults to `var(--mod-dial-border-color-hover, var(--spectrum-dial-border-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-dial-handle-marker-color-hover": {
+      "value": "var(--mod-dial-handle-marker-color-hover, var(--spectrum-dial-handle-marker-color-hover))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:hover:after`. <br/>Defaults to `var(--mod-dial-handle-marker-color-hover, var(--spectrum-dial-handle-marker-color-hover))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-dial-handle-marker-color-key-focus": {
+      "value": "var(--mod-dial-handle-marker-color-key-focus, var(--spectrum-dial-handle-marker-color-key-focus))",
+      "description": "Defined in `.spectrum-Dial`. <br/>Used by `.spectrum-Dial-handle:focus-visible:after, .spectrum-Dial-handle:focus-within:after`, `.spectrum-Dial-handle.is-dragged:after, .spectrum-Dial-handle:active:after`. <br/>Defaults to `var(--mod-dial-handle-marker-color-key-focus, var(--spectrum-dial-handle-marker-color-key-focus))`, if not set.",
+      "control": "color"
+    }
+  }
 }

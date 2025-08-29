@@ -1,8 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
+
 import {
 	DocsBodyVariants,
 	DocsCodeVariants,
@@ -16,6 +15,10 @@ import {
 	DocsInternationalizedHeadingVariants, Template
 } from "./template.js";
 import { TypographyGroup } from "./typography.test.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Spectrum typography is broken out into several separate components: heading, body, detail, and code. Internationalized typography examples are also shown.
@@ -85,6 +88,10 @@ export default {
 		metadata,
 		status: {
 			type: "unmigrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["unmigrated"],

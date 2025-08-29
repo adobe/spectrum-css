@@ -165,42 +165,147 @@ function validateComponentName(componentName) {
  * sub-component passthrough properties that should not be listed as mods.
  * @param {string} content
  * @param {{ [string]: (string)[] }} [meta={}]
- * @returns { [string]: string[] }
+ * @returns { [string]: { [string]: { value: string, description: string, usedBy: string[], fallback: string } } }
  */
 function extractProperties(content, meta = {}) {
-	if (!content) return new Set();
+	if (!content) return {};
 
 	const found = {};
+
+	function getArgType(key, data = []) {
+		if (!key) return {};
+
+		const control = key.includes("color") ? "color" : "text";
+
+		let defined = new Set();
+		let used = new Set();
+		let defaultValue;
+
+		// Start by parsing the definition data
+		data.filter((item) => item.type === "definition").forEach((item) => {
+			if (item.value) defaultValue = item.value;
+
+			if (item.usedBy?.length) {
+				item.usedBy.forEach((ub) => {
+					defined.add(ub);
+				});
+			}
+		});
+
+		// Then parse the reference data
+		data.filter((item) => item.type === "reference").forEach((item) => {
+			if (item.usedBy?.length) {
+				item.usedBy.forEach((ub) => {
+					used.add(ub);
+				});
+			}
+
+			if (item.fallback) {
+				// @todo: improve on this reporting in the future
+				// if (defaultValue && defaultValue !== item.fallback) console.log(key, defaultValue, item.fallback);
+
+				defaultValue = item.fallback;
+			}
+		});
+
+		// Deduplicate the descriptions
+		let descriptions = [];
+
+		if (defined.size) {
+			descriptions.push(`Defined in ${[...defined].map((defined) => `\`${defined.replaceAll(new RegExp("\\n(\\t)?", "g"), " ")}\``).join(", ")}.`);
+		}
+
+		if (used.size) {
+			descriptions.push(`Used by ${[...used].map((used) => `\`${used.replaceAll(new RegExp("\\n(\\t)?", "g"), " ")}\``).join(", ")}.`);
+		}
+
+		if (defaultValue) {
+			descriptions.push(`Defaults to \`${defaultValue}\`, if not set.`);
+		}
+
+		return { value: defaultValue, description: descriptions.join(" <br/>")?.trim(), control };
+	}
 
 	// Process CSS content through the valuesParser an postcss to capture
 	// all the custom properties defined and used in the CSS
 	postcss.parse(content).walkDecls((decl) => {
 		Object.entries(meta).forEach(([key, values]) => {
-			found[key] = found[key] ?? new Set();
+			found[key] = found[key] ?? {};
 
-			values.forEach((value) => {
-				if (decl.prop.startsWith("--") && decl.prop.startsWith(`--${value}-`)) {
-					found[key].add(decl.prop);
+			// Iterate over custom property DEFINITIONS
+			values.forEach((property) => {
+				if (decl.prop.startsWith(`--${property}-`)) {
+					// Remove the -- prefix in order to create a clean key
+					const cleanProp = decl.prop.replace(/^--/, "");
+					const prevDefinition = found[key]?.[cleanProp];
+					let usedBy = [];
+					if (decl.parent?.selector) {
+						usedBy = [ decl.parent.selector ];
+					}
+
+					let value;
+					if (decl.value) {
+						value = decl.value?.replaceAll(/[\n|\t]/g, "");
+					}
+
+					found[key][cleanProp] = [
+						...(prevDefinition ?? []),
+						{ type: "definition", value, usedBy },
+					];
 				}
 			});
 
-			// Parse the value of the declaration to extract custom properties
+			// Parse the value of the declaration to extract custom properties being USED
 			valuesParser.parse(decl.value).walk((node) => {
-				if (node.type !== "word" || !node.isVariable) return;
+				if (!node || node.type !== "word" || !node.isVariable) return;
 
 				// Extract the custom property name from the var() function
-				values.forEach((value) => {
-					if (node.value.startsWith(`--${value}-`)) {
-						found[key].add(node.value);
+				values.forEach((property) => {
+					if (!node.value?.startsWith(`--${property}-`)) return;
+
+					const cleanProp = node.value.replace(/^--/, "");
+					const prevReference = found[key]?.[cleanProp];
+					let value = decl.value?.replaceAll(/[\n|\t]/g, "");
+
+					let usedBy = [];
+					if (decl.prop.startsWith("--")) {
+						usedBy = [ decl.prop ];
 					}
+					else if (decl.parent?.selector) {
+						usedBy = [ decl.parent.selector ];
+					}
+
+					let fallback;
+					node.parent?.nodes?.forEach((leaf, idx) => {
+						// if cleanProp is the first node, capture the last node as the fallback
+						if (idx > 0 && leaf.type !== "punctuation" && leaf.params) {
+							fallback = `${leaf.name}${leaf.params}`;
+						}
+					});
+
+					if (value.includes(cleanProp)) {
+						// Unset the value if the custom property is used in the value
+						value = fallback;
+					}
+
+					found[key][cleanProp] = [
+						...(prevReference ?? []),
+						{ type: "reference", value, usedBy, fallback },
+					];
 				});
 			});
 		});
 	});
 
-	// Sort the custom properties alphabetically and return them as an array
-	Object.keys(found).forEach((key) => {
-		found[key] = [...found[key]].sort();
+	Object.keys(meta).forEach((key) => {
+		Object.entries(found[key]).forEach(([prop, data]) => {
+			if (Array.isArray(data)) {
+				found[key][prop] = getArgType(prop, data);
+			}
+			else {
+				found[key][prop] = getArgType(prop, [ data ]);
+			}
+		});
 	});
 
 	return found;

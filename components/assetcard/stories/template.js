@@ -11,6 +11,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-AssetCard",
+	id = getRandomId("asset-card"),
 	image,
 	exampleImage,
 	title,
@@ -22,7 +23,6 @@ export const Template = ({
 	isDropTarget = false,
 	customClasses = [],
 	customStyles = {},
-	id = getRandomId("assetcard"),
 	testId,
 } = {}, context = {}) => {
 	const { updateArgs } = context;

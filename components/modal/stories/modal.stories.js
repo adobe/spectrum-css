@@ -2,9 +2,11 @@ import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { ModalGroup } from "./modal.test.js";
+
+// Local assets to render the component styles and structure
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
-import { ModalGroup } from "./modal.test.js";
 
 /**
  * A modal component is a dialog box/popup window that is displayed on top of the current page using `position: fixed`.
@@ -53,6 +55,10 @@ export default {
 		metadata,
 		status: {
 			type: "unmigrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	decorators: [

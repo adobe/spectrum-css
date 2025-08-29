@@ -2,10 +2,12 @@ import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/deco
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isKeyboardFocused, isReadOnly, size } from "@spectrum-css/preview/types";
 import { default as TextfieldStories } from "@spectrum-css/textfield/stories/textfield.stories.js";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { NumberFieldGroup } from "./stepper.test.js";
 import { AllDefaultVariantsGroup, DisabledVariantsGroup, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * A number field can be used to increment or decrement a value by a specified amount via add and subtract buttons. The input field displays the current value.
@@ -80,15 +82,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		actions: {
-			handles: ["click .spectrum-InfieldButton:not([disabled])"],
-		},
-		downState: {
-			selectors: [".spectrum-InfieldButton:not(:disabled)"],
-		},
-		status: {
-			type: "migrated",
-		},
+		cssprops: metadata.modifiers,
 	},
 	tags: ["migrated"],
 	decorators: [

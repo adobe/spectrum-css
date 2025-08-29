@@ -1,10 +1,12 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isChecked, isDisabled, isEmphasized, isFocused, isHovered, isReadOnly, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
 import { BasicGroupTemplate } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
@@ -66,9 +68,7 @@ export default {
 		},
 		packageJson,
 		metadata,
-		status: {
-			type: "migrated",
-		},
+		cssprops: metadata.modifiers,
 	},
 	tags: ["migrated"],
 };

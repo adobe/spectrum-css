@@ -9,12 +9,12 @@
     ".spectrum-Card--gallery .spectrum-Card-preview",
     ".spectrum-Card--gallery .spectrum-Card-preview:after",
     ".spectrum-Card--gallery .spectrum-Card-preview:before",
+    ".spectrum-Card--gallery:before",
+    ".spectrum-Card--gallery:hover .spectrum-Card-preview",
     ".spectrum-Card--gallery.is-drop-target",
     ".spectrum-Card--gallery.is-drop-target .spectrum-Card-preview",
     ".spectrum-Card--gallery.is-drop-target .spectrum-Card-preview:before",
     ".spectrum-Card--gallery.is-selected .spectrum-Card-preview:before",
-    ".spectrum-Card--gallery:before",
-    ".spectrum-Card--gallery:hover .spectrum-Card-preview",
     ".spectrum-Card--horizontal",
     ".spectrum-Card--horizontal .spectrum-Card-body",
     ".spectrum-Card--horizontal .spectrum-Card-content",
@@ -35,14 +35,6 @@
     ".spectrum-Card-subtitle",
     ".spectrum-Card-subtitle + .spectrum-Card-description:before",
     ".spectrum-Card-title",
-    ".spectrum-Card.is-drop-target",
-    ".spectrum-Card.is-focused .spectrum-Card-actions",
-    ".spectrum-Card.is-focused .spectrum-Card-quickActions",
-    ".spectrum-Card.is-selected",
-    ".spectrum-Card.is-selected .spectrum-Card-actions",
-    ".spectrum-Card.is-selected .spectrum-Card-quickActions",
-    ".spectrum-Card.is-selected:before",
-    ".spectrum-Card.spectrum-Card--gallery",
     ".spectrum-Card:after",
     ".spectrum-Card:before",
     ".spectrum-Card:focus .spectrum-Card-actions",
@@ -53,143 +45,738 @@
     ".spectrum-Card:focus-visible:after",
     ".spectrum-Card:hover",
     ".spectrum-Card:hover .spectrum-Card-actions",
-    ".spectrum-Card:hover .spectrum-Card-quickActions"
+    ".spectrum-Card:hover .spectrum-Card-quickActions",
+    ".spectrum-Card.is-drop-target",
+    ".spectrum-Card.is-focused .spectrum-Card-actions",
+    ".spectrum-Card.is-focused .spectrum-Card-quickActions",
+    ".spectrum-Card.is-selected",
+    ".spectrum-Card.is-selected .spectrum-Card-actions",
+    ".spectrum-Card.is-selected .spectrum-Card-quickActions",
+    ".spectrum-Card.is-selected:before",
+    ".spectrum-Card.spectrum-Card--gallery"
   ],
-  "modifiers": [
-    "--mod-animation-duration-100",
-    "--mod-card-actions-border-radius",
-    "--mod-card-actions-drop-shadow-blur",
-    "--mod-card-actions-drop-shadow-color",
-    "--mod-card-actions-drop-shadow-x",
-    "--mod-card-actions-drop-shadow-y",
-    "--mod-card-actions-size",
-    "--mod-card-actions-spacing",
-    "--mod-card-animation-duration",
-    "--mod-card-background-color",
-    "--mod-card-background-color-hover",
-    "--mod-card-background-color-selected",
-    "--mod-card-body-font-color",
-    "--mod-card-body-font-family",
-    "--mod-card-body-font-size",
-    "--mod-card-body-font-style",
-    "--mod-card-body-font-weight",
-    "--mod-card-body-line-height",
-    "--mod-card-body-padding-block-end",
-    "--mod-card-body-padding-block-start",
-    "--mod-card-body-padding-inline-end",
-    "--mod-card-body-padding-inline-start",
-    "--mod-card-body-spacing",
-    "--mod-card-border-color",
-    "--mod-card-border-color-hover",
-    "--mod-card-border-color-selected",
-    "--mod-card-border-width",
-    "--mod-card-content-margin-bottom",
-    "--mod-card-content-margin-top",
-    "--mod-card-corner-radius",
-    "--mod-card-divider-color",
-    "--mod-card-focus-indicator-color",
-    "--mod-card-focus-indicator-width",
-    "--mod-card-footer-margin-block-start",
-    "--mod-card-footer-margin-inline-end",
-    "--mod-card-footer-margin-inline-start",
-    "--mod-card-footer-padding-block-end",
-    "--mod-card-footer-padding-block-start",
-    "--mod-card-horizontal-body-padding",
-    "--mod-card-horizontal-preview-padding",
-    "--mod-card-minimum-width",
-    "--mod-card-preview-background-color",
-    "--mod-card-preview-background-color-hover",
-    "--mod-card-preview-minimum-height",
-    "--mod-card-selected-background-color-rgb",
-    "--mod-card-selected-background-opacity",
-    "--mod-card-subtitle-padding-right",
-    "--mod-card-title-font-color",
-    "--mod-card-title-font-family",
-    "--mod-card-title-font-size",
-    "--mod-card-title-font-style",
-    "--mod-card-title-font-weight",
-    "--mod-card-title-line-height",
-    "--mod-card-title-padding-right",
-    "--mod-overlay-animation-duration"
-  ],
-  "component": [
-    "--spectrum-card-actions-border-radius",
-    "--spectrum-card-actions-drop-shadow-blur",
-    "--spectrum-card-actions-drop-shadow-color",
-    "--spectrum-card-actions-drop-shadow-x",
-    "--spectrum-card-actions-drop-shadow-y",
-    "--spectrum-card-actions-size",
-    "--spectrum-card-actions-spacing",
-    "--spectrum-card-background-color",
-    "--spectrum-card-body-font-color",
-    "--spectrum-card-body-font-family",
-    "--spectrum-card-body-font-size",
-    "--spectrum-card-body-font-style",
-    "--spectrum-card-body-font-weight",
-    "--spectrum-card-body-line-height",
-    "--spectrum-card-body-padding-block-start",
-    "--spectrum-card-body-spacing",
-    "--spectrum-card-border-color",
-    "--spectrum-card-border-color-hover",
-    "--spectrum-card-border-color-selected",
-    "--spectrum-card-border-width",
-    "--spectrum-card-content-margin-bottom",
-    "--spectrum-card-content-margin-top",
-    "--spectrum-card-corner-radius",
-    "--spectrum-card-divider-color",
-    "--spectrum-card-focus-indicator-color",
-    "--spectrum-card-focus-indicator-width",
-    "--spectrum-card-footer-padding-top",
-    "--spectrum-card-horizontal-body-padding",
-    "--spectrum-card-horizontal-preview-padding",
-    "--spectrum-card-minimum-width",
-    "--spectrum-card-preview-background-color",
-    "--spectrum-card-preview-background-color-hover",
-    "--spectrum-card-preview-minimum-height",
-    "--spectrum-card-selected-background-color-rgb",
-    "--spectrum-card-selected-background-opacity",
-    "--spectrum-card-selection-background-color",
-    "--spectrum-card-selection-background-size",
-    "--spectrum-card-subtitle-padding-right",
-    "--spectrum-card-title-font-color",
-    "--spectrum-card-title-font-family",
-    "--spectrum-card-title-font-size",
-    "--spectrum-card-title-font-style",
-    "--spectrum-card-title-font-weight",
-    "--spectrum-card-title-line-height",
-    "--spectrum-card-title-padding-right"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-background-base-color",
-    "--spectrum-background-layer-2-color",
-    "--spectrum-blue-700",
-    "--spectrum-body-color",
-    "--spectrum-body-line-height",
-    "--spectrum-body-sans-serif-font-style",
-    "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-body-size-s",
-    "--spectrum-border-width-100",
-    "--spectrum-corner-radius-100",
-    "--spectrum-drop-shadow-blur",
-    "--spectrum-drop-shadow-color",
-    "--spectrum-drop-shadow-x",
-    "--spectrum-drop-shadow-y",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-heading-color",
-    "--spectrum-heading-line-height",
-    "--spectrum-heading-sans-serif-font-style",
-    "--spectrum-heading-sans-serif-font-weight",
-    "--spectrum-heading-size-xxs",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-200",
-    "--spectrum-spacing-300",
-    "--spectrum-spacing-400"
-  ],
-  "passthroughs": [],
-  "high-contrast": []
+  "modifiers": {
+    "mod-card-border-color": {
+      "description": "Defined in `.spectrum-Card.is-selected`, `.spectrum-Card:hover`, `.spectrum-Card--horizontal:hover .spectrum-Card-preview`. <br/>Used by `--spectrum-card-border-color`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-border-color-hover": {
+      "description": "Defined in `.spectrum-Card--gallery`. <br/>Used by `--spectrum-card-border-color-hover`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-border-color-selected": {
+      "description": "Used by `--spectrum-card-border-color-selected`. <br/>Defaults to `var(--spectrum-blue-700)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-divider-color": {
+      "description": "Used by `--spectrum-card-divider-color`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-preview-background-color": {
+      "description": "Used by `--spectrum-card-preview-background-color`. <br/>Defaults to `var(--mod-card-background-color, var(--spectrum-gray-100))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-background-color": {
+      "description": "Defined in `.spectrum-Card.is-drop-target`. <br/>Used by `--spectrum-card-preview-background-color`, `--spectrum-card-background-color`. <br/>Defaults to `var(--spectrum-background-layer-2-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-preview-background-color-hover": {
+      "description": "Used by `--spectrum-card-preview-background-color-hover`. <br/>Defaults to `var(--mod-card-background-color-hover, var(--spectrum-gray-200))`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-background-color-hover": {
+      "description": "Used by `--spectrum-card-preview-background-color-hover`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-body-spacing": {
+      "description": "Used by `--spectrum-card-body-spacing`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-padding-block-start": {
+      "description": "Used by `--spectrum-card-body-padding-block-start`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-title-padding-right": {
+      "description": "Used by `--spectrum-card-title-padding-right`. <br/>Defaults to `var(--spectrum-spacing-400)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-content-margin-top": {
+      "description": "Used by `--spectrum-card-content-margin-top`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-content-margin-bottom": {
+      "description": "Used by `--spectrum-card-content-margin-bottom`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-footer-padding-block-start": {
+      "description": "Used by `--spectrum-card-footer-padding-top`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-subtitle-padding-right": {
+      "description": "Used by `--spectrum-card-subtitle-padding-right`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-border-width": {
+      "description": "Used by `--spectrum-card-border-width`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-corner-radius": {
+      "description": "Used by `--spectrum-card-corner-radius`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-title-font-family": {
+      "description": "Used by `--spectrum-card-title-font-family`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-title-font-size": {
+      "description": "Used by `--spectrum-card-title-font-size`. <br/>Defaults to `var(--spectrum-heading-size-xxs)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-title-font-weight": {
+      "description": "Used by `--spectrum-card-title-font-weight`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-title-font-style": {
+      "description": "Used by `--spectrum-card-title-font-style`. <br/>Defaults to `var(--spectrum-heading-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-title-line-height": {
+      "description": "Used by `--spectrum-card-title-line-height`. <br/>Defaults to `var(--spectrum-heading-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-title-font-color": {
+      "description": "Used by `--spectrum-card-title-font-color`. <br/>Defaults to `var(--spectrum-heading-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-body-font-family": {
+      "description": "Used by `--spectrum-card-body-font-family`. <br/>Defaults to `var(--spectrum-sans-font-family-stack)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-font-size": {
+      "description": "Used by `--spectrum-card-body-font-size`. <br/>Defaults to `var(--spectrum-body-size-s)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-font-weight": {
+      "description": "Used by `--spectrum-card-body-font-weight`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-font-style": {
+      "description": "Used by `--spectrum-card-body-font-style`. <br/>Defaults to `var(--spectrum-body-sans-serif-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-line-height": {
+      "description": "Used by `--spectrum-card-body-line-height`. <br/>Defaults to `var(--spectrum-body-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-font-color": {
+      "description": "Used by `--spectrum-card-body-font-color`. <br/>Defaults to `var(--spectrum-body-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-actions-spacing": {
+      "description": "Used by `--spectrum-card-actions-spacing`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-actions-size": {
+      "description": "Used by `--spectrum-card-actions-size`. <br/>Defaults to `var(--spectrum-card-selection-background-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-actions-border-radius": {
+      "description": "Used by `--spectrum-card-actions-border-radius`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-actions-drop-shadow-color": {
+      "description": "Used by `--spectrum-card-actions-drop-shadow-color`. <br/>Defaults to `var(--spectrum-drop-shadow-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-actions-drop-shadow-x": {
+      "description": "Used by `--spectrum-card-actions-drop-shadow-x`. <br/>Defaults to `var(--spectrum-drop-shadow-x)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-actions-drop-shadow-y": {
+      "description": "Used by `--spectrum-card-actions-drop-shadow-y`. <br/>Defaults to `var(--spectrum-drop-shadow-y)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-actions-drop-shadow-blur": {
+      "description": "Used by `--spectrum-card-actions-drop-shadow-blur`. <br/>Defaults to `var(--spectrum-drop-shadow-blur)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-focus-indicator-color": {
+      "description": "Used by `--spectrum-card-focus-indicator-color`. <br/>Defaults to `var(--spectrum-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-card-focus-indicator-width": {
+      "description": "Used by `--spectrum-card-focus-indicator-width`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-selected-background-opacity": {
+      "description": "Used by `--spectrum-card-selected-background-opacity`, `.spectrum-Card--gallery.is-selected .spectrum-Card-preview:before`. <br/>Defaults to `var(--spectrum-card-selected-background-opacity)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-horizontal-body-padding": {
+      "description": "Used by `--spectrum-card-horizontal-body-padding`. <br/>Defaults to `var(--spectrum-spacing-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-horizontal-preview-padding": {
+      "description": "Used by `--spectrum-card-horizontal-preview-padding`. <br/>Defaults to `var(--spectrum-spacing-200)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-minimum-width": {
+      "description": "Used by `.spectrum-Card`. <br/>Defaults to `var(--spectrum-card-minimum-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-background-color-selected": {
+      "description": "Used by `.spectrum-Card.is-selected:before`. <br/>Defaults to `var(--spectrum-card-selection-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-overlay-animation-duration": {
+      "description": "Used by `.spectrum-Card-quickActions`. <br/>Defaults to `var(--spectrum-animation-duration-100, 0.13s)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-preview-minimum-height": {
+      "description": "Used by `.spectrum-Card-coverPhoto`, `.spectrum-Card--gallery .spectrum-Card-preview`. <br/>Defaults to `var(--spectrum-card-preview-minimum-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-padding-inline-end": {
+      "description": "Used by `.spectrum-Card-body`. <br/>Defaults to `calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-padding-inline-start": {
+      "description": "Used by `.spectrum-Card-body`. <br/>Defaults to `calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-body-padding-block-end": {
+      "description": "Used by `.spectrum-Card-body`. <br/>Defaults to `calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-footer-margin-block-start": {
+      "description": "Used by `.spectrum-Card-footer`. <br/>Defaults to `calc((var(--spectrum-card-body-spacing) - var(--spectrum-card-content-margin-bottom)) * -1)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-footer-margin-inline-start": {
+      "description": "Used by `.spectrum-Card-footer`. <br/>Defaults to `var(--spectrum-card-body-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-footer-margin-inline-end": {
+      "description": "Used by `.spectrum-Card-footer`. <br/>Defaults to `var(--spectrum-card-body-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-footer-padding-block-end": {
+      "description": "Used by `.spectrum-Card-footer`. <br/>Defaults to `calc(var(--spectrum-card-body-spacing) - var(--spectrum-card-border-width))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-animation-duration": {
+      "description": "Used by `.spectrum-Card--gallery .spectrum-Card-preview`. <br/>Defaults to `var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-animation-duration-100": {
+      "description": "Used by `.spectrum-Card--gallery .spectrum-Card-preview`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-card-selected-background-color-rgb": {
+      "description": "Used by `.spectrum-Card--gallery.is-selected .spectrum-Card-preview:before`. <br/>Defaults to `var(--spectrum-card-selected-background-color-rgb)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-card-border-color": {
+      "value": "var(--mod-card-border-color, var(--spectrum-gray-100))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card`, `.spectrum-Card.is-drop-target`, `.spectrum-Card-coverPhoto`, `.spectrum-Card--horizontal .spectrum-Card-preview`. <br/>Defaults to `var(--mod-card-border-color, var(--spectrum-gray-100))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-border-color-hover": {
+      "value": "var(--mod-card-border-color-hover, var(--spectrum-gray-200))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `--mod-card-border-color`. <br/>Defaults to `var(--mod-card-border-color-hover, var(--spectrum-gray-200))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-border-color-selected": {
+      "value": "var(--mod-card-border-color-selected, var(--spectrum-blue-700))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `--mod-card-border-color`. <br/>Defaults to `var(--mod-card-border-color-selected, var(--spectrum-blue-700))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-divider-color": {
+      "value": "var(--mod-card-divider-color, var(--spectrum-gray-200))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-footer`. <br/>Defaults to `var(--mod-card-divider-color, var(--spectrum-gray-200))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-preview-background-color": {
+      "value": "var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-gray-100)))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-coverPhoto`, `.spectrum-Card--gallery .spectrum-Card-preview`, `.spectrum-Card--gallery.is-drop-target .spectrum-Card-preview`, `.spectrum-Card--horizontal .spectrum-Card-preview`. <br/>Defaults to `var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-gray-100)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-preview-background-color-hover": {
+      "value": "var(--mod-card-preview-background-color-hover, var(--mod-card-background-color-hover, var(--spectrum-gray-200)))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card--gallery:hover .spectrum-Card-preview`. <br/>Defaults to `var(--mod-card-preview-background-color-hover, var(--mod-card-background-color-hover, var(--spectrum-gray-200)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-background-color": {
+      "value": "var(--mod-card-background-color, var(--spectrum-background-layer-2-color))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card`. <br/>Defaults to `var(--mod-card-background-color, var(--spectrum-background-layer-2-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-body-spacing": {
+      "value": "var(--mod-card-body-spacing, var(--spectrum-spacing-400))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-body`, `.spectrum-Card-footer`. <br/>Defaults to `var(--mod-card-body-spacing, var(--spectrum-spacing-400))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-body-padding-block-start": {
+      "value": "var(--mod-card-body-padding-block-start, var(--spectrum-spacing-300))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-body`. <br/>Defaults to `var(--mod-card-body-padding-block-start, var(--spectrum-spacing-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-title-padding-right": {
+      "value": "var(--mod-card-title-padding-right, var(--spectrum-spacing-400))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-title`. <br/>Defaults to `var(--mod-card-title-padding-right, var(--spectrum-spacing-400))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-content-margin-top": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Card`, `.spectrum-Card.spectrum-Card--gallery`. <br/>Used by `.spectrum-Card-content`, `.spectrum-Card--gallery .spectrum-Card-body`. <br/>Defaults to `var(--spectrum-spacing-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-content-margin-bottom": {
+      "value": "var(--mod-card-content-margin-bottom, var(--spectrum-spacing-300))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-footer`. <br/>Defaults to `var(--mod-card-content-margin-bottom, var(--spectrum-spacing-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-footer-padding-top": {
+      "value": "var(--mod-card-footer-padding-block-start, var(--spectrum-spacing-100))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-footer`. <br/>Defaults to `var(--mod-card-footer-padding-block-start, var(--spectrum-spacing-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-subtitle-padding-right": {
+      "value": "var(--mod-card-subtitle-padding-right, var(--spectrum-spacing-100))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-subtitle`, `.spectrum-Card-subtitle + .spectrum-Card-description:before`. <br/>Defaults to `var(--mod-card-subtitle-padding-right, var(--spectrum-spacing-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-border-width": {
+      "value": "var(--mod-card-border-width, var(--spectrum-border-width-100))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card`, `.spectrum-Card-quickActions`, `.spectrum-Card-coverPhoto`, `.spectrum-Card-body`, `.spectrum-Card-footer`, `.spectrum-Card--horizontal .spectrum-Card-preview`. <br/>Defaults to `var(--mod-card-border-width, var(--spectrum-border-width-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-corner-radius": {
+      "value": "var(--mod-card-corner-radius, var(--spectrum-corner-radius-100))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card`, `.spectrum-Card:after`, `.spectrum-Card:focus-visible .spectrum-Card-coverPhoto, .spectrum-Card:focus-visible .spectrum-Card-preview`, `.spectrum-Card-coverPhoto`, `.spectrum-Card-preview`, `.spectrum-Card--gallery .spectrum-Card-preview`, `.spectrum-Card--gallery .spectrum-Card-preview:after`, `.spectrum-Card--horizontal .spectrum-Card-preview`. <br/>Defaults to `var(--mod-card-corner-radius, var(--spectrum-corner-radius-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-title-font-family": {
+      "value": "var(--mod-card-title-font-family, var(--spectrum-sans-font-family-stack))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-title`. <br/>Defaults to `var(--mod-card-title-font-family, var(--spectrum-sans-font-family-stack))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-title-font-size": {
+      "value": "var(--mod-card-title-font-size, var(--spectrum-heading-size-xxs))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-title`. <br/>Defaults to `var(--mod-card-title-font-size, var(--spectrum-heading-size-xxs))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-title-font-weight": {
+      "value": "var(--mod-card-title-font-weight, var(--spectrum-heading-sans-serif-font-weight))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-title`. <br/>Defaults to `var(--mod-card-title-font-weight, var(--spectrum-heading-sans-serif-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-title-font-style": {
+      "value": "var(--mod-card-title-font-style, var(--spectrum-heading-sans-serif-font-style))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-title`. <br/>Defaults to `var(--mod-card-title-font-style, var(--spectrum-heading-sans-serif-font-style))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-title-line-height": {
+      "value": "var(--mod-card-title-line-height, var(--spectrum-heading-line-height))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-title`. <br/>Defaults to `var(--mod-card-title-line-height, var(--spectrum-heading-line-height))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-title-font-color": {
+      "value": "var(--mod-card-title-font-color, var(--spectrum-heading-color))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-title`, `.spectrum-Card-subtitle`. <br/>Defaults to `var(--mod-card-title-font-color, var(--spectrum-heading-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-body-font-family": {
+      "value": "var(--mod-card-body-font-family, var(--spectrum-sans-font-family-stack))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-description`. <br/>Defaults to `var(--mod-card-body-font-family, var(--spectrum-sans-font-family-stack))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-body-font-size": {
+      "value": "var(--mod-card-body-font-size, var(--spectrum-body-size-s))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-description`. <br/>Defaults to `var(--mod-card-body-font-size, var(--spectrum-body-size-s))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-body-font-weight": {
+      "value": "var(--mod-card-body-font-weight, var(--spectrum-body-sans-serif-font-weight))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-description`. <br/>Defaults to `var(--mod-card-body-font-weight, var(--spectrum-body-sans-serif-font-weight))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-body-font-style": {
+      "value": "var(--mod-card-body-font-style, var(--spectrum-body-sans-serif-font-style))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-description`. <br/>Defaults to `var(--mod-card-body-font-style, var(--spectrum-body-sans-serif-font-style))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-body-line-height": {
+      "value": "var(--mod-card-body-line-height, var(--spectrum-body-line-height))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-description, .spectrum-Card-footer`. <br/>Defaults to `var(--mod-card-body-line-height, var(--spectrum-body-line-height))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-body-font-color": {
+      "value": "var(--mod-card-body-font-color, var(--spectrum-body-color))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-preview`, `.spectrum-Card-description, .spectrum-Card-footer`. <br/>Defaults to `var(--mod-card-body-font-color, var(--spectrum-body-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-actions-spacing": {
+      "value": "var(--mod-card-actions-spacing, var(--spectrum-spacing-300))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-quickActions`, `.spectrum-Card-actions`. <br/>Defaults to `var(--mod-card-actions-spacing, var(--spectrum-spacing-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-actions-size": {
+      "value": "var(--mod-card-actions-size, var(--spectrum-card-selection-background-size))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-quickActions`. <br/>Defaults to `var(--mod-card-actions-size, var(--spectrum-card-selection-background-size))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-selection-background-size": {
+      "value": "40px",
+      "description": "Used by `--spectrum-card-actions-size`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-actions-border-radius": {
+      "value": "var(--mod-card-actions-border-radius, var(--spectrum-corner-radius-100))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-quickActions`. <br/>Defaults to `var(--mod-card-actions-border-radius, var(--spectrum-corner-radius-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-actions-drop-shadow-color": {
+      "value": "var(--mod-card-actions-drop-shadow-color, var(--spectrum-drop-shadow-color))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-quickActions`. <br/>Defaults to `var(--mod-card-actions-drop-shadow-color, var(--spectrum-drop-shadow-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-actions-drop-shadow-x": {
+      "value": "var(--mod-card-actions-drop-shadow-x, var(--spectrum-drop-shadow-x))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-quickActions`. <br/>Defaults to `var(--mod-card-actions-drop-shadow-x, var(--spectrum-drop-shadow-x))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-actions-drop-shadow-y": {
+      "value": "var(--mod-card-actions-drop-shadow-y, var(--spectrum-drop-shadow-y))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-quickActions`. <br/>Defaults to `var(--mod-card-actions-drop-shadow-y, var(--spectrum-drop-shadow-y))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-actions-drop-shadow-blur": {
+      "value": "var(--mod-card-actions-drop-shadow-blur, var(--spectrum-drop-shadow-blur))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card-quickActions`. <br/>Defaults to `var(--mod-card-actions-drop-shadow-blur, var(--spectrum-drop-shadow-blur))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-focus-indicator-color": {
+      "value": "var(--mod-card-focus-indicator-color, var(--spectrum-focus-indicator-color))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card:focus-visible:after`, `.spectrum-Card--gallery.is-drop-target .spectrum-Card-preview:before`. <br/>Defaults to `var(--mod-card-focus-indicator-color, var(--spectrum-focus-indicator-color))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-focus-indicator-width": {
+      "value": "var(--mod-card-focus-indicator-width, var(--spectrum-focus-indicator-thickness))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card:after`, `.spectrum-Card:focus-visible:after`, `.spectrum-Card:focus-visible .spectrum-Card-coverPhoto, .spectrum-Card:focus-visible .spectrum-Card-preview`, `.spectrum-Card--gallery .spectrum-Card-preview:after`. <br/>Defaults to `var(--mod-card-focus-indicator-width, var(--spectrum-focus-indicator-thickness))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-selected-background-opacity": {
+      "value": "var(--mod-card-selected-background-opacity, 0.1)",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card--gallery.is-selected .spectrum-Card-preview:before`. <br/>Defaults to `var(--mod-card-selected-background-opacity, 0.1)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-horizontal-body-padding": {
+      "value": "var(--mod-card-horizontal-body-padding, var(--spectrum-spacing-300))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card--horizontal .spectrum-Card-body`. <br/>Defaults to `var(--mod-card-horizontal-body-padding, var(--spectrum-spacing-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-horizontal-preview-padding": {
+      "value": "var(--mod-card-horizontal-preview-padding, var(--spectrum-spacing-200))",
+      "description": "Defined in `.spectrum-Card`. <br/>Used by `.spectrum-Card--horizontal .spectrum-Card-preview`. <br/>Defaults to `var(--mod-card-horizontal-preview-padding, var(--spectrum-spacing-200))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-minimum-width": {
+      "value": "100px",
+      "description": "Used by `.spectrum-Card`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-selection-background-color": {
+      "value": "rgba(0, 0, 0, 0.56)",
+      "description": "Used by `.spectrum-Card.is-selected:before`, `.spectrum-Card-quickActions`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-card-preview-minimum-height": {
+      "value": "130px",
+      "description": "Used by `.spectrum-Card-coverPhoto`, `.spectrum-Card--gallery .spectrum-Card-preview`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-card-selected-background-color-rgb": {
+      "description": "Used by `.spectrum-Card--gallery.is-selected .spectrum-Card-preview:before`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Used by `--spectrum-card-border-color`, `--spectrum-card-preview-background-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-card-border-color-hover`, `--spectrum-card-divider-color`, `--spectrum-card-preview-background-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-blue-700": {
+      "value": "light-dark(rgb(93, 137, 255), rgb(52, 91, 248))",
+      "description": "Used by `--spectrum-card-border-color-selected`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-background-layer-2-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Used by `--spectrum-card-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-spacing-400": {
+      "value": "24px",
+      "description": "Used by `--spectrum-card-body-spacing`, `--spectrum-card-title-padding-right`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-300": {
+      "value": "16px",
+      "description": "Used by `--spectrum-card-body-padding-block-start`, `--spectrum-card-content-margin-bottom`, `--spectrum-card-actions-spacing`, `--spectrum-card-horizontal-body-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-100": {
+      "value": "8px",
+      "description": "Used by `--spectrum-card-content-margin-top`, `--spectrum-card-footer-padding-top`, `--spectrum-card-subtitle-padding-right`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "value": "1px",
+      "description": "Used by `--spectrum-card-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "value": "4px",
+      "description": "Used by `--spectrum-card-corner-radius`, `--spectrum-card-actions-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `--spectrum-card-title-font-family`, `--spectrum-card-body-font-family`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-size-xxs": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-card-title-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-weight": {
+      "value": "800",
+      "description": "Used by `--spectrum-card-title-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-card-title-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-line-height": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-card-title-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-card-title-font-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-body-size-s": {
+      "value": "var(--spectrum-font-size-100)",
+      "description": "Used by `--spectrum-card-body-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-weight": {
+      "value": "400",
+      "description": "Used by `--spectrum-card-body-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-sans-serif-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-card-body-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-line-height": {
+      "value": "1.5",
+      "description": "Used by `--spectrum-card-body-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-body-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-card-body-font-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-color": {
+      "value": "var(--spectrum-drop-shadow-color-100)",
+      "description": "Used by `--spectrum-card-actions-drop-shadow-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-x": {
+      "value": "0px",
+      "description": "Used by `--spectrum-card-actions-drop-shadow-x`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-y": {
+      "value": "1px",
+      "description": "Used by `--spectrum-card-actions-drop-shadow-y`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-blur": {
+      "value": "6px",
+      "description": "Used by `--spectrum-card-actions-drop-shadow-blur`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-card-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-card-focus-indicator-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-spacing-200": {
+      "value": "12px",
+      "description": "Used by `--spectrum-card-horizontal-preview-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-background-base-color": {
+      "value": "var(--spectrum-gray-25)",
+      "description": "Used by `--mod-card-background-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-Card-quickActions`, `.spectrum-Card--gallery .spectrum-Card-preview`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {}
 }

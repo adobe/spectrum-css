@@ -56,6 +56,9 @@ export const Template = ({
 		}, 0);
 	}
 
+	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
+	const adjustedPopoverHeight = showFieldLabel ? popoverHeight : popoverHeight + 32; // Subtract label height when no label
+
 	return html`
 		<div
 			class=${classMap({
@@ -75,7 +78,10 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId ?? id)}
-			style=${styleMap(customStyles)}
+			style=${styleMap({
+				...customStyles,
+				["margin-block-end"]: !isReadOnly && isOpen && !isDisabled ? `${adjustedPopoverHeight}px` : undefined,
+			})}
 			role="combobox"
 			aria-expanded=${isOpen}
 			aria-haspopup="listbox"
@@ -144,6 +150,7 @@ export const Template = ({
 					"inline-size": size === "s" ? "192px" : size === "l" ? "224px" : size === "xl" ? "240px" : "208px",
 				},
 				content,
+				popoverHeight,
 			}, context)}
 			${when(helpText, () =>
 				HelpText({

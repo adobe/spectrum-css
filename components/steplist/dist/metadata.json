@@ -3,8 +3,8 @@
   "selectors": [
     ".spectrum-Steplist",
     ".spectrum-Steplist--interactive .spectrum-Steplist-item :focus .spectrum-Steplist-marker",
-    ".spectrum-Steplist--interactive .spectrum-Steplist-item.is-focused .spectrum-Steplist-marker",
     ".spectrum-Steplist--interactive .spectrum-Steplist-item:focus .spectrum-Steplist-marker",
+    ".spectrum-Steplist--interactive .spectrum-Steplist-item.is-focused .spectrum-Steplist-marker",
     ".spectrum-Steplist--interactive .spectrum-Steplist-label",
     ".spectrum-Steplist--interactive .spectrum-Steplist-markerContainer",
     ".spectrum-Steplist--small",
@@ -15,15 +15,6 @@
     ".spectrum-Steplist--small .spectrum-Steplist-item:last-child",
     ".spectrum-Steplist--small .spectrum-Steplist-item:last-child .spectrum-Steplist-markerContainer",
     ".spectrum-Steplist-item",
-    ".spectrum-Steplist-item.is-complete + .spectrum-Steplist-item .spectrum-Steplist-segment",
-    ".spectrum-Steplist-item.is-complete .spectrum-Steplist-label",
-    ".spectrum-Steplist-item.is-complete .spectrum-Steplist-marker",
-    ".spectrum-Steplist-item.is-complete .spectrum-Steplist-segment",
-    ".spectrum-Steplist-item.is-selected .spectrum-Steplist-label",
-    ".spectrum-Steplist-item.is-selected .spectrum-Steplist-marker",
-    ".spectrum-Steplist-item.is-selected .spectrum-Steplist-segment",
-    ".spectrum-Steplist-item.is-selected :focus",
-    ".spectrum-Steplist-item.is-selected:focus",
     ".spectrum-Steplist-item:first-child",
     ".spectrum-Steplist-item:first-child .spectrum-Steplist-label",
     ".spectrum-Steplist-item:first-child .spectrum-Steplist-markerContainer",
@@ -36,62 +27,264 @@
     ".spectrum-Steplist-item:only-child .spectrum-Steplist-label",
     ".spectrum-Steplist-item:only-child .spectrum-Steplist-label:dir(rtl)",
     ".spectrum-Steplist-item:only-child .spectrum-Steplist-markerContainer",
+    ".spectrum-Steplist-item.is-complete .spectrum-Steplist-label",
+    ".spectrum-Steplist-item.is-complete .spectrum-Steplist-marker",
+    ".spectrum-Steplist-item.is-complete .spectrum-Steplist-segment",
+    ".spectrum-Steplist-item.is-complete + .spectrum-Steplist-item .spectrum-Steplist-segment",
+    ".spectrum-Steplist-item.is-selected :focus",
+    ".spectrum-Steplist-item.is-selected .spectrum-Steplist-label",
+    ".spectrum-Steplist-item.is-selected .spectrum-Steplist-marker",
+    ".spectrum-Steplist-item.is-selected .spectrum-Steplist-segment",
+    ".spectrum-Steplist-item.is-selected:focus",
     ".spectrum-Steplist-label",
     ".spectrum-Steplist-label:dir(rtl)",
     ".spectrum-Steplist-marker",
     ".spectrum-Steplist-markerContainer",
     ".spectrum-Steplist-segment"
   ],
-  "modifiers": [
-    "--mod-steplist-complete-label-text-color",
-    "--mod-steplist-complete-marker-background-color",
-    "--mod-steplist-complete-segment-border-block-end-color",
-    "--mod-steplist-current-label-text-color",
-    "--mod-steplist-current-marker-color",
-    "--mod-steplist-current-marker-color-key-focus",
-    "--mod-steplist-incomplete-label-color",
-    "--mod-steplist-incomplete-marker-border-color",
-    "--mod-steplist-incomplete-segment-border-block-end-color",
-    "--mod-steplist-label-labelOffset",
-    "--mod-steplist-label-text-size",
-    "--mod-steplist-marker-diameter",
-    "--mod-steplist-marker-hitArea",
-    "--mod-steplist-segment-height",
-    "--mod-steplist-sidePadding",
-    "--mod-steplist-small-topPadding",
-    "--mod-steplist-step-width",
-    "--mod-steplist-topPadding"
-  ],
-  "component": [
-    "--spectrum-steplist-complete-label-text-color",
-    "--spectrum-steplist-complete-marker-background-color",
-    "--spectrum-steplist-complete-segment-border-block-end-color",
-    "--spectrum-steplist-current-label-text-color",
-    "--spectrum-steplist-current-marker-color",
-    "--spectrum-steplist-current-marker-color-key-focus",
-    "--spectrum-steplist-incomplete-label-color",
-    "--spectrum-steplist-incomplete-marker-border-color",
-    "--spectrum-steplist-incomplete-segment-border-block-end-color",
-    "--spectrum-steplist-label-labelOffset",
-    "--spectrum-steplist-label-text-size",
-    "--spectrum-steplist-marker-diameter",
-    "--spectrum-steplist-marker-hitArea",
-    "--spectrum-steplist-segment-height",
-    "--spectrum-steplist-sidePadding",
-    "--spectrum-steplist-small-topPadding",
-    "--spectrum-steplist-step-width",
-    "--spectrum-steplist-topPadding"
-  ],
-  "global": [
-    "--spectrum-gray-200",
-    "--spectrum-gray-600",
-    "--spectrum-gray-700",
-    "--spectrum-gray-800"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-steplist-complete-marker-background-color",
-    "--highcontrast-steplist-current-marker-color",
-    "--highcontrast-steplist-current-marker-color-key-focus"
-  ]
+  "modifiers": {
+    "mod-steplist-topPadding": {
+      "description": "Used by `.spectrum-Steplist`. <br/>Defaults to `var(--spectrum-steplist-topPadding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-sidePadding": {
+      "description": "Used by `.spectrum-Steplist`. <br/>Defaults to `var(--spectrum-steplist-sidePadding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-current-marker-color-key-focus": {
+      "description": "Used by `.spectrum-Steplist--interactive .spectrum-Steplist-item :focus .spectrum-Steplist-marker, .spectrum-Steplist--interactive .spectrum-Steplist-item.is-focused .spectrum-Steplist-marker, .spectrum-Steplist--interactive .spectrum-Steplist-item:focus .spectrum-Steplist-marker`. <br/>Defaults to `var(--spectrum-steplist-current-marker-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-steplist-small-topPadding": {
+      "description": "Used by `.spectrum-Steplist--small`. <br/>Defaults to `var(--spectrum-steplist-small-topPadding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-step-width": {
+      "description": "Used by `.spectrum-Steplist-item`, `.spectrum-Steplist-label`, `.spectrum-Steplist-segment`, `.spectrum-Steplist-item:first-child, .spectrum-Steplist-item:last-child`. <br/>Defaults to `var(--spectrum-steplist-step-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-complete-label-text-color": {
+      "description": "Used by `.spectrum-Steplist-item.is-complete .spectrum-Steplist-label`. <br/>Defaults to `var(--spectrum-steplist-complete-label-text-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-steplist-complete-marker-background-color": {
+      "description": "Used by `.spectrum-Steplist-item.is-complete .spectrum-Steplist-marker`. <br/>Defaults to `var(--spectrum-steplist-complete-marker-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-steplist-segment-height": {
+      "description": "Used by `.spectrum-Steplist-item.is-complete + .spectrum-Steplist-item .spectrum-Steplist-segment`, `.spectrum-Steplist-segment`. <br/>Defaults to `var(--spectrum-steplist-segment-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-current-label-text-color": {
+      "description": "Used by `.spectrum-Steplist-item.is-selected .spectrum-Steplist-label`. <br/>Defaults to `var(--spectrum-steplist-current-label-text-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-steplist-current-marker-color": {
+      "description": "Used by `.spectrum-Steplist-item.is-selected .spectrum-Steplist-marker`. <br/>Defaults to `var(--spectrum-steplist-current-marker-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-steplist-complete-segment-border-block-end-color": {
+      "description": "Used by `.spectrum-Steplist-item.is-complete .spectrum-Steplist-segment, .spectrum-Steplist-item.is-selected .spectrum-Steplist-segment`. <br/>Defaults to `var(--spectrum-steplist-complete-segment-border-block-end-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-steplist-label-labelOffset": {
+      "description": "Used by `.spectrum-Steplist-label`. <br/>Defaults to `var(--spectrum-steplist-label-labelOffset)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-label-text-size": {
+      "description": "Used by `.spectrum-Steplist-label`. <br/>Defaults to `var(--spectrum-steplist-label-text-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-incomplete-label-color": {
+      "description": "Used by `.spectrum-Steplist-label`. <br/>Defaults to `var(--spectrum-steplist-incomplete-label-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-steplist-marker-hitArea": {
+      "description": "Used by `.spectrum-Steplist-markerContainer`, `.spectrum-Steplist-item:last-child .spectrum-Steplist-markerContainer`, `.spectrum-Steplist-item:only-child .spectrum-Steplist-markerContainer`. <br/>Defaults to `var(--spectrum-steplist-marker-hitArea)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-marker-diameter": {
+      "description": "Used by `.spectrum-Steplist-marker`, `.spectrum-Steplist-segment`, `.spectrum-Steplist-item:last-child .spectrum-Steplist-segment`, `.spectrum-Steplist-item:first-child, .spectrum-Steplist-item:last-child`. <br/>Defaults to `var(--spectrum-steplist-marker-diameter)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-steplist-incomplete-marker-border-color": {
+      "description": "Used by `.spectrum-Steplist-marker`. <br/>Defaults to `var(--spectrum-steplist-incomplete-marker-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-steplist-incomplete-segment-border-block-end-color": {
+      "description": "Used by `.spectrum-Steplist-segment`. <br/>Defaults to `var(--spectrum-steplist-incomplete-segment-border-block-end-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-steplist-incomplete-marker-border-color": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-marker`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-steplist-incomplete-segment-border-block-end-color": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-segment`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-steplist-step-width": {
+      "value": "80px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item`, `.spectrum-Steplist-label`, `.spectrum-Steplist-segment`, `.spectrum-Steplist-item:first-child, .spectrum-Steplist-item:last-child`. <br/>Defaults to `80px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-marker-diameter": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-marker`, `.spectrum-Steplist-segment`, `.spectrum-Steplist-item:last-child .spectrum-Steplist-segment`, `.spectrum-Steplist-item:first-child, .spectrum-Steplist-item:last-child`. <br/>Defaults to `8px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-marker-hitArea": {
+      "value": "20px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-markerContainer`, `.spectrum-Steplist-item:last-child .spectrum-Steplist-markerContainer`, `.spectrum-Steplist-item:only-child .spectrum-Steplist-markerContainer`. <br/>Defaults to `20px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-segment-height": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item.is-complete + .spectrum-Steplist-item .spectrum-Steplist-segment`, `.spectrum-Steplist-segment`. <br/>Defaults to `2px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-topPadding": {
+      "value": "22px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist`. <br/>Defaults to `22px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-small-topPadding": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist--small`. <br/>Defaults to `11px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-sidePadding": {
+      "value": "60px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist`. <br/>Defaults to `60px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-label-labelOffset": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-label`. <br/>Defaults to `10px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-label-text-size": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-label`. <br/>Defaults to `12px`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-steplist-current-label-text-color": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item.is-selected .spectrum-Steplist-label`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-steplist-current-marker-color": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item.is-selected .spectrum-Steplist-marker`. <br/>Defaults to `var(--spectrum-gray-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-steplist-complete-label-text-color": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item.is-complete .spectrum-Steplist-label`. <br/>Defaults to `var(--spectrum-gray-700)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-steplist-complete-marker-background-color": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item.is-complete .spectrum-Steplist-marker`. <br/>Defaults to `var(--spectrum-gray-600)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-steplist-complete-segment-border-block-end-color": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item.is-complete .spectrum-Steplist-segment, .spectrum-Steplist-item.is-selected .spectrum-Steplist-segment`. <br/>Defaults to `var(--spectrum-gray-600)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-steplist-incomplete-label-color": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-label`. <br/>Defaults to `var(--spectrum-gray-600)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-steplist-current-marker-color-key-focus": {
+      "description": "Used by `.spectrum-Steplist--interactive .spectrum-Steplist-item :focus .spectrum-Steplist-marker, .spectrum-Steplist--interactive .spectrum-Steplist-item.is-focused .spectrum-Steplist-marker, .spectrum-Steplist--interactive .spectrum-Steplist-item:focus .spectrum-Steplist-marker`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-steplist-incomplete-marker-border-color`, `--spectrum-steplist-incomplete-segment-border-block-end-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-800": {
+      "value": "light-dark(rgb(41, 41, 41), rgb(219, 219, 219))",
+      "description": "Used by `--spectrum-steplist-current-label-text-color`, `--spectrum-steplist-current-marker-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-700": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Used by `--spectrum-steplist-complete-label-text-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-600": {
+      "value": "light-dark(rgb(113, 113, 113), rgb(138, 138, 138))",
+      "description": "Used by `--spectrum-steplist-complete-marker-background-color`, `--spectrum-steplist-complete-segment-border-block-end-color`, `--spectrum-steplist-incomplete-label-color`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-steplist-current-marker-color-key-focus": {
+      "value": "var(--mod-steplist-current-marker-color-key-focus, var(--spectrum-steplist-current-marker-color-key-focus))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist--interactive .spectrum-Steplist-item :focus .spectrum-Steplist-marker, .spectrum-Steplist--interactive .spectrum-Steplist-item.is-focused .spectrum-Steplist-marker, .spectrum-Steplist--interactive .spectrum-Steplist-item:focus .spectrum-Steplist-marker`. <br/>Defaults to `var(--mod-steplist-current-marker-color-key-focus, var(--spectrum-steplist-current-marker-color-key-focus))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-steplist-complete-marker-background-color": {
+      "value": "var(--mod-steplist-complete-marker-background-color, var(--spectrum-steplist-complete-marker-background-color))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item.is-complete .spectrum-Steplist-marker`. <br/>Defaults to `var(--mod-steplist-complete-marker-background-color, var(--spectrum-steplist-complete-marker-background-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-steplist-current-marker-color": {
+      "value": "var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color))",
+      "description": "Defined in `.spectrum-Steplist`. <br/>Used by `.spectrum-Steplist-item.is-selected .spectrum-Steplist-marker`. <br/>Defaults to `var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

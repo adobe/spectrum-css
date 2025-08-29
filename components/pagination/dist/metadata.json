@@ -12,27 +12,102 @@
     ".spectrum-Pagination-textfield",
     ".spectrum-Pagination:dir(rtl)"
   ],
-  "modifiers": [
-    "--mod-pagination-counter-color",
-    "--mod-pagination-counter-font-size",
-    "--mod-pagination-counter-line-height",
-    "--mod-pagination-page-button-inline-spacing",
-    "--mod-pagination-textfield-width"
-  ],
-  "component": [
-    "--spectrum-pagination-counter-color",
-    "--spectrum-pagination-counter-font-size",
-    "--spectrum-pagination-counter-inline-spacing",
-    "--spectrum-pagination-counter-line-height",
-    "--spectrum-pagination-item-inline-spacing",
-    "--spectrum-pagination-textfield-width"
-  ],
-  "global": [
-    "--spectrum-font-size-100",
-    "--spectrum-line-height-100",
-    "--spectrum-logical-rotation",
-    "--spectrum-neutral-subdued-content-color-default"
-  ],
-  "passthroughs": ["--mod-textfield-min-width", "--mod-textfield-width"],
-  "high-contrast": []
+  "modifiers": {
+    "mod-pagination-counter-color": {
+      "description": "Used by `--spectrum-pagination-counter-color`. <br/>Defaults to `var(--spectrum-neutral-subdued-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-pagination-counter-font-size": {
+      "description": "Used by `--spectrum-pagination-counter-font-size`. <br/>Defaults to `var(--spectrum-font-size-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-pagination-counter-line-height": {
+      "description": "Used by `--spectrum-pagination-counter-line-height`. <br/>Defaults to `var(--spectrum-line-height-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-pagination-page-button-inline-spacing": {
+      "description": "Used by `--spectrum-pagination-counter-inline-spacing`. <br/>Defaults to `var(--spectrum-pagination-item-inline-spacing)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-pagination-textfield-width": {
+      "description": "Used by `--mod-textfield-width`, `--mod-textfield-min-width`. <br/>Defaults to `var(--spectrum-pagination-textfield-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-pagination-counter-color": {
+      "value": "var(--mod-pagination-counter-color, var(--spectrum-neutral-subdued-content-color-default))",
+      "description": "Defined in `.spectrum-Pagination`. <br/>Used by `.spectrum-Pagination-counter`. <br/>Defaults to `var(--mod-pagination-counter-color, var(--spectrum-neutral-subdued-content-color-default))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-pagination-counter-font-size": {
+      "value": "var(--mod-pagination-counter-font-size, var(--spectrum-font-size-100))",
+      "description": "Defined in `.spectrum-Pagination`. <br/>Used by `.spectrum-Pagination-counter`. <br/>Defaults to `var(--mod-pagination-counter-font-size, var(--spectrum-font-size-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-pagination-counter-line-height": {
+      "value": "var(--mod-pagination-counter-line-height, var(--spectrum-line-height-100))",
+      "description": "Defined in `.spectrum-Pagination`. <br/>Used by `.spectrum-Pagination-counter`. <br/>Defaults to `var(--mod-pagination-counter-line-height, var(--spectrum-line-height-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-pagination-counter-inline-spacing": {
+      "value": "var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-item-inline-spacing))",
+      "description": "Defined in `.spectrum-Pagination`. <br/>Used by `.spectrum-Pagination-counter, .spectrum-Pagination-nextButton`, `.spectrum-Pagination-prevButton`. <br/>Defaults to `var(--mod-pagination-page-button-inline-spacing, var(--spectrum-pagination-item-inline-spacing))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-pagination-item-inline-spacing": {
+      "description": "Used by `--spectrum-pagination-counter-inline-spacing`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-pagination-textfield-width": {
+      "description": "Used by `--mod-textfield-width`, `--mod-textfield-min-width`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-neutral-subdued-content-color-default": {
+      "value": "var(--spectrum-gray-700)",
+      "description": "Used by `--spectrum-pagination-counter-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-pagination-counter-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `--spectrum-pagination-counter-line-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-logical-rotation": {
+      "value": "matrix(-1, 0, 0, 1, 0, 0)",
+      "description": "Defined in `.spectrum-Pagination:dir(rtl)`. <br/>Used by `.spectrum-Pagination-nextButton .spectrum-Icon`, `.spectrum-Pagination-prevButton .spectrum-Icon`. <br/>Defaults to `matrix(-1, 0, 0, 1, 0, 0)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-textfield-width": {
+      "category": "Passthrough"
+    },
+    "mod-textfield-min-width": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {}
 }

@@ -9,6 +9,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-SwatchGroup",
+	id = getRandomId("swatch-group"),
 	customClasses = [],
 	size = "m",
 	density = "regular",
@@ -16,7 +17,6 @@ export const Template = ({
 	containerWidth,
 	items = [],
 	customStyles = {},
-	id = getRandomId("swatchgroup"),
 } = {}, context = {}) => html`
 	<div
 		class=${classMap({

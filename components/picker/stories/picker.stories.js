@@ -3,10 +3,12 @@ import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.sto
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isHovered, isInvalid, isKeyboardFocused, isLoading, isOpen, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { PickerGroup } from "./picker.test.js";
 import { ClosedAndOpenTemplate, DisabledTemplate, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The picker component (sometimes known as a "dropdown" or "select") allows users to choose from a list of options in a limited space. The list of options can change based on the context.
@@ -140,18 +142,18 @@ export default {
 		],
 	},
 	parameters: {
+		docs: {
+			story: {
+				height: "400px"
+			}
+		},
 		design: {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=739-1453",
 		},
 		packageJson,
 		metadata,
-		downState: {
-			selectors: [".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"],
-		},
-		status: {
-			type: "migrated",
-		},
+		cssprops: metadata.modifiers,
 	},
 	decorators: [
 		withDownStateDimensionCapture,
@@ -162,6 +164,13 @@ export default {
 export const Default = PickerGroup.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
+Default.parameters = {
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = PickerGroup.bind({});
@@ -186,6 +195,11 @@ Standard.storyName = "Default";
 Standard.tags = ["!dev"];
 Standard.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
 };
 
 /**
@@ -214,6 +228,11 @@ SelectedValue.args = {
 SelectedValue.tags = ["!dev"];
 SelectedValue.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
 };
 
 /**
@@ -266,6 +285,11 @@ Invalid.args = {
 };
 Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px",
+		}
+	},
 };
 
 export const Loading = Template.bind({});

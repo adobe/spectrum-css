@@ -8,7 +8,7 @@ import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 
 import { Container, getRandomId } from "@spectrum-css/preview/decorators";
-import { html } from "lit";
+import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -41,24 +41,18 @@ const Label = ({
 }) => {
 	if (isCollapsible) {
 		return html`<span
-					class=${classMap({
-						["spectrum-Menu-sectionHeading"]: true,
-						[`${rootClass}Label--truncate`]: shouldTruncate,
-					})}
-				>
-					${label}
-				</span>`;
+			class=${classMap({
+				["spectrum-Menu-sectionHeading"]: true,
+				[`${rootClass}Label--truncate`]: shouldTruncate,
+			})}
+		>${label}</span>`;
 	}
-	else {
-		return html`<span
-				class=${classMap({
-					[`${rootClass}Label`]: true,
-					["spectrum-Switch-label"]: hasActions,
-					["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
-				})}>
-				${label}
-				</span>`;
-	}
+	return html`<span
+		class=${classMap({
+			[`${rootClass}Label`]: true,
+			["spectrum-Switch-label"]: hasActions,
+			["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+		})}>${label}</span>`;
 };
 
 const Visual = ({
@@ -106,9 +100,8 @@ const StartAction = ({
 	rootClass,
 	selectionMode,
 	size,
-	context
-}) => {
-	if (isUnavailable) return null;
+} = {}, context = {}) => {
+	if (isUnavailable) return nothing;
 
 	if (isCollapsible || (selectionMode == "single" && isSelected)) {
 		return html`
@@ -141,7 +134,7 @@ const StartAction = ({
 			},
 			context)}`;
 	}
-	return null;
+	return nothing;
 };
 
 const EndAction = ({
@@ -156,8 +149,7 @@ const EndAction = ({
 	selectionMode,
 	size,
 	value,
-	context
-}) => html`
+} = {}, context = {}) => html`
 	${when(value, () => html`
 		<span
 			class=${classMap({
@@ -257,7 +249,7 @@ export const MenuItem = (
 		exclusiveFeatures = "none",
 		hasExternalLink = false,
 		hasActions = false,
-		id = getRandomId("menuitem"),
+		id = getRandomId("menu-item"),
 		idx = 0,
 		isActive = false,
 		isCollapsible = false,
@@ -319,11 +311,11 @@ export const MenuItem = (
 			aria-disabled=${isDisabled ? "true" : "false"}
 			tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
 		>
-			${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, isUnavailable, rootClass, selectionMode, size, context })}
+			${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, isUnavailable, rootClass, selectionMode, size }, context)}
 			${Visual({ iconName, iconSet, rootClass, size, thumbnailUrl, hasExternalLink, isDrillIn })}
 			${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
 			${when(description, () => Description({ description, rootClass }))}
-			${EndAction({ hasExternalLink, hasActions, idx, isUnavailable, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, context })}
+			${EndAction({ hasExternalLink, hasActions, idx, isUnavailable, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value }, context)}
 			${when(isCollapsible && items.length > 0, () =>
 				Template(
 					{
@@ -343,7 +335,7 @@ export const MenuGroup = (
 	{
 		hasActions = false,
 		heading,
-		id = getRandomId("menugroup"),
+		id = getRandomId("menu-group"),
 		idx = 0,
 		items = [],
 		isDisabled = false,

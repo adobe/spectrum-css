@@ -5,10 +5,6 @@
     ".spectrum-ClearButton > .spectrum-Icon",
     ".spectrum-ClearButton-fill",
     ".spectrum-ClearButton-icon",
-    ".spectrum-ClearButton.is-disabled",
-    ".spectrum-ClearButton.spectrum-ClearButton--sizeL",
-    ".spectrum-ClearButton.spectrum-ClearButton--sizeS",
-    ".spectrum-ClearButton.spectrum-ClearButton--sizeXL",
     ".spectrum-ClearButton:disabled",
     ".spectrum-ClearButton:focus-visible",
     ".spectrum-ClearButton:not(:disabled)",
@@ -19,53 +15,245 @@
     ".spectrum-ClearButton:not(:disabled):focus-within",
     ".spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill",
     ".spectrum-ClearButton:not(:disabled):hover",
-    ".spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill"
+    ".spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill",
+    ".spectrum-ClearButton.is-disabled",
+    ".spectrum-ClearButton.spectrum-ClearButton--sizeL",
+    ".spectrum-ClearButton.spectrum-ClearButton--sizeS",
+    ".spectrum-ClearButton.spectrum-ClearButton--sizeXL"
   ],
-  "modifiers": [
-    "--mod-clear-button-background-color",
-    "--mod-clear-button-background-color-disabled",
-    "--mod-clear-button-background-color-down",
-    "--mod-clear-button-background-color-hover",
-    "--mod-clear-button-background-color-key-focus",
-    "--mod-clear-button-height",
-    "--mod-clear-button-icon-color",
-    "--mod-clear-button-icon-color-disabled",
-    "--mod-clear-button-icon-color-down",
-    "--mod-clear-button-icon-color-hover",
-    "--mod-clear-button-icon-color-key-focus",
-    "--mod-clear-button-padding",
-    "--mod-clear-button-width"
-  ],
-  "component": [
-    "--spectrum-clear-button-background-color",
-    "--spectrum-clear-button-background-color-down",
-    "--spectrum-clear-button-background-color-hover",
-    "--spectrum-clear-button-background-color-key-focus",
-    "--spectrum-clear-button-height",
-    "--spectrum-clear-button-icon-color",
-    "--spectrum-clear-button-icon-color-down",
-    "--spectrum-clear-button-icon-color-hover",
-    "--spectrum-clear-button-icon-color-key-focus",
-    "--spectrum-clear-button-padding",
-    "--spectrum-clear-button-width"
-  ],
-  "global": [
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-component-size-difference-down",
-    "--spectrum-component-size-minimum-perspective-down",
-    "--spectrum-disabled-content-color",
-    "--spectrum-in-field-button-edge-to-fill-extra-large",
-    "--spectrum-in-field-button-edge-to-fill-large",
-    "--spectrum-in-field-button-edge-to-fill-medium",
-    "--spectrum-in-field-button-edge-to-fill-small",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus"
-  ],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-clear-button-icon-color-hover"]
+  "modifiers": {
+    "mod-clear-button-icon-color": {
+      "description": "Defined in `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-clear-button-icon-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-icon-color-disabled": {
+      "description": "Used by `--mod-clear-button-icon-color`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-icon-color-hover": {
+      "description": "Defined in `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover`. <br/>Defaults to `var(--spectrum-clear-button-icon-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-icon-color-down": {
+      "description": "Defined in `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. <br/>Used by `.spectrum-ClearButton:not(:disabled):active`. <br/>Defaults to `var(--spectrum-clear-button-icon-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-background-color": {
+      "description": "Defined in `.spectrum-ClearButton.is-disabled, .spectrum-ClearButton:disabled`. <br/>Used by `.spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-clear-button-background-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-background-color-disabled": {
+      "description": "Used by `--mod-clear-button-background-color`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-height": {
+      "description": "Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-clear-button-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-clear-button-width": {
+      "description": "Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-clear-button-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-clear-button-padding": {
+      "description": "Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-clear-button-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-clear-button-background-color-hover": {
+      "description": "Used by `.spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-clear-button-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-background-color-down": {
+      "description": "Used by `.spectrum-ClearButton:not(:disabled):active .spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-clear-button-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-icon-color-key-focus": {
+      "description": "Used by `.spectrum-ClearButton:not(:disabled):focus-visible, .spectrum-ClearButton:not(:disabled):focus-within`. <br/>Defaults to `var(--spectrum-clear-button-icon-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-clear-button-background-color-key-focus": {
+      "description": "Used by `.spectrum-ClearButton:not(:disabled):focus-visible .spectrum-ClearButton-fill, .spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill`. <br/>Defaults to `var(--spectrum-clear-button-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-clear-button-height": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--sizeS`, `.spectrum-ClearButton.spectrum-ClearButton--sizeL`, `.spectrum-ClearButton.spectrum-ClearButton--sizeXL`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-clear-button-width": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--sizeS`, `.spectrum-ClearButton.spectrum-ClearButton--sizeL`, `.spectrum-ClearButton.spectrum-ClearButton--sizeXL`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-clear-button-padding": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-ClearButton`, `.spectrum-ClearButton.spectrum-ClearButton--sizeS`, `.spectrum-ClearButton.spectrum-ClearButton--sizeL`, `.spectrum-ClearButton.spectrum-ClearButton--sizeXL`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-in-field-button-edge-to-fill-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-clear-button-icon-color": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-clear-button-icon-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover`. <br/>Defaults to `var(--spectrum-neutral-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-clear-button-icon-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):active`. <br/>Defaults to `var(--spectrum-neutral-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-clear-button-icon-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):focus-visible, .spectrum-ClearButton:not(:disabled):focus-within`. <br/>Defaults to `var(--spectrum-neutral-content-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-clear-button-background-color": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton-fill`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-clear-button-background-color-hover": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-clear-button-background-color-down": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):active .spectrum-ClearButton-fill`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-clear-button-background-color-key-focus": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-ClearButton`. <br/>Used by `.spectrum-ClearButton:not(:disabled):focus-visible .spectrum-ClearButton-fill, .spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-clear-button-height`, `--spectrum-clear-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-edge-to-fill-medium": {
+      "value": "6px",
+      "description": "Used by `--spectrum-clear-button-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-clear-button-icon-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-clear-button-icon-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-clear-button-icon-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-clear-button-icon-color-key-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-clear-button-height`, `--spectrum-clear-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-edge-to-fill-small": {
+      "value": "4px",
+      "description": "Used by `--spectrum-clear-button-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-clear-button-height`, `--spectrum-clear-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-edge-to-fill-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-clear-button-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-clear-button-height`, `--spectrum-clear-button-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-in-field-button-edge-to-fill-extra-large": {
+      "value": "8px",
+      "description": "Used by `--spectrum-clear-button-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--mod-clear-button-icon-color`, `--mod-clear-button-icon-color-hover`, `--mod-clear-button-icon-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-size-minimum-perspective-down": {
+      "value": "24px",
+      "description": "Used by `.spectrum-ClearButton:not(:disabled):active`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-difference-down": {
+      "value": "-2px",
+      "description": "Used by `.spectrum-ClearButton:not(:disabled):active`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-clear-button-icon-color-hover": {
+      "value": "var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover))",
+      "description": "Defined in `.spectrum-ClearButton:not(:disabled)`. <br/>Used by `.spectrum-ClearButton:not(:disabled):hover`. <br/>Defaults to `var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover))`, if not set.",
+      "control": "color"
+    }
+  }
 }

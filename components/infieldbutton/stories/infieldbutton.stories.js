@@ -2,10 +2,12 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isHovered, isQuiet, size } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { InfieldButtonGroup } from "./infieldbutton.test.js";
 import { InfieldButtonGroupVariant, InfieldButtonIcons, Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * In-field buttons are used to represent actions within input fields. They’re currently used inside the [number field](/docs/components-stepper--docs).
@@ -61,6 +63,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	decorators: [

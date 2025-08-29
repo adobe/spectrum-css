@@ -13,18 +13,6 @@
     ".spectrum-ActionButton-icon",
     ".spectrum-ActionButton-label",
     ".spectrum-ActionButton-label:empty",
-    ".spectrum-ActionButton.is-disabled",
-    ".spectrum-ActionButton.is-selected",
-    ".spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized",
-    ".spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack",
-    ".spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite",
-    ".spectrum-ActionButton.spectrum-ActionButton--quiet",
-    ".spectrum-ActionButton.spectrum-ActionButton--quiet.is-selected",
-    ".spectrum-ActionButton.spectrum-ActionButton--quiet:disabled:not(.is-selected)",
-    ".spectrum-ActionButton.spectrum-ActionButton--staticBlack",
-    ".spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet",
-    ".spectrum-ActionButton.spectrum-ActionButton--staticWhite",
-    ".spectrum-ActionButton.spectrum-ActionButton--staticWhite.spectrum-ActionButton--quiet",
     ".spectrum-ActionButton::-moz-focus-inner",
     ".spectrum-ActionButton:active",
     ".spectrum-ActionButton:after",
@@ -36,197 +24,1049 @@
     ".spectrum-ActionButton:has(.spectrum-ActionButton-icon)",
     ".spectrum-ActionButton:hover",
     ".spectrum-ActionButton:not(:has(.spectrum-ActionButton-label))",
+    ".spectrum-ActionButton.is-disabled",
+    ".spectrum-ActionButton.is-selected",
+    ".spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized",
+    ".spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack",
+    ".spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite",
+    ".spectrum-ActionButton.spectrum-ActionButton--quiet",
+    ".spectrum-ActionButton.spectrum-ActionButton--quiet:disabled:not(.is-selected)",
+    ".spectrum-ActionButton.spectrum-ActionButton--quiet.is-selected",
+    ".spectrum-ActionButton.spectrum-ActionButton--staticBlack",
+    ".spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet",
+    ".spectrum-ActionButton.spectrum-ActionButton--staticWhite",
+    ".spectrum-ActionButton.spectrum-ActionButton--staticWhite.spectrum-ActionButton--quiet",
     "a.spectrum-ActionButton"
   ],
-  "modifiers": [
-    "--mod-actionbutton-animation-duration",
-    "--mod-actionbutton-background-color-default",
-    "--mod-actionbutton-background-color-default-selected",
-    "--mod-actionbutton-background-color-default-selected-emphasized",
-    "--mod-actionbutton-background-color-disabled",
-    "--mod-actionbutton-background-color-down",
-    "--mod-actionbutton-background-color-down-selected",
-    "--mod-actionbutton-background-color-down-selected-emphasized",
-    "--mod-actionbutton-background-color-focus",
-    "--mod-actionbutton-background-color-focus-selected",
-    "--mod-actionbutton-background-color-focus-selected-emphasized",
-    "--mod-actionbutton-background-color-hover",
-    "--mod-actionbutton-background-color-hover-selected",
-    "--mod-actionbutton-background-color-hover-selected-emphasized",
-    "--mod-actionbutton-border-radius",
-    "--mod-actionbutton-content-color-default",
-    "--mod-actionbutton-content-color-default-selected",
-    "--mod-actionbutton-content-color-default-selected-emphasized",
-    "--mod-actionbutton-content-color-disabled",
-    "--mod-actionbutton-content-color-down",
-    "--mod-actionbutton-content-color-down-selected",
-    "--mod-actionbutton-content-color-down-selected-emphasized",
-    "--mod-actionbutton-content-color-focus",
-    "--mod-actionbutton-content-color-focus-selected",
-    "--mod-actionbutton-content-color-focus-selected-emphasized",
-    "--mod-actionbutton-content-color-hover",
-    "--mod-actionbutton-content-color-hover-selected",
-    "--mod-actionbutton-content-color-hover-selected-emphasized",
-    "--mod-actionbutton-edge-to-hold-icon",
-    "--mod-actionbutton-edge-to-text",
-    "--mod-actionbutton-edge-to-visual",
-    "--mod-actionbutton-edge-to-visual-only",
-    "--mod-actionbutton-focus-indicator-border-radius",
-    "--mod-actionbutton-focus-indicator-color",
-    "--mod-actionbutton-focus-indicator-gap",
-    "--mod-actionbutton-focus-indicator-thickness",
-    "--mod-actionbutton-font-size",
-    "--mod-actionbutton-font-style",
-    "--mod-actionbutton-font-weight",
-    "--mod-actionbutton-height",
-    "--mod-actionbutton-icon-size",
-    "--mod-actionbutton-label-color",
-    "--mod-actionbutton-line-height",
-    "--mod-actionbutton-min-width",
-    "--mod-actionbutton-text-to-visual"
-  ],
-  "component": [
-    "--spectrum-action-button-edge-to-hold-icon-extra-large",
-    "--spectrum-action-button-edge-to-hold-icon-extra-small",
-    "--spectrum-action-button-edge-to-hold-icon-large",
-    "--spectrum-action-button-edge-to-hold-icon-medium",
-    "--spectrum-action-button-edge-to-hold-icon-small",
-    "--spectrum-actionbutton-animation-duration",
-    "--spectrum-actionbutton-background-color-default",
-    "--spectrum-actionbutton-background-color-disabled",
-    "--spectrum-actionbutton-background-color-down",
-    "--spectrum-actionbutton-background-color-focus",
-    "--spectrum-actionbutton-background-color-hover",
-    "--spectrum-actionbutton-border-color",
-    "--spectrum-actionbutton-border-radius",
-    "--spectrum-actionbutton-border-width",
-    "--spectrum-actionbutton-content-color-default",
-    "--spectrum-actionbutton-content-color-disabled",
-    "--spectrum-actionbutton-content-color-down",
-    "--spectrum-actionbutton-content-color-focus",
-    "--spectrum-actionbutton-content-color-hover",
-    "--spectrum-actionbutton-downstate-perspective",
-    "--spectrum-actionbutton-edge-to-hold-icon",
-    "--spectrum-actionbutton-edge-to-text",
-    "--spectrum-actionbutton-edge-to-visual",
-    "--spectrum-actionbutton-edge-to-visual-only",
-    "--spectrum-actionbutton-focus-indicator-border-radius",
-    "--spectrum-actionbutton-focus-indicator-color",
-    "--spectrum-actionbutton-focus-indicator-gap",
-    "--spectrum-actionbutton-focus-indicator-thickness",
-    "--spectrum-actionbutton-font-size",
-    "--spectrum-actionbutton-font-style",
-    "--spectrum-actionbutton-font-weight",
-    "--spectrum-actionbutton-height",
-    "--spectrum-actionbutton-icon-size",
-    "--spectrum-actionbutton-line-height",
-    "--spectrum-actionbutton-min-width",
-    "--spectrum-actionbutton-text-to-visual"
-  ],
-  "global": [
-    "--spectrum-accent-background-color-default",
-    "--spectrum-accent-background-color-down",
-    "--spectrum-accent-background-color-hover",
-    "--spectrum-accent-background-color-key-focus",
-    "--spectrum-animation-duration-100",
-    "--spectrum-black",
-    "--spectrum-border-width-100",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-edge-to-text-200",
-    "--spectrum-component-edge-to-text-300",
-    "--spectrum-component-edge-to-text-50",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-edge-to-visual-100",
-    "--spectrum-component-edge-to-visual-200",
-    "--spectrum-component-edge-to-visual-300",
-    "--spectrum-component-edge-to-visual-50",
-    "--spectrum-component-edge-to-visual-75",
-    "--spectrum-component-edge-to-visual-only-100",
-    "--spectrum-component-edge-to-visual-only-200",
-    "--spectrum-component-edge-to-visual-only-300",
-    "--spectrum-component-edge-to-visual-only-50",
-    "--spectrum-component-edge-to-visual-only-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-50",
-    "--spectrum-component-height-75",
-    "--spectrum-component-size-difference-down",
-    "--spectrum-component-size-minimum-perspective-down",
-    "--spectrum-component-size-width-ratio-down",
-    "--spectrum-corner-radius-medium-size-extra-large",
-    "--spectrum-corner-radius-medium-size-extra-small",
-    "--spectrum-corner-radius-medium-size-large",
-    "--spectrum-corner-radius-medium-size-medium",
-    "--spectrum-corner-radius-medium-size-small",
-    "--spectrum-default-font-style",
-    "--spectrum-disabled-background-color",
-    "--spectrum-disabled-content-color",
-    "--spectrum-disabled-static-black-background-color",
-    "--spectrum-disabled-static-black-content-color",
-    "--spectrum-disabled-static-white-background-color",
-    "--spectrum-disabled-static-white-content-color",
-    "--spectrum-downstate-height",
-    "--spectrum-downstate-width",
-    "--spectrum-focus-indicator-color",
-    "--spectrum-focus-indicator-gap",
-    "--spectrum-focus-indicator-thickness",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-50",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-gray-25",
-    "--spectrum-line-height-100",
-    "--spectrum-logical-rotation",
-    "--spectrum-medium-font-weight",
-    "--spectrum-neutral-background-color-selected-default",
-    "--spectrum-neutral-background-color-selected-down",
-    "--spectrum-neutral-background-color-selected-hover",
-    "--spectrum-neutral-background-color-selected-key-focus",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-sans-font-family-stack",
-    "--spectrum-static-black-focus-indicator-color",
-    "--spectrum-static-white-focus-indicator-color",
-    "--spectrum-text-to-visual-100",
-    "--spectrum-text-to-visual-200",
-    "--spectrum-text-to-visual-300",
-    "--spectrum-text-to-visual-50",
-    "--spectrum-text-to-visual-75",
-    "--spectrum-transparent-black-100",
-    "--spectrum-transparent-black-200",
-    "--spectrum-transparent-black-25",
-    "--spectrum-transparent-black-800",
-    "--spectrum-transparent-black-900",
-    "--spectrum-transparent-white-100",
-    "--spectrum-transparent-white-200",
-    "--spectrum-transparent-white-25",
-    "--spectrum-transparent-white-800",
-    "--spectrum-transparent-white-900",
-    "--spectrum-white",
-    "--spectrum-workflow-icon-size-100",
-    "--spectrum-workflow-icon-size-200",
-    "--spectrum-workflow-icon-size-300",
-    "--spectrum-workflow-icon-size-50",
-    "--spectrum-workflow-icon-size-75"
-  ],
-  "passthroughs": [
-    "--mod-button-animation-duration",
-    "--mod-button-font-family",
-    "--mod-button-line-height"
-  ],
-  "high-contrast": [
-    "--highcontrast-actionbutton-animation-duration",
-    "--highcontrast-actionbutton-background-color-default",
-    "--highcontrast-actionbutton-background-color-disabled",
-    "--highcontrast-actionbutton-border-color",
-    "--highcontrast-actionbutton-content-color-default",
-    "--highcontrast-actionbutton-content-color-disabled",
-    "--highcontrast-actionbutton-focus-indicator-color"
-  ]
+  "modifiers": {
+    "mod-actionbutton-background-color-default": {
+      "description": "Defined in `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-default-selected": {
+      "description": "Used by `--mod-actionbutton-background-color-default`. <br/>Defaults to `var(--spectrum-neutral-background-color-selected-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-hover": {
+      "description": "Defined in `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized`. <br/>Used by `.spectrum-ActionButton:hover`. <br/>Defaults to `var(--spectrum-actionbutton-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-hover-selected": {
+      "description": "Used by `--mod-actionbutton-background-color-hover`. <br/>Defaults to `var(--spectrum-neutral-background-color-selected-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-down": {
+      "description": "Defined in `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized`. <br/>Used by `.spectrum-ActionButton:active`. <br/>Defaults to `var(--spectrum-actionbutton-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-down-selected": {
+      "description": "Used by `--mod-actionbutton-background-color-down`. <br/>Defaults to `var(--spectrum-neutral-background-color-selected-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-focus": {
+      "description": "Defined in `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized`. <br/>Used by `.spectrum-ActionButton:focus-visible`. <br/>Defaults to `var(--spectrum-actionbutton-background-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-focus-selected": {
+      "description": "Used by `--mod-actionbutton-background-color-focus`. <br/>Defaults to `var(--spectrum-neutral-background-color-selected-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-default": {
+      "description": "Defined in `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-default-selected": {
+      "description": "Used by `--mod-actionbutton-content-color-default`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-hover": {
+      "description": "Defined in `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized`. <br/>Used by `.spectrum-ActionButton:hover`. <br/>Defaults to `var(--spectrum-actionbutton-content-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-hover-selected": {
+      "description": "Used by `--mod-actionbutton-content-color-hover`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-down": {
+      "description": "Defined in `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized`. <br/>Used by `.spectrum-ActionButton:active`. <br/>Defaults to `var(--spectrum-actionbutton-content-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-down-selected": {
+      "description": "Used by `--mod-actionbutton-content-color-down`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-focus": {
+      "description": "Defined in `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--emphasized`. <br/>Used by `.spectrum-ActionButton:focus-visible`. <br/>Defaults to `var(--spectrum-actionbutton-content-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-focus-selected": {
+      "description": "Used by `--mod-actionbutton-content-color-focus`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-default-selected-emphasized": {
+      "description": "Used by `--mod-actionbutton-background-color-default`. <br/>Defaults to `var(--spectrum-accent-background-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-hover-selected-emphasized": {
+      "description": "Used by `--mod-actionbutton-background-color-hover`. <br/>Defaults to `var(--spectrum-accent-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-down-selected-emphasized": {
+      "description": "Used by `--mod-actionbutton-background-color-down`. <br/>Defaults to `var(--spectrum-accent-background-color-down)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-focus-selected-emphasized": {
+      "description": "Used by `--mod-actionbutton-background-color-focus`. <br/>Defaults to `var(--spectrum-accent-background-color-key-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-default-selected-emphasized": {
+      "description": "Used by `--mod-actionbutton-content-color-default`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-hover-selected-emphasized": {
+      "description": "Used by `--mod-actionbutton-content-color-hover`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-down-selected-emphasized": {
+      "description": "Used by `--mod-actionbutton-content-color-down`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-focus-selected-emphasized": {
+      "description": "Used by `--mod-actionbutton-content-color-focus`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-min-width": {
+      "description": "Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-min-width)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-height": {
+      "description": "Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-line-height": {
+      "description": "Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-line-height)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-border-radius": {
+      "description": "Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-text-to-visual": {
+      "description": "Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-text-to-visual)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-edge-to-text": {
+      "description": "Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-edge-to-text)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-background-color-disabled": {
+      "description": "Used by `.spectrum-ActionButton.is-disabled, .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--spectrum-actionbutton-background-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-content-color-disabled": {
+      "description": "Used by `.spectrum-ActionButton.is-disabled, .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--spectrum-actionbutton-content-color-disabled)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-icon-size": {
+      "description": "Used by `.spectrum-ActionButton-icon`. <br/>Defaults to `var(--spectrum-actionbutton-icon-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-edge-to-visual": {
+      "description": "Used by `.spectrum-ActionButton:has(.spectrum-ActionButton-icon)`. <br/>Defaults to `var(--spectrum-actionbutton-edge-to-visual)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-edge-to-visual-only": {
+      "description": "Used by `.spectrum-ActionButton:not(:has(.spectrum-ActionButton-label))`. <br/>Defaults to `var(--spectrum-actionbutton-edge-to-visual-only)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-font-size": {
+      "description": "Used by `.spectrum-ActionButton-label`. <br/>Defaults to `var(--spectrum-actionbutton-font-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-font-weight": {
+      "description": "Used by `.spectrum-ActionButton-label`. <br/>Defaults to `var(--spectrum-actionbutton-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-font-style": {
+      "description": "Used by `.spectrum-ActionButton-label`. <br/>Defaults to `var(--spectrum-actionbutton-font-style)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-label-color": {
+      "description": "Used by `.spectrum-ActionButton-label`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-edge-to-hold-icon": {
+      "description": "Used by `.spectrum-ActionButton-hold`. <br/>Defaults to `var(--spectrum-actionbutton-edge-to-hold-icon)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-animation-duration": {
+      "description": "Used by `.spectrum-ActionButton`, `.spectrum-ActionButton:after`. <br/>Defaults to `var(--spectrum-actionbutton-animation-duration)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-focus-indicator-gap": {
+      "description": "Used by `.spectrum-ActionButton:after`. <br/>Defaults to `var(--spectrum-actionbutton-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-focus-indicator-border-radius": {
+      "description": "Used by `.spectrum-ActionButton:after`. <br/>Defaults to `var(--spectrum-actionbutton-focus-indicator-border-radius)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-focus-indicator-thickness": {
+      "description": "Used by `.spectrum-ActionButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-actionbutton-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-actionbutton-focus-indicator-color": {
+      "description": "Used by `.spectrum-ActionButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-actionbutton-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-actionbutton-animation-duration": {
+      "value": "var(--spectrum-animation-duration-100)",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton`, `.spectrum-ActionButton:after`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-border-radius": {
+      "value": "10px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `--spectrum-actionbutton-focus-indicator-border-radius`, `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-corner-radius-medium-size-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-border-width": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton`, `.spectrum-ActionButton:has(.spectrum-ActionButton-icon)`, `.spectrum-ActionButton:not(:has(.spectrum-ActionButton-label))`, `.spectrum-ActionButton-hold`, `.spectrum-ActionButton:after`. <br/>Defaults to `var(--spectrum-border-width-100)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-border-color": {
+      "value": "transparent",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `transparent`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-content-color-default": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-content-color-hover": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton:hover`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-content-color-down": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton:active`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-content-color-focus": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton:focus-visible`. <br/>Defaults to `var(--spectrum-white)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-content-color-disabled": {
+      "value": "rgba(255, 255, 255, 0.21)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`. <br/>Used by `.spectrum-ActionButton.is-disabled, .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--spectrum-disabled-static-white-content-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-background-color-default": {
+      "value": "rgba(0, 0, 0, 0.84)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-transparent-black-800)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-background-color-hover": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton:hover`. <br/>Defaults to `var(--spectrum-transparent-black-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-background-color-down": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton:active`. <br/>Defaults to `var(--spectrum-transparent-black-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-background-color-focus": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton:focus-visible`. <br/>Defaults to `var(--spectrum-transparent-black-900)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-background-color-disabled": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--quiet.is-selected`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite`, `.spectrum-ActionButton.is-selected.spectrum-ActionButton--staticBlack`. <br/>Used by `.spectrum-ActionButton.is-disabled, .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--spectrum-disabled-static-black-background-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `--spectrum-actionbutton-focus-indicator-border-radius`, `.spectrum-ActionButton:after`. <br/>Defaults to `var(--spectrum-focus-indicator-gap)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-focus-indicator-thickness)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-focus-indicator-color": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--staticBlack`, `.spectrum-ActionButton.spectrum-ActionButton--staticWhite`. <br/>Used by `.spectrum-ActionButton:focus-visible:after`. <br/>Defaults to `var(--spectrum-static-white-focus-indicator-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-focus-indicator-border-radius": {
+      "value": "calc(var(--spectrum-actionbutton-border-radius) + var(--spectrum-actionbutton-focus-indicator-gap))",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton:after`. <br/>Defaults to `calc(var(--spectrum-actionbutton-border-radius) + var(--spectrum-actionbutton-focus-indicator-gap))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-min-width": {
+      "value": "calc(var(--spectrum-component-edge-to-visual-only-300) * 2 + var(--spectrum-workflow-icon-size-300))",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `calc(var(--spectrum-component-edge-to-visual-only-300) * 2 + var(--spectrum-workflow-icon-size-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-height": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `--spectrum-actionbutton-line-height`, `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-icon-size": {
+      "value": "26px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `.spectrum-ActionButton-icon`. <br/>Defaults to `var(--spectrum-workflow-icon-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-font-size": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `.spectrum-ActionButton-label`. <br/>Defaults to `var(--spectrum-font-size-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-font-weight": {
+      "value": "500",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton-label`. <br/>Defaults to `var(--spectrum-medium-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-font-style": {
+      "value": "normal",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton-label`. <br/>Defaults to `var(--spectrum-default-font-style)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-line-height": {
+      "value": "var(--spectrum-actionbutton-height)",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-height)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-text-to-visual": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-text-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-edge-to-hold-icon": {
+      "value": "6px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `.spectrum-ActionButton-hold`. <br/>Defaults to `var(--spectrum-action-button-edge-to-hold-icon-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-action-button-edge-to-hold-icon-medium": {
+      "value": "4px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-hold-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-edge-to-visual": {
+      "value": "15px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `.spectrum-ActionButton:has(.spectrum-ActionButton-icon)`. <br/>Defaults to `var(--spectrum-component-edge-to-visual-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-edge-to-text": {
+      "value": "18px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-component-edge-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-edge-to-visual-only": {
+      "value": "11px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`, `.spectrum-ActionButton--sizeL`, `.spectrum-ActionButton--sizeXL`. <br/>Used by `.spectrum-ActionButton:not(:has(.spectrum-ActionButton-label))`. <br/>Defaults to `var(--spectrum-component-edge-to-visual-only-300)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-actionbutton-downstate-perspective": {
+      "value": "24px",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton--sizeXS`, `.spectrum-ActionButton--sizeS`. <br/>Used by `.spectrum-ActionButton:active`. <br/>Defaults to `var(--spectrum-component-size-minimum-perspective-down)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-action-button-edge-to-hold-icon-extra-small": {
+      "value": "3px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-hold-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-action-button-edge-to-hold-icon-small": {
+      "value": "3px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-hold-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-action-button-edge-to-hold-icon-large": {
+      "value": "5px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-hold-icon`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-action-button-edge-to-hold-icon-extra-large": {
+      "value": "6px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-hold-icon`.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-sans-font-family-stack": {
+      "description": "Used by `.spectrum-ActionButton`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-100": {
+      "value": "1.3",
+      "description": "Used by `.spectrum-ActionButton`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-ActionButton`, `--spectrum-actionbutton-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-medium": {
+      "value": "8px",
+      "description": "Used by `--spectrum-actionbutton-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-border-width-100": {
+      "value": "1px",
+      "description": "Used by `--spectrum-actionbutton-border-width`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-actionbutton-content-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-actionbutton-content-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-actionbutton-content-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-actionbutton-content-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-actionbutton-content-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Used by `--spectrum-actionbutton-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-actionbutton-background-color-hover`, `--spectrum-actionbutton-background-color-down`, `--spectrum-actionbutton-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-background-color": {
+      "value": "var(--spectrum-gray-100)",
+      "description": "Used by `--spectrum-actionbutton-background-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-gap": {
+      "value": "2px",
+      "description": "Used by `--spectrum-actionbutton-focus-indicator-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-thickness": {
+      "value": "2px",
+      "description": "Used by `--spectrum-actionbutton-focus-indicator-thickness`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-focus-indicator-color": {
+      "value": "var(--spectrum-blue-800)",
+      "description": "Used by `--spectrum-actionbutton-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-edge-to-visual-only`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-100": {
+      "value": "20px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-actionbutton-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-actionbutton-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-medium-font-weight": {
+      "value": "500",
+      "description": "Used by `--spectrum-actionbutton-font-weight`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-default-font-style": {
+      "value": "normal",
+      "description": "Used by `--spectrum-actionbutton-font-style`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-100": {
+      "value": "6px",
+      "description": "Used by `--spectrum-actionbutton-text-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-100": {
+      "value": "10px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-downstate-height": {
+      "description": "Used by `--spectrum-actionbutton-downstate-perspective`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-downstate-width": {
+      "description": "Used by `--spectrum-actionbutton-downstate-perspective`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-width-ratio-down": {
+      "value": "0.3333",
+      "description": "Used by `--spectrum-actionbutton-downstate-perspective`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-logical-rotation": {
+      "value": "matrix(-1, 0, 0, 1, 0, 0)",
+      "description": "Defined in `.spectrum-ActionButton:dir(rtl)`. <br/>Used by `.spectrum-ActionButton-hold`. <br/>Defaults to `matrix(-1, 0, 0, 1, 0, 0)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-100": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Used by `--spectrum-actionbutton-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-200": {
+      "value": "rgba(0, 0, 0, 0.12)",
+      "description": "Used by `--spectrum-actionbutton-background-color-hover`, `--spectrum-actionbutton-background-color-down`, `--spectrum-actionbutton-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-static-black-background-color": {
+      "value": "rgba(0, 0, 0, 0.09)",
+      "description": "Used by `--spectrum-actionbutton-background-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-800": {
+      "value": "rgba(0, 0, 0, 0.84)",
+      "description": "Used by `--spectrum-actionbutton-content-color-default`, `--spectrum-actionbutton-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-900": {
+      "value": "rgba(0, 0, 0, 0.93)",
+      "description": "Used by `--spectrum-actionbutton-content-color-hover`, `--spectrum-actionbutton-content-color-down`, `--spectrum-actionbutton-content-color-focus`, `--spectrum-actionbutton-background-color-hover`, `--spectrum-actionbutton-background-color-down`, `--spectrum-actionbutton-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-static-black-content-color": {
+      "value": "rgba(0, 0, 0, 0.22)",
+      "description": "Used by `--spectrum-actionbutton-content-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-static-black-focus-indicator-color": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--spectrum-actionbutton-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-transparent-black-25": {
+      "value": "rgba(0, 0, 0, 0)",
+      "description": "Used by `--spectrum-actionbutton-background-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-100": {
+      "value": "rgba(255, 255, 255, 0.11)",
+      "description": "Used by `--spectrum-actionbutton-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-200": {
+      "value": "rgba(255, 255, 255, 0.14)",
+      "description": "Used by `--spectrum-actionbutton-background-color-hover`, `--spectrum-actionbutton-background-color-down`, `--spectrum-actionbutton-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-static-white-background-color": {
+      "value": "rgba(255, 255, 255, 0.11)",
+      "description": "Used by `--spectrum-actionbutton-background-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-800": {
+      "value": "rgba(255, 255, 255, 0.85)",
+      "description": "Used by `--spectrum-actionbutton-content-color-default`, `--spectrum-actionbutton-background-color-default`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-900": {
+      "value": "rgba(255, 255, 255, 0.94)",
+      "description": "Used by `--spectrum-actionbutton-content-color-hover`, `--spectrum-actionbutton-content-color-down`, `--spectrum-actionbutton-content-color-focus`, `--spectrum-actionbutton-background-color-hover`, `--spectrum-actionbutton-background-color-down`, `--spectrum-actionbutton-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-static-white-content-color": {
+      "value": "rgba(255, 255, 255, 0.21)",
+      "description": "Used by `--spectrum-actionbutton-content-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-static-white-focus-indicator-color": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-actionbutton-focus-indicator-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-transparent-white-25": {
+      "value": "rgba(255, 255, 255, 0)",
+      "description": "Used by `--spectrum-actionbutton-background-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-selected-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--mod-actionbutton-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-selected-hover": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-actionbutton-background-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-selected-down": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-actionbutton-background-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-background-color-selected-key-focus": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--mod-actionbutton-background-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--mod-actionbutton-content-color-default`, `--mod-actionbutton-content-color-hover`, `--mod-actionbutton-content-color-down`, `--mod-actionbutton-content-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-default": {
+      "value": "var(--spectrum-accent-color-900)",
+      "description": "Used by `--mod-actionbutton-background-color-default`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-hover": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-actionbutton-background-color-hover`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-down": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-actionbutton-background-color-down`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-accent-background-color-key-focus": {
+      "value": "var(--spectrum-accent-color-1000)",
+      "description": "Used by `--mod-actionbutton-background-color-focus`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-white": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--mod-actionbutton-content-color-default`, `--mod-actionbutton-content-color-hover`, `--mod-actionbutton-content-color-down`, `--mod-actionbutton-content-color-focus`, `--spectrum-actionbutton-content-color-default`, `--spectrum-actionbutton-content-color-hover`, `--spectrum-actionbutton-content-color-down`, `--spectrum-actionbutton-content-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-black": {
+      "value": "rgb(0, 0, 0)",
+      "description": "Used by `--spectrum-actionbutton-content-color-default`, `--spectrum-actionbutton-content-color-hover`, `--spectrum-actionbutton-content-color-down`, `--spectrum-actionbutton-content-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-extra-small": {
+      "value": "6px",
+      "description": "Used by `--spectrum-actionbutton-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-50": {
+      "value": "3px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-edge-to-visual-only`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-50": {
+      "value": "14px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-50": {
+      "value": "20px",
+      "description": "Used by `--spectrum-actionbutton-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-50": {
+      "value": "11px",
+      "description": "Used by `--spectrum-actionbutton-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-50": {
+      "value": "5px",
+      "description": "Used by `--spectrum-actionbutton-text-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-50": {
+      "value": "6px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-50": {
+      "value": "8px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-minimum-perspective-down": {
+      "value": "24px",
+      "description": "Used by `--spectrum-actionbutton-downstate-perspective`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-actionbutton-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-75": {
+      "value": "4px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-edge-to-visual-only`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-75": {
+      "value": "16px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-actionbutton-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-actionbutton-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-actionbutton-text-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-75": {
+      "value": "7px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "value": "9px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-large": {
+      "value": "9px",
+      "description": "Used by `--spectrum-actionbutton-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-200": {
+      "value": "9px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-edge-to-visual-only`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-200": {
+      "value": "22px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-actionbutton-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-actionbutton-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-200": {
+      "value": "7px",
+      "description": "Used by `--spectrum-actionbutton-text-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-200": {
+      "value": "13px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-200": {
+      "value": "15px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-medium-size-extra-large": {
+      "value": "10px",
+      "description": "Used by `--spectrum-actionbutton-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-only-300": {
+      "value": "11px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-edge-to-visual-only`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-workflow-icon-size-300": {
+      "value": "26px",
+      "description": "Used by `--spectrum-actionbutton-min-width`, `--spectrum-actionbutton-icon-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-actionbutton-height`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-actionbutton-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-300": {
+      "value": "8px",
+      "description": "Used by `--spectrum-actionbutton-text-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-visual-300": {
+      "value": "15px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-visual`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-actionbutton-edge-to-text`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-size-difference-down": {
+      "value": "-2px",
+      "description": "Used by `.spectrum-ActionButton:active`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {
+    "mod-button-font-family": {
+      "category": "Passthrough"
+    },
+    "mod-button-line-height": {
+      "category": "Passthrough"
+    },
+    "mod-button-animation-duration": {
+      "category": "Passthrough"
+    }
+  },
+  "high-contrast": {
+    "highcontrast-actionbutton-border-color": {
+      "value": "var(--spectrum-actionbutton-border-color)",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.spectrum-ActionButton--quiet:disabled:not(.is-selected)`, `.spectrum-ActionButton:active, .spectrum-ActionButton:focus-visible`, `.spectrum-ActionButton:hover`, `.spectrum-ActionButton.is-selected`, `.spectrum-ActionButton:disabled`. <br/>Used by `.spectrum-ActionButton`. <br/>Defaults to `var(--spectrum-actionbutton-border-color)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-actionbutton-background-color-default": {
+      "value": "var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down))",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.is-selected`. <br/>Used by `.spectrum-ActionButton`, `.spectrum-ActionButton:hover`, `.spectrum-ActionButton:focus-visible`, `.spectrum-ActionButton:active`. <br/>Defaults to `var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-actionbutton-content-color-default": {
+      "value": "var(--mod-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down))",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`, `.spectrum-ActionButton.is-selected`. <br/>Used by `.spectrum-ActionButton`, `.spectrum-ActionButton:hover`, `.spectrum-ActionButton:focus-visible`, `.spectrum-ActionButton:active`. <br/>Defaults to `var(--mod-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-actionbutton-background-color-disabled": {
+      "value": "var(--mod-actionbutton-background-color-disabled, var(--spectrum-actionbutton-background-color-disabled))",
+      "description": "Defined in `.spectrum-ActionButton`, `.spectrum-ActionButton.spectrum-ActionButton--quiet`. <br/>Used by `.spectrum-ActionButton.is-disabled, .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--mod-actionbutton-background-color-disabled, var(--spectrum-actionbutton-background-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-actionbutton-content-color-disabled": {
+      "value": "var(--mod-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled))",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton.is-disabled, .spectrum-ActionButton:disabled`. <br/>Defaults to `var(--mod-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-actionbutton-animation-duration": {
+      "value": "var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton`, `.spectrum-ActionButton:after`. <br/>Defaults to `var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))`, if not set.",
+      "control": "text"
+    },
+    "highcontrast-actionbutton-focus-indicator-color": {
+      "value": "var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color))",
+      "description": "Defined in `.spectrum-ActionButton`. <br/>Used by `.spectrum-ActionButton:focus-visible:after`. <br/>Defaults to `var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

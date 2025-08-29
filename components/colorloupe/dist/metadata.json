@@ -7,57 +7,256 @@
     ".spectrum-ColorLoupe-checkerboard-pattern",
     ".spectrum-ColorLoupe-inner-border",
     ".spectrum-ColorLoupe-outer-border",
+    ".spectrum-ColorLoupe:dir(rtl)",
     ".spectrum-ColorLoupe.is-disabled",
-    ".spectrum-ColorLoupe.is-open",
-    ".spectrum-ColorLoupe:dir(rtl)"
+    ".spectrum-ColorLoupe.is-open"
   ],
-  "modifiers": [
-    "--mod-colorloupe-animation-distance",
-    "--mod-colorloupe-drop-shadow-blur",
-    "--mod-colorloupe-drop-shadow-color",
-    "--mod-colorloupe-drop-shadow-x",
-    "--mod-colorloupe-drop-shadow-y",
-    "--mod-colorloupe-inner-border-color",
-    "--mod-colorloupe-inner-border-width",
-    "--mod-colorloupe-offset",
-    "--mod-colorloupe-outer-border-color",
-    "--mod-colorloupe-outer-border-width"
-  ],
-  "component": [
-    "--spectrum-color-loupe-bottom-to-color-handle",
-    "--spectrum-color-loupe-height",
-    "--spectrum-color-loupe-inner-border",
-    "--spectrum-color-loupe-inner-border-width",
-    "--spectrum-color-loupe-outer-border",
-    "--spectrum-color-loupe-outer-border-width",
-    "--spectrum-color-loupe-width",
-    "--spectrum-colorloupe-animation-distance",
-    "--spectrum-colorloupe-checkerboard-dark-color",
-    "--spectrum-colorloupe-checkerboard-fill",
-    "--spectrum-colorloupe-checkerboard-light-color",
-    "--spectrum-colorloupe-drop-shadow-blur",
-    "--spectrum-colorloupe-drop-shadow-color",
-    "--spectrum-colorloupe-drop-shadow-x",
-    "--spectrum-colorloupe-drop-shadow-y",
-    "--spectrum-colorloupe-height",
-    "--spectrum-colorloupe-inner-border-color",
-    "--spectrum-colorloupe-inner-border-width",
-    "--spectrum-colorloupe-offset",
-    "--spectrum-colorloupe-outer-border-color",
-    "--spectrum-colorloupe-outer-border-width",
-    "--spectrum-colorloupe-width"
-  ],
-  "global": [
-    "--spectrum-color-handle-outer-border-width",
-    "--spectrum-color-handle-size",
-    "--spectrum-drop-shadow-elevated-blur",
-    "--spectrum-drop-shadow-elevated-color",
-    "--spectrum-drop-shadow-elevated-x",
-    "--spectrum-drop-shadow-elevated-y",
-    "--spectrum-opacity-checkerboard-square-dark",
-    "--spectrum-opacity-checkerboard-square-light",
-    "--spectrum-picked-color"
-  ],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-colorloupe-outer-border-color"]
+  "modifiers": {
+    "mod-colorloupe-animation-distance": {
+      "description": "Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-colorloupe-animation-distance)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-offset": {
+      "description": "Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-colorloupe-offset)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-drop-shadow-x": {
+      "description": "Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-colorloupe-drop-shadow-x)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-drop-shadow-y": {
+      "description": "Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-colorloupe-drop-shadow-y)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-drop-shadow-blur": {
+      "description": "Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-colorloupe-drop-shadow-blur)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-drop-shadow-color": {
+      "description": "Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-colorloupe-drop-shadow-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-inner-border-color": {
+      "description": "Used by `.spectrum-ColorLoupe-inner-border`. <br/>Defaults to `var(--spectrum-colorloupe-inner-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-inner-border-width": {
+      "description": "Used by `.spectrum-ColorLoupe-inner-border`. <br/>Defaults to `var(--spectrum-colorloupe-inner-border-width)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-outer-border-color": {
+      "description": "Used by `.spectrum-ColorLoupe-outer-border`. <br/>Defaults to `var(--spectrum-colorloupe-outer-border-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-colorloupe-outer-border-width": {
+      "description": "Used by `.spectrum-ColorLoupe-outer-border`. <br/>Defaults to `var(--spectrum-colorloupe-outer-border-width)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-colorloupe-width": {
+      "value": "48px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe`, `.spectrum-ColorLoupe:dir(rtl)`. <br/>Defaults to `var(--spectrum-color-loupe-width)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-loupe-width": {
+      "value": "48px",
+      "description": "Used by `--spectrum-colorloupe-width`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-height": {
+      "value": "64px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-color-loupe-height)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-loupe-height": {
+      "value": "64px",
+      "description": "Used by `--spectrum-colorloupe-height`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-offset": {
+      "value": "12px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-color-loupe-bottom-to-color-handle)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-loupe-bottom-to-color-handle": {
+      "value": "12px",
+      "description": "Used by `--spectrum-colorloupe-offset`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-animation-distance": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe`. <br/>Defaults to `8px`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-drop-shadow-x": {
+      "value": "0px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-drop-shadow-elevated-x)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-drop-shadow-y": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-drop-shadow-elevated-y)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-drop-shadow-blur": {
+      "value": "8px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-drop-shadow-elevated-blur)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-drop-shadow-color": {
+      "value": "var(--spectrum-drop-shadow-color-200)",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe`. <br/>Defaults to `var(--spectrum-drop-shadow-elevated-color)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-outer-border-width": {
+      "value": "2px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe-outer-border`. <br/>Defaults to `var(--spectrum-color-loupe-outer-border-width)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-loupe-outer-border-width": {
+      "value": "2px",
+      "description": "Used by `--spectrum-colorloupe-outer-border-width`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-inner-border-width": {
+      "value": "1px",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe-inner-border`. <br/>Defaults to `var(--spectrum-color-loupe-inner-border-width)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-loupe-inner-border-width": {
+      "value": "1px",
+      "description": "Used by `--spectrum-colorloupe-inner-border-width`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-outer-border-color": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe-outer-border`. <br/>Defaults to `var(--spectrum-color-loupe-outer-border)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-loupe-outer-border": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-colorloupe-outer-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-inner-border-color": {
+      "value": "rgba(0, 0, 0, 0.12)",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe-inner-border`. <br/>Defaults to `var(--spectrum-color-loupe-inner-border)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-color-loupe-inner-border": {
+      "value": "rgba(0, 0, 0, 0.12)",
+      "description": "Used by `--spectrum-colorloupe-inner-border-color`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-checkerboard-dark-color": {
+      "value": "var(--spectrum-gray-200)",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe-checkerboard-pattern`. <br/>Defaults to `var(--spectrum-opacity-checkerboard-square-dark)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-checkerboard-light-color": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe-checkerboard-background`. <br/>Defaults to `var(--spectrum-opacity-checkerboard-square-light)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-colorloupe-checkerboard-fill": {
+      "description": "Used by `.spectrum-ColorLoupe-checkerboard-fill`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-drop-shadow-elevated-x": {
+      "value": "0px",
+      "description": "Used by `--spectrum-colorloupe-drop-shadow-x`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-elevated-y": {
+      "value": "2px",
+      "description": "Used by `--spectrum-colorloupe-drop-shadow-y`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-elevated-blur": {
+      "value": "8px",
+      "description": "Used by `--spectrum-colorloupe-drop-shadow-blur`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-drop-shadow-elevated-color": {
+      "value": "var(--spectrum-drop-shadow-color-200)",
+      "description": "Used by `--spectrum-colorloupe-drop-shadow-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-opacity-checkerboard-square-dark": {
+      "value": "var(--spectrum-gray-200)",
+      "description": "Used by `--spectrum-colorloupe-checkerboard-dark-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-opacity-checkerboard-square-light": {
+      "value": "rgb(255, 255, 255)",
+      "description": "Used by `--spectrum-colorloupe-checkerboard-light-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-color-handle-size": {
+      "value": "16px",
+      "description": "Used by `.spectrum-ColorLoupe`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-color-handle-outer-border-width": {
+      "value": "1px",
+      "description": "Used by `.spectrum-ColorLoupe`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-picked-color": {
+      "description": "Used by `.spectrum-ColorLoupe-inner-border`.",
+      "control": "color",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-colorloupe-outer-border-color": {
+      "value": "var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color))",
+      "description": "Defined in `.spectrum-ColorLoupe`. <br/>Used by `.spectrum-ColorLoupe-outer-border`. <br/>Defaults to `var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color))`, if not set.",
+      "control": "color"
+    }
+  }
 }

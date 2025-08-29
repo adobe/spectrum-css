@@ -2,10 +2,12 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isPending, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { ButtonGroups } from "./button.test.js";
 import { ButtonsWithIconOptions, TextOverflowTemplate, TextWrapTemplate, TreatmentTemplate } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
@@ -100,6 +102,10 @@ export default {
 		metadata,
 		status: {
 			type: "migrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	decorators: [

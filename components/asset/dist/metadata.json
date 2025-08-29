@@ -10,26 +10,95 @@
     ".spectrum-Asset-folderOutline",
     ".spectrum-Asset-image"
   ],
-  "modifiers": [
-    "--mod-asset-file-background-color",
-    "--mod-asset-folder-background-color",
-    "--mod-asset-icon-margin",
-    "--mod-asset-icon-max-width",
-    "--mod-asset-icon-min-width",
-    "--mod-asset-icon-outline-color"
-  ],
-  "component": [
-    "--spectrum-asset-file-background",
-    "--spectrum-asset-file-outline",
-    "--spectrum-asset-folder-background",
-    "--spectrum-asset-folder-outline"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-gray-200",
-    "--spectrum-gray-25",
-    "--spectrum-gray-500"
-  ],
-  "passthroughs": [],
-  "high-contrast": ["--highcontrast-asset-icon-background-color"]
+  "modifiers": {
+    "mod-asset-folder-background-color": {
+      "description": "Used by `--spectrum-asset-folder-background`. <br/>Defaults to `var(--spectrum-gray-200)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-asset-file-background-color": {
+      "description": "Used by `--spectrum-asset-file-background`. <br/>Defaults to `var(--spectrum-gray-25)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-asset-icon-outline-color": {
+      "description": "Used by `--spectrum-asset-folder-outline`, `--spectrum-asset-file-outline`. <br/>Defaults to `var(--spectrum-gray-500)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-asset-icon-min-width": {
+      "description": "Used by `.spectrum-Asset-file, .spectrum-Asset-folder`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-asset-icon-max-width": {
+      "description": "Used by `.spectrum-Asset-file, .spectrum-Asset-folder`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-asset-icon-margin": {
+      "description": "Used by `.spectrum-Asset-file, .spectrum-Asset-folder`.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-asset-folder-background": {
+      "value": "var(--highcontrast-asset-icon-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-200)))",
+      "description": "Defined in `.spectrum-Asset`. <br/>Used by `.spectrum-Asset-folderBackground`. <br/>Defaults to `var(--highcontrast-asset-icon-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-200)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-asset-file-background": {
+      "value": "var(--highcontrast-asset-icon-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-25)))",
+      "description": "Defined in `.spectrum-Asset`. <br/>Used by `.spectrum-Asset-fileBackground`. <br/>Defaults to `var(--highcontrast-asset-icon-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-25)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-asset-folder-outline": {
+      "value": "var(--mod-asset-icon-outline-color, var(--spectrum-gray-500))",
+      "description": "Defined in `.spectrum-Asset`. <br/>Used by `.spectrum-Asset-folderOutline`. <br/>Defaults to `var(--mod-asset-icon-outline-color, var(--spectrum-gray-500))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-asset-file-outline": {
+      "value": "var(--mod-asset-icon-outline-color, var(--spectrum-gray-500))",
+      "description": "Defined in `.spectrum-Asset`. <br/>Used by `.spectrum-Asset-fileOutline`. <br/>Defaults to `var(--mod-asset-icon-outline-color, var(--spectrum-gray-500))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-200": {
+      "value": "light-dark(rgb(225, 225, 225), rgb(50, 50, 50))",
+      "description": "Used by `--spectrum-asset-folder-background`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-25": {
+      "value": "light-dark(rgb(255, 255, 255), rgb(17, 17, 17))",
+      "description": "Used by `--spectrum-asset-file-background`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-500": {
+      "value": "light-dark(rgb(143, 143, 143), rgb(109, 109, 109))",
+      "description": "Used by `--spectrum-asset-folder-outline`, `--spectrum-asset-file-outline`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `.spectrum-Asset-image`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-asset-icon-background-color": {
+      "value": "var(--mod-asset-file-background-color, var(--spectrum-gray-25))",
+      "description": "Defined in `.spectrum-Asset`. <br/>Used by `--spectrum-asset-folder-background`, `--spectrum-asset-file-background`. <br/>Defaults to `var(--mod-asset-file-background-color, var(--spectrum-gray-25))`, if not set.",
+      "control": "color"
+    }
+  }
 }

@@ -1,8 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
 import { SideNavGroup } from "./sidenav.test.js";
 import { Template } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * Side nav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.
@@ -71,6 +73,10 @@ export default {
 		metadata,
 		status: {
 			type: "unmigrated",
+		},
+		cssprops: {
+			...metadata.modifiers,
+			...metadata.component,
 		},
 	},
 	tags: ["unmigrated"],

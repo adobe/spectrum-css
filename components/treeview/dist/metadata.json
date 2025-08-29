@@ -45,142 +45,702 @@
     ".spectrum-TreeView-itemLink:hover:before",
     ".spectrum-TreeView-section > .spectrum-TreeView",
     ".spectrum-TreeView-section:not(:first-child)",
+    ".spectrum-TreeView:dir(rtl)",
     ".spectrum-TreeView.spectrum-TreeView--detached",
     ".spectrum-TreeView.spectrum-TreeView--quiet",
-    ".spectrum-TreeView.spectrum-TreeView--thumbnail",
-    ".spectrum-TreeView:dir(rtl)"
+    ".spectrum-TreeView.spectrum-TreeView--thumbnail"
   ],
-  "modifiers": [
-    "--mod-treeview-font-size",
-    "--mod-treeview-heading-bottom-to-text",
-    "--mod-treeview-heading-color",
-    "--mod-treeview-heading-font-weight",
-    "--mod-treeview-indicator-animation-duration",
-    "--mod-treeview-indicator-margin-inline-start",
-    "--mod-treeview-indicator-padding-block",
-    "--mod-treeview-indicator-padding-inline",
-    "--mod-treeview-item-background-color-focus",
-    "--mod-treeview-item-background-color-hover",
-    "--mod-treeview-item-background-color-quiet-selected",
-    "--mod-treeview-item-background-color-selected",
-    "--mod-treeview-item-border-color-focus",
-    "--mod-treeview-item-border-color-selected",
-    "--mod-treeview-item-border-color-selected-quiet",
-    "--mod-treeview-item-border-radius",
-    "--mod-treeview-item-border-radius-detached",
-    "--mod-treeview-item-border-size",
-    "--mod-treeview-item-border-size-selected",
-    "--mod-treeview-item-icon-color",
-    "--mod-treeview-item-icon-color-disabled",
-    "--mod-treeview-item-icon-color-focus",
-    "--mod-treeview-item-icon-color-hover",
-    "--mod-treeview-item-icon-color-selected",
-    "--mod-treeview-item-icon-gap",
-    "--mod-treeview-item-indentation",
-    "--mod-treeview-item-min-block-size",
-    "--mod-treeview-item-min-block-size-thumbnail",
-    "--mod-treeview-item-padding-inline-end",
-    "--mod-treeview-item-padding-inline-start",
-    "--mod-treeview-item-text-color",
-    "--mod-treeview-item-text-color-disabled",
-    "--mod-treeview-item-text-color-focus",
-    "--mod-treeview-item-text-color-hover",
-    "--mod-treeview-item-text-color-selected",
-    "--mod-treeview-line-height",
-    "--mod-treeview-margin-block",
-    "--mod-treeview-section-spacing"
-  ],
-  "component": [
-    "--spectrum-treeview-font-size",
-    "--spectrum-treeview-heading-bottom-to-text",
-    "--spectrum-treeview-heading-color",
-    "--spectrum-treeview-indicator-animation-duration",
-    "--spectrum-treeview-indicator-margin-inline-start",
-    "--spectrum-treeview-indicator-padding",
-    "--spectrum-treeview-item-background-color-focus",
-    "--spectrum-treeview-item-background-color-hover",
-    "--spectrum-treeview-item-background-color-quiet-selected",
-    "--spectrum-treeview-item-background-color-selected",
-    "--spectrum-treeview-item-border-color-focus",
-    "--spectrum-treeview-item-border-color-quiet-selected",
-    "--spectrum-treeview-item-border-color-selected",
-    "--spectrum-treeview-item-border-radius",
-    "--spectrum-treeview-item-border-size",
-    "--spectrum-treeview-item-border-size-selected",
-    "--spectrum-treeview-item-icon-color",
-    "--spectrum-treeview-item-icon-color-disabled",
-    "--spectrum-treeview-item-icon-color-focus",
-    "--spectrum-treeview-item-icon-color-hover",
-    "--spectrum-treeview-item-icon-color-selected",
-    "--spectrum-treeview-item-icon-gap",
-    "--spectrum-treeview-item-indentation",
-    "--spectrum-treeview-item-indentation-extra-large",
-    "--spectrum-treeview-item-indentation-large",
-    "--spectrum-treeview-item-indentation-medium",
-    "--spectrum-treeview-item-indentation-small",
-    "--spectrum-treeview-item-min-block-size",
-    "--spectrum-treeview-item-min-block-size-thumbnail-offset",
-    "--spectrum-treeview-item-min-block-size-thumbnail-offset-medium",
-    "--spectrum-treeview-item-padding-inline-end",
-    "--spectrum-treeview-item-padding-inline-start",
-    "--spectrum-treeview-item-sized-indentation",
-    "--spectrum-treeview-item-sized-min-block-size",
-    "--spectrum-treeview-item-text-color",
-    "--spectrum-treeview-item-text-color-disabled",
-    "--spectrum-treeview-item-text-color-focus",
-    "--spectrum-treeview-item-text-color-hover",
-    "--spectrum-treeview-item-text-color-selected",
-    "--spectrum-treeview-section-spacing"
-  ],
-  "global": [
-    "--spectrum-animation-duration-100",
-    "--spectrum-blue-700",
-    "--spectrum-blue-800",
-    "--spectrum-bold-font-weight",
-    "--spectrum-border-width-200",
-    "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-edge-to-text-200",
-    "--spectrum-component-edge-to-text-300",
-    "--spectrum-component-edge-to-text-75",
-    "--spectrum-component-height-100",
-    "--spectrum-component-height-200",
-    "--spectrum-component-height-300",
-    "--spectrum-component-height-75",
-    "--spectrum-corner-radius-100",
-    "--spectrum-disabled-content-color",
-    "--spectrum-disclosure-indicator-top-to-disclosure-icon-extra-large",
-    "--spectrum-disclosure-indicator-top-to-disclosure-icon-large",
-    "--spectrum-disclosure-indicator-top-to-disclosure-icon-medium",
-    "--spectrum-disclosure-indicator-top-to-disclosure-icon-small",
-    "--spectrum-font-size-100",
-    "--spectrum-font-size-200",
-    "--spectrum-font-size-300",
-    "--spectrum-font-size-75",
-    "--spectrum-gray-100",
-    "--spectrum-gray-500",
-    "--spectrum-gray-700",
-    "--spectrum-gray-900",
-    "--spectrum-heading-color",
-    "--spectrum-line-height-200",
-    "--spectrum-logical-rotation",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-text-to-visual-75"
-  ],
-  "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-treeview-heading-color",
-    "--highcontrast-treeview-item-background-color-disabled",
-    "--highcontrast-treeview-item-background-color-focus",
-    "--highcontrast-treeview-item-background-color-selected",
-    "--highcontrast-treeview-item-border-color-focus",
-    "--highcontrast-treeview-item-border-color-selected",
-    "--highcontrast-treeview-item-icon-color",
-    "--highcontrast-treeview-item-icon-color-disabled",
-    "--highcontrast-treeview-item-icon-color-focus",
-    "--highcontrast-treeview-item-icon-color-selected",
-    "--highcontrast-treeview-item-text-color",
-    "--highcontrast-treeview-item-text-color-disabled",
-    "--highcontrast-treeview-item-text-color-focus",
-    "--highcontrast-treeview-item-text-color-selected"
-  ]
+  "modifiers": {
+    "mod-treeview-font-size": {
+      "description": "Used by `--spectrum-treeview-font-size`. <br/>Defaults to `var(--spectrum-font-size-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-min-block-size": {
+      "description": "Used by `--spectrum-treeview-item-sized-min-block-size`, `--spectrum-treeview-item-min-block-size`. <br/>Defaults to `var(--spectrum-treeview-item-sized-min-block-size)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-heading-bottom-to-text": {
+      "description": "Used by `--spectrum-treeview-heading-bottom-to-text`. <br/>Defaults to `var(--spectrum-component-edge-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-padding-inline-start": {
+      "description": "Used by `--spectrum-treeview-item-padding-inline-start`. <br/>Defaults to `var(--spectrum-component-height-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-padding-inline-end": {
+      "description": "Used by `--spectrum-treeview-item-padding-inline-end`. <br/>Defaults to `var(--spectrum-component-edge-to-text-300)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-indicator-margin-inline-start": {
+      "description": "Used by `--spectrum-treeview-indicator-margin-inline-start`. <br/>Defaults to `calc(var(--spectrum-component-height-300) * -1)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-indentation": {
+      "description": "Used by `--spectrum-treeview-item-indentation`. <br/>Defaults to `var(--spectrum-treeview-item-sized-indentation)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-section-spacing": {
+      "description": "Used by `--spectrum-treeview-section-spacing`. <br/>Defaults to `var(--spectrum-treeview-item-indentation)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-heading-color": {
+      "description": "Used by `--spectrum-treeview-heading-color`. <br/>Defaults to `var(--spectrum-heading-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-border-size": {
+      "description": "Used by `--spectrum-treeview-item-border-size`. <br/>Defaults to `var(--spectrum-border-width-200)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-border-size-selected": {
+      "description": "Used by `--spectrum-treeview-item-border-size-selected`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-border-radius": {
+      "description": "Defined in `.spectrum-TreeView.spectrum-TreeView--detached`. <br/>Used by `--spectrum-treeview-item-border-radius`. <br/>Defaults to `var(--mod-treeview-item-border-radius-detached, var(--spectrum-corner-radius-100))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-border-color-selected": {
+      "description": "Defined in `.spectrum-TreeView.spectrum-TreeView--quiet`. <br/>Used by `--spectrum-treeview-item-border-color-selected`. <br/>Defaults to `var(--spectrum-blue-800)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-border-color-focus": {
+      "description": "Used by `--spectrum-treeview-item-border-color-focus`. <br/>Defaults to `var(--spectrum-blue-700)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-border-color-selected-quiet": {
+      "description": "Used by `--spectrum-treeview-item-border-color-quiet-selected`.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-icon-gap": {
+      "description": "Used by `--spectrum-treeview-item-icon-gap`. <br/>Defaults to `var(--spectrum-text-to-visual-75)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-icon-color": {
+      "description": "Used by `--spectrum-treeview-item-icon-color`. <br/>Defaults to `var(--spectrum-gray-700)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-icon-color-hover": {
+      "description": "Used by `--spectrum-treeview-item-icon-color-hover`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-icon-color-focus": {
+      "description": "Used by `--spectrum-treeview-item-icon-color-focus`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-icon-color-selected": {
+      "description": "Used by `--spectrum-treeview-item-icon-color-selected`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-icon-color-disabled": {
+      "description": "Used by `--spectrum-treeview-item-icon-color-disabled`. <br/>Defaults to `var(--spectrum-disabled-content-color)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-text-color": {
+      "description": "Used by `--spectrum-treeview-item-text-color`. <br/>Defaults to `var(--spectrum-neutral-content-color-default)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-text-color-selected": {
+      "description": "Used by `--spectrum-treeview-item-text-color-selected`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-text-color-disabled": {
+      "description": "Used by `--spectrum-treeview-item-text-color-disabled`. <br/>Defaults to `var(--spectrum-gray-500)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-text-color-focus": {
+      "description": "Used by `--spectrum-treeview-item-text-color-focus`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-text-color-hover": {
+      "description": "Used by `--spectrum-treeview-item-text-color-hover`. <br/>Defaults to `var(--spectrum-gray-900)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-indicator-animation-duration": {
+      "description": "Used by `--spectrum-treeview-indicator-animation-duration`. <br/>Defaults to `var(--spectrum-animation-duration-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-line-height": {
+      "description": "Used by `.spectrum-TreeView`. <br/>Defaults to `var(--spectrum-line-height-200)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-margin-block": {
+      "description": "Used by `.spectrum-TreeView`.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-background-color-selected": {
+      "description": "Defined in `.spectrum-TreeView.spectrum-TreeView--quiet`. <br/>Used by `.spectrum-TreeView-item.is-drop-target > .spectrum-TreeView-itemLink:before, .spectrum-TreeView-item.is-selected > .spectrum-TreeView-itemLink:before`. <br/>Defaults to `var(--spectrum-treeview-item-background-color-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-background-color-quiet-selected": {
+      "description": "Used by `--mod-treeview-item-background-color-selected`. <br/>Defaults to `var(--spectrum-treeview-item-background-color-quiet-selected)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-min-block-size-thumbnail": {
+      "description": "Used by `--spectrum-treeview-item-min-block-size`. <br/>Defaults to `calc(var(--spectrum-treeview-item-sized-min-block-size) + var(--spectrum-treeview-item-min-block-size-thumbnail-offset))`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-border-radius-detached": {
+      "description": "Used by `--mod-treeview-item-border-radius`. <br/>Defaults to `var(--spectrum-corner-radius-100)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-background-color-focus": {
+      "description": "Used by `.spectrum-TreeView-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-treeview-item-background-color-focus)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-item-background-color-hover": {
+      "description": "Used by `.spectrum-TreeView-itemLink:hover:before`. <br/>Defaults to `var(--spectrum-treeview-item-background-color-hover)`, if not set.",
+      "control": "color",
+      "category": "Modifier"
+    },
+    "mod-treeview-indicator-padding-inline": {
+      "description": "Used by `.spectrum-TreeView-itemIndicator`. <br/>Defaults to `var(--spectrum-treeview-indicator-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-indicator-padding-block": {
+      "description": "Used by `.spectrum-TreeView-itemIndicator`. <br/>Defaults to `var(--spectrum-treeview-indicator-padding)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    },
+    "mod-treeview-heading-font-weight": {
+      "description": "Used by `.spectrum-TreeView-heading`. <br/>Defaults to `var(--spectrum-bold-font-weight)`, if not set.",
+      "control": "text",
+      "category": "Modifier"
+    }
+  },
+  "component": {
+    "spectrum-treeview-item-background-color-hover": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:hover:before`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-background-color-focus": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:focus-visible:before`. <br/>Defaults to `var(--spectrum-gray-100)`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-font-size": {
+      "value": "var(--mod-treeview-font-size, var(--spectrum-font-size-300))",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `.spectrum-TreeView`. <br/>Defaults to `var(--mod-treeview-font-size, var(--spectrum-font-size-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-sized-min-block-size": {
+      "value": "var(--mod-treeview-item-min-block-size, var(--spectrum-component-height-300))",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `--spectrum-treeview-item-min-block-size`. <br/>Defaults to `var(--mod-treeview-item-min-block-size, var(--spectrum-component-height-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-sized-indentation": {
+      "value": "var(--spectrum-treeview-item-indentation-extra-large)",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `--spectrum-treeview-item-indentation`. <br/>Defaults to `var(--spectrum-treeview-item-indentation-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-indentation-medium": {
+      "description": "Used by `--spectrum-treeview-item-sized-indentation`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-heading-bottom-to-text": {
+      "value": "var(--mod-treeview-heading-bottom-to-text, var(--spectrum-component-edge-to-text-300))",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `.spectrum-TreeView-heading`. <br/>Defaults to `var(--mod-treeview-heading-bottom-to-text, var(--spectrum-component-edge-to-text-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-padding-inline-start": {
+      "value": "var(--mod-treeview-item-padding-inline-start, var(--spectrum-component-height-300))",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `.spectrum-TreeView-itemLink`. <br/>Defaults to `var(--mod-treeview-item-padding-inline-start, var(--spectrum-component-height-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-padding-inline-end": {
+      "value": "var(--mod-treeview-item-padding-inline-end, var(--spectrum-component-edge-to-text-300))",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `.spectrum-TreeView-itemLink`. <br/>Defaults to `var(--mod-treeview-item-padding-inline-end, var(--spectrum-component-edge-to-text-300))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-indicator-margin-inline-start": {
+      "value": "var(--mod-treeview-indicator-margin-inline-start, calc(var(--spectrum-component-height-300) * -1))",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `.spectrum-TreeView-itemIndicator`. <br/>Defaults to `var(--mod-treeview-indicator-margin-inline-start, calc(var(--spectrum-component-height-300) * -1))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-indicator-padding": {
+      "value": "17px",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `.spectrum-TreeView-itemIndicator`. <br/>Defaults to `var(--spectrum-disclosure-indicator-top-to-disclosure-icon-extra-large)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-min-block-size-thumbnail-offset": {
+      "value": "0",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView--sizeS`, `.spectrum-TreeView--sizeL`, `.spectrum-TreeView--sizeXL`. <br/>Used by `--spectrum-treeview-item-min-block-size`. <br/>Defaults to `0`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-min-block-size-thumbnail-offset-medium": {
+      "description": "Used by `--spectrum-treeview-item-min-block-size-thumbnail-offset`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-indentation-small": {
+      "description": "Used by `--spectrum-treeview-item-sized-indentation`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-indentation-large": {
+      "description": "Used by `--spectrum-treeview-item-sized-indentation`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-indentation-extra-large": {
+      "description": "Used by `--spectrum-treeview-item-sized-indentation`.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-indentation": {
+      "value": "var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-sized-indentation))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-section-spacing`, `.spectrum-TreeView .spectrum-TreeView`, `.spectrum-TreeView-item--indent1`, `.spectrum-TreeView-item--indent2`, `.spectrum-TreeView-item--indent3`, `.spectrum-TreeView-item--indent4`, `.spectrum-TreeView-item--indent5`, `.spectrum-TreeView-item--indent6`, `.spectrum-TreeView-item--indent7`, `.spectrum-TreeView-item--indent8`, `.spectrum-TreeView-item--indent9`, `.spectrum-TreeView-item--indent10`. <br/>Defaults to `var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-sized-indentation))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-section-spacing": {
+      "value": "var(--mod-treeview-section-spacing, var(--spectrum-treeview-item-indentation))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-section:not(:first-child)`. <br/>Defaults to `var(--mod-treeview-section-spacing, var(--spectrum-treeview-item-indentation))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-heading-color": {
+      "value": "var(--highcontrast-treeview-heading-color, var(--mod-treeview-heading-color, var(--spectrum-heading-color)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-heading`. <br/>Defaults to `var(--highcontrast-treeview-heading-color, var(--mod-treeview-heading-color, var(--spectrum-heading-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-border-size": {
+      "value": "var(--mod-treeview-item-border-size, var(--spectrum-border-width-200))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-item.is-drop-target > .spectrum-TreeView-itemLink:before`, `.spectrum-TreeView-itemLink:before`, `.spectrum-TreeView-itemLink:focus-visible:before`. <br/>Defaults to `var(--mod-treeview-item-border-size, var(--spectrum-border-width-200))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-border-size-selected": {
+      "value": "var(--mod-treeview-item-border-size-selected, 1px)",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-item.is-selected > .spectrum-TreeView-itemLink:not(:focus-visible):before`. <br/>Defaults to `var(--mod-treeview-item-border-size-selected, 1px)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-border-radius": {
+      "value": "var(--mod-treeview-item-border-radius, 0px)",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:before`. <br/>Defaults to `var(--mod-treeview-item-border-radius, 0px)`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-border-color-selected": {
+      "value": "var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected, var(--spectrum-blue-800)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-item.is-drop-target > .spectrum-TreeView-itemLink:not(:focus-visible):before, .spectrum-TreeView-item.is-selected > .spectrum-TreeView-itemLink:not(:focus-visible):before`. <br/>Defaults to `var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected, var(--spectrum-blue-800)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-border-color-focus": {
+      "value": "var(--highcontrast-treeview-item-border-color-focus, var(--mod-treeview-item-border-color-focus, var(--spectrum-blue-700)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:focus-visible:before`. <br/>Defaults to `var(--highcontrast-treeview-item-border-color-focus, var(--mod-treeview-item-border-color-focus, var(--spectrum-blue-700)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-border-color-quiet-selected": {
+      "value": "var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, transparent))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--mod-treeview-item-border-color-selected`. <br/>Defaults to `var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, transparent))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-icon-gap": {
+      "value": "var(--mod-treeview-item-icon-gap, var(--spectrum-text-to-visual-75))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemIcon`, `.spectrum-TreeView--thumbnail .spectrum-TreeView-itemThumbnail`. <br/>Defaults to `var(--mod-treeview-item-icon-gap, var(--spectrum-text-to-visual-75))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-icon-color": {
+      "value": "var(--highcontrast-treeview-item-icon-color, var(--mod-treeview-item-icon-color, var(--spectrum-gray-700)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemIcon`. <br/>Defaults to `var(--highcontrast-treeview-item-icon-color, var(--mod-treeview-item-icon-color, var(--spectrum-gray-700)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-icon-color-hover": {
+      "value": "var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-icon-color-hover, var(--spectrum-gray-900)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:hover .spectrum-TreeView-itemIcon`. <br/>Defaults to `var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-icon-color-hover, var(--spectrum-gray-900)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-icon-color-focus": {
+      "value": "var(--highcontrast-treeview-item-icon-color-focus, var(--mod-treeview-item-icon-color-focus, var(--spectrum-gray-900)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:focus-visible .spectrum-TreeView-itemIcon`. <br/>Defaults to `var(--highcontrast-treeview-item-icon-color-focus, var(--mod-treeview-item-icon-color-focus, var(--spectrum-gray-900)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-icon-color-selected": {
+      "value": "var(--highcontrast-treeview-item-icon-color-selected, var(--mod-treeview-item-icon-color-selected, var(--spectrum-gray-900)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-item.is-drop-target > .spectrum-TreeView-itemLink .spectrum-TreeView-itemIcon, .spectrum-TreeView-item.is-selected > .spectrum-TreeView-itemLink .spectrum-TreeView-itemIcon`. <br/>Defaults to `var(--highcontrast-treeview-item-icon-color-selected, var(--mod-treeview-item-icon-color-selected, var(--spectrum-gray-900)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-icon-color-disabled": {
+      "value": "var(--highcontrast-treeview-item-icon-color-disabled, var(--mod-treeview-item-icon-color-disabled, var(--spectrum-disabled-content-color)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-item.is-disabled > .spectrum-TreeView-itemLink .spectrum-Icon`. <br/>Defaults to `var(--highcontrast-treeview-item-icon-color-disabled, var(--mod-treeview-item-icon-color-disabled, var(--spectrum-disabled-content-color)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-text-color": {
+      "value": "var(--highcontrast-treeview-item-text-color, var(--mod-treeview-item-text-color, var(--spectrum-neutral-content-color-default)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink`. <br/>Defaults to `var(--highcontrast-treeview-item-text-color, var(--mod-treeview-item-text-color, var(--spectrum-neutral-content-color-default)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-text-color-selected": {
+      "value": "var(--highcontrast-treeview-item-text-color-selected, var(--mod-treeview-item-text-color-selected, var(--spectrum-gray-900)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-item.is-drop-target > .spectrum-TreeView-itemLink, .spectrum-TreeView-item.is-selected > .spectrum-TreeView-itemLink`. <br/>Defaults to `var(--highcontrast-treeview-item-text-color-selected, var(--mod-treeview-item-text-color-selected, var(--spectrum-gray-900)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-text-color-disabled": {
+      "value": "var(--highcontrast-treeview-item-text-color-disabled, var(--mod-treeview-item-text-color-disabled, var(--spectrum-gray-500)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-item.is-disabled > .spectrum-TreeView-itemLink`. <br/>Defaults to `var(--highcontrast-treeview-item-text-color-disabled, var(--mod-treeview-item-text-color-disabled, var(--spectrum-gray-500)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-text-color-focus": {
+      "value": "var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-text-color-focus, var(--spectrum-gray-900)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:focus-visible`. <br/>Defaults to `var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-text-color-focus, var(--spectrum-gray-900)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-text-color-hover": {
+      "value": "var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-text-color-hover, var(--spectrum-gray-900)))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:hover`. <br/>Defaults to `var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-text-color-hover, var(--spectrum-gray-900)))`, if not set.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-indicator-animation-duration": {
+      "value": "var(--mod-treeview-indicator-animation-duration, var(--spectrum-animation-duration-100))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemIndicator`. <br/>Defaults to `var(--mod-treeview-indicator-animation-duration, var(--spectrum-animation-duration-100))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-min-block-size": {
+      "value": "var(--mod-treeview-item-min-block-size-thumbnail, calc(var(--spectrum-treeview-item-sized-min-block-size) + var(--spectrum-treeview-item-min-block-size-thumbnail-offset)))",
+      "description": "Defined in `.spectrum-TreeView`, `.spectrum-TreeView.spectrum-TreeView--thumbnail`. <br/>Used by `.spectrum-TreeView-itemLink, .spectrum-TreeView-itemLink:before`. <br/>Defaults to `var(--mod-treeview-item-min-block-size-thumbnail, calc(var(--spectrum-treeview-item-sized-min-block-size) + var(--spectrum-treeview-item-min-block-size-thumbnail-offset)))`, if not set.",
+      "control": "text",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-background-color-quiet-selected": {
+      "description": "Used by `--mod-treeview-item-background-color-selected`.",
+      "control": "color",
+      "category": "Component"
+    },
+    "spectrum-treeview-item-background-color-selected": {
+      "description": "Used by `.spectrum-TreeView-item.is-drop-target > .spectrum-TreeView-itemLink:before, .spectrum-TreeView-item.is-selected > .spectrum-TreeView-itemLink:before`.",
+      "control": "color",
+      "category": "Component"
+    }
+  },
+  "global": {
+    "spectrum-gray-100": {
+      "value": "light-dark(rgb(233, 233, 233), rgb(44, 44, 44))",
+      "description": "Used by `--spectrum-treeview-item-background-color-hover`, `--spectrum-treeview-item-background-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-100": {
+      "value": "14px",
+      "description": "Used by `--spectrum-treeview-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-100": {
+      "value": "32px",
+      "description": "Used by `--spectrum-treeview-item-sized-min-block-size`, `--spectrum-treeview-item-padding-inline-start`, `--spectrum-treeview-indicator-margin-inline-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-100": {
+      "value": "12px",
+      "description": "Used by `--spectrum-treeview-heading-bottom-to-text`, `--spectrum-treeview-item-padding-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disclosure-indicator-top-to-disclosure-icon-medium": {
+      "value": "11px",
+      "description": "Used by `--spectrum-treeview-indicator-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-75": {
+      "value": "12px",
+      "description": "Used by `--spectrum-treeview-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-75": {
+      "value": "24px",
+      "description": "Used by `--spectrum-treeview-item-sized-min-block-size`, `--spectrum-treeview-item-padding-inline-start`, `--spectrum-treeview-indicator-margin-inline-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-75": {
+      "value": "9px",
+      "description": "Used by `--spectrum-treeview-heading-bottom-to-text`, `--spectrum-treeview-item-padding-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disclosure-indicator-top-to-disclosure-icon-small": {
+      "value": "7px",
+      "description": "Used by `--spectrum-treeview-indicator-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-200": {
+      "value": "16px",
+      "description": "Used by `--spectrum-treeview-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-200": {
+      "value": "40px",
+      "description": "Used by `--spectrum-treeview-item-sized-min-block-size`, `--spectrum-treeview-item-padding-inline-start`, `--spectrum-treeview-indicator-margin-inline-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-200": {
+      "value": "15px",
+      "description": "Used by `--spectrum-treeview-heading-bottom-to-text`, `--spectrum-treeview-item-padding-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disclosure-indicator-top-to-disclosure-icon-large": {
+      "value": "14px",
+      "description": "Used by `--spectrum-treeview-indicator-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-font-size-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-treeview-font-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-height-300": {
+      "value": "48px",
+      "description": "Used by `--spectrum-treeview-item-sized-min-block-size`, `--spectrum-treeview-item-padding-inline-start`, `--spectrum-treeview-indicator-margin-inline-start`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-component-edge-to-text-300": {
+      "value": "18px",
+      "description": "Used by `--spectrum-treeview-heading-bottom-to-text`, `--spectrum-treeview-item-padding-inline-end`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disclosure-indicator-top-to-disclosure-icon-extra-large": {
+      "value": "17px",
+      "description": "Used by `--spectrum-treeview-indicator-padding`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-heading-color": {
+      "value": "var(--spectrum-gray-900)",
+      "description": "Used by `--spectrum-treeview-heading-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-border-width-200": {
+      "value": "2px",
+      "description": "Used by `--spectrum-treeview-item-border-size`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-blue-800": {
+      "value": "light-dark(rgb(75, 117, 255), rgb(64, 105, 253))",
+      "description": "Used by `--spectrum-treeview-item-border-color-selected`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-blue-700": {
+      "value": "light-dark(rgb(93, 137, 255), rgb(52, 91, 248))",
+      "description": "Used by `--spectrum-treeview-item-border-color-focus`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-text-to-visual-75": {
+      "value": "5px",
+      "description": "Used by `--spectrum-treeview-item-icon-gap`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-700": {
+      "value": "light-dark(rgb(80, 80, 80), rgb(175, 175, 175))",
+      "description": "Used by `--spectrum-treeview-item-icon-color`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-gray-900": {
+      "value": "light-dark(rgb(19, 19, 19), rgb(242, 242, 242))",
+      "description": "Used by `--spectrum-treeview-item-icon-color-hover`, `--spectrum-treeview-item-icon-color-focus`, `--spectrum-treeview-item-icon-color-selected`, `--spectrum-treeview-item-text-color-selected`, `--spectrum-treeview-item-text-color-focus`, `--spectrum-treeview-item-text-color-hover`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-disabled-content-color": {
+      "value": "var(--spectrum-gray-400)",
+      "description": "Used by `--spectrum-treeview-item-icon-color-disabled`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-neutral-content-color-default": {
+      "value": "var(--spectrum-gray-800)",
+      "description": "Used by `--spectrum-treeview-item-text-color`.",
+      "control": "color",
+      "category": "Global"
+    },
+    "spectrum-gray-500": {
+      "value": "light-dark(rgb(143, 143, 143), rgb(109, 109, 109))",
+      "description": "Used by `--spectrum-treeview-item-text-color-disabled`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-animation-duration-100": {
+      "description": "Used by `--spectrum-treeview-indicator-animation-duration`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-line-height-200": {
+      "value": "1.5",
+      "description": "Used by `.spectrum-TreeView`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-corner-radius-100": {
+      "value": "4px",
+      "description": "Used by `--mod-treeview-item-border-radius`.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-logical-rotation": {
+      "value": "matrix(-1, 0, 0, 1, 0, 0)",
+      "description": "Defined in `.spectrum-TreeView:dir(rtl)`. <br/>Used by `.spectrum-TreeView-item.is-open > .spectrum-TreeView-itemLink > .spectrum-TreeView-itemIndicator`, `.spectrum-TreeView-itemIndicator`. <br/>Defaults to `matrix(-1, 0, 0, 1, 0, 0)`, if not set.",
+      "control": "text",
+      "category": "Global"
+    },
+    "spectrum-bold-font-weight": {
+      "value": "700",
+      "description": "Used by `.spectrum-TreeView-heading`.",
+      "control": "text",
+      "category": "Global"
+    }
+  },
+  "passthroughs": {},
+  "high-contrast": {
+    "highcontrast-treeview-heading-color": {
+      "value": "var(--mod-treeview-heading-color, var(--spectrum-heading-color))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-heading-color`. <br/>Defaults to `var(--mod-treeview-heading-color, var(--spectrum-heading-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-border-color-selected": {
+      "value": "var(--mod-treeview-item-border-color-selected-quiet, transparent)",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-border-color-selected`, `--spectrum-treeview-item-border-color-quiet-selected`. <br/>Defaults to `var(--mod-treeview-item-border-color-selected-quiet, transparent)`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-border-color-focus": {
+      "value": "var(--mod-treeview-item-border-color-focus, var(--spectrum-blue-700))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-border-color-focus`. <br/>Defaults to `var(--mod-treeview-item-border-color-focus, var(--spectrum-blue-700))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-icon-color": {
+      "value": "var(--mod-treeview-item-icon-color, var(--spectrum-gray-700))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-icon-color`. <br/>Defaults to `var(--mod-treeview-item-icon-color, var(--spectrum-gray-700))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-text-color-focus": {
+      "value": "var(--mod-treeview-item-text-color-hover, var(--spectrum-gray-900))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-icon-color-hover`, `--spectrum-treeview-item-text-color-focus`, `--spectrum-treeview-item-text-color-hover`. <br/>Defaults to `var(--mod-treeview-item-text-color-hover, var(--spectrum-gray-900))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-icon-color-focus": {
+      "value": "var(--mod-treeview-item-icon-color-focus, var(--spectrum-gray-900))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-icon-color-focus`. <br/>Defaults to `var(--mod-treeview-item-icon-color-focus, var(--spectrum-gray-900))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-icon-color-selected": {
+      "value": "var(--mod-treeview-item-icon-color-selected, var(--spectrum-gray-900))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-icon-color-selected`. <br/>Defaults to `var(--mod-treeview-item-icon-color-selected, var(--spectrum-gray-900))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-icon-color-disabled": {
+      "value": "var(--mod-treeview-item-icon-color-disabled, var(--spectrum-disabled-content-color))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-icon-color-disabled`. <br/>Defaults to `var(--mod-treeview-item-icon-color-disabled, var(--spectrum-disabled-content-color))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-text-color": {
+      "value": "var(--mod-treeview-item-text-color, var(--spectrum-neutral-content-color-default))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-text-color`. <br/>Defaults to `var(--mod-treeview-item-text-color, var(--spectrum-neutral-content-color-default))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-text-color-selected": {
+      "value": "var(--mod-treeview-item-text-color-selected, var(--spectrum-gray-900))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-text-color-selected`. <br/>Defaults to `var(--mod-treeview-item-text-color-selected, var(--spectrum-gray-900))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-text-color-disabled": {
+      "value": "var(--mod-treeview-item-text-color-disabled, var(--spectrum-gray-500))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--spectrum-treeview-item-text-color-disabled`. <br/>Defaults to `var(--mod-treeview-item-text-color-disabled, var(--spectrum-gray-500))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-background-color-selected": {
+      "value": "var(--mod-treeview-item-background-color-selected, var(--spectrum-treeview-item-background-color-selected))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `--mod-treeview-item-background-color-selected`, `.spectrum-TreeView-item.is-drop-target > .spectrum-TreeView-itemLink:before, .spectrum-TreeView-item.is-selected > .spectrum-TreeView-itemLink:before`. <br/>Defaults to `var(--mod-treeview-item-background-color-selected, var(--spectrum-treeview-item-background-color-selected))`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-background-color-disabled": {
+      "value": "Canvas",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-item.is-disabled > .spectrum-TreeView-itemLink:before`. <br/>Defaults to `Canvas`, if not set.",
+      "control": "color"
+    },
+    "highcontrast-treeview-item-background-color-focus": {
+      "value": "var(--mod-treeview-item-background-color-hover, var(--spectrum-treeview-item-background-color-hover))",
+      "description": "Defined in `.spectrum-TreeView`. <br/>Used by `.spectrum-TreeView-itemLink:focus-visible:before`, `.spectrum-TreeView-itemLink:hover:before`. <br/>Defaults to `var(--mod-treeview-item-background-color-hover, var(--spectrum-treeview-item-background-color-hover))`, if not set.",
+      "control": "color"
+    }
+  }
 }
