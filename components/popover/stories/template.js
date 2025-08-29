@@ -21,7 +21,7 @@ export const Template = ({
 	if (isOpen) {
 		if (["top", "bottom"].some((e) => position.startsWith(e))) {
 			customWrapperStyles["min-inline-size"] = "var(--spectrum-popover-width)";
-			customWrapperStyles["min-block-size"] = "calc(var(--spectrum-popover-height) + var(--spectrum-popover-trigger-height, 0px) + var(--mod-popover-wrapper-spacing, var(--spectrum-spacing-100) * 2))";
+			customWrapperStyles["min-block-size"] = "calc(var(--spectrum-popover-height) + var(--spectrum-popover-trigger-height, 0px) + var(--spectrum-popover-wrapper-spacing, var(--spectrum-spacing-100) * 2))";
 		}
 		else {
 			customWrapperStyles["min-inline-size"] = "calc(var(--spectrum-popover-width) + var(--spectrum-popover-trigger-width, 0px))";
@@ -143,8 +143,8 @@ export const Popover = ({
 
 				// Write the actual height and width of the popover to the CSS custom properties
 				if (isPopover) {
-					if (size.width) entry.target.parentElement.style.setProperty("--spectrum-popover-width", `var(--mod-popover-width, ${parseInt(size.width, 10)}px)`);
-					if (size.height) entry.target.parentElement.style.setProperty("--spectrum-popover-height", `var(--mod-popover-height, ${parseInt(size.height, 10)}px)`);
+					if (size.width) entry.target.parentElement.style.setProperty("--spectrum-popover-width", `var(--spectrum-popover-width-override, ${parseInt(size.width, 10)}px)`);
+					if (size.height) entry.target.parentElement.style.setProperty("--spectrum-popover-height", `var(--spectrum-popover-height-override, ${parseInt(size.height, 10)}px)`);
 				}
 				else {
 					if (size.width) entry.target.parentElement.style.setProperty("--spectrum-popover-trigger-width", `${parseInt(size.width, 10)}px`);

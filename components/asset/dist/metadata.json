@@ -10,19 +10,14 @@
     ".spectrum-Asset-folderOutline",
     ".spectrum-Asset-image"
   ],
-  "modifiers": [
-    "--mod-asset-file-background-color",
-    "--mod-asset-folder-background-color",
-    "--mod-asset-icon-margin",
-    "--mod-asset-icon-max-width",
-    "--mod-asset-icon-min-width",
-    "--mod-asset-icon-outline-color"
-  ],
   "component": [
     "--spectrum-asset-file-background",
     "--spectrum-asset-file-outline",
     "--spectrum-asset-folder-background",
-    "--spectrum-asset-folder-outline"
+    "--spectrum-asset-folder-outline",
+    "--spectrum-asset-icon-margin",
+    "--spectrum-asset-icon-max-width",
+    "--spectrum-asset-icon-min-width"
   ],
   "global": [
     "--spectrum-animation-duration-100",
@@ -31,5 +26,5 @@
     "--spectrum-gray-500"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-asset-icon-background-color"]
+  "high-contrast": []
 }

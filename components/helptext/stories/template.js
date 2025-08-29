@@ -87,7 +87,7 @@ export const NegativeTemplate = (args, context) => Container({
 				...args,
 				hideIcon,
 				customStyles: {
-					"--mod-helptext-align-text": "center",
+					"--spectrum-helptext-align-text": "center",
 				},
 			}, context),
 		}, context)
