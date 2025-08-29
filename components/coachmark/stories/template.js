@@ -59,19 +59,24 @@ export const CoachContainer = (
 					{
 						isOpen,
 						position: "bottom-start",
-						iconName: "More",
-						size: scale === "large" ? "s" : "m",
+						triggerArgs: {
+							iconName: "More",
+							size: scale === "large" ? "s" : "m",
+						},
 						customClasses: [
 							`${rootClass}-action-menu`
 						],
-						items: [
-							{
-								label: "Skip tour",
-							},
-							{
-								label: "Reset tour",
-							},
-						],
+						menuArgs: {
+							size: scale === "large" ? "s" : "m",
+							items: [
+								{
+									label: "Skip tour",
+								},
+								{
+									label: "Reset tour",
+								},
+							],
+						}
 					},
 					context,
 				),

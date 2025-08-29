@@ -102,7 +102,7 @@
 			margin-inline-end: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 		}
 
-		&.is-selected {
+		&:is([aria-pressed="true"], [aria-expanded="true"]) {
 			z-index: 1;
 		}
 
