@@ -98,11 +98,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Menu-item"],
 		},
-		docs: {
-			story: {
-				height: "300px",
-			},
-		},
 		design: {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=37252-553",
@@ -173,7 +168,6 @@ Default.args = {
 				},
 			],
 		},
-		{ type: "divider" },
 		{
 			idx: 2,
 			heading: "Menu header - With descriptions and icons",
@@ -211,7 +205,6 @@ Default.args = {
 				},
 			],
 		},
-		{ type: "divider" },
 		{
 			idx: 3,
 			heading:
@@ -346,7 +339,6 @@ TraySubmenu.parameters = {
 	docs: {
 		story: {
 			inline: false,
-			height: "300px",
 		},
 	},
 	viewport: {
@@ -826,7 +818,6 @@ WithDividersAndHeaders.args = {
 				},
 			],
 		},
-		{ type: "divider" },
 		{
 			idx: 2,
 			heading: "Actions",
