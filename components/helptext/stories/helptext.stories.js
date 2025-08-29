@@ -102,7 +102,7 @@ Sizing.storyName = "Sizing";
 Sizing.args = {
 	variant: "negative",
 	customStyles: {
-		"--mod-helptext-align-text": "center",
+		"--spectrum-helptext-align-text": "center",
 	},
 };
 Sizing.tags = ["!dev"];

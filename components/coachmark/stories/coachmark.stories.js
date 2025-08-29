@@ -133,7 +133,9 @@ StandardNoMedia.parameters = {
 	},
 };
 
-/** Images and media have a minimum height and can grow with the parent component. Fixed height media is constrained to a 4:3 aspect ratio by applying the `spectrum-CoachMark-image-wrapper--fixedHeight` class. When this fixed height class is used, the height can be customized using the modifiable custom property `--mod-coachmark-media-fixed-height`.  */
+/**
+ * Images and media have a minimum height and can grow with the parent component. Fixed height media is constrained to a 4:3 aspect ratio by applying the `spectrum-CoachMark-image-wrapper--fixedHeight` class. When this fixed height class is used, the height can be customized using the modifiable custom property `--spectrum-coachmark-media-fixed-height`.
+ */
 export const MediaOptions = CoachMarkMediaOptionsTemplate.bind({});
 MediaOptions.tags = ["!dev"];
 MediaOptions.args = {

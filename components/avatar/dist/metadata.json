@@ -25,16 +25,6 @@
     ".spectrum-Avatar.is-focused:not(.is-disabled):after",
     ".spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after"
   ],
-  "modifiers": [
-    "--mod-avatar-block-size",
-    "--mod-avatar-border-radius",
-    "--mod-avatar-color-opacity",
-    "--mod-avatar-color-opacity-disabled",
-    "--mod-avatar-focus-indicator-color",
-    "--mod-avatar-focus-indicator-gap",
-    "--mod-avatar-focus-indicator-thickness",
-    "--mod-avatar-inline-size"
-  ],
   "component": [
     "--spectrum-avatar-block-size",
     "--spectrum-avatar-border-color",

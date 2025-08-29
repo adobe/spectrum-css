@@ -183,7 +183,6 @@ module.exports = {
 					{
 						/** @note this is a list of custom properties that are allowed to be unknown */
 						ignoreList: [
-							/^--mod-/,
 							/^--spectrum-picked-color$/,
 							/^--spectrum-downstate-(height|width)$/,
 						],
@@ -196,9 +195,6 @@ module.exports = {
 				"spectrum-tools/no-unused-custom-properties": [
 					true,
 					{
-						ignoreList: [
-							/^--mod-/,
-						],
 						disableFix: true,
 						severity: "warning",
 					},
@@ -226,9 +222,7 @@ module.exports = {
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": [
 					true,
-					{
-						ignoreList: [/^--mod-/],
-					},
+					{},
 				],
 			}
 		},

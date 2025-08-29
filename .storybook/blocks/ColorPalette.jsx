@@ -52,7 +52,7 @@ export const ColorItem = ({ title, color, size = 60, values = [], noCheckerboard
 							<SwatchSet
 								className="swatch-set"
 								key={`${color}-${value}`}
-								style={{ "--mod-swatch-size": `${size}px` }}
+								style={{ "--spectrum-swatch-size": `${size}px` }}
 							>
 								<Body className="swatch-label" size="s">
 									{value}
