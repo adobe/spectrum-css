@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
 		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-disabled: transparent;
 
-		&:is([aria-pressed="true"], [aria-expanded="true"]) {
+		&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 			--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
 		}
 	}
@@ -119,7 +119,7 @@ governing permissions and limitations under the License.
 	}
 
 	/* expanded is specific to action menu when the menu is open */
-	&:is([aria-pressed="true"], [aria-expanded="true"]) {
+	&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 		--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected, var(--spectrum-neutral-background-color-selected-default));
 		--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-neutral-background-color-selected-hover));
 		--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected, var(--spectrum-neutral-background-color-selected-down));
@@ -398,7 +398,7 @@ a.spectrum-ActionButton {
 			--highcontrast-actionbutton-border-color: Highlight;
 		}
 
-		&:is([aria-pressed="true"], [aria-expanded="true"]) {
+		&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 			--highcontrast-actionbutton-border-color: Highlight;
 			--highcontrast-actionbutton-background-color-default: Highlight;
 			--highcontrast-actionbutton-content-color-default: HighlightText;

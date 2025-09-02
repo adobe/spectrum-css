@@ -11,20 +11,23 @@ import { html, literal } from "lit/static-html.js";
 
 import "../index.css";
 
-export const Template = ({
-	rootClass = "spectrum-Tabs",
-	customClasses = [],
-	orientation = "horizontal",
-	isOpen = false,
-	isCompact = false,
-	iconOnly = false,
-	labelOnly = false,
-	hasRightAlignedTabs = false,
-	useAnchors = false,
-	id = getRandomId("tabs"),
-	customStyles = {},
-	content = [],
-} = {}, context = {}) => {
+export const Template = (
+	{
+		rootClass = "spectrum-Tabs",
+		customClasses = [],
+		orientation = "horizontal",
+		isOpen = false,
+		isCompact = false,
+		iconOnly = false,
+		labelOnly = false,
+		hasRightAlignedTabs = false,
+		useAnchors = false,
+		id = getRandomId("tabs"),
+		customStyles = {},
+		content = [],
+	} = {},
+	context = {},
+) => {
 	if (!content || !content.length) {
 		console.warn("Tabs: content required");
 		return html``;
@@ -52,12 +55,15 @@ export const Template = ({
 			id=${ifDefined(id)}
 			role="tablist"
 		>
-			${when(!isOverflow, () => repeat(
-				content,
-				(item) => item.id,
-				(item) => {
-					if (typeof item === "object") {
-						return html`
+			${when(
+				!isOverflow,
+				() =>
+					repeat(
+						content,
+						(item) => item.id,
+						(item) => {
+							if (typeof item === "object") {
+								return html`
 							<${tabMarkup}
 								class=${classMap({
 									[`${rootClass}-item`]: true,
@@ -73,61 +79,85 @@ export const Template = ({
 								aria-disabled=${item?.isDisabled ?? false}
 							>
 								${when(item.icon && !labelOnly, () =>
-									Icon({
-										iconName: item.icon,
-										setName: "workflow",
-									}, context)
+									Icon(
+										{
+											iconName: item.icon,
+											setName: "workflow",
+										},
+										context,
+									),
 								)}
-								${when(item.label && !iconOnly, () => html`
-									<span
-										class="${rootClass}-itemLabel"
-										id=${getRandomId("tab-item-label")}
-									>
-										${item.label}
-									</span>
-								`)}
-								${when(item.isSelected, () => html`
-									<div class="${rootClass}-selectionIndicator"></div>
-								`)}
+								${when(
+									item.label && !iconOnly,
+									() => html`
+										<span
+											class="${rootClass}-itemLabel"
+											id=${getRandomId("tab-item-label")}
+										>
+											${item.label}
+										</span>
+									`,
+								)}
+								${when(
+									item.isSelected,
+									() => html`
+										<div class="${rootClass}-selectionIndicator"></div>
+									`,
+								)}
 							</${tabMarkup}>
 						`;
-					}
-					else {
-						return item;
-					}
-				}
-			), () => html`
-				${Picker({
-					isQuiet: true,
-					isOpen,
-					placeholder: !iconOnly ? content?.[0].label : Icon({
-						iconName: content?.[0].icon,
-						setName: "workflow",
-					}, context),
-					name: content?.[0].label,
-					id: "tab-selector",
-					customPopoverStyles: {
-						insetBlockStart: "24px",
-					},
-					popoverContent: [
-						() => Menu({
-							selectionMode: "none",
-							role: "listbox",
-							subrole: "option",
-							customStyles: { minWidth: "max-content" },
-							items: content.filter((_, idx) => idx !== 0).map(item => {
-								return {
-									...item,
-									iconName: item.icon,
-									iconSet: "workflow",
-									label: !iconOnly ? item.label : undefined,
-								};
-							}),
-						}, context),
-					]
-				}, context)}
-				<div class="${rootClass}-selectionIndicator"></div>
-			`)}
+							}
+ else {
+								return item;
+							}
+						},
+					),
+				() => html`
+					${Picker(
+						{
+							isQuiet: true,
+							isOpen,
+							placeholder: !iconOnly
+								? content?.[0].label
+								: Icon(
+										{
+											iconName: content?.[0].icon,
+											setName: "workflow",
+										},
+										context,
+									),
+							name: content?.[0].label,
+							id: "tab-selector",
+							customPopoverStyles: {
+								insetBlockStart: "24px",
+							},
+							popoverContent: [
+								() =>
+									Menu(
+										{
+											selectionMode: "none",
+											role: "listbox",
+											customStyles: { minWidth: "max-content" },
+											items: content
+												.filter((_, idx) => idx !== 0)
+												.map((item) => {
+													return {
+														...item,
+														iconName: item.icon,
+														iconSet: "workflow",
+														label: !iconOnly ? item.label : undefined,
+													};
+												}),
+										},
+										context,
+									),
+							],
+						},
+						context,
+					)}
+					<div class="${rootClass}-selectionIndicator"></div>
+				`,
+			)}
 		</div>
 	`;
 };
@@ -149,78 +179,126 @@ const LabelOnlyTabsContent = [
 	},
 ];
 
-export const OverflowGroup = (args, context) => Container({
-	direction: "column",
-	withHeading: false,
-	withBorder: false,
-	content: html`
-		${Container({
+export const OverflowGroup = (args, context) =>
+	Container(
+		{
+			direction: "column",
+			withHeading: false,
 			withBorder: false,
-			heading: "Default overflow",
-			containerStyles: { "gap": "8px", },
-			content: Template(args, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Compact overflow",
-			containerStyles: { "gap": "8px", },
-			content: Template({...args, isCompact: true}, context),
-		}, context)}
-	`
-}, context);
+			content: html`
+				${Container(
+					{
+						withBorder: false,
+						heading: "Default overflow",
+						containerStyles: { gap: "8px" },
+						content: Template(args, context),
+					},
+					context,
+				)}
+				${Container(
+					{
+						withBorder: false,
+						heading: "Compact overflow",
+						containerStyles: { gap: "8px" },
+						content: Template({ ...args, isCompact: true }, context),
+					},
+					context,
+				)}
+			`,
+		},
+		context,
+	);
 
-export const VerticalGroup = (args, context) => Container({
-	direction: "column",
-	withHeading: false,
-	withBorder: false,
-	content: html`
-		${Container({
+export const VerticalGroup = (args, context) =>
+	Container(
+		{
+			direction: "column",
+			withHeading: false,
 			withBorder: false,
-			heading: "Label and icon",
-			containerStyles: {"gap": "8px"},
-			content: Template(args, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Label only",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, content: LabelOnlyTabsContent, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Compact, with label and icon",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, isCompact: true, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Compact, label only",
-			containerStyles: {"gap": "8px"},
-			content: Template({...args, content: LabelOnlyTabsContent, isCompact: true, }, context),
-		}, context)}
-	`
-}, context);
+			content: html`
+				${Container(
+					{
+						withBorder: false,
+						heading: "Label and icon",
+						containerStyles: { gap: "8px" },
+						content: Template(args, context),
+					},
+					context,
+				)}
+				${Container(
+					{
+						withBorder: false,
+						heading: "Label only",
+						containerStyles: { gap: "8px" },
+						content: Template(
+							{ ...args, content: LabelOnlyTabsContent },
+							context,
+						),
+					},
+					context,
+				)}
+				${Container(
+					{
+						withBorder: false,
+						heading: "Compact, with label and icon",
+						containerStyles: { gap: "8px" },
+						content: Template({ ...args, isCompact: true }, context),
+					},
+					context,
+				)}
+				${Container(
+					{
+						withBorder: false,
+						heading: "Compact, label only",
+						containerStyles: { gap: "8px" },
+						content: Template(
+							{ ...args, content: LabelOnlyTabsContent, isCompact: true },
+							context,
+						),
+					},
+					context,
+				)}
+			`,
+		},
+		context,
+	);
 
 /* Shows variants of compact story in a single group. */
-export const CompactGroup = (args, context) => Container({
-	direction: "column",
-	withBorder: false,
-	withHeading: false,
-	content: html`
-		${Container({
+export const CompactGroup = (args, context) =>
+	Container(
+		{
+			direction: "column",
 			withBorder: false,
-			heading: "Label and icon",
-			content: Template(args, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Label only",
-			content: Template({...args, content: LabelOnlyTabsContent, }, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Icon only",
-			content: Template({...args, iconOnly: true, }, context),
-		}, context)}
-	`
-}, context);
+			withHeading: false,
+			content: html`
+				${Container(
+					{
+						withBorder: false,
+						heading: "Label and icon",
+						content: Template(args, context),
+					},
+					context,
+				)}
+				${Container(
+					{
+						withBorder: false,
+						heading: "Label only",
+						content: Template(
+							{ ...args, content: LabelOnlyTabsContent },
+							context,
+						),
+					},
+					context,
+				)}
+				${Container(
+					{
+						withBorder: false,
+						heading: "Icon only",
+						content: Template({ ...args, iconOnly: true }, context),
+					},
+					context,
+				)}
+			`,
+		},
+		context,
+	);

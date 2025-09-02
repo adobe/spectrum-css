@@ -7,18 +7,21 @@ import { repeat } from "lit/directives/repeat.js";
 
 import "../index.css";
 
-export const SteplistItem = ({
-	rootClass = "spectrum-Steplist-item",
-	isSmall = false,
-	isInteractive = false,
-	withTooltip = false,
-	label,
-	ariaPosInSet = 1,
-	ariaSetSize = 4,
-	isComplete = false,
-	isSelected = false,
-	id = getRandomId("steplist-item"),
-} = {}, context = {}) => {
+export const SteplistItem = (
+	{
+		rootClass = "spectrum-Steplist-item",
+		isSmall = false,
+		isInteractive = false,
+		withTooltip = false,
+		label,
+		ariaPosInSet = 1,
+		ariaSetSize = 4,
+		isComplete = false,
+		isSelected = false,
+		id = getRandomId("steplist-item"),
+	} = {},
+	context = {},
+) => {
 	const labelMarkup =
 		!isSmall && !withTooltip && typeof label !== "undefined"
 			? html`<span class="spectrum-Steplist-label">${label}</span>`
@@ -27,12 +30,15 @@ export const SteplistItem = ({
 	const markerContainer = html`
 		<span class="${rootClass}-markerContainer">
 			${withTooltip && !isSmall && typeof label !== "undefined"
-				? Tooltip({
-						label,
-						isOpen: true,
-						placement: "top",
-						showOnHover: true,
-				}, context)
+				? Tooltip(
+						{
+							label,
+							isOpen: true,
+							placement: "top",
+							showOnHover: true,
+						},
+						context,
+					)
 				: nothing}
 			<span class="${rootClass}-marker"></span>
 		</span>
@@ -63,24 +69,27 @@ export const SteplistItem = ({
 						role="link"
 						aria-label=${isSmall ? ifDefined(label) : nothing}
 						tabindex=${isSelected ? "1" : "-1"}
-				>
+					>
 						${labelMarkup} ${markerContainer}
-				  </a>`
+					</a>`
 				: html` ${labelMarkup} ${markerContainer}`}
 			<span class="${rootClass}-segment"></span>
 		</div>
 	`;
 };
 
-export const Template = ({
-	rootClass = "spectrum-Steplist",
-	items,
-	isSmall = false,
-	isInteractive = false,
-	withTooltip = false,
-	id = getRandomId("steplist"),
-	customClasses = [],
-} = {}, context = {}) => {
+export const Template = (
+	{
+		rootClass = "spectrum-Steplist",
+		items,
+		isSmall = false,
+		isInteractive = false,
+		withTooltip = false,
+		id = getRandomId("steplist"),
+		customClasses = [],
+	} = {},
+	context = {},
+) => {
 	if (!items || !items.length) return html``;
 
 	return html`
@@ -95,34 +104,47 @@ export const Template = ({
 			role="list"
 		>
 			${repeat(items, (args, idx) =>
-				SteplistItem({
-					rootClass: `${rootClass}`,
-					isSmall,
-					isInteractive,
-					withTooltip,
-					...args,
-					ariaPosInSet: idx + 1,
-					ariaSetSize: items.length,
-				}, context)
+				SteplistItem(
+					{
+						rootClass: `${rootClass}`,
+						isSmall,
+						isInteractive,
+						withTooltip,
+						...args,
+						ariaPosInSet: idx + 1,
+						ariaSetSize: items.length,
+					},
+					context,
+				),
 			)}
 		</div>
 	`;
 };
 
 /* Shows both the static and interactive variants in one grouping. */
-export const DocsSteplistGroup = (args, context) => Container({
-	direction: "column",
-	withBorder: false,
-	content: html`
-		${Container({
+export const DocsSteplistGroup = (args, context) =>
+	Container(
+		{
+			direction: "column",
 			withBorder: false,
-			heading: "Static",
-			content: Template(args, context),
-		}, context)}
-		${Container({
-			withBorder: false,
-			heading: "Interactive",
-			content: Template({...args, isInteractive: true} ,context),
-		}, context)}
-	`
-}, context);
+			content: html`
+				${Container(
+					{
+						withBorder: false,
+						heading: "Static",
+						content: Template(args, context),
+					},
+					context,
+				)}
+				${Container(
+					{
+						withBorder: false,
+						heading: "Interactive",
+						content: Template({ ...args, isInteractive: true }, context),
+					},
+					context,
+				)}
+			`,
+		},
+		context,
+	);
