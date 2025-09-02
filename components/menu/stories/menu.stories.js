@@ -78,15 +78,12 @@ export default {
 		labelledby: { table: { disable: true } },
 		items: { table: { disable: true } },
 		role: { table: { disable: true } },
-		subrole: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Menu",
 		selectionMode: "none",
 		size: "m",
 		shouldTruncate: false,
-		role: "listbox",
-		subrole: "option",
 		hasDividers: false,
 		items: [
 			{ label: "Edit" },
@@ -406,7 +403,8 @@ MenuItem.argTypes = {
 	},
 	exclusiveFeatures: {
 		name: "Mutually exclusive features",
-		description: "These options are intended to never be used in combination with each other:\n- `hasExternalLink`: Displays external link icon\n- `hasThumbnail`: Displays a thumbnail, taking the place of an icon\n- `isDrillIn`: Displays submenu indicator",
+		description:
+			"These options are intended to never be used in combination with each other:\n- `hasExternalLink`: Displays external link icon\n- `hasThumbnail`: Displays a thumbnail, taking the place of an icon\n- `isDrillIn`: Displays submenu indicator",
 		options: ["none", "hasExternalLink", "hasThumbnail", "isDrillIn"],
 		control: "select",
 		table: {
@@ -442,7 +440,7 @@ MenuItem.args = {
 	isFocused: false,
 	isHovered: false,
 	isSelected: false,
-	hasActions: false
+	hasActions: false,
 };
 MenuItem.parameters = {
 	design: {
@@ -601,7 +599,7 @@ Sizing.args = {
 			label: "Menu item with thumbnail",
 			description: "and description",
 			thumbnailUrl: "thumbnail.png",
-		}
+		},
 	],
 };
 Sizing.parameters = {
@@ -690,7 +688,7 @@ UnavailableItems.args = {
 			label: "Marquee",
 			isSelected: true,
 			iconName: "SelectRectangle",
-			isUnavailable: true
+			isUnavailable: true,
 		},
 		{
 			label: "Add",
@@ -719,18 +717,18 @@ ExternalLinks.args = {
 	items: [
 		{
 			label: "An offsite link item",
-			hasExternalLink: true
+			hasExternalLink: true,
 		},
 		{
 			label: "Link with item icon",
 			iconName: "Chat",
-			hasExternalLink: true
+			hasExternalLink: true,
 		},
 		{
 			label: "An external link",
 			iconName: "Folder",
 			description: "And an additional description",
-			hasExternalLink: true
+			hasExternalLink: true,
 		},
 	],
 };

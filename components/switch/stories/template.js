@@ -18,6 +18,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id = getRandomId("switch"),
+	labelId,
 } = {}) => {
 	// ID attribute value for the input element.
 	const inputId = getRandomId("switch-input");
@@ -26,8 +27,8 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--disabled`] : isDisabled,
-				[`${rootClass}--emphasized`] : isEmphasized,
+				[`${rootClass}--disabled`]: isDisabled,
+				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--active`]: isActive,
@@ -42,37 +43,49 @@ export const Template = ({
 				id=${inputId}
 				?disabled=${isDisabled}
 				?checked=${isChecked}
+				aria-labelledby=${ifDefined(labelId)}
 			/>
 			<span class="${rootClass}-switch"></span>
-			${when(label, () => html`
-				<label class="${rootClass}-label" for=${inputId}>
-					${label}
-				</label>
-			`)}
+			${when(
+				label,
+				() => html`
+					<label class="${rootClass}-label" for=${inputId}> ${label} </label>
+				`,
+			)}
 		</div>
 	`;
 };
 
-export const DocsSwitchGroup = (args, context) => Container({
-	withBorder: false,
-	content: html`
-		${Container({
-			heading: "Not selected",
+export const DocsSwitchGroup = (args, context) =>
+	Container(
+		{
 			withBorder: false,
-			content: Template({
-				...args,
-				context,
-				isChecked: false,
-			})
-		}, context)}
-		${Container({
-			heading: "Selected",
-			withBorder: false,
-			content: Template({
-				...args,
-				context,
-				isChecked: true,
-			})
-		}, context)}
-	`
-}, context);
+			content: html`
+				${Container(
+					{
+						heading: "Not selected",
+						withBorder: false,
+						content: Template({
+							...args,
+							context,
+							isChecked: false,
+						}),
+					},
+					context,
+				)}
+				${Container(
+					{
+						heading: "Selected",
+						withBorder: false,
+						content: Template({
+							...args,
+							context,
+							isChecked: true,
+						}),
+					},
+					context,
+				)}
+			`,
+		},
+		context,
+	);
