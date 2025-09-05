@@ -21,7 +21,8 @@
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
-		"./stories/*": "./stories/*"
+		"./stories/*": "./stories/*",
+		"./themes/*": "./dist/themes/*"
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
