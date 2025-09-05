@@ -3856,6 +3856,34 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/appframe@workspace:components/appframe":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/appframe@workspace:components/appframe"
+  peerDependencies:
+    "@spectrum-css/tokens": ">=16.1.0-next.0"
+    "@spectrum-css/typography": ">=9.0.0-next.0"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
+    "@spectrum-css/typography":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
+"@spectrum-css/appframesidenav@workspace:components/appframesidenav":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/appframesidenav@workspace:components/appframesidenav"
+  peerDependencies:
+    "@spectrum-css/icon": ">=10.0.0-next.0"
+    "@spectrum-css/tokens": ">=16.1.0-next.0"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/tokens":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/asset@npm:8.0.0-next.0, @spectrum-css/asset@workspace:components/asset":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/asset@workspace:components/asset"
