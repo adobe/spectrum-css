@@ -52,7 +52,7 @@ jobs:
             - name: Use Node LTS version
               uses: actions/setup-node@v4
               with:
-                  node-version: 20.19.4
+                  node-version: 20.19.5
                   cache: yarn
                   cache-dependency-path: yarn.lock
 
@@ -179,7 +179,7 @@ jobs:
             - name: Use Node LTS version
               uses: actions/setup-node@v4
               with:
-                  node-version: 20.19.4
+                  node-version: 20.19.5
                   cache: yarn
 
             - name: Enable Corepack
