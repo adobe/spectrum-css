@@ -47,7 +47,7 @@ governing permissions and limitations under the License.
 	--spectrum-actionbutton-line-height: var(--spectrum-actionbutton-height);
 
 	--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-100);
-	--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-medium);
+	--spectrum-actionbutton-edge-to-hold-icon: var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-action-button-edge-to-hold-icon-medium));
 	--spectrum-actionbutton-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 	--spectrum-actionbutton-edge-to-text: var(--spectrum-component-edge-to-text-100);
 	--spectrum-actionbutton-edge-to-visual-only: var(--spectrum-component-edge-to-visual-only-100);
@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
 		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-disabled: transparent;
 
-		&.is-selected {
+		&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 			--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
 		}
 	}
@@ -118,7 +118,8 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	&.is-selected {
+	/* expanded is specific to action menu when the menu is open */
+	&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 		--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected, var(--spectrum-neutral-background-color-selected-default));
 		--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-neutral-background-color-selected-hover));
 		--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected, var(--spectrum-neutral-background-color-selected-down));
@@ -178,7 +179,7 @@ governing permissions and limitations under the License.
 	--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-50);
 	--spectrum-actionbutton-font-size: var(--spectrum-font-size-50);
 	--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-50);
-	--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-extra-small);
+	--spectrum-actionbutton-edge-to-hold-icon: var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-action-button-edge-to-hold-icon-extra-small));
 	--spectrum-actionbutton-edge-to-visual: var(--spectrum-component-edge-to-visual-50);
 	--spectrum-actionbutton-edge-to-text: var(--spectrum-component-edge-to-text-50);
 	--spectrum-actionbutton-edge-to-visual-only: var(--spectrum-component-edge-to-visual-only-50);
@@ -195,7 +196,7 @@ governing permissions and limitations under the License.
 	--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-actionbutton-font-size: var(--spectrum-font-size-75);
 	--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-75);
-	--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-small);
+	--spectrum-actionbutton-edge-to-hold-icon: var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-action-button-edge-to-hold-icon-small));
 	--spectrum-actionbutton-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
 	--spectrum-actionbutton-edge-to-text: var(--spectrum-component-edge-to-text-75);
 	--spectrum-actionbutton-edge-to-visual-only: var(--spectrum-component-edge-to-visual-only-75);
@@ -212,7 +213,7 @@ governing permissions and limitations under the License.
 	--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-200);
 	--spectrum-actionbutton-font-size: var(--spectrum-font-size-200);
 	--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-200);
-	--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-large);
+	--spectrum-actionbutton-edge-to-hold-icon: var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-action-button-edge-to-hold-icon-large));
 	--spectrum-actionbutton-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
 	--spectrum-actionbutton-edge-to-text: var(--spectrum-component-edge-to-text-200);
 	--spectrum-actionbutton-edge-to-visual-only: var(--spectrum-component-edge-to-visual-only-200);
@@ -227,7 +228,7 @@ governing permissions and limitations under the License.
 	--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-300);
 	--spectrum-actionbutton-font-size: var(--spectrum-font-size-300);
 	--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-300);
-	--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-extra-large);
+	--spectrum-actionbutton-edge-to-hold-icon: var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-action-button-edge-to-hold-icon-extra-large));
 	--spectrum-actionbutton-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
 	--spectrum-actionbutton-edge-to-text: var(--spectrum-component-edge-to-text-300);
 	--spectrum-actionbutton-edge-to-visual-only: var(--spectrum-component-edge-to-visual-only-300);
@@ -252,6 +253,18 @@ governing permissions and limitations under the License.
 	background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-default, var(--spectrum-actionbutton-background-color-default)));
 	color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-default, var(--spectrum-actionbutton-content-color-default)));
 
+	transition: border-color var(--highcontrast-actionbutton-animation-duration, var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))) ease-in-out;
+
+	&::after {
+		position: absolute;
+		inset: 0;
+		margin: calc((var(--mod-actionbutton-focus-indicator-gap, var(--spectrum-actionbutton-focus-indicator-gap)) + var(--spectrum-actionbutton-border-width)) * -1);
+		border-radius: var(--mod-actionbutton-focus-indicator-border-radius, var(--spectrum-actionbutton-focus-indicator-border-radius));
+		transition: box-shadow var(--highcontrast-actionbutton-animation-duration, var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))) ease-in-out;
+		pointer-events: none;
+		content: "";
+	}
+
 	&:hover {
 		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover)));
 		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover)));
@@ -260,6 +273,13 @@ governing permissions and limitations under the License.
 	&:focus-visible {
 		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus)));
 		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus)));
+
+		box-shadow: none;
+		outline: none;
+
+		&::after {
+			box-shadow: 0 0 0 var(--mod-actionbutton-focus-indicator-thickness, var(--spectrum-actionbutton-focus-indicator-thickness)) var(--highcontrast-actionbutton-focus-indicator-color, var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color)));
+		}
 	}
 
 	&:active {
@@ -268,8 +288,9 @@ governing permissions and limitations under the License.
 		transform: perspective(var(--spectrum-actionbutton-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
-	&:disabled,
-	&.is-disabled {
+	/* ideal when we want to disable the button but still allow it's content to be focused */
+	&:is(:disabled, .is-disabled, [aria-disabled="true"]) {
+		/* @todo: should pointer events be disabled? */
 		background-color: var(--highcontrast-actionbutton-background-color-disabled, var(--mod-actionbutton-background-color-disabled, var(--spectrum-actionbutton-background-color-disabled)));
 		color: var(--highcontrast-actionbutton-content-color-disabled, var(--mod-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled)));
 	}
@@ -313,34 +334,11 @@ a.spectrum-ActionButton {
 
 .spectrum-ActionButton-hold {
 	position: absolute;
-	inset-inline-end: calc(var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--spectrum-actionbutton-border-width));
-	inset-block-end: calc(var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--spectrum-actionbutton-border-width));
+	inset-inline-end: calc(var(--spectrum-actionbutton-edge-to-hold-icon) - var(--spectrum-actionbutton-border-width));
+	inset-block-end: calc(var(--spectrum-actionbutton-edge-to-hold-icon) - var(--spectrum-actionbutton-border-width));
+	display: block;
 	color: inherit;
 	transform: var(--spectrum-logical-rotation);
-}
-
-/* Focus indicator */
-.spectrum-ActionButton {
-	transition: border-color var(--highcontrast-actionbutton-animation-duration, var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))) ease-in-out;
-
-	&::after {
-		position: absolute;
-		inset: 0;
-		margin: calc((var(--mod-actionbutton-focus-indicator-gap, var(--spectrum-actionbutton-focus-indicator-gap)) + var(--spectrum-actionbutton-border-width)) * -1);
-		border-radius: var(--mod-actionbutton-focus-indicator-border-radius, var(--spectrum-actionbutton-focus-indicator-border-radius));
-		transition: box-shadow var(--highcontrast-actionbutton-animation-duration, var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))) ease-in-out;
-		pointer-events: none;
-		content: "";
-	}
-
-	&:focus-visible {
-		box-shadow: none;
-		outline: none;
-
-		&::after {
-			box-shadow: 0 0 0 var(--mod-actionbutton-focus-indicator-thickness, var(--spectrum-actionbutton-focus-indicator-thickness)) var(--highcontrast-actionbutton-focus-indicator-color, var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color)));
-		}
-	}
 }
 
 @media (forced-colors: active) {
@@ -388,7 +386,7 @@ a.spectrum-ActionButton {
 			--highcontrast-actionbutton-background-color-disabled: Canvas;
 			--highcontrast-actionbutton-content-color-default: CanvasText;
 
-			&:disabled:not(.is-selected) {
+			&:is(:disabled, .is-disabled, [aria-disabled="true"]):not(:is([aria-pressed="true"], [aria-expanded="true"])) {
 				--highcontrast-actionbutton-border-color: Canvas;
 			}
 		}
@@ -400,8 +398,7 @@ a.spectrum-ActionButton {
 			--highcontrast-actionbutton-border-color: Highlight;
 		}
 
-		/* Selected always shows as a solid highlighted color. */
-		&.is-selected {
+		&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 			--highcontrast-actionbutton-border-color: Highlight;
 			--highcontrast-actionbutton-background-color-default: Highlight;
 			--highcontrast-actionbutton-content-color-default: HighlightText;
