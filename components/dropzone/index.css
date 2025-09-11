@@ -42,13 +42,6 @@
 
 	--spectrum-drop-zone-content-background-color: var(--spectrum-accent-visual-color);
 
-	/* Settings for a nested illustrated message */
-	--spectrum-illustrated-message-vertical-maximum-width: var(--spectrum-drop-zone-content-maximum-width);
-	--spectrum-illustrated-message-description-to-action: var(--spectrum-drop-zone-body-to-action);
-	--spectrum-illustrated-message-description-position: relative;
-	--spectrum-illustrated-message-description-z-index: 10;
-	--spectrum-illustrated-message-description-font-size: var(--spectrum-drop-zone-body-font-size);
-
 	/* Adjusts height of filled & dragged dropzone state */
 	--spectrum-drop-zone-content-height: 280px;
 }
@@ -67,17 +60,20 @@
 	border: var(--spectrum-drop-zone-border-width) dashed var(--highcontrast-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
 
 	&.is-dragged {
-		--spectrum-drop-zone-border-style: solid;
 		--spectrum-drop-zone-background-color: rgb(var(--spectrum-drop-zone-background-color), var(--spectrum-drop-zone-dragged-background-color));
 		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover));
 
-		/* Updated values for a nested illustrated message when state changes */
-		--spectrum-illustrated-message-illustration-color: var(--spectrum-drop-zone-illustration-color-hover);
 		color: var(--spectrum-drop-zone-illustration-color-hover);
 		border-style: solid;
 
 		.spectrum-DropZone-strokePath {
 			stroke-dasharray: none;
+		}
+
+		.spectrum-IllustratedMessage {
+			/* @passthrough start - overrides for nested IllustratedMessage component */
+			--spectrum-illustrated-message-illustration-color: var(--spectrum-drop-zone-illustration-color-hover);
+			/* @passthrough end */
 		}
 	}
 
@@ -85,8 +81,11 @@
 		/* note: the below applies to .is-filled.is-dragged but works here b/c dragged is the only state applying background color */
 		--spectrum-drop-zone-background-color: rgb(var(--spectrum-drop-zone-background-color), var(--spectrum-drop-zone-background-color-opacity-filled));
 
-		/* Updated values for a nested illustrated message when state changes */
-		--spectrum-illustrated-message-display: none;
+		.spectrum-IllustratedMessage {
+			/* @passthrough start - overrides for nested IllustratedMessage component */
+			--spectrum-illustrated-message-display: none;
+			/* @passthrough end */
+		}
 	}
 
 	&.is-filled.is-dragged {
@@ -108,6 +107,7 @@
 
 	&:focus-visible {
 		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover));
+
 		outline: 0;
 	}
 }
@@ -145,8 +145,10 @@
 }
 
 .spectrum-DropZone-button {
-	/* Adjust corner radius of button component is dragged & filled state */
+	/* @passthrough - Adjust corner radius of button component is dragged & filled state */
 	--spectrum-button-border-radius: var(--spectrum-corner-radius-500);
+	/* @passthrough end */
+
 	box-sizing: border-box;
 	border: none;
 	block-size: auto;
@@ -174,10 +176,16 @@
 }
 
 /********* Illustrated Message *********/
-.spectrum-DropZone {
-	.spectrum-IllustratedMessage {
-		justify-content: center;
-	}
+.spectrum-DropZone .spectrum-IllustratedMessage {
+	/* @passthrough start - overrides for nested IllustratedMessage component */
+	--spectrum-illustrated-message-vertical-maximum-width: var(--spectrum-drop-zone-content-maximum-width);
+	--spectrum-illustrated-message-description-to-action: var(--spectrum-drop-zone-body-to-action);
+	--spectrum-illustrated-message-description-position: relative;
+	--spectrum-illustrated-message-description-z-index: 10;
+	--spectrum-illustrated-message-description-font-size: var(--spectrum-drop-zone-body-font-size);
+	/* @passthrough end */
+
+	justify-content: center;
 }
 
 /********* WHCM *********/

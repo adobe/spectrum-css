@@ -75,7 +75,7 @@
 		--spectrum-search-line-height: var(--spectrum-cjk-line-height-100);
 	}
 
-	/* /* @passthrough start: nested Textfield component. */
+	/* @passthrough start - nested Textfield component */
 	--spectrum-textfield-font-family: var(--spectrum-search-font-family);
 	--spectrum-textfield-font-weight: var(--spectrum-search-font-weight);
 	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);

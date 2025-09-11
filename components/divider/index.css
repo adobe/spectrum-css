@@ -69,9 +69,8 @@
 .spectrum-Divider--vertical {
 	inline-size: var(--spectrum-divider-thickness);
 	min-block-size: var(--spectrum-divider-block-minimum-size);
-	margin-block: var(--spectrum-divider-vertical-margin, 0);
-	block-size: var(--spectrum-divider-vertical-height);
-	align-self: var(--spectrum-divider-vertical-align, flex-start);
+	margin-block: 0;
+	align-self: flex-start;
 }
 
 /* windows high contrast mode */

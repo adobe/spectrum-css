@@ -18,15 +18,17 @@
 	--spectrum-tag-group-inline-spacing-label-to-tags: var(--spectrum-spacing-200);
 	--spectrum-tag-group-spacing-help-text-to-tags: var(--spectrum-help-text-to-component);
 
-	/* passthroughs for body typography element in empty state */
+	/* @passthrough start - for body typography element in empty state */
 	--spectrum-body-line-height: var(--spectrum-line-height-100);
 	--spectrum-body-font-size: var(--spectrum-font-size-100);
 	--spectrum-body-margin-start: var(--spectrum-component-top-to-text-100);
 	--spectrum-body-margin-end: var(--spectrum-component-bottom-to-text-100);
+	/* @passthrough end */
 
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
+		/* @passthrough - for body typography element in empty state */
 		--spectrum-body-cjk-line-height: var(--spectrum-cjk-line-height-100);
 	}
 }
@@ -35,20 +37,22 @@
 	--spectrum-tag-group-inline-tag-spacing: var(--spectrum-spacing-100);
 	--spectrum-tag-group-block-tag-spacing: var(--spectrum-spacing-100);
 
-	/* passthroughs for body typography element in empty state */
+	/* @passthrough start - for body typography element in empty state */
 	--spectrum-body-font-size: var(--spectrum-font-size-75);
 	--spectrum-body-margin-start: var(--spectrum-component-top-to-text-75);
 	--spectrum-body-margin-end: var(--spectrum-component-bottom-to-text-75);
+	/* @passthrough end */
 }
 
 .spectrum-TagGroup--sizeL {
 	--spectrum-tag-group-inline-tag-spacing: var(--spectrum-spacing-200);
 	--spectrum-tag-group-block-tag-spacing: var(--spectrum-spacing-200);
 
-	/* passthroughs for body typography element in empty state */
+	/* @passthrough start - for body typography element in empty state */
 	--spectrum-body-font-size: var(--spectrum-font-size-200);
 	--spectrum-body-margin-start: var(--spectrum-component-top-to-text-200);
 	--spectrum-body-margin-end: var(--spectrum-component-bottom-to-text-200);
+	/* @passthrough end */
 }
 
 .spectrum-TagGroup {

@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "@spectrum-css/commons/basebutton.css";
-
 .spectrum-Button {
 	--spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
 
@@ -39,8 +37,6 @@
 	--spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
 	--spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
 	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-100);
-
-	--spectrum-progress-circle-position: absolute;
 	--spectrum-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
 
 	&.spectrum-Button--iconOnly {
@@ -325,7 +321,60 @@
 }
 
 .spectrum-Button {
-	@extend %spectrum-BaseButton;
+	cursor: pointer;
+	user-select: none;
+
+	/* Contain halo */
+
+	/* Show the button overflow in Edge. */
+	overflow: visible;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	box-sizing: border-box;
+
+	/* Remove button the margin in Firefox and Safari. */
+	margin: 0;
+
+	font-family: var(--spectrum-sans-font-family-stack);
+
+	/* Adjacent buttons should be aligned correctly */
+	vertical-align: top;
+
+	-webkit-font-smoothing: antialiased;
+
+	/* Font smoothing for Firefox */
+	-moz-osx-font-smoothing: grayscale;
+
+	line-height: var(--spectrum-line-height-100);
+	text-decoration: none;
+
+	/* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
+	text-transform: none;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari (normalize). */
+	-webkit-appearance: button;
+
+	/* Fix Firefox */
+	&::-moz-focus-inner {
+		margin-block-start: -2px;
+		margin-block-end: -2px;
+		padding: 0;
+		border: 0;
+
+		/* Remove the inner border and padding for button in Firefox. */
+		border-style: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		cursor: default;
+	}
 
 	border-radius: var(--spectrum-button-border-radius);
 	border-width: var(--spectrum-button-border-width);
@@ -333,7 +382,7 @@
 	font-size: var(--spectrum-button-font-size);
 	font-weight: var(--spectrum-button-font-weight);
 	gap: var(--spectrum-button-padding-label-to-icon);
-	max-inline-size: var(--spectrum-button-max-inline-size, none);
+	max-inline-size: none;
 	min-inline-size: var(--spectrum-button-min-width);
 	min-block-size: var(--spectrum-button-height);
 
@@ -349,15 +398,11 @@
 		color var(--spectrum-button-animation-duration) linear,
 		background-color var(--spectrum-button-animation-duration) linear;
 
-	margin-block: var(--spectrum-button-margin-block);
-	margin-inline-end: var(--spectrum-button-margin-right);
-	margin-inline-start: var(--spectrum-button-margin-left);
-
 	.spectrum-Icon {
 		/* Any block-size difference between the intended workflow icon size and actual icon used. Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
-		--_icon-size-difference: max(0px, var(--spectrum-button-intended-icon-size) - var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size)));
+		--_icon-size-difference: max(0px, var(--spectrum-button-intended-icon-size) - var(--spectrum-icon-size, var(--spectrum-button-intended-icon-size)));
 
-		margin-block-start: var(--spectrum-button-icon-margin-block-start, max(0px, var(--spectrum-button-top-to-icon) - var(--spectrum-button-border-width) + (var(--_icon-size-difference, 0px) / 2)));
+		margin-block-start: max(0px, var(--spectrum-button-top-to-icon) - var(--spectrum-button-border-width) + (var(--_icon-size-difference, 0px) / 2));
 
 		margin-inline-start: calc(var(--spectrum-button-edge-to-visual) - var(--spectrum-button-edge-to-text));
 		color: inherit;
@@ -372,7 +417,7 @@
 		position: absolute;
 		inset: 0;
 		margin: calc((var(--spectrum-button-focus-ring-gap) + var(--spectrum-button-border-width)) * -1);
-		border-radius: var(--spectrum-button-focus-ring-border-radius, calc(var(--spectrum-button-border-radius) + var(--spectrum-button-focus-ring-gap)));
+		border-radius: calc(var(--spectrum-button-border-radius) + var(--spectrum-button-focus-ring-gap));
 		transition: box-shadow var(--spectrum-button-animation-duration) ease-in-out;
 		pointer-events: none;
 	}
@@ -429,6 +474,7 @@
 	}
 
 	.spectrum-ProgressCircle {
+		position: absolute;
 		visibility: hidden;
 		opacity: 0;
 		transition:
@@ -458,16 +504,27 @@
 }
 
 a.spectrum-Button {
-	@extend %spectrum-AnchorButton;
+	/* Make link text not selectable  */
+	user-select: none;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Remove appearance for clickable types in iOS and Safari. */
+	-webkit-appearance: none;
 }
 
 .spectrum-Button-label {
-	@extend %spectrum-ButtonLabel;
+	justify-self: center;
+
+	/* Fixes horizontal alignment of text in anchor buttons */
+
+	&:empty {
+		display: none;
+	}
+
 	padding-block-start: calc(var(--spectrum-button-top-to-text) - var(--spectrum-button-border-width));
 	padding-block-end: calc(var(--spectrum-button-bottom-to-text) - var(--spectrum-button-border-width));
 	line-height: var(--spectrum-button-line-height);
 	align-self: start;
-	text-align: var(--spectrum-button-text-align, center);
+	text-align: center;
 }
 
 /* Disable button label wrap */
@@ -478,7 +535,7 @@ a.spectrum-Button {
 }
 
 .spectrum-Button .spectrum-Icon + .spectrum-Button-label {
-	text-align: var(--spectrum-button-text-align-with-icon, start);
+	text-align: start;
 }
 
 /* Icon only variant */
@@ -504,12 +561,6 @@ a.spectrum-Button {
 		--highcontrast-button-border-color-disabled: GrayText;
 		--highcontrast-button-background-color-disabled: ButtonFace;
 		--highcontrast-button-focus-ring-color: ButtonText;
-
-		.spectrum-ProgressCircle {
-			--spectrum-progress-circle-track-border-color: ButtonText;
-			--spectrum-progress-circle-track-border-color-over-background: ButtonText;
-			--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
-		}
 
 		&:focus-visible::after {
 			/* Make sure the box-shadow used for the focus indicator is displayed. */

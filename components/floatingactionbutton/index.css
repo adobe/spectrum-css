@@ -44,7 +44,7 @@
 	cursor: pointer;
 	block-size: var(--spectrum-floating-action-button-size);
 	inline-size: var(--spectrum-floating-action-button-size);
-	border-radius: var(--spectrum-floating-action-button-border-radius, 50%);
+	border-radius: 50%;
 	padding-inline: var(--spectrum-floating-action-button-padding);
 	padding-block: var(--spectrum-floating-action-button-padding);
 	margin-inline-end: var(--spectrum-floating-action-button-margin);
@@ -85,7 +85,7 @@
 			inset: 0;
 			margin: calc(-1 * var(--spectrum-focus-indicator-gap));
 			box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--spectrum-focus-indicator-color);
-			border-radius: var(--spectrum-floating-action-button-border-radius, 50%);
+			border-radius: 50%;
 			pointer-events: none;
 			content: "";
 		}

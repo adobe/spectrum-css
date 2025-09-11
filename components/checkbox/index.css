@@ -170,7 +170,7 @@
 	&:not(.is-readOnly) {
 		.spectrum-Checkbox-input:active:not(:disabled) + .spectrum-Checkbox-box,
 		&:active .spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
-			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down)); /* stylelint-disable-line */
+			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
 		}
 	}
 

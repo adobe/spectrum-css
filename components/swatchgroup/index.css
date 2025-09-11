@@ -14,7 +14,10 @@
 .spectrum-SwatchGroup {
 	--spectrum-swatchgroup-spacing: var(--spectrum-spacing-75);
 
-	--spectrum-swatch-border-opacity: 0.2;
+	.spectrum-Swatch {
+		/* @passthrough - nested Swatch component */
+		--spectrum-swatch-border-opacity: 0.2;
+	}
 }
 
 .spectrum-SwatchGroup {

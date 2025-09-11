@@ -11,21 +11,30 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-InfieldProgressCircle {
+	/* @passthrough start */
 	--spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);
 	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-100);
+	/* @passthrough end */
+
 	--spectrum-infieldprogresscircle-padding-block: var(--spectrum-in-field-progress-circle-edge-to-fill);
 }
 
 .spectrum-InfieldProgressCircle--sizeS {
+	/* @passthrough start */
 	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-75);
+	/* @passthrough end */
 }
 
 .spectrum-InfieldProgressCircle--sizeL {
+	/* @passthrough start */
 	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-200);
+	/* @passthrough end */
 }
 
 .spectrum-InfieldProgressCircle--sizeXL {
+	/* @passthrough start */
 	--spectrum-progress-circle-size: var(--spectrum-in-field-progress-circle-size-300);
+	/* @passthrough end */
 }
 
 .spectrum-InfieldProgressCircle {

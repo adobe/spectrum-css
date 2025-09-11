@@ -2,48 +2,29 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-AlertBanner",
-    ".spectrum-AlertBanner--info",
-    ".spectrum-AlertBanner--negative",
     ".spectrum-AlertBanner-body",
     ".spectrum-AlertBanner-content",
     ".spectrum-AlertBanner-icon",
     ".spectrum-AlertBanner-text",
-    ".spectrum-AlertBanner.is-open",
     ".spectrum-AlertBanner:has(.spectrum-CloseButton) .spectrum-AlertBanner-body",
     ".spectrum-AlertBanner:lang(ja)",
     ".spectrum-AlertBanner:lang(ko)",
     ".spectrum-AlertBanner:lang(zh)",
+    ".spectrum-AlertBanner:where(.is-open)",
+    ".spectrum-AlertBanner:where(.spectrum-AlertBanner--info)",
+    ".spectrum-AlertBanner:where(.spectrum-AlertBanner--negative)",
     ".spectrum-CloseButton"
   ],
   "component": [
-    "--spectrum-alert-banner-background",
-    "--spectrum-alert-banner-block-edge-to-button",
     "--spectrum-alert-banner-bottom-to-text",
     "--spectrum-alert-banner-close-button-spacing",
-    "--spectrum-alert-banner-close-button-to-content",
-    "--spectrum-alert-banner-close-button-to-inline-end",
-    "--spectrum-alert-banner-font-color",
-    "--spectrum-alert-banner-font-family",
-    "--spectrum-alert-banner-font-size",
-    "--spectrum-alert-banner-icon-size",
-    "--spectrum-alert-banner-icon-to-text",
-    "--spectrum-alert-banner-inline-end-to-content",
-    "--spectrum-alert-banner-inline-size",
-    "--spectrum-alert-banner-inline-start-to-content",
-    "--spectrum-alert-banner-line-height",
-    "--spectrum-alert-banner-max-inline-size",
-    "--spectrum-alert-banner-min-height",
     "--spectrum-alert-banner-minimum-height",
-    "--spectrum-alert-banner-text-margin-block-end",
-    "--spectrum-alert-banner-text-margin-block-start",
-    "--spectrum-alert-banner-text-to-button-horizontal",
     "--spectrum-alert-banner-text-to-button-vertical",
-    "--spectrum-alert-banner-top-to-icon",
     "--spectrum-alert-banner-top-to-text",
+    "--spectrum-alert-banner-top-to-workflow-icon",
     "--spectrum-alert-banner-width"
   ],
   "global": [
-    "--spectrum-border-width-100",
     "--spectrum-cjk-line-height-100",
     "--spectrum-closebutton-align-self",
     "--spectrum-closebutton-margin-inline",
@@ -62,8 +43,5 @@
     "--spectrum-workflow-icon-size-100"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-alert-banner-border-color",
-    "--highcontrast-alert-banner-border-width"
-  ]
+  "high-contrast": []
 }

@@ -163,9 +163,10 @@
 	/* Row Selection */
 	--spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-medium-compact);
 
-	/* Visuals */
+	/* @passthrough start - nested Thumbnail and Avatar components */
 	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-75);
 	--spectrum-avatar-size: var(--spectrum-avatar-size-50);
+	/* @passthrough end */
 }
 
 .spectrum-Table--spacious {
@@ -177,9 +178,10 @@
 	/* Row Selection */
 	--spectrum-table-row-checkbox-block-spacing: var(--spectrum-table-row-checkbox-to-top-medium-spacious);
 
-	/* Visuals */
+	/* @passthrough start - nested Thumbnail and Avatar components */
 	--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-200);
 	--spectrum-avatar-size: var(--spectrum-avatar-size-100);
+	/* @passthrough end */
 }
 
 .spectrum-Table--emphasized,
@@ -279,20 +281,20 @@
 
 	/* These styles get applied to the icon within that menu button. */
 	& .spectrum-Table-menuButton {
-		--spectrum-icon-color: var(--spectrum-table-header-icons-color-default);
+		color: var(--spectrum-table-header-icons-color-default);
 
 		&:hover {
-			--spectrum-icon-color: var(--spectrum-table-header-icons-color-hover);
+			color: var(--spectrum-table-header-icons-color-hover);
 		}
 
 		&:active {
-			--spectrum-icon-color: var(--spectrum-table-header-icons-color-active);
+			color: var(--spectrum-table-header-icons-color-active);
 		}
 
 		&:focus,
 		&:focus:hover,
 		&:focus-visible {
-			--spectrum-icon-color: var(--spectrum-table-header-icons-color-key-focus);
+			color: var(--spectrum-table-header-icons-color-key-focus);
 		}
 	}
 }
@@ -379,6 +381,7 @@
 		padding-block: var(--spectrum-table-header-row-checkbox-block-spacing);
 
 		.spectrum-Table-checkbox {
+			/* @passthrough - nested Checkbox component */
 			--spectrum-checkbox-margin-block: 0px;
 
 			min-block-size: initial;
@@ -790,9 +793,8 @@
 	border-block: var(--spectrum-table-border-width) solid var(--highcontrast-table-border-color, var(--spectrum-table-border-color));
 	border-inline: var(--spectrum-table-outer-border-inline-width) solid var(--highcontrast-table-border-color, var(--spectrum-table-border-color));
 
-	/* Make sure shift-tab reverse keyboard navigation keeps the whole cell in focus.
-     --spectrum-table-current-header-height should be dynamically updated with JS to match the table header height. */
-	scroll-padding-top: var(--spectrum-table-current-header-height, calc((var(--spectrum-table-row-line-height) * var(--spectrum-table-row-font-size)) + var(--spectrum-table-header-row-top-to-text) + var(--spectrum-table-header-row-bottom-to-text) + var(--spectrum-table-border-width)));
+	/* Make sure shift-tab reverse keyboard navigation keeps the whole cell in focus */
+	scroll-padding-top: calc((var(--spectrum-table-row-line-height) * var(--spectrum-table-row-font-size)) + var(--spectrum-table-header-row-top-to-text) + var(--spectrum-table-header-row-bottom-to-text) + var(--spectrum-table-border-width));
 
 	.spectrum-Table-head {
 		position: sticky;
