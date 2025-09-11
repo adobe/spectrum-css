@@ -13,7 +13,7 @@
 
 .spectrum-Badge {
 	/* base badge styling for all t-shirt sizes and all themes */
-	--spectrum-badge-border-width: var(--mod-badge-border-width, var(--spectrum-border-width-200));
+	--spectrum-badge-border-width: var(--spectrum-border-width-200);
 	--spectrum-badge-border-color: transparent;
 
 	/* label text styles for all t-shirt sizes and all themes */
@@ -193,7 +193,7 @@
 }
 
 .spectrum-Badge {
-	min-block-size: var(--mod-badge-height, var(--spectrum-badge-height));
+	min-block-size: var(--spectrum-badge-height);
 	inline-size: auto;
 
 	display: inline-flex;
@@ -202,12 +202,11 @@
 
 	cursor: default;
 
-	/* Due to calc() for spacing, --mod is included in base border-width token */
-	border: var(--spectrum-badge-border-width) solid var(--mod-badge-border-color, var(--spectrum-badge-border-color));
-	border-radius: var(--mod-badge-corner-radius, var(--spectrum-badge-corner-radius));
+	border: var(--spectrum-badge-border-width) solid var(--spectrum-badge-border-color);
+	border-radius: var(--spectrum-badge-corner-radius);
 
-	background: var(--mod-badge-background-color-default, var(--spectrum-badge-background-color-default));
-	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
+	background: var(--spectrum-badge-background-color-default);
+	color: var(--spectrum-badge-label-icon-color);
 
 	/* Show background color under transparent border to correct visual height */
 	background-origin: border-box;
@@ -218,242 +217,242 @@
 
 /* background color variants */
 .spectrum-Badge--neutral {
-	background: var(--mod-badge-background-color-default, var(--spectrum-badge-background-color-default));
+	background: var(--spectrum-badge-background-color-default);
 }
 
 .spectrum-Badge--accent {
-	background: var(--mod-badge-background-color-accent, var(--spectrum-badge-background-color-accent));
+	background: var(--spectrum-badge-background-color-accent);
 }
 
 .spectrum-Badge--informative {
-	background: var(--mod-badge-background-color-informative, var(--spectrum-badge-background-color-informative));
+	background: var(--spectrum-badge-background-color-informative);
 }
 
 .spectrum-Badge--negative {
-	background: var(--mod-badge-background-color-negative, var(--spectrum-badge-background-color-negative));
+	background: var(--spectrum-badge-background-color-negative);
 }
 
 .spectrum-Badge--positive {
-	background: var(--mod-badge-background-color-positive, var(--spectrum-badge-background-color-positive));
+	background: var(--spectrum-badge-background-color-positive);
 }
 
 .spectrum-Badge--notice {
-	background: var(--mod-badge-background-color-notice, var(--spectrum-badge-background-color-notice));
+	background: var(--spectrum-badge-background-color-notice);
 }
 
 /* non-semantic colors */
 .spectrum-Badge--gray {
-	background: var(--mod-badge-background-color-gray, var(--spectrum-badge-background-color-gray));
+	background: var(--spectrum-badge-background-color-gray);
 }
 
 .spectrum-Badge--red {
-	background: var(--mod-badge-background-color-red, var(--spectrum-badge-background-color-red));
+	background: var(--spectrum-badge-background-color-red);
 }
 
 .spectrum-Badge--orange {
-	background: var(--mod-badge-background-color-orange, var(--spectrum-badge-background-color-orange));
+	background: var(--spectrum-badge-background-color-orange);
 }
 
 .spectrum-Badge--yellow {
-	background: var(--mod-badge-background-color-yellow, var(--spectrum-badge-background-color-yellow));
+	background: var(--spectrum-badge-background-color-yellow);
 }
 
 .spectrum-Badge--chartreuse {
-	background: var(--mod-badge-background-color-chartreuse, var(--spectrum-badge-background-color-chartreuse));
+	background: var(--spectrum-badge-background-color-chartreuse);
 }
 
 .spectrum-Badge--celery {
-	background: var(--mod-badge-background-color-celery, var(--spectrum-badge-background-color-celery));
+	background: var(--spectrum-badge-background-color-celery);
 }
 
 .spectrum-Badge--green {
-	background: var(--mod-badge-background-color-green, var(--spectrum-badge-background-color-green));
+	background: var(--spectrum-badge-background-color-green);
 }
 
 .spectrum-Badge--seafoam {
-	background: var(--mod-badge-background-color-seafoam, var(--spectrum-badge-background-color-seafoam));
+	background: var(--spectrum-badge-background-color-seafoam);
 }
 
 .spectrum-Badge--cyan {
-	background: var(--mod-badge-background-color-cyan, var(--spectrum-badge-background-color-cyan));
+	background: var(--spectrum-badge-background-color-cyan);
 }
 
 .spectrum-Badge--blue {
-	background: var(--mod-badge-background-color-blue, var(--spectrum-badge-background-color-blue));
+	background: var(--spectrum-badge-background-color-blue);
 }
 
 .spectrum-Badge--indigo {
-	background: var(--mod-badge-background-color-indigo, var(--spectrum-badge-background-color-indigo));
+	background: var(--spectrum-badge-background-color-indigo);
 }
 
 .spectrum-Badge--purple {
-	background: var(--mod-badge-background-color-purple, var(--spectrum-badge-background-color-purple));
+	background: var(--spectrum-badge-background-color-purple);
 }
 
 .spectrum-Badge--fuchsia {
-	background: var(--mod-badge-background-color-fuchsia, var(--spectrum-badge-background-color-fuchsia));
+	background: var(--spectrum-badge-background-color-fuchsia);
 }
 
 .spectrum-Badge--magenta {
-	background: var(--mod-badge-background-color-magenta, var(--spectrum-badge-background-color-magenta));
+	background: var(--spectrum-badge-background-color-magenta);
 }
 
 .spectrum-Badge--pink {
-	background: var(--mod-badge-background-color-pink, var(--spectrum-badge-background-color-pink));
+	background: var(--spectrum-badge-background-color-pink);
 }
 
 .spectrum-Badge--turquoise {
-	background: var(--mod-badge-background-color-turquoise, var(--spectrum-badge-background-color-turquoise));
+	background: var(--spectrum-badge-background-color-turquoise);
 }
 
 .spectrum-Badge--brown {
-	background: var(--mod-badge-background-color-brown, var(--spectrum-badge-background-color-brown));
+	background: var(--spectrum-badge-background-color-brown);
 }
 
 .spectrum-Badge--cinnamon {
-	background: var(--mod-badge-background-color-cinnamon, var(--spectrum-badge-background-color-cinnamon));
+	background: var(--spectrum-badge-background-color-cinnamon);
 }
 
 .spectrum-Badge--silver {
-	background: var(--mod-badge-background-color-silver, var(--spectrum-badge-background-color-silver));
+	background: var(--spectrum-badge-background-color-silver);
 }
 
 /* Style = subtle */
 .spectrum-Badge--style-subtle {
-	color: var(--mod-badge-subtle-label-icon-color, var(--spectrum-badge-subtle-label-icon-color));
+	color: var(--spectrum-badge-subtle-label-icon-color);
 
 	/* background color variants */
 	&.spectrum-Badge--neutral {
-		background: var(--mod-badge-subtle-background-color-default, var(--spectrum-badge-subtle-background-color-default));
+		background: var(--spectrum-badge-subtle-background-color-default);
 	}
 
 	&.spectrum-Badge--accent {
-		background: var(--mod-badge-subtle-background-color-accent, var(--spectrum-badge-subtle-background-color-accent));
+		background: var(--spectrum-badge-subtle-background-color-accent);
 	}
 
 	&.spectrum-Badge--informative {
-		background: var(--mod-badge-subtle-background-color-informative, var(--spectrum-badge-subtle-background-color-informative));
+		background: var(--spectrum-badge-subtle-background-color-informative);
 	}
 
 	&.spectrum-Badge--negative {
-		background: var(--mod-badge-subtle-background-color-negative, var(--spectrum-badge-subtle-background-color-negative));
+		background: var(--spectrum-badge-subtle-background-color-negative);
 	}
 
 	&.spectrum-Badge--positive {
-		background: var(--mod-badge-subtle-background-color-positive, var(--spectrum-badge-subtle-background-color-positive));
+		background: var(--spectrum-badge-subtle-background-color-positive);
 	}
 
 	&.spectrum-Badge--notice {
-		background: var(--mod-badge-subtle-background-color-notice, var(--spectrum-badge-subtle-background-color-notice));
+		background: var(--spectrum-badge-subtle-background-color-notice);
 	}
 
 	/* non-semantic colors */
 	&.spectrum-Badge--gray {
-		background: var(--mod-badge-subtle-background-color-gray, var(--spectrum-badge-subtle-background-color-gray));
+		background: var(--spectrum-badge-subtle-background-color-gray);
 	}
 
 	&.spectrum-Badge--red {
-		background: var(--mod-badge-subtle-background-color-red, var(--spectrum-badge-subtle-background-color-red));
+		background: var(--spectrum-badge-subtle-background-color-red);
 	}
 
 	&.spectrum-Badge--orange {
-		background: var(--mod-badge-subtle-background-color-orange, var(--spectrum-badge-subtle-background-color-orange));
+		background: var(--spectrum-badge-subtle-background-color-orange);
 	}
 
 	&.spectrum-Badge--yellow {
-		background: var(--mod-badge-subtle-background-color-yellow, var(--spectrum-badge-subtle-background-color-yellow));
+		background: var(--spectrum-badge-subtle-background-color-yellow);
 	}
 
 	&.spectrum-Badge--chartreuse {
-		background: var(--mod-badge-subtle-background-color-chartreuse, var(--spectrum-badge-subtle-background-color-chartreuse));
+		background: var(--spectrum-badge-subtle-background-color-chartreuse);
 	}
 
 	&.spectrum-Badge--celery {
-		background: var(--mod-badge-subtle-background-color-celery, var(--spectrum-badge-subtle-background-color-celery));
+		background: var(--spectrum-badge-subtle-background-color-celery);
 	}
 
 	&.spectrum-Badge--green {
-		background: var(--mod-badge-subtle-background-color-green, var(--spectrum-badge-subtle-background-color-green));
+		background: var(--spectrum-badge-subtle-background-color-green);
 	}
 
 	&.spectrum-Badge--seafoam {
-		background: var(--mod-badge-subtle-background-color-seafoam, var(--spectrum-badge-subtle-background-color-seafoam));
+		background: var(--spectrum-badge-subtle-background-color-seafoam);
 	}
 
 	&.spectrum-Badge--cyan {
-		background: var(--mod-badge-subtle-background-color-cyan, var(--spectrum-badge-subtle-background-color-cyan));
+		background: var(--spectrum-badge-subtle-background-color-cyan);
 	}
 
 	&.spectrum-Badge--blue {
-		background: var(--mod-badge-subtle-background-color-blue, var(--spectrum-badge-subtle-background-color-blue));
+		background: var(--spectrum-badge-subtle-background-color-blue);
 	}
 
 	&.spectrum-Badge--indigo {
-		background: var(--mod-badge-subtle-background-color-indigo, var(--spectrum-badge-subtle-background-color-indigo));
+		background: var(--spectrum-badge-subtle-background-color-indigo);
 	}
 
 	&.spectrum-Badge--purple {
-		background: var(--mod-badge-subtle-background-color-purple, var(--spectrum-badge-subtle-background-color-purple));
+		background: var(--spectrum-badge-subtle-background-color-purple);
 	}
 
 	&.spectrum-Badge--fuchsia {
-		background: var(--mod-badge-subtle-background-color-fuchsia, var(--spectrum-badge-subtle-background-color-fuchsia));
+		background: var(--spectrum-badge-subtle-background-color-fuchsia);
 	}
 
 	&.spectrum-Badge--magenta {
-		background: var(--mod-badge-subtle-background-color-magenta, var(--spectrum-badge-subtle-background-color-magenta));
+		background: var(--spectrum-badge-subtle-background-color-magenta);
 	}
 
 	&.spectrum-Badge--pink {
-		background: var(--mod-badge-subtle-background-color-pink, var(--spectrum-badge-subtle-background-color-pink));
+		background: var(--spectrum-badge-subtle-background-color-pink);
 	}
 
 	&.spectrum-Badge--turquoise {
-		background: var(--mod-badge-subtle-background-color-turquoise, var(--spectrum-badge-subtle-background-color-turquoise));
+		background: var(--spectrum-badge-subtle-background-color-turquoise);
 	}
 
 	&.spectrum-Badge--brown {
-		background: var(--mod-badge-subtle-background-color-brown, var(--spectrum-badge-subtle-background-color-brown));
+		background: var(--spectrum-badge-subtle-background-color-brown);
 	}
 
 	&.spectrum-Badge--cinnamon {
-		background: var(--mod-badge-subtle-background-color-cinnamon, var(--spectrum-badge-subtle-background-color-cinnamon));
+		background: var(--spectrum-badge-subtle-background-color-cinnamon);
 	}
 
 	&.spectrum-Badge--silver {
-		background: var(--mod-badge-subtle-background-color-silver, var(--spectrum-badge-subtle-background-color-silver));
+		background: var(--spectrum-badge-subtle-background-color-silver);
 	}
 }
 
 /* Style = outline - only valid for semantic colors */
 .spectrum-Badge--style-outline {
 	&:is(.spectrum-Badge--neutral, .spectrum-Badge--accent, .spectrum-Badge--informative, .spectrum-Badge--negative, .spectrum-Badge--positive, .spectrum-Badge--notice) {
-		background: var(--mod-badge-outline-background-color-default, var(--spectrum-badge-outline-background-color));
-		color: var(--mod-badge-outline-label-icon-color, var(--spectrum-badge-outline-label-icon-color));
+		background: var(--spectrum-badge-outline-background-color);
+		color: var(--spectrum-badge-outline-label-icon-color);
 	}
 
 	&.spectrum-Badge--neutral {
-		border-color: var(--mod-badge-outline-border-color-neutral, var(--spectrum-badge-outline-border-color-neutral));
+		border-color: var(--spectrum-badge-outline-border-color-neutral);
 	}
 
 	&.spectrum-Badge--accent {
-		border-color: var(--mod-badge-outline-border-color-accent, var(--spectrum-badge-outline-border-color-accent));
+		border-color: var(--spectrum-badge-outline-border-color-accent);
 	}
 
 	&.spectrum-Badge--informative {
-		border-color: var(--mod-badge-outline-border-color-informative, var(--spectrum-badge-outline-border-color-informative));
+		border-color: var(--spectrum-badge-outline-border-color-informative);
 	}
 
 	&.spectrum-Badge--negative {
-		border-color: var(--mod-badge-outline-border-color-negative, var(--spectrum-badge-outline-border-color-negative));
+		border-color: var(--spectrum-badge-outline-border-color-negative);
 	}
 
 	&.spectrum-Badge--positive {
-		border-color: var(--mod-badge-outline-border-color-positive, var(--spectrum-badge-outline-border-color-positive));
+		border-color: var(--spectrum-badge-outline-border-color-positive);
 	}
 
 	&.spectrum-Badge--notice {
-		border-color: var(--mod-badge-outline-border-color-notice, var(--spectrum-badge-outline-border-color-notice));
+		border-color: var(--spectrum-badge-outline-border-color-notice);
 	}
 }
 
@@ -480,20 +479,20 @@
 
 /* label */
 .spectrum-Badge-label {
-	font-size: var(--mod-badge-font-size, var(--spectrum-badge-font-size));
+	font-size: var(--spectrum-badge-font-size);
 	font-weight: var(--spectrum-badge-font-weight);
-	line-height: var(--mod-badge-line-height, var(--spectrum-badge-line-height));
+	line-height: var(--spectrum-badge-line-height);
 
-	padding-inline-end: calc(var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal)) - var(--spectrum-badge-border-width));
-	padding-inline-start: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
-	padding-block-start: calc(var(--mod-badge-label-spacing-vertical-top, var(--spectrum-badge-label-spacing-vertical-top)) - var(--spectrum-badge-border-width));
-	padding-block-end: calc(var(--mod-badge-label-spacing-vertical-bottom, var(--spectrum-badge-label-spacing-vertical-bottom)) - var(--spectrum-badge-border-width));
+	padding-inline-end: calc(var(--spectrum-badge-label-spacing-horizontal) - var(--spectrum-badge-border-width));
+	padding-inline-start: var(--spectrum-badge-label-spacing-horizontal);
+	padding-block-start: calc(var(--spectrum-badge-label-spacing-vertical-top) - var(--spectrum-badge-border-width));
+	padding-block-end: calc(var(--spectrum-badge-label-spacing-vertical-bottom) - var(--spectrum-badge-border-width));
 
 	/* cjk language support */
 	&:lang(ja),
 	&:lang(zh),
 	&:lang(ko) {
-		line-height: var(--mod-badge-line-height-cjk, var(--spectrum-badge-line-height-cjk));
+		line-height: var(--spectrum-badge-line-height-cjk);
 	}
 
 	/* remove left padding from label if preceded by an icon */
@@ -504,24 +503,24 @@
 
 /* optional icon */
 .spectrum-Badge-icon {
-	block-size: var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
-	inline-size: var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
+	block-size: var(--spectrum-badge-workflow-icon-size);
+	inline-size: var(--spectrum-badge-workflow-icon-size);
 
 	/* ensures icon does not shrink when badge width is limited */
-	flex: 0 0 var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
+	flex: 0 0 var(--spectrum-badge-workflow-icon-size);
 
-	margin-inline-start: calc(var(--mod-badge-icon-spacing-horizontal, var(--spectrum-badge-icon-spacing-horizontal)) - var(--spectrum-badge-border-width));
+	margin-inline-start: calc(var(--spectrum-badge-icon-spacing-horizontal) - var(--spectrum-badge-border-width));
 
 	/* icon with label has reduced padding between icon and text */
-	margin-inline-end: var(--mod-badge-icon-text-spacing, var(--spectrum-badge-icon-text-spacing));
-	margin-block-start: calc(var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top)) - var(--spectrum-badge-border-width));
-	margin-block-end: calc(var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top)) - var(--spectrum-badge-border-width));
+	margin-inline-end: var(--spectrum-badge-icon-text-spacing);
+	margin-block-start: calc(var(--spectrum-badge-icon-spacing-vertical-top) - var(--spectrum-badge-border-width));
+	margin-block-end: calc(var(--spectrum-badge-icon-spacing-vertical-top) - var(--spectrum-badge-border-width));
 }
 
 .spectrum-Badge-icon--no-label {
 	/* icon without label has identical padding left and right */
-	margin-inline-start: calc(var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal)) - var(--spectrum-badge-border-width));
-	margin-inline-end: calc(var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal)) - var(--spectrum-badge-border-width));
+	margin-inline-start: calc(var(--spectrum-badge-icon-only-spacing-horizontal) - var(--spectrum-badge-border-width));
+	margin-inline-end: calc(var(--spectrum-badge-icon-only-spacing-horizontal) - var(--spectrum-badge-border-width));
 }
 
 .spectrum-Badge,

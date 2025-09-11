@@ -161,7 +161,7 @@ CustomWidth.storyName = "Custom width";
 CustomWidth.args = {
 	items: longerContent,
 	customStyles: {
-		"--mod-accordion-item-width": "auto",
+		"--spectrum-accordion-item-width": "auto",
 	},
 };
 CustomWidth.parameters = {

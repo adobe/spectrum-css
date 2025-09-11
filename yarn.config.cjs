@@ -19,7 +19,6 @@ module.exports = defineConfig({
 		const components = fg.sync("components/*", {
 			cwd: __dirname,
 			onlyDirectories: true,
-			ignore: ["components/commons"],
 		});
 
 		/**
