@@ -26,22 +26,18 @@ export const PropertiesTable = () => {
 
 	return (
 		<ThemeContainer color="light" display="contents">
-			<LinkableHeading id="modifiable-properties" size="m">
+			<LinkableHeading id="custom-properties" size="m">
 				<a
 					aria-hidden="true"
-					href="#modifiable-properties"
+					href="#custom-properties"
 					tabIndex="-1"
 					target="_self"
 					onClick={() => {
-						context.channel.emit(NAVIGATE_URL, "#modifiable-properties");
+						context.channel.emit(NAVIGATE_URL, "#custom-properties");
 					}}
 				></a>
-				Modifiable custom properties
+				Custom properties
 			</LinkableHeading>
-			<Body>
-				These are empty CSS custom property hooks available in this component
-				that enable one-off customizations specific to a product implementation.
-			</Body>
 			<Table
 				headers={["Property"]}
 				rows={metadata?.component.map((propertyName) => [

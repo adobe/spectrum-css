@@ -86,30 +86,6 @@
 	--spectrum-closebutton-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 }
 
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-CloseButton {
-		--highcontrast-closebutton-icon-color-disabled: GrayText;
-		--highcontrast-closebutton-icon-color-down: Highlight;
-		--highcontrast-closebutton-icon-color-hover: Highlight;
-		--highcontrast-closebutton-icon-color-focus: Highlight;
-		--highcontrast-closebutton-background-color-default: ButtonFace;
-		--highcontrast-closebutton-focus-indicator-color: ButtonText;
-
-		&:focus-visible::after {
-			forced-color-adjust: none;
-			margin: var(--spectrum-closebutton-focus-indicator-gap);
-			transition:
-				opacity var(--spectrum-closebutton-animation-duration) ease-out,
-				margin var(--spectrum-closebutton-animation-duration) ease-out;
-		}
-	}
-
-	.spectrum-CloseButton--staticWhite {
-		--highcontrast-closebutton-icon-color-disabled: Highlight;
-	}
-}
-
 a.spectrum-CloseButton {
 	/* Make link text not selectable  */
 	user-select: none;
@@ -123,14 +99,9 @@ a.spectrum-CloseButton {
 	user-select: none;
 
 	/* Contain halo */
-	position: relative;
 
 	/* Show the button overflow in Edge. */
 	overflow: visible;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
 
 	box-sizing: border-box;
 
@@ -168,10 +139,6 @@ a.spectrum-CloseButton {
 
 	transition: border-color var(--spectrum-closebutton-animation-duration) ease-in-out;
 
-	margin-inline: var(--spectrum-closebutton-margin-inline);
-	margin-block-start: var(--spectrum-closebutton-margin-top);
-	align-self: var(--spectrum-closebutton-align-self);
-
 	/* Fix Firefox */
 	&::-moz-focus-inner {
 		margin-block-start: -2px;
@@ -185,6 +152,11 @@ a.spectrum-CloseButton {
 
 	&:focus {
 		outline: none;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		cursor: default;
 	}
 
 	&::after {
@@ -262,4 +234,28 @@ a.spectrum-CloseButton {
 
 .spectrum-CloseButton-UIIcon {
 	margin: 0;
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-CloseButton {
+		--highcontrast-closebutton-icon-color-disabled: GrayText;
+		--highcontrast-closebutton-icon-color-down: Highlight;
+		--highcontrast-closebutton-icon-color-hover: Highlight;
+		--highcontrast-closebutton-icon-color-focus: Highlight;
+		--highcontrast-closebutton-background-color-default: ButtonFace;
+		--highcontrast-closebutton-focus-indicator-color: ButtonText;
+
+		&:focus-visible::after {
+			forced-color-adjust: none;
+			margin: var(--spectrum-closebutton-focus-indicator-gap);
+			transition:
+				opacity var(--spectrum-closebutton-animation-duration) ease-out,
+				margin var(--spectrum-closebutton-animation-duration) ease-out;
+		}
+	}
+
+	.spectrum-CloseButton--staticWhite {
+		--highcontrast-closebutton-icon-color-disabled: Highlight;
+	}
 }

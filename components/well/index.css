@@ -12,21 +12,15 @@
  */
 
 .spectrum-Well {
-	--spectrum-well-border-color: rgb(var(--spectrum-gray-1000-rgb), 0.05);
-
-	--spectrum-well-border-width: var(--spectrum-border-width-100);
-	--spectrum-well-content-color: var(--spectrum-body-color);
-	--spectrum-well-background-color: rgb(var(--spectrum-gray-800-rgb), 0.02);
-
 	text-align: start;
 	display: block;
 	min-inline-size: var(--spectrum-well-min-width);
 	padding: var(--spectrum-well-padding);
 	margin-block-start: var(--spectrum-well-margin-top);
-	border-width: var(--spectrum-well-border-width);
+	border-width: var(--spectrum-border-width-100);
 	border-style: solid;
 	border-radius: var(--spectrum-well-border-radius);
-	background-color: var(--spectrum-well-background-color);
-	border-color: var(--spectrum-well-border-color);
-	color: var(--spectrum-well-content-color);
+	background-color: rgb(var(--spectrum-gray-800-rgb), 0.02);
+	border-color: rgb(var(--spectrum-gray-1000-rgb), 0.05);
+	color: var(--spectrum-body-color);
 }

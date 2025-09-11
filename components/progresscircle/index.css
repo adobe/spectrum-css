@@ -38,7 +38,7 @@ governing permissions and limitations under the License.
 	display: inline-block;
 	inline-size: var(--spectrum-progress-circle-size);
 	block-size: var(--spectrum-progress-circle-size);
-	position: var(--spectrum-progress-circle-position, relative);
+	position: relative;
 	direction: ltr;
 
 	/* Fix for Safari rendering bug */

@@ -73,12 +73,13 @@
 	--spectrum-slider-track-corner-radius: 2px;
 	--spectrum-slider-handle-border-radius: var(--spectrum-slider-handle-size);
 
-	/* Textfield passthrough */
+	/* @passthrough - nested Textfield component */
 	--spectrum-textfield-width: var(--spectrum-slider-editable-field-inline-size-medium);
 
-	/* Field label passthrough */
+	/* @passthrough start - nested Field label component */
 	--spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+	/* @passthrough end */
 }
 
 .spectrum-Slider--sizeS {
@@ -92,9 +93,12 @@
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-small);
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-small);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-small);
+	/* @passthrough - nested Textfield component */
 	--spectrum-textfield-width: var(--spectrum-slider-editable-field-inline-size-small);
+	/* @passthrough start - nested Field label component */
 	--spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	/* @passthrough end */
 }
 
 .spectrum-Slider--sizeL {
@@ -128,10 +132,12 @@
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-extra-large);
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-extra-large);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-extra-large);
+	/* @passthrough - nested Textfield component */
 	--spectrum-textfield-width: var(--spectrum-slider-editable-field-inline-size-extra-large);
+	/* @passthrough start - nested Field label component */
 	--spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-300);
 	--spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
-
+	/* @passthrough end */
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 22px;
 }

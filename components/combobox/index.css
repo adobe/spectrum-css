@@ -197,6 +197,13 @@
 	}
 }
 
+/* POPOVER */
+.spectrum-Combobox-popover.spectrum-Popover {
+	/* @passthroughs start -- overrides for nested Popover component */
+	--spectrum-popover-animation-distance: var(--spectrum-combobox-popover-animation-distance);
+	/* @passthroughs end */
+}
+
 /* LOADING INDICATOR */
 .spectrum-Combobox-progress-circle {
 	position: absolute;
@@ -320,7 +327,7 @@
 	/* ****** Invalid & Loading ****** */
 	.spectrum-Combobox-textfield.is-invalid &,
 	.spectrum-Combobox-textfield.is-loading & {
-		padding-inline-end: calc(var(--spectrum-combobox-button-width) + var(--spectrum-combobox-spacing-inline-icon-to-button) + var(--spectrum-combobox-icon-size) + var(--spectrum-combobox-spacing-alert-icon-to-text) - var(--spectrum-combobox-border-width));
+		padding-inline-end: calc(var(--spectrum-combobox-button-width) + var(--spectrum-combobox-spacing-inline-icon-to-button) + var(--spectrum-combobox-icon-size) + var(--spectrum-combobox-spacing-inline-icon-to-text) - var(--spectrum-combobox-border-width));
 	}
 
 	&:lang(ja),

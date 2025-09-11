@@ -107,7 +107,7 @@
 	color: inherit;
 	margin-block: 0;
 	margin-inline: var(--spectrum-fieldlabel-text-to-asterisk) 0;
-	vertical-align: var(--spectrum-fieldlabel-asterisk-vertical-align, baseline);
+	vertical-align: baseline;
 }
 
 .spectrum-FieldLabel--left,

@@ -124,7 +124,7 @@
 	}
 
 	&:focus-visible::after {
-		margin: calc(-2 * var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
+		margin: calc(-2 * var(--spectrum-focus-indicator-gap));
 	}
 
 	&:focus-visible {

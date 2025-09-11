@@ -53,7 +53,7 @@
 
 	border-radius: 100%;
 
-	transition: all var(--spectrum-animation-duration-100) var(--spectrum-animation-easing);
+	transition: all var(--spectrum-animation-duration-100) var(--spectrum-animation-ease-linear);
 
 	touch-action: none; /* Disable touch scrolling on touch devices to allow for color picking */
 	user-select: none; /* Prevent text selection when dragging the handle */
@@ -66,7 +66,7 @@
 		display: block;
 		inline-size: var(--spectrum-color-control-track-width);
 		block-size: var(--spectrum-color-control-track-width);
-		border-radius: var(--spectrum-colorhandle-hitarea-border-radius, 100%);
+		border-radius: 100%;
 	}
 
 	&.is-focused,

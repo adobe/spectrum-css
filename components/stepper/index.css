@@ -33,9 +33,7 @@
 	/* Text color */
 	--spectrum-numberfield-text-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-numberfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Textfield mods */
 	--spectrum-numberfield-text-color-focus: var(--spectrum-neutral-content-color-focus);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used to assign Textfield mods */
 	--spectrum-numberfield-text-color-focus-hover: var(--spectrum-neutral-content-color-focus-hover);
 	--spectrum-numberfield-text-color-keyboard-focus: var(--spectrum-neutral-content-color-key-focus);
 	--spectrum-numberfield-text-color-disabled: var(--spectrum-disabled-content-color);
@@ -164,11 +162,11 @@
 
 	&:not(.is-disabled, .is-readOnly).is-hover,
 	&:not(.is-disabled, .is-readOnly):hover {
-		--spectrum-numberfield-border-color: var(--highcontrast-numberfield-border-color-hover, var(--spectrum-numberfield-border-color-hover));
+		--spectrum-numberfield-border-color-default: var(--highcontrast-numberfield-border-color-hover, var(--spectrum-numberfield-border-color-hover));
 	}
 
 	&.is-invalid {
-		--spectrum-numberfield-border-color: var(--spectrum-numberfield-border-color-invalid-default);
+		--spectrum-numberfield-border-color-default: var(--spectrum-numberfield-border-color-invalid-default);
 		--spectrum-numberfield-border-color-hover: var(--spectrum-numberfield-border-color-invalid-hover);
 		--spectrum-numberfield-border-color-focus: var(--spectrum-numberfield-border-color-invalid-focus);
 		--spectrum-numberfield-border-color-focus-hover: var(--spectrum-numberfield-border-color-invalid-focus-hover);
@@ -178,31 +176,31 @@
 	&:not(.is-disabled, .is-readOnly).is-focused,
 	&:not(.is-disabled, .is-readOnly):focus,
 	&:not(.is-disabled, .is-readOnly):focus-within {
-		--spectrum-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus, var(--spectrum-numberfield-border-color-focus));
+		--spectrum-numberfield-border-color-default: var(--highcontrast-numberfield-border-color-focus, var(--spectrum-numberfield-border-color-focus));
 
 		&.is-hover,
 		&:hover {
-			--spectrum-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover));
+			--spectrum-numberfield-border-color-default: var(--highcontrast-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover));
 		}
 	}
 
 	&:not(.is-disabled, .is-readOnly).is-keyboardFocused,
 	&:not(.is-disabled, .is-readOnly):focus-visible,
 	&:not(.is-disabled, .is-readOnly):focus-within {
-		--spectrum-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus, var(--spectrum-numberfield-border-color-keyboard-focus));
+		--spectrum-numberfield-border-color-default: var(--highcontrast-numberfield-border-color-focus, var(--spectrum-numberfield-border-color-keyboard-focus));
 
 		&.is-hover,
 		&:hover {
-			--spectrum-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover));
+			--spectrum-numberfield-border-color-default: var(--highcontrast-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover));
 		}
 	}
 
 	&.is-readOnly {
-		--spectrum-numberfield-border-color: var(--spectrum-numberfield-border-color-disabled);
+		--spectrum-numberfield-border-color-default: var(--spectrum-numberfield-border-color-disabled);
 	}
 
 	&.is-disabled {
-		--spectrum-numberfield-border-color: var(--spectrum-numberfield-border-color-disabled);
+		--spectrum-numberfield-border-color-default: var(--spectrum-numberfield-border-color-disabled);
 		--spectrum-numberfield-background-color: var(--spectrum-numberfield-background-color-disabled);
 	}
 
@@ -212,13 +210,12 @@
 		--spectrum-numberfield-line-height: var(--spectrum-cjk-line-height-100);
 	}
 
-	/* @passthrough start -- MODS for sub components */
-	/* nested textfield */
+	/* @passthrough start - MODS for sub components */
 	--spectrum-textfield-spacing-block-start: var(--spectrum-numberfield-spacing-block-start-edge-to-text);
 	--spectrum-textfield-spacing-block-end: var(--spectrum-numberfield-spacing-block-end-edge-to-text);
 	--spectrum-textfield-icon-spacing-block-invalid: calc(var(--spectrum-numberfield-spacing-block-start-edge-to-alert-icon) - var(--spectrum-numberfield-border-width));
 
-	/* this mod overrides the inline-size of the nested textfield */
+	/* overrides the inline-size of the nested textfield */
 	--spectrum-textfield-width: 100%;
 	--spectrum-textfield-height: calc(var(--spectrum-numberfield-block-size) - var(--spectrum-numberfield-border-width) * 2);
 	--spectrum-textfield-background-color: var(--spectrum-numberfield-background-color, transparent);
@@ -229,32 +226,33 @@
 	--spectrum-textfield-font-weight: var(--spectrum-numberfield-font-weight);
 	--spectrum-textfield-font-style: var(--spectrum-numberfield-font-style);
 	--spectrum-textfield-font-size: var(--spectrum-numberfield-font-size);
+	/* @passthrough end */
 
 	&:not(.is-disabled).is-hover,
 	&:not(.is-disabled):hover {
-		/* overrides the textfield mod */
+		/* @passthrough - overrides the textfield */
 		--spectrum-textfield-text-color-default: var(--spectrum-numberfield-text-color-hover);
 	}
 
 	&:not(.is-disabled).is-keyboardFocused,
 	&:not(.is-disabled):focus-visible,
 	&:not(.is-disabled):focus-within {
-		/* overrides the textfield mod */
+		/* @passthrough - overrides the textfield */
 		--spectrum-textfield-text-color-default: var(--spectrum-numberfield-text-color-keyboard-focus);
 	}
 
 	&:not(.is-disabled).is-focused,
 	&:not(.is-disabled):focus,
 	&:not(.is-disabled):focus-within {
+		/* @passthrough - overrides the textfield */
 		--spectrum-textfield-text-color-focus: var(--spectrum-numberfield-text-color-focus);
 
 		&.is-hover,
 		&:hover {
-			/* overrides the textfield mod */
+			/* @passthrough - overrides the textfield */
 			--spectrum-textfield-text-color-focus: var(--spectrum-numberfield-text-color-focus-hover);
 		}
 	}
-	/* @passthrough end */
 }
 
 /* --- Component styles --- */

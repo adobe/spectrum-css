@@ -62,10 +62,6 @@
 	--spectrum-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--spectrum-breadcrumbs-item-dragged-background: rgb(var(--spectrum-drop-zone-background-color-rgb), var(--spectrum-drop-zone-background-color-opacity));
-
-	/* Sub-component: heading */
-	--spectrum-heading-margin-end: 0px;
-	--spectrum-heading-margin-start: 0px;
 }
 
 .spectrum-Breadcrumbs--sizeL {

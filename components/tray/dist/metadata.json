@@ -4,12 +4,12 @@
     ".spectrum-Tray",
     ".spectrum-Tray .spectrum-Dialog",
     ".spectrum-Tray-wrapper",
-    ".spectrum-Tray.is-open"
+    ".spectrum-Tray.is-open",
+    ".spectrum-Tray.spectrum-Modal"
   ],
   "component": [
     "--spectrum-tray-background-color",
     "--spectrum-tray-corner-radius",
-    "--spectrum-tray-corner-radius-portrait",
     "--spectrum-tray-entry-animation-delay",
     "--spectrum-tray-entry-animation-duration",
     "--spectrum-tray-exit-animation-delay",

@@ -34,9 +34,9 @@
 
 .spectrum-Asset-folder,
 .spectrum-Asset-file {
-	inline-size: clamp(var(--spectrum-asset-icon-min-width, 48px), 100%, var(--spectrum-asset-icon-max-width, 80px));
+	inline-size: clamp(48px, 100%, 80px);
 	block-size: 100%;
-	margin: var(--spectrum-asset-icon-margin, 20px);
+	margin: 20px;
 }
 
 .spectrum-Asset-folderBackground {

@@ -23,7 +23,7 @@
 	margin: 0;
 	display: grid;
 	grid-template-columns: var(--spectrum-form-grid-template-columns);
-	inline-size: var(--spectrum-form-inline-size, fit-content);
+	inline-size: fit-content;
 	justify-content: start;
 	row-gap: var(--spectrum-form-item-block-spacing);
 }

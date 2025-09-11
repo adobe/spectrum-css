@@ -31,19 +31,24 @@
 	}
 
 	&.is-positive {
+		/* @passthrough start */
 		--spectrum-progressbar-fill-color: var(--spectrum-positive-visual-color);
+		/* @passthrough end */
 	}
 
 	&.is-notice {
+		/* @passthrough start */
 		--spectrum-progressbar-fill-color: var(--spectrum-notice-visual-color);
+		/* @passthrough end */
 	}
 
 	&.is-negative {
+		/* @passthrough start */
 		--spectrum-progressbar-fill-color: var(--spectrum-negative-visual-color);
+		/* @passthrough end */
 	}
 
 	.spectrum-ProgressBar-helptext {
 		margin-block-start: var(--spectrum-meter-help-text-to-progress-bar);
 	}
 }
-/* @passthrough end */

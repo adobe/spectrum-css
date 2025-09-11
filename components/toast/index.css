@@ -48,7 +48,10 @@
 	--spectrum-toast-informative-background-color-default: var(--spectrum-informative-background-color-default);
 	--spectrum-toast-text-and-icon-color: var(--spectrum-white);
 
-	--spectrum-closebutton-icon-color-default: var(--spectrum-toast-text-and-icon-color);
+	.spectrum-CloseButton {
+		/* @passthrough */
+		--spectrum-closebutton-icon-color-default: var(--spectrum-toast-text-and-icon-color);
+	}
 }
 
 .spectrum-Toast {

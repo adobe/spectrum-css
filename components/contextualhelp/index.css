@@ -29,11 +29,6 @@
 	--spectrum-contextual-help-min-inline-size: var(--spectrum-contextual-help-minimum-width);
 	--spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
 	--spectrum-contextual-help-padding: var(--spectrum-spacing-400);
-
-	/* @passthrough start */
-	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
-	--spectrum-popover-corner-radius: var(--spectrum-corner-radius-large-default);
-	/* @passthrough end */
 }
 
 .spectrum-ContextualHelp {
@@ -46,6 +41,11 @@
 }
 
 .spectrum-ContextualHelp-popover {
+	/* @passthrough start */
+	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
+	--spectrum-popover-corner-radius: var(--spectrum-corner-radius-large-default);
+	/* @passthrough end */
+
 	padding: var(--spectrum-contextual-help-padding);
 	font-size: var(--spectrum-contextual-help-body-size);
 	color: var(--highcontrast-contextual-help-body-color, var(--spectrum-contextual-help-body-color));
