@@ -23,6 +23,7 @@ export const CoachContainer = (
 		currentStep = 2,
 		totalStepCount = 8,
 		isOpen = false,
+		alt = "",
 	} = {},
 	context = {},
 ) => {
@@ -37,49 +38,55 @@ export const CoachContainer = (
 				<div
 					class=${classMap({
 						[`${rootClass}-image-wrapper`]: true,
-						[`${rootClass}-image-wrapper--fixedHeight`]: imageIsFixedHeight
+						[`${rootClass}-image-wrapper--fixedHeight`]: imageIsFixedHeight,
 					})}
 				>
 					<img
 						class="${rootClass}-image"
 						src="${imageSource || "example-card-landscape.png"}"
+						alt="${alt}"
 					/>
 				</div>
 			`,
 		)}
-		<div class="spectrum-CoachMark-header" style=${styleMap({
-			"--mod-popover-width": "0px",
-			"--mod-popover-height": "0px",
-			"--mod-popover-wrapper-spacing": "0px",
-		})}>
+		<div
+			class="spectrum-CoachMark-header"
+			style=${styleMap({
+				"--mod-popover-width": "0px",
+				"--mod-popover-height": "0px",
+				"--mod-popover-wrapper-spacing": "0px",
+			})}
+		>
 			<div class="spectrum-CoachMark-title">${title}</div>
-			${when(
-				hasActionMenu,
-				() => ActionMenu(
+			${when(hasActionMenu, () =>
+				ActionMenu(
 					{
 						isOpen,
 						position: "bottom-start",
-						iconName: "More",
-						size: scale === "large" ? "s" : "m",
-						customClasses: [
-							`${rootClass}-action-menu`
-						],
-						items: [
-							{
-								label: "Skip tour",
-							},
-							{
-								label: "Reset tour",
-							},
-						],
+						triggerArgs: {
+							iconName: "More",
+							size: scale === "large" ? "s" : "m",
+							label: "More actions",
+							hideLabel: true,
+						},
+						customClasses: [`${rootClass}-action-menu`],
+						menuArgs: {
+							size: scale === "large" ? "s" : "m",
+							items: [
+								{
+									label: "Skip tour",
+								},
+								{
+									label: "Reset tour",
+								},
+							],
+						},
 					},
 					context,
 				),
 			)}
 		</div>
-		<div class="spectrum-CoachMark-content">
-			${content}
-		</div>
+		<div class="spectrum-CoachMark-content">${content}</div>
 		<div class="${rootClass}-footer">
 			${when(
 				hasPagination,
@@ -131,12 +138,9 @@ export const CoachContainer = (
 export const Template = (args, context) => {
 	return Popover(
 		{
-			customWrapperClasses: [
-				args.rootClass,
-				...args?.customClasses ?? []
-			],
+			customWrapperClasses: [args.rootClass, ...(args?.customClasses ?? [])],
 			customStyles: {
-				...args?.customStyles ?? {},
+				...(args?.customStyles ?? {}),
 				"inline-size": "var(--spectrum-coach-mark-width)",
 			},
 			customClasses: [`${args.rootClass}-popover`],
@@ -172,7 +176,7 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 						...args,
 						hasImage: false,
 						hasActionMenu: true,
-						isOpen: true
+						isOpen: true,
 					},
 					context,
 				),
@@ -200,8 +204,8 @@ export const CoachMarkMediaOptionsTemplate = (args, context) =>
 						imageIsFixedHeight: true,
 						imageSource: "example-card-portrait.png",
 						customStyles: {
-							"height": "315px"
-						}
+							height: "315px",
+						},
 					},
 					context,
 				),
@@ -214,8 +218,8 @@ export const CoachMarkMediaOptionsTemplate = (args, context) =>
 						...args,
 						imageIsFixedHeight: false,
 						customStyles: {
-							"height": "700px"
-						}
+							height: "700px",
+						},
 					},
 					context,
 				),
