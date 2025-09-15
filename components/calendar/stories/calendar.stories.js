@@ -115,6 +115,10 @@ export default {
 				...(ActionButtonStories.parameters.actions.handles ?? [])
 			],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=34191-21153",
+		},
 		packageJson,
 		metadata,
 		status: {
