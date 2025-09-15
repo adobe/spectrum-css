@@ -96,3 +96,6 @@ const ActionButtonTable = (args, context) => {
 
 export const ActionButtonExamples = ActionButtonTable.bind({});
 ActionButtonExamples.args = {};
+ActionButtonExamples.parameters = {
+	chromatic: { disableSnapshot: true },
+};

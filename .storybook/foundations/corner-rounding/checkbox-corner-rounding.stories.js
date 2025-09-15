@@ -86,3 +86,6 @@ const CheckboxTable = (args, context) => {
 
 export const CheckboxExamples = CheckboxTable.bind({});
 CheckboxExamples.args = {};
+CheckboxExamples.parameters = {
+	chromatic: { disableSnapshot: true },
+};

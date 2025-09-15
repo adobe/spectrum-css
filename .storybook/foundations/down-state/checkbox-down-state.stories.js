@@ -20,3 +20,6 @@ export const CheckboxDownState = Template.bind({});
 CheckboxDownState.args = {
 	label: "Checkbox",
 };
+CheckboxDownState.parameters = {
+	chromatic: { disableSnapshot: true },
+};

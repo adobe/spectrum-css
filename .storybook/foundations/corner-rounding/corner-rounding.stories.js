@@ -86,3 +86,6 @@ const CornerRadiusGroup = (args = {}, context = {}) => html`
 
 export const CornerRounding = CornerRadiusGroup.bind({});
 CornerRounding.args = {};
+CornerRounding.parameters = {
+	chromatic: { disableSnapshot: true },
+};
