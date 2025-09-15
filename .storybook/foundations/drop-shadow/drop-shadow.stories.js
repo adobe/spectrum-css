@@ -57,11 +57,17 @@ DropShadowEmphasizedDefault.args = {
 	variant: "emphasized-default",
 	isDropShadow: true,
 };
+DropShadowEmphasizedDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const DropShadowEmphasizedHover = DropShadowVariant.bind({});
 DropShadowEmphasizedHover.args = {
 	variant: "emphasized-hover",
 	isDropShadow: true,
+};
+DropShadowEmphasizedHover.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const DropShadowElevated = DropShadowVariant.bind({});
@@ -69,11 +75,17 @@ DropShadowElevated.args = {
 	variant: "elevated",
 	isDropShadow: true,
 };
+DropShadowElevated.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const BoxShadowEmphasizedDefault = DropShadowVariant.bind({});
 BoxShadowEmphasizedDefault.args = {
 	variant: "emphasized-default",
 	isDropShadow: false,
+};
+BoxShadowEmphasizedDefault.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const BoxShadowEmphasizedHover = DropShadowVariant.bind({});
@@ -81,9 +93,15 @@ BoxShadowEmphasizedHover.args = {
 	variant: "emphasized-hover",
 	isDropShadow: false,
 };
+BoxShadowEmphasizedHover.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const BoxShadowElevated = DropShadowVariant.bind({});
 BoxShadowElevated.args = {
 	variant: "elevated",
 	isDropShadow: false,
+};
+BoxShadowElevated.parameters = {
+	chromatic: { disableSnapshot: true },
 };

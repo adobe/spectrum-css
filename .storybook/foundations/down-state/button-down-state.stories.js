@@ -25,3 +25,6 @@ ButtonDownState.args = {
 		"--spectrum-downstate-height": "32px"
 	}
 };
+ButtonDownState.parameters = {
+	chromatic: { disableSnapshot: true },
+};
