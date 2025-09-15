@@ -5,7 +5,6 @@
 ### Major Changes
 
 - [#3682](https://github.com/adobe/spectrum-css/pull/3682) [`6d53893`](https://github.com/adobe/spectrum-css/commit/6d5389364504bc8373212276651055aa6c51bb76) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Tag now uses Spectrum 2 tokens and specifications:
-
   - The invalid variant has been removed, tag errors are now displayed with help text within the tag group only.
   - Borders remain in high contrast but are otherwise transparent.
   - Thumbnail has been added as a visual option.
@@ -17,7 +16,6 @@
   - Emphasized tags have accent coloring only when they are selected.
 
   Changed mods:
-
   - "--mod-tag-avatar-spacing-inline-end" --> "--mod-tag-visual-spacing-inline-end",
   - "--mod-tag-icon-spacing-inline-end" --> "--mod-tag-visual-spacing-inline-end",
   - "--mod-tag-spacing-inline-start" --> "--mod-tag-label-spacing-inline",
@@ -26,7 +24,6 @@
   - "--mod-tag-clear-button-spacing-inline-end" --> "--mod-tag-edge-to-clear-icon"
 
   Added mods:
-
   - "--mod-tag-avatar-size",
   - "--mod-tag-clear-button-size",
   - "--mod-tag-label-font-family",
@@ -38,7 +35,6 @@
   - "--mod-tag-visual-spacing-inline-start"
 
   Removed mods:
-
   - "--mod-tag-background-color-invalid-selected",
   - "--mod-tag-background-color-invalid-selected-active",
   - "--mod-tag-background-color-invalid-selected-focus",
@@ -78,6 +74,14 @@
 - Updated dependencies [[`a25e0a9`](https://github.com/adobe/spectrum-css/commit/a25e0a99e5a4736ab4e607e00739343101a2633b)]:
   - @spectrum-css/icon@10.0.0-next.0
   - @spectrum-css/clearbutton@8.0.0-next.0
+
+## 10.2.0
+
+### Minor Changes
+
+📝 [#4218](https://github.com/adobe/spectrum-css/pull/4218) [`2df53f8`](https://github.com/adobe/spectrum-css/commit/2df53f8b9ef6d6a031ca99726aa7f0475443ca03) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Ensure accurate exports are present for each component. Specifically, adding `themes/*` assets where present and removing`index-*.css` exports where those assets do not exist.
 
 ## 10.1.0
 

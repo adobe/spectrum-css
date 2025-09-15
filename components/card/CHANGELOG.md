@@ -79,6 +79,22 @@ Removed the quiet variant which is no longer supported in Spectrum 2.
   - @spectrum-css/actionbutton@8.0.0-next.0
   - @spectrum-css/checkbox@11.0.0-next.0
 
+## 11.2.0
+
+### Minor Changes
+
+📝 [#4218](https://github.com/adobe/spectrum-css/pull/4218) [`2df53f8`](https://github.com/adobe/spectrum-css/commit/2df53f8b9ef6d6a031ca99726aa7f0475443ca03) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Ensure accurate exports are present for each component. Specifically, adding `themes/*` assets where present and removing`index-*.css` exports where those assets do not exist.
+
+## 11.1.2
+
+### Patch Changes
+
+📝 [#4137](https://github.com/adobe/spectrum-css/pull/4137) [`b7e67ba`](https://github.com/adobe/spectrum-css/commit/b7e67ba3559d62949deb0add211542a8dd02335a) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)!
+
+The property `block-size: 100%` had been removed accidentally from `.spectrum-Card–gallery` and `.spectrum-Card–quiet`, and put on the `.spectrum-Card` parent card. This patch correctly reapplies `block-size: 100%` to the gallery and quiet variants.
+
 ## 11.1.1
 
 ### Patch Changes

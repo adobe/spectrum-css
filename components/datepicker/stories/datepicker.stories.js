@@ -70,6 +70,10 @@ export default {
 				...(CalendarStories.parameters.actions.handles ?? [])
 			],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2---Desktop?node-id=112153-679",
+		},
 		packageJson,
 		metadata,
 		status: {

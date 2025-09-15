@@ -39,6 +39,14 @@ _No visual or functional changes to components._
   - @spectrum-css/button@15.0.0-next.0
   - @spectrum-css/closebutton@7.0.0-next.0
 
+## 3.2.0
+
+### Minor Changes
+
+📝 [#4218](https://github.com/adobe/spectrum-css/pull/4218) [`2df53f8`](https://github.com/adobe/spectrum-css/commit/2df53f8b9ef6d6a031ca99726aa7f0475443ca03) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+Ensure accurate exports are present for each component. Specifically, adding `themes/*` assets where present and removing`index-*.css` exports where those assets do not exist.
+
 ## 3.1.2
 
 ### Patch Changes
