@@ -4365,6 +4365,9 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.2"
   peerDependencies:
     "@spectrum-css/tokens": ">=16.0.1"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 

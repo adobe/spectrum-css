@@ -1,16 +1,7 @@
 module.exports = {
-	"*.css": [
-		"stylelint --fix --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables",
-		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
-	],
-	"*.{js,json},!package.json": [
-		"eslint --fix --cache --no-error-on-unmatched-pattern"
-	],
-	"*.{md,mdx}": [
-		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
-		"markdownlint --config .markdownlint.json --fix"
-	],
 	"package.json": (files) => ([
+		/** why build? constraints checks for compiled dist output to validate exports */
+		"cross-env NODE_ENV=production yarn build",
 		"yarn constraints --fix",
 		"yarn install --refresh-lockfile",
 		`eslint --fix --cache --no-error-on-unmatched-pattern ${files.join(" ")}`,
@@ -26,5 +17,16 @@ module.exports = {
 	},
 	".github/renovate.json": () => ([
 		"yarn dlx --package renovate -- renovate-config-validator"
-	])
+	]),
+	"!(*dist/**).css": [
+		"stylelint --fix --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables",
+		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
+	],
+	"!(*metadata|package|renovate).{cjs,js,json}": [
+		"eslint --fix --cache --no-error-on-unmatched-pattern"
+	],
+	"*.md": [
+		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write --config .prettierrc",
+		"markdownlint --config .markdownlint.json --fix"
+	],
 };
