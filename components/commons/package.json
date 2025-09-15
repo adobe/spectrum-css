@@ -15,10 +15,9 @@
 	},
 	"exports": {
 		".": "./index.css",
-		"./*.css": "./*.css",
-		"./CHANGELOG.md": "./CHANGELOG.md",
-		"./README.md": "./README.md",
+		"./*.md": "./*.md",
 		"./package.json": "./package.json",
+		"./*.css": "./*.css",
 		"./stories/*": "./stories/*"
 	},
 	"main": "index.css",
@@ -29,6 +28,11 @@
 	"peerDependencies": {
 		"@spectrum-css/tokens": ">=16.0.1"
 	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "16.0.2"
 	},
@@ -37,7 +41,8 @@
 		"spectrum",
 		"spectrum-css",
 		"adobe",
-		"adobe-spectrum"
+		"adobe-spectrum",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"

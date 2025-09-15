@@ -16,11 +16,10 @@
 	"exports": {
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
+		"./package.json": "./package.json",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
-		"./package.json": "./package.json",
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",

@@ -14,8 +14,7 @@
 	},
 	"scripts": {
 		"build": "yarn builder tag:component,ui-icons",
-		"build:docs": "yarn build:preview --output-dir ../dist/",
-		"build:preview": "yarn report && nx build storybook",
+		"build:docs": "nx build storybook --output-dir ../dist/",
 		"builder": "nx run-many --target build report --projects",
 		"bundle": "nx build bundle",
 		"changeset": "changeset",

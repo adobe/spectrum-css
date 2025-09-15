@@ -3,6 +3,8 @@ const { defineConfig } = require("@yarnpkg/types");
 
 const fg = require("fast-glob");
 const semver = require("semver");
+const { existsSync } = require("fs");
+const { join } = require("path");
 
 /**
  * The workspace object used in the constraints function
@@ -19,7 +21,6 @@ module.exports = defineConfig({
 		const components = fg.sync("components/*", {
 			cwd: __dirname,
 			onlyDirectories: true,
-			ignore: ["components/commons"],
 		});
 
 		/**
@@ -126,23 +127,49 @@ module.exports = defineConfig({
 		 * @returns {void}
 		 */
 		function validateComponentPackageJson(workspace, folderName) {
+			// Check the folder to see if there's a themes directory
+			const hasThemes = existsSync(join(workspace.cwd, "themes"));
+			const hasDist = existsSync(join(workspace.cwd, "dist"));
+			const hasIndexCSS = existsSync(join(workspace.cwd, "index.css"));
+			const hasOtherCSS = fg.sync(["*.css", "!index.css"], { cwd: workspace.cwd, onlyFiles: true }).length > 0;
+
 			// Only update the homepage if it does not already exist
 			if (!workspace.manifest.homepage) {
 				workspace.set("homepage", `https://opensource.adobe.com/spectrum-css/?path=/docs/components-${folderName}--docs`);
 			}
 
 			workspace.set("publishConfig.access", "public");
-			workspace.set("keywords", keywords(["component", "css"]));
-			workspace.set("main", "dist/index.css");
+
+			if (hasDist) workspace.set("keywords", keywords(["component", "css"]));
+			else if (hasOtherCSS) workspace.set("keywords", keywords(["css"]));
+			else workspace.set("keywords", keywords());
+
+			if (hasDist) workspace.set("main", "dist/index.css");
+			else if (hasIndexCSS) workspace.set("main", "index.css");
+			else workspace.set("main", "README.md");
+
 			workspace.set("exports", {
-				".": "./dist/index.css",
+				...(hasDist ? {
+					".": "./dist/index.css",
+				} : hasIndexCSS ? {
+					".": "./index.css",
+				} : {}),
 				"./*.md": "./*.md",
-				"./dist/*": "./dist/*",
-				"./index-*.css": "./dist/index-*.css",
-				"./index.css": "./dist/index.css",
-				"./metadata.json": "./dist/metadata.json",
 				"./package.json": "./package.json",
-				"./stories/*": "./stories/*"
+				...(hasDist ? {
+					"./dist/*": "./dist/*",
+					"./index.css": "./dist/index.css",
+					...(hasDist && hasThemes ? {
+						"./index-*.css": "./dist/index-*.css",
+					} : {}),
+					"./metadata.json": "./dist/metadata.json",
+				} : hasOtherCSS ? {
+					"./*.css": "./*.css",
+				} : {}),
+				...(hasDist && hasThemes ? {
+					"./themes/*": "./dist/themes/*"
+				} : {}),
+				"./stories/*": "./stories/*",
 			});
 		}
 

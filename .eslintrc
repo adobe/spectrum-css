@@ -138,6 +138,10 @@
 						"order": { "type": "asc" }
 					},
 					{
+						"pathPattern": "^exports$",
+						"order": ["."]
+					},
+					{
 						"pathPattern": ".*",
 						"order": { "type": "asc" }
 					}
