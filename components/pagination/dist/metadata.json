@@ -12,27 +12,20 @@
     ".spectrum-Pagination-textfield",
     ".spectrum-Pagination:dir(rtl)"
   ],
-  "modifiers": [
-    "--mod-pagination-counter-color",
-    "--mod-pagination-counter-font-size",
-    "--mod-pagination-counter-line-height",
-    "--mod-pagination-page-button-inline-spacing",
-    "--mod-pagination-textfield-width"
-  ],
   "component": [
     "--spectrum-pagination-counter-color",
     "--spectrum-pagination-counter-font-size",
     "--spectrum-pagination-counter-inline-spacing",
-    "--spectrum-pagination-counter-line-height",
-    "--spectrum-pagination-item-inline-spacing",
-    "--spectrum-pagination-textfield-width"
+    "--spectrum-pagination-counter-line-height"
   ],
   "global": [
     "--spectrum-font-size-100",
     "--spectrum-line-height-100",
     "--spectrum-logical-rotation",
-    "--spectrum-neutral-subdued-content-color-default"
+    "--spectrum-neutral-subdued-content-color-default",
+    "--spectrum-pagination-item-inline-spacing",
+    "--spectrum-pagination-textfield-width"
   ],
-  "passthroughs": ["--mod-textfield-min-width", "--mod-textfield-width"],
+  "passthroughs": [],
   "high-contrast": []
 }

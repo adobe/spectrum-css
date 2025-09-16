@@ -19,8 +19,6 @@ const path = require("path");
 
 const fg = require("fast-glob");
 const { rimrafSync } = require("rimraf");
-const postcss = require("postcss");
-const valuesParser = require("postcss-values-parser");
 
 /**
  * A source of truth for commonly used directories
@@ -156,54 +154,6 @@ function validateComponentName(componentName) {
 	}
 
 	return true;
-}
-
-/**
- * This regex will find all the custom properties that start with --mod-
- * and are defined inside a var() function. The last capture group will
- * ignore any mod properties that are followed by a colon, to exclude
- * sub-component passthrough properties that should not be listed as mods.
- * @param {string} content
- * @param {{ [string]: (string)[] }} [meta={}]
- * @returns { [string]: string[] }
- */
-function extractProperties(content, meta = {}) {
-	if (!content) return new Set();
-
-	const found = {};
-
-	// Process CSS content through the valuesParser an postcss to capture
-	// all the custom properties defined and used in the CSS
-	postcss.parse(content).walkDecls((decl) => {
-		Object.entries(meta).forEach(([key, values]) => {
-			found[key] = found[key] ?? new Set();
-
-			values.forEach((value) => {
-				if (decl.prop.startsWith("--") && decl.prop.startsWith(`--${value}-`)) {
-					found[key].add(decl.prop);
-				}
-			});
-
-			// Parse the value of the declaration to extract custom properties
-			valuesParser.parse(decl.value).walk((node) => {
-				if (node.type !== "word" || !node.isVariable) return;
-
-				// Extract the custom property name from the var() function
-				values.forEach((value) => {
-					if (node.value.startsWith(`--${value}-`)) {
-						found[key].add(node.value);
-					}
-				});
-			});
-		});
-	});
-
-	// Sort the custom properties alphabetically and return them as an array
-	Object.keys(found).forEach((key) => {
-		found[key] = [...found[key]].sort();
-	});
-
-	return found;
 }
 
 /**
@@ -370,7 +320,6 @@ module.exports = {
 	copy,
 	dirs,
 	log,
-	extractProperties,
 	fetchContent,
 	cleanAndMkdir,
 	getAllComponentNames,

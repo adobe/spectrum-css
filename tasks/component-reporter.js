@@ -20,12 +20,12 @@ const yargs = require("yargs");
 
 const postcss = require("postcss");
 const prettier = require("prettier");
+const valuesParser = require("postcss-values-parser");
 
 require("colors");
 
 const {
 	dirs,
-	extractProperties,
 	getAllComponentNames,
 	getPackageFromPath,
 	writeAndReport,
@@ -33,8 +33,65 @@ const {
 
 const { processCSS } = require("./component-builder.js");
 
+
 /**
- * Extract custom property modifers to report
+ * This regex will find all the custom properties that start with --mod-
+ * and are defined inside a var() function. The last capture group will
+ * ignore any mod properties that are followed by a colon, to exclude
+ * sub-component passthrough properties that should not be listed as mods.
+ * @param {string} content
+ * @param {{ [string]: (string)[] }} [meta={}]
+ * @returns { [string]: string[] }
+ */
+function extractProperties(content, meta = {}) {
+	if (!content) return;
+
+	const found = {};
+
+	// Process CSS content through the valuesParser an postcss to capture
+	// all the custom properties defined and used in the CSS
+	postcss.parse(content).walkDecls((decl) => {
+		Object.entries(meta).forEach(([key, values]) => {
+			found[key] = found[key] ?? new Map([
+				["used", new Set()],
+				["defined", new Set()],
+			]);
+
+			values.forEach((value) => {
+				if (decl.prop.startsWith("--") && decl.prop.startsWith(`--${value}-`)) {
+					found[key].get("defined").add(decl.prop);
+				}
+			});
+
+			// Parse the value of the declaration to extract custom properties
+			valuesParser.parse(decl.value).walk((node) => {
+				if (node.type !== "word" || !node.isVariable) return;
+
+				// Extract the custom property name from the var() function
+				values.forEach((value) => {
+					if (node.value.startsWith(`--${value}-`)) {
+						found[key].get("used").add(node.value);
+					}
+				});
+			});
+		});
+	});
+
+	// Sort the custom properties alphabetically and return them as a map
+	Object.entries(found).forEach(([key, values]) => {
+		found[key] = new Map([
+			["used", [...values.get("used").values()].sort()],
+			["defined", [...values.get("defined").values()].sort()],
+		]);
+	});
+
+	console.log(Object.keys(found));
+
+	return found;
+}
+
+/**
+ * Extract custom properties to report
  * @param {string} sourcePath
  * @param {object} [options={}]
  * @param {string} [options.componentName] - The name of the component being built
@@ -86,7 +143,11 @@ async function extractModifiers(
 
 	// Iterate over the spectrum values and see if the 2nd part of the variable
 	// name matches the component name
-	const spectrum = meta.spectrum ?? [];
+	const used = meta.spectrum.get("used") ?? [];
+	const defined = meta.spectrum.get("defined") ?? [];
+
+	// Remove the generic spectrum values from the meta object
+	delete meta.spectrum;
 
 	function isComponentVar(value, componentName) {
 		if (!componentName) return value;
@@ -103,31 +164,32 @@ async function extractModifiers(
 		return;
 	}
 
-	const componentLevel = new Set(spectrum.map((value) => isComponentVar(value, componentName)).filter(Boolean));
+	meta.component = [...new Set(defined.map((value) => isComponentVar(value, componentName)).filter(Boolean))].sort();
 
 	// Filter out the component level values from the global spectrum values
-	meta.global = spectrum.filter((value) => !componentLevel.has(value));
+	meta.global = used.filter((value) => !meta.component.includes(value)).sort();
 
-	// Filter out mods that reference other components --mod-<componentName>-*
-	meta.passthroughs = meta.modifiers.filter((mod) => {
+	if (!Object.keys(meta).includes("high-contrast")) {
+		meta["high-contrast"] = new Map(["used", [], "defined", []]);
+	}
+
+	// Filter out variables that reference other components --spectrum-<componentName>-*
+	meta.passthroughs = [...meta["high-contrast"].get("defined"), ...defined].filter((v) => {
 		if (!componentName) return false;
 
-		if (isComponentVar(mod, componentName)) return false;
+		if (isComponentVar(v, componentName)) return false;
 
 		const otherComponents = components.filter((component) => component !== componentName);
 
-		// If the mod doesn't reference any other components, it's not a passthrough, maybe it's a global or deprecated mod?
-		if (!otherComponents.some((component) => isComponentVar(mod, component))) return false;
+		// If the variable doesn't reference any other components, it's not a passthrough
+		if (!otherComponents.some((component) => isComponentVar(v, component))) return false;
 
-		// Remove the mod from the modifiers list if it's a passthrough
-		meta.modifiers = meta.modifiers.filter((m) => m !== mod);
+		// Remove the variable from the global list if it's a passthrough
+		meta.global = meta.global.filter((m) => m !== v).sort();
 		return true;
 	});
 
-	// Remove the spectrum values from the meta object
-	delete meta.spectrum;
-
-	meta.component = [...componentLevel].sort();
+	meta["high-contrast"] = meta["high-contrast"].get("used");
 
 	return meta;
 }
@@ -188,7 +250,6 @@ async function main({
 			componentName,
 			baseSelectors: [".spectrum"],
 			dataModel: {
-				modifiers: ["mod"],
 				spectrum: ["spectrum"],
 				"high-contrast": ["highcontrast"],
 			},
@@ -201,7 +262,6 @@ async function main({
 				JSON.stringify({
 					sourceFile: meta.sourceFile,
 					selectors: meta.selectors,
-					modifiers: meta.modifiers,
 					component: meta.component,
 					global: meta.global,
 					passthroughs: meta.passthroughs,

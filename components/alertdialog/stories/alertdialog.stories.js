@@ -61,6 +61,11 @@ export default {
 	},
 	parameters: {
 		layout: "fullscreen",
+		docs: {
+			story: {
+				height: "400px",
+			},
+		},
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
 		},
@@ -177,6 +182,11 @@ Overflow.args = {
 };
 Overflow.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "550px",
+		},
+	},
 };
 
 /**

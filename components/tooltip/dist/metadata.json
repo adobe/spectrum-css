@@ -249,32 +249,6 @@
     ".u-tooltip-showOnHover:hover .spectrum-Tooltip--top-right",
     ".u-tooltip-showOnHover:hover .spectrum-Tooltip--top-start"
   ],
-  "modifiers": [
-    "--mod-overlay-animation-duration",
-    "--mod-overlay-animation-duration-opened",
-    "--mod-tooltip-animation-distance",
-    "--mod-tooltip-background-color-default",
-    "--mod-tooltip-background-color-informative",
-    "--mod-tooltip-background-color-negative",
-    "--mod-tooltip-border-radius",
-    "--mod-tooltip-cjk-line-height",
-    "--mod-tooltip-content-color",
-    "--mod-tooltip-font-size",
-    "--mod-tooltip-font-weight",
-    "--mod-tooltip-height",
-    "--mod-tooltip-line-height",
-    "--mod-tooltip-margin",
-    "--mod-tooltip-max-inline-size",
-    "--mod-tooltip-pointer-corner-spacing",
-    "--mod-tooltip-spacing-block-end",
-    "--mod-tooltip-spacing-block-start",
-    "--mod-tooltip-spacing-inline",
-    "--mod-tooltip-tip-antialiasing-inset",
-    "--mod-tooltip-tip-block-size",
-    "--mod-tooltip-tip-corner-radius",
-    "--mod-tooltip-tip-height-percentage",
-    "--mod-tooltip-tip-square-size"
-  ],
   "component": [
     "--spectrum-tooltip-animation-distance",
     "--spectrum-tooltip-animation-duration",
@@ -290,17 +264,13 @@
     "--spectrum-tooltip-line-height",
     "--spectrum-tooltip-margin",
     "--spectrum-tooltip-max-inline-size",
-    "--spectrum-tooltip-maximum-width",
     "--spectrum-tooltip-pointer-corner-spacing",
     "--spectrum-tooltip-spacing-block-end",
     "--spectrum-tooltip-spacing-block-start",
     "--spectrum-tooltip-spacing-inline",
     "--spectrum-tooltip-tip-antialiasing-inset",
     "--spectrum-tooltip-tip-block-size",
-    "--spectrum-tooltip-tip-corner-radius",
-    "--spectrum-tooltip-tip-height",
-    "--spectrum-tooltip-tip-height-percentage",
-    "--spectrum-tooltip-tip-square-size"
+    "--spectrum-tooltip-tip-height-percentage"
   ],
   "global": [
     "--spectrum-animation-duration-0",
@@ -317,7 +287,11 @@
     "--spectrum-negative-background-color-default",
     "--spectrum-neutral-background-color-default",
     "--spectrum-regular-font-weight",
-    "--spectrum-spacing-75"
+    "--spectrum-spacing-75",
+    "--spectrum-tooltip-maximum-width",
+    "--spectrum-tooltip-tip-corner-radius",
+    "--spectrum-tooltip-tip-height",
+    "--spectrum-tooltip-tip-square-size"
   ],
   "passthroughs": [],
   "high-contrast": [

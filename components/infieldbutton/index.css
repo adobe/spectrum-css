@@ -64,7 +64,7 @@
 		--spectrum-infield-button-edge-to-fill: var(--spectrum-in-field-button-edge-to-fill-large);
 		--spectrum-infield-button-border-radius: var(--spectrum-corner-radius-small-size-large);
 		--spectrum-infield-button-field-edge-to-disclosure-icon: var(--spectrum-field-edge-to-disclosure-icon-200);
-		--spectrum-infield-button-inline-edge-to-fill: var(--spectrum-in-field-button-side-edge-to-fill-large);
+		--spectrum-infield-button-inline-edge-to-fill: 4px;
 		--spectrum-infield-button-inline-field-edge-to-icon: var(--spectrum-field-edge-to-icon-200);
 	}
 
@@ -74,7 +74,7 @@
 		--spectrum-infield-button-edge-to-fill: var(--spectrum-in-field-button-edge-to-fill-extra-large);
 		--spectrum-infield-button-border-radius: var(--spectrum-corner-radius-small-size-extra-large);
 		--spectrum-infield-button-field-edge-to-disclosure-icon: var(--spectrum-field-edge-to-disclosure-icon-300);
-		--spectrum-infield-button-inline-edge-to-fill: var(--spectrum-in-field-button-side-edge-to-fill-extra-large);
+		--spectrum-infield-button-inline-edge-to-fill: 4px;
 		--spectrum-infield-button-inline-field-edge-to-icon: var(--spectrum-field-edge-to-icon-300);
 	}
 
