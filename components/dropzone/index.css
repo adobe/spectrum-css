@@ -12,6 +12,9 @@
  */
 
 .spectrum-DropZone {
+	/** default light colors */
+	--spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-800-rgb); /* var(--spectrum-accent-color-900); */
+
 	/* Sizing */
 	--spectrum-drop-zone-padding: var(--spectrum-spacing-400);
 	--spectrum-drop-zone-border-width: var(--spectrum-border-width-200);
@@ -51,6 +54,12 @@
 
 	/* Adjusts height of filled & dragged dropzone state */
 	--mod-drop-zone-content-height: 280px;
+}
+
+@media (prefers-color-scheme: dark) {
+	.spectrum-DropZone {
+		--spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900); */
+	}
 }
 
 .spectrum-DropZone {

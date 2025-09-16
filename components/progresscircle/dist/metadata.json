@@ -12,27 +12,20 @@
     ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-innerCircle",
     ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-outerCircle"
   ],
-  "modifiers": [
-    "--mod-progress-circle-fill-border-color",
-    "--mod-progress-circle-position",
-    "--mod-progress-circle-size",
-    "--mod-progress-circle-thickness",
-    "--mod-progress-circle-track-border-color"
-  ],
   "component": [
     "--spectrum-progress-circle-fill-border-color",
     "--spectrum-progress-circle-size",
-    "--spectrum-progress-circle-size-large",
-    "--spectrum-progress-circle-size-medium",
-    "--spectrum-progress-circle-size-small",
     "--spectrum-progress-circle-thickness",
-    "--spectrum-progress-circle-thickness-large",
-    "--spectrum-progress-circle-thickness-medium",
-    "--spectrum-progress-circle-thickness-small",
     "--spectrum-progress-circle-track-border-color"
   ],
   "global": [
     "--spectrum-accent-content-color-default",
+    "--spectrum-progress-circle-size-large",
+    "--spectrum-progress-circle-size-medium",
+    "--spectrum-progress-circle-size-small",
+    "--spectrum-progress-circle-thickness-large",
+    "--spectrum-progress-circle-thickness-medium",
+    "--spectrum-progress-circle-thickness-small",
     "--spectrum-static-black-track-color",
     "--spectrum-static-black-track-indicator-color",
     "--spectrum-static-white-track-color",

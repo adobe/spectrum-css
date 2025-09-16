@@ -17,35 +17,7 @@
     ".spectrum-ActionBar:lang(ko)",
     ".spectrum-ActionBar:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-actionbar-close-button-to-counter",
-    "--mod-actionbar-corner-radius",
-    "--mod-actionbar-height",
-    "--mod-actionbar-item-counter-color",
-    "--mod-actionbar-item-counter-line-height-cjk",
-    "--mod-actionbar-minimum-width",
-    "--mod-actionbar-popover-background-color",
-    "--mod-actionbar-popover-border-color",
-    "--mod-actionbar-shadow-blur",
-    "--mod-actionbar-shadow-color",
-    "--mod-actionbar-shadow-horizontal",
-    "--mod-actionbar-shadow-vertical",
-    "--mod-actionbar-spacing-action-group-edge",
-    "--mod-actionbar-spacing-bottom-area",
-    "--mod-actionbar-spacing-label-to-action-group",
-    "--mod-actionbar-spacing-outer-edge",
-    "--mod-actionbar-spacing-top-area"
-  ],
   "component": [
-    "--spectrum-action-bar-border-color",
-    "--spectrum-action-bar-bottom-to-content-area",
-    "--spectrum-action-bar-close-button-to-counter",
-    "--spectrum-action-bar-counter-font-size",
-    "--spectrum-action-bar-edge-to-content-area",
-    "--spectrum-action-bar-height",
-    "--spectrum-action-bar-label-to-action-group-area",
-    "--spectrum-action-bar-minimum-width",
-    "--spectrum-action-bar-top-to-content-area",
     "--spectrum-actionbar-close-button-to-counter",
     "--spectrum-actionbar-corner-radius",
     "--spectrum-actionbar-height",
@@ -66,6 +38,15 @@
     "--spectrum-actionbar-spacing-top-area"
   ],
   "global": [
+    "--spectrum-action-bar-border-color",
+    "--spectrum-action-bar-bottom-to-content-area",
+    "--spectrum-action-bar-close-button-to-counter",
+    "--spectrum-action-bar-counter-font-size",
+    "--spectrum-action-bar-edge-to-content-area",
+    "--spectrum-action-bar-height",
+    "--spectrum-action-bar-label-to-action-group-area",
+    "--spectrum-action-bar-minimum-width",
+    "--spectrum-action-bar-top-to-content-area",
     "--spectrum-background-elevated-color",
     "--spectrum-cjk-line-height-100",
     "--spectrum-corner-radius-medium-size-extra-large",
@@ -78,9 +59,6 @@
     "--spectrum-neutral-content-color-default",
     "--spectrum-spacing-300"
   ],
-  "passthroughs": [
-    "--mod-fieldlabel-font-size",
-    "--mod-fieldlabel-line-height"
-  ],
+  "passthroughs": [],
   "high-contrast": ["--highcontrast-actionbar-popover-border-color"]
 }

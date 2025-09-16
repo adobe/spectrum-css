@@ -28,16 +28,6 @@
     ".spectrum-ActionGroup--vertical",
     ".spectrum-ActionGroup:not(.spectrum-ActionGroup--vertical, .spectrum-ActionGroup--compact) .spectrum-ActionGroup-item"
   ],
-  "modifiers": [
-    "--mod-actiongroup-border-radius",
-    "--mod-actiongroup-border-radius-reset",
-    "--mod-actiongroup-button-spacing-reset",
-    "--mod-actiongroup-gap-size-compact",
-    "--mod-actiongroup-horizontal-spacing-compact",
-    "--mod-actiongroup-horizontal-spacing-regular",
-    "--mod-actiongroup-vertical-spacing-compact",
-    "--mod-actiongroup-vertical-spacing-regular"
-  ],
   "component": [
     "--spectrum-actiongroup-border-radius",
     "--spectrum-actiongroup-border-radius-reset",
@@ -53,6 +43,6 @@
     "--spectrum-spacing-100",
     "--spectrum-spacing-75"
   ],
-  "passthroughs": ["--mod-actionbutton-focus-indicator-border-radius"],
+  "passthroughs": [],
   "high-contrast": []
 }

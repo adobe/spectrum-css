@@ -60,7 +60,7 @@ Start by including the base set of variables:
 
 ```css
 /* Include tokens */
-@import "node_modules/@spectrum-css/tokens/dist/index.css";
+@import "node_modules/@spectrum-css/tokens/dist/css/index.css";
 
 @import "node_modules/@spectrum-css/page/dist/index.css";
 @import "node_modules/@spectrum-css/typography/dist/index.css";

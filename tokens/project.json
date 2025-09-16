@@ -2,28 +2,46 @@
 	"name": "tokens",
 	"tag": ["tokens"],
 	"namedInputs": {
-		"core": [
-			"{projectRoot}/custom/*.css"
+		"core": ["{projectRoot}/custom-tokens.json"],
+		"scripts": [
+			"{projectRoot}/style-dictionary.config.js",
+			"{projectRoot}/utilities/*.js"
 		],
-		"scripts": ["{projectRoot}/style-dictionary.config.js", "{projectRoot}/utilities/*.js"],
-		"tools": ["{projectRoot}/postcss.config.js", "{projectRoot}/tasks/token-rollup.js"]
+		"tools": ["{projectRoot}/postcss.config.js"]
 	},
 	"targets": {
 		"build": {
 			"cache": false,
-			"dependsOn": ["clean", "style-dictionary"],
+			"dependsOn": ["clean"],
 			"executor": "nx:run-commands",
-			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
+			"inputs": [
+				"core",
+				"tools",
+				{
+					"externalDependencies": [
+						"postcss",
+						"postcss-cli",
+						"prettier",
+						"@adobe/spectrum-tokens"
+					]
+				}
+			],
 			"options": {
 				"commands": [
-					"node --no-warnings ./tasks/token-rollup.js"
+					"style-dictionary build --config style-dictionary.config.js --verbose",
+					"postcss ./dist/css/index.css ./dist/css/mobile.css --replace",
+					"postcss ./dist/css/index.css ./dist/css/mobile.css --dir ./dist/css --ext min.css"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
 			},
 			"outputs": [
-				"{projectRoot}/dist/css/*-vars.css",
-				"{projectRoot}/dist/css/index.css"
+				"{projectRoot}/dist/css/index.css",
+				"{projectRoot}/dist/css/mobile.css",
+				"{projectRoot}/dist/css/index.min.css",
+				"{projectRoot}/dist/css/mobile.min.css",
+				"{projectRoot}/dist/json/tokens.json",
+				"{projectRoot}/dist/json/raw.json"
 			]
 		},
 		"clean": {
@@ -39,46 +57,22 @@
 			},
 			"outputs": []
 		},
-		"diff": {
+		"compare": {
 			"cache": true,
 			"executor": "nx:run-commands",
-			"inputs": [{ "externalDependencies": ["glob", "@adobe/token-diff-generator"] }],
+			"inputs": [
+				{ "externalDependencies": ["glob", "@adobe/token-diff-generator"] }
+			],
 			"options": {
 				"commands": [
 					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output {projectRoot}/dist/tokens-diff.md"
 				],
 				"forwardAllArgs": true,
-				"v1": "13.13.0",
-				"v2": "13.14.0"
+				"v1": "13.15.0"
 			},
-			"outputs": [
-				"{projectRoot}/dist/tokens-diff.md"
-			]
+			"outputs": ["{projectRoot}/dist/tokens-diff.md"]
 		},
 		"format": {},
-		"lint": {},
-		"style-dictionary": {
-			"dependsOn": ["clean"],
-			"executor": "nx:run-commands",
-			"inputs": [
-				"{projectRoot}/postcss.config.js",
-				"{projectRoot}/style-dictionary.config.js",
-				"{projectRoot}/utilities/style-dictionary.utils.js"
-			],
-			"options": {
-				"commands": [
-					"style-dictionary build --config style-dictionary.config.js"
-				],
-				"cwd": "{projectRoot}"
-			},
-			"outputs": [
-				"{projectRoot}/dist/css/global-vars.css",
-				"{projectRoot}/dist/css/light-vars.css",
-				"{projectRoot}/dist/css/dark-vars.css",
-				"{projectRoot}/dist/css/medium-vars.css",
-				"{projectRoot}/dist/css/large-vars.css",
-				"{projectRoot}/dist/json/tokens.json"
-			]
-		}
+		"lint": {}
 	}
 }

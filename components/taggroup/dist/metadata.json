@@ -17,18 +17,6 @@
     ".spectrum-TagGroup:lang(ko)",
     ".spectrum-TagGroup:lang(zh)"
   ],
-  "modifiers": [
-    "--mod-body-cjk-line-height",
-    "--mod-body-font-size",
-    "--mod-body-line-height",
-    "--mod-body-margin-end",
-    "--mod-body-margin-start",
-    "--mod-tag-group-block-spacing-label-to-tags",
-    "--mod-tag-group-block-tag-spacing",
-    "--mod-tag-group-inline-spacing-label-to-tags",
-    "--mod-tag-group-inline-tag-spacing",
-    "--mod-tag-group-spacing-help-text-to-tags"
-  ],
   "component": [
     "--spectrum-tag-group-block-spacing-label-to-tags",
     "--spectrum-tag-group-block-tag-spacing",

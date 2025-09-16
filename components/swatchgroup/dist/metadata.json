@@ -6,16 +6,13 @@
     ".spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeM, .spectrum-Swatch--sizeL)",
     ".spectrum-SwatchGroup--spacious:has(.spectrum-Swatch--sizeXS, .spectrum-Swatch--sizeS)"
   ],
-  "modifiers": ["--mod-swatchgroup-spacing"],
-  "component": [
-    "--spectrum-swatch-group-spacing-spacious",
-    "--spectrum-swatchgroup-spacing"
-  ],
+  "component": ["--spectrum-swatchgroup-spacing"],
   "global": [
     "--spectrum-spacing-100",
     "--spectrum-spacing-50",
-    "--spectrum-spacing-75"
+    "--spectrum-spacing-75",
+    "--spectrum-swatch-group-spacing-spacious"
   ],
-  "passthroughs": ["--mod-swatch-border-opacity"],
+  "passthroughs": [],
   "high-contrast": []
 }

@@ -1,59 +1,75 @@
-import { fetchDefinition, varToRef } from "./shared-logic.js";
+import { format as JSONSetsFormat } from "./json-sets-formatter.js";
 
 /**
- * Formats the data file for the given platform.
- * @type {import('style-dictionary/types').FormatFn} format
+ * @description Formats the JSON sets
+ * @type {import('style-dictionary/types').FormatFn}
  */
-export const format = ({ dictionary, platform }) => {
-	const { prefix } = platform;
+export const format = ({ dictionary, platform, file, options }) => {
+	const prefix = platform.prefix ? platform.prefix : false;
 	let result = {};
 
-	dictionary.allTokens.forEach((token) => {
-		if (!token) return;
+	const jsonSets = JSON.parse(
+		JSONSetsFormat({ dictionary, platform, file, options })
+	);
 
-		const values = fetchDefinition(token, { prefix });
-		if (!values || values.length === 0) return;
+	const convertRef = (ref) => {
+		return typeof ref === "string" ? ref.replace(/\{(.*?)\}/g, `var(--${prefix}-$1)`) : ref;
+	};
 
-		values.forEach(({ key, ...data }) => {
-			if (key.includes("android")) return;
-			result[key] = {
-				...(result[key] ?? {}),
-				...data,
-			};
-		});
-	});
+	const deconstructSets = (obj, scope = undefined) => {
+		let ret = obj;
+		Object.entries(obj.sets ?? {}).forEach(([context, data]) => {
+			if (context === "wireframe") return;
+			if (typeof scope !== "undefined" && scope !== context) return;
 
-	function resolveNestedRefs(value, { prefix, result } = {}) {
-		if (Object.keys(value).length < 3 && value.ref) {
-			const subKey = varToRef(value.ref, prefix);
-			let subValue = result[subKey];
-			if (subValue) {
-				if (Object.keys(subValue).length < 3 && subValue.ref && subValue.prop) {
-					subValue = resolveNestedRefs(subValue, { prefix, result });
+			delete data.uuid;
+
+			if (data.ref) {
+				data.ref = convertRef(data.ref);
+
+				if (String(data.ref) === String(data.value)) {
+					delete data.ref;
 				}
-
-				Object.entries(subValue).forEach(([k, v]) => {
-					if (k === "prop") return;
-					if (k === "ref") return;
-					value[k] = v;
-				});
 			}
+
+			if (data.sets) {
+				data = deconstructSets(data, context);
+
+				ret = {
+					...ret,
+					...data
+				};
+			}
+			else {
+				ret[context] = data;
+			}
+
+			delete ret.sets;
+		});
+
+		delete ret.uuid;
+		if (ret.ref) ret.ref = convertRef(ret.ref);
+
+		if (ret.ref === ret.value) {
+			delete ret.ref;
 		}
 
-		return value;
-	}
+		return ret;
+	};
 
-	/**
-	 * Sorts two arrays of [key, value] pairs lexicographically by the key.
-	 * @param {Array} a - The first array.
-	 * @param {Array} b - The second array.
-	 * @returns {number} The comparison result.
-	 */
-	const sortLexically = (a, b) => a[0].localeCompare(b[0]);
+	Object.keys(jsonSets).forEach((tokenName) => {
+		const tokenValue = jsonSets[tokenName];
+
+		// Add the property to the results object
+		result[tokenName] = {
+			prop: (prefix)? `--${prefix}-${tokenName}` : `--${tokenName}`,
+			...(deconstructSets(tokenValue) ?? {}),
+		};
+	});
 
 	// Sort the result alphabetically by keys
-	result = Object.entries(result).sort(sortLexically).reduce((acc, [key, value]) => {
-		acc[key] = resolveNestedRefs(value, { prefix, result });
+	result = Object.entries(result).sort().reduce((acc, [key, value]) => {
+		acc[key] = value;
 		return acc;
 	}, {});
 
@@ -62,6 +78,9 @@ export const format = ({ dictionary, platform }) => {
 
 format.nested = true;
 
+/**
+ * @type {import('style-dictionary/types').Format}
+ */
 export default {
 	name: "json/sets",
 	format,

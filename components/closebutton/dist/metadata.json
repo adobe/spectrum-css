@@ -29,27 +29,6 @@
     ".spectrum-CloseButton:not(:disabled):hover .spectrum-CloseButton-UIIcon",
     "a.spectrum-CloseButton"
   ],
-  "modifiers": [
-    "--mod-closebutton-align-self",
-    "--mod-closebutton-animation-duraction",
-    "--mod-closebutton-animation-duration",
-    "--mod-closebutton-background-color-default",
-    "--mod-closebutton-background-color-down",
-    "--mod-closebutton-background-color-focus",
-    "--mod-closebutton-background-color-hover",
-    "--mod-closebutton-border-radius",
-    "--mod-closebutton-focus-indicator-color",
-    "--mod-closebutton-focus-indicator-gap",
-    "--mod-closebutton-focus-indicator-thickness",
-    "--mod-closebutton-icon-color-default",
-    "--mod-closebutton-icon-color-disabled",
-    "--mod-closebutton-icon-color-down",
-    "--mod-closebutton-icon-color-focus",
-    "--mod-closebutton-icon-color-hover",
-    "--mod-closebutton-margin-inline",
-    "--mod-closebutton-margin-top",
-    "--mod-closebutton-size"
-  ],
   "component": [
     "--spectrum-closebutton-animation-duration",
     "--spectrum-closebutton-background-color-default",
@@ -96,7 +75,7 @@
     "--spectrum-transparent-white-800",
     "--spectrum-transparent-white-900"
   ],
-  "passthroughs": ["--mod-button-font-family", "--mod-button-line-height"],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-closebutton-background-color-default",
     "--highcontrast-closebutton-focus-indicator-color",
