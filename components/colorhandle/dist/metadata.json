@@ -27,10 +27,8 @@
   ],
   "component": [
     "--spectrum-color-handle-border-width",
-    "--spectrum-color-handle-inner-border-color",
     "--spectrum-color-handle-inner-border-opacity",
     "--spectrum-color-handle-inner-border-width",
-    "--spectrum-color-handle-outer-border-color",
     "--spectrum-color-handle-outer-border-opacity",
     "--spectrum-color-handle-outer-border-width",
     "--spectrum-color-handle-size",
@@ -41,6 +39,7 @@
   ],
   "global": [
     "--spectrum-animation-duration-100",
+    "--spectrum-black-rgb",
     "--spectrum-color-control-track-width",
     "--spectrum-disabled-background-color",
     "--spectrum-disabled-content-color",

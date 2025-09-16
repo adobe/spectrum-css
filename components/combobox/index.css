@@ -61,7 +61,7 @@
 	--spectrum-combobox-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover);
 	--spectrum-combobox-border-color-invalid-key-focus: var(--spectrum-negative-border-color-key-focus);
 
-	--spectrum-combobox-background-color-autofill: color-mix(in sRGB, var(--spectrum-blue-900) 70%, transparent);
+	--spectrum-combobox-background-color-autofill: rgb(var(--spectrum-blue-900-rgb), 0.3);
 
 	--mod-combobox-popover-animation-distance: var(--spectrum-component-to-menu-medium);
 

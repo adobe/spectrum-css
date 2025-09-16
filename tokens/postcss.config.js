@@ -29,6 +29,9 @@ export default (ctx = {}) => postcssConfig({
 	minify: ext?.includes("min.") ?? false,
 	env: "production",
 	additionalPlugins: {
+		"@spectrum-tools/postcss-rgb-mapping": {
+			colorFunctionalNotation: false,
+		},
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",

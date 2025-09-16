@@ -1,0 +1,7 @@
+.elements {
+  --seafoam-100: rgba(206, 247, 243);
+  --seafoam-200: rgba(206, 247, 243, 0.5);
+  --seafoam-300: rgb(206, 247, 243);
+  --spectrum-transparent-white-100: rgba(100, 100, 100, 0.5);
+  --disabled-static-white-background-color: var(--spectrum-transparent-white-100);
+}

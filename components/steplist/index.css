@@ -12,6 +12,9 @@
  */
 
 .spectrum-Steplist {
+	/** default light colors */
+	--spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-800);
+
 	--spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
 	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
 
@@ -61,6 +64,12 @@
 	white-space: nowrap;
 	font-size: 0; /* To remove html whitespace between inline elements */
 	line-height: 16px; /* in case the container changes it */
+}
+
+@media (prefers-color-scheme: dark) {
+	.spectrum-Steplist {
+		--spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-700);
+	}
 }
 
 .spectrum-Steplist--interactive {

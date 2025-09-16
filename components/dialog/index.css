@@ -50,10 +50,9 @@
 	/* Hero */
 	--spectrum-standard-dialog-hero-block-size: 140px;
 
-	/* @passthrough start */
+	/* Passthrough for nested component(s) */
 	--mod-buttongroup-justify-content: flex-end;
 	--mod-buttongroup-flex-wrap: nowrap;
-	/* @passthrough end */
 
 	/* Fullscreen/fullscreenTakeover */
 	--spectrum-takeover-dialog-title-font-size: var(--spectrum-title-size-xxl);
@@ -445,6 +444,6 @@
 
 @media (forced-colors: active) {
 	.spectrum-Dialog {
-		border: 1px solid color-mix(in sRGB, var(--spectrum-black) var(--spectrum-overlay-opacity), transparent);
+		border: 1px solid rgb(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
 	}
 }

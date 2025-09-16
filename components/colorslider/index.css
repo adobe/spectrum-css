@@ -14,7 +14,9 @@
 .spectrum-ColorSlider {
 	/* Size and Spacing */
 	--spectrum-color-slider-control-track-width: var(--spectrum-color-control-track-width);
-	--spectrum-color-slider-border-color-default: color-mix(in sRGB, var(--spectrum-color-slider-border-color) var(--spectrum-color-slider-border-opacity), transparent);
+
+	/* @todo Refactor with --spectrum-color-slider-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
+	--spectrum-color-slider-border-color-default: rgb(var(--spectrum-gray-1000-rgb), var(--spectrum-color-slider-border-opacity));
 
 	/* @passthrough -- settings for nested color handle */
 	--mod-colorhandle-hitarea-border-radius: var(--mod-color-slider-handle-hitarea-border-radius, 0px);

@@ -24,6 +24,11 @@
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
+	--spectrum-slider-precision-handle-width: 6px;
+	--spectrum-slider-editable-field-inline-size-small: 56px;
+	--spectrum-slider-editable-field-inline-size-medium: 70px;
+	--spectrum-slider-editable-field-inline-size-large: 82px;
+	--spectrum-slider-editable-field-inline-size-extra-large: 94px;
 
 	--spectrum-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
 

@@ -22,7 +22,11 @@
     "--spectrum-dropindicator-circle-size",
     "--spectrum-dropindicator-color"
   ],
-  "global": ["--spectrum-border-width-200"],
+  "global": [
+    "--spectrum-blue-700",
+    "--spectrum-blue-800",
+    "--spectrum-border-width-200"
+  ],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-dropindicator-color"]
 }

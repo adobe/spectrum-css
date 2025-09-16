@@ -12,6 +12,9 @@
  */
 
 .spectrum-DropZone {
+	/** default light colors */
+	--spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-800-rgb); /* var(--spectrum-accent-color-900); */
+
 	/* Sizing */
 	--spectrum-drop-zone-padding: var(--spectrum-spacing-400);
 	--spectrum-drop-zone-border-width: var(--spectrum-border-width-200);
@@ -20,6 +23,7 @@
 	--spectrum-drop-zone-inline-size: var(--spectrum-drop-zone-width);
 
 	/* Color */
+	--spectrum-drop-zone-background-color: var(--spectrum-drop-zone-background-color-rgb);
 	--spectrum-drop-zone-border-color-hover: var(--spectrum-accent-visual-color);
 	--spectrum-drop-zone-illustration-color-hover: var(--spectrum-accent-content-color-default);
 	--spectrum-drop-zone-body-to-action: var(--spectrum-spacing-300);
@@ -52,6 +56,12 @@
 	--mod-drop-zone-content-height: 280px;
 }
 
+@media (prefers-color-scheme: dark) {
+	.spectrum-DropZone {
+		--spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900); */
+	}
+}
+
 .spectrum-DropZone {
 	display: flex;
 	justify-content: center;
@@ -67,7 +77,7 @@
 
 	&.is-dragged {
 		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style-dragged, solid);
-		--mod-drop-zone-background-color: color-mix(in sRGB, var(--spectrum-drop-zone-background-color) var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-dragged-background-color), transparent));
+		--mod-drop-zone-background-color: rgb(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-dragged-background-color)));
 		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 
 		/* Updated values for a nested illustrated message when state changes */
@@ -82,7 +92,7 @@
 
 	&.is-filled {
 		/* note: the below applies to .is-filled.is-dragged but works here b/c dragged is the only state applying background color */
-		--mod-drop-zone-background-color: color-mix(in sRGB, var(--spectrum-drop-zone-background-color) var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled), transparent));
+		--mod-drop-zone-background-color: rgb(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled)));
 
 		/* Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-display: none;

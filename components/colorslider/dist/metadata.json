@@ -31,7 +31,6 @@
     "--mod-color-slider-vertical-minimum-height"
   ],
   "component": [
-    "--spectrum-color-slider-border-color",
     "--spectrum-color-slider-border-color-default",
     "--spectrum-color-slider-border-color-local",
     "--spectrum-color-slider-border-opacity",
@@ -44,7 +43,8 @@
   ],
   "global": [
     "--spectrum-color-control-track-width",
-    "--spectrum-disabled-background-color"
+    "--spectrum-disabled-background-color",
+    "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
   "high-contrast": [

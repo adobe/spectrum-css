@@ -31,17 +31,13 @@ To force the dark theme, you can add `color-scheme: dark` to your container elem
 </div>
 ```
 
-The design language also includes a set of token values that represent different device sizes. At the moment, these values are only defined as "medium" and "large", with "medium" as the default which maps generally to a desktop or laptop screen. The "large" value is intended for smaller devices, such as phones and tablets. The default value for all tokens is set to the default value for the medium scale. To force the large scale, you can update the cascading layers inheritance:
+The design language also includes a set of token values that represent different device sizes. At the moment, these values are only defined as "medium" and "large", with "medium" as the default which maps generally to a desktop or laptop screen. The "large" value is intended for smaller devices, such as phones and tablets. The default value for all tokens is set to the default value for the medium scale. To force the large scale, you can load the CSS overrides for the large scale:
 
-```css
-@layers defaults, medium;
-
-@media screen and (min-width: 768px) {
-	@layers defaults, large;
-}
+```html
+<link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/css/mobile.css" />
 ```
 
-What's happening here is that the `defaults` layer is being overridden by the `large` layer when the screen size is greater than 768px. This means that all tokens that have a value for the `large` scale will be used instead of the default value. The most useful feature of this approach is that each application can make their own decision about which scale to leverage and at what screen size. This allows for a lot of flexibility in how the design language is applied to different applications.
+This will override the default value for all tokens to the value for the large scale.
 
 Use the `index.css` files in your project to include component and global styles ([background theme/colorstop](https://github.com/adobe/spectrum-css?tab=readme-ov-file#themes-colorstops), [platform scaling](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales), etc.) for the component. If you don't need all of the global styles, peek at the docs for [including assets](https://github.com/adobe/spectrum-css?tab=readme-ov-file#including-assets)). Use this file by including the stylesheet (plus stylesheets for dependencies) in the `<head>` tag:
 
@@ -50,7 +46,7 @@ Use the `index.css` files in your project to include component and global styles
 	<!-- Include global tokens depedency first -->
 	<link
 		rel="stylesheet"
-		href="node_modules/@spectrum-css/tokens/dist/index.css"
+		href="node_modules/@spectrum-css/tokens/dist/css/index.css"
 	/>
 
 	<!-- Include index.css for the components you're using -->
@@ -78,7 +74,7 @@ To put it all together, your final html file will look like this:
 	<head>
 		<link
 			rel="stylesheet"
-			href="node_modules/@spectrum-css/tokens/dist/index.css"
+			href="node_modules/@spectrum-css/tokens/dist/css/index.css"
 		/>
 		<link
 			rel="stylesheet"

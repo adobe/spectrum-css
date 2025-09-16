@@ -30,7 +30,7 @@
 
 	/* font */
 	--spectrum-coachmark-title-color: var(--spectrum-heading-color);
-	--spectrum-coachmark-title-font-family: var(--spectrum-sans-serif-font);
+	--spectrum-coachmark-title-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-coachmark-title-font-size: var(--spectrum-coach-mark-title-font-size);
 	--spectrum-coachmark-title-font-style: var(--spectrum-title-serif-font-style);
 	--spectrum-coachmark-title-text-font-weight: var(--spectrum-title-sans-serif-font-weight);
@@ -143,7 +143,7 @@
 	color: var(--mod-coachmark-content-font-color, var(--spectrum-body-color));
 	font-size: var(--mod-coachmark-content-font-size, var(--spectrum-coachmark-content-font-size));
 	font-weight: var(--mod-coachmark-content-font-weight, var(--spectrum-coachmark-content-font-weight));
-	font-family: var(--mod-coachmark-content-font-family, var(--spectrum-sans-serif-font));
+	font-family: var(--mod-coachmark-content-font-family, var(--spectrum-sans-font-family-stack));
 	font-style: var(--mod-coachmark-content-font-style, var(--spectrum-body-sans-serif-font-style));
 	line-height: var(--mod-coachmark-content-line-height, var(--spectrum-body-line-height));
 }
@@ -164,7 +164,7 @@
 	color: var(--mod-coachmark-step-color, var(--spectrum-coachmark-step-color));
 	font-size: var(--mod-coachmark-step-font-size, var(--spectrum-coachmark-step-font-size));
 	font-weight: var(--mod-coachmark-step-text-font-weight, var(--spectrum-coachmark-step-text-font-weight));
-	font-family: var(--spectrum-sans-serif-font);
+	font-family: var(--spectrum-sans-font-family-stack);
 	font-style: var(--mod-coachmark-step-font-style, var(--spectrum-coachmark-step-font-style));
 	line-height: var(--mod-coachmark-step-text-line-height, var(--spectrum-coachmark-step-text-line-height));
 	white-space: nowrap;

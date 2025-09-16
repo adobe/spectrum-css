@@ -122,6 +122,12 @@
 	--highcontrast-badge-border-color: CanvasText;
 }
 
+@media (prefers-color-scheme: dark) {
+	.spectrum-Badge {
+		--spectrum-badge-label-icon-color: var(--spectrum-black);
+	}
+}
+
 /* text and icon color is black for these background colors */
 .spectrum-Badge--notice,
 .spectrum-Badge--orange,

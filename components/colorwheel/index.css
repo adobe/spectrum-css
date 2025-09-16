@@ -16,8 +16,11 @@
 	--spectrum-colorwheel-block-size: var(--spectrum-color-wheel-width);
 	--spectrum-colorwheel-min-inline-size: var(--spectrum-color-wheel-minimum-width);
 
+	/* @TODO: leveraging the rgb token in this case to achieve the desired border color implementation as rgb + opacity are required by the `rgba` function. */
+	--spectrum-colorwheel-border-color-rgb: var(--spectrum-gray-1000-rgb);
+
 	--spectrum-colorwheel-border-opacity: var(--spectrum-color-wheel-border-opacity);
-	--spectrum-colorwheel-border-color: color-mix(in sRGB, var(--spectrum-gray-1000) var(--spectrum-colorwheel-border-opacity), transparent);
+	--spectrum-colorwheel-border-color: rgb(var(--spectrum-colorwheel-border-color-rgb), var(--spectrum-colorwheel-border-opacity));
 
 	--spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
 	--spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);

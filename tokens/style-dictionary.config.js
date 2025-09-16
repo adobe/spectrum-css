@@ -11,12 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-import fg from "fast-glob";
-import { capitalize } from "lodash-es";
-import { basename, dirname, join, resolve, sep } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
+import { dirname, join, sep } from "path";
 
 import StyleDictionary from "style-dictionary";
 import {
@@ -45,7 +40,7 @@ const tokensDir = dirname(tokensPath);
  * @type {import('style-dictionary').Config}
  */
 export default {
-	source: [join(tokensDir, "src", "*.json"), "custom-tokens.json", "../components/accordion/tokens.json"],
+	source: [join(tokensDir, "src", "*.json"), "custom-tokens.json"],
 	hooks: {
 		transforms: {
 			[CSSOpenTypeTransform.name]: CSSOpenTypeTransform,
@@ -89,34 +84,6 @@ export default {
 						return false;
 					},
 				},
-			],
-		},
-		components: {
-			buildPath: resolve(__dirname, "..", "components") + sep,
-			prefix: "spectrum",
-			outputReferences: true,
-			outputReferenceFallbacks: true,
-			showFileHeader: false,
-			transforms: [
-				"name/kebab",
-				CSSOpenTypeTransform.name,
-				CSSBorderRoundingTransform.name,
-				CSSOpacityPercentTransform.name,
-			],
-			files: [
-				// Iterate over all files in the components folder and build a css file for each
-				...(fg.sync("accordion/tokens.json", { cwd: resolve(__dirname, "..", "components") })).map((pkg) => ({
-					format: "css/sets",
-					destination: `${dirname(pkg)}/dist/${basename(pkg, ".json")}.css`,
-					options: {
-						selector: `.spectrum-${capitalize(dirname(pkg))}`,
-					},
-					filter: (token) => {
-						if (token.filePath?.includes(pkg)) return true;
-						if (token.component == dirname(pkg)) return true;
-						return false;
-					},
-				})),
 			],
 		},
 		JSON: {

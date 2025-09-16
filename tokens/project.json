@@ -2,7 +2,7 @@
 	"name": "tokens",
 	"tag": ["tokens"],
 	"namedInputs": {
-    "core": ["{projectRoot}/custom/*.css"],
+    "core": ["{projectRoot}/custom-tokens.json"],
 		"scripts": ["{projectRoot}/style-dictionary.config.js", "{projectRoot}/utilities/*.js"],
 		"tools": ["{projectRoot}/postcss.config.js"]
 	},
@@ -11,7 +11,7 @@
 			"cache": false,
       "dependsOn": ["clean"],
 			"executor": "nx:run-commands",
-			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
+			"inputs": ["core", "tools", { "externalDependencies": ["postcss", "postcss-cli", "prettier", "@adobe/spectrum-tokens"] }],
       "options": {
         "commands": [
           "style-dictionary build --config style-dictionary.config.js --verbose",
@@ -49,8 +49,9 @@
 				"commands": [
 					"tdiff report --old-token-version @adobe/spectrum-tokens@{args.v1} --new-token-version @adobe/spectrum-tokens@{args.v2} --format markdown --output ./dist/tokens-diff.md"
 				],
+        "cwd": "{projectRoot}",
 				"forwardAllArgs": true,
-				"v1": "13.10.0"
+				"v1": "13.15.0"
 			},
       "outputs": ["{projectRoot}/dist/tokens-diff.md"]
     },

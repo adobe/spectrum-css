@@ -23,22 +23,13 @@
 	},
 	"main": "dist/css/index.css",
 	"module": "style-dictionary.config.js",
-	"scripts": {
-		"build": "run-s clean build:tokens build:entry build:format build:min",
-		"build:entry": "postcss ./dist/css/index.css --replace",
-		"build:format": "prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern ./dist/*/*",
-		"build:min": "postcss ./dist/css/index.css --dir ./dist/css --ext min.css",
-		"build:tokens": "style-dictionary build --config style-dictionary.config.js --verbose",
-		"clean": "rimraf dist",
-		"compare": "tdiff report --old-token-version @adobe/spectrum-tokens@${1:-13.7.0} --new-token-version @adobe/spectrum-tokens@${2:-13.9.0} --format markdown --output dist/tokens-diff.md"
-	},
 	"devDependencies": {
 		"@adobe/spectrum-tokens": "13.15.0",
 		"@adobe/token-diff-generator": "^2.0.0",
+		"@spectrum-tools/postcss-rgb-mapping": "1.1.0",
 		"deepmerge": "^4.3.1",
 		"glob": "^11.0.3",
 		"lodash-es": "^4.17.21",
-		"npm-run-all2": "^8.0.4",
 		"postcss": "^8.5.6",
 		"postcss-cli": "^11.0.1",
 		"postcss-sorting": "^9.1.0",
