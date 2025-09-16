@@ -207,10 +207,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:13.15.0":
-  version: 13.15.0
-  resolution: "@adobe/spectrum-tokens@npm:13.15.0"
-  checksum: 10c0/09c063c9702a4459e3399c5bf32d2de5f9ef5c9b7ee89523decb8eb5f1f1678ca59133a3ddcf14be2bceaee11e268cc85d80c102a2ba7fa8f9c7d51ddb51728e
+"@adobe/spectrum-tokens@npm:13.15.1":
+  version: 13.15.1
+  resolution: "@adobe/spectrum-tokens@npm:13.15.1"
+  checksum: 10c0/745543f734fc9a4a69f3eb93b05370e6591dd034f0ac79b85b9a9089ae0cbd7a166633bb562f25eab4cc377e6136648de7e052e600ed8a03f6e306c6dc1e19ed
   languageName: node
   linkType: hard
 
@@ -3024,17 +3024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/trace-mapping@npm:^0.3.12, @jridgewell/trace-mapping@npm:^0.3.18, @jridgewell/trace-mapping@npm:^0.3.24":
-  version: 0.3.30
-  resolution: "@jridgewell/trace-mapping@npm:0.3.30"
-  dependencies:
-    "@jridgewell/resolve-uri": "npm:^3.1.0"
-    "@jridgewell/sourcemap-codec": "npm:^1.4.14"
-  checksum: 10c0/3a1516c10f44613b9ba27c37a02ff8f410893776b2b3dad20a391b51b884dd60f97bbb56936d65d2ff8fe978510a0000266654ab8426bdb9ceb5fb4585b19e23
-  languageName: node
-  linkType: hard
-
-"@jridgewell/trace-mapping@npm:^0.3.25":
+"@jridgewell/trace-mapping@npm:^0.3.12, @jridgewell/trace-mapping@npm:^0.3.18, @jridgewell/trace-mapping@npm:^0.3.24, @jridgewell/trace-mapping@npm:^0.3.25":
   version: 0.3.25
   resolution: "@jridgewell/trace-mapping@npm:0.3.25"
   dependencies:
@@ -5658,7 +5648,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:13.15.0"
+    "@adobe/spectrum-tokens": "npm:13.15.1"
     "@adobe/token-diff-generator": "npm:^2.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:1.1.0"
     deepmerge: "npm:^4.3.1"
