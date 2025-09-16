@@ -117,7 +117,8 @@ jobs:
             ## --- BUILD --- ##
             - name: Build components & ui-icons
               shell: bash
-              run: yarn ci
+              # add and lint-staged to catch any formatting fixes before diffing
+              run: yarn ci && git add . && yarn lint-staged
 
             ## --- UPLOAD (only ubuntu-latest at the moment) --- ##
             - name: Upload compiled assets & NX performance profile
