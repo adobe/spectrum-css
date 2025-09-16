@@ -14,11 +14,15 @@
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
 	"exports": {
+		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./package.json": "./package.json",
+		"./dist/*": "./dist/*",
+		"./index.css": "./dist/index.css",
+		"./metadata.json": "./dist/metadata.json",
 		"./stories/*": "./stories/*"
 	},
-	"main": "README.md",
+	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/actionbutton": ">=8.0.0-next.0",
 		"@spectrum-css/icon": ">=10.0.0-next.0",
@@ -55,7 +59,9 @@
 		"spectrum",
 		"spectrum-css",
 		"adobe",
-		"adobe-spectrum"
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"
