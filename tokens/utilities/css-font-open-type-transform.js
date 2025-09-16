@@ -1,3 +1,7 @@
+/**
+ * @description Converts a font-weight token to a number
+ * @type {import('style-dictionary/types').ValueTransform}
+ */
 export default {
 	type: "value",
 	name: "font/openType",

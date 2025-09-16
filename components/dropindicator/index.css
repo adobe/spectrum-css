@@ -18,6 +18,9 @@
 }
 
 .spectrum-DropIndicator {
+	/** default light colors */
+	--spectrum-dropindicator-color: var(--spectrum-blue-800);
+
 	--spectrum-dropindicator-border-size: var(--spectrum-border-width-200);
 	--spectrum-dropindicator-circle-size: 12px;
 
@@ -34,6 +37,12 @@
 		border: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) solid;
 		box-sizing: border-box;
 		border-color: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-color)));
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.spectrum-DropIndicator {
+		--spectrum-dropindicator-color: var(--spectrum-blue-700);
 	}
 }
 

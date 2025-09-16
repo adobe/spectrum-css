@@ -11,27 +11,18 @@
     ".spectrum-Divider--vertical",
     ".spectrum-Divider:not(.spectrum-Divider.spectrum-Divider--vertical)"
   ],
-  "modifiers": [
-    "--mod-divider-background-color",
-    "--mod-divider-block-minimum-size",
-    "--mod-divider-inline-minimum-size",
-    "--mod-divider-thickness",
-    "--mod-divider-vertical-align",
-    "--mod-divider-vertical-height",
-    "--mod-divider-vertical-margin"
-  ],
   "component": [
     "--spectrum-divider-background-color",
     "--spectrum-divider-block-minimum-size",
-    "--spectrum-divider-horizontal-minimum-width",
     "--spectrum-divider-inline-minimum-size",
-    "--spectrum-divider-thickness",
+    "--spectrum-divider-thickness"
+  ],
+  "global": [
+    "--spectrum-divider-horizontal-minimum-width",
     "--spectrum-divider-thickness-large",
     "--spectrum-divider-thickness-medium",
     "--spectrum-divider-thickness-small",
-    "--spectrum-divider-vertical-minimum-height"
-  ],
-  "global": [
+    "--spectrum-divider-vertical-minimum-height",
     "--spectrum-gray-200",
     "--spectrum-gray-800",
     "--spectrum-transparent-black-200",

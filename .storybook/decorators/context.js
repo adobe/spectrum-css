@@ -47,9 +47,6 @@ export const withContextWrapper = makeDecorator({
 			// Start by attaching the appropriate tokens to the container
 			toggleStyles(document.body, "tokens", tokens, true);
 
-			// add the default classes to the body to ensure labels, headings, and borders are styled correctly
-			document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
-
 			for (const container of fetchContainers(id, isDocs, isTesting)) {
 				// Check if the container is a testing wrapper to prevent applying colors around the testing grid
 				const isTestingWrapper = isTesting ? container.matches("body:has([data-testing-preview]),[data-testing-preview]") : false;
@@ -71,9 +68,6 @@ export const withContextWrapper = makeDecorator({
 				// If we can't determine the static key, we can't use the static color
 				if (!staticKey) hasStaticElement = false;
 
-				// Every container gets the spectrum class
-				container.classList.toggle("spectrum", true);
-
 				// Let the static color override the color if it's set
 				if (!isTestingWrapper && hasStaticElement && staticColorSettings[staticKey]?.color) {
 					color = staticColorSettings[staticKey].color;
@@ -85,13 +79,8 @@ export const withContextWrapper = makeDecorator({
 					color = "light";
 				}
 
-				for (let c of ["light", "dark"]) {
-					container.classList.toggle(`spectrum--${c}`, c === color);
-				}
-
-				for (const s of ["medium", "large"]) {
-					container.classList.toggle(`spectrum--${s}`, s === scale);
-				}
+				container.style.setProperty("color-scheme", color);
+				container.classList.toggle("spectrum--large", scale === "large");
 
 				if (!isTestingWrapper) {
 					if (hasStaticElement && staticKey && staticColorSettings[staticKey]) {

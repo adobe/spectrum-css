@@ -4,23 +4,18 @@
     ".spectrum-OpacityCheckerboard",
     ".spectrum-OpacityCheckerboard--sizeS"
   ],
-  "modifiers": [
-    "--mod-opacity-checkerboard-dark",
-    "--mod-opacity-checkerboard-light",
-    "--mod-opacity-checkerboard-position",
-    "--mod-opacity-checkerboard-size"
-  ],
   "component": [
     "--spectrum-opacity-checkerboard-dark",
     "--spectrum-opacity-checkerboard-light",
     "--spectrum-opacity-checkerboard-position",
-    "--spectrum-opacity-checkerboard-size",
+    "--spectrum-opacity-checkerboard-size"
+  ],
+  "global": [
     "--spectrum-opacity-checkerboard-square-dark",
     "--spectrum-opacity-checkerboard-square-light",
     "--spectrum-opacity-checkerboard-square-size-medium",
     "--spectrum-opacity-checkerboard-square-size-small"
   ],
-  "global": [],
   "passthroughs": [],
   "high-contrast": []
 }

@@ -12,6 +12,9 @@
  */
 
 .spectrum-Table {
+	/** default light colors */
+	--spectrum-table-selected-row-background-color-rgb: var(--spectrum-blue-900-rgb);
+
 	/* Animation */
 	--spectrum-table-transition-duration: var(--spectrum-animation-duration-100);
 
@@ -150,6 +153,12 @@
 	&:lang(zh),
 	&:lang(ko) {
 		--spectrum-table-row-line-height: var(--spectrum-cjk-line-height-100);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.spectrum-Table {
+		--spectrum-table-selected-row-background-color-rgb: var(--spectrum-blue-800-rgb);
 	}
 }
 

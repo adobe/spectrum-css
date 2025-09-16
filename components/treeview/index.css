@@ -12,6 +12,10 @@
  */
 
 .spectrum-TreeView {
+	/** default light colors */
+	--spectrum-treeview-item-background-color-quiet-selected: rgb(var(--spectrum-gray-900-rgb), 0.06);
+	--spectrum-treeview-item-background-color-selected: rgb(var(--spectrum-blue-900-rgb), 0.1);
+
 	--spectrum-treeview-item-border-size: var(--mod-treeview-item-border-size, var(--spectrum-border-width-200));
 	--spectrum-treeview-item-border-size-selected: var(--mod-treeview-item-border-size-selected, 1px);
 	--spectrum-treeview-item-border-radius: var(--mod-treeview-item-border-radius, 0px);
@@ -52,7 +56,14 @@
 	--spectrum-treeview-indicator-margin-inline-start: var(--mod-treeview-indicator-margin-inline-start, calc(-1 * var(--spectrum-component-height-100)));
 	--spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-medium);
 
-	--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium, 0);
+	--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium);
+}
+
+@media (prefers-color-scheme: dark) {
+	.spectrum-TreeView {
+		--spectrum-treeview-item-background-color-quiet-selected: rgb(var(--spectrum-gray-900-rgb), 0.07);
+		--spectrum-treeview-item-background-color-selected: rgb(var(--spectrum-blue-800-rgb), 0.15);
+	}
 }
 
 .spectrum-TreeView--sizeS {

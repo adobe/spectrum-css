@@ -15,38 +15,23 @@
     ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-gradient",
     ".spectrum-ColorSlider.is-focused"
   ],
-  "modifiers": [
-    "--mod-color-slider-background-color-disabled",
-    "--mod-color-slider-border-color",
-    "--mod-color-slider-border-color-disabled",
-    "--mod-color-slider-border-rounding",
-    "--mod-color-slider-border-width",
-    "--mod-color-slider-control-track-height",
-    "--mod-color-slider-control-track-width",
-    "--mod-color-slider-handle-hitarea-border-radius",
-    "--mod-color-slider-length",
-    "--mod-color-slider-minimum-length",
-    "--mod-color-slider-vertical-control-track-width",
-    "--mod-color-slider-vertical-height",
-    "--mod-color-slider-vertical-minimum-height"
-  ],
   "component": [
     "--spectrum-color-slider-border-color-default",
     "--spectrum-color-slider-border-color-local",
-    "--spectrum-color-slider-border-opacity",
-    "--spectrum-color-slider-border-rounding",
-    "--spectrum-color-slider-border-width",
     "--spectrum-color-slider-control-track-width",
-    "--spectrum-color-slider-fill-color-disabled",
-    "--spectrum-color-slider-length",
-    "--spectrum-color-slider-minimum-length"
+    "--spectrum-color-slider-fill-color-disabled"
   ],
   "global": [
     "--spectrum-color-control-track-width",
+    "--spectrum-color-slider-border-opacity",
+    "--spectrum-color-slider-border-rounding",
+    "--spectrum-color-slider-border-width",
+    "--spectrum-color-slider-length",
+    "--spectrum-color-slider-minimum-length",
     "--spectrum-disabled-background-color",
     "--spectrum-gray-1000-rgb"
   ],
-  "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-color-slider-background-color-disabled",
     "--highcontrast-color-slider-border-color",

@@ -1,21 +1,16 @@
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
-import { startCase } from "lodash";
 
 import "./assets/index.css";
 
 import logo from "./assets/logo.svg";
-import pkg from "./package.json";
-
-const root = document.body ?? document.documentElement;
-if (root) root.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 
 addons.setConfig({
 	theme: create({
 		base: "light",
 
 		brandTitle: "Adobe | Spectrum CSS",
-		brandUrl: pkg.homepage ?? "https://opensource.adobe.com/spectrum-css",
+		brandUrl: "https://opensource.adobe.com/spectrum-css",
 		brandImage: logo,
 		brandTarget: "_self",
 
@@ -63,8 +58,4 @@ addons.setConfig({
 
 		// gridCellSize?: number;
 	}),
-	sidebar: {
-		showRoots: false,
-		renderLabel: ({ name, type }) => (type === 'story' ? name : startCase(name)) + " 📚",
-	},
 });
