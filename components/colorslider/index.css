@@ -70,7 +70,7 @@
 }
 
 .spectrum-ColorSlider-checkerboard {
-	--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-default)));
+	--spectrum-color-slider-border-color-local: var(--spectrum-color-slider-border-color-default);
 
 	/* Inset border on top of background, created with box-shadow. */
 	&::before {
@@ -83,8 +83,8 @@
 	}
 
 	.spectrum-ColorSlider.is-disabled & {
-		--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-color-slider-fill-color-disabled)));
-		background: var(--highcontrast-color-slider-background-color-disabled, var(--mod-color-slider-background-color-disabled, var(--spectrum-color-slider-fill-color-disabled)));
+		--spectrum-color-slider-border-color-local: var(--spectrum-color-slider-fill-color-disabled);
+		background: var(--spectrum-color-slider-fill-color-disabled);
 	}
 }
 
@@ -111,13 +111,4 @@
 	z-index: 0;
 	margin: 0;
 	pointer-events: none;
-}
-
-@media (forced-colors: active) {
-	.spectrum-ColorSlider {
-		--highcontrast-color-slider-border-color: CanvasText;
-		--highcontrast-color-slider-border-color-disabled: GrayText;
-		--highcontrast-color-slider-background-color-disabled: Canvas;
-		forced-color-adjust: none;
-	}
 }

@@ -82,7 +82,7 @@
 	}
 
 	&:not(:disabled):hover {
-		color: var(--highcontrast-clear-button-icon-color-hover, var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover)));
+		color: var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover));
 
 		.spectrum-ClearButton-fill {
 			background-color: var(--mod-clear-button-background-color-hover, var(--spectrum-clear-button-background-color-hover));
@@ -121,12 +121,4 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-@media (forced-colors: active) {
-	.spectrum-ClearButton {
-		&:not(:disabled) {
-			--highcontrast-clear-button-icon-color-hover: Highlight;
-		}
-	}
 }

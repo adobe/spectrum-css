@@ -64,12 +64,12 @@
 	background-size: cover;
 	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
 	position: relative;
-	border: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)) dashed var(--highcontrast-drop-zone-border-color, var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color)));
+	border: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width)) dashed var(--spectrum-drop-zone-border-color);
 
 	&.is-dragged {
 		--mod-drop-zone-border-style: var(--mod-drop-zone-border-style-dragged, solid);
 		--mod-drop-zone-background-color: rgb(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-dragged-background-color)));
-		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
+		--spectrum-drop-zone-border-color: var(--spectrum-drop-zone-border-color-hover);
 
 		/* Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
@@ -107,7 +107,7 @@
 	}
 
 	&:focus-visible {
-		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
+		--spectrum-drop-zone-border-color: var(--spectrum-drop-zone-border-color-hover);
 		outline: 0;
 	}
 }
@@ -126,7 +126,7 @@
 }
 
 .spectrum-DropZone-strokePath {
-	stroke: var(--highcontrast-drop-zone-border-color, var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color)));
+	stroke: var(--spectrum-drop-zone-border-color);
 	stroke-dasharray: var(--mod-drop-zone-border-dash-length, var(--spectrum-drop-zone-stroke-dash-length)) var(--mod-drop-zone-border-dash-gap, var(--spectrum-drop-zone-stroke-dash-gap));
 	rx: var(--spectrum-drop-zone-corner-radius);
 	ry: var(--spectrum-drop-zone-corner-radius);
@@ -155,7 +155,7 @@
 	padding-block-start: var(--mod-drop-zone-content-top-to-text, var(--spectrum-drop-zone-content-top-to-text));
 	padding-block-end: var(--mod-drop-zone-content-bottom-to-text, var(--spectrum-drop-zone-content-bottom-to-text));
 	padding-inline: var(--mod-drop-zone-edge-to-text, var(--spectrum-drop-zone-edge-to-text));
-	background-color: var(--highcontrast-drop-zone-button-color, var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color)));
+	background-color: var(--spectrum-drop-zone-content-background-color);
 	max-block-size: var(--spectrum-drop-zone-component-height);
 
 	font-family: var(--mod-drop-zone-content-font-family, var(--spectrum-drop-zone-content-font-family));
@@ -169,7 +169,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: var(--highcontrast-drop-zone-button-color, var(--mod-drop-zone-content-background-color, var(--spectrum-drop-zone-content-background-color)));
+		background-color: var(--spectrum-drop-zone-content-background-color);
 	}
 }
 
@@ -177,22 +177,5 @@
 .spectrum-DropZone {
 	.spectrum-IllustratedMessage {
 		justify-content: center;
-	}
-}
-
-/********* WHCM *********/
-@media (forced-colors: active) {
-	.spectrum-DropZone {
-		--highcontrast-drop-zone-border-color-hover: Highlight;
-		--highcontrast-drop-zone-button-color: ButtonText;
-		--highcontrast-drop-zone-border-color: ButtonText;
-
-		&.is-dragged {
-			border-color: var(--highcontrast-drop-zone-border-color-hover);
-
-			.spectrum-DropZone-strokePath {
-				stroke: var(--highcontrast-drop-zone-border-color-hover);
-			}
-		}
 	}
 }

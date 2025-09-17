@@ -26,14 +26,11 @@
     "--mod-drop-zone-background-color-opacity-filled",
     "--mod-drop-zone-body-font-size",
     "--mod-drop-zone-body-to-action",
-    "--mod-drop-zone-border-color",
-    "--mod-drop-zone-border-color-hover",
     "--mod-drop-zone-border-dash-gap",
     "--mod-drop-zone-border-dash-length",
     "--mod-drop-zone-border-style",
     "--mod-drop-zone-border-style-dragged",
     "--mod-drop-zone-border-width",
-    "--mod-drop-zone-content-background-color",
     "--mod-drop-zone-content-bottom-to-text",
     "--mod-drop-zone-content-font-family",
     "--mod-drop-zone-content-font-size",
@@ -109,9 +106,5 @@
     "--mod-illustrated-message-illustration-color",
     "--mod-illustrated-message-vertical-maximum-width"
   ],
-  "high-contrast": [
-    "--highcontrast-drop-zone-border-color",
-    "--highcontrast-drop-zone-border-color-hover",
-    "--highcontrast-drop-zone-button-color"
-  ]
+  "high-contrast": []
 }

@@ -23,12 +23,10 @@
   "modifiers": [
     "--mod-helptext-bottom-edge-to-workflow-icon",
     "--mod-helptext-bottom-to-text",
-    "--mod-helptext-content-color-default",
     "--mod-helptext-font-family",
     "--mod-helptext-font-size",
     "--mod-helptext-font-style",
     "--mod-helptext-font-weight",
-    "--mod-helptext-icon-color-default",
     "--mod-helptext-icon-size",
     "--mod-helptext-line-height",
     "--mod-helptext-line-height-cjk",
@@ -91,10 +89,5 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-helptext-content-color-default",
-    "--highcontrast-helptext-content-color-disabled",
-    "--highcontrast-helptext-icon-color-default",
-    "--highcontrast-helptext-icon-color-disabled"
-  ]
+  "high-contrast": []
 }

@@ -2,9 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-ActionButton",
-    ".spectrum-ActionButton .spectrum-ActionButton-hold",
-    ".spectrum-ActionButton .spectrum-ActionButton-icon",
-    ".spectrum-ActionButton .spectrum-ActionButton-label",
     ".spectrum-ActionButton--sizeL",
     ".spectrum-ActionButton--sizeS",
     ".spectrum-ActionButton--sizeXL",
@@ -20,7 +17,6 @@
     ".spectrum-ActionButton.is-selected.spectrum-ActionButton--staticWhite",
     ".spectrum-ActionButton.spectrum-ActionButton--quiet",
     ".spectrum-ActionButton.spectrum-ActionButton--quiet.is-selected",
-    ".spectrum-ActionButton.spectrum-ActionButton--quiet:disabled:not(.is-selected)",
     ".spectrum-ActionButton.spectrum-ActionButton--staticBlack",
     ".spectrum-ActionButton.spectrum-ActionButton--staticBlack.spectrum-ActionButton--quiet",
     ".spectrum-ActionButton.spectrum-ActionButton--staticWhite",
@@ -218,13 +214,5 @@
     "--mod-button-animation-duration",
     "--mod-button-font-family"
   ],
-  "high-contrast": [
-    "--highcontrast-actionbutton-animation-duration",
-    "--highcontrast-actionbutton-background-color-default",
-    "--highcontrast-actionbutton-background-color-disabled",
-    "--highcontrast-actionbutton-border-color",
-    "--highcontrast-actionbutton-content-color-default",
-    "--highcontrast-actionbutton-content-color-disabled",
-    "--highcontrast-actionbutton-focus-indicator-color"
-  ]
+  "high-contrast": []
 }

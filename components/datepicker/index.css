@@ -20,8 +20,8 @@
 	--spectrum-datepicker-icon-size: var(--spectrum-workflow-icon-size-100);
 
 	/* button */
-	--spectrum-datepicker-pickerbutton-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color, var(--spectrum-gray-500)));
-	--spectrum-datepicker-pickerbutton-border-color-invalid: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-negative-border-color-default)));
+	--spectrum-datepicker-pickerbutton-border-color: var(--spectrum-gray-500);
+	--spectrum-datepicker-pickerbutton-border-color-invalid: var(--spectrum-negative-border-color-default);
 	--spectrum-datepicker-pickerbutton-width: calc(var(--spectrum-field-edge-to-disclosure-icon-100) * 2 + var(--spectrum-workflow-icon-size-100));
 	--spectrum-datepicker-quiet-button-offset: var(--mod-datepicker-quiet-button-offset, var(--spectrum-text-to-visual-100));
 	--spectrum-datepicker-icon-to-text: var(--spectrum-component-edge-to-text-100);
@@ -34,7 +34,7 @@
 	--spectrum-datepicker-focus-thickness: var(--mod-datepicker-focus-thickness, var(--spectrum-focus-indicator-thickness));
 	--spectrum-datepicker-focus-animation: var(--mod-datepicker-focus-animation, var(--spectrum-animation-duration-100));
 	--spectrum-datepicker-focus-ring-width: var(--mod-datepicker-focus-ring-width, var(--spectrum-border-width-100));
-	--spectrum-datepicker-focus-ring-color: var(--highcontrast-datepicker-focus-ring-color, var(--mod-datepicker-focus-ring-color, var(--spectrum-focus-indicator-color)));
+	--spectrum-datepicker-focus-ring-color: var(--spectrum-focus-indicator-color);
 	--spectrum-datepicker-focus-line-gap: var(--mod-datepicker-focus-line-gap, var(--spectrum-spacing-75));
 
 	/* color */
@@ -44,7 +44,7 @@
 
 	/* dash */
 	--spectrum-datepicker-dash-font-size: var(--mod-datepicker-dash-font-size, var(--spectrum-font-size-100));
-	--spectrum-datepicker-dash-color: var(--highcontrast-datepicker-dash-color, var(--mod-datepicker-dash-color, var(--spectrum-neutral-content-color-default)));
+	--spectrum-datepicker-dash-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-datepicker-range-dash-padding-top: var(--mod-datepicker-range-dash-padding-top, 0);
 
 	/* Calculated as negative half of font-size */
@@ -276,23 +276,6 @@
 
 		&:first-of-type {
 			inline-size: var(--spectrum-datepicker-range-input-width-first);
-		}
-	}
-}
-
-/********* WHCM *********/
-@media (forced-colors: active) {
-	.spectrum-DatePicker {
-		--highcontrast-datepicker-dash-color: CanvasText;
-		--highcontrast-datepicker-focus-ring-color: Highlight;
-		--highcontrast-datepicker-pickerbutton-border-color: Highlight;
-
-		&.is-disabled {
-			--highcontrast-datepicker-dash-color: GrayText;
-		}
-
-		&.spectrum-DatePicker--quiet.is-invalid {
-			--highcontrast-datepicker-pickerbutton-border-color: Highlight;
 		}
 	}
 }

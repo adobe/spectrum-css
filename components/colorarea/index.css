@@ -33,7 +33,7 @@
 	block-size: var(--mod-colorarea-height, var(--spectrum-colorarea-height));
 	box-sizing: border-box;
 	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
-	border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
+	border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--spectrum-colorarea-border-color);
 
 	touch-action: none; /* Disable touch scrolling on touch devices to allow for color picking */
 	user-select: none;
@@ -44,8 +44,8 @@
 
 	&.is-disabled {
 		pointer-events: none;
-		background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));
-		border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color-disabled);
+		background: var(--spectrum-colorarea-disabled-background-color);
+		border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid;
 
 		.spectrum-ColorArea-gradient {
 			display: none;
@@ -80,22 +80,4 @@
 	z-index: 0;
 	margin: 0;
 	pointer-events: none;
-}
-
-/* Windows High Contrast Mode */
-@media (forced-colors: active) {
-	.spectrum-ColorArea {
-		--highcontrast-colorarea-border-color-disabled: GrayText;
-		--highcontrast-colorarea-border-color: Canvas;
-		--highcontrast-colorarea-fill-color-disabled: Canvas;
-
-		&.is-disabled {
-			forced-color-adjust: none;
-		}
-	}
-
-	.spectrum-ColorArea-gradient,
-	.spectrum-ColorHandle-color {
-		forced-color-adjust: none;
-	}
 }

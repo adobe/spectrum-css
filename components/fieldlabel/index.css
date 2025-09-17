@@ -35,7 +35,7 @@
 
 	/********* Disabled state *********/
 	&.is-disabled {
-		--spectrum-fieldlabel-color: var(--highcontrast-fieldlabel-disabled-content-color, var(--spectrum-disabled-content-color));
+		--spectrum-fieldlabel-color: var(--spectrum-disabled-content-color);
 	}
 }
 
@@ -123,11 +123,4 @@
 
 .spectrum-FieldLabel--right {
 	text-align: end;
-}
-
-/********* WHCM *********/
-@media (forced-colors: active) {
-	.spectrum-FieldLabel {
-		--highcontrast-fieldlabel-disabled-content-color: GrayText;
-	}
 }

@@ -363,9 +363,3 @@
 		border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
 	}
 }
-
-@media (forced-colors: active) {
-	.spectrum-Accordion {
-		--spectrum-accordion-item-focus-indicator-color: Highlight;
-	}
-}

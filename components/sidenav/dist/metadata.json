@@ -2,7 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-SideNav",
-    ".spectrum-SideNav .spectrum-Icon",
     ".spectrum-SideNav--hasIcon.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav .spectrum-SideNav-itemLink",
     ".spectrum-SideNav--hasIcon.spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav-itemLink",
     ".spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav .spectrum-SideNav-itemLink",
@@ -30,22 +29,12 @@
   "modifiers": [
     "--mod-sidenav-background-default",
     "--mod-sidenav-background-disabled",
-    "--mod-sidenav-background-hover",
-    "--mod-sidenav-background-hover-selected",
-    "--mod-sidenav-background-key-focus",
-    "--mod-sidenav-background-key-focus-selected",
     "--mod-sidenav-border-radius",
     "--mod-sidenav-bottom-to-label",
-    "--mod-sidenav-content-color-default",
-    "--mod-sidenav-content-color-default-selected",
-    "--mod-sidenav-content-color-down",
     "--mod-sidenav-content-color-down-selected",
-    "--mod-sidenav-content-color-hover",
     "--mod-sidenav-content-color-hover-selected",
     "--mod-sidenav-content-color-key-focus",
     "--mod-sidenav-content-color-key-focus-selected",
-    "--mod-sidenav-content-disabled-color",
-    "--mod-sidenav-focus-ring-color",
     "--mod-sidenav-focus-ring-gap",
     "--mod-sidenav-focus-ring-size",
     "--mod-sidenav-gap",
@@ -59,9 +48,6 @@
     "--mod-sidenav-icon-size",
     "--mod-sidenav-icon-spacing",
     "--mod-sidenav-inline-padding",
-    "--mod-sidenav-item-background-default-selected",
-    "--mod-sidenav-item-background-down",
-    "--mod-sidenav-item-background-down-selected",
     "--mod-sidenav-max-width",
     "--mod-sidenav-min-height",
     "--mod-sidenav-min-width",
@@ -181,20 +167,5 @@
     "--spectrum-workflow-icon-size-100"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-sidenav-background-hover",
-    "--highcontrast-sidenav-background-hover-selected",
-    "--highcontrast-sidenav-background-key-focus",
-    "--highcontrast-sidenav-background-key-focus-selected",
-    "--highcontrast-sidenav-content-color-default",
-    "--highcontrast-sidenav-content-color-default-selected",
-    "--highcontrast-sidenav-content-color-down",
-    "--highcontrast-sidenav-content-color-hover",
-    "--highcontrast-sidenav-content-disabled-color",
-    "--highcontrast-sidenav-focus-ring-color",
-    "--highcontrast-sidenav-item-background-default-selected",
-    "--highcontrast-sidenav-item-background-down",
-    "--highcontrast-sidenav-item-background-down-selected",
-    "--highcontrast-sidenav-top-level-font-color"
-  ]
+  "high-contrast": []
 }

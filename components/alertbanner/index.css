@@ -70,7 +70,6 @@
 	line-height: var(--mod-alert-banner-line-height, var(--spectrum-alert-banner-line-height));
 	color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
 	background: var(--mod-alert-banner-background, var(--spectrum-alert-banner-background));
-	border: var(--highcontrast-alert-banner-border-width, 0) solid var(--highcontrast-alert-banner-border-color, transparent);
 
 	&.is-open {
 		display: flex;
@@ -118,11 +117,4 @@
 .spectrum-AlertBanner-text {
 	margin-block-start: var(--mod-alert-banner-text-margin-block-start, var(--spectrum-alert-banner-text-margin-block-start));
 	margin-block-end: var(--mod-alert-banner-text-margin-block-end, var(--spectrum-alert-banner-text-margin-block-end));
-}
-
-@media (forced-colors: active) {
-	.spectrum-AlertBanner {
-		--highcontrast-alert-banner-border-color: CanvasText;
-		--highcontrast-alert-banner-border-width: var(--spectrum-border-width-100);
-	}
 }

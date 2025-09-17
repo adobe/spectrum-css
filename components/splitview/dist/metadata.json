@@ -43,10 +43,6 @@
     "--mod-splitview-gripper-border-width-vertical",
     "--mod-splitview-gripper-height",
     "--mod-splitview-gripper-width",
-    "--mod-splitview-handle-background-color",
-    "--mod-splitview-handle-background-color-down",
-    "--mod-splitview-handle-background-color-focus",
-    "--mod-splitview-handle-background-color-hover",
     "--mod-splitview-handle-width",
     "--mod-splitview-vertical-gripper-outer-width",
     "--mod-splitview-vertical-gripper-reset",
@@ -82,10 +78,5 @@
     "--spectrum-gray-800"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-splitview-handle-background-color",
-    "--highcontrast-splitview-handle-background-color-down",
-    "--highcontrast-splitview-handle-background-color-focus",
-    "--highcontrast-splitview-handle-background-color-hover"
-  ]
+  "high-contrast": []
 }

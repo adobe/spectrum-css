@@ -118,7 +118,7 @@
 	block-size: 100%;
 	inline-size: 100%;
 
-	background-color: var(--highcontrast-picker-button-background-color, var(--mod-picker-button-background-color, var(--spectrum-picker-button-background-color)));
+	background-color: var(--spectrum-picker-button-background-color);
 	border-radius: var(--mod-picker-button-border-radius, var(--spectrum-picker-button-border-radius));
 
 	padding: calc(var(--mod-picker-button-fill-padding, var(--spectrum-picker-button-fill-padding)) - var(--mod-picker-button-padding, var(--spectrum-picker-button-padding)));
@@ -140,40 +140,5 @@
 .spectrum-PickerButton-icon {
 	/* don't be small, ever */
 	flex-shrink: 0;
-	color: var(--highcontrast-picker-button-icon-color, var(--mod-picker-button-icon-color, var(--spectrum-picker-button-icon-color)));
-}
-
-@media (forced-colors: active) {
-	.spectrum-PickerButton {
-		--highcontrast-picker-button-background-color: ButtonText;
-		--highcontrast-picker-button-icon-color: ButtonFace;
-		forced-color-adjust: none; /* keeps button from flashing when hovered */
-
-		&:disabled {
-			--highcontrast-picker-button-background-color: GrayText;
-		}
-
-		&:not(:disabled):hover,
-		&:not(:disabled):active,
-		&:not(:disabled):focus-visible {
-			--highcontrast-picker-button-background-color: Highlight;
-		}
-	}
-
-	.spectrum-PickerButton--quiet {
-		--highcontrast-picker-button-background-color: Canvas;
-		--highcontrast-picker-button-icon-color: ButtonText;
-
-		&:disabled {
-			--highcontrast-picker-button-background-color: Canvas;
-			--highcontrast-picker-button-icon-color: GrayText;
-		}
-
-		&:not(:disabled):hover,
-		&:not(:disabled):active,
-		&:not(:disabled):focus-visible {
-			--highcontrast-picker-button-background-color: Canvas;
-			--highcontrast-picker-button-icon-color: Highlight;
-		}
-	}
+	color: var(--spectrum-picker-button-icon-color);
 }

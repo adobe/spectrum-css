@@ -11,18 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-@media (forced-colors: active) {
-	.spectrum-DropIndicator {
-		--highcontrast-dropindicator-color: Highlight;
-	}
-}
-
 .spectrum-DropIndicator {
 	--spectrum-dropindicator-border-size: var(--spectrum-border-width-200);
 	--spectrum-dropindicator-circle-size: 12px;
 
 	position: relative;
-	background: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-color)));
+	background: var(--spectrum-dropindicator-color);
 
 	&::before,
 	&::after {
@@ -33,7 +27,7 @@
 		border-radius: 50%;
 		border: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) solid;
 		box-sizing: border-box;
-		border-color: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-color)));
+		border-color: var(--spectrum-dropindicator-color);
 	}
 }
 

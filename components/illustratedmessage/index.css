@@ -85,7 +85,7 @@ governing permissions and limitations under the License.
 
 .spectrum-IllustratedMessage-illustration {
 	margin-block-end: var(--mod-illustrated-message-illustration-to-heading, var(--spectrum-illustrated-message-illustration-to-heading));
-	color: var(--highcontrast-illustrated-message-illustration-color, var(--mod-illustrated-message-illustration-color, var(--spectrum-illustrated-message-illustration-color)));
+	color: var(--spectrum-illustrated-message-illustration-color);
 	fill: currentColor;
 	stroke: currentColor;
 	block-size: var(--mod-illustrated-message-illustration-block-size, var(--mod-illustrated-message-illustration-size, var(--spectrum-illustrated-message-illustration-size)));
@@ -141,10 +141,4 @@ governing permissions and limitations under the License.
 
 .spectrum-IllustratedMessage-content {
 	grid-area: body;
-}
-
-@media (forced-colors: active) {
-	.spectrum-IllustratedMessage {
-		--highcontrast-illustrated-message-illustration-color: CanvasText;
-	}
 }

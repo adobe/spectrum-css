@@ -11,25 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@media (forced-colors: active) {
-	.spectrum-FloatingActionButton {
-		--highcontrast-floating-action-button-background-color: ButtonText;
-		--highcontrast-floating-action-button-background-color-hover: Highlight;
-		--highcontrast-floating-action-button-background-color-down: Highlight;
-		--highcontrast-floating-action-button-background-color-key-focus: Highlight;
-
-		--highcontrast-floating-action-button-icon-color: ButtonFace;
-		--highcontrast-floating-action-button-icon-color-hover: ButtonFace;
-		--highcontrast-floating-action-button-icon-color-down: ButtonFace;
-		--highcontrast-floating-action-button-icon-color-key-focus: ButtonFace;
-
-		&::after {
-			/* make sure focus-ring renders */
-			forced-color-adjust: none;
-		}
-	}
-}
-
 .spectrum-FloatingActionButton {
 	--spectrum-floating-action-button-size: var(--spectrum-component-height-200);
 	--spectrum-floating-action-button-icon-size: var(--spectrum-workflow-icon-size-200);
@@ -73,30 +54,30 @@
 	position: relative;
 
 	/* default is primary */
-	background-color: var(--highcontrast-floating-action-button-background-color, var(--mod-floating-action-button-background-color, var(--spectrum-floating-action-button-background-color)));
+	background-color: var(--spectrum-floating-action-button-background-color);
 
 	&:hover {
-		background-color: var(--highcontrast-floating-action-button-background-color-hover, var(--mod-floating-action-button-background-color-hover, var(--spectrum-floating-action-button-background-color-hover)));
+		background-color: var(--spectrum-floating-action-button-background-color-hover);
 
 		.spectrum-FloatingActionButton-icon {
-			color: var(--highcontrast-floating-action-button-icon-color-hover, var(--mod-floating-action-button-icon-color-hover, var(--spectrum-floating-action-button-icon-color-hover)));
+			color: var(--spectrum-floating-action-button-icon-color-hover);
 		}
 	}
 
 	&:active {
-		background-color: var(--highcontrast-floating-action-button-background-color-down, var(--mod-floating-action-button-background-color-down, var(--spectrum-floating-action-button-background-color-down)));
+		background-color: var(--spectrum-floating-action-button-background-color-down);
 
 		.spectrum-FloatingActionButton-icon {
-			color: var(--highcontrast-floating-action-button-icon-color-down, var(--mod-floating-action-button-icon-color-down, var(--spectrum-floating-action-button-icon-color-down)));
+			color: var(--spectrum-floating-action-button-icon-color-down);
 		}
 	}
 
 	&:focus-visible {
-		background-color: var(--highcontrast-floating-action-button-background-color-key-focus, var(--mod-floating-action-button-background-color-key-focus, var(--spectrum-floating-action-button-background-color-key-focus)));
+		background-color: var(--spectrum-floating-action-button-background-color-key-focus);
 		outline: 0;
 
 		.spectrum-FloatingActionButton-icon {
-			color: var(--highcontrast-floating-action-button-icon-color-key-focus, var(--mod-floating-action-button-icon-color-key-focus, var(--spectrum-floating-action-button-icon-color-key-focus)));
+			color: var(--spectrum-floating-action-button-icon-color-key-focus);
 		}
 
 		&::after {
@@ -114,5 +95,5 @@
 .spectrum-Icon.spectrum-FloatingActionButton-icon {
 	block-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
 	inline-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
-	color: var(--highcontrast-floating-action-button-icon-color, var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color)));
+	color: var(--spectrum-floating-action-button-icon-color);
 }

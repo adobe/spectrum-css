@@ -129,7 +129,7 @@
 		outline: none;
 
 		&::after {
-			box-shadow: 0 0 0 var(--mod-logic-button-focus-indicator-width, var(--spectrum-focus-indicator-thickness)) var(--highcontrast-logic-button-focus-indicator-color, var(--mod-logic-button-focus-indicator-color, var(--spectrum-focus-indicator-color)));
+			box-shadow: 0 0 0 var(--mod-logic-button-focus-indicator-width, var(--spectrum-focus-indicator-thickness)) var(--spectrum-focus-indicator-color);
 		}
 	}
 
@@ -150,56 +150,23 @@
 }
 
 .spectrum-LogicButton--and {
-	background-color: var(--highcontrast-logic-button-and-background-color, var(--mod-logic-button-and-background-color, var(--spectrum-logic-button-and-background-color)));
-	border-color: var(--highcontrast-logic-button-and-border-color, var(--mod-logic-button-and-border-color, var(--spectrum-logic-button-and-border-color)));
-	color: var(--highcontrast-logic-button-and-text-color, var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color)));
+	background-color: var(--spectrum-logic-button-and-background-color);
+	border-color: var(--spectrum-logic-button-and-border-color);
+	color: var(--spectrum-logic-button-and-text-color);
 
 	&:hover:not([disabled]) {
-		background-color: var(--highcontrast-logic-button-and-background-color-hover, var(--mod-logic-button-and-background-color-hover, var(--spectrum-logic-button-and-background-color-hover)));
-		border-color: var(--highcontrast-logic-button-and-border-color-hover, var(--mod-logic-button-and-border-color-hover, var(--spectrum-logic-button-and-border-color-hover)));
+		background-color: var(--spectrum-logic-button-and-background-color-hover);
+		border-color: var(--spectrum-logic-button-and-border-color-hover);
 	}
 }
 
 .spectrum-LogicButton--or {
-	background-color: var(--highcontrast-logic-button-or-background-color, var(--mod-logic-button-or-background-color, var(--spectrum-logic-button-or-background-color)));
-	border-color: var(--highcontrast-logic-button-or-border-color, var(--mod-logic-button-or-border-color, var(--spectrum-logic-button-or-border-color)));
-	color: var(--highcontrast-logic-button-or-text-color, var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color)));
+	background-color: var(--spectrum-logic-button-or-background-color);
+	border-color: var(--spectrum-logic-button-or-border-color);
+	color: var(--spectrum-logic-button-or-text-color);
 
 	&:hover:not([disabled]) {
-		background-color: var(--highcontrast-logic-button-or-background-color-hover, var(--mod-logic-button-or-background-color-hover, var(--spectrum-logic-button-or-background-color-hover)));
-		border-color: var(--highcontrast-logic-button-or-border-color-hover, var(--mod-logic-button-or-border-color-hover, var(--spectrum-logic-button-or-border-color-hover)));
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-LogicButton::after {
-		--highcontrast-logic-button-focus-indicator-color: Highlight;
-
-		forced-color-adjust: none;
-	}
-
-	.spectrum-LogicButton {
-		--highcontrast-logic-button-and-background-color: ButtonFace;
-		--highcontrast-logic-button-and-background-color-hover: ButtonFace;
-		--highcontrast-logic-button-and-border-color: ButtonText;
-		--highcontrast-logic-button-and-border-color-hover: Highlight;
-		--highcontrast-logic-button-and-text-color: ButtonText;
-		--highcontrast-logic-button-or-background-color: ButtonFace;
-		--highcontrast-logic-button-or-background-color-hover: ButtonFace;
-		--highcontrast-logic-button-or-border-color: ButtonText;
-		--highcontrast-logic-button-or-border-color-hover: Highlight;
-		--highcontrast-logic-button-or-text-color: ButtonText;
-
-		forced-color-adjust: none;
-
-		&:disabled,
-		&.is-disabled {
-			--highcontrast-logic-button-and-background-color: ButtonFace;
-			--highcontrast-logic-button-and-border-color: GrayText;
-			--highcontrast-logic-button-and-text-color: GrayText;
-			--highcontrast-logic-button-or-background-color: ButtonFace;
-			--highcontrast-logic-button-or-border-color: GrayText;
-			--highcontrast-logic-button-or-text-color: GrayText;
-		}
+		background-color: var(--spectrum-logic-button-or-background-color-hover);
+		border-color: var(--spectrum-logic-button-or-border-color-hover);
 	}
 }

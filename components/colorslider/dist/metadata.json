@@ -16,9 +16,6 @@
     ".spectrum-ColorSlider.is-focused"
   ],
   "modifiers": [
-    "--mod-color-slider-background-color-disabled",
-    "--mod-color-slider-border-color",
-    "--mod-color-slider-border-color-disabled",
     "--mod-color-slider-border-rounding",
     "--mod-color-slider-border-width",
     "--mod-color-slider-control-track-height",
@@ -47,9 +44,5 @@
     "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
-  "high-contrast": [
-    "--highcontrast-color-slider-background-color-disabled",
-    "--highcontrast-color-slider-border-color",
-    "--highcontrast-color-slider-border-color-disabled"
-  ]
+  "high-contrast": []
 }

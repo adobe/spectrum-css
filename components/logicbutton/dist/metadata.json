@@ -28,7 +28,6 @@
     "--mod-logic-button-and-text-color-disabled",
     "--mod-logic-button-border-radius",
     "--mod-logic-button-border-width",
-    "--mod-logic-button-focus-indicator-color",
     "--mod-logic-button-focus-indicator-gap",
     "--mod-logic-button-focus-indicator-width",
     "--mod-logic-button-font-size",
@@ -89,17 +88,5 @@
     "--mod-button-focus-indicator-gap",
     "--mod-button-font-family"
   ],
-  "high-contrast": [
-    "--highcontrast-logic-button-and-background-color",
-    "--highcontrast-logic-button-and-background-color-hover",
-    "--highcontrast-logic-button-and-border-color",
-    "--highcontrast-logic-button-and-border-color-hover",
-    "--highcontrast-logic-button-and-text-color",
-    "--highcontrast-logic-button-focus-indicator-color",
-    "--highcontrast-logic-button-or-background-color",
-    "--highcontrast-logic-button-or-background-color-hover",
-    "--highcontrast-logic-button-or-border-color",
-    "--highcontrast-logic-button-or-border-color-hover",
-    "--highcontrast-logic-button-or-text-color"
-  ]
+  "high-contrast": []
 }

@@ -31,7 +31,6 @@
   ],
   "modifiers": [
     "--mod-closebutton-align-self",
-    "--mod-closebutton-animation-duraction",
     "--mod-closebutton-animation-duration",
     "--mod-closebutton-background-color-default",
     "--mod-closebutton-background-color-down",
@@ -97,12 +96,5 @@
     "--spectrum-transparent-white-900"
   ],
   "passthroughs": ["--mod-button-font-family", "--mod-button-line-height"],
-  "high-contrast": [
-    "--highcontrast-closebutton-background-color-default",
-    "--highcontrast-closebutton-focus-indicator-color",
-    "--highcontrast-closebutton-icon-color-disabled",
-    "--highcontrast-closebutton-icon-color-down",
-    "--highcontrast-closebutton-icon-color-focus",
-    "--highcontrast-closebutton-icon-color-hover"
-  ]
+  "high-contrast": []
 }

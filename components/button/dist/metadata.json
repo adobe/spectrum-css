@@ -21,7 +21,6 @@
     ".spectrum-Button.is-pending .spectrum-Icon",
     ".spectrum-Button.is-pending .spectrum-ProgressCircle",
     ".spectrum-Button.spectrum-Button--accent",
-    ".spectrum-Button.spectrum-Button--accent .spectrum-Button-label",
     ".spectrum-Button.spectrum-Button--iconOnly",
     ".spectrum-Button.spectrum-Button--iconOnly .spectrum-Icon",
     ".spectrum-Button.spectrum-Button--negative",
@@ -46,8 +45,6 @@
     ".spectrum-Button:focus-visible",
     ".spectrum-Button:focus-visible:after",
     ".spectrum-Button:hover",
-    ".spectrum-Button:not(.spectrum-Button--primary, .spectrum-Button--negative, .spectrum-Button--secondary, .spectrum-Button--staticBlack, .spectrum-Button--staticWhite)",
-    ".spectrum-Button:not(.spectrum-Button--primary, .spectrum-Button--negative, .spectrum-Button--secondary, .spectrum-Button--staticBlack, .spectrum-Button--staticWhite) .spectrum-Button-label",
     ".spectrum-Button[pending]",
     ".spectrum-Button[pending] .spectrum-Button-label",
     ".spectrum-Button[pending] .spectrum-Icon",
@@ -214,7 +211,6 @@
     "--spectrum-neutral-content-color-down",
     "--spectrum-neutral-content-color-hover",
     "--spectrum-neutral-content-color-key-focus",
-    "--spectrum-progress-circle-thickness-medium",
     "--spectrum-sans-font-family-stack",
     "--spectrum-static-black-focus-indicator-color",
     "--spectrum-static-white-focus-indicator-color",
@@ -242,28 +238,6 @@
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
   ],
-  "passthroughs": [
-    "--mod-progress-circle-position",
-    "--mod-progress-circle-thickness",
-    "--mod-progress-circle-track-border-color",
-    "--mod-progress-circle-track-border-color-over-background"
-  ],
-  "high-contrast": [
-    "--highcontrast-button-background-color-default",
-    "--highcontrast-button-background-color-disabled",
-    "--highcontrast-button-background-color-down",
-    "--highcontrast-button-background-color-focus",
-    "--highcontrast-button-background-color-hover",
-    "--highcontrast-button-border-color-default",
-    "--highcontrast-button-border-color-disabled",
-    "--highcontrast-button-border-color-down",
-    "--highcontrast-button-border-color-focus",
-    "--highcontrast-button-border-color-hover",
-    "--highcontrast-button-content-color-default",
-    "--highcontrast-button-content-color-disabled",
-    "--highcontrast-button-content-color-down",
-    "--highcontrast-button-content-color-focus",
-    "--highcontrast-button-content-color-hover",
-    "--highcontrast-button-focus-ring-color"
-  ]
+  "passthroughs": ["--mod-progress-circle-position"],
+  "high-contrast": []
 }

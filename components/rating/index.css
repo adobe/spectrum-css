@@ -217,7 +217,7 @@
 		color: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
 
 		&.is-selected {
-			color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
+			color: var(--spectrum-rating-emphasized-icon-color-default);
 		}
 
 		/* All stars following the hovered star */
@@ -228,11 +228,11 @@
 
 	&:hover .spectrum-Rating-icon {
 		/* Make all stars selected when the component is hovered */
-		color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
+		color: var(--spectrum-rating-emphasized-icon-color-default);
 
 		&:hover {
 			/* The icon that's actually hovered is darker */
-			color: var(--highcontrast-rating-emphasized-icon-color-hover, var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover)));
+			color: var(--spectrum-rating-emphasized-icon-color-hover);
 		}
 
 		&:hover ~ .spectrum-Rating-icon {
@@ -240,7 +240,7 @@
 		}
 
 		&:active {
-			color: var(--highcontrast-rating-emphasized-icon-color-down, var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down)));
+			color: var(--spectrum-rating-emphasized-icon-color-down);
 		}
 	}
 }
@@ -248,24 +248,10 @@
 /* Disabled */
 .spectrum-Rating.is-disabled {
 	.spectrum-Rating-icon {
-		color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
+		color: var(--spectrum-rating-icon-color-disabled);
 
 		&.is-selected {
-			color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
-		}
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-Rating {
-		--highcontrast-rating-icon-color-disabled: GrayText;
-		--highcontrast-rating-emphasized-icon-color-default: Highlight;
-		--highcontrast-rating-emphasized-icon-color-hover: Highlight;
-		--highcontrast-rating-emphasized-icon-color-down: Highlight;
-		--highcontrast-rating-focus-color-outline: CanvasText;
-
-		&.is-focused {
-			outline: 1px solid var(--highcontrast-rating-focus-color-outline);
+			color: var(--spectrum-rating-icon-color-disabled);
 		}
 	}
 }

@@ -37,7 +37,6 @@
     "--mod-illustrated-message-horizontal-maximum-width",
     "--mod-illustrated-message-illustrated-inline-size",
     "--mod-illustrated-message-illustration-block-size",
-    "--mod-illustrated-message-illustration-color",
     "--mod-illustrated-message-illustration-size",
     "--mod-illustrated-message-illustration-to-heading",
     "--mod-illustrated-message-pointer-events",
@@ -97,5 +96,5 @@
     "--spectrum-title-sans-serif-font-weight"
   ],
   "passthroughs": ["--mod-buttongroup-justify-content"],
-  "high-contrast": ["--highcontrast-illustrated-message-illustration-color"]
+  "high-contrast": []
 }

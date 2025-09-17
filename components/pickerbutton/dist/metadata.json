@@ -2,11 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-PickerButton",
-    ".spectrum-PickerButton--quiet",
-    ".spectrum-PickerButton--quiet:disabled",
-    ".spectrum-PickerButton--quiet:not(:disabled):active",
-    ".spectrum-PickerButton--quiet:not(:disabled):focus-visible",
-    ".spectrum-PickerButton--quiet:not(:disabled):hover",
     ".spectrum-PickerButton--workflowicon .spectrum-PickerButton-fill",
     ".spectrum-PickerButton-fill",
     ".spectrum-PickerButton-icon",
@@ -19,10 +14,7 @@
     ".spectrum-PickerButton:active",
     ".spectrum-PickerButton:disabled",
     ".spectrum-PickerButton:focus-visible",
-    ".spectrum-PickerButton:hover",
-    ".spectrum-PickerButton:not(:disabled):active",
-    ".spectrum-PickerButton:not(:disabled):focus-visible",
-    ".spectrum-PickerButton:not(:disabled):hover"
+    ".spectrum-PickerButton:hover"
   ],
   "modifiers": [
     "--mod-picker-button-background-animation-duration",
@@ -94,8 +86,5 @@
     "--spectrum-neutral-content-color-hover"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-picker-button-background-color",
-    "--highcontrast-picker-button-icon-color"
-  ]
+  "high-contrast": []
 }

@@ -104,12 +104,12 @@
 	&:hover,
 	&:focus-visible {
 		.spectrum-AssetCard-assetContainer::after {
-			border-color: var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
+			border-color: var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover));
 		}
 
 		/* adds hover to checkbox when spectrum-AssetCard card receives hover */
 		.spectrum-Checkbox-box::before {
-			border-color: var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
+			border-color: var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover));
 		}
 	}
 
@@ -273,7 +273,7 @@
 
 	box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) var(--spectrum-assetcard-selectionindicator-box-shadow-color);
 
-	color: var(--highcontrast-assetcard-selectionindicator-color, var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color)));
+	color: var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color));
 	font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
 	font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
 
@@ -290,7 +290,7 @@
 .spectrum-AssetCard.is-drop-target,
 .spectrum-AssetCard.is-selected {
 	.spectrum-AssetCard-assetContainer::after {
-		border-color: var(--highcontrast-assetcard-border-color-selected, var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected)));
+		border-color: var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected));
 	}
 
 	.spectrum-AssetCard-selectionOverlay {
@@ -299,13 +299,13 @@
 
 	&:hover {
 		.spectrum-AssetCard-assetContainer::after {
-			border-color: var(--highcontrast-assetcard-border-color-selected-hover, var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover)));
+			border-color: var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover));
 		}
 	}
 
 	&:active {
 		.spectrum-AssetCard-assetContainer::after {
-			border-color: var(--highcontrast-assectcard-border-color-selected-down, var(--mod-assectcard-border-color-selected-down, var(--spectrum-assetcard-border-color-selected-down)));
+			border-color: var(--mod-assectcard-border-color-selected-down, var(--spectrum-assetcard-border-color-selected-down));
 		}
 	}
 }
@@ -346,7 +346,7 @@
 /* with the little order flag that shows the selection order */
 .spectrum-AssetCard--orderedSelection {
 	.spectrum-AssetCard-selectionIndicator {
-		background-color: var(--highcontrast-assetcard-selectionindicator-background-color-ordered, var(--mod-assetcard-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered)));
+		background-color: var(--mod-assetcard-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered));
 
 		.spectrum-AssetCard-checkbox {
 			display: none;
@@ -357,22 +357,6 @@
 		.spectrum-AssetCard-selectionIndicator {
 			display: flex;
 			pointer-events: all;
-		}
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-AssetCard {
-		--highcontrast-assetcard-border-color-hover: Highlight;
-		--highcontrast-assetcard-border-color-selected: Highlight;
-		--highcontrast-assetcard-border-color-selected-hover: Highlight;
-		--highcontrast-assectcard-border-color-selected-down: Highlight;
-		--highcontrast-assetcard-selectionindicator-background-color-ordered: Highlight;
-		--highcontrast-assetcard-selectionindicator-color: SelectedItemText;
-
-		.spectrum-AssetCard-selectionOrder {
-			/* prevents text backplate on displayed order number */
-			forced-color-adjust: none;
 		}
 	}
 }

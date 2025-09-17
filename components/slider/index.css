@@ -368,8 +368,8 @@
 }
 
 .spectrum-Slider-handle {
-	border-color: var(--highcontrast-slider-handle-border-color, var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color)));
-	background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
+	border-color: var(--spectrum-slider-handle-border-color);
+	background: var(--spectrum-slider-handle-background-color);
 	position: absolute;
 	inset-inline-start: 0;
 	z-index: 2;
@@ -392,12 +392,12 @@
 	outline: none;
 
 	&:hover {
-		border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
+		border-color: var(--spectrum-slider-handle-border-color-hover);
 	}
 
 	&:active,
 	&.is-dragged {
-		border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
+		border-color: var(--spectrum-slider-handle-border-color-down);
 		transform: perspective(var(--spectrum-slider-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
@@ -436,11 +436,11 @@
 	.spectrum-Slider:not(.is-disabled) &.is-focused,
 	.spectrum-Slider:not(.is-disabled) &:focus,
 	.spectrum-Slider:not(.is-disabled) &:focus-visible {
-		border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
+		border-color: var(--spectrum-slider-handle-border-color-key-focus);
 		outline: 0;
 
 		&::before {
-			box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
+			box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--spectrum-slider-handle-focus-ring-color-key-focus);
 			inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
 			block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-slider-focus-indicator-gap)) * 2);
 		}
@@ -570,7 +570,7 @@
 		justify-content: center;
 		font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
 		line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
-		color: var(--highcontrast-slider-label-text-color, var(--mod-slider-tick-label-color, var(--spectrum-slider-tick-label-color)));
+		color: var(--spectrum-slider-tick-label-color);
 	}
 
 	&:first-of-type,
@@ -627,7 +627,7 @@
 /* Applies to the filled-offset variant to keep track the same color for highcontrast mode */
 .spectrum-Slider-track {
 	&::before {
-		background: var(--highcontrast-slider-track-color-static, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
+		background: var(--spectrum-slider-track-color);
 	}
 
 	/* Styles below are applied to the sibling spectrum-Slider-track when filled-offset variant is activated */
@@ -640,25 +640,25 @@
 /* All variants other than filled-offset get a new track color for highcontrast mode */
 .spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)) {
 	&::before {
-		background: var(--highcontrast-slider-track-color, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
+		background: var(--spectrum-slider-track-color);
 	}
 }
 
 .spectrum-Slider-labelContainer {
-	color: var(--highcontrast-slider-label-text-color, var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color)));
+	color: var(--spectrum-slider-label-text-color);
 }
 
 .spectrum-Slider--filled {
 	.spectrum-Slider-track:first-child {
 		&::before {
-			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+			background: var(--spectrum-slider-track-fill-color);
 		}
 	}
 }
 
 .spectrum-Slider-fill {
 	&::before {
-		background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+		background: var(--spectrum-slider-track-fill-color);
 		border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
 		border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
 	}
@@ -669,7 +669,7 @@
 	&.spectrum-Slider--range .spectrum-Slider-track:not(:first-of-type, :last-of-type),
 	.spectrum-Slider-fill {
 		&::before {
-			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-emphasized-track-fill-color, var(--spectrum-slider-emphasized-track-fill-color)));
+			background: var(--spectrum-slider-emphasized-track-fill-color);
 		}
 	}
 
@@ -680,11 +680,11 @@
 
 .spectrum-Slider-ramp {
 	.spectrum-Slider-ramp-track {
-		fill: var(--highcontrast-slider-ramp-track-color, var(--mod-slider-ramp-track-color, var(--spectrum-slider-track-color)));
+		fill: var(--spectrum-slider-track-color);
 	}
 
 	.spectrum-Slider-ramp-track-fill {
-		fill: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-ramp-track-fill-color, var(--spectrum-slider-track-fill-color)));
+		fill: var(--spectrum-slider-track-fill-color);
 	}
 }
 
@@ -695,7 +695,7 @@
 .spectrum-Slider--emphasized {
 	.spectrum-Slider-tick:nth-child(-n + 4) {
 		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-filled-track, var(--mod-slider-emphasized-tick-mark-color, var(--spectrum-slider-emphasized-tick-mark-color)));
+			background-color: var(--spectrum-slider-emphasized-tick-mark-color);
 		}
 	}
 }
@@ -704,7 +704,7 @@
 .spectrum-Slider--offset {
 	&:not(.spectrum-Slider--range, .is-disabled, .spectrum-Slider--emphasized) .spectrum-Slider-tick:nth-child(-n + 4) {
 		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-filled-track, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
+			background-color: var(--spectrum-slider-tick-mark-color-filled-track);
 		}
 	}
 }
@@ -714,7 +714,7 @@
 	.spectrum-Slider-tick:nth-child(4),
 	.spectrum-Slider-tick:nth-child(5) {
 		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-filled-track, var(--mod-slider-tick-mark-color-filled-track, var(--spectrum-slider-tick-mark-color-filled-track)));
+			background-color: var(--spectrum-slider-tick-mark-color-filled-track);
 		}
 	}
 }
@@ -722,13 +722,13 @@
 .spectrum-Slider--range {
 	.spectrum-Slider-track {
 		&:not(:first-of-type, :last-of-type)::before {
-			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+			background: var(--spectrum-slider-track-fill-color);
 			border-start-end-radius: 0;
 			border-end-end-radius: 0;
 		}
 
 		&:first-of-type::before {
-			background: var(--highcontrast-slider-track-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-color)));
+			background: var(--spectrum-slider-track-color);
 		}
 	}
 }
@@ -736,7 +736,7 @@
 .spectrum-Slider-tick,
 .spectrum-Slider.is-disabled .spectrum-Slider-tick {
 	&::after {
-		background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
+		background-color: var(--spectrum-slider-tick-mark-color);
 	}
 }
 
@@ -748,59 +748,59 @@
 	}
 
 	.spectrum-Slider-tickLabel {
-		color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
+		color: var(--spectrum-slider-label-text-color-disabled);
 	}
 
 	.spectrum-Slider-labelContainer {
-		color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
+		color: var(--spectrum-slider-label-text-color-disabled);
 	}
 
 	.spectrum-Slider-handle {
-		border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled)));
-		background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-background-color-disabled)));
+		border-color: var(--spectrum-slider-handle-border-color-disabled);
+		background: var(--spectrum-slider-handle-background-color-disabled);
 		cursor: default;
 		pointer-events: none;
 
 		&:hover,
 		&:active {
-			border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-disabled-border-color, var(--spectrum-slider-handle-border-color-disabled)));
-			background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
+			border-color: var(--spectrum-slider-handle-border-color-disabled);
+			background: var(--spectrum-slider-handle-background-color-disabled);
 		}
 	}
 
 	.spectrum-Slider-track {
 		&::before {
-			background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
+			background: var(--spectrum-slider-track-color-disabled);
 		}
 	}
 
 	&.spectrum-Slider--filled {
 		.spectrum-Slider-track:first-child::before {
-			background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
+			background: var(--spectrum-slider-track-fill-color-disabled);
 		}
 	}
 
 	.spectrum-Slider-fill {
 		&::before {
-			background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
+			background: var(--spectrum-slider-track-fill-color-disabled);
 		}
 	}
 
 	.spectrum-Slider-ramp {
 		path {
-			fill: var(--highcontrast-slider-ramp-track-color-disabled, var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled)));
+			fill: var(--spectrum-slider-ramp-track-color-disabled);
 		}
 	}
 
 	.spectrum-Slider-tick {
 		&::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
+			background-color: var(--spectrum-slider-tick-mark-color);
 		}
 	}
 
 	&.spectrum-Slider--range {
 		.spectrum-Slider-track:not(:first-of-type, :last-of-type)::before {
-			background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
+			background: var(--spectrum-slider-track-color-disabled);
 		}
 	}
 }
@@ -813,60 +813,4 @@
 	block-size: calc(var(--spectrum-slider-precision-handle-height) + var(--spectrum-slider-focus-indicator-gap) * 2);
 	inline-size: calc(var(--spectrum-slider-precision-handle-width) + var(--spectrum-slider-focus-indicator-gap) * 2);
 	transition: none;
-}
-
-@media (forced-colors: active) {
-	.spectrum-Slider {
-		--highcontrast-slider-track-color: ButtonText;
-		--highcontrast-slider-track-color-disabled: GrayText;
-		--highcontrast-slider-track-color-static: ButtonText;
-		--highcontrast-slider-track-fill-color-disabled: GrayText;
-		--highcontrast-slider-filled-track-fill-color: Highlight;
-
-		--highcontrast-slider-ramp-track-color: ButtonText;
-		--highcontrast-slider-ramp-track-color-disabled: GrayText;
-		--highcontrast-slider-tick-mark-color: ButtonText;
-		--highcontrast-slider-tick-mark-color-disabled: GrayText;
-		--highcontrast-slider-tick-mark-color-filled-track: Highlight;
-
-		--highcontrast-slider-handle-border-color: ButtonText;
-		--highcontrast-slider-handle-border-color-hover: Highlight;
-		--highcontrast-slider-handle-border-color-down: Highlight;
-		--highcontrast-slider-handle-border-color-key-focus: Highlight;
-		--highcontrast-slider-handle-border-color-disabled: GrayText;
-		--highcontrast-slider-handle-focus-ring-color-key-focus: CanvasText;
-		--highcontrast-slider-handle-background-color: ButtonFace;
-		--highcontrast-slider-handle-disabled-background-color: Canvas;
-		--highcontrast-slider-label-text-color: CanvasText;
-		--highcontrast-slider-label-text-color-disabled: GrayText;
-
-		.spectrum-Slider-handle.is-focused::before {
-			forced-color-adjust: none;
-		}
-
-		&.spectrum-Slider--ramp .spectrum-Slider-handle {
-			/* forced-color-adjust is required to ensure the contrasting "circle" around the ramp handle (created by box-shadow) is visible. */
-			forced-color-adjust: none;
-		}
-
-		/* Slider control hover and focus colors for high contrast mode */
-		/* Filled and range variants are excluded since the filled portion of the track uses Highlight */
-		&:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) {
-			.spectrum-Slider-controls:hover,
-			.spectrum-Slider-controls:active,
-			.spectrum-Slider-controls:focus-within,
-			.spectrum-Slider-controls.is-focused {
-				--highcontrast-slider-track-color: Highlight;
-				--highcontrast-slider-handle-border-color: Highlight;
-			}
-		}
-
-		/* Slider handle turns transparent in high contrast mode for ramp */
-		&.is-disabled {
-			.spectrum-Slider-ramp + .spectrum-Slider-handle {
-				fill: ButtonFace;
-				background-color: ButtonFace;
-			}
-		}
-	}
 }

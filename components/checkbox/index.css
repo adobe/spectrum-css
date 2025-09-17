@@ -131,7 +131,7 @@
 }
 
 .spectrum-Checkbox {
-	color: var(--highcontrast-checkbox-content-color-default, var(--mod-checkbox-content-color-default, var(--spectrum-checkbox-content-color-default)));
+	color: var(--mod-checkbox-content-color-default, var(--spectrum-checkbox-content-color-default));
 	display: inline-flex;
 	align-items: flex-start;
 	position: relative;
@@ -141,29 +141,29 @@
 
 	&:hover {
 		.spectrum-Checkbox-box::before {
-			border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-control-color-hover, var(--spectrum-checkbox-control-color-hover)));
+			border-color: var(--mod-checkbox-control-color-hover, var(--spectrum-checkbox-control-color-hover));
 		}
 
 		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box::before {
-			border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-control-selected-color-hover, var(--spectrum-checkbox-control-selected-color-hover)));
+			border-color: var(--mod-checkbox-control-selected-color-hover, var(--spectrum-checkbox-control-selected-color-hover));
 		}
 
 		.spectrum-Checkbox-label {
-			color: var(--highcontrast-checkbox-content-color-hover, var(--mod-checkbox-content-color-hover, var(--spectrum-checkbox-content-color-hover)));
+			color: var(--mod-checkbox-content-color-hover, var(--spectrum-checkbox-content-color-hover));
 		}
 	}
 
 	&:active {
 		.spectrum-Checkbox-box::before {
-			border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-control-color-down, var(--spectrum-checkbox-control-color-down)));
+			border-color: var(--mod-checkbox-control-color-down, var(--spectrum-checkbox-control-color-down));
 		}
 
 		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box::before {
-			border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-control-selected-color-down, var(--spectrum-checkbox-control-selected-color-down)));
+			border-color: var(--mod-checkbox-control-selected-color-down, var(--spectrum-checkbox-control-selected-color-down));
 		}
 
 		.spectrum-Checkbox-label {
-			color: var(--highcontrast-checkbox-content-color-down, var(--mod-checkbox-content-color-down, var(--spectrum-checkbox-content-color-down)));
+			color: var(--mod-checkbox-content-color-down, var(--spectrum-checkbox-content-color-down));
 		}
 	}
 
@@ -176,7 +176,7 @@
 
 	.spectrum-Checkbox-checkmark,
 	.spectrum-Checkbox-partialCheckmark {
-		color: var(--highcontrast-checkbox-background-color-default, var(--spectrum-checkbox-checkmark-color));
+		color: var(--spectrum-checkbox-checkmark-color);
 		opacity: 0;
 		transform: scale(0);
 
@@ -239,8 +239,8 @@
 		/* Selected */
 		&:checked + .spectrum-Checkbox-box {
 			&::before {
-				border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default)));
-				background-color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
+				border-color: var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default));
+				background-color: var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color));
 				border-width: var(--mod-checkbox-selected-border-width, var(--spectrum-checkbox-selected-border-width));
 			}
 
@@ -253,17 +253,17 @@
 		/* Focus */
 		&:focus-visible + .spectrum-Checkbox-box {
 			&::before {
-				border-color: var(--highcontrast-checkbox-color-focus, var(--mod-checkbox-control-color-focus, var(--spectrum-checkbox-control-color-focus)));
+				border-color: var(--mod-checkbox-control-color-focus, var(--spectrum-checkbox-control-color-focus));
 			}
 
 			&::after {
-				box-shadow: 0 0 0 var(--mod-checkbox-focus-indicator-thickness, var(--spectrum-checkbox-focus-indicator-thickness)) var(--highcontrast-checkbox-focus-indicator-color, var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color)));
+				box-shadow: 0 0 0 var(--mod-checkbox-focus-indicator-thickness, var(--spectrum-checkbox-focus-indicator-thickness)) var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color));
 				margin: calc(var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap)) * -1);
 			}
 		}
 
 		&:focus-visible + .spectrum-Checkbox-label {
-			color: var(--highcontrast-checkbox-content-color-focus, var(--mod-checkbox-content-color-focus, var(--spectrum-checkbox-content-color-focus)));
+			color: var(--mod-checkbox-content-color-focus, var(--spectrum-checkbox-content-color-focus));
 		}
 	}
 
@@ -283,8 +283,8 @@
 		flex-shrink: 0;
 
 		&::before {
-			border-color: var(--highcontrast-checkbox-color-default, var(--mod-checkbox-control-color-default, var(--spectrum-checkbox-control-color-default)));
-			background-color: var(--highcontrast-checkbox-background-color-default, var(--spectrum-checkbox-background-color));
+			border-color: var(--mod-checkbox-control-color-default, var(--spectrum-checkbox-control-color-default));
+			background-color: var(--spectrum-checkbox-background-color);
 			display: block;
 			z-index: 0;
 			content: "";
@@ -328,7 +328,7 @@
 		.spectrum-Checkbox-box,
 		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
 			&::before {
-				border-color: var(--highcontrast-checkbox-highlight-color-default);
+				border-color: var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default));
 				border-width: var(--mod-checkbox-selected-border-width, var(--spectrum-checkbox-selected-border-width));
 			}
 
@@ -350,13 +350,13 @@
 	.spectrum-Checkbox-box,
 	.spectrum-Checkbox-input:checked:not(:disabled) + .spectrum-Checkbox-box {
 		&::before {
-			border-color: var(--highcontrast-checkbox-highlight-color-default, var(--spectrum-checkbox-control-selected-color-default));
+			border-color: var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default));
 		}
 	}
 
 	.spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
 		&::before {
-			border-color: var(--highcontrast-checkbox-color-focus, var(--spectrum-checkbox-control-color-focus));
+			border-color: var(--spectrum-checkbox-control-color-focus);
 		}
 	}
 
@@ -364,7 +364,7 @@
 		.spectrum-Checkbox-box,
 		.spectrum-Checkbox-input:checked:not(:disabled) + .spectrum-Checkbox-box {
 			&::before {
-				border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--spectrum-checkbox-control-selected-color-hover));
+				border-color: var(--mod-checkbox-control-selected-color-hover, var(--spectrum-checkbox-control-selected-color-hover));
 			}
 		}
 	}
@@ -375,13 +375,13 @@
 	.spectrum-Checkbox-box,
 	.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
 		&::before {
-			border-color: var(--highcontrast-checkbox-highlight-color-default, var(--spectrum-checkbox-control-selected-color-default));
+			border-color: var(--mod-checkbox-control-selected-color-default, var(--spectrum-checkbox-control-selected-color-default));
 		}
 	}
 
 	&:not(.is-invalid) .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box {
 		&::before {
-			border-color: var(--highcontrast-checkbox-color-focus, var(--spectrum-checkbox-emphasized-color-focus));
+			border-color: var(--spectrum-checkbox-emphasized-color-focus);
 		}
 	}
 
@@ -389,7 +389,7 @@
 		.spectrum-Checkbox-box,
 		.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
 			&::before {
-				border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--spectrum-checkbox-control-selected-color-hover));
+				border-color: var(--spectrum-checkbox-control-selected-color-hover);
 			}
 		}
 	}
@@ -398,7 +398,7 @@
 .spectrum-Checkbox--emphasized {
 	&:not(.is-invalid) .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box {
 		&::before {
-			--mod-checkbox-control-color-focus: var(--highcontrast-checkbox-color-focus, var(--spectrum-checkbox-emphasized-color-focus));
+			--mod-checkbox-control-color-focus: var(--spectrum-checkbox-emphasized-color-focus);
 		}
 	}
 }
@@ -408,51 +408,18 @@
 .spectrum-Checkbox .spectrum-Checkbox-input:checked {
 	&:disabled + .spectrum-Checkbox-box {
 		&::before {
-			border-color: var(--highcontrast-checkbox-disabled-color-default, var(--mod-checkbox-control-color-disabled, var(--spectrum-checkbox-control-color-disabled)));
-			background-color: var(--highcontrast-checkbox-background-color-default, var(--spectrum-checkbox-background-color));
+			border-color: var(--mod-checkbox-control-color-disabled, var(--spectrum-checkbox-control-color-disabled));
+			background-color: var(--spectrum-checkbox-background-color);
 		}
 	}
 
 	&:hover:disabled + .spectrum-Checkbox-box {
 		&::before {
-			border-color: var(--highcontrast-checkbox-disabled-color-default, var(--mod-checkbox-control-color-disabled, var(--spectrum-checkbox-control-color-disabled)));
+			border-color: var(--mod-checkbox-control-color-disabled, var(--spectrum-checkbox-control-color-disabled));
 		}
 	}
 
 	&:disabled ~ .spectrum-Checkbox-label {
-		color: var(--highcontrast-checkbox-disabled-color-default, var(--mod-checkbox-content-color-disabled, var(--spectrum-checkbox-control-color-disabled)));
-	}
-}
-
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Checkbox-input {
-		&:focus-visible + .spectrum-Checkbox-box {
-			forced-color-adjust: none;
-			outline-color: var(--highcontrast-checkbox-focus-indicator-color, var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color)));
-			outline-offset: var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap));
-			outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
-		}
-	}
-
-	.spectrum-Checkbox {
-		/* Label Text */
-		--highcontrast-checkbox-content-color-default: CanvasText;
-		--highcontrast-checkbox-content-color-hover: CanvasText;
-		--highcontrast-checkbox-content-color-down: CanvasText;
-		--highcontrast-checkbox-content-color-focus: CanvasText;
-
-		/* Checkbox box */
-		--highcontrast-checkbox-background-color-default: Canvas;
-
-		--highcontrast-checkbox-color-default: ButtonText;
-		--highcontrast-checkbox-color-focus: Highlight;
-
-		--highcontrast-checkbox-highlight-color-default: Highlight;
-		--highcontrast-checkbox-highlight-color-hover: Highlight;
-		--highcontrast-checkbox-highlight-color-down: Highlight;
-
-		--highcontrast-checkbox-disabled-color-default: GrayText;
-		--highcontrast-checkbox-focus-indicator-color: CanvasText;
+		color: var(--mod-checkbox-content-color-disabled, var(--spectrum-checkbox-control-color-disabled));
 	}
 }

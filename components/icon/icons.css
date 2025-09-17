@@ -11,8 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-Icon,
-.spectrum-UIIcon {
+.spectrum-Icon {
 	/* stylelint-disable-next-line custom-property-pattern -- variable name defined by A4U output */
 	--iconPrimary: var(--mod-icon-color, currentColor);
 
@@ -35,8 +34,7 @@
 }
 
 @media (forced-colors: active) {
-	.spectrum-Icon,
-	.spectrum-UIIcon {
+	.spectrum-Icon {
 		/* Automatically adjust the SVG to pick up the text color for High Contrast mode */
 		forced-color-adjust: auto;
 	}

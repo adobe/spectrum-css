@@ -20,17 +20,14 @@
     ".spectrum-NumberField.is-focused:not(.is-disabled, .is-readOnly):hover",
     ".spectrum-NumberField.is-hover:not(.is-disabled)",
     ".spectrum-NumberField.is-hover:not(.is-disabled):focus",
-    ".spectrum-NumberField.is-hover:not(.is-disabled):focus-visible",
     ".spectrum-NumberField.is-hover:not(.is-disabled):focus-within",
     ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly)",
     ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus",
     ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-visible",
     ".spectrum-NumberField.is-hover:not(.is-disabled, .is-readOnly):focus-within",
     ".spectrum-NumberField.is-invalid",
-    ".spectrum-NumberField.is-keyboardFocused.is-hover:not(.is-disabled)",
     ".spectrum-NumberField.is-keyboardFocused.is-hover:not(.is-disabled, .is-readOnly)",
     ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled)",
-    ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled):hover",
     ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly)",
     ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly) .spectrum-NumberField-inputs",
     ".spectrum-NumberField.is-keyboardFocused:not(.is-disabled, .is-readOnly):hover",
@@ -54,7 +51,6 @@
     ".spectrum-NumberField:lang(zh)",
     ".spectrum-NumberField:not(.is-disabled):focus",
     ".spectrum-NumberField:not(.is-disabled):focus-visible",
-    ".spectrum-NumberField:not(.is-disabled):focus-visible:hover",
     ".spectrum-NumberField:not(.is-disabled):focus-within",
     ".spectrum-NumberField:not(.is-disabled):focus-within:hover",
     ".spectrum-NumberField:not(.is-disabled):focus:hover",
@@ -90,7 +86,6 @@
     "--mod-numberfield-border-radius",
     "--mod-numberfield-border-width",
     "--mod-numberfield-button-inline-offset",
-    "--mod-numberfield-focus-indicator-color",
     "--mod-numberfield-focus-indicator-gap",
     "--mod-numberfield-focus-indicator-width",
     "--mod-numberfield-font-family",
@@ -268,14 +263,5 @@
     "--mod-textfield-text-color-focus",
     "--mod-textfield-width"
   ],
-  "high-contrast": [
-    "--highcontrast-numberfield-background-color",
-    "--highcontrast-numberfield-border-color",
-    "--highcontrast-numberfield-border-color-focus",
-    "--highcontrast-numberfield-border-color-focus-hover",
-    "--highcontrast-numberfield-border-color-hover",
-    "--highcontrast-numberfield-border-color-keyboard-focus",
-    "--highcontrast-numberfield-focus-indicator-color",
-    "--highcontrast-textfield-border-color"
-  ]
+  "high-contrast": []
 }

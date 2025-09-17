@@ -112,7 +112,7 @@
 	position: relative;
 	margin-block: var(--mod-breadcrumbs-icon-spacing-block, var(--spectrum-breadcrumbs-icon-spacing-block));
 	opacity: 1;
-	color: var(--highcontrast-breadcrumbs-separator-color, var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color)));
+	color: var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color));
 
 	&:dir(rtl) {
 		transform: scaleX(-1);
@@ -147,10 +147,10 @@
 	> .spectrum-ActionButton {
 		margin-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
 		margin-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
-		color: var(--highcontrast-breadcrumbs-action-button-color, var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color)));
+		color: var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color));
 
 		&:disabled {
-			color: var(--highcontrast-breadcrumbs-action-button-color-disabled, var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled)));
+			color: var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled));
 		}
 	}
 
@@ -174,7 +174,7 @@
 	border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius)); /* placeholder for token */
 	outline: none;
 	text-decoration: none;
-	color: var(--highcontrast-breadcrumbs-text-color, var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color)));
+	color: var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color));
 
 	/* Create new stacking context for negative z-index dragged pseudo element. */
 	isolation: isolate;
@@ -185,12 +185,12 @@
 
 	&.is-disabled,
 	&[aria-disabled="true"] {
-		color: var(--highcontrast-breadcrumbs-text-color-disabled, var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled)));
+		color: var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled));
 	}
 
 	/* Breadcrumbs title (current item) */
 	.spectrum-Breadcrumbs-item:last-of-type & {
-		color: var(--highcontrast-breadcrumbs-text-color-current, var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current)));
+		color: var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current));
 		margin-block-start: var(--mod-breadcrumbs-title-spacing-block-start, var(--spectrum-breadcrumbs-title-spacing-block-start));
 		margin-block-end: var(--mod-breadcrumbs-title-spacing-block-end, var(--spectrum-breadcrumbs-title-spacing-block-end));
 	}
@@ -232,7 +232,7 @@
 	border-width: var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness));
 	border-style: solid;
 	border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius));
-	border-color: var(--highcontrast-breadcrumbs-focus-indicator-color, var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color)));
+	border-color: var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color));
 }
 
 .spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink::before {
@@ -255,17 +255,5 @@
 		> .spectrum-Breadcrumbs-itemLink {
 			margin-inline-start: var(--mod-breadcrumbs-inline-start, var(--spectrum-breadcrumbs-inline-start));
 		}
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-Breadcrumbs {
-		--highcontrast-breadcrumbs-text-color: LinkText;
-		--highcontrast-breadcrumbs-text-color-current: CanvasText;
-		--highcontrast-breadcrumbs-text-color-disabled: GrayText;
-		--highcontrast-breadcrumbs-separator-color: CanvasText;
-		--highcontrast-breadcrumbs-action-button-color: LinkText;
-		--highcontrast-breadcrumbs-action-button-color-disabled: GrayText;
-		--highcontrast-breadcrumbs-focus-indicator-color: CanvasText;
 	}
 }

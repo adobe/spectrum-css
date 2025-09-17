@@ -12,7 +12,6 @@
     ".spectrum-Divider:not(.spectrum-Divider.spectrum-Divider--vertical)"
   ],
   "modifiers": [
-    "--mod-divider-background-color",
     "--mod-divider-block-minimum-size",
     "--mod-divider-inline-minimum-size",
     "--mod-divider-thickness",
@@ -40,5 +39,5 @@
     "--spectrum-transparent-white-800"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-divider-background-color"]
+  "high-contrast": []
 }

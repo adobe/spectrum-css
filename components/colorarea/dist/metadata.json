@@ -8,14 +8,11 @@
     ".spectrum-ColorArea-slider",
     ".spectrum-ColorArea.is-disabled",
     ".spectrum-ColorArea.is-disabled .spectrum-ColorArea-gradient",
-    ".spectrum-ColorArea.is-focused",
-    ".spectrum-ColorHandle-color"
+    ".spectrum-ColorArea.is-focused"
   ],
   "modifiers": [
-    "--mod-colorarea-border-color",
     "--mod-colorarea-border-radius",
     "--mod-colorarea-border-width",
-    "--mod-colorarea-disabled-background-color",
     "--mod-colorarea-height",
     "--mod-colorarea-min-height",
     "--mod-colorarea-min-width",
@@ -44,9 +41,5 @@
     "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-colorarea-border-color",
-    "--highcontrast-colorarea-border-color-disabled",
-    "--highcontrast-colorarea-fill-color-disabled"
-  ]
+  "high-contrast": []
 }

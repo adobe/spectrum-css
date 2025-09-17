@@ -253,9 +253,6 @@
     "--mod-overlay-animation-duration",
     "--mod-overlay-animation-duration-opened",
     "--mod-tooltip-animation-distance",
-    "--mod-tooltip-background-color-default",
-    "--mod-tooltip-background-color-informative",
-    "--mod-tooltip-background-color-negative",
     "--mod-tooltip-border-radius",
     "--mod-tooltip-cjk-line-height",
     "--mod-tooltip-content-color",
@@ -320,8 +317,5 @@
     "--spectrum-spacing-75"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-tooltip-background-color-default",
-    "--highcontrast-tooltip-border-width"
-  ]
+  "high-contrast": []
 }

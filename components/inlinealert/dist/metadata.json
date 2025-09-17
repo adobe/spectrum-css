@@ -27,17 +27,12 @@
     ".spectrum-InLineAlert.spectrum-InLineAlert--subtle"
   ],
   "modifiers": [
-    "--mod-inlinealert-background-color",
-    "--mod-inlinealert-border-and-icon-color",
     "--mod-inlinealert-border-radius",
-    "--mod-inlinealert-border-width",
-    "--mod-inlinealert-content-color",
     "--mod-inlinealert-content-font-family",
     "--mod-inlinealert-content-font-size",
     "--mod-inlinealert-content-font-style",
     "--mod-inlinealert-content-font-weight",
     "--mod-inlinealert-content-line-height",
-    "--mod-inlinealert-header-color",
     "--mod-inlinealert-header-min-block-size",
     "--mod-inlinealert-heading-font-family",
     "--mod-inlinealert-heading-font-size",
@@ -116,11 +111,5 @@
     "--spectrum-workflow-icon-size-100"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-inlinealert-background-color",
-    "--highcontrast-inlinealert-border-and-icon-color",
-    "--highcontrast-inlinealert-border-width",
-    "--highcontrast-inlinealert-content-color",
-    "--highcontrast-inlinealert-header-color"
-  ]
+  "high-contrast": []
 }

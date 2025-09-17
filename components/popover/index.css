@@ -74,7 +74,7 @@
 
 	border-style: solid;
 	border-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
-	border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency)));
+	border-color: var(--spectrum-popover-border-color-with-transparency);
 
 	border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 
@@ -94,7 +94,7 @@
 				stroke-linecap: square;
 				stroke-linejoin: miter;
 				fill: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
-				stroke: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color-with-transparency)));
+				stroke: var(--spectrum-popover-border-color-with-transparency);
 				stroke-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 			}
 		}
@@ -436,12 +436,5 @@
 				transform: scaleX(1);
 			}
 		}
-	}
-}
-
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Popover {
-		--highcontrast-popover-border-color: CanvasText;
 	}
 }

@@ -64,17 +64,10 @@
 /********* Disabled state *********/
 .spectrum-Form-itemLabel {
 	&.is-disabled {
-		color: var(--highcontrast-form-item-disabled-content-color, var(--mod-disabled-content-color, var(--spectrum-form-item-disabled-content-color)));
+		color: var(--spectrum-form-item-disabled-content-color);
 
 		.spectrum-FieldLabel-requiredIcon {
-			color: var(--highcontrast-form-item-disabled-content-color, var(--mod-disabled-content-color, var(--spectrum-form-item-disabled-content-color)));
+			color: var(--spectrum-form-item-disabled-content-color);
 		}
-	}
-}
-
-/********* WHCM *********/
-@media (forced-colors: active) {
-	.spectrum-Form {
-		--highcontrast-form-item-disabled-content-color: GrayText;
 	}
 }

@@ -16,27 +16,27 @@
 
 	/* border color - transparent unless modified or high contrast mode */
 	--spectrum-tag-border-width: var(--spectrum-border-width-100);
-	--spectrum-tag-border-color: var(--highcontrast-tag-border-color, var(--mod-tag-border-color, transparent));
-	--spectrum-tag-border-color-hover: var(--highcontrast-tag-border-color-hover, var(--mod-tag-border-color-hover, transparent));
-	--spectrum-tag-border-color-active: var(--highcontrast-tag-border-color-active, var(--mod-tag-border-color-active, transparent));
-	--spectrum-tag-border-color-focus: var(--highcontrast-tag-border-color-focus, var(--mod-tag-border-color-focus, transparent));
+	--spectrum-tag-border-color: transparent;
+	--spectrum-tag-border-color-hover: transparent;
+	--spectrum-tag-border-color-active: transparent;
+	--spectrum-tag-border-color-focus: transparent;
 
 	/* background color */
-	--spectrum-tag-background-color: var(--highcontrast-tag-background-color, var(--mod-tag-background-color, var(--spectrum-gray-100)));
-	--spectrum-tag-background-color-hover: var(--highcontrast-tag-background-color-hover, var(--mod-tag-background-color-hover, var(--spectrum-gray-200)));
-	--spectrum-tag-background-color-active: var(--highcontrast-tag-background-color-active, var(--mod-tag-background-color-active, var(--spectrum-gray-200)));
-	--spectrum-tag-background-color-focus: var(--highcontrast-tag-background-color-focus, var(--mod-tag-background-color-focus, var(--spectrum-gray-200)));
+	--spectrum-tag-background-color: var(--spectrum-gray-100);
+	--spectrum-tag-background-color-hover: var(--spectrum-gray-200);
+	--spectrum-tag-background-color-active: var(--spectrum-gray-200);
+	--spectrum-tag-background-color-focus: var(--spectrum-gray-200);
 
 	/* content color */
-	--spectrum-tag-content-color: var(--highcontrast-tag-content-color, var(--mod-tag-content-color, var(--spectrum-neutral-content-color-default)));
-	--spectrum-tag-content-color-hover: var(--highcontrast-tag-content-color-hover, var(--mod-tag-content-color-hover, var(--spectrum-neutral-content-color-hover)));
-	--spectrum-tag-content-color-active: var(--highcontrast-tag-content-color-active, var(--mod-tag-content-color-active, var(--spectrum-neutral-content-color-down)));
-	--spectrum-tag-content-color-focus: var(--highcontrast-tag-content-color-focus, var(--mod-tag-content-color-focus, var(--spectrum-neutral-content-color-key-focus)));
+	--spectrum-tag-content-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-tag-content-color-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-tag-content-color-active: var(--spectrum-neutral-content-color-down);
+	--spectrum-tag-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
 	/* focus ring */
 	--spectrum-tag-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-tag-focus-ring-gap: var(--spectrum-focus-indicator-gap);
-	--spectrum-tag-focus-ring-color: var(--highcontrast-tag-focus-ring-color, var(--mod-tag-focus-ring-color, var(--spectrum-focus-indicator-color)));
+	--spectrum-tag-focus-ring-color: var(--spectrum-focus-indicator-color);
 
 	/* label */
 	--spectrum-tag-label-line-height: var(--spectrum-line-height-100);
@@ -97,45 +97,45 @@
 	}
 
 	&.is-selected:not(.is-disabled, .is-readOnly) {
-		--spectrum-tag-border-color: var(--highcontrast-tag-border-color-selected, var(--mod-tag-border-color-selected, transparent));
-		--spectrum-tag-background-color: var(--highcontrast-tag-background-color-selected, var(--mod-tag-background-color-selected, var(--spectrum-neutral-background-color-default)));
-		--spectrum-tag-content-color: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-gray-25)));
+		--spectrum-tag-border-color: transparent;
+		--spectrum-tag-background-color: var(--spectrum-neutral-background-color-default);
+		--spectrum-tag-content-color: var(--spectrum-gray-25);
 
-		--spectrum-tag-border-color-hover: var(--highcontrast-tag-border-color-selected, var(--mod-tag-border-color-selected, transparent));
-		--spectrum-tag-background-color-hover: var(--highcontrast-tag-background-color-selected-hover, var(--mod-tag-background-color-selected-hover, var(--spectrum-neutral-background-color-hover)));
-		--spectrum-tag-content-color-hover: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-gray-25)));
+		--spectrum-tag-border-color-hover: transparent;
+		--spectrum-tag-background-color-hover: var(--spectrum-neutral-background-color-hover);
+		--spectrum-tag-content-color-hover: var(--spectrum-gray-25);
 
-		--spectrum-tag-border-color-active: var(--highcontrast-tag-border-color-selected, var(--mod-tag-border-color-selected, transparent));
-		--spectrum-tag-background-color-active: var(--highcontrast-tag-background-color-selected-active, var(--mod-tag-background-color-selected-active, var(--spectrum-neutral-background-color-down)));
-		--spectrum-tag-content-color-active: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-gray-25)));
+		--spectrum-tag-border-color-active: transparent;
+		--spectrum-tag-background-color-active: var(--spectrum-neutral-background-color-down);
+		--spectrum-tag-content-color-active: var(--spectrum-gray-25);
 
-		--spectrum-tag-border-color-focus: var(--highcontrast-tag-border-color-selected, var(--mod-tag-border-color-selected, transparent));
-		--spectrum-tag-background-color-focus: var(--highcontrast-tag-background-color-selected-focus, var(--mod-tag-background-color-selected-focus, var(--spectrum-neutral-background-color-key-focus)));
-		--spectrum-tag-content-color-focus: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-gray-25)));
+		--spectrum-tag-border-color-focus: transparent;
+		--spectrum-tag-background-color-focus: var(--spectrum-neutral-background-color-key-focus);
+		--spectrum-tag-content-color-focus: var(--spectrum-gray-25);
 	}
 
 	&.spectrum-Tag--emphasized.is-selected:not(.is-disabled, .is-readOnly) {
-		--spectrum-tag-border-color: var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent));
-		--spectrum-tag-background-color: var(--highcontrast-tag-background-color-emphasized, var(--mod-tag-background-color-emphasized, var(--spectrum-accent-background-color-default)));
-		--spectrum-tag-content-color: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)));
+		--spectrum-tag-border-color: transparent;
+		--spectrum-tag-background-color: var(--spectrum-accent-background-color-default);
+		--spectrum-tag-content-color: var(--spectrum-white);
 
-		--spectrum-tag-border-color-hover: var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent));
-		--spectrum-tag-background-color-hover: var(--highcontrast-tag-background-color-emphasized-hover, var(--mod-tag-background-color-emphasized-hover, var(--spectrum-accent-background-color-hover)));
-		--spectrum-tag-content-color-hover: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)));
+		--spectrum-tag-border-color-hover: transparent;
+		--spectrum-tag-background-color-hover: var(--spectrum-accent-background-color-hover);
+		--spectrum-tag-content-color-hover: var(--spectrum-white);
 
-		--spectrum-tag-border-color-active: var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent));
-		--spectrum-tag-background-color-active: var(--highcontrast-tag-background-color-emphasized-active, var(--mod-tag-background-color-emphasized-active, var(--spectrum-accent-background-color-down)));
-		--spectrum-tag-content-color-active: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)));
+		--spectrum-tag-border-color-active: transparent;
+		--spectrum-tag-background-color-active: var(--spectrum-accent-background-color-down);
+		--spectrum-tag-content-color-active: var(--spectrum-white);
 
-		--spectrum-tag-border-color-focus: var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, transparent));
-		--spectrum-tag-background-color-focus: var(--highcontrast-tag-background-color-emphasized-focus, var(--mod-tag-background-color-emphasized-focus, var(--spectrum-accent-background-color-key-focus)));
-		--spectrum-tag-content-color-focus: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-white)));
+		--spectrum-tag-border-color-focus: transparent;
+		--spectrum-tag-background-color-focus: var(--spectrum-accent-background-color-key-focus);
+		--spectrum-tag-content-color-focus: var(--spectrum-white);
 	}
 
 	&.spectrum-Tag.is-disabled {
-		--spectrum-tag-border-color: var(--highcontrast-tag-border-color-disabled, var(--mod-tag-border-color-disabled, transparent));
-		--spectrum-tag-background-color: var(--highcontrast-tag-background-color-disabled, var(--mod-tag-background-color-disabled, var(--spectrum-disabled-background-color)));
-		--spectrum-tag-content-color: var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-disabled-content-color)));
+		--spectrum-tag-border-color: transparent;
+		--spectrum-tag-background-color: var(--spectrum-disabled-background-color);
+		--spectrum-tag-content-color: var(--spectrum-disabled-content-color);
 	}
 }
 
@@ -332,56 +332,5 @@
 
 	.spectrum-Thumbnail {
 		opacity: var(--mod-thumbnail-opacity-disabled, var(--spectrum-thumbnail-opacity-disabled));
-	}
-}
-
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Tag {
-		--highcontrast-tag-border-color: ButtonText;
-		--highcontrast-tag-border-color-hover: ButtonText;
-		--highcontrast-tag-border-color-active: ButtonText;
-		--highcontrast-tag-border-color-focus: ButtonText;
-
-		--highcontrast-tag-background-color: ButtonFace;
-		--highcontrast-tag-background-color-hover: ButtonFace;
-		--highcontrast-tag-background-color-active: ButtonFace;
-		--highcontrast-tag-background-color-focus: ButtonFace;
-
-		--highcontrast-tag-content-color: ButtonText;
-		--highcontrast-tag-content-color-hover: ButtonText;
-		--highcontrast-tag-content-color-active: ButtonText;
-		--highcontrast-tag-content-color-focus: ButtonText;
-
-		--highcontrast-tag-focus-ring-color: Highlight;
-		forced-color-adjust: none;
-
-		&.is-selected {
-			--highcontrast-tag-border-color-selected: Highlight;
-
-			--highcontrast-tag-background-color-selected: Highlight;
-			--highcontrast-tag-background-color-selected-hover: Highlight;
-			--highcontrast-tag-background-color-selected-active: Highlight;
-			--highcontrast-tag-background-color-selected-focus: Highlight;
-
-			--highcontrast-tag-content-color-selected: HighlightText;
-		}
-
-		&.is-disabled {
-			--highcontrast-tag-border-color-disabled: GrayText;
-			--highcontrast-tag-background-color-disabled: ButtonFace;
-			--highcontrast-tag-content-color-disabled: GrayText;
-		}
-
-		&.spectrum-Tag--emphasized {
-			--highcontrast-tag-border-color-emphasized: Highlight;
-
-			--highcontrast-tag-background-color-emphasized: ButtonFace;
-			--highcontrast-tag-background-color-emphasized-hover: ButtonFace;
-			--highcontrast-tag-background-color-emphasized-active: ButtonFace;
-			--highcontrast-tag-background-color-emphasized-focus: ButtonFace;
-
-			--highcontrast-tag-content-color-emphasized: CanvasText;
-		}
 	}
 }

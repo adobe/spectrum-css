@@ -58,7 +58,7 @@
 	border-width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
 	border-radius: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
 
-	background-color: var(--highcontrast-divider-background-color, var(--mod-divider-background-color, var(--spectrum-divider-background-color)));
+	background-color: var(--spectrum-divider-background-color);
 
 	&:not(&.spectrum-Divider--vertical) {
 		min-inline-size: var(--mod-divider-inline-minimum-size, var(--spectrum-divider-inline-minimum-size));
@@ -72,11 +72,4 @@
 	margin-block: var(--mod-divider-vertical-margin, 0);
 	block-size: var(--mod-divider-vertical-height, 100%);
 	align-self: var(--mod-divider-vertical-align, flex-start);
-}
-
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Divider {
-		--highcontrast-divider-background-color: CanvasText;
-	}
 }

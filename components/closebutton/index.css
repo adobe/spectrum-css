@@ -86,30 +86,6 @@
 	--spectrum-closebutton-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 }
 
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-CloseButton {
-		--highcontrast-closebutton-icon-color-disabled: GrayText;
-		--highcontrast-closebutton-icon-color-down: Highlight;
-		--highcontrast-closebutton-icon-color-hover: Highlight;
-		--highcontrast-closebutton-icon-color-focus: Highlight;
-		--highcontrast-closebutton-background-color-default: ButtonFace;
-		--highcontrast-closebutton-focus-indicator-color: ButtonText;
-
-		&:focus-visible::after {
-			forced-color-adjust: none;
-			margin: var(--mod-closebutton-focus-indicator-gap, var(--spectrum-closebutton-focus-indicator-gap));
-			transition:
-				opacity var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-out,
-				margin var(--mod-closebutton-animation-duraction, var(--spectrum-closebutton-animation-duration)) ease-out;
-		}
-	}
-
-	.spectrum-CloseButton--staticWhite {
-		--highcontrast-closebutton-icon-color-disabled: Highlight;
-	}
-}
-
 a.spectrum-CloseButton {
 	/* Make link text not selectable  */
 	user-select: none;
@@ -205,19 +181,19 @@ a.spectrum-CloseButton {
 		outline: none;
 
 		&::after {
-			box-shadow: 0 0 0 var(--mod-closebutton-focus-indicator-thickness, var(--spectrum-closebutton-focus-indicator-thickness)) var(--highcontrast-closebutton-focus-indicator-color, var(--mod-closebutton-focus-indicator-color, var(--spectrum-closebutton-focus-indicator-color)));
+			box-shadow: 0 0 0 var(--mod-closebutton-focus-indicator-thickness, var(--spectrum-closebutton-focus-indicator-thickness)) var(--mod-closebutton-focus-indicator-color, var(--spectrum-closebutton-focus-indicator-color));
 		}
 	}
 
 	/* COLORS */
 	&:not(:disabled) {
-		background-color: var(--highcontrast-closebutton-background-color-default, var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default)));
+		background-color: var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default));
 
 		&:hover {
 			background-color: var(--mod-closebutton-background-color-hover, var(--spectrum-closebutton-background-color-hover));
 
 			.spectrum-CloseButton-UIIcon {
-				color: var(--highcontrast-closebutton-icon-color-hover, var(--mod-closebutton-icon-color-hover, var(--spectrum-closebutton-icon-color-hover)));
+				color: var(--mod-closebutton-icon-color-hover, var(--spectrum-closebutton-icon-color-hover));
 			}
 		}
 
@@ -225,7 +201,7 @@ a.spectrum-CloseButton {
 			background-color: var(--mod-closebutton-background-color-down, var(--spectrum-closebutton-background-color-down));
 
 			.spectrum-CloseButton-UIIcon {
-				color: var(--highcontrast-closebutton-icon-color-down, var(--mod-closebutton-icon-color-down, var(--spectrum-closebutton-icon-color-down)));
+				color: var(--mod-closebutton-icon-color-down, var(--spectrum-closebutton-icon-color-down));
 			}
 		}
 
@@ -234,7 +210,7 @@ a.spectrum-CloseButton {
 			background-color: var(--mod-closebutton-background-color-focus, var(--spectrum-closebutton-background-color-focus));
 
 			.spectrum-CloseButton-UIIcon {
-				color: var(--highcontrast-closebutton-icon-color-focus, var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus)));
+				color: var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus));
 			}
 		}
 
@@ -245,7 +221,7 @@ a.spectrum-CloseButton {
 		&:focus,
 		&.is-focused {
 			.spectrum-CloseButton-UIIcon {
-				color: var(--highcontrast-closebutton-icon-color-focus, var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus)));
+				color: var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus));
 			}
 		}
 	}
@@ -255,7 +231,7 @@ a.spectrum-CloseButton {
 		background-color: var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default));
 
 		.spectrum-CloseButton-UIIcon {
-			color: var(--highcontrast-closebutton-icon-color-disabled, var(--mod-closebutton-icon-color-disabled, var(--spectrum-closebutton-icon-color-disabled)));
+			color: var(--mod-closebutton-icon-color-disabled, var(--spectrum-closebutton-icon-color-disabled));
 		}
 	}
 }

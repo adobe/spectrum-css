@@ -278,14 +278,14 @@ governing permissions and limitations under the License.
 
 	border-radius: var(--mod-actionbutton-border-radius, var(--spectrum-actionbutton-border-radius));
 	border-width: var(--spectrum-actionbutton-border-width);
-	border-color: var(--highcontrast-actionbutton-border-color, var(--spectrum-actionbutton-border-color));
+	border-color: var(--spectrum-actionbutton-border-color);
 	border-style: solid;
 
 	gap: var(--mod-actionbutton-text-to-visual, var(--spectrum-actionbutton-text-to-visual));
 	padding-inline: calc(var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--spectrum-actionbutton-border-width));
 
-	background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-default, var(--spectrum-actionbutton-background-color-default)));
-	color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-default, var(--spectrum-actionbutton-content-color-default)));
+	background-color: var(--mod-actionbutton-background-color-default, var(--spectrum-actionbutton-background-color-default));
+	color: var(--mod-actionbutton-content-color-default, var(--spectrum-actionbutton-content-color-default));
 
 	/* Fix Firefox */
 	&::-moz-focus-inner {
@@ -308,25 +308,25 @@ governing permissions and limitations under the License.
 	}
 
 	&:hover {
-		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover)));
-		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover)));
+		background-color: var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover));
+		color: var(--mod-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover));
 	}
 
 	&:focus-visible {
-		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus)));
-		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus)));
+		background-color: var(--mod-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus));
+		color: var(--mod-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus));
 	}
 
 	&:active {
-		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down)));
-		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down)));
+		background-color: var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down));
+		color: var(--mod-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down));
 		transform: perspective(var(--spectrum-actionbutton-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
 	&:disabled,
 	&.is-disabled {
-		background-color: var(--highcontrast-actionbutton-background-color-disabled, var(--mod-actionbutton-background-color-disabled, var(--spectrum-actionbutton-background-color-disabled)));
-		color: var(--highcontrast-actionbutton-content-color-disabled, var(--mod-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled)));
+		background-color: var(--mod-actionbutton-background-color-disabled, var(--spectrum-actionbutton-background-color-disabled));
+		color: var(--mod-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled));
 	}
 }
 
@@ -390,14 +390,14 @@ a.spectrum-ActionButton {
 
 /* Focus indicator */
 .spectrum-ActionButton {
-	transition: border-color var(--highcontrast-actionbutton-animation-duration, var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))) ease-in-out;
+	transition: border-color var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
 
 	&::after {
 		position: absolute;
 		inset: 0;
 		margin: calc((var(--mod-actionbutton-focus-indicator-gap, var(--spectrum-actionbutton-focus-indicator-gap)) + var(--spectrum-actionbutton-border-width)) * -1);
 		border-radius: var(--mod-actionbutton-focus-indicator-border-radius, var(--spectrum-actionbutton-focus-indicator-border-radius));
-		transition: box-shadow var(--highcontrast-actionbutton-animation-duration, var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))) ease-in-out;
+		transition: box-shadow var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
 		pointer-events: none;
 		content: "";
 	}
@@ -407,78 +407,7 @@ a.spectrum-ActionButton {
 		outline: none;
 
 		&::after {
-			box-shadow: 0 0 0 var(--mod-actionbutton-focus-indicator-thickness, var(--spectrum-actionbutton-focus-indicator-thickness)) var(--highcontrast-actionbutton-focus-indicator-color, var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color)));
-		}
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-ActionButton {
-		/**
-		 * Default
-		 * - Uses "Button*" system color pairings.
-		 * - Focus indicator is outside the element and should contrast with its background (default of Canvas).
-		 */
-		--highcontrast-actionbutton-border-color: ButtonBorder;
-		--highcontrast-actionbutton-background-color-default: ButtonFace;
-		--highcontrast-actionbutton-content-color-default: ButtonText;
-
-		--highcontrast-actionbutton-background-color-disabled: ButtonFace;
-		--highcontrast-actionbutton-content-color-disabled: GrayText;
-
-		--highcontrast-actionbutton-focus-indicator-color: CanvasText;
-
-		/**
-		 * Avoid performance and rendering issues with transitions between system colors.
-		 * Fixes bug in Windows High Contrast where border flashes the wrong color after hover (quiet).
-		 */
-		--highcontrast-actionbutton-animation-duration: 0;
-
-		&::after {
-			/* Make sure the box-shadow for the focus indicator renders. */
-			forced-color-adjust: none;
-		}
-
-		.spectrum-ActionButton-icon,
-		.spectrum-ActionButton-hold,
-		.spectrum-ActionButton-label {
-			/* Removes the extra unwanted background on label ("readability backplate") that can cause text to be unreadable. */
-			forced-color-adjust: none;
-		}
-
-		/**
-		 * Quiet
-		 * - Default blends in with background and has no border.
-		 * - Quiet + disabled does not show border unless selected.
-		 */
-		&.spectrum-ActionButton--quiet {
-			--highcontrast-actionbutton-border-color: Canvas;
-			--highcontrast-actionbutton-background-color-default: Canvas;
-			--highcontrast-actionbutton-background-color-disabled: Canvas;
-			--highcontrast-actionbutton-content-color-default: CanvasText;
-
-			&:disabled:not(.is-selected) {
-				--highcontrast-actionbutton-border-color: Canvas;
-			}
-		}
-
-		/* Interaction shows a change in border color. */
-		&:hover,
-		&:active,
-		&:focus-visible {
-			--highcontrast-actionbutton-border-color: Highlight;
-		}
-
-		/* Selected always shows as a solid highlighted color. */
-		&.is-selected {
-			--highcontrast-actionbutton-border-color: Highlight;
-			--highcontrast-actionbutton-background-color-default: Highlight;
-			--highcontrast-actionbutton-content-color-default: HighlightText;
-		}
-
-		/* Disabled has a GrayText border and content color. */
-		&:disabled {
-			--highcontrast-actionbutton-border-color: GrayText;
+			box-shadow: 0 0 0 var(--mod-actionbutton-focus-indicator-thickness, var(--spectrum-actionbutton-focus-indicator-thickness)) var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color));
 		}
 	}
 }

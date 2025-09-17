@@ -189,7 +189,7 @@
 }
 
 .spectrum-Search-icon {
-	--spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
+	--spectrum-search-color: var(--spectrum-search-color-default);
 
 	display: block;
 	position: absolute;
@@ -199,24 +199,24 @@
 	color: var(--spectrum-search-color);
 
 	.spectrum-Search-textfield:hover & {
-		--spectrum-search-color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
+		--spectrum-search-color: var(--spectrum-search-color-hover);
 	}
 
 	.spectrum-Search-textfield.is-focused & {
-		--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
+		--spectrum-search-color: var(--spectrum-search-color-focus);
 	}
 
 	.spectrum-Search-textfield.is-focused:hover & {
-		--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
+		--spectrum-search-color: var(--spectrum-search-color-focus-hover);
 	}
 
 	.spectrum-Search-textfield.is-keyboardFocused & {
-		--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
+		--spectrum-search-color: var(--spectrum-search-color-key-focus);
 	}
 
 	.spectrum-Search-textfield.is-disabled &,
 	.spectrum-Search-textfield.is-disabled:hover & {
-		--spectrum-search-color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
+		--spectrum-search-color: var(--spectrum-search-color-disabled);
 	}
 }
 
@@ -238,23 +238,5 @@
 	&::-webkit-search-cancel-button,
 	&::-webkit-search-decoration {
 		appearance: none;
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-Search .spectrum-Search-textfield,
-	.spectrum-Search .spectrum-Search-textfield .spectrum-Search-input {
-		--highcontrast-search-color-default: CanvasText;
-		--highcontrast-search-color-hover: CanvasText;
-		--highcontrast-search-color-focus: CanvasText;
-		--highcontrast-search-color-disabled: GrayText;
-	}
-
-	.spectrum-Search .spectrum-Search-clearButton {
-		.spectrum-ClearButton-fill {
-			/* Avoid button background color overlapping on border. */
-			forced-color-adjust: none;
-			background-color: transparent;
-		}
 	}
 }

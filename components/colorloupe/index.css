@@ -71,7 +71,7 @@
 
 .spectrum-ColorLoupe-outer-border {
 	fill: none;
-	stroke: var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color)));
+	stroke: var(--spectrum-colorloupe-outer-border-color);
 	stroke-width: calc(var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width)) + 2px);
 }
 
@@ -88,10 +88,4 @@
 
 .spectrum-ColorLoupe-checkerboard-fill {
 	fill: var(--spectrum-colorloupe-checkerboard-fill);
-}
-
-@media (forced-colors: active) {
-	.spectrum-ColorLoupe {
-		--highcontrast-colorloupe-outer-border-color: CanvasText;
-	}
 }

@@ -115,9 +115,3 @@
 	display: flex;
 	justify-content: end;
 }
-
-@media (forced-colors: active) {
-	.spectrum-AlertDialog {
-		border: solid;
-	}
-}
