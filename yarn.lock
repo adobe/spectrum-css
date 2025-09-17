@@ -4817,7 +4817,7 @@ __metadata:
   resolution: "@spectrum-css/generator@workspace:tools/generator"
   dependencies:
     fuzzy: "npm:0.1.3"
-    inquirer: "npm:9.3.7"
+    inquirer: "npm:9.3.8"
     inquirer-autocomplete-prompt: "npm:3.0.1"
     plop: "npm:4.0.2"
   languageName: unknown
@@ -12124,14 +12124,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inquirer@npm:9.3.7, inquirer@npm:^9.3.7":
-  version: 9.3.7
-  resolution: "inquirer@npm:9.3.7"
+"inquirer@npm:9.3.8":
+  version: 9.3.8
+  resolution: "inquirer@npm:9.3.8"
   dependencies:
+    "@inquirer/external-editor": "npm:^1.0.2"
     "@inquirer/figures": "npm:^1.0.3"
     ansi-escapes: "npm:^4.3.2"
     cli-width: "npm:^4.1.0"
-    external-editor: "npm:^3.1.0"
     mute-stream: "npm:1.0.0"
     ora: "npm:^5.4.1"
     run-async: "npm:^3.0.0"
@@ -12140,7 +12140,7 @@ __metadata:
     strip-ansi: "npm:^6.0.1"
     wrap-ansi: "npm:^6.2.0"
     yoctocolors-cjs: "npm:^2.1.2"
-  checksum: 10c0/7a5b70312a734b579846648365cbf354e8b23ec73f379d46ada30bc2cf3961dc33b7ca59a3c2beed8a8e03744e3d6c12d4998a34b2d3904774aed238d77328b4
+  checksum: 10c0/f9e64487413816460d2eb04520cd0898b8d488533bba93dfb432013383fe7bab5ddffd9ecfe5d5e2d96aaac86086bfa13c0a397a75083896693ab9d36177197b
   languageName: node
   linkType: hard
 
@@ -12161,6 +12161,26 @@ __metadata:
     "@types/node":
       optional: true
   checksum: 10c0/068d9acbfab5e0c19d68603f86e296d00a8c797b6c2d7f2e659dfc557176e9247c2313beaf79d5557deb7d76a514cf9a75835c7928094b8759570b7a4e3f909f
+  languageName: node
+  linkType: hard
+
+"inquirer@npm:^9.3.7":
+  version: 9.3.7
+  resolution: "inquirer@npm:9.3.7"
+  dependencies:
+    "@inquirer/figures": "npm:^1.0.3"
+    ansi-escapes: "npm:^4.3.2"
+    cli-width: "npm:^4.1.0"
+    external-editor: "npm:^3.1.0"
+    mute-stream: "npm:1.0.0"
+    ora: "npm:^5.4.1"
+    run-async: "npm:^3.0.0"
+    rxjs: "npm:^7.8.1"
+    string-width: "npm:^4.2.3"
+    strip-ansi: "npm:^6.0.1"
+    wrap-ansi: "npm:^6.2.0"
+    yoctocolors-cjs: "npm:^2.1.2"
+  checksum: 10c0/7a5b70312a734b579846648365cbf354e8b23ec73f379d46ada30bc2cf3961dc33b7ca59a3c2beed8a8e03744e3d6c12d4998a34b2d3904774aed238d77328b4
   languageName: node
   linkType: hard
 
