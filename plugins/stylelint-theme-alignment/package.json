@@ -24,15 +24,15 @@
     "*.md"
   ],
   "dependencies": {
-    "colors": "^1.4.0",
-    "postcss": "^8.5.6",
-    "postcss-values-parser": "^6.0.2"
+    "colors": "1.4.0",
+    "postcss": "8.5.6",
+    "postcss-values-parser": "6.0.2"
   },
   "peerDependencies": {
     "stylelint": ">=16"
   },
   "devDependencies": {
-    "stylelint": "^16.24.0"
+    "stylelint": "16.24.0"
   },
   "keywords": [
     "css",
