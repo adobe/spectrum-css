@@ -10,7 +10,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Foundations-Example-CornerRounding",
 	},
-	tags: ["!dev"],
+	tags: ["!dev", "migrated"],
 };
 
 const CornerRadiusGroup = (args = {}, context = {}) => html`
