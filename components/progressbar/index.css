@@ -120,14 +120,14 @@
 		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
 		border-radius: var(--spectrum-progressbar-corner-radius);
 
-		background: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
+		background: var(--spectrum-progressbar-track-color);
 	}
 
 	.spectrum-ProgressBar-fill {
 		border: none;
 		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
 		transition: width 1s;
-		background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
+		background: var(--spectrum-progressbar-fill-color);
 		border-radius: var(--spectrum-progressbar-corner-radius);
 	}
 }
@@ -172,7 +172,7 @@
 .spectrum-ProgressBar--staticWhite {
 	.spectrum-ProgressBar-fill {
 		color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
-		background: var(--highcontrast-progressbar-fill-color-white, var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white)));
+		background: var(--spectrum-progressbar-fill-color-white);
 	}
 
 	.spectrum-ProgressBar-label,
@@ -189,7 +189,7 @@
 .spectrum-ProgressBar--staticBlack {
 	.spectrum-ProgressBar-fill {
 		color: var(--mod-progressbar-label-and-value-black, var(--spectrum-progressbar-label-and-value-black));
-		background: var(--highcontrast-progressbar-fill-color-black, var(--mod-progressbar-fill-color-black, var(--spectrum-progressbar-fill-color-black)));
+		background: var(--spectrum-progressbar-fill-color-black);
 	}
 
 	.spectrum-ProgressBar-label,
@@ -228,17 +228,5 @@
 
 	100% {
 		transform: translate(calc(var(--spectrum-progressbar-inline-size) * -1));
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-ProgressBar-track {
-		--highcontrast-progressbar-fill-color: ButtonText;
-		--highcontrast-progressbar-track-color: ButtonFace;
-		--highcontrast-progressbar-fill-color-white: ButtonText;
-		--highcontrast-progressbar-fill-color-black: ButtonText;
-
-		forced-color-adjust: none;
-		border: 1px solid ButtonText;
 	}
 }

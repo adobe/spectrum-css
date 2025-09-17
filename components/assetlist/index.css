@@ -48,7 +48,7 @@
 
 .spectrum-AssetList-item {
 	position: relative;
-	color: var(--highcontrast-assetlist-label-color, var(--mod-assetlist-label-color, var(--spectrum-assetlist-label-color)));
+	color: var(--mod-assetlist-label-color, var(--spectrum-assetlist-label-color));
 
 	display: flex;
 	box-sizing: border-box;
@@ -116,17 +116,17 @@
 	}
 
 	&:hover {
-		background-color: var(--highcontrast-assetlist-item-background-color-hover, var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover)));
+		background-color: var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover));
 	}
 
 	&:focus-within {
 		&:focus-visible,
 		&.is-focused {
-			background-color: var(--highcontrast-assetlist-item-background-color-hover, var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover)));
+			background-color: var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover));
 
 			&::before {
 				/* we cannot achieve rounded corners with outline so we use box-shadow instead */
-				box-shadow: 0 0 0 2px var(--highcontrast-assetlist-border-color-key-focus, var(--mod-assetlist-border-color-key-focus, var(--spectrum-assetlist-border-color-key-focus))) inset;
+				box-shadow: 0 0 0 2px var(--mod-assetlist-border-color-key-focus, var(--spectrum-assetlist-border-color-key-focus)) inset;
 			}
 		}
 	}
@@ -142,11 +142,11 @@
 	}
 
 	&.is-selected {
-		background-color: var(--highcontrast-assetlist-item-background-color-selected, var(--mod-assetlist-item-background-color-selected, var(--spectrum-assetlist-item-background-color-selected)));
+		background-color: var(--mod-assetlist-item-background-color-selected, var(--spectrum-assetlist-item-background-color-selected));
 
 		&:hover,
 		&:focus {
-			background-color: var(--highcontrast-assetlist-item-background-color-selected-hover, var(--mod-assetlist-item-background-color-selected-hover, var(--spectrum-assetlist-item-background-color-selected-hover)));
+			background-color: var(--mod-assetlist-item-background-color-selected-hover, var(--spectrum-assetlist-item-background-color-selected-hover));
 		}
 	}
 }
@@ -168,22 +168,4 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-}
-
-@media (forced-colors: active) {
-	.spectrum-AssetList-item {
-		--highcontrast-assetlist-border-color-key-focus: Highlight;
-		--highcontrast-assetlist-item-background-color-hover: Highlight;
-		--highcontrast-assetlist-item-background-color-selected-hover: Highlight;
-		--highcontrast-assetlist-label-color: ButtonText;
-		--highcontrast-assetlist-item-background-color-selected: SelectedItem;
-
-		forced-color-adjust: none;
-
-		&:hover,
-		&.is-selected,
-		&.is-navigated {
-			--highcontrast-assetlist-label-color: HighlightText;
-		}
-	}
 }

@@ -24,11 +24,11 @@
 	--spectrum-swatch-slash-thickness: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness-medium));
 
 	/* Color */
-	--spectrum-swatch-border-color-selected: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-gray-1000)));
-	--spectrum-swatch-inner-border-color-selected: var(--highcontrast-swatch-background-color-selected, var(--mod-swatch-inner-border-color-selected, var(--spectrum-gray-25)));
-	--spectrum-swatch-disabled-icon-color: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-white)));
-	--spectrum-swatch-icon-color: var(--highcontrast-swatch-icon-color, var(--mod-swatch-icon-color, var(--spectrum-neutral-content-color-default)));
-	--spectrum-swatch-slash-icon-color: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-negative-visual-color)));
+	--spectrum-swatch-border-color-selected: var(--spectrum-gray-1000);
+	--spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-25);
+	--spectrum-swatch-disabled-icon-color: var(--spectrum-white);
+	--spectrum-swatch-icon-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-swatch-slash-icon-color: var(--spectrum-negative-visual-color);
 	--spectrum-mixed-button-background: var(--spectrum-gray-25);
 	--spectrum-add-button-background: var(--spectrum-gray-100);
 	--spectrum-add-button-background-hover: var(--spectrum-gray-200);
@@ -39,7 +39,7 @@
 	--spectrum-swatch-border: rgb(from var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)) r g b / var(--mod-swatch-border-opacity, var(--spectrum-swatch-border-opacity)));
 
 	/* Focus ring */
-	--spectrum-swatch-focus-indicator-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-focus-indicator-color)));
+	--spectrum-swatch-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--spectrum-swatch-focus-indicator-thickness: var(--mod-swatch-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 	--spectrum-swatch-focus-indicator-gap: var(--mod-swatch-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
 }
@@ -261,7 +261,7 @@
 		background: var(--spectrum-picked-color, transparent);
 
 		/* Swatch border */
-		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border, var(--spectrum-swatch-border)));
+		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--spectrum-swatch-border);
 		border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 	}
 }
@@ -340,47 +340,4 @@
 	transition:
 		width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
 		height var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
-}
-
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Swatch {
-		--mod-mixed-button-background: ButtonFace;
-
-		--mod-add-button-background: ButtonFace;
-		--mod-add-button-background-hover: ButtonText;
-		--mod-add-button-background-down: ButtonText;
-
-		--highcontrast-swatch-disabled-icon-color: GrayText;
-		--highcontrast-swatch-focus-indicator-color: ButtonText;
-		--highcontrast-swatch-background-color-selected: ButtonFace;
-		--highcontrast-swatch-border-color-selected: Highlight;
-		--highcontrast-swatch-border-color: ButtonText;
-		--highcontrast-swatch-fill-foreground-color: ButtonText;
-
-		.spectrum-Swatch-fill {
-			forced-color-adjust: none;
-		}
-
-		&.is-mixedValue {
-			--highcontrast-swatch-icon-color: ButtonFace;
-		}
-
-		&.is-addSwatch {
-			&:hover,
-			&:active {
-				--highcontrast-swatch-icon-color: ButtonFace;
-			}
-
-			&.is-keyboardFocused,
-			&:focus-visible {
-				--highcontrast-swatch-icon-color: ButtonFace;
-			}
-		}
-
-		&[disabled],
-		&.is-disabled {
-			--highcontrast-swatch-border-color: GrayText;
-		}
-	}
 }

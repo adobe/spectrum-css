@@ -121,16 +121,16 @@
 	&:hover {
 		/* selection indicator hover */
 		.spectrum-Radio-button::before {
-			border-color: var(--highcontrast-radio-button-border-color-hover, var(--mod-radio-button-border-color-hover, var(--spectrum-radio-button-border-color-hover)));
+			border-color: var(--spectrum-radio-button-border-color-hover);
 		}
 
 		/* checked selection indicator hover */
 		.spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-			border-color: var(--highcontrast-radio-button-checked-border-color-hover, var(--mod-radio-button-checked-border-color-hover, var(--spectrum-radio-button-border-color-hover)));
+			border-color: var(--spectrum-radio-button-border-color-hover);
 		}
 
 		.spectrum-Radio-label {
-			color: var(--highcontrast-radio-neutral-content-color-hover, var(--mod-radio-neutral-content-color-hover, var(--spectrum-radio-neutral-content-color-hover)));
+			color: var(--spectrum-radio-neutral-content-color-hover);
 		}
 	}
 
@@ -144,29 +144,29 @@
 	&.is-active {
 		/* selection indicator active */
 		.spectrum-Radio-button::before {
-			border-color: var(--highcontrast-radio-button-border-color-down, var(--mod-radio-button-border-color-down, var(--spectrum-radio-button-border-color-down)));
+			border-color: var(--spectrum-radio-button-border-color-down);
 		}
 
 		/* checked selection indicator active */
 		.spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-			border-color: var(--highcontrast-radio-button-checked-border-color-down, var(--mod-radio-button-checked-border-color-down, var(--spectrum-radio-button-border-color-down)));
+			border-color: var(--spectrum-radio-button-border-color-down);
 		}
 
 		.spectrum-Radio-label {
-			color: var(--highcontrast-radio-neutral-content-color-down, var(--mod-radio-neutral-content-color-down, var(--spectrum-radio-neutral-content-color-down)));
+			color: var(--spectrum-radio-neutral-content-color-down);
 		}
 	}
 
 	&:focus {
 		/* selection indicator is focused state */
 		.spectrum-Radio-button::before {
-			border-color: var(--highcontrast-radio-button-border-color-focus, var(--mod-radio-button-border-color-focus, var(--spectrum-radio-button-border-color-focus)));
+			border-color: var(--spectrum-radio-button-border-color-focus);
 		}
 
 		/* focus ring is focused state */
 		.spectrum-Radio-button::after {
 			border-style: solid;
-			border-color: var(--highcontrast-radio-focus-indicator-color, var(--mod-radio-focus-indicator-color, var(--spectrum-radio-focus-indicator-color)));
+			border-color: var(--spectrum-radio-focus-indicator-color);
 			border-width: var(--mod-radio-focus-indicator-thickness, var(--spectrum-radio-focus-indicator-thickness));
 
 			inline-size: calc(var(--spectrum-radio-button-control-size) + (var(--spectrum-radio-focus-indicator-gap) * 2));
@@ -175,11 +175,11 @@
 
 		/* selected selection indicator is focused state */
 		.spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-			border-color: var(--highcontrast-radio-button-checked-border-color-focus, var(--mod-radio-button-checked-border-color-focus, var(--spectrum-radio-button-border-color-focus)));
+			border-color: var(--spectrum-radio-button-border-color-focus);
 		}
 
 		.spectrum-Radio-label {
-			color: var(--highcontrast-radio-neutral-content-color-focus, var(--mod-radio-neutral-content-color-focus, var(--spectrum-radio-neutral-content-color-focus)));
+			color: var(--spectrum-radio-neutral-content-color-focus);
 		}
 	}
 
@@ -192,7 +192,7 @@
 		/* ensure disabled readonly has normal text color */
 		& .spectrum-Radio-input:disabled ~ .spectrum-Radio-label,
 		& .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label {
-			color: var(--highcontrast-radio-neutral-content-color, var(--mod-radio-neutral-content-color, var(--spectrum-radio-neutral-content-color)));
+			color: var(--spectrum-radio-neutral-content-color);
 		}
 	}
 }
@@ -200,22 +200,22 @@
 .spectrum-Radio--emphasized {
 	/* selection indicator emphasized */
 	.spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-emphasized-accent-color, var(--mod-radio-emphasized-accent-color, var(--spectrum-radio-emphasized-accent-color)));
+		border-color: var(--spectrum-radio-emphasized-accent-color);
 	}
 
 	/* selection indicator emphasized hover */
 	&:hover .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-emphasized-accent-color-hover, var(--mod-radio-emphasized-accent-color-hover, var(--spectrum-radio-emphasized-accent-color-hover)));
+		border-color: var(--spectrum-radio-emphasized-accent-color-hover);
 	}
 
 	/* selection indicator emphasized active */
 	&:active .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-emphasized-accent-color-down, var(--mod-radio-emphasized-accent-color-down, var(--spectrum-radio-emphasized-accent-color-down)));
+		border-color: var(--spectrum-radio-emphasized-accent-color-down);
 	}
 
 	/* selection indicator emphasized focus */
 	&:focus .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-emphasized-accent-color-focus, var(--mod-radio-emphasized-accent-color-focus, var(--spectrum-radio-emphasized-accent-color-focus)));
+		border-color: var(--spectrum-radio-emphasized-accent-color-focus);
 	}
 }
 
@@ -224,11 +224,11 @@
 .spectrum-Radio .spectrum-Radio-input:checked:disabled {
 	/* selection indicator */
 	& + .spectrum-Radio-button::before {
-		border-color: var(--highcontrast-radio-disabled-border-color, var(--mod-radio-disabled-border-color, var(--spectrum-radio-disabled-border-color)));
+		border-color: var(--spectrum-radio-disabled-border-color);
 	}
 
 	& ~ .spectrum-Radio-label {
-		color: var(--highcontrast-radio-disabled-content-color, var(--mod-radio-disabled-content-color, var(--spectrum-radio-disabled-content-color)));
+		color: var(--spectrum-radio-disabled-content-color);
 	}
 }
 
@@ -268,7 +268,7 @@
 		&::before {
 			/* half of element width minus half of indicator width is checked border width */
 			border-width: calc((var(--spectrum-radio-button-control-size) / 2) - (var(--spectrum-radio-button-selection-indicator) / 2));
-			border-color: var(--highcontrast-radio-button-checked-border-color-default, var(--mod-radio-button-checked-border-color-default, var(--spectrum-radio-button-border-color-default)));
+			border-color: var(--spectrum-radio-button-border-color-default);
 		}
 	}
 
@@ -276,7 +276,7 @@
 	&:focus-visible {
 		+ .spectrum-Radio-button::after {
 			border-width: var(--mod-radio-focus-indicator-thickness, var(--spectrum-radio-focus-indicator-thickness));
-			border-color: var(--highcontrast-radio-focus-indicator-color, var(--mod-radio-focus-indicator-color, var(--spectrum-radio-focus-indicator-color)));
+			border-color: var(--spectrum-radio-focus-indicator-color);
 			border-style: solid;
 
 			inline-size: calc(var(--spectrum-radio-button-control-size) + (var(--spectrum-radio-focus-indicator-gap) * 2));
@@ -295,7 +295,7 @@
 
 	font-weight: var(--spectrum-radio-text-font-weight);
 	font-style: var(--spectrum-radio-text-font-style);
-	color: var(--highcontrast-radio-neutral-content-color, var(--mod-radio-neutral-content-color, var(--spectrum-radio-neutral-content-color)));
+	color: var(--spectrum-radio-neutral-content-color);
 	line-height: var(--mod-radio-line-height, var(--spectrum-radio-line-height));
 
 	transition: color var(--mod-radio-animation-duration, var(--spectrum-radio-animation-duration)) ease-in-out;
@@ -333,7 +333,7 @@
 
 		border-radius: 50%;
 		border-width: var(--mod-radio-border-width, var(--spectrum-radio-border-width));
-		border-color: var(--highcontrast-radio-button-border-color-default, var(--mod-radio-button-border-color-default, var(--spectrum-radio-button-border-color-default)));
+		border-color: var(--spectrum-radio-button-border-color-default);
 		border-style: solid;
 
 		transition:
@@ -358,61 +358,6 @@
 
 		.spectrum-Radio:dir(rtl) & {
 			transform: translateX(50%) translateY(-50%);
-		}
-	}
-}
-
-/* windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Radio {
-		/* high contrast text */
-		--highcontrast-radio-neutral-content-color: CanvasText;
-		--highcontrast-radio-neutral-content-color-hover: CanvasText;
-		--highcontrast-radio-neutral-content-color-down: CanvasText;
-		--highcontrast-radio-neutral-content-color-focus: CanvasText;
-
-		/* high contrast selector */
-		--highcontrast-radio-button-border-color-default: ButtonText;
-		--highcontrast-radio-button-border-color-hover: Highlight;
-		--highcontrast-radio-button-border-color-down: ButtonText;
-		--highcontrast-radio-button-border-color-focus: Highlight;
-
-		/* high contrast emphasized selector */
-		--highcontrast-radio-emphasized-accent-color: Highlight;
-		--highcontrast-radio-emphasized-accent-color-hover: Highlight;
-		--highcontrast-radio-emphasized-accent-color-down: ButtonText;
-		--highcontrast-radio-emphasized-accent-color-focus: Highlight;
-
-		/* high contrast checked selector */
-		--highcontrast-radio-button-checked-border-color-default: Highlight;
-		--highcontrast-radio-button-checked-border-color-hover: Highlight;
-		--highcontrast-radio-button-checked-border-color-down: Highlight;
-		--highcontrast-radio-button-checked-border-color-focus: Highlight;
-
-		/* high contrast disabled text */
-		--highcontrast-radio-disabled-content-color: GrayText;
-
-		/* high contrast disabled selector */
-		--highcontrast-radio-disabled-border-color: GrayText;
-
-		/* high contrast focus ring */
-		--highcontrast-radio-focus-indicator-color: CanvasText;
-
-		/* ensure focus ring is visible if user agent has non-accessible system overrides */
-		.spectrum-Radio-button {
-			&::after {
-				forced-color-adjust: none;
-			}
-		}
-
-		&.is-readOnly {
-			.spectrum-Radio-input + .spectrum-Radio-button::before {
-				border-color: var(--highcontrast-radio-button-border-color-default);
-			}
-
-			&:hover .spectrum-Radio-input + .spectrum-Radio-button::before {
-				border-color: var(--highcontrast-radio-button-border-color-default);
-			}
 		}
 	}
 }

@@ -3,7 +3,6 @@
   "selectors": [
     ".spectrum-Swatch",
     ".spectrum-Swatch .spectrum-Swatch-disabledIcon",
-    ".spectrum-Swatch .spectrum-Swatch-fill",
     ".spectrum-Swatch--rectangle",
     ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill",
     ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill:before",
@@ -36,7 +35,6 @@
     ".spectrum-Swatch.is-addSwatch:active",
     ".spectrum-Swatch.is-addSwatch:focus-visible",
     ".spectrum-Swatch.is-addSwatch:hover",
-    ".spectrum-Swatch.is-disabled",
     ".spectrum-Swatch.is-disabled .spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch.is-image .spectrum-Swatch-fill:before",
     ".spectrum-Swatch.is-keyboardFocused",
@@ -52,7 +50,6 @@
     ".spectrum-Swatch.is-selected:before",
     ".spectrum-Swatch:before",
     ".spectrum-Swatch:focus-visible",
-    ".spectrum-Swatch[disabled]",
     ".spectrum-Swatch[disabled] .spectrum-Swatch-disabledIcon"
   ],
   "modifiers": [
@@ -63,23 +60,17 @@
     "--mod-animation-duration-100",
     "--mod-corner-radius-full",
     "--mod-mixed-button-background",
-    "--mod-swatch-border",
     "--mod-swatch-border-color",
-    "--mod-swatch-border-color-selected",
     "--mod-swatch-border-opacity",
     "--mod-swatch-border-radius",
     "--mod-swatch-border-thickness",
     "--mod-swatch-border-thickness-selected",
-    "--mod-swatch-disabled-icon-color",
     "--mod-swatch-disabled-icon-size",
     "--mod-swatch-focus-indicator-color",
     "--mod-swatch-focus-indicator-gap",
     "--mod-swatch-focus-indicator-thickness",
     "--mod-swatch-icon-border-color",
-    "--mod-swatch-icon-color",
-    "--mod-swatch-inner-border-color-selected",
     "--mod-swatch-size",
-    "--mod-swatch-slash-icon-color",
     "--mod-swatch-slash-thickness"
   ],
   "component": [
@@ -140,13 +131,5 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-swatch-background-color-selected",
-    "--highcontrast-swatch-border-color",
-    "--highcontrast-swatch-border-color-selected",
-    "--highcontrast-swatch-disabled-icon-color",
-    "--highcontrast-swatch-fill-foreground-color",
-    "--highcontrast-swatch-focus-indicator-color",
-    "--highcontrast-swatch-icon-color"
-  ]
+  "high-contrast": []
 }

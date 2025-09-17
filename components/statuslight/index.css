@@ -148,7 +148,7 @@
 
 	line-height: var(--mod-statuslight-line-height, var(--spectrum-statuslight-line-height));
 
-	color: var(--highcontrast-statuslight-content-color-default, var(--mod-statuslight-content-color-default, var(--spectrum-statuslight-content-color-default)));
+	color: var(--spectrum-statuslight-content-color-default);
 
 	&:lang(ja),
 	&:lang(zh),
@@ -173,7 +173,7 @@
 
 /* Semantic Colors */
 .spectrum-StatusLight--neutral {
-	color: var(--highcontrast-statuslight-subdued-content-color-default, var(--mod-statuslight-subdued-content-color-default, var(--spectrum-statuslight-subdued-content-color-default)));
+	color: var(--spectrum-statuslight-subdued-content-color-default);
 
 	&::before {
 		background-color: var(--mod-statuslight-semantic-neutral-color, var(--spectrum-statuslight-semantic-neutral-color));
@@ -271,18 +271,4 @@
 
 .spectrum-StatusLight--silver::before {
 	background-color: var(--mod-statuslight-nonsemantic-silver-color, var(--spectrum-statuslight-nonsemantic-silver-color));
-}
-
-@media (forced-colors: active) {
-	.spectrum-StatusLight {
-		--highcontrast-statuslight-content-color-default: CanvasText;
-		--highcontrast-statuslight-subdued-content-color-default: CanvasText;
-		forced-color-adjust: none;
-
-		/* Dot */
-		&::before {
-			forced-color-adjust: none;
-			border: var(--mod-statuslight-border-width, var(--spectrum-statuslight-border-width)) solid ButtonText;
-		}
-	}
 }

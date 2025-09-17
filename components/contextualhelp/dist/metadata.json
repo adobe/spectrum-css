@@ -21,7 +21,6 @@
     "--mod-contextual-help-min-inline-size",
     "--mod-contextual-help-padding",
     "--mod-contextual-help-popover-maximum-width",
-    "--mod-contextual-help-title-color",
     "--mod-contextual-help-title-font-style",
     "--mod-contextual-help-title-font-weight",
     "--mod-contextual-help-title-line-height",
@@ -65,8 +64,5 @@
     "--mod-popover-animation-distance",
     "--mod-popover-corner-radius"
   ],
-  "high-contrast": [
-    "--highcontrast-contextual-help-body-color",
-    "--highcontrast-contextual-help-title-color"
-  ]
+  "high-contrast": []
 }

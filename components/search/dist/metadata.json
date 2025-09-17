@@ -3,9 +3,6 @@
   "selectors": [
     ".spectrum-Search",
     ".spectrum-Search .spectrum-HelpText",
-    ".spectrum-Search .spectrum-Search-clearButton .spectrum-ClearButton-fill",
-    ".spectrum-Search .spectrum-Search-textfield",
-    ".spectrum-Search .spectrum-Search-textfield .spectrum-Search-input",
     ".spectrum-Search--sizeL",
     ".spectrum-Search--sizeS",
     ".spectrum-Search--sizeXL",
@@ -188,10 +185,5 @@
     "--mod-textfield-text-color-hover",
     "--mod-textfield-text-color-keyboard-focus"
   ],
-  "high-contrast": [
-    "--highcontrast-search-color-default",
-    "--highcontrast-search-color-disabled",
-    "--highcontrast-search-color-focus",
-    "--highcontrast-search-color-hover"
-  ]
+  "high-contrast": []
 }

@@ -12,7 +12,6 @@
     ".spectrum-Form-itemLabel.is-disabled .spectrum-FieldLabel-requiredIcon"
   ],
   "modifiers": [
-    "--mod-disabled-content-color",
     "--mod-form-grid-template-columns",
     "--mod-form-grid-template-columns-labels-above",
     "--mod-form-inline-size",
@@ -32,5 +31,5 @@
     "--spectrum-spacing-300"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-form-item-disabled-content-color"]
+  "high-contrast": []
 }

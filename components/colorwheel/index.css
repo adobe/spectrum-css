@@ -85,7 +85,7 @@
 		&::before,
 		&::after,
 		.spectrum-ColorWheel-inner::before {
-			border-color: var(--highcontrast-colorwheel-border-color-disabled, transparent);
+			border-color: transparent;
 		}
 	}
 
@@ -151,16 +151,6 @@
 
 	&.is-disabled {
 		pointer-events: none;
-		background: var(--highcontrast-colorwheel-fill-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
-	}
-}
-
-/* Windows High Contrast Mode */
-@media (forced-colors: active) {
-	.spectrum-ColorWheel {
-		--highcontrast-colorwheel-border-color-disabled: GrayText;
-		--highcontrast-colorwheel-fill-color-disabled: Canvas;
-
-		forced-color-adjust: none;
+		background: var(--spectrum-colorwheel-fill-color-disabled);
 	}
 }

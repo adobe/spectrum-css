@@ -43,7 +43,7 @@
 	outline: none;
 	cursor: pointer;
 
-	color: var(--highcontrast-link-text-color, var(--mod-link-text-color, var(--spectrum-accent-content-color-default)));
+	color: var(--spectrum-accent-content-color-default);
 	font-family: var(--spectrum-link-default-font-family);
 	font-weight: var(--spectrum-link-font-weight);
 	font-size: var(--spectrum-link-font-size);
@@ -63,7 +63,7 @@
 	&:focus-visible {
 		--mod-link-text-color: var(--mod-link-text-color-focus, var(--spectrum-accent-content-color-key-focus));
 
-		outline: var(--spectrum-link-focus-indicator-thickness) solid var(--highcontrast-link-focus-indicator-color, var(--spectrum-link-focus-indicator-color));
+		outline: var(--spectrum-link-focus-indicator-thickness) solid var(--spectrum-link-focus-indicator-color);
 		outline-offset: var(--spectrum-link-focus-indicator-gap);
 		border-radius: var(--spectrum-link-corner-radius);
 	}
@@ -110,12 +110,4 @@
 	--mod-link-text-color-focus: var(--mod-link-text-color-black, var(--spectrum-black));
 
 	--spectrum-link-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
-}
-
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-	.spectrum-Link {
-		--highcontrast-link-text-color: LinkText;
-		--highcontrast-link-focus-indicator-color: LinkText;
-	}
 }

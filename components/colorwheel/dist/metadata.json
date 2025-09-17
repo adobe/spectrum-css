@@ -23,7 +23,6 @@
     "--mod-colorwheel-block-size",
     "--mod-colorwheel-border-color",
     "--mod-colorwheel-colorarea-container-size",
-    "--mod-colorwheel-fill-color-disabled",
     "--mod-colorwheel-inline-size",
     "--mod-colorwheel-min-inline-size",
     "--mod-colorwheel-path",
@@ -52,8 +51,5 @@
     "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-colorwheel-border-color-disabled",
-    "--highcontrast-colorwheel-fill-color-disabled"
-  ]
+  "high-contrast": []
 }

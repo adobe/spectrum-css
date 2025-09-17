@@ -33,7 +33,6 @@
     ".spectrum-DatePicker.is-disabled",
     ".spectrum-DatePicker.is-invalid",
     ".spectrum-DatePicker.is-invalid:not(.spectrum-DatePicker--quiet, .is-disabled)",
-    ".spectrum-DatePicker.spectrum-DatePicker--quiet.is-invalid",
     ".spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled)"
   ],
   "modifiers": [
@@ -50,7 +49,6 @@
     "--mod-datepicker-datetime-quiet-input-width-first",
     "--mod-datepicker-focus-animation",
     "--mod-datepicker-focus-line-gap",
-    "--mod-datepicker-focus-ring-color",
     "--mod-datepicker-focus-ring-gap",
     "--mod-datepicker-focus-ring-width",
     "--mod-datepicker-focus-thickness",
@@ -62,8 +60,6 @@
     "--mod-datepicker-padding-inline",
     "--mod-datepicker-padding-inline-end-invalid-quiet",
     "--mod-datepicker-padding-inline-quiet",
-    "--mod-datepicker-pickerbutton-border-color",
-    "--mod-datepicker-pickerbutton-border-color-invalid",
     "--mod-datepicker-quiet-border-color-hover",
     "--mod-datepicker-quiet-button-offset",
     "--mod-datepicker-range-dash-margin-left",
@@ -149,9 +145,5 @@
     "--mod-textfield-icon-spacing-inline-end-invalid",
     "--mod-textfield-icon-spacing-inline-end-quiet-invalid"
   ],
-  "high-contrast": [
-    "--highcontrast-datepicker-dash-color",
-    "--highcontrast-datepicker-focus-ring-color",
-    "--highcontrast-datepicker-pickerbutton-border-color"
-  ]
+  "high-contrast": []
 }

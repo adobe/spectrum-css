@@ -26,14 +26,14 @@
 
 	--spectrum-tabs-item-border-radius: var(--mod-tabs-item-border-radius, var(--spectrum-corner-radius-0));
 
-	--spectrum-tabs-color: var(--highcontrast-tabs-color, var(--mod-tabs-color, var(--spectrum-neutral-subdued-content-color-default)));
-	--spectrum-tabs-color-hover: var(--highcontrast-tabs-color-hover, var(--mod-tabs-color-hover, var(--spectrum-neutral-subdued-content-color-hover)));
-	--spectrum-tabs-color-key-focus: var(--highcontrast-tabs-color-key-focus, var(--mod-tabs-color-key-focus, var(--spectrum-neutral-subdued-content-color-key-focus)));
-	--spectrum-tabs-color-selected: var(--highcontrast-tabs-color-selected, var(--mod-tabs-color-selected, var(--spectrum-neutral-content-color-default)));
-	--spectrum-tabs-color-selected-hover: var(--highcontrast-tabs-color-selected-hover, var(--mod-tabs-color-selected-hover, var(--spectrum-neutral-content-color-hover)));
-	--spectrum-tabs-color-selected-key-focus: var(--highcontrast-tabs-color-selected-key-focus, var(--mod-tabs-color-selected-key-focus, var(--spectrum-neutral-content-color-key-focus)));
-	--spectrum-tabs-color-disabled: var(--highcontrast-tabs-color-disabled, var(--mod-tabs-color-disabled, var(--spectrum-disabled-content-color)));
-	--spectrum-tabs-selection-indicator-color-disabled: var(--highcontrast-tabs-selection-indicator-color-disabled, var(--mod-tabs-selection-indicator-color-disabled, var(--spectrum-disabled-border-color)));
+	--spectrum-tabs-color: var(--spectrum-neutral-subdued-content-color-default);
+	--spectrum-tabs-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+	--spectrum-tabs-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+	--spectrum-tabs-color-selected: var(--spectrum-neutral-content-color-default);
+	--spectrum-tabs-color-selected-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-tabs-color-selected-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	--spectrum-tabs-color-disabled: var(--spectrum-disabled-content-color);
+	--spectrum-tabs-selection-indicator-color-disabled: var(--spectrum-disabled-border-color);
 
 	--spectrum-tabs-font-weight: var(--mod-tabs-font-weight, var(--spectrum-regular-font-weight));
 	--spectrum-tabs-font-family: var(--mod-tabs-font-family, var(--spectrum-sans-font-family-stack));
@@ -44,9 +44,9 @@
 	--spectrum-tabs-focus-indicator-width: var(--mod-tabs-focus-indicator-width, var(--spectrum-focus-indicator-thickness));
 	--spectrum-tabs-focus-indicator-border-radius: var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-corner-radius-100)); /* component rounding + focus indicator thickness + focus indicator gap = 0 + 2px + 2px = 4px */
 	--spectrum-tabs-focus-indicator-gap: var(--mod-tabs-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
-	--spectrum-tabs-focus-indicator-color: var(--highcontrast-tabs-focus-indicator-color, var(--mod-tabs-focus-indicator-color, var(--spectrum-focus-indicator-color)));
+	--spectrum-tabs-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-	--spectrum-tabs-selection-indicator-color: var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-neutral-subdued-content-color-down)));
+	--spectrum-tabs-selection-indicator-color: var(--spectrum-neutral-subdued-content-color-down);
 	--spectrum-tabs-selection-indicator-thickness: var(--mod-tabs-selection-indicator-thickness, var(--spectrum-tab-selection-indicator-thickness));
 	--spectrum-tabs-selection-indicator-border-radius: var(--mod-tabs-selection-indicator-border-radius, var(--spectrum-corner-radius-full));
 
@@ -263,42 +263,5 @@
 .spectrum-Tabs--vertical-right {
 	.spectrum-Tabs-selectionIndicator {
 		inset-inline: auto calc(-1 * var(--spectrum-tabs-start-to-edge));
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-Tabs {
-		--highcontrast-tabs-background-color-selected: SelectedItem;
-		--highcontrast-tabs-color-selected: SelectedItemText;
-		--highcontrast-tabs-color-selected-key-focus: SelectedItemText;
-		--highcontrast-tabs-color-selected-hover: SelectedItemText;
-		--highcontrast-tabs-selection-indicator-color: CanvasText;
-		--highcontrast-tabs-focus-indicator-color: Highlight;
-		--highcontrast-tabs-color: ButtonText;
-		--highcontrast-tabs-color-hover: ButtonText;
-		--highcontrast-tabs-color-key-focus: ButtonText;
-		--highcontrast-tabs-color-disabled: GrayText;
-		--highcontrast-tabs-selection-indicator-color-disabled: GrayText;
-
-		/* Prevents black box behind text on SelectedItem background */
-		forced-color-adjust: none;
-
-		.spectrum-Tabs-item.is-selected {
-			background-color: var(--highcontrast-tabs-background-color-selected);
-
-			.spectrum-Icon {
-				color: var(--highcontrast-tabs-color-selected);
-			}
-
-			&.is-disabled {
-				.spectrum-Icon {
-					color: var(--highcontrast-tabs-color-disabled);
-				}
-
-				.spectrum-Tabs-selectionIndicator {
-					background-color: var(--highcontrast-tabs-selection-indicator-color-disabled);
-				}
-			}
-		}
 	}
 }

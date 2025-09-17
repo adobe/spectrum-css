@@ -12,9 +12,7 @@
     ".spectrum-DropIndicator:before"
   ],
   "modifiers": [
-    "--mod-dropindicator-border-color",
     "--mod-dropindicator-border-size",
-    "--mod-dropindicator-circle-color",
     "--mod-dropindicator-circle-size"
   ],
   "component": [
@@ -24,5 +22,5 @@
   ],
   "global": ["--spectrum-border-width-200"],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-dropindicator-color"]
+  "high-contrast": []
 }

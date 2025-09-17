@@ -27,7 +27,6 @@
     ".spectrum-Checkbox--emphasized.is-indeterminate:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized.is-indeterminate:not(.is-invalid) .spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox--emphasized:not(.is-invalid) .spectrum-Checkbox-input:focus-visible:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox-input:focus-visible + .spectrum-Checkbox-box",
     ".spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-checkmark",
     ".spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark",
     ".spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box:before",
@@ -86,8 +85,7 @@
     "--mod-checkbox-margin-block",
     "--mod-checkbox-selected-border-width",
     "--mod-checkbox-text-to-control",
-    "--mod-checkbox-top-to-text",
-    "--mod-focus-indicator-thickness"
+    "--mod-checkbox-top-to-text"
   ],
   "component": [
     "--spectrum-checkbox-animation-duration",
@@ -189,18 +187,5 @@
     "--spectrum-text-to-control-75"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-checkbox-background-color-default",
-    "--highcontrast-checkbox-color-default",
-    "--highcontrast-checkbox-color-focus",
-    "--highcontrast-checkbox-content-color-default",
-    "--highcontrast-checkbox-content-color-down",
-    "--highcontrast-checkbox-content-color-focus",
-    "--highcontrast-checkbox-content-color-hover",
-    "--highcontrast-checkbox-disabled-color-default",
-    "--highcontrast-checkbox-focus-indicator-color",
-    "--highcontrast-checkbox-highlight-color-default",
-    "--highcontrast-checkbox-highlight-color-down",
-    "--highcontrast-checkbox-highlight-color-hover"
-  ]
+  "high-contrast": []
 }

@@ -37,20 +37,14 @@
   ],
   "modifiers": [
     "--mod-dial-background-color-default",
-    "--mod-dial-border-color",
-    "--mod-dial-border-color-hover",
     "--mod-dial-border-radius",
     "--mod-dial-container-width",
     "--mod-dial-controls-margin",
     "--mod-dial-controls-min-height",
     "--mod-dial-handle-block-margin",
-    "--mod-dial-handle-border-color-disabled",
     "--mod-dial-handle-border-size",
     "--mod-dial-handle-inline-margin",
     "--mod-dial-handle-marker-border-radius",
-    "--mod-dial-handle-marker-color",
-    "--mod-dial-handle-marker-color-hover",
-    "--mod-dial-handle-marker-color-key-focus",
     "--mod-dial-handle-marker-color-mouse-focus",
     "--mod-dial-handle-marker-height",
     "--mod-dial-handle-marker-width",
@@ -61,11 +55,9 @@
     "--mod-dial-label-gap-y",
     "--mod-dial-label-line-height",
     "--mod-dial-label-text-color",
-    "--mod-dial-label-text-color-disabled",
     "--mod-dial-label-text-size",
     "--mod-dial-min-height",
     "--mod-dial-min-max-tick-angles",
-    "--mod-dial-min-max-tick-color",
     "--mod-dial-width"
   ],
   "component": [
@@ -113,14 +105,5 @@
     "--spectrum-line-height-200"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-dial-border-color",
-    "--highcontrast-dial-border-color-hover",
-    "--highcontrast-dial-handle-border-color-disabled",
-    "--highcontrast-dial-handle-marker-color",
-    "--highcontrast-dial-handle-marker-color-hover",
-    "--highcontrast-dial-handle-marker-color-key-focus",
-    "--highcontrast-dial-label-text-color-disabled",
-    "--highcontrast-dial-min-max-tick-color"
-  ]
+  "high-contrast": []
 }
