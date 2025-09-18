@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "@spectrum-css/commons/overlay.css";
-
 .spectrum-Popover {
 	/* animation distance is equal to and responsible for popover offset ("spacing" tip to source) */
 	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
@@ -56,7 +54,13 @@
 	/* box-shadow is for popovers without a tip. */
 	--spectrum-popover-box-shadow: var(--mod-popover-drop-shadow-x, var(--spectrum-popover-drop-shadow-x)) var(--mod-popover-drop-shadow-y, var(--spectrum-popover-drop-shadow-y)) var(--mod-popover-drop-shadow-blur, var(--spectrum-popover-drop-shadow-blur)) var(--mod-popover-drop-shadow-color, var(--spectrum-popover-drop-shadow-color));
 
-	@extend %spectrum-overlay;
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+	transition:
+		transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
+		opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
+		visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
 
 	box-sizing: border-box;
 	position: absolute;
@@ -99,7 +103,10 @@
 
 /* default opens and animates upward */
 .spectrum-Popover.is-open {
-	@extend %spectrum-overlay--open;
+	pointer-events: auto;
+	visibility: visible;
+	opacity: 1;
+	transition-delay: var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0, 0ms));
 }
 
 /* position naming - first position term is popover position, second term is source position */

@@ -127,7 +127,7 @@ module.exports = defineConfig({
 		 * @returns {void}
 		 */
 		function validateComponentPackageJson(workspace, folderName) {
-			const hasDist = isComponent(workspace) && folderName !== "commons";
+			const hasDist = isComponent(workspace);
 			const hasIndexCSS = existsSync(join(workspace.cwd, "index.css"));
 			const hasOtherCSS = fg.sync(["*.css", "!index.css"], { cwd: workspace.cwd, onlyFiles: true }).length > 0;
 

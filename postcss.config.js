@@ -70,8 +70,7 @@ module.exports = ({
 				reportInvalidScopeDisables: lint,
 			},
 			/* --------------------------------------------------- */
-			/* ------------------- SASS-LIKE UTILITIES ----------- */
-			"postcss-extend": {},
+			/* ------------------- UTILITIES ----------- */
 			"postcss-pseudo-classes": !isProduction ? {
 				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
 				allCombinations: true,

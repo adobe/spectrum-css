@@ -49,13 +49,12 @@ module.exports = {
 			{
 				except: ["blockless-after-blockless", "first-nested"],
 				ignore: ["after-comment", "first-nested"],
-				ignoreAtRules: ["extend"],
 			},
 		],
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: ["extend", "each", "include", "mixin"],
+				ignoreAtRules: ["include"],
 			},
 		],
 		"block-no-empty": [true, {

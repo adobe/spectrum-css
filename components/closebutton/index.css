@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "@spectrum-css/commons/basebutton.css";
-
 .spectrum-CloseButton {
 	--spectrum-closebutton-border-radius: var(--spectrum-corner-radius-full);
 
@@ -113,27 +111,59 @@
 }
 
 a.spectrum-CloseButton {
-	@extend %spectrum-AnchorButton;
+	/* Make link text not selectable  */
+	user-select: none;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Remove appearance for clickable types in iOS and Safari. */
+	-webkit-appearance: none;
 }
 
 .spectrum-CloseButton {
-	@extend %spectrum-BaseButton;
+	cursor: pointer;
+	user-select: none;
+
+	/* Contain halo */
+	position: relative;
+
+	/* Show the button overflow in Edge. */
+	overflow: visible;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+
+	box-sizing: border-box;
+
+	/* Remove button the margin in Firefox and Safari. */
+	margin: 0;
+
+	font-family: var(--mod-button-font-family, var(--spectrum-sans-font-family-stack));
+
+	/* Adjacent buttons should be aligned correctly */
+	vertical-align: top;
+
+	-webkit-font-smoothing: antialiased;
+
+	/* Font smoothing for Firefox */
+	-moz-osx-font-smoothing: grayscale;
+
+	line-height: var(--mod-button-line-height, var(--spectrum-line-height-100));
+	text-decoration: none;
+
+	/* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
+	text-transform: none;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari (normalize). */
+	-webkit-appearance: button;
 
 	block-size: var(--mod-closebutton-size, var(--spectrum-closebutton-size));
 	inline-size: var(--mod-closebutton-size, var(--spectrum-closebutton-size));
-
-	position: relative;
 
 	color: inherit;
 
 	border-color: transparent;
 	border-radius: var(--mod-closebutton-border-radius, var(--spectrum-closebutton-border-radius));
 	border-width: 0;
-
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	display: inline-flex;
 	padding: 0;
 
 	transition: border-color var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-in-out;
@@ -141,6 +171,21 @@ a.spectrum-CloseButton {
 	margin-inline: var(--mod-closebutton-margin-inline);
 	margin-block-start: var(--mod-closebutton-margin-top);
 	align-self: var(--mod-closebutton-align-self);
+
+	/* Fix Firefox */
+	&::-moz-focus-inner {
+		margin-block-start: -2px;
+		margin-block-end: -2px;
+		padding: 0;
+		border: 0;
+
+		/* Remove the inner border and padding for button in Firefox. */
+		border-style: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
 
 	&::after {
 		pointer-events: none;
@@ -206,6 +251,7 @@ a.spectrum-CloseButton {
 	}
 
 	&:disabled {
+		cursor: default;
 		background-color: var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default));
 
 		.spectrum-CloseButton-UIIcon {
