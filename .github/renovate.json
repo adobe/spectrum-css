@@ -10,6 +10,10 @@
 	"labels": ["dependencies", "skip_vrt", "ready-for-review"],
 	"packageRules": [
 		{
+			"matchDatasources": ["npm"],
+			"minimumReleaseAge": "1 month"
+		},
+		{
 			"matchUpdateTypes": ["major"],
 			"matchBaseBranches": ["main"],
 			"enabled": false
