@@ -11,6 +11,10 @@
 	"rangeStrategy": "bump",
 	"packageRules": [
 		{
+		"matchDatasources": ["npm"],
+		"minimumReleaseAge": "1 month"
+		},
+		{
 			"matchUpdateTypes": ["major"],
 			"matchBaseBranches": ["main"],
 			"enabled": false
