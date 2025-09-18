@@ -75,7 +75,7 @@ module.exports = {
 				],
 			},
 		],
-		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system|_)/, {}],
+		"custom-property-pattern": [/^(spectrum|mod|highcontrast|_)/, {}],
 		"declaration-block-no-duplicate-custom-properties": true,
 		"declaration-property-value-no-unknown": [
 			true,
@@ -171,7 +171,7 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["components/*/index.css", "components/*/themes/spectrum.css"],
+			files: ["components/*/index.css"],
 			rules: {
 				"selector-class-pattern": [
 					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
@@ -184,7 +184,6 @@ module.exports = {
 						/** @note this is a list of custom properties that are allowed to be unknown */
 						ignoreList: [
 							/^--mod-/,
-							/^--system-/,
 							/^--spectrum-picked-color$/,
 							/^--spectrum-downstate-(height|width)$/,
 						],
@@ -218,7 +217,7 @@ module.exports = {
 		{
 			files: ["tokens*/**/*.css(?inline)?", "tokens/**/*.css"],
 			rules: {
-				"custom-property-pattern": [/^(spectrum|color|scale|system)/, {}],
+				"custom-property-pattern": [/^(spectrum|color|scale)/, {}],
 			}
 		},
 		{
