@@ -2,11 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-InfieldButton",
-    ".spectrum-InfieldButton--quiet",
-    ".spectrum-InfieldButton--quiet:disabled",
-    ".spectrum-InfieldButton--quiet:not(:disabled):active",
-    ".spectrum-InfieldButton--quiet:not(:disabled):focus-visible",
-    ".spectrum-InfieldButton--quiet:not(:disabled):hover",
     ".spectrum-InfieldButton-fill",
     ".spectrum-InfieldButton-icon",
     ".spectrum-InfieldButton-inline",
@@ -20,10 +15,7 @@
     ".spectrum-InfieldButton:active",
     ".spectrum-InfieldButton:disabled",
     ".spectrum-InfieldButton:focus-visible",
-    ".spectrum-InfieldButton:hover",
-    ".spectrum-InfieldButton:not(:disabled):active",
-    ".spectrum-InfieldButton:not(:disabled):focus-visible",
-    ".spectrum-InfieldButton:not(:disabled):hover"
+    ".spectrum-InfieldButton:hover"
   ],
   "modifiers": [
     "--mod-infield-button-background-color",
@@ -109,8 +101,5 @@
     "--spectrum-neutral-content-color-hover"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-infield-button-background-color",
-    "--highcontrast-infield-button-icon-color"
-  ]
+  "high-contrast": []
 }

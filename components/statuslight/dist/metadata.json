@@ -36,8 +36,6 @@
     ".spectrum-StatusLight:lang(zh)"
   ],
   "modifiers": [
-    "--mod-statuslight-border-width",
-    "--mod-statuslight-content-color-default",
     "--mod-statuslight-corner-radius",
     "--mod-statuslight-dot-size",
     "--mod-statuslight-font-family",
@@ -74,8 +72,7 @@
     "--mod-statuslight-spacing-bottom-to-label",
     "--mod-statuslight-spacing-dot-to-label",
     "--mod-statuslight-spacing-top-to-dot",
-    "--mod-statuslight-spacing-top-to-label",
-    "--mod-statuslight-subdued-content-color-default"
+    "--mod-statuslight-spacing-top-to-label"
   ],
   "component": [
     "--spectrum-status-light-dot-size-extra-large",
@@ -185,8 +182,5 @@
     "--spectrum-yellow-visual-color"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-statuslight-content-color-default",
-    "--highcontrast-statuslight-subdued-content-color-default"
-  ]
+  "high-contrast": []
 }

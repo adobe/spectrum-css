@@ -70,7 +70,6 @@
     "--spectrum-alert-banner-width"
   ],
   "global": [
-    "--spectrum-border-width-100",
     "--spectrum-cjk-line-height-100",
     "--spectrum-font-size-100",
     "--spectrum-informative-background-color-default",
@@ -90,8 +89,5 @@
     "--mod-closebutton-margin-top",
     "--mod-icon-size"
   ],
-  "high-contrast": [
-    "--highcontrast-alert-banner-border-color",
-    "--highcontrast-alert-banner-border-width"
-  ]
+  "high-contrast": []
 }

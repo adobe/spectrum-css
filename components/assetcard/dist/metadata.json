@@ -2,7 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-AssetCard",
-    ".spectrum-AssetCard .spectrum-AssetCard-selectionOrder",
     ".spectrum-AssetCard--checkboxSelection .spectrum-AssetCard-selectionIndicator",
     ".spectrum-AssetCard--checkboxSelection .spectrum-AssetCard-selectionIndicator .spectrum-AssetCard-selectionOrder",
     ".spectrum-AssetCard--checkboxSelection.is-selected .spectrum-AssetCard-selectionIndicator",
@@ -177,12 +176,5 @@
     "--spectrum-white"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-assectcard-border-color-selected-down",
-    "--highcontrast-assetcard-border-color-hover",
-    "--highcontrast-assetcard-border-color-selected",
-    "--highcontrast-assetcard-border-color-selected-hover",
-    "--highcontrast-assetcard-selectionindicator-background-color-ordered",
-    "--highcontrast-assetcard-selectionindicator-color"
-  ]
+  "high-contrast": []
 }

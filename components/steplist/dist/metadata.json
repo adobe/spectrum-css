@@ -44,11 +44,8 @@
   ],
   "modifiers": [
     "--mod-steplist-complete-label-text-color",
-    "--mod-steplist-complete-marker-background-color",
     "--mod-steplist-complete-segment-border-block-end-color",
     "--mod-steplist-current-label-text-color",
-    "--mod-steplist-current-marker-color",
-    "--mod-steplist-current-marker-color-key-focus",
     "--mod-steplist-incomplete-label-color",
     "--mod-steplist-incomplete-marker-border-color",
     "--mod-steplist-incomplete-segment-border-block-end-color",
@@ -89,9 +86,5 @@
     "--spectrum-gray-800"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-steplist-complete-marker-background-color",
-    "--highcontrast-steplist-current-marker-color",
-    "--highcontrast-steplist-current-marker-color-key-focus"
-  ]
+  "high-contrast": []
 }

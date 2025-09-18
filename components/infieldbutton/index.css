@@ -144,7 +144,7 @@
 	block-size: 100%;
 	inline-size: 100%;
 
-	background-color: var(--highcontrast-infield-button-background-color, var(--mod-infield-button-background-color, var(--spectrum-infield-button-background-color)));
+	background-color: var(--spectrum-infield-button-background-color);
 	border-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
 
 	padding: var(--mod-infield-button-fill-padding, var(--spectrum-infield-button-fill-padding));
@@ -166,41 +166,6 @@
 	/* remove margin used for centering */
 	margin: 0 !important;
 
-	color: var(--highcontrast-infield-button-icon-color, var(--mod-infield-button-icon-color, var(--spectrum-infield-button-icon-color)));
+	color: var(--spectrum-infield-button-icon-color);
 	padding: var(--mod-infield-button-field-edge-to-icon, var(--spectrum-infield-button-field-edge-to-disclosure-icon));
-}
-
-@media (forced-colors: active) {
-	.spectrum-InfieldButton {
-		--highcontrast-infield-button-background-color: ButtonText;
-		--highcontrast-infield-button-icon-color: ButtonFace;
-		forced-color-adjust: none; /* keeps button from flashing when hovered */
-
-		&:disabled {
-			--highcontrast-infield-button-background-color: GrayText;
-		}
-
-		&:not(:disabled):hover,
-		&:not(:disabled):active,
-		&:not(:disabled):focus-visible {
-			--highcontrast-infield-button-background-color: Highlight;
-		}
-	}
-
-	.spectrum-InfieldButton--quiet {
-		--highcontrast-infield-button-background-color: Canvas;
-		--highcontrast-infield-button-icon-color: ButtonText;
-
-		&:disabled {
-			--highcontrast-infield-button-background-color: Canvas;
-			--highcontrast-infield-button-icon-color: GrayText;
-		}
-
-		&:not(:disabled):hover,
-		&:not(:disabled):active,
-		&:not(:disabled):focus-visible {
-			--highcontrast-infield-button-background-color: Canvas;
-			--highcontrast-infield-button-icon-color: Highlight;
-		}
-	}
 }

@@ -13,9 +13,7 @@
     "--mod-colorhandle-animation-duration",
     "--mod-colorhandle-animation-easing",
     "--mod-colorhandle-border-color",
-    "--mod-colorhandle-border-color-disabled",
     "--mod-colorhandle-border-width",
-    "--mod-colorhandle-fill-color-disabled",
     "--mod-colorhandle-focused-size",
     "--mod-colorhandle-hitarea-border-radius",
     "--mod-colorhandle-hitarea-size",
@@ -47,8 +45,5 @@
     "--spectrum-white"
   ],
   "passthroughs": ["--mod-opacity-checkerboard-position"],
-  "high-contrast": [
-    "--highcontrast-colorhandle-border-color-disabled",
-    "--highcontrast-colorhandle-fill-color-disabled"
-  ]
+  "high-contrast": []
 }

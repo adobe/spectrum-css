@@ -20,7 +20,6 @@
     "--mod-colorloupe-inner-border-color",
     "--mod-colorloupe-inner-border-width",
     "--mod-colorloupe-offset",
-    "--mod-colorloupe-outer-border-color",
     "--mod-colorloupe-outer-border-width"
   ],
   "component": [
@@ -59,5 +58,5 @@
     "--spectrum-picked-color"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-colorloupe-outer-border-color"]
+  "high-contrast": []
 }

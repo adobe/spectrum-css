@@ -109,7 +109,7 @@
 		/* Disable all children */
 		.spectrum-SideNav-itemLink {
 			background-color: var(--mod-sidenav-background-disabled, var(--spectrum-sidenav-background-disabled));
-			color: var(--highcontrast-sidenav-content-disabled-color, var(--mod-sidenav-content-disabled-color, var(--spectrum-sidenav-content-disabled-color)));
+			color: var(--spectrum-sidenav-content-disabled-color);
 
 			cursor: default;
 			pointer-events: none;
@@ -118,22 +118,22 @@
 
 	&.is-selected {
 		.spectrum-SideNav-itemLink {
-			background-color: var(--highcontrast-sidenav-item-background-default-selected, var(--mod-sidenav-item-background-default-selected, var(--spectrum-sidenav-item-background-default-selected)));
-			color: var(--highcontrast-sidenav-content-color-default-selected, var(--mod-sidenav-content-color-default-selected, var(--spectrum-sidenav-content-color-default-selected)));
+			background-color: var(--spectrum-sidenav-item-background-default-selected);
+			color: var(--spectrum-sidenav-content-color-default-selected);
 
 			&:hover {
-				background-color: var(--highcontrast-sidenav-background-hover-selected, var(--mod-sidenav-background-hover-selected, var(--spectrum-sidenav-background-hover-selected)));
+				background-color: var(--spectrum-sidenav-background-hover-selected);
 				color: var(--mod-sidenav-content-color-hover-selected, var(--spectrum-sidenav-content-color-hover-selected));
 			}
 
 			&:active {
-				background-color: var(--highcontrast-sidenav-item-background-down-selected, var(--mod-sidenav-item-background-down-selected, var(--spectrum-sidenav-item-background-down-selected)));
+				background-color: var(--spectrum-sidenav-item-background-down-selected);
 				color: var(--mod-sidenav-content-color-down-selected, var(--spectrum-sidenav-content-color-down-selected));
 			}
 
 			&.is-keyboardFocused,
 			&:focus-visible {
-				background-color: var(--highcontrast-sidenav-background-key-focus-selected, var(--mod-sidenav-background-key-focus-selected, var(--spectrum-sidenav-background-key-focus-selected)));
+				background-color: var(--spectrum-sidenav-background-key-focus-selected);
 				color: var(--mod-sidenav-content-color-key-focus-selected, var(--spectrum-sidenav-content-color-key-focus-selected));
 			}
 		}
@@ -157,7 +157,7 @@
 	border-radius: var(--mod-sidenav-border-radius, var(--spectrum-sidenav-border-radius));
 
 	background-color: var(--mod-sidenav-background-default, var(--spectrum-sidenav-background-default));
-	color: var(--highcontrast-sidenav-content-color-default, var(--mod-sidenav-content-color-default, var(--spectrum-sidenav-content-color-default)));
+	color: var(--spectrum-sidenav-content-color-default);
 
 	inline-size: var(--mod-sidenav-width, var(--spectrum-sidenav-width));
 	min-inline-size: var(--mod-sidenav-min-width, var(--spectrum-sidenav-min-width));
@@ -188,20 +188,20 @@
 	}
 
 	&:hover {
-		background-color: var(--highcontrast-sidenav-background-hover, var(--mod-sidenav-background-hover, var(--spectrum-sidenav-background-hover)));
-		color: var(--highcontrast-sidenav-content-color-hover, var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover)));
+		background-color: var(--spectrum-sidenav-background-hover);
+		color: var(--spectrum-sidenav-content-color-hover);
 	}
 
 	&:active {
-		background-color: var(--highcontrast-sidenav-item-background-down, var(--mod-sidenav-item-background-down, var(--spectrum-sidenav-item-background-down)));
-		color: var(--highcontrast-sidenav-content-color-down, var(--mod-sidenav-content-color-down, var(--spectrum-sidenav-content-color-down)));
+		background-color: var(--spectrum-sidenav-item-background-down);
+		color: var(--spectrum-sidenav-content-color-down);
 	}
 
 	&.is-keyboardFocused,
 	&:focus-visible {
-		outline: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color))) solid var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
+		outline: var(--spectrum-sidenav-focus-ring-color) solid var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
 		outline-offset: var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
-		background-color: var(--highcontrast-sidenav-background-key-focus, var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus)));
+		background-color: var(--spectrum-sidenav-background-key-focus);
 		color: var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus));
 	}
 }
@@ -220,7 +220,6 @@
 
 .spectrum-SideNav--multiLevel {
 	.spectrum-SideNav-itemLink {
-		color: var(--highcontrast-sidenav-top-level-font-color);
 		font-family: var(--mod-sidenav-top-level-font-family, var(--spectrum-sidenav-top-level-font-family));
 		font-weight: var(--mod-sidenav-top-level-font-weight, var(--spectrum-sidenav-top-level-font-weight));
 		font-style: var(--mod-sidenav-top-level-font-style, var(--spectrum-sidenav-top-level-font-style));
@@ -249,38 +248,5 @@
 		.spectrum-SideNav .spectrum-SideNav-itemLink {
 			padding-inline-start: var(--mod-sidenav-start-to-content-with-icon-third-level, var(--spectrum-sidenav-start-to-content-with-icon-third-level));
 		}
-	}
-}
-
-@media (forced-colors: active) {
-	/* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
-	.spectrum-SideNav {
-		.spectrum-Icon {
-			forced-color-adjust: preserve-parent-color;
-		}
-	}
-
-	.spectrum-SideNav-item {
-		--highcontrast-sidenav-content-disabled-color: GrayText;
-
-		--highcontrast-sidenav-focus-ring-color: Highlight;
-
-		--highcontrast-sidenav-content-color-default-selected: SelectedItemText;
-		--highcontrast-sidenav-item-background-default-selected: SelectedItem;
-
-		--highcontrast-sidenav-background-key-focus-selected: Highlight;
-		--highcontrast-sidenav-background-hover-selected: Highlight;
-		--highcontrast-sidenav-item-background-down-selected: Highlight;
-
-		--highcontrast-sidenav-item-background-down: Highlight;
-		--highcontrast-sidenav-background-hover: Highlight;
-		--highcontrast-sidenav-content-color-hover: HighlightText;
-		--highcontrast-sidenav-background-key-focus: Highlight;
-
-		--highcontrast-sidenav-top-level-font-color: ButtonText;
-		--highcontrast-sidenav-content-color-default: ButtonText;
-		--highcontrast-sidenav-content-color-down: HighlightText;
-
-		forced-color-adjust: none;
 	}
 }

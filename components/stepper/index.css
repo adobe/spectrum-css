@@ -16,11 +16,11 @@
 	/* Border */
 	--spectrum-numberfield-border-radius: var(--mod-numberfield-border-radius, var(--spectrum-corner-radius-medium-size-medium));
 	--spectrum-numberfield-border-width: var(--mod-numberfield-border-width, var(--spectrum-border-width-200));
-	--spectrum-numberfield-border-color-default: var(--highcontrast-numberfield-border-color, var(--mod-numberfield-border-color, var(--spectrum-gray-300)));
-	--spectrum-numberfield-border-color-hover: var(--highcontrast-numberfield-border-color-hover, var(--mod-numberfield-border-color-hover, var(--spectrum-gray-400)));
-	--spectrum-numberfield-border-color-focus: var(--highcontrast-numberfield-border-color-focus, var(--mod-numberfield-border-color-focus, var(--spectrum-gray-800)));
-	--spectrum-numberfield-border-color-keyboard-focus: var(--highcontrast-numberfield-border-color-keyboard-focus, var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-gray-800)));
-	--spectrum-numberfield-border-color-focus-hover: var(--highcontrast-numberfield-border-color-focus-hover, var(--mod-numberfield-border-color-focus-hover, var(--spectrum-gray-900)));
+	--spectrum-numberfield-border-color-default: var(--spectrum-gray-300);
+	--spectrum-numberfield-border-color-hover: var(--spectrum-gray-400);
+	--spectrum-numberfield-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-numberfield-border-color-keyboard-focus: var(--spectrum-gray-800);
+	--spectrum-numberfield-border-color-focus-hover: var(--spectrum-gray-900);
 	--spectrum-numberfield-border-color-disabled: var(--mod-numberfield-border-color-disabled, var(--spectrum-disabled-border-color));
 
 	/* Invalid border */
@@ -41,7 +41,7 @@
 	--spectrum-numberfield-text-color-disabled: var(--mod-numberfield-text-color-disabled, var(--spectrum-disabled-content-color));
 
 	/* Background */
-	--spectrum-numberfield-background-color: var(--highcontrast-numberfield-background-color, var(--mod-numberfield-background-color, var(--spectrum-gray-25)));
+	--spectrum-numberfield-background-color: var(--spectrum-gray-25);
 
 	/* --spectrum-numberfield-background-color-disabled: var(--mod-numberfield-background-color-disabled, var(--spectrum-disabled-background-color)); */
 	--spectrum-numberfield-background-color-disabled: var(--mod-numberfield-background-color-disabled, var(--spectrum-gray-25));
@@ -56,7 +56,7 @@
 	/* Focus indicator */
 	--spectrum-numberfield-focus-indicator-width: var(--mod-numberfield-focus-indicator-width, var(--spectrum-focus-indicator-thickness));
 	--spectrum-numberfield-focus-indicator-gap: var(--mod-numberfield-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
-	--spectrum-numberfield-focus-indicator-color: var(--highcontrast-numberfield-focus-indicator-color, var(--mod-numberfield-focus-indicator-color, var(--spectrum-focus-indicator-color)));
+	--spectrum-numberfield-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
 	/* Dimensions */
 	--spectrum-numberfield-block-size: var(--mod-numberfield-block-size, var(--spectrum-component-height-100));
@@ -166,7 +166,7 @@
 
 	&:not(.is-disabled, .is-readOnly).is-hover,
 	&:not(.is-disabled, .is-readOnly):hover {
-		--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-hover, var(--mod-numberfield-border-color-hover, var(--spectrum-numberfield-border-color-hover)));
+		--mod-numberfield-border-color: var(--spectrum-numberfield-border-color-hover);
 	}
 
 	&.is-invalid {
@@ -180,22 +180,22 @@
 	&:not(.is-disabled, .is-readOnly).is-focused,
 	&:not(.is-disabled, .is-readOnly):focus,
 	&:not(.is-disabled, .is-readOnly):focus-within {
-		--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus, var(--mod-numberfield-border-color-focus, var(--spectrum-numberfield-border-color-focus)));
+		--mod-numberfield-border-color: var(--spectrum-numberfield-border-color-focus);
 
 		&.is-hover,
 		&:hover {
-			--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus-hover, var(--mod-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover)));
+			--mod-numberfield-border-color: var(--spectrum-numberfield-border-color-focus-hover);
 		}
 	}
 
 	&:not(.is-disabled, .is-readOnly).is-keyboardFocused,
 	&:not(.is-disabled, .is-readOnly):focus-visible,
 	&:not(.is-disabled, .is-readOnly):focus-within {
-		--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus, var(--mod-numberfield-border-color-keyboard-focus, var(--spectrum-numberfield-border-color-keyboard-focus)));
+		--mod-numberfield-border-color: var(--spectrum-numberfield-border-color-keyboard-focus);
 
 		&.is-hover,
 		&:hover {
-			--mod-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus-hover, var(--mod-numberfield-border-color-focus-hover, var(--spectrum-numberfield-border-color-focus-hover)));
+			--mod-numberfield-border-color: var(--spectrum-numberfield-border-color-focus-hover);
 		}
 	}
 
@@ -388,64 +388,4 @@
 .spectrum-NumberField-buttons {
 	position: absolute;
 	inset-inline-end: calc(var(--mod-numberfield-button-inline-offset, var(--spectrum-numberfield-button-inline-offset, 0px)));
-}
-
-/* --- High contrast settings --- */
-@media (forced-colors: active) {
-	.spectrum-NumberField {
-		--highcontrast-numberfield-border-color: CanvasText;
-		--highcontrast-numberfield-background-color: Canvas;
-		--highcontrast-numberfield-border-color-hover: Highlight;
-		--highcontrast-numberfield-border-color-focus: Highlight;
-		--highcontrast-numberfield-border-color-focus-hover: Highlight;
-		--highcontrast-numberfield-border-color-keyboard-focus: CanvasText;
-		--highcontrast-numberfield-focus-indicator-color: Highlight;
-
-		&.is-invalid {
-			--highcontrast-numberfield-border-color: Highlight;
-			--highcontrast-numberfield-border-color-hover: Highlight;
-			--highcontrast-numberfield-border-color-focus: Highlight;
-			--highcontrast-numberfield-border-color-focus-hover: Highlight;
-			--highcontrast-numberfield-border-color-keyboard-focus: Highlight;
-		}
-
-		&.is-disabled {
-			--highcontrast-numberfield-border-color: GrayText;
-		}
-
-		&:not(.is-disabled) {
-			&.is-hover,
-			&:hover {
-				--highcontrast-numberfield-border-color: var(--highcontrast-numberfield-border-color-hover);
-			}
-
-			&.is-focused,
-			&:focus,
-			&:focus-within {
-				--highcontrast-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus);
-
-				&.is-hover,
-				&:hover {
-					--highcontrast-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus-hover);
-				}
-			}
-
-			&.is-keyboardFocused,
-			&:focus-visible,
-			&:focus-within {
-				--highcontrast-numberfield-border-color: var(--highcontrast-numberfield-border-color-keyboard-focus);
-
-				&.is-hover,
-				&:hover {
-					--highcontrast-numberfield-border-color: var(--highcontrast-numberfield-border-color-focus-hover);
-				}
-			}
-		}
-	}
-
-	/* @passthrough start */
-	.spectrum-NumberField-textfield {
-		--highcontrast-textfield-border-color: var(--highcontrast-numberfield-border-color);
-	}
-	/* @passthrough end */
 }

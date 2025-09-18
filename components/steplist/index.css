@@ -76,7 +76,7 @@
 		&.is-focused,
 		*:focus {
 			.spectrum-Steplist-marker {
-				background-color: var(--highcontrast-steplist-current-marker-color-key-focus, var(--mod-steplist-current-marker-color-key-focus, var(--spectrum-steplist-current-marker-color-key-focus)));
+				background-color: var(--spectrum-steplist-current-marker-color-key-focus);
 			}
 		}
 	}
@@ -138,7 +138,7 @@
 		}
 
 		.spectrum-Steplist-marker {
-			background-color: var(--highcontrast-steplist-complete-marker-background-color, var(--mod-steplist-complete-marker-background-color, var(--spectrum-steplist-complete-marker-background-color)));
+			background-color: var(--spectrum-steplist-complete-marker-background-color);
 			border: none;
 		}
 
@@ -163,7 +163,7 @@
 
 		.spectrum-Steplist-marker {
 			border: none;
-			background-color: var(--highcontrast-steplist-current-marker-color, var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color)));
+			background-color: var(--spectrum-steplist-current-marker-color);
 		}
 	}
 
@@ -217,8 +217,8 @@
 	position: absolute;
 	inset-block-start: 50%;
 	inset-inline-start: 50%;
-	margin-block-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
-	margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
+	margin-block-start: calc(-1 * var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter) / 2));
+	margin-inline-start: calc(-1 * var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter) / 2));
 
 	inline-size: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
 	block-size: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
@@ -235,11 +235,11 @@
 	display: block;
 	z-index: 1;
 	position: absolute;
-	inset-inline-end: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 1.5));
+	inset-inline-end: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) - (var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 1.5));
 
 	box-sizing: content-box;
-	inline-size: calc(calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2));
-	inset-block-end: calc(-1 * calc(var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height)) / 2));
+	inline-size: calc((var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5) - (var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2));
+	inset-block-end: calc(-1 * (var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height)) / 2));
 
 	/* Default is dashed */
 	border-block-end-width: var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
@@ -282,7 +282,7 @@
 		inset-inline-end: 0;
 
 		margin-inline-start: 0;
-		margin-inline-end: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
+		margin-inline-end: calc(-1 * (var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
 	}
 
 	.spectrum-Steplist-segment {
@@ -293,7 +293,7 @@
 
 .spectrum-Steplist-item:first-child,
 .spectrum-Steplist-item:last-child {
-	inline-size: calc(calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2.5));
+	inline-size: calc((var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2) - (var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2.5));
 }
 
 /* Single step */
@@ -316,20 +316,6 @@
 
 		/* Override last-child bits */
 		margin-inline-end: 0;
-		margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-Steplist {
-		--highcontrast-steplist-complete-marker-background-color: CanvasText;
-		--highcontrast-steplist-current-marker-color: Highlight;
-		--highcontrast-steplist-current-marker-color-key-focus: Highlight;
-	}
-
-	@supports (color: SelectedItem) {
-		.spectrum-Steplist {
-			--highcontrast-steplist-current-marker-color: SelectedItem;
-		}
+		margin-inline-start: calc(-1 * (var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
 	}
 }

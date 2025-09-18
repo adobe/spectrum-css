@@ -2,8 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Combobox",
-    ".spectrum-Combobox .spectrum-Combobox-button.spectrum-PickerButton--quiet .spectrum-PickerButton-fill",
-    ".spectrum-Combobox .spectrum-Combobox-button.spectrum-PickerButton--quiet .spectrum-PickerButton-icon",
     ".spectrum-Combobox .spectrum-Combobox-content",
     ".spectrum-Combobox .spectrum-Combobox-label",
     ".spectrum-Combobox .spectrum-Combobox-popover",
@@ -311,10 +309,5 @@
     "--mod-textfield-text-color-hover",
     "--mod-textfield-text-color-keyboard-focus"
   ],
-  "high-contrast": [
-    "--highcontrast-combobox-background-color-default",
-    "--highcontrast-combobox-border-color-highlight",
-    "--highcontrast-combobox-border-color-invalid",
-    "--highcontrast-combobox-readonly-border-color"
-  ]
+  "high-contrast": []
 }

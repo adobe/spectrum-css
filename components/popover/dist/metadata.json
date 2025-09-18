@@ -90,7 +90,6 @@
     "--mod-overlay-animation-duration-opened",
     "--mod-popover-animation-distance",
     "--mod-popover-background-color",
-    "--mod-popover-border-color",
     "--mod-popover-border-width",
     "--mod-popover-box-shadow",
     "--mod-popover-content-area-spacing",
@@ -142,5 +141,5 @@
     "--spectrum-spacing-100"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-popover-border-color"]
+  "high-contrast": []
 }

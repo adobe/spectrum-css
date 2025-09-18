@@ -135,19 +135,19 @@
 	padding-block: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 	padding-inline: var(--mod-inlinealert-spacing-edge-to-text, var(--spectrum-inlinealert-spacing-edge-to-text));
 
-	border-width: var(--highcontrast-inlinealert-border-width, var(--mod-inlinealert-border-width, var(--spectrum-inlinealert-border-width)));
+	border-width: var(--spectrum-inlinealert-border-width);
 	border-style: solid;
 	border-radius: var(--mod-inlinealert-border-radius, var(--spectrum-inlinealert-border-radius));
 
-	background-color: var(--highcontrast-inlinealert-background-color, var(--mod-inlinealert-background-color, var(--spectrum-inlinealert-background-color)));
-	border-color: var(--highcontrast-inlinealert-border-and-icon-color, var(--mod-inlinealert-border-and-icon-color, var(--spectrum-inlinealert-border-and-icon-color)));
+	background-color: var(--spectrum-inlinealert-background-color);
+	border-color: var(--spectrum-inlinealert-border-and-icon-color);
 }
 
 .spectrum-InLineAlert-icon {
 	inline-size: var(--mod-inlinealert-icon-size, var(--spectrum-inlinealert-icon-size));
 	block-size: var(--mod-inlinealert-icon-size, var(--spectrum-inlinealert-icon-size));
 	flex-shrink: 0;
-	color: var(--highcontrast-inlinealert-border-and-icon-color, var(--spectrum-inlinealert-border-and-icon-color));
+	color: var(--spectrum-inlinealert-border-and-icon-color);
 }
 
 .spectrum-InLineAlert-header {
@@ -166,7 +166,7 @@
 
 	min-block-size: var(--mod-inlinealert-header-min-block-size, var(--spectrum-inlinealert-header-min-block-size));
 
-	color: var(--highcontrast-inlinealert-header-color, var(--mod-inlinealert-header-color, var(--spectrum-inlinealert-header-color)));
+	color: var(--spectrum-inlinealert-header-color);
 }
 
 .spectrum-InLineAlert-content {
@@ -187,7 +187,7 @@
 	font-size: var(--mod-inlinealert-content-font-size, var(--spectrum-inlinealert-content-font-size));
 	line-height: var(--mod-inlinealert-content-line-height, var(--spectrum-inlinealert-content-line-height));
 
-	color: var(--highcontrast-inlinealert-content-color, var(--mod-inlinealert-content-color, var(--spectrum-inlinealert-content-color)));
+	color: var(--spectrum-inlinealert-content-color);
 }
 
 .spectrum-InLineAlert-footer {
@@ -197,20 +197,5 @@
 
 	&:empty {
 		display: none;
-	}
-}
-
-@media (forced-colors: active) {
-	.spectrum-InLineAlert {
-		--highcontrast-inlinealert-header-color: CanvasText;
-		--highcontrast-inlinealert-content-color: CanvasText;
-		--highcontrast-inlinealert-border-and-icon-color: CanvasText;
-
-		--highcontrast-inlinealert-background-color: Canvas;
-
-		&.spectrum-InLineAlert--subtle,
-		&.spectrum-InLineAlert--bold {
-			--highcontrast-inlinealert-border-width: var(--spectrum-border-width-200);
-		}
 	}
 }

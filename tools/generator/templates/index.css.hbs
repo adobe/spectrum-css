@@ -18,11 +18,3 @@
   &.spectrum-{{ pascalCase name }}--sizeL {}
   &.spectrum-{{ pascalCase name }}--sizeXL {}
 }
-
-@media (forced-colors: active) {
-  .spectrum-{{ pascalCase name }} {
-    --highcontrast-{{ folderName }}-content-color-default: CanvasText;
-
-    forced-color-adjust: none;
-  }
-}

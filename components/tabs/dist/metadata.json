@@ -3,10 +3,6 @@
   "selectors": [
     ".spectrum-Tabs",
     ".spectrum-Tabs .spectrum-Picker-button",
-    ".spectrum-Tabs .spectrum-Tabs-item.is-selected",
-    ".spectrum-Tabs .spectrum-Tabs-item.is-selected .spectrum-Icon",
-    ".spectrum-Tabs .spectrum-Tabs-item.is-selected.is-disabled .spectrum-Icon",
-    ".spectrum-Tabs .spectrum-Tabs-item.is-selected.is-disabled .spectrum-Tabs-selectionIndicator",
     ".spectrum-Tabs--horizontal",
     ".spectrum-Tabs--horizontal .spectrum-Tabs-item",
     ".spectrum-Tabs--horizontal .spectrum-Tabs-selectionIndicator",
@@ -43,15 +39,7 @@
     "--mod-tabs-animation-ease",
     "--mod-tabs-bottom-to-text",
     "--mod-tabs-bottom-to-text-compact",
-    "--mod-tabs-color",
-    "--mod-tabs-color-disabled",
-    "--mod-tabs-color-hover",
-    "--mod-tabs-color-key-focus",
-    "--mod-tabs-color-selected",
-    "--mod-tabs-color-selected-hover",
-    "--mod-tabs-color-selected-key-focus",
     "--mod-tabs-focus-indicator-border-radius",
-    "--mod-tabs-focus-indicator-color",
     "--mod-tabs-focus-indicator-gap",
     "--mod-tabs-focus-indicator-width",
     "--mod-tabs-font-family",
@@ -69,8 +57,6 @@
     "--mod-tabs-label-to-selection-indicator-compact",
     "--mod-tabs-line-height",
     "--mod-tabs-selection-indicator-border-radius",
-    "--mod-tabs-selection-indicator-color",
-    "--mod-tabs-selection-indicator-color-disabled",
     "--mod-tabs-selection-indicator-thickness",
     "--mod-tabs-side-to-icon",
     "--mod-tabs-side-to-icon-compact",
@@ -158,17 +144,5 @@
     "--spectrum-workflow-icon-size-100"
   ],
   "passthroughs": ["--mod-picker-block-size"],
-  "high-contrast": [
-    "--highcontrast-tabs-background-color-selected",
-    "--highcontrast-tabs-color",
-    "--highcontrast-tabs-color-disabled",
-    "--highcontrast-tabs-color-hover",
-    "--highcontrast-tabs-color-key-focus",
-    "--highcontrast-tabs-color-selected",
-    "--highcontrast-tabs-color-selected-hover",
-    "--highcontrast-tabs-color-selected-key-focus",
-    "--highcontrast-tabs-focus-indicator-color",
-    "--highcontrast-tabs-selection-indicator-color",
-    "--highcontrast-tabs-selection-indicator-color-disabled"
-  ]
+  "high-contrast": []
 }

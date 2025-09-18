@@ -2,12 +2,10 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Tray",
-    ".spectrum-Tray .spectrum-Dialog",
     ".spectrum-Tray-wrapper",
     ".spectrum-Tray.is-open"
   ],
   "modifiers": [
-    "--mod-tray-background-color",
     "--mod-tray-bottom-to-content-area",
     "--mod-tray-corner-radius",
     "--mod-tray-corner-radius-portrait",
@@ -37,5 +35,5 @@
     "--spectrum-corner-radius-100"
   ],
   "passthroughs": ["--mod-modal-max-width"],
-  "high-contrast": ["--highcontrast-tray-background-color"]
+  "high-contrast": []
 }
