@@ -361,9 +361,6 @@ async function main(
 		components = getAllComponentNames(false);
 	}
 
-	// Strip out utilities
-	components = components.filter(c => !["actionmenu"].includes(c));
-
 	pathing.output = output;
 	pathing.cache = join(output, "packages");
 	pathing.base = join(output, "base");

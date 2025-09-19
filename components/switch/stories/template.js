@@ -18,6 +18,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id = getRandomId("switch"),
+	labelId,
 } = {}) => {
 	// ID attribute value for the input element.
 	const inputId = getRandomId("switch-input");
@@ -42,6 +43,7 @@ export const Template = ({
 				id=${inputId}
 				?disabled=${isDisabled}
 				?checked=${isChecked}
+				aria-labelledby=${ifDefined(labelId)}
 			/>
 			<span class="${rootClass}-switch"></span>
 			${when(label, () => html`

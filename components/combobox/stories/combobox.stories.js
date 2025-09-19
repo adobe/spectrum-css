@@ -141,33 +141,36 @@ export default {
 		helpText: "",
 		value: "Ballard",
 		content: [
-			(passthroughs, context) => Menu({
-				role: "listbox",
-				subrole: "option",
-				selectionMode: "single",
-				hasDividers: true,
-				items: [
+			(passthroughs, context) =>
+				Menu(
 					{
-						label: "Ballard",
-						isSelected: true,
-						isChecked: true,
+						role: "listbox",
+						selectionMode: "single",
+						hasDividers: true,
+						items: [
+							{
+								label: "Ballard",
+								isSelected: true,
+								isChecked: true,
+							},
+							{
+								label: "Fremont",
+							},
+							{
+								label: "Greenwood",
+							},
+							{
+								type: "divider",
+							},
+							{
+								label: "United States of America",
+								isDisabled: true,
+							},
+						],
+						...passthroughs,
 					},
-					{
-						label: "Fremont",
-					},
-					{
-						label: "Greenwood",
-					},
-					{
-						type: "divider",
-					},
-					{
-						label: "United States of America",
-						isDisabled: true,
-					},
-				],
-				...passthroughs,
-			}, context),
+					context,
+				),
 		],
 	},
 	parameters: {
@@ -227,28 +230,31 @@ HelpText.args = {
 	helpText: "This is a help text. Select an option",
 };
 
-
 /**
  * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made. To enable this feature, add the `.is-readOnly` class to the combobox. To enable this feature, add the `.is-readOnly` class to the combobox. Then within the nested textfield component, add the `.is-readOnly class and readonly attribute to the `input` element.
-*/
+ */
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
 	isReadOnly: true,
-	value: "Ballard"
+	value: "Ballard",
 };
 ReadOnly.parameters = {
-	chromatic: { disableSnapshot: true }
+	chromatic: { disableSnapshot: true },
 };
 
 ReadOnly.storyName = "Read-only";
 
-export const Sizing = (args, context) => Sizes({
-	Template,
-	withBorder: false,
-	withHeading: false,
-	...args,
-}, context);
+export const Sizing = (args, context) =>
+	Sizes(
+		{
+			Template,
+			withBorder: false,
+			withHeading: false,
+			...args,
+		},
+		context,
+	);
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },

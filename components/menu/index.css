@@ -292,7 +292,7 @@
 			padding-inline-start: var(--mod-menu-item-selectable-edge-to-text-not-selected, var(--spectrum-menu-item-selectable-edge-to-text-not-selected));
 
 			/* Remove inline-start spacing once an item is selected and a checkmark appears. */
-			&.is-selected {
+			&:where(.is-selected, [aria-selected="true"]) {
 				--spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-shown);
 
 				padding-inline-start: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
@@ -300,17 +300,13 @@
 		}
 	}
 
-	&.is-selectable,
-	&.is-selectableMultiple {
-		.spectrum-Menu-item {
-			align-items: start;
-		}
+	&.is-selectable .spectrum-Menu-item,
+	&.is-selectableMultiple .spectrum-Menu-item {
+		align-items: start;
 	}
 
-	&.is-selectableMultiple {
-		.spectrum-Menu-itemCheckbox {
-			grid-area: checkmarkArea;
-		}
+	&.is-selectableMultiple:not(:has(.is-selectable)) .spectrum-Menu-itemCheckbox {
+		grid-area: checkmarkArea;
 	}
 
 	.spectrum-Menu-divider {
@@ -610,8 +606,7 @@
 	}
 
 	/* Disabled menu items */
-	&.is-disabled,
-	&[aria-disabled="true"] {
+	&:is(.is-disabled, [aria-disabled="true"]) {
 		.spectrum-Menu-itemLabel,
 		.spectrum-Menu-sectionHeading,
 		.spectrum-Menu-itemValue {
