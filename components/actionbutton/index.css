@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "@spectrum-css/commons/basebutton.css";
-
 .spectrum-ActionButton {
 	--spectrum-actionbutton-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-medium);
@@ -234,8 +232,45 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton {
-	@extend %spectrum-BaseButton;
+	cursor: pointer;
+	user-select: none;
+
+	/* Contain halo */
 	position: relative;
+
+	/* Show the button overflow in Edge. */
+	overflow: visible;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	box-sizing: border-box;
+
+	/* Remove button the margin in Firefox and Safari. */
+	margin: 0;
+
+	font-family: var(--mod-button-font-family, var(--spectrum-sans-font-family-stack));
+
+	/* Adjacent buttons should be aligned correctly */
+	vertical-align: top;
+
+	-webkit-font-smoothing: antialiased;
+
+	/* Font smoothing for Firefox */
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+
+	/* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
+	text-transform: none;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari (normalize). */
+	-webkit-appearance: button;
+
+	transition:
+		background var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+		border-color var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+		color var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+		box-shadow var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out;
 
 	min-inline-size: var(--mod-actionbutton-min-width, var(--spectrum-actionbutton-min-width));
 	block-size: var(--mod-actionbutton-height, var(--spectrum-actionbutton-height));
@@ -251,6 +286,26 @@ governing permissions and limitations under the License.
 
 	background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-default, var(--spectrum-actionbutton-background-color-default)));
 	color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-default, var(--spectrum-actionbutton-content-color-default)));
+
+	/* Fix Firefox */
+	&::-moz-focus-inner {
+		margin-block-start: -2px;
+		margin-block-end: -2px;
+		padding: 0;
+		border: 0;
+
+		/* Remove the inner border and padding for button in Firefox. */
+		border-style: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		cursor: default;
+	}
 
 	&:hover {
 		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover)));
@@ -276,11 +331,16 @@ governing permissions and limitations under the License.
 }
 
 a.spectrum-ActionButton {
-	@extend %spectrum-AnchorButton;
+	/* Make link text not selectable  */
+	user-select: none;
+
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Remove appearance for clickable types in iOS and Safari. */
+	-webkit-appearance: none;
 }
 
 .spectrum-ActionButton-icon {
-	@extend %spectrum-ButtonIcon;
+	flex-shrink: 0;
+	max-block-size: 100%;
 
 	inline-size: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
 	block-size: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
@@ -298,7 +358,16 @@ a.spectrum-ActionButton {
 }
 
 .spectrum-ActionButton-label {
-	@extend %spectrum-ButtonLabel;
+	align-self: center;
+	justify-self: center;
+
+	/* Fixes horizontal alignment of text in anchor buttons */
+	text-align: center;
+
+	&:empty {
+		display: none;
+	}
+
 	pointer-events: none;
 
 	font-size: var(--mod-actionbutton-font-size, var(--spectrum-actionbutton-font-size));

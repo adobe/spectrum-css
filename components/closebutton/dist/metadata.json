@@ -8,7 +8,6 @@
     ".spectrum-CloseButton--staticBlack",
     ".spectrum-CloseButton--staticWhite",
     ".spectrum-CloseButton-UIIcon",
-    ".spectrum-CloseButton.is-disabled",
     ".spectrum-CloseButton.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton.is-keyboardFocused:not(:disabled)",
     ".spectrum-CloseButton.is-keyboardFocused:not(:disabled) .spectrum-CloseButton-UIIcon",
@@ -97,11 +96,7 @@
     "--spectrum-transparent-white-800",
     "--spectrum-transparent-white-900"
   ],
-  "passthroughs": [
-    "--mod-button-animation-duration",
-    "--mod-button-font-family",
-    "--mod-button-line-height"
-  ],
+  "passthroughs": ["--mod-button-font-family", "--mod-button-line-height"],
   "high-contrast": [
     "--highcontrast-closebutton-background-color-default",
     "--highcontrast-closebutton-focus-indicator-color",

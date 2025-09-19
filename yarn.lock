@@ -151,7 +151,6 @@ __metadata:
     open: "npm:10.2.0"
     pajv: "npm:1.2.0"
     postcss: "npm:8.5.6"
-    postcss-extend: "npm:1.0.5"
     postcss-hover-media-feature: "npm:1.0.2"
     postcss-import: "npm:16.1.1"
     postcss-licensing: "npm:3.0.0"
@@ -4170,7 +4169,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actionbutton@workspace:components/actionbutton"
   dependencies:
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/icon": "npm:10.0.0-next.3"
     "@spectrum-css/tokens": "npm:16.1.0-next.10"
   peerDependencies:
@@ -4426,7 +4424,6 @@ __metadata:
     "@spectrum-css/colorslider": "npm:9.0.0-next.3"
     "@spectrum-css/colorwheel": "npm:7.0.0-next.4"
     "@spectrum-css/combobox": "npm:5.0.0-next.4"
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/contextualhelp": "npm:6.0.0-next.3"
     "@spectrum-css/datepicker": "npm:5.0.0-next.2"
     "@spectrum-css/dial": "npm:6.0.0-next.1"
@@ -4493,7 +4490,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/button@workspace:components/button"
   dependencies:
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/icon": "npm:10.0.0-next.3"
     "@spectrum-css/progresscircle": "npm:6.0.0-next.0"
     "@spectrum-css/tokens": "npm:16.1.0-next.10"
@@ -4619,7 +4615,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/closebutton@workspace:components/closebutton"
   dependencies:
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/icon": "npm:10.0.0-next.3"
     "@spectrum-css/tokens": "npm:16.1.0-next.10"
   peerDependencies:
@@ -4808,19 +4803,6 @@ __metadata:
       optional: true
     "@spectrum-css/textfield":
       optional: true
-    "@spectrum-css/tokens":
-      optional: true
-  languageName: unknown
-  linkType: soft
-
-"@spectrum-css/commons@npm:12.0.0-next.0, @spectrum-css/commons@workspace:components/commons":
-  version: 0.0.0-use.local
-  resolution: "@spectrum-css/commons@workspace:components/commons"
-  dependencies:
-    "@spectrum-css/tokens": "npm:16.1.0-next.10"
-  peerDependencies:
-    "@spectrum-css/tokens": ">=16.1.0-next.0"
-  peerDependenciesMeta:
     "@spectrum-css/tokens":
       optional: true
   languageName: unknown
@@ -5180,7 +5162,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/logicbutton@workspace:components/logicbutton"
   dependencies:
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/tokens": "npm:16.1.0-next.10"
   peerDependencies:
     "@spectrum-css/tokens": ">=16.1.0-next.0"
@@ -5337,7 +5318,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/picker@workspace:components/picker"
   dependencies:
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/helptext": "npm:8.0.0-next.2"
     "@spectrum-css/icon": "npm:10.0.0-next.3"
     "@spectrum-css/menu": "npm:10.0.0-next.5"
@@ -5397,7 +5377,6 @@ __metadata:
   resolution: "@spectrum-css/popover@workspace:components/popover"
   dependencies:
     "@spectrum-css/alertdialog": "npm:5.0.0-next.4"
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/dialog": "npm:13.0.0-next.4"
     "@spectrum-css/divider": "npm:6.0.0-next.1"
     "@spectrum-css/menu": "npm:10.0.0-next.5"
@@ -5885,7 +5864,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tooltip@workspace:components/tooltip"
   dependencies:
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/icon": "npm:10.0.0-next.3"
     "@spectrum-css/tokens": "npm:16.1.0-next.10"
   peerDependencies:
@@ -5980,7 +5958,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/underlay@workspace:components/underlay"
   dependencies:
-    "@spectrum-css/commons": "npm:12.0.0-next.0"
     "@spectrum-css/tokens": "npm:16.1.0-next.10"
   peerDependencies:
     "@spectrum-css/tokens": ">=16.1.0-next.0"
@@ -7349,13 +7326,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-regex@npm:^2.0.0":
-  version: 2.1.1
-  resolution: "ansi-regex@npm:2.1.1"
-  checksum: 10c0/78cebaf50bce2cb96341a7230adf28d804611da3ce6bf338efa7b72f06cc6ff648e29f80cd95e582617ba58d5fdbec38abfeed3500a98bce8381a9daec7c548b
-  languageName: node
-  linkType: hard
-
 "ansi-regex@npm:^5.0.1":
   version: 5.0.1
   resolution: "ansi-regex@npm:5.0.1"
@@ -7367,13 +7337,6 @@ __metadata:
   version: 6.2.0
   resolution: "ansi-regex@npm:6.2.0"
   checksum: 10c0/20a2e55ae9816074a60e6729dbe3daad664cd967fc82acc08b02f5677db84baa688babf940d71f50acbbb184c02459453789705e079f4d521166ae66451de551
-  languageName: node
-  linkType: hard
-
-"ansi-styles@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "ansi-styles@npm:2.2.1"
-  checksum: 10c0/7c68aed4f1857389e7a12f85537ea5b40d832656babbf511cc7ecd9efc52889b9c3e5653a71a6aade783c3c5e0aa223ad4ff8e83c27ac8a666514e6c79068cab
   languageName: node
   linkType: hard
 
@@ -8423,19 +8386,6 @@ __metadata:
   dependencies:
     traverse: "npm:>=0.3.0 <0.4"
   checksum: 10c0/c27b8b10fd372b07d80b3f63615ce5ecb9bb1b0be6934fe5de3bb0328f9ffad5051f206bd7a0b426b85778fee0c063a1f029fb32cc639f3b2ee38d6b39f52c5c
-  languageName: node
-  linkType: hard
-
-"chalk@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "chalk@npm:1.1.3"
-  dependencies:
-    ansi-styles: "npm:^2.2.1"
-    escape-string-regexp: "npm:^1.0.2"
-    has-ansi: "npm:^2.0.0"
-    strip-ansi: "npm:^3.0.0"
-    supports-color: "npm:^2.0.0"
-  checksum: 10c0/28c3e399ec286bb3a7111fd4225ebedb0d7b813aef38a37bca7c498d032459c265ef43404201d5fbb8d888d29090899c95335b4c0cda13e8b126ff15c541cef8
   languageName: node
   linkType: hard
 
@@ -12000,26 +11950,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"has-ansi@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "has-ansi@npm:2.0.0"
-  dependencies:
-    ansi-regex: "npm:^2.0.0"
-  checksum: 10c0/f54e4887b9f8f3c4bfefd649c48825b3c093987c92c27880ee9898539e6f01aed261e82e73153c3f920fde0db5bf6ebd58deb498ed1debabcb4bc40113ccdf05
-  languageName: node
-  linkType: hard
-
 "has-bigints@npm:^1.0.2":
   version: 1.1.0
   resolution: "has-bigints@npm:1.1.0"
   checksum: 10c0/2de0cdc4a1ccf7a1e75ffede1876994525ac03cc6f5ae7392d3415dd475cd9eee5bceec63669ab61aa997ff6cceebb50ef75561c7002bed8988de2b9d1b40788
-  languageName: node
-  linkType: hard
-
-"has-flag@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "has-flag@npm:1.0.0"
-  checksum: 10c0/d0ad4bebbbc005edccfa1e2c0600c89375be5663d23f49a129e0f817187405748b0b515abfc5b3c209c92692e39bb0481c83c0ee4df69433d6ffd0242183100b
   languageName: node
   linkType: hard
 
@@ -13858,13 +13792,6 @@ __metadata:
     "@sideway/formula": "npm:^3.0.1"
     "@sideway/pinpoint": "npm:^2.0.0"
   checksum: 10c0/9262aef1da3f1bec5b03caf50c46368899fe03b8ff26cbe3d53af4584dd1049079fc97230bbf1500b6149db7cc765b9ee45f0deb24bb6fc3fa06229d7148c17f
-  languageName: node
-  linkType: hard
-
-"js-base64@npm:^2.1.9":
-  version: 2.6.4
-  resolution: "js-base64@npm:2.6.4"
-  checksum: 10c0/95d93c4eca0bbe0f2d5ffe8682d9acd23051e5c0ad71873ff5a48dd46a5f19025de9f7b36e63fa3f02f342ae4a8ca4c56e7b590d7300ebb6639ce09675e0fd02
   languageName: node
   linkType: hard
 
@@ -16990,15 +16917,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-extend@npm:1.0.5":
-  version: 1.0.5
-  resolution: "postcss-extend@npm:1.0.5"
-  dependencies:
-    postcss: "npm:^5.0.4"
-  checksum: 10c0/663d85d7fb10547090d416babb75452789679d9663b162d70052f589de424e42e4a307f9022d59983b4e55c4da3e1ae0b339fe109d263bf820835c7055ead05f
-  languageName: node
-  linkType: hard
-
 "postcss-focus-visible@npm:^10.0.1":
   version: 10.0.1
   resolution: "postcss-focus-visible@npm:10.0.1"
@@ -17721,18 +17639,6 @@ __metadata:
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
   checksum: 10c0/5127cc7c91ed7a133a1b7318012d8bfa112da9ef092dddf369ae699a1f10ebbd89b1b9f25f3228795b84585c72aabd5ced5fc11f2ba467eedf7b081a66fad024
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^5.0.4":
-  version: 5.2.18
-  resolution: "postcss@npm:5.2.18"
-  dependencies:
-    chalk: "npm:^1.1.3"
-    js-base64: "npm:^2.1.9"
-    source-map: "npm:^0.5.6"
-    supports-color: "npm:^3.2.3"
-  checksum: 10c0/1f9f6673dd24d52f1ed33b800248e6ef752d6b6a092fe268021e398df0d7e0956f00fb961781647264d659240c3d67f5bfd3df9bf1b7af985aa996be619d30b1
   languageName: node
   linkType: hard
 
@@ -18931,13 +18837,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map@npm:^0.5.6":
-  version: 0.5.7
-  resolution: "source-map@npm:0.5.7"
-  checksum: 10c0/904e767bb9c494929be013017380cbba013637da1b28e5943b566031e29df04fba57edf3f093e0914be094648b577372bd8ad247fa98cfba9c600794cd16b599
-  languageName: node
-  linkType: hard
-
 "source-map@npm:^0.6.0, source-map@npm:^0.6.1, source-map@npm:~0.6.1":
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
@@ -19253,15 +19152,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "strip-ansi@npm:3.0.1"
-  dependencies:
-    ansi-regex: "npm:^2.0.0"
-  checksum: 10c0/f6e7fbe8e700105dccf7102eae20e4f03477537c74b286fd22cfc970f139002ed6f0d9c10d0e21aa9ed9245e0fa3c9275930e8795c5b947da136e4ecb644a70f
-  languageName: node
-  linkType: hard
-
 "strip-ansi@npm:^7.0.1, strip-ansi@npm:^7.1.0":
   version: 7.1.0
   resolution: "strip-ansi@npm:7.1.0"
@@ -19500,22 +19390,6 @@ __metadata:
     serialize-error: "npm:^7.0.1"
     strip-ansi: "npm:^7.0.1"
   checksum: 10c0/8164674f2e280cab875f0fef5bb36c15553c13e29697ff92f4e0d6bc62149f0303a89eee47535413ed145ea72e14a24d065bab233059d48a499ec5ebb4566b0f
-  languageName: node
-  linkType: hard
-
-"supports-color@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "supports-color@npm:2.0.0"
-  checksum: 10c0/570e0b63be36cccdd25186350a6cb2eaad332a95ff162fa06d9499982315f2fe4217e69dd98e862fbcd9c81eaff300a825a1fe7bf5cc752e5b84dfed042b0dda
-  languageName: node
-  linkType: hard
-
-"supports-color@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "supports-color@npm:3.2.3"
-  dependencies:
-    has-flag: "npm:^1.0.0"
-  checksum: 10c0/d39a57dbd75c3b5740654f8ec16aaf7203b8d12b8a51314507bed590c9081120805f105b4ce741db13105e6f842ac09700e4bd665b9ffc46eb0b34ba54720bd3
   languageName: node
   linkType: hard
 
