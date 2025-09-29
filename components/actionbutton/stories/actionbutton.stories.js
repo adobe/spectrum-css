@@ -107,7 +107,7 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: ["click .spectrum-ActionButton:not([disabled])"],
+			handles: ["click .spectrum-ActionButton:not([disabled])", "mousedown .spectrum-ActionButton:not([disabled])", "mouseup .spectrum-ActionButton:not([disabled])", "touchstart .spectrum-ActionButton:not([disabled])", "touchend .spectrum-ActionButton:not([disabled])"],
 		},
 		design: {
 			type: "figma",
@@ -198,8 +198,8 @@ Quiet.parameters = {
 
 /**
  * An action button can have a hold icon (a small corner triangle). This icon indicates that holding down the action button for a
- * short amount of time can reveal a [popover](/docs/components-popover--docs) menu, which can be used, for example, to switch
- * between related actions. Note that this popover menu is not demonstrated here—this would be handled by the implementation.
+ * short amount of time (currently the standard is 300ms) can reveal a [popover](/docs/components-popover--docs) menu, which can be used, for example, to switch
+ * between related actions. Note that this popover menu is not demonstrated here; this would be handled by the implementation.
  * Because of the way padding is calculated, the hold icon must be placed before the workflow icon in the markup.
  */
 export const HoldIcon = IconOnlyOption.bind({});

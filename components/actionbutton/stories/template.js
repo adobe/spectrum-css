@@ -69,6 +69,20 @@ export const Template = ({
 	role = "button",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
+	// If a custom onclick handler isn't provided, close the popover when clicking outside of the button
+	if (typeof onclick !== "function") {
+		document.body.addEventListener("click", function (evt) {
+			if (evt.target.closest(`.${rootClass}`)) {
+				return;
+			}
+			updateArgs({
+				isSelected: false,
+				isOpen: false,
+			});
+		});
+	}
+
 	return html`
 		<button
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
@@ -77,31 +91,36 @@ export const Template = ({
 			aria-pressed=${ifDefined(isSelected ? "true" : undefined)}
 			aria-expanded=${ifDefined(hasPopup && hasPopup !== "false" ? isOpen ? "true" : "false" : undefined)}
 			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--emphasized`]: isEmphasized,
-				[`${rootClass}--static${capitalize(staticColor)}`]:
-					typeof staticColor !== "undefined",
-				["is-disabled"]: isDisabled,
-				["is-hover"]: isHovered,
-				["is-focus-visible"]: isFocused,
-				["is-active"]: isActive,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
+		[rootClass]: true,
+		[`${rootClass}--size${size?.toUpperCase()}`]:
+			typeof size !== "undefined",
+		[`${rootClass}--quiet`]: isQuiet,
+		[`${rootClass}--emphasized`]: isEmphasized,
+		[`${rootClass}--static${capitalize(staticColor)}`]:
+			typeof staticColor !== "undefined",
+		["is-disabled"]: isDisabled,
+		["is-hover"]: isHovered,
+		["is-focus-visible"]: isFocused,
+		["is-active"]: isActive,
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	})}
 			id=${id}
 			data-testid=${testId ?? id}
 			popovertarget=${ifDefined(hasPopup && hasPopup !== "false" ? popupId : undefined)}
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
-			@click=${onclick ?? function() {
-				updateArgs({
-					isSelected: !isSelected
-				});
+			@click=${function () {
+				if (isDisabled) return;
+				if (typeof onclick === "function") onclick();
+				else {
+					updateArgs({
+						isSelected: !isSelected,
+						isOpen: !isOpen,
+					});
+				}
 			}}
-			@focusin=${function() {
+			@focusin=${function () {
 				updateArgs({ isFocused: true });
 			}}
 			@focusout=${function() {

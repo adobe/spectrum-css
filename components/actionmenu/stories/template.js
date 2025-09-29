@@ -3,6 +3,8 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 
+import "../index.css";
+
 export const Template = (
 	{
 		rootClass = "spectrum-ActionMenu",
@@ -24,6 +26,15 @@ export const Template = (
 ) => {
 	const { updateArgs } = context;
 
+	document.body.addEventListener("click", function (evt) {
+		if (evt.target.closest(`.${rootClass}`)) {
+			return;
+		}
+		updateArgs({
+			isOpen: false,
+		});
+	});
+
 	return Popover(
 		{
 			...popoverArgs,
@@ -40,12 +51,12 @@ export const Template = (
 						hasPopup: "menu",
 						hasLongPress,
 						id: triggerId,
+						isOpen,
+						isSelected: isOpen,
 						customClasses: [`${rootClass}-trigger`],
-						onclick: hasLongPress
-							? undefined
-							: () => {
-								updateArgs({ isOpen: !isOpen });
-							},
+						onclick: () => {
+							updateArgs({ isOpen: !isOpen });
+						},
 					},
 					context,
 				),

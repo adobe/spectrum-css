@@ -44,10 +44,7 @@ Example markup:
 
 Updates `@spectrum-css/menu` styles to align with latest Spectrum 2 design specifications and improve accessibility.
 
-- Focus indicator tokens wired through: width, color, gap/offset, and outline style.
-- CJK line-height tokens applied for labels, descriptions, and section headers.
-- External link and drill‑in icon sizing variables exposed; thumbnail sizing and alignment refined.
-- Forced-colors improvements and readability adjustments.
+- Added this not to prevent clash with the `.is-selectable` placement.
 - Non-breaking; no class or DOM changes required.
 
 ### Action button refinements
