@@ -1,4 +1,4 @@
-import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as CoachIndicator } from "@spectrum-css/coachindicator/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
@@ -22,7 +22,6 @@ export const CoachContainer = (
 		content = "Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.",
 		currentStep = 2,
 		totalStepCount = 8,
-		isOpen = false,
 		alt = "",
 	} = {},
 	context = {},
@@ -52,33 +51,19 @@ export const CoachContainer = (
 		<div class="spectrum-CoachMark-header" style=${styleMap({
 			"--mod-popover-width": "0px",
 			"--mod-popover-height": "0px",
-			"--mod-popover-wrapper-spacing": "0px",
+			"--spectrum-popover-animation-distance": "0px",
 		})}>
 			<div class="spectrum-CoachMark-title">${title}</div>
+			<!-- This only demonstrates the presence of the action button but not the popover menu -->
 			${when(
 				hasActionMenu,
-				() => ActionMenu(
+				() => ActionButton(
 					{
-						isOpen,
-						position: "bottom-start",
-						triggerArgs: {
-							iconName: "More",
-							size: scale === "large" ? "s" : "m",
-							label: "More actions",
-							hideLabel: true,
-						},
+						iconName: "More",
+						size: scale === "large" ? "s" : "m",
+						label: "More actions",
+						hideLabel: true,
 						customClasses: [`${rootClass}-action-menu`],
-						menuArgs: {
-							size: scale === "large" ? "s" : "m",
-							items: [
-								{
-									label: "Skip tour",
-								},
-								{
-									label: "Reset tour",
-								},
-							],
-						},
 					},
 					context,
 				),
@@ -179,7 +164,6 @@ export const CoachmarkMenuStatesTemplate = (args, context) =>
 						...args,
 						hasImage: false,
 						hasActionMenu: true,
-						isOpen: true
 					},
 					context,
 				),
@@ -207,7 +191,7 @@ export const CoachMarkMediaOptionsTemplate = (args, context) =>
 						imageIsFixedHeight: true,
 						imageSource: "example-card-portrait.png",
 						customStyles: {
-							"height": "315px"
+							"--mod-coachmark-media-fixed-height": "150px"
 						}
 					},
 					context,

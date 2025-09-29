@@ -75,11 +75,6 @@ export default {
 	tags: ["migrated"],
 };
 
-/**
- * Action menu allows users to access and execute various commands or tasks related to their current workflow. It's typically triggered from an action button by user interaction.
- *
- * Note that the accessibility roles are different for an action menu compared to a normal menu. The action menu is a combination of a menu, popover, and action button.
- */
 export const Default = ActionMenuGroup.bind({});
 Default.args = {
 	triggerArgs: {
@@ -130,6 +125,8 @@ Default.args = {
  * By default, the menu is opened by pressing the trigger element or activating it via the <kbd>Space</kbd> or <kbd>Enter</kbd> keys. However, there may be cases where the trigger should perform a separate action on press such as selection, and should only display the menu when long pressed. For this use-case, the menu will only be opened when pressing and holding the trigger or by using the <kbd>Option</kbd> (Alt on Windows) + <kbd>Down arrow</kbd>/<kbd>Up arrow</kbd> keys while focusing the trigger.
  *
  * This example illustrates the expected visuals and states of the action menu for a trigger with both long press and short press behaviors.
+ *
+ * Please note that the long press functionality is not implemented in this documentation and the example serves only as a visual reference.
  */
 export const LongPress = Template.bind({});
 LongPress.args = {
@@ -165,7 +162,7 @@ LongPress.parameters = {
 };
 
 /**
- * Action menus can be positioned in four locals relative to the trigger but <u>only one menu can be triggered at a single time</u>.
+ * Action menus can be positioned in four locales relative to the trigger but <em>only one menu can be triggered at a single time</em>.
  */
 export const PlacementOptions = (args, context) => ArgGrid({
 	Template,

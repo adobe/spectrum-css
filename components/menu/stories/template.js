@@ -323,8 +323,6 @@ export const MenuItem = (
 		else role = "menuitemradio";
 	}
 
-	// hasCheckbox = selectionMode == "multiple" && !hasActions
-
 	return html`
 		<li
 			class=${classMap({

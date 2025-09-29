@@ -69,6 +69,7 @@ export const Template = ({
 	role = "button",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
 	return html`
 		<button
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
@@ -96,12 +97,17 @@ export const Template = ({
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
-			@click=${onclick ?? function() {
-				updateArgs({
-					isSelected: !isSelected
-				});
+			@click=${function () {
+				if (isDisabled) return;
+				if (typeof onclick === "function") onclick();
+				else {
+					updateArgs({
+						isSelected: !isSelected,
+						isOpen: !isOpen,
+					});
+				}
 			}}
-			@focusin=${function() {
+			@focusin=${function () {
 				updateArgs({ isFocused: true });
 			}}
 			@focusout=${function() {

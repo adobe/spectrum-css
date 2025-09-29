@@ -11,7 +11,7 @@ Introduces `@spectrum-css/actionmenu`, a composition of `ActionButton`, `Popover
 
 - Adds wrapper classes: `spectrum-ActionMenu`, `spectrum-ActionMenu-trigger`, `spectrum-ActionMenu-popover`, and `spectrum-ActionMenu-menu`.
 - Supports long press triggers and four placements (start/end, top/bottom) via the underlying popover API.
-- Design reference: [Figma S2 token specs](https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-Token-specs?node-id=19758-3424).
+- Design reference: [Figma S2 token specs](https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=20959-21513&node-type=frame&t=jbePQKK1yLdrHG2M-11).
 
 #### Migration notes
 
@@ -44,10 +44,7 @@ Example markup:
 
 Updates `@spectrum-css/menu` styles to align with latest Spectrum 2 design specifications and improve accessibility.
 
-- Focus indicator tokens wired through: width, color, gap/offset, and outline style.
-- CJK line-height tokens applied for labels, descriptions, and section headers.
-- External link and drill‑in icon sizing variables exposed; thumbnail sizing and alignment refined.
-- Forced-colors improvements and readability adjustments.
+- Updated `.is-selectableMultiple .spectrum-Menu-itemCheckbox` to `.is-selectableMultiple:not(:has(.is-selectable)) .spectrum-Menu-itemCheckbox` to prevent clash with the `.is-selectable` placement.
 - Non-breaking; no class or DOM changes required.
 
 ### Action button refinements
