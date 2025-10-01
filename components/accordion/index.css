@@ -54,29 +54,26 @@
 
 	/* Colors */
 	/* @TODO: use opacity tokens when available */
-	--spectrum-accordion-background-color-default: var(--mod-accordion-background-color-default, var(--spectrum-transparent-black-25));
-	--spectrum-accordion-background-color-hover: var(--mod-accordion-background-color-hover, var(--spectrum-transparent-black-100));
-	--spectrum-accordion-background-color-down: var(--mod-accordion-background-color-down, var(--spectrum-transparent-black-300));
-	--spectrum-accordion-background-color-key-focus: var(--mod-accordion-background-color-key-focus, var(--spectrum-transparent-black-100));
+	--spectrum-accordion-background-color-default: var(--spectrum-transparent-black-25);
+	--spectrum-accordion-background-color-hover: var(--spectrum-transparent-black-100);
+	--spectrum-accordion-background-color-down: var(--spectrum-transparent-black-300);
+	--spectrum-accordion-background-color-key-focus: var(--spectrum-transparent-black-100);
 
-	--spectrum-accordion-item-content-color: var(--mod-accordion-item-content-color, var(--spectrum-body-color));
-	--spectrum-accordion-divider-color: var(--mod-accordion-divider-color, var(--spectrum-gray-200));
-	--spectrum-accordion-item-focus-indicator-color: var(--mod-accordion-item-focus-indicator-color, var(--spectrum-focus-indicator-color));
+	--spectrum-accordion-item-content-color: var(--spectrum-body-color);
+	--spectrum-accordion-divider-color: var(--spectrum-gray-200);
+	--spectrum-accordion-item-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-	--spectrum-accordion-item-header-color-default: var(--mod-accordion-item-header-color-default, var(--spectrum-neutral-content-color-default));
-	--spectrum-accordion-item-header-color-hover: var(--mod-accordion-item-header-color-hover, var(--spectrum-neutral-content-color-hover));
-	--spectrum-accordion-item-header-color-down: var(--mod-accordion-item-header-color-down, var(--spectrum-neutral-content-color-down));
-	--spectrum-accordion-item-header-color-key-focus: var(--mod-accordion-item-header-color-key-focus, var(--spectrum-neutral-content-color-key-focus));
+	--spectrum-accordion-item-header-color-default: var(--spectrum-neutral-content-color-default);
+	--spectrum-accordion-item-header-color-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-accordion-item-header-color-down: var(--spectrum-neutral-content-color-down);
+	--spectrum-accordion-item-header-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
 	/* Calculated minimum block-size that accounts for density spacing changes and/or increases in font size and line-height.
 	   This gives us the block-size of the header with a single line of text. */
-	--spectrum-accordion-item-min-block-size: max(
-		var(--mod-accordion-item-minimum-height, var(--spectrum-accordion-item-minimum-height)),
-		var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) + var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) + (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height)))
-	);
+	--spectrum-accordion-item-min-block-size: max(var(--spectrum-accordion-item-minimum-height), var(--spectrum-accordion-item-header-top-to-text-space) + var(--spectrum-accordion-item-header-bottom-to-text-space) + (var(--spectrum-accordion-item-header-font-size) * var(--spectrum-accordion-item-header-line-height)));
 
 	/* Calculated vertical spacing for action button and switch to center them within the accordion item */
-	--spectrum-accordion-item-direct-actions-vertical-spacing: calc((var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size)) - var(--mod-accordion-item-direct-actions-height, var(--spectrum-accordion-item-direct-actions-height))) / 2);
+	--spectrum-accordion-item-direct-actions-vertical-spacing: calc((var(--spectrum-accordion-item-min-block-size) - var(--spectrum-accordion-item-direct-actions-height)) / 2);
 
 	/* Right-to-left adjustments for transforms */
 	&:dir(rtl) {
@@ -209,11 +206,11 @@
 	--spectrum-accordion-background-color-hover: transparent;
 	--spectrum-accordion-background-color-down: transparent;
 	--spectrum-accordion-background-color-key-focus: transparent;
-	--spectrum-accordion-item-content-color: var(--mod-accordion-item-content-disabled-color, var(--spectrum-disabled-content-color));
-	--spectrum-accordion-item-header-color-default: var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color));
-	--spectrum-accordion-item-header-color-hover: var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color));
-	--spectrum-accordion-item-header-color-down: var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color));
-	--spectrum-accordion-item-header-color-key-focus: var(--mod-accordion-item-header-disabled-color, var(--spectrum-disabled-content-color));
+	--spectrum-accordion-item-content-color: var(--spectrum-disabled-content-color);
+	--spectrum-accordion-item-header-color-default: var(--spectrum-disabled-content-color);
+	--spectrum-accordion-item-header-color-hover: var(--spectrum-disabled-content-color);
+	--spectrum-accordion-item-header-color-down: var(--spectrum-disabled-content-color);
+	--spectrum-accordion-item-header-color-key-focus: var(--spectrum-disabled-content-color);
 }
 
 .spectrum-Accordion.spectrum-Accordion--noInlinePadding {
@@ -232,13 +229,13 @@
 	z-index: inherit;
 	position: relative;
 	margin: 0;
-	min-block-size: var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size));
-	min-inline-size: var(--mod-accordion-item-minimum-width, var(--spectrum-accordion-item-minimum-width));
-	inline-size: var(--mod-accordion-item-width, var(--spectrum-accordion-item-width));
-	border-block-end: var(--mod-accordion-divider-thickness, var(--spectrum-accordion-divider-thickness)) solid var(--spectrum-accordion-divider-color);
+	min-block-size: var(--spectrum-accordion-item-min-block-size);
+	min-inline-size: var(--spectrum-accordion-item-minimum-width);
+	inline-size: var(--spectrum-accordion-item-width);
+	border-block-end: var(--spectrum-accordion-divider-thickness) solid var(--spectrum-accordion-divider-color);
 
 	&:first-child {
-		border-block-start: var(--mod-accordion-divider-thickness, var(--spectrum-accordion-divider-thickness)) solid var(--spectrum-accordion-divider-color);
+		border-block-start: var(--spectrum-accordion-divider-thickness) solid var(--spectrum-accordion-divider-color);
 	}
 }
 
@@ -250,25 +247,25 @@
 }
 
 .spectrum-Accordion-itemIndicator {
-	inline-size: var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height));
-	block-size: var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height));
+	inline-size: var(--spectrum-accordion-disclosure-indicator-height);
+	block-size: var(--spectrum-accordion-disclosure-indicator-height);
 	transform: var(--spectrum-logical-rotation);
-	transition: transform ease var(--mod-accordion-animation-duration, var(--spectrum-accordion-animation-duration));
+	transition: transform ease var(--spectrum-accordion-animation-duration);
 	flex-shrink: 0;
-	margin-block-start: var(--mod-accordion-top-to-disclosure-indicator, var(--spectrum-accordion-top-to-disclosure-indicator));
-	margin-inline: var(--mod-accordion-edge-to-disclosure-indicator-space, var(--spectrum-accordion-edge-to-disclosure-indicator-space)) var(--mod-accordion-disclosure-indicator-to-text-space, var(--spectrum-accordion-disclosure-indicator-to-text-space));
+	margin-block-start: var(--spectrum-accordion-top-to-disclosure-indicator);
+	margin-inline: var(--spectrum-accordion-edge-to-disclosure-indicator-space) var(--spectrum-accordion-disclosure-indicator-to-text-space);
 }
 
 .spectrum-Accordion-itemContent {
 	display: none;
-	padding-block: var(--mod-accordion-item-content-area-top-to-content, var(--spectrum-accordion-item-content-area-top-to-content)) var(--mod-accordion-item-content-area-bottom-to-content, var(--spectrum-accordion-item-content-area-bottom-to-content));
-	padding-inline: var(--mod-accordion-content-padding-inline, var(--spectrum-accordion-content-padding-inline));
+	padding-block: var(--spectrum-accordion-item-content-area-top-to-content) var(--spectrum-accordion-item-content-area-bottom-to-content);
+	padding-inline: var(--spectrum-accordion-content-padding-inline);
 	color: var(--spectrum-accordion-item-content-color);
-	font-weight: var(--mod-accordion-item-content-font-weight, var(--spectrum-accordion-item-content-font-weight));
-	font-style: var(--mod-accordion-item-content-font-style, var(--spectrum-accordion-item-content-font-style));
-	font-size: var(--mod-accordion-item-content-font-size, var(--spectrum-accordion-item-content-font-size));
-	font-family: var(--mod-accordion-item-content-font, var(--spectrum-accordion-item-content-font));
-	line-height: var(--mod-accordion-item-content-line-height, var(--spectrum-accordion-item-content-line-height));
+	font-weight: var(--spectrum-accordion-item-content-font-weight);
+	font-style: var(--spectrum-accordion-item-content-font-style);
+	font-size: var(--spectrum-accordion-item-content-font-size);
+	font-family: var(--spectrum-accordion-item-content-font);
+	line-height: var(--spectrum-accordion-item-content-line-height);
 }
 
 .spectrum-Accordion-itemTitle {
@@ -276,10 +273,10 @@
 	display: flex;
 	align-items: center;
 
-	min-block-size: var(--mod-accordion-item-min-block-size, var(--spectrum-accordion-item-min-block-size));
+	min-block-size: var(--spectrum-accordion-item-min-block-size);
 	box-sizing: border-box; /* respect min-block-size but include padding */
-	padding-block: var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space));
-	padding-inline-end: var(--mod-accordion-edge-to-text-space, var(--spectrum-accordion-edge-to-text-space));
+	padding-block: var(--spectrum-accordion-item-header-top-to-text-space) var(--spectrum-accordion-item-header-bottom-to-text-space);
+	padding-inline-end: var(--spectrum-accordion-edge-to-text-space);
 }
 
 /* Focusable button that expands/collapses the accordion item. */
@@ -293,16 +290,16 @@
 	justify-content: flex-start;
 
 	/* start spacing controlled by edge to disclosure icon spacing */
-	padding-inline: 0 var(--mod-accordion-edge-to-content-area, var(--spectrum-accordion-edge-to-content-area));
+	padding-inline: 0 var(--spectrum-accordion-edge-to-content-area);
 	padding-block: 0; /* reset user-agent styles */
-	line-height: var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height));
+	line-height: var(--spectrum-accordion-item-header-line-height);
 
 	text-overflow: ellipsis;
 	cursor: var(--spectrum-accordion-item-header-cursor);
-	font-size: var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size));
-	font-weight: var(--mod-accordion-item-header-font-weight, var(--spectrum-accordion-item-header-font-weight));
-	font-style: var(--mod-accordion-item-header-font-style, var(--spectrum-accordion-item-header-font-style));
-	font-family: var(--mod-accordion-item-header-font, var(--spectrum-accordion-item-header-font));
+	font-size: var(--spectrum-accordion-item-header-font-size);
+	font-weight: var(--spectrum-accordion-item-header-font-weight);
+	font-style: var(--spectrum-accordion-item-header-font-style);
+	font-family: var(--spectrum-accordion-item-header-font);
 
 	/* Reset styling of button element */
 	appearance: none;
@@ -319,11 +316,11 @@
 	}
 
 	&:focus-visible {
-		border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
+		border-radius: var(--spectrum-accordion-corner-radius);
 		background-color: var(--spectrum-accordion-background-color-key-focus);
 		color: var(--spectrum-accordion-item-header-color-key-focus);
-		outline: var(--mod-accordion-item-focus-indicator-thickness, var(--spectrum-accordion-item-focus-indicator-thickness)) solid var(--spectrum-accordion-item-focus-indicator-color);
-		outline-offset: var(--mod-accordion-item-focus-indicator-gap, var(--spectrum-accordion-item-focus-indicator-gap));
+		outline: var(--spectrum-accordion-item-focus-indicator-thickness) solid var(--spectrum-accordion-item-focus-indicator-color);
+		outline-offset: var(--spectrum-accordion-item-focus-indicator-gap);
 	}
 
 	/* higher specificity to maintain active styles over @media hover styles */
@@ -334,17 +331,17 @@
 
 	&:has(+ .spectrum-Accordion-itemDirectActions) {
 		/* set spacing between header and direct actions, whether or not noInlinePadding variant is used */
-		margin-inline-end: var(--mod-accordion-item-header-to-direct-actions-space, var(--spectrum-accordion-item-header-to-direct-actions-space));
+		margin-inline-end: var(--spectrum-accordion-item-header-to-direct-actions-space);
 	}
 }
 
 .spectrum-Accordion-itemDirectActions {
-	margin-inline-end: var(--mod-accordion-edge-to-content-area, var(--spectrum-accordion-edge-to-content-area));
+	margin-inline-end: var(--spectrum-accordion-edge-to-content-area);
 	display: inline-flex;
-	gap: var(--mod-accordion-item-direct-actions-spacing, var(--spectrum-accordion-item-direct-actions-spacing));
+	gap: var(--spectrum-accordion-item-direct-actions-spacing);
 
 	/* margin needs to be set on top and bottom to keep compact XL items vertically centered and prevent them from growing vertically */
-	margin-block: var(--mod-accordion-item-direct-actions-vertical-spacing, var(--spectrum-accordion-item-direct-actions-vertical-spacing));
+	margin-block: var(--spectrum-accordion-item-direct-actions-vertical-spacing);
 }
 
 .spectrum-Accordion-item.is-open {
@@ -360,7 +357,7 @@
 .spectrum-Accordion--quiet .spectrum-Accordion-itemHeader {
 	&:hover,
 	&:active {
-		border-radius: var(--mod-accordion-corner-radius, var(--spectrum-accordion-corner-radius));
+		border-radius: var(--spectrum-accordion-corner-radius);
 	}
 }
 
