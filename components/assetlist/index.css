@@ -12,6 +12,11 @@
  */
 
 .spectrum-AssetList {
+	/** default light colors */
+	--spectrum-assetlist-item-background-color-selected-hover: rgb(var(--spectrum-blue-900-rgb), 0.2);
+	--spectrum-assetlist-item-background-color-selected: rgb(var(--spectrum-blue-900-rgb), 0.1);
+	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-800);
+
 	--spectrum-assetlist-item-background-color-down: var(--spectrum-gray-200);
 	--spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-100);
 
@@ -43,6 +48,14 @@
 
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.spectrum-AssetList {
+		--spectrum-assetlist-item-background-color-selected-hover: rgb(var(--spectrum-blue-800-rgb), 0.25);
+		--spectrum-assetlist-item-background-color-selected: rgb(var(--spectrum-blue-800-rgb), 0.15);
+		--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
 	}
 }
 

@@ -10,31 +10,19 @@
     ".spectrum-Meter.spectrum-Meter--sizeS",
     ".spectrum-Meter.spectrum-Meter--sizeXL"
   ],
-  "modifiers": [
-    "--mod-meter-help-text-to-progress-bar",
-    "--mod-meter-max-width",
-    "--mod-meter-min-width"
-  ],
-  "component": [
-    "--spectrum-meter-help-text-to-progress-bar",
+  "component": ["--spectrum-meter-help-text-to-progress-bar"],
+  "global": [
     "--spectrum-meter-maximum-width",
     "--spectrum-meter-minimum-width",
     "--spectrum-meter-thickness-extra-large",
     "--spectrum-meter-thickness-large",
     "--spectrum-meter-thickness-medium",
-    "--spectrum-meter-thickness-small"
-  ],
-  "global": [
+    "--spectrum-meter-thickness-small",
     "--spectrum-negative-visual-color",
     "--spectrum-notice-visual-color",
     "--spectrum-positive-visual-color",
     "--spectrum-spacing-75"
   ],
-  "passthroughs": [
-    "--mod-progressbar-fill-color",
-    "--mod-progressbar-max-size",
-    "--mod-progressbar-min-size",
-    "--mod-progressbar-thickness"
-  ],
+  "passthroughs": [],
   "high-contrast": []
 }

@@ -14,8 +14,6 @@ module.exports = {
 		// "stylelint-high-performance-animation",
 	],
 	ignoreFiles: [
-		// Static utility assets
-		"tokens/custom-*/*.css",
 		"tools/generator/**/*.css",
 		// Compiled and generated files
 		"**/dist/**",
@@ -216,7 +214,7 @@ module.exports = {
 		{
 			files: ["tokens*/**/*.css(?inline)?", "tokens/**/*.css"],
 			rules: {
-				"custom-property-pattern": [/^(spectrum|color|scale)/, {}],
+				"custom-property-pattern": [/^(spectrum|scale)/, {}],
 			}
 		},
 		{

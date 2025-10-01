@@ -1,5 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
+
 import "./index.css";
 
 export default {
@@ -35,11 +37,8 @@ const DropShadowBackground = (
 	context,
 ) => html`
 	<div
-		class=${classMap({
-			[rootClass]: true,
-			"spectrum--light": color === "light",
-			"spectrum--dark": color === "dark",
-		})}
+		class=${classMap({ [rootClass]: true })}
+		style=${styleMap({ "color-scheme": color })}
 	>
 		${DropShadowSwatch(args, context)}
 	</div>

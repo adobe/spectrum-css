@@ -12,6 +12,9 @@
  */
 
 .spectrum-CoachIndicator {
+	/** default light colors */
+	--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-800);
+
 	--spectrum-coach-indicator-ring-border-size: var(--spectrum-border-width-200);
 	--spectrum-coach-indicator-sizing-multiple: 3;
 	--spectrum-coach-indicator-ring-diameter-size: var(--mod-coach-indicator-ring-diameter, var(--spectrum-coach-indicator-ring-diameter));
@@ -49,6 +52,12 @@
 
 	inline-size: var(--spectrum-coach-indicator-inline-size);
 	block-size: var(--spectrum-coach-indicator-block-size);
+}
+
+@media (prefers-color-scheme: dark) {
+	.spectrum-CoachIndicator {
+		--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-700);
+	}
 }
 
 .spectrum-CoachIndicator-ring {

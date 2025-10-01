@@ -24,6 +24,11 @@
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
+	--spectrum-slider-precision-handle-width: 6px;
+	--spectrum-slider-editable-field-inline-size-small: 56px;
+	--spectrum-slider-editable-field-inline-size-medium: 70px;
+	--spectrum-slider-editable-field-inline-size-large: 82px;
+	--spectrum-slider-editable-field-inline-size-extra-large: 94px;
 
 	--spectrum-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
@@ -92,9 +97,11 @@
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-small);
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-small);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-small);
+	/* @passthrough start */
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-small);
 	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
 	--mod-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	/* @passthrough end */
 }
 
 .spectrum-Slider--sizeL {
@@ -109,9 +116,11 @@
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-large);
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-large);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-large);
+	/* @passthrough start */
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-large);
 	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
 	--mod-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+	/* @passthrough end */
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
@@ -128,9 +137,11 @@
 	--spectrum-slider-precision-handle-height: var(--spectrum-slider-precision-handle-height-extra-large);
 	--spectrum-slider-control-to-text-field: var(--spectrum-slider-control-to-text-field-extra-large);
 	--spectrum-slider-editable-control-to-field-label: var(--spectrum-slider-control-to-field-label-editable-extra-large);
+	/* @passthrough start */
 	--mod-textfield-width: var(--spectrum-slider-editable-field-inline-size-extra-large);
 	--mod-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-300);
 	--mod-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+	/* @passthrough end */
 
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 22px;
