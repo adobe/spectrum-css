@@ -19,16 +19,6 @@
     ".spectrum-ColorWheel:after",
     ".spectrum-ColorWheel:before"
   ],
-  "modifiers": [
-    "--mod-colorwheel-block-size",
-    "--mod-colorwheel-border-color",
-    "--mod-colorwheel-colorarea-container-size",
-    "--mod-colorwheel-fill-color-disabled",
-    "--mod-colorwheel-inline-size",
-    "--mod-colorwheel-min-inline-size",
-    "--mod-colorwheel-path",
-    "--mod-colorwheel-track-width"
-  ],
   "component": [
     "--spectrum-color-wheel-border-opacity",
     "--spectrum-color-wheel-minimum-width",
@@ -52,8 +42,5 @@
     "--spectrum-gray-1000-rgb"
   ],
   "passthroughs": [],
-  "high-contrast": [
-    "--highcontrast-colorwheel-border-color-disabled",
-    "--highcontrast-colorwheel-fill-color-disabled"
-  ]
+  "high-contrast": []
 }

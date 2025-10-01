@@ -17,31 +17,6 @@
     ".spectrum-Toast.spectrum-Toast--noButton",
     ".spectrum-Toast:not(:has(.spectrum-Button))"
   ],
-  "modifiers": [
-    "--mod-toast-background-color-default",
-    "--mod-toast-corner-radius",
-    "--mod-toast-font-family",
-    "--mod-toast-font-size",
-    "--mod-toast-font-style",
-    "--mod-toast-font-weight",
-    "--mod-toast-icon-block-size",
-    "--mod-toast-informative-background-color-default",
-    "--mod-toast-line-height",
-    "--mod-toast-line-height-cjk",
-    "--mod-toast-max-inline-size",
-    "--mod-toast-min-block-size",
-    "--mod-toast-negative-background-color-default",
-    "--mod-toast-positive-background-color-default",
-    "--mod-toast-spacing-block-close-button",
-    "--mod-toast-spacing-button-to-close-button-horizontal",
-    "--mod-toast-spacing-close-button-to-end-edge",
-    "--mod-toast-spacing-icon-to-text",
-    "--mod-toast-spacing-start-edge-to-text-and-icon",
-    "--mod-toast-spacing-text-to-button-vertical",
-    "--mod-toast-spacing-text-to-close-button",
-    "--mod-toast-spacing-toast-to-edge",
-    "--mod-toast-text-and-icon-color"
-  ],
   "component": [
     "--spectrum-toast-background-color-default",
     "--spectrum-toast-bottom-to-text",
@@ -78,6 +53,7 @@
   ],
   "global": [
     "--spectrum-cjk-line-height-100",
+    "--spectrum-closebutton-icon-color-default",
     "--spectrum-corner-radius-800",
     "--spectrum-default-font-style",
     "--spectrum-font-size-100",
@@ -96,6 +72,6 @@
     "--spectrum-white",
     "--spectrum-workflow-icon-size-100"
   ],
-  "passthroughs": ["--mod-closebutton-icon-color-default"],
+  "passthroughs": [],
   "high-contrast": []
 }

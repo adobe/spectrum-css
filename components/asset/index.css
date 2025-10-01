@@ -12,10 +12,10 @@
  */
 
 .spectrum-Asset {
-	--spectrum-asset-folder-background: var(--highcontrast-asset-icon-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-200)));
-	--spectrum-asset-file-background: var(--highcontrast-asset-icon-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-25)));
-	--spectrum-asset-folder-outline: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
-	--spectrum-asset-file-outline: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
+	--spectrum-asset-folder-background: var(--spectrum-gray-200);
+	--spectrum-asset-file-background: var(--spectrum-gray-25);
+	--spectrum-asset-folder-outline: var(--spectrum-gray-500);
+	--spectrum-asset-file-outline: var(--spectrum-gray-500);
 
 	display: flex;
 	align-items: center;
@@ -34,9 +34,9 @@
 
 .spectrum-Asset-folder,
 .spectrum-Asset-file {
-	inline-size: clamp(var(--mod-asset-icon-min-width, 48px), 100%, var(--mod-asset-icon-max-width, 80px));
+	inline-size: clamp(48px, 100%, 80px);
 	block-size: 100%;
-	margin: var(--mod-asset-icon-margin, 20px);
+	margin: 20px;
 }
 
 .spectrum-Asset-folderBackground {
@@ -56,7 +56,8 @@
 }
 
 @media (forced-colors: active) {
-	.spectrum-Asset {
-		--highcontrast-asset-icon-background-color: currentColor;
+	.spectrum-Asset-folderBackground,
+	.spectrum-Asset-fileBackground {
+		fill: currentColor;
 	}
 }
