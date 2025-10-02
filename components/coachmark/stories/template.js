@@ -23,6 +23,7 @@ export const CoachContainer = (
 		currentStep = 2,
 		totalStepCount = 8,
 		isOpen = false,
+		alt = "",
 	} = {},
 	context = {},
 ) => {
@@ -43,6 +44,7 @@ export const CoachContainer = (
 					<img
 						class="${rootClass}-image"
 						src="${imageSource || "example-card-landscape.png"}"
+						alt="${alt}"
 					/>
 				</div>
 			`,
@@ -50,7 +52,7 @@ export const CoachContainer = (
 		<div class="spectrum-CoachMark-header" style=${styleMap({
 			"--mod-popover-width": "0px",
 			"--mod-popover-height": "0px",
-			"--mod-popover-wrapper-spacing": "0px",
+			"--spectrum-popover-animation-distance": "0px",
 		})}>
 			<div class="spectrum-CoachMark-title">${title}</div>
 			${when(
@@ -59,19 +61,24 @@ export const CoachContainer = (
 					{
 						isOpen,
 						position: "bottom-start",
-						iconName: "More",
-						size: scale === "large" ? "s" : "m",
-						customClasses: [
-							`${rootClass}-action-menu`
-						],
-						items: [
-							{
-								label: "Skip tour",
-							},
-							{
-								label: "Reset tour",
-							},
-						],
+						triggerArgs: {
+							iconName: "More",
+							size: scale === "large" ? "s" : "m",
+							label: "More actions",
+							hideLabel: true,
+						},
+						customClasses: [`${rootClass}-action-menu`],
+						menuArgs: {
+							size: scale === "large" ? "s" : "m",
+							items: [
+								{
+									label: "Skip tour",
+								},
+								{
+									label: "Reset tour",
+								},
+							],
+						},
 					},
 					context,
 				),

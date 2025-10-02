@@ -21,7 +21,7 @@ export const Template = ({
 	if (isOpen) {
 		if (["top", "bottom"].some((e) => position.startsWith(e))) {
 			customWrapperStyles["min-inline-size"] = "var(--spectrum-popover-width)";
-			customWrapperStyles["min-block-size"] = "calc(var(--spectrum-popover-height) + var(--spectrum-popover-trigger-height, 0px) + var(--mod-popover-wrapper-spacing, var(--spectrum-spacing-100) * 2))";
+			customWrapperStyles["min-block-size"] = "calc(var(--spectrum-popover-height) + var(--spectrum-popover-trigger-height, 0px) + var(--spectrum-popover-animation-distance, var(--spectrum-spacing-100) * 2))";
 		}
 		else {
 			customWrapperStyles["min-inline-size"] = "calc(var(--spectrum-popover-width) + var(--spectrum-popover-trigger-width, 0px))";
@@ -95,10 +95,10 @@ export const Popover = ({
 	if (trigger) {
 		// Translate the popover to the correct position, keeping the default spacing between the trigger and the popover in mind.
 		if (position.startsWith("top")) {
-			popoverAlignment["transform"] = "translateY(calc(var(--spectrum-popover-trigger-height, 0px) * -1 - var(--spectrum-spacing-100)))";
+			popoverAlignment["transform"] = "translateY(calc(var(--spectrum-popover-trigger-height, 0px) * -1 - var(--spectrum-popover-animation-distance, var(--spectrum-spacing-100))))";
 		}
 		else if (position.startsWith("bottom")) {
-			popoverAlignment["transform"] = "translateY(calc(var(--spectrum-popover-trigger-height, 0px) + var(--spectrum-spacing-100)))";
+			popoverAlignment["transform"] = "translateY(calc(var(--spectrum-popover-trigger-height, 0px) + var(--spectrum-popover-animation-distance, var(--spectrum-spacing-100))))";
 		}
 
 		// Position the popover to the correct position at the correct side of the trigger.
@@ -157,17 +157,6 @@ export const Popover = ({
 
 		if (triggerEl) resizeObserver.observe(triggerEl);
 		resizeObserver.observe(popoverEl);
-
-		// Run the resize observer callback immediately to get the initial size
-		setTimeout(() => {
-			resizeObserverCallback([{
-				target: popoverEl,
-				contentRect: popoverEl.getBoundingClientRect(),
-			}, {
-				target: triggerEl,
-				contentRect: triggerEl.getBoundingClientRect(),
-			}]);
-		}, 100);
 	});
 
 	return html`
