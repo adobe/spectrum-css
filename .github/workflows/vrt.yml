@@ -54,7 +54,7 @@ jobs:
           CHROMATIC_SLUG: ${{ github.repository }}
 
       - name: Use Node LTS version
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: 20.19.5
           cache: yarn

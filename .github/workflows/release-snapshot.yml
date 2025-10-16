@@ -29,7 +29,7 @@ jobs:
           echo "authorName=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
           echo "authorEmail=$(git log -1 --pretty=format:'%ae')" >> $GITHUB_OUTPUT
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: 20.19.5
           cache: yarn
