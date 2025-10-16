@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/bundle",
-	"version": "2.0.0-next.15",
+	"version": "2.0.0-next.16",
 	"description": "A demo-ready bundle of the components in the Spectrum CSS library.",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -30,10 +30,10 @@
 	},
 	"main": "dist/index.css",
 	"dependencies": {
-		"@spectrum-css/accordion": "8.0.0-next.4",
-		"@spectrum-css/actionbar": "11.0.0-next.2",
+		"@spectrum-css/accordion": "8.0.0-next.5",
+		"@spectrum-css/actionbar": "11.0.0-next.3",
 		"@spectrum-css/actionbutton": "8.0.0-next.3",
-		"@spectrum-css/actiongroup": "7.0.0-next.1",
+		"@spectrum-css/actiongroup": "7.0.0-next.2",
 		"@spectrum-css/actionmenu": "8.0.0-next.1",
 		"@spectrum-css/alertbanner": "4.0.0-next.3",
 		"@spectrum-css/alertdialog": "5.0.0-next.4",

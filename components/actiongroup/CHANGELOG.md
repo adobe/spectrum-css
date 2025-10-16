@@ -1,5 +1,19 @@
 # Change log
 
+## 7.0.0-next.2
+
+### Major Changes
+
+📝 [#4249](https://github.com/adobe/spectrum-css/pull/4249) [`9629fe3`](https://github.com/adobe/spectrum-css/commit/9629fe37cad996d47c827a3eabcdf39092a27b0d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+This update removes `--mod-*` custom property hooks per SWC-1264, see also the RFC for extensible styling.
+
+- Remove all `--mod-*` custom property hooks.
+- Keep existing class selectors and variants unchanged.
+- Update stories to reflect the removal of the `--mod-*` override layer.
+
+Breaking change: the `--mod-*` override layer is removed. Consumers should set `--spectrum-*` variables directly where customization is needed.
+
 ## 7.0.0-next.1
 
 ### Patch Changes

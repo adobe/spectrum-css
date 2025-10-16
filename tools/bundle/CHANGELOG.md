@@ -1,5 +1,15 @@
 # Change Log
 
+## 2.0.0-next.16
+
+### Patch Changes
+
+Updated dependencies [[`9629fe3`](https://github.com/adobe/spectrum-css/commit/9629fe37cad996d47c827a3eabcdf39092a27b0d)]:
+
+- @spectrum-css/accordion@8.0.0-next.5
+- @spectrum-css/actionbar@11.0.0-next.3
+- @spectrum-css/actiongroup@7.0.0-next.2
+
 ## 2.0.0-next.15
 
 ### Patch Changes
