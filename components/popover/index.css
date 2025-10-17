@@ -109,6 +109,14 @@
 	transition-delay: var(--mod-overlay-animation-duration-opened, var(--spectrum-animation-duration-0, 0ms));
 }
 
+@starting-style {
+	.spectrum-Popover.is-open {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(0) translateZ(0);
+	}
+}
+
 /* position naming - first position term is popover position, second term is source position */
 /* example: --top-left = popover is to top and source is to left */
 

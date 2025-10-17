@@ -86,7 +86,7 @@
 			margin-inline-end: 0;
 		}
 
-		&.is-selected {
+		&:where(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 			z-index: 1;
 		}
 

@@ -54,7 +54,9 @@ export const Template = ({
 	isFocused = false,
 	isActive = false,
 	isDisabled = false,
+	isOpen = false,
 	hasPopup = "false",
+	hasLongPress = false,
 	popupId,
 	hideLabel = false,
 	staticColor,
@@ -67,12 +69,14 @@ export const Template = ({
 	role = "button",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
 	return html`
 		<button
 			aria-label=${ifDefined(hideLabel ? label : undefined)}
 			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
-			aria-pressed=${isSelected ? "true" : "false"}
+			aria-pressed=${ifDefined(isSelected ? "true" : undefined)}
+			aria-expanded=${ifDefined(hasPopup && hasPopup !== "false" ? isOpen ? "true" : "false" : undefined)}
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -82,7 +86,6 @@ export const Template = ({
 				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
 				["is-disabled"]: isDisabled,
-				["is-selected"]: isSelected,
 				["is-hover"]: isHovered,
 				["is-focus-visible"]: isFocused,
 				["is-active"]: isActive,
@@ -90,22 +93,28 @@ export const Template = ({
 			})}
 			id=${id}
 			data-testid=${testId ?? id}
+			popovertarget=${ifDefined(hasPopup && hasPopup !== "false" ? popupId : undefined)}
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
-			@click=${onclick ?? function() {
-				updateArgs({
-					isSelected: !isSelected
-				});
+			@click=${function () {
+				if (isDisabled) return;
+				if (typeof onclick === "function") onclick();
+				else {
+					updateArgs({
+						isSelected: !isSelected,
+						isOpen: !isOpen,
+					});
+				}
 			}}
-			@focusin=${function() {
+			@focusin=${function () {
 				updateArgs({ isFocused: true });
 			}}
 			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
 		>
-			${when(hasPopup && hasPopup !== "false", () =>
+			${when(hasLongPress && hasPopup && hasPopup !== "false", () =>
 				Icon({
 					size,
 					iconName: "CornerTriangle" + ({
@@ -138,7 +147,7 @@ export const Template = ({
 
 /**
  * Displays multiple action buttons in a row, with different combinations of
- * label, icon, and hold button (has popup).
+ * label, icon, and hold button (has pop-up).
  */
 export const ActionButtonsWithIconOptions = (args, context) => Container({
 	withBorder: false,
@@ -162,11 +171,13 @@ export const ActionButtonsWithIconOptions = (args, context) => Container({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
+			hasLongPress: true,
 		}, context),
 		Template({
 			...args,
 			iconName: undefined,
 			hasPopup: "true",
+			hasLongPress: true,
 		}, context)
 	],
 }, context);
@@ -174,7 +185,7 @@ export const ActionButtonsWithIconOptions = (args, context) => Container({
 /**
  * Displays two action buttons in a row:
  * - icon only action button
- * - icon only action button with hold button (has popup)
+ * - icon only action button with hold button (has pop-up)
  */
 export const IconOnlyOption = (args, context) => Container({
 	withBorder: false,
@@ -187,12 +198,14 @@ export const IconOnlyOption = (args, context) => Container({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
+			hasLongPress: true,
 		}, context),
 		Template({
 			...args,
 			hideLabel: true,
 			isQuiet: true,
 			hasPopup: "true",
+			hasLongPress: true,
 		}, context),
 	],
 }, context);

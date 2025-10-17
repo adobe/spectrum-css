@@ -1,7 +1,5 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { MenuItem, Template } from "./template.js";
+import { Template } from "./template.js";
 
 export const MenuWithVariants = Variants({
 	Template,
@@ -101,27 +99,23 @@ export const MenuWithVariants = Variants({
 });
 
 export const MenuItemGroup = Variants({
-	Template: (args, context) => html`
-		<ul
-			class=${classMap({
-				"spectrum-Menu": true,
-				[`spectrum-Menu--size${args.size?.toUpperCase()}`]:
-					typeof args.size !== "undefined",
-				"is-selectable": args.selectionMode === "single",
-				"is-selectableMultiple": args.selectionMode === "multiple",
-				"is-open": args.isOpen,
-			})}
-		>
-			${MenuItem(
-				{
-					...args,
-					rootClass: "spectrum-Menu-item",
-					thumbnailUrl: (args.hasThumbnail && "thumbnail.png") || args.thumbnailUrl,
-				},
-				context,
-			)}
-		</ul>
-	`,
+	Template: ({
+		customStyles,
+		hasActions,
+		hasThumbnail,
+		selectionMode,
+		shouldTruncate,
+		...args
+	}, context) => Template({
+		customStyles,
+		hasActions,
+		selectionMode,
+		shouldTruncate,
+		items: [{
+			...args,
+			thumbnailUrl: hasThumbnail && !args.thumbnailUrl ? "thumbnail.png" : args.thumbnailUrl,
+		}],
+	}, context),
 	wrapperStyles: {
 		"min-block-size": "auto",
 	},
@@ -133,14 +127,14 @@ export const MenuItemGroup = Variants({
 		{
 			testHeading: "No selection, with thumbnails",
 			description: undefined,
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "No selection, with description",
 		},
 		{
 			testHeading: "No selection, with thumbnails, description",
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Single selection: selected",
@@ -155,7 +149,7 @@ export const MenuItemGroup = Variants({
 			value: undefined,
 			selectionMode: "single",
 			isSelected: true,
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Single selection: unselected",
@@ -174,7 +168,7 @@ export const MenuItemGroup = Variants({
 			label: "Share",
 			iconName: "Share",
 			iconSet: "workflow",
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Multi-selection: selected",
@@ -189,7 +183,7 @@ export const MenuItemGroup = Variants({
 			value: undefined,
 			selectionMode: "multiple",
 			isSelected: true,
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Multi-selection: unselected",
@@ -206,7 +200,7 @@ export const MenuItemGroup = Variants({
 			label: "Share",
 			iconName: "Share",
 			iconSet: "workflow",
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Multi-selection: unselected switches",
@@ -221,7 +215,7 @@ export const MenuItemGroup = Variants({
 			hasActions: true,
 			value: undefined,
 			description: undefined,
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Multi-selection: selected switches",
@@ -238,7 +232,7 @@ export const MenuItemGroup = Variants({
 			value: undefined,
 			description: undefined,
 			isSelected: true,
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Multi-selection: switches + description",
@@ -251,7 +245,7 @@ export const MenuItemGroup = Variants({
 			selectionMode: "multiple",
 			hasActions: true,
 			label: "Menu item",
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Drill-in",
@@ -276,7 +270,7 @@ export const MenuItemGroup = Variants({
 			customStyles: {
 				"inline-size": "175px",
 			},
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		},
 		{
 			testHeading: "Text wrapping",
@@ -295,7 +289,7 @@ export const MenuItemGroup = Variants({
 			customStyles: {
 				"inline-size": "175px",
 			},
-			thumbnailUrl: "thumbnail.png"
+			hasThumbnail: true,
 		}
 	],
 	stateData: [

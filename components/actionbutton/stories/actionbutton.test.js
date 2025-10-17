@@ -17,12 +17,14 @@ export const ActionButtons = (args, context) => {
 			${Template({
 				...args,
 				hasPopup: "true",
+				hasLongPress: true,
 				hideLabel: true,
 			}, context)}
 			${Template({
 				...args,
 				iconName: undefined,
 				hasPopup: "true",
+				hasLongPress: true,
 			}, context)}
 		</div>
 	`;

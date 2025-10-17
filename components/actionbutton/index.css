@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
 		--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
 		--spectrum-actionbutton-background-color-disabled: transparent;
 
-		&.is-selected {
+		&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 			--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
 		}
 	}
@@ -116,7 +116,8 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	&.is-selected {
+	/* expanded is specific to action menu when the menu is open */
+	&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 		--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected, var(--spectrum-neutral-background-color-selected-default));
 		--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-neutral-background-color-selected-hover));
 		--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected, var(--spectrum-neutral-background-color-selected-down));
@@ -298,6 +299,16 @@ governing permissions and limitations under the License.
 		border-style: none;
 	}
 
+	&::after {
+		position: absolute;
+		inset: 0;
+		margin: calc((var(--spectrum-actionbutton-focus-indicator-gap) + var(--spectrum-actionbutton-border-width)) * -1);
+		border-radius: var(--spectrum-actionbutton-focus-indicator-border-radius);
+		transition: box-shadow var(--highcontrast-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
+		pointer-events: none;
+		content: "";
+	}
+
 	&:focus {
 		outline: none;
 	}
@@ -315,6 +326,13 @@ governing permissions and limitations under the License.
 	&:focus-visible {
 		background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus)));
 		color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus)));
+
+		box-shadow: none;
+		outline: none;
+
+		&::after {
+			box-shadow: 0 0 0 var(--spectrum-actionbutton-focus-indicator-thickness) var(--highcontrast-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color));
+		}
 	}
 
 	&:active {
@@ -323,8 +341,8 @@ governing permissions and limitations under the License.
 		transform: perspective(var(--spectrum-actionbutton-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
-	&:disabled,
-	&.is-disabled {
+	/* ideal when we want to disable the button but still allow its content to be focused */
+	&:is(:disabled, .is-disabled, [aria-disabled="true"]) {
 		background-color: var(--highcontrast-actionbutton-background-color-disabled, var(--mod-actionbutton-background-color-disabled, var(--spectrum-actionbutton-background-color-disabled)));
 		color: var(--highcontrast-actionbutton-content-color-disabled, var(--mod-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled)));
 	}
@@ -364,10 +382,6 @@ a.spectrum-ActionButton {
 	/* Fixes horizontal alignment of text in anchor buttons */
 	text-align: center;
 
-	&:empty {
-		display: none;
-	}
-
 	pointer-events: none;
 
 	font-size: var(--mod-actionbutton-font-size, var(--spectrum-actionbutton-font-size));
@@ -378,38 +392,19 @@ a.spectrum-ActionButton {
 
 	text-overflow: ellipsis;
 	overflow: hidden;
+
+	&:empty {
+		display: none;
+	}
 }
 
 .spectrum-ActionButton-hold {
 	position: absolute;
 	inset-inline-end: calc(var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--spectrum-actionbutton-border-width));
 	inset-block-end: calc(var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--spectrum-actionbutton-border-width));
+	display: block;
 	color: inherit;
 	transform: var(--spectrum-logical-rotation);
-}
-
-/* Focus indicator */
-.spectrum-ActionButton {
-	transition: border-color var(--highcontrast-actionbutton-animation-duration, var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))) ease-in-out;
-
-	&::after {
-		position: absolute;
-		inset: 0;
-		margin: calc((var(--mod-actionbutton-focus-indicator-gap, var(--spectrum-actionbutton-focus-indicator-gap)) + var(--spectrum-actionbutton-border-width)) * -1);
-		border-radius: var(--mod-actionbutton-focus-indicator-border-radius, var(--spectrum-actionbutton-focus-indicator-border-radius));
-		transition: box-shadow var(--highcontrast-actionbutton-animation-duration, var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration))) ease-in-out;
-		pointer-events: none;
-		content: "";
-	}
-
-	&:focus-visible {
-		box-shadow: none;
-		outline: none;
-
-		&::after {
-			box-shadow: 0 0 0 var(--mod-actionbutton-focus-indicator-thickness, var(--spectrum-actionbutton-focus-indicator-thickness)) var(--highcontrast-actionbutton-focus-indicator-color, var(--mod-actionbutton-focus-indicator-color, var(--spectrum-actionbutton-focus-indicator-color)));
-		}
-	}
 }
 
 @media (forced-colors: active) {
@@ -457,7 +452,7 @@ a.spectrum-ActionButton {
 			--highcontrast-actionbutton-background-color-disabled: Canvas;
 			--highcontrast-actionbutton-content-color-default: CanvasText;
 
-			&:disabled:not(.is-selected) {
+			&:is(:disabled, .is-disabled, [aria-disabled="true"]):not(:where(.is-selected, [aria-pressed="true"], [aria-expanded="true"])) {
 				--highcontrast-actionbutton-border-color: Canvas;
 			}
 		}
@@ -469,8 +464,7 @@ a.spectrum-ActionButton {
 			--highcontrast-actionbutton-border-color: Highlight;
 		}
 
-		/* Selected always shows as a solid highlighted color. */
-		&.is-selected {
+		&:is(.is-selected, [aria-pressed="true"], [aria-expanded="true"]) {
 			--highcontrast-actionbutton-border-color: Highlight;
 			--highcontrast-actionbutton-background-color-default: Highlight;
 			--highcontrast-actionbutton-content-color-default: HighlightText;

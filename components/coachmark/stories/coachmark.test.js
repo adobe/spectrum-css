@@ -48,12 +48,10 @@ export const CoachMarkGroup = Variants({
 			testHeading: "With action menu",
 			hasPagination: false,
 			hasActionMenu: true,
-			isOpen: true,
 		},
 		{
 			testHeading: "With action menu + media",
 			hasPagination: false,
-			isOpen: true,
 			hasImage: true,
 			hasActionMenu: true,
 		},

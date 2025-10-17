@@ -1,11 +1,13 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
-import metadata from "../dist/metadata.json";
-import packageJson from "../package.json";
+import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isOpen, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
 import { ActionButtonGroup } from "./actionbutton.test.js";
 import { ActionButtonsWithIconOptions, IconOnlyOption, Template, TreatmentTemplate } from "./template.js";
+
+// Local assets to render the component styles and structure
+import metadata from "../dist/metadata.json";
+import packageJson from "../package.json";
 
 /**
  * The action button component represents an action a user can take.
@@ -56,8 +58,8 @@ export default {
 			control: "boolean",
 		},
 		hasPopup: {
-			name: "Has popup",
-			description: "If the button triggers a popup action, this should be set to reflect the type of element that pops-up.",
+			name: "Has pop-up",
+			description: "If the button triggers a popover element to open, this should be set to reflect the semantic type of that element.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -65,6 +67,22 @@ export default {
 			},
 			control: "select",
 			options: ["true", "menu", "listbox", "tree", "grid", "dialog", "false"],
+		},
+		hasLongPress: {
+			name: "Long press",
+			description: "If the trigger supports a long-press action which triggers the menu, this should be set to true.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Accessibility",
+			},
+			control: "boolean",
+		},
+		isOpen: {
+			...isOpen,
+			name: "Popover open",
+			description: "This should be true when the popover element is open.",
+			if: { arg: "hasPopup", truthy: true },
 		},
 		staticColor: {
 			...staticColor,
@@ -77,6 +95,7 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: "false",
+		hasLongPress: false,
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
@@ -88,7 +107,7 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: ["click .spectrum-ActionButton:not([disabled])"],
+			handles: ["click .spectrum-ActionButton:not([disabled])", "mousedown .spectrum-ActionButton:not([disabled])", "mouseup .spectrum-ActionButton:not([disabled])", "touchstart .spectrum-ActionButton:not([disabled])", "touchend .spectrum-ActionButton:not([disabled])"],
 		},
 		design: {
 			type: "figma",
@@ -179,8 +198,8 @@ Quiet.parameters = {
 
 /**
  * An action button can have a hold icon (a small corner triangle). This icon indicates that holding down the action button for a
- * short amount of time can reveal a [popover](/docs/components-popover--docs) menu, which can be used, for example, to switch
- * between related actions. Note that this popover menu is not demonstrated here—this would be handled by the implementation.
+ * short amount of time (currently the standard is 300ms) can reveal a [popover](/docs/components-popover--docs) menu, which can be used, for example, to switch
+ * between related actions. Note that this popover menu is not demonstrated here; this would be handled by the implementation.
  * Because of the way padding is calculated, the hold icon must be placed before the workflow icon in the markup.
  */
 export const HoldIcon = IconOnlyOption.bind({});
