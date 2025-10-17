@@ -20,6 +20,8 @@ export const AssetListItem = ({
 	isSelectable = false,
 	isSelected = false,
 	isBranch = false,
+	isFocused = false,
+	isHovered = false,
 	onclick = () => {},
 } = {}, context = {}) => html`
 	<li
@@ -29,6 +31,10 @@ export const AssetListItem = ({
 			"is-selected": isSelected,
 			"is-branch": isBranch,
 			"is-navigated": isNavigated,
+			"is-focus-within": isFocused,
+			"is-focus-visible": isFocused,
+			"is-focused": isFocused,
+			"is-hover": isHovered,
 		})}
 		@click=${onclick}
 		tabindex="0"
@@ -73,6 +79,7 @@ export const AssetListItem = ({
 
 export const Template = ({
 	rootClass = "spectrum-AssetList",
+	isSelectable = false,
 	items = [],
 	customClasses = [],
 	id = getRandomId("assetlist"),
@@ -89,6 +96,7 @@ export const Template = ({
 				callback: AssetListItem,
 				args: {
 					rootClass: `${rootClass}-item`,
+					isSelectable,
 				},
 				context
 			})}

@@ -20,10 +20,10 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 		>
-			${columns.map(({ items }) => {
+			${columns.map(({ items, ...args } = { items: [] }) => {
 				return html`
 					<div class="${rootClass}-item">
-						${AssetList({ items }, context)}
+						${AssetList({ ...args, items }, context)}
 					</div>
 				`;
 			})}
