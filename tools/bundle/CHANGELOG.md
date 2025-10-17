@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.0.0-next.17
+
+### Patch Changes
+
+Updated dependencies [[`082862e`](https://github.com/adobe/spectrum-css/commit/082862eb80c6e0ac1c801b1d538e4d2f2bb919b4)]:
+
+- @spectrum-css/actionmenu@8.0.0-next.2
+- @spectrum-css/actionbutton@8.0.0-next.4
+- @spectrum-css/menu@10.0.0-next.6
+- @spectrum-css/actiongroup@7.0.0-next.3
+
 ## 2.0.0-next.16
 
 ### Patch Changes
