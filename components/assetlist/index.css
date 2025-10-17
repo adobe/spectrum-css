@@ -28,7 +28,7 @@
 	display: flex;
 	box-sizing: border-box;
 	align-items: center;
-	inline-size: var(--spectrum-field-width-large);
+	inline-size: var(--spectrum-field-default-width-large);
 	block-size: var(--spectrum-component-height-200);
 	padding-block: 0;
 	padding-inline: var(--spectrum-spacing-300);
