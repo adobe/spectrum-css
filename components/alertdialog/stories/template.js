@@ -102,9 +102,12 @@ export const Dialog = ({
 					<h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
 				</div>
 				<section class="${rootClass}-content">${content}</section>
-				<section class="${rootClass}-buttongroup">
-					${ButtonGroup({ items: buttonMap[variant], vertical: hasVerticalButtons }, context)}
-				</section>
+				<div class="${rootClass}-buttongroup">
+					${ButtonGroup({
+						items: buttonMap[variant],
+						vertical: hasVerticalButtons,
+					}, context)}
+				</div>
 			</div>
 		</div>
 	`;

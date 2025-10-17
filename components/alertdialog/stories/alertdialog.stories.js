@@ -142,7 +142,7 @@ Error.args = {
 	isOpen: true,
 	variant: "error",
 	heading: "Unable to share",
-	icon: "Alert",
+	icon: "AlertTriangle",
 	content: "An error occurred while sharing your project. Please verify the email address and try again.",
 };
 Error.parameters = {
